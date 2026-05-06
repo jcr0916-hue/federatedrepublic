@@ -408,13 +408,6 @@
     // ── Render result ──
     function renderResult(data) {
       const el = document.getElementById('analysisOutput');
-      const beatsHTML = (data.beats || []).map(b => `
-        <div class="beat">
-          <div class="beat-label">${b.label}</div>
-          <div class="beat-title">${b.title}</div>
-          <p>${b.content}</p>
-        </div>
-      `).join('');
 
       el.innerHTML = `
         <div class="analysis-header">
@@ -423,14 +416,17 @@
           <div class="provisions-row">${(data.provisions || []).map(provTag).join('')}</div>
           <div class="setup-text">${data.setup}</div>
         </div>
-        ${beatsHTML}
+        <div class="beat">
+          <div class="beat-label">Constitutional Analysis</div>
+          <p>${data.analysis}</p>
+        </div>
         <div class="finding-box">
-          <span class="finding-label">${data.finding.label}</span>
-          <p>${data.finding.content}</p>
+          <span class="finding-label">Constitutional Determination</span>
+          <p>${data.finding}</p>
         </div>
         <div class="verdict-box">
-          <span class="verdict-label">${data.outcome.label}</span>
-          <p>${data.outcome.content}</p>
+          <span class="verdict-label">The Verdict</span>
+          <p>${data.outcome}</p>
         </div>
         <button class="try-another" onclick="resetOutput()">↩ Try another scenario</button>
       `;
