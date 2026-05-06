@@ -469,15 +469,30 @@
           body: JSON.stringify(payload)
         });
 
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        if (!resp.ok) {
+          const errText = await resp.text().catch(() => '');
+          document.getElementById('outputEmpty').innerHTML = `
+            <div class="output-empty-icon">!</div>
+            <p>Function returned ${resp.status}: ${errText.slice(0,300) || 'no details'}</p>
+          `;
+          return;
+        }
+
         const data = await resp.json();
-        if (data.error) throw new Error(data.error);
+        if (data.error) {
+          document.getElementById('outputEmpty').innerHTML = `
+            <div class="output-empty-icon">!</div>
+            <p>Analysis error: ${data.error}</p>
+          `;
+          return;
+        }
+
         renderResult(data);
       } catch (err) {
         console.error('Analysis error:', err);
         document.getElementById('outputEmpty').innerHTML = `
           <div class="output-empty-icon">!</div>
-          <p>The analysis couldn't be completed right now — the API may be at capacity. Try again in a moment.</p>
+          <p>Error: ${err.message}</p>
         `;
       } finally {
         setAnalyzing(false);
