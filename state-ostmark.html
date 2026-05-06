@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ostmark — The Federated Republic</title>
+  <meta name="description" content="A portrait of Ostmark — a post-conflict state of the Federated Republic whose institutions were built under reconstruction conditions, testing whether constitutional resilience can be built rather than grown.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0;--state:#252535;--state2:#161624;--state-light:#EEEEF4;--state-mid:#3A3A50}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-cta{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);padding:0.35rem 0.9rem;border-radius:3px}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+
+    .state-hero{background:var(--state2);padding:100px 2rem 60px;text-align:center;border-bottom:1px solid rgba(201,168,76,0.15)}
+    .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.5);margin-bottom:2rem}
+    .breadcrumb a{color:rgba(201,168,76,0.5);text-decoration:none}
+    .breadcrumb a:hover{color:var(--gold)}
+    .state-abbr-hero{font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);font-weight:300;line-height:1;display:block;margin-bottom:0.5rem}
+    .state-name-hero{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,5vw,3rem);color:rgba(245,240,232,0.9);font-weight:300;margin-bottom:0.75rem}
+    .state-tagline-hero{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:2rem}
+    .state-summary{font-size:1rem;color:rgba(245,240,232,0.6);max-width:560px;margin:0 auto;line-height:1.9}
+
+    .stats-bar{background:var(--state-mid);padding:1.5rem 2rem;display:flex;justify-content:center;gap:0;flex-wrap:wrap;border-bottom:1px solid rgba(201,168,76,0.15)}
+    .stat{text-align:center;padding:0.75rem 2rem;border-right:1px solid rgba(255,255,255,0.08)}
+    .stat:last-child{border-right:none}
+    .stat-val{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);font-weight:300;display:block;line-height:1}
+    .stat-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,240,232,0.35);margin-top:0.3rem;display:block}
+
+    .body-wrap{max-width:700px;margin:0 auto;padding:60px 2rem 100px}
+    .section-head{margin:3.5rem 0 1.5rem}
+    .section-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+    .section-head h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--navy);font-weight:400}
+    p{color:var(--muted);line-height:1.9;margin-bottom:1.25rem;font-size:0.95rem}
+    p strong{color:var(--text);font-weight:500}
+
+    .pull-quote{border-left:3px solid var(--gold);padding:1.25rem 0 1.25rem 1.75rem;margin:2rem 0;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--navy);line-height:1.6}
+
+    .fact-box{background:var(--state-light);border:1px solid rgba(37,37,53,0.12);padding:1.5rem 1.75rem;margin:2rem 0}
+    .fact-box-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--state-mid);margin-bottom:1rem;opacity:0.8}
+    .fact-row{display:flex;justify-content:space-between;align-items:baseline;padding:0.5rem 0;border-bottom:1px solid rgba(37,37,53,0.07);font-size:0.85rem}
+    .fact-row:last-child{border-bottom:none}
+    .fact-key{color:var(--muted)}
+    .fact-val{color:var(--text);font-weight:500;text-align:right;max-width:60%}
+
+    .insp-box{background:rgba(27,42,74,0.04);border:1px solid var(--border);border-left:3px solid var(--state-mid);padding:1.5rem 1.75rem;margin:2rem 0}
+    .insp-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--state-mid);opacity:0.7;margin-bottom:0.6rem}
+    .insp-box p{font-size:0.85rem;margin-bottom:0;color:var(--muted)}
+
+    .tam-box{background:var(--state2);border:1px solid rgba(201,168,76,0.15);padding:1.75rem;margin:2rem 0}
+    .tam-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);opacity:0.7;margin-bottom:0.75rem}
+    .tam-box p{font-size:0.85rem;color:rgba(245,240,232,0.65);line-height:1.85;margin-bottom:0}
+
+    .const-note{background:var(--navy2);color:rgba(245,240,232,0.8);padding:1.5rem 1.75rem;margin:2rem 0;border-left:3px solid var(--gold);font-size:0.85rem;line-height:1.8}
+    .const-note strong{color:var(--gold)}
+
+    .state-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .state-nav a{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+
+    @media(max-width:600px){
+      .stats-bar{gap:0}.stat{padding:0.75rem 1rem;border-right:none;border-bottom:1px solid rgba(255,255,255,0.08)}
+      .stat:last-child{border-bottom:none}
+      .hamburger{display:flex}.nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html" class="active">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="scenario-ordinary.html">Start Here</a>
+  <a href="index.html">Home</a>
+  <a href="annotated.html">Constitution</a>
+  <a href="states.html" class="active">States</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="papers.html">Essays</a>
+</div>
+
+<div class="state-hero">
+  <div class="breadcrumb"><a href="states.html">The States</a> &nbsp;/&nbsp; Ostmark</div>
+  <span class="state-abbr-hero">OS</span>
+  <h1 class="state-name-hero">The State of Ostmark</h1>
+  <div class="state-tagline-hero">Post-Conflict · Parliamentary · Reconstructed · Admitted Year 14</div>
+  <p class="state-summary">Ostmark is the only state in the Republic that did not hold its founding convention under ordinary conditions. It came through the Conflict-Affected State Provisional Status mechanism — its institutions built during reconstruction, under active Inspectorate oversight, with parts of the state still unsettled when the convention met. It raises a question no other state forces: can constitutional resilience be built deliberately, or can it only be grown?</p>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><span class="stat-val">1.6M</span><span class="stat-label">Population</span></div>
+  <div class="stat"><span class="stat-val">Yr. 14</span><span class="stat-label">Admitted</span></div>
+  <div class="stat"><span class="stat-val">6.1%</span><span class="stat-label">BNF Level</span></div>
+  <div class="stat"><span class="stat-val">5 Yrs</span><span class="stat-label">Provisional Status</span></div>
+  <div class="stat"><span class="stat-val">2</span><span class="stat-label">Federal Senators</span></div>
+</div>
+
+<div class="body-wrap">
+
+  <div class="section-head">
+    <div class="section-eyebrow">Origin</div>
+    <h2>What Provisional Status Actually Means</h2>
+  </div>
+
+  <p>When the Republic was formed, Ostmark was a Territory in the third year of an internal armed conflict — a factional struggle over territorial governance that had collapsed the Territory's court system, displaced roughly a quarter of the population from their homes, and rendered the normal Statehood Audit criteria essentially unapplicable. Electoral accountability requires elections; judicial independence requires functioning courts; public law governance requires law that is being enforced. Ostmark had none of these during the conflict's peak years.</p>
+
+  <p>The Legislative Inspectorate certified Conflict-Affected State Provisional Status in Year 4 of the Republic — the first and, to date, only use of the mechanism. The certification triggered a five-year protected window: Ostmark retained its Territory status with reduced obligations, received priority federal support for institution-building, and was placed under joint Inspectorate monitoring that reported publicly to the NRS every quarter. The three Inspectorates collectively published more NRS reports about Ostmark during its Provisional Status period than about any other state-equivalent territory in the Republic's history.</p>
+
+  <p>The conflict ended in Year 6. The following three years were reconstruction — courts rebuilt, a civil service reconstituted, electoral infrastructure established, the first free elections held under the new framework. Ostmark passed the Statehood Audit in Year 12 on its second cycle. Its founding convention met in Year 13, and Ostmark was admitted as the Republic's newest State in Year 14.</p>
+
+  <div class="pull-quote">
+    "We did not choose our constitution in a vacuum. We chose it with the Inspectorates in the room, with three years of their quarterly reports on the table, and with the knowledge that they would still be in the room after. That is not a complaint. It is a fact about where we come from."<br>
+    <span style="font-size:0.85rem;font-style:normal;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:var(--muted)">— Premier Adara Voss, First Address to the Ostmark Assembly, Year 14</span>
+  </div>
+
+  <div class="section-head">
+    <div class="section-eyebrow">Government Structure</div>
+    <h2>The Convention That Could Not Start from Zero</h2>
+  </div>
+
+  <p>The Ostmark founding convention ran for 28 days and was the most constrained in the Republic's history — not because the federal government imposed restrictions, but because the political conditions did. Several choices that other conventions debated at length were effectively decided by what had happened in the preceding decade.</p>
+
+  <p><strong>A parliamentary executive was never seriously contested.</strong> No individual political figure in Ostmark had sufficient cross-factional legitimacy to anchor a presidential model. The conflict had been partly factional in character, and a directly elected Governor would have meant a Governor who was someone's Governor and not someone else's. Coalition government, with its requirement for ongoing negotiation and shared accountability, was not an ideological preference — it was the only model that could plausibly hold. The Assembly elects the Premier by absolute majority; the current Premier leads a four-party coalition that has governed by consensus for three years.</p>
+
+  <p><strong>The legislature is unicameral</strong>, but the Ostmark State Charter contains a Minority Protection Provision — a constitutional requirement, unusual in Republic state law, that no Assembly vote affecting the formal rights of recognized minority communities may pass without a concurrent 2/3 majority among Assembly members representing those communities. This provision was the most contentious element of the convention. It passed on the final day by a narrow margin. It has been tested once, in Year 15, when a housing regulation was challenged under it. The challenge failed on procedural grounds. The provision itself was not invalidated.</p>
+
+  <p><strong>An appointed judiciary was recommended by the Inspectorates</strong> during the Provisional Status period, and the convention followed that recommendation without significant debate. The reasoning was direct: the legal profession had been decimated during the conflict, and the pool of candidates available for judicial election in Years 12 through 14 was too thin, too factionally identified, or both. A Judicial Appointments Commission — with representation from all recognized communities, confirmed by the Assembly at 2/3 — was the mechanism chosen. Three of the seven Commission members are drawn from communities that were on opposite sides of the conflict. This has produced difficult appointments processes. It has also produced a judiciary that the Judicial Inspectorate has not yet found to have a pattern of independence failure.</p>
+
+  <div class="fact-box">
+    <div class="fact-box-label">Ostmark State Charter — Key Provisions</div>
+    <div class="fact-row"><span class="fact-key">Executive</span><span class="fact-val">Premier — elected by Assembly absolute majority</span></div>
+    <div class="fact-row"><span class="fact-key">Legislature</span><span class="fact-val">Unicameral Assembly, 64 members, RCV multi-member</span></div>
+    <div class="fact-row"><span class="fact-key">Minority Protection</span><span class="fact-val">Rights-affecting votes require 2/3 concurrent minority community majority</span></div>
+    <div class="fact-row"><span class="fact-key">Judiciary</span><span class="fact-val">Appointed — Judicial Appointments Commission + 2/3 Assembly confirmation</span></div>
+    <div class="fact-row"><span class="fact-key">BNF level</span><span class="fact-val">6.1% — above floor, constrained by fiscal capacity</span></div>
+    <div class="fact-row"><span class="fact-key">Gate 1 posture</span><span class="fact-val">Passive — state too fragile for active recruitment</span></div>
+    <div class="fact-row"><span class="fact-key">TAM status</span><span class="fact-val">Active — Parliament activated under §19.9 in Year 8, expires Year 18</span></div>
+  </div>
+
+  <div class="section-head">
+    <div class="section-eyebrow">Living in Ostmark</div>
+    <h2>What Government Feels Like</h2>
+  </div>
+
+  <p>An Ostmark resident's experience of government is shaped above all by two facts that residents of other states take for granted: that the government might not always have been there, and that the federal government is visibly present in ways it is not elsewhere.</p>
+
+  <p>The BNF operates at 6.1% — above the constitutional floor, but modest compared to Kailos or Varentis. Healthcare is delivered through a State-federal partnership that dates to the Provisional Status period; the federal government built the infrastructure, and the State now operates it with decreasing federal support. Housing provision covers genuine need but not the supplemental programs that higher-BNF states offer. The fiscal constraint is real: Ostmark's post-conflict economy is still reconstructing, its tax base is thinner than its population requires, and the MA's most recent assessment projects that the State will not reach fiscal self-sufficiency comparable to Arveld or Kailos until Year 22 at the earliest. Parliament supplements the shortfall under §10.1.g. The supplementation is published to the NRS quarterly. It is not a secret, but it is also not a comfortable fact.</p>
+
+  <p>The National Record System has a particular character in Ostmark. During the Provisional Status period, the Inspectorates published so extensively about the Territory's institutional failures — court system collapse, electoral manipulation by factional actors, regulatory capture — that the NRS became for many Ostmark residents the most visible symbol of the federal presence. When Statehood came, the NRS did not recede; it simply changed character. Now it records Ostmark's own government actions, its own Assembly votes, its own judicial appointments. The transition from being watched to watching yourself through the same system has not been seamless. Several Assembly members have publicly noted that they are aware of the NRS in a way their counterparts in other states likely are not.</p>
+
+  <div class="section-head">
+    <div class="section-eyebrow">The Accountability Mechanism</div>
+    <h2>The TAM and What It Has Produced</h2>
+  </div>
+
+  <div class="tam-box">
+    <div class="tam-label">§19.9 — Transitional Accountability Mechanism</div>
+    <p>Parliament activated a Transitional Accountability Mechanism for Ostmark in Year 8, during the reconstruction period, by a 2/3 majority of both chambers. The TAM cannot impose criminal sentences; it produces findings, published permanently to the NRS, about documented constitutional violations by the predecessor territorial administration during the conflict period. It operates for a maximum of ten years from activation — expiring in Year 18 — and cannot be renewed for the same historical period. The TAM's findings are persuasive, not legally binding. Prosecution for individual criminal acts remained with the federal courts.</p>
+  </div>
+
+  <p>The TAM has published eleven findings in six years. Three of those findings involved the territorial administration's deliberate manipulation of internal displacement to alter community composition in contested areas — the most serious documented violations of the conflict period. Two findings involved systematic denial of BNF-equivalent services to displaced persons during the emergency years. Six findings addressed the court system's documented role in factional property transfers during the conflict.</p>
+
+  <p>The findings are all on the NRS. They will remain there permanently. The TAM expires in Year 18. Parliament may not reopen it for the same period. Ostmark's Assembly voted in Year 15, by a margin of 38 to 26, to formally receive the TAM's findings as a matter of State record — a vote that was not constitutionally required and that several Assembly members opposed on the grounds that it constituted collective acknowledgment of acts that predated the current state's existence. The vote and its margin are also on the NRS.</p>
+
+  <div class="section-head">
+    <div class="section-eyebrow">The Federal Relationship</div>
+    <h2>The Inspectorates and the Problem of Scaffolding</h2>
+  </div>
+
+  <p>No other state in the Republic has as complicated a relationship with the three Inspectorates as Ostmark. This is not because Ostmark resents oversight — most of its current political leadership explicitly credits the Inspectorate presence during the Provisional Status period with having made the Statehood Audit possible at all. It is because the relationship has changed character in a way that neither the federal framework nor the State Charter fully anticipated.</p>
+
+  <p>During Provisional Status, the Inspectorates were builders as much as auditors. The LI designed the framework for Ostmark's first free elections. The JI provided the formal assessment on which the Judicial Appointments Commission model was based. The EI certified the BNF delivery infrastructure before the State had an executive capable of certifying it itself. This was appropriate under the Provisional Status mechanism — the federal framework provided the scaffolding because the State could not yet provide it for itself.</p>
+
+  <p>Since Statehood, the scaffolding has been removed and the monitoring has continued. The Inspectorates now publish quarterly reports on Ostmark that other states receive annually. The LI has twice flagged BNF delivery inconsistencies between community districts that it characterized as requiring "continued monitoring" — language that has not appeared in reports on any other State. The JI has noted that the Judicial Appointments Commission's most recent two appointments were contested along community lines in a pattern it characterizes as "warranting attention." No formal finding has been issued for any of these concerns. No Early Warning has been triggered.</p>
+
+  <div class="insp-box">
+    <div class="insp-label">Current Inspectorate Status — Ostmark</div>
+    <p>LI: Active monitoring — quarterly BNF delivery reports, redistricting review pending for Year 16 cycle. No formal finding. No Early Warning triggered.</p>
+    <p style="margin-top:0.5rem">JI: Active monitoring — judicial appointment pattern tracking, independence assessment ongoing. No formal finding.</p>
+    <p style="margin-top:0.5rem">EI: Standard monitoring — civil service integrity assessment complete, no findings. BNF certification current.</p>
+  </div>
+
+  <p>The Ostmark Assembly's relationship with these reports is the most active of any State legislature. Almost every quarterly report generates a formal Assembly response, published to the NRS alongside the original. Several Assembly members have argued publicly that the monitoring intensity applied to Ostmark is inconsistent with the constitutional principle that all States stand equally within the Republic. The Inspectorates have not responded to this argument formally. It is, technically, not their role to do so — their role is to publish what they find.</p>
+
+  <div class="section-head">
+    <div class="section-eyebrow">The Deeper Question</div>
+    <h2>What Ostmark Tests</h2>
+  </div>
+
+  <p>The constitutional question Ostmark poses has no precedent in the Republic's short history: can institutions built with external scaffolding become genuinely self-sustaining? The other three states — Kailos, Arveld, Varentis — chose their structures from positions of relative institutional health. They had functioning courts before their conventions met, functioning civil services before their first elections, functioning economies before their BNF obligations activated. Ostmark had none of these. It built them during the Provisional Status period, under federal supervision, against deadlines set by an audit process it needed to pass.</p>
+
+  <p>The early evidence is cautiously encouraging. The judiciary has ruled against the State government four times in its first three years — on BNF delivery standards, on a civil service appointment the Assembly challenged as factionally motivated, on a boundary dispute with a neighboring State, and once on a question of Assembly procedure. None of these rulings was comfortable for the government. All were accepted and implemented. The LI's redistricting review has not yet produced a finding. The Assembly's minority protection provision has been tested and survived its procedural challenge intact.</p>
+
+  <p>What remains genuinely uncertain is whether the current institutional behavior reflects durable constitutional culture or careful management of an ongoing monitoring relationship. The Inspectorates cannot answer this question — it will only be answered when the monitoring intensity reduces and the institutions continue to function. That reduction has not yet happened. Ostmark, five years into Statehood, is still being watched at a level that reflects where it came from rather than where it is. Whether that is appropriate caution or excessive scrutiny is the argument its Assembly is having, loudly, on the permanent public record, for anyone who wants to read it.</p>
+
+  <div class="const-note">
+    <strong>Constitutional status:</strong> Ostmark is a fully admitted State in good standing. No Early Warning has been triggered. The TAM remains active until Year 18. The Inspectorates' elevated monitoring reflects Ostmark's origin conditions and has no constitutional consequence unless a formal finding is issued. The State Charter's minority protection provision is constitutionally permissible under §13.7 — it is Ostmark's own choice about its own internal governance, above the constitutional floor.
+  </div>
+
+  <div style="background:var(--state2);padding:1.75rem 2rem;margin:3rem 0 0;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:0.6rem">§13.7 — State Structural Autonomy</div>
+    <p style="color:rgba(245,240,232,0.6);font-size:0.88rem;line-height:1.7;margin-bottom:1.25rem;max-width:480px;margin-left:auto;margin-right:auto">Your state might look entirely different. Configure your own executive model, legislature, BNF level, and immigration posture.</p>
+    <a href="state-builder.html" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.35);padding:0.65rem 1.4rem;text-decoration:none;background:rgba(201,168,76,0.08);display:inline-block">Design Your State &rarr;</a>
+  </div>
+
+  <div class="state-nav">
+    <a href="state-varentis.html">← Varentis</a>
+    <a href="states.html">All States →</a>
+  </div>
+
+</div>
+
+<script>
+function toggleMobileNav(){
+  const m=document.getElementById('mobileMenu');
+  const b=document.querySelector('.hamburger');
+  const open=m.classList.toggle('open');
+  b.setAttribute('aria-expanded',open);
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobileMenu');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!document.querySelector('.hamburger').contains(e.target)){
+    m.classList.remove('open');
+    document.querySelector('.hamburger').setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>

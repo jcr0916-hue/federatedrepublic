@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Weimar Scenario — The Federated Republic</title>
+  <meta name="description" content="A historical scenario: the Federated Republic ratified in November 1932 — and fifteen years of operation against the conditions that destroyed the Weimar Republic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}</style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+
+  <div class="page-wrap">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The Weimar Scenario</h1>
+      <p class="scenario-premise">November 1932. The Weimar Republic has twenty days before Hindenburg appoints Hitler as Chancellor. The Nazi and Communist parties together hold a Reichstag majority. Article 48 has been invoked 109 times. The constitution is being amended to death. The Federated Republic is ratified instead. What does a document specifically designed against Weimar's failure modes do with Weimar's conditions?</p>
+      <div class="provisions-tested"><span class="prov-tag">§1.25 Emergency Derogation</span><span class="prov-tag">§2.3 Constructive No-Confidence</span><span class="prov-tag">§1.8 Equality</span><span class="prov-tag">§15.3 Unamendable Provisions</span><span class="prov-tag">§9 NRS Architecture</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <div class="analysis-box">
+        <div class="analysis-label">Historical Scenario — November 1932</div>
+        <p>This is a historical scenario, not a contemporary transition. It posits ratification of the Federated Republic in November 1932 — at the last constitutional moment before the Weimar Republic's destruction. The economic conditions, the political actors, and the paramilitary violence of 1932 Germany are not altered. What changes is the constitutional architecture. The scenario asks: could a document specifically designed against Weimar's failure modes have held?</p>
+      </div>
+
+      <p>The Weimar scenario is the most important one in this collection — not because it is the most fun to run (though it is) but because it is the scenario this document was specifically designed to address. Every constitutional lawyer who has worked on post-authoritarian design has Weimar as their primary reference case. The Basic Law was written against Weimar. This document was written against the same failure modes, through the Basic Law's lens. Running the Federated Republic against Weimar itself closes the intellectual circle.</p>
+
+      <h2>What Failed — The Weimar Constitution's Specific Vulnerabilities</h2>
+
+      <h3>Article 48 — The Constitutional Suicide Mechanism</h3>
+      <p>The President could rule by decree in a state of emergency, bypassing the Reichstag entirely. Between 1930 and 1932, Article 48 was invoked 109 times. Governing by emergency decree became the normal mode of administration. When the Nazi leader was appointed Chancellor in January 1933, the constitutional machinery for emergency rule by executive decree was already fully normalised. The emergency exception had swallowed the constitutional rule.</p>
+
+      <h3>No Constructive Vote of No Confidence</h3>
+      <p>Governments could be voted out of office without parliament simultaneously electing a replacement. Between 1919 and 1933, the Weimar Republic had twenty separate cabinets averaging less than nine months each. The permanent governmental instability was not incidental to Weimar's failure — it was the mechanism through which anti-democratic actors could make democratic governance appear impossible.</p>
+
+      <h3>Article 76 — Amendment by Simple Supermajority of Members Present</h3>
+      <p>Combined with the exclusion of Communist deputies from the March 1933 session and the SA's physical intimidation of Social Democratic deputies, this provision allowed the Enabling Act to pass with the appearance of constitutional legitimacy. The constitution was amended to death.</p>
+
+      <h3>No Court with Jurisdiction to Strike Down Unconstitutional Legislation</h3>
+      <p>The Staatsgerichtshof's jurisdiction was limited to disputes between Reich and Länder — not review of legislation for constitutionality. There was no institution with authority to declare Article 48's systematic use unconstitutional. The courts applied the law as written. The law as written included Article 48.</p>
+
+      <h2>The Context of Ratification — November 1932</h2>
+
+      <p>The November 1932 elections have produced a Reichstag in which the Nazi and Communist parties together hold a majority — two parties explicitly dedicated to the destruction of the democratic republic, between them commanding more seats than all pro-democratic parties combined. The Papen government is governing by Article 48 decree. President Hindenburg is under sustained pressure to appoint the Nazi leader as Chancellor.</p>
+
+      <p>The ratification convention meets in Weimar itself — a gesture toward the Republic's founding that is also a frank acknowledgment that the founding has failed. The ratification referendum passes at 54.1% on 81.3% participation. The Nazi and Communist parties boycott it. The 54.1% affirmative is a thin majority in a deeply polarised society. It is enough.</p>
+
+      <h2>What Changes — The Architecture Against Weimar's Failure Modes</h2>
+
+      <div class="beat">
+        <div class="beat-label">Article 48 → §1.25</div>
+        <div class="beat-title">Joint declaration. Seven-day ratification. 90-day maximum. Five non-derogable rights.</div>
+        <p>Every requirement addresses a specific way Article 48 was exploited. Joint declaration prevents any single actor from invoking emergency powers. Seven-day two-thirds ratification means the emergency cannot survive without genuine democratic support. 90-day automatic expiry forecloses permanent emergency rule through inertia. The five non-derogable rights — including habeas corpus — cannot be suspended by any emergency declaration. The April 1933 mass arrests could not have occurred under this framework.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">No Constructive Vote → §2.3</div>
+        <div class="beat-title">Named successor required. The Nazi-Communist majority is constitutionally inert.</div>
+        <p>The Nazi and Communist parties together have a Reichstag majority capable of voting no confidence in any democratic government, but they cannot agree on a successor. Under the Federated Republic's §2.3, their combined majority is constitutionally inert for the purpose of government removal unless they produce a constructive replacement. They cannot. The democratic PM governs.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">Article 76 → The Amendment Architecture</div>
+        <div class="beat-title">3/4 of State legislatures or 70% national referendum on 65% participation.</div>
+        <p>The Enabling Act is introduced as a constitutional amendment in March 1933. It receives 47.3% affirmative on 79% participation — below the 70% threshold. The proposal fails. The mechanism that provided constitutional legitimacy to the Nazi seizure of power in the historical timeline does not work in the Federated Republic.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">No Constitutional Court → Elected Supreme Court</div>
+        <div class="beat-title">Full constitutional review authority. No legislation is beyond judicial challenge.</div>
+        <p>The specific mechanism that allowed the Enabling Act to survive — the absence of any court with jurisdiction to strike it down — is closed. Whether the Court would have had the institutional courage to strike down a Nazi-backed Enabling Act is a different question; that it would have had the constitutional authority is clear.</p>
+      </div>
+
+      <h2>Year 1 — The Founding Crisis</h2>
+
+      <h3>The Reichstag Fire — February 1933</h3>
+      <p>A fire destroys the Reichstag building. The President and PM jointly declare an emergency under §1.25. The declaration is specific: it covers public order measures in three States where political violence has been most acute, and explicitly lists what it does not derogate — including §1.13 (habeas corpus) and §1.2 (prohibition on torture). The transitional assembly ratifies the emergency declaration within seven days by a 71% supermajority.</p>
+
+      <p>The emergency is nothing like the historical Reichstag Fire Decree of February 28, 1933, which suspended all civil liberties, permitted indefinite detention, and was used to arrest Communist and Social Democratic leaders. The Federated Republic's declaration does none of these things because none of them are constitutionally available. The EI publishes its first finding within fourteen days: the emergency declaration is compliant in all respects.</p>
+
+      <h3>The March 1933 Elections</h3>
+      <p>The Nazi party receives 43.9% of the first-preference vote. The Communist party receives approximately 12%. Together, approximately 56% of House seats — but under the constructive vote of no confidence, this majority is constitutionally inert unless they can produce a named alternative PM. They cannot. The democratic coalition governs at 44% of the House. The PM faces a parliament that cannot remove her without naming a replacement she is willing to accept.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Enabling Act That Cannot Pass</span>
+        <p>In March 1933, the Nazi leadership introduces a constitutional amendment — an Enabling Act — granting the executive legislative authority for four years. Under the Federated Republic's amendment architecture, this requires 3/4 of State legislatures or 70% in a national referendum on 65% participation. The State legislatures — which include the democratic governments of Prussia, Bavaria, and seven others — will not provide 3/4 ratification. A national referendum is held in May 1933. The proposal receives 47.3% affirmative. It fails. The constitutional mechanism that granted legitimacy to the Nazi seizure of power does not work here.</p>
+      </div>
+
+      <h2>Year 1-3 — Survival and the Economic Crisis</h2>
+
+      <p>Germany's economy in 1933 is in its fourth year of depression. GNR has fallen approximately 40% from 1929 levels. The Severe Contraction Protocol activates — the floor proportionally reduces. This is painful but constitutionally honest: the floor adjusts to economic reality rather than becoming an unenforceable promise. The constitutional record shows exactly what social provision is being provided and how far above or below the floor actual provision falls.</p>
+
+      <p>The democratic coalition's economic programme draws on the trade union movement's emergency plan. Public works — road construction, housing rehabilitation, rural electrification — are funded through deficit financing requiring two-thirds parliamentary supermajority for each budget measure. By Year 2, unemployment has begun declining from its peak. The NRS publishes employment figures monthly, certified by the MA. Citizens can see, for the first time, that the constitutional government is producing measurable economic improvement.</p>
+
+      <h3>The §1.8 Protection — The Laws That Cannot Pass</h3>
+      <p>The historical timeline's legal discrimination against Jewish Germans — the April 1933 laws dismissing Jewish civil servants and restricting Jewish professional practice — is attempted in States where the Nazi party holds State government authority. The EI finds major violations within 30 days. The Supreme Court accepts emergency challenges within 14 days and rules 7-2: the discriminatory legislation is void under §1.8. Corrective orders issue. Nazi State governments comply under constitutional compulsion.</p>
+
+      <p>The protection is meaningful but not complete. The document protects against government discrimination. It cannot protect against social discrimination that the government is required to prevent but not always willing to. Constitutional compliance and social change are not the same thing.</p>
+
+      <h2>Year 4-15 — The Long Question</h2>
+
+      <p>By Year 4 elections, the Nazi party's vote share has declined from 43.9% to 37.1% — driven by visible economic improvement, the EI's published Rule Violation record of Nazi State governance, and the constructive vote's demonstration that the Nazi bloc cannot produce the governmental collapse democratic failure required.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What Held at Year 15</span>
+        <p>The architecture worked against the specific constitutional failure modes it was designed to prevent. The emergency mechanism did not become permanent emergency rule. The government could not be removed without a successor. The constitution could not be amended by a frightened or coerced majority. The Court struck down discriminatory legislation. The NRS documented everything, in real time, permanently.</p>
+        <p>By Year 15, the Nazi movement's vote share has declined to approximately 21% from its 1932 peak of 37%. It does not hold federal government authority. Its State government participation has produced, in every case, an extensive EI Rule Violation record cited by opposing candidates as the most effective campaign material available. The movement is constrained, documented, politically declining, and constitutionally contained.</p>
+      </div>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Question the Scenario Cannot Answer</span>
+        <p>The Basic Law's designers built the constructive vote, the eternity clauses, and the Constitutional Court's broad jurisdiction specifically to close these pathways. They were right that closing them was necessary. The Weimar scenario's fifteen-year verdict is that they were also, provisionally, right that closing them was sufficient — that a constitution designed specifically against Weimar's failure modes could have survived Weimar's conditions long enough for economic recovery to consolidate democratic legitimacy.</p>
+        <p>The word "provisionally" carries weight. Year 15 is not the end of the story. The social conditions that produced National Socialism have not been resolved in fifteen years of constitutional democracy. They required, in the historical timeline, not only military defeat but a complete cultural reckoning to produce the Germany that eventually became one of the world's most stable democracies. The Federated Republic's Weimar scenario does not produce that reckoning by Year 15 because the catastrophe that made it necessary did not occur. Whether constitutional architecture without constitutional catastrophe can produce constitutional culture over time is the question this scenario leaves genuinely open.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-germany.html">← The Germany Scenario</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-india.html">The India Scenario →</a>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

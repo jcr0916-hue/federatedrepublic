@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Economic Crisis Scenario — The Federated Republic</title>
+  <meta name="description" content="A purpose-built scenario testing the Federated Republic's fiscal architecture under severe contraction conditions — the Valdoria crisis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}</style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+
+  <div class="page-wrap">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The Economic Crisis Scenario</h1>
+      <p class="scenario-premise">The Republic of Valdoria enters its tenth year of operation when a global financial contagion collapses 31% of GNR. The BNF floor activates its Severe Contraction Protocol. States fall below even the reduced floor. The MA Director certifies honestly under sustained pressure from both executives. The anti-evasion principle catches four evasion attempts. The NRS records everything — including the four years of pre-crisis warnings that nobody acted on.</p>
+      <div class="provisions-tested"><span class="prov-tag">§10.1 BNF Floor + Severe Contraction</span><span class="prov-tag">§10.1.g Federal Supplementation</span><span class="prov-tag">§2.3.b Constructive Vote</span><span class="prov-tag">§9.4 MA Independence</span><span class="prov-tag">§9.2 NRS Co-Equal Records</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>The economic crisis scenario is different in character from the transition scenarios. It is not testing how the document handles a new ratification. It is testing how a functioning Republic handles severe economic stress from within — institutions established and running, a decade of constitutional operation behind it, and then conditions that pressure every fiscal provision simultaneously.</p>
+
+      <h2>Setting — The Republic of Valdoria</h2>
+
+      <p>A fictional mid-sized Mediterranean-adjacent Republic — population 11 million, in its tenth year of operation. Eight States. A mixed economy dependent on manufacturing, tourism, and agricultural exports. Debt-to-GNR ratio of 68% at Phase 4 — elevated but manageable. BNF compliance steady at 1.9x the minimum across its first decade. The MA Director, Dr. Serena Valkonen, has published four consecutive annual assessments flagging Valdoria's export concentration risk: 62% of GNR directly or indirectly tied to three sectors. A synchronised external shock would produce a GNR decline significantly faster than the Republic's fiscal buffers could absorb.</p>
+
+      <p>The note is published to the NRS. It is read by Parliament's Finance Committee and by nobody in the executive branch with sufficient authority to act on it. The finding sits on the NRS, permanently, in the record that will eventually be cited in every post-crisis analysis.</p>
+
+      <h2>Year 11 — The Shock</h2>
+
+      <p>A global financial contagion produces a sudden stop in Valdoria's export markets. Within eighteen months, GNR has fallen 31%. Unemployment reaches 22%. The MA Director exercises her authority to issue an emergency deficit certification simultaneously to both executives, to Parliament, and to the NRS.</p>
+
+      <h3>The Anti-Evasion Principle Under Maximum Pressure</h3>
+      <p>Within 90 days of Severe Contraction certification, the federal government proposes reclassifying road maintenance as "infrastructure supporting social provision access" — counting it toward the BNF housing category. The MA Director's assessment within 14 days: road maintenance is not BNF housing provision regardless of the label. The anti-evasion principle prohibits formula manipulation through accounting redefinition. The reclassification is void. The EI concurs. The proposal is withdrawn. This is the first of four evasion attempts the architecture catches during the crisis period.</p>
+
+      <h3>The State Variation</h3>
+      <p>Eight States, facing the same contraction, respond differently. Korenza — home to the financial sector — maintains above-floor spending from its own revenues throughout. Three mid-tier States draw down reserves the MA had recommended building. One State that had not built reserves drops to the constitutional floor by Month 9. Its citizens can see, on the NRS, that their State government had three years of MA recommendations it did not act on. That Korenza is maintaining above-floor provision. That their State is at-floor while their neighbors are not. This is democratic accountability working as designed: not preventing bad outcomes, but making their causes permanently visible and attributable.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Below-Floor Emergency — The Most Important Constitutional Question</span>
+        <p>Three States fall below even the reduced constitutional floor — not through evasion but through genuine fiscal collapse. The LI's finding triggers the Rule Violation architecture. Two States submit credible fiscal plans. One — Ostmere, the Republic's smallest and most rural State — submits a plan the MA certifies as technically compliant but fiscally impossible.</p>
+        <p>The Supreme Court rules 6-3 in one of its most consequential decisions: where a State's fiscal capacity is genuinely insufficient to meet even the reduced floor, the Republic bears a constitutional obligation to supplement. The individual sovereignty floor — §1.1, the document's first operative provision — requires that the Republic not permit its own constitutional provisions to produce outcomes that systematically deprive citizens of the minimum material conditions for exercising their rights. A floor the Republic allows to fail in its poorest States is not a floor. §10.1.g is subsequently added to the document codifying this obligation.</p>
+      </div>
+
+      <h2>Year 13 — The Political Crisis</h2>
+
+      <h3>The Constructive Vote Attempt</h3>
+      <p>The PM's parliamentary coalition frays under fiscal pressure. A no-confidence coalition spends three weeks attempting to assemble a constructive majority with a named replacement. They cannot. The constructive vote is withdrawn without a formal floor vote. §2.3.b working as designed: the PM's fiscal management is politically unpopular; the opposition cannot produce a governing alternative; she remains in office, politically weakened but constitutionally secure.</p>
+
+      <h3>The Dual Executive Under Fiscal Stress</h3>
+      <p>The President's creditor negotiations produce a preliminary agreement requiring an international economist panel to certify domestic fiscal adjustments alongside the MA. The PM's Emergency Panel challenge: the President has committed to domestic fiscal oversight arrangements that modify constitutional accountability mechanisms — her domain. The Panel rules within 48 hours: debt restructuring terms are presidential domain; domestic certification arrangements are PM domain. The President must renegotiate the certification element. The renegotiated solution — international assessments published alongside the MA's certifications, neither superseding the other — is upheld by the NRS co-equal records provision.</p>
+
+      <h3>The MA Director Under Sustained Pressure</h3>
+      <p>In two years, Dr. Valkonen has certified Severe Contraction, the reduced BNF floor, three below-floor State findings, the federal supplementation obligation, and four evasion attempt violations. She has received formal complaints from both executives and three State governors. She has responded to each with the same published statement: the MA certifies what it finds. The constitutional architecture requires publication. She is operating under precisely the pressure the Candidate Register mechanism and the graduated protection provisions were designed to insulate her from. Neither executive can remove her. She serves her term. She certifies honestly.</p>
+
+      <h2>Year 14-15 — Recovery and the Constitutional Record</h2>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What the Crisis Revealed</span>
+        <p>The anti-evasion principle caught four evasion attempts under maximum pressure. All four were corrected within 60 days. None resulted in sustained BNF reduction through evasion rather than through the Severe Contraction Protocol's legitimate reduction mechanism. The dual executive domain separation held under the most significant stress it experienced. The MA Director's independence held through four formal complaints in two years. The NRS recorded everything — including the four years of pre-crisis warnings that nobody acted on, which became the most cited records in every post-crisis accountability proceeding.</p>
+        <p>The MA's Year 14 retrospective: the constitutional architecture performed its function not by preventing bad outcomes but by making those outcomes visible, attributable, and constitutionally processed. The pre-crisis warnings are on the NRS permanently. Future parliaments reviewing that record will find a complete documented account of what the MA said, when it said it, who received it, and what they did or did not do with it. Constitutional honesty rather than constitutional prevention. The document's designers expected it to make the record. It made the record.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-nigeria.html">← The Nigeria Scenario</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-caledoria.html">The Indigenous Governance Scenario →</a>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

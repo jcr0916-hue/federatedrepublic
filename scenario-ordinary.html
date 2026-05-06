@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordinary Law — The Federated Republic</title>
+  <meta name="description" content="Four people. One week. The Federated Republic doing what it was designed to do.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Jost",sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:680px;margin:0 auto;padding:96px 2rem 80px}
+    .story-eyebrow{font-family:"JetBrains Mono",monospace;font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.1rem}
+    .story-title{font-family:"Cormorant Garamond",serif;font-size:3.8rem;font-weight:300;color:var(--navy);line-height:1.0;margin-bottom:0.4rem;letter-spacing:-0.01em}
+    .story-subtitle{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.25rem;color:var(--muted);font-weight:300;margin-bottom:2.2rem;line-height:1.45}
+    .header-rule{display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+    .header-rule-line{flex:1;height:1px;background:var(--border)}
+    .header-rule-diamond{color:var(--gold);font-size:0.8rem;opacity:0.7}
+    .story-lede{font-size:1.05rem;color:var(--muted);line-height:1.95;margin-bottom:2rem;font-style:italic;padding-left:1.5rem;border-left:2px solid var(--gold)}
+    .read-time{font-family:"JetBrains Mono",monospace;font-size:0.62rem;letter-spacing:0.15em;color:var(--muted);text-transform:uppercase;margin-bottom:2.5rem;display:block}
+    .character-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:3.5rem;border:1px solid var(--border)}
+    .char-card{background:var(--cream2);padding:0.9rem 0.85rem}
+    .char-name{font-family:"Cormorant Garamond",serif;font-size:1rem;font-weight:600;color:var(--navy);display:block;margin-bottom:0.2rem}
+    .char-role{font-size:0.72rem;color:var(--muted);line-height:1.45}
+    .story-section{margin-bottom:4rem}
+    .section-header{margin-bottom:1.75rem}
+    .section-name{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:400;color:var(--navy);display:block;margin-bottom:0.15rem;line-height:1.1}
+    .section-time{font-family:"JetBrains Mono",monospace;font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase}
+    .section-divider{width:2.5rem;height:2px;background:var(--gold);margin:0.75rem 0 0}
+    .section-body p{margin-bottom:1.35rem;font-size:1.01rem;line-height:1.92}
+    .section-body p:first-of-type::first-letter{font-family:"Cormorant Garamond",serif;font-size:4.2rem;font-weight:600;float:left;line-height:0.7;margin:0.14em 0.07em 0 0;color:var(--gold)}
+    .section-body em{font-style:italic}
+    .section-body strong{font-weight:600;color:var(--navy)}
+    .nrs-block{font-family:"JetBrains Mono",monospace;background:var(--navy);color:rgba(245,240,232,0.78);padding:1.1rem 1.4rem;margin:1.5rem 0;font-size:0.76rem;line-height:1.65;border-left:3px solid var(--gold)}
+    .nrs-label{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.4rem;opacity:0.75}
+    .nrs-status{color:#a8d08d;letter-spacing:0.05em}
+    .ornament{text-align:center;color:var(--gold);opacity:0.35;margin:0 0 3.5rem;letter-spacing:1em;font-size:0.75rem;font-family:"JetBrains Mono",monospace}
+    .coda{background:rgba(27,42,74,0.05);border-top:2px solid var(--gold);border-bottom:1px solid var(--border);padding:2.25rem 2rem;margin:0.5rem 0 3rem}
+    .coda-label{font-family:"JetBrains Mono",monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:#7A5800;margin-bottom:1rem;display:block}
+    .coda p{font-size:0.97rem;line-height:1.88;color:var(--text);margin-bottom:1rem}
+    .coda p:last-child{margin-bottom:0}
+    .coda em{font-style:italic}
+    .next-panel{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .next-label{font-family:"JetBrains Mono",monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;display:block}
+    .next-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+    .next-card{border:1px solid var(--border);padding:1.1rem 1rem;text-decoration:none;display:block;transition:border-color 0.2s,background 0.2s}
+    .next-card:hover{border-color:var(--gold);background:var(--cream2)}
+    .next-card-eyebrow{font-family:"JetBrains Mono",monospace;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.4rem}
+    .next-card-title{font-family:"Cormorant Garamond",serif;font-size:1.05rem;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:0.3rem}
+    .next-card-desc{font-size:0.76rem;color:var(--muted);line-height:1.5}
+    .story-note{font-size:0.82rem;color:var(--muted);line-height:1.75;font-style:italic;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.story-title{font-size:2.5rem}.character-grid{grid-template-columns:1fr 1fr}.next-grid{grid-template-columns:1fr}}
+    @media(max-width:480px){.story-title{font-size:2rem}.character-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Open site navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+  <div class="page-wrap">
+
+    <div style="margin-bottom:3rem">
+      <span class="story-eyebrow">An Introduction &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; The Republic at Ground Level</span>
+      <h1 class="story-title">Ordinary Law</h1>
+      <p class="story-subtitle">Four people. One week. One constitutional order doing what it was designed to do.</p>
+      <div class="header-rule">
+        <div class="header-rule-line"></div>
+        <span class="header-rule-diamond">&#9670;</span>
+        <div class="header-rule-line"></div>
+      </div>
+      <p class="story-lede">This is not a crisis scenario. No executive oversteps, no court is threatened, no constitution nearly collapses. It is an ordinary week in the Republic &#8212; which is, it turns out, the most interesting kind.</p>
+      <span class="read-time">&#8776; 12 minute read &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; Provisions on display: NRS &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; &#167;10.1 BNF Floor &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; &#167;6.4 Asylum Court &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; &#167;8 Inspectorates &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; &#167;3 Parliament</span>
+    </div>
+
+    <div class="character-grid" aria-label="The four characters">
+      <div class="char-card"><span class="char-name">Mara</span><span class="char-role">Clinic intake coordinator, Carston State &#8212; currently in Early Warning</span></div>
+      <div class="char-card"><span class="char-name">James</span><span class="char-role">Backbench MP, Harwick South. Eleven years in the House.</span></div>
+      <div class="char-card"><span class="char-name">Dena</span><span class="char-role">Parliamentary reporter. Finely calibrated sense for ministerial pauses.</span></div>
+      <div class="char-card"><span class="char-name">Selin</span><span class="char-role">Asylum seeker. Federal housing, Northern Coast Territory. Day 23.</span></div>
+    </div>
+
+    <!-- MARA -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-name">Mara</span>
+        <span class="section-time">Tuesday &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; 9:14 AM</span>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-body">
+        <p>Mara V&#225;squez had not expected to care this much about a spreadsheet.</p>
+        <p>She ran the intake desk at the Harwick Community Health Clinic &#8212; technically a regional healthcare access point under Carston State&#8217;s Basic Needs Floor obligations &#8212; and she had done this job for six years without once reading a government audit at midnight on her phone. Then Carston entered Early Warning, and the Legislative Inspectorate started publishing its findings to the National Record System every quarter, and Mara discovered she had opinions about audit methodology.</p>
+        <p>The clinic&#8217;s BNF provision rate in the last audit: 91.4 percent of floor. Technically compliant. Actually worrying. There were counties in the eastern district where that number was lower and getting lower, and Mara had a theory: the State&#8217;s intake classification system was routing patients into the wrong funding categories, which meant the spending looked correct on paper while actual provision quietly degraded.</p>
+        <p>She had written a four-page proposal for a new protocol. She had submitted it to the State Health Board in March. She had received an acknowledgment in April. Nothing since.</p>
+        <p>That was Tuesday morning. She opened the NRS before the clinic opened. The LI had published an interim finding overnight. It cited, in a footnote on page eleven, a new intake protocol being piloted in Harwick County that had improved routing accuracy by 23 percent. It named the method. It didn&#8217;t name her.</p>
+        <p>She read the footnote three times. Then she unlocked the clinic door and began the morning.</p>
+        <p>The thing about the National Record System, she had come to understand, was not that it made government responsive &#8212; it didn&#8217;t, necessarily. It made government <em>legible</em>. Anyone could find out in four minutes whether Carston&#8217;s BNF provision was improving or declining. The State couldn&#8217;t claim credit for numbers it wasn&#8217;t producing. The federal corrective order was visible. The timeline was visible. Whether anyone was meeting it was visible.</p>
+        <p>When the supplementation vote passed that afternoon, she saw the federal transfer amount appear in Carston&#8217;s public fiscal record within two hours of the vote, timestamped and certified by the Monetary Authority. She texted her supervisor: <em>money&#8217;s coming.</em></p>
+      </div>
+    </div>
+
+    <div class="ornament">&#xB7; &#xB7; &#xB7;</div>
+
+    <!-- JAMES -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-name">James</span>
+        <span class="section-time">Tuesday through Thursday</span>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-body">
+        <p>James Osei had served eleven years in the House of the Republic without ever being asked to do something that made him feel physically sick. He noted that the feeling was new and he did not enjoy it.</p>
+        <p>The party whip had been direct: the supplementation bill was a political problem. The leadership wanted a unified opposition vote. The argument &#8212; federal overreach into state affairs, the proper boundary between State and federal responsibility &#8212; was not unreasonable. James had voted on this basis before.</p>
+        <p>The problem was what he&#8217;d found on Tuesday morning.</p>
+        <p>He had been reading through session papers when he pulled the NRS index for the party leader&#8217;s public addresses. This was not unusual &#8212; MPs had always researched what their leaders had said. What was different was that the research took four minutes and produced a timestamped video with a full transcript.</p>
+        <p>The address: two years and three months ago, the party leader at the State Governors&#8217; Conference, arguing that federal supplementation of BNF obligations during Early Warning was <strong>&#8220;a constitutional requirement, not a political choice.&#8221;</strong> Forty minutes of remarks. Fully indexed. Accessible to any citizen who thought to look.</p>
+        <p>James sat with this for a long time.</p>
+        <p>The record was not going anywhere. If he voted with the party on Thursday, the permanent public record would show that the party had argued one position and voted against it when the vote came. If he voted against the party, the record would show a 51-year-old backbench MP from Harwick South breaking ranks on a fiscal bill.</p>
+        <p>Neither outcome was comfortable. Only one of them was honest.</p>
+        <p>He published a statement to his constituency log &#8212; an NRS-linked record that MPs were required to maintain for any vote against their party&#8217;s stated position &#8212; at 9:47 AM Thursday, two hours before the debate opened. It was four paragraphs. It cited the party leader&#8217;s address by its NRS document number. He voted for the bill.</p>
+        <p>His phone produced 340 notifications over the following six hours. He read none of them. He had said what he meant to say, and the record had it.</p>
+      </div>
+    </div>
+
+    <div class="ornament">&#xB7; &#xB7; &#xB7;</div>
+
+    <!-- DENA -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-name">Dena</span>
+        <span class="section-time">Monday through Wednesday</span>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-body">
+        <p>Dena Kwan had been covering Parliament for three years and had developed a finely calibrated sense for the specific pause that meant a minister had said something that was not true. The Minister for Domestic Affairs had produced that pause on Monday afternoon when he told the Finance Committee that the state supplementation fund had been &#8220;fully audited and certified&#8221; for the current fiscal year.</p>
+        <p>She wrote a small star next to it in her notebook.</p>
+        <p>By Tuesday evening she had the answer. The Executive Inspectorate &#8212; constitutionally independent, not an arm of either executive &#8212; published monthly certification summaries for every major federal funding mechanism. Public. Indexed. Published every month for nine years. The certification summary for the state supplementation fund was dated six weeks ago and showed provisional certification, with two outstanding compliance conditions.</p>
+        <p>The fund had not been fully certified. The Minister had told Parliament it had.</p>
+        <p>She spent Wednesday confirming she had read this correctly. She called two constitutional law professors. She pulled the statutory definition of &#8220;fully audited and certified&#8221; &#8212; also on the NRS, also public. She compared the EI&#8217;s summary against the Minister&#8217;s testimony three separate times.</p>
+        <p>The record said what the record said.</p>
+        <p>The story she filed at 11:41 AM on Wednesday was, she reflected, the easiest she had ever written. She had not needed a source. She had not needed a leak. She had needed the NRS and approximately three hours.</p>
+        <p>What she had been thinking about since &#8212; and what she put in the story&#8217;s final paragraph &#8212; was the Minister&#8217;s calculation. He had known the EI&#8217;s certification summaries were public. Every minister knew they were public. The NRS had been operating for nine years. He had said it anyway, in front of a parliamentary committee, on the record, in a session automatically transcribed and indexed.</p>
+        <p>The Minister&#8217;s office issued a correction at 2:15 PM. The Speaker required him to appear before the Committee the following Tuesday to present the actual certification status. That story filed itself.</p>
+      </div>
+    </div>
+
+    <div class="ornament">&#xB7; &#xB7; &#xB7;</div>
+
+    <!-- SELIN -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-name">Selin</span>
+        <span class="section-time">Day 23 in the Republic</span>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-body">
+        <p>Selin Arslan had been in the Republic for twenty-three days, and she knew the number because she had been counting &#8212; not in the anxious way she had counted days in other places, but in the careful way of someone learning where they are.</p>
+        <p>She was in federal housing in a city called Westhaven, in a Territory called the Northern Coast, in a building that housed forty-seven other people whose claims were also pending. Her room was small. The food was adequate. There was a common room with four computers available until ten at night.</p>
+        <p>Her asylum claim had been filed twenty days ago by a federal legal aid officer who had arrived at the Territory processing center within two days of her arrival. The officer had explained the process in three languages before finding the one Selin could follow with confidence. She had been given a document number. When she typed it into the NRS search at the common room computers, she could see its status:</p>
+        <div class="nrs-block" role="img" aria-label="NRS status: protection active">
+          <span class="nrs-label">National Record System &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; Claim AR-2847-119</span>
+          PENDING &#8212; ASYLUM COURT HEARING DATE TO BE ASSIGNED<br>
+          STATUS: <span class="nrs-status">PROTECTION ACTIVE</span>
+        </div>
+        <p>She had read those two words approximately once a day since she first found them. While her claim was pending before the Asylum Court &#8212; a federal judicial body, the officer had been careful to say, independent of the President, independent of the Prime Minister, not like immigration tribunals she had read about in other countries &#8212; she could not be removed. A judge with constitutional tenure protections would hear her case. After the decision, she could appeal. Throughout the process: protection active.</p>
+        <p>On Thursday afternoon she watched the parliamentary vote on the television in the common room. She understood that the bill had to do with funding for states not meeting their minimum provision obligations, and she had understood from the legal aid officer that those obligations extended to her &#8212; that she was, in the document&#8217;s language, an Inhabitant of the Republic from the date of her filing.</p>
+        <p>The vote passed. That evening she checked the computers.</p>
+        <div class="nrs-block" role="img" aria-label="NRS updated: hearing date assigned">
+          <span class="nrs-label">National Record System &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; Claim AR-2847-119 &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; Updated Thursday 2:31 PM</span>
+          ASYLUM COURT HEARING DATE ASSIGNED &#8212; 44 DAYS<br>
+          STATUS: <span class="nrs-status">PROTECTION ACTIVE</span>
+        </div>
+        <p>She sat with that for a while. Then she wrote a letter to her sister, who did not know yet that she was here.</p>
+      </div>
+    </div>
+
+    <div class="ornament">&#xB7; &#xB7; &#xB7;</div>
+
+    <!-- CODA -->
+    <div class="coda">
+      <span class="coda-label">The Record &#8212; Friday</span>
+      <p>Four things happened during that week that the National Record System recorded and that will remain there indefinitely: the LI&#8217;s audit finding for Carston State; the parliamentary vote, with individual voting records for all 412 seated members, including James Osei&#8217;s; the Executive Inspectorate&#8217;s preliminary Rule Violation assessment against the Minister for Domestic Affairs; and Selin Arslan&#8217;s asylum claim, record number AR-2847-119, updated at 2:31 PM Thursday.</p>
+      <p>None of these records can be altered. None can be deleted. None can be corrected without a new record documenting the correction and the reason for it.</p>
+      <p>The Republic&#8217;s foundational wager &#8212; the design choice that preceded every other &#8212; is that governments behave differently when everything they do is permanently visible. Not that transparency prevents bad behavior. It does not, always. But that behavior has a different character when it is documented in real time, available to anyone, and will still be available in fifty years.</p>
+      <p>The Minister who misspoke before the Committee will face it again on Tuesday. The party leader whose two-year-old speech contradicted this week&#8217;s position carries that record into the next election. The audit finding about Mara&#8217;s intake protocol is in the permanent record of what Carston State did during Early Warning. And Selin&#8217;s record, with its two words at the end, is there.</p>
+      <p>This is not utopia. The clinic is still underfunded. Carston is still in Early Warning. James Osei&#8217;s eleven years of careful parliamentary work have just become considerably more complicated. Selin has forty-four days to wait for a hearing about whether she can stay.</p>
+      <p>But the document&#8217;s theory &#8212; that visibility changes the character of power, that the obligation to be honest in public produces, over time, governments that are more honest &#8212; is being tested here. In an ordinary week. By four people who did not ask to test it.</p>
+      <p>That is the Republic at ground level. The archive of stress tests and adversarial scenarios throughout this site answers a different question: not what the Republic <em>feels like</em>, but whether it holds.</p>
+    </div>
+
+    <!-- NEXT STEPS -->
+    <div class="next-panel">
+      <span class="next-label">Where to go next</span>
+      <div class="next-grid">
+        <a href="annotated.html" class="next-card">
+          <span class="next-card-eyebrow">The Document</span>
+          <div class="next-card-title">Annotated Constitution</div>
+          <div class="next-card-desc">Every major provision with the design rationale behind it. Interactive &#8212; click any navy underlined text.</div>
+        </a>
+        <a href="scenario-american.html" class="next-card">
+          <span class="next-card-eyebrow">30-Year Scenario</span>
+          <div class="next-card-title">The American Republic</div>
+          <div class="next-card-desc">Seven provisions stress-tested over three decades. Immigration, devolution, economic contraction.</div>
+        </a>
+        <a href="papers.html" class="next-card">
+          <span class="next-card-eyebrow">The Essays</span>
+          <div class="next-card-title">Volume II: The Papers</div>
+          <div class="next-card-desc">Nine essays on the design choices. Start with Paper I: The Wager.</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="scenario-nav" style="margin-top:3rem">
+      <span></span>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-american.html">The American Republic &#8594;</a>
+    </div>
+
+    <p class="story-note">This is a work of constitutional imagination. The Federated Republic is a theoretical framework &#8212; not the law of any existing nation &#8212; but an attempt to answer a serious question about what democratic constitutions could be. All characters and situations are fictional.</p>
+
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById("mobileMenu");
+      var b=document.querySelector(".hamburger");
+      var open=m.classList.toggle("open");
+      b.setAttribute("aria-expanded",open);
+    }
+    document.addEventListener("click",function(e){
+      var m=document.getElementById("mobileMenu");
+      if(m.classList.contains("open")&&!m.contains(e.target)&&!document.querySelector(".hamburger").contains(e.target)){
+        m.classList.remove("open");
+        document.querySelector(".hamburger").setAttribute("aria-expanded","false");
+      }
+    });
+  </script>
+</body>
+</html>

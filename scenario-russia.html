@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Russia Scenario — The Federated Republic</title>
+  <meta name="description" content="A hypothetical transition from the Russian Federation to the Federated Republic following political rupture, and fifteen years in operation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The Russia Scenario</h1>
+      <p class="scenario-premise">Russia transitions to the Federated Republic following political rupture — not gradual reform. 85 federal subjects become 43 States. Security services are dissolved and reconstituted. The NRS publishes the previous regime's operational records. The Transitional Accountability Mechanism, enabled by §19.9, operates for a decade then sunsets. What remains is a Republic that has completed its transition but not yet its transformation.</p>
+      <div class="provisions-tested"><span class="prov-tag">§2.1–2.2 Dual Executive</span><span class="prov-tag">§9.2 NRS Co-Equal Records</span><span class="prov-tag">§10.1.d Severe Contraction</span><span class="prov-tag">§19.1 Institutional Accommodation</span><span class="prov-tag">§19.9 Transitional Accountability</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>Russia is the most dramatically different transition of the three — and the most interesting constitutionally, because the challenge isn't simply replacing institutions. It's replacing a constitutional culture in which formal constitutional text and actual governance have been systematically divorced from each other for the document's entire existence.</p>
+
+      <p>Russia has a written constitution — enacted after the constitutional crisis of September-October 1993, when the constitutional standoff ended with tanks and the resulting constitution was drafted by the executive's team. The constitution is formally democratic, formally federal, formally rights-protective. The gap between the constitutional text and actual governance is the defining fact of Russian constitutional life.</p>
+
+      <h2>The Context of Ratification</h2>
+
+      <p>This scenario's transition cannot plausibly occur as a consensual constitutional choice by an operating government. It requires a political rupture. The scenario posits a specific trigger: the death of the incumbent President following a prolonged period of political and economic crisis, a disputed succession that produces a temporary governing council, and an agreement — brokered between reform-oriented security and military factions, regional elites particularly from Tatarstan and Siberia, and urban civil society movements — to hold a constitutional convention rather than a presidential election.</p>
+
+      <p>The convention meets in Kazan — Tatarstan's capital, chosen deliberately. Moscow is too compromised by the previous regime's associations. Kazan is the capital of Russia's most politically significant ethnic republic, a gesture toward the federal transformation the document will require. Two hundred and forty-seven delegates meet for six months. The ratification referendum passes at 61.3% on 73.8% participation — with significant regional variation, the North Caucasus republics voting narrowly against, the Siberian regions voting strongly for.</p>
+
+      <h2>The Structural Transition</h2>
+
+      <h3>From Hyper-Presidential to Dual Executive</h3>
+      <p>The 1993 constitution's presidency — the strongest formal executive in any major democratic constitution — is dissolved. The Federated Republic's dual executive, with a President whose domain is explicitly limited to foreign affairs, defense, and national security, and a PM whose domain is domestic governance, is constitutionally clear. The difficulty is that nobody — not the public, not the civil service, not the former security services — has any experience of an executive whose power has meaningful constitutional limits.</p>
+
+      <p>The first President is elected in Year 1 — a former Constitutional Court justice with a background in constitutional law, whose primary campaign argument is the simplest available: the document means what it says and she intends to govern within it. The first PM, nominated by the largest House coalition, is a former regional governor whose appointment is the first PM nomination in Russian history that is genuinely independent of presidential preference.</p>
+
+      <h3>The Federal Subjects — 85 to 43</h3>
+      <p>Russia's 85 federal subjects present the most complex State-building challenge of any scenario. The Federated Republic's model — States as constitutional actors — is compatible with Russia's existing federal structure in form but not in substance. The form exists: Russia already has regional constitutions, elected regional assemblies. The substance does not: regional governments have been centrally dependent for twenty years.</p>
+
+      <p>The Convention adopts a tiered approach: the 22 ethnic republics become founding States immediately. The 46 oblasts and 9 krais are consolidated into 18 regional States over three years. The 3 federal cities (Moscow, St. Petersburg, Sevastopol) become States. The result: 43 founding States. Tatarstan, with its strong existing governance capacity, sends the Senate's first elected members before any other State. Chechnya — whose independence declaration during the Interregnum is resolved by negotiated re-entry — sends senators who are the first Chechen political representatives to participate in Russian federal governance without military coercion in three decades.</p>
+
+      <h3>The Security Services — Dissolution and Reconstitution</h3>
+      <p>The parallel governance structures that defined the previous regime must be dissolved. The domestic intelligence service is reconstituted under explicit statutory authority, subject to the LI's annual audit, with individual agents accountable to NRS publication requirements for their operational mandates. The 340,000-person service is reduced to 80,000 over five years through retirement, retraining, and prosecution. The prosecutions — 847 individuals in the first three years, covering documented human rights violations and corruption — are the most significant test of the new Supreme Court's credibility. The Court convicts in 523 cases and acquits in 324.</p>
+
+      <p>The 324 acquittals — including several high-profile figures the public expected to be convicted — are the most important single signal that the Court operates by constitutional standards rather than political direction.</p>
+
+      <div class="finding">
+        <span class="finding-label">The NRS and the Truth</span>
+        <p>In Month 9, the reconstituted security service delivers to the RSA Director's office 847 terabytes of operational records from the previous two decades — covering surveillance, authorisations of extrajudicial action, election manipulation, and financial corruption. These records are constitutionally required to be published to the NRS.</p>
+        <p>The RSA Director publishes everything. The NRS record of the previous regime's conduct becomes the most-accessed public dataset in Russian history. The political consequences run for a decade. The constitutional precedent — that the NRS publishes what the government did, not only what the government does — is the Republic's most important early institutional statement. This is the §19.9 Transitional Accountability Mechanism's foundational case: the mechanism that Parliament subsequently establishes formally is built on the RSA Director's act of publishing the record first.</p>
+      </div>
+
+      <h3>The Orthodox Church</h3>
+      <p>The Church retains its properties, its institutional existence, and its public role. It loses its constitutional legitimacy function — the Patriarch cannot bless state acts, cannot officiate at presidential inaugurations, cannot issue canonical rulings that carry state authority. The 2020 constitutional amendments' references to "God" and the definition of marriage as between a man and a woman are not carried forward into the Republic's constitutional text. A supplementary protocol acknowledges the Church's historical role in Russian civil society without creating constitutional standing for its doctrinal positions.</p>
+
+      <h2>Year 1-3 — The Founding Period</h2>
+
+      <h3>The Chechen Question</h3>
+      <p>Chechnya's re-entry into the Republic following its Interregnum independence declaration is the most politically complex founding-period event. The incumbent Chechen executive negotiates the re-entry terms personally and remains in office in Year 1. His relationship with the Federated Republic's constitutional framework is immediately tested: the first Rule Violation finding arrives in Month 8, documenting that Chechen State security forces detained a journalist without judicial authorisation.</p>
+
+      <p>The corrective order issues. He does not comply within 30 days. The automatic escalation to major violation proceeds. The Supreme Court's assessment finds willful non-compliance. The suspension proceeding produces his resignation rather than formal suspension. His successor — from a reform faction within Chechen political society — is the Republic's first constitutionally compliant Chechen State executive.</p>
+
+      <h3>The Economic Transition</h3>
+      <p>The BNF's 5% floor is met in Year 1, barely, with the MA's certification applying the full-population calculation to a GNR that has declined 23% from pre-Interregnum levels. The Severe Contraction Protocol under §10.1.d is the most immediately relevant provision in the entire document: the MA certifies qualifying contraction conditions in Month 6. The BNF floor proportionally reduces. The anti-evasion principle holds — the reduction is proportional and documented, not manipulated.</p>
+
+      <h2>Year 4-8 — Consolidation</h2>
+
+      <h3>The State-Building Problem</h3>
+      <p>By Year 5, six States are in Early Warning on fiscal integrity. The Statehood Audit system processes this variation honestly: the North Caucasus Consolidated State's fiscal position reflects a structural dependency on federal transfers that predates the Republic. Parliament passes a five-year structural adjustment statute providing enhanced federal support conditioned on State administrative reform benchmarks. Both the most vulnerable States pass their Year 8 Statehood Audit under this framework.</p>
+
+      <h3>The Nasledstvo Doctrine</h3>
+      <p>By Year 5, 2,340 civil claims have been filed by individuals whose surveillance, imprisonment, or displacement are documented in the published records. The Supreme Court develops a framework for civil damages against the Republic as the legal successor to the Russian Federation.</p>
+
+      <div class="finding">
+        <span class="finding-label">§19.9 in Operation</span>
+        <p>The Transitional Accountability Mechanism — established by Parliament in Year 2 under the supermajority provision — formally authorises what the RSA Director's Year 1 publication had already begun. The Mechanism examines 2,340 individual claims, awards damages in 1,847 cases, and refers 523 cases to criminal prosecution. At its Year 10 sunset, it dissolves as required. Its NRS record is permanent.</p>
+        <p>The Supreme Court's ruling upholding successor liability is known as the <em>Nasledstvo</em> (Inheritance) doctrine: "A republic that inherits the institutions, the territory, the treaty obligations, and the assets of its predecessor cannot selectively disclaim the obligations that inconvenience it. Constitutional legitimacy requires constitutional honesty about what was done in the name of the state." This is the §19.9 provision's constitutional logic stated as judicial doctrine.</p>
+      </div>
+
+      <h3>Tatarstan and the Independence Architecture</h3>
+      <p>By Year 7, Tatarstan's State government — the most capable in the Republic — initiates the independence framework's preliminary consultation process under §15.4.b. The MA's Republic-wide fiscal impact assessment — required under the v118 amendment before any independence referendum — is commissioned even though no referendum has been called. Tatarstan's GNR contribution: 8.2% of total. The assessment is published to the NRS. Tatarstan's independence movement, having seen the numbers, concludes that the fiscal independence argument is less compelling than it appeared. The petition does not reach the threshold. The independence process lapses in Year 9.</p>
+
+      <h3>The Orthodox Church Trilogy</h3>
+
+      <div class="beat">
+        <div class="beat-label">Case 1</div>
+        <div class="beat-title">State statute restricting expression on the basis of sexual orientation</div>
+        <p>The Court rules 6-3: State statutes that discriminate on the basis of sexual orientation violate §1.8 regardless of religious or cultural justification. The ruling produces the largest public demonstrations in Moscow since the Interregnum.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">Case 2</div>
+        <div class="beat-title">Patriarch seeks declaratory relief establishing canonical marriage definition has constitutional standing</div>
+        <p>The Court rules 7-2: the Republic's recognition of religious heritage in the preamble creates no justiciable constitutional right for religious bodies. The Church's canonical positions are protected as religious expression; they are not constitutional law.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">Case 3</div>
+        <div class="beat-title">State seeks to include Buddhist teaching in public school curricula as cultural heritage</div>
+        <p>The Court rules 5-4: States may include religious and cultural traditions in public curricula provided the inclusion is non-mandatory, comparative, and neutral across traditions.</p>
+      </div>
+
+      <h2>Year 15 — The Verdict</h2>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What the Republic Achieved</span>
+        <p>A Supreme Court that has ruled against powerful interests and been obeyed. An NRS that has published the previous regime's crimes and not been shut down. A dual executive whose domain boundaries have been tested 67 times and resolved constitutionally every time. A Chechen State government that is, for the first time, operating under constitutional constraints. A Tatar State that explored independence constitutionally, found the numbers unpersuasive, and remained in the Republic without coercion.</p>
+        <p>The Transitional Accountability Mechanism operated, reached its sunset, and dissolved. Its record — 1,847 civil awards, 523 criminal referrals, and the complete operational archives of the predecessor government — is permanently on the NRS. The mechanism worked as designed precisely because it was time-limited and constitutionally grounded.</p>
+      </div>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What the Republic Has Not Yet Achieved</span>
+        <p>Constitutional culture. The same gap that characterised the British scenario is deeper and wider in Russia. The political class that governed before the transition is not fully replaced. The security services' reconstituted officers are operating under statutory constraints they did not choose. The Siberian fiscal grievance — documented, audited, published — is unresolved at Year 15, with a constitutional amendment campaign to revise the resource revenue distribution formula at 31 of 43 State Senate votes but not yet the 3/4 required.</p>
+        <p>The most honest assessment of the Russian Republic at Year 15: it has completed the transition. It has not completed the transformation. The document is the supreme law. Whether the people who live under it believe that — and whether that belief produces the constitutional culture that makes the architecture work over generations — is the question the next fifteen years will begin to answer. The NRS records everything. The question of whether future generations read it and draw the right conclusions is one that no constitution can answer in advance.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-uk.html">← The United Kingdom Scenario</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-applied-analysis.html">Applied Constitutionalism →</a>
+    </nav>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

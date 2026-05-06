@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The States — The Federated Republic</title>
+  <meta name="description" content="The Federated Republic's states are constitutionally diverse — same floor, radically different governments. Explore how the laboratory of democracy works when the floor is genuinely high.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-cta{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);padding:0.35rem 0.9rem;border-radius:3px}
+    .nav-cta:hover{background:rgba(201,168,76,0.25) !important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+
+    /* Hero */
+    .hero{padding:120px 2rem 80px;max-width:760px;margin:0 auto;text-align:center}
+    .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,3.8rem);font-weight:300;color:var(--navy);line-height:1.1;margin-bottom:1.5rem}
+    .hero-title em{font-style:italic;color:var(--muted)}
+    .hero-body{font-size:1.05rem;color:var(--muted);max-width:580px;margin:0 auto;line-height:1.9}
+
+    /* Divider */
+    .divider{width:60px;height:1px;background:var(--gold);margin:2.5rem auto;opacity:0.5}
+
+    /* Concept section */
+    .concept{max-width:700px;margin:0 auto;padding:0 2rem 80px}
+    .concept-block{background:white;border:1px solid var(--border);border-left:3px solid var(--gold);padding:2rem 2rem 2rem 2.5rem;margin-bottom:2rem}
+    .concept-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .concept-block h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--navy);margin-bottom:0.75rem;font-weight:400}
+    .concept-block p{color:var(--muted);font-size:0.95rem;line-height:1.85}
+
+    /* Constitutional anchor */
+    .const-anchor{background:var(--navy2);color:rgba(245,240,232,0.85);padding:2.5rem;max-width:700px;margin:0 auto 80px;border-left:3px solid var(--gold)}
+    .const-anchor .provision-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+    .const-anchor blockquote{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;line-height:1.8;color:rgba(245,240,232,0.9);margin-bottom:1rem}
+    .const-anchor .cite{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color:var(--gold);opacity:0.7}
+
+    /* State profiles section */
+    .profiles-section{max-width:760px;margin:0 auto;padding:0 2rem 100px}
+    .profiles-header{margin-bottom:3rem}
+    .profiles-header h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--navy);margin-bottom:0.5rem}
+    .profiles-header p{color:var(--muted);font-size:0.9rem}
+
+    /* State cards */
+    .state-card{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);margin-bottom:2.5rem;text-decoration:none;color:inherit;transition:border-color 0.2s,box-shadow 0.2s}
+    .state-card:hover{border-color:var(--gold);box-shadow:0 4px 24px rgba(27,42,74,0.08)}
+    .state-card-map{background:var(--navy);min-height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .state-card-map svg{opacity:0.15;position:absolute;inset:0;width:100%;height:100%}
+    .state-card-map-content{position:relative;z-index:1;text-align:center;padding:2rem}
+    .state-abbr{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--gold);font-weight:300;line-height:1;display:block}
+    .state-full{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,240,232,0.5);margin-top:0.5rem;display:block}
+    .state-card-info{background:white;padding:2rem 2rem 2rem 2rem;display:flex;flex-direction:column;justify-content:space-between}
+    .state-meta{margin-bottom:1.5rem}
+    .state-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);font-weight:400;margin-bottom:0.25rem}
+    .state-tagline{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)}
+    .state-desc{font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
+    .state-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
+    .tag{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.6rem;border:1px solid var(--border);color:var(--muted)}
+    .tag.gov{border-color:rgba(27,42,74,0.3);color:var(--navy)}
+    .state-cta{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.5rem}
+    .state-cta::after{content:'→'}
+
+    /* Coming soon card */
+    .state-card-coming{border:1px dashed var(--border);padding:2rem;display:flex;align-items:center;gap:2rem;margin-bottom:2rem;opacity:0.6}
+    .coming-abbr{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--muted);font-weight:300;min-width:60px}
+    .coming-info h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--text);margin-bottom:0.25rem;font-weight:400}
+    .coming-info p{font-size:0.8rem;color:var(--muted)}
+    .coming-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+
+    /* Axis grid */
+    .axis-section{max-width:700px;margin:0 auto;padding:0 2rem 80px}
+    .axis-header{margin-bottom:2rem}
+    .axis-header h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--navy)}
+    .axis-header p{color:var(--muted);font-size:0.88rem;margin-top:0.5rem}
+    .axis-table{width:100%;border-collapse:collapse;font-size:0.82rem}
+    .axis-table th{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);padding:0.75rem 1rem;text-align:left;border-bottom:1px solid var(--border);font-weight:400}
+    .axis-table td{padding:0.85rem 1rem;border-bottom:1px solid rgba(212,201,176,0.4);vertical-align:top}
+    .axis-table tr:last-child td{border-bottom:none}
+    .axis-name{font-weight:500;color:var(--navy)}
+    .axis-kailos{color:#2E6B8A}
+    .axis-arveld{color:#8A4A2E}
+    .axis-note{color:var(--muted);font-size:0.78rem}
+
+    @media(max-width:600px){
+      .state-card{grid-template-columns:1fr}
+      .state-card-map{min-height:140px}
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html" class="active">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="scenario-ordinary.html">Start Here</a>
+  <a href="index.html">Home</a>
+  <a href="annotated.html">Constitution</a>
+  <a href="states.html" class="active">States</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="papers.html">Essays</a>
+  <a href="constitution-v118.docx">Download DOCX</a>
+</div>
+
+<div class="hero">
+  <div class="hero-eyebrow">The Laboratory of Democracy</div>
+  <h1 class="hero-title">One Floor.<br><em>Many Governments.</em></h1>
+  <p class="hero-body">The Federated Republic's constitution sets a floor — rights, healthcare, housing, education, accountability — and then steps back. States decide everything above it. The result is something no existing federal system quite achieves: genuine structural diversity among states, none of it at the expense of citizens.</p>
+  <div class="divider"></div>
+</div>
+
+<div class="concept">
+  <div class="concept-block">
+    <div class="concept-label">The Design Choice</div>
+    <h3>Why Structural Diversity is a Feature</h3>
+    <p>Brandeis's "laboratory of democracy" has always had a dark side in existing federal systems — states experimenting downward, using autonomy to deny rights, suppress wages, exclude people. The Republic's constitutional floor changes this. Healthcare, housing, food security, and education are guaranteed regardless of which party controls the state legislature. A hostile Assembly cannot eliminate the BNF. It cannot gerrymander its own districts. It cannot accept corporate money. What states can do is decide everything above that floor: how to organize the executive, whether to recruit immigrants actively or passively, how far to push the BNF above 5%, how strong to make local government. Those are genuine choices with genuine consequences — and citizens are protected from the worst-case outcomes of each experiment.</p>
+  </div>
+  <div class="concept-block">
+    <div class="concept-label">The Founding Moment</div>
+    <h3>Every Territory Chose Its Government</h3>
+    <p>Every state that formed from a territory had a constitutional convention — a moment when real people sat down with a blank page above the constitutional floor and decided what kind of government they wanted to be. That founding act is constitutionally significant: the choices made — unicameral or bicameral, parliamentary or presidential, appointed or elected judiciary, strong local government or centralized state — are not inherited from a predecessor system. They are deliberate. They belong to the community that made them. Those choices create path dependencies that shape political culture for generations, and they carry a weight that purely inherited structures do not — because the people who made them are still alive, and their reasoning is on the permanent public record.</p>
+  </div>
+  <div class="concept-block">
+    <div class="concept-label">What the NRS Changes</div>
+    <h3>No State Has a Memory Hole</h3>
+    <p>Every state government action required to be published is permanent, unalterable, and publicly accessible from the moment it is recorded on the National Record System. State legislators' votes, state contracts, civil servant refusal reports, regulatory decisions — all of it is there, forever, searchable by anyone. The effect on political culture across all states — regardless of their other differences — is consistent: there is no comfortable private record. State governments in the Republic are not more honest than governments elsewhere because their officials are better people. They are more accountable because their records cannot disappear.</p>
+  </div>
+</div>
+
+<div class="const-anchor" style="padding:2.5rem 2rem;margin:0 2rem 60px;max-width:700px;margin-left:auto;margin-right:auto">
+  <div class="provision-label">§13.7 — State Structural Autonomy</div>
+  <blockquote>"Every State of the Republic retains the right to organize its internal government as it sees fit, provided it meets the minimum democratic legitimacy conditions of §13.2.e. This Constitution prescribes no required structure for State governments... The diversity of State governance structures is a constitutional feature, not a constitutional problem."</blockquote>
+  <div class="cite">Article XIII · National Expansion and State Devolution</div>
+</div>
+
+<div style="max-width:760px;margin:0 auto 3rem;padding:0 2rem">
+  <div style="background:var(--navy2);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">Interactive</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:rgba(245,240,232,0.95);font-weight:300">Design Your Own State</div>
+      <p style="color:rgba(245,240,232,0.55);font-size:0.85rem;margin-top:0.4rem;line-height:1.7">Configure eight axes of state government and see what kind of state you build in the Republic.</p>
+    </div>
+    <a href="state-builder.html" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:var(--gold);padding:0.75rem 1.5rem;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background 0.2s">Try the Builder →</a>
+  </div>
+</div>
+
+<div class="profiles-section">
+  <div class="profiles-header">
+    <h2>State Profiles</h2>
+    <p>Same constitutional floor. Radically different governments.</p>
+  </div>
+
+  <a href="state-kailos.html" class="state-card">
+    <div class="state-card-map" style="background:#1B3A4A">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M30 60 Q50 20 100 30 Q150 40 170 80 Q180 120 150 160 Q120 190 80 180 Q40 170 20 130 Q10 100 30 60Z" fill="none" stroke="white" stroke-width="1"/><path d="M60 100 L80 60 L130 70 L140 120 L100 150 L70 140Z" fill="white"/></svg>
+      <div class="state-card-map-content">
+        <span class="state-abbr">KL</span>
+        <span class="state-full">Kailos</span>
+      </div>
+    </div>
+    <div class="state-card-info">
+      <div>
+        <div class="state-meta">
+          <div class="state-name">The State of Kailos</div>
+          <div class="state-tagline">Coastal · Parliamentary · Compact-Present</div>
+        </div>
+        <p class="state-desc">A maritime and technology state that chose a unicameral Assembly and parliamentary executive at its founding convention. Home to the Kaili Compact — a recognized indigenous sovereign nation — and one of the Republic's most active Gate 1 immigration sponsors.</p>
+        <div class="state-tags">
+          <span class="tag gov">Parliamentary</span>
+          <span class="tag gov">Unicameral</span>
+          <span class="tag">Kaili Compact</span>
+          <span class="tag">Active Gate 1</span>
+          <span class="tag">BNF 7.2%</span>
+        </div>
+      </div>
+      <div class="state-cta" style="margin-top:1.5rem">Read profile</div>
+    </div>
+  </a>
+
+  <a href="state-arveld.html" class="state-card">
+    <div class="state-card-map" style="background:#3A2A1B">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="40" width="140" height="120" fill="none" stroke="white" stroke-width="1"/><rect x="50" y="60" width="100" height="80" fill="white"/><line x1="100" y1="40" x2="100" y2="160" stroke="white" stroke-width="0.5" opacity="0.5"/></svg>
+      <div class="state-card-map-content">
+        <span class="state-abbr">AV</span>
+        <span class="state-full">Arveld</span>
+      </div>
+    </div>
+    <div class="state-card-info">
+      <div>
+        <div class="state-meta">
+          <div class="state-name">The State of Arveld</div>
+          <div class="state-tagline">Landlocked · Governor · Resource Economy</div>
+        </div>
+        <p class="state-desc">A vast landlocked state built on timber, mining, and agricultural tradition, Arveld chose a separately elected Governor, a bicameral legislature, and strong county government at its founding. Conservative political culture, fiercely protective of State and local authority.</p>
+        <div class="state-tags">
+          <span class="tag gov">Presidential</span>
+          <span class="tag gov">Bicameral</span>
+          <span class="tag">Resource Economy</span>
+          <span class="tag">Passive Gate 1</span>
+          <span class="tag">BNF 5.4%</span>
+        </div>
+      </div>
+      <div class="state-cta" style="margin-top:1.5rem">Read profile</div>
+    </div>
+  </a>
+
+  <a href="state-varentis.html" class="state-card">
+    <div class="state-card-map" style="background:#2A1B3A">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="60" fill="none" stroke="white" stroke-width="1"/><circle cx="100" cy="100" r="35" fill="white"/><circle cx="100" cy="100" r="15" fill="none" stroke="rgba(27,42,74,0.5)" stroke-width="2"/></svg>
+      <div class="state-card-map-content">
+        <span class="state-abbr">VR</span>
+        <span class="state-full">Varentis</span>
+      </div>
+    </div>
+    <div class="state-card-info">
+      <div>
+        <div class="state-meta">
+          <div class="state-name">The State of Varentis</div>
+          <div class="state-tagline">Urban · City-State · Finance &amp; Culture</div>
+        </div>
+        <p class="state-desc">A city of 2.1 million that became a state. Where the state and the city are the same institution, local government means something entirely different, and the Senate's equal-state principle creates tensions that are felt every day.</p>
+        <div class="state-tags">
+          <span class="tag gov">Mayor-Governor</span>
+          <span class="tag gov">City-State Council</span>
+          <span class="tag">340 km²</span>
+          <span class="tag">BNF 8.8%</span>
+          <span class="tag">Active Gate 1</span>
+        </div>
+      </div>
+      <div class="state-cta" style="margin-top:1.5rem">Read profile</div>
+    </div>
+  </a>
+
+  <a href="state-ostmark.html" class="state-card">
+    <div class="state-card-map" style="background:#161624">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="100" x2="180" y2="100" stroke="white" stroke-width="0.5" opacity="0.3"/><line x1="100" y1="20" x2="100" y2="180" stroke="white" stroke-width="0.5" opacity="0.3"/><polygon points="100,30 160,80 140,160 60,160 40,80" fill="none" stroke="white" stroke-width="1" opacity="0.4"/><circle cx="100" cy="100" r="12" fill="white" opacity="0.7"/></svg>
+      <div class="state-card-map-content">
+        <span class="state-abbr">OS</span>
+        <span class="state-full">Ostmark</span>
+      </div>
+    </div>
+    <div class="state-card-info">
+      <div>
+        <div class="state-meta">
+          <div class="state-name">The State of Ostmark</div>
+          <div class="state-tagline">Post-Conflict · Parliamentary · Reconstructed</div>
+        </div>
+        <p class="state-desc">The only state admitted after Conflict-Affected Provisional Status. Its institutions were built under reconstruction conditions with active Inspectorate oversight. The question it raises is unlike any other state's: can constitutional resilience be built deliberately, or can it only be grown?</p>
+        <div class="state-tags">
+          <span class="tag gov">Parliamentary</span>
+          <span class="tag gov">Unicameral</span>
+          <span class="tag">Post-Conflict</span>
+          <span class="tag">TAM Active</span>
+          <span class="tag">BNF 6.1%</span>
+        </div>
+      </div>
+      <div class="state-cta" style="margin-top:1.5rem">Read profile</div>
+    </div>
+  </a>
+</div>
+
+<div class="axis-section">
+  <div class="axis-header">
+    <h2>How States Differ</h2>
+    <p>The same constitutional floor. The following choices are entirely each state's own.</p>
+  </div>
+  <table class="axis-table">
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th>Kailos</th>
+        <th>Arveld</th>
+        <th>Varentis</th>
+        <th>Ostmark</th>
+        <th>Constitutional Requirement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="axis-name">Executive Model</span></td>
+        <td class="axis-kailos">Premier (Assembly-elected)</td>
+        <td class="axis-arveld">Governor (directly elected)</td>
+        <td style="color:#5A3A7A">Mayor-Governor (directly elected)</td>
+        <td style="color:#4A4A6A">Premier (coalition, no presidential model viable)</td>
+        <td class="axis-note">None — §13.7</td>
+      </tr>
+      <tr>
+        <td><span class="axis-name">Legislature</span></td>
+        <td class="axis-kailos">Unicameral, 72 seats</td>
+        <td class="axis-arveld">Bicameral — Assembly + Senate</td>
+        <td style="color:#5A3A7A">City-State Council, 48 seats, 8 boroughs</td>
+        <td style="color:#4A4A6A">Unicameral, 64 seats + minority protection provision</td>
+        <td class="axis-note">Must exist · must be elected</td>
+      </tr>
+      <tr>
+        <td><span class="axis-name">Judiciary Selection</span></td>
+        <td class="axis-kailos">Appointed (panel + confirmation)</td>
+        <td class="axis-arveld">Elected (partisan ballot)</td>
+        <td style="color:#5A3A7A">Commission appointment + Council confirmation</td>
+        <td style="color:#4A4A6A">Appointed — multi-community commission + 2/3 confirmation</td>
+        <td class="axis-note">Must be independent</td>
+      </tr>
+      <tr>
+        <td><span class="axis-name">BNF Level</span></td>
+        <td class="axis-kailos">7.2% — includes dental, mental health</td>
+        <td class="axis-arveld">5.4% — minimum plus emergency supplement</td>
+        <td style="color:#5A3A7A">8.8% — includes housing, childcare, transit</td>
+        <td style="color:#4A4A6A">6.1% — above floor, fiscally constrained</td>
+        <td class="axis-note">5% constitutional floor</td>
+      </tr>
+      <tr>
+        <td><span class="axis-name">Gate 1 Immigration</span></td>
+        <td class="axis-kailos">Active recruiter — maritime, tech</td>
+        <td class="axis-arveld">Passive — accepts federal applications</td>
+        <td style="color:#5A3A7A">Highly active — sector-specific quarterly targeting</td>
+        <td style="color:#4A4A6A">Passive — state too fragile for active recruitment</td>
+        <td class="axis-note">Participation optional</td>
+      </tr>
+      <tr>
+        <td><span class="axis-name">Local Government</span></td>
+        <td class="axis-kailos">Strong city authority (Varesse)</td>
+        <td class="axis-arveld">Strong county authority (44 counties)</td>
+        <td style="color:#5A3A7A">8 borough councils within single city</td>
+        <td style="color:#4A4A6A">Moderate — reconstruction-era central administration</td>
+        <td class="axis-note">Subsidiarity principle — §11.2.a</td>
+      </tr>
+      <tr>
+        <td><span class="axis-name">Indigenous Compact</span></td>
+        <td class="axis-kailos">Present — Kaili Nation</td>
+        <td class="axis-arveld">Absent — no recognized compact</td>
+        <td style="color:#5A3A7A">Absent — no compact territory</td>
+        <td style="color:#4A4A6A">Absent — minority protection via State Charter instead</td>
+        <td class="axis-note">Governed by Article XIV if present</td>
+      </tr>
+      <tr>
+        <td><span class="axis-name">NRS Node</span></td>
+        <td class="axis-kailos">State node + Varesse city node</td>
+        <td class="axis-arveld">State node + 6 county nodes</td>
+        <td style="color:#5A3A7A">State node + 8 borough nodes</td>
+        <td style="color:#4A4A6A">State node — built during Provisional Status period</td>
+        <td class="axis-note">Minimum one node required</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+function toggleMobileNav(){
+  const m=document.getElementById('mobileMenu');
+  const b=document.querySelector('.hamburger');
+  const open=m.classList.toggle('open');
+  b.setAttribute('aria-expanded',open);
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobileMenu');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!document.querySelector('.hamburger').contains(e.target)){
+    m.classList.remove('open');
+    document.querySelector('.hamburger').setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>

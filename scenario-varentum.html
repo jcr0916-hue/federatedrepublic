@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Immigration Scenario — The Federated Republic</title>
+  <meta name="description" content="Testing §6.1's statutory gate framework under sustained immigration pressure and three discriminatory legislative attempts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}</style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+
+  <div class="page-wrap">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The Immigration Scenario</h1>
+      <p class="scenario-premise">The Republic of Varentum faces a tripling of immigration petitions from a region with which it has complicated history. A parliamentary coalition intends to use its statutory authority over the Gate 2 certification categories to restrict that immigration. Three attempts follow. The scenario tests whether the altitude-reduced §6.1 gates — with Parliament defining the categories by statute rather than the constitution specifying them — creates discriminatory application pathways.</p>
+      <div class="provisions-tested"><span class="prov-tag">§6.1.a Gate 1 — State Sponsorship</span><span class="prov-tag">§6.1.b Gate 2 — Federal Certification</span><span class="prov-tag">§1.8 Equality</span><span class="prov-tag">§9 NRS Statistics Publication</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>The immigration scenario has a specific purpose: to test whether the altitude-reduced §6.1 gates — with Parliament now defining the certification categories by statute rather than the constitution specifying them — creates discriminatory application pathways. The setting is a Republic under sustained immigration pressure from two source regions, one culturally similar and one not, with a parliamentary coalition determined to restrict immigration from the latter through statutory gate manipulation.</p>
+
+      <h2>Setting — The Republic of Varentum</h2>
+
+      <p>Year 10. Population 14 million, eight States. 23% of the skilled workforce over the past decade has been foreign-born, primarily from two source regions: the Aldric region (culturally similar, high educational attainment, smooth integration) and the Karesh Basin (predominantly Muslim, a history of conflict with Varentum's predecessor state, distinct cultural tradition, now 14% of Varentum's population). A global economic disruption in Year 8 triggers a Karesh Basin recession. Annual Gate 1 petition volume from Karesh Basin applicants triples within 18 months. A parliamentary coalition forms around restricting it. Parliament has statutory authority over the four Gate 2 certification categories. The coalition intends to use it.</p>
+
+      <h2>Three Attempts — Year 10</h2>
+
+      <h3>Attempt 1 — The Civic Integration Assessment</h3>
+      <p>Parliament adds a fifth Gate 2 category: the Civic Integration Assessment, requiring applicants to demonstrate "familiarity with and commitment to the Republic's constitutional values." The first six months of CIA results are published to the NRS. Karesh Basin applicants fail at 3.4 times the rate of Aldric applicants with comparable educational backgrounds. The correlation is with religious affiliation, not constitutional knowledge.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Disparity Presumption Works</span>
+        <p>The EI publishes its finding immediately: the CIA produces statistically significant disparities by national origin and religion, presumptively void under the constitutional prohibition on certification categories whose documented effect is §1.8 discrimination. The Supreme Court rules 6-3 in seven months: the CIA is not a knowledge test — it tests belief rather than fact; it produces documented §1.8 disparities the government cannot justify; and it constitutes ideological screening by another name. The EI's published NRS data is the evidentiary foundation of the ruling.</p>
+        <p>Without the disparity presumption, the CIA might have processed tens of thousands of applications discriminatorily before a court ruled. The presumption makes the EI's monthly statistics immediately actionable rather than merely evidence in a longer challenge.</p>
+      </div>
+
+      <h3>Attempt 2 — The National Security Manipulation</h3>
+      <p>The coalition turns to the national security certification category — presidential domain. The Director of Intelligence is asked to expand the criteria to presume any applicant from a Karesh Basin state that has ever harboured terrorist activity is a national security concern, shifting the burden to the applicant to disprove it. The President has genuine constitutional authority over national security assessments. He also has a §1.8 obligation. A blanket presumption based on national origin is facial national origin discrimination regardless of the security framing.</p>
+
+      <p>The Emergency Panel rules on a Senate challenge: §1.8's prohibition applies to all government actors including the Director of Intelligence. A blanket national origin presumption is not a specific, credible, documented concern regarding the individual applicant — it is a stereotype applied to a population. The individual-specific standard is constitutionally required. The President accepts the ruling. The presumption is not implemented.</p>
+
+      <h3>Attempt 3 — The Gate 1 Financial Penalty</h3>
+      <p>Parliament imposes full economic liability on States that sponsor Karesh Basin applicants — five years of public services costs, financial penalties for any crime during the sponsorship period. The Supreme Court rules 5-4: where federal regulation imposes differential costs by national origin on State sponsors, making sponsorship of Karesh Basin applicants significantly more expensive than Aldric applicants with identical profiles, it constitutes constructive discrimination against a §1.8 characteristic. The provision is void.</p>
+
+      <p>The 5-4 ruling produces the Republic's most contested constitutional opinion of the founding decade. The four dissenters argue the majority eliminated Parliament's authority to reflect legitimate risk differentiation. The majority's response: risk differentiation by national origin is precisely what §1.8 prohibits.</p>
+
+      <h2>Year 11-14 — The Framework That Holds</h2>
+
+      <p>Having failed three times, Parliament enacts a Gate 2 statute with genuinely non-discriminatory categories: identity verification through a document authentication standard applying equally to all nationalities; criminal history through a conviction record standard with no national origin weighting; national security through the individual-specific documented concern standard the Panel required; and self-sufficiency through an employment or sponsorship guarantee standard applying equally.</p>
+
+      <p>Gate 2 approval rates for Karesh Basin applicants remain lower than Aldric applicants — not because of discriminatory categories but because of structural factors: lower average self-sufficiency scores reflecting economic conditions in the Basin, higher rates of identity document issues reflecting the Basin's documentation infrastructure. The EI's annual statistics document these gaps explicitly. The immigration debate continues — over how to address structural factors producing differential outcomes, over whether the self-sufficiency standard should be revised. These are political debates conducted within a constitutional framework that prohibits the most obvious discriminatory mechanisms and documents every outcome.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Verdict at Year 15</span>
+        <p>Three discriminatory attempts, all struck down. The altitude pass was correct — the four-category constitutional specification was statute-level detail. The constitutional constraints that remain (no ideological screening, no §1.8 disparities, precise written grounds for denial) are sufficient and are doing real work. The NRS publication requirement and the disparity presumption together constitute the most important constitutional innovation the scenario tested: continuous documentation rather than episodic challenge. Every month's immigration statistics are on the NRS, every approval and denial rate disaggregated by national origin, every pattern visible to any citizen who looks.</p>
+        <p>What the scenario did not resolve: the structural disparity problem — Karesh Basin applicants producing lower approval rates because of their origin circumstances rather than discriminatory categories — is not a constitutional problem the document can solve. §1.8 prohibits discrimination by national origin. It does not prohibit genuine differences in outcomes that reflect genuine differences in circumstances. Whether those differences are the Republic's obligation to remedy through modified standards is a political question the constitutional framework correctly leaves to democratic deliberation — documented, published, and publicly visible.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-aldric.html">← The Voluntary Federation</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-american.html">The American Republic →</a>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

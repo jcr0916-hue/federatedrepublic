@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Judicial Election Scenario — The Federated Republic</title>
+  <meta name="description" content="A Supreme Court seat opens. The Triad nominates three candidates from the Qualified Jurist Pool. One is brilliant and polarising. One is safe and forgettable. One is unexpected. A focused scenario testing §4.2.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .candidate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+    .candidate-card{background:white;border:1px solid var(--border);padding:1.25rem 1rem}
+    .candidate-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.2rem}
+    .candidate-nominator{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;font-family:'JetBrains Mono',monospace}
+    .candidate-card p{font-size:0.82rem;color:var(--muted);line-height:1.65;margin-bottom:0}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .rcv-result{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .rcv-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .rcv-row{display:flex;justify-content:space-between;align-items:center;padding:0.4rem 0;border-bottom:1px solid var(--border);font-size:0.88rem}
+    .rcv-row:last-child{border-bottom:none;font-weight:600;color:var(--navy)}
+    .rcv-candidate{color:var(--text)}
+    .rcv-pct{font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:var(--gold)}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .outcome p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}.candidate-grid{grid-template-columns:1fr}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="scenario-meta">
+      <span class="scenario-tag">Focused Scenario · §4.2 Supreme Court Election</span>
+      <h1 class="scenario-title">The Judicial Election Scenario</h1>
+      <p class="scenario-premise">A Supreme Court seat opens mid-term. The Triad nominates three candidates from the Qualified Jurist Pool. The Senate confirms all three eligible. Citizens choose. What does a judicial election actually look like?</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§4.2.a Triad Nomination</span>
+        <span class="prov-tag">§4.2.b Senate Eligibility</span>
+        <span class="prov-tag">§4.2.c Direct Public Election</span>
+        <span class="prov-tag">§4.3.b Qualified Jurist Pool</span>
+        <span class="prov-tag">§4.2.f Recusal Framework</span>
+      </div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>Justice Amara Chen announces her retirement fourteen months before the end of her 12-year term — the first voluntary early retirement in the Republic's history. The seat has handled three of the Republic's most consequential constitutional rulings. Her departure triggers the Triad nomination process: the House, the Prime Minister, and the President each nominate one candidate from the Qualified Jurist Pool. The Pool currently contains 847 names. Each nominator has six weeks.</p>
+
+      <p>The three nominations arrive within days of each other. The EI publishes factual assessments of all three to the NRS within 72 hours of each nomination — professional background, published decisions, academic work, no editorial commentary. Citizens can read all of it before the Senate eligibility vote begins.</p>
+
+      <div class="candidate-grid">
+        <div class="candidate-card">
+          <div class="candidate-name">Dr. Yaw Asante-Mensah</div>
+          <div class="candidate-nominator">Nominated by the House</div>
+          <p>Former Chief Justice of the Northern State Supreme Court. 22 years on the bench. Known for methodical, narrow rulings. Reversed on constitutional grounds three times in eleven years. No published academic work outside judicial opinions. Uncontroversial.</p>
+        </div>
+        <div class="candidate-card">
+          <div class="candidate-name">Prof. Leila Nazari</div>
+          <div class="candidate-nominator">Nominated by the PM</div>
+          <p>Constitutional law scholar. 14 years on the bench, 9 years academia. Author of the leading treatise on the Republic's dual executive jurisprudence. Has written publicly that the current Emergency Panel jurisdiction is too narrow. Strong views, clearly documented. Polarising.</p>
+        </div>
+        <div class="candidate-card">
+          <div class="candidate-name">Justice Kofi Darko-Mensah</div>
+          <div class="candidate-nominator">Nominated by the President</div>
+          <p>Currently serving on the Second Circuit Court of Appeal. Former public defender — the first in the Qualified Jurist Pool with that background. No published academic work. Known for proportionality reasoning in Article I cases. Largely unknown outside the legal profession.</p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">Senate Eligibility Vote — Round 1</div>
+        <div class="beat-title">All three confirmed eligible</div>
+        <p>The Senate's role is narrow: confirm that each candidate meets the constitutional qualifications for Pool membership, not evaluate their jurisprudential philosophy. All three are Pool members — the eligibility question is largely procedural. The Senate confirms all three eligible by the required supermajority within the statutory period. The Senate Judiciary Committee holds hearings. Three Senators vote against Nazari's eligibility on the grounds that her published views on Emergency Panel jurisdiction constitute pre-commitment to a ruling. The Supreme Court, in an expedited ruling, confirms that published academic views do not constitute disqualifying pre-commitment. The confirmation stands. The election proceeds with all three candidates.</p>
+      </div>
+
+      <div class="divider">✦</div>
+
+      <p>The campaign runs eight weeks. Public financing only — each candidate receives the same campaign allocation from the Electoral Commission. No private funds. The EI's factual assessments are the baseline material for every voter. The candidates hold four nationally broadcast debates. The format is constitutional law questions put by a panel of legal academics — not gotcha moments, but genuine questions about how the candidates would approach hard cases. The debates are, by general consensus, the most substantive political broadcast in the Republic's history to that point.</p>
+
+      <p>Prof. Nazari is brilliant in the debates and makes no effort to hide her views. She argues that the Emergency Panel's jurisdiction should extend to the proportionality of emergency measures, not just their domain boundary — a position that would significantly expand judicial oversight of executive emergency powers. Justice Darko-Mensah argues methodically for proportionality as the central constitutional principle and discusses his public defender experience in terms of how constitutional rights function for citizens without resources. Dr. Asante-Mensah argues for judicial restraint and the importance of narrow rulings that don't resolve questions the facts don't require.</p>
+
+      <p>The national RCV election is held on the same day as the Republic's municipal elections — a deliberate choice to drive participation. Turnout: 71%.</p>
+
+      <div class="rcv-result">
+        <div class="rcv-label">National RCV Results — First Preferences</div>
+        <div class="rcv-row"><span class="rcv-candidate">Prof. Leila Nazari</span><span class="rcv-pct">38.2%</span></div>
+        <div class="rcv-row"><span class="rcv-candidate">Justice Kofi Darko-Mensah</span><span class="rcv-pct">34.7%</span></div>
+        <div class="rcv-row"><span class="rcv-candidate">Dr. Yaw Asante-Mensah</span><span class="rcv-pct">27.1%</span></div>
+      </div>
+
+      <div class="rcv-result">
+        <div class="rcv-label">After Elimination of Asante-Mensah — Final Count</div>
+        <div class="rcv-row"><span class="rcv-candidate">Justice Kofi Darko-Mensah</span><span class="rcv-pct">52.4%</span></div>
+        <div class="rcv-row"><span class="rcv-candidate" style="color:var(--muted)">Prof. Leila Nazari</span><span class="rcv-pct" style="color:var(--muted)">47.6%</span></div>
+      </div>
+
+      <p>Asante-Mensah's second-preference votes split: 61% to Darko-Mensah, 39% to Nazari. Citizens who preferred the most restrained candidate, when asked to choose between the polarising scholar and the methodical circuit judge, chose the judge. Justice Darko-Mensah is elected. The Electoral Commission certifies the result. He is sworn in twenty-two days later.</p>
+
+      <div class="finding">
+        <span class="finding-label">§4.2.f — The Recusal Question That Arises Immediately</span>
+        <p>Three months into his term, Justice Darko-Mensah is assigned to a case involving the public defenders' office of one of the States — an Article I challenge to mandatory representation caseload limits. His former employer. The recusal framework Parliament enacted under §4.2.f requires recusal where a justice received material campaign support from a party to the case, or has a direct financial interest. The public defenders' office is a State government body, not a campaign donor. There is no financial interest. The framework does not require recusal. The JI publishes a note confirming this. Darko-Mensah does not recuse. He writes the majority opinion, 5-4, finding the caseload limits violate the right to effective representation under §1.17. His opinion does not reference his professional background. It references the constitutional text and three prior rulings. It is subsequently cited fourteen times in the first two years after publication.</p>
+      </div>
+
+      <div class="outcome">
+        <span class="outcome-label">What This Scenario Tests</span>
+        <p>Three things the appointment model cannot test because they don't happen under appointment. First, that the Qualified Jurist Pool separates the competence question from the electoral question. No unqualified candidate appeared on the ballot. The election chose among three demonstrably qualified jurists — and chose the one whose electoral coalition was broader than his first-preference count suggested. RCV produced a different result than plurality would have: Nazari would have won on first preferences alone. The majority chose differently when asked to rank rather than select.</p>
+        <p>Second, that published views are not disqualifying. Nazari's well-documented position on Emergency Panel jurisdiction — the most controversial element of her candidacy — survived a Senate eligibility challenge and a Supreme Court ruling. The electorate then weighed those views against Darko-Mensah's record and chose him. Democratic accountability produced a result, not constitutional suppression of dissenting judicial opinion.</p>
+        <p>Third, that the recusal framework works as a contained question separate from the appointment question. Darko-Mensah's background was visible to every voter. His first assignment testing that background was handled by the framework — which found no recusal required — and by the judge himself, who ruled on constitutional text rather than personal history. The NRS records both the JI's recusal note and the opinion. Both are there for any citizen who wants to evaluate whether the elected court is working as designed.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-amendment.html">← The Amendment Scenario</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

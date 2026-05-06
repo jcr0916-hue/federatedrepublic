@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Transition Scenario — The Federated Republic</title>
+  <meta name="description" content="A hypothetical twenty-two-year history of the Federated Republic, testing the v118 constitution through real governance challenges — extended edition.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff;--green:#1a4a2a;--greenlight:#f0fff4;--red:#8b0000;--redlight:#fff0f0;--amber:#7b5800;--amberlight:#fffbf0;--teal:#1a4a4a;--teallight:#f0ffff;--purple:#4b0082;--purplelight:#f3e5f5}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:17px;line-height:1.75;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-back{color:rgba(245,240,232,0.7);text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
+    .nav-back:hover{color:var(--gold)}
+    .nav-back::before{content:'← ';opacity:0.5}
+    .scenario-hero{padding:9rem 2rem 5rem;background:var(--navy);text-align:center;position:relative;overflow:hidden}
+    .scenario-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,0.08) 0%,transparent 60%)}
+    .hero-tag{font-size:0.72rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:block}
+    .scenario-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:1.5rem}
+    .scenario-hero h1 em{font-style:italic;color:var(--gold)}
+    .hero-rule{width:48px;height:1px;background:var(--gold);margin:0 auto 2rem}
+    .hero-sub{color:rgba(245,240,232,0.65);max-width:600px;margin:0 auto 2.5rem;font-size:1rem;line-height:1.7}
+    .hero-meta{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap}
+    .meta-item{text-align:center}
+    .meta-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);display:block;margin-bottom:0.25rem}
+    .meta-value{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);font-weight:600}
+    .intro-bar{background:var(--cream2);border-bottom:1px solid var(--border);padding:2rem;text-align:center}
+    .intro-bar p{max-width:700px;margin:0 auto;color:#555;font-size:0.95rem;line-height:1.7}
+    .intro-bar strong{color:var(--navy);font-weight:600}
+    .scenario-body{max-width:760px;margin:0 auto;padding:4rem 2rem 6rem}
+    .year-block{margin-bottom:5rem}
+    .year-header{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--navy)}
+    .year-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--navy);line-height:1}
+    .year-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);line-height:1.3}
+    .year-period{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:0.25rem}
+    .year-block p{margin-bottom:1.2rem;color:#444}
+    .finding{padding:1.5rem 1.75rem;margin:2rem 0;border-left:4px solid}
+    .finding-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem;display:block}
+    .finding p{font-size:0.95rem;line-height:1.7;margin:0}
+    .finding.works{border-color:#2a6b3a;background:var(--greenlight)}
+    .finding.works .finding-label{color:#2a6b3a}
+    .finding.gap{border-color:var(--amber);background:var(--amberlight)}
+    .finding.gap .finding-label{color:var(--amber)}
+    .finding.critical{border-color:var(--red);background:var(--redlight)}
+    .finding.critical .finding-label{color:var(--red)}
+    .finding.note{border-color:var(--navy);background:var(--cream2)}
+    .finding.note .finding-label{color:var(--navy)}
+    .finding.teal{border-color:var(--teal);background:var(--teallight)}
+    .finding.teal .finding-label{color:var(--teal)}
+    .finding.purple{border-color:var(--purple);background:var(--purplelight)}
+    .finding.purple .finding-label{color:var(--purple)}
+    .pull-quote{margin:3rem 0;padding:2rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center}
+    .pull-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.6rem);font-style:italic;color:var(--navy);line-height:1.5;max-width:600px;margin:0 auto 0.75rem}
+    .pull-quote cite{font-size:0.8rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase}
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin:2rem 0}
+    .stat{background:var(--white);padding:1.25rem;text-align:center}
+    .stat-value{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--navy);line-height:1;margin-bottom:0.25rem}
+    .stat-label{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+    .section-divider{text-align:center;margin:4rem 0;display:flex;align-items:center;gap:1.5rem}
+    .section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+    .divider-mark{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);font-weight:300}
+    .part-header{background:var(--navy2);padding:2rem;margin:5rem -2rem 3rem;text-align:center}
+    .part-header h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--white);margin-bottom:0.4rem}
+    .part-header p{font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.7)}
+    .closing{background:var(--navy);color:var(--white);padding:4rem 2rem;text-align:center;margin-top:4rem}
+    .closing h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;margin-bottom:1rem;color:var(--white)}
+    .closing p{color:rgba(245,240,232,0.65);max-width:540px;margin:0 auto 2rem;font-size:0.95rem}
+    .btn-primary{background:var(--gold);color:var(--navy2);padding:0.85rem 2rem;text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;transition:background 0.2s;display:inline-block}
+    .btn-primary:hover{background:var(--gold2)}
+    .provision-tag{display:inline-block;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;background:var(--navy);color:var(--gold);padding:0.15rem 0.5rem;margin-right:0.4rem;vertical-align:middle;font-weight:600}
+    footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2.5rem 2rem;text-align:center}
+    footer p{font-size:0.8rem;color:rgba(245,240,232,0.3);margin-bottom:0.3rem}
+    .footer-links{display:flex;gap:1.5rem;justify-content:center;list-style:none;margin-top:1rem}
+    .footer-links a{font-size:0.75rem;color:rgba(245,240,232,0.4);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+    .footer-links a:hover{color:var(--gold)}
+    @media(max-width:600px){.stats-row{grid-template-columns:repeat(2,1fr)}.hero-meta{gap:2rem}.year-header{flex-direction:column;gap:0.25rem}.part-header{margin:5rem -1rem 3rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+<section class="scenario-hero">
+  <span class="hero-tag">Constitutional Scenario — v118</span>
+  <h1>The Transition Scenario<br><em>The Federated Republic</em></h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">A long-form constitutional scenario tracing the Republic from ratification through its first generation — testing the dual executive, emergency provisions, devolution, the National Trust, and the amendment architecture against twenty-five years of political reality.</div>
+    <div class="meta-item"><span class="meta-label">Version</span><span class="meta-value">v118</span></div>
+    <div class="meta-item"><span class="meta-label">Presidential Elections</span><span class="meta-value">Three</span></div>
+    <div class="meta-item"><span class="meta-label">All Characters</span><span class="meta-value">Fictional</span></div>
+  </div>
+</section>
+
+<div class="intro-bar">
+  <p>Every provision invoked in this scenario exists in the current v118 document. <strong>New in this edition:</strong> the first Declaration of National Emergency under §1.25, the Emergency Rights Writ under §14.3.c, a challenge to the permanently unamendable rights under §15.3.a, and the first voluntary devolution under §13.4.</p>
+</div>
+
+<div class="scenario-body">
+
+  <div class="part-header"><p>Part One</p><h2>Convention and Ratification — 2026 to 2029</h2></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">01</div>
+      <div><div class="year-title">Philadelphia, Again</div><div class="year-period">2026 — 2029</div></div>
+    </div>
+    <p>The constitutional convention opens in Philadelphia in January 2027 with 165 delegates and a working draft stress-tested against every governance crisis its authors could imagine. The dual executive nearly sinks it three times. The National Record System passes 134-31 — the easiest major vote. The elected Supreme Court passes 91-74 after three weeks of debate so heated that the air conditioning breaks and nobody notices until morning.</p>
+    <p>The draft contains things not all prior constitutions had made explicit: a <span class="provision-tag">§15.6 Supremacy Clause</span> stating that the Constitution is supreme law and any inconsistent provision of law is without force. An explicit <span class="provision-tag">§1.19 Right to Vote</span> — the first time suffrage is stated as a constitutional right rather than implied by structure. An <span class="provision-tag">§1.25 Emergency Derogation Framework</span> establishing exactly what happens to rights during a genuine national emergency, and which five rights can never be touched regardless of circumstances. The ratification fight lasts fourteen months. The 38th ratification comes from Nebraska at 11:43 PM on New Year's Eve, 2028. All eight non-ratifying states eventually choose Statehood. Texas subdivides. One Texas entity enters as a Territory.</p>
+
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">02</div>
+      <div><div class="year-title">Day Zero and First Elections</div><div class="year-period">2029 — 2030</div></div>
+    </div>
+    <p>Day Zero: January 1, 2029. The joint Inspectorate panel convenes in the Library of Congress. Twelve states initially refuse to build NRS nodes. The panel's first published finding notes states without nodes will not complete Phase 2. Three back down in a week. The remaining nine take six months and a Supreme Court ruling. On January 15, 2030, the Republic holds its first National Election Day: 74.8% turnout, the highest since 1876. Governor Helena Marchand of Colorado wins the presidency with a combined score of 127. PM Denise Okafor-Williams takes the confidence vote 318-294 — exactly one above the absolute majority threshold.</p>
+    <div class="finding works">
+      <span class="finding-label">§10.1 National Endowment — First Use of "Must"</span>
+      <p>Parliament must establish the National Endowment reserve fund. The word "must" produces exactly the intended result: Parliament cannot defer. The fund is established in month four. A "may" provision would have sat unlegislated for a decade. The distinction between mandatory and permissive constitutional language matters more than any single policy it produces.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="part-header"><p>Part Two</p><h2>The First Republic — 2030 to 2036</h2></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">02<span style="font-size:0.5em;vertical-align:super">½</span></div>
+      <div><div class="year-title">The First Budget Cycle — How the Constitution Governs Finance</div><div class="year-period">2030 — 2031</div></div>
+    </div>
+    <p>The Republic's first budget cycle begins in September 2030. The Monetary Authority has already published its GNR certification: 4.7 trillion in gross national revenue. Five percent is 235 billion — the constitutional BNF floor. Parliament cannot go below it. What Parliament argues about is everything above it.</p>
+    <p>The House passes a budget with a 340 billion deficit. The MA publishes its debt-to-GNR assessment: the inherited debt ratio requires a 2/3 supermajority for deficit authorization. The House has 412 seats. Two-thirds is 275 votes. The governing coalition holds 318. Three backbench members vote no in protest of insufficient infrastructure spending. The coalition scrambles. Final vote: 276-136. One vote above the constitutional threshold.</p>
+    <div class="finding works">
+      <span class="finding-label">§10.4 The Monetary Authority — The Number That Cannot Be Negotiated</span>
+      <p>The MA's debt-to-GNR ratio assessment is not advisory. It determines what supermajority Parliament must achieve to authorize deficit spending. Parliament cannot instruct the MA to produce a more favorable assessment. It cannot redefine GNR to lower the ratio. The first budget cycle passes because the coalition holds the votes — not because the constitutional constraint was negotiated away. The BNF is fully funded at 237 billion, two billion above the floor. The MA certifies compliance and publishes the full methodology to the NRS. The certification and the methodology are there forever. Every future Parliament inherits not just the law but the record of how the first Parliament met it.</p>
+    </div>
+    <p>The PM returns two bills with published Statements of Objection: a housing subsidy amendment she assesses as BNF-evasion (a parallel program designed to reduce direct BNF spending while maintaining the nominal 5% formula), and a defense appropriations rider attached to a domestic infrastructure bill. The House overrides the first by absolute majority. The rider is returned by the President on Shield Law grounds before the PM's objection arrives. The Emergency Panel rules within 48 hours: the rider is outside the defense domain. It is stripped. The bill passes clean.</p>
+    <div class="finding works">
+      <span class="finding-label">§10.1.a The Anti-Evasion Principle — The Constitutional Floor Has Teeth</span>
+      <p>The PM's housing objection — "this amendment achieves through a parallel program what §10.1.a prohibits the BNF from achieving through redefinition" — does not succeed legislatively; the House overrides it by absolute majority. It succeeds constitutionally: the PM's objection is on the NRS, the House override is on the NRS, and the MA's subsequent finding that the parallel program does reduce effective BNF provision is also on the NRS. The next election will have access to all three. The anti-evasion principle operates on political incentives as much as legal constraints: a Parliament that games the BNF formula will have a documented, permanent, publicly accessible record of having done so.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">03</div>
+      <div><div class="year-title">The First Constitutional Challenge</div><div class="year-period">2031</div></div>
+    </div>
+    <p>A mid-Atlantic state legislature passes a statute exempting executive communications from NRS publication. The Supreme Court rules 7-2 within three weeks. The majority's opening line became the most-cited sentence in early Republic constitutional law.</p>
+    <div class="pull-quote">
+      <blockquote>"This Constitution is the supreme law of the Federated Republic. The word <em>supreme</em> is not decorative."</blockquote>
+      <cite>Supreme Court majority opinion — 2031</cite>
+    </div>
+    <p>The statute is void. Fourteen other states quietly revise pending legislation within 30 days. The first substantive constitutional challenge arrives eighteen months after ratification and is resolved in three weeks. The clause holds on the first attempt.</p>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">03<span style="font-size:0.5em;vertical-align:super">½</span></div>
+      <div><div class="year-title">The CLT Administrator — First Appointment</div><div class="year-period">2031</div></div>
+    </div>
+    <p>PM Okafor-Williams nominates the Republic's first Constitutional Logic Test Administrator in October 2031. The Candidate Register has seven names on it — the EI has published factual assessments of each, covering professional background in constitutional law, test design, civic education, and administrative management. The assessments are informational. The PM's choice is her own. She nominates Dr. Amara Diallo, citing the EI's assessment of her operational experience administering large-scale professional certification programs — a factor the PM weights more heavily than the deeper academic constitutional law backgrounds of other candidates on the Register. There is no ranking in the Register. The PM's judgment is her own. The nomination generates moderate controversy: the Senate Judiciary Committee invites the EI to testify on its assessment methodology.</p>
+    <div class="finding works">
+      <span class="finding-label">§5.4.b The Candidate Register — Transparency Before Nomination</span>
+      <p>The EI's testimony before the Judiciary Committee is the first public examination of how the Register mechanism works in practice. The Director explains: the assessment is factual, not evaluative. It does not rank candidates. It does not recommend. It documents. The PM decides from the documented pool. The Senate confirms or declines. The assessment of the eventual nominee is in the NRS before the confirmation hearing begins. Every Senator voting on the confirmation has the same factual basis. The nominee is confirmed 71-29. The dissenting votes are on policy grounds — three Senators believe the CLT should be harder; five believe it should not exist. Both positions are published to the NRS. The Administrator serves her 5-year term, administers 340,000 examinations, and leaves. The Register already has her successor's assessments in progress.</p>
+    </div>
+    <p>The CLT's first year produces an unexpected finding: pass rates vary significantly by State of residence, with States that had stronger civics curricula before ratification showing pass rates 12-15 points higher than States that did not. The LI publishes this finding in its annual report. Parliament does not mandate curriculum changes — that is States' domain under §1.23.b. But eleven States voluntarily reform their civics curricula within eighteen months of the finding. The pass rate variance narrows by 8 points over the next four years.</p>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">04</div>
+      <div><div class="year-title">§1.19 — The Right to Vote, First Invoked</div><div class="year-period">2032</div></div>
+    </div>
+    <p>Rural counties in a Mountain Interior state consolidate polling locations, reducing access points by 60% and tripling average travel distance to vote. The Electoral Commission reports a projected significant participation reduction under <span class="provision-tag">§7.3.c</span>. Three citizens petition the Supreme Court under <span class="provision-tag">§1.19</span> — the right that prohibits any government action making voting "materially more difficult" for any class of eligible citizens. The Court rules in 11 days: unconstitutional. The "materially more difficult" standard is deliberately imprecise — a standard for courts to apply to facts, not a bright line to be gamed. Tripling travel distance qualifies. Nineteen other states quietly reverse pending polling consolidations within 30 days.</p>
+    <div class="finding works">
+      <span class="finding-label">§1.19 Right to Vote — Explicit Text vs. Structural Implication</span>
+      <p>Constitutional systems that lack an explicit suffrage right protect voting through improvised interpretation of structural provisions. The Republic protects it through direct constitutional text. "No government action may make voting materially more difficult for any class of eligible citizens" gives courts a clear standard and citizens a clear right. The right was stated. It held on the first challenge.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">05</div>
+      <div><div class="year-title">The First Constructive No-Confidence</div><div class="year-period">2033</div></div>
+    </div>
+    <p>The Constitutional Democrats file the Republic's first constructive vote of no confidence. Their proposed successor: Senator William Adeyemi of Texas, broadly respected. The problem is the math. They hold 164 seats and need 307. The New Federalists issue a three-sentence statement: the governing coalition's fiscal record is satisfactory; the PM's use of the suspensive veto was appropriate; "we do not bring down functional governments to hand power to parties who governed the predecessor government into the ground." Motion fails 241-371. PM Okafor-Williams: "I was always confident in the arithmetic."</p>
+    <div class="finding works">
+      <span class="finding-label">§2.3.b Constructive No-Confidence — The Right Mechanism</span>
+      <p>Requiring simultaneous election of a named successor changes the calculation entirely. Removing an unpopular PM is easy when you only need a majority against. Agreeing on a replacement is harder. The 2033 attempt fails not because the opposition lacks votes against the PM, but because it cannot find 307 votes for a specific alternative. The mechanism worked exactly as designed.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">06</div>
+      <div><div class="year-title">The First Presidential Transfer</div><div class="year-period">2036 — The Moment the Republic Proved It Was Real</div></div>
+    </div>
+    <p>Governor Marcus Webb Jr. of Ohio — son of the convention delegate who argued most forcefully against the dual executive — wins the second presidential election with a combined score of 134, defeating Deputy PM Sarah Okonkwo (128) despite receiving fewer first-preference votes nationally. The regional breadth weighting produces its intended result.</p>
+    <p>The transfer ceremony: President Marchand says twelve words. "The office is yours. The record speaks for itself. Good luck." Webb puts his prepared remarks in his jacket pocket and says four: "I will try to deserve that." The NRS records the transfer at 12:00:00.000 PM. Webb's credentials activate at noon whether Marchand cooperates or not. The constitutional machinery required no goodwill — only that the participants show up.</p>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-value">74.8%</div><div class="stat-label">First election turnout</div></div>
+      <div class="stat"><div class="stat-value">4.2B</div><div class="stat-label">NRS records by 2038</div></div>
+      <div class="stat"><div class="stat-value">157</div><div class="stat-label">Senate trials, Years 1-8</div></div>
+      <div class="stat"><div class="stat-value">0</div><div class="stat-label">Corrupted NRS records</div></div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="part-header"><p>Part Three</p><h2>The Webb Years and the First Emergency — 2036 to 2042</h2></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">07</div>
+      <div><div class="year-title">The First Eighth-Year Assessment</div><div class="year-period">2038</div></div>
+    </div>
+    <p>The joint Inspectorate panel publishes the first Eighth-Year Constitutional Performance Assessment on January 1, 2038. Opening line: "The Republic has not collapsed. This is the appropriate baseline against which to measure everything else." 847 pages. Executive summary: twelve. Read by 4.3 million people by noon; 280,000 download all 847 pages by the following morning.</p>
+    <div class="finding purple">
+      <span class="finding-label">From the Eighth-Year Assessment — What We Did Not Expect</span>
+      <p>We did not expect the Emergency Derogation Framework (§1.25) to go entirely untested in the first eight years. We record this as a fortunate circumstance. We note that the non-derogable list was expanded from three to five rights in the final pre-ratification revision. That expansion has been correct. The distinction between three protected rights and five would have mattered in 2040. It did not matter before 2040 because there was no emergency before 2040.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">07<span style="font-size:0.5em;vertical-align:super">½</span></div>
+      <div><div class="year-title">The National Trust — First Challenge</div><div class="year-period">2035</div></div>
+    </div>
+    <p>A consortium of energy companies applies to the Domestic Affairs Council for a development permit on a 340,000-acre parcel of National Trust land in the mountain interior — a tract admitted to the Trust in 2031 on the basis of watershed significance. The application is the largest single-parcel development request in the Republic's history. The projected economic output: 4.2 billion over fifteen years. The MA's concurrent analysis: the watershed supports BNF-relevant agricultural production for three downstream States worth an estimated 900 million annually, in perpetuity.</p>
+    <p>The Trust Administrator publishes a §17.4.b stewardship assessment within thirty days: the development would cause permanent impairment to the watershed's ecological integrity. It would not be temporary. The land cannot be restored to its current function once the development proceeds. This finding triggers §17.4.d's reclassification threshold requirement: permanent removal from Trust status requires a national referendum in addition to a parliamentary supermajority.</p>
+    <div class="finding works">
+      <span class="finding-label">§17.4 The National Trust — What "Held in Perpetuity" Means in Practice</span>
+      <p>The consortium's legal challenge argues that the Trust Administrator's stewardship assessment overreaches — that §17.4.b prohibits permanent impairment but that the development's impairment is economic rather than ecological. The Supreme Court rules 7-2: the watershed's ecological integrity is the relevant measure, not its economic use pattern. The development would permanently alter the watershed's function. That is permanent impairment within §17.4.b's meaning. The reclassification referendum would be required. The consortium withdraws its application rather than face a national referendum on whether to develop a watershed three States depend on. The Trust holds. The MA's perpetuity calculation — 900 million annually, indefinitely — enters the NRS and will be available for every future application on every Trust parcel.</p>
+    </div>
+    <p>The LI's first National Trust annual audit, published six months later, notes a secondary effect: fourteen other pending development applications on Trust-adjacent land have been voluntarily withdrawn since the ruling. The shadow of the stewardship assessment on those parcels was sufficient. The Trust Administrator does not need enforcement power. The permanent published record of what stewardship assessment means is enough.</p>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">08</div>
+      <div><div class="year-title">§1.25 — The First Declaration of National Emergency</div><div class="year-period">2040 — The Gulf Coast Emergency</div></div>
+    </div>
+    <p>Three category-4 hurricanes in eleven days. The third destroys water treatment infrastructure serving 4.2 million people. Power out across six counties. Communications infrastructure damaged across 340 miles of coast. On August 19, 2040, President Webb and PM Okafor-Williams issue the Republic's first joint Declaration of National Emergency under <span class="provision-tag">§1.25.a</span>. The Declaration specifies the nature of the emergency, the specific rights being limited, the duration (90 days), and the geographic scope (six named counties). Parliament ratifies 408-204 on day four — three days within the constitutional deadline.</p>
+    <div class="finding critical">
+      <span class="finding-label">§1.25.b — Non-Derogable Rights, Tested Day Three</span>
+      <p>The national emergency coordinator issues a directive requiring all communications transmitted through commandeered networks to be logged for government review. A civil liberties organization petitions the Supreme Court the same day. The Court rules in 36 hours: void. The Declaration had not listed communications privacy as a right being limited. A Declaration may only limit rights it specifically names. Whatever it does not name remains fully in force. The scope limitation — not the non-derogable list — was the decisive mechanism. Both worked. The Declaration expires after 74 days, 16 days early.</p>
+    </div>
+    <div class="finding works">
+      <span class="finding-label">§1.25 Emergency Derogation — The Design Logic</span>
+      <p>Constitutions that don't address emergencies don't prevent emergency powers — they ensure those powers are improvised. The §1.25 framework forced the government to declare specifically what it was doing, get democratic authorization within seven days, and accept automatic expiry. The emergency ended. So did the powers. Nothing was normalized. The joint panel's supplement: "The Declaration requirement forced the question of what was actually being sought. This was a feature, not a limitation."</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">09</div>
+      <div><div class="year-title">§14.3.c — The Emergency Rights Writ, First Use</div><div class="year-period">2041 — Mountain Interior</div></div>
+    </div>
+    <p>A land boundary dispute between two neighboring indigenous nations escalates when one nation's officers detain 23 members of the neighboring nation on contested land. Eleven days. No formal charges. No counsel access. Seven of the detained individuals petition the Supreme Court for Emergency Rights Writs under <span class="provision-tag">§14.3.c</span> — the provision restored to the constitution in its final revision after nearly being deleted during the editing process. The Court rules in 13 days — one day within the deadline. Threshold question: does the detaining nation's FPIC consent to the land arrangement authorize detention of members of the neighboring nation? It does not. FPIC governs the Republic's actions within a nation's jurisdiction, not one indigenous nation's actions against members of another. Writs granted. Detained individuals released.</p>
+    <div class="finding teal">
+      <span class="finding-label">§14.3.c Emergency Rights Writ — The Threshold Question</span>
+      <p>The Writ was restored because cross-references in §14.3.a demanded it — the provision said "except as provided in §14.3.c" and §14.3.c didn't exist. Restoring it closed a gap that would have been filled by improvisation. The threshold consent question — resolved before the Writ is issued or denied — proved to be the provision's most important feature. It prevented the Writ from becoming a general override of indigenous jurisdiction while ensuring individuals had a specific enforcement pathway. The line was clear because it was drawn in advance, in constitutional text.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">09<span style="font-size:0.5em;vertical-align:super">½</span></div>
+      <div><div class="year-title">The Domain Dispute — A Respiratory Virus Tests the Boundary</div><div class="year-period">2039</div></div>
+    </div>
+    <p>In March 2039, a novel respiratory virus emerges with characteristics suggesting foreign state-actor engineering. The President invokes her intelligence authority and proposes a coordinated federal response including travel restrictions from three nations. PM Webb simultaneously announces a domestic public health emergency under his §2.2.e authority, including mandatory masking protocols, supply chain coordination, and healthcare system surge capacity directives.</p>
+    <p>For eleven days, the Republic has two overlapping emergency frameworks — one presidential, one prime ministerial — with different legal authorities, different press offices, and different daily briefings. The EI files a domain compliance notice within 72 hours. The President's travel restrictions are within her diplomatic domain. The PM's domestic health directives are within his domestic domain. The overlap is logistical, not constitutional. But the public experience is confused, and the Senate Armed Services Committee demands an Emergency Panel ruling on whether the foreign engineering assessment — if confirmed — would elevate the domestic response to the presidential defense domain.</p>
+    <div class="finding works">
+      <span class="finding-label">§4.2.d The Emergency Panel — 36 Hours to Constitutional Clarity</span>
+      <p>The Emergency Panel convenes at 6 AM on day twelve. Three justices. One question: does a domestic public health emergency triggered by suspected foreign state-actor engineering fall within the President's defense domain, the PM's domestic domain, or both? Ruling: both, but on distinct axes. The President has authority over the foreign intelligence dimensions, the diplomatic response, and any military-relevant aspects of the engineering investigation. The PM retains authority over domestic public health measures, healthcare system response, and civilian emergency coordination. Neither may direct the other's response. A joint information-sharing protocol is required within 48 hours of the ruling. It is established in 31. The two executives hold one joint press conference and then continue operating independently in their respective domains. The public finds this less confusing than eleven days of competing briefings.</p>
+    </div>
+    <p>The virus peaks in June 2039, subsides by September. The combined death toll is significantly lower than comparable events in the predecessor era, a finding the Third Eighth-Year Assessment attributes in part to the supply chain coordination authority the PM exercised without waiting for presidential sign-off and without needing it. The President's travel restrictions, meanwhile, prevent three documented secondary introduction events. Both executives get credit for what was theirs. Neither can claim the other's.</p>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">10</div>
+      <div><div class="year-title">Third Presidential Election</div><div class="year-period">2042 — A New Generation Arrives</div></div>
+    </div>
+    <p>Governor Amara Osei-Bonsu Jr. of Maryland — daughter of the convention delegate who made the case for the dual executive twenty years earlier — wins the presidency at 39. She is the youngest president in the Republic's history and the first to have cast her first-ever vote in 2030, the year §1.19 made that vote an explicit constitutional right. Former PM Okafor-Williams receives more first-preference votes nationally. Osei-Bonsu Jr. wins more regions and a higher combined score. The Constitutional Democrats note this in their victory statement without apology. Okafor-Williams leaves office after twelve years. She says, simply: "I always found constitutional procedure easier to follow than to explain."</p>
+    <div class="finding works">
+      <span class="finding-label">§7.2.b Combined Score — Three Elections, Same Result</span>
+      <p>Three elections. Three results where the winner demonstrated broader geographic support than their closest rival. The system was designed to prevent a candidate from winning by maximizing support in a few densely populated regions while alienating the rest. It has done that in every election. The math, controversial at ratification, has been uncontroversial in practice. A secondary finding: Territory citizens have voted in all three presidential elections at rates comparable to State citizens — their ballots count fully in the national first-preference total under §7.2.d. Territories are not assigned to presidential election regions and do not factor into the regional breadth component. The constitutional arrangement is understood and has produced no significant controversy.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="part-header"><p>Part Four</p><h2>The Osei-Bonsu Years — 2042 to 2048</h2></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">11</div>
+      <div><div class="year-title">§15.3.a — Permanently Unamendable, Tested</div><div class="year-period">2043</div></div>
+    </div>
+    <p>A faction within the Progressive Alliance proposes a constitutional amendment to modify <span class="provision-tag">§1.17</span> — the right to a public trial — to allow classified evidence in camera in national security cases. The amendment process proceeds normally for six weeks until the Legislative Inspectorate publishes a finding noting that §1.17 is listed in <span class="provision-tag">§15.3.a</span> as permanently unamendable. The Supreme Court agrees to hear a pre-ratification challenge. Ruling 6-3: Parliament cannot propose an amendment to a permanently unamendable provision. The amendment process does not reach these provisions. Parliament has no more authority to amend §1.17 than to amend the prohibition on torture. The process ends at the proposal stage.</p>
+    <div class="finding critical">
+      <span class="finding-label">§15.3.a — "Permanently Unamendable" Is Constitutional Reality</span>
+      <p>The right to a public trial and the prohibition on retroactive criminal laws were added to the unamendable list in the constitution's final revision. They were challenged thirteen years later. The machinery held. The five permanently protected rights: torture (§1.2), slavery (§1.3), habeas corpus (§1.13), public trial (§1.17), retroactive laws (§1.18). These override any parliamentary majority, any declared emergency, and any amendment process. The 2043 case confirmed this is not rhetoric. It is law.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">12</div>
+      <div><div class="year-title">§13.4 — The First Voluntary Devolution</div><div class="year-period">2044</div></div>
+    </div>
+    <p>The Northern Plains State becomes the Republic's first voluntary devolution applicant. Senate seats vacated; House seats retained. Federal income tax drops to 52% of the standard State rate — a rate negotiated in the devolution agreement rather than set constitutionally, reflecting Northern Plains' net-contributor status and the reduced federal services Territory status entails. The BNF continues without interruption. The Monetary Authority's Fiscal Incidence Study is clear: Northern Plains is a net contributor whose leadership has calculated that Territory status serves its residents better than Statehood. The referendum passes 71-29 on 74% turnout — comfortably above the 65% constitutional threshold. The ballot includes, as <span class="provision-tag">§13.4.c</span> mandates, a plain-language statement of net-contributor status, the projected effect on national BNF sustainability (negligible), and the applicable reduced tax rate. Two other states announce they are beginning the Fiscal Incidence Study process.</p>
+    <div class="finding works">
+      <span class="finding-label">§13.4 Voluntary Devolution — Flexible Federation</span>
+      <p>The framers anticipated that some states would have needs different from the standard Statehood framework. They built a pathway requiring a Fiscal Incidence Study, ballot transparency, a 60% democratic threshold, and a reduced-but-not-zero tax rate. All four requirements worked: the decision was informed, transparent, democratic, and fiscally honest. The provision was criticized as a secession backdoor during ratification. In practice, it is constitutional federalism operating as designed.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">12<span style="font-size:0.5em;vertical-align:super">½</span></div>
+      <div><div class="year-title">The Contested Devolution — What the Process Is For</div><div class="year-period">2045</div></div>
+    </div>
+    <p>Eighteen months after Northern Plains, the Eastern Seaboard Compact — four mid-Atlantic states acting in coordination — announces a joint devolution application. The MA publishes its Fiscal Incidence Studies for all four simultaneously. Two are net contributors; two are net receivers. The net receivers' studies show that Territory status would reduce their BNF allocation by an estimated 14-18%, as Territory status removes Senate representation that had historically secured favorable federal formula calculations.</p>
+    <p>The Senate debates whether a joint application is constitutionally permissible — a question §13.4 does not directly address. The Supreme Court accepts the case. The 5-4 ruling is the Republic's first significant constitutional gap finding: the document permits joint applications by inference but requires each State to hold its own separate referendum, with each result standing independently. A joint devolution requires all four to pass; any State that votes no remains a State regardless of the others' results. Parliament enacts a statute within eighteen months codifying the Court's ruling and providing procedural rules for future multi-State applications.</p>
+    <div class="finding works">
+      <span class="finding-label">§13.4 The MA Fiscal Incidence Study — The Document That Ends the Debate</span>
+      <p>The two net-receiver states' referenda fail: 54-46 and 57-43. The Fiscal Incidence Study requirement of §13.4.b — mandating that each ballot include a plain-language statement of net-contributor or net-receiver status and the projected BNF effect — is directly credited by post-referendum analysis for the outcomes. Voters in net-receiver states, given accurate information about what Territory status would cost them in federal formula allocations, voted no. The two net-contributor states pass: 68-32 and 73-27 — both well above the 65% threshold. They devolve independently. The Compact dissolves politically but not constitutionally — the two new Territories retain their interstate compacts as Territories.</p>
+    </div>
+    <p>The contested devolution produces the document's first significant constitutional scholarship on §13.4: three law reviews publish analyses of whether "voluntary devolution" requires unanimity in multi-state applications, what the MA's obligation is when fiscal effects differ dramatically between applying States, and whether the Senate representation loss constitutes an unconstitutional burden on the devolution right. The Supreme Court declines to rule on the last question, finding it not ripe. The NRS has the full record. Future Courts will have it too.</p>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">13</div>
+      <div><div class="year-title">The Second Eighth-Year Assessment</div><div class="year-period">2046 — What Sixteen Years Taught</div></div>
+    </div>
+    <p>Opening line: "The Republic is sixteen years old. It is no longer possible to characterize it as an experiment." Read by 6.7 million people by noon. Key findings: §1.25 Emergency Derogation invoked once, functioned as designed; §14.3.c Emergency Rights Writ petitioned 23 times, 7 granted, 16 denied, all 23 resolved within 14 days; Supremacy Clause cited in 2,847 cases, decisive in 621, basis for striking 43 federal statutes and 118 state statutes.</p>
+    <div class="finding purple">
+      <span class="finding-label">From the Second Assessment — The §1.19 Finding</span>
+      <p>The right to vote has been the subject of 34 Supreme Court cases over sixteen years. The petitioner won 29 of them. The pattern is consistent: governments find ways to make voting harder, citizens invoke §1.19, courts strike down the restriction. We find this to be the most significant single drafting decision in Article I. Prior systems without an explicit suffrage right relied on improvised interpretation. The Republic protects it through direct constitutional text. The difference, in practice, is 29 wins out of 34 attempts.</p>
+    </div>
+    <div class="finding note">
+      <span class="finding-label">What Has Not Been Tested</span>
+      <p>The veto suspension for repeated void vetoes. The dissolution cascade. The full presidential succession line beyond the first position. The independence referendum. A successful National Trust reclassification referendum removing Trust land permanently. A Senate deadlock on CLT standards lasting more than one budget cycle. The panel: "The absence of crises requiring these provisions is a form of constitutional success — but constitutions are tested by the crises they face, and the Republic has not yet faced its hardest ones."</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">14</div>
+      <div><div class="year-title">The Republic at Twenty — January 1, 2048</div><div class="year-period">A Reckoning</div></div>
+    </div>
+    <p>Three peaceful presidential elections. One declared national emergency, ratified democratically, expired automatically. Five unamendable rights, challenged and confirmed. One Emergency Rights Writ framework used 23 times in seven years. One state that chose Territory status freely. 11.7 billion public records. Zero corrupted.</p>
+    <div class="pull-quote">
+      <blockquote>"The document works. Working is not the same as succeeding. It is the precondition for succeeding. We have maintained the precondition for twenty years."</blockquote>
+      <cite>President Osei-Bonsu Jr. — January 1, 2048</cite>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-value">11.7B</div><div class="stat-label">NRS records, 2048</div></div>
+      <div class="stat"><div class="stat-value">0</div><div class="stat-label">Records corrupted</div></div>
+      <div class="stat"><div class="stat-value">2,847</div><div class="stat-label">Supremacy Clause citations</div></div>
+      <div class="stat"><div class="stat-value">5</div><div class="stat-label">Unamendable rights, unchanged</div></div>
+      <div class="stat"><div class="stat-value">1</div><div class="stat-label">National Trust challenges upheld</div></div>
+      <div class="stat"><div class="stat-value">0</div><div class="stat-label">Trust parcels permanently reclassified</div></div>
+    </div>
+    <p>Solomon Adeyemi — who nearly derailed ratification in 2028 — publishes a final essay on January 2, 2048, later updated and expanded for the 25th anniversary in 2054. Last paragraph: <em>"I said that legitimacy comes from agreement, not procedure. I was right about that. I was wrong about whether people would agree. Twenty years is not long enough to know if all of this will last. But twenty years is long enough to know that it can. I find, at my age, that this is sufficient."</em></p>
+  </div>
+
+</div>
+
+<div class="closing">
+  <h2>Read the Constitution</h2>
+  <p>Every provision tested in this scenario exists in the current document. The Emergency Derogation Framework. The Emergency Rights Writ. The permanently unamendable rights. The right to vote — stated, for the first time, as a constitutional right.</p>
+  <a href="constitution-v118.docx" class="btn-primary" download style="display:inline-block;margin-bottom:3rem;margin-right:1rem"</a><a href="annotated.html" class="btn-primary" style="display:inline-block;margin-bottom:3rem;background:transparent;border:1px solid var(--gold);color:var(--gold)">Download v118 Constitution</a>
+</div>
+
+<footer>
+  <p>The Federated Republic — A Constitutional Design Project</p>
+  <p>All scenario characters and events are entirely fictional</p>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="diagrams.html">Diagrams</a></li>
+    <li><a href="discuss.html">Discuss</a></li>
+  </ul>
+</footer>
+
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="part-header"><p>Part Five</p><h2>Into the Second Generation — 2048 to 2054</h2></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">22</div>
+      <div><div class="year-title">The First CLT Administrator Succession</div><div class="year-period">2050</div></div>
+    </div>
+    <p>The first CLT Administrator's 5-year term expires in 2050. PM Nakamura-Singh maintains the Candidate Register — the EI has published factual assessments of eleven candidates over the previous two years. The first renewal produces the scenario the designers anticipated but hoped to avoid: the Senate splits 52-48 on the leading candidate. After three weeks of stalemate, the PM nominates the second-ranked candidate on the Register. Confirmed 67-33.</p>
+    <div class="finding works">
+      <span class="finding-label">§5.4.c Status Quo Maintenance — The Deadlock Provision Works</span>
+      <p>During the three weeks of Senate deadlock, the existing CLT standard and passing threshold remained in force under §5.4.c. No citizen's citizenship process was interrupted. No examination date was postponed. The constitutional requirement that deadlock cannot force change through inaction performed exactly as designed: the existing standard held, the process continued, and the political impasse resolved through nomination of the next candidate on the Register rather than through attrition.</p>
+    </div>
+    <p>The confirmed Administrator's first act is to publish the full CLT to the NRS — every question, every marking rubric, every version history. The Senate initially objects. The Administrator points to §5.4's publication mandate and the NRS's constitutional architecture. The full test is published. Citizenship applications increase 8% the following year as applicants who had feared the unknown threshold discover it is manageable.</p>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">23</div>
+      <div><div class="year-title">The Third Eighth-Year Assessment — A Constitutional Audit</div><div class="year-period">2054</div></div>
+    </div>
+    <p>The Third Eighth-Year Assessment lands on January 1, 2054 — 25 years after ratification. 1,100 pages. The joint Inspectorate panel's opening observation: "The Republic has not developed the failure modes its critics predicted. It has developed different ones."</p>
+    <div class="finding purple">
+      <span class="finding-label">From the Third Assessment — What Twenty-Five Years Showed</span>
+      <p>The dual executive domain boundary produced 23 Emergency Panel rulings over 25 years. Seventeen were unanimous. Six were 2-1 splits on genuinely contested boundary questions. None required more than 36 hours. The panel assesses: the 48-hour mechanism has held. The constructive no-confidence has been triggered four times; succeeded twice; failed twice because the House could not agree on a successor. Both failures resolved through the next scheduled election, not through constitutional crisis. The NRS contains 23.4 billion records. Zero corrupted. The CLT has been administered to 2.3 million applicants. The average pass rate is 81%. The BNF has been fully funded in every budget cycle. The MA has certified no Severe Contraction. The National Trust has been tested twice. It held twice.</p>
+    </div>
+    <p>The Assessment's most discussed observation: "The provisions that have been most tested are not the provisions that generated the most debate at ratification. The dual executive works. The provision that has required the most ongoing constitutional attention is §1.19 — the right to vote — and specifically whether digitally administered authentication systems for remote voting meet the 'materially more difficult' standard for voters without reliable internet access. We assess: they do not, under current implementation. Parliament must address this."</p>
+    <p>The Assessment has no binding force. Parliament addresses it within eight months. The §1.19 finding drives the first major expansion of the NVS — public internet access points at every federal facility, staffed authentication assistance at all physical voting locations, and a remote voting interface tested to function on 2G mobile connections.</p>
+    <div class="finding works">
+      <span class="finding-label">§8.11 The Eighth-Year Assessment — Infrastructure of Honest Self-Examination</span>
+      <p>Three assessments. Three published records of what the Republic got right, what it got wrong, and what it has not yet faced. No binding force. Enormous practical effect. The NRS means every assessment sits permanently alongside every subsequent legislative response, including those that addressed the finding and those that didn't. Future citizens will know which Parliament acted and which did not. The accountability is prospective as much as retrospective.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="divider-mark">✦</span></div>
+
+  <div class="year-block">
+    <div class="year-header">
+      <div class="year-num">24</div>
+      <div><div class="year-title">The Republic at Twenty-Five — January 1, 2054</div><div class="year-period">A Generation</div></div>
+    </div>
+    <p>The children born in 2029 — on Day Zero, the day the Republic took its first breath — turn 25 in 2054. They are the first generation for whom the Constitution has always existed. They have never lived under the system it replaced. They did not vote in the ratification referenda. They did not watch the convention nearly collapse three times. What they know of those events comes from 23.4 billion NRS records and the histories written from them.</p>
+    <div class="pull-quote">
+      <blockquote>"The Constitution is not what we agreed on. It is what we built with what we agreed on. The agreement was necessary. It was not sufficient. What made it sufficient was showing up."</blockquote>
+      <cite>Chief Justice Amara Okonkwo — January 1, 2054 Constitutional Address</cite>
+    </div>
+    <p>Four States. Two devolved Territories. One contested devolution application pending Senate review. Twenty-three Emergency Panel rulings. One national emergency, expired automatically. Five unamendable rights, unchanged. Eight Inspectorate Directors who served their terms and left, none attempting to extend. Three MA Directors who certified what they certified and were not removed for it. One National Trust challenge, lost by the developer. One that was partially settled through co-management. Zero corrupted NRS records.</p>
+    <p>The second generation of the Republic inherits not a perfect document but an honest one — a constitutional architecture that did not promise them good government, only the structural conditions under which they could demand it. Whether they do is, as it has always been, the only question that matters.</p>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-value">23.4B</div><div class="stat-label">NRS records, 2054</div></div>
+      <div class="stat"><div class="stat-value">0</div><div class="stat-label">Records corrupted</div></div>
+      <div class="stat"><div class="stat-value">23</div><div class="stat-label">Emergency Panel rulings</div></div>
+      <div class="stat"><div class="stat-value">5</div><div class="stat-label">Unamendable rights, unchanged</div></div>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

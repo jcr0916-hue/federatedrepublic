@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The American Republic — Thirty Years — The Federated Republic</title>
+  <meta name="description" content="A purpose-built scenario testing the Federated Republic's fiscal architecture under severe contraction conditions — the Valdoria crisis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}</style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+
+  <div class="page-wrap">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The American Republic — Thirty Years</h1>
+      <p class="scenario-premise" id="main-content">The Republic of Valdoria enters its tenth year of operation when a global financial contagion collapses 31% of GNR. The BNF floor activates its Severe Contraction Protocol. States fall below even the reduced floor. The MA Director certifies honestly under sustained pressure from both executives. The anti-evasion principle catches four evasion attempts. The NRS records everything — including the four years of pre-crisis warnings that nobody acted on.</p>
+      <div class="provisions-tested"><span class="prov-tag">§10.1 BNF Floor + Severe Contraction</span><span class="prov-tag">§10.1.g Federal Supplementation</span><span class="prov-tag">§2.3.b Constructive Vote</span><span class="prov-tag">§9.4 MA Independence</span><span class="prov-tag">§9.2 NRS Co-Equal Records</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>A single continuous narrative — one Republic, one set of citizens, one constitutional order — across thirty years. Not a transition scenario. Not a crisis scenario. The ordinary constitutional life of a large and complex democracy: recessions, immigration waves, state fiscal failures, an island community choosing independence and then choosing to return, and finally the economic contraction that tests everything simultaneously.</p>
+
+      <h2>Year 5-9 — The First Recession and the Gate Architecture</h2>
+
+      <p>A technology sector correction in Year 5 produces a regional recession in six States. California, facing a $47 billion shortfall, proposes reclassifying university funding as BNF education provision. The MA Director's assessment within 14 days: university education is not basic needs floor provision. The anti-evasion principle prohibits definitional expansion. The reclassification is void. California complies within 90 days. The NRS records the attempt, the finding, and the compliance. In the pre-transition era, a similar reclassification might have been embedded in a budget document thousands of pages long, discovered years later, never corrected.</p>
+
+      <h3>The Central American Displacement Wave</h3>
+      <p>In Year 6, climate and governance collapse in three Central American nations produces the Republic's first major immigration pressure — Gate 1 petition volume increases 340%. Parliament's three successive attempts to restrict immigration through statutory Gate 2 modifications test the constitutional architecture against real political pressure.</p>
+
+      <div class="finding">
+        <span class="finding-label">Three Attempts — One Architecture</span>
+        <p>Attempt 1: a "community ties assessment" designed to identify potential irregular migrants. The EI's preliminary disparity analysis finds a 2.8x differential approval rate against Central American applicants. The proposal is withdrawn before introduction.</p>
+        <p>Attempt 2: extending maximum processing periods for applicants from countries with limited documentation infrastructure. Constitutional — it produces processing delays, not §1.8 disparities. Enacted. Its effects documented on the NRS.</p>
+        <p>Attempt 3: State sponsorship financial liability for Central American applicants — seven years of public services costs, criminal penalties for officials whose sponsored applicants later violate law. The Supreme Court strikes it down 6-3: the liability is facially neutral but produces costs so differentially concentrated on Central American applicants as to constitute constructive discrimination by national origin.</p>
+      </div>
+
+      <p>The disparity presumption is the gate architecture's most important constitutional feature — not the gates themselves but the continuous published statistical record that makes discriminatory effects visible immediately and actionable without requiring a constitutional challenge to document what every economist already knows. Three proposals, three outcomes. The architecture is working.</p>
+
+      <h2>Year 10-14 — West Virginia and the Devolution Question</h2>
+
+      <p>West Virginia enters Early Warning in Year 10. Coal revenues declining faster than any MA projection. Administrative capacity contracting. BNF provision in two rural counties below floor. The LI's audit is careful — it establishes the precedent every subsequent audit will follow. It finds genuine structural crisis, not bad faith. The corrective order issues. Federal support engagement opens within 30 days.</p>
+
+      <p>By Year 12, the corrective order's specific requirements are met but the broader fiscal trajectory remains unsustainable. The Senate's Devolution Committee debates a Devolution Motion. West Virginia's senators participate fully — the constitutional architecture gives them no power to prevent the debate but full power to make their case within it.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Two-Vote Margin</span>
+        <p>The Devolution Motion reaches the Senate floor in Year 13. The count: 37 in favour, 15 opposed. The 3/4 threshold requires 39 votes. The Motion fails by two votes.</p>
+        <p>What happens next is the scenario's most constitutionally significant moment — not the vote but its aftermath. The two senators who voted against devolution have committed their political credibility to the proposition that West Virginia is on a viable trajectory. By Year 14, BNF compliance is at 1.3x the floor — still the lowest of any State, still receiving federal supplementation, but improving. Economic diversification is visible on the NRS. New manufacturing, renewable energy, a growing healthcare services industry. The constitutional architecture did not save West Virginia's economy. It kept the State's citizens protected during the transition, created political accountability for the trajectory, and made the process visible to everyone.</p>
+      </div>
+
+      <h2>Year 15-19 — Guam and the First American Associated Community</h2>
+
+      <p>Guam Territory's independence movement produces the Republic's first Article XX compact negotiation. The independence petition reaches threshold in Year 13. The MA fiscal impact assessment finds Guam's GNR contribution at 0.4% — economically modest, strategically substantial. The independence referendum passes at 58.3% in Year 14. Formal independence takes effect in Year 15.</p>
+
+      <h3>The Compact Negotiation</h3>
+      <p>Within six months, Guam initiates compact negotiations. The JI pre-certification finds no systematic Article I violations. The compact's contested element: the Republic proposes embedding the existing Operational Use Rights — military base access — as a reciprocal compact term. Guam's negotiators object that this converts an equal partnership into an explicitly transactional arrangement.</p>
+
+      <p>The resolution reflects the equal sovereignty principle's constitutional weight: the compact specifies the Republic's service obligations and notes, in the published statement of the Republic's non-economic interest, that the strategic relationship established in the separate Operational Use Rights agreement is the context within which the compact exists. Fishing access is a separate commercial treaty. The compact is ratified in Year 16 by 71% of both chambers.</p>
+
+      <p>Guam's observing delegate takes a seat in the House of the Republic. The NRS records every draft, every counter-proposal, every Emergency Panel consultation, the JI certification, the final compact text. Future compact negotiations will occur against this complete founding precedent.</p>
+
+      <h2>Year 20-25 — The Climate Immigration Crisis</h2>
+
+      <p>The Republic's largest immigration pressure since the founding: 40 million displaced persons globally by Year 22, extended climate displacement from Bangladesh, Philippines, Vietnam, and Pacific Island nations. Parliament's response produces three more Gate 2 modification attempts — and, for the first time, one that holds.</p>
+
+      <p>Attempt 1: a "Climate Stability Country of Origin Assessment" rating source countries by climate stability index. The EI finds a 4.1x differential burden against South Asian, African, and Pacific applicants. Withdrawn before floor consideration.</p>
+
+      <p>Attempt 2: a "Community Integration Pathway Assessment" requiring employment offers and language assessments. Facially neutral. The EI's disparity analysis of six months of implementation finds 91% documentation compliance for high-income English-speaking source countries, 34% for displacement source countries — not because they lack integration capacity but because the displacement event itself destroyed the documentation infrastructure. The Supreme Court rules 7-2: the Republic is using evidence of displacement to screen against displaced persons. Void.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Reform That Holds</span>
+        <p>Year 24: the Climate Displacement Track — a separately resourced processing pathway substituting a Republic-administered resettlement support program for the private sponsorship or employment offer requirement. Security screening and identity verification unchanged. The EI's disparity analysis after one year: approval rates by national origin converge toward parity for the first time in the immigration system's history. 340,000 approvals annually. The NRS documents this in real time.</p>
+        <p>The disparity presumption eliminated every discriminatory approach before it processed a single application. Parliament was left with only genuine policy choices: restrict equally or expand pathways equally. It eventually chose the latter — not because the constitution required it but because the constitution eliminated every alternative.</p>
+      </div>
+
+      <h2>Year 26-31 — The Guam Constitutional Gap</h2>
+
+      <p>In Year 26, a decade into its Associated Community compact, Guam's elected assembly petitions for Territory status with a Statehood pathway. The petition is 71% in favour. It is constitutionally novel — the document has no mechanism for a sovereign entity to voluntarily incorporate as a Territory.</p>
+
+      <p>The Supreme Court's Year 27 advisory opinion identifies the gap precisely: the independence process runs outward; there is no corresponding inbound incorporation process. §13.1 defines Territories as existing entities in transition. It does not contemplate new Territories admitted from outside the constitutional framework. The Court declines to create the mechanism by judicial interpretation. It is a constitutional amendment question.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Amendment That Fills the Gap</span>
+        <p>The State Convention amendment process produces §13.6 — a Voluntary Incorporation provision for sovereign entities seeking Territory status, requiring: a democratic act of the petitioning entity expressing the will to incorporate; Republic parliamentary acceptance by 2/3 of both chambers; a defined transition period; and immediate applicability of all Territory protections. Ratified in Year 29. Guam's assembly votes to incorporate in Year 30. Parliament accepts. Guam enters the Territory framework.</p>
+        <p>Every step was voluntary. Every step was democratic. Every step was constitutionally processed. The gap the Court identified was real, recognized, and resolved through the amendment architecture rather than judicial improvisation. This is the eighteenth amendment in 30 years — and the one that most directly demonstrates that the amendment architecture is not merely formal but functional.</p>
+      </div>
+
+      <h2>Year 32-35 — The Economic Contraction</h2>
+
+      <p>A global financial contagion originating in European sovereign debt markets reaches the Republic in Year 32. GNR declines 17% in Year 32, accelerating to 29% in Year 33. The Severe Contraction Protocol activates. The MA Director's certification is published at 9:07 AM on a Wednesday. By 10:00 AM it is the most-read NRS record in the Republic's history.</p>
+
+      <h3>The State Variation</h3>
+      <p>Thirteen States maintain above-floor provision — fiscal reserves and diversified revenues give them the capacity to absorb federal transfer reductions. Twenty-four States maintain exactly at-floor provision. Eleven States fall below the reduced constitutional floor within six months. The LI's audit findings trigger Rule Violation proceedings. Eight restore compliance within 90 days. Three — Ohio, Kentucky, and Mississippi — cannot.</p>
+
+      <h3>The Supplementation Crisis</h3>
+      <p>The MA certifies the Gap 14 triggering condition: these three States' fiscal capacity is genuinely insufficient to meet the constitutionally reduced floor. Parliament must appropriate within 60 days. Parliament does not appropriate within 60 days. Day 61 arrives without an appropriation.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Court Orders What Parliament Wouldn't</span>
+        <p>The Supreme Court accepts an emergency challenge within 24 hours. Its ruling, 6-3: the supplementation obligation is constitutional, not discretionary. Parliament's failure to appropriate within the constitutional period does not extinguish it. The Court orders the PM's office to identify emergency funding under existing appropriations authority and directs Parliament to ratify or reject within 14 days. Parliament ratifies — 287-156 in the House, 61-39 in the Senate — under the Court's timeline.</p>
+        <p>Supplementation reaches the three States within 30 days. BNF provision is restored to the reduced constitutional floor. The citizens of Ohio, Kentucky, and Mississippi, who have been watching the NRS record of corrective orders, federal supplementation requests, and parliamentary deadlock, experience the constitutional architecture doing precisely what it was designed to do: slowly, messily, publicly, and eventually correctly.</p>
+      </div>
+
+      <h3>The Dual Executive Under Contraction</h3>
+      <p>The President's international creditor negotiations require demonstrating fiscal consolidation. The PM's constitutional obligations require maintaining the BNF floor. The Emergency Panel receives three domain challenges during the contraction period. The most significant: a G20 accord provision requiring independent international certification of Republic fiscal commitments that would overlap with the MA's constitutional function. The Panel rules within 48 hours: the President may commit to consolidation targets but may not commit to domestic social provision reductions that would conflict with constitutional floor obligations. The accord is renegotiated. The Republic's partners — most with their own constitutional floor obligations — understand the constraint.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Thirty-Year Verdict</span>
+        <p>The BNF floor held for 28 years before the contraction and held — at its reduced level — during the contraction. Twenty-three evasion attempts documented over 28 years. Twenty-three corrected. The immigration disparity presumption eliminated six discriminatory proposals before any processed a single application, leaving Parliament with only genuine policy choices. The constructive vote prevented governmental instability. The dual executive domain separation handled three contraction-period crises without breakdown. The NRS recorded everything — including the warnings that were not acted upon, which became the most cited records in every post-contraction accountability proceeding.</p>
+        <p>What the architecture could not produce: West Virginia's economic transformation. The climate crisis's root causes addressed. The 29% GNR decline prevented. Parliamentary inaction on fiscal warnings changed. These are not constitutional failures. They are political and economic challenges that no constitutional framework can resolve. The constitution creates conditions for democratic self-governance. It does not guarantee the democracy will make correct choices. Thirty years is not enough. The NRS records everything. Whether the next generation reads what it contains is the question Year 35 cannot answer.</p>
+      </div>
+
+      </div>/div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-varentum.html">← The Immigration Scenario</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

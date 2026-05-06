@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scenarios — The Federated Republic</title>
+  <meta name="description" content="Constitutional scenarios testing the provisions of the Federated Republic — from a long-form transition history to focused tests of emergency powers, rule violations, amendments, and judicial elections.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .page-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .page-header h1{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);margin-bottom:0.5rem}
+    .page-header p{color:var(--muted);font-size:0.95rem;line-height:1.75;max-width:540px}
+    .scenario-section{margin-bottom:3rem}
+    .section-label{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.25rem;font-family:'JetBrains Mono',monospace}
+    .featured-card{display:block;text-decoration:none;background:var(--navy);padding:2rem 2.25rem;margin-bottom:1rem;transition:background 0.2s;position:relative;overflow:hidden}
+    .featured-card:hover{background:var(--navy2)}
+    .featured-card::after{content:'→';position:absolute;right:2rem;top:50%;transform:translateY(-50%);color:var(--gold);font-size:1.5rem;opacity:0;transition:opacity 0.2s,right 0.2s}
+    .featured-card:hover::after{opacity:1;right:1.5rem}
+    .fc-tag{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:0.5rem;font-family:'JetBrains Mono',monospace}
+    .fc-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--gold);margin-bottom:0.5rem;line-height:1.2}
+    .fc-desc{font-size:0.88rem;color:rgba(245,240,232,0.65);line-height:1.7;margin-bottom:0.75rem}
+    .fc-meta{font-size:0.7rem;color:rgba(201,168,76,0.5);font-family:'JetBrains Mono',monospace;display:flex;gap:1.5rem}
+    .scenario-list{display:flex;flex-direction:column;gap:0}
+    .scenario-entry{display:block;text-decoration:none;padding:1.75rem 0;border-bottom:1px solid var(--border);transition:all 0.2s;position:relative}
+    .scenario-entry:first-child{border-top:1px solid var(--border)}
+    .scenario-entry:hover{padding-left:1rem;padding-right:1rem;margin:0 -1rem;background:rgba(201,168,76,0.04);border-color:rgba(201,168,76,0.3)}
+    .se-tag{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;font-family:'JetBrains Mono',monospace}
+    .se-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);margin-bottom:0.3rem}
+    .se-desc{font-size:0.86rem;color:var(--muted);line-height:1.6;font-style:italic;margin-bottom:0.4rem}
+    .se-provisions{display:flex;flex-wrap:wrap;gap:0.35rem}
+    .se-prov{font-family:'JetBrains Mono',monospace;font-size:0.62rem;background:rgba(27,42,74,0.08);color:var(--navy);padding:0.15rem 0.5rem;letter-spacing:0.04em}
+    .se-arrow{position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--gold);opacity:0;transition:opacity 0.2s}
+    .scenario-entry:hover .se-arrow{opacity:1}
+    .page-note{margin-top:3rem;padding:1.5rem 2rem;background:var(--navy);color:rgba(245,240,232,0.7);font-size:0.85rem;line-height:1.75}
+    .page-note strong{color:var(--gold)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.page-header h1{font-size:1.9rem}.fc-title{font-size:1.4rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="page-header">
+      <span style="font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace">Constitutional Scenarios</span>
+      <h1>The Republic in Practice</h1>
+      <p>Constitutions are tested by the situations they face, not the situations they anticipate. These scenarios put the Federated Republic's provisions under pressure — some over decades, some in a single week.</p>
+    </header>
+
+    <div class="scenario-section">
+      <span class="section-label">Long-Form Scenario</span>
+      <a href="scenario.html" class="featured-card">
+        <div class="fc-tag">The Transition Scenario · 2026 — 2054</div>
+        <div class="fc-title">From Ratification to the Second Generation</div>
+        <div class="fc-desc">A long-form constitutional scenario tracing the Republic from its founding convention through twenty-five years of political reality — three presidential elections, a national emergency, voluntary and contested devolution, the National Trust's first challenge, a domain dispute, and the third Eighth-Year Assessment.</div>
+        <div class="fc-meta"><span>22 year-blocks</span><span>5 parts</span><span>~5,700 words</span></div>
+      </a>
+    </div>
+
+    <div class="scenario-section">
+      <span class="section-label">Focused Scenarios — Single Provisions Under Pressure</span>
+      <div style="margin-bottom:2.5rem">
+          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;opacity:0.8">Start Here</p>
+          <a href="scenario-ordinary.html" class="scenario-entry" style="border-color:rgba(201,168,76,0.35);background:rgba(201,168,76,0.04)">
+            <div class="se-tag">Introduction <span aria-hidden="true">&middot;</span> The Republic at Ground Level</div>
+            <div class="se-title">Ordinary Law</div>
+            <div class="se-desc">Four people. One week. Not a crisis scenario &#8212; the Republic doing what it was designed to do. A clinic intake coordinator watching an Early Warning audit update overnight. A backbench MP whose party leader&#8217;s old speech contradicts this week&#8217;s position. A reporter who needed only three hours and the public NRS to contradict a Minister&#8217;s testimony. An asylum seeker on Day 23, watching the Thursday vote from a common room computer. The place to start if you&#8217;re new to this document.</div>
+            <div class="se-provisions">
+              <span class="se-prov">NRS</span>
+              <span class="se-prov">&#167;10.1 BNF Floor</span>
+              <span class="se-prov">&#167;6.4 Asylum Court</span>
+              <span class="se-prov">&#167;8 Inspectorates</span>
+            </div>
+            <span class="se-arrow">&#8594;</span>
+          </a>
+        </div>
+
+        <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;opacity:0.8">The Scenario Library</p>
+        <div class="scenario-list">
+
+        <a href="scenario-emergency.html" class="scenario-entry">
+          <div class="se-tag">§1.25 Emergency Derogation</div>
+          <div class="se-title">The Emergency Scenario</div>
+          <div class="se-desc">A cyberattack cripples critical infrastructure. An emergency is declared and ratified. Then a minister argues one of the five absolute rights is getting in the way.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§1.25.a Declaration</span>
+            <span class="se-prov">§1.25.b Non-Derogable</span>
+            <span class="se-prov">§1.25.c Inspectorates</span>
+            <span class="se-prov">§1.25.d Automatic Expiry</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-rule-violation.html" class="scenario-entry">
+          <div class="se-tag">§2.7 Rule Violations</div>
+          <div class="se-title">The Rule Violation Scenario</div>
+          <div class="se-desc">A popular President keeps acting just outside her constitutional domain. Each instance is minor. The pattern is not. What does the accountability architecture actually do?</div>
+          <div class="se-provisions">
+            <span class="se-prov">§2.7.c Minor Violations</span>
+            <span class="se-prov">§2.7.d Corrective Orders</span>
+            <span class="se-prov">§8.3 Executive Inspectorate</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-amendment.html" class="scenario-entry">
+          <div class="se-tag">§15.1 Amendment Architecture</div>
+          <div class="se-title">The Amendment Scenario</div>
+          <div class="se-desc">Citizens petition to add a right of digital privacy to the constitution. The vote reaches 73% in favour. Participation falls to 63%. Does the amendment pass?</div>
+          <div class="se-provisions">
+            <span class="se-prov">§15.1.a State Convention Path</span>
+            <span class="se-prov">§15.1.b Direct Democracy Path</span>
+            <span class="se-prov">§8.4 Judicial Inspectorate</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-judicial-election.html" class="scenario-entry">
+          <div class="se-tag">§4.2 Supreme Court Election</div>
+          <div class="se-title">The Judicial Election Scenario</div>
+          <div class="se-desc">A Supreme Court seat opens. The Triad nominates three candidates from the Qualified Jurist Pool. One is brilliant and polarising. One is methodical and safe. One is unexpected. Citizens choose.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§4.2.a Triad Nomination</span>
+            <span class="se-prov">§4.2.b Senate Eligibility</span>
+            <span class="se-prov">§4.2.c Direct Election</span>
+            <span class="se-prov">§4.2.f Recusal</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="scenario-section">
+      <span class="section-label">International Scenarios — Applied Constitutionalism</span>
+      <div class="scenario-list">
+
+        <a href="scenario-france.html" class="scenario-entry">
+          <div class="se-tag">France · Fifth Republic to Federated Republic</div>
+          <div class="se-title">The France Scenario</div>
+          <div class="se-desc">A hypothetical transition from the Fifth Republic — Napoleonic legal tradition, unitary state, semi-presidential executive — and fifteen years in operation. The laïcité cases, New Caledonia's independence vote, and the overseas territories question.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§2.1 Dual Executive</span>
+            <span class="se-prov">§4.1 Legal Accommodation</span>
+            <span class="se-prov">§15.4 Independence</span>
+            <span class="se-prov">§19.1 Institutional Accommodation</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-uk.html" class="scenario-entry">
+          <div class="se-tag">United Kingdom · Unwritten Constitution to Federated Republic</div>
+          <div class="se-title">The United Kingdom Scenario</div>
+          <div class="se-desc">After Scotland's departure, England, Wales, and Northern Ireland ratify the Federated Republic. Parliamentary sovereignty yields — reluctantly — to constitutional supremacy. The monarchy is dissolved. The Good Friday Agreement must hold throughout.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§2.1 Dual Executive</span>
+            <span class="se-prov">§15.6 Supremacy</span>
+            <span class="se-prov">§19.1 Institutional Accommodation</span>
+            <span class="se-prov">GFA Protocol</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-russia.html" class="scenario-entry">
+          <div class="se-tag">Russia · Federation to Federated Republic</div>
+          <div class="se-title">The Russia Scenario</div>
+          <div class="se-desc">Following political rupture, Russia transitions to the Federated Republic. 85 federal subjects become 43 States. The NRS publishes the previous regime's operational records. The Transitional Accountability Mechanism operates for a decade then sunsets.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§9.2 NRS Architecture</span>
+            <span class="se-prov">§10.1.d Severe Contraction</span>
+            <span class="se-prov">§19.1 Institutional Accommodation</span>
+            <span class="se-prov">§19.9 Transitional Accountability</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-applied-analysis.html" class="scenario-entry">
+          <div class="se-tag">Analysis · What Three Scenarios Revealed</div>
+          <div class="se-title">Applied Constitutionalism</div>
+          <div class="se-desc">Six findings from running the international scenarios — including why the NRS is the most universally applicable innovation, why the judicial election architecture is the most culturally dependent provision, and what prompted two of the document's post-scenario amendments.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§4.1 Legal System Accommodation</span>
+            <span class="se-prov">§19.1 Institutional Accommodation</span>
+            <span class="se-prov">§19.9 Transitional Accountability</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="scenario-section">
+      <span class="section-label">Further Scenarios — Constitutional Inheritance and Historical Limits</span>
+      <div class="scenario-list">
+
+        <a href="scenario-germany.html" class="scenario-entry">
+          <div class="se-tag">Germany · Basic Law to Federated Republic</div>
+          <div class="se-title">The Germany Scenario</div>
+          <div class="se-desc">Germany ratifies a document that took its most distinctive provisions from the Basic Law. The constructive vote, the eternity clauses, the strong independent court — all German in origin. The question is not whether the Federated Republic is better, but whether it is better enough to justify the disruption. Bavaria still isn't sure.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§2.3 Constructive No-Confidence</span>
+            <span class="se-prov">§15.3 Unamendable Provisions</span>
+            <span class="se-prov">§19.1 Institutional Accommodation</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-weimar.html" class="scenario-entry">
+          <div class="se-tag">Historical · Weimar Republic, November 1932</div>
+          <div class="se-title">The Weimar Scenario</div>
+          <div class="se-desc">A historical scenario. November 1932 — twenty days before Hindenburg appoints Hitler as Chancellor. Article 48 invoked 109 times. The Enabling Act is weeks away. The Federated Republic is ratified instead. Could a document specifically designed against Weimar's failure modes have held?</div>
+          <div class="se-provisions">
+            <span class="se-prov">§1.25 Emergency Derogation</span>
+            <span class="se-prov">§2.3 Constructive No-Confidence</span>
+            <span class="se-prov">§15.3 Unamendable Provisions</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-india.html" class="scenario-entry">
+          <div class="se-tag">India · Constitution of India to Federated Republic</div>
+          <div class="se-title">The India Scenario</div>
+          <div class="se-desc">India has been arguing about every fundamental design choice in this document for seventy-five years. Directive Principles versus an enforceable floor. Emergency powers and their abuse. Judicial appointment versus election. Equality and reservations. Indigenous rights and development. The world's most constitutionally sophisticated democracy meets the document built to address what it could not.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§1.25 Emergency Derogation</span>
+            <span class="se-prov">§10.1 BNF Floor</span>
+            <span class="se-prov">§1.8 Equality</span>
+            <span class="se-prov">§19.1 Tribal Accommodation</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="scenario-section">
+      <span class="section-label">Applied Scenarios — Architecture Under Pressure</span>
+      <div class="scenario-list">
+
+        <a href="scenario-nigeria.html" class="scenario-entry">
+          <div class="se-tag">Nigeria · Federal Republic to Federated Republic</div>
+          <div class="se-title">The Nigeria Scenario</div>
+          <div class="se-desc">The largest democracy in Africa — 36 States of wildly varying capacity, oil-dependent economy, Sharia law courts in twelve northern States, active insurgency in the northeast, and the Biafra independence movement entering a constitutional pathway. The most important test of the document's universal applicability claim.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§10.1 BNF Floor</span>
+            <span class="se-prov">§13.2.g Conflict-Affected States</span>
+            <span class="se-prov">§19.1 Institutional Accommodation</span>
+            <span class="se-prov">§15.4 Independence Framework</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-valdoria.html" class="scenario-entry">
+          <div class="se-tag">Valdoria · Economic Crisis Scenario</div>
+          <div class="se-title">The Economic Crisis Scenario</div>
+          <div class="se-desc">A purpose-built scenario. The Republic of Valdoria, ten years into operation, faces a global financial contagion that collapses 31% of GNR. The Severe Contraction Protocol activates. States fall below even the reduced floor. The MA Director certifies honestly under sustained pressure from both executives. Four evasion attempts caught. The NRS records what nobody acted on.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§10.1 Severe Contraction</span>
+            <span class="se-prov">§10.1.g Federal Supplementation</span>
+            <span class="se-prov">§2.3.b Constructive Vote</span>
+            <span class="se-prov">§9 NRS Architecture</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-caledoria.html" class="scenario-entry">
+          <div class="se-tag">Caledoria · Indigenous Governance Scenario</div>
+          <div class="se-title">The Indigenous Governance Scenario</div>
+          <div class="se-desc">Seventeen treaty nations participate as nations in the constitutional convention. Each negotiates a compact. Hereditary governance structures are preserved while Article I rights run directly to every resident. FPIC consent is final. The NRS publishes the complete treaty record for the first time. The Supreme Court answers whether a pre-existing sovereign nation can become an Associated Community without completing the independence process.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§14 Indigenous Compact</span>
+            <span class="se-prov">§13.5 Associated Community</span>
+            <span class="se-prov">§14.5.d Pre-Existing Sovereignty</span>
+            <span class="se-prov">§19.1 Accommodation</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+        <a href="scenario-aldric.html" class="scenario-entry">
+          <div class="se-tag">Aldric Republic · Voluntary Federation</div>
+          <div class="se-title">The Voluntary Federation</div>
+          <div class="se-desc">Three functioning democracies — Alduria, Mervane, and Korsten — choose to pool sovereignty together. No crisis, no failure, no predecessor to escape. The constitutional relationship is the honest completion of an economic integration that has already happened. The most different scenario in the series: can the Federated Republic be adopted as an achievement rather than a rescue?</div>
+          <div class="se-provisions">
+            <span class="se-prov">§19 Transition Architecture</span>
+            <span class="se-prov">§13.5 Associated Community</span>
+            <span class="se-prov">§3.2 Senate</span>
+            <span class="se-prov">§9 NRS Architecture</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+        <a href="scenario-immigration.html" class="scenario-entry">
+          <div class="se-tag">Breckian Republic · Immigration Scenario</div>
+          <div class="se-title">The Immigration Scenario</div>
+          <div class="se-desc">Testing the altitude-reduced §6.1 immigration gates. A constitutionally sophisticated coalition replaces detailed gates with a civic integration assessment, amends withdrawal rules, and authorises extended detention. The constitutional floor — §1.8 non-discrimination, 72-hour judicial review, NRS statistical publication — is tested against sustained pressure. The NRS documents the disparity before any legal challenge is filed.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§6.1 Immigration Gates</span>
+            <span class="se-prov">§1.8 Equality</span>
+            <span class="se-prov">§9 NRS Record</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+        <a href="scenario-varentum.html" class="scenario-entry">
+          <div class="se-tag">Varentum · Immigration Scenario</div>
+          <div class="se-title">The Immigration Scenario</div>
+          <div class="se-desc">A Republic under sustained immigration pressure from a region with complicated historical ties. Three legislative attempts to restrict immigration through statutory gate manipulation — a Civic Integration Assessment, a national security presumption, a financial penalty on State sponsors. Three constitutional challenges. The altitude-reduced §6.1 gates tested under maximum political pressure.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§6.1 Immigration Gates</span>
+            <span class="se-prov">§1.8 Equality</span>
+            <span class="se-prov">§9 NRS Statistics</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+        <a href="scenario-american.html" class="scenario-entry">
+          <div class="se-tag">United States · 30-Year Extended Scenario · Years 5–35</div>
+          <div class="se-title">The American Republic — Thirty Years</div>
+          <div class="se-desc">One Republic, thirty years, seven constitutional provisions tested through continuous narrative. The BNF floor and anti-evasion principle under recession. The immigration disparity presumption eliminating six discriminatory proposals. West Virginia entering Early Warning and surviving a Devolution Motion by two votes. Guam's independence, Associated Community compact, and return as a Territory — exposing and closing a constitutional gap through the amendment process. The Severe Contraction Protocol and the federal supplementation obligation invoked simultaneously.</div>
+          <div class="se-provisions">
+            <span class="se-prov">§6.1 Immigration Gates</span>
+            <span class="se-prov">§10.1 BNF + Severe Contraction</span>
+            <span class="se-prov">§13 Devolution</span>
+            <span class="se-prov">Art XX Associated Community</span>
+            <span class="se-prov">§13.6 Voluntary Incorporation</span>
+          </div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="page-note">
+      <strong>About these scenarios.</strong> These are hypothetical — the Federated Republic does not exist. The scenarios are designed to show how constitutional provisions function under real pressure, not to predict or prescribe political outcomes. Names, events, and statistics are invented for illustrative purposes. The constitutional provisions tested are drawn directly from the document.
+    </div>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

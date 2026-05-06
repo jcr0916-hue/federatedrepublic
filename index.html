@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Federated Republic — A Constitutional Framework</title>
+  <meta name="description" content="A constitutional framework built from first principles. Twenty articles. Tested through dozens of scenarios. Read the document, explore the scenarios, or start with Ordinary Law.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:rgba(201,168,76,0.18);--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+
+    /* ── NAV ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.25);height:56px;display:flex;align-items:center;padding:0 2rem;gap:2rem}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;margin-right:auto}
+    .nav-links{display:flex;gap:1.5rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-cta{background:var(--gold);color:var(--navy2)!important;padding:0.35rem 0.9rem;font-weight:600;font-size:0.7rem!important;letter-spacing:0.08em;transition:opacity 0.2s!important}
+    .nav-cta:hover{opacity:0.85;color:var(--navy2)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:1rem 2rem 1.5rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.65rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none;color:var(--gold)}
+    .mobile-menu a:hover{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+
+    /* ── HERO ── */
+    .hero{min-height:100vh;background:var(--navy2);display:flex;flex-direction:column;justify-content:center;padding:96px 2rem 4rem;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(201,168,76,0.07) 0%,transparent 60%);pointer-events:none}
+    .hero-inner{max-width:780px;margin:0 auto;width:100%}
+    .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);opacity:0.75;display:block;margin-bottom:1.5rem}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;color:var(--cream);line-height:1.05;margin-bottom:1.5rem;letter-spacing:-0.02em}
+    .hero-title em{font-style:italic;color:var(--gold)}
+    .hero-sub{font-size:1.05rem;color:rgba(245,240,232,0.55);line-height:1.8;max-width:540px;margin-bottom:2.5rem}
+    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn-hero-primary{background:var(--gold);color:var(--navy2);padding:0.85rem 2rem;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;transition:opacity 0.2s;display:inline-block}
+    .btn-hero-primary:hover{opacity:0.88}
+    .btn-hero-ghost{border:1px solid rgba(201,168,76,0.4);color:rgba(245,240,232,0.65);padding:0.85rem 2rem;font-size:0.85rem;letter-spacing:0.06em;text-transform:uppercase;transition:all 0.2s;display:inline-block}
+    .btn-hero-ghost:hover{border-color:var(--gold);color:var(--gold)}
+    .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:rgba(245,240,232,0.25);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+    .hero-scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,rgba(201,168,76,0.4),transparent);animation:scroll-line 2s ease-in-out infinite}
+    @keyframes scroll-line{0%,100%{opacity:0.4;transform:scaleY(1)}50%{opacity:0.8;transform:scaleY(1.2)}}
+
+    /* ── FEATURED STORY ── */
+    .featured{background:var(--cream);padding:4rem 2rem}
+    .featured-inner{max-width:780px;margin:0 auto}
+    .featured-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;display:block}
+    .featured-card{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);transition:border-color 0.2s}
+    .featured-card:hover{border-color:rgba(201,168,76,0.5)}
+    .featured-text{padding:2.5rem}
+    .featured-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);opacity:0.8;margin-bottom:0.75rem;display:block}
+    .featured-title{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--navy);line-height:1.05;margin-bottom:0.75rem;letter-spacing:-0.01em}
+    .featured-desc{font-size:0.92rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
+    .featured-chars{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.75rem}
+    .char-chip{font-size:0.72rem;background:var(--cream2);border:1px solid var(--border);padding:0.2rem 0.6rem;color:var(--text);font-family:'Jost',sans-serif}
+    .featured-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.78rem;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;font-weight:600;font-family:'JetBrains Mono',monospace;transition:gap 0.2s}
+    .featured-link:hover{gap:0.75rem}
+    .featured-sidebar{background:var(--navy);padding:2.5rem;display:flex;flex-direction:column;justify-content:space-between}
+    .featured-pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;font-weight:300;color:rgba(245,240,232,0.85);line-height:1.5;margin-bottom:1.5rem}
+    .featured-meta{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:rgba(245,240,232,0.3);letter-spacing:0.1em;text-transform:uppercase;line-height:1.8}
+
+    /* ── PATHS ── */
+    .paths{background:var(--cream2);padding:3rem 2rem}
+    .paths-inner{max-width:780px;margin:0 auto}
+    .paths-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;display:block}
+    .paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+    .path-card{background:var(--cream2);padding:1.75rem 1.5rem;transition:background 0.2s;display:block}
+    .path-card:hover{background:var(--cream)}
+    .path-icon{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;display:block}
+    .path-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem;line-height:1.2}
+    .path-desc{font-size:0.78rem;color:#5c5245;line-height:1.6}
+
+    /* ── SCENARIOS ── */
+    .scenarios{background:var(--navy);padding:3.5rem 2rem}
+    .scenarios-inner{max-width:780px;margin:0 auto}
+    .scenarios-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem}
+    .scenarios-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(201,168,76,0.6)}
+    .scenarios-all{font-size:0.72rem;color:rgba(201,168,76,0.5);letter-spacing:0.06em;transition:color 0.2s}
+    .scenarios-all:hover{color:var(--gold)}
+    .scenarios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+    .sc-card{background:var(--navy);padding:1.5rem 1.25rem;display:block;transition:background 0.2s}
+    .sc-card:hover{background:rgba(255,255,255,0.04)}
+    .sc-tag{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.5);margin-bottom:0.5rem;display:block}
+    .sc-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--cream);line-height:1.25;margin-bottom:0.4rem}
+    .sc-desc{font-size:0.75rem;color:rgba(245,240,232,0.4);line-height:1.55}
+    .sc-arrow{color:rgba(201,168,76,0.4);font-size:0.8rem;display:block;margin-top:0.75rem;transition:color 0.2s}
+    .sc-card:hover .sc-arrow{color:var(--gold)}
+
+    /* ── DOWNLOAD ── */
+    .download{background:var(--cream2);padding:3rem 2rem;border-top:1px solid var(--border)}
+    .download-inner{max-width:780px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .download-text h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--navy);margin-bottom:0.3rem}
+    .download-text p{font-size:0.82rem;color:var(--muted);line-height:1.6}
+    .btn-download{background:var(--navy);color:var(--cream);padding:0.75rem 1.75rem;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;transition:opacity 0.2s;display:inline-block}
+    .btn-download:hover{opacity:0.85}
+
+    /* ── FOOTER ── */
+    footer{background:var(--navy2);padding:1.75rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-logo{font-family:'Cormorant Garamond',serif;color:rgba(201,168,76,0.5);font-size:0.9rem;letter-spacing:0.06em}
+    .footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+    .footer-links a{font-size:0.7rem;color:rgba(245,240,232,0.3);letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .footer-links a:hover{color:rgba(245,240,232,0.65)}
+    .footer-note{font-size:0.68rem;color:rgba(245,240,232,0.2);width:100%}
+
+    /* ── ACCESSIBILITY ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+    /* ── MOBILE ── */
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+      .hero-title{font-size:2.6rem}
+      .featured-card{grid-template-columns:1fr}
+      .featured-sidebar{display:none}
+      .paths-grid{grid-template-columns:1fr}
+      .scenarios-grid{grid-template-columns:1fr 1fr}
+      .download-inner{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:520px){
+      .hero-title{font-size:2.1rem}
+      .scenarios-grid{grid-template-columns:1fr}
+      .hero-actions{flex-direction:column}
+      .btn-hero-primary,.btn-hero-ghost{text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content-area" class="skip-nav">Skip to main content</a>
+
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="states.html">States</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main id="main-content-area" tabindex="-1">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">A Constitutional Project &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; v118 &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; Twenty Articles</span>
+      <h1 class="hero-title">What would a <em>better</em><br>republic look like?</h1>
+      <p class="hero-sub">A constitution built from first principles. Every right is a floor. Every power is a ceiling. Everything government does is on the permanent public record.</p>
+      <div class="hero-actions">
+        <a href="scenario-ordinary.html" class="btn-hero-primary">Read: Ordinary Law</a>
+        <a href="annotated.html" class="btn-hero-ghost">The Annotated Constitution</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- FEATURED STORY -->
+  <section class="featured">
+    <div class="featured-inner">
+      <span class="featured-label">Start Here &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; An Introduction</span>
+      <a href="scenario-ordinary.html" class="featured-card" aria-label="Read Ordinary Law — an introduction to the Federated Republic" style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);transition:border-color 0.2s;text-decoration:none;color:inherit" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div class="featured-text">
+          <span class="featured-eyebrow">&#8776; 12 minute read &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; Provisions: NRS <span aria-hidden="true">&middot;</span> BNF <span aria-hidden="true">&middot;</span> Asylum Court <span aria-hidden="true">&middot;</span> Inspectorates</span>
+          <div class="featured-title">Ordinary Law</div>
+          <p class="featured-desc">Four people. One week. The Republic doing what it was designed to do — not a crisis, not a transition. A clinic coordinator. A backbench MP. A reporter. An asylum seeker. All in the same constitutional order on the same Thursday.</p>
+          <div class="featured-chars">
+            <span class="char-chip">Mara &mdash; Clinic coordinator</span>
+            <span class="char-chip">James &mdash; Backbench MP</span>
+            <span class="char-chip">Dena &mdash; Reporter</span>
+            <span class="char-chip">Selin &mdash; Asylum seeker, Day 23</span>
+          </div>
+          <span class="featured-link">Read the story &rarr;</span>
+        </div>
+        <div class="featured-sidebar">
+          <p class="featured-pull">"His phone produced 340 notifications over the following six hours. He read none of them. He had said what he meant to say, and the record had it."</p>
+          <div class="featured-meta">
+            The National Record System<br>
+            Permanent <span aria-hidden="true">&middot;</span> Public <span aria-hidden="true">&middot;</span> Unalterable<br>
+            The document's foundational wager
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- THREE PATHS -->
+  <section class="paths">
+    <div class="paths-inner">
+      <h2 class="paths-label" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;display:block;font-weight:400">Go Deeper</h2>
+      <div class="paths-grid">
+        <a href="annotated.html" class="path-card">
+          <span class="path-icon">Read It</span>
+          <div class="path-title">The Annotated Constitution</div>
+          <p class="path-desc">Every major provision with the design rationale. Click any navy underlined text to see why that choice was made. Twenty articles. Interactive.</p>
+        </a>
+        <a href="states.html" class="path-card">
+          <span class="path-icon">Explore It</span>
+          <div class="path-title">The States</div>
+          <p class="path-desc">Three state profiles — parliamentary Kailos, presidential Arveld, urban Varentis — showing what the constitutional floor looks like with radically different governments above it.</p>
+        </a>
+        <a href="scenarios.html" class="path-card">
+          <span class="path-icon">Test It</span>
+          <div class="path-title">The Scenario Library</div>
+          <p class="path-desc">Twenty scenarios — from ordinary governance to economic collapse to indigenous sovereignty compacts. The document under real pressure.</p>
+        </a>
+        <a href="papers.html" class="path-card">
+          <span class="path-icon">Understand It</span>
+          <div class="path-title">Volume II: The Essays</div>
+          <p class="path-desc">Nine essays on the design choices. Start with Paper I: The Wager — the core argument for why this approach to constitutional design produces different outcomes.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE FEATURED SCENARIOS -->
+  <section class="scenarios">
+    <div class="scenarios-inner">
+      <div class="scenarios-header">
+        <h2 class="scenarios-label" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(201,168,76,0.6);font-weight:400">From the Scenario Library</h2>
+        <a href="scenarios.html" class="scenarios-all">All scenarios &rarr;</a>
+      </div>
+      <div class="scenarios-grid">
+        <a href="scenario-american.html" class="sc-card">
+          <span class="sc-tag">30-Year Arc <span aria-hidden="true">&middot;</span> 7 Provisions</span>
+          <div class="sc-title">The American Republic</div>
+          <p class="sc-desc">Immigration pressure, state devolution, Guam's independence and return, and a global financial contraction — all in one continuous narrative.</p>
+          <span class="sc-arrow">&rarr;</span>
+        </a>
+        <a href="scenario-valdoria.html" class="sc-card">
+          <span class="sc-tag">Economic Crisis <span aria-hidden="true">&middot;</span> BNF Floor</span>
+          <div class="sc-title">The Valdoria Crisis</div>
+          <p class="sc-desc">A 31% GNR collapse triggers the Severe Contraction Protocol. Four evasion attempts caught. The MA Director certifies honestly under sustained pressure from both executives.</p>
+          <span class="sc-arrow">&rarr;</span>
+        </a>
+        <a href="scenario-caledoria.html" class="sc-card">
+          <span class="sc-tag">Indigenous Governance <span aria-hidden="true">&middot;</span> Art XIV</span>
+          <div class="sc-title">The Caledoria Compact</div>
+          <p class="sc-desc">An indigenous nation negotiating pre-existing sovereignty, Article XIV compacts, and what self-determination looks like inside a constitutional framework.</p>
+          <span class="sc-arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATES -->
+  <section style="background:var(--navy2);padding:64px 2rem">
+    <div style="max-width:960px;margin:0 auto">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(201,168,76,0.6);font-weight:400;margin-bottom:0.4rem">The Laboratory of Democracy</div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:rgba(245,240,232,0.95)">The States</h2>
+        </div>
+        <a href="states.html" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none;opacity:0.8">All states &rarr;</a>
+      </div>
+      <p style="color:rgba(245,240,232,0.5);font-size:0.88rem;line-height:1.8;max-width:600px;margin-bottom:2.5rem">Same constitutional floor. Radically different governments. Every state formed from a territory held a founding convention and chose its own structure. The result is genuine diversity — above a floor that protects citizens from the experiment&rsquo;s worst-case outcomes.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-bottom:1.5rem">
+        <a href="state-kailos.html" style="background:rgba(27,42,74,0.6);padding:1.5rem;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='rgba(27,42,74,0.9)'" onmouseout="this.style.background='rgba(27,42,74,0.6)'">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);font-weight:300;line-height:1;margin-bottom:0.75rem">KL</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-bottom:0.4rem">Kailos</div>
+          <div style="color:rgba(245,240,232,0.5);font-size:0.8rem;line-height:1.6">Parliamentary &middot; Coastal &middot; Kaili Compact &middot; BNF 7.2%</div>
+        </a>
+        <a href="state-arveld.html" style="background:rgba(27,42,74,0.6);padding:1.5rem;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='rgba(27,42,74,0.9)'" onmouseout="this.style.background='rgba(27,42,74,0.6)'">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);font-weight:300;line-height:1;margin-bottom:0.75rem">AV</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-bottom:0.4rem">Arveld</div>
+          <div style="color:rgba(245,240,232,0.5);font-size:0.8rem;line-height:1.6">Presidential &middot; Landlocked &middot; Resource Economy &middot; BNF 5.4%</div>
+        </a>
+        <a href="state-varentis.html" style="background:rgba(27,42,74,0.6);padding:1.5rem;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='rgba(27,42,74,0.9)'" onmouseout="this.style.background='rgba(27,42,74,0.6)'">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);font-weight:300;line-height:1;margin-bottom:0.75rem">VR</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-bottom:0.4rem">Varentis</div>
+          <div style="color:rgba(245,240,232,0.5);font-size:0.8rem;line-height:1.6">City-State &middot; Urban &middot; Mayor-Governor &middot; BNF 8.8%</div>
+        </a>
+        <a href="state-ostmark.html" style="background:rgba(27,42,74,0.6);padding:1.5rem;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='rgba(27,42,74,0.9)'" onmouseout="this.style.background='rgba(27,42,74,0.6)'">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);font-weight:300;line-height:1;margin-bottom:0.75rem">OS</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-bottom:0.4rem">Ostmark</div>
+          <div style="color:rgba(245,240,232,0.5);font-size:0.8rem;line-height:1.6">Post-Conflict &middot; Reconstructed &middot; TAM Active &middot; BNF 6.1%</div>
+        </a>
+      </div>
+      <a href="state-builder.html" style="display:inline-flex;align-items:center;gap:0.75rem;font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.3);padding:0.7rem 1.5rem;text-decoration:none;background:rgba(201,168,76,0.06);transition:background 0.2s" onmouseover="this.style.background='rgba(201,168,76,0.12)'" onmouseout="this.style.background='rgba(201,168,76,0.06)'">
+        Design your own state &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="download">
+    <div class="download-inner">
+      <div class="download-text">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--navy);margin-bottom:0.3rem">The full document</h2>
+        <p>v118 &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; Twenty articles &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; 766 paragraphs &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; Tested through twenty scenarios and multiple adversarial stress tests</p>
+      </div>
+      <a href="constitution-v118.docx" class="btn-download" download>Download Constitution (DOCX)</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  </main>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="states.html">States</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+      <a href="discuss.html">Discuss</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;<span aria-hidden="true">&middot;</span>&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      var open=m.classList.toggle('open');
+      b.setAttribute('aria-expanded',String(open));
+    }
+    document.addEventListener('click',function(e){
+      var m=document.getElementById('mobileMenu');
+      if(m.classList.contains('open')&&!m.contains(e.target)&&!document.querySelector('.hamburger').contains(e.target)){
+        m.classList.remove('open');
+        document.querySelector('.hamburger').setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
+</body>
+</html>

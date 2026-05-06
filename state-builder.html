@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Builder — The Federated Republic</title>
+  <meta name="description" content="Configure a state government in the Federated Republic and see what it would look like — from executive model to BNF level to immigration posture.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;
+      --text:#2a2520;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-cta{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);padding:0.35rem 0.9rem;border-radius:3px}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+
+    /* Hero */
+    .hero{background:var(--navy2);padding:96px 2rem 56px;text-align:center;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,6vw,3.2rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:1rem}
+    .hero-body{color:rgba(245,240,232,0.6);font-size:0.95rem;max-width:520px;margin:0 auto;line-height:1.8}
+
+    /* Layout */
+    .builder-wrap{max-width:1100px;margin:0 auto;padding:60px 2rem 100px;display:grid;grid-template-columns:420px 1fr;gap:4rem;align-items:start}
+
+    /* Config panel */
+    .config-panel{position:sticky;top:80px}
+    .config-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);margin-bottom:0.25rem;font-weight:400}
+    .config-subtitle{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem}
+
+    /* Control groups */
+    .control-group{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(212,201,176,0.5)}
+    .control-group:last-of-type{border-bottom:none}
+    .control-label{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .control-value{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--navy);float:right;font-style:italic}
+
+    /* Sliders */
+    .slider-wrap{position:relative;padding-top:0.25rem}
+    input[type=range]{-webkit-appearance:none;width:100%;height:3px;background:linear-gradient(to right, var(--gold) var(--pct, 50%), var(--border) var(--pct, 50%));border-radius:2px;outline:none;cursor:pointer}
+    input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;background:var(--navy);border:2px solid var(--gold);border-radius:50%;cursor:pointer;transition:transform 0.15s}
+    input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
+    input[type=range]::-moz-range-thumb{width:16px;height:16px;background:var(--navy);border:2px solid var(--gold);border-radius:50%;cursor:pointer;border:none}
+    .slider-ends{display:flex;justify-content:space-between;margin-top:0.5rem}
+    .slider-end{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase}
+
+    /* Toggles */
+    .toggle-group{display:flex;gap:0;border:1px solid var(--border);overflow:hidden}
+    .toggle-btn{flex:1;padding:0.5rem;font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;background:white;border:none;cursor:pointer;color:var(--muted);transition:all 0.2s;text-align:center}
+    .toggle-btn.active{background:var(--navy);color:var(--gold)}
+    .toggle-btn:first-child{border-right:1px solid var(--border)}
+
+    /* Economy selector */
+    .economy-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+    .econ-btn{padding:0.6rem 0.75rem;font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;background:white;border:1px solid var(--border);cursor:pointer;color:var(--muted);transition:all 0.2s;text-align:left}
+    .econ-btn.active{background:var(--navy);border-color:var(--navy);color:var(--gold)}
+
+    /* Generate button */
+    .generate-btn{width:100%;padding:1rem 2rem;background:var(--navy);border:2px solid var(--gold);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;margin-top:1.5rem;position:relative;overflow:hidden}
+    .generate-btn:hover{background:var(--gold);color:var(--navy)}
+    .generate-btn:disabled{opacity:0.5;cursor:not-allowed}
+    .generate-btn .btn-inner{display:flex;align-items:center;justify-content:center;gap:0.75rem}
+
+    /* Output panel */
+    .output-panel{min-height:400px}
+    .output-empty{text-align:center;padding:80px 2rem;color:var(--muted)}
+    .output-empty-icon{font-size:3rem;margin-bottom:1rem;opacity:0.3}
+    .output-empty p{font-size:0.88rem;line-height:1.8}
+
+    /* State portrait */
+    .portrait{opacity:0;transform:translateY(12px);transition:all 0.4s ease}
+    .portrait.visible{opacity:1;transform:translateY(0)}
+    .portrait-header{margin-bottom:2rem}
+    .portrait-abbr{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--gold);font-weight:300;line-height:1;display:block}
+    .portrait-name{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--navy);font-weight:300;margin-bottom:0.25rem}
+    .portrait-tagline{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted)}
+
+    .portrait-stats{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0;padding:1.25rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .p-stat{text-align:center;min-width:80px}
+    .p-stat-val{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--navy);font-weight:300;display:block;line-height:1}
+    .p-stat-label{font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:0.2rem;display:block}
+
+    .portrait-section{margin-bottom:1.5rem}
+    .portrait-section-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+    .portrait-section p{color:var(--muted);font-size:0.9rem;line-height:1.85}
+
+    .portrait-charter{background:white;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .charter-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem}
+    .charter-row{display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid rgba(212,201,176,0.4);font-size:0.82rem}
+    .charter-row:last-child{border-bottom:none}
+    .charter-key{color:var(--muted)}
+    .charter-val{color:var(--text);font-weight:500;text-align:right;max-width:55%}
+
+    .portrait-tension{background:rgba(27,42,74,0.04);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .tension-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);opacity:0.6;margin-bottom:0.5rem}
+    .portrait-tension p{font-size:0.85rem;color:var(--muted);line-height:1.8}
+
+    .reset-btn{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;padding:0.5rem 0;margin-top:1rem;text-decoration:underline}
+    .reset-btn:hover{color:var(--navy)}
+
+    @media(max-width:900px){
+      .builder-wrap{grid-template-columns:1fr;gap:3rem}
+      .config-panel{position:static}
+    }
+    @media(max-width:600px){
+      .hamburger{display:flex}.nav-links{display:none}
+      .portrait-stats{gap:0.75rem}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="scenario-ordinary.html">Start Here</a>
+  <a href="index.html">Home</a>
+  <a href="annotated.html">Constitution</a>
+  <a href="states.html">States</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="papers.html">Essays</a>
+</div>
+
+<div class="hero">
+  <div class="hero-eyebrow">§13.7 — State Structural Autonomy</div>
+  <h1 class="hero-title">Design Your State</h1>
+  <p class="hero-body">Every state above the constitutional floor is its own. Configure the axes that matter — executive model, legislature, judiciary, BNF level, immigration posture — and see what kind of state you build in the Republic.</p>
+</div>
+
+<div class="builder-wrap">
+
+  <!-- Configuration Panel -->
+  <div class="config-panel">
+    <div class="config-title">State Configuration</div>
+    <div class="config-subtitle">Eight axes · Infinite combinations</div>
+
+    <!-- Economy -->
+    <div class="control-group">
+      <span class="control-label">Economic Character</span>
+      <div class="economy-grid" id="econ-grid">
+        <button class="econ-btn active" data-econ="coastal" onclick="setEcon(this)">Coastal / Maritime</button>
+        <button class="econ-btn" data-econ="landlocked" onclick="setEcon(this)">Landlocked / Resource</button>
+        <button class="econ-btn" data-econ="urban" onclick="setEcon(this)">Urban / Finance</button>
+        <button class="econ-btn" data-econ="mixed" onclick="setEcon(this)">Agricultural / Mixed</button>
+      </div>
+    </div>
+
+    <!-- Executive -->
+    <div class="control-group">
+      <span class="control-label">Executive Model <span class="control-value" id="exec-val">Parliamentary</span></span>
+      <div class="slider-wrap">
+        <input type="range" id="exec-slider" min="0" max="100" value="0" oninput="updateSlider(this,'exec-val',['Parliamentary Premier','Parliamentary Premier','Mixed Coalition','Elected Governor','Elected Governor'])">
+        <div class="slider-ends"><span class="slider-end">Parliamentary</span><span class="slider-end">Presidential</span></div>
+      </div>
+    </div>
+
+    <!-- Legislature -->
+    <div class="control-group">
+      <span class="control-label">Legislature</span>
+      <div class="toggle-group">
+        <button class="toggle-btn active" onclick="setToggle('leg','unicameral',this)">Unicameral</button>
+        <button class="toggle-btn" onclick="setToggle('leg','bicameral',this)">Bicameral</button>
+      </div>
+    </div>
+
+    <!-- Judiciary -->
+    <div class="control-group">
+      <span class="control-label">Judicial Selection</span>
+      <div class="toggle-group">
+        <button class="toggle-btn active" onclick="setToggle('jud','appointed',this)">Appointed</button>
+        <button class="toggle-btn" onclick="setToggle('jud','elected',this)">Elected</button>
+      </div>
+    </div>
+
+    <!-- BNF -->
+    <div class="control-group">
+      <span class="control-label">BNF Level <span class="control-value" id="bnf-val">5.0%</span></span>
+      <div class="slider-wrap">
+        <input type="range" id="bnf-slider" min="50" max="130" value="50" oninput="updateBNF(this)">
+        <div class="slider-ends"><span class="slider-end">5% (floor)</span><span class="slider-end">13%</span></div>
+      </div>
+    </div>
+
+    <!-- Gate 1 -->
+    <div class="control-group">
+      <span class="control-label">Gate 1 Immigration <span class="control-value" id="gate-val">Passive</span></span>
+      <div class="slider-wrap">
+        <input type="range" id="gate-slider" min="0" max="100" value="0" oninput="updateSlider(this,'gate-val',['Passive','Minimal','Moderate','Active','Highly Active'])">
+        <div class="slider-ends"><span class="slider-end">Passive</span><span class="slider-end">Highly Active</span></div>
+      </div>
+    </div>
+
+    <!-- Local Government -->
+    <div class="control-group">
+      <span class="control-label">Local Government <span class="control-value" id="local-val">Centralized</span></span>
+      <div class="slider-wrap">
+        <input type="range" id="local-slider" min="0" max="100" value="0" oninput="updateSlider(this,'local-val',['Centralized','Mostly Central','Balanced','Mostly Local','Strong Local'])">
+        <div class="slider-ends"><span class="slider-end">State-centralized</span><span class="slider-end">Strong local</span></div>
+      </div>
+    </div>
+
+    <!-- Indigenous Compact -->
+    <div class="control-group">
+      <span class="control-label">Indigenous Compact</span>
+      <div class="toggle-group">
+        <button class="toggle-btn active" onclick="setToggle('compact','absent',this)">Absent</button>
+        <button class="toggle-btn" onclick="setToggle('compact','present',this)">Present</button>
+      </div>
+    </div>
+
+    <button class="generate-btn" onclick="generatePortrait()">
+      <div class="btn-inner">
+        <span>Generate State Profile</span>
+        <span>→</span>
+      </div>
+    </button>
+
+    <button class="reset-btn" onclick="resetAll()">Reset to defaults</button>
+  </div>
+
+  <!-- Output Panel -->
+  <div class="output-panel" id="output-panel">
+    <div class="output-empty" id="output-empty">
+      <div class="output-empty-icon">◈</div>
+      <p>Configure your state on the left,<br>then generate its profile to see<br>how it fits within the Republic.</p>
+    </div>
+    <div class="portrait" id="portrait-output"></div>
+  </div>
+
+</div>
+
+<script>
+// ── State ──
+const cfg = {
+  econ: 'coastal',
+  exec: 0,
+  leg: 'unicameral',
+  jud: 'appointed',
+  bnf: 5.0,
+  gate: 0,
+  local: 0,
+  compact: 'absent'
+};
+
+// ── Controls ──
+function setEcon(btn){
+  document.querySelectorAll('.econ-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  cfg.econ = btn.dataset.econ;
+}
+
+function setToggle(key, val, btn){
+  const group = btn.closest('.toggle-group');
+  group.querySelectorAll('.toggle-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  cfg[key] = val;
+}
+
+function updateSlider(input, valId, labels){
+  const v = parseInt(input.value);
+  const idx = Math.round(v / 25);
+  document.getElementById(valId).textContent = labels[Math.min(idx, labels.length-1)];
+  cfg[valId.replace('-val','')] = v;
+  const pct = ((v - input.min) / (input.max - input.min) * 100) + '%';
+  input.style.setProperty('--pct', pct);
+}
+
+function updateBNF(input){
+  const v = parseInt(input.value);
+  const pct = (v / 10).toFixed(1);
+  cfg.bnf = parseFloat(pct);
+  document.getElementById('bnf-val').textContent = pct + '%';
+  const p = ((v - 50) / (130 - 50) * 100) + '%';
+  input.style.setProperty('--pct', p);
+}
+
+// Sync slider gradients on load
+function syncSliders(){
+  ['exec-slider','gate-slider','local-slider'].forEach(id=>{
+    const el = document.getElementById(id);
+    const pct = ((parseInt(el.value) - parseInt(el.min))/(parseInt(el.max)-parseInt(el.min))*100)+'%';
+    el.style.setProperty('--pct', pct);
+  });
+  const bnf = document.getElementById('bnf-slider');
+  const pct = ((parseInt(bnf.value)-50)/80*100)+'%';
+  bnf.style.setProperty('--pct', pct);
+}
+syncSliders();
+
+function resetAll(){
+  cfg.econ='coastal'; cfg.exec=0; cfg.leg='unicameral'; cfg.jud='appointed';
+  cfg.bnf=5.0; cfg.gate=0; cfg.local=0; cfg.compact='absent';
+  document.getElementById('exec-slider').value=0;
+  document.getElementById('bnf-slider').value=50;
+  document.getElementById('gate-slider').value=0;
+  document.getElementById('local-slider').value=0;
+  document.getElementById('exec-val').textContent='Parliamentary';
+  document.getElementById('bnf-val').textContent='5.0%';
+  document.getElementById('gate-val').textContent='Passive';
+  document.getElementById('local-val').textContent='Centralized';
+  document.querySelectorAll('.econ-btn').forEach(b=>b.classList.toggle('active',b.dataset.econ==='coastal'));
+  document.querySelectorAll('.toggle-btn').forEach(b=>{
+    const grp = b.closest('.toggle-group');
+    const isFirst = b === grp.querySelector('.toggle-btn');
+    b.classList.toggle('active', isFirst);
+  });
+  syncSliders();
+  document.getElementById('output-empty').style.display='';
+  const p = document.getElementById('portrait-output');
+  p.classList.remove('visible');
+  p.innerHTML='';
+}
+
+// ── Name Generator ──
+function hashConfig(){
+  const str = `${cfg.econ}${cfg.exec}${cfg.leg}${cfg.jud}${Math.round(cfg.bnf)}${cfg.gate}${cfg.local}${cfg.compact}`;
+  let h = 0;
+  for(let i=0;i<str.length;i++){h=((h<<5)-h)+str.charCodeAt(i);h|=0;}
+  return Math.abs(h);
+}
+
+function generateName(hash){
+  const pre=['Kal','Ar','Var','Mor','Dal','Est','Bel','Cor','Tor','Sel','Ver','Hav','Tren','Mal','Dor','Ost','Ren','Vel'];
+  const suf=['eld','is','ais','en','on','ath','or','ax','ia','ova','ara','ent','eld','ys','am','esh','al','ost'];
+  const p = pre[hash % pre.length];
+  const s = suf[(hash >> 3) % suf.length];
+  const name = p + s;
+  const abbr = name.slice(0,2).toUpperCase();
+  return { name, abbr };
+}
+
+// ── Content Blocks ──
+const content = {
+
+  origin: {
+    coastal:{
+      parliamentary: `{NAME} grew along the Republic's coastline as a Territory shaped by tides and trade — a fishing economy in its early decades, then a container port, then the industries that always follow ports. Its founding convention was held in the port authority building, which says something about what the delegates thought they were governing. The Territory entered the Statehood Audit process with robust institutions and cleared it in a single cycle. Its founding convention took {DAYS} days and produced a parliamentary executive — Assemblyists reasoned that the speed and flexibility of coalition government suited a maritime economy where conditions change with the season.`,
+      presidential: `{NAME} grew along the Republic's coastline as a Territory shaped by tides and trade — a fishing economy in its early decades, then a container port, then the industries that always follow ports. When it convened its founding constitutional convention in the port authority building, the delegates argued for {DAYS} days before settling on a directly elected Governor. The prevailing view was that maritime emergencies — storms, port accidents, environmental crises — require an executive who can act without waiting for coalition negotiations. The Governor holds a clear mandate and is expected to use it.`
+    },
+    landlocked:{
+      parliamentary: `{NAME} is a state of long winters and deep mineral deposits, of timber operations and agricultural plains that run to every horizon. Its founders, convening for {DAYS} days in the territorial capital, chose a parliamentary executive not from idealism but from pragmatism: no single industry and no single region held enough weight to anchor a strong executive, and the coalition model suited a state where compromise between competing economic interests was simply how governance had always worked.`,
+      presidential: `{NAME} is a state of long winters and deep mineral deposits, of timber operations and agricultural plains that run to every horizon. Its founding convention ran for {DAYS} days and produced a directly elected Governor — a figure strong enough to referee the competing claims of the mining counties, the timber industry, and the agricultural cooperatives that had each tried to dominate territorial politics. A strong executive was not ideological. It was the answer to the question of who, exactly, was in charge.`
+    },
+    urban:{
+      parliamentary: `{NAME} is a city that became a state — dense, vertical, and entirely urban within its {AREA}. Its founding convention was the most analytically demanding in the Republic's history: delegates spent {DAYS} days working out what federalism means when there is no hinterland, no rural-urban divide, no distant counties. They chose a parliamentary executive because a city's governance requires constant adjustment and consensus-building that a strong executive model would slow.`,
+      presidential: `{NAME} is a city that became a state — dense, vertical, and entirely urban within its {AREA}. Its founding convention spent {DAYS} days on a single central question: in a city-state where the state is the city, who makes fast decisions? The answer was a directly elected Mayor-Governor with a clear mandate and executive authority over transit, planning, emergency services, and the port. Governance by council consensus was judged too slow for urban complexity.`
+    },
+    mixed:{
+      parliamentary: `{NAME} was a Territory of deliberate diversity — its founding charter, drafted over {DAYS} days of convention debate, was written to balance three regions that had never quite agreed on anything: the river valley agricultural communities, the mid-sized industrial cities, and the upland timber country. The parliamentary executive emerged from this diversity as a structural necessity: no region was dominant enough to anchor a strong Governor, so coalition government became the design.`,
+      presidential: `{NAME} was a Territory of deliberate diversity — its founding charter, drafted over {DAYS} days of convention debate, had to bridge three regions that had never quite agreed on anything: the river valley agricultural communities, the mid-sized industrial cities, and the upland timber country. A directly elected Governor was the solution — a figure with a statewide mandate that no single region could claim to control, required to assemble cross-regional support to win, and empowered to enforce it once elected.`
+    }
+  },
+
+  government:{
+    parliamentary_uni_appointed: `The {NAME} Assembly sits {SEATS} members elected by ranked-choice vote in multi-member constituencies. It elects the Premier by absolute majority — no Premier can take office without genuine Assembly support, and no Premier can be removed without a simultaneous vote naming a successor. The judiciary is appointed: a Judicial Selection Panel nominates, the Assembly confirms at a 2/3 supermajority. After the lessons of the Statehood Audit — which found a legacy court system with a documented pattern of ruling for the territorial administration — {NAME} decided that judicial independence required structural insulation from electoral politics.`,
+    parliamentary_uni_elected: `The {NAME} Assembly sits {SEATS} members elected by ranked-choice vote in multi-member constituencies. It elects the Premier by absolute majority of all seated members. The judiciary faces the electorate: State judges stand for election on {PARTY} ballots, serving {JTERM}-year terms with a midterm retention vote. The Legislative Inspectorate's judicial independence monitoring applies — and {NAME}'s courts have issued significant rulings against the State government. Whether that record can be maintained through partisan elections is the constitutional question that will define {NAME}'s legal culture for a generation.`,
+    parliamentary_bi_appointed: `{NAME} maintains a bicameral legislature — an Assembly of {SEATS} members elected by constituency and a State Senate of {SENATS} seats distributed to give {REGIONAL} regions equal weight alongside population. The Premier is elected by the Assembly alone and need only maintain Assembly confidence; Senate is advisory on non-constitutional matters. The judiciary is appointed through a Judicial Commission, with Assembly confirmation at 2/3 — the bicameral structure was designed to balance competing regional interests in legislation while keeping judicial appointment above electoral pressure.`,
+    parliamentary_bi_elected: `{NAME} maintains a bicameral legislature — an Assembly of {SEATS} members and a State Senate distributed to balance {REGIONAL} regional interests. The Premier serves at Assembly confidence. Judges face the electorate — a structural tension the LI monitors closely, since bicameral states with elected judiciaries have historically produced different judicial cultures than those with appointed courts. The State Senate in particular has influenced judicial elections in ways that the Statehood Audit criteria around independence were designed to prevent. {NAME} has not triggered a formal finding. The monitoring continues.`,
+    presidential_uni_appointed: `The {NAME} Governor is directly elected to a four-year term, maximum two terms. Executive authority is clear and personal — the Governor may act where the State Charter assigns executive power without Assembly approval, subject to the charter's own checks. The unicameral Assembly of {SEATS} members checks the Governor through legislation and budget authority. The judiciary is appointed: nominated by a Judicial Commission, confirmed by the Assembly. The combination of strong executive and appointed courts is the {NAME} answer to the question of how to maintain speed and independence simultaneously.`,
+    presidential_uni_elected: `The {NAME} Governor is directly elected to a four-year term, maximum two terms, with full executive authority over state administration, emergency services, and BNF delivery. The unicameral Assembly of {SEATS} members passes legislation, oversees the budget, and can override the Governor's veto by 2/3 vote. Judges are elected — the most constitutionally consequential choice the convention made. The LI monitors {NAME}'s judicial record carefully. Three recent cases in which elected judges ruled against the Governor's administration have been cited as evidence that electoral accountability and judicial independence can coexist. Three others have been cited as evidence they cannot.`,
+    presidential_bi_appointed: `The {NAME} Governor holds a direct electoral mandate independent of the legislature — able to act where the State Charter permits without waiting for Assembly agreement. The bicameral legislature — an Assembly of {SEATS} members and a State Senate of {SENATS} seats giving {REGIONAL} regions equal standing — provides layered oversight and ensures the Governor cannot rely on a simple majority in a single chamber. The appointed judiciary is the structural counterweight: independent courts that can and do rule against both the Governor and the legislature when the law requires.`,
+    presidential_bi_elected: `The {NAME} Governor holds a direct four-year electoral mandate alongside a bicameral legislature — an Assembly and a State Senate distributing {REGIONAL} regional representation — and an elected judiciary. This is the most structurally complex configuration available under §13.7. Three independently elected power centers, each with distinct mandates and constituencies. The {NAME} experience has been that this produces vigorous democratic argument, slower governance, and a judiciary whose independence is tested regularly. The LI has not issued a formal finding. It has published substantial monitoring reports.`
+  },
+
+  citizens:{
+    low_bnf_passive_central: `An {ECONADJ} Kailan's daily experience of state government is shaped above all by the constitutional floor's presence and the state's proximity to it. BNF delivery at {BNF}% covers the basics — healthcare, housing support, food security — but without the supplemental programs that higher-BNF states offer. State services are administered centrally, which provides consistency across the territory but limits the responsiveness that local government authority enables. Gate 1 sponsorship is passive: the state accepts federal applications but does not actively recruit, leaving immigration composition largely to federal standards.`,
+    low_bnf_passive_local: `An {ECONADJ} resident finds that county and municipal governments handle most of what feels like "government" — planning, school administration, local taxes, the delivery of BNF programs at the neighborhood level. The state sets standards and equalizes funding between richer and poorer localities; the counties implement. BNF at {BNF}% covers the constitutional requirements without supplemental programs. Gate 1 is passive: the state is not actively recruiting Legal Residents, and the demographic character of the state changes more slowly than in states that use Gate 1 deliberately.`,
+    low_bnf_active_central: `The state delivers its services centrally and invests actively in Gate 1 recruitment — sponsoring Legal Residents in sectors the state government has identified as strategic priorities. With BNF at {BNF}%, the floor is present but unelaborated; what the state is spending its policy energy on is shaping who arrives rather than expanding what they receive. Central administration means Gate 1 certification is managed by a State Residency Office with consistent standards across the territory.`,
+    low_bnf_active_local: `Gate 1 recruitment is active but decentralized — county governments participate in sponsorship decisions within state standards, creating variation in who arrives where. A rural county with a timber industry labor shortage recruits differently than an urban center with healthcare gaps. BNF at {BNF}% covers requirements but locals supplement where county budgets allow. The subsidiarity principle is working: the most capable level for many immigration decisions turns out to be closer to the ground than the state capital.`,
+    high_bnf_passive_central: `The state invests substantially in its residents' basic conditions: BNF at {BNF}% covers healthcare with dental and mental health inclusion, a meaningful housing supplement, food security beyond the federal floor, and education support that closes the gap between wealthier and poorer districts. The services are delivered centrally, which means consistent quality across the territory but limited local customization. Gate 1 is passive — the state has chosen to focus its resources on deepening provision for current residents rather than expanding the population.`,
+    high_bnf_passive_local: `What an {ECONADJ} resident receives in this state is substantial — BNF at {BNF}%, including supplemental programs that the state Assembly has added above the federal floor, delivered through local governments that administer the programs with some discretion over how. A county in a lower-cost area may deliver housing support differently than one in a high-cost urban center. Gate 1 is passive; the state's policy emphasis is on the quality of provision for those already here.`,
+    high_bnf_active_central: `The state's constitutional ambition is visible on two fronts simultaneously: BNF at {BNF}%, with supplemental programs covering healthcare comprehensively, meaningful housing support, and education parity across districts — and an active Gate 1 program sponsoring Legal Residents in sectors the State Residency Office has certified as high-need. The combination is uncommon. It requires fiscal discipline to sustain high BNF provision while also managing the population growth that active Gate 1 produces. The Monetary Authority's most recent GNR assessment is publicly available on the NRS, as is the state's fiscal modeling.`,
+    high_bnf_active_local: `This is the fullest expression of §13.7's promise: high BNF provision, decentralized delivery, and active Gate 1 recruitment managed at the most local level capable. County governments participate in sponsorship decisions, administer supplemental BNF programs with local discretion, and report everything to the NRS. A resident of this state can see, at any time, what their county is spending on their behalf, who their county sponsored last quarter, and how their BNF delivery compares to adjacent counties. The transparency is constitutional. The variation is deliberate.`
+  },
+
+  tensions:{
+    parliamentary_compact: `The FPIC framework shapes every significant policy decision in {NAME}. The recognized indigenous nation's consent is required for any action materially affecting their lands or treaty rights — which, in practice, means the Premier's coalition must factor indigenous consent into infrastructure planning, environmental regulation, and land use decisions as a structural constraint rather than a political consideration. Three cases have gone to the federal Emergency Rights Writ mechanism since Statehood. The coalition government has generally found that early, genuine consultation produces better outcomes than litigation, which is perhaps the point.`,
+    presidential_compact: `The Governor's direct electoral mandate creates an interesting tension with the FPIC framework: an executive elected to act can be constitutionally required not to act, without any coalition process to absorb the friction. When the Governor's environmental regulation plans have crossed into Kaili territory without adequate consultation, the result has been federal court proceedings rather than political negotiation. {NAME} has lost two such cases. The FPIC framework is not a policy preference — it is constitutional, and the Governor's mandate does not override it.`,
+    elected_jud: `{NAME}'s elected judiciary is the Republic's most actively monitored judicial structure. The LI publishes quarterly independence assessments. The state's courts have ruled against the government in significant cases — on BNF delivery standards, on redistricting compliance, on executive overreach. Whether these outcomes reflect genuine judicial independence or the specific ideological alignment of the current judicial cohort with the opposition is a question the LI report acknowledges it cannot definitively answer. The question will be answered over decades of judicial election cycles, not quarters.`,
+    high_bnf_fiscal: `At {BNF}% of GNR, {NAME}'s BNF commitment requires sustained fiscal discipline. The Monetary Authority's GNR assessments, published to the NRS, show that the state's fiscal position is currently sustainable — but the margin is tighter than in states that operate closer to the floor. The State Assembly debates the BNF level at every budget cycle. The constitutional minimum of 5% is not the political floor in {NAME}; the political floor is closer to the current level. Reducing it would require a constituency that does not currently exist.`,
+    active_gate1: `Gate 1 recruitment at this scale produces visible community change — new residents, new industries, new political interests that were not part of the founding coalition. The NRS records every sponsorship decision. Civil society organizations monitor demographic shifts and their relationship to sponsorship priorities. The State Residency Office's quarterly sector assessments are public. Whether active Gate 1 use constitutes a form of state-directed demographic composition — and whether that is constitutionally permissible, or simply a policy choice — has not been litigated. It will be.`,
+    low_bnf_accountability: `At {BNF}% BNF, {NAME} operates close to the constitutional floor. The LI monitors BNF delivery rates quarterly and publishes compliance reports. The state has not triggered an Early Warning, which requires sustained delivery failure rather than proximity to minimum. But the margin between {NAME}'s provision level and a finding of constitutional inadequacy is visible on the NRS. Every county-level delivery report is public. Every Assembly budget vote is permanent. The accountability infrastructure exists precisely for situations like this — states that choose to operate near the floor are watched more closely than those that don't.`,
+    bicameral_regional: `{NAME}'s bicameral legislature creates persistent tension between the population-weighted Assembly and the regionally-weighted Senate. Bills that pass the Assembly with comfortable majorities have stalled in the Senate when they affected specific regional interests disproportionately. The constitutional single-subject rule (§3.1.c) has been invoked three times to challenge legislation that Senate members argued bundled regional costs with statewide benefits. None of those challenges succeeded, but the pattern reveals the structural friction that the convention's architects built deliberately into the system.`,
+    default: `{NAME} sits within the Republic's constitutional framework as a fully compliant state operating above the individual sovereignty floor. Its Statehood Audit record is clean. The Inspectorates' most recent reports note no formal findings. What {NAME} faces are not constitutional problems but constitutional choices — the normal argument of democratic governance about what the state is for, who benefits from its decisions, and how the founding generation's choices constrain and enable those of the next. These arguments play out on the National Record System, permanently, for anyone to read.`
+  }
+};
+
+// ── Generate Portrait ──
+function generatePortrait(){
+  const hash = hashConfig();
+  const {name, abbr} = generateName(hash);
+  const execLevel = cfg['exec-slider'] !== undefined ? parseInt(document.getElementById('exec-slider').value) : cfg.exec;
+  const gateLevel = parseInt(document.getElementById('gate-slider').value);
+  const localLevel = parseInt(document.getElementById('local-slider').value);
+  const execType = execLevel < 50 ? 'parliamentary' : 'presidential';
+  const isHighBNF = cfg.bnf >= 7.5;
+  const isActiveGate = gateLevel >= 50;
+  const isLocalStrong = localLevel >= 50;
+
+  // Days for founding convention (deterministic from hash)
+  const days = 14 + (hash % 28);
+  const seats = 48 + Math.round((hash % 80) / 2) * 2;
+  const senats = 40 + Math.round((hash % 40) / 2) * 2;
+  const jterm = [8,10,12][hash % 3];
+  const party = ['partisan','non-partisan'][hash % 2];
+  const area = [180,240,340,420,560][hash % 5];
+  const regional = ['geographic','economic','demographic'][hash % 3];
+
+  const econAdj = {coastal:'maritime', landlocked:'resource-economy', urban:'urban', mixed:'agricultural'}[cfg.econ];
+
+  function pick(obj, ...keys){
+    let o = obj;
+    for(const k of keys){ if(o && o[k]) o = o[k]; else return null; }
+    return o;
+  }
+
+  function fill(str){
+    return str
+      .replace(/{NAME}/g, name)
+      .replace(/{ABBR}/g, abbr)
+      .replace(/{DAYS}/g, days)
+      .replace(/{SEATS}/g, seats)
+      .replace(/{SENATS}/g, senats)
+      .replace(/{JTERM}/g, jterm)
+      .replace(/{PARTY}/g, party)
+      .replace(/{AREA}/g, area + ' km²')
+      .replace(/{REGIONAL}/g, regional)
+      .replace(/{BNF}/g, cfg.bnf.toFixed(1) + '%')
+      .replace(/{ECONADJ}/g, econAdj);
+  }
+
+  // Pick origin
+  const originBase = pick(content.origin, cfg.econ, execType) || pick(content.origin, 'coastal', execType);
+  const originText = fill(originBase || '');
+
+  // Pick government
+  const govKey = `${execType}_${cfg.leg}_${cfg.jud}`;
+  const govText = fill(content.government[govKey] || content.government['parliamentary_uni_appointed']);
+
+  // Pick citizens
+  const bnfTier = isHighBNF ? 'high_bnf' : 'low_bnf';
+  const gateTier = isActiveGate ? 'active' : 'passive';
+  const localTier = isLocalStrong ? 'local' : 'central';
+  const citizenKey = `${bnfTier}_${gateTier}_${localTier}`;
+  const citizenText = fill(content.citizens[citizenKey] || content.citizens['low_bnf_passive_central']);
+
+  // Pick tension
+  let tensionText;
+  if(cfg.compact === 'present'){
+    tensionText = fill(content.tensions[`${execType}_compact`]);
+  } else if(cfg.jud === 'elected'){
+    tensionText = fill(content.tensions.elected_jud);
+  } else if(isHighBNF){
+    tensionText = fill(content.tensions.high_bnf_fiscal);
+  } else if(isActiveGate){
+    tensionText = fill(content.tensions.active_gate1);
+  } else if(cfg.leg === 'bicameral'){
+    tensionText = fill(content.tensions.bicameral_regional);
+  } else if(!isHighBNF && cfg.bnf < 6.5){
+    tensionText = fill(content.tensions.low_bnf_accountability);
+  } else {
+    tensionText = fill(content.tensions.default);
+  }
+
+  // Charter entries
+  const charter = [
+    ['Executive', execType === 'parliamentary' ? `Premier (Assembly-elected)` : `Governor (directly elected)`],
+    ['Legislature', cfg.leg === 'unicameral' ? `Unicameral, ${seats} seats` : `Bicameral — Assembly (${seats}) + Senate (${senats})`],
+    ['Judiciary', cfg.jud === 'appointed' ? 'Appointed — commission + confirmation' : `Elected — ${party} ballot, ${jterm}-year terms`],
+    ['BNF Level', cfg.bnf.toFixed(1) + '% of GNR'],
+    ['Gate 1 Posture', ['Passive','Minimal','Moderate','Active','Highly Active'][Math.round(gateLevel/25)]],
+    ['Local Authority', ['State-centralized','Mostly central','Balanced','Mostly local','Strong local authority'][Math.round(localLevel/25)]],
+    ['Indigenous Compact', cfg.compact === 'present' ? 'Present — FPIC applies' : 'Absent'],
+  ];
+
+  // Tags
+  const tags = [
+    execType === 'parliamentary' ? 'Parliamentary' : 'Presidential',
+    cfg.leg === 'unicameral' ? 'Unicameral' : 'Bicameral',
+    cfg.jud === 'appointed' ? 'Appointed Judiciary' : 'Elected Judiciary',
+    `BNF ${cfg.bnf.toFixed(1)}%`,
+    isActiveGate ? 'Active Gate 1' : 'Passive Gate 1',
+    cfg.compact === 'present' ? 'Compact-Present' : null,
+    {coastal:'Coastal', landlocked:'Landlocked', urban:'Urban', mixed:'Agricultural'}[cfg.econ],
+  ].filter(Boolean);
+
+  const tagHTML = tags.map(t=>`<span style="font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.5rem;border:1px solid var(--border);color:var(--muted);display:inline-block;margin:0.15rem">${t}</span>`).join('');
+
+  const html = `
+    <div class="portrait-header">
+      <span class="portrait-abbr">${abbr}</span>
+      <div class="portrait-name">The State of ${name}</div>
+      <div class="portrait-tagline">${tags.slice(0,3).join(' · ')} · Admitted Year ${11 + (hash % 10)}</div>
+    </div>
+    <div style="margin-bottom:1rem">${tagHTML}</div>
+
+    <div class="portrait-charter">
+      <div class="charter-label">State Charter — Key Provisions</div>
+      ${charter.map(([k,v])=>`<div class="charter-row"><span class="charter-key">${k}</span><span class="charter-val">${v}</span></div>`).join('')}
+    </div>
+
+    <div class="portrait-section">
+      <div class="portrait-section-label">Origin</div>
+      <p>${originText}</p>
+    </div>
+
+    <div class="portrait-section">
+      <div class="portrait-section-label">Government Structure</div>
+      <p>${govText}</p>
+    </div>
+
+    <div class="portrait-section">
+      <div class="portrait-section-label">Living in ${name}</div>
+      <p>${citizenText}</p>
+    </div>
+
+    <div class="portrait-tension">
+      <div class="tension-label">Constitutional Watch</div>
+      <p>${tensionText}</p>
+    </div>
+
+    <div style="margin-top:2rem;border-top:1px solid var(--border);padding-top:1.75rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">Compare with real state profiles</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0.5rem">
+        <a href="state-kailos.html" style="border:1px solid var(--border);padding:0.85rem 1rem;text-decoration:none;background:white;display:block;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);font-weight:300;line-height:1;margin-bottom:0.3rem">KL</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.25rem">Kailos</div>
+          <div style="font-size:0.72rem;color:var(--muted);line-height:1.5">Parliamentary · Coastal · BNF 7.2%</div>
+        </a>
+        <a href="state-arveld.html" style="border:1px solid var(--border);padding:0.85rem 1rem;text-decoration:none;background:white;display:block;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);font-weight:300;line-height:1;margin-bottom:0.3rem">AV</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.25rem">Arveld</div>
+          <div style="font-size:0.72rem;color:var(--muted);line-height:1.5">Presidential · Landlocked · BNF 5.4%</div>
+        </a>
+        <a href="state-varentis.html" style="border:1px solid var(--border);padding:0.85rem 1rem;text-decoration:none;background:white;display:block;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);font-weight:300;line-height:1;margin-bottom:0.3rem">VR</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.25rem">Varentis</div>
+          <div style="font-size:0.72rem;color:var(--muted);line-height:1.5">City-State · Urban · BNF 8.8%</div>
+        </a>
+        <a href="state-ostmark.html" style="border:1px solid var(--border);padding:0.85rem 1rem;text-decoration:none;background:white;display:block;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);font-weight:300;line-height:1;margin-bottom:0.3rem">OS</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.25rem">Ostmark</div>
+          <div style="font-size:0.72rem;color:var(--muted);line-height:1.5">Post-Conflict · Parliamentary · BNF 6.1%</div>
+        </a>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('output-empty').style.display = 'none';
+  const portrait = document.getElementById('portrait-output');
+  portrait.innerHTML = html;
+  portrait.classList.remove('visible');
+  setTimeout(()=>portrait.classList.add('visible'), 50);
+  portrait.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function toggleMobileNav(){
+  const m=document.getElementById('mobileMenu');
+  const b=document.querySelector('.hamburger');
+  const open=m.classList.toggle('open');
+  b.setAttribute('aria-expanded',open);
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobileMenu');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!document.querySelector('.hamburger').contains(e.target)){
+    m.classList.remove('open');
+    document.querySelector('.hamburger').setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>

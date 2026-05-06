@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 7 — Voluntary Union · The Federated Republic</title>
+  <meta name="description" content="On devolution, independence, and why a federation held together by ongoing consent is more durable than one held together by constitutional compulsion.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:17px;line-height:1.85;overflow-x:hidden}
+
+    /* READING PROGRESS */
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:300;width:0%;transition:width 0.1s linear}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+
+    /* LAYOUT */
+    .page-wrap{max-width:720px;margin:0 auto;padding:96px 2rem 80px}
+
+    /* PAPER HEADER */
+    .paper-meta{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .paper-volume{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+    .paper-number{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--muted);margin-bottom:0.4rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.9rem;color:var(--muted);font-style:italic;line-height:1.7}
+    .paper-wordcount{font-size:0.72rem;color:var(--border);font-family:'JetBrains Mono',monospace;margin-top:0.5rem}
+
+    /* ESSAY BODY */
+    .essay-body{font-size:1.05rem;line-height:1.9;color:#2a2520}
+    .essay-body p{margin-bottom:1.6rem}
+
+    /* Drop cap on first paragraph */
+    .essay-body > p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+
+    /* ITALIC OPENING (the provocative statement) */
+    .essay-body > p:first-of-type em{font-style:italic;color:var(--navy)}
+    .essay-opener{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--navy);line-height:1.7;font-style:italic;margin-bottom:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06)}
+
+    /* SECTION HEADERS */
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin:3rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+
+    /* DIVIDER */
+    .essay-divider{text-align:center;color:var(--gold);font-size:1.2rem;margin:2.5rem 0;letter-spacing:0.5em;opacity:0.6}
+
+    /* NAV BETWEEN PAPERS */
+    .paper-nav{
+      position:fixed;bottom:0;left:0;right:0;z-index:150;
+      display:flex;justify-content:space-between;align-items:center;
+      background:rgba(245,240,232,0.97);backdrop-filter:blur(8px);
+      border-top:1px solid var(--border);
+      padding:0.75rem 2rem;gap:1rem;
+      box-shadow:0 -2px 12px rgba(27,42,74,0.08)
+    }
+    .paper-nav a.prev,.paper-nav a.next{max-width:40%}
+    .page-wrap{padding-bottom:80px!important}
+    .paper-nav a{text-decoration:none;display:flex;flex-direction:column;max-width:45%}
+    .paper-nav a.prev{align-items:flex-start}
+    .paper-nav a.next{align-items:flex-end;text-align:right}
+    .paper-nav .nav-direction{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.25rem}
+    .paper-nav .nav-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);line-height:1.3;transition:color 0.2s}
+    .paper-nav a:hover .nav-title{color:var(--gold)}
+    .paper-nav-center{color:var(--muted);font-size:0.75rem;text-align:center}
+
+    @media(max-width:640px){.page-wrap{padding:80px 1.25rem 60px}.paper-title{font-size:2rem}.essay-body > p:first-of-type::first-letter{font-size:3rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="states.html">States</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="paper-meta">
+      <span class="paper-volume">Volume II · The Papers of the Federated Republic</span>
+      <div class="paper-number">Paper No. 7</div>
+      <h1 class="paper-title">Voluntary Union</h1>
+      <p class="paper-subtitle">On devolution, independence, and why a federation held together by ongoing consent is more durable than one held together by constitutional compulsion.</p>
+      <div class="paper-wordcount">~2,440 words</div>
+    </header>
+
+    <article class="essay-body">
+      <div class="essay-opener">The Devolution and Independence Architecture</div>
+      <p><em>Most constitutions treat the political units that compose a federation as permanent. The states, provinces, or lands that enter a federal union at its founding become fixed features of the constitutional geography — their existence, their status, and their relationship to the central government defined once and inherited by every subsequent generation. The constitution governs what those units do. It does not contemplate what they might choose to become.</em></p>
+      <p><em>This document takes a different position. Statehood is a constitutional status, not a permanent institutional identity. The communities that hold that status — their people, their cultures, their histories, their futures — exist independent of it. What the document governs is the relationship between those communities and the federal structure. That relationship can change. The change is governed, transparent, democratic, and in some cases reversible. But it is possible.</em></p>
+      <p><em>That reconception is the foundation of the devolution and independence architecture. Everything else follows from it.</em></p>
+      <h2>Statehood as Status</h2>
+      <div class="essay-divider">✦</div>
+      <p>The conventional assumption about states in a federation is understandable. The founding generation drew the map. The communities on that map entered the union and became states. Their status was established by the act of joining, and the constitution's job is to govern the relationship that act created — not to provide mechanisms for renegotiating it. To contemplate a state reducing its constitutional standing, or departing the union entirely, is to contemplate something the constitutional tradition mostly treats as either unthinkable or illegal.</p>
+      <p>The assumption has a cost that the tradition has absorbed without fully acknowledging. A federation that treats state status as permanent has no constitutional answer to the question of what happens when a state's citizens genuinely prefer a different relationship with the central government. The question doesn't disappear because the constitution ignores it. It reappears in other forms — political movements, constitutional crises, in the most extreme cases the kind of rupture that no constitutional framework resolves cleanly because no constitutional framework anticipated it.</p>
+      <p>This document's answer begins earlier. Statehood carries specific obligations: Senate representation and the responsibilities that come with it, the annual Statehood Audit that requires ongoing fiscal and legal performance, the full federal tax relationship including contributions to redistribution that may exceed what the State's residents receive in return. These obligations are not trivial. They are the price of the constitutional standing that Statehood provides. A community that has changed — economically, politically, demographically — may find that the obligations of Statehood no longer match what its citizens want from their relationship with the Republic.</p>
+      <p>The document's position is that this is a legitimate democratic judgment, not a constitutional emergency. The geographic community does not cease to exist if its constitutional status changes. Its Article I rights are fully preserved in Territory status. Its Basic Needs Floor distributions continue without interruption. Its path back to Statehood remains open. What changes is the set of obligations and the scope of political participation — fewer federal responsibilities, less federal representation, a different compact with the Republic. That is a constitutional choice the document makes available because it trusts communities to know what kind of relationship with the federal government serves them best.</p>
+      <p>This reconception is more honest about political geography than the permanence assumption. The founding generation's decisions about which territories become states, with which boundaries, at which moment in history, are starting positions. They reflect the political and economic realities of a particular time. Communities change. What the founders' generation could not anticipate — and what no founding generation can anticipate — is what subsequent generations will want from the political relationship the constitution establishes. A constitution that forbids those generations from changing that relationship is not more stable. It is more brittle. It stores pressure that has no constitutional outlet.</p>
+      <h2>Why Statehood Isn't Compulsory</h2>
+      <div class="essay-divider">✦</div>
+      <p>The architecture provides two paths to Territory status: mandatory devolution, which is remedial, and voluntary devolution, which is political. Both produce the same destination. They travel different routes because they address different problems.</p>
+      <p>Mandatory devolution applies when a State has failed its governance obligations — chronic fiscal insolvency or a verified pattern of executive non-enforcement of federal constitutional law — for three consecutive annual Statehood Audits. The document is clear that mandatory devolution is not punishment. It is a remedial process: a State that has ceased to perform the functions of Statehood returns to the constitutional relationship that does not require those functions. The Early Warning period provides two years of published findings and joint remediation efforts before the Senate votes. The 3/4 Senate supermajority required for the Devolution Motion ensures the decision cannot be made casually or by narrow partisan majority. The Supreme Court challenge provision gives the affected State a constitutional avenue to contest the factual basis of the audit findings before the devolution takes effect.</p>
+      <p>Voluntary devolution applies when a State's citizens have made a free democratic choice. A 65% vote of residents who have held a Citizen Voting Credential for a minimum of ten years authorises the change. That threshold is not arbitrary. Voluntary devolution is constitutional change of lasting effect for everyone in the State — including the roughly 35% who voted no. The 10-year CVC minimum ensures the vote reflects settled civic commitment rather than transient population movement. The threshold ensures that a close and contested result does not produce irreversible constitutional change. These are not obstacles to democratic choice. They are the conditions under which a consequential democratic choice produces a legitimate result.</p>
+      <p>Voluntary devolution is also reversible in a way that independence is not. A devolved Territory that achieves the Statehood Audit criteria can re-enter the Provisional Membership Period and return to Statehood. The path back is open and defined. The architecture recognises that the pressures that lead a State to choose Territory status may change — economic conditions, political circumstances, demographic shifts — and that a community which made one choice at one moment should not be permanently bound by it. Independence, by contrast, produces a sovereign state. The transition framework is designed for permanence, not for reversal. The document makes that asymmetry explicit because the decisions belong in different constitutional categories.</p>
+      <h2>The Fiscal Dimension</h2>
+      <div class="essay-divider">✦</div>
+      <p>The tax structure of both forms of devolution is not administrative detail. It is a constitutional argument about who bears the consequences of constitutional change, and it deserves direct examination.</p>
+      <p>Voluntary devolution produces a lower federal income tax rate for Territory residents — the exact rate established in the negotiated devolution agreement or set by Parliament — along with the loss of Senate seats but the retention of House seats proportional to population. Before this vote can be held, the Monetary Authority must publish a Fiscal Incidence Study: a plain-language assessment of whether the State is a net contributor to federal redistribution or a net receiver, what the projected tax reduction would be, and what the effect on BNF distributions would be. Where the study finds a net-contributor State, the ballot must include this finding explicitly.</p>
+      <p>The Fiscal Incidence Study requirement is a constitutional obligation, not a procedural nicety. It reflects the same principle that runs through this document's most important design choices: citizens making consequential decisions deserve accurate information before they make them. A State population voting on voluntary devolution without knowing whether they are subsidising the rest of the Republic or being subsidised by it is making an irreversible constitutional choice on incomplete information. The study requirement closes that gap. The net-contributor disclosure requirement on the ballot closes it further — a State whose citizens would gain substantially from devolution knows that explicitly; a State whose citizens would lose federal distributions knows that too.</p>
+      <p>The scenario the document anticipated — and the scenario the scenario section of this project has explored — is that net-contributor States are more likely to pass devolution referenda and net-receiver States are more likely to fail them, once citizens have accurate information. That is the design working as intended. Democratic choice constrained by honest information produces better outcomes than democratic choice made in an information vacuum.</p>
+      <p>Mandatory devolution raises a different and harder fiscal question. When a State is mandatorily devolved, its citizens bear a change in their federal fiscal relationship as a consequence of their State government's failures — not necessarily their own choices. The citizens of a devolved State may have voted against every government decision that triggered the audit failures. The fiscal change lands on them regardless.</p>
+      <p>The honest answer is that the Territory compact carries genuine fiscal relief that partially offsets the loss of constitutional standing. Lower federal tax obligations, continued Basic Needs Floor protection at full levels, preserved Article I rights, a defined path back to Statehood — these are not consolation prizes. They represent a real reduction in the federal obligations that contributed to the State's fiscal difficulties in the first place. The document's position is that Territory status in mandatory devolution is not designed to compound the consequence of governance failure. It is designed to create the conditions under which the underlying community can stabilise, rebuild, and return to Statehood when it is genuinely ready to do so. The fiscal structure reflects that design intention.</p>
+      <h2>The Relief Valve</h2>
+      <div class="essay-divider">✦</div>
+      <p>Most federations offer their constituent units two constitutional options: full membership or departure. Full membership carries all the obligations of Statehood. Departure is unconstitutional, catastrophic, or both. The gap between those two options — which is large — has no constitutional occupant. Communities that want something other than full Statehood but are not seeking independence have nowhere to go within the constitutional structure. The pressure that builds in that gap finds extralegal channels.</p>
+      <p>Voluntary devolution is the constitutional occupant of that gap. It provides a community that wants a different relationship with the Republic — lower federal obligations, less central government entanglement, a lighter compact — a defined constitutional pathway to that relationship without requiring departure from the Republic itself. The relief valve metaphor is precise: it releases pressure that would otherwise have nowhere to go.</p>
+      <p>The political significance of this is larger than the number of States that will ever actually use it. The mere existence of the pathway changes the character of political movements that might otherwise have no constitutional channel. A separatist movement in a State that cannot constitutionally change its relationship with the Republic is a movement with nowhere to go but outside the constitution. A movement with the same grievances in a Republic that provides voluntary devolution has a constitutional option short of independence to advocate for and potentially achieve. The option's existence moderates the political dynamic even when it is not exercised.</p>
+      <p>The voluntary devolution pathway also reflects the document's theory of subsidiarity applied to constitutional status itself. The question of what level of federal engagement is appropriate for a given community is not one that only the founding generation could answer. Communities at different stages of development, with different economic profiles, different political cultures, and different preferences about the scope of central government in their lives should be able to make that choice within the constitutional framework. The document provides the mechanism. The communities make the choice.</p>
+      <h2>The Stability Argument — Independence</h2>
+      <div class="essay-divider">✦</div>
+      <p>The independence pathway produces the most immediate objection to the entire architecture: providing a constitutional route to departure invites fragmentation. If communities know they can leave, the centrifugal forces in any federation will be amplified. The exit option becomes a political resource for movements that would not otherwise have constitutional legitimacy.</p>
+      <p>The inverse of this argument has been tested more thoroughly than the argument itself. Federations that deny the exit right do not eliminate the pressure for departure — they force it into unconstitutional channels. When leaving is legally impossible, political movements seeking independence have only extralegal options: unilateral declaration, sustained political crisis, and in the worst cases the kind of violence that constitutional frameworks cannot resolve because those frameworks have already been set aside.</p>
+      <p>Canada's experience is the most instructive. The Supreme Court of Canada's 1998 reference opinion on Quebec secession established a constitutional principle that this document extends into operative text: unilateral declaration of independence is unconstitutional, but a clear democratic majority on a clear question creates a constitutional obligation to negotiate. The Clarity Act codified this into statute. The result was not fragmentation but stabilisation. Quebec independence movements have had a constitutional pathway available and have used it — twice, in 1980 and 1995 — and lost both times. The knowledge that the question could be asked constitutionally made the asking less dangerous, not more. Scotland's independence referenda under Section 30 orders produced the same dynamic: a contested constitutional question governed by democratic process and legal framework rather than political confrontation alone.</p>
+      <p>The contrast case is instructive in a different direction. The American Civil War is the starkest example of what happens when a federation's answer to the question of departure is "impossible and illegal" — when the constitutional framework provides no pathway and the political pressure has no constitutional outlet. The war resolved the question by force. It resolved it definitively. It also demonstrated that a constitutional answer, even one that says "yes, under these conditions," is more stable than a constitutional silence that says nothing while political reality builds toward rupture.</p>
+      <p>This document's independence pathway is not easy. The citizen petition threshold, the framework agreement requirement — negotiated and published 90 days before the referendum — the supermajority vote, the 24-to-60 month transition period, the dual executive authority split between the President's international dimensions and the Prime Minister's domestic arrangements: these are the conditions of a governed exit, not a casual one. The pathway exists for the hardest cases. It is designed to ensure that the hardest cases are resolved constitutionally rather than unconstitutionally, with full information, with defined transition arrangements, and with the Republic's obligations to departing citizens honoured through the transition period under treaty-equivalent terms.</p>
+      <h2>Voluntary Union</h2>
+      <div class="essay-divider">✦</div>
+      <p>The devolution and independence architecture is the document's theory of political union stated in its most concrete form.</p>
+      <p>The Republic holds itself together by ongoing consent expressed at every level of the constitutional relationship. Territory citizens choose to remain citizens. States choose to remain States. The Republic's members choose to remain members. At each level, the constitutional relationship is chosen and maintained — not inherited and compelled. The provisions that make exit possible are not the weakest parts of this document. They are among the most honest.</p>
+      <p>They are also, ultimately, among the most confident. A constitution that provides no exit pathway is a constitution that doubts its own legitimacy — that fears the question "why should we remain?" because it has no constitutional answer and no democratic process for asking it. A constitution that provides a governed, transparent, democratic exit pathway is a constitution that believes its own answer to that question is good enough to be tested. The Republic that results from voluntary union, at every level, is more legitimate than one held together by constitutional compulsion. Its members remain because the relationship serves them — not because the document forbids them from asking whether it does.</p>
+      <p>The founding generation cannot answer that question for every subsequent generation. The document provides the mechanism for each generation to answer it for themselves. That is not a weakness in the constitutional architecture. It is the architecture's deepest expression of trust in the people it governs.</p>
+      <p>*</p>
+    </article>
+
+    <nav class="paper-nav">
+      <a href="paper-06.html" class="prev"><span class="nav-direction">← Previous</span><span class="nav-title">The Combined Score</span></a>
+      <span class="paper-nav-center"><a href="papers.html" style="color:var(--muted);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase">All Papers</a></span>
+      <a href="paper-08.html" class="next"><span class="nav-direction">Next →</span><span class="nav-title">The Amendment Architecture</span></a>
+    </nav>
+  </main>
+
+  <script>
+    const bar = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docHeight * 100) + '%';
+    });
+  </script>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

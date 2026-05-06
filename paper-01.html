@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 1 — The Wager · The Federated Republic</title>
+  <meta name="description" content="On what this document bets on and why the bet is honest.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:17px;line-height:1.85;overflow-x:hidden}
+
+    /* READING PROGRESS */
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:300;width:0%;transition:width 0.1s linear}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+
+    /* LAYOUT */
+    .page-wrap{max-width:720px;margin:0 auto;padding:96px 2rem 80px}
+
+    /* PAPER HEADER */
+    .paper-meta{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .paper-volume{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+    .paper-number{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--muted);margin-bottom:0.4rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.9rem;color:var(--muted);font-style:italic;line-height:1.7}
+    .paper-wordcount{font-size:0.72rem;color:var(--border);font-family:'JetBrains Mono',monospace;margin-top:0.5rem}
+
+    /* ESSAY BODY */
+    .essay-body{font-size:1.05rem;line-height:1.9;color:#2a2520}
+    .essay-body p{margin-bottom:1.6rem}
+
+    /* Drop cap on first paragraph */
+    .essay-body > p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+
+    /* ITALIC OPENING (the provocative statement) */
+    .essay-body > p:first-of-type em{font-style:italic;color:var(--navy)}
+    .essay-opener{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--navy);line-height:1.7;font-style:italic;margin-bottom:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06)}
+
+    /* SECTION HEADERS */
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin:3rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+
+    /* DIVIDER */
+    .essay-divider{text-align:center;color:var(--gold);font-size:1.2rem;margin:2.5rem 0;letter-spacing:0.5em;opacity:0.6}
+
+    /* NAV BETWEEN PAPERS */
+    .paper-nav{
+      position:fixed;bottom:0;left:0;right:0;z-index:150;
+      display:flex;justify-content:space-between;align-items:center;
+      background:rgba(245,240,232,0.97);backdrop-filter:blur(8px);
+      border-top:1px solid var(--border);
+      padding:0.75rem 2rem;gap:1rem;
+      box-shadow:0 -2px 12px rgba(27,42,74,0.08)
+    }
+    .paper-nav a.prev,.paper-nav a.next{max-width:40%}
+    .page-wrap{padding-bottom:80px!important}
+    .paper-nav a{text-decoration:none;display:flex;flex-direction:column;max-width:45%}
+    .paper-nav a.prev{align-items:flex-start}
+    .paper-nav a.next{align-items:flex-end;text-align:right}
+    .paper-nav .nav-direction{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.25rem}
+    .paper-nav .nav-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);line-height:1.3;transition:color 0.2s}
+    .paper-nav a:hover .nav-title{color:var(--gold)}
+    .paper-nav-center{color:var(--muted);font-size:0.75rem;text-align:center}
+
+    @media(max-width:640px){.page-wrap{padding:80px 1.25rem 60px}.paper-title{font-size:2rem}.essay-body > p:first-of-type::first-letter{font-size:3rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="states.html">States</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="paper-meta">
+      <span class="paper-volume">Volume II · The Papers of the Federated Republic</span>
+      <div class="paper-number">Paper No. 1</div>
+      <h1 class="paper-title">The Wager</h1>
+      <p class="paper-subtitle">On what this document bets on and why the bet is honest.</p>
+      <div class="paper-wordcount">~1,580 words</div>
+    </header>
+
+    <article class="essay-body">
+      <h2>Section 1</h2>
+      <div class="essay-divider">✦</div>
+      <p>This document makes a bet. Not about policy, not about which party governs, not about the right rate of taxation or the correct level of defense spending. A bet about citizens — about whether they can be trusted with the full truth of how their government operates and make reasonable decisions with it.</p>
+      <p>The bet is explicit. Every provision in this document that requires the government to publish its decisions — and there are many — rests on the assumption that citizens who can see what their government is doing will hold it accountable for what they see. Every provision that makes constitutional commitments visible and enforceable rather than aspirational and deferrable rests on the same assumption. So does every provision that refuses to simplify government structure in the name of making it easier to understand, and every provision that places constitutional authority in the hands of citizens rather than delegating it entirely to officials.</p>
+      <p>If the assumption is wrong — if citizens cannot or will not engage with accurate information about their government — then the document fails. Not in a minor way. In the way that matters: the accountability mechanisms don't function, the transparency infrastructure produces information nobody reads, the sovereignty of the people becomes a phrase rather than a fact. The document is honest about this dependency because there is no constitutional design that escapes it. A government of the people depends on the people. That is not a limitation of this constitution. It is the nature of self-governance.</p>
+      <p>What follows in these papers is the case for each major design decision in the document. The case is made to citizens, not to constitutional scholars. It assumes the reader can follow an argument, evaluate a trade-off, and disagree with a conclusion — because if the reader cannot do those things, there is no point making the case at all.</p>
+      <h2>Section 2</h2>
+      <div class="essay-divider">✦</div>
+      <p>Every attempt at constitutional reform begins from the same place. You take the model you know, identify what's wrong with it, and fix those things. The result is always a modified version of what you started with — which means it inherits the structural assumptions of what you started with. The problems you were trying to solve reappear in different forms. Not because the modifications were wrong, but because the model's architecture was producing them, and the modifications left the architecture intact.</p>
+      <p>This is not an abstract observation. Anyone who has spent serious time thinking about constitutional design will recognise the pattern immediately. The instinct is almost irresistible: start from the familiar, adjust the obvious failures, produce something recognisable. The instinct feels like pragmatism. It is actually a bias — toward the known over the correct, toward the inherited over the examined.</p>
+      <p>The United States Constitution is the clearest illustration of both the tradition's strength and the pattern's pull. It established principles — separation of powers, enumerated authority, individual rights, democratic accountability — that were genuinely revolutionary in 1787 and that remain the foundation of every serious constitutional democracy that followed. Germany's Basic Law drew from it. Japan's postwar constitution was shaped by it. France's Fifth Republic engaged with it. The constitutional systems that have produced the most durable democratic governance in the past century are, without exception, in dialogue with it.</p>
+      <p>This document is in that same dialogue. It does not propose to replace the principles of 1787. It proposes to follow them more completely — to ask what those principles require when applied to the specific problems that two and a half centuries of experience have revealed, rather than to the problems the framers faced in their moment. The dual executive is not a departure from the principle of separated powers. Article II of the US Constitution vests all executive authority in a single President — a deliberate and defensible choice in 1787, when the framers' primary concern was preventing the weak confederation from collapsing inward. This document asks what separated powers looks like when applied to the executive branch directly, rather than only between the executive and the legislature. The answer is two executives with constitutionally bounded domains, each checking the other's capacity for unilateral action. The National Record System is not a departure from the principle of democratic accountability. It is democratic accountability given structural force rather than left as an aspiration.</p>
+      <p>What this document is not is a modification of what came before. The reform instinct — identify the failures, adjust the architecture, preserve the familiar — produces better versions of the same design. What was needed here was not a better version. What was needed was a design that asked what the founding principles genuinely require, answered that question honestly, and built accordingly.</p>
+      <h2>Section 3</h2>
+      <div class="essay-divider">✦</div>
+      <p>The tradition this document continues is older than the American founding. The Romans understood that concentrated executive authority is the mechanism of tyranny, not the mechanism of good governance, and they built their republic accordingly — two consuls, concurrent authority, mutual veto, serving simultaneously for one year at a time. For nearly five centuries the Roman Republic governed an increasingly complex society through that divided executive structure. The American framers knew this. Madison and Hamilton cited the Roman Republic in the Federalist Papers. They admired the consular model. They made a different choice for reasons specific to their moment — a new nation, a weak confederation, a continent to govern with limited administrative capacity — but the principle they were working from was Rome's.</p>
+      <p>What the tradition accumulated over the centuries that followed was evidence. The English parliamentary revolution established that executive authority accountable to a legislature produces more durable governance than executive authority accountable only to itself. The American founding established that enumerated federal authority — a government that can only do what it is specifically granted permission to do — is a more honest arrangement than a government whose authority expands to fill whatever space political will allows. The Weimar Republic's failure established that constitutional rights require structural enforcement mechanisms, not just philosophical commitments — that a constitution which states protections without building the institutional architecture to defend them will lose those protections precisely when they matter most. Germany's Basic Law, written in Weimar's aftermath, drew that lesson directly into its design: the constructive vote of no confidence, the constitutional court with active jurisdiction, the explicitly enumerated federal authority. Each generation learned something the previous one had not fully understood, and built accordingly.</p>
+      <p>This document is in that line. The dual executive descends from the consular principle — divided authority as structural resistance to capture rather than structural impediment to governance. The parliamentary accountability of the Prime Minister descends from Westminster — continuous democratic accountability rather than periodic electoral accountability. The elected Supreme Court descends from a different answer to the question Article III of the US Constitution also answers: how should judges be selected and retained? Article III provides for lifetime appointment — a design that maximizes independence from electoral pressure. This document makes a different trade-off: election from a constitutionally defined qualified pool, prioritising democratic accountability while preserving qualification standards through the Jurist Registry. The National Record System descends from the Enlightenment principle that sunlight is the most effective disinfectant — now made structurally real, for the first time, by the technology to make it possible. The permanently unamendable rights descend from Weimar's lesson: that constitutional protections without structural teeth are aspirations, not guarantees.</p>
+      <p>None of this was invented. Every piece of it was earned — by the tradition that produced it and by the failures that revealed where the tradition's prior applications fell short.</p>
+      <h2>Section 4</h2>
+      <div class="essay-divider">✦</div>
+      <p>Two commitments follow from the tradition and the wager together.</p>
+      <p>The first is transparency. The government's obligation to the citizen is complete, accurate, and permanent disclosure of what it is doing and why. Not managed transparency — not the release of information that reflects well on the government while inconvenient information is quietly buried. The full record, published in real time, without redaction, in a form any citizen can access without charge. What citizens do with that record is their sovereign right. The constitution provides the information. What follows from it belongs to the people.</p>
+      <p>This is not idealism. It is the practical conclusion of the wager stated in the opening of these papers. A government that curates what its citizens know has already decided, on the citizen's behalf, that they cannot be trusted with the full picture. That decision is incompatible with self-governance. A government either trusts its citizens with the truth or it doesn't. This document trusts them.</p>
+      <p>The second commitment is continuity. This document is not a revolution. It is the next step in a tradition that runs from the Roman Republic through the English parliamentary revolution through the American founding through the constitutional lessons of the twentieth century. Every provision in it has ancestors. The dual executive has Rome. The parliamentary accountability of the Prime Minister has Westminster. The enumerated federal authority has 1787. The structural protection of rights has Weimar. The transparency infrastructure has the Enlightenment principle of sunlight, now given institutional form for the first time by the technology to make it possible.</p>
+      <p>The combination is new. The components are not. What this document proposes is not that the democratic tradition was wrong — it proposes that the tradition, followed honestly to where its own logic leads, produces this.</p>
+      <h2>Section 5</h2>
+      <div class="essay-divider">✦</div>
+      <p>This is not a document that promises good government. It is a document that makes good government possible — by building the structural conditions under which citizens can see what their government is doing, hold it accountable for what they see, and change it when they conclude it has failed. The difference between a promise and a structure is the difference between hope and design. This document is a design.</p>
+      <p>The essays that follow examine each major design decision in turn. The dual executive. The elected Supreme Court. The information-only Inspectorates. The combined-score presidential election. The National Record System. The permanently unamendable rights. Each essay makes the case for why that decision was the right one — what problem it solves, what trade-off it accepts, and why the trade-off is worth making. Each essay also acknowledges what the decision costs, because a case that ignores costs is not a case. It is advocacy.</p>
+      <p>The tradition that produced this document trusted citizens with the argument for it. So do these papers. Read them with the same skepticism you would bring to any argument. Look for the places where the reasoning fails. Find the provisions that concern you. Bring those concerns to the discussion that a living constitution requires. That is not a threat to the document. It is the document working as intended.</p>
+      <p>The wager, in the end, is simple. It is that you — reading this, forming a view, preparing to make a choice — are capable of the work that self-governance requires. Everything else follows from that.</p>
+      <div class="essay-opener"></div>
+    </article>
+
+    <nav class="paper-nav">
+      <span></span>
+      <span class="paper-nav-center"><a href="papers.html" style="color:var(--muted);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase">All Papers</a></span>
+      <a href="paper-02.html" class="next"><span class="nav-direction">Next →</span><span class="nav-title">The Dual Executive</span></a>
+    </nav>
+  </main>
+
+  <script>
+    const bar = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docHeight * 100) + '%';
+    });
+  </script>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

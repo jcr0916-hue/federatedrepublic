@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The India Scenario — The Federated Republic</title>
+  <meta name="description" content="A hypothetical transition from the Constitution of India to the Federated Republic — and fifteen years in the world's most constitutionally sophisticated democracy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}</style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+
+  <div class="page-wrap">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The India Scenario</h1>
+      <p class="scenario-premise">India has been arguing about every fundamental design choice in this document for seventy-five years. The Directive Principles versus an enforceable social floor. Emergency powers and their abuse. Judicial appointment versus election. Equality and affirmative action. Indigenous rights. The Federated Republic does not introduce these debates to India. It provides constitutional architecture for debates India has already been having.</p>
+      <div class="provisions-tested"><span class="prov-tag">§1.25 Emergency Derogation</span><span class="prov-tag">§10.1 BNF Floor</span><span class="prov-tag">§1.8 Equality + Economic Status</span><span class="prov-tag">§5.1 CLT in 47 Languages</span><span class="prov-tag">§19.1 Tribal Institutional Accommodation</span><span class="prov-tag">§19.9 Transitional Accountability</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>India is the most constitutionally sophisticated transition of all — because India has been arguing about every fundamental design choice in this document for seventy-five years. The Directive Principles versus an enforceable social floor. Emergency powers and their abuse. Judicial appointment versus judicial election. Equality and affirmative action. Indigenous rights and development. The Federated Republic does not introduce these debates to India. It provides constitutional architecture for debates India has already been having.</p>
+
+      <h2>The Context of Ratification</h2>
+
+      <p>The constitutional convention meets in Nagpur — geographically central, symbolically neutral in a country where every city carries historical weight. Three years of deliberation and a ratification campaign that is the most substantive public constitutional debate since 1947 produce a vote. The ratification passes at 57.3% on 66.8% participation — the lowest of any scenario, reflecting genuine depth of opposition from communities who believe the Federated Republic's framework is less protective of their specific constitutional interests than the document being replaced.</p>
+
+      <p>The SC and ST communities split — 52% in favour, 48% against. Tamil Nadu votes 61% in favour. Bihar votes 48% against. The Republic ratifies. It is the most complicated constitutional transition any polity has ever undertaken.</p>
+
+      <h2>The Key Exchanges</h2>
+
+      <h3>The Directive Principles → The BNF</h3>
+      <p>This is the transition's most philosophically significant moment. Articles 36-51 — the right to adequate means of livelihood, equal pay, the right to work, to education, to public assistance — are non-justiciable. Constitutionally promised. Constitutionally unenforceable. The Supreme Court has spent seventy years progressively blurring this distinction through creative jurisprudence. The right to education became a Fundamental Right only in 2002, by amendment — not by the promise in the 1950 document.</p>
+
+      <p>The BNF does not promise outcomes. It constrains allocation. India's constitutional scholars, who have spent careers on exactly this problem, immediately understand what the exchange means: not better promises but honest ones. The BNF certification in Year 1 finds India compliant at approximately 2.8x the constitutional minimum — real provision in a country where per-capita GNR is a fraction of European levels.</p>
+
+      <h3>The Emergency Provisions → §1.25</h3>
+
+      <div class="finding">
+        <span class="finding-label">India's Weimar: The Emergency of 1975-1977</span>
+        <p>Proclaimed on June 25, 1975, it lasted 21 months. The press was censored. Opposition politicians were imprisoned without trial. Elections were postponed. Constitutional amendments eliminated judicial review of emergency proclamations. The fundamental rights of citizens were suspended. It ended only when the incumbent PM called elections in 1977, expecting to win, and lost.</p>
+        <p>The Federated Republic closes every specific pathway through which the 1975 Emergency operated: joint declaration prevents unilateral proclamation; seven-day two-thirds ratification prevents indefinite extension by decree; 90-day maximum prevents normalisation; five non-derogable rights prevent the suspension of habeas corpus and freedom from torture regardless of emergency status. Article 356 — the mechanism for central dismissal of State governments, used over 125 times and routinely abused — has no equivalent in the Federated Republic.</p>
+      </div>
+
+      <h3>The Collegium → Elected Supreme Court</h3>
+      <p>India's collegium system — entirely judge-made, with no constitutional basis, deeply opaque — is the most contested aspect of Indian judicial governance. The government's attempt to replace it with the National Judicial Appointments Commission was struck down by the Supreme Court in 2015: the Court ruled that judicial primacy in judicial appointments is part of the basic structure. The collegium continued.</p>
+
+      <p>The transition to the Qualified Jurist Pool resolves this impasse by providing a framework the 2015 NJAC ruling could not: an appointment system that is both more democratic than the collegium and more insulated from political interference than the NJAC would have been. The Pool's first seeding from India's 1.5 million lawyers produces 340 qualified candidates. The judicial elections achieve 67% and 64% participation in Years 1 and 4 — the highest of any scenario.</p>
+
+      <h3>The Reservations System — The Most Difficult Provision</h3>
+      <p>The Federated Republic's §1.8 prohibits discrimination on enumerated characteristics. India's reservations — 15% for Scheduled Castes, 7.5% for Scheduled Tribes, 27% for OBCs, 10% for Economically Weaker Sections — are formally discrimination in favour of historically disadvantaged groups. The constitution contains no explicit affirmative action authorisation. The Convention's most contested three weeks produce the Transition Schedule's resolution: "The Republic's §1.8 equality provision does not prohibit measures designed to remedy historically entrenched discrimination and disadvantage, provided such measures are proportionate and subject to periodic democratic assessment."</p>
+
+      <p>The Supreme Court's Year 3 ruling upholds this 7-2. The two-word phrase "time-limited in their review" — requiring Parliament to assess the reservations every ten years — is described as a victory by everyone and contested as insufficient by everyone, which is precisely what the Court intended.</p>
+
+      <h2>Year 1-3 — The Founding Period</h2>
+
+      <h3>28 States → 36 States</h3>
+      <p>India's larger Union Territories — Delhi, Puducherry, Jammu and Kashmir, Ladakh — are converted to States. Smaller Union Territories become Territories under §13.1. The Northeast's Seven Sisters retain State status with specific provisions accommodating the Sixth Schedule Autonomous District Councils within their territories. The Senate has 72 members. The first presidential election's combined score forces candidates to compete genuinely in southern States that northern-dominated politics had historically written off. The South has been heard.</p>
+
+      <h3>The First Emergency Test — Year 2</h3>
+      <p>A significant communal violence episode in one State produces calls for a federal emergency declaration. The President and PM disagree on whether §1.25 conditions are met. The Emergency Panel hears an expedited challenge in 48 hours. The Panel rules: communal violence confined within a single State is domestic law and order — PM domain, resolvable through State authorities and federal statutory law. No joint declaration is required. The State deploys its own police. The violence is suppressed in two weeks without a federal emergency declaration. The Republic's first demonstration that the emergency architecture works in the Indian context.</p>
+
+      <h3>The CLT in 47 Languages</h3>
+      <p>The CLT's linguistic accessibility requirement — added by the v111 amendment — faces its most demanding implementation anywhere. India has 22 Eighth Schedule languages and hundreds of regional languages. By Year 3, the CLT is administered in 47 languages. The linguistic accessibility standard is the provision doing the most direct work in India of any scenario.</p>
+
+      <h2>Year 4-8 — Consolidation</h2>
+
+      <h3>Article 356 Without Article 356</h3>
+      <p>A State government is implicated in systematic diversion of BNF-funded education programmes across three consecutive audit years. Under the old constitution, Article 356 would have been invoked — the Centre dismissing the State government by executive order. Under the Federated Republic, this pathway does not exist.</p>
+
+      <p>The LI's Statehood Audit finds major violation. Early Warning runs for two years. The Senate votes 56 of 72 for a Devolution Motion — above the 3/4 threshold. The State government, facing mandatory devolution to Territory status, resigns and calls elections before the Senate vote is certified. New elections produce a government that passes its first Statehood Audit within 18 months. The outcome is constitutionally cleaner than any Article 356 invocation in Indian history. It took four years. It was legitimate.</p>
+
+      <h3>The FPIC Provision and Development</h3>
+      <p>India's most economically significant FPIC application involves mining in the Scheduled Tribal areas of Jharkhand, Chhattisgarh, and Odisha — some of the country's richest mineral deposits beneath communities with the strongest legal protections. By Year 6, the Supreme Court has developed an FPIC framework holding: consent must be free, prior, and informed. Consent withheld is final. Several major mining projects that were proceeding under the old consultation-but-not-consent standard are required to genuinely obtain tribal consent. Some do. Some do not. The ones that do not cannot proceed. The result over six years: fewer mining projects, more revenue sharing in those that proceed, and the beginnings of a constitutionally grounded development model promised since the Forest Rights Act but never fully implemented.</p>
+
+      <h3>The Personal Laws — The Uniform Civil Code Question</h3>
+      <p>Parliament enacts a Uniform Civil Code in Year 7 — the first in Indian history. It does not replace personal laws entirely but establishes uniform civil procedure for inheritance of property acquired after ratification, maintenance obligations in separation, and division of marital property — while leaving personal law governing religious ceremonies and practices intact. The new Senate, elected directly by citizens, is more willing to support reform that the political class of State governments had historically blocked. The Code is immediately challenged. The Supreme Court upholds it 5-4 while striking down two provisions it finds insufficiently neutral between religious communities.</p>
+
+      <h2>Year 15 — The Verdict</h2>
+
+      <h3>The Ten-Year Reservations Review</h3>
+      <p>The constitutionally mandated Year 10 parliamentary review produces the most data-rich political debate in Indian democratic history. Eight years of State-level NRS data on employment, educational attainment, income, and social mobility disaggregated by caste, religion, gender, and State. The evidence shows: Scheduled Tribe disadvantage remains severe and widespread. Scheduled Caste disadvantage remains significant but has declined measurably in southern States. OBC conditions are highly variable.</p>
+
+      <p>Parliament responds with differentiated reservations calibrated by State and by community to evidence of actual disadvantage — not uniform percentages. The political storm is predictable. The constitutional architecture holds: the NRS evidence cannot be contested, the Supreme Court's proportionality jurisprudence provides the framework, and Parliament's democratic authority to design remedial measures is confirmed.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What Changed</span>
+        <p>The emergency architecture is the most important change. No emergency has been declared in fifteen years. In the historical timeline of the old constitution, this period would almost certainly have seen at least one Article 356 imposition and at least one Article 352 threat. The joint declaration requirement, the 90-day maximum, and the non-derogable absolute rights have together produced a constitutional environment in which emergency powers are not available as political instruments.</p>
+        <p>The Directive Principles are gone as aspirational text. The BNF is present as a constitutional floor. This exchange has produced, over fifteen years, a more honest relationship between constitutional promise and constitutional delivery than seventy-five years of progressive Directive Principles jurisprudence ever managed.</p>
+      </div>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Deepest Challenge</span>
+        <p>India's population is 1.5 billion. Its per-capita income, while growing, remains a fraction of European or East Asian levels. The BNF's 5% floor at Indian GNR levels provides real but modest protection. The Directive Principles' aspiration — that every Indian should have an adequate means of livelihood — was never achievable by constitutional mandate. The BNF's floor is achievable. The gap between the floor and the aspiration is where Indian politics continues to operate.</p>
+        <p>The most honest verdict at Year 15 is Ambedkar's own, restated for the Republic: constitutional morality must precede social morality. The Federated Republic has provided India with a framework that is, for the first time, honest about what it can guarantee rather than aspirational about what it cannot. Whether Indian society develops the constitutional morality that makes the framework work is not a constitutional question. It is a cultural and generational one. The CLT in 47 languages is training the next generation. The rest is India.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-weimar.html">← The Weimar Scenario</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

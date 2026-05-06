@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Emergency Scenario — The Federated Republic</title>
+  <meta name="description" content="What happens when a national emergency declaration meets the five provisions that cannot be suspended? A focused scenario testing §1.25.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="scenario-meta">
+      <span class="scenario-tag">Focused Scenario · §1.25 Emergency Derogation</span>
+      <h1 class="scenario-title">The Emergency Scenario</h1>
+      <p class="scenario-premise">A cyberattack cripples critical infrastructure. The President and PM jointly declare a national emergency. Parliament ratifies it. Then a government minister argues that one of the five absolute rights is getting in the way.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§1.25.a Declaration</span>
+        <span class="prov-tag">§1.25.b Non-Derogable</span>
+        <span class="prov-tag">§1.25.c Inspectorates</span>
+        <span class="prov-tag">§1.25.d Automatic Expiry</span>
+        <span class="prov-tag">§1.25.e No Permanence</span>
+      </div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>The attack begins at 2:47 AM on a Tuesday in November. By dawn, three States report cascading failures across power grids, water treatment systems, and transport networks. By noon, intelligence analysts have traced the intrusion to infrastructure inside a hostile foreign state. By 3 PM, the President and Prime Minister are in the same room for the first time since the election.</p>
+
+      <p>The joint declaration goes out at 6:17 PM. It is the Republic's first. The legal text is precise — the declaration specifies which Article I rights are temporarily limited, in which domains, and for what purposes. The Press Secretary reads it aloud. The NRS timestamps it at 6:19 PM. The clock starts.</p>
+
+      <div class="beat">
+        <div class="beat-label">Hour 0 — The Declaration</div>
+        <div class="beat-title">What the declaration actually says</div>
+        <p>The declaration limits freedom of movement in the three affected States (§1.6), allows emergency requisitioning of private communications infrastructure (§1.9.b), and suspends certain procedural requirements for emergency cyber-response contracting (§1.20). It explicitly states which rights it touches and which it does not. The five non-derogable rights — prohibition on torture, prohibition on slavery, habeas corpus, right to public trial, prohibition on retroactive laws — are not mentioned. They cannot be mentioned. They are outside the declaration's reach regardless of what it says.</p>
+      </div>
+
+      <p>Parliament convenes in emergency session 31 hours after the declaration. The ratification vote under §1.25.a requires a 2/3 supermajority within 7 days. The governing coalition has the numbers but not comfortably — three members are concerned about the communications infrastructure provision. The debate runs nine hours. The PM makes concessions on the sunset terms for the communications measure. The vote passes 289-144 at 1:14 AM. The emergency is ratified. The 90-day clock begins.</p>
+
+      <div class="divider">✦</div>
+
+      <p>On Day 34, the Interior Minister makes a statement that stops the room. The cyber-response teams have been attempting to trace attribution through a network of detained individuals — technical specialists arrested under emergency powers in the first 72 hours. Two of them have been held without formal charge for over a month. The Minister argues that the emergency declaration, combined with Parliament's ratification, provides authority to extend detention without the habeas corpus timeline that would normally apply.</p>
+
+      <p>The argument is wrong. The Minister knows it is wrong. The legal team that drafted it knows it is wrong. But the political pressure is real — releasing the detainees before attribution is established creates a different kind of problem — and someone in the government has decided to test the boundary.</p>
+
+      <div class="finding">
+        <span class="finding-label">§1.25.b — The Absolute Limit</span>
+        <p>The right against arbitrary detention and the right to habeas corpus are listed in §1.25.b as non-derogable. The provision does not say "may not be unreasonably limited." It says: these rights are absolute and apply without exception regardless of any declared emergency. The declaration cannot touch them. Parliament's ratification vote cannot touch them. A 99-0 Senate vote cannot touch them. A unanimous Direct Democracy amendment — which is itself constitutionally impossible under §15.3.a — cannot touch them. They hold.</p>
+        <p>The Judicial Inspectorate publishes a finding within 48 hours of the Minister's statement. The finding is three paragraphs. The first paragraph quotes §1.25.b. The second paragraph notes that the two detainees have been held beyond the habeas corpus timeline. The third paragraph states that this is a constitutional violation regardless of the declared emergency. The finding carries no enforcement power. It does not need any. It is published to the NRS and it will be there permanently.</p>
+      </div>
+
+      <p>The Prime Minister overrules the Interior Minister before the Supreme Court has to act. The two detainees appear before a magistrate within 24 hours. One is charged. One is released. The Minister resigns three days later, citing personal reasons. The EI's eventual Rule Violation assessment finds a minor corrective-order-track violation — the Minister acted on legal advice that the EI finds was internally inconsistent with the constitutional text. The corrective order is moot by the time it issues. The Minister is no longer in office.</p>
+
+      <div class="divider">✦</div>
+
+      <p>Day 89. One day before automatic expiry. The cyber-response is substantially complete. Three individuals have been charged. Attribution has been formally established. The grid is back. The water systems are operational. The transport disruption has resolved.</p>
+
+      <p>A faction in Parliament proposes a renewal. The Prime Minister declines to support it. The President does not comment — renewal is Parliament's prerogative, not hers. The renewal motion fails 201-232. At midnight on Day 90, the emergency expires automatically. Every measure it authorised lapses with no residual effect. The communications requisitioning authority ends. The movement restrictions end. Nothing carries over.</p>
+
+      <div class="outcome">
+        <span class="outcome-label">What This Scenario Tests</span>
+        <p>Three things. First, that the five non-derogable rights hold not because the government chose to respect them but because the constitutional architecture makes violation unconstitutional regardless of the political weather. The Interior Minister's argument failed before the JI published its finding — it was wrong on the law. The finding made the wrongness permanent and public.</p>
+        <p>Second, that automatic expiry is not a formality. Parliament could have renewed the emergency. It chose not to. The automatic expiry is the default that governs when political will is absent — the emergency ends whether or not anyone actively moves to end it.</p>
+        <p>Third, that the Inspectorates continued operating throughout. The JI published findings during the emergency. The EI assessed the Minister's Rule Violation during the emergency. The NRS recorded everything in real time. §1.25.c's guarantee that the Inspectorates operate with full constitutional authority throughout any declared emergency is not aspirational. It is what happened.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-rule-violation.html">Next: The Rule Violation Scenario →</a>
+    </nav>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

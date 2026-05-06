@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 5 — The Basic Needs Floor · The Federated Republic</title>
+  <meta name="description" content="On why a constitutional spending floor is more honest than a constitutional spending promise.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:17px;line-height:1.85;overflow-x:hidden}
+
+    /* READING PROGRESS */
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:300;width:0%;transition:width 0.1s linear}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+
+    /* LAYOUT */
+    .page-wrap{max-width:720px;margin:0 auto;padding:96px 2rem 80px}
+
+    /* PAPER HEADER */
+    .paper-meta{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .paper-volume{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+    .paper-number{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--muted);margin-bottom:0.4rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.9rem;color:var(--muted);font-style:italic;line-height:1.7}
+    .paper-wordcount{font-size:0.72rem;color:var(--border);font-family:'JetBrains Mono',monospace;margin-top:0.5rem}
+
+    /* ESSAY BODY */
+    .essay-body{font-size:1.05rem;line-height:1.9;color:#2a2520}
+    .essay-body p{margin-bottom:1.6rem}
+
+    /* Drop cap on first paragraph */
+    .essay-body > p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+
+    /* ITALIC OPENING (the provocative statement) */
+    .essay-body > p:first-of-type em{font-style:italic;color:var(--navy)}
+    .essay-opener{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--navy);line-height:1.7;font-style:italic;margin-bottom:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06)}
+
+    /* SECTION HEADERS */
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin:3rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+
+    /* DIVIDER */
+    .essay-divider{text-align:center;color:var(--gold);font-size:1.2rem;margin:2.5rem 0;letter-spacing:0.5em;opacity:0.6}
+
+    /* NAV BETWEEN PAPERS */
+    .paper-nav{
+      position:fixed;bottom:0;left:0;right:0;z-index:150;
+      display:flex;justify-content:space-between;align-items:center;
+      background:rgba(245,240,232,0.97);backdrop-filter:blur(8px);
+      border-top:1px solid var(--border);
+      padding:0.75rem 2rem;gap:1rem;
+      box-shadow:0 -2px 12px rgba(27,42,74,0.08)
+    }
+    .paper-nav a.prev,.paper-nav a.next{max-width:40%}
+    .page-wrap{padding-bottom:80px!important}
+    .paper-nav a{text-decoration:none;display:flex;flex-direction:column;max-width:45%}
+    .paper-nav a.prev{align-items:flex-start}
+    .paper-nav a.next{align-items:flex-end;text-align:right}
+    .paper-nav .nav-direction{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.25rem}
+    .paper-nav .nav-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);line-height:1.3;transition:color 0.2s}
+    .paper-nav a:hover .nav-title{color:var(--gold)}
+    .paper-nav-center{color:var(--muted);font-size:0.75rem;text-align:center}
+
+    @media(max-width:640px){.page-wrap{padding:80px 1.25rem 60px}.paper-title{font-size:2rem}.essay-body > p:first-of-type::first-letter{font-size:3rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="states.html">States</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="paper-meta">
+      <span class="paper-volume">Volume II · The Papers of the Federated Republic</span>
+      <div class="paper-number">Paper No. 5</div>
+      <h1 class="paper-title">The Basic Needs Floor</h1>
+      <p class="paper-subtitle">On why a constitutional spending floor is more honest than a constitutional spending promise.</p>
+      <div class="paper-wordcount">~1,950 words</div>
+    </header>
+
+    <article class="essay-body">
+      <div class="essay-opener">Constitutional spending commitments are a mistake. What Parliament spends is Parliament's business — economic conditions change, priorities shift, and a constitution that locks in fiscal ratios has elevated policy preference to fundamental law. This is the respectable version of the objection. It deserves a direct answer.</div>
+      <p><em>The answer begins with a distinction. The Basic Needs Floor is not a spending commitment. It is a constraint on allocation. The difference between those two things is the entire argument.</em></p>
+      <h2>The Promise Objection</h2>
+      <div class="essay-divider">✦</div>
+      <p><em>Constitutions that promise economic outcomes almost never deliver them. The history of socioeconomic rights in constitutional text is a history of aspirations that courts cannot enforce and governments need not meet.</em></p>
+      <p>The objection is correct about the history. It is incorrect about what this document does.</p>
+      <p>The positive rights tradition — "every citizen has the right to adequate housing," "every child has the right to free basic education," "every person has the right to a healthy environment" — has a generous and understandable origin. These rights express genuine moral commitments about what a just society owes its members. They have been written into constitutions across the democratic world with sincere intent. They have also, almost universally, failed as enforceable constitutional provisions.</p>
+      <p>India's constitution includes directive principles of state policy — socioeconomic commitments that the constitution itself describes as non-justiciable, meaning courts cannot compel compliance with them. The Indian Supreme Court has spent decades developing elaborate jurisprudence attempting to bridge the gap between the aspiration the directive principles express and the enforceability the constitution withholds. The result is a body of case law that is creative, contested, and unable to resolve the foundational problem: you cannot judicially compel an outcome that depends on conditions outside government control. South Africa's constitution, among the most progressive in the world, includes justiciable socioeconomic rights that its Constitutional Court has worked diligently to enforce. The Court has developed the concept of "progressive realisation" — the government must move toward the right's fulfilment as resources permit — which is a principled response to a real problem. The problem is that "progressive realisation" is not the right as written. It is an acknowledgment that the right as written cannot be enforced as written, and that something less will have to do.</p>
+      <p>This document faced the same choice. Its earlier drafts included the right to adequate housing, the right to basic education, and the right to a healthy environment — provisions that reflected the same genuine moral commitments that motivated those earlier constitutions. They were removed. Not because the commitments were wrong but because the mechanism was. A constitution that promises outcomes it cannot guarantee produces one of two results: courts that overreach to honour the promise, or governments that ignore it. Neither serves the people the provision was meant to protect.</p>
+      <p>The Basic Needs Floor is the mechanism that replaced those provisions. It does not promise that every citizen will have housing. It does not promise that every child will receive excellent education. It does not promise a healthy environment. It promises one thing and one thing only: that a minimum of 5% of what the government collects from citizens will be directed back to them in the form of four specified basic social goods. That promise depends on nothing except what the government does with revenue it already holds. It is not a statement about outcomes. It is a constraint on allocation.</p>
+      <p>The distinction matters enormously. "You have the right to housing" requires housing markets, construction capacity, urban land availability, and economic conditions the government cannot guarantee and courts cannot compel. "5% of gross national revenue must fund basic needs" requires only that the government direct existing revenue correctly. The first promise can be broken by conditions. The second can only be broken by choice — and the constitution makes that choice a constitutional violation rather than a policy option.</p>
+      <h2>The Gaming Objection</h2>
+      <div class="essay-divider">✦</div>
+      <p><em>Percentage floors can be gamed. Define the denominator narrowly, reclassify spending categories, run parallel programs that substitute for BNF spending while maintaining the nominal percentage. A clever Parliament can satisfy the formula while gutting the floor.</em></p>
+      <p>This is the most technically serious objection and it is the one the document was most carefully designed to address.</p>
+      <p>The anti-evasion principle — §10.1.a — states explicitly that the Basic Needs Floor guarantees a minimum level of actual provision, not merely a formula that may be satisfied by manipulating its component definitions. No parliamentary act, executive order, or budget mechanism that achieves effective reduction in actual provision below the constitutional minimum is valid, regardless of whether the nominal formula percentage remains technically unchanged. Compliance theater is named and prohibited. The principle was written because every mechanism for nominal compliance while achieving substantive evasion was identified during drafting and closed as a design requirement.</p>
+      <p>The methodology integrity provision — §10.4.d — closes the definitional manipulation pathway from the opposite direction. The Monetary Authority must use a single internationally recognised national income accounting standard, applied consistently across every constitutional formula calculation simultaneously. Parliament may update the standard — but only if the same standard applies to all formula-based provisions at once. It cannot adopt a favorable definition of gross national revenue for the BNF calculation while keeping a different definition for the deficit threshold. Any statutory definition that diverges from the unified standard for any subset of formula calculations is void.</p>
+      <p>The consequence is simple but powerful: you cannot cook one number without cooking all of them. A Parliament that wants to narrow GNR to lower the BNF floor must also narrow GNR for deficit threshold purposes, for Inspectorate funding purposes, for every other constitutional provision that depends on that number. The political cost of doing so comprehensively is far higher than the political cost of simply funding the floor honestly.</p>
+      <p>The Monetary Authority certifies actual provision, not formula compliance. It publishes the full methodology, the revenue assessment, and the compliance determination to the National Record System annually. Every publication is permanently on record. A Parliament that games the BNF — that satisfies the number while gutting the provision — will have a documented, permanent, publicly accessible record of having done so. The accountability is prospective as much as it is legal: the next election will have the record.</p>
+      <h2>The Legitimacy Objection</h2>
+      <div class="essay-divider">✦</div>
+      <p><em>Locking spending ratios in constitutional text removes democratic flexibility and elevates economic policy to constitutional status. Parliaments should make spending decisions. That is what parliaments are for.</em></p>
+      <p>The objection conflates a floor with a policy. The Basic Needs Floor sets a minimum below which Parliament cannot go. It does not set a level. Parliament can spend 6% of GNR on basic needs, or 10%, or 20% — the document places no ceiling and expresses no preference. Parliament retains full authority over how much to spend above the floor, which specific programs to fund, how to structure delivery, which States and Territories receive proportionally more, and every other dimension of social policy that constitutes the genuine substance of democratic fiscal deliberation.</p>
+      <p>What Parliament cannot do is spend less than 5%. That single constraint carries the same structural logic as the document's unamendable rights: not a limit on democratic choice but a limit on how far democratic majorities can erode the minimum obligations government owes citizens. The unamendable rights say: there are things the Republic may never do to its citizens regardless of democratic preference. The Basic Needs Floor says: there are minimum obligations the Republic owes its citizens that democratic preference cannot eliminate. The logic is identical. The form is different because the obligation is financial rather than prohibitory.</p>
+      <p>The Severe Contraction Protocol is the document's acknowledgment that even constitutional floors must account for genuine economic catastrophe. When the Monetary Authority certifies that current gross revenue represents less than 60% of the ten-year revenue median — genuine economic collapse, far beyond normal recession — the floor may proportionally reduce in the same ratio as the contraction. It may not be eliminated. In the worst economic conditions the Republic might face, basic needs provision continues, proportionally reduced, until recovery permits restoration. The protocol is not a weakening of the floor. It is the floor being honest about the conditions under which any government operates.</p>
+      <p>Constitutionalising the floor also produces a less-noted effect on democratic deliberation. When no floor exists, budget negotiations over basic needs spending are negotiations over whether to spend anything at all. The floor removes that question from the negotiation entirely — the 5% is spent, the debate is about how much more and how. That constraint changes the character of democratic fiscal deliberation in a direction the document endorses: from whether to how well.</p>
+      <h2>What the Floor Actually Protects</h2>
+      <div class="essay-divider">✦</div>
+      <p>The Basic Needs Floor is not the most dramatic provision in this document. It does not appear in the clauses most likely to generate public controversy. It will not be the subject of the first landmark Supreme Court ruling. What it does is more durable than drama: it ensures that the moral commitments behind the positive rights tradition — that a just society guarantees certain basic conditions to all its members — are honoured through a mechanism capable of honouring them.</p>
+      <p>The provisions it replaced were sincere. They were not sufficient. A right that depends on conditions the government cannot guarantee is, in the hardest cases, no right at all. The Basic Needs Floor is the same commitment made in a form the constitution can actually keep. It does not promise outcomes. It constrains allocation. It closes the manipulation pathways. It survives economic catastrophe proportionally rather than disappearing. It is certified by an independent institution that cannot be directed to produce convenient numbers and publishes everything it certifies to a permanent public record.</p>
+      <p>The aspiration that motivated a century of socioeconomic rights jurisprudence was not wrong. The mechanism was. This document keeps the aspiration and replaces the mechanism with one the architecture can support.</p>
+      <p>*</p>
+    </article>
+
+    <nav class="paper-nav">
+      <a href="paper-04.html" class="prev"><span class="nav-direction">← Previous</span><span class="nav-title">The Elected Supreme Court</span></a>
+      <span class="paper-nav-center"><a href="papers.html" style="color:var(--muted);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase">All Papers</a></span>
+      <a href="paper-06.html" class="next"><span class="nav-direction">Next →</span><span class="nav-title">The Combined Score</span></a>
+    </nav>
+  </main>
+
+  <script>
+    const bar = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docHeight * 100) + '%';
+    });
+  </script>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

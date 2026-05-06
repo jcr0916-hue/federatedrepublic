@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Germany Scenario — The Federated Republic</title>
+  <meta name="description" content="A hypothetical transition from the Basic Law to the Federated Republic — and what it reveals about what the document adds when constitutional foundations are already strong.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}</style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+
+  <div class="page-wrap">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The Germany Scenario</h1>
+      <p class="scenario-premise">Germany ratifies the Federated Republic — a document that took its most distinctive provisions from the Basic Law. The constructive vote of no confidence, the eternity clauses, the strong independent constitutional court. In constitutional terms, Germany is ratifying a refined version of what it already has. The question is not whether the Federated Republic is better — but whether it is better enough to justify the disruption.</p>
+      <div class="provisions-tested"><span class="prov-tag">§2.3 Constructive No-Confidence</span><span class="prov-tag">§4.1 Legal System Accommodation</span><span class="prov-tag">§15.3 Unamendable Provisions</span><span class="prov-tag">§15.6 Supremacy</span><span class="prov-tag">§19.1 Institutional Accommodation</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>Germany is, in constitutional terms, the most intellectually interesting of all the transitions — because Germany is ratifying a document that took its most distinctive provisions from Germany. The constructive vote of no confidence is German. The eternity clauses are German in inspiration. The strong independent constitutional court with non-renewable terms is German. In some meaningful sense, Germany is being asked to ratify a document that is partially a refined version of what it already has.</p>
+
+      <p>This produces a specific kind of political debate that none of the other transitions faced: not "is this constitutional framework better than what we have?" but "is this constitutional framework <em>better enough</em> to justify the disruption of transition?" The answer, when it comes, is not overwhelming.</p>
+
+      <h2>The Context of Ratification</h2>
+
+      <p>The proximate cause is not a single crisis but a convergence. The Basic Law's provisional character — always intended for reunified Germany as a step toward a broader European constitutional settlement — has become a political embarrassment. European integration has stalled at the treaty level. Germany's demographic and fiscal trajectory has produced a decade of pension reform politics that the Bundesrat's structure makes nearly impossible to resolve because Land governments have irreconcilable fiscal interests. And the Constitutional Court's increasingly assertive role in European affairs — its rulings on the ESM, the ECB's bond-buying programme, and the Fiscal Compact — has produced an institutional tension between the German constitutional order and European integration that no one within the existing framework can cleanly resolve.</p>
+
+      <p>The constitutional convention meets in Frankfurt — a gesture toward the 1848 Paulskirche convention, Germany's first constitutional moment. The ratification referendum passes at 56.8% on 72.4% participation. Bavaria votes 48.3% in favour — the only Land to vote against. This matters for what follows.</p>
+
+      <h2>The Structural Transition</h2>
+
+      <h3>The Bundesrat → Elected Senate</h3>
+      <p>This is Germany's most significant structural loss, and worth naming honestly. The Bundesrat's model — Land governments sending their own ministers to vote as government blocs — means the upper house represents the interests of state governments, not state populations. It is simultaneously more responsive to state administrative concerns (because the people voting are the people who run the states) and less democratically legitimate (because those people are not directly elected to the federal upper house).</p>
+
+      <p>German public administration loses something real in this transition: the Bundesrat's practical check on federal legislation that State administrations must implement. The first Eighth-Year Assessment flags this gap, recommending a statutory mechanism for State administrative compatibility review. Parliament enacts it in Year 9 — a parliamentary solution to a problem the constitution did not anticipate.</p>
+
+      <h3>The 16 Länder → 16 States</h3>
+      <p>Unlike France's regional consolidation or Russia's dramatic restructuring, Germany's 16 Länder map almost perfectly onto the Federated Republic's State model. They have elected assemblies, established administrations, significant legislative competence, and well-developed fiscal frameworks. The Statehood Audit process, when it runs in Year 2, finds all 16 States compliant — the first transition in any scenario where no State requires Early Warning or enhanced federal support in the founding period. The Senate has 32 members from the outset.</p>
+
+      <p>Bavaria's opposition to ratification doesn't prevent it from sending senators and functioning as a constitutional actor within the Republic. Bavaria's senators are, predictably, among the most active challengers of federal legislation in the Senate's first decade. This is exactly what the Senate is designed for.</p>
+
+      <h3>The Federal Constitutional Court → Elected Supreme Court</h3>
+      <p>The Federal Constitutional Court at Karlsruhe is not merely an effective institution — it is a globally admired one. Its 16 justices, elected by 2/3 majorities in both the Bundestag and Bundesrat, serving single 12-year non-renewable terms, have produced constitutional jurisprudence studied worldwide. The transition to the Qualified Jurist Pool and national judicial election is, for Germany, the resolution of a debate that has been irresolvable within the existing framework precisely because the existing framework made the existing system unamendable.</p>
+
+      <p>The first judicial elections produce justices whose quality is strikingly high — Germany's legal culture is sophisticated enough that voters take the EI's factual assessments seriously, and campaign dynamics reward genuine qualification. Germany's justices serve the same 12-year non-renewable terms as Karlsruhe. The election adds a legitimacy dimension Karlsruhe lacked. The Karlsruhe building becomes a constitutional museum. Its NRS archive is complete. The tradition continues in a different institutional form.</p>
+
+      <h3>The Eternity Clauses → §15.3.a</h3>
+      <p>Basic Law Articles 1 (human dignity) and 20 (democratic social federal state) are replaced by the Federated Republic's five unamendable provisions. This is a narrowing in some respects and a broadening in others. The Federated Republic's provisions are more specific: prohibition on torture, prohibition on slavery, habeas corpus, public trial, no retroactive laws. The Basic Law's Article 1 (human dignity) is broader as a constitutional concept but less enforceable in practice because "dignity" requires judicial interpretation in a way that "no torture" does not. German constitutional scholars argue about this for years. The dominant academic view, by Year 8, is that the Federated Republic's formulation is more honest about what "unamendable" can actually guarantee.</p>
+
+      <h2>Year 1-3 — The Party Question</h2>
+
+      <p>The Basic Law's party ban provision — Articles 9 and 21 allowing prohibition of parties that threaten the free democratic basic order — has no equivalent in the Federated Republic. The document prohibits conduct, not associations.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Supreme Court's Year 3 Ruling</span>
+        <p>The Court rules 7-2: the Federated Republic's constitution constrains what governments may do, not what political parties may advocate. A party that wins elections must govern within the constitutional framework. A party whose governing programme requires constitutional violations will face the accountability architecture the moment it governs.</p>
+        <p>The two dissenting justices — both former Karlsruhe judges — write a joint dissent noting that Weimar's constitution also had accountability mechanisms and that the Weimar parties that destroyed it were, for a period, governing within formal legal parameters while dismantling the institutional preconditions for accountability. The dissent is the most important piece of constitutional writing produced in the German Republic's first decade.</p>
+      </div>
+
+      <h2>Year 4-8 — Consolidation</h2>
+
+      <h3>Bavaria and Constitutional Activism</h3>
+      <p>Bavaria's senators are the most constitutionally active in the founding period, filing challenges to 14 pieces of federal legislation in the first two years and winning 4 outright. Bavaria's constitutional activism demonstrates something the other transition scenarios couldn't: what a State with high administrative capacity, genuine political identity, and democratic disagreement with the ratification outcome does within the constitutional framework. The answer is: it litigates, it votes, it challenges, and it wins some. The NRS records every challenge, every ruling, every vote. Bavaria is, paradoxically, the most constitutionally engaged State in the founding Republic precisely because it was most opposed to the transition.</p>
+
+      <h3>The Party Question — Continued</h3>
+      <p>The political movement whose constitutional status was debated in Year 3 contests Year 4 State elections in four Länder and wins representation in three. By Year 6, the EI has issued seven findings against State government actions by coalition governments that include this movement — all involving rule violations around §1.8 equal protection. Five produce corrective orders. Two escalate to major violation proceedings producing enhanced corrective orders. The movement's electoral support, having peaked at Year 4, declines through Year 7 as the NRS record becomes a campaign issue. This is the accountability architecture working as the Supreme Court's Year 3 ruling said it would.</p>
+
+      <h3>EU Law and Constitutional Supremacy</h3>
+      <p>The Supreme Court's Year 5 ruling on EU law supremacy is the most technically sophisticated constitutional decision of the German Republic's first decade. The Court holds that the Republic assumes Germany's EU treaty obligations. EU law continues to take precedence over Republic statute in areas of EU competence. EU law does not take precedence over the Federated Republic's constitution, including its unamendable provisions. The ruling is immediately recognised in Brussels as a functional continuity of the existing relationship — a vindication of the Basic Law's EU jurisprudence translated into the new framework.</p>
+
+      <h2>Year 15 — The Verdict</h2>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What the Document Adds to a Well-Functioning Democracy</span>
+        <p>Germany's Federated Republic is the scenario's most constitutionally successful transition by every metric the Assessment measures. All 16 States stable. No major constitutional crises. EU integration maintained. Military accountability enhanced. The NRS fully operational and actively used, with Germany's national public broadcaster becoming its most effective civic dissemination mechanism.</p>
+        <p>But the Assessment's appendix notes, in measured language that German constitutional scholars debate for years: Germany's success may be more a tribute to the Basic Law's success than to the Federated Republic's design. Germany's institutions were already strong, its democratic culture already deep, its constitutional courts already trusted, its citizens already constitutionally literate. The Republic did not make Germany constitutional. Germany was already constitutional. The Republic gave Germany's constitutional tradition a new and more explicitly democratic institutional expression.</p>
+      </div>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Question the Germany Scenario Cannot Answer</span>
+        <p>The Germany scenario is the clearest picture of what the document adds when the institutional foundations are already strong. The answer: democratic legitimacy and universal applicability. The elected Supreme Court is more legitimate than Karlsruhe, not better. The Senate is more democratic than the Bundesrat, not more effective. Whether that trade-off is worth making is the question the German scenario leaves open. 56.8% of German voters thought so. Bavaria still isn't sure.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-applied-analysis.html">← Applied Constitutionalism</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-weimar.html">The Weimar Scenario →</a>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

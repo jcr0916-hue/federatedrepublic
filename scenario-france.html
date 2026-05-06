@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The France Scenario — The Federated Republic</title>
+  <meta name="description" content="A hypothetical transition from the Fifth Republic to the Federated Republic, and fifteen years in operation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The France Scenario</h1>
+      <p class="scenario-premise">France ratifies the Federated Republic following a prolonged cohabitation crisis. The Fifth Republic's semi-presidential system, Napoleonic administrative law tradition, and unitary state structure must all translate into the federal constitutional framework — over fifteen years.</p>
+      <div class="provisions-tested"><span class="prov-tag">§2.1–2.2 Dual Executive</span><span class="prov-tag">§4.1 Legal System Accommodation</span><span class="prov-tag">§13.1 Territory Status</span><span class="prov-tag">§15.4 Independence Framework</span><span class="prov-tag">§19.1 Institutional Accommodation</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>The Federated Republic's French ratification is not adopted against a backdrop of constitutional failure. The Fifth Republic governed France for over sixty years — through decolonisation, two periods of cohabitation, repeated institutional reform, and sustained democratic legitimacy. What drives ratification is not crisis but exhaustion: the accumulated weight of institutional arrangements that work but that successive generations have found increasingly difficult to reform.</p>
+
+      <p>The proximate cause is a prolonged cohabitation following parliamentary elections that produced a National Assembly majority opposed to a sitting President with three years remaining in his term. The resulting governmental paralysis — particularly around a European fiscal compact the Assembly refused to ratify and the President refused to dissolve the Assembly to contest — produces the political opening for a constitutional convention. What begins as a proposal for Fifth Republic reform evolves, over eighteen months of public deliberation, into a ratification vote on a new constitutional framework.</p>
+
+      <p>The ratification passes at 58.4% on 71.2% participation. The <em>non</em> campaign, centered on the loss of France's unitary tradition, the overseas territories question, and the elected Supreme Court, runs to 41.6%. France enters the Federated Republic as a contested but democratic choice.</p>
+
+      <h2>The Structural Transition</h2>
+
+      <h3>From Unitary to Federal</h3>
+      <p>The most dramatic transformation. France's 13 metropolitan regions become the founding States. After eighteen months of debate, the 13 regions prevail over the 96 departments — they have elected regional councils, established administrative capacity, and enough political identity to function as constitutional actors. The departments become sub-State administrative units.</p>
+
+      <p>The overseas territories require a separate solution. Martinique, Guadeloupe, French Guiana, Réunion, and Mayotte become Territories under §13.1, retaining their Article I rights, BNF protections, and a defined Statehood pathway. New Caledonia, already operating under the Nouméa Accord with significant autonomy and an independence referendum framework, becomes the Republic's first explicit independence-track Territory under §15.4.b. French Polynesia negotiates a similar arrangement.</p>
+
+      <h3>From Presidential to Dual Executive</h3>
+      <p>The Fifth Republic's President maps imperfectly but recognisably onto the Federated Republic's President. The Prime Minister role — already existing in French constitutional practice, the subject of decades of cohabitation jurisprudence — maps onto the domestic executive with less disruption than might be expected. The domain specification that §2.1 and §2.2 provide resolves a tension French constitutional lawyers had been arguing about for sixty years: in the Fifth Republic, the boundary between presidential and prime ministerial authority is convention and political circumstance, not constitutional text.</p>
+
+      <p>The nuclear question requires the Convention's most difficult provision: a supplementary article specifying that France's nuclear command authority rests with the President for the first three years of the Republic, pending Parliament's definition of military command statutes under §12.1. The provision sunsets and Parliament enacts permanent command statutes in Year 3.</p>
+
+      <h3>The Constitutional Council → Elected Supreme Court</h3>
+      <p>France's Constitutional Council is dissolved. The first Qualified Jurist Pool is seeded from the <em>Conseil d'État</em>, the <em>Cour de cassation</em>, and the <em>Conseil constitutionnel</em>. The pool's qualification criteria prove immediately controversial: several prominent <em>conseillers d'État</em> fail to meet the requirement for demonstrated knowledge of the constitutional rights framework, having spent careers in administrative law rather than constitutional law. The EI's factual assessments are published. Three Pool candidates appeal. The Supreme Court's first ruling upholds the Pool criteria 4-1.</p>
+
+      <h3>The NRS and French Administrative Tradition</h3>
+      <p>France's existing administrative record systems — the <em>Journal officiel</em>, the <em>Légifrance</em> database, regional administrative registries — are integrated into the NRS's distributed node architecture over the 24-month Phase 3 transition period. France's existing digital identity infrastructure (<em>France Connect</em>) is adapted for the Citizen Voting Credential system. The CLT is administered in French and in regional languages under the linguistic accessibility provisions.</p>
+
+      <h2>Year 1-3 — The Founding Period</h2>
+
+      <p>The combined-score presidential election is held in Year 1. Five candidates clear the petition threshold. The first President's support is distributed across the northern, western, and southwestern regions — a distribution that would have been difficult to achieve under the Fifth Republic's two-round system, which historically concentrated on Paris and major metropolitan areas in its final round dynamics.</p>
+
+      <p>The Senate presents the most complex transition problem. Each State sends two Senators — the 13 metropolitan regions each send two, producing a 26-member metropolitan Senate. The Île-de-France senators, representing a State containing roughly 18% of France's population, have identical voting weight to the senators from Corse, representing roughly 0.5%. The disparity produces immediate political argument. The Supreme Court's Year 2 ruling is brief: the Senate's equal State representation is constitutional text, not constitutional error.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Constitutional Council Transition Gap</span>
+        <p>The dissolution of the Constitutional Council removes the <em>question prioritaire de constitutionnalité</em> mechanism before the elected Supreme Court has developed its own standing doctrine. The transition period produces a gap of approximately eight months during which constitutional challenges to legislation have no clear procedural pathway. The LI documents 23 pending challenges filed with courts that no longer have jurisdiction and not yet transferred to the Supreme Court. The Court, once it reaches a four-justice quorum, issues an emergency procedural ruling establishing transfer protocols. All 23 challenges are resolved within fourteen months.</p>
+      </div>
+
+      <h2>Year 4-8 — Consolidation</h2>
+
+      <h3>The Regions as States</h3>
+      <p>The 13 metropolitan States develop at different speeds. Île-de-France, Auvergne-Rhône-Alpes, and Occitanie — the three largest by population and economic output — establish functioning State administrations quickly, drawing on existing regional council capacity. Bretagne and Occitanie, with strong regional cultural identities, move aggressively to exercise their State legislative authority, particularly in education and regional language policy. Normandie and Centre-Val de Loire, historically administrative regions without strong political identities, find State-building more difficult. Their first Statehood Audits in Year 5 pass, but narrowly.</p>
+
+      <h3>New Caledonia</h3>
+      <p>New Caledonia holds its third independence referendum in Year 4 under the Federated Republic's §15.4 framework. The result — 52.3% for independence on 64.1% participation — fails the 70% threshold. The independence movement, having expected the constitutional framework to provide a cleaner pathway than the Nouméa Accord, is frustrated. The Supreme Court's ruling on the threshold's constitutionality is unanimous: 70% reflects the irreversibility of the decision. New Caledonia pivots to the Statehood pathway, calculating that State status followed by a better-organised independence campaign is the more effective route.</p>
+
+      <h3>The EU and Cohabitation</h3>
+      <p>The first significant cohabitation dispute in Year 5 — a PM who wants to implement an EU digital markets directive in a way that conflicts with the President's technology sovereignty position — goes to the Emergency Panel. The Panel rules that EU treaty obligation implementation is domestic law administration and therefore PM domain, subject to the President's right to register formal objection through the EU Council process. The ruling is the most-cited Emergency Panel decision in the Republic's first decade.</p>
+
+      <h3>The CLT Controversy</h3>
+      <p>The Constitutional Logic Test's implementation surfaces a specific problem: France's naturalization tradition emphasises cultural integration and language proficiency more heavily than constitutional knowledge. The LI's annual CLT audit in Year 6 documents statistically that applicants from Francophone Africa — who have high French language proficiency but different governmental traditions — pass at lower rates than applicants from other European countries with similar constitutional frameworks. The CLT Administrator commissions a content review under the v118 amendment's linguistic accessibility requirement. The revised CLT, published in Year 7, maintains the knowledge standard while removing question framings that assumed familiarity with common law traditions. Pass rates rise 12 points.</p>
+
+      <h2>The Laïcité Trilogy</h2>
+
+      <p>The Supreme Court's most significant jurisprudential development is a trilogy of cases arising from State-level laïcité regulations.</p>
+
+      <div class="beat">
+        <div class="beat-label">Case 1</div>
+        <div class="beat-title">State laïcité statute prohibiting visible religious symbols</div>
+        <p>The Court rules 5-4: State laïcité regulations are constitutional provided they are neutral and general — applying equally to all religious expressions, not targeting specific religions. The statute survives.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">Case 2</div>
+        <div class="beat-title">State funding for religious schools through general education formula</div>
+        <p>The Court rules 6-3: States may not be required to apply laïcité as a matter of federal constitutional law — it is a policy choice, not a constitutional mandate. The funding formula is permitted. The ruling produces extraordinary controversy in States with strong laïcité traditions.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">Case 3</div>
+        <div class="beat-title">State statute establishing regional language as co-official</div>
+        <p>The Court rules 7-2: States have full authority over their administrative language choices within their domain. French remains the language of federal institutions. A State may administer itself in its regional language. The ruling is described by one justice's concurrence as "the moment the Republic became genuinely federal."</p>
+      </div>
+
+      <h2>Year 15 — The Verdict</h2>
+
+      <p>At fifteen years, the French Republic is recognisably French and recognisably constitutional. It has not shed its administrative tradition — the <em>grandes écoles</em> still dominate public service, the planning culture still shapes economic policy. What has changed is the locus of constitutional authority.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What Held</span>
+        <p>The Emergency Panel resolved 31 domain disputes in eight years — a lower number than most observers predicted, attributed partly to the domain specification's clarity in the French context, where decades of cohabitation jurisprudence had produced extensive practice in distinguishing presidential from prime ministerial functions.</p>
+        <p>The NRS integrated with France's civil law administrative tradition more smoothly than anticipated. The §19.1 institutional accommodation provision — which required Parliament to define the relationship between existing administrative court structures and the new constitutional framework — resolved the <em>Conseil d'État's</em> ambiguous status within two years of Phase 4 activation.</p>
+        <p>Réunion, after seven years as a Territory, passes its Statehood Audit in Year 7 and enters the Provisional Membership Period — the Republic's first overseas Statehood.</p>
+      </div>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What Remains Unresolved</span>
+        <p>Four of the original 13 States have Statehood Audit findings that concern the LI. The laïcité trilogy has produced a constitutional controversy that will run for decades. The first voluntary devolution petition — from a faction within Centre-Val de Loire — fails its signature threshold in Year 14 but signals the pressure that fiscal underperformance and constitutional indifference produce over time.</p>
+        <p>The most honest verdict at Year 15 is that France has successfully translated a unitary republican tradition into a federal constitutional one — not without friction, not without loss, and not without surprises. The document trusted the architecture. The architecture, in France's case, has held.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <span></span>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-uk.html">The United Kingdom Scenario →</a>
+    </nav>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

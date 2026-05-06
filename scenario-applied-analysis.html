@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applied Constitutionalism — The Federated Republic</title>
+  <meta name="description" content="What three international scenarios — France, the UK, and Russia — revealed about the Federated Republic's constitutional architecture.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">Applied Constitutionalism</h1>
+      <p class="scenario-premise">After running the three international scenarios, several findings emerge about how the document's architecture performs across different legal traditions, institutional inheritances, and political cultures. This analysis draws together the lessons — including the observation that prompted two of the document's most significant post-scenario amendments.</p>
+      <div class="provisions-tested"><span class="prov-tag">§4.1 Legal System Accommodation</span><span class="prov-tag">§9.2 NRS Architecture</span><span class="prov-tag">§19.1 Institutional Accommodation</span><span class="prov-tag">§19.9 Transitional Accountability</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>Three scenarios. Three different political cultures, legal traditions, and institutional inheritances. The same constitutional document applied to each. What did the exercise reveal?</p>
+
+      <h2>What the Scenarios Revealed That Stress Tests Could Not</h2>
+
+      <p>The eight adversarial stress tests looked for gaps by assuming bad actors — political operators deliberately gaming the architecture. The international scenarios are different. They assume ordinary political actors, ordinary civic cultures, and the ordinary friction of governments trying to govern within constitutional constraints they didn't design and don't always understand. What the scenarios show, across France, the UK, and Russia, is that the document's architecture is more universally applicable than its origins might suggest — and more culturally dependent than any document can fully acknowledge.</p>
+
+      <h2>Six Findings</h2>
+
+      <h3>1. The Architecture Scales to Legal Tradition</h3>
+      <p>The document's implicit legal framework is closer to common law than civil law. Its rights provisions are written as judicially enforceable individual entitlements, its challenge mechanisms assume courts that develop constitutional doctrine case by case. But the French scenario showed civil law courts applying the document, the NRS integrating with civil law administrative record systems, and the anti-evasion principle working in a civil law enforcement environment. The Russian scenario showed the document functioning in a mixed legal tradition with significant authoritarian institutional inheritance.</p>
+
+      <p>The document doesn't require a common law culture. It requires a culture that accepts courts as final arbiters of constitutional text — which is a different and harder requirement, as the British scenario demonstrated most clearly.</p>
+
+      <h3>2. The NRS Is the Most Universally Applicable Innovation</h3>
+      <p>In all three scenarios, the NRS does its most important work differently from what the document's designers anticipated. In France it becomes the foundation for historical administrative transparency. In the UK it becomes the backbone of the BBC's constitutional journalism. In Russia it publishes the previous regime's crimes. The common thread: the NRS's value is not primarily as a record of what the new government does. It is as a permanent, immutable, publicly accessible account of what governments do — and in Russia's case, what governments did.</p>
+
+      <p>No political culture the document is applied to needs the NRS explained to it. Every political culture has something it would rather not have on a permanent public record. The NRS is valuable precisely because it doesn't make that distinction.</p>
+
+      <h3>3. The Dual Executive's Domain Separation Has Universal Application</h3>
+      <p>Every transition scenario identified the same problem from a different angle: the boundary between foreign policy and domestic governance is contested in every political system because it has never been constitutionally specified in any of them. France's Fifth Republic cohabitation jurisprudence spent sixty years building case law around a boundary the constitution didn't draw. The UK's Royal Prerogative covered both domains in a single institution without distinguishing between them. Russia's hyper-presidency collapsed all distinctions into a single executive will.</p>
+
+      <p>The domain specification in §2.1 and §2.2 is not a constraint on executive power in any of the three scenarios — it is a clarification of something that was already happening but had no constitutional language to describe it. The Emergency Panel's jurisdiction fills a gap every system has. Most systems fill it with political convention. This document fills it with constitutional text.</p>
+
+      <h3>4. The BNF's Floor Works Everywhere; the Ceiling Is Everywhere Different</h3>
+      <p>In France, the BNF minimum is so far below actual provision as to be constitutionally invisible. In the UK, it is slightly below the NHS's actual cost, making it a meaningful floor. In Russia, the Severe Contraction Protocol is the most immediately relevant BNF provision in the first three years. The same provision functions differently in each context — not because the provision changes but because what governments can and do provide varies enormously.</p>
+
+      <p>The document correctly identifies this: it sets a floor and trusts political processes above it. The floor is genuinely universal. Everything above it is local.</p>
+
+      <h3>5. The Judicial Election Architecture Is the Most Culturally Dependent Provision</h3>
+      <p>The elected Supreme Court generates the most friction across all three scenarios. In France, the legal profession's institutional hierarchy initially captures the Qualified Jurist Pool. In the UK, the common law tradition's suspicion of judicial policymaking produces resistance to an elected court with genuine supremacy review authority. In Russia, the Court's credibility depends entirely on its willingness to rule against powerful interests in its first years.</p>
+
+      <p>The Pool mechanism — separating qualification from election — functions correctly in all three scenarios, but the political meaning of the election varies significantly by context. The architecture is right. The cultural reception of it varies.</p>
+
+      <h3>6. Constitutional Culture Cannot Be Constitutionally Mandated</h3>
+      <p>This is the most important finding across all three scenarios and it applies to the document's deepest assumption. The beta philosophy — trust the architecture, leave the rest to the governed — requires a citizenry and political class that takes the architecture seriously. In France, that culture exists but is being reshaped. In the UK, it exists but resists constitutional subordination of parliamentary will. In Russia, it is being built from near-zero.</p>
+
+      <p>The NRS can make constitutional violations visible. The EI can document them. The Supreme Court can adjudicate them. None of these mechanisms can compel a political class to think constitutionally rather than politically. The architecture is a necessary condition for constitutional governance, not a sufficient one.</p>
+
+      <h2>What the Three Scenarios Revealed About the Constitution Itself</h2>
+
+      <h3>The Federal Model Is More Adaptable Than Its Origins Suggest</h3>
+      <p>France's 13 regions, the UK's 11 States, Russia's 43 — the State-based federal architecture accommodates very different scales of political geography because it specifies the constitutional relationship between States and the Republic without specifying what States must look like. The Senate's equal representation principle is the most controversial provision in all three scenarios. But the controversy is about the principle — that geographic political units have standing independent of population — not about the mechanism for expressing it. The principle is defensible. The mechanism is scalable.</p>
+
+      <h3>The Candidate Register System Is Universally Valuable</h3>
+      <p>In France, the Constitutional Council's appointed-political-legal hybrid was the problem the Pool solves. In the UK, the Lords' appointed Life Peers were partly filling the same function less systematically. In Russia, the absence of genuinely independent appointment mechanisms was the critical institutional gap that every reform attempt since 1993 had failed to close. The Pool's separation of qualification assessment from appointment decision is not a solution to a particular country's problem. It is a constitutional solution to the problem of how any polity produces genuinely independent officers.</p>
+
+      <h3>The Independence Architecture Is the Provision That Looks Most Exceptional and Functions Most Universally</h3>
+      <p>No other constitutional tradition provides a constitutionally governed pathway for a territory to reduce its relationship with the central government or leave it. The French scenario shows New Caledonia using the pathway constitutionally rather than through the improvised Nouméa Accord. The UK scenario shows Scotland's pre-transition departure happening precisely because no such pathway existed. The Russian scenario shows Tatarstan exploring independence constitutionally and concluding it is uneconomic rather than having its movement suppressed. In all three cases, the existence of a governed exit pathway produced more political stability than the absence of one would have.</p>
+
+      <div class="analysis-box">
+        <div class="analysis-label">On Legal Traditions and Institutional Inheritance</div>
+        <p>The scenarios also prompted a question the original document drafting hadn't fully addressed: how does the Federated Republic accommodate societies that bring existing legal traditions, institutions, and governance relationships into the Republic with them?</p>
+        <p>The §19.1 addition — requiring Parliament to define by statute the relationship between existing institutions and the constitutional framework — addresses this honestly. It acknowledges that constitutions are not applied to blank slates. France's Napoleonic administrative law tradition, the UK's common law courts, Russia's complex inheritance of Soviet-era institutional structures — none of these disappear at ratification. The document's job is not to pretend otherwise but to specify how these inheritances relate to the constitutional framework.</p>
+        <p>There is a deeper observation here. The relationships between peoples whose governance structures predate the ratifying state — indigenous nations, ethnic republics with their own constitutional traditions, communities with treaty rights that predate the constitution — raise the same fundamental question. The §19.1 provision's acknowledgment that "the Republic is ratified into polities with histories, legal traditions, and existing institutional relationships — including relationships with peoples and communities whose governance structures predate the ratifying state" is the document's most honest statement about the limits of constitutional founding. No ratification moment is truly a beginning. It is always also an inheritance.</p>
+      </div>
+
+      <h2>The Summary Finding</h2>
+
+      <p>The document is not a universal constitution. No document is. But it is more universally applicable than its origins suggest, for a reason the three scenarios make clear: it is not designed around any particular society's existing institutions. It is designed around a theory of what any constitutional government needs — permanent visible accountability, specified executive authority, democratic judicial legitimacy, a minimum material floor, and an honest relationship between what the constitution promises and what the government can deliver. Those needs do not vary significantly across the political cultures tested. The institutions that express them vary enormously.</p>
+
+      <p>What varies most is time. France needs a generation to internalise the judicial supremacy the Fifth Republic never fully established. The UK needs a generation to shed the parliamentary sovereignty instinct three centuries deep. Russia needs more than a generation — it needs the NRS to make the previous regime's record permanent and the new regime's record visible long enough that the memory of ungoverned power becomes the political motivation for constitutional governance.</p>
+
+      <p>The document cannot compress that time. What it can do — and what the architecture is designed to do — is make the record. The rest is political culture. The rest takes time.</p>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-russia.html">← The Russia Scenario</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-germany.html">The Germany Scenario →</a>
+    </nav>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

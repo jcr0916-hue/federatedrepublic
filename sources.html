@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sources and Inspiration — The Federated Republic</title>
+  <meta name="description" content="The intellectual genealogy of the Federated Republic — foundational documents, philosophical tradition, and suggested reading.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+
+    .page-wrap{max-width:760px;margin:0 auto;padding:88px 2rem 100px}
+
+    .page-header{margin-bottom:3.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .page-header h1{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);margin-bottom:0.75rem;line-height:1.1}
+    .page-intro{font-size:1rem;color:var(--muted);line-height:1.85;max-width:600px}
+    .page-intro p+p{margin-top:1rem}
+
+    .sources-section{margin-bottom:4rem}
+    .section-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.5rem}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--navy);margin-bottom:1rem;line-height:1.2}
+    .section-intro{font-size:0.95rem;color:var(--muted);line-height:1.8;margin-bottom:2rem;font-style:italic}
+
+    /* Source entries */
+    .source-entry{padding:1.5rem 0;border-bottom:1px solid var(--border)}
+    .source-entry:first-of-type{border-top:1px solid var(--border)}
+    .source-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:0.2rem}
+    .source-author{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-family:'JetBrains Mono',monospace;margin-bottom:0.5rem}
+    .source-note{font-size:0.9rem;color:var(--text);line-height:1.75}
+
+    /* Philosopher entries — two column grid */
+    .phil-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .phil-entry{padding:1.25rem 1.25rem 1.25rem 0;border-bottom:1px solid var(--border)}
+    .phil-entry:nth-child(even){padding-left:1.25rem;border-left:1px solid var(--border)}
+    .phil-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:0.15rem}
+    .phil-era{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-family:'JetBrains Mono',monospace;margin-bottom:0.4rem}
+    .phil-note{font-size:0.85rem;color:var(--muted);line-height:1.7}
+
+    /* Reading entries */
+    .reading-entry{display:flex;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
+    .reading-entry:first-of-type{border-top:1px solid var(--border)}
+    .reading-num{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--gold);min-width:1.5rem;padding-top:0.15rem}
+    .reading-body{}
+    .reading-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:0.1rem}
+    .reading-author{font-size:0.72rem;color:var(--muted);margin-bottom:0.35rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.05em}
+    .reading-note{font-size:0.88rem;color:var(--text);line-height:1.7}
+
+    .closing-note{margin-top:4rem;padding:2rem 2.25rem;background:var(--navy);color:rgba(245,240,232,0.75);font-size:0.9rem;line-height:1.85}
+    .closing-note strong{color:var(--gold)}
+    .closing-note p+p{margin-top:0.75rem}
+
+    @media(max-width:640px){
+      .page-wrap{padding:76px 1.25rem 80px}
+      .page-header h1{font-size:2rem}
+      .phil-grid{grid-template-columns:1fr}
+      .phil-entry:nth-child(even){padding-left:0;border-left:none}
+    }
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="states.html">States</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+
+    <header class="page-header">
+      <h1>Sources and Inspiration</h1>
+      <div class="page-intro">
+        <p>Constitutional design doesn't emerge from nowhere. Every provision in this document has ancestors — in the democratic tradition, in specific historical texts, in political philosophy stretching back to the Roman Republic, in the hard lessons of constitutional failure. This page is an honest account of that intellectual genealogy.</p>
+        <p>It is not a bibliography. It does not claim that these works endorse this document's conclusions, or that this document faithfully represents their arguments. It claims only that a lifetime of serious reading across traditions usually treated as opposed produced the questions this document tries to answer — and that readers who want to go further deserve signposts.</p>
+      </div>
+    </header>
+
+    <!-- SECTION 1: FOUNDATIONAL DOCUMENTS -->
+    <div class="sources-section">
+      <span class="section-label">Section I</span>
+      <h2 class="section-title">Foundational Documents</h2>
+      <p class="section-intro">The constitutional texts this document draws from directly — as design ancestors, as instructive successes, and in one case as a study in technically sophisticated design deployed in the service of a catastrophic wrong.</p>
+
+      <div class="source-entry">
+        <div class="source-title">The Federalist Papers</div>
+        <div class="source-author">Hamilton, Madison, Jay · 1787–1788</div>
+        <div class="source-note">The most rigorous defence of constitutional design in the democratic tradition. Papers 10 (faction and representation), 51 (the internal structure of government), and 78 (the judiciary) are the essential three. The dual executive, separated powers, and bicameral legislature in this document all engage the Federalist arguments directly — and in some cases answer objections Hamilton and Madison did not fully resolve.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Anti-Federalist Papers</div>
+        <div class="source-author">Brutus, Centinel, Federal Farmer, and others · 1787–1788</div>
+        <div class="source-note">Underread and underappreciated. Brutus's argument — that a large republic cannot sustain genuine democratic accountability, that geographic distance from government produces oligarchy regardless of formal structure — was never fully answered by Hamilton. The National Record System and the Inspectorate architecture are a better answer to Brutus than the Federalist Papers provide: the information infrastructure addresses the accountability gap that distance creates.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The United States Constitution</div>
+        <div class="source-author">1787, with amendments through 1992</div>
+        <div class="source-note">A masterpiece of political architecture — the most consequential act of constitutional design in the modern era, and the foundational inspiration for this project. It established principles that remain the bedrock of democratic governance: separated powers, enumerated authority, individual rights, and the sovereignty of the people over their government. That it has held, adapted, and endured for two and a half centuries of extraordinary stress is testament to the genius of its framers. This document stands in dialogue with it — taking its principles seriously enough to ask what they require when applied to the specific challenges two hundred and fifty years of experience have revealed. The dual executive, the combined-score election, the amendment architecture — each reflects the tradition the Constitution established, followed further toward its own conclusions.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Basic Law of the Federal Republic of Germany</div>
+        <div class="source-author">Parliamentary Council · 1949</div>
+        <div class="source-note">The most instructive post-Weimar constitutional design. The constructive vote of no confidence — which this document adopts directly — was the Basic Law's answer to Weimar's fatal instability: you cannot remove a government without simultaneously electing its replacement. The eternity clauses protecting human dignity and the federal structure provided the model for this document's unamendable provisions. The Basic Law understood that constitutional design must anticipate its own failure modes.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Canadian Charter of Rights and Freedoms and the Clarity Act</div>
+        <div class="source-author">1982 · 2000</div>
+        <div class="source-note">The Charter's rights framework informed the structure of Article I. The Clarity Act — Parliament's codification of the Supreme Court's 1998 reference opinion on Quebec secession — provided the model for this document's independence framework: a clear democratic majority on a clear question creates a constitutional obligation to negotiate. The lesson is that governed exit is more stable than impossible exit.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Constitution of the Republic of South Africa</div>
+        <div class="source-author">Constitutional Assembly · 1996</div>
+        <div class="source-note">Among the most progressive constitutions ever written. Its justiciable socioeconomic rights and the Constitutional Court's "progressive realisation" doctrine were instructive in a specific way: they demonstrated that the aspiration behind positive rights is correct and that the mechanism of aspirational text without material guarantee is not. The Basic Needs Floor in this document is the answer to what South Africa's constitution identified as the design problem.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The UN Declaration on the Rights of Indigenous Peoples</div>
+        <div class="source-author">United Nations General Assembly · 2007</div>
+        <div class="source-note">The source of the Free, Prior, and Informed Consent framework in Article XIV. FPIC as a constitutional standard — consent withheld is final — goes further than the Declaration requires, but the Declaration provided the framework and the vocabulary.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Constitution of the Confederate States of America</div>
+        <div class="source-author">Montgomery Convention · 1861</div>
+        <div class="source-note">Instructive in a way its authors did not intend. The Confederate constitution improved on the US constitution in several technical respects — a single non-renewable presidential term, a line-item veto, explicit budget transparency requirements — while enshrining the catastrophic wrong at its centre. The lesson is not only moral. It is that technically sophisticated constitutional design can serve fundamentally unjust ends, and that the quality of institutional design and the justice of the purposes it serves are entirely separable questions. The five unamendable rights in this document exist partly because of that lesson.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Declaration of the Rights of Man and of the Citizen</div>
+        <div class="source-author">French National Constituent Assembly · 1789</div>
+        <div class="source-note">The Enlightenment's most consequential constitutional statement. The universalist claim — that rights belong to humans as humans, not as citizens of a particular state — is reflected in this document's application of Article I protections to every person within the Republic's jurisdiction, not only to citizens. The Declaration's architects understood something the American founders hedged: if rights are natural, they cannot be conditional on citizenship.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">Estonia's Digital Governance Framework</div>
+        <div class="source-author">Republic of Estonia · 1997 onwards</div>
+        <div class="source-note">The most advanced implementation of digital public infrastructure in the democratic world. The National Record System's cryptographic architecture, distributed node structure, and immutable publication model draw directly on Estonia's X-Road infrastructure and digital identity framework. Estonia demonstrated that the technical requirements for trustworthy permanent public records are achievable at national scale.</div>
+      </div>
+      <div class="source-entry">
+        <div class="source-title">The Constitution of the Weimar Republic</div>
+        <div class="source-author">German Reich · 1919</div>
+        <div class="source-note">The most instructive constitutional failure in the democratic tradition — not because it was poorly designed but because it was well designed and still fell. Its Article 48 emergency powers, the absence of a constructive vote of no confidence, and its low amendment threshold together constitute the primary negative brief this document was built against. The Basic Law and the Federated Republic's emergency architecture are both, in different ways, Weimar's answer to itself.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Constitution of India</div>
+        <div class="source-author">Republic of India · 1950, with amendments</div>
+        <div class="source-note">The longest written constitution in the democratic world — and the most direct prior engagement with the questions this document addresses. The Directive Principles versus justiciable rights debate, the emergency powers provisions and their abuse in 1975-1977, the collegium system's contested legitimacy, the reservations framework, and the Basic Structure doctrine developed in <em>Kesavananda Bharati</em> — India's constitutional scholars have been arguing about every fundamental design choice in the Federated Republic for seventy-five years. The Basic Needs Floor is the honest answer to the Directive Principles. The elected Supreme Court is the democratic answer to the collegium.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Constitution of the Federal Republic of Nigeria</div>
+        <div class="source-author">Federal Republic of Nigeria · 1999</div>
+        <div class="source-note">The most practically instructive case for constitutional design under conditions of thin institutional capacity, deep ethnic and religious diversity, and oil-driven fiscal distortion. Nigeria's 1999 constitution — drafted by a military government transitioning to civilian rule — is formally democratic, formally federal, and formally rights-protective. The gap between constitutional text and constitutional delivery is the defining fact of Nigerian constitutional life. The NRS's function as a transparency mechanism rather than a provision guarantee, the BNF floor's role in documenting what governments actually spend, and the FPIC standard's operation in a resource-extraction context are all illuminated by Nigeria's constitutional experience.</div>
+      </div>
+
+      
+      
+    </div>
+
+    
+      <div class="source-entry">
+        <div class="source-title">The Compacts of Free Association — United States with Palau, FSM, and Marshall Islands</div>
+        <div class="source-author">United States · 1986, 1994, renewed 2023</div>
+        <div class="source-note">The most directly relevant real-world precedent for the Article XX Associated Community framework. Three sovereign Pacific island nations maintain defense relationships, currency arrangements, and citizen mobility rights with the United States through compact agreements that either party can renegotiate. The compacts specify with precision what each party provides — financial assistance, military access, exclusive economic zone rights — and include ten-year review mechanisms. Their operation over forty years demonstrates both the viability of voluntary subsidiary relationships between unequal parties and the importance of explicit, material reciprocal terms.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Cook Islands and Niue — Free Association with New Zealand</div>
+        <div class="source-author">New Zealand · 1965, 1974</div>
+        <div class="source-note">Self-governing states in free association with New Zealand, each with its own parliament, legal system, and foreign policy capacity. New Zealand handles defense by agreement and provides citizenship rights. The Cook Islands and Niue may modify or terminate the relationship by unilateral democratic decision. Their experience demonstrates that small sovereign entities can maintain genuine autonomy within a compact relationship — and that the relationship's voluntary character is its constitutional foundation.</div>
+      </div>
+
+      <div class="source-entry">
+        <div class="source-title">The Crown Dependencies — Jersey, Guernsey, Isle of Man</div>
+        <div class="source-author">United Kingdom · Constitutional relationship developed over centuries</div>
+        <div class="source-note">Self-governing jurisdictions that are neither part of the United Kingdom nor British overseas territories, but maintain a constitutional relationship through the Crown. Each has its own legislature, legal system, and tax regime. The Crown handles defense and certain foreign affairs. No representation in Westminster. The Crown Dependencies demonstrate that compact-like relationships can be durable, constitutionally grounded, and genuinely autonomous — though their relationship evolved through history rather than through explicit compact negotiation, which is precisely the gap the Article XX framework is designed to address.</div>
+      </div>
+
+    <!-- SECTION 2: PHILOSOPHICAL TRADITION -->
+    <div class="sources-section">
+      <span class="section-label">Section II</span>
+      <h2 class="section-title">The Philosophical Tradition</h2>
+      <p class="section-intro">Organised not by philosopher but by the question each addresses in this document. Constitutional design is applied political philosophy — these are the thinkers whose questions shaped the provisions.</p>
+
+      <div class="phil-grid">
+
+        <div class="phil-entry">
+          <div class="phil-name">Marcus Tullius Cicero</div>
+          <div class="phil-era">106–43 BC · De Re Publica, De Legibus</div>
+          <div class="phil-note">The bridge between Greek political philosophy and the constitutional tradition. The mixed constitution — combining monarchic, aristocratic, and democratic elements, each checking the others — is the direct ancestor of separated powers. The concept of natural law as a standard higher than any human enactment underpins the individual sovereignty floor and the unamendable rights. The res publica — the commonwealth as literally the thing of the people — names what this document is trying to build. Cicero's insistence that informed civic participation is a moral obligation, not merely a right, runs through the entire transparency architecture.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Plato</div>
+          <div class="phil-era">428–348 BC · The Republic, The Laws</div>
+          <div class="phil-note">The foundational warning about concentrated knowledge and authority. Plato's philosopher-kings are the archetype of what this document refuses: the claim that the right experts, insulated from democratic interference, will govern justly. The Inspectorates' information-only mandate — no enforcement power, no authority to compel — is partly a response to Plato: expertise is valuable in government, but expertise with coercive authority produces exactly the capture Plato feared from the wrong direction.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Thomas Hobbes</div>
+          <div class="phil-era">1588–1679 · Leviathan</div>
+          <div class="phil-note">The social contract as the only coherent account of why anyone should obey a government they didn't personally consent to. The opening provision on individual sovereignty is Hobbesian in its logic: the Republic's authority exists because citizens constituted it, and that authority extends only as far as the consent does. Hobbes also provides the most honest account of what happens when constitutional authority collapses — the state of nature is not a metaphor but a description of what political failure produces.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">John Locke</div>
+          <div class="phil-era">1632–1704 · Two Treatises of Government</div>
+          <div class="phil-note">The right of revolution reframed as a constitutional design requirement. Locke's argument that government derives its just powers from the consent of the governed, and that citizens retain the right to dissolve a government that violates the social contract, is answered constitutionally rather than through revolution: the amendment architecture, voluntary devolution, and independence framework are the constitutional mechanisms for doing what Locke said citizens may do.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Montesquieu</div>
+          <div class="phil-era">1689–1755 · The Spirit of the Laws</div>
+          <div class="phil-note">Separated powers as the structural condition of liberty. Montesquieu's observation — that there is no liberty where legislative and executive power are combined in the same person or body — is the foundational argument for the dual executive, the independent judiciary, and the bicameral legislature. The Emergency Panel's 48-hour jurisdiction over domain boundary disputes is the mechanism that makes Montesquieu's separation functional rather than merely aspirational.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Jean-Jacques Rousseau</div>
+          <div class="phil-era">1712–1778 · The Social Contract</div>
+          <div class="phil-note">The general will and its discontents. Rousseau's argument that legitimate government expresses the general will — not the sum of individual preferences but the common interest — shaped the combined-score presidential election: the 65/35 weighting is an attempt to measure something closer to general will than plurality preference. His critique of representative government as a corruption of direct democracy informs the Direct Democracy amendment path, which allows citizens to bypass representative bodies when those bodies resist genuinely popular change.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">John Stuart Mill</div>
+          <div class="phil-era">1806–1873 · On Liberty, Considerations on Representative Government</div>
+          <div class="phil-note">The tyranny of the majority as the central danger of democratic government. Mill's harm principle — that the only legitimate basis for restricting individual liberty is preventing harm to others — runs through Article I's rights architecture. His arguments for proportional representation and the value of minority voices in democratic deliberation informed the bicameral structure's counter-majoritarian design. Mill also understood, better than most of his contemporaries, that formal rights without material conditions for their exercise are not rights in any meaningful sense.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Thomas Paine</div>
+          <div class="phil-era">1737–1809 · Rights of Man, Common Sense</div>
+          <div class="phil-note">The most accessible of the Enlightenment constitutionalists and the clearest on the universalist claim. Rights of Man is both a defence of the French Revolution and an argument that rights belong to humans before they belong to citizens — that no government grants rights, it can only protect or violate them. The page you are reading exists partly because Paine believed that political arguments should be written to be understood by ordinary people, not only by scholars.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Karl Marx</div>
+          <div class="phil-era">1818–1883 · Capital, On the Jewish Question</div>
+          <div class="phil-note">The critique of formal rights that leave material conditions unchanged. Marx's argument that political emancipation — the grant of formal legal rights — is insufficient without economic emancipation has force that this document does not dismiss. The Basic Needs Floor is the answer: not a promise of economic emancipation, which the document cannot honestly make, but a constitutional constraint on the minimum material conditions the Republic must maintain. The floor acknowledges that Marx identified a real problem while proposing a different mechanism for addressing it.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Vladimir Lenin and Mao Zedong</div>
+          <div class="phil-era">1870–1924 · 1893–1976</div>
+          <div class="phil-note">Instructive as the 20th century's most consequential attempt to implement the Marxist critique through constitutional and revolutionary means — and as the clearest demonstration of what happens when the vanguard theory of political authority replaces democratic accountability. The Inspectorates' information-only mandate, the prohibition on permanent emergency, and the five unamendable rights are all designed specifically against the logic of concentrated revolutionary authority that Lenin theorised and both men practiced.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Hannah Arendt</div>
+          <div class="phil-era">1906–1975 · The Origins of Totalitarianism, On Revolution</div>
+          <div class="phil-note">The conditions under which political authority becomes legitimate and the conditions under which it collapses into tyranny. Arendt's analysis of totalitarianism — its systematic destruction of the public realm, its reduction of citizens to atomised subjects — informed the design of the NRS and Inspectorates as public realm infrastructure: spaces where political facts are established independently of government claim. Her argument in On Revolution that the American founding succeeded where the French failed because it created institutions rather than merely declaring rights is the foundational argument for this entire project.</div>
+        </div>
+
+        <div class="phil-entry">
+          <div class="phil-name">Mary Wollstonecraft and the Marquis de Condorcet</div>
+          <div class="phil-era">1759–1797 · 1743–1794</div>
+          <div class="phil-note">The Enlightenment's two most important voices on the question of who the universalist rights claims actually apply to. Wollstonecraft's Vindication of the Rights of Woman demonstrated that the revolutionary generation's universalism stopped at gender — and made the logical case that it should not. Condorcet argued for women's suffrage, for gradual abolition of slavery, and for public education as a prerequisite of genuine democratic participation. The §1.8 equality provision and §1.19 suffrage guarantee are their arguments in constitutional text.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 3: SUGGESTED READING -->
+    <div class="sources-section">
+      <span class="section-label">Section III</span>
+      <h2 class="section-title">Suggested Reading</h2>
+      <p class="section-intro">A curated list for readers who want to go further. Not exhaustive and not academic — chosen because each book is genuinely readable and addresses a question this document takes seriously.</p>
+
+      <div class="reading-entry">
+        <div class="reading-num">01</div>
+        <div class="reading-body">
+          <div class="reading-title">How Democracies Die</div>
+          <div class="reading-author">Steven Levitsky and Daniel Ziblatt · 2018</div>
+          <div class="reading-note">The best recent account of democratic backsliding — how democracies end not through dramatic coups but through the gradual erosion of norms by elected officials. The Rule Violation architecture and the Inspectorates' permanent record mandate are designed specifically against the mechanisms Levitsky and Ziblatt document.</div>
+        </div>
+      </div>
+
+      <div class="reading-entry">
+        <div class="reading-num">02</div>
+        <div class="reading-body">
+          <div class="reading-title">Why Nations Fail</div>
+          <div class="reading-author">Daron Acemoglu and James A. Robinson · 2012</div>
+          <div class="reading-note">The economic and institutional argument for why inclusive institutions produce prosperity and extractive institutions produce failure — regardless of geography, culture, or natural resources. The distinction between inclusive and extractive political institutions maps directly onto the design choices in this document.</div>
+        </div>
+      </div>
+
+      <div class="reading-entry">
+        <div class="reading-num">03</div>
+        <div class="reading-body">
+          <div class="reading-title">How to Save a Constitutional Democracy</div>
+          <div class="reading-author">Tom Ginsburg and Aziz Huq · 2018</div>
+          <div class="reading-note">The most rigorous recent work on constitutional design as a tool for democratic survival. Ginsburg and Huq identify the specific mechanisms through which constitutional democracy fails and the design features that resist those mechanisms. Required reading for anyone who wants to understand why this document makes the choices it makes.</div>
+        </div>
+      </div>
+
+      <div class="reading-entry">
+        <div class="reading-num">04</div>
+        <div class="reading-body">
+          <div class="reading-title">The Federalist Papers — Numbers 10, 51, and 78</div>
+          <div class="reading-author">Hamilton, Madison, Jay · 1787–1788</div>
+          <div class="reading-note">Read in full if you haven't. If you have, read them again with this document in hand. Federalist 10 on faction, 51 on the internal structure of government, and 78 on the judiciary are the three that most directly address the design questions this document engages. The arguments are 237 years old and most of them are still right.</div>
+        </div>
+      </div>
+
+      <div class="reading-entry">
+        <div class="reading-num">05</div>
+        <div class="reading-body">
+          <div class="reading-title">The Origins of Totalitarianism</div>
+          <div class="reading-author">Hannah Arendt · 1951</div>
+          <div class="reading-note">The most important 20th century work on what political catastrophe actually is and how it develops. The five unamendable rights in this document — the absolute floor — make no sense without understanding what Arendt documented: that the destruction of those specific rights was not incidental to totalitarianism but its constitutive act.</div>
+        </div>
+      </div>
+
+      <div class="reading-entry">
+        <div class="reading-num">06</div>
+        <div class="reading-body">
+          <div class="reading-title">Custer Died for Your Sins: An Indian Manifesto</div>
+          <div class="reading-author">Vine Deloria Jr. · 1969</div>
+          <div class="reading-note">The foundational work of modern Native American political thought. Article XIV of this document exists in part because of the tradition Deloria helped establish — the argument that indigenous sovereignty is not a historical curiosity or a welfare question but a live constitutional matter with specific legal and political content. Any serious engagement with indigenous rights in constitutional design should begin here.</div>
+        </div>
+      </div>
+
+      <div class="reading-entry">
+        <div class="reading-num">07</div>
+        <div class="reading-body">
+          <div class="reading-title">The Spirit of the Laws</div>
+          <div class="reading-author">Montesquieu · 1748</div>
+          <div class="reading-note">Long, sprawling, and worth it. Book XI, on the constitution of England and the separation of powers, is the direct ancestor of this document's dual executive architecture. Montesquieu understood something Hamilton and Madison sometimes obscured: that the point of separated powers is not efficiency but liberty, and that the friction between branches is the mechanism, not the problem.</div>
+        </div>
+      </div>
+
+      <div class="reading-entry">
+        <div class="reading-num">08</div>
+        <div class="reading-body">
+          <div class="reading-title">Rights of Man</div>
+          <div class="reading-author">Thomas Paine · 1791</div>
+          <div class="reading-note">Still the most readable case for constitutional democracy as a universal good rather than a Western particular. Paine wrote for ordinary readers because he believed ordinary readers were capable of following political arguments — the same bet this project makes. Two hundred and thirty years later the bet still seems worth making.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="closing-note">
+      <p><strong>On this document's own origins — and the role of AI.</strong> The constitution of the Federated Republic was developed through an extended collaborative process between its author and two AI systems: Claude (Anthropic) and Google Gemini. The author brought a lifetime of reading across the traditions listed above — the philosophical texts, constitutional documents, and political theory that form this document's intellectual inheritance. The AI systems contributed the capacity to organise, synthesise, draft, stress-test, and iteratively refine that material at a scale and pace that would not have been possible working alone.</p>
+      <p>This is not a disclaimer. It is an accurate description of how the document was made. The constitutional judgments — what to include, what to discard, where to draw the line between honest obligation and false promise, what the document should be — belong to its author. The AI assistance made it possible to work through the implications of those judgments systematically, to catch internal contradictions, to draft and revise provisions through dozens of iterations, and to build the accompanying essays, scenarios, and website alongside the document itself.</p>
+      <p>We think that kind of transparency about AI involvement in intellectual work is the right standard. Constitutional design is serious work. The people who engage with this document deserve to know how it was produced. The traditions listed on this page — Cicero, Arendt, Paine, the Federalist Papers — were all produced by people working with the tools available to them. These are ours.</p>
+    </div>
+
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

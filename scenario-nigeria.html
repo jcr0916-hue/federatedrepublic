@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Nigeria Scenario — The Federated Republic</title>
+  <meta name="description" content="The largest democracy in Africa — and the most important test of the document's universal applicability claim.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}</style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+
+  <div class="page-wrap">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The Nigeria Scenario</h1>
+      <p class="scenario-premise">Nigeria ratifies the Federated Republic. 36 States of wildly varying capacity. An oil-dependent economy. Twelve Sharia law States. Active insurgency in the northeast. The NRS in a hybrid physical-digital form. The Biafra independence movement entering a constitutional pathway. The architecture working under conditions it was not designed for.</p>
+      <div class="provisions-tested"><span class="prov-tag">§10.1 BNF Floor</span><span class="prov-tag">§13.2.g Conflict-Affected States</span><span class="prov-tag">§19.1 Institutional Accommodation</span><span class="prov-tag">§9 NRS Architecture</span><span class="prov-tag">§1.25 Emergency Derogation</span><span class="prov-tag">§15.4 Independence Framework</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>Nigeria is the most important test of the document's universal applicability claim — and the most honest answer to it. The largest democracy in Africa by population, already federal, oil-wealthy with all the resource curse complications that creates, a deep North-South religious divide that produced parallel Sharia law courts in twelve northern states, extraordinary ethnic diversity across 250+ groups, and genuine institutional fragility the other scenarios never had to contend with.</p>
+
+      <h2>The Context of Ratification</h2>
+
+      <p>The transition follows the cumulative weight of a constitutional order that has produced approximately the same governance outcomes as its three military predecessors: an extractive federal centre distributing oil rents to a political class whose primary activity is capturing those rents, States that cannot function independently of federal transfers, and courts that cannot process their dockets. The proximate trigger is confluence — an oil price collapse, a Supreme Court paralysed by conflicting executive pressures, and a constitutional convention movement that eventually produces political cover for the National Assembly to authorise a convention rather than face another election cycle with the existing framework.</p>
+
+      <p>The ratification passes at 61.2% on 58.4% participation. The twelve northern Sharia States vote at 54% in favour — assured through convention negotiations that the §19.1 provision's institutional inheritance framework preserves existing Sharia court structures pending parliamentary definition. The southeast votes at 71% in favour — the independence movement calculating that §15.4's voluntary independence pathway offers more than anything remaining within the prior constitutional order.</p>
+
+      <h2>The Structural Transition</h2>
+
+      <h3>From Oil Federalism to Constitutional Federalism</h3>
+      <p>Nigeria's fundamental constitutional problem is not its formal federal structure. It is the fiscal architecture that makes that structure meaningless — 85% of State revenues flowing from a federal distribution formula. The MA's first GNR certification produces Nigeria's first honest national accounts in a generation. The Fiscal Incidence Study for each State, required within two years of Phase 4 activation, produces the most detailed public account of net contributors and net recipients that Nigeria has ever published. The information is on the NRS. It cannot be altered.</p>
+
+      <h3>The Statehood Audit — Starkest Findings of Any Scenario</h3>
+      <p>Of the 36 States: eight pass without conditions. Fourteen pass with conditions. Nine are placed in Early Warning. Five cannot complete the audit at all — because LI audit teams cannot safely access significant portions of their territory due to ongoing insurgency. This produces the document's most genuinely novel constitutional question: the Statehood Audit assumes the auditee controls its own territory. It does not.</p>
+
+      <div class="finding">
+        <span class="finding-label">Provisional Status — A New Constitutional Category</span>
+        <p>The LI's Year 2 finding: the audit cannot certify what it cannot assess. The five States are granted provisional status under §13.2.g — neither passing nor failing — pending security conditions that allow full assessment. The Senate votes to maintain their State status, BNF protections, and federal support during the provisional period. The Supreme Court upholds this as consistent with the audit's constitutional purpose: not to punish States for conditions beyond their control, but to identify and remedy genuine governance failures. Provisional status is reviewed annually and cannot continue indefinitely.</p>
+      </div>
+
+      <h3>The Sharia Question and §19.1</h3>
+      <p>Parliament's Year 2 accommodation statute navigates this through a framework that is constitutionally defensible but politically explosive: Sharia civil courts — handling family law, inheritance, property disputes between consenting Muslim parties — are constitutionally recognised under the §19.1 accommodation framework. Sharia criminal courts — exercising criminal jurisdiction including hudud punishments — are not accommodated, because their operation requires the Republic to permit torture and discriminatory punishment within its own constitutional order, which the unamendable provisions prohibit.</p>
+
+      <p>The Supreme Court rules 6-3: the non-diminishment standard applies to governance structures and institutional relationships, not to the specific power to inflict punishments the constitution prohibits. The twelve northern States comply. The compliance is not enthusiastic. It is on the NRS record, permanently.</p>
+
+      <h3>The NRS in Nigeria's Infrastructure Context</h3>
+      <p>The RSA Director makes the decision that defines the Nigerian NRS: the system will be genuinely hybrid. Every State capital has an NRS node in a physically secure facility with dedicated power generation. Where internet connectivity is unavailable, records travel by physically secure courier between nodes. Constitutional publication requirements are met slowly, expensively, and imperfectly on access — but not on integrity. By Year 5, a civil society programme trains university students as NRS access agents in 28 of 36 States. The NRS's civic function is being performed by civil society rather than by digital infrastructure.</p>
+
+      <h2>Year 1-3 — The Founding Crisis</h2>
+
+      <h3>The Oil Revenue Finding</h3>
+      <p>The MA's first GNR certification produces the Republic's most politically explosive document of the founding period: approximately $47 billion in oil revenue appropriated to federal accounts between 2019 and the transition cannot be accounted for in any published expenditure record. The MA Director certifies this as a "fiscal documentation gap" and publishes the finding to the NRS. No prosecutions result directly — but the fiscal baseline is established permanently. Governments cannot claim improvement when the previous government's record is on the NRS.</p>
+
+      <h3>The Emergency Declaration — Month 14</h3>
+      <p>A coordinated attack on government facilities in two northeastern States produces pressure for emergency declaration. The President and PM jointly declare under §1.25. The declaration is constitutionally compliant in every respect — specific in scope, explicit about what it does not derogate, transmitted to Parliament within 24 hours, ratified by 68% within seven days. The emergency operates for 87 days. There are 14 documented violations of the 48-hour judicial authorisation requirement. All 14 produce corrective orders. Three escalate to major violation proceedings against specific military command personnel. The Nigerian military has never before been subject to published constitutional accountability for individual detention decisions.</p>
+
+      <h2>Year 4-15 — Consolidation and the Verdict</h2>
+
+      <h3>The Biafra Question — Constitutionalised</h3>
+      <p>In Year 6, a citizen petition for an independence referendum begins circulating in Enugu State. It reaches the threshold within eight months. The MA's Republic-wide fiscal impact assessment is published — Enugu's GNR contribution: 2.1% of total. The independence movement studies the numbers. They continue. The advisory referendum achieves 61% — below the 70% threshold for a formal referendum. The movement recalibrates rather than collapses. What the process reveals: the existence of a constitutional pathway has converted an armed independence tradition into a constitutional process. Whether it eventually produces independence is a question the constitution leaves to democratic determination.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Verdict at Year 15</span>
+        <p>Nigeria's Federated Republic is the most imperfect constitutional democracy in the scenario series and the one where the architecture has done the most work against the most resistance. Four findings define it: the NRS is the most transformative institution — in a country where official records have been routinely falsified for sixty years, a tamper-evident permanent public record has changed the political economy of information more than any other provision. The BNF floor is doing its most important work as a transparency mechanism. The emergency architecture prevented emergency from becoming permanent rule. The independence pathway has changed the political character of Nigeria's most persistent separatist movements.</p>
+        <p>The most honest verdict: Nigeria's Federated Republic has achieved the minimum necessary outcome. It has not failed. The architecture is working. The transformation it is designed to produce over time is not yet visible at Year 15. The NRS records everything. The question of whether the next generation develops constitutional instincts the founding generation could not is the question this scenario leaves genuinely open.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-applied-analysis.html">← Applied Constitutionalism</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-valdoria.html">The Economic Crisis Scenario →</a>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

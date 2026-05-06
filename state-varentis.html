@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varentis — The Federated Republic</title>
+  <meta name="description" content="A portrait of Varentis — a dense urban state of the Federated Republic where the city and the state are essentially the same thing, and subsidiarity means something different.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0;--state:#2A1B3A;--state2:#180f25;--state-light:#EEE8F4}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-cta{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);padding:0.35rem 0.9rem;border-radius:3px}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+
+    .state-hero{background:var(--state2);padding:100px 2rem 60px;text-align:center;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:2rem}
+    .breadcrumb a{color:rgba(201,168,76,0.6);text-decoration:none}
+    .breadcrumb a:hover{color:var(--gold)}
+    .state-abbr-hero{font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);font-weight:300;line-height:1;display:block;margin-bottom:0.5rem}
+    .state-name-hero{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,5vw,3rem);color:rgba(245,240,232,0.95);font-weight:300;margin-bottom:0.75rem}
+    .state-tagline-hero{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-bottom:2rem}
+    .state-summary{font-size:1rem;color:rgba(245,240,232,0.7);max-width:560px;margin:0 auto;line-height:1.9}
+
+    .stats-bar{background:var(--state);padding:1.5rem 2rem;display:flex;justify-content:center;gap:0;flex-wrap:wrap;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .stat{text-align:center;padding:0.75rem 2rem;border-right:1px solid rgba(255,255,255,0.1)}
+    .stat:last-child{border-right:none}
+    .stat-val{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);font-weight:300;display:block;line-height:1}
+    .stat-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,240,232,0.4);margin-top:0.3rem;display:block}
+
+    .body-wrap{max-width:700px;margin:0 auto;padding:60px 2rem 100px}
+    .section-head{margin:3.5rem 0 1.5rem}
+    .section-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+    .section-head h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--navy);font-weight:400}
+    p{color:var(--muted);line-height:1.9;margin-bottom:1.25rem;font-size:0.95rem}
+    p strong{color:var(--text);font-weight:500}
+
+    .pull-quote{border-left:3px solid var(--gold);padding:1.25rem 0 1.25rem 1.75rem;margin:2rem 0;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--navy);line-height:1.6}
+
+    .fact-box{background:var(--state-light);border:1px solid rgba(42,27,58,0.15);padding:1.5rem 1.75rem;margin:2rem 0}
+    .fact-box-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--state);margin-bottom:1rem;opacity:0.7}
+    .fact-row{display:flex;justify-content:space-between;align-items:baseline;padding:0.5rem 0;border-bottom:1px solid rgba(42,27,58,0.08);font-size:0.85rem}
+    .fact-row:last-child{border-bottom:none}
+    .fact-key{color:var(--muted)}
+    .fact-val{color:var(--text);font-weight:500;text-align:right;max-width:60%}
+
+    .question-box{background:rgba(27,42,74,0.04);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1.5rem 1.75rem;margin:2rem 0}
+    .question-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);opacity:0.6;margin-bottom:0.75rem}
+    .question-box p{font-size:0.85rem;margin-bottom:0}
+
+    .const-note{background:var(--navy2);color:rgba(245,240,232,0.8);padding:1.5rem 1.75rem;margin:2rem 0;border-left:3px solid var(--gold);font-size:0.85rem;line-height:1.8}
+    .const-note strong{color:var(--gold)}
+
+    .comparison-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);margin:2rem 0;font-size:0.82rem}
+    .cg-header{background:var(--navy2);color:rgba(245,240,232,0.7);padding:0.75rem 1rem;font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase}
+    .cg-cell{background:white;padding:0.75rem 1rem;color:var(--muted);vertical-align:top}
+    .cg-cell strong{color:var(--text);display:block;margin-bottom:0.2rem;font-size:0.8rem}
+
+    .state-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .state-nav a{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+
+    @media(max-width:600px){
+      .stats-bar{gap:0}.stat{padding:0.75rem 1rem;border-right:none;border-bottom:1px solid rgba(255,255,255,0.1)}
+      .stat:last-child{border-bottom:none}
+      .comparison-grid{grid-template-columns:1fr}
+      .hamburger{display:flex}.nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html" class="active">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="scenario-ordinary.html">Start Here</a>
+  <a href="index.html">Home</a>
+  <a href="annotated.html">Constitution</a>
+  <a href="states.html" class="active">States</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="papers.html">Essays</a>
+</div>
+
+<div class="state-hero">
+  <div class="breadcrumb"><a href="states.html">The States</a> &nbsp;/&nbsp; Varentis</div>
+  <span class="state-abbr-hero">VR</span>
+  <h1 class="state-name-hero">The State of Varentis</h1>
+  <div class="state-tagline-hero">Urban · City-State · Finance &amp; Culture · Admitted Year 11</div>
+  <p class="state-summary">Varentis is a city that became a state — 2.1 million people in 340 square kilometers, more density per block than most states have per county. When it passed the Statehood Audit in Year 11, it confronted a question no other Territory had faced: what does federalism mean when local government and state government are essentially the same institution? The answer Varentis built is distinctive, contested, and unlike anything else in the Republic.</p>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><span class="stat-val">2.1M</span><span class="stat-label">Population</span></div>
+  <div class="stat"><span class="stat-val">340 km²</span><span class="stat-label">Area</span></div>
+  <div class="stat"><span class="stat-val">8.8%</span><span class="stat-label">BNF Level</span></div>
+  <div class="stat"><span class="stat-val">Yr. 11</span><span class="stat-label">Admitted</span></div>
+  <div class="stat"><span class="stat-val">2</span><span class="stat-label">Federal Senators</span></div>
+</div>
+
+<div class="body-wrap">
+
+  <div class="section-head">
+    <div class="section-eyebrow">Origin</div>
+    <h2>How a City Becomes a State</h2>
+  </div>
+
+  <p>Varentis began as a commercial port territory — a single urban agglomeration that the predecessor government had administered as a discrete territorial unit because its economic weight justified it and its political independence from surrounding regions was more convenient than the alternative. By Day Zero it had 1.8 million people, a financial sector accounting for a disproportionate share of what would become the Republic's GNR, four universities, seventeen hospitals, one of the Republic's three major port facilities, and a transit system more sophisticated than anything in the neighboring territories.</p>
+
+  <p>It also had no hinterland. No agricultural land to speak of, no extractive industry, no rural counties whose interests would need to be balanced against the city center. Varentis was entirely, irreducibly urban — a fact that the Statehood Audit noted in its structural assessment and that the Inspectorates continue to note in every eight-year Constitutional Performance Assessment.</p>
+
+  <p>The Statehood Audit process in Years 9 through 11 surfaced an issue nobody in the federal framework had fully anticipated. Varentis's legacy institutions were robust — genuine electoral accountability, an independent judiciary with a clean record of ruling against the territorial administration, comprehensive public law. It cleared the audit criteria without difficulty. The question was structural: for a territory this size, with this population density and this degree of economic integration, what should the relationship between State government and local government actually look like? The constitution's subsidiarity principle (§11.2.a) requires decisions at the most local level capable of handling them. But in Varentis, the most local level capable of handling almost everything was the territorial administration that was about to become the State itself.</p>
+
+  <div class="section-head">
+    <div class="section-eyebrow">Government Structure</div>
+    <h2>The City-State Solution</h2>
+  </div>
+
+  <p>The Varentis founding convention ran for 41 days — the longest in the Republic's history. The central argument was not about executive models or judicial selection methods. It was about what local government meant when the "local" level and the "state" level were the same people living in the same streets.</p>
+
+  <p><strong>The solution they reached was a two-tier structure within a single state.</strong> The State government — a directly elected City-State Council of 48 members, elected by ranked-choice vote in eight boroughs — handles everything requiring state-level authority: federal relations, NRS compliance, BNF delivery standards, Gate 1 immigration, the state court system, the port authority, and the transit network. Below it, the eight borough governments hold genuine autonomous authority over planning, local licensing, neighborhood services, and a locally determined tax rate within the State's overall fiscal framework.</p>
+
+  <p><strong>The executive is a Mayor-Governor</strong> — a position with no equivalent elsewhere in the Republic — elected statewide on a four-year term. The Mayor-Governor is simultaneously the State's chief executive (with constitutional responsibilities for BNF delivery, NRS obligation compliance, and Gate 1 certification) and the functional equivalent of a mayor (responsible for transit operations, port administration, and urban infrastructure). The position commands the State's emergency services. It cannot be the Assembly's creature; Varentis explicitly rejected the parliamentary model because the density and complexity of urban administration requires an executive who can act without coalition negotiations.</p>
+
+  <p><strong>No elected judiciary.</strong> The Varentis State Charter establishes a Judicial Commission — seven members, three nominated by the City-State Council, three nominated by the Mayor-Governor, one drawn by lot from the public bar of practicing attorneys — that nominates all State judges. The Council confirms by 2/3 majority. Given what a partisan elected judiciary would look like in a dense, ideologically concentrated urban population, the convention found this easy to agree on.</p>
+
+  <div class="fact-box">
+    <div class="fact-box-label">Varentis State Charter — Key Provisions</div>
+    <div class="fact-row"><span class="fact-key">Executive</span><span class="fact-val">Mayor-Governor — directly elected, 4-year term, 2-term limit</span></div>
+    <div class="fact-row"><span class="fact-key">Legislature</span><span class="fact-val">City-State Council, 48 members, 8 boroughs, RCV</span></div>
+    <div class="fact-row"><span class="fact-key">Judiciary</span><span class="fact-val">Judicial Commission appointment + 2/3 Council confirmation</span></div>
+    <div class="fact-row"><span class="fact-key">Local government</span><span class="fact-val">8 elected borough councils with autonomous planning and service authority</span></div>
+    <div class="fact-row"><span class="fact-key">BNF level</span><span class="fact-val">8.8% — includes housing supplement, childcare, and transit subsidy</span></div>
+    <div class="fact-row"><span class="fact-key">Area</span><span class="fact-val">340 km² — no rural territory</span></div>
+  </div>
+
+  <div class="section-head">
+    <div class="section-eyebrow">Living in Varentis</div>
+    <h2>What Government Feels Like</h2>
+  </div>
+
+  <p>A Varentian's relationship with government is immediate in a way that neither Kailos nor Arveld can quite replicate. The State is the city. When the transit system is late, when the planning approval for the building next door takes eighteen months, when the emergency services response time is inadequate — these are State government failures, not local government failures, because the distinction barely exists. The Mayor-Governor owns the transit system. The City-State Council sets the planning framework. Borough councils hold meaningful but bounded authority.</p>
+
+  <p>The BNF sits at 8.8% — the highest of any state in the Republic. This is partly policy and partly necessity. Housing costs in Varentis are the highest in the Republic; the constitutional floor of 5% would deliver a housing supplement that couldn't house a family of two in any of the eight boroughs. The City-State Council has consistently voted to include a housing supplement, a childcare benefit, and a transit subsidy within the BNF calculation. The transit subsidy is constitutionally straightforward — the BNF covers transportation access, and in a city without a car culture, that means transit. The childcare benefit has been contested before the State courts once and before the federal courts once; it survived both challenges.</p>
+
+  <p>Gate 1 immigration sponsorship is Varentis's most distinctive policy lever, and it uses it aggressively. The State sponsors Legal Residents in financial services, healthcare, hospitality, construction, and cultural industries. Because Varentis is small and its labor market is visible, the Gate 1 sponsorship program is managed at a level of specificity impossible in larger states — the State tracks labor market gaps by sector in real time and adjusts sponsorship priorities quarterly. The NRS publishes all of this. It is the most transparent immigration system in the Republic.</p>
+
+  <div class="pull-quote">
+    "We are not a state that happens to contain a city. We are a city that happens to be a state. Everything we build has to start from that fact."<br>
+    <span style="font-size:0.85rem;font-style:normal;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:var(--muted)">— First Mayor-Governor Adaeze Nkrumah, Inaugural Address, Year 11</span>
+  </div>
+
+  <div class="section-head">
+    <div class="section-eyebrow">The Senate Problem</div>
+    <h2>Two Senators for 2.1 Million People</h2>
+  </div>
+
+  <p>Varentis has two federal Senate seats. So does Arveld, with 3.1 million people spread across 44 counties and hundreds of thousands of square kilometers. So does every other state. This is by constitutional design — the Senate represents States equally, as a chamber of federal balance, not as a chamber of proportional population representation. The House is where Varentis's population weight registers; the Senate is where it does not.</p>
+
+  <p>The practical consequence is that Varentis carries outsized weight in the House — its population density translates to House seats at a ratio that makes it a significant bloc in the lower chamber — and equal weight in the Senate, where Arveld's two rural senators and Varentis's two urban senators balance each other regardless of the population differential. Varentis's senators have been vocal about this. The constitutional framework has not changed. This is, of course, working exactly as intended.</p>
+
+  <p>What Varentis has used its Senate seats for is influence over federal standards that affect urban economies disproportionately: financial regulation, port administration standards, federal transit funding formulas, and immigration Gate 2 federal certification standards. The Varentis senators are among the most engaged in Senate proceedings of any state, because their constituency's interests are concentrated enough to make every Senate vote legible.</p>
+
+  <div class="section-head">
+    <div class="section-eyebrow">Constitutional Questions</div>
+    <h2>What Varentis Tests</h2>
+  </div>
+
+  <p>Three constitutional questions that Varentis has put into sharp focus — none resolved.</p>
+
+  <p><strong>Subsidiarity and the city-state.</strong> §11.2.a requires government to operate at the most local level capable of handling a matter effectively. In Varentis, borough governments are genuinely local but have limited fiscal and administrative capacity compared to the State. The State is the capable level for most matters. Critics argue Varentis has used this to centralize authority at State level that should sit with boroughs. Varentis argues that in an urban environment, "most local level capable" often is the State level, because the functions are integrated across borough boundaries in ways that borough governments cannot coordinate. The Judicial Inspectorate has not issued a finding. The argument continues.</p>
+
+  <p><strong>BNF and cost-of-living indexing.</strong> The federal BNF floor is 5% of GNR, applying uniformly across all states. 5% in Varentis delivers less actual provision than 5% in Arveld because everything in Varentis costs more. Varentis supplements aggressively, but its argument — that the constitutional BNF floor should be cost-adjusted — has federal implications. If accepted, it would require the MA to calculate state-specific BNF minima, which is a significant architectural change to the BNF formula. The MA has published a technical assessment noting the point. Parliament has not acted. The question remains open.</p>
+
+  <p><strong>The Mayor-Governor's dual role.</strong> The position exercises both State constitutional authority and what is functionally municipal executive authority. In practice this creates occasional ambiguity about which hat is being worn in a given decision — and thus which federal constitutional obligations apply. Three federal court cases have turned on this distinction, with different outcomes. The federal courts have not yet produced a unified framework for when a Mayor-Governor acts as a state executive (full constitutional obligations) versus a municipal administrator (different set of federal constraints). This is an area of active constitutional development.</p>
+
+  <div class="question-box">
+    <div class="question-label">The Deeper Question</div>
+    <p>Varentis asks something none of the Republic's other states quite ask: what happens when the federal constitutional framework — designed with a mental model of states as large, diverse, geographically varied entities — encounters a state that is entirely different in kind? The answer so far is that the framework is flexible enough to accommodate Varentis without bending its fundamental logic. Whether that flexibility is sufficient as Varentis grows and its constitutional questions multiply is the question the Republic will be answering for decades.</p>
+  </div>
+
+  <div class="section-head">
+    <div class="section-eyebrow">How It Differs</div>
+    <h2>Varentis Against Kailos and Arveld</h2>
+  </div>
+
+  <div class="comparison-grid">
+    <div class="cg-header">Dimension</div>
+    <div class="cg-header">Varentis</div>
+    <div class="cg-header">Kailos / Arveld</div>
+
+    <div class="cg-cell"><strong>Area</strong>340 km²</div>
+    <div class="cg-cell"></div>
+    <div class="cg-cell">Thousands of km² each</div>
+
+    <div class="cg-cell"><strong>Local government</strong>Boroughs within the city</div>
+    <div class="cg-cell"></div>
+    <div class="cg-cell">Cities and counties geographically separate from each other</div>
+
+    <div class="cg-cell"><strong>Subsidiarity</strong>State = capable level for most matters</div>
+    <div class="cg-cell"></div>
+    <div class="cg-cell">Genuine urban-rural tension pushes functions down</div>
+
+    <div class="cg-cell"><strong>BNF</strong>8.8% — cost-of-living driven</div>
+    <div class="cg-cell"></div>
+    <div class="cg-cell">7.2% (Kailos) / 5.4% (Arveld)</div>
+
+    <div class="cg-cell"><strong>Senate weight</strong>2 seats for 2.1M people</div>
+    <div class="cg-cell"></div>
+    <div class="cg-cell">2 seats for comparable populations spread over far larger areas</div>
+
+    <div class="cg-cell"><strong>Constitutional frontier</strong>City-state within federal framework</div>
+    <div class="cg-cell"></div>
+    <div class="cg-cell">Large states with internal diversity</div>
+  </div>
+
+  <div class="const-note">
+    <strong>Constitutional status:</strong> Varentis is in full Statehood compliance. The Inspectorates' reports note active monitoring of the subsidiarity question and the BNF cost-adjustment argument. No formal finding has been issued on either. The Mayor-Governor dual-role question is being tracked by the Judicial Inspectorate as an area of developing constitutional law. No Early Warning has been triggered.
+  </div>
+
+  
+  <div style="background:var(--navy2);padding:1.75rem 2rem;margin:3rem 0 0;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:0.6rem">§13.7 — State Structural Autonomy</div>
+    <p style="color:rgba(245,240,232,0.6);font-size:0.88rem;line-height:1.7;margin-bottom:1.25rem;max-width:480px;margin-left:auto;margin-right:auto">Your state might look entirely different. Configure your own executive model, legislature, BNF level, and immigration posture.</p>
+    <a href="state-builder.html" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.35);padding:0.65rem 1.4rem;text-decoration:none;background:rgba(201,168,76,0.08);display:inline-block">Design Your State &rarr;</a>
+  </div>
+
+  <div class="state-nav">
+    <a href="state-arveld.html">← Arveld</a>
+    <a href="state-ostmark.html">Ostmark →</a>
+  </div>
+
+</div>
+
+<script>
+function toggleMobileNav(){
+  const m=document.getElementById('mobileMenu');
+  const b=document.querySelector('.hamburger');
+  const open=m.classList.toggle('open');
+  b.setAttribute('aria-expanded',open);
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobileMenu');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!document.querySelector('.hamburger').contains(e.target)){
+    m.classList.remove('open');
+    document.querySelector('.hamburger').setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>

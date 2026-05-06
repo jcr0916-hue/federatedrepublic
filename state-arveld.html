@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arveld — The Federated Republic</title>
+  <meta name="description" content="A portrait of Arveld — a vast landlocked state of the Federated Republic built on resource extraction, strong county government, and a deep tradition of suspicion toward both distant capitals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0;--state:#3A2A1B;--state2:#261a10;--state-light:#F4EEE6}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-cta{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);padding:0.35rem 0.9rem;border-radius:3px}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+
+    .state-hero{background:var(--state2);padding:100px 2rem 60px;text-align:center;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:2rem}
+    .breadcrumb a{color:rgba(201,168,76,0.6);text-decoration:none}
+    .breadcrumb a:hover{color:var(--gold)}
+    .state-abbr-hero{font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);font-weight:300;line-height:1;display:block;margin-bottom:0.5rem}
+    .state-name-hero{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,5vw,3rem);color:rgba(245,240,232,0.95);font-weight:300;margin-bottom:0.75rem}
+    .state-tagline-hero{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-bottom:2rem}
+    .state-summary{font-size:1rem;color:rgba(245,240,232,0.7);max-width:560px;margin:0 auto;line-height:1.9}
+
+    .stats-bar{background:var(--state);padding:1.5rem 2rem;display:flex;justify-content:center;gap:0;flex-wrap:wrap;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .stat{text-align:center;padding:0.75rem 2rem;border-right:1px solid rgba(255,255,255,0.1)}
+    .stat:last-child{border-right:none}
+    .stat-val{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);font-weight:300;display:block;line-height:1}
+    .stat-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,240,232,0.4);margin-top:0.3rem;display:block}
+
+    .body-wrap{max-width:700px;margin:0 auto;padding:60px 2rem 100px}
+    .section-head{margin:3.5rem 0 1.5rem}
+    .section-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+    .section-head h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--navy);font-weight:400}
+    p{color:var(--muted);line-height:1.9;margin-bottom:1.25rem;font-size:0.95rem}
+    p strong{color:var(--text);font-weight:500}
+
+    .pull-quote{border-left:3px solid var(--gold);padding:1.25rem 0 1.25rem 1.75rem;margin:2rem 0;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--navy);line-height:1.6}
+
+    .fact-box{background:var(--state-light);border:1px solid rgba(58,42,27,0.15);padding:1.5rem 1.75rem;margin:2rem 0}
+    .fact-box-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--state);margin-bottom:1rem;opacity:0.7}
+    .fact-row{display:flex;justify-content:space-between;align-items:baseline;padding:0.5rem 0;border-bottom:1px solid rgba(58,42,27,0.08);font-size:0.85rem}
+    .fact-row:last-child{border-bottom:none}
+    .fact-key{color:var(--muted)}
+    .fact-val{color:var(--text);font-weight:500;text-align:right;max-width:60%}
+
+    .tension-box{background:rgba(27,42,74,0.04);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1.5rem 1.75rem;margin:2rem 0}
+    .tension-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);opacity:0.6;margin-bottom:0.75rem}
+    .tension-box p{font-size:0.85rem;margin-bottom:0}
+
+    .const-note{background:var(--navy2);color:rgba(245,240,232,0.8);padding:1.5rem 1.75rem;margin:2rem 0;border-left:3px solid var(--gold);font-size:0.85rem;line-height:1.8}
+    .const-note strong{color:var(--gold)}
+
+    .state-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .state-nav a{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+
+    @media(max-width:600px){
+      .stats-bar{gap:0}.stat{padding:0.75rem 1rem;border-right:none;border-bottom:1px solid rgba(255,255,255,0.1)}
+      .stat:last-child{border-bottom:none}
+      .hamburger{display:flex}.nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html" class="active">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="scenario-ordinary.html">Start Here</a>
+  <a href="index.html">Home</a>
+  <a href="annotated.html">Constitution</a>
+  <a href="states.html" class="active">States</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="papers.html">Essays</a>
+</div>
+
+<div class="state-hero">
+  <div class="breadcrumb"><a href="states.html">The States</a> &nbsp;/&nbsp; Arveld</div>
+  <span class="state-abbr-hero">AV</span>
+  <h1 class="state-name-hero">The State of Arveld</h1>
+  <div class="state-tagline-hero">Landlocked · Presidential · Resource Economy · Admitted Year 6</div>
+  <p class="state-summary">A vast landlocked state of forests, mines, and agricultural plains, Arveld was the first Territory to achieve Statehood. Its founding convention chose a strong elected Governor, a bicameral legislature, and forty-four elected county governments with broad autonomous authority. Arveld's political tradition treats distant capitals with deep suspicion — including the federal one. Its relationship with the Republic is constitutionally correct and personally cool.</p>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><span class="stat-val">3.1M</span><span class="stat-label">Population</span></div>
+  <div class="stat"><span class="stat-val">44</span><span class="stat-label">Counties</span></div>
+  <div class="stat"><span class="stat-val">5.4%</span><span class="stat-label">BNF Level</span></div>
+  <div class="stat"><span class="stat-val">Yr. 6</span><span class="stat-label">Admitted</span></div>
+  <div class="stat"><span class="stat-val">2</span><span class="stat-label">Federal Senators</span></div>
+</div>
+
+<div class="body-wrap">
+
+  <div class="section-head">
+    <div class="section-eyebrow">Origin</div>
+    <h2>The First State</h2>
+  </div>
+
+  <p>Arveld was the first Territory to pass the Statehood Audit — Year 6, three years before Kailos, before the Republic's institutional architecture had fully settled into its permanent form. This matters: Arveld's founding convention happened when the Republic itself was still finding its shape, and the Arveldians who gathered to write their State Charter brought a territorial administration that had functioned largely autonomously for decades and saw little reason to change that fact.</p>
+
+  <p>The Territory's Statehood Audit was straightforward. Its legacy institutions had operated with genuine electoral accountability, functioning courts, and publicly available law. Its NRS node was operational — the territorial administration had adopted it early, partly because the transparency requirements gave smaller operators in the timber and mining industries a legal tool against the large extraction companies that had historically dominated territorial politics. Arveld passed the first audit cycle without remediation, which its first Governor has mentioned in every election campaign since.</p>
+
+  <p>The founding convention ran for 19 days. It was the fastest-concluding convention in the Republic's history, which its participants regarded as evidence of clarity of purpose and historians regard as evidence of a pre-existing political consensus that did not need to be argued into existence.</p>
+
+  <div class="pull-quote">
+    "We have governed ourselves. We know what works. We are here to write down what we already do, not to invent something new."<br>
+    <span style="font-size:0.85rem;font-style:normal;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:var(--muted)">— Convention President Harro Densen, Opening Session</span>
+  </div>
+
+  <div class="section-head">
+    <div class="section-eyebrow">Government Structure</div>
+    <h2>What the Convention Chose</h2>
+  </div>
+
+  <p><strong>A separately elected Governor.</strong> Four-year term, maximum two terms, elected by ranked-choice vote statewide. The Governor has sole executive authority over the State government — no cabinet confirmation requirement in the State Charter, though practice has evolved toward public nomination hearings before the State Senate. The Governor may veto legislation; the Legislature overrides by 2/3 of both chambers. The Arveld Governor is a genuinely powerful figure with a personal electoral mandate separate from the legislative majority. This creates friction. The convention regarded friction as healthy.</p>
+
+  <p><strong>A bicameral Legislature.</strong> The State Assembly (lower chamber) is elected by constituency, 120 members, two-year terms. The State Senate (upper chamber) is elected by county — two senators per county regardless of population, 88 members total, four-year staggered terms. The bicameral structure was not accidental: the State Senate gives sparsely populated agricultural counties the same weight as the mining cities, which was a condition that rural convention delegates were unwilling to surrender and urban delegates were unwilling to refuse.</p>
+
+  <p><strong>An elected judiciary.</strong> State judges stand for election on partisan ballots. Judges serve twelve-year terms with a retention election at year six. This was the convention's most contested decision: the judicial independence requirement under §13.2.e applies, and Arveld's judiciary has in fact ruled against the State government multiple times. The Inspectorates have not yet issued a formal independence-failure finding for Arveld, though the matter has been discussed internally. The Arveld State Supreme Court's independence record is closely watched.</p>
+
+  <p><strong>Strong county government.</strong> Forty-four elected county governments hold constitutional authority under the Arveld State Charter to set local tax rates, administer land use and zoning, operate schools and libraries, maintain county roads, and manage BNF delivery infrastructure. The subsidiarity principle cuts both ways in Arveld: State government cannot preempt county authority on matters counties can handle, and the State has learned over time that it cannot. Some counties run their BNF programs more generously than the State mandates; some run them at the minimum. All of it is on the NRS.</p>
+
+  <div class="fact-box">
+    <div class="fact-box-label">Arveld State Charter — Key Provisions</div>
+    <div class="fact-row"><span class="fact-key">Executive</span><span class="fact-val">Governor — directly elected, 4-year term, 2-term limit</span></div>
+    <div class="fact-row"><span class="fact-key">Legislature</span><span class="fact-val">Bicameral — Assembly (120 seats, constituency) + State Senate (88 seats, 2 per county)</span></div>
+    <div class="fact-row"><span class="fact-key">Judiciary</span><span class="fact-val">Elected — partisan ballot, 12-year terms, retention at year 6</span></div>
+    <div class="fact-row"><span class="fact-key">Counties</span><span class="fact-val">44 counties, each with elected board, broad autonomous authority</span></div>
+    <div class="fact-row"><span class="fact-key">BNF level</span><span class="fact-val">5.4% State mandate — counties may supplement</span></div>
+    <div class="fact-row"><span class="fact-key">Indigenous compact</span><span class="fact-val">None — no recognized compact within current State boundaries</span></div>
+  </div>
+
+  <div class="section-head">
+    <div class="section-eyebrow">Living in Arveld</div>
+    <h2>What Government Feels Like</h2>
+  </div>
+
+  <p>An Arveldan's primary relationship with government is with their county. The county board collects local taxes, administers the school system, maintains roads, processes BNF delivery, and holds the planning authority over what can be built and where. The State government in the capital, Dornbach, is a distant presence — one that sets regulations, maintains the State Inspectorate equivalent, and occasionally picks fights with the federal government about the scope of federal authority over Arveld's resource industries.</p>
+
+  <p>The BNF is present at 5.4% — above the floor, but only modestly. Healthcare is delivered through a State block grant to counties, which contract with providers. In the three wealthiest mining counties, the county supplement pushes effective BNF coverage close to Kailos levels. In the six most rural agricultural counties, it sits near the constitutional floor. The differential is on the NRS. It is a political issue in every State Senate election. It has not been resolved, because the political coalition that supports higher State-level BNF funding has not achieved a durable majority in the State Senate, where the agricultural counties have structural weight equal to the cities.</p>
+
+  <p>The NRS is culturally distinct in Arveld from how it operates elsewhere. The Territory adopted it early because resource industry operators wanted transparency — the large timber and mining companies had historically used regulatory opacity to their advantage, and smaller operators and workers wanted the records public. This means Arveld's NRS culture predates Statehood and is deeply embedded: county governments assume their records are public, State agencies assume their decisions are public, and the Governor's office assumes its contracts are public. There has been one formal improper classification finding against an Arveld agency, involving a regulatory negotiation with a mining company. The finding is on the NRS. The official involved did not seek re-election.</p>
+
+  <div class="section-head">
+    <div class="section-eyebrow">Federal Tensions</div>
+    <h2>The Difficult Relationship</h2>
+  </div>
+
+  <p>Arveld has brought more federal constitutional challenges than any other State. These are not challenges to the Individual Sovereignty Floor — Arveld's courts enforce §1.8 and the other Article I rights without significant friction. The challenges cluster around three areas: federal environmental regulation of extractive industries on State land; federal immigration authority and the Gate 1 sponsorship process; and the Inspectorate oversight regime, which Arveld officials have periodically characterized as federally controlled surveillance of State governance.</p>
+
+  <p>On environmental regulation, Arveld has lost most of its challenges. The federal government's authority over waterways, migratory species, and cross-boundary pollution is constitutionally grounded in treaty obligations and the federal supremacy clause. Arveld's argument — that the State, not the federal government, best understands its land — has found no constitutional purchase. The argument is nonetheless made, loudly, in every Governor's election campaign.</p>
+
+  <p>On immigration, Arveld is a passive Gate 1 participant. The State accepts federal residency applications but does not actively sponsor Legal Residents or set up State-specific recruitment programs. This is a policy choice, not a constitutional constraint. The Arveld State Senate passed a resolution in Year 11 affirming that federal control of removal authority was an infringement on State interests. The resolution had no legal effect. It is on the NRS.</p>
+
+  <div class="tension-box">
+    <div class="tension-label">A Constitutional Tension Worth Watching</div>
+    <p>Arveld's elected judiciary operates under the federal §13.2.e independence requirement — courts must rule against the government when the law requires it. The Legislative Inspectorate monitors this. Arveld's State Supreme Court has issued significant rulings against the State government on environmental compliance and labor standards. But in three recent cases involving challenges to county land-use decisions, the pattern of rulings has drawn LI attention without triggering a formal finding. The question — whether partisan judicial elections produce structurally independent courts even when individual judges sometimes rule against the government — is not yet answered by the Republic's constitutional law. Arveld is where it will be answered.</p>
+  </div>
+
+  <div class="section-head">
+    <div class="section-eyebrow">The Contrast</div>
+    <h2>What Arveld Proves About the Republic</h2>
+  </div>
+
+  <p>Arveld proves that the Republic's constitutional floor is genuinely the floor, not the ceiling in disguise. A state with conservative political culture, a strong executive, an elected judiciary, county-level BNF delivery, passive immigration policy, and a contentious relationship with federal oversight is still a Republic state in full standing. Its citizens hold every Article I right. Its courts are subject to federal judicial review. Its NRS is public. The Inspectorates have access. The floor holds.</p>
+
+  <p>What Arveld also proves is that diversity within the constitutional framework produces genuine political tension, and that tension is productive. Arveld's ongoing argument about county-level BNF differentials is a real democratic argument about redistribution and local authority that no federal constitutional provision resolves. Arveld's judicial independence question will eventually produce either a federal finding that forces reform or a body of law that clarifies what independence means under electoral conditions. Either outcome advances the Republic's constitutional development.</p>
+
+  <p>The Arveldian political tradition holds that government governs best when it is close, accountable, and distrusted. The Republic's constitutional design accommodates this without endorsing it. That accommodation is, in itself, a constitutional achievement.</p>
+
+  <div class="const-note">
+    <strong>Note on constitutional compliance:</strong> Arveld has been fully compliant with the Statehood Audit criteria since Year 6. The Inspectorates' reports on Arveld note active monitoring of judicial independence patterns and the BNF differential between counties. No formal finding has been issued. No Early Warning has been triggered. Arveld is, by all constitutional measures, a state in good standing.
+  </div>
+
+  
+  <div style="background:var(--navy2);padding:1.75rem 2rem;margin:3rem 0 0;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:0.6rem">§13.7 — State Structural Autonomy</div>
+    <p style="color:rgba(245,240,232,0.6);font-size:0.88rem;line-height:1.7;margin-bottom:1.25rem;max-width:480px;margin-left:auto;margin-right:auto">Your state might look entirely different. Configure your own executive model, legislature, BNF level, and immigration posture.</p>
+    <a href="state-builder.html" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.35);padding:0.65rem 1.4rem;text-decoration:none;background:rgba(201,168,76,0.08);display:inline-block">Design Your State &rarr;</a>
+  </div>
+
+  <div class="state-nav">
+    <a href="state-kailos.html">← Kailos</a>
+    <a href="state-varentis.html">Varentis →</a>
+  </div>
+
+</div>
+
+<script>
+function toggleMobileNav(){
+  const m=document.getElementById('mobileMenu');
+  const b=document.querySelector('.hamburger');
+  const open=m.classList.toggle('open');
+  b.setAttribute('aria-expanded',open);
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobileMenu');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!document.querySelector('.hamburger').contains(e.target)){
+    m.classList.remove('open');
+    document.querySelector('.hamburger').setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>

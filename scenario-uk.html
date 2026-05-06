@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The United Kingdom Scenario — The Federated Republic</title>
+  <meta name="description" content="A hypothetical transition from the United Kingdom's unwritten constitutional order to the Federated Republic, and fifteen years in operation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The United Kingdom Scenario</h1>
+      <p class="scenario-premise">The United Kingdom — after Scotland's departure — ratifies the Federated Republic. Parliamentary sovereignty, three centuries deep, must yield to constitutional supremacy. The monarchy is dissolved. Eleven States are constituted from England's regions, Wales, and Northern Ireland. The Good Friday Agreement must be honoured throughout.</p>
+      <div class="provisions-tested"><span class="prov-tag">§2.1–2.2 Dual Executive</span><span class="prov-tag">§4.1 Legal System Accommodation</span><span class="prov-tag">§15.6 Supremacy</span><span class="prov-tag">§19.1 Institutional Accommodation</span><span class="prov-tag">Good Friday Agreement Protocol</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>No constitutional transition is stranger than the one the United Kingdom undertakes in this scenario. France had a written constitution to replace. The United States had a constitutional framework whose provisions could be mapped onto equivalents. The United Kingdom has neither. What it has is an accumulation of statutes, conventions, common law principles, and constitutional practices that together constitute — in the words of every constitutional law lecturer in every British university — not a constitution but <em>the constitution</em>. The distinction, which British lawyers insist upon, is the distinction between a document and a tradition.</p>
+
+      <p>The tradition is old. Magna Carta is 800 years old. The Bill of Rights 1689 is older than the United States. The constitutional conventions that govern the monarch's role, the cabinet's collective responsibility, the Lords' political restraint — none of these are written down in any single place. They are understood by the people who exercise them, transmitted through practice and precedent, and enforced by political consequence rather than judicial review.</p>
+
+      <h2>The Context of Ratification</h2>
+
+      <p>The proximate cause of ratification is the formal dissolution of the United Kingdom following a successful Scottish independence referendum — producing the political and psychological conditions for a comprehensive constitutional rethinking in what remains: England, Wales, and Northern Ireland. The three-year Convention that follows is the most contested constitutional deliberation in British history since the seventeenth century. Its central tension: can Parliament bind its successors? Can a document be supreme law in a tradition that holds parliamentary sovereignty as its first constitutional principle?</p>
+
+      <p>The Convention's answer produces the most carefully worded ratification question ever put to a British electorate: <em>"Do you approve the establishment of the Federated Republic as the governing constitutional framework for England, Wales, and Northern Ireland, understanding that this Constitution shall be the supreme law of the land, binding upon Parliament, the Crown, and all governmental bodies?"</em></p>
+
+      <p>The question passes at 54.7% on 68.3% participation. It is the first time in British history that Parliament has explicitly authorised its own subordination to a higher law. The monarchy is dissolved. The last act of the King is to give Royal Assent to the Constitutional Transition Act — the monarch signing the document that ends the monarchy. His public statement describes it as "the completion of the constitutional journey my family has accompanied for three centuries, from absolute sovereignty through constitutional monarchy to the sovereignty of the people."</p>
+
+      <h2>The Structural Transition</h2>
+
+      <h3>From Parliamentary Sovereignty to Constitutional Supremacy</h3>
+      <p>This is the transition's philosophical core and its most practically difficult element. Every lawyer trained in the British tradition has been taught that Parliament can do anything — that no court can strike down an Act of Parliament, that no prior Parliament can bind a future one. The Federated Republic inverts this entirely. The constitution is supreme. Parliament operates within it. The Supreme Court can declare Acts of Parliament unconstitutional. Five provisions cannot be amended at all.</p>
+
+      <h3>The House of Lords: Dissolved</h3>
+      <p>The Lords had been under sustained reform pressure for thirty years. The Life Peers, the remaining Hereditary Peers, and the Lords Spiritual — twenty-six Church of England bishops — are all removed. The Lords Spiritual's removal is the first formal disestablishment of the Church of England in legislative terms, though the Church itself continues as an institution. The new Senate, elected from the States, is a more democratic body than anything the Lords reforms produced.</p>
+
+      <h3>England's Constitutional Geography</h3>
+      <p>England has no regional government. The Convention's most consequential decision: how to divide England into States. Three options are debated. England as a single State would give England two Senate seats and produce a Senate where England has the same weight as Wales — clearly worse than what preceded it. The nine English regions used for EU structural funds and regional development purposes prevail over alternatives. England is divided into nine constitutional States, plus Wales and Northern Ireland — eleven States in total.</p>
+
+      <p>Wales enters as a State rather than a Territory — its Senedd provides the administrative foundation, and Welsh devolution is simply converted to State constitutional status. Welsh is designated a co-official language for State administration immediately.</p>
+
+      <h3>Northern Ireland and the Good Friday Agreement</h3>
+      <p>Northern Ireland is the most constitutionally complex case. The Good Friday Agreement — an international treaty between the United Kingdom and Ireland — governs Northern Ireland's constitutional arrangements, including the provision that Northern Ireland's status can only change with the consent of a majority of its population. The Convention must satisfy two requirements simultaneously: adopting the Federated Republic's framework and maintaining compatibility with the GFA.</p>
+
+      <p>The solution, negotiated with the Irish government over eighteen months, is a supplementary international agreement establishing that Northern Ireland joins the Federated Republic as a founding State, that the north-south institutional arrangements continue in treaty form, and that Northern Ireland citizens retain the right to Irish citizenship under existing GFA provisions. The Protocol is deposited with the UN. The Republic assumes the UK's treaty obligations under the GFA in full.</p>
+
+      <h3>The Royal Prerogative Distributed</h3>
+      <p>The collection of constitutional powers exercised by the monarch on ministerial advice — the power to dissolve Parliament, appoint ministers, conduct foreign affairs, command the armed forces — is absorbed into the dual executive framework. The President inherits the foreign affairs and military prerogative functions. The PM inherits the domestic prerogative functions. The power to declare war moves to the parliamentary declaration requirement under §12.2.</p>
+
+      <h2>Year 1-3 — The Founding Period</h2>
+
+      <h3>Parliamentary Sovereignty's Last Stand</h3>
+      <p>The Republic's first constitutional crisis arrives in Month 7. The new Parliament passes a statute purporting to override a Constitutional Court ruling on State tax powers. The statute's preamble includes the phrase "notwithstanding the Constitution" — language that would have been perfectly standard in UK parliamentary tradition. Under the Federated Republic's constitutional framework, the phrase is void.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Supreme Court's First Landmark Ruling</span>
+        <p>A parliamentary statute that purports to override a constitutional ruling is void in its entirety, not merely in its overriding provision. The court does not merely strike down the notwithstanding clause; it strikes down the statute, because the notwithstanding clause was the statute's operative mechanism. Parliament must legislate within the constitution's framework, not around it.</p>
+        <p>Senior parliamentarians who voted for ratification describe feeling "constitutionally ambushed." The Supreme Court's President writes a brief public statement — unusual for judicial officers — noting that the ruling is precisely what ratification authorised, that the supremacy clause was in the document the electorate voted for, and that Parliament's remedy is to legislate constitutionally, which it does in the next session.</p>
+      </div>
+
+      <h3>Northern Ireland's First Test</h3>
+      <p>A State election in Year 4 produces a Sinn Féin First Minister — the first in Northern Ireland's history — without significant difficulty. The power-sharing arrangements function. The constitutional novelty is that Sinn Féin, which sought Irish unity, is now governing a State of a federal republic rather than a devolved region of the UK. The irony is noted by every political commentator in Ireland, north and south.</p>
+
+      <h2>Year 4-8 — Consolidation</h2>
+
+      <h3>The Common Law and Constitutional Interpretation</h3>
+      <p>British courts bring a distinctive interpretive tradition to constitutional adjudication. The common law's emphasis on precedent, its case-by-case development, its suspicion of abstract principle unmoored from specific facts — all of these shape how the Republic's courts apply constitutional provisions in ways that are subtly different from civil law courts applying the same document. The most significant divergence emerges around the NRS, whose evidentiary status the Supreme Court resolves in Year 5 by carefully synthesising common law and civil law approaches.</p>
+
+      <h3>The Good Friday Agreement and Irish Relations</h3>
+      <p>The north-south institutions of the GFA become, in practice, cross-border institutions between a State of the Federated Republic and a sovereign foreign state. Ireland applies for associated membership of the Federated Republic in Year 6 — an application whose processing would effectively reunify the island under a federal constitutional framework, achieving through constitutional design what the GFA specifically declined to predetermine. The application is received, its processing is initiated, and its resolution is still pending at Year 15.</p>
+
+      <h3>The House of Lords' Ghost</h3>
+      <p>British political culture's most persistent constitutional inheritance proves not to be the monarchy but the practice of legislative revision. The Lords performed a genuine function: it revised and improved legislation, caught drafting errors, and provided a check on the Commons' worst legislative excesses. The Republic's Senate, elected and State-representative, is not designed for detailed legislative revision. Parliament's legislative quality in Years 1-5 is noticeably lower than before, and the reason is identified in the first Eighth-Year Assessment: the revision function has no institutional home. Parliament establishes a statutory revision committee in Year 9.</p>
+
+      <h3>The BBC and the NRS</h3>
+      <p>The BBC, reconstituted under State authority, develops an unexpected constitutional role: its journalism becomes the primary vehicle through which ordinary citizens access and understand NRS records. The BBC's NRS digest, broadcast daily on Radio 4, achieves audiences that constitutional scholars find both extraordinary and appropriate. The EI publishes a finding in Year 7 noting that the BBC's NRS coverage has become so influential in shaping public understanding of constitutional findings that its independence from State government interference is a constitutional matter rather than merely a statutory one.</p>
+
+      <h2>Year 15 — The Verdict</h2>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What Held</span>
+        <p>The transition from parliamentary sovereignty to constitutional supremacy has been accomplished — the Supreme Court's authority is accepted, its rulings are followed, and the Rule Violation architecture has processed genuine constitutional violations by powerful actors without collapse. London State, building on the existing Greater London Authority, functions as the Republic's most capable and confident State actor. Wales, building on its Senedd tradition, is the most constitutionally literate State government in the Republic.</p>
+        <p>The monarchy's dissolution produced less cultural rupture than either republicans hoped for or monarchists feared. The former royal family, which retains its properties under a negotiated settlement, remains enormously popular — more popular, polls suggest, than when it was constitutional.</p>
+      </div>
+
+      <div class="verdict-box">
+        <span class="verdict-label">What Remains Unresolved</span>
+        <p>Constitutional culture. Fifteen years is not long enough to replace three centuries of parliamentary tradition with constitutional instinct. The citizens of the British Republic vote, participate, and access the NRS at high rates — the civic engagement tradition is strong. But they do not yet think constitutionally. They think parliamentarily: they believe their elected representatives should be able to do what they want, that courts are there to apply law not make it, and that a document should be subordinate to democratic will rather than superior to it.</p>
+        <p>The Eighth-Year Assessment makes this point with characteristic British understatement in its final paragraph: "The Republic is working. The question of whether it is yet understood is a different question, and the answer to that question will take longer to establish."</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-france.html">← The France Scenario</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-russia.html">The Russia Scenario →</a>
+    </nav>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>

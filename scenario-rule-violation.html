@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rule Violation Scenario — The Federated Republic</title>
+  <meta name="description" content="A President pushes the boundary of her defense mandate — repeatedly. What happens when the EI finds a pattern? A focused scenario testing §2.7.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .outcome p+p{margin-top:0.75rem}
+    .timeline{border-left:2px solid var(--border);margin:2rem 0;padding-left:1.5rem}
+    .timeline-item{margin-bottom:1.5rem;position:relative}
+    .timeline-item::before{content:'';position:absolute;left:-1.6rem;top:0.4rem;width:0.6rem;height:0.6rem;background:var(--gold);border-radius:50%}
+    .timeline-date{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:0.2rem}
+    .timeline-item p{font-size:0.9rem;line-height:1.7;color:var(--text);margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="scenario-meta">
+      <span class="scenario-tag">Focused Scenario · §2.7 Rule Violations</span>
+      <h1 class="scenario-title">The Rule Violation Scenario</h1>
+      <p class="scenario-premise">A popular President keeps acting just outside her constitutional domain. Each instance is minor. The pattern is not. What does the accountability architecture actually do — and when?</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.7.a Former Official Accountability</span>
+        <span class="prov-tag">§2.7.c Minor Violations</span>
+        <span class="prov-tag">§2.7.d Corrective Order Mechanics</span>
+        <span class="prov-tag">§8.3 Executive Inspectorate</span>
+      </div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>President Mara Voss is three years into her term and genuinely popular. Her approval rating sits at 61%. She came up through the defense apparatus, thinks strategically, and has an instinct for big pictures that sometimes leads her to act first and check the jurisdictional lines afterward. Her supporters call this leadership. The Executive Inspectorate calls it a pattern.</p>
+
+      <p>The first finding arrives fourteen months into her term. The President, during a state visit, made a commitment to a foreign leader about a domestic infrastructure program — a specific railway corridor that would serve a strategic military logistics purpose but was unambiguously a domestic infrastructure matter under the PM's domain. The EI's finding is classified as minor under §2.7.c: procedural, no evidence of deliberate circumvention, no lasting harm to the constitutional order. A corrective order issues. The President acknowledges it. The commitment is walked back through the Foreign Minister.</p>
+
+      <div class="beat">
+        <div class="beat-label">Finding No. 1 — Month 14</div>
+        <div class="beat-title">Minor violation — corrective order track</div>
+        <p>The EI finds the President made a domestic policy commitment during a diplomatic engagement — crossing the domain boundary. The violation is procedural. The corrective order directs the President to issue a clarifying statement within 14 days confirming that the railway commitment requires PM authorization. She does. The NRS records both the finding and the compliance. The matter closes.</p>
+      </div>
+
+      <p>The second finding arrives eight months later. The President, during a national security briefing she convened, issued informal guidance to two State governors about hardening their electrical grid infrastructure against foreign interference. The guidance was framed as intelligence-adjacent — the threat intelligence was genuinely presidential domain. The infrastructure directives were not. The EI finds another minor violation. Another corrective order. This one directs the President to route infrastructure guidance through the PM's domestic coordination office going forward.</p>
+
+      <p>The third finding arrives five months after that. The President, in a press conference, announced that the federal government would be "taking direct action" on port security at three specific commercial ports — language that the EI finds constitutes an executive commitment to domestic infrastructure action without PM co-authorization. The President's communications director argues this was aspirational language, not a policy commitment. The EI's finding disagrees and says so in writing, citing the two previous findings.</p>
+
+      <div class="finding">
+        <span class="finding-label">§2.7.c — When Minor Becomes a Pattern</span>
+        <p>Three corrective-order-track findings in twenty-three months. Each individual finding is minor — procedural overreach, no deliberate circumvention established, no lasting constitutional damage. But §2.7.c's classification of a violation as minor requires, among other factors, that the court find no evidence of deliberate circumvention and that the pattern of conduct not suggest systematic disregard for the domain boundary. The EI's third finding explicitly flags the pattern. It does not itself escalate the finding to major violation status — that determination belongs to the Supreme Court. But the EI's language is precise: "The three findings, taken together, require the Court's assessment of whether the pattern constitutes systematic disregard within the meaning of §2.7.c."</p>
+        <p>The EI has no enforcement power. It has referred the question to the institution that does. The referral is published to the NRS. The President's lawyers are reading it before the press conference ends.</p>
+      </div>
+
+      <div class="divider">✦</div>
+
+      <p>The Supreme Court accepts the pattern referral. The President does not challenge jurisdiction. Her legal team's calculation is straightforward: a jurisdictional challenge that fails — and they assess it would fail — produces a worse NRS record than cooperation. The Court's review takes six weeks.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Week 1</div>
+          <p>President's legal team submits written response. Argues each incident was independently justifiable and the pattern reflects the inherently overlapping nature of defense and domestic domains, not systematic disregard.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Week 3</div>
+          <p>EI submits supplementary assessment. Notes that the President's internal communications — obtained under the EI's constitutional access authority — show awareness of the domain boundary question in all three incidents prior to the relevant actions.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Week 6</div>
+          <p>Court rules 6-3. The three findings together constitute a pattern of conduct consistent with systematic disregard for the domain boundary under §2.7.c. The violation is reclassified from minor to major. A suspension proceeding is initiated.</p>
+        </div>
+      </div>
+
+      <p>The suspension proceeding is not the same as suspension. Under §2.7, the Court initiates a 30-day suspension assessment period in which the President remains in office but under enhanced EI monitoring. The assessment is whether the pattern represents willful constitutional breach or constitutional negligence — the former triggers suspension, the latter triggers a major corrective order that cannot be closed by the President alone but requires PM co-certification of compliance.</p>
+
+      <p>The Court finds constitutional negligence, not willful breach. President Voss is not suspended. She receives a major corrective order that requires her to establish a formal domain compliance review process for all presidential communications and commitments — co-administered by the EI and certified by the PM's office. The order runs for the remainder of her term. Every presidential communication with a potential domestic dimension is routed through it.</p>
+
+      <div class="outcome">
+        <span class="outcome-label">What This Scenario Tests</span>
+        <p>The Rule Violation architecture is designed for exactly this case: a political actor who is not malicious but who has a constitutional blind spot, and who will not correct it without structured accountability. President Voss did not intend to undermine the dual executive. She genuinely believes her actions were defensible. The architecture's response is not to remove her — the conduct does not meet that threshold — but to make structural negligence structurally costly going forward.</p>
+        <p>The EI's role is information. It documented, flagged the pattern, and referred the question to the institution with the authority to act on it. The Supreme Court's role is determination. It assessed the pattern against the constitutional standard and issued a binding order. The PM's role is co-certification — making the corrective order dependent on the PM's satisfaction that compliance is genuine rather than performative.</p>
+        <p>Three minor violations that individually would each have closed on a corrective order produced, together, a major corrective order that runs for two years. The NRS records all of it permanently. President Voss's constitutional record is not clean. Whether her successor reads it and learns from it is a different question — and the correct one.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-emergency.html">← The Emergency Scenario</a>
+      <a href="scenario-amendment.html">Next: The Amendment Scenario →</a>
+    </nav>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

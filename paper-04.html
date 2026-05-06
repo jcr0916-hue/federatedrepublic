@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 4 — The Elected Supreme Court · The Federated Republic</title>
+  <meta name="description" content="On democratic accountability for the court — and why the design challenge is an engineering problem, not a reason to abandon the principle.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:17px;line-height:1.85;overflow-x:hidden}
+
+    /* READING PROGRESS */
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:300;width:0%;transition:width 0.1s linear}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+
+    /* LAYOUT */
+    .page-wrap{max-width:720px;margin:0 auto;padding:96px 2rem 80px}
+
+    /* PAPER HEADER */
+    .paper-meta{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .paper-volume{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+    .paper-number{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--muted);margin-bottom:0.4rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.9rem;color:var(--muted);font-style:italic;line-height:1.7}
+    .paper-wordcount{font-size:0.72rem;color:var(--border);font-family:'JetBrains Mono',monospace;margin-top:0.5rem}
+
+    /* ESSAY BODY */
+    .essay-body{font-size:1.05rem;line-height:1.9;color:#2a2520}
+    .essay-body p{margin-bottom:1.6rem}
+
+    /* Drop cap on first paragraph */
+    .essay-body > p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+
+    /* ITALIC OPENING (the provocative statement) */
+    .essay-body > p:first-of-type em{font-style:italic;color:var(--navy)}
+    .essay-opener{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--navy);line-height:1.7;font-style:italic;margin-bottom:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06)}
+
+    /* SECTION HEADERS */
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin:3rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+
+    /* DIVIDER */
+    .essay-divider{text-align:center;color:var(--gold);font-size:1.2rem;margin:2.5rem 0;letter-spacing:0.5em;opacity:0.6}
+
+    /* NAV BETWEEN PAPERS */
+    .paper-nav{
+      position:fixed;bottom:0;left:0;right:0;z-index:150;
+      display:flex;justify-content:space-between;align-items:center;
+      background:rgba(245,240,232,0.97);backdrop-filter:blur(8px);
+      border-top:1px solid var(--border);
+      padding:0.75rem 2rem;gap:1rem;
+      box-shadow:0 -2px 12px rgba(27,42,74,0.08)
+    }
+    .paper-nav a.prev,.paper-nav a.next{max-width:40%}
+    .page-wrap{padding-bottom:80px!important}
+    .paper-nav a{text-decoration:none;display:flex;flex-direction:column;max-width:45%}
+    .paper-nav a.prev{align-items:flex-start}
+    .paper-nav a.next{align-items:flex-end;text-align:right}
+    .paper-nav .nav-direction{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.25rem}
+    .paper-nav .nav-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);line-height:1.3;transition:color 0.2s}
+    .paper-nav a:hover .nav-title{color:var(--gold)}
+    .paper-nav-center{color:var(--muted);font-size:0.75rem;text-align:center}
+
+    @media(max-width:640px){.page-wrap{padding:80px 1.25rem 60px}.paper-title{font-size:2rem}.essay-body > p:first-of-type::first-letter{font-size:3rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="states.html">States</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="paper-meta">
+      <span class="paper-volume">Volume II · The Papers of the Federated Republic</span>
+      <div class="paper-number">Paper No. 4</div>
+      <h1 class="paper-title">The Elected Supreme Court</h1>
+      <p class="paper-subtitle">On democratic accountability for the court — and why the design challenge is an engineering problem, not a reason to abandon the principle.</p>
+      <div class="paper-wordcount">~2,100 words</div>
+    </header>
+
+    <article class="essay-body">
+      <div class="essay-opener">Judges should not be elected. The argument is familiar: elections make judges political, electoral accountability corrupts judicial independence, and courts derive their authority precisely from insulation rather than popular mandate. It is the conventional wisdom of constitutional design, repeated so often it has the quality of settled fact.</div>
+      <p><em>It is not settled. It is a design choice — one that has produced predictable and well-documented failures. This document makes a different choice.</em></p>
+      <h2>The Independence Objections</h2>
+      <div class="essay-divider">✦</div>
+      <p><em>Elected judges will rule with one eye on voters. A justice who must stand for re-election cannot be independent.</em></p>
+      <p>Before engaging the argument, the word in its center deserves examination. Independent from what?</p>
+      <p>A justice appointed by a political executive is not independent. She is independent from voters while being dependent on the authority that elevated her — the president or prime minister who selected her, the political coalition that confirmed her, the ideological project that defined the criteria by which she was chosen. That is not the absence of dependence. It is dependence relocated to a less visible address.</p>
+      <p>The appointment model's claim to judicial independence rests on a sleight of hand: it identifies one source of influence — electoral — and eliminates it, while leaving another source — executive — entirely intact. The result is a court whose composition is determined by the political accidents of when seats open, which party holds appointing authority, and how aggressively political actors are willing to treat a lifetime appointment as a long-term ideological investment. None of this appears in the word "independence."</p>
+      <p>This document's response to the independence objection is structural rather than rhetorical. The Qualified Jurist Pool constrains entry. The three-step election process — Triad nomination from the Pool, Senate eligibility confirmation, national ranked-choice election — places multiple filters between the electorate and the bench. The single non-renewable term closes the re-election incentive that the objection correctly identifies as the primary channel of electoral corruption: a justice who cannot stand again has no electoral audience to manage, no donor relationships to maintain, no approval rating to protect. The independence that matters — independence from the pressures that actually shape judicial behavior — is better served by a non-renewable elected term than by a renewable appointment whose renewal is controlled by the political actors the justice might otherwise need to disappoint.</p>
+      <p>The objection describes a real risk with a badly designed elected court. It does not describe this court.</p>
+      <h2>The Competence and Legitimacy Objections</h2>
+      <div class="essay-divider">✦</div>
+      <p><em>The best judges are not the most electable. Courts derive their authority from legal expertise, not popular support — and that expertise is precisely what democratic elections cannot evaluate.</em></p>
+      <p>This objection has more force than the independence argument and deserves a direct answer rather than a pivot.</p>
+      <p>The Qualified Jurist Pool is that answer. The election cannot produce an unqualified justice because the election draws only from candidates who have already satisfied constitutional qualification criteria — criteria defined in the document itself and alterable only by constitutional amendment, not by parliamentary statute. A citizen voting in a judicial election under this system is not choosing between lawyers of varying quality. They are choosing among pre-qualified jurists whose professional records have been published to the National Record System before the campaign begins. The competence question is answered before the electability question is asked.</p>
+      <p>The objection is correct that democratic elections cannot evaluate legal expertise. The document does not ask them to. It asks them to evaluate which among a set of qualified candidates should exercise authority over citizens' lives. That is precisely the question democratic elections are designed to answer.</p>
+      <p>The legitimacy objection is more interesting and cuts closer to the design. Courts in the appointment tradition claim authority from two sources: legal expertise and insulation from political pressure. An elected court abandons the second claim. What does it gain in return?</p>
+      <p>It gains the one form of legitimacy that appointment cannot produce: the consent of the governed. An appointment-based court can claim that its justices are qualified and independent. It cannot claim that the people over whom those justices exercise authority have chosen them. That gap has always been present in the appointment model. For most of the democratic era it was tolerated because the alternative — an elected court — seemed to create worse problems than it solved. This document's position is that the problems of the elected court, properly designed, are more manageable than the problems of the appointed court that the historical record has produced.</p>
+      <h2>The Historical Objections</h2>
+      <div class="essay-divider">✦</div>
+      <p><em>Judicial elections have been tried. State supreme court elections in the United States have produced financially captured campaigns, partisan polarization, and judges who rule in ways that help their donors. The problems are documented.</em></p>
+      <p>They are. And they constitute the most serious challenge to the elected court model — not because they refute the principle of judicial elections but because they identify the specific conditions under which judicial elections fail. Understanding those conditions is the design brief.</p>
+      <p>American state judicial elections are open elections. Any qualified lawyer can run. Campaign finance comes predominantly from private sources — law firms, corporations, advocacy organizations with interests before the court. Campaigns are partisan in most states. Voters frequently have little information about candidates beyond party affiliation. The documented failures — judges ruling favorably for major campaign donors, judicial races decided by party-line voting rather than candidate evaluation, implicit or explicit commitments to future rulings as campaign promises — are the predictable consequences of these specific design features, not of the election mechanism as such.</p>
+      <p>The federal appointment model has its own well-documented record, particularly visible in recent decades. The United States Supreme Court is one of the most consequential judicial institutions in democratic history. Its composition has increasingly been shaped by the political accidents of when vacancies occur and who holds appointing authority. Confirmation processes have become ideological auditions. Seats have been held open for strategic reasons. The court's public confidence ratings have reached historic lows. These are not accidents or aberrations. They are the predictable consequences of a design that concentrates appointing authority for the most powerful court in the republic in the hands of a single political executive confirmed by a chamber whose partisan composition determines outcomes. The difference between this design and the one proposed here is not that one is political and one is not. Both are political. The difference is in who exercises the political authority and under what constraints.</p>
+      <p>Germany's Federal Constitutional Court offers a third point of comparison. Justices are selected by parliamentary supermajority — half by the Bundestag and half by the Bundesrat — with formal qualification requirements constraining the pool. The result is a court with strong democratic legitimacy, high public confidence, and genuine insulation from single-party control, because the supermajority requirement forces genuine cross-party negotiation. Germany's model reflects the same instinct that drives this document's design: the problem with appointment is the concentration of appointing authority in a single political actor, and the solution is to distribute that authority more broadly. This document takes that instinct one step further — distributing appointing authority to citizens, filtered through qualification requirements that ensure the distribution produces competent outcomes.</p>
+      <p>The state judicial election model demonstrates what elected courts look like without qualification filters and with private campaign finance. The German model demonstrates what broader distribution of appointing authority produces. This document's design is the synthesis: distribute appointing authority to citizens, filter the pool by constitutional qualification, close the re-election incentive with a non-renewable term, fund campaigns publicly to remove the donor capture pathway. The specific conditions that produced documented failures in state judicial elections are all addressed by the design — because they were the design specification.</p>
+      <h2>The Evolutionary Argument</h2>
+      <div class="essay-divider">✦</div>
+      <p>The democratic tradition extended accountability to institutions in sequence, and the sequence was resisted at every step.</p>
+      <p>Parliamentary accountability arrived first, under the argument that the executive needed to act without the paralysis of popular interference. When parliamentary accountability was established, it was argued that extending it to the executive itself would corrupt the decisive authority that effective government requires. When executive accountability was established through elections, it was argued that extending democratic accountability to courts would destroy the independence that made courts useful. The argument takes the same form each time — this particular institution is too important, too technical, or too dependent on insulation to survive democratic accountability — and has been wrong each time about the institution to which it pointed.</p>
+      <p>The court is the last major institution of democratic government to which the argument has not yet been resolved. This document's position is that it will be resolved the same way the others were: by recognizing that authority exercised over citizens is more legitimate when citizens have a voice in who exercises it, and that the design challenges of democratic accountability are engineering problems to be solved rather than reasons to forgo the accountability itself.</p>
+      <p>The Qualified Jurist Pool is the engineering. It separates the two questions that the competence objection correctly insists must be distinguished: who is qualified to serve, and who among the qualified should serve. The first question has a professional answer, defined in constitutional text and reviewable only by constitutional amendment. The second question has a democratic answer, delivered through national ranked-choice election from a pre-qualified pool.</p>
+      <p>Neither question alone is sufficient. An unelected body of qualified jurists is a technocracy. An elected court with no qualification filter is vulnerable to the pathologies state judicial elections have documented. The design proposed here is neither. It is the democratic tradition's accountability principle applied to the court as it was applied to every institution before it — carefully, with the specific failure modes of prior attempts built into the specification.</p>
+      <p>The court that results is not the most familiar model. It is the most honest one.</p>
+      <p>*</p>
+    </article>
+
+    <nav class="paper-nav">
+      <a href="paper-03.html" class="prev"><span class="nav-direction">← Previous</span><span class="nav-title">The Backbone</span></a>
+      <span class="paper-nav-center"><a href="papers.html" style="color:var(--muted);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase">All Papers</a></span>
+      <a href="paper-05.html" class="next"><span class="nav-direction">Next →</span><span class="nav-title">The Basic Needs Floor</span></a>
+    </nav>
+  </main>
+
+  <script>
+    const bar = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docHeight * 100) + '%';
+    });
+  </script>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

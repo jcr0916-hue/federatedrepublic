@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Amendment Scenario — The Federated Republic</title>
+  <meta name="description" content="Citizens petition to add a new right to the constitution via the Direct Democracy path. The vote reaches 73% — but participation falls just short. A focused scenario testing §15.1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .vote-display{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:2rem 0;text-align:center}
+    .vote-item{background:white;border:1px solid var(--border);padding:1.25rem 1rem}
+    .vote-number{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--navy);line-height:1}
+    .vote-label{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem}
+    .vote-status{font-size:0.75rem;font-weight:600;margin-top:0.4rem}
+    .vote-pass{color:#2a7a3a}
+    .vote-fail{color:#9a2a2a}
+    .vote-edge{color:var(--gold)}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .outcome p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}.vote-display{grid-template-columns:1fr}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <main class="page-wrap" id="main-content">
+    <header class="scenario-meta">
+      <span class="scenario-tag">Focused Scenario · §15.1 Amendment Architecture</span>
+      <h1 class="scenario-title">The Amendment Scenario</h1>
+      <p class="scenario-premise">A citizen campaign spends four years building support to add a right of digital privacy to the constitution. The vote is 73% in favour. Participation falls to 63%. Does the amendment pass?</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§15.1.a State Convention Path</span>
+        <span class="prov-tag">§15.1.b Direct Democracy Path</span>
+        <span class="prov-tag">§15.3.a Unamendable Provisions</span>
+        <span class="prov-tag">§8.4 Judicial Inspectorate</span>
+      </div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>The campaign begins as most constitutional movements do — as something that most political observers do not take seriously. A coalition of civil liberties organisations, technology policy researchers, and privacy advocates forms in Year 6 of the Republic, eighteen months after a series of data breaches affecting nearly a third of all citizens. The proposed amendment is straightforward: a new §1.26, establishing that citizens own their personal data, that government collection requires a judicially authorised warrant, and that commercial collection requires explicit documented consent.</p>
+
+      <p>The coalition files a petition under the Direct Democracy Path. The petition requires 3% of registered citizens to trigger a formal amendment ballot. They collect 4.1% over eight months. The Judicial Inspectorate certifies the petition valid and schedules the national amendment vote for the following spring.</p>
+
+      <div class="beat">
+        <div class="beat-label">The Campaign — 16 months</div>
+        <div class="beat-title">What the opposition argues</div>
+        <p>Three State legislatures pass resolutions opposing the amendment. Their argument: the amendment's commercial data consent requirement would require rewriting the data infrastructure of every State government system in the Republic. The compliance cost is estimated at 2.1 billion over five years. Two technology industry associations fund a counter-campaign arguing the amendment's "explicit documented consent" language is undefined and would create a decade of litigation before any right is meaningfully established. The coalition counters that this is how all rights start — as constitutional text that subsequent courts interpret.</p>
+      </div>
+
+      <p>The vote is held on a Tuesday in April. The NVS reports results at 10 PM. Participation: 63.2%. Affirmative vote: 73.1%.</p>
+
+      <div class="vote-display">
+        <div class="vote-item">
+          <div class="vote-number">73.1%</div>
+          <div class="vote-label">Affirmative Vote</div>
+          <div class="vote-status vote-pass">↑ Above 70% threshold</div>
+        </div>
+        <div class="vote-item">
+          <div class="vote-number">63.2%</div>
+          <div class="vote-label">Participation</div>
+          <div class="vote-status vote-edge">↓ Below 65%, above 60%</div>
+        </div>
+        <div class="vote-item">
+          <div class="vote-number">?</div>
+          <div class="vote-label">Amendment Status</div>
+          <div class="vote-status vote-fail">JI Determination Required</div>
+        </div>
+      </div>
+
+      <p>The affirmative vote exceeds 70%. But participation falls in the gap — below the 65% requirement and above the 60% floor. Under §15.1.b, the Judicial Inspectorate may certify the amendment valid if it finds that the participation shortfall resulted from systemic access failures rather than genuine civic disengagement. If it cannot make that finding, the amendment fails.</p>
+
+      <div class="divider">✦</div>
+
+      <p>The JI opens its assessment immediately. The question is specific: why did 1.8% of eligible citizens who were registered and active fail to vote? The NVS infrastructure data is pulled. Voting access reports from every State are compiled. The JI has 30 days to make a determination.</p>
+
+      <p>What the data shows: three States in the mountain interior experienced NVS connectivity failures on election day affecting an estimated 340,000 voters — approximately 0.9% of registered citizens. Authentication latency in two urban centres made the voting process take significantly longer than expected, with documented abandonment rates. A severe weather event in one coastal State suppressed turnout in four counties disproportionately.</p>
+
+      <div class="finding">
+        <span class="finding-label">§15.1.b — The JI's Finding</span>
+        <p>The JI finds systemic access failures affecting between 0.7% and 1.1% of registered citizens — enough that, had those failures not occurred, participation would likely have fallen between 64.1% and 64.3%. Not enough to close the full 1.8% gap. The JI cannot find that the participation shortfall resulted predominantly from systemic access failures. The remaining shortfall represents genuine non-participation — citizens who could have voted and did not.</p>
+        <p>The amendment is not certified. The JI publishes its full methodology and the underlying data to the NRS. The coalition's legal challenge arrives within 48 hours. The Supreme Court accepts it and rules within 21 days: the JI's determination standard is correct; the finding is within the JI's constitutional authority; the amendment does not pass.</p>
+        <p>One justice writes a concurrence worth reading: "The participation requirement exists to ensure that constitutional change reflects active civic engagement, not merely the preferences of those who show up on any given day. Today's vote showed that 73% of those who voted support this amendment. It did not show that 65% of citizens made an active choice to participate in deciding it. Those are different things, and the constitution treats them as different things for good reason. The answer to this result is to fix the access failures, rebuild the coalition, and try again."</p>
+      </div>
+
+      <div class="divider">✦</div>
+
+      <p>The coalition does not dissolve. It pivots. The NVS access failures become a separate campaign — Parliament passes legislation within fourteen months improving rural connectivity for NVS access and expanding the assisted authentication network. The coalition also files a simultaneous track under the State Convention Path. Four years later, with 38 of the Republic's 52 States having ratified the amendment through their legislatures, §1.26 is certified and enters the constitution.</p>
+
+      <p>The right exists. It arrived through the slower path, with broader geographic buy-in, without the participation question ever arising. The JI's original finding — and the Supreme Court's ruling upholding it — are on the NRS. The coalition's persistence is also on the NRS. The amendment's eventual text, and the ratification record, will be there too.</p>
+
+      <div class="outcome">
+        <span class="outcome-label">What This Scenario Tests</span>
+        <p>The amendment architecture provides two paths because a single path has a single vulnerability. The Direct Democracy Path failed here not because the amendment lacked support — 73% is a commanding affirmative — but because it didn't meet the participation standard. The State Convention Path succeeded because the coalition built the geographic breadth that 38 of 52 State legislatures represents. Neither path is inherently superior. They solve different problems and require different kinds of democratic effort.</p>
+        <p>The participation safety valve in §15.1.b is not a backdoor to constitutional change on thin turnout. The JI's standard is honest: it can certify where access failures are clearly causal, not where civic disengagement fills the gap. That standard held under legal challenge. The right to try again — and the existence of a second path — meant the outcome was a better-grounded amendment rather than a failed one.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-rule-violation.html">← The Rule Violation Scenario</a>
+      <a href="scenario-judicial-election.html">Next: The Judicial Election Scenario →</a>
+    </nav>
+  </main>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

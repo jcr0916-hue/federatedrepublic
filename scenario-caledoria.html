@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Indigenous Governance Scenario — The Federated Republic</title>
+  <meta name="description" content="The Federated Republic's institutional inheritance and FPIC provisions tested by a ratifying polity with seventeen treaty nations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0;line-height:1.75}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .outcome{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .outcome-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .outcome p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
+    .scenario-nav a:hover{color:var(--navy)}
+    .divider{text-align:center;color:var(--gold);opacity:0.5;margin:2rem 0;letter-spacing:0.5em}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
+    .analysis-box{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0}
+    .analysis-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
+    .analysis-box p{font-size:0.95rem;line-height:1.85;margin-bottom:1rem}
+    .analysis-box p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem!important}}</style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <span id="main-content" tabindex="-1" style="position:absolute;top:56px;pointer-events:none"></span>
+
+  <div class="page-wrap">
+    <header class="scenario-meta">
+      <span class="scenario-tag">International Scenario · Applied Constitutionalism</span>
+      <h1 class="scenario-title">The Indigenous Governance Scenario</h1>
+      <p class="scenario-premise">The Republic of Caledoria ratifies the Federated Republic with seventeen indigenous treaty nations participating as nations rather than interest groups. Each negotiates a compact defining their constitutional relationship. Hereditary governance structures are preserved. FPIC consent is final. The NRS publishes the complete treaty record for the first time. The question of whether a pre-existing sovereign nation can elect Associated Community status without completing the independence process is answered by the Supreme Court in Year 12.</p>
+      <div class="provisions-tested"><span class="prov-tag">§14 Indigenous Nation Compact</span><span class="prov-tag">§19.1 Institutional Accommodation</span><span class="prov-tag">§13.5 Associated Community Status</span><span class="prov-tag">§14.5.d Pre-Existing Sovereignty Pathway</span><span class="prov-tag">§1.26 Associated Community Residents</span><span class="prov-tag">§13.2.e Minimum Democratic Legitimacy</span></div>
+    </header>
+
+    <div class="scenario-body">
+
+      <p>The indigenous governance scenario is the most carefully designed of the series — the one where the document's newest provisions get their most direct test. The setting: a fictional nation with geography, demographics, and indigenous governance complexity analogous to Canada or New Zealand, with seventeen treaty nations whose governance structures are deeply embedded in the existing legal order and who participated in the constitutional convention as nations rather than interest groups.</p>
+
+      <h2>The Context of Ratification</h2>
+
+      <p>Caledoria's prior constitution recognised indigenous rights in 1982 — and provided no enforcement mechanism, no floor on what those rights meant in practice, no process for authoritatively determining their content when the state and indigenous nations disagreed. The gap between constitutional recognition and constitutional delivery has been the dominant fact of indigenous constitutional law for forty years. The convention that produces the Federated Republic ratification is the first in which indigenous nations participate as nations rather than interest groups. The seventeen treaty nations each send delegations with full negotiating authority. The convention's indigenous delegations are the most constitutionally sophisticated participants — they have been thinking about constitutional design from the position of peoples whose prior constitutional experiences have been consistently disappointing.</p>
+
+      <p>The ratification passes at 58.9% on 64.3% participation. The indigenous communities vote at 71% in favour — reflecting the specific provisions the convention negotiations produced.</p>
+
+      <h2>What the Indigenous Nations Negotiated</h2>
+
+      <h3>The Indigenous Governance Compact Process</h3>
+      <p>The general §19.1 provision requires Parliament to define the relationship between existing institutions and the constitutional framework. The indigenous nations negotiated a specific supplement: a dedicated Indigenous Governance Compact process running in parallel with and independently of the general §19.1 parliamentary process. Each of the seventeen nations negotiates directly with a federal Compact Commission rather than with Parliament. Compacts are ratified by both the treaty nation's own governance authority and by Parliament — requiring 2/3 Senate supermajority to amend once ratified. Once a Compact establishes a relationship, Parliament cannot diminish it without the treaty nation's consent.</p>
+
+      <h3>The Range of Compacts</h3>
+      <p>The three largest nations — with elected governments, legislative assemblies, court systems, and significant territorial control — have Compacts establishing them as constitutional actors with governance authority co-equal with State authority in defined domains: land use, natural resource management, family law, education, policing. Six mid-sized nations have Compacts specifying exactly what FPIC means for projects within their territories — the information required, the timeline, the decision-making process, and the consequence of consent withheld, which is final. Eight smaller nations have Compacts preserving traditional governance structures, including hereditary leadership and elder councils, without requiring electoral accountability.</p>
+
+      <div class="finding">
+        <span class="finding-label">Governance Form vs Rights Protection — The Clearest Statement</span>
+        <p>Several smaller nations have governance traditions that are non-electoral: hereditary leadership, elder consensus, ceremonial governance. Gap 10's minimum democratic legitimacy requirements apply to States. Indigenous nations operating under Compacts are not States. The requirements do not apply to them.</p>
+        <p>What does apply — through §1.26's direct incorporation — is the full protection of Article I rights for every resident regardless of governance structure. A hereditary chief cannot torture. An elder council cannot deny habeas corpus. A ceremonial governance structure cannot practice slavery. The Republic does not prescribe how indigenous nations govern themselves. The Republic does guarantee that every person within those nations' territories has the full protection of the Republic's foundational rights. This distinction — governance form and rights protection operating independently — is the provision's clearest constitutional statement.</p>
+      </div>
+
+      <h2>Year 1-3 — The Compact Negotiations</h2>
+
+      <h3>The Abenaki Compact — The Test Case</h3>
+      <p>The Abenaki Confederation's Compact negotiation is the most watched. The central provision: within Abenaki territory, no resource development project may proceed without Abenaki consent. Consent withheld is final. Two Caledorian States whose territory overlaps with Abenaki territory object that this gives the Confederation veto authority over resource development within State territory. The Compact Commission's determination: Abenaki territory is not State territory in the relevant constitutional sense. The treaties established Confederation authority before Caledoria existed. The non-diminishment standard requires that this authority not be reduced below its pre-Phase 4 level. The Supreme Court upholds 6-3, producing the most-cited constitutional decision in indigenous law since the 1982 amendments.</p>
+
+      <h3>The Hereditary Governance Question</h3>
+      <p>Does §1.19's right to vote — the right to participate in genuine periodic elections — require electoral accountability within indigenous governance? The Compact Commission's resolution, confirmed by the Supreme Court in Year 3: §1.19 applies to participation in Republic governance — federal and State elections, referenda. It does not require that every governance structure a citizen participates in be electoral in form. A Nation member has the full right to vote in all Republic elections. The nation's internal governance is not a Republic governance structure. The two operate in different constitutional spaces.</p>
+
+      <h2>Year 4-15 — Consolidation and the Verdict</h2>
+
+      <h3>The FPIC Architecture Under Resource Pressure</h3>
+      <p>By Year 5, FPIC processes have been completed for 47 development projects. Thirty-one received consent — with varying conditions negotiated. Sixteen were refused. Twelve remain refused. They cannot proceed. Three Supreme Court challenges from affected States arguing economic discrimination: the Court rules 7-2 that the FPIC standard is the constitutional expression of pre-existing indigenous territorial authority. A constitutional order that protects rights only when doing so is economically convenient is not a constitutional order.</p>
+
+      <h3>The NRS and the Treaty Record</h3>
+      <p>The RSA Director's Year 3 initiative — digitising and publishing treaty records from each of the seventeen nations alongside government records — produces the most complete publicly accessible indigenous treaty record in Caledorian history. The gaps are significant. Several treaty provisions have not been implemented for decades — not because they were legally extinguished, but because no government prioritised enforcement and no public record made the gap visible. By Year 5, the LI's annual audit of Compact compliance references specific NRS treaty records in 23 of its 47 findings. The treaty record has become a constitutional accountability tool rather than a historical document.</p>
+
+      <h3>The Associated Community Advisory Opinion — Year 12</h3>
+      <p>The Abenaki Confederation raises a constitutional question: can an indigenous nation with recognised sovereignty elect Associated Community status under §13.5 without completing the §15.4 independence process? The Supreme Court's Year 12 advisory opinion is the most philosophically significant constitutional document produced in Caledoria's first decade: an indigenous nation's sovereignty predates the Republic. The Republic recognised that sovereignty through the Compact framework. Recognition of pre-existing sovereignty is constitutionally equivalent to the independence process for Associated Community eligibility under §14.5.d. The Abenaki Confederation does not exercise this pathway at Year 15. It now knows it exists.</p>
+
+      <div class="verdict-box">
+        <span class="verdict-label">The Verdict at Year 15</span>
+        <p>Caledoria's Federated Republic has produced the most significant advancement in indigenous constitutional rights of any event in the country's history since the treaties themselves. Three provisions doing the most work: the §19.1 non-diminishment standard — preventing Parliament from diminishing Compact protections by simple majority. The §1.26 general incorporation clause — Article I rights running directly to every indigenous resident regardless of their nation's governance structure. And the FPIC provision's "consent withheld is final" standard — doing more than any other provision to change the material experience of constitutional recognition for indigenous nations. Prior constitutional systems produced consultation without consequence. This system produces consent with meaning. Twelve refused projects remain refused. The Republic has not collapsed. The constitutional order has not failed.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-valdoria.html">← The Economic Crisis Scenario</a>
+      <a href="scenarios.html">All Scenarios</a>
+      <a href="scenario-aldric.html">The Voluntary Federation →</a>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    const bar = document.getElementById('progress');
+    if(bar){
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if(docHeight > 0) bar.style.width = (scrollTop / docHeight * 100) + '%';
+      });
+    }
+  </script>
+</body>
+</html>
