@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scenario Tester — The Federated Republic</title>
+  <meta name="description" content="Build a constitutional scenario, submit it to the Federated Republic, and receive a full constitutional analysis — which provisions apply, what happens, and why.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-cta{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);padding:0.35rem 0.9rem;border-radius:3px}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+
+    /* Hero */
+    .hero{background:var(--navy2);padding:96px 2rem 56px;text-align:center;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.25rem}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,6vw,3.2rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:1rem}
+    .hero-body{color:rgba(245,240,232,0.6);font-size:0.95rem;max-width:520px;margin:0 auto 0;line-height:1.8}
+
+    /* Layout */
+    .tester-wrap{max-width:1100px;margin:0 auto;padding:60px 2rem 100px;display:grid;grid-template-columns:420px 1fr;gap:4rem;align-items:start}
+
+    /* Config panel */
+    .config-panel{position:sticky;top:80px}
+    .config-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);margin-bottom:0.25rem;font-weight:400}
+    .config-subtitle{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem}
+
+    /* Steps */
+    .step{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(212,201,176,0.5)}
+    .step:last-of-type{border-bottom:none}
+    .step-label{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+    .step-num{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:var(--navy);color:var(--gold);font-size:0.55rem;border-radius:50%;flex-shrink:0}
+
+    /* Actor grid */
+    .actor-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+    .actor-btn{padding:0.75rem 0.6rem;font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.08em;text-transform:uppercase;background:white;border:1px solid var(--border);cursor:pointer;color:var(--muted);transition:all 0.2s;text-align:left;line-height:1.4}
+    .actor-btn:hover{border-color:var(--gold);color:var(--navy)}
+    .actor-btn.active{background:var(--navy);border-color:var(--navy);color:var(--gold)}
+    .actor-btn .actor-role{display:block;font-size:0.48rem;letter-spacing:0.05em;opacity:0.6;margin-top:0.2rem;font-family:'Jost',sans-serif;text-transform:none;font-weight:400}
+
+    /* Action list */
+    .action-list{display:flex;flex-direction:column;gap:0.4rem}
+    .action-btn{padding:0.6rem 0.75rem;font-family:'Jost',sans-serif;font-size:0.82rem;background:white;border:1px solid var(--border);cursor:pointer;color:var(--muted);transition:all 0.2s;text-align:left;line-height:1.4}
+    .action-btn:hover{border-color:var(--gold);color:var(--navy)}
+    .action-btn.active{background:var(--navy);border-color:var(--navy);color:rgba(245,240,232,0.9)}
+    .action-placeholder{color:var(--muted);font-size:0.82rem;font-style:italic;padding:0.5rem 0}
+
+    /* Circumstances */
+    .circ-grid{display:flex;flex-wrap:wrap;gap:0.4rem}
+    .circ-chip{padding:0.3rem 0.7rem;font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.08em;text-transform:uppercase;background:white;border:1px solid var(--border);cursor:pointer;color:var(--muted);transition:all 0.2s;user-select:none}
+    .circ-chip:hover{border-color:var(--gold);color:var(--navy)}
+    .circ-chip.active{background:var(--navy);border-color:var(--navy);color:var(--gold)}
+
+    /* Details field */
+    .details-field{width:100%;padding:0.75rem 1rem;font-family:'Jost',sans-serif;font-size:0.88rem;background:white;border:1px solid var(--border);color:var(--text);resize:vertical;min-height:70px;transition:border-color 0.2s;outline:none;line-height:1.6}
+    .details-field:focus{border-color:var(--gold)}
+    .details-hint{font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.1em;color:var(--muted);margin-top:0.4rem;display:flex;justify-content:space-between}
+
+    /* Analyze button */
+    .analyze-btn{width:100%;padding:1rem 2rem;background:var(--navy);border:2px solid var(--gold);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;margin-top:1.5rem}
+    .analyze-btn:hover{background:var(--gold);color:var(--navy)}
+    .analyze-btn:disabled{opacity:0.5;cursor:not-allowed}
+    .analyze-btn .btn-inner{display:flex;align-items:center;justify-content:center;gap:0.75rem}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* Output panel */
+    .output-panel{min-height:400px}
+    .output-empty{text-align:center;padding:80px 2rem;color:var(--muted)}
+    .output-empty-icon{font-size:2.5rem;margin-bottom:1rem;opacity:0.25}
+    .output-empty p{font-size:0.88rem;line-height:1.8;max-width:260px;margin:0 auto}
+
+    /* Analysis output — same visual language as scenario pages */
+    .analysis{opacity:0;transform:translateY(12px);transition:all 0.4s ease}
+    .analysis.visible{opacity:1;transform:translateY(0)}
+
+    .analysis-header{margin-bottom:1.75rem}
+    .analysis-ai-badge{font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem}
+    .analysis-ai-badge span{display:inline-block;width:6px;height:6px;background:var(--gold);border-radius:50%}
+    .analysis-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--navy);font-weight:300;margin-bottom:0.75rem;line-height:1.2}
+    .provisions-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;padding:0.2rem 0.55rem;letter-spacing:0.05em}
+    .prov-tag.violated{background:#5c1a1a;color:#f5b8b8}
+    .prov-tag.upheld{background:#1a3a2a;color:#a8d4b8}
+    .prov-tag.triggered{background:var(--navy);color:var(--gold)}
+    .prov-tag.tested{background:rgba(27,42,74,0.12);color:var(--navy);border:1px solid var(--border)}
+
+    .setup-text{font-size:1rem;line-height:1.9;color:var(--muted);margin-bottom:1.5rem;font-style:italic;border-left:3px solid var(--border);padding-left:1rem}
+
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:1.25rem 0}
+    .beat-label{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.35rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem}
+    .beat p{font-size:0.9rem;color:#3a3530;line-height:1.75}
+
+    .finding-box{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .finding-label{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding-box p{font-size:0.9rem;line-height:1.75}
+
+    .verdict-box{border:2px solid var(--gold);padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .verdict-label{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.9rem;line-height:1.75;color:var(--text)}
+
+    .try-another{margin-top:1.5rem;font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);cursor:pointer;background:none;border:none;padding:0;display:inline-flex;align-items:center;gap:0.4rem}
+    .try-another:hover{color:var(--navy)}
+
+    /* Responsive */
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+      .tester-wrap{grid-template-columns:1fr;gap:2.5rem;padding:40px 1.25rem 80px}
+      .config-panel{position:static}
+      .hero{padding:80px 1.25rem 48px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="scenario-tester.html" style="color:var(--gold)">Scenario Tester</a>
+    <a href="state-builder.html">State Builder</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="constitution-v118.docx" download>Download DOCX</a>
+  </div>
+
+  <section class="hero">
+    <span class="hero-eyebrow">Interactive Tool &nbsp;·&nbsp; AI-Powered</span>
+    <h1 class="hero-title">Test a Scenario<br>Against the Constitution</h1>
+    <p class="hero-body">Pick an actor, an action, and the circumstances. The constitution analyzes what happens — which provisions apply, what's permitted, what's prohibited, and what the consequences are.</p>
+  </section>
+
+  <div class="tester-wrap">
+
+    <!-- CONFIG PANEL -->
+    <div class="config-panel">
+      <div class="config-title">Build Your Scenario</div>
+      <div class="config-subtitle">Four steps &nbsp;·&nbsp; Infinite combinations</div>
+
+      <!-- Step 1: Actor -->
+      <div class="step">
+        <div class="step-label"><span class="step-num">1</span> Who is the primary actor?</div>
+        <div class="actor-grid" id="actorGrid">
+          <button class="actor-btn" onclick="selectActor(this,'The President')" data-actor="The President">
+            The President
+            <span class="actor-role">Military · Foreign policy · Intelligence</span>
+          </button>
+          <button class="actor-btn" onclick="selectActor(this,'The Prime Minister')" data-actor="The Prime Minister">
+            The Prime Minister
+            <span class="actor-role">Domestic policy · Civil service · Budget</span>
+          </button>
+          <button class="actor-btn" onclick="selectActor(this,'The House')" data-actor="The House">
+            The House
+            <span class="actor-role">Legislation · PM selection · Impeachment</span>
+          </button>
+          <button class="actor-btn" onclick="selectActor(this,'The Senate')" data-actor="The Senate">
+            The Senate
+            <span class="actor-role">Treaties · Judicial confirmation · Trials</span>
+          </button>
+          <button class="actor-btn" onclick="selectActor(this,'A State Government')" data-actor="A State Government">
+            A State Government
+            <span class="actor-role">State powers · BNF · Local governance</span>
+          </button>
+          <button class="actor-btn" onclick="selectActor(this,'The Supreme Court')" data-actor="The Supreme Court">
+            The Supreme Court
+            <span class="actor-role">Constitutional review · Domain disputes</span>
+          </button>
+          <button class="actor-btn" onclick="selectActor(this,'An Inspectorate')" data-actor="An Inspectorate">
+            An Inspectorate
+            <span class="actor-role">Oversight · Audit · Accountability</span>
+          </button>
+          <button class="actor-btn" onclick="selectActor(this,'A Citizen or Group')" data-actor="A Citizen or Group">
+            A Citizen or Group
+            <span class="actor-role">Rights claims · Asylum · Challenges</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Action -->
+      <div class="step">
+        <div class="step-label"><span class="step-num">2</span> What are they attempting?</div>
+        <div class="action-list" id="actionList">
+          <div class="action-placeholder">Select an actor above to see available actions.</div>
+        </div>
+      </div>
+
+      <!-- Step 3: Circumstances -->
+      <div class="step">
+        <div class="step-label"><span class="step-num">3</span> What are the circumstances? <span style="opacity:0.5;font-size:0.48rem">(select all that apply)</span></div>
+        <div class="circ-grid">
+          <div class="circ-chip" onclick="toggleCirc(this)" data-circ="Active military conflict">Active military conflict</div>
+          <div class="circ-chip" onclick="toggleCirc(this)" data-circ="Declared national emergency">National emergency declared</div>
+          <div class="circ-chip" onclick="toggleCirc(this)" data-circ="Economic recession">Economic recession</div>
+          <div class="circ-chip" onclick="toggleCirc(this)" data-circ="Immigration pressure">Immigration pressure</div>
+          <div class="circ-chip" onclick="toggleCirc(this)" data-circ="Opposition majority in the House">Opposition majority in House</div>
+          <div class="circ-chip" onclick="toggleCirc(this)" data-circ="Public health crisis">Public health crisis</div>
+          <div class="circ-chip" onclick="toggleCirc(this)" data-circ="Natural disaster">Natural disaster</div>
+          <div class="circ-chip" onclick="toggleCirc(this)" data-circ="Ongoing constitutional dispute">Ongoing constitutional dispute</div>
+        </div>
+      </div>
+
+      <!-- Step 4: Details -->
+      <div class="step" style="margin-bottom:0">
+        <div class="step-label"><span class="step-num">4</span> Any specific details? <span style="opacity:0.5;font-size:0.48rem">(optional)</span></div>
+        <textarea class="details-field" id="detailsField" placeholder="E.g. The President is personally named in the intelligence report. The PM has been in office for 7 years and 8 months." maxlength="250" oninput="updateCharCount()"></textarea>
+        <div class="details-hint">
+          <span>Add context that shapes the constitutional question</span>
+          <span id="charCount">0 / 250</span>
+        </div>
+      </div>
+
+      <button class="analyze-btn" id="analyzeBtn" onclick="runAnalysis()" disabled>
+        <div class="btn-inner">Analyze Against the Constitution</div>
+      </button>
+    </div>
+
+    <!-- OUTPUT PANEL -->
+    <div class="output-panel" id="outputPanel">
+      <div class="output-empty" id="outputEmpty">
+        <div class="output-empty-icon">§</div>
+        <p>Configure your scenario on the left, then run it against the constitution to see the analysis.</p>
+      </div>
+      <div class="analysis" id="analysisOutput"></div>
+    </div>
+
+  </div>
+
+  <script>
+    // ── State ──
+    let selectedActor = null;
+    let selectedAction = null;
+    const selectedCircs = new Set();
+
+    // ── Action definitions per actor ──
+    const actions = {
+      'The President': [
+        'Declare a national emergency without the Prime Minister',
+        'Conduct surveillance on domestic political opponents',
+        'Postpone or cancel a scheduled election',
+        'Launch an offensive military operation abroad',
+        'Issue a veto on a domestic spending bill',
+        'Override a PM domestic policy decision',
+        'Grant clemency to a political ally convicted of corruption',
+        'Remain in office after their six-year term expires',
+        'Issue a Tier 1 defensive response to an attack',
+        'Direct the issuance of residency credentials on political grounds',
+      ],
+      'The Prime Minister': [
+        'Declare a domestic emergency without parliamentary ratification',
+        'Direct civil service appointments based on party loyalty',
+        'Serve beyond the eight-year consecutive limit',
+        'Issue an executive order without recording it on the NRS',
+        'Refuse to fund a constitutionally mandated BNF program',
+        'Apply a suspensive veto to the annual budget',
+        'Grant clemency to themselves for a criminal offense',
+        'Obstruct an Inspectorate audit of their office',
+      ],
+      'The House': [
+        'Remove the PM without simultaneously naming a successor',
+        'Pass a bill covering multiple unrelated subjects',
+        'Amend a permanently protected right in Article I',
+        'Fail to seat a PM within the statutory deadline',
+        'Restrict immigration by applicant nationality',
+        'Impeach the President',
+        'Expel a member whose vote they need on a pending bill',
+        'Postpone a scheduled election by statute',
+      ],
+      'The Senate': [
+        'Refuse to hold a confirmation vote on a Supreme Court nominee',
+        'Ratify a mutual defense treaty without a triggering threshold',
+        'Convict an impeached official by simple majority',
+        'Indefinitely delay a House-passed bill',
+        'Conduct an impeachment trial in secret',
+        'Fail to hold a Rule Violation trial within the statutory period',
+      ],
+      'A State Government': [
+        'Conduct its own deportations of undocumented immigrants',
+        'Reduce BNF provision below the constitutional floor',
+        'Restrict voting access for a specific group of citizens',
+        'Refuse to recognize a court order from another State',
+        'Deny immigrants entry at the state border',
+        'Pass a law that discriminates by religion',
+        'Establish its own asylum review process',
+      ],
+      'The Supreme Court': [
+        'Issue an advisory opinion on a bill before it is passed',
+        'Redraw electoral districts after finding a map invalid',
+        'Review a Presidential Veto for domain scope',
+        'Rule on an emergency measure during an active emergency',
+        'Reject a §1.27 asylum claim without a hearing',
+        'Extend a justice\'s 12-year term due to a national crisis',
+      ],
+      'An Inspectorate': [
+        'Find the President violated the constitution',
+        'Audit a State\'s BNF compliance and issue a corrective order',
+        'Publish classified intelligence during an active investigation',
+        'Refuse to publish a finding against the PM',
+        'Conduct a census in a way that alters House seat allocation',
+        'Reject a Supreme Court nominee before Senate confirmation',
+      ],
+      'A Citizen or Group': [
+        'Challenge detention without a First Appearance within 24 hours',
+        'Claim asylum protection after irregular entry across the border',
+        'Challenge a law that restricts a permanently protected right',
+        'Demand the NRS publish a redacted government contract in full',
+        'Petition the courts over an election result',
+        'Challenge a Gate 2 immigration denial as discriminatory',
+        'Sue a State government for refusing to meet the BNF floor',
+      ],
+    };
+
+    // ── Actor selection ──
+    function selectActor(btn, actor) {
+      document.querySelectorAll('.actor-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedActor = actor;
+      selectedAction = null;
+      renderActions(actor);
+      checkReady();
+    }
+
+    function renderActions(actor) {
+      const list = document.getElementById('actionList');
+      const items = actions[actor] || [];
+      list.innerHTML = items.map(a =>
+        `<button class="action-btn" onclick="selectAction(this,'${a.replace(/'/g,"\\'")}')">${a}</button>`
+      ).join('');
+    }
+
+    function selectAction(btn, action) {
+      document.querySelectorAll('.action-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedAction = action;
+      checkReady();
+    }
+
+    // ── Circumstances ──
+    function toggleCirc(chip) {
+      const circ = chip.dataset.circ;
+      if (selectedCircs.has(circ)) {
+        selectedCircs.delete(circ);
+        chip.classList.remove('active');
+      } else {
+        selectedCircs.add(circ);
+        chip.classList.add('active');
+      }
+    }
+
+    // ── Details ──
+    function updateCharCount() {
+      const val = document.getElementById('detailsField').value;
+      document.getElementById('charCount').textContent = `${val.length} / 250`;
+    }
+
+    // ── Button state ──
+    function checkReady() {
+      const btn = document.getElementById('analyzeBtn');
+      btn.disabled = !(selectedActor && selectedAction);
+    }
+
+    // ── Spinner ──
+    function setAnalyzing(on) {
+      const btn = document.getElementById('analyzeBtn');
+      if (on) {
+        btn.disabled = true;
+        btn.querySelector('.btn-inner').innerHTML = `<span style="display:inline-block;width:14px;height:14px;border:2px solid var(--gold);border-top-color:transparent;border-radius:50%;animation:spin 0.7s linear infinite"></span> Analyzing…`;
+      } else {
+        btn.disabled = false;
+        btn.querySelector('.btn-inner').innerHTML = 'Analyze Against the Constitution';
+        checkReady();
+      }
+    }
+
+    // ── Provision tag HTML ──
+    function provTag(p) {
+      const statusClass = ['violated','upheld','triggered','tested'].includes(p.status) ? p.status : 'tested';
+      return `<span class="prov-tag ${statusClass}">${p.section} — ${p.name}</span>`;
+    }
+
+    // ── Render result ──
+    function renderResult(data) {
+      const el = document.getElementById('analysisOutput');
+      const beatsHTML = (data.beats || []).map(b => `
+        <div class="beat">
+          <div class="beat-label">${b.label}</div>
+          <div class="beat-title">${b.title}</div>
+          <p>${b.content}</p>
+        </div>
+      `).join('');
+
+      el.innerHTML = `
+        <div class="analysis-header">
+          <div class="analysis-ai-badge"><span></span> AI constitutional analysis</div>
+          <div class="analysis-title">${data.title}</div>
+          <div class="provisions-row">${(data.provisions || []).map(provTag).join('')}</div>
+          <div class="setup-text">${data.setup}</div>
+        </div>
+        ${beatsHTML}
+        <div class="finding-box">
+          <span class="finding-label">${data.finding.label}</span>
+          <p>${data.finding.content}</p>
+        </div>
+        <div class="verdict-box">
+          <span class="verdict-label">${data.outcome.label}</span>
+          <p>${data.outcome.content}</p>
+        </div>
+        <button class="try-another" onclick="resetOutput()">↩ Try another scenario</button>
+      `;
+
+      document.getElementById('outputEmpty').style.display = 'none';
+      el.classList.remove('visible');
+      setTimeout(() => el.classList.add('visible'), 50);
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ── Reset output ──
+    function resetOutput() {
+      const el = document.getElementById('analysisOutput');
+      el.innerHTML = '';
+      el.classList.remove('visible');
+      document.getElementById('outputEmpty').style.display = '';
+    }
+
+    // ── Run analysis ──
+    async function runAnalysis() {
+      if (!selectedActor || !selectedAction) return;
+
+      setAnalyzing(true);
+
+      const payload = {
+        actor: selectedActor,
+        action: selectedAction,
+        circumstances: [...selectedCircs],
+        details: document.getElementById('detailsField').value.trim()
+      };
+
+      try {
+        const resp = await fetch('/.netlify/functions/analyze-scenario', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        if (data.error) throw new Error(data.error);
+        renderResult(data);
+      } catch (err) {
+        console.error('Analysis error:', err);
+        document.getElementById('outputEmpty').innerHTML = `
+          <div class="output-empty-icon">!</div>
+          <p>The analysis couldn't be completed right now — the API may be at capacity. Try again in a moment.</p>
+        `;
+      } finally {
+        setAnalyzing(false);
+      }
+    }
+
+    function toggleMobileNav() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
