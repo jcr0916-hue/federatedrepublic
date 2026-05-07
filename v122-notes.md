@@ -145,3 +145,95 @@ Test 6 (Emergency/Election Collision) → No fix needed; §1.25.e confirmed airt
 
 All five fixes are targeted additions to existing provisions.
 No existing provision text needs to be removed or replaced.
+
+---
+
+## Fix 6 — Replace IOC with State Designee Panel
+
+**Gap:** The Inspectorate Oversight Committee creates a fourth oversight layer above the
+three Inspectorates. After v120 changes, its functions are largely redundant except for
+For-Cause removal verification. Peer IG verification creates conflict with collaborative
+functions. Supreme Court verification is proactive and advisory-opinion adjacent.
+Legislature committee verification has a direct conflict of interest for the LI.
+
+**Eliminate:** The IOC entirely.
+
+**Replace with:** The State Designee Panel — a standing pool of State and Territory
+appointed representatives drawn by lot for a two-year cycle, with the single function
+of verifying For-Cause IG removal grounds.
+
+**Full architecture (add as new Article or §8.X):**
+
+COMPOSITION OF THE POOL:
+Each State and Territory under compact maintains one standing designee for this function,
+published to the National Record System. States and Territories appoint their designee
+by whatever mechanism they choose. Federal constitutional floor for designees:
+  (1) Must be a citizen of the Republic
+  (2) Must hold no current federal elected or appointed office
+  (3) Must not be a judicial officer at any level
+  (4) Must not be currently employed by any federal Inspectorate or constitutional
+      administrative body
+States and Territories update their designee on the NRS whenever the designation changes.
+
+PANEL SELECTION:
+At the start of each two-year election cycle, the Electoral Commission draws five panel
+members and two alternates by lot from the full pool of State and Territory designees.
+The draw is published to the NRS immediately upon completion.
+Alternates activate automatically and in order if a primary member cannot serve.
+The lot is binding — no State or Territory may decline to have their designee drawn.
+
+MANDATE — SINGLE FUNCTION ONLY:
+The panel's sole constitutional function is For-Cause IG removal verification.
+Upon receipt of a For-Cause removal motion from Parliament, the panel convenes,
+reviews the stated grounds, and publishes a binary finding to the NRS within 30 days:
+grounds substantiated or grounds unsubstantiated.
+The panel has no investigative authority, no enforcement power, no proactive role,
+no annual reporting function, and no other mandate.
+Parliament may proceed to the For-Cause removal vote only after the panel publishes
+its finding, regardless of which way the finding goes.
+
+TERM TRANSITION:
+At the end of a two-year cycle, the sitting panel completes any proceeding already
+underway — it may not accept new proceedings after its cycle ends.
+All in-progress work must be completed within one year of the cycle's end.
+The panel remains in session as needed to complete work in progress and must review
+results together before publishing — the finding must be issued by the panel in session,
+not by individual members separately.
+The incoming panel handles any new proceedings arising after the cycle ends.
+
+COMPENSATION:
+Panel members are compensated at rates determined by their appointing State or Territory.
+The federal budget reimburses compensation only during periods of active service —
+defined as the period from the date the panel convenes for a specific proceeding
+to the date the finding is published to the NRS.
+No federal compensation is owed for standing readiness during cycles in which
+no proceeding arises.
+
+APPEALS:
+An IG who disputes a panel substantiation finding may petition the Supreme Court
+within 14 days of publication. The Supreme Court reviews only whether the panel
+applied the correct legal standard — not the merits of the removal grounds themselves.
+This keeps the Supreme Court in its reactive role.
+
+WHAT IS ABSORBED BY EXISTING BODIES:
+All IOC functions beyond For-Cause removal verification are absorbed as follows:
+  - Pattern findings on Inspectorate conduct → Legislature standing committees,
+    published to NRS on the same timeline
+  - Mandatory IG written response → Legislature standing committees may require
+    this directly through existing oversight authority
+  - Annual oversight reporting → absorbed into existing IG annual reports,
+    with a mandatory cross-Inspectorate section added to each annual report
+
+IOC provisions to remove: all §8.X IOC provisions throughout the constitution.
+State Designee Panel provisions to add: new §8.X or dedicated Article section.
+
+---
+
+## Revised v122 Summary — Six Fixes Total
+
+Fix 1: §2.1.h — Dual executive conflict resolution during active military operations
+Fix 2: §10.4.d — MA Director veto must be accompanied by 48-hour judicial challenge
+Fix 3: §2.10.a — Statement of Grounds required with House removal vote
+Fix 4: §5.4.b — CLT Administrator explicit eligibility criteria
+Fix 5: §4.1.b — Legislature-defined confirmation period cannot exceed 180-day ceiling
+Fix 6: IOC eliminated; replaced by State Designee Panel (new §8.X)
