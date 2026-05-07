@@ -237,3 +237,97 @@ Fix 3: §2.10.a — Statement of Grounds required with House removal vote
 Fix 4: §5.4.b — CLT Administrator explicit eligibility criteria
 Fix 5: §4.1.b — Legislature-defined confirmation period cannot exceed 180-day ceiling
 Fix 6: IOC eliminated; replaced by State Designee Panel (new §8.X)
+
+---
+
+## Fix 7 — Emergency Panel Rotation Simplification (§4.2.d)
+
+**Gap:** The staggered rotation rules create an unresolvable edge case. If a justice
+retires mid-cycle, the 18-month minimum service requirement for retained justices
+cannot be met. The provision is silent on how to handle this.
+
+**Current text to replace:**
+  "The Emergency Panel rotation must be staggered: at least two justices from the
+   prior two-year rotation must be retained in the following rotation cycle. Full
+   simultaneous replacement of all four panel members is prohibited. Staggering
+   preserves institutional continuity of the Panel's understanding of active
+   cohabitation dispute patterns. Staggered rotation requires that the two retained
+   justices have served at least 18 months of prior Panel service. Panel membership
+   rotates with a maximum of two new members per cycle regardless of retirement or
+   term expiration of incumbent members, ensuring institutional knowledge is preserved
+   across the full cohabitation dispute landscape."
+
+**Replace with:**
+  "The Emergency Panel rotation must maintain continuity: at least two members of the
+   sitting Emergency Panel must have served on the prior cycle's Panel. Where fewer
+   than two prior Panel members remain available for the new cycle due to retirement,
+   term expiration, or incapacity, the Supreme Court designates the most senior
+   available justices with prior Panel experience as replacements; if no prior Panel
+   members are available, continuity is satisfied by the most senior available justices
+   by years of service on the Court."
+
+This achieves the same institutional continuity goal without the 18-month minimum,
+the maximum-two-new-members rule, or the mid-cycle retirement edge case.
+
+---
+
+## Fix 8 — Ministerial Appointment Provision (§2.2 addition)
+
+**Gap:** The document defines the Domestic Affairs Council and SDACO but does not
+address how ministers are appointed, on what grounds they can be removed, or
+explicitly confirm that ministerial authority is bounded by the PM's constitutional
+domain and the NRS mandate. The PM could appoint and remove ministers entirely
+outside any constitutional framework.
+
+**Add as new §2.2.g — Ministerial Appointments:**
+
+  "2.2.g Ministerial Appointments: The Prime Minister appoints and removes ministers
+   to serve within the Domestic Affairs Council. All ministerial appointments and
+   removals are published to the National Record System within 24 hours of taking
+   effect. Ministers exercise only authority delegated by the PM within the PM's
+   constitutional domain — no minister may act outside that domain regardless of
+   how the delegation is framed. All ministerial orders, contracts, and expenditures
+   are subject to the same NRS recording requirement as PM orders under §2.2.a;
+   unrecorded ministerial orders are void. Civil servants are bound by the same
+   duty of refusal under §2.2.b with respect to ministerial orders as they are
+   with respect to PM orders. Ministers serve at the PM's pleasure and may be
+   removed without cause; removal does not affect any ministerial accountability
+   for prior conduct during their term of service."
+
+---
+
+## Fix 6 Addendum — IOC References Requiring Cleanup
+
+When Fix 6 (IOC elimination / State Designee Panel) is applied, the following
+sections must also be updated:
+
+§8.4.d — "The Inspectorate Oversight Committee may appoint temporary IGs for each
+simultaneously vacant position within 14 days"
+→ Replace IOC with State Designee Panel for the temporary IG appointment function,
+OR assign this function to the joint Senate-House standing committee that absorbs
+other IOC functions. Recommendation: the Senate, by simple majority of available
+members under §3.2.g survivor quorum, appoints temporary IGs for simultaneous
+vacancy events — this is faster than convening the State Designee Panel and the
+Senate is already constitutionally activated during catastrophic events.
+
+§8.5.a — "Before the parliamentary vote, the Inspectorate Oversight Committee (§8.9)
+must publish a verification finding within 30 days of the removal motion being filed."
+→ Replace with: "Before the legislative vote, the State Designee Panel must publish
+a verification finding within 30 days of the removal motion being filed. The Panel
+convenes under the procedures of §8.X [State Designee Panel section]."
+
+§8.9 — The entire IOC section.
+→ Remove in full. Replace with the State Designee Panel provision.
+
+---
+
+## Revised v122 Summary — Eight Fixes Total
+
+Fix 1: §2.1.h — Dual executive conflict resolution during active military operations
+Fix 2: §10.4.d — MA Director veto must be accompanied by 48-hour judicial challenge
+Fix 3: §2.10.a — Statement of Grounds required with House removal vote
+Fix 4: §5.4.b — CLT Administrator explicit eligibility criteria
+Fix 5: §4.1.b — Legislature-defined confirmation period cannot exceed 180-day ceiling
+Fix 6: IOC eliminated; replaced by State Designee Panel (new §8.X); cleanup §8.4.d and §8.5.a
+Fix 7: §4.2.d — Emergency Panel rotation rules simplified; edge case resolved
+Fix 8: §2.2.g — Ministerial appointments provision added
