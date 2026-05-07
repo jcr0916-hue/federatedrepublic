@@ -73,7 +73,7 @@ Max 3 provisions. Be direct and specific.`;
     if (!response.ok) {
       const err = await response.text();
       console.error('Anthropic error:', err);
-      return { statusCode: 502, body: JSON.stringify({ error: `Anthropic: ${response.status}` }) };
+      return { statusCode: 502, body: JSON.stringify({ error: `Anthropic ${response.status}: ${err.slice(0,300)}` }) };
     }
 
     const data = await response.json();
