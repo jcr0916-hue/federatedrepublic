@@ -20,7 +20,7 @@ exports.handler = async function(event) {
 
 SCENARIO: ${actor} attempts to: ${action}${ctx ? `. Context: ${ctx}` : ''}
 
-KEY CONSTITUTIONAL RULES (v122):
+KEY CONSTITUTIONAL RULES (v124):
 - §1.25: Emergency needs JOINT President+PM declaration + 2/3 both chambers within 7 days. Max 90 days. Cannot suspend §1.2/1.3/1.13/1.17/1.18. CANNOT postpone elections — any order postponing an election is automatically void.
 - §1.13 UNAMENDABLE: 24hr first appearance before judge; 48hr habeas corpus. No exceptions, no emergency derogation.
 - §1.2/1.3/1.17/1.18 UNAMENDABLE: No torture, slavery, secret trials, retroactive laws.
@@ -37,6 +37,7 @@ KEY CONSTITUTIONAL RULES (v122):
 - §2.10.a: Presidential removal Path 1 — 2/3 full House to initiate WITH a Statement of Grounds + 2/3 full Senate to convict. No Statement of Grounds = motion is constitutionally void. Senate trial under §3.5.c mechanics.
 - §2.10.b: Presidential removal Path 2 — Senate simple majority refers to national recall referendum. Removal requires majority of ELIGIBLE voters (not just turnout). One referral per term. Senate Speaker assumes succession role during referendum.
 - §2.10.c: One referral per presidential term. Failed referendum cannot be re-run within same term. Legislative removal track has no such bar.
+- §2.1.h: Dual executive conflict during active military ops — President has 6 hours to file written objection to NRS; Emergency Panel rules within 24 hours; PM domestic orders remain operative pending ruling; failure to object within 6 hours waives the claim.
 - §2.2.g: Ministerial appointments: PM appoints/removes ministers within Domestic Affairs Council. All appointments published to NRS within 24hrs. Ministers exercise only PM-domain authority. Unrecorded ministerial orders are void.
 - §3.2.h: Senate Speaker vacancy: Deputy Speaker assumes succession role immediately. Senate must elect new Speaker within 72 hours. If Senate cannot convene due to catastrophic event, Deputy Speaker continues until Senate convenes.
 - §3.1.c: Bills must cover single subject. Unrelated riders = entire act void.
@@ -54,12 +55,12 @@ KEY CONSTITUTIONAL RULES (v122):
 - §6.2: Only federal government can deport. States cannot.
 - §7.3.a: Elections cannot be postponed. Even during emergency. Any order postponing an election is automatically void.
 - §8.1: Inspectorates publish facts and recommendations — no enforcement power, no binding orders. Nominating actors submit candidate disclosure records; Inspectorates review for accuracy and publish recommendation. Citizens who identify discrepancies petition their elected representative (§8.6.g).
-- §8.5.a For-Cause IG removal: requires 2/3 both chambers + State Designee Panel verification finding. The State Designee Panel (five State-appointed representatives drawn by lot at each two-year election cycle) must publish a binary finding — grounds substantiated or unsubstantiated — before the Legislature may vote. Legislature MAY vote even if Panel finds grounds unsubstantiated, but the finding is on the NRS permanently.
+- §8.5.a For-Cause IG removal: requires 2/3 both chambers + State Designee Panel verification finding. IOC IS ELIMINATED — replaced by State Designee Panel (§8.9). Panel draws 5 members by lot from State/Territory designees each 2-year cycle. Binary finding (substantiated/unsubstantiated) published before legislative vote. Unsubstantiated finding does NOT block vote — it becomes permanent NRS record alongside vote. For-Cause removal vote at constitutional threshold is NOT a Rule Violation for political motivation where process is complete. The State Designee Panel (five State-appointed representatives drawn by lot at each two-year election cycle) must publish a binary finding — grounds substantiated or unsubstantiated — before the Legislature may vote. Legislature MAY vote even if Panel finds grounds unsubstantiated, but the finding is on the NRS permanently.
 - §8.5.b No-Cause IG removal: 3/4 both chambers + 90-day delay. No State Designee Panel verification required for No-Cause. Judicial IG has no No-Cause removal track — For-Cause only.
 - §8.6.g: Any citizen who identifies a discrepancy in a published candidate disclosure record may petition their elected House member or Senator. No petition fee or threshold required.
 - §10.1: BNF floor mandatory. States must meet it. Federal supplementation required if State can't.
 - §10.4: Monetary Authority governed by elected Director + 5 Senate-confirmed board members. Director may veto ANY board determination. Board may override Director veto by 4-of-5 vote. ALL vetoes and overrides published to NRS immediately. NEITHER veto NOR override may be exercised under political direction — doing so = Rule Violation.
-- §10.4.d: Director who vetoes a board certification on METHODOLOGY grounds must file a Supreme Court methodology challenge within 48 HOURS of the veto or the veto lapses automatically. Board override proceeds regardless of any pending challenge.
+- §10.4.d: Director who vetoes on METHODOLOGY grounds must file SC methodology challenge within 48 HOURS or veto lapses automatically. Board override proceeds regardless. Director removal protection runs from date challenge filed, not date of veto.
 - §15.3: §1.2/1.3/1.13/1.17/1.18 permanently unamendable. Any amendment targeting them = void.
 - NRS: All executive orders must be recorded within 24hrs or void. Civil servants must refuse and report unrecorded orders.
 
