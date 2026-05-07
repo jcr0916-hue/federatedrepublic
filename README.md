@@ -21,14 +21,14 @@ A constitutional project — twenty articles, built from first principles.
 - `state-builder.html` — Generate a constitutional state portrait from eight configuration axes
 - `scenario-tester.html` — Guided constitutional scenario analysis: pick an actor, action, and circumstances; receive a full constitutional ruling
 
-### Scenarios (v121)
+### Scenarios (v122)
 - `scenario-ordinary.html` — "Start Here" introduction scenario
 - `scenario-weimar.html` — Historical scenario: Weimar Republic, November 1932 (15-year narrative)
 - `scenario-rule-violation.html` — §2.7 Rule Violations: pattern violations, military deferral, former official lookback
 - `scenario-american.html` — Long-form: The American Republic across 35 years
 
 ### Constitutional Document
-- `constitution-v121.docx` — The full constitutional document (v121)
+- `constitution-v122.docx` — The full constitutional document (v122)
 
 ### Deployment
 - `netlify.toml` — Netlify deployment configuration
