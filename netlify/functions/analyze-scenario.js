@@ -20,7 +20,7 @@ exports.handler = async function(event) {
 
 SCENARIO: ${actor} attempts to: ${action}${ctx ? `. Context: ${ctx}` : ''}
 
-KEY CONSTITUTIONAL RULES (v120):
+KEY CONSTITUTIONAL RULES (v122):
 - §1.25: Emergency needs JOINT President+PM declaration + 2/3 both chambers within 7 days. Max 90 days. Cannot suspend §1.2/1.3/1.13/1.17/1.18. CANNOT postpone elections — any order postponing an election is automatically void.
 - §1.13 UNAMENDABLE: 24hr first appearance before judge; 48hr habeas corpus. No exceptions, no emergency derogation.
 - §1.2/1.3/1.17/1.18 UNAMENDABLE: No torture, slavery, secret trials, retroactive laws.
@@ -34,24 +34,32 @@ KEY CONSTITUTIONAL RULES (v120):
 - §2.7: Supreme Court Rule Violation finding → automatic suspension, access revocation, Senate trial. No vote required.
 - §2.7.b: Military deferral: if President found in violation during active Tier1/2/3, suspension deferred max 30 days.
 - §2.7.e: Rule Violation against legislator = suspension from voting/committee + mandatory §3.6 expulsion referral within 30 days.
-- §2.10.a: Presidential removal Path 1 — 2/3 full House to initiate + 2/3 full Senate to convict. Independent of §2.7.
-- §2.10.b: Presidential removal Path 2 — simple Senate majority to refer to national recall referendum. Removal requires majority of eligible voters. One referral per presidential term.
+- §2.10.a: Presidential removal Path 1 — 2/3 full House to initiate WITH a Statement of Grounds + 2/3 full Senate to convict. No Statement of Grounds = motion is constitutionally void. Senate trial under §3.5.c mechanics.
+- §2.10.b: Presidential removal Path 2 — Senate simple majority refers to national recall referendum. Removal requires majority of ELIGIBLE voters (not just turnout). One referral per term. Senate Speaker assumes succession role during referendum.
+- §2.10.c: One referral per presidential term. Failed referendum cannot be re-run within same term. Legislative removal track has no such bar.
+- §2.2.g: Ministerial appointments: PM appoints/removes ministers within Domestic Affairs Council. All appointments published to NRS within 24hrs. Ministers exercise only PM-domain authority. Unrecorded ministerial orders are void.
+- §3.2.h: Senate Speaker vacancy: Deputy Speaker assumes succession role immediately. Senate must elect new Speaker within 72 hours. If Senate cannot convene due to catastrophic event, Deputy Speaker continues until Senate convenes.
 - §3.1.c: Bills must cover single subject. Unrelated riders = entire act void.
 - §3.2.e: Treaties need 2/3 Senate + defined triggering threshold.
-- §3.2.h: Senate Speaker vacancy → Deputy Speaker assumes succession role immediately. Senate must elect new Speaker within 72 hours.
 - §3.5: Applies ONLY to executive and judicial officers. Legislative members governed exclusively by §3.6.
 - §3.6: House expelled by 2/3 full membership; Senate expelled by 2/3 full membership. Anti-weaponization: raises to 3/4 if vote within 30 days of a vote the member was publicly opposing.
-- §4.1.b: Inferior court vacancy must be filled within 180 days. PM has 90 days to nominate; if fails, Supreme Court nominates from Qualified Jurist Registry.
-- §4.1.c: Inferior court judges removed by three tracks: Rule Violation (§2.7), judicial initiation (2/3 SC petition + parliamentary supermajority), or political removal (2/3 House + 2/3 Senate, OR Senate referral to popular recall).
-- §4.2: Supreme Court — 9 justices, single non-renewable 12-year terms, elected by national RCV. Triad nominators are Senate, PM, and President (not House) — all nominating from Qualified Jurist Registry. No Senate eligibility confirmation round — JI vetting is the sole filter.
+- §3.6.e: States and Territories may establish recall mechanisms for both Senators and House members. Federal government cannot restrict this.
+- §3.6.f: Vacancy filling: States and Territories determine replacement process. Legislature sets maximum vacancy period — no seat may remain indefinitely unfilled. Supermajority thresholds calculated against full constitutional membership, not reduced seated membership.
+- §4.1.b: Inferior court vacancy must be filled within 180 days from date of vacancy. PM has 90 days to nominate; if fails, Supreme Court nominates from Qualified Jurist Registry. Deemed Confirmed if House fails to vote within Legislature-defined period. Legislature-defined confirmation period cannot push total elapsed time past 180-day ceiling.
+- §4.1.c: Inferior court judges removed by THREE independent tracks: (1) Rule Violation under §2.7 — automatic; (2) Judicial initiation — 2/3 Supreme Court petition + legislative supermajority; (3) Political removal — 2/3 House + 2/3 Senate OR Senate referral to popular recall. §3.5 does NOT apply to inferior court judges.
+- §4.2: Supreme Court — 9 justices, single non-renewable 12-year terms, elected by national RCV. Triad nominators are Senate, PM, and President (NOT the House) — each nominates ONE candidate from Qualified Jurist Registry. No Senate eligibility confirmation round — JI vetting of Registry records is the ONLY eligibility filter. All certified nominees go directly to public election.
+- §4.2 political removal: Supreme Court justices removed by same two paths as President: 2/3 House + 2/3 Senate (For-Cause only, JI verification required) OR Senate referral to popular recall. NOT by §3.5 impeachment alone.
 - §4.2.b: Mid-term SC vacancy → President and PM nominate; Senate has 90 days to nominate third candidate; if Senate fails, public elects from two nominees.
 - §6.1: Immigration needs State sponsorship (Gate1) + federal certification (Gate2). No nationality quotas.
 - §6.2: Only federal government can deport. States cannot.
 - §7.3.a: Elections cannot be postponed. Even during emergency. Any order postponing an election is automatically void.
-- §8.1: Inspectorates publish facts and recommendations — no enforcement power, no binding orders. Nominating actors submit candidate disclosure records; Inspectorates review for accuracy and publish recommendation. Citizens who identify discrepancies petition their elected representative.
+- §8.1: Inspectorates publish facts and recommendations — no enforcement power, no binding orders. Nominating actors submit candidate disclosure records; Inspectorates review for accuracy and publish recommendation. Citizens who identify discrepancies petition their elected representative (§8.6.g).
+- §8.5.a For-Cause IG removal: requires 2/3 both chambers + State Designee Panel verification finding. The State Designee Panel (five State-appointed representatives drawn by lot at each two-year election cycle) must publish a binary finding — grounds substantiated or unsubstantiated — before the Legislature may vote. Legislature MAY vote even if Panel finds grounds unsubstantiated, but the finding is on the NRS permanently.
+- §8.5.b No-Cause IG removal: 3/4 both chambers + 90-day delay. No State Designee Panel verification required for No-Cause. Judicial IG has no No-Cause removal track — For-Cause only.
 - §8.6.g: Any citizen who identifies a discrepancy in a published candidate disclosure record may petition their elected House member or Senator. No petition fee or threshold required.
 - §10.1: BNF floor mandatory. States must meet it. Federal supplementation required if State can't.
-- §10.4: Monetary Authority governed by elected Director + 5 Senate-confirmed board members. Director may veto board determinations; board may override by 4-of-5 vote. Neither veto nor override may be exercised under political direction.
+- §10.4: Monetary Authority governed by elected Director + 5 Senate-confirmed board members. Director may veto ANY board determination. Board may override Director veto by 4-of-5 vote. ALL vetoes and overrides published to NRS immediately. NEITHER veto NOR override may be exercised under political direction — doing so = Rule Violation.
+- §10.4.d: Director who vetoes a board certification on METHODOLOGY grounds must file a Supreme Court methodology challenge within 48 HOURS of the veto or the veto lapses automatically. Board override proceeds regardless of any pending challenge.
 - §15.3: §1.2/1.3/1.13/1.17/1.18 permanently unamendable. Any amendment targeting them = void.
 - NRS: All executive orders must be recorded within 24hrs or void. Civil servants must refuse and report unrecorded orders.
 

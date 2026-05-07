@@ -175,7 +175,7 @@
           </button>
           <button class="actor-btn" onclick="selectActor(this,'The Prime Minister')" data-actor="The Prime Minister">
             The Prime Minister
-            <span class="actor-role">Domestic policy · Civil service · Budget</span>
+            <span class="actor-role">Domestic policy · Civil service · Budget · Ministers</span>
           </button>
           <button class="actor-btn" onclick="selectActor(this,'The House')" data-actor="The House">
             The House
@@ -183,7 +183,7 @@
           </button>
           <button class="actor-btn" onclick="selectActor(this,'The Senate')" data-actor="The Senate">
             The Senate
-            <span class="actor-role">Treaties · Judicial confirmation · Trials</span>
+            <span class="actor-role">Treaties · Triad nomination · Trials · Recall referral</span>
           </button>
           <button class="actor-btn" onclick="selectActor(this,'A State Government')" data-actor="A State Government">
             A State Government
@@ -195,7 +195,7 @@
           </button>
           <button class="actor-btn" onclick="selectActor(this,'An Inspectorate')" data-actor="An Inspectorate">
             An Inspectorate
-            <span class="actor-role">Oversight · Audit · Accountability</span>
+            <span class="actor-role">Oversight · Audit · Submitted-record review</span>
           </button>
           <button class="actor-btn" onclick="selectActor(this,'A Citizen or Group')" data-actor="A Citizen or Group">
             A Citizen or Group
@@ -267,20 +267,24 @@
         'Postpone or cancel a scheduled election',
         'Launch an offensive military operation abroad',
         'Issue a veto on a domestic spending bill',
-        'Override a PM domestic policy decision',
+        'Issue conflicting orders to civil servants during an active military operation',
         'Grant clemency to a political ally convicted of corruption',
         'Remain in office after their six-year term expires',
-        'Issue a Tier 1 defensive response to an attack',
+        'Issue a Tier 1 defensive response to an active attack',
         'Direct the issuance of residency credentials on political grounds',
+        'Grant clemency to themselves for a criminal offense',
+        'Refuse to issue residency credentials after both immigration gates are cleared',
       ],
       'The Prime Minister': [
-        'Declare a domestic emergency without parliamentary ratification',
+        'Declare a domestic emergency without legislative ratification',
         'Direct civil service appointments based on party loyalty',
         'Serve beyond the eight-year consecutive limit',
         'Issue an executive order without recording it on the NRS',
         'Refuse to fund a constitutionally mandated BNF program',
         'Apply a suspensive veto to the annual budget',
-        'Grant clemency to themselves for a criminal offense',
+        'Fail to nominate a replacement inferior court judge within 90 days of vacancy',
+        'Appoint a minister without publishing the appointment to the NRS',
+        'Nominate an MA board member without submitting a candidate disclosure record',
         'Obstruct an Inspectorate audit of their office',
       ],
       'The House': [
@@ -289,20 +293,21 @@
         'Amend a permanently protected right in Article I',
         'Fail to seat a PM within the statutory deadline',
         'Restrict immigration by applicant nationality',
-        'Initiate presidential removal with a 2/3 majority vote',
+        'Initiate presidential removal without a Statement of Grounds',
+        'Initiate presidential removal with exactly 2/3 House majority',
         'Expel a member whose vote they need on a pending bill',
         'Postpone a scheduled election by statute',
-        'Impeach a Supreme Court justice',
       ],
       'The Senate': [
         'Refer the President to a national recall referendum',
-        'Refuse to nominate a Triad candidate within the statutory period',
+        'Refuse to nominate a Triad candidate within the 90-day window',
         'Ratify a mutual defense treaty without a triggering threshold',
         'Convict an impeached official by simple majority',
         'Indefinitely delay a House-passed bill',
         'Conduct a Rule Violation trial in secret',
-        'Fail to hold a Rule Violation trial within the statutory period',
         'Refuse to fill a vacant Senate Speaker role within 72 hours',
+        'Refer an IG For-Cause removal without State Designee Panel verification',
+        'Nominate two Triad candidates for the same Supreme Court seat',
       ],
       'A State Government': [
         'Conduct its own deportations of undocumented immigrants',
@@ -311,17 +316,18 @@
         'Refuse to recognize a court order from another State',
         'Deny immigrants entry at the state border',
         'Pass a law that discriminates by religion',
-        'Establish its own asylum review process',
-        'Leave a vacant federal legislative seat unfilled indefinitely',
+        'Leave a vacant federal legislative seat unfilled beyond the Legislature-defined period',
+        'Establish a recall mechanism for House members that conflicts with §1.8',
       ],
       'The Supreme Court': [
         'Issue an advisory opinion on a bill before it is passed',
         'Redraw electoral districts after finding a map invalid',
         'Review a Presidential Veto for domain scope',
-        'Rule on an emergency measure during an active emergency',
+        'Rule on a Tier 1 scope challenge during active military operations',
         'Reject a §1.27 asylum claim without a hearing',
-        'Extend a justice\'s 12-year term due to a national crisis',
-        'Refuse to nominate an inferior court judge after PM fails 90-day deadline',
+        'Nominate an inferior court judge after the PM fails the 90-day deadline',
+        'Refuse to nominate an inferior court judge from the Qualified Jurist Registry',
+        'Issue a Rule Violation finding against a sitting Senator',
       ],
       'An Inspectorate': [
         'Publish a factual discrepancy finding against a nominee\'s submitted record',
@@ -329,18 +335,30 @@
         'Publish classified intelligence during an active investigation',
         'Refuse to publish a finding against the PM',
         'Issue a binding order to correct a constitutional violation',
-        'Reject a referendum petition without stating specific grounds',
-        'Generate an independent assessment of a nominee without a submitted record',
+        'Reject a referendum petition without stating which specific criterion is unmet',
+        'Attempt to generate an independent assessment without a submitted record',
+        'Refuse to review a candidate disclosure record submitted by a nominating actor',
       ],
       'A Citizen or Group': [
         'Challenge detention without a First Appearance within 24 hours',
         'Claim asylum protection after irregular entry across the border',
-        'Challenge a law that restricts a permanently protected right',
+        'Challenge a permanently protected right being restricted by statute',
         'Petition an elected representative over a nominee disclosure discrepancy',
-        'Petition the courts over an election result',
-        'Challenge a Gate 2 immigration denial as discriminatory',
+        'Challenge the State Designee Panel\'s IG removal verification finding',
+        'Challenge a Gate 2 immigration denial as statistically discriminatory',
         'Sue a State government for refusing to meet the BNF floor',
         'Petition for a national recall referendum against the President',
+        'Challenge exclusion from the Qualified Jurist Registry',
+      ],
+      'The Monetary Authority': [
+        'The Director vetoes a board BNF floor certification',
+        'The board overrides the Director\'s veto by 4-of-5 vote',
+        'The Director vetoes a certification without filing a judicial challenge within 48 hours',
+        'The Director issues a certification under pressure from the PM',
+        'The board refuses to override a Director veto the Legislature demands they override',
+        'The Director vetoes a Severe Contraction Protocol activation',
+        'A board member is removed by the PM for issuing an unfavorable certification',
+        'The Director and board deadlock on a BNF methodology dispute',
       ],
     };
 
