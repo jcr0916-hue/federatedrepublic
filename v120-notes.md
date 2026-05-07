@@ -133,6 +133,89 @@ Add to §8.6 (The Information-Only Mandate) as §8.6.g:
    is their own constitutional judgment, published to their public record where they choose
    to act through official channels."
 
+## Full Three-Inspectorate Analysis
+
+### Legislative Inspectorate (LI) — NO CHANGES NEEDED
+
+The LI has no candidate assessment functions. All its work falls into two categories
+that already follow the correct model or are audit/technical functions not covered by this change:
+
+**Already submitted-record model:**
+- Redistricting compliance review (§3.4.e) — States submit maps; LI reviews for criteria compliance. Correct model already.
+- Presidential election region compliance (§7.2.c) — LI reviews its own drawn regions against criteria. Technical function.
+- State Remediation Plans (§13.3.b) — States submit; LI reviews. Correct model already.
+- Severe Contraction certification review (§10.1.f) — MA certifies; LI reviews within 30 days. Correct model already.
+
+**Proactive audit/technical functions — not candidate assessment:**
+- Census (§3.1.b) — LI conducts proactively. Pure data collection.
+- Presidential election region drawing (§7.2.c) — LI draws itself. Technical function.
+- CLT administration annual audit (§5.4.b) — Audit of an institution, not a nominee.
+- National Trust stewardship audit (§17.4.g) — Same.
+- Void veto suspension publication (§2.1.f.ii) — Triggered by SC finding; not candidate assessment.
+
+**LI Conclusion:** No changes required. The LI already operates correctly under the principle
+that it reviews submitted documents where applicable, and conducts independent audits
+of institutions — not assessments of nominees.
+
+---
+
+### Judicial Inspectorate (JI) — PARTIAL CHANGES NEEDED
+
+**Function 1 — Qualified Jurist Registry (§8.4.a)**
+Already addressed in v120 notes. Candidates submit registration records; JI reviews
+for accuracy and publishes recommendation. ✓
+
+**Function 2 — Triad Nominee Vetting (§4.2.c)**
+The Triad nominators submit nominees FROM the Registry. The nominee's Registry record
+(already submitted and reviewed at admission) serves as the submitted record.
+The JI confirms Registry status and current eligibility — it does not generate a new
+independent assessment.
+
+Clarification needed in §4.2.c:
+  "The Registry record submitted at admission serves as the candidate's disclosure record
+   for Triad nomination vetting purposes. The JI confirms that the nominee remains in
+   the Registry, that no disqualifying change in circumstances has occurred since admission,
+   and that the specific eligibility criteria are met. Where the JI identifies a material
+   change in circumstances since Registry admission, it publishes a specific finding;
+   the nominating Triad member may submit an updated record within a Parliament-defined
+   period. The existing SC appeals process under §8.9.d applies."
+
+No new submission required at the nomination stage — the Registry submission is the record.
+
+**Function 3 — Electoral Commission Candidate Vetting**
+§8.1.c says JI "vets Electoral Commission candidates." §16.2 says EI "publishes a
+factual assessment of each candidate's qualifications." These are DUAL functions:
+  - EI handles factual accuracy of the submitted disclosure record (addressed in v120 notes)
+  - JI handles eligibility determination — do the submitted facts demonstrate the §16.2
+    criteria are met?
+
+Clarification needed in §8.1.c and §16.2:
+  EC candidates submit a single disclosure record. The EI reviews for factual accuracy
+  and publishes with recommendation. The JI separately applies the §16.2 eligibility
+  criteria and publishes an eligibility determination. Both are published to the NRS.
+  The JI eligibility determination is subject to §8.9.d SC appeals.
+  Citizens who spot discrepancies in the submitted record petition their elected representative.
+
+**Function 4 — Referendum Petition Screening (§11.1.b)**
+Citizens submit petitions; JI screens for eligibility (does the targeted law solely
+or primarily expand an Article I right?). This is already the submitted-record model —
+the petition IS the submitted record. Citizens may appeal to SC within 14 days. SC
+must rule within 14 days. All findings published to NRS.
+NO CHANGE NEEDED. Already correct.
+
+**Function 5 — Annual EC Audit**
+Proactive audit of an institution, not candidate assessment. NO CHANGE NEEDED.
+
+---
+
+### Executive Inspectorate (EI) — CHANGES AS PREVIOUSLY NOTED
+
+All candidate assessment functions shift to the submitted-record plus recommendation model.
+EI retains all audit functions unchanged.
+Clemency background reports (§2.1.g, §2.2.f) unchanged — already submitted-record model.
+
+---
+
 ## Summary of Sections to Edit in v120
 
 - §5.4.b (CLT Administrator)
