@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constitutional Changelog — The Federated Republic</title>
+  <meta name="description" content="A complete record of every constitutional revision to the Federated Republic, version by version. What changed, why it changed, and what it closes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+
+    /* Hero */
+    .hero{background:var(--navy2);padding:96px 2rem 56px;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .hero-inner{max-width:780px;margin:0 auto}
+    .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:1rem}
+    .hero-body{color:rgba(245,240,232,0.55);font-size:0.92rem;max-width:540px;line-height:1.8}
+
+    /* Page wrap */
+    .page-wrap{max-width:780px;margin:0 auto;padding:64px 2rem 100px}
+
+    /* Note box */
+    .note-box{background:rgba(27,42,74,0.06);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin-bottom:3rem;font-size:0.88rem;color:var(--muted);line-height:1.75}
+    .note-box strong{color:var(--text)}
+
+    /* Version entries */
+    .version-entry{margin-bottom:3.5rem;padding-bottom:3.5rem;border-bottom:1px solid var(--border)}
+    .version-entry:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+
+    .version-header{display:flex;align-items:baseline;gap:1.25rem;margin-bottom:0.25rem;flex-wrap:wrap}
+    .version-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--gold);line-height:1}
+    .version-date{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
+    .version-badge{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.55rem;border:1px solid;display:inline-block}
+    .badge-major{border-color:var(--gold);color:var(--gold)}
+    .badge-minor{border-color:var(--border);color:var(--muted)}
+    .badge-current{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+
+    .version-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--navy);margin-bottom:0.75rem;line-height:1.3}
+    .version-summary{font-size:0.95rem;color:var(--muted);line-height:1.8;margin-bottom:1.25rem}
+
+    .change-group{margin-top:1.25rem}
+    .change-group-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
+    .change-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+    .change-item{display:flex;gap:0.75rem;align-items:baseline;font-size:0.88rem;line-height:1.65}
+    .change-section{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;color:var(--navy);background:rgba(27,42,74,0.08);padding:0.15rem 0.45rem;flex-shrink:0;white-space:nowrap}
+    .change-desc{color:var(--text)}
+
+    .gap-closed{margin-top:0.75rem;padding:0.75rem 1rem;background:rgba(27,42,74,0.04);border-left:2px solid var(--border);font-size:0.83rem;color:var(--muted);line-height:1.7}
+    .gap-closed strong{color:var(--text);font-weight:500}
+
+    /* Download link */
+    .download-row{display:flex;align-items:center;gap:1rem;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border)}
+    .download-link{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+    .download-link:hover{color:var(--navy)}
+
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+      .page-wrap{padding:48px 1.25rem 80px}
+      .hero{padding:80px 1.25rem 48px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="states.html">States</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="discuss.html">Discuss</a>
+    <a href="changelog.html" style="color:var(--gold)">Changelog</a>
+    <a href="constitution-v122.docx" download>Download v122</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Constitutional Record</span>
+      <h1 class="hero-title">Changelog</h1>
+      <p class="hero-body">Every revision to the Federated Republic — what changed, why it changed, and what gap it closes. The constitution is a living document; this is its institutional memory.</p>
+    </div>
+  </section>
+
+  <div class="page-wrap">
+
+    <div class="note-box">
+      <strong>About versioning.</strong> Version numbers track the constitutional document, not the website. A version increment means at least one provision was added, revised, or removed. Minor fixes — terminology corrections, cross-reference repairs, drafting errors — are included where they affect meaning. The document is available for download at each current version. Prior versions are archived in the project repository.
+    </div>
+
+    <!-- v122 -->
+    <div class="version-entry">
+      <div class="version-header">
+        <span class="version-num">v122</span>
+        <span class="version-date">May 2026</span>
+        <span class="version-badge badge-current">Current</span>
+      </div>
+      <div class="version-title">Cross-Reference Audit · Article XIX Alignment · State Designee Panel</div>
+      <p class="version-summary">Full cross-reference audit identified ten internal errors accumulated across v119–v121 revisions. Article XIX (Ratification and Transition) updated to reflect the elected MA Director and the v120 submitted-record model. The Inspectorate Oversight Committee eliminated and replaced by a State Designee Panel — a rotating body of State-appointed representatives with the single function of verifying For-Cause IG removal grounds.</p>
+
+      <div class="change-group">
+        <div class="change-group-label">Cross-Reference Fixes</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§1.13.a</span><span class="change-desc">Bail cross-reference corrected: §1.16.b → §1.15.b. Bail proportionality is in §1.15, not the Right to Silence.</span></li>
+          <li class="change-item"><span class="change-section">§2.1.g / §12.3</span><span class="change-desc">Rule Violation cross-references corrected: §2.8 → §2.7. Rule Violations are governed by §2.7; §2.8 is Emergency Governance Protocol.</span></li>
+          <li class="change-item"><span class="change-section">§2.4.a / §2.8 / §8.4.d / §12.2.e</span><span class="change-desc">Emergency Governance Protocol cross-references corrected: §2.9 → §2.8 throughout. §2.9 is Clemency; Emergency Governance is §2.8.</span></li>
+          <li class="change-item"><span class="change-section">§19.5</span><span class="change-desc">Classification Framework reference corrected: §9.4 → §9.5, following the Emergency Mode renumbering in v121.</span></li>
+          <li class="change-item"><span class="change-section">§19.9</span><span class="change-desc">Missing section heading added. §19.9 (Transitional Accountability Mechanism) existed as a provision without a heading.</span></li>
+          <li class="change-item"><span class="change-section">Schedule A</span><span class="change-desc">Unamendable provisions list completed: §1.17, §1.18, §1.27 added alongside §1.2, §1.3, §1.13. All six permanently unamendable provisions now listed.</span></li>
+        </ul>
+      </div>
+
+      <div class="change-group">
+        <div class="change-group-label">Article XIX — Transition Alignment</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§19.3.c</span><span class="change-desc">Phase 2 description corrected: MA Director removed from Candidate Register assembly (Director is now elected); MA board members and RSA Director are the registered positions.</span></li>
+          <li class="change-item"><span class="change-section">§19.8.a</span><span class="change-desc">Register assembly updated: MA Director → MA board members + RSA Director. Old proactive assessment model replaced with submitted-record model consistent with v120.</span></li>
+          <li class="change-item"><span class="change-section">§19.8.b</span><span class="change-desc">Interim functions updated: MA Director is elected (Phase 3), not confirmed. PM nominates MA board members within 90 days of Phase 4 activation; RSA Director within 180 days.</span></li>
+          <li class="change-item"><span class="change-section">Phase 3 Table</span><span class="change-desc">MA Director election added to the list of Phase 3 National Election Day offices.</span></li>
+          <li class="change-item"><span class="change-section">§19.7.e</span><span class="change-desc">Grammatical error fixed: "The Commission publishes" → "The panel publishes". Subject was the joint Inspectorate panel, not the Electoral Commission.</span></li>
+        </ul>
+      </div>
+
+      <div class="change-group">
+        <div class="change-group-label">Institutional Reform — State Designee Panel</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§8.9</span><span class="change-desc">Inspectorate Oversight Committee eliminated. Its sole meaningful function — verifying For-Cause IG removal grounds — is transferred to the State Designee Panel.</span></li>
+          <li class="change-item"><span class="change-section">§8.9 new</span><span class="change-desc">State Designee Panel established. Each State and Territory maintains one standing designee. Five-member panel drawn by lot at each two-year election cycle. Single function: binary verification of For-Cause removal grounds. Compensated from federal budget during active service only. Panel completes work in progress at cycle end (max one additional year).</span></li>
+        </ul>
+      </div>
+
+      <div class="download-row">
+        <a href="constitution-v122.docx" download class="download-link">Download constitution-v122.docx →</a>
+      </div>
+    </div>
+
+    <!-- v121 -->
+    <div class="version-entry">
+      <div class="version-header">
+        <span class="version-num">v121</span>
+        <span class="version-date">May 2026</span>
+        <span class="version-badge badge-minor">Minor</span>
+      </div>
+      <div class="version-title">Full Document Assessment — Drafting Corrections</div>
+      <p class="version-summary">Systematic assessment of the document following the v119–v120 structural revisions. Ten drafting errors identified and corrected: section number drift, cross-reference errors from renumbering, self-referential provisions, a duplicate section number, and an incomplete Schedule A entry.</p>
+
+      <div class="change-group">
+        <div class="change-group-label">Corrections Applied</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">Throughout</span><span class="change-desc">All remaining "Parliament-defined" instances updated to "Legislature-defined". All "parliamentary vote may proceed" → "legislative vote may proceed".</span></li>
+          <li class="change-item"><span class="change-section">§4.2.a</span><span class="change-desc">Wrong cross-reference corrected: "eligibility criteria of §4.2.b" → "eligibility criteria of §8.4.a". §4.2.b is the mid-term vacancy process, not the eligibility criteria.</span></li>
+          <li class="change-item"><span class="change-section">§9.4 → §9.5</span><span class="change-desc">Classification Framework renumbered to §9.5. Emergency Mode was renamed to §9.4 in v119, creating a duplicate. Classification Framework is now §9.5.</span></li>
+          <li class="change-item"><span class="change-section">§8.3.b</span><span class="change-desc">Duplicate phrase removed: "before the Senate confirmation vote" appeared twice in the same sentence.</span></li>
+          <li class="change-item"><span class="change-section">§4.1.b</span><span class="change-desc">Lowercase sentence start corrected: "the Legislature may by statute" → "The Legislature may by statute".</span></li>
+          <li class="change-item"><span class="change-section">§5.4.b / §9.3 / §17.4.g</span><span class="change-desc">Self-referential "same mechanism as §10.4.a" preamble removed. §10.4.a no longer defines a generic Candidate Register mechanism following the v120 board model revision.</span></li>
+          <li class="change-item"><span class="change-section">§10.4.a</span><span class="change-desc">Acting officer self-reference replaced with explicit escalation language. "Same escalation framework as §10.4.a's prior acting officer provisions" was circular.</span></li>
+          <li class="change-item"><span class="change-section">§2.10.c</span><span class="change-desc">"Parliamentary removal track" → "legislative removal track".</span></li>
+          <li class="change-item"><span class="change-section">§2.10.a</span><span class="change-desc">Cross-reference to §3.5.c added for Senate trial mechanics. Trial has defined subject matter and procedure.</span></li>
+          <li class="change-item"><span class="change-section">Schedule A</span><span class="change-desc">SCOTUS Appointment entry updated: "Triad → Senate → People (2 rounds)" replaced with revised Triad description. Round 2 entry replaced with mid-term vacancy process.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v120 -->
+    <div class="version-entry">
+      <div class="version-header">
+        <span class="version-num">v120</span>
+        <span class="version-date">May 2026</span>
+        <span class="version-badge badge-major">Major</span>
+      </div>
+      <div class="version-title">Inspectorate Model Revision · Legislature Terminology</div>
+      <p class="version-summary">Two significant changes. First: the Inspectorate candidate assessment model was redesigned — nominating actors now submit candidate disclosure records; Inspectorates review for accuracy and publish recommendations rather than generating independent assessments. Second: "Parliament" and "Parliamentary" replaced throughout with "Legislature" and "Legislative", reflecting the document's universal applicability rather than a British parliamentary association.</p>
+
+      <div class="change-group">
+        <div class="change-group-label">Inspectorate Assessment Model</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§8.1.b</span><span class="change-desc">EI mandate description updated: reviews submitted candidate disclosure records, publishes recommendations. Does not generate independent assessments.</span></li>
+          <li class="change-item"><span class="change-section">§8.3.b</span><span class="change-desc">Executive IG appointment: House submits candidate disclosure record to JI (not EI); JI reviews and publishes recommendation before Senate confirmation.</span></li>
+          <li class="change-item"><span class="change-section">§8.4.a</span><span class="change-desc">Qualified Jurist Registry: candidates submit registration records; JI reviews for accuracy and eligibility; publishes recommendation. SC appeals under §8.9.d unchanged.</span></li>
+          <li class="change-item"><span class="change-section">§8.6.g new</span><span class="change-desc">Citizen Discrepancy Petition added. Any citizen who identifies a discrepancy in a published candidate disclosure record may petition their elected representative. No fee, threshold, or filing requirement.</span></li>
+          <li class="change-item"><span class="change-section">§4.2.c</span><span class="change-desc">Triad nominee vetting: Registry record serves as the disclosure record. JI confirms Registry status and no disqualifying change since admission — does not generate a new assessment.</span></li>
+          <li class="change-item"><span class="change-section">§5.4.b / §9.3 / §10.4.a / §17.4.g</span><span class="change-desc">All PM-nominated positions updated: PM submits candidate disclosure record to EI; EI reviews and publishes recommendation. Old proactive assessment model removed.</span></li>
+          <li class="change-item"><span class="change-section">§16.2</span><span class="change-desc">Electoral Commission candidates submit disclosure records. EI reviews factual accuracy; JI separately applies eligibility criteria. Both published to NRS before election.</span></li>
+        </ul>
+      </div>
+
+      <div class="change-group">
+        <div class="change-group-label">Terminology</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">Throughout</span><span class="change-desc">"Parliament" → "the Legislature" and "Parliamentary" → "Legislative" in all uses referring to the Republic's legislature. Government-system descriptors ("parliamentary vs presidential") preserved unchanged. 186 run-level changes in the constitutional document; 189 changes across the website.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v119 -->
+    <div class="version-entry">
+      <div class="version-header">
+        <span class="version-num">v119</span>
+        <span class="version-date">May 2026</span>
+        <span class="version-badge badge-major">Major</span>
+      </div>
+      <div class="version-title">Presidential Removal · Triad Revision · Judicial Overhaul · MA Board Model</div>
+      <p class="version-summary">The most structurally significant revision since the document's founding. Fourteen distinct amendments across Articles II, III, IV, V, IX, X, XVI, and XVII. Four areas of focus: presidential accountability (two new removal tracks), Supreme Court nomination (Triad redesigned), judicial removal and vacancy (three-track architecture for all courts), and Monetary Authority governance (elected Director plus board with veto/override).</p>
+
+      <div class="change-group">
+        <div class="change-group-label">Article II — Presidential Accountability</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§2.7.e new</span><span class="change-desc">Rule Violation modified consequences for legislators: suspension from voting and committee participation; mandatory §3.6 expulsion referral within 30 days. Chambers retain the expulsion decision but cannot avoid commencing proceedings.</span></li>
+          <li class="change-item"><span class="change-section">§2.10 new</span><span class="change-desc">Presidential removal — two political tracks independent of §2.7. Path 1: 2/3 House to initiate + 2/3 Senate to convict (Statement of Grounds required). Path 2: Senate simple majority refers to national recall referendum; removal requires majority of eligible voters; one referral per term.</span></li>
+          <li class="change-item"><span class="change-section">§2.2.g new</span><span class="change-desc">Ministerial appointments defined: PM appoints and removes ministers within the Domestic Affairs Council; all appointments published to NRS; ministers exercise only authority delegated within the PM's domain.</span></li>
+        </ul>
+      </div>
+
+      <div class="change-group">
+        <div class="change-group-label">Article III — Legislative Accountability</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§3.2.h new</span><span class="change-desc">Senate Speaker vacancy: Deputy Speaker assumes succession role immediately; Senate must elect new Speaker within 72 hours. Protects the presidential succession line.</span></li>
+          <li class="change-item"><span class="change-section">§3.5</span><span class="change-desc">Scope clarified: §3.5 impeachment applies exclusively to executive and judicial officers. Legislative members governed exclusively by §3.6.</span></li>
+          <li class="change-item"><span class="change-section">§3.6.e</span><span class="change-desc">Expanded: States and Territories may establish recall mechanisms for both Senators and House members.</span></li>
+          <li class="change-item"><span class="change-section">§3.6.f new</span><span class="change-desc">Vacancy filling: States and Territories determine replacement process by their own statute. Legislature sets maximum vacancy period — no seat may remain indefinitely unfilled.</span></li>
+        </ul>
+      </div>
+
+      <div class="change-group">
+        <div class="change-group-label">Article IV — Judicial Architecture</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§4.1.b</span><span class="change-desc">Inferior court vacancy: 180-day constitutional ceiling. PM has 90 days to nominate; if fails, Supreme Court nominates from Qualified Jurist Registry. Deemed Confirmed prevents House inaction veto. Legislature-defined confirmation period cannot push past ceiling.</span></li>
+          <li class="change-item"><span class="change-section">§4.1.c</span><span class="change-desc">Inferior court judge removal: three independent tracks — Rule Violation (§2.7), judicial initiation (2/3 SC petition + legislative supermajority), political removal (mirroring presidential tracks). §3.5 explicitly excluded.</span></li>
+          <li class="change-item"><span class="change-section">§4.2 Triad</span><span class="change-desc">Senate replaces House as Triad nominator. Senate/PM/President each nominate one candidate from Qualified Jurist Registry. Senate eligibility confirmation round eliminated — JI Registry vetting is the sole eligibility filter. All certified nominees proceed directly to national RCV election.</span></li>
+          <li class="change-item"><span class="change-section">§4.2.b new</span><span class="change-desc">Mid-term vacancy process: President and PM nominate; Senate has 90 days for third nominee. If Senate fails, two-nominee public election. Replacement serves remainder of original term.</span></li>
+          <li class="change-item"><span class="change-section">§4.2.c / §4.2.d</span><span class="change-desc">JI vetting and public election provisions revised to reflect new Triad and Registry model.</span></li>
+          <li class="change-item"><span class="change-section">§4.2.d Emergency Panel</span><span class="change-desc">Rotation rules simplified: "at least two members of the sitting Panel must have served on the prior cycle" replaces the 18-month minimum and two-retained-justices rules, resolving a mid-cycle retirement edge case.</span></li>
+          <li class="change-item"><span class="change-section">§4.2 political removal</span><span class="change-desc">Supreme Court justices: political removal mirrors presidential tracks. 2/3 both chambers or Senate referral to popular recall. For-Cause only; JI verification required before Legislature votes.</span></li>
+        </ul>
+      </div>
+
+      <div class="change-group">
+        <div class="change-group-label">Article X — Monetary Authority</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§10.4.a</span><span class="change-desc">MA Director is now elected by national RCV on National Election Day to a single non-renewable 7-year term — the only administrative officer directly elected by citizens. Five board members nominated by PM from Candidate Register, Senate-confirmed on staggered terms.</span></li>
+          <li class="change-item"><span class="change-section">§10.4 veto/override</span><span class="change-desc">Director may veto any board determination. Board may override Director's veto by 4-of-5 vote. Both veto and override reasoning published to NRS immediately. Applies to all board determinations including BNF certifications.</span></li>
+          <li class="change-item"><span class="change-section">§10.4.b</span><span class="change-desc">Independence provision updated: any Director or board member who exercises veto or override under political direction commits a Rule Violation.</span></li>
+        </ul>
+      </div>
+
+      <div class="change-group">
+        <div class="change-group-label">Other Articles</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">§9.3 / §9.4</span><span class="change-desc">RSA Director: 7-year term defined; removal threshold established; §9.3 Emergency Mode renamed §9.4 to resolve duplicate numbering.</span></li>
+          <li class="change-item"><span class="change-section">§5.4.b / §17.4.g</span><span class="change-desc">CLT Administrator and National Trust Administrator: confirmed officer removal thresholds defined; mid-term vacancy provisions added; explicit eligibility criteria added for CLT Administrator.</span></li>
+          <li class="change-item"><span class="change-section">§16.5.d new</span><span class="change-desc">Electoral Commission mid-term vacancy: special election within 90 days for popular seats; joint legislative session within 90 days for legislative seats. Quorum defined; odd-number requirement preserved.</span></li>
+        </ul>
+      </div>
+
+      <div class="gap-closed">
+        <strong>Gap this revision closes:</strong> Prior to v119, the document had no political removal mechanism for the President beyond the §2.7 Rule Violation track, no defined process for mid-term Supreme Court vacancies, and a Triad that effectively gave the PM two nominations (House + PM). It also lacked explicit removal thresholds for several constitutional officers and had no vacancy provisions for inferior court seats. v119 addresses all of these simultaneously.
+      </div>
+    </div>
+
+    <!-- v118 -->
+    <div class="version-entry">
+      <div class="version-header">
+        <span class="version-num">v118</span>
+        <span class="version-date">April 2026</span>
+        <span class="version-badge badge-minor">Baseline</span>
+      </div>
+      <div class="version-title">Session Baseline — Twenty Articles, 766 Paragraphs</div>
+      <p class="version-summary">The version of the document at the start of the current drafting session. Twenty articles covering individual rights, the dual executive, the legislature, the judicial architecture, citizenship, immigration, elections, the inspectorates, the national record system, public finance, direct democracy, national defense, territorial governance, indigenous compacts, amendment procedures, the electoral commission, federal property, electoral finance, ratification, and associated communities.</p>
+
+      <div class="change-group">
+        <div class="change-group-label">Document at Baseline</div>
+        <ul class="change-list">
+          <li class="change-item"><span class="change-section">Articles I–XX</span><span class="change-desc">Full constitutional framework. Twenty articles, 766 paragraphs, 282 interactive provisions in the annotated version.</span></li>
+          <li class="change-item"><span class="change-section">§1.25.e</span><span class="change-desc">Elections cannot be postponed under any emergency. Any such order is automatically void.</span></li>
+          <li class="change-item"><span class="change-section">§2.3.b</span><span class="change-desc">Constructive vote of no confidence: the House can only remove the PM by simultaneously electing a named successor. Destructive oppositions cannot manufacture governmental instability.</span></li>
+          <li class="change-item"><span class="change-section">§2.7</span><span class="change-desc">Rule Violation automatic consequences: Supreme Court finding triggers immediate suspension, access revocation, and Senate trial — no vote required, no discretion available.</span></li>
+          <li class="change-item"><span class="change-section">§6.1</span><span class="change-desc">Dual-gate immigration: State sponsorship (Gate 1) and federal certification (Gate 2). No nationality quotas. Statistical disparity presumption protects against indirect discrimination.</span></li>
+          <li class="change-item"><span class="change-section">§9.1</span><span class="change-desc">National Record System: all executive orders, legislation, court decisions, and inspectorate findings published permanently. Unrecorded executive orders are void.</span></li>
+          <li class="change-item"><span class="change-section">§15.3</span><span class="change-desc">Six permanently unamendable provisions: §1.2 (torture), §1.3 (slavery), §1.13 (habeas corpus), §1.17 (public trial), §1.18 (retroactive laws), §1.27 (non-refoulement).</span></li>
+        </ul>
+      </div>
+
+      <div class="download-row">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)">Archived — download current version above</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
