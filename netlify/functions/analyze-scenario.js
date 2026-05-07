@@ -24,7 +24,7 @@ KEY CONSTITUTIONAL RULES (v124):
 - §1.25: Emergency needs JOINT President+PM declaration + 2/3 both chambers within 7 days. Max 90 days. Cannot suspend §1.2/1.3/1.13/1.17/1.18. CANNOT postpone elections — any order postponing an election is automatically void.
 - §1.13 UNAMENDABLE: 24hr first appearance before judge; 48hr habeas corpus. No exceptions, no emergency derogation.
 - §1.2/1.3/1.17/1.18 UNAMENDABLE: No torture, slavery, secret trials, retroactive laws.
-- §2.1: President = military/foreign/intelligence only. Tier1=immediate defense(no auth, notify within 12hrs); Tier2=Senate Armed Services 96hrs; Tier3=Parliament 2/3.
+- §2.1: President = military/foreign/intelligence only. Tier1=immediate defense(no auth, notify BOTH chambers and PM within 12hrs); Tier2=Senate Armed Services 96hrs; Tier3=Legislature 2/3.
 - §2.1.e: Domestic surveillance of citizens = automatic Rule Violation → immediate suspension.
 - §2.1.f: Presidential veto only within President's domain. Out-of-scope veto = Rule Violation. 3 void vetoes in 180 days = veto suspended.
 - §2.2: PM = domestic only. Orders unrecorded on NRS within 24hrs = void.
@@ -37,7 +37,7 @@ KEY CONSTITUTIONAL RULES (v124):
 - §2.10.a: Presidential removal Path 1 — 2/3 full House to initiate WITH a Statement of Grounds + 2/3 full Senate to convict. No Statement of Grounds = motion is constitutionally void. Senate trial under §3.5.c mechanics.
 - §2.10.b: Presidential removal Path 2 — Senate simple majority refers to national recall referendum. Removal requires majority of ELIGIBLE voters (not just turnout). One referral per term. Senate Speaker assumes succession role during referendum.
 - §2.10.c: One referral per presidential term. Failed referendum cannot be re-run within same term. Legislative removal track has no such bar.
-- §2.1.h: Dual executive conflict during active military ops — President has 6 hours to file written objection to NRS; Emergency Panel rules within 24 hours; PM domestic orders remain operative pending ruling; failure to object within 6 hours waives the claim.
+- §2.1.h: Dual executive conflict during active military ops — President has 6 hours to file written objection to NRS; Emergency Panel (§4.2.e) rules within 24 hours; PM domestic orders remain operative pending ruling; failure to object within 6 hours waives the claim. The §4.2.e Emergency Panel has sole jurisdiction over Tier 1 scope challenges and §2.1.h conflict disputes during active operations.
 - §2.2.g: Ministerial appointments: PM appoints/removes ministers within Domestic Affairs Council. All appointments published to NRS within 24hrs. Ministers exercise only PM-domain authority. Unrecorded ministerial orders are void.
 - §3.2.h: Senate Speaker vacancy: Deputy Speaker assumes succession role immediately. Senate must elect new Speaker within 72 hours. If Senate cannot convene due to catastrophic event, Deputy Speaker continues until Senate convenes.
 - §3.1.c: Bills must cover single subject. Unrelated riders = entire act void.
@@ -48,9 +48,10 @@ KEY CONSTITUTIONAL RULES (v124):
 - §3.6.f: Vacancy filling: States and Territories determine replacement process. Legislature sets maximum vacancy period — no seat may remain indefinitely unfilled. Supermajority thresholds calculated against full constitutional membership, not reduced seated membership.
 - §4.1.b: Inferior court vacancy must be filled within 180 days from date of vacancy. PM has 90 days to nominate; if fails, Supreme Court nominates from Qualified Jurist Registry. Deemed Confirmed if House fails to vote within Legislature-defined period. Legislature-defined confirmation period cannot push total elapsed time past 180-day ceiling.
 - §4.1.c: Inferior court judges removed by THREE independent tracks: (1) Rule Violation under §2.7 — automatic; (2) Judicial initiation — 2/3 Supreme Court petition + legislative supermajority; (3) Political removal — 2/3 House + 2/3 Senate OR Senate referral to popular recall. §3.5 does NOT apply to inferior court judges.
-- §4.2: Supreme Court — 9 justices, single non-renewable 12-year terms, elected by national RCV. Triad nominators are Senate, PM, and President (NOT the House) — each nominates ONE candidate from Qualified Jurist Registry. No Senate eligibility confirmation round — JI vetting of Registry records is the ONLY eligibility filter. All certified nominees go directly to public election.
+- §4.2: Supreme Court — 9 justices, single non-renewable 12-year terms, elected by national RCV. Triad nominators are Senate, PM, and President (NOT the House) — each nominates ONE candidate from Qualified Jurist Registry. No Senate eligibility confirmation round — JI vetting of Registry records is the ONLY eligibility filter. All certified nominees go directly to public election. §4.2.e (formerly §4.2.d before v123 renumbering) is the Emergency Panel for Tier 1 scope challenges and §2.1.h dual-executive conflict disputes.
 - §4.2 political removal: Supreme Court justices removed by same two paths as President: 2/3 House + 2/3 Senate (For-Cause only, JI verification required) OR Senate referral to popular recall. NOT by §3.5 impeachment alone.
 - §4.2.b: Mid-term SC vacancy → President and PM nominate; Senate has 90 days to nominate third candidate; if Senate fails, public elects from two nominees.
+- §5.4.b: CLT Administrator eligibility criteria are constitutionally defined: no government position in prior 5 years; no financial interest in testing/credentialing entities; demonstrated expertise in psychometrics, constitutional law, educational policy, or civic literacy research. Legislature may add requirements by statute but not reduce below this floor.
 - §6.1: Immigration needs State sponsorship (Gate1) + federal certification (Gate2). No nationality quotas.
 - §6.2: Only federal government can deport. States cannot.
 - §7.3.a: Elections cannot be postponed. Even during emergency. Any order postponing an election is automatically void.
