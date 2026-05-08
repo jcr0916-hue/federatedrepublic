@@ -225,6 +225,7 @@
       <a href="states.html">States</a>
       <a href="scenarios.html">Scenarios</a>
       <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
       <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
     </div>
     <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
@@ -237,6 +238,7 @@
     <a href="states.html">States</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="sources.html">Sources</a>
     <a href="discuss.html">Discuss</a>
@@ -250,6 +252,7 @@
     <a href="states.html">States</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="sources.html">Sources</a>
     <a href="discuss.html">Discuss</a>
@@ -348,7 +351,7 @@
       <div class="gov-node node-li" onclick="showPanel('li')">
         <span class="node-icon">📊</span>
         <span class="node-title">Legislative Inspectorate</span>
-        <span class="node-sub">Audits Parliament<br>Redistricting compliance</span>
+        <span class="node-sub">Audits Legislature<br>Redistricting compliance</span>
       </div>
       <div class="gov-node node-ji" onclick="showPanel('ji')">
         <span class="node-icon">📋</span>
@@ -437,7 +440,7 @@
       <div class="flow-num">3</div>
       <div class="flow-body">
         <div class="flow-title">PM Review Window</div>
-        <div class="flow-desc">The PM has a statutory review period (Parliament-defined, not more than 21 days) to consider the bill. The PM may: sign (enact immediately), take no action (deemed enacted at window's close), issue a Suspensive Veto, or issue a Fiscal Objection.</div>
+        <div class="flow-desc">The PM has a statutory review period (Legislature-defined, not more than 21 days) to consider the bill. The PM may: sign (enact immediately), take no action (deemed enacted at window's close), issue a Suspensive Veto, or issue a Fiscal Objection.</div>
         <span class="flow-ref">§2.4 — PM Legislative Objection</span>
         <div class="flow-branch">
           <span class="branch-label">PM Options</span>
@@ -640,7 +643,7 @@
 <footer>
   <p>The Federated Republic — A Constitutional Project</p>
   <p>thefederatedrepublic.org</p>
-  <p>Constitution: v118 — current version</p>
+  <p>Constitution: v124 — current version</p>
   <ul class="footer-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#constitution">Constitution</a></li>
@@ -685,13 +688,13 @@ const nodeData = {
   pm: {
     title: 'The Prime Minister — Domestic Affairs',
     ref: 'Article II, §2.2–2.4',
-    body: `<p>The Prime Minister leads the domestic executive — civil service, domestic policy, social programs, criminal justice, and emergency management. The PM serves at the confidence of the House and may be removed only through a Constructive Vote of No Confidence, which requires simultaneously electing a named successor by absolute majority.</p><p>The PM holds two legislative objection powers: the Suspensive Veto (any bill, delays one full session, absolute majority override) and the Fiscal Objection (fiscal grounds, simple majority override). Neither is an absolute veto — Parliament always has the final word.</p><p>The PM's maximum consecutive service is 8 years. The EI publishes a 6-month advance notice before this limit expires.</p>`,
+    body: `<p>The Prime Minister leads the domestic executive — civil service, domestic policy, social programs, criminal justice, and emergency management. The PM serves at the confidence of the House and may be removed only through a Constructive Vote of No Confidence, which requires simultaneously electing a named successor by absolute majority.</p><p>The PM holds two legislative objection powers: the Suspensive Veto (any bill, delays one full session, absolute majority override) and the Fiscal Objection (fiscal grounds, simple majority override). Neither is an absolute veto — the Legislature always has the final word.</p><p>The PM's maximum consecutive service is 8 years. The EI publishes a 6-month advance notice before this limit expires.</p>`,
     tags: ['§2.2 Domain', 'Constructive No-Confidence', 'Suspensive Veto', '8-Year Maximum']
   },
   house: {
     title: 'The House — The Democratic Chamber',
     ref: 'Article III, §3.1',
-    body: `<p>The House is the Republic's primary legislative body — all bills originate here. Members are elected proportionally from their States. The House size is Parliament-defined with a constitutional floor of one member per 750,000 citizens or one per State, whichever produces a larger House.</p><p>The House elects and removes the Prime Minister, initiates impeachment proceedings, originates all budget legislation, and may override executive vetoes. The Single-Subject Rule (§3.1.c) prevents omnibus legislation — every bill addresses one subject only.</p>`,
+    body: `<p>The House is the Republic's primary legislative body — all bills originate here. Members are elected proportionally from their States. The House size is Legislature-defined with a constitutional floor of one member per 750,000 citizens or one per State, whichever produces a larger House.</p><p>The House elects and removes the Prime Minister, initiates impeachment proceedings, originates all budget legislation, and may override executive vetoes. The Single-Subject Rule (§3.1.c) prevents omnibus legislation — every bill addresses one subject only.</p>`,
     tags: ['§3.1 Structure', 'PM Confidence', 'Single-Subject Rule', 'Budget Origination']
   },
   senate: {
@@ -713,9 +716,9 @@ const nodeData = {
     tags: ['§8.1.b Mandate', 'Information Only', 'No Enforcement Power', 'Annual NRS Publication']
   },
   li: {
-    title: 'Legislative Inspectorate — Auditing Parliament',
+    title: 'Legislative Inspectorate — Auditing the Legislature',
     ref: 'Article VIII, §8.1.a',
-    body: `<p>The LI audits Parliament for NRS compliance and constitutional mandate adherence. It also conducts the Statehood Audit for Territory-to-State transitions and reviews State-drawn redistricting maps for compliance with the constitutional criteria hierarchy and prohibited inputs.</p><p>The LI does not draw redistricting maps — States draw their own through independent commissions. The LI is the compliance referee, not the cartographer.</p>`,
+    body: `<p>The LI audits the Legislature for NRS compliance and constitutional mandate adherence. It also conducts the Statehood Audit for Territory-to-State transitions and reviews State-drawn redistricting maps for compliance with the constitutional criteria hierarchy and prohibited inputs.</p><p>The LI does not draw redistricting maps — States draw their own through independent commissions. The LI is the compliance referee, not the cartographer.</p>`,
     tags: ['§8.1.a Mandate', 'Statehood Audit', 'Redistricting Compliance', 'Information Only']
   },
   ji: {
