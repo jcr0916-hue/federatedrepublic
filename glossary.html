@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary — The Federated Republic</title>
+  <meta name="description" content="Every defined term in the Federated Republic's constitution — what it means, where it appears, and why it matters.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+
+    /* Hero */
+    .hero{background:var(--navy2);padding:88px 2rem 48px;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .hero-inner{max-width:860px;margin:0 auto}
+    .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:1rem}
+    .hero-body{color:rgba(245,240,232,0.5);font-size:0.88rem;max-width:560px;line-height:1.8}
+
+    /* Layout */
+    .page-wrap{max-width:860px;margin:0 auto;padding:48px 2rem 100px;display:grid;grid-template-columns:200px 1fr;gap:0 3rem;align-items:start}
+
+    /* Alphabet sidebar */
+    .alpha-nav{position:sticky;top:80px;display:flex;flex-direction:column;gap:0.15rem}
+    .alpha-nav a{font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;color:var(--muted);text-decoration:none;padding:0.2rem 0.4rem;transition:color 0.15s}
+    .alpha-nav a:hover,.alpha-nav a.active-letter{color:var(--gold)}
+    .alpha-nav a.no-terms{opacity:0.3;pointer-events:none}
+    .alpha-count{font-size:0.55rem;opacity:0.5;margin-left:0.25rem}
+
+    /* Glossary content */
+    .glossary-content{}
+
+    .letter-group{margin-bottom:3rem}
+    .letter-heading{
+      font-family:'Cormorant Garamond',serif;
+      font-size:3rem;font-weight:300;
+      color:var(--gold);opacity:0.35;
+      line-height:1;
+      margin-bottom:1.25rem;
+      padding-bottom:0.5rem;
+      border-bottom:1px solid var(--border);
+    }
+
+    .term-entry{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(212,201,176,0.4)}
+    .term-entry:last-child{border-bottom:none}
+
+    .term-name{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.25rem;font-weight:600;
+      color:var(--navy);
+      line-height:1.2;
+      margin-bottom:0.3rem;
+      display:flex;align-items:baseline;gap:0.75rem;flex-wrap:wrap;
+    }
+    .term-ref{
+      font-family:'JetBrains Mono',monospace;
+      font-size:0.58rem;letter-spacing:0.1em;
+      color:var(--muted);
+      font-weight:400;
+      text-decoration:none;
+      transition:color 0.15s;
+    }
+    .term-ref:hover{color:var(--gold)}
+    .term-abbrev{
+      font-family:'JetBrains Mono',monospace;
+      font-size:0.58rem;letter-spacing:0.1em;
+      color:var(--gold);
+      background:rgba(201,168,76,0.1);
+      padding:0.1rem 0.4rem;
+    }
+    .term-def{font-size:0.93rem;color:var(--text);line-height:1.8;margin-bottom:0.4rem}
+    .term-note{font-size:0.82rem;color:var(--muted);line-height:1.7;font-style:italic}
+
+    /* Search */
+    .glossary-search{
+      display:flex;align-items:center;gap:0.75rem;
+      margin-bottom:2rem;
+      padding:0.6rem 0.85rem;
+      background:rgba(27,42,74,0.05);
+      border:1px solid var(--border);
+    }
+    .glossary-search input{
+      flex:1;background:none;border:none;outline:none;
+      font-family:'Jost',sans-serif;font-size:0.9rem;
+      color:var(--text);
+    }
+    .glossary-search input::placeholder{color:var(--muted)}
+    .glossary-search span{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:0.1em}
+    .term-hidden{display:none}
+    .no-results{font-size:0.88rem;color:var(--muted);padding:1rem 0;font-style:italic}
+
+    @media(max-width:860px){
+      .page-wrap{grid-template-columns:1fr;gap:0}
+      .alpha-nav{flex-direction:row;flex-wrap:wrap;position:static;gap:0;margin-bottom:1.5rem}
+      .alpha-nav a{padding:0.15rem 0.3rem}
+      .hamburger{display:flex}.nav-links{display:none}
+      .hero{padding:76px 1.25rem 40px}
+      .page-wrap{padding:36px 1.25rem 80px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="glossary.html" style="color:var(--gold)">Glossary</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="constitution-v126.docx" download>Download v126</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Reference</span>
+      <h1 class="hero-title">Glossary</h1>
+      <p class="hero-body">Every defined term in the constitution — what it means, where it appears, and why the design choice matters. Section references link directly to the annotated provision.</p>
+    </div>
+  </section>
+
+  <div class="page-wrap">
+    <nav class="alpha-nav" id="alphNav" aria-label="Jump to letter">
+      <a href="#g-A">A</a>
+      <a href="#g-B">B</a>
+      <a href="#g-C">C</a>
+      <a href="#g-D">D</a>
+      <a href="#g-E">E</a>
+      <a href="#g-F">F</a>
+      <a href="#g-G">G</a>
+      <a href="#g-H" class="no-terms">H</a>
+      <a href="#g-I">I</a>
+      <a href="#g-J" class="no-terms">J</a>
+      <a href="#g-K" class="no-terms">K</a>
+      <a href="#g-L">L</a>
+      <a href="#g-M" class="no-terms">M</a>
+      <a href="#g-N">N</a>
+      <a href="#g-O">O</a>
+      <a href="#g-P">P</a>
+      <a href="#g-Q">Q</a>
+      <a href="#g-R">R</a>
+      <a href="#g-S">S</a>
+      <a href="#g-T">T</a>
+      <a href="#g-U" class="no-terms">U</a>
+      <a href="#g-V" class="no-terms">V</a>
+      <a href="#g-W" class="no-terms">W</a>
+      <a href="#g-X" class="no-terms">X</a>
+      <a href="#g-Y" class="no-terms">Y</a>
+      <a href="#g-Z" class="no-terms">Z</a>
+    </nav>
+
+    <div class="glossary-content">
+      <div class="glossary-search">
+        <span>⌕</span>
+        <input type="text" id="glossarySearch" placeholder="Filter terms…" autocomplete="off" oninput="filterGlossary(this.value)">
+      </div>
+      <div id="noResults" class="no-results" style="display:none">No terms match that search.</div>
+
+      <!-- A -->
+      <div class="letter-group" id="g-A">
+        <div class="letter-heading">A</div>
+
+        <div class="term-entry" data-term="associated community">
+          <div class="term-name">Associated Community <a href="annotated.html#s20-1" class="term-ref">§20.1 →</a></div>
+          <p class="term-def">A polity that has entered a compact relationship with the Republic through Article XX — below Territory status, above a treaty relationship. Associated Community residents hold full Article I protections regardless of the compact's internal governance structure. The pathway is available to independent entities that choose a closer relationship with the Republic without pursuing Statehood.</p>
+          <p class="term-note">Distinguished from Territories, which are part of the Republic's State structure, and from indigenous nations, which hold prior sovereignty recognized by Article XIV.</p>
+        </div>
+
+        <div class="term-entry" data-term="absolute majority">
+          <div class="term-name">Absolute Majority <a href="annotated.html#s3-1" class="term-ref">§3.1 →</a></div>
+          <p class="term-def">A majority of the full seated membership of a chamber — not merely those present or voting. Used for PM selection, constructive no-confidence votes, and other threshold votes. Distinguished from simple majority (those present) and supermajority (2/3 or 3/4 of full membership).</p>
+          <p class="term-note">The distinction between absolute majority and simple majority is load-bearing: it prevents slim-quorum majorities from making consequential constitutional decisions.</p>
+        </div>
+      </div>
+
+      <!-- B -->
+      <div class="letter-group" id="g-B">
+        <div class="letter-heading">B</div>
+
+        <div class="term-entry" data-term="basic needs floor bnf">
+          <div class="term-name">Basic Needs Floor <span class="term-abbrev">BNF</span> <a href="annotated.html#s10-1" class="term-ref">§10.1 →</a></div>
+          <p class="term-def">The constitutionally guaranteed minimum of 5% of Gross National Revenue the government must spend on Basic Needs — including food security, shelter, primary healthcare, and essential utilities. A floor of human dignity, not a ceiling on generosity. The Legislature may set a higher percentage by statute; it may not go below 5%. The Republic must actually provide these benefits — accounting manipulations that satisfy the formula while reducing real provision are prohibited.</p>
+          <p class="term-note">The BNF applies to every Inhabitant, not just citizens. Asylum seekers become BNF Inhabitants from the date of filing their claim.</p>
+        </div>
+
+        <div class="term-entry" data-term="bnf inhabitant">
+          <div class="term-name">BNF Inhabitant <a href="annotated.html#s10-1" class="term-ref">§10.1 →</a></div>
+          <p class="term-def">Any person within the Republic's jurisdiction who is entitled to Basic Needs Floor benefits. Includes all citizens, legal residents, and asylum seekers from the date of filing. The term operationalizes the principle that the BNF is a floor of human dignity rather than a citizenship benefit.</p>
+        </div>
+      </div>
+
+      <!-- C -->
+      <div class="letter-group" id="g-C">
+        <div class="letter-heading">C</div>
+
+        <div class="term-entry" data-term="candidate register">
+          <div class="term-name">Candidate Register <a href="annotated.html#s8-4" class="term-ref">§8.4 →</a></div>
+          <p class="term-def">A list of pre-vetted, eligible candidates maintained for appointed positions — including MA board members and RSA Director. Candidates submit their own disclosure records; the relevant Inspectorate reviews for factual accuracy, applies constitutional eligibility criteria, and publishes the record with its recommendation. The PM nominates from the Register; the Senate confirms. Distinguished from the Qualified Jurist Registry, which serves the same function for judicial positions.</p>
+        </div>
+
+        <div class="term-entry" data-term="caretaker pm prime minister">
+          <div class="term-name">Caretaker PM <a href="annotated.html#s2-3-c" class="term-ref">§2.3.c →</a></div>
+          <p class="term-def">The Senior Domestic Affairs Council Officer who serves as acting Prime Minister during any PM vacancy. Restricted to maintenance of existing obligations only — no new policy or spending may be initiated during the interim. Exception: the Caretaker PM retains full domestic emergency authority during any vacancy period.</p>
+        </div>
+
+        <div class="term-entry" data-term="citizens league test clt">
+          <div class="term-name">Citizens League Test <span class="term-abbrev">CLT</span> <a href="annotated.html#s5-4" class="term-ref">§5.4 →</a></div>
+          <p class="term-def">The constitutional assessment required for naturalization. Tests civic literacy, constitutional knowledge, and language competency. Administered by the CLT Authority, an independent body whose Administrator is nominated by the PM and confirmed by the Senate. The test must be fair, publicly available for preparation, and not a proxy for cultural conformity. The Administrator must have no government position within the prior five years, no financial interest in testing entities, and demonstrated expertise in psychometrics, constitutional law, educational policy, or civic literacy research.</p>
+        </div>
+
+        <div class="term-entry" data-term="constructive vote of no confidence">
+          <div class="term-name">Constructive Vote of No Confidence <a href="annotated.html#s2-3-b" class="term-ref">§2.3.b →</a></div>
+          <p class="term-def">The mechanism by which the House removes the Prime Minister — by simultaneously electing a named successor by absolute majority in the same motion. A vote of no confidence that does not name and elect a replacement is constitutionally void and has no effect. This requirement means the House must agree not only that it has lost confidence in the current PM but that it has found a specific successor with majority support.</p>
+          <p class="term-note">The constructive requirement closes the "destructive opposition" problem — oppositions cannot manufacture governmental instability without being able to agree on an alternative.</p>
+        </div>
+
+        <div class="term-entry" data-term="combined score presidential election">
+          <div class="term-name">Combined Score <a href="annotated.html#s7-2-b" class="term-ref">§7.2.b →</a></div>
+          <p class="term-def">The tiebreaker metric used in presidential elections where no candidate achieves a national RCV majority: 65% weight applied to national first-preference vote share, plus 35% weight applied to the fraction of presidential election regions won. Territory citizens contribute to the 65% national component but not to the 35% regional component — Territories are not assigned to election regions.</p>
+        </div>
+      </div>
+
+      <!-- D -->
+      <div class="letter-group" id="g-D">
+        <div class="letter-heading">D</div>
+
+        <div class="term-entry" data-term="declaration of national emergency">
+          <div class="term-name">Declaration of National Emergency <a href="annotated.html#s1-25" class="term-ref">§1.25 →</a></div>
+          <p class="term-def">A formal joint declaration by the President and Prime Minister, ratified by a 2/3 vote of both chambers within 7 days, authorizing temporary limitation of specified Article I rights. Must specify: the nature of the emergency; the specific rights being limited; a duration not exceeding 90 days; and the minimum necessary geographic scope. Renewable for successive 90-day periods at the same threshold. Cannot limit the seven non-derogable rights enumerated in §1.25.b. Cannot affect elections.</p>
+        </div>
+
+        <div class="term-entry" data-term="deemed confirmed">
+          <div class="term-name">Deemed Confirmed <a href="annotated.html#s4-1-b" class="term-ref">§4.1.b →</a></div>
+          <p class="term-def">The mechanism by which an inferior court judge nominee is automatically confirmed if the House fails to vote within the Legislature-defined confirmation period. Prevents House inaction from indefinitely blocking judicial appointments. The Legislature-defined period cannot be set at a duration that would push Deemed Confirmation past the 180-day constitutional ceiling from the date of vacancy.</p>
+        </div>
+
+        <div class="term-entry" data-term="domestic affairs council dac">
+          <div class="term-name">Domestic Affairs Council <span class="term-abbrev">DAC</span> <a href="annotated.html#s2-2" class="term-ref">§2.2 →</a></div>
+          <p class="term-def">The Prime Minister's governing body, coordinating domestic policy, the civil service, and the budget. The Legislature defines its specific structure and composition by statute. Ministers appointed by the PM serve within the DAC and exercise only PM-domain authority. Distinguished from the National Security Council, which coordinates the President's foreign affairs and defense domain.</p>
+        </div>
+
+        <div class="term-entry" data-term="dual executive">
+          <div class="term-name">Dual Executive <a href="annotated.html#s2-1" class="term-ref">Article II →</a></div>
+          <p class="term-def">The constitutional architecture that divides executive authority between a directly elected President (military, intelligence, foreign affairs) and a PM chosen by and accountable to the House (domestic administration, budget, civil service). Neither executive may act in the other's domain. When a single event implicates both domains simultaneously, both executives act within their respective domains concurrently.</p>
+          <p class="term-note">Cohabitation — where the President and PM represent different political coalitions — is the design's stress test. §2.1.h provides a specific conflict resolution mechanism during active military operations.</p>
+        </div>
+      </div>
+
+      <!-- E -->
+      <div class="letter-group" id="g-E">
+        <div class="letter-heading">E</div>
+
+        <div class="term-entry" data-term="emergency governance protocol">
+          <div class="term-name">Emergency Governance Protocol <a href="annotated.html#s2-8" class="term-ref">§2.8 →</a></div>
+          <p class="term-def">The framework that activates when the Legislature is physically unable to convene — authorizing the Senate to pass legislation with House equivalent authority for a period not exceeding 30 days. Requires the Senate Speaker to certify the House's physical incapacity on the NRS before the Senate acts. The House must ratify or reject all emergency measures within 30 days of reconvening.</p>
+        </div>
+
+        <div class="term-entry" data-term="emergency panel">
+          <div class="term-name">Emergency Panel <a href="annotated.html#s4-2-e" class="term-ref">§4.2.e →</a></div>
+          <p class="term-def">A standing panel of four Supreme Court justices designated by rotation at the start of each two-year election cycle. Has sole jurisdiction over constitutional scope challenges to Tier 1 presidential authority during active operations, and over dual-executive conflict disputes under §2.1.h. Must rule within 48 hours of any challenge. A scope ruling is binding on the full Court unless overruled by a majority within 72 hours. Rotation maintains continuity: at least two members must have served on the prior cycle's Panel.</p>
+        </div>
+
+        <div class="term-entry" data-term="emergency rights writ">
+          <div class="term-name">Emergency Rights Writ <a href="annotated.html#s14-3-c" class="term-ref">§14.3.c →</a></div>
+          <p class="term-def">A petition to the Supreme Court by any individual within an indigenous jurisdiction alleging a specific, ongoing violation of their Article I rights. The Court must rule within 14 days. A granted Writ is targeted to the specific violation and expires when the violation is remedied — it does not authorize general law enforcement operations within the indigenous jurisdiction.</p>
+        </div>
+      </div>
+
+      <!-- F -->
+      <div class="letter-group" id="g-F">
+        <div class="letter-heading">F</div>
+
+        <div class="term-entry" data-term="fiscal objection">
+          <div class="term-name">Fiscal Objection <a href="annotated.html#s2-4" class="term-ref">§2.4 →</a></div>
+          <p class="term-def">The PM's power to object to legislation on specific solvency grounds — that the bill, if enacted, would render the Republic insolvent or unable to meet its BNF constitutional obligations. Narrower than the suspensive veto: only solvency grounds qualify. Overridden by simple majority of full House membership. The PM may use either the suspensive veto or the fiscal objection on any given bill, but not both.</p>
+        </div>
+
+        <div class="term-entry" data-term="for-cause removal">
+          <div class="term-name">For-Cause Removal <a href="annotated.html#s8-5-a" class="term-ref">§8.5.a →</a></div>
+          <p class="term-def">Removal of an Inspector General on stated grounds — documented dereliction, incapacity, undisclosed conflict of interest, or criminal conviction. Requires 2/3 of both chambers simultaneously. Before the legislative vote, the State Designee Panel must publish a verification finding. The Panel's finding does not block the vote — it becomes permanent public record alongside it. A For-Cause removal vote at the constitutional threshold is not a Rule Violation for voting members solely by reason of political motivation.</p>
+        </div>
+
+        <div class="term-entry" data-term="founding congress">
+          <div class="term-name">Founding Congress <a href="annotated.html#s19-1" class="term-ref">§19.1 →</a></div>
+          <p class="term-def">The transitional legislative body drawn from the elected assemblies of all ratifying polities by proportional delegation. Governs during Phases 1 and 2 of the transition period. Produces the founding statutes required before the Phase 3 national elections. Disbanded when the first Legislature is seated at Phase 4 activation.</p>
+        </div>
+
+        <div class="term-entry" data-term="free prior and informed consent fpic">
+          <div class="term-name">Free, Prior, and Informed Consent <span class="term-abbrev">FPIC</span> <a href="annotated.html#s14-3-a" class="term-ref">§14.3.a →</a></div>
+          <p class="term-def">The consent required from indigenous nations before the Republic takes any legislative or executive action materially affecting their lands, sovereignty, or treaty rights. Freely given without coercion or economic inducement; obtained before any action is taken; based on full information. A process that produces objection does not produce consent regardless of its duration or the government's good faith. Where an indigenous nation withholds consent, the government's only recourse is to propose modifications, seek alternatives, or accept the proposed action will not proceed.</p>
+        </div>
+      </div>
+
+      <!-- G -->
+      <div class="letter-group" id="g-G">
+        <div class="letter-heading">G</div>
+
+        <div class="term-entry" data-term="gate 1 gate 2 immigration">
+          <div class="term-name">Gate 1 / Gate 2 <a href="annotated.html#s6-1" class="term-ref">§6.1 →</a></div>
+          <p class="term-def">The two-stage immigration system. Gate 1 is State or Territory sponsorship — a community-level decision about whom to welcome, governed by the sponsoring State's own criteria. Gate 2 is federal certification on four grounds only: health, criminal history, national security, and prior deportation. No nationality quotas permitted at either gate. The President must ministerially issue residency credentials once both gates are cleared — refusal is a Rule Violation. Statistical disparity presumption applies: a pattern of denials significantly correlated with protected characteristics triggers a presumption of discrimination.</p>
+        </div>
+
+        <div class="term-entry" data-term="gross national revenue gnr">
+          <div class="term-name">Gross National Revenue <span class="term-abbrev">GNR</span> <a href="annotated.html#s10-1" class="term-ref">§10.1 →</a></div>
+          <p class="term-def">The measure against which the Basic Needs Floor percentage is calculated. Certified annually by the Monetary Authority Director — not by any political body. The MA's certification methodology is subject to judicial challenge by the Director (§10.4.d) and legislative review (§10.1.f) but cannot be altered by executive direction. The Legislature may define GNR by statute within constitutional bounds; it cannot define GNR in a way that eliminates the BNF's practical effect.</p>
+        </div>
+      </div>
+
+      <!-- I -->
+      <div class="letter-group" id="g-I">
+        <div class="letter-heading">I</div>
+
+        <div class="term-entry" data-term="individual sovereignty floor">
+          <div class="term-name">Individual Sovereignty Floor <a href="annotated.html#s1-1" class="term-ref">§1.1 →</a></div>
+          <p class="term-def">The irreducible minimum of rights and protections held by every person within the Republic's jurisdiction, regardless of citizenship or residency status. Article I is a floor, not a ceiling — rights enumerated there may be expanded but never contracted by amendment. The floor applies to all Inhabitants: citizens, residents, asylum seekers, visitors, and undocumented persons alike.</p>
+        </div>
+
+        <div class="term-entry" data-term="inhabitant">
+          <div class="term-name">Inhabitant <a href="annotated.html#s1-1" class="term-ref">Article I →</a></div>
+          <p class="term-def">Any person within the Republic's jurisdiction — regardless of citizenship or residency status. All Inhabitants hold the full protections of Article I. The term is deliberately broader than "citizen" or "legal resident" to make clear that constitutional rights are not contingent on immigration status.</p>
+          <p class="term-note">The preamble uses "inhabitants" to establish scope: "Every person within our borders." This is intentional — the constitution protects persons, not statuses.</p>
+        </div>
+
+        <div class="term-entry" data-term="inspectorate inspector general ig">
+          <div class="term-name">Inspectorate <a href="annotated.html#s8-1" class="term-ref">Article VIII →</a></div>
+          <p class="term-def">One of three independent constitutional oversight bodies: the Legislative Inspectorate (audits House and Senate), the Executive Inspectorate (audits both executive offices and the MA), and the Judicial Inspectorate (audits courts, maintains the Qualified Jurist Registry, vets judicial nominees). Each is headed by an Inspector General selected through a process that excludes the watched branch. Inspectorates publish facts and recommendations — they have no enforcement power. Their findings are constitutional facts that the Legislature, courts, or the People may act upon.</p>
+        </div>
+      </div>
+
+      <!-- L -->
+      <div class="letter-group" id="g-L">
+        <div class="letter-heading">L</div>
+
+        <div class="term-entry" data-term="legal resident">
+          <div class="term-name">Legal Resident <a href="annotated.html#s5-2" class="term-ref">§5.2 →</a></div>
+          <p class="term-def">A person who has cleared both immigration gates and holds residency credentials issued by the President. Legal Residents hold most Article I protections but do not hold voting rights or the right to hold elected office until naturalized. May apply for citizenship after the statutory residency period by completing the CLT.</p>
+        </div>
+
+        <div class="term-entry" data-term="legislative declaration of defense">
+          <div class="term-name">Legislative Declaration of Defense <a href="annotated.html#s2-1-c" class="term-ref">§2.1.c →</a></div>
+          <p class="term-def">A 2/3 concurrent majority of both chambers authorizing military operations beyond 30 days from initial deployment. Simultaneously authorizes extended operations and triggers the Emergency Defense Allocation. Renewable every 180 days. Subject to a 5-year maximum and the Successive Declaration Standard — a new Declaration within 12 months of a mandatory cessation must be based on a materially different threat.</p>
+        </div>
+      </div>
+
+      <!-- N -->
+      <div class="letter-group" id="g-N">
+        <div class="letter-heading">N</div>
+
+        <div class="term-entry" data-term="national record system nrs">
+          <div class="term-name">National Record System <span class="term-abbrev">NRS</span> <a href="annotated.html#s9-1" class="term-ref">Article IX →</a></div>
+          <p class="term-def">The Republic's permanent, tamper-evident, publicly accessible repository of all official government actions, laws, expenditures, court decisions, and Inspectorate reports. All entries are permanent — corrections are made by new entries that reference and supersede prior entries, with both permanently visible. Maintained by a distributed network of independent node operators; no single entity may control a majority of nodes. Accessible to all Inhabitants at no cost, including through non-digital pathways. An executive order, contract, or expenditure not recorded on the NRS within 24 hours is void.</p>
+        </div>
+
+        <div class="term-entry" data-term="national security council nsc">
+          <div class="term-name">National Security Council <span class="term-abbrev">NSC</span> <a href="annotated.html#s2-1" class="term-ref">§2.1 →</a></div>
+          <p class="term-def">The President's governing body for military, intelligence, and foreign affairs. The Legislature defines its composition by statute. Distinguished from the Domestic Affairs Council, which coordinates the PM's domain.</p>
+        </div>
+
+        <div class="term-entry" data-term="national voting system nvs">
+          <div class="term-name">National Voting System <span class="term-abbrev">NVS</span> <a href="annotated.html#s16-1" class="term-ref">Article XVI →</a></div>
+          <p class="term-def">The Republic's cryptographically secured platform for all elections, referenda, and petition signature collection. Constitutionally separate from the National Record System. Administered exclusively by the Electoral Commission. No election result is constitutionally valid unless conducted through it. No State may take any action that reduces NVS access, functionality, or processing capacity in its jurisdiction.</p>
+        </div>
+
+        <div class="term-entry" data-term="no-cause removal">
+          <div class="term-name">No-Cause Removal <a href="annotated.html#s8-5" class="term-ref">§8.5 →</a></div>
+          <p class="term-def">Removal of an Inspector General without stated grounds — requiring 3/4 of both chambers simultaneously and a 90-day waiting period. The higher threshold and mandatory delay distinguish it from For-Cause Removal. The Judicial IG has no No-Cause track — For-Cause only, reflecting the courts' institutional independence.</p>
+        </div>
+
+        <div class="term-entry" data-term="non-refoulement">
+          <div class="term-name">Non-Refoulement <a href="annotated.html#s1-27" class="term-ref">§1.27 →</a></div>
+          <p class="term-def">The absolute prohibition on returning, expelling, or extraditing any person to a territory where they face genuine risk of persecution, torture, or deprivation of life. Applies regardless of immigration status or mode of entry. Cannot be suspended by any emergency declaration. One of the seven permanently non-derogable rights. Its inclusion as unamendable reflects the founding generation's view that the right to seek protection from persecution is as fundamental as the prohibition on torture.</p>
+        </div>
+      </div>
+
+      <!-- O -->
+      <div class="letter-group" id="g-O">
+        <div class="letter-heading">O</div>
+
+        <div class="term-entry" data-term="official oath">
+          <div class="term-name">Official Oath <a href="annotated.html#s10-5-h" class="term-ref">§10.5.h →</a></div>
+          <p class="term-def">The oath taken by all constitutional officers upon assuming office, recorded on the National Record System within 24 hours of administration. No constitutional authority vests before the Oath is taken and recorded. A constitutional officer who takes the Oath but has not yet seen it published to the NRS holds their authority from the moment of administration, not the moment of publication.</p>
+        </div>
+
+        <div class="term-entry" data-term="optional referendum mandatory referendum">
+          <div class="term-name">Optional Referendum <a href="annotated.html#s11-1" class="term-ref">§11.1 →</a></div>
+          <p class="term-def">A national vote on legislation or policy that may be triggered by a citizen petition meeting the JI-verified threshold, or automatically where the Legislature has failed to enact a constitutionally mandated statute. The Optional Referendum may direct the Legislature to enact a specific statutory framework or establish a default rule that operates until the Legislature acts. Distinguished from the Mandatory Referendum — votes constitutionally required for specific actions, including independence (§15.4.a) and constitutional amendment through the citizen-led path (§15.1.c).</p>
+        </div>
+      </div>
+
+      <!-- P -->
+      <div class="letter-group" id="g-P">
+        <div class="letter-heading">P</div>
+
+        <div class="term-entry" data-term="provisional membership period">
+          <div class="term-name">Provisional Membership Period <a href="annotated.html#s13-3" class="term-ref">§13.3 →</a></div>
+          <p class="term-def">A time-limited status for Territories that are on a defined Statehood pathway but have not yet completed the conditions for full Statehood. Territories in the Provisional Membership Period have defined representation rights, contribute to the national popular vote in presidential elections, and are subject to a remediation framework if they fail to meet Statehood conditions within the statutory period.</p>
+        </div>
+
+        <div class="term-entry" data-term="presidential veto scope">
+          <div class="term-name">Presidential Veto <a href="annotated.html#s2-1-f" class="term-ref">§2.1.f →</a></div>
+          <p class="term-def">The President's power to veto legislation that raises a genuine constitutional concern within the presidential domain — military operations, intelligence, treaty obligations, or border security. The connection must be direct, specific, and material: a general, inferential, or speculative security connection is not sufficient. The Supreme Court reviews any veto within 48 hours on petition from either chamber's Speaker. Three voided vetoes within 180 days triggers automatic suspension of veto authority for the remainder of that period.</p>
+          <p class="term-note">The presidential veto is a domain protection mechanism, not a general legislative power. The PM's suspensive veto is the general legislative objection tool.</p>
+        </div>
+      </div>
+
+      <!-- Q -->
+      <div class="letter-group" id="g-Q">
+        <div class="letter-heading">Q</div>
+
+        <div class="term-entry" data-term="qualified jurist registry">
+          <div class="term-name">Qualified Jurist Registry <a href="annotated.html#s8-4-a" class="term-ref">§8.4.a →</a></div>
+          <p class="term-def">The pool of pre-vetted candidates eligible for Supreme Court nomination by any Triad member. Candidates submit their own registration records — including professional background, financial disclosures, and prior government positions. The Judicial Inspectorate reviews for accuracy and eligibility; publishes the record with its recommendation. Registry admission is the sole eligibility filter for Triad nominations — there is no separate Senate confirmation round.</p>
+        </div>
+      </div>
+
+      <!-- R -->
+      <div class="letter-group" id="g-R">
+        <div class="letter-heading">R</div>
+
+        <div class="term-entry" data-term="rule violation">
+          <div class="term-name">Rule Violation <a href="annotated.html#s2-7" class="term-ref">§2.7 →</a></div>
+          <p class="term-def">A Supreme Court finding that an official has violated a specific constitutional provision. Consequences are automatic — no further vote or order required: immediate suspension from duties and pay freeze; revocation of access to classified information, government systems, and official vehicles; a Senate trial within the statutory period. Only courts make Rule Violation determinations — Inspectorate findings are facts the courts, Legislature, or People may act upon, not Rule Violation findings themselves. For former officials, a Rule Violation finding within five years of the conduct triggers a permanent bar on federal office and forfeiture of federal pension.</p>
+          <p class="term-note">The automatic consequence structure — rather than a discretionary response — is the key design choice. It prevents political interference with accountability enforcement.</p>
+        </div>
+      </div>
+
+      <!-- S -->
+      <div class="letter-group" id="g-S">
+        <div class="letter-heading">S</div>
+
+        <div class="term-entry" data-term="severe contraction protocol">
+          <div class="term-name">Severe Contraction Protocol <a href="annotated.html#s10-1" class="term-ref">§10.1 →</a></div>
+          <p class="term-def">A constitutional mechanism allowing temporary reduction of the BNF floor during a documented economic contraction. Requires MA certification of a Severe Contraction, subject to Legislative Inspectorate review within 30 days. The Legislature may override the certification by 2/3 of both chambers. The reduction is strictly temporary — the BNF floor restores automatically when the contraction conditions cease.</p>
+        </div>
+
+        <div class="term-entry" data-term="state designee panel">
+          <div class="term-name">State Designee Panel <a href="annotated.html#s8-9" class="term-ref">§8.9 →</a></div>
+          <p class="term-def">A rotating body of five State and Territory-appointed representatives drawn by lot at each two-year election cycle, with two alternates. Its sole constitutional function is verifying For-Cause IG removal grounds before the Legislature may vote. The Panel publishes a binary finding — grounds substantiated or unsubstantiated — regardless of which way it finds, the Legislature may proceed to the 2/3 vote. The Panel has no investigative authority, no proactive role, and no ongoing institutional presence outside active proceedings. Replaced the Inspectorate Oversight Committee in v122.</p>
+        </div>
+
+        <div class="term-entry" data-term="submitted-record model">
+          <div class="term-name">Submitted-Record Model <a href="annotated.html#s8-1-b" class="term-ref">§8.1 →</a></div>
+          <p class="term-def">The model governing all Inspectorate candidate assessments: nominating actors submit candidate disclosure records; Inspectorates review for factual accuracy, apply constitutional eligibility criteria, and publish the record with their recommendation. Inspectorates do not generate independent assessments. The distinction matters: it places the burden of disclosure on the nominator and candidate, not the Inspectorate, while preserving the Inspectorate's role as reviewer and publisher.</p>
+        </div>
+
+        <div class="term-entry" data-term="suspensive veto">
+          <div class="term-name">Suspensive Veto <a href="annotated.html#s2-4-a" class="term-ref">§2.4.a →</a></div>
+          <p class="term-def">The PM's power to return any bill to the House with a written Statement of Objection specifying the grounds — constitutional, fiscal, operational, or policy. Suspends the bill for one full legislative session. The House may override by absolute majority at the next session. The PM may not use the suspensive veto on the annual budget, bills implementing constitutional obligations, or bills passed under the Emergency Governance Protocol. The PM may use either the suspensive veto or the fiscal objection on any given bill, not both.</p>
+          <p class="term-note">Neither the PM nor the President holds an absolute veto. The Legislature always has the final word.</p>
+        </div>
+      </div>
+
+      <!-- T -->
+      <div class="letter-group" id="g-T">
+        <div class="letter-heading">T</div>
+
+        <div class="term-entry" data-term="tier 1 tier 2 tier 3 military">
+          <div class="term-name">Tier 1 / Tier 2 / Tier 3 <a href="annotated.html#s2-1-a" class="term-ref">§2.1.a–c →</a></div>
+          <p class="term-def">The three levels of military authorization. Tier 1: immediate defensive response to an active attack — no prior authorization, defensive only, expires when threat is neutralized, Legislature notified within 12 hours. Tier 2: Senate Armed Services Committee authorization within 96 hours for offensive operations or sustained defensive deployments — covers up to 30 days. Tier 3: Legislative Declaration of Defense by 2/3 of both chambers for operations beyond 30 days — renewable every 180 days, 5-year maximum.</p>
+        </div>
+
+        <div class="term-entry" data-term="triad supreme court nomination">
+          <div class="term-name">Triad <a href="annotated.html#s4-2-a" class="term-ref">§4.2.a →</a></div>
+          <p class="term-def">The three-party Supreme Court nomination structure: the Senate, the PM, and the President each nominate one candidate from the Qualified Jurist Registry per open seat. All three nominations must be submitted and Judicially Inspectorate-certified before the public election proceeds. The Senate replaces the House as Triad nominator because the Senate's institutional relationship with the President — through treaty ratification, judicial confirmations, and Rule Violation trials — produces genuinely distinct perspective from both the PM and the President.</p>
+        </div>
+      </div>
+
+      <!-- V, W, X, Y, Z placeholder -->
+
+    </div><!-- glossary-content -->
+  </div><!-- page-wrap -->
+
+  <script>
+    function toggleMobileNav(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    function filterGlossary(q){
+      const query = q.toLowerCase().trim();
+      const entries = document.querySelectorAll('.term-entry');
+      const groups = document.querySelectorAll('.letter-group');
+      let anyVisible = false;
+
+      entries.forEach(e => {
+        const terms = e.getAttribute('data-term') || '';
+        const name = e.querySelector('.term-name')?.textContent?.toLowerCase() || '';
+        const def = e.querySelector('.term-def')?.textContent?.toLowerCase() || '';
+        const match = !query || terms.includes(query) || name.includes(query) || def.includes(query);
+        e.classList.toggle('term-hidden', !match);
+        if(match) anyVisible = true;
+      });
+
+      groups.forEach(g => {
+        const visible = g.querySelectorAll('.term-entry:not(.term-hidden)').length > 0;
+        g.style.display = visible ? '' : 'none';
+      });
+
+      document.getElementById('noResults').style.display = (!anyVisible && query) ? 'block' : 'none';
+    }
+
+    // Highlight active letter in sidebar on scroll
+    const letterGroups = document.querySelectorAll('.letter-group[id]');
+    const alphaLinks = document.querySelectorAll('.alpha-nav a:not(.no-terms)');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          const letter = e.target.id.replace('g-','');
+          alphaLinks.forEach(a => {
+            a.classList.toggle('active-letter', a.textContent.trim() === letter);
+          });
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    letterGroups.forEach(g => io.observe(g));
+  </script>
+</body>
+</html>
