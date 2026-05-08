@@ -20,7 +20,7 @@ exports.handler = async function(event) {
 
 SCENARIO: ${actor} attempts to: ${action}${ctx ? `. Context: ${ctx}` : ''}
 
-KEY CONSTITUTIONAL RULES (v130):
+KEY CONSTITUTIONAL RULES (v131):
 - §1.25: Emergency needs JOINT President+PM declaration + 2/3 both chambers within 7 days. Max 90 days. Cannot suspend §1.2/1.3/1.13/1.17/1.18. CANNOT postpone elections — any order postponing an election is automatically void.
 - §1.13 UNAMENDABLE: 24hr first appearance before judge; 48hr habeas corpus. No exceptions, no emergency derogation.
 - §1.2/1.3/1.17/1.18 UNAMENDABLE: No torture, slavery, secret trials, retroactive laws.
@@ -63,7 +63,7 @@ KEY CONSTITUTIONAL RULES (v130):
 - §8.5.b No-Cause IG removal: 3/4 both chambers + 90-day delay. No State Designee Panel verification required for No-Cause. Judicial IG has no No-Cause removal track — For-Cause only.
 - §8.6.g: Any citizen who identifies a discrepancy in a published candidate disclosure record may petition their elected House member or Senator. No petition fee or threshold required.
 - §10.1: BNF floor mandatory. States must meet it. Federal supplementation required if State can't.
-- §10.4: Monetary Authority governed by elected Director + 5 Senate-confirmed board members. Director may veto ANY board determination. Board may override Director veto by 4-of-5 vote. ALL vetoes and overrides published to NRS immediately. NEITHER veto NOR override may be exercised under political direction — doing so = Rule Violation.
+- §10.4: Monetary Authority — Director elected by national RCV, 7-yr non-renewable term. MA DIRECTOR BALLOT ACCESS: four narrow objective disqualifiers only — (1) currently holds any government position, (2) direct financial conflict with MA policy decisions, (3) not a citizen, (4) prior Rule Violation conviction. EI reviews disclosure for FACTUAL ACCURACY ONLY — candidate proceeds to ballot if disclosure is accurate regardless of expertise level. MA BOARD ADVISORY ASSESSMENT: Board publishes advisory (non-gatekeeping) expertise assessment 90 days before election. Candidates may respond. BOARD ELIGIBILITY: 5yr experience in monetary/fiscal/macro field; no current government position; no direct financial conflict. governed by elected Director + 5 Senate-confirmed board members. Director may veto ANY board determination. Board may override Director veto by 4-of-5 vote. ALL vetoes and overrides published to NRS immediately. NEITHER veto NOR override may be exercised under political direction — doing so = Rule Violation.
 - §10.4.d: Director who vetoes on METHODOLOGY grounds must file SC methodology challenge within 48 HOURS or veto lapses automatically. Board override proceeds regardless. Director removal protection runs from date challenge filed, not date of veto.
 - §15.3: §1.2/1.3/1.13/1.17/1.18 permanently unamendable. Any amendment targeting them = void.
 - NRS: All executive orders must be recorded within 24hrs or void. Civil servants must refuse and report unrecorded orders.
