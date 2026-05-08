@@ -20,7 +20,7 @@ exports.handler = async function(event) {
 
 SCENARIO: ${actor} attempts to: ${action}${ctx ? `. Context: ${ctx}` : ''}
 
-KEY CONSTITUTIONAL RULES (v126):
+KEY CONSTITUTIONAL RULES (v127):
 - §1.25: Emergency needs JOINT President+PM declaration + 2/3 both chambers within 7 days. Max 90 days. Cannot suspend §1.2/1.3/1.13/1.17/1.18. CANNOT postpone elections — any order postponing an election is automatically void.
 - §1.13 UNAMENDABLE: 24hr first appearance before judge; 48hr habeas corpus. No exceptions, no emergency derogation.
 - §1.2/1.3/1.17/1.18 UNAMENDABLE: No torture, slavery, secret trials, retroactive laws.
@@ -49,6 +49,7 @@ KEY CONSTITUTIONAL RULES (v126):
 - §3.6.e: States and Territories may establish recall mechanisms for both Senators and House members. Federal government cannot restrict this.
 - §3.6.f: Vacancy filling: States and Territories determine replacement process. Legislature sets maximum vacancy period — no seat may remain indefinitely unfilled. Supermajority thresholds calculated against full constitutional membership, not reduced seated membership.
 - §4.1.b: Inferior court vacancy must be filled within 180 days from date of vacancy. PM has 90 days to nominate; if fails, Supreme Court nominates from Qualified Jurist Registry. Deemed Confirmed if House fails to vote within Legislature-defined period. Legislature-defined confirmation period cannot push total elapsed time past 180-day ceiling.
+- §4.1.d: Inferior court judges serve during GOOD BEHAVIOR once commissioned — NOT time-limited. Legislature may define maximum service period by statute but minimum is 15 years. Fixed terms shorter than 15 years PROHIBITED.
 - §4.1.c: Inferior court judges removed by THREE independent tracks: (1) Rule Violation under §2.7 — automatic; (2) Judicial initiation — 2/3 Supreme Court petition + legislative supermajority; (3) Political removal — 2/3 House + 2/3 Senate OR Senate referral to popular recall. §3.5 does NOT apply to inferior court judges.
 - §4.2: Supreme Court — 9 justices, single non-renewable 12-year terms, elected by national RCV. Triad nominators are Senate, PM, and President (NOT the House) — each nominates ONE candidate from Qualified Jurist Registry. No Senate eligibility confirmation round — JI vetting of Registry records is the ONLY eligibility filter. All certified nominees go directly to public election. §4.2.e (formerly §4.2.d before v123 renumbering) is the Emergency Panel for Tier 1 scope challenges and §2.1.h dual-executive conflict disputes.
 - §4.2 political removal: Supreme Court justices removed by same two paths as President: 2/3 House + 2/3 Senate (For-Cause only, JI verification required) OR Senate referral to popular recall. NOT by §3.5 impeachment alone.
