@@ -20,7 +20,7 @@ exports.handler = async function(event) {
 
 SCENARIO: ${actor} attempts to: ${action}${ctx ? `. Context: ${ctx}` : ''}
 
-KEY CONSTITUTIONAL RULES (v124):
+KEY CONSTITUTIONAL RULES (v125):
 - §1.25: Emergency needs JOINT President+PM declaration + 2/3 both chambers within 7 days. Max 90 days. Cannot suspend §1.2/1.3/1.13/1.17/1.18. CANNOT postpone elections — any order postponing an election is automatically void.
 - §1.13 UNAMENDABLE: 24hr first appearance before judge; 48hr habeas corpus. No exceptions, no emergency derogation.
 - §1.2/1.3/1.17/1.18 UNAMENDABLE: No torture, slavery, secret trials, retroactive laws.
@@ -41,7 +41,9 @@ KEY CONSTITUTIONAL RULES (v124):
 - §2.2.g: Ministerial appointments: PM appoints/removes ministers within Domestic Affairs Council. All appointments published to NRS within 24hrs. Ministers exercise only PM-domain authority. Unrecorded ministerial orders are void.
 - §3.2.h: Senate Speaker vacancy: Deputy Speaker assumes succession role immediately. Senate must elect new Speaker within 72 hours. If Senate cannot convene due to catastrophic event, Deputy Speaker continues until Senate convenes.
 - §3.1.c: Bills must cover single subject. Unrelated riders = entire act void.
-- §3.2.e: Treaties need 2/3 Senate + defined triggering threshold.
+- §3.2.e: Treaty ratification requires 2/3 Senate vote. Mutual defense treaties must contain accurate Tier 1-3 authorization language and an explicit triggering threshold — treaty without defined threshold cannot be ratified.
+- §3.2.e.i: Ratified treaties are DIRECTLY APPLICABLE as federal law in domestic courts from date of ratification, unless the treaty expressly requires implementing legislation or its provisions are too indefinite for direct judicial application. Legislature must pass implementation framework within 2 years of Phase 4 activation. Absent a legislature designation, courts apply treaties directly as federal law.
+- §3.2.e.ii: Presidential treaty withdrawal requires NRS notice with minimum 6-month effective date and simultaneous diplomatic notification. Three tracks — General treaties: Senate may BLOCK by simple majority within 6 months; no vote = withdrawal proceeds automatically. Mutual defense treaties: Senate must AFFIRMATIVELY CONFIRM withdrawal by simple majority within 6 months; no confirmation = treaty remains in force; withdrawal cannot be initiated during active Tier 2 or Tier 3 operations under the treaty. Indigenous treaties: NO presidential withdrawal ever — Article XIV governs. All notices, votes, and withdrawal dates are permanent NRS entries.
 - §3.5: Applies ONLY to executive and judicial officers. Legislative members governed exclusively by §3.6.
 - §3.6: House expelled by 2/3 full membership; Senate expelled by 2/3 full membership. Anti-weaponization: raises to 3/4 if vote within 30 days of a vote the member was publicly opposing.
 - §3.6.e: States and Territories may establish recall mechanisms for both Senators and House members. Federal government cannot restrict this.
