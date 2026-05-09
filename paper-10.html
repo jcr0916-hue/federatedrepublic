@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 10 — Seventeen Principles · The Federated Republic</title>
+  <meta name="description" content="A constitution is a theory of power as much as it is a legal document. Seventeen design principles distilled from the drafting process — on accountability, legitimacy, emergency, rights, and mechanism.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+    .paper-hero{background:var(--navy2);padding:88px 2rem 64px;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .paper-hero-inner{max-width:680px;margin:0 auto}
+    .paper-meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .paper-number{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold)}
+    .paper-date{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.15em;color:rgba(201,168,76,0.5);text-transform:uppercase}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.15;margin-bottom:0.75rem}
+    .paper-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:rgba(245,240,232,0.45);line-height:1.5}
+    .paper-body{max-width:680px;margin:0 auto;padding:56px 2rem 100px}
+    .paper-body p{font-size:1.02rem;line-height:1.9;margin-bottom:1.5rem;color:var(--text)}
+    .paper-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .paper-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .principle{margin:2rem 0;padding:1.5rem 1.75rem;background:rgba(27,42,74,0.03);border-left:3px solid var(--gold)}
+    .principle-num{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.4rem}
+    .principle-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:0.6rem}
+    .principle p{font-size:0.95rem;line-height:1.8;color:var(--text);margin-bottom:0.5rem}
+    .principle p:last-child{margin-bottom:0}
+    .pull-quote{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--navy);line-height:1.6;font-style:italic;border-left:3px solid var(--gold);padding:1rem 0 1rem 1.75rem;margin:2.5rem 0;background:rgba(201,168,76,0.04)}
+    .paper-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .paper-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    .paper-nav a:hover{color:var(--navy)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.paper-hero{padding:76px 1.25rem 48px}.paper-body{padding:40px 1.25rem 80px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v135.docx" download>Download v135</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="paper-hero">
+    <div class="paper-hero-inner">
+      <div class="paper-meta">
+        <span class="paper-number">Paper No. 10</span>
+        <span class="paper-date">May 2026</span>
+      </div>
+      <h1 class="paper-title">Seventeen Principles</h1>
+      <p class="paper-subtitle">A constitution is a theory of power as much as it is a legal document. Seventeen design principles distilled from the drafting process — on accountability, legitimacy, emergency, rights, and mechanism.</p>
+    </div>
+  </div>
+
+  <div class="paper-body">
+
+    <p>The other essays in this collection argue for specific provisions — why this section is designed this way, why this threshold was chosen over that one. This essay is different. It argues for a method. The seventeen principles below are not rules that were applied to the document from outside; they emerged from the drafting process itself, each one the residue of a design decision that forced a more general question to be answered. Taken together they describe what this document believes about the relationship between constitutional text and political reality.</p>
+
+    <p>Not all of these principles are original. Some are restatements of ideas that political theorists and constitutional designers have articulated before. What is original is the particular combination and the particular applications — the specific way each principle manifests in this document's architecture rather than in constitutional theory generally. The principles are worth stating plainly because they are the kind of thing that gets lost when a drafting session moves from question to question. The specific provision gets written. The underlying idea that justified it can go unrecorded. This essay is an attempt to record it.</p>
+
+    <h2>On Accountability</h2>
+
+    <div class="principle">
+      <span class="principle-num">Principle I</span>
+      <div class="principle-title">The watched branch cannot select its own watcher.</div>
+      <p>The Legislative Inspectorate is nominated by the Supreme Court, not the Legislature, because the Legislature cannot meaningfully oversee itself. The Executive Inspectorate is nominated by the House but confirmed by the Senate, with the executive excluded from the nomination, because the executive cannot select its own auditor. The Judicial Inspector General is selected by lottery to prevent any political actor from controlling who watches the courts.</p>
+      <p>This principle is stronger than the usual separation of powers. It is not merely that different branches check each other; it is that the accountability relationship must be structurally beyond the reach of the body being held accountable. A watchdog whose appointment depends on the goodwill of the watched is not a watchdog. It is a permit.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle II</span>
+      <div class="principle-title">Information-generation and consequence-imposition must be structurally separated.</div>
+      <p>The Inspectorates publish facts. Courts, the Legislature, and the People impose consequences. Inspectorate findings are not Rule Violations — only courts make that legal determination. This separation prevents the information-gatherer from becoming the judge, which concentrates power in ways that corrupt both functions. An institution that can both discover wrongdoing and punish it has every incentive to shape its discoveries toward punishments it wants to impose.</p>
+      <p>The separation also makes findings more credible. An Inspectorate that cannot punish has no stake in the outcome of its findings. Its institutional interest is in accuracy, not in results. That alignment produces better information than any arrangement in which the information-gatherer benefits from a particular finding.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle III</span>
+      <div class="principle-title">Independence requires a legitimacy source outside the reach of those being overseen.</div>
+      <p>The MA Director is elected because PM appointment would make the MA a PM creation. The Electoral Commission is elected because appointed election administrators would owe their position to the actors whose elections they administer. The Judicial Inspector General is lottery-selected for the same reason. Genuine independence cannot be granted by those it operates against — it must come from somewhere they do not control.</p>
+      <p>This principle also explains why administrative independence and significant policy discretion together generate a requirement for popular election. An independent body with real discretionary power over citizens' lives needs democratic legitimacy that does not flow from the political branches it is independent of. Election provides that legitimacy. Appointment by the actors the body must be independent of does not.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle IV</span>
+      <div class="principle-title">Recording is a constitutive condition of legitimate state action, not an administrative requirement.</div>
+      <p>Unrecorded executive orders are void. Classification must be registered on the National Record System even where the content cannot be read. The existence of every legal proceeding must be public even where the content is sealed. Every oath of office must be recorded within 24 hours of administration.</p>
+      <p>These requirements treat transparency not as something governments aspire to but as something they must achieve for their actions to be legally valid. An act of state that cannot be seen is not a legitimate act of state — it is an act that the government is unwilling to stand behind publicly, which is itself a reason to doubt its legitimacy. The NRS is not an archive of what government has done. It is the medium in which government action becomes real.</p>
+    </div>
+
+    <h2>On Emergency and Permanence</h2>
+
+    <div class="principle">
+      <span class="principle-num">Principle V</span>
+      <div class="principle-title">Emergency powers must contain their own expiration.</div>
+      <p>Emergency measures expire unless actively renewed. A declaration of national emergency lapses automatically at 90 days without renewal. Emergency governance protocols terminate automatically when the House is reconstituted. Military deployment authority is time-bounded at every tier.</p>
+      <p>This principle addresses the most reliable mechanism by which constitutional democracies become authoritarian: the exception that becomes the rule. Emergency powers that can be extended indefinitely by the same actor who declared the emergency are not exceptions — they are a parallel constitutional order available to anyone willing to declare an emergency. The only effective constraint is expiration that the emergency-declaring actor cannot prevent.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle VI</span>
+      <div class="principle-title">Some provisions cannot be amended because a constitution that can amend away its core is not a constitution.</div>
+      <p>Six provisions are permanently unamendable: torture prohibition, slavery prohibition, habeas corpus, public trial, retroactivity ban, and non-refoulement. These are placed beyond the reach of any future majority not because the drafters distrust future generations but because the mechanisms of constitutional change can themselves be captured. A sufficiently motivated majority can change almost anything — including the things that make majority rule legitimate in the first place. The unamendable list draws the line at the provisions whose removal would undermine democratic legitimacy itself.</p>
+      <p>The amendment difficulty hierarchy reflects the same logic more broadly: not all provisions deserve the same protection, and the structure should reflect the stability the document intends each provision to have.</p>
+    </div>
+
+    <h2>On Democratic Legitimacy</h2>
+
+    <div class="principle">
+      <span class="principle-num">Principle VII</span>
+      <div class="principle-title">Gatekeeping is power exercised before the vote. Minimize it. Make it visible.</div>
+      <p>Every qualification mechanism, nomination filter, and eligibility criterion is an exercise of what political scientists call second-face power — agenda-setting that shapes outcomes before citizens choose. This document uses gatekeeping where it is constitutionally necessary (the Triad nomination for Supreme Court justices; the JI certification for Electoral Commission candidates) and minimizes it where it is not (the MA Director's four objective disqualifiers are the floor, not the ceiling, of what the Republic imposes on the ballot).</p>
+      <p>The gatekeeping that does exist is on the record. Every removal from a ballot is published to the NRS with specific grounds stated. Every JI eligibility determination is challengeable before the Supreme Court. The exercise of second-face power is itself visible, which is the strongest available check on its abuse.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle VIII</span>
+      <div class="principle-title">Constructive removal requires demonstrated capacity to replace.</div>
+      <p>The House may remove the Prime Minister only by simultaneously electing a successor. A vote of no confidence that does not name and elect a replacement in the same motion has no constitutional effect. This constructive requirement forces the legislature to demonstrate that it has a positive alternative — that its dissatisfaction with the current government is accompanied by a genuine capacity to govern differently, not merely a desire to destabilize.</p>
+      <p>This principle prevents the most common failure mode of parliamentary systems: a legislature that can destroy without building. The power to bring down a government without bearing responsibility for what follows is a power that encourages recklessness. The constructive requirement means that the House can only use its removal authority when it is genuinely ready to govern.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle IX</span>
+      <div class="principle-title">A motivated minority cannot reverse democratic decisions through selective mobilization.</div>
+      <p>Referenda require 50% participation to be valid, not merely a majority of those who participate. This is not a restriction on the power of democratic minorities — they can still win referenda that achieve the participation threshold. It is a restriction on the use of low-turnout votes to reverse decisions made by high-turnout legislative processes.</p>
+      <p>The participation threshold addresses a structural asymmetry: the costs of voting are higher for people who are satisfied with the status quo than for people who are motivated to change it. A passionate minority organized against an enacted law can produce a referendum majority among a small turnout, even though a broader and less organized majority would have voted to retain the law if the cost of participation were lower. The threshold requires that a reversal of enacted law represent genuine democratic engagement, not merely the superior mobilization capacity of an interested minority.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle X</span>
+      <div class="principle-title">A status chosen is constitutionally different from a status inherited.</div>
+      <p>The Miran League's deliberate affirmation of the Article XIV compact — reviewed and published to the NRS after being offered genuine alternatives — is constitutionally meaningful in a way that simply remaining in the default would not be. A status that can be freely exited and is nonetheless maintained carries democratic legitimacy that an assigned status does not. The status election framework exists not to force change but to make the existing relationship one of continuous democratic choice rather than historical inheritance.</p>
+    </div>
+
+    <h2>On Rights</h2>
+
+    <div class="principle">
+      <span class="principle-num">Principle XI</span>
+      <div class="principle-title">Rights that depend on legislative implementation need constitutional defaults, not just mandates.</div>
+      <p>A constitutional mandate without an enforcement mechanism is a declaration of intent. The right to counsel means nothing if inadequate public defender resources make meaningful representation impossible. The right to trial means nothing if exercising it reliably produces enhanced sentences. The constitutional solution is not merely to mandate the relevant statute but to specify what happens in its absence: a self-executing default that makes the right real even if the legislature has not acted.</p>
+      <p>The legal aid right, the caseload guarantee, the trial penalty prohibition — all three are now self-executing. In the absence of the statute, a citizen can invoke the constitutional standard directly in court. The legislature's inaction does not extinguish the right; it just means the constitutional default operates in place of the more refined statutory standard the legislature should have provided.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle XII</span>
+      <div class="principle-title">Geographic position does not determine constitutional rights.</div>
+      <p>The Venuwa Nation's right to independence is not diminished by the fact that their territory is entirely surrounded by Republic land. The right derives from the nature of the right — prior sovereignty and the continuous self-determination of a people — not from the physical circumstances that make exercising it logistically complicated. The practical difficulties (transit corridors, trade access, diplomatic recognition) are treaty problems that the Republic must solve. They are not reasons to deny the right.</p>
+      <p>This principle has a broader application: constitutional rights attach to persons and peoples, not to their circumstances. A right that only applies in convenient cases is not a right; it is a conditional permission extended when exercising it costs the state nothing.</p>
+    </div>
+
+    <h2>On Mechanism</h2>
+
+    <div class="principle">
+      <span class="principle-num">Principle XIII</span>
+      <div class="principle-title">The threat is the mechanism.</div>
+      <p>The most effective constitutional provisions often work through their threatened application rather than their actual use. The legislative inaction trigger (§3.3.a) produced a statute in eleven days without a referendum being held. The fund certification mechanism transformed military subordination over eighteen years without a single funding dispute reaching crisis. The right to initiate a status change process, even where it is never exercised, changes the character of the default relationship.</p>
+      <p>This principle suggests a design preference: provisions that produce compliance through their existence are more valuable than provisions that produce compliance only through activation. A mechanism that works by being used is a mechanism that requires the costly and destabilizing act of using it. A mechanism that works by being available is a mechanism that operates continuously at near-zero activation cost.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle XIV</span>
+      <div class="principle-title">The right to initiate is not the right to achieve.</div>
+      <p>Many constitutional rights are rights to begin a process, not rights to an immediate outcome. The right to initiate a status change process is continuous; the change itself takes effect only when the relevant constitutional process is complete. The right to petition for independence does not produce independence until the treaty is ratified and the Senate has voted.</p>
+      <p>This distinction matters because it prevents both manipulation and false promises. It prevents manipulation: a governance council vote cannot instantly change a constitutional relationship, which means the constitutional relationship cannot be shifted by a momentary majority without the process that validates the shift. It prevents false promises: the constitution does not promise that initiating the process will produce the desired outcome in a particular timeframe, which means it is not breaking a promise when the process takes the time it takes.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle XV</span>
+      <div class="principle-title">The single-subject rule is an anti-corruption mechanism, not a drafting convention.</div>
+      <p>Legislative bundling disguises costs and benefits, forces votes on packages rather than policies, and allows provisions that could not survive independent scrutiny to survive by attaching to popular legislation. The requirement that every bill address a single clearly defined subject, with unrelated riders voiding the entire act, is not primarily about legislative elegance. It is about making democratic accountability meaningful at the level of individual policy choices.</p>
+      <p>A legislator who votes for a popular bill that contains a corrupt rider is not accountable for the rider in the same way they would be accountable for a standalone bill. The single-subject rule removes the cover. Every vote is for one thing, which means every vote is legible to constituents.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle XVI</span>
+      <div class="principle-title">Dual-domain architecture is more effective than checks-and-balances within a unified executive.</div>
+      <p>Where executive functions are categorically separable — foreign and domestic, military and civilian — constitutional domain separation prevents concentration more reliably than oversight mechanisms applied to a single executive holding all functions. You cannot effectively balance what you cannot separate. A president with both foreign and domestic authority can use each domain to expand influence in the other. A dual executive with genuinely distinct domains has a structural limitation that no amount of oversight legislation can fully replicate.</p>
+      <p>The separation also changes the accountability relationship. The PM answers to the House for domestic policy; the President answers to the electorate for defense and diplomacy. These are different accountability mechanisms suited to different functions. Combining them under a single executive requires one accountability mechanism to serve both functions, which means it serves neither well.</p>
+    </div>
+
+    <div class="principle">
+      <span class="principle-num">Principle XVII</span>
+      <div class="principle-title">Prior sovereignty is acknowledged, not created.</div>
+      <p>A constitution can recognize a sovereignty that predates it but cannot create sovereignty in the same act. The acknowledgment and the grant are different things with different constitutional implications. A sovereignty created by constitutional recognition depends on the ongoing willingness of the recognizing body to maintain the recognition. A sovereignty acknowledged as pre-existing does not.</p>
+      <p>This principle has practical consequences. The Free, Prior, and Informed Consent requirement is not a policy choice the Republic has made about how to treat indigenous nations; it is the constitutional expression of a government-to-government relationship between equals. The Republic cannot modify the FPIC requirement by simple statute because the requirement does not derive from a policy decision — it derives from the acknowledged prior sovereignty that generates the equal relationship in the first place. The source of the right determines the mechanism required to alter it.</p>
+    </div>
+
+    <h2>A Method, Not a Checklist</h2>
+
+    <p>These seventeen principles are not a checklist that produces constitutional design by application. No two of them are always in tension, but many of them sometimes are. The principle that gatekeeping should be minimized (VII) is in tension with the principle that some provisions cannot be amended (VI), which is itself a form of gatekeeping applied to the constitution-amending process. The principle that rights need constitutional defaults (XI) must be balanced against the principle that some things genuinely belong to statute and democratic deliberation. The principle that the watched branch cannot select its watcher (I) requires selecting someone to do the watching — which creates its own selection problem.</p>
+
+    <p>What these principles provide is not an algorithm but a sensibility — a set of questions to ask when a provision is being designed, a set of failure modes to watch for when a mechanism is being constructed. They push in the direction of accountability mechanisms that are structurally insulated from the bodies they oversee; of rights that have operational content rather than just declaratory force; of democratic processes that take seriously both the legitimacy of majority decisions and the danger of majority capture; of transparency as a default rather than an aspiration.</p>
+
+    <div class="pull-quote">A constitution cannot select only the trustworthy. What it can do is create institutions capable of outlasting any particular period's political conditions. These principles are, in the end, about how to do that.</div>
+
+    <p>The preamble of this document says: "We do not limit it because we distrust the people who serve within it — we limit it because no document can select only the trustworthy, and no generation can bind the next to its own virtue." That sentence is the premise from which all seventeen principles follow. If you could rely on the virtue of the people who hold power, you would need none of this. The principles exist because you cannot. They are the constitutional response to the permanent human condition of having to be governed by other humans — which means being governed by people with interests, with blind spots, with the capacity for both courage and corruption, who will sometimes act well and sometimes badly, who cannot be selected in advance for only the former and never the latter.</p>
+
+    <p>The goal is not a constitution that produces good outcomes regardless of who implements it. That is not achievable. The goal is a constitution that makes good outcomes easier and bad outcomes harder, that creates accountability for failure, that makes corruption visible and difficult and costly, and that gives the people enough real power — through elections, through referenda, through transparent records, through self-executing rights — to correct course when things go wrong.</p>
+
+    <p>These seventeen principles are the distillate of how this document tries to do that. Whether they succeed is a question the scenarios, the stress tests, and ultimately the practice of constitutional governance will answer. The principles themselves are the honest account of what was attempted.</p>
+
+    <div class="paper-nav">
+      <a href="paper-09.html">← Paper No. 9</a>
+      <a href="papers.html">All Essays</a>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
