@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Environmental Scenario — The Federated Republic</title>
+  <meta name="description" content="Year 9. A State government authorizes a petrochemical facility over citizen objection. Residents invoke §1.22.a directly in court. The no-indefinite-deferral clause activates. The self-executing environmental default meets industrial policy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .court-ruling{background:rgba(27,42,74,0.06);border:1px solid rgba(27,42,74,0.15);padding:1.5rem 1.75rem;margin:2rem 0}
+    .court-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);margin-bottom:1rem;display:block}
+    .court-ruling p{font-size:0.9rem;line-height:1.8;margin-bottom:0.6rem;color:var(--text)}
+    .court-ruling p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    .scenario-nav a:hover{color:var(--navy)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v135.docx" download>Download v135</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Rights in Practice · Year 9 · §1.22.a Self-Executing Default</span>
+      <h1 class="scenario-title">The Environmental Scenario</h1>
+      <p class="scenario-subtitle">A State authorizes a petrochemical facility over citizen objection. Residents invoke §1.22.a directly in federal court. The no-indefinite-deferral clause meets industrial policy — and the self-executing default does what it was designed to do.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§1.22.a Government Non-Harm</span>
+        <span class="prov-tag">§1.22.b Environmental Stewardship</span>
+        <span class="prov-tag">§11.2.a Subsidiarity</span>
+        <span class="prov-tag">§15.6 Constitutional Supremacy</span>
+        <span class="prov-tag">§4.3.a Concrete Cases Only</span>
+        <span class="prov-tag">§9.1 NRS Publication</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The State of Ostmark grants a construction permit for a petrochemical processing facility on the Mirren River floodplain in Year 8. The facility would process heavy crude extracted from newly opened formations in the State's interior. Environmental impact modeling, commissioned by the State's own agency, projects that routine operations will raise particulate matter concentrations in four downstream municipalities to levels associated with elevated respiratory disease incidence. The State Cabinet approves the permit anyway, citing economic development priorities and the 4,200 jobs the facility is projected to create.</p>
+
+      <p>The Mirren Valley Residents' Coalition — a civil society organization representing approximately 31,000 Inhabitants across the four affected municipalities — files suit in federal inferior court in Month 3 of Year 9. They do not sue under State environmental law, which the State government has already applied to grant the permit. They invoke §1.22.a of the Constitution directly.</p>
+
+      <h2>The Provision</h2>
+
+      <p>§1.22.a states: "No government at any level may take action that it knows, or has reasonable grounds to know, will cause significant harm to the health of Inhabitants through environmental degradation. Where a government has such knowledge and proceeds regardless, any affected Inhabitant may bring a constitutional claim directly in federal court without exhausting administrative remedies. Government may not indefinitely defer compliance with this provision by claiming that remediation is ongoing."</p>
+
+      <p>Three elements of the provision are constitutionally significant in this case. First, the knowledge standard — "knows, or has reasonable grounds to know" — is objective. The State's own environmental impact modeling satisfies it. The State cannot claim it did not know; its own commissioned study documents the projected harm. Second, the direct federal court access clause bypasses the administrative process the State would ordinarily require petitioners to exhaust before suing. Third — and this is the provision the State will contest most vigorously — the no-indefinite-deferral clause prevents the State from defending by promising future compliance.</p>
+
+      <h2>The State's Defense</h2>
+
+      <p>Ostmark raises three arguments before the Federal Court for the Northern District.</p>
+
+      <div class="beat">
+        <div class="beat-label">Defense Argument 1</div>
+        <div class="beat-title">Subsidiarity — State environmental regulation is a State competence</div>
+        <p>The State argues that §11.2.a (subsidiarity) places environmental regulation at the State level absent a specific federal mandate. The State has exercised that competence by granting the permit. The federal court should defer to the State's legitimate policy judgment about the tradeoff between economic development and environmental risk.</p>
+        <p>The Coalition's response: subsidiarity allocates regulatory competence; it does not authorize a State to exercise that competence in ways that violate individual constitutional rights. §1.22.a is an individual right, not a regulatory standard. A State can regulate environmental policy however it chooses within the constitutional floor — it cannot authorize government action that it knows will cause significant harm to Inhabitants' health. The State's authority to permit industrial facilities does not extend to permitting constitutional violations.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">Defense Argument 2</div>
+        <div class="beat-title">Ripeness — harm is projected, not yet realized</div>
+        <p>The State argues that the harm is speculative. The facility has not been built. The projected particulate increases are modeling outputs, not measured concentrations. Under §4.3.a (concrete cases only), federal courts may not adjudicate abstract or hypothetical harms — they require concrete facts in controversy.</p>
+        <p>The Coalition's response: the constitutional harm is not the future respiratory disease — it is the government's present decision to take action it knows will cause that harm. The right violated is the right not to have government knowingly degrade the environmental conditions affecting your health. That violation occurs at the moment of the permit decision, not at the moment of first measured health impact. The case is ripe because the constitutional wrong has already happened: the State has made a decision it knows will cause significant harm.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">Defense Argument 3</div>
+        <div class="beat-title">Remediation commitment — compliance is ongoing</div>
+        <p>The State's most substantive argument: it has required the facility to install particulate filtration systems and has established a monitoring regime. Environmental compliance is a continuous process, not a binary one. The no-indefinite-deferral clause should not apply where the State is actively pursuing harm reduction — it should apply only where government simply refuses to act.</p>
+        <p>The Coalition's response: the filtration requirement the State imposed does not bring projected concentrations below the health threshold the State's own modeling identifies. The monitoring regime documents harm after the fact; it does not prevent it. A commitment to measure compliance with a standard that is not being met is not compliance — it is documentation of ongoing violation. The no-indefinite-deferral clause exists precisely to close this gap: a government cannot satisfy §1.22.a by promising to work toward compliance while authorizing ongoing harm.</p>
+      </div>
+
+      <h2>The Federal Court Rules</h2>
+
+      <div class="court-ruling">
+        <span class="court-label">Federal Inferior Court — Northern District — Year 9, Month 7</span>
+        <p>The court rules for the Coalition on all three grounds. On subsidiarity: §1.22.a is an individual constitutional right enforceable against all levels of government; it is not a regulatory standard subject to State variation. States retain authority to regulate environmental matters, but that authority does not include authority to authorize action the State knows will cause significant harm to Inhabitants' health. On ripeness: the constitutional violation is the government's knowing decision, which is a present concrete act with present legal consequences — the case is ripe. On remediation: the State's filtration requirement does not achieve the health-protective outcome §1.22.a requires. Ongoing monitoring of a continuing violation is not compliance.</p>
+        <p>The court issues a preliminary injunction halting construction pending full trial. The injunction is published to the NRS within 24 hours. The State files an immediate interlocutory appeal to the Supreme Court.</p>
+      </div>
+
+      <h2>The Supreme Court</h2>
+
+      <p>The Supreme Court accepts the interlocutory appeal and issues its ruling six weeks later, before the full trial proceeds. The Court's 6-2 majority opinion is the first substantive interpretation of §1.22.a and establishes the constitutional framework for all subsequent environmental rights litigation.</p>
+
+      <div class="court-ruling">
+        <span class="court-label">Supreme Court — 6-2 Majority — Year 9, Month 10</span>
+        <p><strong>On the knowledge standard:</strong> The Court holds that "reasonable grounds to know" is satisfied by the State's own commissioned environmental impact study. The State cannot argue it lacked knowledge of the projected harm when it commissioned, received, and reviewed the modeling before granting the permit. The knowledge element is established by the State's own evidentiary record.</p>
+        <p><strong>On subsidiarity and rights:</strong> The Court draws a clear line between regulatory competence and constitutional compliance. States have wide latitude to make environmental policy choices — which industries to permit, what standards to set, how to balance development against environmental protection. That latitude ends where a policy choice constitutes a knowing decision to cause significant harm to Inhabitants' health. §1.22.a does not prescribe environmental policy; it sets a floor below which no government may go. Below that floor, constitutional rights analysis governs, not regulatory deference.</p>
+        <p><strong>On the no-indefinite-deferral clause:</strong> This is the Court's most consequential holding. The clause means what it says: a government cannot satisfy §1.22.a by committing to ongoing harm reduction that does not achieve the health-protective outcome the provision requires. The relevant question is not whether the government is trying — it is whether the action the government has authorized causes significant harm it knows about. A permit for a facility whose projected operation causes significant health harm is a constitutional violation at the time of permit issuance, regardless of what monitoring or mitigation requirements accompany the permit. The mitigation must be sufficient to prevent the harm, not merely to document it.</p>
+        <p>The Court upholds the preliminary injunction and remands to the inferior court for determination of the appropriate remedy: either a construction halt until the facility can be redesigned to meet the health standard, or denial of the permit.</p>
+      </div>
+
+      <h2>The Outcome</h2>
+
+      <p>Back before the inferior court, Ostmark and the facility's developer present a redesigned facility plan. The redesign includes a more advanced filtration system and a modified processing methodology that the State's updated modeling projects will keep particulate concentrations within the health-protective range. The Coalition's expert review of the modeling concurs. The court lifts the injunction conditioned on the redesigned facility's compliance with the updated projections, a monitoring requirement with automatic permit revocation if measured concentrations exceed the threshold, and annual EI publication of monitoring results.</p>
+
+      <p>Construction proceeds under the redesigned plan. The facility opens in Year 11, twenty-six months later than originally scheduled. It employs 3,100 people — 1,100 fewer than the original projection, reflecting the higher capital cost of the redesigned filtration system. The monitoring requirement is active and its results are on the NRS.</p>
+
+      <h2>What This Established</h2>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§1.22.a is the constitution's most novel rights provision — it creates a positive individual right against government environmental harm, with a self-executing enforcement mechanism and an explicit no-deferral clause. Before this case, it was unclear how courts would handle the interaction between the right and State regulatory authority, between the knowledge standard and projected future harm, and between the no-deferral clause and good-faith mitigation efforts. The Supreme Court's ruling answers all three questions clearly and in ways that make the right genuinely enforceable rather than aspirationally declared.</p>
+        <p>The outcome is not that the facility was stopped. It was redesigned. That is the correct constitutional result: §1.22.a does not prohibit industrial development, it prohibits government-authorized development that the government knows will cause significant health harm. A facility that can be operated without causing that harm is constitutionally permissible. The right functions as a floor, not a ceiling — exactly as the provision intends.</p>
+        <p>The no-deferral clause proved to be the provision's most important element in practice. Without it, the State's monitoring-plus-mitigation commitment would have been a plausible defense — promising compliance while documenting ongoing harm indefinitely. The clause closes that route and forces the question: does the authorized activity, as designed, cause significant harm that the government knows about? If yes, the permit is constitutionally invalid until the design changes. The monitoring can continue; the authorization cannot stand until the design meets the standard.</p>
+        <p>The EI's role here is characteristic: the annual publication of monitoring results creates a permanent NRS record of compliance or violation. If the facility's measured concentrations exceed the threshold, that fact is public immediately and continuously. The conditional permit doesn't depend on the government deciding to enforce it — the record enforces itself by making violation visible to every affected resident, every court, and every future litigant.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-justice.html">The Justice Scenario →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
