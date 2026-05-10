@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The First Director — The Federated Republic</title>
+  <meta name="description" content="Year 7. The Monetary Authority Director election — 39 candidates, a Board advisory assessment that raises more questions than it answers, and an electorate choosing between technical expertise and demonstrated independence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .candidate-row{border:1px solid var(--border);padding:1.25rem 1.5rem;margin:1rem 0}
+    .candidate-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:0.25rem}
+    .candidate-meta{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+    .candidate-row p{font-size:0.88rem;line-height:1.7;color:var(--text);margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    .scenario-nav a:hover{color:var(--navy)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v135.docx" download>Download v135</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Institutional Process · Year 7 · First Election Cycle</span>
+      <h1 class="scenario-title">The First Director</h1>
+      <p class="scenario-subtitle">The Monetary Authority Director election arrives. Thirty-nine candidates, a Board that cannot choose for you, and an electorate deciding what monetary independence actually means.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§10.4.a MA Director Election</span>
+        <span class="prov-tag">§10.2 MA Independence</span>
+        <span class="prov-tag">§10.3 MA Mandate</span>
+        <span class="prov-tag">§8.6 EI Candidate Registry</span>
+        <span class="prov-tag">§9.1 NRS Publication</span>
+        <span class="prov-tag">§16.2 Electoral Commission</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>Seven years after ratification, the Monetary Authority has been operating under its founding Director — a transitional appointment made by the joint Inspectorate panel during Phase 2, before elections were possible. She is competent, cautious, and deeply aware that her authority rests on a transitional mandate that was always understood to be temporary. In Month 3 of Year 7, she steps down. The Candidate Register opens. The Republic holds its first democratic election for the Monetary Authority Director.</p>
+
+      <p>Most citizens have never thought carefully about who runs the monetary authority. The MA is not a glamorous institution. It certifies the Basic Needs Floor. It publishes the GNR methodology. It certifies fiscal solvency. It keeps the currency stable. It is, by constitutional design, boring — the kind of institution that produces no news when it is working correctly. The election changes this. For six weeks, the MA's mandate becomes a public question, and the answers citizens receive depend on which of 39 registered candidates they are paying attention to.</p>
+
+      <h2>The Candidate Register</h2>
+
+      <p>§10.4.a requires the EI to maintain a Candidate Register for MA Director. Any citizen who intends to seek the position files a disclosure record — professional history, financial interests, any prior government positions — and the EI reviews it for factual accuracy. The EI does not assess whether the candidate is qualified. It does not rank candidates or screen for expertise. It confirms that what the candidate says about themselves is true and that they do not hold a current government position, do not have a direct financial conflict with MA decisions, hold Republic citizenship, and carry no prior Rule Violation conviction. These four criteria are the floor the constitution imposes. Everything else is the electorate's judgment.</p>
+
+      <div class="beat">
+        <div class="beat-label">§8.6.g — EI Registry Audit</div>
+        <div class="beat-title">47 registered, 8 removed, 39 proceed to ballot</div>
+        <p>Of 47 filed disclosure records, the EI removes eight before ballot certification. Three hold current government advisory positions and did not step down before the filing deadline. Two have direct financial conflicts: one holds a significant position in a bond instrument whose yield is directly affected by MA interest rate decisions; the other has a consulting contract with a financial institution that is a primary counterparty to MA operations. Two disclosure records contain material inaccuracies — one misrepresents a prior termination as a voluntary resignation; one omits a prior professional license revocation. One candidate does not hold Republic citizenship and filed on the apparent assumption that permanent residency was sufficient.</p>
+        <p>All eight removals are published to the National Record System with specific grounds stated. All eight candidates may challenge the removal before the Supreme Court. Three do. The Court upholds all three removals within the mandatory 14-day review period. The ballot contains 39 names.</p>
+      </div>
+
+      <h2>The Board Advisory Assessment</h2>
+
+      <p>The MA Board — five members confirmed by the Senate, with backgrounds in macroeconomics, public finance, and monetary systems — is required by §10.4.a to publish an advisory assessment of registered candidates 90 days before National Election Day. The assessment is explicitly advisory: the Board has no gatekeeping authority. It cannot remove candidates from the ballot. It cannot endorse a candidate. What it can do is describe, for each candidate, the extent to which their publicly disclosed experience is relevant to the MA's constitutional mandate — price stability, fiscal solvency certification, and GNR methodology — and identify any features of their record that bear on their capacity to exercise the mandate independently.</p>
+
+      <p>Of 39 candidates, the Board's assessment finds that six have professional histories directly relevant to the MA's mandate. The other 33 range from tangentially relevant to wholly unrelated. The Board publishes full assessments of all 39, but the six it identifies as directly relevant receive the most detailed analysis and generate the most public attention. Three become the focus of the election's final weeks.</p>
+
+      <div class="candidate-row">
+        <div class="candidate-name">Dr. Asel Nurlanovna</div>
+        <div class="candidate-meta">Former Deputy Governor, Central Reserve · 22 years monetary policy experience</div>
+        <p>Board assessment: demonstrates deep technical familiarity with price stability mechanisms, national income accounting, and monetary transmission. Her professional history spans the full range of functions the MA's mandate requires. The Board notes that her 22-year career was conducted entirely within a central bank that operated, for its first decade, under a statutory requirement to consult with the Minister of Finance before setting the reference rate. The statutory requirement was repealed in Year 2 of the Republic's existence. Whether Dr. Nurlanovna's professional instincts formed during that earlier period reflect the constitutional independence the MA requires is not assessable from the disclosure record.</p>
+      </div>
+
+      <div class="candidate-row">
+        <div class="candidate-name">Professor Emeka Adeyemi</div>
+        <div class="candidate-meta">Academic economist · Monetary theory and institutional design</div>
+        <p>Board assessment: demonstrates substantial theoretical expertise in monetary systems, constitutional monetary architecture, and the independence literature. Has published extensively on the design of central bank independence mechanisms, including a well-regarded analysis of the MA's constitutional structure published in Year 4. Has no operational experience running a monetary institution. The Board cannot assess from the disclosure record whether theoretical expertise in monetary independence translates to the operational judgment required to certify fiscal solvency under §10.3, which involves institutional relationships with the Executive and Legislature that the academic literature describes but does not practise.</p>
+      </div>
+
+      <div class="candidate-row">
+        <div class="candidate-name">Councillor Fatima Diallo</div>
+        <div class="candidate-meta">Former State Finance Minister, Arveld · Public finance, 14 years</div>
+        <p>Board assessment: demonstrates substantial public finance experience at the State level, including fiscal consolidation work during the Arveld remediation period that is relevant to the MA's solvency certification function. Is running on a platform that includes statements about monetary policy serving "community economic resilience" alongside price stability. The Board notes that the MA's constitutional mandate is defined by §10.3 and does not include community economic resilience as a standalone objective. Whether Councillor Diallo's platform language reflects a policy preference she would pursue within the mandate's constraints, or a view about how the mandate should be interpreted, is not determinable from the disclosure record. The Board cannot assess motivation.</p>
+      </div>
+
+      <h2>The Election</h2>
+
+      <p>National Election Day arrives. The MA Director election runs on a ranked-choice ballot administered by the Electoral Commission under §16.2. The ballot contains all 39 names. Voters may rank as many or as few as they choose. The EC administers the count and certifies the result to the NRS within 72 hours.</p>
+
+      <p>First-preference results scatter across the field. Councillor Diallo leads with 23% — her public finance background and accessible campaign language have the broadest initial appeal. Dr. Nurlanovna is second at 19%, drawing heavily from voters with financial sector backgrounds and from constituencies that weight operational experience heavily. Professor Adeyemi is third at 14%, with strong support among younger voters and in constituencies with higher constitutional literacy assessment scores. The remaining 36 candidates share the rest.</p>
+
+      <div class="beat">
+        <div class="beat-label">§16.2 — RCV Count</div>
+        <div class="beat-title">Seventeen elimination rounds, three candidates standing</div>
+        <p>The elimination process runs seventeen rounds as minor candidates are sequentially removed and their ballots redistributed. The count is published to the NRS after each round — every redistribution is a public record. By Round 17, three candidates remain: Diallo at 31%, Nurlanovna at 29%, Adeyemi at 26%, with 14% of ballots exhausted or unresolvable.</p>
+        <p>Round 18 eliminates Nurlanovna. Her ballots redistribute: 52% to Adeyemi, 31% to Diallo, 17% exhausted. The distribution reflects a pattern visible throughout the count — voters who ranked Nurlanovna first tended to weight technical credentials, and when forced to choose between the remaining two, they preferred Adeyemi's independence credentials over Diallo's community platform language.</p>
+        <p>Final result: Adeyemi 48.3%, Diallo 37.4%, exhausted 14.3%. Professor Emeka Adeyemi is elected MA Director. He will serve a single non-renewable seven-year term.</p>
+      </div>
+
+      <h2>What the Mechanism Produced</h2>
+
+      <p>The election's result is not the technically optimal outcome by any simple measure. Dr. Nurlanovna had more directly applicable operational experience than Professor Adeyemi. Whether he can translate his theoretical expertise into the operational judgment that fiscal solvency certification requires is genuinely uncertain. The Board said so plainly, and the Board was right to say so. The electorate knew this when it voted.</p>
+
+      <p>What the electorate decided — distributed across 39 candidates, 18 rounds of ranked-choice redistribution, and a six-week campaign period in which the Board's assessment was public and widely discussed — is that it preferred demonstrated independence to demonstrated operational experience. The Board's note about Dr. Nurlanovna's career under the statutory consultation requirement was not a disqualifier. It was information. The electorate weighted it as it saw fit.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>The MA Director election mechanism is the constitution's most unusual democratic design: a technical office filled by popular election, with an expert advisory board that cannot choose for the electorate and a transparency regime that makes all expert findings public. The question the mechanism is designed to answer is not "who is most qualified?" — it is "who does the electorate trust to be independent, given everything it can know about the candidates?"</p>
+        <p>Those are different questions and they produce different answers. A technocratic appointment process — PM nominates, Senate confirms — would likely have produced Dr. Nurlanovna, who was the most operationally credentialed candidate. The democratic election produced Professor Adeyemi, who was the most credibly independent. Whether those two qualities trade off in practice, or whether Professor Adeyemi develops the operational judgment the role requires during his seven-year term, is an empirical question the NRS will answer. The EI's annual audit of MA operations, published each year, will document his GNR methodology, his solvency certification decisions, and his independence record. The next election, in Year 14, will incorporate that record.</p>
+        <p>The mechanism works not by guaranteeing the best outcome but by creating a visible, accountable process whose failures are as legible as its successes. Year 7's MA Director was chosen by the people who will live with the consequences of the choice. The Board told them what it knew. The NRS will tell them what happened. That combination — informed choice, documented consequences — is what the election provision was designed to produce.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-justice.html">The Justice Scenario →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
