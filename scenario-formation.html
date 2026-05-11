@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Formation Scenarios — The Federated Republic</title>
+  <meta name="description" content="Two tests of §2.3's redesigned government formation provisions: a post-election failure where no Domestic Affairs Council exists and Senate designation is mandatory; and a mid-term vacancy where the SDACO steps up and the House seats a successor within 90 days.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .timeline{border-left:2px solid var(--border);margin:2rem 0;padding-left:1.5rem}
+    .tl-item{margin-bottom:1.25rem;position:relative}
+    .tl-item::before{content:'';width:10px;height:10px;background:var(--gold);border-radius:50%;position:absolute;left:-1.9rem;top:0.4rem}
+    .tl-day{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.2rem}
+    .tl-item p{font-size:0.9rem;line-height:1.7;color:var(--text);margin:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .part-divider{text-align:center;margin:3.5rem 0;padding:1.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .part-label{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold)}
+    .part-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);margin-top:0.4rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v141.docx" download>Download v140</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Institutional Process · Two Tests · §2.3 Fixed-Term Caretaker Model</span>
+      <h1 class="scenario-title">The Formation Scenarios</h1>
+      <p class="scenario-subtitle">Two tests of the redesigned §2.3 government formation provisions. Part A: a post-election failure where no Domestic Affairs Council exists and Senate designation is mandatory. Part B: a mid-term vacancy where the SDACO steps up and the House seats a successor within 90 days.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.3.a PM Selection</span>
+        <span class="prov-tag">§2.3.b Constructive No Confidence</span>
+        <span class="prov-tag">§2.3.c Caretaker Protocol</span>
+        <span class="prov-tag">§8.2 LI Weekly Reporting</span>
+        <span class="prov-tag">§9.1 NRS Publication</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+    <div class="part-divider">
+      <div class="part-label">Part A</div>
+      <div class="part-title">Post-Election Failure — No Council Exists</div>
+    </div>
+
+      <p>The general election produces a fractured result. The Republic's four major parties split the House almost evenly: the Progressive Coalition holds 162 seats, the National Alliance 158, the Democratic Reform Party 94, and the Independents and minor parties 86. No combination of two parties commands an absolute majority. Every viable coalition requires at least three parties — and three-party coalitions have a long history of collapsing within months over ministerial allocation disputes.</p>
+
+      <p>The House convenes on Day 1. Under §2.3.a, the 60-day clock starts. An absolute majority — a majority of the full seated membership, not merely those present — is required to seat a PM. With 500 House members seated, that threshold is 251.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-day">Days 1–18</span>
+          <p>The Progressive Coalition and Democratic Reform Party open coalition negotiations. Combined they hold 256 seats — a majority, but only barely, and the DRP's demands for three cabinet positions including Finance prove non-negotiable to the PC. First round of talks collapses on Day 18.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-day">Days 19–35</span>
+          <p>The National Alliance makes overtures to the DRP. Combined they hold 252 — again a slim majority. Talks collapse on Day 35 when the DRP refuses to support the NA's flagship economic policy on grounds of constitutional fiscal compliance.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-day">Days 36–48</span>
+          <p>Three-way negotiations begin between PC, NA, and a bloc of eight Independent members whose combined support would bring either major coalition to a comfortable majority. The Independents hold out for formal committee chairmanships and binding written policy commitments — both parties resist binding written commitments. Talks stall.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-day">Days 49–60</span>
+          <p>Final push. The PC proposes a minority government arrangement — govern without a formal coalition, seek support bill by bill. The DRP declines. The NA proposes the same. The DRP declines again. Day 60 passes with no PM confidence vote held. The 60-day period expires at midnight.</p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§2.3.a — Day 61</div>
+        <div class="beat-title">Caretaker Protocol activates — but no SDACO exists</div>
+        <p>§2.3.a is clear: failure to seat a PM within 60 days activates the Caretaker Protocol of §2.3.c automatically. The House continues in full session. The LI begins publishing weekly accountability reports documenting PM formation votes, candidates proposed, and each member's individual participation record.</p>
+        <p>The problem §2.3.c anticipates directly: no Domestic Affairs Council exists. No PM was appointed in this term. No PM has appointed ministers. There is no Senior Domestic Affairs Council Officer to step into the caretaker role. The mid-term vacancy track — SDACO steps up — has no one to activate it.</p>
+        <p>§2.3.c's second scenario applies: Senate designation is mandatory. The Senate must act within 14 days of Day 61 — by Day 75 — to designate an Interim PM from persons who have never held partisan elected office. The Senate Speaker convenes an emergency session on Day 62.</p>
+      </div>
+
+      <h3>The Senate's Designation</h3>
+
+      <p>The Senate's task is specific: designate an Interim PM who has never held partisan elected office, who will govern in maintenance-only mode until the House seats a PM through the ordinary confidence process. The designation is not a political appointment in the ordinary sense — the Interim PM has no mandate, no policy agenda, and no authority to initiate new spending or policy. They are a constitutional caretaker, not a government.</p>
+
+      <p>The Senate convenes three days of hearings. Four candidates are considered: the Republic's former Chief Civil Service Commissioner, a retired Supreme Court justice who resigned from the Court five years prior to serve on an international arbitration panel, the current Director of the National Statistical Office, and a former university president who chaired the Republic's independent fiscal review commission. All four have never held partisan elected office.</p>
+
+      <div class="beat">
+        <div class="beat-label">§2.3.c — Day 71</div>
+        <div class="beat-title">Senate designates: Dr. Amara Osei, former Chief Civil Service Commissioner</div>
+        <p>The Senate votes 67-33 to designate Dr. Osei. She is the most operationally experienced of the four candidates — seventeen years in senior civil service leadership, including eight as Chief Commissioner overseeing the civil service of three administrations. She has never been a member of any political party. She has never stood for elected office. She is constitutionally qualified.</p>
+        <p>Dr. Osei takes the Official Oath within 24 hours of the Senate vote. The oath is published to the NRS. She assumes the Interim PM role at noon on Day 72. The House is notified. The maintenance-only protocol is in effect: existing obligations continue, no new policy or spending may be initiated, emergency and military fund certification authorities are available if required.</p>
+      </div>
+
+      <h3>The House Resolves</h3>
+
+      <p>Dr. Osei's designation changes the political calculus in the House. The prospect of an indefinite non-partisan caretaker government — visible in the LI's weekly accountability reports, with each member's negotiating record on permanent public file — creates the pressure that the 60-day clock alone did not. Voters are watching. The NRS is publishing. The members who have blocked PM formation are named in the weekly reports.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-day">Day 76</span>
+          <p>The Progressive Coalition and Democratic Reform Party reopen talks. The DRP reduces its cabinet demands from three positions to two. The PC accepts, with the Finance portfolio going to a DRP-nominated technocrat rather than a DRP politician.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-day">Day 83</span>
+          <p>Coalition agreement signed. The PC-DRP coalition holds 256 seats — five above the absolute majority threshold. A PM candidate is named: the PC's parliamentary leader, who has served three terms and holds the confidence of both coalition parties.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-day">Day 87</span>
+          <p>House confidence vote: 263-237. The PM candidate achieves absolute majority. She takes the Official Oath within four hours of the vote. The Oath is published to the NRS. Dr. Osei's Interim PM authority terminates immediately — she is displaced by operation of §2.3.c the moment the new PM is sworn in. The Domestic Affairs Council appointments begin within 48 hours. The caretaker period lasted 16 days.</p>
+        </div>
+      </div>
+
+    <div class="part-divider">
+      <div class="part-label">Part B</div>
+      <div class="part-title">Mid-Term Vacancy — SDACO Steps Up</div>
+    </div>
+
+      <p>Three years into the same term, the PM tenders her resignation for health reasons. The diagnosis — a degenerative neurological condition — is confirmed by two independent medical panels. She advises the House Speaker of her intention to resign six weeks before the resignation takes effect, giving the coalition time to identify a successor candidate. The resignation is published to the NRS on the date it takes effect.</p>
+
+      <div class="beat">
+        <div class="beat-label">§2.3.c — Vacancy Day 1</div>
+        <div class="beat-title">Mid-term vacancy: SDACO steps up</div>
+        <p>A Domestic Affairs Council now exists — the PM appointed it three years ago and it has been governing continuously. The most senior Domestic Affairs Council Officer is the Minister for Economic Affairs, the most senior minister by both tenure and statutory rank within the Council's governance structure. She assumes the Caretaker PM role immediately upon the PM's resignation taking effect. Her Caretaker authority is maintenance-only: existing obligations continue, no new policy or spending initiated. Emergency and military fund certification authorities remain available.</p>
+        <p>The 90-day clock begins. If the House has not seated a new PM by Day 90 of the vacancy, the Senate may designate an Interim PM with full powers. The SDACO-Caretaker does not prevent the House from seating a PM — she is a bridge, not an obstacle.</p>
+      </div>
+
+      <h3>Coalition Mechanics Under Caretaker Government</h3>
+
+      <p>The coalition that elected the original PM holds 263 seats — still above absolute majority. In principle, seating a new PM should be straightforward: the coalition nominates a successor and the House confirms. In practice, the vacancy has opened a leadership contest within the Progressive Coalition between two senior figures: the Minister for Economic Affairs now serving as Caretaker, and the Minister for Justice who resigned from the Council upon the PM's announcement to contest the leadership.</p>
+
+      <p>The PC's internal leadership contest runs under its own party rules, not constitutional provisions. The constitution requires only that whoever is nominated commands an absolute House majority. The PC's rules require an internal membership ballot before a parliamentary candidate is named. The ballot takes 28 days.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-day">Vacancy Day 28</span>
+          <p>PC membership ballot concludes. The Minister for Justice wins 54%-46%. She becomes the PC's candidate for PM. The DRP coalition partner confirms its support within 48 hours. The coalition's 263 seats remain intact.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-day">Vacancy Day 35</span>
+          <p>House confidence vote: 271-229. The Minister for Justice achieves absolute majority — she gains eight votes beyond the coalition's baseline from Independent members who supported the prior PM and extend their confidence to her successor. She takes the Official Oath within two hours. The Caretaker PM's authority terminates immediately. The new PM's Council appointments begin within 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <span class="finding-label">What These Scenarios Test</span>
+        <p>The two parts test the same provision under the two conditions §2.3.c explicitly distinguishes. Part A — the post-election failure — is the harder constitutional case because no caretaker infrastructure exists. The solution relies on Senate designation being mandatory rather than discretionary: if the House fails, the Senate must act within 14 days. The 14-day window is short enough to prevent indefinite caretaker government while giving the Senate time for meaningful deliberation. Dr. Osei's designation works constitutionally because she meets the only criteria that matter: never held partisan elected office, willing to serve, operationally capable.</p>
+        <p>Part B — the mid-term vacancy — is the simpler constitutional case. The SDACO mechanism works because the institutional infrastructure exists. The Caretaker PM's 90-day window gives the coalition time to run an internal leadership process without triggering Senate intervention. The vacancy lasted 35 days — well within the window. The new PM was seated by ordinary confidence vote. The NRS recorded the resignation, the caretaker activation, the coalition ballot timeline, and the new PM's oath.</p>
+        <p>The key difference between the two scenarios is what the constitution requires the Senate to do. In the post-election case: mandatory designation within 14 days. In the mid-term case: the Senate may designate after 90 days if necessary — but the House acted in 35, so the Senate's authority never activated. The graduated response — SDACO first, Senate optional after 90 days, Senate mandatory in the post-election case — is the design the two scenarios validate.</p>
+        <p>The LI's weekly accountability reports in Part A are the accountability mechanism that made the political difference. Members whose names appeared on published records of failed formation votes — 87 days of weekly reports before a PM was seated — faced a constituency-visible record of inaction. The reports don't force resolution. They make the cost of failure visible at the individual member level, which is the pressure the fixed-term caretaker model relies on instead of dissolution.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-clemency.html">The Clemency Scenario →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
