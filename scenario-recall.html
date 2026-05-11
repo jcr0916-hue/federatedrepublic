@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Presidential Recall — The Federated Republic</title>
+  <meta name="description" content="A test of §2.10.b's popular recall mechanism — the highest democratic threshold in the constitution. The Senate refers. The campaign runs. The votes are counted. And the 'majority of all eligible voters' threshold proves far harder to meet than a majority of those who show up.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v144.docx" download>Download v143</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Democratic Accountability · §2.10.b · Presidential Popular Recall</span>
+      <h1 class="scenario-title">The Presidential Recall</h1>
+      <p class="scenario-subtitle">A test of §2.10.b — the highest democratic threshold in the constitution. The Senate refers a presidential recall to the national electorate. The campaign runs. Turnout is exceptional. But the constitution does not ask whether a majority of those who voted want removal. It asks whether a majority of all eligible voters do.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.10.a Legislative Removal</span>
+        <span class="prov-tag">§2.10.b Popular Recall</span>
+        <span class="prov-tag">§2.10.c One Referral Per Term</span>
+        <span class="prov-tag">§16.1 Electoral Commission</span>
+        <span class="prov-tag">§9.1 NRS Publication</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>President Adaora Mensah is in Year 4 of her six-year term. The intelligence scandal that broke in Year 3 — classified surveillance orders issued under her authority that the EI determined were constitutionally void under §2.1.e — has not resolved. Criminal investigations are ongoing. The President maintains the orders were lawful emergency measures. The EI's finding is on the NRS. The President's approval rating has fallen to 31%.</p>
+
+      <p>The §2.10.a legislative removal track has already failed. The House passed a Statement of Grounds by 271-229 — below the 2/3 threshold of 334. The §2.10.a track requires 2/3 of both chambers; it did not proceed. The President's supporters in the House, arguing the intelligence operations were necessary to prevent a documented external attack, held the majority below the constitutional threshold.</p>
+
+      <p>§2.10.c permits one Senate referral per presidential term. This is the Senate's one opportunity. A Senate majority of 61-39 votes to refer the presidential recall question to the national electorate. The motion passes on a Tuesday afternoon. The Electoral Commission sets a recall election date: 45 days from the Senate vote.</p>
+
+      <h2>The Constitutional Question Before the Campaign Begins</h2>
+
+      <p>§2.10.b requires a "majority of all eligible voters" for removal — not a majority of those who vote, not a majority of those who participate, but a majority of the full electoral roll. With 48.7 million eligible voters, the removal threshold is 24,350,001 votes for removal. This is a different question than whether a majority of participants want the President removed.</p>
+
+      <div class="math-box">
+        <span class="math-label">The Threshold — Three Scenarios</span>
+        <div class="line">Eligible voters: 48,700,000</div>
+        <div class="line">Threshold for removal: 24,350,001 (50%+ of eligible voters)</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">Scenario A — 70% turnout (34,090,000 voting):</div>
+        <div class="line">  Removal needs 24,350,001 = 71.4% of those who vote</div>
+        <div class="line">Scenario B — 80% turnout (38,960,000 voting):</div>
+        <div class="line">  Removal needs 24,350,001 = 62.5% of those who vote</div>
+        <div class="line">Scenario C — 90% turnout (43,830,000 voting):</div>
+        <div class="result">  Removal needs 24,350,001 = 55.6% of those who vote</div>
+      </div>
+
+      <p>The President's opponents understand the arithmetic. A majority of those who are motivated to vote is not enough. They need an extraordinary combination of high turnout and high margin. Non-participation is mathematically equivalent to a vote against removal — an eligible voter who does not show up effectively shields the President from recall.</p>
+
+      <h2>The Campaign</h2>
+
+      <p>The 45-day campaign is unlike any prior electoral contest in the Republic's history. It is not a campaign for candidates or policy — it is a campaign about one question: whether a specific individual should continue holding a specific office for two more years.</p>
+
+      <p>The President's campaign does not argue she acted lawfully — the EI's finding is on the NRS and cannot be disputed. It argues that removal requires the consent of the whole nation, not an activated partisan majority. It campaigns explicitly on turnout suppression among soft opponents: "This is not an election. Don't participate in a political game." The constitutional design that makes non-participation equivalent to a vote against removal is the campaign's structural advantage.</p>
+
+      <p>The recall campaign responds by reframing turnout as civic obligation: if you want accountability for documented constitutional violations, you must vote for it. Abstention is not neutrality — it is a choice with a constitutional consequence. The campaign's message is mathematically precise: 24.4 million votes for removal. Not a majority of those who show up. A majority of every eligible citizen in the Republic.</p>
+
+      <h2>Election Day</h2>
+
+      <p>Turnout reaches 82% — the highest in any Republic election. 40,134,000 citizens vote. The result is close by historical standards for a two-option referendum question.</p>
+
+      <div class="math-box">
+        <span class="math-label">The Result</span>
+        <div class="line">Total eligible voters: 48,700,000</div>
+        <div class="line">Turnout: 82% = 39,934,000 voting</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">For removal: 22,761,380 (57.0% of those voting)</div>
+        <div class="line">Against removal: 17,172,620 (43.0% of those voting)</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">Threshold required: 24,350,001</div>
+        <div class="result">For removal: 22,761,380 — SHORT BY 1,588,621 votes</div>
+      </div>
+
+      <p>57% of those who voted wanted the President removed. But 57% of those who voted is 46.7% of all eligible voters — short of the constitutional majority by 1.6 million votes. The recall fails. President Mensah continues in office.</p>
+
+      <div class="beat">
+        <div class="beat-label">Constitutional Aftermath</div>
+        <div class="beat-title">The President survives — narrowly and on record</div>
+        <p>§2.10.c bars the Senate from making another referral this term. One referral per term was used. The President's political position, already damaged, is now defined by an election result that will remain on the NRS permanently: 57% of those who participated voted for her removal. She governs for two more years with that fact publicly documented.</p>
+        <p>The 82% turnout and 57% against-President vote constitutes a massive democratic rebuke that stops just short of removal. Whether the design produced the right outcome is contested. The President's supporters argue the high threshold correctly prevented a politically motivated recall from removing a directly elected executive. Her opponents argue that 57% of 82% turnout should be sufficient democratic expression — that the "all eligible voters" denominator produces an anti-democratic result by making non-voters into effective supporters of the status quo.</p>
+        <p>The constitutional answer to both arguments is the same: the threshold was set deliberately high because the President holds a direct electoral mandate from a national election. Removing a nationally elected executive requires more than a simple majority of those motivated enough to participate in a recall campaign. The design reflects a judgment about democratic legitimacy, not a flaw. 1.6 million more motivated voters for removal could have changed the result. They did not participate.</p>
+      </div>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§2.10.b's "majority of all eligible voters" threshold is the most distinctive feature of the presidential recall mechanism. It is far harder to meet than a majority of participants — it requires not just winning the argument but producing the mobilization. The scenario tests the threshold under conditions of exceptional democratic engagement: 82% turnout is extraordinary, and 57% of those voting for removal is a decisive margin by ordinary electoral standards. Neither is sufficient.</p>
+        <p>The design choice this scenario validates: the threshold should be high for a President who holds a direct electoral mandate. §2.10.a's 2/3 legislative removal track requires cross-partisan consensus; §2.10.b's popular recall requires national supermajority mobilization. The two tracks together mean that removing a directly elected President is constitutionally possible but genuinely difficult. The scenario also validates §2.10.c's one-referral-per-term rule: without it, a hostile Senate could force repeated recall elections in a campaign of attrition. The one-shot rule makes the referral a serious commitment.</p>
+        <p>The President survives. The EI's constitutional violation finding remains permanently on the NRS. The Senate has spent its one referral. The electorate has spoken — and the constitution's design means that speaking is not enough if 18% of eligible voters choose not to participate.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-sc-election.html">← The Supreme Court Election</a>
+      <a href="scenario-budget.html">The Budget Impasse →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>

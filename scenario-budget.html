@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Budget Impasse — The Federated Republic</title>
+  <meta name="description" content="A test of §10.2 and §10.2.a — what happens when the Legislature fails to pass a budget past the 90-day continuation period. Government employee pay and legislator pay are withheld simultaneously. The NRS daily counter starts. And the political cost of continued failure accumulates publicly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .counter{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .counter-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .counter .line{margin-bottom:0.3rem;line-height:1.5}
+    .counter .highlight{color:#8B1A1A;font-weight:600}
+    .timeline{border-left:2px solid var(--border);margin:2rem 0;padding-left:1.5rem}
+    .tl-item{margin-bottom:1.25rem;position:relative}
+    .tl-item::before{content:'';width:10px;height:10px;background:var(--gold);border-radius:50%;position:absolute;left:-1.9rem;top:0.4rem}
+    .tl-day{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.2rem}
+    .tl-item p{font-size:0.9rem;line-height:1.7;color:var(--text);margin:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v144.docx" download>Download v143</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Fiscal Accountability · §10.2 and §10.2.a · Budget Failure and Pay Withholding</span>
+      <h1 class="scenario-title">The Budget Impasse</h1>
+      <p class="scenario-subtitle">A coalition fracture stalls the budget past the 90-day continuation period. Discretionary spending suspends. Government employees lose pay. Legislators lose pay simultaneously. The Monetary Authority publishes a daily count. And the political cost of failure accumulates on the National Record System one day at a time.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§10.2 Budget Continuation</span>
+        <span class="prov-tag">§10.2.a Legislative Pay Withholding</span>
+        <span class="prov-tag">§10.3 Fiscal Responsibility</span>
+        <span class="prov-tag">§8.1 MA Fiscal Certification</span>
+        <span class="prov-tag">§9.1 NRS Publication</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The PC-DRP coalition that formed the government has held together for three years on domestic policy. The coalition fractures on Year 4's budget over one provision: the government's proposed expansion of the Basic Needs Floor housing adequacy standard, which the DRP argues is fiscally unsustainable given current gross national revenue projections. The PC refuses to remove it. The DRP refuses to vote for a budget that includes it. The fiscal year begins without a passed budget.</p>
+
+      <p>§10.2 is clear: where no budget has been enacted by the start of the fiscal year, existing programs continue at the prior year's spending rate for a continuation period of up to 90 days. The Monetary Authority publishes a public finding to the NRS confirming that continuation spending is in effect — the first such finding in the Republic's history. The finding triggers a 90-day countdown.</p>
+
+      <h2>The Continuation Period — Days 1 through 90</h2>
+
+      <p>During the 90-day window, government continues to function at prior-year rates. Civil servants receive pay. Existing programs operate. New spending and policy cannot be initiated. The coalition holds formal negotiations in weeks one and two; they produce nothing. In weeks three and four, the PM proposes three compromise formulations on the housing standard — all rejected by the DRP. The DRP proposes two alternatives — both rejected by the PC.</p>
+
+      <p>Day 60: the MA publishes an updated finding noting the continuation period is two-thirds expired. The finding includes the constitutional timeline: discretionary spending suspends at Day 91. Both chambers receive the finding. The political pressure rises but does not resolve the dispute. The coalition's internal dynamics have calcified — both parties are preparing for the political consequence of budget failure rather than negotiating toward resolution.</p>
+
+      <div class="beat">
+        <div class="beat-label">Day 91 — §10.2 Suspension Triggers</div>
+        <div class="beat-title">Discretionary spending suspends — §10.2.a activates simultaneously</div>
+        <p>At the close of Day 90 without a passed budget, discretionary government spending suspends automatically under §10.2. The Basic Needs Floor continues at constitutional minimum — that is protected spending and cannot be suspended. All other discretionary spending stops. Government employees in roles funded by discretionary appropriation do not receive pay until a budget is enacted.</p>
+        <p>Simultaneously, §10.2.a activates: legislator pay is withheld from the same day. Not a day earlier, not a day later. The Monetary Authority publishes a joint counter to the NRS — Day 1 of pay withholding, for both government employees and legislators simultaneously. The counter is publicly accessible. It is updated every calendar day. It will not stop until a budget passes.</p>
+      </div>
+
+      <h2>The Pay Withholding Period</h2>
+
+      <p>The practical effect on legislators is immediate and personal. Members of the House who are not independently wealthy begin to feel the financial pressure within two pay cycles. The DRP's fourteen junior members — newer legislators with mortgages and dependent households — are the first to crack. On Day 8 of withholding, four DRP members publicly break from their caucus and announce they will support a budget with a modified housing standard.</p>
+
+      <div class="counter">
+        <span class="counter-label">MA Daily Counter — NRS Publication</span>
+        <div class="line">Day 1 (Day 91 of fiscal year): Withholding begins</div>
+        <div class="line">  Government employees affected: 312,400</div>
+        <div class="line">  Legislators affected: 500 House + 100 Senate = 600</div>
+        <div class="line">  Pay withheld (employees): MA certified weekly total</div>
+        <div class="line highlight">  Pay withheld (legislators): publicly named by chamber and party</div>
+        <div class="line">Day 8: First DRP defections (4 members)</div>
+        <div class="line">Day 11: Additional DRP members signal willingness to negotiate</div>
+        <div class="line">Day 14: Coalition emergency session called</div>
+        <div class="line highlight">Day 19: Budget enacted — withholding period: 19 days</div>
+      </div>
+
+      <h3>The Resolution</h3>
+
+      <p>On Day 14 of withholding — Day 104 of the fiscal year — the PM calls an emergency coalition session. The housing standard compromise that passed is a modified version of the PC's original proposal: the adequacy standard expansion applies but with a phased MA fiscal certification requirement that defers full implementation until revenue thresholds are met. The DRP accepts the MA fiscal gate. The PC accepts the phased implementation. The vote is 271-229 — the four DRP defectors voting with the government, the remaining DRP bloc voting against.</p>
+
+      <p>The budget passes at 11:47 PM on Day 104 of the fiscal year. It is certified by the PM and published to the NRS within the hour. The Monetary Authority confirms budget enactment to the NRS simultaneously. Day 19 of pay withholding ends.</p>
+
+      <div class="beat">
+        <div class="beat-label">§10.2.a — Restoration</div>
+        <div class="beat-title">Withheld pay released within 14 days of budget enactment</div>
+        <p>§10.2.a requires withheld legislator pay to be released in full within 14 days of budget enactment. The 19 days of withheld pay for all 600 legislators is transferred within 12 days of the budget passing. Government employees in roles funded by discretionary spending receive their withheld pay through the normal payroll cycle within the same window.</p>
+        <p>The pay is escrowed throughout — no legislator permanently loses compensation for the 19 days. §10.2.a is explicit: members are compensated for the full period because they continued performing their duties during the impasse. The withholding was pressure, not punishment. The resolution restores what was held.</p>
+        <p>The MA's daily NRS counter — 19 entries, each documenting the running total of withheld pay for legislators and employees — remains on the NRS permanently. Day 1 through Day 19. The counter stopped. The record did not.</p>
+      </div>
+
+      <h2>The Political Aftermath</h2>
+
+      <p>The 19-day withholding period leaves a detailed public record of who cracked first and why. The four DRP members who defected on Day 8 face internal party discipline — two are removed from committee assignments by the DRP caucus. The DRP's public position is that the budget compromise was forced through financial pressure on junior members, not genuine policy agreement.</p>
+
+      <p>The PC's position: the housing standard the DRP refused to vote for is now law, in modified form. The MA's phased implementation gate gives it a fiscal sustainability guarantee the DRP originally demanded. The impasse produced a compromise that neither side would have reached without the financial pressure of the 90-day continuation deadline and the 19-day pay withholding period.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§10.2.a's parallel withholding mechanism is designed to make budget failure personally costly for legislators at the same moment it becomes costly for government employees. The scenario validates the design: the financial pressure on junior legislators was the decisive variable. The 90-day continuation period provides a genuine working window — it is not a cliff edge at Day 1 — but the cliff at Day 91 is real. The parallel activation means legislators cannot extend the continuation period indefinitely while drawing pay; they feel the same suspension they impose on 312,400 government employees.</p>
+        <p>The escrowed restoration matters too. A permanent forfeiture model would punish legislators disproportionately and create an incentive to accept bad deals quickly rather than negotiate good ones. The escrow model means the pressure is genuine but the consequence is proportionate: legislators who worked through the impasse get paid for having worked. The NRS record of 19 days of withholding — not the permanent loss of 19 days of pay — is the accountability mechanism.</p>
+        <p>The scenario also illustrates the limit of financial pressure as a constitutional tool. 19 days resolved a coalition fracture. A more fundamental constitutional dispute — a minority bloc prepared to accept indefinite withholding on ideological grounds — would not be resolved this way. The mechanism works when legislators' personal financial circumstances create pressure that aligns with the constitutional objective. When it does not, the political accountability mechanisms — recall, elections, confidence votes — are the right instruments.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-recall.html">← The Presidential Recall</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
