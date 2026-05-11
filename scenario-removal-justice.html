@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Statement of Grounds — The Federated Republic</title>
+  <meta name="description" content="A Supreme Court justice is removed under §4.1.c for the first time. The mechanism is new. The conduct is documented. The Senate trial takes 67 days. What separates removable conduct from disagreement with rulings — and what it costs the Court to function with six justices for nine months.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v145.docx" download>Download v145</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Judicial Accountability · §4.1.c · First SC Justice Removal</span>
+      <h1 class="scenario-title">The Statement of Grounds</h1>
+      <p class="scenario-subtitle">A Supreme Court justice is removed under §4.1.c for the first time — not for her rulings, but for how she issued one. The distinction between judicial philosophy and judicial conduct is the constitutional question the removal mechanism forces the Legislature to answer precisely.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§4.1.c SC Justice Removal</span>
+        <span class="prov-tag">§3.5.c Senate Trial</span>
+        <span class="prov-tag">§4.2.e Mid-Term Vacancy</span>
+        <span class="prov-tag">§4.2.g Vacancy Operating Rules</span>
+        <span class="prov-tag">§8.6.b No Classification</span>
+        <span class="prov-tag">§9.1 NRS Immutability</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>Justice Elara Vance has served on the Supreme Court for eight years. She was elected in Year 2 of the Republic — the second judicial election cycle — on a platform of strict constitutional textualism, and her record on the Court has been consistent with that position. In forty-one majority opinions, she has developed a coherent body of judicial doctrine. The Legislature has disagreed with much of it. Several of her rulings on the scope of emergency powers under §1.25 have been particularly contested.</p>
+
+      <p>The case that produces the Statement of Grounds is not about her judicial philosophy. It is about a specific order, issued on a Tuesday evening in October of Year 9, in response to an emergency motion filed by the Prime Minister's office at 6:47 p.m.</p>
+
+      <h2>The Order</h2>
+
+      <p>The motion asked the Court to stay an Executive Inspectorate report scheduled for publication to the National Record System the following morning. The report detailed findings from an eighteen-month audit of the PM's domestic emergency certification process — specifically, the basis for three domestic emergency declarations issued during Year 8. The PM's office characterized the report as operationally sensitive material that, if published before the Legislature could respond, would cause immediate policy harm.</p>
+
+      <p>Justice Vance issued the stay at 9:12 p.m. She did not convene the Court. She did not contact the other six justices. She did not publish a written rationale to the National Record System. She issued the order as a single-justice emergency measure and transmitted it to the EI's Director of Operations.</p>
+
+      <p>The EI's response, published to the NRS the following morning in place of the stayed report, noted three facts: §8.6.b permanently exempts Inspectorate Reports from classification; the Court's own procedural rules require a quorum of five justices for any stay affecting an Inspectorate publication; and no quorum had been convened. The EI published a notice of constitutional irregularity and held the report. Justice Vance's order remained formally unresolved for forty-seven days — forty-seven days during which the EI's constitutionally mandated report was withheld from public access.</p>
+
+      <p>The Court eventually convened and vacated Justice Vance's order 5-2. The report was published. Justice Vance declined to issue a written statement explaining the initial order.</p>
+
+      <h2>The Statement of Grounds</h2>
+
+      <p>Under §4.1.c, the House must pass a Statement of Grounds by 2/3 of its full seated membership before a Senate trial may begin. The Statement is a legal document — it specifies the conduct, decisions, or failures that constitute the basis for removal. The Senate trial is strictly limited to the grounds stated; the Senate may not convict on conduct outside the Statement.</p>
+
+      <p>The drafting of the Statement takes six weeks. Multiple versions circulate. The central debate is the one the mechanism is designed to force: is the basis for removal her judicial philosophy — her rulings on emergency powers — or her conduct in issuing the October order? The constitution answers this question structurally. You cannot remove a justice for rulings that a 2/3 legislative majority disagrees with. You can remove a justice for conduct that violates the constitutional order. The Statement that emerges focuses exclusively on the October order.</p>
+
+      <div class="beat">
+        <div class="beat-label">§4.1.c — The Statement of Grounds</div>
+        <div class="beat-title">What the House charged</div>
+        <p>The Statement of Grounds, published to the NRS simultaneously with the House vote, specified three distinct grounds: (1) issuance of a judicial order without convening the constitutionally and procedurally required quorum; (2) issuance of a stay affecting an Inspectorate publication in direct conflict with §8.6.b, which permanently exempts Inspectorate Reports from classification or suppression by any authority; and (3) failure to publish any rationale to the National Record System, in violation of the Court's own constitutional transparency obligations under §9.1.</p>
+        <p>The Statement explicitly excluded any reference to Justice Vance's jurisprudential positions on emergency powers. The drafting committee noted in its published remarks: a justice may interpret §1.25 differently than a legislative majority. That is not a ground for removal. A justice may not suppress an Inspectorate report for forty-seven days by issuing an order the Court had no quorum to authorize. That is.</p>
+      </div>
+
+      <div class="math-box">
+        <span class="math-label">House Vote on the Statement of Grounds</span>
+        <div class="line">Full seated House membership: 500</div>
+        <div class="line">2/3 threshold: 334 (minimum)</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">For the Statement: 341</div>
+        <div class="line">Against: 159</div>
+        <div class="result">Statement passes — Senate trial authorized</div>
+      </div>
+
+      <h2>The Trial</h2>
+
+      <p>Under §3.5.c, the Senate trial is presided by the Supreme Court's most senior justice — defined as the longest-serving, with age as a tiebreaker — unless that justice is the subject of the proceedings. Justice Vance is the subject. The most senior remaining justice is Justice Kwame Ekwueme, who has served eleven years. Justice Ekwueme presides.</p>
+
+      <p>The trial is public. Every session is recorded and published to the NRS in real time. It runs sixty-seven days.</p>
+
+      <p>Justice Vance mounts a defense centered on the emergency context of the October order. She argues the motion before her required immediate action; that calling a quorum at 9 p.m. on a Tuesday was practically impossible; that the forty-seven-day hold was not her doing but the EI's interpretation of the order's scope; and that a single-justice emergency measure is within the inherent authority of any justice of any court when circumstances demand it.</p>
+
+      <p>The prosecution — conducted by House managers — presents a narrow argument. There is no inherent authority in a constitutional court that overrides explicit quorum requirements. There is no emergency exception to §8.6.b. The forty-seven days were constitutionally intolerable regardless of who caused them. The October order was not a constitutional act.</p>
+
+      <p>Six justices constitute the functioning Court during the trial period. They continue hearing cases. Under §4.2.g, a 3-3 tie affirms the lower court ruling without setting national precedent. There are three such ties during the sixty-seven days of trial — three constitutional questions that remain unresolved, sent back to lower courts without Supreme Court guidance, because the Court is operating at half-quorum through a procedure it has never previously used.</p>
+
+      <div class="math-box">
+        <span class="math-label">Senate Vote — Conviction and Removal</span>
+        <div class="line">Full seated Senate membership: 100</div>
+        <div class="line">2/3 threshold: 67 (minimum)</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">For conviction (removal): 87</div>
+        <div class="line">Against: 13</div>
+        <div class="result">Conviction — removal from office immediate and automatic</div>
+      </div>
+
+      <p>Justice Vance is removed. The Senate subsequently votes 78-22 to bar her from holding any future federal office — a separate vote, requiring only a simple majority, which passes comfortably. Her criminal liability for the unauthorized suppression of an Inspectorate report remains separately pursuable; proceedings are opened and ultimately produce a formal charge, though not a conviction.</p>
+
+      <h2>The Vacancy</h2>
+
+      <p>Under §4.2.e, the vacant seat appears on the next National Election Day ballot. National Election Day is nine months away. The Legislature does not reach the 2/3 threshold to authorize an earlier special election. The Court operates with six justices for nine months.</p>
+
+      <div class="beat">
+        <div class="beat-label">§4.2.g — Vacancy Operating Rules</div>
+        <div class="beat-title">Six justices, three ties, nine months</div>
+        <p>The Court publishes its operating rules for the vacancy period to the NRS within fourteen days of Justice Vance's removal. The rules establish: six justices constitute a quorum; a 3-3 tie affirms the lower court ruling without setting national precedent; cases raising the specific issue of single-justice emergency orders are assigned priority scheduling in anticipation of a full seven-justice bench after the election.</p>
+        <p>Seven cases produce 3-3 ties during the nine months. Five of them involve emergency power questions — constitutional issues that, under ordinary circumstances, would have produced binding Supreme Court precedent. They produce none. The questions are sent back to lower courts, which apply different standards in different jurisdictions. The constitutional uncertainty created by the vacancy lasts until the replacement justice takes her seat, issues her first opinion, and writes the tie-breaking vote in the emergency powers case that had been waiting eleven months for resolution.</p>
+      </div>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§4.1.c is the most carefully bounded removal mechanism in the constitution. The Statement of Grounds requirement forces the House to specify — in writing, on the NRS, before the trial begins — exactly what conduct constitutes the basis for removal. The Senate may not convict on anything outside the Statement. This structural constraint is deliberate: it prevents judicial removal from becoming a legislative weapon against rulings that a 2/3 majority dislikes.</p>
+        <p>The scenario validates that constraint by showing what it excludes as much as what it permits. Justice Vance's emergency powers jurisprudence — the body of rulings that produced political hostility toward her — is not in the Statement of Grounds. It was not a basis for removal. What is in the Statement is narrow, specific, and documented: a judicial order issued without quorum, affecting an Inspectorate publication that §8.6.b shields from suppression by any authority, with no NRS rationale published. The 87-13 Senate vote suggests that when the conduct is clearly stated, the threshold for removal is not the obstacle — the requirement to be specific about what the justice actually did is.</p>
+        <p>The nine-month vacancy and its seven 3-3 ties are the constitutional cost of the mechanism. The Court loses its full voice on a set of questions for the duration. The design offers no shortcut: the replacement is elected, not appointed, and the election is national, not expedited without a 2/3 legislative vote. The cost of maintaining judicial accountability through a democratic election is nine months of 3-3 ties. The constitution treats that cost as acceptable.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-budget.html">← The Budget Impasse</a>
+      <a href="scenario-removal-officer.html">The Notice →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>

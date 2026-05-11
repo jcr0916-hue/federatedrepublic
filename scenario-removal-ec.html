@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Commissioner — The Federated Republic</title>
+  <meta name="description" content="A Commissioner's undisclosed conflict of interest is discovered 210 days before National Election Day. The JI finds grounds. The Legislature schedules a vote. By the time of the vote, 175 days remain — inside the 180-day election proximity window. The removal is suspended by operation of law. The Commissioner administers the election.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .alert-box{background:#4a1b1b;border-left:3px solid #c9504c;color:rgba(245,240,232,0.85);padding:1.25rem 1.5rem;margin:2rem 0}
+    .alert-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#e8888a;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .alert-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .alert-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v145.docx" download>Download v145</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Electoral Integrity · §16.2.a · §16.5.c · EC Member Removal</span>
+      <h1 class="scenario-title">The Commissioner</h1>
+      <p class="scenario-subtitle">An Electoral Commission member's undisclosed conflict of interest is discovered 210 days before National Election Day. The JI finds grounds substantiated. The Legislature schedules a removal vote. By the time it can be held, only 175 days remain before the election — inside the 180-day proximity window. The removal is automatically suspended by the constitution. Commissioner Vargas administers the election.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§16.2.a EC Removal</span>
+        <span class="prov-tag">§16.5.c 180-Day Proximity Rule</span>
+        <span class="prov-tag">§16.5.d Mid-Term Vacancy</span>
+        <span class="prov-tag">§8.1.c JI Oversight of EC</span>
+        <span class="prov-tag">§8.9 State Designee Panel</span>
+        <span class="prov-tag">§9.1 NRS Immutability</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>Commissioner Thalia Vargas was elected to the Electoral Commission in Year 6 of the Republic, on a platform of technical modernization for the National Voting System. She received 61.3% of the national vote — a strong mandate for a body that rarely generates electoral enthusiasm. She serves a six-year non-renewable term. In Year 9, the Judicial Inspectorate's annual audit of the Electoral Commission discovers a problem in her financial disclosures.</p>
+
+      <h2>The Conflict</h2>
+
+      <p>Commissioner Vargas disclosed her investment holdings as required under §10.5.b. She disclosed her spouse's general investment portfolio as required. What she did not disclose — and what the JI's forensic audit discovers by cross-referencing her spouse's holdings against EC vendor contracts — is that her spouse holds 340,000 shares of Meridian Electoral Systems, a voting technology company that received a sole-source contract from the EC in Year 8 for supplemental National Voting System infrastructure.</p>
+
+      <p>The contract was worth 47 million. Her spouse's holding was worth approximately 4.1 million at the time of the contract award. Commissioner Vargas participated in the EC vote approving the Meridian contract. The vote was 4-1. She voted in favor.</p>
+
+      <p>She did not receive any direct financial benefit. Her spouse's shares were already owned before she joined the Commission. The gain was passive and proportional to the market performance of the shares, not to any preferential treatment Meridian received. Commissioner Vargas maintains she was unaware of the specific Meridian holding within her spouse's managed portfolio — that her disclosures accurately reflected what she knew of the portfolio's composition.</p>
+
+      <p>The JI's published finding makes no determination about her intent or knowledge. It makes one determination: the undisclosed holding constitutes an undisclosed conflict of interest under §16.2.a, regardless of intent. The conflict existed. It was not disclosed. The EC vote occurred with the conflict undisclosed. That is the factual record.</p>
+
+      <div class="beat">
+        <div class="beat-label">§8.1.c — JI Annual Audit Finding</div>
+        <div class="beat-title">Published to the NRS — Day 0</div>
+        <p>The JI's finding is published to the National Record System on a Thursday morning. It is 34 pages. The first paragraph states its conclusion: Commissioner Vargas holds an undisclosed conflict of interest as defined under §16.2.a — specifically, an undisclosed financial interest through her spouse in a vendor that received a sole-source contract during her tenure, in a vote she participated in without disclosure. The finding states that this constitutes documented grounds for For-Cause removal proceedings and that the JI has notified the Legislature accordingly.</p>
+        <p>Commissioner Vargas issues a public statement the same day. She acknowledges the holding. She says she was unaware of its specific composition. She does not resign. She says she will continue to perform her duties unless and until a valid removal process concludes.</p>
+      </div>
+
+      <h2>The Timing Problem</h2>
+
+      <p>The JI's finding is published 210 days before National Election Day — the biennial election at which roughly 40% of all House seats, the full Electoral Commission election, and two Senate seats are on the ballot. Well over 20% of seated national offices are contested.</p>
+
+      <p>The Legislature files a formal For-Cause removal motion the following week. Under §16.2.a, no removal vote may be held without a JI finding — and that finding is already published. Under §16.5.c, the removal requires a 2/3 vote of both chambers simultaneously. Under §8.9.a, the State Designee Panel must verify the grounds before the Legislature may act.</p>
+
+      <p>The State Designee Panel convenes within fourteen days. It reviews the JI's finding and publishes its binary determination on Day 22: grounds substantiated. The Legislature may proceed.</p>
+
+      <div class="math-box">
+        <span class="math-label">The Proximity Calculation</span>
+        <div class="line">JI finding published: Day 0 (210 days before National Election Day)</div>
+        <div class="line">Removal motion filed: Day 7 (203 days before NED)</div>
+        <div class="line">State Designee Panel: convenes Day 10, publishes Day 22</div>
+        <div class="line">Earliest vote date after Panel publication: Day 27</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">Days before National Election Day at Day 27: 210 - 27 = 183</div>
+        <div class="line">183 days > 180-day threshold — vote CAN proceed</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">Legislature schedules the vote for Day 35 (scheduling conflicts)</div>
+        <div class="result">Days before NED at Day 35: 210 - 35 = 175 days — INSIDE the window</div>
+      </div>
+
+      <p>The vote is scheduled for a Thursday, Day 35. On Tuesday of that week — Day 33 — a legal challenge is filed in the Supreme Court. The challenge does not contest the grounds or the process. It notes one fact: on the scheduled vote date, 175 days will remain before National Election Day. Under §16.5.c, any removal attempt within 180 days of a national election at which more than 20% of seated national offices are on the ballot is automatically suspended pending Supreme Court review within 48 hours.</p>
+
+      <div class="alert-box">
+        <div class="alert-label">§16.5.c — Automatic Suspension</div>
+        <p>The Supreme Court convenes an emergency panel within 24 hours. The question before the Court is narrow: does the vote, as scheduled, fall within the 180-day proximity window? The answer is arithmetic. 175 days remain. 175 is less than 180. The suspension applies automatically.</p>
+        <p>The Court's published order, issued forty-one hours after the challenge is filed: the scheduled removal vote is suspended by operation of §16.5.c. The suspension continues until the completion of National Election Day and the certification of its results. The Legislature may reschedule the vote at any point after certification.</p>
+      </div>
+
+      <h2>The Election</h2>
+
+      <p>Commissioner Vargas continues in her post. She has no choice; the constitution gives her none. Under §16.2.a, a member subject to For-Cause proceedings continues all duties until the removal vote concludes. The vote has not concluded — it has been suspended. She is the elected Commissioner. She continues to serve.</p>
+
+      <p>The Electoral Commission administers National Election Day under its standard operating protocols. Commissioner Vargas participates in all five Commission votes during the pre-election period. The Commission's decisions require a 3/5 majority — three votes from its five members. Commissioner Vargas's vote is one of five. She recuses herself from two procedural matters that the other Commissioners determine involve the Meridian Systems contract. She does not recuse herself from any election administration decisions.</p>
+
+      <p>National Election Day proceeds without incident. Turnout is 74%. Results are certified by the Electoral Commission — all five members signing — eighteen days after the election. The JI's post-election audit finds no irregularities in the conduct of the election attributable to the Commission or any of its members.</p>
+
+      <h2>The Vote</h2>
+
+      <p>The Legislature reschedules the removal vote for thirty-two days after election certification. The constitutional process resumes where it was suspended. The State Designee Panel's finding remains valid — grounds were substantiated; nothing in the interim changes that determination. The JI's finding remains on the NRS. The vote proceeds.</p>
+
+      <div class="math-box">
+        <span class="math-label">Removal Vote — Post-Election</span>
+        <div class="line">Full seated House membership: 500 — threshold: 334</div>
+        <div class="line">Full seated Senate membership: 100 — threshold: 67</div>
+        <div class="line">Both chambers must vote simultaneously (same day)</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">House: 339 for removal / 161 against — PASSES (334 needed)</div>
+        <div class="line">Senate: 71 for removal / 29 against — PASSES (67 needed)</div>
+        <div class="result">Commissioner Vargas removed — effective immediately</div>
+      </div>
+
+      <p>Commissioner Vargas is removed eighty-three days after the JI published its initial finding. She administered one full national election while the documented conflict of interest and the substantiated grounds for her removal were publicly visible on the NRS. The Senate's additional vote on future office disqualification fails — 59-41, short of the simple majority of full seated membership required. She is removed but not barred from future federal office.</p>
+
+      <p>Under §16.5.d, the vacancy is filled by special election through the National Voting System within ninety days. The seat was originally filled by national popular vote; it is filled the same way.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>The 180-day election proximity rule in §16.5.c exists to prevent a temporary legislative majority from removing an Electoral Commission member just before an election in order to influence that election's administration. It is a protection against the most acute form of electoral manipulation: a partisan Legislature purging the body that runs elections in the final months before those elections occur.</p>
+        <p>The protection is structural. It does not ask why the Legislature is acting. It asks only when. A removal motion filed in good faith, for legitimate grounds, with a JI finding substantiated and a Panel verification complete, is suspended with equal automaticity as a bad-faith partisan removal attempt — if the vote falls within 180 days of a qualifying election. The constitution cannot distinguish intent from outcome at the proximity threshold. So it applies the rule without regard to intent.</p>
+        <p>This scenario tests the cost of that design choice. The 35-day scheduling delay — the five working days between when the Panel's finding was published and when the Legislature could schedule the vote — moved the vote date from 183 days before the election to 175. Eight days of scheduling friction created a constitutional barrier that lasted four months. Commissioner Vargas administered a national election with documented, substantiated grounds for her removal permanently on the NRS.</p>
+        <p>The constitution's answer to the question of whether that cost is acceptable is implicit in the design: yes. The alternative — a rule that suspends only bad-faith removal attempts — would require the Court or the Legislature to determine intent in real time, with forty-eight hours to act, close to an election. That determination cannot be reliably made. The bright-line proximity rule is crude and will occasionally protect people who should be removed. The alternative produces a different and harder problem: courts adjudicating legislative motivation about election administration in the final weeks before an election. The design chooses the cruder, more predictable rule.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-removal-officer.html">← The Notice</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
