@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everywhere She Goes — The Federated Republic</title>
+  <meta name="description" content="A couple adopts a child in the State of Verentis. One parent's work takes the family to the State of Kailos. Kailos courts refuse to recognize the adoption order. The grounds: that recognizing it would violate Article I fundamental rights. The Supreme Court receives the case in twenty-two days. The constitutional question is narrow. The answer is not.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v150.docx" download>Download v150</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Interstate Recognition · §4.4.d · Status Order Portability</span>
+      <h1 class="scenario-title">Everywhere She Goes</h1>
+      <p class="scenario-subtitle">Amara and Suki adopt a child in the State of Verentis. Amara's work takes the family to the State of Kailos. Kailos courts refuse to register the adoption order, arguing that recognizing it would be facially contrary to Article I fundamental rights. The Supreme Court receives the case in twenty-two days. The constitutional question is narrow. The answer reshapes what the Republic means by a unified legal space.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§4.4.d Status Orders</span>
+        <span class="prov-tag">§4.4.a Grounds for Non-Recognition</span>
+        <span class="prov-tag">§4.4.b NRS Authentication</span>
+        <span class="prov-tag">§1.8 Equality Before the Law</span>
+        <span class="prov-tag">§1.12 Freedom of Movement</span>
+        <span class="prov-tag">§4.3.b Organizational Standing</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>Amara Osei and Suki Tanaka adopted Maya through the State of Verentis Family Court in Year 4 of the Republic. Maya was eighteen months old at the time. The adoption order names both women as legal parents with equal parental rights and responsibilities. It was published to the National Record System within forty-eight hours of issuance, bearing the issuing judge's cryptographic signature and the court's authentication seal. On the NRS it is entry number 847,204,113. It has been there, immutably, for three years.</p>
+
+      <p>In Year 7, Amara accepts a senior engineering position at a firm in the State of Kailos. They move. Maya is four years old. Suki begins the process of enrolling Maya in school and updating family records with Kailos State administrative authorities.</p>
+
+      <p>The Kailos Office of Vital Records declines to register Suki Tanaka as a legal parent on Maya's Kailos birth record. The stated reason: Kailos family law recognizes adoption orders where both parents are of opposite sexes. The Verentis order does not meet this criterion. The Office declines to treat the NRS-published order as presumptive proof of Suki's parental status under §4.4.b.</p>
+
+      <p>Suki petitions the Kailos District Court for an order directing the Vital Records Office to comply with §4.4.d. The District Court declines. Its published opinion — twelve pages, filed to the NRS within the required period — argues that Kailos courts are entitled to invoke the §4.4.a non-recognition grounds, specifically the provision permitting non-recognition where "the judgment is facially contrary to a fundamental right guaranteed by Article I." The Kailos District Court holds that children have a fundamental right under Article I to the stability of a legally defined family structure — a structure the court interprets as requiring opposite-sex parents. The adoption order, the court concludes, is facially contrary to that fundamental right.</p>
+
+      <h2>The Argument</h2>
+
+      <p>The District Court's opinion is immediately recognized by constitutional scholars as aggressive and almost certainly wrong, but not frivolous. It has located the one non-recognition ground in §4.4.a that requires the receiving court to make a substantive Article I judgment — and it has made that judgment in a direction that inverts the provision's obvious design. The §4.4.a grounds were written to prevent enforcement of judgments that actively harm the rights of the person before the receiving court. The Kailos District Court has deployed them to deny rights to the very person they were designed to protect.</p>
+
+      <div class="beat">
+        <div class="beat-label">§4.4.a — The Non-Recognition Grounds</div>
+        <div class="beat-title">What the provision actually permits receiving courts to refuse</div>
+        <p>§4.4.a lists four exhaustive grounds for non-recognition: the issuing court lacked jurisdiction; the judgment was obtained by fraud on the court; the judgment is facially contrary to an Article I fundamental right; or enforcement falls into a category the Legislature has defined as categorically unenforceable. The provision is explicit: these grounds are exhaustive. No receiving court may create additional bases.</p>
+        <p>The "facially contrary to Article I" ground was drafted for cases where enforcing an order would itself violate the rights of the person before the receiving court — for example, enforcing a foreign judgment that would enslave a person, or an order that would torture them. It was not drafted as a general licence for receiving courts to substitute their substantive family law for the issuing court's. The Kailos District Court has treated a child-protective provision as a parent-targeting one. It has used a rights-protecting clause to deny rights. This inversion is the constitutional question the Supreme Court must resolve.</p>
+      </div>
+
+      <p>Amara and Suki appeal to the Kailos Appellate Court. The Appellate Court upholds the District Court 2-1, with a strong dissent. The majority acknowledges it is in "constitutionally uncertain territory" but defers to the District Court's interpretation of Article I's content. The dissent is direct: there is no Article I fundamental right that a child be raised by opposite-sex parents; §1.8 explicitly prohibits discrimination on the basis of sexual orientation; and the majority's reasoning would allow any receiving State to refuse recognition of any adoption order it found culturally inconvenient by manufacturing an Article I theory. The dissent is sixteen pages and is widely reproduced in legal publications before the Supreme Court grants certiorari.</p>
+
+      <p>The SC grants certiorari on Day 22 of the Appellate Court's ruling — well within the petition window. Four civil liberties organizations file as amicus curiae under §4.3.b organizational standing. The Kailos State government files a brief defending the Appellate Court's decision. Eleven other States — those with family law most similar to Kailos — file a joint amicus brief supporting the State's position. Fourteen States file a joint amicus brief on the other side.</p>
+
+      <h2>The Ruling</h2>
+
+      <p>The Supreme Court rules 7-0. The majority opinion is fifty-one pages. The concurrence is nine. There is no dissent.</p>
+
+      <div class="beat">
+        <div class="beat-label">§4.4.d and §1.8 — The SC's Core Holding</div>
+        <div class="beat-title">Three propositions, each narrower than the last</div>
+        <p><strong>First:</strong> §4.4.d requires immediate recognition of adoption orders in every State and Territory without waiting period. The provision is not qualified by the receiving State's family law. It does not say "recognition consistent with receiving State law." It says recognition. Period. The Kailos courts had no power to substitute their own family law for the Verentis court's jurisdiction over this adoption.</p>
+        <p><strong>Second:</strong> The §4.4.a "facially contrary to Article I" non-recognition ground applies where enforcing the order would itself violate the rights of the person before the receiving court. It does not apply where the receiving court simply disagrees with the order's substantive content. The Kailos District Court identified no Article I right that enforcement of this adoption order would violate. It identified an Article I right it believed the child possessed — a right nowhere in the text of Article I — and used it to deny the child's own legal parent recognition. This is not what §4.4.a permits. The §4.4.a grounds are protective of the person before the court; they are not a gateway for cultural non-recognition.</p>
+        <p><strong>Third:</strong> §1.8 prohibits discrimination on the basis of sexual orientation. It binds all entities exercising public authority. The Kailos Vital Records Office and the Kailos courts are entities exercising public authority. Refusing to register a legal parent on grounds that the adoption order was issued to same-sex parents is discrimination on the basis of sexual orientation under §1.8. The Kailos courts' §4.4.a reasoning was an attempt to give §1.8-prohibited discrimination a constitutional disguise. It does not succeed.</p>
+      </div>
+
+      <p>The SC's order is immediate and direct: the Kailos Office of Vital Records must register Suki Tanaka as Maya's legal parent within 14 days. The Kailos courts' published opinions — both the District Court and Appellate Court decisions — remain on the NRS permanently as entries in the constitutional record. They are not erased. They stand as documentation of an argument the Republic's highest court rejected unanimously.</p>
+
+      <p>The concurring opinion, written by the SC's most recently elected justice, addresses the NRS dimension directly. The Verentis adoption order has been on the NRS for three years. It carries a cryptographic signature. Under §4.4.b it is presumptive proof of its own existence, authenticity, content, and finality. The Kailos courts could not challenge its authenticity — they did not try to. What they challenged was its meaning. The NRS cannot store meaning — it stores facts. What the SC has done in this ruling is state what the fact means in the Republic's constitutional order: it means Suki Tanaka is Maya's legal parent, everywhere she goes.</p>
+
+      <h2>The Aftermath</h2>
+
+      <p>Within ninety days of the ruling, the Legislature passes the Family Status Recognition Implementation Act — the §4.4.f statutory implementation the constitution required but the Legislature had not fully enacted. The Act defines what constitutes a final judgment for family status proceedings, establishes a uniform one-day filing deadline for receiving courts to register adoption orders, creates a civil enforcement mechanism with costs awarded to the petitioning party in cases of bad-faith non-recognition, and explicitly codifies the SC's interpretation of the §4.4.a Article I ground as applying only to orders that would themselves violate the rights of the person before the receiving court.</p>
+
+      <p>The eleven States that filed amicus briefs in favor of Kailos comply with the ruling. Their compliance is published to the NRS. None of them subsequently attempt to invoke §4.4.a on family status grounds. The argument the Kailos courts made has been closed — not just for this case, but for every case that follows, by a unanimous ruling from a court that includes justices elected from every part of the Republic.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§4.4.d's "immediate recognition" language is the provision's most important word. Not recognition after a waiting period. Not recognition subject to the receiving State's review of the underlying merits. Immediate. The provision was written to prevent exactly what the Kailos courts attempted: a receiving State using its own family law values to effectively nullify a legal status established by a court of competent jurisdiction in another State. The Republic is not a federation of separate legal spaces. A person's legal life does not stop at a State border and restart under new rules.</p>
+        <p>The §4.4.a non-recognition grounds exist because absolute recognition would occasionally enforce genuinely harmful orders — orders obtained by fraud, orders issued without jurisdiction, orders that would actively violate the rights of the person before the receiving court. The exhaustive list was designed to be exactly that: exhaustive. The Kailos courts treated the Article I ground as a flexible gateway for cultural objection. The SC's response makes clear this is not what was designed, not what was written, and not what will be permitted.</p>
+        <p>The §1.8 analysis is where the opinion's sharpest teeth are. §1.8 binds all entities exercising public authority. There is no Article I ground — no religious exemption, no cultural tradition, no child welfare theory — that permits a public authority to discriminate on the basis of sexual orientation. The Kailos courts had dressed §1.8-prohibited discrimination in the language of §4.4.a non-recognition. The SC stripped that dressing and named what it was. The NRS records both the dressing and the stripping, permanently, in the same searchable archive.</p>
+        <p>Maya is four years old. She has two legal parents in every State and Territory of the Republic. That fact is on the NRS. It cannot be changed by any court, any State government, or any legislature. It is entry number 847,204,113. It has been there since Year 4. The Kailos courts' attempt to pretend otherwise is now also on the NRS — as a constitutional failure, documented with the same permanence as the adoption order they refused to recognize.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-redistricting.html">← The Map</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
