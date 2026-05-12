@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Petition — The Federated Republic</title>
+  <meta name="description" content="A citizen-led constitutional amendment reaches a national vote through the NVS. It achieves 77% affirmative support on 63.1% participation — above 60%, below the 65% threshold. The Judicial Inspectorate may certify it as presumptively valid under the exception clause. The question: what does the JI weigh when it has discretion that the constitution does not define?">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v148.docx" download>Download v148</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Constitutional Amendment · §15.1.c · Citizen-Led Path</span>
+      <h1 class="scenario-title">The Petition</h1>
+      <p class="scenario-subtitle">A citizen-led amendment to extend §1.9 digital privacy rights achieves 77% affirmative support on 63.1% participation — above the 60% floor, below the 65% threshold. The Judicial Inspectorate may certify it as presumptively valid under the exception clause. Whether it will depends on a question the constitution deliberately leaves unspecified: what does the JI weigh when the provision gives it discretion without giving it criteria?</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§15.1.c Citizen-Led Amendment Path</span>
+        <span class="prov-tag">§15.2.a No Executive Veto</span>
+        <span class="prov-tag">§15.3.a Unamendable Provisions</span>
+        <span class="prov-tag">§8.9.d JI Gatekeeping Appeal</span>
+        <span class="prov-tag">§1.9 Digital Privacy</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Digital Sovereignty Amendment is the Republic's first citizen-led constitutional amendment to reach a national vote. It was proposed through a petition campaign organised outside the Legislature over fourteen months, certified by the Electoral Commission as meeting the petition threshold, and scheduled for a national vote through the National Voting System. The amendment would expand §1.9 — the right to bodily autonomy and digital privacy — to explicitly include the right to computational sovereignty: the right to control any artificial process that operates on behalf of a citizen without their continuing informed consent, including algorithmic decision systems used by public authorities.</p>
+
+      <p>The campaign has broad but unevenly distributed support. Digital rights advocates, civil liberties organisations, and significant portions of the technical community have organised for it. Opposition focuses on concerns about implementation: the amendment as drafted would require judicial interpretation of what "continuing informed consent" means in practice, creating years of litigation over every government algorithm. Opponents argue this is a policy question better addressed by statute than constitution.</p>
+
+      <h2>The Vote</h2>
+
+      <div class="math-box">
+        <span class="math-label">Citizen-Led Amendment Vote — §15.1.c</span>
+        <div class="line">Standard path: 70% affirmative support + 65% participation</div>
+        <div class="line">Exception clause: participation 60-65% + affirmative >75% → JI may certify</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">Affirmative: 77.2% (exceeds 75% exception threshold)</div>
+        <div class="line">Participation: 63.1% (exceeds 60% floor, falls short of 65% standard)</div>
+        <div class="line">──────────────────────────────────</div>
+        <div class="line">Standard path: FAILS (participation 63.1% &lt; 65%)</div>
+        <div class="result">Exception clause: triggered — JI may certify as presumptively valid</div>
+      </div>
+
+      <p>The amendment does not pass the standard threshold. 63.1% participation falls 1.9 points short of the 65% required. But the affirmative vote — 77.2% — exceeds the 75% trigger for the exception clause in §15.1.c. The exception provides that where participation exceeds 60% but falls short of 65% and the affirmative vote exceeds 75%, the Judicial Inspectorate may certify the amendment as presumptively valid, subject to Supreme Court review within thirty days.</p>
+
+      <h2>The JI's Deliberation</h2>
+
+      <p>The JI convenes its full body within forty-eight hours of the result publication. §15.1.c says the JI "may certify." It does not define the criteria. It does not say the JI must certify if the thresholds are met. It gives the JI genuine discretion — a discretion the constitution provides and the constitution leaves without a standard.</p>
+
+      <p>The JI publishes its deliberation framework to the NRS before deciding: the provision gives it discretion; it will exercise that discretion by examining whether the participation shortfall reflects a failure of democratic process, a failure of democratic will, or random variation near the threshold. These are the JI's own categories. The constitution offers no others.</p>
+
+      <div class="beat">
+        <div class="beat-label">§15.1.c — What the JI Examines</div>
+        <div class="beat-title">Three questions the provision does not ask but the JI must answer</div>
+        <p><strong>Was the participation shortfall caused by a process failure?</strong> No. The NVS operated correctly. The voting window was the full statutory period. No technical barriers to participation were identified. The participation rate of 63.1% represents genuine turnout, not a suppressed vote. The JI finds: no process failure accounts for the gap.</p>
+        <p><strong>Was participation suppressed by external action?</strong> The EI's rapid audit finds no evidence of suppression, intimidation, or interference with voting access. The opposition campaign actively encouraged non-participation — but this is political speech, constitutionally protected under §1.4, and not "suppression" in any constitutional sense. Non-participation encouraged by political opponents is the democratic process operating normally.</p>
+        <p><strong>Does 63.1% participation with 77.2% affirmative represent an expression of democratic will that the standard threshold's failure would misread?</strong> This is the hard question. The JI's deliberation notes: 63.1% participation in a constitutional amendment vote is not low — it exceeds the participation rate of most national elections. The 1.9% gap is narrow. The 77.2% affirmative rate is commanding. Nearly four in five people who voted chose yes. The JI finds: the participation shortfall represents the gap between motivated and unmotivated eligible voters, not a failure of democratic expression.</p>
+      </div>
+
+      <p>The JI certifies the Digital Sovereignty Amendment as presumptively valid. The Supreme Court has thirty days to review.</p>
+
+      <h2>SC Review</h2>
+
+      <p>The SC receives two challenges within the thirty-day window. The first challenges the JI's certification on procedural grounds — arguing the JI exceeded its mandate by developing its own criteria. The second challenges the amendment's substance — arguing it conflicts with the Legislature's statutory authority over algorithm governance.</p>
+
+      <p>The SC rules on both challenges in a single opinion, 5-2. On the procedural challenge: the JI's discretion under §15.1.c is genuine and the constitution provides no criteria because the drafters intended the JI to exercise judgment. The JI published its framework publicly and applied it consistently. Developing a framework for exercising constitutionally provided discretion is not exceeding a mandate — it is the mandate. On the substance challenge: the Court lacks jurisdiction to review whether a citizen-led amendment is wise policy. The amendment is within constitutional scope — it expands, not contracts, an Article I right — and no unamendable provision bars it. §15.3.a is satisfied. The amendment takes effect.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§15.1.c's exception clause is the most unusual provision in Article XV — an amendment pathway that explicitly gives a constitutional institution discretion without specifying how to exercise it. The standard constitutional design principle is that discretion requires criteria. §15.1.c deliberately departs from this: the JI "may certify," full stop. The provision trusts the Inspectorate to exercise genuine judgment rather than applying a formula that could be gamed.</p>
+        <p>The scenario tests whether that trust is warranted. The JI develops its own framework, publishes it before deciding, and applies it transparently. The SC upholds the JI's process precisely because it was not arbitrary — a published framework, consistently applied, with reasoning on the NRS. The constitutional point the scenario makes: institutional discretion without statutory criteria can produce legitimate outcomes if the institution exercises it with procedural integrity. The NRS requirement does a lot of work here: the JI cannot act secretly, cannot change its reasoning after the fact, and cannot apply different standards in different cases without the inconsistency being visible.</p>
+        <p>The SC's rejection of the substance challenge makes the second constitutional point: the Court cannot review whether a citizen-led amendment is good policy. If the participation threshold is met (or the JI certifies under the exception), the amendment takes effect. There is no additional filter for policy quality. The constitution trusts democratic majorities to expand rights; it prohibits democratic majorities from contracting them. The Digital Sovereignty Amendment expands §1.9. The SC has nothing to say about whether that expansion is wise. That question was answered — imprecisely, narrowly, legitimately — by 77.2% of 63.1% of eligible citizens.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-redistricting.html">← The Map</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
