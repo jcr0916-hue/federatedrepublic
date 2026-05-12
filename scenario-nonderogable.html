@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Measures — The Federated Republic</title>
+  <meta name="description" content="Year 14. The Republic is in a Tier 3 operation against a state-sponsored network. Captured operatives are held at a classified facility. Intelligence uses sleep deprivation, stress positions, and isolation. The EI publishes its annual military compliance finding. The President's office publishes a counter-opinion. The Supreme Court receives the petition in eighteen days. The constitutional question is whether the text of §1.2 means what it says.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.6}
+    .nrs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v150.docx" download>Download v150</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Non-Derogable Rights · §1.2 · §1.25.b · §15.3.a</span>
+      <h1 class="scenario-title">Enhanced Measures</h1>
+      <p class="scenario-subtitle">Year 14. A Tier 3 operation is active. Captured operatives are held at a classified facility. Intelligence uses sleep deprivation, stress positions, and isolation. The EI publishes its annual military compliance finding. The President's office publishes a counter-opinion. The Supreme Court receives the petition eighteen days later. The constitutional question is whether the text of §1.2 means what it says — and whether the government can avoid an absolute prohibition by refusing to use the prohibited word.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§1.2 Prohibition of Torture</span>
+        <span class="prov-tag">§1.25.b Non-Derogable Rights</span>
+        <span class="prov-tag">§15.3.a Unamendable Provisions</span>
+        <span class="prov-tag">§8.1.b EI Military Compliance</span>
+        <span class="prov-tag">§8.6.c No Binding Force</span>
+        <span class="prov-tag">§4.3.b Organizational Standing</span>
+        <span class="prov-tag">§12.2.a Legislative Declaration</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Republic is in Year 14 of its constitutional history, in the second year of a Tier 3 Legislative Declaration of Defense against a state-sponsored network responsible for attacks on Republic citizens and treaty allies. The operation is authorized under §12.2.a by a 2/3 concurrent majority of both chambers, renewed every 180 days. The President exercises Tier 1 through Tier 3 military authority within the framework. The PM certifies funds. The operation is legally authorized and constitutionally clean.</p>
+
+      <p>What is not clean is the interrogation program operating within it.</p>
+
+      <p>At a classified overseas facility — its existence registered on the NRS under §9.5.c, its location protected — intelligence personnel have been applying what their internal documentation calls "enhanced measures" to captured foreign operatives. The program involves: sleep deprivation of up to 96 hours through continuous noise and light; stress positions maintained for periods the documentation describes as "operationally calibrated"; isolation in cells with no natural light for periods extending to 45 days; and temperature manipulation sustained below and above comfort thresholds. No physical strikes. No simulated drowning. The program's architects have drawn their parameters precisely at the line they believe separates "enhanced measures" from the word the constitution prohibits.</p>
+
+      <h2>The Finding</h2>
+
+      <p>The Executive Inspectorate's annual audit of the presidential office includes a dedicated military constitutional compliance section under §8.1.b. In Year 14, this section documents the program in full. The EI's mandate is factual: it publishes what it observes. It does not make legal determinations. Its Year 14 military compliance finding, published to the NRS, devotes eleven pages to describing the techniques with precision. The final paragraph reads:</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — EI Annual Military Compliance Finding — Year 14</span>
+        The Executive Inspectorate makes no legal determination regarding the above-described techniques. Its mandate under §8.6.c is to document observed facts; courts determine their legal characterization. The Inspectorate notes that the above-described techniques are documented practices applied to persons in the custody or control of the Republic under §1.2. The Republic's constitutional obligations under §1.2, as interpreted by competent judicial authority, govern the characterization of these practices. The Inspectorate has notified the Legislature and the Supreme Court of this finding simultaneously with its NRS publication, consistent with §8.8.b.
+      </div>
+
+      <p>Forty-eight hours later, the President's office publishes a legal opinion to the NRS. It is 34 pages. Its argument runs on three tracks: the techniques do not constitute "torture" under any recognized international standard; §1.2 was drafted in the context of domestic criminal justice and was not intended to govern military interrogation of foreign combatants captured in authorized operations; and the persons in custody, as foreign nationals captured outside Republic territory, are not within the scope of "persons in the custody or control of the Republic" as §1.2 uses that phrase.</p>
+
+      <p>The opinion is careful and precise. It does not argue that torture is permissible. It argues that what is happening is not torture, and that even if it is, §1.2 does not apply in this context. The program continues.</p>
+
+      <h2>The Petition</h2>
+
+      <p>Three organizations file a joint petition before the Supreme Court eighteen days after the EI finding is published. Each invokes §4.3.b organizational standing: each has members who are either captured Republic military personnel at risk of reciprocal treatment, legal practitioners whose constitutional mandate includes §1.2 enforcement, or veterans whose service creates a direct institutional stake in the Republic's adherence to its own prohibitions. The petition argues that the President's opinion is constitutionally wrong on all three grounds and asks the Court to rule immediately.</p>
+
+      <p>The SC accepts the petition. It schedules oral argument within 14 days. The President's office files a brief defending its opinion. The PM's office files a brief taking no position on the merits — the domestic domain executive's brief notes only that the ruling will affect how the PM's government interprets its own constitutional obligations and requests the Court's clarity. The Senate Armed Services Committee files amicus. Seventeen law faculties file amicus on the constitutional interpretation questions.</p>
+
+      <h2>The Ruling</h2>
+
+      <p>The Supreme Court rules 8-1. The opinion is 67 pages. There is one partial dissent on remedy. Every substantive constitutional holding is unanimous.</p>
+
+      <div class="beat">
+        <div class="beat-label">§1.2 — Holding One: Scope</div>
+        <div class="beat-title">"No person in the custody or control of the Republic"</div>
+        <p>The President's argument that §1.2 does not apply to foreign nationals captured outside Republic territory fails at the text. §1.2 says: "No person in the custody or control of the Republic, its agents, or any entity acting on its behalf." There is no geographic qualifier. There is no citizenship qualifier. The provision does not say "no Republic citizen" or "no person on Republic territory." It says "no person." The persons at the facility are held by Republic intelligence personnel acting within an authorized military operation. They are in Republic custody. §1.2 applies to them.</p>
+        <p>The drafting history, to the extent it is relevant, confirms this. The prohibition on torture applies wherever and to whomever the Republic exercises custodial authority. A person in Republic custody in a foreign jurisdiction has §1.2 protection. A person in Republic custody aboard a Republic military vessel has §1.2 protection. The provision follows the person — it attaches to Republic conduct, not to Republic territory.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§1.2 — Holding Two: The Definitional Game</div>
+        <div class="beat-title">"Torture, cruel, degrading, or inhumane treatment"</div>
+        <p>The President's central argument — that the techniques do not constitute "torture" — is, even if accepted, insufficient to resolve the constitutional question. The Court declines to rule on whether the techniques meet the threshold for "torture" because it does not need to. §1.2 prohibits "torture, cruel, degrading, or inhumane treatment or punishment." This is a disjunctive list. Each term is independently sufficient. A practice that constitutes cruel treatment violates §1.2 whether or not it constitutes torture. A practice that constitutes degrading treatment violates §1.2 whether or not it constitutes torture.</p>
+        <p>Sleep deprivation sustained for 96 hours is degrading treatment. Stress positions maintained at "operationally calibrated" durations are cruel treatment. Isolation without natural light for 45 days is inhumane treatment. The Court does not need to call any of these "torture." §1.2's prohibition is not satisfied by the government's decision to route its interrogation practices around the specific word the provision uses while landing squarely within the other words in the same sentence.</p>
+        <p>The Court adds: this is not an unprecedented argument. Every government in history that has wished to torture its prisoners has found a word other than "torture" for what it was doing. The provision was written to cover conduct, not vocabulary. A constitutional prohibition on "cruel, degrading, or inhumane treatment" cannot be circumvented by attaching a different adjective to the treatment. The government cannot escape §1.2 by calling its practices "enhanced."</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§1.2 — Holding Three: The Military Necessity Argument</div>
+        <div class="beat-title">The provision anticipated this argument and foreclosed it</div>
+        <p>The President's second argument — that the domestic criminal justice context of §1.2 did not intend to cover authorized military operations — is foreclosed by the text of the provision itself. §1.2 states: "No declared emergency, legislative act, executive order, or military necessity may authorize or excuse a violation." This language is unambiguous. The provision lists military necessity explicitly, alongside legislative acts and executive orders, and says that none of them may authorize or excuse a violation. This sentence was not drafted accidentally. It reflects a constitutional choice: some prohibitions are absolute, and the Republic does not weigh their cost against any competing interest, however compelling.</p>
+        <p>The Court does not weigh the intelligence value of the program. The Court does not assess whether the techniques produced actionable information that saved Republic lives. §1.2 removes that weighing from the analysis. The provision does not say the prohibition applies "unless national security requires otherwise." It says "under any circumstances." These words foreclose the balancing test the government's brief invites the Court to apply. There is no balancing test for §1.2. The prohibition is absolute or it is nothing.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§1.25.b and §15.3.a — Holding Four: The Constitutional Structure</div>
+        <div class="beat-title">Absolute prohibitions that can be redefined are not absolute</div>
+        <p>§1.25.b places §1.2 on the non-derogable list — it survives every declared emergency, without exception. §15.3.a makes §1.2 permanently unamendable. These structural protections would be legally meaningless if the prohibition could be circumvented by definitional redescription. A government that calls its prohibited conduct "enhanced measures" and then argues the prohibition does not apply to "enhanced measures" has not found a legitimate exception. It has found an evasion. The Court will not ratify it.</p>
+        <p>The constitutional structure of non-derogability and unamendability serves a single purpose: to remove certain commitments from political negotiation entirely. The Republic committed at ratification that it would not torture. Not that it would not torture unless the circumstances were sufficiently compelling. Not that it would not torture in domestic contexts only. Not that it would not torture by any method a future government chose to call "torture." The commitment is to the conduct, not to the word. Holding otherwise would allow the prohibition to be emptied of meaning while preserving its form — the worst of both outcomes.</p>
+      </div>
+
+      <h2>The Remedy</h2>
+
+      <p>The injunction issues immediately. All techniques identified in the EI's finding are prohibited within 48 hours of the ruling. The program is terminated. Persons held under the program are immediately entitled to the standard detention conditions applicable to captured combatants within the Republic's authorized military operations.</p>
+
+      <p>The partial dissent — on remedy only, not on any constitutional holding — argues for a 30-day transition period to allow orderly cessation. The majority rejects it in two sentences: there is no orderly cessation timeline for a constitutional violation. The prohibited conduct stops now.</p>
+
+      <p>The SC's ruling explicitly preserves criminal liability: "Nothing in this ruling limits the criminal accountability of persons who ordered, authorized, designed, or implemented the practices described in the EI's Year 14 military compliance finding. §1.2 states that any official who orders, authorizes, or knowingly permits such treatment commits a criminal offense under federal statute. That accountability proceeds through the courts on its own track."</p>
+
+      <p>Two senior intelligence officials and one general are subsequently charged. Their prosecutions proceed over the following three years, producing the Republic's first criminal convictions for constitutional violations committed under an authorized military operation. The convictions are published to the NRS. They are there permanently.</p>
+
+      <h2>What the NRS Records</h2>
+
+      <p>The EI's Year 14 military compliance finding is on the NRS. The President's 34-page counter-opinion is on the NRS. The SC's 67-page ruling is on the NRS. The program's termination order is on the NRS. The three criminal convictions are on the NRS. The Republic's complete constitutional record on this question — including the period during which the executive branch argued publicly that it was not violating the prohibition it was violating — is on the NRS permanently and searchably.</p>
+
+      <p>The EI's finding in Year 15 notes, for the record, that the Year 14 military compliance section of its annual report is the first finding the EI has issued on §1.2 in fourteen years of the Republic's existence. Its conclusion: the Republic's military constitutional compliance record, taken as a whole, reflects adherence to the Tier authorization framework, the Intelligence Firewall, and the fund certification requirements. The Year 14 §1.2 finding was an exception. The Year 15 finding is: the exception was identified, reported, adjudicated, and terminated. The Republic's accountability mechanisms functioned.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§1.2 is among the most carefully drafted provisions in the constitution. Its text forecloses, in advance, each argument the President's office deployed. "Under any circumstances" answers the weighing argument. "Military necessity may not authorize or excuse" answers the operational necessity argument. "Any person in the custody or control of the Republic" answers the jurisdiction argument. "Cruel, degrading, or inhumane treatment" answers the definitional game. The provision was written as if its drafters anticipated that a future government would try all four arguments simultaneously — because every government that has ever wanted to torture its prisoners has made all four arguments.</p>
+        <p>The scenario tests whether a provision drafted this carefully holds under real pressure. The answer is yes, but the scenario shows why the NRS is a necessary part of that answer. The EI cannot stop the program. It has no enforcement power. It publishes facts. The President's office publishes a counter-opinion. Both documents are on the NRS permanently. When the SC rules, it is ruling on a fully documented public record — not a contested factual dispute, but an acknowledged program whose constitutionality was the only question. The EI did its job: it made the facts visible. The SC did its job: it interpreted the provision. The EI's lack of enforcement power was not a design failure — it was the design working correctly. The SC is the enforcement authority. The EI is the eye that cannot be closed.</p>
+        <p>The three criminal convictions are the scenario's most significant output. §1.2 includes a sentence that most rights provisions do not: "Any official who orders, authorizes, or knowingly permits such treatment commits a criminal offense under federal statute." The provision did not stop at prohibiting the conduct. It specified that those who ordered it commit a crime. The two intelligence officials and one general who were convicted were not prosecuted for losing a policy argument. They were prosecuted for committing a criminal offense that the constitution named as such before they committed it.</p>
+        <p>The most important moment in the scenario is the smallest one. In the EI's Year 15 report, one sentence: "The Republic's accountability mechanisms functioned." That is the constitutional design's self-assessment. Not that the Republic was perfect. Not that no violation occurred. That when a violation occurred, it was found, published, adjudicated, and ended. That is what the mechanisms were built to produce. On the NRS, the whole record is there — the violation and the accountability both — visible to anyone who looks, for as long as the Republic exists.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-status-order.html">← Everywhere She Goes</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
