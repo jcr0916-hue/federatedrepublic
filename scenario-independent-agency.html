@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Safety Director — The Federated Republic</title>
+  <meta name="description" content="Year 18. The Food and Pharmaceutical Safety Agency launches a post-market investigation into a licensed agricultural additive. The PM removes the director citing dereliction of mandate. The LI publishes an emergency statutory compliance finding. The EI finds no constitutional conduct violations. The Senate has 21 days.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.6}
+    .nrs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .timeline{margin:2rem 0}
+    .timeline-item{display:flex;gap:1.25rem;margin-bottom:1.25rem;align-items:flex-start}
+    .timeline-day{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);background:var(--navy);padding:0.2rem 0.5rem;white-space:nowrap;margin-top:0.15rem;letter-spacing:0.05em}
+    .timeline-text{font-size:0.92rem;line-height:1.7;color:#3a3530}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v151.docx" download>Download the Constitution</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Statutory Independent Agencies · §3.7 · Removal and Reinstatement</span>
+      <h1 class="scenario-title">The Safety Director</h1>
+      <p class="scenario-subtitle">Year 18. The Food and Pharmaceutical Safety Agency launches a post-market investigation into a licensed agricultural additive. The PM removes the director for dereliction of mandate. The LI publishes an emergency statutory compliance finding. The EI finds no constitutional conduct violations. The Senate has 21 days.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§3.7.a Authorization</span>
+        <span class="prov-tag">§3.7.b Appointment</span>
+        <span class="prov-tag">§3.7.c Removal</span>
+        <span class="prov-tag">§3.7.d Oversight</span>
+        <span class="prov-tag">§3.7.e Limits</span>
+        <span class="prov-tag">§8.1 Executive Inspectorate</span>
+        <span class="prov-tag">§8.2 Legislative Inspectorate</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>In Year 12 a three-party coalition enacted the Food and Pharmaceutical Safety Agency statute. The enabling statute gave the FPSA a mandate covering new product approvals, post-market safety surveillance, and enforcement of labeling and ingredient disclosure requirements. Directors serve five-year terms, renewable once, removable only for material dereliction of the agency's statutory mandate, financial misconduct, or willful and repeated violation of the governing statute. The legislature deliberately chose not to include political disagreement with regulatory decisions as a removal ground. The statute was passed 61-39 in the House and 52-48 in the Senate — narrowly, but durably.</p>
+
+      <p>Dr. Elara Senn was nominated by the PM in Year 13 and confirmed by the Senate 58-42 after a three-week review. She has led the FPSA for five years without a significant constitutional dispute. Her agency approves products, enforces disclosure requirements, and maintains a public registry of every licensed substance on the NRS. In Year 17 a whistleblower inside a domestic agricultural consortium submitted to the FPSA a set of internal documents suggesting that safety data submitted in Year 3 — during the original licensing review for Compound 7, a widely used crop yield additive — had been selectively reported. The unfiled data showed elevated bioaccumulation rates in soil and groundwater that the filed data did not.</p>
+
+      <p>The FPSA opened a formal post-market investigation in Year 17, Month 9. Compound 7 is manufactured by a consortium of three domestic producers. The consortium employs approximately 40,000 people across six States. Two of the three PM's coalition parties represent agricultural States with significant Compound 7 production.</p>
+
+      <h2>The Removal</h2>
+
+      <p>On Year 18, Day 214, the PM publishes a Notice of Removal to the NRS. The notice is 11 pages. Its argument: the FPSA's statutory mandate covers post-market surveillance — defined in the enabling statute as ongoing monitoring of licensed products for safety signals arising after approval. The FPSA's investigation, the PM argues, is not post-market surveillance. It is a collateral attack on a final licensing determination made in Year 3, using documents that were never part of the original proceeding. A final licensing determination is a completed administrative action, not a subject for re-investigation by the same agency 15 years later. The PM characterizes the investigation as a unilateral expansion of the FPSA's jurisdiction that constitutes material dereliction of its actual mandate.</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — PM Notice of Removal — Year 18, Day 214 — FPSA Director</span>
+        Pursuant to §3.7.c of the Constitution and Section 14(b) of the Food and Pharmaceutical Safety Agency Act, the Prime Minister hereby removes Dr. Elara Senn as Director of the Food and Pharmaceutical Safety Agency, effective upon publication of this notice. The stated ground is material dereliction of the agency's statutory mandate. The Director has initiated a re-examination of a Year 3 final licensing determination that is not within the agency's post-market surveillance mandate as defined by Section 3(a) of the enabling statute. This notice is published simultaneously to the Director, the Senate Speaker, the Executive Inspectorate, and the Legislative Inspectorate, consistent with §3.7.c.
+      </div>
+
+      <p>Under §3.7.c, removal takes effect immediately upon NRS publication. Dr. Senn receives her access revocation at 9:14 AM. By 9:15 AM the notice is indexed on the NRS and distributed to all registered subscribers. The Senate Speaker receives the statutory notification that the 21-day reversal window has opened. The window closes at midnight on Day 235.</p>
+
+      <h2>The 21 Days</h2>
+
+      <p>Both Inspectorates receive the notice simultaneously with publication. Their responses arrive on different schedules and address different questions.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-day">Day 214</span>
+          <span class="timeline-text">Removal published to NRS. Director access revoked. 21-day window opens. Senate Speaker announces the Senate will convene to consider the removal. EI and LI begin independent reviews.</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-day">Day 216</span>
+          <span class="timeline-text">EI publishes its preliminary finding: no evidence of financial misconduct, procedural violations, or unconstitutional conduct by the Director in the course of the investigation. The EI's review covers the Director's conduct, not the legal question of mandate. The EI notes that the investigation was initiated under documented internal procedures, that whistleblower materials were received and logged per NRS requirements, and that no FPSA staff have filed complaints of improper direction. The EI's finding is factual and narrow: the Director conducted herself constitutionally throughout.</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-day">Day 219</span>
+          <span class="timeline-text">LI publishes its statutory compliance finding. The LI's mandate under §3.7.d is to audit whether the agency is complying with its enabling statute. The LI reads Section 3(a)'s definition of post-market surveillance — "ongoing monitoring of licensed products for safety signals arising after approval" — and concludes that newly surfaced evidence of pre-approval data suppression constitutes a safety signal arising after approval in the relevant sense: it is information about the product's safety profile that was not available to the agency during the original approval process and that bears on whether continued licensing is appropriate. The LI finds the investigation within mandate. The finding is published to the NRS and transmitted to the Senate.</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-day">Days 220–217</span>
+          <span class="timeline-text">Senate committee hearings. The PM's legal counsel appears and argues that the LI's reading of the mandate definition is overbroad — that "safety signals arising after approval" means empirical post-market findings, not historical re-examination of the original data submission. Dr. Senn, appearing in a personal capacity, testifies that the investigation was specifically designed to determine whether the original data submission was complete, which is a question about whether Compound 7's current license rests on accurate information.</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-day">Day 218</span>
+          <span class="timeline-text">Senate leadership schedules the void vote for Day 218, two days before the window closes. Both caucuses complete their consultations. The final vote alignment is not publicly confirmed before the session opens.</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-day">Day 218 — Vote</span>
+          <span class="timeline-text">The Senate votes 56-44 to void the removal. The void takes effect immediately upon the Senate Speaker's certification. Dr. Senn's access is restored. The NRS records the reinstatement automatically. She is reinstated to the full remainder of her term.</span>
+        </div>
+      </div>
+
+      <h2>The Second Notice</h2>
+
+      <p>At 4:47 PM on Day 218 — three hours and twenty-two minutes after the Senate's void certification — the PM publishes a second Notice of Removal to the NRS. The second notice does not cite material dereliction of mandate. It cites willful and repeated violation of the governing statute, specifically Section 14(c) of the enabling act, which requires the Director to provide the PM's office with advance notice of any investigative action that may have significant economic impact on a regulated industry. The PM's office states that it received no such notice before the Compound 7 investigation was opened in Year 17, Month 9.</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — PM Second Notice of Removal — Year 18, Day 218 — FPSA Director</span>
+        Pursuant to §3.7.c of the Constitution and Section 14(b) of the Food and Pharmaceutical Safety Agency Act, the Prime Minister hereby removes Dr. Elara Senn as Director of the Food and Pharmaceutical Safety Agency, effective upon publication of this notice. The stated ground is willful and repeated violation of Section 14(c) of the enabling statute — specifically, failure to provide advance notice of significant-impact investigative actions as required. This ground is independent of and does not constitute a continuation of the removal notice published on Day 214. The 21-day Senate window under §3.7.c opens with publication of this notice.
+      </div>
+
+      <p>A second 21-day window opens. Dr. Senn's access is revoked for the second time on Day 218. The Senate Speaker convenes an emergency session on Day 219 to consider whether the second notice is constitutionally permissible at all.</p>
+
+      <h2>The Constitutional Questions</h2>
+
+      <div class="beat">
+        <div class="beat-label">§3.7.c — Question One: Are successive removal notices permissible?</div>
+        <div class="beat-title">The provision does not limit the number of removal attempts</div>
+        <p>§3.7.c states that the PM may remove a director only on grounds specified in the enabling statute, and that the Senate may void any removal within 21 days. It does not say the PM may issue only one removal notice per term, or that a voided removal bars future notices. The second notice cites a different statutory ground — Section 14(c) notice failure, not mandate dereliction — and the PM's office has correctly framed it as an independent ground, not a continuation of the first.</p>
+        <p>The Senate's legal counsel advises that the constitutional text supports the PM's position: each removal notice is a distinct action subject to its own 21-day window. The Senate cannot bar a second notice simply by having voided the first. What it can do is void the second notice too, within its own 21-day window.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§3.7.c — Question Two: Does the Senate's void say anything about the investigation?</div>
+        <div class="beat-title">The void is about the removal, not the underlying conduct</div>
+        <p>The PM's second notice is only viable if successive notices are constitutionally permissible — which they are. But the PM's legal team makes a further argument: that the Senate's void on Day 218 validated the investigation itself, and that the second notice on different grounds therefore amounts to an end-run around that validation. The Senate's legal counsel rejects this framing. §3.7.c gives the Senate the power to void a removal, not to issue a binding ruling on the agency's conduct. The Senate voted that the PM's stated cause — mandate dereliction — did not hold. It did not vote that the investigation was proper. Those are different questions.</p>
+        <p>The LI's statutory compliance finding, similarly, addresses whether the investigation was within mandate as a factual matter of agency conduct. It does not bind future proceedings or preclude the PM from asserting a different statutory ground for removal.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§3.7.d — Question Three: What does the LI audit for the second notice?</div>
+        <div class="beat-title">The LI examines whether the notice-failure ground actually occurred</div>
+        <p>The LI's mandate covers compliance with the enabling statute. The second removal ground is a statutory notice violation — failure to give advance notice of a significant-impact investigation under Section 14(c). The LI reviews the FPSA's internal communications and finds that the Director did provide written notice to the PM's office on Year 17, Month 7 — two months before the investigation formally opened — describing the whistleblower submission and the agency's intention to open a formal review. The LI finds that the notice requirement was met. The LI publishes its finding on Day 222 of the second window.</p>
+        <p>The Senate votes on Day 228 to void the second removal, 53-47. Dr. Senn is reinstated for the second time. The PM does not issue a third notice.</p>
+      </div>
+
+      <h2>What the NRS Records</h2>
+
+      <p>By the end of Year 18 the NRS contains: two removal notices, two void votes, two reinstatements, two LI statutory compliance findings, and one EI constitutional conduct finding. The Compound 7 investigation continues. In Year 19 the FPSA publishes its preliminary findings: the original Year 3 submission omitted 14 internal safety studies. The agency recommends conditional relicensing subject to additional monitoring requirements. The consortium challenges the recommendation in the Asylum and Administrative Court. The case works its way through the judicial system over the following three years.</p>
+
+      <p>The PM who issued both removal notices serves out the remainder of the term without further action against the FPSA. The director completes her term in Year 20. Her successor is nominated and confirmed without controversy.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§3.7.c is a lighter mechanism than the Panel process governing constitutional offices, and this scenario shows why that matters. The Senate voided two removal notices in 14 days across two separate windows. The process was fast enough to protect the director before the investigation's momentum was lost. The Panel process — with its formal constitution, hearing schedule, and multi-stage proceedings — would have taken months. A safety investigation into a time-sensitive public health question cannot wait months for its leadership to be restored.</p>
+        <p>The successive notices question is the provision's most significant gap: §3.7.c is silent on whether the PM can issue removal notice after removal notice on different grounds. The scenario shows that silence meaning "permitted" is the correct reading — and that the constitutional check on that power is the political cost of repeated public removals recorded permanently on the NRS, combined with the Senate's ability to void each one. A PM who issues three removal notices against the same director in six months is making a very public statement about their relationship with an independent agency that the electorate can read.</p>
+        <p>The dual oversight design works exactly as intended in the second notice dispute. The LI's audit of whether the Section 14(c) notice violation actually occurred — the factual question — is precisely the kind of statutory compliance review the LI is designed to conduct. Without the LI's finding that notice was in fact given, the Senate would have had to make a much harder political judgment call. With it, the Senate had an authoritative factual record from an independent body with a constitutional mandate to answer that specific question.</p>
+        <p>The scenario also clarifies what independence is not. The Compound 7 investigation proceeds, is challenged in court, and produces contested findings over several years. The independence provision did not make the director right. It made her removable only on legitimate grounds, with a public record of every attempt, and with a body capable of voiding pretextual removal. That is the entirety of what §3.7 promises — and in this scenario, it delivers it.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
