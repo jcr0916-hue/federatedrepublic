@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scenarios — The Federated Republic</title>
-  <meta name="description" content="Constitutional scenarios testing the provisions of the Federated Republic — from a long-form transition history to focused tests of emergency powers, rule violations, amendments, and judicial elections.">
+  <meta name="description" content="45 constitutional scenarios testing the provisions of the Federated Republic — from ordinary governance to institutional stress tests, rights cases, and long-form narratives.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -83,10 +83,26 @@
     button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
     .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
   </style>
+  <style>
+    .featured-section{margin-bottom:3.5rem}
+    .featured-label{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);font-family:'JetBrains Mono',monospace;margin-bottom:1rem;display:block}
+    .featured-intro{font-size:0.95rem;color:var(--muted);margin-bottom:1.75rem;line-height:1.7;max-width:600px}
+    .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .featured-entry{background:var(--cream2);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.25rem 1.5rem;text-decoration:none;display:block;transition:border-color 0.2s,background 0.2s}
+    .featured-entry:hover{background:#e8e1d0;border-top-color:var(--navy)}
+    .featured-entry .fe-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);display:block;margin-bottom:0.4rem}
+    .featured-entry .fe-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);display:block;margin-bottom:0.4rem}
+    .featured-entry .fe-desc{font-size:0.82rem;color:var(--muted);line-height:1.6}
+    .library-section{margin-bottom:3rem}
+    .category-header{border-bottom:2px solid var(--border);padding-bottom:0.6rem;margin-bottom:0.4rem}
+    .category-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy)}
+    .category-count{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--muted);margin-left:0.75rem}
+    .category-desc{font-size:0.88rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.6;font-style:italic}
+    @media(max-width:640px){.featured-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  
   <nav>
     <a href="index.html" class="nav-logo">The Federated Republic</a>
     <div class="nav-links">
@@ -97,666 +113,469 @@
       <a href="glossary.html">Glossary</a>
       <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
     </div>
-    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
     <a href="annotated.html">Constitution</a>
-    <a href="states.html">States</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="papers.html">Essays</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="glossary.html">Glossary</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="sources.html">Sources</a>
-    <a href="constitution-v150.docx" download>Download DOCX</a>
-      <a href="contact.html">Contact</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v153.docx" download>Download the Constitution</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-    <main class="page-wrap" id="main-content">
-    <header class="page-header">
-      <span style="font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem;font-family:JetBrains Mono,monospace">Constitutional Scenarios</span>
-      <h1>The Republic in Practice</h1>
-      <p>Constitutions are tested by the situations they face, not the situations they anticipate. These scenarios put the Federated Republic's provisions under pressure — some over decades, some in a single week.</p>
-    </header>
+  <div class="page-header" id="main-content">
+    <div class="page-header-inner">
+      <h1>The Scenario Library</h1>
+      <p>45 scenarios testing the constitution from ordinary governance to institutional crisis. Start with the eight below — they give the fullest picture of how the system works and why it was designed this way. The complete library follows.</p>
+    </div>
+  </div>
 
-    <div class="scenario-section">
-      <span class="section-label">Start Here</span>
+  <main class="main">
 
-      <a href="scenario-ordinary.html" class="scenario-entry" style="border-color:rgba(201,168,76,0.35);background:rgba(201,168,76,0.04)">
-        <div class="se-tag">Introduction · The Republic at Ground Level</div>
-        <div class="se-title">Start Here — Ordinary Law</div>
-        <div class="se-desc">Begin with a day in the life of the constitution — an ordinary parliamentary session, a Ministerial press conference, a minor Inspectorate finding. The document under normal conditions.</div>
-        <span class="se-arrow">→</span>
-      </a>
+    <!-- FEATURED -->
+    <div class="featured-section">
+      <span class="featured-label">Start Here — Eight Essential Scenarios</span>
+      <div class="featured-grid">
 
-<div class="scenario-section">
-      <span class="section-label">The Scenario Library</span>
+        <a href="scenario-ordinary.html" class="featured-entry">
+          <span class="fe-num">01 · Ordinary Governance</span>
+          <span class="fe-title">The Ordinary Week</span>
+          <span class="fe-desc">A full week of constitutional governance — a bill, a budget dispute, a PM formation, a Presidential foreign policy action. The system working as designed.</span>
+        </a>
 
-      <div class="filter-bar" id="filterBar">
-        <button class="filter-btn active" onclick="filterScenarios('all', this)">All <span style="opacity:0.5;font-size:0.55rem">(31)</span></button>
-        <button class="filter-btn" onclick="filterScenarios('long-form', this)">Long-Form</button>
-        <button class="filter-btn" onclick="filterScenarios('historical', this)">Historical</button>
-        <button class="filter-btn" onclick="filterScenarios('focused', this)">Focused</button>
-        <button class="filter-btn" onclick="filterScenarios('comparative', this)">Comparative</button>
+        <a href="scenario-budget.html" class="featured-entry">
+          <span class="fe-num">02 · Fiscal Accountability</span>
+          <span class="fe-title">The Budget Impasse</span>
+          <span class="fe-desc">A coalition fracture stalls the budget. 600 legislators and 312,400 government employees stop receiving pay on Day 91. The constitutional pressure mechanism resolves what negotiation could not.</span>
+        </a>
+
+        <a href="scenario-nonderogable.html" class="featured-entry">
+          <span class="fe-num">03 · Non-Derogable Rights</span>
+          <span class="fe-title">Enhanced Measures</span>
+          <span class="fe-desc">A general requests interrogation methods the constitution prohibits. The EI finds a violation. The SC rules 8-1. The prohibition on torture holds regardless of who is asking or why.</span>
+        </a>
+
+        <a href="scenario-independent-agency.html" class="featured-entry">
+          <span class="fe-num">04 · Institutional Independence</span>
+          <span class="fe-title">The Safety Director</span>
+          <span class="fe-desc">A food safety director investigating a politically connected industry receives two removal notices in one day. She stays at her desk throughout both. The constitutional mechanism works as designed.</span>
+        </a>
+
+        <a href="scenario-medical-autonomy.html" class="featured-entry">
+          <span class="fe-num">05 · Medical Autonomy</span>
+          <span class="fe-title">The Referral</span>
+          <span class="fe-desc">A state restricts abortion services through scope of practice regulation — constitutionally valid — then tries to punish a patient, her sister, her doctor, and an out-of-state provider. SC 9-0 strikes down the civil mechanism.</span>
+        </a>
+
+        <a href="scenario-capital.html" class="featured-entry">
+          <span class="fe-num">06 · Right to Life</span>
+          <span class="fe-title">The Capital Cases</span>
+          <span class="fe-desc">Three questions about capital punishment: whether §1.1 permits it, whether §1.2 applies to the method, and whether a federal abolition statute binds state criminal law. Each answer changes what the next majority can do.</span>
+        </a>
+
+        <a href="scenario-status-order.html" class="featured-entry">
+          <span class="fe-num">07 · Interstate Recognition</span>
+          <span class="fe-title">Everywhere She Goes</span>
+          <span class="fe-desc">A family with a same-sex adoption order moves to a state that refuses recognition. The SC rules 7-0. A status order issued by a court of competent jurisdiction is valid everywhere in the Republic.</span>
+        </a>
+
+        <a href="scenario-american.html" class="featured-entry">
+          <span class="fe-num">08 · Long-Form</span>
+          <span class="fe-title">The American Republic — 35 Years</span>
+          <span class="fe-desc">The first 35 years of a republic formed from the United States. Five constitutional crises, each resolved by a different provision. The document earning its authority over time.</span>
+        </a>
+
       </div>
-      <div class="filter-count" id="filterCount">45 scenarios</div>
+    </div>
 
-      <div class="scenario-list" id="scenarioList">
+    <!-- FULL LIBRARY -->
+    <div class="library-section">
+      <div class="page-section-header" style="margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--gold)">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--navy)">The Full Library</h2>
+        <p style="font-size:0.9rem;color:var(--muted);margin-top:0.5rem">All 45 scenarios organized by subject. The eight above appear in their categories below.</p>
+      </div>
 
-        
-        <a href="scenario.html" class="scenario-entry" data-type="long-form">
-          <div class="se-tag">Long-Form · Twenty-Two Years · Founding Arc</div>
-          <div class="se-title">The Transition Scenario</div>
-          <div class="se-desc">A hypothetical twenty-two-year history of the Federated Republic — from the Convention that ratified it through the first generation of governance. The transition architecture (Article XIX) in full operation: Phase 1 through Phase 4 activation, the first elections, the first cohabitation, and the first constitutional crisis.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§19 Transition Architecture</span>
-            <span class="se-prov">§2.1 Dual Executive</span>
-            <span class="se-prov">§4.2 open-candidacy judicial selection</span>
-            <span class="se-prov">§8.9 State Designee Panel</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
+      <!-- GOVERNANCE AND INSTITUTIONS -->
+      <div class="library-section" style="margin-bottom:2.5rem">
+        <div class="category-header">
+          <span class="category-title">Governance and Institutions</span>
+          <span class="category-count">12 scenarios</span>
+        </div>
+        <p class="category-desc">How the system's machinery works in practice — elections, formation, the PM's legislative tools, executive accountability, and the inspectorate design.</p>
+        <div id="scenarioList">
 
-        
-        <a href="scenario-applied-analysis.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
-          <div class="se-title">Applied Constitutionalism</div>
-          <div class="se-desc">An international scenario testing how the Republic's constitutional framework handles real-world complexity: existing legal institutions, the NRS architecture, institutional accommodation, and the Transitional Accountability Mechanism. Tests the interface between Article IV, Article IX, §19.1, and §19.9.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§4.1 Legal System Accommodation</span>
-            <span class="se-prov">§9.2 NRS Architecture</span>
-            <span class="se-prov">§19.1 Institutional Accommodation</span>
-            <span class="se-prov">§19.9 Transitional Accountability</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-american.html" class="scenario-entry" data-type="long-form">
-          <div class="se-tag">Long-Form · Thirty-Five Years · North America</div>
-          <div class="se-title">The American Republic</div>
-          <div class="se-desc">One Republic, one constitutional order, thirty-five years. Recession, immigration pressure, State fiscal failure, climate displacement, an island community that leaves and returns, a caretaker period, and the economic contraction that tests everything simultaneously.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§6.1 Dual-Gate Immigration</span>
-            <span class="se-prov">§1.27 Non-Refoulement</span>
-            <span class="se-prov">§10.1 Basic Needs Floor</span>
-            <span class="se-prov">§2.3 Post-Dissolution Bar</span>
-            <span class="se-prov">§13 Territories</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-china.html" class="scenario-entry" data-type="long-form">
-          <div class="se-tag">Long-Form · Year 0 to Year 30 · Continental Scale</div>
-          <div class="se-title">The China Scenario</div>
-          <div class="se-desc">A polity of 1.4 billion ratifies the constitution. Six constitutional systems break almost immediately: the NRS against national information control architecture, civilian command of a military whose chain of authority answers to an abolished institution, Statehood Audits across 34 provincial divisions with three failures, constitutional literacy at generational scale, two sovereign frameworks coexisting in one territory, and a monetary authority director election where the most qualified candidates are former central planners. A thirty-year stress test.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§9.1–9.2 NRS Architecture</span>
-            <span class="se-prov">§2.1.d Fund Certification</span>
-            <span class="se-prov">§14.1 Prior Sovereignty</span>
-            <span class="se-prov">§13.2–13.3 Statehood Audit</span>
-            <span class="se-prov">§10.4.a MA Director Election</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-seren.html" class="scenario-entry" data-type="long-form">
-          <div class="se-tag">Long-Form · Formation to Year 30 · West Africa</div>
-          <div class="se-title">The Republic of Seren</div>
-          <div class="se-desc">Three former colonial territories federate on the West African coast. Offshore gas revenue, a Sahel climate migration emergency, a presidential removal following an Intelligence Firewall violation, a traditional authority compact that survives its territory's physical disappearance to the sea, and an independence referendum that produces 71% territorial support and fails on the §15.4.a national threshold.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§13.6 Voluntary Incorporation</span>
-            <span class="se-prov">§14.1 Indigenous Compact</span>
-            <span class="se-prov">§12.3 Intelligence Firewall</span>
-            <span class="se-prov">§2.10 Presidential Removal</span>
-            <span class="se-prov">§15.4.a 70% Threshold</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-weimar.html" class="scenario-entry" data-type="historical">
-          <div class="se-tag">Historical · Applied Constitutionalism · Weimar Germany</div>
-          <div class="se-title">The Weimar Scenario</div>
-          <div class="se-desc">November 1932 — twenty days before Hindenburg appoints Hitler as Chancellor. Article 48 invoked 109 times. The Federated Republic is ratified instead and runs for fifteen years against the exact conditions that destroyed its predecessor. Which provisions bite, when, and against whom.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§1.25 Emergency Derogation</span>
-            <span class="se-prov">§1.25.e No Electoral Postponement</span>
-            <span class="se-prov">§2.3.b Constructive Vote</span>
-            <span class="se-prov">§15.3 Unamendable Provisions</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        
-
-
-
-        <a href="scenario-concordance.html" class="scenario-entry" data-type="long-form">
-          <div class="se-tag">Long-Form · Year 0 to Year 35 · Multi-State Founding · External Threat</div>
-          <div class="se-title">The Concordance Scenario</div>
-          <div class="se-desc">Five SE Asian states ratify together. The continental neighbor to the north views the union as encirclement and the constitutional framework as an ideological threat. Thirty-five years of constitutional durability: sustained economic warfare, two military crises, an Intelligence Firewall violation that removes a sitting PM through the constructive no-confidence mechanism, and a maritime treaty ratified by the Senate while naval forces are on Tier 2. The constitution's hardest test is not whether it defeats its enemies — it is whether it remains itself under their pressure.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§19.1 Multi-Founder Ratification</span>
-            <span class="se-prov">§12.3 Intelligence Firewall</span>
-            <span class="se-prov">Article VIII constitutional violation</span>
-            <span class="se-prov">§2.3.b Constructive No Confidence</span>
-            <span class="se-prov">§2.1 Tier Authorization</span>
-            <span class="se-prov">§10.1 BNF Under Pressure</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-war.html" class="scenario-entry" data-type="long-form">
-          <div class="se-tag">Long-Form · Year 0 to Year 7 · Total War · Constitutional Limit</div>
-          <div class="se-title">The War Scenario</div>
-          <div class="se-desc">A coordinated surprise attack. Tier 1 at 04:31. Tier 3 — the first Legislative Declaration of Defense in the document's history — by Day 23. Emergency derogation at maximum scale, and the unamendable rights holding even then. Two States fall under enemy occupation. An Intelligence Firewall violation during active combat, published to the NRS while the war continues. A Senate vote authorizes a weapon that kills 41,200 civilians. The Republic wins. Everything is on the permanent record. The constitution cannot fully answer whether authorization makes it right.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.1.c Tier 3 — First Invocation</span>
-            <span class="se-prov">§1.25 Emergency Derogation</span>
-            <span class="se-prov">§1.25.b Non-Derogable Rights</span>
-            <span class="se-prov">§12.3 Intelligence Firewall</span>
-            <span class="se-prov">§10.1 Severe Contraction Protocol</span>
-            <span class="se-prov">§9.1 NRS Under Attack</span>
-          </div>
+        <a href="scenario-ordinary.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Ordinary Governance · All Articles</div>
+          <div class="se-title">The Ordinary Week <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
+          <div class="se-desc">A full week of constitutional governance across both executives, the legislature, and the courts. The entry point for the entire project.</div>
           <span class="se-arrow">→</span>
         </a>
 
         <a href="scenario-formation.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Institutional Process · Two Tests · §2.3 Fixed-Term Caretaker Model</div>
+          <div class="se-tag">Institutional Process · §2.3 Fixed-Term Caretaker Model</div>
           <div class="se-title">The Formation Scenarios</div>
-          <div class="se-desc">Two tests of the redesigned §2.3 government formation provisions. Part A: a post-election failure where no Domestic Affairs Council exists and Senate designation is mandatory at day 61. Part B: a mid-term vacancy where the SDACO steps up and the House seats a successor within 35 days. The LI's weekly accountability reports are the pressure mechanism that replaces dissolution.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.3.a PM Selection</span>
-            <span class="se-prov">§2.3.c Caretaker Protocol</span>
-            <span class="se-prov">§2.3.b Constructive No Confidence</span>
-            <span class="se-prov">§8.2 LI Weekly Reporting</span>
-          </div>
+          <div class="se-desc">Two tests of PM formation: a post-election failure where Senate designation becomes mandatory at Day 61, and a mid-term vacancy where the SDACO steps up.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-sc-election.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Institutional Process · §4.2 Open-Candidacy SC Selection</div>
+          <div class="se-title">The Supreme Court Election</div>
+          <div class="se-desc">Two SC elections — an uncontested and a highly contested one — test the open-candidacy selection process and appellate court review of eligibility disputes.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-madirector.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Institutional Process · Year 7 · First MA Election Cycle</div>
+          <div class="se-title">The First Director</div>
+          <div class="se-desc">The Republic's first Monetary Authority Director election. The independence design is tested before the institution has established its own authority.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-suspensive-veto.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">PM Legislative Objection · §2.4.a · Suspensive Veto and Lapse</div>
+          <div class="se-title">The Veto That Lapses</div>
+          <div class="se-desc">The PM issues a Fiscal Objection against a House-passed bill. The House waits out the objection window. The bill becomes law without PM signature or override vote.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-president-combined.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Presidential Election · §7.2.b · The Combined Score</div>
+          <div class="se-title">The Combined Score</div>
+          <div class="se-desc">The first presidential election under the combined popular-plus-geographic scoring system. A candidate wins the popular vote; a different candidate wins the presidency.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-removal-ec.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Electoral Integrity · §16.2.a · EC Member Removal</div>
+          <div class="se-title">The Commissioner</div>
+          <div class="se-desc">An Electoral Commission member is removed mid-term for cause. The process tests the EC's independence from the executive and the Panel mechanism at the electoral commission level.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-removal-justice.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Judicial Accountability · §4.1.c · First SC Justice Removal</div>
+          <div class="se-title">The Statement of Grounds</div>
+          <div class="se-desc">The Republic's first Supreme Court justice removal proceeding. The Statement of Grounds mechanism, the Panel, and the distinction between judicial independence and judicial unaccountability.</div>
           <span class="se-arrow">→</span>
         </a>
 
         <a href="scenario-clemency.html" class="scenario-entry" data-type="process">
           <div class="se-tag">Constitutional Process · §2.9.d · Cross-Chamber Clemency Review</div>
           <div class="se-title">The Clemency Scenario</div>
-          <div class="se-desc">Two tests of §2.9.d's cross-chamber review. A Presidential pardon survives House review by four votes — 247-253. A PM commutation is voided 61-39 after the EI finds the explanatory report contains a material inaccuracy about the recipient's prior convictions. The one-year resubmission bar is registered on the NRS.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.9.d Cross-Chamber Clemency Review</span>
-            <span class="se-prov">§2.1.g Presidential Clemency</span>
-            <span class="se-prov">§2.2.f PM Clemency</span>
-            <span class="se-prov">§8.1 EI Factual Review</span>
-          </div>
+          <div class="se-desc">A clemency petition reaches the cross-chamber review panel. The constitutional process for clemency, its limits, and the accountability requirements tested in a contested case.</div>
           <span class="se-arrow">→</span>
         </a>
-        
-        <a href="scenario-sc-election.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Institutional Process · Two Tests · §4.2 Open-Candidacy SC Selection</div>
-          <div class="se-title">The Supreme Court Election</div>
-          <div class="se-desc">Two tests of the open-candidacy SC selection model. Part A: a mid-term vacancy where a JI certification refusal is challenged — and routed to the Appellate Courts, not the sitting Court. Part B: a regular election with eleven candidates and the Judicial Selection Board's advisory assessment under pressure from candidates who argue the Board is gatekeeping without authority.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§4.2.a–e Open-Candidacy Process</span>
-            <span class="se-prov">§4.2.b Judicial Selection Board</span>
-            <span class="se-prov">§4.2.c JI Certification</span>
-            <span class="se-prov">§8.4.e SC Candidate Registry</span>
-          </div>
+
+        <a href="scenario-ma-certification.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Fiscal Independence · §10.4 · Monetary Authority Under Pressure</div>
+          <div class="se-title">The Certification</div>
+          <div class="se-desc">The PM requests MA certification for a fiscal measure the MA board finds constitutionally problematic. The independence design and the limits of political pressure on a constitutionally insulated body.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-cleanmoney.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Electoral Finance · Article XVIII</div>
+          <div class="se-title">The Clean Money Cases</div>
+          <div class="se-desc">Three challenges to the electoral finance framework — dark money routing, foreign-adjacent donors, and spending by constitutionally ineligible entities — and how Article XVIII handles each.</div>
           <span class="se-arrow">→</span>
         </a>
 
         <a href="scenario-recall.html" class="scenario-entry" data-type="process">
           <div class="se-tag">Democratic Accountability · §2.10.b · Presidential Popular Recall</div>
           <div class="se-title">The Presidential Recall</div>
-          <div class="se-desc">A test of §2.10.b — the highest democratic threshold in the constitution. The Senate refers a presidential recall after the §2.10.a legislative track fails. Turnout reaches 82%. 57% of those who vote want removal. But the constitution requires a majority of all eligible voters — not those who show up. The recall fails by 1.6 million votes.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.10.a Legislative Removal</span>
-            <span class="se-prov">§2.10.b Popular Recall</span>
-            <span class="se-prov">§2.10.c One Referral Per Term</span>
-          </div>
+          <div class="se-desc">A citizen-initiated recall referendum against a sitting President. The petition, the threshold, the timing rules, and what happens when the recall succeeds mid-term.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        </div>
+      </div>
+
+      <!-- RIGHTS UNDER PRESSURE -->
+      <div class="library-section" style="margin-bottom:2.5rem">
+        <div class="category-header">
+          <span class="category-title">Rights Under Pressure</span>
+          <span class="category-count">6 scenarios</span>
+        </div>
+        <p class="category-desc">Article I rights tested in contested circumstances — emergency powers, environmental entitlements, cross-border care, absolute prohibitions, and capital punishment.</p>
+
+        <a href="scenario-nonderogable.html" class="scenario-entry" data-type="rights">
+          <div class="se-tag">Non-Derogable Rights · §1.2 · §1.25.b · §15.3.a</div>
+          <div class="se-title">Enhanced Measures <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
+          <div class="se-desc">A military commander requests interrogation methods the constitution absolutely prohibits. The non-derogable rights floor holds.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-medical-autonomy.html" class="scenario-entry" data-type="rights">
+          <div class="se-tag">Medical Autonomy · §1.28 · §1.1 · Cross-Border Care</div>
+          <div class="se-title">The Referral <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
+          <div class="se-desc">A state restricts abortion services locally and tries to extend its reach across borders. SC 9-0 on the cross-border protections; 8-1 on the scope of practice authority.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-capital.html" class="scenario-entry" data-type="rights">
+          <div class="se-tag">Right to Life · §1.1 · §1.2 · §1.25.b · §15.3.a · Federalism</div>
+          <div class="se-title">The Capital Cases <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
+          <div class="se-desc">Three connected questions: method challenge under §1.2, federal abolition by statute, and whether that statute binds state criminal law. Each answer shapes what comes next.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-status-order.html" class="scenario-entry" data-type="rights">
+          <div class="se-tag">Interstate Recognition · §4.4.d · Status Order Portability</div>
+          <div class="se-title">Everywhere She Goes <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
+          <div class="se-desc">A same-sex adoption order denied recognition when the family crosses a state line. SC 7-0. A status order from a court of competent jurisdiction is valid throughout the Republic.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-environment.html" class="scenario-entry" data-type="rights">
+          <div class="se-tag">Rights in Practice · Year 9 · §1.22.a Self-Executing Default</div>
+          <div class="se-title">The Environmental Scenario</div>
+          <div class="se-desc">Year 9 and the legislature has not enacted the environmental protection statute §1.22.a requires. The self-executing default activates. A citizen invokes the constitutional standard directly in court.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-emergency.html" class="scenario-entry" data-type="rights">
+          <div class="se-tag">Emergency Powers · §1.25 · Emergency Derogation and Limits</div>
+          <div class="se-title">The Emergency Scenario</div>
+          <div class="se-desc">A Declaration of National Emergency is used to suspend rights beyond what §1.25 permits. The SC applies the proportionality standard. The non-derogable list and the expiry requirements enforced.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+
+      <!-- DEMOCRATIC MACHINERY -->
+      <div class="library-section" style="margin-bottom:2.5rem">
+        <div class="category-header">
+          <span class="category-title">Democratic Machinery</span>
+          <span class="category-count">5 scenarios</span>
+        </div>
+        <p class="category-desc">Amendments, referenda, redistricting, and the mechanisms that give citizens direct constitutional authority.</p>
+
+        <a href="scenario-amendment.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Constitutional Amendment · §15.1 · Amendment Architecture</div>
+          <div class="se-title">The Amendment Scenario</div>
+          <div class="se-desc">A proposed amendment passes the legislative supermajority but fails the popular ratification threshold. The amendment architecture — who initiates, who ratifies, what is immune — tested in full.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-referendum.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Direct Democracy · Article XI · Optional Referendum</div>
+          <div class="se-title">The Referendum Year</div>
+          <div class="se-desc">Three referenda in one year: a citizen-initiated challenge to a new law, a legislative inaction referendum, and a constitutional referendum. The participation threshold and finality rules tested.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-citizen-amendment.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Constitutional Amendment · §15.1.c · Citizen-Led Path and Re-Vote</div>
+          <div class="se-title">The Petition</div>
+          <div class="se-desc">A citizen-initiated constitutional amendment reaches the re-vote threshold after an initial failure. The citizen pathway, the 90-day re-vote window, and what happens when it succeeds.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-redistricting.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Electoral Districts · §3.4 · Redistricting Challenge</div>
+          <div class="se-title">The Map</div>
+          <div class="se-desc">The Electoral Commission submits a redistricting plan the Legislature rejects. The SC arbitrates. The prohibition on partisan gerrymandering and the Commission's independence tested against a hostile House.</div>
           <span class="se-arrow">→</span>
         </a>
 
         <a href="scenario-budget.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Fiscal Accountability · §10.2 and §10.2.a · Budget Failure</div>
-          <div class="se-title">The Budget Impasse</div>
-          <div class="se-desc">A coalition fracture stalls the budget past the 90-day continuation period. Discretionary spending suspends. 312,400 government employees and 600 legislators lose pay simultaneously on Day 91. The Monetary Authority publishes a daily NRS counter. By Day 19 of withholding, the political pressure resolves what negotiation could not. Pay is restored within 14 days of enactment.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§10.2 Budget Continuation</span>
-            <span class="se-prov">§10.2.a Legislative Pay Withholding</span>
-            <span class="se-prov">§8.1 MA Fiscal Certification</span>
-          </div>
+          <div class="se-tag">Fiscal Accountability · §10.2 · Budget Failure and Pay Withholding</div>
+          <div class="se-title">The Budget Impasse <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
+          <div class="se-desc">A stalled budget triggers the pay-withholding mechanism. Political pressure does what negotiation could not. Day 91 and counting.</div>
           <span class="se-arrow">→</span>
         </a>
-        <a href="scenario-removal-justice.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Judicial Accountability · §4.1.c · First SC Justice Removal</div>
-          <div class="se-title">The Statement of Grounds</div>
-          <div class="se-desc">A Supreme Court justice is removed under §4.1.c for the first time — not for her rulings, but for how she issued one. The House passes a Statement of Grounds 341-159. A 67-day Senate trial follows. The constitutional question: what separates removable conduct from judicial philosophy — and what it costs the Court to operate with six justices for nine months.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§4.1.c SC Justice Removal</span>
-            <span class="se-prov">§3.5.c Senate Trial</span>
-            <span class="se-prov">§4.2.e Mid-Term Vacancy</span>
-            <span class="se-prov">§4.2.g Vacancy Operating Rules</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-                <a href="scenario-removal-ec.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Electoral Integrity · §16.2.a · §16.5.c · EC Member Removal</div>
-          <div class="se-title">The Commissioner</div>
-          <div class="se-desc">An Electoral Commission member's undisclosed conflict of interest is found 210 days before National Election Day. The JI substantiates grounds. The Legislature schedules a vote. By the scheduled date, 175 days remain — inside the 180-day proximity window. The vote is automatically suspended. Commissioner Vargas administers the election. The vote is held afterward. She is removed. The scenario asks what the proximity rule costs when the timing is close and the grounds are real.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§16.2.a EC Removal</span>
-            <span class="se-prov">§16.5.c 180-Day Proximity Rule</span>
-            <span class="se-prov">§8.1.c JI Oversight of EC</span>
-            <span class="se-prov">§8.9 State Designee Panel</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-                <a href="scenario-president-combined.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Presidential Election · §7.2.b · The Combined Score</div>
-          <div class="se-title">The Combined Score</div>
-          <div class="se-desc">No candidate achieves a national RCV majority. The combined score — 65% national first-preference share, 35% fraction of regions won — decides. Candidate Osei receives 46.1% of the national vote and wins four of ten regions. Candidate Vasquez receives 41.8% and wins six of ten. Vasquez wins the presidency. The constitutional challenge reaches the Supreme Court within fourteen days.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§7.2.a National RCV</span>
-            <span class="se-prov">§7.2.b Combined Score</span>
-            <span class="se-prov">§7.2.e Certification Challenge</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
+
+      </div>
+
+      <!-- TERRITORIAL AND INDIGENOUS -->
+      <div class="library-section" style="margin-bottom:2.5rem">
+        <div class="category-header">
+          <span class="category-title">Territorial and Indigenous</span>
+          <span class="category-count">2 scenarios</span>
+        </div>
+        <p class="category-desc">Devolution, statehood, and the Republic's relationship with indigenous nations whose sovereignty predates its own.</p>
+
         <a href="scenario-devolution.html" class="scenario-entry" data-type="process">
           <div class="se-tag">State Governance · §13.3 · Mandatory Devolution</div>
           <div class="se-title">The Third Audit</div>
-          <div class="se-desc">The State of Korrath fails its Statehood Audit for the third consecutive year. The early warnings were published. Federal grants were withheld. The remediation plan did not hold. The Senate votes 76-24 on a Motion of Devolution — one above the 75 required. Korrath challenges at the Supreme Court within thirty days on the narrow factual ground. The challenge fails. Korrath becomes a Territory.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§13.3.a Devolution Triggers</span>
-            <span class="se-prov">§13.3.c Senate Vote</span>
-            <span class="se-prov">§13.3.e Constitutional Challenge</span>
-            <span class="se-prov">§13.3.d Effects</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-ma-certification.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Fiscal Independence · §10.4 · Monetary Authority Under Pressure</div>
-          <div class="se-title">The Certification</div>
-          <div class="se-desc">The Monetary Authority certifies a GNR figure 8.3% below what the government projected. The PM's budget collapses. The government tries every available mechanism — methodology challenge, statutory amendment, removal inquiry, public pressure campaign. The MA publishes its full workings in real time. None of it changes the certified figure. The number is what it is.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§10.4.b Independence</span>
-            <span class="se-prov">§10.4.d Methodology Integrity</span>
-            <span class="se-prov">§10.3.a Deficit Threshold</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-suspensive-veto.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">PM Legislative Objection · §2.4.a · Suspensive Veto and Lapse</div>
-          <div class="se-title">The Veto That Lapses</div>
-          <div class="se-desc">The PM issues a suspensive veto on a major healthcare bill eighteen days before National Election Day. The bill is suspended for one session. The election produces a coalition four votes short of the absolute majority needed to override. The House never schedules the override vote. The bill lapses on the last day of the session without anyone being defeated on it. The mechanism worked exactly as designed — which is itself the question.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.4.a Suspensive Veto</span>
-            <span class="se-prov">§2.4.b Fiscal Objection — Excluded</span>
-            <span class="se-prov">§2.4.c Objection Limits</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-redistricting.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Electoral Districts · §3.4 · Redistricting Challenge</div>
-          <div class="se-title">The Map</div>
-          <div class="se-desc">Veldun's redistricting commission draws a map that passes LI compliance review. A 1/3 parliamentary minority challenges it at the Supreme Court with statistical evidence: the map's three contested boundaries appear in only 2% of 500,000 simulated neutral maps. The Court orders specific districts redrawn — it cannot draw them itself. The commission redraws with full methodology documentation. The map is certified.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§3.4.b Prohibited Inputs</span>
-            <span class="se-prov">§3.4.e LI Compliance Review</span>
-            <span class="se-prov">§3.4.f Court Adjudication</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-citizen-amendment.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Constitutional Amendment · §15.1.c · Citizen-Led Path</div>
-          <div class="se-title">The Petition</div>
-          <div class="se-desc">The Digital Sovereignty Amendment achieves 77.2% affirmative support on 63.1% participation — above the 60% floor, 1.9% short of the 65% standard. The exception clause applies: the JI may certify as presumptively valid. The JI develops its own framework (the constitution provides none), publishes it, applies it, and certifies. The SC upholds in thirty days. The amendment takes effect.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§15.1.c Citizen-Led Path</span>
-            <span class="se-prov">§15.2.a No Executive Veto</span>
-            <span class="se-prov">§15.3.a Unamendable Provisions</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-status-order.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Interstate Recognition · §4.4.d · Status Order Portability</div>
-          <div class="se-title">Everywhere She Goes</div>
-          <div class="se-desc">A same-sex couple adopts a child in Verentis. They move to Kailos. Kailos courts invoke the §4.4.a "facially contrary to Article I" non-recognition ground to refuse the adoption order — arguing children have a fundamental right to opposite-sex parents. The Supreme Court rules 7-0: the ground was designed to protect the person before the court, not to give receiving States a veto on orders they dislike culturally. §1.8 independently prohibits what Kailos did.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§4.4.d Status Orders</span>
-            <span class="se-prov">§4.4.a Non-Recognition Grounds</span>
-            <span class="se-prov">§1.8 Equality Before the Law</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-nonderogable.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Non-Derogable Rights · §1.2 · §1.25.b · Military Pressure</div>
-          <div class="se-title">Enhanced Measures</div>
-          <div class="se-desc">Year 14. A Tier 3 operation is active. Intelligence uses sleep deprivation, stress positions, and isolation on captured foreign operatives — calling the techniques "enhanced measures" rather than torture. The EI publishes its annual military compliance finding. The President's office publishes a 34-page counter-opinion. The SC rules 8-1: §1.2 prohibits "cruel, degrading, or inhumane treatment" independently of "torture"; military necessity is foreclosed by the text; absolute prohibitions that can be redefined are not absolute.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§1.2 Prohibition of Torture</span>
-            <span class="se-prov">§1.25.b Non-Derogable Rights</span>
-            <span class="se-prov">§15.3.a Unamendable Provisions</span>
-            <span class="se-prov">§8.1.b EI Military Compliance</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-american-mature.html" class="scenario-entry" data-type="longform">
-          <div class="se-tag">Long-Form Scenario · The American Republic · Years 60–90</div>
-          <div class="se-title">The American Republic — Sixty to Ninety Years</div>
-          <div class="se-desc">The mechanisms are no longer new. The NRS holds 5 billion entries. Citizens born after ratification have grandchildren. The arguments have shifted from whether the constitution works to what it should do next. Six threads: the NRS as constitutional memory, the third generation of amendments, the Pacific Realignment, a generational budget crisis, the §1.9.c computational sovereignty cases, and a presidential election won by the great-granddaughter of a senator who voted against ratification.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§8.11 Constitutional Performance Assessment</span>
-            <span class="se-prov">§10.4 MA Independence</span>
-            <span class="se-prov">§15.1 Amendment Paths</span>
-            <span class="se-prov">Article XX Associated Communities</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-independent-agency.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Statutory Independent Agencies · §3.7 · Removal and Reinstatement</div>
-          <div class="se-title">The Safety Director</div>
-          <div class="se-desc">Year 18. The Food and Pharmaceutical Safety Agency investigates a licensed agricultural additive based on evidence of suppressed safety data. The PM removes the director for dereliction of mandate. The LI finds the investigation within statutory mandate; the EI finds no constitutional conduct violations. The Senate voids the removal 56-44 on Day 18. The PM issues a second notice on different grounds three hours later. The Senate voids that one too. The provision's successive-removal gap and the dual inspectorate design are both tested in full.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§3.7.c Removal</span>
-            <span class="se-prov">§3.7.d Oversight</span>
-            <span class="se-prov">§3.7.b Appointment</span>
-            <span class="se-prov">§3.7.e Limits</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-capital.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Right to Life · §1.1 · §1.2 · §1.25.b · Federalism</div>
-          <div class="se-title">The Capital Cases</div>
-          <div class="se-desc">Three constitutional questions on the right to life. Part I: the first method challenge under §1.2 after the removal of the old capital punishment carve-out — SC 6-3 that the three-drug lethal injection protocol constitutes cruel treatment; the legislature's authorization is not a defense. Part II: whether abolition requires statute or amendment — statute suffices, amendment only needed for permanent entrenchment. Part III: whether a federal abolition statute binds state criminal law — SC 5-4 upholding federal preemption, with a dissent that the constitution's gap on criminal law allocation means the question isn't really settled.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§1.1 Right to Life</span>
-            <span class="se-prov">§1.2 Prohibition of Torture</span>
-            <span class="se-prov">§1.25.b Non-Derogable Rights</span>
-            <span class="se-prov">§15.3.a Unamendable Provisions</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-medical-autonomy.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Medical Autonomy · §1.28 · §1.1 · Cross-Border Care</div>
-          <div class="se-title">The Referral</div>
-          <div class="se-desc">Year 26. Kailos restricts abortion services through scope of practice regulation — constitutionally valid under §1.28 — and creates a civil cause of action against anyone who assists a resident in obtaining care elsewhere. A resident, her sister, her OB-GYN who provided information, and the Arveld provider who performed the procedure are all sued. SC 9-0 strikes down the civil mechanism: all four protections in §1.28's second paragraph apply. The §1.1 personhood clarification closes the fetal personhood argument but leaves states free to pass fetal protection laws under their own authority.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§1.28 Medical Autonomy</span>
-            <span class="se-prov">§1.1 Right to Life</span>
-            <span class="se-prov">§1.28 Cross-Border Protection</span>
-            <span class="se-prov">§1.25.b Non-Derogable Rights</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-<a href="scenario-madirector.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Institutional Process · Year 7 · First Election Cycle</div>
-          <div class="se-title">The First Director</div>
-          <div class="se-desc">The Monetary Authority Director election arrives in Year 7. Thirty-nine candidates, a Board advisory assessment that cannot choose for the electorate, and a ranked-choice count running seventeen rounds. The mechanism does not guarantee the best outcome — it produces a legitimate one, with a documented record of how the choice was made.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§10.4.a MA Director Election</span>
-            <span class="se-prov">§10.2 MA Independence</span>
-            <span class="se-prov">§8.6 EI Candidate Registry</span>
-            <span class="se-prov">§16.2 Electoral Commission</span>
-          </div>
+          <div class="se-desc">A State fails its third consecutive governance audit. The devolution process activates. The Early Warning, Remediation Plan, and devolution vote sequence — constitutional mechanics in a State governance failure.</div>
           <span class="se-arrow">→</span>
         </a>
 
-        
-
-        <a href="scenario-environment.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Rights in Practice · Year 9 · §1.22.a Self-Executing Default</div>
-          <div class="se-title">The Environmental Scenario</div>
-          <div class="se-desc">A State authorizes a petrochemical facility knowing it will raise particulate concentrations to harmful levels. Residents invoke §1.22.a directly in federal court — bypassing State administrative remedies. The Supreme Court's 6-2 ruling establishes that the no-indefinite-deferral clause means what it says: mitigation that does not prevent significant harm is not compliance. The facility is redesigned, not blocked.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§1.22.a Government Non-Harm</span>
-            <span class="se-prov">§1.22.b Environmental Stewardship</span>
-            <span class="se-prov">§11.2.a Subsidiarity</span>
-            <span class="se-prov">§15.6 Constitutional Supremacy</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-emergency.html" class="scenario-entry" data-type="focused">
-          <div class="se-tag">Focused · §1.25 Emergency Derogation · Rights Under Pressure</div>
-          <div class="se-title">The Emergency Scenario</div>
-          <div class="se-desc">A cascading infrastructure failure triggers a Declaration of National Emergency. The government tests the boundary between legitimate emergency powers and unconstitutional derogation. Which rights can be limited, which cannot, and what the Inspectorates do when an emergency order oversteps.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§1.25.a Declaration Standard</span>
-            <span class="se-prov">§1.25.b Non-Derogable Rights</span>
-            <span class="se-prov">§1.25.e Election Protection</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-amendment.html" class="scenario-entry" data-type="focused">
-          <div class="se-tag">Focused · §15.1 Amendment Architecture · Constitutional Change</div>
-          <div class="se-title">The Amendment Scenario</div>
-          <div class="se-desc">Three amendment paths tested in sequence: the State Convention path, the citizen-led direct democracy path, and an attempt to amend one of the permanently unamendable provisions. Which paths work, which fail, and why the unamendable list is not itself amendable.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§15.1.a State Convention Path</span>
-            <span class="se-prov">§15.1.b Direct Democracy Path</span>
-            <span class="se-prov">§15.3.a Unamendable Provisions</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-referendum.html" class="scenario-entry" data-type="focused">
-          <div class="se-tag">Focused · Article XI · Direct Democracy</div>
-          <div class="se-title">The Referendum Year</div>
-          <div class="se-desc">Three Article XI mechanisms activate simultaneously: a citizen petition that triggers a JI eligibility dispute reaching the Supreme Court; a referendum that wins 54.1% No and fails the 50% participation threshold; and a Notice of Legislative Inaction that forces the Legislature to pass a statute it had avoided for four sessions.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§11.1.a Citizen Petition</span>
-            <span class="se-prov">§11.1.b JI Eligibility Screen</span>
-            <span class="se-prov">§11.1.c 50% Threshold</span>
-            <span class="se-prov">§3.3.a Legislative Inaction</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-cleanmoney.html" class="scenario-entry" data-type="focused">
-          <div class="se-tag">Focused · Article XVIII · Electoral Finance</div>
-          <div class="se-title">The Clean Money Cases</div>
-          <div class="se-desc">A mining company routes contributions through 312 employees at identical amounts — the Supreme Court rules 7-2 on attribution. A disclosure threshold exempts 23% of electoral spending, triggering automatic referendum eligibility. A publicly funded candidate faces 8-to-1 spending, producing the Republic's first Structural Disadvantage Finding.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§18.1.b Natural Persons Only</span>
-            <span class="se-prov">§18.3.c Aggregate Attribution</span>
-            <span class="se-prov">§18.1.d Disclosure Threshold</span>
-            <span class="se-prov">§18.2.c Public Funding Adequacy</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-uk.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · United Kingdom · Parliamentary Sovereignty</div>
-          <div class="se-title">The United Kingdom Scenario</div>
-          <div class="se-desc">What does the constitution mean for a polity with Westminster parliamentary sovereignty? The tension between constitutional supremacy and a tradition where Parliament can do anything — and what the supremacy clause settles that Westminster convention cannot.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§15.6 Constitutional Supremacy</span>
-            <span class="se-prov">§2.1–2.2 Dual Executive</span>
-            <span class="se-prov">§4.1 Legal System Accommodation</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-france.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · France · Fifth Republic Cohabitation</div>
-          <div class="se-title">The France Scenario</div>
-          <div class="se-desc">France's Fifth Republic already has cohabitation — but without constitutional domain separation, it produces paralysis. What changes when domains are defined, recorded, and enforced? A close reading of how the dual executive architecture differs from its closest real-world analogue.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.1–2.2 Dual Executive</span>
-            <span class="se-prov">§2.1.h Conflict Resolution</span>
-            <span class="se-prov">§9.1 NRS</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-germany.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · Germany · Federal Architecture</div>
-          <div class="se-title">The Germany Scenario</div>
-          <div class="se-desc">Germany's Basic Law has the constructive vote of no confidence and unamendable provisions — the two features most directly borrowed here. What does this constitution do with those mechanisms that the Basic Law does not? Where they converge and where they diverge.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.3.b Constructive Vote</span>
-            <span class="se-prov">§15.3 Unamendable Provisions</span>
-            <span class="se-prov">§4.1 Legal System Accommodation</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-russia.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · Russia · Authoritarian Backsliding</div>
-          <div class="se-title">The Russia Scenario</div>
-          <div class="se-desc">The specific constitutional mechanisms that enabled Russia's slide toward authoritarianism — and which provisions of this document are designed to close those pathways. The NRS as the anti-forgetting machine. The BNF floor as the anti-austerity weapon. The unamendable list as the permanent barrier.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§9.1 NRS Architecture</span>
-            <span class="se-prov">§10.1.d Severe Contraction Protocol</span>
-            <span class="se-prov">§15.3 Unamendable Provisions</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-india.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · India · Scale and Diversity</div>
-          <div class="se-title">The India Scenario</div>
-          <div class="se-desc">What does this constitution look like at subcontinental scale, with a billion and a half people, twenty-two official languages, and a history of emergency provisions used against the population they were meant to protect? Scale, linguistic accessibility, and emergency derogation under real pressure.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§1.25 Emergency Derogation</span>
-            <span class="se-prov">§1.8 Equality</span>
-            <span class="se-prov">§10.1 BNF Floor at Scale</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-nigeria.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · Nigeria · Post-Conflict Federalism</div>
-          <div class="se-title">The Nigeria Scenario</div>
-          <div class="se-desc">A federal republic with deep ethnic, religious, and regional divisions adopts this constitution. The BNF floor in a resource-dependent economy. The dual executive in a polity where civilian-military relations are constitutionally unsettled. Conflict-affected State provisions and the reconstruction framework.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§10.1 BNF Floor</span>
-            <span class="se-prov">§13.2.g Conflict-Affected States</span>
-            <span class="se-prov">§19.1 Institutional Accommodation</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-caledoria.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · Caledoria · Indigenous Governance</div>
-          <div class="se-title">The Indigenous Governance Scenario</div>
-          <div class="se-desc">A fictional polity with strong indigenous governance traditions, significant pre-existing treaty networks, and a history of colonial administrative disruption. How does Article XIV's compact framework interact with governance structures that predate any written constitution by centuries?</div>
-          <div class="se-provisions">
-            <span class="se-prov">§14 Indigenous Nation Compact</span>
-            <span class="se-prov">§19.1 Institutional Accommodation</span>
-            <span class="se-prov">Article XX Associated Communities</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-indigenous.html" class="scenario-entry" data-type="focused">
-          <div class="se-tag">Focused · §14.6 · Indigenous Nation Status Elections</div>
+        <a href="scenario-indigenous.html" class="scenario-entry" data-type="process">
+          <div class="se-tag">Indigenous Sovereignty · §14.6 · Status Elections</div>
           <div class="se-title">The Four Elections</div>
-          <div class="se-desc">At ratification, four indigenous nations exercise their §14.6 status rights simultaneously. The Miran League affirms the Article XIV compact. The Kessai Peoples elect Associated Community status. The Ataro Confederacy pursues territorial integration through the two-step pathway. The Venuwa Nation — entirely landlocked within Republic territory — elects full sovereign independence. The Republic has 24 months to negotiate a treaty it has never negotiated before.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§14.6 Status Elections</span>
-            <span class="se-prov">§14.5.d Associated Community Path</span>
-            <span class="se-prov">§14.1 Prior Sovereignty</span>
-            <span class="se-prov">§3.2.e Treaty Ratification</span>
-          </div>
+          <div class="se-desc">Four indigenous nations simultaneously initiate status change processes under §14.6 — one choosing compact continuation, one Associated Community status, one the territorial pathway, one independence. The four options and their constitutional consequences tested concurrently.</div>
           <span class="se-arrow">→</span>
         </a>
 
-        <a href="scenario-immigration.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · Immigration · Gate System Under Pressure</div>
-          <div class="se-title">The Immigration Scenario</div>
-          <div class="se-desc">A polity with an existing immigration crisis — large undocumented population, political pressure on Gate 1 State sponsorship, diplomatic disputes over Gate 2 national security denials — adopts this constitution. What changes immediately? What takes years? What doesn't change at all?</div>
-          <div class="se-provisions">
-            <span class="se-prov">§6.1 Immigration Gates</span>
-            <span class="se-prov">§1.8 Equality and National Origin</span>
-            <span class="se-prov">§1.27 Non-Refoulement</span>
-          </div>
+      </div>
+
+      <!-- THE REPUBLIC OVER TIME -->
+      <div class="library-section" style="margin-bottom:2.5rem">
+        <div class="category-header">
+          <span class="category-title">The Republic Over Time</span>
+          <span class="category-count">5 scenarios</span>
+        </div>
+        <p class="category-desc">Long-form multi-year narratives that trace constitutional governance across decades — crises, recoveries, and the document's authority earned through use.</p>
+
+        <a href="scenario-american.html" class="scenario-entry" data-type="longform">
+          <div class="se-tag">Long-Form · Thirty-Five Years</div>
+          <div class="se-title">The American Republic — 35 Years <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
+          <div class="se-desc">Formation from the United States, five constitutional crises in 35 years, each resolved by a different provision. The recommended entry point for the long-form scenarios.</div>
           <span class="se-arrow">→</span>
         </a>
 
-        <a href="scenario-varentum.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · Varentum · Immigration Pressure State</div>
-          <div class="se-title">The Varentum Scenario</div>
-          <div class="se-desc">A border State under heavy immigration pressure tries to restrict Gate 1 sponsorship access by national origin and administrative burden. The statistical disparity presumption activates. The federal courts engage. What a State can and cannot do within the dual-gate architecture.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§6.1.a Gate 1 — State Sponsorship</span>
-            <span class="se-prov">§6.1.b Statistical Disparity Presumption</span>
-            <span class="se-prov">§1.8 Equality</span>
-          </div>
+        <a href="scenario-american-mature.html" class="scenario-entry" data-type="longform">
+          <div class="se-tag">Long-Form · The American Republic · Years 60–90</div>
+          <div class="se-title">The American Republic — Sixty to Ninety Years</div>
+          <div class="se-desc">The mature republic under sustained demographic and geopolitical pressure. Second-generation constitutional questions that only arise when the first generation has been settled for decades.</div>
           <span class="se-arrow">→</span>
         </a>
 
-        <a href="scenario-valdoria.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · Valdoria · Economic Crisis</div>
+        <a href="scenario-seren.html" class="scenario-entry" data-type="longform">
+          <div class="se-tag">Long-Form · Formation to Year 30</div>
+          <div class="se-title">The Republic of Seren</div>
+          <div class="se-desc">A smaller republic formed from a parliamentary democracy. Thirty years of governance including a surveillance crisis, an economic contraction, and a successful constitutional amendment.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-concordance.html" class="scenario-entry" data-type="longform">
+          <div class="se-tag">Long-Form · Year 0 to Year 35 · Multi-State Founding</div>
+          <div class="se-title">The Concordance</div>
+          <div class="se-desc">Four sovereign nations forming a republic simultaneously under the multi-founder provisions. The coordination problems of a simultaneous founding, an early external threat, and 35 years of federal consolidation.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-china.html" class="scenario-entry" data-type="longform">
+          <div class="se-tag">Long-Form · Year 0 to Year 30 · Continental Scale</div>
+          <div class="se-title">The China Scenario</div>
+          <div class="se-desc">The framework applied to a continental-scale polity. How the federal structure, the inspectorates, the indigenous compact, and the amendment architecture function at a scale the document was not specifically designed for.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-war.html" class="scenario-entry" data-type="longform">
+          <div class="se-tag">Long-Form · Year 0 to Year 7 · Total War</div>
+          <div class="se-title">The War Scenario</div>
+          <div class="se-desc">The Republic in total war within its first seven years. Article XII, emergency powers, the non-derogable floor, and the fiscal mechanisms under maximum pressure simultaneously.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+
+      <!-- INTERNATIONAL AND COMPARATIVE -->
+      <div class="library-section" style="margin-bottom:2.5rem">
+        <div class="category-header">
+          <span class="category-title">International and Comparative</span>
+          <span class="category-count">13 scenarios</span>
+        </div>
+        <p class="category-desc">This framework applied to and compared against other constitutional systems. For readers who want context — how this design differs from existing democracies, and what it looks like when the framework encounters conditions it was not built for.</p>
+
+        <a href="scenario-germany.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The Germany Scenario</div>
+          <div class="se-desc">The Federated Republic framework applied to the German constitutional context. Comparisons with the Basic Law on the dual executive, the constructive vote, and the unamendable provisions.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-uk.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The United Kingdom Scenario</div>
+          <div class="se-desc">The framework applied to a Westminster-tradition polity without a codified constitution. What a written individual sovereignty floor and a dual executive do to a system built on parliamentary supremacy.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-france.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The France Scenario</div>
+          <div class="se-desc">Applied to a semi-presidential system. How the domain separation between President and PM differs from cohabitation, and what the inspectorate design adds to a system that already has the Conseil d'État.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-russia.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The Russia Scenario</div>
+          <div class="se-desc">The framework applied to a polity with deep authoritarian capture. Which provisions are most resistant to capture, which are most vulnerable, and what the NRS requirement does to a government determined to act in the dark.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-india.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The India Scenario</div>
+          <div class="se-desc">Applied to the world's largest democracy. The territorial framework, the indigenous compact, and the federal structure at scale. How the devolution and statehood provisions handle a highly diverse federal polity.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-weimar.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">Historical Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The Weimar Scenario</div>
+          <div class="se-desc">The Weimar Republic's constitutional failure applied to this framework. Which provisions would have changed the outcome, which would not have, and what the Weimar experience teaches about constitutional design against democratic backsliding.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-nigeria.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The Nigeria Scenario</div>
+          <div class="se-desc">Applied to a multi-ethnic federal polity with a history of military interruption. The indigenous compact, the inspectorate design, and the electoral architecture in a context where these problems have been acute.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-valdoria.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
           <div class="se-title">The Economic Crisis Scenario</div>
-          <div class="se-desc">A commodity-dependent economy hits a severe contraction. The BNF floor must be maintained while GNR collapses. The PM loses a constructive vote — a new government is formed mid-crisis. The MA's independence is tested when the new PM demands methodology changes to the GNR certification.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§10.1 BNF Floor + Severe Contraction</span>
-            <span class="se-prov">§2.3.b Constructive Vote</span>
-            <span class="se-prov">§10.4 MA Independence</span>
-          </div>
+          <div class="se-desc">A republic in severe economic contraction. The Basic Needs Floor, the Monetary Authority's independence, and the fiscal framework under conditions that have historically produced constitutional failure.</div>
           <span class="se-arrow">→</span>
         </a>
 
-        <a href="scenario-aldric.html" class="scenario-entry" data-type="comparative">
-          <div class="se-tag">Comparative · Aldric · Voluntary Federation</div>
+        <a href="scenario-aldric.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
           <div class="se-title">The Voluntary Federation</div>
-          <div class="se-desc">A small independent republic voluntarily joins the Federation as a founding member — bringing its own legal system, its own civil service, and a written constitution that conflicts with this one in seventeen places. The transition architecture, the compatibility assessment, and the 48-month institutional adjustment.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§19 Transition Architecture</span>
-            <span class="se-prov">§13.6 Voluntary Incorporation</span>
-            <span class="se-prov">§15.6 Constitutional Supremacy</span>
-          </div>
+          <div class="se-desc">Two independent republics voluntarily merging under the multi-founder provisions. The treaty process, the simultaneous ratification requirement, and what the transition provisions look like when both founding states have functioning governments.</div>
           <span class="se-arrow">→</span>
         </a>
 
-      
-    <div class="scenario-section">
-      <span class="section-label">Interactive Tool</span>
-      <a href="scenario-tester.html" style="display:block;text-decoration:none;border:2px solid var(--gold);padding:2rem 2.25rem;transition:background 0.2s" onmouseover="this.style.background='rgba(201,168,76,0.05)'" onmouseout="this.style.background='transparent'">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem">Scenario Tester · AI-Powered</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);margin-bottom:0.5rem;font-weight:400">Test Your Own Scenario</div>
-        <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:1rem">Pick an actor, an action, and the circumstances. The constitution analyzes what happens — which provisions apply, what's permitted, what's prohibited, and what the consequences are.</p>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)">Open the Scenario Tester →</span>
-      </a>
-    </div>
+        <a href="scenario-applied-analysis.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">Applied Constitutionalism</div>
+          <div class="se-desc">A comparative overview of how the framework's major design choices — dual executive, inspectorates, NRS, constructive vote, unamendable floor — compare against the solutions other constitutional systems have found to the same problems.</div>
+          <span class="se-arrow">→</span>
+        </a>
 
-    <div class="page-note">
-      <strong>About these scenarios.</strong> These are hypothetical — the Federated Republic does not exist. The scenarios are designed to show how constitutional provisions function under real pressure, not to predict or prescribe political outcomes. Names, events, and statistics are invented for illustrative purposes.
-    </div>
+        <a href="scenario-caledoria.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The Indigenous Governance Scenario</div>
+          <div class="se-desc">A polity with a large and politically organized indigenous population adopts the framework. How the Article XIV compact and §14.6 status elections interact with a pre-existing treaty relationship between the state and indigenous nations.</div>
+          <span class="se-arrow">→</span>
+        </a>
 
+        <a href="scenario-immigration.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The Integration Test</div>
+          <div class="se-desc">The Breckian Republic replaces its immigration statute with a civic integration assessment that discriminates by cultural proximity. The constitutional floor on immigration under §6.1, the §1.8 equality requirement, and what happens when a government designs discrimination into a facially neutral process.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+        <a href="scenario-varentum.html" class="scenario-entry" data-type="international">
+          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
+          <div class="se-title">The Three Attempts</div>
+          <div class="se-desc">The Republic of Varentum tries three successive legislative strategies to restrict immigration from a historically complicated region. Each attempt tests a different limit of the Gate 2 statutory authority. Two fail constitutionally; the third succeeds within the framework's constraints.</div>
+          <span class="se-arrow">→</span>
+        </a>
+
+      </div>
+
+    </div>
   </main>
 
   <script>
-
-  function filterScenarios(type, btn) {
-    // Update active button
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    // Filter entries
-    const entries = document.querySelectorAll('#scenarioList .scenario-entry');
-    let visible = 0;
-    entries.forEach(e => {
-      const match = type === 'all' || e.dataset.type === type;
-      e.classList.toggle('hidden', !match);
-      if(match) visible++;
-    });
-
-    // Update count
-    const label = type === 'all' ? 'All scenarios' :
-      type === 'long-form' ? 'Long-Form scenarios' :
-      type === 'historical' ? 'Historical scenarios' :
-      type === 'focused' ? 'Focused scenarios' : 'Comparative scenarios';
-    document.getElementById('filterCount').textContent = visible + ' ' + label;
-  }
-
-    function toggleMobileNav(){
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
       document.getElementById('mobileMenu').classList.toggle('open');
-    }
-    document.addEventListener('click',function(e){
-      const menu=document.getElementById('mobileMenu');
-      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
-        menu.classList.remove('open');
-      }
     });
   </script>
 </body>
