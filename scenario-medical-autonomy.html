@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Referral — The Federated Republic</title>
+  <meta name="description" content="Year 26. Kailos restricts abortion services through scope of practice regulation and creates a civil cause of action against anyone who assists a resident in obtaining care elsewhere. The SC addresses whether the scope of practice restriction is constitutionally valid, whether the civil mechanism survives §1.28's second paragraph, and what the §1.1 personhood clarification does and does not decide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .ruling{background:var(--cream2);border:1px solid var(--border);border-top:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .ruling-vote{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--navy);font-weight:500;margin-bottom:0.5rem;letter-spacing:0.05em}
+    .ruling p{font-size:0.92rem;line-height:1.75;margin-bottom:0.75rem}
+    .ruling p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .statute-box{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.7}
+    .statute-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v151.docx" download>Download the Constitution</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Medical Autonomy · §1.28 · §1.1 · Cross-Border Care</span>
+      <h1 class="scenario-title">The Referral</h1>
+      <p class="scenario-subtitle">Year 26. Kailos restricts abortion services through scope of practice regulation and creates a civil cause of action against anyone who assists a resident in obtaining care elsewhere. A resident, her sister, her doctor, and an Arveld provider are all named in a civil suit. The Supreme Court addresses what §1.28 permits, what it prohibits, and what the §1.1 personhood clarification resolves — and what it deliberately leaves open.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§1.28 Medical Autonomy</span>
+        <span class="prov-tag">§1.1 Right to Life</span>
+        <span class="prov-tag">§1.25.b Non-Derogable Rights</span>
+        <span class="prov-tag">§4.4.d Interstate Obligations</span>
+        <span class="prov-tag">§4.3.b Standing</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>In Year 25 the Kailos Legislature passed the Reproductive Services Regulation Act by a margin of 61-39. The Act operated on two tracks. The first was a scope of practice amendment: abortion was reclassified as a restricted procedure, permissible only where the attending physician certified that continuing the pregnancy posed a serious and documented risk to the life of the patient. Violations resulted in license revocation and a civil fine. The second track was an enforcement mechanism the Act's sponsors called the Assistance Prohibition: any person who knowingly assisted a Kailos resident in obtaining an abortion outside Kailos — by providing transportation, funding, referrals, information, or any other material support — was liable in a civil action for statutory damages of not less than ten thousand Republic dollars, recoverable by any resident of Kailos who filed suit.</p>
+
+      <div class="statute-box">
+        <span class="statute-label">Kailos Reproductive Services Regulation Act — Year 25 — Section 7(a) Assistance Prohibition</span>
+        Any person who, with knowledge that a Kailos resident intends to obtain an abortion outside the State of Kailos, provides transportation, financial assistance, written or verbal referral, medical records, or any other material assistance toward that purpose, shall be liable in a civil action for statutory damages in the amount of ten thousand Republic dollars per instance, recoverable by any resident of Kailos in a court of competent jurisdiction within the State. No defense of lawfulness in another jurisdiction shall be available to a defendant under this section.
+      </div>
+
+      <p>The final clause was deliberate. The Act's drafters had read the Republic's constitution carefully. They knew §1.28's second paragraph protected care that was "lawfully provided" where it was received. Section 7(a) did not punish the receipt of care. It punished the provision of assistance — a category they argued §1.28 did not explicitly protect in the same terms. The argument was technical and the drafters knew it, but they believed it created enough legal ambiguity to survive initial challenge.</p>
+
+      <h2>The Parties</h2>
+
+      <p>Maren Doss was a Kailos resident who became pregnant in Year 25 and sought an abortion. The procedure she sought did not meet the Act's emergency exception. She traveled to Arveld, where the procedure was legal, available, and performed without complication at a licensed clinic. She was accompanied by her sister, Petra Doss, who drove her and paid for the procedure. Before the trip, Maren's OB-GYN in Kailos — Dr. Siona Treth — had told her at an appointment that the procedure she was seeking was not something Dr. Treth could perform in Kailos under current law, but that it was available at licensed facilities in Arveld, and provided her with a list of clinics. Dr. Treth did not provide a formal referral letter. She provided information.</p>
+
+      <p>The Arveld provider who performed the procedure was Dr. Calder Vane, a licensed physician in Arveld with no Kailos license and no Kailos professional connection of any kind.</p>
+
+      <p>Three months after the procedure, a Kailos resident named Tobias Harn — who had no personal connection to any of the parties — filed civil suit in Kailos court under Section 7(a) against all four: Maren Doss, Petra Doss, Dr. Treth, and Dr. Vane. The suit sought ten thousand Republic dollars from each defendant. Harn had standing under the Act's broad private right of action. The Kailos trial court accepted the suit and set a hearing date.</p>
+
+      <h2>The Constitutional Petition</h2>
+
+      <p>All four defendants jointly petitioned the Supreme Court for constitutional review before the trial court hearing. The petition raised three questions: whether the Kailos scope of practice restriction itself was constitutionally valid; whether Section 7(a) could constitutionally impose liability on any of the four defendants; and whether the suit against Dr. Vane — a licensed physician in Arveld who had never practiced in or held any connection to Kailos — could proceed consistent with the constitution.</p>
+
+      <p>The SC accepted the petition and ordered the trial court proceeding stayed pending its ruling. Kailos filed a brief defending all three positions. The Republic's Attorney-General filed an amicus brief on questions one and three. The Arveld Attorney-General filed an amicus brief on question three. Legal representation organizations from across the Republic filed amicus on question two.</p>
+
+      <h2>The Ruling</h2>
+
+      <div class="beat">
+        <div class="beat-label">§1.28 — Question One: Is the scope of practice restriction valid?</div>
+        <div class="beat-title">SC 8–1: Yes — §1.28 explicitly permits it</div>
+        <p>§1.28's first paragraph protects the patient-provider relationship from State compulsion or prohibition of specific treatments. Its fourth sentence then provides: "State governments may, pursuant to their domestic authority, regulate which medical services licensed professionals may offer within their jurisdiction." These two elements operate together. The first establishes a general protection; the fourth provides a specific authorization for state scope of practice regulation. A state that restricts which procedures its licensed professionals may perform is acting within the explicit grant of authority §1.28 provides. The Kailos scope of practice amendment is constitutionally valid.</p>
+        <p>The single dissenting justice writes on this question alone, arguing that scope of practice authority cannot be used to eliminate access to a procedure rather than regulate it — that there is a constitutional distinction between regulating a service and prohibiting it entirely through licensing law. The majority does not adopt this distinction. The scope of practice grant is unqualified on its face; reading a floor into it would require the Court to import content §1.28 does not contain.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§1.28 — Question Two: Does Section 7(a) survive?</div>
+        <div class="beat-title">SC 9–0: No — all four protections in §1.28's second paragraph apply</div>
+        <p>The Kailos Act's argument that §1.28 protected only the receipt of care and not the provision of assistance fails on the text. §1.28's second paragraph provides four independent protections. The second protection covers "any person who assists a citizen in obtaining or traveling to receive such care." Petra Doss provided transportation and funding. She is directly within the second protection. Section 7(a)'s liability cannot reach her.</p>
+        <p>The third protection covers "any medical professional who refers or provides information to a patient regarding care lawfully available elsewhere in the Republic." Dr. Treth told her patient that a procedure she was seeking was available at licensed facilities in Arveld and provided a list of clinics. This is the provision of information regarding care lawfully available elsewhere. The Act's Section 7(a) cannot reach her. The Court addresses the drafters' technical argument directly: the protection covers "information" as an explicit category. The Kailos Legislature's framing of information-provision as "assistance" rather than "referral" does not change the constitutional analysis. The third protection is written broadly enough to cover what Dr. Treth did regardless of which label the Act places on it.</p>
+        <p>The fourth protection covers "any medical professional licensed in another State or Territory for providing care that was lawful in the jurisdiction in which it was provided." Dr. Vane holds an Arveld license. He performed a procedure that was lawful in Arveld. He has no Kailos connection. Section 7(a)'s final clause — "No defense of lawfulness in another jurisdiction shall be available" — attempts to remove this protection by statute. The Court holds that the constitutional protection cannot be removed by statute. §1.28 is a constitutional provision; a state legislature cannot negate its protections through enabling language in a civil cause of action.</p>
+        <p>On Maren Doss herself: the first protection covers a citizen receiving care that was "lawfully provided" where she received it. The Act's Section 7(a) does not on its face create liability for the patient — it targets those who assist her. But the Court notes in a footnote that any future Kailos legislative attempt to impose direct liability on a resident for seeking care elsewhere would fall under the first protection and would be equally void.</p>
+        <p>Section 7(a) is struck down in its entirety. No defendant is liable. The private right of action it creates is constitutionally void. The underlying scope of practice restriction remains valid and in effect.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§1.1 — Question Three: What does the personhood clarification resolve?</div>
+        <div class="beat-title">SC 9–0: It resolves one question and deliberately leaves others open</div>
+        <p>Kailos argued in its brief that the constitution's silence on when personhood begins left it free to define personhood by state law to begin at conception, and that this state-law definition provided a constitutional foundation for its scope of practice restrictions — and potentially for the Assistance Prohibition. The Court addresses this argument, though it notes the scope of practice ruling makes it unnecessary to the outcome.</p>
+        <p>§1.1 now provides that "the State's obligations attach from the moment of live birth." This sentence was added to foreclose the argument that §1.1's right to life — which the State may not deliberately deprive without a lawful sentence following conviction — extends to fetuses, thereby requiring the State to protect fetal life as a matter of constitutional obligation. That argument is foreclosed. The constitution does not mandate that any government treat a fetus as a person for purposes of §1.1's protections.</p>
+        <p>What the sentence does not decide: it does not prevent states from passing fetal protection laws under their own legislative authority. A state may choose to create wrongful death liability for third-party harm to a fetus. A state may define fetal personhood for purposes of its own civil law. What it may not do is invoke §1.1 as a constitutional mandate for those protections or as justification for restricting rights that the constitution elsewhere protects. Kailos may restrict abortion services through scope of practice regulation — §1.28 explicitly permits this. It may not claim that §1.1 requires it to do so, or that §1.1 provides constitutional justification for extending its reach beyond its borders.</p>
+      </div>
+
+      <h2>After the Ruling</h2>
+
+      <p>Section 7(a) is struck down. The Kailos scope of practice restriction remains. Maren Doss, Petra Doss, Dr. Treth, and Dr. Vane are not liable. Tobias Harn receives nothing. The Kailos Legislature convenes an extraordinary session to consider alternative enforcement mechanisms. The legal analysis that follows is careful: the constitution has now specifically enumerated four categories of protected persons. Any mechanism that reaches any of those four categories is void on its face. The space for legislative creativity within §1.28's constraints is narrow.</p>
+
+      <p>In Year 27, three other States with similar scope of practice restrictions repeal their Assistance Prohibition equivalents following the ruling. Two do not and face identical litigation. The outcomes are identical.</p>
+
+      <p>Dr. Treth's medical license is not revoked. Her provision of information was constitutionally protected. The Kailos Medical Board, which had opened an inquiry into her conduct pending the SC ruling, closes the inquiry following the decision and publishes a statement that providing information about lawfully available care in other States is protected conduct that the Board cannot discipline.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§1.28 was designed as a framework provision rather than an enumerated guarantee. The scope of practice authority it gives states is real and the ruling upholds it without qualification. Kailos can restrict abortion services within its borders. The constitution does not require Kailos to provide or permit any particular medical service. The individual sovereignty floor protects the patient-provider relationship from compulsion; it does not guarantee that a willing provider exists within any given state.</p>
+        <p>The second paragraph's four protections are where the provision's constitutional work gets done. The Kailos drafters believed they had found a gap between "receipt of care" (protected) and "assistance toward care" (arguably not). The ruling forecloses that reading entirely. Three of the four protections specifically address categories of assistance — helpers, referring providers, out-of-state providers — because the drafters of §1.28 anticipated exactly this legislative strategy. A scope of practice restriction that cannot be enforced extraterritorially and cannot punish those who help residents seek care elsewhere is a restriction on local medical practice. It is not a barrier to care. Whether that distinction matters practically depends entirely on the resources and mobility of the individual seeking care. The constitution does not equalize those resources.</p>
+        <p>The §1.1 personhood ruling matters beyond the immediate case. By explicitly closing the §1.1 fetal personhood argument, the Court removes one of the two constitutional foundations that might have justified the Assistance Prohibition even if §1.28 had not existed. The other foundation — a state's general police power to regulate conduct affecting its residents' moral welfare — was not argued and the Court does not address it. That argument remains available for a future legislature to make. Whether it could survive §1.28's direct text is a question the scenario deliberately leaves open, as the constitution left it open.</p>
+        <p>The most significant output of the ruling is not what it strikes down but what it leaves standing. Kailos's scope of practice restriction is constitutional. Citizens of Kailos who cannot afford to travel, cannot take time from work, cannot arrange care for dependents, or do not know their options have a constitutional right the ruling cannot make practical. §1.28 is a floor, not a guarantee of access. The gap between the constitutional protection and the lived reality of exercising it is not a constitutional question. It is a political one.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-capital.html">← The Capital Cases</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
