@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Nordmere Cases — The Federated Republic</title>
+  <meta name="description" content="Year 21. Two trade agreements with the Confederacy of Nordmere fail Senate ratification in the same session. The President faces the same constitutional question twice — transmit the domestic provisions to the House Speaker or withdraw and renegotiate — and makes different choices. §2.1.i in full operation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:400;color:var(--navy);margin:3.5rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h2 .part-label{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--gold);display:block;margin-bottom:0.3rem;letter-spacing:0.15em}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
+    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.6}
+    .nrs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .vote-record{background:var(--cream2);border:1px solid var(--border);padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.88rem}
+    .vote-record strong{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--navy);display:block;margin-bottom:0.4rem}
+    .part-divider{border:none;border-top:1px solid var(--border);margin:3rem 0}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v153.docx" download>Download the Constitution</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">International Trade Authority · §2.1.i · Presidential Election After Failure</span>
+      <h1 class="scenario-title">The Nordmere Cases</h1>
+      <p class="scenario-subtitle">Year 21. Two trade agreements with the Confederacy of Nordmere fail Senate ratification in the same session. The President faces the same constitutional question twice — transmit the domestic provisions to the House Speaker, or withdraw and renegotiate — and makes different choices. The difference is which path serves the Republic's interests when the international obligations fall away.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.1.i Trade Authority</span>
+        <span class="prov-tag">§3.2.e Treaty Ratification</span>
+        <span class="prov-tag">§2.1.i PM Concurrence</span>
+        <span class="prov-tag">§3.3 Legislative Process</span>
+        <span class="prov-tag">§2.4 Suspensive Veto</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>President Yara Solis had been negotiating two separate agreements with the Confederacy of Nordmere for most of her third year in office. The agreements were distinct in character and had been deliberately structured separately — one covering tariffs and customs procedures, one covering investment protections and professional credential recognition. Her trade team advised that bundling them would create a single failure point. The advice was correct. Both failed anyway, twelve days apart, for entirely different reasons.</p>
+
+      <hr class="part-divider">
+
+      <h2><span class="part-label">CASE ONE</span>The Tariff and Customs Agreement</h2>
+
+      <p>The Nordmere Tariff and Customs Simplification Agreement reduced bilateral tariff rates on manufactured goods in seventeen product categories and established a joint customs clearance protocol that would reduce border processing time for commercial shipments. The PM had provided written concurrence before the agreement was concluded — the customs infrastructure changes would require domestic investment and affected the Republic's domestic logistics industry significantly. The concurrence was published to the NRS alongside the concluded agreement.</p>
+
+      <div class="vote-record">
+        <strong>NRS ENTRY — SENATE RATIFICATION VOTE — YEAR 21, DAY 84 — NORDMERE TARIFF AGREEMENT</strong>
+        Failed to achieve 2/3 Senate majority required under §3.2.e. Vote: 28 in favor, 16 opposed. Required: 30. The agreement is not binding on the Republic. Published to NRS simultaneously with the vote record.
+      </div>
+
+      <p>The failure was attributable to manufacturing-state senators who objected to tariff reductions in three product categories — precision instruments, specialty textiles, and consumer electronics components — where Nordmere producers were significantly more competitive than Republic manufacturers. Fourteen of the sixteen opposing senators represented States with significant employment in those sectors. The other two had constitutional objections to the customs protocol's data-sharing provisions.</p>
+
+      <h3>The President's Assessment</h3>
+
+      <p>Under §2.1.i, the President could transmit the domestic provisions to the House Speaker or withdraw and renegotiate. The Tariff Agreement's domestic provisions were: the customs clearance protocol infrastructure requirements, the domestic regulatory alignment changes needed to implement the joint clearance system, and a port modernization authorization. These provisions had value independent of the tariff reductions. Faster customs clearance benefited the Republic's own export operations regardless of whether Nordmere reciprocated on tariffs. The infrastructure investment would improve the Republic's logistics capacity with all trading partners, not only Nordmere.</p>
+
+      <p>President Solis elected to transmit. The transmission was published to the NRS on Day 86 — two days after the ratification failure.</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — Presidential Transmission — Year 21, Day 86 — Nordmere Tariff Agreement Domestic Provisions</span>
+        Pursuant to §2.1.i, the President transmits the domestic provisions of the Nordmere Tariff and Customs Simplification Agreement to the Speaker of the House for consideration as legislation. The transmitted provisions are: Schedule A (Customs Infrastructure Requirements), Schedule B (Regulatory Alignment), and Schedule C (Port Modernization Authorization). The tariff reduction provisions (Schedule D) are not transmitted — their value is contingent on Nordmere's reciprocal obligations and have no domestic standalone application. The President notes that renegotiation of the tariff provisions is under consideration separately.
+      </div>
+
+      <p>The Speaker referred Schedules A and B to the Trade and Commerce Committee. Schedule C — the port modernization authorization — was referred to the Infrastructure Committee, which had been working on a parallel domestic ports bill and absorbed the authorization into its own legislation. The Trade and Commerce Committee held three weeks of hearings and passed a modified version of the customs infrastructure provisions, tightening the data privacy requirements that had concerned two of the dissenting senators. The modified bill passed the House 241-159, moved through the Senate without amendment, and was enacted. The PM certified the fiscal provisions. The customs infrastructure improvements proceeded on a domestic basis.</p>
+
+      <p>The tariff provisions were renegotiated separately. President Solis approached Nordmere six weeks after the ratification failure with a revised proposal: the three contested product categories would have a seven-year phase-in period with annual review rather than immediate tariff reduction. Nordmere agreed. The revised Nordmere Tariff Agreement — covering only the tariff provisions, the customs infrastructure now having traveled separately — was submitted to the Senate in Year 22. It passed 33-11.</p>
+
+      <hr class="part-divider">
+
+      <h2><span class="part-label">CASE TWO</span>The Investment and Credentials Agreement</h2>
+
+      <p>The Nordmere Investment Protection and Professional Recognition Agreement covered two distinct areas: bilateral investment protections allowing Republic and Nordmere investors to operate in each other's markets with defined legal safeguards, and a mutual recognition framework for professional credentials in medicine, law, and engineering. Both areas were materially domestic — the investment provisions affected the Republic's own regulatory framework for foreign investors, and the credential recognition framework directly affected professional licensing standards. The PM's written concurrence had been obtained for both before conclusion. Both the agreement and the concurrence were on the NRS.</p>
+
+      <div class="vote-record">
+        <strong>NRS ENTRY — SENATE RATIFICATION VOTE — YEAR 21, DAY 96 — NORDMERE INVESTMENT AGREEMENT</strong>
+        Failed to achieve 2/3 Senate majority required under §3.2.e. Vote: 26 in favor, 18 opposed. Required: 30. The agreement is not binding on the Republic.
+      </div>
+
+      <p>The failure was primarily attributable to the professional credential recognition framework. Medical professional bodies had lobbied against recognition of Nordmere medical credentials without additional Republic-standard examination requirements. Three legal professional associations had published statements arguing that the Nordmere legal system's procedural differences made direct credential recognition inappropriate. Engineering associations were largely supportive. The eighteen opposing senators cited professional standards concerns in their floor statements.</p>
+
+      <h3>The President's Assessment</h3>
+
+      <p>The President considered the same question: transmit the domestic provisions to the House Speaker, or renegotiate?</p>
+
+      <p>The investment protection provisions were bilateral by nature. Their purpose was to give Republic investors enforceable rights in Nordmere and Nordmere investors enforceable rights in the Republic. Implementing the Republic's side of those protections domestically — without Nordmere's reciprocal commitment — would create obligations on the Republic without any return. A Republic investor in Nordmere would gain nothing from domestic legislation if Nordmere had not ratified its corresponding obligations. The provisions were only meaningful as part of a binding mutual commitment.</p>
+
+      <p>The credential recognition framework had a similar character. Recognition was explicitly bilateral — the agreement required both parties to recognize the other's credentials. Unilateral domestic implementation would mean the Republic recognized Nordmere credentials without Nordmere recognizing Republic credentials. The professional bodies' concerns would likely intensify rather than diminish if the Republic implemented recognition without the reciprocal benefit.</p>
+
+      <p>President Solis did not transmit. She published her assessment to the NRS on Day 98.</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — Presidential Assessment — Year 21, Day 98 — Nordmere Investment Agreement</span>
+        The President has assessed whether to transmit the domestic provisions of the Nordmere Investment Protection and Professional Recognition Agreement to the Speaker of the House pursuant to §2.1.i. The President has determined not to transmit. The investment protection provisions have no standalone domestic value — their effect is contingent on Nordmere's reciprocal obligations under the agreement. The credential recognition provisions are bilateral in design; unilateral domestic implementation would create asymmetric obligations without the corresponding benefit. The President intends to renegotiate the credential recognition framework to address professional standards concerns raised during the ratification process. The investment provisions will be resubmitted without modification.
+      </div>
+
+      <p>The renegotiation of the credential recognition framework took four months. President Solis's trade team worked with the Republic's medical and legal professional bodies to define the additional examination requirements that would satisfy their standards concerns. Nordmere agreed to equivalent reciprocal requirements — their professional associations had analogous concerns about Republic credentials. The revised framework required a Republic-standards examination for Nordmere credential holders seeking Republic recognition, with the examination content and passing threshold defined by the relevant domestic professional regulator rather than by the agreement itself. The investment provisions were resubmitted unchanged.</p>
+
+      <p>The revised agreement was submitted to the Senate in Year 22. The PM's concurrence was obtained again — the renegotiated credential provisions were still materially domestic-affecting, now more so given the domestic professional regulator's role. The PM's concurrence noted the change in the credential framework and confirmed it met the domestic standards requirements the professional bodies had raised. The agreement passed 34-10.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>The two cases test the same provision with the same outcome — failed ratification — and produce different presidential choices. The constitutional "may" in §2.1.i does real work precisely because the right answer depends on the nature of the provisions, not on a uniform rule. The Tariff Agreement's domestic provisions had standalone value; customs infrastructure improvements serve the Republic's interests regardless of what Nordmere does. Transmitting them to the House was the correct choice and produced enacted legislation. The Investment Agreement's domestic provisions had no standalone value — they were bilateral by design and meaningless without the foreign party's corresponding obligations. Transmitting them would have created domestic obligations that served no one.</p>
+        <p>The PM concurrence requirement performs consistently across both cases. Both agreements materially affected the domestic economic sphere — customs infrastructure and investment protection frameworks both required PM concurrence before conclusion. What the cases show is that PM concurrence at the negotiation stage and the post-failure presidential election are independent decisions. The PM concurring with an agreement before conclusion does not determine what happens to the domestic provisions if ratification fails. That judgment belongs to the President, applied to the specific character of each provision.</p>
+        <p>The NRS record across both cases is complete: both ratification failures, both presidential assessments, the transmission in Case One and the non-transmission in Case Two, the revised agreements, the PM concurrences, and the eventual ratifications. A senator voting on either revised agreement has access to the full history of what changed and why. The renegotiation process that produced each revision is visible because the presidential assessments explaining what needed to change were published when the failures occurred. The NRS does not only record outcomes. It records the reasoning that produced them.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-amendment-authority.html">← The Rider</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
