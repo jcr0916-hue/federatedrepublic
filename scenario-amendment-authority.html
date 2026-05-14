@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rider — The Federated Republic</title>
+  <meta name="description" content="Year 14. The House passes the Public Infrastructure Renewal Act. The Senate adds an agricultural export subsidy provision with broad cross-party support. The LI finds it non-germane. The bill reaches the PM with the non-germane rider attached. The PM must give the LI's finding due consideration. §3.2.i in full operation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.6}
+    .nrs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .vote-record{background:var(--cream2);border:1px solid var(--border);padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.88rem}
+    .vote-record strong{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--navy);display:block;margin-bottom:0.4rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v153.docx" download>Download the Constitution</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Senate Amendment Authority · §3.2.i · LI Germaneness Analysis</span>
+      <h1 class="scenario-title">The Rider</h1>
+      <p class="scenario-subtitle">Year 14. The House passes the Public Infrastructure Renewal Act. The Senate adds an agricultural export subsidy provision with broad cross-party support. The LI finds it non-germane. The bill reaches the PM with the rider attached. §3.2.i in full operation.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§3.2.i Senate Amendment Authority</span>
+        <span class="prov-tag">§3.2.c Deemed Approval</span>
+        <span class="prov-tag">§8.1.a Legislative Inspectorate</span>
+        <span class="prov-tag">§2.4 Suspensive Veto</span>
+        <span class="prov-tag">§2.5 Legislative Review Period</span>
+        <span class="prov-tag">§3.3.b Standard Passage</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Public Infrastructure Renewal Act had been three years in the making. Its core was straightforward: a federal authorization of 4.2 billion Republic dollars over six years for road and bridge rehabilitation, rural broadband deployment, and flood mitigation works in States meeting a defined infrastructure deficit threshold. The bill was the PM's signature domestic program. It passed the House 231-169 after a five-week committee process and two days of floor debate. Every version of the bill — drafts, committee amendments, floor amendments, and the final enrolled text — was recorded on the National Record System with timestamps and the signatures of the presiding officers.</p>
+
+      <p>The bill entered the Senate on a Tuesday. Under §3.2.c, the Senate had a statutory period of thirty days to act before Deemed Approval triggered. The Senate's review was, by the standards of major legislation, swift. What slowed it was not opposition to infrastructure spending — that had broad support — but an opportunity the Senate's agricultural caucus had been waiting for.</p>
+
+      <h2>The Amendment</h2>
+
+      <p>The agricultural export subsidy provision had been circulating as a standalone bill in the House for two sessions. It had failed to reach a floor vote twice — once for lack of coalition support, once because it was crowded out by the budget calendar. The provision itself was targeted: it established export credit mechanisms for agricultural commodities traded under existing bilateral agreements, allowing domestic producers to access government-backed financing for export contracts above a defined threshold. Its sponsors argued it was a domestic competitiveness measure. Its opponents argued it touched international trade in ways that could complicate the President's trade negotiation authority under §2.1.i.</p>
+
+      <p>The Senate's agricultural caucus numbered nineteen of forty-four senators. They did not have the votes to pass a standalone amendment by simple majority. What they had was a bill that needed thirty-seven votes to avoid Deemed Approval — and a coalition of senators from agricultural states who were also infrastructure supporters. The negotiation was direct: the infrastructure bill would carry the export credit provision, or the agricultural caucus would delay action past the Deemed Approval threshold and then vote against the Deemed Approved version at the first available opportunity.</p>
+
+      <p>The Senate passed the amended bill 31-13. The amendment had cross-party support from agricultural states. The bill was returned to the House with the export credit provision attached.</p>
+
+      <div class="vote-record">
+        <strong>NRS ENTRY — SENATE PASSAGE — YEAR 14, DAY 47 — PUBLIC INFRASTRUCTURE RENEWAL ACT (AMENDED)</strong>
+        Bill passed with Senate amendments: 31 in favor, 13 opposed, 0 abstentions. Amended text transmitted to the House pursuant to §3.2.i. Senate Amendment: Section 14 — Agricultural Export Credit Mechanism, establishing export credit financing for agricultural commodities under existing bilateral agreements. Presiding officer signature attached. All versions — House-passed original and Senate-amended text — indexed at this NRS reference.
+      </div>
+
+      <h2>The LI Analysis</h2>
+
+      <p>The Legislative Inspectorate published its germaneness analysis forty-one hours after the Senate's vote. Under §3.2.i, the LI's function was to assess whether the Senate's amendments conformed to the subject matter of the original bill. The analysis was twenty-two pages.</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — LI Germaneness Analysis — Year 14, Day 49 — Public Infrastructure Renewal Act</span>
+        The Legislative Inspectorate has reviewed Senate Amendment Section 14 (Agricultural Export Credit Mechanism) for conformity with the subject matter of the Public Infrastructure Renewal Act as passed by the House.
+
+        Finding: Non-germane.
+
+        The Public Infrastructure Renewal Act as passed by the House concerns the authorization of federal funding for physical infrastructure rehabilitation and deployment within the Republic's domestic territory. Its subject matter encompasses: federal-State cost-sharing for infrastructure deficit remediation; broadband deployment standards and funding criteria; flood mitigation engineering standards; and the administrative framework for infrastructure deficit assessment.
+
+        Senate Amendment Section 14 introduces a distinct subject: the establishment of government-backed export credit financing for agricultural commodities in international trade. This subject — international agricultural trade finance — is not present in the original bill's text, purposes, or appropriations. It does not modify, expand, or qualify any provision of the original bill. It establishes an entirely separate program in a separate policy domain.
+
+        The LI notes that the substance of Amendment Section 14 may be sound policy. This analysis addresses only whether it conforms to the subject matter of the bill to which it was appended. It does not. This finding is published pursuant to §3.2.i and §8.1.a. The Prime Minister is required to give this finding due consideration before acting on the bill during the Legislative Review Period under §2.5.
+      </div>
+
+      <h2>The House's Response</h2>
+
+      <p>The House had fourteen days under statute to respond to the Senate amendments before the bill proceeded to the Legislative Review Period. The PM's office communicated privately to House leadership that a Suspensive Veto was under consideration if the House accepted the Senate amendments. That communication was not published — it was internal coalition management. What was published, on the NRS, was the LI's finding, which House members could read.</p>
+
+      <p>The political calculation was uncomfortable. A significant minority of House members represented agricultural districts and would have voted for the export credit provision as a standalone bill. But they had not voted for it in this vehicle — they had voted for an infrastructure bill. The LI's finding gave them cover to reject the Senate amendments on procedural grounds without appearing to oppose the underlying export credit policy.</p>
+
+      <div class="vote-record">
+        <strong>NRS ENTRY — HOUSE VOTE ON SENATE AMENDMENTS — YEAR 14, DAY 58</strong>
+        Senate Amendment Section 14 (Agricultural Export Credit Mechanism): rejected, 194 in favor, 206 opposed. The original bill as passed by the House is returned to the Senate pursuant to §3.2.i. The Senate must within the statutory period either approve the original bill or allow it to fail.
+      </div>
+
+      <h2>The Senate's Choice</h2>
+
+      <p>The Senate now faced a binary. Under §3.2.i, no further amendments were permitted in this session once the House had rejected Senate amendments. The Senate could approve the original infrastructure bill and accept that the export credit provision would need to travel separately, or it could let the infrastructure bill fail — taking political responsibility for the failure of a 4.2 billion Republic dollar program because it could not attach an unrelated rider.</p>
+
+      <p>The agricultural caucus held two days of internal negotiation. The PM's office offered a commitment: the export credit provision would receive a dedicated House committee review within sixty days of the infrastructure bill's passage, with a floor vote guaranteed within the session. The commitment was not binding — the PM had no constitutional authority to guarantee a House floor vote — but it was published to the NRS as a formal statement from the PM's office, which made it politically costly to ignore.</p>
+
+      <div class="vote-record">
+        <strong>NRS ENTRY — SENATE VOTE — YEAR 14, DAY 63 — PUBLIC INFRASTRUCTURE RENEWAL ACT (ORIGINAL)</strong>
+        Bill approved as originally passed by the House: 29 in favor, 15 opposed, 0 abstentions. Bill proceeds to Legislative Review Period under §2.5.
+      </div>
+
+      <h2>The Legislative Review Period</h2>
+
+      <p>The original bill — without the Senate amendment — entered the Legislative Review Period. The PM issued no Suspensive Veto. The President issued no Presidential Veto; the bill contained no foreign affairs or defense provisions. The bill was enacted on Day 77 of the Senate's initial receipt. All versions — the House original, the Senate-amended text, the House rejection of amendments, and the final enacted text — were indexed on the NRS with a complete timeline.</p>
+
+      <p>The Agricultural Export Credit Act was introduced as a standalone House bill the following month. It passed the House 247-153, moved through the Senate without amendment, and was enacted forty-one days after introduction. Its NRS entry contained no LI germaneness finding — there was no Senate amendment to analyze. The President's office reviewed it during the Legislative Review Period and noted, in a published communication, that the PM's concurrence had been sought and obtained under §2.1.i given the bill's connection to existing bilateral trade agreements. The PM concurred in writing, also published. Both communications were indexed on the NRS alongside the bill's enactment.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>§3.2.i establishes the Senate's amendment authority and its limits, but the limiting mechanism — the LI's germaneness analysis — has no procedural teeth. The LI finds non-germaneness; the Senate and House do whatever they do. The provision's power is informational, not procedural. This scenario tests whether informational power is sufficient.</p>
+        <p>The answer, here, is yes — but not because the LI's finding automatically produced the right outcome. The House rejected the Senate amendments 206-194. Those twelve votes represent individual members' calculations about the LI's finding, the PM's stated position, their own agricultural district interests, and the cost of being publicly associated with a constitutionally criticized procedural maneuver. The LI's published finding gave the 206 members something to cite. Without it, the vote might have gone differently — the export credit provision had genuine support. The finding didn't bind anyone. It shifted the political calculus.</p>
+        <p>The PM's role under §3.2.i is to give the LI's finding "due consideration" before acting during the Legislative Review Period. In this scenario, the PM never reached the Legislative Review Period with the amended bill — the House rejected the amendments first. But the PM's private communication to House leadership about the Suspensive Veto was itself a form of due consideration acted upon in advance. The PM read the LI's finding, concluded the rider was non-germane, and made clear that the Suspensive Veto was available. That communication was not published. The PM's eventual decision — to approve the original bill without a veto — was published and indexed.</p>
+        <p>The Agricultural Export Credit Act's separate enactment shows what the provision is designed to produce: legislation travels through the process appropriate to its subject. The export credit policy was not bad policy. It was policy that belonged in its own bill, with its own committee review, its own floor debate, and its own NRS record. When it traveled that path, it passed with a wider margin than the Senate's rider would have achieved. The constitutional separation of subject matter produced a cleaner legislative record and, arguably, better-considered legislation.</p>
+        <p>The scenario also previews the §2.1.i trade authority question. The Agricultural Export Credit Act touched existing bilateral trade agreements, which brought it within the President's domain as well as the PM's domestic domain. The President's published review and the PM's published concurrence under §2.1.i were both on the NRS before enactment. The dual-executive check on trade-adjacent domestic legislation operated without a dispute — both executives agreed the concurrence was required and gave it. What the scenario leaves open is what happens when they don't agree. That is a question §2.1.i leaves to the Supreme Court on expedited review.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
