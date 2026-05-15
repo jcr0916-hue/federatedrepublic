@@ -168,7 +168,59 @@
     .pathway-step .ps-ref{font-size:0.7rem;color:var(--muted);margin-top:0.35rem;display:block;letter-spacing:0.08em}
     .path-threshold{text-align:center;padding:0.75rem;background:var(--cream2);border:1px dashed var(--border);margin:1.25rem 0;font-size:0.85rem;color:var(--navy);font-weight:600}
 
-    /* FOOTER */
+    /* ═══════════════════════════════════
+       DIAGRAM 4: IMMIGRATION TRACKS
+    ═══════════════════════════════════ */
+    .imm-chart{max-width:960px;margin:0 auto}
+    .imm-entry{background:var(--navy);color:var(--white);padding:1.5rem 2rem;text-align:center;margin-bottom:0;position:relative}
+    .imm-entry h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--gold);margin-bottom:0.25rem}
+    .imm-entry p{font-size:0.85rem;color:rgba(245,240,232,0.6)}
+    .imm-split{display:flex;align-items:flex-start;gap:0;margin:0;position:relative}
+    .imm-split::before{content:'';position:absolute;top:0;left:50%;width:1px;background:var(--border);height:100%;z-index:0}
+    .imm-track{flex:1;padding:0 1.5rem 2rem;position:relative;z-index:1}
+    .imm-track-label{text-align:center;padding:0.75rem 1rem;margin:0 0 1.5rem;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;border-bottom:3px solid}
+    .track-regular .imm-track-label{color:var(--blue);border-color:var(--blue);background:var(--bluelight)}
+    .track-asylum .imm-track-label{color:#7A5800;border-color:var(--gold);background:#fffbf0}
+    .imm-step{background:var(--white);border:1px solid var(--border);padding:1.1rem 1.25rem;margin-bottom:0.75rem;position:relative;transition:box-shadow 0.15s;cursor:default}
+    .imm-step:hover{box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+    .imm-step-num{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.3rem;display:block}
+    .imm-step-title{font-weight:600;font-size:0.95rem;color:var(--navy);margin-bottom:0.3rem}
+    .imm-step-desc{font-size:0.82rem;color:#555;line-height:1.55;margin-bottom:0.4rem}
+    .imm-step-ref{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:block}
+    .imm-step.step-gate1{border-left:4px solid var(--blue)}
+    .imm-step.step-gate2{border-left:4px solid var(--blue)}
+    .imm-step.step-file{border-left:4px solid var(--gold2)}
+    .imm-step.step-inhabit{border-left:4px solid var(--gold2);background:#fffbf0}
+    .imm-step.step-court{border-left:4px solid var(--gold2)}
+    .imm-step.step-credentials{border-left:4px solid var(--green);background:var(--greenlight)}
+    .imm-step.step-movement{border-left:4px solid var(--green)}
+    .imm-step.step-denial{border-left:4px solid var(--red);background:var(--redlight)}
+    .imm-arrow-down{text-align:center;color:var(--muted);font-size:1.2rem;line-height:1;margin:0.25rem 0}
+    .imm-branch{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.75rem}
+    .imm-branch-item{padding:0.75rem;font-size:0.82rem;line-height:1.5;border-left:3px solid}
+    .branch-grant{border-color:var(--green);background:var(--greenlight);color:var(--green)}
+    .branch-deny{border-color:var(--red);background:var(--redlight);color:var(--red)}
+    .imm-callout{background:var(--cream2);border:1px dashed var(--border);padding:0.75rem 1rem;margin:0.5rem 0 0.75rem;font-size:0.8rem;color:#555;line-height:1.5}
+    .imm-callout strong{color:var(--navy);display:block;margin-bottom:0.2rem;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase}
+    .imm-challenge{background:var(--bluelight);border:1px solid #b8c8d8;border-left:3px solid var(--blue);padding:0.75rem 1rem;margin:0.5rem 0;font-size:0.8rem;color:var(--blue);line-height:1.5}
+    .imm-exempt{display:inline-block;background:var(--gold);color:var(--navy);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.5rem;font-weight:700;margin-bottom:0.5rem}
+    .imm-connector{text-align:center;padding:0.5rem 0;color:var(--muted);font-size:0.8rem;letter-spacing:0.1em}
+    .imm-merge{background:var(--navy);color:var(--white);padding:1.25rem 2rem;text-align:center;margin-top:0}
+    .imm-merge h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);margin-bottom:0.25rem}
+    .imm-merge p{font-size:0.83rem;color:rgba(245,240,232,0.7)}
+    .imm-note-bar{background:var(--cream2);border-top:1px solid var(--border);padding:1.5rem 2rem;margin-top:2rem}
+    .imm-note-bar h4{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);margin-bottom:1rem}
+    .imm-notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+    .imm-note-item{font-size:0.82rem;color:#555;line-height:1.6;padding-left:0.75rem;border-left:2px solid var(--border)}
+    .imm-note-item strong{color:var(--navy);display:block;margin-bottom:0.2rem}
+    @media(max-width:700px){
+      .imm-split{flex-direction:column}
+      .imm-split::before{display:none}
+      .imm-track{padding:0 0 1.5rem}
+      .imm-branch{grid-template-columns:1fr}
+    }
+
+            /* FOOTER */
     footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2.5rem 2rem;text-align:center}
     footer p{font-size:0.8rem;color:rgba(245,240,232,0.3);margin-bottom:0.3rem}
     .footer-links{display:flex;gap:1.5rem;justify-content:center;list-style:none;margin-top:1rem}
@@ -259,7 +311,7 @@
 <div class="page-hero">
   <span class="eyebrow">Constitutional Architecture</span>
   <h1>How the Republic Works</h1>
-  <p>Three interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
+  <p>Four interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
 </div>
 
 <!-- TAB NAVIGATION -->
@@ -267,6 +319,7 @@
   <button class="tab-btn active" onclick="showTab('structure')">Government Structure</button>
   <button class="tab-btn" onclick="showTab('lifecycle')">Legislative Lifecycle</button>
   <button class="tab-btn" onclick="showTab('devolution')">State Pathways</button>
+  <button class="tab-btn" onclick="showTab('immigration')">Immigration Tracks</button>
 </div>
 
 <!-- ═══════════════════════════════
@@ -617,6 +670,160 @@
 
   </div>
 </div>
+<!-- ═══════════════════════════════
+     DIAGRAM 4: IMMIGRATION TRACKS
+═══════════════════════════════ -->
+<div class="diagram-section" id="tab-immigration">
+  <div class="section-intro">
+    <h2>Two Paths to Residency</h2>
+    <p>The Republic has two constitutionally distinct immigration tracks. They operate independently and both lead to the same federal residency credential — but through entirely different constitutional foundations.</p>
+  </div>
+
+  <div class="imm-chart">
+
+    <!-- ENTRY POINT -->
+    <div class="imm-entry">
+      <h3>Applicant</h3>
+      <p>Any person seeking to reside in the Republic permanently</p>
+    </div>
+
+    <!-- TWO TRACKS -->
+    <div class="imm-split">
+
+      <!-- LEFT: REGULAR IMMIGRATION -->
+      <div class="imm-track track-regular">
+        <div class="imm-track-label">Regular Immigration · Dual-Gate System</div>
+
+        <div class="imm-step step-gate1">
+          <span class="imm-step-num">Gate 1</span>
+          <div class="imm-step-title">State Sponsorship</div>
+          <div class="imm-step-desc">A sponsoring State certifies the applicant through its own vetting process and accepts notification obligations during the application period.</div>
+          <span class="imm-step-ref">§6.1.a — Gate 1 State Sponsorship</span>
+        </div>
+
+        <div class="imm-callout">
+          <strong>Genuine Connection Requirement</strong>
+          Applicant must maintain a genuine connection to the sponsoring State during processing. Credentials are federal once issued — not tied to the sponsoring State.
+        </div>
+
+        <div class="imm-challenge">
+          <strong>§1.8 Discrimination Challenge:</strong> If a State denies Gate 1 on discriminatory grounds, the applicant may bring a direct constitutional claim in federal court. The court may order reconsideration — it may not compel sponsorship. · §6.3
+        </div>
+
+        <div class="imm-arrow-down">↓</div>
+
+        <div class="imm-step step-gate2">
+          <span class="imm-step-num">Gate 2</span>
+          <div class="imm-step-title">Federal Certification</div>
+          <div class="imm-step-desc">The Republic certifies the applicant against four federal standards: identity verification, criminal history, national security assessment, and self-sufficiency or support guarantee.</div>
+          <span class="imm-step-ref">§6.1.b — Gate 2 Federal Certification</span>
+        </div>
+
+        <div class="imm-callout">
+          <strong>No Ideological Screening</strong>
+          No nationality-based quotas. Any denial must state the precise ground in writing, published to the NRS. · §6.1.b
+        </div>
+
+        <div class="imm-callout">
+          <strong>Legislative Categories</strong>
+          Legislature may create additional categories: skills-based, labour-need, family connection, or temporal authorizations — all subject to §1.8. · §6.1.d
+        </div>
+
+        <div class="imm-arrow-down">↓</div>
+
+        <div class="imm-step step-credentials">
+          <span class="imm-step-num">Outcome</span>
+          <div class="imm-step-title">Federal Residency Credentials</div>
+          <div class="imm-step-desc">Credentials are federal — valid throughout the Republic. The sponsoring State's role ends at issuance. Freedom of movement applies from this point.</div>
+          <span class="imm-step-ref">§6.1.a · §1.12 Freedom of Movement</span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: ASYLUM TRACK -->
+      <div class="imm-track track-asylum">
+        <div class="imm-track-label">Asylum Track · §1.27 Non-Refoulement</div>
+
+        <span class="imm-exempt">Gate 1 Not Required</span>
+
+        <div class="imm-step step-file">
+          <span class="imm-step-num">Step 1</span>
+          <div class="imm-step-title">File §1.27 Asylum Claim</div>
+          <div class="imm-step-desc">Any person may claim asylum under the non-refoulement protection. No state sponsorship is required. No state's refusal to sponsor can extinguish this right.</div>
+          <span class="imm-step-ref">§1.27 — Non-Refoulement · §6.4</span>
+        </div>
+
+        <div class="imm-arrow-down">↓</div>
+
+        <div class="imm-step step-inhabit">
+          <span class="imm-step-num">Immediate Effect</span>
+          <div class="imm-step-title">Inhabitant Status — from date of filing</div>
+          <div class="imm-step-desc">The person becomes an Inhabitant the moment the claim is filed — not when it is decided. Full Article I protections apply immediately. Removal is barred while the claim is pending.</div>
+          <span class="imm-step-ref">§6.4.a — Inhabitant Status on Filing</span>
+        </div>
+
+        <div class="imm-arrow-down">↓</div>
+
+        <div class="imm-step step-court">
+          <span class="imm-step-num">Step 2</span>
+          <div class="imm-step-title">Asylum Court Determination</div>
+          <div class="imm-step-desc">The Asylum Court determines whether the person faces genuine persecution of the kind the constitution protects against. The claim must be determined before any removal order takes effect.</div>
+          <span class="imm-step-ref">§6.4.b — Asylum Court · §6.4.c</span>
+        </div>
+
+        <div class="imm-arrow-down">↓</div>
+
+        <div class="imm-step">
+          <span class="imm-step-num">Outcome</span>
+          <div class="imm-step-title">Asylum Court Decision</div>
+          <div class="imm-branch">
+            <div class="imm-branch-item branch-grant">
+              <strong>Grant</strong><br>
+              Federal residency credentials by operation of the Asylum Court's grant. Gate 1 and Gate 2 not required. President must issue credentials within statutory period. · §6.4.c.i
+            </div>
+            <div class="imm-branch-item branch-deny">
+              <strong>Denial</strong><br>
+              Removal may proceed. The Asylum Court's determination is the operative decision. Standard removal framework applies. · §6.2
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MERGE POINT -->
+    <div class="imm-merge">
+      <h4>Federal Residency Credentials</h4>
+      <p>Both tracks lead to the same outcome: federal credentials valid throughout the Republic · §1.12 Freedom of Movement applies to all credential holders</p>
+    </div>
+
+    <!-- KEY NOTES BAR -->
+    <div class="imm-note-bar">
+      <h4>Key Constitutional Distinctions</h4>
+      <div class="imm-notes-grid">
+        <div class="imm-note-item">
+          <strong>Asylum is constitutionally independent</strong>
+          The asylum track's foundation is §1.27, an unamendable Article I right. No legislation can extinguish the right to claim and have determined an asylum claim. The dual-gate system cannot be used to block asylum proceedings.
+        </div>
+        <div class="imm-note-item">
+          <strong>Credentials are always federal</strong>
+          Whether granted through the dual-gate process or the Asylum Court, residency credentials are issued by the federal government and are valid in every State. No State may create a separate residency tier.
+        </div>
+        <div class="imm-note-item">
+          <strong>Aggregate limits apply to Gate 1/2 only</strong>
+          The Legislature may set aggregate limits on immigration applications processed — these apply to the dual-gate track. Asylum proceedings are not subject to aggregate caps. · §6.1
+        </div>
+        <div class="imm-note-item">
+          <strong>Discrimination is always reviewable</strong>
+          §1.8 non-discrimination applies throughout both tracks. Gate 1 denials are not subject to federal review on the merits, but §1.8 discrimination claims always have a federal court pathway. · §6.3
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 
 <footer>
   <p>The Federated Republic — A Constitutional Project</p>
