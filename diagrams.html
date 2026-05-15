@@ -437,6 +437,64 @@
       .insp-term{gap:1rem}
     }
 
+        /* ═══════════════════════════════════
+       DIAGRAM 9: SC ELECTION CYCLE
+    ═══════════════════════════════════ */
+    .sc-chart{max-width:960px;margin:0 auto}
+    .sc-principle{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);margin-bottom:1.5rem;border:1px solid var(--border)}
+    .sc-principle-item{background:var(--white);padding:1rem 1.25rem;text-align:center}
+    .sc-principle-item strong{display:block;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);margin-bottom:0.3rem}
+    .sc-principle-item span{font-size:0.82rem;color:#555;line-height:1.45}
+
+    .sc-pipeline{margin-bottom:2rem}
+    .sc-pipeline-header{background:var(--navy);color:var(--white);padding:0.75rem 1.25rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600}
+    .sc-steps{display:flex;align-items:stretch;gap:0;overflow-x:auto}
+    .sc-step{flex:1;min-width:140px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);border-top:1px solid var(--border);position:relative;display:flex;flex-direction:column}
+    .sc-step:first-child{border-left:1px solid var(--border)}
+    .sc-step-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--gold2);padding:0.75rem 1rem 0;line-height:1}
+    .sc-step-title{font-size:0.82rem;font-weight:600;color:var(--navy);padding:0.25rem 1rem;line-height:1.3}
+    .sc-step-body{font-size:0.75rem;color:#555;padding:0.25rem 1rem 1rem;line-height:1.45;flex:1}
+    .sc-step-ref{font-size:0.67rem;letter-spacing:0.08em;color:var(--muted);padding:0 1rem 0.75rem;display:block;margin-top:auto}
+    .sc-step-arrow{position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--gold2);font-size:1.2rem;z-index:2;background:var(--white);padding:0 2px;line-height:1}
+
+    .sc-stagger{margin-bottom:1.5rem}
+    .sc-stagger-header{background:var(--navy2);color:var(--white);padding:0.75rem 1.25rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+    .sc-stagger-header span{font-size:0.72rem;color:rgba(245,240,232,0.5);letter-spacing:0.05em;text-transform:none;font-weight:400}
+    .sc-timeline{overflow-x:auto;padding-bottom:0.5rem}
+    .sc-timeline-inner{min-width:640px}
+    .sc-year-row{display:flex;align-items:center;gap:0;border-bottom:1px solid var(--border)}
+    .sc-year-label{width:72px;flex-shrink:0;font-size:0.72rem;color:var(--muted);padding:0.4rem 0.75rem;text-align:right;font-family:'JetBrains Mono',monospace}
+    .sc-year-cells{flex:1;display:flex}
+    .sc-cell{flex:1;height:36px;border-right:1px solid rgba(0,0,0,0.06);position:relative;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:600;letter-spacing:0.08em}
+    .sc-cell.election{background:var(--navy);color:var(--gold);border-radius:0}
+    .sc-cell.serving-a{background:#e8f5ec;color:#1a5c2a}
+    .sc-cell.serving-b{background:var(--bluelight);color:var(--blue)}
+    .sc-cell.serving-c{background:var(--purplelight);color:var(--purple)}
+    .sc-cell.election-a{background:#1a5c2a;color:white}
+    .sc-cell.election-b{background:var(--blue);color:white}
+    .sc-cell.election-c{background:var(--purple);color:white}
+    .sc-timeline-header{display:flex;align-items:center;border-bottom:2px solid var(--border)}
+    .sc-thlabel{width:72px;flex-shrink:0;font-size:0.65rem;color:var(--muted);padding:0.3rem 0.75rem;text-align:right}
+    .sc-thcells{flex:1;display:flex}
+    .sc-thcell{flex:1;text-align:center;font-size:0.65rem;color:var(--muted);padding:0.3rem 0;border-right:1px solid rgba(0,0,0,0.06);font-family:'JetBrains Mono',monospace}
+    .sc-legend{display:flex;gap:1rem;flex-wrap:wrap;padding:0.75rem 1rem;background:var(--cream2);border-top:1px solid var(--border);font-size:0.75rem}
+    .sc-legend-item{display:flex;align-items:center;gap:0.4rem}
+    .sc-legend-dot{width:14px;height:14px;flex-shrink:0}
+
+    .sc-vacancy{background:var(--cream2);border:1px solid var(--border);margin-bottom:1.5rem}
+    .sc-vacancy-header{padding:0.75rem 1.25rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);font-weight:600;border-bottom:1px solid var(--border);background:var(--white)}
+    .sc-vacancy-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .sc-vacancy-item{padding:0.85rem 1.25rem;border:1px solid var(--border);border-top:none;font-size:0.82rem;line-height:1.5}
+    .sc-vacancy-item strong{display:block;color:var(--navy);margin-bottom:0.2rem}
+    .sc-vacancy-item span{color:#555;font-size:0.78rem}
+    @media(max-width:760px){
+      .sc-principle{grid-template-columns:1fr}
+      .sc-steps{flex-direction:column}
+      .sc-step{border-right:1px solid var(--border);border-left:1px solid var(--border)}
+      .sc-step-arrow{display:none}
+      .sc-vacancy-grid{grid-template-columns:1fr}
+    }
+
         /* FOOTER */
     footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2.5rem 2rem;text-align:center}
     footer p{font-size:0.8rem;color:rgba(245,240,232,0.3);margin-bottom:0.3rem}
@@ -528,7 +586,7 @@
 <div class="page-hero">
   <span class="eyebrow">Constitutional Architecture</span>
   <h1>How the Republic Works</h1>
-  <p>Eight interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
+  <p>Nine interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
 </div>
 
 <!-- TAB NAVIGATION -->
@@ -541,6 +599,7 @@
   <button class="tab-btn" onclick="showTab('dual')">Dual Executive</button>
   <button class="tab-btn" onclick="showTab('amendment')">Amendment Paths</button>
   <button class="tab-btn" onclick="showTab('inspectorates')">Inspectorates</button>
+  <button class="tab-btn" onclick="showTab('scelection')">SC Elections</button>
 </div>
 
 <!-- ═══════════════════════════════
@@ -1747,6 +1806,198 @@
       <div class="insp-term-item">
         <strong>Removal</strong>
         For-cause: 2/3 both chambers + State Designee Panel verification · No-cause: 3/4 both chambers · §8.5
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════
+     DIAGRAM 9: SC ELECTION CYCLE
+═══════════════════════════════ -->
+<div class="diagram-section" id="tab-scelection">
+  <div class="section-intro">
+    <h2>Supreme Court Elections</h2>
+    <p>Nine justices elected directly by citizens, organized into three staggered classes. No political branch nominates anyone. The ballot is open to any qualified citizen on the Judicial Inspectorate's Registry.</p>
+  </div>
+
+  <div class="sc-chart">
+
+    <!-- THREE DESIGN PRINCIPLES -->
+    <div class="sc-principle">
+      <div class="sc-principle-item">
+        <strong>Open Candidacy</strong>
+        <span>No political branch controls ballot access. Any citizen on the SC Candidate Registry may stand. The Registry is maintained by the Judicial Inspectorate.</span>
+      </div>
+      <div class="sc-principle-item">
+        <strong>Expert Voice — No Veto</strong>
+        <span>A Judicial Selection Board of five randomly selected senior judges publishes an advisory assessment of all candidates. Advisory only — the Board cannot remove anyone from the ballot.</span>
+      </div>
+      <div class="sc-principle-item">
+        <strong>Ranked Choice Election</strong>
+        <span>Citizens vote by national Ranked Choice Vote. The winner is the candidate who achieves a national RCV majority. The Electoral Commission administers and certifies.</span>
+      </div>
+    </div>
+
+    <!-- ELECTION PIPELINE -->
+    <div class="sc-pipeline">
+      <div class="sc-pipeline-header">The Election Process — Open Seat or Class Election</div>
+      <div class="sc-steps">
+
+        <div class="sc-step">
+          <div class="sc-step-num">1</div>
+          <div class="sc-step-title">SC Candidate Registry</div>
+          <div class="sc-step-body">Any citizen with 15+ years legal practice (or 10+ years judicial service) who holds no current executive or legislative position and has no disqualifying financial interest may apply to the JI's Registry. Inclusion does not expire.</div>
+          <span class="sc-step-ref">§8.4.e · Maintained by JI</span>
+          <div class="sc-step-arrow">›</div>
+        </div>
+
+        <div class="sc-step">
+          <div class="sc-step-num">2</div>
+          <div class="sc-step-title">Candidate Files Disclosure</div>
+          <div class="sc-step-body">A Registry member who wishes to stand files a full disclosure record with the Executive Inspectorate: professional history, judicial record, financial interests, Registry eligibility confirmation. EI reviews within 14 days.</div>
+          <span class="sc-step-ref">§4.2.a · EI factual review</span>
+          <div class="sc-step-arrow">›</div>
+        </div>
+
+        <div class="sc-step">
+          <div class="sc-step-num">3</div>
+          <div class="sc-step-title">Selection Board Assessment</div>
+          <div class="sc-step-body">Five senior judges, chosen by lot, publish an advisory assessment of every candidate's judicial record, legal reasoning, and professional independence — published at least 60 days before the election. Advisory only.</div>
+          <span class="sc-step-ref">§4.2.b · No ballot access power</span>
+          <div class="sc-step-arrow">›</div>
+        </div>
+
+        <div class="sc-step">
+          <div class="sc-step-num">4</div>
+          <div class="sc-step-title">JI Certification</div>
+          <div class="sc-step-body">The Judicial Inspectorate confirms each candidate still meets Registry criteria. No new assessment — only a Registry status check. Refused candidates may appeal to an Appellate Court within 14 days.</div>
+          <span class="sc-step-ref">§4.2.c · Ministerial confirmation</span>
+          <div class="sc-step-arrow">›</div>
+        </div>
+
+        <div class="sc-step">
+          <div class="sc-step-num">5</div>
+          <div class="sc-step-title">National RCV Election</div>
+          <div class="sc-step-body">All certified candidates appear on the national ballot. Citizens vote using Ranked Choice Voting. Winner is the candidate achieving a national RCV majority. EC administers and certifies the result.</div>
+          <span class="sc-step-ref">§4.2.d · Electoral Commission</span>
+          <div class="sc-step-arrow">›</div>
+        </div>
+
+        <div class="sc-step">
+          <div class="sc-step-num">6</div>
+          <div class="sc-step-title">Official Oath</div>
+          <div class="sc-step-body">The elected justice takes the Official Oath administered by the Supreme Court. Recorded on the NRS within 24 hours. The justice serves a single non-renewable 12-year term from this date.</div>
+          <span class="sc-step-ref">§4.2.d · §4.1.b Oath</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STAGGER TIMELINE -->
+    <div class="sc-stagger">
+      <div class="sc-stagger-header">
+        The Three-Class Stagger
+        <span>Three seats elected every 4 years · Six justices always carry continuing tenure</span>
+      </div>
+      <div class="sc-timeline">
+        <div class="sc-timeline-inner">
+
+          <!-- HEADER ROW: YEAR MARKERS -->
+          <div class="sc-timeline-header">
+            <div class="sc-thlabel">Year</div>
+            <div class="sc-thcells">
+              <div class="sc-thcell">0</div>
+              <div class="sc-thcell">4</div>
+              <div class="sc-thcell">8</div>
+              <div class="sc-thcell">12</div>
+              <div class="sc-thcell">16</div>
+              <div class="sc-thcell">20</div>
+              <div class="sc-thcell">24</div>
+            </div>
+          </div>
+
+          <!-- CLASS A: 4-year initial, then 12-year -->
+          <div class="sc-year-row">
+            <div class="sc-year-label">Class A<br><span style="font-size:0.6rem;opacity:0.6">3 seats</span></div>
+            <div class="sc-year-cells">
+              <div class="sc-cell election-a" style="flex:1">Phase 3<br>All 9 fill</div>
+              <div class="sc-cell election-a" style="flex:1">Election<br>Year 4</div>
+              <div class="sc-cell serving-a" style="flex:3" title="Serving: Year 4–16">Serving 12-year term</div>
+              <div class="sc-cell election-a" style="flex:1">Election<br>Year 16</div>
+              <div class="sc-cell serving-a" style="flex:2">Serving…</div>
+            </div>
+          </div>
+
+          <!-- CLASS B: 8-year initial, then 12-year -->
+          <div class="sc-year-row">
+            <div class="sc-year-label">Class B<br><span style="font-size:0.6rem;opacity:0.6">3 seats</span></div>
+            <div class="sc-year-cells">
+              <div class="sc-cell election-b" style="flex:1">Phase 3<br>All 9 fill</div>
+              <div class="sc-cell serving-b" style="flex:2">Serving 8-year initial term</div>
+              <div class="sc-cell election-b" style="flex:1">Election<br>Year 8</div>
+              <div class="sc-cell serving-b" style="flex:3">Serving 12-year term</div>
+              <div class="sc-cell election-b" style="flex:1">Elec.<br>Y.20</div>
+            </div>
+          </div>
+
+          <!-- CLASS C: 12-year initial, then 12-year -->
+          <div class="sc-year-row">
+            <div class="sc-year-label">Class C<br><span style="font-size:0.6rem;opacity:0.6">3 seats</span></div>
+            <div class="sc-year-cells">
+              <div class="sc-cell election-c" style="flex:1">Phase 3<br>All 9 fill</div>
+              <div class="sc-cell serving-c" style="flex:3">Serving 12-year initial term</div>
+              <div class="sc-cell election-c" style="flex:1">Election<br>Year 12</div>
+              <div class="sc-cell serving-c" style="flex:3">Serving 12-year term</div>
+            </div>
+          </div>
+
+          <!-- SEATS IN ELECTION ROW -->
+          <div class="sc-year-row" style="background:var(--cream2)">
+            <div class="sc-year-label" style="font-size:0.65rem;color:var(--muted)">Seats<br>elected</div>
+            <div class="sc-year-cells">
+              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">9</div>
+              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
+              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
+              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
+              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
+              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
+              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="sc-legend">
+        <div class="sc-legend-item"><div class="sc-legend-dot" style="background:#1a5c2a"></div>Class A election</div>
+        <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--blue)"></div>Class B election</div>
+        <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--purple)"></div>Class C election</div>
+        <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--cream2);border:1px solid var(--border)"></div>Serving (mid-term)</div>
+        <span style="color:var(--muted);font-size:0.75rem;margin-left:auto">Class assignment by JI public lot draw after Phase 3 election · published to NRS before any justice takes oath · §4.2</span>
+      </div>
+    </div>
+
+    <!-- VACANCY AND SPECIAL PROVISIONS -->
+    <div class="sc-vacancy">
+      <div class="sc-vacancy-header">Mid-Term Vacancies and Special Provisions</div>
+      <div class="sc-vacancy-grid">
+        <div class="sc-vacancy-item">
+          <strong>Mid-Term Vacancy — Special Election (180 days)</strong>
+          <span>Death, resignation, removal, or expulsion triggers a 180-day special election. Full open-candidacy process applies with compressed timelines (registration day 30, EI day 60, Board day 90, JI day 120, election day 180). The replacement serves only the remainder of the original 12-year term. · §4.2.e</span>
+        </div>
+        <div class="sc-vacancy-item">
+          <strong>Temporary Associate Justice</strong>
+          <span>During the vacancy, the most senior Appellate Court judge (by continuous service) is automatically designated as Temporary Associate Justice within 5 days — no nomination or confirmation required. They hold a full vote in all cases. They cannot stand as a candidate for the seat they are temporarily filling. · §4.2.g</span>
+        </div>
+        <div class="sc-vacancy-item">
+          <strong>Emergency Panel — Tier 1 Scope</strong>
+          <span>Four justices drawn by rotation form a standing Emergency Panel each two-year cycle. The Panel has sole jurisdiction over constitutional challenges to Tier 1 presidential authority during active operations and must rule within 48 hours. Ruling is binding on the full Court unless overruled within 72 hours. · §4.2.f</span>
+        </div>
+        <div class="sc-vacancy-item">
+          <strong>Non-Renewable Terms</strong>
+          <span>Every term — initial or subsequent — is non-renewable. A justice who serves a 4-year Class A initial term, then wins election to the same or another seat, serves a full new 12-year term that is also non-renewable. A justice who serves their 12-year term cannot stand again. Term limits are built into the non-renewable structure. · §4.2</span>
+        </div>
       </div>
     </div>
 
