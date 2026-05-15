@@ -366,6 +366,77 @@
       .amend-floor-grid{grid-template-columns:1fr}
     }
 
+        /* ═══════════════════════════════════
+       DIAGRAM 8: INSPECTORATES
+    ═══════════════════════════════════ */
+    .insp-chart{max-width:960px;margin:0 auto}
+    .insp-principle{background:var(--navy);color:var(--white);padding:1rem 1.5rem;margin-bottom:1.5rem;font-size:0.88rem;line-height:1.6;text-align:center}
+    .insp-principle strong{color:var(--gold);display:block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.3rem}
+    .insp-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem}
+    .insp-col{border:2px solid;display:flex;flex-direction:column}
+    .insp-col-header{padding:1.25rem;border-bottom:1px solid rgba(0,0,0,0.08);text-align:center}
+    .insp-col-abbr{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;line-height:1;display:block;margin-bottom:0.2rem}
+    .insp-col-name{font-size:0.82rem;font-weight:600;display:block;margin-bottom:0.2rem}
+    .insp-col-domain{font-size:0.72rem;letter-spacing:0.08em;opacity:0.65}
+    .insp-selection{padding:0.85rem 1.1rem;border-bottom:1px solid rgba(0,0,0,0.06);font-size:0.8rem;line-height:1.45;background:rgba(0,0,0,0.02)}
+    .insp-selection-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:0.35rem;opacity:0.6}
+    .insp-selection-who{font-weight:600;display:block;margin-bottom:0.15rem}
+    .insp-selection-confirm{font-size:0.75rem;opacity:0.75}
+    .insp-body{padding:1rem 1.1rem;flex:1;display:flex;flex-direction:column;gap:0.5rem}
+    .insp-function{padding:0.5rem 0.65rem;font-size:0.8rem;line-height:1.4;border-left:2px solid rgba(0,0,0,0.15)}
+    .insp-function strong{display:block;font-size:0.72rem;margin-bottom:0.1rem}
+    .insp-function span{font-size:0.75rem;opacity:0.75}
+    .insp-special{background:rgba(0,0,0,0.03);border:1px dashed rgba(0,0,0,0.12);padding:0.5rem 0.65rem;margin-top:0.25rem;font-size:0.78rem;line-height:1.4}
+    .insp-special strong{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.2rem}
+
+    .col-li{border-color:#4a5c1a}
+    .col-li .insp-col-abbr{color:#4a5c1a}
+    .col-li .insp-col-name{color:#4a5c1a}
+    .col-li .insp-col-header{background:#f9fdf4}
+    .col-li .insp-function{border-left-color:#4a5c1a}
+
+    .col-ei{border-color:var(--gold2)}
+    .col-ei .insp-col-abbr{color:var(--gold2)}
+    .col-ei .insp-col-name{color:var(--gold2)}
+    .col-ei .insp-col-header{background:#fffbf4}
+    .col-ei .insp-function{border-left-color:var(--gold2)}
+
+    .col-ji{border-color:#5c1a4a}
+    .col-ji .insp-col-abbr{color:#5c1a4a}
+    .col-ji .insp-col-name{color:#5c1a4a}
+    .col-ji .insp-col-header{background:#fdf4fb}
+    .col-ji .insp-function{border-left-color:#5c1a4a}
+
+    .insp-rules{background:var(--cream2);border:1px solid var(--border);margin-bottom:1.5rem}
+    .insp-rules-header{padding:0.75rem 1.25rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);font-weight:600;border-bottom:1px solid var(--border);background:var(--white)}
+    .insp-rules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+    .insp-rule{padding:0.85rem 1.25rem;border:1px solid var(--border);border-top:none;font-size:0.82rem;line-height:1.5}
+    .insp-rule strong{display:block;font-size:0.75rem;color:var(--navy);margin-bottom:0.2rem}
+    .insp-rule span{color:#555}
+    .rule-can{border-left:3px solid var(--green)}
+    .rule-cannot{border-left:3px solid var(--red)}
+
+    .insp-term{background:var(--navy2);color:rgba(245,240,232,0.8);padding:1rem 1.5rem;font-size:0.82rem;line-height:1.6;display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;text-align:center}
+    .insp-term-item strong{color:var(--gold);display:block;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.2rem}
+
+    .insp-cross{background:var(--cream2);border:1px solid var(--border);padding:1.1rem 1.5rem;margin-bottom:1.5rem;font-size:0.85rem;color:#555;line-height:1.6}
+    .insp-cross strong{color:var(--navy)}
+    .cross-row{display:flex;align-items:center;gap:0.75rem;margin-top:0.6rem;font-size:0.8rem}
+    .cross-arrow{color:var(--gold);font-size:1.1rem;flex-shrink:0}
+    .cross-from{padding:0.3rem 0.6rem;font-weight:600;font-size:0.78rem;border:1px solid;border-radius:2px}
+    .cross-from.li{border-color:#4a5c1a;color:#4a5c1a}
+    .cross-from.ei{border-color:var(--gold2);color:var(--gold2)}
+    .cross-from.ji{border-color:#5c1a4a;color:#5c1a4a}
+    .cross-from.sc{border-color:var(--red);color:var(--red)}
+    .cross-from.house{border-color:var(--green);color:var(--green)}
+    .cross-from.lottery{border-color:var(--navy);color:var(--navy)}
+
+    @media(max-width:760px){
+      .insp-columns{grid-template-columns:1fr}
+      .insp-rules-grid{grid-template-columns:1fr}
+      .insp-term{gap:1rem}
+    }
+
         /* FOOTER */
     footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2.5rem 2rem;text-align:center}
     footer p{font-size:0.8rem;color:rgba(245,240,232,0.3);margin-bottom:0.3rem}
@@ -457,7 +528,7 @@
 <div class="page-hero">
   <span class="eyebrow">Constitutional Architecture</span>
   <h1>How the Republic Works</h1>
-  <p>Seven interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
+  <p>Eight interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
 </div>
 
 <!-- TAB NAVIGATION -->
@@ -469,6 +540,7 @@
   <button class="tab-btn" onclick="showTab('tiers')">Military Tiers</button>
   <button class="tab-btn" onclick="showTab('dual')">Dual Executive</button>
   <button class="tab-btn" onclick="showTab('amendment')">Amendment Paths</button>
+  <button class="tab-btn" onclick="showTab('inspectorates')">Inspectorates</button>
 </div>
 
 <!-- ═══════════════════════════════
@@ -1452,6 +1524,230 @@
 
     <div class="amend-effect">
       <strong>The amendment process itself is amendable.</strong> A future supermajority could change the thresholds, add paths, or restructure the process — provided it does so through one of the three current paths and does not touch the permanently unamendable provisions.
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════
+     DIAGRAM 8: INSPECTORATES
+═══════════════════════════════ -->
+<div class="diagram-section" id="tab-inspectorates">
+  <div class="section-intro">
+    <h2>The Three Inspectorates</h2>
+    <p>One for each branch. Each is selected by the branches it does not watch. None has enforcement power. Their sole constitutional output is published fact.</p>
+  </div>
+
+  <div class="insp-chart">
+
+    <!-- KEY PRINCIPLE -->
+    <div class="insp-principle">
+      <strong>§8 — The Governing Rule</strong>
+      No branch controls its own oversight. The Legislature does not select the Legislative IG. The Executive does not select the Executive IG. No political actor controls the Judicial IG — they are chosen by random lottery.
+    </div>
+
+    <!-- CROSS-NOMINATION LOGIC -->
+    <div class="insp-cross">
+      <strong>How selection works:</strong>
+      <div class="cross-row">
+        <span class="cross-from sc">Supreme Court</span>
+        <span class="cross-arrow">nominates →</span>
+        <span class="cross-from li">LI Inspector General</span>
+        <span style="color:var(--muted);font-size:0.75rem">confirmed by Senate (2/3 supermajority) · House entirely excluded · §8.3.a</span>
+      </div>
+      <div class="cross-row">
+        <span class="cross-from house">House</span>
+        <span class="cross-arrow">nominates →</span>
+        <span class="cross-from ei">EI Inspector General</span>
+        <span style="color:var(--muted);font-size:0.75rem">confirmed by Senate (simple majority) · JI vets the nominee · §8.3.b</span>
+      </div>
+      <div class="cross-row">
+        <span class="cross-from lottery">Random Lottery</span>
+        <span class="cross-arrow">selects →</span>
+        <span class="cross-from ji">JI Inspector General</span>
+        <span style="color:var(--muted);font-size:0.75rem">drawn from qualified pool by outgoing IG, witnessed publicly · §8.4</span>
+      </div>
+    </div>
+
+    <!-- THREE INSPECTORATE COLUMNS -->
+    <div class="insp-columns">
+
+      <!-- LI -->
+      <div class="insp-col col-li">
+        <div class="insp-col-header">
+          <span class="insp-col-abbr">LI</span>
+          <span class="insp-col-name">Legislative Inspectorate</span>
+          <span class="insp-col-domain">Watches the Legislature</span>
+        </div>
+        <div class="insp-selection">
+          <span class="insp-selection-label">Nominated by</span>
+          <span class="insp-selection-who">The Supreme Court</span>
+          <span class="insp-selection-confirm">Senate confirms by 2/3 supermajority. House is entirely excluded. · §8.3.a</span>
+        </div>
+        <div class="insp-body">
+          <div class="insp-function">
+            <strong>Fiscal Accuracy</strong>
+            <span>Audits the House and Senate for fiscal accuracy in legislative records and budgetary claims.</span>
+          </div>
+          <div class="insp-function">
+            <strong>Constitutional Compliance</strong>
+            <span>Reviews enacted legislation for constitutional compliance. Finds are published — courts enforce.</span>
+          </div>
+          <div class="insp-function">
+            <strong>NRS Integrity</strong>
+            <span>Audits the National Record System's parliamentary records for accuracy and completeness.</span>
+          </div>
+          <div class="insp-function">
+            <strong>Population Census</strong>
+            <span>Conducts the national census. Assigned to the LI precisely because the census determines House seat allocation — giving that function to a body the House nominates would create a conflict of interest.</span>
+          </div>
+          <div class="insp-function">
+            <strong>House District Maps</strong>
+            <span>Reviews State-drawn federal House district maps for compliance with redistricting criteria. · §3.4</span>
+          </div>
+          <div class="insp-function">
+            <strong>Germaneness Analysis</strong>
+            <span>Publishes germaneness analysis for any bill returned to the House with Senate amendments. PM must give it due consideration. · §3.2.i</span>
+          </div>
+          <div class="insp-special">
+            <strong>State Remediation Plans</strong>
+            Reviews State Remediation Plans under §13.3.b and Presidential Election Region maps drawn by the Electoral Commission. · §7.2.c
+          </div>
+        </div>
+      </div>
+
+      <!-- EI -->
+      <div class="insp-col col-ei">
+        <div class="insp-col-header">
+          <span class="insp-col-abbr">EI</span>
+          <span class="insp-col-name">Executive Inspectorate</span>
+          <span class="insp-col-domain">Watches both Executives + MA</span>
+        </div>
+        <div class="insp-selection">
+          <span class="insp-selection-label">Nominated by</span>
+          <span class="insp-selection-who">The House</span>
+          <span class="insp-selection-confirm">Senate confirms by simple majority. JI vets the nominee's disclosure record before the vote. · §8.3.b</span>
+        </div>
+        <div class="insp-body">
+          <div class="insp-function">
+            <strong>Executive Constitutional Compliance</strong>
+            <span>Audits both the President and PM for domain boundary compliance, NRS mandate adherence, ethics provisions, and classification rules.</span>
+          </div>
+          <div class="insp-function">
+            <strong>Military Compliance</strong>
+            <span>Annual assessment: were military operations authorized through the correct Tier? Was §1.29.d Intelligence Firewall maintained? Were fund certifications followed? · §8.1.b</span>
+          </div>
+          <div class="insp-function">
+            <strong>Monetary Authority Audit</strong>
+            <span>Audits the MA for constitutional compliance including mandate adherence and NRS publication requirements. · §10.4.c</span>
+          </div>
+          <div class="insp-function">
+            <strong>Clemency Reports</strong>
+            <span>Publishes a factual background report on every clemency petition before either executive acts — petitioner's record, conviction, prior EI findings. Published to NRS simultaneously. · §2.1.g · §2.2.f</span>
+          </div>
+          <div class="insp-function">
+            <strong>Candidate Disclosure Review</strong>
+            <span>Reviews candidate disclosure records for factual accuracy for MA board members, independent agency nominees, and other constitutional appointments. Publishes findings to NRS before confirmation votes.</span>
+          </div>
+          <div class="insp-special">
+            <strong>Annual State of the Republic Report</strong>
+            Publishes the executive compliance section of the joint annual report — including the dedicated military constitutional compliance assessment. · §8.8
+          </div>
+        </div>
+      </div>
+
+      <!-- JI -->
+      <div class="insp-col col-ji">
+        <div class="insp-col-header">
+          <span class="insp-col-abbr">JI</span>
+          <span class="insp-col-name">Judicial Inspectorate</span>
+          <span class="insp-col-domain">Watches the Courts</span>
+        </div>
+        <div class="insp-selection">
+          <span class="insp-selection-label">Selected by</span>
+          <span class="insp-selection-who">Random Public Lottery</span>
+          <span class="insp-selection-confirm">Drawn from a qualified candidate pool by the outgoing JI, witnessed by the other two IGs and three citizens chosen by jury protocols. Published to NRS immediately. · §8.4</span>
+        </div>
+        <div class="insp-body">
+          <div class="insp-function">
+            <strong>Judicial Scope and Independence Audit</strong>
+            <span>Audits the court system for compliance with judicial scope — are courts deciding constitutional questions only, staying within their jurisdiction, and maintaining independence from political pressure?</span>
+          </div>
+          <div class="insp-function">
+            <strong>SC Candidate Registry</strong>
+            <span>Maintains the Supreme Court Candidate Registry — the eligibility register that any qualified citizen may join to stand for election to the SC. Reviews submissions within 21 days. · §8.4.e</span>
+          </div>
+          <div class="insp-function">
+            <strong>Judicial Nominee Vetting</strong>
+            <span>Vets inferior court judicial nominees and Electoral Commission candidates before confirmation votes.</span>
+          </div>
+          <div class="insp-function">
+            <strong>Referendum Petition Eligibility</strong>
+            <span>Screens citizen referendum petitions for eligibility — specifically, whether the targeted law solely or primarily expands an Article I right (ineligible for referendum). · §11.1.b</span>
+          </div>
+          <div class="insp-function">
+            <strong>Electoral Commission Annual Audit</strong>
+            <span>Audits the Electoral Commission annually for compliance with electoral integrity requirements. · §8.1.c</span>
+          </div>
+          <div class="insp-special">
+            <strong>Compact Compliance Reviews</strong>
+            Annual compliance reviews for §19.1 accommodation compacts, §20 Associated Community compacts, and Article XIV indigenous compact obligations — Article I rights protections and compact terms. · §8.4
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- UNIVERSAL RULES -->
+    <div class="insp-rules">
+      <div class="insp-rules-header">§8.6 — The Information-Only Mandate: What All Three Can and Cannot Do</div>
+      <div class="insp-rules-grid">
+        <div class="insp-rule rule-can">
+          <strong>✓ Publish facts to the NRS</strong>
+          <span>Every finding, report, and discrepancy notice is published permanently and freely accessible to all Inhabitants. No official may suppress, delay, classify, or alter a Report before publication.</span>
+        </div>
+        <div class="insp-rule rule-cannot">
+          <strong>✗ Issue binding orders</strong>
+          <span>Inspectorate findings are not legal determinations. They state observed facts. Courts, the Legislature, and the People decide what to do with them.</span>
+        </div>
+        <div class="insp-rule rule-can">
+          <strong>✓ Publish Annual State of the Republic Reports</strong>
+          <span>Every year, automatically, on a constitutionally fixed date — regardless of whether any official requests it. Content includes compliance rates, investigation summaries, constitutional strains, and a risk register.</span>
+        </div>
+        <div class="insp-rule rule-cannot">
+          <strong>✗ Arrest, prosecute, or enforce</strong>
+          <span>No arrest authority. No prosecutorial function. No enforcement power of any kind. Their sole constitutional output is published factual information.</span>
+        </div>
+        <div class="insp-rule rule-can">
+          <strong>✓ Receive minority reports from staff</strong>
+          <span>Any staff member may publish a Minority Report directly to the NRS if they believe a finding has been improperly omitted or suppressed. Staff cannot be disciplined for doing so — the protection is absolute.</span>
+        </div>
+        <div class="insp-rule rule-cannot">
+          <strong>✗ Classify their reports</strong>
+          <span>Inspectorate Reports are permanently exempt from classification. If an investigation involves classified material, the Report describes the issue's nature without reproducing classified content, and flags it for the relevant executive.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERM AND FUNDING STRIP -->
+    <div class="insp-term">
+      <div class="insp-term-item">
+        <strong>Term Length</strong>
+        10 years · Single non-renewable term
+      </div>
+      <div class="insp-term-item">
+        <strong>Staggering</strong>
+        No two IG terms may begin within 18 months of each other
+      </div>
+      <div class="insp-term-item">
+        <strong>Funding</strong>
+        Cannot be cut below prior year without 2/3 vote of both chambers · §8.10
+      </div>
+      <div class="insp-term-item">
+        <strong>Removal</strong>
+        For-cause: 2/3 both chambers + State Designee Panel verification · No-cause: 3/4 both chambers · §8.5
+      </div>
     </div>
 
   </div>
