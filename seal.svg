@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <path id="topTextPath" d="M 80,250 A 170,170 0 0,1 420,250" fill="none" />
+    <path id="bottomTextPath" d="M 420,250 A 170,170 0 0,1 80,250" fill="none" />
+    <style>
+      .border-line { stroke: #C5A059; stroke-width: 2; fill: none; }
+      .thick-border { stroke: #111827; stroke-width: 6; fill: none; }
+      .seal-text { font-family: 'Cinzel', 'Georgia', 'Times New Roman', serif; font-size: 14px; fill: #111827; letter-spacing: 3px; font-weight: 600; }
+      .philosophy-text { font-family: 'Cinzel', 'Georgia', serif; font-size: 10px; fill: #C5A059; letter-spacing: 2px; }
+      .center-element { fill: none; stroke: #111827; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .gold-accent { fill: #C5A059; }
+    </style>
+  </defs>
+  <circle cx="250" cy="250" r="220" class="border-line" />
+  <circle cx="250" cy="250" r="212" class="thick-border" />
+  <circle cx="250" cy="250" r="190" class="border-line" />
+  <circle cx="250" cy="250" r="150" class="border-line" stroke-dasharray="4,4" />
+  <text class="seal-text">
+    <textPath href="#topTextPath" startOffset="50%" text-anchor="middle">THE FEDERATED REPUBLIC</textPath>
+  </text>
+  <text class="philosophy-text">
+    <textPath href="#bottomTextPath" startOffset="50%" text-anchor="middle">• CIVIS SUPREMUS • POTESTAS LIMITATA •</textPath>
+  </text>
+  <g id="centerGraphics">
+    <line x1="140" y1="310" x2="360" y2="310" class="center-element" stroke-width="5" />
+    <line x1="150" y1="316" x2="350" y2="316" stroke="#C5A059" stroke-width="2" />
+    <path d="M 160,210 Q 250,110 340,210" class="center-element" stroke-width="4" />
+    <path d="M 170,215 Q 250,125 330,215" stroke="#C5A059" stroke-width="1.5" fill="none" />
+    <polygon points="250,170 256,195 280,200 256,205 250,230 244,205 220,200 244,195" class="gold-accent" />
+    <line x1="210" y1="310" x2="210" y2="240" class="center-element" stroke-width="2" />
+    <line x1="290" y1="310" x2="290" y2="240" class="center-element" stroke-width="2" />
+    <line x1="190" y1="240" x2="310" y2="240" class="center-element" stroke-width="3" />
+  </g>
+  <polygon points="90,246 94,254 102,255 96,261 98,269 90,265 82,269 84,261 78,255 86,254" class="gold-accent" />
+  <polygon points="410,246 414,254 422,255 416,261 418,269 410,265 402,269 404,261 398,255 406,254" class="gold-accent" />
+</svg>
