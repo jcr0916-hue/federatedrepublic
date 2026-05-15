@@ -304,7 +304,7 @@
       <div class="gov-node node-senate" onclick="showPanel('senate')">
         <span class="node-icon">🏛</span>
         <span class="node-title">The Senate</span>
-        <span class="node-sub">2 senators per State<br>Staggered 8-year terms · Treaty ratification</span>
+        <span class="node-sub">2 senators per State<br>Staggered 6-year terms · Treaty ratification</span>
       </div>
     </div>
     <div class="gov-connector-v"></div>
@@ -402,110 +402,100 @@
 ═══════════════════════════════ -->
 <div class="diagram-section" id="tab-lifecycle">
   <div class="section-intro">
-    <h2>The Life of a Law</h2>
-    <p>From introduction to enactment — every checkpoint, every veto point, every override mechanism.</p>
+    <h2>How a Law Is Made</h2>
+    <p>Every law originates in the House and passes through multiple constitutional gates. Click any stage to explore the provisions behind it.</p>
   </div>
 
-  <div class="flow-chart">
+  <div class="lifecycle-chart">
 
-    <div class="flow-step step-intro">
-      <div class="flow-num">1</div>
-      <div class="flow-body">
-        <div class="flow-title">Bill Introduced in the House</div>
-        <div class="flow-desc">Any member may introduce a bill. The Single-Subject Rule applies immediately — a bill may address only one subject. The Speaker reviews for compliance; a bill violating the single-subject rule is returned to the sponsor before it can proceed.</div>
-        <span class="flow-ref">§3.3.b Single-Subject Rule</span>
+    <!-- STAGE 1 -->
+    <div class="lc-stage" onclick="showLcPanel('intro')">
+      <div class="lc-num">1</div>
+      <div class="lc-content">
+        <div class="lc-title">Bill Introduced in the House</div>
+        <div class="lc-ref">§3.1.c Single-Subject Rule · §3.1.d Bill Exposure</div>
       </div>
     </div>
+    <div class="lc-arrow-down">↓</div>
 
-    <div class="flow-step step-house">
-      <div class="flow-num">2</div>
-      <div class="flow-body">
-        <div class="flow-title">House Passage</div>
-        <div class="flow-desc">The bill is debated and voted upon. Standard passage requires an absolute majority — a majority of the full seated membership, not merely those present. Budget bills and constitutional implementation bills have the same threshold.</div>
-        <span class="flow-ref">§3.3.a — Absolute majority of full membership</span>
-        <div class="flow-branch">
-          <span class="branch-label">Vote Outcome</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-pass">✓ Passes — proceeds to PM review</div>
-            <div class="branch-outcome outcome-fail">✗ Fails — bill dies; sponsor may re-introduce next session</div>
-          </div>
+    <!-- STAGE 2 -->
+    <div class="lc-stage" onclick="showLcPanel('house')">
+      <div class="lc-num">2</div>
+      <div class="lc-content">
+        <div class="lc-title">House Passage</div>
+        <div class="lc-ref">§3.3.a — Absolute majority of full membership</div>
+        <div class="lc-outcomes">
+          <span class="lc-pass">✓ Passes — proceeds to Senate</span>
+          <span class="lc-fail">✗ Fails — bill dies; may re-introduce next session</span>
         </div>
       </div>
     </div>
+    <div class="lc-arrow-down">↓</div>
 
-    <div class="flow-step step-pm">
-      <div class="flow-num">3</div>
-      <div class="flow-body">
-        <div class="flow-title">PM Review Window</div>
-        <div class="flow-desc">The PM has a statutory review period (Legislature-defined, not more than 21 days) to consider the bill. The PM may: sign (enact immediately), take no action (deemed enacted at window's close), issue a Suspensive Veto, or issue a Fiscal Objection.</div>
-        <span class="flow-ref">§2.4 — PM Legislative Objection</span>
-        <div class="flow-branch">
-          <span class="branch-label">PM Options</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-pass">✓ Signs or silent — bill enacted</div>
-            <div class="branch-outcome outcome-delay">⏸ Suspensive Veto — bill suspended one full session; House may override by absolute majority next session</div>
-            <div class="branch-outcome outcome-delay">📊 Fiscal Objection — House overrides by simple majority; MA assessment required</div>
-          </div>
+    <!-- STAGE 3 -->
+    <div class="lc-stage" onclick="showLcPanel('senate')">
+      <div class="lc-num">3</div>
+      <div class="lc-content">
+        <div class="lc-title">Senate Review</div>
+        <div class="lc-ref">§3.2.c — Senate Must Act · §3.2.i Senate Amendment Authority</div>
+        <div class="lc-outcomes">
+          <span class="lc-pass">✓ Passes — proceeds to Legislative Review Period</span>
+          <span class="lc-amend">↩ Amends — returns to House for acceptance or rejection</span>
+          <span class="lc-fail">✗ Declines — bill dies</span>
+          <span class="lc-note">⏱ No action in statutory period — Deemed Approved</span>
         </div>
       </div>
     </div>
+    <div class="lc-arrow-down">↓</div>
 
-    <div class="flow-step step-senate">
-      <div class="flow-num">4</div>
-      <div class="flow-body">
-        <div class="flow-title">Senate Review</div>
-        <div class="flow-desc">The Senate must act on every House-passed bill within 30 days. The Senate may pass, amend, or decline. Senate amendments return the bill to the House. Failure to act within 30 days results in Deemed Passed — the bill proceeds without Senate action.</div>
-        <span class="flow-ref">§3.2.c — Senate Must Act on Every House Bill</span>
-        <div class="flow-branch">
-          <span class="branch-label">Senate Options</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-pass">✓ Passes — proceeds to Presidential review</div>
-            <div class="branch-outcome outcome-neutral">↩ Amends — returns to House for concurrence</div>
-            <div class="branch-outcome outcome-fail">✗ Declines — bill dies (unless House overrides by 2/3)</div>
-            <div class="branch-outcome outcome-delay">⏱ No action in 30 days — Deemed Passed</div>
-          </div>
+    <!-- STAGE 4 -->
+    <div class="lc-stage" onclick="showLcPanel('pm')">
+      <div class="lc-num">4</div>
+      <div class="lc-content">
+        <div class="lc-title">Legislative Review Period — PM</div>
+        <div class="lc-ref">§2.4 Suspensive Veto · §2.5 Legislative Review Period</div>
+        <div class="lc-outcomes">
+          <span class="lc-pass">✓ Signs or silent — bill proceeds to enactment</span>
+          <span class="lc-note">📊 Fiscal Objection — requires MA assessment; House may override by simple majority</span>
+          <span class="lc-fail">↩ Suspensive Veto — returns to Legislature; 2/3 both chambers to override</span>
         </div>
       </div>
     </div>
+    <div class="lc-arrow-down">↓</div>
 
-    <div class="flow-step step-president">
-      <div class="flow-num">5</div>
-      <div class="flow-body">
-        <div class="flow-title">Presidential Review (Security Domain Bills Only)</div>
-        <div class="flow-desc">For bills touching the President's constitutional domain — defense, diplomacy, national security — the President has a veto. The Presidential Veto requires a 2/3 override by both chambers. Bills outside the President's domain proceed directly to enactment. The President may not expand the definition of their domain to capture domestic legislation.</div>
-        <span class="flow-ref">§2.1.f — Presidential Veto (domain-scoped)</span>
-        <div class="flow-branch">
-          <span class="branch-label">Presidential Options</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-pass">✓ Signs — enacted</div>
-            <div class="branch-outcome outcome-fail">✗ Vetoes — requires 2/3 both chambers to override</div>
-            <div class="branch-outcome outcome-neutral">→ Not in domain — bill proceeds to enactment directly</div>
-          </div>
+    <!-- STAGE 5 -->
+    <div class="lc-stage" onclick="showLcPanel('president')">
+      <div class="lc-num">5</div>
+      <div class="lc-content">
+        <div class="lc-title">Presidential Review <span style="font-size:0.75em;font-weight:400;opacity:0.7">(Security Domain Bills Only)</span></div>
+        <div class="lc-ref">§2.1.f Presidential Veto — domain-scoped</div>
+        <div class="lc-outcomes">
+          <span class="lc-pass">✓ Signs or not in domain — enacted</span>
+          <span class="lc-fail">✗ Vetoes — requires 2/3 both chambers to override · SC reviews within 48hrs</span>
         </div>
       </div>
     </div>
+    <div class="lc-arrow-down">↓</div>
 
-    <div class="flow-step step-enact">
-      <div class="flow-num">6</div>
-      <div class="flow-body">
-        <div class="flow-title">Enactment and NRS Publication</div>
-        <div class="flow-desc">The enacted law is published to the National Record System simultaneously with enactment. The publication is immutable — neither the law nor the record of its passage can be altered without a new legislative act. Citizens may read the full text of every law, every amendment, and every legislative vote on the NRS.</div>
-        <span class="flow-ref">§9.1 — National Record System Mandate</span>
+    <!-- STAGE 6 -->
+    <div class="lc-stage" onclick="showLcPanel('enactment')">
+      <div class="lc-num">6</div>
+      <div class="lc-content">
+        <div class="lc-title">Enactment and NRS Publication</div>
+        <div class="lc-ref">§9.1 — National Record System Mandate</div>
       </div>
     </div>
+    <div class="lc-arrow-down">↓</div>
 
-    <div class="flow-step step-challenge">
-      <div class="flow-num">7</div>
-      <div class="flow-body">
-        <div class="flow-title">Post-Enactment Challenge</div>
-        <div class="flow-desc">Any citizen with a concrete injury from an enacted law may petition the Supreme Court. The Optional Referendum also allows citizens to challenge any enacted law by gathering the required petition threshold — the Legislature cannot prevent a referendum that meets the constitutional requirements.</div>
-        <span class="flow-ref">§4.3 Judicial Scope / §11.1 Optional Referendum</span>
-        <div class="flow-branch">
-          <span class="branch-label">Challenge Paths</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-neutral">⚖ Supreme Court — may strike as unconstitutional</div>
-            <div class="branch-outcome outcome-neutral">🗳 Optional Referendum — citizens may repeal by majority vote</div>
-          </div>
+    <!-- STAGE 7 -->
+    <div class="lc-stage" onclick="showLcPanel('challenge')">
+      <div class="lc-num">7</div>
+      <div class="lc-content">
+        <div class="lc-title">Post-Enactment Challenge</div>
+        <div class="lc-ref">§4.3 Judicial Review · §11.1 Optional Referendum</div>
+        <div class="lc-outcomes">
+          <span class="lc-note">⚖ Supreme Court — may strike as unconstitutional</span>
+          <span class="lc-note">🗳 Optional Referendum — 5% petition triggers citizen vote</span>
         </div>
       </div>
     </div>
@@ -513,9 +503,6 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════
-     DIAGRAM 3: STATE PATHWAYS
-═══════════════════════════════ -->
 <div class="diagram-section" id="tab-devolution">
   <div class="section-intro">
     <h2>State Pathways</h2>
@@ -544,24 +531,18 @@
           <p class="ps-desc">The Legislative Inspectorate conducts a Competency Baseline audit assessing fiscal sustainability, rule of law, institutional capacity, and infrastructure. A score of 60% or above passes. Below 60% begins a technical assistance period with the Development Assistance Corps.</p>
           <span class="ps-ref">§13.2 — Requirements for Statehood</span>
         </div>
-        <div class="path-threshold">Threshold: 60% Competency Baseline score required to proceed</div>
-        <div class="pathway-step step-vote">
-          <span class="ps-label">Step 3 — Democratic Authorization</span>
-          <span class="ps-title">NVS Referendum</span>
-          <p class="ps-desc">Residents vote on Statehood via the National Voting System. A simple majority of residents who have held a Citizen Voting Credential for the statutory minimum period approves Statehood. The Electoral Commission certifies the result.</p>
-          <span class="ps-ref">§13.2.d — Statehood Referendum</span>
-        </div>
+        <div class="path-threshold">Criteria: fiscal integrity (§13.2.a) and full Article I legal compliance (§13.2.b)</div>
         <div class="pathway-step step-effect">
-          <span class="ps-label">Step 4 — Provisional Period</span>
-          <span class="ps-title">730-Day Provisional Membership</span>
-          <p class="ps-desc">Following a successful referendum, the new State enters a 730-day Provisional Membership Period — a constitutional probationary period with full rights but monitored institutional development. At 730 days, full Statehood is confirmed.</p>
-          <span class="ps-ref">§13.2.e — Provisional Membership Period</span>
+          <span class="ps-label">Step 3 — Provisional Period</span>
+          <span class="ps-title">Provisional Membership Period</span>
+          <p class="ps-desc">Following a successful referendum, the new State enters a Provisional Membership Period (Legislature sets duration, 365–900 days) — a constitutional probationary period with full rights but monitored institutional development. At the end of the Legislature-defined period, full Statehood is confirmed automatically on a clean audit.</p>
+          <span class="ps-ref">§13.2.c — Provisional Membership Period</span>
         </div>
         <div class="pathway-step step-restore">
           <span class="ps-label">Final — Full Membership</span>
           <span class="ps-title">Statehood Confirmed</span>
           <p class="ps-desc">The State receives two Senate seats, retains proportional House seats, participates in the BNF funding formula, and is subject to federal taxation. All constitutional rights and obligations of full Statehood apply.</p>
-          <span class="ps-ref">§13.2.f — Full Statehood</span>
+          <span class="ps-ref">§13.2.c — Statehood is automatic at end of clean Provisional Period; no further vote required</span>
         </div>
       </div>
     </div>
