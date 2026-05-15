@@ -313,6 +313,59 @@
       .conflict-steps{grid-template-columns:1fr 1fr}
     }
 
+        /* ═══════════════════════════════════
+       DIAGRAM 7: AMENDMENT PATHS
+    ═══════════════════════════════════ */
+    .amend-chart{max-width:960px;margin:0 auto}
+    .amend-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem}
+    .amend-path{border:2px solid;display:flex;flex-direction:column}
+    .amend-path-header{padding:1.25rem 1.25rem 1rem;border-bottom:1px solid rgba(0,0,0,0.08)}
+    .amend-path-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;line-height:1;display:block;margin-bottom:0.3rem}
+    .amend-path-name{font-size:0.82rem;font-weight:600;letter-spacing:0.05em;display:block;margin-bottom:0.15rem}
+    .amend-path-ref{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6}
+    .amend-path-body{padding:1rem 1.25rem;flex:1;display:flex;flex-direction:column;gap:0.75rem}
+    .amend-threshold{padding:0.6rem 0.75rem;font-size:0.82rem;line-height:1.45;border-left:3px solid}
+    .amend-threshold strong{display:block;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.2rem}
+    .amend-path-footer{padding:0.75rem 1.25rem;font-size:0.78rem;line-height:1.45;border-top:1px solid rgba(0,0,0,0.08);margin-top:auto}
+
+    .path-a{border-color:var(--navy)}
+    .path-a .amend-path-num{color:var(--navy)}
+    .path-a .amend-path-name{color:var(--navy)}
+    .path-a .amend-threshold{border-color:var(--navy);background:var(--bluelight)}
+    .path-a .amend-path-header{background:#f8f9fc}
+
+    .path-b{border-color:var(--purple)}
+    .path-b .amend-path-num{color:var(--purple)}
+    .path-b .amend-path-name{color:var(--purple)}
+    .path-b .amend-threshold{border-color:var(--purple);background:var(--purplelight)}
+    .path-b .amend-path-header{background:#fbf8fd}
+
+    .path-c{border-color:var(--green)}
+    .path-c .amend-path-num{color:var(--green)}
+    .path-c .amend-path-name{color:var(--green)}
+    .path-c .amend-threshold{border-color:var(--green);background:var(--greenlight)}
+    .path-c .amend-path-header{background:#f8fcf8}
+
+    .amend-noveto{background:var(--navy);color:var(--white);padding:1rem 1.5rem;margin-bottom:1.5rem;font-size:0.85rem;display:flex;align-items:center;gap:1rem}
+    .amend-noveto strong{color:var(--gold);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:0.2rem;white-space:nowrap}
+
+    .amend-floor{margin-bottom:1.5rem}
+    .amend-floor-header{background:var(--cream2);border:1px solid var(--border);border-bottom:none;padding:0.75rem 1.25rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);font-weight:600;display:flex;align-items:center;gap:0.5rem}
+    .amend-floor-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .amend-floor-item{padding:0.85rem 1.25rem;border:1px solid var(--border);border-top:none;font-size:0.82rem;line-height:1.5}
+    .amend-floor-item strong{display:block;font-size:0.75rem;color:var(--navy);margin-bottom:0.2rem}
+    .amend-floor-item span{color:#555}
+    .floor-expand{border-left:3px solid var(--green)}
+    .floor-locked{border-left:3px solid var(--red)}
+
+    .amend-effect{background:var(--cream2);border:1px solid var(--border);padding:1rem 1.5rem;font-size:0.82rem;color:#555;line-height:1.6;text-align:center}
+    .amend-effect strong{color:var(--navy)}
+
+    @media(max-width:760px){
+      .amend-paths{grid-template-columns:1fr}
+      .amend-floor-grid{grid-template-columns:1fr}
+    }
+
         /* FOOTER */
     footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2.5rem 2rem;text-align:center}
     footer p{font-size:0.8rem;color:rgba(245,240,232,0.3);margin-bottom:0.3rem}
@@ -404,7 +457,7 @@
 <div class="page-hero">
   <span class="eyebrow">Constitutional Architecture</span>
   <h1>How the Republic Works</h1>
-  <p>Six interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
+  <p>Seven interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
 </div>
 
 <!-- TAB NAVIGATION -->
@@ -415,6 +468,7 @@
   <button class="tab-btn" onclick="showTab('immigration')">Immigration Tracks</button>
   <button class="tab-btn" onclick="showTab('tiers')">Military Tiers</button>
   <button class="tab-btn" onclick="showTab('dual')">Dual Executive</button>
+  <button class="tab-btn" onclick="showTab('amendment')">Amendment Paths</button>
 </div>
 
 <!-- ═══════════════════════════════
@@ -1247,6 +1301,157 @@
 
     <div class="dual-note">
       <strong>The key asymmetry:</strong> The President's domain is bounded and defined — defense, diplomacy, intelligence, trade agreements. The PM's domain is residual — everything else. A question about which executive has authority almost always resolves to the PM unless the President can point to a specific defense, intelligence, or foreign affairs nexus.
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════
+     DIAGRAM 7: AMENDMENT PATHS
+═══════════════════════════════ -->
+<div class="diagram-section" id="tab-amendment">
+  <div class="section-intro">
+    <h2>Amending the Constitution</h2>
+    <p>Three paths to constitutional amendment — each requiring different sources of authority. No executive may veto an amendment. Some provisions cannot be amended at all.</p>
+  </div>
+
+  <div class="amend-chart">
+
+    <!-- NO EXECUTIVE VETO BANNER -->
+    <div class="amend-noveto">
+      <div>
+        <strong>§15.2.a — No Executive Veto</strong>
+        Neither the President nor the Prime Minister holds any veto authority over constitutional amendments. An amendment takes immediate effect the moment the Inspectorates certify ratification and publish it to the National Record System.
+      </div>
+    </div>
+
+    <!-- THREE PATHS -->
+    <div class="amend-paths">
+
+      <!-- PATH A: LEGISLATIVE -->
+      <div class="amend-path path-a">
+        <div class="amend-path-header">
+          <span class="amend-path-num">A</span>
+          <span class="amend-path-name">Legislative Path</span>
+          <span class="amend-path-ref">§15.1.a</span>
+        </div>
+        <div class="amend-path-body">
+          <div class="amend-threshold">
+            <strong>Both Chambers — Simultaneously</strong>
+            ¾ supermajority of the full seated membership of both chambers in a single concurrent vote.
+          </div>
+          <div class="amend-threshold">
+            <strong>No Popular Vote Required</strong>
+            Legislature acts alone. No citizen referendum. No executive signature needed.
+          </div>
+          <div class="amend-threshold">
+            <strong>Recorded Vote</strong>
+            Every member's position published to the NRS within 24 hours. No anonymous constitutional amendment votes.
+          </div>
+        </div>
+        <div class="amend-path-footer">
+          <strong>Takes effect:</strong> Upon LI certification and NRS publication.
+        </div>
+      </div>
+
+      <!-- PATH B: LEGISLATIVE + POPULAR -->
+      <div class="amend-path path-b">
+        <div class="amend-path-header">
+          <span class="amend-path-num">B</span>
+          <span class="amend-path-name">Legislative and Popular Path</span>
+          <span class="amend-path-ref">§15.1.b</span>
+        </div>
+        <div class="amend-path-body">
+          <div class="amend-threshold">
+            <strong>Stage 1 — Legislature</strong>
+            ⅔ supermajority of the full seated membership of both chambers simultaneously.
+          </div>
+          <div class="amend-threshold">
+            <strong>Stage 2 — National Popular Vote</strong>
+            55% affirmative support with at least 55% citizen participation. Must be held within 180 days of the parliamentary vote.
+          </div>
+          <div class="amend-threshold">
+            <strong>Certified by:</strong>
+            Electoral Commission and Legislative Inspectorate jointly.
+          </div>
+        </div>
+        <div class="amend-path-footer">
+          <strong>Lower legislative threshold</strong> than Path A, but requires the People to ratify. Neither stage alone is sufficient.
+        </div>
+      </div>
+
+      <!-- PATH C: CITIZEN-LED -->
+      <div class="amend-path path-c">
+        <div class="amend-path-header">
+          <span class="amend-path-num">C</span>
+          <span class="amend-path-name">Citizen-Led Path</span>
+          <span class="amend-path-ref">§15.1.c</span>
+        </div>
+        <div class="amend-path-body">
+          <div class="amend-threshold">
+            <strong>National Vote — No Legislature Required</strong>
+            70% affirmative support with at least 65% citizen participation. Legislature plays no role.
+          </div>
+          <div class="amend-threshold">
+            <strong>Second Vote Mechanism</strong>
+            If participation falls between 60–65% but affirmative exceeds 75%, the EC schedules a second vote (90 days to 12 months later) at full standard thresholds. One second vote per amendment text.
+          </div>
+          <div class="amend-threshold">
+            <strong>Highest threshold — broadest mandate</strong>
+            The only path that bypasses the legislature entirely.
+          </div>
+        </div>
+        <div class="amend-path-footer">
+          <strong>Takes effect:</strong> Upon EC certification and NRS publication.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- UNAMENDABLE PROVISIONS -->
+    <div class="amend-floor">
+      <div class="amend-floor-header">
+        🔒 §15.3.a — The Unamendable Floor
+      </div>
+      <div class="amend-floor-grid">
+        <div class="amend-floor-item floor-expand">
+          <strong>Article I — Can only expand, never contract</strong>
+          <span>No amendment may reduce any right below the floor established in Article I. The Individual Sovereignty Floor is a one-way ratchet — rights may be added or expanded, never removed or weakened.</span>
+        </div>
+        <div class="amend-floor-item floor-locked">
+          <strong>§1.2 — Prohibition on Torture</strong>
+          <span>Permanently unamendable. May not be altered, qualified, or removed by any process, under any circumstances.</span>
+        </div>
+        <div class="amend-floor-item floor-locked">
+          <strong>§1.3 — Prohibition on Slavery and Forced Labor</strong>
+          <span>Permanently unamendable. No declaration, statute, or constitutional process may reinstate slavery or compelled labor.</span>
+        </div>
+        <div class="amend-floor-item floor-locked">
+          <strong>§1.13 — Habeas Corpus and First Appearance</strong>
+          <span>Permanently unamendable. The right to challenge detention before a court cannot be suspended or removed.</span>
+        </div>
+        <div class="amend-floor-item floor-locked">
+          <strong>§1.17 — Right to a Public Trial</strong>
+          <span>Permanently unamendable. No secret criminal proceedings.</span>
+        </div>
+        <div class="amend-floor-item floor-locked">
+          <strong>§1.18 — No Retroactive Criminal Laws</strong>
+          <span>Permanently unamendable. No person may be convicted of an act that was not criminal when committed.</span>
+        </div>
+        <div class="amend-floor-item floor-locked">
+          <strong>§1.27 — Non-Refoulement</strong>
+          <span>Permanently unamendable. The prohibition on returning any person to persecution is an absolute right of the same character as the prohibitions on torture and slavery.</span>
+        </div>
+        <div class="amend-floor-item floor-expand" style="border-left-color:var(--muted)">
+          <strong>Everything else — Amendable by one of the three paths</strong>
+          <span>All other provisions — including the structure of the government, the amendment process itself, the judiciary, the fiscal framework — may be changed through Paths A, B, or C.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="amend-effect">
+      <strong>The amendment process itself is amendable.</strong> A future supermajority could change the thresholds, add paths, or restructure the process — provided it does so through one of the three current paths and does not touch the permanently unamendable provisions.
     </div>
 
   </div>
