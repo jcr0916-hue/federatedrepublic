@@ -512,99 +512,108 @@
 <div class="diagram-section" id="tab-lifecycle">
   <div class="section-intro">
     <h2>How a Law Is Made</h2>
-    <p>Every law originates in the House and passes through multiple constitutional gates. Click any stage to explore the provisions behind it.</p>
+    <p>Every law originates in the House and passes through multiple constitutional gates before enactment. Click any stage to explore the provisions behind it.</p>
   </div>
 
-  <div class="lifecycle-chart">
+  <div class="flow-chart">
 
-    <!-- STAGE 1 -->
-    <div class="lc-stage" onclick="showLcPanel('intro')">
-      <div class="lc-num">1</div>
-      <div class="lc-content">
-        <div class="lc-title">Bill Introduced in the House</div>
-        <div class="lc-ref">§3.1.c Single-Subject Rule · §3.1.d Bill Exposure</div>
+    <div class="flow-step step-intro">
+      <div class="flow-num">1</div>
+      <div class="flow-body">
+        <div class="flow-title">Bill Introduced in the House</div>
+        <div class="flow-desc">All legislation originates in the House. Every bill must address a single, clearly defined subject — unrelated riders nullify the entire act. The full bill text must be published to the NRS for the minimum exposure period before any final vote.</div>
+        <span class="flow-ref">§3.1.c Single-Subject Rule · §3.1.d Bill Exposure</span>
       </div>
     </div>
-    <div class="lc-arrow-down">↓</div>
 
-    <!-- STAGE 2 -->
-    <div class="lc-stage" onclick="showLcPanel('house')">
-      <div class="lc-num">2</div>
-      <div class="lc-content">
-        <div class="lc-title">House Passage</div>
-        <div class="lc-ref">§3.3.a — Absolute majority of full membership</div>
-        <div class="lc-outcomes">
-          <span class="lc-pass">✓ Passes — proceeds to Senate</span>
-          <span class="lc-fail">✗ Fails — bill dies; may re-introduce next session</span>
+    <div class="flow-step step-house">
+      <div class="flow-num">2</div>
+      <div class="flow-body">
+        <div class="flow-title">House Passage</div>
+        <div class="flow-desc">The House votes. An absolute majority of the full seated membership — not merely those present — is required to pass.</div>
+        <span class="flow-ref">§3.3.a — Standard Passage</span>
+        <div class="flow-branch">
+          <span class="branch-label">Vote Outcome</span>
+          <div class="branch-outcomes">
+            <div class="branch-outcome outcome-pass">✓ Passes — proceeds to Senate</div>
+            <div class="branch-outcome outcome-fail">✗ Fails — bill dies; sponsor may re-introduce next session</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="lc-arrow-down">↓</div>
 
-    <!-- STAGE 3 -->
-    <div class="lc-stage" onclick="showLcPanel('senate')">
-      <div class="lc-num">3</div>
-      <div class="lc-content">
-        <div class="lc-title">Senate Review</div>
-        <div class="lc-ref">§3.2.c — Senate Must Act · §3.2.i Senate Amendment Authority</div>
-        <div class="lc-outcomes">
-          <span class="lc-pass">✓ Passes — proceeds to Legislative Review Period</span>
-          <span class="lc-amend">↩ Amends — returns to House for acceptance or rejection</span>
-          <span class="lc-fail">✗ Declines — bill dies</span>
-          <span class="lc-note">⏱ No action in statutory period — Deemed Approved</span>
+    <div class="flow-step step-senate">
+      <div class="flow-num">3</div>
+      <div class="flow-body">
+        <div class="flow-title">Senate Review</div>
+        <div class="flow-desc">The Senate must take up every House-passed bill within the statutory period. It may pass, amend, decline, or allow Deemed Approval to trigger. Senate amendments must be germane — limited to the subject matter of the original bill. The LI publishes a germaneness analysis for any amended bill returned to the House.</div>
+        <span class="flow-ref">§3.2.c Senate Must Act · §3.2.i Senate Amendment Authority · §8.1.a LI Germaneness Analysis</span>
+        <div class="flow-branch">
+          <span class="branch-label">Senate Options</span>
+          <div class="branch-outcomes">
+            <div class="branch-outcome outcome-pass">✓ Passes — proceeds to Legislative Review Period</div>
+            <div class="branch-outcome outcome-neutral">↩ Amends — returns to House for acceptance or rejection</div>
+            <div class="branch-outcome outcome-fail">✗ Declines — bill dies</div>
+            <div class="branch-outcome outcome-delay">⏱ No action in statutory period — Deemed Approved</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="lc-arrow-down">↓</div>
 
-    <!-- STAGE 4 -->
-    <div class="lc-stage" onclick="showLcPanel('pm')">
-      <div class="lc-num">4</div>
-      <div class="lc-content">
-        <div class="lc-title">Legislative Review Period — PM</div>
-        <div class="lc-ref">§2.4 Suspensive Veto · §2.5 Legislative Review Period</div>
-        <div class="lc-outcomes">
-          <span class="lc-pass">✓ Signs or silent — bill proceeds to enactment</span>
-          <span class="lc-note">📊 Fiscal Objection — requires MA assessment; House may override by simple majority</span>
-          <span class="lc-fail">↩ Suspensive Veto — returns to Legislature; 2/3 both chambers to override</span>
+    <div class="flow-step step-pm">
+      <div class="flow-num">4</div>
+      <div class="flow-body">
+        <div class="flow-title">Legislative Review Period — PM</div>
+        <div class="flow-desc">The PM reviews every bill during the statutory review period. The PM may sign, remain silent (Deemed Enacted), issue a Fiscal Objection, or issue a Suspensive Veto. The PM must give the LI's germaneness analysis due consideration where one was published.</div>
+        <span class="flow-ref">§2.4 Suspensive Veto · §2.5 Legislative Review Period</span>
+        <div class="flow-branch">
+          <span class="branch-label">PM Options</span>
+          <div class="branch-outcomes">
+            <div class="branch-outcome outcome-pass">✓ Signs or silent — bill proceeds to enactment</div>
+            <div class="branch-outcome outcome-delay">📊 Fiscal Objection — requires MA assessment; House may override by simple majority</div>
+            <div class="branch-outcome outcome-neutral">↩ Suspensive Veto — returns to Legislature; 2/3 both chambers to override</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="lc-arrow-down">↓</div>
 
-    <!-- STAGE 5 -->
-    <div class="lc-stage" onclick="showLcPanel('president')">
-      <div class="lc-num">5</div>
-      <div class="lc-content">
-        <div class="lc-title">Presidential Review <span style="font-size:0.75em;font-weight:400;opacity:0.7">(Security Domain Bills Only)</span></div>
-        <div class="lc-ref">§2.1.f Presidential Veto — domain-scoped</div>
-        <div class="lc-outcomes">
-          <span class="lc-pass">✓ Signs or not in domain — enacted</span>
-          <span class="lc-fail">✗ Vetoes — requires 2/3 both chambers to override · SC reviews within 48hrs</span>
+    <div class="flow-step step-president">
+      <div class="flow-num">5</div>
+      <div class="flow-body">
+        <div class="flow-title">Presidential Review <span style="font-size:0.82em;font-weight:400;opacity:0.7">(Security Domain Bills Only)</span></div>
+        <div class="flow-desc">The President may veto only bills raising a genuine constitutional concern within the President's domain — military operations, intelligence, treaty obligations, or border security. A general or speculative connection to security is not sufficient. The SC reviews any veto within 48 hours on petition from either Speaker.</div>
+        <span class="flow-ref">§2.1.f Presidential Veto — domain-scoped · §2.1.f.i SC Review</span>
+        <div class="flow-branch">
+          <span class="branch-label">Presidential Options</span>
+          <div class="branch-outcomes">
+            <div class="branch-outcome outcome-pass">✓ Signs, or bill not in domain — enacted</div>
+            <div class="branch-outcome outcome-fail">✗ Vetoes — 2/3 both chambers to override; SC reviews within 48hrs</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="lc-arrow-down">↓</div>
 
-    <!-- STAGE 6 -->
-    <div class="lc-stage" onclick="showLcPanel('enactment')">
-      <div class="lc-num">6</div>
-      <div class="lc-content">
-        <div class="lc-title">Enactment and NRS Publication</div>
-        <div class="lc-ref">§9.1 — National Record System Mandate</div>
+    <div class="flow-step step-enact">
+      <div class="flow-num">6</div>
+      <div class="flow-body">
+        <div class="flow-title">Enactment and NRS Publication</div>
+        <div class="flow-desc">The enacted law is published to the National Record System — permanently, tamper-evidently, and publicly accessible to every Inhabitant at no cost. All prior versions, votes, Inspectorate findings, and veto records are indexed alongside it.</div>
+        <span class="flow-ref">§9.1 — National Record System Mandate</span>
       </div>
     </div>
-    <div class="lc-arrow-down">↓</div>
 
-    <!-- STAGE 7 -->
-    <div class="lc-stage" onclick="showLcPanel('challenge')">
-      <div class="lc-num">7</div>
-      <div class="lc-content">
-        <div class="lc-title">Post-Enactment Challenge</div>
-        <div class="lc-ref">§4.3 Judicial Review · §11.1 Optional Referendum</div>
-        <div class="lc-outcomes">
-          <span class="lc-note">⚖ Supreme Court — may strike as unconstitutional</span>
-          <span class="lc-note">🗳 Optional Referendum — 5% petition triggers citizen vote</span>
+    <div class="flow-step step-challenge">
+      <div class="flow-num">7</div>
+      <div class="flow-body">
+        <div class="flow-title">Post-Enactment Challenge</div>
+        <div class="flow-desc">Enacted law remains subject to constitutional challenge and citizen repeal. These are independent paths — both may run concurrently.</div>
+        <span class="flow-ref">§4.3 Judicial Review · §11.1 Optional Referendum</span>
+        <div class="flow-branch">
+          <span class="branch-label">Challenge Paths</span>
+          <div class="branch-outcomes">
+            <div class="branch-outcome outcome-neutral">⚖ Supreme Court — any party with standing may challenge; court may strike as unconstitutional</div>
+            <div class="branch-outcome outcome-neutral">🗳 Optional Referendum — 5% citizen petition within 90 days triggers a national vote; simple majority overturns</div>
+          </div>
         </div>
       </div>
     </div>
