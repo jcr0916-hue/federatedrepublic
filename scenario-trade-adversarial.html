@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Concurrence Dispute — The Federated Republic</title>
+  <meta name="description" content="Year 28. President Solis concludes the Valdenmere Digital Services Agreement without PM concurrence — she believes it requires none. PM Adara Vehn disagrees, withholds concurrence, and publishes her reasoning. The SC rules within 72 hours. §2.1.i in adversarial operation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.6}
+    .nrs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .vote-record{background:var(--cream2);border:1px solid var(--border);padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.88rem}
+    .vote-record strong{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--navy);display:block;margin-bottom:0.4rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="constitution-v157.docx" download>Download the Constitution</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Presidential Trade Authority · §2.1.i · Adversarial Concurrence Dispute · SC Expedited Review</span>
+      <h1 class="scenario-title">The Concurrence Dispute</h1>
+      <p class="scenario-subtitle">Year 28. President Solis concludes the Valdenmere Digital Services Agreement without PM concurrence — she believes it requires none. PM Adara Vehn disagrees, publishes her written position to the NRS, and refuses to concur. The agreement is void until the SC rules. §2.1.i under maximum pressure.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.1.i Trade Authority</span>
+        <span class="prov-tag">§2.1.h Dual Executive Conflict</span>
+        <span class="prov-tag">§4.3 SC Expedited Review</span>
+        <span class="prov-tag">§3.2.e Treaty Ratification</span>
+        <span class="prov-tag">§9.1 NRS Publication</span>
+        <span class="prov-tag">§15.6 Constitutional Supremacy</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Valdenmere Digital Services Agreement had been four years in negotiation. Valdenmere was the Republic's largest trading partner in the digital services sector — software licensing, cloud infrastructure, data processing contracts. The agreement established a mutual market access framework: Republic-based digital services firms could operate in Valdenmere under national treatment, and Valdenmere firms could do the same in the Republic. It contained no tariff provisions. It contained no labor market commitments. It was, in President Yara Solis's assessment, a pure foreign commerce agreement operating in the President's diplomatic and trade domain, requiring Senate ratification but not PM concurrence. She concluded it on Year 28, Day 203 and submitted it to the Senate for ratification.</p>
+
+      <p>Prime Minister Adara Vehn read the agreement's text the same day it was published to the NRS. She reached a different conclusion.</p>
+
+      <h2>The Competing Positions</h2>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — Presidential Statement — Year 28, Day 203 — Valdenmere Digital Services Agreement</span>
+        The President has concluded the Valdenmere Digital Services Agreement and transmitted it to the Senate for ratification under §3.2.e. The agreement establishes mutual market access for digital services firms in both jurisdictions under national treatment principles. The President has determined that this agreement does not materially affect the domestic economic sphere within the meaning of §2.1.i. The agreement governs the terms under which Republic firms operate in Valdenmere and Valdenmere firms operate in the Republic — it is a framework for market access, not a regulation of domestic industry, labour conditions, or public services. No PM concurrence has been sought or is required. The agreement takes effect upon Senate ratification by 2/3 majority under §3.2.e.
+      </div>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — Prime Minister's Statement — Year 28, Day 205 — Valdenmere Digital Services Agreement</span>
+        The Prime Minister has reviewed the Valdenmere Digital Services Agreement published to the NRS on Day 203. The PM's written concurrence was not sought before conclusion of this agreement. The PM's position is that PM concurrence was required under §2.1.i and was not obtained. The agreement as concluded is therefore void under §2.1.i pending resolution.
+
+        The basis for this position: The agreement establishes that Valdenmere digital services firms may operate in the Republic under national treatment. "National treatment" means they must be treated as domestic firms. This directly affects domestic industry — specifically, the regulatory framework, licensing requirements, and market structure governing Republic digital services firms. An agreement that requires the Republic to treat foreign firms identically to domestic firms materially affects the conditions under which domestic industry operates. It affects public services where digital infrastructure intersects with government procurement. It affects labour conditions to the extent that market expansion or compression from foreign competition affects employment in the sector.
+
+        The PM does not dispute the President's authority to negotiate and conclude trade agreements. The dispute is whether this specific agreement — which imposes national treatment obligations on the Republic — materially affects the domestic economic sphere. The PM's position is that it does, and that §2.1.i therefore required written PM concurrence before conclusion.
+
+        Pursuant to §2.1.i, disputes about whether PM concurrence is required are resolved by the Supreme Court on expedited review. The PM requests that the Supreme Court resolve this dispute. The Valdenmere government has been notified that the agreement's legal status is under constitutional review.
+      </div>
+
+      <h2>The Diplomatic Dimension</h2>
+
+      <p>The Valdenmere government's response was measured but pointed. Valdenmere's trade minister published a statement noting that the agreement had been concluded through a four-year negotiation with the Republic's trade representatives, that Valdenmere had relied on the President's authority to conclude the agreement, and that Valdenmere's parliament had begun its own ratification proceedings in good faith. The statement asked the Republic to resolve its internal constitutional question expeditiously.</p>
+
+      <p>President Solis published a response acknowledging the diplomatic awkwardness and committing to expedited SC review. The PM published a concurrent statement noting that the constitutional process was designed precisely for situations like this — it protected both parties from the consequences of an agreement later found void — and that the SC's expedited review framework would resolve the question within days, not weeks.</p>
+
+      <p>This was true. §2.1.i's "expedited review" language, combined with the SC's jurisdiction over the question, meant the court had to act quickly. The Senate had suspended its ratification process pending the SC's ruling, which was the correct approach — ratifying an agreement later found to require PM concurrence would have created a more difficult legal situation than waiting three days.</p>
+
+      <h2>The SC Ruling</h2>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — SC Ruling — Year 28, Day 208 — Valdenmere Digital Services Agreement Concurrence Dispute</span>
+        The Supreme Court rules 5-4 that the Valdenmere Digital Services Agreement required PM concurrence under §2.1.i before conclusion.
+
+        The question before the Court is whether this agreement "materially affects the domestic economic sphere — including domestic industry, labour conditions, or public services" within the meaning of §2.1.i.
+
+        The Court accepts the President's argument that pure foreign commerce agreements — those that govern only how Republic actors operate abroad — ordinarily fall within the presidential trade domain without requiring PM concurrence. The Court also accepts that the Senate's 2/3 ratification requirement provides meaningful democratic oversight regardless of whether PM concurrence is also required.
+
+        However, the Court finds that the national treatment obligation in this agreement is not a pure foreign commerce provision. A national treatment obligation requires the Republic to modify or constrain its domestic regulatory framework as applied to a category of foreign firms operating within the Republic's territory. The Republic's digital services regulatory framework — licensing, data governance, market access conditions — applies to domestic industry. An agreement that requires the Republic to extend that framework on identical terms to Valdenmere firms directly affects the conditions governing domestic industry.
+
+        The Court holds: an international trade agreement that requires the Republic to apply its domestic economic regulatory framework to foreign firms on a national treatment basis materially affects the domestic economic sphere within the meaning of §2.1.i. The President must obtain written PM concurrence before concluding any agreement containing a binding national treatment obligation applicable within Republic territory.
+
+        The agreement as concluded without PM concurrence is void under §2.1.i. The President may renegotiate or seek PM concurrence and re-conclude the agreement in the form concluded. The agreement's domestic provisions, if the President elects, may also be transmitted to the House Speaker for consideration as ordinary legislation under §2.1.i.
+
+        Dissent (Justices Ariel Moss, Yenn, Okoro, and Farid): The majority's national treatment analysis is correct but the application is overstated. The agreement does not alter the Republic's domestic regulatory framework — it applies that framework to a new category of participant. "Affecting" domestic industry by expanding the competitive set is not the same as "materially affecting the domestic economic sphere" in the sense §2.1.i contemplates. The concurrence requirement was designed for agreements that change domestic regulatory conditions, not agreements that extend existing conditions to new market entrants. We would hold that PM concurrence was not required on these facts.
+      </div>
+
+      <h2>The Resolution</h2>
+
+      <p>President Solis read the ruling and its 5-4 margin carefully. The majority had drawn a clear line — national treatment obligations within Republic territory require PM concurrence — but the dissent's reasoning was not frivolous. The line would matter for future negotiations. She published a brief statement acknowledging the ruling and noting that the agreement would be renegotiated to seek PM concurrence before re-conclusion.</p>
+
+      <p>The PM published a statement of equal brevity: she had reviewed the agreement's text and the SC ruling, concurred with the majority's analysis, and indicated she was prepared to give written concurrence if the agreement was re-presented unchanged. She had not withheld concurrence because she opposed the agreement's substance — she had withheld it because the constitutional process required it, and the resolution required the question to be settled cleanly rather than left to practice.</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — Presidential Statement — Year 28, Day 211 — Valdenmere Digital Services Agreement Re-Conclusion</span>
+        The President re-concludes the Valdenmere Digital Services Agreement, with the written concurrence of the Prime Minister obtained this date. The PM's written concurrence is published to the NRS simultaneously. The agreement is transmitted to the Senate for ratification under §3.2.e. The Valdenmere government has been notified. The agreement's text is unchanged from the version published on Day 203.
+      </div>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — PM Written Concurrence — Year 28, Day 211 — Valdenmere Digital Services Agreement</span>
+        The Prime Minister provides written concurrence in the Valdenmere Digital Services Agreement pursuant to §2.1.i. The PM has reviewed the agreement and finds that it materially affects the domestic economic sphere — specifically the conditions governing Republic digital services firms and the regulatory framework applicable to Valdenmere firms operating in the Republic. The PM concurs in the agreement's conclusion. This concurrence is provided pursuant to the Supreme Court's ruling of Day 208 and satisfies the §2.1.i requirement.
+      </div>
+
+      <p>The Senate ratified the agreement on Year 28, Day 231 by a vote of 31-13. Eight days later than the original timeline. The Valdenmere parliament completed its own ratification within the following month. The agreement entered into force on Year 28, Day 310 — 107 days after the original conclusion date, and 7 days before the end of the Republic's fiscal year.</p>
+
+      <div class="finding">
+        <span class="finding-label">What This Scenario Tests</span>
+        <p>The Nordmere Cases tested §2.1.i's presidential election after a failed ratification — a cooperative case. This scenario tests the provision's dispute resolution mechanism under genuine executive conflict. Both executives had defensible positions. The President's reading — that national treatment is a reciprocal market access provision, not a domestic regulatory change — was reasonable enough to attract four SC justices. The PM's reading — that national treatment obligations within Republic territory directly affect how domestic industry is regulated — was correct on the majority's analysis, but only narrowly.</p>
+        <p>The speed of the process is the provision's key design feature. The dispute arose on Day 203. The SC ruled on Day 208 — five days later. The agreement was re-concluded on Day 211. The Senate ratified on Day 231. From the original conclusion to the entry into force was 107 days. The constitutional question was settled before it could harden into a diplomatic incident. Valdenmere's patience was tested but not exhausted. The NRS publication of both executives' positions, the SC ruling, and the PM's concurrence meant the entire sequence was visible — Valdenmere could follow every step.</p>
+        <p>The SC's holding has prospective consequences. The majority's national treatment test — an agreement that requires the Republic to apply its domestic regulatory framework to foreign firms on a national treatment basis materially affects the domestic economic sphere — is now published constitutional doctrine. Future Presidents know that national treatment agreements within Republic territory require PM concurrence. Future PMs know that they cannot withhold concurrence on grounds unrelated to the domestic economic sphere question. The dispute was not about whether the agreement was good policy — the PM said she was prepared to concur immediately once the question was resolved. It was about whether the constitutional process was followed. It was, ultimately, because the SC made it so.</p>
+        <p>The 5-4 margin is worth noting. The SC did not find the question easy, and four justices would have found for the President. The concurrence requirement in §2.1.i is genuinely ambiguous at its edges — the dissent's argument that "extending existing regulations to new market entrants" is different from "changing domestic regulatory conditions" is a coherent reading of the text. What the ruling establishes is that the ambiguity is resolved toward requiring concurrence when the agreement imposes binding obligations on how the Republic applies its own domestic regulatory framework to parties within its territory. That test has teeth. It will apply to future agreements — and future executives will negotiate differently knowing it.</p>
+      </div>
+
+    </div>
+
+    <nav class="scenario-nav">
+      <a href="scenario-trade-agreement.html">← The Nordmere Cases</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </nav>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>
