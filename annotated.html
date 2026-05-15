@@ -1668,3 +1668,115 @@
     <p class="prov-text">The compact must specify with particularity the reciprocal obligations of both parties and the review mechanism. The Associated Community holds obligations to the Republic as well as rights from it. Review must be scheduled at regular intervals defined in the compact; either party may request a review outside the schedule by providing written notice to the NRS.</p>
           </div>
 
+
+
+<script>
+  /* ── Mobile navigation ── */
+  function toggleMobileNav() {
+    var menu = document.getElementById('mobileMenu');
+    if (menu) menu.classList.toggle('open');
+  }
+
+  /* ── Search ── */
+  function openSearch() {
+    var wrap = document.getElementById('searchWrap');
+    var input = document.getElementById('searchInput');
+    if (!wrap) return;
+    wrap.style.display = 'block';
+    if (input) { input.value = ''; input.focus(); }
+    renderResults([]);
+  }
+
+  function closeSearch() {
+    var wrap = document.getElementById('searchWrap');
+    if (wrap) wrap.style.display = 'none';
+  }
+
+  function doSearch(q) {
+    if (!q || q.length < 2) { renderResults([]); return; }
+    q = q.toLowerCase().trim();
+    if (typeof PROVISION_INDEX === 'undefined') { renderResults([]); return; }
+    var results = PROVISION_INDEX.filter(function(p) {
+      return p.section.toLowerCase().includes(q) ||
+             p.name.toLowerCase().includes(q) ||
+             (p.text && p.text.toLowerCase().includes(q));
+    }).slice(0, 12);
+    renderResults(results, q);
+  }
+
+  function renderResults(results, q) {
+    var box = document.getElementById('searchResults');
+    if (!box) return;
+    if (!results.length) { box.innerHTML = ''; return; }
+    box.innerHTML = results.map(function(p) {
+      var snippet = '';
+      if (q && p.text) {
+        var idx = p.text.toLowerCase().indexOf(q);
+        if (idx >= 0) {
+          var start = Math.max(0, idx - 40);
+          var end = Math.min(p.text.length, idx + q.length + 60);
+          snippet = (start > 0 ? '…' : '') + p.text.slice(start, end) + (end < p.text.length ? '…' : '');
+        }
+      }
+      return '<a href="#' + p.id + '" onclick="closeSearch()" style="display:block;padding:0.6rem 0.75rem;border-bottom:1px solid rgba(255,255,255,0.06);text-decoration:none;color:rgba(245,240,232,0.85);font-size:0.85rem;line-height:1.4;">' +
+        '<span style="color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.72rem;margin-right:0.5rem;">' + p.section + '</span>' +
+        '<strong style="color:rgba(245,240,232,0.95);">' + p.name + '</strong>' +
+        (snippet ? '<div style="font-size:0.78rem;color:rgba(245,240,232,0.5);margin-top:0.2rem;">' + snippet + '</div>' : '') +
+        '</a>';
+    }).join('');
+  }
+
+  /* ── Keyboard shortcuts ── */
+  document.addEventListener('keydown', function(e) {
+    var wrap = document.getElementById('searchWrap');
+    var input = document.getElementById('searchInput');
+    if (!wrap) return;
+    if (e.key === 's' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) {
+      e.preventDefault(); openSearch();
+    }
+    if (e.key === 'Escape') closeSearch();
+  });
+
+  /* ── Search input listener ── */
+  (function() {
+    var inp = document.getElementById('searchInput');
+    if (inp) {
+      inp.addEventListener('input', function() { doSearch(this.value); });
+      inp.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeSearch(); });
+    }
+  })();
+
+  /* ── Copy provision link ── */
+  function copyProvLink(id) {
+    var url = location.origin + location.pathname + '#' + id;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(function() { showCopied(id); });
+    } else {
+      var el = document.createElement('textarea');
+      el.value = url; document.body.appendChild(el);
+      el.select(); document.execCommand('copy');
+      document.body.removeChild(el); showCopied(id);
+    }
+  }
+
+  function showCopied(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var tip = document.createElement('span');
+    tip.textContent = 'Copied!';
+    tip.style.cssText = 'position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);background:var(--navy);color:var(--gold);padding:0.4rem 1rem;font-size:0.78rem;letter-spacing:0.1em;z-index:999;pointer-events:none;';
+    document.body.appendChild(tip);
+    setTimeout(function() { document.body.removeChild(tip); }, 1800);
+  }
+
+  /* ── Reading progress bar ── */
+  var bar = document.createElement('div');
+  bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s;pointer-events:none;';
+  document.body.prepend(bar);
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+  });
+</script>
+</body>
+</html>
