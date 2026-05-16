@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Departure — The Federated Republic</title>
+  <meta name="description" content="The Kelen Nation votes to terminate its Associated Community compact and proceed as a fully sovereign state. No Republic consent is required. But the termination agreement must address citizenship, BNF, defence, and two hundred years of interwoven obligations.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Departure">
+  <meta property="og:description" content="The Kelen Nation votes to terminate its Associated Community compact. No Republic consent required. But the termination agreement must address citizenship, BNF, defence, and two hundred years of interwoven obligations.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-compact.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here &#8212; Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="annotated.html">Read the Constitution</a>
+    <a href="constitution-v166.docx" download>Download (.docx)</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Associated Communities &#xb7; §20.4 &#xb7; Compact Termination</span>
+      <h1 class="scenario-title">The Departure</h1>
+      <p class="scenario-subtitle">The Kelen Nation votes by traditional council to terminate its Associated Community compact and proceed as a fully independent sovereign state. §20.4 is explicit: no Republic consent is required. But the termination agreement must address citizenship for forty thousand dual-status members, BNF distributions for a population with no domestic alternative, defence arrangements across a shared border, and the status of a joint resource management treaty that neither party wants to lose.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§20.1 Associated Community Status</span>
+        <span class="prov-tag">§20.2 Compact Terms</span>
+        <span class="prov-tag">§20.4 Sovereign Mobility</span>
+        <span class="prov-tag">§20.5 Reciprocal Obligations</span>
+        <span class="prov-tag">§14.5.d Citizenship Compatibility</span>
+        <span class="prov-tag">§10.1 BNF Transition</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Kelen Nation has held Associated Community status for sixteen years. The compact was entered in the Republic&#8217;s seventh year, negotiated over three years by the Nation&#8217;s elected assembly and the Republic&#8217;s Senate. It was the first compact signed under Article XX and remains a reference model for the three that followed. The Kelen hold full Article I protections, send observing delegates to both chambers, maintain their own governance structure, and have never been required to adopt the Republic&#8217;s legal code in matters of internal governance.</p>
+
+      <p>The vote to terminate is not a repudiation of the relationship. The Nation&#8217;s council describes it as a recalibration: they want full treaty status as an independent sovereign rather than associated status within a constitutional framework. The difference is not about rights &#8212; they have full Article I protections under the compact and would retain them under a treaty. It is about constitutional standing. As an Associated Community, they are within the Republic&#8217;s constitutional order. As a treaty nation, they would be external to it.</p>
+
+      <h2>What §20.4 Says and Doesn&#8217;t Say</h2>
+
+      <p>§20.4 is among the most explicit provisions in the constitution: the Associated Community may at any time, by its own democratic or traditional governance process, elect to terminate the compact and proceed as a fully independent sovereign nation. No Republic consent is required. The Nation&#8217;s traditional council &#8212; the constitutionally recognised governance body under the compact &#8212; has voted. The vote is valid. The compact termination is constitutionally self-executing in its authorization.</p>
+
+      <p>What is not self-executing is the termination agreement. §20.5 requires the compact to specify reciprocal obligations and the review mechanism. The original compact included a termination framework: the parties have 18 months from notice of intent to negotiate the transition agreement, and the agreement must be ratified by the Nation&#8217;s council and the Republic&#8217;s Senate before termination takes effect. During the negotiating period, all compact terms remain in force.</p>
+
+      <div class="beat">
+        <div class="beat-label">§20.4 — Termination Notice · Month 1</div>
+        <div class="beat-title">Nation transmits notice; 18-month negotiating period begins</div>
+        <p>The Nation&#8217;s council transmits formal notice of compact termination to the Republic&#8217;s Senate and to the JI, which audits compact compliance. The notice is published to the NRS under §20.5&#8217;s transparency requirement. The Senate designates a negotiating delegation of six senators and establishes a joint working group with the Kelen Nation&#8217;s designated negotiators.</p>
+        <p>The JI confirms that the Nation&#8217;s council vote meets the compact&#8217;s governance process requirements and that the termination is constitutionally valid under §20.4. The question is not whether the Nation can leave &#8212; it can. The question is what the terms of leaving look like.</p>
+      </div>
+
+      <h2>The Four Hard Problems</h2>
+
+      <p>Compact termination negotiations surface four problems that the original compact did not fully anticipate.</p>
+
+      <p><strong>Citizenship.</strong> Forty thousand Kelen Nation members hold dual status: Republic citizenship under §14.5.d (which makes Indigenous Nation membership and Republic citizenship compatible and independent) and Nation membership. Upon compact termination, the Republic&#8217;s Article I protections no longer apply automatically. These forty thousand individuals will need to make an election: retain Republic citizenship with whatever treaty rights are negotiated, or relinquish Republic citizenship and hold Nation membership exclusively. The Republic cannot require them to choose under the constitution &#8212; §5.1.e makes citizenship irrevocable from the Republic&#8217;s side. The Nation&#8217;s traditional law governs what Nation membership requires.</p>
+
+      <p><strong>BNF distributions.</strong> Kelen Nation members currently receive Basic Needs Floor distributions as Republic citizens. The BNF&#8217;s constitutional floor is tied to Republic citizenship status. Upon compact termination, members who retain Republic citizenship continue to receive distributions. Members who do not retain Republic citizenship lose access to the BNF. The Nation has no domestic equivalent. The negotiating teams must decide whether the termination agreement includes a transitional BNF arrangement for a defined period &#8212; or whether the citizenship election effectively determines each member&#8217;s economic floor.</p>
+
+      <p><strong>Defence.</strong> The compact includes mutual defence provisions: the Republic provides border security assistance to the Nation, and the Nation&#8217;s territory serves as a buffer zone under specific protocols. These provisions cannot simply lapse &#8212; the geographic reality that makes them valuable doesn&#8217;t change with compact termination. The termination agreement must replace them with a bilateral defence treaty.</p>
+
+      <p><strong>The resource management treaty.</strong> A joint watershed management agreement has operated under the compact for eleven years. Both parties benefit from it. Neither wants to lose it. But its constitutional basis is the compact &#8212; it was authorized as a compact arrangement under §20.5, not as a standalone treaty. The legal question is whether it survives compact termination automatically, requires re-ratification as a bilateral treaty, or lapses and must be renegotiated from scratch.</p>
+
+      <div class="beat">
+        <div class="beat-label">§20.5 — Negotiation · Month 14</div>
+        <div class="beat-title">Draft termination agreement published for comment</div>
+        <p>After fourteen months, the negotiating teams publish a draft termination agreement for the 60-day public comment period required under §20.5&#8217;s review mechanism. The draft resolves the four hard problems as follows.</p>
+        <p>Citizenship: dual-status members have five years from compact termination to make an election. During the election period, all rights are maintained. The Republic will not compel a choice; the Nation&#8217;s membership council will determine what dual-status means under traditional law.</p>
+        <p>BNF: a 10-year transitional arrangement continues BNF distributions to Nation members at the current rate regardless of citizenship election, funded jointly by the Republic and a development fund the Nation will establish from its resource revenues. After year 10, only those maintaining Republic citizenship receive distributions.</p>
+        <p>Defence: the mutual defence provisions convert to a bilateral security treaty subject to normal Senate ratification. The treaty is negotiated in parallel with the termination agreement and enters force simultaneously.</p>
+        <p>The watershed agreement: the SC rules during the comment period that the watershed agreement requires re-ratification as a bilateral treaty &#8212; it does not survive compact termination automatically. Both parties indicate they will ratify it immediately.</p>
+      </div>
+
+      <h2>Ratification and Termination</h2>
+
+      <p>The Nation&#8217;s council ratifies the termination agreement in Month 17 by a vote of 31-4. The Senate ratifies in Month 18 by a vote of 84-16. The compact terminates on the final day of the 18-month window.</p>
+
+      <div class="finding">
+        <span class="finding-label">Constitutional Position at Termination</span>
+        <p>The Kelen Nation exits the Republic&#8217;s constitutional order as a fully independent sovereign. The Article I protections that applied automatically under the compact no longer apply automatically &#8212; they apply to Nation members only to the extent those members retain Republic citizenship. The bilateral security treaty is in force. The watershed agreement is ratified as a bilateral treaty. The BNF transitional arrangement is a contractual obligation of the Republic, not a constitutional one.</p>
+        <p>§20.4&#8217;s sovereign mobility provision worked exactly as designed: the Nation&#8217;s decision to leave was constitutional and uncontestable, and the 18-month negotiating window gave both parties the time to manage the transition&#8217;s genuine complexity. The provision&#8217;s drafters understood that easy departure and difficult negotiation are not contradictions &#8212; they are the appropriate design for a compact between equal sovereigns.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&#x2190; All Scenarios</a>
+      <a href="scenario-caledoria.html">Caledoria &#x2192;</a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

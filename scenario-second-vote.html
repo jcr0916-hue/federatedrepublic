@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Second Vote — The Federated Republic</title>
+  <meta name="description" content="A Path C citizen amendment achieves 77% affirmative support but only 62% participation — above the 60% floor for a second vote, below the 65% threshold for ratification. The EC schedules a second vote. What counts as the same amendment text, who decides, and whether the coalition's energy survives the wait.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Second Vote">
+  <meta property="og:description" content="A Path C amendment achieves 77% yes but only 62% participation. The second-vote mechanism activates. What counts as the same text, and whether the coalition's energy survives.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-second-vote.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-row{margin-bottom:0.4rem;line-height:1.6}
+    .math-row.pass{color:#1a4a1a;font-weight:600}
+    .math-row.fail{color:#4a1a1a;font-weight:600}
+    .math-row.trigger{color:#7A5800;font-weight:600}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here &#8212; Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="annotated.html">Read the Constitution</a>
+    <a href="constitution-v166.docx" download>Download (.docx)</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Constitutional Amendment &#xb7; §15.1.c &#xb7; Path C Second Vote</span>
+      <h1 class="scenario-title">The Second Vote</h1>
+      <p class="scenario-subtitle">A Path C citizen amendment achieves 77.4% affirmative support and 62.1% participation. The 65% participation floor is not met. But 62.1% is above 60%, and the affirmative exceeded 75% &#8212; both conditions for the second-vote mechanism. The EC is required to schedule a second vote. One second vote per amendment text. The coalition has one more chance, and no one knows whether the momentum survived the wait.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§15.1.c Path C — Citizen-Led</span>
+        <span class="prov-tag">§8.1.c JI Petition Screening</span>
+        <span class="prov-tag">§16.1 Electoral Commission</span>
+        <span class="prov-tag">§8.1.a LI Certification</span>
+        <span class="prov-tag">§15.2 No Executive Veto</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Digital Sovereignty Amendment proposes to add two sentences to §1.9: a floor on algorithmic transparency in government-administered systems, and a prohibition on government use of automated decision systems whose training data cannot be disclosed to affected parties. The petition gathered signatures over fourteen months, was screened by the JI under §8.1.c, and qualified for a national vote. The EC administered it on a Tuesday in late Year 9.</p>
+
+      <h2>The First Vote</h2>
+
+      <div class="math-box">
+        <span class="math-label">First Vote Result</span>
+        <div class="math-row">Affirmative votes: 77.4%</div>
+        <div class="math-row">Required affirmative: 70.0%</div>
+        <div class="math-row pass">&#x2713; Affirmative: EXCEEDED</div>
+        <div class="math-row" style="margin-top:0.75rem">Participation: 62.1% of eligible citizens</div>
+        <div class="math-row">Required participation: 65.0%</div>
+        <div class="math-row fail">&#x2717; Participation: NOT MET</div>
+        <div class="math-row" style="margin-top:0.75rem">Second vote trigger: participation 60&#x2013;65% AND affirmative &gt;75%</div>
+        <div class="math-row trigger">&#x21D2; Second vote mechanism ACTIVATED — §15.1.c</div>
+      </div>
+
+      <p>The coalition&#8217;s celebration-and-dismay on election night is a constitutional novelty. Seventy-seven percent said yes. That exceeds the 70% affirmative threshold by a meaningful margin. But sixty-two percent turned out, missing the 65% participation floor by three points. In any other mechanism this would be a clear defeat. Under §15.1.c, it is something more complicated: a qualified near-miss that requires the EC to offer one more attempt.</p>
+
+      <p>§15.1.c&#8217;s second vote mechanism is explicit about the conditions: participation between 60-65% and affirmative exceeding 75%. Both conditions are satisfied. The EC is required to schedule a second vote &#8212; not permitted to, required to. The amendment is not dead. It is on hold.</p>
+
+      <h2>The Text Question</h2>
+
+      <p>The coalition&#8217;s first instinct is to refine the amendment text before the second vote. The 77% affirmative suggests broad support; the low participation suggests that supporters who didn&#8217;t show up were lukewarm rather than opposed. A sharper, cleaner text might energize the low-propensity supporters without alienating the 77% who already voted yes.</p>
+
+      <p>§15.1.c says &#8220;one second vote per amendment text.&#8221; The LI publishes a certification note: the second vote must be administered on the same text that was certified for the first vote. Any textual change constitutes a new amendment, requiring a new petition process from the beginning. The constitutional purpose is clear &#8212; the second vote is a second chance for the same question, not a do-over with a rewritten question. Revising the text and calling it a second vote would effectively give Path C campaigns an unlimited number of refinements.</p>
+
+      <div class="beat">
+        <div class="beat-label">§15.1.c — Second Vote Scheduling · Month 2 After First Vote</div>
+        <div class="beat-title">EC schedules second vote; campaign dynamics shift</div>
+        <p>The EC schedules the second vote for Month 8 &#8212; the EC&#8217;s administrative calendar allows up to 12 months between first and second votes; the coalition lobbied for the earliest available date. The 6-month window is long enough for a new campaign push and short enough that the original organizing infrastructure has not fully dispersed.</p>
+        <p>The dynamics of a second vote are different from a first vote in one critical way: the result of the first vote is public and permanent on the NRS. Every voter in the second vote knows that 77% of those who turned out last time said yes. The question for the coalition is not whether the amendment is popular &#8212; that is settled &#8212; but whether the people who didn&#8217;t turn out last time will do so this time when they know the amendment&#8217;s passage depends on them specifically.</p>
+      </div>
+
+      <h2>The Opposition Strategy</h2>
+
+      <p>The opposition&#8217;s position after the first vote is constitutionally weak on substance &#8212; 77% affirmative is a substantial mandate &#8212; but strategically coherent. They know the same math the coalition knows: the second vote fails if participation drops below 65%. The opposition does not need more &#8220;no&#8221; voters. They need fewer voters overall. Their campaign in the second vote period is not about the amendment&#8217;s merits. It is about whether this second vote, specifically, is a legitimate use of the mechanism.</p>
+
+      <p>Their argument: §15.1.c&#8217;s second vote mechanism was designed for genuinely close results where low participation was incidental. A 62% turnout was not incidental &#8212; it reflected a widespread judgment that the amendment, while broadly supported if you voted, was not important enough to vote on. The second vote mechanism is being used to manufacture a result that the first vote&#8217;s full electorate, including its non-participants, implicitly rejected.</p>
+
+      <p>The LI publishes a brief responding to a citizen discrepancy petition on this question: the second vote mechanism contains no intent requirement. It activates automatically on specified numerical conditions. The opposition&#8217;s argument about the mechanism&#8217;s purpose has no constitutional basis for blocking the vote.</p>
+
+      <h2>The Second Vote</h2>
+
+      <div class="math-box">
+        <span class="math-label">Second Vote Result — Month 8</span>
+        <div class="math-row">Affirmative votes: 74.2%</div>
+        <div class="math-row">Required affirmative: 70.0%</div>
+        <div class="math-row pass">&#x2713; Affirmative: EXCEEDED</div>
+        <div class="math-row" style="margin-top:0.75rem">Participation: 66.8% of eligible citizens</div>
+        <div class="math-row">Required participation: 65.0%</div>
+        <div class="math-row pass">&#x2713; Participation: MET</div>
+        <div class="math-row" style="margin-top:0.75rem;font-weight:600">Amendment: RATIFIED</div>
+      </div>
+
+      <p>The affirmative share dropped 3.2 points from the first vote &#8212; some of the new participants voted no. But participation rose 4.7 points. The coalition&#8217;s six-month turnout operation, focused entirely on low-propensity supporters in districts with high first-vote affirmative rates, produced a result above the 65% floor.</p>
+
+      <p>The Digital Sovereignty Amendment is published to the NRS. The EC and LI certify jointly. §1.9 is updated. The amendment is one second vote per amendment text &#8212; this one has been used. No further second-vote opportunity exists on this text.</p>
+
+      <h2>What the Second Vote Mechanism Reveals</h2>
+
+      <p>The scenario exposes the constitutional design tension at the heart of §15.1.c. The participation floor is not purely about democratic legitimacy in the abstract &#8212; it is a structural filter against amendments that pass only because their opponents stayed home. The second vote mechanism creates a narrow exception: if support is genuinely overwhelming (above 75%) but participation was merely low rather than catastrophically low (above 60%), the People get one more attempt.</p>
+
+      <p>The opposition&#8217;s argument that the mechanism is being abused has constitutional intuition behind it even if it lacks constitutional force. The designers of §15.1.c knew that a coalition that can&#8217;t reach 65% participation once might be able to manufacture it a second time simply by running a more intense turnout operation. The single second vote limit is the answer to that concern: you can intensify your turnout operation once. After that, the amendment fails and cannot return without a new petition.</p>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenario-citizen-amendment.html">&#x2190; The Petition</a>
+      <a href="scenario-amendment.html">The Amendment Scenario &#x2192;</a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
