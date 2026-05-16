@@ -2039,7 +2039,7 @@ id="s2-8">
     q = q.toLowerCase().trim();
     if (typeof PROVISION_INDEX === 'undefined') { renderResults([]); return; }
     var results = PROVISION_INDEX.filter(function(p) {
-      return p.section.toLowerCase().includes(q) ||
+      return p.num.toLowerCase().includes(q) ||
              p.name.toLowerCase().includes(q) ||
              (p.text && p.text.toLowerCase().includes(q));
     }).slice(0, 12);
@@ -2061,7 +2061,7 @@ id="s2-8">
         }
       }
       return '<a href="#' + p.id + '" onclick="closeSearch()" style="display:block;padding:0.6rem 0.75rem;border-bottom:1px solid rgba(255,255,255,0.06);text-decoration:none;color:rgba(245,240,232,0.85);font-size:0.85rem;line-height:1.4;">' +
-        '<span style="color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.72rem;margin-right:0.5rem;">' + p.section + '</span>' +
+        '<span style="color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.72rem;margin-right:0.5rem;">' + p.num + '</span>' +
         '<strong style="color:rgba(245,240,232,0.95);">' + p.name + '</strong>' +
         (snippet ? '<div style="font-size:0.78rem;color:rgba(245,240,232,0.5);margin-top:0.2rem;">' + snippet + '</div>' : '') +
         '</a>';
