@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Empty Seat — The Federated Republic</title>
+  <meta name="description" content="The first State Designee Panel draw under the pool mechanism. Two States let their pools lapse. A drawn member holds a disqualifying position. Both alternates are exhausted. The JI conducts a supplemental draw. What the constitution does when the mechanism runs exactly as designed — and exactly as strained.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Empty Seat">
+  <meta property="og:description" content="The first State Designee Panel draw under the pool mechanism. Two States let their pools lapse. A drawn member holds a disqualifying position. Both alternates are exhausted.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-sdp-draw.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Empty Seat">
+  <meta name="twitter:description" content="The first State Designee Panel draw under the pool mechanism. Two States let their pools lapse. A drawn member holds a disqualifying position. Both alternates are exhausted.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.6}
+    .nrs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="annotated.html">Read the Constitution</a>
+    <a href="constitution-v163.docx" download>Download (.docx)</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Institutional Process · §8.9.a–e · §8.9.d · Panel Constitution</span>
+      <h1 class="scenario-title">The Empty Seat</h1>
+      <p class="scenario-subtitle">The first State Designee Panel draw under the pool mechanism. Two States let their pools lapse. A drawn member holds a disqualifying position she didn&#8217;t disclose. Both alternates are exhausted before the Panel is fully seated. The JI conducts a supplemental draw. What the constitution does when the mechanism runs exactly as designed &#8212; and exactly as strained.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§8.9 State Designee Panel</span>
+        <span class="prov-tag">§8.9.a State Designee Pools</span>
+        <span class="prov-tag">§8.9.b Annual Addition Cap</span>
+        <span class="prov-tag">§8.9.c Pool Monitoring</span>
+        <span class="prov-tag">§8.9.d Panel Constitution</span>
+        <span class="prov-tag">§8.9.e Ongoing Eligibility</span>
+        <span class="prov-tag">§8.9.k Pool Reset</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The first State Designee Panel draw under the new pool mechanism is scheduled for the week following the general election. The Judicial Inspectorate has been publishing Pool Status Reports for two years. Most are unremarkable. Two are not.</p>
+
+      <h2>The Pool Reports</h2>
+
+      <p>Fourteen months before the draw, the LI publishes a Pool Health Notice for the State of Darent. Darent added three members in Year 1 and zero in Year 2. Two of the three original members have since become ineligible &#8212; one accepted a federal district court appointment, the other joined the state attorney general&#8217;s office. The third remains eligible. Darent&#8217;s pool has one eligible member.</p>
+
+      <p>The notice is advisory. The constitution does not require Darent to respond. Darent does not respond. Its legislature is in recess, its governor&#8217;s attention is elsewhere, and the State Designee Pool is not a priority for any office that has a political constituency to answer to.</p>
+
+      <p>Six months before the draw, the LI publishes a second Pool Health Notice, this time for the State of Vellen. Vellen&#8217;s pool was never formally constituted. The State&#8217;s enabling statute for the pool mechanism passed its legislature in Year 1 but named no pool administrator, appropriated no funds for outreach, and set no deadline for nominations. The statute exists. The pool does not. Vellen&#8217;s pool has zero eligible members.</p>
+
+      <div class="beat">
+        <div class="beat-label">§8.9.c — Pool Monitoring · Six Months Before Draw</div>
+        <div class="beat-title">LI publishes combined Pool Status Report</div>
+        <p>The combined national pool &#8212; all State pools aggregated &#8212; contains 847 eligible members across 48 States. Darent contributes one. Vellen contributes zero. The LI&#8217;s annual report flags both States under the pool health provisions and includes them in the State of the Republic Report&#8217;s compliance appendix. It does not convene an emergency session: 847 members is well above the twenty-member floor that would trigger mandatory emergency review.</p>
+        <p>The two States&#8217; pool failures go into the permanent NRS record. They will be there when Darent and Vellen&#8217;s governors next face election.</p>
+      </div>
+
+      <h2>The Draw</h2>
+
+      <p>The draw session is held eleven days after the general election. The Judicial Inspectorate conducts it in the Republic&#8217;s public proceedings hall. A representative of each Inspectorate is present. Three citizens selected by jury protocols take seats at the witness table. The JI&#8217;s draw officer reads the protocol into the record, confirms that the national pool stands at 847 eligible members, and begins the lottery.</p>
+
+      <p>The draw produces five members and two alternates in sequence, each name drawn from the aggregated pool and announced in real time as the NRS records the session. The seven names represent citizens of six different States. None is from Darent or Vellen &#8212; with one eligible member and zero respectively, the probability of either being drawn was vanishingly small and neither was.</p>
+
+      <p>All three Inspectorates certify the draw. The record is published to the NRS before the session closes.</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry — JI Draw Record — Election Day + 11</span>
+        State Designee Panel constituted by public lottery. Five members drawn; two alternates drawn. Draw certified jointly by all three Inspectorates. National pool at time of draw: 847 eligible members across 48 States. Panel constituted for two-year term commencing this date. Full draw record published at this entry.
+      </div>
+
+      <h2>The Disqualification</h2>
+
+      <p>On Day 14 after the draw &#8212; three days after the NRS publication &#8212; the EI receives a routine disclosure filing from the State of Korvel&#8217;s governor&#8217;s office. It contains a list of new appointments to state advisory commissions. One of the names is Maren Theis.</p>
+
+      <p>Maren Theis is the Panel&#8217;s second drawn member.</p>
+
+      <p>The appointment is to Korvel&#8217;s State Fiscal Advisory Board &#8212; a statutory body that advises the governor on budget matters. The position is not a department director or above. It falls within the category of positions that §8.9.e&#8217;s ongoing eligibility rules prohibit during Panel service.</p>
+
+      <p>Theis was appointed on Day 12 &#8212; the day after the NRS published her name as a Panel member. The timing suggests she may not have known about the appointment before it was announced; Korvel&#8217;s governor&#8217;s office issues a statement to that effect. It does not matter. §8.9.e does not require intent. The position is disqualifying. Theis&#8217;s seat is extinguished.</p>
+
+      <div class="beat">
+        <div class="beat-label">§8.9.e — Ongoing Eligibility · Day 14</div>
+        <div class="beat-title">First alternate fills the extinguished seat</div>
+        <p>The JI notifies the first alternate, Piotr Cavalcante, that he is now a seated Panel member. Cavalcante confirms acceptance. The NRS is updated: Theis&#8217;s seat is recorded as extinguished on Day 14 by reason of disqualifying appointment; Cavalcante fills the seat in the order established at draw. The Panel has five seated members. One alternate remains.</p>
+      </div>
+
+      <h2>The Exhaustion</h2>
+
+      <p>On Day 31, the JI receives a communication from the second alternate, Oya Lindqvist. She is declining to serve. Her reason is personal &#8212; a family medical situation that she does not wish to detail. §8.9.e permits any member to resign at any time. Lindqvist&#8217;s seat is extinguished. Her position is not replaced.</p>
+
+      <p>The Panel now has five seated members and zero alternates. If any of the five is subsequently disqualified or resigns before a removal proceeding is completed, the JI must conduct a supplemental draw.</p>
+
+      <p>No removal proceeding is currently active. The Panel is dormant. But the Panel is also uninsured against attrition for the remainder of its two-year term.</p>
+
+      <div class="finding">
+        <span class="finding-label">Constitutional Position — Day 31</span>
+        <p>§8.9.b is explicit: positions extinguished on exit are not replaced. §8.9.d provides for a supplemental draw only if alternates are exhausted and a replacement is needed for an active proceeding. No proceeding is active. The constitution does not require the JI to reconstitute alternates outside of an active proceeding &#8212; and it does not permit it. The Panel continues with five members and no alternates. This is the mechanism working as designed: the no-replacement rule is absolute, and its consequence is that early attrition leaves the Panel more exposed to future strain.</p>
+        <p>The LI&#8217;s next Pool Status Report will note Lindqvist&#8217;s exit as a cautionary example of why States should maintain deep pools: a Panel with no alternates and a proceeding pending would require a supplemental draw from a pool that must be healthy enough to supply one.</p>
+      </div>
+
+      <h2>What This Tests</h2>
+
+      <p>Nothing in this scenario is a constitutional failure. Darent and Vellen let their pools lapse &#8212; that is permitted, flagged, and recorded. The pool health notices are published. The draw produces a valid Panel from 847 members. Theis&#8217;s disqualification is handled by the alternate mechanism exactly as designed. Lindqvist&#8217;s resignation is permitted and its consequence &#8212; no replacement &#8212; is the rule&#8217;s intended operation.</p>
+
+      <p>What the scenario reveals is the texture of the mechanism under ordinary conditions. Pool maintenance is an unglamorous administrative obligation for fifty States. Most will do it adequately. A few won&#8217;t. The constitution anticipates this: the pool health notice is advisory rather than mandatory precisely because mandating pool maintenance would raise questions about what remedy applies to non-compliance that the constitution is not positioned to answer. The remedy instead is transparency: the non-compliance is on the NRS, alongside the governor&#8217;s name.</p>
+
+      <p>The no-replacement rule &#8212; the same rule that applies to the Regional Boundary Commission &#8212; creates the genuine constitutional risk this scenario exposes. A Panel with five members and no alternates is constitutionally functional until it isn&#8217;t. If a member is disqualified mid-proceeding, the JI must conduct a supplemental draw. That draw requires a functioning pool. The scenario makes visible, in a low-stakes moment, exactly what would be at stake if the same chain of events ran during an active removal proceeding.</p>
+
+      <p>The pool reset under §8.9.k opens the following election cycle. Theis and Lindqvist are no longer on the Panel, but they remain eligible for the new pool if they choose to re-enter. The new cycle is its own fresh start. Whatever attrition occurred in this one does not carry forward.</p>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-sdp-removal.html">The Record →</a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
