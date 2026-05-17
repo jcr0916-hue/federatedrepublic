@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 13 — Ordinary Law · The Federated Republic</title>
+  <meta name="description" content="On how legislation actually moves through the Republic — the single-subject rule, absolute majority passage, the constructive no-confidence vote, the PM's suspensive veto, and the legislative inaction trigger. The unglamorous machinery that determines whether governance works.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Paper No. 13 — Ordinary Law">
+  <meta property="og:description" content="On how legislation actually moves through the Republic. The unglamorous machinery that determines whether governance works.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/paper-13.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Paper No. 13 — Ordinary Law">
+  <meta name="twitter:description" content="On how legislation actually moves. The unglamorous machinery that determines whether governance works.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:17px;line-height:1.85;overflow-x:hidden}
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:300;width:0%;transition:width 0.1s linear}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:720px;margin:0 auto;padding:96px 2rem 80px}
+    .paper-meta{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .paper-volume{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+    .paper-number{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--muted);margin-bottom:0.4rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.9rem;color:var(--muted);font-style:italic;line-height:1.7}
+    .paper-wordcount{font-size:0.72rem;color:var(--border);font-family:'JetBrains Mono',monospace;margin-top:0.5rem}
+    .essay-body{font-size:1.05rem;line-height:1.9;color:#2a2520}
+    .essay-body p{margin-bottom:1.6rem}
+    .essay-body > p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .essay-opener{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--navy);line-height:1.7;font-style:italic;margin-bottom:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06)}
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin:3rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .essay-divider{text-align:center;color:var(--gold);font-size:1.2rem;margin:2.5rem 0;letter-spacing:0.5em;opacity:0.6}
+    .paper-nav{position:fixed;bottom:0;left:0;right:0;z-index:150;display:flex;justify-content:space-between;align-items:center;background:rgba(245,240,232,0.97);backdrop-filter:blur(8px);border-top:1px solid var(--border);padding:0.75rem 2rem;gap:1rem;box-shadow:0 -2px 12px rgba(27,42,74,0.08)}
+    .paper-nav a{text-decoration:none;display:flex;flex-direction:column;max-width:45%}
+    .paper-nav a.prev{align-items:flex-start}
+    .paper-nav a.next{align-items:flex-end;text-align:right}
+    .paper-nav .nav-direction{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.25rem}
+    .paper-nav .nav-title{font-size:0.8rem;color:var(--navy);font-weight:500}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:80px 1.25rem 80px}.paper-title{font-size:2.1rem}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" style="position:absolute;left:-9999px">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here &#8212; Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="annotated.html">Read the Constitution</a>
+    <a href="constitution-v167.docx" download>Download (.docx)</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+  <div class="page-wrap">
+    <div class="paper-meta">
+      <span class="paper-volume">Volume II &#xb7; May 2026</span>
+      <p class="paper-number">Paper No. 13</p>
+      <h1 class="paper-title">Ordinary Law</h1>
+      <p class="paper-subtitle">On how legislation actually moves through the Republic &#8212; the single-subject rule, absolute majority passage, the constructive no-confidence vote, the PM&#8217;s tools for shaping the legislative agenda, and the constitutional backstop for a legislature that refuses to govern. The unglamorous machinery that determines whether any of this actually works.</p>
+      <p class="paper-wordcount">~2,500 words</p>
+    </div>
+
+    <div class="essay-body">
+
+      <div class="essay-opener">Constitutional crises are interesting. Ordinary governance is where constitutions are tested. A document that handles emergency powers brilliantly but produces paralysis in routine legislative sessions has failed at the harder task.</div>
+
+      <p>Most of the papers in this series discuss dramatic mechanisms &#8212; the emergency powers, the military tiers, the removal processes, the amendment paths. This one discusses something less dramatic and more important: how a bill becomes law. Not how an extraordinary bill triggers a constitutional confrontation, but how the everyday work of governance &#8212; the budget, the regulatory framework, the statutes that fill in the constitutional mandates &#8212; actually moves through the system.</p>
+
+      <p>The answer reveals a set of design choices that are individually sensible and collectively coherent. Each one addresses a specific failure mode of ordinary legislative governance. Taken together, they describe a system designed to produce legislation that genuinely reflects the will of a majority, to give the PM meaningful tools for governing without giving any single actor veto power, and to ensure that the Legislature cannot simply refuse to act when the constitution requires it to.</p>
+
+      <h2>The Single-Subject Rule</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>Every bill introduced in the Republic must concern a single subject. The subject must be stated in the bill&#8217;s title. The LI reviews all enacted legislation for compliance. A bill that addresses multiple unrelated subjects &#8212; a defense appropriation bundled with an environmental regulation &#8212; fails the single-subject rule regardless of whether both subjects have majority support individually.</p>
+
+      <p>The single-subject rule is a response to one of the oldest legislative manipulation techniques: the omnibus bill. Omnibus legislation bundles popular provisions with unpopular ones, forcing legislators to vote for things they oppose in order to pass things they support, or vice versa. The omnibus bill is a mechanism for circumventing the majority will through strategic packaging. A provision that could not pass on its own can pass when attached to something with broad support. A provision that most legislators want can be held hostage inside legislation that guarantees those same legislators must swallow something they oppose.</p>
+
+      <p>The single-subject rule eliminates the omnibus by requiring that each bill stand on its own merits. Every provision must have a majority that supports it as written, without the benefit of attachment to something else. This makes the legislative record cleaner and more legible &#8212; each vote is a vote on one thing, not on a package designed to obscure what individual legislators actually support. It also makes the LI&#8217;s compliance review function meaningful: the LI identifies genuine single-subject violations, published to the NRS, without enforcement power &#8212; but a finding of noncompliance becomes part of the permanent record of that legislation&#8217;s passage.</p>
+
+      <p>The practical cost of the single-subject rule is that genuinely related provisions sometimes require multiple bills rather than one. The trade is explicitly accepted: the cleaner legislative record is worth the additional drafting work.</p>
+
+      <h2>Absolute Majority and Why Quorum Is Not Enough</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>Bills pass by absolute majority of the full seated membership of both chambers &#8212; not a majority of those present, not a majority of a quorum, but a majority of every legislator who holds a seat. A chamber with 300 seated members requires 151 votes for passage, regardless of how many members are in the room when the vote is called.</p>
+
+      <p>The absolute majority standard prevents one of the most common manipulation techniques in legislative systems: strategic abstention and quorum-based passage. In a quorum-based system, a bill can pass with a minority of the full membership if opponents are absent or abstaining and only a quorum is present. A governing coalition can schedule controversial votes for times when known opponents are traveling, ill, or occupied. A determined plurality can pass legislation that a majority of legislators would reject if they were all in the room.</p>
+
+      <p>Absolute majority closes this entirely. Every passing vote represents an actual majority of every person the chamber contains. Absence counts as a no. Abstention counts as a no. There is no strategic scheduling advantage to be gained from ensuring opponents are out of the building. This raises the effective passage threshold and produces legislation that genuinely reflects majority support rather than support by a majority of whoever happened to attend.</p>
+
+      <p>The cost is that it requires active engagement from the governing coalition &#8212; you cannot pass your agenda by showing up reliably when opponents are absent. You have to have the votes. This is the intended effect.</p>
+
+      <h2>The Constructive No-Confidence Vote</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>The Prime Minister can be removed from office by the House of Representatives &#8212; but only by simultaneously electing a named successor by absolute majority of the full House. The House cannot simply vote to remove a PM and then figure out what comes next. The replacement must be named and elected in the same motion that removes the incumbent.</p>
+
+      <p>This provision is borrowed from the German Basic Law, where it has functioned for decades without generating the governmental instability that afflicts parliamentary systems where simple no-confidence votes are available. The logic is straightforward: a House that can remove a PM without installing a successor has a low-cost tool for expressing dissatisfaction that produces high-cost outcomes. Governments fall, coalitions collapse, caretaker arrangements drag on, and the resulting instability creates a governance vacuum that is often more damaging than the PM who was removed.</p>
+
+      <p>The constructive requirement changes the political calculus entirely. Removing a PM requires having already agreed on and gathered majority support for a successor. The coalition that wants the current PM gone must also have solved the successor problem &#8212; which forces a level of prior negotiation and commitment that simple no-confidence votes do not require. Governments are not removed on impulse or in moments of legislative frustration. They are removed when there is already a functioning alternative waiting to take over.</p>
+
+      <p>The flip side is that a PM can sometimes govern with a House that dislikes them, because the House cannot agree on who would replace them. This is the acknowledged trade: political stability at the cost of occasionally prolonged governments that have lost their working majority. The Republic concluded that this trade was better than the alternative.</p>
+
+      <h2>The PM&#8217;s Legislative Tools</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>The Prime Minister has two tools for shaping the legislative agenda that operate differently and serve different functions. The suspensive veto allows the PM to return any bill passed by both chambers within 21 days with a written statement of objections. Both chambers may override by simple majority &#8212; a lower threshold than initial passage. The override mechanism is deliberately accessible: a PM who abuses the suspensive veto to block popular legislation will find their vetoes overridden, and three void vetoes within 180 days suspends the PM&#8217;s veto power entirely for the remainder of that period.</p>
+
+      <p>The suspensive veto is not a true veto. It is a delay and reconsideration mechanism &#8212; a constitutional requirement that the Legislature look again at something the PM has formally objected to, with a statement of the specific objections on the record. The override threshold being lower than initial passage reflects this: the PM&#8217;s objection should be heard and considered, but a Legislature that heard the objection and still wants the bill should not face a higher bar than it already cleared.</p>
+
+      <p>The fiscal objection is a narrower tool. The PM may object to any legislation specifically on the grounds that it would cause or materially worsen a fiscal crisis &#8212; that the bill, if enacted, would leave the government unable to meet its constitutional obligations. The fiscal objection triggers a joint session and a fiscal review. It is not a general policy veto and cannot be used as one. A PM who files a fiscal objection to legislation for reasons that are primarily political rather than fiscal has filed a bad-faith fiscal objection, which goes on the NRS and becomes part of the political record of their tenure.</p>
+
+      <p>These two tools together give the PM meaningful input into the legislative process without veto power in the American sense. The PM can slow things down, force reconsideration, and raise legitimate fiscal alarms. The PM cannot unilaterally block legislation the House and Senate want to pass.</p>
+
+      <h2>The Legislative Inaction Trigger</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>Several provisions of this constitution require the Legislature to enact specific implementing legislation. The Basic Needs Floor requires a statute setting the BNF rate. The Inspectorate compensation provisions require statutory rate-setting. The electoral machinery requires statutory implementation of various administrative requirements. In each case, the constitution mandates an outcome and delegates the details to statute.</p>
+
+      <p>What happens when the Legislature refuses to act? In most constitutional systems, the answer is: the mandate becomes unenforceable. Legislatures that find constitutional mandates politically inconvenient can simply not enact the required implementing legislation, leaving the constitutional right or requirement as a nominal guarantee without operational reality.</p>
+
+      <p>This constitution&#8217;s response is the legislative inaction trigger. Where the constitution requires the Legislature to enact specific legislation and the Legislature fails to do so within a defined period, the matter is referred to a joint committee with a statutory drafting mandate and a binding deadline. If the joint committee also fails, the matter passes to the Supreme Court, which drafts the minimum implementing statute necessary to give effect to the constitutional requirement &#8212; a statute that remains in force until the Legislature replaces it with its own enactment.</p>
+
+      <p>The SC-drafted statute is explicitly minimal: it implements only what the constitution requires, without policy elaboration. It is constitutional minimum compliance, not constitutional maximum vision. The design intends the SC-drafted version to be unappealing &#8212; bare, mechanical, stripped of the policy judgments the Legislature would normally make &#8212; specifically to create an incentive for the Legislature to act rather than let the courts do their job for them. A Legislature that wants BNF rate-setting to reflect its own policy priorities will set the BNF rate. A Legislature that refuses to act will get a court-drafted rate that reflects the constitutional floor and nothing more.</p>
+
+      <h2>Why Ordinary Law Is Not a Secondary Concern</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>Constitutional designers tend to spend their energy on dramatic provisions: emergency powers, removal mechanisms, fundamental rights, amendment procedures. These provisions matter. But a constitution that handles all of those things brilliantly and then produces a legislative process prone to manipulation, paralysis, and bad-faith obstruction has failed at its primary task. Governance is the point. Everything else is infrastructure for governance.</p>
+
+      <p>The provisions described in this essay are not secondary. The single-subject rule and the absolute majority standard are the difference between a legislature that produces law that reflects majority will and one that produces law designed to obscure who voted for what. The constructive no-confidence vote is the difference between a parliamentary system with structural stability and one prone to perpetual governmental crisis. The PM&#8217;s tools are the difference between an executive who can govern and one who is hostage to any parliamentary majority that assembles against them. The inaction trigger is the difference between constitutional mandates that are operational and ones that are aspirational.</p>
+
+      <p>Together, they describe a theory of ordinary governance: legislation should be legible, majorities should be real, governments should be stable, executives should have tools without having veto power, and constitutionally mandated action cannot be avoided by the simple expedient of not legislating. This is not a glamorous theory. It is the theory that determines whether the Republic actually governs itself, as opposed to merely having a constitution that describes how it would govern itself if everyone behaved well.</p>
+
+    </div>
+  </div>
+  </main>
+
+  <nav class="paper-nav">
+    <a href="paper-12.html" class="prev">
+      <span class="nav-direction">&#x2190; Previous</span>
+      <span class="nav-title">Paper No. 12 &#x2014; The Mix</span>
+    </a>
+    <a href="papers.html" class="next">
+      <span class="nav-direction">All Essays &#x2192;</span>
+      <span class="nav-title">Return to Papers</span>
+    </a>
+  </nav>
+
+  <script>
+    const bar = document.getElementById('progress');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const h = document.documentElement;
+        bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%';
+      });
+    }
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

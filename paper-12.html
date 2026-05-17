@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 12 — The Mix · The Federated Republic</title>
+  <meta name="description" content="On elections in the Federated Republic. None of the mechanisms used here — ranked-choice voting, regional scoring, lottery-based redistricting — is new. The question is why this particular combination was chosen, and what each piece is designed to prevent.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Paper No. 12 — The Mix">
+  <meta property="og:description" content="On elections in the Republic. None of the mechanisms is new. The question is why this particular combination — and what each piece prevents.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/paper-12.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Paper No. 12 — The Mix">
+  <meta name="twitter:description" content="On elections in the Republic. None of the mechanisms is new. The question is why this particular combination — and what each piece prevents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:17px;line-height:1.85;overflow-x:hidden}
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:300;width:0%;transition:width 0.1s linear}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:720px;margin:0 auto;padding:96px 2rem 80px}
+    .paper-meta{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .paper-volume{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+    .paper-number{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--muted);margin-bottom:0.4rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.9rem;color:var(--muted);font-style:italic;line-height:1.7}
+    .paper-wordcount{font-size:0.72rem;color:var(--border);font-family:'JetBrains Mono',monospace;margin-top:0.5rem}
+    .essay-body{font-size:1.05rem;line-height:1.9;color:#2a2520}
+    .essay-body p{margin-bottom:1.6rem}
+    .essay-body > p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .essay-opener{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--navy);line-height:1.7;font-style:italic;margin-bottom:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06)}
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin:3rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .essay-divider{text-align:center;color:var(--gold);font-size:1.2rem;margin:2.5rem 0;letter-spacing:0.5em;opacity:0.6}
+    .paper-nav{position:fixed;bottom:0;left:0;right:0;z-index:150;display:flex;justify-content:space-between;align-items:center;background:rgba(245,240,232,0.97);backdrop-filter:blur(8px);border-top:1px solid var(--border);padding:0.75rem 2rem;gap:1rem;box-shadow:0 -2px 12px rgba(27,42,74,0.08)}
+    .paper-nav a{text-decoration:none;display:flex;flex-direction:column;max-width:45%}
+    .paper-nav a.prev{align-items:flex-start}
+    .paper-nav a.next{align-items:flex-end;text-align:right}
+    .paper-nav .nav-direction{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.25rem}
+    .paper-nav .nav-title{font-size:0.8rem;color:var(--navy);font-weight:500}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:80px 1.25rem 80px}.paper-title{font-size:2.1rem}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" style="position:absolute;left:-9999px">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here &#8212; Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="annotated.html">Read the Constitution</a>
+    <a href="constitution-v167.docx" download>Download (.docx)</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+  <div class="page-wrap">
+    <div class="paper-meta">
+      <span class="paper-volume">Volume II &#xb7; May 2026</span>
+      <p class="paper-number">Paper No. 12</p>
+      <h1 class="paper-title">The Mix</h1>
+      <p class="paper-subtitle">On elections in the Federated Republic. None of the mechanisms used here &#8212; ranked-choice voting, regional scoring, lottery-based redistricting, direct judicial election &#8212; is new. The question is why this particular combination was chosen, and what each piece is designed to prevent.</p>
+      <p class="paper-wordcount">~2,700 words</p>
+    </div>
+
+    <div class="essay-body">
+
+      <div class="essay-opener">Electoral design is not a matter of finding the correct system. It is a matter of deciding which failure modes you can live with &#8212; and which you cannot. Every electoral system has failure modes. The Republic chose its failure modes deliberately.</div>
+
+      <p>The Republic runs six distinct categories of election, and no two of them work the same way. The House is elected by ranked-choice vote from geographic districts. The Senate is elected by ranked-choice vote statewide. The Supreme Court justices are elected by ranked-choice vote nationally from a pool of candidates that no political body nominated. The Monetary Authority Director is elected nationally. The Electoral Commission is elected nationally. The President is elected through a two-stage process that has no exact parallel anywhere. And the Prime Minister is not directly elected at all.</p>
+
+      <p>Each of these design choices was made against a specific failure mode. Understanding why the Republic&#8217;s electoral system looks the way it does requires understanding the failure modes it was built to prevent &#8212; not as a criticism of any particular real-world system, but as an account of the tradeoffs that any electoral designer must confront.</p>
+
+      <h2>Ranked-Choice Voting and the Strategic Vote</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>All federal elections in the Republic use ranked-choice voting. This is not primarily about making elections fairer in the abstract. It is about eliminating the strategic vote.</p>
+
+      <p>In a plurality system, voting for your preferred candidate when that candidate is unlikely to win can help your least preferred candidate win. Voters in plurality systems routinely vote for candidates they do not prefer most because they fear what will happen if they vote sincerely. The strategic vote is not a failure of voter rationality &#8212; it is a completely rational response to a poorly designed system. The problem is that the aggregate of strategic votes produces outcomes that do not reflect actual preferences, and it creates a structural incentive to consolidate around two parties even when the genuine preference distribution is more dispersed.</p>
+
+      <p>Ranked-choice voting eliminates the strategic vote by making sincere preference expression the rational choice. Voting for your genuine first preference cannot hurt you: if your first choice is eliminated, your vote transfers to your second choice. The system extracts more information from voters and produces outcomes that better represent the actual distribution of preferences. It also reduces the two-party consolidation pressure, which means genuine policy diversity can survive in legislative bodies without being absorbed by one of two dominant coalitions.</p>
+
+      <p>RCV has known weaknesses. It is more complex to administer. Voters sometimes make ranking errors. In some configurations it can produce counterintuitive results when preference distributions are non-transitive. None of these weaknesses was considered disqualifying. The Republic chose the failure mode of administrative complexity over the failure mode of strategic voting, because the strategic vote corrupts the signal that elections are supposed to send.</p>
+
+      <h2>The Presidential Election and the Two-Stage Design</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>The most distinctive electoral mechanism in this constitution is the presidential election, which combines a national ranked-choice primary with a regional combined score fallback. Paper No. 06 analyzes the combined score in detail. What this essay adds is the context for why a two-stage mechanism was chosen rather than a simpler alternative.</p>
+
+      <p>The design problem for presidential elections in a large federal republic is the geographic concentration problem. A candidate can win a national popular vote by running up enormous margins in densely populated coastal cities while losing everywhere else by modest margins. The resulting president has a genuine popular mandate in the strict numerical sense but has never needed to build support across the republic&#8217;s geographic diversity. Over time, a consistently coastal-concentrated coalition produces a president who governs as if the republic&#8217;s interests are those of its most dense and prosperous regions &#8212; because those are the only regions whose votes ever mattered.</p>
+
+      <p>The Republic&#8217;s two-stage design addresses this directly. The first stage is a national RCV election: if any candidate achieves a national RCV majority, they win outright. Most elections will end here. The combined score only activates when no candidate achieves a majority &#8212; the fallback for genuinely contested elections where the popular vote alone produces an ambiguous result. In the fallback, the combined score weights both popular support and geographic breadth, measured across regions drawn by a lottery-constituted commission from population-balanced zones. A candidate who wins the popular vote by dominating the two largest cities cannot automatically win the combined score without demonstrating that their support is not exclusively metropolitan.</p>
+
+      <p>The objection to this design is real: it is possible for a candidate who wins more raw votes to lose the combined score. Paper No. 06 addresses this at length. What is worth adding here is the constitutional reason: the combined score does not override the popular vote. It comes into play only when the popular vote has not produced a majority &#8212; when more than half the electorate did not rank the leading candidate first. In that specific circumstance, the question of which candidate has the stronger mandate is genuinely open, and the combined score answers it by asking which candidate&#8217;s support is broader rather than just larger.</p>
+
+      <h2>Redistricting Without Politicians</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>The single most consequential point of manipulation in district-based electoral systems is the redistricting process. Whoever draws the lines controls the electoral map for a decade. Every democratic system that uses geographic districts has wrestled with this problem. The solutions attempted elsewhere include independent redistricting commissions, algorithmic drawing, judicial oversight, and bipartisan negotiation. Each has its own capture problem: independent commissions can be staffed with loyalists, algorithms can be tuned to produce desired outcomes, courts can be ideologically aligned, bipartisan negotiation produces incumbent protection rather than competitive districts.</p>
+
+      <p>The Republic uses two redistricting processes for two different purposes, and they work differently by design. House districts &#8212; the proportional chamber &#8212; are drawn by States from within their own boundaries. The Legislature sets the apportionment formula; the LI conducts the census and reviews maps for compliance; but the actual line-drawing is a State function. The constitutional criteria are specified (population balance, contiguity, non-discrimination, compactness, preservation of political subdivisions where possible) and the LI is the compliance referee. States draw; the LI calls fouls.</p>
+
+      <p>Presidential election regions &#8212; the zones used for the combined score fallback &#8212; are drawn by a completely different mechanism: the Regional Boundary Commission, constituted by public lottery. One member per State, drawn by the Judicial Inspectorate from each State&#8217;s pool of eligible citizens. The commission has no party affiliation, no electoral constituency, and no ongoing institutional existence outside of each redistricting cycle. The Legislature sets the number of regions by statute; the commission draws the actual lines; the LI reviews for compliance.</p>
+
+      <p>The lottery mechanism deserves more explanation than it usually receives. The objection is that lottery-selected citizens lack the expertise to draw electoral maps. This objection has it backwards. The problem with expert redistricters is not that they lack expertise &#8212; it is that expertise in drawing electoral maps is expertise in drawing electoral maps to achieve particular outcomes. A commission of citizens drawn at random from a pool defined by eligibility criteria rather than political affiliation has no incentive to produce any particular outcome. They apply the criteria and draw the lines. The lottery does not guarantee a technically excellent map. It guarantees a politically unmanipulated one, which is the harder property to achieve.</p>
+
+      <h2>Electing Judges</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>The most counterintuitive election in the Republic is the Supreme Court election. In most constitutional systems, judicial independence is protected by insulating judges from popular election: appointment by the executive, confirmation by the legislature, life tenure or fixed non-renewable terms. The Republic rejects this model for the Supreme Court and replaces it with direct national election &#8212; but structures that election in a way designed to eliminate the failure modes of judicial elections elsewhere.</p>
+
+      <p>The failure mode of appointed judges is selection capture: whoever appoints the judge controls the court&#8217;s ideological direction over the long term. An executive who appoints enough judges eventually has a court that validates the executive&#8217;s constitutional interpretations. The problem is not that any particular executive is corrupt &#8212; it is that every political actor has a rational interest in the court&#8217;s composition and will act on that interest when given the opportunity.</p>
+
+      <p>The failure mode of elected judges, as practiced in some American states, is campaign capture: judges raise campaign funds from parties with interests before the court, run as partisan candidates, and are selected based on their perceived ideological alignment with voter blocs rather than their legal competence. The judicial election as practiced in those systems produces judges who are politically accountable in exactly the wrong way &#8212; accountable to donors and partisan coalitions rather than to the constitution they are supposed to apply.</p>
+
+      <p>The Republic&#8217;s SC election eliminates both failure modes. Any citizen may stand for the SC by filing a disclosure record &#8212; no political body nominates, endorses, or controls access to the ballot. The Judicial Inspectorate certifies candidates for eligibility and administers an expert assessment panel whose advisory findings are published but not binding. The election is national RCV, administered by the Electoral Commission. Candidates appear on the ballot based on JI certification, not political nomination. The outcome reflects the preferences of the national electorate rather than those of an appointing executive or a partisan voter bloc.</p>
+
+      <p>The PM is not directly elected at all &#8212; a design choice with its own logic. The PM emerges from the House through the constructive no-confidence mechanism. The electorate chooses representatives who choose a PM. This keeps the PM accountable to the legislature in a way that direct election would undermine: a directly elected PM has independent democratic legitimacy that insulates them from legislative accountability. The Westminster-derived constructive vote model &#8212; the PM can only be removed by simultaneously electing a named successor &#8212; prevents the instability of ordinary no-confidence votes while preserving the legislature&#8217;s control over who governs.</p>
+
+      <h2>Why No Single System Works</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>The Republic&#8217;s electoral system is not philosophically coherent in the sense of deriving from a single theory of democratic legitimacy. RCV reflects a preference-aggregation theory. The combined score reflects a geographic-breadth theory. The SC election reflects a direct-democracy theory for an office that most constitutional designers insulate from democracy. The lottery-based redistricting commission reflects a civic-republicanism theory about who should draw lines. None of these theories is fully consistent with the others.</p>
+
+      <p>This is a feature, not a failure. The relevant question for each electoral mechanism is not &#8220;which theory of democracy does this implement?&#8221; but &#8220;which failure mode does this prevent?&#8221; Electoral systems fail in specific, documented ways. Plurality systems produce strategic voting and two-party consolidation. Appointment-based judicial selection produces selection capture. Politician-drawn districts produce gerrymandering. Purely national presidential elections produce geographic concentration. The Republic chose mechanisms that address those specific failures, even when the mechanisms come from different theoretical traditions.</p>
+
+      <p>The cost of this pragmatic approach is that the electoral system is complex. Voters face different mechanisms for different offices. The combined score requires understanding regional geography. The SC election requires understanding an unusual open-candidacy process. This complexity is real and is not dismissed lightly. The designers of this system concluded that the complexity of multiple well-chosen mechanisms was preferable to the simplicity of a single mechanism with known and serious failure modes.</p>
+
+      <p>None of these mechanisms is original. Ranked-choice voting exists in multiple democracies. Regional electoral systems exist in multiple forms. Randomly selected commissions have been used for redistricting. Direct judicial election exists in some American states. The Republic did not invent any of them. What it did was look at the specific failure modes that had done the most damage to democratic legitimacy in observed systems, identify the mechanisms that address those specific failures, and combine them into a single electoral framework. The combination is the design. The individual pieces are the evidence base.</p>
+
+    </div>
+  </div>
+  </main>
+
+  <nav class="paper-nav">
+    <a href="paper-11.html" class="prev">
+      <span class="nav-direction">&#x2190; Previous</span>
+      <span class="nav-title">Paper No. 11 &#x2014; The Watchmen</span>
+    </a>
+    <a href="paper-13.html" class="next">
+      <span class="nav-direction">Paper No. 13 &#x2192;</span>
+      <span class="nav-title">Ordinary Law</span>
+    </a>
+  </nav>
+
+  <script>
+    const bar = document.getElementById('progress');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const h = document.documentElement;
+        bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%';
+      });
+    }
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
