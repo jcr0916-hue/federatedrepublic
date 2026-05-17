@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Seat — The Federated Republic</title>
+  <meta name="description" content="Three cycles of the Seat of Government bid process. A founding bid, a contested twenty-year review where the host changes, and a no-bid cycle where the Senate must identify candidates. Tests §17.2.a through §17.2.f.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Seat">
+  <meta property="og:description" content="Three cycles of the Seat of Government bid process. The founding bid, a contested review, and the no-bid fallback.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-seat.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none;display:flex;align-items:center;gap:0.5rem}
+    .nav-seal{height:30px;width:30px;border-radius:50%;object-fit:cover;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.5rem 0 1rem;flex-direction:column;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.75rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 1.25rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,6vw,2.6rem);font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.6}
+    .nrs-label{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .ruling{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .ruling-label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .ruling p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .ruling p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here &#8212; Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Federal Property &#xb7; §17.2 Seat of Government &#xb7; Three Cycles</span>
+      <h1 class="scenario-title">The Seat</h1>
+      <p class="scenario-subtitle">Three cycles of the Seat of Government bid process &#x2014; the founding bid, a contested twenty-year review where the host changes, and a no-bid cycle where the Senate must act. Tests every mechanism of §17.2.a through §17.2.f.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§17.2 Seat of Government</span>
+        <span class="prov-tag">§17.2.a Bid Process</span>
+        <span class="prov-tag">§17.2.b 20-Year Review</span>
+        <span class="prov-tag">§17.2.c Transition Window</span>
+        <span class="prov-tag">§17.2.d No-Bid Scenario</span>
+        <span class="prov-tag">§17.2.e Federal Control</span>
+        <span class="prov-tag">§17.2.f Resident Rights</span>
+        <span class="prov-tag">§17.3.a Registration</span>
+        <span class="prov-tag">§17.3.b Reversion</span>
+        <span class="prov-tag">§2.4 Legislative Review</span>
+        <span class="prov-tag">§10.4.b MA Assessment</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <h2>Act I &#x2014; The Founding Bid (Year 2)</h2>
+
+      <p>The Republic is eighteen months old. The transitional seat &#x2014; established under emergency provisions during the Transition Window &#x2014; is functioning but temporary. The PM has committed to completing the first competitive bid process before Year 3. The Republic holds no territorial sovereignty and will not acquire any. The Seat of Government must be hosted by a consenting State on the Republic&#8217;s terms, competing for the privilege.</p>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.a &#x2014; Requirements Specification</div>
+        <div class="beat-title">The PM publishes the Requirements Specification</div>
+        <p>The PM publishes the Seat of Government Requirements Specification to the NRS on the first working day of Year 2. The document is 47 pages. It defines the minimum threshold across four constitutional categories: a designated federal footprint of not less than 340 hectares; security perimeter and access standards; transportation links capable of sustaining continuous legislative, judicial, and executive operations; and accommodation for all constitutional offices including both executives, both chambers of the Legislature, the Supreme Court, all three Inspectorates, the Electoral Commission, and the NRS primary node cluster.</p>
+        <p>The specification is explicit on what it does not require: the host State need not fund any federal construction. The federal government pays for what it builds. The host provides the land under terms it proposes.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.a &#x2014; Bid Submissions</div>
+        <div class="beat-title">Three States bid; one is disqualified</div>
+        <p>Three States submit bids before the closing date. Arveld proposes a 480-hectare site in its central plateau, offering a 99-year ground lease at a nominal fee in exchange for the federal employment and infrastructure investment the Seat would bring. Kailos proposes a 360-hectare coastal site with existing transport infrastructure, at a market-rate ground lease with a shared revenue arrangement on federal contracts. Varentis proposes a 280-hectare urban site adjacent to its existing financial district.</p>
+        <p>The PM&#8217;s office reviews the Varentis bid against the Requirements Specification. The 280-hectare footprint falls below the 340-hectare minimum. The Varentis bid is constitutionally ineligible &#x2014; bids not meeting the published specification cannot be considered by the House regardless of their other merits. The PM publishes a notification to the NRS confirming the Varentis bid&#8217;s ineligibility and the grounds.</p>
+      </div>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry &#x2014; Seat of Government Bid Process &#x2014; Year 2</span>
+        Requirements Specification published [reference]. Bid submissions received: Arveld, Kailos, Varentis. Varentis bid found ineligible: proposed footprint (280ha) falls below minimum specification (340ha). Two qualifying bids proceeding to House review: Arveld, Kailos. Notification published per §17.2.a.
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.a &#x2014; House Selection and Executive Review</div>
+        <div class="beat-title">The House selects Arveld; both executives review</div>
+        <p>The House considers both qualifying bids through its normal committee process. The Joint Territorial Affairs Committee hears testimony from both State governments over three weeks. The principal considerations are cost to the federal government, long-term operational suitability, and the proposed terms of the Operational Use Rights. Arveld&#8217;s nominal ground lease and larger footprint carry substantial weight. Kailos&#8217;s existing infrastructure reduces short-term construction costs but locks the federal government into a revenue-sharing arrangement the committee finds constitutionally awkward.</p>
+        <p>The House passes the Arveld Seat of Government Hosting Statute by 287&#x2013;213. The statute grants Arveld the Seat hosting arrangement, defines the federal footprint&#8217;s precise boundaries, establishes the Operational Use Rights under §17.3, and &#x2014; critically &#x2014; specifies the disposition of federal improvements: all structures built on the federal footprint with federal funds remain federal property for the duration of the hosting arrangement, and revert to Arveld&#8217;s sovereignty with the land if the Seat ever relocates, unless the two governments negotiate a different arrangement within the transition window.</p>
+        <p>The PM reviews and signs within the legislative review period. The President reviews under §2.4. The President raises no domain-specific constitutional concern. The statute takes effect and is published to the NRS. The Operational Use Right is registered under §17.3.a with precise geographic boundaries, authorized purpose, and termination conditions.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.e &#x2014; §17.2.f &#x2014; Federal Control and Resident Rights</div>
+        <div class="beat-title">The footprint operates under federal law; residents retain Article I rights</div>
+        <p>Within the registered footprint, the Arveld government cannot tax federal operations, apply Arveld law to federal functions, or interfere with the Republic&#8217;s constitutional institutions. The federal government operates exclusively on the basis of its Operational Use Right. Outside the footprint, Arveld&#8217;s full sovereignty applies without qualification.</p>
+        <p>Approximately 2,400 people live within the designated federal footprint &#x2014; long-term residents whose homes fall within the boundaries. §17.2.f is unambiguous: they retain full Article I rights enforceable in federal courts. Arveld may not apply residency-based restrictions on footprint residents that conflict with Article I. In Year 4, a footprint resident brings an Article I privacy challenge against an Arveld state data-collection programme. Federal courts have jurisdiction. The SC rules in Year 5 that §17.2.f creates a direct federal right of action for footprint residents independent of ordinary federal standing rules.</p>
+      </div>
+
+      <h2>Act II &#x2014; The Twenty-Year Review (Year 22)</h2>
+
+      <p>The first hosting statute takes effect in Year 2. Twenty years later, the federal government is constitutionally required to issue a new call for bids. The Seat of Government has been in Arveld for two decades. The federal footprint now includes 47 permanent buildings, extensive communications infrastructure, and transport links the federal government built under the nominal ground lease. The question everyone is asking: can a new State actually compete with two decades of sunk federal investment?</p>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.b &#x2014; New Call for Bids</div>
+        <div class="beat-title">Federal government issues Year 22 bid call; three States respond</div>
+        <p>The PM publishes an updated Requirements Specification reflecting twenty years of operational experience and the expanded constitutional infrastructure. The call period runs for 90 days. Three States submit bids: Arveld (re-bidding), Kailos (returning from Year 2), and a new entrant &#x2014; the State of Serenveld, a mid-sized inland State whose capital city has invested heavily in transport infrastructure over the prior decade specifically to position itself as a viable Seat host.</p>
+        <p>All three bids meet the Requirements Specification. The House proceeds to review all three.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.b &#x2014; House Review</div>
+        <div class="beat-title">Serenveld wins; the first Seat of Government transfer in Republic history</div>
+        <p>Arveld&#8217;s bid rests on its infrastructure advantage &#x2014; the 47 federal buildings, the established transport network, the operational continuity. The bid offers a continued nominal ground lease and estimates federal transition costs if Serenveld were chosen at 2.4 billion over five years.</p>
+        <p>Serenveld&#8217;s bid offers a larger footprint (620 hectares), a 150-year ground lease at nominal fee, a State-funded rapid transit link to the nearest international airport, and a State contribution of 800 million toward new federal construction. The net cost comparison, over a 20-year projected term, favours Serenveld by a substantial margin once the transition costs are amortised.</p>
+        <p>The House&#8217;s committee debate is extensive. The infrastructure argument for Arveld is real &#x2014; transition costs are not hypothetical. But the committee concludes that the bid process exists precisely to create competitive pressure, and a system that always favours the incumbent because of accumulated investment is not a genuine competitive process. The House passes the Serenveld Seat of Government Hosting Statute 261&#x2013;239.</p>
+        <p>The PM reviews and signs. The President reviews and concurs. The statute takes effect. The two-year transition window begins.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.c &#x2014; Transition Window</div>
+        <div class="beat-title">Arveld continues as temporary Seat; federal improvements become a negotiation</div>
+        <p>Under §17.2.c, Arveld continues as the default temporary Seat for the duration of the transition window. Federal operations do not move until Serenveld is ready to receive them. The transition statute specifies a phased transfer: legislative functions first (Month 18), executive and judicial functions (Month 22), NRS primary node cluster last (Month 24, the final day of the window).</p>
+        <p>The federal improvements question is immediately contested. The Year 2 hosting statute specified that federal buildings revert to Arveld with the land unless the two governments negotiate otherwise within the transition window. Arveld has sovereign interest in 47 buildings worth an estimated 3.1 billion. The federal government has operational interest in relocating functional equipment but no legal claim to the structures themselves. Negotiations run for fourteen months. The eventual agreement: Arveld retains the structures; the federal government purchases back four buildings containing unique infrastructure (the primary NRS node cluster and three classified secure facilities) at independently assessed fair market value. All other federal equipment and movable assets transfer to Serenveld at federal expense.</p>
+        <p>On Month 24, the NRS records the transfer of the Operational Use Right from Arveld to Serenveld. Arveld recovers full sovereignty over the former federal footprint simultaneously. The LI publishes the termination notice under §17.3.b within 30 days.</p>
+      </div>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry &#x2014; Seat of Government Transfer &#x2014; Year 24</span>
+        Operational Use Right [Arveld federal footprint] terminated per §17.3.b. Termination effective this date. Land and improvements revert to Arveld per Year 2 hosting statute and Year 22 transition agreement. Four structures purchased by federal government at fair market value [agreement ref.]. All remaining improvements revert without encumbrance. Arveld sovereignty over former footprint restored. Serenveld Operational Use Right [Serenveld federal footprint] registered per §17.3.a [boundaries, authorized purpose, termination conditions attached].
+      </div>
+
+      <h2>Act III &#x2014; The No-Bid Cycle (Year 42)</h2>
+
+      <p>The Serenveld hosting statute has been in effect for twenty years. The Republic issues the Year 42 bid call. The Seat of Government has been in Serenveld for two decades &#x2014; and Serenveld is increasingly ambivalent about it. The federal footprint generates federal employment but also federal oversight, federal law operating within State borders, and a population of footprint residents whose Article I rights create a parallel legal order inside Serenveld&#8217;s territory that Serenveld&#8217;s government finds politically uncomfortable. Serenveld does not re-bid.</p>
+
+      <p>No other State bids either. The combination of transition costs (the Arveld experience is well-documented), infrastructure investment requirements, and the resident rights dynamic under §17.2.f has made voluntary hosting unattractive. The bid period closes with zero submissions.</p>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.d &#x2014; Senate Identifies Candidates</div>
+        <div class="beat-title">Senate acts within 90 days; identifies three candidate States</div>
+        <p>Under §17.2.d, the Senate must identify candidate States and present options to the House within 90 days of the close of the bid period. The Senate&#8217;s Territorial Affairs Committee convenes within a week of the bid period closing. The committee identifies candidates on the basis of geographic suitability, existing infrastructure, population distribution, and the State&#8217;s fiscal capacity to support the hosting arrangement without federal subsidy beyond the fair market rental payment.</p>
+        <p>Three States are presented to the House on Day 87: Kailos (which has bid twice voluntarily and has relevant infrastructure), the State of Nordmaren (a large northern State with suitable land and existing transport networks), and Arveld (the original host, which now has all the federal buildings the Republic bought back in Year 24 sitting largely unused on the former footprint site). Each State&#8217;s government was notified before inclusion and none objected &#x2014; they cannot block the process, but the committee extended the courtesy.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§17.2.d &#x2014; House Selects; MA Assesses Rental</div>
+        <div class="beat-title">Nordmaren selected; MA determines fair market rental</div>
+        <p>The House selects Nordmaren as the temporary host by 258&#x2013;242. The selection is not an eminent domain taking and is explicitly not compensated at the §1.10.b rate. The federal government pays fair market value rental for the Operational Use Rights granted &#x2014; assessed by the Monetary Authority under the methodology established by statute.</p>
+        <p>The MA assessment is published to the NRS within 60 days of the hosting statute&#8217;s enactment. The MA values the Operational Use Right on the basis of comparable commercial ground lease rates for equivalent footprint, adjusted for the federal covenant against alienation and the indefinite term. The assessed annual rental is published and forms the basis of the federal payment obligation to Nordmaren for the duration of the temporary arrangement.</p>
+        <p>The arrangement is temporary in constitutional status only. Nordmaren will host the Seat of Government for as long as it takes to find a voluntary host &#x2014; which could be years or decades. The Republic has an ongoing constitutional obligation to issue new calls for voluntary bids at each twenty-year review cycle until a State comes forward.</p>
+      </div>
+
+      <div class="ruling">
+        <span class="ruling-label">§17.2.d &#x2014; Constitutional Structure of the No-Bid Arrangement</span>
+        <p>The Nordmaren hosting arrangement differs from the Arveld and Serenveld arrangements in constitutional character, not in operational effect. Nordmaren holds the same Operational Use Right registered under §17.3.a. The federal government exercises the same exclusive operational control under §17.2.e. Footprint residents hold the same Article I rights under §17.2.f. The PM&#8217;s Requirements Specification continues to govern what the footprint must accommodate.</p>
+        <p>The difference is financial and constitutional: Nordmaren receives fair market rental rather than nominal fee; it did not choose the arrangement; and the Republic cannot treat the temporary arrangement as a permanent resolution. §17.2.d requires the Republic to continue seeking voluntary bids. A Republic that stops trying has breached its constitutional obligation &#x2014; the LI would note it in the annual State of the Republic Report. The obligation runs until a State voluntarily bids and wins.</p>
+      </div>
+
+      <h2>What These Scenarios Test</h2>
+
+      <p>Act I establishes the foundational mechanics: the Requirements Specification as a constitutional prerequisite, the ineligibility of non-conforming bids, the ordinary statute process with dual executive review, and the importance of specifying federal improvements disposition in the hosting statute before it takes effect. The Varentis disqualification is not punitive &#x2014; it is automatic. A bid below the specification is constitutionally ineligible regardless of its other merits.</p>
+
+      <p>Act II tests the twenty-year review as a genuine competitive process. Arveld&#8217;s infrastructure advantage is real but not decisive. The mechanism forces the federal government to justify continuing its existing arrangement against alternatives, creating cost discipline that pure incumbency protection would eliminate. The transition window and the federal improvements negotiation show that §17.2.a&#8217;s requirement to specify improvements disposition is not a formality &#x2014; it determines who owns 3.1 billion in buildings when the Seat moves.</p>
+
+      <p>Act III tests the no-bid scenario as it is likely to operate in practice: the Senate identifies candidates, the House selects, the MA determines compensation at fair market value, and the arrangement is legally temporary even if operationally indefinite. The Republic&#8217;s ongoing obligation to seek voluntary bids prevents normalisation of the forced-hosting arrangement as a permanent condition. Whether that obligation produces results depends on whether the compensation and terms become attractive enough that a State volunteers &#x2014; a question the constitution leaves to politics and economics rather than legal compulsion.</p>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&#x2190; All Scenarios</a>
+      <a href="scenario-capital.html">The Capital Cases &#x2192;</a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
