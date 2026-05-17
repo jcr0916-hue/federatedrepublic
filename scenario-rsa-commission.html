@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Architecture — The Federated Republic</title>
+  <meta name="description" content="The first RSA Technical Integrity Commission completes its decennial review. Its finding: node operator ownership has been quietly concentrating across the Republic's first decade. No single actor controls the NRS yet — but the trend line is visible, and the finding goes on the permanent record of the system it describes.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Architecture">
+  <meta property="og:description" content="The first RSA Technical Integrity Commission discovers node concentration. The finding goes on the NRS — the permanent record of the system it describes.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-rsa-commission.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.6}
+    .nrs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here &#8212; Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="annotated.html">Read the Constitution</a>
+    <a href="constitution-v167.docx" download>Download (.docx)</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">NRS Integrity &#xb7; §9.X RSA Technical Integrity Commission &#xb7; Decennial Review</span>
+      <h1 class="scenario-title">The Architecture</h1>
+      <p class="scenario-subtitle">The first RSA Technical Integrity Commission completes its decennial review. Its finding: node operator ownership has been quietly concentrating across the Republic&#8217;s first decade. No single actor controls the NRS. But the trend line is visible &#8212; and the finding goes on the permanent record of the system it describes.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§9.1 NRS Properties</span>
+        <span class="prov-tag">§9.X Pool Constitution</span>
+        <span class="prov-tag">§9.X.a Executive Nomination</span>
+        <span class="prov-tag">§9.X.b Senate Confirmation</span>
+        <span class="prov-tag">§9.X.e Commission Draw</span>
+        <span class="prov-tag">§9.X.g Tri-Inspectorate Oversight</span>
+        <span class="prov-tag">§9.X.h Findings</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The NRS Technical Pool has been building for ten years. Each year, the President nominated one qualified expert and the PM nominated one. The Senate voted on each within 60 days &#8212; confirming seventeen of the twenty nominees over the decade, rejecting two, and failing to vote on one, which was flagged as a constitutional compliance failure and published to the NRS at the time. The pool at the time of the decennial draw: seventeen eligible members, their qualifications, confirmation dates, and nominating executives all public record.</p>
+
+      <h2>The Draw</h2>
+
+      <p>Eleven years into the Republic, the decennial commission draw is held. The JI conducts the lottery in a public session attended by representatives of all three Inspectorates and three citizens selected by jury protocols. Five names are drawn from the seventeen eligible pool members. All three Inspectorates certify the draw before the session closes. The remaining twelve pool members are notified that they constitute the standby replacement pool for the commission&#8217;s working period.</p>
+
+      <div class="nrs-entry">
+        <span class="nrs-label">NRS Entry &#x2014; RSA Technical Integrity Commission Draw &#x2014; Year 11</span>
+        Commission constituted by public lottery from RSA Technical Pool. Five members drawn; twelve members constitute replacement pool. Draw certified jointly by all three Inspectorates. Pool at draw: 17 eligible members. Commission constituted for decennial review commencing this date. Full draw record published at this entry.
+      </div>
+
+      <p>The commission&#8217;s mandate, defined by statute, is specific: assess whether the NRS architecture continues to meet the constitutional requirements for distributed, tamper-evident operation. The five members have backgrounds in distributed systems, cryptography, network architecture, information security, and database integrity. They have no relationship to the RSA Director or to any node operator. They have access to the full node network topology, the ownership records of node operators, the cryptographic audit logs, and the RSA&#8217;s published methodology.</p>
+
+      <h2>What They Find</h2>
+
+      <p>The NRS is functioning correctly. The cryptographic verification is sound. The tamper-evidence properties are intact. No record has been altered since the Republic&#8217;s founding. The commission confirms this without qualification.</p>
+
+      <p>What they also find, buried in the node ownership topology, is a pattern that is not yet a problem but is becoming one. In Year 1, the NRS launched with forty-three node operators distributed across twenty-eight States and four Associated Communities. By Year 11, the number of node operators has grown to sixty-one &#8212; a healthy increase. But the ownership of those nodes has not grown proportionally. Three network infrastructure firms, through a combination of organic growth and acquisition, now collectively operate nineteen of the sixty-one nodes. No single firm controls a majority. No coalition of the three is coordinated in any documented way. But the trajectory of the first decade, if it continues, produces a scenario in Year 21 where the constitutional requirement for genuine distribution is genuinely at risk.</p>
+
+      <p>The commission does not have enforcement authority. It has publication authority. Its finding goes on the NRS.</p>
+
+      <div class="beat">
+        <div class="beat-label">§9.X.g &#x2014; Tri-Inspectorate Oversight &#xb7; Month 8</div>
+        <div class="beat-title">Commission finding certified and published</div>
+        <p>The commission&#8217;s full report is reviewed by all three Inspectorates before publication. The Inspectorates do not have authority to revise the finding &#8212; their role is to certify that the commission conducted its review in accordance with its statutory mandate, had the access it required, and that the findings reflect the commission&#8217;s genuine conclusions rather than suppressed or modified output. All three Inspectorates certify. The finding is published to the NRS jointly under all three Inspectorate seals.</p>
+        <p>The RSA Director receives a copy simultaneously with NRS publication. She cannot remove it. She cannot annotate it without the annotation itself appearing as a separate entry alongside the original. The commission&#8217;s finding is the permanent record.</p>
+      </div>
+
+      <h2>The Reflexive Problem</h2>
+
+      <p>There is something constitutionally interesting about where this finding lives. The commission has documented a trend that threatens the integrity of the NRS &#8212; and the documentation of that threat is on the NRS. The NRS is simultaneously the subject of the finding and its permanent home. If the node concentration ever reached the point where the NRS&#8217;s tamper-evidence properties were compromised, the records of the concentration trend &#8212; including this finding &#8212; would be among the first things at risk.</p>
+
+      <p>This is not a design flaw. It is the design working correctly. The commission&#8217;s finding exists precisely to ensure that the concentration trend is documented while the NRS is still reliable enough to host it. The finding is now public, permanent, and cited in the annual State of the Republic Report. Any future government that allows the concentration to deepen does so with a decennial commission finding on the NRS saying that the trend was identified and documented in Year 11.</p>
+
+      <div class="finding">
+        <span class="finding-label">RSA Technical Integrity Commission &#x2014; Decennial Finding &#x2014; Year 11 &#x2014; Certified by All Three Inspectorates</span>
+        <p>The NRS meets all constitutional requirements for distributed, tamper-evident operation as of this review. Cryptographic integrity is confirmed across all sixty-one nodes. No record alteration has been detected since founding.</p>
+        <p>The commission identifies a concentration trend in node operator ownership requiring legislative attention. Three infrastructure entities now collectively operate 31.1% of NRS nodes, up from 9.3% at founding. No single entity or coordinated group controls a majority. The constitutional threshold for genuine distribution is not presently breached. At the rate of concentration observed over the first decade, the threshold may be approached within twenty years.</p>
+        <p>The commission makes no enforcement order. It has no such authority. This finding is published to the NRS as a permanent record of the system&#8217;s condition at Year 11. The Legislature may by statute establish node operator concentration limits, diversification requirements, or divestiture mechanisms. The RSA Director may by administrative action develop voluntary diversification frameworks. The next commission, convening in Year 21, will assess whether the trend has been addressed.</p>
+      </div>
+
+      <h2>What Happens Next</h2>
+
+      <p>Constitutionally, nothing. The commission&#8217;s mandate ends with publication of the finding. The commission dissolves. The pool resets. Previously confirmed members who did not serve may be re-nominated for the next cycle by either executive in the years that follow.</p>
+
+      <p>What happens next is a matter of statute and politics, not constitutional mechanism. The Legislature has the published finding. The RSA Director has it. The press has it. The three infrastructure firms whose ownership trajectory generated the finding have it. The scenario ends where most constitutional mechanisms end &#8212; at the edge of the document&#8217;s authority, with a permanent record of what was found and a democratic system now informed enough to decide what to do about it.</p>
+
+      <p>That is what the commission was designed to produce. Not a solution. A finding. Whether the Republic acts on it is the next decade&#8217;s problem, and the next commission will document whether it did.</p>
+
+      <h2>The Pool After the Commission</h2>
+
+      <p>The twelve members who were not drawn and never served remain eligible for re-nomination in the next cycle. They must be re-nominated by an executive and confirmed by the Senate afresh &#8212; their Year 1-10 confirmations do not carry over. Some will be re-nominated. Some will have moved into positions that disqualify them. Some will not be interested in a second decade of standby availability.</p>
+
+      <p>The five who served are extinguished from pool eligibility. The constitution does not prohibit them from serving in any other capacity &#8212; only from returning to the RSA Technical Pool. Their institutional knowledge of the NRS&#8217;s architecture, the concentration finding, and the commission&#8217;s methodology is now dispersed into the Republic&#8217;s broader expert community. That dispersal is itself part of the design: commissions that dissolve leave traces in the people who constituted them.</p>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&#x2190; All Scenarios</a>
+      <a href="scenario-sdp-draw.html">The Empty Seat &#x2192;</a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger')?.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
