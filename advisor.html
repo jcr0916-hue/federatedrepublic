@@ -263,7 +263,7 @@
       const t0 = Date.now();
 
       try {
-        const res = await fetch('/.netlify/functions/advisor', {
+        const res = await fetch('/api/advisor', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ question }),
