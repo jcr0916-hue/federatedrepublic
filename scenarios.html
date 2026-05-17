@@ -55,10 +55,10 @@
     @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.page-header h1{font-size:1.9rem}.fc-title{font-size:1.4rem}}
   
     /* ══ MOBILE RESPONSIVE ══ */
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
     .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
     .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.75rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s,background 0.2s}
     .mobile-menu a:last-child{border-bottom:none}
     .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
     .mobile-menu.open{display:flex}
