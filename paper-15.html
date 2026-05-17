@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 15 — The Price of Participation · The Federated Republic</title>
+  <meta name="description" content="On electoral finance. The Republic's campaign finance provisions are not an attempt to make elections less expensive or politics less competitive. They are a structural response to a structural problem: private funding of elected officials creates institutional relationships that distort governance.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Paper No. 15 — The Price of Participation">
+  <meta property="og:description" content="On electoral finance. The structural problem private funding creates — and the constitutional response.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/paper-15.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Paper No. 15 — The Price of Participation">
+  <meta name="twitter:description" content="On electoral finance. The structural problem private funding creates — and the constitutional response.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:17px;line-height:1.85;overflow-x:hidden}
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:300;width:0%;transition:width 0.1s linear}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:auto}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:720px;margin:0 auto;padding:96px 2rem 80px}
+    .paper-meta{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .paper-volume{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+    .paper-number{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--muted);margin-bottom:0.4rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.9rem;color:var(--muted);font-style:italic;line-height:1.7}
+    .paper-wordcount{font-size:0.72rem;color:var(--border);font-family:'JetBrains Mono',monospace;margin-top:0.5rem}
+    .essay-body{font-size:1.05rem;line-height:1.9;color:#2a2520}
+    .essay-body p{margin-bottom:1.6rem}
+    .essay-body > p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .essay-opener{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--navy);line-height:1.7;font-style:italic;margin-bottom:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06)}
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin:3rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .essay-divider{text-align:center;color:var(--gold);font-size:1.2rem;margin:2.5rem 0;letter-spacing:0.5em;opacity:0.6}
+    .paper-nav{position:fixed;bottom:0;left:0;right:0;z-index:150;display:flex;justify-content:space-between;align-items:center;background:rgba(245,240,232,0.97);backdrop-filter:blur(8px);border-top:1px solid var(--border);padding:0.75rem 2rem;gap:1rem;box-shadow:0 -2px 12px rgba(27,42,74,0.08)}
+    .paper-nav a{text-decoration:none;display:flex;flex-direction:column;max-width:45%}
+    .paper-nav a.prev{align-items:flex-start}
+    .paper-nav a.next{align-items:flex-end;text-align:right}
+    .paper-nav .nav-direction{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.25rem}
+    .paper-nav .nav-title{font-size:0.8rem;color:var(--navy);font-weight:500}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:80px 1.25rem 80px}.paper-title{font-size:2.1rem}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" style="position:absolute;left:-9999px">Skip to main content</a>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here &#8212; Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="annotated.html">Read the Constitution</a>
+    <a href="constitution-v167.docx" download>Download (.docx)</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+  <div class="page-wrap">
+    <div class="paper-meta">
+      <span class="paper-volume">Volume II &#xb7; May 2026</span>
+      <p class="paper-number">Paper No. 15</p>
+      <h1 class="paper-title">The Price of Participation</h1>
+      <p class="paper-subtitle">On electoral finance. The Republic&#8217;s campaign finance provisions are not an attempt to make elections inexpensive or politics less competitive. They are a structural response to a structural problem: when elected officials depend on private funds to reach office, the funding relationship becomes an institutional fact that shapes governance regardless of any individual&#8217;s intentions.</p>
+      <p class="paper-wordcount">~2,500 words</p>
+    </div>
+
+    <div class="essay-body">
+
+      <div class="essay-opener">The problem with private campaign funding is not that donors are corrupt. It is that the funding relationship is structural. An official who depends on a small group of large donors for their political survival has institutional incentives that run toward those donors, independent of any agreement, any expectation, and any individual act of goodwill. The structural relationship exists whether or not anyone in it behaves improperly.</div>
+
+      <p>Campaign finance is among the most contested topics in democratic theory. Reasonable people hold strong and opposing views about the right relationship between private money and public elections. This essay does not adjudicate that debate. It explains the specific constitutional choices this document makes and the reasoning behind each one &#8212; reasoning that is structural rather than ideological, concerned with incentive design rather than the moral character of political actors.</p>
+
+      <p>The provisions in Article 18 are built around a single analytical claim: the source, scale, and transparency of campaign funding shapes the institutional incentives of elected officials in ways that affect governance. The constitutional response to this claim is to address each dimension &#8212; source, scale, and transparency &#8212; with specific structural provisions.</p>
+
+      <h2>The Structural Problem</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>To understand why electoral finance requires constitutional attention, it is useful to start from first principles about what elections are for. Elections are the mechanism by which citizens select their representatives. For elections to produce genuinely representative government, the people who win elections need to be responsive to the people who elected them &#8212; not the people who funded their campaigns, if those are different groups.</p>
+
+      <p>The structural problem arises when the people who fund campaigns and the people who vote in them are systematically different. Funding tends to be concentrated &#8212; a small number of contributors provide a large share of campaign resources. Voting is distributed across the full electorate. When funding is highly concentrated, the officials who win campaigns have a specific institutional relationship with their major funders: their political survival depended on those funders&#8217; support, and will depend on it again in the next cycle.</p>
+
+      <p>This structural relationship does not require corruption to produce distorted governance. An official who believes they must satisfy their major funding sources to be reelected will make decisions that reflect that belief, independently of whether any particular decision was explicitly requested or rewarded. The incentive structure does the work that explicit agreements are not needed to do. The problem is institutional, not individual.</p>
+
+      <p>This is not a claim that privately funded officials always govern badly. It is a claim that the funding relationship is a systematic pressure on governance that operates whether or not any individual acts on it. Constitutional design should address systematic pressures. That is what Article 18 does.</p>
+
+      <h2>Transparency First</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>The first and most fundamental electoral finance provision is disclosure. All contributions above the de minimis threshold must be publicly disclosed to the Electoral Commission and published to the NRS. Anonymity in electoral finance is prohibited. The de minimis threshold cannot be set so high that it effectively permits anonymous large contributions &#8212; the constitution specifies this constraint explicitly to prevent circumvention through threshold manipulation.</p>
+
+      <p>Disclosure is the baseline response to the structural problem because it enables accountability without restricting funding. If every contribution is public, the relationship between funders and officials is visible. Citizens, the press, the opposition, and the Inspectorates can all observe the funding relationship and draw their own conclusions about its influence on governance. The NRS makes this disclosure permanent &#8212; contribution records cannot be altered or deleted &#8212; so the funding history of any official&#8217;s career is always available.</p>
+
+      <p>Disclosure alone does not solve the structural problem. An official whose major funders are publicly known still has the same institutional incentives as one whose funders are anonymous. But disclosure makes those incentives visible, which is the prerequisite for any democratic accountability. The voters who re-elect an official have access to the information about who funded their campaigns. The press has access. The opposition has access. Accountability requires information; disclosure provides it.</p>
+
+      <p>Independent expenditures &#8212; spending in support of a campaign made outside the campaign&#8217;s direct control &#8212; are subject to the same disclosure requirements as direct contributions. The same structural relationship between funder and official that operates through direct contributions can operate through independent expenditure. Limiting disclosure to direct contributions while leaving independent expenditure opaque would simply shift concentration to the less visible channel.</p>
+
+      <h2>Source and Scale</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>Disclosure addresses transparency. Two further provisions address the source and scale of contributions directly.</p>
+
+      <p>Only natural persons &#8212; individual citizens and residents of the Republic &#8212; may contribute to electoral campaigns. Corporate, organizational, and foreign contributions are prohibited. The prohibition on foreign contributions is self-evidently consistent with the principle that elections should reflect the preferences of citizens who live under the government being elected. The prohibition on corporate and organizational contributions requires more explanation.</p>
+
+      <p>Corporations and organizations are legal entities that pool resources from multiple individuals and can accumulate resources of a scale no individual reaches. Their electoral finance participation is therefore not equivalent to individual participation: the structural relationship between a large organizational contributor and an elected official is different in kind, not just degree, from the relationship between that official and an individual donor. The official who depends on large organizational contributions for their political survival has a funding relationship with an entity whose interests may or may not align with the interests of the individual citizens the official was elected to represent.</p>
+
+      <p>The constitutional choice to limit contributions to natural persons is a choice to make the funding relationship a relationship between officials and individual citizens rather than between officials and aggregated institutional interests. This does not mean organizations lose political voice &#8212; their individual members retain full rights to contribute and to participate in the political process. It means the institutional resources of organizations cannot be directly deployed in the funding relationship between candidates and funders.</p>
+
+      <p>Individual contributions are capped by statute at a level the Legislature sets within constitutional parameters. The cap addresses scale: a single very large individual contributor creates the same structural relationship problem as a corporate contributor. The cap is not designed to equalize influence entirely &#8212; that would require prohibiting all private contribution &#8212; but to reduce the extent to which any single contributor can create a disproportionate funding relationship with an official.</p>
+
+      <h2>The Categorization Question</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>The most direct and most debated provision in Article 18 appears in §18.3.d: financial contributions to electoral campaigns are not constitutionally protected speech under §1.4, and are not protected as associational activity under §1.7.</p>
+
+      <p>This provision requires careful explanation because the objection to it is serious. The objection runs: contributing money to a political campaign is an act of political participation. Political participation is precisely what the free expression and free association protections are designed to protect. To say that the government may regulate campaign contributions without constitutional limit is to say that the government may restrict political participation without constitutional limit. That is a dangerous grant of power.</p>
+
+      <p>The answer the constitution gives is not that the objection is wrong about the value of political participation. It is that whether campaign contributions are protected speech or associational activity is not a fact that constitutions must accept &#8212; it is a constitutional choice. Different constitutional systems categorize the same activity differently, and the categorization has consequences for what regulation is permissible.</p>
+
+      <p>This constitution makes a specific categorization: electoral finance is not constitutionally equivalent to speech or association. It is regulated as an act that affects democratic governance &#8212; specifically, as an act that creates institutional relationships between funders and officials. The regulation of such acts is explicitly within the scope of what a constitution designed around democratic integrity may do.</p>
+
+      <p>The categorization is not a statement that money in politics is without value or that campaign contributors have no legitimate interest in electoral outcomes. It is a statement about what constitutional category governs the regulation of that interest. The same person who contributes to a campaign retains full free expression and associational rights to advocate for candidates, organize fellow citizens, publish political arguments, and participate in every other dimension of the political process. What they do not retain is a constitutional right to contribute without limit on the grounds that the contribution is equivalent to political speech.</p>
+
+      <p>The argument for this categorization is structural. If campaign contributions are constitutionally equivalent to political speech, then the regulation of campaign contributions is constitutionally equivalent to the regulation of speech &#8212; subject to the highest level of constitutional scrutiny and therefore, in practice, largely unregulable. The structural problem that private campaign funding creates &#8212; institutional incentives that run toward funders rather than constituents &#8212; cannot be addressed if the primary tool for addressing it is constitutionally off-limits. The categorization choice is the prerequisite for the structural remedy.</p>
+
+      <h2>Public Financing and the Opt-In Model</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>Article 18 does not prohibit private campaign funding. It regulates it and provides an alternative. The public financing system offers all registered candidates equal baseline funding. Candidates who opt into the public system accept the contribution cap in exchange for public funds. Candidates who opt out may raise private contributions subject to the disclosure requirements and prohibitions, but without public funding support.</p>
+
+      <p>The opt-in structure is a constitutional choice rather than a mandate. An outright prohibition on private funding would raise genuine concerns about the scope of government control over political competition. An opt-in system that makes public funding genuinely viable &#8212; meaningful rather than token &#8212; creates a realistic alternative to private funding dependence without mandating it.</p>
+
+      <p>The matching funds component further shapes the incentive structure for candidates who use private funding. Matching funds provide public dollars to match small contributions from citizens &#8212; a structure that incentivizes broad citizen funding rather than large-donor concentration. A candidate who builds their campaign on many small contributions receives more public support than one who relies on fewer large contributions. The matching structure does not prohibit large contributions. It rewards the candidate who minimizes dependence on them.</p>
+
+      <p>Public financing is administered by the Electoral Commission, audited by the Executive Inspectorate, and allocation criteria are published before each election cycle &#8212; criteria that explicitly cannot be set in ways that systematically advantage incumbents or established parties. The incumbency problem &#8212; the tendency of publicly funded systems to entrench whoever designed the funding rules &#8212; is addressed directly rather than left to the goodwill of whoever controls allocation.</p>
+
+      <h2>What This Does Not Claim</h2>
+      <div class="essay-divider">&#x2055;</div>
+
+      <p>It is worth being precise about what Article 18 does not claim. It does not claim that privately funded elections always produce bad governance. It does not claim that contributors are corrupt or that officials who accept private contributions cannot govern well. It does not claim that these provisions will eliminate the influence of wealth on political outcomes.</p>
+
+      <p>What it claims is narrower: that the structural relationship between private funders and funded officials creates institutional pressures on governance that operate independently of individual intentions, that these pressures are visible and documentable, and that constitutional design can reduce their magnitude even if it cannot eliminate them entirely. The provisions in Article 18 are calibrated responses to a structural problem. Disclosure reduces opacity. The natural persons requirement removes the largest-scale funding actors. Contribution caps reduce individual concentration. Public financing provides an alternative. The categorization enables the regulation that the other provisions require.</p>
+
+      <p>None of these provisions makes politics costless, equal, or free from the influence of resources. They make the funding relationship more transparent, less concentrated, and more amenable to the accountability mechanisms the rest of this constitution provides. The NRS records who funded whom. The Inspectorates audit compliance. The courts adjudicate disputes. The citizens who vote in elections have access to the full funding record of every candidate they consider.</p>
+
+      <p>Electoral finance is a structural problem. Article 18 is a structural response. The response will not be perfect &#8212; no structural response to a human institution is. It will be imperfect in specific, documented ways that the NRS makes visible and that future citizens can evaluate and revise. The provisions are designed to be better than the alternative, not to be optimal. That is the standard that constitutional design can realistically meet.</p>
+
+    </div>
+  </div>
+  </main>
+
+  <nav class="paper-nav">
+    <a href="paper-14.html" class="prev">
+      <span class="nav-direction">&#x2190; Previous</span>
+      <span class="nav-title">Paper No. 14 &#x2014; The Writ</span>
+    </a>
+    <a href="papers.html" class="next">
+      <span class="nav-direction">All Essays &#x2192;</span>
+      <span class="nav-title">Return to Papers</span>
+    </a>
+  </nav>
+
+  <script>
+    const bar = document.getElementById('progress');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const h = document.documentElement;
+        bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%';
+      });
+    }
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
