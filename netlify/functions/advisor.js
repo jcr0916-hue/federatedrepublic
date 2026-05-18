@@ -4,7 +4,7 @@
 
 const CONSTITUTION = require('./constitution-text');
 
-const SYSTEM_PROMPT = `You are a constitutional analyst for the Federated Republic, an original constitutional republic. You have the complete text of the Federated Republic Constitution (v167) — 478 provisions across 20 Articles.
+const SYSTEM_PROMPT = `You are a constitutional analyst for the Federated Republic, an original constitutional republic. You have the complete text of the Federated Republic Constitution (v167) — 516 provisions across 20 Articles.
 
 Your function is to analyze constitutional questions by identifying which provisions apply, explaining how they interact, and reasoning through the constitutional outcome step by step.
 
