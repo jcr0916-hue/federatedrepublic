@@ -336,7 +336,7 @@ Where the Caretaker PM period extends beyond 90 days without a seated House — 
 Where the Legislature has been physically unable to convene due to an attack on the seat of government or other catastrophic external event, the 90-day waiting period of §2.8 is waived. Expedited activation requires joint certification by the Caretaker PM and the most senior available Supreme Court justice, published to the NRS, stating that the Legislature cannot convene due to catastrophic external circumstances. Upon such certification, the Senate may immediately assume the three emergency functions of §2.8 by majority of surviving members. Expedited activation expires automatically upon the House maintaining quorum and electing a Speaker.
 
 [§2.9] Clemency and Amnesty
-The pardon power is constitutionally divided and constrained. Clemency may only be granted within each executive's domain, with full transparency, and subject to cross-chamber review. Self-clemency is absolutely prohibited.
+The pardon power is constitutionally divided and constrained. Clemency may only be granted within each executive's domain, with full transparency, and subject to cross-chamber review. Presidential clemency is subject to cross-chamber review under §2.9.c. Self-clemency is absolutely prohibited for all constitutional officers.
 
 [§2.9.a] Legislative Amnesty
 Only the Legislature may grant group amnesty, by simple majority of both chambers. No executive may grant group amnesty. Cannot extend to constitutional violations, official misconduct offenses, or crimes against the fundamental rights of §1.3 and §1.4. Subject to judicial review within 60 days of enactment.
@@ -504,7 +504,7 @@ The Legislature may establish a joint ethics committee with authority to sanctio
 Members are privileged from civil arrest and civil suit arising from acts performed in their legislative capacity: votes, speeches, committee testimony. This privilege does not extend to criminal conduct, conduct outside legislative functions, or conduct the EI has certified as a constitutional breach.
 
 [§3.7] Independent Statutory Officers
-The constitution authorizes a class of statutory officers who operate independently of both executives. Their independence is structural — fixed terms, merit appointment, and removal only on the grounds specified in enabling statute.
+The constitution authorizes a class of statutory officers who operate independently of both executives. Their independence is structural — fixed terms, appointment from a JI-maintained registry, and removal only on the grounds specified in enabling statute.
 
 [§3.7.a] Authorization
 Statutory Independent Officers — the constitution authorizes the Legislature to create independent statutory offices outside both executive domains. They exercise regulatory, quasi-judicial, or administrative functions with constitutional independence — neither executive may direct their operations.
@@ -621,7 +621,7 @@ A State or Territory may not discriminate in its recognition of another jurisdic
 A judgment is final for §4.4.a purposes if it is not subject to an automatic stay under the issuing jurisdiction's procedural law, regardless of whether an appeal is pending. The Legislature may refine the finality standard for specific categories but may not use pending-appeal status alone to block enforcement. The procedural framework mandate — filing forms, fee schedule, and enforcement timeline — is established by statute.
 
 [§5.1] Citizenship
-Citizenship in the Republic is acquired by birth, descent, or naturalization under the conditions of this section. Citizens hold the full rights established in Article I and are eligible to vote, hold office, and stand for election.
+Citizenship is acquired by birth, by parentage, or by naturalization under the conditions of this section. Citizens hold the full rights established in Article I and are eligible to vote, hold office, and stand for election.
 
 [§5.1.a] Inherent Citizenship
 A child is automatically a citizen at birth if at least one parent is a Citizen or Legal Resident at the time of birth. Statelessness prevention clause: where a child would otherwise be stateless, citizenship is granted regardless of parental status. No citizenship may be stripped from a natural-born citizen.
@@ -822,7 +822,7 @@ EI Inspector General Selection — nominated by the House, confirmed by the Sena
 All IGs serve 10-year non-renewable terms. No two IG terms may begin within 18 months of each other, ensuring continuous institutional knowledge. An outgoing IG may not be reappointed to the same office. The stagger means the system never faces simultaneous turnover in multiple offices.
 
 [§8.4] Judicial Inspectorate Mandate
-The Judicial Inspectorate monitors the court system, administers the SC candidate registry, conducts compliance audits, and certifies lottery draws and panel selections throughout the constitution. Its mandate is informational only.
+The Judicial Inspectorate monitors the court system, administers the SC candidate registry, conducts compliance audits, and certifies lottery draws and panel selections throughout the constitution, including the State Designee Panel, the Regional Boundary Commission, and the RSA Technical Integrity Commission. Its mandate is informational only.
 
 [§8.4.a] Judicial IG Candidate Pool
 JI IG Selection — drawn by public lottery from a qualified candidate pool. The outgoing JI IG administers the draw, witnessed by the other two IGs and three citizens chosen by jury protocols. Published to the NRS immediately. No political body nominates the JI IG — the most structurally independent selection mechanism in the constitution.
@@ -1133,13 +1133,13 @@ The JI determines whether a targeted law is eligible for referendum. Laws that s
 [§11.1.c] Referendum Thresholds and Finality
 Referendum Outcome — if the referendum passes (simple majority of votes cast, subject to the Legislature-defined turnout threshold), the law is repealed immediately upon EC certification. If it fails, the law remains in effect and cannot be subjected to referendum on the same grounds for 5 years. The Legislature may re-enact a repealed law, but the re-enacted version is again subject to referendum.
 
-[§11.2] Citizen Initiatives and Local Government
-Citizens hold direct legislative initiative rights at the federal level. Local governments are constitutionally recognized entities whose powers are established by State statute within the limits of this constitution.
+[§11.2] Citizen Legislative Initiative
+Citizens hold the right to propose legislation directly to the Legislature through the initiative mechanism. The initiative is distinct from the referendum — it creates new law rather than repealing enacted law. The process and thresholds are established in §11.2.a.
 
-[§11.2.a] Citizen Legislative Initiative
+[§11.2.a] Initiative Process and Thresholds
 Distinct from the referendum, the initiative allows citizens to propose legislation directly. 10% of eligible voters petition for a specific legislative proposal. The Legislature must vote on the proposal within 90 days. If it fails or is not voted on, the proposal proceeds to a national referendum at the §15.1.c thresholds — citizen-initiated legislation that bypasses the Legislature requires a higher democratic mandate than simple repeal.
 
-[§11.2.b] Local Government
+[§11.3] Local Government
 Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as the primary points of contact between citizens and government. They are entitled to reasonable fiscal capacity to carry out their constitutional functions. States may not starve local governments to achieve de facto state centralization.
 
 [§12.1] Authorized Purposes for Military Force
