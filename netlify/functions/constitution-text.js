@@ -44,12 +44,16 @@ States may establish licensing and safety training requirements as a condition o
 No State requirement may function as an effective prohibition on keeping or bearing arms. A requirement is an effective prohibition if it imposes costs, delays, or conditions that make lawful ownership practically inaccessible to ordinary citizens. The burden of proof lies with the State to demonstrate proportionality.
 [§1.13] Freedom of Movement and Labor
 All Inhabitants have the right to travel and reside anywhere within the Republic. State professional licensing requirements may not create barriers to labor mobility; licenses issued under State law are recognized throughout the Republic. Every person has the right to form and join trade unions and bargain collectively; the right to strike as a collective work stoppage is protected, subject to reasonable regulation of essential services.
+[§1.14] Detention and Habeas Corpus Rights
+Any person taken into custody by the State holds the rights established in this section. These rights are self-executing and may not be suspended by statute or executive order.
 [§1.14.a] First Appearance
 Any person taken into custody must appear before a judicial officer within 72 hours of arrest. At the First Appearance, the judge must determine whether custody is lawful and whether conditions of release are appropriate.
 [§1.14.b] Habeas Corpus Response Deadline
 A court receiving a habeas corpus petition must rule within 48 hours of filing. No procedural rule may extend this deadline. A court that fails to rule within 48 hours is deemed to have found the detention unlawful — the detained person must be released or brought before a judicial officer immediately.
 [§1.14.c] Habeas Corpus
 Any person detained by the State has the absolute right to challenge the lawfulness of their confinement before a judge at any time. The right cannot be suspended by emergency declaration — it appears in §1.26.b's list of absolutely non-derogable rights.
+[§1.15] Rights of the Accused
+Every person accused of a crime or subject to criminal proceedings holds the rights established in this section from the moment of accusation through final disposition.
 [§1.15.a] Right to Counsel
 Any person accused of a crime or subject to detention has the right to retain and consult with a lawyer before questioning. If they cannot afford counsel, the Republic provides it. The right attaches from the moment of accusation or detention, not from formal charging.
 [§1.15.b] Caseload Guarantee
@@ -58,6 +62,8 @@ the Legislature must establish maximum caseload limits for publicly funded defen
 Any person detained or accused must be informed promptly, in plain language they understand, of the specific grounds for their detention and the charges being considered. Detention without meaningful explanation of its basis is unconstitutional from its first moment.
 [§1.15.d] Right to Full Disclosure
 Any accused person has the right to full disclosure of all State evidence — including evidence the prosecution does not intend to use — before trial. Any withholding of exculpatory evidence is a constitutional violation, not a procedural irregularity.
+[§1.16] Fair Trial Rights
+Every person subject to criminal proceedings has the right to a fair and timely trial. These rights may not be waived by prosecutorial pressure, plea incentive, or judicial scheduling convenience.
 [§1.16.a] Speedy Trial Principle
 Every accused person has the right to trial without unreasonable delay. Delay caused by the State is not a neutral fact — prolonged pre-trial detention is itself a punishment imposed without verdict. What constitutes unreasonable delay is defined by the Legislature in statute, subject to judicial review.
 [§1.16.b] Bail Proportionality
@@ -70,6 +76,8 @@ Any accused person has the right to inspect, challenge, and rebut any algorithm,
 No person may be compelled to testify against themselves or to produce self-incriminating evidence. The right of silence is complete — silence may not be commented upon or used to draw adverse inferences. Consistent with §1.10.c, this extends to cryptographic keys.
 [§1.18] Right to a Public Trial
 Every accused person has the right to a public trial before a judge and, in criminal matters, a jury of peers. Secret or closed proceedings are constitutionally prohibited except for the minimal portion where a specific witness's safety requires it — and even then the verdict must be public. Also permanently unamendable.
+[§1.19] Criminal Law Limits
+The criminal law may not be applied retroactively or used to punish a person more than once for the same conduct. These prohibitions apply equally to the federal government and to every State.
 [§1.19.a] No Retroactive Criminal Laws
 No person may be convicted of an act that was not defined as a criminal offense at the time it was committed. No sentence may exceed the maximum available at the time of the offense. The prohibition on retroactive criminal law is absolute and permanently unamendable.
 [§1.19.b] Double Jeopardy
@@ -100,6 +108,8 @@ No government authority may use regulatory or land-use powers to exclude any per
 No government authority — federal, State, or local — may use regulatory or land-use powers to exclude any person from access to housing on the basis of any characteristic enumerated in §1.9. Exclusionary zoning designed to keep certain populations out of a community is constitutionally prohibited.
 [§1.25.b] BNF Housing Obligation
 Housing access for persons who cannot independently secure it is a Basic Needs Floor obligation under §10.1. Housing exclusion is an enforceable constitutional violation.
+[§1.26] Emergency Derogation
+No emergency — however severe — suspends the Individual Sovereignty Floor in full. Temporary derogation of certain rights is permitted only under the strict conditions of this section; the rights enumerated in §1.26.b may not be derogated under any circumstances.
 [§1.26.a] Emergency Derogation — Declaration Requirements
 Emergency derogation of Article I rights requires a precisely structured declaration specifying: the nature of the emergency, which rights are limited, the geographic scope, the duration, and the review mechanism. The specificity requirement prevents open-ended emergency licenses — the government must commit in advance to exactly what it is doing, for how long, and where. Blanket declarations are constitutionally invalid. The declaration is published to the NRS immediately: an undisclosed emergency is not a constitutionally recognized emergency. Automatic expiry (§1.26.d) without renewal.
 [§1.26.b] Non-Derogable Rights
@@ -176,18 +186,24 @@ Where the PM is temporarily unable to exercise authority, the most senior Domest
 Civil servants must refuse and report any order that lacks required PM fund certification, violates any Article I right, or has not been recorded on the National Record System. A civil servant who refuses an unconstitutional order may not be dismissed, demoted, or penalized for that refusal. The EI reports any attempt to penalize a refusing civil servant to the NRS.
 [§2.2.j] Civil Service Integrity
 The PM has constitutional responsibility for the integrity of the civil service. Civil service appointments, promotions, and assignments must be made on the basis of merit and qualification, not political affiliation. Civil servants are protected from retaliation for exercising their duty of refusal under §2.2.i. The Legislature must by statute establish a Civil Service Commission with independent oversight of hiring, promotion, and disciplinary processes within the civil service.
+[§2.3] Prime Minister — Accountability and Formation
+The Prime Minister is accountable to the House through the mechanisms of this section. The House's power to remove the PM is matched by its constitutional obligation to maintain a functioning government.
 [§2.3.a] Constructive Vote of No Confidence
 The House cannot simply vote 'no confidence' and leave a vacuum; it must simultaneously elect a replacement by absolute majority of full seated House membership. Both the removal and successor election occur in the same vote.
 [§2.3.b] PM Maximum Consecutive Service
 The 8-year maximum — no PM may serve more than 8 consecutive years. After 8 years, the PM must stand down even if the House would re-elect them. The 8-year maximum and the constructive vote operate independently — a PM reaching 8 years is replaced through a House election of a successor.
 [§2.3.c] PM Formation and Senate Designation
 The House elects the PM by absolute majority of full seated membership within 30 days of any general election. The House may attempt to elect a PM at any time. If the House has not elected a PM within 30 days, the SDACO continues as Caretaker PM. Where the House has not elected a PM within 30 days, the Senate may, by 2/3 supermajority of full seated membership, designate a serving House member as PM. A PM designated under this provision holds full constitutional PM authority and is subject to the same obligations, term limits, and removal procedures as a PM elected by the House, including constructive no-confidence under §2.3.a and the 8-year maximum under §2.3.b. If the House subsequently elects a PM by absolute majority, that election terminates the Senate designation. Where the House has not seated a PM within 30 days, the Legislative Inspectorate publishes a weekly report to the NRS naming each member's participation record — votes taken, candidates proposed, and each member's individual participation — forming the permanent constitutional accountability record for that term.
+[§2.4] Prime Minister — Legislative Instruments
+The PM holds two instruments for engaging the Legislature on enacted bills: the Suspensive Veto and the Fiscal Objection. These are tools of constitutional dialogue, not obstruction; the Legislature retains final authority in both cases.
 [§2.4.a] Suspensive Veto
 The PM may return any bill to the Legislature with a written Statement of Objection specifying the constitutional, fiscal, or operational grounds. The statement is recorded permanently on the NRS. The Legislature may override by 2/3 of both chambers simultaneously. The suspensive veto may not be used on: the annual budget; any bill the Legislature has certified as directly implementing a constitutional obligation; or any bill passed under the §2.8 Emergency Governance Protocol. If the Legislature does not hold an override vote within the session in which the bill was returned, the bill lapses. The PM may apply the suspensive veto to any single bill only once.
 [§2.4.b] Fiscal Objection
 A narrower tool than the Suspensive Veto. The PM may object to legislation on specific solvency grounds: the bill, if enacted, would cause or materially worsen a structural deficit beyond constitutional thresholds. Requires MA assessment within 21 days. House may override by simple majority after receiving the assessment.
 [§2.4.c] Deemed Enactment
 If the PM neither signs nor objects within the Legislative Review Period, the bill is automatically enacted. Silence is not a veto.
+[§2.5] Legislative Review Period
+Both executives hold a concurrent review period following final passage of any bill. The periods and their interaction are governed by this section.
 [§2.5.a] Legislative Review Period — Duration
 The presidential veto period may not exceed 20 days; the PM objection period may not exceed 45 days. The periods run concurrently from the date of final passage in both chambers. If neither executive acts within their respective period, the bill is deemed enacted. The President and PM may jointly agree to shorten a review period but may not extend it beyond the statutory maximum. Where both executives act on the same bill, the instruments operate in parallel. A legislative override of a Presidential veto restores the bill; any pending PM objection period continues from where it stands. Resolution of one executive's instrument does not moot the other's.
 [§2.6] Presidential Succession
@@ -204,6 +220,8 @@ Both executives must publish all official acts — orders, certifications, vetoe
 Where the Caretaker PM period extends beyond 90 days without a seated House — accounting for a 60-day election period and a 30-day seating grace period — the Senate automatically assumes joint emergency legislative authority by simple majority for three functions only: election administration, Basic Needs funding continuity, and active national security obligations. All Senate emergency actions under this provision require co-signature of the Caretaker PM and are published to the NRS. This authority expires automatically the moment a new House is seated.
 [§2.8.a] Expedited Activation
 Where the Legislature has been physically unable to convene due to an attack on the seat of government or other catastrophic external event, the 90-day waiting period of §2.8 is waived. Expedited activation requires joint certification by the Caretaker PM and the most senior available Supreme Court justice, published to the NRS, stating that the Legislature cannot convene due to catastrophic external circumstances. Upon such certification, the Senate may immediately assume the three emergency functions of §2.8 by majority of surviving members. Expedited activation expires automatically upon the House maintaining quorum and electing a Speaker.
+[§2.9] Clemency and Amnesty
+The pardon power is constitutionally divided and constrained. Clemency may only be granted within each executive's domain, with full transparency, and subject to cross-chamber review. Self-clemency is absolutely prohibited.
 [§2.9.a] Legislative Amnesty
 Only the Legislature may grant group amnesty, by simple majority of both chambers. No executive may grant group amnesty. Cannot extend to constitutional violations, official misconduct offenses, or crimes against the fundamental rights of §1.3 and §1.4. Subject to judicial review within 60 days of enactment.
 [§2.9.b] Self-Clemency Absolute Prohibition
@@ -218,6 +236,8 @@ Legislative removal grounds: verified constitutional breach, demonstrated perman
 A simple majority of the full Senate membership may refer the question of presidential removal to a national recall referendum. The EC administers the referendum within 90 days of the Senate vote. The President is removed if 60% of votes cast are affirmative with at least 55% citizen participation. A failed referendum cannot be re-initiated within the same presidential term. The Senate Speaker assumes Acting Presidential Authority under §2.6.b from the date the Senate votes to refer until the referendum result is certified — the Speaker's Senate seat is not vacated during this period. If the referendum fails, the President resumes full authority immediately upon certification. If the referendum succeeds, §2.6.a permanent succession activates at the moment of result certification.
 [§2.10.c] One Referral Per Term
 No second Senate referral to popular recall within the same presidential term. One-shot rule prevents a hostile Senate from using repeated recall elections as attrition. After a failed recall, the President serves out their term with the NRS record intact.
+[§3.1] The House of Representatives
+The House of Representatives is the proportional chamber of the Legislature — directly elected by citizens on the basis of population. All legislation originates in the House and the PM is elected and accountable to it.
 [§3.1.a] House Membership Floor
 The Republic's legislature is bicameral. The House of Representatives is the proportional chamber. Seats are allocated by population with a minimum of one seat per State, a floor of one seat per 750,000 citizens, and a formula that self-scales with population growth. The Legislature may set a higher membership by statute and must publish justification for any formula producing fewer than one seat per 500,000 citizens.
 [§3.1.b] Census Authority
@@ -260,6 +280,8 @@ Standing committees are constitutionally mandated for certain functions (the Sen
 The Senate may amend House-passed bills, but amendments must be germane to the bill's subject matter. The LI publishes a germaneness analysis before the amended bill is returned to the House. The PM must give the LI's analysis due consideration during the Legislative Review Period. Non-germane amendments can void the non-germane portion.
 [§3.2.j] Senate Speaker Role Limit
 No Senator may serve as Speaker for more than three consecutive sessions (6 years). After three consecutive sessions as Speaker, the Senator must sit out at least one full session as a non-Speaker Senator before standing for Speaker again. This limit applies to the Speaker role only and does not affect the Senator's ability to continue serving their State in their Senate seat.
+[§3.3] Legislative Process and Passage
+Bills become law through the process established in this section. The default passage standard is an absolute majority of the full seated membership of both chambers; higher thresholds apply as specified.
 [§3.3.a] Standard Passage
 Bills pass by absolute majority of the full seated membership of both chambers, not just those present. The 'full seated membership' standard prevents passage by small quorums. Applies to ordinary legislation; higher thresholds apply to constitutional amendments, veto overrides, and removal proceedings.
 [§3.3.b] Presidential Veto Override
@@ -296,6 +318,8 @@ Elected by the House from among its members by absolute majority. Presides over 
 A House seat that falls vacant mid-term triggers a special election within 90 days if more than 90 days remain in the term. Short-term vacancies (fewer than 90 days) are not filled — the seat remains vacant for the remainder of the term.
 [§3.5.d] House Quorum
 A majority of the full seated House membership constitutes a quorum for ordinary business. The Speaker may compel attendance of absent members by warrant. No vote that requires an absolute majority of full membership may be held without quorum.
+[§3.6] Legislative Oversight and Transparency
+The Legislature operates under continuous Inspectorate oversight and is subject to the transparency obligations of this section. Oversight is informational only — the Inspectorates publish findings; they do not direct legislative outcomes.
 [§3.6.a] Inspectorate Access to Legislative Records
 All three Inspectorates have full access to legislative records, committee deliberations, voting records, and draft legislation. The Legislature may not classify records from the Inspectorates.
 [§3.6.b] LI Pre-Passage Constitutional Review
@@ -308,6 +332,8 @@ The two chambers may meet in joint session for constitutionally enumerated purpo
 The Legislature may establish a joint ethics committee with authority to sanction, suspend (not remove), or refer members to the EI for investigation. Removal requires a 2/3 vote of the relevant chamber following a published EI finding — the ethics committee cannot remove members, only the full chamber can.
 [§3.6.f] Legislative Privilege
 Members are privileged from civil arrest and civil suit arising from acts performed in their legislative capacity: votes, speeches, committee testimony. This privilege does not extend to criminal conduct, conduct outside legislative functions, or conduct the EI has certified as a constitutional breach.
+[§3.7] Independent Statutory Officers
+The constitution authorizes a class of statutory officers who operate independently of both executives. Their independence is structural — fixed terms, merit appointment, and removal only on the grounds specified in enabling statute.
 [§3.7.a] Authorization
 Statutory Independent Officers — the constitution authorizes the Legislature to create independent statutory offices outside both executive domains. They exercise regulatory, quasi-judicial, or administrative functions with constitutional independence — neither executive may direct their operations.
 [§3.7.b] Appointment
@@ -370,6 +396,8 @@ The SC has original (first-instance) jurisdiction over constitutional disputes b
 NRS findings published by the LI, EI, or JI are admissible as authoritative factual evidence in judicial proceedings. Courts must address any inconsistency between their factual findings and a prior Inspectorate finding in written decisions. Inspectorate findings are not judicial determinations — courts retain full authority to reach different factual conclusions — but must explain why.
 [§4.3.f] Organizational Standing
 An organization may bring a constitutional claim on behalf of its members where: (a) at least one member would individually have standing; (b) the claim is germane to the organization's established constitutional purpose; and (c) neither the claim nor the relief sought requires the participation of individual members as named parties. The organization must identify at least one member with specific, articulable injury and publish that identification to the NRS concurrent with filing.
+[§4.4] Judgment Recognition and Authentication
+Judicial judgments, official records, and authenticated documents are recognized across all jurisdictions within the Republic. The NRS is the authentication infrastructure for this cross-jurisdictional recognition.
 [§4.4.a] Judicial Judgments
 Non-recognition grounds are exhaustive: the issuing court lacked jurisdiction; the judgment was obtained by fraud; or enforcement would require an act the Legislature has defined as categorically unenforceable. These three grounds are the only bases on which a Republic court may decline to recognize a judgment valid in another jurisdiction. Any judgment contrary to Article I is void by operation of §15.6 and requires no separate non-recognition finding.
 [§4.4.b] NRS Authentication
@@ -382,6 +410,8 @@ Protective orders, custody determinations, and other status orders take immediat
 A State or Territory may not discriminate in its recognition of another jurisdiction's judgments or records based on the nature of the parties, the subject matter, or the legal status recognized by the issuing jurisdiction. Recognition is mandatory; non-recognition grounds are exhaustive under §4.4.a.
 [§4.4.f] Legislative Implementation Mandates
 A judgment is final for §4.4.a purposes if it is not subject to an automatic stay under the issuing jurisdiction's procedural law, regardless of whether an appeal is pending. The Legislature may refine the finality standard for specific categories but may not use pending-appeal status alone to block enforcement. The procedural framework mandate — filing forms, fee schedule, and enforcement timeline — is established by statute.
+[§5.1] Citizenship
+Citizenship in the Republic is acquired by birth, descent, or naturalization under the conditions of this section. Citizens hold the full rights established in Article I and are eligible to vote, hold office, and stand for election.
 [§5.1.a] Inherent Citizenship
 A child is automatically a citizen at birth if at least one parent is a Citizen or Legal Resident at the time of birth. Statelessness prevention clause: where a child would otherwise be stateless, citizenship is granted regardless of parental status. No citizenship may be stripped from a natural-born citizen.
 [§5.1.a.i] Statelessness Prevention
@@ -410,6 +440,8 @@ The CLT must assess knowledge sufficient to understand the structure, powers, li
 The Constitutional Logic Test is administered by a CLT Administrator nominated by the PM from a Candidate Register, confirmed by the Senate. Structural independence from partisan influence: the CLT process cannot be used to create barriers that track political outcomes.
 [§5.4.c] Status Quo Maintenance
 Senate deadlock on CLT standard changes keeps the existing version in force. Deadlock cannot be weaponized to eliminate the CLT or make it impossibly difficult — the existing test remains operative.
+[§5.5] Founding Generation Citizenship
+The circumstances of ratification require a transitional citizenship grant for those who held voting rights at the moment of founding.
 [§5.5.a] Automatic Citizenship Grant
 All individuals holding voting rights on Day Zero of ratification are automatically granted full citizenship without testing or application. The Day Zero Grandfather Clause prevents the new Republic from immediately disenfranchising its existing population by requiring existing voters to re-qualify under new standards.
 [§6.1] The Dual-Gate System
@@ -452,6 +484,8 @@ The asylum proceedings statute must ensure asylum is accessible to persons in Te
 An unaccompanied minor arriving in the Republic or presenting to Republic authorities is an Inhabitant from the moment of contact and holds full §1.28 protection. A federal legal guardian must be appointed within 24 hours. No unaccompanied minor may be detained in a facility not specifically designated and resourced for children.
 [§7.1] Standard Elections — Ranked Choice
 All federal elections on National Election Day, every two years. All elections for House, Senate, SC, and Electoral Commission seats use Ranked Choice Voting — majority required, not plurality. No federal elections outside National Election Day except special elections for vacancies.
+[§7.2] Presidential Election System
+The President is elected through a two-component national system that combines a ranked-choice popular vote with regional representation. No candidate may win the presidency on the basis of either component alone.
 [§7.2.a] National Ranked-Choice Vote
 Presidential elections use Ranked Choice Voting conducted nationally. Votes transfer until one candidate holds a majority of active ballots nationwide. A candidate must achieve both a national majority and broad geographic distribution under the combined score mechanism in §7.2.b. The Electoral Commission administers the national election and certifies results under §7.2.e.
 [§7.2.b] The Combined Score
@@ -484,6 +518,8 @@ Territory citizens hold the full §1.20 right to vote in presidential elections.
 The Electoral Commission certifies the final presidential election result to the NRS within a period the Legislature defines by statute. Certification is final and may be challenged only before the Supreme Court within 14 days. No transfer of presidential authority may be delayed beyond the constitutionally fixed moment.
 [§7.2.f] Run-off
 If two candidates are within 0.5 percentage points of each other on the final combined score as calculated under §7.2.b, a head-to-head national RCV runoff is conducted between those two candidates. The runoff closes the edge-case gap where the combined score is mathematically indeterminate.
+[§7.3] Legislative Elections
+Legislative elections are administered by the Electoral Commission free from executive interference. The National Voting System is the uniform platform for all federal elections.
 [§7.3.a] No Executive Interference
 The President may not declare, postpone, or influence the scheduling of elections — including declaring emergencies that have the effect of postponing them. §1.26.e's prohibition on emergency-based election postponement backs this up: even a genuine emergency cannot defer a scheduled election.
 [§7.3.b] National Voting System
@@ -500,12 +536,16 @@ EI Mandate — audits both executives and the Monetary Authority. Annual militar
 JI Mandate — audits the courts for judicial scope and independence. Maintains the SC Candidate Registry. Vets judicial nominees and Electoral Commission candidates. Screens citizen referendum petitions for eligibility. Audits the Electoral Commission annually. Reviews accommodation compact compliance under §19.1, Associated Community compact compliance under Article XX, and Article XIV indigenous compact obligations.
 [§8.2] Selection and Independence
 Each Inspectorate is constituted through a cross-nomination process that structurally excludes the body being watched from selecting those who watch it. The Supreme Court nominates the LI Inspector General, confirmed by Senate 2/3 supermajority. The House nominates the EI Inspector General, confirmed by Senate simple majority with JI vetting. The JI Inspector General is selected by public lottery with no political nomination by any branch.
+[§8.3] Inspector General Selection
+Each Inspectorate is headed by an Inspector General selected through a cross-nominating process that ensures no branch selects its own overseer. The selection mechanisms for each IG are specified in this section.
 [§8.3.a] Legislative IG
 LI Inspector General Selection — nominated by the Supreme Court, confirmed by the Senate by 2/3 supermajority. The House is entirely excluded — the body whose seat allocation the census determines has no role in selecting the office that conducts the census. The 2/3 Senate threshold ensures the LI IG commands cross-party support.
 [§8.3.b] Executive IG
 EI Inspector General Selection — nominated by the House, confirmed by the Senate by simple majority, with JI vetting of the nominee's disclosure record before the confirmation vote. The House nominates the EI because the PM — whom the EI watches — is accountable to the House, creating structural alignment without giving the PM or President control over selection.
 [§8.3.c] Term and Staggering
 All IGs serve 10-year non-renewable terms. No two IG terms may begin within 18 months of each other, ensuring continuous institutional knowledge. An outgoing IG may not be reappointed to the same office. The stagger means the system never faces simultaneous turnover in multiple offices.
+[§8.4] Judicial Inspectorate Mandate
+The Judicial Inspectorate monitors the court system, administers the SC candidate registry, conducts compliance audits, and certifies lottery draws and panel selections throughout the constitution. Its mandate is informational only.
 [§8.4.a] Judicial IG Candidate Pool
 JI IG Selection — drawn by public lottery from a qualified candidate pool. The outgoing JI IG administers the draw, witnessed by the other two IGs and three citizens chosen by jury protocols. Published to the NRS immediately. No political body nominates the JI IG — the most structurally independent selection mechanism in the constitution.
 [§8.4.b] JI Compact Compliance Audit
@@ -524,12 +564,16 @@ Within the annual judicial audit, the JI publishes a specific assessment of SC i
 The JI audits inferior courts for compliance with their jurisdictional limits under §4.3.b. Courts that repeatedly exceed their jurisdictional scope, or demonstrate a pattern of failing to apply constitutional standards, are flagged in the JI annual report. The JI identifies systemic compliance issues for legislative or SC attention.
 [§8.4.i] Gatekeeping Appeal
 Any candidate removed from a ballot by the JI's certification function may appeal to the Appellate Court within 14 days. The Court reviews only whether the JI correctly applied the eligibility criteria. Must rule within 21 days. If the removal is found improper, the candidate is reinstated to the ballot.
+[§8.5] Inspector General Removal
+An Inspector General may be removed only through the mechanisms specified in this section. The removal thresholds are designed to prevent any single branch from eliminating its oversight body through ordinary political action.
 [§8.5.a] For-Cause Removal
 For-cause removal of an Inspector General requires a 2/3 vote of both chambers simultaneously, preceded by a substantiated finding from a State Designee Panel under §8.9.f. Duty suspension triggers upon publication of a substantiated Panel finding, pending the legislative vote and any SC review.
 [§8.5.b] No-Cause Removal
 Any IG may be removed without cause by 3/4 of both chambers simultaneously, except the Judicial Inspectorate IG under §8.5.c, whose lottery-based selection makes no-cause removal equivalent to a political veto over the draw result. The higher threshold (3/4 vs 2/3 for cause) ensures no-cause removal is used only when extraordinary circumstances make continued service untenable regardless of conduct.
 [§8.5.c] Judicial IG — For-Cause Only
 JI Removal — the JI IG may only be removed for cause; no-cause removal is not available. The JI's lottery-based selection and its role in judicial independence oversight makes it the most insulated of the three offices.
+[§8.6] Inspectorate Operations and Mandate
+The three Inspectorates operate under a shared information-only mandate: they observe, audit, and publish. They hold no enforcement authority. Their power derives entirely from the constitutional weight of a permanent public record.
 [§8.6.a] Information-Only Mandate
 Inspectorates publish facts; they do not issue binding orders or legal determinations. A finding that a government actor has breached the constitution is a factual statement, not a judgment.
 [§8.6.b] NRS Publication Requirement
@@ -618,6 +662,8 @@ All three Inspectorates certify the draw under §9.3.d, oversee the Commission's
 Commission findings are published directly and jointly to the NRS by all three Inspectorates upon completion of the decennial review. Findings may include assessments of cryptographic integrity, node distribution adequacy, technical standard compliance, and any architectural features that approach or breach constitutional requirements. The Legislature, the RSA Director, and both executives receive findings simultaneously with NRS publication. The Commission's mandate ends upon publication; the Commission dissolves and the pool resets under §9.3.c.
 [§9.4] NRS and Electoral Integrity
 All electoral records (voter registration, ballot counts, audit trails, certification documents) must be published to the NRS within the timeframes specified by the Electoral Commission's constitutional mandate under Article XVI. No classification exception applies to electoral records.
+[§9.5] NRS Administration and Continuity
+The National Record System is administered by a technically independent office under LI oversight. This section governs staffing, continuity, citizen access, and the technical standards that maintain the NRS's constitutional integrity.
 [§9.5.a] NRS Staffing and Independence
 The NRS is administered by a non-partisan technical office reporting to the LI for oversight. NRS staff may not receive direction from either executive or the Legislature regarding the content, timing, or availability of any record. The NRS administrator is appointed by the LI following public application and qualification review.
 [§9.5.b] NRS Downtime Protocol
@@ -654,6 +700,8 @@ The Legislature must by statute establish a public campaign financing system by 
 The public financing system must provide all registered candidates with equal access to public funds. No incumbent advantage in the allocation formula. Private contributions are capped at the de minimis threshold under §18.3. Administered by the Electoral Commission — not by either executive or the Legislature.
 [§10.3.b] Campaign Financing Enforcement
 Violations are a constitutional breach reportable by the EI. The EI audits all campaign finance records within 90 days of any election. Candidates who received impermissible contributions must refund them or have the amount treated as an undisclosed in-kind contribution.
+[§10.4] The Monetary Authority
+The Monetary Authority is the Republic's constitutionally independent central bank, governed by an elected Director and an appointed board. Its mandate hierarchy and independence from political direction are established in this section.
 [§10.4.a] MA Director — Elected Office
 MA Director Election and Board Composition — the MA is governed by an elected Director and a board of five appointed members. The Director is elected by national RCV on National Election Day to a single non-renewable 8-year term, staggered from the board member appointment cycle.
 [§10.4.b] MA Independence
@@ -668,6 +716,8 @@ The MA's calculation methodologies must be published and publicly available. The
 Where the MA cannot certify the incoming government's fiscal position because the inherited data is too incomplete or unreliable, the MA publishes a qualified certification explaining the limitations. The Legislature must respond within 30 days with a plan to establish reliable fiscal data.
 [§10.4.f] Director-Board Authority
 The MA Director chairs the board and holds veto authority over board decisions. The board of five members decides by majority vote; the Director does not hold a board vote. The Director may veto any board decision by publishing written grounds to the NRS within the period the Legislature defines by statute; a veto without published grounds is constitutionally void. The board may override a Director veto by 4-of-5 supermajority; the override and its grounds are published to the NRS. Where a board decision takes effect following a 4-of-5 override and the Director believes it violates the §10.4.b primary mandate hierarchy, the Director may refer the question to the Executive Inspectorate. If the EI advises that a potential mandate hierarchy violation exists, the Director may petition the Supreme Court for a mandate determination. Timelines for the veto, override, EI advisory, and SC petition are established by statute.
+[§10.5] Ethics and Conflict of Interest
+All constitutional officers are subject to the ethics obligations of this section from the moment they take office. These obligations run concurrently with and do not replace any statutory ethics requirements the Legislature may establish.
 [§10.5.a] Personal Financial Disclosure
 All elected and appointed constitutional officers must disclose all financial interests, holdings, income sources, and liabilities to the EI within 30 days of taking office and annually thereafter. Disclosure records are published to the NRS. The standard for all official benefits, allowances, and in-office provisions — housing, healthcare, retirement — is that of a civil service employee in a comparable role. Departure from this standard is permitted only where an official's constitutional responsibilities create a demonstrable operational need, and only to the minimum extent that need requires.
 [§10.5.b] Conflict of Interest Recusal
@@ -684,6 +734,8 @@ Constitutional officers may not move directly from government service into priva
 Ideas, analyses, and work product created during official service belong to the Republic. An officer may not monetize work done in their official capacity for 5 years following service. For classified information, the 5-year cooling-off applies after declassification — it cannot be monetized the day after it becomes public.
 [§10.5.h] Ethics Enforcement
 The EI is the primary enforcement mechanism for the §10.5 ethics provisions. The EI publishes all disclosed conflicts, all flagged violations, and all referrals to the Legislature for removal proceedings. The EI publishes facts and refers serious violations — it does not impose penalties directly.
+[§10.6] National Endowment
+The National Endowment is a constitutionally established reserve fund that provides BNF continuity during periods of severe revenue contraction. It operates independently of the annual budget process.
 [§10.6.a] National Endowment Governance
 Governed by a board of trustees appointed by the PM from JI-maintained candidates, confirmed by the Senate. The board's sole mandate is to preserve and grow the Endowment fund for BNF backstop purposes — it may not be directed to other investment goals by either executive or the Legislature.
 [§10.6.b] National Endowment Activation
@@ -700,6 +752,8 @@ Petition Requirements — the 5% petition must be collected within 90 days of th
 The JI determines whether a targeted law is eligible for referendum. Laws that solely or primarily expand an Article I right are ineligible — the Individual Sovereignty Floor can expand but cannot contract through popular vote. The JI's eligibility determination is final subject only to SC review on an expedited basis within 14 days.
 [§11.1.c] Referendum Thresholds and Finality
 Referendum Outcome — if the referendum passes (simple majority of votes cast, subject to the Legislature-defined turnout threshold), the law is repealed immediately upon EC certification. If it fails, the law remains in effect and cannot be subjected to referendum on the same grounds for 5 years. The Legislature may re-enact a repealed law, but the re-enacted version is again subject to referendum.
+[§11.2] Citizen Initiatives and Local Government
+Citizens hold direct legislative initiative rights at the federal level. Local governments are constitutionally recognized entities whose powers are established by State statute within the limits of this constitution.
 [§11.2.a] Citizen Legislative Initiative
 Distinct from the referendum, the initiative allows citizens to propose legislation directly. 10% of eligible voters petition for a specific legislative proposal. The Legislature must vote on the proposal within 90 days. If it fails or is not voted on, the proposal proceeds to a national referendum at the §15.1.c thresholds — citizen-initiated legislation that bypasses the Legislature requires a higher democratic mandate than simple repeal.
 [§11.2.b] Local Government
@@ -722,6 +776,8 @@ Within 180 days of a Declaration's final expiry, the EI publishes a comprehensiv
 The use of intelligence capabilities in support of authorized military operations. The §1.30.d Intelligence Firewall applies at all times — no military operation authorizes domestic intelligence collection against citizens. Intelligence activities must be published to the NRS in classified summary form within 90 days of operation completion.
 [§12.4] Military Accountability
 Post-Conflict Obligations — before any extended military engagement concludes, the Senate must approve a Transition and Reconstruction Plan specifying the Republic's post-conflict obligations: status of alliance obligations, civilian reconstruction support, transitional justice support, and withdrawal timeline. The Plan is published to the NRS and is binding on the executive.
+[§12.5] Treaty-Based Military Authorization
+An existing treaty may provide an alternative basis for emergency military authorization outside the standard Tier framework. This authorization is strictly bounded and does not displace the Legislature's ultimate authority over sustained operations.
 [§12.5.a] Treaty Emergency Certification
 Where an existing treaty requires emergency military action, the President may invoke Treaty Emergency Certification as an alternative to the standard Tier authorization process. The certification must be published to the NRS within 6 hours with the specific treaty obligation cited. The Senate Armed Services Committee reviews the certification within 48 hours.
 [§12.5.b] Treaty Emergency Procedures
@@ -788,6 +844,8 @@ A sovereign entity may petition to join the Republic's constitutional framework 
 Indigenous Nation Compact — the foundational provision recognizing that Indigenous Nations within the Republic's territory hold a distinct constitutional relationship based on prior sovereignty. The compact relationship is bilateral: the Republic acknowledges Indigenous prior sovereignty; Indigenous Nations acknowledge the Republic's constitutional framework.
 [§14.2] Compact Formation
 An Indigenous Nation may enter a compact with the Republic by submitting a compact proposal to the Senate. The Senate must respond within 90 days. Compact terms are negotiated between the Nation and the PM's domestic affairs office, with JI oversight. Compacts take effect upon 2/3 Senate ratification and Indigenous Nation ratification by their own constitutional process.
+[§14.3] Rights and Governance in Compact Territories
+Article I rights apply in full within all compact territories. Indigenous Nations with compacts hold governance, judicial, and resource sovereignty within their territories, subject to the specific terms of this section.
 [§14.3.a] Article I Rights in Compact Territories
 Article I rights apply in full within compact territories. No compact provision may limit or qualify any Article I right. The compact creates a framework for Indigenous governance, not a carve-out from constitutional rights. Where compact governance conflicts with an Article I right, Article I prevails.
 [§14.3.b] Compact Judicial Authority
@@ -798,12 +856,16 @@ Compact territories include explicit land and resource sovereignty provisions ne
 The Republic recognizes the Indigenous Nation's governance structures as legitimate political institutions within compact scope. Federal agencies must coordinate with compact governance bodies. The Republic may not impose federal administrative structures on compact governance without Nation consent.
 [§14.3.e] Compact Education and Language
 Compacts must include provisions for preservation and transmission of Indigenous languages and cultural practices. The Republic provides federal education funding that supports Indigenous-language instruction within compact territories.
+[§14.4] Compact Administration and Continuity
+Compacts are living agreements administered through joint mechanisms. This section governs dispute resolution, review cycles, and the conditions under which a compact may be modified or terminated.
 [§14.4.a] Compact Dispute Resolution
 Disputes about compact terms are resolved through a Joint Compact Review Council (equal representation of the Nation and the Republic) with appeal to the SC on constitutional questions. The Council's decisions are binding on both parties within the scope of the compact. Neither party may unilaterally declare a compact dispute resolved.
 [§14.4.b] Compact Review Cycle
 Compacts are reviewed on a schedule defined in the compact terms, minimum every 20 years. Either party may request a review outside the scheduled cycle. Reviews are conducted by the Joint Compact Review Council. The review may result in compact amendment by mutual agreement — neither party can impose amendments.
 [§14.4.c] Compact Termination
 A compact may be terminated by mutual agreement only. Neither party may unilaterally terminate a compact. If the Nation seeks termination, the Republic must negotiate exit terms within 2 years. If no agreement is reached, the compact continues and the dispute is referred to the SC.
+[§14.5] Federal Obligations and New Compact Petitions
+The Republic holds affirmative obligations to compact territories. Indigenous communities that do not currently hold a compact retain the right to petition for compact recognition under this section.
 [§14.5.a] Emergency Rights Writ
 Any resident of compact territory who believes an Article I right has been violated may bring an Emergency Rights Writ directly to the SC, bypassing all lower courts and the compact dispute resolution process. The SC must respond within 7 days. Cannot be displaced by compact terms — a direct constitutional remedy that exists independently of compact jurisdiction.
 [§14.5.b] Federal Assistance Obligations
@@ -830,8 +892,12 @@ Citizen-Led Amendment. The only path that entirely bypasses the Legislature. 70%
 Neither the President nor the PM has any role in the constitutional amendment process. No signature required. No veto available. An amendment takes effect the moment the Inspectorates certify ratification and publish it to the NRS. Constitutional change is entirely outside executive control.
 [§15.2.a] Amendment Takes Effect
 An amendment takes effect immediately upon LI certification (Paths A and B) or EC certification (Path C) and NRS publication. No implementation delay, no commencement date, no executive discretion over timing.
+[§15.3] Unamendable Provisions
+Six provisions of this constitution may not be amended by any pathway — not by legislative supermajority, popular ratification, or any combination of both. These provisions define the minimum conditions for constitutional legitimacy itself.
 [§15.3.a] Permanently Unamendable Provisions
 The Unamendable Floor — six provisions that cannot be amended by any process: §1.3 (torture prohibition), §1.4 (slavery and forced labor), §1.14 (habeas corpus), §1.18 (public trial), §1.19 (no retroactive criminal laws), §1.28 (non-refoulement). Article I as a whole can only expand — no amendment may reduce any Article I right below its current floor.
+[§15.4] Territorial Integrity
+The Republic's territorial extent may only be reduced by the consent of the affected population. No State may leave the Republic through ordinary legislation, and no government may cede territory without meeting the threshold established in this section.
 [§15.4.a] Territorial Integrity
 The Republic's territorial extent may only be reduced by a Path B or Path C amendment (not Path A). Expansion of territory is governed by §13.1. No executive action may alter the Republic's territorial extent.
 [§15.4.b] No Secession by Ordinary Legislation
@@ -864,6 +930,8 @@ No person or institution — including Electoral Commission members — may iden
 Every vote cast through the NVS must be individually verifiable by the voter who cast it, without revealing that voter's identity to any other party. The NVS must produce an audit trail that allows independent verification of aggregate results without individual identification. Both requirements must be simultaneously satisfied.
 [§16.3.c] Resilience and Privacy
 The NVS must operate in degraded conditions without compromising ballot secrecy or auditability. No information generated by the NVS — including voter participation records — may be shared with any government body, law enforcement, or foreign entity for any purpose other than administering the relevant election or referendum. Voter participation data is constitutionally protected even from the government.
+[§16.4] Voting Rights and Access
+Every citizen holds the right to vote in federal elections. The Electoral Commission administers the Citizen Voting Credential and is constitutionally obligated to maintain access to the National Voting System for every eligible citizen.
 [§16.4.a] The Citizen Voting Credential
 The Citizen Voting Credential is issued and managed by the Electoral Commission. The system stores only cryptographic identifiers — not names, biometric data, or personal information — ensuring the link between a citizen and their credential cannot be used to identify how they voted. Voluntary biometric authentication may be used as a method of accessing the credential; no biometric data is transmitted to or held by the National Voting System or the Electoral Commission. Citizens whose Credentials are lost or compromised have the right to timely reissuance under a process the Legislature defines by statute.
 [§16.4.b] Remote Voting
@@ -874,6 +942,8 @@ States may implement early voting periods, mail-in ballot options, and alternati
 Before each federal election window opens, the Electoral Commission delivers to every eligible citizen: the list of federal races on their ballot, the NVS access procedures, and the certification timeline. Delivery must reach every eligible citizen through at least two distinct channels.
 [§16.4.e] State Ballot Information on Request
 At a State's request, the Electoral Commission may extend ballot information delivery to cover State and local races. The State bears the cost. The Commission may not refuse except on operational capacity grounds.
+[§16.5] Electoral Commission — Accountability
+The Electoral Commission's independence does not place it above accountability. This section governs its funding, Inspectorate oversight, removal of members for cause, and vacancy procedures.
 [§16.5.a] Campaign Funding
 Campaigns for Electoral Commission seats are publicly funded in full. No private money may be spent on EC campaigns. The EC administers elections for all other offices — it cannot itself be captured by the interests that it would regulate in other campaigns.
 [§16.5.b] JI Oversight
@@ -902,6 +972,8 @@ If no State or Territory submits a bid within the call period, the Senate identi
 Within the specific registered footprint, the federal government has exclusive operational control. The host State or Territory may not tax federal operations, interfere with federal functions, or apply its own law to federal operations within the footprint.
 [§17.2.f] Resident Rights
 Persons residing within any area designated as the federal footprint under §17.3 retain full Article I rights enforceable in federal courts. The host State or Territory may not apply residency-based restrictions on federal footprint residents that conflict with Article I.
+[§17.3] Operational Use Rights
+The federal government holds property interests within States through Operational Use Rights rather than fee ownership. This section governs registration, termination, improvements, and the rights of residents within federal use footprints.
 [§17.3.a] Registration
 Every federal operational use right must be registered on the NRS with precise geographic boundaries, authorized purpose, and termination conditions. There are no unregistered federal land claims. Federal property rights are explicit, bounded, and auditable.
 [§17.3.b] Termination and Reversion
@@ -930,6 +1002,8 @@ Land may be designated National Trust by a 2/3 vote of both chambers with host S
 The National Trust Administrator is a statutory independent officer under §3.7. The Legislature creates the office by statute and establishes the Administrator's independence, term, and removal grounds through the enabling statute. The enabling statute may not reduce the stewardship obligations established in §17.4.a–f or diminish the EI's annual monitoring authority.
 [§17.5] Federal Property in Territories
 Federal operational use rights in Territories follow the same framework as in States under §17.3 and §17.4. Host State legislative consent is not required because Territories have no State legislature; the Territory's representative body and the LI are consulted before any use right is registered. The same constitutional principles and obligations apply.
+[§18.1] Electoral Finance
+Electoral finance is regulated to prevent the structural distortion of democratic accountability through concentrated financial influence. The provisions of this section govern contributions, disclosure, and independent expenditures.
 [§18.1.a] Financial Contributions as Electoral Acts
 Electoral Finance Disclosure — all contributions above the de minimis threshold must be publicly disclosed to the Electoral Commission and published to the NRS. Anonymity in electoral finance is prohibited. The de minimis threshold may not be set so high that it effectively permits anonymous large-scale contributions.
 [§18.1.b] Natural Persons Only
@@ -938,6 +1012,8 @@ Contribution Limits — individual contributions to electoral campaigns are capp
 Independent Expenditure Disclosure — expenditures made independently of but in support of a campaign must also be disclosed. Independent expenditures are not subject to the same contribution limits as direct contributions, but are subject to the same disclosure requirements. Coordinated expenditures are treated as direct contributions.
 [§18.1.d] Full Disclosure
 EC Administration — the Electoral Commission administers all electoral finance rules, reviews all disclosed contributions, publishes all disclosures to the NRS, and investigates suspected violations. The EI audits EC administration annually. Candidates who receive impermissible contributions must report them within 10 days and either return them or have them treated as undisclosed.
+[§18.2] Campaign Conduct
+Candidates for constitutional office are subject to conduct standards administered by the Electoral Commission. These standards govern factual accuracy, media access, and foreign interference — not political content or viewpoint.
 [§18.2.a] Campaign Conduct Standards
 Candidates for constitutional office must campaign in compliance with published EC conduct standards: prohibition on demonstrably false statements of material fact about a candidate's recorded votes — specifically, claiming a vote was cast when it was not, or was not cast when it was; characterization, emphasis, and contextual framing of voting records are protected expression and are not subject to EC conduct review, prohibition on impersonating other candidates, prohibition on vote suppression activities, and prohibition on interference with the electoral administration process.
 [§18.2.b] Adequate Allocation
@@ -946,6 +1022,8 @@ Media and Communication Standards — campaign communications must clearly ident
 Foreign Interference — any attempt by a foreign government, foreign national, or foreign-controlled entity to influence a Republic election is a constitutional breach. Both the EI and the President's intelligence domain have concurrent obligations to monitor and report foreign electoral interference. The EC must publish any credible foreign interference finding to the NRS within 24 hours of identification.
 [§18.2.d] EC Administration
 Incumbent Advantage Rules — constitutional officeholders standing for election in a different race must observe strict separation between their official functions and their campaign activities. Official resources — staff, communications, facilities — may not be used for campaign purposes. The EI audits incumbent campaigns for compliance.
+[§18.3] Public Campaign Financing
+The Republic maintains a publicly funded campaign financing system as an alternative to private fundraising. Participation is voluntary; the system is structured to ensure candidates who participate can mount effective campaigns.
 [§18.3.a] Separation from the Voting System
 Public Campaign Financing Structure — consistent with §10.3.a, the public financing system provides all registered candidates with equal baseline funding. Candidates who opt into the public system accept the contribution cap in exchange for public funding. Candidates who opt out may raise private contributions but must comply with all disclosure and contribution limit requirements.
 [§18.3.b] Registry Contents
@@ -994,6 +1072,8 @@ The Republic inherits and honors all benefit obligations to persons who served i
 The immediate nullification of laws conflicting with the Individual Sovereignty Floor creates constitutional disputes that existing courts may not have capacity to absorb. The Legislature must by statute establish an interim Constitutional Claims Court within Phase 2, with jurisdiction over all Article I claims arising from Day Zero nullification.
 [§19.6.f] Legal Continuity
 The Federated Republic is the legal continuation of the prior government as a matter of international law. All international obligations, financial commitments, treaty relationships, and contractual obligations of the prior government as of Day Zero are assumed by the Republic as its successor sovereign.
+[§19.7] Transition-Period Territory and Subdivision Elections
+The transition period provides specific mechanisms for territories seeking statehood and for prior-government states seeking subdivision. These mechanisms operate alongside the standard Phase structure and do not delay Phase activation.
 [§19.7.a] Transition-Period Territorial Elections
 Territories or subdivisions meeting the §13.2 Competency Baseline by Phase 2 end may petition to enter as State or Territory. Those failing the Baseline enter as Territory under §13.1 and may begin the Statehood Audit immediately. Any territory may choose Territory status by simple legislative vote regardless of whether it meets the Statehood Baseline.
 [§19.7.b] Subdivision Elections
