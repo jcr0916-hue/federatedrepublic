@@ -153,7 +153,17 @@
       font-size:0.82rem;font-style:italic;}
     mark{background:rgba(201,168,76,0.3);color:inherit;padding:0 1px;}
 
-    </style>
+    
+    /* ── ARTICLE MINI-MAP ── */
+    .minimap{position:fixed;top:56px;left:0;width:170px;height:calc(100vh - 56px);overflow-y:auto;background:rgba(27,42,74,0.97);border-right:1px solid rgba(201,168,76,0.15);padding:1.25rem 0;z-index:100;scrollbar-width:thin;scrollbar-color:rgba(201,168,76,0.3) transparent;display:flex;flex-direction:column}
+    .minimap-title{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(201,168,76,0.5);padding:0 1rem 0.75rem;flex-shrink:0}
+    .minimap a{display:block;padding:0.28rem 1rem;font-size:0.68rem;color:rgba(245,240,232,0.35);text-decoration:none;letter-spacing:0.02em;transition:color 0.15s,background 0.15s;line-height:1.35;border-left:2px solid transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .minimap a:hover{color:rgba(245,240,232,0.75);background:rgba(255,255,255,0.05)}
+    .minimap a.active{color:var(--gold);border-left-color:var(--gold);background:rgba(201,168,76,0.08)}
+    .minimap-toggle{display:none;position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:1.1rem;cursor:pointer;z-index:101;align-items:center;justify-content:center;border-radius:2px}
+    @media(max-width:1100px){.minimap{display:none}.minimap-toggle{display:flex}}
+    @media(min-width:1101px){body:has(.minimap) .page-wrap{margin-left:170px}}
+  </style>
   <script src="search-index.js"></script>
 </head>
 <body>
@@ -169,7 +179,8 @@
       <a href="papers.html">Essays</a>
       <a href="changelog.html">Changelog</a>
       <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
       <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
     </div>
     <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
@@ -205,7 +216,8 @@
     <a href="papers.html">Essays</a>
     <a href="changelog.html">Changelog</a>
     <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
+    <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
     <a href="annotated.html">Read the Constitution</a>
     <a href="constitution-v172.docx" download>Download (.docx)</a>
     <a href="contact.html">Contact</a>
@@ -258,6 +270,33 @@
 
 
 
+
+
+  <!-- ARTICLE MINI-MAP -->
+  <nav class="minimap" id="minimap" aria-label="Article navigation">
+    <span class="minimap-title">Articles</span>
+    <a href="#art1" data-art="art1">I · Rights &amp; Floor</a>
+    <a href="#art2" data-art="art2">II · Executives</a>
+    <a href="#art3" data-art="art3">III · Legislature</a>
+    <a href="#art4" data-art="art4">IV · Courts</a>
+    <a href="#art5" data-art="art5">V · Citizenship</a>
+    <a href="#art6" data-art="art6">VI · Immigration</a>
+    <a href="#art7" data-art="art7">VII · Elections</a>
+    <a href="#art8" data-art="art8">VIII · Inspectorates</a>
+    <a href="#art9" data-art="art9">IX · NRS</a>
+    <a href="#art10" data-art="art10">X · Economics</a>
+    <a href="#art11" data-art="art11">XI · Democracy</a>
+    <a href="#art12" data-art="art12">XII · Military</a>
+    <a href="#art13" data-art="art13">XIII · Territories</a>
+    <a href="#art14" data-art="art14">XIV · Indigenous</a>
+    <a href="#art15" data-art="art15">XV · Amendments</a>
+    <a href="#art16" data-art="art16">XVI · Electoral</a>
+    <a href="#art17" data-art="art17">XVII · Property</a>
+    <a href="#art18" data-art="art18">XVIII · Finance</a>
+    <a href="#art19" data-art="art19">XIX · Transition</a>
+    <a href="#art20" data-art="art20">XX · Associated</a>
+  </nav>
+  <button class="minimap-toggle" id="minimapToggle" onclick="document.getElementById('minimap').style.display=(document.getElementById('minimap').style.display==='flex'?'none':'flex')" aria-label="Toggle article navigation">≡</button>
 
 <div id="art1" class="article-section">
   <h2 class="article-header">Article I — The Individual Sovereignty Floor</h2>
@@ -2791,4 +2830,37 @@
     if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
   });
 </script>
+
+  <script>
+  /* ── Article mini-map scroll tracking ── */
+  (function(){
+    var links = document.querySelectorAll('.minimap a[data-art]');
+    if(!links.length) return;
+    var artMap = {};
+    links.forEach(function(l){ artMap[l.dataset.art] = l; });
+    var current = null;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var id = e.target.id;
+          if(current) current.classList.remove('active');
+          current = artMap[id];
+          if(current){
+            current.classList.add('active');
+            var mm = document.getElementById('minimap');
+            if(mm) mm.scrollTop = current.offsetTop - mm.clientHeight/2;
+          }
+        }
+      });
+    },{rootMargin:'-10% 0px -80% 0px',threshold:0});
+    document.querySelectorAll('[id^="art"]').forEach(function(el){ obs.observe(el); });
+    links.forEach(function(l){
+      l.addEventListener('click',function(e){
+        e.preventDefault();
+        var target = document.getElementById(l.dataset.art);
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  })();
+  </script>
 </body>

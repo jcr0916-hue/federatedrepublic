@@ -3,700 +3,449 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scenarios — The Federated Republic</title>
-  <meta name="description" content="45 constitutional scenarios testing the provisions of the Federated Republic — from ordinary governance to institutional stress tests, rights cases, and long-form narratives."
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Scenarios">
-  <meta property="og:description" content="45 constitutional scenarios testing the provisions of the Federated Republic — from ordinary governance to institutional stress tests, rights cases, and long-form narratives.">
-  <meta property="og:url" content="https://thefederatedrepublic.org/scenarios.html">
-  <meta property="og:site_name" content="The Federated Republic">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Scenarios">
-  <meta name="twitter:description" content="45 constitutional scenarios testing the provisions of the Federated Republic — from ordinary governance to institutional stress tests, rights cases, and long-form narratives.">>
+  <title>Scenario Library — The Federated Republic</title>
+  <meta name="description" content="55 scenarios testing the Federated Republic constitution — from ordinary governance to institutional crisis.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.7}
+    /* ── NAV ── */
+    .skip-nav{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-nav:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:0.5rem 1rem;background:var(--gold);color:var(--navy);z-index:300;font-size:0.85rem}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.05rem;font-weight:600;letter-spacing:0.06em;text-decoration:none;display:flex;align-items:center;gap:0.5rem}
+    .nav-seal{height:32px;width:32px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.35);opacity:0.9;flex-shrink:0}
+    .nav-links{display:flex;align-items:center;gap:0.15rem}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
     .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
-    .page-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
-    .page-header h1{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);margin-bottom:0.5rem}
-    .page-header p{color:var(--muted);font-size:0.95rem;line-height:1.75;max-width:540px}
-    .scenario-section{margin-bottom:3rem}
-    .section-label{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.25rem;font-family:'JetBrains Mono',monospace}
-    .featured-card{display:block;text-decoration:none;background:var(--navy);padding:2rem 2.25rem;margin-bottom:1rem;transition:background 0.2s;position:relative;overflow:hidden}
-    .featured-card:hover{background:var(--navy2)}
-    .featured-card::after{content:'→';position:absolute;right:2rem;top:50%;transform:translateY(-50%);color:var(--gold);font-size:1.5rem;opacity:0;transition:opacity 0.2s,right 0.2s}
-    .featured-card:hover::after{opacity:1;right:1.5rem}
-    .fc-tag{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:0.5rem;font-family:'JetBrains Mono',monospace}
-    .fc-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--gold);margin-bottom:0.5rem;line-height:1.2}
-    .fc-desc{font-size:0.88rem;color:rgba(245,240,232,0.65);line-height:1.7;margin-bottom:0.75rem}
-    .fc-meta{font-size:0.7rem;color:rgba(201,168,76,0.5);font-family:'JetBrains Mono',monospace;display:flex;gap:1.5rem}
-    .scenario-list{display:flex;flex-direction:column;gap:0}
-    .scenario-entry{display:block;text-decoration:none;padding:1.75rem 0;border-bottom:1px solid var(--border);transition:all 0.2s;position:relative}
-    .scenario-entry:first-child{border-top:1px solid var(--border)}
-    .scenario-entry:hover{padding-left:1rem;padding-right:1rem;margin:0 -1rem;background:rgba(201,168,76,0.04);border-color:rgba(201,168,76,0.3)}
-    .se-tag{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;font-family:'JetBrains Mono',monospace}
-    .se-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);margin-bottom:0.3rem}
-    .se-desc{font-size:0.86rem;color:var(--muted);line-height:1.6;font-style:italic;margin-bottom:0.4rem}
-    .se-provisions{display:flex;flex-wrap:wrap;gap:0.35rem}
-    .se-prov{font-family:'JetBrains Mono',monospace;font-size:0.62rem;background:rgba(27,42,74,0.08);color:var(--navy);padding:0.15rem 0.5rem;letter-spacing:0.04em}
-    .se-arrow{position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--gold);opacity:0;transition:opacity 0.2s}
-    .scenario-entry:hover .se-arrow{opacity:1}
-    .page-note{margin-top:3rem;padding:1.5rem 2rem;background:var(--navy);color:rgba(245,240,232,0.7);font-size:0.85rem;line-height:1.75}
-    .page-note strong{color:var(--gold)}
-    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}.page-header h1{font-size:1.9rem}.fc-title{font-size:1.4rem}}
-  
-    /* ══ MOBILE RESPONSIVE ══ */
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.75rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s,background 0.2s}
-    .mobile-menu a:last-child{border-bottom:none}
-    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.12);margin:0 0.25rem;flex-shrink:0}
+    .nav-links .nav-tool{border:1px solid rgba(201,168,76,0.3);color:rgba(245,240,232,0.7)}
+    .nav-links .nav-tool:hover{border-color:var(--gold);color:var(--gold)}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .nav-links .nav-cta:hover{background:#d4b055;color:var(--navy2)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:transform 0.2s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu a:first-child{color:var(--gold);font-weight:600}
     .mobile-menu.open{display:flex}
-
-    .filter-bar{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.75rem}
-    .filter-btn{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 0.85rem;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s}
-    .filter-btn:hover{border-color:var(--gold);color:var(--gold)}
-    .filter-btn.active{background:var(--navy);border-color:var(--navy);color:var(--gold)}
-    .scenario-entry.hidden{display:none}
-    .filter-count{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;color:var(--muted);margin-bottom:1.25rem}
-
-    @media(max-width:820px){
-      .hamburger{display:flex}
-      .nav-links{display:none}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}}
+    /* ── HERO ── */
+    .page-header{background:var(--navy);padding:5rem 2rem 2.5rem;margin-top:56px}
+    .page-header-inner{max-width:900px;margin:0 auto}
+    .page-header h1{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--cream);margin-bottom:0.75rem;line-height:1.15}
+    .page-header p{color:rgba(245,240,232,0.6);font-size:0.98rem;max-width:620px;line-height:1.75}
+    .hero-stats{display:flex;gap:2rem;margin-top:1.5rem;flex-wrap:wrap}
+    .hero-stat{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:rgba(245,240,232,0.4);letter-spacing:0.06em;text-transform:uppercase}
+    .hero-stat strong{color:var(--gold);font-size:1.4rem;display:block;margin-bottom:0.2rem;font-family:'Cormorant Garamond',serif;font-weight:400;letter-spacing:0}
+    /* ── MAIN ── */
+    main{max-width:960px;margin:0 auto;padding:0 2rem 5rem}
+    /* ── FEATURED ── */
+    .featured-section{padding:2.5rem 0 0}
+    .featured-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.25rem;font-family:'JetBrains Mono',monospace}
+    .featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-bottom:1rem}
+    .featured-entry{display:flex;flex-direction:column;gap:0.4rem;padding:1.25rem 1.4rem;border:1px solid var(--border);background:rgba(255,255,255,0.5);text-decoration:none;transition:border-color 0.2s,background 0.2s;border-top:3px solid var(--gold)}
+    .featured-entry:hover{border-color:var(--navy);background:white}
+    .fe-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);letter-spacing:0.1em}
+    .fe-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);line-height:1.2}
+    .fe-desc{font-size:0.82rem;color:var(--muted);line-height:1.55}
+    .fe-arrow{margin-top:auto;font-size:0.75rem;color:var(--gold);font-family:'Cormorant Garamond',serif}
+    /* ── RECENT ── */
+    .recent-section{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .section-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:1rem;font-family:'JetBrains Mono',monospace}
+    .recent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem}
+    .recent-card{border:1px solid var(--border);background:rgba(255,255,255,0.4);padding:1rem 1.1rem;text-decoration:none;display:flex;flex-direction:column;gap:0.35rem;transition:border-color 0.2s,background 0.2s}
+    .recent-card:hover{border-color:var(--navy);background:white}
+    .recent-tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold);letter-spacing:0.06em}
+    .recent-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy)}
+    .recent-new{font-size:0.62rem;background:var(--navy);color:var(--gold);padding:0.15rem 0.5rem;align-self:flex-start;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;margin-top:0.25rem}
+    /* ── ACCORDION ── */
+    .library-section{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .library-section:first-of-type{margin-top:1rem}
+    .accordion-controls{display:flex;justify-content:flex-end;margin-bottom:0.5rem}
+    .toggle-all-btn{background:none;border:none;font-size:0.7rem;color:var(--muted);cursor:pointer;font-family:'Jost',sans-serif;letter-spacing:0.05em;padding:0.25rem 0;text-decoration:underline;text-underline-offset:3px}
+    .toggle-all-btn:hover{color:var(--navy)}
+    .accordion{border:1px solid var(--border);background:rgba(255,255,255,0.4)}
+    .accordion+.accordion{border-top:none}
+    .accordion-header{display:flex;align-items:center;padding:1rem 1.25rem;cursor:pointer;gap:1rem;user-select:none;transition:background 0.15s}
+    .accordion-header:hover{background:rgba(255,255,255,0.7)}
+    .accordion-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);flex:1}
+    .accordion-meta{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+    .accordion-count{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted);background:var(--cream2);padding:0.2rem 0.6rem;border-radius:2px;letter-spacing:0.05em}
+    .accordion-chevron{width:18px;height:18px;flex-shrink:0;color:var(--gold);transition:transform 0.25s;margin-left:0.25rem}
+    .accordion-chevron path{stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .accordion.open .accordion-chevron{transform:rotate(180deg)}
+    .accordion-desc{padding:0 1.25rem;font-size:0.85rem;color:var(--muted);line-height:1.65;max-height:0;overflow:hidden;transition:max-height 0.25s ease,padding 0.25s}
+    .accordion.open .accordion-desc{max-height:60px;padding-bottom:0.75rem}
+    .accordion-body{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .accordion.open .accordion-body{max-height:4000px}
+    .scenario-grid{display:flex;flex-direction:column;border-top:1px solid var(--border)}
+    .scenario-entry{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.25rem;text-decoration:none;border-bottom:1px solid rgba(212,201,176,0.4);transition:background 0.15s;background:rgba(255,255,255,0.3)}
+    .scenario-entry:hover{background:rgba(255,255,255,0.8)}
+    .scenario-entry:last-child{border-bottom:none}
+    .se-info{flex:1;min-width:0}
+    .se-tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold);letter-spacing:0.06em;display:block;margin-bottom:0.2rem}
+    .se-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .se-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;margin-top:0.15rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .se-arrow{font-size:1.1rem;color:var(--gold);flex-shrink:0;font-family:'Cormorant Garamond',serif}
+    /* ── FOOTER ── */
+    .site-footer{background:var(--navy);color:rgba(245,240,232,0.5);padding:2rem;text-align:center;font-size:0.8rem;margin-top:3rem}
+    .site-footer a{color:var(--gold);text-decoration:none}
+    .site-footer a:hover{text-decoration:underline}
+    .download-card{display:inline-flex;align-items:center;gap:1rem;border:1px solid rgba(201,168,76,0.3);padding:0.75rem 1.25rem;margin-top:1rem;border-radius:2px}
+    .download-card .dc-meta{text-align:left}
+    .download-card .dc-label{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);display:block;margin-bottom:0.2rem}
+    .download-card .dc-title{color:rgba(245,240,232,0.85);font-size:0.88rem}
+    .download-card .dc-btn{background:var(--gold);color:var(--navy);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;font-weight:600;font-family:'Jost',sans-serif;text-decoration:none;white-space:nowrap}
+    @media(max-width:700px){
+      .page-header{padding:4.5rem 1.25rem 2rem}
+      .page-header h1{font-size:2rem}
+      main{padding:0 1.25rem 4rem}
+      .featured-grid{grid-template-columns:1fr}
+      .recent-grid{grid-template-columns:1fr}
+      .accordion-title{font-size:1rem}
+      .se-desc{display:none}
+      .hero-stats{gap:1.25rem}
     }
-    @media(max-width:820px){
-      .page-wrap{padding:76px 1.25rem 60px}
-      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
-      .candidate-grid{grid-template-columns:1fr!important}
-      .vote-display{grid-template-columns:1fr!important}
-      .phil-grid{grid-template-columns:1fr!important}
-      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
-      .reading-entry{flex-direction:column;gap:0.5rem}
-    }
-  
-    /* ── Accessibility ── */
-    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
-    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
-    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
-    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
-    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
-    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-  </style>
-  <style>
-    .featured-section{margin-bottom:3.5rem}
-    .featured-label{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);font-family:'JetBrains Mono',monospace;margin-bottom:1rem;display:block}
-    .featured-intro{font-size:0.95rem;color:var(--muted);margin-bottom:1.75rem;line-height:1.7;max-width:600px}
-    .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    .featured-entry{background:var(--cream2);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.25rem 1.5rem;text-decoration:none;display:block;transition:border-color 0.2s,background 0.2s}
-    .featured-entry:hover{background:#e8e1d0;border-top-color:var(--navy)}
-    .featured-entry .fe-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);display:block;margin-bottom:0.4rem}
-    .featured-entry .fe-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);display:block;margin-bottom:0.4rem}
-    .featured-entry .fe-desc{font-size:0.82rem;color:var(--muted);line-height:1.6}
-    .library-section{margin-bottom:3rem}
-    .category-header{border-bottom:2px solid var(--border);padding-bottom:0.6rem;margin-bottom:0.4rem}
-    .category-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy)}
-    .category-count{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--muted);margin-left:0.75rem}
-    .category-desc{font-size:0.88rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.6;font-style:italic}
-    @media(max-width:640px){.featured-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
-    <div class="nav-links">
-      <a href="annotated.html">Constitution</a>
-      <a href="scenarios.html" class="active">Scenarios</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="papers.html">Essays</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
-    </div>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="seal.png" alt="" class="nav-seal" aria-hidden="true">
+    The Federated Republic
+  </a>
+  <div class="nav-links">
     <a href="annotated.html">Constitution</a>
-    <a href="scenarios.html">Scenarios</a>
+    <a href="scenarios.html" class="active">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="papers.html">Essays</a>
     <a href="changelog.html">Changelog</a>
     <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
-    <a href="annotated.html">Read the Constitution</a>
-    <a href="constitution-v180.docx" download>Download (.docx)</a>
-    <a href="contact.html">Contact</a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <a href="advisor.html" class="nav-tool">Advisor</a>
+    <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
   </div>
+  <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <div class="page-header" id="main-content">
-    <div class="page-header-inner">
-      <h1>The Scenario Library</h1>
-      <p>55 scenarios testing the constitution from ordinary governance to institutional crisis. Start with the eight below — they give the fullest picture of how the system works and why it was designed this way. The complete library follows.</p>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+  <a href="annotated.html">Constitution</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="papers.html">Essays</a>
+  <a href="changelog.html">Changelog</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="advisor.html">Advisor</a>
+  <a href="constitution-v172.docx" download>Download (.docx)</a>
+</div>
+
+<div class="page-header" id="main-content">
+  <div class="page-header-inner">
+    <h1>The Scenario Library</h1>
+    <p>Constitutional provisions under pressure — from ordinary governance to institutional crisis. Start with the eight featured scenarios below. They give the fullest picture of how the system works and why it was designed this way.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>55</strong>Total scenarios</div>
+      <div class="hero-stat"><strong>6</strong>Categories</div>
+      <div class="hero-stat"><strong>566</strong>Provisions tested</div>
     </div>
   </div>
+</div>
 
-  <main class="main">
+<main>
 
-    <!-- FEATURED -->
-    <div class="featured-section">
-      <span class="featured-label">Start Here — Eight Essential Scenarios</span>
-      <div class="featured-grid">
+  <!-- FEATURED -->
+  <section class="featured-section" aria-labelledby="featured-label">
+    <span class="featured-label" id="featured-label">Start Here — Eight Essential Scenarios</span>
+    <div class="featured-grid">
+      <a href="scenario-ordinary.html" class="featured-entry">
+        <span class="fe-num">01 · Ordinary Governance</span>
+        <span class="fe-title">The Ordinary Week</span>
+        <span class="fe-desc">A full week of constitutional governance — a bill, a budget dispute, a PM formation, a Presidential foreign policy action. The system working as designed.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-budget.html" class="featured-entry">
+        <span class="fe-num">02 · Fiscal Accountability</span>
+        <span class="fe-title">The Budget Impasse</span>
+        <span class="fe-desc">A coalition fracture stalls the budget. 600 legislators and 312,400 government employees stop receiving pay. The constitutional clock starts.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-nonderogable.html" class="featured-entry">
+        <span class="fe-num">03 · Non-Derogable Rights</span>
+        <span class="fe-title">Enhanced Measures</span>
+        <span class="fe-desc">A general requests interrogation methods the constitution prohibits. The EI finds a violation. What the Inspectorate can and cannot do.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-independent-agency.html" class="featured-entry">
+        <span class="fe-num">04 · Institutional Independence</span>
+        <span class="fe-title">The Safety Director</span>
+        <span class="fe-desc">A food safety director investigating a politically connected industry receives termination pressure. The constitution's independence architecture holds.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-medical-autonomy.html" class="featured-entry">
+        <span class="fe-num">05 · Medical Autonomy</span>
+        <span class="fe-title">The Referral</span>
+        <span class="fe-desc">A state restricts abortion services through scope of practice regulation — constitutionally valid — then tries to punish a patient, her sister, her doctor, and an out-of-state provider. SC 9-0.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-capital.html" class="featured-entry">
+        <span class="fe-num">06 · Right to Life</span>
+        <span class="fe-title">The Capital Cases</span>
+        <span class="fe-desc">Three questions about capital punishment: whether §1.1 permits it, whether §1.2 applies to the method, and whether a federal abolition statute binds state criminal law.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-status-order.html" class="featured-entry">
+        <span class="fe-num">07 · Interstate Recognition</span>
+        <span class="fe-title">Everywhere She Goes</span>
+        <span class="fe-desc">A family with a same-sex adoption order moves to a state that refuses recognition. The SC rules 7-0. A status order issued by a court of competent jurisdiction is valid everywhere in the Republic.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-career.html" class="featured-entry">
+        <span class="fe-num">08 · The Long View</span>
+        <span class="fe-title">A Constitutional Life</span>
+        <span class="fe-desc">Sera Alin — state assembly member, House Finance Committee chair, Prime Minister, Supreme Court justice. Thirty-five years inside the constitutional architecture. The only scenario that shows the constitution as lived experience.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+    </div>
+  </section>
 
-        <a href="scenario-ordinary.html" class="featured-entry">
-          <span class="fe-num">01 · Ordinary Governance</span>
-          <span class="fe-title">The Ordinary Week</span>
-          <span class="fe-desc">A full week of constitutional governance — a bill, a budget dispute, a PM formation, a Presidential foreign policy action. The system working as designed.</span>
-        </a>
+  <!-- RECENTLY ADDED -->
+  <section class="recent-section" aria-labelledby="recent-label">
+    <span class="section-label" id="recent-label">Recently Added</span>
+    <div class="recent-grid">
+      <a href="scenario-redistricting.html" class="recent-card">
+        <span class="recent-tag">House Apportionment · §3.1.a</span>
+        <span class="recent-title">The Census and the Count</span>
+        <span class="recent-new">New</span>
+      </a>
+      <a href="scenario-twenty-one-days.html" class="recent-card">
+        <span class="recent-tag">Presidential Runoff · §18.2</span>
+        <span class="recent-title">Twenty-One Days</span>
+        <span class="recent-new">New</span>
+      </a>
+      <a href="scenario-the-03.html" class="recent-card">
+        <span class="recent-tag">Presidential Election · §7.2.f</span>
+        <span class="recent-title">The 0.3</span>
+        <span class="recent-new">New</span>
+      </a>
+    </div>
+  </section>
 
-        <a href="scenario-budget.html" class="featured-entry">
-          <span class="fe-num">02 · Fiscal Accountability</span>
-          <span class="fe-title">The Budget Impasse</span>
-          <span class="fe-desc">A coalition fracture stalls the budget. 600 legislators and 312,400 government employees stop receiving pay on Day 91. The constitutional pressure mechanism resolves what negotiation could not.</span>
-        </a>
+  <!-- LIBRARY ACCORDION -->
+  <section class="library-section" aria-labelledby="library-label">
+    <span class="section-label" id="library-label">All 49 Scenarios by Category</span>
+    <div class="accordion-controls">
+      <button class="toggle-all-btn" id="toggleAll" onclick="toggleAll()">Expand all</button>
+    </div>
 
-        <a href="scenario-nonderogable.html" class="featured-entry">
-          <span class="fe-num">03 · Non-Derogable Rights</span>
-          <span class="fe-title">Enhanced Measures</span>
-          <span class="fe-desc">A general requests interrogation methods the constitution prohibits. The EI finds a violation. The SC rules 8-1. The prohibition on torture holds regardless of who is asking or why.</span>
-        </a>
-
-        <a href="scenario-independent-agency.html" class="featured-entry">
-          <span class="fe-num">04 · Institutional Independence</span>
-          <span class="fe-title">The Safety Director</span>
-          <span class="fe-desc">A food safety director investigating a politically connected industry receives two removal notices in one day. She stays at her desk throughout both. The constitutional mechanism works as designed.</span>
-        </a>
-
-        <a href="scenario-medical-autonomy.html" class="featured-entry">
-          <span class="fe-num">05 · Medical Autonomy</span>
-          <span class="fe-title">The Referral</span>
-          <span class="fe-desc">A state restricts abortion services through scope of practice regulation — constitutionally valid — then tries to punish a patient, her sister, her doctor, and an out-of-state provider. SC 9-0 strikes down the civil mechanism.</span>
-        </a>
-
-        <a href="scenario-capital.html" class="featured-entry">
-          <span class="fe-num">06 · Right to Life</span>
-          <span class="fe-title">The Capital Cases</span>
-          <span class="fe-desc">Three questions about capital punishment: whether §1.1 permits it, whether §1.2 applies to the method, and whether a federal abolition statute binds state criminal law. Each answer changes what the next majority can do.</span>
-        </a>
-
-        <a href="scenario-seat.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Federal Property &middot; §17.2 Seat of Government &middot; Three Cycles</div>
-          <div class="se-title">The Seat</div>
-          <div class="se-desc">Three cycles of the Seat of Government bid process: a founding bid, a contested twenty-year review where the host changes and federal improvements become a 3.1 billion negotiation, and a no-bid cycle where the Senate must act.</div>
-          <span class="se-arrow">&#x2192;</span>
-        </a>
-
-        <a href="scenario-status-order.html" class="featured-entry">
-          <span class="fe-num">07 · Interstate Recognition</span>
-          <span class="fe-title">Everywhere She Goes</span>
-          <span class="fe-desc">A family with a same-sex adoption order moves to a state that refuses recognition. The SC rules 7-0. A status order issued by a court of competent jurisdiction is valid everywhere in the Republic.</span>
-        </a>
-
-        <a href="scenario-career.html" class="featured-entry">
-          <span class="fe-num">08 · The Long View</span>
-          <span class="fe-title">A Constitutional Life</span>
-          <span class="fe-desc">Sera Alin — state assembly member, House Finance Committee chair, Prime Minister, Supreme Court justice. Thirty-five years inside the constitutional architecture. The only scenario that shows the constitution as lived experience.</span>
-        </a>
-
+    <!-- GOVERNANCE AND INSTITUTIONS -->
+    <div class="accordion" id="acc-gov">
+      <div class="accordion-header" onclick="toggleAccordion('acc-gov')" role="button" aria-expanded="false" tabindex="0">
+        <div class="accordion-title">Governance and Institutions</div>
+        <div class="accordion-meta">
+          <span class="accordion-count">22 scenarios</span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+      <div class="accordion-desc">How the system's machinery works in practice — elections, formation, the PM's legislative instruments, judicial appointments, Inspectorate proceedings, and the MA.</div>
+      <div class="accordion-body">
+        <div class="scenario-grid">
+          <a href="scenario-ordinary.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Ordinary Governance · §3.3 · §2.1 · §2.2</span><span class="se-title">The Ordinary Week</span><span class="se-desc">A full week of constitutional governance — a bill, a budget dispute, a PM formation, a Presidential foreign policy action.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-amendment-authority.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Legislative Authority · §3.2 · §3.8</span><span class="se-title">The Rider</span><span class="se-desc">A Senate amendment attaches unrelated policy to a House bill. The single-subject rule is tested.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-trade-agreement.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Treaty Power · §2.1.h · §3.2</span><span class="se-title">The Nordmere Cases</span><span class="se-desc">Presidential treaty power collides with Senate amendment authority across three parallel proceedings.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-trade-adversarial.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Dual Executive · §2.1 · §2.2</span><span class="se-title">The Concurrence Dispute</span><span class="se-desc">President and PM in concurrent review reach opposite conclusions on the same bill.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-formation.html" class="scenario-entry"><div class="se-info"><span class="se-tag">PM Formation · §2.3 · §2.3.a</span><span class="se-title">The Formation Scenarios</span><span class="se-desc">Five formation attempts. Which succeed, which fail, and what the constitution requires at each stage.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-sc-election.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Judicial Selection · §4.2 · §8.4</span><span class="se-title">The Supreme Court Election</span><span class="se-desc">The JI-run SC lottery produces an unexpected result. The process holds.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-madirector.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Monetary Authority · §10.4 · §10.4.b</span><span class="se-title">The First Director</span><span class="se-desc">The Republic's first MA Director election. Eight years of constitutional independence begin.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-suspensive-veto.html" class="scenario-entry"><div class="se-info"><span class="se-tag">PM Instruments · §2.4 · §2.5</span><span class="se-title">The Veto That Lapses</span><span class="se-desc">A Suspensive Veto expires without override or withdrawal. The constitutional consequences.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-president-combined.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Presidential Election · §7.2.b</span><span class="se-title">The Combined Score</span><span class="se-desc">The first presidential election under the combined popular-plus-geographic scoring system. A candidate wins the popular vote; a different candidate wins the presidency.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-the-03.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Presidential Election · §7.2.f · Runoff</span><span class="se-title">The 0.3</span><span class="se-desc">The first presidential runoff in Republic history, triggered when two candidates finish 0.29 percentage points apart on the combined score.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-twenty-one-days.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Presidential Runoff · §18.2 · Campaign Conduct</span><span class="se-title">Twenty-One Days</span><span class="se-desc">A conduct complaint on Day 3. Foreign interference on Day 11. An EC ruling on Day 15. The constitutional machinery of a runoff campaign under pressure.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-removal-ec.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Electoral Commission · §16.5 · §8.5</span><span class="se-title">The Commissioner</span><span class="se-desc">An Electoral Commission member faces a for-cause removal proceeding. The independence architecture is tested.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-sdp-draw.html" class="scenario-entry"><div class="se-info"><span class="se-tag">State Designee Panel · §8.9 · §8.9.d</span><span class="se-title">The Empty Seat</span><span class="se-desc">Two States maintain empty SDP pools. A removal proceeding is triggered the next morning. The per-incident draw runs anyway.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-rsa-commission.html" class="scenario-entry"><div class="se-info"><span class="se-tag">RSA Commission · §9.3 · §9.3.b</span><span class="se-title">The Architecture</span><span class="se-desc">The decennial RSA Technical Integrity Commission convenes to assess whether the NRS cryptographic architecture still meets constitutional standards.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-sdp-removal.html" class="scenario-entry"><div class="se-info"><span class="se-tag">NRS Compliance · §9.1 · §8.9</span><span class="se-title">The Record</span><span class="se-desc">A State challenges the NRS record of a removal proceeding. What the constitution says about the permanence of the public record.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-removal-justice.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Judicial Removal · §4.1.d · §8.3</span><span class="se-title">The Statement of Grounds</span><span class="se-desc">A Supreme Court justice faces legislative removal. The three-track process and the EI's factual finding role.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-clemency.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Clemency · §2.9 · §2.9.c</span><span class="se-title">The Clemency Scenario</span><span class="se-desc">Presidential clemency granted to a politically connected defendant. The cross-chamber review mechanism activates.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-stagflation.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Monetary Authority · §10.4.b · §10.1</span><span class="se-title">The Stagflation Years</span><span class="se-desc">The MA Director's mandate hierarchy under simultaneous inflation and recession. What the constitution requires and what it leaves to the Director.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-ma-certification.html" class="scenario-entry"><div class="se-info"><span class="se-tag">MA Certification · §10.4.b.i · §8.1.b</span><span class="se-title">The Certification</span><span class="se-desc">The EI questions the MA's methodology independence. The annual certification process and its constitutional consequences.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-cleanmoney.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Campaign Finance · §18.1 · §10.3</span><span class="se-title">The Clean Money Cases</span><span class="se-desc">Three independent expenditure scenarios test the boundary between protected speech and electoral finance regulation.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-recall.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Presidential Removal · §2.10 · §2.10.b</span><span class="se-title">The Presidential Recall</span><span class="se-desc">The Senate refers a presidential recall referendum. The EC administers. The result is not what anyone expected.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-career.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Long View · Multiple Articles</span><span class="se-title">The Long View</span><span class="se-desc">Thirty-five years of constitutional governance through one person's career. The only scenario that shows the system as lived experience.</span></div><span class="se-arrow">→</span></a>
+        </div>
       </div>
     </div>
 
-    <!-- FULL LIBRARY -->
-    <div class="library-section">
-      <div class="page-section-header" style="margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--gold)">
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--navy)">The Full Library</h2>
-        <p style="font-size:0.9rem;color:var(--muted);margin-top:0.5rem">All 49 scenarios organized by subject. The eight above appear in their categories below.</p>
-      </div>
-
-      <!-- GOVERNANCE AND INSTITUTIONS -->
-      <div class="library-section" style="margin-bottom:2.5rem">
-        <div class="category-header">
-          <span class="category-title">Governance and Institutions</span>
-          <span class="category-count">35 scenarios</span>
-        </div>
-        <p class="category-desc">How the system's machinery works in practice — elections, formation, the PM's legislative tools, executive accountability, and the inspectorate design.</p>
-        <div id="scenarioList">
-
-        <a href="scenario-ordinary.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Ordinary Governance · All Articles</div>
-          <div class="se-title">The Ordinary Week <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
-          <div class="se-desc">A full week of constitutional governance across both executives, the legislature, and the courts. The entry point for the entire project.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-                <a href="scenario-amendment-authority.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Senate Amendment Authority · §3.2.i · LI Germaneness Analysis</div>
-          <div class="se-title">The Rider</div>
-          <div class="se-desc">Year 14. The Senate attaches an agricultural export credit provision to the Public Infrastructure Renewal Act. The LI finds it non-germane: the amendment introduces international trade finance into a domestic infrastructure bill. The House rejects the amendment 206-194. The Senate approves the original. The export credit policy is introduced as a standalone bill the following month and passes with a wider margin. §3.2.i tested in full.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§3.2.i Senate Amendment Authority</span>
-            <span class="se-prov">§8.1.a LI Germaneness Analysis</span>
-            <span class="se-prov">§2.4 Suspensive Veto</span>
-            <span class="se-prov">§2.1.i Trade Authority</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-                <a href="scenario-trade-agreement.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">International Trade Authority · §2.1.i · Presidential Election After Failure</div>
-          <div class="se-title">The Nordmere Cases</div>
-          <div class="se-desc">Year 21. Two Nordmere trade agreements fail Senate ratification in the same session. Case One: tariff agreement fails 28-16; domestic customs infrastructure provisions have standalone value; President transmits to House Speaker; House enacts them; tariff provisions renegotiated separately and ratified. Case Two: investment agreement fails 26-18; bilateral provisions worthless without the foreign party's reciprocal obligations; President does not transmit; renegotiates instead; revised agreement ratified. The presidential "may" doing real constitutional work.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.1.i Trade Authority</span>
-            <span class="se-prov">§3.2.e Treaty Ratification</span>
-            <span class="se-prov">§2.1.i PM Concurrence</span>
-            <span class="se-prov">§3.3 Legislative Process</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-trade-adversarial.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Presidential Trade Authority · §2.1.i · Adversarial Concurrence Dispute</div>
-          <div class="se-title">The Concurrence Dispute</div>
-          <div class="se-desc">Year 28. President Solis concludes the Valdenmere Digital Services Agreement — a national treatment compact for digital services — without PM concurrence, believing it falls entirely within the presidential trade domain. PM Adara Vehn publishes her disagreement to the NRS within two days. The SC rules 5-4 within five days: national treatment obligations within Republic territory materially affect the domestic economic sphere; PM concurrence was required. The agreement is void, re-concluded eight days later with PM concurrence, and ratified 20 days after that. §2.1.i's dispute resolution mechanism in adversarial operation.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.1.i Presidential Trade Authority</span>
-            <span class="se-prov">§2.1.h Dual Executive Conflict</span>
-            <span class="se-prov">§4.3 SC Expedited Review</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-formation.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Institutional Process · §2.3 Fixed-Term Caretaker Model</div>
-          <div class="se-title">The Formation Scenarios</div>
-          <div class="se-desc">Two tests of PM formation: a post-election failure where Senate designation becomes mandatory at Day 61, and a mid-term vacancy where the SDACO steps up.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-sc-election.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Institutional Process · §4.2 Open-Candidacy SC Selection</div>
-          <div class="se-title">The Supreme Court Election</div>
-          <div class="se-desc">Two SC elections — an uncontested and a highly contested one — test the open-candidacy selection process and appellate court review of eligibility disputes.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-madirector.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Institutional Process · Year 7 · First MA Election Cycle</div>
-          <div class="se-title">The First Director</div>
-          <div class="se-desc">The Republic's first Monetary Authority Director election. The independence design is tested before the institution has established its own authority.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-suspensive-veto.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">PM Legislative Objection · §2.4.a · Suspensive Veto and Lapse</div>
-          <div class="se-title">The Veto That Lapses</div>
-          <div class="se-desc">The PM issues a Fiscal Objection against a House-passed bill. The House waits out the objection window. The bill becomes law without PM signature or override vote.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-president-combined.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Presidential Election · §7.2.b · The Combined Score</div>
-          <div class="se-title">The Combined Score</div>
-          <div class="se-desc">The first presidential election under the combined popular-plus-geographic scoring system. A candidate wins the popular vote; a different candidate wins the presidency.</div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-the-03.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Presidential Election · §7.2.f · The Runoff</div>
-          <div class="se-title">The 0.3</div>
-          <div class="se-desc">The first presidential runoff in Republic history. Two candidates finish 0.29 percentage points apart on the combined score. The SC rules in 33 hours. Twenty-one days later, the Republic chooses again.</div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-twenty-one-days.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Presidential Runoff · §18.2 · Campaign Conduct</div>
-          <div class="se-title">Twenty-One Days</div>
-          <div class="se-desc">A conduct complaint on Day 3. Foreign interference on Day 11. An EC ruling on Day 15. The constitutional machinery of a presidential runoff campaign under pressure. Companion to The 0.3.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-
-
-        <a href="scenario-removal-ec.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Electoral Integrity · §16.2.a · EC Member Removal</div>
-          <div class="se-title">The Commissioner</div>
-          <div class="se-desc">An Electoral Commission member is removed mid-term for cause. The process tests the EC's independence from the executive and the Panel mechanism at the electoral commission level.</div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-sdp-draw.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Institutional Process · §8.9.a&#x2013;e · Panel Constitution</div>
-          <div class="se-title">The Empty Seat</div>
-          <div class="se-desc">The first State Designee Panel draw under the pool mechanism. Two States let their pools lapse. A drawn member holds a disqualifying position. Both alternates are exhausted. The JI conducts a supplemental draw.</div>
-          <span class="se-arrow">&#x2192;</span>
-        </a>
-
-        <a href="scenario-rsa-commission.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">NRS Integrity &#xb7; §9.X RSA Technical Integrity Commission &#xb7; Decennial Review</div>
-          <div class="se-title">The Architecture</div>
-          <div class="se-desc">The first RSA Technical Integrity Commission completes its decennial review and finds node concentration trending toward a constitutional threshold. The finding goes on the NRS &#x2014; the permanent record of the system it describes.</div>
-          <span class="se-arrow">&#x2192;</span>
-        </a>
-
-        <a href="scenario-sdp-removal.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Inspectorate Accountability · §8.5.a · §8.9.f&#x2013;i · IG For-Cause Removal</div>
-          <div class="se-title">The Record</div>
-          <div class="se-desc">The LI Inspector General is accused of systematic dereliction. The State Designee Panel finds grounds unsubstantiated. The Legislature proceeds to the removal vote anyway. Both the finding and the vote go on the NRS permanently.</div>
-          <span class="se-arrow">&#x2192;</span>
-        </a>
-
-
-        <a href="scenario-removal-justice.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Judicial Accountability · §4.1.c · First SC Justice Removal</div>
-          <div class="se-title">The Statement of Grounds</div>
-          <div class="se-desc">The Republic's first Supreme Court justice removal proceeding. The Statement of Grounds mechanism, the Panel, and the distinction between judicial independence and judicial unaccountability.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-clemency.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Constitutional Process · §2.9.d · Cross-Chamber Clemency Review</div>
-          <div class="se-title">The Clemency Scenario</div>
-          <div class="se-desc">A clemency petition reaches the cross-chamber review panel. The constitutional process for clemency, its limits, and the accountability requirements tested in a contested case.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-                <a href="scenario-stagflation.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Monetary Authority · §10.4.b · Hierarchical Mandate</div>
-          <div class="se-title">The Stagflation Years</div>
-          <div class="se-desc">Years 16–22. A commodity shock drives inflation to 11%. The MA raises the benchmark rate to 7% across five determinations, publishing full reasoning to the NRS each time. Unemployment reaches 11.3%. The PM makes three public addresses urging the MA to consider employment. The MA responds to each on the NRS. The House passes the Mandate Rebalancing Act 231-169. The LI finds it void. The PM issues a Suspensive Veto. The SC rules 6-3: the mandate hierarchy is constitutionally fixed. The primary mandate holds. The secondary mandate operated throughout — within its proper place.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§10.4.b MA Independence and Mandate</span>
-            <span class="se-prov">§8.1.a LI Constitutional Review</span>
-            <span class="se-prov">§2.4 Suspensive Veto</span>
-            <span class="se-prov">§4.3.a Constitutional Review</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
-        <a href="scenario-ma-certification.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Fiscal Independence · §10.4 · Monetary Authority Under Pressure</div>
-          <div class="se-title">The Certification</div>
-          <div class="se-desc">The PM requests MA certification for a fiscal measure the MA board finds constitutionally problematic. The independence design and the limits of political pressure on a constitutionally insulated body.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-cleanmoney.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Electoral Finance · Article XVIII</div>
-          <div class="se-title">The Clean Money Cases</div>
-          <div class="se-desc">Three challenges to the electoral finance framework — dark money routing, foreign-adjacent donors, and spending by constitutionally ineligible entities — and how Article XVIII handles each.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-recall.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Democratic Accountability · §2.10.b · Presidential Popular Recall</div>
-          <div class="se-title">The Presidential Recall</div>
-          <div class="se-desc">A citizen-initiated recall referendum against a sitting President. The petition, the threshold, the timing rules, and what happens when the recall succeeds mid-term.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-                <a href="scenario-career.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Character Narrative · Thirty-Five Years · State Assembly to Supreme Court</div>
-          <div class="se-title">The Long View</div>
-          <div class="se-desc">A state assembly member from Kailos wins a House seat, chairs the Finance Committee, becomes PM through a coalition formation on Day 41 of the formation window, serves five years through a fiscal contraction and a failed constructive vote, and registers for the Supreme Court. The constitution from the inside — what the NRS, the dual executive, the constructive vote, and the open-candidacy SC election feel like to someone living inside them.</div>
-          <div class="se-provisions">
-            <span class="se-prov">§2.3 PM Selection</span>
-            <span class="se-prov">§2.3.b Constructive Vote</span>
-            <span class="se-prov">§2.1 Dual Executive</span>
-            <span class="se-prov">§4.2 SC Open Candidacy</span>
-          </div>
-          <span class="se-arrow">→</span>
-        </a>
+    <!-- RIGHTS UNDER PRESSURE -->
+    <div class="accordion" id="acc-rights">
+      <div class="accordion-header" onclick="toggleAccordion('acc-rights')" role="button" aria-expanded="false" tabindex="0">
+        <div class="accordion-title">Rights Under Pressure</div>
+        <div class="accordion-meta">
+          <span class="accordion-count">6 scenarios</span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </div>
       </div>
-
-      <!-- RIGHTS UNDER PRESSURE -->
-      <div class="library-section" style="margin-bottom:2.5rem">
-        <div class="category-header">
-          <span class="category-title">Rights Under Pressure</span>
-          <span class="category-count">6 scenarios</span>
+      <div class="accordion-desc">Article I rights tested in contested circumstances — emergency powers, environmental protection, medical autonomy, and the absolute floor that cannot be derogated.</div>
+      <div class="accordion-body">
+        <div class="scenario-grid">
+          <a href="scenario-nonderogable.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Emergency Powers · §1.26 · §1.3</span><span class="se-title">Enhanced Measures</span><span class="se-desc">A general requests interrogation methods the constitution prohibits. The EI finds a violation. What the Inspectorate can and cannot do.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-medical-autonomy.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Medical Autonomy · §1.7 · §4.3</span><span class="se-title">The Referral</span><span class="se-desc">A state restricts abortion services through scope of practice regulation — constitutionally valid — then tries to punish a patient, her sister, her doctor, and an out-of-state provider. SC 9-0.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-capital.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Right to Life · §1.1 · §1.2</span><span class="se-title">The Capital Cases</span><span class="se-desc">Three questions about capital punishment: whether §1.1 permits it, whether §1.2 applies to the method, and whether a federal abolition statute binds state criminal law.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-status-order.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Interstate Recognition · §4.4 · §1.9</span><span class="se-title">Everywhere She Goes</span><span class="se-desc">A family with a same-sex adoption order moves to a state that refuses recognition. The SC rules 7-0.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-environment.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Environmental Rights · §1.23 · §1.23.b</span><span class="se-title">The Environmental Scenario</span><span class="se-desc">Industrial contamination triggers the constitutional non-harm obligation. What §1.23 requires of the Republic and what it leaves to the courts.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-emergency.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Emergency Derogation · §1.26 · §1.26.b</span><span class="se-title">The Emergency Scenario</span><span class="se-desc">A declared emergency tests the six non-derogable rights and the Inspectorate continuity requirement. Where the absolute floor holds.</span></div><span class="se-arrow">→</span></a>
         </div>
-        <p class="category-desc">Article I rights tested in contested circumstances — emergency powers, environmental entitlements, cross-border care, absolute prohibitions, and capital punishment.</p>
-
-        <a href="scenario-nonderogable.html" class="scenario-entry" data-type="rights">
-          <div class="se-tag">Non-Derogable Rights · §1.2 · §1.25.b · §15.3.a</div>
-          <div class="se-title">Enhanced Measures <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
-          <div class="se-desc">A military commander requests interrogation methods the constitution absolutely prohibits. The non-derogable rights floor holds.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-medical-autonomy.html" class="scenario-entry" data-type="rights">
-          <div class="se-tag">Medical Autonomy · §1.28 · §1.1 · Cross-Border Care</div>
-          <div class="se-title">The Referral <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
-          <div class="se-desc">A state restricts abortion services locally and tries to extend its reach across borders. SC 9-0 on the cross-border protections; 8-1 on the scope of practice authority.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-capital.html" class="scenario-entry" data-type="rights">
-          <div class="se-tag">Right to Life · §1.1 · §1.2 · §1.25.b · §15.3.a · Federalism</div>
-          <div class="se-title">The Capital Cases <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
-          <div class="se-desc">Three connected questions: method challenge under §1.2, federal abolition by statute, and whether that statute binds state criminal law. Each answer shapes what comes next.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-status-order.html" class="scenario-entry" data-type="rights">
-          <div class="se-tag">Interstate Recognition · §4.4.d · Status Order Portability</div>
-          <div class="se-title">Everywhere She Goes <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
-          <div class="se-desc">A same-sex adoption order denied recognition when the family crosses a state line. SC 7-0. A status order from a court of competent jurisdiction is valid throughout the Republic.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-environment.html" class="scenario-entry" data-type="rights">
-          <div class="se-tag">Rights in Practice · Year 9 · §1.22.a Self-Executing Default</div>
-          <div class="se-title">The Environmental Scenario</div>
-          <div class="se-desc">Year 9 and the legislature has not enacted the environmental protection statute §1.22.a requires. The self-executing default activates. A citizen invokes the constitutional standard directly in court.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-emergency.html" class="scenario-entry" data-type="rights">
-          <div class="se-tag">Emergency Powers · §1.25 · Emergency Derogation and Limits</div>
-          <div class="se-title">The Emergency Scenario</div>
-          <div class="se-desc">A Declaration of National Emergency is used to suspend rights beyond what §1.25 permits. The SC applies the proportionality standard. The non-derogable list and the expiry requirements enforced.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
       </div>
-
-      <!-- DEMOCRATIC MACHINERY -->
-      <div class="library-section" style="margin-bottom:2.5rem">
-        <div class="category-header">
-          <span class="category-title">Democratic Machinery</span>
-          <span class="category-count">5 scenarios</span>
-        </div>
-        <p class="category-desc">Amendments, referenda, redistricting, and the mechanisms that give citizens direct constitutional authority.</p>
-
-        <a href="scenario-amendment.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Constitutional Amendment · §15.1 · Amendment Architecture</div>
-          <div class="se-title">The Amendment Scenario</div>
-          <div class="se-desc">A proposed amendment passes the legislative supermajority but fails the popular ratification threshold. The amendment architecture — who initiates, who ratifies, what is immune — tested in full.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-path-b.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Constitutional Amendment &#xb7; §15.1.b &#xb7; Path B — Parliamentary and Popular</div>
-          <div class="se-title">The Second Threshold</div>
-          <div class="se-desc">An amendment campaign stalls at 68% legislative support — enough for Path B, not enough for Path A&#8217;s three-quarter requirement. The coalition pivots. Both chambers vote. The People must now ratify within 180 days.</div>
-          <span class="se-arrow">&#x2192;</span>
-        </a>
-
-        <a href="scenario-referendum.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Direct Democracy · Article XI · Optional Referendum</div>
-          <div class="se-title">The Referendum Year</div>
-          <div class="se-desc">Three referenda in one year: a citizen-initiated challenge to a new law, a legislative inaction referendum, and a constitutional referendum. The participation threshold and finality rules tested.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-citizen-amendment.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Constitutional Amendment · §15.1.c · Citizen-Led Path and Re-Vote</div>
-          <div class="se-title">The Petition</div>
-          <div class="se-desc">A citizen-initiated constitutional amendment reaches the re-vote threshold after an initial failure. The citizen pathway, the 90-day re-vote window, and what happens when it succeeds.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-second-vote.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Constitutional Amendment &#xb7; §15.1.c &#xb7; Path C Second Vote</div>
-          <div class="se-title">The 77 Percent</div>
-          <div class="se-desc">A Path C amendment achieves 77% affirmative and 62% participation. The 65% floor is not met. The amendment fails &#x2014; no second vote is available. The coalition files a new petition the following morning, with the NRS record of 77% as evidence.</div>
-          <span class="se-arrow">&#x2192;</span>
-        </a>
-
-        <a href="scenario-redistricting.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">House Apportionment · §3.1.a · Webster Method</div>
-          <div class="se-title">The Census and the Count</div>
-          <div class="se-desc">Year 12 redistricting. Three states, one territory, four apportionment methods. Webster, Huntington-Hill, Hamilton, and Jefferson produce nearly identical results — except for one small state where they sharply disagree. With an international comparison across major western democracies.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-budget.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Fiscal Accountability · §10.2 · Budget Failure and Pay Withholding</div>
-          <div class="se-title">The Budget Impasse <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
-          <div class="se-desc">A stalled budget triggers the pay-withholding mechanism. Political pressure does what negotiation could not. Day 91 and counting.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-      </div>
-
-      <!-- TERRITORIAL AND INDIGENOUS -->
-      <div class="library-section" style="margin-bottom:2.5rem">
-        <div class="category-header">
-          <span class="category-title">Territorial and Indigenous</span>
-          <span class="category-count">2 scenarios</span>
-        </div>
-        <p class="category-desc">Devolution, statehood, and the Republic's relationship with indigenous nations whose sovereignty predates its own.</p>
-
-        <a href="scenario-devolution.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">State Governance · §13.3 · Mandatory Devolution</div>
-          <div class="se-title">The Third Audit</div>
-          <div class="se-desc">A State fails its third consecutive governance audit. The devolution process activates. The Early Warning, Remediation Plan, and devolution vote sequence — constitutional mechanics in a State governance failure.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-indigenous.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Indigenous Sovereignty · §14.6 · Status Elections</div>
-          <div class="se-title">The Four Elections</div>
-          <div class="se-desc">Four indigenous nations simultaneously initiate status change processes under §14.6 — one choosing compact continuation, one Associated Community status, one the territorial pathway, one independence. The four options and their constitutional consequences tested concurrently.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-      </div>
-
-      <!-- THE REPUBLIC OVER TIME -->
-      <div class="library-section" style="margin-bottom:2.5rem">
-        <div class="category-header">
-          <span class="category-title">The Republic Over Time</span>
-          <span class="category-count">7 scenarios</span>
-        </div>
-        <p class="category-desc">Long-form multi-year narratives that trace constitutional governance across decades — crises, recoveries, and the document's authority earned through use.</p>
-
-                
-        <a href="scenario-american.html" class="scenario-entry" data-type="longform">
-          <div class="se-tag">Long-Form · Thirty-Five Years</div>
-          <div class="se-title">The American Republic — 35 Years <span style="font-size:0.65rem;background:var(--gold);color:var(--navy);padding:0.1rem 0.4rem;margin-left:0.5rem;font-family:'JetBrains Mono',monospace;vertical-align:middle">FEATURED</span></div>
-          <div class="se-desc">Formation from the United States, five constitutional crises in 35 years, each resolved by a different provision. The recommended entry point for the long-form scenarios.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-american-mature.html" class="scenario-entry" data-type="longform">
-          <div class="se-tag">Long-Form · The American Republic · Years 60–90</div>
-          <div class="se-title">The American Republic — Sixty to Ninety Years</div>
-          <div class="se-desc">The mature republic under sustained demographic and geopolitical pressure. Second-generation constitutional questions that only arise when the first generation has been settled for decades.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-seren.html" class="scenario-entry" data-type="longform">
-          <div class="se-tag">Long-Form · Formation to Year 30</div>
-          <div class="se-title">The Republic of Seren</div>
-          <div class="se-desc">A smaller republic formed from a parliamentary democracy. Thirty years of governance including a surveillance crisis, an economic contraction, and a successful constitutional amendment.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-concordance.html" class="scenario-entry" data-type="longform">
-          <div class="se-tag">Long-Form · Year 0 to Year 35 · Multi-State Founding</div>
-          <div class="se-title">The Concordance</div>
-          <div class="se-desc">Four sovereign nations forming a republic simultaneously under the multi-founder provisions. The coordination problems of a simultaneous founding, an early external threat, and 35 years of federal consolidation.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-china.html" class="scenario-entry" data-type="longform">
-          <div class="se-tag">Long-Form · Year 0 to Year 30 · Continental Scale</div>
-          <div class="se-title">The China Scenario</div>
-          <div class="se-desc">The framework applied to a continental-scale polity. How the federal structure, the inspectorates, the indigenous compact, and the amendment architecture function at a scale the document was not specifically designed for.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-war.html" class="scenario-entry" data-type="longform">
-          <div class="se-tag">Long-Form · Year 0 to Year 7 · Total War</div>
-          <div class="se-title">The War Scenario</div>
-          <div class="se-desc">The Republic in total war within its first seven years. Article XII, emergency powers, the non-derogable floor, and the fiscal mechanisms under maximum pressure simultaneously.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-military-tier.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Military Authorization &#xb7; §2.1.a&#x2013;d &#xb7; Three-Tier War Powers</div>
-          <div class="se-title">The Ninety-Six Hours</div>
-          <div class="se-desc">A Tier 1 defensive response to a border incursion runs into the funding lock. The 96-hour Emergency Defense Allocation expires. The President has Tier 2 authorization. The PM will not certify expenditure. Four constitutional clocks running simultaneously.</div>
-          <span class="se-arrow">&#x2192;</span>
-        </a>
-
-      </div>
-
-      <!-- INTERNATIONAL AND COMPARATIVE -->
-      <div class="library-section" style="margin-bottom:2.5rem">
-        <div class="category-header">
-          <span class="category-title">International and Comparative</span>
-          <span class="category-count">13 scenarios</span>
-        </div>
-        <p class="category-desc">This framework applied to and compared against other constitutional systems. For readers who want context — how this design differs from existing democracies, and what it looks like when the framework encounters conditions it was not built for.</p>
-
-        <a href="scenario-germany.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
-          <div class="se-title">The Germany Scenario</div>
-          <div class="se-desc">The Federated Republic framework applied to the German constitutional context. Comparisons with the Basic Law on the dual executive, the constructive vote, and the unamendable provisions.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-uk.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
-          <div class="se-title">The United Kingdom Scenario</div>
-          <div class="se-desc">The framework applied to a Westminster-tradition polity without a codified constitution. What a written individual sovereignty floor and a dual executive do to a system built on parliamentary supremacy.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-france.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
-          <div class="se-title">The France Scenario</div>
-          <div class="se-desc">Applied to a semi-presidential system. How the domain separation between President and PM differs from cohabitation, and what the inspectorate design adds to a system that already has the Conseil d'État.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        
-
-        <a href="scenario-india.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
-          <div class="se-title">The India Scenario</div>
-          <div class="se-desc">Applied to the world's largest democracy. The territorial framework, the indigenous compact, and the federal structure at scale. How the devolution and statehood provisions handle a highly diverse federal polity.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-weimar.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">Historical Scenario · Applied Constitutionalism</div>
-          <div class="se-title">The Weimar Scenario</div>
-          <div class="se-desc">The Weimar Republic's constitutional failure applied to this framework. Which provisions would have changed the outcome, which would not have, and what the Weimar experience teaches about constitutional design against democratic backsliding.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        
-
-        <a href="scenario-valdoria.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
-          <div class="se-title">The Economic Crisis Scenario</div>
-          <div class="se-desc">A republic in severe economic contraction. The Basic Needs Floor, the Monetary Authority's independence, and the fiscal framework under conditions that have historically produced constitutional failure.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        
-
-        
-
-        <a href="scenario-caledoria.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
-          <div class="se-title">The Indigenous Governance Scenario</div>
-          <div class="se-desc">A polity with a large and politically organized indigenous population adopts the framework. How the Article XIV compact and §14.6 status elections interact with a pre-existing treaty relationship between the state and indigenous nations.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        <a href="scenario-compact.html" class="scenario-entry" data-type="process">
-          <div class="se-tag">Associated Communities &#xb7; §20.4 &#xb7; Compact Termination</div>
-          <div class="se-title">The Departure</div>
-          <div class="se-desc">The Kelen Nation votes to terminate its Associated Community compact. No Republic consent required. But the termination agreement must address citizenship for forty thousand dual-status members, BNF distributions, defence arrangements, and a resource treaty neither party wants to lose.</div>
-          <span class="se-arrow">&#x2192;</span>
-        </a>
-
-        <a href="scenario-immigration.html" class="scenario-entry" data-type="international">
-          <div class="se-tag">International Scenario · Applied Constitutionalism</div>
-          <div class="se-title">The Integration Test</div>
-          <div class="se-desc">The Breckian Republic replaces its immigration statute with a civic integration assessment that discriminates by cultural proximity. The constitutional floor on immigration under §6.1, the §1.8 equality requirement, and what happens when a government designs discrimination into a facially neutral process.</div>
-          <span class="se-arrow">→</span>
-        </a>
-
-        
-
-      </div>
-
     </div>
-  </main>
 
-  <script>
-    document.querySelector('.hamburger')?.addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('open');
+    <!-- DEMOCRATIC MACHINERY -->
+    <div class="accordion" id="acc-demo">
+      <div class="accordion-header" onclick="toggleAccordion('acc-demo')" role="button" aria-expanded="false" tabindex="0">
+        <div class="accordion-title">Democratic Machinery</div>
+        <div class="accordion-meta">
+          <span class="accordion-count">7 scenarios</span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+      <div class="accordion-desc">Amendments, referenda, redistricting, and the mechanisms that give citizens direct constitutional agency — including the three-path amendment system and the referendum repeal right.</div>
+      <div class="accordion-body">
+        <div class="scenario-grid">
+          <a href="scenario-amendment.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Amendment · §15.1 · §15.2</span><span class="se-title">The Amendment Scenario</span><span class="se-desc">A Path A amendment moves through both chambers. Where supermajority arithmetic bites and where it doesn't.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-path-b.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Amendment Path B · §15.1.b · §15.2.b</span><span class="se-title">The Second Threshold</span><span class="se-desc">A Path B amendment reaches the national referendum. The 55% affirmative and 55% participation requirements both tested.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-referendum.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Citizen Referendum · §11.1 · §11.1.b</span><span class="se-title">The Referendum Year</span><span class="se-desc">Citizens petition to repeal an enacted law. The LI eligibility screen, the EC verification, and the 90-day window all exercised simultaneously.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-citizen-amendment.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Citizen Initiative · §11.2 · §11.2.a</span><span class="se-title">The Petition</span><span class="se-desc">Citizens initiate a constitutional amendment under §11.2.a. The initiative process from petition to House introduction.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-second-vote.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Amendment Path C · §15.1.c</span><span class="se-title">The 77 Percent</span><span class="se-desc">A Path C amendment wins 77% affirmative but the participation floor is contested. The EC's certification and the hard-floor design.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-redistricting.html" class="scenario-entry"><div class="se-info"><span class="se-tag">House Apportionment · §3.1.a · Webster Method</span><span class="se-title">The Census and the Count</span><span class="se-desc">Year 12 redistricting. Three states, one territory, four apportionment methods compared. Webster, Huntington-Hill, Hamilton, and Jefferson diverge on one small state.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-budget.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Fiscal Accountability · §10.1 · §3.3</span><span class="se-title">The Budget Impasse</span><span class="se-desc">A coalition fracture stalls the budget. 600 legislators and 312,400 government employees stop receiving pay. The constitutional clock starts.</span></div><span class="se-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERRITORIAL AND INDIGENOUS -->
+    <div class="accordion" id="acc-terr">
+      <div class="accordion-header" onclick="toggleAccordion('acc-terr')" role="button" aria-expanded="false" tabindex="0">
+        <div class="accordion-title">Territorial and Indigenous</div>
+        <div class="accordion-meta">
+          <span class="accordion-count">2 scenarios</span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+      <div class="accordion-desc">Devolution, statehood, and the Republic's relationship with indigenous nations whose sovereignty the constitution acknowledges rather than creates.</div>
+      <div class="accordion-body">
+        <div class="scenario-grid">
+          <a href="scenario-devolution.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Voluntary Devolution · §13.4 · §13.3</span><span class="se-title">The Third Audit</span><span class="se-desc">A State voluntarily devolves after failing its third Statehood Audit. The negotiated restructuring agreement and the path back.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-indigenous.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Indigenous Status · §14.7 · §14.3</span><span class="se-title">The Four Elections</span><span class="se-desc">An Indigenous Nation holds four status elections over forty years — compact, territorial integration attempt, and full independence. Each transition is irrevocable.</span></div><span class="se-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE REPUBLIC OVER TIME -->
+    <div class="accordion" id="acc-time">
+      <div class="accordion-header" onclick="toggleAccordion('acc-time')" role="button" aria-expanded="false" tabindex="0">
+        <div class="accordion-title">The Republic Over Time</div>
+        <div class="accordion-meta">
+          <span class="accordion-count">7 scenarios</span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+      <div class="accordion-desc">Long-form multi-year narratives that trace constitutional governance across decades — the American successor, external comparisons, and the question of whether this framework survives its own stress tests.</div>
+      <div class="accordion-body">
+        <div class="scenario-grid">
+          <a href="scenario-american.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Long View · Years 1–35</span><span class="se-title">The American Republic — 35 Years</span><span class="se-desc">The Republic's first 35 years on former American territory. What holds, what strains, and what the founding generation got right and wrong.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-american-mature.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Long View · Years 60–90</span><span class="se-title">The American Republic — Sixty to Ninety Years</span><span class="se-desc">A mature Republic three generations in. Constitutional drift, amendment attempts, and the document's relationship with a society it no longer perfectly fits.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-seren.html" class="scenario-entry"><div class="se-info"><span class="se-tag">External Comparison · Small Republic</span><span class="se-title">The Republic of Seren</span><span class="se-desc">A small island nation adopts the Federated Republic framework. What works at 4 million people, what doesn't, and what the constitution assumes about scale.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-concordance.html" class="scenario-entry"><div class="se-info"><span class="se-tag">External Comparison · Multilingual</span><span class="se-title">The Concordance</span><span class="se-desc">A multilingual confederation adopts the framework. Language rights, regional autonomy, and the constitution's assumptions about a shared civic identity.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-china.html" class="scenario-entry"><div class="se-info"><span class="se-tag">External Comparison · Large State</span><span class="se-title">The China Scenario</span><span class="se-desc">The framework applied to a state of 1.4 billion people. What scales, what breaks, and what the Republic's design assumes about population size.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-war.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Military Authority · §12 · §1.26</span><span class="se-title">The War Scenario</span><span class="se-desc">Full military mobilization. The Tier system under sustained international conflict. Where the constitution draws the line between defense and overreach.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-military-tier.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Military Tiers · §12.1 · §12.2</span><span class="se-title">The Ninety-Six Hours</span><span class="se-desc">Tier 2 authorization in 96 hours. The military authorization clock, the Senate Armed Services Committee, and what happens when the vote splits.</span></div><span class="se-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERNATIONAL AND COMPARATIVE -->
+    <div class="accordion" id="acc-intl">
+      <div class="accordion-header" onclick="toggleAccordion('acc-intl')" role="button" aria-expanded="false" tabindex="0">
+        <div class="accordion-title">International and Comparative</div>
+        <div class="accordion-meta">
+          <span class="accordion-count">13 scenarios</span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+      <div class="accordion-desc">This framework applied to and compared against other constitutional systems. For readers who want to understand what makes the Republic distinctive — and what it shares with existing democracies.</div>
+      <div class="accordion-body">
+        <div class="scenario-grid">
+          <a href="scenario-germany.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Comparative · Germany</span><span class="se-title">The Germany Scenario</span><span class="se-desc">How the Republic's dual-executive model compares to the German Basic Law. Where they converge, where they diverge, and which handles coalition collapse better.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-uk.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Comparative · United Kingdom</span><span class="se-title">The United Kingdom Scenario</span><span class="se-desc">Westminster versus the Republic. Parliamentary sovereignty, constitutional supremacy, and what an uncodified constitution can and cannot do.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-france.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Comparative · France</span><span class="se-title">The France Scenario</span><span class="se-desc">The Fifth Republic's semi-presidentialism compared to the Republic's dual executive. Cohabitation, the PM's legislative instruments, and executive conflict resolution.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-india.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Comparative · India</span><span class="se-title">The India Scenario</span><span class="se-desc">A federal republic at continental scale. Emergency powers, linguistic federalism, and the Republic's approach to minority rights compared to Articles 356 and 370.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-weimar.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Historical Stress Test · 1932</span><span class="se-title">The Weimar Scenario</span><span class="se-desc">The conditions of 1932 Germany applied to the Republic. What fails, what holds, and which specific provisions were designed to prevent this outcome.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-valdoria.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Economic Crisis · §10 · §10.1</span><span class="se-title">The Economic Crisis Scenario</span><span class="se-desc">Severe economic contraction triggers the BNF protection provisions, the National Endowment, and the MA's mandate hierarchy simultaneously.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-caledoria.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Indigenous Governance · §14</span><span class="se-title">The Indigenous Governance Scenario</span><span class="se-desc">An Indigenous Nation exercises its full compact rights. Resource sovereignty, judicial jurisdiction, and the limits of federal authority within compact territory.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-compact.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Status Transition · §14.7 · §20.1</span><span class="se-title">The Departure</span><span class="se-desc">An Indigenous Nation elects Full Sovereign Independence. The 24-month treaty negotiation, the transition obligations, and what the Republic owes on the way out.</span></div><span class="se-arrow">→</span></a>
+          <a href="scenario-immigration.html" class="scenario-entry"><div class="se-info"><span class="se-tag">Immigration · §6.1 · §6.3</span><span class="se-title">The Integration Test</span><span class="se-desc">The dual-gate immigration system under stress. A State refuses to sponsor; an asylum claim arrives independently. The two tracks run simultaneously.</span></div><span class="se-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>The Federated Republic &nbsp;·&nbsp; <a href="annotated.html">Read the Constitution</a> &nbsp;·&nbsp; <a href="advisor.html">Ask the Advisor</a> &nbsp;·&nbsp; <a href="changelog.html">Changelog</a></p>
+  <div>
+    <a href="constitution-v172.docx" download class="download-card">
+      <div class="dc-meta">
+        <span class="dc-label">v172 · 566 provisions · 20 articles</span>
+        <span class="dc-title">Constitution of the Federated Republic</span>
+      </div>
+      <span class="dc-btn">Download .docx</span>
+    </a>
+  </div>
+</footer>
+
+<script>
+  function toggleAccordion(id) {
+    const el = document.getElementById(id);
+    const isOpen = el.classList.contains('open');
+    el.classList.toggle('open');
+    el.querySelector('.accordion-header').setAttribute('aria-expanded', !isOpen);
+    updateToggleAllBtn();
+  }
+
+  function toggleAll() {
+    const accordions = document.querySelectorAll('.accordion');
+    const allOpen = [...accordions].every(a => a.classList.contains('open'));
+    accordions.forEach(a => {
+      a.classList.toggle('open', !allOpen);
+      a.querySelector('.accordion-header').setAttribute('aria-expanded', !allOpen);
     });
-  </script>
+    document.getElementById('toggleAll').textContent = allOpen ? 'Expand all' : 'Collapse all';
+  }
+
+  function updateToggleAllBtn() {
+    const accordions = document.querySelectorAll('.accordion');
+    const allOpen = [...accordions].every(a => a.classList.contains('open'));
+    const noneOpen = [...accordions].every(a => !a.classList.contains('open'));
+    const btn = document.getElementById('toggleAll');
+    if (allOpen) btn.textContent = 'Collapse all';
+    else btn.textContent = 'Expand all';
+  }
+
+  document.querySelectorAll('.accordion-header').forEach(h => {
+    h.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
+    });
+  });
+</script>
+
 </body>
 </html>

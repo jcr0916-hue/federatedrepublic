@@ -23,6 +23,9 @@
     .nav-links{display:flex;gap:1rem;align-items:center}
     .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
     .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-tool{border:1px solid rgba(201,168,76,0.3)!important;border-radius:2px!important}
+    .nav-tool:hover{border-color:var(--gold)!important}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
     .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
     .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
@@ -110,9 +113,10 @@
     <a href="papers.html">Essays</a>
     <a href="changelog.html">Changelog</a>
     <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
+    <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
     <a href="annotated.html">Read the Constitution</a>
-    <a href="constitution-v180.docx" download>Download (.docx)</a>
+    <a href="constitution-v172.docx" download>Download (.docx)</a>
     <a href="contact.html">Contact</a>
   </div>
 

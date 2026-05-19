@@ -33,6 +33,9 @@
     .nav-links{display:flex;gap:1rem;align-items:center}
     .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
     .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-tool{border:1px solid rgba(201,168,76,0.3)!important;border-radius:2px!important}
+    .nav-tool:hover{border-color:var(--gold)!important}
 
     /* LAYOUT */
     .page-wrap{max-width:720px;margin:0 auto;padding:96px 2rem 80px}
@@ -142,7 +145,8 @@
       <a href="scenarios.html">Scenarios</a>
       <a href="diagrams.html">Diagrams</a>
       <a href="papers.html" class="active">Essays</a>
-      <a href="advisor.html">Advisor</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
       <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
     </div>
     <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
@@ -157,9 +161,10 @@
     <a href="papers.html">Essays</a>
     <a href="changelog.html">Changelog</a>
     <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
+    <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
     <a href="annotated.html">Read the Constitution</a>
-    <a href="constitution-v180.docx" download>Download (.docx)</a>
+    <a href="constitution-v172.docx" download>Download (.docx)</a>
     <a href="contact.html">Contact</a>
   </div>
 
