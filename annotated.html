@@ -163,6 +163,13 @@
     .minimap-toggle{display:none;position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:1.1rem;cursor:pointer;z-index:101;align-items:center;justify-content:center;border-radius:2px}
     @media(max-width:1100px){.minimap{display:none}.minimap-toggle{display:flex}}
     @media(min-width:1101px){body:has(.minimap) .page-wrap{margin-left:170px}}
+  
+    .minimap-scenarios{display:none;border-top:1px solid rgba(201,168,76,0.15);margin-top:0.5rem;padding-top:0.6rem}
+    .mms-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.35);display:block;padding:0 1rem 0.4rem}
+    .mms-link{display:block;padding:0.3rem 1rem;text-decoration:none;transition:background 0.15s;border-left:2px solid transparent}
+    .mms-link:hover{background:rgba(255,255,255,0.06);border-left-color:rgba(201,168,76,0.4)}
+    .mms-title{display:block;font-size:0.66rem;color:rgba(245,240,232,0.6);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .mms-tag{display:block;font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(201,168,76,0.35);margin-top:0.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   </style>
   <script src="search-index.js"></script>
 </head>
@@ -2832,12 +2839,124 @@
 </script>
 
   <script>
-  /* ── Article mini-map scroll tracking ── */
+  /* ── Article mini-map scroll tracking + scenario links ── */
   (function(){
     var links = document.querySelectorAll('.minimap a[data-art]');
     if(!links.length) return;
     var artMap = {};
     links.forEach(function(l){ artMap[l.dataset.art] = l; });
+
+    /* ── Scenario map: up to 3 per article ── */
+    var SCENARIOS = {
+      art1: [
+        {href:'scenario-nonderogable.html', title:'Enhanced Measures', tag:'§1.3 · §1.26'},
+        {href:'scenario-medical-autonomy.html', title:'The Referral', tag:'§1.7 · Rights Floor'},
+        {href:'scenario-capital.html', title:'The Capital Cases', tag:'§1.1 · §1.2'}
+      ],
+      art2: [
+        {href:'scenario-trade-adversarial.html', title:'The Concurrence Dispute', tag:'§2.1 · §2.2'},
+        {href:'scenario-formation.html', title:'The Formation Scenarios', tag:'§2.3 · PM Formation'},
+        {href:'scenario-suspensive-veto.html', title:'The Veto That Lapses', tag:'§2.4 · §2.5'}
+      ],
+      art3: [
+        {href:'scenario-amendment-authority.html', title:'The Rider', tag:'§3.1.c · Single-Subject'},
+        {href:'scenario-ordinary.html', title:'The Ordinary Week', tag:'§3.3 · Legislation'},
+        {href:'scenario-redistricting.html', title:'The Census and the Count', tag:'§3.1.a · Webster'}
+      ],
+      art4: [
+        {href:'scenario-sc-election.html', title:'The Supreme Court Election', tag:'§4.2 · Selection'},
+        {href:'scenario-removal-justice.html', title:'The Statement of Grounds', tag:'§4.1.d · Removal'}
+      ],
+      art5: [
+        {href:'scenario-ordinary.html', title:'The Ordinary Week', tag:'§5.3 · Citizenship'},
+        {href:'scenario-immigration.html', title:'The Integration Test', tag:'§5.1 · Residency'}
+      ],
+      art6: [
+        {href:'scenario-immigration.html', title:'The Integration Test', tag:'§6.1 · §6.3 · Dual Gate'}
+      ],
+      art7: [
+        {href:'scenario-the-03.html', title:'The 0.3', tag:'§7.2.f · Runoff Trigger'},
+        {href:'scenario-twenty-one-days.html', title:'Twenty-One Days', tag:'§7.2 · Runoff Campaign'},
+        {href:'scenario-president-combined.html', title:'The Combined Score', tag:'§7.2.b · Election'}
+      ],
+      art8: [
+        {href:'scenario-removal-ec.html', title:'The Commissioner', tag:'§8.5 · EC Removal'},
+        {href:'scenario-sdp-draw.html', title:'The Empty Seat', tag:'§8.9 · SDP Draw'},
+        {href:'scenario-sdp-removal.html', title:'The Record', tag:'§8.9 · SDP Removal'}
+      ],
+      art9: [
+        {href:'scenario-rsa-commission.html', title:'The Architecture', tag:'§9.3 · RSA Commission'},
+        {href:'scenario-sdp-removal.html', title:'The Record', tag:'§9.1 · NRS Permanence'}
+      ],
+      art10: [
+        {href:'scenario-stagflation.html', title:'The Stagflation Years', tag:'§10.4.b · MA Mandate'},
+        {href:'scenario-ma-certification.html', title:'The Certification', tag:'§10.4.b.i · EI Audit'},
+        {href:'scenario-valdoria.html', title:'The Economic Crisis', tag:'§10.1 · BNF Floor'}
+      ],
+      art11: [
+        {href:'scenario-referendum.html', title:'The Referendum Year', tag:'§11.1 · Citizen Repeal'},
+        {href:'scenario-citizen-amendment.html', title:'The Petition', tag:'§11.2 · Initiative'},
+        {href:'scenario-second-vote.html', title:'The 77 Percent', tag:'§11.2 · Path C Link'}
+      ],
+      art12: [
+        {href:'scenario-military-tier.html', title:'The Ninety-Six Hours', tag:'§12.1 · §12.2 · Tiers'},
+        {href:'scenario-war.html', title:'The War Scenario', tag:'§12 · Sustained Conflict'},
+        {href:'scenario-nonderogable.html', title:'Enhanced Measures', tag:'§12.4 · §1.26.b'}
+      ],
+      art13: [
+        {href:'scenario-devolution.html', title:'The Third Audit', tag:'§13.4 · Devolution'},
+        {href:'scenario-redistricting.html', title:'The Census and the Count', tag:'§13.2 · Statehood'}
+      ],
+      art14: [
+        {href:'scenario-indigenous.html', title:'The Four Elections', tag:'§14.7 · Status Transitions'},
+        {href:'scenario-compact.html', title:'The Departure', tag:'§14.7.d · Independence'},
+        {href:'scenario-caledoria.html', title:'The Indigenous Governance', tag:'§14.3 · Compact Rights'}
+      ],
+      art15: [
+        {href:'scenario-amendment.html', title:'The Amendment Scenario', tag:'§15.1 · Path A'},
+        {href:'scenario-path-b.html', title:'The Second Threshold', tag:'§15.1.b · Path B'},
+        {href:'scenario-second-vote.html', title:'The 77 Percent', tag:'§15.1.c · Path C'}
+      ],
+      art16: [
+        {href:'scenario-the-03.html', title:'The 0.3', tag:'§16.3 · NVS · EC Role'},
+        {href:'scenario-removal-ec.html', title:'The Commissioner', tag:'§16.1 · EC Independence'},
+        {href:'scenario-twenty-one-days.html', title:'Twenty-One Days', tag:'§16.4 · CVC Access'}
+      ],
+      art17: [
+        {href:'scenario-ordinary.html', title:'The Ordinary Week', tag:'§17.1 · Federal Property'}
+      ],
+      art18: [
+        {href:'scenario-cleanmoney.html', title:'The Clean Money Cases', tag:'§18.1 · Finance'},
+        {href:'scenario-twenty-one-days.html', title:'Twenty-One Days', tag:'§18.2 · Conduct Rules'}
+      ],
+      art19: [
+        {href:'scenario-american.html', title:'The American Republic', tag:'§19.2 · Transition'}
+      ],
+      art20: [
+        {href:'scenario-compact.html', title:'The Departure', tag:'§20.1 · AC Status'},
+        {href:'scenario-caledoria.html', title:'The Indigenous Governance', tag:'§20 · Compact'}
+      ]
+    };
+
+    /* ── Scenario panel element ── */
+    var panel = document.createElement('div');
+    panel.className = 'minimap-scenarios';
+    panel.setAttribute('aria-label', 'Related scenarios');
+    document.getElementById('minimap').appendChild(panel);
+
+    function showScenarios(artId){
+      var items = SCENARIOS[artId] || [];
+      if(!items.length){ panel.style.display='none'; return; }
+      panel.style.display = 'block';
+      panel.innerHTML = '<span class="mms-label">Scenarios</span>' +
+        items.map(function(s){
+          return '<a href="'+s.href+'" class="mms-link" title="'+s.tag+'">'
+               + '<span class="mms-title">'+s.title+'</span>'
+               + '<span class="mms-tag">'+s.tag+'</span>'
+               + '</a>';
+        }).join('');
+    }
+
     var current = null;
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
@@ -2848,11 +2967,13 @@
           if(current){
             current.classList.add('active');
             var mm = document.getElementById('minimap');
-            if(mm) mm.scrollTop = current.offsetTop - mm.clientHeight/2;
+            if(mm) mm.scrollTop = current.offsetTop - mm.clientHeight/3;
+            showScenarios(id);
           }
         }
       });
     },{rootMargin:'-10% 0px -80% 0px',threshold:0});
+
     document.querySelectorAll('[id^="art"]').forEach(function(el){ obs.observe(el); });
     links.forEach(function(l){
       l.addEventListener('click',function(e){
