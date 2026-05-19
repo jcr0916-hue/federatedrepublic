@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 0.3 · The Federated Republic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="papers.html">Papers</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="papers.html">Papers</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="advisor.html">Advisor</a>
+  </div>
+</nav>
+
+<!-- SCENARIO HEADER -->
+<div class="scenario-header">
+  <div class="scenario-header-inner">
+    <div class="scenario-label">Presidential Election · Scenario</div>
+    <h1 class="scenario-title">The 0.3</h1>
+    <p class="scenario-subtitle">The first presidential runoff in Republic history, triggered when two candidates finish 0.29 percentage points apart on the combined score</p>
+    <div class="scenario-tags">
+      <span class="scenario-tag">§7.2.a — National RCV</span>
+      <span class="scenario-tag">§7.2.b — Combined Score</span>
+      <span class="scenario-tag">§7.2.c — Regional Score</span>
+      <span class="scenario-tag">§7.2.f — Runoff Trigger</span>
+      <span class="scenario-tag">§7.2.e — Certification</span>
+      <span class="scenario-tag">§4.3.b — Judicial Scope</span>
+      <span class="scenario-tag">§16.1 — Electoral Commission</span>
+      <span class="scenario-tag">§16.3 — NVS Properties</span>
+    </div>
+  </div>
+</div>
+
+<!-- SCENARIO BODY -->
+<main class="scenario-body">
+  <div class="scenario-meta-bar">
+    <span><strong>Setting:</strong> Year 12 of the Federated Republic</span>
+    <span><strong>Duration:</strong> 21 days — Election Night through Runoff Certification</span>
+    <span><strong>Mechanism:</strong> First presidential runoff in Republic history</span>
+  </div>
+
+  <!-- ACT I -->
+  <div class="scenario-act">
+    <div class="act-label">Act I · Election Night</div>
+  </div>
+
+  <p>By 11:00 PM on National Election Day, Electoral Commission Chair Adaeze Nwofor had been on her feet for nineteen hours. The Commission's operations center had processed 218 million ballots through the National Voting System. That number was already published to the NRS — every precinct-level count visible to anyone with a phone. That was the point. <span class="prov-tag">§16.3.b</span></p>
+
+  <p>Three candidates had cleared the opening rounds of ranked-choice tabulation. Senator Marcus Webb had 38.4% of first-preference votes — the highest single-candidate share in twelve years of Republic elections. Governor Dana Holt had 35.8%. Secretary Rosa Esteban, running independently after a decade in successive administrations, held 25.8%. <span class="prov-tag">§7.1 · §7.2.a</span></p>
+
+  <p>The NVS ran the RCV transfers automatically. As Esteban's voters were eliminated and their second preferences counted, the results moved as expected: the majority of her supporters in the interior and the South broke for Holt. Pacific Coast and northeastern Esteban voters split toward Webb. Final post-transfer tabulation:</p>
+
+  <div class="scenario-data-block">
+    <div class="data-label">National RCV · Post-Transfer (% of active ballots)</div>
+    <div class="data-row">
+      <span class="data-candidate">Marcus Webb</span>
+      <span class="data-value">48.7%</span>
+      <span class="data-note">No majority — 5.2% of ballots exhausted</span>
+    </div>
+    <div class="data-row">
+      <span class="data-candidate">Dana Holt</span>
+      <span class="data-value">46.1%</span>
+      <span class="data-note"></span>
+    </div>
+  </div>
+
+  <p>No candidate had achieved a majority of active ballots nationwide. With 5.2% of ballots exhausted — voters who had ranked only Esteban — neither remaining candidate crossed 50%. Under <span class="prov-tag">§7.2.a</span>, a national majority was required to win outright. The race moved to the combined score.</p>
+
+  <div class="scenario-beat">
+    <div class="beat-provision">§7.2.b — The Combined Score</div>
+    <p>Where no candidate achieves a national RCV majority, the combined score determines the winner. The combined score weights national first-preference totals at 65% and regional performance score at 35%. Regional performance is calculated from the ten presidential election regions drawn by the Regional Boundary Commission — designed to ensure a winning candidate builds support across the Republic's geographic spread, not merely its population centers.</p>
+  </div>
+
+  <!-- ACT II -->
+  <div class="scenario-act">
+    <div class="act-label">Act II · The Regional Score</div>
+  </div>
+
+  <p>The ten presidential election regions had been redrawn four years earlier by the Regional Boundary Commission — fifty state lottery delegates who had spent six months drawing boundaries that cut across old state lines in ways no politician could have managed. <span class="prov-tag">§7.2.c · §7.2.c.iv</span></p>
+
+  <p>Webb had won five regions: the Pacific Coast, the Great Lakes Urban Corridor, the Northeast, the Mid-Atlantic, and the Southwest Desert — all by substantial margins, all heavily urbanized. Holt had won the other five: the Great Plains, the Mountain West, the Mississippi Valley, the Gulf South, and the Appalachian Interior — by narrower margins, across more land, fewer people.</p>
+
+  <p>The regional score was not weighted by population. It measured geographic breadth — margin of victory distributed across regions. Webb's enormous coastal wins were efficient for the national vote total. They were less efficient for the regional score.</p>
+
+  <div class="scenario-data-block">
+    <div class="data-label">Regional Performance Score (% of possible regional points)</div>
+    <div class="data-row">
+      <span class="data-candidate">Marcus Webb</span>
+      <span class="data-value">47.0%</span>
+      <span class="data-note">5 regions, large margins, concentrated geography</span>
+    </div>
+    <div class="data-row">
+      <span class="data-candidate">Dana Holt</span>
+      <span class="data-value">51.0%</span>
+      <span class="data-note">5 regions, steady margins across the interior</span>
+    </div>
+  </div>
+
+  <p>At 12:43 AM, the NVS published the combined score calculation:</p>
+
+  <div class="scenario-data-block">
+    <div class="data-label">Combined Score · Final Calculation (§7.2.b)</div>
+    <div class="data-row">
+      <span class="data-candidate">Marcus Webb</span>
+      <span class="data-value">41.41</span>
+      <span class="data-note">0.65 × 38.4 + 0.35 × 47.0 = 24.96 + 16.45</span>
+    </div>
+    <div class="data-row">
+      <span class="data-candidate">Dana Holt</span>
+      <span class="data-value">41.12</span>
+      <span class="data-note">0.65 × 35.8 + 0.35 × 51.0 = 23.27 + 17.85</span>
+    </div>
+    <div class="data-row data-row-highlight">
+      <span class="data-candidate">Margin</span>
+      <span class="data-value">0.29 pp</span>
+      <span class="data-note">Within the §7.2.f 0.5 percentage point threshold</span>
+    </div>
+  </div>
+
+  <p>Webb led on the combined score by 0.29 percentage points — published to the NRS as 0.3 under the EC's rounding protocol, a figure that would name the election in constitutional history.</p>
+
+  <p>Under <span class="prov-tag">§7.2.f</span>, if two candidates were within 0.5 percentage points of each other on the final combined score, a head-to-head national RCV runoff was required. The threshold existed precisely for this: a margin too narrow for the combined score alone to be treated as a definitive expression of national preference.</p>
+
+  <p>0.29 was within 0.5. Commissioner Nwofor published the EC's finding to the NRS at 1:07 AM. A runoff was required within 21 days.</p>
+
+  <!-- ACT III -->
+  <div class="scenario-act">
+    <div class="act-label">Act III · The Challenge</div>
+  </div>
+
+  <p>The Webb campaign filed a petition with the Supreme Court by 9:00 AM. The legal argument was narrow: the 0.5 percentage point threshold was a hard boundary, and 0.29 was within it. But the campaign's real argument — made in press conferences rather than briefs — was that a candidate who had led on first-preference votes, post-transfer votes, and the combined score should not be required to run again.</p>
+
+  <p>The Court took the petition under the 48-hour emergency review mechanism. <span class="prov-tag">§4.3.d</span> Chief Justice Lena Park assigned it to a three-justice panel. The ruling came 33 hours after filing.</p>
+
+  <div class="scenario-ruling">
+    <div class="ruling-label">Supreme Court · Per Curiam</div>
+    <p>The petitioner asks this Court to find that the 0.5 percentage point threshold in §7.2.f should be interpreted as establishing only a mathematical boundary, not triggering a mandatory runoff where the winner is already apparent from the combined score. We decline this interpretation on every available ground.</p>
+    <p>The provision is not ambiguous. A margin of 0.29 percentage points is within 0.5 percentage points. The question of whether the winner is "apparent" from the combined score is not a question this Court may answer. The framers determined that a combined score margin within 0.5 percentage points was not a sufficient expression of national preference to select a President without a further democratic test. That determination reflects a policy judgment that is not ours to second-guess. <span class="prov-tag">§4.3.b</span></p>
+    <p>The Electoral Commission's finding was correct. The runoff shall proceed.</p>
+  </div>
+
+  <p>Governor Holt's campaign said nothing publicly for three hours, then published a single sentence to the NRS campaign record: <em>"We'll see everyone in 21 days."</em></p>
+
+  <!-- ACT IV -->
+  <div class="scenario-act">
+    <div class="act-label">Act IV · The Twenty-One Days</div>
+  </div>
+
+  <p>The runoff was a structurally different election. Under <span class="prov-tag">§7.2.f</span>, it was a head-to-head national RCV contest — no regional score, no third candidate, no transfer rounds. The combined score's geographic balancing mechanism was not in play. The question the combined score had been unable to definitively answer was now asked in its simplest form: between these two people, which one does the Republic prefer?</p>
+
+  <p>Webb's campaign ran on the argument that the system had failed its own test. He had led on every metric and been handed to a runoff anyway.</p>
+
+  <p>Holt's campaign ran on something harder to articulate but easier to feel. She had built support in places that hadn't felt heard in the old political system. The combined score existed because concentrated support wasn't the same as broad support. The 0.29 was a genuine tie by the constitution's own standards — not a malfunction, a measurement. They were asking the Republic to choose again, clearly.</p>
+
+  <p>Secretary Esteban didn't formally endorse. On Day 12 she published a short statement: <em>"I ran because I believed in governing across division. I'll leave my voters to make their own choice. I've made mine privately."</em> Her Texas co-chair appeared at a Holt rally on Day 15. No one was surprised.</p>
+
+  <!-- ACT V -->
+  <div class="scenario-act">
+    <div class="act-label">Act V · The Runoff</div>
+  </div>
+
+  <p>Turnout was 81.3% — higher than the initial election's 79.1%. The NVS processed runoff ballots through the night, publishing running NRS counts at every hour mark. By 2:00 AM the direction was clear. By 3:30 AM it was over.</p>
+
+  <div class="scenario-data-block">
+    <div class="data-label">Runoff Result · National Head-to-Head (§7.2.f)</div>
+    <div class="data-row">
+      <span class="data-candidate">Dana Holt</span>
+      <span class="data-value">53.4%</span>
+      <span class="data-note">President-elect</span>
+    </div>
+    <div class="data-row">
+      <span class="data-candidate">Marcus Webb</span>
+      <span class="data-value">46.6%</span>
+      <span class="data-note"></span>
+    </div>
+  </div>
+
+  <p>Esteban's voters had broken for Holt by roughly three-to-one. The geographic breadth Holt had demonstrated in the initial election translated directly to national breadth in a pure head-to-head contest. The voters who had wanted something different — someone who governed across the old divides rather than running up margins within them — had found their answer.</p>
+
+  <p>Commissioner Nwofor certified the result at 4:47 AM and published the certification to the NRS. Under <span class="prov-tag">§7.2.e</span>, the certification was final. No challenge was filed.</p>
+
+  <p>Senator Webb called Governor Holt at 5:12 AM. His concession statement was published to the NRS at 5:38 AM. Holt's transition team published its first NRS filing eight minutes later.</p>
+
+  <!-- CODA -->
+  <div class="scenario-act">
+    <div class="act-label">Coda · What the System Did</div>
+  </div>
+
+  <p>The political commentary spent weeks relitigating the result. Webb supporters argued that a candidate who had led on every metric had been handed to a runoff mechanism and lost. Holt supporters argued that a 0.29-point margin in a three-candidate field was not a mandate, and the runoff had produced one.</p>
+
+  <p>Both arguments missed the more important point.</p>
+
+  <p>Marcus Webb had run an efficient campaign — enormous support in places already going to support him, margins turned into a national popular vote lead. That was good politics. It was not the same as building a national coalition.</p>
+
+  <p>Dana Holt had run a broader campaign. She had competed everywhere and won everywhere — by smaller margins, consistently. The combined score's 35% regional weighting identified something real about the nature of her support that the raw first-preference numbers had obscured. And in the head-to-head runoff, stripped of the regional mechanism, the voters who had split three ways resolved their preference clearly in her direction.</p>
+
+  <p>The constitution hadn't picked the wrong winner. It had identified a genuine tie by its own measurement and asked a cleaner question. The runoff had resolved it.</p>
+
+  <div class="scenario-ruling">
+    <div class="ruling-label">Chief Justice Lena Park · State of the Republic Ceremony</div>
+    <p>The system worked. Not because it produced the result anyone predicted, but because it produced a result no one could credibly challenge. Dana Holt is President because 53.4% of Republic citizens, given a binary choice, chose her. The path to that answer was longer than usual. It was not less legitimate.</p>
+  </div>
+
+  <!-- WHAT THIS TESTS -->
+  <div class="scenario-analysis">
+    <div class="analysis-label">What This Scenario Tests</div>
+    <div class="analysis-item">
+      <span class="analysis-prov">§7.2.a — National RCV</span>
+      <p>The exhausted-ballot mechanism — 5.2% of voters ranked only the eliminated candidate — is why no majority was achieved. This is realistic in a three-candidate race and constitutionally consequential: it is what routes the election to the combined score rather than resolving on national popular vote alone.</p>
+    </div>
+    <div class="analysis-item">
+      <span class="analysis-prov">§7.2.b — Combined Score</span>
+      <p>The 65/35 weighting between national first-preference and regional performance produces a different ordering than the raw popular vote. A candidate with more national votes can still trail on the combined score if their regional performance is sufficiently concentrated. This is the design intent — preventing a purely urban campaign from winning without demonstrating geographic breadth.</p>
+    </div>
+    <div class="analysis-item">
+      <span class="analysis-prov">§7.2.c — Regional Score</span>
+      <p>Winning five regions by large margins in population-dense areas scores lower than winning five regions by steady margins across the interior. The regional score measures breadth, not magnitude. Webb won the same number of regions as Holt but his wins were geographically clustered; Holt's wins were distributed. This distinction drove the combined score result.</p>
+    </div>
+    <div class="analysis-item">
+      <span class="analysis-prov">§7.2.f — Runoff Trigger</span>
+      <p>The 0.5 percentage point threshold is a hard numerical boundary. 0.29 is within it. The runoff mechanism exists precisely for margins too narrow for the combined score to be treated as definitive — the provision doesn't ask whether the winner is "apparent," it asks whether the margin is within a specified threshold.</p>
+    </div>
+    <div class="analysis-item">
+      <span class="analysis-prov">§4.3.b — Judicial Scope</span>
+      <p>The Court's ruling demonstrates proper judicial restraint — it answered the legal question (is 0.29 within 0.5?) without substituting its policy judgment for the framers' (was the 0.5 threshold wise?). The Court correctly identified this as a policy question, not a constitutional question, and declined to answer it.</p>
+    </div>
+    <div class="analysis-item">
+      <span class="analysis-prov">§7.2.e — Certification and §16.3 — NVS Properties</span>
+      <p>Both the combined score finding and the runoff result were published to the NRS as they were determined. The NVS's public auditability meant every vote was verifiable throughout the process. The transparency didn't prevent controversy — it made the controversy manageable by ensuring no actor could claim the process was opaque.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>The Federated Republic · <a href="index.html">Home</a> · <a href="annotated.html">Read the Constitution</a> · <a href="constitution-v172.docx" download>Download (.docx)</a></p>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileNav() {
+    var menu = document.getElementById('mobileMenu');
+    if (menu) menu.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
