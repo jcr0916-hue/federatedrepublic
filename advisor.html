@@ -88,6 +88,31 @@
       .page-title{font-size:1.9rem}
     }
   </style>
+
+  <script>
+  /* ── Pre-load question from URL parameter ── */
+  (function(){
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('q');
+      if(q && q.trim()){
+        window.addEventListener('DOMContentLoaded', function(){
+          var textarea = document.getElementById('question');
+          if(textarea){
+            textarea.value = decodeURIComponent(q.replace(/\+/g,' '));
+            textarea.dispatchEvent(new Event('input'));
+            // Auto-scroll to question and submit after short delay
+            textarea.scrollIntoView({behavior:'smooth', block:'center'});
+            setTimeout(function(){
+              var btn = document.getElementById('submit-btn');
+              if(btn && !btn.disabled) btn.click();
+            }, 400);
+          }
+        });
+      }
+    } catch(e){}
+  })();
+  </script>
 </head>
 <body>
   <nav>
