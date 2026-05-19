@@ -39,10 +39,6 @@
     .page-desc{font-size:0.92rem;color:var(--muted);line-height:1.8;max-width:520px}
 
     /* Examples */
-    .examples-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace}
-    .examples-grid{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem}
-    .example-btn{background:transparent;border:1px solid var(--border);color:var(--text);font-size:0.78rem;padding:0.4rem 0.75rem;cursor:pointer;line-height:1.5;text-align:left;font-family:'Jost',sans-serif;transition:border-color 0.15s,color 0.15s;max-width:340px}
-    .example-btn:hover{border-color:var(--gold);color:#7A5800}
 
     /* Input */
     .input-wrap{margin-bottom:1.25rem}
@@ -127,8 +123,8 @@
       <p class="page-desc">Describe any situation and see which provisions apply, how they interact, and what the constitution requires. Citations link directly to the annotated constitution.</p>
     </div>
 
-    <div class="examples-label">Example questions</div>
-    <div class="examples-grid" id="examples"></div>
+    <div class="vault-label">Try a question</div>
+    <div class="vault-grid" id="vault"></div>
 
     <div class="input-wrap">
       <textarea id="question" placeholder="Describe a constitutional situation or pose a question…" rows="4" aria-label="Constitutional question"></textarea>
@@ -165,25 +161,39 @@
 
   <script>
   (function() {
-    const EXAMPLES = [
-      "The PM refuses to certify military spending during an active Tier 1 defensive response. What does the constitution require?",
-      "A State has maintained no pool members for three years. A removal proceeding is triggered the following morning. What happens?",
-      "The LI publishes a finding that a passed bill violates the single-subject rule. What legal force does that finding carry?",
-      "Two IGs jointly initiate a For-Cause removal proceeding against the third IG. Walk me through the full process.",
-      "A State votes to voluntarily devolve. What threshold applies and what must the petition specify?",
-      "A Path C amendment wins 73% affirmative but only 61% participation. What are the coalition's constitutional options?",
-      "An Associated Community votes to terminate its compact. What must the termination agreement address?",
-      "The President invokes Tier 2 military authority. The Senate Armed Services Committee splits 5-5. What happens?",
+    const VAULT = [
+      { category: "Executive Power", tags: ["§2.1","§2.6.b","§2.10"], text: "Can the President invoke emergency powers without Senate confirmation? What limits apply?" },
+      { category: "Executive Power", tags: ["§2.3.a","§2.3.c"], text: "The PM loses a constructive no-confidence vote by one seat. Walk me through what happens next." },
+      { category: "Executive Power", tags: ["§2.6.b","§8.1.b"], text: "The EI and LI certify Presidential incapacity but the PM refuses to affirm. What are the constitutional options?" },
+      { category: "Legislative Process", tags: ["§3.1.c","§3.3"], text: "The LI finds a passed bill violates the single-subject rule. What legal force does that finding carry?" },
+      { category: "Legislative Process", tags: ["§2.4","§3.3.b"], text: "The PM invokes a Fiscal Objection on a bill that passed 58% of the full House. What happens?" },
+      { category: "Rights & Courts", tags: ["§1.14","§1.26.b"], text: "Can habeas corpus be suspended during a declared emergency? What are the absolute limits?" },
+      { category: "Rights & Courts", tags: ["§4.2","§8.4"], text: "An SC vacancy has been open for seven months. What constitutional obligations has the JI triggered?" },
+      { category: "Elections", tags: ["§7.2.b","§7.2.f"], text: "Two presidential candidates finish 0.29 percentage points apart on the combined score. What happens?" },
+      { category: "Elections", tags: ["§8.9","§3.2"], text: "A State's SDP pool is empty when a removal proceeding is activated. Does the draw still proceed?" },
+      { category: "Territory & Statehood", tags: ["§13.2","§13.7"], text: "A Territory wants to merge with an adjacent State rather than pursue standalone statehood. What process applies?" },
+      { category: "Territory & Statehood", tags: ["§13.8","§13.4"], text: "A State wants to split into two separate States. Is that possible and what must happen first?" },
+      { category: "Amendment & Change", tags: ["§15.1.c","§15.2"], text: "A Path C amendment wins 73% affirmative but only 61% participation. What are the coalition's options?" },
+      { category: "Amendment & Change", tags: ["§14.7","§20.1"], text: "An Indigenous nation wants Associated Community status. Can they transition directly from a compact?" },
     ];
 
-    const exGrid = document.getElementById('examples');
-    EXAMPLES.forEach(ex => {
-      const btn = document.createElement('button');
-      btn.className = 'example-btn';
-      btn.textContent = ex.length > 76 ? ex.slice(0, 74) + '…' : ex;
-      btn.title = ex;
-      btn.onclick = () => { q.value = ex; q.focus(); updateBtn(); };
-      exGrid.appendChild(btn);
+    const vault = document.getElementById('vault');
+    let lastCat = '';
+    VAULT.forEach(item => {
+      if (item.category !== lastCat) {
+        const catEl = document.createElement('div');
+        catEl.className = 'vault-category';
+        catEl.textContent = item.category;
+        vault.appendChild(catEl);
+        lastCat = item.category;
+      }
+      const card = document.createElement('button');
+      card.className = 'vault-card';
+      const tags = item.tags.map(t => `<span class="vault-tag">${t}</span>`).join('');
+      card.innerHTML = `<div class="vault-tags">${tags}</div><div class="vault-text">${item.text}</div>`;
+      card.title = item.text;
+      card.onclick = () => { q.value = item.text; q.focus(); updateBtn(); q.scrollIntoView({behavior:'smooth',block:'nearest'}); };
+      vault.appendChild(card);
     });
 
     const q = document.getElementById('question');
