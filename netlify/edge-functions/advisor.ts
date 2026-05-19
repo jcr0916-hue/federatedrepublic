@@ -1286,6 +1286,9 @@ Where a partial Territory merges with an existing State, the LI assesses the rem
 [§13.7.e] Senate Ratification and Effect
 Senate ratification requires a simple majority of full seated membership. Upon ratification: the merging territory is incorporated into the existing State by operation of law from the date of ratification; the existing State's House seat allocation is recalculated at the next census; the existing State's two Senate seats remain unchanged; all residents of the merging territory become citizens and residents of the State for all constitutional purposes; and the LI publishes the updated State boundaries to the NRS within 30 days. Where a partial Territory merges, the remaining Territory continues under §13.1 and begins or continues the §13.2 Statehood Audit process from its current baseline.
 
+[§13.8] State Immutability
+A State's constitutional boundaries are fixed. No constitutional mechanism permits a State to divide directly into two or more States. Where a State seeks to subdivide, it must first voluntarily devolve to Territory status under §13.4 — each resulting Territory then pursues Statehood independently through §13.2 or §13.2.d. The same requirement applies to any partial subdivision: the separating portion must first become a Territory before it may seek independent Statehood. A State undergoing this process retains its constitutional status until devolution takes effect; the resulting Territories re-qualify from their current baseline without prejudice.
+
 [§14.1] Acknowledgment of Prior Sovereignty
 The foundational provision recognizing that Indigenous Nations within the Republic's territory hold a distinct constitutional relationship based on prior sovereignty. The compact relationship is bilateral: the Republic acknowledges Indigenous prior sovereignty; Indigenous Nations acknowledge the Republic's constitutional framework.
 
