@@ -3,16 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Map — The Federated Republic</title>
-  <meta name="description" content="A State redistricting commission draws a map that passes LI compliance review. A 1/3 parliamentary minority challenges it at the Supreme Court. The standard: could this map have been drawn by a neutral actor? The Court reviews. Orders specific districts redrawn. Cannot draw them itself."
+  <title>The Census and the Count — The Federated Republic</title>
+  <meta name="description" content="Year 12 redistricting. Three states and a territory. Four apportionment methods. The Webster method, Huntington-Hill, Hamilton, and Jefferson produce different results — and only one state sees them diverge.">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="The Map">
-  <meta property="og:description" content="A State redistricting commission draws a map that passes LI compliance review. A 1/3 parliamentary minority challenges it at the Supreme Court. The standard: could this map have been drawn by a neutra">
-  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-redistricting.html">
+  <meta property="og:title" content="The Census and the Count">
   <meta property="og:site_name" content="The Federated Republic">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Map">
-  <meta name="twitter:description" content="A State redistricting commission draws a map that passes LI compliance review. A 1/3 parliamentary minority challenges it at the Supreme Court. The standard: could this map have been drawn by a neutra">>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -30,7 +25,7 @@
     .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
     .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
     .mobile-menu.open{display:flex}
-    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .page-wrap{max-width:760px;margin:0 auto;padding:88px 2rem 80px}
     .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
     .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
     .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
@@ -40,125 +35,413 @@
     .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
     .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
     .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin:2rem 0 0.75rem}
     .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
     .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
-    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
     .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
     .beat p:last-child{margin-bottom:0}
     .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
     .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
     .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
     .finding p+p{margin-top:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
+    .verdict-box p+p{margin-top:0.75rem}
+    /* Tables */
+    .data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
+    .data-table th{background:var(--navy);color:var(--gold);padding:0.6rem 0.8rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;font-weight:400}
+    .data-table td{padding:0.5rem 0.8rem;border-bottom:1px solid var(--border);vertical-align:top}
+    .data-table tr:nth-child(even) td{background:rgba(0,0,0,0.02)}
+    .data-table .num{text-align:right;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .data-table .highlight td{background:rgba(201,168,76,0.1) !important;font-weight:600}
+    .data-table .differ td{background:rgba(201,168,76,0.2) !important}
+    .differ-note{font-size:0.72rem;color:#7A5800;font-style:italic}
+    .state-block{background:var(--cream2);border:1px solid var(--border);border-top:3px solid var(--navy);padding:1.5rem;margin:2rem 0}
+    .state-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:0.25rem}
+    .state-pop{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);margin-bottom:1rem}
+    .district-row{display:grid;grid-template-columns:160px 1fr auto;gap:0.75rem;align-items:baseline;padding:0.3rem 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:0.9rem}
+    .district-row:last-child{border-bottom:none}
+    .district-num{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--gold)}
+    .analysis-item{margin-bottom:1.5rem}
+    .analysis-prov{font-family:'JetBrains Mono',monospace;font-size:0.72rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;display:inline-block;margin-bottom:0.5rem}
     .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
     .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
-    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}.district-row{grid-template-columns:1fr;gap:0.2rem}.data-table{font-size:0.78rem}}
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
-    <div class="nav-links">
-      <a href="annotated.html">Constitution</a>
-      <a href="scenarios.html" class="active">Scenarios</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="papers.html">Essays</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
-    </div>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
     <a href="annotated.html">Constitution</a>
-    <a href="scenarios.html">Scenarios</a>
+    <a href="scenarios.html" class="active">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="papers.html">Essays</a>
     <a href="changelog.html">Changelog</a>
     <a href="glossary.html">Glossary</a>
     <a href="advisor.html">Advisor</a>
-    <a href="annotated.html">Read the Constitution</a>
-    <a href="constitution-v180.docx" download>Download (.docx)</a>
-    <a href="contact.html">Contact</a>
+    <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+  </div>
+  <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+  <a href="annotated.html">Constitution</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="papers.html">Essays</a>
+  <a href="changelog.html">Changelog</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="advisor.html">Advisor</a>
+  <a href="annotated.html">Read the Constitution</a>
+  <a href="constitution-v172.docx" download>Download (.docx)</a>
+</div>
+
+<div class="page-wrap">
+
+  <div class="scenario-meta">
+    <span class="scenario-tag">House Apportionment &middot; §3.1.a Webster Method &middot; §3.4 Redistricting</span>
+    <h1 class="scenario-title">The Census and the Count</h1>
+    <p class="scenario-subtitle">Year 12 redistricting. Three states and a territory. Four apportionment methods produce nearly identical results — except for one small state where they sharply disagree.</p>
+    <div class="provisions-tested">
+      <span class="prov-tag">§3.1.a — Webster Method</span>
+      <span class="prov-tag">§3.1.b — Census Authority</span>
+      <span class="prov-tag">§3.4 — Redistricting</span>
+      <span class="prov-tag">§3.4.a — Drawing Criteria</span>
+      <span class="prov-tag">§3.5 — House Composition</span>
+      <span class="prov-tag">§13.2 — Statehood Audit</span>
+    </div>
+    <p style="font-size:0.82rem;color:var(--muted);margin-top:1rem;margin-bottom:0"><strong>Setting:</strong> Year 12 &nbsp;&middot;&nbsp; <strong>Jurisdictions:</strong> Cascadia, Meridian, Augusta, Territory of Lakeshore &nbsp;&middot;&nbsp; <strong>Republic population:</strong> 362,000,000</p>
   </div>
 
-  <div class="page-wrap">
-    <div class="scenario-meta">
-      <span class="scenario-tag">Electoral Districts · §3.4 · Redistricting Challenge</span>
-      <h1 class="scenario-title">The Map</h1>
-      <p class="scenario-subtitle">The State of Veldun's redistricting commission draws a map that passes LI compliance review. A parliamentary minority of exactly 1/3 challenges it at the Supreme Court within the 60-day window. The constitutional standard: could this map have been drawn by a neutral actor applying the criteria correctly? The Court finds it could not. Orders specific districts redrawn. Cannot draw them itself.</p>
-      <div class="provisions-tested">
-        <span class="prov-tag">§3.4.a Criteria Hierarchy</span>
-        <span class="prov-tag">§3.4.b Prohibited Inputs</span>
-        <span class="prov-tag">§3.4.c Drawing Authority — States</span>
-        <span class="prov-tag">§3.4.e LI Compliance Review</span>
-        <span class="prov-tag">§3.4.f Court Adjudication</span>
-        <span class="prov-tag">§3.4.g Continuity</span>
+  <div class="scenario-body">
+
+    <h2>The Year 12 Census</h2>
+
+    <p>The Legislative Inspectorate completed the Year 12 population census in Month 8 and published the full results to the NRS within the constitutional 30-day window. Republic-wide population: 362,000,000 citizens, up from 341 million at the founding census.</p>
+
+    <p>The census triggered automatic reapportionment under §3.1.a. The Webster method applied immediately: divide each State's population by 750,000, round to the nearest integer, with a floor of one seat per State. Total House seats: 483. The LI published certified seat allocations within 30 days of the census completion, as constitutionally required.</p>
+
+    <p>Four jurisdictions drew particular attention from the LI's redistricting analysts. Three were States with different apportionment characteristics. One was a Territory watching the process from outside — constitutionally ineligible for House seats, but close enough to statehood eligibility to make the question pointed.</p>
+
+    <div class="beat">
+      <div class="beat-label">The Webster Method · §3.1.a</div>
+      <p>Webster apportionment uses the arithmetic mean as its rounding threshold: a State with quota 1.499 gets 1 seat; a State with quota 1.500 gets 2. The method is mathematically neutral — it neither systematically advantages large States (as Jefferson does) nor small ones (as Huntington-Hill does). The Republic adopted it specifically because it minimizes total representation error across the full State population.</p>
+    </div>
+
+    <h2>The Four Jurisdictions</h2>
+
+    <div class="state-block">
+      <div class="state-name">State of Cascadia</div>
+      <div class="state-pop">Population: 8,235,000 &nbsp;&middot;&nbsp; Quota: 10.980 &nbsp;&middot;&nbsp; Webster seats: <strong>11</strong></div>
+      <p style="font-size:0.9rem;margin-bottom:0.75rem">A large coastal state combining a major technology and finance hub with extensive agricultural interior and mountain regions. The Year 12 census showed continued urban growth on the coast and moderate decline in the rural interior — a pattern that complicated the Regional Boundary Commission's district-drawing work more than the seat count itself.</p>
+      <p style="font-size:0.9rem;margin-bottom:0">Quota of 10.980 rounds cleanly to 11 under all methods. No apportionment controversy here.</p>
+    </div>
+
+    <div class="state-block">
+      <div class="state-name">State of Meridian</div>
+      <div class="state-pop">Population: 11,310,000 &nbsp;&middot;&nbsp; Quota: 15.080 &nbsp;&middot;&nbsp; Webster seats: <strong>15</strong></div>
+      <p style="font-size:0.9rem;margin-bottom:0.75rem">A large plains and mountain state with population concentrated in several mid-sized cities and dispersed across an enormous agricultural territory. Meridian's challenge is geographic: 15 districts averaging 754,000 people across a state with vast low-density regions means some districts are geographically enormous while meeting the population criterion exactly.</p>
+      <p style="font-size:0.9rem;margin-bottom:0">Quota of 15.080 rounds to 15 under all methods. Hamilton's largest-remainder would also give Meridian 15 — the 0.08 remainder is too small to win an additional seat in competition with other States.</p>
+    </div>
+
+    <div class="state-block" style="border-top-color:var(--gold)">
+      <div class="state-name">State of Augusta <span style="font-size:0.9rem;color:var(--gold);font-family:var(--JetBrains Mono);"> ← the interesting case</span></div>
+      <div class="state-pop">Population: 1,080,000 &nbsp;&middot;&nbsp; Quota: 1.440 &nbsp;&middot;&nbsp; Webster seats: <strong>1</strong> &nbsp;&middot;&nbsp; H-H seats: <strong>2</strong></div>
+      <p style="font-size:0.9rem;margin-bottom:0.75rem">A small northeastern state with a single urban center and extensive rural territory. Augusta's quota of 1.440 sits in a narrow band where apportionment methods sharply disagree — above the Huntington-Hill threshold of √2 ≈ 1.414, but below the Webster threshold of 1.500.</p>
+      <p style="font-size:0.9rem;margin-bottom:0">This is the scenario's constitutional hinge point. Which method you use changes Augusta's representation by 100%.</p>
+    </div>
+
+    <div class="state-block" style="border-top-color:var(--muted)">
+      <div class="state-name">Territory of Lakeshore</div>
+      <div class="state-pop">Population: 492,000 &nbsp;&middot;&nbsp; Status: Territory &nbsp;&middot;&nbsp; House seats: <strong>0</strong> (projection if state: 1)</div>
+      <p style="font-size:0.9rem;margin-bottom:0">A midwestern territory in the §13.2 Statehood Audit process. §3.1.a allocates seats to "each State" — Territories are constitutionally outside this provision. Lakeshore's 492,000 citizens hold no House representation. Their projection-if-state quota is 0.656, which rounds to 1 under Webster (minimum floor) or Hamilton (with remainder), and to 1 under H-H (guaranteed first seat). The Territory watches the census and counts the days to statehood eligibility.</p>
+    </div>
+
+    <h2>The Four-Method Comparison</h2>
+
+    <p>Running all four major apportionment methods against the same population figures reveals where they agree — and where they don't.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Jurisdiction</th>
+          <th class="num">Population</th>
+          <th class="num">Quota</th>
+          <th class="num">Webster</th>
+          <th class="num">Huntington-Hill</th>
+          <th class="num">Hamilton</th>
+          <th class="num">Jefferson</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cascadia</td>
+          <td class="num">8,235,000</td>
+          <td class="num">10.980</td>
+          <td class="num">11</td>
+          <td class="num">11</td>
+          <td class="num">11</td>
+          <td class="num">10</td>
+        </tr>
+        <tr>
+          <td>Meridian</td>
+          <td class="num">11,310,000</td>
+          <td class="num">15.080</td>
+          <td class="num">15</td>
+          <td class="num">15</td>
+          <td class="num">15</td>
+          <td class="num">15</td>
+        </tr>
+        <tr class="differ">
+          <td>Augusta<br><span class="differ-note">methods diverge here</span></td>
+          <td class="num">1,080,000</td>
+          <td class="num">1.440</td>
+          <td class="num">1</td>
+          <td class="num"><strong>2</strong></td>
+          <td class="num">1*</td>
+          <td class="num">1</td>
+        </tr>
+        <tr>
+          <td>Lakeshore<br><span class="differ-note">territory (0); projection if state</span></td>
+          <td class="num">492,000</td>
+          <td class="num">0.656</td>
+          <td class="num">1 (min)</td>
+          <td class="num">1 (guaranteed)</td>
+          <td class="num">1 (min)</td>
+          <td class="num">1 (min)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:-1rem">* Hamilton would give Augusta 1 seat in any realistic nationwide allocation — the 0.440 remainder rarely wins against larger States' remainders. Jefferson gives Cascadia only 10 seats (floor of 10.980), systematically disadvantaging large States with high fractional remainders.</p>
+
+    <h2>The Augusta Problem in Detail</h2>
+
+    <p>Augusta's quota of 1.440 sits in a 0.086-wide band between the Huntington-Hill threshold (√(1×2) = 1.4142) and the Webster threshold (1.500). In this band, H-H gives 2 seats and Webster gives 1.</p>
+
+    <div class="finding">
+      <span class="finding-label">The Rounding Thresholds Compared</span>
+      <p><strong>Webster (major fractions):</strong> Round to nearest integer. Threshold between 1 and 2 seats = 1.500. Augusta's 1.440 &lt; 1.500 → <strong>1 seat</strong>.</p>
+      <p><strong>Huntington-Hill (geometric mean):</strong> Compare quota to geometric mean of n and n+1. Threshold = √(1×2) = 1.4142. Augusta's 1.440 &gt; 1.4142 → <strong>2 seats</strong>.</p>
+      <p><strong>Hamilton (largest remainder):</strong> Floor all quotas, then distribute remaining seats by remainder size. Augusta's remainder of 0.440 is typically outcompeted by larger States' remainders → <strong>1 seat</strong> in most realistic scenarios.</p>
+      <p><strong>Jefferson (d'Hondt):</strong> Always floor. 1.440 floors to 1. → <strong>1 seat</strong>. Jefferson systematically favors large States by discarding their large fractional remainders along with small States' smaller ones.</p>
+    </div>
+
+    <p>The policy question H-H versus Webster raises is genuine: which is better, a method that slightly tilts toward small-State representation (H-H) or one that is mathematically neutral between State sizes (Webster)? Augusta's extra H-H seat comes at the expense of a large State somewhere in the Republic. That is not a drafting accident — it is the known, intentional behavior of the Huntington-Hill method. The Republic chose Webster precisely to avoid this tilt.</p>
+
+    <h2>Internal Redistricting</h2>
+
+    <p>Seat allocation is only the first step. Once the LI certifies seat counts, the Regional Boundary Commission in each State convenes to draw district boundaries. The §3.4.a criteria hierarchy applies: population equality first, compactness and contiguity second, communities of interest third, existing political boundaries fourth. No partisan registration data, voting history, incumbent residence, or racial composition as primary consideration may be used.</p>
+
+    <h3>Cascadia — 11 Districts</h3>
+
+    <p>Ideal district population: 748,636. The Commission drew its map around a single geographic tension: two-thirds of Cascadia's population lives within 60 miles of the coast; the remaining third is spread across a land area four times as large. Geographic compactness and equal population cannot both be fully optimized simultaneously.</p>
+
+    <div class="state-block">
+      <div class="district-row" style="border-bottom:2px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted)">
+        <span>DISTRICT NAME</span><span>DESCRIPTION</span><span>POP.</span>
+      </div>
+      <div class="district-row">
+        <div><div class="district-num">Districts 1–2</div>Metro Core</div>
+        <div>Dense coastal city center; tech and financial districts; high transit use</div>
+        <div class="num" style="font-family:'JetBrains Mono',monospace;font-size:0.82rem">~900,000 each</div>
+      </div>
+      <div class="district-row">
+        <div><div class="district-num">Districts 3–4</div>Coastal Suburban</div>
+        <div>Suburban ring; bedroom communities; growing professional population</div>
+        <div class="num" style="font-family:'JetBrains Mono',monospace;font-size:0.82rem">~825,000 each</div>
+      </div>
+      <div class="district-row">
+        <div><div class="district-num">District 5</div>Valley Agricultural</div>
+        <div>Wine and specialty crop region; farmworker communities; rural service towns</div>
+        <div class="num" style="font-family:'JetBrains Mono',monospace;font-size:0.82rem">~748,000</div>
+      </div>
+      <div class="district-row">
+        <div><div class="district-num">Districts 6–7</div>Mountain West</div>
+        <div>Ski economy; outdoor recreation; small cities; significant Indigenous compact territory</div>
+        <div class="num" style="font-family:'JetBrains Mono',monospace;font-size:0.82rem">~675,000 each</div>
+      </div>
+      <div class="district-row">
+        <div><div class="district-num">Districts 8–11</div>Eastern Plateau</div>
+        <div>Ranching; dry-land farming; border communities; very low density — each district covers ~15,000 sq mi</div>
+        <div class="num" style="font-family:'JetBrains Mono',monospace;font-size:0.82rem">~596,000 each</div>
       </div>
     </div>
 
-    <div class="scenario-body">
+    <p>The four eastern plateau districts are geographically massive — unavoidable given population density. The LI's compliance review flagged no criterion violations, though two advocacy groups filed challenges arguing that Districts 8 and 9 split a recognized agricultural community along a river boundary. The SC dismissed both challenges within the 60-day window, finding the Commission had applied the criteria hierarchy correctly. <span class="prov-tag">§3.7.e</span></p>
 
-      <p>The State of Veldun has eleven federal House districts. The post-census redistricting cycle produces a map from the State's independent redistricting commission — established by State statute, structurally independent of the State legislature and executive, with published methodology as required under §3.4.c. The LI reviews the map for compliance with the criteria hierarchy and prohibited inputs and certifies it as compliant. The 60-day public review period opens.</p>
+    <h3>Meridian — 15 Districts</h3>
 
-      <p>On day forty-one of the review period, 54 of the 162 members of the Veldun state legislature — exactly one-third — file a petition challenging the map at the Supreme Court. The petition is accompanied by a statistical analysis prepared by a team of computational geographers.</p>
+    <p>Ideal district population: 754,000. Meridian presents the inverse of Cascadia's problem: instead of coastal concentration, population is spread across a grid of mid-sized cities and vast agricultural land with no dominant urban center. The Commission drew three urban-anchored districts around the three largest cities, then divided the remainder by watershed and agricultural community.</p>
 
-      <h2>The Challenge</h2>
+    <p>No boundary challenges were filed. The Commission's prohibited-inputs compliance was straightforward — Meridian's population distribution correlates weakly with partisan geography, making the criterion-order approach natural rather than strained.</p>
 
-      <p>§3.4.f permits the Court to consider whether "a challenger demonstrates through clear statistical evidence that the map could not have been drawn by a neutral actor applying the criteria correctly." The statistical analysis does exactly this. It runs a simulation of 500,000 randomly generated compliant maps — maps satisfying equal population, contiguity, geographic integrity, and community cohesion in the criteria hierarchy order — and compares them to the Veldun commission's map. The central finding: on a measure of community cohesion, the Veldun map is at the 98th percentile of all simulated maps, but only for one specific type of community. Three of Veldun's eleven districts split existing municipal boundaries in ways that appear systematically in the simulation only when maps are generated using a community cohesion criterion applied differently to different community types.</p>
+    <h3>Augusta — 1 Seat (At-Large)</h3>
 
-      <p>The commission's published methodology does not document the basis for these three boundary choices. The methodology documentation covers the data sources and the criteria hierarchy application — but for the three contested districts, the discretionary choice notes read only: "geographic integrity preserved, community cohesion applied." The simulation shows this documentation is consistent with multiple possible approaches, one of which produces the statistical outcome found in the Veldun map and most of which do not.</p>
+    <p>Augusta's single seat requires no district drawing. The entire State is one constituency. The RBC was not convened. There is no redistricting to conduct, no boundary to draw, and no gerrymandering possible. Every one of Augusta's 1,080,000 citizens is in the same district: Augusta.</p>
 
-      <div class="beat">
-        <div class="beat-label">§3.4.f — The Neutral Actor Standard</div>
-        <div class="beat-title">Not whether a better map exists. Whether a neutral actor could have drawn this one.</div>
-        <p>The Court receives briefs from the commission defending the map, from the State government supporting the commission, and from the minority challengers. The LI files an amicus brief noting that its compliance review is criteria-based — it reviews whether the map satisfies the criteria hierarchy and excludes prohibited inputs, not whether the discretionary choices within compliance are neutral.</p>
-        <p>The Supreme Court rules 5-2. The majority opinion is precise about what it finds and what it does not find. It does not find that the commission used prohibited inputs. It does not find intentional manipulation. It finds that three districts contain boundary choices that, taken together, produce a statistical outcome inconsistent with neutral criteria application and inadequately documented in the commission's published methodology. A neutral actor applying the criteria correctly could not be shown to have produced these three boundaries without additional documentation that the commission has not provided. That is the constitutional standard. The map fails it for three districts.</p>
-      </div>
+    <p>This is the cleanest constitutional outcome in apportionment. A single-seat State elects its one representative in a statewide vote. No community is carved out. No boundary is drawn to advantage any population over another. The Webster method's assignment of 1 seat produces this result; the H-H method's assignment of 2 seats would require Augusta to be split into two districts of ~540,000 each — raising the full range of redistricting politics the constitution's criteria hierarchy is designed to manage.</p>
 
-      <h2>The Remedy</h2>
-
-      <p>§3.4.f grants the Court authority to "order the State commission or the LI to redraw specific districts" but explicitly prohibits the Court from drawing districts itself. The majority opinion orders the Veldun redistricting commission to redraw districts 4, 7, and 9 within a 45-day period, with full methodology documentation for every discretionary choice. The order specifies the minimum documentation required. It does not specify what the redrawn districts should look like.</p>
-
-      <p>The commission redraws the three districts. The new boundaries are different — not dramatically, but verifiably so. The revised methodology documentation now specifies the exact data sources and decision criteria for every boundary choice in the three contested districts. The LI certifies the revised map as compliant. No further challenge is filed within the remaining review period. The map takes effect.</p>
-
-      <div class="beat">
-        <div class="beat-label">§3.4.g — The Continuity Question</div>
-        <div class="beat-title">What happens to scheduled elections during a map challenge?</div>
-        <p>The 60-day review period closed before the Court's ruling, but elections are not scheduled during a compliance challenge period. §3.4.g states: a valid district map remains in effect until the next census cycle. The prior cycle's map remains operative until the new map is certified as valid. The Supreme Court's order, the commission's redraw, and the LI's certification complete before National Election Day. The revised map governs the election.</p>
-        <p>If the timeline had not permitted pre-election resolution, §3.4.g would have left the prior map in force for that election cycle, with the revised map applying at the next cycle. The constitution does not allow a judicially-disputed map to govern an election — it defaults to the last valid map. Elections run on known, certified ground.</p>
-      </div>
-
-      <div class="finding">
-        <span class="finding-label">What This Scenario Tests</span>
-        <p>§3.4's redistricting framework is the constitution's answer to gerrymandering — not by designing "fair" districts (a contested concept) but by removing the tools parties use to engineer outcomes. Prohibited inputs (§3.4.b) eliminate partisan registration data, voting history, incumbent addresses, and racial composition as primary consideration. The independent commission requirement eliminates legislative control over the process. The statistical evidence standard in §3.4.f provides a judicial backstop for maps that passed compliance review but cannot be explained by neutral criteria application.</p>
-        <p>The scenario tests each layer. The commission passed LI review — the map satisfied all criteria and contained no prohibited inputs. The challenge succeeded not because the map was non-compliant but because three boundary choices could not be documented as neutrally derived. The Court's remedy — redraw specific districts, cannot draw them itself — preserves the commission's role as the drawing authority while removing the specific boundaries that failed the neutral actor test.</p>
-        <p>The 1/3 minority standing provision is the scenario's quiet design point. Any 1/3 of a state legislature can trigger the Court's review. This is deliberately low: it prevents the majority from protecting its own map from challenge. A party that drew or benefits from the map controls the state legislature majority; the minority standing rule means they cannot veto a challenge by controlling the petition process. The 1/3 threshold is low enough to be accessible, high enough to require genuine legislative minority coordination rather than individual litigation.</p>
-      </div>
-
+    <div class="beat">
+      <div class="beat-label">The Design Implication</div>
+      <p>Augusta's one-seat result under Webster is not a consolation prize for a small State — it is a clean constitutional outcome. Single-seat States are immune to internal redistricting conflicts. H-H's extra seat would force Augusta to confront exactly the boundary-drawing politics that larger States must manage. Webster's neutral arithmetic spares Augusta that problem.</p>
     </div>
 
-    <nav class="scenario-nav">
-      <a href="scenario-suspensive-veto.html">← The Veto That Lapses</a>
-      <a href="scenario-citizen-amendment.html">The Petition →</a>
-    </nav>
+    <h3>Territory of Lakeshore — 0 Seats</h3>
+
+    <p>The Territory of Lakeshore held its own census in parallel with the Republic's LI census. Result: 492,000 citizens, up from 411,000 at the founding. The LI accepted the territorial census as the baseline for Statehood Audit purposes.</p>
+
+    <p>Lakeshore holds zero House seats. Its citizens are governed by federal law but have no direct representation in the chamber that originates all legislation. This is the constitutional cliff separating territorial status from statehood — and at 492,000 citizens, Lakeshore is beginning to feel the weight of it. <span class="prov-tag">§13.2</span></p>
+
+    <p>The Year 12 census triggered Lakeshore's formal §13.2 Statehood Audit eligibility — the Territory now has the population and economic baseline to begin the process. The LI published a preliminary audit opening notice to the NRS in Month 11. The Territory's legislature voted 34–6 to begin audit proceedings.</p>
+
+    <p>If the audit succeeds and statehood is granted, Lakeshore's 492,000 citizens receive their first House seat under the Webster minimum. Their quota of 0.656 is below the 0.750 divisor threshold, but the constitutional floor guarantees them one seat regardless. The projection-to-actual gap for Lakeshore under all four methods is identical: one seat the moment they become a State.</p>
+
+    <h2>International Context</h2>
+
+    <p>The Republic's 750,000-per-seat constituency size places it in a distinct category among western democracies — larger constituencies than any major European legislature, essentially identical to the United States.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th class="num">Population</th>
+          <th class="num">Seats</th>
+          <th class="num">Citizens/Seat</th>
+          <th>Method</th>
+          <th>Electoral System</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight">
+          <td><strong>Federated Republic</strong></td>
+          <td class="num">362,000,000</td>
+          <td class="num">483</td>
+          <td class="num">749,000</td>
+          <td>Webster</td>
+          <td>Single-member districts</td>
+        </tr>
+        <tr>
+          <td>United States</td>
+          <td class="num">331,000,000</td>
+          <td class="num">435</td>
+          <td class="num">761,000</td>
+          <td>Huntington-Hill</td>
+          <td>Single-member districts</td>
+        </tr>
+        <tr>
+          <td>Australia</td>
+          <td class="num">26,000,000</td>
+          <td class="num">151</td>
+          <td class="num">172,000</td>
+          <td>H-H variant</td>
+          <td>Preferential (AV)</td>
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td class="num">38,000,000</td>
+          <td class="num">338</td>
+          <td class="num">112,000</td>
+          <td>H-H variant</td>
+          <td>Single-member districts</td>
+        </tr>
+        <tr>
+          <td>France</td>
+          <td class="num">67,000,000</td>
+          <td class="num">577</td>
+          <td class="num">116,000</td>
+          <td>Equal quota</td>
+          <td>Two-round single-member</td>
+        </tr>
+        <tr>
+          <td>United Kingdom</td>
+          <td class="num">67,000,000</td>
+          <td class="num">650</td>
+          <td class="num">103,000</td>
+          <td>Equal quota</td>
+          <td>Single-member districts</td>
+        </tr>
+        <tr>
+          <td>Germany</td>
+          <td class="num">84,000,000</td>
+          <td class="num">736</td>
+          <td class="num">114,000</td>
+          <td>Sainte-Laguë</td>
+          <td>Mixed-member proportional</td>
+        </tr>
+        <tr>
+          <td>New Zealand</td>
+          <td class="num">5,000,000</td>
+          <td class="num">120</td>
+          <td class="num">42,000</td>
+          <td>Sainte-Laguë</td>
+          <td>Mixed-member proportional</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Two observations stand out. First, the Republic and the United States are the only major western democracies with constituencies above 700,000 — every European and Commonwealth democracy operates at 100,000–200,000 per seat. Second, Webster (major fractions) and Sainte-Laguë are mathematically identical methods with different names: Sainte-Laguë is Webster applied to party seat allocation in proportional systems. Germany, New Zealand, and several Scandinavian countries use the same mathematical principle as the Republic, adapted for party-list rather than State-by-State apportionment.</p>
+
+    <p>The US uses Huntington-Hill, not Webster — a deliberate choice that slightly benefits small States. The Republic's choice of Webster rather than H-H is a genuine departure from the US model, reflecting the constitutional preference for mathematical neutrality over small-State tilt.</p>
+
+    <div class="verdict-box">
+      <span class="verdict-label">LI Director's Census Report — Year 12</span>
+      <p>The Year 12 apportionment produced no contested allocations for 481 of the Republic's 483 House seats. Two States — one large, one small — received queries from neighboring States about the boundary commission process. Both were resolved within the 60-day challenge window. The Webster method functioned as designed: no State received a seat allocation that any alternative major method would consider materially unfair.</p>
+      <p>The Territory of Lakeshore's statehood audit opening is noted. If the audit completes successfully, the Year 22 census will be the first at which Lakeshore casts a House ballot. The LI records this as a pending constitutional event.</p>
+    </div>
+
+    <h2>What This Scenario Tests</h2>
+
+    <div class="analysis-item">
+      <span class="analysis-prov">§3.1.a — Webster Method</span>
+      <p>The Webster method's arithmetic-mean rounding is mathematically neutral between large and small States. The Augusta result — 1 seat under Webster vs 2 under H-H — is not an error or an injustice; it is the method behaving as designed. Augusta's quota of 1.440 is closer to 1 than to 2 under standard arithmetic rounding. The method gives Augusta the seat count nearest to its proportional share.</p>
+    </div>
+
+    <div class="analysis-item">
+      <span class="analysis-prov">Webster vs Huntington-Hill</span>
+      <p>H-H uses geometric-mean rounding, which rounds up at a lower threshold than Webster (1.414 vs 1.500 for the 1→2 seat boundary). This systematically advantages small States at the margin — they need less population to earn an extra seat. The Republic's constitutional choice of Webster over H-H reflects a deliberate preference for neutral apportionment over the small-State tilt built into H-H. The US made the opposite choice in 1941 and has used H-H ever since.</p>
+    </div>
+
+    <div class="analysis-item">
+      <span class="analysis-prov">Jefferson/D'Hondt</span>
+      <p>Jefferson always floors quotas, giving large States' large fractional remainders the same treatment as small States' small remainders: they're discarded. This systematically advantages large States, which accumulate more seats from their population. Cascadia would get only 10 seats under Jefferson — losing the 0.98 remainder that makes its Webster result 11. Jefferson was used in the early United States until its bias was recognized; D'Hondt is its proportional-list equivalent, still used in many European party allocation systems where its large-party bias is sometimes considered a feature for government stability.</p>
+    </div>
+
+    <div class="analysis-item">
+      <span class="analysis-prov">§3.4.a — Redistricting Criteria</span>
+      <p>Cascadia's redistricting illustrates the tension built into the criteria hierarchy. Population equality is first; it produces the four geographically enormous eastern plateau districts. Compactness is second; it can be substantially optimized within those population-equal boundaries. Prohibited inputs — partisan data, voting history, incumbent residence — are absent from the process entirely. The Commission cannot optimize for political outcomes even if it wanted to, because the data that would enable that optimization is constitutionally excluded from the process.</p>
+    </div>
+
+    <div class="analysis-item">
+      <span class="analysis-prov">§13.2 — The Territorial Cliff</span>
+      <p>Lakeshore's 492,000 citizens have no House representation. Their neighbors in Augusta (1,080,000 citizens) have one representative. The constitutional gap between 0 seats and 1 seat is the statehood threshold, and it is absolute. This is not a design flaw — it is a deliberate structure that makes the stakes of statehood concrete. Lakeshore's legislature voted 34–6 to begin the audit. The constitutional incentive to do so is clear.</p>
+    </div>
+
+    <div class="analysis-item">
+      <span class="analysis-prov">750,000 Per Seat vs European Norms</span>
+      <p>The Republic's constituency size (750,000) is seven times larger than Germany's, six times larger than the UK's, and more than twice Australia's. This is a deliberate choice for a manageable legislature — 483 seats is a functional deliberative body; 3,400 seats (European ratio) is not. The tradeoff is reduced local representational density: each Republic member represents a constituency the size of a European country's full legislature. Whether that tradeoff is worth it is a question the constitution answers implicitly by setting the divisor at 750,000 and giving the Legislature authority to adjust it by statute.</p>
+    </div>
+
   </div>
 
-  <script>
-    document.querySelector('.hamburger')?.addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    });
-    const bar = document.createElement('div');
-    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
-    document.body.prepend(bar);
-    window.addEventListener('scroll', () => {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
-    });
-  </script>
+  <div class="scenario-nav">
+    <a href="scenarios.html">&larr; All Scenarios</a>
+    <a href="scenario-the-03.html">The 0.3 &rarr;</a>
+  </div>
+
+</div>
+
+<script>
+  function toggleMobileNav() {
+    var menu = document.getElementById('mobileMenu');
+    if (menu) menu.classList.toggle('open');
+  }
+</script>
+
 </body>
 </html>
