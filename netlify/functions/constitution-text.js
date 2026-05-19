@@ -238,8 +238,8 @@ A simple majority of the full Senate membership may refer the question of presid
 No second Senate referral to popular recall within the same presidential term. One-shot rule prevents a hostile Senate from using repeated recall elections as attrition. After a failed recall, the President serves out their term with the NRS record intact.
 [§3.1] The House of Representatives
 The House of Representatives is the proportional chamber of the Legislature — directly elected by citizens on the basis of population. All legislation originates in the House and the PM is elected and accountable to it.
-[§3.1.a] House Membership Floor
-The House has a minimum of one seat per State and a floor of one seat per 750,000 citizens, with final allocation determined by the LI formula following each census. The LI publishes the updated seat allocation to the NRS within 30 days of census completion. Where a reapportionment event reduces a State's seats, the reduction takes effect at the next general election — no sitting member's term is cut short by reapportionment.
+[§3.1.a] House Seat Allocation — Webster Method
+House seats are allocated by the Webster method: each State receives the number of seats nearest to the State's population divided by the Republic's standard constituency divisor, with a minimum of one seat per State regardless of population. The constituency divisor is set at 750,000 citizens per seat and may be adjusted by the Legislature by statute, provided no adjustment reduces any State below its one-seat minimum and no adjustment takes effect until the census following its enactment. The LI administers the allocation following each census and publishes the certified seat counts to the NRS within 30 days of census completion. No adjustment to the constituency divisor may be made in the 12 months preceding or during a census year.
 [§3.1.b] Census Authority
 The population census is conducted by the Legislative Inspectorate every ten years and whenever the Legislature requires reapportionment. Census methodology is published to the NRS before each census. Results are published to the NRS within 90 days of completion and used as the basis for House seat allocation.
 [§3.1.c] Single-Subject Rule
@@ -309,9 +309,9 @@ All State submissions, LI analyses, and interim maps must be published to the NR
 [§3.4.h] Redistricting Challenge
 Any citizen, State government, or parliamentary minority of 1/3 may challenge a proposed district map by petitioning the SC within the 60-day review period after LI compliance certification. The Court reviews whether criteria were correctly applied — not whether a different map would have been better.
 [§3.5] The House — Composition and Structure
-The House of Representatives is the proportional chamber. Seats are allocated by population under the formula in §3.1.a, with a minimum of one seat per State. All members serve 2-year terms. The House originates all legislation and fiscal measures and elects the Prime Minister.
+The House of Representatives is the proportional chamber. Seats are allocated by the Webster method under §3.1.a, with a minimum of one seat per State. All members serve 2-year terms. The House originates all legislation and fiscal measures and elects the Prime Minister.
 [§3.5.a] House Membership Formula
-Seat allocation follows the formula in §3.1.a. Where a reapportionment event creates or eliminates seats, the EC coordinates with affected States on district boundary adjustments before the next general election. The LI resolves any dispute between States about seat allocation methodology.
+Seat allocation follows the Webster method defined in §3.1.a. Where a reapportionment event creates or eliminates seats, the EC coordinates with affected States on district boundary adjustments before the next general election. The LI resolves any dispute between States about seat allocation methodology.
 [§3.5.b] House Speaker
 Elected by the House from among its members by absolute majority. Presides over House proceedings, manages the legislative calendar, and holds Acting Presidential Authority in the Presidential succession chain. The Speaker's dual role — legislative and succession — keeps the succession line within the elected legislative class.
 [§3.5.c] House Vacancy
