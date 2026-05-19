@@ -30,7 +30,7 @@ Every person has the right to hold, practice, change, or decline any belief and 
 Every person has the right to freely associate with others for any lawful purpose — including political parties, trade unions, civic organizations, and professional associations. The State may not compel membership as a condition of employment or civic participation, nor prohibit any association solely on ideological grounds unless it advocates violent overthrow of this Constitution or the denial of enumerated rights.
 
 [§1.8] Right to Petition
-Every citizen has the right to petition any branch of government on any matter of public or personal concern. All petitions must receive a formal response within a Legislature-defined period. The subject and status of petitions are published to the National Record System; petitioner identity is withheld where the petitioner requests anonymity. The right includes the right to file formal complaints against government officials and agencies.
+Every Inhabitant has the right to petition any branch of government on any matter of public or personal concern. All petitions must receive a formal response within a Legislature-defined period. The subject and status of petitions are published to the National Record System; petitioner identity is withheld where the petitioner requests anonymity. The right includes the right to file formal complaints against government officials and agencies.
 
 [§1.9] Equality and Non-Discrimination
 Every person is equal before the law. No person may be discriminated against on the basis of the enumerated characteristics. Distinctions based on race, ethnicity, religion, sex, sexual orientation, gender identity, national origin, or disability are presumptively unconstitutional, requiring a compelling government purpose achievable by no less discriminatory means. Distinctions based on age or economic status require only rational connection to a legitimate purpose.
@@ -129,7 +129,7 @@ No person may be convicted of an act that was not defined as a criminal offense 
 No person may be tried or punished more than once for the same offense arising from the same factual events. Acquittal is final. This applies across all levels of the Republic's court system — a State court acquittal cannot be retried in a federal court on the same facts.
 
 [§1.20] Right to Democratic Participation
-No government action may make voting materially more difficult for any eligible citizen. This covers not only formal disenfranchisement but practical barriers: polling place closures, identification requirements that function as wealth or document-access tests, registration obstacles designed to suppress participation, and reductions in early or mail voting access. This right is self-executing: a citizen facing a material barrier may bring a constitutional claim directly in court.
+No government action may make voting materially more difficult for any eligible citizen. This covers not only formal disenfranchisement but practical barriers: polling place closures, identification requirements that function as wealth or document-access tests, registration obstacles designed to suppress participation, and reductions in early or mail voting access. This right is self-executing: a citizen facing a material barrier may bring a constitutional claim directly in court. Eligibility to vote is established in §16.4.
 
 [§1.21] Right to Marry and Found a Family
 The right to marry or form a legally recognized partnership belongs to any two consenting adults regardless of sex, gender, or sexual orientation. The Republic must recognize such partnerships for all legal purposes. The Legislature and States may not create hierarchies of partnership recognition based on the characteristics of the parties.
@@ -411,7 +411,7 @@ Where a treaty is bilateral and designed as an integrated whole — with recipro
 The President may initiate withdrawal from any ratified treaty by publishing a formal notice of withdrawal to the NRS specifying the treaty, the effective withdrawal date (not less than 6 months from NRS publication), and the grounds. Withdrawal operates differently by treaty type: (a) General treaties — the Senate may block withdrawal by simple majority within the 6-month notice period; if the Senate does not vote to block, withdrawal takes effect automatically on the effective date; (b) Mutual defense treaties — the Senate must affirmatively confirm withdrawal by simple majority within the 6-month period; if the Senate does not confirm, the treaty remains in force; withdrawal from a mutual defense treaty may not be initiated while the Republic is engaged in active Tier 2 or Tier 3 operations under that treaty; (c) Indigenous treaties — no treaty with an indigenous nation recognized under Article XIV may be withdrawn or unilaterally modified; Article XIV governs. All withdrawal notices, blocking votes, confirmation votes, and withdrawal completion dates are published to the NRS as permanent records.
 
 [§3.2.f] Senate Electoral Functions
-The Senate administers the Presidential election in the absence of a functioning Electoral Commission, presides over contested electoral proceedings, and certifies Presidential election results. A direct role in executive accountability that does not depend on the House.
+The Senate administers the Presidential election in the absence of a functioning Electoral Commission — as certified by the JI following a finding that the EC cannot administer a constitutionally valid election — presides over contested electoral proceedings, and certifies Presidential election results. A direct role in executive accountability that does not depend on the House.
 
 [§3.2.g] Senate Internal Rules
 The Senate defines its own internal procedures by standing order, subject to constitutional constraints. The presiding officer is the Speaker of the Senate, elected by Senate members. The Senate's procedural autonomy prevents the House from using procedural leverage to control Senate deliberation.
@@ -546,7 +546,7 @@ The PM nominates inferior court judges within 90 days of a vacancy. The Senate c
 Inferior court judges, once commissioned, serve during good behavior with no fixed term. The Legislature may establish a maximum service age or maximum total service period (not less than 15 years from first commissioning), but may not create fixed-term appointments shorter than 15 years. Ensures judicial independence from political branches — a judge who must seek reappointment is not fully independent.
 
 [§4.1.d] Judicial Removal
-Three tracks: legislative removal by 2/3 of both chambers for constitutional breach or demonstrated incapacity; judicial discipline through the SC's internal accountability process; and criminal conviction for disqualifying offenses. The EI must publish a factual finding before any legislative removal vote.
+Three tracks: legislative removal by 2/3 of both chambers for constitutional breach or demonstrated incapacity; judicial discipline through a process the Legislature establishes by statute, subject to SC oversight; and criminal conviction for disqualifying offenses. The EI must publish a factual finding before any legislative removal vote.
 
 [§4.2] Open-Candidacy Judicial Selection
 Supreme Court justices are elected by national ranked-choice vote from an open pool of registered candidates. No political branch nominates, appoints, or confirms SC justices. Three justices are elected every four years under a staggered class system; each serves a single non-renewable 12-year term.
@@ -657,7 +657,7 @@ Where a parent or guardian who is the primary caregiver of a citizen child is re
 The CLT is required for earned citizenship through naturalization (§5.1.c) and national service (§5.1.d). It tests knowledge of constitutional principles and civic structure — not political opinions or cultural loyalty. The Senate deadlock rule (§5.4.c) ensures the existing test remains in force if the Legislature cannot agree on a new standard.
 
 [§5.4.a] Senate Authority over the CLT Standard
-The CLT must assess knowledge sufficient to understand the structure, powers, limits, and rights established by this Constitution. Any statute reducing the CLT below this floor is void and any citizen may challenge it in court. The Senate sets the CLT standard by statute — raising it by simple majority of both chambers, lowering it by 2/3 supermajority of both chambers. Compliance with the constitutional floor is enforced by courts on challenge. Where the CLT Administrator position is vacant, the Judicial Inspectorate administers the CLT on an interim basis using the most recently published test version until a new Administrator is confirmed by the Senate.
+The CLT must assess knowledge sufficient to understand the structure, powers, limits, and rights established by this Constitution. Any statute reducing the CLT below this floor is void and any citizen may challenge it in court. The Senate sets the CLT standard by statute — raising it by simple majority of both chambers. No statute may lower the CLT below the constitutional literacy floor established by this provision regardless of the majority used; any such statute is void and enforceable by any citizen in court. Compliance with the constitutional floor is enforced by courts on challenge. Where the CLT Administrator position is vacant, the Judicial Inspectorate administers the CLT on an interim basis using the most recently published test version until a new Administrator is confirmed by the Senate.
 
 [§5.4.b] CLT Administrator
 The Constitutional Logic Test is administered by a CLT Administrator nominated by the PM from a Candidate Register, confirmed by the Senate. Structural independence from partisan influence: the CLT process cannot be used to create barriers that track political outcomes.
@@ -690,7 +690,7 @@ The Legislature may establish a Federal Sponsorship Category where designated fe
 Only the federal government may remove individuals from the Republic — States may not conduct deportations independently. Removal occurs only for violations of laws the Legislature has defined — executive detention without statutory basis is not removal, it is unlawful detention subject to habeas corpus.
 
 [§6.3] Gate 2 Appeal Rights
-Gate 2 denials are judicially challengeable on three grounds: criterion outside the four certified categories; denial made on discriminatory grounds contrary to §1.9; or procedural violation affecting the outcome. Gate 1 denials — a state's decision not to sponsor — are not subject to federal review on the merits of the sponsorship decision. However, where an applicant believes a Gate 1 denial was made on §1.9 discriminatory grounds, they may bring a direct constitutional claim in any federal court, treated procedurally as a §6.3.a challenge. The court may order the state to reconsider free of discriminatory criteria; it may not compel the state to grant sponsorship. State discretion at Gate 1 is preserved; discriminatory exercise of that discretion is not.
+Gate 2 denials are judicially challengeable on three grounds: criterion outside the four certified categories; denial made on discriminatory grounds contrary to §1.9; or procedural violation affecting the outcome. Gate 1 denials are not reviewable on the merits of the sponsorship decision — a State's discretion over whom it sponsors is constitutionally protected. Gate 1 denials made on §1.9 discriminatory grounds are separately challengeable as constitutional violations, not as immigration appeals; a court finding discrimination may order the State to reconsider free of discriminatory criteria but may not compel sponsorship.
 
 [§6.3.a] Judicial Challenge
 An applicant may challenge a Gate 2 denial on three grounds: criterion outside the four certified categories; discriminatory application; or procedurally deficient process. Three-ground limitation channels challenges rather than eliminating them.
@@ -735,7 +735,7 @@ The President is elected through a two-component national system that combines a
 Presidential elections use Ranked Choice Voting conducted nationally. Votes transfer until one candidate holds a majority of active ballots nationwide. A candidate must achieve both a national majority and broad geographic distribution under the combined score mechanism in §7.2.b. The Electoral Commission administers the national election and certifies results under §7.2.e.
 
 [§7.2.b] The Combined Score
-Where no candidate achieves a national RCV majority, the combined score determines the winner. The combined score weights national first-preference totals at 65% and regional performance across the presidential election regions at 35%. The regional component requires a winning candidate to demonstrate support distributed across the Republic's geographic breadth, not only its most densely populated areas. The formula is published by statute and administered by the Electoral Commission.
+Where no candidate achieves a national RCV majority, the combined score determines the winner. The combined score weights national first-preference totals at 65% and regional performance across the presidential election regions at 35%. The regional component requires a winning candidate to demonstrate support distributed across the Republic's geographic breadth, not only its most densely populated areas. The formula is published by statute and administered by the Electoral Commission. Where two candidates finish within 0.5 percentage points of each other on the final combined score, a runoff is required under §7.2.f.
 
 [§7.2.c] Presidential Election Regions
 Presidential election regions provide the geographic breadth component of the combined score, ensuring that a winning candidate builds support across the Republic's geographic spread rather than only its population centres. The number of regions is defined by the Legislature by statute. Regions are drawn by the Regional Boundary Commission — a body constituted by lottery from State-maintained candidate pools — under the same criteria hierarchy that governs House redistricting. The Electoral Commission administers the election within the regions; it plays no role in drawing them.
@@ -807,7 +807,7 @@ JI Mandate — audits the courts for judicial scope and independence. Maintains 
 Each Inspectorate is constituted through a cross-nomination process that structurally excludes the body being watched from selecting those who watch it. The Supreme Court nominates the LI Inspector General, confirmed by Senate 2/3 supermajority. The House nominates the EI Inspector General, confirmed by Senate simple majority with JI vetting. The JI Inspector General is selected by public lottery with no political nomination by any branch.
 
 [§8.3] Inspector General Selection
-Each Inspectorate is headed by an Inspector General selected through a cross-nominating process that ensures no branch selects its own overseer. The selection mechanisms for each IG are specified in this section.
+The selection mechanisms for each Inspector General are detailed in §8.3.a (Legislative IG), §8.3.b (Executive IG), and §8.3.c (term and staggering). The cross-nomination principles are established in §8.2.
 
 [§8.3.a] Legislative IG
 LI Inspector General Selection — nominated by the Supreme Court, confirmed by the Senate by 2/3 supermajority. The House is entirely excluded — the body whose seat allocation the census determines has no role in selecting the office that conducts the census. The 2/3 Senate threshold ensures the LI IG commands cross-party support.
@@ -1128,7 +1128,7 @@ Citizens are required to serve on juries when called. Jury service is compensate
 Citizens may initiate a national referendum to repeal enacted legislation by petition of 5% of eligible voters within 90 days of enactment. The LI screens petitions for eligibility — laws that solely or primarily expand an Article I right are not eligible for referendum (the Bill of Rights cannot be repealed by popular vote). Simple majority of votes cast overturns the law.
 
 [§11.1.a] Citizen Petition Right
-Petition Requirements — the 5% petition must be collected within 90 days of the law's enactment. The EI verifies petition signatures for eligibility. If the threshold is met, the EC administers the referendum within 90 days of verification. Petitioners may withdraw the petition before the referendum is scheduled, but not after.
+The 5% petition must be collected within 90 days of the law's enactment. The EC verifies petition signatures for eligibility. If the threshold is met, the EC administers the referendum within 90 days of verification. Petitioners may withdraw the petition before the referendum is scheduled, but not after.
 
 [§11.1.b] Eligibility Screen
 The Legislative Inspectorate determines whether a targeted law is eligible for referendum. Laws that solely or primarily expand an Article I right are ineligible; a law cannot be repealed by referendum if its primary effect is to broaden individual protections. Budget laws and laws implementing a constitutionally mandated obligation are also ineligible. The LI publishes its eligibility determination to the NRS within 14 days of petition submission. An ineligibility determination may be challenged in the Appellate Court within 7 days; the Court must rule within 21 days.
@@ -1203,7 +1203,7 @@ Upon passing the Statehood Audit, the territory enters a Provisional Membership 
 A defined geographic subdivision of a Territory may petition for Statehood independently of the remainder. The petitioning subdivision must meet the same Statehood criteria as a whole Territory. Used where a Territory contains a region with clearly different institutional development.
 
 [§13.2.e] Minimum Democratic Legitimacy
-Every State must maintain three ongoing conditions: functioning electoral processes under Article XVI, basic rule of law and judicial function, and Article I rights compliance. Annual Statehood Audit verifies continued compliance. A State that fails receives Early Warning under §13.3.b — it enters a remediation process, not automatic devolution.
+Every State must maintain three ongoing conditions: functioning electoral processes under Article XVI, basic rule of law and judicial function, and Article I rights compliance. Annual Statehood Audit verifies continued compliance. A State that fails receives Early Warning under §13.3.b — it enters a remediation process, not automatic devolution. The annual Statehood Audit for existing States includes assessment of all three conditions in this provision in addition to the criteria in §13.2.a and §13.2.b.
 
 [§13.2.f] Territorial Minimum Institutional Floor
 Every Territory must maintain basic governance infrastructure: a governance council with defined membership and published authority, basic public financial reporting, and access to federal court jurisdiction for Article I claims. Territories that cannot maintain this floor may be placed in federal receivership pending institutional restoration.
@@ -1355,7 +1355,7 @@ The Unamendable Floor — six provisions that cannot be amended by any process: 
 [§15.4] Territorial Integrity
 The Republic's territorial extent may only be reduced by the consent of the affected population. No State may leave the Republic through ordinary legislation, and no government may cede territory without meeting the threshold established in this section.
 
-[§15.4.a] Territorial Integrity
+[§15.4.a] Amendment Requirement for Territorial Reduction
 The Republic's territorial extent may only be reduced by a Path B or Path C amendment (not Path A). Expansion of territory is governed by §13.1. No executive action may alter the Republic's territorial extent.
 
 [§15.4.b] No Secession by Ordinary Legislation
@@ -1482,7 +1482,7 @@ All improvements on federal Operational Use Rights default to reverting to the h
 Disputes over use right boundaries, termination, or improvement valuation go to the SC on an expedited track. Neither party may occupy or alter disputed land during pending resolution. The expedited track ensures federal operational continuity — resolution must happen fast enough to maintain the relevant federal function.
 
 [§17.3.e] Independence Transition
-Where a State achieves independence through §15.4 and §15.5, automatic reversion under §17.3.b does not immediately apply to Operational Use Rights within the departing territory. Use rights continue under the terms of the framework agreement and independence treaty negotiated under §15.5.a.
+Where a State achieves independence through a constitutional amendment under §15.4.a and a voluntary devolution agreement under §13.4, automatic reversion under §17.3.b does not immediately apply to Operational Use Rights within the departing territory. Use rights continue under the terms of the framework agreement and independence treaty negotiated under §13.4.b.
 
 [§17.4] The National Trust
 The National Trust holds all federal land not conveyed by statute to States, indigenous compact territories, or private parties. Land disposal requires statute — the executive cannot convey or encumber public land unilaterally, preventing privatization by executive discretion. The National Trust Administrator is independently confirmed under the §2.2.h escalation framework, insulating land management from PM pressure. The Trust is structurally distinct from the Community Land Trust: the NTA manages federal holdings; the CLT Administrator manages affordable residential land held in trust for Inhabitants.
@@ -1587,7 +1587,7 @@ Phase 2 (Days 91–270) is Institutional Construction. Statehood Audits are cond
 Phase 3 (Days 271-450) is First Elections. The first National Election Day. Supreme Court justices elected through the open-candidacy judicial selection process. Electoral Commission inaugural elections. Phase 3 ends when the first the Legislature is sworn in and the first executives take office — the moment at which the Republic's constitutional design becomes self-sustaining.
 
 [§19.3.e] Phase 4 — Full Constitutional Operation
-Beginning the day the first Legislature convenes and the first executives take the constitutional oath. From Phase 4, all constitutional provisions are fully operative. The 18-month Transition Window concludes at the end of Phase 4.
+Beginning the day the first Legislature convenes and the first executives take the constitutional oath. From Phase 4, all constitutional provisions are fully operative. The 24-month Transition Window concludes at the end of Phase 4.
 
 [§19.4] Caretaker Status
 All existing government officials serve as caretakers during the Transition Window — restricted to maintaining existing services only. No new permanent legislation. Transition supervised by joint Inspectorate panel: one representative per Inspectorate, appointed by their respective IGs. The panel dissolves automatically at the Transition Window's conclusion. Caretaker status prevents the predecessor government from entrenching itself during transition.
