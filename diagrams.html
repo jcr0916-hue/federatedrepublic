@@ -554,6 +554,17 @@
     a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
     button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
     .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .diagram-footer{border-top:1px solid var(--border);margin-top:2rem;padding:1.25rem 0 0.5rem;display:flex;flex-wrap:wrap;align-items:flex-start;gap:1rem;justify-content:space-between}
+    .diagram-scenarios{display:flex;flex-wrap:wrap;gap:0.5rem;flex:1;min-width:0}
+    .diagram-footer-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:0.4rem;width:100%}
+    .diagram-sc-link{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.3rem 0.75rem;text-decoration:none;letter-spacing:0.04em;white-space:nowrap;transition:background 0.15s}
+    .diagram-sc-link:hover{background:var(--navy2)}
+    .diagram-sc-tag{font-size:0.6rem;color:var(--muted);display:block;margin-top:0.15rem}
+    .diagram-advisor-link{font-size:0.78rem;color:rgba(201,168,76,0.6);text-decoration:none;border:1px solid rgba(201,168,76,0.2);padding:0.4rem 0.85rem;white-space:nowrap;transition:border-color 0.15s,color 0.15s;align-self:flex-start;flex-shrink:0;font-family:'Jost',sans-serif}
+    .diagram-advisor-link:hover{border-color:var(--gold);color:var(--gold)}
+    .diagram-advisor-link::before{content:"\2197  ";font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:rgba(201,168,76,0.4)}
+    @media(max-width:600px){.diagram-footer{flex-direction:column}.diagram-advisor-link{width:100%;text-align:center}}
   </style>
 </head>
 <body>
@@ -753,6 +764,13 @@
       <div class="legend-item"><div class="legend-dot" style="border-color:#3a3a3a"></div>Infrastructure</div>
     </div>
     <p class="checks-note">Every institution is checked by at least one other. No institution controls its own oversight. The Legislature is the most direct democratic link — the PM serves at its confidence. Every major appointment to an independent body is publicly assessed before nomination or election.</p>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-ordinary.html" class="diagram-sc-link">The Ordinary Week &rarr;</a><span class="diagram-sc-tag">Ordinary Governance &middot; &sect;3.3</span></div>
+        <div><a href="scenario-career.html" class="diagram-sc-link">A Constitutional Life &rarr;</a><span class="diagram-sc-tag">Long View &middot; Multiple Articles</span></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -867,6 +885,14 @@
         </div>
       </div>
     </div>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-amendment-authority.html" class="diagram-sc-link">The Rider &rarr;</a><span class="diagram-sc-tag">Single-Subject Rule &middot; &sect;3.1.c</span></div>
+        <div><a href="scenario-suspensive-veto.html" class="diagram-sc-link">The Veto That Lapses &rarr;</a><span class="diagram-sc-tag">PM's Veto &middot; &sect;2.4</span></div>
+      </div>
+      <a href="advisor.html?q=The+LI+finds+a+passed+bill+violates+the+single-subject+rule.+What+legal+force+does+that+finding+carry%3F" class="diagram-advisor-link">Ask the Advisor</a>
+    </div>
 
   </div>
 </div>
@@ -980,6 +1006,13 @@
           <p class="ps-desc">Republic citizens residing in the former territory retain Republic citizenship — it is irrevocable and continues regardless of the territory's independence. Citizens who choose to renounce Republic citizenship may petition the Electoral Commission; renunciation is voluntary and irrevocable. The Legislature may not impose more than a two-year waiting period.</p>
           <span class="ps-ref">§5.1.e — Post-Independence Citizenship and Voluntary Renunciation</span>
         </div>
+      </div>
+    </div>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-devolution.html" class="diagram-sc-link">The Third Audit &rarr;</a><span class="diagram-sc-tag">Voluntary Devolution &middot; &sect;13.4</span></div>
+        <div><a href="scenario-redistricting.html" class="diagram-sc-link">The Census and the Count &rarr;</a><span class="diagram-sc-tag">Apportionment &middot; &sect;3.1.a</span></div>
       </div>
     </div>
 
@@ -1132,6 +1165,12 @@
           <strong>Discrimination is always reviewable</strong>
           §1.8 non-discrimination applies throughout both tracks. Gate 1 denials are not subject to federal review on the merits, but §1.8 discrimination claims always have a federal court pathway. · §6.3
         </div>
+      </div>
+    </div>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-immigration.html" class="diagram-sc-link">The Integration Test &rarr;</a><span class="diagram-sc-tag">Immigration &middot; &sect;6.1</span></div>
       </div>
     </div>
 
@@ -1291,6 +1330,14 @@
           Operations to spread a political system, religion, or set of values.
         </div>
       </div>
+    </div>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-military-tier.html" class="diagram-sc-link">The Ninety-Six Hours &rarr;</a><span class="diagram-sc-tag">Military Tiers &middot; &sect;12.1</span></div>
+        <div><a href="scenario-war.html" class="diagram-sc-link">The War Scenario &rarr;</a><span class="diagram-sc-tag">Sustained Conflict &middot; &sect;12</span></div>
+      </div>
+      <a href="advisor.html?q=The+President+invokes+Tier+2+military+authority.+The+Senate+Armed+Services+Committee+splits+5-5.+What+happens%3F" class="diagram-advisor-link">Ask the Advisor</a>
     </div>
 
   </div>
@@ -1459,6 +1506,14 @@
     <div class="dual-note">
       <strong>The key asymmetry:</strong> The President's domain is bounded and defined — defense, diplomacy, intelligence, trade agreements. The PM's domain is residual — everything else. A question about which executive has authority almost always resolves to the PM unless the President can point to a specific defense, intelligence, or foreign affairs nexus.
     </div>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-trade-adversarial.html" class="diagram-sc-link">The Concurrence Dispute &rarr;</a><span class="diagram-sc-tag">Dual Executive &middot; &sect;2.1</span></div>
+        <div><a href="scenario-trade-agreement.html" class="diagram-sc-link">The Nordmere Cases &rarr;</a><span class="diagram-sc-tag">Treaty Power &middot; &sect;2.1.h</span></div>
+      </div>
+      <a href="advisor.html?q=The+President+and+PM+reach+opposite+conclusions+on+the+same+matter.+Who+prevails+and+how+is+the+conflict+resolved%3F" class="diagram-advisor-link">Ask the Advisor</a>
+    </div>
 
   </div>
 </div>
@@ -1609,6 +1664,15 @@
 
     <div class="amend-effect">
       <strong>The amendment process itself is amendable.</strong> A future supermajority could change the thresholds, add paths, or restructure the process — provided it does so through one of the three current paths and does not touch the permanently unamendable provisions.
+    </div>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-amendment.html" class="diagram-sc-link">The Amendment Scenario &rarr;</a><span class="diagram-sc-tag">Path A &middot; &sect;15.1</span></div>
+        <div><a href="scenario-path-b.html" class="diagram-sc-link">The Second Threshold &rarr;</a><span class="diagram-sc-tag">Path B &middot; &sect;15.1.b</span></div>
+        <div><a href="scenario-second-vote.html" class="diagram-sc-link">The 77 Percent &rarr;</a><span class="diagram-sc-tag">Path C &middot; &sect;15.1.c</span></div>
+      </div>
+      <a href="advisor.html?q=A+Path+C+amendment+wins+73%25+affirmative+but+only+61%25+participation.+What+are+the+constitutional+options%3F" class="diagram-advisor-link">Ask the Advisor</a>
     </div>
 
   </div>
@@ -1834,6 +1898,14 @@
         For-cause: 2/3 both chambers + State Designee Panel verification · No-cause: 3/4 both chambers · §8.5
       </div>
     </div>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-removal-ec.html" class="diagram-sc-link">The Commissioner &rarr;</a><span class="diagram-sc-tag">EI Independence &middot; &sect;8.5</span></div>
+        <div><a href="scenario-sdp-removal.html" class="diagram-sc-link">The Record &rarr;</a><span class="diagram-sc-tag">NRS Compliance &middot; &sect;9.1</span></div>
+      </div>
+      <a href="advisor.html?q=Two+IGs+jointly+initiate+a+For-Cause+removal+proceeding+against+the+third+IG.+Walk+me+through+the+full+process." class="diagram-advisor-link">Ask the Advisor</a>
+    </div>
 
   </div>
 </div>
@@ -2024,6 +2096,13 @@
           <strong>Non-Renewable Terms</strong>
           <span>Every term — initial or subsequent — is non-renewable. A justice who serves a 4-year Class A initial term, then wins election to the same or another seat, serves a full new 12-year term that is also non-renewable. A justice who serves their 12-year term cannot stand again. Term limits are built into the non-renewable structure. · §4.2</span>
         </div>
+      </div>
+    </div>
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-sc-election.html" class="diagram-sc-link">The Supreme Court Election &rarr;</a><span class="diagram-sc-tag">Judicial Selection &middot; &sect;4.2</span></div>
+        <div><a href="scenario-removal-justice.html" class="diagram-sc-link">The Statement of Grounds &rarr;</a><span class="diagram-sc-tag">Judicial Removal &middot; &sect;4.1.d</span></div>
       </div>
     </div>
 
