@@ -623,6 +623,9 @@ A State or Territory may not discriminate in its recognition of another jurisdic
 [§4.4.f] Legislative Implementation Mandates
 A judgment is final for §4.4.a purposes if it is not subject to an automatic stay under the issuing jurisdiction's procedural law, regardless of whether an appeal is pending. The Legislature may refine the finality standard for specific categories but may not use pending-appeal status alone to block enforcement. The procedural framework mandate — filing forms, fee schedule, and enforcement timeline — is established by statute.
 
+[§4.5] Jury Service
+Citizens are required to serve on juries when called. Jury service is compensated at the national median daily income rate, as the Legislature defines by statute. Unexcused refusal is subject to civil consequences the Legislature defines by statute. Jury service does not constitute forced labor under §1.4.
+
 [§5.1] Citizenship
 Citizenship is acquired by birth, by parentage, or by naturalization under the conditions of this section. Citizens hold the full rights established in Article I and are eligible to vote, hold office, and stand for election.
 
@@ -1017,7 +1020,7 @@ Funding for the NRS may not be reduced below the prior year's level without a 2/
 Classification used to conceal a constitutional violation, an illegal order, or embarrassing but non-sensitive information is constitutionally prohibited in itself. Improper classification is not an administrative error — it is a constitutional offense.
 
 [§10.1] The Basic Needs Floor
-A constitutional guarantee that the federal government will ensure every Inhabitant has access to a minimum basket of goods and services (food, housing, healthcare, education, and utilities) at a level adequate for a dignified life. Funded by a constitutionally reserved 5% of gross domestic revenue — this percentage cannot be reduced without a constitutional amendment.
+The federal government guarantees every Inhabitant access to a minimum basket of goods and services — food, housing, healthcare, education, and utilities — at a level adequate for a dignified life. Funded by a constitutionally reserved 5% of gross domestic revenue — this percentage cannot be reduced without a constitutional amendment.
 
 [§10.1.a] BNF Funding Reserve
 5% of gross domestic revenue is constitutionally reserved for the BNF and cannot be redirected. If the BNF requires more than 5%, the Legislature may appropriate additional funding by statute. The reserve is calculated annually by the MA and published to the NRS. During a Severe Revenue Contraction (§10.1.f), the National Endowment backstops the BNF.
@@ -1050,10 +1053,10 @@ Structural deficits above the constitutional threshold (defined by the MA by sta
 Where discretionary government spending has been suspended due to budget failure, the pay of all members of both chambers is withheld from the same date on which government employee pay is withheld — no earlier and no later. Withheld legislator pay is held and released in full within 14 days of a budget being enacted. No member may receive advance pay, loans from government sources, or any substitute compensation from public funds during this period. The MA publishes a daily count of days withheld to the NRS, running concurrently with the equivalent count for government employees.
 
 [§10.2.c] National Endowment
-The Legislature must by statute establish a National Endowment reserve fund for BNF backstop purposes during severe revenue contractions. Funded by appropriation in years of fiscal surplus. If the Legislature fails to establish the Endowment within the constitutionally required period, the failure is a constitutional compliance breach.
+The National Endowment reserve fund for BNF backstop purposes is established and governed under §10.6. The Legislature must fund it by appropriation in years of fiscal surplus. Failure to establish or adequately fund the Endowment within the constitutionally required period is a compliance breach reportable by the LI.
 
 [§10.3] Public Campaign Financing
-The Legislature must by statute establish a public campaign financing system by the constitutional deadline. If it fails to do so, the failure triggers automatic referendum eligibility under §11.1 — citizens may petition for a national vote on whether to impose a public financing framework by citizen mandate.
+The Legislature must by statute establish a public campaign financing system within 24 months of the first Legislature convening under §19.3.d. If it fails to do so, the failure is a constitutional compliance breach — the LI certifies the breach, the EI reports it, and citizens may petition for a citizen legislative initiative under §11.2.a to impose a public financing framework by direct mandate.
 
 [§10.3.a] Campaign Financing Standards
 The public financing system must provide all registered candidates with equal access to public funds. No incumbent advantage in the allocation formula. Private contributions are capped at the de minimis threshold under §18.3. Administered by the Electoral Commission — not by either executive or the Legislature.
@@ -1064,8 +1067,8 @@ Violations are a constitutional breach reportable by the EI. The EI audits all c
 [§10.4] The Monetary Authority
 The Monetary Authority is the Republic's constitutionally independent central bank, governed by an elected Director and an appointed board. Its mandate hierarchy and independence from political direction are established in this section.
 
-[§10.4.a] MA Director — Elected Office
-MA Director Election and Board Composition — the MA is governed by an elected Director and a board of five appointed members. The Director is elected by national RCV on National Election Day to a single non-renewable 8-year term, staggered from the board member appointment cycle.
+[§10.4.a] MA Director Election and Board Composition
+The MA is governed by an elected Director and a board of five appointed members. The Director is elected by national RCV on National Election Day to a single non-renewable 8-year term, staggered from the board member appointment cycle. Board members are appointed by the PM and confirmed by the Senate to staggered 6-year non-renewable terms. No more than two board members may be appointed by the same PM. Board vacancies must be filled within 90 days of opening; if the PM fails to nominate within 60 days, the JI publishes a notice of constitutional non-compliance.
 
 [§10.4.b] MA Independence
 The MA's hierarchical mandate is constitutionally fixed: primary mandate is price stability and fiscal solvency; secondary mandate is regard for employment conditions and sustainable growth. The primary mandate takes precedence in all cases of conflict. This hierarchy cannot be altered by ordinary statute — only by constitutional amendment. No government may direct the MA to elevate its secondary mandate to co-equal status with the primary mandate.
@@ -1073,29 +1076,32 @@ The MA's hierarchical mandate is constitutionally fixed: primary mandate is pric
 [§10.4.b.i] Executive Non-Interference
 The Monetary Authority's operational independence is explicitly protected against executive direction. Neither executive may direct, modify, delay, or suppress an MA operational capacity certification. An acting MA Director who issues certifications under executive direction or pressure is subject to the same constitutional accountability framework as a confirmed Director and is constitutionally prohibited from issuing such certifications under political direction.
 
+[§10.4.b.ii] Acting MA Director
+Where the MA Director position is vacant or the Director is incapacitated, the board of five members selects an Acting Director from among themselves by majority vote within 7 days of the vacancy or incapacity being established. The Acting Director holds all Director powers except the veto right under §10.4.f, which is suspended until a new Director is elected under §10.4.a. An Acting Director may not be nominated to stand as the permanent elected Director for the vacancy period they filled. The JI publishes the vacancy notice to the NRS within 48 hours, triggering the electoral process for a replacement Director under the timeline established by statute.
+
 [§10.4.c] Transparency
 All MA determinations, rate decisions, board votes, dissents, and mandate analyses must be published to the NRS within 48 hours of the board meeting. Board Member dissents are published alongside the majority determination.
 
 [§10.4.d] Methodology Integrity
-The MA's calculation methodologies must be published and publicly available. The MA may not change its published methodology without 90 days' notice and a published explanation. Covert methodology changes — changing how the numbers are calculated without telling anyone — are a constitutional breach.
+The MA's calculation methodologies must be published and publicly available. The MA may not change its published methodology without 90 days' notice and a published explanation. Covert methodology changes — changing how the numbers are calculated without telling anyone — are a constitutional breach. Violations of the notice requirement are a constitutional breach reportable by the EI. The MA's methodology must maintain comparability with its prior published series — changes that retroactively alter historical measurements are void without an explicit published historical restatement reconciling old and new series.
 
 [§10.4.e] Uncertifiable Inherited Fiscal Position
 Where the MA cannot certify the incoming government's fiscal position because the inherited data is too incomplete or unreliable, the MA publishes a qualified certification explaining the limitations. The Legislature must respond within 30 days with a plan to establish reliable fiscal data.
 
 [§10.4.f] Director-Board Authority
-The MA Director chairs the board and holds veto authority over board decisions. The board of five members decides by majority vote; the Director does not hold a board vote. The Director may veto any board decision by publishing written grounds to the NRS within the period the Legislature defines by statute; a veto without published grounds is constitutionally void. The board may override a Director veto by 4-of-5 supermajority; the override and its grounds are published to the NRS. Where a board decision takes effect following a 4-of-5 override and the Director believes it violates the §10.4.b primary mandate hierarchy, the Director may refer the question to the Executive Inspectorate. If the EI advises that a potential mandate hierarchy violation exists, the Director may petition the Supreme Court for a mandate determination. Timelines for the veto, override, EI advisory, and SC petition are established by statute.
+The MA Director chairs the board and holds veto authority over board decisions. The board of five members decides by majority vote; the Director does not hold a board vote. The Director may veto any board decision by publishing written grounds to the NRS within the period the Legislature defines by statute; a veto without published grounds is constitutionally void. The board may override a Director veto by 4-of-5 supermajority; the override and its grounds are published to the NRS. Where a board decision takes effect following a 4-of-5 override and the Director believes it violates the §10.4.b primary mandate hierarchy, the Director may refer the question to the Executive Inspectorate. If the EI advises that a potential mandate hierarchy violation exists, the Director may petition the Supreme Court for a mandate determination. The veto period must be no fewer than 7 days; the board override period no fewer than 14 days; the EI advisory period no fewer than 30 days; the SC petition period no fewer than 60 days. The Legislature may extend but not shorten these floors by statute.
 
 [§10.5] Ethics and Conflict of Interest
 All constitutional officers are subject to the ethics obligations of this section from the moment they take office. These obligations run concurrently with and do not replace any statutory ethics requirements the Legislature may establish.
 
 [§10.5.a] Personal Financial Disclosure
-All elected and appointed constitutional officers must disclose all financial interests, holdings, income sources, and liabilities to the EI within 30 days of taking office and annually thereafter. Disclosure records are published to the NRS. The standard for all official benefits, allowances, and in-office provisions — housing, healthcare, retirement — is that of a civil service employee in a comparable role. Departure from this standard is permitted only where an official's constitutional responsibilities create a demonstrable operational need, and only to the minimum extent that need requires.
+All elected and appointed constitutional officers must disclose all financial interests, holdings, income sources, and liabilities to the EI within 30 days of taking office and annually thereafter. Disclosure records are published to the NRS. The standard for all official benefits, allowances, and in-office provisions — housing, healthcare, retirement — is that of a senior career public servant in a non-political role, not an executive, elected official, or political appointee. The Legislature defines the comparator by statute; any definition that produces a standard materially higher than senior career public service is constitutionally void. Departure above this standard is permitted only where an official's constitutional responsibilities create a demonstrable operational need, certified by the EI, and only to the minimum extent that need requires.
 
 [§10.5.b] Conflict of Interest Recusal
 Any constitutional officer with a direct financial interest in a decision within their authority must recuse themselves from that decision. Recusal is self-executing — the officer cannot be excused from recusal by the PM, President, or Legislature. Failure to recuse when required is a constitutional breach reportable by the EI.
 
-[§10.5.c] Post-Service Restrictions
-Constitutional officers may not, for 5 years after leaving office, engage in activities that monetize non-public information acquired during service. The restriction covers lobbying, consulting, and any advisory role that draws on confidential government knowledge.
+[§10.5.c] Post-Service and Revolving Door Restrictions
+Constitutional officers may not, for 5 years after leaving office, engage in any activity that monetizes, exploits, or draws on non-public information, relationships, or access accumulated during service. This covers lobbying, consulting, advisory roles, and employment in regulated industries directly affected by the officer's prior decisions — regardless of whether the officer characterizes the engagement as drawing on their prior role. The EI determines whether a post-service engagement falls within this restriction; the officer bears the burden of demonstrating it does not. Violations are a constitutional breach and the officer forfeits any compensation received during the restricted period to the public treasury.
 
 [§10.5.d] Gift and Hospitality Rules
 Constitutional officers may not accept gifts or hospitality above a de minimis threshold defined by statute. All gifts above the threshold must be disclosed to the EI within 30 days and deposited with the relevant treasury. Retention without disclosure is a constitutional breach. Foreign gifts are subject to the same rules.
@@ -1103,11 +1109,11 @@ Constitutional officers may not accept gifts or hospitality above a de minimis t
 [§10.5.e] Official Records Belong to the Republic
 All records created in the exercise of official functions are public records. Constitutional officers may not retain, destroy, or remove official records after leaving office. Records physically retained without authorization are subject to forfeiture.
 
-[§10.5.f] Revolving Door Restriction
-Constitutional officers may not move directly from government service into private roles that would allow them to exploit relationships, knowledge, or access accumulated during service. The 5-year cooling-off period applies to regulated industries directly affected by the officer's prior decisions.
+[§10.5.f] Revolving Door — see §10.5.c
+Post-service restrictions including the revolving door prohibition are consolidated in §10.5.c.
 
 [§10.5.g] Official Intellectual Property
-Ideas, analyses, and work product created during official service belong to the Republic. An officer may not monetize work done in their official capacity for 5 years following service. For classified information, the 5-year cooling-off applies after declassification — it cannot be monetized the day after it becomes public.
+Ideas, analyses, and work product created during official service belong to the Republic. An officer may not monetize work done in their official capacity for 5 years following service.
 
 [§10.5.h] Ethics Enforcement
 The EI is the primary enforcement mechanism for the §10.5 ethics provisions. The EI publishes all disclosed conflicts, all flagged violations, and all referrals to the Legislature for removal proceedings. The EI publishes facts and refers serious violations — it does not impose penalties directly.
@@ -1115,8 +1121,14 @@ The EI is the primary enforcement mechanism for the §10.5 ethics provisions. Th
 [§10.6] National Endowment
 The National Endowment is a constitutionally established reserve fund that provides BNF continuity during periods of severe revenue contraction. It operates independently of the annual budget process.
 
-[§10.6.a] National Endowment Governance
-Governed by a board of trustees appointed by the PM from JI-maintained candidates, confirmed by the Senate. The board's sole mandate is to preserve and grow the Endowment fund for BNF backstop purposes — it may not be directed to other investment goals by either executive or the Legislature.
+[§10.6.a] National Endowment Trustee Pool
+The National Endowment is governed by a board of five trustees selected by public lottery from a constitutionally maintained Trustee Pool. The President and PM each nominate one qualified person per year to the Trustee Pool. Each nominee must hold demonstrable expertise in investment management, public finance, or fiduciary governance as determined by a qualifications standard published by the Legislature by statute. Each nominee must be confirmed by the Senate within 60 days of nomination by affirmative vote — no deemed confirmation applies. Unconfirmed nominees are returned without prejudice; the nominating executive may submit a replacement within 30 days. No more than two confirmed Pool members may be nominees of the same executive at any time. The Pool must maintain a minimum of ten confirmed members; if it falls below ten, both executives must nominate within 30 days and the JI publishes a notice of pool deficiency to the NRS.
+
+[§10.6.a.i] Trustee Draw and Terms
+When the Endowment board has a vacancy, all three Inspectorates jointly conduct a public lottery draw from the confirmed Trustee Pool, excluding current serving trustees. The draw selects one trustee per vacancy. Trustees serve staggered 6-year non-renewable terms. A trustee drawn to fill a mid-term vacancy serves only the remainder of that term. The JI certifies each draw and publishes the result to the NRS within 24 hours. No trustee may be removed except for cause under the same grounds applicable to independent constitutional officers — the board's independence from political direction is constitutionally protected.
+
+[§10.6.a.ii] Trustee Mandate and Accountability
+The board's sole mandate is to preserve and grow the Endowment fund for BNF backstop purposes. The board may not be directed to any other investment goal by either executive or the Legislature. All board decisions, investment mandates, and performance reports are published to the NRS quarterly. The EI audits the board annually for compliance with the sole-mandate requirement and publishes findings to the NRS. A trustee who acts outside the sole mandate has committed a constitutional breach.
 
 [§10.6.b] National Endowment Activation
 When the MA certifies a Severe Revenue Contraction under §10.1.f, the Endowment is automatically activated. The board must begin BNF supplement disbursements within 30 days. Disbursements continue until the MA certifies that the revenue contraction has ended. The board may not withhold disbursements during a certified contraction — activation is automatic.
@@ -1124,8 +1136,8 @@ When the MA certifies a Severe Revenue Contraction under §10.1.f, the Endowment
 [§10.7] Compensation of Public Officials
 No government official may set their own compensation or the compensation of their direct supervisors. All official compensation is set by House statute and is public record on the NRS.
 
-[§10.7.a] Jury Service
-Citizens are required to serve on juries when called. Jury service is compensated at the national median daily income rate, as the Legislature defines by statute. Unexcused refusal is subject to civil consequences the Legislature defines by statute. Jury service does not constitute forced labor under §1.4.
+[§10.7.a] Jury Service — see §4.5
+Jury service obligations, compensation, and enforcement are established in §4.5.
 
 [§11.1] Optional Referendum
 Citizens may initiate a national referendum to repeal enacted legislation by petition of 5% of eligible voters within 90 days of enactment. The LI screens petitions for eligibility — laws that solely or primarily expand an Article I right are not eligible for referendum (the Bill of Rights cannot be repealed by popular vote). Simple majority of votes cast overturns the law.
