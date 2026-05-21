@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acting — The Federated Republic</title>
+  <meta name="description" content="The President nominates a Secretary for Defense. The Senate delays for political reasons. After the statutory period, the President names an Acting Secretary from the senior civil service. Six months run. One 30-day extension. The Senate still hasn't voted. The most senior career officer takes the role.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-tool{border:1px solid rgba(201,168,76,0.3);border-radius:2px}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="constitution-v172.docx" download>Download (.docx)</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Executive Appointments · §2.1.j · Acting Officer · Senate Confirmation</span>
+      <h1 class="scenario-title">Acting</h1>
+      <p class="scenario-subtitle">The President nominates a Secretary for Defense. The Senate Armed Services Committee opens hearings and stalls — the nominee's past statements on alliance obligations have split the chamber on political lines. After the statutory confirmation period expires without a vote, the President names a career civil servant as Acting Secretary. Six months run. One 30-day extension. The Senate still has not voted. The most senior career officer in the Defense department assumes the role.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.1.j Presidential Domain Appointments</span>
+        <span class="prov-tag">§2.1 Presidential Domain</span>
+        <span class="prov-tag">§2.1.d PM Fiscal Certification</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Secretary for Defense has resigned after six years in the role following a public disagreement with the President over the Veldran Basin engagement. The President nominates a replacement — a former Director of Intelligence with extensive military policy experience and strong views on alliance obligations that she has stated publicly over a career spanning two decades. The nomination is transmitted to the Senate on Day 1.</p>
+
+      <p>The Senate's Armed Services Committee begins confirmation hearings on Day 12. The nominee's testimony is sharp and direct. Three Senators on the Committee object to her position on treaty-based defense commitments — she has argued publicly that the Republic's alliance obligations require a more forward military posture than current policy reflects. The objection is not to her competence. It is to her conclusions. The Committee Chair declines to schedule a floor vote.</p>
+
+      <h2>The Statutory Period Expires — §2.1.j</h2>
+
+      <p>§2.1.j requires the Senate to confirm each presidential domain nomination within the period defined by statute. The Legislature has set that period at 60 days. Day 60 arrives without a Senate vote. The nomination is technically still live — a failure to vote within the statutory period does not reject the nominee. But the President may now name an Acting officer.</p>
+
+      <div class="beat">
+        <div class="beat-label">§2.1.j — The Acting Appointment</div>
+        <div class="beat-title">Civil service or confirmed officers. The President's choice.</div>
+        <p>The President's options under §2.1.j are broad: the Acting officer may be drawn from the civil service or from existing confirmed executive branch officers. The President does not name the stalled nominee as Acting — doing so would be constitutionally valid but politically inflammatory. Instead, the President appoints the Deputy Secretary for Defense, a career civil servant with 22 years in the defense establishment who has served in the department under three administrations. The appointment is published to the NRS within 24 hours.</p>
+        <p>The original nominee remains nominated. Her confirmation process does not end because an Acting officer has been named. The Senate may vote to confirm her at any point — doing so would immediately end the Acting appointment. The Senate may also vote to reject her, which would end both the nomination and require the President to either resubmit or allow the Acting arrangement to continue under its constitutional time limits.</p>
+      </div>
+
+      <p>The Acting Secretary serves for six months. During that period the Senate Armed Services Committee schedules two additional hearings with the nominee, neither of which produces a floor vote. The original nominee grows increasingly frustrated. The President declines to withdraw the nomination. The EI publishes a monitoring note — not a breach — observing that the Secretary for Defense position has been held by an Acting officer for 120 days and that the statutory confirmation clock has long expired.</p>
+
+      <h2>The 30-Day Extension — §2.1.j</h2>
+
+      <p>On Day 181 — the day the six-month Acting status would expire — the Senate Armed Services Committee Chair requests additional time, citing a scheduled foreign policy review that she argues should inform the confirmation decision. The President grants the one available 30-day extension under §2.1.j. The extension is published to the NRS. The EI updates its monitoring note.</p>
+
+      <div class="math-box">
+        <span class="math-label">§2.1.j — Acting Officer Timeline</span>
+        <div class="line">Day 1:   Nomination transmitted to Senate</div>
+        <div class="line">Day 12:  SASC confirmation hearings begin</div>
+        <div class="line">Day 60:  Statutory confirmation period expires; no vote</div>
+        <div class="line">Day 61:  Acting Secretary named from civil service; published to NRS</div>
+        <div class="line">Day 181: Six-month Acting status expires</div>
+        <div class="line">Day 181: One 30-day extension granted; published to NRS</div>
+        <div class="line">Day 211: Extension expires; no Senate vote</div>
+        <div class="result">Most senior career officer in Defense assumes role; nomination lapses</div>
+      </div>
+
+      <p>Day 211 arrives. The Senate has not voted. The President has no further extension available — §2.1.j is explicit that one extension is the constitutional maximum. The most senior career officer in the Defense department — the Deputy Under-Secretary for Strategic Planning, with 27 years of service — assumes the role under the §2.1.j fallback provision. The appointment is not the President's choice. It is the constitution's default.</p>
+
+      <h2>The Nomination Lapses</h2>
+
+      <p>The original nominee's nomination does not technically lapse on Day 211 — the constitution sets no formal lapse date for the nomination itself. But with a career officer now holding the role by constitutional default, the political context has shifted. The President withdraws the nomination on Day 218 with a public statement attributing the vacancy to Senate procedural delay.</p>
+
+      <div class="beat">
+        <div class="beat-label">The Career Officer Default</div>
+        <div class="beat-title">The most senior career officer is not the President's appointment. It is the constitution's consequence.</div>
+        <p>The career officer default is not a sanction — it is a practical fallback that ensures the Secretary for Defense position is never left vacant regardless of political dynamics. But it has a consequence the President did not want: the career officer brings her own institutional perspective, continuity preferences, and bureaucratic relationships. She is not the President's political ally. She is the department's most senior officer doing a constitutional duty.</p>
+        <p>Seven months after assuming the role, the President nominates a new Secretary for Defense — a different candidate with a quieter public record on alliance obligations. The Senate confirms her in 44 days.</p>
+      </div>
+
+      <div class="finding">
+        <span class="finding-label">What §2.1.j Balances</span>
+        <p>The Acting officer mechanism exists because an unfilled Secretary for Defense is more dangerous than one without full Senate confirmation. A Senate that can block by inaction — simply refusing to hold a vote — would give the legislature an absolute veto over presidential domain appointments that the constitution does not intend. The Acting mechanism prevents that outcome while preserving the Senate's confirmation power: the Senate can vote to confirm or reject at any point during the Acting period.</p>
+        <p>The one-extension limit matters. Without it, a President could cycle Acting officers indefinitely, permanently bypassing Senate confirmation. The career officer fallback matters too — it means the President cannot extend indefinitely by withdrawing and resubmitting a nomination to reset the clock. After 6 months and 30 days, the position goes to the career establishment, not back to the President's discretion.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-referral.html">Related: The Referral →</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Broken Standard — The Federated Republic</title>
+  <meta name="description" content="The LI's annual audit finds that a cryptographic standard underpinning the NRS has been broken by advances in quantum computing. The LI declares an emergency review. The PM requests State nominees in 14 days. Five are drawn by lottery. The Emergency RSA Commission reviews the failure. The Senate accountability session follows.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-tool{border:1px solid rgba(201,168,76,0.3);border-radius:2px}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="constitution-v172.docx" download>Download (.docx)</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">National Record System · §9.3.h · §9.3.i · Emergency RSA Commission</span>
+      <h1 class="scenario-title">The Broken Standard</h1>
+      <p class="scenario-subtitle">The LI's annual audit finds that advances in quantum computing have rendered one of the NRS's primary hash algorithms theoretically breakable — not broken yet, but the standard no longer meets the constitutional requirement for tamper-evident operation. The LI declares an emergency review under §9.3.a. The PM requests State nominees in 14 days. Five are drawn by public lottery. The Emergency RSA Commission reviews the specific failure and publishes findings. The Senate accountability session follows.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§9.3.a Emergency Trigger</span>
+        <span class="prov-tag">§9.3.h Emergency RSA Commission</span>
+        <span class="prov-tag">§9.3.i Senate Accountability Session</span>
+        <span class="prov-tag">§9.1.a NRS Permanence</span>
+        <span class="prov-tag">§9.1.e Annual LI Audit</span>
+        <span class="prov-tag">§9.5 NRS Administration</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The NRS has run on a layered cryptographic architecture since Year 2 of the Republic. The outermost layer — the tamper-evidence hash applied to each published record — uses a standard that was considered computationally secure at adoption: factoring attacks would require resources far beyond any realistic adversary. In Year 19, a research consortium publishes a paper demonstrating that quantum computing advances have reduced that computational requirement by four orders of magnitude. The standard is not broken. But it is breakable — by a sufficiently resourced state actor with access to current quantum hardware.</p>
+
+      <p>The LI's Year 19 annual audit team includes three cryptographers drawn from the technical advisory pool. Their finding, buried in Appendix C of the draft audit report, is unambiguous: the NRS's primary tamper-evidence hash no longer meets the constitutional standard for tamper-evident operation against a sophisticated adversary. The NRS Director disputes the finding. The LI's audit team does not revise it.</p>
+
+      <h2>The Emergency Declaration — §9.3.a</h2>
+
+      <p>§9.3.a defines a critical architectural failure as a finding that the NRS no longer meets the constitutional requirements for tamper-evident operation or distributed custody. The LI's audit finding meets that definition. On the day the final audit is published, the LI exercises its authority under §9.3.a: it declares an emergency review and alerts the PM.</p>
+
+      <div class="beat">
+        <div class="beat-label">§9.3.a — The Emergency Declaration</div>
+        <div class="beat-title">The LI declares. The PM acts. The clock starts.</div>
+        <p>The LI's emergency declaration is published to the NRS simultaneously with the annual audit. It names the specific architectural failure: the tamper-evidence hash standard identified in Appendix C. The PM receives formal notification within the hour. The declaration triggers the §9.3.h process: the PM must request State nominations within a defined window, the LI certifies qualifications, and the three Inspectorates draw an Emergency Commission by public lottery.</p>
+        <p>The NRS Director requests a meeting with the LI. He argues the finding is overstated — the quantum attack requires hardware that no current adversary has demonstrated capability to deploy against civilian record systems. The LI's response, published to the NRS: the constitutional standard is not "currently being attacked." It is "tamper-evident operation." A standard that is theoretically breakable by a known class of attack does not meet that standard. The emergency declaration stands.</p>
+      </div>
+
+      <h2>State Nominations — §9.3.h</h2>
+
+      <p>The PM formally requests each State to nominate one qualified person to the Emergency Technical Pool within 14 days. The request specifies the qualification criteria established by statute: relevant technical expertise in cryptography, distributed systems, or information security, with no current government employment that would create a conflict of interest with the RSA's operations.</p>
+
+      <p>Thirty-one of the Republic's forty-two States submit nominations within the 14-day window. Eight States submit no nomination — three cite inability to identify a qualified candidate within the timeframe, five provide no explanation. Three States request a 7-day extension; the LI declines under the statutory timeline. The LI certifies qualifications for 28 of the 31 nominations — three nominees fail the conflict-of-interest check, being employed by firms holding NRS infrastructure contracts.</p>
+
+      <div class="math-box">
+        <span class="math-label">Emergency Technical Pool — §9.3.h</span>
+        <div class="line">States in the Republic: 42</div>
+        <div class="line">Nominations submitted within 14 days: 31</div>
+        <div class="line">LI qualification certification failures: 3 (conflict of interest)</div>
+        <div class="line">Certified pool: 28 nominees</div>
+        <div class="line">─────────────────────────────────────────────</div>
+        <div class="result">Public lottery draw: 5 Commission members drawn from pool of 28</div>
+      </div>
+
+      <p>The public lottery draw is conducted on Day 15 by all three Inspectorates in a joint session. The draw is live-streamed and published in full to the NRS before the session closes. Five Commission members are drawn from the 28 certified nominees: two cryptographers, one distributed systems architect, one information security auditor, and one former government technology officer. None are from the same State. The draw certification is signed by all three Inspector Generals and published immediately.</p>
+
+      <h2>The Commission's Work</h2>
+
+      <p>§9.3.h limits the Emergency Commission's scope to the specific architectural failure identified in the LI's emergency finding. The Commission may not expand its mandate to review the NRS's full cryptographic architecture — only the tamper-evidence hash standard named in the declaration. This constraint is deliberate: scope creep would extend the Commission's timeline and risk producing findings that go beyond what the emergency justifies.</p>
+
+      <p>The Commission works for 44 days. It reviews the LI's audit finding, the NRS Director's technical objections, three independent assessments of the quantum attack vector, and the RSA's own roadmap for cryptographic standard updates. Its findings are published jointly by all three Inspectorates to the NRS on Day 59.</p>
+
+      <div class="finding">
+        <span class="finding-label">Emergency Commission Findings — Published Day 59</span>
+        <p>The tamper-evidence hash standard used in NRS record layers deployed before Year 14 does not meet the constitutional standard for tamper-evident operation against a quantum-capable adversary. Records published before Year 14 are not retroactively compromised — no attack has occurred. But the standard's continued use for new records creates a forward risk that the constitution does not permit.</p>
+        <p>The RSA must migrate all active NRS hash operations to a post-quantum cryptographic standard within 18 months. The RSA Director's proposed migration roadmap, reviewed by the Commission, is technically adequate if funded at the requested level. Funding is not within the Commission's authority to direct — it is a recommendation to the Legislature and PM. The Commission finds no evidence of bad faith or negligence in the RSA's management of the standard; the quantum computing advance that created this vulnerability was not foreseeable at adoption.</p>
+      </div>
+
+      <h2>The Senate Accountability Session — §9.3.i</h2>
+
+      <p>§9.3.i requires the Senate to schedule a mandatory public accountability session within 30 days of the Emergency Commission's appointment — which occurred on Day 15. The scheduling deadline is Day 45. The Senate's Technology and Infrastructure Committee schedules the session for Day 38. The session itself must occur within 90 days of the Commission's appointment — by Day 105. It is held on Day 72.</p>
+
+      <p>All five Commission members appear. The session runs for four hours. Senators press on three questions: why the vulnerability was not caught earlier, whether the 18-month migration timeline is sufficient given the risk, and whether the LI's emergency declaration was proportionate given that no attack has occurred. The Commission answers all three on the record.</p>
+
+      <div class="beat">
+        <div class="beat-label">§9.3.i — The Accountability Session</div>
+        <div class="beat-title">The session substitutes for the Senate confirmation that Emergency Commission members did not receive.</div>
+        <p>The Senate accountability session is not a confirmation hearing — the Commission's work is complete before the session occurs. It is the mechanism that provides democratic accountability for an unconfirmed technical body that has reviewed the Republic's most critical public infrastructure. The Commission members answer questions under the public NRS record. Their findings, which were already published, are tested by elected representatives. The session is published in full.</p>
+        <p>Two Senators push back on the 18-month migration timeline as too slow. The Commission's distributed systems architect provides a detailed technical response: faster migration creates its own integrity risks — parallel operation of old and new hash standards during migration is necessary to maintain chain-of-custody continuity for records created under the old standard. The technical answer satisfies the Committee. The session record is permanent.</p>
+      </div>
+
+      <p>The Legislature passes a supplementary appropriation funding the RSA's migration roadmap at the requested level 34 days after the accountability session. Migration begins in Month 3 of Year 20. The Emergency Commission dissolves on the day the accountability session concludes. The Emergency Technical Pool dissolves with it. The regular decennial Commission pool and clock are unaffected — the emergency review did not reset either.</p>
+
+      <p>The next regularly scheduled decennial Commission, convening in Year 22, includes a mandatory agenda item under §9.3.g: review of the emergency Commission's findings and assessment of whether the migration remediation was adequate. The Year 22 Commission finds the migration was completed on schedule, the new hash standard meets the constitutional requirement, and no records were compromised during or after the transition.</p>
+
+      <div class="finding">
+        <span class="finding-label">Why the Emergency RSA Commission Is Structured This Way</span>
+        <p>The regular RSA Commission pool takes up to ten years to assemble — annual nominations, Senate confirmation, lottery draw. That timeline is appropriate for a scheduled decennial review. It is not appropriate when the NRS's constitutional integrity is actively at risk. The emergency mechanism needs to be fast: 14 days for State nominations, LI certification, immediate lottery draw.</p>
+        <p>The cost of speed is the absence of Senate confirmation. The Senate accountability session is the constitution's answer to that cost. The Commission's legitimacy comes not from pre-appointment vetting but from post-appointment scrutiny — its members present their findings before the elected chamber, take questions, and stand behind their work on the public record. The findings carry full constitutional weight from the moment of NRS publication regardless of when the session occurs.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-nrs-challenge.html">Related: The Architecture →</a>
+    </div>
+  </div>
+</body>
+</html>

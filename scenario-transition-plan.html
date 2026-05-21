@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Follows — The Federated Republic</title>
+  <meta name="description" content="A Tier 3 Declaration has been renewed for a second time. The Senate has 90 days to approve a Transition and Reconstruction Plan. It deadlocks. The LI certifies breach. The PM invokes provisional authorization under §12.4.a. Two 30-day extensions. SASC notifications. The Declaration expires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-tool{border:1px solid rgba(201,168,76,0.3);border-radius:2px}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="constitution-v172.docx" download>Download (.docx)</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Military Authorization · §12.4 · §12.4.a · Post-Conflict Obligations</span>
+      <h1 class="scenario-title">What Follows</h1>
+      <p class="scenario-subtitle">The Republic's Tier 3 Declaration has been renewed for a second time. The Senate has 90 days to approve a Transition and Reconstruction Plan specifying how the engagement ends. The Senate deadlocks. The LI certifies breach. The PM invokes provisional authorization — two 30-day extensions, mandatory SASC notifications, no further renewals. The Declaration runs to its natural expiry and the §12.2.c wind-down begins.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§12.4 Post-Conflict Obligations</span>
+        <span class="prov-tag">§12.4.a Provisional PM Authorization</span>
+        <span class="prov-tag">§12.2.c Allocation Termination</span>
+        <span class="prov-tag">§12.2 Emergency Defense Allocation</span>
+        <span class="prov-tag">§2.1.d PM Fiscal Certification</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Republic has been engaged in military operations in the Veldran Basin for fourteen months. The engagement is Tier 3 — full Declaration, Emergency Defense Allocation active, Senate Armed Services Committee oversight running quarterly. The first Declaration renewal passed the Senate 67–33. The second renewal, six months later, passed 58–42. The margin is narrowing. The public record is growing.</p>
+
+      <p>On the day the second renewal takes effect, §12.4 activates. The Senate now has 90 days to approve a Transition and Reconstruction Plan — a binding public document specifying the Republic's post-conflict obligations: alliance commitments, civilian reconstruction support, transitional justice, and a withdrawal timeline. The Plan is not optional. It is not advisory. Once approved, it binds both executives.</p>
+
+      <h2>The Deadlock — Day 1 through Day 90</h2>
+
+      <p>The Senate's Foreign Affairs Committee produces three competing draft Plans within the first 30 days. They agree on the withdrawal timeline. They disagree on everything else. The civilian reconstruction commitment is the fault line: one coalition of Senators wants a specific monetary commitment and a 10-year presence; another wants flexibility and a shorter horizon; a third wants a simple withdrawal plan with no reconstruction obligations at all.</p>
+
+      <div class="beat">
+        <div class="beat-label">§12.4 — The Obligation</div>
+        <div class="beat-title">The Plan must specify four things. The Senate cannot pick three.</div>
+        <p>§12.4 is specific: the Transition and Reconstruction Plan must address status of alliance obligations, civilian reconstruction support, transitional justice support, and a withdrawal timeline. It is not a menu. The Senate cannot pass a Plan that addresses three of the four components and calls it complete. The LI's interpretation of §12.4, published as an advisory finding on Day 45, is unambiguous: a plan that omits any of the four required components is not a plan within the meaning of §12.4.</p>
+        <p>The Senate's third coalition — those who want no reconstruction obligations — cannot achieve a Plan at all. Their position is constitutionally excluded. The fight narrows to two competing visions of what reconstruction support means, and neither can reach 51 votes.</p>
+      </div>
+
+      <p>On Day 89, the Senate holds a fourth vote on a compromise Plan. The vote is 49–51. The Plan fails. The 90-day window closes without a published Plan and without a formal SC dispute. The LI publishes its §12.4 compliance breach certification to the NRS at midnight on Day 90. The PM's provisional authorization under §12.4.a is now the only mechanism keeping operations legally funded.</p>
+
+      <h2>The PM's Provisional Authorization — §12.4.a</h2>
+
+      <p>§12.4.a is narrow and explicit. The PM may authorize continued operations under the existing Declaration using fiscal certification authority under §2.1.d — the same authority the PM uses to certify military expenditure generally. The provisional authorization is not new power. It is the PM's existing fiscal authority deployed in a defined failure-mode scenario.</p>
+
+      <p>The PM issues the first 30-day extension on Day 91. Three things are required: written notification to the Senate Armed Services Committee, certification to the LI and EI that operations remain within the scope of the existing Declaration, and a notice of provisional authorization published to the NRS. All three are completed within 24 hours. The EI publishes a monitoring notice: it will review all expenditure under provisional authorization for Declaration scope compliance.</p>
+
+      <div class="math-box">
+        <span class="math-label">§12.4.a — Provisional Authorization Timeline</span>
+        <div class="line">Day 90: LI certifies compliance breach (no Plan, no SC dispute)</div>
+        <div class="line">Day 91: PM issues Extension 1 — SASC notified, LI/EI certified, NRS notice published</div>
+        <div class="line">Day 121: Extension 1 expires</div>
+        <div class="line">Day 121: PM issues Extension 2 — same requirements repeated</div>
+        <div class="line">Day 151: Extension 2 expires</div>
+        <div class="line">─────────────────────────────────────────────</div>
+        <div class="result">After Day 151: No further Declaration renewals permitted</div>
+      </div>
+
+      <p>During the two 30-day extensions, the Senate attempts two more votes on a Transition Plan. Neither reaches 51. The President, whose domain includes the military engagement, issues a public statement calling on the Senate to act. The LI publishes a second compliance breach notice — the Senate has failed to meet its constitutional obligation for 60 days after the initial breach certification. Both notices are permanent on the NRS.</p>
+
+      <h2>The Declaration Expires — §12.2.c</h2>
+
+      <p>On Day 151, the second and final 30-day extension exhausts. The PM's provisional authorization ends. No further Declaration renewals are permitted. The current Declaration — issued at the second renewal — has a natural expiry date 90 days from its issuance, which falls on Day 183 from the original §12.4 deadline. The Declaration continues to that date. No new commitments may be entered after Day 151. The EI monitors wind-down expenditure from that point under its §12.2.c oversight function, reporting confidentially to the SASC.</p>
+
+      <div class="beat">
+        <div class="beat-label">§12.2.c — Wind-Down</div>
+        <div class="beat-title">Operations continue until Declaration expiry. Then the 30-day wind-down begins.</div>
+        <p>The Declaration expires on Day 183. The Emergency Defense Allocation ceases within 48 hours. Ongoing contracts within the certified allocation may continue to wind down for 30 days — Day 213 is the last day any contract expenditure can run. No new commitments. The EI's wind-down oversight report, which has been confidential to the SASC during operations, will be published in full to the NRS after Day 213.</p>
+        <p>Republic forces in the Veldran Basin are withdrawn over 45 days following the Declaration's expiry. The alliance partners are notified of the constitutional position — the Republic's legislature failed to authorize continued engagement and the constitution does not permit the executive to substitute for that failure indefinitely. The alliance treaty's consultation provisions activate. The President manages the foreign affairs consequences under §2.1.</p>
+      </div>
+
+      <p>On Day 190, with withdrawal underway, the Senate passes a Transition and Reconstruction Plan. Seven votes late — by seven Senators who had previously opposed the civilian reconstruction commitment changing their positions after the withdrawal began. The Plan is legally valid. It is constitutionally binding. It does not restart operations, which the expired Declaration cannot authorize. But it establishes the Republic's post-conflict obligations for reconstruction support and transitional justice — obligations that apply regardless of whether the military engagement continues.</p>
+
+      <div class="finding">
+        <span class="finding-label">What §12.4.a Does and Does Not Permit</span>
+        <p>§12.4.a is a bridge, not a substitute. It bridges the gap between a Senate planning failure and the Declaration's natural expiry — buying time for the legislature to act while ensuring Republic forces are not abandoned mid-operation. It is not a mechanism for the executive to sustain indefinite military engagement without legislative authorization. Two extensions of 30 days is the constitutional maximum.</p>
+        <p>The fact that the Senate eventually passed a Plan — after withdrawal began — confirms the mechanism worked as intended. The constitution created enough pressure through the no-renewal rule to produce Senate action, even if too late to change the operational outcome. The NRS record of the failure, the compliance breach certifications, and the eventual Plan are all permanent. The next time a Declaration approaches its second renewal, that record exists.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-military-tier.html">Related: The Ninety-Six Hours →</a>
+    </div>
+  </div>
+</body>
+</html>
