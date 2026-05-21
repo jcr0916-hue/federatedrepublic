@@ -630,13 +630,13 @@ A child is automatically a citizen at birth if at least one parent is a Citizen 
 A child born on Republic territory to parents holding neither Citizen nor Legal Resident status is an Inhabitant from birth, with full Article I protections and BNF access. Where no country recognizes the child as a citizen, the Republic provides a determination process consistent with §6.4's protection principles — protection first, determination second. A child determined to hold no other citizenship is eligible for Legal Residency from birth, with all Inhabitant years counting toward the §5.1.c residency requirement. Where a parent or guardian who is the primary caregiver of a child granted Inhabitant status under this provision is subject to removal, the removal order is stayed pending resolution of the child's custodial arrangements under §5.3. The Republic may not execute removal where doing so would deprive an Inhabitant child of their primary caregiver without first establishing an alternative care arrangement.
 
 [§5.1.b] Coming of Age
-Children of citizens are Inhabitants at birth with full Article I protections. Full citizenship rights — including the right to vote — activate at 18. The distinction between Inhabitant and Citizen status for citizen children prevents citizenship from being used to exempt children from local law.
+Children of citizens are Inhabitants at birth with full Article I protections. Full citizenship rights — including the right to vote — activate at 18.
 
 [§5.1.c] Naturalization
 A Legal Resident may earn citizenship after five continuous years of residency, a clean legal record, and passing the Constitutional Logic Test.
 
 [§5.1.d] National Service Path
-A Legal Resident may earn citizenship through honorable completion of military or national service — a service path that runs parallel to the residency path. Years of service are a legitimate basis for constitutional membership.
+A Legal Resident may earn citizenship through honorable completion of military or national service — a service path that runs parallel to the residency path.
 
 [§5.1.e] Citizenship Irrevocability
 Citizenship may not be revoked as punishment or for any reason once granted by birth or naturalization. The Republic may not manufacture statelessness as a punitive tool. See also §5.1.a.i, which ensures children born on Republic territory to undocumented parents cannot be left stateless by inaction.
@@ -657,16 +657,16 @@ Where a parent or guardian who is the primary caregiver of a citizen child is re
 The CLT is required for earned citizenship through naturalization (§5.1.c) and national service (§5.1.d). It tests knowledge of constitutional principles and civic structure — not political opinions or cultural loyalty. The Senate deadlock rule (§5.4.c) ensures the existing test remains in force if the Legislature cannot agree on a new standard.
 
 [§5.4.a] Senate Authority over the CLT Standard
-The CLT must assess knowledge sufficient to understand the structure, powers, limits, and rights established by this Constitution. Any statute reducing the CLT below this floor is void and any citizen may challenge it in court. The Senate sets the CLT standard by statute — raising it by simple majority of both chambers. No statute may lower the CLT below the constitutional literacy floor established by this provision regardless of the majority used; any such statute is void and enforceable by any citizen in court. Compliance with the constitutional floor is enforced by courts on challenge. Where the CLT Administrator position is vacant, the Judicial Inspectorate administers the CLT on an interim basis using the most recently published test version until a new Administrator is confirmed by the Senate.
+The CLT must assess knowledge sufficient to understand the structure, powers, limits, and rights established by this Constitution. Any statute reducing the CLT below this floor is void and any citizen may challenge it in court. The Senate sets the CLT standard by statute — raising it by simple majority of both chambers. Compliance with the constitutional floor is enforced by courts on challenge. Where the CLT Administrator position is vacant, the Judicial Inspectorate administers the CLT on an interim basis using the most recently published test version until a new Administrator is confirmed by the Senate.
 
 [§5.4.b] CLT Administrator
 The Constitutional Logic Test is administered by a CLT Administrator nominated by the PM from a Candidate Register, confirmed by the Senate. Structural independence from partisan influence: the CLT process cannot be used to create barriers that track political outcomes.
 
 [§5.4.c] Status Quo Maintenance
-Senate deadlock on CLT standard changes keeps the existing version in force. Deadlock cannot be weaponized to eliminate the CLT or make it impossibly difficult — the existing test remains operative.
+Senate deadlock on CLT standard changes keeps the existing version in force.
 
 [§5.5] Founding Generation Citizenship
-The circumstances of ratification require a transitional citizenship grant for those who held voting rights at the moment of founding.
+All individuals holding voting rights on Day Zero of ratification are automatically granted full citizenship as founding members of the Republic, as established in §5.5.a.
 
 [§5.5.a] Automatic Citizenship Grant
 All individuals holding voting rights on Day Zero of ratification are automatically granted full citizenship without testing or application. The Day Zero Grandfather Clause prevents the new Republic from immediately disenfranchising its existing population by requiring existing voters to re-qualify under new standards.
