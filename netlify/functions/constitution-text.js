@@ -911,9 +911,9 @@ A status election under §14.7 requires: (1) a decision by the nation's own gove
 [§15.1] Three Amendment Paths
 The constitution can be amended through three routes with varying levels of democratic mandate. Path A (Legislature only): 3/4 of both chambers simultaneously. Path B (Legislature + popular vote): 2/3 of both chambers + 55% affirmative with 55% participation. Path C (citizens alone): 70% affirmative with 65% participation. An amendment passed by any path has identical constitutional force.
 [§15.1.a] Parliamentary Path
-Legislative Amendment. Requires 3/4 supermajority of the full seated membership of both chambers in a single concurrent vote. No popular referendum. No executive signature. Every member's vote is published to the NRS within 24 hours. The 3/4 threshold is the highest legislative supermajority in the constitution — near-unanimous legislative agreement required.
+Requires 3/4 supermajority of the full seated membership of both chambers in a single concurrent vote. No popular referendum. No executive signature. Every member's vote is published to the NRS within 24 hours. The 3/4 threshold is the highest legislative supermajority in the constitution — near-unanimous legislative agreement required.
 [§15.1.b] Parliamentary and Popular Path
-Path B — Legislative and Popular Amendment. Lower legislative threshold (2/3 both chambers) but requires the People to ratify. National popular vote within 180 days of the parliamentary vote. 55% affirmative support with at least 55% citizen participation required. EC and LI certify jointly. Neither stage alone is sufficient.
+Lower legislative threshold (2/3 both chambers) but requires the People to ratify. National popular vote within 180 days of the parliamentary vote. 55% affirmative support with at least 55% citizen participation required. EC and LI certify jointly. Neither stage alone is sufficient.
 [§15.1.c] Citizen-Led Path
 Citizen-Led Amendment. The only path that entirely bypasses the Legislature. 70% affirmative support with 65% citizen participation required. A vote that fails either threshold fails; no second vote is available. A new petition may be filed immediately under the same process, with the failed vote's NRS record available as public evidence of prior support.
 [§15.2] No Executive Veto Over Amendments
@@ -923,7 +923,7 @@ An amendment takes effect immediately upon LI certification (Paths A and B) or E
 [§15.3] Unamendable Provisions
 Six provisions of this constitution may not be amended by any pathway — not by legislative supermajority, popular ratification, or any combination of both. These provisions define the minimum conditions for constitutional legitimacy itself.
 [§15.3.a] Permanently Unamendable Provisions
-The Unamendable Floor — six provisions that cannot be amended by any process: §1.3 (torture prohibition), §1.4 (slavery and forced labor), §1.14 (habeas corpus), §1.18 (public trial), §1.19 (no retroactive criminal laws), §1.28 (non-refoulement). Article I as a whole can only expand — no amendment may reduce any Article I right below its current floor.
+Six provisions that cannot be amended by any process: §1.3 (torture prohibition), §1.4 (slavery and forced labor), §1.14 (habeas corpus), §1.18 (public trial), §1.19 (no retroactive criminal laws), §1.28 (non-refoulement). Article I as a whole can only expand — no amendment may reduce any Article I right below its current floor.
 [§15.4] Territorial Integrity
 The Republic's territorial extent may only be reduced by the consent of the affected population. No State may leave the Republic through ordinary legislation, and no government may cede territory without meeting the threshold established in this section.
 [§15.4.a] Amendment Requirement for Territorial Reduction
@@ -943,7 +943,7 @@ Two amendments may be simultaneously in the ratification process. If both pass, 
 [§15.5.e] Withdrawn Amendments
 A proposed amendment may be withdrawn by the proposing body at any point before ratification is certified. Once ratification is certified, an amendment may only be reversed by a subsequent amendment through one of the three paths.
 [§15.6] Supremacy of This Constitution
-Constitutional Supremacy — this Constitution is the supreme law of the Federated Republic. All legislative acts, executive orders, treaties, administrative decisions, and government actions must be consistent with this Constitution. Any provision inconsistent with this Constitution is void to the extent of the inconsistency.
+This Constitution is the supreme law of the Federated Republic. All legislative acts, executive orders, treaties, administrative decisions, and government actions must be consistent with this Constitution. Any provision inconsistent with this Constitution is void to the extent of the inconsistency.
 [§16.1] Electoral Commission
 The Electoral Commission is a constitutionally independent body of five members elected by national ranked-choice vote on National Election Day to non-renewable six-year staggered terms. No political body nominates EC members. The EC administers all federal elections and referenda, maintains the National Voting System, enforces Article XVIII campaign finance requirements, and certifies all election results to the NRS. The EC is independent of both executives and the Legislature in the exercise of its administrative and certification functions. No member of the EC may have held elected office or party membership within ten years of their election.
 [§16.2] Electoral Commission Qualifications
