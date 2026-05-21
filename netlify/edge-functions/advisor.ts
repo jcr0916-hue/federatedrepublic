@@ -1461,16 +1461,16 @@ Before each federal election window opens, the Electoral Commission delivers to 
 At a State's request, the Electoral Commission may extend ballot information delivery to cover State and local races. The State bears the cost. The Commission may not refuse except on operational capacity grounds.
 
 [§16.5] Electoral Commission — Accountability
-The Electoral Commission's independence does not place it above accountability. This section governs its funding, Inspectorate oversight, removal of members for cause, and vacancy procedures.
+The Electoral Commission's independence does not place it above accountability.
 
 [§16.5.a] Campaign Funding
-Campaigns for Electoral Commission seats are publicly funded in full. No private money may be spent on EC campaigns. The EC administers elections for all other offices — it cannot itself be captured by the interests that it would regulate in other campaigns.
+Campaigns for Electoral Commission seats are publicly funded in full. No private money may be spent on EC campaigns.
 
 [§16.5.b] JI Oversight
 The Judicial Inspectorate audits the Electoral Commission annually. The JI is the appropriate Inspectorate for EC oversight — it audits judicial independence, and electoral integrity has similar structural properties. JI audit findings on the EC are published to the NRS and presented to both chambers.
 
 [§16.5.c] Removal
-For-cause only, 2/3 both chambers simultaneously, preceded by State Designee Panel verification. 180-day election proximity rule: any removal vote within 180 days of a major national election is automatically suspended pending SC review within 48 hours. Critically: the proximity restriction applies to the removal vote only — Panel-triggered suspension of duties under §16.2.a is not subject to the proximity window.
+For-cause only, 2/3 both chambers simultaneously, preceded by State Designee Panel verification. 180-day election proximity rule: any removal vote within 180 days of a major national election is automatically suspended pending SC review within 48 hours. The proximity restriction applies to the removal vote only — Panel-triggered suspension of duties under §16.2.a is not subject to the proximity window.
 
 [§16.5.d] Mid-Term Vacancy
 Where any Electoral Commission seat becomes vacant mid-term, a special election is held within 90 days through the NVS. The replacement serves the remainder of the vacated seat's term, then may stand as a candidate at the next regular EC election for a full new non-renewable term. Where fewer than 18 months remain in the vacated seat's term, the replacement may stand for a full term at the next regular EC election without serving the remainder. The Commission operates under its active-membership threshold during the vacancy period.
@@ -1479,7 +1479,7 @@ Where any Electoral Commission seat becomes vacant mid-term, a special election 
 Legislature must establish by statute a procedure for the EC to adopt temporary technical measures in imminent security threats or system failures, bypassing the normal 3/5 decision threshold. The emergency power is narrowly constrained — it cannot change electoral rules, timelines, or candidate eligibility. A system-integrity tool only.
 
 [§16.7] Day Zero Voting System Transition
-Legislature must establish by statute the transition from any predecessor voting infrastructure to the constitutionally required NVS. The statute must ensure continuity of democratic participation — no gap between the predecessor system going offline and the NVS coming online. The ratification vote itself was conducted on the NVS (§19.1).
+Legislature must establish by statute the transition from any predecessor voting infrastructure to the constitutionally required NVS. The statute must ensure continuity of democratic participation — no gap between the predecessor system going offline and the NVS coming online.
 
 [§17.1] The Use Doctrine
 Federal government holds no territorial sovereignty within any State or Territory. All federal property rights are functional use rights — operational control over a designated footprint for the duration of the stated function. Use rights do not constitute ownership, do not transfer sovereignty from the host State, and do not survive the termination of the function that justified them. Every use right must be on the NRS.
