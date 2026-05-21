@@ -1,19 +1,19 @@
 module.exports = `[§1.1] Right of Access to Courts
-Self-executing right: every person may seek legal remedy for any rights violation. Court access cannot be made meaninglessly expensive through procedural costs. If the Legislature fails to fund legal aid, courts appoint counsel at public expense until a statutory framework exists — the self-executing default ensures the right is never purely nominal.
+Every person may seek legal remedy for any rights violation — a self-executing right that courts may not make meaninglessly expensive through procedural costs. If the Legislature fails to fund legal aid, courts appoint counsel at public expense until a statutory framework exists — the self-executing default ensures the right is never purely nominal.
 [§1.2] Individual Sovereignty Floor
 Every person holds an individual sovereignty that government authority may limit only as this Constitution permits — and may never eliminate. No official, institution, or emergency suspends this floor. The State may deprive a person of life only as the lawful consequence of a sentence imposed by a court following conviction. Any method a legislature permits remains subject to §1.11's prohibition on cruel, degrading, or inhumane treatment. The State's obligations attach from the moment of live birth.
 [§1.3] Prohibition of Torture and Cruel Treatment
 Absolute prohibition on torture, cruel treatment, and degrading punishment. No exception exists — not for national security, not for emergency, not for military operations. One of six permanently unamendable provisions under §15.3.a.
 [§1.4] Prohibition of Slavery and Forced Labor
-Slavery, forced labor, debt bondage, and compelled service are prohibited absolutely and in all forms. The prohibition extends to all persons within the Republic's jurisdiction, not merely to citizens. Jury service required under §10.7.a and lawful sentences of community service imposed by a court do not constitute forced labor under this provision.
+Slavery, forced labor, debt bondage, and compelled service are prohibited absolutely and in all forms. The prohibition extends to all persons within the Republic's jurisdiction, not merely to citizens. Jury service required under §4.5 and lawful sentences of community service imposed by a court do not constitute forced labor under this provision.
 [§1.5] Freedom of Expression
 No branch, agency, official, or instrumentality of the Republic or any State may abridge the freedom of speech, press, or assembly in any medium — physical or digital.
 [§1.5.a] Censorship by Proxy
 Government actors may not pressure, incentivize, or coerce private platforms or institutions to suppress speech on their behalf. Such an act constitutes the same constitutional violation as direct censorship. This prohibition applies equally to digital and physical media. Government may not impose viewpoint-based conditions on benefits, contracts, or licensing.
-[§1.5.b] Separation of Church and State
-No religion may be established by law, and public funds directed to religious organizations must comply with the equality requirements of §1.9. The separation of church and state is structural, not merely preferential.
 [§1.6] Freedom of Thought, Conscience, and Religion
 Every person has the right to hold, practice, change, or decline any belief and to manifest it through worship, observance, practice, and teaching. No person may be compelled to participate in any religious observance contrary to their beliefs. Free exercise does not authorize harm to others and creates no exemption from laws protecting other enumerated rights.
+[§1.6.a] Separation of Church and State
+No religion may be established by law, and public funds directed to religious organizations must comply with the equality requirements of §1.9. The separation of church and state is structural, not merely preferential.
 [§1.7] Freedom of Association
 Every person has the right to freely associate with others for any lawful purpose — including political parties, trade unions, civic organizations, and professional associations. The State may not compel membership as a condition of employment or civic participation, nor prohibit any association solely on ideological grounds unless it advocates violent overthrow of this Constitution or the denial of enumerated rights.
 [§1.8] Right to Petition
@@ -35,7 +35,7 @@ Every person's home is inviolable against government access without judicial war
 [§1.11.b] Eminent Domain
 Seizure of private property requires proof of absolute public necessity, payment of 150% of fair market value, and NRS publication. Private-to-private transfer via eminent domain — using government condemnation to benefit another private party — is constitutionally prohibited.
 [§1.12] Self-Defense and the Right to Bear Arms
-The right to keep and bear arms for personal defense and hunting must not be infringed. States may establish proportionate licensing and safety requirements that do not function as effective prohibitions on lawful ownership. The burden of proof lies with the State to demonstrate that any challenged requirement is proportionate, non-discriminatory, and genuinely serves a safety purpose.
+The right to keep and bear arms for personal defense and hunting must not be infringed. The scope and limits of this right are established in §1.12.a through §1.12.c.
 [§1.12.a] Right to Bear Arms
 The right to keep and bear arms is a personal right held by each individual. It is not a collective right conditional on militia service or membership, and does not require any governmental authorization for keeping arms in the home.
 [§1.12.b] State Licensing Latitude
@@ -103,7 +103,7 @@ Public education must equip every student to understand the structure, rights, a
 [§1.24.c] Parental Right
 Parents retain the right to educate children through alternative means — homeschooling, faith-based schools, alternative institutions — provided those alternatives meet the constitutional literacy standard. The Republic may set the floor; it may not mandate the method.
 [§1.25] Housing Non-Exclusion
-No government authority may use regulatory or land-use powers to exclude any person from housing on the basis of any characteristic enumerated in §1.9. Persons who cannot independently secure housing hold a constitutional entitlement to it through the Basic Needs Floor under §10.1.
+Housing access is a constitutional right — no government authority may use its powers to exclude persons from housing on discriminatory grounds or to deny housing to those who cannot independently secure it. The non-exclusion principle is established in §1.25.a and the BNF housing obligation in §1.25.b.
 [§1.25.a] Non-Exclusion Principle
 No government authority — federal, State, or local — may use regulatory or land-use powers to exclude any person from access to housing on the basis of any characteristic enumerated in §1.9. Exclusionary zoning designed to keep certain populations out of a community is constitutionally prohibited.
 [§1.25.b] BNF Housing Obligation
