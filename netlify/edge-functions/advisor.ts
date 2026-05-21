@@ -1554,16 +1554,16 @@ Federal operational use rights in Territories follow the same framework as in St
 Electoral finance is regulated to prevent the structural distortion of democratic accountability through concentrated financial influence. The provisions of this section govern contributions, disclosure, and independent expenditures.
 
 [§18.1.a] Financial Contributions as Electoral Acts
-Electoral Finance Disclosure — all contributions above the de minimis threshold must be publicly disclosed to the Electoral Commission and published to the NRS. Anonymity in electoral finance is prohibited. The de minimis threshold may not be set so high that it effectively permits anonymous large-scale contributions.
+All contributions above the de minimis threshold must be publicly disclosed to the Electoral Commission and published to the NRS. Anonymity in electoral finance is prohibited. The de minimis threshold may not be set so high that it effectively permits anonymous large-scale contributions.
 
 [§18.1.b] Natural Persons Only
-Contribution Limits — individual contributions to electoral campaigns are capped at a level defined by statute. Corporate, organizational, and foreign contributions are prohibited. The prohibition on foreign contributions applies to any person or entity that is not a Republic citizen or resident.
+Individual contributions to electoral campaigns are capped at a level defined by statute. Corporate, organizational, and foreign contributions are prohibited. The prohibition on foreign contributions applies to any person or entity that is not a Republic citizen or resident.
 
 [§18.1.c] Voter-Donor Parity
-Independent Expenditure Disclosure — expenditures made independently of but in support of a campaign must also be disclosed. Independent expenditures are not subject to the same contribution limits as direct contributions, but are subject to the same disclosure requirements. Coordinated expenditures are treated as direct contributions.
+Expenditures made independently of but in support of a campaign must also be disclosed. Independent expenditures are not subject to the same contribution limits as direct contributions, but are subject to the same disclosure requirements. Coordinated expenditures are treated as direct contributions.
 
 [§18.1.d] Full Disclosure
-EC Administration — the Electoral Commission administers all electoral finance rules, reviews all disclosed contributions, publishes all disclosures to the NRS, and investigates suspected violations. The EI audits EC administration annually. Candidates who receive impermissible contributions must report them within 10 days and either return them or have them treated as undisclosed.
+The Electoral Commission administers all electoral finance rules, reviews all disclosed contributions, publishes all disclosures to the NRS, and investigates suspected violations. The EI audits EC administration annually. Candidates who receive impermissible contributions must report them within 10 days and either return them or have them treated as undisclosed.
 
 [§18.2] Campaign Conduct
 Candidates for constitutional office are subject to conduct standards administered by the Electoral Commission. These standards govern factual accuracy, media access, and foreign interference — not political content or viewpoint.
