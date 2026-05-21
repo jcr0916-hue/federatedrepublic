@@ -543,7 +543,7 @@ The PM nominates inferior court judges within 90 days of a vacancy. The Senate c
 Inferior court judges, once commissioned, serve during good behavior with no fixed term. The Legislature may establish a maximum service age or maximum total service period (not less than 15 years from first commissioning), but may not create fixed-term appointments shorter than 15 years. Ensures judicial independence from political branches — a judge who must seek reappointment is not fully independent.
 
 [§4.1.d] Judicial Removal
-Three tracks: legislative removal by 2/3 of both chambers for constitutional breach or demonstrated incapacity; judicial discipline through a process the Legislature establishes by statute, subject to SC oversight; and criminal conviction for disqualifying offenses. The EI must publish a factual finding before any legislative removal vote.
+Inferior court judges may be removed through three tracks: legislative removal by 2/3 of both chambers for constitutional breach or demonstrated incapacity; judicial discipline through a process the Legislature establishes by statute, subject to SC oversight; and criminal conviction for disqualifying offenses. The EI must publish a factual finding before any legislative removal vote.
 
 [§4.2] Open-Candidacy Judicial Selection
 Supreme Court justices are elected by national ranked-choice vote from an open pool of registered candidates. No political branch nominates, appoints, or confirms SC justices. Three justices are elected every four years under a staggered class system; each serves a single non-renewable 12-year term.
@@ -555,7 +555,7 @@ Any citizen on the SC Candidate Registry (maintained by the JI under §8.4.e) ma
 Five senior judges (at least 10 years continuous service) chosen by lot by the JI from all eligible judges who are not themselves candidates. Advisory assessment of every candidate's judicial record, legal reasoning, and professional independence. Advisory only — no ballot access authority, no endorsement. Published no later than 60 days before the election.
 
 [§4.2.c] Judicial Inspectorate Certification
-JI Certification — the JI confirms that each candidate remains on the SC Candidate Registry and that no disqualifying change has occurred since Registry admission. Ministerial check, not a new assessment. Candidates who fail JI certification may appeal to an Appellate Court within 14 days.
+The JI confirms that each candidate remains on the SC Candidate Registry and that no disqualifying change has occurred since Registry admission. Candidates who fail JI certification may appeal under §8.4.i.
 
 [§4.2.d] Public Election
 National RCV election administered by the Electoral Commission. All JI-certified candidates appear on the ballot. Winner achieves a national RCV majority. The EC certifies the result; the elected justice takes the Official Oath. Recorded on the NRS within 24 hours. From this moment, the justice serves a single non-renewable 12-year term.
@@ -564,7 +564,7 @@ National RCV election administered by the Electoral Commission. All JI-certified
 Any vacancy triggers a special election within 180 days. The full open-candidacy process applies with compressed timelines: registration Day 30, EI review Day 60, Board assessment Day 90, JI certification Day 120, election Day 180. The replacement serves only the remainder of the original 12-year term — not a new full term.
 
 [§4.2.f] Emergency Panel for Tier 1 Scope Challenges
-Emergency Panel — four justices drawn by rotation each 2-year cycle. Sole jurisdiction over constitutional challenges to Tier 1 presidential military authority during active operations. Must rule within 48 hours. Binding on the full Court unless overruled within 72 hours. Ensures SC oversight during active crisis without paralysis.
+Four justices are drawn by rotation each 2-year cycle. Sole jurisdiction over constitutional challenges to Tier 1 presidential military authority during active operations. Must rule within 48 hours. Binding on the full Court unless overruled within 72 hours. Ensures SC oversight during active crisis without paralysis.
 
 [§4.2.g] Vacancy Operating Rules
 The most senior Appellate Court judge by continuous service is automatically designated as Temporary Associate Justice within 5 days of any SC vacancy, without nomination or confirmation. The Temporary Associate Justice holds a full vote in all cases and may not stand as a candidate for the seat they are temporarily filling. For purposes of this provision, "continuous service" means uninterrupted judicial commission without a break exceeding 90 days, calculated from the most recent judicial commission date; service across multiple courts without a gap exceeding 90 days counts as continuous service from the date of first commission.
