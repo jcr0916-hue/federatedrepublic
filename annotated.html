@@ -20,6 +20,7 @@
     :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
+    html{scroll-padding-top:72px}
     body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.8;overflow-x:hidden}
     nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
     .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
@@ -43,7 +44,7 @@
     .ls-term{background:rgba(201,168,76,0.55)}
     .ls-design{background:rgba(27,42,74,0.4)}
     .ls-ref{background:rgba(80,120,80,0.5)}
-    .article-section{margin-bottom:3rem}
+    .article-section{margin-bottom:3rem;scroll-margin-top:72px}
     .article-header{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);padding-bottom:0.4rem;border-bottom:2px solid var(--navy);margin-bottom:0.2rem}
     .article-subtitle{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
     .article-intro{font-size:0.88rem;color:var(--muted);font-style:italic;margin-bottom:1.5rem;padding-left:1rem;border-left:2px solid var(--border)}
@@ -318,6 +319,8 @@
     <a href="#art20" data-art="art20">XX · Associated</a>
   </nav>
   <button class="minimap-toggle" id="minimapToggle" onclick="document.getElementById('minimap').classList.toggle('mobile-open')" aria-label="Toggle article navigation">≡</button>
+
+
 
 
 
@@ -1656,11 +1659,11 @@
 
 <div class="provision" id="s9-1">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.1" onclick="copyProvLink('s9-1')" style="cursor:pointer">§9.1<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">NRS Properties</span></div>
-    <p class="prov-text">The National Record System — the constitutional backbone of transparency. Permanent, tamper-evident, freely accessible to every Inhabitant at no cost. Every government act required to be published must be on the NRS before it takes legal effect. The NRS is the definitive public record of the Republic — if something happened in government and it is not on the NRS, it is constitutionally suspect.</p>
+    <p class="prov-text">The National Record System is the permanent, tamper-evident public record of the Republic — freely accessible to every Inhabitant at no cost. Every government act required to be published must appear on the NRS before it takes legal effect. An act not on the NRS is constitutionally suspect. The NRS is not a government convenience — it is the mechanism by which Inhabitants verify that government acts exist and what they say.</p>
 </div>
 <div class="provision" id="s9-1-a">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.1.a" onclick="copyProvLink('s9-1-a')" style="cursor:pointer">§9.1.a<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Immutability</span></div>
-    <p class="prov-text">NRS Permanence — records published to the NRS may not be deleted, altered, or reclassified after publication. Corrections are published as new entries alongside the original, not as replacements. The full history of any government act — including corrections, amendments, and subsequent interpretations — is permanently available.</p>
+    <p class="prov-text">Records published to the NRS may not be deleted, altered, or reclassified after publication. Corrections are published as new entries alongside the original, not as replacements. The full history of any government act — including corrections, amendments, and subsequent interpretations — is permanently available.</p>
 </div>
 <div class="provision" id="s9-1-b">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.1.b" onclick="copyProvLink('s9-1-b')" style="cursor:pointer">§9.1.b<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">NRS Access</span></div>
@@ -1668,7 +1671,7 @@
 </div>
 <div class="provision" id="s9-1-c">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.1.c" onclick="copyProvLink('s9-1-c')" style="cursor:pointer">§9.1.c<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Public Accessibility</span></div>
-    <p class="prov-text">NRS Publication Requirements — every category of government act required to be published must be published within the time specified by the constitution or enabling statute. Acts not published within their required period are not void (except where the constitution specifically provides otherwise), but the publication failure is a constitutional breach reportable by the relevant Inspectorate.</p>
+    <p class="prov-text">Every category of government act required to be published must be published within the time specified by the constitution or enabling statute. Acts not published within their required period are not void (except where the constitution specifically provides otherwise), but the publication failure is a constitutional breach reportable by the relevant Inspectorate.</p>
 </div>
 <div class="provision" id="s9-1-d">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.1.d" onclick="copyProvLink('s9-1-d')" style="cursor:pointer">§9.1.d<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">NRS Technical Standards</span></div>
@@ -1696,11 +1699,11 @@
 </div>
 <div class="provision" id="s9-3">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.3" onclick="copyProvLink('s9-3')" style="cursor:pointer">§9.3<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">RSA Technical Integrity</span></div>
-    <p class="prov-text">The Republic System Administrator operates the NRS under the oversight of the Legislative Inspectorate. The RSA Director is a statutory independent officer under §3.7. A decennial Technical Integrity Commission reviews whether the NRS architecture continues to meet the constitutional requirements for distributed custody, cryptographic verification, and public accessibility under §9.1.</p>
+    <p class="prov-text">The Republic System Administrator operates the NRS under the oversight of the Legislative Inspectorate. The RSA Director is a statutory independent officer whose independence is protected by §9.5.a. A decennial Technical Integrity Commission reviews whether the NRS architecture continues to meet the constitutional requirements for distributed custody, cryptographic verification, and public accessibility under §9.1.</p>
 </div>
 <div class="provision" id="s9-3-a">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.3.a" onclick="copyProvLink('s9-3-a')" style="cursor:pointer">§9.3.a<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">RSA Technical Integrity Commission</span></div>
-    <p class="prov-text">A decennial RSA Technical Integrity Commission reviews whether the NRS architecture continues to meet the constitutional requirements for distributed, tamper-evident operation established by §9.1. The Commission has publication authority only — it may not issue binding orders, impose penalties, or direct the RSA Director. Its findings are published jointly by all three Inspectorates to the NRS and cannot be withheld, suppressed, or altered after publication. Qualifications for pool eligibility, audit methodology and scope, working session parameters, compensation, and decennial trigger timing are established by statute.</p>
+    <p class="prov-text">A decennial RSA Technical Integrity Commission reviews whether the NRS architecture continues to meet the constitutional requirements for distributed, tamper-evident operation established by §9.1. The Commission has publication authority only — it may not issue binding orders, impose penalties, or direct the RSA Director. Its findings are published jointly by all three Inspectorates to the NRS and cannot be withheld, suppressed, or altered after publication. The Commission convenes every ten years from the date of the first Legislature convening under §19.3.d. Qualifications for pool eligibility, audit methodology and scope, working session parameters, and compensation are established by statute. The Legislature may not adjust the decennial trigger date by statute. If the LI's annual audit under §9.1.e identifies a critical architectural failure — defined as a finding that the NRS no longer meets the constitutional requirements for tamper-evident operation or distributed custody — the LI may declare an emergency review, triggering an extraordinary Commission draw from the current confirmed pool under §9.3.d. An emergency Commission draw does not reset the decennial clock.</p>
 </div>
 <div class="provision" id="s9-3-b">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.3.b" onclick="copyProvLink('s9-3-b')" style="cursor:pointer">§9.3.b<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">RSA Technical Pool — Constitution</span></div>
@@ -1724,7 +1727,15 @@
 </div>
 <div class="provision" id="s9-3-g">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.3.g" onclick="copyProvLink('s9-3-g')" style="cursor:pointer">§9.3.g<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Commission Findings</span></div>
-    <p class="prov-text">Commission findings are published directly and jointly to the NRS by all three Inspectorates upon completion of the decennial review. Findings may include assessments of cryptographic integrity, node distribution adequacy, technical standard compliance, and any architectural features that approach or breach constitutional requirements. The Legislature, the RSA Director, and both executives receive findings simultaneously with NRS publication. The Commission's mandate ends upon publication; the Commission dissolves and the pool resets under §9.3.c.</p>
+    <p class="prov-text">Commission findings are published directly and jointly to the NRS by all three Inspectorates upon completion of the decennial review. Findings may include assessments of cryptographic integrity, node distribution adequacy, technical standard compliance, and any architectural features that approach or breach constitutional requirements. The Legislature, the RSA Director, and both executives receive findings simultaneously with NRS publication. The Commission's mandate ends upon publication; the Commission dissolves and the pool resets under §9.3.c. Where an Emergency RSA Commission has been constituted under §9.3.h since the prior decennial review, the next regularly scheduled decennial Commission must include in its scope a review of the emergency findings — assessing whether the remediation was adequate and making architectural recommendations to prevent recurrence. These findings are published as a dedicated section of the decennial report.</p>
+</div>
+<div class="provision" id="s9-3-h">
+    <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.3.h" onclick="copyProvLink('s9-3-h')" style="cursor:pointer">§9.3.h<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Emergency RSA Commission</span></div>
+    <p class="prov-text">Where the LI has declared an emergency review under §9.3.a, the LI formally alerts the PM and publishes the emergency finding to the NRS. The PM requests each State to nominate one qualified person to an Emergency Technical Pool within 14 days. The LI certifies each nominee's qualifications against the statutory standard established under §9.3.b. All three Inspectorates then conduct a public lottery draw of five members from the certified nominees using the procedure under §9.3.d — the draw is published to the NRS before the session closes. The Emergency Commission's scope is limited to the specific architectural failure identified in the LI's emergency finding; it may not expand its mandate beyond that scope. Findings are published jointly by all three Inspectorates to the NRS upon completion. Senate confirmation is not required for Emergency Commission members; the mandatory Senate accountability session under §9.3.i provides accountability in lieu of confirmation. The Emergency Commission does not trigger a pool reset; the regular decennial pool and clock are unaffected. The Emergency Technical Pool dissolves upon conclusion of the Senate accountability session.</p>
+</div>
+<div class="provision" id="s9-3-i">
+    <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.3.i" onclick="copyProvLink('s9-3-i')" style="cursor:pointer">§9.3.i<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Emergency Commission Senate Accountability Session</span></div>
+    <p class="prov-text">Within 30 days of the Emergency Commission's appointment under §9.3.h, the Senate must schedule a mandatory public accountability session. The session must occur within 90 days of the Emergency Commission's appointment. Emergency Commission members appear before the Senate, present their findings, and respond to questions from senators. The session is published in full to the NRS. Failure to schedule the session within 30 days of appointment is a constitutional compliance breach certified by the LI and published to the NRS. The Senate accountability session provides the legitimacy in lieu of Senate confirmation — the Commission's findings carry full constitutional weight upon NRS publication regardless of whether the session has yet occurred.</p>
 </div>
 <div class="provision" id="s9-4">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.4" onclick="copyProvLink('s9-4')" style="cursor:pointer">§9.4<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">NRS and Electoral Integrity</span></div>
@@ -1732,7 +1743,7 @@
 </div>
 <div class="provision" id="s9-5">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.5" onclick="copyProvLink('s9-5')" style="cursor:pointer">§9.5<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">NRS Administration and Continuity</span></div>
-    <p class="prov-text">The National Record System is administered by a technically independent office under LI oversight. This section governs staffing, continuity, citizen access, and the technical standards that maintain the NRS's constitutional integrity.</p>
+    <p class="prov-text">The National Record System is administered by a technically independent office under LI oversight.</p>
 </div>
 <div class="provision" id="s9-5-a">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §9.5.a" onclick="copyProvLink('s9-5-a')" style="cursor:pointer">§9.5.a<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">NRS Staffing and Independence</span></div>
