@@ -1506,7 +1506,7 @@ Within the specific registered footprint, the federal government has exclusive o
 Persons residing within any area designated as the federal footprint under §17.3 retain full Article I rights enforceable in federal courts. The host State or Territory may not apply residency-based restrictions on federal footprint residents that conflict with Article I.
 
 [§17.3] Operational Use Rights
-The federal government holds property interests within States through Operational Use Rights rather than fee ownership. This section governs registration, termination, improvements, and the rights of residents within federal use footprints.
+The federal government holds property interests within States through Operational Use Rights rather than fee ownership.
 
 [§17.3.a] Registration
 Every federal operational use right must be registered on the NRS with precise geographic boundaries, authorized purpose, and termination conditions. There are no unregistered federal land claims. Federal property rights are explicit, bounded, and auditable.
@@ -1524,7 +1524,7 @@ Disputes over use right boundaries, termination, or improvement valuation go to 
 Where a State achieves independence through a constitutional amendment under §15.4.a and a voluntary devolution agreement under §13.4, automatic reversion under §17.3.b does not immediately apply to Operational Use Rights within the departing territory. Use rights continue under the terms of the framework agreement and independence treaty negotiated under §13.4.b.
 
 [§17.4] The National Trust
-The National Trust holds all federal land not conveyed by statute to States, indigenous compact territories, or private parties. Land disposal requires statute — the executive cannot convey or encumber public land unilaterally, preventing privatization by executive discretion. The National Trust Administrator is independently confirmed under the §2.2.h escalation framework, insulating land management from PM pressure. The Trust is structurally distinct from the Community Land Trust: the NTA manages federal holdings; the CLT Administrator manages affordable residential land held in trust for Inhabitants.
+The National Trust holds all federal land not conveyed by statute to States, indigenous compact territories, or private parties. Land disposal requires statute — the executive cannot convey or encumber public land unilaterally. The National Trust Administrator is independently confirmed under the §2.2.h escalation framework. The Trust is structurally distinct from the Community Land Trust: the NTA manages federal holdings; the CLT Administrator manages affordable residential land held in trust for Inhabitants.
 
 [§17.4.a] Trust Nature
 National Trust lands are designated as permanent heritage, ecological, or public recreation resources. Trust designation requires a 2/3 vote of both chambers with host State consent. Trust lands are not subject to Operational Use Right termination. The stewardship obligation (§17.4.b) applies from the date of designation.
@@ -1542,10 +1542,10 @@ Land may be removed from National Trust designation only by a 2/3 vote of both c
 National Trust lands recognized under international conservation agreements require a 2/3 Senate vote to withdraw from the relevant international obligation before the national removal process begins. The Republic cannot quietly delist internationally recognized sites without formal democratic action.
 
 [§17.4.f] Admission of New Trust Lands
-Land may be designated National Trust by a 2/3 vote of both chambers with host State consent (land in Territories: 2/3 vote alone). No executive action may designate Trust lands — designation is a legislative act. Prevents executive land grabs under Trust designation and executive stripping of Trust status.
+Land may be designated National Trust by a 2/3 vote of both chambers with host State consent (land in Territories: 2/3 vote alone). No executive action may designate Trust lands — designation is a legislative act.
 
 [§17.4.g] National Trust Administrator
-The National Trust Administrator is a statutory independent officer under §3.7. The Legislature creates the office by statute and establishes the Administrator's independence, term, and removal grounds through the enabling statute. The enabling statute may not reduce the stewardship obligations established in §17.4.a–f or diminish the EI's annual monitoring authority.
+The National Trust Administrator is a statutory independent officer whose independence is protected by statute. The Legislature creates the office by statute and establishes the Administrator's independence, term, and removal grounds through the enabling statute. The enabling statute may not reduce the stewardship obligations established in §17.4.a–f or diminish the EI's annual monitoring authority.
 
 [§17.5] Federal Property in Territories
 Federal operational use rights in Territories follow the same framework as in States under §17.3 and §17.4. Host State legislative consent is not required because Territories have no State legislature; the Territory's representative body and the LI are consulted before any use right is registered. The same constitutional principles and obligations apply.
