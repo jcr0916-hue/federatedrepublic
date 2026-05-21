@@ -795,25 +795,25 @@ No State may take any action that reduces NVS access, functionality, or availabi
 The Republic maintains three constitutionally independent Inspectorates — Legislative, Executive, and Judicial — each selected by branches other than those it oversees. The Inspectorates hold an information-only mandate: they publish findings but do not issue binding orders. Each Inspector General serves a 10-year non-renewable term with a constitutionally protected funding floor.
 
 [§8.1.a] The Legislative Inspectorate (LI)
-LI Mandate — audits the Legislature for fiscal accuracy, constitutional compliance, and NRS integrity. Conducts the population census (assigned to the LI because the census determines House seat allocation — giving this to a body nominated by the House would be a direct conflict of interest). Reviews House district maps. Publishes germaneness analyses. Annual compliance report published to the NRS. Determines referendum eligibility for citizen-initiated repeal petitions under §11.1.b.
+The LI audits the Legislature for fiscal accuracy, constitutional compliance, and NRS integrity. Conducts the population census (assigned to the LI because the census determines House seat allocation — giving this to a body nominated by the House would be a direct conflict of interest). Reviews House district maps. Publishes germaneness analyses. Annual compliance report published to the NRS. Determines referendum eligibility for citizen-initiated repeal petitions under §11.1.b.
 
 [§8.1.b] The Executive Inspectorate (EI)
-EI Mandate — audits both executives and the Monetary Authority. Annual military compliance assessment: were Tier authorizations followed? Was §1.30.d Intelligence Firewall maintained? Were fund certifications observed? Publishes clemency background reports before any executive act. Reviews disclosure records for constitutional appointments.
+The EI audits both executives and the Monetary Authority. Annual military compliance assessment: were Tier authorizations followed? Was §1.30.d Intelligence Firewall maintained? Were fund certifications observed? Publishes clemency background reports before any executive act. Reviews disclosure records for constitutional appointments.
 
 [§8.1.c] The Judicial Inspectorate (JI)
-JI Mandate — audits the courts for judicial scope and independence. Maintains the SC Candidate Registry. Vets judicial nominees and Electoral Commission candidates. Audits the Electoral Commission annually. Reviews accommodation compact compliance under §19.1, Associated Community compact compliance under Article XX, and Article XIV indigenous compact obligations. The JI's structural independence — selection by public lottery with no political nomination — makes it the appropriate body to administer all constitutional lottery draws and candidate certification functions throughout the Republic, in addition to its core judicial audit mandate. This dual role is a deliberate constitutional design choice, not an accumulation of functions by default.
+The JI audits the courts for judicial scope and independence. Maintains the SC Candidate Registry. Vets judicial nominees and Electoral Commission candidates. Audits the Electoral Commission annually. Reviews accommodation compact compliance under §19.1, Associated Community compact compliance under Article XX, and Article XIV indigenous compact obligations. The JI's structural independence — selection by public lottery with no political nomination — makes it the appropriate body to administer all constitutional lottery draws and candidate certification functions throughout the Republic, in addition to its core judicial audit mandate. This dual role is a deliberate constitutional design choice, not an accumulation of functions by default.
 
 [§8.2] Selection and Independence
 Each Inspectorate is constituted through a cross-nomination process that structurally excludes the body being watched from selecting those who watch it. The Supreme Court nominates the LI Inspector General, confirmed by Senate 2/3 supermajority. The House nominates the EI Inspector General, confirmed by Senate simple majority with JI vetting. The JI Inspector General is selected by public lottery with no political nomination by any branch.
 
 [§8.3] Inspector General Selection
-The selection mechanisms for each Inspector General are detailed in §8.3.a (Legislative IG), §8.3.b (Executive IG), and §8.3.c (term and staggering). The cross-nomination principles are established in §8.2.
+Each Inspector General is selected through a cross-nomination process that excludes the body being watched, as specified in §8.3.a through §8.3.c.
 
 [§8.3.a] Legislative IG
-LI Inspector General Selection — nominated by the Supreme Court, confirmed by the Senate by 2/3 supermajority. The House is entirely excluded — the body whose seat allocation the census determines has no role in selecting the office that conducts the census. The 2/3 Senate threshold ensures the LI IG commands cross-party support.
+The LI Inspector General is nominated by the Supreme Court, confirmed by the Senate by 2/3 supermajority. The House is entirely excluded — the body whose seat allocation the census determines has no role in selecting the office that conducts the census. The 2/3 Senate threshold ensures the LI IG commands cross-party support.
 
 [§8.3.b] Executive IG
-EI Inspector General Selection — nominated by the House, confirmed by the Senate by simple majority, with JI vetting of the nominee's disclosure record before the confirmation vote. The House nominates the EI because the PM — whom the EI watches — is accountable to the House, creating structural alignment without giving the PM or President control over selection.
+The EI Inspector General is nominated by the House, confirmed by the Senate by simple majority, with JI vetting of the nominee's disclosure record before the confirmation vote. The House nominates the EI because the PM — whom the EI watches — is accountable to the House, creating structural alignment without giving the PM or President control over selection.
 
 [§8.3.c] Term and Staggering
 All IGs serve 10-year non-renewable terms. No two IG terms may begin within 18 months of each other, ensuring continuous institutional knowledge. An outgoing IG may not be reappointed to the same office. The stagger means the system never faces simultaneous turnover in multiple offices.
@@ -822,7 +822,7 @@ All IGs serve 10-year non-renewable terms. No two IG terms may begin within 18 m
 The Judicial Inspectorate holds two constitutional mandates. First, as auditor: it monitors the court system, administers the SC candidate registry, and conducts compliance audits across compact obligations. Second, as certification administrator: it certifies lottery draws and panel selections throughout the constitution, including the State Designee Panel, the Regional Boundary Commission, and the RSA Technical Integrity Commission. Both mandates are informational only — the JI publishes findings and certifies processes; it does not issue binding orders or control outcomes.
 
 [§8.4.a] Judicial IG Candidate Pool
-JI IG Selection — drawn by public lottery from a qualified candidate pool. The outgoing JI IG administers the draw, witnessed by the other two IGs and three citizens chosen by jury protocols. Published to the NRS immediately. No political body nominates the JI IG — the most structurally independent selection mechanism in the constitution.
+The JI Inspector General is drawn by public lottery from a qualified candidate pool. The outgoing JI IG administers the draw, witnessed by the other two IGs and three citizens chosen by jury protocols. Published to the NRS immediately. No political body nominates the JI IG — the most structurally independent selection mechanism in the constitution. Where there is no outgoing JI IG — on the first-ever selection or where the outgoing IG has been removed or is incapacitated — the draw is administered jointly by the LI and EI Inspector Generals.
 
 [§8.4.b] JI Compact Compliance Audit
 Annual compliance reviews for §19.1 accommodation compacts, Article XX Associated Community compacts, and Article XIV indigenous compact obligations. The JI verifies that Article I rights protections are being maintained and that compact terms are being honored by both parties.
@@ -849,7 +849,7 @@ The JI audits inferior courts for compliance with their jurisdictional limits un
 Any candidate removed from a ballot by the JI's certification function may appeal to the Appellate Court within 14 days. The Court reviews only whether the JI correctly applied the eligibility criteria. Must rule within 21 days. If the removal is found improper, the candidate is reinstated to the ballot.
 
 [§8.5] Inspector General Removal
-An Inspector General may be removed only through the mechanisms specified in this section. The removal thresholds are designed to prevent any single branch from eliminating its oversight body through ordinary political action.
+An Inspector General may be removed only through the mechanisms specified in this section.
 
 [§8.5.a] For-Cause Removal
 For-cause removal of an Inspector General requires a 2/3 vote of both chambers simultaneously, preceded by a substantiated finding from a State Designee Panel under §8.9.f. Duty suspension triggers upon publication of a substantiated Panel finding, pending the legislative vote and any SC review.
@@ -858,10 +858,10 @@ For-cause removal of an Inspector General requires a 2/3 vote of both chambers s
 Any IG may be removed without cause by 3/4 of both chambers simultaneously, except the Judicial Inspectorate IG under §8.5.c, whose lottery-based selection makes no-cause removal equivalent to a political veto over the draw result. The higher threshold (3/4 vs 2/3 for cause) ensures no-cause removal is used only when extraordinary circumstances make continued service untenable regardless of conduct.
 
 [§8.5.c] Judicial IG — For-Cause Only
-JI Removal — the JI IG may only be removed for cause; no-cause removal is not available. The JI's lottery-based selection and its role in judicial independence oversight makes it the most insulated of the three offices.
+The JI IG may only be removed for cause; no-cause removal is not available. The JI's lottery-based selection and its role in judicial independence oversight makes it the most insulated of the three offices.
 
 [§8.6] Inspectorate Operations and Mandate
-The three Inspectorates operate under a shared information-only mandate: they observe, audit, and publish. They hold no enforcement authority. Their power derives entirely from the constitutional weight of a permanent public record.
+The three Inspectorates operate under a shared information-only mandate: they observe, audit, and publish.
 
 [§8.6.a] Information-Only Mandate
 Inspectorates publish facts; they do not issue binding orders or legal determinations. A finding that a government actor has breached the constitution is a factual statement, not a judgment.
@@ -885,10 +885,10 @@ Where a compliance question spans multiple Inspectorate mandates, the Inspectora
 All three Inspectorates have unrestricted access to records, personnel, facilities, and systems within their audit mandate. No official may obstruct, delay, or impede an Inspectorate investigation. Obstruction is a constitutional breach reportable by the affected Inspectorate to the NRS.
 
 [§8.7] Triggered Investigations
-EI Dereliction Investigation — the EI may investigate a constitutional officer for dereliction: failure to perform a constitutionally mandated function. Dereliction is distinct from breach — breach is doing something unconstitutional, dereliction is failing to do something constitutionally required. The EI publishes its dereliction findings to the NRS.
+The EI may investigate a constitutional officer for dereliction: failure to perform a constitutionally mandated function. Dereliction is distinct from breach — breach is doing something unconstitutional, dereliction is failing to do something constitutionally required. The EI publishes its dereliction findings to the NRS.
 
 [§8.7.a] Official Trigger
-Dereliction Standards — dereliction requires: (a) the constitutional function is clearly established; (b) the officer failed to perform it within the constitutionally required period; and (c) the failure was not caused by circumstances genuinely beyond the officer's control. Political disagreement with a constitutional requirement is not a defense.
+Dereliction requires: (a) the constitutional function is clearly established; (b) the officer failed to perform it within the constitutionally required period; and (c) the failure was not caused by circumstances genuinely beyond the officer's control. Political disagreement with a constitutional requirement is not a defense.
 
 [§8.8] EI Annual Military Assessment
 A dedicated section within the EI's annual report covering: whether military operations in the prior year were authorized through the correct Tier; whether the §1.30.d Intelligence Firewall was maintained; whether PM fund certifications were obtained and observed; whether the 48-hour NRS publication requirement was met for all military orders.
