@@ -61,6 +61,8 @@
     .recent-tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold);letter-spacing:0.06em}
     .recent-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy)}
     .recent-new{font-size:0.62rem;background:var(--navy);color:var(--gold);padding:0.15rem 0.5rem;align-self:flex-start;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;margin-top:0.25rem}
+    /* ── LIBRARY HEADING ── */
+    .library-heading{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid var(--navy)}
     /* ── ACCORDION ── */
     .library-section{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
     .library-section:first-of-type{margin-top:1rem}
@@ -175,61 +177,63 @@
 
   <!-- FEATURED -->
   <section class="featured-section" aria-labelledby="featured-label">
-    <span class="featured-label" id="featured-label">Start Here — Eight Essential Scenarios</span>
+    <span class="featured-label" id="featured-label">Scenario Spotlight</span>
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6;max-width:680px">Eight scenarios covering the Republic's major constitutional mechanisms — a complete tour from ordinary governance to the edges of constitutional design.</p>
     <div class="featured-grid">
       <a href="scenario-ordinary.html" class="featured-entry">
         <span class="fe-num">01 · Ordinary Governance</span>
-        <span class="fe-title">The Ordinary Week</span>
-        <span class="fe-desc">A full week of constitutional governance — a bill, a budget dispute, a PM formation, a Presidential foreign policy action. The system working as designed.</span>
+        <span class="fe-title">The Ordinary Day</span>
+        <span class="fe-desc">A bill, a budget dispute, a PM formation, a Presidential foreign policy action. The constitutional system working exactly as designed.</span>
+        <span class="fe-arrow">Start Here →</span>
+      </a>
+      <a href="scenario-state-threshold.html" class="featured-entry">
+        <span class="fe-num">02 · Presidential Election</span>
+        <span class="fe-title">The State Threshold</span>
+        <span class="fe-desc">A candidate wins 57% nationally but only 19 of 42 States. The first presidential runoff — and why the State plurality requirement exists.</span>
         <span class="fe-arrow">Read →</span>
       </a>
-      <a href="scenario-budget.html" class="featured-entry">
-        <span class="fe-num">02 · Fiscal Accountability</span>
-        <span class="fe-title">The Budget Impasse</span>
-        <span class="fe-desc">A coalition fracture stalls the budget. 600 legislators and 312,400 government employees stop receiving pay. The constitutional clock starts.</span>
+      <a href="scenario-jec-table.html" class="featured-entry">
+        <span class="fe-num">03 · Dual Executive</span>
+        <span class="fe-title">The JEC Table</span>
+        <span class="fe-desc">A trade agreement has domestic implementation provisions. The Joint Executive Council meets. No consensus. The SC rules in 30 days on which executive governs.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-first-nomination.html" class="featured-entry">
+        <span class="fe-num">04 · Supreme Court</span>
+        <span class="fe-title">The First Nomination</span>
+        <span class="fe-desc">The PM nominates from the open SC registry. The Senate votes 61-39 — two short of 2/3. A second nomination is required. What the threshold is actually doing.</span>
+        <span class="fe-arrow">Read →</span>
+      </a>
+      <a href="scenario-shortfall.html" class="featured-entry">
+        <span class="fe-num">05 · Social State</span>
+        <span class="fe-title">The Shortfall</span>
+        <span class="fe-desc">Year 8. Mass unemployment crashes healthcare revenues. The MA certifies insolvency. The Endowment activates for both systems simultaneously — for the first time.</span>
         <span class="fe-arrow">Read →</span>
       </a>
       <a href="scenario-nonderogable.html" class="featured-entry">
-        <span class="fe-num">03 · Non-Derogable Rights</span>
-        <span class="fe-title">Enhanced Measures</span>
-        <span class="fe-desc">A general requests interrogation methods the constitution prohibits. The EI finds a violation. What the Inspectorate can and cannot do.</span>
+        <span class="fe-num">06 · Individual Rights</span>
+        <span class="fe-title">The Non-Derogable Floor</span>
+        <span class="fe-desc">A government declares a national emergency and suspends habeas corpus. Why the constitution does not permit it — not even in emergencies. Not even by statute.</span>
         <span class="fe-arrow">Read →</span>
       </a>
-      <a href="scenario-independent-agency.html" class="featured-entry">
-        <span class="fe-num">04 · Institutional Independence</span>
-        <span class="fe-title">The Safety Director</span>
-        <span class="fe-desc">A food safety director investigating a politically connected industry receives termination pressure. The constitution's independence architecture holds.</span>
+      <a href="scenario-critical-finding.html" class="featured-entry">
+        <span class="fe-num">07 · Inspectorate Accountability</span>
+        <span class="fe-title">The Critical Finding</span>
+        <span class="fe-desc">The Eight-Year Assessment produces the Republic's first Critical Failure. The Legislature had understated obligations for six of eight years. What transparency does.</span>
         <span class="fe-arrow">Read →</span>
       </a>
-      <a href="scenario-medical-autonomy.html" class="featured-entry">
-        <span class="fe-num">05 · Medical Autonomy</span>
-        <span class="fe-title">The Referral</span>
-        <span class="fe-desc">A state restricts abortion services through scope of practice regulation — constitutionally valid — then tries to punish a patient, her sister, her doctor, and an out-of-state provider. SC 9-0.</span>
+      <a href="scenario-devolution.html" class="featured-entry">
+        <span class="fe-num">08 · Territorial Structure</span>
+        <span class="fe-title">The Devolution</span>
+        <span class="fe-desc">A State fails three consecutive audits. Citizens vote to devolve. Sitting senators keep their seats. The logic of holding democratic mandates through institutional failure.</span>
         <span class="fe-arrow">Read →</span>
       </a>
-      <a href="scenario-capital.html" class="featured-entry">
-        <span class="fe-num">06 · Right to Life</span>
-        <span class="fe-title">The Capital Cases</span>
-        <span class="fe-desc">Three questions about capital punishment: whether §1.1 permits it, whether §1.2 applies to the method, and whether a federal abolition statute binds state criminal law.</span>
-        <span class="fe-arrow">Read →</span>
-      </a>
-      <a href="scenario-status-order.html" class="featured-entry">
-        <span class="fe-num">07 · Interstate Recognition</span>
-        <span class="fe-title">Everywhere She Goes</span>
-        <span class="fe-desc">A family with a same-sex adoption order moves to a state that refuses recognition. The SC rules 7-0. A status order issued by a court of competent jurisdiction is valid everywhere in the Republic.</span>
-        <span class="fe-arrow">Read →</span>
-      </a>
-      
-      
     </div>
   </section>
 
   <!-- LIBRARY ACCORDION -->
   <section class="library-section" aria-labelledby="library-label">
-    <span class="section-label" id="library-label">All 54 Scenarios by Category</span>
-    <div class="accordion-controls">
-      <button class="toggle-all-btn" id="toggleAll" onclick="toggleAll()">Expand all</button>
-    </div>
+    <h2 class="library-heading" id="library-label">All 54 Scenarios by Category</h2>
 
     <div class="scenario-grid">
       <div class="scenario-category">
@@ -383,36 +387,7 @@
 </footer>
 
 <script>
-  function toggleAccordion(id) {
-    const el = document.getElementById(id);
-    const isOpen = el.classList.contains('open');
-    el.classList.toggle('open');
-    el.querySelector('.accordion-header').setAttribute('aria-expanded', !isOpen);
-    updateToggleAllBtn();
-  }
-
-  function toggleAll() {
-    const accordions = document.querySelectorAll('.accordion');
-    const allOpen = [...accordions].every(a => a.classList.contains('open'));
-    accordions.forEach(a => {
-      a.classList.toggle('open', !allOpen);
-      a.querySelector('.accordion-header').setAttribute('aria-expanded', !allOpen);
-    });
-    document.getElementById('toggleAll').textContent = allOpen ? 'Expand all' : 'Collapse all';
-  }
-
-  function updateToggleAllBtn() {
-    const accordions = document.querySelectorAll('.accordion');
-    const allOpen = [...accordions].every(a => a.classList.contains('open'));
-    const noneOpen = [...accordions].every(a => !a.classList.contains('open'));
-    const btn = document.getElementById('toggleAll');
-    if (allOpen) btn.textContent = 'Collapse all';
-    else btn.textContent = 'Expand all';
-  }
-
-  document.querySelectorAll('.accordion-header').forEach(h => {
-    h.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
+  
     });
   });
 </script>
