@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Expanded Court — The Federated Republic</title>
+  <meta name="description" content="Year 6. The Legislature passes a statute adding two SC seats. The PM nominates both within 60 days. One seat is confirmed; the other expires unfilled at 18 mont">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem}
+    .finding{background:var(--navy);color:var(--white);padding:1.5rem;margin:2rem 0;border-radius:4px}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+    .finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+    .finding p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;color:var(--gold);font-size:0.85rem}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a><a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a>
+      <span class="nav-sep"></span><a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><a href="advisor.html">Advisor</a>
+  </div>
+  <main>
+    <div class="scenario-meta">
+      <span class="scenario-tag">Supreme Court · Court Composition · §4.1.e · Legislature</span>
+      <h1 class="scenario-title">The Expanded Court</h1>
+      <p class="scenario-subtitle">Year 6. The Legislature passes a statute adding two SC seats. The PM nominates both within 60 days. One seat is confirmed; the other expires unfilled at 18 months. The opposition attempts reversal under the 2/3 + attrition rule.</p>
+      <div class="provisions-tested"><span class="prov-tag">§4.1.e SC Composition and Size</span>
+        <span class="prov-tag">§4.2.d PM Nomination and Senate Confirmation</span>
+        <span class="prov-tag">§3.2 Senate Powers</span></div>
+    </div>
+    <div class="scenario-body">
+      <p>The court expansion debate began in Year 5, when a 6-3 SC majority issued three consecutive rulings narrowing the scope of the social state provisions. The rulings were constitutionally reasoned and technically defensible. They were also, to the governing coalition, politically inconvenient. The PM's coalition held narrow House and Senate majorities. The constitutional arithmetic was straightforward: add two seats, nominate two justices whose published records suggested a different interpretive approach, restore the doctrinal balance.</p>
+
+      <p>The statute passed the House by ordinary majority and the Senate by ordinary majority. Under §4.1.e, adding SC seats requires only ordinary statute — both chambers, simple majority. The design's deliberate asymmetry: expansion is easy; reduction is hard. The theory is that a government willing to pack the court faces a slow and politically costly unwind that deters the practice without preventing it.</p>
+
+      <h2>The Two New Seats — §4.1.e</h2>
+
+      <div class="beat">
+        <div class="beat-label">§4.1.e — Expansion Mechanics</div>
+        <div class="beat-title">New seats are assigned to the class with the fewest members. Must be filled within 18 months or expire.</div>
+        <p>Two new seats added to a nine-justice court. The smallest classes at the time of expansion both had three members. The JI drew public lots to assign one seat to Class B and one to Class C. The PM had 60 days from enactment to nominate for each seat under §4.2.d. Both nominations were submitted on Day 58.</p>
+        <p>The first nominee, Judge Ryo Hashimoto, was confirmed by the Senate 28-14 on Day 112. The second nominee, Judge Celestine Mwamba, had a published record that drew more sustained Senate scrutiny. Her confirmation hearing stretched across six weeks. On Day 163 of the 18-month window, the Senate voted 26-16 — two votes short of the 2/3 required.</p>
+      </div>
+
+      <p>The PM re-nominated within 30 days as required. The third attempt for the second seat — a different nominee, Judge Serrano Vives — was still pending confirmation on Day 540 of the 18-month window. Under §4.1.e, a new seat that is not filled within 18 months of enactment expires by operation of law. On Day 548, the JI published a notice to the NRS: the second new seat had expired unfilled. The court sat at 10 justices — one expansion, one expiry.</p>
+
+      <h2>The Reversal Attempt — §4.1.e Reduction</h2>
+
+      <p>The opposition, having won the midterm elections in Year 7, now held a Senate majority but not a supermajority. They introduced a statute to reduce the court from 10 back to 9 seats — reversing the expansion entirely.</p>
+
+      <div class="beat">
+        <div class="beat-label">§4.1.e — Reduction Mechanics</div>
+        <div class="beat-title">Reduction requires 2/3 of both chambers. Takes effect through natural attrition only. No sitting justice may be removed.</div>
+        <p>The opposition's statute passed the Senate with exactly 2/3 of full seated membership — the minimum required. It passed the House with 2/3 as well, in a remarkable cross-party vote that reflected how the court expansion had changed the politics. The statute designated the Class B expansion seat for reduction by attrition — the next vacancy in that class would not be filled.</p>
+        <p>Judge Hashimoto, the confirmed expansion justice, was in Year 2 of a 12-year non-renewable term. He would not voluntarily step down; there were no grounds for removal. The reduction statute was constitutionally valid and the designation was constitutionally proper — but the court would remain at 10 until Hashimoto's term expired, resigned, or until death or removal created the vacancy. That was a maximum of 10 more years away.</p>
+      </div>
+
+      <p>The court sat at 10 justices. With an even number, §4.1.e's tie rule applied: where the court is equally divided, the challenged ruling of the lower court or government body stands. In practice, the court rarely split evenly on the high-stakes cases — justices do not vote as predictable blocs. But on three occasions in the following four years, cases produced a 5-5 split. Each time, the lower court ruling stood.</p>
+
+      <div class="finding">
+        <div class="finding-label">What This Scenario Tests</div>
+        <p>§4.1.e's asymmetric design is its central feature: expansion requires ordinary statute; reduction requires 2/3 supermajority of both chambers plus natural attrition. The asymmetry creates a deterrent without an absolute prohibition. A government that packs the court faces real consequences — the opposition needs only 2/3 to authorise reduction, but then must wait years for attrition to produce the result.</p>
+        <p>The 18-month expiry rule functions as designed: a seat added to justify expansion but never filled cannot remain as a perpetual vacancy waiting for a politically convenient moment to fill. The expiry closes that path. The PM had 18 months across three nominees to fill the second seat. She failed.</p>
+        <p>The tie rule's application to an even-numbered court is mild rather than destabilising. The court is not paralysed — it handles hundreds of cases, most of which produce clear majorities. The handful of 5-5 ties produce the constitutional default: the existing ruling stands. That is not nothing. It means the SC cannot overturn a lower court ruling on a tied vote — which is, arguably, the right outcome when the Republic's highest court cannot reach majority agreement.</p>
+      </div>
+</div>
+    <div class="scenario-nav"><a href="scenarios.html">&larr; All Scenarios</a><a href="scenarios.html">All Scenarios &rarr;</a></div>
+  </main>
+  <script>document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});</script>
+</body></html>

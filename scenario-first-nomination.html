@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The First Nomination — The Federated Republic</title>
+  <meta name="description" content="Year 2. The first scheduled SC vacancy. The PM nominates from the open JI registry. The Senate votes 61-39 — short of the 2/3 required. A second nomination is r">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem}
+    .finding{background:var(--navy);color:var(--white);padding:1.5rem;margin:2rem 0;border-radius:4px}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+    .finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+    .finding p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;color:var(--gold);font-size:0.85rem}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+  </div>
+
+  <main>
+    <div class="scenario-meta">
+      <span class="scenario-tag">Supreme Court · PM Nomination · Senate Confirmation · §4.2.d</span>
+      <h1 class="scenario-title">The First Nomination</h1>
+      <p class="scenario-subtitle">Year 2. The first scheduled SC vacancy. The PM nominates from the open JI registry. The Senate votes 61-39 — short of the 2/3 required. A second nomination is required within 30 days. What the 2/3 threshold is actually doing.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§4.2 Supreme Court Selection</span>
+        <span class="prov-tag">§4.2.d PM Nomination and Senate Confirmation</span>
+        <span class="prov-tag">§8.4.e SC Candidate Registry</span>
+        <span class="prov-tag">§4.1.e SC Composition and Size</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The first scheduled Supreme Court vacancy arrived on a Tuesday in Year 2 — the Class A seat held by a founding justice whose four-year initial term had run its course. Under §4.2.h, the initial terms of the nine founding justices were staggered by public lot to prevent any government from replacing the entire court at once: Class A held four-year initial terms, Class B eight, Class C twelve. Three Class A justices would now be replaced, the first of many confirmation cycles that would populate the court with justices nominated under the new appointment model.</p>
+
+      <p>The PM, Asha Tamboli, published her first nomination to the NRS at 9:00 a.m. — a retired appellate judge named Carver Osei-Mensah with a 22-year judicial record, extensive constitutional scholarship, and no prior electoral or partisan history. The JI confirmed his registry status within 14 days and published a comprehensive assessment to the NRS: credentials verified, financial disclosures complete, no disqualifying interests. The published record ran to 84 pages including 19 years of published opinions.</p>
+
+      <h2>The Senate Vote — §4.2.d</h2>
+
+      <p>The Senate vote opened on Day 78 of the confirmation period. The 2/3 threshold — 2/3 of full seated membership — required 28 yes votes from a 42-member Senate. The PM's coalition held 24 reliable Senate seats. Six more votes were needed from opposition senators or independents.</p>
+
+      <div class="beat">
+        <div class="beat-label">§4.2.d — The 2/3 Threshold</div>
+        <div class="beat-title">Confirmation requires 2/3 of full seated membership. No deemed confirmation. Senate must hold an affirmative vote.</div>
+        <p>The 2/3 requirement is not an accident of the drafting. It is the mechanism that forces cross-party consensus. A PM who can confirm a justice with their own coalition's votes alone has, in effect, a unilateral appointment power. The 2/3 threshold requires that at least some opposition senators find the nominee acceptable — which means the nominee must be acceptable to at least some of the senators whose job it is to oppose the government.</p>
+        <p>Osei-Mensah had no obvious partisan liabilities. But three opposition senators raised concerns about two opinions from his appellate record — dissents in privacy cases that, in their reading, suggested a narrower interpretation of §1.10 than the majority of constitutional scholars supported. Two further senators objected to the procedure, not the nominee. One voted against on principle as a matter of judicial philosophy.</p>
+      </div>
+
+      <p>The vote was 61-39 in favour — but the Senate counts by membership, not present-and-voting. The 42-seat Senate requires 28 confirmations at 2/3. Sixty-one percent of senators voted yes. That is not 2/3. The nomination fails.</p>
+
+      <p>The LI certifies no constitutional compliance breach — the Senate voted within the 90-day window. The PM must submit a new nomination within 30 days under §4.2.d.</p>
+
+      <h2>The Re-Nomination — What the Threshold Teaches</h2>
+
+      <p>PM Tamboli's options were limited by the arithmetic. Any second nominee would face the same Senate. The three opposition senators who voted against Osei-Mensah on substance would need to find the second nominee acceptable. The PM's advisors identified the specific provisions at issue — the §1.10 privacy dissents — and searched the registry for candidates with a published record that addressed those concerns.</p>
+
+      <div class="beat">
+        <div class="beat-label">§8.4.e — The Registry's Function</div>
+        <div class="beat-title">The registry contains every qualifying citizen who has chosen to apply. The PM's second search produced three viable candidates.</div>
+        <p>The registry is not a shortlist assembled by the government. It is an open record of every qualifying citizen — 15 or more years of legal practice or 10 or more years of judicial service — who has applied and been certified. The PM's team searched the JI's published qualification reports for appellate judges with strong §1.10 records. The registry made that search possible in a way that a closed nomination process would not.</p>
+        <p>The second nominee, Judge Priya Nair, had a 15-year appellate record that included two majority opinions directly addressing the §1.10 privacy provisions the opposition had cited. She had also served as a district court judge before her appellate appointment — 26 years of judicial service in total. Her registry entry included the JI's assessment of her full published record.</p>
+      </div>
+
+      <p>The second confirmation vote, held on Day 28 of the new 30-day window, was 30-12. Two of the three opposition senators who had voted against Osei-Mensah voted yes. The third voted no but did not block. Judge Nair was confirmed.</p>
+
+      <div class="finding">
+        <div class="finding-label">What This Scenario Tests</div>
+        <p>The 2/3 threshold functions as designed: the first nominee, while qualified, failed to command cross-party consensus on specific constitutional questions that mattered to opposition senators. The PM's response was not to fight the threshold or claim it was being applied in bad faith — it was to search the registry for a nominee whose published record addressed the specific concerns.</p>
+        <p>The scenario illustrates why the open registry is the right foundation for this appointment model. A closed nomination process would have produced whoever the PM's advisors suggested. The registry produced a searchable, publicly assessable pool from which a second nominee could be identified based on her actual constitutional record, not her political connections.</p>
+        <p>The no-deemed-confirmation rule is also tested: the Senate's failure to vote is itself a breach, but the Senate's vote to decline is a legitimate constitutional outcome. The PM must re-nominate, not argue that the Senate exceeded its authority. The 2/3 threshold is not an obstacle to good governance — it is the mechanism that makes the appointment legitimate.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+      <a href="scenario-state-threshold.html">The State Threshold &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,227 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Clean Money Cases — The Federated Republic</title>
-  <meta name="description" content="Three Article XVIII mechanisms tested in one election cycle: a corporate conduit scheme that reaches the Supreme Court, a disclosure threshold that automatically triggers referendum eligibility, and a public funding system that fails its own adequacy standard mid-campaign."
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="The Clean Money Cases">
-  <meta property="og:description" content="Three Article XVIII mechanisms tested in one election cycle: a corporate conduit scheme that reaches the Supreme Court, a disclosure threshold that automatically triggers referendum eligibility, and a">
-  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-cleanmoney.html">
-  <meta property="og:site_name" content="The Federated Republic">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Clean Money Cases">
-  <meta name="twitter:description" content="Three Article XVIII mechanisms tested in one election cycle: a corporate conduit scheme that reaches the Supreme Court, a disclosure threshold that automatically triggers referendum eligibility, and a">>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0}
-    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
-    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
-    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
-    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
-    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
-    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
-    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
-    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
-    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
-    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
-    .scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:1.75rem 0 0.5rem}
-    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
-    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
-    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
-    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
-    .beat p:last-child{margin-bottom:0}
-    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
-    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
-    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
-    .finding p+p{margin-top:0.75rem}
-    .evidence-table{width:100%;margin:1.5rem 0;border-collapse:collapse;font-size:0.85rem}
-    .evidence-table th{background:rgba(27,42,74,0.08);color:var(--navy);font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.6rem 0.75rem;text-align:left;border-bottom:2px solid var(--border)}
-    .evidence-table td{padding:0.55rem 0.75rem;border-bottom:1px solid rgba(212,201,176,0.4);color:var(--text)}
-    .evidence-table tr:last-child td{border-bottom:none}
-    .evidence-table .flag{color:#8b2000;font-family:'JetBrains Mono',monospace;font-size:0.7rem}
-    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
-    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
-    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
-    .verdict-box p+p{margin-top:0.75rem}
-    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
-    .scenario-nav a:hover{color:var(--navy)}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
-    .mobile-menu a:last-child{border-bottom:none}
-    .mobile-menu.open{display:flex}
-    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
-  </style>
-</head>
-<body>
-  <div class="progress-bar" id="progress"></div>
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
-    <div class="nav-links">
-      <a href="annotated.html">Constitution</a>
-      <a href="scenarios.html" class="active">Scenarios</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="papers.html">Essays</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
-    </div>
-    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
-    <a href="annotated.html">Constitution</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="papers.html">Essays</a>
-    <a href="changelog.html">Changelog</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
-    <a href="annotated.html">Read the Constitution</a>
-    <a href="constitution-v181.docx" download>Download (.docx)</a>
-    <a href="contact.html">Contact</a>
-  </div>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Clean Money Election — The Federated Republic</title><meta name="description" content="The Republic's public campaign financing framework faces its first significant test — a major donor attempts to circumvent the constitutional contribution limit"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><style>body{font-family:'Jost',sans-serif;background:#F5F0E8;color:#2a2520;font-size:16px;line-height:1.85}*{box-sizing:border-box;margin:0;padding:0}nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}.nav-logo{font-family:'Cormorant Garamond',serif;color:#C9A84C;font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}.nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}.nav-links{display:flex;gap:0.15rem;align-items:center}.nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px}.nav-links a:hover,.nav-links a.active{color:#C9A84C}.nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block}.nav-links .nav-cta{background:#C9A84C;color:#0f1e38;font-weight:600;padding:0.3rem 0.8rem}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}.hamburger span{display:block;width:22px;height:2px;background:#C9A84C}.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}.mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}.mobile-menu.open{display:flex}main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid #1B2A4A}.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:0.8rem}.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:#1B2A4A;line-height:1.1;margin-bottom:1rem}.scenario-subtitle{font-size:0.95rem;color:#7a7060;font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:#1B2A4A;color:#C9A84C;padding:0.25rem 0.6rem;border-radius:2px}.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:#1B2A4A;margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid #d4c9b0}.beat{background:#EDE7D8;border-left:3px solid #C9A84C;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#7a7060;margin-bottom:0.4rem}.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#1B2A4A;margin-bottom:0.8rem}.beat p{margin-bottom:0.8rem;font-size:0.92rem}.finding{background:#1B2A4A;color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;margin-bottom:0.8rem}.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}.finding p:last-child{margin-bottom:0}.scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid #d4c9b0}.scenario-nav a{text-decoration:none;color:#C9A84C;font-size:0.85rem}@media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 60px}}</style></head><body><nav><a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a><div class="nav-links"><a href="annotated.html">Constitution</a><a href="scenarios.html" class="active">Scenarios</a><a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a><a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><span class="nav-sep"></span><a href="advisor.html" class="nav-tool">Advisor</a><a href="scenario-ordinary.html" class="nav-cta">Start Here</a></div><button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button></nav><div class="mobile-menu" id="mobileMenu"><a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a><a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a><a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><a href="advisor.html">Advisor</a></div><main><div class="scenario-meta"><span class="scenario-tag">Electoral Finance · Campaign Contributions · §18 · Elections Panel</span><h1 class="scenario-title">The Clean Money Election</h1><p class="scenario-subtitle">The Republic's public campaign financing framework faces its first significant test — a major donor attempts to circumvent the constitutional contribution limits through a complex intermediary structure.</p><div class="provisions-tested"><span class="prov-tag">§18.1 Campaign Finance Framework</span><span class="prov-tag">§18.1.a Contribution Limits</span><span class="prov-tag">§18.2 Public Financing</span><span class="prov-tag">§10.5 Ethics Framework</span><span class="prov-tag">§16.1 Digital Infrastructure Commission</span></div></div><div class="scenario-body">
+      <p>The Republic's electoral finance framework was designed to reduce the dependence of elected officials on large private donors. Public campaign financing, constitutional contribution limits, disclosure requirements, and the Elections Panel's certification role together constitute the framework. In Year 3, the first national election cycle under the full constitutional framework, the system faced a challenge that was sophisticated in design and straightforward in constitutional outcome.</p>
 
-  <div class="page-wrap">
-    <div class="scenario-meta">
-      <span class="scenario-tag">Scenario · Article XVIII · Electoral Finance</span>
-      <h1 class="scenario-title">The Clean Money Cases</h1>
-      <p class="scenario-premise">Three Article XVIII mechanisms activate in the same election cycle. A mining company routes contributions through 312 of its employees at identical amounts, on identical dates, to identical recipients. The EI's reverse-flow attribution analysis surfaces the pattern. The Supreme Court must decide whether statistical similarity is sufficient to attribute the contributions to the company. Meanwhile, the Elections Panel and EI jointly certify that the disclosure threshold exempts 23% of all electoral spending — triggering automatic referendum eligibility — and a publicly funded Senate candidate faces an opponent spending eight times more, forcing the Elections Panel into its first-ever structural disadvantage finding.</p>
-      <div class="provisions-tested">
-        <span class="prov-tag">§18.1.b Natural Persons Only</span>
-        <span class="prov-tag">§18.1.c Voter-Donor Parity</span>
-        <span class="prov-tag">§18.1.d Full Disclosure</span>
-        <span class="prov-tag">§18.2.c Public Funding Adequacy</span>
-        <span class="prov-tag">§18.3.c Aggregate Attribution</span>
-        <span class="prov-tag">§11.1 Automatic Referendum</span>
-        <span class="prov-tag">Article VIII constitutional violations</span>
-      </div>
-    </div>
+      <p>Industrialist Cassian Roth had been a prominent political donor in the predecessor government. Under the Republic's constitutional framework, direct contributions to candidates were limited by statute; the Elections Panel monitored compliance; and all campaign finance transactions were published to the NRS within 48 hours of receipt. Roth's direct contributions were, by the time of the election, well within the published limits. His indirect contributions were not.</p>
 
-    <div class="scenario-body">
-
-      <p>Meridian Resources is the Republic's largest privately held extraction company — offshore gas leases in four States, smelting operations in three more. It is not a legal person for purposes of Article XVIII. It has never been. Its general counsel made this clear in a memo eighteen months before the election cycle in question: "We have no constitutional right to make financial contributions to any electoral campaign. Any contribution structured to circumvent this prohibition is attributed to us regardless of whose credential is used." The memo is filed in Meridian's legal department. It is not read by the Vice President for Government Relations.</p>
-
-      <p>In the eight weeks before National Election Day, 312 Meridian senior employees make financial contributions to the re-election campaign of Senator Amara Djouti — who sits on the Senate Natural Resources Committee — through the NVS Campaign Finance Registry. Each contribution is $4,750. Each is made on one of four specific dates. Each uses a personal Citizen Voting Credential correctly, confirming eligibility to vote in the relevant Senate jurisdiction. Each is individually legal on its face. Collectively, they constitute $1,485,000 in contributions to a single senatorial campaign from employees of a single company within a compressed window. All 312 are published to the Campaign Finance Registry on the NRS the day they are made. The EI's annual audit begins six weeks after election day.</p>
-
-      <h2>Case 1 — The Meridian Attribution</h2>
+      <h2>The Structure — §18.1.a</h2>
 
       <div class="beat">
-        <div class="beat-label">§18.3.c — Reverse-Flow Attribution Analysis</div>
-        <div class="beat-title">The pattern the EI was designed to find</div>
-        <p>The EI's audit applies §18.3.c's reverse-flow attribution analysis — "identifying statistical patterns where multiple citizen contributions share common funding sources, timing, recipients, or amounts suggestive of coordinated direction rather than independent electoral choice." The Meridian contributions appear in the analysis immediately: 312 contributions, four discrete dates, one recipient, identical amounts. The probability that 312 individuals independently selected the same amount, the same dates, and the same recipient without coordination is, as the EI's published finding puts it, "not calculable as a meaningful probability."</p>
-        <p>The EI publishes its preliminary finding to the NRS: the Meridian contributions exhibit all characteristics of coordinated direction. It opens a formal investigation and notifies Meridian and Senator Djouti's campaign simultaneously. Under §18.3.d, the PM's law enforcement agencies must respond within 30 days with a published statement of whether a formal investigation has been opened.</p>
+        <div class="beat-label">§18.1.a — Contribution Limits and Circumvention</div>
+        <div class="beat-title">Constitutional contribution limits apply to all financial value directed toward a campaign, not only direct monetary transfers.</div>
+        <p>The intermediary structure Roth had constructed ran through three advocacy organisations and a policy research entity. Each organisation received contributions within the constitutional limits. Each organisation then funded activities — research publications, media placements, event sponsorships — that had the direct effect of promoting specific candidates. The organisations were formally independent of the campaigns. The financial trail from Roth to campaign benefit required, in the Elections Panel's analysis, fourteen steps to fully document.</p>
+        <p>The Elections Panel's investigation — triggered by an NRS anomaly flag in the transaction publication system — took six weeks. The Panel published its findings under its §16.x certification authority. The finding was straightforward: the intermediary structure was designed to direct financial value to specific campaigns in excess of the constitutional contribution limits while structuring each step to avoid the direct transaction the limits were designed to capture.</p>
       </div>
 
-      <p>Meridian's defense is structured carefully. The company did not direct contributions. It did not set amounts. It did not identify recipients. What it did: it established a "Senior Employee Political Participation Program" — a voluntary program under which senior employees received a $4,750 annual bonus explicitly designated for "political participation activities." The program's documentation — all of which Meridian provided to the EI immediately — states that participation is voluntary, that employees may contribute to any lawful candidate or cause, and that the bonus is personal income. All 312 participating employees filed the bonus as personal income on their tax returns. Meridian argues: employees received cash, they made their own choices, and the statistical clustering reflects their shared professional interests and political views, not corporate direction.</p>
+      <p>The EI opened an ethics investigation under §10.5.h simultaneously with the Elections Panel's certification process. Roth's structure, in the EI's assessment, constituted an attempt to circumvent constitutionally mandated electoral limits. The investigation findings were published to the NRS. The referral — potential criminal violations — went to prosecutorial authorities.</p>
+
+      <h2>The Candidates — §18.2</h2>
+
+      <p>Three candidates had benefited from the Roth intermediary structure. Two had received indirect benefits without knowledge of the structure's design — they had accepted funding from the advocacy organisations as independent entities without investigating their financing chains. One had a closer relationship with one of the organisations. The Elections Panel's certification findings were individual and specific.</p>
 
       <div class="beat">
-        <div class="beat-label">§18.1.b — The Constitutional Standard</div>
-        <div class="beat-title">What "direction, payment, or coordination" means</div>
-        <p>§18.1.b defines a contribution as reflecting an individual's independent electoral choice only "where it reflects that person's independent electoral choice — meaning the person independently determined the amount and recipient without direction, payment, or compensation from any third party." It then specifies: "A contribution made under any agreement, direction, or payment by a third party as to amount, recipient, or timing is attributable to that third party regardless of whose Citizen Voting Credential was used."</p>
-        <p>The critical question: is a bonus designated for political participation, paid in a specific amount, a "payment" as to "amount" within the meaning of §18.1.b? Meridian argues no — the employees chose their recipients independently, which is the central electoral choice. The EI argues yes — the amount determination is constitutionally relevant, and a designated-purpose bonus of a specific amount is functionally a corporate contribution in which the routing mechanism is the employee's credential, not the employee's independent judgment.</p>
+        <div class="beat-label">§18.2 — Public Financing and the Electoral Record</div>
+        <div class="beat-title">The NRS publication requirement makes campaign finance transparent not just in the moment but permanently.</div>
+        <p>All three candidates' NRS finance records were updated with the Elections Panel's investigation findings. The two candidates who had received benefits unknowingly were required to return the equivalent value to their public financing account. Their campaigns continued with the corrected financing records publicly visible. The third candidate — whose relationship with the advocacy organisation was sufficiently close to constitute knowing circumvention in the Elections Panel's finding — faced disqualification proceedings under the statutory framework.</p>
+        <p>The disqualification proceedings resolved before the election. The candidate withdrew rather than contest the Elections Panel's finding in the available appellate process. The withdrawal was itself published to the NRS as a permanent record alongside the investigation findings. Future election cycles would begin with that record accessible to any candidate, any voter, any journalist researching the history of the Republic's campaign finance framework.</p>
       </div>
-
-      <p>The Supreme Court accepts the case on direct appeal following the EI's formal finding. The legal question is certified: does a designated-purpose bonus of a specified amount, paid to employees who then contribute that amount to electoral campaigns, constitute "payment by a third party as to amount" within §18.1.b, even where the recipient selection is the employee's own?</p>
-
-      <div class="beat">
-        <div class="beat-label">§18.1.b — Supreme Court — 7-2</div>
-        <div class="beat-title">The amount is not severable from the contribution</div>
-        <p>The majority holds that an electoral contribution has three constitutionally relevant components: amount, timing, and recipient. §18.1.b requires independence in all three. A designated-purpose bonus of a specific amount that is then contributed to an electoral campaign reflects corporate determination of the amount — the employee did not independently choose to contribute $4,750; the company did. The fact that the employee chose the recipient does not cure the corporate determination of the amount. Both the amount and the recipient are components of the electoral act; independence of one does not make the contribution independent.</p>
-        <p>The majority explicitly addresses Meridian's "shared professional interests" argument: statistical clustering of identical amounts on identical dates to identical recipients is not consistent with independent judgment under any standard. Independent political actors with shared interests might give to the same candidate. They do not independently choose identical amounts on identical dates. The pattern itself is evidence that §18.1.b's independence requirement was not met.</p>
-        <p>The dissent (2 justices) argues the majority has gone too far: if a company pays its employees a political participation bonus, that is ordinary income, and the employees' subsequent choices are genuinely their own. The dissent would require evidence of explicit direction as to recipient, not merely as to amount. The majority responds: §18.1.b says "amount, recipient, or timing" — the word "or" is disjunctive. Corporate determination of any one of the three renders the contribution attributable to the corporation.</p>
-        <p>Result: the $1,485,000 is attributed to Meridian under §18.3.c. Meridian is a non-natural person with no right to make electoral contributions. The contributions to Senator Djouti's campaign are ordered returned. Meridian's general counsel publishes the eighteen-month-old memo to the NRS the same day as the ruling. Senator Djouti's campaign cannot fully execute the return order — $890,000 has already been spent. The $890,000 shortfall is assessed as a fine to the Electoral Integrity Fund under §18.3.d. A Inspectorate finding against the VP for Government Relations is filed by the EI. The Supreme Court issues the constitutional violation determination within six weeks.</p>
-      </div>
-
-      <h2>Case 2 — The Disclosure Threshold</h2>
-
-      <p>Separately from the Meridian investigation, the Elections Panel of the Digital Infrastructure Commission and Executive Inspectorate conduct their joint annual certification of the disclosure threshold — required by §18.1.d, which mandates that "the de minimis threshold may not be set at a level that exempts more than a de minimis fraction of total electoral spending in any jurisdiction." The current threshold is $500 — contributions below $500 need not be disclosed on the Campaign Finance Registry.</p>
-
-      <table class="evidence-table">
-        <thead>
-          <tr><th>Jurisdiction</th><th>Total Electoral Spending</th><th>Sub-threshold Spending</th><th>% Exempted</th><th>Status</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Federal (Senate)</td><td>$412M</td><td>$67M</td><td>16.3%</td><td class="flag">⚑ EXCEEDS</td></tr>
-          <tr><td>Federal (House, avg)</td><td>$8.4M</td><td>$2.1M</td><td>25.0%</td><td class="flag">⚑ EXCEEDS</td></tr>
-          <tr><td>Akoro State (avg)</td><td>$1.8M</td><td>$610K</td><td>33.9%</td><td class="flag">⚑ EXCEEDS</td></tr>
-          <tr><td>Maurel State (avg)</td><td>$2.1M</td><td>$440K</td><td>21.0%</td><td class="flag">⚑ EXCEEDS</td></tr>
-          <tr><td>Tessaba State (avg)</td><td>$890K</td><td>$280K</td><td>31.5%</td><td class="flag">⚑ EXCEEDS</td></tr>
-          <tr><td><strong>Aggregate</strong></td><td><strong>All jurisdictions</strong></td><td></td><td><strong>23.1%</strong></td><td class="flag">⚑ UNCONSTITUTIONAL</td></tr>
-        </tbody>
-      </table>
-
-      <div class="beat">
-        <div class="beat-label">§18.1.d — Automatic Referendum Eligibility</div>
-        <div class="beat-title">The statute exempts too much. It becomes referendum-eligible automatically.</div>
-        <p>The joint EC/EI certification is published to the NRS: the $500 disclosure threshold exempts 23.1% of total electoral spending across all jurisdictions — far more than a de minimis fraction. §18.1.d's final sentence is clear: "If they find the threshold inadequate, the relevant statute automatically becomes eligible for referendum under Article XI without requiring a citizen petition." No petition. No signatures. The Campaign Finance Disclosure Statute becomes referendum-eligible the moment the certification is published.</p>
-        <p>The Legislature's response is immediate. Within three weeks of the certification, the House passes an amendment to the Disclosure Statute reducing the de minimis threshold from $500 to $50 — the amount the EI's own modelling suggests would bring sub-threshold spending below 2% of total spending in all jurisdictions. The Senate concurs. The amendment is signed and published to the NRS. The EC certifies that the amended threshold meets the constitutional standard. The automatic referendum eligibility lapses — the statute now complies. The referendum is never held. Same mechanism as the CLT inaction trigger in the Referendum Year: the threat of the referendum produces the legislative correction the constitution demanded.</p>
-      </div>
-
-      <h2>Case 3 — The Structural Disadvantage Finding</h2>
-
-      <p>Senator Djouti's re-election campaign — now returned the contributed funds, heavily publicized through the Meridian case, and facing a campaign finance scandal — is not the election cycle's most interesting public funding question. That is the open Senate seat in Maurel's Northern District, where candidate Léa Thierno-Walsh has taken public funding and faces privately funded opponent Raoul Mendes, a property developer who has committed $22 million of personal wealth to the campaign. The public funding allocation for the district's Senate race: $2.75 million.</p>
-
-      <p>Mendes is not violating §18.1.b — he is a natural person contributing to his own campaign, which is the one category of non-third-party contribution the constitution does not restrict. He is not routing corporate funds. He is spending his own money in an election he is eligible to vote in. The constitution permits this.</p>
-
-      <div class="beat">
-        <div class="beat-label">§18.2.c — EC Structural Disadvantage Finding</div>
-        <div class="beat-title">8-to-1 spending is structural disadvantage</div>
-        <p>§18.2.c requires that "the public funding system must be designed so that a publicly funded candidate is not structurally disadvantaged against a privately funded opponent." The EC conducts its mid-campaign review and finds: at an 8-to-1 spending ratio, Thierno-Walsh cannot achieve media parity, cannot maintain ground operations at comparable scale, and cannot respond to Mendes's advertising at the rate it is being deployed. The EC publishes a formal Structural Disadvantage Finding to the NRS — the first in the Republic's history.</p>
-        <p>What the Elections Panel cannot do: it cannot increase Thierno-Walsh's allocation mid-campaign. The public funding amount is set by statute, not by the EC. The EC administers; it does not legislate. What the Finding does: it is published to the NRS permanently, it triggers a mandatory post-election adequacy review by the Legislature under §18.2.b, and it is the constitutional basis for a referendum petition by any citizen who believes the statute's allocation is unconstitutional. The Finding does not change this election. It changes the next statute.</p>
-      </div>
-
-      <p>Thierno-Walsh loses the election — 47.3% to 52.7%. Whether the spending disparity determined the outcome is not constitutionally adjudicable. After the election, the Legislature's post-election adequacy review recommends a 340% increase in the public funding allocation for Senate races. The revised statute passes the following session. Mendes, who has served one term, declines to run again.</p>
 
       <div class="finding">
-        <span class="finding-label">What Article XVIII built</span>
-        <p>The Meridian case established the foundational attribution precedent: an electoral contribution has three components — amount, timing, recipient — and independence in one does not cure corporate determination of another. A designated-purpose bonus of a specific amount is corporate determination of the amount, regardless of how the employee spends it. This will be cited in every future conduit scheme case. The VP for Government Relations' constitutional violation is permanently on the NRS. Meridian's own legal advice — which warned against exactly this — is also permanently on the NRS, alongside the VP's decision to ignore it.</p>
-        <p>The disclosure threshold case never produced a referendum. It produced a statute. This is Article XVIII working as the preamble to §18.1.d suggests it should — "anonymity in electoral finance is prohibited" is a constitutional principle; the threshold mechanism is the enforcement tool; the referendum-eligibility trigger is the enforcement tool's enforcement mechanism. When the threshold fails its constitutional standard, the correction is immediate because the cost of non-correction is immediate. The Legislature understood this and corrected within three weeks.</p>
-        <p>The structural disadvantage finding is the hardest case. Mendes spent legally. Thierno-Walsh received legally insufficient public funding. The constitution requires that public funding be "designed so that a publicly funded candidate is not structurally disadvantaged" — which is a design standard for statutes, not an order to the Elections Panel to act mid-election. The EC's role is to document, certify, and publish. The Legislature's role is to fix the design. The election happened under a constitutionally inadequate design. The design was fixed. The candidate who ran under the inadequate design lost. The constitution does not provide a remedy for that candidate. It provides a mechanism to ensure no future candidate runs under the same inadequate design. Whether this is sufficient is a question Article XVIII leaves to democratic judgment.</p>
+        <div class="finding-label">What This Scenario Tests</div>
+        <p>The electoral finance framework's constitutional architecture depends on three concurrent mechanisms: contribution limits that apply to financial value not merely direct monetary transfers, NRS real-time publication that makes transactions visible before violations become entrenched, and the Elections Panel's certification authority that can flag anomalies and investigate structures the literal contribution text might not capture.</p>
+        <p>The scenario demonstrates that transparency does enforcement work that investigation cannot. The NRS anomaly flag that triggered the Elections Panel's investigation existed because the 48-hour transaction publication requirement was producing a real-time data set. A contribution structure that took fourteen steps to document was generating fourteen NRS entries, each individually within limits, each contributing to a pattern that the publication system's monitoring function could detect.</p>
+        <p>The distinction between knowing and unknowing receipt of circumvented contributions is constitutionally important. The two candidates who received benefits unknowingly face a remediation — return the value, continue the campaign with corrected records. The candidate who knowingly participated faces disqualification. The framework's proportionality is deliberate: deterrence works through graduated consequences, not blanket punishment for proximity to a violation.</p>
       </div>
-
-      <div class="verdict-box">
-        <span class="verdict-label">The Architecture in Practice</span>
-        <p><strong>§18.1.b</strong> closes the corporate contribution question at the constitutional level — before any statute, before any regulatory ruling. A corporation has no right to make electoral contributions. The conduit mechanism — routing through natural persons — is constitutionally attributed back to the corporation where "direction, payment, or coordination" as to amount, timing, or recipient is present. The Supreme Court's reading of "or" as disjunctive means any one of the three is sufficient. This is a significantly broader prohibition than the factual conduit schemes that preceded it.</p>
-        <p><strong>§18.1.d</strong>'s threshold mechanism is self-enforcing in the same way §3.3.a is self-enforcing: it does not require citizen action to activate, it does not require a court finding, and its activation does not guarantee a referendum — it guarantees that the cost of continued non-compliance becomes immediate and visible. The Legislature corrected in three weeks because the alternative was a citizen referendum on a disclosure threshold, which is the kind of campaign finance technicality that legislators rightly understand voters will not forgive them for not handling themselves.</p>
-        <p><strong>§18.2.c</strong>'s structural disadvantage standard is the article's most unresolved tension. The constitution requires a design that prevents structural disadvantage; it provides no mid-election remedy when the design fails. The EC's Finding is the constitutional record. The post-election adequacy review is the constitutional correction. The candidate who ran under the inadequate design has no constitutional remedy for that election. The article protects future candidates, not current ones who fall into the gap between constitutional intent and statutory implementation. This is deliberate — it places the correction responsibility squarely on the Legislature, where it belongs.</p>
-      </div>
-
-    </div>
-
-    <nav class="scenario-nav">
-      <a href="scenarios.html">← All Scenarios</a>
-      <a href="scenario-referendum.html">The Referendum Year →</a>
-    </nav>
-  </div>
-
-  <script>
-    function toggleMobileNav(){
-      document.getElementById('mobileMenu').classList.toggle('open');
-    }
-    const bar = document.getElementById('progress');
-    window.addEventListener('scroll', () => {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      if(h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
-    });
-  </script>
-</body>
-</html>
+</div><div class="scenario-nav"><a href="scenarios.html">&larr; All Scenarios</a><a href="scenario-ordinary.html">The Ordinary Day &rarr;</a></div></main><script>document.addEventListener("click",function(e){const m=document.getElementById("mobileMenu");if(m&&m.classList.contains("open")&&!e.target.closest("nav")&&!e.target.closest("#mobileMenu"))m.classList.remove("open");});</script></body></html>

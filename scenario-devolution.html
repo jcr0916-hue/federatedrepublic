@@ -1,192 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Third Audit — The Federated Republic</title>
-  <meta name="description" content="The State of Korrath fails its Statehood Audit for the third consecutive year. Early warnings, withheld grants, a remediation plan that did not hold. The Senate votes on a Motion of Devolution by 3/4 supermajority. Korrath becomes a Territory. What the three-year process actually looks like from inside."
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="The Third Audit">
-  <meta property="og:description" content="The State of Korrath fails its Statehood Audit for the third consecutive year. Early warnings, withheld grants, a remediation plan that did not hold. The Senate votes on a Motion of Devolution by 3/4 ">
-  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-devolution.html">
-  <meta property="og:site_name" content="The Federated Republic">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Third Audit">
-  <meta name="twitter:description" content="The State of Korrath fails its Statehood Audit for the third consecutive year. Early warnings, withheld grants, a remediation plan that did not hold. The Senate votes on a Motion of Devolution by 3/4 ">>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
-    .mobile-menu.open{display:flex}
-    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
-    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
-    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
-    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
-    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
-    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
-    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
-    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
-    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
-    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
-    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
-    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
-    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
-    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
-    .beat p:last-child{margin-bottom:0}
-    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
-    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
-    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
-    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
-    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
-    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
-    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
-    .finding p+p{margin-top:0.75rem}
-    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
-    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
-    <div class="nav-links">
-      <a href="annotated.html">Constitution</a>
-      <a href="scenarios.html" class="active">Scenarios</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="papers.html">Essays</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
-    </div>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
-    <a href="annotated.html">Constitution</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="papers.html">Essays</a>
-    <a href="changelog.html">Changelog</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
-    <a href="annotated.html">Read the Constitution</a>
-    <a href="constitution-v181.docx" download>Download (.docx)</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <div class="page-wrap">
-    <div class="scenario-meta">
-      <span class="scenario-tag">State Governance · §13.3 · Mandatory Devolution</span>
-      <h1 class="scenario-title">The Third Audit</h1>
-      <p class="scenario-subtitle">The State of Korrath fails its Statehood Audit for the third consecutive year. Early warnings were published. Grants were withheld. A remediation plan was submitted and found inadequate. The Senate votes 76-24 on the Motion of Devolution. Korrath challenges at the Supreme Court within thirty days. The three-year process, and what follows it.</p>
-      <div class="provisions-tested">
-        <span class="prov-tag">§13.3 Mandatory Devolution — Triggers</span>
-        <span class="prov-tag">§13.3 Mandatory Devolution — Early Warning</span>
-        <span class="prov-tag">§13.3 Mandatory Devolution — Devolution Vote</span>
-        <span class="prov-tag">§13.3 Mandatory Devolution — Effects</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Devolution — The Federated Republic</title><meta name="description" content="Year 5. Aldenmoor State fails its third Statehood Audit. Citizens vote for devolution. Its senators keep their seats. The constitutional logic of holding democr"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><style>body{font-family:'Jost',sans-serif;background:#F5F0E8;color:#2a2520;font-size:16px;line-height:1.85}:root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}*{box-sizing:border-box;margin:0;padding:0}nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}.nav-logo{font-family:'Cormorant Garamond',serif;color:#C9A84C;font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}.nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}.nav-links{display:flex;gap:0.15rem;align-items:center}.nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}.nav-links a:hover,.nav-links a.active{color:#C9A84C}.nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}.nav-links .nav-cta{background:#C9A84C;color:#0f1e38;font-weight:600;padding:0.3rem 0.8rem}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}.hamburger span{display:block;width:22px;height:2px;background:#C9A84C}.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}.mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}.mobile-menu.open{display:flex}main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid #1B2A4A}.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:0.8rem}.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:#1B2A4A;line-height:1.1;margin-bottom:1rem}.scenario-subtitle{font-size:0.95rem;color:#7a7060;font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:#1B2A4A;color:#C9A84C;padding:0.25rem 0.6rem;border-radius:2px}.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:#1B2A4A;margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid #d4c9b0}.beat{background:#EDE7D8;border-left:3px solid #C9A84C;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#7a7060;margin-bottom:0.4rem}.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#1B2A4A;margin-bottom:0.8rem}.beat p{margin-bottom:0.8rem;font-size:0.92rem}.finding{background:#1B2A4A;color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;margin-bottom:0.8rem}.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}.finding p:last-child{margin-bottom:0}.scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid #d4c9b0}.scenario-nav a{text-decoration:none;color:#C9A84C;font-size:0.85rem}@media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 60px}}</style></head><body><nav><a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a><div class="nav-links"><a href="annotated.html">Constitution</a><a href="scenarios.html" class="active">Scenarios</a><a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a><a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><span class="nav-sep"></span><a href="advisor.html" class="nav-tool">Advisor</a><a href="scenario-ordinary.html" class="nav-cta">Start Here</a></div><button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button></nav><div class="mobile-menu" id="mobileMenu"><a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a><a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a><a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><a href="advisor.html">Advisor</a></div><main><div class="scenario-meta"><span class="scenario-tag">Territory · Mandatory Devolution · Path A · §13.3</span><h1 class="scenario-title">The Devolution</h1><p class="scenario-subtitle">Year 5. Aldenmoor State fails its third Statehood Audit. Citizens vote for devolution. Its senators keep their seats. The constitutional logic of holding democratic mandates through failure.</p><div class="provisions-tested"><span class="prov-tag">§13.3 Mandatory Devolution</span>
+        <span class="prov-tag">§13.2 The Statehood Audit</span>
+        <span class="prov-tag">§13.2.e Minimum Democratic Legitimacy</span>
         <span class="prov-tag">§13.3.e Constitutional Challenge</span>
-        <span class="prov-tag">§13.1 Territory Status</span>
-      </div>
-    </div>
+        <span class="prov-tag">§13.5 Re-Qualification Pathway</span></div></div><div class="scenario-body">
+      <p>Aldenmoor's three-year audit record was a study in incremental failure. After the first Early Warning, its government published a remediation plan that addressed the electoral process failures directly but left the Article I compliance gaps — specifically in due process protections in administrative detention — without a credible timeline. After the second warning, the plan was updated to add a timeline. The timeline passed without implementation. After the third audit failure, the LI's certification was joined by both the EI and JI confirmations that §13.3 requires before devolution can be initiated. The constitutional machinery moved to the referendum stage.</p>
 
-    <div class="scenario-body">
+      <p>Aldenmoor's citizens voted 61% to 39% in favour of devolution over the federal remediation commission alternative. The vote was not, in most analyses, a vote in favour of Territory status. It was a vote against the specific composition of the proposed remediation commission — a body that Aldenmoor's political leadership had successfully characterised as federal interference. The constitutional choice was between two paths to the same destination. Citizens chose the path without direct federal governance, accepting the implications of Territory status rather than ceding administrative control.</p>
 
-      <p>Korrath is a mid-sized State of 2.3 million citizens. It entered the Republic in Year 4 of the transition, passing its Phase 2 Statehood Audit on the second attempt. It struggled from the beginning: a legacy of underfunded public infrastructure, a revenue base heavily dependent on a single extractive industry in structural decline, and a state judiciary that produced a pattern of §1.8 equality rulings that the LI's published findings described as "systematically insufficient without reasonable legal basis."</p>
+      <h2>Path A — The Senators — §13.3</h2>
 
-      <h2>Year 1 — The First Failure</h2>
-
-      <p>Korrath fails its Year 11 annual Statehood Audit on two grounds: fiscal insolvency (its projected revenue ratio falls below the constitutional threshold without federal assistance beyond the Social State floor) and Article I non-enforcement (the LI documents twenty-three §1.8 cases in which Korrath's state courts dismissed equality claims on procedural grounds the LI characterizes as pretextual).</p>
-
-      <p>The LI publishes an Early Warning Report to the NRS and distributes it to every eligible voter in Korrath. The Korrath state government and the Domestic Affairs Council jointly publish a Remediation Plan within the statutory period. The Plan addresses fiscal restructuring through a mineral rights revaluation and addresses Article I enforcement through a mandatory judicial training program. The LI reviews the Plan and publishes a finding: the fiscal component is adequate; the judicial training component is insufficient — training does not address the structural procedural barriers identified in the LI's findings.</p>
-
-      <p>The PM does not take action within the statutory period following the LI's inadequacy finding. Federal grant withholding activates automatically. Social State floor distributions to Korrath residents continue unaffected — the MA classifies them and protects them explicitly.</p>
-
-      <h2>Year 2 — The Second Failure</h2>
-
-      <p>Korrath's Year 12 audit fails again. The fiscal position has improved marginally — the mineral rights revaluation produced partial results — but remains below the threshold. The Article I non-enforcement finding is repeated and expanded: forty-one cases, the same pretextual procedural pattern. The Korrath government has amended its judicial procedures statute, but the LI finds the amendments have not changed the pattern of outcomes.</p>
+      <p>Aldenmoor had two sitting senators at the time of devolution. Under §13.3, sitting senators serve the remainder of their current elected terms. Senate seats are not vacated. No new Senate elections may be held for the devolved State until Statehood is restored.</p>
 
       <div class="beat">
-        <div class="beat-label">§13.3 — Second Year Warning</div>
-        <div class="beat-title">Grant withholding continues. The countdown cannot be reset.</div>
-        <p>The critical provision of §13.3: the countdown resets to zero only if Korrath passes an audit in an intervening year. It has not. Year 2 is the second consecutive failure. Federal grant withholding continues. The LI's published findings for Year 2 note — for the first time in the Republic's history — that a third consecutive failure will trigger the Senate Devolution Vote under §13.3. The finding is published to the NRS. Every eligible voter in Korrath receives it.</p>
-        <p>The Korrath government appeals to the Senate to intervene — to pass legislation overriding the LI's Article I non-enforcement determination. The Senate's legal counsel publishes an advisory opinion: the Senate may not override LI factual findings. The LI's non-enforcement determination is a published statement of observed fact, not a legal order. The only path that resets the counter is a passed audit.</p>
+        <div class="beat-label">§13.3 — Why Senators Keep Their Seats</div>
+        <div class="beat-title">Senate seats are not vacated. Citizens who elected those senators are not stripped of their representation because their government failed.</div>
+        <p>The design choice is explicit. Aldenmoor's senators were elected by citizens who voted in good faith. Those citizens did not fail the Statehood Audit — their government did. Stripping them of Senate representation would compound the consequence of a government failure onto individuals who had no individual role in producing it. Path A holds the democratic mandate intact: senators serve until their terms expire, then the seats go vacant until restoration.</p>
+        <p>Senator Kofi Larbi had two years remaining in his term. Senator Yuki Tanabe had four. Both remained in the Senate, voting on all matters as full members. The constitutional tension this creates — senators representing a Territory rather than a State — is real. It is also the price of not punishing voters for their government's failures.</p>
       </div>
 
-      <h2>Year 3 — The Vote</h2>
+      <h2>The Audit Challenge — §13.3.e</h2>
 
-      <p>Korrath fails its Year 13 audit for the third consecutive year. The fiscal position has not reached the constitutional threshold. The Article I non-enforcement pattern continues. The LI publishes its Year 3 finding with a mandatory statement under §13.3: the three-consecutive-failure trigger has been met. The Senate must vote on a Motion of Devolution.</p>
+      <p>Aldenmoor's government filed a constitutional challenge within 30 days of devolution taking effect under §13.3.e. The challenge had a narrow ground: the LI's audit findings were, in Aldenmoor's submission, factually insufficient to establish three consecutive failures on the electoral process criteria. The government argued that the audit had applied a higher standard to its electoral processes than the constitutional minimum required.</p>
 
-      <p>The Senate debate takes eleven days. Korrath's two Senators argue that devolution is disproportionate — a state with genuine structural challenges, not a state acting in bad faith. Other Senators respond that the three-year process provided two years of early warning, federal support, remediation planning, and every institutional tool available. The question before the Senate is not whether to help Korrath — that help has been ongoing — but whether a State that has failed to meet minimum governance standards for three consecutive years should retain the constitutional rights of Statehood.</p>
+      <p>The SC reviewed only the factual basis of the audit findings — not the policy merits of devolution, not the State's economic circumstances, not whether devolution was proportionate. Its ruling, issued on Day 14, found the LI's findings factually sufficient. The three consecutive failures were documented with specific evidence in each audit cycle. The challenge failed. Devolution stood.</p>
 
-      <div class="math-box">
-        <span class="math-label">Senate Devolution Vote — §13.3</span>
-        <div class="line">Full seated Senate membership: 100</div>
-        <div class="line">Required threshold: 3/4 = 75 (minimum)</div>
-        <div class="line">──────────────────────────────────</div>
-        <div class="line">For devolution: 76</div>
-        <div class="line">Against: 24</div>
-        <div class="result">Motion of Devolution passes — Korrath becomes a Territory</div>
-      </div>
+      <h2>Territory Status and the Restoration Path — §13.5</h2>
 
-      <h2>The Challenge</h2>
-
-      <p>Under §13.3.e, the affected State has thirty days to petition the Supreme Court for expedited review on a single narrow ground: whether the LI's audit findings, as a factual matter, meet the constitutional trigger standards of §13.3. Korrath files on day eighteen. The challenge argues that the Article I non-enforcement findings do not meet the constitutional standard — the LI documented procedural dismissals, but a pattern of procedural dismissals does not constitute "verified failure to enforce Article I protections" under §13.3.</p>
-
-      <p>The SC rules within the expedited statutory period. The majority opinion is careful and narrow: the Court reviews facts, not policy. The LI documented twenty-three cases in Year 1 and forty-one in Year 2 in which equality claims were dismissed on procedural grounds the LI characterizes as pretextual. The Court's review is limited to whether this factual record meets the constitutional trigger standard. It does. The challenge is dismissed.</p>
-
-      <h2>Korrath as a Territory</h2>
-
-      <p>The devolution takes effect on the date the Senate Motion passes. Two sitting senators serve out their remaining terms immediately. Korrath's House seats are retained proportionally — its citizens continue to have federal legislative representation. Social State floor distributions continue without interruption. The Domestic Affairs Council assumes administrative oversight. The LI conducts an immediate post-devolution baseline audit.</p>
-
-      <div class="beat">
-        <div class="beat-label">§13.3 — What Devolution Does and Does Not Do</div>
-        <div class="beat-title">Statehood lost. Rights intact. The path back is open immediately.</div>
-        <p>Every Korrath citizen retains full Article I rights. Devolution removes Statehood — it does not diminish the Individual Sovereignty Floor. Korrath residents vote in House elections. They participate in national elections. Their Social State floor distributions continue. What they lose is Senate representation and the governance autonomy that comes with Statehood.</p>
-        <p>Under §13.2, Korrath may begin the Statehood Audit process again immediately. There is no waiting period. The path to restored Statehood is available from the first day of Territory status. What is required is passing three annual audits — one each year, with no consecutive failures. The three-year process that produced devolution is the same three-year process that produces restoration. The constitution's remedial logic is symmetric: the same standard that was not met produces Territory status; meeting it produces Statehood again.</p>
-      </div>
+      <p>Aldenmoor Territory's first year under §13.1 brought Article I protections and social state access without interruption — the constitution's guarantee that devolution does not punish citizens for their government's failures applies to rights and social protections as well as to electoral representation. The federal tax exemption applied immediately. The Domestic Affairs Council exercised oversight without replacing the elected State government, which continued to govern under State law.</p>
 
       <div class="finding">
-        <span class="finding-label">What This Scenario Tests</span>
-        <p>§13.3's mandatory devolution process is the most significant sanction in the constitution short of the individual accountability mechanisms. It is also — deliberately — slow. Three consecutive audit failures, each preceded by Early Warning Reports, each triggering remediation obligations, each activating federal support tools. A state that reaches year three has had two years of explicit constitutional notice that the next failure will produce this outcome.</p>
-        <p>The scenario tests the process at its most uncomfortable point: a State that has genuine structural challenges, not bad faith. Korrath's fiscal problem was not manufactured — it inherited an economy in structural decline. Its Article I enforcement problem was a pattern of judicial procedure, not explicit discrimination. The constitution's response to this is not sympathy or flexibility in the threshold — it is the three-year process itself. Two years of early warnings, federal resources, and remediation opportunities constitute the constitution's accommodation for difficult circumstances. The threshold for the third year is the threshold. Korrath didn't meet it.</p>
-        <p>The SC challenge under §13.3.e is the design's judicial backstop — the narrow review that ensures devolution isn't applied to a state whose audit findings were factually wrong. The Court does not review whether devolution is a proportionate response. It reviews whether the factual record meets the trigger standard. That narrow scope is intentional: it keeps the Court out of governance policy and limits it to factual verification.</p>
+        <div class="finding-label">What This Scenario Tests</div>
+        <p>§13.3 Path A is the constitution's answer to the democratic tension in mandatory devolution. The remediation ladder — three consecutive audits, Early Warnings, published plans, citizen referendum — ensures the process is proportionate and documented before any status change occurs. The Path A consequence — senators keep seats, no new elections until restoration, Article I protections continue — ensures the citizens of a devolved State are not punished for their government's failures beyond the loss of State constitutional status itself.</p>
+        <p>The §13.3.e challenge demonstrates that devolution is not beyond judicial review. The SC can find that the audit findings are factually insufficient. It can order a stay pending ruling. What it cannot do is review the policy judgment that a State failing three consecutive audits should face consequences. The factual threshold is reviewable; the constitutional design is not.</p>
+        <p>The restoration pathway under §13.5 is the other half of the mandatory devolution design. Territory status is not punitive in perpetuity. The moment Aldenmoor passes the Statehood Audit and completes the Provisional Membership Period, it is a State again — automatically, without requiring a political grant of permission. The devolution is a consequence; the restoration is a right.</p>
       </div>
-
-    </div>
-
-    <nav class="scenario-nav">
-      <a href="scenario-president-combined.html">← The State Plurality Requirement</a>
-      <a href="scenario-ma-certification.html">The Certification →</a>
-    </nav>
-  </div>
-
-  <script>
-    document.querySelector('.hamburger')?.addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    });
-    const bar = document.createElement('div');
-    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
-    document.body.prepend(bar);
-    window.addEventListener('scroll', () => {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
-    });
-  </script>
-</body>
-</html>
+</div><div class="scenario-nav"><a href="scenarios.html">&larr; All Scenarios</a><a href="scenario-ordinary.html">The Ordinary Day &rarr;</a></div></main><script>document.addEventListener("click",function(e){const m=document.getElementById("mobileMenu");if(m&&m.classList.contains("open")&&!e.target.closest("nav")&&!e.target.closest("#mobileMenu"))m.classList.remove("open");});</script></body></html>

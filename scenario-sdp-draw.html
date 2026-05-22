@@ -1,195 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Empty Seat — The Federated Republic</title>
-  <meta name="description" content="The first proceeding to trigger the per-incident State Designee Panel draw. Two States have empty pools. A drawn member declines. A challenge is filed on the second day. Both alternates are exhausted. The JI conducts a supplemental draw and the clock restarts. What the mechanism looks like under ordinary strain at the moment it matters.">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="The Empty Seat">
-  <meta property="og:description" content="The first proceeding to trigger the per-incident Panel draw. Two States with empty pools. A drawn member declines. A challenge filed on day two. Both alternates exhausted.">
-  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-sdp-draw.html">
-  <meta property="og:site_name" content="The Federated Republic">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Empty Seat">
-  <meta name="twitter:description" content="The first proceeding to trigger the per-incident Panel draw. Two States with empty pools. A drawn member declines. A challenge filed on day two. Both alternates exhausted.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
-    .mobile-menu.open{display:flex}
-    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
-    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
-    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
-    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
-    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
-    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
-    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
-    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
-    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
-    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
-    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
-    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
-    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
-    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
-    .beat p:last-child{margin-bottom:0}
-    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
-    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
-    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
-    .finding p+p{margin-top:0.75rem}
-    .nrs-entry{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--navy);padding:1rem 1.25rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.78rem;line-height:1.6}
-    .nrs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;display:block}
-    .timeline{margin:2rem 0}
-    .tl-row{display:flex;gap:1.25rem;margin-bottom:0.75rem;align-items:baseline}
-    .tl-day{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);min-width:3.5rem;text-align:right;padding-top:0.1rem}
-    .tl-text{font-size:0.88rem;color:var(--text);line-height:1.6}
-    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
-    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
-    <div class="nav-links">
-      <a href="annotated.html">Constitution</a>
-      <a href="scenarios.html" class="active">Scenarios</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="papers.html">Essays</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
-    </div>
-    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="scenario-ordinary.html">&#9656; Start Here &#8212; Ordinary Law</a>
-    <a href="annotated.html">Constitution</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="papers.html">Essays</a>
-    <a href="changelog.html">Changelog</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
-    <a href="annotated.html">Read the Constitution</a>
-    <a href="constitution-v181.docx" download>Download (.docx)</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <div class="page-wrap">
-    <div class="scenario-meta">
-      <span class="scenario-tag">Institutional Process &#xb7; §8.9.a&#x2013;d.i &#xb7; Per-Incident Panel Draw</span>
-      <h1 class="scenario-title">The Empty Seat</h1>
-      <p class="scenario-subtitle">The first proceeding to trigger the per-incident State Designee Panel draw. Two States have empty pools. A drawn member declines within hours. A challenge is filed the following day. Both alternates are exhausted before the Panel is fully seated. The JI conducts a supplemental draw and the clock restarts. What the mechanism looks like under ordinary strain &#8212; at the moment it actually matters.</p>
-      <div class="provisions-tested">
-        <span class="prov-tag">§8.9 State Designee Panel</span>
-        <span class="prov-tag">§8.9.a State Designee Pools</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Panel Draw — The Federated Republic</title><meta name="description" content="A For-Cause removal proceeding is initiated against a senior government official. The Joint Inspectorate Council constitutes the State Designee Panel by public "><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><style>body{font-family:'Jost',sans-serif;background:#F5F0E8;color:#2a2520;font-size:16px;line-height:1.85}:root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}*{box-sizing:border-box;margin:0;padding:0}nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}.nav-logo{font-family:'Cormorant Garamond',serif;color:#C9A84C;font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}.nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}.nav-links{display:flex;gap:0.15rem;align-items:center}.nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}.nav-links a:hover,.nav-links a.active{color:#C9A84C}.nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}.nav-links .nav-cta{background:#C9A84C;color:#0f1e38;font-weight:600;padding:0.3rem 0.8rem}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}.hamburger span{display:block;width:22px;height:2px;background:#C9A84C}.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}.mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}.mobile-menu.open{display:flex}main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid #1B2A4A}.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:0.8rem}.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:#1B2A4A;line-height:1.1;margin-bottom:1rem}.scenario-subtitle{font-size:0.95rem;color:#7a7060;font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:#1B2A4A;color:#C9A84C;padding:0.25rem 0.6rem;border-radius:2px}.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:#1B2A4A;margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid #d4c9b0}.beat{background:#EDE7D8;border-left:3px solid #C9A84C;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#7a7060;margin-bottom:0.4rem}.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#1B2A4A;margin-bottom:0.8rem}.beat p{margin-bottom:0.8rem;font-size:0.92rem}.finding{background:#1B2A4A;color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;margin-bottom:0.8rem}.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}.finding p:last-child{margin-bottom:0}.scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid #d4c9b0}.scenario-nav a{text-decoration:none;color:#C9A84C;font-size:0.85rem}@media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 60px}}</style></head><body><nav><a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a><div class="nav-links"><a href="annotated.html">Constitution</a><a href="scenarios.html" class="active">Scenarios</a><a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a><a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><span class="nav-sep"></span><a href="advisor.html" class="nav-tool">Advisor</a><a href="scenario-ordinary.html" class="nav-cta">Start Here</a></div><button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button></nav><div class="mobile-menu" id="mobileMenu"><a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a><a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a><a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><a href="advisor.html">Advisor</a></div><main><div class="scenario-meta"><span class="scenario-tag">State Designee Panel · §8.9 · JIC Lottery · §8.13</span><h1 class="scenario-title">The Panel Draw</h1><p class="scenario-subtitle">A For-Cause removal proceeding is initiated against a senior government official. The Joint Inspectorate Council constitutes the State Designee Panel by public lottery under §8.9 and §8.13.</p><div class="provisions-tested"><span class="prov-tag">§8.9 State Designee Panel</span>
         <span class="prov-tag">§8.9.a State Designee Pool</span>
-        <span class="prov-tag">§8.9.a State Designee Pool</span>
-        <span class="prov-tag">§8.9.d Panel Constitution</span>
         <span class="prov-tag">§8.9.d Panel Constitution by Lottery</span>
-        <span class="prov-tag">§8.9.d Panel Constitution by Lottery</span>
-        <span class="prov-tag">§8.9.f Activation and Meeting Parameters</span>
-      </div>
-    </div>
+        <span class="prov-tag">§8.12 Joint Inspectorate Council</span>
+        <span class="prov-tag">§8.13 Constitutional Pool Framework</span></div></div><div class="scenario-body">
+      <p>The State Designee Panel exists for one purpose: to determine, before any qualifying For-Cause removal vote, whether the stated grounds for removal are substantiated within the enumerated constitutional categories for the subject office. It does not investigate. It does not judge credibility. It does not recommend. It answers a binary question — grounds substantiated or not — and publishes that finding to the NRS.</p>
 
-    <div class="scenario-body">
+      <p>The proceeding that triggered this draw involved a senior official in the Domestic Affairs domain. The initiating body had transmitted the stated grounds and supporting documentary record to the JI. The five-day draw window under §8.9.d began on the day of transmission.</p>
 
-      <p>The EI and JI jointly initiate a For-Cause removal proceeding against the Legislative Inspectorate&#8217;s Inspector General. The grounds are transmitted to the JI at 9:14 on a Tuesday morning. The 21-day review clock does not start yet &#8212; first, the JI must draw a Panel.</p>
-
-      <h2>The Pool</h2>
-
-      <p>Before the draw session opens, the JI&#8217;s systems pull the current national pool from the NRS. The combined pool has 831 eligible members across 48 States. Two States contribute zero: Darent, whose last eligible member withdrew six months ago and whose legislature has not added a replacement within the current year&#8217;s cap; and Vellen, whose enabling statute for the pool was passed four years ago but never funded or staffed.</p>
-
-      <p>Neither absence is a crisis. The draw pulls from the aggregated national pool. With 831 eligible members, the absence of two States reduces the probability of those States&#8217; citizens being drawn, but does not impair the draw itself. The LI&#8217;s most recent Pool Status Report flagged both States. The flag is in the permanent NRS record. It has been there for two years.</p>
+      <h2>The Draw Session — §8.13 · §8.12</h2>
 
       <div class="beat">
-        <div class="beat-label">§8.9.d &#x2014; Draw Session &#xb7; Activation + 3 Days</div>
-        <div class="beat-title">Public lottery, certified remotely by all three Inspectorates</div>
-        <p>The draw session is held by secure video platform under the parameters the Legislature has set by statute. The JI&#8217;s draw officer opens the session. A representative of each Inspectorate joins from their respective offices. Three citizens selected by jury protocols join from two different States. The session is streamed and recorded to the NRS in real time.</p>
-        <p>Seven names are drawn in sequence from the national pool &#8212; five members and two alternates. The draw takes eleven minutes. All three Inspectorates certify. The NRS entry is published before the session closes. Drawn members receive notification simultaneously with NRS publication.</p>
+        <div class="beat-label">§8.9.d · §8.13 — Pool Constitution by JIC Lottery</div>
+        <div class="beat-title">The JIC conducts the draw in a single public session. Certified jointly by all three Inspector Generals. Published to NRS in real time.</div>
+        <p>The draw session convened on Day 4. The Joint Inspectorate Council — the three Inspector Generals — presided jointly. The combined national pool was drawn from all 42 State Designee Pools simultaneously. Each pool member's eligibility status had been confirmed by the LI in the 48 hours preceding the draw: no current federal position, no pending criminal proceedings, no current service on any active Panel.</p>
+        <p>The draw was conducted in real time and published to the NRS simultaneously. Citizens watching the NRS stream saw each name drawn as it was selected. The five drawn members and two alternates were notified within the hour. Under §8.13, drawn members must accept or decline within 48 hours; alternates fill declined seats in draw order.</p>
       </div>
 
-      <h2>The Declines</h2>
+      <p>Three of the five drawn members accepted within 24 hours. The fourth declined — a recently retired government lawyer who, on reflection, determined that the subject matter of the proceeding was too close to her prior professional work to be comfortable accepting service. The first alternate accepted within 12 hours of being notified. The fifth drawn member accepted on the morning of Day 2. The Panel was constituted at five members, four full draws and one alternate fill, all within the 48-hour window.</p>
 
-      <p>The 48-hour acceptance window opens the moment notifications go out. By hour fourteen, four of the five drawn members have confirmed. The fifth &#8212; Wren Calloway, a retired municipal administrator from the State of Orreth &#8212; sends a decline. Her reason is personal: she is the primary caregiver for a family member whose condition has worsened in recent weeks. She asks that her pool membership be extinguished rather than held for future draws.</p>
+      <h2>The 21-Day Review — §8.9.f</h2>
 
-      <p>First alternate Jae-won Suh accepts within the hour. The Panel now has five confirmed members. One alternate remains: Petra Holst.</p>
+      <p>The Panel's 21-day review clock began on Day 5 — the day after full constitution was confirmed by the JI. The documentary record submitted by the initiating body ran to 847 pages. The Panel requested an additional documentary submission from the initiating body within the first seven days, as permitted under §8.9.f — three specific documents referenced in the stated grounds but not included in the initial submission.</p>
 
-      <div class="nrs-entry">
-        <span class="nrs-label">NRS Entry &#x2014; Draw Record &#x2014; Activation + 3 Days</span>
-        State Designee Panel constituted by public lottery for proceeding [reference]. Five members drawn; two alternates. Draw certified jointly by all three Inspectorates. National pool at draw: 831 eligible members across 48 States. Calloway (Orreth) declined; first alternate Suh filled seat. Panel fully constituted &#x2014; five members confirmed. 48-hour challenge window open.
+      <div class="beat">
+        <div class="beat-label">§8.9.g — Scope Limitation</div>
+        <div class="beat-title">The Panel determines only whether stated grounds constitute at least one enumerated constitutional category. No independent investigation. No credibility assessment.</div>
+        <p>The Panel's scope is deliberately narrow. It reviews the documentary record submitted by the initiating body — only that record, only those documents. It does not interview witnesses, does not conduct its own research, does not assess whether the official actually committed the acts alleged. It asks: do the stated grounds, as documented in the submitted record, constitute at least one of the enumerated constitutional categories for For-Cause removal applicable to this office?</p>
+        <p>This narrowness is the Panel's constitutional design. The Panel is not a trial. It is a threshold filter. Its finding of substantiated or unsubstantiated shapes the political process that follows — but the removal vote itself, which requires the applicable constitutional threshold, is where the full political judgment is exercised.</p>
       </div>
 
-      <h2>The Challenge</h2>
-
-      <p>On the second day of the challenge window, the named officer&#8217;s legal representative files a challenge under §8.9.d. The challenge names Jae-won Suh. It does not challenge the draw procedure or any of the other four members. It alleges that Suh, during a panel discussion at a governance conference three years prior, made public remarks characterizing the type of conduct alleged in this proceeding as &#8220;a textbook example of dereliction &#8212; the kind that should trigger immediate removal proceedings.&#8221; A transcript is attached.</p>
-
-      <p>The JI reviews the challenge. The remarks are documented. The question is whether they constitute a conflict of interest impairing impartiality under §8.9.d, or whether they reflect a general professional opinion that falls short of the standard.</p>
-
-      <p>The JI&#8217;s ruling, published to the NRS within 48 hours of filing: the challenge is sustained. The remarks were specific enough in their characterization that a reasonable assessment of impartiality could not exclude their influence. Suh&#8217;s seat is extinguished. The remaining alternate, Petra Holst, is notified.</p>
-
-      <p>Holst declines. She has accepted a short-term state advisory appointment that she cannot exit on the timeline the proceeding requires. The appointment does not technically trigger §8.9.d&#8217;s disqualifying positions &#8212; it is below the department director threshold &#8212; but she chooses not to serve. The decline is her right. The seat is extinguished.</p>
-
-      <p>The Panel now has four confirmed members. Both alternates are exhausted.</p>
+      <p>On Day 19, the Panel published its binary finding to the NRS: grounds substantiated. The finding was accompanied by no elaboration, no recommendation, no opinion on the merits of removal. The initiating body could proceed to a For-Cause removal vote. The applicable constitutional voting threshold applied regardless of the finding. The official remained in office pending any such vote, subject to applicable duty suspension provisions.</p>
 
       <div class="finding">
-        <span class="finding-label">Constitutional Position &#x2014; Activation + 5 Days</span>
-        <p>§8.9.d is explicit: if both alternates are exhausted before five members have accepted, the JI conducts a supplemental draw from the remaining eligible pool by the same procedure. The 21-day review clock has not started &#8212; it begins only from full Panel constitution under §8.9.f. The clock is also suspended during the pending challenge, which has now been resolved. No timeline has been violated. The JI opens a supplemental draw.</p>
+        <div class="finding-label">What This Scenario Tests</div>
+        <p>§8.9 and §8.13 operate in sequence: the pool framework constitutes the Panel; the Panel performs its narrow constitutional function. The scenario demonstrates that the State Designee Panel's constitutional value lies precisely in what it does not do. It does not investigate, does not reach a full merits judgment, does not produce a recommendation. It answers the binary question the constitution assigns to it and publishes that answer.</p>
+        <p>The JIC's role in the draw — all three Inspector Generals certifying jointly — ensures no single Inspectorate controls the Panel's constitution. The real-time NRS publication ensures the process is visible from the moment of draw. The 48-hour acceptance window and the alternate mechanism ensure the Panel can be constituted within the five-day window without the process stalling on individual decisions.</p>
       </div>
-
-      <h2>The Supplemental Draw</h2>
-
-      <p>The supplemental draw is conducted the following morning by the same remote procedure. One name is drawn from the remaining eligible pool &#8212; 829 members, minus the seven already drawn and minus Calloway whose position has been extinguished. The draw is certified and published. The drawn member, Olamide Adeyemi of the State of Korveth, accepts within six hours.</p>
-
-      <div class="timeline">
-        <div class="tl-row"><span class="tl-day">Day 0</span><span class="tl-text">Grounds transmitted. JI activation triggered.</span></div>
-        <div class="tl-row"><span class="tl-day">Day 3</span><span class="tl-text">Draw session. Seven drawn. Five confirmed; Calloway declines; Suh (Alternate 1) fills seat. 48-hour challenge window opens.</span></div>
-        <div class="tl-row"><span class="tl-day">Day 4</span><span class="tl-text">Challenge filed against Suh. 21-day clock suspended.</span></div>
-        <div class="tl-row"><span class="tl-day">Day 5</span><span class="tl-text">Challenge sustained. Suh removed. Holst (Alternate 2) notified; declines. Alternates exhausted.</span></div>
-        <div class="tl-row"><span class="tl-day">Day 6</span><span class="tl-text">Supplemental draw. Adeyemi drawn and accepts.</span></div>
-        <div class="tl-row"><span class="tl-day">Day 6</span><span class="tl-text">Panel fully constituted &#x2014; five members. 21-day review clock starts.</span></div>
-        <div class="tl-row"><span class="tl-day">Day 27</span><span class="tl-text">Finding deadline (Day 6 + 21 days).</span></div>
-      </div>
-
-      <h2>What This Tests</h2>
-
-      <p>The per-incident design moves pool health from a deferred administrative concern to an immediate operational one. Under a standing panel model, Darent and Vellen&#8217;s empty pools were a problem visible two years in advance, flagged in reports, and practically irrelevant until the next election. Under the per-incident model, those empty pools are a fact at the moment of every draw. They do not break the draw &#8212; the national aggregation absorbs them &#8212; but they are always present, always on the NRS, always attached to whoever holds the governor&#8217;s office.</p>
-
-      <p>The challenge mechanism tests a genuine design tension. §8.9.d exists to protect the proceeding from drawn members with documented conflicts. It is also the most obvious vector for delay: file a challenge, exhaust alternates, force a supplemental draw, restart the clock. The provision anticipates this. The 48-hour JI ruling deadline, the prohibition on frivolous grounds, and the clock-suspension rather than clock-restart all bound the tactic. In this scenario the challenge was legitimate and the JI sustained it. The delay &#8212; three days before the clock started &#8212; was the constitutional cost of getting a Panel that could actually function impartially.</p>
-
-      <p>What the scenario does not test &#8212; because it did not arise &#8212; is what happens if a named officer files challenges against multiple drawn members sequentially, each within the 48-hour window. That question is left to statute under the Legislature&#8217;s §8.9.f parameter-setting authority. The constitution provides the floor: no challenge on grounds of State of origin, professional background, or prior pool membership. The Legislature may tighten further.</p>
-
-      <p>The Pool Monitoring provision&#8217;s threshold &#8212; twenty national members before the LI must convene an emergency session &#8212; was not triggered. At 831 members the national pool is robust. The two absent States are a governance failure of those States, not a systemic pool health problem. The unglamorous work of pool maintenance is exactly that: unglamorous, distributed, and mostly invisible until the moment it isn&#8217;t.</p>
-
-    </div>
-
-    <div class="scenario-nav">
-      <a href="scenarios.html">&#x2190; All Scenarios</a>
-      <a href="scenario-sdp-removal.html">The Record &#x2192;</a>
-    </div>
-  </div>
-
-  <script>
-    document.querySelector('.hamburger')?.addEventListener('click', function() {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    });
-  </script>
-</body>
-</html>
+</div><div class="scenario-nav"><a href="scenarios.html">&larr; All Scenarios</a><a href="scenario-ordinary.html">The Ordinary Day &rarr;</a></div></main><script>document.addEventListener("click",function(e){const m=document.getElementById("mobileMenu");if(m&&m.classList.contains("open")&&!e.target.closest("nav")&&!e.target.closest("#mobileMenu"))m.classList.remove("open");});</script></body></html>
