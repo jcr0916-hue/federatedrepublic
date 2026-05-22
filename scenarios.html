@@ -109,7 +109,18 @@
       .se-desc{display:none}
       .hero-stats{gap:1.25rem}
     }
-  </style>
+  
+    .scenario-grid{display:flex;flex-direction:column;gap:2rem}
+    .scenario-category{border-bottom:1px solid var(--border);padding-bottom:1.5rem}
+    .scenario-cat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);letter-spacing:0.04em;margin-bottom:0.8rem;padding-bottom:0.4rem;border-bottom:2px solid var(--gold)}
+    .scenario-cat-grid{display:flex;flex-direction:column;gap:0.1rem}
+    .scenario-entry{display:block;text-decoration:none;padding:0.7rem 0;border-bottom:1px solid rgba(212,201,176,0.4)}
+    .scenario-entry:hover .se-title{color:var(--gold)}
+    .scenario-entry:last-child{border-bottom:none}
+    .se-info{display:flex;flex-direction:column;gap:0.2rem}
+    .se-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy)}
+    .se-desc{font-size:0.82rem;color:var(--muted);line-height:1.5}
+</style>
 </head>
 <body>
 
@@ -220,18 +231,7 @@
       <button class="toggle-all-btn" id="toggleAll" onclick="toggleAll()">Expand all</button>
     </div>
 
-    <!-- GOVERNANCE AND INSTITUTIONS -->
-    <div class="accordion" id="acc-gov">
-      <div class="accordion-header" onclick="toggleAccordion('acc-gov')" role="button" aria-expanded="false" tabindex="0">
-        <div class="accordion-title">Governance and Institutions</div>
-        <div class="accordion-meta">
-          <span class="accordion-count">56 scenarios</span>
-          <svg class="accordion-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-      </div>
-      <div class="accordion-desc">How the system's machinery works in practice — elections, formation, the PM's legislative instruments, judicial appointments, Inspectorate proceedings, and the MA.</div>
-      <div class="accordion-body">
-        <div class="scenario-grid">
+    <div class="scenario-grid">
       <div class="scenario-category">
         <h3 class="scenario-cat-title">Starting Point</h3>
         <div class="scenario-cat-grid">
@@ -364,6 +364,8 @@
     </div>
 
     </section>
+
+
 
 </main>
 
