@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Firewall — The Federated Republic</title>
+  <meta name="description" content="A close presidential election. Day 21, the certification deadline. A regional governor demands delay. The Director appears at a press conference expressing personal concern. The Elections Panel chair sends a formal notice: this panel has sole operational authority over certification under §16.1.e. The panel certifies. The SC upholds it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-tool{border:1px solid rgba(201,168,76,0.3);border-radius:2px}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="constitution-v172.docx" download>Download (.docx)</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Digital Infrastructure Commission · §16.1.e · Operational Independence · Elections Panel</span>
+      <h1 class="scenario-title">The Firewall</h1>
+      <p class="scenario-subtitle">A close presidential election. Day 21 — the certification deadline. The losing candidate's home State governor demands the Elections Panel delay certification pending a State court review. The Director holds a press conference expressing "personal concerns" about the regional results. The Elections Panel chair sends a formal notice to the Director, the governor, and the NRS: this panel has sole operational authority over certification. The panel certifies. The SC upholds it.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§16.1.e Operational Independence of Panels</span>
+        <span class="prov-tag">§16.1.d Commission Decision-Making</span>
+        <span class="prov-tag">§16.3 NVS Properties</span>
+        <span class="prov-tag">§7.2.e Election Certification</span>
+        <span class="prov-tag">§16.2.a Removal — for Cause Only</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The presidential election was the closest in the Republic's history. The combined score under §7.2.b — a weighted aggregate of national RCV result and regional breadth measure — produced a margin of 0.31% between the two leading candidates. Both campaigns had been watching the certification timeline since election night. One region — the Keln highlands, spanning parts of three States — had counted more slowly than the rest of the Republic due to a combination of higher-than-projected turnout and two NVS nodes running on degraded capacity during the final hours of voting.</p>
+
+      <p>By Day 12, the national count was complete. The Elections Panel had published rolling certification updates throughout. The Keln regional count was certified on Day 14. The combined score calculation — run publicly by the Electoral Commission's mathematics and published to the NRS — showed a 0.31% margin in favour of Candidate A. The Panel's Day 21 full certification deadline was approaching.</p>
+
+      <h2>The Pressure Begins — Days 15 through 19</h2>
+
+      <p>Candidate B's legal team filed a petition in the Keln regional State courts on Day 15, arguing that the two degraded NVS nodes had produced a systematic undercounting of votes in precincts where their candidate ran strongest. The petition asked the State court to order the Elections Panel to withhold certification pending the court's review.</p>
+
+      <p>The governor of the largest Keln State — a political ally of Candidate B — issued a public statement on Day 17: the Elections Panel "should exercise restraint" and delay national certification until the State court matter was resolved. The statement was transmitted directly to the Commission's public inbox.</p>
+
+      <div class="beat">
+        <div class="beat-label">Day 18 — The Director's Press Conference</div>
+        <div class="beat-title">The Director has a vote on Commission matters. The Director has no vote on certification.</div>
+        <p>The Director held an unscheduled press conference on Day 18. The statement was carefully worded but unmistakably directional: the Director "personally believed" that the degraded node issue warranted additional review, and that the Elections Panel "should consider" whether the full 21-day window was necessary for its review to be thorough. The Director did not instruct the Panel. The Director did not issue a Commission directive. But the statement existed and it was public.</p>
+        <p>The Elections Panel chair received the transcript of the Director's press conference before its public release — a Commission staffer forwarded it. She read it once, set it down, and convened an emergency panel session for the following morning.</p>
+      </div>
+
+      <h2>The Panel's Response — §16.1.e</h2>
+
+      <p>The Elections Panel published a formal notice to the NRS on Day 19 — two days before the certification deadline. It was addressed to the Director of the Digital Infrastructure Commission, the governor of the Keln State, and the general public. It was four paragraphs.</p>
+
+      <div class="finding">
+        <span class="finding-label">Elections Panel Formal Notice — Day 19</span>
+        <p>The Elections Panel of the Digital Infrastructure Commission has sole operational authority over the conduct of elections, the administration of the National Voting System, and the certification of all electoral results under §16.1.e. The Director of the Commission and the NRS Panel may not issue instructions to the Elections Panel regarding election conduct or result certification. These independence protections are absolute and may not be modified by Commission policy or Director directive.</p>
+        <p>The Panel has reviewed the NVS node degradation in the Keln region. The degradation was within the constitutional resilience parameters of §16.3 — the NVS operated in degraded conditions without compromising ballot secrecy or auditability. The vote count from the affected precincts is correct. The Panel will certify the national presidential election result on Day 21 as required by the constitutional certification timeline.</p>
+        <p>The Director's public statement expressing personal concern about the regional results does not constitute an operational instruction and has no legal effect on the Panel's certification timeline or process. It is noted for the record. No State court has authority to order the Elections Panel to withhold federal electoral certification — federal electoral certification is a constitutional function of this Panel, not a State judicial matter.</p>
+        <p>The Panel will certify on Day 21.</p>
+      </div>
+
+      <h2>Day 21 — Certification</h2>
+
+      <p>The Elections Panel certified the national presidential election result at 2:14pm on Day 21. The certification was published to the NRS simultaneously. Candidate A was certified as the Republic's President-elect. The margin: 0.31% of the combined score. The certification was signed by all three Elections Panel administrators and published with the full NRS audit trail from every NVS node.</p>
+
+      <p>Candidate B's legal team filed an emergency petition with the SC within the hour, challenging the certification on three grounds: the degraded nodes, the Panel's alleged failure to consider the State court petition, and the claim that the Director's expressed concern created a constitutional basis for review. The SC accepted the petition for expedited review under §4.2.f and convened an emergency panel of four Justices within 48 hours.</p>
+
+      <div class="beat">
+        <div class="beat-label">§4.2.f — Emergency Panel</div>
+        <div class="beat-title">The SC's review of the certification was constitutional. The certification itself was also constitutional.</div>
+        <p>The SC emergency panel's ruling came on Day 25 — four days after certification. On the degraded nodes: the constitutional standard is §16.3's resilience requirement, which the Elections Panel had correctly applied — the nodes operated within degraded parameters without compromising secrecy or auditability. On the State court petition: no State court has jurisdiction over federal electoral certification; the Panel's refusal to comply with the State court's request was constitutionally required, not constitutionally suspect. On the Director's press conference: the Director's personal expression of concern was not an operational instruction and had no constitutional effect. The Panel's independence under §16.1.e was not breached. The certification stands.</p>
+      </div>
+
+      <h2>After the Ruling</h2>
+
+      <p>The question of whether the Director's press conference constituted an attempt to influence the Elections Panel — and whether such an attempt, falling short of an actual instruction, had any constitutional consequences — was left open by the SC's ruling. The SC found that no instruction had been issued and no breach of §16.1.e had occurred. It did not address whether the Director's public statements were appropriate for the Director's role.</p>
+
+      <p>The EI opened a monitoring review of the Director's conduct within fourteen days of the ruling — not a breach finding, but a formal notice to the Commission and the NRS that the EI was examining whether the Director's public statements fell within the constitutional scope of the Director's role. The review closed six months later with no finding of breach: the Director had expressed a personal view, had not issued an instruction, and the Elections Panel's independence had been correctly invoked and maintained. The EI's closing note, published permanently to the NRS: "The Director's conduct was constitutionally permissible. It was not institutionally wise."</p>
+
+      <div class="finding">
+        <span class="finding-label">What §16.1.e Protects Against</span>
+        <p>The operational independence of the Elections Panel is not merely a procedural nicety. It is the constitutional answer to the most dangerous scenario in a democratic republic: someone with authority over the elections body using that authority — or the appearance of that authority — to influence an electoral outcome. The Director did not cross the constitutional line. The structure ensures that crossing it changes nothing — an instruction from the Director to the Elections Panel is constitutionally void regardless of its form.</p>
+        <p>The Elections Panel chair's formal notice — published to the NRS before the certification — was itself the mechanism working correctly. It did not wait for the Director to issue an actual instruction. It drew the line in public, in advance, where it could be seen. That is what constitutional independence looks like when it is functioning as designed.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-pool.html">Related: The Pool →</a>
+    </div>
+  </div>
+</body>
+</html>

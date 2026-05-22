@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Pool — The Federated Republic</title>
+  <meta name="description" content="Year 1 of the Digital Infrastructure Commission. The Director is elected. Both executives begin populating their advisory pools. The first NRS Panel vacancy arises. The Director reviews both nominees — and rejects one, citing a published conflict of interest. New nominees arrive. The Senate confirms on Day 47. How the appointment mechanism works in practice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-tool{border:1px solid rgba(201,168,76,0.3);border-radius:2px}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="constitution-v172.docx" download>Download (.docx)</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Digital Infrastructure Commission · §16.1.c · Panel Appointments · Pool Mechanism</span>
+      <h1 class="scenario-title">The Pool</h1>
+      <p class="scenario-subtitle">Year 1 of the Digital Infrastructure Commission. The Director election is complete. Both executives begin building their nominee pools — the JI publishes qualification reports for each. When the first NRS Panel vacancy arises, the Director reviews both nominees and rejects one, citing a published conflict of interest. New nominees come forward. The Senate confirms on Day 47. The appointment mechanism, start to finish.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§16.1 Digital Infrastructure Commission</span>
+        <span class="prov-tag">§16.1.a Director — Election and Term</span>
+        <span class="prov-tag">§16.1.b Panel Composition and Terms</span>
+        <span class="prov-tag">§16.1.c Digital Infrastructure Pool and Appointment</span>
+        <span class="prov-tag">§16.2 Administrator Qualifications</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Director election was held on the same National Election Day as the Year 1 legislative elections. It was the first time the position had appeared on a ballot — most citizens understood the Director as something like a chief administrator for the Republic's two most critical digital systems, though the distinction between the Director's standards-setting role and the panels' operational independence was not universally understood. The campaign was publicly funded in full; no private money was permitted. Six candidates stood. The winner — a former State technology commissioner with twenty-two years of digital infrastructure work — received 44.7% of first-preference votes and won on the fifth RCV elimination round.</p>
+
+      <p>The Director took office on the first Monday following the election certification. The Commission had three panel seats to fill immediately — two on the NRS Panel and one on the Elections Panel — and the staggered appointment schedule meant each seat had a different term length to establish the cycle going forward.</p>
+
+      <h2>Building the Pools — §16.1.c</h2>
+
+      <p>Both executives began nominating to their respective pools within the first week of the Commission's operation. The pool mechanism was open-ended: no annual limit, no cap on total nominations, no constraint except the JI's qualification assessment for each nominee. The President and PM each nominated three candidates in the first month. The JI published a qualification report for each within thirty days of nomination.</p>
+
+      <div class="beat">
+        <div class="beat-label">§16.1.c — The JI Qualification Reports</div>
+        <div class="beat-title">Public. Permanent. The vetting mechanism citizens can read.</div>
+        <p>The JI's reports were not pass/fail documents. They were structured assessments: years of relevant experience, nature of the expertise, any prior roles that might create conflicts of interest, the Constitutional Logic Test result, and a summary conclusion on whether the nominee met the qualification standard for their stated panel track. All six initial reports were published to the NRS within thirty days. All six nominees were certified as qualified.</p>
+        <p>Citizens read them. Technology journalists wrote about them. Two nominees whose JI reports noted prior work for private NRS infrastructure vendors prompted questions in a Senate committee hearing — not a formal challenge, but the kind of public scrutiny the pool model was designed to enable. The nominees remained in the pool; the JI had found no disqualifying conflict, only prior sector experience worth public awareness.</p>
+      </div>
+
+      <h2>The First Vacancy — §16.1.c Appointment Process</h2>
+
+      <p>The first NRS Panel seat to be filled had a six-year term — the longest of the staggered initial appointments. The vacancy process under §16.1.c triggered: each executive selected one JI-certified nominee from their pool matching the NRS qualification track and transmitted the name to the Director.</p>
+
+      <p>The President's nominee was a distributed systems architect with eighteen years of infrastructure work, including three years as a State CTO. The JI report was strong. The PM's nominee was a senior cryptographer whose JI report was also strong — but whose most recent employer was a firm that held an active NRS infrastructure maintenance contract. The JI report had noted this relationship as a prior sector matter, not a disqualifying conflict, because the firm's contract predated the nomination and the nominee had left the firm two years prior.</p>
+
+      <div class="beat">
+        <div class="beat-label">§16.1.c — The Director's Rejection</div>
+        <div class="beat-title">The Director may reject both nominees. Reasons must be published.</div>
+        <p>The Director did not accept either nominee immediately. After a ten-day review, the Director published a notice to the NRS: the PM's nominee's prior relationship with an NRS contract holder — while not disqualifying at the JI level — raised an independence concern the Director was not prepared to disregard for the first NRS Panel appointment, when establishing the Commission's credibility mattered most. The President's nominee was not rejected, but the Director declined to select just one from a two-person field, preferring instead to request a second nominee from the PM to give a genuine choice.</p>
+        <p>The PM's office responded within the required thirty days with a new nominee: a public records management specialist with seventeen years at the State archival level, no private sector infrastructure relationships, and a JI certification published within the month. The Director reviewed both remaining nominees — the President's original and the PM's replacement — and selected the PM's replacement.</p>
+      </div>
+
+      <div class="math-box">
+        <span class="math-label">NRS Panel Appointment — First Vacancy</span>
+        <div class="line">Vacancy announced: Day 1</div>
+        <div class="line">Executives each select nominee: Day 8</div>
+        <div class="line">Director reviews nominees: Day 8–18</div>
+        <div class="line">Director rejects PM nominee, requests replacement: Day 18</div>
+        <div class="line">PM submits replacement nominee: Day 31</div>
+        <div class="line">JI certification of replacement: Day 48</div>
+        <div class="line">Director selects: Day 50</div>
+        <div class="line">Senate confirmation hearing: Day 58–72</div>
+        <div class="line">Senate vote: Day 72 — 61–39</div>
+        <div class="result">First NRS Panel administrator confirmed: Day 72 of vacancy</div>
+      </div>
+
+      <h2>What the Process Achieved</h2>
+
+      <p>The Senate confirmation hearing was notable for what it focused on: not whether the nominee was qualified — the JI report was publicly available and uncontested — but what the new administrator's approach would be to the NRS Panel's operational independence from the Director. The nominee answered directly: the §16.1.e independence provision was not a relationship to be negotiated with the Director but a constitutional fact. The NRS Panel would make its own operational decisions. The Director's role was technical standards-setting. If those roles conflicted in practice, the constitution was the resolution.</p>
+
+      <p>The line drew applause from the public gallery. The Director, watching from the audience, made no comment publicly. The NRS panel administrator was confirmed 61–39 on Day 72 of the vacancy and began service the following Monday.</p>
+
+      <div class="finding">
+        <span class="finding-label">The Pool Model's Public Value</span>
+        <p>The first appointment cycle demonstrated what the pool mechanism was designed to produce: visible accountability at every stage. Citizens could read the executives' nominations. They could read the JI's qualification assessments. They could see the Director's rejection and the reasons for it. They could follow the Senate confirmation hearing. No stage was opaque.</p>
+        <p>The Director's rejection of the PM's first nominee was not a political move — the published reasons made clear it was a judgment call about independence optics at a moment of institutional foundation. Whether it was the right call is a matter citizens can assess. The reasons are permanent on the NRS. The next Director will inherit that precedent and decide what it means for how the pool mechanism is used.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-firewall.html">Related: The Firewall →</a>
+    </div>
+  </div>
+</body>
+</html>

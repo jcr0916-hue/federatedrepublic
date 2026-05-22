@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Shortfall — The Federated Republic</title>
+  <meta name="description" content="Year 8. Mass unemployment crashes healthcare insurance contribution revenues. The MA certifies the system cannot meet its obligations. The Legislature has 90 days. The National Endowment activates for both insurance solvency and social assistance simultaneously — the first time the dual backstop has ever triggered.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-tool{border:1px solid rgba(201,168,76,0.3);border-radius:2px}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .math-box{background:var(--cream2);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+    .math-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;display:block}
+    .math-box .line{margin-bottom:0.4rem;line-height:1.6}
+    .math-box .result{color:var(--navy);font-weight:600;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="constitution-v172.docx" download>Download (.docx)</a>
+  </div>
+
+  <div class="page-wrap">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Social State · §10.1.a · §10.1.e · National Endowment</span>
+      <h1 class="scenario-title">The Shortfall</h1>
+      <p class="scenario-subtitle">Year 8 of the Republic. A financial crisis drives unemployment to 22%. Healthcare insurance contribution revenues collapse. The MA certifies the system cannot meet its obligations. The Endowment activates simultaneously for both insurance solvency and social assistance — the first time the dual backstop has ever triggered. The Legislature debates and misses the deadline. The Republic's social state promise holds.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§10.1 The Social State</span>
+        <span class="prov-tag">§10.1.a Universal Healthcare Insurance</span>
+        <span class="prov-tag">§10.1.b Social Assistance</span>
+        <span class="prov-tag">§10.1.e Emergency Protection and Revenue Contraction</span>
+        <span class="prov-tag">§10.6 National Endowment</span>
+        <span class="prov-tag">§10.6.b Endowment Activation</span>
+        <span class="prov-tag">§2.1.d PM Fiscal Certification</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The crisis began in Year 7 with the collapse of the Veldran Basin trade corridor — three months of export disruption that cascaded into credit contraction, then a banking liquidity crisis, then mass layoffs. By the time the MA published its Year 8 annual assessments, unemployment had reached 22.4% — the highest in the Republic's short history. The fiscal consequences were compounding: fewer employed workers meant lower contribution revenues for the healthcare insurance system; higher unemployment meant more people drawing social assistance; and the general revenue contraction was already straining the annual budget.</p>
+
+      <p>The MA's Year 8 healthcare insurance system certification was the document that mattered. Under §10.1.a, the MA certifies annually whether the system is solvent and provides constitutionally required universal access. This year's certification was three words that launched ninety days of constitutional procedure: <em>solvency not certified.</em></p>
+
+      <h2>The Certification — §10.1.a</h2>
+
+      <p>The MA's full certification report ran to 140 pages. The summary was direct: employer and employee contributions were running at 61% of their Year 6 levels. Combined with the federal government's own contribution obligations (the Republic is the contributor of last resort for Inhabitants without employment income, and that population had grown by 1.4 million since Year 6), the system's projected twelve-month shortfall was 18.3% of its annual obligations — approximately the cost of providing coverage to everyone newly unemployed.</p>
+
+      <div class="beat">
+        <div class="beat-label">§10.1.a — The Certification's Legal Effect</div>
+        <div class="beat-title">The MA certifies. The Legislature must respond within 90 days.</div>
+        <p>The certification is not a recommendation. It is not an advisory opinion. Under §10.1.a, where the MA certifies insolvency or access failure, the Legislature must respond within 90 days with a remediation plan. Failure to respond is a constitutional compliance breach certified by the LI. The MA published the certification on the NRS at midnight on the last day of the fiscal year. The 90-day clock started the next morning.</p>
+        <p>Simultaneously, the MA published a second certification: that its Year 8 social assistance review found appropriations below the §10.1 dignity standard in eleven States. The social assistance shortfall was smaller than the insurance solvency gap — approximately 7% below the dignity floor — but it triggered the same constitutional response obligation and the same Endowment activation threshold under §10.1.e.</p>
+      </div>
+
+      <h2>The Legislature Debates — Days 1 through 90</h2>
+
+      <p>The remediation options were genuinely difficult. Raising contribution rates — the most direct fix — required a statutory change and imposed costs on employers struggling with the same crisis that had produced the shortfall. Direct federal appropriation would work but widened an already significant structural deficit. Temporarily reducing covered procedures would be a constitutional access failure even if solvency improved. Borrowing from the Endowment directly was not an option — the Endowment activates automatically on MA certification of Severe Revenue Contraction, not on legislative request, and it operates independently of the budget process.</p>
+
+      <p>The House passed a remediation bill on Day 62 — a combination of temporarily increased federal contributions and a 0.8% contribution rate increase phased over eighteen months. The Senate's Finance Committee approved it on Day 79. The bill reached the Senate floor on Day 86. Four days of debate. On Day 90, the Senate vote was 49–51. The bill failed by two votes.</p>
+
+      <div class="math-box">
+        <span class="math-label">Day 90 — Constitutional Status</span>
+        <div class="line">§10.1.a certification date: Day 0</div>
+        <div class="line">Legislative deadline: Day 90</div>
+        <div class="line">Senate vote: 49–51 (bill fails)</div>
+        <div class="line">LI certification published: Day 90, 23:58</div>
+        <div class="line">─────────────────────────────────────────</div>
+        <div class="result">Constitutional compliance breach: Legislature failed to respond</div>
+      </div>
+
+      <p>The LI's breach certification was published to the NRS at 11:58pm on Day 90 — two minutes before midnight. It named the specific obligation, the 90-day window, and the Senate vote that closed without passage. It was a factual record. It named no individual Senators. It was permanent.</p>
+
+      <h2>The Endowment Activates — §10.1.e and §10.6.b</h2>
+
+      <p>The MA's Severe Revenue Contraction certification — a separate document from the insurance solvency certification — had been published three months earlier when the MA's quarterly review confirmed a contraction of sufficient depth and duration to meet the constitutional threshold. Under §10.1.e, that certification triggers automatic Endowment activation for both insurance solvency and social assistance. The Endowment board had been monitoring the situation since that certification.</p>
+
+      <p>On Day 91 — the morning after the Senate vote — the Endowment board met. The legal position was clear: the dual backstop obligation was already triggered by the Revenue Contraction certification; the Legislature's failure to pass a remediation plan did not create the Endowment's obligation, it merely confirmed that no legislative fix would arrive before the insurance system's solvency gap became acute.</p>
+
+      <div class="beat">
+        <div class="beat-label">§10.6.b — Dual Activation</div>
+        <div class="beat-title">Insurance solvency. Social assistance. Both simultaneously. Both automatic.</div>
+        <p>The board authorized two disbursement streams: a healthcare insurance supplement covering the projected 18.3% solvency gap for up to six months, channelled directly into the insurance system's operating reserve; and a social assistance supplement covering the 7% dignity standard gap across the eleven States, channelled through the Domestic Affairs Council's existing distribution infrastructure. The PM certified both expenditure streams under §2.1.d within six hours of the board's authorization. Both certifications were published to the NRS before noon on Day 91.</p>
+        <p>One board member dissented — not on the legality, but with a note for the permanent record: "The Endowment was designed for genuine revenue shortfalls, not for legislative failures to address foreseeable gaps. We are covering a political failure with a financial instrument. That distinction matters for how future boards interpret this precedent."</p>
+        <p>The board chair's response, also published: "The distinction matters for political accountability. It does not affect our constitutional obligation. The Republic's social state promise exists regardless of whether the Legislature chose to honour it through the budget. We honour it through the Endowment."</p>
+      </div>
+
+      <h2>After the Backstop</h2>
+
+      <p>The Senate reconvened on Day 103. The two Senators who had voted against the remediation bill both faced immediate public pressure — the LI's breach certification had named no individuals, but the Senate vote record was public, and the Endowment's activation report, published quarterly to the NRS, would show their State's residents had relied on emergency backstop funding. One Senator changed her vote. The bill passed 50–50 with the Vice President of the Senate casting the deciding vote — a constitutional mechanism that had never before been invoked on a social state remediation question.</p>
+
+      <p>The remediation bill took effect on Day 110. Contribution rate increases phased in over eighteen months. The Endowment's insurance supplement wound down over ninety days as the system's reserves rebuilt. The social assistance supplement wound down more quickly — the eleven States' appropriation gaps were closed by the associated fiscal measures in the bill.</p>
+
+      <div class="finding">
+        <span class="finding-label">What the Dual Backstop Is and Is Not</span>
+        <p>§10.1.e does not make the Legislature irrelevant. It makes the Legislature's failure visible and bounded. The Endowment covers the gap for up to six months — after which the board must publish a notice to the NRS that the Endowment is bearing costs the Legislature has not resolved. That notice is political accountability made permanent.</p>
+        <p>The dissenting board member was correct that the activation covered a political failure. The board chair was also correct that the constitution makes no distinction between types of shortfall for backstop purposes. The social state promise is not conditional on legislative diligence. That is what makes it a promise rather than a policy preference.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-ma-certification.html">Related: The Certification →</a>
+    </div>
+  </div>
+</body>
+</html>
