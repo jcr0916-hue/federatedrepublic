@@ -88,7 +88,7 @@
     /* Mobile minimap close button */
     .minimap-close{display:none;position:absolute;top:0.75rem;right:0.75rem;background:none;border:none;color:rgba(201,168,76,0.5);font-size:1.1rem;cursor:pointer;padding:4px;line-height:1}
     .minimap-close:hover{color:var(--gold)}
-    @media(max-width:1100px){.layout{grid-template-columns:minmax(0,1fr) 280px}}
+    @media(max-width:1366px){.layout{grid-template-columns:minmax(0,1fr) 280px}}
     @media(max-width:820px){
     .layout{grid-template-columns:1fr}
     aside{display:block}
@@ -173,19 +173,19 @@
     .minimap a:hover{color:rgba(245,240,232,0.75);background:rgba(255,255,255,0.05)}
     .minimap a.active{color:var(--gold);border-left-color:var(--gold);background:rgba(201,168,76,0.08)}
     .minimap-toggle{display:none;position:fixed;bottom:1.5rem;left:1rem;width:44px;height:44px;background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:1.1rem;cursor:pointer;z-index:101;align-items:center;justify-content:center;border-radius:2px}
-    @media(max-width:1100px){.minimap{display:none}.minimap.mobile-open{display:flex;z-index:201;box-shadow:4px 0 20px rgba(0,0,0,0.4)}.minimap-toggle{display:flex}.minimap-close{display:block}}
-    @media(min-width:1101px){body.has-minimap .page-wrap{margin-left:170px}}
+    @media(max-width:1366px){.minimap{display:none}.minimap.mobile-open{display:flex;z-index:201;box-shadow:4px 0 20px rgba(0,0,0,0.4)}.minimap-toggle{display:flex}.minimap-close{display:block}}
+    @media(min-width:1367px){body.has-minimap .page-wrap{margin-left:170px}}
   
     /* ── Search FAB ── */
     .search-fab{position:fixed;bottom:1.75rem;right:1.25rem;z-index:195;background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:0.55rem 0.9rem;cursor:pointer;text-transform:uppercase}
     .search-fab:hover{border-color:var(--gold);background:var(--navy2)}
-    @media(max-width:1100px){
+    @media(max-width:1366px){
       .search-fab{bottom:1.5rem;right:1rem;width:44px;height:44px;padding:0;display:flex;align-items:center;justify-content:center;border-radius:2px;font-size:1rem;letter-spacing:0}
     }
   
     .search-fab-icon{display:none}
     .search-fab-text{display:inline}
-    @media(max-width:1100px){
+    @media(max-width:1366px){
       .search-fab-icon{display:inline;font-size:1.2rem}
       .search-fab-text{display:none}
     }
