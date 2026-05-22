@@ -1568,6 +1568,9 @@ The Mechanism may not exercise criminal jurisdiction — that remains with the c
 [§19.9.d] TAM Sunset and Rationale
 At sunset the Mechanism dissolves; its NRS record is permanent. The Legislature may not extend the Mechanism beyond its statutory sunset without a fresh 2/3 supermajority in both chambers; extension is not a renewal and does not reset the ten-year successor bar under §19.9.b.
 
+[§19.10] Required Statutory Agency Establishment
+Where this Constitution assigns a specific function to a statutory independent agency under §3.7, the Legislature shall establish that agency within the following timeframes measured from Phase 4 activation: the CLT Administrator under §5.4.b, within 180 days — the CLT must be operational before the first naturalization applications are accepted; the Census Bureau under §3.1.b, within 18 months — the Bureau must conduct its first census before the first post-transition House reapportionment. Where the Legislature fails to establish a required agency within its deadline, §3.7.a applies: the function is administered on an interim basis by the responsible Inspectorate until the enabling statute is enacted and the agency is operational. The LI publishes a compliance notice to the NRS when any establishment deadline is missed and again when the agency becomes operational. The Legislature may not permanently delegate a constitutionally required statutory function to an Inspectorate in lieu of establishing the required agency.
+
 [§20.1] Associated Community Status
 Exclusively for sovereign entities — not a form of State or Territory status, not transitional, not incorporation. Available to nations that have completed the independence process under §13.9.a and §13.4, to independent nations outside the Republic seeking a defined relationship, or to nations recognised as pre-existing sovereigns under Article XIV.
 
