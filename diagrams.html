@@ -636,7 +636,7 @@
   <button class="tab-btn" onclick="showTab('dual')">Dual Executive</button>
   <button class="tab-btn" onclick="showTab('amendment')">Amendment Paths</button>
   <button class="tab-btn" onclick="showTab('inspectorates')">Inspectorates</button>
-  <button class="tab-btn" onclick="showTab('scelection')">SC Elections</button>
+  <button class="tab-btn" onclick="showTab('social')">Social State</button>
 </div>
 
 <!-- ═══════════════════════════════
@@ -979,7 +979,7 @@
           <span class="ps-label">Step 1 — Petition</span>
           <span class="ps-title">National Citizen Petition</span>
           <p class="ps-desc">A citizen petition must gather 10% of eligible voters nationally through the National Voting System — not just the residents of the proposing territory. This requires building a national coalition for independence, not merely a local majority. The petition is certified by the Judicial Inspectorate.</p>
-          <span class="ps-ref">§15.4 — Territorial Integrity and Independence</span>
+          <span class="ps-ref">§13.9 — Territorial Integrity and Independence</span>
         </div>
         <div class="pathway-step step-study">
           <span class="ps-label">Step 2 — Framework</span>
@@ -992,7 +992,7 @@
           <span class="ps-label">Step 3 — National Referendum</span>
           <span class="ps-title">70% National Supermajority</span>
           <p class="ps-desc">The referendum is held nationally with a minimum 65% participation requirement. 70% of all eligible voters must approve — a threshold that requires not just the departing territory's support but genuine national consensus. The ballot references the published framework agreement.</p>
-          <span class="ps-ref">§15.4 — 70% threshold / 65% participation minimum</span>
+          <span class="ps-ref">§13.9 — 70% threshold / 65% participation minimum</span>
         </div>
         <div class="pathway-step step-transition">
           <span class="ps-label">Step 4 — Transition</span>
@@ -1914,12 +1914,6 @@
 <!-- ═══════════════════════════════
      DIAGRAM 9: SC ELECTION CYCLE
 ═══════════════════════════════ -->
-<div class="diagram-section" id="tab-scelection">
-  <div class="section-intro">
-    <h2>Supreme Court Elections</h2>
-    <p>Nine justices elected directly by citizens, organized into three staggered classes. No political branch nominates anyone. The ballot is open to any qualified citizen on the Judicial Inspectorate's Registry.</p>
-  </div>
-
   <div class="sc-chart">
 
     <!-- THREE DESIGN PRINCIPLES -->
@@ -1930,7 +1924,7 @@
       </div>
       <div class="sc-principle-item">
         <strong>Expert Voice — No Veto</strong>
-        <span>A Judicial Selection Board of five senior judges chosen by lot publishes advisory assessments of registered candidates. Transmitted to the Senate before any confirmation vote. Advisory only — the Board holds no nomination authority.</span>
+        <span>A SC Candidate Registry of five senior judges chosen by lot publishes advisory assessments of registered candidates. Transmitted to the Senate before any confirmation vote. Advisory only — the Board holds no nomination authority.</span>
       </div>
       <div class="sc-principle-item">
         <strong>PM Nomination + 2/3 Senate Confirmation</strong>
@@ -1970,7 +1964,7 @@
         <div class="sc-step">
           <div class="sc-step-num">4</div>
           <div class="sc-step-title">JI Assessment + Board Report</div>
-          <div class="sc-step-body">The JI confirms the nominee's registry status and publishes its assessment within 30 days — covering judicial record, legal career, and conflicts of interest. The Judicial Selection Board's advisory assessment, if any, is transmitted to the Senate simultaneously.</div>
+          <div class="sc-step-body">The JI confirms the nominee's registry status and publishes its assessment within 30 days — covering judicial record, legal career, and conflicts of interest. The SC Candidate Registry's advisory assessment, if any, is transmitted to the Senate simultaneously.</div>
           <span class="sc-step-ref">§4.2.b–c · Published to NRS</span>
           <div class="sc-step-arrow">›</div>
         </div>
@@ -2254,12 +2248,29 @@ function closePanel() {
       }
     });
   </script>
+
+<div class="diagram-section" id="tab-social">
+  <div class="section-intro">
+    <h2>The Social State</h2>
+    <p>The Republic's constitutional commitment that every Inhabitant is entitled to conditions of life consistent with human dignity. Click any node to explore the provisions behind it.</p>
+  </div>
+
+  <div class="diagram-detail-box" style="max-width:760px;margin:0 auto">
+    <div class="prov-tags" style="margin-bottom:1.2rem">
+      <span class="prov-tag">§10.1 Principle</span>
+      <span class="prov-tag">Healthcare Insurance</span>
+      <span class="prov-tag">Social Assistance</span>
+      <span class="prov-tag">Compulsory Education</span>
+      <span class="prov-tag">Endowment Backstop</span>
+      <span class="prov-tag">MA Certification</span>
+    </div>
+    <p>The Social State is the Republic's constitutional commitment that every Inhabitant is entitled to conditions of life consistent with human dignity. It is implemented through three mandatory systems, each constitutionally required to exist but defined in detail by statute — following the model of successful welfare states that achieve universal provision through statutory implementation rather than constitutional baskets.</p><p>The universal healthcare insurance system is funded by mandatory employer, employee, and federal government contributions. The Republic is the contributor of last resort — no Inhabitant is excluded by inability to pay. The MA certifies annually whether the system is solvent and provides constitutionally required universal access. Where the MA certifies insolvency or access failure, the Legislature has 90 days to publish a remediation plan or face an LI-certified constitutional breach.</p><p>Social assistance covers Inhabitants outside the insurance system, providing support sufficient for the §10.1 dignity standard. Compulsory education is free for all children, state-delivered, with a federal constitutional floor requiring literacy, numeracy, and civic education adequate for full democratic participation.</p><p>Both the insurance system and social assistance are backstopped by the National Endowment during Severe Revenue Contractions — the dual backstop activates automatically on MA certification, requiring no legislative action. Where the insurance system becomes insolvent without a Revenue Contraction, the Endowment board may authorize emergency disbursement for up to six months while the Legislature's constitutional obligation is enforced.</p>
+    <div class="diagram-footer" style="margin-top:2rem">
+      <a href="scenario-ordinary.html" class="diagram-sc-link">Explore Social State Scenarios &rarr;</a>
+      <span class="diagram-sc-tag">Article X · §10.1 through §10.3</span>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
-    {
-      id: 'social-state',
-      title: 'The Social State — Social Insurance and Dignity Floor',
-      tags: ['§10.1 Principle', 'Healthcare Insurance', 'Social Assistance', 'Compulsory Education', 'Endowment Backstop', 'MA Certification'],
-      body: `<p>The Social State is the Republic's constitutional commitment that every Inhabitant is entitled to conditions of life consistent with human dignity. It is implemented through three mandatory systems, each constitutionally required to exist but defined in detail by statute — following the model of successful welfare states that achieve universal provision through statutory implementation rather than constitutional baskets.</p><p>The universal healthcare insurance system is funded by mandatory employer, employee, and federal government contributions. The Republic is the contributor of last resort — no Inhabitant is excluded by inability to pay. The MA certifies annually whether the system is solvent and provides constitutionally required universal access. Where the MA certifies insolvency or access failure, the Legislature has 90 days to publish a remediation plan or face an LI-certified constitutional breach.</p><p>Social assistance covers Inhabitants outside the insurance system, providing support sufficient for the §10.1 dignity standard. Compulsory education is free for all children, state-delivered, with a federal constitutional floor requiring literacy, numeracy, and civic education adequate for full democratic participation.</p><p>Both the insurance system and social assistance are backstopped by the National Endowment during Severe Revenue Contractions — the dual backstop activates automatically on MA certification, requiring no legislative action. Where the insurance system becomes insolvent without a Revenue Contraction, the Endowment board may authorize emergency disbursement for up to six months while the Legislature's constitutional obligation is enforced.</p>`
-    },
-
