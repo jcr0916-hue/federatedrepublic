@@ -545,7 +545,7 @@ Inferior court judges, once commissioned, serve during good behavior with no fix
 [§4.1.d] Judicial Removal
 Inferior court judges may be removed through three tracks: legislative removal by 2/3 of both chambers for constitutional breach or demonstrated incapacity; judicial discipline through a process the Legislature establishes by statute, subject to SC oversight; and criminal conviction for disqualifying offenses. The EI must publish a factual finding before any legislative removal vote.
 
-[§4.2] Open-Candidacy Judicial Selection
+[§4.2] Supreme Court Selection
 Supreme Court justices are nominated by the PM from the SC Candidate Registry and confirmed by the Senate by 2/3 supermajority of full seated membership. Three justices are confirmed every four years under a staggered class system; each serves a single non-renewable 12-year term.
 
 [§4.2.a] Candidate Registration
@@ -557,7 +557,7 @@ Five senior judges (at least 10 years continuous service) chosen by lot by the J
 [§4.2.c] Judicial Inspectorate Certification
 The JI confirms that each candidate remains on the SC Candidate Registry and that no disqualifying change has occurred since Registry admission. Candidates who fail JI certification may appeal under §8.4.i.
 
-[§4.2.d] Public Election
+[§4.2.d] PM Nomination and Senate Confirmation
 The PM nominates a JI-certified candidate from the SC Candidate Registry. For scheduled vacancies, the PM must nominate within 60 days of the outgoing justice's term ending. For mid-term vacancies, the PM must nominate within 45 days of the vacancy arising. Within 30 days of nomination, the JI confirms the candidate's registry status and publishes its assessment to the NRS — covering the nominee's judicial record, legal career, and any relevant conflicts of interest. Any Judicial Selection Board assessment of the nominee is transmitted to the Senate simultaneously. The Senate must vote within 90 days of the JI assessment being published. Failure to vote within 90 days is a constitutional compliance breach certified by the LI. No deemed confirmation applies — the Senate must hold an affirmative vote. If the Senate declines to confirm, the PM submits a new nomination within 30 days and the full process restarts from that nomination. The confirmed justice takes the Official Oath; the confirmation and JI assessment are published to the NRS as permanent records. From this moment, the justice serves a single non-renewable 12-year term.
 
 [§4.2.e] Mid-Term Vacancies
