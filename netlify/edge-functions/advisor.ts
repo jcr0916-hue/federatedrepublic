@@ -788,8 +788,8 @@ Annual compliance reviews for §19.1 accommodation compacts, Article XX Associat
 [§8.4.c] JI Court Operations Audit
 Annual audit of the court system for judicial scope compliance, independence from political pressure, and proper administration of judicial functions. The JI does not audit judicial reasoning — it audits whether courts are operating within their constitutional mandate and free from inappropriate influence.
 
-[§8.4.d] JI Electoral Commission Audit
-Annual audit of the EC for electoral integrity compliance, administrative accuracy, and independence. Distinct from the EI's executive compliance audit — the JI focuses on electoral administration integrity. Published to the NRS as a standalone annual report.
+[§8.4.d] JI Elections Panel Audit
+Annual audit of the Elections Panel of the Digital Infrastructure Commission for electoral integrity compliance, administrative accuracy, and independence. Distinct from the EI's executive compliance audit — the JI focuses on electoral administration integrity. Published to the NRS as a standalone annual report.
 
 [§8.4.e] Supreme Court Candidate Registry
 The JI maintains the standing SC Candidate Registry. Any citizen meeting the eligibility criteria — 15 or more years of legal practice or 10 or more years of judicial service, no current government position, no disqualifying financial interest — may apply. Registry applicants must file a financial disclosure record with the EI; the EI reviews for factual accuracy within 21 days and publishes its findings to the NRS as part of the registry entry. Registry inclusion does not expire unless the JI identifies a disqualifying change in eligibility status. The Registry is publicly accessible on the NRS at all times.
