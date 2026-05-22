@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 21 — The Structural Audit · The Federated Republic</title>
+  <meta name="description" content="On three improvements to the Inspectorates' own independence — the JI circular self-selection problem, the EI confirmation threshold, and the Joint Inspectorate Council.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    .progress-bar{position:fixed;top:0;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    main{max-width:680px;margin:0 auto;padding:76px 2rem 80px}
+    .paper-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .paper-number{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.75;max-width:560px}
+    .essay-body p{margin-bottom:1.6rem;font-size:1rem;line-height:1.95}
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:400;color:var(--navy);margin:3rem 0 1.2rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .essay-body h2::before{content:'✦ ';color:var(--gold);font-size:0.8em}
+    .section-ref{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:var(--muted);margin-left:0.4rem}
+    .comparison-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+    .comp-box{padding:1rem 1.2rem;border-radius:4px;font-size:0.88rem;line-height:1.6}
+    .comp-before{background:var(--cream2);border-left:3px solid #999}
+    .comp-after{background:var(--navy);color:rgba(245,240,232,0.9);border-left:3px solid var(--gold)}
+    .comp-label{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;opacity:0.7}
+    .paper-nav-bottom{display:flex;justify-content:space-between;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .paper-nav-bottom a{text-decoration:none;font-size:0.78rem;color:var(--gold);display:flex;flex-direction:column;gap:0.2rem}
+    .nav-label{font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)}
+    .nav-title{font-family:'Cormorant Garamond',serif;font-size:1rem}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 80px}.paper-title{font-size:1.9rem}.comparison-row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+  </div>
+
+  <main>
+    <header class="paper-header">
+      <span class="paper-number">Paper No. 21</span>
+      <h1 class="paper-title">The Structural Audit</h1>
+      <p class="paper-subtitle">Paper No. 11 makes the case for the Inspectorates. This paper audits them — three structural problems in their own independence that the original design left unresolved, and what fixing them reveals about the difficulty of designing institutions that watch other institutions.</p>
+    </header>
+
+    <div class="essay-body">
+
+      <p>The hardest design problem in constitutional accountability is not finding someone to watch the powerful. It is ensuring that the watchers are not, themselves, captured by the powerful they watch. Paper No. 11 argued for the Republic's cross-nomination model — the SC nominates the LI Inspector General so the Legislature cannot select its own auditor, the House nominates the EI IG so the executives are excluded, and the JI IG is drawn by lottery so no political actor controls who watches the courts. The architecture is sound. But architecture on paper and architecture in practice are different things, and the original design had three gaps that only became visible when the structure was examined against the specific mechanics of each appointment.</p>
+
+      <p>The three gaps were: a circular self-selection problem in the JI IG selection; a Senate confirmation threshold for the EI IG that was weaker than the institution's role required; and the absence of a formal coordination body for the functions the three Inspectorates were already performing jointly. None of these was a crisis. All three were genuine structural problems that compromised the independence the design claimed to provide. Fixing them is this paper's subject.</p>
+
+      <h2>The Problem With Self-Audit</h2>
+
+      <p>Before examining each fix, it is worth stating the general principle they all serve. Institutions that audit other institutions must themselves be auditable. The cross-nomination model is a specific implementation of this principle: each Inspectorate's IG is selected by a body that has no interest in the audit outcome. The SC has no stake in how the Legislature is audited. The House has no stake in how the executives are audited at the level of structural accountability rather than political convenience. The lottery has no stake in anything.</p>
+
+      <p>But the principle can fail in subtler ways than direct capture. An institution that selects its own auditor has a conflict of interest even if that selection is procedurally formal. An institution whose auditor is confirmed by a simple majority of the body whose party leader the auditor will scrutinise has a structural problem even if no individual acts corruptly. A set of institutions that lack a formal coordination body for their joint functions will produce coordination failures not because anyone intends them but because the incentive structure doesn't require coordination.</p>
+
+      <p>These are the three patterns the fixes address. None required a fundamental redesign. Each required one targeted correction to a specific mechanism. The targeted nature of the fixes is itself an argument for the underlying design: a structure with three fixable gaps is better than a structure requiring wholesale replacement.</p>
+
+      <h2>The Circular Self-Selection</h2>
+
+      <p>The original JI IG selection had three stages, all controlled by the JI itself.<span class="section-ref">§8.4.a (original)</span> The JI maintained the candidate pool — deciding who could be in it. The JI vetted pool members — certifying who met the criteria. And the outgoing JI IG administered the draw — personally conducting the lottery that selected their successor. The other two Inspector Generals witnessed the draw. Witnessing is not oversight. Witnessing is attendance.</p>
+
+      <p>The structural problem is obvious once stated: the JI IG selection had the JI making the three decisions that determined who would audit the JI. Compare this to the other IGs: the LI IG is nominated by the SC (the Legislature that the LI audits is entirely excluded); the EI IG is nominated by the House (the executives that the EI audits have no nomination role). The JI design not only failed to exclude the audited body from selection — it gave the audited body complete control over the selection mechanism. This is not a minor procedural gap. It is a structural inversion of the principle the rest of the design correctly implements.</p>
+
+      <div class="comparison-row">
+        <div class="comp-box comp-before">
+          <div class="comp-label">Before</div>
+          JI maintains pool · JI vets pool members · Outgoing JI IG administers the draw · Other IGs witness only
+        </div>
+        <div class="comp-box comp-after">
+          <div class="comp-label">After §8.4.a</div>
+          Pool of former judges (State or federal, trial court and above) · LI certifies service records · EI reviews financial disclosure · JIC conducts lottery · Outgoing IG does not participate
+        </div>
+      </div>
+
+      <p>The fix chooses former judges as the eligible class for a specific reason beyond just removing the JI from its own selection.<span class="section-ref">§8.4.a</span> Former judges — at the trial court level or above, whether from the Republic's federal courts or from State judiciaries — carry self-evidencing qualifications. A judicial service record is a public document. The JI does not need to evaluate whether a former judge is "qualified for the pool"; the fact of judicial service over the applicable minimum period is the qualification. Former judges have also already left the institution the JI audits. A retired appellate judge is not a current court officer. They bring the expertise to understand what the JI is auditing — what judicial independence looks like, what scope compliance requires — without having a personal stake in the audit's outcome.</p>
+
+      <p>The five-year cooling-off for former SC justices is the one element that requires explanation. A retired SC justice who immediately joined the JI IG candidate pool would be overseeing the institution that audited decisions they personally participated in. The cooling-off period removes that specific conflict without permanently excluding former SC justices — who would in many cases be exactly the constitutionally literate people a JI IG pool benefits from. The one-year cooling-off for all other former judges reflects the difference in institutional proximity: a retired district court judge is one level removed from the SC and has no comparable conflict.</p>
+
+      <p>The result is a JI IG selection that now parallels the logic of the other two: the body being audited — the courts — is excluded from selecting who audits them, because former judges are not current court officers. The LI and EI provide external certification of the pool rather than the JI certifying itself. The JIC — all three IGs jointly — conducts the lottery rather than the outgoing IG drawing their own successor.</p>
+
+      <h2>The Weak Threshold</h2>
+
+      <p>The EI Inspector General audits both executives — the President and the Prime Minister. The PM is accountable to the House. The House nominates the EI IG.<span class="section-ref">§8.3.b</span> The structural alignment this creates is legitimate: having the House nominate the EI IG means the body that holds the PM accountable also initiates the selection of the PM's auditor, which creates a form of democratic alignment without giving either executive direct nomination control.</p>
+
+      <p>But the original design then required only a simple Senate majority for EI IG confirmation. This created a gap that the nomination logic could not close. A PM with a disciplined House majority — the ordinary condition of successful parliamentary governance — could nominate an EI IG nominee and confirm that nominee with only coalition votes. The 2/3 threshold that the LI IG required did not apply. The EI IG, who audits the executives including the PM, had a weaker independence protection than the LI IG, who audits the Legislature.</p>
+
+      <p>The asymmetry is indefensible as a matter of principle. If the LI IG requires a 2/3 confirmation threshold to ensure cross-party support and prevent the audited body from effectively selecting its own auditor through a friendly confirmation vote, the EI IG requires the same threshold for the same reason. The PM's governing coalition controls the House nomination; it should not also be able to confirm that nominee without opposition participation.</p>
+
+      <div class="comparison-row">
+        <div class="comp-box comp-before">
+          <div class="comp-label">Before</div>
+          House nominates · Senate confirms by simple majority · JI vets disclosure record
+        </div>
+        <div class="comp-box comp-after">
+          <div class="comp-label">After §8.3.b</div>
+          House nominates · Senate confirms by 2/3 supermajority · JI vets disclosure record
+        </div>
+      </div>
+
+      <p>The fix is a single threshold change. The House nomination is preserved — the structural alignment argument remains sound. The JI vetting of the nominee's disclosure record continues. Only the Senate confirmation threshold changes: from simple majority to 2/3, matching the LI IG. The effect is that a PM who nominates a preferred EI IG nominee must find opposition senators willing to confirm — which substantially limits the PM's ability to install a friendly auditor without abandoning the nomination model's legitimate structural alignment benefits.</p>
+
+      <p>After this change, all three IGs have equivalent independence structures at the confirmation stage. The LI IG and EI IG are both confirmed by 2/3 Senate supermajority. The JI IG requires no Senate confirmation at all — the lottery mechanism makes Senate participation unnecessary and potentially counterproductive. The Republic's three auditors now have confirmation arrangements calibrated to their specific structural situations rather than a uniform threshold applied without consideration of institutional context.</p>
+
+      <h2>The Missing Council</h2>
+
+      <p>The third problem was the least visible and the most consequential for day-to-day Inspectorate operations. The three IGs were already performing joint functions — certifying the Eight-Year Assessment together, conducting lottery draws for constitutional pools together, overseeing joint proceedings — but there was no formal institutional home for any of these joint activities. Each joint function was specified separately in whatever provision created it. The three IGs would assemble for a particular function, certify a particular result, and then have no standing coordination structure until the next mandated joint function appeared.</p>
+
+      <p>This created three specific problems. First, there was no forum for resolving jurisdictional questions between Inspectorates — where two Inspectorates had concurrent or adjacent jurisdiction over a matter, coordination happened informally or not at all. Second, the joint certification of major constitutional processes — the Eight-Year Assessment, pool draws, compliance findings — had no institutional weight behind it beyond the sum of three individual certifications. Third, the accumulated expertise of the three Inspector Generals working together on joint matters had no vehicle for producing institutional continuity, since each joint function was ad hoc rather than part of a standing institutional relationship.</p>
+
+      <p>The Joint Inspectorate Council<span class="section-ref">§8.12</span> addresses all three. It formally houses every jointly certified constitutional function. It provides a standing forum for cross-jurisdictional coordination. It creates the institutional infrastructure for the three IGs to develop working relationships that persist across joint functions rather than being rebuilt from scratch each time.</p>
+
+      <p>Two design features of the JIC are worth explaining. The subject-matter chair — where the IG whose domain covers the primary subject matter of a joint session chairs that session — prevents any one Inspectorate from dominating the joint body. The LI IG chairs sessions primarily about legislative compliance; the EI IG chairs sessions about executive matters; the JI IG chairs certification and lottery sessions. For genuinely equal-domain joint matters, the chair rotates annually. This structure ensures that the JIC's authority reflects the Inspectorates' individual mandates rather than creating a hierarchy among equals.</p>
+
+      <p>The consensus-with-dissent publication rule is the second feature worth explaining. The JIC operates by consensus where possible. Where the three IGs cannot reach consensus, each publishes their individual assessment and the disagreement is noted permanently in the NRS record. This rule embodies the information-only mandate — the JIC does not vote, does not produce a majority finding that overrides dissent, and cannot direct or override the individual mandate of any Inspectorate. Three separate assessments, published with the disagreement visible, is more informative than a forced consensus that papers over genuine institutional disagreement. The permanent NRS record of the disagreement is itself accountability: future readers can assess whether the dissenting IG was right.</p>
+
+      <h2>What the Three Fixes Share</h2>
+
+      <p>Looking at the three corrections together, a pattern emerges that is worth naming. Each fix addressed a gap where an Inspectorate's independence was more assumed than designed. The JI's independence was assumed to follow from the lottery mechanism, but the lottery drew from a pool the JI controlled — the assumption failed at the pool level. The EI's independence was assumed to follow from the cross-nomination structure, but the confirmation threshold allowed the nominated party's coalition to confirm without opposition — the assumption failed at the confirmation level. The JICs independence was assumed to follow from the individual IGs' independence, but without a formal joint structure, the joint functions had no institutional weight — the assumption failed at the coordination level.</p>
+
+      <p>In each case, the fix was not to redesign the underlying mechanism but to close the specific gap where the assumption broke down. The lottery is still the right mechanism for the JI IG — it just needs to draw from a pool the JI doesn't control. The cross-nomination is still right for the EI IG — it just needs a threshold that prevents coalition-only confirmation. The joint functions were already being performed correctly — they just needed a formal institutional home.</p>
+
+      <p>This pattern — assumption failure at a specific mechanism level, targeted fix at that level — is the right way to think about constitutional maintenance. A constitution that requires wholesale replacement whenever a gap is found is too fragile. A constitution whose gaps can be closed by targeted corrections to specific mechanisms, while preserving the underlying design, is more durable. The three Inspectorate fixes are an example of what constitutional maintenance looks like when it is working as it should.</p>
+
+      <p>The deeper point is that designing institutions that watch other institutions requires continuous attention to whether the watchers' own independence holds. The original Inspectorate design was genuine and sound in its architecture. The three gaps were not failures of vision — they were the natural consequence of building something complex and then finding the points where the execution did not fully deliver what the architecture intended. Finding them and correcting them, rather than defending the original design against criticism, is the constitutional practice the Republic's transparency infrastructure is designed to make possible.</p>
+
+    </div>
+
+    <div class="paper-nav-bottom">
+      <a href="paper-20.html">
+        <span class="nav-label">← Previous</span>
+        <span class="nav-title">The Case for Limits</span>
+      </a>
+      <a href="papers.html" style="text-align:right">
+        <span class="nav-label">All Essays →</span>
+        <span class="nav-title">Papers</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    const bar=document.getElementById('progress');
+    window.addEventListener('scroll',()=>{
+      const d=document.documentElement;
+      bar.style.width=(window.scrollY/(d.scrollHeight-window.innerHeight)*100)+'%';
+    });
+    document.addEventListener('click',function(e){
+      const m=document.getElementById('mobileMenu');
+      if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))
+        m.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
