@@ -636,7 +636,9 @@
   <button class="tab-btn" onclick="showTab('dual')">Dual Executive</button>
   <button class="tab-btn" onclick="showTab('amendment')">Amendment Paths</button>
   <button class="tab-btn" onclick="showTab('inspectorates')">Inspectorates</button>
+  <button class="tab-btn" onclick="showTab('sc-appointment')">SC Appointment</button>
   <button class="tab-btn" onclick="showTab('social')">Social State</button>
+  <button class="tab-btn" onclick="showTab('pool')">Pool Process</button>
 </div>
 
 <!-- ═══════════════════════════════
@@ -1910,10 +1912,81 @@
   </div>
 </div>
 
+<div class="diagram-section" id="tab-social">
+  <div class="section-intro">
+    <h2>The Social State</h2>
+    <p>The Republic's constitutional commitment that every Inhabitant is entitled to conditions of life consistent with human dignity — implemented through three mandatory systems and backstopped by the National Endowment.</p>
+  </div>
 
-<!-- ═══════════════════════════════
-     DIAGRAM 9: SC ELECTION CYCLE
-═══════════════════════════════ -->
+  <div class="diagram-detail-box" style="max-width:800px;margin:0 auto 2rem">
+    <div class="prov-tags" style="margin-bottom:1.5rem">
+      <span class="prov-tag">§10.1 Principle</span>
+      <span class="prov-tag">§10.2 Healthcare Insurance</span>
+      <span class="prov-tag">§10.3 Social Assistance</span>
+      <span class="prov-tag">§10.1.c Compulsory Education</span>
+      <span class="prov-tag">§10.1.e Endowment Backstop</span>
+      <span class="prov-tag">§10.4 MA Certification</span>
+    </div>
+
+    <!-- THREE SYSTEMS -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem">
+      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
+        <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 1</div>
+        <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Healthcare Insurance</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Every Inhabitant enrolled from birth. No premium. No exclusions based on pre-existing conditions. Portable across all States.</div>
+        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§10.2</div>
+      </div>
+      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
+        <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 2</div>
+        <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Social Assistance</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Income floor ensuring every Inhabitant can meet basic material needs. Right-to-work referral within 30 days. MA certifies adequacy annually.</div>
+        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§10.3</div>
+      </div>
+      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
+        <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 3</div>
+        <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Compulsory Education</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Free through secondary level. State-funded, constitutionally guaranteed. No child may be excluded on financial grounds.</div>
+        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§10.1.c</div>
+      </div>
+    </div>
+
+    <!-- FUNDING ARCHITECTURE -->
+    <div style="border:1px solid var(--border);border-radius:6px;padding:1.2rem;margin-bottom:1.5rem">
+      <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:1rem">Funding Architecture</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+        <div>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem">Normal Operation</div>
+          <div style="font-size:0.8rem;color:#555;line-height:1.5">All three systems funded through the ordinary annual budget. The Legislature appropriates; the MA certifies that the appropriation meets the constitutional dignity standard. If any system falls short, the MA publishes a compliance gap and the Legislature must address it.</div>
+        </div>
+        <div>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem">Severe Revenue Contraction</div>
+          <div style="font-size:0.8rem;color:#555;line-height:1.5">When the MA certifies a Severe Revenue Contraction, the National Endowment activates automatically — disbursing from its constitutionally maintained reserve to backstop all three systems. Emergency reduction of social state access is constitutionally prohibited. <span style="color:var(--gold);font-size:0.7rem">§10.1.e</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MA ROLE -->
+    <div style="background:var(--cream2);border-radius:6px;padding:1rem;margin-bottom:1.5rem">
+      <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:0.5rem">Monetary Authority Certification Role</div>
+      <div style="font-size:0.8rem;color:#555;line-height:1.5">The MA independently certifies: (1) that healthcare insurance is financially solvent; (2) that social assistance meets the constitutionally required adequacy standard; (3) whether a Severe Revenue Contraction exists that triggers Endowment activation. The MA cannot be directed by either executive in its certification function — these findings are constitutional facts, not political judgments.</div>
+    </div>
+
+    <div class="diagram-footer">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-shortfall.html" class="diagram-sc-link">Social Assistance Shortfall &rarr;</a><span class="diagram-sc-tag">Social State &middot; §10.3</span></div>
+        <div><a href="scenario-stagflation.html" class="diagram-sc-link">Stagflation and the MA &rarr;</a><span class="diagram-sc-tag">Social State &middot; §10.4</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="diagram-section" id="tab-sc-appointment">
+  <div class="section-intro">
+    <h2>Supreme Court — Appointment Process</h2>
+    <p>Justices are nominated by the PM from the open SC Candidate Registry and confirmed by the Senate by 2/3 supermajority. Nine justices serve staggered 12-year non-renewable terms.</p>
+  </div>
   <div class="sc-chart">
 
     <!-- THREE DESIGN PRINCIPLES -->
@@ -2101,8 +2174,123 @@
 
   </div>
 </div>
+</div>
 
 
+<div class="diagram-section" id="tab-pool">
+  <div class="section-intro">
+    <h2>The Constitutional Pool Framework</h2>
+    <p>Six constitutional pools operate through the same four-stage framework under §8.13: Entry → Certification → Selection → Confirmation. Only the actors and thresholds vary.</p>
+  </div>
+
+  <div class="diagram-detail-box" style="max-width:900px;margin:0 auto 2rem">
+    <div class="prov-tags" style="margin-bottom:1.5rem">
+      <span class="prov-tag">§8.13 Pool Framework</span>
+      <span class="prov-tag">§8.12 JIC Lottery</span>
+      <span class="prov-tag">§8.4.e SC Registry</span>
+      <span class="prov-tag">§8.9 State Designee</span>
+      <span class="prov-tag">§9.3 Advisory Council</span>
+      <span class="prov-tag">§10.6 Endowment</span>
+      <span class="prov-tag">§16.1.c DIC Panels</span>
+    </div>
+
+    <!-- FOUR STAGES -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;margin-bottom:2rem">
+      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1rem;text-align:center">
+        <div style="font-size:1.5rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">1</div>
+        <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Entry</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.8);line-height:1.5">Who may join the pool? Self-nominated, State-designated, or executive-nominated. <span style="color:rgba(255,200,100,0.9)">Never requires Senate confirmation.</span></div>
+      </div>
+      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1rem;text-align:center">
+        <div style="font-size:1.5rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">2</div>
+        <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Certification</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.8);line-height:1.5">JI reviews and publishes a qualification report within 30 days. EI reviews financial disclosure for offices with significant financial authority.</div>
+      </div>
+      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1rem;text-align:center">
+        <div style="font-size:1.5rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">3</div>
+        <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Selection</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.8);line-height:1.5">JIC public lottery (independence-critical roles) or deliberate nomination from pool (accountability-critical roles). All draws publicly certified and NRS-published.</div>
+      </div>
+      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1rem;text-align:center">
+        <div style="font-size:1.5rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">4</div>
+        <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Confirmation</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.8);line-height:1.5">Where required, Senate confirms the selected individual only — never pool entry. Some pools require no confirmation at all.</div>
+      </div>
+    </div>
+
+    <!-- SIX POOLS TABLE -->
+    <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:0.75rem">The Six Constitutional Pools</div>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:0.78rem">
+      <thead>
+        <tr style="background:var(--navy);color:var(--white)">
+          <th style="padding:0.6rem 0.8rem;text-align:left;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Pool</th>
+          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Entry</th>
+          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Vetting</th>
+          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Selection</th>
+          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Confirmation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:var(--cream)">
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>SC Registry</strong><br><span style="font-size:0.68rem;color:var(--muted)">§8.4.e · §4.2.d</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated<br><span style="font-size:0.68rem;color:var(--muted)">15+ yrs practice</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JI credentials<br>EI financial</td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">PM nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center;color:var(--gold);font-weight:600">Senate 2/3<br><span style="font-size:0.68rem;font-weight:400;color:var(--muted)">90 days</span></td>
+        </tr>
+        <tr style="background:var(--cream2)">
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Advisory Council</strong><br><span style="font-size:0.68rem;color:var(--muted)">§9.3</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">State-designated<br><span style="font-size:0.68rem;color:var(--muted)">freely</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JI qualification<br>report</td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JIC lottery<br><span style="font-size:0.68rem;color:var(--muted)">public session</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center;color:var(--muted)">None</td>
+        </tr>
+        <tr style="background:var(--cream)">
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Endowment Trustees</strong><br><span style="font-size:0.68rem;color:var(--muted)">§10.6.a</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Executive-nominated<br><span style="font-size:0.68rem;color:var(--muted)">1/yr each</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JI credentials<br>EI financial</td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JIC lottery<br><span style="font-size:0.68rem;color:var(--muted)">public session</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center;color:var(--gold);font-weight:600">Senate confirms<br><span style="font-size:0.68rem;font-weight:400;color:var(--muted)">post-lottery · 60d</span></td>
+        </tr>
+        <tr style="background:var(--cream2)">
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>DIC Panels</strong><br><span style="font-size:0.68rem;color:var(--muted)">§16.1.c</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Executive-nominated<br><span style="font-size:0.68rem;color:var(--muted)">freely</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JI qualification<br>report</td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Director selects<br><span style="font-size:0.68rem;color:var(--muted)">1-of-2</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center;color:var(--gold);font-weight:600">Senate confirms<br><span style="font-size:0.68rem;font-weight:400;color:var(--muted)">60 days</span></td>
+        </tr>
+        <tr style="background:var(--cream)">
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>State Designee Panel</strong><br><span style="font-size:0.68rem;color:var(--muted)">§8.9</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">State-designated<br><span style="font-size:0.68rem;color:var(--muted)">eligibility-based</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">LI eligibility<br>certification</td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JIC lottery<br><span style="font-size:0.68rem;color:var(--muted)">5 members + 2 alt</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center;color:var(--muted)">None</td>
+        </tr>
+        <tr style="background:var(--cream2)">
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>JI Inspector General</strong><br><span style="font-size:0.68rem;color:var(--muted)">§8.4.a</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JI-maintained<br><span style="font-size:0.68rem;color:var(--muted)">open registry</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JI internal<br>pool</td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JI lottery<br><span style="font-size:0.68rem;color:var(--muted)">outgoing IG draws</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center;color:var(--muted)">None</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div style="margin-top:1.2rem;padding:0.8rem;background:var(--cream2);border-radius:6px;font-size:0.78rem;color:#555">
+      <strong style="color:var(--navy)">Constitutional principle:</strong> Pool entry never requires Senate confirmation — that would create double confirmation and undermine the pool model's independence rationale. Confirmation applies only to the selected individual. If an office needs Senate confirmation at entry, it should be elected, not pooled.
+    </div>
+
+    <div class="diagram-footer" style="margin-top:1.5rem">
+      <div class="diagram-scenarios">
+        <span class="diagram-footer-label">See this in action</span>
+        <div><a href="scenario-sdp-draw.html" class="diagram-sc-link">State Designee Panel Draw &rarr;</a><span class="diagram-sc-tag">Pool Process &middot; §8.9</span></div>
+        <div><a href="scenario-pool.html" class="diagram-sc-link">DIC Panel Pool &rarr;</a><span class="diagram-sc-tag">Pool Process &middot; §16.1.c</span></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer>
   <p>The Federated Republic — A Constitutional Project</p>
@@ -2125,7 +2313,6 @@
     </a>
   </div>
 </footer>
-
 <script>
 // Tab switching
 function showTab(id) {
@@ -2248,29 +2435,5 @@ function closePanel() {
       }
     });
   </script>
-
-<div class="diagram-section" id="tab-social">
-  <div class="section-intro">
-    <h2>The Social State</h2>
-    <p>The Republic's constitutional commitment that every Inhabitant is entitled to conditions of life consistent with human dignity. Click any node to explore the provisions behind it.</p>
-  </div>
-
-  <div class="diagram-detail-box" style="max-width:760px;margin:0 auto">
-    <div class="prov-tags" style="margin-bottom:1.2rem">
-      <span class="prov-tag">§10.1 Principle</span>
-      <span class="prov-tag">Healthcare Insurance</span>
-      <span class="prov-tag">Social Assistance</span>
-      <span class="prov-tag">Compulsory Education</span>
-      <span class="prov-tag">Endowment Backstop</span>
-      <span class="prov-tag">MA Certification</span>
-    </div>
-    <p>The Social State is the Republic's constitutional commitment that every Inhabitant is entitled to conditions of life consistent with human dignity. It is implemented through three mandatory systems, each constitutionally required to exist but defined in detail by statute — following the model of successful welfare states that achieve universal provision through statutory implementation rather than constitutional baskets.</p><p>The universal healthcare insurance system is funded by mandatory employer, employee, and federal government contributions. The Republic is the contributor of last resort — no Inhabitant is excluded by inability to pay. The MA certifies annually whether the system is solvent and provides constitutionally required universal access. Where the MA certifies insolvency or access failure, the Legislature has 90 days to publish a remediation plan or face an LI-certified constitutional breach.</p><p>Social assistance covers Inhabitants outside the insurance system, providing support sufficient for the §10.1 dignity standard. Compulsory education is free for all children, state-delivered, with a federal constitutional floor requiring literacy, numeracy, and civic education adequate for full democratic participation.</p><p>Both the insurance system and social assistance are backstopped by the National Endowment during Severe Revenue Contractions — the dual backstop activates automatically on MA certification, requiring no legislative action. Where the insurance system becomes insolvent without a Revenue Contraction, the Endowment board may authorize emergency disbursement for up to six months while the Legislature's constitutional obligation is enforced.</p>
-    <div class="diagram-footer" style="margin-top:2rem">
-      <a href="scenario-ordinary.html" class="diagram-sc-link">Explore Social State Scenarios &rarr;</a>
-      <span class="diagram-sc-tag">Article X · §10.1 through §10.3</span>
-    </div>
-  </div>
-</div>
-
 </body>
 </html>
