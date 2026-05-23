@@ -326,7 +326,6 @@
        DIAGRAM 7: AMENDMENT PATHS
     ═══════════════════════════════════ */
     .amend-chart{max-width:960px;margin:0 auto}
-    .amend-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem}
     .amend-path{border:2px solid;display:flex;flex-direction:column}
     .amend-path-header{padding:1.25rem 1.25rem 1rem;border-bottom:1px solid rgba(0,0,0,0.08)}
     .amend-path-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;line-height:1;display:block;margin-bottom:0.3rem}
@@ -371,7 +370,8 @@
     .amend-effect strong{color:var(--navy)}
 
     @media(max-width:760px){
-      .amend-paths{grid-template-columns:1fr}
+      .amend-paths{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:1.5rem}
+    .amend-paths{grid-template-columns:1fr}
       .amend-floor-grid{grid-template-columns:1fr}
     }
 
@@ -565,6 +565,52 @@
     .diagram-advisor-link:hover{border-color:var(--gold);color:var(--gold)}
     .diagram-advisor-link::before{content:"\2197  ";font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:rgba(201,168,76,0.4)}
     @media(max-width:600px){.diagram-footer{flex-direction:column}.diagram-advisor-link{width:100%;text-align:center}}
+  
+    /* ── Tier diagram additions ── */
+    .tier-block{border:2px solid var(--border);background:var(--cream);margin-bottom:0;border-radius:0}
+    .tier-block.tier1{border-left:4px solid var(--gold);border-radius:4px 0 0 4px}
+    .tier-block.tier2{border-left:4px solid var(--navy);border-radius:0 0 4px 4px}
+    .tier-header{display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1.25rem;background:var(--cream2);border-bottom:1px solid var(--border)}
+    .tier-badge{width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .tier-col-label{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy);font-weight:600}
+    .tier-body{padding:1rem 1.25rem}
+    .tier-body p{font-size:0.85rem;line-height:1.65;margin-bottom:0.6rem}
+    .tier-body p:last-child{margin-bottom:0}
+    .tier-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.75rem}
+    .tier-tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.5rem;border-radius:2px}
+    .tier-arrow{text-align:center;font-size:1.5rem;color:var(--muted);padding:0.25rem;line-height:1}
+
+    /* ── Amendment diagram fixes ── */
+    .amend-path-head{background:var(--navy);color:var(--gold);padding:1rem 1.25rem;font-family:'JetBrains Mono',monospace;font-size:0.85rem;font-weight:600;letter-spacing:0.05em}
+    .amend-path-label{font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(245,240,232,0.85);font-weight:400;display:block;margin-top:0.2rem}
+    .amend-path-body{padding:1.25rem;border:2px solid var(--border);border-top:none;display:flex;flex-direction:column;gap:0.75rem}
+    .amend-step{display:flex;gap:0.75rem;align-items:flex-start}
+    .amend-step-num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:var(--gold);font-size:0.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem}
+    .amend-step div{font-size:0.85rem;line-height:1.6}
+    .amend-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.5rem}
+    .amend-certify{background:var(--navy);color:rgba(245,240,232,0.9);padding:1rem 1.25rem;border-radius:4px;margin-top:1rem;font-size:0.85rem;line-height:1.6}
+    .amend-nonderogable{background:var(--cream2);border-left:3px solid var(--gold);padding:1rem 1.25rem;margin-top:1rem;font-size:0.85rem;line-height:1.6}
+
+    /* ── Cross-nomination color coding ── */
+    .cross-from.sc{background:var(--navy)}
+    .cross-from.house{background:#2d5a27}
+    .cross-from.lottery{background:#5a2d7a}
+    .cross-from.li{background:var(--navy);border-left:3px solid var(--gold)}
+    .cross-from.ei{background:#1a3a1a;border-left:3px solid #4caf50}
+    .cross-from.ji{background:#2d0050;border-left:3px solid #9c27b0}
+
+    /* ── Inspectorate column color coding ── */
+    .insp-col.col-li .insp-col-header{border-top:4px solid var(--gold)}
+    .insp-col.col-ei .insp-col-header{border-top:4px solid #4caf50}
+    .insp-col.col-ji .insp-col-header{border-top:4px solid #9c27b0}
+
+    /* ── Inspectorate rules ── */
+    .insp-rule{display:flex;gap:0.6rem;align-items:flex-start;padding:0.4rem 0;font-size:0.8rem}
+    .insp-rule.rule-can::before{content:"✓";color:#4caf50;font-weight:700;flex-shrink:0}
+    .insp-rule.rule-cannot::before{content:"✕";color:#c0392b;font-weight:700;flex-shrink:0}
+    .insp-term-item{display:flex;justify-content:space-between;padding:0.3rem 0;border-bottom:1px solid var(--border);font-size:0.8rem}
+    .insp-term-item:last-child{border-bottom:none}
+
   </style>
 </head>
 <body>
@@ -817,7 +863,7 @@
       <div class="flow-body">
         <div class="flow-title">Senate Review</div>
         <div class="flow-desc">The Senate must take up every House-passed bill within the statutory period. It may pass, amend, decline, or allow Deemed Approval to trigger. Senate amendments must be germane — limited to the subject matter of the original bill. The LI publishes a germaneness analysis for any amended bill returned to the House.</div>
-        <span class="flow-ref">§3.2.c Senate Must Act · §3.2.i Senate Amendment Authority · §8.1.a LI Germaneness Analysis</span>
+        <span class="flow-ref">§3.1 Senate Must Act · §3.4 Senate Amendment Authority · §8.1.a LI Germaneness Analysis</span>
         <div class="flow-branch">
           <span class="branch-label">Senate Options</span>
           <div class="branch-outcomes">
@@ -1317,7 +1363,7 @@ id="tab-dual">
         </div>
         <div class="dual-item item-president">
           <strong>Clemency</strong>
-          <span>Military law and national security offenses only. EI publishes factual report before any grant. · §2.1.g</span>
+          <span>Military law and national security offenses only. EI publishes factual report before any grant. · §2.12</span>
         </div>
 
         <div class="dual-cannot">
@@ -1388,7 +1434,7 @@ id="tab-dual">
         </div>
         <div class="dual-item item-pm">
           <strong>PM Clemency</strong>
-          <span>Domestic offenses. EI publishes factual report before any grant. · §2.2.f</span>
+          <span>Domestic offenses. EI publishes factual report before any grant. 
         </div>
         <div class="dual-item item-pm">
           <strong>Trade Agreement Concurrence</strong>
@@ -1547,19 +1593,19 @@ id="tab-inspectorates">
         <span class="cross-from sc">Supreme Court</span>
         <span class="cross-arrow">nominates →</span>
         <span class="cross-from li">LI Inspector General</span>
-        <span style="color:var(--muted);font-size:0.75rem">confirmed by Senate (2/3 supermajority) · House entirely excluded · Senate confirmation replaced by national vote · §8.3</span>
+        <span style="color:var(--muted);font-size:0.75rem">national popular vote · simple majority · next federal electoral period · House excluded from nomination · §8.3</span>
       </div>
       <div class="cross-row">
         <span class="cross-from house">House</span>
         <span class="cross-arrow">nominates →</span>
         <span class="cross-from ei">EI Inspector General</span>
-        <span style="color:var(--muted);font-size:0.75rem">confirmed by Senate (simple majority) · JI vets the nominee · §8.3</span>
+        <span style="color:var(--muted);font-size:0.75rem">national popular vote · simple majority · JI publishes disclosure before vote · §8.3</span>
       </div>
       <div class="cross-row">
         <span class="cross-from lottery">Random Lottery</span>
         <span class="cross-arrow">selects →</span>
         <span class="cross-from ji">JI Inspector General</span>
-        <span style="color:var(--muted);font-size:0.75rem">drawn from qualified pool by outgoing IG, witnessed publicly · §8.4</span>
+        <span style="color:var(--muted);font-size:0.75rem">Elections Panel pool · JIC public lottery · outgoing IG excluded · §8.4.a</span>
       </div>
     </div>
 
@@ -1576,7 +1622,7 @@ id="tab-inspectorates">
         <div class="insp-selection">
           <span class="insp-selection-label">Nominated by</span>
           <span class="insp-selection-who">The Supreme Court</span>
-          <span class="insp-selection-confirm">Senate confirms by 2/3 supermajority. House is entirely excluded. · §8.3</span>
+          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. House is entirely excluded from nomination. · §8.3</span>
         </div>
         <div class="insp-body">
           <div class="insp-function">
@@ -1601,7 +1647,7 @@ id="tab-inspectorates">
           </div>
           <div class="insp-function">
             <strong>Germaneness Analysis</strong>
-            <span>Publishes germaneness analysis for any bill returned to the House with Senate amendments. PM must give it due consideration. · §3.2.i</span>
+            <span>Publishes germaneness analysis for any bill returned to the House with Senate amendments. PM must give it due consideration. · §3.4</span>
           </div>
           <div class="insp-special">
             <strong>State Remediation Plans</strong>
@@ -1620,7 +1666,7 @@ id="tab-inspectorates">
         <div class="insp-selection">
           <span class="insp-selection-label">Nominated by</span>
           <span class="insp-selection-who">The House</span>
-          <span class="insp-selection-confirm">Senate confirms by simple majority. JI vets the nominee's disclosure record before the vote. · §8.3</span>
+          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. JI publishes disclosure record before the vote. · §8.3</span>
         </div>
         <div class="insp-body">
           <div class="insp-function">
@@ -1629,7 +1675,7 @@ id="tab-inspectorates">
           </div>
           <div class="insp-function">
             <strong>Military Compliance</strong>
-            <span>Annual assessment: were military operations authorized through the correct Tier? Was the §2.3 intelligence warrant requirement maintained? Were fund certifications followed? · §8.1.b</span>
+            <span>Annual assessment: were military operations authorized through the correct legislative authorization? Was the §2.3 intelligence warrant requirement maintained? Were fund certifications followed? · §8.1.b</span>
           </div>
           <div class="insp-function">
             <strong>Monetary Authority Audit</strong>
@@ -1637,7 +1683,7 @@ id="tab-inspectorates">
           </div>
           <div class="insp-function">
             <strong>Clemency Reports</strong>
-            <span>Publishes a factual background report on every clemency petition before either executive acts — petitioner's record, conviction, prior EI findings. Published to NRS simultaneously. · §2.1.g · §2.2.f</span>
+            <span>Publishes a factual background report on every clemency petition before either executive acts — petitioner's record, conviction, prior EI findings. Published to NRS simultaneously. · §2.12</span>
           </div>
           <div class="insp-function">
             <strong>Candidate Disclosure Review</strong>
@@ -1660,7 +1706,7 @@ id="tab-inspectorates">
         <div class="insp-selection">
           <span class="insp-selection-label">Selected by</span>
           <span class="insp-selection-who">Random Public Lottery</span>
-          <span class="insp-selection-confirm">Drawn from a qualified candidate pool by the outgoing JI, witnessed by the other two IGs and three citizens chosen by jury protocols. Published to NRS immediately. · §8.4</span>
+          <span class="insp-selection-confirm">Selected by JIC public lottery from Elections Panel-maintained pool. Outgoing JI IG does not participate in the draw. Result published to NRS immediately. · §8.4.a</span>
         </div>
         <div class="insp-body">
           <div class="insp-function">
@@ -1763,10 +1809,10 @@ id="tab-inspectorates">
   <div class="diagram-detail-box" style="max-width:800px;margin:0 auto 2rem">
     <div class="prov-tags" style="margin-bottom:1.5rem">
       <span class="prov-tag">§10.1 Principle</span>
-      <span class="prov-tag">§10.2 Healthcare Insurance</span>
-      <span class="prov-tag">§10.3 Social Assistance</span>
-      <span class="prov-tag">§10.1.c Compulsory Education</span>
-      <span class="prov-tag">§10.1.e Endowment Backstop</span>
+      <span class="prov-tag">§10.1 Healthcare Insurance</span>
+      <span class="prov-tag">§10.1 Social Assistance</span>
+      <span class="prov-tag">§10.1 Compulsory Education</span>
+      <span class="prov-tag">§10.6 National Endowment</span>
       <span class="prov-tag">§10.1 MA Certification</span>
     </div>
 
@@ -1776,13 +1822,13 @@ id="tab-inspectorates">
         <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 1</div>
         <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Healthcare Insurance</div>
         <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Every Inhabitant enrolled from birth. No premium. No exclusions based on pre-existing conditions. Portable across all States.</div>
-        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§10.2</div>
+        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§10.1</div>
       </div>
       <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
         <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 2</div>
         <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Social Assistance</div>
         <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Income floor ensuring every Inhabitant can meet basic material needs. Right-to-work referral within 30 days. MA certifies adequacy annually.</div>
-        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§10.3</div>
+        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§10.1</div>
       </div>
       <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
         <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 3</div>
