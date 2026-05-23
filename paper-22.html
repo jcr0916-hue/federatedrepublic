@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper No. 22 — The Open Field · The Federated Republic</title>
+  <meta name="description" content="On the pool nomination system — how making the field of qualified candidates visible before any nomination is made renders the second face of executive power accountable without disrupting it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    .progress-bar{position:fixed;top:0;left:0;height:2px;background:var(--gold);width:0;z-index:300;transition:width 0.1s}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    main{max-width:680px;margin:0 auto;padding:76px 2rem 80px}
+    .paper-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .paper-number{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .paper-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .paper-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.75;max-width:560px}
+    .essay-body p{margin-bottom:1.6rem;font-size:1rem;line-height:1.95}
+    .essay-body h2{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:400;color:var(--navy);margin:3rem 0 1.2rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .essay-body h2::before{content:'✦ ';color:var(--gold);font-size:0.8em}
+    .section-ref{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:var(--muted);margin-left:0.4rem}
+    .paper-nav-bottom{display:flex;justify-content:space-between;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .paper-nav-bottom a{text-decoration:none;font-size:0.78rem;color:var(--gold);display:flex;flex-direction:column;gap:0.2rem}
+    .nav-label{font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)}
+    .nav-title{font-family:'Cormorant Garamond',serif;font-size:1rem}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 80px}.paper-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="papers.html" class="active">Essays</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+  </div>
+
+  <main>
+    <header class="paper-header">
+      <span class="paper-number">Paper No. 22</span>
+      <h1 class="paper-title">The Open Field</h1>
+      <p class="paper-subtitle">On the pool nomination system — how making the field of qualified candidates publicly visible before any nomination is made renders the second face of executive power accountable without disrupting it.</p>
+    </header>
+
+    <div class="essay-body">
+
+      <p>The nomination of a Supreme Court justice, a central bank governor, or a director of intelligence is one of the most consequential acts an executive can perform. And yet, in almost every democratic system that uses executive appointment, the public sees only the last step of the process. They see the nominee. They do not see the field. They cannot see who was considered and passed over, what the range of qualified candidates looked like, or whether the nominee was the best available choice or simply the most politically convenient one.</p>
+
+      <p>This is what constitutional scholars sometimes call the second face of power: not the visible act of choosing, but the invisible act of shaping the choice set. The most effective exercise of executive influence often happens before any nomination is made — in the cultivation of networks, the narrowing of who is considered plausible, the quiet elimination of candidates who might prove inconvenient. None of this is visible to the public, and none of it is subject to democratic scrutiny.</p>
+
+      <p>The pool nomination system addresses this directly. It does not replace executive discretion. It does not replace Senate confirmation. It does not turn appointment into election. What it does is make the field visible — publicly, permanently, and before any nomination is made.</p>
+
+      <h2>The Mechanism</h2>
+
+      <p>Every appointed constitutional position operates from a publicly maintained pool of qualified candidates.<span class="section-ref">§8.13</span> Any citizen who meets the qualifications may apply. The Elections Panel of the Digital Infrastructure Commission maintains the pool as a public record — receiving applications, storing records, and providing access through the National Record System. The appropriate Inspectorate certifies each applicant's eligibility against the stated criteria and publishes that certification to the NRS alongside the applicant's record.<span class="section-ref">§8.4.e</span></p>
+
+      <p>The pool is not a shortlist. It is not curated by the executive. Every qualified applicant who is certified goes in. The Elections Panel may not exclude a certified applicant — the independence of the registry function from the nominating function is constitutionally explicit. The result is a public document, on the NRS, accessible to every citizen, that shows exactly who the executive could choose from.</p>
+
+      <p>When a vacancy arises, the executive nominates from the pool. The Senate confirms. Nothing in the traditional appointment process changes — the executive retains full discretion over whom to nominate from among certified candidates, and the Senate retains full discretion over whether to confirm. The pool adds no new bureaucratic step, no new veto point, no new filter on executive judgment.</p>
+
+      <p>What it adds is visibility.</p>
+
+      <h2>What Visibility Does</h2>
+
+      <p>The importance of making the pool public cannot be overstated, and it operates through several distinct mechanisms.</p>
+
+      <p>The first is direct accountability. A President who nominates a Director of Intelligence from the pool must do so against a background of public knowledge about who else was available. If the pool contains ten certified candidates with stronger operational records and the President chooses the eleventh, citizens and senators can ask why. They cannot be told there were no better options, because the options are on the NRS. The nomination becomes an accountable choice rather than an opaque one.</p>
+
+      <p>The second is structural. The existence of the pool changes the information environment for Senate confirmation hearings. A senator questioning a nominee no longer has to work with the information the executive chooses to provide about why this nominee rather than another. They can look at the pool, assess the relative qualifications of the field, and ask pointed questions grounded in that knowledge. The confirmation process becomes substantively richer because both parties to it have access to the same public record.</p>
+
+      <p>The third is pre-emptive. Because the pool is permanent and public, it changes the incentives around who applies and who is discouraged from applying. In a system without a pool, informal gatekeeping happens through networks — certain candidates simply never make it into the consideration set because they lack the right connections or have made the wrong enemies. The public pool breaks that mechanism. If you are qualified and certified, you are in the pool. The executive cannot remove you from the choice set without making a nomination — and therefore taking a public, accountable action — rather than simply not considering you.</p>
+
+      <h2>The Lottery and the Nomination</h2>
+
+      <p>The pool concept serves two different selection mechanisms in the constitution, and it is worth being precise about the distinction between them.</p>
+
+      <p>For independence-critical positions — Inspector General appointments, constitutional pool draws for bodies like the State Designee Panel and the National Endowment trustees — the pool feeds a lottery conducted by the Joint Inspectorate Council.<span class="section-ref">§8.12</span> The lottery selects randomly from the pool of certified candidates. No political actor nominates; no Senate confirms. The independence that makes these positions valuable comes precisely from the inability of any elected official to select the individual who fills them.</p>
+
+      <p>For nominated positions — Supreme Court justices, senior presidential domain officers, Monetary Authority board members, Digital Infrastructure Commission administrators, Inspectorate Generals, inferior court judges — the pool feeds executive nomination followed by Senate confirmation.<span class="section-ref">§8.13</span> Here the logic is different: these positions require executive accountability, not executive exclusion. The PM or President who nominates a Supreme Court justice is exercising a constitutional responsibility and should be held to account for that exercise. The Senate that confirms or rejects is performing a co-equal constitutional function.</p>
+
+      <p>The pool serves both mechanisms through the same infrastructure — the Elections Panel as administrative keeper, Inspectorate certification of qualifications, NRS publication of all records — while the selection step differs entirely. This is not incidental. The pool is the common foundation for both democratic accountability and genuine independence. What varies is which of those values the specific office requires.</p>
+
+      <h2>What the Pool Does Not Do</h2>
+
+      <p>It is worth being precise about the limits of the pool system, because overstating its reach would misrepresent its design.</p>
+
+      <p>The pool does not constrain the quality of nominations — it expands it. A pool of publicly certified qualified candidates does not force the executive to nominate an inferior candidate. It forces the executive to nominate from a known, verified field. If the executive believes the best candidate is someone currently outside the pool, that candidate must apply and be certified first. This is not a significant constraint on the exercise of genuine judgment about qualifications; it is a constraint on the nomination of candidates whose qualifications cannot be independently verified.</p>
+
+      <p>The pool does not replace political judgment. The executive still determines what combination of qualifications, experience, temperament, and policy alignment they want in the office. Two executives looking at the same pool of certified candidates will often make different nominations, and reasonably so. The pool does not tell the executive what to value; it ensures the field within which that judgment is exercised is publicly known.</p>
+
+      <p>The pool does not expand the Senate's formal confirmation role. The Senate still confirms or rejects; it gains no new power over the nomination itself. What the pool gives the Senate — and more importantly, what it gives the public who elects the Senate — is better information on which to exercise that existing role.</p>
+
+      <h2>The Second Face of Power, Made Visible</h2>
+
+      <p>The phrase "the second face of power" was coined in mid-twentieth century political science to describe power exercised not through visible decisions but through the control of what decisions get made — the ability to keep certain questions off the agenda, to ensure certain options are never seriously considered, to shape the choice set before any choosing begins. It is power that is almost impossible to contest because it is almost impossible to see.</p>
+
+      <p>The pool nomination system is a direct constitutional response to this problem in the specific domain of executive appointment. It does not eliminate the second face of power — no mechanism could do that entirely — but it makes one of its most significant manifestations visible. The choice set is public. The executive's choice from it is public. The gap between the two is public.</p>
+
+      <p>Citizens who can see the field can ask better questions than citizens who cannot. Senators who confirm against a background of public knowledge are performing a richer constitutional function than senators confirming in the dark. Future nominees who know their application becomes a public record have different incentives than nominees who exist only in private networks. Each of these effects is modest individually. Together they constitute a meaningful shift in how democratic accountability operates in the domain of appointment.</p>
+
+      <p>The pool nomination system changes nothing about who nominates, who confirms, or who serves. It changes only one thing: whether the public can see. And in a constitutional system designed around the principle that power exercised in public is power that can be questioned, that is not a small thing.</p>
+
+    </div>
+
+    <div class="paper-nav-bottom">
+      <a href="paper-21.html">
+        <span class="nav-label">← Previous</span>
+        <span class="nav-title">The Structural Audit</span>
+      </a>
+      <a href="papers.html" style="text-align:right">
+        <span class="nav-label">All Essays →</span>
+        <span class="nav-title">Papers</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    const bar=document.getElementById('progress');
+    window.addEventListener('scroll',()=>{
+      const d=document.documentElement;
+      bar.style.width=(window.scrollY/(d.scrollHeight-window.innerHeight)*100)+'%';
+    });
+    document.addEventListener('click',function(e){
+      const m=document.getElementById('mobileMenu');
+      if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))
+        m.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
