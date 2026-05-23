@@ -1,215 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Clemency Scenario — The Federated Republic</title>
-  <meta name="description" content="Two tests of §2.9.c's cross-chamber clemency review. A Presidential pardon voided by House disapproval. A PM grant voided after the EI finds a material inaccuracy in the explanatory report. The mechanism working as designed — and the one-year bar that follows."
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="The Clemency Scenario">
-  <meta property="og:description" content="Two tests of §2.9.c's cross-chamber clemency review. A Presidential pardon voided by House disapproval. A PM grant voided after the EI finds a material inaccuracy in the explanatory report. The mechan">
-  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-clemency.html">
-  <meta property="og:site_name" content="The Federated Republic">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Clemency Scenario">
-  <meta name="twitter:description" content="Two tests of §2.9.c's cross-chamber clemency review. A Presidential pardon voided by House disapproval. A PM grant voided after the EI finds a material inaccuracy in the explanatory report. The mechan">>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
-    .mobile-menu a:last-child{border-bottom:none}
-    .mobile-menu.open{display:flex}
-    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
-    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
-    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
-    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
-    .scenario-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.5}
-    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
-    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
-    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
-    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
-    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--border)}
-    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
-    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
-    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
-    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
-    .beat p:last-child{margin-bottom:0}
-    .vote-row{display:flex;gap:2rem;margin:1.5rem 0;flex-wrap:wrap}
-    .vote-box{flex:1;min-width:120px;text-align:center;padding:1rem;border:1px solid var(--border)}
-    .vote-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--navy);display:block}
-    .vote-label{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
-    .ei-report{background:rgba(27,42,74,0.06);border:1px solid rgba(27,42,74,0.15);padding:1.5rem 1.75rem;margin:2rem 0}
-    .ei-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);margin-bottom:0.75rem;display:block}
-    .ei-report p{font-size:0.9rem;line-height:1.8;margin-bottom:0.5rem;color:var(--text)}
-    .ei-report p:last-child{margin-bottom:0}
-    .part-divider{text-align:center;margin:3.5rem 0;padding:1.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .part-label{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold)}
-    .part-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);margin-top:0.4rem}
-    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
-    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
-    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
-    .finding p+p{margin-top:0.75rem}
-    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
-    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
-    <div class="nav-links">
-      <a href="annotated.html">Constitution</a>
-      <a href="scenarios.html" class="active">Scenarios</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="papers.html">Essays</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
-    </div>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
-    <a href="annotated.html">Constitution</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="papers.html">Essays</a>
-    <a href="changelog.html">Changelog</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
-    <a href="annotated.html">Read the Constitution</a>
-    <a href="constitution-current.docx" download>Download (.docx)</a>
-    <a href="contact.html">Contact</a>
-  </div>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Clemency Scenario — The Federated Republic</title><meta name="description" content="Two tests of §2.12's cross-domain clemency provisions. A Presidential pardon voided as self-interested. A PM clemency grant challenged as reaching into the pres"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><style>body{font-family:'Jost',sans-serif;background:#F5F0E8;color:#2a2520;font-size:16px;line-height:1.85}:root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}*{box-sizing:border-box;margin:0;padding:0}nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}.nav-logo{font-family:'Cormorant Garamond',serif;color:#C9A84C;font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}.nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}.nav-links{display:flex;gap:0.15rem;align-items:center}.nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}.nav-links a:hover,.nav-links a.active{color:#C9A84C}.nav-links .nav-cta{background:#C9A84C;color:#0f1e38;font-weight:600;padding:0.3rem 0.8rem}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}.hamburger span{display:block;width:22px;height:2px;background:#C9A84C}.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}.mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}.mobile-menu.open{display:flex}main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid #1B2A4A}.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:0.8rem}.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:#1B2A4A;line-height:1.1;margin-bottom:1rem}.scenario-subtitle{font-size:0.95rem;color:#7a7060;font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:#1B2A4A;color:#C9A84C;padding:0.25rem 0.6rem;border-radius:2px}.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:#1B2A4A;margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid #d4c9b0}.beat{background:#EDE7D8;border-left:3px solid #C9A84C;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#7a7060;margin-bottom:0.4rem}.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#1B2A4A;margin-bottom:0.8rem}.beat p{margin-bottom:0.8rem;font-size:0.92rem}.finding{background:#1B2A4A;color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;margin-bottom:0.8rem}.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}.finding p:last-child{margin-bottom:0}.scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid #d4c9b0}.scenario-nav a{text-decoration:none;color:#C9A84C;font-size:0.85rem}@media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 60px}}</style></head><body><nav><a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a><div class="nav-links"><a href="annotated.html">Constitution</a><a href="scenarios.html" class="active">Scenarios</a><a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a><a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><a href="advisor.html">Advisor</a><a href="scenario-ordinary.html" class="nav-cta">Start Here</a></div><button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button></nav><div class="mobile-menu" id="mobileMenu"><a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a><a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a><a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><a href="advisor.html">Advisor</a></div><main><div class="scenario-meta"><span class="scenario-tag">Executive Power · Clemency · §2.12</span><h1 class="scenario-title">The Clemency Scenario</h1><p class="scenario-subtitle">Two tests of §2.12's cross-domain clemency provisions. A Presidential pardon voided as self-interested. A PM clemency grant challenged as reaching into the presidential domain.</p><div class="provisions-tested">
+        <span class="prov-tag">§2.12 Clemency</span>
+        <span class="prov-tag">§8.1.b The Executive Inspectorate</span>
+        <span class="prov-tag">§9.1 National Record System</span>
+      </div></div><div class="scenario-body">
+      <p>The Republic's clemency architecture is simple in principle: each executive holds clemency authority within their own domain only. Presidential clemency covers military law and national security offenses. PM clemency covers domestic offenses. Neither may pardon offenses in the other's domain. Self-clemency is absolutely prohibited. The EI publishes a factual background report before any grant.</p>
 
-  <div class="page-wrap">
-    <div class="scenario-meta">
-      <span class="scenario-tag">Constitutional Process · §2.9.c · Cross-Chamber Clemency Review</span>
-      <h1 class="scenario-title">The Clemency Scenario</h1>
-      <p class="scenario-subtitle">Two tests of §2.9.c's cross-chamber review mechanism. A Presidential pardon voided by the House on political grounds — the mechanism working as a genuine check. A PM grant voided after the EI finds a material inaccuracy in the explanatory report — the transparency requirement doing constitutional work.</p>
-      <div class="provisions-tested">
-        <span class="prov-tag">§2.9.c Cross-Chamber Transparency Review</span>
-        <span class="prov-tag">§2.1.g Presidential Clemency</span>
-        <span class="prov-tag">§2.2.f PM Clemency</span>
-        <span class="prov-tag">§2.9.c Self-Clemency Prohibition</span>
-        <span class="prov-tag">§8.1 EI Factual Review</span>
-        <span class="prov-tag">§9.1 NRS Publication</span>
-      </div>
-    </div>
+      <h2>Test One — The Presidential Grant — Year 6</h2>
 
-    <div class="scenario-body">
+      <p>President Valdez issued a full pardon to a former Director of Intelligence convicted of unauthorized domestic surveillance — an offense under both domestic law and military law. The EI published its pre-grant background report as required, noting that the President had been a co-signatory on the classified order that the Director had implemented. The report did not characterize this as a conflict. The EI's mandate is factual, not advisory.</p>
 
-    <div class="part-divider">
-      <div class="part-label">Part A</div>
-      <div class="part-title">Presidential Pardon — House Disapproval</div>
-    </div>
-
-      <p>Commander Lena Strauss was convicted three years ago of unlawfully disclosing classified military intelligence to a foreign journalist. The disclosure concerned what Strauss believed were war crimes committed by senior officers during a counterterrorism operation — crimes she says she reported through internal channels without result. She was convicted under national security statutes and sentenced to eight years. She has served two. Her case has become a cause in civil liberties circles; her supporters argue she acted on conscience and that the internal crimes she disclosed have never been prosecuted.</p>
-
-      <p>The President grants Strauss a full pardon in Month 7 of Year 4. The pardon covers her conviction under military and national security statutes — within the President's clemency domain under §2.1.g. The President files the explanatory report with the EI within the required 7 days.</p>
-
-      <div class="ei-report">
-        <span class="ei-label">EI Factual Review — Published Day 19 after grant</span>
-        <p>The EI reviews the President's explanatory report for factual accuracy and completeness. The report states: (1) Strauss was convicted under military national security statutes within the presidential clemency domain — confirmed accurate. (2) The President received a clemency petition from Strauss's legal representatives — confirmed. (3) The President reviewed the full trial record and the classified intelligence assessment underlying Strauss's disclosure — confirmed, the classification registry shows presidential access to the relevant materials. (4) The President states no financial, political, or personal benefit accrues to the executive from the pardon — the EI finds no basis to dispute this statement. (5) The pardon does not extend to any ongoing criminal investigation — confirmed.</p>
-        <p>EI finding: the explanatory report is factually accurate and complete. The pardon is within the President's constitutional clemency domain. The EI identifies no material inaccuracy or omission. The 45-day House review period begins from the date of this publication.</p>
-      </div>
-
-      <h2>The House Review</h2>
-
-      <p>The House Judiciary Committee convenes within the first week of the review period. The political landscape is hostile to the pardon. The House majority — a different coalition from the one that supports the President — views the pardon as undermining military discipline and the chain of command that the intelligence community depends on. The committee's majority argues that however principled Strauss's motives, the President has pardoned a military officer convicted of a national security offense without waiting for the appellate process to conclude or for any independent review of the alleged underlying crimes to take place.</p>
-
-      <p>The President's position: the pardon is constitutionally valid, within her domain, and represents her judgment that the interests of justice require it. She does not appear before the committee. The EI's finding that the report is accurate is the record she rests on.</p>
-
-      <p>The committee votes 11-4 to recommend disapproval to the full House. The full House debates for three days. The debate is broadcast publicly; the NRS records the proceedings in full.</p>
-
-      <div class="vote-row">
-        <div class="vote-box"><span class="vote-num">247</span><span class="vote-label">For disapproval</span></div>
-        <div class="vote-box"><span class="vote-num">253</span><span class="vote-label">Against disapproval</span></div>
-        <div class="vote-box"><span class="vote-num">251</span><span class="vote-label">Simple majority required</span></div>
-      </div>
-
-      <p>The disapproval motion fails. 247 votes for disapproval, 253 against — four votes short of the simple majority required. The pardon is deemed approved. Commander Strauss is released. The full record — the pardon, the explanatory report, the EI finding, the committee hearing, the full House debate, and the vote — is on the NRS permanently. The President's use of her clemency authority and the House's response to it are both publicly documented.</p>
-
-    <div class="part-divider">
-      <div class="part-label">Part B</div>
-      <div class="part-title">PM Grant — EI Inaccuracy Finding — Senate Disapproval</div>
-    </div>
-
-      <p>Marcus Vane was convicted six years ago of large-scale procurement fraud — a domestic offense, within the PM's clemency domain under §2.2.f. The fraud involved a series of government contracting decisions in which Vane, then a mid-level civil servant, directed contracts to companies he had undisclosed financial interests in. The amount involved was substantial. He received a seven-year sentence and has served five. He petitioned for clemency on grounds of significant rehabilitation, cooperation with subsequent audits of the contracting system he exploited, and medical circumstances.</p>
-
-      <p>The PM grants Vane a commutation — reducing his remaining sentence to time served — in Month 3 of Year 6. The PM files the explanatory report with the EI within 7 days.</p>
-
-      <div class="ei-report">
-        <span class="ei-label">EI Factual Review — Published Day 16 after grant</span>
-        <p>The EI reviews the PM's explanatory report. The report states: (1) Vane was convicted of procurement fraud under domestic criminal statutes — confirmed. (2) The commutation is limited to reducing the sentence to time served and does not affect civil liability arising from the conviction — confirmed. (3) The PM states the commutation was granted on grounds of significant rehabilitation and documented cooperation with the anti-corruption audit program — the EI notes that Vane's cooperation is documented in the LI's anti-corruption audit records and is confirmed.</p>
-        <p><strong>Material inaccuracy identified:</strong> The PM's explanatory report states that Vane has "no prior convictions." The EI's review of court records finds that Vane was convicted in Year 1 of a separate financial misconduct offense — a lesser charge that resulted in a suspended sentence and a fine. That conviction is on the permanent court record. The PM's statement that Vane has no prior convictions is factually inaccurate.</p>
-        <p>EI finding: the explanatory report contains a material factual inaccuracy on the question of prior convictions. The EI publishes this finding to the NRS alongside its full review. The 45-day Senate review period begins from the date of this publication. The Senate has been informed of the inaccuracy.</p>
-      </div>
-
-      <h2>The Senate Review</h2>
-
-      <p>The EI's finding of inaccuracy changes the Senate's review posture significantly. The inaccuracy may be innocent — the PM may not have had access to Year 1's records or may have relied on incorrect information — or it may be deliberate. The EI does not characterize it either way: it states the inaccuracy as a factual matter and leaves motivation to the political process. What the finding does is ensure the Senate is reviewing the commutation with full information rather than the PM's stated version of it.</p>
+      <p>The NRS published the pardon within hours. The House's Legal Affairs Committee petitioned the SC on two grounds: first, that the offense involved domestic law violations outside the presidential domain; second, that the President had been a direct beneficiary of the conduct being pardoned — the order that caused the offense was the President's own.</p>
 
       <div class="beat">
-        <div class="beat-label">Senate Judiciary Committee</div>
-        <div class="beat-title">The PM appears and addresses the inaccuracy</div>
-        <p>The PM appears before the Senate Judiciary Committee and acknowledges the inaccuracy. She states she was not aware of the Year 1 conviction when she reviewed the petition — her office relied on a summary prepared by the Clemency Review Secretariat that did not include the earlier conviction. She does not withdraw the commutation. She argues that the Year 1 offense was a lesser matter and does not change her judgment about the appropriateness of the commutation on its merits.</p>
-        <p>The committee's majority is not satisfied with this explanation. The inaccuracy — however it arose — was in the PM's explanatory report, which is a constitutional document. The report is the mechanism by which the reviewing chamber evaluates the grant. A report that contains a material inaccuracy about the recipient's criminal history, regardless of how the inaccuracy occurred, undermines the review function the provision was designed to support.</p>
-        <p>The committee votes 8-4 to recommend disapproval. The full Senate debates for two days.</p>
+        <div class="beat-label">§2.12 — No Clemency for Offenses in Which the Executive Was a Participant</div>
+        <div class="beat-title">No clemency may be granted for offenses in which the granting executive was a participant or direct beneficiary.</div>
+        <p>The SC ruled within fourteen days. On the first ground — domain — the Court found that the national security component of the offense was sufficient to place it within the presidential domain. The President had clemency authority over that component. On the second ground — participation — the Court found that co-signing the order whose implementation constituted the offense placed the President directly within §2.12's participation bar. The pardon was void as to the domestic law component already; it was also void as to the national security component.</p>
+        <p>The Director remained convicted. The President faced an EI investigation into whether issuing a void clemency grant constituted a constitutional compliance breach. The EI found breach, published a finding, and referred the matter to the appropriate authority.</p>
       </div>
 
-      <div class="vote-row">
-        <div class="vote-box"><span class="vote-num">61</span><span class="vote-label">For disapproval</span></div>
-        <div class="vote-box"><span class="vote-num">39</span><span class="vote-label">Against disapproval</span></div>
-        <div class="vote-box"><span class="vote-num">51</span><span class="vote-label">Simple majority required</span></div>
+      <h2>Test Two — The PM's Grant — Year 9</h2>
+
+      <p>PM Asante issued a clemency order to a former intelligence contractor convicted under a domestic fraud statute. The fraud had occurred in the contractor's private capacity, entirely separate from their intelligence work. The Presidential domain officer — the Director of Intelligence — filed an objection, arguing that the contractor's intelligence background brought the clemency into the presidential domain.</p>
+
+      <p>The EI's background report documented the contractor's intelligence history but made no assessment of domain. The PM issued the grant. The Director petitioned the SC.</p>
+
+      <div class="beat">
+        <div class="beat-label">§2.12 — Domestic Offense, PM Domain</div>
+        <div class="beat-title">PM clemency covers domestic offenses. The relevant question is the nature of the offense, not the background of the offender.</div>
+        <p>The SC dismissed the petition. The offense was domestic fraud. The contractor's intelligence history was not relevant to the offense charged, the conviction, or the clemency question. Domain is determined by the nature of the offense, not by the identity or background of the person convicted. A domestic fraud conviction does not become a national security matter because the convicted person once held a security clearance. The PM's grant was valid.</p>
       </div>
-
-      <p>The disapproval motion passes. 61-39 — ten votes above the simple majority threshold. The commutation is void. Vane's original sentence is reinstated. He returns to custody to serve the remainder of his term. The PM may not resubmit clemency for Vane for one year from the date of the Senate vote.</p>
-
-      <p>The PM accepts the Senate's decision publicly. She issues a statement acknowledging the inaccuracy in the explanatory report and announcing a review of the Clemency Review Secretariat's processes to prevent future omissions. The NRS record contains: the original commutation, the PM's explanatory report with the inaccuracy, the EI's finding identifying it, the Senate Judiciary Committee hearing, the full Senate debate, and the 61-39 vote. The year-long bar on resubmission is registered on the NRS with the date it expires.</p>
 
       <div class="finding">
-        <span class="finding-label">What This Scenario Tests</span>
-        <p>Part A tests §2.9.c where the mechanism operates correctly and reaches its natural endpoint: the House reviews, debates publicly, holds a public hearing, publishes formal observations, but the pardon stands — the reviewing chamber holds no veto power. The pardon stands as it must. The constitutional record shows a Presidential clemency grant that faced genuine legislative scrutiny and survived it on the merits. The cross-chamber assignment — House reviews Presidential grants — worked as designed: the House has no confidence or electoral relationship with the President, making its review genuinely independent. The four-vote margin is on the NRS. The President's judgment was tested and confirmed, narrowly.</p>
-        <p>Part B tests the EI's factual review function — the accountability layer that sits between the executive's explanatory report and the chamber's review period. The inaccuracy the EI found was not in the grant itself but in the document that explains it. The §2.9.c framework places the explanatory report at the centre of the review mechanism: if the report is inaccurate, the review is compromised. The EI's finding of inaccuracy is the information that allowed the Senate to review the commutation with full knowledge rather than partial knowledge. The Senate's 61-39 vote is the democratic judgment made possible by that information.</p>
-        <p>Part B also illustrates the one-year bar. The PM's government could theoretically resubmit in Year 7 with a corrected explanatory report and accurate prior conviction disclosure. Whether the Senate would approve a correctly documented commutation for the same recipient is a question the NRS record will inform: senators voting on a Year 7 resubmission will have the Year 6 record — the inaccuracy, the EI finding, the chamber observation hearing — permanently available. The bar is temporal, not permanent. The record is.</p>
+        <div class="finding-label">What This Scenario Tests</div>
+        <p>§2.12 tests two of the clemency architecture's most important design features: the participation bar and the domain question. The participation bar — no executive may pardon offenses in which they were a participant or beneficiary — is the constitutionalization of the most obvious self-dealing risk in any clemency system. The EI's mandatory pre-grant background report is the mechanism that makes the bar operational: the public record shows the relevant facts before the grant is made, not after.</p>
+        <p>The domain question — which executive holds clemency authority for which offenses — requires case-by-case determination. The SC's guidance from Test One (domain follows the nature of the offense, not secondary considerations) and Test Two (background of the offender is not relevant to domain) gives courts and executives a workable rule.</p>
       </div>
-
-    </div>
-
-    <nav class="scenario-nav">
-      <a href="scenario-formation.html">← The Formation Scenarios</a>
-      <a href="scenarios.html">All Scenarios →</a>
-    </nav>
-  </div>
-
-  <script>
-    document.querySelector('.hamburger')?.addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    });
-    const bar = document.createElement('div');
-    bar.style.cssText = 'position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0;transition:width 0.1s';
-    document.body.prepend(bar);
-    window.addEventListener('scroll', () => {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
-    });
-  </script>
-</body>
-</html>
+</div><div class="scenario-nav"><a href="scenarios.html">&larr; All Scenarios</a><a href="scenarios.html">All Scenarios &rarr;</a></div></main><script>document.addEventListener("click",function(e){const m=document.getElementById("mobileMenu");if(m&&m.classList.contains("open")&&!e.target.closest("nav")&&!e.target.closest("#mobileMenu"))m.classList.remove("open");});</script></body></html>
