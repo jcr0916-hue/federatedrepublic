@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Stalemate — The Federated Republic</title>
+  <meta name="description" content="Year 7. The President concludes a mutual defense treaty requiring domestic infrastructure commitments. The PM refuses to authorize the spending on fiscal grounds. Both are right. Neither will yield.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:var(--white);padding:1.5rem;margin:2rem 0;border-radius:4px}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+    .finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+    .finding p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;color:var(--gold);font-size:0.85rem}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a><a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a>
+      <span class="nav-sep"></span><a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><a href="advisor.html">Advisor</a>
+  </div>
+  <main>
+    <div class="scenario-meta">
+      <span class="scenario-tag">Dual Executive · Coordination Failure · §2.14.a · §2.11</span>
+      <h1 class="scenario-title">The Stalemate</h1>
+      <p class="scenario-subtitle">Year 7. The President concludes a mutual defense treaty requiring domestic infrastructure commitments. The PM refuses to authorize the spending on fiscal grounds. Both are acting within their constitutional domain. Neither will yield.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.14.a Coordination Failure Protocol</span>
+        <span class="prov-tag">§2.11 Joint Executive Council</span>
+        <span class="prov-tag">§2.4 Presidential Domain</span>
+        <span class="prov-tag">§3.3 Legislative Process</span>
+        <span class="prov-tag">§9.1 National Record System</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Meridian Mutual Defense Treaty committed the Republic to a fifteen-year program of joint infrastructure investment: hardened communication nodes, shared satellite ground stations, and a network of dual-use logistics facilities along the northern territorial boundary. The President concluded the treaty in Year 6, with Senate ratification following in Year 7. The treaty's domestic implementation provisions — the infrastructure spending itself — required parliamentary appropriation.</p>
+
+      <p>The PM read the MA's preliminary cost assessment and refused to authorize the spending request. Her fiscal objection was specific: the treaty's Year 8–12 commitments would coincide with the Republic's structural deficit correction window, the period during which three consecutive Satisfactory MA certifications were required before any new major capital commitment could be added to the medium-term fiscal framework. The PM was not disputing the President's authority to conclude the treaty. She was declining to authorize spending that her fiscal framework could not accommodate.</p>
+
+      <p>The President's position was equally precise. The treaty was ratified. It was the law of the Republic. The domestic infrastructure commitments were treaty obligations, not discretionary spending. The PM's fiscal objection — however legitimate as fiscal policy — did not override a ratified treaty commitment. The President was not asking the PM to violate her fiscal framework. He was stating that the Republic had a binding international obligation that the domestic fiscal framework would have to accommodate.</p>
+
+      <p>Both were right. Neither was wrong. The constitutional machinery had no obvious answer.</p>
+
+      <h2>Why the Standard Mechanisms Failed</h2>
+
+      <p>This was not a domain dispute. The President's authority to conclude and implement mutual defense treaties is explicitly enumerated in §2.4. The PM's authority over domestic fiscal authorization is the core of her residual mandate. Neither executive was claiming authority over the other's domain. The SC's domain determination process under §2.1.k was unavailable — there was nothing to determine. Each executive was acting entirely within their own constitutional space. Their actions simply produced incompatible outcomes.</p>
+
+      <p>The JEC had been working on the problem for four months before the coordination failure declaration. The joint working group had identified three possible bridging mechanisms: a phased implementation schedule that deferred the most expensive commitments beyond the deficit correction window, a contingency appropriation that would activate automatically on MA certification of structural balance, and a treaty renegotiation to extend the implementation timeline. The President found the first two inadequate to meet the treaty's Year 8 benchmarks. The PM found the third diplomatically unacceptable — renegotiating a ratified mutual defense treaty over domestic fiscal concerns would signal a constitutional unreliability she was not willing to create.</p>
+
+      <div class="beat">
+        <div class="beat-label">§2.14.a — Coordination Failure Declaration</div>
+        <div class="beat-title">Day 127</div>
+        <p>The President published a coordination failure declaration to the NRS under §2.14.a. The declaration specified the incompatibility precisely: the treaty's binding Year 8 infrastructure benchmarks, the PM's documented fiscal authorization refusal, and the four-month JEC record demonstrating that the joint body had been unable to produce a resolution. The NRS timestamp made the declaration permanent from the moment of publication.</p>
+        <p>The declaration triggered the §2.14.a mechanism. The JEC had 14 days to produce a joint resolution — a formal deadline, not a continuation of the previous four months of working-group process. If no joint resolution was published within 14 days, the matter would be transmitted to the House Speaker and Senate Speaker jointly.</p>
+      </div>
+
+      <p>The 14-day JEC window produced nothing new. The same three bridging mechanisms were on the table; the same objections applied. On Day 141, the matter was transmitted to the Speakers. The PM published a formal statement noting that the coordination failure declaration was the first in the Republic's history and that she was prepared to work with the Legislature on a concurrent resolution framework — but that she would not authorize spending commitments that violated the MA's structural balance parameters without legislative authorization that explicitly addressed the fiscal consequences.</p>
+
+      <h2>The Concurrent Resolution</h2>
+
+      <p>The Legislature had 30 days to produce a concurrent resolution that bound both executives to its terms for the duration of the impasse. The constitutional constraint on the resolution was significant: it could not alter permanent domain boundaries. It could resolve the specific impasse — prescribe how this particular incompatibility would be addressed — but it could not permanently limit the President's treaty authority or the PM's fiscal authorization function.</p>
+
+      <p>The resolution that emerged after 26 days of joint House-Senate drafting did three things. It authorized a contingency appropriation for the Meridian infrastructure commitments, structured as a separate fiscal instrument outside the standard medium-term framework, subject to MA certification of solvency at each disbursement trigger. It required the President to transmit a revised implementation schedule to the Senate within 60 days, with Year 8 benchmarks adjusted to reflect the first-tranche authorization only. And it required the PM to present the overall fiscal impact to the House within 90 days, with a proposed offset mechanism that the House could approve or reject by ordinary majority.</p>
+
+      <div class="beat">
+        <div class="beat-label">§2.14.a — Concurrent Resolution Effect</div>
+        <div class="beat-title">Day 167</div>
+        <p>The concurrent resolution passed both chambers and was published to the NRS. Under §2.14.a, its terms bound both executives for the duration of the impasse — which the resolution itself defined as ending when the PM presented the fiscal offset mechanism to the House and the House acted on it. The impasse was not resolved by the resolution; it was governed by it, with a defined path to resolution.</p>
+        <p>The President submitted the revised implementation schedule on Day 221. The PM presented the offset mechanism on Day 248. The House approved it 289-211. The original fiscal authorization dispute was resolved through ordinary legislative process — which is exactly where the constitution intended it to land.</p>
+      </div>
+
+      <h2>What This Scenario Tests</h2>
+
+      <p>§2.14.a addresses a failure mode that the JEC and the domain default rule cannot reach: two executives each acting within their constitutional authority whose actions are materially incompatible. The domain default rule (§2.1.k) governs disputes about which executive has authority over a given action. It has nothing to say when neither executive's authority is in dispute — only their outcomes conflict.</p>
+
+      <p>The Coordination Failure Protocol is not a solution. It is a structured path through an impasse that the constitutional machinery cannot otherwise resolve. The JEC gets a defined deadline. The Legislature gets a defined role. The PM's residual authority governs if the Legislature fails to act. Every step is on the NRS permanently — the declaration, the JEC outcome, the legislative response. The public can see, in real time, who declared the failure, what the JEC produced, and what the Legislature did with it.</p>
+
+      <p>The President's decision to declare a coordination failure rather than continue the JEC process indefinitely was a political calculation as much as a constitutional one. The NRS record of the declaration was permanent — future readers would see that the President had concluded the JEC could not resolve the matter and had invoked the protocol. That is a reputational cost worth incurring only when the alternative is ongoing paralysis on a treaty commitment. The PM's willingness to work with the Legislature rather than simply maintain her fiscal position reflected the same calculation: the NRS record of the coordination failure was permanent, and a PM who was seen as blocking treaty implementation without providing a resolution path would bear the political consequences of that record.</p>
+
+      <p>The Meridian Treaty was ultimately implemented — late, restructured, and through a more laborious process than the President had intended. The constitutional order held. The impasse was resolved not by one executive yielding to the other but by the Legislature performing the function that representative institutions exist to perform: resolving genuine political disagreements between constitutionally valid positions.</p>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--muted)"><a href="constitution-current.pdf" download style="color:var(--gold)">Download (.pdf)</a></p>
+  </main>
+  <script>
+    document.addEventListener('click',function(e){
+      const m=document.getElementById('mobileMenu');
+      if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))
+        m.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
