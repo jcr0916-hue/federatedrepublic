@@ -148,7 +148,22 @@
 
       <p>The NRS and the Inspectorates that feed it have nothing worth capturing in this sense. Capturing an Inspectorate does not change what it has already published. It does not alter the existing record. It does not prevent a staff member from publishing a Minority Report if a finding was suppressed. The only thing capture accomplishes is stopping future publication &#8212; and the distributed custody of the NRS means that even a captured Inspectorate cannot retroactively alter what the captured body published when it was honest.</p>
 
-      <h2>The Inspectorates as Infrastructure</h2>
+      
+      <h2>The Record Is Not the Condition</h2>
+
+      <p>One assumption ran silently through the original NRS design: that the system would always be there. Government acts were published to the NRS, and the publication was the constitutional act — an unpublished order was void, a law not on the NRS had not taken effect. The NRS was not just a record. It was a condition of legal existence.</p>
+
+      <p>This design had a vulnerability the NRS's transparency architecture could not address. A sufficiently serious attack on the NRS's infrastructure — a cyberattack, a cascading node failure, sustained physical compromise — would not just make the record inaccessible. It would suspend the constitutional machinery itself. A President could not issue a valid order. Laws could not take effect. The Inspectorates could not publish findings. Government would not be slowed by an NRS outage. It would be constitutionally paused.</p>
+
+      <p>The revised design<span class="section-ref">§9.1</span> separates the record from the condition. Government acts take legal effect from the moment of issuance — not from the moment of NRS publication. Publication remains mandatory, and unpublished acts are published the moment the NRS is restored. But the act itself is valid whether or not the system is up when it is issued.</p>
+
+      <p>The mechanism that makes this possible is a continuously operating parallel authentication system maintained by the JI — physically and logistically independent of the NRS, capable of authenticating and preserving all constitutional acts without NRS connectivity. This system runs in parallel at all times, not as a contingency that activates on failure, but as a permanent second track. Every authenticated act is recorded in both systems simultaneously. When the NRS is restored, the parallel system's records migrate with their original timestamps intact.</p>
+
+      <p>The distinction matters because it changes the stakes of an attack. The original design made the NRS a constitutional chokepoint — disabling it disabled the constitutional order. The revised design makes the NRS what it should always have been: the permanent, public, canonical record of government, whose temporary unavailability inconveniences publication without suspending governance. An adversary who disables the NRS has removed public visibility. They have not suspended constitutional government. The Republic continues to function, on a parallel authenticated record, until the primary system is restored.</p>
+
+      <p>Where the NRS is not restored within 180 days, the parallel system becomes the constitutional record of the Republic, and the Legislature must by statute establish permanent restoration obligations and timelines within 90 days of that threshold. The constitution does not wait for the NRS to come back. It provides a path forward if it does not.</p>
+
+<h2>The Inspectorates as Infrastructure</h2>
       <div class="essay-divider">&#x2055;</div>
 
       <p>The three Inspectorates &#8212; Legislative, Executive, Judicial &#8212; are the primary generators of material that the NRS is designed to preserve. Each watches one branch of government. Each has a constitutional mandate to observe and publish. None has the power to compel action, issue binding orders, or impose consequences.</p>
