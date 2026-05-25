@@ -428,10 +428,10 @@
     .insp-term{background:var(--navy2);color:rgba(245,240,232,0.8);padding:1rem 1.5rem;font-size:0.82rem;line-height:1.6;display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;text-align:center}
     .insp-term-item strong{color:var(--gold);display:block;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.2rem}
 
-    .insp-cross{background:var(--cream2);border:1px solid var(--border);padding:1.1rem 1.5rem;margin-bottom:1.5rem;font-size:0.85rem;color:#555;line-height:1.6}
-    .insp-cross strong{color:var(--navy)}
+    .insp-cross{background:var(--navy2);border:1px solid rgba(201,168,76,0.3);padding:1.25rem 1.5rem;margin-bottom:1.5rem;font-size:0.85rem;color:rgba(245,240,232,0.8);line-height:1.6;border-radius:2px}
+    .insp-cross strong{color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:0.5rem}
     .cross-row{display:flex;align-items:center;gap:0.75rem;margin-top:0.6rem;font-size:0.8rem}
-    .cross-arrow{color:var(--gold);font-size:1.1rem;flex-shrink:0}
+    .cross-arrow{color:rgba(201,168,76,0.7);font-size:1rem;flex-shrink:0;font-family:'JetBrains Mono',monospace}
     .cross-from{padding:0.3rem 0.6rem;font-weight:600;font-size:0.78rem;border:1px solid;border-radius:2px}
     .cross-from.li{border-color:#4a5c1a;color:#4a5c1a}
     .cross-from.ei{border-color:var(--gold2);color:var(--gold2)}
@@ -592,12 +592,12 @@
     .amend-nonderogable{background:var(--cream2);border-left:3px solid var(--gold);padding:1rem 1.25rem;margin-top:1rem;font-size:0.85rem;line-height:1.6}
 
     /* ── Cross-nomination color coding ── */
-    .cross-from.sc{background:var(--navy)}
-    .cross-from.house{background:#2d5a27}
-    .cross-from.lottery{background:#5a2d7a}
-    .cross-from.li{background:var(--navy);border-left:3px solid var(--gold)}
-    .cross-from.ei{background:#1a3a1a;border-left:3px solid #4caf50}
-    .cross-from.ji{background:#2d0050;border-left:3px solid #9c27b0}
+    .cross-from.sc{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+    .cross-from.house{background:#2d5a27;color:#e8f5e9;border-color:#2d5a27}
+    .cross-from.lottery{background:#5a2d7a;color:#f3e5f5;border-color:#5a2d7a}
+    .cross-from.li{background:var(--navy);color:var(--gold);border-left:4px solid var(--gold);border-color:var(--navy)}
+    .cross-from.ei{background:#1a3a1a;color:#a5d6a7;border-left:4px solid #4caf50;border-color:#1a3a1a}
+    .cross-from.ji{background:#2d0050;color:#ce93d8;border-left:4px solid #9c27b0;border-color:#2d0050}
 
     /* ── Inspectorate column color coding ── */
     .insp-col.col-li .insp-col-header{border-top:4px solid var(--gold)}
@@ -751,7 +751,7 @@
       <div class="gov-node node-court" onclick="showPanel('court')" style="max-width:300px">
         <span class="node-icon">⚖</span>
         <span class="node-title">Supreme Court</span>
-        <span class="node-sub">Elected by the People — 9 justices<br>Staggered terms · Concrete cases only</span>
+        <span class="node-sub">PM-nominated from open registry · 9 justices<br>Senate confirmed · 12-year non-renewable terms</span>
       </div>
     </div>
     <div class="gov-connector-v"></div>
@@ -775,23 +775,10 @@
       </div>
     </div>
 
-    <!-- ROW 6: Digital Infrastructure -->
-    <div class="gov-row">
-      <div class="gov-node node-ec" onclick="showPanel('ec')">
-        <span class="node-icon">🖥️</span>
-        <span class="node-title">Digital Infrastructure Commission</span>
-        <span class="node-sub">Two Independent Panels: NRS Panel + Elections Panel<br>NRS · NVS · Each chaired by most senior administrator</span>
-      </div>
-      <div class="gov-node node-ma" onclick="showPanel('ma')">
-        <span class="node-icon">📈</span>
-        <span class="node-title">Monetary Authority</span>
-        <span class="node-sub">Independent fiscal assessment<br>Social State certification · §10.1</span>
-      </div>
-      <div class="gov-node node-nrs" onclick="showPanel('nrs')">
-        <span class="node-icon">📒</span>
-        <span class="node-title">National Record System</span>
-        <span class="node-sub">Permanent public record<br>Distributed · Immutable</span>
-      </div>
+    <!-- CONSTITUTIONAL INFRASTRUCTURE NOTE -->
+    <div style="margin-top:1.5rem;padding:1rem 1.5rem;background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--gold);font-size:0.82rem;color:var(--muted);line-height:1.7">
+      <strong style="color:var(--navy);display:block;margin-bottom:0.35rem">Constitutional Infrastructure</strong>
+      The <strong style="color:var(--navy)">National Record System</strong> (§9.1) is the permanent, tamper-evident public record underlying every institution above. Every act of every branch is published to it — permanently and freely accessible to every Inhabitant. The Inspectorates, the courts, and the public all rely on it as the medium of accountability. The <strong style="color:var(--navy)">Monetary Authority</strong>, <strong style="color:var(--navy)">NRS Panel</strong>, and <strong style="color:var(--navy)">Elections Panel</strong> are constitutionally mandated but legislatively defined independent agencies — not part of the formal government structure above.
     </div>
 
     <!-- INFO PANEL -->
@@ -809,7 +796,7 @@
       <div class="legend-item"><div class="legend-dot" style="border-color:var(--navy)"></div>Executive</div>
       <div class="legend-item"><div class="legend-dot" style="border-color:var(--red)"></div>Judicial</div>
       <div class="legend-item"><div class="legend-dot" style="border-color:var(--gold2)"></div>Oversight</div>
-      <div class="legend-item"><div class="legend-dot" style="border-color:#3a3a3a"></div>Infrastructure</div>
+      <div class="legend-item"><div class="legend-dot" style="border-color:#888"></div>Note below</div>
     </div>
     <p class="checks-note">Every institution is checked by at least one other. No institution controls its own oversight. The Legislature is the most direct democratic link — the PM serves at its confidence. Every major appointment to an independent body is publicly assessed before nomination or election.</p>
     <div class="diagram-footer">
@@ -1549,7 +1536,7 @@ id="tab-dual">
     </div>
 
     <!-- NON-DEROGABLE NOTE -->
-    <div class="amend-nonderogable" style="margin-top:1.5rem;padding:1rem 1.25rem;background:var(--cream2);border-left:3px solid var(--gold);font-size:0.9rem">
+    <div class="amend-nonderogable" style="background:var(--cream2);border-left:3px solid var(--gold);padding:1rem 1.25rem;margin-top:1rem;font-size:0.85rem;line-height:1.6" style="margin-top:1.5rem;padding:1rem 1.25rem;background:var(--cream2);border-left:3px solid var(--gold);font-size:0.9rem">
       <strong>Non-Derogable Rights</strong> — Six rights (§1.26.b) cannot be suspended during emergencies. They remain amendable through Path A or Path B but cannot be derogated from by emergency declaration. Any amendment to a non-derogable provision requires the same 2/3 threshold as any other amendment.
     </div>
 
@@ -1593,19 +1580,19 @@ id="tab-inspectorates">
         <span class="cross-from sc">Supreme Court</span>
         <span class="cross-arrow">nominates →</span>
         <span class="cross-from li">LI Inspector General</span>
-        <span style="color:var(--muted);font-size:0.75rem">national popular vote · simple majority · next federal electoral period · House excluded from nomination · §8.3</span>
+        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · 24 months pre-term nomination · House excluded · §8.3</span>
       </div>
       <div class="cross-row">
         <span class="cross-from house">House</span>
         <span class="cross-arrow">nominates →</span>
         <span class="cross-from ei">EI Inspector General</span>
-        <span style="color:var(--muted);font-size:0.75rem">national popular vote · simple majority · JI publishes disclosure before vote · §8.3</span>
+        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · 2/3 Senate confirmation threshold · JI disclosure pre-vote · §8.3</span>
       </div>
       <div class="cross-row">
         <span class="cross-from lottery">Random Lottery</span>
         <span class="cross-arrow">selects →</span>
         <span class="cross-from ji">JI Inspector General</span>
-        <span style="color:var(--muted);font-size:0.75rem">Elections Panel pool · JIC public lottery · outgoing IG excluded · §8.4.a</span>
+        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">Elections Panel-maintained pool · JIC public lottery · outgoing IG excluded · §8.4.a</span>
       </div>
     </div>
 
@@ -1622,7 +1609,7 @@ id="tab-inspectorates">
         <div class="insp-selection">
           <span class="insp-selection-label">Nominated by</span>
           <span class="insp-selection-who">The Supreme Court</span>
-          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. House is entirely excluded from nomination. · §8.3</span>
+          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. Nomination must begin 24 months before term end to ensure seamless succession under §1.31. House is entirely excluded from nomination. · §8.3</span>
         </div>
         <div class="insp-body">
           <div class="insp-function">
@@ -1666,7 +1653,7 @@ id="tab-inspectorates">
         <div class="insp-selection">
           <span class="insp-selection-label">Nominated by</span>
           <span class="insp-selection-who">The House</span>
-          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. JI publishes disclosure record before the vote. · §8.3</span>
+          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. Nomination must begin 24 months before term end. JI publishes disclosure record before the vote. 2/3 Senate confirmation threshold. · §8.3</span>
         </div>
         <div class="insp-body">
           <div class="insp-function">
@@ -1715,7 +1702,7 @@ id="tab-inspectorates">
           </div>
           <div class="insp-function">
             <strong>SC Candidate Registry</strong>
-            <span>Maintains the Supreme Court Candidate Registry — the eligibility register that any qualified citizen may join to stand for election to the SC. Reviews submissions within 21 days. · §8.4.e</span>
+            <span>Maintains the Supreme Court Candidate Registry — the eligibility register that any qualified citizen may join, from which the PM nominates and the Senate confirms SC justices. Reviews submissions within 21 days. · §8.4.e</span>
           </div>
           <div class="insp-function">
             <strong>Judicial Nominee Vetting</strong>
@@ -1726,8 +1713,8 @@ id="tab-inspectorates">
             <span>Screens citizen referendum petitions for eligibility — specifically, whether the targeted law solely or primarily expands an Article I right (ineligible for referendum). · §11.1.b</span>
           </div>
           <div class="insp-function">
-            <strong>Digital Infrastructure Commission Audit</strong>
-            <span>Audits the Digital Infrastructure Commission annually — Elections Panel for electoral integrity, overall compliance with §16.1. · §8.1.c</span>
+            <strong>DIC Panel Audit</strong>
+            <span>Audits the Elections Panel for electoral integrity compliance annually. The JIC audits NRS Panel operations and NRS integrity compliance. · §8.1.c / §8.12</span>
           </div>
           <div class="insp-special">
             <strong>Compact Compliance Reviews</strong>
