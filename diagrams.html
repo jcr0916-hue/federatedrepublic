@@ -780,7 +780,7 @@
       <div class="gov-node node-ec" onclick="showPanel('ec')">
         <span class="node-icon">🖥️</span>
         <span class="node-title">Digital Infrastructure Commission</span>
-        <span class="node-sub">Two Panels + Director (elected by Commission) + NRS Panel + Elections Panel<br>NRS · NVS · Advisory Council</span>
+        <span class="node-sub">Two Independent Panels: NRS Panel + Elections Panel<br>NRS · NVS · Each chaired by most senior administrator</span>
       </div>
       <div class="gov-node node-ma" onclick="showPanel('ma')">
         <span class="node-icon">📈</span>
@@ -1494,7 +1494,7 @@ id="tab-dual">
 <div class="diagram-section" id="tab-amendment">
   <div class="section-intro">
     <h2>Amending the Constitution</h2>
-    <p>Two paths to constitutional amendment — both requiring a 2/3 supermajority of the full seated membership of both chambers as the legislative threshold. No executive may veto an amendment. No provision is absolutely unamendable — but all amendments require genuine democratic mandate.</p>
+    <p>Three paths to constitutional amendment — parliamentary via State ratification, parliamentary via popular ratification, and citizen-led. No executive may veto an amendment. All amendments require genuine democratic consensus.</p>
   </div>
 
   <div class="amend-chart">
@@ -1719,7 +1719,7 @@ id="tab-inspectorates">
           </div>
           <div class="insp-function">
             <strong>Judicial Nominee Vetting</strong>
-            <span>Vets inferior court judicial nominees and Digital Infrastructure Commission Director candidates before confirmation votes.</span>
+            <span>Vets inferior court judicial nominees and DIC administrator candidates before confirmation votes.</span>
           </div>
           <div class="insp-function">
             <strong>Referendum Petition Eligibility</strong>
@@ -2331,8 +2331,8 @@ const nodeData = {
   ec: {
     title: 'Digital Infrastructure Commission — NRS, NVS, and Elections',
     ref: 'Article XVI, §16.1–16.5',
-    body: `<p>The Digital Infrastructure Commission governs both the National Record System and the National Voting System under a single independent body. It is governed by two panels of three administrators each — the NRS Panel and the Elections Panel — who jointly elect a Director from among themselves for a maximum 4-year term. Panel administrators are appointed to 8-year terms through the pool mechanism.</p><p>Panel administrators are appointed through the pool mechanism: each executive nominates qualified candidates to their own pool freely; the JI reviews each nominee and publishes a qualification report to the NRS; when a vacancy arises, each executive selects one from their pool; the Director chooses between the two; the Senate confirms. The pool and its qualification reports are public — citizens can scrutinise executive nominations and hold their Senator accountable for the confirmation vote.</p><p>Operational independence is absolute: the NRS Panel controls the technical infrastructure, security, and system availability of the NRS — what gets published is constitutionally determined, not within the Panel's discretion. The Elections Panel alone controls how elections run and what results get certified. Neither the Director nor the opposite panel may issue operational instructions on these core functions. The EI oversees the Director; the LI audits the NRS Panel; the JI audits the Elections Panel. A decennial Digital Infrastructure Advisory Council — drawn by lottery from State-nominated experts — reviews both systems' architecture and publishes recommendations, with a mandatory Senate public session on the findings.</p>`,
-    tags: ['§16.1 Structure', 'Elected Director', 'NRS Panel', 'Elections Panel', 'Pool Mechanism', 'Advisory Council', 'Operational Independence']
+    body: `<p>The Digital Infrastructure Commission comprises two constitutionally independent panels — the NRS Panel and the Elections Panel — each responsible for the day-to-day operation of its respective system. The NRS Panel operates the National Record System. The Elections Panel operates the National Voting System and administers all federal elections. Each panel is chaired by its most senior administrator by continuous service within that panel.</p><p>Panel administrators are appointed through the pool mechanism: the PM nominates from the DIC Administrator Pool, the JI certifies qualifications and publishes reports to the NRS, and the Senate confirms by 2/3 supermajority. Administrators serve 8-year non-renewable terms, staggered within each panel so no more than one seat expires per year.</p><p>The Legislature defines technical standards, interface requirements, and budget by statute; the panels implement within those parameters. Operational independence is absolute: the NRS Panel controls the NRS; the Elections Panel controls elections and certification; neither may direct the other. The EI oversees each panel for executive accountability; the JIC audits NRS compliance annually; the JI audits Elections Panel operations annually.</p>`,
+    tags: ['§16.1 Structure', 'NRS Panel', 'Elections Panel', 'Pool Mechanism', 'Within-Panel Staggering', 'Operational Independence']
   },
   nrs: {
     title: 'National Record System — The Permanent Public Record',
