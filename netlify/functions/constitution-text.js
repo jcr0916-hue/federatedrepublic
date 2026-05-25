@@ -342,4 +342,7 @@ For every office established by this Constitution with a fixed term, the confirm
 
 [§8.15] Constitutional Officer Removal Framework
 Governs for-cause removal of all constitutionally confirmed independent officers except SC justices (§4.1.c) and elected executives. Standard Track: State Designee Panel finding + duty suspension + 2/3 both chambers simultaneously; no vote within 180 days of election without SC review. Judicial Track: Two Inspectorates certify + SC suspension finding within 30 days + Senate 3/5 within 60 days or public election at 60%. Available where Standard Track legislative threshold is unreachable due to political gridlock. Covers IGs, DIC administrators, MA board members, and all other constitutionally confirmed independent officers.
+
+[§11.4] Electoral Supermajority Threshold
+60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations — presidential first-round threshold (§7.2), SC public confirmation (§4.4.a), and public election removal (§8.15). The Legislature may not alter this threshold without a constitutional amendment. Does not govern the optional referendum or citizen initiative, which require simple majority.
 `;
