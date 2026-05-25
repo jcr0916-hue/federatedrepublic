@@ -153,7 +153,7 @@
 
   <div class="page-wrap">
     <div class="page-header">
-      <span class="page-tag">Constitutional Advisor · v181 · 529 provisions</span>
+      <span class="page-tag">Constitutional Advisor · 166 provisions · 20 articles</span>
       <h1 class="page-title">Pose a Constitutional Question</h1>
       <p class="page-desc">Describe any situation and see which provisions apply, how they interact, and what the constitution requires. Citations link directly to the annotated constitution.</p>
     </div>
@@ -325,7 +325,7 @@
         if (!text) throw new Error('No response received');
 
         const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
-        responseMeta.textContent = `${elapsed}s · v181`;
+        responseMeta.textContent = `${elapsed}s`;
         renderResponse(text);
         loadWrap.style.display = 'none';
         responseWrap.style.display = 'block';
