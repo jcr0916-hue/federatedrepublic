@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Recalled Senator — The Federated Republic</title>
+  <meta name="description" content="Year 6. The State of Merath invokes its recall mechanism against Senator Cyrus Veld. He disputes the State procedure. The constitution does not take sides — but it does create a vacancy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:0.15rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.3rem}
+    .nav-links .nav-cta{background:var(--gold);color:var(--navy2);font-weight:600;padding:0.3rem 0.8rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
+    .mobile-menu.open{display:flex}
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:var(--cream);padding:1.5rem;margin:2rem 0;border-radius:4px}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+    .finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+    .finding p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .scenario-nav a{text-decoration:none;color:var(--gold);font-size:0.85rem}
+    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Constitution</a><a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+      <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a>
+      <span class="nav-sep"></span><a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Constitution</a><a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a><a href="papers.html">Essays</a>
+    <a href="changelog.html">Changelog</a><a href="glossary.html">Glossary</a><a href="advisor.html">Advisor</a>
+  </div>
+  <main>
+    <div class="scenario-meta">
+      <span class="scenario-tag">Senate · State Recall · §3.5 · Vacancy</span>
+      <h1 class="scenario-title">The Recalled Senator</h1>
+      <p class="scenario-subtitle">Year 6. Merath invokes its recall mechanism against Senator Cyrus Veld. He disputes the procedure. The federal constitution does not adjudicate state recall law — but it does recognize its result.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§3.5 Senate Recall</span>
+        <span class="prov-tag">§3.2 Mid-Term Vacancies</span>
+        <span class="prov-tag">§10.1 NRS Publication</span>
+        <span class="prov-tag">§2.11 Senate Quorum</span>
+      </div>
+    </div>
+    <div class="scenario-body">
+
+      <p>Senator Cyrus Veld of Merath has served four years of a six-year term. His relationship with the Merath State Legislature — which appointed him under Merath's governor-appointment model — has deteriorated over a sustained dispute about agricultural trade policy. The State Legislature passes a resolution invoking its recall statute. Under Merath State law, the appointing body may recall an appointed senator by simple majority at any time.</p>
+
+      <p>Veld refuses to vacate. He argues the State's recall statute is procedurally defective — the notice period was insufficient under State constitutional law. He files for emergency review in the Merath State courts.</p>
+
+      <h2>What the Federal Constitution Says</h2>
+
+      <p>The federal constitution is brief and deliberate on this point. §3.5 says: "A State may establish by its own law a recall mechanism for its senators; where a senator is recalled under State law, the seat is treated as vacant under this Constitution."</p>
+
+      <p>The federal constitution does not validate or invalidate the recall. It does not say the recall must be procedurally correct under State law. It says that where State law produces a recall, the seat is vacant under federal law. The question of whether Merath's recall was valid under Merath State law is a question for Merath's courts.</p>
+
+      <div class="beat">
+        <div class="beat-label">Day 3 — Constitutional question</div>
+        <div class="beat-title">Has the seat become vacant?</div>
+        <p>The Senate Speaker asks the LI for an assessment. The LI publishes within 48 hours: the Merath State Legislature has published a recall under its own law; the federal constitutional trigger has been met; the seat is vacant under §3.5 from the moment of the State Legislature's published resolution. Any State court ruling on the recall's validity under State law is a State matter and does not affect the federal vacancy determination. The seat is vacant. Merath has one senator.</p>
+      </div>
+
+      <p>Veld continues to appear in the Senate chamber. The Senate Speaker rules him out of order — he does not hold a seat. Veld appeals to the SC, arguing the federal constitution requires the State recall to be valid under State law before the federal vacancy activates. The SC takes the question on an emergency basis.</p>
+
+      <h2>The SC Rules</h2>
+
+      <p>Within nine days, the SC publishes its ruling: the federal constitution's vacancy trigger is self-executing upon a State's published recall action. The federal government does not sit in judgment of State law compliance. If Merath's courts later find the recall procedurally defective under State law and order Veld reinstated, the federal vacancy will close — but until that State court ruling, the seat is vacant. The Republic cannot hold a federal Senate seat open pending State litigation.</p>
+
+      <p>Veld's State court challenge continues. Meanwhile, Merath has one senator and a vacant seat.</p>
+
+      <h2>The Vacancy</h2>
+
+      <p>Merath's replacement mechanism is its governor-appointment model — no confirmation required, appointee serves the full remaining term. Governor Aldric Nast appoints retired agricultural economist Dr. Sefa Oden, 61, within a week. The appointment is published to the NRS. Merath has two senators again.</p>
+
+      <div class="beat">
+        <div class="beat-label">Six months later</div>
+        <div class="beat-title">State court rules</div>
+        <p>The Merath State Court of Appeals rules that the State Legislature's recall notice was technically defective under State constitutional law. The recall is void under State law. The federal vacancy closes — under §3.5, a recall void under State law is not a recall "under State law." Veld's seat is restored. Merath now has three people with claims to two Senate seats.</p>
+        <p>The Senate, guided by the LI assessment, resolves the situation cleanly: Oden holds the appointed seat. Veld holds the elected seat. The overlapping period is treated as Oden having served as a valid senator during the vacancy and Veld having been validly excluded during that period. The NRS records both the vacancy and its closure. The Republic did not lose Senate representation for a single day.</p>
+      </div>
+
+      <div class="finding">
+        <div class="finding-label">Constitutional finding</div>
+        <p>The federal constitution's treatment of State recall is deliberately hands-off. The Republic recognizes the diversity of State governance models — some States appoint senators, some elect, some have recall provisions, some don't. The federal document acknowledges all of these without trying to standardize them. The only federal statement is that a valid recall creates a vacancy. What "valid" means is a State question.</p>
+        <p>The Veld scenario is the stress case: a disputed recall, a senator who refuses to leave, and a competing appointment. The system produced an answer at each step — the LI assessment, the SC ruling, the governor's appointment — without the Republic losing Senate function at any point. When the State courts finally resolved the State law question, the federal system adjusted to reflect it.</p>
+      </div>
+
+    </div>
+    <div class="scenario-nav">
+      <a href="scenarios.html">&#x2190; All Scenarios</a>
+      <a href="scenario-formation.html">The Formation &#x2192;</a>
+    </div>
+  </main>
+  <script>
+    document.addEventListener('click',function(e){
+      const menu=document.getElementById('mobileMenu');
+      if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
