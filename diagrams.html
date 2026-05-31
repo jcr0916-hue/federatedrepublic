@@ -76,8 +76,8 @@
     .gov-node .node-sub{font-size:0.75rem;opacity:0.7;line-height:1.4}
 
     /* Node color themes */
-    .node-president{border-color:var(--navy);color:var(--navy)}
-    .node-president .node-title{color:var(--navy)}
+    .node-legat-consul{border-color:var(--navy);color:var(--navy)}
+    .node-legat-consul .node-title{color:var(--navy)}
     .node-pm{border-color:var(--blue);color:var(--blue)}
     .node-pm .node-title{color:var(--blue)}
     .node-house{border-color:var(--green);color:var(--green)}
@@ -142,7 +142,7 @@
     .step-house .flow-num{background:var(--green);color:var(--white)}
     .step-pm .flow-num{background:var(--blue);color:var(--white)}
     .step-senate .flow-num{background:var(--purple);color:var(--white)}
-    .step-president .flow-num{background:var(--navy);color:var(--white)}
+    .step-legat-consul .flow-num{background:var(--navy);color:var(--white)}
     .step-enact .flow-num{background:var(--gold2);color:var(--white)}
     .step-challenge .flow-num{background:var(--red);color:var(--white)}
 
@@ -292,8 +292,8 @@
     .dual-col{padding:1.5rem}
     .dual-col-header{text-align:center;padding:1rem 1.5rem;margin-bottom:1.25rem;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;border-bottom:3px solid}
     .dual-col-sub{font-size:0.68rem;font-weight:400;opacity:0.7;display:block;margin-top:0.2rem;letter-spacing:0.1em}
-    .col-president{background:#fafbfd;border-right:1px solid var(--border)}
-    .col-president .dual-col-header{color:var(--navy);border-color:var(--navy)}
+    .col-legat-consul{background:#fafbfd;border-right:1px solid var(--border)}
+    .col-legat-consul .dual-col-header{color:var(--navy);border-color:var(--navy)}
     .col-shared{background:var(--cream2);border-right:1px solid var(--border);min-width:180px;display:flex;flex-direction:column;padding:1.5rem 1rem}
     .col-shared .dual-col-header{color:#5c3a00;border-color:var(--gold);background:none}
     .col-pm{background:#fafcfa}
@@ -317,7 +317,7 @@
     .dual-note strong{color:var(--navy)}
     @media(max-width:760px){
       .dual-columns{grid-template-columns:1fr}
-      .col-president{border-right:none;border-bottom:1px solid var(--border)}
+      .col-legat-consul{border-right:none;border-bottom:1px solid var(--border)}
       .col-shared{border-right:none;border-bottom:1px solid var(--border);min-width:auto}
       .conflict-steps{grid-template-columns:1fr 1fr}
     }
@@ -729,7 +729,7 @@
 
     <!-- ROW 3: Dual Executive — Constrained, separated domains -->
     <div class="gov-row" style="margin-bottom:8px">
-      <div class="gov-node node-president" onclick="showPanel('president')">
+      <div class="gov-node node-legat-consul" onclick="showPanel('president')">
         <span class="node-icon">🏛️</span>
         <span class="node-title">Legat Consul</span>
         <span class="node-sub">Defense & Diplomacy only<br>6-year term, 1 term · Elected by People</span>
@@ -880,7 +880,7 @@
       </div>
     </div>
 
-    <div class="flow-step step-president">
+    <div class="flow-step step-legat-consul">
       <div class="flow-num">5</div>
       <div class="flow-body">
         <div class="flow-title">Consular Review <span style="font-size:0.82em;font-weight:400;opacity:0.7">(Security Domain Bills Only)</span></div>
@@ -1314,7 +1314,7 @@ id="tab-dual">
     <div class="dual-columns">
 
       <!-- PRESIDENT'S DOMAIN -->
-      <div class="dual-col col-president">
+      <div class="dual-col col-legat-consul">
         <div class="dual-col-header">
           The Legat Consul
           <span class="dual-col-sub">National Defense &amp; Diplomacy · 6-year term</span>
@@ -2024,7 +2024,7 @@ id="tab-inspectorates">
         </div>
         <div class="sc-vacancy-item">
           <strong>Emergency Panel — Immediate Defensive Authority Scope</strong>
-          <span>Four justices drawn by rotation form a standing Emergency Panel each two-year cycle. The Panel has sole jurisdiction over constitutional challenges to immediate defensive presidential authority during active operations and must rule within 48 hours. Ruling is binding on the full Court unless overruled within 72 hours. · §4.2.f</span>
+          <span>Four justices drawn by rotation form a standing Emergency Panel each two-year cycle. The Panel has sole jurisdiction over constitutional challenges to immediate defensive Legat Consul's authority during active operations and must rule within 48 hours. Ruling is binding on the full Court unless overruled within 72 hours. · §4.2.f</span>
         </div>
         <div class="sc-vacancy-item">
           <strong>Non-Renewable Terms</strong>
@@ -2283,7 +2283,7 @@ const nodeData = {
   li: {
     title: 'Legislative Monitor — Auditing the Legislature',
     ref: 'Article IX, §9.1.a',
-    body: `<p>The LM audits the Legislature for NRS compliance and constitutional mandate adherence. It also conducts the Statehood Audit for Territory-to-State transitions and reviews State-drawn redistricting maps for compliance with the constitutional criteria hierarchy and prohibited inputs.</p><p>The LM does not draw redistricting maps — States draw Assembly district maps through independent commissions, and the State redistricting process draws presidential States. The LM is the compliance referee, not the cartographer, in both cases.</p>`,
+    body: `<p>The LM audits the Legislature for NRS compliance and constitutional mandate adherence. It also conducts the Statehood Audit for Territory-to-State transitions and reviews State-drawn redistricting maps for compliance with the constitutional criteria hierarchy and prohibited inputs.</p><p>The LM does not draw redistricting maps — States draw Assembly district maps through independent commissions, and the State redistricting process draws Legat Consul States. The LM is the compliance referee, not the cartographer, in both cases.</p>`,
     tags: ['§9.1.a Mandate', 'Statehood Audit', 'Redistricting Compliance', 'Information Only']
   },
   ji: {
