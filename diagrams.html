@@ -712,7 +712,7 @@
     <div class="gov-row" style="margin-bottom:8px">
       <div class="gov-node node-house" onclick="showPanel('house')">
         <span class="node-icon">🏠</span>
-        <span class="node-title">The House</span>
+        <span class="node-title">The Assembly</span>
         <span class="node-sub">Proportional representation<br>Min. 1 per 750K citizens · Elects PM</span>
       </div>
       <div style="display:flex;flex-direction:column;justify-content:center;padding:0 0.5rem">
@@ -741,7 +741,7 @@
       <div class="gov-node node-pm" onclick="showPanel('pm')">
         <span class="node-icon">⚖️</span>
         <span class="node-title">Civic Consul</span>
-        <span class="node-sub">Domestic Affairs<br>8-year max · Serves at House confidence</span>
+        <span class="node-sub">Domestic Affairs<br>8-year max · Serves at Assembly confidence</span>
       </div>
     </div>
     <div class="gov-connector-v"></div>
@@ -832,7 +832,7 @@
     <div class="flow-step step-house">
       <div class="flow-num">2</div>
       <div class="flow-body">
-        <div class="flow-title">House Passage</div>
+        <div class="flow-title">Assembly Passage</div>
         <div class="flow-desc">The Assembly votes. An absolute majority of the full seated membership — not merely those present — is required to pass.</div>
         <span class="flow-ref">§3.3.a — Standard Passage</span>
         <div class="flow-branch">
@@ -849,13 +849,13 @@
       <div class="flow-num">3</div>
       <div class="flow-body">
         <div class="flow-title">Senate Review</div>
-        <div class="flow-desc">The Senate must take up every House-passed bill within the statutory period. It may pass, amend, decline, or allow Deemed Approval to trigger. Senate amendments must be germane — limited to the subject matter of the original bill. The LM publishes a germaneness analysis for any amended bill returned to the Assembly.</div>
+        <div class="flow-desc">The Senate must take up every Assembly-passed bill within the statutory period. It may pass, amend, decline, or allow Deemed Approval to trigger. Senate amendments must be germane — limited to the subject matter of the original bill. The LM publishes a germaneness analysis for any amended bill returned to the Assembly.</div>
         <span class="flow-ref">§3.1 Senate Must Act · §3.4 Senate Amendment Authority · §9.1.a LM Germaneness Analysis</span>
         <div class="flow-branch">
           <span class="branch-label">Senate Options</span>
           <div class="branch-outcomes">
             <div class="branch-outcome outcome-pass">✓ Passes — proceeds to Legislative Review Period</div>
-            <div class="branch-outcome outcome-neutral">↩ Amends — returns to House for acceptance or rejection</div>
+            <div class="branch-outcome outcome-neutral">↩ Amends — returns to Assembly for acceptance or rejection</div>
             <div class="branch-outcome outcome-fail">✗ Declines — bill dies</div>
             <div class="branch-outcome outcome-delay">⏱ No action in statutory period — Deemed Approved</div>
           </div>
@@ -873,7 +873,7 @@
           <span class="branch-label">Civic Consul Options</span>
           <div class="branch-outcomes">
             <div class="branch-outcome outcome-pass">✓ Signs or silent — bill proceeds to enactment</div>
-            <div class="branch-outcome outcome-delay">📊 Fiscal Objection — requires MA assessment; House may override by simple majority</div>
+            <div class="branch-outcome outcome-delay">📊 Fiscal Objection — requires MA assessment; Assembly may override by simple majority</div>
             <div class="branch-outcome outcome-neutral">↩ Suspensive Veto — returns to Legislature; 2/3 both chambers to override</div>
           </div>
         </div>
@@ -1392,7 +1392,7 @@ id="tab-dual">
       <div class="dual-col col-pm">
         <div class="dual-col-header" style="color:#1a4a1a;border-color:var(--green)">
           The Civic Consul
-          <span class="dual-col-sub">Domestic Affairs · Serves at House confidence</span>
+          <span class="dual-col-sub">Domestic Affairs · Serves at Assembly confidence</span>
         </div>
 
         <div class="dual-item item-pm">
@@ -1580,10 +1580,10 @@ id="tab-inspectorates">
         <span class="cross-from sc">Supreme Court</span>
         <span class="cross-arrow">nominates →</span>
         <span class="cross-from li">LM Monitor General</span>
-        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · 24 months pre-term nomination · House excluded · §9.3</span>
+        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · 24 months pre-term nomination · Assembly excluded · §9.3</span>
       </div>
       <div class="cross-row">
-        <span class="cross-from house">House</span>
+        <span class="cross-from house">Assembly</span>
         <span class="cross-arrow">nominates →</span>
         <span class="cross-from ei">EM Monitor General</span>
         <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · 2/3 Senate confirmation threshold · JM disclosure pre-vote · §9.3</span>
@@ -1609,7 +1609,7 @@ id="tab-inspectorates">
         <div class="insp-selection">
           <span class="insp-selection-label">Nominated by</span>
           <span class="insp-selection-who">The Supreme Court</span>
-          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. Nomination must begin 24 months before term end to ensure seamless succession under §3.13. House is entirely excluded from nomination. · §9.3</span>
+          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. Nomination must begin 24 months before term end to ensure seamless succession under §3.13. Assembly is entirely excluded from nomination. · §9.3</span>
         </div>
         <div class="insp-body">
           <div class="insp-function">
@@ -1629,8 +1629,8 @@ id="tab-inspectorates">
             <span>Conducts the national census. Assigned to the LM precisely because the census determines Assembly seat allocation — giving that function to a body the Assembly nominates would create a conflict of interest.</span>
           </div>
           <div class="insp-function">
-            <strong>House District Maps</strong>
-            <span>Reviews State-drawn federal House district maps for compliance with redistricting criteria. · §3.4</span>
+            <strong>Assembly District Maps</strong>
+            <span>Reviews State-drawn federal Assembly district maps for compliance with redistricting criteria. · §3.4</span>
           </div>
           <div class="insp-function">
             <strong>Germaneness Analysis</strong>
@@ -1652,7 +1652,7 @@ id="tab-inspectorates">
         </div>
         <div class="insp-selection">
           <span class="insp-selection-label">Nominated by</span>
-          <span class="insp-selection-who">The House</span>
+          <span class="insp-selection-who">The Assembly</span>
           <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. Nomination must begin 24 months before term end. JM publishes disclosure record before the vote. 2/3 Senate confirmation threshold. · §9.3</span>
         </div>
         <div class="insp-body">
@@ -2120,7 +2120,7 @@ id="tab-inspectorates">
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Legislature defines<br>by statute</td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Appropriate Monitor<br>certifies eligibility</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">House nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Assembly nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">National vote<br><span style="font-size:0.68rem;color:var(--muted)">simple majority · next electoral period</span></td>
         </tr>
         <tr>
@@ -2257,15 +2257,15 @@ const nodeData = {
     tags: ['§2.2 Domain', 'Constructive No-Confidence', 'Suspensive Veto', '8-Year Maximum']
   },
   house: {
-    title: 'The House — The Democratic Chamber',
+    title: 'The Assembly — The Democratic Chamber',
     ref: 'Article III, §3.1',
-    body: `<p>The House is the Republic's primary legislative body — all bills originate here. Members are elected proportionally from their States. The House size is Legislature-defined with a constitutional floor of one member per 750,000 citizens or one per State, whichever produces a larger House.</p><p>The House elects and removes the Civic Consul, initiates impeachment proceedings, originates all budget legislation, and may override executive vetoes. The Single-Subject Rule (§3.1.c) prevents omnibus legislation — every bill addresses one subject only.</p>`,
+    body: `<p>The Assembly is the Republic's primary legislative body — all bills originate here. Members are elected proportionally from their States. The Assembly size is Legislature-defined with a constitutional floor of one member per 750,000 citizens or one per State, whichever produces a larger Assembly.</p><p>The Assembly elects and removes the Civic Consul, initiates impeachment proceedings, originates all budget legislation, and may override executive vetoes. The Single-Subject Rule (§3.1.c) prevents omnibus legislation — every bill addresses one subject only.</p>`,
     tags: ['§3.1 Structure', 'Civic Consul Confidence', 'Single-Subject Rule', 'Budget Origination']
   },
   senate: {
     title: 'The Senate — The States\' Chamber',
     ref: 'Article III, §3.2',
-    body: `<p>The Senate represents States equally — two senators per State regardless of population. This is the constitutional protection for small States against majoritarian domination by large ones. Senators serve staggered 8-year terms; one-third of seats are contested every election cycle.</p><p>The Senate confirms judicial appointments, ratifies treaties, and acts as the constitutional violation trial chamber for constitutional violations by senior officials. The Senate must act on every House-passed bill within 30 days or the bill is Deemed Passed.</p>`,
+    body: `<p>The Senate represents States equally — two senators per State regardless of population. This is the constitutional protection for small States against majoritarian domination by large ones. Senators serve staggered 8-year terms; one-third of seats are contested every election cycle.</p><p>The Senate confirms judicial appointments, ratifies treaties, and acts as the constitutional violation trial chamber for constitutional violations by senior officials. The Senate must act on every Assembly-passed bill within 30 days or the bill is Deemed Passed.</p>`,
     tags: ['§3.2 Structure', 'Equal State Representation', 'Treaty Ratification', 'constitutional violation Trials']
   },
   court: {
@@ -2283,7 +2283,7 @@ const nodeData = {
   li: {
     title: 'Legislative Monitor — Auditing the Legislature',
     ref: 'Article IX, §9.1.a',
-    body: `<p>The LM audits the Legislature for NRS compliance and constitutional mandate adherence. It also conducts the Statehood Audit for Territory-to-State transitions and reviews State-drawn redistricting maps for compliance with the constitutional criteria hierarchy and prohibited inputs.</p><p>The LM does not draw redistricting maps — States draw House district maps through independent commissions, and the State redistricting process draws presidential States. The LM is the compliance referee, not the cartographer, in both cases.</p>`,
+    body: `<p>The LM audits the Legislature for NRS compliance and constitutional mandate adherence. It also conducts the Statehood Audit for Territory-to-State transitions and reviews State-drawn redistricting maps for compliance with the constitutional criteria hierarchy and prohibited inputs.</p><p>The LM does not draw redistricting maps — States draw Assembly district maps through independent commissions, and the State redistricting process draws presidential States. The LM is the compliance referee, not the cartographer, in both cases.</p>`,
     tags: ['§9.1.a Mandate', 'Statehood Audit', 'Redistricting Compliance', 'Information Only']
   },
   ji: {
