@@ -123,6 +123,38 @@
       .hero{padding:76px 1.25rem 40px}
       .page-wrap{padding:36px 1.25rem 80px}
     }
+  
+    /* ── Mobile FABs (mirrors annotated.html pattern) ── */
+    .alpha-toggle{display:none;position:fixed;bottom:1.5rem;left:1rem;width:44px;height:44px;
+      background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);
+      font-size:1.1rem;cursor:pointer;z-index:201;align-items:center;justify-content:center;
+      border-radius:2px;font-family:'JetBrains Mono',monospace}
+    .alpha-toggle:hover{border-color:var(--gold);background:var(--navy2)}
+    .search-fab-gl{display:none;position:fixed;bottom:1.5rem;right:1rem;width:44px;height:44px;
+      background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);
+      font-size:1.2rem;cursor:pointer;z-index:201;align-items:center;justify-content:center;
+      border-radius:2px}
+    .search-fab-gl:hover{border-color:var(--gold);background:var(--navy2)}
+
+    @media(max-width:860px){
+      .page-wrap{grid-template-columns:1fr;gap:0;padding:36px 1.25rem 80px}
+      /* Hide alpha-nav by default on mobile; shown via FAB */
+      .alpha-nav{display:none;position:fixed;top:56px;left:0;width:220px;
+        height:calc(100vh - 56px);overflow-y:auto;background:rgba(27,42,74,0.97);
+        border-right:1px solid rgba(201,168,76,0.15);flex-direction:column;
+        gap:0;padding:1.25rem 0;z-index:200;flex-wrap:nowrap;margin-bottom:0}
+      .alpha-nav.mobile-open{display:flex}
+      .alpha-nav a{font-size:0.85rem;padding:0.45rem 1.25rem;color:rgba(245,240,232,0.5);
+        border-left:2px solid transparent;letter-spacing:0.05em}
+      .alpha-nav a:hover,.alpha-nav a.active-letter{color:var(--gold);
+        border-left-color:var(--gold);background:rgba(201,168,76,0.08)}
+      .alpha-nav a.no-terms{opacity:0.25}
+      /* Search bar: show always on mobile above terms */
+      .glossary-search{margin-bottom:1.5rem}
+      /* FABs visible on mobile */
+      .alpha-toggle{display:flex}
+      .search-fab-gl{display:flex}
+    }
   </style>
 </head>
 <body>
@@ -598,7 +630,7 @@
   </script>
 
 <footer style="background:#1B2A4A;color:rgba(245,240,232,0.5);padding:2rem;text-align:center;font-size:0.8rem;margin-top:3rem">
-  <p>The Federated Republic &nbsp;·&nbsp; <a href="annotated.html" style="color:#C9A84C;text-decoration:none">Read the Constitution</a> &nbsp;·&nbsp; <a href="advisor.html" style="color:#C9A84C;text-decoration:none">Ask the Advisor</a> &nbsp;·&nbsp; <a href="constitutional-history.pdf" target="_blank" style="color:#C9A84C;text-decoration:none">Changelog</a></p>
+  <p>The Federated Republic &nbsp;·&nbsp; <a href="annotated.html" style="color:#C9A84C;text-decoration:none">Read the Constitution</a> &nbsp;·&nbsp; <a href="advisor.html" style="color:#C9A84C;text-decoration:none">Ask the Advisor</a> &nbsp;·&nbsp; <a href="constitutional-history.html" style="color:#C9A84C;text-decoration:none">Changelog</a></p>
   <div style="margin-top:1.25rem;text-align:center">
     <a href="constitution-current.pdf" download style="display:inline-flex;align-items:center;gap:1rem;border:1px solid rgba(201,168,76,0.3);padding:0.75rem 1.25rem;border-radius:2px;text-decoration:none">
       <div style="text-align:left">
@@ -609,5 +641,13 @@
     </a>
   </div>
 </footer>
+
+  <!-- Mobile FABs -->
+  <button class="alpha-toggle" id="alphaToggle" 
+    onclick="document.getElementById('alphNav').classList.toggle('mobile-open')"
+    aria-label="Toggle alphabet navigation">≡</button>
+  <button class="search-fab-gl" id="searchFabGl"
+    onclick="document.getElementById('glossarySearch').focus();document.getElementById('glossarySearch').scrollIntoView({behavior:'smooth',block:'center'})"
+    aria-label="Search glossary">⌕</button>
 </body>
 </html>
