@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constitutional History — The Federated Republic</title>
+  <meta name="description" content="A record of constitutional changes, amendments, and design decisions in the Federated Republic — from founding through comprehensive testing.">
+  <meta property="og:title" content="Annotated Constitution">
+  <meta property="og:description" content="The Constitution of the Federated Republic with inline annotations, design rationale, and plain-language explanations of every major provision.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/annotated.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Annotated Constitution">
+  <meta name="twitter:description" content="The Constitution of the Federated Republic with inline annotations, design rationale, and plain-language explanations of every major provision.">>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--gold2:#a8873a;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2a2a;--muted:#7a7060;--border:#d4c9b0;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    html{scroll-padding-top:72px}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.8;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
+    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--gold)}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;min-height:100vh;padding-top:56px}
+    .sidebar{display:none}
+    
+    
+    
+    
+    .main{padding:3rem 3rem 6rem;max-width:860px;margin:0 auto}
+    .doc-header{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .doc-header h1{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:400;color:var(--navy);margin-bottom:0.5rem}
+    .doc-header p{color:var(--muted);font-size:0.88rem;line-height:1.7}
+    .legend{display:flex;gap:1.5rem;flex-wrap:wrap;padding:0.9rem 1.25rem;background:var(--cream2);border:1px solid var(--border);margin-bottom:2.5rem;font-size:0.78rem}
+    .legend-item{display:flex;align-items:center;gap:0.4rem;color:var(--muted)}
+    .legend-swatch{width:26px;height:3px;border-radius:2px}
+    .ls-term{background:rgba(201,168,76,0.55)}
+    .ls-design{background:rgba(27,42,74,0.4)}
+    .ls-ref{background:rgba(80,120,80,0.5)}
+    .article-section{margin-bottom:3rem;scroll-margin-top:72px}
+    .article-header{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);padding-bottom:0.4rem;border-bottom:2px solid var(--navy);margin-bottom:0.2rem}
+    .article-subtitle{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
+    .article-intro{font-size:0.88rem;color:var(--muted);font-style:italic;margin-bottom:1.5rem;padding-left:1rem;border-left:2px solid var(--border)}
+    .provision{margin-bottom:1.4rem}
+    .prov-label{font-size:0.7rem;margin-bottom:0.25rem;display:flex;align-items:center;gap:0.5rem}
+    .prov-num{font-family:'JetBrains Mono',monospace;color:var(--gold);letter-spacing:0.04em}
+    .prov-name{color:var(--navy);font-weight:600;text-transform:uppercase;letter-spacing:0.1em}
+    .prov-text{font-size:0.92rem;line-height:1.85;color:#3a3530}
+    .ann-term{background:rgba(201,168,76,0.16);border-bottom:2px solid var(--gold);cursor:help;border-radius:2px;padding:0 2px;transition:background 0.15s;position:relative;display:inline}
+    .ann-term:hover{background:rgba(201,168,76,0.3)}
+    .ann-design{background:rgba(27,42,74,0.09);border-bottom:2px solid var(--navy);cursor:pointer;border-radius:2px;padding:0 2px;transition:background 0.15s;display:inline}
+    .ann-design:hover,.ann-design.active{background:rgba(27,42,74,0.18)}
+    .tooltip-wrap{position:relative;display:inline}
+    .tooltip-box{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--navy);color:#f5f0e8;font-size:0.76rem;line-height:1.5;padding:0.6rem 0.85rem;border-radius:3px;width:230px;z-index:500;pointer-events:none;opacity:0;transition:opacity 0.15s;box-shadow:0 4px 16px rgba(0,0,0,0.3)}
+    .tooltip-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--navy)}
+    .tooltip-wrap:hover .tooltip-box{opacity:1}
+    .tooltip-ref{font-size:0.66rem;color:var(--gold);margin-top:0.3rem;display:block;font-family:'JetBrains Mono',monospace}
+    
+    .panel-wrap{padding:1.25rem 1rem 4rem;position:sticky;top:70px;max-height:calc(100vh - 80px);overflow-y:auto}
+    .panel-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;text-align:center;color:var(--muted);font-size:0.83rem;border:1px dashed var(--border);padding:1.5rem;margin-top:1rem}
+    .panel-empty-icon{font-size:1.5rem;margin-bottom:0.6rem;opacity:0.35}
+    .panel-card:focus{box-shadow:0 0 0 3px rgba(201,168,76,0.5);outline:none}
+    .panel-card{background:var(--white);border:1px solid var(--gold2);padding:1.4rem;display:none;outline:none;margin-top:1rem}
+    .panel-card.visible{display:block}
+    .panel-section{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem}
+    .panel-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.9rem;line-height:1.35}
+    .panel-body{font-size:0.84rem;line-height:1.75;color:#3a3530}
+    .panel-body p{margin-bottom:0.7rem}
+    .panel-body p:last-child{margin-bottom:0}
+    .panel-ref{font-size:0.72rem;color:var(--muted);margin-top:0.9rem;padding-top:0.7rem;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace}
+    .panel-close{display:block;margin-top:0.9rem;font-size:0.7rem;color:var(--muted);cursor:pointer;text-align:right;letter-spacing:0.08em;text-transform:uppercase}
+    .panel-close:hover{color:var(--navy)}
+    
+    /* ── Minimap scenario links ── */
+    .minimap-scenarios{display:none;border-top:1px solid rgba(201,168,76,0.15);margin-top:0.5rem;padding-top:0.6rem}
+    .mms-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.35);display:block;padding:0 1rem 0.4rem}
+    .mms-link{display:block;padding:0.3rem 1rem;text-decoration:none;transition:background 0.15s;border-left:2px solid transparent}
+    .mms-link:hover{background:rgba(255,255,255,0.06);border-left-color:rgba(201,168,76,0.4)}
+    .mms-title{display:block;font-size:0.66rem;color:rgba(245,240,232,0.65);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .mms-tag{display:block;font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(201,168,76,0.35);margin-top:0.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    /* Mobile minimap close button */
+    .minimap-close{display:none;position:absolute;top:0.75rem;right:0.75rem;background:none;border:none;color:rgba(201,168,76,0.5);font-size:1.1rem;cursor:pointer;padding:4px;line-height:1}
+    .minimap-close:hover{color:var(--gold)}
+    @media(max-width:1366px){.layout{grid-template-columns:minmax(0,1fr) 280px}}
+    @media(max-width:820px){
+    .layout{grid-template-columns:1fr}
+    aside{display:block}
+    .panel-wrap{display:none}
+    .main{padding:2rem 1.25rem}
+  }
+  
+    /* ══ MOBILE RESPONSIVE ══ */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
+    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.75rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s,background 0.2s}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
+    .mobile-menu.open{display:flex}
+    @media(max-width:820px){
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
+    @media(max-width:820px){
+      .page-wrap{padding:76px 1.25rem 60px}
+      .paper-title,.scenario-title,.page-header h1,.papers-header h1{font-size:1.9rem!important}
+      .candidate-grid{grid-template-columns:1fr!important}
+      .vote-display{grid-template-columns:1fr!important}
+      .phil-grid{grid-template-columns:1fr!important}
+      .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
+      .reading-entry{flex-direction:column;gap:0.5rem}
+    }
+  
+    /* ── Accessibility ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  
+    .prov-permalink{
+      display:inline-block;
+      opacity:0;
+      margin-left:0.3em;
+      font-size:0.75em;
+      color:var(--gold);
+      transition:opacity 0.15s;
+      vertical-align:middle;
+      user-select:none;
+    }
+    .prov-num:hover .prov-permalink{opacity:1}
+    .prov-num.copied{color:var(--gold)}
+    .prov-num.copied .prov-permalink{opacity:1;content:'✓'}
+    .copy-toast{
+      position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);
+      background:var(--navy);color:var(--gold);
+      font-family:'JetBrains Mono',monospace;font-size:0.7rem;
+      letter-spacing:0.1em;padding:0.5rem 1.25rem;
+      opacity:0;transition:opacity 0.2s;pointer-events:none;z-index:999;
+    }
+    .copy-toast.show{opacity:1}
+    
+    
+    #searchResults .sr-item{
+      padding:0.6rem 0.85rem;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.06);
+      transition:background 0.15s;
+    }
+    #searchResults .sr-item:hover{background:rgba(201,168,76,0.1)}
+    #searchResults .sr-section{
+      font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);
+      letter-spacing:0.1em;margin-right:0.5rem;
+    }
+    #searchResults .sr-name{font-size:0.85rem;color:rgba(245,240,232,0.9)}
+    #searchResults .sr-text{font-size:0.75rem;color:rgba(245,240,232,0.45);margin-top:0.2rem;
+      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    #searchResults .sr-none{padding:0.75rem 0.85rem;color:rgba(245,240,232,0.4);
+      font-size:0.82rem;font-style:italic;}
+    mark{background:rgba(201,168,76,0.3);color:inherit;padding:0 1px;}
+
+    
+    /* ── ARTICLE MINI-MAP ── */
+    .minimap{position:fixed;top:56px;left:0;width:170px;height:calc(100vh - 56px);overflow-y:auto;background:rgba(27,42,74,0.97);border-right:1px solid rgba(201,168,76,0.15);padding:1.25rem 0;z-index:100;scrollbar-width:thin;scrollbar-color:rgba(201,168,76,0.3) transparent;display:flex;flex-direction:column}
+    .minimap-title{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(201,168,76,0.5);padding:0 1rem 0.75rem;flex-shrink:0}
+    .minimap a{display:block;padding:0.28rem 1rem;font-size:0.68rem;color:rgba(245,240,232,0.35);text-decoration:none;letter-spacing:0.02em;transition:color 0.15s,background 0.15s;line-height:1.35;border-left:2px solid transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .minimap a:hover{color:rgba(245,240,232,0.75);background:rgba(255,255,255,0.05)}
+    .minimap a.active{color:var(--gold);border-left-color:var(--gold);background:rgba(201,168,76,0.08)}
+    .minimap-toggle{display:none;position:fixed;bottom:1.5rem;left:1rem;width:44px;height:44px;background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:1.1rem;cursor:pointer;z-index:101;align-items:center;justify-content:center;border-radius:2px}
+    @media(max-width:1366px){.minimap{display:none}.minimap.mobile-open{display:flex;z-index:201;box-shadow:4px 0 20px rgba(0,0,0,0.4)}.minimap-toggle{display:flex}.minimap-close{display:block}}
+    @media(min-width:1367px){body.has-minimap .page-wrap{margin-left:170px}}
+  
+    /* ── Search FAB ── */
+    .search-fab{position:fixed;bottom:1.75rem;right:1.25rem;z-index:195;background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:0.55rem 0.9rem;cursor:pointer;text-transform:uppercase}
+    .search-fab:hover{border-color:var(--gold);background:var(--navy2)}
+    @media(max-width:1366px){
+      .search-fab{bottom:1.5rem;right:1rem;width:44px;height:44px;padding:0;display:flex;align-items:center;justify-content:center;border-radius:2px;font-size:1rem;letter-spacing:0}
+    }
+  
+    .search-fab-icon{display:none}
+    .search-fab-text{display:inline}
+    @media(max-width:1366px){
+      .search-fab-icon{display:inline;font-size:1.2rem}
+      .search-fab-text{display:none}
+    }
+  </style>
+  <script src="search-index.js"></script>
+
+<style>
+  .page-hero {max-width:740px;margin:0 auto;padding:88px 2rem 2rem}
+  .page-hero h1 {font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:0.5rem}
+  .page-hero .hero-sub {color:var(--muted);font-style:italic;margin-bottom:0}
+  .hist-container {max-width:740px;margin:0 auto;padding:0 2rem 80px}
+  .hist-entry {border-top:1px solid var(--rule);padding:2rem 0}
+  .hist-entry:first-child {border-top:none}
+  .hist-tag {font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+  .hist-title {font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;margin:0 0 0.75rem}
+  .hist-body p {margin:0.5rem 0;line-height:1.7;font-size:0.92rem}
+  .hist-body strong {font-weight:600}
+  .hist-intro {max-width:740px;margin:0 auto;padding:0 2rem 2rem;color:var(--muted);font-style:italic;font-size:0.92rem;line-height:1.7;border-bottom:1px solid var(--rule);margin-bottom:1rem}
+</style>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html" >Constitution</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="sources.html">Sources</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Download a copy</a>
+  </div>
+<main>
+  <div class="page-hero">
+    <h1>Constitutional History</h1>
+    <p class="hero-sub">A record of the document's development — provisions added, amended, relocated, and refined.</p>
+  </div>
+  <p class="hist-intro">This record covers the full development of the Federated Republic's constitution: from its initial drafting through terminology reform, article reordering, and seven sessions of systematic stress-testing. Entries run chronologically, oldest first. The constitutional text itself is available in the <a href="annotated.html">annotated edition</a>.</p>
+  <div class="hist-container">
+    
+  <article class="hist-entry">
+    <div class="hist-tag">v172 · Constitutional · Historical</div>
+    <h2 class="hist-title">v172 and earlier — Article-by-article content review series</h2>
+    <div class="hist-body"><p>Systematic review of all twenty articles over multiple sessions: Article I (5 issues), Article IV (3), Article V (5), Article VI (4), Article VII (5), Article VIII (9), Articles XI+XIII (10), Articles XV+XVI (8), Article XVII (4), Article XVIII (4), Article XIX (6), Articles X+XX (14), Article-wide cross-reference repairs. String-based display ordering corrected. Annotated mini-map with dynamic scenario links added.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">v184 · Constitutional</div>
+    <h2 class="hist-title">v184 — Constitutional cleanup: SC redesign, 26 rewrites, 11 removals</h2>
+    <div class="hist-body"><p>Supreme Court redesigned from national RCV election to Civic Consul nomination from open JM registry + Senate 2/3 confirmation; 12-year non-renewable terms retained; §4.2.d time ceilings added (60-day nomination, 30-day JM assessment, 90-day Senate vote, no deemed confirmation). §2.6 rewritten. §2.9.c chamber veto removed. §1.10.c warrant exception. §7.1 SC removed from election day. SDP 11→529 provisions; RBC 10→529 provisions. §10.5.f/§10.7.a deleted. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">v185 · Constitutional</div>
+    <h2 class="hist-title">v185 — Article XIII reduction: 529 provisions to 14</h2>
+    <div class="hist-body"><p>Territorial structure reduced from 35 to 529 provisions. §13.2.a/b absorbed into §13.2; §13.2.g replaced 529 provisions with 1; §13.3 absorbed triggers/early warning/devolution vote/consequences; §13.4 absorbed §13.4.a–f; §13.7 absorbed merger sub-provisions. 529 provisions moved to statute. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · §2.11 · §2.1.i · §2.1.k</div>
+    <h2 class="hist-title">Council of Ministers + dual executive domain improvements</h2>
+    <div class="hist-body"><p>§2.11 (new): Council of Ministers — both executives' officers meeting jointly as standing coordination body; quarterly executive attendance floor; NRS-published session summaries; first forum for cross-domain matters. §2.1.i: Civic Consul trade concurrence narrowed from "materially affects the domestic economy" to three specific categories; external terms Consular sole authority; severability provision. §2.1.k (new): General Domain Default — Civic Consul residual authority presumptive pending SC ruling; Council of Ministers first forum; SC rules within 30 days. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Batch 1</div>
+    <h2 class="hist-title">Batch 1 — Seven changes across Articles II and III</h2>
+    <div class="hist-body"><p>§2.2.i: duty of refusal broadened to both executives and military members; may report to EI; legal redress available. §2.1.f.ii: veto suspension deleted. §2.6.a/c: presidential succession redesigned — successor serves remainder of term, no election required, succession does not consume successor's presidential term. §3.1.b: census → §3.7 independent agency. §3.5.b: stale Assembly Speaker succession claim removed. §3.6.b: LM constitutional review redesigned — post-passage analysis plus on-request only pre-passage; no own-motion pre-passage review. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Batch 2</div>
+    <h2 class="hist-title">Batch 2 — 13 changes across Articles III–X + §8.12 JMC</h2>
+    <div class="hist-body"><p>§3.2.d + §4.1.b: inferior court confirmation → supermajority defined by statute. §4.1.c: good-behavior tenure → 15-year non-renewable term. §4.2.a/b/c deleted: Judicial Selection Board removed; EM disclosure absorbed into §8.4.e registry entry; JM post-nomination certification deleted as redundant. §4.2.d simplified. §4.3.e: "authoritative factual evidence" → "due consideration and appropriate weight." §4.4.c: professional license sentence removed (already in §1.13). §5.1.g deleted. §5.4.b: CLT Administrator → §3.7 agency. §3.7.a: "may/shall" conflict resolved. §8.1.a: LM now audits census (not conducts it). §8.12 (new): Joint Monitor Council. §10.5.h: ethics investigation on request or own-motion audit; referral to appropriate authority. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Batch 3</div>
+    <h2 class="hist-title">Batch 3 — Pool standardisation, JMC references, §15.4 relocated</h2>
+    <div class="hist-body"><p>§8.13 (new): Constitutional Pool Framework — master standard for all six constitutional pools; four stages (entry, certification, selection, confirmation); JMC conducts all lottery draws. §9.3.b/d/e/f: JMC references throughout. §8.9.a/d: simplified. §10.6.a: Endowment trustee Senate confirmation moved from pool entry to post-lottery. §16.1.c: simplified. §15.4/§15.4.a/§15.4.b moved to §13.9/§13.9.a/§13.9.b — territorial integrity provisions now in Article XIII where they belong. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Batch 4 · Full Audit</div>
+    <h2 class="hist-title">Batch 4 — Mandatory devolution Path A + 18 stale reference fixes</h2>
+    <div class="hist-body"><p>§13.3: Mandatory Devolution Path A — sitting senators serve remainder of elected terms; Senate seats not vacated; no new Senate elections until Statehood restored. §13.3.e: stale "Senate Devolution vote" reference fixed. §8.13: pool entry confirmation rule made absolute (no "unless" loophole). 18 Electoral Commission → Elections Panel fixes throughout Articles VII–XIX. §17.3.e/§20.1: §15.4.a → §13.9.a references updated. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · §19.10 (new)</div>
+    <h2 class="hist-title">§19.10 — Required Statutory Agency Establishment</h2>
+    <div class="hist-body"><p>Closes the §3.7 "may vs shall" gap for constitutionally required agencies. CLT Administrator (§5.4.b): must be established within 180 days of Phase 4. Census Bureau (§3.1.b): within 18 months of Phase 4. Interim Monitor administration where deadline is missed. LM publishes compliance notices. Legislature may not permanently delegate required statutory functions to an Monitor in lieu of establishing the agency. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · §2.3.b</div>
+    <h2 class="hist-title">Civic Consul term limits — 12-year total cap added</h2>
+    <div class="hist-body"><p>Two limits now apply simultaneously: the existing 8-year consecutive maximum plus a new 12-year total cap across all periods of service. A former Civic Consul who returns after stepping aside may serve only up to the 12-year total — a Civic Consul who served 8 years can return for at most 4 more. Partial years count in full for both limits. The consecutive limit prevents entrenchment; the total cap closes the unlimited-return gap. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · §8.4.a · §8.2</div>
+    <h2 class="hist-title">JM Monitor General selection redesigned — circular self-selection eliminated</h2>
+    <div class="hist-body"><p>The JM IG had a structural flaw: the JM maintained its own candidate pool, vetted pool members, and the outgoing IG administered the draw. Redesigned: the eligible class is now former Republic judges (State or federal, trial court and above) certified by the LM (service records) and EM (financial disclosure). The JMC conducts the lottery; the outgoing JM IG does not participate. The JM holds no role in constituting its own candidate pool.</p>
+        <p>This mirrors the cross-nomination logic of the other IGs: LM IG is SC-nominated (Legislature excluded); EM IG is House-nominated (executives excluded); JM IG is now drawn from a pool the JM does not control. 529 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · §8.3.b</div>
+    <h2 class="hist-title">§8.3.b — EM IG Senate confirmation upgraded simple majority → 2/3</h2>
+    <div class="hist-body"><p>The EM Monitor General — who audits both executives including the Civic Consul — was the only IG confirmed by simple majority, meaning the Civic Consul's governing coalition could confirm a preferred auditor without cross-party support. Raised to 2/3 supermajority matching the LM IG threshold. House nomination preserved (structural alignment remains sound); 2/3 threshold now requires opposition participation regardless of who controls the Assembly majority. All three IGs now confirmed by 2/3 supermajority (LM and EI) or selected by depoliticised lottery (JI). 530 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Article XX</div>
+    <h2 class="hist-title">Article XX — three fixes: §20.1 stale ref, §20.3 terminology, §20.3 phrasing</h2>
+    <div class="hist-body"><p>§20.1: §13.4 (Voluntary Devolution) cross-reference replaced with §13.9 and §13.9.a (Territorial Integrity — correct provision for independence process). Added clarification that indigenous nations under Article XIV may not substitute an Article XX compact for their Article XIV relationship without first completing §14.7.a status election.</p>
+        <p>§20.3: "Article I unamendable prohibitions" → "non-derogable rights under §1.26.b" throughout — unified to single terminology for the same six rights. Phrasing: "established in §1.26.b to any person" → "established in §1.26.b, committed against any person within its jurisdiction."</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Article VI</div>
+    <h2 class="hist-title">Article VI — four fixes: §6.1 clarity, §6.3.a deleted, §6.4.c/f strengthened</h2>
+    <div class="hist-body"><p>§6.1: "may set aggregate limits on total applications processed" → "received and processed" — distinguishes filing cap (impermissible) from processing throughput cap (legitimate).</p>
+        <p>§6.3.a deleted: three grounds for Gate 2 judicial challenge were already stated identically in §6.3. Redundant provision removed. 529 provisions.</p>
+        <p>§6.4.c: Asylum Court judge appointment mechanism added — judges appointed under §4.1.b (Civic Consul nomination, Senate confirmation by supermajority) with full tenure protections. Previously the court was constitutionally independent without specifying how judges got there.</p>
+        <p>§6.4.f: "mandatory judicial review by an independent federal court" specified for security detention review — prevents Legislature assigning review to a non-independent body.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Major Revision</div>
+    <h2 class="hist-title">Hybrid Constitution — 156 provisions (from 529)</h2>
+    <div class="hist-body"><p>The constitution has been substantially revised through a principled rewrite. Structure, players, and constitutional principles are unchanged. The revision delegates operational detail to statute, trusts democratic governance with implementation, and reserves constitutional text for rights, structure, powers, and the mechanisms that protect them.</p>
+        <p>Core changes: Article I rights stated as principles without classification taxonomy. Military authorization rebuilt on five constitutional principles replacing the tier structure. Monetary Authority established as a constitutionally mandated but statutorily defined institution. Two amendment paths at 2/3 supermajority replacing four paths. Pool nomination system extended to all appointed positions. Elections Panel of the DIC becomes administrative keeper of all constitutional registries. JMC assigned NRS operational and integrity audit. DIC governance redesigned — panels elect their own Director, 8-year terms, Civic Consul nominates from pool, Senate confirms. Official benefits tied to functional requirements of office, not status.</p>
+        <p>Production version (529 provisions) archived as federated-republic-constitution-production-529.docx.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Full Review — May 23, 2026</div>
+    <h2 class="hist-title">Comprehensive article review — 13 substantive changes, 9 new provisions</h2>
+    <div class="hist-body"><p>Full review of all 20 articles against prior audit reports. Decisions made across two sessions. Changes applied to the correct 157-provision hybrid base.</p>
+        <p><strong>§2.3</strong> — Consular veto review: SC petition removed; EM domain assessment replaces it. Either Speaker may request EM finding published to NRS within 48 hours.</p>
+        <p><strong>§2.14.a</strong> (new) — Coordination Failure Protocol: structured resolution path for non-emergency executive deadlocks — Council of Ministers 14 days, Legislature concurrent resolution 30 days, Civic Consul residual authority default.</p>
+        <p><strong>§3.9.a</strong> (new) — Independent Officer Judicial Removal Track: two-Monitor petition → SC suspension ruling → Senate 3/5 removal or 60% public election.</p>
+        <p><strong>§4.3</strong> — SC seat expansion now requires 2/3 of both chambers (was ordinary statute). Now symmetric with reduction threshold.</p>
+        <p><strong>§4.3.a</strong> (new) — Supreme Court Quorum: majority of seated justices; minimum five for constitutional questions; District Court fallback if Appellate bench depleted.</p>
+        <p><strong>§4.4.a</strong> (new) — Senate Bypass / Public Confirmation: Civic Consul + 2/3 House may place Temporary Associate Justice on electoral ballot; 60% confirms; Senate authority extinguished on confirmation.</p>
+        <p><strong>§7.2</strong> — Consular election threshold: "reaches or exceeds 60%" corrected to "reaches or reaches or exceeds 60%".</p>
+        <p><strong>§8.1.d</strong> (new) — IG Term Expiry and Incapacity: automatic authority termination at term end; deputy acting authority; incapacity protocol.</p>
+        <p><strong>§8.12.a</strong> (new) — Institutional Compromise Protocol: two-Monitor SC petition; Acting IG from candidate pool approved by both executives; ineligibility for permanent appointment.</p>
+        <p><strong>§8.14</strong> (new) — Registry Integrity Standards: objective criteria only; published exclusion grounds; SC appeal right; eight-year assessment requirement.</p>
+        <p><strong>§9.1</strong> — NRS Downtime: government acts now effective regardless of NRS status; JM maintains continuously operating parallel authentication system; 180-day threshold triggers permanent framework.</p>
+        <p><strong>§9.5 / §9.5.a</strong> (new) — Classification Criteria and Duration Framework: statutory grounds required; 25-year maximum; single 5-year EI-certified extension; absolute 30-year ceiling.</p>
+        <p><strong>§19.9</strong> — TAM: ten-year successor bar added; no new Mechanism within ten years of a prior Mechanism's sunset.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Site — May 24, 2026</div>
+    <h2 class="hist-title">DIC Director removed; office continuity provision added; IG acting mechanism revised</h2>
+    <div class="hist-body"><p><strong>§1.31</strong> (new) — Continuity of Constitutionally Mandated Offices: confirmed successor assumes office at precise term end; no gap during normal transitions; acting officials must be otherwise eligible; LM certifies failure as compliance breach.</p>
+        <p><strong>§8.1.d</strong> — Rewritten: acting IG is now pool-sourced (longest eligible pool tenure) for unexpected mid-term vacancies only; ineligible for permanent appointment; returns to pool; both executives approve within 5 days. Deputy mechanism removed.</p>
+        <p><strong>§8.3</strong> — Revised: 24-month nomination deadline added; acting capacity on nomination removed; confirmed successor assumes office at precise term end under §1.31; §8.1.d acting mechanism activates if confirmation fails.</p>
+        <p><strong>§16.1</strong> — Director removed; no joint Commission; Legislature defines standards/budget by statute; Chair of each panel is most senior administrator by continuous service within that panel.</p>
+        <p><strong>§16.1.a</strong> — Within-panel staggering: no more than one seat expires per calendar year within each panel; founding lot assigns three offset start points to create immediate seniority hierarchy.</p>
+        <p><strong>§16.1.b</strong> — Removed entirely (Director no longer exists).</p>
+        <p><strong>§16.1.c / §16.5</strong> — Director and joint Commission references removed; emergency measures ratified per panel.</p>
+        <p><strong>scenario-director retired</strong>: premise (§16.1.b Director election, 3-3 tie) no longer exists constitutionally. Count: 52 scenarios.</p>
+        <p><strong>Paper 17 rewritten</strong>: argument restructured — expert independence with accountability chains outperforms elected Director for technical infrastructure governance.</p>
+        <p>Papers 12 and 18 updated; glossary Director entry removed; scenarios-pool-draw and scenario-concordance Director references corrected.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Efficiency — May 25, 2026</div>
+    <h2 class="hist-title">Three constitutional simplifications: universal NRS rule, unified removal framework, simultaneous coordination window</h2>
+    <div class="hist-body"><p><strong>§9.1 — Universal NRS Publication Default (new rule):</strong> All constitutional acts, orders, findings, certifications, designations, declarations, and determinations are NRS-published by operation of §9.1 — no provision need state this individually. Five boilerplate publication tails removed from §2.14.a, §8.1.d, §8.12.a, §8.13, and §16.1.c.</p>
+        <p><strong>§8.15 — Constitutional Officer Removal Framework (new):</strong> Unified provision governing removal of all constitutionally confirmed independent officers (IGs, DIC administrators, MA board, others). Standard Track and Judicial Track defined once. §3.9.a, §8.3.a IG removal, and §16.1.c DIC removal now cross-reference §8.15 rather than restating its terms.</p>
+        <p><strong>§2.14.a — Simultaneous Legislature Window:</strong> Legislature now notified simultaneously with Council of Ministers on Day 0 of a coordination failure declaration (not after Council of Ministers failure on Day 14+). Legislature window: 30 days from declaration. Council of Ministers resolution within 14 days closes the process. Eliminates up to 14 days of avoidable deadlock.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Threshold Rationalization — May 25, 2026</div>
+    <h2 class="hist-title">§11.4 — Electoral Supermajority Threshold (new)</h2>
+    <div class="hist-body"><p>60% of votes cast is now explicitly stated as the constitutional threshold for all direct electoral supermajority determinations. Applies to: the presidential first-round threshold at which the State plurality requirement is waived (§7.2); public confirmation of a Supreme Court justice via Senate bypass (§4.4.a); and public election removal of a constitutional officer via the Judicial Track (§8.15).</p>
+        <p>The Legislature may not alter this threshold without a constitutional amendment. The provision clarifies that the optional referendum and citizen initiative (§11.1–§11.2) require only simple majority — they are not supermajority determinations. The 60% threshold was already implicit in three separate provisions; §11.4 makes the principle constitutional rather than coincidental.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Simplification — May 25, 2026</div>
+    <h2 class="hist-title">Five structural simplifications: Council of Ministers attendance, State Designee Panel, TAM, amendment paths, advisory board</h2>
+    <div class="hist-body"><p><strong>Council of Ministers quarterly attendance floor removed (§2.11):</strong> The constitutional mandate requiring both executives to attend at least one Council of Ministers session per quarter is removed. The Council of Ministers as an institution stands; operational frequency is for the executives to determine.</p>
+        <p><strong>State Designee Panel → standing body (§8.9):</strong> The per-proceeding lottery constitution is replaced by a standing Panel of five members constituted by the JMC at the start of each two-year cycle. No more reconstituting the Panel for each proceeding. Members serve staggered two-year terms; the Panel is immediately available when needed. Review timeline moves to statute.</p>
+        <p><strong>Amendment paths collapsed (§15.1):</strong> Path A and Path B merge into a single Parliamentary Amendment path. The 2/3 legislative threshold is unchanged. The proposing body simultaneously specifies the ratification mechanism — State Ratification (2/3 of States) or Popular Ratification (2/3 with 55% participation). One path, two ratification options. Path C (citizen-led) unchanged.</p>
+        <p><strong>TAM simplified (§19.9):</strong> Transitional Accountability Mechanism provision reduced from ~250 words of constitutional machinery to ~80 words of authorization principle. Implementation details delegated to the establishing statute, which already required 2/3 majority. Ten-year successor bar retained.</p>
+        <p><strong>Governing principle applied throughout:</strong> Implementation timelines and procedural details belong in statute; constitutional text states the principle and the protection. The State Designee Panel review timeline, the Panel constitution mechanics, and the TAM operational rules all move to statute.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Simplification — May 25, 2026</div>
+    <h2 class="hist-title">§8.9 — State Designee Panel replaced with SC Removal Grounds Review</h2>
+    <div class="hist-body"><p>The State Designee Panel — a standing body of five members constituted by JMC lottery — is replaced by direct SC categorical review. To initiate a standard track removal vote, the charging party (1/3 of either chamber or two Monitors jointly) files stated grounds with the SC. The SC determines within 14 days whether the grounds constitute a statutory removal category. No panel required; no pool to maintain; no two-year constitution cycle.</p>
+        <p>§8.15 Standard Track updated to reference SC categorical confirmation under §8.9. Article VIII heading updated to "Monitors and Accountability." State Designee Pool removed from constitutional machinery; the Legislature defines enumerated removal categories by statute.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 25, 2026</div>
+    <h2 class="hist-title">No-cause IG removal eliminated</h2>
+    <div class="hist-body"><p>The provision allowing removal of Monitor Generals without cause by 3/4 of both chambers is removed. With §8.9 (SC Removal Grounds Review) and §8.15 (Judicial Track) now providing robust paths through political gridlock, no-cause removal at any threshold is inconsistent with the independence the Monitor structure is designed to protect. IGs may now only be removed for cause through §8.15.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Principles Review — May 25, 2026</div>
+    <h2 class="hist-title">Seven-principle review: 8 changes across 7 provisions</h2>
+    <div class="hist-body"><p><strong>§2.12 Clemency:</strong> Premature clemency grant explicitly void. A grant made before the EM report is published is void and of no legal effect by constitutional operation.</p>
+        <p><strong>§8.1.d / §8.12.a Acting IG:</strong> Executive approval replaced with notification. Designation is effective on acceptance and JMC certification; notice does not condition effectiveness.</p>
+        <p><strong>§8.3 IG Selection:</strong> 24-month nomination deadlines removed; replaced with statutory timeline under §1.31. Constitutional principle (sufficient lead time) stays; implementation detail moves to statute.</p>
+        <p><strong>§8.6 Monitor Operations:</strong> Critical Failure remediation trigger added. Where any Monitor publishes a Critical Failure finding, the Legislature must publish a remediation plan within the period defined by statute.</p>
+        <p><strong>§8.11 Eight-Year Assessment:</strong> Removed entirely. Annual Monitor reports, JMC annual audit, and NRS continuous record cover what it did. Critical Failure trigger moved to §8.6 as a standing requirement.</p>
+        <p><strong>§9.3 Digital Infrastructure Advisory Council:</strong> Removed entirely. JMC annual NRS audit and JM annual Elections Panel audit cover its function.</p>
+        <p><strong>§9.5 Classification:</strong> "prohibited" → "prohibited and void." A classification violating §9.5 is void by constitutional operation from the moment of creation; the EM documents it.</p>
+        <p><strong>CLT removed from §16.1.a:</strong> Constitutional Literacy Test removed from DIC administrator appointment requirements. CLT retained in §5.1.c (naturalization), where it is properly defined and appropriate.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Full Review — May 26, 2026</div>
+    <h2 class="hist-title">Constitutional review: 13 fixes across structure, broken references, and principle violations</h2>
+    <div class="hist-body"><p><strong>§4.3.b Supreme Court Justice Removal (new):</strong> SC justices were excluded from §8.15 with a reference to §4.1.c — a provision that did not exist. Added §4.3.b defining the for-cause removal process: EM breach finding, joint incapacity certification, or criminal conviction; 2/3 both chambers simultaneously; 180-day election window protection; judicial disagreement is not a removal ground.</p>
+        <p><strong>§15.1 Path C thresholds restored:</strong> When Path A and Path B were consolidated, the citizen initiative amendment path (Path C) lost its threshold text. Restored: 15% petition, 70% passage, 65% participation, 180-day Elections Panel referendum window. Two provisions cross-referencing §15.1 Path C thresholds now have a valid reference.</p>
+        <p><strong>§8.15 repositioned:</strong> §8.15 had been inserted between §20.7's heading and body text, and the Article IX heading was misplaced before §8.14. Both corrected: §8.14 → §8.15 → Article IX heading → §9.1.</p>
+        <p><strong>§1.26 Emergency Derogation reordered:</strong> §1.26 and its sub-provisions appeared after §1.27 and §1.28. Moved to correct sequential position before §1.27.</p>
+        <p><strong>§2.13 Consular recall threshold (Principle 6):</strong> "Affirmative threshold defined by statute" replaced with explicit 60% under §11.4 with 55% participation. Pre-political restriction now in constitutional text.</p>
+        <p><strong>§2.11 SC justice actor defined (Principle 4):</strong> "Most senior available SC justice" replaced with "Chief Justice — or, where unavailable, the most senior Associate Justice by length of continuous SC service."</p>
+        <p><strong>§13.7 stale amendment terminology:</strong> "Path B or Path C — Path A alone insufficient" replaced with current amendment path language.</p>
+        <p><strong>§15.1 grammar:</strong> "requires...proposes" fragment fixed. §8.15 cross-reference corrected from §4.1.c to §4.3.b. §11.2 Path C reference updated. §8.12.a double-word typo removed. §8.1.a incomplete sentence fixed. §10.1 minor language.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Detail Review — May 26, 2026</div>
+    <h2 class="hist-title">Fine detail review: stale references, structural ordering, language precision</h2>
+    <div class="hist-body"><p><strong>§15.2 stale path names corrected:</strong> "Path A" and "Path B" were still named in §15.2 after those paths were consolidated. Corrected to "State Ratification" and "Popular Ratification" to match current §15.1 terminology.</p>
+        <p><strong>§15.1 redundant clause removed:</strong> §15.1 restated the two-simultaneous-amendments rule already fully stated in §15.5 (which additionally handles the equal-timing edge case). Removed from §15.1; §15.5 is the authoritative provision.</p>
+        <p><strong>§4.3 sub-provision ordering corrected:</strong> §4.3.a (Quorum) and §4.3.b (Justice Removal) were positioned after §4.4 in the document. Moved to immediately follow §4.3, before §4.4, as correct sub-provisions of that section.</p>
+        <p><strong>§19.10 language precision:</strong> "the Legislature shall establish" corrected to "must establish" — the only surviving use of archaic "shall" in the document; consistent with every other obligation in the constitution.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 26, 2026</div>
+    <h2 class="hist-title">Eligibility requirements, legislative expulsion, and six structural clarifications</h2>
+    <div class="hist-body"><p><strong>§1.32 Disqualifying Offense (new):</strong> Defines "disqualifying offense," wherever that term appears in the Constitution, as a federal felony conviction under Republic law. State-level and foreign convictions do not qualify. A pardon restores eligibility only if the pardoning instrument expressly states so and the EM certifies it. Pending appeals do not suspend the disqualifying effect.</p>
+        <p><strong>§2.1 Consular eligibility:</strong> To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office and must hold no federal felony conviction. No other eligibility requirement applies.</p>
+        <p><strong>§2.5 Civic Consul eligibility:</strong> Same standard — citizen for at least 7 years, no federal felony conviction. Replaces "period established by statute," which had left eligibility entirely to legislative definition.</p>
+        <p><strong>§3.2 House expulsion:</strong> The House may expel a member by 2/3 vote of full seated membership; expulsion is effective immediately and published to the NRS.</p>
+        <p><strong>§3.5 Senate expulsion and State recall:</strong> The Senate may expel a member by 2/3 vote of full seated membership. States may establish recall mechanisms for their senators by State law; a recalled senator's seat is treated as vacant under this Constitution.</p>
+        <p><strong>§4.2 Inferior court confirmation threshold:</strong> "Supermajority defined by statute" replaced with explicit 2/3 supermajority — consistent with all other judicial confirmation thresholds in the document.</p>
+        <p><strong>§16.1.a panel size:</strong> "Each panel comprises three administrators" now explicitly stated; previously implied only by the three-offset staggering structure.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Capture Hardening — May 26, 2026</div>
+    <h2 class="hist-title">Five capture vulnerabilities addressed</h2>
+    <div class="hist-body"><p><strong>§8.2 / §8.3 — EM IG nomination:</strong> House nomination replaced with joint nomination by Assembly Speaker and Senate Speaker. Neither Speaker can act alone; joint nomination requires cross-chamber consensus. The 2/3 Senate confirmation threshold and JM vetting unchanged.</p>
+        <p><strong>§2.9 — Consular succession (instantaneous):</strong> Succession is now self-executing by constitutional operation from the moment the triggering event is published to the NRS. No active assumption required or permitted — the transfer is instantaneous. Military chain of command recognizes the constitutional transfer immediately upon NRS publication; any order issued in the name of the prior Legat Consul after that moment is constitutionally void.</p>
+        <p><strong>§2.13 — Consular removal (instantaneous + military compliance):</strong> Senate Speaker holds Acting Consular Authority from the moment of Senate referral published to the NRS — no active assumption required. Military compliance obligation stated explicitly: compliance with a constitutionally valid transfer is mandatory; a military officer who executes a void order commits a constitutional breach.</p>
+        <p><strong>§8.10 — Monitor funding floor (inflation-adjusted):</strong> Nominal prior-year floor replaced with inflation-adjusted equivalent certified by the MA. Where a budget falls below the certified floor without the required 2/3 supermajority, the prior-year inflation-adjusted level takes effect automatically by constitutional operation.</p>
+        <p><strong>§10.1 — Monetary Authority independence floor:</strong> The Legislature may not define MA independence standards in a manner that compromises its certification credibility. The EM publishes an annual MA independence assessment. MA board composition, terms, and selection procedures may not be amended by simple majority within the same legislative session in which any MA certification is disputed.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 26, 2026</div>
+    <h2 class="hist-title">§3.9 rewrite, DIC removed, independent agency framework clarified</h2>
+    <div class="hist-body"><p><strong>§3.9 Independent Statutory Agencies (rewritten):</strong> Legislature sets qualification standards by statute. JM certifies candidates and maintains the pool as a public record. Civic Consul nominates from the certified pool only — nominations outside the pool are constitutionally void. Senate confirms by 2/3. Fixed terms by statute. For-cause removal only; no unilateral executive removal. Oversight and removal procedure defined by the establishing statute. §8.15 does not apply to §3.9 agency officers.</p>
+        <p><strong>§8.15 updated:</strong> Coverage narrowed to Monitor Generals and officers whose selection is established by this Constitution. §3.9 agency officers explicitly excluded; their removal is governed by the statute establishing the relevant agency.</p>
+        <p><strong>Digital Infrastructure Commission removed entirely:</strong> The DIC as a named entity is gone throughout the document. The NRS Panel and Elections Panel stand as independent constitutional bodies under Article XVI. §16.1 renamed "NRS Panel and Elections Panel." §16.1.a (DIC Administrator Appointment) and §16.1.c (DIC Removal) removed — panel member selection, terms, and removal are governed by statute under §3.9. §16.5 renamed "Panel Emergency Authority."</p>
+        <p><strong>Article XVI renamed:</strong> "The Electoral Commission" → "National Record System and Electoral Operations."</p>
+        <p><strong>Six "Elections Panel of the Digital Infrastructure Commission"</strong> references shortened to "Elections Panel" throughout.</p>
+        <p><strong>§8.7:</strong> "is not a defence" → "is not a defense" (final spelling correction).</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Principles Review — May 27, 2026</div>
+    <h2 class="hist-title">Full ten-principle review: 13 fixes across structure, degradation, and transparency</h2>
+    <div class="hist-body"><p><strong>§3.10:</strong> Stale cross-reference corrected — SC justice removal is §4.3.b, not §4.2.</p>
+        <p><strong>§3.9.a removed:</strong> Provision referenced §8.15 Judicial Track for §3.9 officers explicitly excluded from §8.15. Self-contradictory; removed. Statute governs §3.9 officer removal.</p>
+        <p><strong>§2.13:</strong> Military compliance obligation removed (stated identically in §2.9); replaced with cross-reference to §2.9.</p>
+        <p><strong>§8.12:</strong> Panel member pool enhanced oversight removed — NRS Panel and Elections Panel pools are §3.9 statutory pools; oversight belongs in statute.</p>
+        <p><strong>§8.9:</strong> "Same grounds" bar strengthened to "same or substantially similar grounds" — prevents reinitiation through minimal reformulation.</p>
+        <p><strong>§10.6:</strong> Cross-reference to §8.15 added for National Endowment trustee removal — removal mechanism previously unstated in §10.6.</p>
+        <p><strong>§14.4:</strong> Compact Officer designation must be published to the NRS within 24 hours of appointment.</p>
+        <p><strong>§12.4:</strong> 90-day Reconstruction Plan deadline moved to statute — implementation timing is statutory detail.</p>
+        <p><strong>§4.4 (Graceful Degradation):</strong> Senate may select from SC Candidate Registry by 2/3 if Civic Consul fails to nominate within 30 days of LM certification of breach — closes the gap where a non-nominating Civic Consul faces no escalation beyond LM certification.</p>
+        <p><strong>§2.6 (Graceful Degradation):</strong> If no Civic Consul elected within 120 days of any general election or vacancy, the Elections Panel automatically administers a new Assembly general election — closes the infinite formation loop.</p>
+        <p><strong>§2.14 (Graceful Degradation):</strong> Non-response to cross-domain emergency lead designation within 12 hours is treated as objection, referring the dispute to the SC under §2.15 — closes the gap where silence could hold the process open.</p>
+        <p><strong>§6.2:</strong> Court decisions on Gate 1 §1.6 discrimination challenges published to NRS; applicant identifying information protected under §1.7 for non-public figures.</p>
+        <p><strong>§3.5:</strong> Party-based committee composition language removed — constitutions should not entrench party-based thinking; staggered terms and term limits provide structural protection.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Stress Test — May 27, 2026</div>
+    <h2 class="hist-title">Stress test: four structural fixes from adversarial scenario analysis</h2>
+    <div class="hist-body"><p><strong>§3.9 — Cause defined:</strong> Cause for removal of an independent agency officer must relate to conduct, competence, or a disqualifying offense under §1.32. Policy disagreement with the Legislature or either executive does not constitute cause. Closes the gap where a Legislature could define "cause" to include policy disagreement, effectively making independent agencies removable at will.</p>
+        <p><strong>§3.9 — Interim mechanism corrected:</strong> Where the Legislature fails to establish a constitutionally mandated agency, the relevant Monitor certifies the constitutional breach annually and reports on compliance — it does not substitute for the agency. Previous language ("performs the function on an interim basis") was inaccurate; Monitors are accountability bodies, not operational substitutes.</p>
+        <p><strong>§8.9 — SC default rule:</strong> Where the SC fails to publish its §8.9 categorical determination within 14 days, the stated grounds are deemed confirmed by constitutional operation and duty suspension activates immediately. Closes the gap where the SC could delay indefinitely when its own justices are the subject of removal proceedings.</p>
+        <p><strong>§8.15 Judicial Track — SC default rule:</strong> Where the SC fails to rule on suspension within 30 days, cause is deemed found by constitutional operation. Same principle applied to the Judicial Track.</p>
+        <p><strong>§2.11 — Elections Panel incapacity:</strong> Elections Panel incapacity is certified jointly by the EM and LM and published to the NRS; from that moment the Senate administers federal elections under §2.11 until panel restoration. Closes the gap where no provision specified who could certify the Panel as non-functioning.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional · Article-by-Article Review — May 28, 2026</div>
+    <h2 class="hist-title">Complete article-by-article review — 20 articles, 50+ fixes</h2>
+    <div class="hist-body"><p>Full provision-by-provision review of all 20 articles against the ten constitutional design principles. Changes include: British spelling corrections throughout; capitalization standardized; §1.26.e emergency re-declaration restructured into two clear rules; §2.4 domain default rule moved to §2.1; §2.7 suspensive veto correctly implemented; §2.8 Duty of Refusal extended to persons acting under direct federal authorization; §2.9 succession fallback updated; §2.13 legislative removal: 2/3 both chambers sufficient, JMC assessment optional; §3.4 mandatory ethics committee; §3.9 independent agency cause defined; §4.1 Legislature replaces House for court structure; §4.4 anticipated/unanticipated vacancy terminology; §5.1 citizenship rights sentence clarified; §6.1 Gate 2 criterion updated; §6.2 in-camera review effect stated; §7.1 state → Republic; §7.2 runoff tiebreaker; §9.1 contradictory sentence removed; §9.5.a declassification actor named; §10.1 MA duplicate sentence consolidated; §10.5 failed-recusal consequence; §11.3 systematic defund language; §12.1 genocide definition anchored to international law; §12.4 dual executive binding; §13.3 third devolution path added; §13.6 pressure prohibition specified; §14.1 rewritten as substantive provision; §14.5 SC default rule; §15.1 Path C label removed; §17.2 Legislature selects Seat; §17.4 §3.9 reference for Trust Administrator; §19.2 typo; §19.10 §3.9 consistency; §20.3 suspension meaning; §20.4 NRS termination notice. Full article reordering and renumbering followed.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 29, 2026</div>
+    <h2 class="hist-title">Article reordering, full renumbering, and Monitor language standardization</h2>
+    <div class="hist-body"><p><strong>Article reordering:</strong> Electoral Finance moved to Article VIII (adjacent to Elections); Monitors to Article IX; NRS to Article X; NRS Panel and Elections Panel to Article XI (adjacent to NRS); Social State to Article XII; Direct Democracy to Article XIII; Military to Article XIV; Territory to Article XV; Indigenous to Article XVI; Amendment to Article XVII; Federal Property to Article XVIII. All provision cross-references updated throughout.</p>
+        <p><strong>Provision gap renumbering:</strong> Sequential provision numbers restored across Articles I, V, VI, IX, X, XI, XII, XVII, and XIX. Forty-four provision renaming operations; 302 changes across 40 files.</p>
+        <p><strong>Monitor language standardized:</strong> "Certifies" replaced with "assesses" or "reports on" for substantive constitutional and compliance findings throughout the document. Pool eligibility certification, incapacity assessment, and electoral certification language preserved. Monitors inform; they do not authorize.</p>
+        <p><strong>Senate Armed Services Committee removed:</strong> Consular succession fallback now uses most senior Senator by continuous service, then age as tiebreaker. Legislature or Senate may extend the succession line by statute or standing order. Reference in §14.4 replaced with Senate notification published to NRS.</p>
+        <p><strong>§4.3 — SC composition changes:</strong> Monitor opinion mechanism added — the relevant Monitor may publish an assessment of any proposed SC size change; the Legislature must address it in the public record; either chamber may request such an assessment.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 29, 2026</div>
+    <h2 class="hist-title">EM IG nomination deadlock closed; final provision gap renumbering</h2>
+    <div class="hist-body"><p><strong>§9.3 — EM IG nomination deadlock:</strong> Where the Assembly Speaker and Senate Speaker fail to jointly nominate within 60 days of a vacancy published to the NRS, the Senate selects a nominee from the certified pool directly by 2/3 vote of full seated membership. The selected nominee proceeds to national popular vote confirmation on the same terms. The executives remain excluded from nomination under both paths. Closes the gap identified in external stress testing where two-person Speaker deadlock could keep an Acting EM IG in place indefinitely.</p>
+        <p><strong>§9.3 — JM IG public confirmation added:</strong> The lottery-selected JM IG candidate is now confirmed by national popular vote before assuming office, consistent with the LM IG and EM IG confirmation mechanism. All three Inspectors General now share identical democratic legitimacy — confirmed by the public. The selection method varies (SC nominates LM IG; Speakers jointly nominate EM IG; lottery selects JM IG) but the confirming body is the same for all three.</p>
+        <p><strong>Final gap renumbering:</strong> §7.2.b → §7.2.a (no §7.2.a existed); §9.13 → §9.12, §9.14 → §9.13, §9.15 → §9.14 (gap at §9.12 from earlier DIC removal). All provision sequences now fully sequential throughout the document.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 30, 2026</div>
+    <h2 class="hist-title">§3.11 — Inviolability of Electoral Mandates (new provision)</h2>
+    <div class="hist-body"><p>New §3.11 added to Article III. Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate. The only permitted exceptions are expulsion under §3.2 or §3.5, State-law recall as recognized in §3.5, and impeachment under §3.10. Any new people-driven mechanism for shortening an elected mandate requires a constitutional amendment — it may not be established by ordinary statute. This provision removes the automatic 120-day House dissolution trigger removed earlier and constitutionally forecloses any future equivalent. Democratic mandates are inviolable except by democratic means or the specific accountability mechanisms the people consented to when they voted.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 30, 2026</div>
+    <h2 class="hist-title">§2.6 — House dissolution referendum added to formation failure sequence</h2>
+    <div class="hist-body"><p>Where the Assembly fails to elect a Civic Consul within the statutory period and the Senate has not designated a Civic Consul within 45 days of that failure, the Elections Panel administers a public dissolution referendum. The question is whether the people wish to dissolve the Assembly and hold a new election. Minimum 30-day campaign window; simple majority decides. If the Assembly elects a Civic Consul by absolute majority at any point before the dissolution vote is certified, the referendum is moot and concludes without effect. Where the vote passes, dissolution takes effect from the moment of Elections Panel certification, published to the NRS; a new Assembly general election follows; the Caretaker continues until the new Assembly elects a Civic Consul.</p>
+        <p>Consistent with §3.11 (Inviolability of Electoral Mandates) — the dissolution mechanism is established in the Constitution itself, and the decision belongs to the people. The Senate designation path (45-day window) remains the faster resolution; the referendum is the backstop where both the Assembly and Senate have failed to produce a Civic Consul.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 30, 2026</div>
+    <h2 class="hist-title">Terminology reform: Legat Consul, Civic Consul, Assembly, Monitors, Council of Ministers</h2>
+    <div class="hist-body"><p><strong>Executive titles:</strong> President → Legat Consul; Prime Minister → Civic Consul; Caretaker PM → Acting Civic Consul. The Legat Consul holds the military-foreign domain; the Civic Consul holds the domestic domain. Both titles are drawn from the Roman republican tradition, appropriate for a document building something genuinely new. Presidential/PM abbreviations removed; Civic Consul spelled in full throughout. Consular replaces Presidential as the adjective form.</p>
+        <p><strong>Legislative chamber:</strong> House → Assembly. The Assembly is the proportionally elected chamber that forms and sustains the Civic Consul's government. Assembly Speaker, Assembly member, Assembly election updated throughout.</p>
+        <p><strong>Oversight bodies:</strong> Inspectorate → Monitor; Inspector General → Monitor General; LI/EI/JI → LM/EM/JM; JIC → JMC (Joint Monitor Council). Legislative Monitor, Executive Monitor, Judicial Monitor. The Monitor terminology is neutral, accurate to the information-only mandate, and carries no national model baggage.</p>
+        <p><strong>Executive coordination:</strong> Joint Executive Council / JEC → Council of Ministers. The Council of Ministers is the joint body of all ministers from both executives — the Legat Consul's directors and the Civic Consul's ministers meeting as the standing cross-executive coordination forum. Cabinet removed entirely; ministers serve their respective Legat Consul or Civic Consul collectively forming the Council of Ministers.</p>
+        <p><strong>Domain officers:</strong> Secretary for Foreign Affairs → Director of Foreign Affairs; Secretary for Defense → Director of Defense. Director is used consistently for all Legat Consul domain officers.</p>
+        <p><strong>Provision relocation:</strong> §1.22 (Continuity of Constitutionally Mandated Offices) → §3.13; §1.23 (Disqualifying Offense) → §3.12. Both provisions move from Article I (Rights) to Article III (Legislature) where they sit alongside §3.11 (Inviolability of Electoral Mandates) as a coherent set of constitutional officer provisions. Article I now ends at §1.21; Article III runs through §3.13. Provision count unchanged at 166.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 31, 2026</div>
+    <h2 class="hist-title">Fine detail review — 24 fixes across all 20 articles</h2>
+    <div class="hist-body"><p><strong>Critical — contradictions and stale references:</strong> §9.1 abbreviations corrected to LM/EM/JM; §9.2 Monitor General confirmation corrected from Senate 2/3 supermajority to national popular vote (contradiction with §9.3); §4.3.b LI→LM; §9.4.b JI-certified→JM-certified; §9.11 Inspectors General→Monitor Generals; §10.2 Article XVI→XI (Elections Panel is Article XI, not XVI); §10.3.a EI→EM; §1.16 and §5.2 Article X→XII (social state moved to Article XII in reordering); §12.5 LI→LM; §15.4 LI-JM→LM-JM; §19.3 IGs→Monitor Generals; §20.1 Article XIV→XVI (Indigenous Sovereignty, not Military).</p>
+        <p><strong>Structural:</strong> Stray "Article II — The Dual Executive" heading removed from between §3.12 and §3.13 — a residual artefact from the §3.12/§3.13 relocation to Article III.</p>
+        <p><strong>Grammar and spelling:</strong> §1.18 "government" → "Government" (sentence-starting); §1.19.a hanging fragment "Automatic expiry (§1.19.d) without renewal." replaced with complete sentence; §2.10 "foundied" → "reported" (typo); §9.1.d "An Monitor General" → "A Monitor General".</p>
+        <p><strong>Terminology consistency:</strong> §2.6 "Caretaker status ends" → "Acting status ends"; §6.1 rephrased "Legat Consul's interference with credential issuance" for natural reading.</p>
+        <p><strong>Undefined institution:</strong> §16.2 "Civic Consul's domestic affairs office" → "Civic Consul"; §16.4 and §18.4 "Domestic Affairs Council" → "Civic Consul" (term never defined; both references consolidated to Civic Consul).</p>
+        <p><strong>Content and logic:</strong> §7.2.a orphan sentence on Legat Consul succession removed (belongs in §2.9, not State Plurality); §2.9 redundant "from the moment of joint certification published to the NRS" → "from that moment"; §12.3 simplified to cross-reference §8.3, removing duplicated campaign financing content.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 31, 2026</div>
+    <h2 class="hist-title">§14.4 — Military extension domain violation corrected</h2>
+    <div class="hist-body"><p>§14.4 previously allowed the Civic Consul to "provisionally authorize continued operations" when the Senate fails to approve a Transition and Reconstruction Plan — granting the Civic Consul direct operational military authority in violation of §2.1, which vests military command exclusively in the Legat Consul.</p>
+        <p>Corrected to: the Civic Consul may provisionally <strong>extend expenditure certification</strong> for continued operations. Operational authority over those operations remains with the Legat Consul throughout. The Civic Consul's constitutional lever is money, not command — the fix preserves the fiscal check while respecting the domain boundary established in §2.1.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 31, 2026</div>
+    <h2 class="hist-title">Term architecture review: Legat Consul 6 years, Civic Consul membership clarified, inferior courts 12 years, Endowment Administrator, Senate Speaker clarified</h2>
+    <div class="hist-body"><p><strong>§2.1 — Legat Consul term extended to 6 years:</strong> Foreign policy credibility is cumulative. Alliances, intelligence partnerships, and deterrence signaling all benefit from a counterpart who will be in place long enough to be held to their commitments. A single non-renewable 6-year term maximizes independence from re-election pressure while providing genuine strategic continuity. §7.3 updated: consular elections every six years.</p>
+        <p><strong>§2.6 — Civic Consul membership and term limit clarified:</strong> The Civic Consul must be and remain a serving Assembly member throughout their tenure. Removal or resignation as Civic Consul does not affect Assembly membership — a former Civic Consul reverts to their Assembly role. All Assembly membership rules apply, including term limits and the cooling-off period. The 8-year limit on serving as Civic Consul is cumulative and permanent across all periods of service, regardless of interruption. The previous "8 consecutive years / 12 total" language was incorrect; the design intent was always 8 years total.</p>
+        <p><strong>§4.2 — Inferior court judge term: 15 years → 12 years:</strong> Inferior court judges now serve the same 12-year single non-renewable term as SC justices. The prior inversion — inferior courts serving longer than the SC — was constitutionally anomalous. SC independence is protected through the nomination architecture, not term length alone.</p>
+        <p><strong>§12.5 — National Endowment: bespoke trustee board removed:</strong> The five-trustee lottery board replaced with a mandatory independent agency under §3.9 (Endowment Administrator). The Legislature must establish it; failure is a compliance breach. The Administrator's sole mandate is unchanged: preserve and grow for social state backstop purposes. Activation on MA certification of Severe Revenue Contraction is unchanged. EM audits annually.</p>
+        <p><strong>§3.5 — Senate Speaker term clarified:</strong> "Three consecutive electoral cycles" replaced with "two consecutive full Senate terms" — removing ambiguity about what "electoral cycle" meant in the Speaker context.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 31, 2026</div>
+    <h2 class="hist-title">Session 1 testing fixes: 7 constitutional gaps closed</h2>
+    <div class="hist-body"><p><strong>§10.2:</strong> Cross-reference corrected — Elections Panel's constitutional mandate is in Article XI, not Article XVI.</p>
+        <p><strong>§2.5:</strong> Cross-reference corrected — social state administration is Article XII, not Article X.</p>
+        <p><strong>§12.1:</strong> Monetary Authority explicitly anchored to §3.9 independent agency framework. The MA Director now has constitutional protection through pool nomination, Senate 2/3 confirmation, and for-cause removal — closing a gap identified in the Actor Test: the MA was a critical constitutional actor with no constitutional actor profile.</p>
+        <p><strong>§2.6:</strong> Three fixes: (1) 21-day constitutional default period added for Civic Consul formation — if the Legislature has never defined the statutory period, the constitutional floor activates automatically, closing a Graceful Degradation gap; (2) Acting Civic Consul fallback extended — where no ministers have been confirmed, the Civic Consul designates a serving Assembly member; (3) residual "Caretaker" terminology corrected to "Acting" throughout §2.6 and §2.11.</p>
+        <p><strong>§11.1:</strong> Minimum membership floor added to both the NRS Panel and Elections Panel: no fewer than five members at all times; Legislature may not reduce either panel below this floor; no single appointing authority may hold a majority of appointments within any single electoral term. Closes an Informational Power Test vulnerability — complete delegation to statute for institutions controlling the constitutional record and all elections.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 31, 2026</div>
+    <h2 class="hist-title">Session 2 testing fixes: 6 adversarial vulnerability gaps closed</h2>
+    <div class="hist-body"><p><strong>§9.10 — Funding floor extended to Elections Panel and NRS Panel:</strong> The Monitor minimum funding guarantee now covers the Elections Panel and NRS Panel. Both administer continuity-protected constitutional functions (electoral administration and NRS availability under §2.15); both now have the same inflation-adjusted self-executing funding floor as the Monitors.</p>
+        <p><strong>§2.3 — SC expedited domain determination for out-of-domain vetoes:</strong> Where the EM publishes a finding that a Legat Consul veto falls outside the defined security domain, either Speaker may petition the SC for an expedited domain determination (48-hour ruling). If the SC confirms out-of-domain, the veto is void and the bill proceeds to ordinary enactment. If the SC confirms within-domain, the 2/3 override threshold applies. The EM remains information-only; the SC makes the binding determination. Closes the gap where an out-of-domain EM finding had no constitutional consequence.</p>
+        <p><strong>§12.2 — Interim automatic appropriation on budget failure:</strong> Where the Legislature fails to enact a budget by the constitutional deadline, an interim automatic appropriation takes effect by constitutional operation covering §2.15-protected functions, civil service compensation, and debt service. Continues at prior-year inflation-adjusted levels until a budget is enacted. No new programs may be initiated under the interim appropriation. The existing member pay withholding consequence is preserved.</p>
+        <p><strong>§9.12 — Constitutional minimum pool depth defined:</strong> The constitutional minimum for all pools is five eligible members. Where a pool falls below five, the JM publishes a compliance breach and nominating bodies must restore the minimum within 60 days. Where a pool reaches zero, the most senior eligible federal judge not currently in constitutional office serves as Acting officer until the pool is restored (applies to judicial and Monitor pools only). Addresses both pool exhaustion and the related risk of Legislature narrowing qualifications to control pool composition.</p>
+        <p><strong>§9.11 — JMC two-of-three quorum rule:</strong> Two of three Monitor Generals constitute a quorum for all JMC functions. A single Monitor General may not permanently block mandatory joint functions (lottery draws, joint certifications). Non-participating Monitor General's position, if stated, is published to the NRS. Sustained non-participation triggers the §9.11.a Institutional Compromise Protocol.</p>
+        <p><strong>§3.9 — 90-day confirmation timeline with bypass:</strong> Senate must act on §3.9 nominees within 90 days of JM pool certification; failure is a constitutional compliance breach. After a further 30 days of inaction, the Senate may select directly from the certified pool by 2/3. Closes the gap where the Senate could indefinitely delay confirmation of the MA Director, Endowment Administrator, and other §3.9 officers.</p>
+        <p><em>Note: Bad-faith Elections Panel certification (D3) deliberately not addressed by constitution — existing §4.5 SC review of certifications and §2.15 continuity protection provide adequate coverage without expanding Monitor authority beyond information-only.</em></p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 31, 2026</div>
+    <h2 class="hist-title">Session 3 testing fixes: 6 domain separation and judicial independence gaps closed</h2>
+    <div class="hist-body"><p><strong>§2.2 — Military notification ceiling:</strong> "Promptly" now has a constitutional maximum of 24 hours; the Legislature may define a shorter period by statute. Closes the gap where the Legislature could define "promptly" as weeks, effectively granting the Legat Consul unilateral military authority without timely oversight. Consistent with §14.5's existing 12-hour standard for treaty-based military actions.</p>
+        <p><strong>§2.4 — Trade concurrence silence default:</strong> The Civic Consul must respond to concurrence requests within the period defined by statute (30-day constitutional default if none established). Silence is deemed concurrence for provisions not requiring new domestic legislation; silence is deemed withheld for provisions requiring domestic legislation. Closes the limbo created by a non-responding Civic Consul.</p>
+        <p><strong>§2.14.a — Coordination failure default narrowed:</strong> The 30-day coordination failure default now grants the Civic Consul coordination authority over the cross-domain interaction only — not substantive authority over matters within the Legat Consul's enumerated domain. The Legat Consul retains full Consular domain authority throughout. Closes the gap where the Civic Consul could manufacture a coordination failure to gain 30-day authority over enumerated Consular matters.</p>
+        <p><strong>§4.1 — Court abolition cannot bypass for-cause removal:</strong> Abolition of an inferior court does not take effect as to any judge currently serving until their term expires or they are removed for cause under §4.2. Judges whose courts are abolished may be reassigned by the Civic Consul with Senate 2/3 confirmation. Closes the backdoor legislative removal mechanism.</p>
+        <p><strong>§4.2 — Cause standard for judicial removal bounded:</strong> Cause must relate to conduct, competence, or a disqualifying offense under §3.12; policy disagreement with judicial decisions does not constitute cause. Explicitly consistent with the §3.9 standard for independent agency officers — one standard across the document for independent officer removal.</p>
+        <p><strong>§4.5 — General right of access to courts:</strong> Any person with a concrete, articulable legal injury has the right to seek relief from a court of competent jurisdiction. The Legislature may not structure the judicial system in a manner that leaves any category of legal injury without a forum for relief. Closes the gap where the Legislature could strip jurisdiction from all courts over a category of claims, leaving persons with valid injuries without any forum. Broader and more durable than a specific SC jurisdiction protection.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 31, 2026</div>
+    <h2 class="hist-title">Session 4 testing fixes: 3 crisis and succession gaps closed</h2>
+    <div class="hist-body"><p><strong>§7.2 — Runoff tie resolution:</strong> Where the consular election runoff produces a tied result, the Elections Panel determines the winner by lot in a public session; the result is published to the NRS and is final. Extends the existing lot mechanism (already used for second-position ties) to cover runoff ties. A lot is the only constitutionally defensible tiebreaker at national scale — pre-political, non-manipulable, and consistent with existing §7.2 architecture.</p>
+        <p><strong>§7.3 — Narrow elections postponement mechanism:</strong> Where the Elections Panel certifies that elections cannot be held across a substantial portion of the Republic due to a natural disaster or catastrophic infrastructure failure, the Legislature may by 2/3 of both chambers simultaneously postpone the affected election for up to 90 days. Sitting members' mandates extend automatically for that period only. Only the Elections Panel may certify normalization; no further postponement without a fresh EP certification and fresh 2/3 legislative determination. Closes the constitutional vacuum where elections are physically impossible — the prior bar on executive election interference is preserved; this mechanism is EP-triggered and legislatively approved only.</p>
+        <p><strong>§17.3 — Non-derogable rights entrenched against amendment:</strong> No constitutional amendment may extinguish a right designated non-derogable under §1.19.b; any amendment purporting to do so is void to the extent of the extinguishment; the SC must so rule on petition of any person with standing. Establishes an unamendable constitutional core: rights designated non-derogable — the preconditions for legitimate governance — cannot be eliminated even by a procedurally valid supermajority amendment. An amendment may add new non-derogable rights; it may not remove existing ones. Note: SC2 (Civic Consul sudden death with no Acting designation) deliberately not addressed — §2.15 Constitutional Continuity covers the gap; the Legislature has strong institutional incentives to legislate succession; over-specification of every succession edge case creates its own constitutional fragility.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — May 31, 2026</div>
+    <h2 class="hist-title">Session 5 testing fixes: 5 rights architecture gaps closed</h2>
+    <div class="hist-body"><p><strong>§1.6 — Age strict scrutiny carve-out:</strong> Age distinctions rationally related to developmental capacity, lifecycle considerations, or demonstrated actuarial risk are subject to rational basis review rather than strict scrutiny. Preserves strict scrutiny for invidious age discrimination while permitting standard statutory frameworks that rely on age as a legitimate capacity proxy (voting age, licensing minimums, retirement thresholds). Invidious discrimination against elderly or young citizens still faces compelling justification.</p>
+        <p><strong>§1.11 — Habeas corpus production ceiling:</strong> Production period "not to exceed 72 hours." Habeas corpus is non-derogable; making it technically available but with a 90-day statutory response window would render it meaningless. The 72-hour ceiling is consistent with established constitutional traditions and ensures the non-derogable status has practical force.</p>
+        <p><strong>§1.15 — Double jeopardy same-conduct floor:</strong> "Same offense means the same conduct regardless of how it is labeled or charged; the protection applies to any charge that does not require proof of an element distinct from those required for the original charge." Prevents the Legislature from defining 'same offense' so narrowly that relabeling charges defeats the protection. The Legislature retains the ability to define scope above this floor — cross-jurisdiction application, regulatory vs. criminal distinctions — but cannot use label-changing to permit repeated prosecution for the same conduct.</p>
+        <p><strong>§1.19.b — Emergency non-discrimination added:</strong> "No emergency measure, regardless of its stated purpose, may be applied in a discriminatory manner on the basis of race, ethnicity, religion, or national origin; any such application is constitutionally void." Emergency-justified discrimination on these grounds — the pattern of the worst governmental abuses in history — is now constitutionally void even during valid declared emergencies. This is a conduct prohibition on application, not a bar on emergency measures themselves.</p>
+        <p><strong>§1.19.e — Emergency relabeling exploit closed:</strong> A new emergency declaration covering substantially the same geographic scope and affecting substantially the same rights as a declaration that expired within 60 days is subject to the same 60-day bar, regardless of labeling. The EM publishes an assessment of whether any new declaration constitutes a relabeled continuation within 14 days. Monitor remains information-only; the published assessment creates the factual record for SC challenge under the existing expedited review jurisdiction.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Constitutional — June 1, 2026</div>
+    <h2 class="hist-title">Session 7 testing fixes: 3 transition and integration gaps closed</h2>
+    <div class="hist-body"><p><strong>§3.5 — Founding Senate cohort lot assignment:</strong> At the first Senate seating, senators are assigned to three approximately equal cohorts by public lot — initial terms of 2, 4, and 6 years respectively; thereafter all Senate terms are 6 years. The lot is conducted by the Elections Panel and published to the NRS before the first senators take the constitutional oath. Mirrors the SC's founding class mechanism (§4.3) exactly. Closes the gap where an unstaggered founding Senate would have had zero electoral accountability for its first 6 years and then complete simultaneous turnover.</p>
+        <p><strong>§19.3 — Phase 0 joint Monitor panel bootstrap:</strong> During Phase 0, before Monitor Generals are constituted, the interim Elections Panel constitutes the joint Monitor panel from a pre-qualified pool established by the ratification convention. From Phase 2, each Monitor General appoints their representative for the remainder of the Transition Window; a Monitor General appointment supersedes any interim Elections Panel appointment. Closes the circular dependency where Phase 0 required a Monitor panel but Monitor Generals (the specified appointing authority) don't exist until Phase 2.</p>
+        <p><strong>§19.9 — MA and Endowment Administrator establishment deadlines:</strong> The Monetary Authority must be established within 180 days of Phase 4 activation; the Endowment Administrator within 12 months. Closes the gap where §19.7 mandated interim MA functions through the joint Monitor panel (which dissolves at 24 months), but no establishment deadline ensured the MA existed before the panel dissolved. The 180-day MA deadline is consistent with §19.7's existing 90-day nomination requirement plus the §3.9 confirmation timeline.</p></div>
+  </article>
+  </div>
+</main>
+
+</body>
+</html>
