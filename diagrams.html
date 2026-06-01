@@ -611,6 +611,12 @@
     .insp-term-item{display:flex;justify-content:space-between;padding:0.3rem 0;border-bottom:1px solid var(--border);font-size:0.8rem}
     .insp-term-item:last-child{border-bottom:none}
 
+  
+    /* States & Federation diagram */
+    @media(max-width:700px){
+      .sf-layout{grid-template-columns:1fr !important}
+      .lc-step{min-width:120px !important}
+    }
   </style>
 </head>
 <body>
@@ -681,6 +687,7 @@
   <button class="tab-btn" onclick="showTab('sc-appointment')">SC Appointment</button>
   <button class="tab-btn" onclick="showTab('social')">Social State</button>
   <button class="tab-btn" onclick="showTab('pool')">Pool Process</button>
+  <button class="tab-btn" onclick="showTab('states-fed')">States &amp; Federation</button>
 </div>
 
 <!-- ═══════════════════════════════
@@ -2192,6 +2199,157 @@ id="tab-inspectorates">
     </div>
   </div>
 </div>
+
+<!-- STATES & FEDERATION -->
+<div id="tab-states-fed" class="diagram-section">
+  <div class="section-intro">
+    <h2>States &amp; Federation</h2>
+    <p>The Republic's constitution gives States significant autonomy — but within explicit, enforceable limits. This diagram maps what States control, what the federal government controls, and the contested boundary where they interact.</p>
+  </div>
+
+  <div class="sf-layout" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto 2.5rem;padding:0 1rem">
+
+    <!-- STATE AUTHORITY -->
+    <div class="sf-col" style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.25rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem">State Authority</div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Gate 1 Immigration Sponsorship</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">States sponsor applicants at their own discretion — but not on §1.6 discriminatory grounds. §6.1</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Assembly District Maps</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">States draw their own maps subject to five constitutional criteria; LM reviews for compliance. §3.3</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Senator Recall</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">States may establish recall mechanisms by their own law; the Republic treats a recalled seat as vacant. §3.5</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>State Court Systems</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">States may maintain their own court structures; constitutional questions always escalate to federal courts. §4.1</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Electoral Frameworks</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">States may offer early voting, mail-in ballots, and alternative methods — as long as all connect to the NVS. §7.3</span>
+      </div>
+      <div class="sf-item" style="font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Voluntary Devolution</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">A State may restructure its relationship with the Republic through referendum and Senate ratification. §15.4</span>
+      </div>
+    </div>
+
+    <!-- CONTESTED BOUNDARY -->
+    <div class="sf-col" style="background:rgba(27,42,74,0.04);border:1px solid rgba(27,42,74,0.15);border-radius:2px;padding:1.25rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.9rem;opacity:0.7">The Boundary</div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Redistricting</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">State draws; LM reviews; Elections Panel draws an interim map where the State's map fails. §3.3</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Immigration Sponsorship</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">State controls Gate 1; federal government controls Gate 2 and credential issuance. §6.1–6.2</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Statehood Audit</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">LM audits fiscal integrity; JM audits Article I compliance. Pass both → automatic Statehood. §15.2</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Federal Property</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">Federal government holds functional use rights over a registered footprint; State retains sovereignty beyond it. §18.1</span>
+      </div>
+      <div class="sf-item" style="font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Amendment Ratification</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">Path A amendments require 2/3 of States to ratify; States hold direct constitutional power over amendment. §17.1</span>
+      </div>
+    </div>
+
+    <!-- FEDERAL AUTHORITY -->
+    <div class="sf-col" style="background:rgba(27,42,74,0.06);border:1px solid rgba(27,42,74,0.2);border-radius:2px;padding:1.25rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.9rem">Federal Authority</div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Removal from the Republic</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">Only the federal government may remove individuals. State law cannot authorize removal. §6.2</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Residency Credentials</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">Federal credentials are valid throughout the Republic; no State may create a secondary residency tier. §6.1</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>NVS Administration</strong><br>
+        <span style="color:var(--muted);font-size:0.77sem">No State may reduce NVS access, functionality, or availability within its territory. §7.3, §11.2</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Article I Rights</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">Article I rights apply in full within all State territory. State law cannot abridge them. Article I</span>
+      </div>
+      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Territorial Integrity</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">A State may not secede by ordinary statute or State referendum alone. §15.7</span>
+      </div>
+      <div class="sf-item" style="font-size:0.82rem;line-height:1.5;color:var(--ink)">
+        <strong>Local Government Protection</strong><br>
+        <span style="color:var(--muted);font-size:0.77rem">States may not systematically defund local governments to achieve de facto centralization. §13.3</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- What States Cannot Do -->
+  <div style="max-width:860px;margin:0 auto 2.5rem;padding:0 1rem">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:1rem;color:var(--navy)">What States Cannot Do</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem 2rem">
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Set immigration policy or conduct removal proceedings <span style="color:var(--muted)">§6.1–6.2</span></div>
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Apply Gate 1 sponsorship criteria that violate §1.6 <span style="color:var(--muted)">§6.1</span></div>
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Reduce NVS access or impose additional voting burdens <span style="color:var(--muted)">§7.3</span></div>
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Draw district maps using partisan registration or racial composition as a primary criterion <span style="color:var(--muted)">§3.3</span></div>
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Divide directly into two States — the portion must become a Territory first <span style="color:var(--muted)">§15.7</span></div>
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Systematically defund local governments to centralize functions at State level <span style="color:var(--muted)">§13.3</span></div>
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Abridge Article I rights within their territory for any reason <span style="color:var(--muted)">Article I</span></div>
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Block asylum proceedings by refusing Gate 1 sponsorship <span style="color:var(--muted)">§6.3</span></div>
+    </div>
+  </div>
+
+  <!-- State Lifecycle -->
+  <div style="max-width:860px;margin:0 auto 2.5rem;padding:0 1rem">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:1.25rem;color:var(--navy)">The State Lifecycle</h3>
+    <div style="display:flex;align-items:flex-start;gap:0;overflow-x:auto;padding-bottom:0.5rem">
+      <div class="lc-step" style="flex:1;min-width:130px;padding:1rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px 0 0 2px;position:relative">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Entry</div>
+        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.3rem">Territory</div>
+        <div style="font-size:0.75rem;color:var(--muted);line-height:1.4">Article I rights apply. Social state access. Assembly seats. No Senate seats. §15.1</div>
+      </div>
+      <div style="width:1.5rem;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold);flex-shrink:0;margin-top:1.5rem">›</div>
+      <div class="lc-step" style="flex:1;min-width:130px;padding:1rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-left:none;position:relative">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Audit</div>
+        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.3rem">Statehood Audit</div>
+        <div style="font-size:0.75rem;color:var(--muted);line-height:1.4">LM: fiscal integrity. JM: Article I compliance. Both must pass. No political vote required once passed. §15.2</div>
+      </div>
+      <div style="width:1.5rem;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold);flex-shrink:0;margin-top:1.5rem">›</div>
+      <div class="lc-step" style="flex:1;min-width:130px;padding:1rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-left:none;position:relative">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Probation</div>
+        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.3rem">Provisional Period</div>
+        <div style="font-size:0.75rem;color:var(--muted);line-height:1.4">1–3 years as Legislature defines. Full rights. Annual audit. Clean completion → automatic Statehood. §15.2</div>
+      </div>
+      <div style="width:1.5rem;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold);flex-shrink:0;margin-top:1.5rem">›</div>
+      <div class="lc-step" style="flex:1;min-width:130px;padding:1rem;background:rgba(27,42,74,0.08);border:1px solid rgba(27,42,74,0.2);border-left:none;border-radius:0 2px 2px 0">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:0.4rem;opacity:0.7">Full Member</div>
+        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.3rem">State</div>
+        <div style="font-size:0.75rem;color:var(--muted);line-height:1.4">Two Senate seats. Proportional Assembly seats. Amendment ratification power. Annual ongoing audit. §15.2</div>
+      </div>
+    </div>
+    <div style="font-size:0.78rem;color:var(--muted);margin-top:1rem;font-style:italic">Devolution paths: Voluntary (§15.4 — referendum + Senate ratification) · Mandatory (§15.3 — three consecutive audit failures). Both return the jurisdiction to Territory status; re-qualification begins immediately.</div>
+  </div>
+
+  <div class="scenario-links" style="max-width:860px;margin:0 auto;padding:0 1rem 1rem;border-top:1px solid var(--rule);padding-top:1.5rem">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">See this in action</div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
+      <a href="scenario-the-map.html" style="font-size:0.82rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,0.3)">The Map &rarr; Redistricting &middot; §3.3</a>
+      <a href="scenario-sponsoring-state.html" style="font-size:0.82rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,0.3)">The Sponsoring State &rarr; Gate 1 &middot; §6.1</a>
+      <a href="scenario-the-audit.html" style="font-size:0.82rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,0.3)">The Audit &rarr; Statehood &middot; §15.2</a>
+      <a href="scenario-the-petition.html" style="font-size:0.82rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,0.3)">The Petition &rarr; Devolution &middot; §15.4</a>
+    </div>
+  </div>
+</div>
+
 
 <footer>
   <p>The Federated Republic — A Constitutional Project</p>
