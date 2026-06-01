@@ -217,7 +217,7 @@
   <div id="searchWrap" style="position:fixed;top:56px;left:0;right:0;z-index:190;background:rgba(27,42,74,0.98);border-bottom:1px solid rgba(201,168,76,0.2);padding:0.6rem 1.5rem;display:none;">
     <div style="max-width:780px;margin:0 auto;position:relative;">
       <input id="searchInput" type="text" placeholder="Search provisions — § number, keyword, or concept…"
-        autocomplete="off" spellcheck="false"
+        autocomplete="off" oninput="runSearch(this.value)" spellcheck="false"
         style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.3);color:rgba(245,240,232,0.9);font-family:'Jost',sans-serif;font-size:0.9rem;padding:0.5rem 2.5rem 0.5rem 0.85rem;outline:none;letter-spacing:0.02em;">
       <button onclick="closeSearch()" aria-label="Close"
         style="position:absolute;right:0.5rem;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(245,240,232,0.4);font-size:1.1rem;cursor:pointer;">✕</button>
