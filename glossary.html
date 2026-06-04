@@ -116,46 +116,48 @@
     .no-results{font-size:0.88rem;color:var(--muted);padding:1rem 0;font-style:italic}
 
     @media(max-width:860px){
-      .page-wrap{grid-template-columns:1fr;gap:0
-      .page-wrap{grid-template-columns:1fr;gap:0;padding:36px 1.25rem 80px
-    }
-      .alpha-nav{flex-direction:row;flex-wrap:wrap;position:static;gap:0;margin-bottom:1.5rem}
-      .alpha-nav a{padding:0.15rem 0.3rem}
-      .hamburger{display:flex}.nav-links{display:none}
-      .hero{padding:76px 1.25rem 40px}
-      .page-wrap{padding:36px 1.25rem 80px}
-    }
-  
-    /* ── Mobile FABs (mirrors annotated.html pattern) ── */
-    .alpha-toggle{display:none;position:fixed;bottom:1.5rem;left:1rem;width:44px;height:44px;
-      background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);
-      font-size:1.1rem;cursor:pointer;z-index:201;align-items:center;justify-content:center;
-      border-radius:2px;font-family:'JetBrains Mono',monospace}
-    .alpha-toggle:hover{border-color:var(--gold);background:var(--navy2)}
-    .search-fab-gl{display:none;position:fixed;bottom:1.5rem;right:1rem;width:44px;height:44px;
-      background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);
-      font-size:1.2rem;cursor:pointer;z-index:201;align-items:center;justify-content:center;
-      border-radius:2px}
-    .search-fab-gl:hover{border-color:var(--gold);background:var(--navy2)}
+    .page-wrap{grid-template-columns:1fr;gap:0;padding:32px 1.25rem 80px}
+    .alpha-nav{flex-direction:row;flex-wrap:wrap;position:static;gap:0;margin-bottom:1.25rem}
+    .alpha-nav a{padding:0.15rem 0.35rem}
+    .hamburger{display:flex}
+    .nav-links{display:none}
+    .hero{padding:48px 1.25rem 28px}
+    .hero-title{font-size:2rem}
+    .hero-body{font-size:0.82rem}
+    .letter-heading{font-size:1.6rem}
+    .glossary-search{margin-bottom:1.25rem}
+  }
 
-    
-      /* Hide alpha-nav by default on mobile; shown via FAB */
-      .alpha-nav{display:none;position:fixed;top:56px;left:0;width:220px;
-        height:calc(100vh - 56px);overflow-y:auto;background:rgba(27,42,74,0.97);
-        border-right:1px solid rgba(201,168,76,0.15);flex-direction:column;
-        gap:0;padding:1.25rem 0;z-index:200;flex-wrap:nowrap;margin-bottom:0}
-      .alpha-nav.mobile-open{display:flex}
-      .alpha-nav a{font-size:0.85rem;padding:0.45rem 1.25rem;color:rgba(245,240,232,0.5);
-        border-left:2px solid transparent;letter-spacing:0.05em}
-      .alpha-nav a:hover,.alpha-nav a.active-letter{color:var(--gold);
-        border-left-color:var(--gold);background:rgba(201,168,76,0.08)}
-      .alpha-nav a.no-terms{opacity:0.25}
-      /* Search bar: show always on mobile above terms */
-      .glossary-search{margin-bottom:1.5rem}
-      /* FABs visible on mobile */
-      .alpha-toggle{display:flex}
-      .search-fab-gl{display:flex}
-    }
+  /* Mobile FABs */
+  .alpha-toggle{display:none;position:fixed;bottom:1.5rem;left:1rem;width:44px;height:44px;
+    background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);
+    font-size:1.1rem;cursor:pointer;z-index:201;align-items:center;justify-content:center;
+    border-radius:2px;font-family:'JetBrains Mono',monospace}
+  .alpha-toggle:hover{border-color:var(--gold);background:var(--navy2)}
+  .search-fab-gl{display:none;position:fixed;bottom:1.5rem;right:1rem;width:44px;height:44px;
+    background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);
+    font-size:1.2rem;cursor:pointer;z-index:201;align-items:center;justify-content:center;
+    border-radius:2px}
+  .search-fab-gl:hover{border-color:var(--gold);background:var(--navy2)}
+
+  @media(max-width:640px){
+    /* Alpha-nav becomes a slide-in drawer on narrow mobile */
+    .alpha-nav{display:none;position:fixed;top:56px;left:0;width:220px;
+      height:calc(100vh - 56px);overflow-y:auto;background:rgba(27,42,74,0.97);
+      border-right:1px solid rgba(201,168,76,0.15);flex-direction:column;
+      gap:0;padding:1.25rem 0;z-index:200;flex-wrap:nowrap;margin-bottom:0}
+    .alpha-nav.mobile-open{display:flex}
+    .alpha-nav a{font-size:0.85rem;padding:0.45rem 1.25rem;color:rgba(245,240,232,0.5);
+      border-left:2px solid transparent;letter-spacing:0.05em}
+    .alpha-nav a:hover,.alpha-nav a.active-letter{color:var(--gold);
+      border-left-color:var(--gold);background:rgba(201,168,76,0.08)}
+    .alpha-nav a.no-terms{opacity:0.25}
+    .alpha-toggle{display:flex}
+    .search-fab-gl{display:flex}
+    .hero{padding:36px 1.25rem 24px}
+    .hero-title{font-size:1.75rem}
+    .page-wrap{padding:24px 1rem 80px}
+  }
   </style>
 </head>
 <body>
