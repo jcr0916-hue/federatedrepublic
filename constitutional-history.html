@@ -88,9 +88,19 @@
     /* Mobile minimap close button */
     .minimap-close{display:none;position:absolute;top:0.75rem;right:0.75rem;background:none;border:none;color:rgba(201,168,76,0.5);font-size:1.1rem;cursor:pointer;padding:4px;line-height:1}
     .minimap-close:hover{color:var(--gold)}
+    
+    .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.5rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-tool{border:1px solid rgba(201,168,76,0.35)!important;border-radius:2px!important;padding:0.2rem 0.65rem!important}
+    .nav-tool:hover,.nav-tool.active{border-color:var(--gold)!important;color:var(--gold)!important}
+    .nav-cta{background:var(--gold)!important;color:var(--navy2)!important;padding:0.2rem 0.65rem!important;border-radius:2px!important;font-weight:600!important}
+    .nav-cta:hover{background:rgba(201,168,76,0.85)!important;color:var(--navy2)!important}
+
     @media(max-width:1366px){.layout{grid-template-columns:minmax(0,1fr) 280px}}
     @media(max-width:820px){
-    .layout{grid-template-columns:1fr}
+    .layout{grid-template-columns:1fr
+      .hamburger{display:flex}
+      .nav-links{display:none}
+    }
     aside{display:block}
     .panel-wrap{display:none}
     .main{padding:2rem 1.25rem}
@@ -206,22 +216,22 @@
 </head>
 <body>
 <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
-    <div class="nav-links">
-      <a href="annotated.html" >Constitution</a>
-      <a href="scenarios.html">Scenarios</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="constitutional-history.html">Constitutional History</a>
-      <a href="sources.html">Sources</a>
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Constitution</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html" class="active">Constitutional History</a>
+    <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
-      <span class="nav-sep" aria-hidden="true"></span>
-      <a href="advisor.html" class="nav-tool">Advisor</a>
-      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
-    </div>
-    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <a href="advisor.html" class="nav-tool">Advisor</a>
+    <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
     <a href="annotated.html">Constitution</a>
