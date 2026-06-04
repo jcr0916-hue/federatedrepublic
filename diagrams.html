@@ -376,17 +376,17 @@
     }
 
         /* ═══════════════════════════════════
-       DIAGRAM 8: INSPECTORATES
+       DIAGRAM 8: MONITORS
     ═══════════════════════════════════ */
-    .insp-chart{max-width:960px;margin:0 auto}
-    .insp-principle{background:var(--navy);color:var(--white);padding:1rem 1.5rem;margin-bottom:1.5rem;font-size:0.88rem;line-height:1.6;text-align:center}
-    .insp-principle strong{color:var(--gold);display:block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.3rem}
-    .insp-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem}
-    .insp-col{border:2px solid;display:flex;flex-direction:column}
-    .insp-col-header{padding:1.25rem;border-bottom:1px solid rgba(0,0,0,0.08);text-align:center}
-    .insp-col-abbr{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;line-height:1;display:block;margin-bottom:0.2rem}
-    .insp-col-name{font-size:0.82rem;font-weight:600;display:block;margin-bottom:0.2rem}
-    .insp-col-domain{font-size:0.72rem;letter-spacing:0.08em;opacity:0.65}
+    .monitor-chart{max-width:960px;margin:0 auto}
+    .monitor-principle{background:var(--navy);color:var(--white);padding:1rem 1.5rem;margin-bottom:1.5rem;font-size:0.88rem;line-height:1.6;text-align:center}
+    .monitor-principle strong{color:var(--gold);display:block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.3rem}
+    .monitor-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem}
+    .monitor-col{border:2px solid;display:flex;flex-direction:column}
+    .monitor-col-header{padding:1.25rem;border-bottom:1px solid rgba(0,0,0,0.08);text-align:center}
+    .monitor-col-abbr{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;line-height:1;display:block;margin-bottom:0.2rem}
+    .monitor-col-name{font-size:0.82rem;font-weight:600;display:block;margin-bottom:0.2rem}
+    .monitor-col-domain{font-size:0.72rem;letter-spacing:0.08em;opacity:0.65}
     .insp-selection{padding:0.85rem 1.1rem;border-bottom:1px solid rgba(0,0,0,0.06);font-size:0.8rem;line-height:1.45;background:rgba(0,0,0,0.02)}
     .insp-selection-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:0.35rem;opacity:0.6}
     .insp-selection-who{font-weight:600;display:block;margin-bottom:0.15rem}
@@ -399,21 +399,21 @@
     .insp-special strong{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.2rem}
 
     .col-li{border-color:#4a5c1a}
-    .col-li .insp-col-abbr{color:#4a5c1a}
-    .col-li .insp-col-name{color:#4a5c1a}
-    .col-li .insp-col-header{background:#f9fdf4}
+    .col-li .monitor-col-abbr{color:#4a5c1a}
+    .col-li .monitor-col-name{color:#4a5c1a}
+    .col-li .monitor-col-header{background:#f9fdf4}
     .col-li .insp-function{border-left-color:#4a5c1a}
 
     .col-ei{border-color:var(--gold2)}
-    .col-ei .insp-col-abbr{color:var(--gold2)}
-    .col-ei .insp-col-name{color:var(--gold2)}
-    .col-ei .insp-col-header{background:#fffbf4}
+    .col-ei .monitor-col-abbr{color:var(--gold2)}
+    .col-ei .monitor-col-name{color:var(--gold2)}
+    .col-ei .monitor-col-header{background:#fffbf4}
     .col-ei .insp-function{border-left-color:var(--gold2)}
 
     .col-ji{border-color:#5c1a4a}
-    .col-ji .insp-col-abbr{color:#5c1a4a}
-    .col-ji .insp-col-name{color:#5c1a4a}
-    .col-ji .insp-col-header{background:#fdf4fb}
+    .col-ji .monitor-col-abbr{color:#5c1a4a}
+    .col-ji .monitor-col-name{color:#5c1a4a}
+    .col-ji .monitor-col-header{background:#fdf4fb}
     .col-ji .insp-function{border-left-color:#5c1a4a}
 
     .insp-rules{background:var(--cream2);border:1px solid var(--border);margin-bottom:1.5rem}
@@ -441,7 +441,7 @@
     .cross-from.lottery{border-color:var(--navy);color:var(--navy)}
 
     @media(max-width:760px){
-      .insp-columns{grid-template-columns:1fr}
+      .monitor-columns{grid-template-columns:1fr}
       .insp-rules-grid{grid-template-columns:1fr}
       .insp-term{gap:1rem}
     }
@@ -600,9 +600,9 @@
     .cross-from.ji{background:#2d0050;color:#ce93d8;border-left:4px solid #9c27b0;border-color:#2d0050}
 
     /* ── Monitor column color coding ── */
-    .insp-col.col-li .insp-col-header{border-top:4px solid var(--gold)}
-    .insp-col.col-ei .insp-col-header{border-top:4px solid #4caf50}
-    .insp-col.col-ji .insp-col-header{border-top:4px solid #9c27b0}
+    .monitor-col.col-li .monitor-col-header{border-top:4px solid var(--gold)}
+    .monitor-col.col-ei .monitor-col-header{border-top:4px solid #4caf50}
+    .monitor-col.col-ji .monitor-col-header{border-top:4px solid #9c27b0}
 
     /* ── Monitor rules ── */
     .insp-rule{display:flex;gap:0.6rem;align-items:flex-start;padding:0.4rem 0;font-size:0.8rem}
@@ -683,7 +683,7 @@
   <button class="tab-btn" onclick="showTab('tiers')">Military Tiers</button>
   <button class="tab-btn" onclick="showTab('dual')">Dual Executive</button>
   <button class="tab-btn" onclick="showTab('amendment')">Amendment Paths</button>
-  <button class="tab-btn" onclick="showTab('inspectorates')">Monitors</button>
+  <button class="tab-btn" onclick="showTab('monitors')">Monitors</button>
   <button class="tab-btn" onclick="showTab('sc-appointment')">SC Appointment</button>
   <button class="tab-btn" onclick="showTab('social')">Social State</button>
   <button class="tab-btn" onclick="showTab('pool')">Pool Process</button>
@@ -1559,19 +1559,19 @@ id="tab-dual">
 
 
 <!-- ═══════════════════════════════
-     DIAGRAM 8: INSPECTORATES
+     DIAGRAM 8: MONITORS
 ═══════════════════════════════ -->
 <div class="diagram-section" 
-id="tab-inspectorates">
+id="tab-monitors">
   <div class="section-intro">
     <h2>The Three Monitors</h2>
     <p>One for each branch. Each is selected by the branches it does not watch. None has enforcement power. Their sole constitutional output is published fact.</p>
   </div>
 
-  <div class="insp-chart">
+  <div class="monitor-chart">
 
     <!-- KEY PRINCIPLE -->
-    <div class="insp-principle">
+    <div class="monitor-principle">
       <strong>§8 — The Governing Rule</strong>
       No branch controls its own oversight. The Legislature does not select the Legislative Monitor General. The Executive does not select the Executive Monitor General. No political actor controls the Judicial Monitor General — they are chosen by random lottery.
     </div>
@@ -1599,8 +1599,8 @@ id="tab-inspectorates">
       </div>
     </div>
 
-    <!-- THREE INSPECTORATE COLUMNS -->
-    <div class="insp-columns">
+    <!-- THREE MONITOR COLUMNS -->
+    <div class="monitor-columns">
 
       <!-- LM -->
       <div class="insp-col col-li">
