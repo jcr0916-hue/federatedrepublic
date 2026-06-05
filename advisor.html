@@ -9,12 +9,8 @@
   <meta property="og:title" content="Constitutional Advisor — The Federated Republic">
   <meta property="og:description" content="Ask the Constitution a question. 166 provisions, cited inline, linking directly to the annotated text.">
   <meta property="og:url" content="https://thefederatedrepublic.org/advisor.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
     *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
     body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85;min-height:100vh}
 
     /* ── NAV ── */
@@ -105,16 +101,8 @@
       #submit-btn{width:100%}
       .input-
     }
-    /* ── FOOTER ── */
-    footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2rem 1.25rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;text-align:center}
-    .footer-logo{font-family:'Cormorant Garamond',serif;color:rgba(245,240,232,0.4);font-size:0.9rem;letter-spacing:0.1em}
-    .footer-links{display:flex;flex-wrap:wrap;gap:0.25rem 1rem;justify-content:center}
-    .footer-links a{font-size:0.72rem;color:rgba(245,240,232,0.35);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .footer-links a:hover{color:var(--gold)}
-    .footer-note{font-size:0.68rem;color:rgba(245,240,232,0.2);letter-spacing:0.06em;line-height:1.6}
     @media(min-width:820px){
-      footer{flex-direction:row;justify-content:space-between;text-align:left}
-    }
+      }
   </style>
 
   <script>
@@ -141,11 +129,15 @@
     } catch(e){}
   })();
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <a href="#main-content-area" class="skip-nav">Skip to main content</a>
   <nav>
-  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
   <div class="nav-links">
     <a href="annotated.html">Constitution</a>
     <a href="scenarios.html">Scenarios</a>

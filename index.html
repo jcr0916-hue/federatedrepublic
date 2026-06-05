@@ -13,23 +13,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="The Federated Republic">
   <meta name="twitter:description" content="A constitution built from first principles.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* ── TOKENS ── */
-    :root {
-      --navy: #1B2A4A;
-      --navy2: #0f1e38;
-      --gold: #C9A84C;
-      --cream: #F5F0E8;
-      --cream2: #EDE7D8;
-      --text: #2a2a2a;
-      --muted: #7a7060;
-      --border: #d4c9b0;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
     body {
       font-family: 'Jost', sans-serif;
       background: var(--cream);
@@ -39,15 +23,12 @@
       overflow-x: hidden;
     }
 
-    /* ── SKIP NAV ── */
-    .skip-nav {
+    nav {
       position: absolute; left: -9999px; top: auto;
       background: var(--gold); color: var(--navy2);
       padding: 0.5rem 1rem; font-size: 0.8rem;
       z-index: 9999;
     }
-    .skip-nav:focus { left: 1rem; top: 1rem; }
-
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
@@ -79,14 +60,6 @@
       transition: color 0.2s; white-space: nowrap;
     }
     .nav-links a:hover { color: var(--gold); }
-    .nav-cta {
-      background: var(--gold) !important;
-      color: var(--navy2) !important;
-      font-weight: 600 !important;
-      padding: 0.3rem 0.75rem !important;
-      margin-left: 0.25rem;
-    }
-    .nav-cta:hover { background: #b89040 !important; color: #fff !important; }
     .hamburger {
       display: none; flex-direction: column;
       gap: 5px; cursor: pointer;
@@ -147,12 +120,6 @@
       align-items: center;
     }
     
-    .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.5rem;flex-shrink:0;display:inline-block;vertical-align:middle}
-    .nav-tool{border:1px solid rgba(201,168,76,0.35)!important;border-radius:2px!important;padding:0.2rem 0.65rem!important}
-    .nav-tool:hover,.nav-tool.active{border-color:var(--gold)!important;color:var(--gold)!important}
-    .nav-cta{background:var(--gold)!important;color:var(--navy2)!important;padding:0.2rem 0.65rem!important;border-radius:2px!important;font-weight:600!important}
-    .nav-cta:hover{background:rgba(201,168,76,0.85)!important;color:var(--navy2)!important}
-
     @media(min-width:780px){
       .hero-layout { grid-template-columns: 1.15fr 0.85fr; gap: 4rem; }
     }
@@ -660,23 +627,19 @@
       .hamburger{-webkit-appearance:none;appearance:none;display:flex}
       .nav-links{display:none}
     }
-    /* ── FOOTER ── */
-    footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2rem 1.25rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;text-align:center}
-    .footer-logo{font-family:'Cormorant Garamond',serif;color:rgba(245,240,232,0.4);font-size:0.9rem;letter-spacing:0.1em}
-    .footer-links{display:flex;flex-wrap:wrap;gap:0.25rem 1rem;justify-content:center}
-    .footer-links a{font-size:0.72rem;color:rgba(245,240,232,0.35);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .footer-links a:hover{color:var(--gold)}
-    .footer-note{font-size:0.68rem;color:rgba(245,240,232,0.2);letter-spacing:0.06em;line-height:1.6}
     @media(min-width:820px){
-      footer{flex-direction:row;justify-content:space-between;text-align:left}
-    }
+      }
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <a href="#main-content-area" class="skip-nav">Skip to main content</a>
 
   <nav>
-  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
   <div class="nav-links">
     <a href="annotated.html">Constitution</a>
     <a href="scenarios.html">Scenarios</a>
@@ -728,7 +691,7 @@
           <a href="advisor.html" class="hero-advisor-link">Or ask the Constitutional Advisor a question &rarr;</a>
         </div>
         <div class="hero-seal-wrap">
-          <img src="seal.png" alt="Seal of the Federated Republic" class="hero-seal-img">
+          
         </div>
       </div>
       <div class="hero-scroll" aria-hidden="true">

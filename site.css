@@ -1,0 +1,155 @@
+/* ── TOKENS ── */
+    :root {
+      --navy: #1B2A4A;
+      --navy2: #0f1e38;
+      --gold: #C9A84C;
+      --cream: #F5F0E8;
+      --cream2: #EDE7D8;
+      --text: #2a2a2a;
+      --muted: #7a7060;
+      --border: #d4c9b0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── SKIP NAV ── */
+    .skip-nav {
+      position: absolute; left: -9999px; top: auto;
+      background: var(--gold); color: var(--navy2);
+      padding: 0.5rem 1rem; font-size: 0.8rem;
+      z-index: 9999;
+    }
+    .skip-nav:focus { left: 1rem; top: 1rem; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: rgba(15,30,56,0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1.25rem; height: 56px;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--gold); font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.07em; text-decoration: none;
+      display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;
+    }
+    .nav-seal {
+      height: 30px; width: 30px;
+      border-radius: 50%; object-fit: cover;
+      opacity: 0.9; flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 0.15rem;
+      flex-wrap: nowrap;
+    }
+    .nav-links a {
+      color: rgba(245,240,232,0.65); text-decoration: none;
+      font-size: 0.72rem; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.3rem 0.55rem;
+      transition: color 0.2s; white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--navy2) !important;
+      font-weight: 600 !important;
+      padding: 0.3rem 0.75rem !important;
+      margin-left: 0.25rem;
+    }
+    .nav-cta:hover { background: #b89040 !important; color: #fff !important; }
+    .hamburger {
+      display: none; flex-direction: column;
+      gap: 5px; cursor: pointer;
+      background: none; border: none;
+      padding: 6px; margin-left: auto;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--gold); transition: 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 56px; left: 0; right: 0;
+      background: rgba(10,20,42,0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      flex-direction: column; z-index: 190;
+      padding: 0.5rem 0 1rem;
+      max-height: calc(100vh - 56px);
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: rgba(245,240,232,0.8); text-decoration: none;
+      font-size: 0.9rem; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.85rem 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: block; transition: color 0.2s, background 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--gold); background: rgba(201,168,76,0.06); }
+    .mobile-menu a.mobile-cta {
+      margin: 0.75rem 1.5rem 0;
+      background: var(--gold); color: var(--navy2) !important;
+      font-weight: 600; text-align: center;
+      border: none; border-radius: 0;
+    }
+
+    /* ── MOBILE NAV ── */
+    @media (max-width: 859px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .hero-track-sub { font-size: 0.65rem; letter-spacing: 0.06em; }
+      .hero-advisor-link { font-size: 0.72rem; }
+      .advisor-questions { margin-top: 1rem; }
+      .advisor-q { font-size: 0.78rem; padding: 0.5rem 0.75rem; }
+      .hero-actions { gap: 0.5rem; }
+      .btn-hero-primary, .btn-hero-ghost { padding: 0.65rem 1.1rem; font-size: 0.76rem; }
+    }
+  
+  @media(max-width:820px){
+      .hamburger{-webkit-appearance:none;appearance:none;display:flex}
+      .nav-links{display:none}
+    }
+    /* ── FOOTER ── */
+    footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2rem 1.25rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;text-align:center}
+    .footer-logo{font-family:'Cormorant Garamond',serif;color:rgba(245,240,232,0.4);font-size:0.9rem;letter-spacing:0.1em}
+    .footer-links{display:flex;flex-wrap:wrap;gap:0.25rem 1rem;justify-content:center}
+    .footer-links a{font-size:0.72rem;color:rgba(245,240,232,0.35);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-note{font-size:0.68rem;color:rgba(245,240,232,0.2);letter-spacing:0.06em;line-height:1.6}
+    @media(min-width:820px){
+      footer{flex-direction:row;justify-content:space-between;text-align:left}
+    }
+  
+    /* ── NAV UTILITIES ── */
+    .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.5rem;flex-shrink:0;display:inline-block;vertical-align:middle}
+    .nav-tool{border:1px solid rgba(201,168,76,0.35)!important;border-radius:2px!important;padding:0.2rem 0.65rem!important}
+    .nav-tool:hover,.nav-tool.active{border-color:var(--gold)!important;color:var(--gold)!important}
+    .nav-cta{background:var(--gold)!important;color:var(--navy2)!important;padding:0.2rem 0.65rem!important;border-radius:2px!important;font-weight:600!important}
+    .nav-cta:hover{background:rgba(201,168,76,0.85)!important;color:var(--navy2)!important}
+
+    /* ── SKIP NAV ── */
+    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
+    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
+    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
+    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
+    button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+    /* ── HAMBURGER BREAKPOINT (iPad + mobile) ── */
+    @media(max-width:1024px){
+      .hamburger{display:flex!important}
+      .nav-links{display:none!important}
+    }

@@ -13,10 +13,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sources and Inspiration">
   <meta name="twitter:description" content="The intellectual genealogy of the Federated Republic — foundational documents, philosophical tradition, and suggested reading.">>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
     nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
@@ -67,12 +64,6 @@
     .closing-note p+p{margin-top:0.75rem}
 
     
-    .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.5rem;flex-shrink:0;display:inline-block;vertical-align:middle}
-    .nav-tool{border:1px solid rgba(201,168,76,0.35)!important;border-radius:2px!important;padding:0.2rem 0.65rem!important}
-    .nav-tool:hover,.nav-tool.active{border-color:var(--gold)!important;color:var(--gold)!important}
-    .nav-cta{background:var(--gold)!important;color:var(--navy2)!important;padding:0.2rem 0.65rem!important;border-radius:2px!important;font-weight:600!important}
-    .nav-cta:hover{background:rgba(201,168,76,0.85)!important;color:var(--navy2)!important}
-
     @media(max-width:640px){
       .page-wrap{padding:76px 1.25rem 80px}
       .page-header h1{font-size:2rem}
@@ -105,30 +96,24 @@
     
   
     /* ── Accessibility ── */
-    .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
-    .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
     :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
     a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
     button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
     .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-    /* ── FOOTER ── */
-    footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2rem 1.25rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;text-align:center}
-    .footer-logo{font-family:'Cormorant Garamond',serif;color:rgba(245,240,232,0.4);font-size:0.9rem;letter-spacing:0.1em}
-    .footer-links{display:flex;flex-wrap:wrap;gap:0.25rem 1rem;justify-content:center}
-    .footer-links a{font-size:0.72rem;color:rgba(245,240,232,0.35);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .footer-links a:hover{color:var(--gold)}
-    .footer-note{font-size:0.68rem;color:rgba(245,240,232,0.2);letter-spacing:0.06em;line-height:1.6}
     @media(min-width:820px){
-      footer{flex-direction:row;justify-content:space-between;text-align:left}
-    }
+      }
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   
   
   <nav>
-  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
   <div class="nav-links">
     <a href="annotated.html">Constitution</a>
     <a href="scenarios.html">Scenarios</a>
