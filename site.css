@@ -3,11 +3,23 @@
       --navy: #1B2A4A;
       --navy2: #0f1e38;
       --gold: #C9A84C;
+      --gold2: #a8843a;
       --cream: #F5F0E8;
       --cream2: #EDE7D8;
       --text: #2a2a2a;
       --muted: #7a7060;
       --border: #d4c9b0;
+      --white: #ffffff;
+      --ink: #1a1a1a;
+      --rule: rgba(212,201,176,0.5);
+      --green: #2d6a4f;
+      --greenlight: rgba(45,106,79,0.12);
+      --red: #9b2335;
+      --redlight: rgba(155,35,53,0.12);
+      --blue: #1B4A7A;
+      --bluelight: rgba(27,74,122,0.12);
+      --purple: #5c3d7a;
+      --purplelight: rgba(92,61,122,0.12);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }

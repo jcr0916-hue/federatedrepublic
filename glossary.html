@@ -14,42 +14,11 @@
   <meta name="twitter:title" content="Glossary">
   <meta name="twitter:description" content="Every defined term in the Federated Republic's constitution — what it means, where it appears, and why it matters.">
   <style>
-    /* ── GLOSSARY TWO-COLUMN LAYOUT (self-contained) ── */
-    .fr-cols{
-      display:flex !important;
-      flex-direction:row !important;
-      align-items:start !important;
-      gap:2.5rem;
-      max-width:1100px;
-      margin:0 auto;
-      padding:3rem 2rem 5rem;
-    }
-    .fr-cols .fr-sidebar{
-      width:180px !important;
-      flex-shrink:0 !important;
-      flex-grow:0 !important;
-      position:sticky !important;
-      top:80px !important;
-      align-self:flex-start;
-      max-height:calc(100vh - 100px);
-      overflow-y:auto;
-    }
-    .fr-cols .fr-main{
-      flex:1 1 0 !important;
-      min-width:0 !important;
-      width:0 !important;
-    }
+    
     @media(max-width:1024px){
-      .fr-cols{flex-direction:column !important;padding:2rem 1.25rem 5rem}
-      .fr-cols .fr-sidebar{
-        position:static !important;
-        width:100% !important;
-        max-height:none !important;
       }
-    }
     @media(max-width:640px){
-      .fr-cols{padding:1.25rem 1rem 5rem}
-    }
+      }
     
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
@@ -181,8 +150,174 @@
       .hamburger{display:flex}
       .nav-links{display:none}
     }
-    
-  </style>
+    /* ── GLOSSARY CONTENT — full width, no sidebar ── */
+    .glossary-wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:3rem 2rem 6rem;
+    }
+    .glossary-search{
+      display:flex;
+      align-items:center;
+      gap:0.75rem;
+      background:var(--cream2);
+      border:1px solid var(--border);
+      border-radius:3px;
+      padding:0.65rem 1rem;
+      margin-bottom:2.5rem;
+    }
+    .glossary-search input{
+      flex:1;
+      border:none;
+      background:transparent;
+      font-family:'Jost',sans-serif;
+      font-size:0.9rem;
+      color:var(--text);
+      outline:none;
+    }
+    .glossary-search input::placeholder{color:var(--muted)}
+    .glossary-search span{color:var(--muted);font-size:1.1rem}
+
+    /* ── ALPHA NAV DRAWER ── */
+    .alpha-nav{
+      position:fixed;
+      top:0;left:0;
+      width:220px;
+      height:100vh;
+      background:var(--navy2);
+      border-right:1px solid rgba(201,168,76,0.2);
+      z-index:300;
+      display:flex;
+      flex-direction:column;
+      padding:4.5rem 0 2rem;
+      transform:translateX(-100%);
+      transition:transform 0.25s ease;
+      overflow-y:auto;
+    }
+    .alpha-nav.open{transform:translateX(0)}
+    .alpha-nav a{
+      font-family:'JetBrains Mono',monospace;
+      font-size:0.85rem;
+      letter-spacing:0.12em;
+      color:rgba(245,240,232,0.5);
+      text-decoration:none;
+      padding:0.5rem 1.5rem;
+      transition:all 0.15s;
+      border-left:2px solid transparent;
+    }
+    .alpha-nav a:hover,.alpha-nav a.active-letter{
+      color:var(--gold);
+      border-left-color:var(--gold);
+      background:rgba(201,168,76,0.07);
+    }
+    .alpha-nav a.no-terms{opacity:0.25;pointer-events:none}
+    .alpha-close{
+      position:absolute;
+      top:1rem;right:1rem;
+      background:none;border:none;
+      color:rgba(245,240,232,0.4);
+      font-size:1.2rem;cursor:pointer;
+      padding:4px;line-height:1;
+      -webkit-appearance:none;appearance:none;
+    }
+    .alpha-close:hover{color:var(--gold)}
+
+    /* Drawer overlay */
+    .drawer-overlay{
+      display:none;
+      position:fixed;inset:0;
+      background:rgba(0,0,0,0.4);
+      z-index:299;
+    }
+    .drawer-overlay.open{display:block}
+
+    /* ── FLOATING BUTTONS ── */
+    .gl-fab{
+      position:fixed;
+      bottom:1.75rem;
+      width:48px;height:48px;
+      background:var(--navy);
+      border:1px solid rgba(201,168,76,0.35);
+      color:var(--gold);
+      border-radius:3px;
+      cursor:pointer;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.1rem;
+      z-index:200;
+      transition:border-color 0.15s,background 0.15s;
+      -webkit-appearance:none;appearance:none;
+    }
+    .gl-fab:hover{border-color:var(--gold);background:rgba(27,42,74,0.95)}
+    .gl-fab-nav{left:1.25rem}
+    .gl-fab-search{right:1.25rem;font-size:1.05rem}
+
+    /* Search overlay */
+    .search-overlay{
+      display:none;
+      position:fixed;
+      top:0;left:0;right:0;
+      background:var(--navy2);
+      border-bottom:1px solid rgba(201,168,76,0.2);
+      padding:1rem 1.5rem;
+      z-index:301;
+      gap:1rem;
+      align-items:center;
+    }
+    .search-overlay.open{display:flex}
+    .search-overlay input{
+      flex:1;
+      background:transparent;
+      border:none;
+      color:var(--cream);
+      font-family:'Jost',sans-serif;
+      font-size:1rem;
+      outline:none;
+    }
+    .search-overlay input::placeholder{color:rgba(245,240,232,0.35)}
+    .search-close{
+      background:none;border:none;
+      color:rgba(245,240,232,0.4);
+      font-size:1.2rem;cursor:pointer;
+      -webkit-appearance:none;appearance:none;
+    }
+    .search-close:hover{color:var(--gold)}
+
+    /* Letter group headings */
+    .letter-heading{
+      font-family:'Cormorant Garamond',serif;
+      font-size:2.5rem;font-weight:300;
+      color:var(--cream2);
+      margin-bottom:1rem;
+      padding-top:0.5rem;
+    }
+    .letter-group{margin-bottom:3rem}
+    .term-entry{
+      margin-bottom:1.75rem;
+      padding-bottom:1.75rem;
+      border-bottom:1px solid rgba(212,201,176,0.35);
+    }
+    .term-entry:last-child{border-bottom:none}
+    .term-name{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.2rem;font-weight:600;
+      color:var(--navy);
+      margin-bottom:0.25rem;
+      display:flex;align-items:baseline;gap:0.75rem;flex-wrap:wrap;
+    }
+    .term-ref{
+      font-family:'JetBrains Mono',monospace;
+      font-size:0.65rem;
+      color:var(--gold);
+      text-decoration:none;
+      letter-spacing:0.06em;
+    }
+    .term-def{font-size:0.93rem;color:var(--text);line-height:1.8;margin-bottom:0.3rem}
+    .term-note{font-size:0.82rem;color:var(--muted);line-height:1.7;font-style:italic}
+
+    @media(max-width:640px){
+      .glossary-wrap{padding:2rem 1rem 6rem}
+    }
+    </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -228,8 +363,8 @@
     </div>
   </section>
 
-  <div class="fr-cols">
-    <nav class="alpha-nav fr-sidebar" id="alphNav" aria-label="Jump to letter">
+  
+    <nav class="alpha-nav" aria-label="Jump to letter" id="alphNav" id="alphNav" aria-label="Jump to letter">
       <a href="#g-A">A</a>
       <a href="#g-B">B</a>
       <a href="#g-C">C</a>
@@ -258,7 +393,7 @@
       <a href="#g-Z" class="no-terms">Z</a>
     </nav>
 
-    <div class="glossary-content fr-main">
+    <div class="glossary-wrap"><div class="glossary-content" id="main-content-area">
       <div class="glossary-search">
         <span>⌕</span>
         <input type="text" id="glossarySearch" placeholder="Filter terms…" autocomplete="off" oninput="filterGlossary(this.value)">
@@ -613,6 +748,7 @@
       </div>
 
     </div><!-- glossary-content -->
+  <!-- glossary-wrap -->
   <!-- page-wrap -->
 
 
@@ -682,12 +818,99 @@
     aria-label="Search glossary">⌕</button>
 
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () =>
-        navigator.serviceWorker.register('/sw.js')
-          .catch(() => {}) // fail silently if blocked
-      );
+  // ── Alpha-nav drawer ──────────────────────────────
+  function openAlphaNav(){
+    document.getElementById('alphNav').classList.add('open');
+    document.getElementById('drawerOverlay').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeAlphaNav(){
+    document.getElementById('alphNav').classList.remove('open');
+    document.getElementById('drawerOverlay').classList.remove('open');
+    document.body.style.overflow='';
+  }
+
+  // ── Search overlay ────────────────────────────────
+  function openSearch(){
+    document.getElementById('searchOverlay').classList.add('open');
+    document.getElementById('searchInput').focus();
+  }
+  function closeSearch(){
+    document.getElementById('searchOverlay').classList.remove('open');
+    filterGlossary('');
+    document.getElementById('searchInput').value='';
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){closeAlphaNav();closeSearch();}
+  });
+
+  // ── Term filter ───────────────────────────────────
+  function filterGlossary(q){
+    var term = q.toLowerCase().trim();
+    var entries = document.querySelectorAll('.term-entry');
+    var groups  = document.querySelectorAll('.letter-group');
+    entries.forEach(function(e){
+      var data = e.getAttribute('data-term')||'';
+      e.style.display = (!term || data.includes(term)) ? '' : 'none';
+    });
+    groups.forEach(function(g){
+      var visible = g.querySelectorAll('.term-entry:not([style*="display: none"])');
+      g.style.display = visible.length ? '' : 'none';
+    });
+    var noResults = document.getElementById('noResults');
+    if(noResults){
+      var any = document.querySelectorAll('.term-entry:not([style*="display: none"])');
+      noResults.style.display = any.length ? 'none' : 'block';
     }
-  </script>
+  }
+
+  // ── Active letter highlight on scroll ─────────────
+  var groups = document.querySelectorAll('.letter-group');
+  var navLinks = document.querySelectorAll('.alpha-nav a');
+  function updateActiveOnScroll(){
+    var scrollY = window.scrollY + 100;
+    var current = '';
+    groups.forEach(function(g){
+      if(g.offsetTop <= scrollY) current = g.id;
+    });
+    navLinks.forEach(function(a){
+      var href = a.getAttribute('href')||'';
+      a.classList.toggle('active-letter', href === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveOnScroll, {passive:true});
+
+  // ── Alpha-nav: close on link click ────────────────
+  navLinks.forEach(function(a){
+    a.addEventListener('click', function(){
+      setTimeout(closeAlphaNav, 150);
+    });
+  });
+
+  // ── Mobile nav ────────────────────────────────────
+  function toggleMobileNav(){
+    var m = document.getElementById('mobileMenu');
+    var b = document.querySelector('.hamburger');
+    if(m){ var open = m.classList.toggle('open'); b&&b.setAttribute('aria-expanded',open); }
+  }
+</script>
+
+  <!-- Drawer overlay (closes alpha-nav) -->
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeAlphaNav()"></div>
+
+  <!-- Search overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <span style="color:var(--gold);font-size:1.1rem">⌕</span>
+    <input type="text" id="searchInput" placeholder="Filter terms…" autocomplete="off"
+           oninput="filterGlossary(this.value)" aria-label="Filter glossary terms">
+    <button class="search-close" onclick="closeSearch()" aria-label="Close search">✕</button>
+  </div>
+
+  <!-- Floating action buttons -->
+  <button class="gl-fab gl-fab-nav" onclick="openAlphaNav()" aria-label="Jump to letter">A–Z</button>
+  <button class="gl-fab gl-fab-search" onclick="openSearch()" aria-label="Search">⌕</button>
+
 </body>
 </html>
