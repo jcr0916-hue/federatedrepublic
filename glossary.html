@@ -122,17 +122,6 @@
   }
 
   /* Mobile FABs */
-  .alpha-toggle{display:none;position:fixed;bottom:1.5rem;left:1rem;width:44px;height:44px;
-    background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);
-    font-size:1.1rem;cursor:pointer;z-index:201;align-items:center;justify-content:center;
-    border-radius:2px;font-family:'JetBrains Mono',monospace}
-  .alpha-toggle:hover{border-color:var(--gold);background:var(--navy2)}
-  .search-fab-gl{display:none;position:fixed;bottom:1.5rem;right:1rem;width:44px;height:44px;
-    background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);
-    font-size:1.2rem;cursor:pointer;z-index:201;align-items:center;justify-content:center;
-    border-radius:2px}
-  .search-fab-gl:hover{border-color:var(--gold);background:var(--navy2)}
-
   @media(max-width:640px){
     /* Alpha-nav becomes a slide-in drawer on narrow mobile */
     .alpha-nav a{font-size:0.85rem;padding:0.45rem 1.25rem;color:rgba(245,240,232,0.5);
@@ -140,8 +129,6 @@
     .alpha-nav a:hover,.alpha-nav a.active-letter{color:var(--gold);
       border-left-color:var(--gold);background:rgba(201,168,76,0.08)}
     .alpha-nav a.no-terms{opacity:0.25}
-    .alpha-toggle{display:flex}
-    .search-fab-gl{display:flex}
     .hero{padding:36px 1.25rem 24px}
     .hero-title{font-size:1.75rem}
     }
@@ -394,10 +381,6 @@
     </nav>
 
     <div class="glossary-wrap"><div class="glossary-content" id="main-content-area">
-      <div class="glossary-search">
-        <span>⌕</span>
-        <input type="text" id="glossarySearch" placeholder="Filter terms…" autocomplete="off" oninput="filterGlossary(this.value)">
-      </div>
       <div id="noResults" class="no-results" style="display:none">No terms match that search.</div>
 
       <!-- A -->
@@ -810,13 +793,6 @@
 </footer>
 
   <!-- Mobile FABs -->
-  <button class="alpha-toggle" id="alphaToggle" 
-    onclick="document.getElementById('alphNav').classList.toggle('mobile-open')"
-    aria-label="Toggle alphabet navigation">≡</button>
-  <button class="search-fab-gl" id="searchFabGl"
-    onclick="document.getElementById('glossarySearch').focus();document.getElementById('glossarySearch').scrollIntoView({behavior:'smooth',block:'center'})"
-    aria-label="Search glossary">⌕</button>
-
   <script>
   // ── Alpha-nav drawer ──────────────────────────────
   function openAlphaNav(){
