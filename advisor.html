@@ -24,7 +24,7 @@
     .nav-links{display:flex;align-items:center;gap:0.15rem}
     .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.3rem 0.55rem;transition:color 0.2s;white-space:nowrap}
     .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;margin-left:auto}
+    .hamburger{-webkit-appearance:none;appearance:none;display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;margin-left:auto}
     .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
     .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(10,20,42,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);flex-direction:column;z-index:190;padding:0.5rem 0 1rem;max-height:calc(100vh - 56px);overflow-y:auto}
     .mobile-menu.open{display:flex}
@@ -59,7 +59,7 @@
     #question{width:100%;background:#fff;border:1px solid var(--border);padding:1rem 1.25rem;font-size:0.98rem;font-family:'Jost',sans-serif;color:var(--text);line-height:1.7;resize:vertical;outline:none;transition:border-color 0.2s;min-height:120px;border-radius:2px}
     #question:focus{border-color:var(--gold)}
     #question::placeholder{color:#c8bfb0}
-    .input-footer{display:flex;justify-content:space-between;align-items:center;margin-top:0.85rem;flex-wrap:wrap;gap:0.5rem}
+    .input-
     .input-hint{font-size:0.7rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
     #submit-btn{background:var(--navy);color:var(--gold);border:none;padding:0.75rem 2rem;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;font-family:'Jost',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s,color 0.2s;min-height:48px}
     #submit-btn:disabled{background:var(--border);color:var(--muted);cursor:default}
@@ -84,7 +84,7 @@
     .response-body p:last-child{margin-bottom:0}
     .cite{color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.86em;font-weight:600;border-bottom:1px solid rgba(201,168,76,0.35);text-decoration:none;padding-bottom:1px;transition:border-color 0.15s}
     .cite:hover{border-color:var(--gold)}
-    .response-footer{border-top:1px solid var(--border);margin-top:2rem;padding-top:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem}
+    .response-
     .response-footer-note{font-size:0.68rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
     #new-btn{background:none;border:1px solid var(--border);color:var(--muted);font-size:0.7rem;padding:0.4rem 0.9rem;cursor:pointer;font-family:'Jost',sans-serif;letter-spacing:0.08em;text-transform:uppercase;transition:border-color 0.15s,color 0.15s;min-height:44px}
     #new-btn:hover{border-color:var(--gold);color:var(--gold)}
@@ -92,27 +92,6 @@
     /* ── ADVISOR NOTE ── */
     .advisor-note{margin-top:3rem;padding:1.25rem 1.5rem;background:var(--cream2);border-left:3px solid var(--border);font-size:0.82rem;line-height:1.75;color:var(--muted)}
     .advisor-note strong{color:var(--navy)}
-
-    /* ── FOOTER ── */
-    footer{background:var(--navy2);padding:2.5rem 2rem;margin-top:3rem}
-    .footer-inner{max-width:720px;margin:0 auto}
-    .footer-links{display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;margin-bottom:1.5rem}
-    .footer-links a{color:rgba(245,240,232,0.45);text-decoration:none;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s}
-    .footer-links a:hover{color:var(--gold)}
-    .footer-download{display:inline-flex;align-items:center;gap:1rem;border:1px solid rgba(201,168,76,0.25);padding:0.85rem 1.25rem;text-decoration:none;transition:border-color 0.2s;margin-bottom:1.5rem}
-    .footer-download:hover{border-color:rgba(201,168,76,0.5)}
-    .footer-download-meta{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);display:block;margin-bottom:0.2rem}
-    .footer-download-title{color:rgba(245,240,232,0.75);font-size:0.88rem}
-    .footer-download-btn{background:var(--gold);color:var(--navy2);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;font-weight:600;font-family:'Jost',sans-serif;white-space:nowrap}
-    .footer-note{font-size:0.72rem;color:rgba(245,240,232,0.3);line-height:1.6}
-
-    /* ── MOBILE ── */
-    
-    .nav-sep{width:1px;height:16px;background:rgba(255,255,255,0.15);margin:0 0.5rem;flex-shrink:0;display:inline-block;vertical-align:middle}
-    .nav-tool{border:1px solid rgba(201,168,76,0.35)!important;border-radius:2px!important;padding:0.2rem 0.65rem!important}
-    .nav-tool:hover,.nav-tool.active{border-color:var(--gold)!important;color:var(--gold)!important}
-    .nav-cta{background:var(--gold)!important;color:var(--navy2)!important;padding:0.2rem 0.65rem!important;border-radius:2px!important;font-weight:600!important}
-    .nav-cta:hover{background:rgba(201,168,76,0.85)!important;color:var(--navy2)!important}
 
     @media(max-width:820px){
       .hamburger{display:flex
@@ -124,7 +103,17 @@
       .page-wrap{padding:2rem 1.25rem 4rem}
       .vault-card{padding:0.75rem 1rem}
       #submit-btn{width:100%}
-      .input-footer{flex-direction:column;align-items:flex-start}
+      .input-
+    }
+    /* ── FOOTER ── */
+    footer{background:var(--navy2);border-top:1px solid rgba(201,168,76,0.15);padding:2rem 1.25rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;text-align:center}
+    .footer-logo{font-family:'Cormorant Garamond',serif;color:rgba(245,240,232,0.4);font-size:0.9rem;letter-spacing:0.1em}
+    .footer-links{display:flex;flex-wrap:wrap;gap:0.25rem 1rem;justify-content:center}
+    .footer-links a{font-size:0.72rem;color:rgba(245,240,232,0.35);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-note{font-size:0.68rem;color:rgba(245,240,232,0.2);letter-spacing:0.06em;line-height:1.6}
+    @media(min-width:820px){
+      footer{flex-direction:row;justify-content:space-between;text-align:left}
     }
   </style>
 
