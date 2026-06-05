@@ -153,3 +153,80 @@
       .hamburger{display:flex!important}
       .nav-links{display:none!important}
     }
+
+/* ════════════════════════════════════════════════════
+   LAYOUT SYSTEM
+   Three breakpoints — mobile ≤640, tablet 641-1024, desktop ≥1025
+   All pages use .fr-page or .fr-cols for consistent structure.
+   Change here → propagates everywhere.
+   ════════════════════════════════════════════════════ */
+
+/* Standard page container */
+.fr-page{
+  max-width:1080px;
+  margin:0 auto;
+  padding:4rem 2rem 5rem;
+}
+
+/* Two-column layout: sidebar + main content
+   Uses FLEXBOX (not Grid) — predictable, no auto-placement surprises */
+.fr-cols{
+  display:flex;
+  gap:3rem;
+  align-items:start;
+  max-width:1080px;
+  margin:0 auto;
+  padding:4rem 2rem 5rem;
+}
+.fr-cols .fr-sidebar{
+  width:220px;
+  flex-shrink:0;
+  position:sticky;
+  top:82px;
+  max-height:calc(100vh - 100px);
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.fr-cols .fr-main{
+  flex:1;
+  min-width:0; /* critical: prevents flex child from overflowing */
+}
+
+/* Tablet: stack sidebar above content */
+@media(max-width:1024px){
+  .fr-page{padding:3rem 1.5rem 4rem}
+  .fr-cols{flex-direction:column;padding:2rem 1.5rem 5rem;gap:1rem}
+  .fr-cols .fr-sidebar{
+    position:static;
+    width:100%;
+    max-height:none;
+    overflow:visible;
+  }
+  .fr-cols .fr-main{width:100%}
+}
+
+/* Mobile */
+@media(max-width:640px){
+  .fr-page{padding:1.5rem 1rem 4rem}
+  .fr-cols{padding:1.5rem 1rem 5rem}
+}
+
+/* Utility: visually hide sidebar on mobile, show via FAB */
+.fr-sidebar.mobile-drawer{
+  display:none
+}
+@media(max-width:1024px){
+  .fr-sidebar.mobile-drawer{
+    display:none;
+    position:fixed;
+    top:60px;left:0;
+    width:220px;
+    height:calc(100vh - 60px);
+    background:rgba(27,42,74,0.97);
+    border-right:1px solid rgba(201,168,76,0.15);
+    z-index:200;
+    overflow-y:auto;
+    padding:1.25rem 0;
+  }
+  .fr-sidebar.mobile-drawer.open{display:block}
+}
