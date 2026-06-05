@@ -658,5 +658,14 @@
   <button class="search-fab-gl" id="searchFabGl"
     onclick="document.getElementById('glossarySearch').focus();document.getElementById('glossarySearch').scrollIntoView({behavior:'smooth',block:'center'})"
     aria-label="Search glossary">⌕</button>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () =>
+        navigator.serviceWorker.register('/sw.js')
+          .catch(() => {}) // fail silently if blocked
+      );
+    }
+  </script>
 </body>
 </html>
