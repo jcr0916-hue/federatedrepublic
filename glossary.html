@@ -36,8 +36,6 @@
     .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:1rem}
     .hero-body{color:rgba(245,240,232,0.5);font-size:0.88rem;max-width:560px;line-height:1.8}
 
-    /* Alphabet sidebar */
-    .alpha-nav{position:sticky;top:80px;display:flex;flex-direction:column;gap:0.15rem;background:var(--cream);padding-top:0.5rem}
     .alpha-nav a{font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;color:var(--muted);text-decoration:none;padding:0.2rem 0.4rem;transition:color 0.15s}
     .alpha-nav a:hover,.alpha-nav a.active-letter{color:var(--gold)}
     .alpha-nav a.no-terms{opacity:0.3;pointer-events:none}
@@ -107,7 +105,6 @@
 
     
     @media(max-width:1080px){
-    .alpha-nav{flex-direction:row;flex-wrap:wrap;position:static;gap:0;margin-bottom:1.25rem}
     .alpha-nav a{padding:0.15rem 0.35rem}
     .hamburger{display:flex}
     .nav-links{display:none}
@@ -132,11 +129,6 @@
 
   @media(max-width:640px){
     /* Alpha-nav becomes a slide-in drawer on narrow mobile */
-    .alpha-nav{display:none;position:fixed;top:56px;left:0;width:220px;
-      height:calc(100vh - 56px);overflow-y:auto;background:rgba(27,42,74,0.97);
-      border-right:1px solid rgba(201,168,76,0.15);flex-direction:column;
-      gap:0;padding:1.25rem 0;z-index:200;flex-wrap:nowrap;margin-bottom:0}
-    .alpha-nav.mobile-open{display:flex}
     .alpha-nav a{font-size:0.85rem;padding:0.45rem 1.25rem;color:rgba(245,240,232,0.5);
       border-left:2px solid transparent;letter-spacing:0.05em}
     .alpha-nav a:hover,.alpha-nav a.active-letter{color:var(--gold);

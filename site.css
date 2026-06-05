@@ -230,3 +230,71 @@
   }
   .fr-sidebar.mobile-drawer.open{display:block}
 }
+/* ── ALPHA-NAV (Glossary letter sidebar) ── */
+.fr-cols .fr-sidebar.alpha-nav{
+  display:flex;
+  flex-direction:column;
+  gap:0.15rem;
+  background:var(--cream);
+  padding-top:0.5rem;
+}
+.fr-cols .fr-sidebar.alpha-nav a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;
+  letter-spacing:0.1em;
+  color:var(--muted);
+  text-decoration:none;
+  padding:0.25rem 0.4rem;
+  transition:color 0.15s;
+  white-space:nowrap;
+}
+.fr-cols .fr-sidebar.alpha-nav a:hover,
+.fr-cols .fr-sidebar.alpha-nav a.active-letter{color:var(--gold)}
+.fr-cols .fr-sidebar.alpha-nav a.no-terms{opacity:0.3;pointer-events:none}
+
+/* Tablet: alpha-nav becomes a horizontal row above content */
+@media(max-width:1024px){
+  .fr-cols .fr-sidebar.alpha-nav{
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:0;
+    padding:0.5rem 0;
+    background:transparent;
+    width:100%;
+    position:static;
+    max-height:none;
+    overflow:visible;
+  }
+}
+
+/* Mobile ≤640px: hidden drawer, shown via FAB */
+@media(max-width:640px){
+  .fr-cols .fr-sidebar.alpha-nav{
+    display:none;
+    position:fixed;
+    top:60px;left:0;
+    width:220px;
+    height:calc(100vh - 60px);
+    background:rgba(27,42,74,0.97);
+    border-right:1px solid rgba(201,168,76,0.15);
+    flex-direction:column;
+    gap:0;
+    padding:1.25rem 0;
+    z-index:200;
+    overflow-y:auto;
+  }
+  .fr-cols .fr-sidebar.alpha-nav.mobile-open{display:flex}
+  .fr-cols .fr-sidebar.alpha-nav a{
+    font-size:0.85rem;
+    padding:0.45rem 1.25rem;
+    color:rgba(245,240,232,0.5);
+    border-left:2px solid transparent;
+    white-space:normal;
+  }
+  .fr-cols .fr-sidebar.alpha-nav a:hover,
+  .fr-cols .fr-sidebar.alpha-nav a.active-letter{
+    color:var(--gold);
+    border-left-color:var(--gold);
+    background:rgba(201,168,76,0.08);
+  }
+}
