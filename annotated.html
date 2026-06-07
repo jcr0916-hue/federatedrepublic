@@ -37,7 +37,7 @@
     .ls-term{background:rgba(201,168,76,0.55)}
     .ls-design{background:rgba(27,42,74,0.4)}
     .ls-ref{background:rgba(80,120,80,0.5)}
-    .article-section{margin-bottom:3rem;scroll-margin-top:72px}
+    .article-section{max-width:900px;width:100%;margin:0 auto 3rem auto;padding:0 2rem;scroll-margin-top:72px;box-sizing:border-box}
     .article-header{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);padding-bottom:0.4rem;border-bottom:2px solid var(--navy);margin-bottom:0.2rem}
     .article-subtitle{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
     .article-intro{font-size:0.88rem;color:var(--muted);font-style:italic;margin-bottom:1.5rem;padding-left:1rem;border-left:2px solid var(--border)}
@@ -45,7 +45,7 @@
     .prov-label{font-size:0.7rem;margin-bottom:0.25rem;display:flex;align-items:center;gap:0.5rem}
     .prov-num{font-family:'JetBrains Mono',monospace;color:var(--gold);letter-spacing:0.04em}
     .prov-name{color:var(--navy);font-weight:600;text-transform:uppercase;letter-spacing:0.1em}
-    .prov-text{font-size:0.92rem;line-height:1.85;color:#3a3530}
+    .prov-text{overflow-wrap:break-word;word-wrap:break-word;font-size:0.92rem;line-height:1.85;color:#3a3530}
     .ann-term{background:rgba(201,168,76,0.16);border-bottom:2px solid var(--gold);cursor:help;border-radius:2px;padding:0 2px;transition:background 0.15s;position:relative;display:inline}
     .ann-term:hover{background:rgba(201,168,76,0.3)}
     .ann-design{background:rgba(27,42,74,0.09);border-bottom:2px solid var(--navy);cursor:pointer;border-radius:2px;padding:0 2px;transition:background 0.15s;display:inline}
@@ -215,9 +215,9 @@
     
     .main{
       width:100%;
-      max-width:900px;
+      max-width:960px;
       margin:0 auto;
-      padding:3rem 2rem 6rem;
+      padding:3rem 0 6rem;
       box-sizing:border-box;
     }
     @media(max-width:1024px){
