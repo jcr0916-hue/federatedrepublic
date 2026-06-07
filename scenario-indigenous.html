@@ -1,31 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="description" content="Four indigenous nations make status elections under §16.7 — testing the full range of choices from compact affirmation to full sovereignty.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Four Elections — The Federated Republic</title>
-  <meta name="description" content="At ratification, four indigenous nations exercise their §16.7 status rights simultaneously — choosing from the full menu. The Venuwa Nation elects full sovereign independence while geographically landlocked inside Republic territory. The most constitutionally complex moment of the founding."
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="The Four Elections">
-  <meta property="og:description" content="At ratification, four indigenous nations exercise their §16.7 status rights simultaneously — choosing from the full menu. The Venuwa Nation elects full sovereign independence while geographically land">
-  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-indigenous.html">
-  <meta property="og:site_name" content="The Federated Republic">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Four Elections">
-  <meta name="twitter:description" content="At ratification, four indigenous nations exercise their §16.7 status rights simultaneously — choosing from the full menu. The Venuwa Nation elects full sovereign independence while geographically land">>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
   <style>
-    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0}
     .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
     .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
     .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
@@ -46,79 +30,71 @@
     .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
     .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
     .finding p+p{margin-top:0.75rem}
-    .nation-card{border:1px solid var(--border);padding:1.25rem 1.5rem;margin:1.25rem 0;position:relative}
+    .nation-card{border:1px solid var(--border);padding:1.25rem 1.5rem;margin:1.25rem 0}
     .nation-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:0.25rem}
     .nation-choice{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
     .nation-desc{font-size:0.88rem;color:var(--muted);line-height:1.7}
     .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
-    .verdict-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
-    .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
-    .verdict-box p+p{margin-top:0.75rem}
-    .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
-    .scenario-nav a:hover{color:var(--navy)}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
-    .mobile-menu a:last-child{border-bottom:none}
-    .mobile-menu.open{display:flex}
-    @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;opacity:0.6}
+    .scenario-nav a:hover{opacity:1;color:var(--gold)}
+    .progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--gold);z-index:199;width:0}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
   </style>
 </head>
 <body>
-  <div class="progress-bar" id="progress"></div>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
   <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
     <div class="nav-links">
-      <a href="annotated.html">Constitution</a>
+      <a href="annotated.html">Annotated Edition</a>
       <a href="scenarios.html" class="active">Scenarios</a>
       <a href="diagrams.html">Diagrams</a>
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="sources.html">Sources</a>
-    <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="scenario-ordinary.html" style="background:var(--gold);color:var(--navy2);padding:0.3rem 0.8rem;font-weight:600;font-size:0.7rem">Start Here</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
     </div>
-    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
-    <a href="annotated.html">Constitution</a>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
     <a href="advisor.html">Advisor</a>
-    <a href="sources.html">Sources</a>
-    <a href="contact.html">Contact</a>
-    <a href="constitution-current.pdf" download class="mobile-cta">Download a copy</a>
+    <a href="scenario-ordinary.html" class="mobile-cta">Start Here</a>
   </div>
+  <div id="progress" class="progress-bar" aria-hidden="true"></div>
 
-  <div class="page-wrap">
+  <div class="page-wrap" id="main-content">
     <div class="scenario-meta">
       <span class="scenario-tag">Scenario · §16.7 · Indigenous Nation Status Elections</span>
       <h1 class="scenario-title">The Four Elections</h1>
-      <p class="scenario-subtitle">Year 0–4. Four elections that shape the Republic's relationship with its indigenous nations — a Phase 3 seat allocation dispute, a compact ratification vote, a citizen initiative, and a first-term Assembly election in a newly recognized Nation Territory.</p>
-      <p class="scenario-premise">At the moment of ratification, Phase 1 of the Transition Window requires the Republic to formally notify all recognized indigenous nations of their §16.7 status rights. Four nations respond. Each chooses differently. One of them — the Venuwa Nation, a landlocked river people whose territory sits entirely within the Republic's interior — elects full sovereign independence. The Republic has 24 months to negotiate a treaty it has never negotiated before.</p>
+      <p class="scenario-premise">Year 0–4. Four elections that shape the Republic's relationship with its indigenous compact nations — and reveal what §16.7's menu of status options actually means in practice.</p>
       <div class="provisions-tested">
-        <span class="prov-tag">§16.7 Status Elections</span>
-        <span class="prov-tag">§16.5.d Associated Community Path</span>
-        <span class="prov-tag">§16.1 Prior Sovereignty</span>
-        <span class="prov-tag">§16.3.a FPIC</span>
-        <span class="prov-tag">§16.4.a Eminent Domain Prohibition</span>
-        <span class="prov-tag">§15.6 Voluntary Incorporation</span>
-        <span class="prov-tag">§20.2 Compact Terms</span>
-        <span class="prov-tag">§3.2.e Treaty Ratification</span>
+        <span class="prov-tag">§16.7</span>
+        <span class="prov-tag">§16.5</span>
+        <span class="prov-tag">§20.1</span>
+        <span class="prov-tag">§15.6</span>
+        <span class="prov-tag">§3.6</span>
+        <span class="prov-tag">§2.4</span>
       </div>
     </div>
 
     <div class="scenario-body">
 
-      <p>The notification arrives at the same time for all of them — a formal document in each nation's primary language, published simultaneously to the National Record System on Day 37 of Phase 1, describing four options in plain language and attaching the relevant constitutional text. No Republic official accompanies the notification. No government minister presents the options in person. No federal liaison office exists to answer questions — only the published text of the constitution and the NRS address of the Judicial Monitor, which will receive formal election notices. The constitution was explicit about what the notification must not include: any signal of preference, any assessment of which option is better, any implicit suggestion that one choice serves the Republic's interests more than another. The Republic sends the menu. The choice belongs to the nations.</p>
+      <p>The notification arrives at the same time for all of them — a formal document in each nation's primary language, published simultaneously to the National Record System on Day 37 of Phase 1, describing four options in plain language and attaching the relevant constitutional text. No Republic official accompanies the notification. No government minister presents the options in person. No federal liaison office exists to answer questions — only the published text of the constitution and the NRS address of the Judicial Monitor, which will receive formal election notices.</p>
+
+      <p>The constitution was explicit about what the notification must not include: any signal of preference, any assessment of which option is better, any implicit suggestion that one choice serves the Republic's interests more than another. The Republic sends the menu. The choice belongs to the nations.</p>
 
       <p>The four nations who respond within Phase 1 are among dozens recognized under predecessor-government treaty relationships. Most take no action during Phase 1 — the Article XVI compact is the default, requiring no election to remain in force, and many nations need time to assess their options. Four do not wait.</p>
 
@@ -127,86 +103,140 @@
       <div class="nation-card">
         <div class="nation-name">The Miran League</div>
         <div class="nation-choice">Option (a) — Article XVI Compact · No Election Required</div>
-        <p class="nation-desc">The Miran League's governance council issues a formal statement on Day 89 of Phase 1: it has reviewed the §16.7 options, assessed each against its current circumstances, and elected to remain in the Article XVI compact relationship. The statement is published to the NRS. It is not an election — no election is required to maintain the default. It is something else: a deliberate, recorded affirmation of the compact after having genuinely considered the alternatives. The Miran League's council notes that the FPIC protections, the land rights, and the government-to-government relationship of Article XVI represent more constitutional protection than any of the other options provide, and that the right to change status under §16.7 means the compact relationship is now a daily choice rather than a historical inheritance.</p>
+        <div class="nation-desc">Deliberate affirmation of the existing compact after reviewing all alternatives. Published to the NRS on Day 89 of Phase 1.</div>
       </div>
 
       <div class="nation-card">
         <div class="nation-name">The Kessai Peoples</div>
-        <div class="nation-choice">Option (b) — Associated Community Status · §16.5.d</div>
-        <p class="nation-desc">The Kessai Peoples have maintained parallel governance structures for three generations — a traditional council for internal affairs and a representative assembly for external relations. Their external relations assembly votes 71-12 to elect Associated Community status under Article XX. The election is published to the NRS on Day 134 of Phase 1. The Kessai's reasoning, also published: they want a compact relationship with the Republic that is explicitly one between equal sovereigns, without the specific constraints that Article XVI's constitutional recognition imposes. They are not disputing the Republic's acknowledgment of their prior sovereignty — they are pointing out that the Associated Community framework treats them as a sovereign making a voluntary compact, which they regard as the more accurate description of the relationship. Their Article XVI land protections survive as compact terms. The Judicial Monitor certifies the election within 14 days. The transition is published to the NRS. The Kessai Peoples' territory is no longer governed by Article XVI — it is governed by Article XX and their compact agreement.</p>
+        <div class="nation-choice">Option (d) — Full Sovereign Independence · §16.7 · First step toward Associated Community</div>
+        <div class="nation-desc">Independence election filed Day 134 of Phase 1. Sovereignty treaty with the Republic negotiated over 18 months. Associated Community compact negotiated separately in Year 3 once sovereignty is established.</div>
       </div>
 
       <div class="nation-card">
         <div class="nation-name">The Ataro Confederacy</div>
-        <div class="nation-choice">Option (c) — Territorial Integration · §16.5.d → §15.6</div>
-        <p class="nation-desc">The Ataro Confederacy's situation is specific. Their territory has been substantially integrated into the surrounding Republic infrastructure for two generations — roads, utilities, schools, health services — to the point where maintaining a distinct governance structure is more burden than benefit for their members. Their confederacy council votes 84-31 to pursue territorial integration. They elect Associated Community status first under §16.5.d (Step 1), then immediately file a §15.6 petition for territorial incorporation (Step 2). The integration agreement — which takes eight months to negotiate — contains specific provisions: the Ataro's ancestral lands within the Territory enter under a permanent co-management covenant; prior treaty rights are statutory obligations of the Republic; the confederacy council is recognized as the Territory's governance council during the Provisional Membership Period. The Ataro Confederacy is the first indigenous nation to use the full two-step pathway. Their territory enters the Territory framework in Month 14 of Phase 2.</p>
+        <div class="nation-choice">Territorial Integration · §16.7 → §15.6</div>
+        <div class="nation-desc">Direct path from Article XVI compact to territorial integration — no intermediate sovereign status required. Integration agreement negotiated over 8 months with co-management covenant for ancestral lands.</div>
       </div>
 
       <div class="nation-card">
         <div class="nation-name">The Venuwa Nation</div>
-        <div class="nation-choice">Option (d) — Full Sovereign Independence</div>
-        <p class="nation-desc">The Venuwa Nation's territory is 4,200 square kilometers of river valley, entirely surrounded by Republic territory on all sides. No Venuwa land touches an international border. The nearest foreign sovereign is 340 kilometers from the Venuwa's eastern boundary. The Venuwa governance council — a traditional assembly of forty-three elected elders — votes 38-5 to elect full sovereign independence under §16.7(d). The election is published to the NRS on Day 203 of Phase 1. The Republic has 24 months to negotiate a treaty.</p>
+        <div class="nation-choice">Option (d) — Full Sovereign Independence · §16.7 · Landlocked</div>
+        <div class="nation-desc">Independence election filed Day 203 of Phase 1. Treaty negotiations led by the Legat Consul over 22 months. Ratified by the Senate under §3.6.</div>
       </div>
 
-      <h2>The Venuwa Treaty Negotiations</h2>
+      <h2>The Miran League — A Deliberate Affirmation</h2>
 
-      <p>The Civic Consul's office receives the Venuwa election notice and immediately faces a constitutional question it has no precedent for: how do you negotiate a sovereignty treaty with a nation that has no access to international territory, no port, no external border, and no existing trade relationship with any foreign sovereign? The constitutional text is clear — the Republic must negotiate in good faith; the geographic position does not affect the right; the practical arrangements are for the treaty to address. The question is what those practical arrangements look like when the "practical" is genuinely unprecedented.</p>
+      <p>The Miran League's governance council issues a formal statement on Day 89 of Phase 1: it has reviewed the §16.7 options, assessed each against its current circumstances, and elected to remain in the Article XVI compact relationship. The statement is published to the NRS. It is not an election — no election is required to maintain the default. It is something else: a deliberate, recorded affirmation of the compact after having genuinely considered the alternatives.</p>
+
+      <p>The Miran League's council notes that the FPIC protections, the land rights, and the government-to-government relationship of Article XVI represent more constitutional protection than any of the other options provide, and that the right to change status under §16.7 means the compact relationship is now a daily choice rather than a historical inheritance. A status chosen is different from a status inherited — even when the status is identical in content.</p>
+
+      <h2>The Kessai Peoples — Independence First, Then a New Compact</h2>
+
+      <p>The Kessai Peoples have maintained parallel governance structures for three generations — a traditional council for internal affairs and a representative assembly for external relations. They want a compact relationship with the Republic that treats them explicitly as equal sovereigns. But the constitution is clear on this point: Associated Community status under Article XX is available to independent entities entering a voluntary compact with the Republic. A nation cannot transition directly from Article XVI compact status to Associated Community status — the Associated Community framework requires sovereignty as a precondition, not as a destination.</p>
+
+      <p>The Kessai external relations assembly votes 71–12 to elect full sovereign independence under §16.7. The election is published to the NRS on Day 134 of Phase 1. The Judicial Monitor certifies the election within 14 days.</p>
 
       <div class="beat">
-        <div class="beat-label">§16.7(d) — The Negotiating Framework</div>
-        <div class="beat-title">What the treaty must cover — and what neither party anticipated</div>
-        <p>The constitution specifies the treaty's mandatory subject matter: transit and border arrangements; economic and trade relationships; the status of Venuwa members who also hold Republic citizenship; infrastructure and utility access; and anything else the nation identifies as essential. The Venuwa council's opening position adds two items the Republic had not anticipated: a formal recognition of the Venuwa's sovereignty under international law, to be registered with international bodies by the Republic; and a Republic obligation not to impede Venuwa's diplomatic recognition by foreign states. The Republic's constitutional obligation is to negotiate. It is not to agree. But §16.7 also prohibits the Republic from using treaty negotiation delays to pressure the nation to reverse its election. The Civic Consul's office publishes a commitment to complete the treaty within 24 months, with quarterly progress reports to the NRS.</p>
-        <p>The treaty framework that emerges after fourteen months of negotiation addresses six areas: (1) Transit corridors — the Republic grants the Venuwa permanent, irrevocable transit rights through designated Republic territory to any border of the Republic they designate; the corridors are published to the NRS as registered federal use rights and may not be revoked without Venuwa consent. (2) Trade — a customs and trade agreement treating the Venuwa Nation as a foreign sovereign for all trade purposes. (3) Citizenship — Venuwa members who hold Republic citizenship retain it; the Republic may not treat that citizenship as incompatible with Venuwa national citizenship; dual citizenship is constitutionally protected under §16.5.b which survives the transition. (4) Infrastructure — existing Republic utilities within Venuwa territory continue under service agreements at rates equivalent to Republic citizens; the Venuwa Nation controls its own internal infrastructure. (5) Diplomatic recognition — the Republic formally recognizes Venuwa sovereignty and commits to supporting the nation's application for recognition by international bodies. (6) Dispute resolution — the Supreme Court retains jurisdiction over disputes arising from the treaty by the express agreement of both parties, with the Venuwa Nation accepted as a standing party before the Court.</p>
+        <div class="beat-label">Constitutional Sequence</div>
+        <div class="beat-title">Why the Kessai Cannot Go Directly to Associated Community Status</div>
+        <p>Article XX compacts are available to independent polities — nations that already hold sovereignty and choose to enter a defined relationship with the Republic. A nation within the Article XVI compact structure is already in a constitutional relationship with the Republic. To become an Associated Community, the Kessai must first exit that relationship entirely by electing independence under §16.7, establishing sovereign standing, and then — from that position of sovereign independence — negotiating an Article XX compact. The two steps are constitutionally distinct and cannot be collapsed into one.</p>
       </div>
 
-      <p>The treaty is ratified by the Senate under §3.2.e — 2/3 majority — in Month 22 of Phase 1. The Venuwa Nation formally exits all Republic constitutional frameworks at the moment of ratification. They are recognized as a fully sovereign nation. Their territory is no longer Republic territory for constitutional purposes. The NRS records the moment with a timestamp. The JM publishes a final Article XVI compact termination notice. The Venuwa sovereignty is acknowledged, as the constitution always said, not created — but now it stands alone without the Republic's constitutional architecture supporting it.</p>
+      <p>The independence treaty negotiations are led by the Legat Consul under §2.4 — the Kessai Nation, once it has elected sovereignty, becomes a foreign relations matter, not a domestic one. The Civic Consul has no constitutional role in negotiating with a newly independent foreign nation. Negotiations cover transit, trade, citizenship status of Kessai members who also hold Republic citizenship, and the survival of existing land protections as treaty obligations.</p>
+
+      <p>The treaty is ratified by the Senate under §3.6 — 2/3 of the full seated Senate — in Month 18. The Kessai Nation is recognized as fully sovereign. Their territory exits the Republic's constitutional framework entirely at the moment of ratification.</p>
+
+      <p>In Year 3, from their position as an established sovereign nation, the Kessai external relations assembly opens Article XX compact negotiations with the Republic. The compact that emerges treats them as the equal sovereign they are: bilateral rather than asymmetric, with explicit recognition that the Kessai hold sovereignty that precedes the compact. Their prior land protections are incorporated as compact terms. The Judicial Monitor certifies the compact under §20.1. The Kessai Peoples are now an Associated Community — but the path required two separate treaty processes, eighteen months apart, with full sovereignty in between.</p>
+
+      <div class="finding">
+        <span class="finding-label">Constitutional Finding</span>
+        <p>The Kessai pathway establishes that reaching Associated Community status from Article XVI compact status is a two-stage process requiring actual independence as an intermediate condition — not a procedural formality but a substantive change in the nation's relationship with the Republic. The independence treaty and the Associated Community compact are separate instruments ratified separately under §3.6.</p>
+      </div>
+
+      <h2>The Ataro Confederacy — Direct Territorial Integration</h2>
+
+      <p>The Ataro Confederacy's situation is specific. Their territory has been substantially integrated into the surrounding Republic infrastructure for two generations — roads, utilities, schools, health services — to the point where maintaining a distinct governance structure is more burden than benefit for their members. Their confederacy council votes 84–31 to pursue territorial integration.</p>
+
+      <p>The territorial integration pathway does not require an intermediate sovereign status. Unlike the Associated Community framework — which is explicitly for independent entities choosing a closer relationship — territorial integration under §15.6 is a constitutional pathway from any status into the Republic's territorial structure. The Ataro petition directly under §15.6 from their Article XVI compact position, without the intermediate step of electing independence.</p>
+
+      <p>The integration agreement — which takes eight months to negotiate — contains specific provisions: the Ataro's ancestral lands within the Territory enter under a permanent co-management covenant; prior treaty rights are statutory obligations of the Republic; the confederacy council is recognized as the Territory's governance council during the Provisional Membership Period. The Ataro Confederacy is the first indigenous nation to use this direct integration pathway. Their territory enters the Territory framework in Month 14.</p>
+
+      <p>In Year 2, a federal social state infrastructure project proposes routing a water supply line through an area the Ataro covenant designates as ceremonial. The Civic Consul's office, reading the co-management covenant correctly, reroutes the project. No legal proceeding was required. The NRS record of the rerouting decision cites the integration agreement. The covenant functioned exactly as designed: not as a barrier to federal infrastructure, but as a requirement that federal infrastructure respect the terms of the integration that brought the Ataro into the Republic's political structure.</p>
+
+      <h2>The Venuwa Nation — Landlocked Sovereignty</h2>
+
+      <p>The Venuwa Nation's territory is 4,200 square kilometers of river valley, entirely surrounded by Republic territory on all sides. No Venuwa land touches an international border. The nearest foreign sovereign is 340 kilometers from the Venuwa's eastern boundary. The Venuwa governance council — a traditional assembly of forty-three elected elders — votes 38–5 to elect full sovereign independence under §16.7(d). The election is published to the NRS on Day 203 of Phase 1. The Republic has 24 months to negotiate a treaty.</p>
+
+      <p>The Legat Consul's office receives the Venuwa election notice and immediately faces a constitutional question with no precedent: how do you negotiate a sovereignty treaty with a nation that has no access to international territory, no port, no external border, and no existing trade relationship with any foreign sovereign? The constitutional text is clear — the Republic must negotiate in good faith; the geographic position does not affect the right; the practical arrangements are for the treaty to address.</p>
 
       <div class="beat">
-        <div class="beat-label">The Landlocked Sovereignty Question in Practice</div>
-        <div class="beat-title">What the transit corridors actually mean</div>
-        <p>The Venuwa Nation's transit corridors are published to the NRS as permanent registered federal use rights. Any Republic citizen, vehicle, or authority may not obstruct them. The corridors are 8 meters wide, extending from the Venuwa's eastern boundary to the Republic's eastern international border — 340 kilometers. The Republic highway system intersects the corridor at eleven points; all eleven must yield to Venuwa transit. In practice, in the first year of independence, the Venuwa Nation uses the corridor primarily for diplomatic travel — four missions to international capitals, two to multilateral forums — and for trade in Venuwa-produced goods. The corridor is not heavily used. Its significance is not logistical. It is constitutional: the existence of the corridor is the proof that the right to independence was real, not merely formal. A sovereignty that cannot access the world is not sovereignty. The transit right converts the election from a symbolic assertion to a practical reality.</p>
+        <div class="beat-label">Constitutional Sequence</div>
+        <div class="beat-title">Why the Legat Consul — Not the Civic Consul — Leads These Negotiations</div>
+        <p>Once the Venuwa Nation elects independence under §16.7, their status changes from a domestic constitutional matter to a foreign relations matter. The Civic Consul holds residual domestic executive authority; the Legat Consul holds enumerated authority over foreign affairs, treaty negotiation, and recognition of foreign governments under §2.1 and §2.4. From the moment the Venuwa election is certified, the Republic's relationship with the Venuwa is a foreign affairs relationship — and the treaty is a foreign treaty ratified by the Senate under §3.6, not a domestic agreement.</p>
       </div>
 
-      <h2>Year Three — The Post-Election Landscape</h2>
+      <p>The treaty framework that emerges after 22 months of negotiation addresses six areas: (1) Transit corridors — the Republic grants the Venuwa permanent, irrevocable transit rights through designated Republic territory to any border of the Republic they designate; the corridors are published to the NRS as registered federal use rights and may not be revoked without Venuwa consent. (2) Trade — a customs and trade agreement treating the Venuwa Nation as a foreign sovereign for all trade purposes. (3) Citizenship — Venuwa members who hold Republic citizenship retain it; dual citizenship is constitutionally protected. (4) Infrastructure — existing Republic utilities within Venuwa territory continue under service agreements at rates equivalent to Republic citizens. (5) Diplomatic recognition — the Republic formally recognizes Venuwa sovereignty and commits to supporting the nation's application for recognition by international bodies. (6) Dispute resolution — the Supreme Court retains jurisdiction over disputes arising from the treaty by the express agreement of both parties.</p>
 
-      <p>Three years after Phase 1, the constitutional landscape around indigenous nation status has clarified in ways the drafters anticipated and some they did not.</p>
+      <p>The treaty is ratified by the Senate under §3.6 — 2/3 of the full seated Senate — in Month 22 of Phase 1. The Venuwa Nation formally exits all Republic constitutional frameworks at the moment of ratification. The NRS records the moment with a timestamp. The JM publishes a final Article XVI compact termination notice.</p>
+
+      <p>The Venuwa Nation's transit corridors are published to the NRS as permanent registered federal use rights. Their significance is not logistical — in the first year of independence, the corridor is used primarily for diplomatic travel and trade. Its significance is constitutional: the existence of the corridor is the proof that the right to independence was real, not merely formal. A sovereignty that cannot access the world is not sovereignty.</p>
+
+      <h2>Year Three — What §16.7 Actually Produced</h2>
 
       <p>The Miran League's deliberate affirmation of the Article XVI compact has been cited in twelve subsequent legal proceedings involving Article XVI rights. The argument: the League's published review and reaffirmation establishes that the compact relationship is a continuous democratic choice, not an inherited constraint. The same FPIC protections apply regardless, but the Miran League's statement has changed the political framing — the compact is now described in public discourse as something nations choose rather than something they are assigned.</p>
 
-      <p>The Kessai Peoples' transition to Associated Community status has produced one unexpected complication. Their compact agreement, negotiated in the weeks following the election, incorporated their Article XVI land protections as compact terms. In Year 2, the Republic's Civic Consul issues a domestic infrastructure order affecting a transport corridor adjacent to Kessai territory. The Kessai protest that the corridor falls within a land protection area. The Republic argues the land protections are now compact terms rather than constitutional rights — and that compact terms are interpreted differently from constitutional provisions. The Kessai petition the Supreme Court. The Court rules that the NRS publication of the original land protection boundaries, combined with the explicit compact term incorporating Article XVI protections, creates a constitutional obligation that survives the compact's Article XX framework. The Kessai win. The infrastructure order is modified. The ruling establishes that migrating constitutional protections into compact terms does not diminish them.</p>
+      <p>The Kessai Peoples' two-stage path has produced an important precedent: the sovereignty treaty and the Associated Community compact are separate instruments with separate ratification votes under §3.6. Nations considering Associated Community status from within Article XVI compact relationships must plan for a multi-year process with full independence as an intermediate stage — not a shortcut, but a genuine constitutional transition with a genuine interim period.</p>
 
-      <p>The Ataro Confederacy's territorial integration is proceeding through the Provisional Membership Period. The co-management covenant — specifying that ancestral lands within the Territory retain Ataro governance for internal resource decisions — has been tested once, when a federal social state infrastructure project proposed routing a water supply line through an area the Ataro covenant designates as ceremonial. The Civic Consul's office, reading the co-management covenant correctly, rerouted the project. No legal proceeding was required. The NRS record of the rerouting decision cites the integration agreement. The covenant functioned exactly as designed: not as a barrier to federal infrastructure, but as a requirement that federal infrastructure respect the terms of the integration that brought the Ataro into the Republic's political structure.</p>
+      <p>The Ataro Confederacy's direct integration pathway has been used by two subsequent nations. The co-management covenant model — specifying that ancestral lands within the Territory retain indigenous governance for internal resource decisions — has become a standard integration agreement term, incorporated by reference in later negotiations.</p>
 
-      <div class="finding">
-        <span class="finding-label">What §16.7 produced that the constitution could not anticipate</span>
-        <p>The most significant effect of the §16.7 status election framework is not any of the four choices the named nations made. It is what the framework did to the Article XVI compact relationship for every nation that chose option (a). The compact relationship — which existed before §16.7 was written — was always theoretically a condition of the prior sovereignty recognition. Nations had no formal mechanism to accept or reject it on their own terms. §16.7 changed that. Every nation that remains in the Article XVI compact after Phase 1 notification is now in that compact because it has been offered alternatives and chosen the compact anyway. The Miran League articulated this explicitly. Dozens of other nations who took no formal action during Phase 1 are discovering, in the years that follow, that the existence of the right to elect changes the meaning of remaining. A status chosen is different from a status inherited — even when the status is identical in content.</p>
-        <p>The Venuwa Nation's independence election is the constitutional stress test the provision was designed to survive. The landlocked geography that would have made independence practically impossible under any prior framework was addressed by the transit corridor requirement. The sovereignty that would have been merely symbolic without international recognition was addressed by the Republic's treaty obligation. The constitutional text was precise: geographic position does not affect the right. The treaty negotiations were the mechanism for making that precision real. The Venuwa Nation is fully sovereign. The transit corridors are registered on the NRS. The treaty is in force. The right was not merely declared — it was honored.</p>
-      </div>
+      <p>The Venuwa Nation's independence election is the constitutional stress test the provision was designed to survive. The landlocked geography that would have made independence practically impossible under any prior framework was addressed by the transit corridor requirement. The constitutional text was precise: geographic position does not affect the right. The Legat Consul's office made that precision real.</p>
 
       <div class="verdict-box">
-        <span class="verdict-label">What This Scenario Tests</span>
-        <p><strong>§16.7's core design question</strong> is whether a constitutional menu of status options genuinely expands indigenous self-determination or merely adds process to outcomes that would have occurred anyway. The four elections suggest a genuine expansion. The Kessai Peoples and the Ataro Confederacy both made choices they could not have formalized without §16.7 — the former moving to a different framework of sovereign relationship, the latter pursuing an integration pathway that required both constitutional structure and explicit land protections to be viable. The Venuwa Nation made a choice that would have been constitutionally impossible without the provision.</p>
-        <p><strong>The FPIC principle</strong> runs through all four elections. §16.7 prohibits the Republic from preferring or inducing any option. This is FPIC applied to the status choice itself — not just to government actions affecting the nation, but to the foundational choice of what relationship the nation has with the government at all. The Miran League's deliberate review and published reaffirmation is perhaps the purest expression of this: free, prior, and informed consent to remain in the relationship that was already in place.</p>
-        <p><strong>The treaty obligation</strong> for the Venuwa Nation establishes the most important precedent this scenario produces: that landlocked sovereignty is not a contradiction in terms. It requires creative treaty arrangements — transit corridors, trade agreements, diplomatic recognition obligations — but it is constitutionally achievable. The Republic cannot solve the geography. It can, and must, negotiate around it. The 24-month deadline was tight. The negotiations were completed in 22 months. The right was real because the obligation was enforceable.</p>
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§16.7's core design question is whether a constitutional menu of status options genuinely expands indigenous self-determination or merely adds process to outcomes that would have occurred anyway. The four elections suggest a genuine expansion — but the pathways are more complex than a simple menu implies.</p>
+        <p>The Kessai pathway establishes that Associated Community status is not a direct election from compact status. Independence must come first. The associated community relationship is available to sovereign nations choosing a closer relationship with the Republic, not to compact nations choosing a different kind of compact.</p>
+        <p>The Ataro pathway establishes that territorial integration does not require an independence intermediate step. The constitutional distinction matters: one framework (Associated Community) is for sovereigns entering the Republic's orbit; the other (territorial integration) is for compact nations choosing to join the Republic's structure.</p>
+        <p>The FPIC principle runs through all four elections. §16.7 prohibits the Republic from preferring or inducing any option. The Miran League's deliberate review and published reaffirmation is perhaps the purest expression of this: free, prior, and informed consent to remain in the relationship that was already in place. The Venuwa Nation's independence election demonstrates that the right was real because the obligation was enforceable — and because the Legat Consul's office negotiated in good faith under constitutional compulsion, within the timeline, on terms the constitution required but could not specify.</p>
       </div>
 
     </div>
 
-    <nav class="scenario-nav">
+    <div class="scenario-nav">
       <a href="scenarios.html">← All Scenarios</a>
       <a href="scenario-ordinary.html">Ordinary Law →</a>
-    </nav>
+    </div>
   </div>
+
+  <footer>
+    <div class="footer-logo">The Federated Republic</div>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <div class="footer-note">A constitutional framework built from first principles &nbsp;·&nbsp; A theoretical project, not the law of any existing nation</div>
+  </footer>
 
   <script>
     function toggleMobileNav(){
-      document.getElementById('mobileMenu').classList.toggle('open');
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',open);}
     }
-    const bar = document.getElementById('progress');
-    window.addEventListener('scroll', () => {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      if(h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    const bar=document.getElementById('progress');
+    window.addEventListener('scroll',()=>{
+      const h=document.documentElement.scrollHeight-window.innerHeight;
+      if(h>0)bar.style.width=(window.scrollY/h*100)+'%';
     });
+  </script>
+  <script>
+    if('serviceWorker' in navigator){
+      window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+    }
   </script>
 </body>
 </html>
