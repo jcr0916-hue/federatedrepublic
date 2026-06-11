@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="Year 3. The Civic Consul issues a written direction suspending a prosecution against a political ally. The direction is published to the NRS within the hour.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Direction — The Federated Republic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;opacity:0.6}
+    .scenario-nav a:hover{opacity:1;color:var(--gold)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="scenario-ordinary.html" class="mobile-cta">Start Here</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §2.16 &middot; Federal Prosecution &middot; Executive Accountability</span>
+      <h1 class="scenario-title">The Direction</h1>
+      <p class="scenario-premise">Year 3. The Civic Consul issues a written direction suspending a prosecution against a political ally. The direction is published to the NRS within the hour. What happens next tests whether transparency alone is sufficient protection — and what the constitution does when it is not.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.16</span>
+        <span class="prov-tag">§2.8</span>
+        <span class="prov-tag">§2.12</span>
+        <span class="prov-tag">§2.13</span>
+        <span class="prov-tag">§9.1.b</span>
+        <span class="prov-tag">§12.4</span>
+        <span class="prov-tag">§17.4</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Federal Prosecution Service's investigation into Hartwell Group had been running for fourteen months when the direction arrived. Securities fraud on a scale that had affected approximately forty thousand small investors across eleven States. The FPS Director had reviewed the evidence package herself. Charges were being prepared.</p>
+
+      <p>Duncan Hartwell was the largest individual donor to Civic Consul Calder's consular campaign three years earlier. He had attended Calder's inauguration. His firm occupied two floors of the building where Calder had maintained his private offices before taking the consulship. None of this was concealed. All of it was publicly known.</p>
+
+      <p>What was not publicly known — until the EM's audit six weeks later — was that Calder's blind trust held a significant position in a Hartwell Group subsidiary through a series of intermediate holding entities. The blind trust's structure, as approved by Calder's ethics counsel, was designed to prevent Calder from knowing the contents. It had not worked as designed. The quarterly summary reports, which the trustee was prohibited by the trust instrument from sending, had been sent anyway. Calder had received three of them.</p>
+
+      <h2>The Direction — §2.16</h2>
+
+      <p>The direction was issued on a Tuesday morning. It was published to the NRS at 11:14 AM, simultaneous with transmission to the FPS Director's office, as §2.16 requires.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Executive Direction &mdash; Filed 11:14 AM</div>
+        DIRECTION OF THE CIVIC CONSUL TO THE FEDERAL PROSECUTION SERVICE<br>
+        Issued under §2.16 &mdash; General Prosecution Policy Authority<br><br>
+        The Service is directed to suspend active investigative proceedings against Hartwell Group and its officers pending completion of a Securities Regulation Policy Review commissioned by this Office. This direction is issued on grounds of general prosecution policy: the current regulatory framework governing securities prosecution requires comprehensive review before major proceedings of this type are initiated. The review will be completed within 90 days. This direction applies to all active investigative matters involving Hartwell Group.<br><br>
+        &mdash; Civic Consul Calder
+      </div>
+
+      <p>The direction was on the front page of every major publication by noon. Three Assembly members called for an emergency session before the afternoon. The FPS Director read it twice, set it on her desk, and called her constitutional counsel.</p>
+
+      <div class="beat">
+        <div class="beat-label">§2.16 &mdash; The Transparency Mechanism</div>
+        <div class="beat-title">The direction is legal. The question is whether it is constitutional.</div>
+        <p>§2.16 expressly permits the Civic Consul to issue directions concerning specific prosecutions. The only requirement is that the direction be in writing and published to the NRS simultaneously. Calder had complied with both requirements. The direction was legal on its face.</p>
+        <p>What §2.16 does not specify is what happens when a direction that is formally legal is issued in circumstances that make it constitutionally suspect. The transparency mechanism was designed to deter misuse by making political cost immediate and public. It assumed the deterrence would work. The Hartwell direction was the test case for what the constitution does when it does not.</p>
+      </div>
+
+      <h2>The Director's Position — §2.8 and §2.16</h2>
+
+      <p>The FPS Director's constitutional position was not straightforward. §2.16 grants the Civic Consul authority to direct specific prosecutions. The duty of refusal under §2.8 applies only to orders that would require a constitutional violation. If the direction was a valid exercise of §2.16 authority, there was no basis for refusal under §2.8.</p>
+
+      <p>The Director did not comply immediately. She filed a written response to the NRS the same afternoon:</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; FPS Director Response &mdash; Filed 3:47 PM</div>
+        RESPONSE OF THE FPS DIRECTOR TO CIVIC CONSUL DIRECTION OF THIS DATE<br><br>
+        The Director has received the direction issued this morning under §2.16. The Director notes that the direction concerns an active investigation in which matters bearing on §12.4 compliance may be relevant. The Director requests that the Civic Consul's Office confirm, in writing published to the NRS, that the conflict of interest disclosure required by §12.4 has been completed with respect to all financial interests touching on Hartwell Group and its related entities. Pending that confirmation, the Director will hold the direction under advisement. The Director's constitutional obligation to refuse unconstitutional orders under §2.8 requires this verification before compliance can proceed.
+      </div>
+
+      <p>The response placed the §12.4 question on the NRS before the EM had completed its audit. It did not halt the investigation — the Director had not been directed to halt it, only to suspend it, and she had not yet complied. It bought time.</p>
+
+      <h2>The EM Finding — §9.1.b and §12.4</h2>
+
+      <p>The Executive Monitor had already opened a routine audit of the Civic Consul's annual §12.4 disclosures three weeks before the direction was issued. The Hartwell direction accelerated the timeline. The EM published its finding thirty-nine days after the direction.</p>
+
+      <div class="finding">
+        <span class="finding-label">Executive Monitor &mdash; §12.4 Compliance Finding</span>
+        <p>The EM has completed its assessment of the Civic Consul's financial disclosures under §12.4 with respect to matters touching on Hartwell Group and related entities. The assessment finds: (1) the blind trust instrument as executed did not meet the §12.4 independence standard; (2) the Civic Consul received three quarterly summary reports from the trustee in direct contravention of the trust instrument; (3) the position in Hartwell Group subsidiary Hartwell Capital Partners II was not disclosed to the EM within the period required by §12.4; (4) the direction issued under §2.16 was issued while the Civic Consul held an undisclosed financial interest in a Hartwell Group entity. This finding is published to the NRS permanently under §9.6.</p>
+      </div>
+
+      <p>The EM had no enforcement authority. It published its finding and did nothing further. That was its entire constitutional function.</p>
+
+      <p>It was sufficient.</p>
+
+      <h2>The Constitutional Question — §17.4</h2>
+
+      <p>The FPS Director filed her refusal of the direction the day after the EM finding was published. Her constitutional argument was precise: §2.16 grants authority to issue directions concerning specific prosecutions. §12.4 requires that any official act touching on a matter in which a constitutional officer holds a financial interest must comply with the conflict of interest framework. An act issued in breach of §12.4 is an unconstitutional act. Under §17.4, any provision inconsistent with the constitution is void. The direction was issued in breach of §12.4 and was therefore constitutionally void. The duty of refusal under §2.8 applied.</p>
+
+      <p>Calder's office challenged the refusal in the Supreme Court the same day.</p>
+
+      <div class="beat">
+        <div class="beat-label">§17.4 &mdash; Constitutional Supremacy</div>
+        <div class="beat-title">Can a formally valid act be constitutionally void?</div>
+        <p>The SC heard argument on an expedited basis. The central question: does a breach of §12.4 in the issuance of a §2.16 direction render the direction void, or merely subject to removal proceedings?</p>
+        <p>The SC held unanimously: a §2.16 direction issued while the Civic Consul holds an undisclosed financial interest in the subject entity is not a valid exercise of §2.16 authority. §12.4 is not merely a disclosure obligation — it conditions the exercise of official authority. An official act issued in breach of §12.4 is constitutionally invalid under §17.4. The duty of refusal under §2.8 applies to constitutionally void acts regardless of their formal compliance with the specific provision under which they purport to be issued. The direction was void. The FPS Director's refusal was constitutionally correct.</p>
+      </div>
+
+      <h2>Removal Proceedings — §2.13</h2>
+
+      <p>The SC ruling resolved the immediate question. It did not resolve the political one. Three days after the ruling, the Assembly commenced removal proceedings against Civic Consul Calder under §2.13 on grounds of constitutional breach — the §12.4 violation confirmed by the EM and affirmed by the SC. The proceedings required 2/3 of both chambers in a concurrent vote.</p>
+
+      <p>The Assembly reached the 2/3 threshold. The Senate, in which Calder's coalition held a narrow advantage, did not. The removal failed by four Senate votes.</p>
+
+      <p>Calder remained in office. The Hartwell prosecution proceeded. Hartwell Group's officers were charged eight weeks after the SC ruling. The case took two years to resolve. Forty thousand investors received partial restitution.</p>
+
+      <p>Calder did not seek re-election at the end of his term.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§2.16 was designed around a transparency mechanism rather than a prohibition. A Consul CAN direct specific prosecutions — but only publicly. The assumption was that the political cost of a visible direction would deter misuse in most cases. The Hartwell direction tested what happens when that deterrence fails: when a Consul is willing to absorb the political cost of public interference.</p>
+        <p>The scenario's answer is that §2.16 alone is insufficient. What makes the provision work is not the transparency mechanism in isolation but the interaction with existing constitutional provisions: §12.4 conditions the exercise of official authority on conflict of interest compliance; §9.1.b gives the EM the mandate to audit and publish; §17.4 makes unconstitutional acts void regardless of formal compliance; §2.8 gives the FPS Director a constitutional basis for refusal of void acts.</p>
+        <p>The transparency mechanism created the political record. The EM found what the record implied. The SC resolved what the EM found. The FPS Director acted on what the SC held. No single provision stopped the direction — the system did. The constitution's design relies on this kind of institutional interaction rather than on any single provision being a complete protection by itself.</p>
+        <p>The removal proceedings failing by four Senate votes is also part of the test. The constitution does not guarantee that constitutional breaches produce removal. It guarantees they produce a permanent public record, an independent audit finding, a judicial determination, and a political process. Whether that political process produces accountability depends on the democratic conditions of the moment. That is the design: not constitutional override of democratic outcomes, but constitutional conditions for democratic judgment.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+      <a href="scenario-ordinary.html">Ordinary Law &rarr;</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">The Federated Republic</div>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <div class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</div>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+    if('serviceWorker' in navigator){
+      window.addEventListener('load',function(){
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
+</body>
+</html>
