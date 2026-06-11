@@ -52,7 +52,8 @@
     .finding p+p{margin-top:0.75rem}
     .timeline-note{background:var(--cream2);border:1px solid var(--border);padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.88rem;color:var(--muted);font-style:italic;line-height:1.6}
     .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
     @media(max-width:820px){.hamburger{display:flex}.nav-links{display:none}.page-wrap{padding:76px 1.25rem 60px}.scenario-title{font-size:1.9rem}}
   </style>
 </head>
@@ -221,6 +222,11 @@
       <a href="scenario-ordinary.html">The Ordinary Week →</a>
     </nav>
   </div>
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+      <a href="scenarios.html">All Scenarios &rarr;</a>
+    </div>
+
 
   <script>
     document.querySelector('.hamburger')?.addEventListener('click', () => {

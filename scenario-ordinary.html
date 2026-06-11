@@ -73,8 +73,9 @@
     .next-card-desc{font-size:0.76rem;color:var(--muted);line-height:1.5}
     .story-note{font-size:0.82rem;color:var(--muted);line-height:1.75;font-style:italic;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
     .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
-    .scenario-nav a:hover{color:var(--navy)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    
     .skip-nav{position:absolute;top:-100px;left:1rem;background:var(--navy);color:var(--cream);padding:0.6rem 1.2rem;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:0 0 4px 4px;z-index:9999;transition:top 0.1s}
     .skip-nav:focus{top:0;outline:3px solid var(--gold);outline-offset:2px}
     :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
@@ -273,6 +274,11 @@
     <p class="story-note">This is a work of constitutional imagination. The Federated Republic is a theoretical framework &#8212; not the law of any existing nation &#8212; but an attempt to answer a serious question about what democratic constitutions could be. All characters and situations are fictional.</p>
 
   </div>
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+      <a href="scenarios.html">All Scenarios &rarr;</a>
+    </div>
+
 
   <script>
     function toggleMobileNav(){

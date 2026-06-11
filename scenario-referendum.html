@@ -54,8 +54,9 @@
     .verdict-box p{font-size:0.92rem;line-height:1.75;margin-bottom:0}
     .verdict-box p+p{margin-top:0.75rem}
     .scenario-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-    .scenario-nav a{text-decoration:none;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em}
-    .scenario-nav a:hover{color:var(--navy)}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
     .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
     .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
@@ -214,6 +215,11 @@
       <a href="scenarios.html">Judicial Election →</a>
     </nav>
   </div>
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+      <a href="scenarios.html">All Scenarios &rarr;</a>
+    </div>
+
 
   <script>
     function toggleMobileNav(){
