@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constitutional Stress Tests — The Federated Republic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:780px;margin:0 auto;padding:88px 2rem 80px}
+    .doc-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .doc-header h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--navy);margin-bottom:0.5rem}
+    .doc-header p{font-size:0.88rem;color:var(--muted);line-height:1.75;font-style:italic}
+
+    .stress-test{margin-bottom:4rem;padding-bottom:3rem;border-bottom:2px solid var(--border)}
+    .stress-test:last-child{border-bottom:none}
+    .st-number{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem}
+    .st-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--navy);margin-bottom:0.3rem}
+    .st-prov{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;display:inline-block;margin-bottom:1.5rem;letter-spacing:0.05em}
+
+    .st-body p{font-size:1rem;line-height:1.9;margin-bottom:1.4rem;color:#2a2520}
+    .st-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:2rem 0 0.5rem}
+
+    .gap-box{background:rgba(27,42,74,0.05);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:1.75rem 0}
+    .gap-label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem}
+    .gap-box p{font-size:0.9rem;color:#3a3530;margin-bottom:0.6rem;line-height:1.75}
+    .gap-box p:last-child{margin-bottom:0}
+
+    .finding-box{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:1.75rem 0}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block}
+    .finding-box p{font-size:0.9rem;line-height:1.75;margin-bottom:0.6rem}
+    .finding-box p:last-child{margin-bottom:0}
+
+    .verdict{border:2px solid var(--gold);padding:1.25rem 1.5rem;margin:1.75rem 0}
+    .verdict-label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block}
+    .verdict p{font-size:0.9rem;line-height:1.75;margin-bottom:0.6rem}
+    .verdict p:last-child{margin-bottom:0}
+
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="doc-header">
+      <h1>Constitutional Stress Tests</h1>
+      <p>Five provisions identified as most likely to produce genuine constitutional ambiguity under pressure. Each test is designed to find the gap — where the provision runs out and the question is left open. Internal stress-testing document. Session 260612a: five tests run, zero §16.7.a amendments needed — existing constitutional framework handles all failure modes. One structural revision to §16.4 (JCRC removed as constitutional institution). See constitutional-history.html entry 260612a.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Stress Test 01</span>
+      <h2 class="st-title">The Suspended Motion</h2>
+      <div><span class="st-prov">§2.6 Constructive Vote of No Confidence</span></div>
+
+      <div class="st-body">
+        <p>A coalition commanding 241 of the 400 Assembly seats files a constructive motion of no confidence against Civic Consul Reyes. The motion names Assembly Member Adaeze Obi as the proposed replacement and attaches a 14-page programme of government. The Assembly Speaker receives the filing at 9:44 AM on a Tuesday. The Speaker schedules the vote for 18 days later, within the statutory scheduling window.</p>
+
+        <p>On Day 11, Obi is involved in a serious road accident. She is hospitalized and issues a written statement from her hospital bed withdrawing from the proposed replacement role. She cites the need to recover and the unfairness of asking the Republic to install a Consul who cannot immediately assume full duties.</p>
+
+        <p>The filing coalition meets in emergency session. Faction A argues the motion is automatically void — the named replacement is a constitutional element, not an administrative detail, and the motion as filed no longer exists. Faction B argues they can substitute a new named replacement and file an amended motion. Faction C argues the Speaker should simply hold the scheduled vote on the original motion and the Assembly can decide what to do.</p>
+
+        <h3>The Constitutional Gap</h3>
+
+        <div class="gap-box">
+          <div class="gap-label">Gap Identified — §2.6</div>
+          <p>§2.6 specifies that a motion must be submitted with a named replacement and a programme of government. It is silent on what happens to a validly filed motion when the named replacement becomes unavailable before the vote. Three questions are left entirely open:</p>
+          <p><strong>(1) Does the motion automatically lapse?</strong> Nothing in §2.6 says so, but the named replacement is a constitutional element — if it is unfilled, the motion may not satisfy the constitutional requirements on the day of the vote.</p>
+          <p><strong>(2) Can the coalition amend the motion?</strong> The provision says the motion must be filed with the Speaker — it does not address amendments after filing. If amendments are permitted, the filing coalition could simply substitute a new name. If not, a new motion must be filed, resetting the clock entirely.</p>
+          <p><strong>(3) What does the Speaker do?</strong> The Speaker schedules the vote on the motion as filed. If the motion is void, holding the vote produces a legal nullity. If the motion is valid, the Assembly votes on installing a replacement who has declined the position.</p>
+        </div>
+
+        <h3>The Downstream Consequences</h3>
+
+        <p>The stakes are asymmetric. If the motion lapses automatically, Reyes survives and the coalition cannot file another motion on the same programme for the period defined by statute — the cooling-off clause that prevents repeat no-confidence attempts. The coalition effectively wasted its shot. If the motion can be amended, the coalition can substitute a new candidate immediately and proceed. If the vote proceeds on the original motion, the Assembly might vote to install Obi, who has publicly declined — producing an absurd outcome requiring immediate resolution.</p>
+
+        <p>Reyes' legal team argues the motion is void. The coalition argues the spirit of §2.6 is to make no-confidence votes constructive, not to trap oppositions in technicalities. The Speaker, caught between them, requests a ruling from the SC under the expedited constitutional question process.</p>
+
+        <div class="finding-box">
+          <span class="finding-label">SC Constitutional Question</span>
+          <p>The SC is asked: does the unavailability of a named replacement after a constructive motion is validly filed, but before the vote, void the motion? And if not, may the filing coalition amend the named replacement?</p>
+          <p>The provision does not answer this. The SC must construct a rule from the purpose of §2.6 — which is to make no-confidence votes constructive rather than merely destructive. An interpretation that allows the motion to be amended is consistent with that purpose; an interpretation that voids it, while consistent with strict textual reading, creates a trap that could produce constitutional paralysis whenever a named replacement becomes unavailable.</p>
+        </div>
+
+        <div class="verdict">
+          <span class="verdict-label">Gap Assessment</span>
+          <p><strong>This is a genuine gap that should be closed.</strong> The provision should specify, at minimum, what happens when a named replacement becomes unavailable after filing. A simple addition: where a named replacement becomes unavailable before the vote, the filing coalition may substitute a replacement within 5 days; if no substitution is made, the motion lapses without prejudice and the cooling-off period does not apply. This prevents both the void-motion trap and the absurdity of voting on a withdrawn candidate.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Stress Test 02</span>
+      <h2 class="st-title">The Treaty That Cannot Be Enacted</h2>
+      <div><span class="st-prov">§2.14.a Coordination Failure Protocol</span> <span class="st-prov">§3.6 Treaty Ratification</span></div>
+
+      <div class="st-body">
+        <p>The Legat Consul negotiates a multilateral climate treaty with 34 other nations. The Senate ratifies it by a 2/3 vote. The treaty requires the Republic to enact carbon pricing legislation within 18 months of ratification, with minimum pricing standards specified in the treaty text.</p>
+
+        <p>The Civic Consul publicly opposes the implementation legislation. She argues that the treaty's carbon pricing mechanism constitutes an unlawful constraint on the Legislature's taxing authority under §12.3, which reserves the taxing power to the Legislature and does not permit treaty obligations to set minimum pricing levels. She declines to introduce implementing legislation and instructs the Council of Ministers that no Ministry will draft a bill consistent with the treaty's requirements.</p>
+
+        <p>The Legat Consul formally notifies the §2.14.a coordination failure process. The Civic Consul's residual authority governs pending resolution. The Legislature has 30 days to override by concurrent resolution.</p>
+
+        <h3>The Constitutional Gap</h3>
+
+        <div class="gap-box">
+          <div class="gap-label">Gap Identified — §2.14.a and §3.6</div>
+          <p>§2.14.a says the Civic Consul's residual authority governs pending resolution, subject to a 30-day legislative override. But "override of what" is ambiguous. The provision was designed for operational conflicts — one executive's lawful act colliding with another's. It was not designed for a structural refusal: a Civic Consul who will not implement a treaty the Senate has ratified.</p>
+          <p>If the Legislature passes a concurrent resolution directing implementation, can the Civic Consul comply with that resolution while maintaining that the treaty is unconstitutional? §17.4 makes the constitution supreme over treaties. If the Civic Consul's constitutional objection is correct, the Legislature's concurrent resolution cannot cure the objection — it can only direct an act the Consul believes is itself unconstitutional.</p>
+          <p>Meanwhile, the 18-month treaty implementation deadline runs. The Republic is accumulating treaty breach while the constitutional question is unresolved.</p>
+        </div>
+
+        <h3>Three Paths and Their Problems</h3>
+
+        <p><strong>Path 1 — SC referral.</strong> The SC could be asked whether the treaty's carbon pricing mechanism is consistent with §12.3. If the SC holds the treaty is constitutional, the Civic Consul must implement. If the SC holds it is not, the Republic has ratified an unconstitutional treaty and must renegotiate or withdraw. This is the cleanest path but the SC's timeline may not align with the treaty's implementation deadline.</p>
+
+        <p><strong>Path 2 — Legislature acts directly.</strong> Can the Legislature enact the implementing legislation without the Civic Consul's introduction or endorsement? §3.7 permits any member to introduce legislation. The Legislature can pass the carbon pricing statute over the Civic Consul's objection using the suspensive veto override. The Civic Consul can veto; the Assembly can override with 2/3. This path works if the Legislature has the votes — but it requires the implementation to proceed through normal legislative channels without executive drafting resources.</p>
+
+        <p><strong>Path 3 — Sustained coordination failure.</strong> If neither path produces implementation within 18 months, the Republic is in formal treaty breach. §3.6 provides for withdrawal from multilateral treaties — but unilateral withdrawal from a multilateral treaty requires notification under the treaty's own withdrawal provisions. The Legat Consul can initiate the treaty withdrawal process, but the Senate ratified the treaty and its concurrence may be required for withdrawal. A Legat Consul who wants to honor the treaty and a Civic Consul who wants it voided could produce an indefinite standoff with no clear resolution mechanism.</p>
+
+        <div class="finding-box">
+          <span class="finding-label">Structural Tension</span>
+          <p>§2.14.a was designed for operational conflicts, not for a Civic Consul who uses the coordination failure process as a constitutional veto on treaty implementation. The 30-day legislative override provision assumes the Legislature can cure the conflict. It cannot cure a constitutional objection — only the SC can. The provision should specify that where a coordination failure involves a Senate-ratified treaty obligation, the conflict is referred to the SC within 30 days for an expedited constitutional determination.</p>
+        </div>
+
+        <div class="verdict">
+          <span class="verdict-label">Gap Assessment</span>
+          <p><strong>No amendment needed.</strong> A Senate-ratified treaty is the law of the land under §3.6 — the same principle as all ratified law. The Senate's 2/3 ratification constitutes an implicit constitutional determination that the treaty is consistent with Republic law. The Civic Consul's constitutional objection pathway was not as strong as the initial analysis assumed. The Legislature can enact implementing legislation directly; the Consul can veto; a 2/3 Assembly majority overrides. If the Legislature has the votes, implementation proceeds. If it doesn't, that is a democratic outcome, not a constitutional gap. No amendment warranted.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Stress Test 03</span>
+      <h2 class="st-title">The Emergency the Court Rejects</h2>
+      <div><span class="st-prov">§1.19 Emergency Derogation</span> <span class="st-prov">§4.5 Judicial Review</span></div>
+
+      <div class="st-body">
+        <p>A severe earthquake destroys critical infrastructure across three northeastern States. The Legat Consul declares a national emergency under §1.19 and deploys military engineering units domestically under §2.2's immediate response authority. The declaration derogates from the right to freedom of movement under §1.5 and the right against arbitrary detention under §1.3 in the three affected States and, citing supply chain and population displacement concerns, in four additional States bordering the disaster zone.</p>
+
+        <p>The SC receives an emergency application the same day from three State governments outside the disaster zone. They argue the declaration violates §1.19.a's specificity requirement: the derogation covers States not affected by the earthquake, which is the opposite of the "specific geography" requirement. The States argue the SC has jurisdiction to invalidate the declaration because it fails to comply with §1.19.a's procedural requirements.</p>
+
+        <p>The Legat Consul's office responds: the SC has jurisdiction to adjudicate individual rights violations arising from emergency measures — but not to invalidate the declaration itself. An emergency declaration is a constitutional act, not an executive order. §4.5 grants courts the power to review "executive orders and administrative decisions" — an emergency declaration is neither. The only remedy for a defective emergency declaration is legislative: the Assembly's power under §1.19.d to refuse to extend it.</p>
+
+        <h3>The Constitutional Gap</h3>
+
+        <div class="gap-box">
+          <div class="gap-label">Gap Identified — §1.19 and §4.5</div>
+          <p>§1.19 specifies detailed requirements for a valid emergency declaration: specific rights, specific geography, specific duration. §1.19.a says blanket declarations are constitutionally void. §4.5 grants courts the power to declare unconstitutional "any legislative act, executive order, or administrative decision." But §1.19 nowhere specifies who may adjudicate whether a declaration satisfies §1.19.a's requirements.</p>
+          <p>The Legat Consul's argument has textual merit: an emergency declaration is not obviously an "executive order" in the ordinary administrative sense. It is a constitutional instrument invoked under Article I itself. If the SC has no jurisdiction to review the declaration's procedural validity, only its individual applications, then §1.19.a's specificity requirements are effectively unenforceable — the Consul can declare broadly and face challenges only case by case.</p>
+          <p>If the SC does have jurisdiction, the Legat Consul may be overruled mid-emergency, creating confusion about which emergency measures remain valid and which do not.</p>
+        </div>
+
+        <h3>What Is at Stake</h3>
+
+        <p>If the SC holds it has no jurisdiction over the declaration itself, §1.19.a's specificity requirements become largely advisory. A Consul could declare a nationwide emergency whenever a regional one would suffice, facing no immediate legal check — only political accountability through the Legislature's extension vote, which comes after the declaration is already in effect.</p>
+
+        <p>If the SC holds it has jurisdiction and invalidates the geographic overbreadth, the four unaffected States immediately resume normal rights status. Military deployments and movement restrictions in those States become unlawful overnight. Emergency operations that have begun must be immediately restructured.</p>
+
+        <p>A third option: the SC holds it has jurisdiction but issues a curative order rather than an invalidation — directing the Consul to amend the declaration to conform to §1.19.a within 24 hours, with the declaration remaining in effect pending amendment. This avoids mid-emergency chaos while enforcing the specificity requirement.</p>
+
+        <div class="finding-box">
+          <span class="finding-label">The Real Risk</span>
+          <p>The deeper problem is not which way the SC rules — it is that the question is ambiguous enough to produce extended litigation during an active emergency. Any period where the validity of an emergency declaration is legally uncertain creates operational confusion for emergency responders, military units, and State governments implementing emergency measures. The ambiguity is itself a governance risk independent of the SC's ultimate ruling.</p>
+        </div>
+
+        <div class="verdict">
+          <span class="verdict-label">Gap Assessment</span>
+          <p><strong>No amendment needed.</strong> SC jurisdiction over executive acts is established under §4.5. Whether an emergency declaration constitutes an "executive act" for §4.5 purposes is exactly the kind of constitutional question the SC exists to answer — specifying the answer in the constitution would be telling the court how to determine its own jurisdiction. The SC will resolve this when it arises, and its ruling will be better calibrated to the specific circumstances than any constitutional pre-specification could be. That is why we have a Supreme Court.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Stress Test 04</span>
+      <h2 class="st-title">Two Councils, Two Elections</h2>
+      <div><span class="st-prov">§16.7 Indigenous Status Elections</span> <span class="st-prov">§16.7.a</span> <span class="st-prov">§16.4 Joint Compact Review Council</span></div>
+
+      <div class="st-body">
+        <p>The Karu Nation has operated under an Article XVI compact for eleven years. Its internal governance has historically been shared between two bodies: the Council of Elders, a traditional body of seventeen members selected by clan leadership processes with roots predating the Republic, and the Elected Assembly, a 43-member body established in the second year of the compact through a democratic reform process the compact itself facilitated.</p>
+
+        <p>Relations between the two bodies have been tense for three years over resource management decisions. When the §16.7 status election window opens, both bodies claim the right to make the election. The Council of Elders votes 11-6 to affirm the Article XVI compact. The Elected Assembly votes 31-12 to elect full sovereign independence. Both publish their elections to the NRS on the same day, citing §16.7.a and claiming their respective process meets "the standards the nation itself defines."</p>
+
+        <p>The JM receives both filings and faces a certification question it has no constitutional guidance to resolve.</p>
+
+        <h3>The Constitutional Gap</h3>
+
+        <div class="gap-box">
+          <div class="gap-label">Gap Identified — §16.7.a</div>
+          <p>§16.7.a requires the status election to be "by the nation's own governance process, meeting the standards the nation itself defines." This language was designed to respect indigenous self-determination in governance. It prevents the Republic from imposing its own standards on how a nation makes its status decision. But the language assumes the nation has a single, uncontested governance process. When two governance structures each claim legitimacy, the provision provides no mechanism for resolution.</p>
+          <p>The Joint Compact Review Council (§16.4) has equal Republic and Nation representation and handles compact modification disputes — but it cannot adjudicate the legitimacy of the governance processes themselves. Both councils are the "Nation" for compact purposes. The Council cannot sit as both judge and party.</p>
+          <p>Referring the question to the SC is problematic: §16.1 explicitly acknowledges that indigenous sovereignty precedes the Republic. For the SC to determine which governance structure is the legitimate voice of a sovereign nation is, on one reading, an exercise of exactly the jurisdictional overreach Article XVI was designed to prevent.</p>
+        </div>
+
+        <h3>Three Positions</h3>
+
+        <p><strong>The Republic cannot decide.</strong> The governance legitimacy question is an internal matter for the Karu Nation. The Republic must wait until the Nation resolves its internal dispute and submits a single election. The compact continues in force in the interim. This position respects sovereignty but could produce indefinite stalemate if the internal dispute cannot be resolved.</p>
+
+        <p><strong>The JM applies objective criteria.</strong> The JM examines both governance processes against objective constitutional criteria: which body has the broader democratic mandate, which was established through a process acknowledged by the compact, which has been the Republic's counterparty in compact administration. The JM certifies the election that better reflects the Nation's self-determination. This position makes the Republic the arbiter of indigenous legitimacy — the very thing §16.1 was designed to prevent.</p>
+
+        <p><strong>Both elections are void; fresh process required.</strong> Where two elections are simultaneously filed for the same nation, neither is valid — the nation has not spoken with one voice. A new election process must be conducted through a mechanism both governance bodies can accept. The JM certifies neither election and notifies the compact parties that a resolution process is required. This is procedurally clean but creates a new question: who designs the resolution process, and what if neither governance body will participate?</p>
+
+        <div class="finding-box">
+          <span class="finding-label">The Deeper Tension</span>
+          <p>This stress test reveals a tension at the heart of Article XVI's design. The provision respects indigenous self-determination by deferring to the nation's own governance standards — but self-determination requires a self that can speak. When the "self" is internally divided, the deference mechanism breaks down. Any resolution the Republic imposes contradicts the principle of the provision. Any resolution the Republic refuses to impose leaves the constitutional question permanently open.</p>
+        </div>
+
+        <div class="verdict">
+          <span class="verdict-label">Gap Assessment</span>
+          <p><strong>A genuine gap with no clean solution.</strong> The provision should add a mechanism for disputed elections: where two governance bodies file incompatible elections, the JM notifies both bodies and the compact continues in force for a defined period (suggested: 24 months) during which the Nation must conduct a resolution process and file a single election. If no single election is filed within that period, the compact is treated as affirmed by default. This preserves sovereignty (the Nation must resolve the dispute internally) while providing a defined outcome for failure to do so.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Stress Test 04</span>
+      <h2 class="st-title">Two Councils, Two Elections</h2>
+      <div><span class="st-prov">§16.7 Indigenous Status Elections</span> <span class="st-prov">§16.7.a</span> <span class="st-prov">§16.4 Compact Administration</span></div>
+
+      <div class="st-body">
+        <p>Two governance bodies within the Karu Nation — the Council of Elders and the Elected Assembly — file incompatible status elections. The Council votes to affirm the Article XVI compact; the Elected Assembly votes to elect full sovereign independence. Both publish their elections to the NRS on the same day, each claiming its governance process meets the §16.7.a standard.</p>
+
+        <h3>Initial Assessment</h3>
+
+        <p>The initial assessment identified three apparent gaps: §16.7.a assumes a single governance voice; the prior §16.4 JCRC structure could not adjudicate internal governance legitimacy without the Republic deciding indigenous politics; and any default outcome imposed by the Republic would be asymmetric.</p>
+
+        <h3>Analysis — Treaty-as-Law Principle</h3>
+
+        <div class="gap-box">
+          <div class="gap-label">Resolution</div>
+          <p>The compact is Senate-ratified law under §3.6. A valid §16.7 status election requires a decision by the nation's governance process meeting the nation's own standards. Two incompatible elections do not constitute one valid election. Neither takes effect by operation of law — no Republic actor needs to make this determination. The compact continues as the law of the land because nothing has validly changed it.</p>
+          <p>The compact-designated counterpart (whoever the compact named as the working relationship interlocutor) continues as the Republic's point of contact. Changing that designation requires compact modification — Legat Consul negotiation, Senate ratification. The Republic deals with the contractually designated counterpart without deciding which governance body is politically legitimate.</p>
+          <p>The Executive Monitor audits Republic-side compliance with compact obligations and publishes findings to the NRS. The nation's internal governance dispute is its own to resolve. When it does, a single valid election is filed and the Republic responds.</p>
+        </div>
+
+        <h3>§16.4 Structural Revision</h3>
+
+        <p>The stress test revealed a more significant issue in §16.4 than the status election question. The Joint Compact Review Council — as a constitutionally prescribed institution with defined composition — imposed Republic institutional architecture on sovereign indigenous nations. Each nation's governance traditions differ; prescribing a specific joint body structure for every compact relationship contradicts §16.1's acknowledgment of prior sovereignty.</p>
+
+        <p>§16.4 was revised in session 260612a. The JCRC is removed as a constitutional institution. Each compact now establishes its own working mechanism in a form the parties agree. The Legat Consul (not the Civic Consul, which had no constitutional basis in this domain) designates a ministerial counterpart for each compact relationship. Compact modifications require LC negotiation and Senate ratification — the same path as creation. The EM audits Republic-side compliance annually.</p>
+
+        <div class="verdict">
+          <span class="verdict-label">Finding</span>
+          <p><strong>No amendment to §16.7.a needed.</strong> The treaty-as-law principle resolves the incompatible elections scenario without additional constitutional text. The compact continues as Senate-ratified law; incompatible elections don't satisfy §16.7's requirements; no Republic actor adjudicates indigenous governance legitimacy.</p>
+          <p><strong>§16.4 required structural revision</strong> — not because of the incompatible elections scenario directly, but because the stress test revealed the JCRC was constitutionally imposing Republic institutional forms on sovereign nations. That was the genuine gap the test uncovered.</p>
+        </div>
+      </div>
+    </div>
+
+    
