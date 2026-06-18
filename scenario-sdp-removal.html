@@ -11,7 +11,9 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="The Grounds Review">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
   <style>
     :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -50,22 +52,25 @@
 </head>
 <body>
   <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
     <div class="nav-links">
-      <a href="annotated.html">Constitution</a><a href="scenarios.html" class="active">Scenarios</a>
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
       <a href="diagrams.html">Diagrams</a>
-      <a href="constitutional-history.html">Constitutional History</a><a href="sources.html">Sources</a>
-    <a href="glossary.html">Glossary</a>
-      <a href="advisor.html">Advisor</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
       <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
     </div>
-    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
-    <a href="annotated.html">Constitution</a>
+    <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
@@ -73,9 +78,10 @@
     <a href="advisor.html">Advisor</a>
     <a href="sources.html">Sources</a>
     <a href="contact.html">Contact</a>
-    <a href="constitution-current.pdf" download class="mobile-cta">Download a copy</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
   </div>
 
+  
   <main>
     <div class="scenario-meta">
       <span class="scenario-tag">Monitor General Removal · §9.14 · SC Categorical Review</span>
@@ -129,5 +135,20 @@
         m.classList.remove('open');
     });
   </script>
+
+<footer>
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
 </body>
 </html>
