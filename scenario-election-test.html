@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scenario: Election Administration Stress Tests — The Federated Republic</title>
+  <meta name="description" content="Four stress tests of the cooperative federalism election model: standards enforcement, result certification with disputed compliance, federal assistance adequacy, and public spectrum access.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:780px;margin:0 auto;padding:88px 2rem 80px}
+    .doc-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .doc-header h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--navy);margin-bottom:0.5rem}
+    .doc-header p{font-size:0.88rem;color:var(--muted);line-height:1.75;font-style:italic}
+
+    .stress-test{margin-bottom:4rem;padding-bottom:3rem;border-bottom:2px solid var(--border)}
+    .stress-test:last-child{border-bottom:none}
+    .st-number{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem}
+    .st-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--navy);margin-bottom:0.3rem}
+    .st-prov{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;display:inline-block;margin-bottom:1.5rem;letter-spacing:0.05em}
+
+    .st-body p{font-size:1rem;line-height:1.9;margin-bottom:1.4rem;color:#2a2520}
+    .st-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin:2rem 0 0.5rem}
+
+    .gap-box{background:rgba(27,42,74,0.05);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:1.75rem 0}
+    .gap-label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem}
+    .gap-box p{font-size:0.9rem;color:#3a3530;margin-bottom:0.6rem;line-height:1.75}
+    .gap-box p:last-child{margin-bottom:0}
+
+    .finding-box{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:1.75rem 0}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block}
+    .finding-box p{font-size:0.9rem;line-height:1.75;margin-bottom:0.6rem}
+    .finding-box p:last-child{margin-bottom:0}
+
+    .verdict{border:2px solid var(--gold);padding:1.25rem 1.5rem;margin:1.75rem 0}
+    .verdict-label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block}
+    .verdict p{font-size:0.9rem;line-height:1.75;margin-bottom:0.6rem}
+    .verdict p:last-child{margin-bottom:0}
+
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="scenario-ordinary.html" class="mobile-cta">Start Here</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="doc-header">
+      <h1>Election Administration Stress Tests</h1>
+      <p>Four scenarios testing the cooperative federalism election model: standards enforcement, result certification with disputed compliance, federal assistance adequacy, and public spectrum access obligations.</p>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Election Test 01</span>
+      <h2 class="st-title">The Non-Compliant State</h2>
+      <div><span class="st-prov">§7.3 Federal Elections</span> <span class="st-prov">§11.1 NRS Panel and Elections Panel</span></div>
+
+      <div class="st-body">
+        <p>Three weeks before a federal Assembly election, the Elections Panel completes its pre-election audit of all State election systems. It finds that Varro, a mid-sized State, is using certified equipment but has misconfigured its NVS connection in a way that the Panel determines violates the real-time auditability standard under §11.2. The Panel issues a formal standards breach notice and directs Varro to remediate within 14 days or face the election being administered directly by the Elections Panel for Varro's territory.</p>
+
+        <p>Varro's Secretary of State disputes the finding, argues the configuration meets the standard under a reasonable technical interpretation, and refuses to remediate. Varro's Governor petitions the SC for emergency review of the Elections Panel's authority to impose direct administration as a remedy. The election is 7 days away.</p>
+
+        <h3>What the Constitution Says</h3>
+
+        <p>§11.1 answers this directly: where the Elections Panel certifies a State's election system as non-compliant before an election, the Panel may withhold result certification for affected districts pending compliance or a special election under §7.3.a. The Panel does not need to take over Varro's election to enforce its finding — it needs only to announce, now, that Varro's results will not be certified unless the configuration is fixed before voting closes.</p>
+
+        <p>The Panel's "direct administration" threat is a different matter, and a weaker one. §11.1 grants the Panel authority to establish standards, certify equipment, audit compliance, and certify results — not to displace a State's administration of its own election. The 14-day remediation order is enforceable through the certification lever the Panel already holds; the administration threat adds nothing the constitution actually backs.</p>
+
+        <div class="finding-box">
+          <span class="finding-label">Finding</span>
+          <p>Varro's Governor is right to challenge the "direct administration" claim — the SC should reject it as unsupported. But the enforcement problem the Panel was reaching to solve is already solved: a pre-election non-compliance finding lets the Panel withhold certification for Varro's results once cast, putting Varro's Assembly seats at risk of going unfilled and triggering §7.3.a special elections. That is real pressure to remediate before the election, without needing to seize administration of it.</p>
+          <p>The Panel's mistake here is reaching for an authority it doesn't have when the authority it does have already does the job.</p>
+        </div>
+
+        <div class="verdict">
+          <span class="verdict-label">Assessment</span>
+          <p><strong>No gap.</strong> §11.1's pre-election certification-withholding clause gives the Panel exactly the enforcement lever this scenario needs, with the §7.3.a special-election mechanism providing the consequence. The "direct administration" claim fails because the constitution never grants it — and doesn't need to, since certification withholding already creates the deterrent the Panel was reaching for.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Election Test 02</span>
+      <h2 class="st-title">The Insufficiently Assisted State</h2>
+      <div><span class="st-prov">§7.3 Federal Elections — Federal Assistance Obligation</span></div>
+
+      <div class="st-body">
+        <p>Maran, a small low-revenue State, applies to the federal assistance program established under §7.3 for election equipment funding. The Legislature has funded the program at a level the Elections Panel determines is below what is needed to bring all qualifying States into compliance. Maran receives partial assistance — enough to upgrade two of its seven counties — but the remaining five counties are running uncertified equipment that cannot properly connect to the NVS.</p>
+
+        <p>The Elections Panel publishes a finding that the federal assistance was insufficient to bring Maran into full compliance, as it is constitutionally required to do under §7.3. Maran's Governor argues the Republic is in constitutional breach — the federal government imposed the standards and the federal government failed to fund compliance. The Governor petitions the SC to order the Republic to provide full compliance funding before the election.</p>
+
+        <h3>The Constitutional Gap</h3>
+
+        <div class="gap-box">
+          <div class="gap-label">Gap Identified — §7.3</div>
+          <p>§7.3 creates an obligation: "The Republic shall provide such financial and technical assistance as is necessary to ensure every State has the capacity to procure certified equipment and meet federal election standards." The Elections Panel certifies whether assistance has been sufficient. But the provision does not specify the consequence of an insufficiency finding, nor does it provide a remedy mechanism.</p>
+          <p>If the Legislature simply underfunds the assistance program, the constitutional obligation exists but the enforcement pathway is unclear. Can the SC compel the Legislature to appropriate funds? Appropriations are traditionally a legislative prerogative. An SC order directing a specific appropriation would be an extraordinary intervention in the legislative domain.</p>
+        </div>
+
+        <h3>Analysis</h3>
+
+        <p>The SC has the power to declare unconstitutional any act or omission that violates the constitution. The Legislature's failure to fund the assistance obligation at the constitutionally required level is a constitutional breach. The SC can declare this and direct the Legislature to remedy it. Whether it can specify the amount or mechanism is the harder question — the FR's constitution generally leaves appropriations to the Legislature while giving the SC declaration authority.</p>
+
+        <p>The more powerful constitutional mechanism may be the result certification consequence: if Maran's five non-compliant counties vote on non-compliant equipment, the Elections Panel withholds certification for those districts. The five unfilled seats represent a significant political cost. The combination of an SC non-compliance declaration and five empty Assembly seats creates overwhelming legislative pressure to fund the assistance obligation properly.</p>
+
+        <div class="finding-box">
+          <span class="finding-label">Finding</span>
+          <p>The assistance obligation is constitutionally binding but the remedy is political rather than direct. The Elections Panel's insufficiency finding combined with the result certification mechanism creates practical pressure without requiring the SC to order specific appropriations. The gap is that the constitution does not explicitly address interim relief — what happens to Maran's election rights while the political pressure takes time to produce a remedy.</p>
+        </div>
+
+        <div class="verdict">
+          <span class="verdict-label">Assessment</span>
+          <p><strong>Acceptable gap.</strong> The constitutional obligation is clear; the political mechanism for enforcement is strong. The SC can declare the breach; the result certification mechanism creates immediate consequences. No amendment needed — the gap resolves through the interaction of existing provisions. The scenario validates that the assistance obligation has real constitutional teeth through the certification mechanism.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Election Test 03</span>
+      <h2 class="st-title">The Disputed Certification</h2>
+      <div><span class="st-prov">§11.1 NRS Panel and Elections Panel</span> <span class="st-prov">§7.3.a Special Elections and Postponements</span></div>
+
+      <div class="st-body">
+        <p>In a federal Senate election, the two candidates in the State of Calla are separated by 340 votes. The Elections Panel's audit of the NVS data reveals a 2-hour gap in Calla's auditability log during the peak voting period — the votes cast during that period are counted but cannot be individually verified. The Elections Panel refuses to certify the result for Calla's Senate seat on the grounds that the §11.2 auditability requirement has not been met for the gap period.</p>
+
+        <p>Calla argues the gap was caused by a federal NVS infrastructure failure, not a state system failure. The trailing candidate argues the result is constitutionally void. The winning candidate argues the gap affected fewer than 340 votes and the result should stand. The Elections Panel's position is that it has no authority to make a probabilistic determination about how the uncertifiable votes were cast.</p>
+
+        <h3>The Constitutional Gap</h3>
+
+        <div class="gap-box">
+          <div class="gap-label">Gap Identified — §11.1 and §11.2</div>
+          <p>§11.1 says the Elections Panel certifies all federal election results. §11.2 requires the NVS to maintain both ballot secrecy and public auditability simultaneously. Where those requirements are not simultaneously met for a subset of votes, the provision does not tell the Panel what to do. Does the Panel certify the overall result with a noted exception? Certify the winning candidate if the gap is smaller than the margin? Refuse to certify and call a special election?</p>
+          <p>The Panel's instinct — refuse to certify — is constitutionally conservative. But the consequence is that a Senate seat goes unfilled pending either a special election or a SC determination. §7.3.a provides for special elections for vacancies. A refused certification creating a vacancy that triggers a special election is a workable outcome but is not explicitly stated as the consequence of a non-certification.</p>
+        </div>
+
+        <h3>The Margin Question</h3>
+
+        <p>The winning candidate's argument — that the gap affected fewer votes than the margin — sounds reasonable but is constitutionally hazardous. It requires the Panel to make a probabilistic determination about uncounted or unverifiable votes, which the §11.2 auditability standard was specifically designed to avoid. If the Panel can certify results despite auditability gaps when the margin is large enough, the auditability requirement becomes a function of the vote count rather than a constitutional floor.</p>
+
+        <div class="finding-box">
+          <span class="finding-label">Finding</span>
+          <p>The Panel's refusal to certify is constitutionally correct. The auditability gap, regardless of margin, means the §11.2 standard was not met. A non-certification is a vacancy under §7.3.a, which triggers a special election. The special election is administered by the Elections Panel directly under §7.3.a. The constitutional chain is complete — the gap in the original provision does not create a gap in the constitutional outcome.</p>
+          <p>The attribution question (whose infrastructure failure caused the gap) is relevant to accountability and liability but does not change the constitutional result: the seat is vacant until a compliant election is held.</p>
+        </div>
+
+        <div class="verdict">
+          <span class="verdict-label">Assessment</span>
+          <p><strong>No gap — the constitution holds.</strong> Non-certification produces a vacancy; vacancy triggers §7.3.a special election administered by the Elections Panel. The margin argument correctly fails because the auditability standard is a floor, not a function of vote count. The scenario validates the interaction between §11.1 and §7.3.a without identifying a constitutional gap.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="stress-test">
+      <span class="st-number">Election Test 04</span>
+      <h2 class="st-title">The Unequal Airwaves</h2>
+      <div><span class="st-prov">§8.3 Public Spectrum Access for Campaigns</span></div>
+
+      <div class="st-body">
+        <p>During the federal electoral period, the principal television broadcaster in the State of Ilen provides each of the four Senate candidates their constitutionally mandated equal free allocation — four thirty-minute prime-time slots each, as defined by statute. The broadcaster then sells twelve additional thirty-minute slots to the incumbent Senator, who is also the current Senate Speaker and has significantly more campaign funds than the challengers. The challenger campaigns argue this violates §8.3's equal access requirement.</p>
+
+        <p>The broadcaster argues that §8.3 requires equal free access but does not prohibit paid supplemental access. The free allocation is equal; the paid allocation is a commercial transaction protected by the broadcaster's own expression rights. The Elections Panel issues a non-compliance finding but notes it has no authority under §8.3 or any statute to compel the broadcaster to stop selling additional time or to revoke the broadcast license.</p>
+
+        <h3>The Constitutional Gap</h3>
+
+        <div class="gap-box">
+          <div class="gap-label">Gap Identified — §8.3</div>
+          <p>§8.3 says licensees "shall provide equal free access to qualified candidates." It does not say licensees may not provide paid unequal access on top of the free allocation. The Legislature has the authority under §8.3 to "prohibit the purchase of supplemental advertising time" by statute — but unless and until the Legislature acts, the constitution does not itself prohibit paid supplemental advertising.</p>
+          <p>The Elections Panel's non-compliance finding is questionable. The broadcaster has provided exactly equal free access as required. Whether paid access is permitted is a statutory question, not answered by the current constitutional text. The Panel may have over-read its mandate.</p>
+          <p>§8.1 reserves electoral finance regulation from speech protection — so a statute prohibiting paid supplemental broadcast advertising would be constitutionally valid. But the constitution does not itself prohibit it; that step requires legislative action.</p>
+        </div>
+
+        <h3>The Elections Panel's Position</h3>
+
+        <p>The Panel's non-compliance finding rests on a reading of §8.3 as requiring equal access in total, not just in the free allocation. Under this reading, "equal free access" is the floor, not the ceiling — the broadcaster must ensure all candidates have equal total access, which paid supplemental advertising defeats. This is a defensible constitutional interpretation but not the only one.</p>
+
+        <p>The SC is the appropriate body to resolve this interpretation. Under §8.1, electoral finance regulation is explicitly removed from speech protection, which means the SC's review of a statutory prohibition on paid supplemental advertising would use a permissive standard. But the SC is being asked here to rule on the constitutional text itself, not on a statute.</p>
+
+        <div class="finding-box">
+          <span class="finding-label">Finding</span>
+          <p>§8.3's silence on paid supplemental advertising is a genuine gap — one that was deliberately left to statute ("the Legislature may by statute prohibit..."). The gap is intentional: the constitution creates the equal free access floor and authorizes but does not require prohibition of paid advertising. The Legislature must act to close it if the intent is to prohibit paid supplemental time entirely.</p>
+          <p>Without a statute prohibiting paid supplemental advertising, the Elections Panel's non-compliance finding exceeds its mandate. The broadcaster is compliant with the constitutional text. The challengers' remedy is political — pressure on the Legislature to enact the prohibition — not constitutional.</p>
+        </div>
+
+        <div class="verdict">
+          <span class="verdict-label">Assessment</span>
+          <p><strong>Intentional gap — remedied by statute.</strong> The constitution creates the equal free access floor; prohibition of paid advertising requires a legislative act under §8.1 and §8.3. This is the correct design: the Legislature decides whether to allow a paid tier on top of the free equal allocation, calibrating commercial reality against electoral equality. No constitutional amendment needed — the Legislature should enact the prohibition if equal total access is the intent. Until then, the free allocation floor is what §8.3 guarantees.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <div class="page-wrap" style="padding-top:0">
+    <div class="scenario-nav" style="display:flex;justify-content:space-between;padding:0 0 2rem;border-top:1px solid var(--border);padding-top:2rem">
+      <a href="scenarios.html" style="text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75">&larr; All Scenarios</a>
+      <a href="scenarios.html" style="text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75">All Scenarios &rarr;</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">The Federated Republic</div>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <div class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</div>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+    if('serviceWorker' in navigator){
+      window.addEventListener('load',function(){
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
+</body>
+</html>
