@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sixty Percent — The Federated Republic</title>
+  <meta name="description" content="Year 12. A geothermal reserve sits beneath National Trust land. The Senate withdraws from a migratory treaty. The Legislature votes 2/3 to remove the designation. The citizenry votes too.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="scenario-ordinary.html" class="mobile-cta">Start Here</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §18.4 &middot; National Trust &middot; Federal Property</span>
+      <h1 class="scenario-title">The Sixty Percent</h1>
+      <p class="scenario-premise">Year 12. A geothermal reserve sits beneath the Tolvern Reserve. The Senate withdraws from a migratory treaty. The Legislature clears the two-thirds threshold to remove the National Trust designation. Then the citizenry votes.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§18.4 The National Trust</span>
+        <span class="prov-tag">§18.1 The Use Doctrine</span>
+        <span class="prov-tag">§1.18</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Tolvern Reserve had been National Trust land for forty-one years — eighty thousand acres of wetland and old-growth forest in the State of Dorvane, designated after a logging concession collapsed and the EM's predecessor agency documented what remained as one of the last intact stretches of its kind on the continent. It was also, as a survey commissioned by Dorvane's energy ministry confirmed in Year 11, sitting on top of a geothermal reserve large enough to supply the State's grid for decades, at a moment when Dorvane's aging coal plants were three years from mandatory decommission and its electricity prices had become a defining issue in two consecutive gubernatorial elections.</p>
+
+      <p>Tolvern was also the southern anchor of the Pelyx Migratory Corridor, a wetland system protected under an international agreement the Republic had signed nineteen years earlier. Removing the National Trust designation to permit geothermal development would put the Republic in breach of that agreement's habitat-protection terms. Under §18.4, that meant the Legislature could not even begin the removal process until the Senate voted to withdraw from it.</p>
+
+      <h2>The Treaty Vote — §18.4</h2>
+
+      <p>The withdrawal debate was shorter than anyone expected. Three senators from coastal States raised the migratory-species argument at length; the Foreign Affairs committee chair countered that the Pelyx Accord had no enforcement mechanism beyond reputational cost, that two of the original four signatory nations had already lapsed on their own commitments, and that the Republic's energy security was not a question the treaty's drafters had weighed against habitat preservation. The vote came eleven days after Dorvane's formal petition reached the Legislature.</p>
+
+      <div class="beat">
+        <div class="beat-label">Senate Vote — Treaty Withdrawal</div>
+        <div class="beat-title">The gate before the gate</div>
+        <p>The Senate voted to withdraw from the Pelyx Migratory Corridor Accord, comfortably clearing the two-thirds threshold §18.4 requires before a Trust removal process touching an existing treaty obligation may proceed. The withdrawal took effect on publication to the NRS. Three senators who voted for withdrawal noted in floor statements that they had not yet decided how they would vote on removal itself — the treaty question and the Trust question, they said, were not the same question.</p>
+      </div>
+
+      <h2>The EM's Finding — §18.4 and §1.18</h2>
+
+      <p>The EM's most recent annual stewardship assessment, published seven months before the petition, had found Tolvern's ecological indicators stable across all measured categories — no decline in wetland coverage, no measurable disruption to the migratory pattern, public accessibility maintained at its statutory minimum. The finding did not resolve anything. Development advocates cited it as proof the land had been adequately preserved and could now responsibly support managed extraction. Preservation advocates cited the same finding as proof the stewardship obligation was working exactly as designed and should not be abandoned for a resource that, once extracted, did not return.</p>
+
+      <p>The EM took no position on removal. Its mandate under §18.4 was to monitor the land, not to judge what should be done with the finding. The finding sat on the NRS, available to both sides, persuasive to neither.</p>
+
+      <h2>The Legislative Vote — §18.4</h2>
+
+      <p>Dorvane's congressional delegation — Assembly members and senators alike — voted almost unanimously for removal; their constituents would receive the jobs, the tax base, and the power. The harder votes came from delegations with no direct stake, weighing energy security against a stewardship obligation that, once broken, §18.4 gave no path to restore for this specific tract. The debate ran six weeks.</p>
+
+      <div class="beat">
+        <div class="beat-label">Concurrent Vote — Both Chambers</div>
+        <div class="beat-title">The legislative threshold clears</div>
+        <p>The Assembly and Senate each cleared the two-thirds threshold §18.4 requires for National Trust removal — the same supermajority required for designation in the first place. Publication to the NRS triggered the referendum clock: the Elections Panel was required to administer a national vote within 180 days.</p>
+      </div>
+
+      <p>Under the old framework, before this session's redesign, that legislative vote and a Supreme Court compliance review would have been the entire test. It was not. §18.4 required something the Legislature could not supply by itself.</p>
+
+      <h2>The National Vote — §18.4</h2>
+
+      <p>The referendum campaign became the most expensive in the Republic's history to that point — geothermal industry advocacy on one side, a coalition of conservation organizations and, notably, several State governments with no direct stake in Tolvern but a stated interest in not seeing the precedent set, on the other. Dorvane's Governor campaigned across the State; national polling in the campaign's final weeks showed the outcome too close to call.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Elections Panel Certification &mdash; Day 174</div>
+        REFERENDUM ON NATIONAL TRUST REMOVAL — TOLVERN RESERVE<br><br>
+        Citizen participation: 58.2% of eligible voters.<br>
+        Affirmative (remove designation): 54.1%<br>
+        Negative (retain designation): 45.9%<br><br>
+        Participation threshold (50%) met. Affirmative threshold (60%) not met. Under §18.4, the National Trust designation is not removed.
+      </div>
+
+      <p>A majority of citizens who voted wanted the designation removed. Under almost any other constitutional threshold in the Republic's design, that would have settled it. Under §18.4, it did not. Tolvern remained National Trust land.</p>
+
+      <div class="finding">
+        <div class="finding-label">Constitutional finding</div>
+        <p>The two-thirds legislative vote represented institutional consensus — the Republic's elected representatives, weighing energy security against an irreversible stewardship loss, decided removal was justified. The referendum tested something different: whether the citizenry, directly and without intermediation, agreed at the level the constitution requires for an irreversible decision. A bare majority is not that level. §18.4 sets the bar at 60% deliberately, and 54.1% — a real majority, an electorally significant majority — did not clear it.</p>
+        <p>This is what the AND-structure was built for. A Legislature voting 2/3 to remove protected land it does not personally lose, while the people who would actually live with an extraction operation or actually lose a wetland they value are asked to ratify that judgment directly, is precisely the asymmetry the design anticipated. Had §18.4 permitted the legislative vote alone to suffice — or the referendum alone, without the institutional threshold — either body could have made an irreversible decision the other might not have ratified. The dual requirement meant Dorvane's delegation could not simply outvote the rest of the Republic from inside the Legislature, and a national majority could not override a Trust designation without that majority being a supermajority.</p>
+        <p>Nothing in §18.4 prevents another removal attempt. The land remains designated; the stewardship obligation continues; the EM's next annual assessment will proceed exactly as the last one did. Dorvane's energy ministry, in a statement the day after certification, said it would revisit the geothermal question in a future legislative session. §18.4 does not set a waiting period before a new attempt — only the same two gates, cleared the same way, every time.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+      <a href="scenarios.html">All Scenarios &rarr;</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">The Federated Republic</div>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <div class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</div>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+    if('serviceWorker' in navigator){
+      window.addEventListener('load',function(){
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
+</body>
+</html>
