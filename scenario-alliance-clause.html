@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Alliance Clause — The Federated Republic</title>
+  <meta name="description" content="Year 6. An ally is attacked. The Legat Consul acts immediately under §14.4 — treaty ratification already constitutes legislative authorization. The SC is asked whether the trigger conditions were met. §14.2 oversight runs from day one.">
+  <meta property="og:title" content="The Alliance Clause">
+  <meta property="og:description" content="Year 6. The Republic's mutual defense treaty with Ardesia is triggered. The Legat Consul deploys immediately. Eight senators petition the SC. Tests §14.4 treaty-based military authorization from trigger to wind-down.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-alliance-clause.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Alliance Clause">
+  <meta name="twitter:description" content="Year 6. An ally is attacked. The Legat Consul acts immediately under §14.4. The SC reviews whether the treaty trigger was met — not whether the response was wise.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0}
+    .finding p+p{margin-top:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="scenario-ordinary.html" class="mobile-cta">Start Here</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §14.4 &middot; Military Authorization &middot; Treaty-Based Action</span>
+      <h1 class="scenario-title">The Alliance Clause</h1>
+      <p class="scenario-premise">Year 6. Ardesia — a treaty ally — is struck in a sustained attack by Mrenk forces. The Legat Consul deploys immediately under §14.4: Senate ratification of the mutual defense treaty already constitutes legislative authorization. Eight senators petition the SC to determine whether the treaty's trigger conditions were actually met. The SC's review is narrow by design.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§14.4 Treaty-Based Authorization</span>
+        <span class="prov-tag">§14.2 Defense Authorization and Allocation</span>
+        <span class="prov-tag">§14.1 Authorized Purposes</span>
+        <span class="prov-tag">§3.6 Treaty Ratification</span>
+        <span class="prov-tag">§9.1.b Executive Monitor</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Ardesian Mutual Defense Treaty had been ratified by the Senate by the required supermajority four years before the events of Year 6. Article VIII of the treaty was unambiguous: "A sustained armed attack on the military forces or civilian population of either Party obligates the other Party to provide direct defensive military assistance within 24 hours of formal notification by the attacked Party." The treaty had been debated at length during ratification. The Senate knew what it was ratifying. Its supermajority vote was, under §14.4, a pre-authorization for any military action that Article VIII required.</p>
+
+      <p>At 6:14 AM on Day 1 of Year 6's Month 9, Ardesia's foreign minister transmitted formal notification to the Legat Consul's office: Mrenk military forces had struck three Ardesian military installations near the Salven border in a coordinated artillery and aerial campaign. Eighteen hours of sustained bombardment had destroyed a weapons depot, damaged two forward operating bases, and killed eleven Ardesian soldiers. Mrenk had not issued a declaration of war. It had not responded to diplomatic contact.</p>
+
+      <p>The Legat Consul acted at 9:03 AM — within three hours of the formal notification. Two naval patrol vessels repositioned to international waters adjacent to the Ardesian southern coast. A defensive air patrol was established over Ardesian territorial waters. At 6:04 PM — nine hours and fifty minutes after the formal notification — the Legat Consul published to the NRS, simultaneously notifying both chambers and the Civic Consul.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Legat Consul Notice &mdash; Year 6 Month 9 Day 1, 18:04</div>
+        NOTICE OF TREATY-BASED MILITARY AUTHORIZATION<br>
+        Issued under §14.4 &mdash; Treaty-Based Military Authorization<br><br>
+        The Republic is engaged in military operations pursuant to the obligations of the Ardesian Mutual Defense Treaty (Senate-ratified, Year 2, Month 6). Treaty obligation triggered: Article VIII &mdash; sustained armed attack on Ardesian military forces. Formal notification received from Ardesia at 06:14 this date. Operations commenced at 09:03 this date; formal notification published within 12 hours as required by §14.4. Specific treaty obligation cited herein. All §14.2 oversight provisions apply from time of action.<br><br>
+        &mdash; Legat Consul
+      </div>
+
+      <h2>The SC Petition — Whether the Trigger Was Met</h2>
+
+      <p>Eight senators filed a petition with the SC within 36 hours of the Legat Consul's notice. Their argument had two prongs. First: the treaty requires a "sustained armed attack," and the 18-hour bombardment had already concluded when the notification was received. An attack that has ended cannot be ongoing — and a non-ongoing attack is not, they argued, a sustained attack in the treaty's intended sense. Second: Article VIII specifies military forces "or" civilian population. The Mrenk attack had targeted only military installations; no civilian population had been struck. The senators acknowledged the "or" construction but argued that an attack on military installations alone did not rise to the treaty's intended scope.</p>
+
+      <p>The SC took the petition on an expedited basis. The Legat Consul's office filed a response the same day. Three days after the petition, the SC published its ruling.</p>
+
+      <div class="finding">
+        <span class="finding-label">SC Ruling — §14.4 Trigger Review</span>
+        <p>The Court's review under §14.4 is limited to whether the treaty's trigger conditions as written were met. The Court does not review whether the Legat Consul's response was proportionate, strategically sound, or likely to achieve its stated objectives. Those are policy judgments. The question before the Court is textual.</p>
+        <p>On "sustained": the treaty uses "sustained" to distinguish a continuing or serious attack from an incidental border incident. The 18-hour coordinated bombardment of three military installations satisfies this standard. "Sustained" does not require that the attack be ongoing at the moment of notification — it describes the character of the attack that has occurred. An attack that lasted 18 hours across multiple coordinated targets was sustained.</p>
+        <p>On "military forces or civilian population": the treaty's disjunctive construction means either is sufficient. Ardesian military forces were struck. The trigger condition is met. The Court does not reach the civilian population prong.</p>
+        <p>The Legat Consul correctly identified an applicable treaty obligation. Operations proceed. All §14.2 oversight provisions apply.</p>
+      </div>
+
+      <p>The ruling was issued on Day 4 of the deployment. From the moment the Legat Consul's NRS notice published, the EM had already begun its audit of expenditure and intelligence activities conducted in support of operations — as §14.2 required. The first classified Senate briefing had been scheduled. The deployment continued.</p>
+
+      <h2>Appropriations and the Legislature's Role</h2>
+
+      <p>The Senate could not reverse the SC's ruling. It could — and did — conduct extensive debate over whether it should exercise its appropriations authority to curtail the deployment. Under §14.4, the Legislature's authority over treaty-based operations runs through appropriations and through the treaty withdrawal mechanism under §3.6. The Senate had ratified the treaty; withdrawing from it to end the Article VIII obligation would require 2/3 of the full seated Senate under §3.6 — a threshold the eight petitioning senators could not reach.</p>
+
+      <p>The MA published fiscal projections on Day 7. The deployment's cost over 90 days was estimated at 0.4% of the annual defense appropriation — significant but not operationally disruptive. A motion to reduce the emergency defense appropriation by 40% failed 22-38. Appropriations continued.</p>
+
+      <h2>Wind-Down and Accountability</h2>
+
+      <p>On Day 41, Mrenk and Ardesia announced a ceasefire. The Ardesian government notified the Legat Consul that the Article VIII obligation was considered satisfied. The Legat Consul published a wind-down declaration to the NRS the same afternoon: operations would cease within 72 hours; the 90-day contract wind-down period under §14.2 would apply to existing operational commitments; no new commitments would be authorized.</p>
+
+      <div class="beat">
+        <div class="beat-label">§14.2 — Post-Operation Accountability</div>
+        <div class="beat-title">The EM's 180-day report closes the record.</div>
+        <p>§14.2 requires the EM to publish a comprehensive accountability report within 180 days of an operation's conclusion. The report — published on Day 219 — covered total expenditure by category, intelligence activities conducted in support of operations (published in classified summary form), and an assessment of whether legislative authorization and allocation requirements were observed throughout. The EM found no expenditure outside the authorized allocation. The classified summary was transmitted to the appropriate Senate committees simultaneously with NRS publication.</p>
+        <p>The 180-day report completed the constitutional record for the deployment. Every step — the trigger notification, the 12-hour notice to chambers, the SC ruling, the Senate briefings, the MA fiscal projections, the wind-down declaration, and the accountability report — was permanently on the NRS.</p>
+      </div>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§14.4's design rests on a specific premise: when the Senate ratifies a treaty by the required supermajority, it makes a policy judgment about what kinds of situations warrant Republic military action. That judgment is the legislative authorization for treaty-triggered operations. The Legat Consul acting on a treaty obligation is not bypassing the Legislature — the Legislature already acted, when it ratified.</p>
+        <p>The SC's narrow review follows from this premise. The Senate knew what Article VIII said when it ratified the treaty. The SC's job is to verify that the Legat Consul invoked the treaty within its scope — that the trigger conditions as written were met — not to re-examine the Senate's ratification decision or second-guess the response. The senators who filed the petition were not wrong to ask; the question of whether the trigger conditions were met is precisely the question §14.4 reserves for the SC. They asked, and the Court answered.</p>
+        <p>The scenario also shows where the Legislature's residual authority sits in treaty-based operations: appropriations and treaty withdrawal. Both are real constraints, though neither was exercised here. A Legislature that believed the Legat Consul had misread the treaty could seek SC review. A Legislature that believed the treaty itself was wrong could withdraw from it under §3.6. What it cannot do is override a correct trigger determination by simple majority vote — because the supermajority that ratified the treaty set a higher threshold than that.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+      <a href="scenarios.html">All Scenarios &rarr;</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+    if('serviceWorker' in navigator){
+      window.addEventListener('load',function(){
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scenario Library — The Federated Republic</title>
-  <meta name="description" content="24 scenarios testing the Federated Republic constitution — from ordinary governance to institutional crisis. Long-form narratives and quick constitutional tests.">>
+  <meta name="description" content="25 scenarios testing the Federated Republic constitution — from ordinary governance to institutional crisis. Long-form narratives and focused constitutional tests.">
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.7}
@@ -15,11 +15,6 @@
     .nav-links{display:flex;align-items:center;gap:0.15rem}
     .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.3rem 0.6rem;border-radius:2px;transition:color 0.2s}
     .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .nav-links
-    .nav-links
-    .nav-links
-    .nav-links
-    .nav-links
     .hamburger{display:none;-webkit-appearance:none;appearance:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;min-width:44px;min-height:44px;justify-content:center;align-items:center}
     .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:transform 0.2s}
     .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
@@ -27,10 +22,14 @@
     .mobile-menu a:first-child{color:var(--gold);font-weight:600}
     .mobile-menu.open{display:flex}
     
-    @media(max-width:820px){.hamburger{display:flex
+    @media(max-width:820px){
       .hamburger{display:flex}
       .nav-links{display:none}
-    }.nav-links{display:none}main{padding:1.5rem 1rem 3rem}.hero-stats{gap:1.5rem}.scenario-cat-title{font-size:0.85rem}.library-heading{font-size:1.1rem}}
+      main{padding:1.5rem 1rem 3rem}
+      .hero-stats{gap:1.5rem}
+      .scenario-cat-title{font-size:0.85rem}
+      .library-heading{font-size:1.1rem}
+    }
     /* ── HERO ── */
     .page-header{background:var(--navy);padding:5rem 2rem 2.5rem;margin-top:56px}
     .page-header-inner{max-width:900px;margin:0 auto}
@@ -51,15 +50,6 @@
     .fe-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);line-height:1.2}
     .fe-desc{font-size:0.82rem;color:var(--muted);line-height:1.55}
     .fe-arrow{margin-top:auto;font-size:0.75rem;color:var(--gold);font-family:'Cormorant Garamond',serif}
-    /* ── RECENT ── */
-    .recent-section{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-    .section-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:1rem;font-family:'JetBrains Mono',monospace}
-    .recent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem}
-    .recent-card{border:1px solid var(--border);background:rgba(255,255,255,0.4);padding:1rem 1.1rem;text-decoration:none;display:flex;flex-direction:column;gap:0.35rem;transition:border-color 0.2s,background 0.2s}
-    .recent-card:hover{border-color:var(--navy);background:white}
-    .recent-tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold);letter-spacing:0.06em}
-    .recent-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy)}
-    .recent-new{font-size:0.62rem;background:var(--navy);color:var(--gold);padding:0.15rem 0.5rem;align-self:flex-start;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;margin-top:0.25rem}
     /* ── LIBRARY HEADING ── */
     .library-heading{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid var(--navy)}
     /* ── ACCORDION ── */
@@ -96,7 +86,6 @@
       .page-header h1{font-size:2rem}
       main{padding:0 1.25rem 4rem}
       .featured-grid{grid-template-columns:1fr}
-      .recent-grid{grid-template-columns:1fr}
       .accordion-title{font-size:1rem}
       .se-desc{font-size:0.78rem;margin-top:0.2rem;-webkit-line-clamp:2}
       .hero-stats{gap:1.25rem}
@@ -159,9 +148,9 @@
     <h1>The Scenario Library</h1>
     <p>Constitutional provisions under pressure — from ordinary governance to institutional crisis. Start with the featured scenarios below. They give the fullest picture of how the system works and why it was designed this way.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><strong>24</strong>Total scenarios</div>
+      <div class="hero-stat"><strong>25</strong>Total scenarios</div>
       <div class="hero-stat"><strong>9</strong>Categories</div>
-      <div class="hero-stat"><strong>56</strong>Provisions tested</div>
+      <div class="hero-stat"><strong>71</strong>Provisions tested</div>
     </div>
   </div>
 </div>
@@ -171,7 +160,7 @@
   <!-- FEATURED -->
   <section class="featured-section" aria-labelledby="featured-label">
     <span class="featured-label" id="featured-label">Scenario Spotlight</span>
-    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6;max-width:680px">Eight scenarios covering the Republic's major constitutional mechanisms — a complete tour from ordinary governance to the edges of constitutional design.</p>
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6;max-width:680px">Three scenarios covering the Republic's major constitutional mechanisms — start here for the fullest picture of how the system works.</p>
     <div class="featured-grid">
       <a href="scenario-ordinary.html" class="featured-entry">
         <span class="fe-num">01 · Ordinary Governance</span>
@@ -200,7 +189,7 @@
 
   <!-- LIBRARY ACCORDION -->
   <section class="library-section fr-page" aria-labelledby="library-label">
-    <h2 class="library-heading" id="library-label">All 20 Scenarios by Category</h2>
+    <h2 class="library-heading" id="library-label">All 25 Scenarios by Category</h2>
 
     <div class="scenario-grid">
       <div class="scenario-category">
@@ -215,7 +204,7 @@
           
           
           
-          <a href="scenario-referendum.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Referendum Year</span><span class="se-desc">Citizens petition to repeal an enacted statute, meeting the 5% threshold; the Elections Panel administers the referendum and the result is certified — the optional referendum from petition to outcome.</span></div></a>
+          <a href="scenario-organized-third.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Organized Third</span><span class="se-desc">Year 4. Citizens organize a §13.1 petition against a federal certification statute. Phase One requires geographic spread across a third of all States and Territories. The Elections Panel administers the referendum. The Act is repealed. The Legislature re-enacts.</span></div></a>
           
           
           
@@ -230,19 +219,14 @@
         <div class="scenario-cat-grid">
           <a href="scenario-formation.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Formation</span><span class="se-desc">Two tests of §2.6.a's government formation provisions: a post-election coalition that takes forty days</span></div></a>
           <a href="scenario-coordination-failure.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Stalemate</span><span class="se-desc">Year 7. The Legat Consul concludes a mutual defense treaty requiring domestic infrastructure commitment</span></div></a>
-          
-          
-          <a href="scenario-twenty-one-days.html" class="scenario-entry"><div class="se-info"><span class="se-title">Twenty-One Days</span><span class="se-desc">Day 1. The Legat Consul is incapacitated following emergency surgery. A majority of the Joint Monitor Council certifies. Th</span></div></a>
-          <a href="scenario-career.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Long View</span><span class="se-desc">A state assembly member from Kailos wins a Assembly seat, rises through eight years in the legislature,</span></div></a>
+          <a href="scenario-alliance-clause.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Alliance Clause</span><span class="se-desc">Year 6. A treaty ally is struck. The Legat Consul deploys immediately — Senate ratification of the mutual defense treaty is the authorization. The SC reviews only whether the trigger conditions were met.</span></div></a>
         </div>
       </div>
       <div class="scenario-category">
         <h3 class="scenario-cat-title">Consular Election</h3>
         <div class="scenario-cat-grid">
-          
-          
           <a href="scenario-harder-ballot.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Harder Ballot</span><span class="se-desc">Year 7. Korda State introduces an in-person verification requirement that effectively reduces NVS ac</span></div></a>
-          
+          <a href="scenario-election-test.html" class="scenario-entry"><div class="se-info"><span class="se-title">Election Administration Stress Tests</span><span class="se-desc">Four scenarios testing the cooperative federalism election model: standards enforcement, certification, fed</span></div></a>
         </div>
       </div>
       <div class="scenario-category">
@@ -256,7 +240,6 @@
       <div class="scenario-category">
         <h3 class="scenario-cat-title">Monitors &amp; Accountability</h3>
         <div class="scenario-cat-grid">
-          <a href="scenario-confirmation-vote.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Confirmation Vote</span><span class="se-desc">Year 3. The SC nominates a Legislative Monitor General. The national confirmation vote is six week</span></div></a>
           <a href="scenario-critical-finding.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Critical Finding</span><span class="se-desc">Year 11. The LM's annual legislative audit publishes a Critical Failure finding on fiscal accuracy —</span></div></a>
           <a href="scenario-sdp-removal.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Grounds Review</span><span class="se-desc">Year 5. The Assembly initiates removal proceedings against the EM Monitor General. A concurrent resol</span></div></a>
           
@@ -273,23 +256,23 @@
       <div class="scenario-category">
         <h3 class="scenario-cat-title">Rights &amp; Emergency Architecture</h3>
         <div class="scenario-cat-grid">
-          
-        </div>
-      </div>
-    </div>
-
-    
           <a href="scenario-second-declaration.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Second Declaration</span><span class="se-desc">Year 3. A regional emergency expires. 72 hours later, a new emergency issues — same geography, same rights, different label. The EM publishes its assessment. The SC rules.</span></div></a>
           <a href="scenario-automatic-floor.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Automatic Floor</span><span class="se-desc">Year 7. The budget deadline passes with no enacted budget. The interim automatic appropriation takes effect by constitutional operation. What continues. What stops.</span></div></a>
           <a href="scenario-finality-act.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Finality Act</span><span class="se-desc">Year 8. The Legislature strips judicial review from intelligence-based residency denials. A permanent resident with no forum petitions the SC directly under §4.5.</span></div></a>
           <a href="scenario-void-exception.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Void Exception</span><span class="se-desc">Year 18. A valid amendment — 2/3 supermajority, state ratification — contains a 90-day habeas carve-out. The SC applies the amendment and voids only the carve-out.</span></div></a>
-        
-        <h2 class="scenario-cat-title">States &amp; Federation</h2>
-
+        </div>
+      </div>
+      <div class="scenario-category">
+        <h3 class="scenario-cat-title">States &amp; Federation</h3>
+        <div class="scenario-cat-grid">
           <a href="scenario-the-map.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Map</span><span class="se-desc">Year 2. A State's redistricting map fails the LM's compactness test. The LM publishes — that's all it can do. But publication gives standing. The Elections Panel is ready to draw an interim map if needed.</span></div></a>
           <a href="scenario-sponsoring-state.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Sponsoring State</span><span class="se-desc">Year 4. A State legislature passes an act purporting to revoke State sponsorship for 340 existing residents. Federal credentials are federal. The State's role ended when the credentials were issued.</span></div></a>
           <a href="scenario-the-audit.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Audit</span><span class="se-desc">Year 3. A Territory passes both Statehood Audit components. No political vote required — the pathway is automatic. What triggers, what's guaranteed, and what no political coalition can block.</span></div></a>
           <a href="scenario-the-petition.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Petition</span><span class="se-desc">Year 7. A State initiates voluntary devolution — converting from State to Territory status. Two requirements: 60% referendum and Senate ratification. What the federal government can and cannot do about it.</span></div></a>
+          <a href="scenario-the-sixty-percent.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Sixty Percent</span><span class="se-desc">Year 12. A geothermal reserve sits beneath National Trust land. The Legislature clears two-thirds. Then the citizenry votes.</span></div></a>
+        </div>
+      </div>
+    </div>
 
         </section>
 
