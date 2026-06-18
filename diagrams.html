@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Government Structure — The Federated Republic</title>
-  <meta name="description" content="Interactive diagrams of the Federated Republic's constitutional structure — government architecture, legislative lifecycle, and devolution pathways."
+  <meta name="description" content="Interactive diagrams of the Federated Republic's constitutional structure — government architecture, legislative lifecycle, and devolution pathways.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Government Structure">
   <meta property="og:description" content="Interactive diagrams of the Federated Republic's constitutional structure — government architecture, legislative lifecycle, and devolution pathways.">
@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="The Federated Republic">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Government Structure">
-  <meta name="twitter:description" content="Interactive diagrams of the Federated Republic's constitutional structure — government architecture, legislative lifecycle, and devolution pathways.">>
+  <meta name="twitter:description" content="Interactive diagrams of the Federated Republic's constitutional structure — government architecture, legislative lifecycle, and devolution pathways.">
   <style>
     body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
 
@@ -694,7 +694,7 @@
       <div class="gov-node node-ji" onclick="showPanel('ji')">
         <span class="node-icon">📋</span>
         <span class="node-title">Judicial Monitor</span>
-        <span class="node-sub">Audits courts<br>Manages SC Candidate Registry</span>
+        <span class="node-sub">Audits courts<br>Audits Judicial Pool admin</span>
       </div>
     </div>
 
@@ -807,13 +807,13 @@
       <div class="flow-num">5</div>
       <div class="flow-body">
         <div class="flow-title">Consular Review <span style="font-size:0.82em;font-weight:400;opacity:0.7">(Security Domain Bills Only)</span></div>
-        <div class="flow-desc">The Legat Consul may veto only bills raising a genuine constitutional concern within the Legat Consul's domain — military operations, intelligence, treaty obligations, or border security. A general or speculative connection to security is not sufficient. The SC reviews any veto within 48 hours on petition from either Speaker.</div>
+        <div class="flow-desc">The Legat Consul may veto only bills raising a genuine constitutional concern within the Legat Consul's domain — military operations, intelligence, treaty obligations, or border security. A general or speculative connection to security is not sufficient. Either Speaker may petition the SC for an expedited domain determination of a disputed veto; the SC must rule within 7 days.</div>
         <span class="flow-ref">§2.3 Consular Intelligence and Veto</span>
         <div class="flow-branch">
           <span class="branch-label">Consular Options</span>
           <div class="branch-outcomes">
             <div class="branch-outcome outcome-pass">✓ Signs, or bill not in domain — enacted</div>
-            <div class="branch-outcome outcome-fail">✗ Vetoes — 2/3 both chambers to override; SC reviews within 48hrs</div>
+            <div class="branch-outcome outcome-fail">✗ Vetoes — 2/3 both chambers to override; SC reviews within 7 days on petition</div>
           </div>
         </div>
       </div>
@@ -838,7 +838,7 @@
           <span class="branch-label">Challenge Paths</span>
           <div class="branch-outcomes">
             <div class="branch-outcome outcome-neutral">⚖ Supreme Court — any party with standing may challenge; court may strike as unconstitutional</div>
-            <div class="branch-outcome outcome-neutral">🗳 Optional Referendum — 5% citizen petition within 90 days triggers a national vote; simple majority overturns</div>
+            <div class="branch-outcome outcome-neutral">🗳 Optional Referendum — two-phase citizen petition (0.5–3% per-State, then 5% nationally) beginning within 90 days of enactment; simple majority, subject to a turnout cap, repeals</div>
           </div>
         </div>
       </div>
@@ -846,8 +846,8 @@
     <div class="diagram-footer">
       <div class="diagram-scenarios">
         <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Single-Subject Rule &middot; &sect;3.1.c</span></div>
-        <div><span class="diagram-sc-tag">Civic Consul's Veto &middot; &sect;2.4</span></div>
+        <div><span class="diagram-sc-tag">Single-Subject Rule &middot; &sect;3.4</span></div>
+        <div><span class="diagram-sc-tag">Civic Consul's Veto &middot; &sect;2.7</span></div>
       </div>
       <a href="advisor.html?q=The+LI+finds+a+passed+bill+violates+the+single-subject+rule.+What+legal+force+does+that+finding+carry%3F" class="diagram-advisor-link">Ask the Advisor</a>
     </div>
@@ -858,14 +858,14 @@
 <div class="diagram-section" id="tab-devolution">
   <div class="section-intro">
     <h2>State Pathways</h2>
-    <p>The three constitutional paths available to States and Territories — from Territory to Statehood, voluntary devolution, and the independence process.</p>
+    <p>The constitutional paths between Territory and Statehood — entry via the Statehood Audit, voluntary exit through devolution, and involuntary devolution on repeated audit failure. There is no separate full-independence pathway for States; the closest analog, Article XVI status elections, is reserved for recognized indigenous nations.</p>
   </div>
 
   <div class="dev-chart">
     <div class="dev-tabs">
       <button class="dev-tab active" onclick="showDevPath('statehood')">Territory → Statehood</button>
       <button class="dev-tab" onclick="showDevPath('voluntary')">Voluntary Devolution</button>
-      <button class="dev-tab" onclick="showDevPath('independence')">Independence</button>
+      <button class="dev-tab" onclick="showDevPath('mandatory')">Mandatory Devolution</button>
     </div>
 
     <!-- PATH A: Statehood -->
@@ -874,27 +874,27 @@
         <div class="pathway-step step-trigger">
           <span class="ps-label">Step 1 — Entry</span>
           <span class="ps-title">Territory Status</span>
-          <p class="ps-desc">A population petitions the Senate for Territory status. The Senate votes by simple majority. Article I rights apply immediately upon petition filing regardless of vote outcome. The Territory receives social state protections under §12.1 and holds Assembly seats but has no Senate representation.</p>
+          <p class="ps-desc">A Territory operates under a Territorial Compact providing an elected local governing authority, full Article I protections, and access to social state systems. Territories hold proportional Assembly seats but no Senate seats.</p>
           <span class="ps-ref">§15.1 — Territorial Compact</span>
         </div>
         <div class="pathway-step step-audit">
           <span class="ps-label">Step 2 — Evaluation</span>
-          <span class="ps-title">Statehood Audit</span>
-          <p class="ps-desc">The Legislative Monitor conducts a Competency Baseline audit assessing fiscal sustainability, rule of law, institutional capacity, and infrastructure. A score of 60% or above passes. Below 60% begins a technical assistance period with the Development Assistance Corps.</p>
-          <span class="ps-ref">§15.2 — Requirements for Statehood</span>
+          <span class="ps-title">The Statehood Audit</span>
+          <p class="ps-desc">Two components, both must pass: the LM audits fiscal integrity; the JM audits legal compliance with every Article I right. A Territory that fails receives published findings and may resubmit after addressing them — there is no scored Baseline and no fixed percentage threshold; the Legislature defines audit methodology and resubmission timelines by statute. A geographic subdivision of a Territory may petition for Statehood independently of the rest.</p>
+          <span class="ps-ref">§15.2 — The Statehood Audit</span>
         </div>
-        <div class="path-threshold">Criteria: fiscal integrity (§15.2) and full Article I legal compliance (§15.2)</div>
+        <div class="path-threshold">Both audit components must pass; no political vote is required once they do</div>
         <div class="pathway-step step-effect">
           <span class="ps-label">Step 3 — Provisional Period</span>
           <span class="ps-title">Provisional Membership Period</span>
-          <p class="ps-desc">Following a successful referendum, the new State enters a Provisional Membership Period (Legislature sets duration, 365–900 days) — a constitutional probationary period with full rights but monitored institutional development. At the end of the Legislature-defined period, full Statehood is confirmed automatically on a clean audit.</p>
-          <span class="ps-ref">§15.2.c — Provisional Membership Period</span>
+          <p class="ps-desc">On passing the audit, the Territory enters a Provisional Membership Period of one to three years, as the Legislature defines. Clean completion results in automatic Statehood — no further vote required.</p>
+          <span class="ps-ref">§15.2 — Provisional Membership Period</span>
         </div>
         <div class="pathway-step step-restore">
           <span class="ps-label">Final — Full Membership</span>
           <span class="ps-title">Statehood Confirmed</span>
-          <p class="ps-desc">The State receives two Senate seats, retains proportional Assembly seats, accesses social state systems under §12.1, and is subject to federal taxation. All constitutional rights and obligations of full Statehood apply.</p>
-          <span class="ps-ref">§15.2.c — Statehood is automatic at end of clean Provisional Period; no further vote required</span>
+          <p class="ps-desc">The State receives two Senate seats, retains proportional Assembly seats, and accesses social state systems under Article XII. Every State must then maintain three ongoing conditions — functioning elections, basic rule of law, and Article I compliance — verified by annual audit.</p>
+          <span class="ps-ref">§15.2 — Statehood is automatic on clean completion of the Provisional Period</span>
         </div>
       </div>
     </div>
@@ -902,75 +902,63 @@
     <!-- PATH B: Voluntary Devolution -->
     <div class="dev-path" id="dev-voluntary">
       <div class="pathway">
-        <div class="pathway-step step-study">
-          <span class="ps-label">Step 1 — Transparency</span>
-          <span class="ps-title">Fiscal Incidence Study</span>
-          <p class="ps-desc">The State formally requests a Fiscal Incidence Study from the Monetary Authority. The MA must publish the study within 120 days. The study shows: the value of the federal income tax exemption to residents, the value of federal benefits received above the social state floor, the net fiscal position, and the projected effect on Republic-wide social state sustainability.</p>
-          <span class="ps-ref">§15.4 — Fiscal Transparency Requirement (120-day MA deadline)</span>
+        <div class="pathway-step step-vote">
+          <span class="ps-label">Step 1 — Democratic Authorization</span>
+          <span class="ps-title">60% State Referendum on the Principle</span>
+          <p class="ps-desc">A State may voluntarily restructure its relationship with the Republic. The process begins with a State referendum achieving 60% approval of eligible voters on the principle of pursuing devolution.</p>
+          <span class="ps-ref">§15.4 — Voluntary Devolution and Merger</span>
         </div>
         <div class="pathway-step step-negotiate">
-          <span class="ps-label">Step 2 — Optional but Recommended</span>
-          <span class="ps-title">Negotiated Agreement</span>
-          <p class="ps-desc">The State may request a formal negotiated devolution agreement with the Republic before the vote — covering infrastructure continuity, DAC assistance, military installation arrangements, and Provisional Membership Period terms. If parties cannot agree within 18 months, a default framework activates automatically so the process cannot be blocked by non-negotiation.</p>
-          <span class="ps-ref">§15.4 — Negotiated Devolution Pathway / §15.4</span>
+          <span class="ps-label">Step 2 — Negotiation</span>
+          <span class="ps-title">Restructuring Agreement</span>
+          <p class="ps-desc">On approval, the State and the Legislature negotiate a restructuring agreement specifying asset and liability allocation, transition timeline, the constitutional status of successor jurisdictions, fiscal obligations to the Republic, and continuing obligations. It is published to the NRS and is legally binding.</p>
+          <span class="ps-ref">§15.4 — Restructuring Agreement</span>
         </div>
-        <div class="path-threshold">180-day public campaign period required after study publication</div>
-        <div class="pathway-step step-vote">
-          <span class="ps-label">Step 3 — Democratic Authorization</span>
-          <span class="ps-title">60% of State Voters</span>
-          <p class="ps-desc">60% of State voters must approve the voluntary devolution petition. The ballot must specify the proposed restructuring — subdivision, merger, conversion to Territory status, or other arrangement — and must include the net-contributor disclosure if the State is a net contributor to federal redistribution.</p>
-          <span class="ps-ref">§15.4 — Voluntary Devolution Vote</span>
-        </div>
+        <div class="path-threshold">Senate ratification by 2/3 majority required to finalize</div>
         <div class="pathway-step step-effect">
-          <span class="ps-label">Step 4 — Effect</span>
+          <span class="ps-label">Step 3 — Effect</span>
           <span class="ps-title">Territory Status</span>
-          <p class="ps-desc">Senate seats are vacated. Assembly seats are retained proportionally. Federal income tax exemption begins the following fiscal year. Social state protections continue without interruption. Article I rights remain fully in force. The path to Statehood restoration is available immediately — no penalty or waiting period applies.</p>
-          <span class="ps-ref">§15.4 — Effect of Voluntary Devolution</span>
+          <p class="ps-desc">Social state protections and Article I rights continue uninterrupted through the transition. A separate, related path lets a Territory or part of one merge with a contiguous existing State — requiring a 60% referendum with at least 50% participation, the existing State's own approval, a joint LM-JM audit confirming the existing State's integrity is maintained, and Senate ratification by simple majority.</p>
+          <span class="ps-ref">§15.4 — Effect of Devolution; Territory/State Merger</span>
         </div>
       </div>
     </div>
 
-    <!-- PATH C: Independence -->
-    <div class="dev-path" id="dev-independence">
+    <!-- PATH C: Mandatory Devolution -->
+    <div class="dev-path" id="dev-mandatory">
       <div class="pathway">
         <div class="pathway-step step-trigger">
-          <span class="ps-label">Step 1 — Petition</span>
-          <span class="ps-title">National Citizen Petition</span>
-          <p class="ps-desc">A citizen petition must gather 10% of eligible voters nationally through the National Voting System — not just the residents of the proposing territory. This requires building a national coalition for independence, not merely a local majority. The petition is certified by the Judicial Monitor.</p>
-          <span class="ps-ref">§15.7 State Immutability and Territorial Integrity</span>
+          <span class="ps-label">Step 1 — Three Consecutive Failures</span>
+          <span class="ps-title">Repeated Audit Failure</span>
+          <p class="ps-desc">A State enters Mandatory Devolution upon three consecutive annual Statehood Audit findings of failure published by the LM. After each failing audit, the LM publishes an Early Warning specifying compliance requirements, and the State must publish a Remediation Plan within the statutory period.</p>
+          <span class="ps-ref">§15.3 — Mandatory Devolution</span>
         </div>
-        <div class="pathway-step step-study">
-          <span class="ps-label">Step 2 — Framework</span>
-          <span class="ps-title">Pre-Referendum Agreement</span>
-          <p class="ps-desc">Before any referendum is held, a framework independence agreement must be negotiated and published to the NRS at least 90 days before the vote. The agreement must address: citizenship status, social state transition provisions, military installations (§14.5), debt arrangements, and diplomatic relationship. The JM conducts annual compliance reviews and publishes findings to the NRS. If no treaty is concluded within 24 months, either party may propose one 12-month extension by mutual agreement; absent that, a provisional framework activates — the process cannot be blocked.</p>
-          <span class="ps-ref">§15.4 Voluntary Devolution and Merger</span>
-        </div>
-        <div class="path-threshold">70% national vote required — all eligible Republic voters, not only the departing territory's residents</div>
         <div class="pathway-step step-vote">
-          <span class="ps-label">Step 3 — National Referendum</span>
-          <span class="ps-title">70% National Supermajority</span>
-          <p class="ps-desc">The referendum is held nationally with a minimum 65% participation requirement. 70% of all eligible voters must approve — a threshold that requires not just the departing territory's support but genuine national consensus. The ballot references the published framework agreement.</p>
-          <span class="ps-ref">§15.7 — 70% threshold / 65% participation minimum</span>
+          <span class="ps-label">Step 2 — Citizen Choice</span>
+          <span class="ps-title">Remediation Commission or Provisional Status</span>
+          <p class="ps-desc">After the third failure, citizens vote, administered by the Elections Panel, on one of two paths: a two-year federal remediation commission, or Provisional status.</p>
+          <span class="ps-ref">§15.3</span>
         </div>
-        <div class="pathway-step step-transition">
-          <span class="ps-label">Step 4 — Transition</span>
-          <span class="ps-title">24–60 Month Transition Period</span>
-          <p class="ps-desc">Formal independence takes effect no sooner than 24 months and no later than 60 months after referendum certification. During the transition, the territory remains part of the Republic for all constitutional purposes. Social state-equivalent provisions continue as treaty obligations the Legislature must authorize. The independence treaty is negotiated by the Legat Consul (diplomatic domain) and requires Senate ratification.</p>
-          <span class="ps-ref">§15.4</span>
+        <div class="path-threshold">Sitting senators and Assembly members complete current terms; no new Senate elections during Provisional status</div>
+        <div class="pathway-step step-effect">
+          <span class="ps-label">Step 3 — Provisional Status</span>
+          <span class="ps-title">Continued Audit Cycle</span>
+          <p class="ps-desc">A State in Provisional status keeps its existing governing structure and continues under the Statehood Audit cycle. Passing the audit restores full Statehood immediately, with no additional vote required. Article I rights and social state protections continue without interruption throughout.</p>
+          <span class="ps-ref">§15.3</span>
         </div>
-        <div class="pathway-step step-independence">
-          <span class="ps-label">Step 5 — Citizenship</span>
-          <span class="ps-title">Citizenship Continuity</span>
-          <p class="ps-desc">Republic citizens residing in the former territory retain Republic citizenship — it is irrevocable and continues regardless of the territory's independence. Citizens who choose to renounce Republic citizenship may petition the Elections Panel; renunciation is voluntary and irrevocable. The Legislature may not impose more than a two-year waiting period.</p>
-          <span class="ps-ref">§5.1.e — Post-Independence Citizenship and Voluntary Renunciation</span>
+        <div class="pathway-step step-restore">
+          <span class="ps-label">Step 4 — If Provisional Status Persists</span>
+          <span class="ps-title">Vote on Devolution</span>
+          <p class="ps-desc">Where Provisional status continues for one year without a passed audit, citizens vote on the principle of pursuing devolution, on the same terms as the voluntary process. An affirmative vote proceeds through negotiation and Senate ratification under §15.4; absent one, the State continues in Provisional status. Within 30 days of entering Provisional status, the State may petition the SC on the sole ground that the audit findings are factually insufficient to establish three consecutive failures.</p>
+          <span class="ps-ref">§15.3</span>
         </div>
       </div>
     </div>
     <div class="diagram-footer">
       <div class="diagram-scenarios">
         <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Voluntary Devolution &middot; &sect;13.4</span></div>
-        <div><span class="diagram-sc-tag">Apportionment &middot; &sect;3.1.a</span></div>
+        <div><span class="diagram-sc-tag">Voluntary Devolution &middot; &sect;15.4</span></div>
+        <div><span class="diagram-sc-tag">Statehood Audit &middot; &sect;15.2</span></div>
       </div>
     </div>
 
@@ -998,13 +986,13 @@
 
       <!-- LEFT: REGULAR IMMIGRATION -->
       <div class="imm-track track-regular">
-        <div class="imm-track-label">Regular Immigration · Immigration Pathway</div>
+        <div class="imm-track-label">Regular Immigration · Two-Stage System</div>
 
         <div class="imm-step step-gate1">
           <span class="imm-step-num">State Sponsorship</span>
           <div class="imm-step-title">State Sponsorship</div>
-          <div class="imm-step-desc">A sponsoring State certifies the applicant through its own vetting process and accepts notification obligations during the application period.</div>
-          <span class="imm-step-ref">§6.1 — State Sponsorship State Sponsorship</span>
+          <div class="imm-step-desc">A sponsoring State certifies the applicant through its own vetting process. States retain discretion over whom they sponsor but may not apply criteria that violate §1.6. The Legislature may also establish a Federal Sponsorship Category, where federal agencies serve as the sponsorship stage for applicants serving a defined federal interest — this does not bypass federal certification.</div>
+          <span class="imm-step-ref">§6.1 — The Two-Stage Immigration System</span>
         </div>
 
         <div class="imm-callout">
@@ -1013,7 +1001,7 @@
         </div>
 
         <div class="imm-challenge">
-          <strong>§1.8 Discrimination Challenge:</strong> If a State denies sponsorship on discriminatory grounds, the applicant may bring a direct constitutional claim in federal court. The court may order reconsideration — it may not compel sponsorship. · §6.3
+          <strong>§1.6 Discrimination Challenge:</strong> A State sponsorship denial isn't reviewable on its merits, but is challengeable as a constitutional violation where made on §1.6 discriminatory grounds — a court may order reconsideration free of discriminatory criteria but may not compel sponsorship. · §6.2
         </div>
 
         <div class="imm-arrow-down">↓</div>
@@ -1021,18 +1009,18 @@
         <div class="imm-step step-gate2">
           <span class="imm-step-num">Federal Certification</span>
           <div class="imm-step-title">Federal Certification</div>
-          <div class="imm-step-desc">The Republic certifies the applicant against four federal standards: identity verification, criminal history, national security assessment, and self-sufficiency or support guarantee.</div>
-          <span class="imm-step-ref">§6.1 — Federal Certification Federal Certification</span>
+          <div class="imm-step-desc">Federal certification categories are established by statute. No ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing.</div>
+          <span class="imm-step-ref">§6.1</span>
         </div>
 
         <div class="imm-callout">
-          <strong>No Ideological Screening</strong>
-          No nationality-based quotas. Any denial must state the precise ground in writing, published to the NRS. · §6.1.b
+          <strong>Certification Denials Are Reviewable</strong>
+          Challengeable on three grounds: the criterion wasn't properly established; discriminatory grounds under §1.6; or a procedural violation affecting the outcome. For national-security denials, a court may examine the classified assessment in camera and vacate the denial if it's insufficient. · §6.2
         </div>
 
         <div class="imm-callout">
-          <strong>Legislative Categories</strong>
-          Legislature may create additional categories: skills-based, labour-need, family connection, or temporal authorizations — all subject to §1.8. · §6.1.d
+          <strong>Aggregate Limits</strong>
+          The Legislature may set aggregate limits on total applications processed in a period, provided they're applied without §1.6 discrimination. Asylum proceedings are exempt from any such cap. · §6.1
         </div>
 
         <div class="imm-arrow-down">↓</div>
@@ -1040,23 +1028,23 @@
         <div class="imm-step step-credentials">
           <span class="imm-step-num">Outcome</span>
           <div class="imm-step-title">Federal Residency Credentials</div>
-          <div class="imm-step-desc">Credentials are federal — valid throughout the Republic. The sponsoring State's role ends at issuance. Freedom of movement applies from this point.</div>
-          <span class="imm-step-ref">§6.1.a · §1.11 Freedom of Movement</span>
+          <div class="imm-step-desc">Once both stages clear, the Legat Consul must ministerially issue residency credentials — interference with issuance is constitutionally prohibited. Credentials are federal, valid throughout the Republic, and carry the freedom of movement protected for every person under §1.5.</div>
+          <span class="imm-step-ref">§6.1 · §1.5 Civil and Political Liberties</span>
         </div>
 
       </div>
 
       <!-- RIGHT: ASYLUM TRACK -->
       <div class="imm-track track-asylum">
-        <div class="imm-track-label">Asylum Track · §1.20 Non-Refoulement</div>
+        <div class="imm-track-label">Asylum Track · §1.21 Non-Refoulement</div>
 
         <span class="imm-exempt">State Sponsorship Not Required</span>
 
         <div class="imm-step step-file">
           <span class="imm-step-num">Step 1</span>
-          <div class="imm-step-title">File §1.20 Asylum Claim</div>
-          <div class="imm-step-desc">Any person may claim asylum under the non-refoulement protection. No state sponsorship is required. No state's refusal to sponsor can extinguish this right.</div>
-          <span class="imm-step-ref">§1.20 — Non-Refoulement · §6.3</span>
+          <div class="imm-step-title">File §1.21 Asylum Claim</div>
+          <div class="imm-step-desc">Any person may claim asylum under the non-refoulement protection, regardless of point or manner of entry. No state sponsorship is required, and no State's refusal to sponsor can extinguish this right.</div>
+          <span class="imm-step-ref">§1.21 — Non-Refoulement · §6.3</span>
         </div>
 
         <div class="imm-arrow-down">↓</div>
@@ -1064,8 +1052,8 @@
         <div class="imm-step step-inhabit">
           <span class="imm-step-num">Immediate Effect</span>
           <div class="imm-step-title">Inhabitant Status — from date of filing</div>
-          <div class="imm-step-desc">The person becomes an Inhabitant the moment the claim is filed — not when it is decided. Full Article I protections apply immediately. Removal is barred while the claim is pending.</div>
-          <span class="imm-step-ref">§6.3.a — Inhabitant Status on Filing</span>
+          <div class="imm-step-desc">The person becomes an Inhabitant the moment the claim is filed — not when it is decided — with full Article I protections and social state access. Claims must be determined before any removal order takes effect. An unaccompanied minor is an Inhabitant from the moment of contact, with a federal guardian appointed within 72 hours.</div>
+          <span class="imm-step-ref">§6.3 · §6.3.c — Unaccompanied Minors</span>
         </div>
 
         <div class="imm-arrow-down">↓</div>
@@ -1073,8 +1061,8 @@
         <div class="imm-step step-court">
           <span class="imm-step-num">Step 2</span>
           <div class="imm-step-title">Asylum Court Determination</div>
-          <div class="imm-step-desc">The Asylum Court determines whether the person faces genuine persecution of the kind the constitution protects against. The claim must be determined before any removal order takes effect.</div>
-          <span class="imm-step-ref">§6.3.b — Asylum Court · §6.3.a</span>
+          <div class="imm-step-desc">The Asylum Court — a federal judicial institution constitutionally independent of both executives, with judges appointed under §4.2 and full tenure protection — determines the claim, providing a qualified adjudicator, interpreter access, the right to present evidence, appointed counsel where needed, and a right of appeal.</div>
+          <span class="imm-step-ref">§6.3.a — Asylum Court</span>
         </div>
 
         <div class="imm-arrow-down">↓</div>
@@ -1085,11 +1073,11 @@
           <div class="imm-branch">
             <div class="imm-branch-item branch-grant">
               <strong>Grant</strong><br>
-              Federal residency credentials by operation of the Asylum Court's grant. State sponsorship and federal certification not required. Legat Consul must issue credentials within statutory period. · §6.3.a
+              Federal residency credentials by operation of the grant. State sponsorship and federal certification are not required. · §6.3
             </div>
             <div class="imm-branch-item branch-deny">
               <strong>Denial</strong><br>
-              Removal may proceed. The Asylum Court's determination is the operative decision. Standard removal framework applies. · §6.2
+              Removal may proceed under the standard framework. Where removal can't actually be executed, or would itself violate §1.21, indefinite stateless detention is prohibited — judicial review applies at 90 days, then every 180 days, with a 5-year cap absent annual SC review. · §6.2, §6.3.b
             </div>
           </div>
         </div>
@@ -1100,7 +1088,7 @@
     <!-- MERGE POINT -->
     <div class="imm-merge">
       <h4>Federal Residency Credentials</h4>
-      <p>Both tracks lead to the same outcome: federal credentials valid throughout the Republic · §1.11 Freedom of Movement applies to all credential holders</p>
+      <p>Both tracks lead to the same outcome: federal credentials valid throughout the Republic · §1.5 freedom of movement applies to all credential holders</p>
     </div>
 
     <!-- KEY NOTES BAR -->
@@ -1109,7 +1097,7 @@
       <div class="imm-notes-grid">
         <div class="imm-note-item">
           <strong>Asylum is constitutionally independent</strong>
-          The asylum track's foundation is §1.20, a non-derogable Article I right under §1.19.b. No legislation can extinguish the right to claim and have determined an asylum claim. The immigration pathway cannot be used to block asylum proceedings.
+          The asylum track's foundation is §1.21, a non-derogable Article I right under §1.19.b. No legislation can extinguish the right to claim and have determined an asylum claim. The immigration pathway cannot be used to block asylum proceedings.
         </div>
         <div class="imm-note-item">
           <strong>Credentials are always federal</strong>
@@ -1121,7 +1109,7 @@
         </div>
         <div class="imm-note-item">
           <strong>Discrimination is always reviewable</strong>
-          §1.8 non-discrimination applies throughout both tracks. State sponsorship denials are not subject to federal review on the merits, but §1.8 discrimination claims always have a federal court pathway. · §6.3
+          §1.6 non-discrimination applies throughout both tracks. State sponsorship denials are not subject to federal review on the merits, but §1.6 discrimination claims always have a federal court pathway. · §6.2
         </div>
       </div>
     </div>
@@ -1142,7 +1130,7 @@
 <div class="diagram-section" id="tab-tiers">
   <div class="section-intro">
     <h2>Military Authorization Framework</h2>
-    <p>Military force operates under five constitutional principles. The Legat Consul may act immediately in defence — but all sustained operations require legislative authorization, Civic Consul fund certification, and a stated authorized purpose. Cessation is the constitutional default.</p>
+    <p>Military force operates under two authorized purposes and two authorization paths. The Legat Consul may act immediately in defence — but all sustained operations require legislative authorization or an existing treaty trigger, and run under continuous Senate oversight. Cessation is the constitutional default.</p>
   </div>
 
   <div class="tier-chart">
@@ -1157,7 +1145,7 @@
         </div>
         <div class="tier-body">
           <p><strong>Legat Consul acts immediately</strong> in response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies.</p>
-          <p>Must notify both chambers and the Civic Consul within the period defined by statute. <strong>Strictly bounded to defensive response.</strong></p>
+          <p>Must notify both chambers and the Civic Consul within 24 hours, or sooner if statute sets a shorter period. <strong>Strictly bounded to defensive response.</strong></p>
           <div class="tier-tags">
             <span class="tier-tag">§2.2</span>
             <span class="tier-tag">No prior authorization</span>
@@ -1173,10 +1161,11 @@
           <div class="tier-col-label">All Other Force — Legislative Authorization Required</div>
         </div>
         <div class="tier-body">
-          <p><strong>Any military force beyond immediate defence requires legislative authorization.</strong> Authorization is granted for a period the Legislature defines; it expires unless affirmatively renewed.</p>
+          <p><strong>Any military force beyond immediate defence requires legislative authorization</strong> stating which §14.1 authorized purpose it serves. Authorization not linked to a purpose is constitutionally void.</p>
           <p><strong>Cessation is the constitutional default.</strong> The burden is always on authorization, never on termination. Operations cease automatically on expiry.</p>
           <div class="tier-tags">
             <span class="tier-tag">§2.2</span>
+            <span class="tier-tag">§14.1</span>
             <span class="tier-tag">Legislature defines timelines</span>
           </div>
         </div>
@@ -1184,13 +1173,33 @@
 
     </div>
 
-    <!-- Civic Consul CERTIFICATION -->
+    <!-- TREATY-BASED PATH -->
     <div class="tier-trigger" style="margin-top:1.5rem">
-      <h3>Civic Consul Fund Certification — Throughout All Operations</h3>
-      <p>Military expenditure requires Civic Consul certification at all times. Immediate defensive operations carry a self-executing allocation for the statutory period; beyond that, Civic Consul certification is required or expenditure is void. No Declaration takes effect without Civic Consul certification. Civic Consul may certify, condition, or decline.</p>
+      <h3>Or: Treaty-Based Authorization</h3>
+      <p>Where an existing treaty requires military action, the Legat Consul may act immediately — notifying both chambers and the Civic Consul within 12 hours and citing the specific treaty obligation triggered. Senate ratification of the treaty already constitutes legislative authorization; no separate vote is needed when its obligations are triggered. If the SC later finds the trigger conditions were not met, operations are limited to a defensive posture and both chambers must vote within 30 days on whether to authorize continuation — absent an affirmative vote, §14.2's expiration and wind-down rules apply.</p>
+      <div class="tier-tags">
+        <span class="tier-tag">§14.4</span>
+        <span class="tier-tag">§3.6</span>
+      </div>
+    </div>
+
+    <!-- FUNDING & OVERSIGHT -->
+    <div class="tier-trigger" style="margin-top:1rem">
+      <h3>Funding &amp; Senate Oversight — Throughout All Operations</h3>
+      <p>Military expenditure requires legislative authorization plus ordinary budget passage under §2.5; the Legat Consul executes the funding, bound by any categories or amounts the authorization specifies. The Legat Consul answers public Senate questions at statutory intervals and gives classified briefings during active operations — the Civic Consul is kept informed through the Council of Ministers, but holds no certification or veto over military funding. The EM audits expenditure throughout and publishes a full accountability report within 180 days of an operation's conclusion. On expiry or lapse, all expenditure ceases; existing contracts may wind down for up to 90 days with no new commitments.</p>
       <div class="tier-tags">
         <span class="tier-tag">§14.2</span>
-        <span class="tier-tag">§2.2</span>
+        <span class="tier-tag">§2.5</span>
+        <span class="tier-tag">§2.14</span>
+      </div>
+    </div>
+
+    <!-- TRANSITION PLAN -->
+    <div class="tier-trigger" style="margin-top:1rem">
+      <h3>On Second Renewal: Transition &amp; Reconstruction Plan</h3>
+      <p>Once legislative authorization has been renewed a second time, the Legat Consul must submit a Transition and Reconstruction Plan to the Senate — covering alliance obligations, civilian reconstruction support, transitional justice, and withdrawal timeline. The Senate reviews, may amend in coordination with the Legat Consul, and approves; the Plan then binds both executives. Authorization may not be renewed again without an approved Plan.</p>
+      <div class="tier-tags">
+        <span class="tier-tag">§14.3</span>
       </div>
     </div>
 
@@ -1200,13 +1209,12 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto;text-align:left">
         <div>
           <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#81c784;margin-bottom:0.6rem;font-family:'JetBrains Mono',monospace">✓ Permitted</div>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Border protection and territorial integrity</p>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Defence of treaty allies (with legislative authorization)</p>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6">Prevention of genocide (with legislative authorization)</p>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Protection of Republic territory, citizens, and treaty allies</p>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6">Response to crimes against humanity, with legislative authorization stating the specific grounds</p>
         </div>
         <div>
           <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#ef9a9a;margin-bottom:0.6rem;font-family:'JetBrains Mono',monospace">✕ Prohibited</div>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Nation-building</p>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Installing or propping up a government in another sovereign state</p>
           <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Resource extraction</p>
           <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6">Ideological imposition</p>
         </div>
@@ -1245,7 +1253,7 @@ id="tab-dual">
 
         <div class="dual-item item-president">
           <strong>Military Command</strong>
-          <span>Immediate defensive force; all other force requires legislative authorization. Cannot spend domestic funds without Civic Consul certification. · §2.1, §2.2, §2.3</span>
+          <span>Immediate defensive force; all other force requires legislative authorization or an existing treaty trigger. · §2.1, §2.2, §14.1, §14.4</span>
         </div>
         <div class="dual-item item-president">
           <strong>Foreign Affairs &amp; Diplomacy</strong>
@@ -1261,15 +1269,15 @@ id="tab-dual">
         </div>
         <div class="dual-item item-president">
           <strong>Intelligence Oversight</strong>
-          <span>Directs intelligence; domestic operations require independent judicial authorisation · §2.3. Domestic intelligence requires independent judicial authorisation. · §2.3</span>
+          <span>Directs foreign intelligence. Domestic operations against Republic citizens require independent judicial authorization. · §2.3</span>
         </div>
         <div class="dual-item item-president">
           <strong>Consular Domain Officers</strong>
-          <span>Nominates Director of Intelligence, Director of Foreign Affairs, Director of Defense. Senate confirms. · §2.4</span>
+          <span>Nominates Director of Intelligence, Director of Foreign Affairs, Director of Defense from an Elections Panel-maintained pool. Senate confirms. · §2.4</span>
         </div>
         <div class="dual-item item-president">
           <strong>Consular Veto</strong>
-          <span>Domain-scoped only — military, intelligence, treaty, border security. SC reviews within 48hrs on petition. · §2.1.f</span>
+          <span>Domain-scoped only — military, intelligence, treaty, border security. Either Speaker may petition the SC for an expedited domain determination; the SC must rule within 7 days. · §2.3</span>
         </div>
         <div class="dual-item item-president">
           <strong>Clemency</strong>
@@ -1295,11 +1303,11 @@ id="tab-dual">
         </div>
         <div class="item-shared">
           <strong>Border Security Legislation</strong>
-          <span>Domestic implementation is Civic Consul domain; Consular Veto applies where genuine border security nexus exists. · §2.1.f</span>
+          <span>Domestic implementation is Civic Consul domain; Consular Veto applies where genuine border security nexus exists. · §2.3</span>
         </div>
         <div class="item-shared">
           <strong>Emergency Situations</strong>
-          <span>During active military operations, both executives act concurrently in their respective domains. Conflict resolution via §2.14.a. · §2.14.a</span>
+          <span>During active military operations, the Legat Consul's domain governs operational decisions. For cross-domain emergencies generally, either executive may propose a temporary operational lead through the Council of Ministers — see Conflict Resolution below. · §2.1, §2.14</span>
         </div>
         <div class="item-shared">
           <strong>NRS Publication</strong>
@@ -1324,7 +1332,7 @@ id="tab-dual">
         </div>
         <div class="dual-item item-pm">
           <strong>Fiscal Policy &amp; Budget</strong>
-          <span>Presents and manages the national budget. Certifies all military expenditure. Fiscal Objection authority on solvency grounds. · §2.5, §12.2</span>
+          <span>Presents and originates the national budget; passes the Assembly. Kept informed of military expenditure through the Council of Ministers — no certification role over it. · §2.5, §14.2</span>
         </div>
         <div class="dual-item item-pm">
           <strong>Social State Systems</strong>
@@ -1332,19 +1340,19 @@ id="tab-dual">
         </div>
         <div class="dual-item item-pm">
           <strong>Legislation</strong>
-          <span>Reviews all legislation during the Legislative Review Period. Suspensive Veto, Fiscal Objection, or enactment. · §2.7</span>
+          <span>Reviews all legislation following final passage. May exercise a suspensive veto (2/3 override) on constitutional, fiscal, or operational grounds, or a solvency objection (simple Assembly majority override). Neither applies to the budget, constitutionally-required bills, or emergency legislation. Silence enacts the bill. · §2.7</span>
         </div>
         <div class="dual-item item-pm">
           <strong>Judicial Nominations</strong>
-          <span>Nominates inferior court judges. Senate confirms. Civic Consul failure triggers Senate nomination pathway. · §4.4</span>
+          <span>Nominates inferior court judges from the Judicial Pool. Senate confirms by 2/3. Civic Consul failure to nominate can trigger a Senate nomination pathway. · §4.2</span>
         </div>
         <div class="dual-item item-pm">
           <strong>Independent Agency Appointments</strong>
-          <span>Nominates §3.7 statutory independent officers from Elections Panel-maintained candidate registries. Senate confirms. · §3.9</span>
+          <span>Nominates statutory independent officers from Elections Panel-maintained pools. Senate confirms. · §3.9</span>
         </div>
         <div class="dual-item item-pm">
           <strong>Civic Consul Clemency</strong>
-          <span>Domestic offenses. EM publishes factual report before any grant. 
+          <span>Domestic offenses. EM publishes factual report before any grant. · §2.12</span>
         </div>
         <div class="dual-item item-pm">
           <strong>Trade Agreement Concurrence</strong>
@@ -1353,7 +1361,7 @@ id="tab-dual">
 
         <div class="dual-cannot">
           <strong>Cannot</strong>
-          Direct military operations · Conduct foreign affairs · Veto legislation outside their domain · Override Civic Consul Fiscal Objection without MA assessment
+          Direct military operations · Conduct foreign affairs · Veto legislation outside their domain · Certify or condition military expenditure
         </div>
       </div>
 
@@ -1361,23 +1369,23 @@ id="tab-dual">
 
     <!-- CONFLICT RESOLUTION -->
     <div class="dual-conflict">
-      <h4>§2.14.a — Conflict Resolution During Active Operations</h4>
+      <h4>§2.14 — Cross-Domain Coordination and Conflict Resolution</h4>
       <div class="conflict-steps">
         <div class="conflict-step">
-          <strong>Step 1 — Objection</strong>
-          Legat Consul must file a specific written objection within 6 hours of the Civic Consul's order, published to the NRS.
+          <strong>During Active Military Operations</strong>
+          The Legat Consul's domain governs operational decisions directly. Either executive may petition the SC for an expedited domain determination if the boundary is disputed. · §2.1
         </div>
         <div class="conflict-step">
-          <strong>Step 2 — 12-Hour Window</strong>
-          Both executives attempt to resolve the conflict. If resolved, the agreed order is published and governs.
+          <strong>General Domain Disputes</strong>
+          The Council of Ministers under §2.14 is the first forum. Pending resolution, each executive continues only functions clearly within their own established domain; the specific disputed action is suspended pending SC determination. · §2.1, §2.14
         </div>
         <div class="conflict-step">
-          <strong>Step 3 — SC Expedited Review</strong>
-          If unresolved after 12 hours, either executive may petition the SC for emergency domain determination. SC rules within 72 hours.
+          <strong>Cross-Domain Emergency Lead</strong>
+          Either executive may propose a temporary operational lead to the Council of Ministers; the other must respond in writing within 12 hours — non-response counts as objection. Concurrence makes the designation effective, published to the NRS immediately; it assigns coordination, not constitutional supremacy. · §2.14
         </div>
         <div class="conflict-step">
-          <strong>Interim Rule</strong>
-          Pending SC ruling, the Legat Consul's order governs only for operations directly connected to the active military situation. All other government functions follow the Civic Consul's order.
+          <strong>SC Resolution</strong>
+          Objection or non-response refers the dispute to the SC under §2.15 for expedited review; the SC must rule within the period defined by statute, not to exceed 48 hours. Judicial review of any lead designation happens after the emergency stabilizes, not during it, but must be initiated within 90 days of the designation taking effect. · §2.14, §2.15
         </div>
       </div>
     </div>
@@ -1448,7 +1456,7 @@ id="tab-dual">
           </div>
           <div class="amend-step">
             <div class="amend-step-num">2</div>
-            <div>National popular referendum: <strong>2/3 affirmative</strong> support with at least <strong>55% citizen participation</strong></div>
+            <div>National popular referendum: <strong>2/3 affirmative</strong> support with at least <strong>55% citizen participation</strong>, within 180 days</div>
           </div>
           <div class="amend-tags">
             <span class="diagram-sc-tag">§17.1 Path B</span>
@@ -1456,16 +1464,40 @@ id="tab-dual">
         </div>
       </div>
 
+      <div class="amend-path">
+        <div class="amend-path-head">Path C</div>
+        <div class="amend-path-label">Citizen Initiative Amendment</div>
+        <div class="amend-path-body">
+          <div class="amend-step">
+            <div class="amend-step-num">1</div>
+            <div>Same two-phase petition process as the §13.2 legislative initiative, but Phase Two requires <strong>15%</strong> of eligible voters nationally (not 10%) — no legislative or executive action needed to reach the ballot</div>
+          </div>
+          <div class="amend-step">
+            <div class="amend-step-num">2</div>
+            <div>National referendum: <strong>70% of votes cast</strong>, with at least <strong>65% citizen participation</strong> — falling short of the participation floor bars resubmission on similar grounds for 5 years</div>
+          </div>
+          <div class="amend-tags">
+            <span class="diagram-sc-tag">§17.1 Path C</span>
+            <span class="diagram-sc-tag">JM advisory review under §17.3</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SPECIAL PROTECTIONS -->
+    <div class="amend-nonderogable" style="background:var(--cream2);border-left:3px solid var(--gold);padding:1rem 1.25rem;margin-top:1rem;font-size:0.85rem;line-height:1.6">
+      <strong>Institutional-Integrity Provisions Require Popular Ratification</strong> — Regardless of an amendment's origin, changes to the Monitor selection and independence mechanisms (§9.2–§9.5), the Monitor information-only mandate (§9.1), the Monitor funding guarantee (§9.10), the NRS architecture (§10.1), or Elections Panel/NRS Panel independence (§11.1) cannot rely on State Ratification alone — they must clear a popular vote. A Citizen Initiative Amendment satisfies this through its own referendum without separately clearing the Path B threshold.
     </div>
 
     <!-- NON-DEROGABLE NOTE -->
-    <div class="amend-nonderogable" style="background:var(--cream2);border-left:3px solid var(--gold);padding:1rem 1.25rem;margin-top:1rem;font-size:0.85rem;line-height:1.6" style="margin-top:1.5rem;padding:1rem 1.25rem;background:var(--cream2);border-left:3px solid var(--gold);font-size:0.9rem">
-      <strong>Non-Derogable Rights</strong> — Six rights (§1.19.b) cannot be suspended during emergencies. Under §17.3, no amendment may extinguish a non-derogable right — any amendment purporting to do so is void to the extent of the extinguishment. Any amendment to a non-derogable provision requires the same 2/3 threshold as any other amendment.
+    <div class="amend-nonderogable" style="margin-top:1.5rem;padding:1rem 1.25rem;background:var(--cream2);border-left:3px solid var(--gold);font-size:0.9rem">
+      <strong>Non-Derogable Rights</strong> — Six rights (§1.19.b) cannot be suspended during emergencies. Under §17.3, no amendment may extinguish a non-derogable right — any amendment purporting to do so is void to the extent of the extinguishment.
     </div>
 
     <!-- LM CERTIFICATION -->
     <div class="amend-certify" style="margin-top:1rem;padding:1rem 1.25rem;background:var(--navy);color:rgba(245,240,232,0.9);font-size:0.88rem">
-      <strong style="color:var(--gold)">LM Certification (Path A) · Elections Panel Certification (Path B)</strong><br>
+      <strong style="color:var(--gold)">LM Certification (Path A) · Elections Panel Certification (Paths B &amp; C)</strong><br>
       The appropriate Monitor certifies ratification and publishes to the NRS. The amendment takes effect immediately on publication. Every member's vote is published to the NRS.
     </div>
 
@@ -1492,7 +1524,7 @@ id="tab-monitors">
 
     <!-- KEY PRINCIPLE -->
     <div class="monitor-principle">
-      <strong>§8 — The Governing Rule</strong>
+      <strong>The Governing Rule</strong>
       No branch controls its own oversight. The Legislature does not select the Legislative Monitor General. The Executive does not select the Executive Monitor General. No political actor controls the Judicial Monitor General — they are chosen by random lottery.
     </div>
 
@@ -1506,10 +1538,10 @@ id="tab-monitors">
         <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · 24 months pre-term nomination · Assembly excluded · §9.3</span>
       </div>
       <div class="cross-row">
-        <span class="cross-from house">Assembly</span>
-        <span class="cross-arrow">nominates →</span>
+        <span class="cross-from house">Both Chamber Speakers</span>
+        <span class="cross-arrow">jointly nominate →</span>
         <span class="cross-from ei">EM Monitor General</span>
-        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · 2/3 Senate confirmation threshold · JM disclosure pre-vote · §9.3</span>
+        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · JM disclosure findings published pre-vote · if Speakers can't agree within 60 days, Senate selects from pool by 2/3 · §9.3</span>
       </div>
       <div class="cross-row">
         <span class="cross-from lottery">Random Lottery</span>
@@ -1575,8 +1607,8 @@ id="tab-monitors">
         </div>
         <div class="insp-selection">
           <span class="insp-selection-label">Nominated by</span>
-          <span class="insp-selection-who">The Assembly</span>
-          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. Nomination must begin 24 months before term end. JM publishes disclosure record before the vote. 2/3 Senate confirmation threshold. · §9.3</span>
+          <span class="insp-selection-who">Both Chamber Speakers, Jointly</span>
+          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority — the same process for all three Monitor types. JM publishes disclosure findings on the nominee before the vote. If the Assembly Speaker and Senate Speaker can't jointly agree within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote instead. · §9.3</span>
         </div>
         <div class="insp-body">
           <div class="insp-function">
@@ -1585,7 +1617,7 @@ id="tab-monitors">
           </div>
           <div class="insp-function">
             <strong>Military Compliance</strong>
-            <span>Annual assessment: were military operations authorized through the correct legislative authorization? Was the §2.3 intelligence warrant requirement maintained? Were fund certifications followed? · §9.1.b</span>
+            <span>Annual assessment: was military force used for an authorized purpose under §14.1? Were legislative authorization and allocation requirements under §14.2 observed? Was the §2.3 intelligence warrant requirement maintained? Were all military orders published to the NRS within the required period? · §9.1.b</span>
           </div>
           <div class="insp-function">
             <strong>Monetary Authority Audit</strong>
@@ -1624,8 +1656,8 @@ id="tab-monitors">
             <span>Audits the court system for compliance with judicial scope — are courts deciding constitutional questions only, staying within their jurisdiction, and maintaining independence from political pressure?</span>
           </div>
           <div class="insp-function">
-            <strong>SC Candidate Registry</strong>
-            <span>Maintains the Supreme Court Candidate Registry — the eligibility register that any qualified citizen may join, from which the Civic Consul nominates and the Senate confirms SC justices. Reviews submissions within 21 days. · §9.4.b</span>
+            <strong>Judicial Pool Audit</strong>
+            <span>Audits the Elections Panel's administration of the Judicial Pool — the eligibility pool any qualified citizen may join, from which the Civic Consul nominates and the Senate confirms SC justices. The JM has no role in constituting or certifying the pool itself. · §9.4.b</span>
           </div>
           <div class="insp-function">
             <strong>Judicial Nominee Vetting</strong>
@@ -1641,7 +1673,7 @@ id="tab-monitors">
           </div>
           <div class="insp-special">
             <strong>Compact Compliance Reviews</strong>
-            Annual compliance reviews for §19.1 accommodation compacts, §20 Associated Community compacts, and Article XVI indigenous compact obligations — Article I rights protections and compact terms. · §9.4
+            Annual compliance reviews for §20 Associated Community compacts and Article XVI indigenous compact obligations — Article I rights protections and compact terms. · §9.4
           </div>
         </div>
       </div>
@@ -1695,13 +1727,12 @@ id="tab-monitors">
       </div>
       <div class="insp-term-item">
         <strong>Removal</strong>
-        For-cause: SC grounds review (§9.9) + 2/3 both chambers (§9.14) · No-cause: 3/4 both chambers · §9.5
+        For-cause only: 1/3 of either chamber, or two of three Monitors jointly, files grounds with the SC; SC confirms the statutory category within 14 days; removal then requires a 2/3 concurrent vote of both chambers. No no-cause removal exists. · §9.5, §9.14
       </div>
     </div>
     <div class="diagram-footer">
       <div class="diagram-scenarios">
         <span class="diagram-footer-label">See this in action</span>
-        <div><a href="scenarios.html" class="diagram-sc-link">The Commissioner &rarr;</a><span class="diagram-sc-tag">EM Independence &middot; &sect;8.5</span></div>
         <div><a href="scenario-sdp-removal.html" class="diagram-sc-link">The Record &rarr;</a><span class="diagram-sc-tag">NRS Compliance &middot; &sect;9.1</span></div>
       </div>
       <a href="advisor.html?q=Two+IGs+jointly+initiate+a+For-Cause+removal+proceeding+against+the+third+Monitor General.+Walk+me+through+the+full+process." class="diagram-advisor-link">Ask the Advisor</a>
@@ -1729,7 +1760,7 @@ id="tab-monitors">
       <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
         <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 2</div>
         <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Social Assistance</div>
-        <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Income floor ensuring every Inhabitant can meet basic material needs. Right-to-work referral within 30 days. MA certifies adequacy annually.</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Income floor ensuring every Inhabitant can meet basic material needs. The Legislature defines the framework by statute; the MA's fiscal integrity certification covers the system's funding adequacy.</div>
         <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§12.1</div>
       </div>
       <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
@@ -1764,7 +1795,7 @@ id="tab-monitors">
     <div class="diagram-footer">
       <div class="diagram-scenarios">
         <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Social State &middot; §12.3</span></div>
+        <div><span class="diagram-sc-tag">National Endowment &middot; §12.5</span></div>
         <div><span class="diagram-sc-tag">Social State &middot; §12.1</span></div>
       </div>
     </div>
@@ -1775,23 +1806,23 @@ id="tab-monitors">
 <div class="diagram-section" id="tab-sc-appointment">
   <div class="section-intro">
     <h2>Supreme Court — Appointment Process</h2>
-    <p>Justices are nominated by the Civic Consul from the open SC Candidate Registry and confirmed by the Senate by 2/3 supermajority. Nine justices serve staggered 12-year non-renewable terms.</p>
+    <p>Justices are nominated by the Civic Consul from the Judicial Pool — maintained by the Elections Panel, audited by the JM — and confirmed by the Senate by 2/3 supermajority. Nine justices serve staggered 12-year non-renewable terms.</p>
   </div>
   <div class="sc-chart">
 
     <!-- THREE DESIGN PRINCIPLES -->
     <div class="sc-principle">
       <div class="sc-principle-item">
-        <strong>Open Registry</strong>
-        <span>No political branch controls who enters the pool. Any citizen with 15+ years legal practice or 10+ years judicial service may apply to the JM's Candidate Registry. The Registry is public, permanent, and freely accessible on the NRS.</span>
+        <strong>Open Pool</strong>
+        <span>No political branch controls who enters the pool. Any citizen with 15+ years legal practice or 10+ years judicial service, holding no current government position and no disqualifying financial interest, may apply directly to the Elections Panel. The pool is public, permanent, and freely accessible on the NRS.</span>
       </div>
       <div class="sc-principle-item">
-        <strong>Expert Voice — No Veto</strong>
-        <span>A SC Candidate Registry of five senior judges chosen by lot publishes advisory assessments of registered candidates. Transmitted to the Senate before any confirmation vote. Advisory only — the Board holds no nomination authority.</span>
+        <strong>JM Audits, Doesn't Gatekeep</strong>
+        <span>The JM's ongoing audit of the Elections Panel's pool administration is published to the NRS, and the Senate may consider any published findings on a nominee before confirmation. The JM holds no role in constituting or certifying the pool, and no veto over nomination or confirmation.</span>
       </div>
       <div class="sc-principle-item">
         <strong>Civic Consul Nomination + 2/3 Senate Confirmation</strong>
-        <span>The Civic Consul nominates from the JM-certified Registry. The Senate confirms by 2/3 supermajority of full seated membership. The 2/3 threshold requires broad Senate consensus — the Civic Consul cannot pack the Court without extraordinary legislative support.</span>
+        <span>The Civic Consul nominates from the Elections Panel-maintained pool. The Senate confirms by 2/3 supermajority of full seated membership. The 2/3 threshold requires broad Senate consensus — the Civic Consul cannot pack the Court without extraordinary legislative support.</span>
       </div>
     </div>
 
@@ -1802,48 +1833,48 @@ id="tab-monitors">
 
         <div class="sc-step">
           <div class="sc-step-num">1</div>
-          <div class="sc-step-title">SC Candidate Registry</div>
-          <div class="sc-step-body">Any citizen with 15+ years legal practice (or 10+ years judicial service) who holds no current government position and has no disqualifying financial interest may apply. The JM reviews applications and publishes a credential record. Registry is public on the NRS.</div>
-          <span class="sc-step-ref">§9.4.b · Maintained by JM</span>
+          <div class="sc-step-title">Judicial Pool</div>
+          <div class="sc-step-body">Any citizen with 15+ years legal practice (or 10+ years judicial service) who holds no current government position and has no disqualifying financial interest may apply directly to the Elections Panel, which applies the criteria and enters qualifying applicants. The pool is public on the NRS.</div>
+          <span class="sc-step-ref">§9.4.b · Maintained by Elections Panel</span>
           <div class="sc-step-arrow">›</div>
         </div>
 
         <div class="sc-step">
           <div class="sc-step-num">2</div>
           <div class="sc-step-title">EM Disclosure Review</div>
-          <div class="sc-step-body">Registry members file a full disclosure record with the Executive Monitor: professional history, judicial record, financial interests. EM reviews for factual accuracy within 14 days and publishes its finding to the NRS.</div>
-          <span class="sc-step-ref">§4.4 · EM factual review</span>
+          <div class="sc-step-body">Pool members' financial disclosures fall within the EM's ongoing audit of constitutional appointments. Findings publish to the NRS as part of that audit, not as a one-time gate before nomination.</div>
+          <span class="sc-step-ref">§9.4.b · EM disclosure audit</span>
           <div class="sc-step-arrow">›</div>
         </div>
 
         <div class="sc-step">
           <div class="sc-step-num">3</div>
           <div class="sc-step-title">Civic Consul Nominates</div>
-          <div class="sc-step-body">The Civic Consul nominates any JM-certified Registry member within 60 days of a scheduled vacancy (45 days for mid-term vacancies). The nominee must be on the Registry — the Civic Consul may not nominate outside it.</div>
-          <span class="sc-step-ref">§4.4 · 60-day window</span>
+          <div class="sc-step-body">The Civic Consul nominates any pool member within 90 days of an anticipated vacancy, or 60 days for an unanticipated one. The nominee must be a pool member — the Civic Consul may not nominate outside it.</div>
+          <span class="sc-step-ref">§4.4 · 90/60-day window</span>
           <div class="sc-step-arrow">›</div>
         </div>
 
         <div class="sc-step">
           <div class="sc-step-num">4</div>
-          <div class="sc-step-title">JM Assessment + Board Report</div>
-          <div class="sc-step-body">The JM confirms the nominee's registry status and publishes its assessment within 30 days — covering judicial record, legal career, and conflicts of interest. The SC Candidate Registry's advisory assessment, if any, is transmitted to the Senate simultaneously.</div>
-          <span class="sc-step-ref">§4.4 · Published to NRS</span>
+          <div class="sc-step-title">JM Findings Available</div>
+          <div class="sc-step-body">The JM's ongoing audit of the Judicial Pool is published to the NRS; the Senate may consider any published JM findings on the nominee before voting. There is no separate certifying body and no advisory board — the JM's audit is informational, not a precondition to confirmation.</div>
+          <span class="sc-step-ref">§4.4 · NRS-published, informational only</span>
           <div class="sc-step-arrow">›</div>
         </div>
 
         <div class="sc-step">
           <div class="sc-step-num">5</div>
           <div class="sc-step-title">Senate Confirmation (2/3)</div>
-          <div class="sc-step-body">The Senate votes within 90 days of the JM assessment. Confirmation requires 2/3 of full seated membership — requiring broad Senate consensus. No deemed confirmation. If declined, Civic Consul re-nominates within 30 days.</div>
-          <span class="sc-step-ref">§4.4 · 2/3 of full Senate</span>
+          <div class="sc-step-body">The Senate must vote within 120 days of nomination. Confirmation requires 2/3 of full seated membership — broad consensus, no deemed confirmation. Failure to vote within the period is itself a constitutional compliance breach. If declined, the Civic Consul nominates again.</div>
+          <span class="sc-step-ref">§4.4 · 2/3 of full Senate, 120-day window</span>
           <div class="sc-step-arrow">›</div>
         </div>
 
         <div class="sc-step">
           <div class="sc-step-num">6</div>
           <div class="sc-step-title">Official Oath</div>
-          <div class="sc-step-body">The confirmed justice takes the Official Oath. Recorded on the NRS within 24 hours alongside the JM assessment — the complete appointment record is permanent. The justice serves a single non-renewable 12-year term from this date.</div>
+          <div class="sc-step-body">The confirmed justice takes the Official Oath. The complete appointment record — pool entry, nomination, JM findings, Senate vote — is permanently published to the NRS. The justice serves a single non-renewable 12-year term from this date.</div>
           <span class="sc-step-ref">§4.4 · NRS publication</span>
         </div>
 
@@ -1929,7 +1960,7 @@ id="tab-monitors">
         <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--blue)"></div>Class B confirmation</div>
         <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--purple)"></div>Class C confirmation</div>
         <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--cream2);border:1px solid var(--border)"></div>Serving (mid-term)</div>
-        <span style="color:var(--muted);font-size:0.75rem;margin-left:auto">Class assignment by JM public lot draw at Phase 3 · published to NRS before any justice takes oath · §4.2</span>
+        <span style="color:var(--muted);font-size:0.75rem;margin-left:auto">Class assignment by JMC public lot draw at Phase 3 · published to NRS before any justice takes oath · §4.4</span>
       </div>
     </div>
 
@@ -1938,8 +1969,8 @@ id="tab-monitors">
       <div class="sc-vacancy-header">Mid-Term Vacancies and Special Provisions</div>
       <div class="sc-vacancy-grid">
         <div class="sc-vacancy-item">
-          <strong>Mid-Term Vacancy — Special Nomination and Confirmation (180 days)</strong>
-          <span>Death, resignation, removal, or expulsion triggers the §4.4 appointment process with compressed timelines: Civic Consul nominates within 45 days; JM assessment within 30 days; Senate confirmation within 90 days. Total ceiling: 180 days. The replacement serves only the remainder of the original 12-year term. · §4.4</span>
+          <strong>Mid-Term Vacancy — Special Nomination and Confirmation</strong>
+          <span>Death, resignation, removal, or expulsion triggers the §4.4 appointment process: Civic Consul nominates within 60 days (vs. 90 days for an anticipated vacancy); Senate must vote within 120 days of nomination, the same window as any other vacancy. The replacement serves only the remainder of the original 12-year term. · §4.4</span>
         </div>
         <div class="sc-vacancy-item">
           <strong>Temporary Associate Justice</strong>
@@ -1947,18 +1978,18 @@ id="tab-monitors">
         </div>
         <div class="sc-vacancy-item">
           <strong>Emergency Panel — Immediate Defensive Authority Scope</strong>
-          <span>Four justices drawn by rotation form a standing Emergency Panel each two-year cycle. The Panel has sole jurisdiction over constitutional challenges to immediate defensive Legat Consul's authority during active operations and must rule within 48 hours. Ruling is binding on the full Court unless overruled within 72 hours. · §4.5</span>
+          <span>Four justices drawn by rotation hold sole jurisdiction over constitutional challenges to immediate defensive military authority under §2.2 during active operations, and must rule within a period defined by statute, not to exceed 48 hours. Where the Court has fewer than four seated justices, the full Court sits as the panel; quorum for emergency review is three. · §4.5</span>
         </div>
         <div class="sc-vacancy-item">
           <strong>Non-Renewable Terms</strong>
-          <span>Every term — initial or subsequent — is non-renewable. A justice confirmed to an initial short class term (4 or 8 years) is eligible to be nominated again; if confirmed, they serve a full new 12-year term. A justice who has served a full 12-year term may not be nominated again. · §4.2</span>
+          <span>Every term — initial or subsequent — is non-renewable. A justice confirmed to an initial short class term (4 or 8 years) is eligible to be nominated again; if confirmed, they serve a full new 12-year term through the same appointment process. A justice who has served a full 12-year term may not be nominated again. · §4.3 / §4.4</span>
         </div>
       </div>
     </div>
     <div class="diagram-footer">
       <div class="diagram-scenarios">
         <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Judicial Removal &middot; &sect;4.1.d</span></div>
+        <div><span class="diagram-sc-tag">Judicial Removal &middot; &sect;4.3.b</span></div>
       </div>
     </div>
 
@@ -1970,7 +2001,7 @@ id="tab-monitors">
 <div class="diagram-section" id="tab-pool">
   <div class="section-intro">
     <h2>The Constitutional Pool Framework</h2>
-    <p>Eleven constitutional pools operate through the same framework under §9.12. The table shows each pool across six dimensions: who fills it, what qualifications are required, who vets applicants, how someone is chosen from the pool, and what confirmation is needed. The Elections Panel maintains all pools administratively; the Elections Panel applies qualification criteria and administers pool entry; Monitors audit EP administration.</p>
+    <p>Eight constitutional pools operate through the same framework under §9.12. The table shows each pool across five dimensions: who fills it, what qualifications are required, who vets applicants, how someone is chosen from the pool, and what confirmation is needed. The Elections Panel maintains all pools administratively; the Elections Panel applies qualification criteria and administers pool entry; Monitors audit EP administration.</p>
   </div>
 
   <div class="diagram-detail-box" style="max-width:900px;margin:0 auto 2rem">
@@ -2000,7 +2031,7 @@ id="tab-monitors">
     </div>
 
     <!-- SIX POOLS TABLE -->
-    <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:0.75rem">The Six Constitutional Pools</div>
+    <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:0.75rem">The Eight Constitutional Pools</div>
     <div style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse;font-size:0.78rem">
       <thead>
@@ -2015,12 +2046,12 @@ id="tab-monitors">
       </thead>
       <tbody>
         <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>SC Registry</strong><br><span class="pool-prov">§9.4.b · §4.4</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Judicial Pool</strong><br><span class="pool-prov">§9.4.b · §4.4</span></td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">15+ yrs legal practice<br>or 10 yrs judicial service;<br>no current govt position;<br>no disqualifying financial interest</td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Civic Consul nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate 2/3<br><span style="font-size:0.68rem;color:var(--muted)">90 days</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate 2/3<br><span style="font-size:0.68rem;color:var(--muted)">120 days</span></td>
         </tr>
         <tr>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>JM Monitor General</strong><br><span class="pool-prov">§9.4.a · §9.3</span></td>
@@ -2028,7 +2059,7 @@ id="tab-monitors">
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Former judge<br>(trial court or above);<br>1yr cooling-off;<br>5yr for former SC justices</td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JMC lottery<br><span style="font-size:0.68rem;color:var(--muted)">outgoing Monitor General excluded</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">None</td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">National vote<br><span style="font-size:0.68rem;color:var(--muted)">simple majority · next electoral period</span></td>
         </tr>
         <tr>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>LM Monitor General</strong><br><span class="pool-prov">§9.3</span></td>
@@ -2043,7 +2074,7 @@ id="tab-monitors">
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Legislature defines<br>by statute</td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Appropriate Monitor<br>certifies eligibility</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Assembly nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Both Speakers jointly nominate<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">National vote<br><span style="font-size:0.68rem;color:var(--muted)">simple majority · next electoral period</span></td>
         </tr>
         <tr>
@@ -2052,7 +2083,7 @@ id="tab-monitors">
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Legislature defines<br>by statute</td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Civic Consul nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate supermajority<br><span style="font-size:0.68rem;color:var(--muted)">Legislature defines threshold</span></td>
+          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate 2/3</td>
         </tr>
         <tr>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Consular Domain Officers</strong><br><span class="pool-prov">§2.4</span></td>
@@ -2078,23 +2109,6 @@ id="tab-monitors">
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Civic Consul nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
           <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate 2/3<br><span style="font-size:0.68rem;color:var(--muted)">90 days</span></td>
         </tr>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Advisory Council</strong><br></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">State-designated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Technical expertise in<br>NRS/NVS systems;<br>Legislature defines by statute</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JM publishes<br>qualification report</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JMC lottery<br><span style="font-size:0.68rem;color:var(--muted)">public session</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">None</td>
-        </tr>
-        
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Removal Grounds Review</strong><br><span class="pool-prov">§9.9</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">State-designated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">5+ yrs citizenship;<br>no current/recent federal office;<br>no pending federal criminal proceedings</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br>LM audits</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JMC lottery<br><span style="font-size:0.68rem;color:var(--muted)">5 members per proceeding</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">None</td>
-        </tr>
       </tbody>
     </table>
     </div>
@@ -2106,7 +2120,7 @@ id="tab-monitors">
     <div class="diagram-footer" style="margin-top:1.5rem">
       <div class="diagram-scenarios">
         <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag"> Process &middot; §9.9</span></div>
+        <div><span class="diagram-sc-tag">Registry Integrity &middot; §9.13</span></div>
         <div><span class="diagram-sc-tag">Pool Process &middot; §9.12</span></div>
       </div>
     </div>
@@ -2189,7 +2203,7 @@ id="tab-monitors">
       </div>
       <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
         <strong>NVS Administration</strong><br>
-        <span style="color:var(--muted);font-size:0.77sem">No State may reduce NVS access, functionality, or availability within its territory. §7.3, §11.2</span>
+        <span style="color:var(--muted);font-size:0.77rem">No State may reduce NVS access, functionality, or availability within its territory. §7.3, §11.2</span>
       </div>
       <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
         <strong>Article I Rights</strong><br>
@@ -2201,7 +2215,7 @@ id="tab-monitors">
       </div>
       <div class="sf-item" style="font-size:0.82rem;line-height:1.5;color:var(--ink)">
         <strong>Local Government Protection</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">States may not systematically defund local governments to achieve de facto centralization. §13.3</span>
+        <span style="color:var(--muted);font-size:0.77rem">States may not systematically defund local governments to achieve de facto centralization. §15.8</span>
       </div>
     </div>
   </div>
@@ -2215,7 +2229,7 @@ id="tab-monitors">
       <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Reduce NVS access or impose additional voting burdens <span style="color:var(--muted)">§7.3</span></div>
       <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Draw district maps using partisan registration or racial composition as a primary criterion <span style="color:var(--muted)">§3.3</span></div>
       <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Divide directly into two States — the portion must become a Territory first <span style="color:var(--muted)">§15.7</span></div>
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Systematically defund local governments to centralize functions at State level <span style="color:var(--muted)">§13.3</span></div>
+      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Systematically defund local governments to centralize functions at State level <span style="color:var(--muted)">§15.8</span></div>
       <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Abridge Article I rights within their territory for any reason <span style="color:var(--muted)">Article I</span></div>
       <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Block asylum proceedings by refusing State sponsorship <span style="color:var(--muted)">§6.3</span></div>
     </div>
@@ -2314,50 +2328,50 @@ const nodeData = {
   president: {
     title: 'The Legat Consul — Defense and Diplomacy',
     ref: 'Article II, §2.1',
-    body: `<p>The Legat Consul holds authority over national defense and diplomacy — exclusively. They may not direct domestic policy, legislation, or civil administration. This domain separation is constitutionally enforced: where an event touches both domains simultaneously, both executives act concurrently within their respective areas.</p><p>The Legat Consul serves a single non-renewable six-year term and is elected by combined-score ranked-choice voting requiring both national support and geographic breadth.</p><p>Checks on the Legat Consul: Legislative military authorization requirement, intelligence warrant requirement (§2.3), EM annual audit, constitutional violation cascade, domain separation with Civic Consul.</p>`,
-    tags: ['§2.1 Domain', 'Three-Tier Military Authorization', 'Intelligence Firewall', '6-Year Single Term']
+    body: `<p>The Legat Consul holds authority over national defense and diplomacy — exclusively. They may not direct domestic policy, legislation, or civil administration. This domain separation is constitutionally enforced: where an event touches both domains simultaneously, both executives act concurrently within their respective areas.</p><p>The Legat Consul serves a single non-renewable six-year term and is elected by combined-score ranked-choice voting requiring both national support and geographic breadth.</p><p>Checks on the Legat Consul: legislative military authorization requirement, intelligence warrant requirement (§2.3), EM annual audit, removal under §2.13 (legislative or popular recall track), domain separation with Civic Consul.</p>`,
+    tags: ['§2.1 Domain', 'Military Authorization Framework', 'Intelligence Firewall', '6-Year Single Term']
   },
   pm: {
     title: 'The Civic Consul — Domestic Affairs',
-    ref: 'Article II, §2.2–2.4',
-    body: `<p>The Civic Consul leads the domestic executive — civil service, domestic policy, social programs, criminal justice, and emergency management. The Civic Consul serves at the confidence of the Assembly and may be removed only through a Constructive Vote of No Confidence, which requires simultaneously electing a named successor by absolute majority.</p><p>The Civic Consul holds two legislative objection powers: the Suspensive Veto (any bill, delays one full session, absolute majority override) and the Fiscal Objection (fiscal grounds, simple majority override). Neither is an absolute veto — the Legislature always has the final word.</p><p>The Civic Consul's maximum consecutive service is 8 years. The EM publishes a 6-month advance notice before this limit expires.</p>`,
-    tags: ['§2.2 Domain', 'Constructive No-Confidence', 'Suspensive Veto', '8-Year Maximum']
+    ref: 'Article II, §2.5–2.7',
+    body: `<p>The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul — domestic policy, the budget (which must originate with the Civic Consul), the civil service, and the social state. The Civic Consul serves at the confidence of the Assembly and may be removed only through a Constructive Vote of No Confidence, which requires simultaneously electing a named successor by absolute majority of full seated Assembly membership.</p><p>On legislation, the Civic Consul may exercise a suspensive veto on constitutional, fiscal, or operational grounds — the Legislature can override by 2/3 of both chambers — or object on specific solvency grounds, which the Assembly can override by simple majority. Neither tool may be used on the annual budget, bills implementing a constitutional obligation, or emergency legislation; silence within the review period enacts the bill.</p><p>No person may serve more than 8 years total as Civic Consul, cumulative across all periods of service — the limit is permanent and is not reset by any interruption in service.</p>`,
+    tags: ['§2.5 Domain', 'Constructive No-Confidence', 'Suspensive Veto (§2.7)', '8-Year Cumulative Maximum']
   },
   house: {
     title: 'The Assembly — The Democratic Chamber',
-    ref: 'Article III, §3.1',
-    body: `<p>The Assembly is the Republic's primary legislative body — all bills originate here. Members are elected proportionally from their States. The Assembly size is Legislature-defined with a constitutional floor of one member per 750,000 citizens or one per State, whichever produces a larger Assembly.</p><p>The Assembly elects and removes the Civic Consul, initiates impeachment proceedings, originates all budget legislation, and may override executive vetoes. The Single-Subject Rule (§3.4) prevents omnibus legislation — every bill addresses one subject only.</p>`,
-    tags: ['§3.1 Structure', 'Civic Consul Confidence', 'Single-Subject Rule', 'Budget Origination']
+    ref: 'Article III, §3.2',
+    body: `<p>The Assembly is the Republic's primary legislative body — all bills originate here. Members are elected proportionally from their States and Territories by the Webster method, with a minimum of one seat per State and Territory; the population divisor behind that allocation is set and may be adjusted by statute.</p><p>The Assembly elects and removes the Civic Consul, initiates removal proceedings against other constitutional officers, originates all budget legislation, and may override executive vetoes. The Single-Subject Rule (§3.4) prevents omnibus legislation — every bill addresses one subject only.</p>`,
+    tags: ['§3.2 Structure', 'Civic Consul Confidence', 'Single-Subject Rule', 'Budget Origination']
   },
   senate: {
     title: 'The Senate — The States\' Chamber',
-    ref: 'Article III, §3.2',
-    body: `<p>The Senate represents States equally — two senators per State regardless of population. This is the constitutional protection for small States against majoritarian domination by large ones. Senators serve staggered 8-year terms; one-third of seats are contested every election cycle.</p><p>The Senate confirms judicial appointments, ratifies treaties, and acts as the constitutional violation trial chamber for constitutional violations by senior officials. The Senate must act on every Assembly-passed bill within 30 days or the bill is Deemed Passed.</p>`,
-    tags: ['§3.2 Structure', 'Equal State Representation', 'Treaty Ratification', 'constitutional violation Trials']
+    ref: 'Article III, §3.5',
+    body: `<p>The Senate represents States equally — two senators per State regardless of population. This is the constitutional protection for small States against majoritarian domination by large ones. Senators serve staggered six-year terms; roughly one-third of seats are contested each election cycle.</p><p>The Senate confirms judicial and other constitutional appointments, ratifies treaties, and votes on the legislative track of officer removal under provisions like §2.13. Absent a shorter statutory period, the Senate must act on every Assembly-passed bill within 90 days or the bill is deemed passed.</p>`,
+    tags: ['§3.5 Structure', 'Equal State Representation', 'Treaty Ratification', 'Removal Votes']
   },
   court: {
     title: 'Supreme Court — Constitutional Adjudication',
-    ref: 'Article IV, §4.1–4.3',
-    body: `<p>The Supreme Court is the Republic's final constitutional authority. Justices are nominated by the Civic Consul from the open SC Candidate Registry — which any qualified citizen may enter — and confirmed by the Senate by 2/3 supermajority of full seated membership. The open registry prevents purely political nominations; the 2/3 threshold requires broad Senate consensus. No single government controls judicial composition.</p><p>The Court reviews constitutional questions, adjudicates Monitor reporting, and interprets the Constitution's text. It may not issue advisory opinions — it requires a concrete injury and a live controversy. Nine justices serve staggered 12-year non-renewable terms. Six justices always carry continuing tenure regardless of which seats are in the current confirmation cycle. The Court decides by majority; no single justice has a veto over constitutional adjudication, or direct executive action.</p>`,
+    ref: 'Article IV, §4.1, §4.3–4.4',
+    body: `<p>The Supreme Court is the Republic's final constitutional authority. Justices are nominated by the Civic Consul from the Judicial Pool — maintained by the Elections Panel, open to any qualifying citizen — and confirmed by the Senate by 2/3 supermajority of full seated membership. The open pool prevents purely political nominations; the 2/3 threshold requires broad Senate consensus. No single government controls judicial composition.</p><p>The Court reviews constitutional questions, adjudicates Monitor reporting, and interprets the Constitution's text. It may not issue advisory opinions — it requires a concrete injury and a live controversy. Nine justices serve staggered 12-year non-renewable terms. Six justices always carry continuing tenure regardless of which seats are in the current confirmation cycle. The Court decides by majority; no single justice has a veto over constitutional adjudication, or direct executive action.</p>`,
     tags: ['§4.1 Structure', 'Confirmed by Senate 2/3', 'Judicial Scope Limits', 'No Advisory Opinions']
   },
   ei: {
     title: 'Executive Monitor — Auditing the Executives',
     ref: 'Article IX, §9.1.b',
-    body: `<p>The EM audits both executive offices and the Constitutional Clemency Commission for NRS compliance, constitutional mandate adherence, and constitutional violation patterns. Its mandate is information-only: the EM publishes factual findings to the NRS and may not make legal conclusions, direct executive action, or enforce its findings.</p><p>The EM cannot be directed by either executive — its independence is constitutionally protected. Its published findings are the primary input to the Article IX constitutional violation process.</p>`,
+    body: `<p>The EM audits both executives and the Monetary Authority. Its annual responsibilities include military compliance assessment, reviewing disclosure records for constitutional appointments, publishing clemency background reports before any executive act under §2.12, and auditing electoral finance after elections. Its mandate is information-only: the EM publishes factual findings to the NRS and may not make legal conclusions, direct executive action, or enforce its findings.</p><p>The EM cannot be directed by either executive — its independence is constitutionally protected. Its published findings are the primary evidentiary input to officer-removal proceedings, including §2.13 (Legat Consul) and §4.2/§4.3.b (judicial removal).</p>`,
     tags: ['§9.1.b Mandate', 'Information Only', 'No Enforcement Power', 'Annual NRS Publication']
   },
   li: {
     title: 'Legislative Monitor — Auditing the Legislature',
     ref: 'Article IX, §9.1.a',
-    body: `<p>The LM audits the Legislature for NRS compliance and constitutional mandate adherence. It also conducts the Statehood Audit for Territory-to-State transitions and reviews State-drawn redistricting maps for compliance with the constitutional criteria hierarchy and prohibited inputs.</p><p>The LM does not draw redistricting maps — States draw Assembly district maps through independent commissions, and the State redistricting process draws Legat Consul States. The LM is the compliance referee, not the cartographer, in both cases.</p>`,
+    body: `<p>The LM audits the Legislature for NRS compliance and constitutional mandate adherence. It also conducts the Statehood Audit for Territory-to-State transitions and reviews State-drawn redistricting maps for compliance with the constitutional criteria hierarchy and prohibited inputs.</p><p>The LM does not draw redistricting maps — States draw their own Assembly district maps through independent commissions. The LM is the compliance referee, not the cartographer, in both cases.</p>`,
     tags: ['§9.1.a Mandate', 'Statehood Audit', 'Redistricting Compliance', 'Information Only']
   },
   ji: {
     title: 'Judicial Monitor — Auditing the Courts',
     ref: 'Article IX, §9.1.c',
-    body: `<p>The JM audits the court system for compliance with judicial scope and independence requirements. It maintains the Qualified SC Candidate Registry from which Supreme Court candidates are drawn, ensuring judicial elections draw from constitutionally qualified candidates.</p><p>The JM also certifies the completeness of framework independence agreements under §15.4 before an independence referendum may be held.</p>`,
-    tags: ['§9.1.c Mandate', 'Qualified SC Candidate Registry', 'Judicial Independence Audit', '§15.4 Certification']
+    body: `<p>The JM audits the court system for compliance with judicial scope and independence requirements. It audits the Elections Panel's administration of the Judicial Pool — the eligibility pool from which Supreme Court nominees are drawn — ensuring judicial appointments draw from constitutionally qualified candidates. The JM has no role in constituting or certifying the pool itself.</p><p>The JM also certifies the completeness of framework independence agreements under §15.4 before an independence referendum may be held.</p>`,
+    tags: ['§9.1.c Mandate', 'Judicial Pool Audit', 'Judicial Independence Audit', '§15.4 Certification']
   },
   ma: {
     title: 'Monetary Authority — Independent Fiscal Assessment',
