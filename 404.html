@@ -49,26 +49,28 @@
 <body>
   <nav>
     <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" aria-hidden="true">The Federated Republic</a>
-    <div class="nav-links">
-      <a href="annotated.html">Constitution</a>
+        <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
       <a href="scenarios.html">Scenarios</a>
       <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
     </div>
     <button class="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
-    <a href="annotated.html">Constitution</a>
+    <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
     <a href="advisor.html">Advisor</a>
-    <a href="sources.html">Sources</a>
     <a href="contact.html">Contact</a>
-    <a href="constitution-current.pdf" download class="mobile-cta">Download a copy</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
   </div>
 
   <main>
@@ -92,7 +94,12 @@
   <footer>The Federated Republic — A Constitutional Framework</footer>
 
   <script>
-    document.querySelector('.hamburger')?.addEventListener('click', () => {
+  function toggleMobileNav(){
+    var m=document.getElementById('mobileMenu');
+    var b=document.querySelector('.hamburger');
+    if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+  }
+      document.querySelector('.hamburger')?.addEventListener('click', () => {
       document.getElementById('mobileMenu').classList.toggle('open');
     });
   </script>
