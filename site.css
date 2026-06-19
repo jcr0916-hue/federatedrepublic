@@ -155,8 +155,8 @@
     a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
     button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
-    /* ── MOBILE NAV — single breakpoint ── */
-    @media(max-width:1200px){
+    /* ── MOBILE NAV — shows on touch devices and narrow screens ── */
+    @media (max-width: 1200px), (hover: none) and (pointer: coarse) {
       .hamburger{display:flex!important;-webkit-appearance:none;appearance:none}
       .nav-links{display:none!important}
     }
