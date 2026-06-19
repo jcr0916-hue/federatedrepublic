@@ -6,9 +6,10 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-[[edge_functions]]
-  path = "/api/advisor"
-  function = "advisor"
+# Edge function temporarily disabled — advisor.ts too large for edge cold start
+# [[edge_functions]]
+#   path = "/api/advisor"
+#   function = "advisor"
 
 [[headers]]
   for = "/*"
