@@ -14,35 +14,11 @@
   <meta name="twitter:title" content="Glossary">
   <meta name="twitter:description" content="Every defined term in the Federated Republic's constitution — what it means, where it appears, and why it matters.">
   <style>
-    
-    @media(max-width:1024px){
-      }
-    @media(max-width:640px){
-      }
-    
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
-
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .hamburger{display:none;-webkit-appearance:none;appearance:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
-    .mobile-menu a:last-child{border-bottom:none}
-    .mobile-menu.open{display:flex}
-
-    /* Hero */
+/* Hero */
     .hero{background:var(--navy2);padding:88px 2rem 48px;border-bottom:1px solid rgba(201,168,76,0.2)}
     .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
     .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:1rem}
-    .hero-body{color:rgba(245,240,232,0.5);font-size:0.88rem;max-width:560px;line-height:1.8}
-
-    .alpha-nav a{font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;color:var(--muted);text-decoration:none;padding:0.2rem 0.4rem;transition:color 0.15s}
+    .hero-.alpha-nav a{font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;color:var(--muted);text-decoration:none;padding:0.2rem 0.4rem;transition:color 0.15s}
     .alpha-nav a:hover,.alpha-nav a.active-letter{color:var(--gold)}
     .alpha-nav a.no-terms{opacity:0.3;pointer-events:none}
     .alpha-count{font-size:0.55rem;opacity:0.5;margin-left:0.25rem}
@@ -112,12 +88,9 @@
     
     @media(max-width:1080px){
     .alpha-nav a{padding:0.15rem 0.35rem}
-    .hamburger{display:flex}
-    .nav-links{display:none}
     .hero{padding:48px 1.25rem 28px}
     .hero-title{font-size:2rem}
-    .hero-body{font-size:0.82rem}
-    .letter-heading{font-size:1.6rem}
+    .hero-.letter-heading{font-size:1.6rem}
     .glossary-search{margin-bottom:1.25rem}
   }
 
@@ -133,10 +106,7 @@
     .hero-title{font-size:1.75rem}
     }
   
-  @media(max-width:820px){
-      .hamburger{display:flex}
-      .nav-links{display:none}
-    }
+  
     /* ── GLOSSARY CONTENT — full width, no sidebar ── */
     .glossary-wrap{
       max-width:900px;
@@ -166,22 +136,7 @@
     .glossary-search span{color:var(--muted);font-size:1.1rem}
 
     /* ── ALPHA NAV DRAWER ── */
-    .alpha-nav{
-      position:fixed;
-      top:0;left:0;
-      width:220px;
-      height:100vh;
-      background:var(--navy2);
-      border-right:1px solid rgba(201,168,76,0.2);
-      z-index:300;
-      display:flex;
-      flex-direction:column;
-      padding:4.5rem 0 2rem;
-      transform:translateX(-100%);
-      transition:transform 0.25s ease;
-      overflow-y:auto;
-    }
-    .alpha-nav.open{transform:translateX(0)}
+    .alpha-.alpha-nav.open{transform:translateX(0)}
     .alpha-nav a{
       font-family:'JetBrains Mono',monospace;
       font-size:0.85rem;
@@ -235,8 +190,7 @@
       -webkit-appearance:none;appearance:none;
     }
     .gl-fab:hover{border-color:var(--gold);background:rgba(27,42,74,0.95)}
-    .gl-fab-nav{left:1.25rem}
-    .gl-fab-search{right:1.25rem;font-size:1.05rem}
+    .gl-fab-.gl-fab-search{right:1.25rem;font-size:1.05rem}
 
     /* Search overlay */
     .search-overlay{
@@ -304,7 +258,7 @@
     @media(max-width:640px){
       .glossary-wrap{padding:2rem 1rem 6rem}
     }
-    </style>
+</style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -501,7 +455,7 @@
         </div>
 
         <div class="term-entry" data-term="electoral supermajority threshold">
-          <div class="term-name">Electoral Supermajority Threshold <a href="annotated.html#s11-4" class="term-ref">§13.4 →</a></div>
+          <div class="term-name">Electoral Supermajority Threshold <a href="annotated.html#s13-3" class="term-ref">§13.3 →</a></div>
           <p class="term-def">60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations — the Legat Consul first-round threshold at which the State plurality requirement is waived (§7.2), public confirmation of a Supreme Court justice via Senate bypass (§4.4.a), and public election removal of a constitutional officer (§9.14). The Legislature may not alter this threshold without a constitutional amendment.</p>
           <p class="term-note">Distinct from the optional referendum and citizen initiative, which require only simple majority of votes cast.</p>
         </div>
@@ -677,7 +631,7 @@
 
         <div class="term-entry" data-term="senate bypass public confirmation sc">
           <div class="term-name">Senate Bypass — Public Confirmation <a href="annotated.html#s4-4-a" class="term-ref">§4.4.a →</a></div>
-          <p class="term-def">A mechanism available when the Senate fails to vote on an SC nominee within the required period — a constitutional compliance breach. The Civic Consul, with 2/3 Assembly consent, may place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation. Confirmation requires 60% of votes cast (§13.4). If confirmed, the justice serves the remainder of the original term. If not confirmed, the justice steps down and the next most senior Appellate Court judge auto-designates.</p>
+          <p class="term-def">A mechanism available when the Senate fails to vote on an SC nominee within the required period — a constitutional compliance breach. The Civic Consul, with 2/3 Assembly consent, may place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation. Confirmation requires 60% of votes cast (§13.3). If confirmed, the justice serves the remainder of the original term. If not confirmed, the justice steps down and the next most senior Appellate Court judge auto-designates.</p>
         </div>
 
         <div class="term-entry" data-term="severe contraction protocol national endowment">
@@ -703,8 +657,8 @@
         
           
         <div class="term-entry" data-term="sc default rule deemed confirmed cause deemed found">
-          <div class="term-name">SC Default Rule <a href="annotated.html#s8-9" class="term-ref">§9.9 →</a></div>
-          <p class="term-def">Where the SC fails to publish its §9.9 grounds confirmation within 14 days, the stated grounds are deemed confirmed by constitutional operation and duty suspension activates immediately — the Legislature may proceed to a removal vote as if grounds had been formally confirmed. Under the §9.14 Judicial Track, where the SC fails to rule on suspension within 30 days, cause is deemed found by the same operation. The default rule prevents the SC from using inaction to protect its own members or other covered officers from timely removal proceedings.</p>
+          <div class="term-name">SC Default Rule <a href="annotated.html#s9-14" class="term-ref">§9.14 →</a></div>
+          <p class="term-def">Where the SC fails to publish its §9.14 grounds confirmation within 14 days, the stated grounds are deemed confirmed by constitutional operation and duty suspension activates immediately — the Legislature may proceed to a removal vote as if grounds had been formally confirmed. Under the §9.14 Judicial Track, where the SC fails to rule on suspension within 30 days, cause is deemed found by the same operation. The default rule prevents the SC from using inaction to protect its own members or other covered officers from timely removal proceedings.</p>
           <p class="term-note">The SC's constitutional obligation to rule within its timing window is absolute. The default rule is the enforcement mechanism — the consequence of institutional non-compliance, not a penalty on the parties.</p>
           </div>
         <div class="term-entry" data-term="supreme court justice removal">
