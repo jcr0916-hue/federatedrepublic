@@ -81,10 +81,10 @@
     }
     .nav-cta:hover { background: #b89040 !important; color: #fff !important; }
     .hamburger {
-      display: none; flex-direction: column;
+      display: flex; flex-direction: column;
       gap: 5px; cursor: pointer;
       background: none; border: none;
-      padding: 6px; margin-left: auto;
+      padding: 6px; margin-left: 0.5rem; flex-shrink: 0;
     }
     .hamburger span {
       display: block; width: 22px; height: 2px;
@@ -110,6 +110,7 @@
       display: block; transition: color 0.2s, background 0.2s;
     }
     .mobile-menu a:hover { color: var(--gold); background: rgba(201,168,76,0.06); }
+    .menu-divider { display: block; height: 1px; background: rgba(255,255,255,0.1); margin: 0.5rem 1.5rem; }
     .mobile-menu a.mobile-cta {
       margin: 0.75rem 1.5rem 0;
       background: var(--gold); color: var(--navy2) !important;
@@ -155,10 +156,10 @@
     a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
     button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
-    /* ── MOBILE NAV — shows on touch devices and narrow screens ── */
-    @media (max-width: 1200px), (hover: none) and (pointer: coarse) {
-      .hamburger{display:flex!important;-webkit-appearance:none;appearance:none}
-      .nav-links{display:none!important}
+    /* ── MOBILE NAV — nav links hide only on phones ── */
+    @media (max-width: 600px) {
+      .hamburger { margin-left: auto; }
+      .nav-links { display: none !important; }
     }
 
 /* ════════════════════════════════════════════════════

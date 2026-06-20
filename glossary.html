@@ -85,6 +85,58 @@
     .term-hidden{display:none}
     .no-results{font-size:0.88rem;color:var(--muted);padding:1rem 0;font-style:italic}
 
+    /* Alpha-nav sticky on all platforms */
+    nav.alpha-nav{
+      position:sticky;top:56px;z-index:100;
+      background:var(--cream2);
+      border-bottom:1px solid var(--border);
+      padding:0.6rem 2rem;
+      display:flex;flex-wrap:wrap;gap:0.25rem;justify-content:center;
+    }
+
+    /* FABs always visible on all platforms */
+    .gl-fab{
+      position:fixed;bottom:1.75rem;
+      width:48px;height:48px;
+      background:var(--navy);
+      border:1px solid rgba(201,168,76,0.35);
+      color:var(--gold);border-radius:3px;
+      cursor:pointer;display:flex;align-items:center;justify-content:center;
+      font-size:1.1rem;z-index:200;
+      transition:border-color 0.15s,background 0.15s;
+      -webkit-appearance:none;appearance:none;
+    }
+    .gl-fab:hover{border-color:var(--gold);background:rgba(27,42,74,0.95)}
+    .gl-fab-nav{right:4.25rem}
+    .gl-fab-search{right:1.25rem;font-size:1.05rem}
+
+    /* Search and drawer overlays always styled */
+    .search-overlay{
+      display:none;position:fixed;
+      top:0;left:0;right:0;
+      background:var(--navy2);
+      border-bottom:1px solid rgba(201,168,76,0.2);
+      padding:1rem 1.5rem;z-index:301;
+      gap:1rem;align-items:center;
+    }
+    .search-overlay.open{display:flex}
+    .search-overlay input{
+      flex:1;background:transparent;border:none;
+      color:var(--cream);font-family:'Jost',sans-serif;font-size:1rem;outline:none;
+    }
+    .search-overlay input::placeholder{color:rgba(245,240,232,0.35)}
+    .search-close{
+      background:none;border:none;color:rgba(245,240,232,0.4);
+      font-size:1.2rem;cursor:pointer;padding:4px;line-height:1;
+      -webkit-appearance:none;appearance:none;
+    }
+    .search-close:hover{color:var(--gold)}
+    .drawer-overlay{
+      display:none;position:fixed;inset:0;
+      background:rgba(0,0,0,0.4);z-index:299;
+    }
+    .drawer-overlay.open{display:block}
+
     
     @media(max-width:1080px){
     .alpha-nav a{padding:0.15rem 0.35rem}
@@ -280,13 +332,14 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu" id="mobileMenu">
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
     <a href="advisor.html">Advisor</a>
     <a href="contact.html">Contact</a>
     <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
@@ -301,7 +354,7 @@
   </section>
 
   
-    <nav class="alpha-nav" aria-label="Jump to letter" id="alphNav" id="alphNav" aria-label="Jump to letter">
+    <nav class="alpha-nav" aria-label="Jump to letter" id="alphNav">
       <a href="#g-A">A</a>
       <a href="#g-B">B</a>
       <a href="#g-C">C</a>
