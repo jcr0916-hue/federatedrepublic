@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Order — The Federated Republic</title>
+  <meta name="description" content="Year 9. A military officer refuses a rendition order she determines would violate §1.1 and §6.2. §2.8 protects her. Her superior initiates disciplinary action. That action is itself a constitutional breach.">
+  <meta property="og:title" content="The Order">
+  <meta property="og:description" content="Year 9. Lt. Commander Vesh Pola refuses a rendition order under §2.8. §2.8 says that's protected. Her superior disciplines her anyway. That's a constitutional breach.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-order.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Order">
+  <meta name="twitter:description" content="Year 9. §2.8 Duty of Refusal. A military officer refuses an unlawful rendition order. Her superior punishes her. §2.8's fourth sentence activates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:rgba(245,240,232,0.85);padding:1.5rem 1.75rem;margin:2rem 0}
+    .finding-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;font-family:'JetBrains Mono',monospace}
+    .finding p{font-size:0.9rem;line-height:1.75;margin-bottom:0.75rem}
+    .finding p:last-child{margin-bottom:0}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §2.8 &middot; Rights &amp; Accountability &middot; Duty of Refusal</span>
+      <h1 class="scenario-title">The Order</h1>
+      <p class="scenario-premise">Year 9. The Director of Intelligence orders the rendition of a suspected foreign agent to a third country without judicial process. Lieutenant Commander Vesh Pola, assigned to execute the order, refuses — the rendition would violate §1.1 and §6.2. §2.8 protects her refusal. Her superior initiates disciplinary proceedings. §2.8's fourth sentence has something to say about that.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.8 Duty of Refusal</span>
+        <span class="prov-tag">§1.1 Right to Courts and Legal Remedy</span>
+        <span class="prov-tag">§6.2 Enforcement, Removal, and Appeals</span>
+        <span class="prov-tag">§9.1.b The Executive Monitor</span>
+        <span class="prov-tag">§2.3 Consular Intelligence and Veto</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The intelligence operation had a proper foundation. The Legat Consul had authorized surveillance of a network of suspected foreign agents under §2.3, with the authorization published to the NRS in classified logged form. The warrant requirement was satisfied. The Director of Intelligence had run the operation within documented statutory parameters for seven months.</p>
+
+      <p>The rendition order was different. A specific individual — identified in the authorization only by a case designation — had been located. The Director of Intelligence issued an order to transfer the individual to a third country's custody for interrogation. No judicial review. No Republic court involvement. No removal proceeding under §6.2. The individual would simply be taken and handed over.</p>
+
+      <p>Lieutenant Commander Vesh Pola was the officer designated to execute the transfer. She read the order, identified the constitutional problem, and refused.</p>
+
+      <p>Her refusal was documented in writing, submitted to her chain of command, and cited the specific provisions she believed the order violated: §1.1 (every person may seek legal remedy for any rights violation before an independent and impartial court — a rendition bypassing all judicial process denied this right at the threshold) and §6.2 (removal of any person from the Republic requires an established legal process with right of appeal). The individual being rendered was subject to neither.</p>
+
+      <h2>§2.8</h2>
+
+      <p>§2.8's first sentence covers the refusal: "No civil servant, military member, or person acting under direct federal authorization in the performance of a specific federal function may comply with an order from either executive that would require violation of any constitutional provision or statute." Lieutenant Commander Pola was a military member performing a specific federal function. The order required what she assessed as a violation of §1.1 and §6.2. The duty applied.</p>
+
+      <p>The second sentence covers her protection: "Refusal of such an order creates no civil or criminal liability and is no basis for dismissal or penalty." Not "may create no liability." Creates none. The protection is categorical, not conditional on the refusal ultimately being correct — it applies at the moment of refusal, based on the refusing person's assessment of the constitutional violation.</p>
+
+      <p>Lieutenant Commander Pola reported the order to the EM under §2.8's third sentence, which specifies that the refusing person may report the order to the EM for investigation and NRS publication. She filed the report within 24 hours of her refusal.</p>
+
+      <div class="beat">
+        <div class="beat-label">The Same Day as the Refusal</div>
+        <div class="beat-title">The Director of Intelligence initiates disciplinary proceedings.</div>
+        <p>The disciplinary notice cited insubordination and dereliction of duty: a direct order had been refused without authorization. The notice initiated a formal military disciplinary process that, if completed, would result in a record sanction, loss of clearance level, and reassignment.</p>
+        <p>The Director of Intelligence's position, communicated through the intelligence chain of command, was that the order was lawful, that the constitutional assessment underlying the refusal was incorrect, and that allowing individual officers to refuse orders based on their own constitutional interpretations was operationally incompatible with intelligence function.</p>
+        <p>This position was, constitutionally, irrelevant. §2.8 does not require the refusal to be correct. It requires the refusal to be made in the belief that compliance would require constitutional violation. The disciplinary proceeding, initiated in response to a refusal that §2.8 protects, was itself a constitutional act. The fourth sentence of §2.8 addressed it directly: "Any penalty imposed for a lawful refusal is itself a constitutional breach."</p>
+      </div>
+
+      <div class="finding">
+        <span class="finding-label">EM Finding — §2.8 Investigation — Year 9, Month 4</span>
+        <p>The EM investigated the order, the refusal, and the disciplinary proceeding under its §9.1.b mandate.</p>
+        <p>On the refusal: the rendition order as issued would have required removal of an individual from the Republic without the legal process required by §6.2 and without access to the judicial remedy guaranteed by §1.1. The refusal was constitutionally grounded. It was a lawful refusal under §2.8.</p>
+        <p>On the disciplinary proceeding: §2.8 is categorical — a penalty imposed for a lawful refusal is a constitutional breach. The disciplinary proceeding initiated against Lieutenant Commander Pola was initiated in direct response to a protected refusal. The proceeding constitutes a constitutional breach by the official who initiated it.</p>
+        <p>On the underlying order: the rendition order as issued was constitutionally void. The EM finds no basis in §2.3's intelligence authorization or any other constitutional provision that would permit removal of an individual from the Republic outside the framework of §6.2. The intelligence context does not suspend §6.2's application.</p>
+        <p>Published to the NRS. Referred to the Legat Consul for remedial action.</p>
+      </div>
+
+      <h2>The Consequences</h2>
+
+      <p>The disciplinary proceeding against Lieutenant Commander Pola was terminated within 48 hours of the EM's finding. Her disciplinary record was expunged. The Director of Intelligence received a formal reprimand published to the NRS — the first reprimand issued to a Legat domain officer in the Republic's history. The Legat Consul, under whose authority the Director of Intelligence operated, published a compliance statement acknowledging the breach and confirming that the intelligence operational framework would be reviewed for consistency with §6.2.</p>
+
+      <p>The individual who had been the subject of the rendition order was arrested six weeks later through a Republic judicial process — an Article I warrant, a court appearance, an assigned legal representative. The process took longer than a rendition would have. It produced a case record that could be reviewed, appealed, and corrected if wrong. The individual was ultimately found to have operated as a foreign agent and was removed from the Republic under §6.2's established process, with appeal rights exercised and exhausted.</p>
+
+      <p>Lieutenant Commander Pola continued her service. She was promoted to Commander two years later. The promotion was not publicly attributed to the refusal, and she did not attribute it to the refusal. The NRS held the full record regardless.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§2.8 is one of the constitution's most structurally unusual provisions. It creates a duty — not a permission — to refuse unlawful orders, and it does so without requiring the refusing person to be correct in their constitutional assessment. The protection attaches to the act of refusal based on the person's own belief, not to the accuracy of that belief. An officer who refuses an order believing it unconstitutional is protected even if a court would later find the order was lawful.</p>
+        <p>This design is intentional and has a cost: it creates the possibility of officers using §2.8 as cover for disobedience on pretextual constitutional grounds. The constitution accepts that risk as the price of ensuring that officers who face genuinely unlawful orders are not deterred from refusing by the threat of career consequences. A system where protection only applied to correct refusals would effectively provide no protection at all — officers cannot know in advance whether their constitutional assessment will be vindicated.</p>
+        <p>The fourth sentence — "Any penalty imposed for a lawful refusal is itself a constitutional breach" — is the provision's enforcement mechanism. The breach doesn't require additional finding; it follows automatically from the imposition of a penalty on a lawful refusal. The EM's role is to investigate, characterize, and publish. The Legat Consul's role is to remedy. The chain of consequences is designed to be swift and attributable, because the deterrent value of §2.8 depends on everyone in the chain of command knowing that punishing a protected refusal creates a named, published constitutional breach on their own record.</p>
+        <p>The rendition itself never happened. That outcome is constitutional design working correctly. The process required to achieve the same security objective was slower and more procedurally demanding — and produced a record that could be examined, challenged, and corrected. The constitution's position on that tradeoff is explicit.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+  </script>
+</body>
+</html>

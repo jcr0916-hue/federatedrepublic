@@ -26,7 +26,7 @@
     /* Glossary content */
     .glossary-content{}
 
-    .letter-group{margin-bottom:3rem}
+    .letter-group{margin-bottom:3rem;scroll-margin-top:115px}
     .letter-heading{
       font-family:'Cormorant Garamond',serif;
       font-size:3rem;font-weight:300;
@@ -84,6 +84,9 @@
     .glossary-search span{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:0.1em}
     .term-hidden{display:none}
     .no-results{font-size:0.88rem;color:var(--muted);padding:1rem 0;font-style:italic}
+
+    /* Anchor scroll offset — accounts for fixed nav + sticky alpha-nav */
+    html{scroll-padding-top:115px}
 
     /* Alpha-nav sticky on all platforms */
     nav.alpha-nav{
@@ -283,7 +286,7 @@
       margin-bottom:1rem;
       padding-top:0.5rem;
     }
-    .letter-group{margin-bottom:3rem}
+    .letter-group{margin-bottom:3rem;scroll-margin-top:115px}
     .term-entry{
       margin-bottom:1.75rem;
       padding-bottom:1.75rem;
@@ -802,14 +805,11 @@
   <script>
   // ── Alpha-nav drawer ──────────────────────────────
   function openAlphaNav(){
-    document.getElementById('alphNav').classList.add('open');
-    document.getElementById('drawerOverlay').classList.add('open');
-    document.body.style.overflow='hidden';
+    // Alpha-nav is sticky — scroll to top to bring it into view
+    window.scrollTo({top:0,behavior:'smooth'});
   }
   function closeAlphaNav(){
-    document.getElementById('alphNav').classList.remove('open');
-    document.getElementById('drawerOverlay').classList.remove('open');
-    document.body.style.overflow='';
+    // Nothing to close — alpha-nav is always visible as sticky bar
   }
 
   // ── Search overlay ────────────────────────────────

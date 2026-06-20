@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Second Path — The Federated Republic</title>
+  <meta name="description" content="Year 8. Citizens petition under §13.2 to place electoral finance reform before the Legislature. The Legislature fails to pass it. The initiative goes to a national referendum. 63% vote yes. Then the Assembly passes a competing bill anyway.">
+  <meta property="og:title" content="The Second Path">
+  <meta property="og:description" content="Year 8. Citizens use §13.2 to put electoral finance reform before the Legislature. It fails. Goes to referendum. Passes 63%. The Assembly then tries to legislate on the same subject. The constitution has something to say about that.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-second-path.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Second Path">
+  <meta name="twitter:description" content="Year 8. §13.2 Citizen Legislative Initiative — what happens when the Legislature fails to act and the proposal goes to referendum.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .stat-row{display:flex;gap:1.5rem;margin:1.5rem 0;flex-wrap:wrap}
+    .stat{background:rgba(27,42,74,0.05);padding:1rem 1.25rem;flex:1;min-width:120px}
+    .stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);display:block;line-height:1}
+    .stat-label{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:0.25rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §13.2 &middot; Direct Democracy &middot; Citizen Legislative Initiative</span>
+      <h1 class="scenario-title">The Second Path</h1>
+      <p class="scenario-premise">Year 8. Citizens fed up with six years of Assembly inaction on electoral finance reform launch a §13.2 Citizen Legislative Initiative. The two-phase petition takes 15 months. The Legislature receives the proposal with a 90-day deadline. The Assembly fails to pass it. The initiative goes to a national referendum. 63% vote yes on 57% participation. The legislation takes effect. Then the Assembly passes a competing bill on the same subject.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§13.2 Citizen Legislative Initiative</span>
+        <span class="prov-tag">§8.1 Electoral Finance Principles</span>
+        <span class="prov-tag">§11.1 NRS Panel and Elections Panel</span>
+        <span class="prov-tag">§9.1.a The Legislative Monitor</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The LM had published audit findings on electoral finance compliance in Year 4 and Year 6. Both found that the Republic's aggregate contribution limits — set by statute at the time of ratification — had not been updated to reflect the Republic's economic growth, and that the real-value contribution limit had effectively increased by 34% since ratification due to inflation. Both findings recommended that the Legislature review the limits. Both findings were on the NRS. The Assembly had not reviewed the limits.</p>
+
+      <p>The Electoral Finance Reform Coalition launched the §13.2 initiative in Year 8, Month 1. Their proposal was specific: reduce aggregate contribution limits by 40% in real terms from the current statutory value, establish a public matching fund for small donations (donations under 50 credits matched at 2:1 by the Republic up to a cap), and require NVS-authenticated real-time disclosure of all contributions above a specified threshold. It was, in substance, the same reform package that had died in Assembly committee twice.</p>
+
+      <h2>Phase One and Phase Two</h2>
+
+      <p>Phase One required signatures equal to 1.2% of eligible voters in each of at least one-third of all States and Territories. Phase Two required 10% nationally, with Phase One signatures carrying over. The initiative launched across all States simultaneously — the coalition had organizational infrastructure from prior advocacy work on the same issue.</p>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat-num">8 mo.</span>
+          <span class="stat-label">Phase One duration</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">7 mo.</span>
+          <span class="stat-label">Phase Two duration</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">11.4%</span>
+          <span class="stat-label">National signatures at threshold</span>
+        </div>
+      </div>
+
+      <p>The Elections Panel certified the petition at Month 15 and transmitted it to the Assembly and Senate simultaneously. Under §13.2, the Legislature had 90 days to vote on the proposal as submitted. The Legislature could not amend it — only pass it, fail it, or fail to vote on it, all three of which triggered the referendum track.</p>
+
+      <h2>The Assembly Vote</h2>
+
+      <p>The Assembly scheduled a floor vote at Day 72. The debate was substantive and unusually direct: members who opposed the bill said so, citing concerns about the public matching fund's fiscal cost and the real-time disclosure provision's implementation complexity. Members who supported it said they would have preferred the Assembly to act in Years 4 and 6 when the LM's audit findings made the case, and noted that the existence of this vote was itself evidence of the initiative system working as designed.</p>
+
+      <p>The vote was 97-103. The proposal failed to receive a majority in the Assembly. The Senate did not vote; under §13.2, a failure in either chamber triggered the referendum track immediately. The proposal proceeded to a national referendum administered by the Elections Panel within 90 days of the Assembly vote.</p>
+
+      <h2>The Referendum</h2>
+
+      <p>§13.2 sets a higher referendum threshold than §13.1's optional referendum: passage requires 60% of votes cast with at least 50% citizen participation. The higher threshold reflects the initiative's nature — citizens proposing legislation, rather than vetoing it.</p>
+
+      <div class="beat">
+        <div class="beat-label">§13.2 — The Result</div>
+        <div class="beat-title">63% in favor. 57% participation. The legislation passes.</div>
+        <p>The Electoral Finance Reform Act — identical to the initiative proposal — was certified by the Elections Panel and took effect immediately upon certification. The NRS timestamp was 11:08 PM on the night of the referendum count. The Assembly's 97-103 vote against the bill was, as of 11:08 PM, a historical record rather than a policy outcome.</p>
+        <p>The Legat Consul's domain was unaffected. The Civic Consul published an implementation notice within 48 hours. The public matching fund framework required statute-level implementation by the Legislature, which it was obligated to provide under §13.2's enactment — the initiative had passed all its thresholds.</p>
+      </div>
+
+      <h2>The Assembly's Response</h2>
+
+      <p>Fourteen days after certification, the Assembly introduced the Electoral Finance Integrity Act — a bill covering the same subject matter as the initiative, with different thresholds: a 30% (not 40%) reduction in contribution limits, no public matching fund, and disclosure requirements applying only to contributions above a higher threshold. The Senate passed it 33-28. The Civic Consul signed it.</p>
+
+      <p>The JM published an assessment within the week. The question was whether the Assembly's competing bill constituted legislation on "the same or substantially similar grounds" as the initiative — which would implicate the re-initiation bar of §13.2: "A failed initiative may not be re-initiated on the same or substantially similar grounds." The JM noted, carefully, that the re-initiation bar applied to citizen re-initiation, not to the Legislature's independent authority to legislate. The Legislature could, at any time, pass legislation on any subject within its competence — including subjects where citizen initiatives had succeeded or failed.</p>
+
+      <p>Both statutes were now in force. They covered the same subject and produced different outcomes in several areas. The Elections Panel published guidance: where the two statutes conflicted, the later-enacted statute (the Assembly's bill) would generally govern, as a matter of ordinary statutory interpretation — the later enactment amended the earlier one. But the public matching fund provision of the initiative had no counterpart in the Assembly's bill; it remained in force because the Assembly's bill didn't address it.</p>
+
+      <p>The result was a composite legal framework: the Assembly's lower contribution limits applied rather than the initiative's 40% reduction; the disclosure threshold from the Assembly's bill applied; but the public matching fund — the provision the Assembly most wanted to avoid — remained in place, enacted by referendum, not repealed by the Assembly's subsequent bill.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§13.2 is the citizen initiative's legislative path — distinct from §13.1's referendum repeal power. §13.1 citizens react to legislation that exists. §13.2 citizens propose legislation that doesn't. The thresholds differ: §13.2's referendum requires 60% on 50% participation, because enacting new legislation via direct vote requires a higher legitimacy threshold than repealing existing law.</p>
+        <p>The Assembly's post-referendum bill raises the most interesting question the scenario presents: can the Legislature immediately re-legislate on a subject where a citizen initiative just succeeded? The answer is yes — the Legislature retains its plenary legislative authority. The citizen initiative does not lock the subject matter. What it does is establish a baseline: the provisions enacted by referendum that the Legislature doesn't address remain in force. The matching fund survived the Assembly's competing bill because the Assembly chose not to repeal it explicitly.</p>
+        <p>This creates a design incentive. A Legislature that disapproves of a citizen initiative outcome has to engage with it provision by provision. It cannot simply pass a competing bill and assume the initiative's effects are superseded. The initiative's enactments have the same legal status as any statute — later-enacted legislation governs conflicts, but conflicts only exist where the texts actually address the same point. The Assembly left the matching fund in place not because it couldn't repeal it, but because it chose to fight specific battles rather than all of them. The matching fund remained. The Assembly's contribution threshold prevailed. The disclosure regime was a hybrid. All of it went onto the NRS.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+  </script>
+</body>
+</html>

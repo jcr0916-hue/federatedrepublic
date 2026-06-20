@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Departure — The Federated Republic</title>
+  <meta name="description" content="Year 11. The Alenvari Nation elects Full Sovereign Independence under §16.7(c). The Republic must negotiate a treaty within 24 months covering borders, trade, citizenship, and infrastructure. What happens when 24 months isn't enough?">
+  <meta property="og:title" content="The Departure">
+  <meta property="og:description" content="Year 11. The Alenvari Nation elects Full Sovereign Independence. The Republic has 24 months to negotiate a treaty. The clock is running.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-departure.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Departure">
+  <meta name="twitter:description" content="Year 11. The Alenvari Nation elects Full Sovereign Independence under §16.7(c). 24 months to negotiate a treaty. What happens if they run out of time?">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .timeline{margin:2rem 0;border-left:2px solid var(--gold);padding-left:1.5rem}
+    .tl-entry{margin-bottom:1.25rem;position:relative}
+    .tl-entry::before{content:'';position:absolute;left:-1.6rem;top:0.35rem;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+    .tl-month{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem}
+    .tl-event{font-size:0.9rem;color:var(--text);line-height:1.6}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §16.7 &middot; Indigenous Nation Status &middot; Full Sovereign Independence</span>
+      <h1 class="scenario-title">The Departure</h1>
+      <p class="scenario-premise">Year 11. The Alenvari Nation — a recognized Article XVI indigenous nation in the Republic's northeast — elects Full Sovereign Independence under §16.7(c). The Republic is constitutionally obligated to negotiate a treaty within 24 months covering borders, trade, citizenship, and infrastructure. The constitution has an extension mechanism. It also has a provisional framework if negotiations fail entirely. Neither outcome is clean.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§16.7 Indigenous Nation Status Elections</span>
+        <span class="prov-tag">§16.7.a Status Election Process</span>
+        <span class="prov-tag">§16.1 Acknowledgment of Prior Sovereignty</span>
+        <span class="prov-tag">§2.14 Council of Ministers</span>
+        <span class="prov-tag">§2.1 The Legat Consul — Domain and Term</span>
+        <span class="prov-tag">§2.5 The Civic Consul</span>
+        <span class="prov-tag">§3.6 Treaty Ratification and Withdrawal</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The Alenvari Nation had held Article XVI compact status since Year 2 of the Republic. Their territory — 4,200 square kilometers of forested upland in the northeast — had been a compact territory since ratification, the terms negotiated under the Republic's first Legat Consul and ratified without controversy. The compact was functional. The Alenvari operated their own governance, their own courts, their own schools. The Republic maintained a single roads authority at the compact's boundary and honored the land use restrictions within it. For nine years, the relationship worked in the way that good compact relationships work: mostly invisibly.</p>
+
+      <p>The status election was not, in retrospect, surprising. The Alenvari Nation's governance council had been debating it for three years. A younger cohort of elected council members had argued consistently that compact status — however well administered — still placed the Nation within a constitutional framework it had not chosen, subject to rights guarantees it had not authored and to a judicial system whose ultimate authority it had not consented to. The older cohort was more cautious: independence was a one-way door, and the provisional framework if negotiations failed was an uncertain destination.</p>
+
+      <p>The council voted 9-3 in favor of initiating a status election. A community referendum followed the council vote, as the Nation's own governance standards required for major decisions. 74% of participating community members — on 81% participation — chose Full Sovereign Independence.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Status Election Publication &mdash; Year 11, Month 3</div>
+        STATUS ELECTION — ALENVARI NATION<br>
+        Article XVI Indigenous Nation Status Election under §16.7<br><br>
+        Elected status: Full Sovereign Independence (§16.7(c))<br>
+        Governance decision: Alenvari Nation Council — 9-3, Year 11 Month 2<br>
+        Community referendum: 74% in favor, 81% participation, Year 11 Month 3<br>
+        This election is irrevocable under §16.7.a.<br><br>
+        The Republic is obligated under §16.7(c) to negotiate a treaty within 24 months covering borders, trade, citizenship, and infrastructure. Negotiations are conducted jointly through the Council of Ministers.<br><br>
+        Independence takes effect upon treaty conclusion, or upon provisional framework activation if no treaty is concluded within the extended period.
+      </div>
+
+      <h2>The Obligation</h2>
+
+      <p>The constitution's language was clear. "The Republic is obligated to negotiate a treaty within 24 months governing borders, trade, citizenship, and infrastructure." Obligated — not invited, not encouraged. The Republic had no constitutional authority to delay, refuse, or condition the negotiations. §16.7 also specified: "The Republic may not prefer, discourage, or offer inducements toward any option." The status election had occurred. The obligation was active.</p>
+
+      <p>The negotiations were conducted through the Council of Ministers, with the Legat Consul holding primary authority on border and defense terms and the Civic Consul holding primary authority on domestic implementation. In practice this meant two separate negotiating tracks that the Council of Ministers was responsible for integrating. The Alenvari Nation sent a delegation of seven, led by Council Chair Mala Tren, a former compact administrator who knew the Republic's bureaucratic vocabulary well enough to navigate it and her own community's priorities well enough to hold firm on the things that mattered.</p>
+
+      <p>The four treaty subjects — borders, trade, citizenship, and infrastructure — were not equally difficult.</p>
+
+      <p>Borders were straightforward. The compact boundaries were documented, surveyed, and agreed. The treaty simply needed to confirm them as sovereign borders, establish a crossing regime, and specify what Republic officers could and could not do within 5 kilometers of the boundary. This was concluded in six weeks.</p>
+
+      <p>Trade took three months. The Alenvari economy was small — forestry, craft production, some tourism — and deeply integrated with the surrounding Republic market. The Nation needed favorable trade terms; the Republic had no particular interest in a punitive trade relationship with a small sovereign neighbor. A trade framework based on existing compact arrangements, with tariff-free movement for goods historically traded and a review mechanism every five years, was agreed at Month 9.</p>
+
+      <p>Infrastructure was harder. The Republic's roads authority maintained the primary road connecting the Alenvari territory to the Republic's highway network. A river ran through both territories. Electricity came through Republic grid infrastructure. Each of these required either transition agreements (the Nation would build its own), service continuation agreements (the Republic would keep providing at negotiated cost), or hybrid arrangements. The infrastructure chapter of the treaty draft ran to 84 pages and was still being revised at Month 16.</p>
+
+      <p>Citizenship was the problem that was not going to be solved in 24 months.</p>
+
+      <h2>The Citizenship Question</h2>
+
+      <p>Approximately 3,400 Alenvari citizens lived outside the Nation's compact territory — in Republic cities, working Republic jobs, holding Republic Residency Credentials or citizenship status. When independence took effect, what happened to them? They would become foreign nationals. The Republic's citizenship framework didn't accommodate dual citizenship. They would need to choose: Republic citizenship (renouncing Alenvari nationality) or Alenvari nationality (losing their Republic status, which for those holding citizenship meant losing voting rights and eventually residency standing).</p>
+
+      <p>The Alenvari Nation's position was firm: their citizens in the Republic should be able to hold both nationalities. This was not an unreasonable position. It was also not what the Republic's constitution currently permitted.</p>
+
+      <p>The Civic Consul's office published an assessment at Month 14: the citizenship question required either a statutory amendment to the Republic's citizenship framework — permitting dual nationality with the Alenvari Nation specifically — or a constitutional amendment if the citizenship framework's current language didn't permit the statutory workaround. The LM published a concurrent assessment: the citizenship framework in §5.1 and §5.2 was written with single nationality in mind; a dual nationality framework for a specific sovereign partner was probably achievable by statute but would require a Senate vote, and that vote was uncertain.</p>
+
+      <p>By Month 18, borders and trade were concluded. Infrastructure was 70% resolved. Citizenship was the last open subject, and neither party was moving.</p>
+
+      <div class="beat">
+        <div class="beat-label">Month 20 — The Extension</div>
+        <div class="beat-title">Both parties agree to one 12-month extension.</div>
+        <p>At Month 20, with four months left on the 24-month clock and no resolution to the citizenship question in sight, both parties published a joint notice to the NRS invoking §16.7.a's extension provision: "either party may propose one 12-month extension by mutual agreement published to the NRS." The extension was the first exercise of that provision in the Republic's history.</p>
+        <p>Council Chair Mala Tren's published statement accompanying the extension notice was precise: the Alenvari Nation was not extending the timeline because of uncertainty about independence. Independence remained the elected status. The extension was for the specific purpose of resolving the citizenship question in a way consistent with the Nation's obligation to its members who lived in the Republic. She did not say what would happen if the extension period also failed to produce a resolution. She didn't need to — the constitution already specified it.</p>
+      </div>
+
+      <h2>The Legislature Moves</h2>
+
+      <p>The Civic Consul's legislative proposal reached the Assembly at Month 22: a statutory framework for bilateral dual nationality with specific recognized sovereign partners. The proposal was narrow — it didn't create a general dual nationality system, only a mechanism for individual sovereign-to-sovereign agreements where both parties established a mutual framework. The Alenvari Nation treaty would be the first such agreement.</p>
+
+      <p>The Assembly debate was more contentious than the Civic Consul's office had anticipated. The core objection was not to the Alenvari Nation specifically but to the principle: would approving dual nationality with one recognized indigenous nation sovereign create a precedent for other Article XVI nations that might elect independence in the future? The LM noted the question was constitutional, not statutory — if the citizenship framework permitted the approach, the precedent was already in the constitution. The Assembly passed the statute 203-97 at Month 25.</p>
+
+      <p>The Senate considered the bill for 34 days and passed it 40-21 at Month 26. The Civic Consul signed it immediately.</p>
+
+      <p>With the statutory framework in place, the Alenvari citizenship chapter of the treaty was concluded in six weeks. Alenvari citizens in the Republic could elect bilateral dual nationality through a process established by both governments jointly, maintaining Republic standing while holding Alenvari nationality. The process required affirmative election — citizenship was not automatic in either direction.</p>
+
+      <h2>The Treaty</h2>
+
+      <p>The treaty was concluded at Month 31 — seven months inside the extended 36-month window. Its four chapters covered 217 pages. The border regime, trade framework, infrastructure transition schedule, and citizenship protocol were all addressed. The Legat Consul published the treaty to the NRS at 3:41 PM on a Thursday. The Senate ratified it by the required 2/3 majority, 41-20, eleven days later.</p>
+
+      <div class="beat">
+        <div class="beat-label">§16.7 — The Effect of Independence</div>
+        <div class="beat-title">Treaty ratification concludes the process.</div>
+        <p>Independence took effect from the moment of Senate ratification. The NRS timestamp at 6:18 PM on the day of ratification was the moment the Alenvari Nation ceased to be within the Republic's constitutional framework and became a fully independent sovereign nation. The compact authority that had governed the territory since Year 2 terminated simultaneously. Republic officers withdrew from the territory according to the treaty's transition schedule.</p>
+        <p>Under the treaty, the Republic maintained a trade representative office at the border crossing. The Alenvari Nation maintained a corresponding liaison at the Republic's foreign affairs office in the capital. The border was defined, crossed, and managed. The river was jointly managed under the infrastructure chapter's natural resources annex. The roads authority transition completed over 18 months.</p>
+      </div>
+
+      <p>The Alenvari Nation's first act as an independent sovereign was to ratify the treaty it had just concluded. This was, technically, the treaty's own ratification mechanism — the Alenvari Nation's governance council ratified it simultaneously with the Republic's Senate, as specified in the treaty's final provisions. Both ratifications were published to the NRS and to the Alenvari Nation's own public record system within hours of each other.</p>
+
+      <p>Council Chair Mala Tren's statement on independence day was brief. She thanked the Republic's negotiating teams for working in good faith through a difficult process. She noted that the citizenship question — the last and hardest problem — had ultimately required the Republic's Legislature to act, and that the Legislature had acted. She said the Alenvari Nation would be a good neighbor. She did not say the departure had been easy.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§16.7(c) is one of the constitution's most unusual provisions — a designed-in mechanism for a recognized nation to exit the constitutional framework entirely. The design rests on a specific premise: that the right of a nation with prior sovereignty to determine its own future is not contingent on the Republic's consent. The status election is irrevocable. The Republic cannot prefer, discourage, or offer inducements. All the Republic can control is whether the treaty gets negotiated in good faith.</p>
+        <p>The citizenship question exposed a gap the constitution hadn't filled. §16.7(c) obligates the Republic to negotiate a citizenship chapter, but what citizenship terms are constitutionally permissible depends on the Republic's citizenship framework — which is statutory, not constitutional. The extension mechanism bought time for the Legislature to act. If the Legislature had not acted, and the extension period had also expired without a treaty, the provisional framework would have activated: existing compact terms governing borders, trade, and infrastructure on a temporary basis, with either party able to petition the SC for dispute resolution within it.</p>
+        <p>The provisional framework is not a failure mode — it's a designed fallback that keeps practical functions operating while the harder questions are resolved. But the constitution is clear that provisional terms don't become permanent: either a treaty eventually replaces them or the parties remain in an indefinite provisional relationship, which neither party can escape unilaterally. The Alenvari Nation and the Republic avoided that outcome. It wasn't guaranteed.</p>
+        <p>The most important design choice in §16.7 is the one that received the least debate during the negotiations: the Republic's obligation to negotiate is unconditional. The Republic cannot use the negotiations as leverage to pressure the Nation into a different status choice. The moment the status election is published to the NRS, the Nation's choice is made, and the Republic's job is to help that choice take effect cleanly.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+  </script>
+</body>
+</html>
