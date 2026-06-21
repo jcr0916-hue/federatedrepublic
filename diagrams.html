@@ -22,7 +22,9 @@
     .page-hero p{color:rgba(245,240,232,0.6);max-width:560px;margin:0 auto;font-size:0.95rem}
 
     /* TAB NAV */
-    .tab-.tab-nav::-webkit-scrollbar{height:3px}.tab-nav::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
+    .tab-nav{display:flex;overflow-x:auto;border-bottom:1px solid rgba(201,168,76,0.2);padding:0 1.5rem;background:var(--navy);position:sticky;top:56px;z-index:100}
+    .tab-nav::-webkit-scrollbar{height:3px}
+    .tab-nav::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
     .tab-btn{padding:0.9rem 0.7rem;background:none;border:none;color:rgba(245,240,232,0.5);font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:color 0.2s;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;flex-shrink:0}
     .tab-btn:hover{color:rgba(245,240,232,0.8)}
     .tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
@@ -686,7 +688,6 @@
       <div class="diagram-scenarios">
         <span class="diagram-footer-label">See this in action</span>
         <div><a href="scenario-ordinary.html" class="diagram-sc-link">The Ordinary Week &rarr;</a><span class="diagram-sc-tag">Ordinary Governance &middot; &sect;3.3</span></div>
-        <div><a href="scenario-career.html" class="diagram-sc-link">A Constitutional Life &rarr;</a><span class="diagram-sc-tag">Long View &middot; Multiple Articles</span></div>
       </div>
     </div>
   </div>

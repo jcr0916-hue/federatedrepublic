@@ -709,53 +709,18 @@
       <p>Provision count: 172 (§9.9 removed).</p>
     </div>
   </article>
+  <article class="hist-entry">
+    <div class="hist-tag">v177 · Constitutional · Fine Detail Review</div>
+    <h2 class="hist-title">Fine Detail Review — All Twenty Articles</h2>
+    <div class="hist-body">
+      <p>Comprehensive fine detail review of all 177 provisions across all twenty articles, applying twelve constitutional design tests to every provision: One Home Rule, Institution Test, Bad-Faith Test, Actor Test, Unique Function Test, Democratic Legitimacy Test, Transparency Test, Constitution vs. Statute, Simplicity, Parallel Structure, Completeness, and Language Register.</p>
+      <p><strong>New provisions created:</strong> §1.7.a (Privacy and Surveillance — split from §1.7); §1.19.f (Non-Discrimination in Emergency Measures); §2.3.a (Legat Consul Legislative Veto — split from §2.3); §2.6.a (Government Formation — split from §2.6); §2.6.b (Temporary Incapacity — split from §2.6); §4.4.b (Temporary Associate Justice — split from §4.4); §12.1.a (The Monetary Authority — split from §12.1); §15.9 (Voluntary State Independence — new two-stage process for State independence: 60% State referendum + 60% concurrent chamber ratification); §19.10 (Founding Citizenship — moved from §5.1.b to Article XIX).</p>
+      <p><strong>Substantive changes:</strong> §1.10 restructured to right→floor→delegation pattern; §3.3 district map prohibition simplified — voting history and incumbent residence prohibited as criteria of any weight, no party or racial composition language; §3.4 CC/LM single-subject enforcement mechanism added; §5.2 Inhabitant formally defined; §12.4 universal information custody rule — all information held in official capacity belongs to the Republic; §15.3 automatic Provisional status replaces citizen vote between paths; §15.7 references §15.9; §17.1 State Ratification ceiling added (not to exceed two years); §18.4 National Trust Administrator language made directly constitutional.</p>
+      <p><strong>Content removed:</strong> §2.4 "indefinite circumvention" sentence; §2.12 "group amnesty" sentence; §14.3 Military Intelligence Operations removed (covered by §2.3 — One Home Rule).</p>
+      <p><strong>Consistency fixes (25 provisions):</strong> All "2/3 of both chambers" standardized to "2/3 of full seated membership of both chambers"; all referendum thresholds standardized to "of votes cast"; all hard deadlines standardized to "period defined by statute, not to exceed X days"; §19.6 Baseline→Statehood Audit completed throughout.</p>
+      <p>Provision count: 177 (net: 9 created, 1 removed).</p>
+    </div>
+  </article>
+
   </div>
 </main>
-
-<script>
-
-    function toggleMobileNav() {
-      const menu = document.getElementById('mobileMenu');
-      const btn = document.querySelector('.hamburger');
-      const open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
-      menu.setAttribute('aria-hidden', !open);
-    }
-    // Close menu on outside click
-    document.addEventListener('click', function(e) {
-      const menu = document.getElementById('mobileMenu');
-      const btn = document.querySelector('.hamburger');
-      if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
-        menu.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        menu.setAttribute('aria-hidden', 'true');
-      }
-    });
-  
-</script>
-
-  <footer>
-    <span class="footer-logo">The Federated Republic</span>
-    <div class="footer-links">
-      <a href="annotated.html">Annotated Edition</a>
-      
-      <a href="scenarios.html">Scenarios</a>
-      <a href="constitutional-history.html">Constitutional History</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="advisor.html">Advisor</a>
-      <a href="sources.html">Sources</a>
-    </div>
-    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
-</footer>
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () =>
-        navigator.serviceWorker.register('/sw.js')
-          .catch(() => {}) // fail silently if blocked
-      );
-    }
-  </script>
-</body>
-</html>
