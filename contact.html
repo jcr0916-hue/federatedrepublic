@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — The Federated Republic</title>
-  <meta name="description" content="Get in touch with the Federated Republic project."
+  <meta name="description" content="Get in touch with the Federated Republic project.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact">
   <meta property="og:description" content="Get in touch with the Federated Republic project.">
@@ -14,25 +14,11 @@
   <meta name="twitter:title" content="Contact">
   <meta name="twitter:description" content="Get in touch with the Federated Republic project.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <style>
-    :root{--navy:#1B2A4A;--navy2:#0f1e38;--gold:#C9A84C;--cream:#F5F0E8;--cream2:#EDE7D8;--text:#2a2520;--muted:#7a7060;--border:#d4c9b0}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.85}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover{color:var(--gold)}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold)}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block}
-    .mobile-menu a:last-child{border-bottom:none}
-    .mobile-menu.open{display:flex}
-
+    /* ── CONTACT PAGE STYLES ── */
     .hero{background:var(--navy2);padding:88px 2rem 48px;border-bottom:1px solid rgba(201,168,76,0.2)}
     .hero-inner{max-width:600px;margin:0 auto}
     .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
@@ -50,17 +36,16 @@
     .contact-note{font-size:0.82rem;color:var(--muted);line-height:1.7;margin-top:0.25rem}
 
     @media(max-width:820px){
-      .hamburger{display:flex}
-      .nav-links{display:none}
       .hero{padding:76px 1.25rem 40px}
       .page-wrap{padding:48px 1.25rem 80px}
     }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
   <nav>
     <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
-        <div class="nav-links">
+    <div class="nav-links">
       <a href="annotated.html">Annotated Edition</a>
       <a href="scenarios.html">Scenarios</a>
       <a href="diagrams.html">Diagrams</a>
@@ -72,13 +57,14 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
-    <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
     <a href="advisor.html">Advisor</a>
     <a href="contact.html">Contact</a>
     <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
@@ -92,7 +78,7 @@
     </div>
   </section>
 
-  <div class="page-wrap">
+  <div class="page-wrap" id="main-content">
 
     <div class="contact-item">
       <span class="contact-label">Email</span>
@@ -111,31 +97,35 @@
     </div>
 
     <div class="contact-item">
+      <span class="contact-label">GitHub</span>
       <span class="contact-value">
-        <a href="https://github.com/jcr0916-hue/federatedrepublic" target="_blank" rel="noopener">GitHub — jcr0916-hue/federatedrepublic</a>
+        <a href="https://github.com/jcr0816-hue/federatedrepublic" target="_blank" rel="noopener">jcr0816-hue/federatedrepublic</a>
       </span>
       <p class="contact-note">The full repository is public. Open an issue to flag a constitutional error, a cross-reference problem, or a scenario inaccuracy.</p>
     </div>
 
   </div>
 
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
   <script>
     function toggleMobileNav(){
-      document.getElementById('mobileMenu').classList.toggle('open');
+      var m = document.getElementById('mobileMenu');
+      var b = document.querySelector('.hamburger');
+      if(m){ var open = m.classList.toggle('open'); b&&b.setAttribute('aria-expanded',String(open)); }
     }
   </script>
-<footer>
-  <span class="footer-logo">The Federated Republic</span>
-  <div class="footer-links">
-    <a href="annotated.html">Annotated Edition</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="constitutional-history.html">Constitutional History</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="advisor.html">Advisor</a>
-    <a href="sources.html">Sources</a>
-  </div>
-  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
-</footer>
 </body>
 </html>
