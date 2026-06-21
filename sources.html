@@ -42,10 +42,11 @@
     /* Reading entries */
     .reading-entry{display:flex;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
     .reading-entry:first-of-type{border-top:1px solid var(--border)}
-    .reading-num{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--gold);min-width:1.5rem;padding-top:0.15rem}
+    .reading-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:0.2rem}
+.reading-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:var(--gold);min-width:2rem;padding-top:0.3rem;opacity:0.7}
     .reading-
-    .reading-author{font-size:0.72rem;color:var(--muted);margin-bottom:0.35rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.05em}
-    .reading-note{font-size:0.88rem;color:var(--text);line-height:1.7}
+    .reading-author{font-size:0.72rem;color:var(--gold);margin-bottom:0.5rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;text-transform:uppercase}
+    .reading-note{font-size:0.9rem;color:var(--text);line-height:1.75}
 
     .closing-note{margin-top:4rem;padding:2rem 2.25rem;background:var(--navy);color:rgba(245,240,232,0.75);font-size:0.9rem;line-height:1.85}
     .closing-note strong{color:var(--gold)}
@@ -73,7 +74,7 @@
     
   
     /* ── Accessibility ── */
-    abutton.hamburger.source-section,.reading-section,.reading-entry{max-width:100%}
+    abutton.reading-section,.reading-entry{max-width:100%}
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
