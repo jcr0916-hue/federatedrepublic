@@ -15,10 +15,6 @@
   <meta name="twitter:description" content="The Constitution of the Federated Republic with inline annotations, design rationale, and plain-language explanations of every major provision.">>
   <style>
     html{scroll-padding-top:72px}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.8;overflow-x:hidden}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,74,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-    .nav-logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600;letter-spacing:0.08em;text-decoration:none}
-    .nav-seal{height:34px;width:34px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,168,76,0.4);margin-right:0.6rem;vertical-align:middle;flex-shrink:0;opacity:0.9}
     .nav-links{display:flex;gap:1rem;align-items:center}
     .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
     .nav-links a:hover{color:var(--gold)}
@@ -51,7 +47,7 @@
     .ann-design{background:rgba(27,42,74,0.09);border-bottom:2px solid var(--navy);cursor:pointer;border-radius:2px;padding:0 2px;transition:background 0.15s;display:inline}
     .ann-design:hover,.ann-design.active{background:rgba(27,42,74,0.18)}
     .tooltip-wrap{position:relative;display:inline}
-    .tooltip-box{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--navy);color:#f5f0e8;font-size:0.76rem;line-height:1.5;padding:0.6rem 0.85rem;border-radius:3px;width:230px;z-index:500;pointer-events:none;opacity:0;transition:opacity 0.15s;box-shadow:0 4px 16px rgba(0,0,0,0.3)}
+    .tooltip-box{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--navy);color:var(--cream);font-size:0.76rem;line-height:1.5;padding:0.6rem 0.85rem;border-radius:3px;width:230px;z-index:500;pointer-events:none;opacity:0;transition:opacity 0.15s;box-shadow:0 4px 16px rgba(0,0,0,0.3)}
     .tooltip-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--navy)}
     .tooltip-wrap:hover .tooltip-box{opacity:1}
     .tooltip-ref{font-size:0.66rem;color:var(--gold);margin-top:0.3rem;display:block;font-family:'JetBrains Mono',monospace}
@@ -64,8 +60,7 @@
     .panel-card.visible{display:block}
     .panel-section{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem}
     .panel-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.9rem;line-height:1.35}
-    .panel-body{font-size:0.84rem;line-height:1.75;color:#3a3530}
-    .panel-body p{margin-bottom:0.7rem}
+    .panel-
     .panel-body p:last-child{margin-bottom:0}
     .panel-ref{font-size:0.72rem;color:var(--muted);margin-top:0.9rem;padding-top:0.7rem;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace}
     .panel-close{display:block;margin-top:0.9rem;font-size:0.7rem;color:var(--muted);cursor:pointer;text-align:right;letter-spacing:0.08em;text-transform:uppercase}
@@ -89,8 +84,6 @@
     aside{display:block}
     .panel-wrap{display:none}
     /* Nav */
-    .hamburger{display:flex}
-    .nav-links{display:none}
     /* Page wrap */
     .page-wrap{padding:76px 1.25rem 60px}
     /* Typography — reduce title to fit mobile width */
@@ -103,10 +96,6 @@
   }
   
     /* ══ MOBILE RESPONSIVE ══ */
-    .hamburger{display:none;-webkit-appearance:none;appearance:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-left:auto;min-width:44px;min-height:44px;justify-content:center;align-items:center}
-    .hamburger span{display:block;width:22px;height:2px;background:var(--gold);transition:all 0.3s}
-    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,30,56,0.98);backdrop-filter:blur(12px);padding:0.75rem 2rem 1.25rem;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,168,76,0.3);z-index:199}
-    .mobile-menu a{color:rgba(245,240,232,0.75);text-decoration:none;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.75rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.2s,background 0.2s}
     .mobile-menu a:last-child{border-bottom:none}
     .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
     .mobile-menu.open{display:flex}
@@ -156,7 +145,7 @@
       white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
     #searchResults .sr-none{padding:0.75rem 0.85rem;color:rgba(245,240,232,0.4);
       font-size:0.82rem;font-style:italic;}
-    mark{background:rgba(201,168,76,0.3);color:inherit;padding:0 1px;}
+    
 
     
     /* ── ARTICLE MINI-MAP ── */
@@ -168,11 +157,11 @@
     @media(max-width:1366px){.minimap{will-change:transform;display:none}.minimap.open{display:flex;z-index:201;box-shadow:4px 0 20px rgba(0,0,0,0.4)}.minimap-close{display:block}}
     @media(min-width:1367px){body.has-minimap .page-wrap{margin-left:170px}}
   
-    /* ── Search FAB ── */
-    .search-fab{position:fixed;bottom:1.75rem;right:1.25rem;z-index:195;background:var(--navy);border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:0.55rem 0.9rem;cursor:pointer;text-transform:uppercase}
+    
+    
     .search-fab:hover{border-color:var(--gold);background:var(--navy2)}
     @media(max-width:1366px){
-      .search-fab{bottom:1.5rem;right:1rem;width:44px;height:44px;padding:0;display:flex;align-items:center;justify-content:center;border-radius:2px;font-size:1rem;letter-spacing:0}
+      
     }
   
     .search-fab-text{display:inline}
@@ -181,35 +170,16 @@
     @media(min-width:820px){
       }
   
-    /* ── ANNOTATED FABs (consistent with glossary) ── */
-    .minimap-toggle,.search-fab{
-      position:fixed;
-      bottom:1.75rem;
-      width:48px;height:48px;
-      background:var(--navy);
-      border:1px solid rgba(201,168,76,0.35);
-      color:var(--gold);
-      border-radius:3px;
-      cursor:pointer;
-      display:flex;align-items:center;justify-content:center;
-      z-index:200;
-      transition:border-color 0.15s,background 0.15s;
-      -webkit-appearance:none;appearance:none;
-      font-size:1.1rem;
-    }
-    .minimap-toggle{left:1.25rem}
-    .search-fab{right:1.25rem}
     
-    .minimap-toggle:hover,.search-fab:hover{
-      border-color:var(--gold);background:rgba(27,42,74,0.95)
-    }
+    
+    
+    
+    
+    
 
     /* Drawer overlay */
-    .minimap-overlay{
-      display:none;position:fixed;inset:0;
-      background:rgba(0,0,0,0.4);z-index:299;
-    }
-    .minimap-overlay.open{display:block}
+    
+    
 
     /* Open state */
     .minimap.open{transform:translateX(0)}
@@ -225,7 +195,32 @@
     @media(max-width:640px){
       .main{padding:1.5rem 1rem 5rem}
     }
-    </style>
+  
+    /* ── MINIMAP OVERLAY ── */
+    
+    
+    .minimap.open{transform:translateX(0)!important}
+    @media(max-width:1200px){
+      nav.minimap{transform:translateX(-110%);transition:transform 0.25s;position:fixed;top:0;bottom:0;left:0;z-index:300;overflow-y:auto;background:var(--navy);width:220px;padding:4rem 1rem 2rem}
+    }
+
+    /* ── SEARCH OVERLAY ── */
+    
+    .search-overlay.open{display:flex}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </style>
   <script src="search-index.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -265,7 +260,7 @@
     <div id="searchResults" style="max-width:780px;margin:0.4rem auto 0;max-height:55vh;overflow-y:auto;"></div>
   </div>
 
-  <button id="searchBtn" onclick="openSearch()" aria-label="Search constitution" class="search-fab">⌕<span class="search-fab-icon" aria-hidden="true">⌕</span></button>
+  <button id="searchBtn" onclick="openSearch()" aria-label="Search constitution" class="search-fab"><span aria-hidden="true">⌕</span></button>
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
@@ -274,11 +269,12 @@
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
     <a href="sources.html">Sources</a>
-    <a href="contact.html">Contact</a>
-    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
-  </div>
+  <span class="menu-divider" aria-hidden="true"></span>
+  <a href="advisor.html">Advisor</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
 
   
 <div class="layout" id="main-content">
@@ -355,6 +351,17 @@
     <a href="#art20" data-art="art20">XX &middot; Assoc. Communities</a>
   </nav>
   <button class="minimap-toggle" id="minimapToggle" onclick="toggleMinimap()" aria-label="Toggle article navigation">≡</button>
+  <div class="minimap-overlay" id="minimapOverlay" onclick="closeMinimap()"></div>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search provisions">
+    <div class="search-inner">
+      <div class="search-bar">
+        <input type="search" id="searchInput" class="search-input" placeholder="Search provisions…" oninput="runSearch(this.value)" autocomplete="off" spellcheck="false">
+        <button class="search-close" onclick="closeSearch()" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
 
 <div id="art1" class="article-section">
   <h2 class="article-header">Article I — The Individual Sovereignty Floor</h2>
@@ -1347,12 +1354,161 @@
 </main>
 </footer>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () =>
-        navigator.serviceWorker.register('/sw.js')
-          .catch(() => {}) // fail silently if blocked
-      );
+    <script>
+    // ── MINIMAP ──────────────────────────────────────
+    if (document.querySelector('.minimap')) document.body.classList.add('has-minimap');
+
+    function toggleMinimap(){
+      var m = document.getElementById('minimap');
+      var o = document.getElementById('minimapOverlay');
+      var open = m.classList.toggle('open');
+      if(o) o.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+      var btn = document.getElementById('minimapToggle');
+      if(btn) btn.setAttribute('aria-expanded', String(open));
+    }
+    function closeMinimap(){
+      var m = document.getElementById('minimap');
+      var o = document.getElementById('minimapOverlay');
+      if(m) m.classList.remove('open');
+      if(o) o.classList.remove('open');
+      document.body.style.overflow = '';
+      var btn = document.getElementById('minimapToggle');
+      if(btn) btn.setAttribute('aria-expanded', 'false');
+    }
+
+    // Highlight current article in minimap as user scrolls
+    (function(){
+      var links = document.querySelectorAll('.minimap-link, nav.minimap a[data-art]');
+      if(!links.length) return;
+      var sections = Array.from(document.querySelectorAll('.article-section[id]'));
+      function onScroll(){
+        var scrollY = window.scrollY + 100;
+        var current = sections[0];
+        for(var i = 0; i < sections.length; i++){
+          if(sections[i].offsetTop <= scrollY) current = sections[i];
+        }
+        links.forEach(function(l){
+          var artNum = l.getAttribute('data-art') || '';
+          var active = artNum === current.id || l.getAttribute('href') === '#' + current.id;
+          l.classList.toggle('active', active);
+        });
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+    })();
+
+    // Close minimap on outside click
+    document.addEventListener('click', function(e){
+      var mm = document.getElementById('minimap');
+      var toggle = document.getElementById('minimapToggle');
+      if(mm && mm.classList.contains('open') &&
+         !mm.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)){
+        closeMinimap();
+      }
+    });
+
+    // Minimap link click: close on mobile after navigation
+    document.querySelectorAll('nav.minimap a').forEach(function(a){
+      a.addEventListener('click', function(){
+        if(window.innerWidth <= 1200) setTimeout(closeMinimap, 150);
+      });
+    });
+
+    // ── SEARCH ───────────────────────────────────────
+    var searchIndex = (typeof SEARCH_INDEX !== 'undefined') ? SEARCH_INDEX : [];
+
+    function openSearch(){
+      var overlay = document.getElementById('searchOverlay');
+      var input = document.getElementById('searchInput');
+      if(!overlay) return;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      if(input){ input.value = ''; setTimeout(function(){ input.focus(); }, 50); }
+      document.getElementById('searchResults').innerHTML = '';
+    }
+    function closeSearch(){
+      var overlay = document.getElementById('searchOverlay');
+      if(!overlay) return;
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function runSearch(q){
+      var container = document.getElementById('searchResults');
+      if(!q || q.trim().length < 2){
+        container.innerHTML = '';
+        return;
+      }
+      var terms = q.trim().toLowerCase().split(/\s+/);
+      var results = searchIndex.filter(function(p){
+        var haystack = (p.num + ' ' + p.name + ' ' + p.text).toLowerCase();
+        return terms.every(function(t){ return haystack.indexOf(t) >= 0; });
+      }).slice(0, 30);
+
+      if(!results.length){
+        container.innerHTML = '<p class="search-empty">No provisions matched.</p>';
+        return;
+      }
+      function hl(str, terms){
+        var s = str.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        terms.forEach(function(t){
+          s = s.replace(new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi'), '<mark>$1</mark>');
+        });
+        return s;
+      }
+      container.innerHTML = results.map(function(p){
+        var snippet = p.text.substring(0, 160);
+        var pid = p.num.replace(/§/,'s').replace(/\./g,'-');
+        return '<a href="annotated.html#' + pid + '" class="search-result" onclick="closeSearch()">' +
+          '<span class="search-result-num">' + hl(p.num, terms) + '</span>' +
+          '<span class="search-result-name">' + hl(p.name, terms) + '</span>' +
+          '<span class="search-result-snippet">' + hl(snippet, terms) + '…</span>' +
+          '</a>';
+      }).join('');
+    }
+
+    // Close search on overlay background click
+    document.getElementById('searchOverlay').addEventListener('click', function(e){
+      if(e.target === this) closeSearch();
+    });
+    // Close search on Escape
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        closeSearch();
+        closeMinimap();
+      }
+    });
+
+    // ── COPY PROVISION LINK ──────────────────────────
+    function copyProvLink(id){
+      var url = location.origin + location.pathname + '#' + id;
+      if(navigator.clipboard){ navigator.clipboard.writeText(url); }
+      else{ var t = document.createElement('textarea'); t.value = url;
+            document.body.appendChild(t); t.select(); document.execCommand('copy');
+            document.body.removeChild(t); }
+    }
+
+    // ── MOBILE NAV ───────────────────────────────────
+    function toggleMobileNav(){
+      var m = document.getElementById('mobileMenu');
+      var b = document.querySelector('.hamburger');
+      if(m){ var open = m.classList.toggle('open');
+             if(b) b.setAttribute('aria-expanded', String(open)); }
+    }
+    document.addEventListener('click', function(e){
+      var m = document.getElementById('mobileMenu');
+      var b = document.querySelector('.hamburger');
+      if(m && m.classList.contains('open') && !m.contains(e.target) && b && !b.contains(e.target)){
+        m.classList.remove('open');
+        b.setAttribute('aria-expanded','false');
+      }
+    });
+
+    // ── SERVICE WORKER ───────────────────────────────
+    if('serviceWorker' in navigator){
+      window.addEventListener('load', function(){
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
     }
   </script>
 </body>

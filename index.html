@@ -14,36 +14,6 @@
   <meta name="twitter:title" content="The Federated Republic">
   <meta name="twitter:description" content="A constitution built from first principles.">
   <style>
-    body {
-      font-family: 'Jost', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      font-size: 16px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    nav {
-      position: absolute; left: -9999px; top: auto;
-      background: var(--gold); color: var(--navy2);
-      padding: 0.5rem 1rem; font-size: 0.8rem;
-      z-index: 9999;
-    }
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      background: rgba(15,30,56,0.97);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(201,168,76,0.25);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 1.25rem; height: 56px;
-    }
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      color: var(--gold); font-size: 1rem; font-weight: 600;
-      letter-spacing: 0.07em; text-decoration: none;
-      display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;
-    }
     .nav-seal {
       height: 30px; width: 30px;
       border-radius: 50%; object-fit: cover;
@@ -60,28 +30,6 @@
       transition: color 0.2s; white-space: nowrap;
     }
     .nav-links a:hover { color: var(--gold); }
-    .hamburger {
-      display: none; flex-direction: column;
-      gap: 5px; cursor: pointer;
-      background: none; border: none;
-      padding: 6px; margin-left: auto;
-    }
-    .hamburger span {
-      display: block; width: 22px; height: 2px;
-      background: var(--gold); transition: 0.3s;
-    }
-    .mobile-menu {
-      display: none;
-      position: fixed; top: 56px; left: 0; right: 0;
-      background: rgba(10,20,42,0.98);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(201,168,76,0.2);
-      flex-direction: column; z-index: 190;
-      padding: 0.5rem 0 1rem;
-      max-height: calc(100vh - 56px);
-      overflow-y: auto;
-    }
-    .mobile-menu.open { display: flex; }
     .mobile-menu a {
       color: rgba(245,240,232,0.8); text-decoration: none;
       font-size: 0.9rem; letter-spacing: 0.06em;
@@ -582,11 +530,7 @@
 
     /* ── DESKTOP (≥860px) ── */
     @media (min-width: 860px) {
-      nav { padding: 0 2rem; }
-      .nav-links { gap: 0.25rem; }
       .nav-links a { font-size: 0.75rem; padding: 0.3rem 0.6rem; }
-      .hamburger { display: none; }
-      .hero { padding: 80px 2rem 5rem; }
       .hero-layout {
         grid-template-columns: 1fr auto;
         gap: 4rem;
@@ -611,8 +555,6 @@
 
     /* ── MOBILE NAV ── */
     @media (max-width: 859px) {
-      .hamburger { display: flex; }
-      .nav-links { display: none; }
     }
     @media (max-width: 600px) {
       .hero-track-sub { font-size: 0.65rem; letter-spacing: 0.06em; }
@@ -624,8 +566,6 @@
     }
   
   @media(max-width:820px){
-      .hamburger{-webkit-appearance:none;appearance:none;display:flex}
-      .nav-links{display:none}
     }
     @media(min-width:820px){
       }
@@ -636,7 +576,7 @@
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <a href="#main-content-area" class="skip-nav">Skip to main content</a>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
 
   <nav>
   <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
@@ -660,13 +600,14 @@
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
     <a href="sources.html">Sources</a>
-    <a href="contact.html">Contact</a>
-    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
-  </div>
+  <span class="menu-divider" aria-hidden="true"></span>
+  <a href="advisor.html">Advisor</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
 
-  <main id="main-content-area" tabindex="-1">
+  <main id="main-content" tabindex="-1">
 
   <!-- HERO -->
   <section class="hero">
