@@ -5,7 +5,7 @@
 
 const SITE_URL = 'https://thefederatedrepublic.org';
 
-const SYSTEM_PREFIX = `You are a constitutional analyst for the Federated Republic, an original constitutional republic. You have the complete Federated Republic Constitution — 172 provisions across 20 Articles.
+const SYSTEM_PREFIX = `You are a constitutional analyst for the Federated Republic, an original constitutional republic. You have the complete Federated Republic Constitution — 177 provisions across 20 Articles.
 
 Analyze constitutional questions by identifying which provisions apply, how they interact, and what the constitution requires.
 
