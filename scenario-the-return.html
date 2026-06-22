@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Return — The Federated Republic</title>
+  <meta name="description" content="A legal resident leaves the Republic to visit a friend in Europe. She is not allowed back in. The government cites national security. She cites her religion, her family name, and her face on the national news.">
+  <meta property="og:title" content="The Return">
+  <meta property="og:description" content="A legal resident denied re-entry after a protest. The government says national security. She says §1.6.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-return.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Return">
+  <meta name="twitter:description" content="A legal resident denied re-entry after a protest. The government says national security. She says §1.6.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="scenario-ordinary.html">&#9656; Start Here &mdash; Ordinary Law</a>
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §6.2 &middot; §1.6 &middot; §1.8 &middot; Immigration &amp; Individual Rights</span>
+      <h1 class="scenario-title">The Return</h1>
+      <p class="scenario-premise">A legal resident with valid work authorization leaves the Republic for a weekend visit. She is not permitted back in. The government invokes national security — her family holds a senior position in a foreign government the Republic is in active diplomatic dispute with, and the Legat Consul has determined she may pose a risk to the community. She says the real reasons are her religion, her family name, and her face on the national news the week before. The constitution has something to say about all of it.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§5.2 Legal Resident Rights</span>
+        <span class="prov-tag">§1.6 Equality and Non-Discrimination</span>
+        <span class="prov-tag">§1.8 Freedom of Expression</span>
+        <span class="prov-tag">§6.1 The Two-Stage Immigration System</span>
+        <span class="prov-tag">§6.2 Enforcement, Removal, and Appeals</span>
+        <span class="prov-tag">§2.1 The Legat Consul — Domain and Term</span>
+        <span class="prov-tag">§1.19.f Non-Discrimination in Emergency Measures</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>Lena Qadir came to the Republic on a work authorization credential three years ago. She was a structural engineer, contracted to a firm building water treatment infrastructure in the Republic's southeastern States. Her work was unremarkable in the best sense — she showed up, she delivered, her firm renewed her contract twice. Her residency credential was current, her federal certification uncontested. She had applied for naturalization and was partway through the statutory waiting period.</p>
+
+      <p>Her family was a different matter, though she had spent years trying to make it irrelevant. Her uncle was the Finance Minister of Kassara — a small Gulf state whose relationship with the Republic had deteriorated sharply over the past eighteen months. A territorial dispute in international waters, a stalled trade negotiation, and a series of public statements by both the Legat Consul and Kassara's foreign ministry had produced something that was not quite a diplomatic rupture but was clearly trending toward one. Lena had not spoken to her uncle in four years. She had left Kassara specifically because she did not want to be defined by the institution her family represented. She had not disclosed the family connection on her initial application — it was not a required disclosure under the federal certification criteria in effect at that time.</p>
+
+      <p>The Legat Consul made three public statements about Kassaran nationals in the Republic over a six-week period. The first was measured — expressing concern about the relationship and noting that existing credential holders would not be affected by the deteriorating diplomatic situation. The second was less measured. The third, delivered at a press event, included a characterization of the Kassaran state religion — which Lena practiced, though quietly — as "structurally incompatible with the Republic's constitutional values." The statement was published to the NRS within the hour, as all official statements must be.</p>
+
+      <p>Lena's colleagues encouraged her not to respond publicly. She did not take their advice. She attended a protest outside the Legat Consul's official residence — organized by a coalition of civil society groups — and was interviewed on camera by the Republic's national news channel. She said two things on camera that were widely replayed: that the Legat Consul's characterization of her religion was factually wrong, and that she had lived and worked in the Republic for three years and found its constitutional values to be exactly what they claimed to be, which was why she intended to stay. The interview ran twice on the evening broadcast and once more the following morning.</p>
+
+      <h2>The Border</h2>
+
+      <p>Eleven days after the interview, Lena flew to visit a friend in a neighboring European country. She was there for four days. When she presented her residency credential at the Republic's border control on her return, she was asked to step aside. She waited for two hours. She was then informed by a border official that her credential had been suspended pending review and that she was not permitted to re-enter the Republic at this time. The official provided a single-page document citing national security grounds under the federal certification authority. No further detail was given.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Border Enforcement Notice &mdash; Year 4, Month 9</div>
+        FEDERAL CERTIFICATION — SUSPENSION NOTICE<br>
+        Credential holder: [redacted per §1.7 privacy protections]<br>
+        Action: Temporary suspension of Residency Credential pending review<br>
+        Authority: §6.1 federal certification authority; Legat Consul domain over border security<br><br>
+        Basis: National security assessment indicates credible concern. Credential holder maintains undisclosed family relationship with senior official of a foreign government with which the Republic is in active diplomatic dispute. Credential holder has made public statements on a matter of active foreign policy sensitivity.<br><br>
+        Right to challenge: Credential holder may challenge this determination under §6.2. Legal representation available at public expense where not otherwise affordable. Review period: statutory maximum applies.
+      </div>
+
+      <p>The notice contained two stated grounds: the undisclosed family connection and the public statements. Lena's lawyer — appointed at public expense under §6.2's representation guarantee — identified immediately that the second ground was a problem. The public statements the notice referenced were the national news interview. The interview was protected expression under §1.8. Using it as a basis for an adverse immigration action was not a national security determination — it was viewpoint retaliation dressed in certification language.</p>
+
+      <p>The first ground was more complicated. The family connection was real. Her uncle was, in fact, the Finance Minister of a country the Republic was in diplomatic dispute with. She had not disclosed the relationship on her original application. The government would argue this was a material omission that independently justified certification review. Lena's position was that the omission was not culpable — non-disclosure of family relationships with foreign officials was not a stated certification criterion at the time of her application — and that the connection was substantively irrelevant given four years of no contact.</p>
+
+      <h2>The Constitutional Questions</h2>
+
+      <p>The §6.2 challenge framework gave Lena three grounds on which to contest the denial. The first was that the criterion applied had not been properly established under the federal certification mandate — she would argue that "undisclosed family relationship with a foreign official" was not a criterion that the Legislature had defined, and that the Legat Consul could not unilaterally impose new certification criteria by executive determination. The second was discriminatory grounds contrary to §1.6. The third was procedural violation.</p>
+
+      <p>Her lawyer filed on the first and second grounds simultaneously.</p>
+
+      <div class="beat">
+        <div class="beat-label">§6.2 — The National Security Review</div>
+        <div class="beat-title">Where the government claims national security, a court may examine the classified assessment in camera.</div>
+        <p>The §6.2 standard is exacting: the classified assessment must constitute a "credible, specific, and documented security concern." The reviewing court has authority to examine that assessment in camera — outside the normal adversarial process — and to vacate the denial if the assessment does not meet the standard. A general concern about a deteriorating diplomatic relationship does not become a specific, documented security concern about an individual by virtue of that individual sharing a surname with a foreign official.</p>
+        <p>Lena's family connection was a real fact. What the government could not show was how that fact — given four years of documented non-contact, the lack of any security-relevant communication, and Lena's own public identification with the Republic's constitutional values — constituted a specific risk that she personally posed. The connection was indirect. The threat theory was inferential. Under §6.2, inferential threats do not clear the credible, specific, and documented threshold.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§1.6 — The Discrimination Claim</div>
+        <div class="beat-title">The Legat Consul's own NRS record was the strongest evidence against the government.</div>
+        <p>The §1.6 discrimination claim required Lena to show that the denial was motivated, in whole or in part, by her religion or national origin rather than by a legitimate security determination. The circumstantial evidence was unusually direct. The Legat Consul had made public statements characterizing her religion as incompatible with the Republic's values — statements published to the NRS. Within two weeks of those statements, and eleven days after Lena appeared on national television to contest them, her credential was suspended. The border notice listed her public statements as a stated ground. The temporal sequence and the stated reasoning together painted a picture that §1.6 was designed to address.</p>
+        <p>The government would argue that the Legat Consul's public statements and the certification decision were separate determinations made by separate processes. The court would have to assess whether that separation was real or formal. Under §6.2, a court finding §1.6 discriminatory grounds may order reconsideration free of those criteria. It may not compel restoration of the credential — but it can require the government to make the decision again, without the tainted inputs.</p>
+      </div>
+
+      <h2>The Gap the Scenario Exposes</h2>
+
+      <p>The §6.2 challenge framework was written for federal certification denials — initial applications. Lena was not a first-time applicant. She held a valid credential, had held it for three years, had passed both stages of §6.1's dual-gate system, and had left the Republic voluntarily for a four-day trip. The government's legal theory was that voluntary departure permitted them to treat the re-entry as a new certification determination, giving the Legat Consul the same authority over a returning legal resident that they held over an initial applicant.</p>
+
+      <p>The constitution does not speak directly to this question. §5.2 establishes that legal residents hold a Residency Credential permitting them to work, enter contracts, own property, and access social state systems. It does not address what happens to that credential when the holder leaves and seeks to return. §6.2 governs removal, which requires statutory grounds and a judicial process — Lena had not been removed. §6.1 governs initial applications. The re-entry situation sits in between, and the government's authority in that space is defined by statute rather than the constitution.</p>
+
+      <p>The court would need to determine whether a credential suspension at the border — applied to a credential holder of three years' standing, on return from voluntary short-term travel — was governed by §6.1's initial certification framework, §6.2's removal framework, or something the Legislature had defined by statute. That threshold question would be resolved before the court reached the §1.6 discrimination claim or the national security review.</p>
+
+      <div class="beat">
+        <div class="beat-label">§1.8 — The Protected Speech Problem</div>
+        <div class="beat-title">The government listed the interview as a stated ground. That was a constitutional error that would be difficult to recover from.</div>
+        <p>Whatever the court concluded about the re-entry gap and the national security assessment, the listing of Lena's national news interview as a basis for the denial was independently indefensible. §1.8 protects freedom of expression. A legal resident appearing on national television to contest a government official's characterization of her religion is exercising protected expression at the core of what §1.8 exists to protect. Using that expression as a stated ground for an adverse government action — regardless of what other grounds existed — brought the government's decision directly into constitutional conflict with §1.8 and reinforced the §1.6 discrimination claim simultaneously.</p>
+        <p>Government counsel would argue the interview was cited for its subject matter — Lena had publicly weighed in on a matter of active foreign policy sensitivity — not for her viewpoint. The court would be unlikely to accept that distinction. The subject matter of the interview was the Legat Consul's statements about her religion. Penalizing a person for speaking on the subject of government statements about their own religion is viewpoint discrimination in the most direct sense available.</p>
+      </div>
+
+      <h2>The Outcome</h2>
+
+      <p>The court examined the classified security assessment in camera. It found the assessment insufficient under §6.2's credible, specific, and documented standard. The family connection was documented. The security concern derived from it was not — the assessment contained no evidence of contact, communication, or coordination between Lena and her uncle during the period of the diplomatic dispute, and no specific theory of harm beyond the inference that a family connection to a foreign official in a hostile relationship constituted inherent risk. The court vacated the national security denial and ordered reconsideration on that ground.</p>
+
+      <p>On the §1.6 claim, the court found discriminatory grounds. The Legat Consul's published statements, the timing of the suspension, and the explicit listing of the protected interview as a stated basis collectively established that religion and national origin had been operative factors in the determination. The court ordered reconsideration free of those criteria — meaning the government could reach the same outcome if a legitimate, non-discriminatory basis for it existed, but could not reach it through the pathway it had used.</p>
+
+      <p>Reconsideration produced no independent basis for denial. Lena's credential was restored. She returned to the Republic and resumed her work. Her naturalization application, which had been paused during the challenge proceedings, was processed under the standard timeline. The non-disclosure of her family relationship — the only remaining issue — was assessed against the certification criteria in effect at the time of her original application. Those criteria did not require disclosure of family relationships with foreign officials. The omission was not culpable under the criteria that governed her application.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>The scenario puts §6.2's in camera national security review standard to work and demonstrates what "credible, specific, and documented" requires. A genuine family connection to a foreign official is a documented fact. It is not, by itself, a documented security concern about the individual. The government bears the burden of connecting the fact to a specific risk, and that connection must be specific — not inferential, not structural, not based on nationality or religion as a proxy for threat.</p>
+        <p>The §1.6 dimension illustrates a design feature that is easy to overlook: the Legat Consul holds domain over border security, but they are not exempt from §1.6. The Legat Consul is a constitutional actor. Their decisions are government decisions. When a government actor makes public statements characterizing a religion as incompatible with the Republic's values and then, days later, issues an adverse immigration determination against a practitioner of that religion who publicly responded, §1.6 applies to the full sequence — not only to the formal determination in isolation.</p>
+        <p>The gap the scenario exposes is real and unresolved. The constitution does not specify what legal framework applies to a credential holder denied re-entry after voluntary departure. The §6.2 challenge framework reached the right result — the in camera review and the §1.6 grounds were both available — but the threshold question of which framework applied required statutory resolution rather than constitutional text. That gap would reward a legislative fix specifying that a credential holder of standing who departs voluntarily retains the full procedural protections of §6.2 on return, and may not be treated as an initial §6.1 applicant.</p>
+        <p>The most durable design point is about institutional accountability. The Legat Consul's public statements were published to the NRS. The border notice was published to the NRS. Lena's challenge was resolved by a court with access to both. The NRS record that created the discrimination case against the government was built by the government's own mandatory publication obligations. Transparency as a structural feature does not only protect citizens from government action — it provides the evidentiary record that makes rights claims arguable.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">The Federated Republic</div>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <div class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</div>
+  </footer>
+
+  <script>
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.querySelector('.hamburger');
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      menu.setAttribute('aria-hidden', !open);
+    }
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.querySelector('.hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () =>
+        navigator.serviceWorker.register('/sw.js')
+          .catch(() => {})
+      );
+    }
+  </script>
+
+</body>
+</html>
