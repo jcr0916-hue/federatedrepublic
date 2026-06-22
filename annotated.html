@@ -136,7 +136,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-  <button id="searchBtn" onclick="openSearch()" aria-label="Search constitution" class="search-fab"><span aria-hidden="true">⌕</span></button>
 
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
@@ -158,7 +157,7 @@
 <main class="main">
 <div class="doc-header">
   <h1>The Constitution of the Federated Republic</h1>
-  <p>Annotated Edition — 164 provisions &nbsp;·&nbsp; Voter and convention ready</p>
+  <p>Annotated Edition — 177 provisions &nbsp;·&nbsp; 20 articles</p>
   <p class="doc-hover-instructions">Hover <span style="border-bottom:2px solid var(--gold);padding:0 2px;font-size:0.85em">gold underlined</span> text for definitions &nbsp;·&nbsp; Click <span style="border-bottom:2px solid var(--navy);padding:0 2px;font-size:0.85em">navy underlined</span> text for design rationale</p>
 </div>
 <div class="legend">
@@ -202,42 +201,6 @@
 
 
   <!-- ARTICLE MINI-MAP -->
-  <nav class="minimap" id="minimap" aria-label="Article navigation">
-    <button class="minimap-close" onclick="closeMinimap()" aria-label="Close navigation">✕</button>
-    <span class="minimap-title">Articles</span>
-    <a href="#art1" data-art="art1">I &middot; Rights & Floor</a>
-    <a href="#art2" data-art="art2">II &middot; Dual Executive</a>
-    <a href="#art3" data-art="art3">III &middot; Legislature</a>
-    <a href="#art4" data-art="art4">IV &middot; Judiciary</a>
-    <a href="#art5" data-art="art5">V &middot; Citizenship</a>
-    <a href="#art6" data-art="art6">VI &middot; Immigration</a>
-    <a href="#art7" data-art="art7">VII &middot; Elections</a>
-    <a href="#art8" data-art="art8">VIII &middot; El. Finance</a>
-    <a href="#art9" data-art="art9">IX &middot; Monitors</a>
-    <a href="#art10" data-art="art10">X &middot; NRS</a>
-    <a href="#art11" data-art="art11">XI &middot; Panels</a>
-    <a href="#art12" data-art="art12">XII &middot; Social State</a>
-    <a href="#art13" data-art="art13">XIII &middot; Direct Democracy</a>
-    <a href="#art14" data-art="art14">XIV &middot; Defense</a>
-    <a href="#art15" data-art="art15">XV &middot; Territorial</a>
-    <a href="#art16" data-art="art16">XVI &middot; Indigenous</a>
-    <a href="#art17" data-art="art17">XVII &middot; Amendments</a>
-    <a href="#art18" data-art="art18">XVIII &middot; Property</a>
-    <a href="#art19" data-art="art19">XIX &middot; Transition</a>
-    <a href="#art20" data-art="art20">XX &middot; Assoc. Communities</a>
-  </nav>
-  <button class="minimap-toggle" id="minimapToggle" onclick="toggleMinimap()" aria-label="Toggle article navigation">≡</button>
-  <div class="minimap-overlay" id="minimapOverlay" onclick="closeMinimap()"></div>
-
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search provisions">
-    <div class="search-inner">
-      <div class="search-bar">
-        <input type="search" id="searchInput" class="search-input" placeholder="Search provisions…" oninput="runSearch(this.value)" autocomplete="off" spellcheck="false">
-        <button class="search-close" onclick="closeSearch()" aria-label="Close search">✕</button>
-      </div>
-      <div class="search-results" id="searchResults"></div>
-    </div>
-  </div>
 
 <div id="art1" class="article-section">
   <h2 class="article-header">Article I — The Individual Sovereignty Floor</h2>
@@ -1387,4 +1350,44 @@
       });
     }
   </script>
+
+  <!-- Fixed UI elements — body level for reliable position:fixed across all browsers -->
+  <nav class="minimap" id="minimap" aria-label="Article navigation">
+    <button class="minimap-close" onclick="closeMinimap()" aria-label="Close navigation">✕</button>
+    <span class="minimap-title">Articles</span>
+    <a href="#art1" data-art="art1">I &middot; Rights & Floor</a>
+    <a href="#art2" data-art="art2">II &middot; Dual Executive</a>
+    <a href="#art3" data-art="art3">III &middot; Legislature</a>
+    <a href="#art4" data-art="art4">IV &middot; Judiciary</a>
+    <a href="#art5" data-art="art5">V &middot; Citizenship</a>
+    <a href="#art6" data-art="art6">VI &middot; Immigration</a>
+    <a href="#art7" data-art="art7">VII &middot; Elections</a>
+    <a href="#art8" data-art="art8">VIII &middot; El. Finance</a>
+    <a href="#art9" data-art="art9">IX &middot; Monitors</a>
+    <a href="#art10" data-art="art10">X &middot; NRS</a>
+    <a href="#art11" data-art="art11">XI &middot; Panels</a>
+    <a href="#art12" data-art="art12">XII &middot; Social State</a>
+    <a href="#art13" data-art="art13">XIII &middot; Direct Democracy</a>
+    <a href="#art14" data-art="art14">XIV &middot; Defense</a>
+    <a href="#art15" data-art="art15">XV &middot; Territorial</a>
+    <a href="#art16" data-art="art16">XVI &middot; Indigenous</a>
+    <a href="#art17" data-art="art17">XVII &middot; Amendments</a>
+    <a href="#art18" data-art="art18">XVIII &middot; Property</a>
+    <a href="#art19" data-art="art19">XIX &middot; Transition</a>
+    <a href="#art20" data-art="art20">XX &middot; Assoc. Communities</a>
+  </nav>
+  <button class="minimap-toggle" id="minimapToggle" onclick="toggleMinimap()" aria-label="Toggle article navigation">≡</button>
+  <div class="minimap-overlay" id="minimapOverlay" onclick="closeMinimap()"></div>
+  <button id="searchBtn" onclick="openSearch()" aria-label="Search constitution" class="search-fab"><span aria-hidden="true">⌕</span></button>
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search provisions">
+    <div class="search-inner">
+      <div class="search-bar">
+        <input type="search" id="searchInput" class="search-input" placeholder="Search provisions…" oninput="runSearch(this.value)" autocomplete="off" spellcheck="false">
+        <button class="search-close" onclick="closeSearch()" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <div class="copy-toast" id="copyToast"></div>
+
 </body>

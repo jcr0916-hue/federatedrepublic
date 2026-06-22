@@ -567,23 +567,6 @@
 
   <!-- Nav drawer overlay -->
   <div class="drawer-overlay" id="drawerOverlay" onclick="closeNavDrawer()"></div>
-
-  <!-- Search overlay -->
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search glossary">
-    <div class="search-inner">
-      <div class="search-bar">
-        <input type="search" id="searchInput" class="search-input" placeholder="Search glossary…"
-               oninput="runGlossarySearch(this.value)" autocomplete="off" spellcheck="false">
-        <button class="search-close" onclick="closeSearch()" aria-label="Close search">✕</button>
-      </div>
-      <div class="search-results" id="searchResults"></div>
-    </div>
-  </div>
-
-  <!-- Floating action buttons -->
-  <button class="minimap-toggle" id="navDrawerToggle" onclick="openNavDrawer()" aria-label="Jump to letter" aria-expanded="false">A–Z</button>
-<button class="search-fab" onclick="openSearch()" aria-label="Search glossary"><span aria-hidden="true">⌕</span></button>
-
 </div>
 
 <div class="nav-drawer-overlay" id="navDrawerOverlay" onclick="closeNavDrawer()"></div>
@@ -608,5 +591,20 @@
     <a href="#g-S" class="nav-drawer-link" onclick="closeNavDrawer()">S</a>
     <a href="#g-T" class="nav-drawer-link" onclick="closeNavDrawer()">T</a>
 </div>
+
+  <!-- Fixed UI elements — body level for reliable position:fixed -->
+  <button class="minimap-toggle" id="navDrawerToggle" onclick="openNavDrawer()" aria-label="Jump to letter" aria-expanded="false">A–Z</button>
+  <button class="search-fab" onclick="openSearch()" aria-label="Search glossary"><span aria-hidden="true">⌕</span></button>
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search glossary">
+    <div class="search-inner">
+      <div class="search-bar">
+        <input type="search" id="searchInput" class="search-input" placeholder="Search glossary…"
+               oninput="runGlossarySearch(this.value)" autocomplete="off" spellcheck="false">
+        <button class="search-close" onclick="closeSearch()" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
 </body>
 </html>
