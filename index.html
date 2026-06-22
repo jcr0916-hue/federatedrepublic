@@ -15,520 +15,91 @@
   <meta name="twitter:description" content="A constitution built from first principles.">
   <style>
     /* ── HERO ── */
-    .hero {
-      background: var(--navy2);
-      min-height: 100svh;
-      display: flex; flex-direction: column;
-      justify-content: center;
-      padding: 80px 1.25rem 4rem;
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 70% 40%, rgba(201,168,76,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .hero-inner { max-width: 1080px; margin: 0 auto; width: 100%; }
-    .hero-layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      align-items: center;
-    }
-    
-    @media(min-width:780px){
-      .hero-layout { grid-template-columns: 1.15fr 0.85fr; gap: 4rem; }
-    }
-    .hero-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.62rem; letter-spacing: 0.22em;
-      text-transform: uppercase; color: rgba(201,168,76,0.7);
-      display: block; margin-bottom: 1.25rem;
-    }
-    .hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.4rem, 8vw, 4rem);
-      font-weight: 300; color: var(--cream);
-      line-height: 1.15; margin-bottom: 1.25rem;
-      letter-spacing: -0.01em;
-    }
-    .hero-title em { font-style: italic; color: var(--gold); }
-    .hero-sub {
-      color: rgba(245,240,232,0.6);
-      font-size: 1rem; line-height: 1.75;
-      max-width: 480px; margin-bottom: 2rem;
-    }
-    .hero-actions {
-      display: flex; gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    .btn-hero-primary, .btn-hero-ghost {
-      display: inline-flex; align-items: center;
-      padding: 0.75rem 1.5rem;
-      font-size: 0.82rem; letter-spacing: 0.06em;
-      text-transform: uppercase; text-decoration: none;
-      font-weight: 500; transition: all 0.2s;
-      min-height: 48px; /* touch target */
-    }
-    .btn-hero-primary {
-      background: var(--gold); color: var(--navy2);
-    }
-    .btn-hero-primary:hover { background: #b89040; }
-    .btn-hero-ghost {
-      border: 1px solid rgba(201,168,76,0.4);
-      color: rgba(245,240,232,0.8);
-    }
-    .btn-hero-ghost:hover {
-      border-color: var(--gold); color: var(--gold);
-    }
-    .hero-track { display: flex; flex-direction: column; gap: 0.4rem; }
-    .hero-track-sub {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem; letter-spacing: 0.1em;
-      color: rgba(245,240,232,0.3); text-transform: uppercase;
-    }
-    .hero-advisor-link {
-      display: inline-block; margin-top: 1.25rem;
-      font-size: 0.78rem; color: rgba(201,168,76,0.55);
-      text-decoration: none; letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-    .hero-advisor-link:hover { color: var(--gold); }
-    .hero-seal-wrap {
-      display: flex; justify-content: center; align-items: center;
-    }
-    .hero-seal-img {
-      width: min(260px, 55vw); height: auto;
-      opacity: 0.88;
-      filter: drop-shadow(0 12px 48px rgba(0,0,0,0.5));
-    }
-    @media(min-width:780px){ .hero-seal-img { width: min(340px, 38vw); } }
-    .hero-scroll {
-      display: flex; align-items: center; gap: 0.75rem;
-      color: rgba(201,168,76,0.4);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-top: 3rem;
-    }
-    .hero-scroll-line {
-      width: 40px; height: 1px;
-      background: rgba(201,168,76,0.3);
-    }
+    .hero{background:var(--navy2);padding:88px 1.5rem 56px;border-bottom:1px solid rgba(201,168,76,0.15)}
+    .hero-inner{max-width:1080px;margin:0 auto}
+    .hero-layout{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+    @media(min-width:780px){.hero-layout{grid-template-columns:1.2fr 0.8fr;gap:3rem}}
+    .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.7);display:block;margin-bottom:1rem}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:0.85rem}
+    .hero-title em{font-style:italic;color:var(--gold)}
+    .hero-sub{font-size:0.95rem;color:rgba(245,240,232,0.6);margin-bottom:1.75rem;line-height:1.7;max-width:440px}
+    .hero-seal-wrap{display:flex;justify-content:center;align-items:center}
+    .hero-seal-img{width:min(240px,45vw);height:auto;opacity:0.88}
+    @media(max-width:779px){.hero-seal-wrap{display:none}}
 
-    /* ── FEATURED STORY ── */
-    .featured { background: var(--cream); padding: 3rem 1.25rem; }
-    .featured-inner { max-width: 780px; margin: 0 auto; }
-    .featured-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.25em;
-      text-transform: uppercase; color: var(--gold);
-      margin-bottom: 1.25rem; display: block;
-    }
-    .featured-card {
-      display: block; border: 1px solid var(--border);
-      text-decoration: none; color: inherit;
-      transition: border-color 0.2s;
-    }
-    .featured-card:hover { border-color: rgba(201,168,76,0.5); }
-    .featured-text { padding: 1.75rem; }
-    .featured-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem; letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(201,168,76,0.7); display: block;
-      margin-bottom: 0.75rem;
-    }
-    .featured-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.9rem; font-weight: 400;
-      color: var(--navy); margin-bottom: 0.75rem;
-    }
-    .featured-desc {
-      color: var(--muted); font-size: 0.9rem;
-      line-height: 1.8; margin-bottom: 1rem;
-    }
-    .featured-chars {
-      display: flex; flex-wrap: wrap; gap: 0.4rem;
-      margin-bottom: 1.25rem;
-    }
-    .char-chip {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.08em;
-      background: var(--cream2); color: var(--muted);
-      padding: 0.3rem 0.6rem;
-    }
-    .featured-read {
-      font-size: 0.8rem; color: var(--gold);
-      letter-spacing: 0.08em; font-weight: 500;
-    }
-    .featured-quote {
-      background: var(--navy);
-      padding: 1.75rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .featured-quote blockquote {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic; font-size: 1.05rem;
-      color: rgba(245,240,232,0.7); line-height: 1.75;
-    }
-    .featured-quote cite {
-      display: block; margin-top: 0.75rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.55rem; letter-spacing: 0.15em;
-      text-transform: uppercase; color: rgba(201,168,76,0.5);
-      font-style: normal;
-    }
+    /* ── NAVIGATOR BAR ── */
+    .nav-bar-wrap{width:100%;max-width:500px}
+    .nav-bar-row{display:flex;gap:0;margin-bottom:0.75rem;border:1px solid rgba(201,168,76,0.4);border-radius:3px;overflow:hidden}
+    .nav-bar-input{flex:1;background:rgba(255,255,255,0.06);border:none;color:rgba(245,240,232,0.92);font-family:'Jost',sans-serif;font-size:0.95rem;padding:0.85rem 1rem;outline:none;min-width:0}
+    .nav-bar-input::placeholder{color:rgba(245,240,232,0.28)}
+    .nav-bar-input:focus{background:rgba(255,255,255,0.09)}
+    .nav-bar-btn{background:var(--gold);color:var(--navy2);border:none;padding:0 1.25rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;white-space:nowrap;transition:background 0.15s;flex-shrink:0}
+    .nav-bar-btn:hover{background:rgba(201,168,76,0.85)}
+    .nav-bar-btn:disabled{opacity:0.5;cursor:default}
+    .nav-chips{display:flex;flex-wrap:wrap;gap:0.4rem}
+    .nav-chip{font-size:0.7rem;padding:0.3rem 0.75rem;border:1px solid rgba(201,168,76,0.2);border-radius:20px;color:rgba(245,240,232,0.45);cursor:pointer;background:none;font-family:'Jost',sans-serif;letter-spacing:0.03em;transition:border-color 0.15s,color 0.15s;white-space:nowrap}
+    .nav-chip:hover{border-color:rgba(201,168,76,0.6);color:rgba(245,240,232,0.8)}
 
-    /* ── PATHS / GO DEEPER ── */
-    .paths { background: var(--cream2); padding: 3rem 1.25rem; }
-    .paths-inner { max-width: 960px; margin: 0 auto; }
-    .paths-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.25em;
-      text-transform: uppercase; color: var(--muted);
-      margin-bottom: 1.25rem; display: block; font-weight: 400;
-    }
-    .paths-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1px; background: var(--border);
-    }
-    @media(min-width:600px){ .paths-grid { grid-template-columns: 1fr 1fr; } }
-    .path-card {
-      background: var(--cream); padding: 1.5rem;
-      text-decoration: none; color: inherit;
-      display: block; transition: background 0.2s;
-    }
-    .path-card:hover { background: #f0ebe0; }
-    .path-icon {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--gold);
-      display: block; margin-bottom: 0.6rem;
-    }
-    .path-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem; font-weight: 600;
-      color: var(--navy); margin-bottom: 0.5rem;
-    }
-    .path-desc {
-      font-size: 0.85rem; color: var(--muted);
-      line-height: 1.7;
-    }
+    /* ── NAVIGATOR RESULTS ── */
+    .nav-results-wrap{display:none;background:var(--cream);border-bottom:1px solid var(--border)}
+    .nav-results-wrap.open{display:block}
+    .nav-results-inner{max-width:780px;margin:0 auto;padding:2rem 1.5rem}
+    .nav-loading{display:none;align-items:center;gap:0.75rem;padding:1rem 0}
+    .nav-loading.visible{display:flex}
+    .nav-spinner{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin 0.7s linear infinite;flex-shrink:0}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .nav-loading span{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em}
+    .nav-summary{font-size:0.98rem;line-height:1.85;color:var(--text);margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+    .nav-section-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .nav-prov-list{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem}
+    .nav-prov{background:var(--cream2);border:1px solid var(--border);border-left:3px solid var(--gold);padding:0.9rem 1rem}
+    .nav-prov-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:0.2rem}
+    .nav-prov-name{font-size:0.88rem;font-weight:600;color:var(--navy);margin-bottom:0.2rem}
+    .nav-prov-note{font-size:0.82rem;color:var(--muted);line-height:1.5;margin-bottom:0.35rem}
+    .nav-prov-link{font-size:0.68rem;font-family:'JetBrains Mono',monospace;color:var(--gold);text-decoration:none;letter-spacing:0.06em}
+    .nav-scen-list{display:flex;flex-direction:column;gap:0.5rem}
+    .nav-scen{display:flex;align-items:flex-start;gap:0.75rem;background:var(--cream2);border:1px solid var(--border);padding:0.9rem 1rem;text-decoration:none}
+    .nav-scen:hover{border-color:rgba(201,168,76,0.4)}
+    .nav-scen-icon{width:28px;height:28px;background:var(--navy);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold);font-size:0.7rem;margin-top:1px}
+    .nav-scen-title{font-size:0.88rem;font-weight:600;color:var(--navy);margin-bottom:0.15rem}
+    .nav-scen-note{font-size:0.8rem;color:var(--muted);line-height:1.45}
+    .nav-close{display:flex;justify-content:flex-end;margin-top:1.25rem}
+    .nav-close-btn{font-size:0.7rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:var(--muted);cursor:pointer;background:none;border:none;text-transform:uppercase;padding:0.35rem 0}
+    .nav-close-btn:hover{color:var(--navy)}
 
-    /* ── ADVISOR CALLOUT ── */
-    .advisor-callout {
-      background: var(--navy);
-      padding: 2.5rem 1.25rem;
-    }
-    .advisor-inner {
-      max-width: 760px; margin: 0 auto;
-      display: flex; gap: 2rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .advisor-text { flex: 1; min-width: 200px; }
-    .advisor-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem; letter-spacing: 0.22em;
-      text-transform: uppercase; color: rgba(201,168,76,0.7);
-      display: block; margin-bottom: 0.6rem;
-    }
-    .advisor-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-weight: 300;
-      color: var(--cream); margin-bottom: 0.5rem;
-    }
-    .advisor-desc {
-      font-size: 0.88rem; color: rgba(245,240,232,0.55);
-      line-height: 1.7;
-    }
-    .btn-advisor {
-      display: inline-flex; align-items: center;
-      padding: 0.75rem 1.5rem;
-      background: transparent;
-      border: 1px solid rgba(201,168,76,0.5);
-      color: var(--gold); text-decoration: none;
-      font-size: 0.78rem; letter-spacing: 0.08em;
-      text-transform: uppercase; font-weight: 500;
-      transition: all 0.2s; white-space: nowrap;
-      min-height: 48px;
-    }
-    .btn-advisor:hover {
-      background: var(--gold); color: var(--navy2);
-      border-color: var(--gold);
-    }
-    .advisor-questions {
-      display: flex; flex-direction: column; gap: 0.5rem;
-      margin-top: 1.25rem;
-    }
-    .advisor-q {
-      display: block; padding: 0.55rem 0.85rem;
-      border: 1px solid rgba(201,168,76,0.2);
-      color: rgba(245,240,232,0.6); text-decoration: none;
-      font-size: 0.82rem; line-height: 1.45;
-      transition: border-color 0.2s, color 0.2s, background 0.2s;
-      border-radius: 2px;
-    }
-    .advisor-q::before {
-      content: "→ ";
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem; color: rgba(201,168,76,0.4);
-      margin-right: 0.25rem;
-    }
-    .advisor-q:hover {
-      border-color: rgba(201,168,76,0.5);
-      color: rgba(245,240,232,0.9);
-      background: rgba(201,168,76,0.06);
-    }
+    /* ── FEATURED ── */
+    .featured{background:var(--cream);padding:3rem 1.25rem}
+    .featured-inner{max-width:780px;margin:0 auto}
+    .featured-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:1rem}
+    .featured-card{display:grid;grid-template-columns:1fr;border:1px solid var(--border);text-decoration:none;transition:border-color 0.2s;background:var(--white)}
+    @media(min-width:640px){.featured-card{grid-template-columns:1.4fr 1fr}}
+    .featured-card:hover{border-color:rgba(201,168,76,0.5)}
+    .featured-text{padding:1.5rem}
+    .featured-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;color:var(--muted);display:block;margin-bottom:0.6rem}
+    .featured-title{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:400;color:var(--navy);margin-bottom:0.6rem}
+    .featured-desc{font-size:0.88rem;color:var(--text);line-height:1.75;margin-bottom:1rem}
+    .featured-read{font-size:0.78rem;font-weight:600;color:var(--gold);letter-spacing:0.05em}
+    .featured-quote{background:var(--navy);padding:1.5rem;display:flex;flex-direction:column;justify-content:center}
+    .featured-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-style:italic;color:rgba(245,240,232,0.75);line-height:1.7;margin-bottom:0.75rem}
+    .featured-quote cite{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;color:rgba(201,168,76,0.5);text-transform:uppercase;font-style:normal}
 
+    /* ── PATHS ── */
+    .paths{background:var(--cream2);padding:3rem 1.25rem}
+    .paths-inner{max-width:960px;margin:0 auto}
+    .paths-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:1.25rem}
+    .paths-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(min-width:700px){.paths-grid{grid-template-columns:repeat(4,1fr)}}
+    .path-card{background:var(--white);border:1px solid var(--border);padding:1.25rem;text-decoration:none;display:block;transition:border-color 0.2s}
+    .path-card:hover{border-color:rgba(201,168,76,0.45)}
+    .path-icon{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem}
+    .path-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem}
+    .path-desc{font-size:0.78rem;color:var(--muted);line-height:1.6}
 
-    /* ── VAULT DOWNLOAD ── */
-    .vault-box {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      border: 1px solid var(--border);
-      padding: 2rem;
-      background: var(--cream);
-    }
-    @media(min-width:640px){ .vault-box { grid-template-columns: 1fr auto; align-items: center; } }
-    .vault-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--gold);
-      display: block; margin-bottom: 0.5rem;
-    }
-    .vault-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem; font-weight: 400;
-      color: var(--navy); margin-bottom: 0.5rem;
-    }
-    .vault-meta {
-      font-size: 0.88rem; color: var(--muted); margin-bottom: 0.75rem;
-    }
-    .vault-details {
-      display: flex; flex-wrap: wrap; gap: 0.4rem;
-      align-items: center;
-    }
-    .vault-detail {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem; letter-spacing: 0.08em;
-      color: var(--muted);
-    }
-    .vault-sep { color: var(--border); font-size: 0.8rem; }
-    .vault-actions {
-      display: flex; flex-direction: column; gap: 0.75rem;
-      min-width: 180px;
-    }
-    .btn-download-vault {
-      display: block; text-align: center;
-      background: var(--navy); color: var(--cream);
-      padding: 0.85rem 1.5rem;
-      font-size: 0.78rem; letter-spacing: 0.1em;
-      text-transform: uppercase; font-weight: 600;
-      text-decoration: none; transition: background 0.2s;
-      min-height: 48px; display: flex; align-items: center; justify-content: center;
-    }
-    .btn-download-vault:hover { background: var(--navy2); }
-    .btn-read-vault {
-      display: block; text-align: center;
-      border: 1px solid var(--border);
-      color: var(--muted); padding: 0.75rem 1.5rem;
-      font-size: 0.78rem; letter-spacing: 0.06em;
-      text-transform: uppercase; text-decoration: none;
-      transition: all 0.2s;
-      min-height: 48px; display: flex; align-items: center; justify-content: center;
-    }
-    .btn-read-vault:hover { border-color: var(--gold); color: var(--gold); }
-
-    /* ── SCENARIOS ── */
-    .scenarios { background: var(--navy2); padding: 3rem 1.25rem; }
-    .scenarios-inner { max-width: 960px; margin: 0 auto; }
-    .scenarios-header {
-      display: flex; justify-content: space-between;
-      align-items: baseline; margin-bottom: 1.5rem;
-      flex-wrap: wrap; gap: 0.5rem;
-    }
-    .scenarios-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.25em;
-      text-transform: uppercase; color: rgba(201,168,76,0.6);
-      font-weight: 400;
-    }
-    .scenarios-all {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--gold);
-      text-decoration: none; opacity: 0.8;
-    }
-    .scenarios-all:hover { opacity: 1; }
-    .scenarios-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1px; background: rgba(255,255,255,0.06);
-    }
-    @media(min-width:640px){ .scenarios-grid { grid-template-columns: 1fr 1fr; } }
-    @media(min-width:960px){ .scenarios-grid { grid-template-columns: repeat(3,1fr); } }
-    .sc-card {
-      background: rgba(27,42,74,0.5); padding: 1.5rem;
-      text-decoration: none; color: inherit;
-      display: flex; flex-direction: column; gap: 0.5rem;
-      transition: background 0.2s;
-    }
-    .sc-card:hover { background: rgba(27,42,74,0.9); }
-    .sc-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.55rem; letter-spacing: 0.15em;
-      text-transform: uppercase; color: rgba(201,168,76,0.6);
-    }
-    .sc-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem; font-weight: 400;
-      color: var(--cream);
-    }
-    .sc-desc {
-      font-size: 0.85rem; color: rgba(245,240,232,0.5);
-      line-height: 1.7; flex: 1;
-    }
-    .sc-arrow { color: var(--gold); font-size: 1.1rem; }
-
-    /* ── STATES ── */
-    .states-section { background: var(--navy2); padding: 3rem 1.25rem; }
-    .states-inner { max-width: 960px; margin: 0 auto; }
-    .states-header {
-      display: flex; align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;
-    }
-    .states-subtitle-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: rgba(201,168,76,0.6); font-weight: 400;
-      margin-bottom: 0.4rem; display: block;
-    }
-    .states-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem; font-weight: 300;
-      color: rgba(245,240,232,0.95);
-    }
-    .states-all {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--gold);
-      text-decoration: none; opacity: 0.8;
-    }
-    .states-intro {
-      color: rgba(245,240,232,0.5); font-size: 0.88rem;
-      line-height: 1.8; max-width: 600px;
-      margin-bottom: 1.5rem;
-    }
-    .states-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1px; background: rgba(255,255,255,0.06);
-      margin-bottom: 1rem;
-    }
-    .state-card {
-      background: rgba(27,42,74,0.6); padding: 1.25rem 1.5rem;
-      text-decoration: none; display: block;
-      transition: background 0.2s;
-    }
-    .state-card:hover { background: rgba(27,42,74,0.95); }
-    .state-abbr {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem; color: var(--gold);
-      font-weight: 300; line-height: 1; margin-bottom: 0.5rem;
-    }
-    .state-name {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem; letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(201,168,76,0.7); margin-bottom: 0.3rem;
-    }
-    .state-desc {
-      font-size: 0.78rem;
-      color: rgba(245,240,232,0.4); line-height: 1.6;
-    }
-    .state-design-own {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.15em;
-      text-transform: uppercase; color: rgba(201,168,76,0.5);
-      text-decoration: none; display: block;
-      padding: 0.75rem 0; transition: color 0.2s;
-    }
-    .state-design-own:hover { color: var(--gold); }
-
-    /* ── DOWNLOAD ── */
-    .download { background: var(--cream2); padding: 2.5rem 1.25rem; }
-    .download-inner {
-      max-width: 760px; margin: 0 auto;
-      display: flex; align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap; gap: 1.25rem;
-    }
-    .download-text h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem; font-weight: 400;
-      color: var(--navy); margin-bottom: 0.3rem;
-    }
-    .download-text p {
-      font-size: 0.85rem; color: var(--muted);
-    }
-    .btn-download {
-      display: inline-flex; align-items: center;
-      padding: 0.75rem 1.5rem;
-      background: var(--navy); color: var(--cream);
-      text-decoration: none; font-size: 0.78rem;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      font-weight: 500; transition: background 0.2s;
-      min-height: 48px; white-space: nowrap;
-    }
-    .btn-download:hover { background: var(--navy2); }
-
-    @media (min-width: 600px) {
-      .paths-grid { grid-template-columns: 1fr 1fr; }
-      .scenarios-grid { grid-template-columns: 1fr 1fr; }
-      .states-grid { grid-template-columns: 1fr 1fr 1fr; }
-      .featured-card { display: grid; grid-template-columns: 1fr 1fr; }
-      .featured-quote { border-top: none; border-left: 1px solid rgba(255,255,255,0.06); }
-    }
-
-    /* ── DESKTOP (≥860px) ── */
-    @media (min-width: 860px) {
-      .hero-layout {
-        grid-template-columns: 1fr auto;
-        gap: 4rem;
-      }
-      .hero-seal-img { width: 260px; }
-      .hero-sub { font-size: 1.05rem; }
-      .featured { padding: 4rem 2rem; }
-      .paths { padding: 4rem 2rem; }
-      .paths-grid { grid-template-columns: repeat(4, 1fr); }
-      .advisor-callout { padding: 3rem 2rem; }
-      .scenarios { padding: 4rem 2rem; }
-      .scenarios-grid { grid-template-columns: repeat(3, 1fr); }
-      .states-section { padding: 4rem 2rem; }
-      .download { padding: 3rem 2rem; }
-    }
-
-    /* ── LARGE DESKTOP (≥1100px) ── */
-    @media (min-width: 1100px) {
-      .hero-seal-img { width: 300px; }
-      .hero-title { font-size: 4.2rem; }
-    }
-
-    /* ── MOBILE (≤600px) ── */
-    @media (max-width: 600px) {
-      .hero-track-sub { font-size: 0.65rem; letter-spacing: 0.06em; }
-      .hero-advisor-link { font-size: 0.72rem; }
-      .advisor-questions { margin-top: 1rem; }
-      .advisor-q { font-size: 0.78rem; padding: 0.5rem 0.75rem; }
-      .hero-actions { gap: 0.5rem; }
-      .btn-hero-primary, .btn-hero-ghost { padding: 0.65rem 1.1rem; font-size: 0.76rem; }
+    @media(max-width:640px){
+      .hero{padding:76px 1.25rem 40px}
+      .nav-bar-wrap{max-width:100%}
+      .featured-card{grid-template-columns:1fr}
+      .featured-quote{display:none}
     }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -574,153 +145,97 @@
   <main id="main-content" tabindex="-1">
 
   <!-- HERO -->
-  <section class="hero">
+  <!-- HERO -->
+  <section class="hero" id="main-content">
     <div class="hero-inner">
       <div class="hero-layout">
         <div class="hero-content">
-          <span class="hero-eyebrow">A Constitutional Project &nbsp;&middot;&nbsp; Twenty Articles</span>
+          <span class="hero-eyebrow">A Constitutional Project &nbsp;&middot;&nbsp; 177 Provisions &nbsp;&middot;&nbsp; 20 Articles</span>
           <h1 class="hero-title">What would a <em>better</em><br>republic look like?</h1>
-          <p class="hero-sub">A constitution built from first principles. Every right is a floor. Every power is a ceiling. Everything government does is on the permanent public record.</p>
-          <div class="hero-actions">
-            <div class="hero-track">
-              <a href="scenario-ordinary.html" class="btn-hero-primary">Start with a Scenario</a>
-              <span class="hero-track-sub">The system working under real pressure</span>
+          <p class="hero-sub">A constitution built from first principles. Ask anything. Explore everything.</p>
+
+          <div class="nav-bar-wrap">
+            <div class="nav-bar-row">
+              <input class="nav-bar-input" id="navQ" type="text" placeholder="Who controls foreign policy?" autocomplete="off" aria-label="Ask the constitution a question" />
+              <button class="nav-bar-btn" id="navBtn" onclick="runNav()" aria-label="Ask">Ask</button>
             </div>
-            <div class="hero-track">
-              <a href="annotated.html" class="btn-hero-ghost">Read the Constitution</a>
-              <span class="hero-track-sub">Every provision with its design rationale</span>
+            <div class="nav-chips">
+              <button class="nav-chip" onclick="setNav('What is the Legat Consul?')">Legat Consul</button>
+              <button class="nav-chip" onclick="setNav('How are judges selected?')">Judicial selection</button>
+              <button class="nav-chip" onclick="setNav('What is the NRS?')">NRS</button>
+              <button class="nav-chip" onclick="setNav('How does impeachment work?')">Impeachment</button>
+              <button class="nav-chip" onclick="setNav('What are the emergency powers?')">Emergency powers</button>
             </div>
           </div>
-          <a href="advisor.html" class="hero-advisor-link">Or ask the Constitutional Advisor a question &rarr;</a>
         </div>
         <div class="hero-seal-wrap">
-          <img src="seal.png" alt="The Federated Republic seal" class="hero-seal" width="340" height="340">
+          <img src="seal.png" alt="The Federated Republic seal" class="hero-seal-img" width="300" height="300">
         </div>
-      </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <div class="hero-scroll-line"></div>
-        <span>Scroll</span>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED STORY -->
+  <!-- NAVIGATOR RESULTS -->
+  <div class="nav-results-wrap" id="navResults" aria-live="polite">
+    <div class="nav-results-inner">
+      <div class="nav-loading" id="navLoading">
+        <div class="nav-spinner"></div>
+        <span>Searching the constitution&hellip;</span>
+      </div>
+      <div class="nav-result-body" id="navBody"></div>
+    </div>
+  </div>
+
+  <!-- START HERE -->
   <section class="featured">
     <div class="featured-inner">
       <span class="featured-label">Start Here &nbsp;&middot;&nbsp; An Introduction</span>
       <a href="scenario-ordinary.html" class="featured-card" aria-label="Read Ordinary Law — an introduction to the Federated Republic">
         <div class="featured-text">
-          <span class="featured-eyebrow">&#8776; 12 minute read &nbsp;&middot;&nbsp; Provisions: NRS &middot; Social State &middot; Asylum Court &middot; Monitors</span>
+          <span class="featured-eyebrow">&#8776; 12 minute read &nbsp;&middot;&nbsp; NRS &middot; Social State &middot; Asylum Court &middot; Monitors</span>
           <div class="featured-title">Ordinary Law</div>
-          <p class="featured-desc">Four people. One week. The Republic doing what it was designed to do — not a crisis, not a transition. A clinic coordinator. A backbench MP. A reporter. An asylum seeker. All in the same constitutional order on the same Thursday.</p>
-          <div class="featured-chars">
-            <span class="char-chip">Mara &mdash; Clinic coordinator</span>
-            <span class="char-chip">James &mdash; Backbench MP</span>
-            <span class="char-chip">Dena &mdash; Reporter</span>
-            <span class="char-chip">Selin &mdash; Asylum seeker, Day 23</span>
-          </div>
-          <span class="featured-read">Read the story &rarr;</span>
+          <p class="featured-desc">Four people. One week. The Republic doing what it was designed to do — not a crisis, not a transition. The constitutional system on a normal Thursday.</p>
+          <span class="featured-read">Read the scenario &rarr;</span>
         </div>
         <div class="featured-quote">
-          <blockquote>
-            &ldquo;His phone produced 340 notifications over the following six hours. He read none of them. He had said what he meant to say, and the record had it.&rdquo;
-          </blockquote>
+          <blockquote>&ldquo;His phone produced 340 notifications over the following six hours. He read none of them. He had said what he meant to say, and the record had it.&rdquo;</blockquote>
           <cite>The National Record System &middot; Permanent &middot; Public &middot; Unalterable</cite>
         </div>
       </a>
     </div>
   </section>
 
-  <!-- GO DEEPER -->
+  <!-- EXPLORE -->
   <section class="paths">
     <div class="paths-inner">
-      <h2 class="paths-label">Go Deeper</h2>
+      <h2 class="paths-label">Explore</h2>
       <div class="paths-grid">
         <a href="annotated.html" class="path-card">
           <span class="path-icon">Read It</span>
-          <div class="path-title">The Annotated Constitution</div>
-          <p class="path-desc">Every major provision with the design rationale. Click any navy underlined text to see why that choice was made. Twenty articles. Interactive.</p>
+          <div class="path-title">Annotated Constitution</div>
+          <p class="path-desc">Every provision with its design rationale. Click any navy text for the reasoning behind each choice.</p>
         </a>
-        
         <a href="scenarios.html" class="path-card">
           <span class="path-icon">Test It</span>
-          <div class="path-title">The Scenario Library</div>
-          <p class="path-desc">30 scenarios — from ordinary governance to economic collapse to indigenous sovereignty compacts. The document under real pressure.</p>
+          <div class="path-title">Scenario Library</div>
+          <p class="path-desc">30 scenarios — ordinary governance to constitutional crisis. The document under real pressure.</p>
         </a>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- ADVISOR -->
-  <section class="advisor-callout">
-    <div class="advisor-inner">
-      <div class="advisor-text">
-        <span class="advisor-tag">AI-Powered &middot; Constitutional Advisor</span>
-        <div class="advisor-title">Ask the Constitution a Question</div>
-        <p class="advisor-desc">The Advisor has the full text of the Federated Republic Constitution. Ask it anything — which provisions apply, how they interact, what the constitution requires.</p>
-        <div class="advisor-questions">
-          <a href="advisor.html?q=Can+the+Legat+Consul+suspend+habeas+corpus+during+a+declared+emergency%3F+What+are+the+absolute+limits%3F" class="advisor-q">Can the Legat Consul suspend habeas corpus during an emergency?</a>
-          <a href="advisor.html?q=The+PM+loses+a+constructive+no-confidence+vote+by+one+seat.+Walk+me+through+what+happens+next." class="advisor-q">What happens when the Civic Consul loses a no-confidence vote?</a>
-          <a href="advisor.html?q=Two+Legat+Consul+candidates+finish+0.29+percentage+points+apart+on+the+combined+score.+What+happens%3F" class="advisor-q">What triggers a Legat Consul runoff?</a>
-          <a href="advisor.html?q=A+Monitor+General+dies+mid-term.+Walk+me+through+the+%C2%A79.1.d+acting+mechanism+step+by+step." class="advisor-q">How does the §9.1.d acting mechanism work when a Monitor General dies mid-term?</a>
-          <a href="advisor.html?q=Both+executives+are+acting+within+their+constitutional+domains+but+their+actions+are+incompatible.+What+is+the+Coordination+Failure+Protocol%3F" class="advisor-q">What happens when both executives are right but their actions conflict?</a>
-        </div>
-      </div>
-      <a href="advisor.html" class="btn-advisor">Open Advisor &rarr;</a>
-    </div>
-  </section>
-
-  <!-- SCENARIOS -->
-  <section class="scenarios">
-    <div class="scenarios-inner">
-      <div class="scenarios-header">
-        <h2 class="scenarios-label">From the Scenario Library</h2>
-        <a href="scenarios.html" class="scenarios-all">All scenarios &rarr;</a>
-      </div>
-      <div class="scenarios-grid">
-        <a href="scenario-coordination-failure.html" class="sc-card">
-          <span class="sc-tag">Dual Executive &middot; §2.14.a</span>
-          <div class="sc-title">The Stalemate</div>
-          <p class="sc-desc">Both executives are acting within their constitutional domains. Their actions are materially incompatible. Neither will yield. The Coordination Failure Protocol activates.</p>
-          <span class="sc-arrow">&rarr;</span>
+        <a href="glossary.html" class="path-card">
+          <span class="path-icon">Look It Up</span>
+          <div class="path-title">Glossary</div>
+          <p class="path-desc">Every defined term — what it means, where it appears, and why the design choice matters.</p>
         </a>
-        <a href="scenario-void-exception.html" class="sc-card">
-          <span class="sc-tag">Constitutional Amendment &middot; §17.3 &middot; §1.11</span>
-          <div class="sc-title">The Void Exception</div>
-          <p class="sc-desc">A constitutional amendment ratified by every required threshold includes a 90-day habeas carve-out. The SC applies the amendment — and voids only the carve-out. The first use of the entrenchment clause.</p>
-          <span class="sc-arrow">&rarr;</span>
+        <a href="diagrams.html" class="path-card">
+          <span class="path-icon">See It</span>
+          <div class="path-title">Diagrams</div>
+          <p class="path-desc">Visual maps of the dual executive, amendment paths, monitor system, and more.</p>
         </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- DOWNLOAD -->
-  <section class="download">
-    <div class="download-inner">
-      <div class="vault-box">
-        <div class="vault-specs">
-          <span class="vault-eyebrow">Constitutional Document</span>
-          <h2 class="vault-title">The Federated Republic</h2>
-          <p class="vault-meta">Twenty articles &nbsp;&middot;&nbsp; 177 provisions &nbsp;&middot;&nbsp; 30 scenarios tested</p>
-          <div class="vault-details">
-            <span class="vault-detail">Written from first principles</span>
-            <span class="vault-sep">&middot;</span>
-            <span class="vault-detail">Full cross-reference index</span>
-            <span class="vault-sep">&middot;</span>
-            <span class="vault-detail">PDF format</span>
-          </div>
-        </div>
-        <div class="vault-actions">
-          <a href="constitution-current.pdf" class="btn-download-vault" download>Formal Document (PDF)</a>
-          <a href="annotated.html" class="btn-read-vault">Read Online &rarr;</a>
-        </div>
       </div>
     </div>
   </section>
 
   </main>
+
 
   <footer>
     <span class="footer-logo">The Federated Republic</span>
@@ -755,6 +270,58 @@
         menu.setAttribute('aria-hidden', 'true');
       }
     });
+  </script>
+
+  <script>
+    const NAV_SYSTEM = `You are the Constitution Navigator for the Federated Republic — a constitutional republic with 177 provisions across 20 Articles. When someone asks about a position, power, provision, or concept, return a JSON object with this exact structure: {"summary":"3-4 sentence plain-language explanation.","provisions":[{"num":"§2.1","name":"The Legat Consul — Domain and Term","relevance":"One sentence on relevance."}],"scenarios":[{"title":"The Alliance Clause","file":"scenario-alliance-clause.html","relevance":"One sentence on relevance."}]}. Return only the JSON — no preamble, no markdown fences. Key facts: DUAL EXECUTIVE: Legat Consul (LC) handles foreign policy, defense, trade, immigration (§2.1-§2.4). Civic Consul (CC) handles domestic governance, budget, legislation (§2.5-§2.10). LEGISLATURE: Assembly (lower) and Senate (upper). Senate ratifies treaties at 2/3 (§3.6). JUDICIARY: Supreme Court 7 justices from Judicial Pool. Nominations by CC; Senate confirmation (§4.1-§4.5). MONITORS: Legislative (LM), Electoral (EM), Judicial (JM), Economic (MA) — independent, Monitor Generals by lottery (§9.1-§9.14). NRS: National Record System — all official acts public (Article X). RIGHTS: Article I individual sovereignty floor. EMERGENCY: Both executives jointly or one with 2/3 chamber consent (§1.19). AMENDMENT: 2/3 both chambers + 2/3 state legislatures (Article XVII). SOCIAL STATE: Universal healthcare, social assistance, free education (§12.1). IMMIGRATION: Two-stage federal certification system; removals require judicial process (§6.1-§6.2). Key scenarios: Ordinary Law (scenario-ordinary.html), The Stalemate (scenario-coordination-failure.html), The Alliance Clause (scenario-alliance-clause.html), The Objection (scenario-the-objection.html), The Direction (scenario-the-direction.html), The Formation (scenario-formation.html), The Recall (scenario-recall.html), The First Nomination (scenario-first-nomination.html), The Critical Finding (scenario-critical-finding.html), The Grounds Review (scenario-sdp-removal.html), The Deadlock (scenario-deadlock.html), Grounds (scenario-grounds.html), The Second Declaration (scenario-second-declaration.html), The Automatic Floor (scenario-automatic-floor.html), The Finality Act (scenario-finality-act.html), The Void Exception (scenario-void-exception.html), The Order (scenario-the-order.html), The Organized Third (scenario-organized-third.html), The Return (scenario-the-return.html).`;
+
+    function setNav(t){ document.getElementById('navQ').value=t; document.getElementById('navQ').focus(); }
+    document.getElementById('navQ').addEventListener('keydown',function(e){if(e.key==='Enter')runNav();});
+
+    async function runNav(){
+      const q=document.getElementById('navQ').value.trim();
+      if(!q)return;
+      const wrap=document.getElementById('navResults');
+      const loading=document.getElementById('navLoading');
+      const body=document.getElementById('navBody');
+      const btn=document.getElementById('navBtn');
+      wrap.classList.add('open');
+      loading.classList.add('visible');
+      body.innerHTML='';
+      btn.disabled=true;
+      try{
+        const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:900,system:NAV_SYSTEM,messages:[{role:'user',content:q}]})});
+        const data=await res.json();
+        const raw=data.content?.[0]?.text||'';
+        let p;
+        try{p=JSON.parse(raw.replace(/```json|```/g,'').trim());}catch(e){throw new Error('parse');}
+        let html=`<p class="nav-summary">${p.summary||''}</p>`;
+        if(p.provisions?.length){
+          html+=`<p class="nav-section-label">Provisions</p><div class="nav-prov-list">`;
+          p.provisions.forEach(v=>{const a=(v.num||'').replace('§','').replace(/\./g,'-');html+=`<div class="nav-prov"><div class="nav-prov-num">${v.num||''}</div><div class="nav-prov-name">${v.name||''}</div><div class="nav-prov-note">${v.relevance||''}</div><a class="nav-prov-link" href="annotated.html#s${a}">Read in Annotated Edition &rarr;</a></div>`;});
+          html+=`</div>`;
+        }
+        if(p.scenarios?.length){
+          html+=`<p class="nav-section-label">Related Scenarios</p><div class="nav-scen-list">`;
+          p.scenarios.forEach(s=>{html+=`<a class="nav-scen" href="${s.file||'#'}"><div class="nav-scen-icon">&blacktriangleright;</div><div><div class="nav-scen-title">${s.title||''}</div><div class="nav-scen-note">${s.relevance||''}</div></div></a>`;});
+          html+=`</div>`;
+        }
+        html+=`<div class="nav-close"><button class="nav-close-btn" onclick="closeNav()">Close &times;</button></div>`;
+        body.innerHTML=html;
+      }catch(err){
+        body.innerHTML=`<p style="color:var(--muted);font-size:0.85rem;padding:0.5rem 0">Something went wrong — try again.</p><div class="nav-close"><button class="nav-close-btn" onclick="closeNav()">Close &times;</button></div>`;
+      }finally{
+        loading.classList.remove('visible');
+        btn.disabled=false;
+        document.getElementById('navResults').scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    }
+
+    function closeNav(){
+      document.getElementById('navResults').classList.remove('open');
+      document.getElementById('navBody').innerHTML='';
+      document.getElementById('navQ').value='';
+    }
   </script>
 
   <script>
