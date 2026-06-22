@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Annotated Constitution — The Federated Republic</title>
-  <meta name="description" content="The Constitution of the Federated Republic with inline annotations, design rationale, and plain-language explanations of every major provision."
+  <meta name="description" content="The Constitution of the Federated Republic with inline annotations, design rationale, and plain-language explanations of every major provision.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Annotated Constitution">
   <meta property="og:description" content="The Constitution of the Federated Republic with inline annotations, design rationale, and plain-language explanations of every major provision.">
@@ -12,18 +12,15 @@
   <meta property="og:site_name" content="The Federated Republic">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Annotated Constitution">
-  <meta name="twitter:description" content="The Constitution of the Federated Republic with inline annotations, design rationale, and plain-language explanations of every major provision.">>
+  <meta name="twitter:description" content="The Constitution of the Federated Republic with inline annotations, design rationale, and plain-language explanations of every major provision.">
   <style>
     html{scroll-padding-top:72px}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover{color:var(--gold)}
+
+    /* ── LAYOUT ── */
     .layout{display:block;min-height:100vh;padding-top:56px}
     .sidebar{display:none}
-    
-    
-    
-    
+
+    /* ── DOC HEADER ── */
     .doc-header{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
     .doc-header h1{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:400;color:var(--navy);margin-bottom:0.5rem}
     .doc-header p{color:var(--muted);font-size:0.88rem;line-height:1.7}
@@ -33,6 +30,8 @@
     .ls-term{background:rgba(201,168,76,0.55)}
     .ls-design{background:rgba(27,42,74,0.4)}
     .ls-ref{background:rgba(80,120,80,0.5)}
+
+    /* ── PROVISION STYLES ── */
     .article-section{margin-bottom:3rem;scroll-margin-top:72px}
     .article-header{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);padding-bottom:0.4rem;border-bottom:2px solid var(--navy);margin-bottom:0.2rem}
     .article-subtitle{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
@@ -51,7 +50,8 @@
     .tooltip-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--navy)}
     .tooltip-wrap:hover .tooltip-box{opacity:1}
     .tooltip-ref{font-size:0.66rem;color:var(--gold);margin-top:0.3rem;display:block;font-family:'JetBrains Mono',monospace}
-    
+
+    /* ── PANEL ── */
     .panel-wrap{padding:1.25rem 1rem 4rem;position:sticky;top:70px;max-height:calc(100vh - 80px);overflow-y:auto}
     .panel-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;text-align:center;color:var(--muted);font-size:0.83rem;border:1px dashed var(--border);padding:1.5rem;margin-top:1rem}
     .panel-empty-icon{font-size:1.5rem;margin-bottom:0.6rem;opacity:0.35}
@@ -60,166 +60,54 @@
     .panel-card.visible{display:block}
     .panel-section{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem}
     .panel-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.9rem;line-height:1.35}
-    .panel-
+    .panel-body{font-size:0.88rem;line-height:1.75;color:var(--text)}
     .panel-body p:last-child{margin-bottom:0}
     .panel-ref{font-size:0.72rem;color:var(--muted);margin-top:0.9rem;padding-top:0.7rem;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace}
     .panel-close{display:block;margin-top:0.9rem;font-size:0.7rem;color:var(--muted);cursor:pointer;text-align:right;letter-spacing:0.08em;text-transform:uppercase}
     .panel-close:hover{color:var(--navy)}
-    
-    /* ── Minimap scenario links ── */
+
+    /* ── MINIMAP ── */
     .minimap-scenarios{display:none;border-top:1px solid rgba(201,168,76,0.15);margin-top:0.5rem;padding-top:0.6rem}
     .mms-label{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.35);display:block;padding:0 1rem 0.4rem}
     .mms-link{display:block;padding:0.3rem 1rem;text-decoration:none;transition:background 0.15s;border-left:2px solid transparent}
     .mms-link:hover{background:rgba(255,255,255,0.06);border-left-color:rgba(201,168,76,0.4)}
     .mms-title{display:block;font-size:0.66rem;color:rgba(245,240,232,0.65);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .mms-tag{display:block;font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(201,168,76,0.35);margin-top:0.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    /* Mobile minimap close button */
-    .minimap-close{display:block;position:absolute;top:0.75rem;right:0.75rem;background:none;border:none;color:rgba(201,168,76,0.5);font-size:1.1rem;cursor:pointer;padding:4px;line-height:1}
+    .minimap-close{display:none;position:absolute;top:0.75rem;right:0.75rem;background:none;border:none;color:rgba(201,168,76,0.5);font-size:1.1rem;cursor:pointer;padding:4px;line-height:1;-webkit-appearance:none;appearance:none}
     .minimap-close:hover{color:var(--gold)}
-    
-    @media(max-width:1366px){}
-    @media(max-width:820px){
-    /* Layout */
-    .layout{grid-template-columns:1fr}
-    aside{display:block}
-    .panel-wrap{display:none}
-    /* Nav */
-    /* Page wrap */
-    .page-wrap{padding:76px 1.25rem 60px}
-    /* Typography — reduce title to fit mobile width */
-    .doc-header h1{font-size:1.35rem;line-height:1.3}
-    /* Hide desktop-only hover/legend instructions */
-    .doc-hover-instructions{display:none}
-    .legend{display:none}
-    /* Article headings */
-    .article-heading{font-size:1.4rem}
-  }
-  
-    /* ══ MOBILE RESPONSIVE ══ */
-    .mobile-menu a:last-child{border-bottom:none}
-    .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
-    .mobile-menu.open{display:flex}
-    
-    
-  
-    /* ── Accessibility ── */
-    :focus-visible{outline:2px solid #7A5800;outline-offset:3px;border-radius:2px}
-    a:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
-    button:focus-visible{outline:2px solid #7A5800;outline-offset:3px}
-    .hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-  
-    .prov-permalink{
-      display:inline-block;
-      opacity:0;
-      margin-left:0.3em;
-      font-size:0.75em;
-      color:var(--gold);
-      transition:opacity 0.15s;
-      vertical-align:middle;
-      user-select:none;
-    }
-    .prov-num:hover .prov-permalink{opacity:1}
-    .prov-num.copied{color:var(--gold)}
-    .prov-num.copied .prov-permalink{opacity:1;content:'✓'}
-    .copy-toast{
-      position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);
-      background:var(--navy);color:var(--gold);
-      font-family:'JetBrains Mono',monospace;font-size:0.7rem;
-      letter-spacing:0.1em;padding:0.5rem 1.25rem;
-      opacity:0;transition:opacity 0.2s;pointer-events:none;z-index:999;
-    }
-    .copy-toast.show{opacity:1}
-    
-    
-    #searchResults .sr-item{
-      padding:0.6rem 0.85rem;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.06);
-      transition:background 0.15s;
-    }
-    #searchResults .sr-item:hover{background:rgba(201,168,76,0.1)}
-    #searchResults .sr-section{
-      font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);
-      letter-spacing:0.1em;margin-right:0.5rem;
-    }
-    #searchResults .sr-name{font-size:0.85rem;color:rgba(245,240,232,0.9)}
-    #searchResults .sr-text{font-size:0.75rem;color:rgba(245,240,232,0.45);margin-top:0.2rem;
-      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-    #searchResults .sr-none{padding:0.75rem 0.85rem;color:rgba(245,240,232,0.4);
-      font-size:0.82rem;font-style:italic;}
-    
-
-    
-    /* ── ARTICLE MINI-MAP ── */
     .minimap{will-change:transform;position:fixed;top:56px;left:0;width:220px;height:calc(100vh - 56px);overflow-y:auto;background:rgba(27,42,74,0.97);border-right:1px solid rgba(201,168,76,0.15);padding:1.25rem 0;z-index:300;scrollbar-width:thin;scrollbar-color:rgba(201,168,76,0.3) transparent;display:flex;flex-direction:column;transform:translateX(-100%);transition:transform 0.25s ease}
     .minimap-title{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(201,168,76,0.5);padding:0 1rem 0.75rem;flex-shrink:0}
     .minimap a{display:block;padding:0.28rem 1rem;font-size:0.68rem;color:rgba(245,240,232,0.35);text-decoration:none;letter-spacing:0.02em;transition:color 0.15s,background 0.15s;line-height:1.35;border-left:2px solid transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .minimap a:hover{color:rgba(245,240,232,0.75);background:rgba(255,255,255,0.05)}
     .minimap a.active{color:var(--gold);border-left-color:var(--gold);background:rgba(201,168,76,0.08)}
-    @media(max-width:1366px){.minimap{will-change:transform;display:none}.minimap.open{display:flex;z-index:201;box-shadow:4px 0 20px rgba(0,0,0,0.4)}.minimap-close{display:block}}
-    @media(min-width:1367px){body.has-minimap .page-wrap{margin-left:170px}}
-  
-    
-    
-    .search-fab:hover{border-color:var(--gold);background:var(--navy2)}
-    @media(max-width:1366px){
-      
-    }
-  
-    .search-fab-text{display:inline}
-    @media(max-width:1366px){
-      }
-    @media(min-width:820px){
-      }
-  
-    
-    
-    
-    
-    
-    
-
-    /* Drawer overlay */
-    
-    
-
-    /* Open state */
     .minimap.open{transform:translateX(0)}
-    
-    .main{
-      max-width:900px;
-      margin:0 auto;
-      padding:3rem 2rem 6rem;
+    @media(max-width:1366px){
+      .minimap{display:none}
+      .minimap.open{display:flex;z-index:301;box-shadow:4px 0 20px rgba(0,0,0,0.4)}
+      .minimap-close{display:block}
     }
-    @media(max-width:1024px){
+    @media(min-width:1367px){body.has-minimap .page-wrap{margin-left:170px}}
+
+    /* ── PERMALINK / COPY TOAST ── */
+    .prov-permalink{display:inline-block;opacity:0;margin-left:0.3em;font-size:0.75em;color:var(--gold);transition:opacity 0.15s;vertical-align:middle;user-select:none}
+    .prov-num:hover .prov-permalink{opacity:1}
+    .prov-num.copied{color:var(--gold)}
+    .prov-num.copied .prov-permalink{opacity:1}
+    .copy-toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);background:var(--navy);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;padding:0.5rem 1.25rem;opacity:0;transition:opacity 0.2s;pointer-events:none;z-index:999}
+    .copy-toast.show{opacity:1}
+
+    /* ── MAIN CONTENT ── */
+    .main{max-width:900px;margin:0 auto;padding:3rem 2rem 6rem}
+    @media(max-width:820px){
       .main{padding:2rem 1.5rem 5rem}
+      .panel-wrap{display:none}
+      .doc-header h1{font-size:1.35rem;line-height:1.3}
+      .doc-hover-instructions{display:none}
+      .legend{display:none}
     }
     @media(max-width:640px){
       .main{padding:1.5rem 1rem 5rem}
     }
-  
-    /* ── MINIMAP OVERLAY ── */
-    
-    
-    .minimap.open{transform:translateX(0)!important}
-    @media(max-width:1200px){
-      nav.minimap{transform:translateX(-110%);transition:transform 0.25s;position:fixed;top:0;bottom:0;left:0;z-index:300;overflow-y:auto;background:var(--navy);width:220px;padding:4rem 1rem 2rem}
-    }
-
-    /* ── SEARCH OVERLAY ── */
-    
-    .search-overlay.open{display:flex}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
   </style>
   <script src="search-index.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -234,42 +122,30 @@
   <nav>
   <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
   <div class="nav-links">
-    <a href="annotated.html" class="active">Annotated Edition</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="constitutional-history.html">Constitutional History</a>
-    <a href="sources.html">Sources</a>
-    <a href="glossary.html">Glossary</a>
-    <span class="nav-sep" aria-hidden="true"></span>
-    <a href="advisor.html" class="nav-tool">Advisor</a>
-    <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+      <a href="annotated.html" class="active">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
   </div>
   <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
-  <!-- Search overlay -->
-  <div id="searchWrap" style="position:fixed;top:56px;left:0;right:0;z-index:190;background:rgba(27,42,74,0.98);border-bottom:1px solid rgba(201,168,76,0.2);padding:0.6rem 1.5rem;display:none;">
-    <div style="max-width:780px;margin:0 auto;position:relative;">
-      <input id="searchInput" type="text" placeholder="Search provisions — § number, keyword, or concept…"
-        autocomplete="off" oninput="runSearch(this.value)" spellcheck="false"
-        style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.3);color:rgba(245,240,232,0.9);font-family:'Jost',sans-serif;font-size:0.9rem;padding:0.5rem 2.5rem 0.5rem 0.85rem;outline:none;letter-spacing:0.02em;">
-      <button onclick="closeSearch()" aria-label="Close"
-        style="position:absolute;right:0.5rem;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(245,240,232,0.4);font-size:1.1rem;cursor:pointer;">✕</button>
-    </div>
-    <div id="searchResults" style="max-width:780px;margin:0.4rem auto 0;max-height:55vh;overflow-y:auto;"></div>
-  </div>
-
   <button id="searchBtn" onclick="openSearch()" aria-label="Search constitution" class="search-fab"><span aria-hidden="true">⌕</span></button>
 
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
-    <a href="glossary.html">Glossary</a>
     <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
   <span class="menu-divider" aria-hidden="true"></span>
   <a href="advisor.html">Advisor</a>
   <a href="contact.html">Contact</a>

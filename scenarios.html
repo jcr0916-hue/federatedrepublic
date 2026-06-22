@@ -54,7 +54,7 @@
     .accordion.open .accordion-chevron{transform:rotate(180deg)}
     .accordion-desc{padding:0 1.25rem;font-size:0.85rem;color:var(--muted);line-height:1.65;max-height:0;overflow:hidden;transition:max-height 0.25s ease,padding 0.25s}
     .accordion.open .accordion-desc{max-height:60px;padding-bottom:0.75rem}
-    .accordion-.accordion.open .accordion-.scenario-grid{display:flex;flex-direction:column;border-top:1px solid var(--border)}
+    .accordion-body{display:flex;flex-direction:column;border-top:1px solid var(--border)}
     .scenario-entry{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.25rem;text-decoration:none;border-bottom:1px solid rgba(212,201,176,0.4);transition:background 0.15s;background:rgba(255,255,255,0.3)}
     .scenario-entry:hover{background:rgba(255,255,255,0.8)}
     .scenario-entry:last-child{border-bottom:none}
@@ -97,36 +97,40 @@
   <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
       <div class="nav-links">
       <a href="annotated.html">Annotated Edition</a>
-      <a href="scenarios.html">Scenarios</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
       <a href="diagrams.html">Diagrams</a>
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="sources.html">Sources</a>
       <a href="glossary.html">Glossary</a>
-    </div>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
   <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
-    <span class="menu-divider" aria-hidden="true"></span>
-    <a href="advisor.html">Advisor</a>
-    <a href="contact.html">Contact</a>
-    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
-  </div>
+  <span class="menu-divider" aria-hidden="true"></span>
+  <a href="advisor.html">Advisor</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
 
 <div class="page-header" id="main-content">
   <div class="page-header-inner">
     <h1>The Scenario Library</h1>
     <p>Constitutional provisions under pressure — from ordinary governance to institutional crisis. Start with the featured scenarios below. They give the fullest picture of how the system works and why it was designed this way.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><strong>30</strong>Total scenarios</div>
+      <div class="hero-stat"><strong>25</strong>Total scenarios</div>
       <div class="hero-stat"><strong>9</strong>Categories</div>
       <div class="hero-stat"><strong>71</strong>Provisions tested</div>
     </div>
@@ -167,7 +171,7 @@
 
   <!-- LIBRARY ACCORDION -->
   <section class="library-section fr-page" aria-labelledby="library-label">
-    <h2 class="library-heading" id="library-label">All 25 Scenarios by Category</h2>
+    <h2 class="library-heading" id="library-label">All 30 Scenarios by Category</h2>
 
     <div class="scenario-grid">
       <div class="scenario-category">

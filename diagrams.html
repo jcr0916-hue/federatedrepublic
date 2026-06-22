@@ -22,7 +22,8 @@
     .page-hero p{color:rgba(245,240,232,0.6);max-width:560px;margin:0 auto;font-size:0.95rem}
 
     /* TAB NAV */
-    .tab-
+    .tab-nav{display:flex;overflow-x:auto;border-bottom:1px solid rgba(201,168,76,0.2);background:var(--navy2);padding:0 2rem;scrollbar-width:none}
+    .tab-nav::-webkit-scrollbar{display:none}
     .tab-nav::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
     .tab-btn{padding:0.9rem 0.7rem;background:none;border:none;color:rgba(245,240,232,0.5);font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:color 0.2s;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;flex-shrink:0}
     .tab-btn:hover{color:rgba(245,240,232,0.8)}
@@ -428,7 +429,6 @@
     
   
     /* ── Accessibility ── */
-    abutton.hamburger.diagram-
     .diagram-scenarios{display:flex;flex-wrap:wrap;gap:0.5rem;flex:1;min-width:0}
     .diagram-footer-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:0.4rem;width:100%}
     .diagram-sc-link{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.3rem 0.75rem;text-decoration:none;letter-spacing:0.04em;white-space:nowrap;transition:background 0.15s}
@@ -437,7 +437,7 @@
     .diagram-advisor-link{font-size:0.78rem;color:rgba(201,168,76,0.6);text-decoration:none;border:1px solid rgba(201,168,76,0.2);padding:0.4rem 0.85rem;white-space:nowrap;transition:border-color 0.15s,color 0.15s;align-self:flex-start;flex-shrink:0;font-family:'Jost',sans-serif}
     .diagram-advisor-link:hover{border-color:var(--gold);color:var(--gold)}
     .diagram-advisor-link::before{content:"\2197  ";font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:rgba(201,168,76,0.4)}
-    @media(max-width:600px){.diagram-.diagram-advisor-link{width:100%;text-align:center}}
+    @media(max-width:600px){.diagram-advisor-link{width:100%;text-align:center}}
   
     /* ── Tier diagram additions ── */
     .tier-block{border:2px solid var(--border);background:var(--cream);margin-bottom:0;border-radius:0}
@@ -491,14 +491,15 @@
   
 
   @media(max-width:700px){
-    .imm-split{flex-direction:column
-    .tier-@media(max-width:760px){
-    .dual-columns{grid-template-columns:1fr
-    .amend-paths{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:1.5rem
-    .monitor-columns{grid-template-columns:1fr
-    .sc-principle{grid-template-columns:1fr
+    .imm-split{flex-direction:column}
   }
-</style>
+  @media(max-width:760px){
+    .dual-columns{grid-template-columns:1fr}
+    .amend-paths{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:1.5rem}
+    .monitor-columns{grid-template-columns:1fr}
+    .sc-principle{grid-template-columns:1fr}
+  }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -514,16 +515,20 @@
       <div class="nav-links">
       <a href="annotated.html">Annotated Edition</a>
       <a href="scenarios.html">Scenarios</a>
-      <a href="diagrams.html">Diagrams</a>
+      <a href="diagrams.html" class="active">Diagrams</a>
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="sources.html">Sources</a>
       <a href="glossary.html">Glossary</a>
-    </div>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
   <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
-    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>

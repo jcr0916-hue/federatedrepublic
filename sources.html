@@ -44,7 +44,7 @@
     .reading-entry:first-of-type{border-top:1px solid var(--border)}
     .reading-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:0.2rem}
 .reading-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:var(--gold);min-width:2rem;padding-top:0.3rem;opacity:0.7}
-    .reading-
+    .reading-body{flex:1;min-width:0}
     .reading-author{font-size:0.72rem;color:var(--gold);margin-bottom:0.5rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;text-transform:uppercase}
     .reading-note{font-size:0.9rem;color:var(--text);line-height:1.75}
 
@@ -92,14 +92,18 @@
       <a href="scenarios.html">Scenarios</a>
       <a href="diagrams.html">Diagrams</a>
       <a href="constitutional-history.html">Constitutional History</a>
-      <a href="sources.html">Sources</a>
+      <a href="sources.html" class="active">Sources</a>
       <a href="glossary.html">Glossary</a>
-    </div>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
   <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
-    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>

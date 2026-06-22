@@ -23,7 +23,7 @@
     .hero-inner{max-width:600px;margin:0 auto}
     .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
     .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:1rem}
-    .hero-
+    .hero-sub{color:rgba(245,240,232,0.55);font-size:0.9rem;line-height:1.8;max-width:480px}
 
     .contact-item{display:flex;flex-direction:column;gap:0.3rem;padding:1.75rem 0;border-bottom:1px solid var(--border)}
     .contact-item:last-child{border-bottom:none}
@@ -50,23 +50,27 @@
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="sources.html">Sources</a>
       <a href="glossary.html">Glossary</a>
-    </div>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
     <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
-  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
-    <span class="menu-divider" aria-hidden="true"></span>
-    <a href="advisor.html">Advisor</a>
-    <a href="contact.html">Contact</a>
-    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
-  </div>
+  <span class="menu-divider" aria-hidden="true"></span>
+  <a href="advisor.html">Advisor</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
 
   <section class="hero">
     <div class="hero-inner">

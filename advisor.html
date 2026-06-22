@@ -4,19 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Constitutional Advisor — The Federated Republic</title>
-  <meta name="description" content="Pose a constitutional question. The Advisor has the full text of the Federated Republic Constitution — 178 provisions, 20 articles. Ask which provisions apply, how they interact, and what the constitution requires.">
+  <meta name="description" content="Pose a constitutional question. The Advisor has the full text of the Federated Republic Constitution — 177 provisions, 20 articles. Ask which provisions apply, how they interact, and what the constitution requires.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Constitutional Advisor — The Federated Republic">
-  <meta property="og:description" content="Ask the Constitution a question. 178 provisions, cited inline, linking directly to the annotated text.">
+  <meta property="og:description" content="Ask the Constitution a question. 177 provisions, cited inline, linking directly to the annotated text.">
   <meta property="og:url" content="https://thefederatedrepublic.org/advisor.html">
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    .nav-links{display:flex;align-items:center;gap:0.15rem}
-    .nav-links a{color:rgba(245,240,232,0.55);text-decoration:none;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.3rem 0.55rem;transition:color 0.2s;white-space:nowrap}
-    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-    .mobile-menu a{color:rgba(245,240,232,0.8);text-decoration:none;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.85rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.05);display:block;transition:color 0.2s}
-    .mobile-menu a:hover{color:var(--gold)}
-
     /* ── PAGE HERO ── */
     .page-hero{background:var(--navy2);padding:88px 2rem 3rem;border-bottom:1px solid rgba(201,168,76,0.2)}
     .page-hero-inner{max-width:720px;margin:0 auto}
@@ -42,12 +35,12 @@
     /* ── INPUT ── */
     .input-section{margin-bottom:1.5rem}
     .input-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:0.75rem}
+    .input-footer{display:flex;align-items:center;gap:1rem;margin-top:0.75rem;flex-wrap:wrap}
+    .input-hint{font-size:0.7rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
     #question{width:100%;background:var(--white);border:1px solid var(--border);padding:1rem 1.25rem;font-size:0.98rem;font-family:'Jost',sans-serif;color:var(--text);line-height:1.7;resize:vertical;outline:none;transition:border-color 0.2s;min-height:120px;border-radius:2px}
     #question:focus{border-color:var(--gold)}
     #question::placeholder{color:#c8bfb0}
-    .input-
-    .input-hint{font-size:0.7rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
-    #submit-btn{background:var(--navy);color:var(--gold);border:none;padding:0.75rem 2rem;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;font-family:'Jost',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s,color 0.2s;min-height:48px}
+    #submit-btn{background:var(--navy);color:var(--gold);border:none;padding:0.75rem 2rem;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;font-family:'Jost',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s,color 0.2s;min-height:48px;-webkit-appearance:none;appearance:none}
     #submit-btn:disabled{background:var(--border);color:var(--muted);cursor:default}
     #submit-btn:not(:disabled):hover{background:var(--gold);color:var(--navy2)}
 
@@ -65,13 +58,14 @@
     #response-wrap{display:none;border-top:2px solid var(--navy);padding-top:2rem;margin-top:0.5rem}
     .response-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:center}
     .response-meta{color:var(--muted);font-size:0.6rem}
-    .response-
+    .response-body{font-size:0.95rem;line-height:1.85;color:var(--text)}
+    .response-body p{margin-bottom:1rem}
     .response-body p:last-child{margin-bottom:0}
+    .response-footer{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);display:flex;align-items:center;gap:1rem}
+    .response-footer-note{font-size:0.68rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
     .cite{color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.86em;font-weight:600;border-bottom:1px solid rgba(201,168,76,0.35);text-decoration:none;padding-bottom:1px;transition:border-color 0.15s}
     .cite:hover{border-color:var(--gold)}
-    .response-
-    .response-footer-note{font-size:0.68rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
-    #new-btn{background:none;border:1px solid var(--border);color:var(--muted);font-size:0.7rem;padding:0.4rem 0.9rem;cursor:pointer;font-family:'Jost',sans-serif;letter-spacing:0.08em;text-transform:uppercase;transition:border-color 0.15s,color 0.15s;min-height:44px}
+    #new-btn{background:none;border:1px solid var(--border);color:var(--muted);font-size:0.7rem;padding:0.4rem 0.9rem;cursor:pointer;font-family:'Jost',sans-serif;letter-spacing:0.08em;text-transform:uppercase;transition:border-color 0.15s,color 0.15s;min-height:44px;-webkit-appearance:none;appearance:none}
     #new-btn:hover{border-color:var(--gold);color:var(--gold)}
 
     /* ── ADVISOR NOTE ── */
@@ -79,16 +73,11 @@
     .advisor-note strong{color:var(--navy)}
 
     @media(max-width:820px){
-      .nav-links{display:none}
-    }
-      .nav-links{display:none}
       .page-hero{padding:76px 1.25rem 2rem}
       .page-wrap{padding:2rem 1.25rem 4rem}
       .vault-card{padding:0.75rem 1rem}
       #submit-btn{width:100%}
-      .input-
     }
-    
   </style>
 
   <script>
@@ -131,12 +120,16 @@
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="sources.html">Sources</a>
       <a href="glossary.html">Glossary</a>
-    </div>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="advisor.html" class="nav-tool active">Advisor</a>
+      <a href="scenario-ordinary.html" class="nav-cta">Start Here</a>
+  </div>
   <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
-    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="scenario-ordinary.html">&#9656; Start Here — Ordinary Law</a>
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
@@ -151,7 +144,7 @@
 
   <div class="page-hero" id="main-content">
     <div class="page-hero-inner">
-      <span class="page-tag">Constitutional Advisor · 178 provisions · 20 articles</span>
+      <span class="page-tag">Constitutional Advisor · 177 provisions · 20 articles</span>
       <h1 class="page-title">Ask the Constitution a Question</h1>
       <p class="page-desc">Describe any situation and see which provisions apply, how they interact, and what the constitution requires. Citations link directly to the annotated text.</p>
     </div>
@@ -203,7 +196,7 @@
     <div class="footer-inner">
       <a href="constitution-current.pdf" download class="footer-download">
         <div>
-          <span class="footer-download-meta">178 provisions · 20 articles</span>
+          <span class="footer-download-meta">177 provisions · 20 articles</span>
           <span class="footer-download-title">Constitution of the Federated Republic</span>
         </div>
         <span class="footer-download-btn">Download a copy</span>
@@ -238,7 +231,7 @@
       { category: "Amendment & Change", tags: ["§17.1","§13.2"], text: "A Path C amendment wins 73% affirmative but only 61% participation. What are the coalition's options?" },
       { category: "Removal & Accountability", tags: ["§9.14"], text: "The SC fails to publish its §9.14 grounds confirmation within 14 days. What happens constitutionally? Does duty suspension activate?" },
       { category: "Removal & Accountability", tags: ["§9.14"], text: "Two Monitors invoke the §9.14 Judicial Track against a Monitor General. The SC fails to rule within 30 days. What is the constitutional effect?" },
-      { category: "Formation & Continuity", tags: ["§2.6.a","§7.3"], text: "The Assembly has failed to elect a Civic Consul within the statutory period. The Senate cannot reach 2/3 for a designation after 45 days. Walk through what happens next and what can make the referendum moot." },
+      { category: "Formation & Continuity", tags: ["§2.6","§7.3"], text: "The Assembly has failed to elect a Civic Consul within the statutory period. The Senate cannot reach 2/3 for a designation after 45 days. Walk through what happens next and what can make the referendum moot." },
       { category: "Formation & Continuity", tags: ["§2.11","§2.9","§7.3"], text: "The Elections Panel is incapacitated on Election Day. What mechanism activates, who certifies it, and what body assumes administration?" },
       { category: "Territory & Statehood", tags: ["§15.2","§15.7"], text: "A Territory wants to merge with an adjacent State rather than pursue standalone statehood. What process applies?" },
           { category: "Emergency Powers", tags: ["§1.19.e","§1.19.b","§9.1.b"], text: "A 60-day emergency expires. Within 72 hours, a new emergency covers the same area and restricts the same rights under a different label. Walk through §1.19.e's relabeling bar and what the EM publishes." },
