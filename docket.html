@@ -17,78 +17,20 @@
     .msg{display:flex;gap:1rem;align-items:flex-start}
     .msg-court{flex-direction:row}
     .msg-user{flex-direction:row-reverse}
-    .msg-avatar{width:36px;height:36px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;font-weight:600;margin-top:2px}
+    .msg-avatar{width:36px;height:36px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;font-weight:600;margin-top:2px}
     .msg-court .msg-avatar{background:var(--navy);color:var(--gold)}
     .msg-user .msg-avatar{background:var(--cream2);color:var(--muted)}
-    .msg-bubble{max-width:88%;font-size:0.95rem;line-height:1.8;color:var(--text)}
-    .msg-court .msg-bubble{color:var(--navy)}
+    .msg-bubble{max-width:88%;font-size:0.95rem;line-height:1.8;color:var(--navy)}
     .msg-user .msg-bubble{color:var(--muted);font-style:italic}
 
-    /* ── INPUT ROW ── */
-    .input-row{display:flex;gap:0;border:1px solid var(--border);border-radius:2px;overflow:hidden;margin-bottom:0.5rem}
+    /* ── INPUT ── */
+    .input-row{display:flex;gap:0;border:1px solid var(--border);overflow:hidden;margin-bottom:0.5rem}
     .docket-input{flex:1;border:none;padding:0.85rem 1rem;font-family:'Jost',sans-serif;font-size:0.95rem;color:var(--text);background:var(--white);outline:none;min-width:0}
     .docket-input::placeholder{color:var(--muted)}
     .docket-send{background:var(--navy);color:var(--gold);border:none;padding:0 1.25rem;font-family:'JetBrains Mono',monospace;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;flex-shrink:0;transition:background 0.15s}
-    .docket-send:hover{background:var(--gold);color:var(--navy2)}
+    .docket-send:hover:not(:disabled){background:var(--gold);color:var(--navy2)}
     .docket-send:disabled{opacity:0.4;cursor:default}
     .input-hint{font-size:0.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em}
-
-    /* ── CASE FILE ── */
-    .case-file{border:1px solid var(--border);margin:2rem 0;background:var(--white)}
-    .case-header{background:var(--navy2);padding:1.25rem 1.5rem;border-bottom:1px solid rgba(201,168,76,0.2)}
-    .case-docket-num{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);display:block;margin-bottom:0.35rem}
-    .case-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:rgba(245,240,232,0.95);line-height:1.2;margin-bottom:0.5rem}
-    .case-provisions{display:flex;flex-wrap:wrap;gap:0.4rem}
-    .case-prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;background:rgba(201,168,76,0.15);color:var(--gold);padding:0.2rem 0.55rem;letter-spacing:0.06em}
-    .case-section{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)}
-    .case-section:last-child{border-bottom:none}
-    .case-section-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
-    .case-situation{font-size:0.92rem;line-height:1.85;color:var(--text)}
-    .case-situation p{margin-bottom:0.9rem}
-    .case-situation p:last-child{margin-bottom:0}
-    .arguments{display:grid;grid-template-columns:1fr 1fr;gap:0}
-    @media(max-width:640px){.arguments{grid-template-columns:1fr}}
-    .argument{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)}
-    .argument:first-child{border-right:1px solid var(--border)}
-    @media(max-width:640px){.argument:first-child{border-right:none}}
-    .arg-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.35rem;display:block}
-    .arg-label-claim{color:var(--blue,#1B4A7A)}
-    .arg-label-resp{color:var(--red,#9b2335)}
-    .arg-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:0.3rem}
-    .arg-position{font-size:0.82rem;color:var(--muted);font-style:italic;margin-bottom:0.85rem;line-height:1.6}
-    .arg-text{font-size:0.88rem;line-height:1.8;color:var(--text)}
-    .arg-text p{margin-bottom:0.75rem}
-    .arg-text p:last-child{margin-bottom:0}
-
-    /* ── VERDICT ── */
-    .verdict-section{padding:1.5rem;background:var(--cream2);border-top:2px solid var(--navy)}
-    .verdict-prompt{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy);margin-bottom:1rem;line-height:1.4}
-    .verdict-buttons{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
-    .verdict-btn{padding:0.65rem 1.25rem;border:1px solid var(--border);background:var(--white);color:var(--navy);font-family:'Jost',sans-serif;font-size:0.85rem;font-weight:500;cursor:pointer;transition:all 0.15s;border-radius:2px}
-    .verdict-btn:hover{border-color:var(--navy);background:var(--navy);color:var(--cream)}
-    .verdict-btn.selected{border-color:var(--navy);background:var(--navy);color:var(--gold)}
-    .verdict-submit{background:var(--gold);color:var(--navy2);border:none;padding:0.65rem 1.5rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;transition:background 0.15s}
-    .verdict-submit:hover{background:rgba(201,168,76,0.85)}
-    .verdict-submit:disabled{opacity:0.4;cursor:default}
-
-    /* ── OPINION ── */
-    .opinion-section{border:1px solid var(--border);margin:2rem 0;background:var(--white)}
-    .opinion-header{padding:1.25rem 1.5rem;border-bottom:2px solid var(--navy);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem}
-    .opinion-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
-    .opinion-result{display:flex;align-items:center;gap:0.75rem}
-    .result-badge{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;padding:0.25rem 0.75rem;font-weight:600}
-    .result-correct{background:rgba(45,106,79,0.12);color:#2d6a4f}
-    .result-wrong{background:rgba(155,35,53,0.12);color:#9b2335}
-    .opinion-body{padding:1.5rem}
-    .opinion-text{font-size:0.95rem;line-height:1.9;color:var(--text);margin-bottom:1.5rem}
-    .opinion-text p{margin-bottom:1rem}
-    .opinion-text p:last-child{margin-bottom:0}
-    .design-note{padding:1rem 1.25rem;background:rgba(27,42,74,0.05);border-left:3px solid var(--gold);font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
-    .provisions-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
-    .provision-text-card{border:1px solid var(--border);padding:1rem 1.25rem;margin-bottom:0.5rem}
-    .provision-text-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:0.2rem}
-    .provision-text-name{font-size:0.88rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
-    .provision-text-body{font-size:0.82rem;line-height:1.8;color:var(--text)}
 
     /* ── LOADING ── */
     .loading{display:none;align-items:center;gap:0.75rem;padding:1rem 0}
@@ -97,15 +39,73 @@
     @keyframes spin{to{transform:rotate(360deg)}}
     .loading-text{font-size:0.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em}
 
+    /* ── CASE FILE ── */
+    .case-file{margin:2rem 0}
+    .case-header{background:var(--navy2);padding:1.25rem 1.5rem;margin-bottom:0}
+    .case-docket-num{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.55);display:block;margin-bottom:0.35rem}
+    .case-title{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:400;color:rgba(245,240,232,0.95);line-height:1.2;margin-bottom:0.6rem}
+    .case-provisions{display:flex;flex-wrap:wrap;gap:0.4rem}
+    .case-prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.58rem;background:rgba(201,168,76,0.12);color:rgba(201,168,76,0.8);padding:0.2rem 0.55rem;letter-spacing:0.06em}
+
+    /* ── STAGES ── */
+    .stage{display:none;animation:fadeIn 0.4s ease}
+    .stage.visible{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+    .stage-section{border:1px solid var(--border);border-top:none;padding:1.5rem}
+    .stage-label{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;display:block;margin-bottom:0.75rem}
+    .label-facts{color:var(--muted)}
+    .label-claimant{color:#1B4A7A}
+    .label-respondent{color:#9b2335}
+    .label-verdict{color:var(--gold)}
+    .label-opinion{color:var(--navy)}
+
+    .party-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.2rem}
+    .party-position{font-size:0.82rem;color:var(--muted);font-style:italic;margin-bottom:1rem;line-height:1.6}
+    .stage-text{font-size:0.92rem;line-height:1.85;color:var(--text)}
+    .stage-text p{margin-bottom:0.85rem}
+    .stage-text p:last-child{margin-bottom:0}
+
+    /* ── STAGE DIVIDER ── */
+    .stage-divider{border:none;border-top:2px solid var(--navy);margin:0}
+
+    /* ── CTA BUTTON ── */
+    .stage-cta{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border)}
+    .stage-btn{background:var(--navy);color:var(--gold);border:none;padding:0.75rem 1.75rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;transition:background 0.15s;-webkit-appearance:none;appearance:none}
+    .stage-btn:hover{background:var(--gold);color:var(--navy2)}
+
+    /* ── VERDICT ── */
+    .verdict-prompt{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;line-height:1.4}
+    .verdict-buttons{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.25rem}
+    .verdict-btn{padding:0.75rem 1.25rem;border:1px solid var(--border);background:var(--white);color:var(--navy);font-family:'Jost',sans-serif;font-size:0.88rem;cursor:pointer;transition:all 0.15s;text-align:left;-webkit-appearance:none;appearance:none}
+    .verdict-btn:hover{border-color:var(--navy);background:rgba(27,42,74,0.04)}
+    .verdict-btn.selected{border-color:var(--navy);background:var(--navy);color:var(--gold)}
+    .verdict-submit{background:var(--gold);color:var(--navy2);border:none;padding:0.7rem 1.75rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;transition:background 0.15s;-webkit-appearance:none;appearance:none}
+    .verdict-submit:hover:not(:disabled){background:rgba(201,168,76,0.85)}
+    .verdict-submit:disabled{opacity:0.35;cursor:default}
+
+    /* ── OPINION ── */
+    .opinion-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem}
+    .opinion-meta{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
+    .result-badge{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.08em;padding:0.2rem 0.75rem;font-weight:600}
+    .result-correct{background:rgba(45,106,79,0.12);color:#2d6a4f}
+    .result-wrong{background:rgba(155,35,53,0.12);color:#9b2335}
+    .design-note{padding:1rem 1.25rem;background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);font-size:0.85rem;color:var(--muted);line-height:1.75;margin:1.25rem 0}
+    .prov-text-card{border:1px solid var(--border);padding:1rem 1.25rem;margin-bottom:0.5rem}
+    .prov-text-num{font-family:'JetBrains Mono',monospace;font-size:0.63rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:0.15rem}
+    .prov-text-name{font-size:0.88rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem}
+    .prov-text-body{font-size:0.82rem;line-height:1.8;color:var(--text)}
+    .section-label-sm{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin:1.25rem 0 0.6rem}
+
     /* ── NEW CASE ── */
     .new-case-row{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center}
-    .new-case-btn{background:none;border:1px solid var(--border);color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;padding:0.6rem 1.25rem;cursor:pointer;transition:all 0.15s}
+    .new-case-btn{background:none;border:1px solid var(--border);color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;padding:0.6rem 1.25rem;cursor:pointer;transition:all 0.15s;-webkit-appearance:none;appearance:none}
     .new-case-btn:hover{border-color:var(--navy);color:var(--navy)}
 
     @media(max-width:640px){
       .docket-wrap{padding:76px 1rem 60px}
-      .case-section,.argument{padding:1rem 1.25rem}
-      .opinion-body{padding:1.25rem}
+      .stage-section{padding:1.25rem 1rem}
+      .case-header{padding:1.1rem 1rem}
     }
   </style>
 </head>
@@ -127,23 +127,22 @@
     </button>
   </nav>
 
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
-  <span class="menu-divider" aria-hidden="true"></span>
-  <a href="docket.html">The Docket</a>
-  <a href="contact.html">Contact</a>
-  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
-</div>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="docket.html">The Docket</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
 
   <main class="docket-wrap" id="main-content">
 
     <div class="conversation" id="conversation">
-      <!-- Opening message — rendered immediately, no API call -->
       <div class="msg msg-court">
         <div class="msg-avatar">SC</div>
         <div class="msg-bubble">The court has a case before it. Before I present it — is there a part of the constitution you have been thinking about, or should I bring something to you?</div>
@@ -152,17 +151,78 @@
 
     <div class="loading" id="loading">
       <div class="spinner"></div>
-      <span class="loading-text" id="loading-text">Preparing the case file&hellip;</span>
+      <span class="loading-text" id="loadingText">Preparing the case file&hellip;</span>
     </div>
 
-    <div id="case-area"></div>
-
-    <div id="input-area">
+    <div id="inputArea">
       <div class="input-row">
-        <input class="docket-input" id="docketInput" type="text" placeholder="Tell me what interests you, or press Enter to receive a case&hellip;" autocomplete="off" aria-label="Your response to the court" />
+        <input class="docket-input" id="docketInput" type="text"
+          placeholder="Tell me what interests you, or press Enter to receive a case&hellip;"
+          autocomplete="off" aria-label="Your response to the court" />
         <button class="docket-send" id="docketSend" onclick="handleInput()">Send</button>
       </div>
       <span class="input-hint">Press Enter to send</span>
+    </div>
+
+    <!-- Case file — populated after generation, revealed in stages -->
+    <div id="caseFile" style="display:none">
+
+      <!-- Always visible once case loads -->
+      <div class="case-header" id="caseHeader"></div>
+
+      <!-- Stage 1: Facts + Claimant -->
+      <div class="stage" id="stage1">
+        <div class="stage-section">
+          <span class="stage-label label-facts">Statement of Facts</span>
+          <div class="stage-text" id="factsText"></div>
+        </div>
+        <hr class="stage-divider">
+        <div class="stage-section">
+          <span class="stage-label label-claimant">For the Claimant</span>
+          <div class="party-name" id="claimantName"></div>
+          <div class="party-position" id="claimantPosition"></div>
+          <div class="stage-text" id="claimantArg"></div>
+          <div class="stage-cta">
+            <button class="stage-btn" onclick="showStage2()">Hear the other side &rarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 2: Respondent -->
+      <div class="stage" id="stage2">
+        <hr class="stage-divider">
+        <div class="stage-section">
+          <span class="stage-label label-respondent">For the Respondent</span>
+          <div class="party-name" id="respondentName"></div>
+          <div class="party-position" id="respondentPosition"></div>
+          <div class="stage-text" id="respondentArg"></div>
+          <div class="stage-cta">
+            <button class="stage-btn" onclick="showStage3()">I have heard both sides. I am ready to rule &rarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 3: Verdict -->
+      <div class="stage" id="stage3">
+        <hr class="stage-divider">
+        <div class="stage-section">
+          <span class="stage-label label-verdict">The Court Awaits Your Ruling</span>
+          <div class="verdict-prompt">Having heard both arguments, how do you rule?</div>
+          <div class="verdict-buttons" id="verdictButtons"></div>
+          <button class="verdict-submit" id="verdictSubmit" onclick="submitVerdict()" disabled>Deliver Verdict &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Stage 4: Opinion -->
+      <div class="stage" id="stage4">
+        <div class="loading" id="loadingOpinion" style="margin:1rem 0">
+          <div class="spinner"></div>
+          <span class="loading-text">The court is deliberating&hellip;</span>
+        </div>
+        <hr class="stage-divider">
+        <div class="stage-section" id="opinionBody" style="display:none"></div>
+      </div>
+
     </div>
 
   </main>
@@ -180,34 +240,35 @@
   </footer>
 
   <script>
-    let state = 'awaiting_input'; // awaiting_input | generating | awaiting_verdict | analyzing | complete
+    let state = 'awaiting_input';
     let currentCase = null;
     let selectedVerdict = null;
     let caseCount = 0;
 
-    const conv = document.getElementById('conversation');
-    const loading = document.getElementById('loading');
-    const loadingText = document.getElementById('loading-text');
-    const caseArea = document.getElementById('case-area');
-    const inputArea = document.getElementById('input-area');
-    const input = document.getElementById('docketInput');
-    const sendBtn = document.getElementById('docketSend');
+    const conv       = document.getElementById('conversation');
+    const loading    = document.getElementById('loading');
+    const loadingText= document.getElementById('loadingText');
+    const inputArea  = document.getElementById('inputArea');
+    const caseFile   = document.getElementById('caseFile');
 
-    input.addEventListener('keydown', e => { if (e.key === 'Enter') handleInput(); });
+    document.getElementById('docketInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') handleInput();
+    });
 
-    function addCourtMessage(text) {
-      const msg = document.createElement('div');
-      msg.className = 'msg msg-court';
-      msg.innerHTML = `<div class="msg-avatar">SC</div><div class="msg-bubble">${text}</div>`;
-      conv.appendChild(msg);
-      msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    /* ── HELPERS ── */
+    function addCourtMsg(html) {
+      const el = document.createElement('div');
+      el.className = 'msg msg-court';
+      el.innerHTML = `<div class="msg-avatar">SC</div><div class="msg-bubble">${html}</div>`;
+      conv.appendChild(el);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    function addUserMessage(text) {
-      const msg = document.createElement('div');
-      msg.className = 'msg msg-user';
-      msg.innerHTML = `<div class="msg-avatar">You</div><div class="msg-bubble">${text}</div>`;
-      conv.appendChild(msg);
+    function addUserMsg(text) {
+      const el = document.createElement('div');
+      el.className = 'msg msg-user';
+      el.innerHTML = `<div class="msg-avatar">You</div><div class="msg-bubble">${text}</div>`;
+      conv.appendChild(el);
     }
 
     function setLoading(visible, text) {
@@ -215,13 +276,17 @@
       if (text) loadingText.textContent = text;
     }
 
+    function paras(text) {
+      return (text || '').split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
+    }
+
+    /* ── INPUT ── */
     async function handleInput() {
       if (state !== 'awaiting_input') return;
-      const userText = input.value.trim();
-      const displayText = userText || 'Surprise me.';
-
-      addUserMessage(displayText);
-      input.value = '';
+      const raw = document.getElementById('docketInput').value.trim();
+      const display = raw || 'Surprise me.';
+      addUserMsg(display);
+      document.getElementById('docketInput').value = '';
       inputArea.style.display = 'none';
       state = 'generating';
       setLoading(true, 'Preparing the case file\u2026');
@@ -230,91 +295,103 @@
         const res = await fetch('/api/docket', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ action: 'generate', input: displayText })
+          body: JSON.stringify({ action: 'generate', input: display })
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         if (data.error) throw new Error(data.error);
         currentCase = data;
         setLoading(false);
-        renderCase(data);
-        state = 'awaiting_verdict';
+        buildCase(data);
       } catch (err) {
         setLoading(false);
-        addCourtMessage('The case file could not be retrieved. Please try again.');
+        addCourtMsg('The case file could not be retrieved. Please try again.');
         inputArea.style.display = '';
         state = 'awaiting_input';
       }
     }
 
-    function renderCase(c) {
+    /* ── BUILD CASE ── */
+    function buildCase(c) {
       caseCount++;
-      const situationParas = (c.situation || '').split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
-      const claimParas = (c.claimant_argument || '').split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
-      const respParas = (c.respondent_argument || '').split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
-      const provTags = (c.provisions || []).map(p => `<span class="case-prov-tag">${p.num} &middot; ${p.name}</span>`).join('');
 
-      caseArea.innerHTML = `
-        <div class="case-file">
-          <div class="case-header">
-            <span class="case-docket-num">Docket No. ${String(caseCount).padStart(4,'0')} &middot; Supreme Court of the Federated Republic</span>
-            <div class="case-title">${c.title || 'Constitutional Dispute'}</div>
-            <div class="case-provisions">${provTags}</div>
-          </div>
-          <div class="case-section">
-            <span class="case-section-label">Statement of Facts</span>
-            <div class="case-situation">${situationParas}</div>
-          </div>
-          <div class="arguments">
-            <div class="argument">
-              <span class="arg-label arg-label-claim">For the Claimant</span>
-              <div class="arg-name">${c.claimant_name || 'The Claimant'}</div>
-              <div class="arg-position">${c.claimant_position || ''}</div>
-              <div class="arg-text">${claimParas}</div>
-            </div>
-            <div class="argument">
-              <span class="arg-label arg-label-resp">For the Respondent</span>
-              <div class="arg-name">${c.respondent_name || 'The Republic'}</div>
-              <div class="arg-position">${c.respondent_position || ''}</div>
-              <div class="arg-text">${respParas}</div>
-            </div>
-          </div>
-          <div class="verdict-section">
-            <div class="verdict-prompt">Having heard both arguments, how do you rule?</div>
-            <div class="verdict-buttons">
-              <button class="verdict-btn" onclick="selectVerdict('claimant', this)">Rule for ${c.claimant_name || 'the Claimant'}</button>
-              <button class="verdict-btn" onclick="selectVerdict('respondent', this)">Rule for ${c.respondent_name || 'the Respondent'}</button>
-              <button class="verdict-btn" onclick="selectVerdict('split', this)">The constitution is genuinely ambiguous</button>
-            </div>
-            <button class="verdict-submit" id="verdictSubmit" onclick="submitVerdict()" disabled>Deliver Verdict &rarr;</button>
-          </div>
-        </div>`;
+      // Header
+      const provTags = (c.provisions || [])
+        .map(p => `<span class="case-prov-tag">${p.num} &middot; ${p.name}</span>`).join('');
+      document.getElementById('caseHeader').innerHTML = `
+        <span class="case-docket-num">Docket No. ${String(caseCount).padStart(4,'0')} &middot; Supreme Court of the Federated Republic</span>
+        <div class="case-title">${c.title || 'Constitutional Dispute'}</div>
+        <div class="case-provisions">${provTags}</div>`;
 
-      caseArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Facts
+      document.getElementById('factsText').innerHTML = paras(c.situation);
+
+      // Claimant
+      document.getElementById('claimantName').textContent = c.claimant_name || 'The Claimant';
+      document.getElementById('claimantPosition').textContent = c.claimant_position || '';
+      document.getElementById('claimantArg').innerHTML = paras(c.claimant_argument);
+
+      // Respondent
+      document.getElementById('respondentName').textContent = c.respondent_name || 'The Republic';
+      document.getElementById('respondentPosition').textContent = c.respondent_position || '';
+      document.getElementById('respondentArg').innerHTML = paras(c.respondent_argument);
+
+      // Verdict buttons
+      document.getElementById('verdictButtons').innerHTML = `
+        <button class="verdict-btn" onclick="selectVerdict('claimant',this)">Rule for ${c.claimant_name || 'the Claimant'}</button>
+        <button class="verdict-btn" onclick="selectVerdict('respondent',this)">Rule for ${c.respondent_name || 'the Respondent'}</button>
+        <button class="verdict-btn" onclick="selectVerdict('split',this)">The constitution is genuinely ambiguous</button>`;
+
+      // Show file and Stage 1
+      caseFile.style.display = 'block';
+      showStage('stage1');
+      addCourtMsg('The case is before you. The claimant presents first.');
+      state = 'stage1';
+      document.getElementById('caseFile').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    function selectVerdict(verdict, btn) {
-      if (state !== 'awaiting_verdict') return;
-      selectedVerdict = verdict;
+    /* ── STAGE REVEALS ── */
+    function showStage(id) {
+      document.getElementById(id).classList.add('visible');
+    }
+
+    function showStage2() {
+      showStage('stage2');
+      addCourtMsg('Now hear the other side.');
+      state = 'stage2';
+      document.getElementById('stage2').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function showStage3() {
+      showStage('stage3');
+      addCourtMsg('You have heard both arguments. The court awaits your ruling.');
+      state = 'stage3';
+      document.getElementById('stage3').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    /* ── VERDICT ── */
+    function selectVerdict(v, btn) {
+      if (state !== 'stage3') return;
+      selectedVerdict = v;
       document.querySelectorAll('.verdict-btn').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       document.getElementById('verdictSubmit').disabled = false;
     }
 
     async function submitVerdict() {
-      if (!selectedVerdict || state !== 'awaiting_verdict') return;
+      if (!selectedVerdict || state !== 'stage3') return;
       state = 'analyzing';
 
-      const verdictLabel = selectedVerdict === 'claimant'
-        ? currentCase.claimant_name
-        : selectedVerdict === 'respondent'
-        ? currentCase.respondent_name
-        : 'Neither party — the constitution is ambiguous';
+      const label = selectedVerdict === 'claimant' ? currentCase.claimant_name
+        : selectedVerdict === 'respondent' ? currentCase.respondent_name
+        : 'Neither — the constitution is ambiguous';
 
-      addCourtMessage(`The court notes your verdict: <em>${verdictLabel}</em>. Deliberating&hellip;`);
-
+      addCourtMsg(`The court records your verdict: <em>${label}</em>. The justices are deliberating.`);
       document.querySelectorAll('.verdict-btn, #verdictSubmit').forEach(b => b.disabled = true);
-      setLoading(true, 'The court is deliberating\u2026');
+
+      showStage('stage4');
+      document.getElementById('loadingOpinion').classList.add('visible');
+      document.getElementById('stage4').scrollIntoView({ behavior: 'smooth', block: 'start' });
 
       try {
         const res = await fetch('/api/docket', {
@@ -325,71 +402,75 @@
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         if (data.error) throw new Error(data.error);
-        setLoading(false);
         renderOpinion(data);
-        state = 'complete';
       } catch (err) {
-        setLoading(false);
-        addCourtMessage('The court was unable to deliver its opinion. Please try again.');
-        state = 'awaiting_verdict';
+        document.getElementById('loadingOpinion').classList.remove('visible');
+        addCourtMsg('The court was unable to deliver its opinion. Please try again.');
+        state = 'stage3';
         document.querySelectorAll('.verdict-btn, #verdictSubmit').forEach(b => b.disabled = false);
       }
     }
 
+    /* ── OPINION ── */
     function renderOpinion(o) {
+      document.getElementById('loadingOpinion').classList.remove('visible');
+
       const correct = o.correct;
-      const courtRuled = o.court_verdict === 'claimant'
-        ? currentCase.claimant_name
-        : o.court_verdict === 'respondent'
-        ? currentCase.respondent_name
+      const courtRuled = o.court_verdict === 'claimant' ? currentCase.claimant_name
+        : o.court_verdict === 'respondent' ? currentCase.respondent_name
         : 'Neither party';
 
-      const opinionParas = (o.opinion || '').split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
-
       const provTexts = (o.provision_texts || []).map(p => `
-        <div class="provision-text-card">
-          <div class="provision-text-num">${p.num}</div>
-          <div class="provision-text-name">${p.name}</div>
-          <div class="provision-text-body">${p.text || ''}</div>
+        <div class="prov-text-card">
+          <div class="prov-text-num">${p.num}</div>
+          <div class="prov-text-name">${p.name}</div>
+          <div class="prov-text-body">${p.text || ''}</div>
         </div>`).join('');
 
-      const opinionEl = document.createElement('div');
-      opinionEl.className = 'opinion-section';
-      opinionEl.innerHTML = `
+      document.getElementById('opinionBody').innerHTML = `
         <div class="opinion-header">
-          <span class="opinion-label">Court Opinion &middot; Supreme Court of the Federated Republic</span>
-          <div class="opinion-result">
-            <span class="opinion-label">Court ruled for ${courtRuled}</span>
+          <span class="stage-label label-opinion" style="margin-bottom:0">Court Opinion</span>
+          <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
+            <span class="opinion-meta">Ruled for ${courtRuled}</span>
             <span class="result-badge ${correct ? 'result-correct' : 'result-wrong'}">${correct ? 'Your verdict agreed' : 'Your verdict differed'}</span>
           </div>
         </div>
-        <div class="opinion-body">
-          <div class="opinion-text">${opinionParas}</div>
-          ${o.design_note ? `<div class="design-note">${o.design_note}</div>` : ''}
-          ${provTexts ? `<span class="provisions-label">Provisions at Issue</span>${provTexts}` : ''}
-          <div class="new-case-row">
-            <button class="new-case-btn" onclick="newCase()">Bring another case before the court &rarr;</button>
-          </div>
+        <div class="stage-text">${paras(o.opinion)}</div>
+        ${o.design_note ? `<div class="design-note">${o.design_note}</div>` : ''}
+        ${provTexts ? `<span class="section-label-sm">Provisions at Issue</span>${provTexts}` : ''}
+        <div class="new-case-row">
+          <button class="new-case-btn" onclick="newCase()">Bring another case before the court &rarr;</button>
         </div>`;
 
-      caseArea.appendChild(opinionEl);
-      opinionEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('opinionBody').style.display = 'block';
+      document.getElementById('opinionBody').scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      addCourtMessage(correct
-        ? 'The court agrees with your ruling. Well reasoned.'
+      addCourtMsg(correct
+        ? 'The court agrees with your ruling.'
         : 'The court has ruled differently. Review the opinion below.');
+      state = 'complete';
     }
 
+    /* ── NEW CASE ── */
     function newCase() {
       currentCase = null;
       selectedVerdict = null;
-      caseArea.innerHTML = '';
-      addCourtMessage('Another case. Is there an area of the constitution you would like to explore, or should the court decide?');
+      caseFile.style.display = 'none';
+      document.getElementById('caseHeader').innerHTML = '';
+      ['stage1','stage2','stage3','stage4'].forEach(id => {
+        document.getElementById(id).classList.remove('visible');
+      });
+      document.getElementById('opinionBody').style.display = 'none';
+      document.getElementById('opinionBody').innerHTML = '';
+      document.getElementById('verdictSubmit').disabled = true;
+      addCourtMsg('Another case. Is there an area of the constitution you would like to explore, or should the court decide?');
       inputArea.style.display = '';
-      input.focus();
+      document.getElementById('docketInput').focus();
       state = 'awaiting_input';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    /* ── NAV ── */
     function toggleMobileNav() {
       const menu = document.getElementById('mobileMenu');
       const btn = document.querySelector('.hamburger');
@@ -402,8 +483,8 @@
       const btn = document.querySelector('.hamburger');
       if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
         menu.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        menu.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded','false');
+        menu.setAttribute('aria-hidden','true');
       }
     });
   </script>
