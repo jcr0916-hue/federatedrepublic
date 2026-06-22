@@ -1,14 +1,11 @@
 [build]
   publish = "."
   command = ""
+  edge_functions = "."
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-
-[[edge_functions]]
-  path = "/api/advisor"
-  function = "advisor"
 
 [[edge_functions]]
   path = "/api/navigator"
