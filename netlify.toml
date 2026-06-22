@@ -10,6 +10,10 @@
   path = "/api/advisor"
   function = "advisor"
 
+[[edge_functions]]
+  path = "/api/navigator"
+  function = "navigator"
+
 [[headers]]
   for = "/*"
   [headers.values]
