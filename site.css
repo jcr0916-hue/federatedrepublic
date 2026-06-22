@@ -23,14 +23,13 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Jost', sans-serif;
   background: var(--cream);
   color: var(--text);
   font-size: 16px;
   line-height: 1.7;
-  overflow-x: hidden;
 }
 
 /* ── SKIP NAV ── */
