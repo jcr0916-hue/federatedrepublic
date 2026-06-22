@@ -40,10 +40,15 @@
     .nav-chip{font-size:0.7rem;padding:0.3rem 0.75rem;border:1px solid rgba(201,168,76,0.2);border-radius:20px;color:rgba(245,240,232,0.45);cursor:pointer;background:none;font-family:'Jost',sans-serif;letter-spacing:0.03em;transition:border-color 0.15s,color 0.15s;white-space:nowrap}
     .nav-chip:hover{border-color:rgba(201,168,76,0.6);color:rgba(245,240,232,0.8)}
 
-    /* ── NAVIGATOR RESULTS ── */
-    .nav-results-wrap{display:none;background:var(--cream);border-bottom:1px solid var(--border)}
-    .nav-results-wrap.open{display:block}
-    .nav-results-inner{max-width:780px;margin:0 auto;padding:2rem 1.5rem}
+    /* ── NAVIGATOR RESULTS PANEL ── */
+    .nav-panel-overlay{display:none;position:fixed;inset:0;background:rgba(10,16,28,0.3);z-index:399;backdrop-filter:blur(1px)}
+    .nav-panel-overlay.open{display:block}
+    .nav-panel{position:fixed;top:56px;right:0;width:min(420px,92vw);height:calc(100vh - 56px);background:var(--white);border-left:1px solid var(--border);overflow-y:auto;z-index:400;transform:translateX(100%);transition:transform 0.25s ease;padding:1.75rem 1.5rem;box-shadow:-4px 0 24px rgba(0,0,0,0.1)}
+    .nav-panel.open{transform:translateX(0)}
+    .nav-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+    .nav-panel-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+    .nav-panel-close{background:none;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:4px;line-height:1;-webkit-appearance:none;appearance:none}
+    .nav-panel-close:hover{color:var(--navy)}
     .nav-loading{display:none;align-items:center;gap:0.75rem;padding:1rem 0}
     .nav-loading.visible{display:flex}
     .nav-spinner{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin 0.7s linear infinite;flex-shrink:0}
@@ -170,15 +175,18 @@
     </div>
   </section>
 
-  <!-- NAVIGATOR RESULTS -->
-  <div class="nav-results-wrap" id="navResults" aria-live="polite">
-    <div class="nav-results-inner">
-      <div class="nav-loading" id="navLoading">
-        <div class="nav-spinner"></div>
-        <span>Searching the constitution&hellip;</span>
-      </div>
-      <div class="nav-result-body" id="navBody"></div>
+  <!-- NAVIGATOR PANEL -->
+  <div class="nav-panel-overlay" id="navOverlay" onclick="closeNav()"></div>
+  <div class="nav-panel" id="navResults" aria-live="polite" role="dialog" aria-label="Constitution Navigator results">
+    <div class="nav-panel-header">
+      <span class="nav-panel-label">Ask the Constitution</span>
+      <button class="nav-panel-close" onclick="closeNav()" aria-label="Close">&#x2715;</button>
     </div>
+    <div class="nav-loading" id="navLoading">
+      <div class="nav-spinner"></div>
+      <span>Searching the constitution&hellip;</span>
+    </div>
+    <div class="nav-result-body" id="navBody"></div>
   </div>
 
   <!-- START HERE -->
@@ -278,6 +286,8 @@
       const body=document.getElementById('navBody');
       const btn=document.getElementById('navBtn');
       wrap.classList.add('open');
+      document.getElementById('navOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
       loading.classList.add('visible');
       body.innerHTML='';
       btn.disabled=true;
@@ -304,14 +314,15 @@
       }finally{
         loading.classList.remove('visible');
         btn.disabled=false;
-        document.getElementById('navResults').scrollIntoView({behavior:'smooth',block:'start'});
       }
     }
 
     function closeNav(){
       document.getElementById('navResults').classList.remove('open');
+      document.getElementById('navOverlay').classList.remove('open');
       document.getElementById('navBody').innerHTML='';
       document.getElementById('navQ').value='';
+      document.body.style.overflow='';
     }
   </script>
 
