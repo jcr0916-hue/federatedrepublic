@@ -254,32 +254,33 @@ footer { background: var(--navy2); border-top: 1px solid rgba(201,168,76,0.15); 
 /* ── Two-FAB pattern ── */
 .minimap-toggle, .search-fab {
   position: fixed; bottom: 1.75rem;
-  width: 48px; height: 48px;
+  width: 56px; height: 56px;
   background: var(--navy);
-  border: 1px solid rgba(201,168,76,0.35);
-  color: var(--gold); border-radius: 3px;
+  border: 1px solid rgba(201,168,76,0.5);
+  color: var(--gold); border-radius: 4px;
   cursor: pointer; display: flex;
   align-items: center; justify-content: center;
-  z-index: 220;
+  z-index: 9999;
   transition: border-color 0.15s, background 0.15s;
   -webkit-appearance: none; appearance: none;
   font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
 }
-.minimap-toggle { left: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.05em; width: 52px; }
-.search-fab { right: 1.25rem; }
-.minimap-toggle:hover, .search-fab:hover { border-color: var(--gold); background: rgba(27,42,74,0.95); }
+.minimap-toggle { left: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.05em; width: 56px; }
+.search-fab { right: 1.25rem; font-size: 1.25rem; }
+.minimap-toggle:hover, .search-fab:hover { border-color: var(--gold); background: rgba(27,42,74,0.95); box-shadow: 0 2px 12px rgba(0,0,0,0.5); }
 
 /* ── Nav drawer (left slide-in) ── */
 .nav-drawer-overlay { display: none; position: fixed; inset: 0; background: rgba(10,16,28,0.55); z-index: 299; backdrop-filter: blur(2px); }
 .nav-drawer-overlay.open { display: block; }
 .nav-drawer {
-  position: fixed; top: 0; left: 0; bottom: 0; width: 200px;
+  position: fixed; top: 0; left: -210px; bottom: 0; width: 200px;
   background: var(--navy); border-right: 1px solid rgba(201,168,76,0.2);
   padding: 4rem 1rem 2rem; z-index: 300;
-  transform: translateX(-110%); transition: transform 0.25s ease;
+  transition: left 0.25s ease;
   overflow-y: auto;
 }
-.nav-drawer.open { transform: translateX(0); }
+.nav-drawer.open { left: 0; }
 .nav-drawer-header { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); padding: 0 0.5rem 1rem; opacity: 0.7; }
 .nav-drawer-link { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: rgba(245,240,232,0.6); padding: 0.45rem 0.5rem; text-decoration: none; border-radius: 2px; transition: color 0.15s, background 0.15s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .nav-drawer-link:hover, .nav-drawer-link.active { color: var(--gold); background: rgba(201,168,76,0.08); }
