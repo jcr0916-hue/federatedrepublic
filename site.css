@@ -85,9 +85,9 @@ nav {
 .nav-cta { background: var(--gold) !important; color: var(--navy2) !important; padding: 0.2rem 0.65rem !important; border-radius: 2px !important; font-weight: 600 !important; }
 .nav-cta:hover { background: rgba(201,168,76,0.85) !important; color: var(--navy2) !important; }
 
-/* ── HAMBURGER — hidden on desktop, shown on mobile ── */
+/* ── HAMBURGER — always visible ── */
 .hamburger {
-  display: none; flex-direction: column;
+  display: flex; flex-direction: column;
   gap: 5px; cursor: pointer;
   background: none; border: none; -webkit-appearance: none; appearance: none;
   padding: 6px; margin-left: 0.5rem; flex-shrink: 0;
@@ -121,9 +121,8 @@ nav {
 .menu-divider { display: block; height: 1px; background: rgba(201,168,76,0.2); margin: 0.5rem 0; }
 .mobile-cta { background: rgba(201,168,76,0.12) !important; color: var(--gold) !important; font-weight: 500 !important; }
 
-/* ── MOBILE BREAKPOINT — hamburger shows, nav-links hide ── */
+/* ── MOBILE BREAKPOINT — nav-links hide, hamburger stays ── */
 @media (max-width: 820px) {
-  .hamburger { display: flex; }
   .nav-links { display: none; }
 }
 

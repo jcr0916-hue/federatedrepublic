@@ -273,8 +273,6 @@
   </script>
 
   <script>
-    const NAV_SYSTEM = `You are the Constitution Navigator for the Federated Republic — a constitutional republic with 177 provisions across 20 Articles. When someone asks about a position, power, provision, or concept, return a JSON object with this exact structure: {"summary":"3-4 sentence plain-language explanation.","provisions":[{"num":"§2.1","name":"The Legat Consul — Domain and Term","relevance":"One sentence on relevance."}],"scenarios":[{"title":"The Alliance Clause","file":"scenario-alliance-clause.html","relevance":"One sentence on relevance."}]}. Return only the JSON — no preamble, no markdown fences. Key facts: DUAL EXECUTIVE: Legat Consul (LC) handles foreign policy, defense, trade, immigration (§2.1-§2.4). Civic Consul (CC) handles domestic governance, budget, legislation (§2.5-§2.10). LEGISLATURE: Assembly (lower) and Senate (upper). Senate ratifies treaties at 2/3 (§3.6). JUDICIARY: Supreme Court 7 justices from Judicial Pool. Nominations by CC; Senate confirmation (§4.1-§4.5). MONITORS: Legislative (LM), Electoral (EM), Judicial (JM), Economic (MA) — independent, Monitor Generals by lottery (§9.1-§9.14). NRS: National Record System — all official acts public (Article X). RIGHTS: Article I individual sovereignty floor. EMERGENCY: Both executives jointly or one with 2/3 chamber consent (§1.19). AMENDMENT: 2/3 both chambers + 2/3 state legislatures (Article XVII). SOCIAL STATE: Universal healthcare, social assistance, free education (§12.1). IMMIGRATION: Two-stage federal certification system; removals require judicial process (§6.1-§6.2). Key scenarios: Ordinary Law (scenario-ordinary.html), The Stalemate (scenario-coordination-failure.html), The Alliance Clause (scenario-alliance-clause.html), The Objection (scenario-the-objection.html), The Direction (scenario-the-direction.html), The Formation (scenario-formation.html), The Recall (scenario-recall.html), The First Nomination (scenario-first-nomination.html), The Critical Finding (scenario-critical-finding.html), The Grounds Review (scenario-sdp-removal.html), The Deadlock (scenario-deadlock.html), Grounds (scenario-grounds.html), The Second Declaration (scenario-second-declaration.html), The Automatic Floor (scenario-automatic-floor.html), The Finality Act (scenario-finality-act.html), The Void Exception (scenario-void-exception.html), The Order (scenario-the-order.html), The Organized Third (scenario-organized-third.html), The Return (scenario-the-return.html).`;
-
     function setNav(t){ document.getElementById('navQ').value=t; document.getElementById('navQ').focus(); }
     document.getElementById('navQ').addEventListener('keydown',function(e){if(e.key==='Enter')runNav();});
 
@@ -290,11 +288,10 @@
       body.innerHTML='';
       btn.disabled=true;
       try{
-        const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:900,system:NAV_SYSTEM,messages:[{role:'user',content:q}]})});
-        const data=await res.json();
-        const raw=data.content?.[0]?.text||'';
-        let p;
-        try{p=JSON.parse(raw.replace(/```json|```/g,'').trim());}catch(e){throw new Error('parse');}
+        const res=await fetch('/api/navigator',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})});
+        if(!res.ok) throw new Error(`HTTP ${res.status}`);
+        const p=await res.json();
+        if(p.error) throw new Error(p.error);
         let html=`<p class="nav-summary">${p.summary||''}</p>`;
         if(p.provisions?.length){
           html+=`<p class="nav-section-label">Provisions</p><div class="nav-prov-list">`;
