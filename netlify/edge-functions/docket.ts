@@ -122,8 +122,6 @@ export default async (request: Request) => {
   if (!action) return jsonResponse({ error: 'Action required' }, 400);
 
   try {
-    const constitutionText = await getConstitutionText();
-
     if (action === 'generate') {
       const input = body?.input?.trim() || 'surprise me';
       const userMessage = input.toLowerCase().includes('surprise') || input.length < 5
@@ -135,8 +133,8 @@ export default async (request: Request) => {
         headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
         body: JSON.stringify({
           model: 'claude-sonnet-4-6',
-          max_tokens: 2000,
-          system: CASE_SYSTEM + constitutionText,
+          max_tokens: 1600,
+          system: CASE_SYSTEM,
           messages: [{ role: 'user', content: userMessage }],
         }),
       });
@@ -156,6 +154,7 @@ export default async (request: Request) => {
       const verdict = body?.verdict;
       if (!caseData || !verdict) return jsonResponse({ error: 'case_data and verdict required' }, 400);
 
+      const constitutionText = await getConstitutionText();
       const userMessage = `Here is the case:\n${JSON.stringify(caseData, null, 2)}\n\nThe user ruled in favor of: ${verdict}\n\nDeliver the court's opinion.`;
 
       const upstream = await fetch('https://api.anthropic.com/v1/messages', {

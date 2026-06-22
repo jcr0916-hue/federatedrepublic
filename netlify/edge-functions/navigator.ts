@@ -129,9 +129,6 @@ export default async (request: Request) => {
   }
 
   try {
-    const constitutionText = await getConstitutionText();
-    const system = SYSTEM_PREFIX + constitutionText;
-
     const upstream = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -142,7 +139,7 @@ export default async (request: Request) => {
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 800,
-        system,
+        system: SYSTEM_PREFIX,
         messages: [{ role: 'user', content: question }],
       }),
     });
