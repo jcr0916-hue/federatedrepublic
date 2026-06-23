@@ -61,30 +61,24 @@ Complete constitution text follows:
 
 `;
 
-let cachedConstitutionText: string | null = null;
+let cachedIndex: string | null = null;
 
-async function getConstitutionText(): Promise<string> {
-  if (cachedConstitutionText) return cachedConstitutionText;
-
+async function getProvisionIndex(): Promise<string> {
+  if (cachedIndex) return cachedIndex;
   const resp = await fetch(`${SITE_URL}/constitution_data.json`, {
     headers: { 'Cache-Control': 'max-age=3600' },
   });
-
   if (!resp.ok) throw new Error(`Failed to fetch constitution: ${resp.status}`);
-
-  const data: Array<{ heading: string; provisions: Array<{ num: string; name: string; text: string }> }> = await resp.json();
-
-  const lines: string[] = [];
+  const data: Array<{ heading: string; provisions: Array<{ num: string; name: string }> }> = await resp.json();
+  const lines: string[] = ['COMPLETE PROVISION INDEX (use these exact numbers and names):'];
   for (const article of data) {
+    lines.push(`\n${article.heading}`);
     for (const prov of article.provisions) {
-      lines.push(`[${prov.num}] ${prov.name}`);
-      lines.push(prov.text);
-      lines.push('');
+      lines.push(`  ${prov.num} — ${prov.name}`);
     }
   }
-
-  cachedConstitutionText = lines.join('\n').trim();
-  return cachedConstitutionText;
+  cachedIndex = lines.join('\n');
+  return cachedIndex;
 }
 
 const CORS_HEADERS = {
@@ -129,6 +123,8 @@ export default async (request: Request) => {
   }
 
   try {
+    const provisionIndex = await getProvisionIndex();
+
     const upstream = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -139,7 +135,7 @@ export default async (request: Request) => {
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 800,
-        system: SYSTEM_PREFIX,
+        system: SYSTEM_PREFIX + '\n\n' + provisionIndex,
         messages: [{ role: 'user', content: question }],
       }),
     });
