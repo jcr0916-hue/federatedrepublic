@@ -552,8 +552,8 @@
     const provTexts=(o.provision_texts||[]).map(p=>`<div class="prov-text-card"><div class="prov-text-num">${p.num}</div><div class="prov-text-name">${p.name}</div><div class="prov-text-body">${p.text||''}</div></div>`).join('');
     document.getElementById('opinionBody').innerHTML=`<div class="opinion-header"><span class="stage-label label-opinion" style="margin-bottom:0">Court Opinion</span><div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap"><span class="opinion-meta">Ruled for ${courtRuled}</span><span class="result-badge ${correct?'result-correct':'result-wrong'}">${correct?'Your verdict agreed':'Your verdict differed'}</span></div></div><div class="stage-text">${paras(o.opinion)}</div>${o.design_note?`<div class="design-note">${o.design_note}</div>`:''} ${provTexts?`<span class="section-label-sm">Provisions at Issue</span>${provTexts}`:''}<div class="new-case-row"><button class="new-case-btn" onclick="newCase()">Bring another case before the court &rarr;</button></div>`;
     document.getElementById('opinionBody').style.display='block';
-    document.getElementById('opinionBody').scrollIntoView({behavior:'smooth',block:'start'});
     addCourtMsg(correct?'The court agrees with your ruling.':'The court has ruled differently. Review the opinion below.');
+    setTimeout(()=>document.getElementById('opinionBody').scrollIntoView({behavior:'smooth',block:'start'}),120);
     state='complete';
   }
 
