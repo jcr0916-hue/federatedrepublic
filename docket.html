@@ -531,8 +531,19 @@
     document.getElementById('stage4').classList.add('visible');
     document.getElementById('loadingOpinion').classList.add('visible');
     document.getElementById('stage4').scrollIntoView({behavior:'smooth',block:'start'});
+
+    // Send only what the opinion needs — not the full argument text
+    const slim = {
+      title: currentCase.title,
+      provisions: currentCase.provisions,
+      claimant_name: currentCase.claimant_name,
+      claimant_position: currentCase.claimant_position,
+      respondent_name: currentCase.respondent_name,
+      respondent_position: currentCase.respondent_position
+    };
+
     try {
-      const res=await fetch('/api/docket',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'analyze',case_data:currentCase,verdict:selectedVerdict})});
+      const res=await fetch('/api/docket',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'analyze',case_data:slim,verdict:selectedVerdict})});
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data=await res.json();
       if (data.error) throw new Error(data.error);

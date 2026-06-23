@@ -154,16 +154,15 @@ export default async (request: Request) => {
       const verdict = body?.verdict;
       if (!caseData || !verdict) return jsonResponse({ error: 'case_data and verdict required' }, 400);
 
-      const constitutionText = await getConstitutionText();
-      const userMessage = `Here is the case:\n${JSON.stringify(caseData, null, 2)}\n\nThe user ruled in favor of: ${verdict}\n\nDeliver the court's opinion.`;
+      const userMessage = `Case: ${caseData.title}\nProvisions at issue: ${(caseData.provisions||[]).map((p:{num:string,name:string})=>`${p.num} ${p.name}`).join(', ')}\nClaimant (${caseData.claimant_name}): ${caseData.claimant_position}\nRespondent (${caseData.respondent_name}): ${caseData.respondent_position}\nUser ruled in favor of: ${verdict}\n\nDeliver the court's opinion.`;
 
       const upstream = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
         body: JSON.stringify({
           model: 'claude-sonnet-4-6',
-          max_tokens: 1500,
-          system: ANALYSIS_SYSTEM + constitutionText,
+          max_tokens: 1000,
+          system: ANALYSIS_SYSTEM,
           messages: [{ role: 'user', content: userMessage }],
         }),
       });
