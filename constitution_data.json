@@ -326,6 +326,11 @@
         "num": "§3.14",
         "name": "Federal Legislative Competence",
         "text": "The Legislature holds general authority to legislate for the peace, order, and good governance of the Republic. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where federal law and State law conflict, federal law prevails to the extent of the conflict. The Legislature may set minimum standards that States must meet but may not direct State institutions as instruments of federal administration."
+      },
+      {
+        "num": "§3.15",
+        "name": "Delegation of Authority",
+        "text": "The Legislature may by statute delegate defined authorities within its legislative competence to the Legat Consul, the Civic Consul, or independent agencies established under §3.9. Any delegation must specify the exact scope of authority delegated, the conditions on its exercise, and a maximum duration not to exceed the term of the Legislature that enacted it. The Legislature may rescind any delegation by simple majority of both chambers at any time; no recipient of delegated authority may obstruct or condition rescission. No delegation creates a permanent transfer of legislative competence. Every exercise of delegated authority is published to the NRS with attribution to both the legislative grant and the recipient's act. The EM audits the exercise of all delegated executive authority annually and publishes findings to the NRS."
       }
     ]
   },
@@ -666,6 +671,11 @@
         "num": "§12.2",
         "name": "Fiscal Accountability",
         "text": "The Legislature must pass a balanced budget or publish a structural deficit justification reviewed by the MA for fiscal accuracy. Structural deficits above the threshold defined by the MA require a published plan for return to balance. Where the Legislature fails to enact a budget by the constitutional deadline defined by statute, an interim automatic appropriation takes effect by constitutional operation covering: the functions protected under §2.15; civil service compensation; and debt service obligations. The interim appropriation continues at the prior fiscal year’s inflation-adjusted level until a budget is enacted; no new programs may be initiated or expanded under the interim appropriation. Where discretionary government spending is suspended due to budget failure, the pay of all members of both chambers is withheld from the same date on which government employee pay is withheld and released only upon budget enactment. The Legislature must fund the National Endowment by appropriation in years of fiscal surplus; failure to adequately fund the Endowment is a constitutional compliance breach."
+      },
+      {
+        "num": "§12.3",
+        "name": "Taxing Power and National Revenue Fund",
+        "text": "The Legislature has exclusive authority to levy taxes, duties, and tariffs by statute; no other body may impose a tax, duty, or levy of any kind. All public money received by the Republic — including tax revenue, fees, and other receipts — is deposited into the National Revenue Fund. No money may be withdrawn from the National Revenue Fund except by legislative appropriation. The EM audits the Fund's receipts and disbursements as part of its annual fiscal mandate and publishes findings to the NRS. No tax may discriminate on the basis of the characteristics listed in §1.6. Tariff rates established by a ratified treaty or approved trade agreement under §3.6 constitute legislatively authorized rates for the duration of that instrument; the Legislature may set tariff schedules within which the Legat Consul may negotiate specific rates."
       },
       {
         "num": "§12.4",
