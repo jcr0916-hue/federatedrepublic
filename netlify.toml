@@ -11,10 +11,6 @@
   path = "/api/navigator"
   function = "navigator"
 
-[[edge_functions]]
-  path = "/api/docket"
-  function = "docket"
-
 [[headers]]
   for = "/*"
   [headers.values]

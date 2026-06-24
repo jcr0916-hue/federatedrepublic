@@ -3,12 +3,12 @@
    On first visit: cache everything. On repeat visits: instant load.
    On offline: serve cached version. */
 
-const CACHE = 'fr-v7';
+const CACHE = 'fr-v8';
 
 const PAGES = [
   '/', '/index.html',
   '/annotated.html', '/scenarios.html', '/glossary.html',
-  '/diagrams.html', '/docket.html', '/sources.html',
+  '/diagrams.html',  '/sources.html',
   '/constitutional-history.html', '/changelog.html',
   '/constitution-current.pdf'
 ];
