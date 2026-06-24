@@ -154,8 +154,8 @@
       },
       {
         "num": "§2.4",
-        "name": "Trade Agreement Authority and Domain Operations",
-        "text": "The Legat Consul negotiates and concludes trade agreements. During negotiation, the Legat Consul must consult the Civic Consul on the domestic implications of the agreement; the Civic Consul's response is published to the NRS. A concluded trade agreement takes effect only upon approval by simple majority of both chambers; neither chamber may amend the terms of a concluded agreement. Trade agreements constituting treaties within the meaning of §3.6 proceed under that provision rather than this one. The Legat Consul nominates senior domain officers — Director of Intelligence, Director of Foreign Affairs, Director of Defense — from a pool of qualified candidates maintained by the Elections Panel under §9.12. The Legislature defines qualifications and confirmation procedures for each office by statute; acting appointments may be made pending confirmation for the period and under the conditions the Legislature defines."
+        "name": "Legat Consul International Agreements",
+        "text": "The Legat Consul negotiates and concludes treaties and trade agreements. Treaties are subject to ratification under §3.6. Trade agreements are subject to legislative approval under §3.6. During negotiation of any trade agreement, the Legat Consul must consult the Civic Consul on its domestic implications; the Civic Consul's response is published to the NRS. The Legat Consul nominates senior domain officers — Director of Intelligence, Director of Foreign Affairs, Director of Defense — from a pool of qualified candidates maintained by the Elections Panel under §9.12. The Legislature defines qualifications and confirmation procedures for each office by statute; acting appointments may be made pending confirmation for the period and under the conditions the Legislature defines."
       },
       {
         "num": "§2.5",
@@ -269,8 +269,8 @@
       },
       {
         "num": "§3.6",
-        "name": "Treaty Ratification and Withdrawal",
-        "text": "Treaty and compact agreement ratification requires 2/3 of the full seated Senate. Where a treaty fails ratification, standalone domestic provisions may be transmitted to the Assembly as ordinary legislation unless the treaty is bilateral and its obligations are interdependent, in which case it must be renegotiated or abandoned in full. The Legat Consul initiates treaty withdrawal by published NRS notice. For general treaties, the Senate may block withdrawal by simple majority within the notice period; if the Senate does not act, withdrawal takes effect. For mutual defense treaties, the Senate must affirmatively confirm withdrawal; if the Senate does not confirm, the treaty remains in force."
+        "name": "Treaty and Trade Agreement Ratification",
+        "text": "Treaty and compact agreement ratification requires 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers; neither chamber may amend the terms of a concluded agreement. Where a treaty fails ratification, standalone domestic provisions may be transmitted to the Assembly as ordinary legislation unless the treaty is bilateral and its obligations are interdependent, in which case it must be renegotiated or abandoned in full. The Legat Consul initiates treaty withdrawal by published NRS notice. For general treaties, the Senate may block withdrawal by simple majority within the notice period; if the Senate does not act, withdrawal takes effect. For mutual defense treaties, the Senate must affirmatively confirm withdrawal; if the Senate does not confirm, the treaty remains in force. Indigenous treaties under Article XVI may not be unilaterally withdrawn."
       },
       {
         "num": "§3.7",
