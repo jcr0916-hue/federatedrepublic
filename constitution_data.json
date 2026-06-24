@@ -260,7 +260,7 @@
       {
         "num": "§3.4",
         "name": "Legislative Standards",
-        "text": "Every bill must address a single, clearly defined subject. Any member or approval body in the legislative process may request an EM assessment of single-subject compliance, published to the NRS. The full text of every bill must be published to the NRS for a minimum period defined by statute before any final passage vote; a substantially amended bill resets the clock. The Legislature must sit for a minimum number of days per year defined by statute; emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber. Members must disclose all financial interests to the EM. The Legislature must establish a joint ethics committee with authority to sanction and refer members; removal requires 2/3 of the relevant chamber; under §9.1, the chamber may request an EM assessment to inform the proceeding. The Republic provides standard residential accommodation at the Seat of Government to every serving member of both chambers during their period of service. The standard is defined by statute and applies equally to all members regardless of tenure, seniority, or political affiliation."
+        "text": "Every bill must address a single, clearly defined subject. Any member or approval body in the legislative process may request an EM assessment of single-subject compliance, published to the NRS. The full text of every bill must be published to the NRS for a minimum period defined by statute before any final passage vote; a substantially amended bill resets the clock. The Legislature must sit for a minimum number of days per year defined by statute; emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber. Members must disclose all financial interests to the EM. The Legislature must establish a joint ethics committee with authority to sanction and refer members; removal requires 2/3 of the relevant chamber; under §9.1, the chamber may request an EM assessment to inform the proceeding."
       },
       {
         "num": "§3.5",
@@ -315,7 +315,7 @@
       {
         "num": "§3.14",
         "name": "Federal Legislative Competence",
-        "text": "The Legislature holds general authority to legislate for the peace, order, and good governance of the Republic. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where federal law and State law conflict, federal law prevails to the extent of the conflict. The Legislature may set minimum standards that States must meet but may not direct State institutions as instruments of federal administration."
+        "text": "The Legislature holds general authority to legislate for the peace, order, and good governance of the Republic. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where federal law and State law conflict, federal law prevails to the extent of the conflict. The Legislature may set minimum standards that States must meet but may not direct State institutions as instruments of federal administration. Where this Constitution directs that a function, standard, procedure, or framework be established, defined, or regulated, that obligation is fulfilled by statute unless this Constitution specifies otherwise. No executive or administrative act may substitute for legislation where this Constitution requires statutory action."
       },
       {
         "num": "§3.15",
@@ -340,12 +340,7 @@
       {
         "num": "§4.3",
         "name": "The Supreme Court",
-        "text": "The Supreme Court consists initially of nine justices organized into three staggered classes, each serving a single non-renewable 12-year term. The Legislature may increase the number of justices by statute requiring 2/3 of both chambers; any seat added must be filled within 18 months from the statute's effective date or expires by operation of law. The Legislature may decrease the number only by 2/3 of both chambers, effective through natural attrition only, never by removing a sitting justice. The Court may not fall below three justices. Where the Court is equally divided, the challenged ruling of the lower court or government body stands."
-      },
-      {
-        "num": "§4.3.a",
-        "name": "Supreme Court Quorum",
-        "text": "A majority of the SC’s seated justices — including any Temporary Associate Justices — constitutes quorum for ordinary decisions. Constitutional questions require a minimum of five justices regardless of total seated membership. The Legislature establishes by statute the procedure for filling any remaining Temporary Associate Justice positions."
+        "text": "The Supreme Court consists initially of nine justices organized into three staggered classes, each serving a single non-renewable 12-year term. The Legislature may increase the number of justices by statute requiring 2/3 of both chambers; any seat added must be filled within 18 months from the statute's effective date or expires by operation of law. The Legislature may decrease the number only by 2/3 of both chambers, effective through natural attrition only, never by removing a sitting justice. The Court may not fall below three justices. Where the Court is equally divided, the challenged ruling of the lower court or government body stands. A majority of the SC's seated justices — including any Temporary Associate Justices — constitutes quorum for ordinary decisions. Constitutional questions require a minimum of five justices regardless of total seated membership."
       },
       {
         "num": "§4.3.b",
@@ -670,7 +665,7 @@
       {
         "num": "§12.6",
         "name": "Compensation of Public Officials",
-        "text": "No government official may set their own compensation or the compensation of their direct supervisors. All official compensation is set by statute and is a public record on the NRS. The Legislature may by statute set the compensation of elected constitutional officers; no such change takes effect until after the next election for the relevant office following the session in which it was enacted. Official benefits and accommodations reflect the functional requirements of the office, not the status of the officeholder; no benefit may exceed what the function genuinely requires. Departures from ordinary professional standards require a demonstrable operational need, documented and published to the NRS, and are limited to the minimum extent that need requires."
+        "text": "No government official may set their own compensation or the compensation of their direct supervisors. All official compensation is set by statute and is a public record on the NRS. The Legislature may by statute set the compensation of elected constitutional officers; no such change takes effect until after the next election for the relevant office following the session in which it was enacted. Official benefits and accommodations reflect the functional requirements of the office, not the status of the officeholder; no benefit may exceed what the function genuinely requires."
       },
       {
         "num": "§12.7",
