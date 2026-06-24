@@ -20,7 +20,7 @@
       {
         "num": "§1.4",
         "name": "Prohibition of Slavery and Forced Labor",
-        "text": "Slavery, involuntary servitude, and forced labor are absolutely prohibited. Lawfully imposed prison labor and compulsory military service under the terms established by statute do not constitute forced labor under this provision. This right is non-derogable under §1.19.b."
+        "text": "Slavery, involuntary servitude, and forced labor are absolutely prohibited. Prison labor authorized by statute and civic obligations lawfully required of citizens by the Legislature — including jury service, military conscription, and civil emergency duties — do not constitute forced labor under this provision. This right is non-derogable under §1.19.b."
       },
       {
         "num": "§1.5",
@@ -100,12 +100,7 @@
       {
         "num": "§1.19",
         "name": "Emergency Derogation",
-        "text": "No emergency — however severe — suspends the Individual Sovereignty Floor in full. Temporary derogation of certain rights is permitted only under the strict conditions of this section; the rights enumerated in §1.19.b may not be derogated."
-      },
-      {
-        "num": "§1.19.f",
-        "name": "Non-Discrimination in Emergency Measures",
-        "text": "No emergency measure, regardless of its stated purpose, may be applied in a discriminatory manner on the basis of race, ethnicity, religion, or national origin; any such application is constitutionally void. This prohibition applies to the implementation of any emergency measure and is not subject to derogation under any emergency declaration."
+        "text": "No emergency — however severe — suspends the Individual Sovereignty Floor in full. Temporary derogation of certain rights is permitted only under the strict conditions of this section; the rights enumerated in §1.19.b may not be derogated. The three Monitors continue to operate with full constitutional authority throughout any emergency — they cannot be suspended or have their mandate reduced by emergency declaration."
       },
       {
         "num": "§1.19.a",
@@ -116,11 +111,6 @@
         "num": "§1.19.b",
         "name": "Non-Derogable Rights",
         "text": "These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.11); the right to a public trial (§1.13); no retroactive punishment (§1.14); and non-refoulement (§1.21). No emergency declaration, executive order, or legislative act may derogate any of these rights. No emergency measure, regardless of its stated purpose, may be applied in a discriminatory manner on the basis of race, ethnicity, religion, or national origin; any such application is constitutionally void."
-      },
-      {
-        "num": "§1.19.c",
-        "name": "Monitor Continuity",
-        "text": "The three Monitors continue to operate with full constitutional authority throughout any emergency — they cannot be suspended or have their mandate reduced by emergency declaration."
       },
       {
         "num": "§1.19.d",
@@ -365,12 +355,7 @@
       {
         "num": "§4.4",
         "name": "Supreme Court Selection",
-        "text": "SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.12 — any pool member meeting the statutory qualifications for Supreme Court appointment is eligible for SC nomination. The Civic Consul nominates within the period defined by statute following a vacancy (not to exceed 90 days for anticipated vacancies, 60 days for unanticipated vacancies). The Senate must vote within the period defined by statute following nomination (not to exceed 120 days); the JM’s ongoing audit of the Judicial Pool is available on the NRS and the Senate may consider any published JM findings on the nominee; no deemed confirmation applies, but failure to vote within that period is a constitutional compliance breach. If the Senate declines, the Civic Consul nominates again within the period defined by statute. Where the Civic Consul fails to nominate within 30 days of an LM assessment of constitutional breach under this section, the Senate may select a nominee directly from the Judicial Pool by 2/3 vote of full seated membership; a Senate selection under this provision requires no further Civic Consul nomination and proceeds directly to confirmation. The confirmed justice serves a single non-renewable 12-year term from the date of confirmation. A mid-term replacement serves only the remainder of the original term. At founding, the nine initial justices are confirmed simultaneously and assigned to their three classes by public lot. The Legislature must by statute establish a recusal framework; in the absence of statute, a justice must recuse where impartiality could reasonably be questioned. Upon any SC vacancy, the most senior Appellate Court judge by continuous service is automatically designated Temporary Associate Justice within 5 days — without nomination or confirmation — holding full voting rights until the vacancy is filled. A Temporary Associate Justice may not stand as a candidate for the seat they are temporarily filling."
-      },
-      {
-        "num": "§4.4.b",
-        "name": "Temporary Associate Justice",
-        "text": "Upon any SC vacancy, the most senior Appellate Court judge by continuous service is automatically designated Temporary Associate Justice within 5 days — without nomination or confirmation — holding full voting rights until the vacancy is filled. A Temporary Associate Justice may not stand as a candidate for the seat they are temporarily filling."
+        "text": "SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.12 — any pool member meeting the statutory qualifications for Supreme Court appointment is eligible for SC nomination. The Civic Consul nominates within the period defined by statute following a vacancy (not to exceed 90 days for anticipated vacancies, 60 days for unanticipated vacancies). The Senate must vote within the period defined by statute following nomination (not to exceed 120 days); the JM’s ongoing audit of the Judicial Pool is available on the NRS and the Senate may consider any published JM findings on the nominee; no deemed confirmation applies, but failure to vote within that period is a constitutional compliance breach. If the Senate declines, the Civic Consul nominates again within the period defined by statute. Where the Civic Consul fails to nominate within 30 days of an LM assessment of constitutional breach under this section, the Senate may select a nominee directly from the Judicial Pool by 2/3 vote of full seated membership; a Senate selection under this provision requires no further Civic Consul nomination and proceeds directly to confirmation. The confirmed justice serves a single non-renewable 12-year term from the date of confirmation. A mid-term replacement serves only the remainder of the original term. At founding, the nine initial justices are confirmed simultaneously and assigned to their three classes by public lot. Upon any SC vacancy, the most senior Appellate Court judge by continuous service is automatically designated Temporary Associate Justice within 5 days — without nomination or confirmation — holding full voting rights until the vacancy is filled. A Temporary Associate Justice may not stand as a candidate for the seat they are temporarily filling."
       },
       {
         "num": "§4.4.a",
@@ -386,11 +371,6 @@
         "num": "§4.6",
         "name": "Judgment Recognition",
         "text": "Judicial judgments, official records, and authenticated documents are recognized across all jurisdictions within the Republic. A judgment valid in one jurisdiction must be recognized in all others. Non-recognition grounds are exhaustive: the issuing court lacked jurisdiction; the judgment was obtained by fraud; or enforcement would require an act defined by the Legislature as categorically unenforceable. Judgments contrary to Article I are void by operation of §17.4. A judgment or status order published to the NRS is self-authenticating in any Republic court and takes immediate effect without re-registration. No State or Territory may discriminate in recognition based on the nature of the parties or the subject matter recognized by the issuing jurisdiction."
-      },
-      {
-        "num": "§4.7",
-        "name": "Jury Service",
-        "text": "Citizens are required to serve on juries when called. Jury service is compensated at a rate the Legislature defines by statute. Unexcused refusal is subject to civil consequences the Legislature defines. Jury service does not constitute forced labor under §1.4."
       }
     ]
   },
@@ -595,12 +575,7 @@
       {
         "num": "§9.12",
         "name": "Constitutional Pool Framework",
-        "text": "The Elections Panel maintains all constitutional candidate registries and pools, including the Judicial Pool, and administers public access to their records via the NRS. Each pool is subject to ongoing Monitor audit; findings are published to the NRS. Any applicant excluded may appeal to the SC within 14 days on the sole ground that the qualification requirements were misapplied. Lottery draws are conducted by the JMC in a public session and published to the NRS. The constitutional minimum for all pools is five eligible members; where a pool falls below five, the JM publishes a compliance breach and the relevant nominating bodies must act to restore the minimum within the period defined by statute. Where a pool reaches zero before an acting designation is made, the most senior eligible federal judge by continuous service who is not currently serving in any constitutional office serves as Acting officer until the pool is restored; this fallback applies only to judicial and Monitor pools."
-      },
-      {
-        "num": "§9.13",
-        "name": "Registry Integrity Standards",
-        "text": "These standards apply to all registries and candidate pools maintained under constitutional mandate. Eligibility criteria are strictly objective — years of practice or service, office status, and financial interests as defined by this Constitution or by statute. No registry administrator may apply criteria relating to legal philosophy, judicial temperament, ideological orientation, or political association; any exclusion on such grounds is constitutionally void. Where an applicant is excluded or removed, the administering body must publish the specific grounds to the NRS within 14 days. An excluded or removed applicant may petition the SC within 30 days of NRS publication; the SC reviews only whether the stated grounds correspond to an established eligibility criterion — it does not review the factual merits of the determination. The JMC annual audit must evaluate each registry for pool depth, distribution, and patterns in exclusion decisions. Changes to eligibility criteria apply prospectively only and do not affect persons already entered in a constitutional pool or registry under the criteria applicable at the time of their entry."
+        "text": "The Elections Panel maintains all constitutional candidate registries and pools, including the Judicial Pool, and administers public access to their records via the NRS. Each pool is subject to ongoing Monitor audit; findings are published to the NRS. Any applicant excluded may appeal to the SC within 14 days on the sole ground that the qualification requirements were misapplied. Lottery draws are conducted by the JMC in a public session and published to the NRS. The constitutional minimum for all pools is five eligible members; where a pool falls below five, the JM publishes a compliance breach and the relevant nominating bodies must act to restore the minimum within the period defined by statute. Where a pool reaches zero before an acting designation is made, the most senior eligible federal judge by continuous service who is not currently serving in any constitutional office serves as Acting officer until the pool is restored; this fallback applies only to judicial and Monitor pools. Eligibility criteria for all pools are strictly objective — years of practice or service, office status, and financial interests as defined by this Constitution or by statute. No registry administrator may apply criteria relating to legal philosophy, judicial temperament, ideological orientation, or political association; any exclusion on such grounds is constitutionally void. Where an applicant is excluded or removed, the administering body must publish the specific grounds to the NRS within 14 days; an excluded applicant may petition the SC within 30 days of NRS publication on the sole ground that stated grounds do not correspond to an established eligibility criterion. Changes to eligibility criteria apply prospectively only and do not affect persons already entered in a constitutional pool or registry under the criteria applicable at the time of their entry."
       },
       {
         "num": "§9.14",
@@ -690,7 +665,7 @@
       {
         "num": "§12.4.a",
         "name": "Codes of Conduct and Recusal",
-        "text": "The Legislature may by statute establish codes of conduct and procedural rules for any constitutionally established office outside the Legislature, including standards for recusal from specific proceedings, disclosure obligations beyond those required by §12.4, and disciplinary procedures for conduct falling short of removal grounds under §9.14. Such rules must be consistent with the independence protections of the relevant office and may not be used to constrain the substantive exercise of any constitutionally assigned function. An officer who fails to recuse in circumstances defined by statute as requiring recusal acts in constitutional breach; the act or determination in which they participated remains subject to challenge on that ground. No statute enacted under this provision may be amended or repealed within the legislative session immediately following the session of its enactment; thereafter, amendment or repeal requires a 2/3 majority of both chambers."
+        "text": "The Legislature may by statute establish codes of conduct and procedural rules for any constitutionally established office outside the Legislature, including standards for recusal from specific proceedings, disclosure obligations beyond those required by §12.4, and disciplinary procedures for conduct falling short of removal grounds under §9.14. Such rules must be consistent with the independence protections of the relevant office and may not be used to constrain the substantive exercise of any constitutionally assigned function. In the absence of statute establishing recusal standards for a given office, an officer must recuse where their impartiality could reasonably be questioned. An officer who fails to recuse in circumstances requiring recusal — whether defined by statute or this default standard — acts in constitutional breach; the act or determination in which they participated remains subject to challenge on that ground. No statute enacted under this provision may be amended or repealed within the legislative session immediately following the session of its enactment; thereafter, amendment or repeal requires a 2/3 majority of both chambers."
       },
       {
         "num": "§12.5",
