@@ -38,6 +38,11 @@
         "text": "Medical decisions are the province of the individual and their chosen provider. The state may promote public health through information, licensing, and access; it may not compel medical decisions or penalize their exercise. Every person holds the right to privacy in their person, home, communications, and data. Searches, surveillance, and data collection by government require prior independent judicial authorization based on specific, articulable grounds. The Legislature establishes by statute the warrant framework, subject to the requirement of independent judicial oversight. Communications and stored data receive equivalent protection to physical premises. Encryption is a lawful means of protecting private information and may not be prohibited. No government may impose civil or criminal liability on any person solely for receiving, assisting access to, or providing information about medical care that was lawful where received."
       },
       {
+        "num": "§1.7.a",
+        "name": "Privacy and Surveillance",
+        "text": "Every person holds the right to privacy in their person, home, communications, and data. Searches, surveillance, and data collection by government require prior independent judicial authorization based on specific, articulable grounds. The Legislature establishes by statute the warrant framework, subject to the requirement of independent judicial oversight. Communications and stored data receive equivalent protection to physical premises. Encryption is a lawful means of protecting private information and may not be prohibited."
+      },
+      {
         "num": "§1.8",
         "name": "Property and Security of the Home",
         "text": "Every person holds the right to own property and to security in their home. The state may take private property for public use only upon payment of just compensation determined by independent process, not by the taking authority. The home may not be entered without the occupant's consent or prior independent judicial authorization."
@@ -98,6 +103,11 @@
         "text": "No emergency — however severe — suspends the Individual Sovereignty Floor in full. Temporary derogation of certain rights is permitted only under the strict conditions of this section; the rights enumerated in §1.19.b may not be derogated."
       },
       {
+        "num": "§1.19.f",
+        "name": "Non-Discrimination in Emergency Measures",
+        "text": "No emergency measure, regardless of its stated purpose, may be applied in a discriminatory manner on the basis of race, ethnicity, religion, or national origin; any such application is constitutionally void. This prohibition applies to the implementation of any emergency measure and is not subject to derogation under any emergency declaration."
+      },
+      {
         "num": "§1.19.a",
         "name": "Emergency Derogation — Declaration Requirements",
         "text": "Emergency derogation of Article I rights requires a declaration specifying the nature of the emergency, which rights are limited, the geographic scope, and the duration; blanket declarations are constitutionally invalid. The declaration is published to the NRS immediately."
@@ -151,6 +161,11 @@
         "num": "§2.3",
         "name": "Consular Intelligence and Veto",
         "text": "The Legat Consul directs foreign intelligence. No intelligence operation may be conducted against Republic citizens within Republic territory on the Legat Consul's authority; such operations require independent judicial authorization. The Legat Consul may veto legislation that raises a genuine constitutional concern within the Legat Consul's domain — military operations, intelligence, treaty obligations, or border security. A general or speculative security connection is insufficient. Either Speaker may petition the SC for an expedited domain determination of any disputed veto; the SC must rule within 7 days of such petition. Under §9.1, either Speaker may request an EM assessment of the domain question, which the SC may consider as expert evidence. Where the SC confirms the veto falls outside the Legat Consul's defined domain, the veto is void and the bill proceeds to ordinary enactment without Legat Consul assent. Where the SC confirms the veto is within domain, the ordinary 2/3 override threshold applies."
+      },
+      {
+        "num": "§2.3.a",
+        "name": "Legat Consul Legislative Veto",
+        "text": "The Legat Consul may veto legislation that raises a genuine constitutional concern within the Legat Consul's security domain — military operations, intelligence, treaty obligations, or border security. A general or speculative security connection is insufficient. Either Speaker may petition the SC for an expedited domain determination of any disputed veto; the SC must rule within the period defined by statute, not to exceed 14 days, of such petition. Under §9.1, either Speaker may request an EM assessment of the domain question, which the SC may consider as expert evidence. Where the SC confirms the veto falls outside the Legat Consul's defined domain, the veto is void and the bill proceeds to ordinary enactment without Legat Consul assent. Where the SC confirms the veto is within domain, the ordinary 2/3 override threshold applies."
       },
       {
         "num": "§2.4",
@@ -223,11 +238,6 @@
         "text": "In a cross-domain emergency requiring unified operational authority, either executive may propose a temporary operational lead designation. Concurrence of both executives makes it effective and is published to the NRS. Where the executives cannot agree, either may petition the SC for expedited resolution under §4.5. A lead designation assigns operational coordination only and does not affect either executive’s constitutional domain authority."
       },
       {
-        "num": "§2.14.b",
-        "name": "Coordination Failure",
-        "text": "Where both executives are acting within their domains but their actions are materially incompatible, either may declare a coordination failure by NRS notice. The Legislature may resolve the deadlock by concurrent resolution. Where the Legislature does not act within 30 days, the Legat Consul retains full authority within the Legat domain and the Civic Consul’s executive authority governs the cross-domain interaction pending resolution; this applies to how the domains interact, not to the substance of either domain."
-      },
-      {
         "num": "§2.15",
         "name": "Constitutional Continuity",
         "text": "Where conflict between constitutional actors creates a risk of suspension of lawful governance or constitutionally mandated essential services, the constitutional default is continuity at existing scope pending formal resolution. No constitutional actor may use a refusal to certify, approve, or coordinate to achieve the functional suspension of a constitutional obligation. The SC holds expedited jurisdiction over any dispute in which continuity of lawful governance is at immediate risk."
@@ -273,6 +283,11 @@
         "text": "Treaty and compact agreement ratification requires 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers; neither chamber may amend the terms of a concluded agreement. Where a treaty fails ratification, standalone domestic provisions may be transmitted to the Assembly as ordinary legislation unless the treaty is bilateral and its obligations are interdependent, in which case it must be renegotiated or abandoned in full. The Legat Consul initiates treaty withdrawal by published NRS notice. For general treaties, the Senate may block withdrawal by simple majority within the notice period; if the Senate does not act, withdrawal takes effect. For mutual defense treaties, the Senate must affirmatively confirm withdrawal; if the Senate does not confirm, the treaty remains in force. Indigenous treaties under Article XVI may not be unilaterally withdrawn."
       },
       {
+        "num": "§3.6.a",
+        "name": "Classification and Dispute Resolution",
+        "text": "Where the Senate disputes the Legat Consul's classification of an international instrument as a trade agreement, the instrument is treated as a treaty pending resolution. Either party may petition the SC for expedited classification determination; the SC must rule within the period defined by statute."
+      },
+      {
         "num": "§3.7",
         "name": "Legislative Process and Passage",
         "text": "Bills pass by absolute majority of the full seated membership of both chambers. Higher thresholds apply to constitutional amendments, veto overrides, removal proceedings, and other matters specified in this constitution. The Speaker of each chamber must publish the final text of every enacted law to the NRS within the period defined by statute. All prior versions, committee reports, Monitor findings, and veto records are indexed alongside the enacted text. Where the constitution requires the Legislature to enact specific legislation and the Legislature fails to do so, the LM publishes a non-compliance finding; the mandate becomes justiciable in the SC; and, for mandates whose non-fulfilment directly impairs the exercise of a right guaranteed in Article I, affected parties may bring direct constitutional claims."
@@ -311,11 +326,6 @@
         "num": "§3.14",
         "name": "Federal Legislative Competence",
         "text": "The Legislature holds general authority to legislate for the peace, order, and good governance of the Republic. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where federal law and State law conflict, federal law prevails to the extent of the conflict. The Legislature may set minimum standards that States must meet but may not direct State institutions as instruments of federal administration."
-      },
-      {
-        "num": "§3.15",
-        "name": "Delegation of Authority",
-        "text": "The Legislature may by statute delegate defined authorities within its legislative competence to the Legat Consul, the Civic Consul, or established agencies. Any delegation must specify the exact scope of authority delegated, the conditions on its exercise, and a maximum duration. The Legislature may rescind any delegation by simple majority of both chambers at any time; no recipient of delegated authority may obstruct or condition rescission. No delegation creates a permanent transfer of legislative competence. Every exercise of delegated authority is published to the NRS with attribution to both the legislative grant and the recipient’s act. The EM audits the exercise of all delegated executive authority and publishes findings to the NRS annually."
       }
     ]
   },
@@ -351,6 +361,11 @@
         "num": "§4.4",
         "name": "Supreme Court Selection",
         "text": "SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.12 — any pool member meeting the statutory qualifications for Supreme Court appointment is eligible for SC nomination. The Civic Consul nominates within the period defined by statute following a vacancy (not to exceed 90 days for anticipated vacancies, 60 days for unanticipated vacancies). The Senate must vote within the period defined by statute following nomination (not to exceed 120 days); the JM’s ongoing audit of the Judicial Pool is available on the NRS and the Senate may consider any published JM findings on the nominee; no deemed confirmation applies, but failure to vote within that period is a constitutional compliance breach. If the Senate declines, the Civic Consul nominates again within the period defined by statute. Where the Civic Consul fails to nominate within 30 days of an LM assessment of constitutional breach under this section, the Senate may select a nominee directly from the Judicial Pool by 2/3 vote of full seated membership; a Senate selection under this provision requires no further Civic Consul nomination and proceeds directly to confirmation. The confirmed justice serves a single non-renewable 12-year term from the date of confirmation. A mid-term replacement serves only the remainder of the original term. At founding, the nine initial justices are confirmed simultaneously and assigned to their three classes by public lot. The Legislature must by statute establish a recusal framework; in the absence of statute, a justice must recuse where impartiality could reasonably be questioned. Upon any SC vacancy, the most senior Appellate Court judge by continuous service is automatically designated Temporary Associate Justice within 5 days — without nomination or confirmation — holding full voting rights until the vacancy is filled. A Temporary Associate Justice may not stand as a candidate for the seat they are temporarily filling."
+      },
+      {
+        "num": "§4.4.b",
+        "name": "Temporary Associate Justice",
+        "text": "Upon any SC vacancy, the most senior Appellate Court judge by continuous service is automatically designated Temporary Associate Justice within 5 days — without nomination or confirmation — holding full voting rights until the vacancy is filled. A Temporary Associate Justice may not stand as a candidate for the seat they are temporarily filling."
       },
       {
         "num": "§4.4.a",
@@ -586,11 +601,6 @@
         "num": "§9.14",
         "name": "Constitutional Officer Removal — Standard Track",
         "text": "This section governs for-cause removal of all constitutionally confirmed independent officers except Supreme Court justices under §4.3.b and elected executives. A concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC. The SC determines within 14 days whether the stated grounds constitute at least one statutory removal category for the subject office; the SC reviews constitutional category only, not factual merits. If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers; no removal vote may be held within 180 days of a major national election without prior SC review within 48 hours. If grounds are not confirmed, the process closes and may not be reinitiated on the same or substantially similar grounds within six months. Where the SC fails to rule within 14 days, grounds are deemed confirmed and duty suspension activates immediately. The Legislature defines enumerated removal categories for each constitutionally confirmed office by statute."
-      },
-      {
-        "num": "§9.14.a",
-        "name": "Constitutional Officer Removal — Judicial Track",
-        "text": "The Judicial Track is available where the Standard Track’s legislative threshold appears unreachable due to demonstrated political gridlock. Where two of the three Monitors jointly assess and report for-cause grounds and petition the SC, the SC determines within 30 days whether the grounds constitute sufficient cause for suspension; where the SC fails to rule within 30 days, cause is deemed found. If cause is found or deemed found, the officer is suspended and the most senior deputy acts in the interim. The Senate has 60 days to hold a removal vote; 3/5 of full seated membership is required for permanent removal. A vote failing 3/5 reinstates the officer and closes the process. Where the Senate fails to vote within 60 days, the matter is placed before the next federal electoral period ballot; removal requires 60% of votes cast. Officers of independent agencies established under §3.9 are not subject to this framework; their removal is governed by the establishing statute, which must preserve the for-cause removal principle."
       }
     ]
   },
@@ -648,14 +658,14 @@
         "text": "The Republic is a social state. Every Inhabitant is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child. The Legislature establishes the framework for each by statute. The Legislature must establish the Monetary Authority as an independent agency under §3.9, responsible for monetary policy, currency issuance, and fiscal integrity certification. The MA has exclusive authority to issue the Republic’s currency; no State, Territory, or other body may issue instruments intended to function as legal tender within the Republic. The Legislature may not define MA independence standards in a manner that compromises the credibility of its certification functions; the EM audits MA operations and independence annually and publishes findings to the NRS."
       },
       {
+        "num": "§12.1.a",
+        "name": "The Monetary Authority",
+        "text": "The Legislature must establish the Monetary Authority as an independent agency under §3.9, responsible for monetary policy, currency issuance, and fiscal integrity certification. The MA has exclusive authority to issue the Republic’s currency; no State, Territory, or other body may issue instruments intended to function as legal tender within the Republic. The Legislature may not define MA independence standards in a manner that compromises the credibility of its certification functions; the EM audits MA operations and independence annually and publishes findings to the NRS."
+      },
+      {
         "num": "§12.2",
         "name": "Fiscal Accountability",
         "text": "The Legislature must pass a balanced budget or publish a structural deficit justification reviewed by the MA for fiscal accuracy. Structural deficits above the threshold defined by the MA require a published plan for return to balance. Where the Legislature fails to enact a budget by the constitutional deadline defined by statute, an interim automatic appropriation takes effect by constitutional operation covering: the functions protected under §2.15; civil service compensation; and debt service obligations. The interim appropriation continues at the prior fiscal year’s inflation-adjusted level until a budget is enacted; no new programs may be initiated or expanded under the interim appropriation. Where discretionary government spending is suspended due to budget failure, the pay of all members of both chambers is withheld from the same date on which government employee pay is withheld and released only upon budget enactment. The Legislature must fund the National Endowment by appropriation in years of fiscal surplus; failure to adequately fund the Endowment is a constitutional compliance breach."
-      },
-      {
-        "num": "§12.3",
-        "name": "Taxing Power and National Revenue Fund",
-        "text": "The Legislature has exclusive authority to levy taxes, duties, and tariffs by statute; no other body may impose a tax, duty, or levy. All public money received by the Republic — including tax revenue, fees, and other receipts — is deposited into the National Revenue Fund. No money may be withdrawn from the National Revenue Fund except by legislative appropriation under §12.2; the EM audits the Fund’s receipts and disbursements as part of its annual fiscal mandate. No tax may discriminate on the basis of the characteristics listed in §1.6. The Legislature sets tax rates for all jurisdictions within the Republic, including States, Territories, and Associated Communities. Tariff rates established by a ratified treaty under §3.6 constitute legislatively authorized rates for the duration of that treaty; the Legislature may set tariff schedules within which the Legat Consul may negotiate specific rates."
       },
       {
         "num": "§12.4",
@@ -701,6 +711,11 @@
         "num": "§13.3",
         "name": "Electoral Supermajority Threshold",
         "text": "60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. This threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State plurality requirement is waived (§7.2); public confirmation of a Supreme Court justice under the Senate bypass mechanism (§4.4.a); and public election removal of a constitutional officer under the Judicial Track (§9.14.a). The Legislature may not set a higher or lower threshold for any direct electoral supermajority determination without a constitutional amendment. This provision does not govern the optional referendum under §13.1 or the citizen legislative initiative under §13.2, which state their own thresholds; it governs determinations that require constitutional supermajority democratic consent."
+      },
+      {
+        "num": "§13.4",
+        "name": "Electoral Supermajority Threshold",
+        "text": "60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. This threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State plurality requirement is waived (§7.2); public confirmation of a Supreme Court justice under the Senate bypass mechanism (§4.4.a); and public election removal of a constitutional officer under the Judicial Track (§9.14). The Legislature may not set a higher or lower threshold for any direct electoral supermajority determination without a constitutional amendment. This provision does not govern the optional referendum under §13.1 (simple majority of votes cast subject to a 50% turnout ceiling) or the citizen legislative initiative under §13.2 (60% of votes cast with at least 50% participation where the Legislature has not acted); it governs determinations that require constitutional supermajority democratic consent. **Article XIV — Military Authorization and Accountability**"
       }
     ]
   },
@@ -771,6 +786,11 @@
         "num": "§15.8",
         "name": "Local Government",
         "text": "Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as primary points of contact between citizens and government. They are entitled to reasonable fiscal capacity to carry out their constitutional functions. States may not systematically defund local governments to achieve de facto centralization of State-level functions."
+      },
+      {
+        "num": "§15.9",
+        "name": "Voluntary State Independence",
+        "text": "A State may seek independence from the Republic through a two-stage process. Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters; the referendum must achieve 60% of votes cast with at least 60% participation among the State's eligible voters; a failed referendum may not be reinitiated on the same or substantially similar grounds for five years. Upon certification of the referendum result, the Elections Panel publishes the independence petition to the NRS; the election is irrevocable from the moment of publication. The Republic may not prefer, discourage, or offer inducements toward any independence petition or referendum; the Republic must provide factual information about the process upon request. Stage Two requires both chambers to hold a concurrent ratification vote within 90 days of NRS publication; Assembly members elected from districts within the petitioning State and senators whose allocation derives from the petitioning State's population are recused from this vote, and the required 60% majority and quorum for each chamber are calculated from the remaining seated members; if either chamber fails to achieve 60% or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction."
       }
     ]
   },
@@ -921,6 +941,11 @@
         "num": "§19.9",
         "name": "Required Statutory Agency Establishment",
         "text": "Where this Constitution assigns a specific function to a statutory independent agency under §3.9, the Legislature must establish that agency within the following timeframes from Phase 4 activation: the civic proficiency assessment administrator under §5.1.a, within 180 days; the Census Bureau under §3.2, within 18 months; the Monetary Authority under §12.1, within 180 days. Where the Legislature fails to meet a deadline, §3.9 applies: the LM publishes a compliance finding to the NRS, and the responsible Monitor’s ongoing audit encompasses the unfilled mandate until the agency is established. The LM publishes a compliance finding to the NRS when any establishment deadline is missed and again when the agency becomes operational. The Legislature may not permanently delegate a constitutionally required statutory function to an Monitor in lieu of establishing the required agency."
+      },
+      {
+        "num": "§19.10",
+        "name": "Founding Citizenship",
+        "text": "All individuals holding voting rights on Day Zero of ratification are automatically granted full citizenship as founding members of the Republic without testing or application."
       }
     ]
   },
