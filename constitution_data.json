@@ -649,6 +649,11 @@
       },
       {
         "num": "§11.3",
+        "name": "State Election Non-Compliance",
+        "text": "Where the Elections Panel finds through audit that a State's election administration materially fails to meet the constitutional standards required under §11.1, it publishes the finding to the NRS and notifies the State formally. The State has the period defined by statute to cure the identified failures. Where the State does not cure within that period, the Elections Panel administers the relevant federal election directly within that State for that electoral period only; State administration resumes automatically at the conclusion of that period. The State may petition the SC for expedited review of the Elections Panel's finding at any point; the SC must rule within the period defined by statute. A finding of non-compliance does not affect the validity of votes cast; the Elections Panel's administration obligation is to ensure constitutional standards are met going forward."
+      },
+      {
+        "num": "§11.3",
         "name": "Panel Emergency Authority",
         "text": "The Legislature must establish by statute a procedure for each panel to adopt temporary technical measures in response to imminent security threats or system failures within its domain; emergency measures may not change electoral rules, timelines, or NRS record permanence; they expire within 72 hours unless the seated members of the panel ratify them by majority vote of those able to act. The Legislature must by statute establish the transition from any predecessor voting infrastructure to the constitutionally required NVS, ensuring no gap in democratic participation."
       }
