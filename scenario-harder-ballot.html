@@ -1,13 +1,50 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Harder Ballot — The Federated Republic</title><meta name="description" content="Year 7. Korda State introduces an in-person verification requirement that effectively reduces NVS access in rural districts by 40%. Citizens challenge under §7."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="site.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Harder Ballot — The Federated Republic</title>
+  <meta name="description" content="Year 7. Korda State introduces in-person verification that reduces rural NVS access by 41%. Citizens challenge under §1.9. The Elections Panel opens a §11.3 compliance audit. Two mechanisms. One constitutional principle.">
+  <meta property="og:title" content="The Harder Ballot">
+  <meta property="og:description" content="§1.9 says no action may make voting more difficult. §11.3 gives the Elections Panel a direct compliance pathway. Korda State tests both.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-harder-ballot.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
   <style>
-main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid #1B2A4A}.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:0.8rem}.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:#1B2A4A;line-height:1.1;margin-bottom:1rem}.scenario-subtitle{font-size:0.95rem;color:#7a7060;font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:#1B2A4A;color:#C9A84C;padding:0.25rem 0.6rem;border-radius:2px}.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:#1B2A4A;margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid #d4c9b0}.beat{background:#EDE7D8;border-left:3px solid #C9A84C;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#7a7060;margin-bottom:0.4rem}.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#1B2A4A;margin-bottom:0.8rem}.beat p{margin-bottom:0.8rem;font-size:0.92rem}.finding{background:#1B2A4A;color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;margin-bottom:0.8rem}.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}.finding p:last-child{margin-bottom:0}.scenario-.scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
-    .scenario-nav a:hover{opacity:1;color:var(--navy)}@media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}.scenario-subtitle{font-size:0.88rem}.beat{padding:1rem 1.2rem}}
-</style></head><body><nav>
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:white;padding:1.5rem;margin:2rem 0}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+    .finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+    .finding p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
     <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
-        <div class="nav-links">
+    <div class="nav-links">
       <a href="annotated.html">Annotated Edition</a>
-      <a href="scenarios.html">Scenarios</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
       <a href="diagrams.html">Diagrams</a>
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="sources.html">Sources</a>
@@ -17,7 +54,7 @@ main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-
       <span></span><span></span><span></span>
     </button>
   </nav>
-    <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
     <a href="diagrams.html">Diagrams</a>
@@ -29,55 +66,87 @@ main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-
     <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
   </div>
 
-  <main><div class="scenario-meta"><span class="scenario-tag">Voting Rights · §1.9 · NVS Access</span><h1 class="scenario-title">The Harder Ballot</h1><p class="scenario-subtitle">Year 7. Korda State introduces an in-person verification requirement that effectively reduces NVS access in rural districts by 40%. Citizens challenge under §1.9's prohibition on making voting more difficult.</p><div class="provisions-tested">
+  <main id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Voting Rights · §1.9 · §11.3 · NVS Access</span>
+      <h1 class="scenario-title">The Harder Ballot</h1>
+      <p class="scenario-subtitle">Year 7. Korda State introduces in-person biometric verification that reduces rural NVS access by 41%. Citizens challenge under §1.9. The Elections Panel opens a separate §11.3 compliance audit. Two constitutional mechanisms converge on the same violation.</p>
+      <div class="provisions-tested">
         <span class="prov-tag">§1.9 The Right to Vote</span>
+        <span class="prov-tag">§11.3 State Election Non-Compliance</span>
         <span class="prov-tag">§7.3 Federal Elections</span>
-        <span class="prov-tag">§11.2 NVS Properties and Voting Rights</span>
-        <span class="prov-tag">§9.1.a The Legislative Monitor</span>
-      </div></div><div class="scenario-body">
-      <p>Korda State's Voting Integrity Act required voters to present government-issued biometric credentials at designated verification terminals before the NVS would accept their ballot. The terminals were installed at 847 locations statewide. Rural districts received one terminal per fifteen hundred square kilometers. Urban districts received one per four square kilometers. Drive times to the nearest terminal in rural Korda ranged from twelve minutes to four hours and twenty minutes.</p>
+        <span class="prov-tag">§11.2 NVS Properties</span>
+        <span class="prov-tag">§9.1.a Legislative Monitor</span>
+      </div>
+    </div>
 
-      <p>The Act passed Korda's legislature 61-39. The State's Attorney General certified it as a fraud prevention measure. Within three weeks of the Act taking effect, the Elections Panel published a NVS access report showing a 41% reduction in submitted federal ballots from Korda's rural districts compared to the prior electoral period.</p>
+    <div class="scenario-body">
 
-      <h2>The Constitutional Challenge — §1.9</h2>
+      <p>Korda State's Voting Integrity Act required voters to present government-issued biometric credentials at designated verification terminals before the NVS would accept their ballot. The terminals were installed at 847 locations statewide. Rural districts received one terminal per fifteen hundred square kilometers. Urban districts received one per four. Drive times to the nearest terminal in rural Korda ranged from twelve minutes to four hours and twenty minutes.</p>
 
-      <p>Three civic organizations and seventeen individual citizens petitioned the SC under §1.9. The petition was direct: the Voting Integrity Act made voting more difficult. The constitutional text was equally direct: no law, rule, administrative decision, or practice that reduces access to the franchise is constitutionally valid.</p>
+      <p>The Act passed Korda's legislature 61-39. The State's Attorney General certified it as a fraud prevention measure. Within three weeks of the Act taking effect, the Elections Panel published a NVS access report showing a 41% reduction in submitted federal ballots from Korda's rural districts compared to the prior electoral period. The report was published to the NRS the same day it was issued — constitutionally mandated transparency producing the exact evidence needed for challenge.</p>
+
+      <h2>The Citizen Challenge — §1.9</h2>
+
+      <p>Three civic organizations and seventeen individual citizens petitioned the SC under §1.9. The petition was direct: the Voting Integrity Act made voting more difficult. The constitutional text was equally direct — no law, rule, administrative decision, or practice that reduces access to the franchise is constitutionally valid.</p>
 
       <div class="beat">
-        <div class="beat-label">§1.9 — The Test Is Simple</div>
+        <div class="beat-label">§1.9 — The Test</div>
         <div class="beat-title">Government at every level is prohibited from taking any action that makes voting more difficult, less accessible, or less secure.</div>
-        <p>Korda's defense was that the Act made voting more secure. The SC's ruling engaged directly with the tension between the accessibility and security requirements in §1.9: "The state holds an affirmative obligation to make voting as accessible as possible consistent with security. Consistent with security does not mean security at any cost to accessibility. The state must demonstrate that the security benefit is genuine, proportionate, and that no less restrictive means achieves the same purpose. A 41% reduction in rural ballot submission is not consistent with the affirmative accessibility obligation."</p>
-        <p>The Act was void. Korda had 90 days to submit a revised verification framework that the Elections Panel would certify as NVS-compatible. The Elections Panel administered the next federal electoral period under the prior access protocols in Korda while the revised framework was developed.</p>
+        <p>Korda's defense was that the Act made voting more secure. The SC's ruling engaged directly with the tension between accessibility and security in §1.9: "The Republic holds an affirmative obligation to make voting as accessible as possible consistent with security. Consistent with security does not mean security at any cost to accessibility. The State must demonstrate that the security benefit is genuine, proportionate, and that no less restrictive means achieves the same purpose. A 41% reduction in rural ballot submission is not consistent with the affirmative accessibility obligation. It does not pass proportionality review."</p>
+        <p>The Act was void. The SC gave Korda 90 days to submit a revised verification framework that the Elections Panel would certify as NVS-compatible.</p>
       </div>
 
-      <h2>The LM's Compliance Finding</h2>
+      <h2>The Elections Panel's Parallel Track — §11.3</h2>
 
-      <p>The LM published a compliance notice noting Korda's Act as a constitutional violation certified by the SC. The notice specified the 41% access reduction figure and Korda's 90-day remediation window. It did not impose any sanction — the LM's mandate is information and compliance, not enforcement. The sanction was the SC ruling itself: the Act was void.</p>
+      <p>The citizen SC petition and the Elections Panel's compliance audit ran in parallel. These are distinct constitutional mechanisms. The SC petition is a rights challenge brought by affected citizens. The §11.3 audit is the Elections Panel exercising its own constitutional mandate over federal election standards — it does not depend on a citizen filing, does not require an SC petition, and produces its own legal consequences.</p>
 
       <div class="beat">
-        <div class="beat-label">§7.3 — No State May Reduce NVS Access</div>
-        <div class="beat-title">No State may take any action that reduces NVS access, functionality, or availability within its territory.</div>
-        <p>§7.3's NVS protection provision is the companion to §1.9's rights guarantee. §1.9 states the principle; §7.3 makes it operational by specifying that NVS access is the constitutional floor and no State may reduce it. The Elections Panel's access report — showing the 41% rural reduction — was the evidentiary foundation for the SC's proportionality analysis. The NVS data is constitutionally transparent: access reductions are visible in the published record before, during, and after any electoral period.</p>
+        <div class="beat-label">§11.3 — Material Non-Compliance</div>
+        <div class="beat-title">The Elections Panel finds Korda materially non-compliant with federal election standards. The cure period begins.</div>
+        <p>The Elections Panel published its §11.3 audit finding the same week as the SC ruling: Korda's Voting Integrity Act materially failed to meet the constitutional standards required under §11.1. The 41% access reduction was the core finding. Korda was formally notified and given the statutory cure period to address the identified failures.</p>
+        <p>This was a different lever than the SC's voiding of the Act. The SC's ruling made the Act constitutionally void. The §11.3 audit established that Korda's election administration itself — the infrastructure choices, the terminal deployment, the access framework — was materially non-compliant. Curing the §11.3 finding required more than repealing the Act; it required demonstrating that the access framework as a whole met constitutional standards.</p>
       </div>
 
       <div class="finding">
-        <div class="finding-label">What This Scenario Tests</div>
-        <p>§1.9 creates a constitutional test that is simple to state and difficult to evade: does this action make voting more difficult? The Korda Act made voting more difficult for rural citizens. That the Act also made voting more secure does not save it — §1.9 requires the state to achieve security without reducing accessibility, not to choose between them. The burden is on the government to show that its security measure is proportionate and that no less restrictive means achieves the same purpose.</p>
-        <p>The scenario also demonstrates the constitutional relationship between §1.9, §7.3, and the Elections Panel. The Panel's NVS access reporting is not advisory — it is the constitutional measurement system that makes §1.9's guarantee enforceable. A state that reduces NVS access produces a visible, documented, NRS-published record of that reduction. The constitutional rights violation is not abstract; it is quantified and permanent.</p>
+        <div class="finding-label">Elections Panel · §11.3 Finding · Year 7 · Korda State</div>
+        <p>The Elections Panel finds that Korda State's election administration materially fails to meet constitutional standards required under §11.1 and §7.3. The Voting Integrity Act's terminal deployment created a two-tier access system in which rural voters faced access barriers not imposed on urban voters. The 41% reduction in rural federal ballot submissions constitutes material failure. The State has the statutory cure period to implement NVS-compatible access standards verified by the Elections Panel. Where the State does not cure within that period, the Elections Panel will administer the relevant federal election directly within Korda for one electoral period. A finding of non-compliance does not affect the validity of votes cast.</p>
       </div>
-</div><div class="scenario-nav"><a href="scenarios.html">&larr; All Scenarios</a></div></main><script>function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}  document.addEventListener("click",function(e){const m=document.getElementById("mobileMenu");if(m&&m.classList.contains("open")&&!e.target.closest("nav")&&!e.target.closest("#mobileMenu"))m.classList.remove("open");});</script>
-<footer>
-  <span class="footer-logo">The Federated Republic</span>
-  <div class="footer-links">
-    <a href="annotated.html">Annotated Edition</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="constitutional-history.html">Constitutional History</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="advisor.html">Advisor</a>
-    <a href="sources.html">Sources</a>
-  </div>
-  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
-</footer>
 
-</body></html>
+      <h2>The LM's Compliance Notice</h2>
+
+      <p>The LM published a compliance notice noting Korda's Act as a constitutional violation certified by the SC and flagged under §11.3. The notice was information, not enforcement — but it added the finding to Korda's permanent constitutional record alongside both the SC ruling and the Elections Panel audit. Three separate publications; one constitutional violation; a permanent NRS record that would inform any future assessment of Korda's election administration.</p>
+
+      <p>Korda cured within the statutory period. A revised terminal deployment plan — 1,200 additional rural locations plus NVS mobile access for remote areas — was certified NVS-compatible by the Elections Panel before the next federal electoral period. The SC ruling and §11.3 finding were both published to the NRS permanently: Korda's electoral history would carry both the violation and the remediation as a public record.</p>
+
+      <p>The scenario shows §1.9 and §11.3 as complementary mechanisms that don't duplicate each other. §1.9 is a right that any citizen can enforce through the courts. §11.3 is a structural oversight mechanism the Elections Panel can activate independently. Both are triggered by the same conduct; both produce different but reinforcing legal consequences. A State that reduces franchise access faces both.</p>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-the-administrator.html">The Administrator →</a>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--muted)"><a href="constitution-current.pdf" download style="color:var(--gold)">Download the constitution</a></p>
+  </main>
+
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+</body>
+</html>
