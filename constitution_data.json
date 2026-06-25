@@ -45,7 +45,7 @@
       {
         "num": "§1.9",
         "name": "Democratic Participation and Family",
-        "text": "Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution. Every person holds the right to marry and found a family, free from governmental discrimination on the basis of the characteristics listed in §1.6. Children born within and outside of formal partnership hold equal legal status."
+        "text": "Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution. Government at every level is prohibited from taking any action that makes voting more difficult, less accessible, or less secure; no law, rule, administrative decision, or practice that reduces access to the franchise is constitutionally valid. The Republic holds an affirmative obligation to make voting as accessible as possible consistent with security — it may not compel citizens to vote, but it must provide conditions in which doing so is genuinely possible. Federal election periods are public holidays. Every person holds the right to marry and found a family, free from governmental discrimination on the basis of the characteristics listed in §1.6. Children born within and outside of formal partnership hold equal legal status."
       },
       {
         "num": "§1.10",
@@ -392,11 +392,6 @@
   {
     "heading": "Article VII — Elections",
     "provisions": [
-      {
-        "num": "§7.1",
-        "name": "The Right to Vote",
-        "text": "Every citizen holds the right to vote in federal elections and the right to have that vote counted. Government at every level is prohibited from taking any action that makes voting more difficult, less accessible, or less secure. No law, rule, administrative decision, or practice that reduces access to the franchise is constitutionally valid. The Republic holds an affirmative obligation to make voting as accessible as possible consistent with security — it may not compel citizens to vote, but it must provide conditions in which doing so is genuinely possible. Federal election periods are public holidays."
-      },
       {
         "num": "§7.2",
         "name": "Consular Election System",
