@@ -14,56 +14,112 @@ const STOP = new Set(['a','an','the','is','are','was','were','be','been','being'
   'need','find','get','know','think','say','see','make']);
 
 const SYNONYMS = {
-  'president':        ['legat consul','civic consul','executive','dual executive'],
-  'prime minister':   ['civic consul','government formation','assembly confidence'],
-  'foreign minister': ['legat consul','foreign','defense'],
-  'chancellor':       ['civic consul','legat consul','executive'],
-  'impeach':          ['removal','assembly-initiated removal','no-confidence','dereliction','grounds review','legat consul removal'],
-  'fire':             ['removal','dismissal','no-confidence'],
-  'recall':           ['removal','referendum','popular track','legat consul removal','§2.13'],
-  'remove legat':     ['§2.13','recall','popular track','legislative track','consular removal'],
-  'remove consul':    ['§2.13','no-confidence','consular removal','recall'],
-  'veto':             ['fiscal objection','written direction'],
-  'supreme court':    ['judicial','court','justice','pool'],
-  'judge':            ['judicial','court','justice','pool','appointment'],
-  'law':              ['statute','legislation','assembly','legislative'],
-  'vote':             ['election','assembly','nvs','suffrage','electoral'],
-  'rights':           ['individual','sovereignty','floor','liberty'],
-  'freedom':          ['expression','rights','individual','floor'],
-  'speech':           ['expression','publication','broadcast'],
-  'press':            ['expression','publication','media'],
-  'religion':         ['faith','expression','belief','non-discrimination','equality'],
-  'privacy':          ['personal','autonomy','information','data'],
-  'discrimination':   ['equality','non-discrimination','protected'],
-  'immigration':      ['certification','removal','non-refoulement','border'],
-  'asylum':           ['non-refoulement','refugee','certification','removal'],
-  'deportation':      ['removal','non-refoulement','certification'],
-  'military':         ['defense','armed','legat consul','orders','treaty'],
-  'army':             ['military','defense','armed'],
-  'war':              ['defense','military','emergency','treaty'],
-  'budget':           ['fiscal','appropriation','assembly','spending'],
-  'money':            ['fiscal','budget','appropriation','economic'],
-  'tax':              ['fiscal','revenue','budget'],
-  'amendment':        ['constitutional','entrenchment','ratification'],
-  'emergency':        ['declaration','measures','restriction','crisis'],
-  'senate':           ['upper chamber','ratification','treaty'],
-  'parliament':       ['assembly','senate','legislature','chamber'],
-  'congress':         ['assembly','senate','legislature','chamber'],
-  'monitor':          ['oversight','independent','lm','em','jm','ma'],
-  'watchdog':         ['monitor','oversight','independent'],
-  'transparency':     ['nrs','national record','publication'],
-  'federalism':       ['state','devolution','federal'],
-  'indigenous':       ['nation','compact','article xvi'],
-  'native':           ['indigenous','nation','compact'],
-  'election':         ['voting','nvs','electoral','suffrage'],
-  'treaty':           ['ratification','senate','international','foreign'],
-  'property':         ['seizure','compensation','economic security'],
-  'healthcare':       ['social state','health','universal','insurance'],
-  'education':        ['social state','school','compulsory','universal'],
-  'citizen':          ['civic life','participation','referendum','petition'],
-  'referendum':       ['citizen','petition','initiative','popular'],
-  'lc':               ['legat consul','foreign','defense','border'],
-  'cc':               ['civic consul','domestic','assembly','budget'],
+  // ── EXECUTIVE ─────────────────────────────────────────────────
+  'president':            ['legat consul','civic consul','executive','dual executive'],
+  'prime minister':       ['civic consul','government formation','assembly confidence'],
+  'foreign minister':     ['legat consul','foreign','defense'],
+  'chancellor':           ['civic consul','legat consul','executive'],
+  'lc':                   ['legat consul','foreign','defense','border','intelligence'],
+  'cc':                   ['civic consul','domestic','assembly','budget','social'],
+
+  // ── REMOVAL / ACCOUNTABILITY ───────────────────────────────────
+  'impeach':              ['removal','assembly-initiated removal','no-confidence','dereliction','grounds review','legat consul removal'],
+  'fire':                 ['removal','dismissal','no-confidence'],
+  'recall':               ['removal','referendum','popular track','legat consul removal','§2.13'],
+  'remove legat':         ['§2.13','recall','popular track','legislative track','consular removal'],
+  'remove consul':        ['§2.13','no-confidence','consular removal','recall'],
+  'assembly-initiated':   ['removal','charges','articles of removal','senate trial','§3.10'],
+  'articles of removal':  ['assembly','senate','removal','charges'],
+
+  // ── LEGISLATIVE ───────────────────────────────────────────────
+  'veto':                 ['fiscal objection','written direction'],
+  'law':                  ['statute','legislation','assembly','legislative'],
+  'parliament':           ['assembly','senate','legislature','chamber'],
+  'congress':             ['assembly','senate','legislature','chamber'],
+  'senate':               ['upper chamber','ratification','treaty','states'],
+  'bill':                 ['legislation','assembly','statute','passage'],
+  'filibuster':           ['assembly','debate','passage','legislative'],
+
+  // ── JUDICIAL ──────────────────────────────────────────────────
+  'supreme court':        ['judicial','court','justice','pool'],
+  'judge':                ['judicial','court','justice','pool','appointment'],
+  'court':                ['judicial','sc','justice','appeal'],
+
+  // ── VOTING AND ELECTIONS ──────────────────────────────────────
+  'vote':                 ['election','nvs','electoral','suffrage','franchise'],
+  'election':             ['voting','nvs','electoral','suffrage','elections panel'],
+  'ballot':               ['election','nvs','voting','access','suffrage'],
+  'franchise':            ['vote','election','access','suffrage'],
+
+  // ── RIGHTS ────────────────────────────────────────────────────
+  'rights':               ['individual','sovereignty','floor','liberty'],
+  'freedom':              ['expression','rights','individual','floor'],
+  'speech':               ['expression','publication','broadcast'],
+  'press':                ['expression','publication','media'],
+  'religion':             ['faith','expression','belief','non-discrimination','equality'],
+  'privacy':              ['personal','autonomy','information','data','surveillance'],
+  'discrimination':       ['equality','non-discrimination','protected'],
+  'property':             ['seizure','compensation','economic security'],
+  'healthcare':           ['social state','health','universal','insurance'],
+  'education':            ['social state','school','compulsory','universal'],
+
+  // ── IMMIGRATION / ASYLUM ──────────────────────────────────────
+  'immigration':          ['certification','removal','non-refoulement','border','dual gate'],
+  'asylum':               ['non-refoulement','refugee','certification','removal','asylum court'],
+  'deportation':          ['removal','non-refoulement','certification'],
+  'refugee':              ['asylum','non-refoulement','protection'],
+  'resident':             ['legal resident','certification','sponsorship','dual gate'],
+
+  // ── MILITARY / SECURITY ───────────────────────────────────────
+  'military':             ['defense','armed','legat consul','orders','treaty','authorized purposes'],
+  'army':                 ['military','defense','armed'],
+  'war':                  ['defense','military','emergency','treaty'],
+  'intelligence':         ['legat consul','foreign','surveillance','warrant'],
+  'security':             ['border','intelligence','military','emergency'],
+
+  // ── FISCAL ────────────────────────────────────────────────────
+  'budget':               ['fiscal','appropriation','assembly','spending','nrf'],
+  'money':                ['fiscal','budget','appropriation','economic'],
+  'tax':                  ['fiscal','revenue','budget','nrf','taxing power'],
+  'spending':             ['appropriation','budget','fiscal','nrf'],
+
+  // ── STATES AND TERRITORIES ────────────────────────────────────
+  'state':                ['territory','devolution','statehood','provisional','senate','audit'],
+  'territory':            ['provisional','statehood','devolution','state','incorporation'],
+  'provisional':          ['provisional status','statehood','audit','devolution','senate seats','§15.1.a'],
+  'devolution':           ['mandatory','voluntary','provisional','statehood','territory','audit failure','§15.3','§15.4'],
+  'statehood':            ['territory','audit','provisional','qualification','senate','§15.2'],
+  'audit':                ['statehood','jmc','monitor','compliance','provisional','failure','annual'],
+  'independence':         ['§15.9','referendum','sovereignty','state','petition','stage one'],
+  'secession':            ['independence','§15.9','referendum','state','voluntary'],
+  'local government':     ['municipality','city','state','fiscal','§15.8'],
+  'incorporation':        ['voluntary','territory','petition','§15.6','treaty'],
+  'devolution election':  ['forced','citizen vote','§15.3','provisional','devolution'],
+  'audit council':        ['provisional audit council','cc','state','advisory','§15.3'],
+  'nrs':                  ['national record','publication','transparency','permanent','§10.1'],
+  'national record':      ['nrs','publication','transparency','permanent'],
+  'publication':          ['nrs','transparency','record','permanent'],
+
+  // ── MONITORS AND OVERSIGHT ────────────────────────────────────
+  'monitor':              ['oversight','independent','lm','em','jm','jmc','ma'],
+  'watchdog':             ['monitor','oversight','independent'],
+  'transparency':         ['nrs','national record','publication'],
+  'lm':                   ['legislative monitor','audit','legislature','compliance'],
+  'em':                   ['executive monitor','audit','executive','compliance'],
+  'jm':                   ['judicial monitor','audit','court','compliance'],
+  'jmc':                  ['joint monitor committee','statehood audit','coordination','assigned function'],
+
+  // ── CONSTITUTIONAL PROCESS ────────────────────────────────────
+  'amendment':            ['constitutional','entrenchment','ratification','popular ratification'],
+  'emergency':            ['declaration','measures','restriction','crisis','§1.19'],
+  'referendum':           ['citizen','petition','initiative','popular','vote'],
+  'citizen':              ['civic life','participation','referendum','petition','initiative'],
+  'treaty':               ['ratification','senate','international','foreign','trade agreement'],
+  'trade agreement':      ['treaty','ratification','lc','§3.6','§2.4'],
+  'monetary':             ['ma','monetary authority','currency','fiscal integrity'],
+  'federalism':           ['state','devolution','federal','§3.14'],
+  'indigenous':           ['nation','compact','article xvi','§16.1'],
+  'native':               ['indigenous','nation','compact'],
 };
 
 let cachedProvisions = null;
@@ -111,29 +167,64 @@ function topProvisions(provisions, terms, n = 3) {
 }
 
 const SCENARIOS = [
-  {title:'Ordinary Law',file:'scenario-ordinary.html',kw:['assembly','budget','bill','formation','nrs']},
+  // ── INTRODUCTION ──
+  {title:'Ordinary Law',file:'scenario-ordinary.html',kw:['assembly','budget','bill','formation','nrs','ordinary']},
+
+  // ── DUAL EXECUTIVE ──
   {title:'The Stalemate',file:'scenario-coordination-failure.html',kw:['lc','cc','domain','conflict','coordination','dual executive']},
   {title:'The Alliance Clause',file:'scenario-alliance-clause.html',kw:['military','treaty','lc','deploy','alliance','defense','foreign']},
   {title:'The Objection',file:'scenario-the-objection.html',kw:['fiscal','objection','cc','budget','assembly','override']},
   {title:'The Direction',file:'scenario-the-direction.html',kw:['direction','cc','prosecution','solicitor','written']},
+
+  // ── GOVERNMENT FORMATION ──
   {title:'The Formation',file:'scenario-formation.html',kw:['formation','government','election','assembly','confidence','coalition']},
   {title:'The Recall',file:'scenario-recall.html',kw:['no-confidence','recall','cc','assembly','successor']},
+
+  // ── JUDICIAL ──
   {title:'The First Nomination',file:'scenario-first-nomination.html',kw:['nomination','judicial','pool','senate','confirmation','sc','vacancy']},
+  {title:'The Finality Act',file:'scenario-finality-act.html',kw:['judicial','review','strip','immigration','court']},
+
+  // ── MONITORS ──
   {title:'The Critical Finding',file:'scenario-critical-finding.html',kw:['lm','legislative monitor','critical','failure','fiscal']},
   {title:'The Grounds Review',file:'scenario-sdp-removal.html',kw:['removal','monitor','grounds','dereliction']},
   {title:'The Deadlock',file:'scenario-deadlock.html',kw:['monitor','appointment','speaker','deadlock','lottery']},
+
+  // ── EMERGENCY ──
   {title:'The Second Declaration',file:'scenario-second-declaration.html',kw:['emergency','declaration','extension']},
+
+  // ── FISCAL ──
   {title:'The Automatic Floor',file:'scenario-automatic-floor.html',kw:['budget','automatic','floor','appropriation']},
-  {title:'The Finality Act',file:'scenario-finality-act.html',kw:['judicial','review','strip','immigration','court']},
+
+  // ── CONSTITUTIONAL AMENDMENT ──
   {title:'The Void Exception',file:'scenario-void-exception.html',kw:['amendment','entrenchment','void','unconstitutional']},
+
+  // ── MILITARY ──
   {title:'The Order',file:'scenario-the-order.html',kw:['military','order','refusal','lawful','soldier']},
+
+  // ── DIRECT DEMOCRACY ──
   {title:'The Organized Third',file:'scenario-organized-third.html',kw:['citizen','referendum','petition','organized']},
   {title:'The Second Path',file:'scenario-the-second-path.html',kw:['initiative','citizen','referendum','assembly']},
+
+  // ── ELECTIONS ──
   {title:'The Harder Ballot',file:'scenario-harder-ballot.html',kw:['voting','state','nvs','access','residency','ballot']},
+  {title:'The Long Count',file:'scenario-long-count.html',kw:['election','count','certification','nvs','results','elections panel']},
+
+  // ── STATES AND FEDERATION ──
   {title:'The Recalled Senator',file:'scenario-recalled-senator.html',kw:['senator','recall','state','senate']},
+  {title:'The Map',file:'scenario-the-map.html',kw:['redistricting','district','map','lm','compactness','elections']},
+  {title:'The Sponsoring State',file:'scenario-sponsoring-state.html',kw:['immigration','sponsorship','state','resident','credentials']},
+  {title:'The Audit',file:'scenario-the-audit.html',kw:['statehood','territory','provisional','qualification','upgrade','audit']},
+  {title:'The Petition',file:'scenario-the-petition.html',kw:['voluntary devolution','state','territory','petition','referendum','devolution']},
+  {title:'The Sixty Percent',file:'scenario-the-sixty-percent.html',kw:['national trust','land','amendment','referendum','supermajority','sixty']},
+  {title:'The Third Strike',file:'scenario-the-third-strike.html',kw:['mandatory devolution','provisional','audit failure','state','statehood','devolution','three','strike']},
+  {title:'The Administrator',file:'scenario-the-administrator.html',kw:['election','state','nvs','compliance','elections panel','§11.3','administrator','haverford']},
+
+  // ── IMMIGRATION AND RIGHTS ──
+  {title:'The Return',file:'scenario-the-return.html',kw:['immigration','return','resident','re-entry','discrimination']},
+
+  // ── INDIGENOUS ──
   {title:'The Four Elections',file:'scenario-indigenous.html',kw:['indigenous','nation','election','compact']},
   {title:'The Departure',file:'scenario-the-departure.html',kw:['indigenous','independence','sovereign','compact']},
-  {title:'The Return',file:'scenario-the-return.html',kw:['immigration','return','resident','re-entry','discrimination']},
 ];
 
 function topScenarios(terms, n = 2) {
@@ -176,7 +267,7 @@ export default async (request) => {
 
     if (matched.length === 0) {
       return jsonResp({
-        summary: "That query didn't match any specific provisions. Try searching for a position (Legat Consul, Civic Consul), a right (expression, privacy), or a process (amendment, emergency, election).",
+        summary: "That query didn't match any specific provisions. Try searching for a position (Legat Consul, Civic Consul), a right (expression, privacy), or a process (amendment, emergency, election, devolution).",
         provisions: [],
         scenarios: []
       });
@@ -189,8 +280,8 @@ export default async (request) => {
       headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        max_tokens: 280,
-        system: `You are a plain language guide to the Federated Republic constitution. A user asked a question. You have been given the relevant constitutional provisions. Write 3-4 sentences that directly answer the question using only those provisions. If the user asks about something that doesn't exist in the constitution (like a "president"), explain what the equivalent constitutional mechanism is. Be accurate, clear, and direct. Plain text only — no headings, bullets, or formatting.`,
+        max_tokens: 320,
+        system: `You are a plain language guide to the Federated Republic constitution. A user asked a question. You have been given the relevant constitutional provisions. Write 3-4 sentences that directly answer the question using only those provisions. If the user asks about something that doesn't exist in the constitution (like a "president" or "impeachment"), explain what the equivalent constitutional mechanism is. Be accurate, clear, and direct. Plain text only — no headings, bullets, or formatting.`,
         messages: [{ role: 'user', content: `Question: ${question}\n\nProvisions:\n${provisionContext}` }],
       }),
     });
