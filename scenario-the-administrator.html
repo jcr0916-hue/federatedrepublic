@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Administrator — The Federated Republic</title>
+  <meta name="description" content="Year 7. Haverford State refuses to implement NVS authentication standards. The cure period expires. The Elections Panel announces it will administer the federal election in Haverford directly. Haverford goes to the SC. The election proceeds anyway.">
+  <meta property="og:title" content="The Administrator">
+  <meta property="og:description" content="Year 7. Haverford refuses NVS compliance. The Elections Panel steps in. The SC rules during the election. The votes are valid regardless.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-administrator.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:white;padding:1.5rem;margin:2rem 0}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+    .finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+    .finding p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <main id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">States &amp; Territories · §11.3 · §7.3 · Election Non-Compliance</span>
+      <h1 class="scenario-title">The Administrator</h1>
+      <p class="scenario-subtitle">Year 7. Haverford State has refused NVS compliance for three consecutive years. The cure period expires. The Elections Panel announces it will administer the federal election in Haverford directly. Haverford petitions the SC. The election proceeds anyway. The votes are valid regardless of the outcome.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§11.3 State Election Non-Compliance</span>
+        <span class="prov-tag">§7.3 State Election Administration</span>
+        <span class="prov-tag">§11.1 Elections Panel Mandate</span>
+        <span class="prov-tag">§1.9 Right to Vote</span>
+        <span class="prov-tag">§4.5 Judicial Review</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>Haverford's objection to the NVS was not frivolous. The State's Attorney General had published a 47-page constitutional analysis in Year 5 arguing that the Elections Panel's technical standards, as applied to Haverford's existing ballot infrastructure, constituted an unfunded mandate that effectively required the State to rebuild its entire election technology stack at federal direction. The legal argument was debatable. The factual result was not: Haverford had administered three consecutive federal elections outside NVS authentication standards, and the Elections Panel had found material non-compliance in each of them.</p>
+
+      <p>In Year 6, the Elections Panel conducted a formal audit under §11.3. The finding was published to the NRS: Haverford's election administration materially failed to meet the constitutional standards required under §11.1. The State was formally notified. The cure period — defined by statute as six months before the next scheduled federal election — began.</p>
+
+      <h2>The Cure Period Expires</h2>
+
+      <div class="beat">
+        <div class="beat-label">§11.3 — Formal Notification and Cure Period</div>
+        <div class="beat-title">Six months. Haverford's Governor announces on Day One that the State will not comply.</div>
+        <p>Governor Adaeze Nwosu's announcement was precise: Haverford did not dispute the Elections Panel's finding on technical grounds. It disputed the Elections Panel's authority to impose standards that required the State to replace functional election infrastructure at its own expense. The Governor invited the Elections Panel to administer Haverford's elections at federal cost if it found the State's own systems inadequate.</p>
+        <p>The Elections Panel's response was also precise: §11.3 does not condition direct administration on the State's financial circumstances. The standard is whether election administration materially meets constitutional requirements. Haverford's did not. The cure period would run to its statutory end. If the State had not cured its non-compliance by that date, the Elections Panel would administer the federal election in Haverford for one electoral period.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§11.3 — Cure Period Expires</div>
+        <div class="beat-title">No cure implemented. Elections Panel publishes its administration announcement to the NRS.</div>
+        <p>Six months passed. Haverford's legislature did not pass any legislation addressing NVS compliance. The Governor did not submit a remediation plan. The Elections Panel published notice to the NRS: it would directly administer the federal election in Haverford for the current electoral period. Elections Panel administrators would operate all polling infrastructure, certification processes, and result reporting within Haverford's borders for this election. State election officials were invited to observe but held no administrative authority over federal election operations during the period.</p>
+      </div>
+
+      <h2>The Challenge</h2>
+
+      <p>Haverford filed its SC petition the same day the Elections Panel published its administration announcement. The petition's central argument: Article XI gives the Elections Panel a constitutional mandate to set standards and certify results. It does not give the Elections Panel authority to directly administer State election operations. The Republic's constitution prohibits commandeering State institutions as federal agents under §3.14. What the Elections Panel was proposing was precisely that — conscripting State election infrastructure for federal use.</p>
+
+      <div class="beat">
+        <div class="beat-label">§11.3 · §3.14 — The Commandeering Question</div>
+        <div class="beat-title">Is §11.3 direct administration or commandeering? The distinction matters constitutionally.</div>
+        <p>The commandeering prohibition in §3.14 prevents the federal government from directing State institutions to perform federal functions. But the Elections Panel is not the federal government in the ordinary sense — it is a constitutionally independent agency with its own constitutional mandate over federal elections. And §11.3's direct administration mechanism is not commandeering of State resources; it is the Elections Panel exercising its own constitutional authority in place of a non-compliant State, for one period, using its own administrators.</p>
+        <p>The SC received the petition. Chief Justice Diallo's chamber noted the timing: the election was four weeks away. Any preliminary injunction suspending the Elections Panel's administration would necessarily affect election logistics already underway. The Court scheduled oral argument for Day 12. It would rule before election day.</p>
+      </div>
+
+      <div class="finding">
+        <div class="finding-label">Elections Panel · NRS Notice · Year 7</div>
+        <p>The Elections Panel hereby notifies the Republic that pursuant to §11.3, it will directly administer the federal election within the State of Haverford for the current electoral period. This administration is limited to federal election functions. State elections proceeding on the same date will be administered by Haverford's own election authorities under existing State law. A finding of non-compliance does not affect the validity of votes cast. All votes cast in Haverford during the current electoral period will be valid and will be counted.</p>
+      </div>
+
+      <h2>The Election Proceeds</h2>
+
+      <div class="beat">
+        <div class="beat-label">§4.5 — SC Ruling · Issued Day 19</div>
+        <div class="beat-title">§11.3 is constitutional. The Elections Panel's administration is not commandeering. Votes are valid.</div>
+        <p>Chief Justice Diallo's opinion addressed the commandeering question directly. §3.14 prohibits the federal government from directing State institutions as federal agents — requiring a State's election officials to administer federal elections under federal direction. §11.3 does something different: it substitutes the Elections Panel's own administrative function for the State's, using the Panel's own authority and personnel. The State's institutions are not conscripted. They are displaced, for one period, by a constitutionally authorized alternative. That is not commandeering; it is a constitutional contingency mechanism.</p>
+        <p>On the franchise: the SC noted that the last sentence of §11.3 — "A finding of non-compliance does not affect the validity of votes cast" — was not merely procedural. It reflected the constitutional priority established in §1.9: the right to vote could not be impaired by the State's constitutional dispute with the Elections Panel. Whatever the SC ruled, and however long the litigation continued, Haverford's voters would have voted, and their votes would count.</p>
+      </div>
+
+      <p>The federal election in Haverford was administered by Elections Panel personnel across all of Haverford's polling locations. Turnout was 71.4% — above the prior cycle. Haverford's state-level races, administered simultaneously by State officials under State law, proceeded without incident on the same infrastructure.</p>
+
+      <h2>The Day After</h2>
+
+      <p>State administration resumed automatically at the conclusion of the electoral period, as §11.3 provides. Haverford's Governor issued a statement noting that the State continued to dispute the Elections Panel's authority but would enter negotiations on NVS implementation funding. Within eight months, Haverford and the Elections Panel had reached an agreement: phased NVS implementation over three years, with Elections Panel technical support and a federal equipment grant program established by statute.</p>
+
+      <p>The constitutional principle established by the ruling was more durable than the dispute that generated it. The Elections Panel had direct administration authority when States materially failed constitutional election standards — and that authority could be exercised regardless of pending litigation, because the franchise could not be held hostage to a State's constitutional objections. The vote happened. It counted. The argument about who ran the election was separate from the election itself.</p>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenario-the-third-strike.html">← The Third Strike</a>
+      <a href="scenarios.html">All Scenarios →</a>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--muted)"><a href="constitution-current.pdf" download style="color:var(--gold)">Download the constitution</a></p>
+  </main>
+
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+</body>
+</html>

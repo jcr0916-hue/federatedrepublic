@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Third Strike — The Federated Republic</title>
+  <meta name="description" content="Year 13. Corindal fails its third consecutive Statehood Audit. No vote is required. Mandatory Devolution activates automatically. The State legislature passes emergency reform at the eleventh hour. The LM is unmoved.">
+  <meta property="og:title" content="The Third Strike">
+  <meta property="og:description" content="Year 13. Corindal's third audit failure. Mandatory Devolution activates. No political coalition can stop what the constitution makes automatic.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-third-strike.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .finding{background:var(--navy);color:white;padding:1.5rem;margin:2rem 0}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+    .finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+    .finding p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <main id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">States &amp; Territories · §15.2 · §15.3 · Mandatory Devolution</span>
+      <h1 class="scenario-title">The Third Strike</h1>
+      <p class="scenario-subtitle">Year 13. Corindal has failed its Statehood Audit twice. On the morning of the third audit publication, its legislature passes emergency electoral reform. The LM reviews it. The finding publishes anyway. Mandatory Devolution is automatic.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§15.2 The Statehood Audit</span>
+        <span class="prov-tag">§15.3 Mandatory Devolution</span>
+        <span class="prov-tag">§9.1.a Legislative Monitor</span>
+        <span class="prov-tag">§3.5 The Senate</span>
+        <span class="prov-tag">§4.5 Judicial Review</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>Corindal had been on Statehood Watch since Year 11. That year's audit had found two failures: its electoral district maps did not meet the LM's compactness criteria, and its ballot certification process ran outside the Elections Panel's technical standards. Corindal published a remediation plan. Year 12's audit found one failure resolved and one persisting. A second consecutive failure was certified and published to the NRS.</p>
+
+      <p>By Year 13, the constitutional arithmetic was clear. A third consecutive failure would trigger Mandatory Devolution — automatic conversion from State to Territory status, by operation of the constitution, without a legislative vote, without executive action, without any mechanism for political intervention. The constitution does not require a third failure to be catastrophic. It requires only that it be a failure.</p>
+
+      <h2>The Eleventh Hour</h2>
+
+      <div class="beat">
+        <div class="beat-label">§15.2 — The Audit</div>
+        <div class="beat-title">The LM publishes its Year 13 finding: one remaining non-compliance. Three consecutive failures.</div>
+        <p>The LM's audit team had been in Corindal for six weeks. The persistent failure — non-compliant ballot certification technology in three of Corindal's fourteen districts — had been flagged in both prior audits. Corindal's remediation plan had addressed the hardware. It had not addressed the certification software, which remained outside NVS technical standards.</p>
+        <p>On the morning of the planned publication date, Corindal's legislature convened an emergency session. By 9:14 AM, it had passed the Electoral Integrity Restoration Act — a statute mandating NVS-compliant certification software in all districts, effective immediately. The Governor signed it at 9:31 AM. At 9:47 AM, the State's Attorney General transmitted notice of the Act to the LM's office with a formal request to delay publication pending assessment of the cure.</p>
+      </div>
+
+      <div class="beat">
+        <div class="beat-label">§15.2 — The LM's Response</div>
+        <div class="beat-title">The Act addresses the identified failure prospectively. It does not cure the audit period finding.</div>
+        <p>The LM's office responded within four hours. The Electoral Integrity Restoration Act was a genuine legislative response to the identified failure. It would, if implemented as written, resolve the non-compliance in future audit cycles. It did not resolve the non-compliance during the Year 13 audit period. The audit assesses the State as it exists at the time of assessment. A law passed on publication morning does not retroactively change conditions that persisted for twelve months.</p>
+        <p>The LM published its Year 13 finding at 2:00 PM. Three consecutive failures. The finding was published to the NRS as a permanent record. Mandatory Devolution activated by constitutional operation at the moment of publication.</p>
+      </div>
+
+      <div class="finding">
+        <div class="finding-label">NRS Publication · LM Year 13 Audit Finding · Corindal</div>
+        <p>The Legislative Monitor certifies the following finding pursuant to §15.2: the State of Corindal has failed the Statehood Audit for the third consecutive annual cycle. The failure is limited to ballot certification technology non-compliance in Districts 4, 9, and 11. This finding constitutes a third consecutive failure under §15.2. Mandatory Devolution under §15.3 activates by constitutional operation effective the date and time of this publication. This finding is published permanently to the NRS.</p>
+      </div>
+
+      <h2>What Mandatory Devolution Means</h2>
+
+      <div class="beat">
+        <div class="beat-label">§15.3 — Automatic Conversion</div>
+        <div class="beat-title">Corindal converts from State to Territory status. No political act is required or permitted to intervene.</div>
+        <p>From the moment of LM publication, Corindal held Territory status. Its existing statutes remained in force. Its residents' Article I rights were unaffected — Territory residents hold full Individual Sovereignty Floor protections. Federal credentials previously issued by Corindal's State sponsorship authority remained valid. The change was structural, not rights-affecting.</p>
+        <p>What changed: Corindal's two sitting senators were permitted to complete their current terms. No senators would be elected from Corindal at the next federal electoral period. Corindal's Assembly seat allocation shifted to the Territory formula — proportional representation continued, but through the Territory mechanism rather than the State mechanism. The State legislature did not dissolve; it continued as Corindal's territorial governing body.</p>
+      </div>
+
+      <h2>The Constitutional Challenge</h2>
+
+      <p>Corindal's Governor petitioned the SC within twenty-four hours. The petition advanced two arguments: first, that the Electoral Integrity Restoration Act constituted a cure and the LM had applied the wrong standard in rejecting it; second, that automatic Mandatory Devolution without any opportunity for political review was incompatible with the constitutional dignity of a sovereign State.</p>
+
+      <div class="beat">
+        <div class="beat-label">§4.5 — SC Ruling · Issued Day 28</div>
+        <div class="beat-title">The LM's standard was correct. The automatic mechanism is constitutional.</div>
+        <p>On the first argument: the audit assesses actual conditions during the audit period, not prospective legislative intent. A statute passed on publication morning does not alter the conditions that existed for the twelve months preceding it. The LM applied the correct standard. The cure period, under §15.2, is the gap between consecutive annual audits — not the hours before a finding is published.</p>
+        <p>On the second argument: the automatic mechanism is a deliberate constitutional design. It ensures that the criteria for Statehood are objective and their enforcement is not subject to political override. A State that meets the criteria cannot be denied Statehood by political opposition. A State that fails the criteria cannot be protected from devolution by political support. The constitution treats these as the same principle.</p>
+        <p>Devolution stood. The SC noted that nothing in the constitution prevented Corindal from immediately beginning the process of re-qualifying for Statehood through the Territory pathway under §15.5. The Electoral Integrity Restoration Act would serve that purpose in the next audit cycle.</p>
+      </div>
+
+      <h2>The Path Back</h2>
+
+      <p>Corindal submitted its first re-qualification audit request in Year 14 — less than twelve months after devolution. The Electoral Integrity Restoration Act had been fully implemented. The Year 14 audit passed both components. The Provisional Membership Period began. Corindal's senators were elected again in Year 17. The process had taken four years from the third failure to restored Statehood.</p>
+
+      <p>The constitutional system had not punished Corindal. It had applied a standard, enforced it consistently, and left the door open. What it had not done — and what it was designed not to do — was allow the standard to be overridden by a legislature that moved fast enough on the right morning.</p>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">← All Scenarios</a>
+      <a href="scenario-the-administrator.html">The Administrator →</a>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--muted)"><a href="constitution-current.pdf" download style="color:var(--gold)">Download the constitution</a></p>
+  </main>
+
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+</body>
+</html>
