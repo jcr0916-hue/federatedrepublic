@@ -18,7 +18,7 @@ const SYNONYMS = {
   'prime minister':   ['civic consul','government formation','assembly confidence'],
   'foreign minister': ['legat consul','foreign','defense'],
   'chancellor':       ['civic consul','legat consul','executive'],
-  'impeach':          ['removal','no-confidence','dereliction','grounds review','legat consul removal'],
+  'impeach':          ['removal','assembly-initiated removal','no-confidence','dereliction','grounds review','legat consul removal'],
   'fire':             ['removal','dismissal','no-confidence'],
   'recall':           ['removal','referendum','popular track','legat consul removal','§2.13'],
   'remove legat':     ['§2.13','recall','popular track','legislative track','consular removal'],
