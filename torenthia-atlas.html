@@ -71,6 +71,7 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
   <!-- Territories -->
   <div class="region" data-r="verdmont"  style="top:13%;left:31%;width:35%;height:11%;background:rgba(251,191,36,.08)"></div>
   <div class="region" data-r="korda"     style="top:13%;left:66%;width:5%;height:30%;background:rgba(251,191,36,.08)"></div>
+  <div class="region" data-r="korda"     style="top:67%;left:56%;width:14%;height:10%;background:rgba(251,191,36,.08)"></div>
   <div class="region" data-r="morantine" style="top:79%;left:31%;width:34%;height:8%;background:rgba(251,191,36,.08)"></div>
 
   <!-- States -->
@@ -85,11 +86,6 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
   <div class="region" data-r="kelvant"    style="top:55%;left:57%;width:13%;height:24%;background:rgba(74,222,128,.07)"></div>
   <div class="region" data-r="corindal"   style="top:64%;left:31%;width:20%;height:15%;background:rgba(249,115,22,.10)"></div>
   <div class="region" data-r="selvane"    style="top:64%;left:51%;width:14%;height:15%;background:rgba(74,222,128,.07)"></div>
-
-  <!-- ══ IMAGE CORRECTION — covers SE Korda Territory label baked into roads map image ══ -->
-  <div style="position:absolute;top:67%;left:56%;width:14%;height:8%;background:rgba(180,200,155,.92);border-radius:2px;display:flex;align-items:center;justify-content:center;pointer-events:none">
-    <span style="font-family:'Jost',sans-serif;font-size:.75vw;font-weight:600;color:#1e293b;white-space:nowrap">Kelvant</span>
-  </div>
 
   <!-- ══ CRISIS INDICATORS ══ -->
   <!-- Korda / Rhondel -->
@@ -151,9 +147,9 @@ const DATA = {
   verdmont:{title:"Verdmont Territory",eye:"Northern Territory",status:"s-warn",
     statusTxt:"Provisional Status · Statehood Audit Ongoing",zoom:{cx:48,cy:18,scale:3.0},
     body:`<p><strong>Northern strip along the Torenthian Alps and Toren River border with Caldris.</strong></p><p>Resource extraction, small population across large alpine territory. In Provisional status for six years. Twice passed the fiscal audit component; twice failed Article I — specifically judicial access in remote mountain districts. Two JMC Early Warnings published.</p>`},
-  korda:{title:"Korda Territory",eye:"Eastern Territory · Active Crisis",status:"s-crisis",
-    statusTxt:"⚠ Provisional Status · ACTIVE CRISIS",zoom:{cx:70,cy:30,scale:4.0},
-    body:`<p><strong>Northeastern strip — Torenthian Alps foothill zone and northern Lake Varda shore.</strong></p><p>The Republic's most sensitive Territory. Primary arrival point for Sunderland refugees crossing Lake Varda. Asylum Court overflow operating here. Elections Panel administered the last federal election directly. Statehood Audit due — Article I compliance under severe strain from refugee infrastructure pressure.</p>`},
+  korda:{title:"Korda Territory",eye:"Indigenous Territory · Two Zones · Active Crisis",status:"s-crisis",
+    statusTxt:"⚠ Provisional Status · ACTIVE CRISIS · Incorporation Dispute",zoom:{cx:70,cy:38,scale:3.5},
+    body:`<p><strong>The Korda people entered the Republic as a Territory at founding — a legitimate constitutional choice under the indigenous sovereignty framework. Their ancestral land comprises two zones: a northern strip along the Torenthian Alps and Lake Varda's northern shore, and a southern zone adjacent to Kelvant.</strong></p><p>The northern zone is the Republic's most sensitive Territory — primary arrival point for Sunderland refugees crossing Lake Varda, Asylum Court overflow operating here, Elections Panel administered the last federal election directly due to NVS compliance failures.</p><p>The southern zone is the center of an active political dispute. Kelvant's Governor — of Korda heritage — has formally advocated for incorporating the southern zone into Kelvant State. The Korda territorial government opposes any partition. There is no clean constitutional mechanism to absorb half a Territory into a State. The full Territory would have to vote for dissolution, with the northern zone redistributing separately. Article XVI's indigenous sovereignty provisions sit over all of it unresolved.</p>`},
   morantine:{title:"Morantine Territory",eye:"Southern Territory",status:"s-warn",
     statusTxt:"Provisional Status · Audit Upcoming",zoom:{cx:48,cy:84,scale:3.0},
     body:`<p><strong>Southern strip along the Valedon border.</strong></p><p>Mixed cultural heritage, warm climate, agricultural. The pro-Republic Valedon faction treats Morantine as a forward embassy. The territorial government has twice petitioned the LC about hosting Valedon civic organizations. The referendum wound from eighteen years ago is lived daily here.</p>`},
