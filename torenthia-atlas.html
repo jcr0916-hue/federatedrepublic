@@ -15,14 +15,13 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 .layout{display:grid;grid-template-columns:1fr 320px;gap:1rem;width:100%;max-width:1340px}
 .map-wrap{position:relative;border:3px solid #6a5a38;border-radius:3px;overflow:hidden;cursor:crosshair;box-shadow:0 8px 32px rgba(0,0,0,0.6)}
 .map-wrap img{display:block;width:100%;height:auto}
-.region{position:absolute;transition:background .2s,border .2s;cursor:pointer;border:1.5px solid transparent}
-.region:hover{border-color:rgba(255,220,80,.7)!important}
-.region.active{border-color:rgba(255,220,80,.9)!important}
-.pulse{position:absolute;pointer-events:none}
-.pulse-core{position:absolute;border-radius:50%;transform:translate(-50%,-50%)}
-.pulse-ring{position:absolute;border-radius:50%;border:2px solid;transform:translate(-50%,-50%);animation:expandRing 2s infinite ease-out}
-.pulse-ring2{animation-delay:.6s}.pulse-ring3{animation-delay:1.2s}
-@keyframes expandRing{0%{width:12px;height:12px;opacity:.9}100%{width:38px;height:38px;opacity:0}}
+.dot{position:absolute;cursor:pointer;width:0;height:0}
+.dot-core{position:absolute;width:13px;height:13px;border-radius:50%;border:2px solid white;transform:translate(-50%,-50%);transition:transform .2s;box-shadow:0 0 6px rgba(0,0,0,.4)}
+.dot:hover .dot-core{transform:translate(-50%,-50%) scale(1.4)}
+.dot.active .dot-core{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 12px rgba(255,255,255,.5)}
+.dot-ring{position:absolute;border-radius:50%;border:2px solid;transform:translate(-50%,-50%);animation:expandRing 2.2s infinite ease-out;pointer-events:none}
+.dot-ring2{animation-delay:.9s}
+@keyframes expandRing{0%{width:13px;height:13px;opacity:.8}100%{width:42px;height:42px;opacity:0}}
 .sidebar{display:flex;flex-direction:column;gap:.75rem}
 .zoom-panel{background:#0e1420;border:1px solid #2a3a50;border-radius:5px;overflow:hidden}
 .zoom-header{background:#0a0f1a;padding:.6rem 1rem;border-bottom:1px solid #1e2a3a;display:flex;justify-content:space-between;align-items:center}
@@ -67,64 +66,83 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 <div class="map-wrap" id="mapWrap">
   <img src="torenthia-map-roads.png" id="baseImg" alt="Torenthia Roads and Routes Map"/>
 
-  <!-- ══ REGIONS — calibrated from locked base map coordinates ══ -->
-  <!-- Territories -->
-  <div class="region" data-r="verdmont"  style="top:13%;left:31%;width:35%;height:11%;background:rgba(251,191,36,.08)"></div>
-  <div class="region" data-r="korda"     style="top:13%;left:66%;width:5%;height:30%;background:rgba(251,191,36,.08)"></div>
-  <div class="region" data-r="korda"     style="top:67%;left:56%;width:14%;height:10%;background:rgba(251,191,36,.08)"></div>
-  <div class="region" data-r="morantine" style="top:79%;left:31%;width:34%;height:8%;background:rgba(251,191,36,.08)"></div>
+  <!-- ══ ACTIVITY DOTS — color-coded by type ══ -->
 
-  <!-- States -->
-  <div class="region" data-r="harren"     style="top:24%;left:31%;width:15%;height:24%;background:rgba(74,222,128,.07)"></div>
-  <div class="region" data-r="varek"      style="top:24%;left:46%;width:19%;height:26%;background:rgba(74,222,128,.07)"></div>
-  <div class="region" data-r="arvane"     style="top:28%;left:31%;width:6%;height:22%;background:rgba(74,222,128,.07)"></div>
-  <div class="region" data-r="caldenmere" style="top:50%;left:31%;width:8%;height:22%;background:rgba(74,222,128,.07)"></div>
-  <div class="region" data-r="orath"      style="top:44%;left:36%;width:12%;height:20%;background:rgba(74,222,128,.07)"></div>
-  <div class="region" data-r="merath"     style="top:44%;left:48%;width:10%;height:20%;background:rgba(74,222,128,.07)"></div>
-  <div class="region" data-r="aldenmere"  style="top:52%;left:44%;width:16%;height:20%;background:rgba(245,158,11,.10)"></div>
-  <div class="region" data-r="rhovane"    style="top:24%;left:58%;width:12%;height:30%;background:rgba(74,222,128,.07)"></div>
-  <div class="region" data-r="kelvant"    style="top:55%;left:57%;width:13%;height:24%;background:rgba(74,222,128,.07)"></div>
-  <div class="region" data-r="corindal"   style="top:64%;left:31%;width:20%;height:15%;background:rgba(249,115,22,.10)"></div>
-  <div class="region" data-r="selvane"    style="top:64%;left:51%;width:14%;height:15%;background:rgba(74,222,128,.07)"></div>
+  <!-- MAGENTA = Active Crisis -->
+  <!-- Korda NE — refugee crisis, conflict spillover -->
+  <div class="dot" data-key="korda-north" style="top:19%;left:72%">
+    <div class="dot-core" style="background:#e8185a"></div>
+    <div class="dot-ring" style="border-color:#e8185a"></div>
+    <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
+  </div>
 
-  <!-- ══ CRISIS INDICATORS ══ -->
-  <!-- Korda / Rhondel -->
-  <div class="pulse" style="top:48%;left:67%">
-    <div class="pulse-core" style="width:10px;height:10px;background:#ef4444;top:0;left:0"></div>
-    <div class="pulse-ring" style="color:#ef4444;top:0;left:0"></div>
-    <div class="pulse-ring pulse-ring2" style="color:#ef4444;top:0;left:0"></div>
+  <!-- Rhondel — coast guard emergency, Asylum Court overflow -->
+  <div class="dot" data-key="rhondel" style="top:50%;left:71%">
+    <div class="dot-core" style="background:#e8185a"></div>
+    <div class="dot-ring" style="border-color:#e8185a"></div>
+    <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
   </div>
-  <!-- Lake Varda midline -->
-  <div class="pulse" style="top:38%;left:72%">
-    <div class="pulse-core" style="width:8px;height:8px;background:#f97316;top:0;left:0"></div>
-    <div class="pulse-ring" style="color:#f97316;top:0;left:0"></div>
+
+  <!-- PURPLE = Political / Electoral -->
+  <!-- Verentum — Year 13 LC race, election season -->
+  <div class="dot" data-key="verentum" style="top:54%;left:55%">
+    <div class="dot-core" style="background:#7c3aed"></div>
+    <div class="dot-ring" style="border-color:#7c3aed"></div>
+    <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
   </div>
-  <!-- Corindal audit -->
-  <div class="pulse" style="top:70%;left:40%">
-    <div class="pulse-core" style="width:8px;height:8px;background:#fbbf24;top:0;left:0"></div>
-    <div class="pulse-ring pulse-ring2" style="color:#fbbf24;top:0;left:0"></div>
+
+  <!-- SKY = Constitutional / Legal -->
+  <!-- Southern Korda — §15.4 merger petition -->
+  <div class="dot" data-key="korda-south" style="top:68%;left:63%">
+    <div class="dot-core" style="background:#0ea5e9"></div>
+    <div class="dot-ring" style="border-color:#0ea5e9"></div>
+    <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
   </div>
-  <!-- Valedon border -->
-  <div class="pulse" style="top:87%;left:46%">
-    <div class="pulse-core" style="width:7px;height:7px;background:#fbbf24;top:0;left:0"></div>
-    <div class="pulse-ring pulse-ring3" style="color:#fbbf24;top:0;left:0"></div>
+
+  <!-- Corindal — provisional status, audit failure -->
+  <div class="dot" data-key="corindal" style="top:71%;left:39%">
+    <div class="dot-core" style="background:#0ea5e9"></div>
+    <div class="dot-ring" style="border-color:#0ea5e9"></div>
+    <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
+  </div>
+
+  <!-- AMBER = Diplomatic / Foreign Affairs -->
+  <!-- Lake Varda midline — Sunderland naval contest -->
+  <div class="dot" data-key="lake-varda" style="top:38%;left:73%">
+    <div class="dot-core" style="background:#f59e0b"></div>
+    <div class="dot-ring" style="border-color:#f59e0b"></div>
+    <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
+  </div>
+
+  <!-- Valedon border — §15.6 petition -->
+  <div class="dot" data-key="valedon" style="top:86%;left:46%">
+    <div class="dot-core" style="background:#f59e0b"></div>
+    <div class="dot-ring" style="border-color:#f59e0b"></div>
+    <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
+  </div>
+
+  <!-- Northern River — Caldris dam treaty -->
+  <div class="dot" data-key="toren-river" style="top:21%;left:48%">
+    <div class="dot-core" style="background:#f59e0b"></div>
+    <div class="dot-ring" style="border-color:#f59e0b"></div>
+    <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
+  </div>
   </div>
 </div>
 
 <div class="sidebar">
   <div class="alerts-panel">
-    <div class="alerts-title">⚠ Active Situations — Year 12</div>
-    <div class="alert-row"><div class="adot adot-red"></div><div><strong>Korda / Rhondel</strong> — Sunderland refugee crossings. Asylum Court overflow. Coast guard emergency protocols.</div></div>
-    <div class="alert-row"><div class="adot adot-red"></div><div><strong>Lake Varda midline</strong> — Sunderland naval vessels in contested waters. Two LC diplomatic notes issued.</div></div>
-    <div class="alert-row"><div class="adot adot-amber"></div><div><strong>Corindal</strong> — Provisional status. Second consecutive failed audit. Audit Council active.</div></div>
-    <div class="alert-row"><div class="adot adot-amber"></div><div><strong>Valedon border</strong> — §15.6 petition unresolved. Pro-Republic faction active in Selvane and Morantine.</div></div>
-    <div class="alert-row"><div class="adot adot-blue"></div><div><strong>Northern River</strong> — Caldris dam treaty renewal. Senate resolution on minimum flow threshold.</div></div>
+    <div class="alerts-title">Activity Legend</div>
+    <div class="alert-row"><div class="adot" style="background:#e8185a;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Active Crisis</strong> — conflict spillover, emergency operations, humanitarian pressure</div></div>
+    <div class="alert-row"><div class="adot" style="background:#7c3aed;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Political · Electoral</strong> — elections, appointments, governance disputes</div></div>
+    <div class="alert-row"><div class="adot" style="background:#0ea5e9;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Constitutional · Legal</strong> — SC cases, audits, Article XVI proceedings</div></div>
+    <div class="alert-row"><div class="adot" style="background:#f59e0b;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Diplomatic · Foreign Affairs</strong> — treaties, border tensions, foreign negotiations</div></div>
   </div>
 
   <div class="zoom-panel">
     <div class="zoom-header">
       <div class="zoom-label">Regional Zoom</div>
-      <div class="zoom-btn" onclick="clearRegion()">✕ clear</div>
+      <div class="zoom-btn" onclick="clearDot()">✕ clear</div>
     </div>
     <div class="zoom-viewport" id="zoomVP">
       <div class="zoom-placeholder" id="zoomPH">SELECT A REGION<br>TO ZOOM IN</div>
@@ -134,119 +152,126 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 
   <div class="info-panel">
     <div class="info-header">
-      <div class="info-eyebrow" id="infoEye">Region Inspector</div>
-      <div class="info-title" id="infoTitle">Click any region</div>
+      <div class="info-eyebrow" id="infoEye">Activity Inspector</div>
+      <div class="info-title" id="infoTitle">Click any dot</div>
     </div>
-    <div class="info-body" id="infoBody">Hover or click any State or Territory to inspect its constitutional status and current situation.</div>
+    <div class="info-body" id="infoBody">Click an activity dot on the map to inspect the situation, constitutional provisions, and current status.</div>
   </div>
 </div>
 </div>
 
 <script>
 const DATA = {
-  verdmont:{title:"Verdmont Territory",eye:"Northern Territory",status:"s-warn",
-    statusTxt:"Provisional Status · Statehood Audit Ongoing",zoom:{cx:48,cy:18,scale:3.0},
-    body:`<p><strong>Northern strip along the Torenthian Alps and Toren River border with Caldris.</strong></p><p>Resource extraction, small population across large alpine territory. In Provisional status for six years. Twice passed the fiscal audit component; twice failed Article I — specifically judicial access in remote mountain districts. Two JMC Early Warnings published.</p>`},
-  korda:{title:"Korda Territory",eye:"Indigenous Territory · Two Zones · Active Dispute",status:"s-crisis",
-    statusTxt:"⚠ Provisional Status · ACTIVE CRISIS · Partial Absorption Petition",zoom:{cx:70,cy:38,scale:3.5},
-    body:`<p><strong>The Korda people entered the Republic as a Territory at founding under the indigenous sovereignty framework. Their ancestral land comprises two zones: a northern strip along the Torenthian Alps and Lake Varda's northern shore, and a southern zone adjacent to Kelvant.</strong></p><p>The northern zone is the Republic's most pressured Territory — primary arrival point for Sunderland refugees, Asylum Court overflow, Elections Panel direct administration last cycle.</p><p>The southern zone is the center of an active constitutional dispute. A Territory may consent to partial boundary adjustment — transferring a zone to an adjacent State — provided the remaining Territory is viable for eventual Statehood on its own terms. Kelvant's Governor, of Korda heritage, has formally petitioned for the southern zone's incorporation into Kelvant, arguing the northern zone is Korda's true heartland and would be strengthened, not diminished, by the separation. The Korda territorial government counters that the Governor is deciding for the southern community without sufficient consent, and that once divided, the political will to complete northern Korda's Statehood pathway will disappear. The JMC must assess northern zone viability before any transfer can proceed. Article XVI sits over all of it.</p>`},
-  morantine:{title:"Morantine Territory",eye:"Southern Territory",status:"s-warn",
-    statusTxt:"Provisional Status · Audit Upcoming",zoom:{cx:48,cy:84,scale:3.0},
-    body:`<p><strong>Southern strip along the Valedon border.</strong></p><p>Mixed cultural heritage, warm climate, agricultural. The pro-Republic Valedon faction treats Morantine as a forward embassy. The territorial government has twice petitioned the LC about hosting Valedon civic organizations. The referendum wound from eighteen years ago is lived daily here.</p>`},
-  harren:{title:"Harren",eye:"Northern Border State · Founding",status:"s-ok",
-    statusTxt:"Full Statehood · Annual Audit: Passing",zoom:{cx:36,cy:34,scale:3.5},
-    body:`<p><strong>Northwestern founding State.</strong></p><p>A semi-autonomous nation for three centuries before the Republic. Entered without the Territory pathway. Tested founding sovereignty before the SC in <em>Republic v. Harren</em> (Year 9) — ruled against unanimously. Strong national identity, older demographic, resource economy. The Toren River runs along its northern border; Caldris dam negotiations are a live political issue in every local election.</p>`},
-  varek:{title:"Varek",eye:"Northern Border State",status:"s-ok",
-    statusTxt:"Full Statehood · Annual Audit: Passing",zoom:{cx:56,cy:34,scale:3.2},
-    body:`<p><strong>Northeastern border State, river country.</strong></p><p>Citizens track upstream Caldris water flow data the way other States track weather. Timber and mineral extraction from the alpine foothills. The Torenthian Alps form its northern horizon. Varek senators have been among the most consistent supporters of the LC's formal diplomatic notes to Caldris over the dam proposal.</p>`},
-  arvane:{title:"Arvane",eye:"Western Coast State",status:"s-ok",
-    statusTxt:"Full Statehood · Annual Audit: Passing",zoom:{cx:32,cy:40,scale:4.0},
-    body:`<p><strong>Northern western coast.</strong></p><p>Fishing economy transitioning to services. Strong maritime heritage. Ferry routes connect it to Solara Territory, giving Arvane a permanent political interest in Solara's Statehood question. The Marisvia maritime boundary disputes directly affect fishing livelihoods here.</p>`},
-  caldenmere:{title:"Caldenmere",eye:"Western Coast State · Commercial Hub",status:"s-ok",
-    statusTxt:"Full Statehood · Annual Audit: Passing",zoom:{cx:31,cy:60,scale:3.8},
-    body:`<p><strong>Southern western coast. Home to Calden, the Republic's largest city.</strong></p><p>Primary port, financial exchange, largest immigration processing operation in the Republic. Most politically diverse State. The financial lobby has outsized Senate influence. The immigration processing system runs at persistent strain. Maritime boundary with Marisvia is Caldenmere's permanent foreign policy concern.</p>`},
-  orath:{title:"Orath",eye:"Interior State · Agricultural Heartland",status:"s-ok",
-    statusTxt:"Full Statehood · Annual Audit: Passing",zoom:{cx:40,cy:54,scale:3.8},
-    body:`<p><strong>Western interior. The agricultural heartland. Home to Dorven.</strong></p><p>Grain, livestock, river access. Highest civic participation rate in the Republic. Dorven's market square has operated continuously for four hundred years. Currently running the most serious formal bid to relocate the seat of government from Aldenmere: "Aldenmere was built around federal presence. Orath already exists independent of it."</p>`},
-  merath:{title:"Merath",eye:"Interior State · Industrial",status:"s-ok",
-    statusTxt:"Full Statehood · Annual Audit: Passing",zoom:{cx:50,cy:54,scale:3.8},
-    body:`<p><strong>Central interior. Industrial heartland.</strong></p><p>Labor history, manufacturing, the Republic's industrial base. The only State to have invoked the senator recall mechanism in the Republic's first decade. Labor organization is strong. Genuine swing State in Assembly elections — political allegiances shift more here than anywhere else in the interior.</p>`},
-  aldenmere:{title:"Aldenmere",eye:"Capital Region · Seat of Government",status:"s-warn",
-    statusTxt:"Full Statehood · 20-Year Review Active",zoom:{cx:52,cy:62,scale:3.5},
-    body:`<p><strong>Central. Host State of the seat of government. Home to Verentum.</strong></p><p>Economy almost entirely built around federal presence. The 20-year review is now active. Orath has filed a formal competing bid. Solara Territory has filed a SC petition arguing Territories should be eligible to host. Aldenmere's senators vote as a bloc on anything touching federal property.</p>`},
-  rhovane:{title:"Rhovane",eye:"Eastern Lake State · Under Pressure",status:"s-warn",
-    statusTxt:"Full Statehood · Under Pressure",zoom:{cx:64,cy:38,scale:3.8},
-    body:`<p><strong>Northern eastern State. Lake Varda shoreline.</strong></p><p>Fishing, light manufacturing, historically independent streak. Watches Sunderland across the lake with chronic unease. The refugee situation has begun changing Rhovane's demographic character faster than any election could. Has formally requested JMC clarification on whether refugee processing counts against the Article I audit component.</p>`},
-  kelvant:{title:"Kelvant",eye:"Eastern Lake State · Republic's Youngest State",status:"s-warn",
-    statusTxt:"Full Statehood · Severe Infrastructure Pressure",zoom:{cx:64,cy:64,scale:3.8},
-    body:`<p><strong>Southern eastern State. Lake Varda access. Home to Rhondel.</strong></p><p>The Republic's youngest State — graduated from Territory status through the full Provisional pathway. Its senators are the most vocal defenders of the audit system. Rhondel is now the Republic's most pressured city: Asylum Court overflow, coast guard command, three petitions to Verentum in eighteen months for emergency infrastructure support.</p>`},
-  corindal:{title:"Corindal",eye:"Southern Border State · PROVISIONAL STATUS",status:"s-crisis",
-    statusTxt:"⚠ PROVISIONAL STATUS — Second Consecutive Audit Failure",zoom:{cx:40,cy:72,scale:3.5},
-    body:`<p><strong>Southwestern border State. Adjacent to Valedon.</strong></p><p>Two consecutive failed Statehood Audits for persistent electoral district non-compliance. Now in Provisional status with the Provisional Audit Council active. A forced devolution election was rejected by 71% of citizens. Year 14 audit approaching. The audit failure is a political deadlock about electoral reform that Corindal's legislature has refused to break.</p>`},
-  selvane:{title:"Selvane",eye:"Southern Border State",status:"s-ok",
-    statusTxt:"Full Statehood · Annual Audit: Passing",zoom:{cx:56,cy:72,scale:3.5},
-    body:`<p><strong>Southeastern border State. Adjacent to Valedon and near Seronne.</strong></p><p>Warm climate, agricultural, mixed cultural heritage. The pro-Republic Valedon faction has deep family roots here — families split across the border by the referendum eighteen years ago. Selvane senators have twice attempted legislation extending associate status to Valedon's pro-Republic civic organizations.</p>`}
+  "korda-north":{title:"Korda Territory — Northern Zone",type:"crisis",
+    typeLabel:"Active Crisis",zoom:{cx:74,cy:22,scale:4.0},
+    body:`<p><strong>Northeastern strip — Torenthian Alps foothill zone, northern Lake Varda shore.</strong></p>
+    <p>The Republic's most pressured Territory. Primary arrival point for Sunderland refugees crossing Lake Varda. Asylum Court overflow operating here. Elections Panel administered the last federal election directly due to NVS compliance failures. Statehood Audit due — Article I compliance under severe strain from refugee infrastructure pressure. The LC has flagged Korda in classified intelligence assessments approaching their §10.3 classification ceiling.</p>`,
+    provisions:["§6.1 Asylum","§11.3 Elections Panel","§15.2 Statehood Audit","§10.3 Classification"]},
+
+  "rhondel":{title:"Rhondel — Eastern Lake City",type:"crisis",
+    typeLabel:"Active Crisis",zoom:{cx:71,cy:50,scale:4.0},
+    body:`<p><strong>Kelvant/Rhovane border city. Coast guard command. Asylum Court overflow chamber.</strong></p>
+    <p>Rhondel is now the Republic's most pressured urban center. Three petitions to Verentum in eighteen months for emergency infrastructure support. The coast guard command for the entire eastern lake operates from Rhondel's harbor. Sunderland naval vessels have been moving through the contested Lake Varda midline — each incursion is logged, reported to the LC's office, and published to the NRS. The city's Asylum Court overflow chamber opened in Year 11 as a temporary measure. It is still operating.</p>`,
+    provisions:["§6.1 Asylum","§2.4 LC Domain","§10.1 NRS"]},
+
+  "verentum":{title:"Verentum — Seat of Government",type:"political",
+    typeLabel:"Political · Electoral",zoom:{cx:55,cy:54,scale:4.0},
+    body:`<p><strong>Aldenmere State. Year 13 LC election forming. Seat of government 20-year review active.</strong></p>
+    <p>Senator Tobias Vael (Harren) declared first — sovereignty wing, confrontational Caldris posture. Director of Foreign Affairs Ines Carrow positioned without declaring — her Verentum Forum speech was read as a campaign address by everyone in the room. Assembly member Seren Mak (Rhovane) has not declared but is winning rooms she shouldn't be winning yet. The CC, Nadia Sorrel, has made no public statement about her Year 13 intentions. The Elections Panel registration window opens in three months.</p>
+    <p>Simultaneously, the 20-year seat of government review is active. Orath has filed a competing bid. Solara Territory has petitioned the SC on eligibility grounds.</p>`,
+    provisions:["§7.2 LC Election","§2.1 LC Term","§18.1 Seat of Government","§4.5 SC Jurisdiction"]},
+
+  "korda-south":{title:"Korda Territory — Southern Zone",type:"legal",
+    typeLabel:"Constitutional · Legal",zoom:{cx:63,cy:70,scale:3.8},
+    body:`<p><strong>Southern ancestral zone adjacent to Kelvant. §15.4 partial merger petition active.</strong></p>
+    <p>The Korda people entered the Republic as a Territory at founding under Article XVI's indigenous sovereignty framework. Their ancestral land comprises two zones. The southern zone is the subject of a §15.4 partial merger petition — Kelvant's Governor, of Korda heritage, has formally petitioned for the southern zone's incorporation into Kelvant State.</p>
+    <p>§15.4 requires a 60% referendum with at least 50% participation in the merging zone, approval by Kelvant through its own process, a joint LM-JM audit confirming Kelvant's integrity, and Senate ratification by simple majority. The Korda territorial government opposes the petition, arguing the vote would divide a people rather than represent them. §15.5 protects the northern zone's Statehood progress if the merger proceeds.</p>`,
+    provisions:["§15.4 Voluntary Devolution and Merger","§15.5 Re-Qualification","§16.1 Indigenous Sovereignty","§9.11 JMC"]},
+
+  "lake-varda":{title:"Lake Varda — Contested Midline",type:"diplomatic",
+    typeLabel:"Diplomatic · Foreign Affairs",zoom:{cx:74,cy:40,scale:3.5},
+    body:`<p><strong>Eastern lake shared with Sunderland. Midline boundary disputed. Naval incursions logged.</strong></p>
+    <p>Sunderland naval vessels have been moving through the contested lake midline, using it as a supply route for internal military operations. The LC has issued two formal diplomatic notes. Each incursion is published to the NRS. The coast guard command in Rhondel operates under standing emergency protocols. The dashed midline on the map represents Torenthia's administrative claim — Sunderland has agreed to no boundary arrangement and the Sunderland government's instability makes any negotiated resolution unlikely in the near term.</p>`,
+    provisions:["§2.4 LC Domain","§10.3 Classification","§10.1 NRS"]},
+
+  "corindal":{title:"Corindal — Provisional Status",type:"legal",
+    typeLabel:"Constitutional · Legal",zoom:{cx:40,cy:71,scale:3.5},
+    body:`<p><strong>Southwestern border State. Second consecutive failed Statehood Audit. Provisional Audit Council active.</strong></p>
+    <p>Corindal has failed two consecutive Statehood Audits for persistent electoral district non-compliance. Now in Provisional status. The Provisional Audit Council — two CC officers and two Corindal State delegates — is publishing findings to the NRS. A forced devolution election was held and rejected by 71% of citizens. Year 14 audit approaching. The audit failure is a political deadlock about electoral reform that Corindal's legislature has refused to break. The Audit Council's most recent report named the deadlock directly.</p>`,
+    provisions:["§15.1.a Provisional Status","§15.2 Statehood Audit","§15.3 Mandatory Devolution","§9.11 JMC"]},
+
+  "valedon":{title:"Valedon Border — §15.6 Unresolved",type:"diplomatic",
+    typeLabel:"Diplomatic · Foreign Affairs",zoom:{cx:46,cy:84,scale:3.0},
+    body:`<p><strong>Southern border. Valedon referendum wound — Year 18. §15.6 petition question before the SC.</strong></p>
+    <p>Eighteen years ago Valedon's citizens voted to join the Republic. The parliament rejected the result. The pro-Republic faction has grown since the anniversary. Whether a citizen referendum can constitute a constructive §15.6 petition from the governing body has never been put to the SC. The LC declined a formal acknowledgment request without closing the door. Caldris was involved in the original rejection through back-channels — never proven, never closed by the LC's intelligence services. Cultural overlap with Corindal, Selvane, and Morantine Territory means the wound is lived daily on both sides of the border.</p>`,
+    provisions:["§15.6 Voluntary Incorporation","§4.5 SC Jurisdiction","§2.4 LC Domain"]},
+
+  "toren-river":{title:"Northern River — Caldris Treaty Renewal",type:"diplomatic",
+    typeLabel:"Diplomatic · Foreign Affairs",zoom:{cx:48,cy:21,scale:3.2},
+    body:`<p><strong>The Toren River runs east-west along the northern border. The Republic is downstream from Caldris.</strong></p>
+    <p>The Northern River treaty is due for renewal. Caldris has proposed upstream dam infrastructure that would give it effective control over Torenthia's downstream water supply in drought conditions. The LC objected formally within 48 hours. The Senate passed a resolution directing minimum guaranteed flow thresholds. The LC and Senate do not agree on what that threshold is. Caldris also holds economic investment in Sunderland — the water negotiation and the eastern situation are not separate files in the LC's office.</p>`,
+    provisions:["§3.6 Treaty Ratification","§2.4 LC Domain","§3.6.a Classification"]}
 };
 
-function selectRegion(key){
-  document.querySelectorAll(".region").forEach(el=>{
-    el.classList.remove("active");
-    const r=el.dataset.r;
-    if(["verdmont","korda","morantine"].includes(r)) el.style.background="rgba(251,191,36,.08)";
-    else if(r==="corindal") el.style.background="rgba(249,115,22,.10)";
-    else if(r==="aldenmere") el.style.background="rgba(245,158,11,.10)";
-    else el.style.background="rgba(74,222,128,.07)";
-  });
-  const el=document.querySelector('[data-r="'+key+'"]');
-  if(el){
-    el.classList.add("active");
-    if(["verdmont","korda","morantine"].includes(key)) el.style.background="rgba(251,191,36,.28)";
-    else if(key==="corindal") el.style.background="rgba(249,115,22,.30)";
-    else if(key==="aldenmere") el.style.background="rgba(245,158,11,.28)";
-    else el.style.background="rgba(74,222,128,.22)";
-  }
-  const d=DATA[key]; if(!d) return;
-  document.getElementById("infoEye").textContent=d.eye;
-  document.getElementById("infoTitle").textContent=d.title;
-  document.getElementById("infoBody").innerHTML=
-    '<span class="info-status '+d.status+'">'+d.statusTxt+'</span>'+d.body;
-  const z=d.zoom;
-  const vp=document.getElementById("zoomVP");
-  const img=document.getElementById("zoomImg");
-  const ph=document.getElementById("zoomPH");
-  const vpW=vp.offsetWidth||306;
-  const vpH=200;
-  const natAR=1024/687;
-  const displayW=vpW*z.scale;
-  const displayH=displayW/natAR;
-  const offsetX=-(z.cx/100)*displayW+vpW*0.45;
-  const offsetY=-(z.cy/100)*displayH+vpH*0.42;
-  img.style.width=displayW+"px";
-  img.style.height=displayH+"px";
-  img.style.left=offsetX+"px";
-  img.style.top=offsetY+"px";
-  img.style.display="block";
-  ph.style.display="none";
+const TYPE_COLORS = {
+  crisis:"#e8185a", political:"#7c3aed", legal:"#0ea5e9", diplomatic:"#f59e0b"
+};
+const TYPE_LABELS = {
+  crisis:"Active Crisis", political:"Political · Electoral",
+  legal:"Constitutional · Legal", diplomatic:"Diplomatic · Foreign Affairs"
+};
+
+let activeDot = null;
+
+function selectDot(key){
+  document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
+  const el = document.querySelector('[data-key="'+key+'"]');
+  if(el) el.classList.add("active");
+  activeDot = key;
+
+  const d = DATA[key];
+  if(!d) return;
+
+  const color = TYPE_COLORS[d.type] || "#888";
+  document.getElementById("infoEye").textContent = d.typeLabel;
+  document.getElementById("infoEye").style.color = color;
+  document.getElementById("infoTitle").textContent = d.title;
+
+  const provs = d.provisions ? d.provisions.map(p=>`<span style="font-family:'JetBrains Mono',monospace;font-size:.6rem;background:#1B2A4A;color:#C9A84C;padding:.15rem .5rem;margin:.1rem .1rem 0;display:inline-block">${p}</span>`).join("") : "";
+  document.getElementById("infoBody").innerHTML =
+    `<span style="font-family:'JetBrains Mono',monospace;font-size:.62rem;padding:.25rem .5rem;border-radius:2px;display:inline-block;margin-bottom:.65rem;background:${color}22;color:${color}">${d.typeLabel}</span>`
+    + d.body
+    + (provs ? `<div style="margin-top:.75rem">${provs}</div>` : "");
+
+  const z = d.zoom;
+  const vp = document.getElementById("zoomVP");
+  const img = document.getElementById("zoomImg");
+  const ph = document.getElementById("zoomPH");
+  const vpW = vp.offsetWidth||306;
+  const vpH = 200;
+  const displayW = vpW * z.scale;
+  const displayH = displayW / (1024/687);
+  img.style.width = displayW+"px";
+  img.style.height = displayH+"px";
+  img.style.left = (-(z.cx/100)*displayW + vpW*0.45)+"px";
+  img.style.top = (-(z.cy/100)*displayH + vpH*0.42)+"px";
+  img.style.display = "block";
+  ph.style.display = "none";
 }
 
-function clearRegion(){
-  document.querySelectorAll(".region").forEach(el=>{
-    el.classList.remove("active");
-    const r=el.dataset.r;
-    if(["verdmont","korda","morantine"].includes(r)) el.style.background="rgba(251,191,36,.08)";
-    else if(r==="corindal") el.style.background="rgba(249,115,22,.10)";
-    else if(r==="aldenmere") el.style.background="rgba(245,158,11,.10)";
-    else el.style.background="rgba(74,222,128,.07)";
-  });
+function clearDot(){
+  activeDot = null;
+  document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
   document.getElementById("zoomImg").style.display="none";
   document.getElementById("zoomPH").style.display="flex";
-  document.getElementById("infoEye").textContent="Region Inspector";
-  document.getElementById("infoTitle").textContent="Click any region";
-  document.getElementById("infoBody").textContent="Hover or click any State or Territory to inspect its constitutional status and current situation.";
+  document.getElementById("infoEye").textContent="Activity Inspector";
+  document.getElementById("infoEye").style.color="";
+  document.getElementById("infoTitle").textContent="Click any dot";
+  document.getElementById("infoBody").textContent="Click an activity dot on the map to inspect the situation, constitutional provisions, and current status.";
 }
 
-document.querySelectorAll(".region").forEach(el=>{
-  el.addEventListener("click",()=>selectRegion(el.dataset.r));
+document.querySelectorAll(".dot").forEach(el=>{
+  el.addEventListener("click",()=>selectDot(el.dataset.key));
 });
 </script>
 </body>
