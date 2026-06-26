@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NRS-Y12-2847 — LC Diplomatic Note — Sunderland No. 3</title>
+  <meta name="description" content="National Record System. Legat Consul Diplomatic Communication to Sunderland. Lake Varda Administrative Midline. Year 12, Month 10.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    /* NRS DOCUMENT STYLING */
+    .nrs-header{background:var(--navy2);padding:0;border-bottom:4px solid var(--gold)}
+    .nrs-header-inner{max-width:860px;margin:0 auto;padding:1.5rem 2rem}
+    .nrs-masthead-row{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem}
+    .nrs-identity{display:flex;align-items:center;gap:1rem}
+    .nrs-seal{width:48px;height:48px;opacity:.9}
+    .nrs-title-block{display:flex;flex-direction:column}
+    .nrs-system-name{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.2rem}
+    .nrs-republic{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#f5f0e8;letter-spacing:.04em;text-transform:uppercase}
+    .nrs-ref-block{text-align:right}
+    .nrs-ref-label{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(201,168,76,.6);display:block;margin-bottom:.25rem}
+    .nrs-ref-num{font-family:'JetBrains Mono',monospace;font-size:1.1rem;color:var(--gold);letter-spacing:.1em}
+    .classification-banner{background:#0a5c2e;padding:.45rem 2rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:#4ade80;text-align:center;max-width:860px;margin:0 auto}
+
+    /* METADATA TABLE */
+    .doc-wrap{max-width:760px;margin:0 auto;padding:2.5rem 2rem 5rem}
+    .meta-table{width:100%;border-collapse:collapse;margin-bottom:2.5rem;font-size:.82rem}
+    .meta-table td{padding:.5rem .75rem;vertical-align:top;border-bottom:1px solid var(--border)}
+    .meta-table td:first-child{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);width:32%;white-space:nowrap}
+    .meta-table td:last-child{font-family:'Jost',sans-serif;color:var(--text)}
+    .meta-table tr:first-child td{border-top:2px solid var(--navy)}
+
+    /* DOCUMENT BODY */
+    .doc-section-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding:.5rem 0;border-bottom:2px solid var(--navy);margin:2rem 0 1.25rem}
+    .doc-body p{font-family:'Georgia',serif;font-size:.95rem;line-height:2;color:#1a1a1a;margin-bottom:1.25rem}
+    .doc-body .formal-address{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--navy);margin-bottom:1.5rem;padding-left:1.5rem;border-left:3px solid var(--border)}
+    .doc-body .formal-close{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+    .doc-body .formal-close p{font-size:.9rem;color:var(--muted)}
+    .doc-body .signature-block{margin-top:1.5rem;padding-left:1.5rem}
+    .doc-body .signature-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy)}
+    .doc-body .signature-title{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.08em;color:var(--muted);margin-top:.2rem}
+
+    /* CERTIFICATION FOOTER */
+    .cert-block{background:var(--cream);border:2px solid var(--navy);padding:1.25rem 1.5rem;margin-top:3rem;font-size:.75rem;font-family:'JetBrains Mono',monospace;color:var(--muted);line-height:1.8}
+    .cert-block .cert-title{color:var(--navy);font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;display:block;font-size:.68rem}
+    .cert-block .cert-hash{color:var(--gold);letter-spacing:.05em}
+
+    /* NAVIGATION */
+    .doc-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-top:1px solid var(--border);margin-top:1.5rem}
+    .doc-nav a{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--gold);text-decoration:none;text-transform:uppercase}
+    .doc-nav a:hover{color:var(--navy)}
+
+    @media(max-width:820px){
+      .nrs-masthead-row{flex-direction:column}
+      .nrs-ref-block{text-align:left}
+      .doc-wrap{padding:1.5rem 1rem 4rem}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html" class="active">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <!-- NRS DOCUMENT HEADER -->
+  <div class="nrs-header" role="banner">
+    <div class="nrs-header-inner">
+      <div class="nrs-masthead-row">
+        <div class="nrs-identity">
+          <img src="seal.png" alt="Federated Republic Seal" class="nrs-seal">
+          <div class="nrs-title-block">
+            <span class="nrs-system-name">National Record System</span>
+            <span class="nrs-republic">The Federated Republic of Torenthia</span>
+          </div>
+        </div>
+        <div class="nrs-ref-block">
+          <span class="nrs-ref-label">NRS Reference</span>
+          <span class="nrs-ref-num">NRS-Y12-2847</span>
+        </div>
+      </div>
+    </div>
+    <div class="classification-banner">Unclassified &nbsp;·&nbsp; Public Record &nbsp;·&nbsp; §10.1 Publication</div>
+  </div>
+
+  <main id="main-content">
+  <div class="doc-wrap">
+
+    <div class="doc-section-label">Document Metadata</div>
+
+    <table class="meta-table">
+      <tr>
+        <td>NRS Reference</td>
+        <td>NRS-Y12-2847</td>
+      </tr>
+      <tr>
+        <td>Cross-Reference</td>
+        <td>LC/FOREIGN/Y12/SUN-003 &nbsp;·&nbsp; Diplomatic Note — Sunderland No. 3</td>
+      </tr>
+      <tr>
+        <td>Document Type</td>
+        <td>Legat Consul Diplomatic Communication</td>
+      </tr>
+      <tr>
+        <td>Issuing Authority</td>
+        <td>Office of the Legat Consul</td>
+      </tr>
+      <tr>
+        <td>Constitutional Authority</td>
+        <td>§2.1 — Legat Consul Domain and Term &nbsp;·&nbsp; §10.1 — National Record System</td>
+      </tr>
+      <tr>
+        <td>Date of Issue</td>
+        <td>Year 12, Month 10, Day 21</td>
+      </tr>
+      <tr>
+        <td>Date of NRS Publication</td>
+        <td>Year 12, Month 10, Day 21 — 0941 hours</td>
+      </tr>
+      <tr>
+        <td>Classification</td>
+        <td>Unclassified &nbsp;·&nbsp; Public Record</td>
+      </tr>
+      <tr>
+        <td>Addressee</td>
+        <td>The Current Governing Authority of Sunderland</td>
+      </tr>
+      <tr>
+        <td>Prior Notes</td>
+        <td>NRS-Y12-1203 (SUN-001) &nbsp;·&nbsp; NRS-Y12-1844 (SUN-002)</td>
+      </tr>
+    </table>
+
+    <div class="doc-section-label">Diplomatic Communication</div>
+
+    <div class="doc-body">
+
+      <div class="formal-address">
+        To: The Current Governing Authority of Sunderland<br>
+        From: The Legat Consul, Federated Republic of Torenthia<br>
+        Subject: Lake Varda — Administrative Midline Incursion, Year 12 Month 10 Day 21<br>
+        Reference: LC/FOREIGN/Y12/SUN-003
+      </div>
+
+      <p>This communication is issued under the foreign affairs authority of the Legat Consul pursuant to §2.1 of the Constitution of the Federated Republic of Torenthia. It is published to the National Record System pursuant to §10.1 as a permanent public record of the Republic.</p>
+
+      <p>The Federated Republic of Torenthia formally records the following: at 0347 hours on Year 12, Month 10, Day 21, a Sunderland naval vessel of identifiable class crossed the administrative midline of Lake Varda into waters under the Republic's administrative jurisdiction. The vessel held position at an average distance of approximately 400 meters from the midline until 1010 hours, at which time it withdrew into Sunderland-controlled waters. The vessel's position was tracked continuously by the Republic's coast guard command throughout the duration of the incursion. The track is a matter of record.</p>
+
+      <p>This is the third incident of this nature recorded in Year 12. The Republic's prior diplomatic communications on this matter — NRS-Y12-1203 and NRS-Y12-1844 — stated the Republic's position on the administrative midline with precision. That position has not changed. The Republic does not accept the premise that the midline is contested in the manner Sunderland's actions suggest. The midline is an administrative boundary maintained by the Republic in the exercise of its sovereign jurisdiction over the waters in question. Incursions across it are not ambiguous events.</p>
+
+      <p>The Republic notes that Sunderland's current governing authority is operating under conditions of domestic instability that the Republic does not regard as eliminating Sunderland's obligations under the law of nations. A state's internal circumstances do not suspend its international responsibilities. The Republic has engaged with Sunderland through proper channels on three occasions in Year 12 regarding this specific matter. Those engagements have produced no change in Sunderland's conduct.</p>
+
+      <p>The Federated Republic of Torenthia expects the current governing authority of Sunderland to take measures to prevent further incursions across the Lake Varda administrative midline. The Republic further expects a formal response to this communication within thirty days of its transmission. The Republic is prepared to pursue this matter through whatever channels are necessary and appropriate to achieve resolution consistent with its sovereign jurisdiction over the waters in question.</p>
+
+      <p>The Republic's position on this matter is not subject to revision in the absence of a substantive change in Sunderland's conduct.</p>
+
+      <div class="formal-close">
+        <p>Transmitted on Year 12, Month 10, Day 21.</p>
+        <p>Published to the National Record System at 0941 hours, Year 12, Month 10, Day 21, pursuant to §10.1 of the Constitution of the Federated Republic of Torenthia.</p>
+
+        <div class="signature-block">
+          <div class="signature-name">Casimir Rehn</div>
+          <div class="signature-title">Legat Consul · Federated Republic of Torenthia · Year 7 – Year 13</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cert-block">
+      <span class="cert-title">National Record System — Publication Certificate</span>
+      This document has been received, verified, and permanently recorded in the National Record System of the Federated Republic of Torenthia. This record may not be altered, reclassified, or removed. It is freely accessible to every Inhabitant of the Republic at no cost, pursuant to §10.1 of the Constitution. The permanent tamper-evident record is maintained by the NRS Panel under Article X.
+      <br><br>
+      <span class="cert-hash">NRS-Y12-2847 &nbsp;·&nbsp; VERIFIED &nbsp;·&nbsp; PERMANENT RECORD &nbsp;·&nbsp; UNCLASSIFIED</span>
+    </div>
+
+    <div class="doc-nav">
+      <a href="torenthia-news-003.html">← The Torenthian: Lake Varda Report</a>
+      <a href="torenthia.html#the-record">The Record →</a>
+    </div>
+
+  </div>
+  </main>
+
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html">The World</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+</body>
+</html>
