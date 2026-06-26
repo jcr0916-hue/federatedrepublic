@@ -40,7 +40,29 @@
 
     /* ── MAP BLOCK ── */
     .map-block{margin:2.5rem 0;border:2px solid var(--border);border-radius:3px;overflow:hidden;position:relative;background:#c9dfaf}
-    .map-block iframe{width:100%;display:block;border:none;aspect-ratio:3/2}
+    .map-scale-wrap{width:100%;overflow:hidden;position:relative}
+    .map-inner{position:relative;width:1000px;height:666px;background:#c9dfaf;background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.12) 0%,rgba(0,0,0,.08) 100%);transform-origin:top left;font-family:'Georgia',serif}
+    .bm-sea{position:absolute;left:0;top:0;width:31%;height:100%;background:#70b3d6;border-right:2px solid #1e2417;z-index:1}
+    .bm-lake{position:absolute;right:16%;top:24%;width:14%;height:52%;background:#70b3d6;transform:rotate(-8deg);border:2px dashed rgba(30,36,23,.4);border-radius:35% 45% 30% 40%;z-index:1}
+    .bm-vectors{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2}
+    .bm-header{position:absolute;top:30px;left:30px;background:#fdfbf7;border:2px solid #1e2417;padding:15px 25px;box-shadow:3px 3px 0 rgba(0,0,0,.15);z-index:10;display:flex;flex-direction:column}
+    .bm-h2{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:#555;font-weight:normal}
+    .bm-h1{font-size:30px;font-family:'Times New Roman',serif;text-transform:uppercase;letter-spacing:1px;margin:2px 0;color:#0f120a}
+    .bm-lbl{position:absolute;color:#0f120a;font-weight:bold;font-size:13px;user-select:none;z-index:4}
+    .bm-sov{font-size:24px;letter-spacing:5px;text-transform:uppercase;opacity:.8;font-family:'Times New Roman',serif}
+    .bm-reg{font-size:13px;font-style:italic;font-weight:normal;opacity:.8}
+    .bm-city{position:absolute;display:flex;align-items:center;gap:6px;z-index:5}
+    .bm-dot{width:10px;height:10px;background:#fff;border:2px solid #1e2417;border-radius:50%}
+    .bm-star{width:14px;height:14px;background:#fff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);border:1px solid #1e2417}
+    .bm-solara{position:absolute;bottom:25px;left:25px;width:155px;height:155px;background:#70b3d6;border:2px solid #1e2417;box-shadow:2px 2px 0 rgba(0,0,0,.1);z-index:4}
+    .bm-inset-label{position:absolute;top:8px;left:8px;font-size:11px;text-transform:uppercase;font-weight:bold;background:#fdfbf7;padding:2px 5px;border:1px solid #1e2417}
+    .bm-island{position:absolute;top:25%;left:25%;width:50%;height:55%;background:#c9dfaf;border:1px solid #1e2417;border-radius:40% 55% 35% 50%}
+    .bm-legend{position:absolute;bottom:25px;right:25px;background:#fdfbf7;border:2px solid #1e2417;padding:12px 15px;width:195px;font-size:11px;box-shadow:3px 3px 0 rgba(0,0,0,.15);z-index:4}
+    .bm-leg-title{font-weight:bold;text-transform:uppercase;border-bottom:1px solid #1e2417;padding-bottom:4px;margin-bottom:6px;letter-spacing:1px}
+    .bm-leg-row{display:flex;align-items:center;margin:5px 0;gap:10px}
+    .bm-line-river{width:25px;height:4px;background:#70b3d6;border:1px solid #4a90b5;border-radius:2px}
+    .bm-line-intl{width:25px;height:3px;border-bottom:3px solid #1e2417}
+    .bm-line-state{width:25px;height:1px;border-bottom:1px dashed #1e2417}
     .map-caption{padding:.75rem 1rem;background:var(--cream);border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
     .map-caption a{color:var(--gold);text-decoration:none}
     .map-caption a:hover{text-decoration:underline}
@@ -184,7 +206,64 @@
     </div>
 
     <div class="map-block">
-      <iframe src="torenthia-basemap.html" title="Political map of the Federated Republic of Torenthia" loading="lazy" scrolling="no"></iframe>
+      <div class="map-scale-wrap" id="mapScaleWrap">
+        <div class="map-inner" id="mapInner">
+          <div class="bm-sea"></div>
+          <div class="bm-lake"></div>
+          <svg class="bm-vectors">
+            <path d="M 310,145 C 420,148 530,142 660,150 C 730,154 780,146 840,165" fill="none" stroke="#70b3d6" stroke-width="7" stroke-linecap="round"/>
+            <path d="M 310,145 C 420,148 530,142 660,150 C 730,154 780,146 840,165" fill="none" stroke="#4a90b5" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 310,142 C 420,145 530,139 660,147 C 730,151 780,143 840,162" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+            <path d="M 840,162 C 845,200 835,240 838,300 C 840,400 815,480 810,530" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+            <path d="M 810,530 C 790,560 770,580 750,600" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+            <path d="M 310,560 C 450,565 580,570 750,600" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+          </svg>
+          <div class="bm-header"><span class="bm-h2">Federated Republic of</span><span class="bm-h1">Torenthia</span></div>
+          <span class="bm-lbl bm-sov" style="top:4%;left:52%;font-size:24px">Caldris</span>
+          <span class="bm-lbl bm-sov" style="top:48%;right:3%">Sunderland</span>
+          <span class="bm-lbl bm-sov" style="bottom:10%;left:45%">Valedon</span>
+          <span class="bm-lbl" style="top:46%;left:6%;color:#2b556c;text-align:center;width:150px;font-size:22px;line-height:1.2;letter-spacing:2px">WESTERN<br>SEA</span>
+          <span class="bm-lbl bm-sov" style="top:22%;left:2%;font-size:14px;color:#467189;letter-spacing:2px;transform:rotate(-15deg)">Marisvia</span>
+          <span class="bm-lbl" style="top:11%;left:46%;font-size:22px;font-style:italic;letter-spacing:3px;opacity:.85">Torenthian Alps</span>
+          <span class="bm-lbl" style="top:42%;left:38%;font-size:16px;text-transform:uppercase;letter-spacing:3px;opacity:.9">The Federated Republic of Torenthia</span>
+          <span class="bm-lbl" style="top:16%;left:51%;font-size:11px;font-style:italic;color:#2d5b78">Toren River</span>
+          <span class="bm-lbl bm-reg" style="top:19%;left:34%">Verdmont Territory</span>
+          <span class="bm-lbl bm-reg" style="top:21%;right:21%;transform:rotate(15deg)">Korda Territory</span>
+          <span class="bm-lbl bm-reg" style="bottom:21%;left:42%">Morantine Territory</span>
+          <span class="bm-lbl" style="top:26%;left:34%">Harren</span>
+          <span class="bm-lbl" style="top:36%;left:33%">Arvane</span>
+          <span class="bm-lbl" style="top:26%;left:56%">Varek</span>
+          <span class="bm-lbl" style="top:54%;left:38%">Orath</span>
+          <span class="bm-lbl" style="top:54%;left:45%">Merath</span>
+          <span class="bm-lbl" style="top:60%;left:52%">Aldenmere</span>
+          <span class="bm-lbl" style="top:60%;left:27%">Caldenmere</span>
+          <span class="bm-lbl" style="top:71%;left:39%">Corindal</span>
+          <span class="bm-lbl" style="top:71%;left:54%">Selvane</span>
+          <span class="bm-lbl" style="top:40%;right:29%">Rhovane</span>
+          <span class="bm-lbl" style="top:61%;right:31%">Kelvant</span>
+          <span class="bm-lbl bm-sov" style="font-size:14px;bottom:17%;right:6%">Seronne</span>
+          <span class="bm-lbl" style="top:48%;right:19.5%;font-size:11px;font-style:italic;color:#1f3d4f;transform:rotate(-45deg)">Lake Varda</span>
+          <div class="bm-city" style="top:50%;left:29%"><div class="bm-dot"></div><span class="bm-lbl" style="position:static;font-size:11px">CALDEN</span></div>
+          <div class="bm-city" style="top:52%;left:51%"><div class="bm-dot" style="width:6px;height:6px"></div><span class="bm-lbl" style="position:static;font-size:10px">Dorven</span></div>
+          <div class="bm-city" style="top:54%;left:55%"><div class="bm-star"></div><span class="bm-lbl" style="position:static;font-size:12px;font-weight:bold">VERENTUM</span></div>
+          <div class="bm-city" style="top:50%;right:28.5%"><div class="bm-dot"></div><span class="bm-lbl" style="position:static;font-size:11px">RHONDEL</span></div>
+          <div class="bm-solara">
+            <div class="bm-inset-label">Solara Territory</div>
+            <div class="bm-island">
+              <div class="bm-dot" style="position:absolute;top:42%;left:42%;width:6px;height:6px"></div>
+              <span style="position:absolute;top:48%;left:18%;font-size:9px;font-weight:bold">OSTARA</span>
+            </div>
+          </div>
+          <div class="bm-legend">
+            <div class="bm-leg-title">Legend Key</div>
+            <div class="bm-leg-row"><div class="bm-star" style="transform:scale(.8)"></div><span>Capital City (Verentum)</span></div>
+            <div class="bm-leg-row"><div class="bm-dot" style="position:static"></div><span>Commercial City Center</span></div>
+            <div class="bm-leg-row"><div class="bm-line-river"></div><span>Major River</span></div>
+            <div class="bm-leg-row"><div class="bm-line-intl"></div><span>International Boundary</span></div>
+            <div class="bm-leg-row"><div class="bm-line-state"></div><span>State/Provincial Boundary</span></div>
+          </div>
+        </div>
+      </div>
 
       <div class="map-caption">
         <span>Federated Republic of Torenthia · Political Reference Map · Year 12</span>
