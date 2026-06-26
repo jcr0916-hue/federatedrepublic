@@ -14,46 +14,46 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 .ph-sub{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#b45309;margin-top:.2rem}
 .ph-note{font-family:"JetBrains Mono",monospace;font-size:.6rem;color:#4a5a6a;letter-spacing:.1em;text-align:right;line-height:1.8}
 .layout{display:grid;grid-template-columns:1fr 320px;gap:1rem;width:100%;max-width:1340px}
-
-/* MAP WRAPPER — scales the 1000x666 base map to fit */
-.map-wrap{position:relative;border:3px solid #6a5a38;border-radius:3px;overflow:hidden;cursor:crosshair;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+.map-wrap{position:relative;border:3px solid #6a5a38;border-radius:3px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.6)}
 .map-scale-wrap{width:100%;position:relative;overflow:hidden}
-.map-inner{position:relative;width:1000px;height:666px;transform-origin:top left;
-  background:#c9dfaf;background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.12) 0%,rgba(0,0,0,.08) 100%);
-  font-family:"Georgia",serif}
-
-/* BASE MAP ELEMENTS */
-.bm-sea{position:absolute;left:0;top:0;width:31%;height:100%;background:#70b3d6;border-right:2px solid #1e2417;z-index:1}
-.bm-lake{position:absolute;right:16%;top:24%;width:14%;height:52%;background:#70b3d6;transform:rotate(-8deg);border:2px dashed rgba(30,36,23,.4);border-radius:35% 45% 30% 40%;z-index:1}
-.bm-vectors{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2}
-.bm-header{position:absolute;top:30px;left:30px;background:#fdfbf7;border:2px solid #1e2417;padding:15px 25px;box-shadow:3px 3px 0 rgba(0,0,0,.15);z-index:10;display:flex;flex-direction:column}
-.bm-h2{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:#555;font-weight:normal}
-.bm-h1{font-size:30px;font-family:"Times New Roman",serif;text-transform:uppercase;letter-spacing:1px;margin:2px 0;color:#0f120a}
-.bm-lbl{position:absolute;color:#0f120a;font-weight:bold;font-size:13px;user-select:none;z-index:4}
-.bm-sov{font-size:24px;letter-spacing:5px;text-transform:uppercase;opacity:.8;font-family:"Times New Roman",serif}
-.bm-reg{font-size:13px;font-style:italic;font-weight:normal;opacity:.8}
-.bm-city{position:absolute;display:flex;align-items:center;gap:6px;z-index:5}
-.bm-dot{width:10px;height:10px;background:#fff;border:2px solid #1e2417;border-radius:50%}
-.bm-star{width:14px;height:14px;background:#fff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);border:1px solid #1e2417}
-.bm-solara{position:absolute;bottom:25px;left:25px;width:155px;height:155px;background:#70b3d6;border:2px solid #1e2417;box-shadow:2px 2px 0 rgba(0,0,0,.1);z-index:4}
-.bm-inset-label{position:absolute;top:8px;left:8px;font-size:11px;text-transform:uppercase;font-weight:bold;background:#fdfbf7;padding:2px 5px;border:1px solid #1e2417}
-.bm-island{position:absolute;top:25%;left:25%;width:50%;height:55%;background:#c9dfaf;border:1px solid #1e2417;border-radius:40% 55% 35% 50%}
-.bm-legend{position:absolute;bottom:25px;right:25px;background:#fdfbf7;border:2px solid #1e2417;padding:12px 15px;width:195px;font-size:11px;box-shadow:3px 3px 0 rgba(0,0,0,.15);z-index:4}
-.bm-leg-title{font-weight:bold;text-transform:uppercase;border-bottom:1px solid #1e2417;padding-bottom:4px;margin-bottom:6px;letter-spacing:1px}
-.bm-leg-row{display:flex;align-items:center;margin:5px 0;gap:10px}
-.bm-line-river{width:25px;height:4px;background:#70b3d6;border:1px solid #4a90b5;border-radius:2px}
-.bm-line-intl{width:25px;height:3px;border-bottom:3px solid #1e2417}
-.bm-line-state{width:25px;height:1px;border-bottom:1px dashed #1e2417}
-
-/* ACTIVITY DOTS */
+.map-inner{
+  position:relative;width:1000px;height:666px;transform-origin:top left;
+  background:url("torenthia-terrain.png") center/100% 100% no-repeat;
+  font-family:"Georgia",serif;cursor:crosshair
+}
+/* SVG OVERLAY */
+.map-vectors{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2}
+/* LABELS */
+.lbl{position:absolute;font-family:"Georgia",serif;font-weight:bold;font-size:13px;color:#0f120a;user-select:none;z-index:4;text-shadow:1px 1px 3px rgba(255,255,255,.7),-1px -1px 3px rgba(255,255,255,.7)}
+.lbl-sov{font-family:"Times New Roman",serif;font-size:22px;letter-spacing:4px;text-transform:uppercase;opacity:.85;color:#1a1a1a;text-shadow:1px 1px 4px rgba(255,255,255,.6),-1px -1px 4px rgba(255,255,255,.6)}
+.lbl-reg{font-size:12px;font-style:italic;font-weight:normal;opacity:.85;color:#2a2a2a}
+.lbl-water{font-family:"Times New Roman",serif;font-size:18px;letter-spacing:2px;color:#1a4a6a;text-shadow:none;font-style:italic;font-weight:normal}
+.lbl-geo{font-family:"Times New Roman",serif;font-size:16px;font-style:italic;letter-spacing:2px;opacity:.9;color:#2a2a2a}
+/* CITY NODES */
+.city-node{position:absolute;display:flex;align-items:center;gap:5px;z-index:5}
+.city-dot{width:9px;height:9px;background:#fff;border:2px solid #1e2417;border-radius:50%;flex-shrink:0}
+.city-star{width:13px;height:13px;background:#fff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);border:1px solid #1e2417;flex-shrink:0}
+/* PANELS */
+.map-title-panel{position:absolute;top:22px;left:22px;background:rgba(253,251,247,.92);border:2px solid #1e2417;padding:12px 20px;z-index:10;box-shadow:2px 2px 0 rgba(0,0,0,.15)}
+.map-title-panel .t1{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#555;font-weight:normal;display:block}
+.map-title-panel .t2{font-size:26px;font-family:"Times New Roman",serif;text-transform:uppercase;letter-spacing:1px;color:#0f120a;display:block}
+.solara-inset{position:absolute;bottom:22px;left:22px;width:130px;height:130px;background:#8ab5cc;border:2px solid #1e2417;z-index:6}
+.solara-island{position:absolute;top:25%;left:22%;width:54%;height:54%;background:#a8bf9a;border:1px solid #1e2417;border-radius:40% 55% 35% 50%}
+.solara-label{position:absolute;top:6px;left:6px;font-size:10px;text-transform:uppercase;font-weight:bold;background:rgba(253,251,247,.9);padding:2px 4px;border:1px solid #1e2417;font-family:"Georgia",serif}
+.map-legend{position:absolute;bottom:22px;right:22px;background:rgba(253,251,247,.92);border:2px solid #1e2417;padding:10px 13px;width:175px;font-size:10px;z-index:6;box-shadow:2px 2px 0 rgba(0,0,0,.15);font-family:"Georgia",serif}
+.leg-title{font-weight:bold;text-transform:uppercase;border-bottom:1px solid #1e2417;padding-bottom:3px;margin-bottom:5px;letter-spacing:1px;font-size:10px}
+.leg-row{display:flex;align-items:center;margin:4px 0;gap:8px}
+.lr-river{width:22px;height:3px;background:#6a9ab5;border:1px solid #4a80a5;border-radius:2px}
+.lr-intl{width:22px;height:2.5px;background:#1e2417}
+.lr-state{width:22px;height:1px;border-bottom:1px dashed #444}
+/* DOTS */
 .dot{position:absolute;cursor:pointer;width:0;height:0;z-index:10}
-.dot-core{position:absolute;width:13px;height:13px;border-radius:50%;border:2px solid white;transform:translate(-50%,-50%);transition:transform .2s;box-shadow:0 0 6px rgba(0,0,0,.4)}
+.dot-core{position:absolute;width:13px;height:13px;border-radius:50%;border:2px solid white;transform:translate(-50%,-50%);transition:transform .2s;box-shadow:0 0 6px rgba(0,0,0,.5)}
 .dot:hover .dot-core{transform:translate(-50%,-50%) scale(1.4)}
 .dot.active .dot-core{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 12px rgba(255,255,255,.5)}
 .dot-ring{position:absolute;border-radius:50%;border:2px solid;transform:translate(-50%,-50%);animation:expandRing 2.2s infinite ease-out;pointer-events:none}
 .dot-ring2{animation-delay:.9s}
 @keyframes expandRing{0%{width:13px;height:13px;opacity:.8}100%{width:42px;height:42px;opacity:0}}
-
 /* SIDEBAR */
 .sidebar{display:flex;flex-direction:column;gap:.75rem}
 .info-panel{background:#0e1420;border:1px solid #2a3a50;border-radius:5px;overflow:hidden;flex:1}
@@ -63,16 +63,14 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 .info-body{padding:.9rem 1rem;font-size:.78rem;color:#8898a8;line-height:1.7}
 .info-body p{margin-bottom:.6rem;color:#90a0b0}
 .info-body strong{color:#c8d8e8;font-weight:500}
-.alerts-panel{background:#140810;border:1px solid #3a1828;border-radius:5px;padding:.75rem 1rem}
+.alerts-panel{background:#0c1018;border:1px solid #2a3a50;border-radius:5px;padding:.75rem 1rem}
 .alerts-title{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:.6rem}
-.alert-row{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.5rem;font-size:.72rem;color:#c09898;line-height:1.55}
+.alert-row{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.5rem;font-size:.72rem;color:#a09080;line-height:1.55}
 .alert-row strong{color:#e8c8c8;font-weight:500}
-
 @media(max-width:900px){.layout{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 <nav>
   <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
@@ -111,130 +109,101 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 </div>
 
 <div class="layout">
-
 <div class="map-wrap">
   <div class="map-scale-wrap" id="mapScaleWrap">
     <div class="map-inner" id="mapInner">
 
-      <!-- BASE MAP -->
-      <div class="bm-sea"></div>
-      <div class="bm-lake"></div>
-      <svg class="bm-vectors">
-        <path d="M 310,145 C 420,148 530,142 660,150 C 730,154 780,146 840,165" fill="none" stroke="#70b3d6" stroke-width="7" stroke-linecap="round"/>
-        <path d="M 310,145 C 420,148 530,142 660,150 C 730,154 780,146 840,165" fill="none" stroke="#4a90b5" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M 310,142 C 420,145 530,139 660,147 C 730,151 780,143 840,162" fill="none" stroke="#1e2417" stroke-width="2.5"/>
-        <path d="M 840,162 C 845,200 835,240 838,300 C 840,400 815,480 810,530" fill="none" stroke="#1e2417" stroke-width="2.5"/>
-        <path d="M 810,530 C 790,560 770,580 750,600" fill="none" stroke="#1e2417" stroke-width="2.5"/>
-        <path d="M 310,560 C 450,565 580,570 750,600" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+      <!-- SVG: River + Borders -->
+      <svg class="map-vectors">
+        <!-- Toren River: east-west along northern border below Alps -->
+        <path d="M 260,138 C 370,141 490,136 630,143 C 700,147 750,140 840,155 C 880,160 930,158 1000,162"
+              fill="none" stroke="#6a9ab5" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+        <path d="M 260,138 C 370,141 490,136 630,143 C 700,147 750,140 840,155 C 880,160 930,158 1000,162"
+              fill="none" stroke="#4a80a5" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
+        <!-- Northern border: Caldris -->
+        <path d="M 260,130 L 1000,130" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <!-- Eastern border: Sunderland -->
+        <path d="M 1000,130 L 1000,500" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <!-- SE border: Seronne -->
+        <path d="M 1000,500 C 940,540 890,560 830,575" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <!-- Southern border: Valedon -->
+        <path d="M 260,555 C 430,558 600,562 830,575" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <!-- Western coastline: subtle line where sea meets land -->
+        <path d="M 260,130 L 260,555" fill="none" stroke="#1e2417" stroke-width="1.5" stroke-dasharray="4,3"/>
       </svg>
-      <div class="bm-header"><span class="bm-h2">Federated Republic of</span><span class="bm-h1">Torenthia</span></div>
-      <span class="bm-lbl bm-sov" style="top:4%;left:52%;font-size:24px">Caldris</span>
-      <span class="bm-lbl bm-sov" style="top:48%;right:3%">Sunderland</span>
-      <span class="bm-lbl bm-sov" style="bottom:10%;left:45%">Valedon</span>
-      <span class="bm-lbl" style="top:46%;left:6%;color:#2b556c;text-align:center;width:150px;font-size:22px;line-height:1.2;letter-spacing:2px">WESTERN<br>SEA</span>
-      <span class="bm-lbl bm-sov" style="top:22%;left:2%;font-size:14px;color:#467189;letter-spacing:2px;transform:rotate(-15deg)">Marisvia</span>
-      <span class="bm-lbl" style="top:11%;left:46%;font-size:22px;font-style:italic;letter-spacing:3px;opacity:.85">Torenthian Alps</span>
-      <span class="bm-lbl" style="top:42%;left:38%;font-size:16px;text-transform:uppercase;letter-spacing:3px;opacity:.9">The Federated Republic of Torenthia</span>
-      <span class="bm-lbl" style="top:16%;left:51%;font-size:11px;font-style:italic;color:#2d5b78">Toren River</span>
-      <span class="bm-lbl bm-reg" style="top:19%;left:34%">Verdmont Territory</span>
-      <span class="bm-lbl bm-reg" style="top:21%;right:21%;transform:rotate(15deg)">Korda Territory</span>
-      <span class="bm-lbl bm-reg" style="bottom:21%;left:42%">Morantine Territory</span>
-      <span class="bm-lbl" style="top:26%;left:34%">Harren</span>
-      <span class="bm-lbl" style="top:36%;left:33%">Arvane</span>
-      <span class="bm-lbl" style="top:26%;left:56%">Varek</span>
-      <span class="bm-lbl" style="top:54%;left:38%">Orath</span>
-      <span class="bm-lbl" style="top:54%;left:45%">Merath</span>
-      <span class="bm-lbl" style="top:60%;left:52%">Aldenmere</span>
-      <span class="bm-lbl" style="top:60%;left:27%">Caldenmere</span>
-      <span class="bm-lbl" style="top:71%;left:39%">Corindal</span>
-      <span class="bm-lbl" style="top:71%;left:54%">Selvane</span>
-      <span class="bm-lbl" style="top:40%;right:29%">Rhovane</span>
-      <span class="bm-lbl" style="top:61%;right:31%">Kelvant</span>
-      <span class="bm-lbl bm-sov" style="font-size:14px;bottom:17%;right:6%">Seronne</span>
-      <span class="bm-lbl" style="top:48%;right:19.5%;font-size:11px;font-style:italic;color:#1f3d4f;transform:rotate(-45deg)">Lake Varda</span>
-      <div class="bm-city" style="top:50%;left:29%"><div class="bm-dot"></div><span class="bm-lbl" style="position:static;font-size:11px">CALDEN</span></div>
-      <div class="bm-city" style="top:52%;left:51%"><div class="bm-dot" style="width:6px;height:6px"></div><span class="bm-lbl" style="position:static;font-size:10px">Dorven</span></div>
-      <div class="bm-city" style="top:54%;left:55%"><div class="bm-star"></div><span class="bm-lbl" style="position:static;font-size:12px;font-weight:bold">VERENTUM</span></div>
-      <div class="bm-city" style="top:50%;right:28.5%"><div class="bm-dot"></div><span class="bm-lbl" style="position:static;font-size:11px">RHONDEL</span></div>
-      <div class="bm-solara">
-        <div class="bm-inset-label">Solara Territory</div>
-        <div class="bm-island">
-          <div class="bm-dot" style="position:absolute;top:42%;left:42%;width:6px;height:6px"></div>
-          <span style="position:absolute;top:48%;left:18%;font-size:9px;font-weight:bold">OSTARA</span>
+
+      <!-- Title panel -->
+      <div class="map-title-panel">
+        <span class="t1">Federated Republic of</span>
+        <span class="t2">Torenthia</span>
+      </div>
+
+      <!-- Sovereign labels -->
+      <span class="lbl lbl-sov" style="top:2%;left:42%;font-size:20px">CALDRIS</span>
+      <span class="lbl lbl-sov" style="top:46%;right:0%;font-size:16px">SUNDERLAND</span>
+      <span class="lbl lbl-sov" style="bottom:3%;left:42%;font-size:18px">VALEDON</span>
+      <span class="lbl lbl-water" style="top:44%;left:4%;text-align:center;width:140px">WESTERN<br>SEA</span>
+      <span class="lbl" style="top:20%;left:1%;font-size:12px;color:#467189;letter-spacing:1px;transform:rotate(-15deg)">Marisvia</span>
+      <span class="lbl lbl-sov" style="bottom:14%;right:2%;font-size:13px;letter-spacing:3px">SERONNE</span>
+
+      <!-- Geographic labels -->
+      <span class="lbl lbl-geo" style="top:8%;left:36%">Torenthian Alps</span>
+      <span class="lbl" style="top:17%;left:41%;font-size:11px;font-style:italic;color:#2d5b78;text-shadow:none">Toren River</span>
+
+      <!-- Republic center brand -->
+      <span class="lbl" style="top:42%;left:30%;font-size:14px;text-transform:uppercase;letter-spacing:2px;opacity:.7">The Federated Republic of Torenthia</span>
+
+      <!-- Territory labels -->
+      <span class="lbl lbl-reg" style="top:19%;left:30%">Verdmont Territory</span>
+      <span class="lbl lbl-reg" style="top:21%;left:66%;transform:rotate(12deg)">Korda Territory</span>
+      <span class="lbl lbl-reg" style="bottom:22%;left:40%">Morantine Territory</span>
+
+      <!-- State labels -->
+      <span class="lbl" style="top:25%;left:31%">Harren</span>
+      <span class="lbl" style="top:35%;left:28%">Arvane</span>
+      <span class="lbl" style="top:25%;left:52%">Varek</span>
+      <span class="lbl" style="top:52%;left:35%">Orath</span>
+      <span class="lbl" style="top:52%;left:44%">Merath</span>
+      <span class="lbl" style="top:60%;left:50%">Aldenmere</span>
+      <span class="lbl" style="top:59%;left:27%">Caldenmere</span>
+      <span class="lbl" style="top:71%;left:36%">Corindal</span>
+      <span class="lbl" style="top:71%;left:51%">Selvane</span>
+      <span class="lbl" style="top:36%;left:75%">Rhovane</span>
+      <span class="lbl" style="top:64%;left:74%">Kelvant</span>
+
+      <!-- Lake label -->
+      <span class="lbl lbl-water" style="top:42%;left:59%;font-size:11px;transform:rotate(-80deg);letter-spacing:1px">Lake Varda</span>
+
+      <!-- City nodes -->
+      <div class="city-node" style="top:48%;left:27%"><div class="city-dot"></div><span class="lbl" style="position:static;font-size:11px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">CALDEN</span></div>
+      <div class="city-node" style="top:50%;left:48%"><div class="city-dot" style="width:6px;height:6px"></div><span class="lbl" style="position:static;font-size:10px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">Dorven</span></div>
+      <div class="city-node" style="top:54%;left:53%"><div class="city-star"></div><span class="lbl" style="position:static;font-size:12px;font-weight:bold;text-shadow:1px 1px 2px rgba(255,255,255,.8)">VERENTUM</span></div>
+      <div class="city-node" style="top:43%;left:61%"><div class="city-dot"></div><span class="lbl" style="position:static;font-size:11px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">RHONDEL</span></div>
+
+      <!-- Solara inset -->
+      <div class="solara-inset">
+        <div class="solara-label">Solara Territory</div>
+        <div class="solara-island">
+          <div class="city-dot" style="position:absolute;top:42%;left:40%;width:6px;height:6px"></div>
+          <span style="position:absolute;top:48%;left:12%;font-size:8px;font-weight:bold;font-family:Georgia,serif">OSTARA</span>
         </div>
       </div>
-      <div class="bm-legend">
-        <div class="bm-leg-title">Legend Key</div>
-        <div class="bm-leg-row"><div class="bm-star" style="transform:scale(.8)"></div><span>Capital City (Verentum)</span></div>
-        <div class="bm-leg-row"><div class="bm-dot" style="position:static"></div><span>Commercial City Center</span></div>
-        <div class="bm-leg-row"><div class="bm-line-river"></div><span>Major River</span></div>
-        <div class="bm-leg-row"><div class="bm-line-intl"></div><span>International Boundary</span></div>
-        <div class="bm-leg-row"><div class="bm-line-state"></div><span>State/Provincial Boundary</span></div>
+
+      <!-- Legend -->
+      <div class="map-legend">
+        <div class="leg-title">Legend Key</div>
+        <div class="leg-row"><div class="city-star" style="transform:scale(.85)"></div><span>Capital City (Verentum)</span></div>
+        <div class="leg-row"><div class="city-dot" style="position:static"></div><span>Commercial City Center</span></div>
+        <div class="leg-row"><div class="lr-river"></div><span>Major River</span></div>
+        <div class="leg-row"><div class="lr-intl"></div><span>International Boundary</span></div>
+        <div class="leg-row"><div class="lr-state"></div><span>State/Provincial Boundary</span></div>
       </div>
 
-<!-- ══ ACTIVITY DOTS — color-coded by type ══ -->
 
-  <!-- MAGENTA = Active Crisis -->
-  <!-- Korda NE — refugee crisis, conflict spillover -->
-  <div class="dot" data-key="korda-north" style="top:19%;left:72%">
-    <div class="dot-core" style="background:#e8185a"></div>
-    <div class="dot-ring" style="border-color:#e8185a"></div>
-    <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
-  </div>
 
-  <!-- Rhondel — coast guard emergency, Asylum Court overflow -->
-  <div class="dot" data-key="rhondel" style="top:50%;left:71%">
-    <div class="dot-core" style="background:#e8185a"></div>
-    <div class="dot-ring" style="border-color:#e8185a"></div>
-    <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
-  </div>
-
-  <!-- PURPLE = Political / Electoral -->
-  <!-- Verentum — Year 13 LC race, election season -->
-  <div class="dot" data-key="verentum" style="top:54%;left:55%">
-    <div class="dot-core" style="background:#7c3aed"></div>
-    <div class="dot-ring" style="border-color:#7c3aed"></div>
-    <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
-  </div>
-
-  <!-- SKY = Constitutional / Legal -->
-  <!-- Southern Korda — §15.4 merger petition -->
-  <div class="dot" data-key="korda-south" style="top:68%;left:63%">
-    <div class="dot-core" style="background:#0ea5e9"></div>
-    <div class="dot-ring" style="border-color:#0ea5e9"></div>
-    <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
-  </div>
-
-  <!-- Corindal — provisional status, audit failure -->
-  <div class="dot" data-key="corindal" style="top:71%;left:39%">
-    <div class="dot-core" style="background:#0ea5e9"></div>
-    <div class="dot-ring" style="border-color:#0ea5e9"></div>
-    <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
-  </div>
-
-  <!-- AMBER = Diplomatic / Foreign Affairs -->
-  <!-- Lake Varda midline — Sunderland naval contest -->
-  <div class="dot" data-key="lake-varda" style="top:38%;left:73%">
-    <div class="dot-core" style="background:#f59e0b"></div>
-    <div class="dot-ring" style="border-color:#f59e0b"></div>
-    <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
-  </div>
-
-  <!-- Valedon border — §15.6 petition -->
-  <div class="dot" data-key="valedon" style="top:86%;left:46%">
-    <div class="dot-core" style="background:#f59e0b"></div>
-    <div class="dot-ring" style="border-color:#f59e0b"></div>
-    <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
-  </div>
-
-  <!-- Northern River — Caldris dam treaty -->
-  <div class="dot" data-key="toren-river" style="top:21%;left:48%">
-    <div class="dot-core" style="background:#f59e0b"></div>
-    <div class="dot-ring" style="border-color:#f59e0b"></div>
-    <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
-  </div>
-  </div>
-</div>
+    </div><!-- /map-inner -->
+  </div><!-- /map-scale-wrap -->
+</div><!-- /map-wrap -->
 
 <div class="sidebar">
   <div class="alerts-panel">
@@ -383,23 +352,20 @@ document.querySelectorAll(".dot").forEach(el=>{
 </div><!-- /layout -->
 
 <script>
-// Scale map to fit container
 (function(){
   function scaleMap(){
-    var wrap = document.getElementById('mapScaleWrap');
-    var inner = document.getElementById('mapInner');
+    var wrap=document.getElementById('mapScaleWrap');
+    var inner=document.getElementById('mapInner');
     if(!wrap||!inner) return;
-    var scale = wrap.offsetWidth / 1000;
-    inner.style.transform = 'scale('+scale+')';
-    wrap.style.height = Math.ceil(666*scale)+'px';
+    var scale=wrap.offsetWidth/1000;
+    inner.style.transform='scale('+scale+')';
+    wrap.style.height=Math.ceil(666*scale)+'px';
   }
   scaleMap();
-  window.addEventListener('resize', scaleMap);
+  window.addEventListener('resize',scaleMap);
 })();
-
 function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
 document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
-
 const DATA = {
   "korda-north":{title:"Korda Territory — Northern Zone",type:"crisis",
     typeLabel:"Active Crisis",
@@ -497,7 +463,6 @@ document.querySelectorAll(".dot").forEach(el=>{
   el.addEventListener("click",()=>selectDot(el.dataset.key));
 });
 </script>
-
 <footer>
   <span class="footer-logo">The Federated Republic</span>
   <div class="footer-links">
