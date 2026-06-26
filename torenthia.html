@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The World — The Federated Republic</title>
+  <meta name="description" content="The Federated Republic of Torenthia — a constitutional republic running on the FR constitution in a world with real neighbors, real pressures, and a record being written in real time.">
+  <meta property="og:title" content="The Federated Republic of Torenthia">
+  <meta property="og:description" content="A constitutional republic in the world. Year 12. The constitution operates here — not as theory, but as the framework a real nation uses to navigate a collapsing eastern neighbor, a disputed river treaty, a southern nation that almost joined, and an audit failure in its own southwest.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    /* ── HERO ── */
+    .world-hero{position:relative;background:var(--navy2);overflow:hidden;padding:5rem 2rem 4rem}
+    .world-hero-map{position:absolute;inset:0;background:url('torenthia-map.png') center/cover no-repeat;opacity:.12;filter:saturate(.4)}
+    .world-hero-inner{position:relative;max-width:860px;margin:0 auto;text-align:center}
+    .world-hero-eye{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+    .world-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;color:#f0ead8;line-height:1.1;margin-bottom:1.25rem}
+    .world-hero-sub{font-size:1.05rem;color:rgba(240,234,216,.65);line-height:1.8;max-width:640px;margin:0 auto 2rem}
+    .world-hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-primary{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;background:var(--gold);color:var(--navy2);padding:.65rem 1.4rem;text-decoration:none;transition:opacity .2s}
+    .btn-primary:hover{opacity:.85}
+    .btn-secondary{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:.65rem 1.4rem;text-decoration:none;opacity:.75;transition:opacity .2s}
+    .btn-secondary:hover{opacity:1}
+
+    /* ── MAIN CONTENT ── */
+    .world-main{max-width:1020px;margin:0 auto;padding:0 2rem 5rem}
+
+    /* ── INTRO ── */
+    .intro-block{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--border);max-width:680px}
+    .intro-block p{font-size:1.05rem;line-height:1.95;color:var(--text);margin-bottom:1.4rem}
+    .intro-block p:last-child{margin-bottom:0}
+
+    /* ── SECTION HEADERS ── */
+    .section-header{padding:3rem 0 1.75rem;border-bottom:2px solid var(--navy)}
+    .section-eye{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--navy)}
+
+    /* ── MAP BLOCK ── */
+    .map-block{margin:2.5rem 0;border:1px solid var(--border);border-radius:3px;overflow:hidden;position:relative}
+    .map-block img{width:100%;display:block}
+    .map-caption{padding:.75rem 1rem;background:var(--cream);border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    .map-caption a{color:var(--gold);text-decoration:none}
+    .map-caption a:hover{text-decoration:underline}
+
+    /* ── NATION CARDS ── */
+    .nations-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
+    .nation-card{border:1px solid var(--border);padding:1.5rem;background:white;position:relative}
+    .nation-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px}
+    .nc-caldris::before{background:#6a8aa8}
+    .nc-marisvia::before{background:#5a8880}
+    .nc-valedon::before{background:#6a8850}
+    .nc-sunderland::before{background:#a07858}
+    .nc-seronne::before{background:#8878a0}
+    .nc-solara::before{background:#b8a870}
+    .nation-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);margin-bottom:.3rem}
+    .nation-tag{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
+    .nation-body{font-size:.88rem;line-height:1.8;color:var(--text)}
+    .nation-tension{margin-top:.85rem;padding:.65rem .85rem;background:var(--cream);border-left:2px solid var(--gold);font-size:.8rem;color:var(--muted);line-height:1.65}
+    .nation-tension strong{color:var(--text);font-weight:500}
+
+    /* ── REPUBLIC INTERIOR ── */
+    .interior-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:2rem 0}
+    .int-card{padding:1.25rem;border:1px solid var(--border);background:white}
+    .int-card-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+    .int-card-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin-bottom:.5rem}
+    .int-card-body{font-size:.82rem;color:var(--text);line-height:1.75}
+
+    /* ── ACTIVE SITUATIONS ── */
+    .situations-list{margin:2rem 0}
+    .situation{border-left:3px solid var(--border);padding:1.5rem 1.5rem 1.5rem 1.75rem;margin-bottom:1.25rem;background:white;border-bottom:1px solid var(--border);position:relative}
+    .situation.crisis{border-left-color:#ef4444}
+    .situation.pressure{border-left-color:#f59e0b}
+    .situation.watch{border-left-color:#60a5fa}
+    .sit-status{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem}
+    .status-crisis{color:#dc2626}
+    .status-pressure{color:#d97706}
+    .status-watch{color:#2563eb}
+    .sit-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:.6rem}
+    .sit-body{font-size:.88rem;line-height:1.8;color:var(--text)}
+    .sit-provisions{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.85rem}
+    .sit-prov{font-family:'JetBrains Mono',monospace;font-size:.6rem;background:var(--navy);color:var(--gold);padding:.15rem .5rem}
+
+    /* ── THE RECORD ── */
+    .record-intro{max-width:640px;margin:0;font-size:1rem;line-height:1.9;color:var(--text);padding:2rem 0 1.5rem}
+    .formats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.25rem 0 2.5rem}
+    .format-item{padding:1.25rem;border:1px solid var(--border);background:white}
+    .format-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+    .format-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:.4rem}
+    .format-body{font-size:.8rem;color:var(--muted);line-height:1.7}
+
+    /* ── STATES TABLE ── */
+    .states-columns{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem 0}
+    .states-col-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+    .state-item{display:flex;justify-content:space-between;align-items:baseline;padding:.4rem 0;border-bottom:1px solid #f0ead8;font-size:.85rem}
+    .state-name{color:var(--text);font-weight:500}
+    .state-char{color:var(--muted);font-size:.78rem;font-style:italic}
+    .state-flag{font-family:'JetBrains Mono',monospace;font-size:.6rem;padding:.1rem .35rem}
+    .flag-ok{background:#0e2a18;color:#4ade80}
+    .flag-prov{background:#2a180a;color:#fbbf24}
+    .flag-crisis{background:#2a080e;color:#fca5a5}
+
+    @media(max-width:820px){
+      .nations-grid,.interior-grid,.formats-grid,.states-columns{grid-template-columns:1fr}
+      .world-main{padding:0 1rem 4rem}
+      .world-hero{padding:3.5rem 1rem 3rem}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html" class="active">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <div class="world-hero">
+    <div class="world-hero-map" aria-hidden="true"></div>
+    <div class="world-hero-inner">
+      <div class="world-hero-eye">The Living World · Year 12</div>
+      <h1 class="world-hero-title">The Federated Republic<br>of Torenthia</h1>
+      <p class="world-hero-sub">A constitutional republic running on this constitution. Not a thought experiment — a nation with neighbors, borders under pressure, and a record being written in real time.</p>
+      <div class="world-hero-actions">
+        <a href="#the-record" class="btn-primary">The Record</a>
+        <a href="#active-situations" class="btn-secondary">Active Situations</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <div class="world-main">
+
+    <!-- ── INTRO ── -->
+    <div class="intro-block">
+      <p>The scenarios elsewhere on this site test constitutional provisions against abstract situations. This is different. Torenthia is the Republic placed in the world — a specific nation, in a specific moment, facing specific pressures from real neighbors with real interests.</p>
+      <p>The constitution doesn't operate in a vacuum here. The Legat Consul has to decide whether to respond formally to Sunderland's naval movements on Lake Varda. The Civic Consul has to get the Legislature to appropriate emergency funding for Korda Territory's refugee infrastructure before the next audit cycle. The Monitors publish their findings whether or not anyone wants them to. The National Record System captures everything — permanently, publicly, unalterably.</p>
+      <p>Content grows over time. News articles. NRS entries. SC opinions. Diplomatic cables. Legislative records. Each piece is a constitutional moment made real — the framework operating as designed, or revealing where it wasn't designed for this.</p>
+    </div>
+
+    <!-- ── MAP ── -->
+    <div class="section-header">
+      <div class="section-eye">Geography</div>
+      <h2 class="section-title">The World at Year 12</h2>
+    </div>
+
+    <div class="map-block">
+      <img src="torenthia-map.png" alt="Political map of the Federated Republic of Torenthia and neighboring nations at Year 12, showing the twelve States, four Territories, the Torenthian Alps, Toren River, and Lake Varda" loading="lazy"/>
+      <div class="map-caption">
+        <span>Federated Republic of Torenthia · Topographic Political Map · Year 12</span>
+        <a href="torenthia-atlas.html">Interactive Atlas →</a>
+      </div>
+    </div>
+
+    <p style="font-size:.88rem;line-height:1.85;color:var(--text);margin-bottom:2.5rem;max-width:680px">The Republic occupies the center of a continent it did not choose. The Torenthian Alps run along the northern border with Caldris, and the Toren River drains eastward along their base — the Republic is downstream. To the east, Lake Varda is shared with Sunderland, its midpoint boundary disputed and increasingly tense. The Western Sea faces Marisvia across open water. Valedon presses against the southern border with eighteen years of unresolved political history.</p>
+
+    <!-- ── NEIGHBORING NATIONS ── -->
+    <div class="section-header">
+      <div class="section-eye">Neighboring Sovereignties</div>
+      <h2 class="section-title">The Nations Around It</h2>
+    </div>
+
+    <div class="nations-grid">
+
+      <div class="nation-card nc-caldris">
+        <div class="nation-name">Caldris</div>
+        <div class="nation-tag">North &amp; Northeast · ~85 million · Upstream Power</div>
+        <div class="nation-body">The Republic's largest neighbor and historically dominant regional power. Caldris controls the Toren River headwaters — the waterway that feeds Torenthian agriculture and industry downstream. The size differential shapes every interaction. Caldris remembers when the Republic's territory was within its sphere of influence. Its diplomatic establishment finds the Republic's constitutional sophistication alternately admirable and irritating.</div>
+        <div class="nation-tension"><strong>Current tension:</strong> Caldris has proposed upstream dam infrastructure on the Toren River. The LC objected formally within 48 hours. The Senate passed a resolution directing minimum guaranteed flow thresholds. Treaty renewal negotiations are active. Caldris also holds economic investment in Sunderland that gives it interests in the eastern war the Republic cannot ignore.</div>
+      </div>
+
+      <div class="nation-card nc-marisvia">
+        <div class="nation-name">Marisvia</div>
+        <div class="nation-tag">West · Maritime Democracy · Across the Western Sea</div>
+        <div class="nation-body">The Republic's closest peer in constitutional values, arrived at through centuries of gradual parliamentary evolution rather than deliberate design from first principles. Marisvia's diplomats are sometimes quietly condescending about Torenthia's newness. Torenthian officials are sometimes quietly impatient with Marisian institutional inertia. They need each other too much to let it become a real problem.</div>
+        <div class="nation-tension"><strong>Current tension:</strong> Marisvia had historical claims on Solara Territory and has never fully accepted the island's choice to join Torenthia. The maritime boundary is disputed. When Sunderland's collapse produces refugee flows westward by boat, Marisvia and Torenthia must coordinate a response — and they do not always agree on burden-sharing.</div>
+      </div>
+
+      <div class="nation-card nc-valedon">
+        <div class="nation-name">Valedon</div>
+        <div class="nation-tag">South · ~25–30 million · The Nation That Almost Joined</div>
+        <div class="nation-body">Eighteen years ago, Valedon's citizens voted in a referendum to enter the Republic. The parliament rejected the result — citing procedural grounds, a threshold technicality, or raw political will depending on who tells the story. The pro-Republic faction does not merely want to join now. They believe they already voted to join and were denied. The government that rejected the referendum is mostly still in power.</div>
+        <div class="nation-tension"><strong>Current tension:</strong> The question of whether a citizen referendum can constitute a constructive §15.6 petition from the governing body has never been put to the SC. The pro-Republic faction has grown since the eighteenth anniversary. Caldris was involved in the original rejection through back-channels — this has never been proven, and never been closed by the LC's intelligence services.</div>
+      </div>
+
+      <div class="nation-card nc-sunderland">
+        <div class="nation-name">Sunderland</div>
+        <div class="nation-tag">East · Authoritarian · Fracturing · At War</div>
+        <div class="nation-body">A nation in the process of coming apart. The authoritarian government is losing control of a significant internal region. The military has factional splits. Civil conflict has been producing refugees for two years, most crossing Lake Varda toward Korda Territory and the city of Rhondel. Sunderland naval vessels have been using the lake as a supply route.</div>
+        <div class="nation-tension"><strong>Current tension:</strong> The LC has issued two formal diplomatic notes about Sunderland vessel movements in contested lake waters. The coast guard command in Rhondel operates under standing emergency protocols. Caldris holds economic investment in Sunderland and is not neutral. The relevant LC intelligence assessment is classified under §10.3. The EM has noted that the classification is approaching its constitutional ceiling.</div>
+      </div>
+
+      <div class="nation-card nc-seronne">
+        <div class="nation-name">Seronne</div>
+        <div class="nation-tag">Southeast · ~5–8 million · Buffer State</div>
+        <div class="nation-body">Small, elegant under pressure, diplomatically sophisticated. Seronne has survived between larger powers for two centuries by being useful to everyone and threatening to no one. Its foreign policy is studied ambiguity — it hosts peace talks and issues careful statements. It has never joined a military alliance. Its northeastern corner touches Lake Varda, giving it a voice in any lake jurisdiction negotiation.</div>
+        <div class="nation-tension"><strong>Current tension:</strong> When Sunderland's war intensified, Seronne's government made quiet inquiries about what §15.6 incorporation into the Republic might look like — not because they want to join, but because having the conversation signals to Sunderland that they have options. The Republic's quiet partnership with Seronne is one of the things that most irritates Caldris.</div>
+      </div>
+
+      <div class="nation-card nc-solara">
+        <div class="nation-name">Solara Territory</div>
+        <div class="nation-tag">Western Sea Island · Torenthian Territory · Distinct Culture</div>
+        <div class="nation-body">An island in the Western Sea between Torenthia and Marisvia. Distinct language (Solaran). Formerly had a state religion — solar-liturgical, disestablished either before or as a condition of joining. The oldest continuously inhabited settlement in Torenthian territory, Ostara, is Solara's ancient capital, built around a sun-court eight hundred years old. Solara chose to join the Republic as a Territory.</div>
+        <div class="nation-tension"><strong>Current tension:</strong> The Statehood question is actively contested within Solara itself. The anti-Statehood faction fears assimilation. Solara has filed a SC petition arguing that the constitution should not exclude Territories from hosting the seat of government — framing it as an equal membership question. Marisvia has never accepted the island's choice of Torenthia over Marisvia.</div>
+      </div>
+
+    </div>
+
+    <!-- ── THE REPUBLIC INTERNALLY ── -->
+    <div class="section-header">
+      <div class="section-eye">The Republic at Year 12</div>
+      <h2 class="section-title">Twelve States · Four Territories</h2>
+    </div>
+
+    <p style="font-size:.9rem;line-height:1.85;color:var(--text);margin:1.5rem 0 2rem;max-width:660px">The Republic is twelve years old. Its institutions are established but not ancient. The annual Statehood Audit has been running long enough to fail twice in Corindal. The first 20-year seat of government review is active. The first generation of constitutional officers has turned over.</p>
+
+    <div class="states-columns">
+      <div>
+        <div class="states-col-label">States</div>
+        <div class="state-item"><span class="state-name">Harren</span><span class="state-char">Northern border · Founding State</span><span class="state-flag flag-ok">Passing</span></div>
+        <div class="state-item"><span class="state-name">Varek</span><span class="state-char">Northern border · River country</span><span class="state-flag flag-ok">Passing</span></div>
+        <div class="state-item"><span class="state-name">Arvane</span><span class="state-char">Western coast · Maritime</span><span class="state-flag flag-ok">Passing</span></div>
+        <div class="state-item"><span class="state-name">Caldenmere</span><span class="state-char">Western coast · Calden port</span><span class="state-flag flag-ok">Passing</span></div>
+        <div class="state-item"><span class="state-name">Orath</span><span class="state-char">Interior · Agricultural heartland</span><span class="state-flag flag-ok">Passing</span></div>
+        <div class="state-item"><span class="state-name">Merath</span><span class="state-char">Interior · Industrial</span><span class="state-flag flag-ok">Passing</span></div>
+        <div class="state-item"><span class="state-name">Aldenmere</span><span class="state-char">Capital region · Seat of government</span><span class="state-flag flag-prov">Review</span></div>
+        <div class="state-item"><span class="state-name">Rhovane</span><span class="state-char">Eastern lake · Under pressure</span><span class="state-flag flag-prov">Watch</span></div>
+        <div class="state-item"><span class="state-name">Kelvant</span><span class="state-char">Eastern lake · Rhondel city</span><span class="state-flag flag-prov">Strained</span></div>
+        <div class="state-item"><span class="state-name">Corindal</span><span class="state-char">Southern border · Valedon adjacent</span><span class="state-flag flag-crisis">Provisional</span></div>
+        <div class="state-item"><span class="state-name">Selvane</span><span class="state-char">Southern border · Mixed heritage</span><span class="state-flag flag-ok">Passing</span></div>
+      </div>
+      <div>
+        <div class="states-col-label">Territories</div>
+        <div class="state-item"><span class="state-name">Verdmont</span><span class="state-char">Northern Alps · Resource extraction</span><span class="state-flag flag-prov">Provisional</span></div>
+        <div class="state-item"><span class="state-name">Korda</span><span class="state-char">Eastern lake border · Refugee crisis</span><span class="state-flag flag-crisis">Crisis</span></div>
+        <div class="state-item"><span class="state-name">Morantine</span><span class="state-char">Southern border · Valedon country</span><span class="state-flag flag-prov">Provisional</span></div>
+        <div class="state-item"><span class="state-name">Solara</span><span class="state-char">Western Sea island · Distinct culture</span><span class="state-flag flag-prov">Provisional</span></div>
+
+        <div class="states-col-label" style="margin-top:1.75rem">Five Cities</div>
+        <div class="state-item"><span class="state-name">Verentum</span><span class="state-char">Seat of government · Aldenmere</span></div>
+        <div class="state-item"><span class="state-name">Calden</span><span class="state-char">Port &amp; finance · Caldenmere</span></div>
+        <div class="state-item"><span class="state-name">Dorven</span><span class="state-char">Interior market · Orath</span></div>
+        <div class="state-item"><span class="state-name">Rhondel</span><span class="state-char">Eastern lake · Kelvant/Rhovane</span></div>
+        <div class="state-item"><span class="state-name">Ostara</span><span class="state-char">Ancient capital · Solara</span></div>
+      </div>
+    </div>
+
+    <!-- ── ACTIVE SITUATIONS ── -->
+    <div class="section-header" id="active-situations">
+      <div class="section-eye">Year 12 Docket</div>
+      <h2 class="section-title">Active Situations</h2>
+    </div>
+
+    <p style="font-size:.88rem;line-height:1.85;color:var(--text);margin:1.5rem 0 2rem;max-width:640px">Five things are in motion simultaneously at the opening of Year 12. Each one has constitutional dimensions. Each one is being documented in real time.</p>
+
+    <div class="situations-list">
+
+      <div class="situation crisis">
+        <div class="sit-status status-crisis">⚠ Active Crisis</div>
+        <div class="sit-title">The Sunderland War — Korda Territory and Lake Varda</div>
+        <div class="sit-body">Sunderland's civil conflict has been producing refugees for two years. Most cross Lake Varda to Korda Territory and the city of Rhondel. The Asylum Court has an overflow operation in both locations. The Elections Panel administered the last federal election in Korda directly due to NVS compliance failures. Sunderland naval vessels are moving through contested lake waters. The LC has issued two formal diplomatic notes. The coast guard command in Rhondel operates under standing emergency protocols. The EM has flagged a classified intelligence assessment that is approaching its constitutional classification ceiling.</div>
+        <div class="sit-provisions">
+          <span class="sit-prov">§2.4 LC Domain</span>
+          <span class="sit-prov">§6.1 Asylum</span>
+          <span class="sit-prov">§9.1.b EM</span>
+          <span class="sit-prov">§10.3 Classification</span>
+          <span class="sit-prov">§11.3 Elections Panel</span>
+        </div>
+      </div>
+
+      <div class="situation pressure">
+        <div class="sit-status status-pressure">Ongoing · Unresolved</div>
+        <div class="sit-title">The Valedon Question — Referendum Wound, Year 18</div>
+        <div class="sit-body">Valedon's citizens voted to join the Republic eighteen years ago. The parliament rejected the result. The question has never been resolved. The pro-Republic faction has grown since the anniversary. A new civic organization operating legally under Valedon law has formally requested that the LC acknowledge the referendum result in any capacity. The LC declined without closing the door. Whether a citizen referendum can constitute a constructive §15.6 petition from the governing body has never been put to the SC. Several parties are waiting to see who moves first.</div>
+        <div class="sit-provisions">
+          <span class="sit-prov">§15.6 Voluntary Incorporation</span>
+          <span class="sit-prov">§4.5 Judicial Review</span>
+          <span class="sit-prov">§2.4 LC Domain</span>
+        </div>
+      </div>
+
+      <div class="situation pressure">
+        <div class="sit-status status-pressure">Ongoing · Treaty Renewal Active</div>
+        <div class="sit-title">The Caldris Water Negotiations — Toren River Treaty Renewal</div>
+        <div class="sit-body">The Northern River treaty is due for renewal. Caldris has proposed upstream dam infrastructure that would give it effective control over the Republic's downstream water supply in drought conditions. The LC objected formally within 48 hours. The EM published a fiscal risk assessment. The Senate passed a resolution directing the LC not to accept any agreement reducing guaranteed minimum flow below a defined threshold. The LC and the Senate do not agree on what that threshold is. Caldris's economic investment in Sunderland adds another dimension: Caldris is not a neutral party in the eastern war, and the water negotiation and the Sunderland situation are not separate files.</div>
+        <div class="sit-provisions">
+          <span class="sit-prov">§3.6 Treaty Ratification</span>
+          <span class="sit-prov">§2.4 LC Domain</span>
+          <span class="sit-prov">§9.1.b EM</span>
+          <span class="sit-prov">§12.3 Taxing Power</span>
+        </div>
+      </div>
+
+      <div class="situation crisis">
+        <div class="sit-status status-crisis">⚠ Provisional Status — Audit Failure</div>
+        <div class="sit-title">Corindal — Second Consecutive Audit Failure</div>
+        <div class="sit-body">Corindal has failed its Statehood Audit twice in a row for persistent electoral district non-compliance. The State is in Provisional status. The Provisional Audit Council — two CC officers and two Corindal State delegates — is active and publishing findings to the NRS. A forced devolution election was held and rejected by 71% of Corindal citizens. Year 14 audit is approaching. The audit failure is ultimately a political deadlock within Corindal's legislature that it has refused to break. The Audit Council's most recent report named the deadlock directly. The Council has no enforcement authority — but the record it is building does.</div>
+        <div class="sit-provisions">
+          <span class="sit-prov">§15.1.a Provisional Status</span>
+          <span class="sit-prov">§15.2 Statehood Audit</span>
+          <span class="sit-prov">§15.3 Mandatory Devolution</span>
+          <span class="sit-prov">§9.11 JMC</span>
+        </div>
+      </div>
+
+      <div class="situation watch">
+        <div class="sit-status status-watch">Active Review · Competing Bids</div>
+        <div class="sit-title">The Seat of Government Review — Verentum at Year 20</div>
+        <div class="sit-body">The 20-year review of Verentum's hosting arrangement in Aldenmere is underway under §18.1. Orath has filed a formal competing bid: "Aldenmere was built around federal presence. Orath already exists independent of it." Aldenmere is running the most sophisticated political retention campaign currently active in the Republic. Solara Territory has filed a SC petition arguing that the constitution should not exclude Territories from hosting the seat of government — framing it as a question of equal membership rather than a competitive bid. The SC has not yet accepted the petition. The Legislature is considering whether to amend the relevant provision before the SC rules, which would moot the petition and settle the question without a ruling.</div>
+        <div class="sit-provisions">
+          <span class="sit-prov">§18.1 Seat of Government</span>
+          <span class="sit-prov">§4.5 SC Jurisdiction</span>
+          <span class="sit-prov">§15.1 Territory Status</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── THE RECORD ── -->
+    <div class="section-header" id="the-record">
+      <div class="section-eye">Format &amp; Method</div>
+      <h2 class="section-title">The Record</h2>
+    </div>
+
+    <p class="record-intro">This world is documented through authentic Torenthian formats — the kinds of documents that would actually exist in a constitutional republic. A news article. An NRS entry. An SC opinion. A Monitor report. A diplomatic note. The content grows over time, piece by piece, as events occur and the constitution responds to them.</p>
+
+    <div class="formats-grid">
+      <div class="format-item">
+        <div class="format-label">Press</div>
+        <div class="format-title">News Articles</div>
+        <div class="format-body">Journalism from a named Torenthian broadsheet covering events in the Republic and its neighbors. The journalist has a voice; the Republic has a press that is constitutionally protected and politically contested.</div>
+      </div>
+      <div class="format-item">
+        <div class="format-label">Official Record</div>
+        <div class="format-title">NRS Entries</div>
+        <div class="format-body">Official government records published to the National Record System — permanent, public, unalterable. LC orders, EM findings, Senate resolutions, JMC audit reports. Each entry is provision-cited and timestamped.</div>
+      </div>
+      <div class="format-item">
+        <div class="format-label">Judiciary</div>
+        <div class="format-title">SC Opinions</div>
+        <div class="format-body">Full written opinions from the Supreme Court. Case-styled, authored, reasoned. The constitutional question stated, the arguments addressed, the ruling given. Chief Justice Diallo has served since Year 3.</div>
+      </div>
+      <div class="format-item">
+        <div class="format-label">Constitutional Oversight</div>
+        <div class="format-title">Monitor Reports</div>
+        <div class="format-body">LM constitutional compliance analyses, EM fiscal assessments, JMC Statehood Audit findings. Published in each Monitor's institutional voice — precise, provision-cited, and politically significant regardless of whether anyone wants them to be.</div>
+      </div>
+      <div class="format-item">
+        <div class="format-label">Foreign Affairs</div>
+        <div class="format-title">Diplomatic Communications</div>
+        <div class="format-body">LC formal notes to foreign governments, treaty draft language, demarches. The foreign affairs apparatus has its own register — careful, formal, and often saying less than it means.</div>
+      </div>
+      <div class="format-item">
+        <div class="format-label">Legislature &amp; States</div>
+        <div class="format-title">Legislative &amp; State Records</div>
+        <div class="format-body">Assembly debate summaries, Senate vote tallies, concurrent resolutions, State government responses to federal actions. A Corindal governor's statement. A Rhovane mayor's petition. A Harren senator's floor speech.</div>
+      </div>
+    </div>
+
+    <p style="font-size:.88rem;line-height:1.85;color:var(--muted);border-top:1px solid var(--border);padding-top:1.5rem;max-width:640px">The National Record System is permanent. Nothing in it is altered or removed. When an event occurs, the record of it exists forever — the LC's formal note, the Monitor's assessment, the SC's ruling, the State's response. The constitution is not just a document here. It is the framework the record is organized around.</p>
+
+  </div>
+  </main>
+
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html">The World</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+</body>
+</html>
