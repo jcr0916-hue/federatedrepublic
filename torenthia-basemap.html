@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federated Republic of Torenthia — Base Map</title>
+    <style>
+        :root {
+            --map-bg: #c9dfaf;
+            --water-blue: #70b3d6;
+            --border-dark: #1e2417;
+            --text-dark: #0f120a;
+            --panel-bg: #fdfbf7;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { width: 100%; height: 100%; overflow: hidden; background: #1e2417; }
+        .map-container {
+            position: relative;
+            width: 1000px;
+            height: 666px;
+            background-color: var(--map-bg);
+            overflow: hidden;
+            background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.12) 0%, rgba(0,0,0,0.08) 100%);
+            transform-origin: top left;
+        }
+        .western-sea { position:absolute;left:0;top:0;width:31%;height:100%;background-color:var(--water-blue);border-right:2px solid var(--border-dark);z-index:1; }
+        .lake-varda { position:absolute;right:16%;top:24%;width:14%;height:52%;background-color:var(--water-blue);transform:rotate(-8deg);border:2px dashed rgba(30,36,23,0.4);border-radius:35% 45% 30% 40%;z-index:1; }
+        .map-vectors { position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2; }
+        .map-header { position:absolute;top:30px;left:30px;background-color:var(--panel-bg);border:2px solid var(--border-dark);padding:15px 25px;box-shadow:3px 3px 0px rgba(0,0,0,0.15);z-index:10; }
+        .map-header h2 { font-size:13px;text-transform:uppercase;letter-spacing:2px;color:#555;font-weight:normal;font-family:'Georgia',serif; }
+        .map-header h1 { font-size:30px;font-family:'Times New Roman',serif;text-transform:uppercase;letter-spacing:1px;margin:2px 0;padding-bottom:2px;color:var(--text-dark); }
+        .map-label { position:absolute;color:var(--text-dark);font-weight:bold;font-size:13px;user-select:none;z-index:4;font-family:'Georgia',serif; }
+        .sovereignty-label { font-size:24px;letter-spacing:5px;text-transform:uppercase;opacity:0.8;font-family:'Times New Roman',serif; }
+        #caldris-label { top:4%;left:52%;font-size:24px; }
+        #sunderland-label { top:48%;right:3%; }
+        #valedon-label { bottom:10%;left:45%; }
+        #western-sea-label { top:46%;left:6%;color:#2b556c;text-align:center;width:150px;font-size:22px;line-height:1.2;letter-spacing:2px; }
+        #marisvia-label { top:22%;left:2%;font-size:14px;color:#467189;letter-spacing:2px;transform:rotate(-15deg); }
+        #torenthian-alps { top:11%;left:46%;font-size:22px;font-family:'Times New Roman',serif;font-style:italic;letter-spacing:3px;opacity:0.85; }
+        #torenthia-center-brand { top:42%;left:38%;font-size:16px;text-transform:uppercase;letter-spacing:3px;opacity:0.9; }
+        .region-text { font-size:13px;font-style:italic;font-weight:normal;opacity:0.8; }
+        #reg-verdmont { top:19%;left:34%; }
+        #reg-korda { top:21%;right:21%;transform:rotate(15deg); }
+        #reg-morantine { bottom:21%;left:42%; }
+        .city-node { position:absolute;display:flex;align-items:center;gap:6px;z-index:5; }
+        .city-dot { width:10px;height:10px;background-color:#fff;border:2px solid var(--border-dark);border-radius:50%; }
+        .capital-star { width:14px;height:14px;background:#fff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);border:1px solid var(--border-dark); }
+        #city-calden { top:50%;left:29%; }
+        #city-verentum { top:54%;left:55%; }
+        #city-dorven { top:52%;left:51%; }
+        #city-rhondel { top:50%;right:28.5%; }
+        .solar-inset { position:absolute;bottom:25px;left:25px;width:155px;height:155px;background-color:var(--water-blue);border:2px solid var(--border-dark);box-shadow:2px 2px 0px rgba(0,0,0,0.1);z-index:4; }
+        .solar-island { position:absolute;top:25%;left:25%;width:50%;height:55%;background-color:var(--map-bg);border:1px solid var(--border-dark);border-radius:40% 55% 35% 50%; }
+        .inset-label { position:absolute;top:8px;left:8px;font-size:11px;text-transform:uppercase;font-weight:bold;background:var(--panel-bg);padding:2px 5px;border:1px solid var(--border-dark);font-family:'Georgia',serif; }
+        .legend-box { position:absolute;bottom:25px;right:25px;background-color:var(--panel-bg);border:2px solid var(--border-dark);padding:12px 15px;width:195px;font-size:11px;box-shadow:3px 3px 0px rgba(0,0,0,0.15);z-index:4;font-family:'Georgia',serif; }
+        .legend-title { font-weight:bold;text-transform:uppercase;border-bottom:1px solid var(--border-dark);padding-bottom:4px;margin-bottom:6px;letter-spacing:1px; }
+        .legend-item { display:flex;align-items:center;margin:5px 0;gap:10px; }
+        .line-border { width:25px;height:1px;border-bottom:1px dashed var(--border-dark); }
+        .line-intl-border { width:25px;height:3px;border-bottom:3px solid var(--border-dark); }
+        .line-river { width:25px;height:4px;background-color:var(--water-blue);border:1px solid #4a90b5;border-radius:2px; }
+    </style>
+</head>
+<body>
+<div class="map-container" id="mapContainer">
+    <div class="western-sea"></div>
+    <div class="lake-varda"></div>
+    <svg class="map-vectors">
+        <path d="M 310,145 C 420,148 530,142 660,150 C 730,154 780,146 840,165" fill="none" stroke="#70b3d6" stroke-width="7" stroke-linecap="round"/>
+        <path d="M 310,145 C 420,148 530,142 660,150 C 730,154 780,146 840,165" fill="none" stroke="#4a90b5" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M 310,142 C 420,145 530,139 660,147 C 730,151 780,143 840,162" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <path d="M 840,162 C 845,200 835,240 838,300 C 840,400 815,480 810,530" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <path d="M 810,530 C 790,560 770,580 750,600" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <path d="M 310,560 C 450,565 580,570 750,600" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+    </svg>
+    <div class="map-header">
+        <h2>Federated Republic of</h2>
+        <h1>Torenthia</h1>
+    </div>
+    <div class="map-label sovereignty-label" id="caldris-label">Caldris</div>
+    <div class="map-label sovereignty-label" id="sunderland-label">Sunderland</div>
+    <div class="map-label sovereignty-label" id="valedon-label">Valedon</div>
+    <div class="map-label" id="western-sea-label">WESTERN<br>SEA</div>
+    <div class="map-label sovereignty-label" id="marisvia-label">Marisvia</div>
+    <div class="map-label" id="torenthian-alps">Torenthian Alps</div>
+    <div class="map-label" style="top:16%;left:51%;font-size:11px;font-style:italic;color:#2d5b78;">Toren River</div>
+    <div class="map-label" id="torenthia-center-brand">The Federated Republic of Torenthia</div>
+    <div class="map-label region-text" id="reg-verdmont">Verdmont Territory</div>
+    <div class="map-label region-text" id="reg-korda">Korda Territory</div>
+    <div class="map-label region-text" id="reg-morantine">Morantine Territory</div>
+    <div class="map-label" style="top:26%;left:34%;">Harren</div>
+    <div class="map-label" style="top:36%;left:33%;">Arvane</div>
+    <div class="map-label" style="top:26%;left:56%;">Varek</div>
+    <div class="map-label" style="top:54%;left:38%;">Orath</div>
+    <div class="map-label" style="top:54%;left:45%;">Merath</div>
+    <div class="map-label" style="top:60%;left:52%;">Aldenmere</div>
+    <div class="map-label" style="top:60%;left:27%;">Caldenmere</div>
+    <div class="map-label" style="top:71%;left:39%;">Corindal</div>
+    <div class="map-label" style="top:71%;left:54%;">Selvane</div>
+    <div class="map-label" style="top:40%;right:29%;">Rhovane</div>
+    <div class="map-label" style="top:61%;right:31%;">Kelvant</div>
+    <div class="map-label sovereignty-label" style="font-size:14px;bottom:17%;right:6%;">Seronne</div>
+    <div class="map-label" style="top:48%;right:19.5%;font-size:11px;font-style:italic;color:#1f3d4f;transform:rotate(-45deg);">Lake Varda</div>
+    <div class="city-node" id="city-calden">
+        <div class="city-dot"></div>
+        <span class="map-label" style="position:static;font-size:11px;">CALDEN</span>
+    </div>
+    <div class="city-node" id="city-dorven">
+        <div class="city-dot" style="width:6px;height:6px;"></div>
+        <span class="map-label" style="position:static;font-size:10px;">Dorven</span>
+    </div>
+    <div class="city-node" id="city-verentum">
+        <div class="capital-star"></div>
+        <span class="map-label" style="position:static;font-size:12px;font-weight:bold;">VERENTUM</span>
+    </div>
+    <div class="city-node" id="city-rhondel">
+        <div class="city-dot"></div>
+        <span class="map-label" style="position:static;font-size:11px;">RHONDEL</span>
+    </div>
+    <div class="solar-inset">
+        <div class="inset-label">Solara Territory</div>
+        <div class="solar-island">
+            <div class="city-dot" style="position:absolute;top:42%;left:42%;width:6px;height:6px;"></div>
+            <span style="position:absolute;top:48%;left:18%;font-size:9px;font-weight:bold;font-family:'Georgia',serif;">OSTARA</span>
+        </div>
+    </div>
+    <div class="legend-box">
+        <div class="legend-title">Legend Key</div>
+        <div class="legend-item"><div class="capital-star" style="transform:scale(0.8);"></div><span>Capital City (Verentum)</span></div>
+        <div class="legend-item"><div class="city-dot" style="position:static;"></div><span>Commercial City Center</span></div>
+        <div class="legend-item"><div class="line-river"></div><span>Major River</span></div>
+        <div class="legend-item"><div class="line-intl-border"></div><span>International Boundary</span></div>
+        <div class="legend-item"><div class="line-border"></div><span>State/Provincial Boundary</span></div>
+    </div>
+</div>
+<script>
+    function scaleMap() {
+        const container = document.getElementById('mapContainer');
+        const scaleX = window.innerWidth / 1000;
+        const scaleY = window.innerHeight / 666;
+        const scale = Math.min(scaleX, scaleY);
+        container.style.transform = `scale(${scale})`;
+        document.body.style.height = Math.ceil(666 * scale) + 'px';
+    }
+    scaleMap();
+    window.addEventListener('resize', scaleMap);
+</script>
+</body>
+</html>

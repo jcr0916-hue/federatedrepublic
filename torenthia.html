@@ -39,8 +39,8 @@
     .section-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--navy)}
 
     /* ── MAP BLOCK ── */
-    .map-block{margin:2.5rem 0;border:1px solid var(--border);border-radius:3px;overflow:hidden;position:relative}
-    .map-block img{width:100%;display:block}
+    .map-block{margin:2.5rem 0;border:2px solid var(--border);border-radius:3px;overflow:hidden;position:relative;background:#c9dfaf}
+    .map-block iframe{width:100%;display:block;border:none;aspect-ratio:3/2}
     .map-caption{padding:.75rem 1rem;background:var(--cream);border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
     .map-caption a{color:var(--gold);text-decoration:none}
     .map-caption a:hover{text-decoration:underline}
@@ -183,11 +183,11 @@
       <h2 class="section-title">The World at Year 12</h2>
     </div>
 
-    <div class="map-block" style="position:relative">
-      <img src="torenthia-map-roads.png" alt="Political map of the Federated Republic of Torenthia and neighboring nations at Year 12, showing the twelve States, four Territories, the Torenthian Alps, Toren River, and Lake Varda" loading="lazy"/>
+    <div class="map-block">
+      <iframe src="torenthia-basemap.html" title="Political map of the Federated Republic of Torenthia" loading="lazy" scrolling="no"></iframe>
 
       <div class="map-caption">
-        <span>Federated Republic of Torenthia · Topographic Political Map · Year 12</span>
+        <span>Federated Republic of Torenthia · Political Reference Map · Year 12</span>
         <a href="torenthia-atlas.html">Interactive Atlas →</a>
       </div>
     </div>
