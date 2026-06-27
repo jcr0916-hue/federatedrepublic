@@ -1,4 +1,15 @@
 {
+  "builds": [
+    { "src": "api/navigator.js", "use": "@vercel/node" },
+    { "src": "api/advisor.js",   "use": "@vercel/node" },
+    { "src": "api/test.js",      "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/navigator", "dest": "/api/navigator.js" },
+    { "src": "/api/advisor",   "dest": "/api/advisor.js"   },
+    { "src": "/api/test",      "dest": "/api/test.js"      },
+    { "src": "/(.*)",          "dest": "/$1"               }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -8,10 +19,5 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
-  ],
-  "functions": {
-    "api/navigator.js": { "maxDuration": 30 },
-    "api/advisor.js":   { "maxDuration": 60 },
-    "api/docket.ts":    { "maxDuration": 300 }
-  }
+  ]
 }
