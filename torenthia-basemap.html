@@ -15,12 +15,12 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Georgia', serif;
-            background-color: #1a1a1a;
+            background: #111820;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 1.5rem 1rem;
         }
         .map-container {
             position: absolute;
@@ -166,8 +166,9 @@
             max-width: 1000px;
             position: relative;
             overflow: hidden;
-            border: 4px double var(--border-dark);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            border: 3px solid #6a5a38;
+            border-radius: 3px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.6);
         }
         .legend-box {
             position: absolute;
