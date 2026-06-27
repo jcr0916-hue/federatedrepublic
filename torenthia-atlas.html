@@ -73,30 +73,30 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 <nav>
-  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <a class='nav-logo' href='/'><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
   <div class="nav-links">
-    <a href="annotated.html">Annotated Edition</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="torenthia.html" class="active">The World</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="constitutional-history.html">Constitutional History</a>
-    <a href="sources.html">Sources</a>
-    <a href="glossary.html">Glossary</a>
+    <a href='/annotated'>Annotated Edition</a>
+    <a href='/scenarios'>Scenarios</a>
+    <a class='active' href='/torenthia'>The World</a>
+    <a href='/diagrams'>Diagrams</a>
+    <a href='/constitutional-history'>Constitutional History</a>
+    <a href='/sources'>Sources</a>
+    <a href='/glossary'>Glossary</a>
   </div>
   <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="annotated.html">Annotated Edition</a>
-  <a href="scenarios.html">Scenarios</a>
-  <a href="torenthia.html">The World</a>
-  <a href="diagrams.html">Diagrams</a>
-  <a href="constitutional-history.html">Constitutional History</a>
-  <a href="sources.html">Sources</a>
-  <a href="glossary.html">Glossary</a>
+  <a href='/annotated'>Annotated Edition</a>
+  <a href='/scenarios'>Scenarios</a>
+  <a href='/torenthia'>The World</a>
+  <a href='/diagrams'>Diagrams</a>
+  <a href='/constitutional-history'>Constitutional History</a>
+  <a href='/sources'>Sources</a>
+  <a href='/glossary'>Glossary</a>
   <a href="advisor.html">Advisor</a>
-  <a href="contact.html">Contact</a>
+  <a href='/contact'>Contact</a>
   <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
 </div>
 
@@ -123,9 +123,9 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
         <!-- Northern border: Caldris -->
         <path d="M 260,130 L 1000,130" fill="none" stroke="#1e2417" stroke-width="2.5"/>
         <!-- Eastern border: Sunderland -->
-        <path d="M 1000,130 L 1000,500" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <path d="M 820,130 L 820,500" fill="none" stroke="#1e2417" stroke-width="2.5"/>
         <!-- SE border: Seronne -->
-        <path d="M 1000,500 C 940,540 890,560 830,575" fill="none" stroke="#1e2417" stroke-width="2.5"/>
+        <path d="M 820,500 C 820,540 825,560 830,575" fill="none" stroke="#1e2417" stroke-width="2.5"/>
         <!-- Southern border: Valedon -->
         <path d="M 260,555 C 430,558 600,562 830,575" fill="none" stroke="#1e2417" stroke-width="2.5"/>
         <!-- Western coastline: subtle line where sea meets land -->
@@ -172,13 +172,13 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
       <span class="lbl" style="top:64%;left:74%">Kelvant</span>
 
       <!-- Lake label -->
-      <span class="lbl lbl-water" style="top:42%;left:59%;font-size:11px;transform:rotate(-80deg);letter-spacing:1px">Lake Varda</span>
+      <span class="lbl lbl-water" style="top:32%;left:86%;font-size:11px;transform:rotate(-80deg);letter-spacing:1px">Lake Varda</span>
 
       <!-- City nodes -->
       <div class="city-node" style="top:48%;left:27%"><div class="city-dot"></div><span class="lbl" style="position:static;font-size:11px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">CALDEN</span></div>
       <div class="city-node" style="top:50%;left:48%"><div class="city-dot" style="width:6px;height:6px"></div><span class="lbl" style="position:static;font-size:10px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">Dorven</span></div>
       <div class="city-node" style="top:54%;left:53%"><div class="city-star"></div><span class="lbl" style="position:static;font-size:12px;font-weight:bold;text-shadow:1px 1px 2px rgba(255,255,255,.8)">VERENTUM</span></div>
-      <div class="city-node" style="top:43%;left:61%"><div class="city-dot"></div><span class="lbl" style="position:static;font-size:11px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">RHONDEL</span></div>
+      <div class="city-node" style="top:48%;left:77%"><div class="city-dot"></div><span class="lbl" style="position:static;font-size:11px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">RHONDEL</span></div>
 
       <!-- Solara inset -->
       <div class="solara-inset">
@@ -256,7 +256,7 @@ const DATA = {
   "lake-varda":{title:"Lake Varda — Contested Midline",type:"diplomatic",
     typeLabel:"Diplomatic · Foreign Affairs",
     body:`<p><strong>Eastern lake shared with Sunderland. Midline boundary disputed. Naval incursions logged.</strong></p>
-    <p>Sunderland naval vessels have been moving through the contested lake midline, using it as a supply route for internal military operations. The LC has issued two formal diplomatic notes. Each incursion is published to the NRS. The coast guard command in Rhondel operates under standing emergency protocols. The dashed midline on the map represents Torenthia's administrative claim — Sunderland has agreed to no boundary arrangement and the Sunderland government's instability makes any negotiated resolution unlikely in the near term.</p>`,
+    <p>Sunderland naval vessels have been moving through the contested lake midline, using it as a supply route for internal military operations. The LC has issued two formal diplomatic notes. Each incursion is published to the NRS. The coast guard command in Rhondel operates under standing emergency protocols. Torenthia's administrative claim to the western shore is unrecognized — Sunderland has agreed to no boundary arrangement and the Sunderland government's instability makes any negotiated resolution unlikely in the near term.</p>`,
     provisions:["§2.4 LC Domain","§10.3 Classification","§10.1 NRS"]},
 
   "corindal":{title:"Corindal — Provisional Status",type:"legal",
@@ -396,7 +396,7 @@ const DATA = {
   "lake-varda":{title:"Lake Varda — Contested Midline",type:"diplomatic",
     typeLabel:"Diplomatic · Foreign Affairs",
     body:`<p><strong>Eastern lake shared with Sunderland. Midline boundary disputed. Naval incursions logged.</strong></p>
-    <p>Sunderland naval vessels have been moving through the contested lake midline, using it as a supply route for internal military operations. The LC has issued two formal diplomatic notes. Each incursion is published to the NRS. The coast guard command in Rhondel operates under standing emergency protocols. The dashed midline on the map represents Torenthia's administrative claim — Sunderland has agreed to no boundary arrangement and the Sunderland government's instability makes any negotiated resolution unlikely in the near term.</p>`,
+    <p>Sunderland naval vessels have been moving through the contested lake midline, using it as a supply route for internal military operations. The LC has issued two formal diplomatic notes. Each incursion is published to the NRS. The coast guard command in Rhondel operates under standing emergency protocols. Torenthia's administrative claim to the western shore is unrecognized — Sunderland has agreed to no boundary arrangement and the Sunderland government's instability makes any negotiated resolution unlikely in the near term.</p>`,
     provisions:["§2.4 LC Domain","§10.3 Classification","§10.1 NRS"]},
 
   "corindal":{title:"Corindal — Provisional Status",type:"legal",
@@ -466,14 +466,14 @@ document.querySelectorAll(".dot").forEach(el=>{
 <footer>
   <span class="footer-logo">The Federated Republic</span>
   <div class="footer-links">
-    <a href="annotated.html">Annotated Edition</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="torenthia.html">The World</a>
-    <a href="constitutional-history.html">Constitutional History</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="diagrams.html">Diagrams</a>
+    <a href='/annotated'>Annotated Edition</a>
+    <a href='/scenarios'>Scenarios</a>
+    <a href='/torenthia'>The World</a>
+    <a href='/constitutional-history'>Constitutional History</a>
+    <a href='/glossary'>Glossary</a>
+    <a href='/diagrams'>Diagrams</a>
     <a href="advisor.html">Advisor</a>
-    <a href="sources.html">Sources</a>
+    <a href='/sources'>Sources</a>
   </div>
   <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
 </footer>
