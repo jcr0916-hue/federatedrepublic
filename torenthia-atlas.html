@@ -18,7 +18,7 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 .map-scale-wrap{width:100%;position:relative;overflow:hidden}
 .map-inner{
   position:absolute;top:0;left:0;width:1000px;height:666px;transform-origin:top left;
-  background:url("torenthia-terrain.png") center/100% 100% no-repeat;
+  background:url("torenthia-map-roads.png") center/100% 100% no-repeat;
   font-family:"Georgia",serif;cursor:crosshair
 }
 /* SVG OVERLAY */
@@ -114,89 +114,54 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
     <div class="map-inner" id="mapInner">
 
       <!-- SVG: River + Borders -->
-      <svg class="map-vectors">
-        <!-- Toren River: east-west along northern border below Alps -->
-        <path d="M 260,138 C 370,141 490,136 630,143 C 700,147 750,140 840,155 C 880,160 930,158 1000,162"
-              fill="none" stroke="#6a9ab5" stroke-width="5" stroke-linecap="round" opacity=".9"/>
-        <path d="M 260,138 C 370,141 490,136 630,143 C 700,147 750,140 840,155 C 880,160 930,158 1000,162"
-              fill="none" stroke="#4a80a5" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
-        <!-- Northern border: Caldris -->
-        <path d="M 260,130 L 1000,130" fill="none" stroke="#1e2417" stroke-width="2.5"/>
-        <!-- Eastern border: Sunderland -->
-        <path d="M 820,130 L 820,500" fill="none" stroke="#1e2417" stroke-width="2.5"/>
-        <!-- SE border: Seronne — open arc swinging southwest toward map edge -->
-        <path d="M 820,500 C 800,540 778,568 755,592" fill="none" stroke="#1e2417" stroke-width="2.5"/>
-        <!-- Southern border: Valedon -->
-        <path d="M 260,555 C 430,558 600,565 755,592" fill="none" stroke="#1e2417" stroke-width="2.5"/>
-        <!-- Western coastline: subtle line where sea meets land -->
-        <path d="M 260,130 L 260,555" fill="none" stroke="#1e2417" stroke-width="1.5" stroke-dasharray="4,3"/>
-      </svg>
+      <!-- Image has all labels, borders, rivers baked in. Dots only for interactivity. -->
 
-      <!-- Title panel -->
-      <div class="map-title-panel">
-        <span class="t1">Federated Republic of</span>
-        <span class="t2">Torenthia</span>
+      <!-- Crisis dots (red) -->
+      <div class="dot" data-key="korda-north" style="top:28%;left:76%">
+        <div class="dot-core" style="background:#e8185a"></div>
+        <div class="dot-ring" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
+        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
+      </div>
+      <div class="dot" data-key="rhondel" style="top:53%;left:74%">
+        <div class="dot-core" style="background:#e8185a"></div>
+        <div class="dot-ring" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
+        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
       </div>
 
-      <!-- Sovereign labels -->
-      <span class="lbl lbl-sov" style="top:2%;left:42%;font-size:20px">CALDRIS</span>
-      <span class="lbl lbl-sov" style="top:46%;right:0%;font-size:16px">SUNDERLAND</span>
-      <span class="lbl lbl-sov" style="bottom:3%;left:42%;font-size:18px">VALEDON</span>
-      <span class="lbl lbl-water" style="top:44%;left:4%;text-align:center;width:140px">WESTERN<br>SEA</span>
-      <span class="lbl" style="top:20%;left:1%;font-size:12px;color:#467189;letter-spacing:1px;transform:rotate(-15deg)">Marisvia</span>
-      <span class="lbl lbl-sov" style="bottom:14%;right:2%;font-size:13px;letter-spacing:3px">SERONNE</span>
-
-      <!-- Geographic labels -->
-      <span class="lbl lbl-geo" style="top:8%;left:36%">Torenthian Alps</span>
-      <span class="lbl" style="top:17%;left:41%;font-size:11px;font-style:italic;color:#2d5b78;text-shadow:none">Toren River</span>
-
-      <!-- Republic center brand -->
-      <span class="lbl" style="top:42%;left:30%;font-size:14px;text-transform:uppercase;letter-spacing:2px;opacity:.7">The Federated Republic of Torenthia</span>
-
-      <!-- Territory labels -->
-      <span class="lbl lbl-reg" style="top:19%;left:30%">Verdmont Territory</span>
-      <span class="lbl lbl-reg" style="top:21%;left:66%;transform:rotate(12deg)">Korda Territory</span>
-      <span class="lbl lbl-reg" style="bottom:22%;left:40%">Morantine Territory</span>
-
-      <!-- State labels -->
-      <span class="lbl" style="top:25%;left:31%">Harren</span>
-      <span class="lbl" style="top:35%;left:28%">Arvane</span>
-      <span class="lbl" style="top:25%;left:52%">Varek</span>
-      <span class="lbl" style="top:52%;left:35%">Orath</span>
-      <span class="lbl" style="top:52%;left:44%">Merath</span>
-      <span class="lbl" style="top:60%;left:50%">Aldenmere</span>
-      <span class="lbl" style="top:59%;left:27%">Caldenmere</span>
-      <span class="lbl" style="top:71%;left:36%">Corindal</span>
-      <span class="lbl" style="top:71%;left:51%">Selvane</span>
-      <span class="lbl" style="top:36%;left:75%">Rhovane</span>
-      <span class="lbl" style="top:64%;left:74%">Kelvant</span>
-
-      <!-- Lake label -->
-      <span class="lbl lbl-water" style="top:32%;left:86%;font-size:11px;transform:rotate(-80deg);letter-spacing:1px">Lake Varda</span>
-
-      <!-- City nodes -->
-      <div class="city-node" style="top:48%;left:27%"><div class="city-dot"></div><span class="lbl" style="position:static;font-size:11px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">CALDEN</span></div>
-      <div class="city-node" style="top:50%;left:48%"><div class="city-dot" style="width:6px;height:6px"></div><span class="lbl" style="position:static;font-size:10px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">Dorven</span></div>
-      <div class="city-node" style="top:54%;left:53%"><div class="city-star"></div><span class="lbl" style="position:static;font-size:12px;font-weight:bold;text-shadow:1px 1px 2px rgba(255,255,255,.8)">VERENTUM</span></div>
-      <div class="city-node" style="top:48%;left:77%"><div class="city-dot"></div><span class="lbl" style="position:static;font-size:11px;text-shadow:1px 1px 2px rgba(255,255,255,.8)">RHONDEL</span></div>
-
-      <!-- Solara inset -->
-      <div class="solara-inset">
-        <div class="solara-label">Solara Territory</div>
-        <div class="solara-island">
-          <div class="city-dot" style="position:absolute;top:42%;left:40%;width:6px;height:6px"></div>
-          <span style="position:absolute;top:48%;left:12%;font-size:8px;font-weight:bold;font-family:Georgia,serif">OSTARA</span>
-        </div>
+      <!-- Political dots (purple) -->
+      <div class="dot" data-key="verentum" style="top:57%;left:53%">
+        <div class="dot-core" style="background:#7c3aed"></div>
+        <div class="dot-ring" style="width:22px;height:22px;border-color:#7c3aed;margin-left:-11px;margin-top:-11px"></div>
+        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#7c3aed;margin-left:-11px;margin-top:-11px"></div>
       </div>
 
-      <!-- Legend -->
-      <div class="map-legend">
-        <div class="leg-title">Legend Key</div>
-        <div class="leg-row"><div class="city-star" style="transform:scale(.85)"></div><span>Capital City (Verentum)</span></div>
-        <div class="leg-row"><div class="city-dot" style="position:static"></div><span>Commercial City Center</span></div>
-        <div class="leg-row"><div class="lr-river"></div><span>Major River</span></div>
-        <div class="leg-row"><div class="lr-intl"></div><span>International Boundary</span></div>
-        <div class="leg-row"><div class="lr-state"></div><span>State/Provincial Boundary</span></div>
+      <!-- Legal dots (blue) -->
+      <div class="dot" data-key="corindal" style="top:73%;left:34%">
+        <div class="dot-core" style="background:#0ea5e9"></div>
+        <div class="dot-ring" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
+        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
+      </div>
+      <div class="dot" data-key="korda-south" style="top:73%;left:71%">
+        <div class="dot-core" style="background:#0ea5e9"></div>
+        <div class="dot-ring" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
+        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
+      </div>
+
+      <!-- Diplomatic dots (gold) -->
+      <div class="dot" data-key="lake-varda" style="top:44%;left:82%">
+        <div class="dot-core" style="background:#f59e0b"></div>
+        <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
+        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
+      </div>
+      <div class="dot" data-key="valedon" style="top:88%;left:50%">
+        <div class="dot-core" style="background:#f59e0b"></div>
+        <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
+        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
+      </div>
+      <div class="dot" data-key="toren-river" style="top:19%;left:50%">
+        <div class="dot-core" style="background:#f59e0b"></div>
+        <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
+        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
       </div>
 
 
