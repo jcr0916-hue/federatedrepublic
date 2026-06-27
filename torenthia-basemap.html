@@ -23,12 +23,12 @@
             padding: 20px;
         }
         .map-container {
-            position: relative;
+            position: absolute;
+            top: 0; left: 0;
             width: 1000px;
             height: 666px;
             background-color: var(--map-bg);
-            border: 4px double var(--border-dark);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            transform-origin: top left;
             overflow: hidden;
         }
         .western-sea {
@@ -161,6 +161,14 @@
             padding: 2px 4px;
             border: 1px solid var(--border-dark);
         }
+        .map-scale-wrap {
+            width: 100%;
+            max-width: 1000px;
+            position: relative;
+            overflow: hidden;
+            border: 4px double var(--border-dark);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+        }
         .legend-box {
             position: absolute;
             bottom: 22px; right: 22px;
@@ -193,7 +201,8 @@
     </style>
 </head>
 <body>
-<div class="map-container">
+<div class="map-scale-wrap" id="mapScaleWrap">
+<div class="map-container" id="mapInner">
 
     <div class="western-sea"></div>
     <div class="lake-varda"></div>
@@ -316,5 +325,20 @@
     </div>
 
 </div>
+</div><!-- /map-scale-wrap -->
+<script>
+(function(){
+  function scaleMap(){
+    var wrap=document.getElementById("mapScaleWrap");
+    var inner=document.getElementById("mapInner");
+    if(!wrap||!inner) return;
+    var scale=Math.min(1, wrap.offsetWidth/1000);
+    inner.style.transform="scale("+scale+")";
+    wrap.style.height=Math.ceil(666*scale)+"px";
+  }
+  scaleMap();
+  window.addEventListener("resize", scaleMap);
+})();
+</script>
 </body>
 </html>
