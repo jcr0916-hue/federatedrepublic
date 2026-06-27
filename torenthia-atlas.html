@@ -18,7 +18,7 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 .map-scale-wrap{width:100%;position:relative;overflow:hidden}
 .map-inner{
   position:absolute;top:0;left:0;width:1000px;height:666px;transform-origin:top left;
-  background:url("torenthia-map-roads.png") center/100% 100% no-repeat;
+  background:#c9dfaf;
   font-family:"Georgia",serif;cursor:crosshair
 }
 /* SVG OVERLAY */
@@ -112,8 +112,8 @@ body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-directio
 <div class="map-wrap">
   <div class="map-scale-wrap" id="mapScaleWrap">
     <div class="map-inner" id="mapInner">
+      <img src="torenthia-map-roads.png" id="baseImg" alt="Federated Republic of Torenthia" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;">
 
-      <!-- SVG: River + Borders -->
       <!-- Image has all labels, borders, rivers baked in. Dots only for interactivity. -->
 
       <!-- Crisis dots (red) -->
