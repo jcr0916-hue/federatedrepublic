@@ -29,12 +29,12 @@
 
     /* Dots */
     .dot{position:absolute;cursor:pointer;width:0;height:0;z-index:10}
-    .dot-core{position:absolute;width:13px;height:13px;border-radius:50%;border:2px solid white;transform:translate(-50%,-50%);transition:transform .2s;box-shadow:0 0 6px rgba(0,0,0,.5)}
-    .dot:hover .dot-core{transform:translate(-50%,-50%) scale(1.4)}
-    .dot.active .dot-core{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 12px rgba(255,255,255,.5)}
-    .dot-ring{position:absolute;border-radius:50%;border:2px solid;transform:translate(-50%,-50%);animation:expandRing 2.2s infinite ease-out;pointer-events:none}
+    .dot-core{position:absolute;left:50%;top:50%;width:13px;height:13px;margin-left:-6.5px;margin-top:-6.5px;border-radius:50%;border:2px solid rgba(255,255,255,.9);transition:transform .2s;box-shadow:0 0 6px rgba(0,0,0,.5)}
+    .dot:hover .dot-core{transform:scale(1.4)}
+    .dot.active .dot-core{transform:scale(1.3);box-shadow:0 0 12px rgba(255,255,255,.5)}
+    .dot-ring{position:absolute;left:50%;top:50%;width:13px;height:13px;margin-left:-6.5px;margin-top:-6.5px;border-radius:50%;border:2px solid;animation:expandRing 2.2s infinite ease-out;pointer-events:none}
     .dot-ring2{animation-delay:.9s}
-    @keyframes expandRing{0%{width:13px;height:13px;opacity:.8}100%{width:42px;height:42px;opacity:0}}
+    @keyframes expandRing{0%{transform:scale(1);opacity:.8}100%{transform:scale(3.4);opacity:0}}
 
     /* Sidebar */
     .atlas-sidebar{display:flex;flex-direction:column;gap:.75rem}
@@ -163,49 +163,49 @@
               <!-- Crisis dots (red) -->
               <div class="dot" data-key="korda-north" style="top:28%;left:76%">
                 <div class="dot-core" style="background:#e8185a"></div>
-                <div class="dot-ring" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
-                <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
+                <div class="dot-ring" style="border-color:#e8185a"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
               </div>
               <div class="dot" data-key="rhondel" style="top:53%;left:76%">
                 <div class="dot-core" style="background:#e8185a"></div>
-                <div class="dot-ring" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
-                <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
+                <div class="dot-ring" style="border-color:#e8185a"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
               </div>
 
               <!-- Political dots (purple) -->
               <div class="dot" data-key="verentum" style="top:57%;left:55%">
                 <div class="dot-core" style="background:#7c3aed"></div>
-                <div class="dot-ring" style="width:22px;height:22px;border-color:#7c3aed;margin-left:-11px;margin-top:-11px"></div>
-                <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#7c3aed;margin-left:-11px;margin-top:-11px"></div>
+                <div class="dot-ring" style="border-color:#7c3aed"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
               </div>
 
               <!-- Legal dots (blue) -->
               <div class="dot" data-key="corindal" style="top:73%;left:34%">
                 <div class="dot-core" style="background:#0ea5e9"></div>
-                <div class="dot-ring" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
-                <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
+                <div class="dot-ring" style="border-color:#0ea5e9"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
               </div>
               <div class="dot" data-key="korda-south" style="top:73%;left:71%">
                 <div class="dot-core" style="background:#0ea5e9"></div>
-                <div class="dot-ring" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
-                <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
+                <div class="dot-ring" style="border-color:#0ea5e9"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
               </div>
 
               <!-- Diplomatic dots (gold) -->
               <div class="dot" data-key="lake-varda" style="top:44%;left:82%">
                 <div class="dot-core" style="background:#f59e0b"></div>
-                <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-                <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
+                <div class="dot-ring" style="border-color:#f59e0b"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
               </div>
               <div class="dot" data-key="valedon" style="top:88%;left:50%">
                 <div class="dot-core" style="background:#f59e0b"></div>
-                <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-                <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
+                <div class="dot-ring" style="border-color:#f59e0b"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
               </div>
               <div class="dot" data-key="toren-river" style="top:19%;left:50%">
                 <div class="dot-core" style="background:#f59e0b"></div>
-                <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-                <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
+                <div class="dot-ring" style="border-color:#f59e0b"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
               </div>
 
             </div>
