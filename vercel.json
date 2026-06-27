@@ -10,7 +10,8 @@
     }
   ],
   "functions": {
-    "api/advisor.js": { "maxDuration": 60 },
-    "api/docket.ts":  { "maxDuration": 300 }
+    "api/navigator.js": { "maxDuration": 30 },
+    "api/advisor.js":   { "maxDuration": 60 },
+    "api/docket.ts":    { "maxDuration": 300 }
   }
 }
