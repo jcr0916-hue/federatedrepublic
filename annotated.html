@@ -84,10 +84,7 @@
     .ann-loading-dot:nth-child(2){animation-delay:.2s}
     .ann-loading-dot:nth-child(3){animation-delay:.4s}
     @keyframes ann-pulse{0%,80%,100%{opacity:.2}40%{opacity:1}}
-    .prov-label{cursor:pointer;transition:background .1s;border-radius:2px;padding:2px 4px;margin:-2px -4px}
-    .prov-label:hover{background:rgba(201,168,76,.12)}
-    .prov-label:hover .prov-name{color:var(--gold)}
-    .provision.ann-active .prov-label{background:rgba(201,168,76,.15)}
+    .prov-name:hover{text-decoration-color:var(--gold) !important;color:var(--gold)}
     .provision.ann-active .prov-name{color:var(--gold)}
 
     /* ── MINIMAP ── */
@@ -180,10 +177,9 @@
 <div class="doc-header">
   <h1>The Constitution of the Federated Republic</h1>
   <p>Annotated Edition — 158 provisions &nbsp;·&nbsp; 20 articles</p>
-  <p class="doc-hover-instructions">Hover <span style="border-bottom:2px solid var(--gold);padding:0 2px;font-size:0.85em">gold underlined</span> text for definitions &nbsp;·&nbsp; Click any <span style="border-bottom:2px solid var(--navy);padding:0 2px;font-size:0.85em">provision title</span> for AI-generated design rationale</p>
+  <p class="doc-hover-instructions">Click any <span style="border-bottom:2px solid var(--navy);padding:0 2px;font-size:0.85em">provision title</span> for AI-generated design rationale</p>
 </div>
 <div class="legend">
-  <div class="legend-item"><div class="legend-swatch ls-term"></div>Defined term — hover</div>
   <div class="legend-item"><div class="legend-swatch ls-design"></div>Click any provision — design rationale</div>
 </div>
 
@@ -375,7 +371,7 @@
 
 <div class="provision" id="s2-5">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §2.5" onclick="copyProvLink('s2-5')" style="cursor:pointer">§2.5<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">The Civic Consul — Domestic Executive Domain</span></div>
-    <p class="prov-text">The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul. To hold the office of Civic Consul, a person must have been a citizen for at least 7 years at the time of taking office and must hold no federal felony conviction. No other eligibility requirement applies. The Civic Consul serves at the confidence of the Assembly, subject to removal under &#xa7;2.6. No person may serve more than 8 years in total as Civic Consul across all periods of service; this limit is cumulative and permanent regardless of interruption. The Civic Consul's domestic authority includes: all domestic policy and regulatory frameworks; the annual budget, which must originate with the Civic Consul and pass the Assembly; the civil service; and administration of the social state under Article XII. The Civic Consul may declare a domestic emergency in response to natural disaster, public health crisis, or infrastructure failure, subject to the constraints of Article I and renewable Assembly approval at intervals defined by statute; in the absence of a statutory interval, the constitutional default is 30 days. The Legat Consul has no role in domestic emergencies. The Civic Consul has the right to be informed on matters within the Legat Consul&#x27;s domain that bear on domestic interests or create domestic fiscal obligations. No classification or domain assertion may be used to withhold such information from the Civic Consul. The Legat Consul shall consult the Civic Consul on compact negotiations under Article XVI; the Civic Consul&#x27;s response is advisory. Where the Civic Consul is temporarily unable to exercise authority, the Civic Consul's designated Acting Civic Consul serves with authority limited to maintaining existing policy and emergency functions. Acting status ends when the Civic Consul resumes their duties or a new Civic Consul is confirmed by the Assembly.</p>
+    <p class="prov-text">The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul. To hold the office of Civic Consul, a person must have been a citizen for at least 7 years at the time of taking office and must hold no federal felony conviction. No other eligibility requirement applies. The Civic Consul serves at the confidence of the Assembly, subject to removal under &#xa7;2.6. No person may serve more than 8 years in total as Civic Consul across all periods of service; this limit is cumulative and permanent regardless of interruption. The Civic Consul's domestic authority includes: all domestic policy and regulatory frameworks; the annual budget, which the Civic Consul prepares and submits to the Assembly for passage; the civil service; and administration of the social state under Article XII. The Civic Consul may declare a domestic emergency in response to natural disaster, public health crisis, or infrastructure failure, subject to the constraints of Article I and renewable Assembly approval at intervals defined by statute; in the absence of a statutory interval, the constitutional default is 30 days. The Legat Consul has no role in domestic emergencies. The Civic Consul has the right to be informed on matters within the Legat Consul&#x27;s domain that bear on domestic interests or create domestic fiscal obligations. No classification or domain assertion may be used to withhold such information from the Civic Consul. The Legat Consul shall consult the Civic Consul on compact negotiations under Article XVI; the Civic Consul&#x27;s response is advisory. Where the Civic Consul is temporarily unable to exercise authority, the Civic Consul's designated Acting Civic Consul serves with authority limited to maintaining existing policy and emergency functions. Acting status ends when the Civic Consul resumes their duties or a new Civic Consul is confirmed by the Assembly.</p>
   </div>
 
 <div class="provision" id="s2-6">
@@ -923,7 +919,6 @@
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §15.9" onclick="copyProvLink('s15-9')" style="cursor:pointer">§15.9<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Voluntary State Independence</span></div>
     <p class="prov-text">A State may seek independence from the Republic through a two-stage process. Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State&#x27;s eligible voters; the referendum must achieve 60% of votes cast with at least 60% participation among the State&#x27;s eligible voters; a failed referendum may not be reinitiated on the same or substantially similar grounds for five years. Upon certification of the referendum result, the Elections Panel publishes the independence petition to the NRS; the election is irrevocable from the moment of publication. The Republic may not prefer, discourage, or offer inducements toward any independence petition or referendum; the Republic must provide factual information about the process upon request. Stage Two requires both chambers to hold a concurrent ratification vote within 90 days of NRS publication; Assembly members elected from districts within the petitioning State and senators whose allocation derives from the petitioning State&#x27;s population are recused from this vote, and the required 60% majority and quorum for each chamber are calculated from the remaining seated members; if either chamber fails to achieve 60% or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction.</p>
   </div>
-  </div>
 </div>
 
 <div id="art16" class="article-section">
@@ -1323,21 +1318,30 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
       if (annActive) { annActive.classList.remove('ann-active'); annActive = null; }
     }
 
-    // Wire up provision labels (title only — text stays selectable)
-    document.querySelectorAll('.prov-label').forEach(function(label){
-      label.addEventListener('click', function(e){
-        var prov = label.closest('.provision');
+    // Wire up prov-name spans as annotation triggers
+    // Use onclick attribute via JS for reliable iOS touch support
+    document.querySelectorAll('.prov-name').forEach(function(nameEl){
+      nameEl.setAttribute('role','button');
+      nameEl.setAttribute('tabindex','0');
+      nameEl.style.cursor = 'pointer';
+      nameEl.style.textDecoration = 'underline';
+      nameEl.style.textDecorationColor = 'rgba(201,168,76,0.4)';
+      nameEl.style.textUnderlineOffset = '3px';
+      nameEl.style.textDecorationThickness = '1px';
+      function triggerAnnotation(){
+        var prov = nameEl.closest('.provision');
         if (!prov) return;
         var numEl = prov.querySelector('.prov-num');
-        var nameEl = prov.querySelector('.prov-name');
         var textEl = prov.querySelector('.prov-text');
         if (!numEl || !textEl) return;
-        var num = numEl.childNodes[0] && numEl.childNodes[0].nodeValue 
-                  ? numEl.childNodes[0].nodeValue.trim()
-                  : numEl.textContent.replace('¶','').trim();
-        var name = nameEl ? nameEl.textContent.trim() : '';
+        var num = numEl.textContent.replace('¶','').replace('§','§').trim();
+        var name = nameEl.textContent.trim();
         var text = textEl.textContent.trim();
         openAnnotation(num, name, text, prov);
+      }
+      nameEl.addEventListener('click', triggerAnnotation);
+      nameEl.addEventListener('keydown', function(e){
+        if(e.key==='Enter'||e.key===' ') triggerAnnotation();
       });
     });
 
