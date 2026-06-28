@@ -181,7 +181,7 @@
 - Must return bill within 10 business days of final passage with written grounds published to NRS; silence within 10 business days = bill proceeds to enactment
 - General or speculative security connection insufficient — genuine domain concern required
 - Single use per bill: reintroduced bill in subsequent session proceeds without LC interference
-- Either Speaker may petition SC for expedited domain determination; SC must rule within 14 days
+- Either Speaker may petition SC for expedited domain determination; SC must rule within 14 days; where SC does not rule within 14 days, the veto is void and bill proceeds to enactment
 - If SC confirms within domain: Senate may override by 2/3 supermajority; no override = bill lapses for session
 - If SC confirms outside domain: veto void, bill proceeds to enactment without LC assent
 
@@ -213,7 +213,7 @@
 - Bill tabled for **one month** from date of return — regardless of any change in CC office (bypass-proof)
 - Senate may override by **2/3 supermajority** during that month; override = bill enacted without CC assent
 - No Senate override within month = bill lapses for session
-- **Single use per bill**: reintroduced bill that passes both chambers returns to CC with only fiscal/solvency veto, approval, or silence available
+- **Single use per bill within a session**: reintroduced bill that passes both chambers in the same session returns to CC with only fiscal/solvency veto, approval, or silence available; a bill reintroduced in a new session may be subject to the suspensive veto once in that session
 - Solvency objection (bill causes/worsens structural deficit): Assembly may override by simple majority
 - Cannot be used on annual budget, bills implementing constitutional obligations, or emergency legislation
 - Both executives review concurrently from date of final passage
