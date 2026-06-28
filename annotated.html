@@ -1227,7 +1227,8 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
     }
 
     // Close search on overlay background click
-    document.getElementById('searchOverlay').addEventListener('click', function(e){
+    var searchOverlayEl = document.getElementById('searchOverlay');
+    if (searchOverlayEl) searchOverlayEl.addEventListener('click', function(e){
       if(e.target === this) closeSearch();
     });
     // Close search on Escape
