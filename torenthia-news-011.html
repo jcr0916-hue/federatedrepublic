@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asdal: 'Is Vael Looking at the Right Border?' — RNN</title>
+  <meta name="description" content="RNN anchor Renn Asdal's Thursday night segment on Tobias Vael's Varek speech ran four minutes. In Verentum, people watched it twice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .rnn-masthead{background:#070c14;border-bottom:3px solid #c02020;padding:0}
+    .rnn-top-bar{background:#c02020;padding:.35rem 2rem;display:flex;align-items:center;gap:1.5rem}
+    .rnn-top-meta{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;color:rgba(255,255,255,.8);text-transform:uppercase}
+    .rnn-main{max-width:900px;margin:0 auto;padding:.9rem 2rem 1rem;display:flex;align-items:center;gap:2rem}
+    .rnn-logo-block{display:flex;flex-direction:column}
+    .rnn-name{font-family:'Jost',sans-serif;font-size:clamp(2.2rem,5vw,3rem);font-weight:600;color:white;letter-spacing:.04em;line-height:1}
+    .rnn-fullname{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.2rem}
+    .rnn-divider{width:1px;height:48px;background:rgba(255,255,255,.15);flex-shrink:0}
+    .rnn-tagline{font-family:'Jost',sans-serif;font-size:.8rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.5}
+    .article-wrap{max-width:700px;margin:0 auto;padding:3rem 2rem 5rem}
+    .rnn-section{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:#c02020;margin-bottom:.85rem;padding-bottom:.6rem;border-bottom:2px solid #c02020}
+    .article-headline{font-family:'Jost',sans-serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:.75rem}
+    .article-deck{font-family:'Jost',sans-serif;font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+    .article-byline{display:flex;flex-wrap:wrap;gap:.75rem;align-items:baseline;padding:.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:1.75rem}
+    .byline-outlet{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;color:#c02020;letter-spacing:.08em;text-transform:uppercase}
+    .byline-sep{color:var(--border)}
+    .byline-date{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.05em;margin-left:auto}
+    .article-body p{font-family:'Jost',sans-serif;font-size:.95rem;line-height:1.85;color:#1a1a1a;margin-bottom:1.25rem;font-weight:300}
+    .transcript-box{background:#07121f;padding:1.5rem;margin:1.75rem 0;border-left:3px solid #c02020}
+    .transcript-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:#c02020;margin-bottom:.85rem}
+    .transcript-line{display:flex;gap:1rem;margin-bottom:.75rem;align-items:flex-start}
+    .transcript-speaker{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:.08em;flex-shrink:0;width:52px;text-align:right;padding-top:.15rem}
+    .transcript-text{font-family:'Georgia',serif;font-size:.92rem;color:rgba(245,240,232,.88);line-height:1.75}
+    .pull-quote{border-left:3px solid #c02020;padding:.85rem 1.25rem;margin:1.75rem 0;background:#fdfafa}
+    .pull-quote p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--navy);line-height:1.6;margin-bottom:0}
+    .article-rule{border:none;border-top:1px solid var(--border);margin:2rem 0}
+    .rnn-footer-note{background:#f8f4f0;border-top:2px solid #c02020;padding:.85rem 1.25rem;margin-top:2.5rem;font-size:.78rem;color:var(--muted);font-family:'Jost',sans-serif;line-height:1.65}
+    .article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-top:1px solid var(--border);margin-top:1.5rem}
+    .article-nav a{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:#c02020;text-decoration:none;text-transform:uppercase}
+    .article-nav a:hover{color:var(--navy)}
+    @media(max-width:820px){.rnn-main{padding:.75rem 1rem;gap:1rem}.rnn-divider{display:none}.rnn-top-bar{padding:.3rem 1rem}.article-wrap{padding:2rem 1rem 4rem}.byline-date{margin-left:0;width:100%}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html" class="active">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="rnn-masthead" role="banner">
+    <div class="rnn-top-bar">
+      <span class="rnn-top-meta">RNN Analysis · Year 12, Month 12 · Thursday Evening Broadcast</span>
+    </div>
+    <div class="rnn-main">
+      <div class="rnn-logo-block">
+        <div class="rnn-name">RNN</div>
+        <div class="rnn-fullname">Republic News Network</div>
+      </div>
+      <div class="rnn-divider"></div>
+      <div class="rnn-tagline">Transcript excerpt — Asdal Report<br>Year 12, Month 12 · Thursday evening</div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <div class="article-wrap">
+
+    <div class="rnn-section">Analysis · LC Race · Varek Speech</div>
+
+    <h1 class="article-headline">Asdal: 'Is Vael Looking at the Right Border?'</h1>
+    <p class="article-deck">RNN anchor Renn Asdal's Thursday night segment on Tobias Vael's Varek speech ran four minutes. The question it asked did not have an easy answer. In Verentum, people watched it twice.</p>
+
+    <div class="article-byline">
+      <span class="byline-outlet">RNN Digital · Transcript Excerpt</span>
+      <span class="byline-sep">·</span>
+      <span class="byline-date">Year 12, Month 12 · Thursday Evening Broadcast</span>
+    </div>
+
+    <div class="article-body">
+
+      <p>The following is an edited transcript of the Asdal Report segment that aired Thursday evening following Senator Vael's address to the Varek Northern Forum. The segment ran approximately four minutes in the broadcast. It has been lightly condensed for the digital record.</p>
+
+    </div>
+
+    <div class="transcript-box">
+      <div class="transcript-label">Transcript — Asdal Report — RNN Evening Broadcast</div>
+
+      <div class="transcript-line">
+        <span class="transcript-speaker">ASDAL</span>
+        <span class="transcript-text">Senator Tobias Vael gave a speech in Varek tonight about the Toren River. About water rights and treaty frameworks and the Caldris relationship. I want to be precise about what I'm saying here, because I think it matters: it was a good speech. He knows that file. He has known it for a decade. If you want a Legat Consul who can walk into a Caldris negotiation on day one and not embarrass the Republic, Vael is probably your candidate.</span>
+      </div>
+
+      <div class="transcript-line">
+        <span class="transcript-speaker">ASDAL</span>
+        <span class="transcript-text">The question I want to ask — and I want to be clear this is a question, not a verdict — is whether the Toren River is where his instincts go because it's the most important thing, or because it's the most familiar thing. Because those are different answers and they produce different Legat Consuls.</span>
+      </div>
+
+      <div class="transcript-line">
+        <span class="transcript-speaker">ASDAL</span>
+        <span class="transcript-text">There are four survivors at Varenne Station right now. Their legal status has not been determined. The Executive Monitor is conducting an interim fiscal review of Korda Territory at the Civic Consul's request. The Civic Consul gave an interview this week to a regional affiliate — not RNN, not The Torenthian, a regional affiliate — about the ninety-day fiscal clock behind the Lake Varda crisis. Senator Vael mentioned Lake Varda once in his speech tonight. Once. In the third paragraph. As context.</span>
+      </div>
+
+      <div class="transcript-line">
+        <span class="transcript-speaker">ASDAL</span>
+        <span class="transcript-text">Now, I've been covering this Republic for eleven years. I know what the Toren River file looks like. I know why it matters. I'm not saying Vael is wrong to talk about it. I'm saying that when you're running for Legat Consul in the middle of an active crisis on the eastern lake, and you give your major foreign policy address about a different border to a room full of your supporters — you have to be able to explain why. Not to me. To the people at Varenne Station who are waiting for the Republic to figure out what it owes them.</span>
+      </div>
+
+      <div class="transcript-line">
+        <span class="transcript-speaker">ASDAL</span>
+        <span class="transcript-text">Mak's campaign said tonight: the Toren River isn't on fire. Carrow's office said nothing, which by now is its own kind of statement. Vael's team said the Senator had addressed Lake Varda in his Senate briefing request. That's true. It's also not an answer to the question I'm asking.</span>
+      </div>
+
+      <div class="transcript-line">
+        <span class="transcript-speaker">ASDAL</span>
+        <span class="transcript-text">The question is not whether Tobias Vael is qualified. He is qualified. The question is whether his instincts, right now, in Year 12, Month 12, are pointing at the right border. That's not a question about his record. It's a question about his judgment. And the voters in this Republic — including the ones in Korda Territory and Rhovane who are watching this differently than the ones in Varek — are going to answer it.</span>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <p>Vael's campaign did not issue a response to the segment before publication of this transcript. The Senator's office confirmed he was aware of the broadcast.</p>
+    </div>
+
+    <div class="rnn-footer-note">
+      <strong>Republic News Network.</strong> The Asdal Report airs Thursday evenings on RNN. Transcript lightly condensed. Full broadcast available in the RNN digital archive.
+    </div>
+
+    <div class="article-nav">
+      <a href="torenthia-news-010.html">← Vael in Varek</a>
+      <a href="torenthia.html">The World →</a>
+    </div>
+
+  </div>
+  </main>
+
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-enabled',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html">The World</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+</body>
+</html>
