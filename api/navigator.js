@@ -1,7 +1,7 @@
 // Vercel Serverless Function: Constitution Navigator
 // Node.js format — compatible with all Vercel project types
 
-const SITE_URL = 'https://thefederatedrepublic.org';
+const path = require('path');
 
 const STOP = new Set(['a','an','the','is','are','was','were','be','been','being',
   'have','has','had','do','does','did','will','would','could','should','may',
@@ -140,9 +140,8 @@ let cachedProvisions = null;
 
 async function getProvisions() {
   if (cachedProvisions) return cachedProvisions;
-  const resp = await fetch(`${SITE_URL}/constitution_data.json`);
-  if (!resp.ok) throw new Error(`Failed to fetch constitution: ${resp.status}`);
-  const data = await resp.json();
+  const dataPath = path.join(__dirname, '..', 'constitution_data.json');
+  const data = require(dataPath);
   cachedProvisions = data.flatMap(a => a.provisions);
   return cachedProvisions;
 }
