@@ -1287,12 +1287,25 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
       panel.style.display = 'block';
       if (backdrop) backdrop.style.display = 'block';
 
-      var cacheKey = num;
+      var cacheKey = 'ann-v1-' + num;
+
+      // Check in-memory cache first (instant)
       if (annCache[cacheKey]) {
         bodyEl.innerHTML = annCache[cacheKey];
         return;
       }
 
+      // Check localStorage (persists across sessions)
+      try {
+        var stored = localStorage.getItem(cacheKey);
+        if (stored) {
+          annCache[cacheKey] = stored;
+          bodyEl.innerHTML = stored;
+          return;
+        }
+      } catch(e) {}
+
+      // Not cached — call the API
       fetch('/api/annotate', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
@@ -1303,6 +1316,7 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
         if (data.annotation) {
           var html = data.annotation.split('\n\n').filter(function(p){return p.trim();}).map(function(p){return '<p>' + p + '</p>';}).join('');
           annCache[cacheKey] = html;
+          try { localStorage.setItem(cacheKey, html); } catch(e) {}
           bodyEl.innerHTML = html;
         } else {
           bodyEl.innerHTML = '<p style="color:var(--muted)">Could not generate annotation. Try again.</p>';
