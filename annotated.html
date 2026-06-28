@@ -67,24 +67,19 @@
     .panel-close:hover{color:var(--navy)}
 
     /* ── ANNOTATION PANEL ── */
-    .ann-panel{position:fixed;top:56px;right:0;width:360px;max-width:92vw;height:calc(100vh - 56px);background:var(--white);border-left:2px solid var(--gold);transform:translateX(100%);transition:transform .25s ease;z-index:300;overflow-y:auto;box-shadow:-4px 0 24px rgba(0,0,0,0.12)}
-    .ann-panel.open{transform:translateX(0)}
-    .ann-panel-inner{padding:1.5rem 1.25rem 3rem}
-    .ann-panel-close{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
-    .ann-panel-close-btn{background:none;border:none;cursor:pointer;font-size:1.1rem;color:var(--muted);padding:.25rem}
+    .ann-backdrop{display:none;position:fixed;inset:0;background:rgba(10,16,28,.5);z-index:9998}
+    .ann-panel{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:520px;max-width:92vw;max-height:82vh;background:var(--white);border:2px solid var(--gold);z-index:9999;overflow-y:auto;border-radius:4px;box-shadow:0 12px 48px rgba(0,0,0,.35)}
+    .ann-panel-inner{padding:1.5rem 1.5rem 2rem}
+    .ann-panel-close{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
+    .ann-panel-close-btn{background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--muted);padding:.25rem;line-height:1}
     .ann-panel-close-btn:hover{color:var(--navy)}
     .ann-panel-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-    .ann-panel-num{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--navy);font-weight:500;margin-bottom:.2rem}
-    .ann-panel-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:1.1rem}
-    .ann-panel-body{font-size:.88rem;line-height:1.8;color:var(--text)}
-    .ann-panel-body p{margin-bottom:1rem}
+    .ann-panel-num{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--navy);font-weight:500;margin-bottom:.25rem}
+    .ann-panel-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:1rem}
+    .ann-panel-body{font-size:.9rem;line-height:1.8;color:var(--text)}
+    .ann-panel-body p{margin-bottom:.9rem}
     .ann-panel-body p:last-child{margin-bottom:0}
-    .ann-loading{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-size:.82rem;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;padding:1rem 0}
-    .ann-loading-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:ann-pulse 1.2s ease-in-out infinite}
-    .ann-loading-dot:nth-child(2){animation-delay:.2s}
-    .ann-loading-dot:nth-child(3){animation-delay:.4s}
-    @keyframes ann-pulse{0%,80%,100%{opacity:.2}40%{opacity:1}}
-    .prov-name:hover{text-decoration-color:var(--gold) !important;color:var(--gold)}
+    .ann-loading{color:var(--muted);font-size:.82rem;font-style:italic;padding:.5rem 0}
     .provision.ann-active .prov-name{color:var(--gold)}
 
     /* ── MINIMAP ── */
@@ -1274,9 +1269,11 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
 
     function openAnnotation(num, name, text, provEl) {
       var panel = document.getElementById('annPanel');
+      var backdrop = document.getElementById('annBackdrop');
       var numEl = document.getElementById('annPanelNum');
       var nameEl = document.getElementById('annPanelName');
       var bodyEl = document.getElementById('annPanelBody');
+      if (!panel || !numEl || !nameEl || !bodyEl) return;
 
       // Update active state
       if (annActive) annActive.classList.remove('ann-active');
@@ -1284,8 +1281,9 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
 
       numEl.textContent = num;
       nameEl.textContent = name;
-      bodyEl.innerHTML = '<div class="ann-loading"><div class="ann-loading-dot"></div><div class="ann-loading-dot"></div><div class="ann-loading-dot"></div><span style="margin-left:.4rem">Analysing</span></div>';
-      panel.classList.add('open');
+      bodyEl.innerHTML = '<p class="ann-loading">Generating design rationale...</p>';
+      panel.style.display = 'block';
+      if (backdrop) backdrop.style.display = 'block';
 
       var cacheKey = num;
       if (annCache[cacheKey]) {
@@ -1314,35 +1312,32 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
     }
 
     function closeAnnotation() {
-      document.getElementById('annPanel').classList.remove('open');
+      var panel = document.getElementById('annPanel');
+      var backdrop = document.getElementById('annBackdrop');
+      if (panel) panel.style.display = 'none';
+      if (backdrop) backdrop.style.display = 'none';
       if (annActive) { annActive.classList.remove('ann-active'); annActive = null; }
     }
 
-    // Wire up prov-name spans as annotation triggers
-    // Use onclick attribute via JS for reliable iOS touch support
+    // Wire up prov-name spans — onclick for maximum iOS compatibility
     document.querySelectorAll('.prov-name').forEach(function(nameEl){
-      nameEl.setAttribute('role','button');
-      nameEl.setAttribute('tabindex','0');
       nameEl.style.cursor = 'pointer';
-      nameEl.style.textDecoration = 'underline';
-      nameEl.style.textDecorationColor = 'rgba(201,168,76,0.4)';
-      nameEl.style.textUnderlineOffset = '3px';
-      nameEl.style.textDecorationThickness = '1px';
-      function triggerAnnotation(){
-        var prov = nameEl.closest('.provision');
+      nameEl.style.borderBottom = '1px solid rgba(201,168,76,0.5)';
+      nameEl.onclick = function(e) {
+        e.stopPropagation();
+        var prov = nameEl.parentNode ? nameEl.parentNode.parentNode : null;
+        if (!prov || !prov.classList.contains('provision')) {
+          prov = nameEl.closest ? nameEl.closest('.provision') : null;
+        }
         if (!prov) return;
-        var numEl = prov.querySelector('.prov-num');
-        var textEl = prov.querySelector('.prov-text');
-        if (!numEl || !textEl) return;
-        var num = numEl.textContent.replace('¶','').replace('§','§').trim();
+        var numSpan = prov.querySelector('.prov-num');
+        var textP = prov.querySelector('.prov-text');
+        if (!numSpan || !textP) return;
+        var num = numSpan.textContent.replace(/¶/g,'').trim();
         var name = nameEl.textContent.trim();
-        var text = textEl.textContent.trim();
+        var text = textP.textContent.trim();
         openAnnotation(num, name, text, prov);
-      }
-      nameEl.addEventListener('click', triggerAnnotation);
-      nameEl.addEventListener('keydown', function(e){
-        if(e.key==='Enter'||e.key===' ') triggerAnnotation();
-      });
+      };
     });
 
     // Close panel on Escape
@@ -1399,7 +1394,8 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
 
 
   <!-- ANNOTATION PANEL -->
-  <div class="ann-panel" id="annPanel" role="complementary" aria-label="Design rationale">
+  <div class="ann-backdrop" id="annBackdrop" onclick="closeAnnotation()"></div>
+  <div class="ann-panel" id="annPanel" role="dialog" aria-modal="true" aria-label="Design rationale">
     <div class="ann-panel-inner">
       <div class="ann-panel-close">
         <span class="ann-panel-label">Design Rationale</span>
