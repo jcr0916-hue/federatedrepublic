@@ -177,9 +177,13 @@
 - Operations against Republic citizens on Republic territory require independent judicial authorization
 
 **§2.3.a — Legat Consul Legislative Veto**
-- LC may veto legislation raising genuine constitutional concern in LC's security domain
-- General or speculative security connection insufficient
-- Either Speaker may petition SC to review veto within 14 days; SC rules within 30 days
+- LC may veto legislation raising genuine constitutional concern in LC's security domain (military operations, intelligence, treaty obligations, border security)
+- Must return bill within 10 business days of final passage with written grounds published to NRS; silence within 10 business days = bill proceeds to enactment
+- General or speculative security connection insufficient — genuine domain concern required
+- Single use per bill: reintroduced bill in subsequent session proceeds without LC interference
+- Either Speaker may petition SC for expedited domain determination; SC must rule within 14 days
+- If SC confirms within domain: Senate may override by 2/3 supermajority; no override = bill lapses for session
+- If SC confirms outside domain: veto void, bill proceeds to enactment without LC assent
 
 **§2.4 — Consular Domain Operations**
 - LC negotiates and concludes trade agreements
@@ -193,20 +197,26 @@
 - Elected by Assembly through confidence mechanism
 
 **§2.6 — Constructive Vote of No Confidence**
-- Assembly removes CC by constructive vote: must simultaneously elect replacement by majority
-- Prevents removal without replacement government ready
+- Assembly removes CC only through constructive vote: single vote simultaneously removes CC and installs named replacement
+- Removal threshold: **60 percent** of full seated Assembly membership (formation threshold remains absolute majority under §2.6.a)
+- A vote that does not name and elect a successor has no constitutional effect
+- CC must remain a serving Assembly member throughout tenure
 
-**§2.6.a — CC Emergency Powers**
-- CC may issue emergency directives in domestic domain pending legislative action
-- Must be ratified by Assembly within 30 days or lapses
-
-**§2.5 (continued) — CC Temporary Incapacity** *(formerly listed separately as §2.6.b; content folded into final paragraph of §2.5)*
-- CC must report to Assembly on use of domain authority within periods defined by statute
+**§2.6.a — Government Formation**
+- Assembly elects CC by absolute majority within statutory period following election or vacancy; constitutional default 21 days
+- If Assembly fails: Acting CC designated by outgoing CC from confirmed ministers or serving Assembly member; published to NRS
+- Senate may designate a serving Assembly member as CC by 2/3 supermajority if Assembly fails within statutory period; Assembly absolute majority terminates Senate designation
+- If no CC elected and Senate has not designated within 45 days: LC nominates serving Assembly member; Senate confirms by simple majority within 21 days; appointee holds full CC authority subject to removal under §2.6
 
 **§2.7 — Suspensive Veto (CC)**
-- CC may suspend legislation for 30 days for reconsideration
-- Legislature may override by simple majority re-passage
-- Not a true veto; only delays
+- CC withholds assent by returning bill within **10 business days** of final passage with written objection (constitutional, fiscal, or operational grounds) published to NRS; silence within 10 business days = bill enacted
+- Bill tabled for **one month** from date of return — regardless of any change in CC office (bypass-proof)
+- Senate may override by **2/3 supermajority** during that month; override = bill enacted without CC assent
+- No Senate override within month = bill lapses for session
+- **Single use per bill**: reintroduced bill that passes both chambers returns to CC with only fiscal/solvency veto, approval, or silence available
+- Solvency objection (bill causes/worsens structural deficit): Assembly may override by simple majority
+- Cannot be used on annual budget, bills implementing constitutional obligations, or emergency legislation
+- Both executives review concurrently from date of final passage
 
 **§2.8 — Duty of Refusal**
 - Both executives must refuse to implement unconstitutional orders
