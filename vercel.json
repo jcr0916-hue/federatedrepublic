@@ -2,12 +2,10 @@
   "version": 2,
   "builds": [
     { "src": "api/navigator.js", "use": "@vercel/node", "config": { "maxDuration": 30 } },
-    { "src": "api/docket.js",    "use": "@vercel/node", "config": { "maxDuration": 60 } },
     { "src": "**/*",             "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/navigator", "dest": "/api/navigator.js" },
-    { "src": "/api/docket",    "dest": "/api/docket.js"    },
     { "src": "/",              "dest": "/index.html"        },
     { "src": "/(.*)\\.(.+)",   "dest": "/$1.$2"            },
     { "src": "/(.*)",          "dest": "/$1.html"           }
