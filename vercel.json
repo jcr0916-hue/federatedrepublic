@@ -1,14 +1,18 @@
 {
+  "version": 2,
   "builds": [
     { "src": "api/navigator.js", "use": "@vercel/node" },
     { "src": "api/advisor.js",   "use": "@vercel/node" },
-    { "src": "api/test.js",      "use": "@vercel/node" }
+    { "src": "api/test.js",      "use": "@vercel/node" },
+    { "src": "**/*",             "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/navigator", "dest": "/api/navigator.js" },
     { "src": "/api/advisor",   "dest": "/api/advisor.js"   },
     { "src": "/api/test",      "dest": "/api/test.js"      },
-    { "src": "/(.*)",          "dest": "/$1"               }
+    { "src": "/",              "dest": "/index.html"        },
+    { "src": "/(.*)\\.(.+)",   "dest": "/$1.$2"            },
+    { "src": "/(.*)",          "dest": "/$1.html"           }
   ],
   "headers": [
     {
