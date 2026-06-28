@@ -39,7 +39,8 @@
     .provision{margin-bottom:1.4rem}
     .prov-label{font-size:0.7rem;margin-bottom:0.25rem;display:flex;align-items:center;gap:0.5rem}
     .prov-num{font-family:'JetBrains Mono',monospace;color:var(--gold);letter-spacing:0.04em}
-    .prov-name{color:var(--navy);font-weight:600;text-transform:uppercase;letter-spacing:0.1em}
+    .prov-name{color:var(--navy);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;border-bottom:1px solid rgba(201,168,76,0.4)}
+    .prov-name:hover{color:var(--gold);border-bottom-color:var(--gold)}
     .prov-text{font-size:0.92rem;line-height:1.85;color:#3a3530}
     .ann-term{background:rgba(201,168,76,0.16);border-bottom:2px solid var(--gold);cursor:help;border-radius:2px;padding:0 2px;transition:background 0.15s;position:relative;display:inline}
     .ann-term:hover{background:rgba(201,168,76,0.3)}
@@ -1319,28 +1320,28 @@ A parliamentary amendment requires a 2/3 supermajority of the full seated member
       if (annActive) { annActive.classList.remove('ann-active'); annActive = null; }
     }
 
-    // Wire up prov-name spans — onclick for maximum iOS compatibility
-    document.querySelectorAll('.prov-name').forEach(function(nameEl){
-      nameEl.style.cursor = 'pointer';
-      nameEl.style.borderBottom = '1px solid rgba(201,168,76,0.5)';
-      nameEl.onclick = function(e) {
-        e.stopPropagation();
-        var prov = nameEl.parentNode ? nameEl.parentNode.parentNode : null;
-        if (!prov || !prov.classList.contains('provision')) {
-          prov = nameEl.closest ? nameEl.closest('.provision') : null;
-        }
+    // Event delegation — one listener catches all prov-name clicks
+    document.addEventListener('click', function(e) {
+      var nameEl = e.target.closest ? e.target.closest('.prov-name') : null;
+      if (nameEl) {
+        var prov = nameEl.closest('.provision');
         if (!prov) return;
         var numSpan = prov.querySelector('.prov-num');
-        var textP = prov.querySelector('.prov-text');
+        var textP   = prov.querySelector('.prov-text');
         if (!numSpan || !textP) return;
-        var num = numSpan.textContent.replace(/¶/g,'').trim();
+        var num  = numSpan.textContent.replace(/¶/g, '').trim();
         var name = nameEl.textContent.trim();
         var text = textP.textContent.trim();
         openAnnotation(num, name, text, prov);
-      };
+        return;
+      }
+      // Close panel on outside click
+      var panel = document.getElementById('annPanel');
+      if (panel && panel.style.display === 'block' && !e.target.closest('#annPanel')) {
+        closeAnnotation();
+      }
     });
 
-    // Close panel on Escape
     document.addEventListener('keydown', function(e){
       if (e.key === 'Escape') closeAnnotation();
     });
