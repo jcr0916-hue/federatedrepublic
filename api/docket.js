@@ -1,6 +1,6 @@
 // Vercel Serverless Function: The Docket
-// Adapted from netlify/edge-functions/docket.ts
-// 5-minute timeout configured in vercel.json
+// generate: Haiku creates a case on the fly (full constitution context)
+// analyze: Sonnet delivers court opinion (only relevant provisions — faster)
 
 const path = require('path');
 
@@ -18,36 +18,39 @@ When asked to generate a case, produce a dispute that:
 Return ONLY a JSON object with this exact structure — no preamble, no markdown fences:
 {
   "title": "Two or three word evocative title",
-  "situation": "Three paragraphs describing the facts. Who the claimant is, what happened, what they are claiming. Written as a neutral statement of facts — no legal argument yet.",
+  "situation": ["Paragraph one of the facts.", "Paragraph two of the facts.", "Paragraph three of the facts."],
   "claimant_name": "Full name of the individual claimant",
   "claimant_position": "One sentence stating what they are claiming and why.",
-  "claimant_argument": "Three paragraphs making the strongest possible constitutional case for the claimant. Cite specific provisions by number. Make this genuinely persuasive.",
+  "claimant_argument": ["Paragraph one of claimant argument.", "Paragraph two.", "Paragraph three."],
   "respondent_name": "The Republic or name of the specific official",
   "respondent_position": "One sentence stating the government's position.",
-  "respondent_argument": "Three paragraphs making the strongest possible constitutional case for the respondent. Cite specific provisions by number. Make this genuinely persuasive.",
+  "respondent_argument": ["Paragraph one of respondent argument.", "Paragraph two.", "Paragraph three."],
   "provisions": [
     {"num": "§1.6", "name": "Equality and Non-Discrimination"},
     {"num": "§2.1", "name": "The Legat Consul — Domain and Term"}
   ]
 }
 
-Key constitutional tensions worth building cases around (choose combinations, not just one):
+Key constitutional tensions worth building cases around:
 - §1.6 non-discrimination vs. §2.1 LC border/immigration authority
-- §1.8 freedom of expression vs. §2.16 CC written direction
+- §1.5 freedom of expression vs. §2.7 CC legislative instruments
 - §1.1 right to courts vs. legislation stripping judicial review (§4.5)
 - §6.2 removal protections vs. §6.1 certification authority
 - §9.14 Monitor removal grounds vs. §1.1 due process
 - §1.19 emergency powers vs. Article I rights floor
 - §2.7 fiscal objection vs. Assembly legislative authority
-- §17.3 entrenchment clause vs. valid amendment process
+- §17.3 amendment consistency vs. valid amendment process
 - §3.6 Senate treaty ratification vs. §2.1 LC foreign domain
 - §2.14 coordination failure vs. domain separation
 - §13.1 citizen referendum vs. §3.1 legislative supremacy
 - §1.21 non-refoulement vs. §2.1 LC immigration authority
-- §4.3 SC quorum vs. §4.5 right to constitutional review
-- §2.8 military orders vs. §1.1 right to courts
+- §4.3 SC composition vs. §4.5 right to constitutional review
+- §2.8 duty of refusal vs. §1.1 right to courts
 - §15.3 mandatory devolution vs. federal authority
-- §16.x indigenous compact rights vs. Republic authority`;
+- §16.3 indigenous compact rights vs. Republic authority
+
+Complete constitution text follows:
+`;
 
 const ANALYSIS_SYSTEM = `You are a Supreme Court justice of the Federated Republic delivering the court's opinion on a constitutional dispute.
 
@@ -56,22 +59,30 @@ The user has rendered a verdict. Now deliver the court's analysis.
 Return ONLY a JSON object with this exact structure — no preamble, no markdown fences:
 {
   "court_verdict": "claimant" or "respondent" or "split",
-  "correct": true or false (whether the user's verdict matches the court's),
-  "opinion": "Four paragraphs. First: restate the core tension precisely. Second: explain why one argument controls over the other — be specific about which provision prevails and why. Third: address the strongest point in the losing argument and explain why it ultimately fails. Fourth: what this case reveals about the constitutional design — what gap, tension, or unresolved question it exposes.",
-  "design_note": "One or two sentences on what this case reveals about the constitution's design — a gap, a tension, or a deliberate choice that produces this outcome.",
+  "correct": true or false,
+  "opinion": ["Paragraph one: restate the core tension precisely.", "Paragraph two: explain which provision controls and why.", "Paragraph three: address the strongest point in the losing argument and why it fails.", "Paragraph four: what this case reveals about the constitutional design."],
+  "design_note": "One or two sentences on what this case reveals about the constitution's design.",
   "provision_texts": [
-    {"num": "§1.6", "name": "Equality and Non-Discrimination", "text": "Full exact text of this provision from the constitution."}
+    {"num": "§1.6", "name": "Equality and Non-Discrimination", "text": "Full exact text of this provision."}
   ]
 }
 
-Be definitive. The court commits to an outcome. Do not hedge. If the case is genuinely ambiguous, say so in the opinion but still state which way the court rules and why.`;
+Be definitive. The court commits to an outcome. Do not hedge. If the case is genuinely ambiguous, say so in the opinion but still state which way the court rules and why.
 
-let cachedConstitutionText = null;
+Relevant constitutional provisions follow:
+`;
 
-function getConstitutionText() {
-  if (cachedConstitutionText) return cachedConstitutionText;
+let cachedData = null;
+
+function getConstitutionData() {
+  if (cachedData) return cachedData;
   const dataPath = path.join(__dirname, '..', 'constitution_data.json');
-  const data = require(dataPath);
+  cachedData = require(dataPath);
+  return cachedData;
+}
+
+function getFullConstitutionText() {
+  const data = getConstitutionData();
   const lines = [];
   for (const article of data) {
     for (const prov of article.provisions) {
@@ -80,8 +91,16 @@ function getConstitutionText() {
       lines.push('');
     }
   }
-  cachedConstitutionText = lines.join('\n').trim();
-  return cachedConstitutionText;
+  return lines.join('\n').trim();
+}
+
+function getProvisionTexts(provisionNums) {
+  const data = getConstitutionData();
+  const allProvisions = data.flatMap(a => a.provisions);
+  return provisionNums.map(num => {
+    const prov = allProvisions.find(p => p.num === num);
+    return prov ? `[${prov.num}] ${prov.name}\n${prov.text}` : `[${num}] (not found)`;
+  }).join('\n\n');
 }
 
 const CORS = {
@@ -103,8 +122,6 @@ module.exports = async (req, res) => {
   const action = body.action;
   if (!action) return res.status(400).json({ error: 'Action required' });
 
-  const constitutionText = getConstitutionText();
-
   try {
     if (action === 'generate') {
       const input = (body.input || '').trim() || 'surprise me';
@@ -117,8 +134,8 @@ module.exports = async (req, res) => {
         headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
         body: JSON.stringify({
           model: 'claude-haiku-4-5-20251001',
-          max_tokens: 1200,
-          system: CASE_SYSTEM + '\n\n' + constitutionText,
+          max_tokens: 1500,
+          system: CASE_SYSTEM + getFullConstitutionText(),
           messages: [{ role: 'user', content: userMessage }],
         }),
       });
@@ -138,7 +155,17 @@ module.exports = async (req, res) => {
       const verdict = body.verdict;
       if (!caseData || !verdict) return res.status(400).json({ error: 'case_data and verdict required' });
 
-      const userMessage = `Case: ${caseData.title}\nProvisions at issue: ${(caseData.provisions||[]).map(p=>`${p.num} ${p.name}`).join(', ')}\nClaimant (${caseData.claimant_name}): ${caseData.claimant_position}\nRespondent (${caseData.respondent_name}): ${caseData.respondent_position}\nUser ruled in favor of: ${verdict}\n\nDeliver the court's opinion.`;
+      // Only send the specific provisions at issue — much faster than full constitution
+      const provNums = (caseData.provisions || []).map(p => p.num);
+      const relevantProvisions = getProvisionTexts(provNums);
+
+      const userMessage = `Case: ${caseData.title}
+Provisions at issue: ${provNums.join(', ')}
+Claimant (${caseData.claimant_name}): ${caseData.claimant_position}
+Respondent (${caseData.respondent_name}): ${caseData.respondent_position}
+User ruled in favor of: ${verdict}
+
+Deliver the court's opinion.`;
 
       const upstream = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
@@ -146,7 +173,7 @@ module.exports = async (req, res) => {
         body: JSON.stringify({
           model: 'claude-sonnet-4-6',
           max_tokens: 1000,
-          system: ANALYSIS_SYSTEM + '\n\n' + constitutionText,
+          system: ANALYSIS_SYSTEM + relevantProvisions,
           messages: [{ role: 'user', content: userMessage }],
         }),
       });
