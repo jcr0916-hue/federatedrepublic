@@ -265,8 +265,11 @@
 - Members capped at 6 consecutive terms (12 years) before cooling-off cycle
 
 **§3.2 — Assembly Operations**
-- Member financial disclosures to LM
-- Ethics committee assessments within LM framework
+- Member financial disclosures to LM; ethics committee assessments within LM framework
+- Expulsion by 2/3 of full seated membership; published to NRS; effective immediately
+- State recall mechanism: must be punitive or political process; must not violate Constitution; final decision by State legislature or eligible voters; no executive/admin/court recall alone; recalled seat treated as vacant
+- Cooling-off: 6 consecutive terms maximum before sitting out one full electoral cycle
+- **Early departure clause:** resignation, expulsion, or state recall at any point during a term counts as full term for cooling-off purposes
 
 **§3.3 — Redistricting**
 - State draws; LM reviews; Elections Panel draws interim map where State's map fails
@@ -278,8 +281,11 @@
 - Ethics committee assessments by LM
 
 **§3.5 — The Senate**
-- Two seats per State; no Territory Senate seats
-- Staggered 6-year terms
+- Two seats per State; no Territory Senate seats; staggered 6-year terms
+- Expulsion by 2/3 of full Senate membership
+- State recall mechanism: same three-principle framework as §3.2 (punitive/political; must not violate Constitution; State legislature or eligible voters decide; no executive/court/admin alone)
+- Cooling-off: 2 consecutive terms maximum before sitting out one full term
+- **Early departure clause:** resignation, expulsion, or state recall at any point during a term counts as full term for cooling-off purposes
 
 **§3.6 — Treaty and Trade Agreement Ratification**
 - Treaties: 2/3 Senate
@@ -308,8 +314,9 @@
 - See also §9.14 for Monitor-initiated path
 
 **§3.11 — Inviolability of Electoral Mandates**
-- Elected members cannot be removed by executive action
-- Only Assembly-initiated removal under §3.10 or criminal conviction
+- Elected members cannot be removed by executive action; mandate is inviolable except by specified mechanisms
+- Permitted exceptions: expulsion under §3.2 or §3.5; recall under state law as recognized in §3.2 or §3.5; Assembly-initiated removal under §3.10; criminal conviction
+- **Criminal non-immunity:** expulsion, recall, and removal under any constitutional provision are civil and political processes; they do not protect the removed officer from criminal prosecution or civil liability for underlying conduct
 
 **§3.12 — Disqualifying Offense**
 - Federal felony conviction disqualifies from holding federal office
