@@ -449,6 +449,13 @@
 
 ## ARTICLE VIII — ELECTORAL FINANCE
 
+**§7.4 — Electoral Supermajority Threshold**
+- 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations
+- Applies to: LC first-round threshold (§7.2); SC public confirmation under Senate bypass (§4.4.a); constitutional officer removal by public election (§9.14)
+- Legislature may not raise or lower this threshold without constitutional amendment
+- Does not govern optional referendum (§13.1, simple majority) or citizen initiative (§13.2, 60% with 50% participation)
+
+
 **§8.1 — Disclosure Requirements**
 - All contributions above de minimis must be publicly disclosed
 - Published to NRS on disclosure schedule defined by statute
@@ -633,11 +640,6 @@
 **§13.2 — Citizen Legislative Initiative**
 - Citizens may propose legislation by petition of 10% of eligible voters
 - Legislature must act or put to referendum within period defined by statute
-
-**§13.3 — Executive Recall**
-- Citizens may recall LC or CC by petition of 15% of eligible voters
-- Recall referendum requires 60% to succeed with 50% participation
-- Three devolution paths if recall succeeds (established by statute)
 
 **§13.4 — Recall Restrictions**
 - No recall in first 12 months or last 12 months of term
