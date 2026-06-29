@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fallback — The Federated Republic</title>
+  <meta name="description" content="An Assembly that cannot organize. A Senate that cannot agree. A Legat Consul's nominee rejected. What the constitution does at each stage — and what governing looks like a year on.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid #1B2A4A}
+.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:0.8rem}
+.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:#1B2A4A;line-height:1.1;margin-bottom:1rem}
+.scenario-subtitle{font-size:0.95rem;color:#7a7060;font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:#1B2A4A;color:#C9A84C;padding:0.25rem 0.6rem;border-radius:2px}
+.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:#1B2A4A;margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid #d4c9b0}
+.scenario-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#1B2A4A;margin:2rem 0 0.75rem}
+.beat{background:#EDE7D8;border-left:3px solid #C9A84C;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}
+.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#7a7060;margin-bottom:0.4rem}
+.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#1B2A4A;margin-bottom:0.8rem}
+.beat p{margin-bottom:0.8rem;font-size:0.92rem}
+.beat p:last-child{margin-bottom:0}
+.finding{background:#1B2A4A;color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}
+.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;margin-bottom:0.8rem}
+.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+.finding p:last-child{margin-bottom:0}
+.stage-marker{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:white;background:#C9A84C;padding:0.2rem 0.6rem;display:inline-block;margin-bottom:0.6rem}
+.assembly-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:0.88rem}
+.assembly-table th{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:#7a7060;text-align:left;padding:0.5rem 0.75rem;border-bottom:2px solid #1B2A4A}
+.assembly-table td{padding:0.5rem 0.75rem;border-bottom:1px solid #d4c9b0;font-size:0.88rem}
+.assembly-table td:last-child{font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:#1B2A4A}
+.scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+.scenario-nav a:hover{opacity:1;color:var(--navy)}
+@media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}.beat{padding:1rem 1.2rem}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <main id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Dual Executive · Government Formation · §2.6 · §2.6.a</span>
+      <h1 class="scenario-title">The Fallback</h1>
+      <p class="scenario-subtitle">An Assembly that cannot organize. A Senate that cannot agree. A Legat Consul's nominee rejected by a single vote. The constitution runs through every fallback in sequence — and then the Republic has to govern for a year. This scenario follows each stage to its failure, examines what the seniority fallback produces, and asks whether the resulting government can function.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.6.a Government Formation</span>
+        <span class="prov-tag">§2.6 Constructive Vote of No Confidence</span>
+        <span class="prov-tag">§2.5 The Civic Consul</span>
+        <span class="prov-tag">§3.1 The Legislature</span>
+        <span class="prov-tag">§12.8 Fiscal Equalization</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <h2>The Situation</h2>
+
+      <p>The general election has returned an Assembly with no majority coalition. Five formations hold seats. None can reach the 251-vote absolute majority required to elect a Civic Consul alone. No two-formation combination reaches 251 without the agreement of either the Progressive Coalition or the Conservative Alliance — the two largest formations — and they have spent the previous electoral cycle in open opposition.</p>
+
+      <table class="assembly-table">
+        <thead><tr><th>Formation</th><th>Seats</th><th>Leader / CC Nominee</th></tr></thead>
+        <tbody>
+          <tr><td>Progressive Coalition</td><td>198</td><td>Nela Vorn</td></tr>
+          <tr><td>Conservative Alliance</td><td>187</td><td>Dar Essem</td></tr>
+          <tr><td>Regional Independence Bloc</td><td>62</td><td>Sen. Torev Anse (bloc chair)</td></tr>
+          <tr><td>Labor & Social State Party</td><td>31</td><td>—</td></tr>
+          <tr><td>Independents / Minor</td><td>22</td><td>—</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>500</strong></td><td>Absolute majority: 251 · Removal threshold (60%): 300</td></tr>
+        </tbody>
+      </table>
+
+      <p>The viable arithmetic for absolute majority: Progressive (198) + Regional (62) = 260. Conservative (187) + Regional (62) = 249 — two votes short. Progressive + Labor (198 + 31) = 229. The Regional Independence Bloc is the kingmaker. They know it. Their price: complete devolution of the federal fiscal equalization allocation for three Territories to direct state administration, bypassing the EM's formula entirely. The Progressives will not accept a modification of the EM's constitutional mandate by legislative side-deal. Negotiations collapse on Day 18.</p>
+
+      <h2>Stage One — Assembly Election</h2>
+
+      <div class="stage-marker">§2.6.a — Primary mechanism</div>
+
+      <div class="beat">
+        <div class="beat-label">Days 1–21 · Constitutional default period</div>
+        <div class="beat-title">The Assembly must elect a Civic Consul by absolute majority within the period defined by statute; constitutional default is 21 days.</div>
+        <p>Day 5: Vorn nominated by the Progressive Coalition. 198 votes. Short of 251. Day 7: Essem nominated by the Conservative Alliance. 187 votes. Short. Days 8–17: Coalition negotiations. Regional Bloc holds its position. Progressive Coalition will not grant EM formula modification by legislative side-deal — they argue this would require a constitutional amendment, not a statute.</p>
+        <p>Day 18: Regional Bloc negotiations collapse. Days 19–21: Two further nominations — Vorn again (198 votes), a Labor compromise candidate (229 votes, Progressive + Labor, still short). Neither reaches 251.</p>
+        <p>Day 21: The constitutional default period expires. No absolute majority. The most senior confirmed minister from the outgoing government — Deputy Minister Cael Orren, who held the Infrastructure portfolio — assumes Acting Civic Consul status. Published to the NRS. The 45-day Senate window opens.</p>
+      </div>
+
+      <p>The Assembly's failure is specific: the Regional Bloc's price exceeded what the Progressives would pay constitutionally. This is not a breakdown of governance — Acting CC Orren continues domestic operations — but it is a visible institutional failure. The press covers little else. The Regional Bloc is widely criticized; Anse's formation counters that the Progressives refused to negotiate seriously.</p>
+
+      <h2>Stage Two — Senate Designation</h2>
+
+      <div class="stage-marker">§2.6.a — First fallback</div>
+
+      <div class="beat">
+        <div class="beat-label">Days 22–66 · 45-day Senate window</div>
+        <div class="beat-title">The Senate may designate a serving Assembly member as Civic Consul by 2/3 supermajority if the Assembly fails to elect within the statutory period.</div>
+        <p>The Senate has 100 members. 2/3 = 67 votes. Senate composition: 38 Progressive, 34 Conservative, 17 Regional, 8 Labor, 3 Independent. For 67 votes the Progressives and Conservatives need to agree — they hold 72 seats together.</p>
+        <p>Day 29: A cross-factional working group in the Senate proposes a compromise candidate: Senior Senator Edna Halveth of Delvane Province, a 16-year Senate veteran with a reputation for fiscal conservatism and no strong party affiliation. The Progressives will support her. The Conservatives want assurances about her approach to the EM's fiscal mandate. Halveth gives a written statement: she will implement the EM's findings as constitutionally required. Conservative senators split — 19 support her, 15 oppose, 0 abstain.</p>
+        <p>Day 44: The Senate votes on Halveth's designation. 38 (Progressive) + 8 (Labor) + 17 (Regional) + 19 (Conservative) + 3 (Independent) = 85. Exceeds 67. Motion passes 85–15.</p>
+      </div>
+
+      <p>Halveth is designated CC by Senate supermajority on Day 44. The designation is published to the NRS. She assumes full CC authority — but she was designated, not elected. She has no working coalition in the Assembly. The Progressives support her; the Conservatives who voted against her designation do not. She governs with 38 + 8 + 3 = 49 seats of reliable support in an Assembly requiring 251 to pass legislation.</p>
+
+      <div class="finding">
+        <div class="finding-label">What Senate Designation Produces</div>
+        <p>Halveth's CC is constitutionally legitimate and legally fully authorised. She can appoint ministers, submit the budget, manage the civil service. What she cannot do is pass legislation without assembling a supermajority coalition for every bill. The Assembly's 60% removal threshold (300 votes) protects her — the Conservative Alliance would need to flip most of the field to a named successor to remove her. But protection from removal and capacity to govern are not the same thing.</p>
+        <p>This is the scenario's first design test. The constitution produces a functioning government at Senate designation. It does not produce a governing mandate. The two are deliberately separated: the mandate comes from the formation process, and the formation process failed.</p>
+      </div>
+
+      <p><strong>But this scenario runs every fallback.</strong> To see the full cascade, we branch: assume the Senate does not reach 67 votes. Halveth gets 64 — three short. The Conservative bloc holds at 22 against, Labor shifts two votes late, the math fails. Day 66: the 45-day Senate window closes without designation. The LC nomination window opens.</p>
+
+      <h2>Stage Three — Legat Consul Nomination</h2>
+
+      <div class="stage-marker">§2.6.a — Second fallback</div>
+
+      <div class="beat">
+        <div class="beat-label">Days 67–108 · LC nomination + Senate confirmation</div>
+        <div class="beat-title">The Legat Consul nominates a serving Assembly member within 21 days, published to the NRS; the Senate confirms by simple majority within 21 days of nomination.</div>
+        <p>LC Kira Dahl has been in office for 49 days. She is managing a foreign affairs portfolio that includes an active crisis on the eastern lake and a Caldris water treaty renewal approaching its deadline. She does not want to spend political capital on domestic formation politics. She nominates on Day 17 of her window — Day 83 overall.</p>
+        <p>Her nominee: Sela Marren, 12-year Assembly veteran from the Labor & Social State Party, chair of the Assembly Finance Subcommittee on Fiscal Transfers. Marren knows the EM's equalization formula in technical detail. She has no declared enemies. She did not seek the CC role. The LC picked her because she is trusted across formations, will focus on administration rather than political positioning, and will not complicate the LC's foreign affairs operation.</p>
+        <p>The NRS record of the nomination publishes at 0912 on Day 83. The Senate has 21 days to confirm by simple majority.</p>
+        <p>Day 97: Senate vote on Marren's confirmation. 51 votes needed. Progressive senators (38) are broadly supportive; Labor (8) votes unanimously yes; three Independents vote yes. That is 49. Two Regional senators cross — 51. Motion passes 51–49.</p>
+      </div>
+
+      <p>Marren is confirmed CC. She assumed full CC authority on Day 97. She was nominated by the executive branch's other half and confirmed by the slimmest possible Senate majority. The Assembly did not choose her. The Assembly cannot easily remove her — 300 votes with a named successor. She governs under the same constraints as the Senate designee but with even less political legitimacy in the Assembly chamber she must work with every day.</p>
+
+      <p><strong>For the complete cascade:</strong> Assume two Regional senators don't cross. The vote is 49–51. Marren fails confirmation by two votes. Day 104: 21 days from nomination have elapsed. Seniority fallback triggers.</p>
+
+      <h2>Stage Four — Seniority Fallback</h2>
+
+      <div class="stage-marker">§2.6.a — Final fallback</div>
+
+      <div class="beat">
+        <div class="beat-label">Day 104 · Constitutional operation</div>
+        <div class="beat-title">Where the Legat Consul does not nominate within 21 days or the Senate does not confirm within 21 days of nomination, the longest-serving Assembly member who otherwise meets the requirements for Civic Consul assumes the role by constitutional operation, published to the NRS.</div>
+        <p>The Elections Panel identifies the qualifying Assembly member with longest continuous service. That member is Wren Cadell of Halvern District — 23 years of unbroken Assembly service, currently chair of the Transportation and Infrastructure Committee. She is 61 years old. She had intended to serve one more term before retiring. She did not seek the Civic Consul role. She did not campaign for it. She does not particularly want it.</p>
+        <p>The Elections Panel publishes the designation to the NRS at 0914 on Day 104. Cadell is Civic Consul by constitutional operation. No nomination required. No confirmation required. No consent required beyond her continued Assembly membership.</p>
+      </div>
+
+      <p>By 0930 on Day 104, every formation in the Assembly has received the NRS notification. By noon, every senior political staff member in Verentum has read it. By evening, the political situation is clear to everyone: the Assembly is stuck with a CC they did not choose, and the only way out requires them to solve a problem they have now failed to solve four times.</p>
+
+      <div class="finding">
+        <div class="finding-label">The Seniority Fallback's Constitutional Logic</div>
+        <p>The fallback is not designed to produce the best possible Civic Consul. It is designed to produce a Civic Consul — immediately, automatically, without further process. The provision cannot fail. There is always a longest-serving member. The designation cannot be blocked, delayed, or contested except on the narrow ground that the eligibility criteria were misapplied.</p>
+        <p>The 60% removal threshold applies to Cadell exactly as it applies to any other CC. To remove her, the Assembly needs 300 votes behind a named successor. The same coalition arithmetic that failed four times now stands between the Assembly and relief from the consequence of its failure. This is not an accident. The harder removal threshold creates the pressure the formation sequence was supposed to create before it collapsed. The constitution is not punishing the Assembly. It is holding the Assembly to the standard it declined to meet voluntarily.</p>
+        <p>Cadell's appointment is published to the NRS. She is Civic Consul. The Republic has a government. It may not be the government anyone wanted.</p>
+      </div>
+
+      <h2>A Year On</h2>
+
+      <h3>What Cadell Governs</h3>
+
+      <p>Wren Cadell has been a legislator for 23 years. She is not an executive. She knows the budget process from the committee side — she has scrutinized it, amended it, voted on it — but she has never prepared and submitted one. She appoints ministers from the Assembly membership, choosing people with administrative backgrounds rather than political ambitions. Her ministerial team is competent and unglamorous. They hold weekly briefings she actually attends.</p>
+
+      <p>Her governing strategy is caution. She continues existing programs. She prepares and submits the budget — a conservative budget that maintains current expenditure without new initiatives. She manages the civil service. She exercises her domain authority under §2.5. She does not introduce significant domestic legislation because she has no coalition to pass it. The Republic's domestic machinery runs. The lights stay on. The EM's fiscal equalization transfers happen on schedule. Courts sit. Civil service salaries are paid. The social state programs continue.</p>
+
+      <p>What she does not do: govern in the ambition sense. No major domestic policy initiative leaves her office. The Assembly's formations — none of which chose her — are not going to help her pass anything significant, and she is wise enough not to spend what little credibility she has on bills that will fail in committee.</p>
+
+      <h3>The Assembly's Reaction</h3>
+
+      <p>For the first two months, the Assembly formations are paralyzed by embarrassment and mutual recrimination. The Progressive Coalition blames the Regional Bloc. The Conservative Alliance blames the Progressives for refusing to negotiate. The Regional Bloc blames the Senate for failing to confirm Halveth. Nobody accepts responsibility for the fact that the arithmetic never added up because nobody made it add up.</p>
+
+      <p>By Month Three, the political calculus begins to shift. Cadell's budget has made clear what a CC without coalition leverage allocates: the Regional Bloc receives exactly the statutory minimum on fiscal transfers — no supplementals, no negotiated additions, nothing above what the EM's formula requires. This was never punitive on Cadell's part. She simply doesn't owe them anything. The Regional Bloc, which had demanded full fiscal devolution in Stage One and settled for their statutory minimum, is now running the numbers on what they gave up.</p>
+
+      <p>Month Six: The Regional Bloc approaches the Progressive Coalition with a revised price. They will accept a binding legislative commitment on Korda Territory infrastructure funding — achievable through normal budget process — in exchange for supporting Nela Vorn as a named successor under §2.6. This is substantially less than their original demand. The Progressive Coalition's response: Vorn will include Regional infrastructure priorities in her first budget submission if elected CC. Not guaranteed. Not statutory. A political commitment.</p>
+
+      <p>Month Eight, First Attempt: Assembly constructive no-confidence motion naming Nela Vorn as successor. Progressive (198) + Regional (62) + Labor (31) = 291. Short of 300 by nine votes. The motion fails. Cadell remains CC. The Conservative Alliance, which would have pushed the total to 300 if four of its members had crossed, declined. They preferred Cadell — who can't pass anything — to Vorn, who might.</p>
+
+      <h3>The Resolution</h3>
+
+      <p>Month Eleven: A second constructive motion. This time the Conservative Alliance calculates differently. Cadell's budget for Year Two has underfunded two infrastructure programs the Conservative Alliance has championed for years — not by design, but because Cadell's approach to budgeting is to maintain current expenditure and nothing in those programs' baseline justified increase. The Conservative Alliance faces its own constituencies asking why the programs are stalled. Some senior Conservative members begin quiet conversations with Progressive counterparts about a cross-formation agreement.</p>
+
+      <p>The agreement: Vorn commits to including Conservative infrastructure priorities alongside Regional ones in her first budget. She will not be bound by statute to this — it is a political commitment — but the conversation is conducted seriously and both sides understand the stakes. Seven Conservative Assembly members announce support for the Vorn nomination.</p>
+
+      <p>Day 341 — Month Eleven of Cadell's tenure: Assembly constructive no-confidence motion. Progressive (198) + Regional (62) + Labor (31) + 7 Conservative crossovers = 298. Still two short. The tension in the chamber is visible. Two Independent members who have been watching negotiations for weeks announce their support at 1447 hours. The motion passes 300–200. Exactly the threshold. Not a vote to spare.</p>
+
+      <p>Cadell thanks the Assembly. She means it. She returns to the Infrastructure Committee. Nela Vorn is Civic Consul on Day 341 — fourteen months after the election that should have produced a CC in twenty-one days.</p>
+
+      <div class="finding">
+        <div class="finding-label">What This Scenario Tests — and What It Reveals</div>
+        <p>The formation sequence is not designed to produce the best CC. It is designed to produce one. The cascade — Assembly, Senate, LC, seniority — guaranteed that outcome at every stage. What changed across those stages was mandate, legitimacy, and governing capacity. A coalition CC (Stage One) would have had a working majority and a legislative program. A Senate-designated CC (Stage Two) would have had cross-factional credibility without Assembly coalition. An LC-nominated CC (Stage Three) would have had executive branch alignment but Assembly distance. The seniority appointee (Stage Four) had full constitutional authority and no political mandate at all. All four options governed. None required an emergency provision or a constitutional suspension.</p>
+        <p>The more indirect the formation path, the more the CC's stability rests on the 60% removal threshold rather than political coalition. This is counterintuitive: a CC with less political legitimacy is harder to remove, not easier, because the Assembly must not only agree to remove but agree on a named replacement — and that agreement is exactly what they failed to achieve in the first place. The seniority fallback locked in the Assembly's own incoherence as the condition for its relief.</p>
+        <p>The year-on examination surfaces the provision's real pressure mechanism. Cadell did not govern badly. She governed cautiously, maintained constitutional obligations, and produced a functional if unambitious domestic executive. What made the Assembly finally solve the problem was not constitutional compulsion but fiscal consequence: the Regional Bloc discovered that a CC who owes them nothing allocates exactly what the formula requires and no more. The constitution created the conditions for that discovery. The Assembly drew its own conclusions.</p>
+        <p>The design observation worth preserving: the fallback sequence is not a punishment mechanism. It is a graceful degradation chain. Each stage produces a government. The quality of that government — its mandate, its coalition, its legislative capacity — degrades with each stage. The constitution does not tell the Assembly to organize. It shows the Assembly what happens if they don't, stage by stage, with increasing clarity, until the consequence is sitting in the Civic Consul's chair running their fiscal transfers by formula.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav"><a href="scenarios.html">← All Scenarios</a></div>
+  </main>
+
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+</body>
+</html>
