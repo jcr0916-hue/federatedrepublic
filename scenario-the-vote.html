@@ -1,22 +1,46 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Vote — The Federated Republic</title>
-  <meta name="description" content="Year 9. Carenthal's independence referendum passes both thresholds. The Elections Panel publishes to the NRS. The election is irrevocable from the moment of publication. What happens next.">
+  <meta name="description" content="The Civic Consul returns a bill within 10 business days. It is tabled for one month. The Senate tries for 2/3. Falls short. The bill lapses. §2.7's suspensive veto from start to finish.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <style>
-main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}.scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}.beat{background:var(--cream2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}.beat p{margin-bottom:0.8rem;font-size:0.92rem;line-height:1.8}.finding{background:var(--navy);color:var(--white);padding:1.5rem;margin:2rem 0;border-radius:4px}.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}.finding p:last-child{margin-bottom:0}.scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}.scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}.scenario-nav a:hover{opacity:1;color:var(--navy)}@media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}.beat{padding:1rem 1.2rem}}
+main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+.scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+.beat{background:#EDE7D8;border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}
+.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+.beat p{margin-bottom:0.8rem;font-size:0.92rem;line-height:1.8}
+.beat p:last-child{margin-bottom:0}
+.finding{background:var(--navy);color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}
+.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+.finding p:last-child{margin-bottom:0}
+.scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+.scenario-nav a:hover{opacity:1;color:var(--navy)}
+@media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}.beat{padding:1rem 1.2rem}}
   </style>
-</head><body>
+</head>
+<body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   <nav>
     <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
     <div class="nav-links">
       <a href="annotated.html">Annotated Edition</a>
       <a href="scenarios.html" class="active">Scenarios</a>
-      <a href="torenthia.html">The World</a>
       <a href="diagrams.html">Diagrams</a>
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="sources.html">Sources</a>
@@ -29,99 +53,106 @@ main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-
   <div class="mobile-menu" id="mobileMenu">
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
-    <a href="torenthia.html">The World</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
     <a href="contact.html">Contact</a>
     <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
   </div>
 
   <main id="main-content">
     <div class="scenario-meta">
-      <span class="scenario-tag">States &amp; Territories · §15.9 · Voluntary State Independence</span>
+      <span class="scenario-tag">Legislative Process · §2.7 · Suspensive Veto</span>
       <h1 class="scenario-title">The Vote</h1>
-      <p class="scenario-subtitle">Year 9. Carenthal holds an independence referendum. 61.3% in favor, 62.1% participation. Both thresholds met. The Elections Panel certifies and publishes to the NRS. The election is irrevocable from that moment. What the constitution requires next — and what it prohibits.</p>
+      <p class="scenario-subtitle">The Legislature passes a bill. The Civic Consul returns it within 10 business days. It is tabled for one month — regardless of what happens to the CC in that time. The Senate tries for 2/3. Falls short. The bill lapses for the session. What each step requires, what each silence means, and what the next session can and cannot do.</p>
       <div class="provisions-tested">
-        <span class="prov-tag">§15.9 Voluntary State Independence</span>
-        <span class="prov-tag">§11.1 Elections Panel</span>
-        <span class="prov-tag">§10.1 NRS Publication</span>
-        <span class="prov-tag">§2.14 Council of Ministers</span>
-        <span class="prov-tag">§2.1 Legat Consul</span>
-        <span class="prov-tag">§2.5 Civic Consul</span>
+        <span class="prov-tag">§2.7 Suspensive Veto</span>
+        <span class="prov-tag">§3.1 The Legislature</span>
+        <span class="prov-tag">§2.5 The Civic Consul</span>
+        <span class="prov-tag">§9.1 The Executive Monitor</span>
       </div>
     </div>
 
     <div class="scenario-body">
 
-      <p>Carenthal's independence movement had been building for six years before the State legislature voted on whether to submit the question to citizens. The arguments were cultural, economic, and geographic — a coastal State that had always felt distinct from the interior, whose commercial relationships ran more naturally across the Western Sea than toward Eldenvar. None of that was constitutionally relevant. What mattered was whether the legislature could resolve by 2/3 majority to hold the referendum, and whether the referendum itself could clear both thresholds: 60% of votes cast, and 60% participation among eligible voters.</p>
+      <h2>The Situation</h2>
 
-      <p>The legislature resolved 41-20. Two-thirds required 40.67 — the vote cleared it by one. The referendum was called. Under §15.9, the Republic's response was defined: it must provide factual information about the independence process upon request. It may not prefer, discourage, or offer inducements toward any outcome. The CC's office published a twelve-page factual summary to the NRS. Nothing else was constitutionally permitted.</p>
+      <p>The Assembly and Senate have passed the Neldrath Infrastructure Investment Act — a major fiscal bill allocating funds for territorial infrastructure across three states. The bill passed the Assembly 274–226 and cleared the Senate 61–39. It now goes to the Civic Consul and the Legat Consul concurrently. Both executives receive the bill from the date of final passage.</p>
 
-      <p>Referendum day: 62.1% of Carenthal's eligible voters participated. 61.3% voted in favor of independence. Both thresholds were met. The Elections Panel certified the result and published the independence petition to the NRS.</p>
+      <p>The CC, Ivar Sonn, has reservations. The bill allocates significantly more to Neldrath than the EM's equalization formula would produce for equivalent need. Sonn believes the Legislature has been politically generous to a swing-state coalition rather than following the constitutional fiscal framework. He is considering his options.</p>
+
+      <h2>The Objection</h2>
 
       <div class="beat">
-        <div class="beat-label">§15.9 — Irrevocability</div>
-        <div class="beat-title">The election is irrevocable from the moment of NRS publication.</div>
-        <p>The NRS publication is not a formality. It is the constitutional moment at which Carenthal's independence election becomes permanent. From that moment, neither Carenthal's legislature nor its citizens could withdraw the petition. The Republic could not decline to process it. No court could suspend it. The constitution does not provide a path back — by design. The irrevocability threshold is NRS publication, not legislative ratification or transition agreement. Both of those come later and may fail. But the election itself cannot be undone.</p>
-        <p>This is the most consequential feature of §15.9's Stage One. It means the threshold for calling a referendum must be understood as the point of no return, not a request for consideration. Carenthal's legislature, in voting 41-20, committed the State to an irreversible constitutional process the moment the referendum passed.</p>
+        <div class="beat-label">Day 8 of 10 · Written objection</div>
+        <div class="beat-title">The CC exercises the suspensive veto by returning the bill within 10 business days of final passage with a written statement of objection specifying constitutional, fiscal, or operational grounds, published to the NRS.</div>
+        <p>Sonn returns the bill on Day 8 with a three-page objection published to the NRS. His grounds: the allocation mechanism bypasses the EM's §12.8 equalization formula without statutory authority to do so; the bill creates a fiscal precedent for political rather than formula-based territorial investment; and the total appropriation would cause or materially worsen a structural deficit in Year 14.</p>
+        <p>The third ground — structural deficit — simultaneously triggers the solvency objection mechanism. Sonn has invoked both instruments in the same return. The solvency objection can be overridden by Assembly simple majority at any time; the suspensive veto proceeds to Senate consideration under separate rules.</p>
+        <p>The bill is tabled from the date of return. It cannot be enacted, amended, or withdrawn during the tabling period.</p>
       </div>
 
-      <div class="beat">
-        <div class="beat-label">§15.9 — Stage Two: Recusal and the Chamber Math</div>
-        <div class="beat-title">Both chambers vote within 90 days. The petitioning State's own members are recused.</div>
-        <p>Within 90 days of NRS publication, both chambers were required to hold a concurrent ratification vote. The required threshold — 60% — was calculated from the remaining seated members after recusal, not from the full chamber. Carenthal held 3 Assembly districts and 2 Senate seats. Those 5 members were recused from the vote entirely.</p>
-        <p>Assembly: 200 total seats, 3 recused, 197 eligible. 60% threshold: 118 votes needed. The Assembly voted 124 in favor, 73 opposed. The threshold cleared.</p>
-        <p>Senate: 24 total seats (12 States, 2 each), 2 recused, 22 eligible. 60% threshold: 14 votes needed. The Senate voted 15 in favor, 7 opposed. The threshold cleared.</p>
-        <p>The recusal mechanism is not a curiosity — it is load-bearing. It means a State seeking independence cannot help ratify its own departure. The vote must reflect the will of the Republic that remains, not the will of the State leaving it. A State with high political pull in both chambers might clear Stage One but find Stage Two harder. A State that is genuinely peripheral — as Carenthal was — may find Stage Two easier than a more integrated one would.</p>
-      </div>
+      <h2>The Bypass That Isn't</h2>
+
+      <p>On Day 11, the Progressive Coalition — which holds 198 Assembly seats and authored the bill — moves a constructive no-confidence motion against Sonn, naming a preferred replacement. The motion attracts 241 votes. Short of the 300 required under §2.6. It fails.</p>
+
+      <p>Even if it had succeeded, it would not have helped. The tabling attaches to the bill, not the officer. A new CC installed on Day 11 inherits a tabled bill that cannot be enacted until the Senate acts or the month expires. The constitution anticipated this: the bypass-proof mechanism runs regardless of any change in the office of Civic Consul.</p>
+
+      <h2>The Senate Override Attempt</h2>
 
       <div class="beat">
-        <div class="beat-label">§15.9 — What Happens If Either Chamber Fails</div>
-        <div class="beat-title">Failure or non-vote within 90 days: the petition lapses. Stage One may restart without restriction.</div>
-        <p>If the Assembly had voted 117-80 — one short of the 118 needed — the petition would have lapsed. If either chamber had simply failed to schedule a vote within 90 days, the petition would have lapsed. In either case, Carenthal could immediately re-initiate Stage One: another legislative resolution, another referendum, another NRS publication. There is no five-year bar on restarting after a Stage Two failure — that bar applies only to a failed Stage One referendum on the same grounds. A Stage Two failure sends the process back to Stage One; Stage One succeeds again; Stage Two opens again.</p>
-        <p>This matters. It means that a determined State can persist through repeated Stage Two failures, building political pressure on the chambers until the math changes. The constitution does not cap the number of attempts. It only imposes the 90-day window and the recusal-adjusted threshold each time.</p>
+        <div class="beat-label">Days 1–30 of tabling period · Senate consideration</div>
+        <div class="beat-title">The Senate may override the suspensive veto by 2/3 supermajority during the one-month tabling period.</div>
+        <p>The Senate has 100 members. Override requires 67 votes. The bill passed the Senate 61–39 on first passage — six votes short of what override requires. Senate leadership immediately begins working the six-vote gap.</p>
+        <p>Day 19: Three senators who voted against the bill announce they will support override on the grounds that the CC's fiscal objection, while legally valid, overstates the structural deficit risk. The gap is now three votes.</p>
+        <p>Day 24: The Progressive Coalition offers Neldrath senators a supplemental fiscal commitment in the next budget cycle in exchange for their override support. Two Neldrath senators confirm yes. Gap: one vote.</p>
+        <p>Day 29: The final Neldrath senator reviews the EM's preliminary assessment of Sonn's deficit projection. The EM, responding to a request from the Senate Fiscal Committee, indicates Sonn's structural deficit projection may overstate the risk by a factor of 1.4 to 1.8 — the bill is unlikely to cause a structural deficit under current projections. The senator announces no vote on override. Final Senate tally: 66–34. The override fails by one vote.</p>
       </div>
 
+      <h2>The Lapse</h2>
+
+      <p>Day 30: The tabling period expires. No Senate override has succeeded. The Neldrath Infrastructure Investment Act lapses for the session. The bill is constitutionally dead until it can be reintroduced. The NRS records the lapse at 0001 hours.</p>
+
+      <p>The solvency objection, which ran alongside the suspensive veto, produced a permanent NRS record of Sonn's deficit projection and the EM's preliminary response. That record now exists regardless of what happens to the bill. Any future version of the bill will be read against that record.</p>
+
+      <h2>The Next Session</h2>
+
       <div class="beat">
-        <div class="beat-label">§15.9 — Transition Agreement</div>
-        <div class="beat-title">Both executives negotiate. The Legislature ratifies by 2/3. The agreement governs everything that follows.</div>
-        <p>Upon ratification by both chambers, the transition agreement process began. The Legat Consul held primary authority on border and defense terms under §2.1. The Civic Consul held primary authority on domestic implementation under §2.5. Both operated through the Council of Ministers under §2.14. The agreement specified asset and liability allocation, transition timeline, treatment of federal property, fiscal obligations, and continuing obligations of the new state.</p>
-        <p>The Legislature ratified the final agreement by 2/3 of full seated membership of both chambers — at this stage, Carenthal's members were not recused. They remained seated members of the Republic until the transition agreement took effect. Their votes counted on the ratification of their own independence terms.</p>
+        <div class="beat-label">Following legislative session · Reintroduction</div>
+        <div class="beat-title">A bill reintroduced in a subsequent session may be subject to the suspensive veto once in that session. A bill reintroduced in the same session is not subject to the suspensive veto and returns to the CC with only the fiscal veto, approval, or silence available.</div>
+        <p>The Assembly reintroduces the bill at the opening of the next session with one modification: the allocation mechanism now references the EM's §12.8 equalization formula rather than the political formula from the original bill. The appropriation total is unchanged.</p>
+        <p>The modified bill passes both chambers. It returns to CC Sonn. He now faces a bill that addresses his principal constitutional objection — formula compliance — while maintaining the appropriation level he questioned on fiscal grounds. His suspensive veto is available again in this session. His solvency objection remains available regardless.</p>
+        <p>Sonn signs the modified bill on Day 7. The formula amendment removed his strongest ground for return. The EM's preliminary assessment — that the original deficit projection overstated the risk — has been published to the NRS. Signing was the constitutionally defensible outcome.</p>
       </div>
 
       <div class="finding">
-        <div class="finding-label">Constitutional Finding</div>
-        <p>§15.9 is structured to make independence hard to start, impossible to reverse once started, and possible to complete only with genuine majority support in the chambers that remain. The 60%/60% referendum thresholds are deliberately high — designed to require both broad support and genuine participation, not just enthusiasm among those who show up. The irrevocability on NRS publication places the point of no return before Stage Two, not after — meaning a failed Stage Two ratification leaves the petition irrevocably published but unratified, and Stage One must be run again.</p>
-        <p>The recusal mechanic in Stage Two is the most unusual structural feature: the State seeking independence has no vote in whether the Republic lets it leave. That decision belongs to the Republic that remains. A State that is constitutionally successful in Stage One may still be held by a Stage Two that reflects how much the rest of the Republic needs it — or wants it gone.</p>
-        <p>The prohibition on inducements cuts both ways. The Republic cannot offer incentives to stay, but it also cannot impose penalties for trying to leave. The process is genuinely neutral. Whether that neutrality favors independence movements or disfavors them depends entirely on the thresholds, the recusal math, and the political geography of any given State.</p>
+        <div class="finding-label">What This Scenario Tests</div>
+        <p>The suspensive veto is not a blocking mechanism. It is a constitutionally bounded delay with three possible outcomes: Senate override, bill lapse for the session, or CC signature. The CC cannot permanently block legislation — only force one month of reconsideration and require Senate supermajority agreement to override. A CC who objects to every bill exhausts the mechanism quickly: single use per session means a reintroduced bill cannot be suspended again in the same session.</p>
+        <p>The bypass-proof design is the scenario's central test. The tabling attaches to the bill. A CC cannot be removed during the tabling period to install a more compliant officer and immediately enact the tabled bill. The constitution anticipated the most obvious circumvention and closed it by design rather than by trust.</p>
+        <p>The solvency objection ran alongside the suspensive veto but is a separate instrument. It required only Assembly simple majority to override and produced a permanent NRS record regardless of whether it was overridden. That record shaped the next session's bill. The CC's fiscal power here is not the veto — it is the documented warning that any subsequent Legislature must answer to.</p>
       </div>
 
     </div>
 
-    <div class="scenario-nav">
-      <a href="scenarios.html">← All Scenarios</a>
-      <a href="scenario-the-graduation.html">The Graduation →</a>
-    </div>
-    <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--muted)"><a href="constitution-current.pdf" download style="color:var(--gold)">Download a copy</a></p>
+    <div class="scenario-nav"><a href="scenarios.html">← All Scenarios</a></div>
   </main>
 
-  <script>function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}} document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});</script>
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
 
   <footer>
     <span class="footer-logo">The Federated Republic</span>
     <div class="footer-links">
       <a href="annotated.html">Annotated Edition</a>
       <a href="scenarios.html">Scenarios</a>
-      <a href="torenthia.html">The World</a>
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="glossary.html">Glossary</a>
       <a href="diagrams.html">Diagrams</a>
-      <a href="advisor.html">Advisor</a>
       <a href="sources.html">Sources</a>
     </div>
     <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
   </footer>
-</body></html>
+</body>
+</html>

@@ -1,22 +1,46 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Graduation — The Federated Republic</title>
-  <meta name="description" content="Year 16. Valdrath passes its second consecutive clean Statehood Audit while in Provisional status. Statehood is restored automatically. No vote. No political coalition can block it.">
+  <meta name="description" content="A student graduates, moves across state lines, and tries to vote. The NVS, residency questions, and §1.2 under ordinary pressure — no crisis, just the system working.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <style>
-main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}.scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}.beat{background:var(--cream2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}.beat p{margin-bottom:0.8rem;font-size:0.92rem;line-height:1.8}.finding{background:var(--navy);color:var(--white);padding:1.5rem;margin:2rem 0;border-radius:4px}.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}.finding p:last-child{margin-bottom:0}.scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}.scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}.scenario-nav a:hover{opacity:1;color:var(--navy)}@media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}.beat{padding:1rem 1.2rem}}
+main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+.scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+.scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+.scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+.scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+.provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+.prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+.scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+.scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+.beat{background:#EDE7D8;border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}
+.beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+.beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+.beat p{margin-bottom:0.8rem;font-size:0.92rem;line-height:1.8}
+.beat p:last-child{margin-bottom:0}
+.finding{background:var(--navy);color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}
+.finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+.finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+.finding p:last-child{margin-bottom:0}
+.scenario-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+.scenario-nav a:hover{opacity:1;color:var(--navy)}
+@media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}.beat{padding:1rem 1.2rem}}
   </style>
-</head><body>
+</head>
+<body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   <nav>
     <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
     <div class="nav-links">
       <a href="annotated.html">Annotated Edition</a>
       <a href="scenarios.html" class="active">Scenarios</a>
-      <a href="torenthia.html">The World</a>
       <a href="diagrams.html">Diagrams</a>
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="sources.html">Sources</a>
@@ -29,90 +53,93 @@ main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}.scenario-meta{margin-
   <div class="mobile-menu" id="mobileMenu">
     <a href="annotated.html">Annotated Edition</a>
     <a href="scenarios.html">Scenarios</a>
-    <a href="torenthia.html">The World</a>
     <a href="diagrams.html">Diagrams</a>
     <a href="constitutional-history.html">Constitutional History</a>
     <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
-    <a href="advisor.html">Advisor</a>
     <a href="contact.html">Contact</a>
     <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
   </div>
 
   <main id="main-content">
     <div class="scenario-meta">
-      <span class="scenario-tag">States &amp; Territories · §15.2 · §15.3 · Mandatory Devolution and Restoration</span>
+      <span class="scenario-tag">Rights &amp; Protections · §1.2 · §11.2 · Electoral Systems</span>
       <h1 class="scenario-title">The Graduation</h1>
-      <p class="scenario-subtitle">Year 16. Valdrath passes its second consecutive clean Statehood Audit while in Provisional status. Under §15.1.a, Statehood is restored automatically — no political vote, no ratification, no executive action. Three years after the third audit failure sent it into Provisional status, the pathway back was the same one that went in: the audit itself.</p>
+      <p class="scenario-subtitle">Maret Ven graduates from Halvern University, takes a job in Delvane, and moves across state lines. Six months later there is a federal election. She wants to vote. The National Voter System, residency rules, and §1.2 under ordinary pressure — no crisis, just the system doing what it is supposed to do.</p>
       <div class="provisions-tested">
-        <span class="prov-tag">§15.3 Mandatory Devolution</span>
-        <span class="prov-tag">§15.1.a Provisional Status</span>
-        <span class="prov-tag">§15.2 The Statehood Audit</span>
-        <span class="prov-tag">§9.1.a Legislative Monitor</span>
-        <span class="prov-tag">§9.1.c Judicial Monitor</span>
-        <span class="prov-tag">§3.5 The Senate</span>
+        <span class="prov-tag">§1.2 Right to Vote</span>
+        <span class="prov-tag">§11.2 NVS Properties and Voting Rights</span>
+        <span class="prov-tag">§8.1 Elections Panel</span>
+        <span class="prov-tag">§7.3 Federal Elections</span>
       </div>
     </div>
 
     <div class="scenario-body">
 
-      <p>By Year 13, Valdrath had failed three consecutive Statehood Audits — persistent electoral district non-compliance in the LM's findings, Article I procedural gaps in the JM's. Under §15.3, three consecutive failures triggered mandatory entry into Provisional status automatically. No vote. No political deliberation. The LM published its third consecutive failure finding to the NRS, and Valdrath's status changed by constitutional operation the same day.</p>
+      <h2>The Situation</h2>
 
-      <p>Provisional status under §15.1.a is not punishment, constitutionally speaking. Full self-governance continued: Valdrath's legislature, courts, and executive remained intact. Article I rights were uninterrupted. Social state access continued without change. The practical consequences were structural: no new Senate elections could be held while Provisional status was active. Valdrath's two sitting senators, elected in Year 11, completed their terms to Year 15 — and then those seats went dormant. Valdrath's Assembly seats continued on a proportional basis throughout.</p>
+      <p>Maret Ven is 23 years old. She grew up in Neldrath, voted in her first federal election from her parents' address at age 19, then enrolled at Halvern University in a different state. She updated her NVS registration to her Halvern address in Year 11 and voted in the Year 11 federal election from there. She graduated in Month 6 of Year 12, accepted a position at a civil engineering firm in Delvane, and moved to an apartment in Delvane's capital district in Month 8.</p>
 
-      <p>The Provisional Audit Council — two CC officers, two Valdrath State delegates — convened and began publishing findings to the NRS. It had no enforcement authority. What it had was the record. Year 14's audit failed again — the same electoral district findings, the same procedural gaps. Year 14's Provisional Audit Council report named the deadlock in Valdrath's legislature directly. Year 15's audit passed both components: the LM certified fiscal integrity; the JM certified full Article I compliance. Year 16's audit passed both components again.</p>
+      <p>The next federal election is Month 6 of Year 13 — ten months after her move. She wants to vote in Delvane. She goes to the NVS portal to update her registration.</p>
 
-      <div class="beat">
-        <div class="beat-label">§15.1.a — Automatic Restoration</div>
-        <div class="beat-title">Two consecutive clean audits while in Provisional status. Statehood restored automatically. No political vote required.</div>
-        <p>Upon LM publication of Year 16's clean audit finding to the NRS, Valdrath's full Statehood was restored automatically. The same constitutional mechanism that triggered mandatory devolution — publication of an audit finding — triggered restoration. Entry and exit from Provisional status both work through the same audit machinery. There is no separate restoration vote, no legislative affirmation, no executive certification. The LM publishes. Status changes.</p>
-        <p>What changed instantly on restoration: Valdrath's Senate seat dormancy ended. New Senate elections could be scheduled at the next federal electoral period. Valdrath's two Senate seats, which had been suspended since Year 15, were open for election. Until senators were seated, the seats were vacant — not filled by interim appointment, not allocated to other States.</p>
-      </div>
+      <h2>The NVS Registration</h2>
 
       <div class="beat">
-        <div class="beat-label">§15.3 — What the Senate Gap Looks Like</div>
-        <div class="beat-title">Sitting senators complete terms. No new elections during Provisional status. Seats go dormant, not vacant by reassignment.</div>
-        <p>Valdrath's Year 11 senators served through Year 15. When their terms ended, no replacement elections could be held — Provisional status was still active at that point. The Senate operated with 22 seated members rather than 24 from Year 15 to Year 16. All quorum and threshold calculations adjusted to reflect the actual seated membership, not the full constitutional complement.</p>
-        <p>This has a downstream consequence that §15.3 does not fully address: legislation passed during the gap required majority support from 22 senators, not 24. Senate votes that would have failed with a 24-member body might have passed with 22 — or vice versa. The constitution treats this as an inherent structural consequence of Provisional status, not an anomaly to correct. The remedy for a State that wants its Senate representation restored is the same as the remedy for entry: pass the audit.</p>
+        <div class="beat-label">Month 8, Year 12 · Residency update</div>
+        <div class="beat-title">The National Voter System is the Republic's single federal voter registry. Under §11.2, any eligible citizen may register or update their registration at any time; no registration window applies to federal elections.</div>
+        <p>Maret logs into the NVS portal and submits a residency update — her Delvane address, her employment documentation, and her lease agreement. The system flags a question: her Halvern registration remains active. The NVS requires her to confirm she intends Delvane as her primary residence and that she understands this cancels her Halvern registration. She confirms. Her Halvern registration is cancelled effective immediately. Her Delvane registration is provisional pending address verification.</p>
+        <p>Address verification takes eleven days — standard processing for a first registration in a new state. On Day 12, her Delvane registration is confirmed and published in the NVS. She is now a registered voter in Delvane's capital district.</p>
       </div>
 
+      <h2>The Question She Didn't Expect</h2>
+
+      <p>In Month 3 of Year 13 — three months before the election — Maret receives a letter from the Delvane Elections Compliance Office. The letter notes that Delvane has a statutory residency requirement: a citizen must have established residency in the state at least six months before the election to vote in that state's Assembly district allocation. Maret moved in Month 8 of Year 12. The election is Month 6 of Year 13. She is ten months resident. She clears the requirement by four months.</p>
+
+      <p>But the letter raises a second point: Delvane's six-month rule is a state rule for state elections. For federal elections — Assembly, Senate, LC, and EM confirmation — the NVS and §11.2 govern. The state may not impose a residency requirement that effectively restricts access to federal elections beyond what §1.2 and §11.2 permit. The letter is informational, not a restriction. She is eligible to vote in federal elections from Day 1 of NVS registration in Delvane.</p>
+
+      <h2>What §1.2 Actually Provides</h2>
+
       <div class="beat">
-        <div class="beat-label">§15.3 — The SC Petition Window</div>
-        <div class="beat-title">30 days to challenge the factual basis of devolution. Factual sufficiency only — not policy disagreement.</div>
-        <p>When Valdrath entered Provisional status in Year 13, it had 30 days to petition the SC on one ground only: that the audit findings were factually insufficient to establish three consecutive failures. The Court's review was limited to the factual basis — did the LM actually publish three consecutive failure findings? Not whether the findings were correct, not whether Valdrath's legislature had a good reason for the deadlock, not whether the threshold was fair. Valdrath did not petition. The findings were accurate. Three consecutive failures had been published.</p>
-        <p>The narrowness of the SC's review window is intentional. The constitution places the audit function in independent Monitors, not courts. The SC's role is to verify the constitutional trigger was correctly applied — not to second-guess the substance of Monitor findings. A State that disagrees with the content of an audit finding has one remedy: remediate and pass the next one.</p>
+        <div class="beat-label">The constitutional floor</div>
+        <div class="beat-title">§1.2 guarantees the right to vote to every eligible citizen; the NVS is the mechanism; no state may restrict access to federal elections beyond what §11.2 permits.</div>
+        <p>Maret could have voted in federal elections from the day her Delvane NVS registration was confirmed — Month 9 of Year 12. She could not have voted in Halvern's state elections after cancelling her Halvern registration. She could not vote in Delvane's state elections until meeting Delvane's six-month residency requirement, which she cleared in Month 2 of Year 13.</p>
+        <p>The federal and state electoral systems run in parallel. The NVS governs federal eligibility. State registration rules govern state eligibility. A citizen moving between states may be temporarily eligible for federal elections but not state elections in their new home. This is not a constitutional gap — it is a deliberate separation of federal and state electoral administration.</p>
       </div>
+
+      <h2>Election Day</h2>
+
+      <p>Month 6, Year 13: Maret votes in Delvane's capital district. She votes in four simultaneous federal elections: Assembly member for Delvane Capital District, her Senate seat in Delvane's staggered cycle (if applicable), the LC election, and the EM confirmation vote. She also votes in Delvane's own state elections — she cleared the residency requirement in Month 2.</p>
+
+      <p>Her ballot is processed through the NVS. There is no provisional ballot, no challenge, no exception to file. Her registration has been confirmed for ten months. The system processed her move, cancelled her old registration, verified her new address, and enrolled her in the correct district — all without human intervention beyond her own submissions.</p>
 
       <div class="finding">
-        <div class="finding-label">Constitutional Finding</div>
-        <p>The pathway into Provisional status and the pathway out of it are the same mechanism — the Statehood Audit. Entry is automatic on three consecutive failures; restoration is automatic on two consecutive clean audits. Neither political opposition nor political support can alter either threshold. A legislature that wants to block a State's restoration cannot. A legislature that wants to prevent a State from entering Provisional status cannot — once the three failure threshold is crossed, the status change is constitutional, not legislative.</p>
-        <p>The Senate dormancy during Provisional status is the sharpest structural consequence, and the one most likely to motivate remediation. A State that values its Senate representation must pass the audit to get it back. The Provisional Audit Council's record — published to the NRS throughout — becomes the factual and political foundation for whatever accountability mechanisms the State's own citizens eventually apply to the legislature that caused the deadlock in the first place.</p>
-        <p>Valdrath's restoration in Year 16 produced no ceremony, no vote, no announcement beyond the LM's routine publication to the NRS. The constitution treats graduation from Provisional status the same way it treats entry: as a mechanical outcome of the audit. That is the point. The pathway is objective, automatic, and not subject to political management in either direction.</p>
+        <div class="finding-label">What This Scenario Tests</div>
+        <p>The NVS and §1.2 together create a right that is portable and self-administered. No election official discretion is required for ordinary residency changes. No registration window closes before an election. The right to vote in federal elections attaches to current verified NVS registration, not to residence duration.</p>
+        <p>The scenario surfaces the federal-state distinction cleanly: state residency requirements are valid for state elections, but they cannot restrict access to federal elections. The NVS is the federal floor. States may require more of their own elections; they may not require more of the Republic's.</p>
+        <p>What makes this scenario worth examining is precisely that nothing went wrong. The system processed a common life event — graduation, relocation, new job — without friction, exception, or bureaucratic failure. The constitution does not only need to be tested under crisis conditions. Ordinary lives moving through a well-designed system is its own kind of proof.</p>
       </div>
 
     </div>
 
-    <div class="scenario-nav">
-      <a href="scenario-the-vote.html">← The Vote</a>
-      <a href="scenario-the-formula.html">The Formula →</a>
-    </div>
-    <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--muted)"><a href="constitution-current.pdf" download style="color:var(--gold)">Download a copy</a></p>
+    <div class="scenario-nav"><a href="scenarios.html">← All Scenarios</a></div>
   </main>
 
-  <script>function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}} document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});</script>
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
 
   <footer>
     <span class="footer-logo">The Federated Republic</span>
     <div class="footer-links">
       <a href="annotated.html">Annotated Edition</a>
       <a href="scenarios.html">Scenarios</a>
-      <a href="torenthia.html">The World</a>
       <a href="constitutional-history.html">Constitutional History</a>
       <a href="glossary.html">Glossary</a>
       <a href="diagrams.html">Diagrams</a>
-      <a href="advisor.html">Advisor</a>
       <a href="sources.html">Sources</a>
     </div>
     <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
   </footer>
-</body></html>
+</body>
+</html>
