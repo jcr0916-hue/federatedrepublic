@@ -181,9 +181,9 @@
 - Must return bill within 10 business days of final passage with written grounds published to NRS; silence within 10 business days = bill proceeds to enactment
 - General or speculative security connection insufficient — genuine domain concern required
 - Single use per bill: reintroduced bill in subsequent session proceeds without LC interference
-- Either Speaker may petition SC for expedited domain determination; SC must rule within 14 days; where SC does not rule within 14 days, the veto is void and bill proceeds to enactment
-- If SC confirms within domain: Senate may override by 2/3 supermajority **at any time during that session**; no override = bill lapses for session
-- If SC confirms outside domain: veto void, bill proceeds to enactment without LC assent
+- Under §9.1, either Speaker may request an EM assessment of the domain question (informational only — no SC adjudication)
+- Senate may override by 2/3 supermajority at any time during that session; no override = bill lapses for session
+- Silence = enactment **by operation of law** (not behavioral — CC's public statements irrelevant)
 
 **§2.4 — Consular Domain Operations**
 - LC negotiates and concludes trade agreements
@@ -631,6 +631,7 @@
 - Legislature may establish uniform commerce standards
 
 **§12.8 — Fiscal Equalization**
+- Following an EM failure finding, MA must submit a remedy plan to the CC and Speaker of each chamber within 30 days, published to the NRS
 - Legislature must establish mechanism ensuring every State and Territory has fiscal capacity to fulfill social state and Article I obligations
 - EM certifies annually; Legislature must respond within 90 days of EM finding of failure
 
