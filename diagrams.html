@@ -637,7 +637,7 @@
       <div class="gov-node node-court" onclick="showPanel('court')" style="max-width:300px">
         <span class="node-icon">⚖</span>
         <span class="node-title">Supreme Court</span>
-        <span class="node-sub">Nominated from open registry · 9 justices<br>Senate confirmed · 12-year non-renewable terms</span>
+        <span class="node-sub">Nominated from the Judicial Pool · 9 justices<br>Senate confirmed · 12-year non-renewable terms</span>
       </div>
     </div>
     <div class="gov-connector-v"></div>
@@ -1292,7 +1292,7 @@ id="tab-dual">
         </div>
         <div class="dual-item item-pm">
           <strong>Fiscal Policy &amp; Budget</strong>
-          <span>Presents and originates the national budget; passes the Assembly. Kept informed of military expenditure through the Council of Ministers — no certification role over it. · §2.5, §14.2</span>
+          <span>Prepares and submits the national budget to the Assembly for passage. Kept informed of military expenditure through the Council of Ministers — no certification role over it. · §2.5, §14.2</span>
         </div>
         <div class="dual-item item-pm">
           <strong>Social State Systems</strong>
@@ -1300,7 +1300,7 @@ id="tab-dual">
         </div>
         <div class="dual-item item-pm">
           <strong>Legislation</strong>
-          <span>Reviews all legislation following final passage. May exercise a suspensive veto (2/3 override) on constitutional, fiscal, or operational grounds, or a solvency objection (simple Assembly majority override). Neither applies to the budget, constitutionally-required bills, or emergency legislation. Silence enacts the bill. · §2.7</span>
+          <span>Reviews all legislation following final passage. May withhold assent within 10 business days — bill is tabled one month (Senate 2/3 override, or re-passage required) — and may issue a fiscal notice entitling the Assembly Speaker to recall a bill. Neither applies to the budget, constitutionally-required bills, or emergency legislation. No action within 10 days enacts the bill by operation of law. · §2.7</span>
         </div>
         <div class="dual-item item-pm">
           <strong>Judicial Nominations</strong>
@@ -2285,14 +2285,14 @@ const nodeData = {
   president: {
     title: 'The Legat Consul — Defense and Diplomacy',
     ref: 'Article II, §2.1',
-    body: `<p>The Legat Consul holds authority over national defense and diplomacy — exclusively. They may not direct domestic policy, legislation, or civil administration. This domain separation is constitutionally enforced: where an event touches both domains simultaneously, both executives act concurrently within their respective areas.</p><p>The Legat Consul serves a single non-renewable six-year term and is elected by combined-score ranked-choice voting requiring both national support and geographic breadth.</p><p>Checks on the Legat Consul: legislative military authorization requirement, intelligence warrant requirement (§2.3), EM annual audit, removal under §2.13 (legislative or popular recall track), domain separation with Civic Consul.</p>`,
+    body: `<p>The Legat Consul holds authority over national defense and diplomacy — exclusively. They may not direct domestic policy, legislation, or civil administration. This domain separation is constitutionally enforced: where an event touches both domains simultaneously, both executives act concurrently within their respective areas.</p><p>The Legat Consul serves a single non-renewable six-year term, elected through two concurrent requirements: a national ranked-choice majority and a State plurality qualification — a candidate must satisfy both to win outright, unless their national total reaches 60% of active ballots, which waives the State plurality requirement.</p><p>Checks on the Legat Consul: legislative military authorization requirement, intelligence warrant requirement (§2.3), EM annual audit, removal under §2.13 — a legislative track (2/3 of both chambers) or a popular track (Senate-referred national referendum requiring 60% under §7.4) — and domain separation with the Civic Consul.</p>`,
     tags: ['§2.1 Domain', 'Military Authorization Framework', 'Intelligence Firewall', '6-Year Single Term']
   },
   pm: {
     title: 'The Civic Consul — Domestic Affairs',
     ref: 'Article II, §2.5–2.7',
-    body: `<p>The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul — domestic policy, the budget (which must originate with the Civic Consul), the civil service, and the social state. The Civic Consul serves at the confidence of the Assembly and may be removed only through a Constructive Vote of No Confidence, which requires simultaneously electing a named successor by absolute majority of full seated Assembly membership.</p><p>On legislation, the Civic Consul may exercise a suspensive veto on constitutional, fiscal, or operational grounds — the Legislature can override by 2/3 of both chambers — or object on specific solvency grounds, which the Assembly can override by simple majority. Neither tool may be used on the annual budget, bills implementing a constitutional obligation, or emergency legislation; silence within the review period enacts the bill.</p><p>No person may serve more than 8 years total as Civic Consul, cumulative across all periods of service — the limit is permanent and is not reset by any interruption in service.</p>`,
-    tags: ['§2.5 Domain', 'Constructive No-Confidence', 'Suspensive Veto (§2.7)', '8-Year Cumulative Maximum']
+    body: `<p>The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul — domestic policy, the budget (which the Civic Consul prepares and submits to the Assembly for passage), the civil service, and the social state. The Civic Consul serves at the confidence of the Assembly and may be removed only through a Constructive Vote of No Confidence — a single vote that simultaneously removes the sitting Civic Consul and installs a named successor — requiring 60% of full seated Assembly membership. Formation is easier than removal by design: the Assembly elects a Civic Consul by absolute majority; if it cannot, a formation cascade follows — Senate designation by 2/3, then Legat Consul nomination with Senate confirmation, and finally automatic seniority succession — each stage published to the NRS.</p><p>On legislation, the Civic Consul may withhold assent by returning a bill within 10 business days of final passage with written grounds, published to the NRS. The bill is tabled for one month regardless of any change in CC office; the Senate may override by 2/3 supermajority, and failing override, the bill must pass both chambers again before the Civic Consul can act on it a second time. The Civic Consul may also issue a fiscal notice — a public statement that a bill would cause or worsen a structural deficit — which does not block enactment but entitles the Assembly Speaker to recall the bill for reconsideration. Neither instrument may be used on the annual budget, bills implementing a constitutional obligation, or emergency legislation; if the Civic Consul takes no action within 10 business days, the bill is enacted by operation of law.</p><p>No person may serve more than 8 years total as Civic Consul, cumulative across all periods of service — the limit is permanent and is not reset by any interruption in service.</p>`,
+    tags: ['§2.5 Domain', 'Constructive No-Confidence (60%)', 'Suspensive Veto & Fiscal Notice (§2.7)', 'Formation Cascade (§2.6.a)', '8-Year Cumulative Maximum']
   },
   house: {
     title: 'The Assembly — The Democratic Chamber',
