@@ -182,7 +182,7 @@
 - General or speculative security connection insufficient — genuine domain concern required
 - Single use per bill: reintroduced bill in subsequent session proceeds without LC interference
 - Either Speaker may petition SC for expedited domain determination; SC must rule within 14 days; where SC does not rule within 14 days, the veto is void and bill proceeds to enactment
-- If SC confirms within domain: Senate may override by 2/3 supermajority; no override = bill lapses for session
+- If SC confirms within domain: Senate may override by 2/3 supermajority **at any time during that session**; no override = bill lapses for session
 - If SC confirms outside domain: veto void, bill proceeds to enactment without LC assent
 
 **§2.4 — Consular Domain Operations**
