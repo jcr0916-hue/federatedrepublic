@@ -288,6 +288,7 @@
 - **Early departure clause:** resignation, expulsion, or state recall at any point during a term counts as full term for cooling-off purposes
 
 **§3.6 — Treaty and Trade Agreement Ratification**
+- Treaty withdrawal: Senate must affirm by **2/3 of full seated membership** within period defined by statute; failure to affirm = notice void, must resubmit; same rule for all treaties (no ordinary vs. mutual defense asymmetry)
 - Treaties: 2/3 Senate
 - Trade agreements: simple majority of both chambers
 - Neither chamber may amend concluded terms
