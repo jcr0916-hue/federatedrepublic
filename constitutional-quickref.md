@@ -178,7 +178,7 @@
 
 **§2.3.a — Legat Consul Legislative Veto**
 - LC may veto legislation raising genuine constitutional concern in LC's security domain (military operations, intelligence, treaty obligations, border security)
-- Must return bill within 10 business days of final passage with written grounds published to NRS; silence within 10 business days = bill proceeds to enactment
+- Must return bill within 10 business days of final passage with written grounds published to NRS; silence within 10 business days = bill **enacted by operation of law**
 - General or speculative security connection insufficient — genuine domain concern required
 - Single use per bill: reintroduced bill in subsequent session proceeds without LC interference
 - Under §9.1, either Speaker may request an EM assessment of the domain question (informational only — no SC adjudication)
@@ -193,8 +193,9 @@
 **§2.5 — The Civic Consul: Domestic Executive Domain**
 - Domain: all executive functions not enumerated to LC
 - Must be serving Assembly member when elected CC
-- 8-year cumulative limit (not per-term)
+- **8-year cumulative limit** (total across all periods of service — single rule, not per-term)
 - Elected by Assembly through confidence mechanism
+- Temporary incapacity: CC's designated Acting CC (who must meet eligibility requirements for the office) serves; where no designation exists or designee is unavailable, **Assembly Speaker** serves as Acting CC with same authority limitation (maintaining existing policy and emergency functions only)
 
 **§2.6 — Constructive Vote of No Confidence**
 - Assembly removes CC only through constructive vote: single vote simultaneously removes CC and installs named replacement
@@ -205,18 +206,18 @@
 **§2.6.a — Government Formation**
 - Assembly elects CC by absolute majority within statutory period following election or vacancy; constitutional default 21 days
 - If Assembly fails: Acting CC designated by outgoing CC from confirmed ministers or serving Assembly member; published to NRS
+- Seniority fallback: **most senior Assembly member by continuous service** who meets CC requirements; tiebreaker determined by statute
 - Senate may designate a serving Assembly member as CC by 2/3 supermajority if Assembly fails within statutory period; Assembly absolute majority terminates Senate designation
 - If no CC elected and Senate has not designated within 45 days: LC nominates serving Assembly member; Senate confirms by simple majority within 21 days; appointee holds full CC authority subject to removal under §2.6
 
-**§2.7 — Suspensive Veto (CC)**
-- CC withholds assent by returning bill within **10 business days** of final passage with written objection (constitutional, fiscal, or operational grounds) published to NRS; silence within 10 business days = bill enacted
-- Bill tabled for **one month** from date of return — regardless of any change in CC office (bypass-proof)
-- Senate may override by **2/3 supermajority** during that month; override = bill enacted without CC assent
-- No Senate override within month = bill lapses for session
-- **Single use per bill within a session**: reintroduced bill that passes both chambers in the same session returns to CC with only fiscal/solvency veto, approval, or silence available; a bill reintroduced in a new session may be subject to the suspensive veto once in that session
-- Solvency objection (bill causes/worsens structural deficit): Assembly may override by simple majority
+**§2.7 — Suspensive Veto and Fiscal Notice (CC)**
+- CC withholds assent by returning bill within **10 business days** of final passage with written grounds published to NRS
+- Bill tabled for **one month** — regardless of any change in CC office (bypass-proof)
+- Senate may override by **2/3 supermajority** during that month; failing override, bill returns to Legislature and must pass both chambers again; CC may not use suspensive veto on that bill again, **including where that bill lapses and is reintroduced in a subsequent session**
+- **Fiscal notice**: written NRS statement that bill would cause/worsen structural deficit; issued within 10-business-day review window; does not block enactment but entitles Assembly Speaker to recall bill for reconsideration within remaining window; both instruments may be used on same bill
+- Where CC neither returns bill nor issues fiscal notice within 10 business days, bill **enacted by operation of law**
 - Cannot be used on annual budget, bills implementing constitutional obligations, or emergency legislation
-- Both executives review concurrently from date of final passage
+- Both executives review concurrently from final passage
 
 **§2.8 — Duty of Refusal**
 - Both executives must refuse to implement unconstitutional orders
@@ -288,13 +289,14 @@
 - **Early departure clause:** resignation, expulsion, or state recall at any point during a term counts as full term for cooling-off purposes
 
 **§3.6 — Treaty and Trade Agreement Ratification**
-- Treaty withdrawal: Senate must affirm by **2/3 of full seated membership** within period defined by statute; failure to affirm = notice void, must resubmit; same rule for all treaties (no ordinary vs. mutual defense asymmetry)
+- Treaty withdrawal: Senate must affirm by **2/3 of full seated membership** within period defined by statute, **not to exceed 90 days**; failure to affirm = notice void, must resubmit; same rule for all treaties (asymmetry removed)
 - Treaties: 2/3 Senate
 - Trade agreements: simple majority of both chambers
 - Neither chamber may amend concluded terms
 
 **§3.6.a — Classification and Dispute Resolution**
-- If Senate disputes LC's classification (treaty vs. trade agreement), defaults to treaty status pending SC expedited determination
+- If Senate disputes LC's classification (treaty vs. trade agreement), defaults to treaty status pending judicial determination
+- Either party may seek expedited judicial determination; applicable court and process defined by statute
 
 **§3.7 — Legislative Process**
 - Ordinary statute: simple majority of both chambers
@@ -358,18 +360,22 @@
 **§4.3.b — SC Operations**
 - LM certification of SC legitimacy (quorum, vacancy, conflict)
 
-**§4.4 — Vacancy and Recusal**
-- Anticipated and unanticipated vacancies treated differently by statute
-- Conflict-of-interest recusal published to NRS
+**§4.4 — Supreme Court Selection**
+- CC nominates from Judicial Pool; Senate confirms by 2/3 within 120 days; no deemed confirmation
+- CC may not nominate a serving TAJ for the seat they temporarily fill (nomination bar); §4.4.a public confirmation ballot is excepted from this bar
+- TAJ: most senior Appellate Court judge by continuous service auto-designates within 5 days; tiebreaker: **oldest by age**
+- Single non-renewable 12-year term for all SC justices
 
 **§12.4.a (note) — Recusal Standards** *(formerly listed as §4.4.b; content enacted as §12.4.a — Codes of Conduct and Recusal)*
 - Default recusal standard applies in absence of statute
 
-**§4.5 — Judicial Review**
-- SC has jurisdiction over constitutional questions
-- Any person with standing may bring constitutional challenge
-- SC jurisdiction over emergency rights challenges is preserved during emergencies
-- Expedited track available for time-sensitive matters
+**§4.5 — Judicial Review and Scope**
+- Courts may declare acts unconstitutional and void; no political actor may override a constitutional ruling
+- **SC original jurisdiction** covers: State-State and State-federal disputes; federal statute challenges; LC-CC domain disputes (§2.1); challenges to constitutionally independent institutions; emergency rights claims under §16.5; amendment consistency under §17.3
+- **Extension mechanism**: majority of seated justices may file extension request within any required ruling period (reason + additional time, NRS published); maximum **not to exceed 30 days per extension**; statute defines the specific ceiling within that cap
+- **Interim protective orders**: available in original jurisdiction matters where delay would cause irreparable harm
+- **SC inaction never produces a constitutional outcome**: failure to rule within any required period does not resolve the matter; petitioner may reinitiate
+- Expedited jurisdiction over continuity-of-governance disputes
 
 **§4.6 — Judgment Recognition**
 - Judgments valid in one jurisdiction recognized in all others
@@ -531,8 +537,11 @@
 - Coordinates resources across Monitor offices (no Monitor's mandate capacity diminished)
 
 **§9.11.a — Institutional Compromise Protocol**
-- Two Monitors may jointly assess and report for-cause grounds against a third constitutional officer
-- Judicial Track for removal (see §9.14)
+- Two Monitors jointly assess and report that third Monitor is operating in bad faith → petition SC under §4.5 original jurisdiction for confirmation; SC rules within 14 days
+- Upon petition filing: two petitioning Monitors designate Acting Monitor General (most senior pool member by continuous pool tenure who accepts); full authority from moment of designation
+- If SC rules **not confirmed**: Acting Monitor stands down, functions return to original Monitor General
+- If SC **neither rules nor files extension** within applicable period: Acting Monitor stands down, petition may be refiled (silence ≠ confirmed)
+- If SC **confirms**: Acting Monitor serves until original MG restored or new permanent MG confirmed
 
 **§9.14 — Constitutional Officer Removal**
 - Standard Track: 1/3 Assembly files → SC categorical review (14 days) → Senate trial (2/3 both chambers)
@@ -570,9 +579,10 @@
 
 ## ARTICLE XI — ELECTIONS PANEL AND NRS PANEL
 
-**§11.1 — Elections Panel Establishment**
-- Independent body administering all federal elections
-- Standards for NVS (National Voting System) established and enforced
+**§11.1 — NRS Panel and Elections Panel**
+- Two constitutionally independent panels: NRS Panel (permanent record) and Elections Panel (electoral systems)
+- Five-member floor at all times; no single appointing authority may hold majority of either panel
+- Zero-floor fallback: CC may appoint qualified civil servant employed by that Panel as Acting member; period defined by statute, **not to exceed 180 days**; full authorities; does not affect permanent appointment process
 
 **§11.2 — NVS Properties**
 - NVS must be accessible, secure, verifiable
@@ -581,7 +591,7 @@
 **§11.3 — State Election Non-Compliance**
 - Elections Panel may audit State election administration
 - Material non-compliance finding → cure period → Elections Panel administers federal election directly in non-compliant State for one electoral period
-- SC expedited review available
+- State may challenge finding under §4.5 State-federal jurisdiction; process and timeline defined by statute
 - Finding does not affect validity of votes cast
 
 ---
