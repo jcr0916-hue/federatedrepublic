@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Holdout — The Federated Republic</title>
+  <meta name="description" content="Year 7. The Senate refuses to schedule a vote on an SC nomination for nine months. Day 120 arrives with no vote. What §4.4 requires next — and what the difference is between a Senate that says no and a Senate that says nothing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem}
+    .nrs-block{background:#f0f5f0;border:1px solid #a0b8a0;border-left:3px solid #2d6a4f;padding:1.1rem 1.4rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.72rem;line-height:1.8;color:#1a2a1a}
+    .nrs-header{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:#2d6a4f;margin-bottom:0.6rem}
+    .finding{background:var(--navy);color:white;padding:1.5rem;margin:2rem 0;border-radius:4px}
+    .finding-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+    .finding p{margin-bottom:0.8rem;font-size:0.9rem;line-height:1.7;color:rgba(245,240,232,0.9)}
+    .finding p:last-child{margin-bottom:0}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}.beat{padding:1rem 1.2rem}}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html" class="active">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<main id="main-content">
+<div class="scenario-meta">
+  <span class="scenario-tag">Judicial Architecture · §4.4 · §4.4.a · Senate Bypass</span>
+  <h1 class="scenario-title">The Holdout</h1>
+  <p class="scenario-subtitle">Year 7. Associate Justice Halden dies in office. The Senate Judiciary Committee Chair announces no hearings until after the Year 8 general election — nine months away. Day 120 arrives with no vote. What §4.4 and §4.4.a require at every step, and why a Senate that says nothing is constitutionally different from a Senate that says no.</p>
+  <div class="provisions-tested">
+    <span class="prov-tag">§4.4 SC Selection</span>
+    <span class="prov-tag">§4.4.a Senate Bypass</span>
+    <span class="prov-tag">§7.4 Electoral Supermajority</span>
+    <span class="prov-tag">§9.4.b Judicial Pool</span>
+  </div>
+</div>
+
+<div class="scenario-body">
+
+  <p>Associate Justice Mira Halden died in office on the morning of Year 7, Month 4, Day 3 — four years into her twelve-year term. The vacancy was unanticipated. Under §4.4, the Civic Consul had sixty days to nominate from the Judicial Pool, not ninety: the shorter window applies to vacancies that could not have been planned for.</p>
+
+  <p>Within five days, the most senior Appellate Court judge by continuous service — Chief Justice Amara Oseni-Park of the Second Appellate Circuit, twenty-one years on the federal bench — was automatically designated Temporary Associate Justice. No nomination, no confirmation vote, no executive action required. The designation published to the NRS at 0001 hours on Day 6. The Court sat at nine.</p>
+
+  <h2>The Nomination — Day 52</h2>
+
+  <div class="beat">
+    <div class="beat-label">§4.4 · Unanticipated vacancy · 60-day window</div>
+    <div class="beat-title">The Civic Consul nominates from the Judicial Pool. The Elections Panel confirms Pool status and publishes the nominee's full record to the NRS. The Senate must vote within 120 days — not to exceed the constitutional ceiling.</div>
+    <p>Civic Consul Diallo-Mensah nominated Pool member Cael Sorin on Day 52 — eight days inside the sixty-day window. Sorin had been in the Judicial Pool since Year 4: eighteen years of appellate practice, no disqualifying financial interests, clean EM disclosure review. The Elections Panel confirmed Pool status the same day and published the full record to the NRS within 48 hours.</p>
+    <p>The Senate Judiciary Committee Chair, Senator Dava Holt-Corren, issued a statement the following morning. Her committee would not schedule hearings on the Sorin nomination until the Year 8 general election had concluded and the new Senate was seated. Her stated reason: the vacancy arose too close to the election cycle for the current Senate to act with appropriate deliberation. She did not dispute Sorin's qualifications.</p>
+  </div>
+
+  <h2>What the Constitution Says About This</h2>
+
+  <p>Senator Holt-Corren's statement attracted immediate constitutional commentary. The answer to the question it raised is unambiguous: the Senate has 120 days to vote. It may vote yes or no. It may not decline to vote.</p>
+
+  <p>§4.4 is explicit: no deemed confirmation applies, but failure to vote within the statutory period is a constitutional compliance breach. The design is deliberate — the Senate's power over SC appointments is a confirmation power, not a veto power. A Senate that repeatedly votes no has exercised its constitutional role. A Senate that refuses to vote has abandoned it. The constitution draws that line precisely because the political incentive to let vacancies lapse indefinitely is real.</p>
+
+  <p>The Year 8 election was nine months away. The 120-day Senate confirmation window closed on Day 172 of the vacancy — Year 7, Month 9, Day 21. The election was Year 8, Month 3.</p>
+
+  <h2>Day 172 — The Breach</h2>
+
+  <div class="beat">
+    <div class="beat-label">§4.4 · Day 120 of confirmation window · LM certification</div>
+    <div class="beat-title">Where the Senate does not vote within the period defined by statute (not to exceed 120 days), the failure is a constitutional compliance breach. The Legislative Monitor certifies the breach and publishes the finding to the NRS.</div>
+    <p>The Senate did not vote. Senator Holt-Corren did not bring the nomination to the floor. Forty-one other senators signed a statement supporting her position; fifty-eight signed a counter-statement asserting that the Senate should vote immediately. The counter-statement had no procedural effect. The committee chair controls the committee calendar.</p>
+    <p>On Day 172 — Day 120 of the Senate confirmation window — the LM published a compliance breach finding to the NRS. The finding was categorical: the Senate had failed to vote within the constitutional ceiling. The finding named no individual senator. It described no bad faith. It recorded a fact: the Senate had not acted.</p>
+  </div>
+
+  <div class="nrs-block">
+    <div class="nrs-header">National Record System — LM Compliance Finding — Year 7, Month 9</div>
+    NRS-Y7-4471<br><br>
+    LEGISLATIVE MONITOR — CONSTITUTIONAL COMPLIANCE FINDING<br><br>
+    The Legislative Monitor finds that the Senate has failed to conduct a confirmation vote on the nomination of Cael Sorin to the Supreme Court within the period established by statute (120 days from the date of nomination, Day 52, Year 7). The constitutional ceiling under §4.4 has been reached without a Senate vote.<br><br>
+    This finding constitutes a certification of constitutional compliance breach under §4.4. The finding is informational and does not of itself alter the status of the nomination or the office of the Temporary Associate Justice.<br><br>
+    This finding activates the conditions precedent for §4.4.a: the Civic Consul may, with 2/3 Assembly consent, place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation.
+  </div>
+
+  <h2>The Bypass Decision</h2>
+
+  <div class="beat">
+    <div class="beat-label">§4.4.a · CC + 2/3 Assembly · Public confirmation</div>
+    <div class="beat-title">Where the LM has assessed and reported a Senate breach, the Civic Consul may — with 2/3 Assembly consent — place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation at 60% of votes cast under §7.4.</div>
+    <p>The Civic Consul had two options. She could nominate again under §4.4 — start the clock over, present a new nominee, give the Senate another 120 days. Or she could invoke §4.4.a: with 2/3 Assembly consent, place Chief Justice Oseni-Park on the Year 8 ballot for public confirmation. The bypass was available because the LM had found a breach. It would not have been available if the Senate had voted no 41 times.</p>
+    <p>Civic Consul Diallo-Mensah requested an Assembly vote. The motion carried 241-109 — 69% of the 350-seat Assembly, well above the 2/3 threshold of 234. The resolution was published to the NRS: the Temporary Associate Justice would appear on the Year 8 federal electoral ballot for public confirmation. The CC could not nominate Oseni-Park directly — §4.4's nomination bar prohibits the CC from nominating a serving TAJ for the seat they temporarily fill through the ordinary appointment process. But §4.4.a is not the ordinary process.</p>
+  </div>
+
+  <h2>The Campaign — Such As It Is</h2>
+
+  <p>Chief Justice Oseni-Park published a single statement following the Assembly resolution. She noted that the public confirmation process was not an election; that §8.1's electoral finance framework did not apply; and that the rules governing advocacy conduct during the confirmation vote would be defined by statute. She stated that she would make herself available for public forums before the ballot and that she had no further comment on the political circumstances that had produced the vote.</p>
+
+  <p>The statement was eleven sentences. It answered every question the press had raised. She did not hold another press availability for three weeks.</p>
+
+  <p>Senator Holt-Corren, for her part, immediately brought the Sorin nomination to a Senate floor vote — the nomination that had sat in her committee for four months without a hearing. The Senate confirmed Sorin 71-29, three days after the Assembly resolution. The confirmation came too late: §4.4.a states that Senate confirmation of a Judicial Pool nominee ends the bypass only if it occurs before the public vote is certified. The Assembly resolution had already been certified and published to the NRS. The bypass proceeded.</p>
+
+  <h2>The Confirmation Vote — Year 8, Month 3</h2>
+
+  <p>Chief Justice Oseni-Park appeared on the Year 8 federal electoral period ballot with the following NRS-published information: her seniority-based TAJ designation, her appellate service record, and the Elections Panel's standard Pool eligibility confirmation. No campaign expenditure disclosure was required — the vote was not an election. The Elections Panel administered the confirmation as it would any referendum, under its existing mandate.</p>
+
+  <p>The result: 64.2% of votes cast confirmed Chief Justice Oseni-Park to Associate Justice. The 60% threshold under §7.4 was met with room to spare. She was sworn in the following week, succeeding herself as TAJ and holding the seat for the four remaining years of Justice Halden's original term. The Senate's confirmation authority over that seat was extinguished. The Sorin confirmation — obtained three days too late — had no effect on the bypass outcome.</p>
+
+  <div class="finding">
+    <div class="finding-label">What This Scenario Tests</div>
+    <p>§4.4 draws a sharp constitutional distinction between a Senate that declines and a Senate that withholds. A series of no votes, however many, does not constitute a breach — it is the Senate exercising its confirmation authority. A failure to vote is categorically different: the Senate has abandoned the process rather than participated in it. The LM's breach finding is not a political judgment about whether the Senate should have confirmed; it is a factual certification that the process was not followed.</p>
+    <p>§4.4.a is not available after repeated rejections. It is only available after an LM breach. Senator Holt-Corren could have called for a floor vote, lost 41-59, and foreclosed the bypass entirely. By declining to schedule a vote, she made the bypass available. The design is intentional: the constitution's escape valve from Senate inaction is narrowly targeted at inaction, not at decisions the CC or Assembly disagrees with.</p>
+    <p>The confirmation vote's non-election status matters. The TAJ may advocate for her own confirmation — Chief Justice Oseni-Park held forums and published her judicial philosophy. But §8.1's contribution caps, disclosure requirements, and foreign-contribution prohibition do not automatically apply. Statute governs the specific rules, subject to the constraint that it must preserve the foreign contribution prohibition and §8.1's disclosure principles. The public is voting on whether a specific person should hold a specific seat, not choosing between competing candidates. The mechanism is structurally different from an election even when it looks like one.</p>
+    <p>The Sorin confirmation, arriving three days after the Assembly resolution, illustrates the bypass's termination condition precisely. Senate confirmation of a Judicial Pool nominee ends the bypass — but only before the public vote is certified. Once the bypass is certified, it proceeds to completion regardless of subsequent Senate action. The Senate could not undo its breach by acting after the fact.</p>
+  </div>
+
+</div>
+<div class="scenario-nav"><a href="scenarios.html">← All Scenarios</a></div>
+</main>
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
+<script>
+  function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+  document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+</script>
+</body>
+</html>
