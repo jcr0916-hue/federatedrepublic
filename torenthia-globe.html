@@ -230,7 +230,7 @@
     // ── TEXTURE LOAD ───────────────────────────────────────────────────
     const loader = new THREE.TextureLoader();
     let loadedCount = 0;
-    const TOTAL = 4;
+    const TOTAL = 3;  // terrain + colors + fog (overlay disabled)
     function onLoad() {
       loadedCount++;
       if (loadedCount === TOTAL) {
@@ -246,9 +246,9 @@
     const colorsTex = loader.load('torenthia-globe-colors.png', onLoad);
     colorsTex.colorSpace = THREE.SRGBColorSpace;
 
-    // Layer 3 — annotation overlay (labels, transparent PNG)
-    const overlayTex = loader.load('torenthia-globe-overlay.png', onLoad);
-    overlayTex.colorSpace = THREE.SRGBColorSpace;
+    // Layer 3 — annotation overlay (disabled: Design PNG has baked-in checkerboard,
+    // not true alpha. Will replace with CSS2D dot markers in a future pass.)
+    // const overlayTex = loader.load('torenthia-globe-overlay.png', onLoad);
 
     // Layer 4 — fog cloud texture (noise input to shader)
     const fogTex = loader.load('torenthia-globe-fog.png', onLoad);
@@ -273,17 +273,6 @@
       blending:    THREE.NormalBlending,
     });
     globeGroup.add(new THREE.Mesh(colorsGeo, colorsMat));
-
-    // ── LAYER 3: ANNOTATION OVERLAY ────────────────────────────────────
-    // Labels and border markers on transparent PNG.
-    const overlayGeo = new THREE.SphereGeometry(1.007, 72, 72);
-    const overlayMat = new THREE.MeshBasicMaterial({
-      map:        overlayTex,
-      transparent: true,
-      depthWrite:  false,
-      blending:    THREE.NormalBlending,
-    });
-    globeGroup.add(new THREE.Mesh(overlayGeo, overlayMat));
 
     // ── LAYER 3: FOG SPHERE (custom shader) ────────────────────────────
     //
@@ -332,8 +321,8 @@
     const fogMat = new THREE.ShaderMaterial({
       uniforms: {
         fogMap:        { value: fogTex },
-        revealCenter:  { value: new THREE.Vector2(0.25, 0.55) }, // ← Torenthia center in world map UV
-        revealRadius:  { value: 0.14 },                          // ← smaller: Torenthia is ~20% of world
+        revealCenter:  { value: new THREE.Vector2(0.25, 0.55) },
+        revealRadius:  { value: 0.20 },  // wider: shows Torenthia + surrounding ocean
       },
       vertexShader:   FOG_VERT,
       fragmentShader: FOG_FRAG,
