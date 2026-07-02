@@ -282,9 +282,9 @@
         float maxRGB = max(max(c.r, c.g), c.b);
         float minRGB = min(min(c.r, c.g), c.b);
         float sat = (maxRGB < 0.001) ? 0.0 : (maxRGB - minRGB) / maxRGB;
-        // Smoothly discard unsaturated pixels; keep colored blobs
-        float alpha = smoothstep(0.08, 0.28, sat);
-        gl_FragColor = vec4(c.rgb, alpha * 0.75);
+        // Discard unsaturated pixels (checkerboard); keep colored blobs softly
+        float alpha = smoothstep(0.15, 0.45, sat) * 0.50;
+        gl_FragColor = vec4(c.rgb, alpha);
       }
     `;
     const colorsGeo = new THREE.SphereGeometry(1.004, 72, 72);
@@ -326,17 +326,22 @@
       void main() {
         vec4 cloud = texture2D(fogMap, vUv);
 
-        // Scale x by 0.5 to compensate for the 2:1 equirectangular aspect ratio,
-        // so the reveal zone appears circular on the sphere surface.
+        // Distance-based reveal — pure math, no PNG alpha dependency
         vec2 d = vUv - revealCenter;
         d.x *= 0.5;
         float dist = length(d);
-
-        // 0 = fully revealed, 1 = fully fogged
         float mask = smoothstep(revealRadius - 0.10, revealRadius + 0.07, dist);
 
-        // Combine distance mask with cloud texture's own alpha for organic edges
-        gl_FragColor = vec4(cloud.rgb, cloud.a * mask);
+        // Use cloud luminance for organic texture variation, but clamp to
+        // a dark range so white checkerboard pixels don't influence the fog.
+        float lum = dot(cloud.rgb, vec3(0.299, 0.587, 0.114));
+        float cloudDensity = 1.0 - smoothstep(0.08, 0.45, lum);
+
+        // Dark navy fog color
+        vec3 fogColor = vec3(0.04, 0.07, 0.14);
+        float alpha = mask * (0.72 + cloudDensity * 0.22);
+
+        gl_FragColor = vec4(fogColor, alpha);
       }
     `;
 
