@@ -215,15 +215,22 @@
   <!-- Torenthia now occupies ~U 0.19–0.26, V 0.38–0.48 in the world map.   -->
   <!-- All values are estimates — tune after seeing the globe in browser.     -->
   <div class="g-locations">
-    <button class="loc-btn active"  data-u="0.22" data-v="0.43">Torenthia</button>
-    <button class="loc-btn"         data-u="0.212" data-v="0.478">Korda</button>
-    <button class="loc-btn"         data-u="0.211" data-v="0.44">Harren</button>
-    <button class="loc-btn"         data-u="0.22" data-v="0.44">Caldris</button>
-    <button class="loc-btn"         data-u="0.21" data-v="0.41">Varek</button>
-    <button class="loc-btn"         data-u="0.23" data-v="0.43">Arvane</button>
-    <button class="loc-btn"         data-u="0.23" data-v="0.40">Orath</button>
-    <button class="loc-btn"         data-u="0.24" data-v="0.41">Merath</button>
-    <button class="loc-btn"         data-u="0.25" data-v="0.43">Corindal</button>
+    <button class="loc-btn active"  data-u="0.251" data-v="0.419">Verentum</button>
+    <button class="loc-btn"         data-u="0.271" data-v="0.465">Korda N.</button>
+    <button class="loc-btn"         data-u="0.293" data-v="0.377">Korda S.</button>
+    <button class="loc-btn"         data-u="0.231" data-v="0.447">Harren</button>
+    <button class="loc-btn"         data-u="0.241" data-v="0.471">Caldris</button>
+    <button class="loc-btn"         data-u="0.244" data-v="0.451">Varek</button>
+    <button class="loc-btn"         data-u="0.221" data-v="0.425">Arvane</button>
+    <button class="loc-btn"         data-u="0.237" data-v="0.414">Orath</button>
+    <button class="loc-btn"         data-u="0.251" data-v="0.435">Merath</button>
+    <button class="loc-btn"         data-u="0.233" data-v="0.387">Corindal</button>
+    <button class="loc-btn"         data-u="0.227" data-v="0.403">Caldenmere</button>
+    <button class="loc-btn"         data-u="0.267" data-v="0.405">Selvane</button>
+    <button class="loc-btn"         data-u="0.289" data-v="0.389">Kelvant</button>
+    <button class="loc-btn"         data-u="0.283" data-v="0.429">Rhovane</button>
+    <button class="loc-btn"         data-u="0.227" data-v="0.473">Verdmont</button>
+    <button class="loc-btn"         data-u="0.253" data-v="0.367">Morantine</button>
   </div>
 
   <div class="g-hint">Drag to rotate</div>
@@ -323,14 +330,14 @@
     //   diplomatic #f59e0b  amber/gold
     //
     const DOT_DATA = [
-      { u: 0.213, v: 0.495, color: '#e8185a', type: 'crisis',     title: 'Korda — Northern Zone', dir: [10, -30] },
-      { u: 0.24,  v: 0.43,  color: '#e8185a', type: 'crisis',     title: 'Rhondel',                dir: [26, -6] },
-      { u: 0.22,  v: 0.44,  color: '#7c3aed', type: 'political',  title: 'Verentum',                dir: [-10, 28] },
-      { u: 0.22,  v: 0.41,  color: '#0ea5e9', type: 'legal',      title: 'Corindal',                dir: [-24, -16] },
-      { u: 0.23,  v: 0.45,  color: '#0ea5e9', type: 'legal',      title: 'Korda — Southern Zone',   dir: [28, 4] },
-      { u: 0.213, v: 0.45,  color: '#f59e0b', type: 'diplomatic', title: 'Lake Varda',               dir: [-30, 2] },
-      { u: 0.22,  v: 0.39,  color: '#f59e0b', type: 'diplomatic', title: 'Valedon Border',           dir: [8, -28] },
-      { u: 0.225, v: 0.476, color: '#f59e0b', type: 'diplomatic', title: 'Toren River',              dir: [26, 20] },
+      { u: 0.271, v: 0.465, color: '#e8185a', type: 'crisis',     title: 'Korda — Northern Zone', dir: [10, -30] },
+      { u: 0.289, v: 0.417, color: '#e8185a', type: 'crisis',     title: 'Rhondel',                dir: [26, -6] },
+      { u: 0.251, v: 0.419, color: '#7c3aed', type: 'political',  title: 'Verentum',                dir: [-10, 28] },
+      { u: 0.233, v: 0.387, color: '#0ea5e9', type: 'legal',      title: 'Corindal',                dir: [-24, -16] },
+      { u: 0.293, v: 0.377, color: '#0ea5e9', type: 'legal',      title: 'Korda — Southern Zone',   dir: [28, 4] },
+      { u: 0.287, v: 0.459, color: '#f59e0b', type: 'diplomatic', title: 'Lake Varda',               dir: [26, 16] },
+      { u: 0.263, v: 0.364, color: '#f59e0b', type: 'diplomatic', title: 'Valedon Border',           dir: [8, -28] },
+      { u: 0.257, v: 0.473, color: '#f59e0b', type: 'diplomatic', title: 'Toren River',              dir: [-8, 24] },
     ];
 
     // Convert UV → 3D point on sphere surface
@@ -449,8 +456,8 @@
     const fogGeo = new THREE.SphereGeometry(1.018, 72, 72);
     const fogMat = new THREE.ShaderMaterial({
       uniforms: {
-        revealCenter: { value: new THREE.Vector2(0.22, 0.43) },
-        revealRadius: { value: 0.16 },  // tight window — Torenthia + surrounding ocean
+        revealCenter: { value: new THREE.Vector2(0.257, 0.42) },
+        revealRadius: { value: 0.14 },  // tight window — Torenthia + surrounding ocean
       },
       vertexShader:   FOG_VERT,
       fragmentShader: FOG_FRAG,
@@ -464,7 +471,7 @@
     // Rotate so Torenthia (terrain U≈0.30) faces the camera.
     // Formula: rotation.y = U * 2π
     // Adjust data-u on buttons to shift focus per location.
-    setGlobeRotation(0.22, 0.43, false);
+    setGlobeRotation(0.257, 0.42, false);
 
     // ── NAVIGATION ────────────────────────────────────────────────────
     // Convert UV coordinates to globe group rotation angles.
