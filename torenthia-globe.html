@@ -311,7 +311,7 @@
     // ── TEXTURE LOAD ───────────────────────────────────────────────────
     const loader = new THREE.TextureLoader();
     let loadedCount = 0;
-    const TOTAL = 1;  // only terrain — colors and fog are shader-generated
+    const TOTAL = 2;  // terrain + borders
     function onLoad() {
       loadedCount++;
       if (loadedCount === TOTAL) {
@@ -319,9 +319,13 @@
       }
     }
 
-    // Terrain only
+    // Terrain
     const terrainTex = loader.load('torenthia-globe-terrain.png', onLoad);
     terrainTex.colorSpace = THREE.SRGBColorSpace;
+
+    // Border lines overlay (Gemini — navy lines, checkerboard stripped by shader)
+    const borderTex = loader.load('torenthia-globe-borders.png', onLoad);
+    borderTex.colorSpace = THREE.SRGBColorSpace;
 
     // ── LAYER 1: TERRAIN SPHERE ────────────────────────────────────────
     const terrainGeo = new THREE.SphereGeometry(1, 72, 72);
@@ -329,6 +333,33 @@
       map: terrainTex, roughness: 0.88, metalness: 0.0,
     });
     globeGroup.add(new THREE.Mesh(terrainGeo, terrainMat));
+
+    // ── LAYER 1b: BORDER LINES ─────────────────────────────────────────
+    // Gemini-generated navy line overlay. Saturation shader strips the
+    // baked-in grey checkerboard (sat≈0) while keeping dark navy lines (sat≈0.63).
+    const BORDER_FRAG = /* glsl */`
+      uniform sampler2D borderMap;
+      varying vec2 vUv;
+      void main() {
+        vec4 c = texture2D(borderMap, vUv);
+        float maxC = max(max(c.r, c.g), c.b);
+        float minC = min(min(c.r, c.g), c.b);
+        float sat  = (maxC < 0.001) ? 0.0 : (maxC - minC) / maxC;
+        // Keep only saturated (navy) pixels; discard grey checkerboard
+        float alpha = smoothstep(0.15, 0.45, sat);
+        gl_FragColor = vec4(c.rgb, alpha * 0.85);
+      }
+    `;
+    const borderGeo = new THREE.SphereGeometry(1.002, 72, 72);
+    const borderMat = new THREE.ShaderMaterial({
+      uniforms: { borderMap: { value: borderTex } },
+      vertexShader: `varying vec2 vUv;
+        void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+      fragmentShader: BORDER_FRAG,
+      transparent: true,
+      depthWrite: false,
+    });
+    globeGroup.add(new THREE.Mesh(borderGeo, borderMat));
 
     // ── LAYER 2: PULSING DOT MARKERS (CSS2DRenderer) ───────────────────
     //
