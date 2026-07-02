@@ -263,14 +263,37 @@
     globeGroup.add(new THREE.Mesh(terrainGeo, terrainMat));
 
     // ── LAYER 2: STATE COLOR FILLS ─────────────────────────────────────
-    // Soft glow blobs (red/amber/blue) over crisis and pressure zones.
-    // Sits just above terrain; NormalBlending respects the blob alpha.
+    // Custom shader discards near-white/grey checkerboard pixels (baked
+    // transparency from Design) by checking color saturation.
+    // Only saturated pixels (the actual red/blue/amber blobs) survive.
+    const COLORS_VERT = /* glsl */`
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `;
+    const COLORS_FRAG = /* glsl */`
+      uniform sampler2D colorsMap;
+      varying vec2 vUv;
+      void main() {
+        vec4 c = texture2D(colorsMap, vUv);
+        // Saturation in HSV — checkerboard is white/grey (sat≈0), blobs are saturated
+        float maxRGB = max(max(c.r, c.g), c.b);
+        float minRGB = min(min(c.r, c.g), c.b);
+        float sat = (maxRGB < 0.001) ? 0.0 : (maxRGB - minRGB) / maxRGB;
+        // Smoothly discard unsaturated pixels; keep colored blobs
+        float alpha = smoothstep(0.08, 0.28, sat);
+        gl_FragColor = vec4(c.rgb, alpha * 0.75);
+      }
+    `;
     const colorsGeo = new THREE.SphereGeometry(1.004, 72, 72);
-    const colorsMat = new THREE.MeshBasicMaterial({
-      map:         colorsTex,
-      transparent: true,
-      depthWrite:  false,
-      blending:    THREE.NormalBlending,
+    const colorsMat = new THREE.ShaderMaterial({
+      uniforms:       { colorsMap: { value: colorsTex } },
+      vertexShader:   COLORS_VERT,
+      fragmentShader: COLORS_FRAG,
+      transparent:    true,
+      depthWrite:     false,
     });
     globeGroup.add(new THREE.Mesh(colorsGeo, colorsMat));
 
@@ -322,7 +345,7 @@
       uniforms: {
         fogMap:        { value: fogTex },
         revealCenter:  { value: new THREE.Vector2(0.25, 0.55) },
-        revealRadius:  { value: 0.20 },  // wider: shows Torenthia + surrounding ocean
+        revealRadius:  { value: 0.25 },  // shows Torenthia + surrounding ocean for context
       },
       vertexShader:   FOG_VERT,
       fragmentShader: FOG_FRAG,
