@@ -152,48 +152,28 @@
       100% { transform: translate(-50%,-50%) scale(3.2); opacity: 0;   }
     }
 
-    /* ── DOT LABELS ── */
-    .globe-dot-label {
+    /* ── LEADER LINES + LABELS ── */
+    .globe-dot-line {
       position: absolute; left: 50%; top: 50%;
-      display: flex; align-items: center;
-      pointer-events: none; white-space: nowrap;
-      transform: translateY(-50%);
+      height: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      opacity: 0.65;
     }
-    .globe-dot-label.left {
-      right: 50%; left: auto;
-      flex-direction: row-reverse;
-    }
-    .globe-dot-label.top {
-      bottom: 50%; top: auto; left: 50%;
-      flex-direction: column-reverse;
-      transform: translateX(-50%);
-    }
-    .globe-label-line {
-      width: 16px; height: 1px;
-      background: currentColor; opacity: 0.45;
-      flex-shrink: 0;
-    }
-    .globe-dot-label.top .globe-label-line { width: 1px; height: 12px; }
-    .globe-label-box {
-      margin-left: 5px; padding: 2px 6px 3px;
-      background: rgba(5,8,16,0.78);
-      border-left: 1.5px solid currentColor;
-    }
-    .globe-dot-label.left .globe-label-box {
-      margin-left: 0; margin-right: 5px;
-      border-left: none; border-right: 1.5px solid currentColor;
-    }
-    .globe-dot-label.top .globe-label-box { margin-left: 0; margin-bottom: 4px; }
-    .globe-label-name {
+    .globe-dot-label {
+      position: absolute;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 8.5px; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: rgba(245,240,232,0.92); display: block;
-    }
-    .globe-label-sub {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 7px; letter-spacing: 0.04em;
-      color: rgba(245,240,232,0.48); display: block; margin-top: 1px;
+      font-size: 0.56rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #f5f0e8;
+      background: rgba(10, 15, 26, 0.88);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-left-width: 2px;
+      padding: 0.22rem 0.5rem;
+      white-space: nowrap;
+      pointer-events: none;
+      line-height: 1.3;
     }
 
     @media (max-width: 600px) {
@@ -311,7 +291,7 @@
     // ── TEXTURE LOAD ───────────────────────────────────────────────────
     const loader = new THREE.TextureLoader();
     let loadedCount = 0;
-    const TOTAL = 3;  // terrain + borders + state lines
+    const TOTAL = 1;  // only terrain — colors and fog are shader-generated
     function onLoad() {
       loadedCount++;
       if (loadedCount === TOTAL) {
@@ -319,15 +299,9 @@
       }
     }
 
+    // Terrain only
     const terrainTex = loader.load('torenthia-globe-terrain.png', onLoad);
     terrainTex.colorSpace = THREE.SRGBColorSpace;
-
-    const borderTex = loader.load('torenthia-globe-borders.png', onLoad);
-    borderTex.colorSpace = THREE.SRGBColorSpace;
-
-    // State lines — composited to exact terrain UV position, true alpha
-    const statesTex = loader.load('torenthia-globe-statelines.png', onLoad);
-    statesTex.colorSpace = THREE.SRGBColorSpace;
 
     // ── LAYER 1: TERRAIN SPHERE ────────────────────────────────────────
     const terrainGeo = new THREE.SphereGeometry(1, 72, 72);
@@ -335,43 +309,6 @@
       map: terrainTex, roughness: 0.88, metalness: 0.0,
     });
     globeGroup.add(new THREE.Mesh(terrainGeo, terrainMat));
-
-    // ── LAYER 1b: BORDER LINES ─────────────────────────────────────────
-    // Gemini-generated navy line overlay. Saturation shader strips the
-    // baked-in grey checkerboard (sat≈0) while keeping dark navy lines (sat≈0.63).
-    const BORDER_FRAG = /* glsl */`
-      uniform sampler2D borderMap;
-      varying vec2 vUv;
-      void main() {
-        vec4 c = texture2D(borderMap, vUv);
-        float maxC = max(max(c.r, c.g), c.b);
-        float minC = min(min(c.r, c.g), c.b);
-        float sat  = (maxC < 0.001) ? 0.0 : (maxC - minC) / maxC;
-        // Keep only saturated (navy) pixels; discard grey checkerboard
-        float alpha = smoothstep(0.15, 0.45, sat);
-        gl_FragColor = vec4(c.rgb, alpha * 0.85);
-      }
-    `;
-    const borderGeo = new THREE.SphereGeometry(1.002, 72, 72);
-    const borderMat = new THREE.ShaderMaterial({
-      uniforms: { borderMap: { value: borderTex } },
-      vertexShader: `varying vec2 vUv;
-        void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
-      fragmentShader: BORDER_FRAG,
-      transparent: true,
-      depthWrite: false,
-    });
-    globeGroup.add(new THREE.Mesh(borderGeo, borderMat));
-
-    // ── LAYER 1c: STATE LINES (composited PNG, true alpha) ─────────────
-    const statesGeo = new THREE.SphereGeometry(1.003, 72, 72);
-    const statesMat = new THREE.MeshBasicMaterial({
-      map:         statesTex,
-      transparent: true,
-      depthWrite:  false,
-      blending:    THREE.NormalBlending,
-    });
-    globeGroup.add(new THREE.Mesh(statesGeo, statesMat));
 
     // ── LAYER 2: PULSING DOT MARKERS (CSS2DRenderer) ───────────────────
     //
@@ -386,17 +323,18 @@
     //   diplomatic #f59e0b  amber/gold
     //
     const DOT_DATA = [
-      { u: 0.213, v: 0.495, color: '#e8185a', type: 'crisis',     title: 'Korda',          sub: 'Emergency · Yr. 13',       offset: 'right' },
-      { u: 0.24,  v: 0.43,  color: '#e8185a', type: 'crisis',     title: 'Rhondel',        sub: 'Crisis zone',               offset: 'right' },
-      { u: 0.22,  v: 0.44,  color: '#7c3aed', type: 'political',  title: 'Verentum',       sub: 'Capital',                   offset: 'top'   },
-      { u: 0.22,  v: 0.41,  color: '#0ea5e9', type: 'legal',      title: 'Corindal',       sub: 'SC-Y12-0091',               offset: 'right' },
-      { u: 0.23,  v: 0.45,  color: '#0ea5e9', type: 'legal',      title: 'Korda South',    sub: 'MA remedy · Yr. 12',        offset: 'left'  },
-      { u: 0.213, v: 0.475, color: '#f59e0b', type: 'diplomatic', title: 'Lake Varda',     sub: 'Displacement · Yr. 12–13',  offset: 'left'  },
-      { u: 0.22,  v: 0.39,  color: '#f59e0b', type: 'diplomatic', title: 'Valedon',        sub: 'Sunderland border',         offset: 'right' },
-      { u: 0.225, v: 0.476, color: '#f59e0b', type: 'diplomatic', title: 'Toren River',    sub: 'Treaty renewal',            offset: 'top'   },
+      { u: 0.213, v: 0.495, color: '#e8185a', type: 'crisis',     title: 'Korda — Northern Zone', dir: [10, -30] },
+      { u: 0.24,  v: 0.43,  color: '#e8185a', type: 'crisis',     title: 'Rhondel',                dir: [26, -6] },
+      { u: 0.22,  v: 0.44,  color: '#7c3aed', type: 'political',  title: 'Verentum',                dir: [-10, 28] },
+      { u: 0.22,  v: 0.41,  color: '#0ea5e9', type: 'legal',      title: 'Corindal',                dir: [-24, -16] },
+      { u: 0.23,  v: 0.45,  color: '#0ea5e9', type: 'legal',      title: 'Korda — Southern Zone',   dir: [28, 4] },
+      { u: 0.213, v: 0.45,  color: '#f59e0b', type: 'diplomatic', title: 'Lake Varda',               dir: [-30, 2] },
+      { u: 0.22,  v: 0.39,  color: '#f59e0b', type: 'diplomatic', title: 'Valedon Border',           dir: [8, -28] },
+      { u: 0.225, v: 0.476, color: '#f59e0b', type: 'diplomatic', title: 'Toren River',              dir: [26, 20] },
     ];
 
     // Convert UV → 3D point on sphere surface
+    // Matches the SphereGeometry UV mapping used by the terrain texture.
     function uvTo3D(u, v, r = 1.025) {
       const phi   = u * Math.PI * 2;
       const theta = (1.0 - v) * Math.PI;
@@ -407,14 +345,14 @@
       ).multiplyScalar(r);
     }
 
-    // Build dot + label elements and add to globe group
-    const dotObjects = [];
+    // Build dot elements and add to globe group
+    const dotObjects = []; // { obj: CSS2DObject, el: HTMLElement }
 
     DOT_DATA.forEach(d => {
       const el = document.createElement('div');
       el.className = 'globe-dot';
+      el.title = d.title;
 
-      // Dot rings
       const core = document.createElement('div');
       core.className = 'globe-dot-core';
       core.style.background = d.color;
@@ -427,36 +365,34 @@
       ring2.className = 'globe-dot-ring globe-dot-ring2';
       ring2.style.borderColor = d.color;
 
-      // Label: connector line + text box
-      const label = document.createElement('div');
-      label.className = `globe-dot-label ${d.offset || 'right'}`;
-      label.style.color = d.color;
-
-      const line = document.createElement('div');
-      line.className = 'globe-label-line';
-
-      const box = document.createElement('div');
-      box.className = 'globe-label-box';
-
-      const name = document.createElement('span');
-      name.className = 'globe-label-name';
-      name.textContent = d.title;
-      box.appendChild(name);
-
-      if (d.sub) {
-        const sub = document.createElement('span');
-        sub.className = 'globe-label-sub';
-        sub.textContent = d.sub;
-        box.appendChild(sub);
-      }
-
-      label.appendChild(line);
-      label.appendChild(box);
-
       el.appendChild(core);
       el.appendChild(ring1);
       el.appendChild(ring2);
-      el.appendChild(label);
+
+      // Leader line + label, offset from the dot per d.dir = [dx, dy] in px.
+      if (d.dir) {
+        const [dx, dy] = d.dir;
+        const dist = Math.hypot(dx, dy);
+        const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+        const line = document.createElement('div');
+        line.className = 'globe-dot-line';
+        line.style.width = dist + 'px';
+        line.style.background = d.color;
+        line.style.transform = `rotate(${angle}deg)`;
+        el.appendChild(line);
+
+        const label = document.createElement('div');
+        label.className = 'globe-dot-label';
+        label.style.borderLeftColor = d.color;
+        label.textContent = d.title;
+        label.style.left = `calc(50% + ${dx}px)`;
+        label.style.top = `calc(50% + ${dy}px)`;
+        label.style.transform = dx >= 0
+          ? 'translate(4px, -50%)'
+          : 'translate(calc(-100% - 4px), -50%)';
+        el.appendChild(label);
+      }
 
       const obj = new CSS2DObject(el);
       obj.position.copy(uvTo3D(d.u, d.v));
