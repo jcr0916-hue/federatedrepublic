@@ -234,7 +234,7 @@
     const labelRenderer = new CSS2DRenderer();
     labelRenderer.setSize(innerWidth, innerHeight);
     labelRenderer.domElement.style.cssText =
-      'position:absolute;top:0;left:0;pointer-events:none;overflow:hidden;';
+      'position:absolute;top:0;left:0;pointer-events:none;overflow:hidden;z-index:10;';
     document.body.appendChild(labelRenderer.domElement);
 
     // ── CONTROLS ───────────────────────────────────────────────────────
