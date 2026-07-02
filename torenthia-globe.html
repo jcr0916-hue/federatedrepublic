@@ -152,6 +152,50 @@
       100% { transform: translate(-50%,-50%) scale(3.2); opacity: 0;   }
     }
 
+    /* ── DOT LABELS ── */
+    .globe-dot-label {
+      position: absolute; left: 50%; top: 50%;
+      display: flex; align-items: center;
+      pointer-events: none; white-space: nowrap;
+      transform: translateY(-50%);
+    }
+    .globe-dot-label.left {
+      right: 50%; left: auto;
+      flex-direction: row-reverse;
+    }
+    .globe-dot-label.top {
+      bottom: 50%; top: auto; left: 50%;
+      flex-direction: column-reverse;
+      transform: translateX(-50%);
+    }
+    .globe-label-line {
+      width: 16px; height: 1px;
+      background: currentColor; opacity: 0.45;
+      flex-shrink: 0;
+    }
+    .globe-dot-label.top .globe-label-line { width: 1px; height: 12px; }
+    .globe-label-box {
+      margin-left: 5px; padding: 2px 6px 3px;
+      background: rgba(5,8,16,0.78);
+      border-left: 1.5px solid currentColor;
+    }
+    .globe-dot-label.left .globe-label-box {
+      margin-left: 0; margin-right: 5px;
+      border-left: none; border-right: 1.5px solid currentColor;
+    }
+    .globe-dot-label.top .globe-label-box { margin-left: 0; margin-bottom: 4px; }
+    .globe-label-name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(245,240,232,0.92); display: block;
+    }
+    .globe-label-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7px; letter-spacing: 0.04em;
+      color: rgba(245,240,232,0.48); display: block; margin-top: 1px;
+    }
+
     @media (max-width: 600px) {
       .g-title { top: 3.5rem; }
       .g-title-main { font-size: 0.9rem; }
@@ -299,18 +343,17 @@
     //   diplomatic #f59e0b  amber/gold
     //
     const DOT_DATA = [
-      { u: 0.213, v: 0.495, color: '#e8185a', type: 'crisis',     title: 'Korda — Northern Zone' },
-      { u: 0.24,  v: 0.43,  color: '#e8185a', type: 'crisis',     title: 'Rhondel' },
-      { u: 0.22,  v: 0.44,  color: '#7c3aed', type: 'political',  title: 'Verentum' },
-      { u: 0.22,  v: 0.41,  color: '#0ea5e9', type: 'legal',      title: 'Corindal' },
-      { u: 0.23,  v: 0.45,  color: '#0ea5e9', type: 'legal',      title: 'Korda — Southern Zone' },
-      { u: 0.213, v: 0.45,  color: '#f59e0b', type: 'diplomatic', title: 'Lake Varda' },
-      { u: 0.22,  v: 0.39,  color: '#f59e0b', type: 'diplomatic', title: 'Valedon Border' },
-      { u: 0.225, v: 0.476, color: '#f59e0b', type: 'diplomatic', title: 'Toren River' },
+      { u: 0.213, v: 0.495, color: '#e8185a', type: 'crisis',     title: 'Korda',          sub: 'Emergency · Yr. 13',       offset: 'right' },
+      { u: 0.24,  v: 0.43,  color: '#e8185a', type: 'crisis',     title: 'Rhondel',        sub: 'Crisis zone',               offset: 'right' },
+      { u: 0.22,  v: 0.44,  color: '#7c3aed', type: 'political',  title: 'Verentum',       sub: 'Capital',                   offset: 'top'   },
+      { u: 0.22,  v: 0.41,  color: '#0ea5e9', type: 'legal',      title: 'Corindal',       sub: 'SC-Y12-0091',               offset: 'right' },
+      { u: 0.23,  v: 0.45,  color: '#0ea5e9', type: 'legal',      title: 'Korda South',    sub: 'MA remedy · Yr. 12',        offset: 'left'  },
+      { u: 0.213, v: 0.475, color: '#f59e0b', type: 'diplomatic', title: 'Lake Varda',     sub: 'Displacement · Yr. 12–13',  offset: 'left'  },
+      { u: 0.22,  v: 0.39,  color: '#f59e0b', type: 'diplomatic', title: 'Valedon',        sub: 'Sunderland border',         offset: 'right' },
+      { u: 0.225, v: 0.476, color: '#f59e0b', type: 'diplomatic', title: 'Toren River',    sub: 'Treaty renewal',            offset: 'top'   },
     ];
 
     // Convert UV → 3D point on sphere surface
-    // Matches the SphereGeometry UV mapping used by the terrain texture.
     function uvTo3D(u, v, r = 1.025) {
       const phi   = u * Math.PI * 2;
       const theta = (1.0 - v) * Math.PI;
@@ -321,14 +364,14 @@
       ).multiplyScalar(r);
     }
 
-    // Build dot elements and add to globe group
-    const dotObjects = []; // { obj: CSS2DObject, el: HTMLElement }
+    // Build dot + label elements and add to globe group
+    const dotObjects = [];
 
     DOT_DATA.forEach(d => {
       const el = document.createElement('div');
       el.className = 'globe-dot';
-      el.title = d.title;
 
+      // Dot rings
       const core = document.createElement('div');
       core.className = 'globe-dot-core';
       core.style.background = d.color;
@@ -341,9 +384,36 @@
       ring2.className = 'globe-dot-ring globe-dot-ring2';
       ring2.style.borderColor = d.color;
 
+      // Label: connector line + text box
+      const label = document.createElement('div');
+      label.className = `globe-dot-label ${d.offset || 'right'}`;
+      label.style.color = d.color;
+
+      const line = document.createElement('div');
+      line.className = 'globe-label-line';
+
+      const box = document.createElement('div');
+      box.className = 'globe-label-box';
+
+      const name = document.createElement('span');
+      name.className = 'globe-label-name';
+      name.textContent = d.title;
+      box.appendChild(name);
+
+      if (d.sub) {
+        const sub = document.createElement('span');
+        sub.className = 'globe-label-sub';
+        sub.textContent = d.sub;
+        box.appendChild(sub);
+      }
+
+      label.appendChild(line);
+      label.appendChild(box);
+
       el.appendChild(core);
       el.appendChild(ring1);
       el.appendChild(ring2);
+      el.appendChild(label);
 
       const obj = new CSS2DObject(el);
       obj.position.copy(uvTo3D(d.u, d.v));
