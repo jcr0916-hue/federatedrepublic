@@ -311,7 +311,7 @@
     // ── TEXTURE LOAD ───────────────────────────────────────────────────
     const loader = new THREE.TextureLoader();
     let loadedCount = 0;
-    const TOTAL = 2;  // terrain + borders
+    const TOTAL = 3;  // terrain + borders + state lines
     function onLoad() {
       loadedCount++;
       if (loadedCount === TOTAL) {
@@ -324,6 +324,10 @@
 
     const borderTex = loader.load('torenthia-globe-borders.png', onLoad);
     borderTex.colorSpace = THREE.SRGBColorSpace;
+
+    // State lines — composited to exact terrain UV position, true alpha
+    const statesTex = loader.load('torenthia-globe-statelines.png', onLoad);
+    statesTex.colorSpace = THREE.SRGBColorSpace;
 
     // ── LAYER 1: TERRAIN SPHERE ────────────────────────────────────────
     const terrainGeo = new THREE.SphereGeometry(1, 72, 72);
@@ -358,6 +362,16 @@
       depthWrite: false,
     });
     globeGroup.add(new THREE.Mesh(borderGeo, borderMat));
+
+    // ── LAYER 1c: STATE LINES (composited PNG, true alpha) ─────────────
+    const statesGeo = new THREE.SphereGeometry(1.003, 72, 72);
+    const statesMat = new THREE.MeshBasicMaterial({
+      map:         statesTex,
+      transparent: true,
+      depthWrite:  false,
+      blending:    THREE.NormalBlending,
+    });
+    globeGroup.add(new THREE.Mesh(statesGeo, statesMat));
 
     // ── LAYER 2: PULSING DOT MARKERS (CSS2DRenderer) ───────────────────
     //
