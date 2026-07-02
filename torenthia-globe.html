@@ -232,9 +232,13 @@
 
     // CSS2D renderer — sits on top of the WebGL canvas, renders HTML dots
     const labelRenderer = new CSS2DRenderer();
-    labelRenderer.setSize(innerWidth, innerHeight);
+    // NOTE: cssText must be set BEFORE setSize() — assigning .style.cssText replaces
+    // the entire inline style attribute, and setSize() writes width/height via
+    // .style.width / .style.height. Setting cssText afterward was wiping those out,
+    // leaving this container at 0x0 with overflow:hidden, which clipped every dot.
     labelRenderer.domElement.style.cssText =
       'position:absolute;top:0;left:0;pointer-events:none;overflow:hidden;z-index:10;';
+    labelRenderer.setSize(innerWidth, innerHeight);
     document.body.appendChild(labelRenderer.domElement);
 
     // ── CONTROLS ───────────────────────────────────────────────────────
