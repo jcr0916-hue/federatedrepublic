@@ -352,6 +352,76 @@
       ).multiplyScalar(r);
     }
 
+    // Internal state/territory boundary lines — computed as a Voronoi tessellation
+    // from the 16 territory anchor points, then clipped to the actual coastline.
+    // { a,b: U,V of point 1 — c,d: U,V of point 2 }
+    const BORDER_DATA = [
+      { a: 0.3324, b: 0.416, c: 0.2868, d: 0.4091 }, // Kelvant | Rhovane
+      { a: 0.3355, b: 0.3978, c: 0.2718, d: 0.3766 }, // Kelvant | Korda-S
+      { a: 0.2868, b: 0.4091, c: 0.2679, d: 0.3831 }, // Kelvant | Selvane
+      { a: 0.2718, b: 0.3766, c: 0.2679, d: 0.3831 }, // Kelvant | Morantine
+      { a: 0.2718, b: 0.3766, c: 0.2735, d: 0.3698 }, // Korda-S | Morantine
+      { a: 0.2542, b: 0.3882, c: 0.223, d: 0.357 }, // Morantine | Corindal
+      { a: 0.2542, b: 0.3882, c: 0.2679, d: 0.3831 }, // Morantine | Selvane
+      { a: 0.255, b: 0.4629, c: 0.2628, d: 0.5021 }, // Caldris | Korda-N
+      { a: 0.255, b: 0.4629, c: 0.2357, d: 0.46 }, // Caldris | Varek
+      { a: 0.2693, b: 0.4444, c: 0.275, d: 0.4463 }, // Korda-N | Rhovane
+      { a: 0.2693, b: 0.4444, c: 0.262, d: 0.4493 }, // Korda-N | Merath
+      { a: 0.262, b: 0.4493, c: 0.255, d: 0.4629 }, // Korda-N | Varek
+      { a: 0.262, b: 0.4493, c: 0.2403, d: 0.4399 }, // Varek | Merath
+      { a: 0.2403, b: 0.4399, c: 0.2356, d: 0.4552 }, // Varek | Harren
+      { a: 0.2134, b: 0.4417, c: 0.2354, d: 0.4317 }, // Harren | Arvane
+      { a: 0.2354, b: 0.4317, c: 0.2403, d: 0.4399 }, // Harren | Merath
+      { a: 0.2693, b: 0.4444, c: 0.2661, d: 0.427 }, // Rhovane | Merath
+      { a: 0.2868, b: 0.4091, c: 0.2677, d: 0.4219 }, // Rhovane | Selvane
+      { a: 0.2677, b: 0.4219, c: 0.2661, d: 0.427 }, // Rhovane | Verentum
+      { a: 0.2487, b: 0.3985, c: 0.2419, d: 0.3995 }, // Orath | Corindal
+      { a: 0.2487, b: 0.3985, c: 0.2495, d: 0.4011 }, // Orath | Selvane
+      { a: 0.2495, b: 0.4011, c: 0.2402, d: 0.427 }, // Orath | Verentum
+      { a: 0.2419, b: 0.3995, c: 0.2255, d: 0.4144 }, // Orath | Caldenmere
+      { a: 0.2255, b: 0.4144, c: 0.2361, d: 0.4298 }, // Orath | Arvane
+      { a: 0.2361, b: 0.4298, c: 0.2402, d: 0.427 }, // Orath | Merath
+      { a: 0.2542, b: 0.3882, c: 0.2487, d: 0.3985 }, // Corindal | Selvane
+      { a: 0.2419, b: 0.3995, c: 0.2045, d: 0.3854 }, // Corindal | Caldenmere
+      { a: 0.2677, b: 0.4219, c: 0.2495, d: 0.4011 }, // Selvane | Verentum
+      { a: 0.2661, b: 0.427, c: 0.2402, d: 0.427 }, // Verentum | Merath
+      { a: 0.2255, b: 0.4144, c: 0.2081, d: 0.4097 }, // Caldenmere | Arvane
+      { a: 0.2354, b: 0.4317, c: 0.2361, d: 0.4298 }, // Arvane | Merath
+      { a: 0.2281, b: 0.4588, c: 0.2439, d: 0.4612 }, // Verdmont | Harren
+      { a: 0.2329, b: 0.4641, c: 0.2351, d: 0.4799 }, // Verdmont | Caldris
+      { a: 0.2168, b: 0.4493, c: 0.2326, d: 0.4473 }, // Verdmont | Arvane
+    ];
+
+    // Render border lines as dashed navy segments on the sphere surface —
+    // matches the "Border Marker" component from the annotation design system.
+    const borderPositions = [];
+    BORDER_DATA.forEach(seg => {
+      const SUBDIVS = 6; // sample points along each segment so it hugs the sphere surface
+      let prev = null;
+      for (let i = 0; i <= SUBDIVS; i++) {
+        const t = i / SUBDIVS;
+        const u = seg.a + (seg.c - seg.a) * t;
+        const v = seg.b + (seg.d - seg.b) * t;
+        const pt = uvTo3D(u, v, 1.008);
+        if (prev) {
+          borderPositions.push(prev.x, prev.y, prev.z, pt.x, pt.y, pt.z);
+        }
+        prev = pt;
+      }
+    });
+    const borderGeo = new THREE.BufferGeometry();
+    borderGeo.setAttribute('position', new THREE.Float32BufferAttribute(borderPositions, 3));
+    const borderMat = new THREE.LineDashedMaterial({
+      color: 0x1B2A4A,
+      dashSize: 0.006,
+      gapSize: 0.005,
+      transparent: true,
+      opacity: 0.72,
+    });
+    const borderLines = new THREE.LineSegments(borderGeo, borderMat);
+    borderLines.computeLineDistances();
+    globeGroup.add(borderLines);
+
     // Build dot elements and add to globe group
     const dotObjects = []; // { obj: CSS2DObject, el: HTMLElement }
 
