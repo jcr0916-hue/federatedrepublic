@@ -162,19 +162,19 @@
   </div>
 
   <!-- LOCATION NAV -->
-  <!-- data-u, data-v: UV coordinates in the terrain texture (0–1)       -->
-  <!-- Torenthia now occupies ~U 0.05–0.45 in the world map texture.     -->
-  <!-- These are estimates — tune after seeing the globe in browser.      -->
+  <!-- data-u, data-v: UV coordinates in the terrain texture (0–1)            -->
+  <!-- Torenthia now occupies ~U 0.19–0.26, V 0.38–0.48 in the world map.   -->
+  <!-- All values are estimates — tune after seeing the globe in browser.     -->
   <div class="g-locations">
-    <button class="loc-btn active"  data-u="0.25" data-v="0.55">Torenthia</button>
-    <button class="loc-btn"         data-u="0.12" data-v="0.65">Korda</button>
-    <button class="loc-btn"         data-u="0.18" data-v="0.55">Harren</button>
-    <button class="loc-btn"         data-u="0.23" data-v="0.60">Caldris</button>
-    <button class="loc-btn"         data-u="0.19" data-v="0.47">Varek</button>
-    <button class="loc-btn"         data-u="0.28" data-v="0.52">Arvane</button>
-    <button class="loc-btn"         data-u="0.27" data-v="0.44">Orath</button>
-    <button class="loc-btn"         data-u="0.32" data-v="0.47">Merath</button>
-    <button class="loc-btn"         data-u="0.37" data-v="0.52">Corindal</button>
+    <button class="loc-btn active"  data-u="0.22" data-v="0.43">Torenthia</button>
+    <button class="loc-btn"         data-u="0.20" data-v="0.47">Korda</button>
+    <button class="loc-btn"         data-u="0.21" data-v="0.44">Harren</button>
+    <button class="loc-btn"         data-u="0.22" data-v="0.44">Caldris</button>
+    <button class="loc-btn"         data-u="0.21" data-v="0.41">Varek</button>
+    <button class="loc-btn"         data-u="0.23" data-v="0.43">Arvane</button>
+    <button class="loc-btn"         data-u="0.23" data-v="0.40">Orath</button>
+    <button class="loc-btn"         data-u="0.24" data-v="0.41">Merath</button>
+    <button class="loc-btn"         data-u="0.25" data-v="0.43">Corindal</button>
   </div>
 
   <div class="g-hint">Drag to rotate</div>
@@ -272,16 +272,16 @@
         vec3 col = vec3(0.0);
 
         // CRISIS RED — Korda (northwest lake territory)
-        col += glow(vUv, vec2(0.12, 0.65), 0.028) * vec3(0.94, 0.27, 0.27);
+        col += glow(vUv, vec2(0.20, 0.47), 0.018) * vec3(0.94, 0.27, 0.27);
 
         // CRISIS RED — Corindal (eastern border, provisional status)
-        col += glow(vUv, vec2(0.37, 0.48), 0.022) * vec3(0.94, 0.27, 0.27);
+        col += glow(vUv, vec2(0.25, 0.42), 0.014) * vec3(0.94, 0.27, 0.27);
 
         // DIPLOMATIC AMBER — Lake Varda / Sunderland pressure
-        col += glow(vUv, vec2(0.14, 0.62), 0.020) * vec3(0.96, 0.62, 0.04);
+        col += glow(vUv, vec2(0.20, 0.45), 0.013) * vec3(0.96, 0.62, 0.04);
 
         // LEGAL BLUE — Rhovane/Kelvant (eastern lake states, SC case)
-        col += glow(vUv, vec2(0.30, 0.51), 0.022) * vec3(0.38, 0.65, 0.98);
+        col += glow(vUv, vec2(0.24, 0.41), 0.014) * vec3(0.38, 0.65, 0.98);
 
         // Alpha derived from accumulated glow intensity
         float a = min(length(col) * 0.65, 0.60);
@@ -350,8 +350,8 @@
     const fogGeo = new THREE.SphereGeometry(1.018, 72, 72);
     const fogMat = new THREE.ShaderMaterial({
       uniforms: {
-        revealCenter: { value: new THREE.Vector2(0.25, 0.55) },
-        revealRadius: { value: 0.18 },  // tighter — Torenthia + immediate surroundings
+        revealCenter: { value: new THREE.Vector2(0.22, 0.43) },
+        revealRadius: { value: 0.16 },  // tight window — Torenthia + surrounding ocean
       },
       vertexShader:   FOG_VERT,
       fragmentShader: FOG_FRAG,
@@ -365,7 +365,7 @@
     // Rotate so Torenthia (terrain U≈0.30) faces the camera.
     // Formula: rotation.y = U * 2π
     // Adjust data-u on buttons to shift focus per location.
-    setGlobeRotation(0.25, 0.55, false);
+    setGlobeRotation(0.22, 0.43, false);
 
     // ── NAVIGATION ────────────────────────────────────────────────────
     // Convert UV coordinates to globe group rotation angles.
