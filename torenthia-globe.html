@@ -230,7 +230,7 @@
     // ── TEXTURE LOAD ───────────────────────────────────────────────────
     const loader = new THREE.TextureLoader();
     let loadedCount = 0;
-    const TOTAL = 3;  // terrain + colors + fog (overlay disabled)
+    const TOTAL = 1;  // only terrain — colors and fog are shader-generated
     function onLoad() {
       loadedCount++;
       if (loadedCount === TOTAL) {
@@ -238,75 +238,73 @@
       }
     }
 
-    // Layer 1 — terrain (world map, Torenthia left-center ~U 0.05–0.45)
+    // Terrain only
     const terrainTex = loader.load('torenthia-globe-terrain.png', onLoad);
     terrainTex.colorSpace = THREE.SRGBColorSpace;
-
-    // Layer 2 — state color fills (soft glow blobs, transparent PNG)
-    const colorsTex = loader.load('torenthia-globe-colors.png', onLoad);
-    colorsTex.colorSpace = THREE.SRGBColorSpace;
-
-    // Layer 3 — annotation overlay (disabled: Design PNG has baked-in checkerboard,
-    // not true alpha. Will replace with CSS2D dot markers in a future pass.)
-    // const overlayTex = loader.load('torenthia-globe-overlay.png', onLoad);
-
-    // Layer 4 — fog cloud texture (noise input to shader)
-    const fogTex = loader.load('torenthia-globe-fog.png', onLoad);
 
     // ── LAYER 1: TERRAIN SPHERE ────────────────────────────────────────
     const terrainGeo = new THREE.SphereGeometry(1, 72, 72);
     const terrainMat = new THREE.MeshStandardMaterial({
-      map:       terrainTex,
-      roughness: 0.88,
-      metalness: 0.0,
+      map: terrainTex, roughness: 0.88, metalness: 0.0,
     });
     globeGroup.add(new THREE.Mesh(terrainGeo, terrainMat));
 
-    // ── LAYER 2: STATE COLOR FILLS ─────────────────────────────────────
-    // Custom shader discards near-white/grey checkerboard pixels (baked
-    // transparency from Design) by checking color saturation.
-    // Only saturated pixels (the actual red/blue/amber blobs) survive.
-    const COLORS_VERT = /* glsl */`
+    // ── LAYER 2: STATE COLOR GLOWS (shader-generated, no PNG) ──────────
+    //
+    // Soft Gaussian glow spots placed at UV coordinates matching each
+    // state/territory. No texture — pure math. Update positions by
+    // adjusting the vec2 center values below.
+    //
+    // UV space: Torenthia occupies roughly U 0.05–0.45, V 0.35–0.75.
+    // d.x *= 0.5 corrects for the 2:1 equirectangular aspect ratio.
+    //
+    const GLOW_FRAG = /* glsl */`
       varying vec2 vUv;
-      void main() {
-        vUv = uv;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-      }
-    `;
-    const COLORS_FRAG = /* glsl */`
-      uniform sampler2D colorsMap;
-      varying vec2 vUv;
-      void main() {
-        vec4 c = texture2D(colorsMap, vUv);
-        // Saturation in HSV — checkerboard is white/grey (sat≈0), blobs are saturated
-        float maxRGB = max(max(c.r, c.g), c.b);
-        float minRGB = min(min(c.r, c.g), c.b);
-        float sat = (maxRGB < 0.001) ? 0.0 : (maxRGB - minRGB) / maxRGB;
-        // Discard unsaturated pixels (checkerboard); keep colored blobs softly
-        float alpha = smoothstep(0.15, 0.45, sat) * 0.50;
-        gl_FragColor = vec4(c.rgb, alpha);
-      }
-    `;
-    const colorsGeo = new THREE.SphereGeometry(1.004, 72, 72);
-    const colorsMat = new THREE.ShaderMaterial({
-      uniforms:       { colorsMap: { value: colorsTex } },
-      vertexShader:   COLORS_VERT,
-      fragmentShader: COLORS_FRAG,
-      transparent:    true,
-      depthWrite:     false,
-    });
-    globeGroup.add(new THREE.Mesh(colorsGeo, colorsMat));
 
-    // ── LAYER 3: FOG SPHERE (custom shader) ────────────────────────────
+      // Gaussian glow: intensity at vUv from a center point
+      float glow(vec2 uv, vec2 center, float radius) {
+        vec2 d = uv - center;
+        d.x *= 0.5; // aspect ratio correction
+        return exp(-dot(d,d) / (radius * radius));
+      }
+
+      void main() {
+        vec3 col = vec3(0.0);
+
+        // CRISIS RED — Korda (northwest lake territory)
+        col += glow(vUv, vec2(0.12, 0.65), 0.028) * vec3(0.94, 0.27, 0.27);
+
+        // CRISIS RED — Corindal (eastern border, provisional status)
+        col += glow(vUv, vec2(0.37, 0.48), 0.022) * vec3(0.94, 0.27, 0.27);
+
+        // DIPLOMATIC AMBER — Lake Varda / Sunderland pressure
+        col += glow(vUv, vec2(0.14, 0.62), 0.020) * vec3(0.96, 0.62, 0.04);
+
+        // LEGAL BLUE — Rhovane/Kelvant (eastern lake states, SC case)
+        col += glow(vUv, vec2(0.30, 0.51), 0.022) * vec3(0.38, 0.65, 0.98);
+
+        // Alpha derived from accumulated glow intensity
+        float a = min(length(col) * 0.65, 0.60);
+        gl_FragColor = vec4(normalize(col + 0.001) * length(col), a);
+      }
+    `;
+
+    const glowGeo = new THREE.SphereGeometry(1.004, 72, 72);
+    const glowMat = new THREE.ShaderMaterial({
+      uniforms: {},
+      vertexShader: `varying vec2 vUv;
+        void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+      fragmentShader: GLOW_FRAG,
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+    globeGroup.add(new THREE.Mesh(glowGeo, glowMat));
+
+    // ── LAYER 3: FOG SPHERE (shader-generated, no PNG) ─────────────────
     //
-    // The fog layer wraps the globe at a slightly larger radius.
-    // Fragment shader punches a soft circular reveal hole at
-    // revealCenter (UV coords) with radius revealRadius.
-    // The cloud texture provides organic texture in the fog zone.
-    //
-    // Tuning:
-    //   revealCenter — (U, V) of the point you want to reveal (Torenthia center)
-    //   revealRadius — in UV space, accounting for 2:1 aspect ratio
+    // Pure math fog — distance from revealCenter controls opacity.
+    // GLSL value noise adds organic cloud variation without any texture.
     //
     const FOG_VERT = /* glsl */`
       varying vec2 vUv;
@@ -317,40 +315,43 @@
     `;
 
     const FOG_FRAG = /* glsl */`
-      uniform sampler2D fogMap;
       uniform vec2  revealCenter;
       uniform float revealRadius;
+      varying vec2  vUv;
 
-      varying vec2 vUv;
+      // Value noise for organic fog texture
+      float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
+      float noise(vec2 p){
+        vec2 i=floor(p), f=fract(p);
+        f=f*f*(3.0-2.0*f);
+        return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),
+                   mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y);
+      }
 
       void main() {
-        vec4 cloud = texture2D(fogMap, vUv);
-
-        // Distance-based reveal — pure math, no PNG alpha dependency
         vec2 d = vUv - revealCenter;
         d.x *= 0.5;
         float dist = length(d);
+
+        // Reveal zone mask
         float mask = smoothstep(revealRadius - 0.10, revealRadius + 0.07, dist);
 
-        // Use cloud luminance for organic texture variation, but clamp to
-        // a dark range so white checkerboard pixels don't influence the fog.
-        float lum = dot(cloud.rgb, vec3(0.299, 0.587, 0.114));
-        float cloudDensity = 1.0 - smoothstep(0.08, 0.45, lum);
+        // Layered noise for organic cloud look
+        float n  = noise(vUv * 6.0)  * 0.50
+                 + noise(vUv * 12.0) * 0.30
+                 + noise(vUv * 24.0) * 0.20;
+        float cloudVar = 0.78 + n * 0.22;
 
-        // Dark navy fog color
         vec3 fogColor = vec3(0.04, 0.07, 0.14);
-        float alpha = mask * (0.72 + cloudDensity * 0.22);
-
-        gl_FragColor = vec4(fogColor, alpha);
+        gl_FragColor = vec4(fogColor, mask * cloudVar * 0.92);
       }
     `;
 
     const fogGeo = new THREE.SphereGeometry(1.018, 72, 72);
     const fogMat = new THREE.ShaderMaterial({
       uniforms: {
-        fogMap:        { value: fogTex },
-        revealCenter:  { value: new THREE.Vector2(0.25, 0.55) },
-        revealRadius:  { value: 0.25 },  // shows Torenthia + surrounding ocean for context
+        revealCenter: { value: new THREE.Vector2(0.25, 0.55) },
+        revealRadius: { value: 0.25 },
       },
       vertexShader:   FOG_VERT,
       fragmentShader: FOG_FRAG,
