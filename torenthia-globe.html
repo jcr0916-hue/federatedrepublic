@@ -162,17 +162,19 @@
   </div>
 
   <!-- LOCATION NAV -->
-  <!-- data-u, data-v: UV coordinates in the terrain texture (0–1) -->
+  <!-- data-u, data-v: UV coordinates in the terrain texture (0–1)       -->
+  <!-- Torenthia now occupies ~U 0.05–0.45 in the world map texture.     -->
+  <!-- These are estimates — tune after seeing the globe in browser.      -->
   <div class="g-locations">
-    <button class="loc-btn active"  data-u="0.30" data-v="0.50">Torenthia</button>
-    <button class="loc-btn"         data-u="0.22" data-v="0.30">Korda</button>
-    <button class="loc-btn"         data-u="0.37" data-v="0.42">Harren</button>
-    <button class="loc-btn"         data-u="0.50" data-v="0.38">Caldris</button>
-    <button class="loc-btn"         data-u="0.40" data-v="0.55">Varek</button>
-    <button class="loc-btn"         data-u="0.62" data-v="0.50">Arvane</button>
-    <button class="loc-btn"         data-u="0.70" data-v="0.55">Orath</button>
-    <button class="loc-btn"         data-u="0.76" data-v="0.55">Merath</button>
-    <button class="loc-btn"         data-u="0.82" data-v="0.45">Corindal</button>
+    <button class="loc-btn active"  data-u="0.25" data-v="0.55">Torenthia</button>
+    <button class="loc-btn"         data-u="0.12" data-v="0.65">Korda</button>
+    <button class="loc-btn"         data-u="0.18" data-v="0.55">Harren</button>
+    <button class="loc-btn"         data-u="0.23" data-v="0.60">Caldris</button>
+    <button class="loc-btn"         data-u="0.19" data-v="0.47">Varek</button>
+    <button class="loc-btn"         data-u="0.28" data-v="0.52">Arvane</button>
+    <button class="loc-btn"         data-u="0.27" data-v="0.44">Orath</button>
+    <button class="loc-btn"         data-u="0.32" data-v="0.47">Merath</button>
+    <button class="loc-btn"         data-u="0.37" data-v="0.52">Corindal</button>
   </div>
 
   <div class="g-hint">Drag to rotate</div>
@@ -228,7 +230,7 @@
     // ── TEXTURE LOAD ───────────────────────────────────────────────────
     const loader = new THREE.TextureLoader();
     let loadedCount = 0;
-    const TOTAL = 3;
+    const TOTAL = 4;
     function onLoad() {
       loadedCount++;
       if (loadedCount === TOTAL) {
@@ -236,15 +238,19 @@
       }
     }
 
-    // Layer 1 — terrain
+    // Layer 1 — terrain (world map, Torenthia left-center ~U 0.05–0.45)
     const terrainTex = loader.load('torenthia-globe-terrain.png', onLoad);
     terrainTex.colorSpace = THREE.SRGBColorSpace;
 
-    // Layer 2 — annotation overlay (transparent PNG)
+    // Layer 2 — state color fills (soft glow blobs, transparent PNG)
+    const colorsTex = loader.load('torenthia-globe-colors.png', onLoad);
+    colorsTex.colorSpace = THREE.SRGBColorSpace;
+
+    // Layer 3 — annotation overlay (labels, transparent PNG)
     const overlayTex = loader.load('torenthia-globe-overlay.png', onLoad);
     overlayTex.colorSpace = THREE.SRGBColorSpace;
 
-    // Layer 3 — fog cloud texture (used as noise in shader)
+    // Layer 4 — fog cloud texture (noise input to shader)
     const fogTex = loader.load('torenthia-globe-fog.png', onLoad);
 
     // ── LAYER 1: TERRAIN SPHERE ────────────────────────────────────────
@@ -256,9 +262,21 @@
     });
     globeGroup.add(new THREE.Mesh(terrainGeo, terrainMat));
 
-    // ── LAYER 2: ANNOTATION OVERLAY ────────────────────────────────────
-    // Sit fractionally outside terrain to avoid z-fighting
-    const overlayGeo = new THREE.SphereGeometry(1.003, 72, 72);
+    // ── LAYER 2: STATE COLOR FILLS ─────────────────────────────────────
+    // Soft glow blobs (red/amber/blue) over crisis and pressure zones.
+    // Sits just above terrain; NormalBlending respects the blob alpha.
+    const colorsGeo = new THREE.SphereGeometry(1.004, 72, 72);
+    const colorsMat = new THREE.MeshBasicMaterial({
+      map:         colorsTex,
+      transparent: true,
+      depthWrite:  false,
+      blending:    THREE.NormalBlending,
+    });
+    globeGroup.add(new THREE.Mesh(colorsGeo, colorsMat));
+
+    // ── LAYER 3: ANNOTATION OVERLAY ────────────────────────────────────
+    // Labels and border markers on transparent PNG.
+    const overlayGeo = new THREE.SphereGeometry(1.007, 72, 72);
     const overlayMat = new THREE.MeshBasicMaterial({
       map:        overlayTex,
       transparent: true,
@@ -314,8 +332,8 @@
     const fogMat = new THREE.ShaderMaterial({
       uniforms: {
         fogMap:        { value: fogTex },
-        revealCenter:  { value: new THREE.Vector2(0.30, 0.50) }, // ← tune to match terrain UV
-        revealRadius:  { value: 0.24 },                          // ← tune to widen/narrow reveal
+        revealCenter:  { value: new THREE.Vector2(0.25, 0.55) }, // ← Torenthia center in world map UV
+        revealRadius:  { value: 0.14 },                          // ← smaller: Torenthia is ~20% of world
       },
       vertexShader:   FOG_VERT,
       fragmentShader: FOG_FRAG,
@@ -329,7 +347,7 @@
     // Rotate so Torenthia (terrain U≈0.30) faces the camera.
     // Formula: rotation.y = U * 2π
     // Adjust data-u on buttons to shift focus per location.
-    setGlobeRotation(0.30, 0.50, false);
+    setGlobeRotation(0.25, 0.55, false);
 
     // ── NAVIGATION ────────────────────────────────────────────────────
     // Convert UV coordinates to globe group rotation angles.
