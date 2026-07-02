@@ -311,7 +311,7 @@
     // ── TEXTURE LOAD ───────────────────────────────────────────────────
     const loader = new THREE.TextureLoader();
     let loadedCount = 0;
-    const TOTAL = 2;  // terrain + borders
+    const TOTAL = 3;  // terrain + borders + state lines
     function onLoad() {
       loadedCount++;
       if (loadedCount === TOTAL) {
@@ -319,13 +319,14 @@
       }
     }
 
-    // Terrain
     const terrainTex = loader.load('torenthia-globe-terrain.png', onLoad);
     terrainTex.colorSpace = THREE.SRGBColorSpace;
 
-    // Border lines overlay (Gemini — navy lines, checkerboard stripped by shader)
     const borderTex = loader.load('torenthia-globe-borders.png', onLoad);
     borderTex.colorSpace = THREE.SRGBColorSpace;
+
+    const statesTex = loader.load('torenthia-globe-statelines.png', onLoad);
+    statesTex.colorSpace = THREE.SRGBColorSpace;
 
     // ── LAYER 1: TERRAIN SPHERE ────────────────────────────────────────
     const terrainGeo = new THREE.SphereGeometry(1, 72, 72);
@@ -360,6 +361,50 @@
       depthWrite: false,
     });
     globeGroup.add(new THREE.Mesh(borderGeo, borderMat));
+
+    // ── LAYER 1c: STATE LINES ──────────────────────────────────────────
+    // Gemini-generated state border lines, Torenthia-only canvas.
+    // Shader remaps UV to place these borders into Torenthia's actual
+    // position in the world terrain (U: 0.17–0.26, V: 0.35–0.52).
+    // Saturation filter strips baked-in checkerboard.
+    const STATES_FRAG = /* glsl */`
+      uniform sampler2D statesMap;
+      varying vec2 vUv;
+
+      void main() {
+        // Torenthia's bounding box in world terrain UV space
+        vec2 tMin = vec2(0.17, 0.35);
+        vec2 tMax = vec2(0.26, 0.52);
+
+        // Discard fragments outside Torenthia's area
+        if (any(lessThan(vUv, tMin)) || any(greaterThan(vUv, tMax))) {
+          gl_FragColor = vec4(0.0);
+          return;
+        }
+
+        // Remap to local [0,1] UV for sampling the state lines image
+        vec2 localUV = (vUv - tMin) / (tMax - tMin);
+        vec4 c = texture2D(statesMap, localUV);
+
+        // Strip baked-in checkerboard via saturation detection
+        float maxC = max(max(c.r, c.g), c.b);
+        float minC = min(min(c.r, c.g), c.b);
+        float sat  = (maxC < 0.001) ? 0.0 : (maxC - minC) / maxC;
+        float alpha = smoothstep(0.10, 0.35, sat) * 0.80;
+
+        gl_FragColor = vec4(c.rgb, alpha);
+      }
+    `;
+    const statesGeo = new THREE.SphereGeometry(1.003, 72, 72);
+    const statesMat = new THREE.ShaderMaterial({
+      uniforms: { statesMap: { value: statesTex } },
+      vertexShader: `varying vec2 vUv;
+        void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+      fragmentShader: STATES_FRAG,
+      transparent: true,
+      depthWrite: false,
+    });
+    globeGroup.add(new THREE.Mesh(statesGeo, statesMat));
 
     // ── LAYER 2: PULSING DOT MARKERS (CSS2DRenderer) ───────────────────
     //
