@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Race, Reshaped: Reading the Field After the Crossing — RNN</title>
+  <meta name="description" content="Three weeks after the Sunderland border crossing, RNN's first analytical piece looks at how the four declared LC candidates responded — and what each response revealed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .rnn-masthead{background:var(--navy2);border-bottom:4px solid #b91c1c;padding:1rem 2rem}
+    .rnn-masthead-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .rnn-logo{font-family:'JetBrains Mono',monospace;font-size:1.1rem;font-weight:500;letter-spacing:.15em;color:#f5f0e8}
+    .rnn-logo span{color:#b91c1c}
+    .rnn-tagline{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,240,232,.45)}
+    .rnn-timestamp{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:rgba(201,168,76,.8)}
+    .analysis-bar{background:#3a2d5c;padding:.4rem 2rem;text-align:center}
+    .analysis-bar-inner{max-width:860px;margin:0 auto;font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#e8d9ff}
+    .article-wrap{max-width:700px;margin:0 auto;padding:2.5rem 2rem 5rem}
+    .rnn-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#3a2d5c;margin-bottom:.7rem;display:flex;align-items:center;gap:.6rem}
+    .rnn-label::after{content:'';flex:1;height:1px;background:#3a2d5c;opacity:.3}
+    .article-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:.75rem}
+    .article-deck{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);line-height:1.65;margin-bottom:1.25rem}
+    .rnn-byline{display:flex;gap:1rem;align-items:baseline;padding:.6rem 0;border-top:2px solid var(--navy);border-bottom:1px solid var(--border);margin-bottom:1.75rem;flex-wrap:wrap}
+    .rnn-byline-source{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;letter-spacing:.08em;color:var(--navy)}
+    .rnn-byline-date{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);margin-left:auto}
+    .article-body p{font-family:'Georgia',serif;font-size:1rem;line-height:1.9;color:#1a1a1a;margin-bottom:1.3rem}
+    .article-body p:first-child::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:700;color:var(--navy);float:left;line-height:.8;margin:.05em .12em 0 0}
+    .article-subhead{font-family:'Cormorant Garamond',serif;font-size:.88rem;font-weight:700;color:var(--navy);margin:2.25rem 0 .85rem;padding-bottom:.4rem;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.06em}
+    .fact-block{background:var(--cream);border:1px solid var(--border);border-left:3px solid #3a2d5c;padding:.9rem 1.1rem;margin:1.5rem 0}
+    .fact-block-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+    .fact-block ul{margin:0;padding-left:1.1rem}
+    .fact-block li{font-family:'Jost',sans-serif;font-size:.85rem;line-height:1.7;color:var(--text);margin-bottom:.2rem}
+    .author-bio{background:var(--cream);border-top:2px solid var(--navy);padding:1rem 1.25rem;margin-top:2.5rem;font-size:.8rem;color:var(--muted);font-family:'Jost',sans-serif;line-height:1.65}
+    .author-bio strong{color:var(--text);font-weight:500}
+    .article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-top:1px solid var(--border);margin-top:1.5rem}
+    .article-nav a{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--gold);text-decoration:none;text-transform:uppercase}
+    .article-nav a:hover{color:var(--navy)}
+    @media(max-width:820px){.rnn-masthead{padding:.8rem 1rem}.article-wrap{padding:2rem 1rem 4rem}.rnn-byline-date{margin-left:0}}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html" class="active">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="torenthia.html">The World</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+<div class="rnn-masthead" role="banner">
+  <div class="rnn-masthead-inner">
+    <div>
+      <div class="rnn-logo">R<span>NN</span> &middot; REPUBLIC NEWS NETWORK</div>
+      <div class="rnn-tagline">Straight news &middot; Independent coverage</div>
+    </div>
+    <div class="rnn-timestamp">Year 13 &middot; Month 5</div>
+  </div>
+</div>
+<div class="analysis-bar">
+  <div class="analysis-bar-inner">Analysis &middot; Not a news report</div>
+</div>
+<main id="main-content">
+<div class="article-wrap">
+  <div class="rnn-label">Analysis &middot; Legat Consul Race</div>
+  <h1 class="article-headline">The Race, Reshaped: Reading the Field After the Crossing</h1>
+  <p class="article-deck">Three weeks ago, an armed formation crossed the Korda border and RNN broke the story within hours. What we didn't report at the time — because it wasn't news yet, it was a pattern still forming — is what each candidate's response actually revealed about how they'd govern.</p>
+  <div class="rnn-byline">
+    <span class="rnn-byline-source">Dara Voss &middot; RNN Political Analysis</span>
+    <span class="rnn-byline-date">Year 13, Month 5</span>
+  </div>
+  <div class="article-body">
+    <p>This is not a breaking story. It is the first piece RNN has run under this label, and it exists because a straight account of what happened on Month 5, Day 8 does not explain why the Legat Consul race looks different three weeks later than it did that morning. Four candidates faced the same fact at the same moment. What they did with it is the actual story.</p>
+
+    <div class="fact-block">
+      <div class="fact-block-label">Three weeks, four candidates</div>
+      <ul>
+        <li>Vael: statement through a spokesperson within hours; the Varek water speech, and its wrong-tributary error, ten days later</li>
+        <li>Mak: drove to Korda in person; endorsed the MA's full remedy plan the same week</li>
+        <li>Carrow: no public statement; declared her candidacy four days later with one line about Sunderland; has since filed a formal diplomatic inquiry through her Foreign Affairs office</li>
+        <li>Sandris: silence for three weeks, then a narrow procedural proposal tied to the Assembly's deferral of the formula review</li>
+      </ul>
+    </div>
+
+    <p class="article-subhead">Speed Is Not the Same as Command</p>
+
+    <p>Vael's spokesperson statement was the fastest response in the field. It was also, by his own campaign's later account, drafted before his staff had confirmed which border marker was involved. The Varek speech ten days later — a wrong tributary, on a different border dispute entirely, caught by this network before his own office noticed — did more to define his candidacy than the crossing itself. Speed established that Vael wants to be seen responding. It did not establish that he has command of the specifics he is responding to.</p>
+
+    <p class="article-subhead">Mak's Argument Got a Military Dimension She Didn't Choose</p>
+
+    <p>Mak's infrastructure argument — that Korda's problems are a design gap, not a foreign affairs footnote — predates the crossing by months. The crossing handed her a harder version of the same argument: a coordination failure with a wounded officer attached to it. She did not change her message. The crossing changed what her message meant.</p>
+
+    <p class="article-subhead">Carrow's Silence Was Never Empty</p>
+
+    <p>Of the four, only Carrow's silence turned out to contain visible work. While the other three campaigns were producing statements, her office was producing an NRS filing — not about the campaign, about the incursion itself, asking the Sunderland Interim Authority the question the Legat Consul's protest didn't: who, specifically, gave the order. It is possible to read this as the clearest answer any candidate has given to what the job actually requires. It is also the answer that generates no clips.</p>
+
+    <p class="article-subhead">Sandris Was Right in Advance and Late on Purpose</p>
+
+    <p>Sandris made the coordination-failure argument in Month 12 of Year 12, before any of this happened. He waited three months to say so out loud, on the record, tied to a specific vote rather than a specific crisis. His proposal — a floor-vote requirement for bundled MA recommendations — is the only concrete institutional response to emerge from any campaign in this cycle. It is also, of the four responses examined here, the one least likely to move a poll.</p>
+
+    <p class="article-subhead">What This Network Is Doing Differently</p>
+
+    <p>RNN has covered every one of these events as breaking news, in real time, as they happened. This piece exists because breaking news and understanding are not the same product, and a race this consequential deserves both. We intend to run more of these. Readers should expect them less often than bulletins and should not mistake fewer for less important.</p>
+  </div>
+  <div class="author-bio"><strong>Dara Voss</strong> writes political analysis for RNN. This is the network's first piece under that label.</div>
+  <div class="article-nav">
+    <a href="torenthia-news-025.html">← Sandris on the Formula Deferral</a>
+    <a href="torenthia-dispatch-sollis.html">Sollis Dispatch →</a>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+<script>
+function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+</script>
+</body>
+</html>
