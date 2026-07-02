@@ -17,10 +17,10 @@
     html{scroll-padding-top:72px}
 
     /* ── HERO ── */
-    .hero{background:var(--navy2);padding:88px 2rem 48px;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .hero{background:var(--navy);padding:88px 2rem 48px;border-bottom:1px solid rgba(201,168,76,0.2)}
     .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
     .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;color:rgba(245,240,232,0.95);line-height:1.1;margin-bottom:1rem}
-    .hero-sub{color:rgba(245,240,232,0.95);font-size:0.95rem;line-height:1.85;max-width:520px}
+    .hero-sub{color:rgba(245,240,232,0.72);font-size:0.95rem;line-height:1.85;max-width:520px}
 
     /* ── GLOSSARY CONTENT ── */
     .glossary-wrap{max-width:900px;margin:0 auto;padding:3rem 2rem 6rem}
@@ -101,7 +101,7 @@
     <div class="hero-inner">
       <span class="hero-eyebrow">Reference</span>
       <h1 class="hero-title">Glossary</h1>
-      <p class="hero-body">Every defined term in the constitution — what it means, where it appears, and why the design choice matters. Section references link directly to the annotated provision.</p>
+      <p class="hero-sub">Every defined term in the constitution — what it means, where it appears, and why the design choice matters. Section references link directly to the annotated provision.</p>
     </div>
   </section>
 
@@ -117,8 +117,8 @@
 
         <div class="term-entry" data-term="absolute majority" id="term-absolute-majority">
           <div class="term-name">Absolute Majority <a href="annotated.html#s3-1" class="term-ref">§3.1 →</a></div>
-          <p class="term-def">A majority of the full seated membership of a chamber — not merely those present or voting. Used for Civic Consul selection, constructive no-confidence votes, and other threshold votes where the constitution requires broad consensus rather than the consent of a quorum.</p>
-          <p class="term-note">Prevents slim-quorum majorities from making consequential constitutional decisions.</p>
+          <p class="term-def">A majority of the full seated membership of a chamber — not merely those present or voting. Used for Civic Consul formation under §2.6.a and other threshold votes where the constitution requires broad consensus. Note: CC removal under §2.6 requires 60 percent of full seated membership, not merely absolute majority — the two thresholds are deliberately asymmetric.</p>
+          <p class="term-note">Prevents slim-quorum majorities from making consequential constitutional decisions. The higher 60 percent removal threshold creates stability without making the CC irremovable.</p>
         </div>
         <div class="term-entry" data-term="acting civic consul" id="term-acting-civic-consul">
           <div class="term-name">Acting Civic Consul <a href="annotated.html#s2-6" class="term-ref">§2.6 →</a></div>
@@ -154,8 +154,8 @@
 
         <div class="term-entry" data-term="constructive vote of no confidence" id="term-constructive-vote-of-no-confidence">
           <div class="term-name">Constructive Vote of No Confidence <a href="annotated.html#s2-6" class="term-ref">§2.6 →</a></div>
-          <p class="term-def">The mechanism by which the Assembly removes the Civic Consul — by simultaneously electing a named successor by absolute majority in the same motion. A vote of no confidence that does not name and elect a replacement is constitutionally void and has no effect. The Assembly must agree not only that it has lost confidence in the current Civic Consul but that it has found a specific successor with majority support.</p>
-          <p class="term-note">Closes the "destructive opposition" problem — oppositions cannot manufacture governmental instability without being able to agree on an alternative.</p>
+          <p class="term-def">The mechanism by which the Assembly removes the Civic Consul — by simultaneously electing a named successor by 60 percent of full seated Assembly membership in a single motion. Formation of a new CC requires only absolute majority; removal requires 60 percent. A vote that does not name and elect a replacement is constitutionally void. The Assembly must agree not only that it has lost confidence in the current CC but that it has found a specific successor with supermajority support.</p>
+          <p class="term-note">The asymmetry between formation (absolute majority) and removal (60 percent) is deliberate: governments should be easy to form and harder to destroy. A close removal vote that fails sends a political signal without requiring the vote to succeed.</p>
         </div>
 
         <div class="term-entry" data-term="Legat Consul officer appointment removal" id="term-legat-consul-officer-appointment-removal">
@@ -165,8 +165,8 @@
 
         <div class="term-entry" data-term="Consular veto scope" id="term-consular-veto-scope">
           <div class="term-name">Consular Veto <a href="annotated.html#s2-3" class="term-ref">§2.3 →</a></div>
-          <p class="term-def">The Legat Consul's power to veto legislation that raises a genuine constitutional concern within the Legat Consul's domain — military operations, intelligence, treaty obligations, or border security. The connection must be direct, specific, and material; a general or speculative security connection is insufficient. The EM assesses whether the veto falls within domain and publishes its finding within 48 hours. Either Speaker may petition the SC on the domain question.</p>
-          <p class="term-note">A domain protection mechanism, not a general legislative power. The Civic Consul's Fiscal Objection is the general domestic legislative instrument.</p>
+          <p class="term-def">The Legat Consul's power to veto legislation raising a genuine constitutional concern within the LC's security domain — military operations, intelligence, treaty obligations, or border security. The LC must return the bill within 10 business days with written grounds published to the NRS; silence within 10 business days means the bill is enacted by operation of law. A general or speculative security connection is insufficient. Single use per bill — a bill reintroduced in a subsequent session proceeds without LC interference. Either Speaker may request an EM assessment of the domain question under §9.1 (informational only). The Senate may override by 2/3 supermajority at any time during that session; where no override occurs, the bill lapses for that session.</p>
+          <p class="term-note">Stronger than the CC's Suspensive Veto — a confirmed LC domain veto lapses the bill for the full session rather than requiring re-passage. Reflects the LC's direct electoral mandate and absence of mid-term Assembly accountability.</p>
         </div>
 
         <div class="term-entry" data-term="coordination failure protocol" id="term-coordination-failure-protocol">
@@ -232,8 +232,14 @@
           <p class="term-def">Four justices drawn by rotation each two-year cycle forming a standing Emergency Panel with sole jurisdiction over constitutional challenges to immediate defensive Legat Consul's authority during active operations. Must rule within 48 hours. Ruling is binding on the full Court unless overruled within 72 hours.</p>
         </div>
 
-        <div class="term-entry" data-term="electoral supermajority threshold" id="term-electoral-supermajority-threshold">
-          <div class="term-name">Electoral Supermajority Threshold <a href="annotated.html#s13-3" class="term-ref">§13.3 →</a></div>
+        <div class="term-entry" data-term="early departure clause cooling-off term limit" id="term-early-departure">
+          <div class="term-name">Early Departure Clause <a href="annotated.html#s3-2" class="term-ref">§3.2 →</a></div>
+          <p class="term-def">The rule that a member who leaves office before completing a term — by resignation, expulsion, or state recall — is deemed to have served that full term for purposes of the consecutive-term limit. Closes the bypass where strategic resignation before completing the final permitted consecutive term could reset the term count and avoid the cooling-off requirement. Applies equally to Assembly members (§3.2) and senators (§3.5).</p>
+          <p class="term-note">Without this clause, a member on their sixth consecutive Assembly term could resign six months before the end of term, win the next election, and argue they had only served five terms. The clause closes that path.</p>
+        </div>
+
+                <div class="term-entry" data-term="electoral supermajority threshold" id="term-electoral-supermajority-threshold">
+          <div class="term-name">Electoral Supermajority Threshold <a href="annotated.html#s7-4" class="term-ref">§7.4 →</a></div>
           <p class="term-def">60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations — the Legat Consul first-round threshold at which the State plurality requirement is waived (§7.2), public confirmation of a Supreme Court justice via Senate bypass (§4.4.a), and public election removal of a constitutional officer (§9.14). The Legislature may not alter this threshold without a constitutional amendment.</p>
           <p class="term-note">Distinct from the optional referendum and citizen initiative, which require only simple majority of votes cast.</p>
         </div>
@@ -244,8 +250,9 @@
         <div class="letter-heading">F</div>
 
         <div class="term-entry" data-term="fiscal objection pm suspensive veto" id="term-fiscal-objection-pm-suspensive-veto">
-          <div class="term-name">Fiscal Objection <a href="annotated.html#s2-7" class="term-ref">§2.7 →</a></div>
-          <p class="term-def">The Civic Consul's legislative instrument for returning a passed bill to the Assembly with a formal objection on fiscal or constitutional grounds. Distinct from the Consular Veto — the Fiscal Objection is a Civic Consul tool covering domestic legislation. The Assembly may override a Fiscal Objection by re-passing the bill at the same margin within the statutory window.</p>
+          <div class="term-name">Fiscal Notice <a href="annotated.html#s2-7" class="term-ref">§2.7 →</a></div>
+          <p class="term-def">The Civic Consul's informational instrument: a written NRS statement issued within the 10-business-day review window that a bill would cause or materially worsen a structural deficit. A fiscal notice does not block or delay enactment — it entitles the Assembly Speaker to recall the bill for reconsideration within the remaining review window. If the Assembly does not recall and the CC does not use the suspensive veto, the bill enacts by operation of law. Both instruments may be used on the same bill. The design is deliberate: the CC's fiscal concern creates a legislative opportunity, not an executive veto.</p>
+          <p class="term-note">See also: Suspensive Veto — the CC's procedural instrument, which tables the bill for one month and requires Senate 2/3 to override.</p>
         </div>
       </div>
 
@@ -267,7 +274,7 @@
 
         <div class="term-entry" data-term="institutional compromise protocol" id="term-institutional-compromise-protocol">
           <div class="term-name">Institutional Compromise Protocol <a href="annotated.html#s8-12-a" class="term-ref">§9.11.a →</a></div>
-          <p class="term-def">The mechanism for addressing a Monitor found to be operating in demonstrable bad faith. Two of the three Monitors petition the SC directly for confirmation of the finding; an Acting Monitor General is immediately designated from the longest-tenured member of the affected Monitor's candidate pool; both executives are notified immediately. The Acting Monitor General is ineligible for permanent appointment to the position and returns to the pool upon conclusion of acting service. SC confirmation of the finding is required before the Acting Monitor General's authority is permanent.</p>
+          <p class="term-def">The mechanism for addressing a Monitor found to be operating in demonstrable bad faith. Two of the three Monitors petition the SC directly for confirmation of the finding; an Acting Monitor General is immediately designated from the most senior member of the affected Monitor's candidate pool by continuous pool tenure; both executives are notified immediately. The Acting Monitor General is ineligible for permanent appointment to the position and returns to the pool upon conclusion of acting service. SC confirmation of the finding is required before the Acting Monitor General's authority is permanent.</p>
           <p class="term-note">The two-of-three petition requirement prevents any single Monitor from weaponizing the protocol against another.</p>
         </div>
       </div>
@@ -408,9 +415,15 @@
           <p class="term-note">Replaced the former State Designee Panel. No per-proceeding panel required; the SC performs this function directly. If the SC fails to rule within 14 days, the stated grounds are deemed confirmed by constitutional operation.</p>
         </div>
 
-        <div class="term-entry" data-term="senate bypass public confirmation sc" id="term-senate-bypass-public-confirmation-sc">
+        <div class="term-entry" data-term="suspensive veto civic consul" id="term-suspensive-veto">
+          <div class="term-name">Suspensive Veto <a href="annotated.html#s2-7" class="term-ref">§2.7 →</a></div>
+          <p class="term-def">The Civic Consul's primary legislative veto instrument. Where the CC withholds assent, the bill is returned within 10 business days with written grounds published to the NRS and tabled for one month — regardless of any change in CC office, closing the remove-and-replace bypass. The Senate may override by 2/3 supermajority during that month; failing override, the bill returns to the Legislature and must pass both chambers again before returning to the CC, who may not use the suspensive veto on that bill again — including where the bill lapses and is reintroduced in a subsequent session. Where the CC neither returns the bill nor issues a fiscal notice within 10 business days, the bill is enacted by operation of law. Cannot be used on the annual budget, bills implementing a constitutional obligation, or emergency legislation.</p>
+          <p class="term-note">The tabling attaches to the bill, not the officer — this is the key design feature. A replacement CC cannot sign a tabled bill, closing the obvious political bypass. The re-passage requirement distinguishes the failed-override outcome from the LC's domain veto, which lapses the bill for the full session — the CC's instrument is deliberately weaker.</p>
+        </div>
+
+                <div class="term-entry" data-term="senate bypass public confirmation sc" id="term-senate-bypass-public-confirmation-sc">
           <div class="term-name">Senate Bypass — Public Confirmation <a href="annotated.html#s4-4-a" class="term-ref">§4.4.a →</a></div>
-          <p class="term-def">A mechanism available when the Senate fails to vote on an SC nominee within the required period — a constitutional compliance breach. The Civic Consul, with 2/3 Assembly consent, may place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation. Confirmation requires 60% of votes cast (§13.3). If confirmed, the justice serves the remainder of the original term. If not confirmed, the justice steps down and the next most senior Appellate Court judge auto-designates.</p>
+          <p class="term-def">A mechanism available when the Senate fails to vote on an SC nominee within the required period — a constitutional compliance breach. The Civic Consul, with 2/3 Assembly consent, may place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation. Confirmation requires 60% of votes cast (§7.4). If confirmed, the justice serves the remainder of the original term. If not confirmed, the justice steps down and the next most senior Appellate Court judge auto-designates.</p>
         </div>
 
         <div class="term-entry" data-term="severe contraction protocol national endowment" id="term-severe-contraction-protocol-national-endowment">
@@ -423,7 +436,13 @@
           <p class="term-def">The Republic's constitutional commitment that every Inhabitant is entitled to conditions of life consistent with human dignity. Implemented through three mandatory systems: universal healthcare insurance funded by mandatory employer, employee, and federal contributions; social assistance for those outside the insurance system; and free compulsory education for all children. A constitutional principle with statutory implementation — the Monetary Authority certifies annually that the systems are adequately funded.</p>
         </div>
 
-        <div class="term-entry" data-term="state plurality requirement Legat Consul election" id="term-state-plurality-requirement-legat-consul-election">
+        <div class="term-entry" data-term="seniority fallback civic consul formation" id="term-seniority-fallback">
+          <div class="term-name">Seniority Fallback <a href="annotated.html#s2-6a" class="term-ref">§2.6.a →</a></div>
+          <p class="term-def">The last resort in the CC formation sequence. Where the Assembly fails to elect a CC, the Senate fails to designate within 45 days, and the LC fails to nominate or the Senate fails to confirm within 21 days, the most senior Assembly member by continuous service who otherwise meets CC eligibility requirements assumes the role by constitutional operation, published to the NRS. No nomination, no confirmation vote — automatic and immediate. The seniority appointee holds full CC authority and is subject to removal under §2.6 at the 60 percent threshold. The harder removal threshold is intentional: the Assembly is stuck with the seniority appointee under the same conditions they failed to meet when they had the opportunity to elect someone.</p>
+          <p class="term-note">The pressure to find a CC comes from the consequences of not doing so — not from a constitutional deadline forcing a bad choice.</p>
+        </div>
+
+                <div class="term-entry" data-term="state plurality requirement Legat Consul election" id="term-state-plurality-requirement-legat-consul-election">
           <div class="term-name">State Plurality Requirement <a href="annotated.html#s7-2" class="term-ref">§7.2 →</a></div>
           <p class="term-def">The tiebreaker metric used in Legat Consul elections where no candidate reaches or exceeds 60% of active ballots: 65% weight applied to national first-preference vote share, plus 35% weight applied to the fraction of Legat Consul States won. Territory citizens contribute to the 65% national component but not the State plurality component.</p>
         </div>

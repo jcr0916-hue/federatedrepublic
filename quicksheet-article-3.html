@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Sheet — Article III — The Legislature — The Federated Republic</title>
+<meta name="description" content="A one-page constitutional quick sheet: Assembly vs Senate, how a bill passes, Senate's distinct ratification and confirmation powers, key thresholds, and notable provisions — Article III at a glance.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quick Sheet — Article III — The Legislature">
+<meta property="og:description" content="Two chambers, one bill path — Article III at a glance.">
+<meta property="og:url" content="https://thefederatedrepublic.org/quicksheet-article-3.html">
+<meta property="og:site_name" content="The Federated Republic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  .qs-page-controls{ max-width:8.5in; margin:0 auto; padding:72px 24px 0; display:flex; justify-content:space-between; align-items:center; }
+  .qs-page-controls .back-link{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--gold); text-decoration:none; text-transform:uppercase; }
+  .qs-page-controls .back-link:hover{ color:var(--navy); }
+  .qs-download-btn{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy2); background:var(--gold); padding:0.5rem 1rem; border-radius:3px; text-decoration:none; }
+  .qs-download-btn:hover{ background:var(--gold2); }
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --blue:#1B4A7A; --bluelight:#dde9f3; --blueborder:#a9c3da;
+    --green:#2d6a4f; --greenlight:#dcebe3; --greenborder:#a8cdba;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ font-family:'Jost',sans-serif; color:var(--text); background:#e8e2d4; }
+  .page{ width:8.5in; min-height:11in; margin:0 auto; background:var(--cream); position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.15); display:flex; flex-direction:column; }
+  @media screen{ .page{ margin:24px auto; } }
+  @page{ size:Letter; margin:0; }
+  @media print{ .site-nav, .site-footer, .qs-page-controls{ display:none !important; } body{ background:none; } .page{ box-shadow:none; margin:0; } }
+
+  /* HEADER */
+  .qs-header{ background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding:0.32in 0.5in 0.22in; color:#f5f0e8; position:relative; overflow:hidden; }
+  .qs-header::after{ content:''; position:absolute; right:-0.3in; top:-0.3in; width:2.2in; height:2.2in; border-radius:50%; border:0.18in solid rgba(201,168,76,0.12); }
+  .qs-eyebrow{ font-family:'JetBrains Mono',monospace; font-size:7px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
+  .qs-title{ font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:700; line-height:1; letter-spacing:0.01em; }
+  .qs-subtitle{ font-family:'Cormorant Garamond',serif; font-size:12px; font-style:italic; color:rgba(245,240,232,0.65); margin-top:4px; line-height:1.4; max-width:5.5in; }
+  .qs-header-meta{ position:absolute; right:0.5in; bottom:0.22in; text-align:right; }
+  .qs-header-meta .prov-range{ font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--gold); letter-spacing:0.06em; }
+  .qs-header-meta .prov-count{ font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(201,168,76,0.6); }
+
+  /* BODY */
+  .qs-body{ padding:0.18in 0.5in 0.14in; flex:1; display:flex; flex-direction:column; gap:0.12in; }
+
+  /* SECTION LABELS */
+  .qs-section-label{ font-family:'JetBrains Mono',monospace; font-size:6.5px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--border); padding-bottom:3px; margin-bottom:7px; }
+
+  /* TWO CHAMBERS */
+  .chambers-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .chamber-card{ padding:9px 11px; border-radius:3px; }
+  .chamber-card.assembly{ background:var(--navy); color:#f5f0e8; }
+  .chamber-card.senate{ background:var(--navy2); color:#f5f0e8; }
+  .chamber-name{ font-family:'Cormorant Garamond',serif; font-size:15px; font-weight:700; margin-bottom:3px; }
+  .chamber-badge{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:5.5px; letter-spacing:0.1em; text-transform:uppercase; padding:1.5px 5px; border-radius:2px; margin-bottom:5px; }
+  .chamber-card.assembly .chamber-badge{ background:rgba(201,168,76,0.25); color:var(--gold); }
+  .chamber-card.senate .chamber-badge{ background:rgba(201,168,76,0.2); color:var(--gold); }
+  .chamber-facts{ font-size:7.8px; line-height:1.75; color:rgba(245,240,232,0.85); }
+  .chamber-facts strong{ color:#f5f0e8; font-weight:600; }
+
+  /* BILL PATH */
+  .bill-path{ background:var(--cream2); border:1px solid var(--border); border-radius:3px; padding:9px 11px; }
+  .bill-flow{ display:flex; align-items:center; flex-wrap:wrap; gap:3px; margin-bottom:7px; }
+  .flow-step{ font-family:'Jost',sans-serif; font-size:7.5px; font-weight:500; background:var(--navy); color:#f5f0e8; padding:3px 7px; border-radius:2px; white-space:nowrap; }
+  .flow-step.light{ background:rgba(27,42,74,0.15); color:var(--navy); }
+  .flow-arrow{ font-size:8px; color:var(--muted); flex-shrink:0; }
+  .bill-notes{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; }
+  .bill-note{ font-size:7.2px; color:var(--muted); line-height:1.55; }
+  .bill-note strong{ color:var(--text); font-family:'JetBrains Mono',monospace; font-size:6.8px; }
+
+  /* SENATE POWERS TABLE */
+  .powers-table{ width:100%; border-collapse:collapse; font-size:7.8px; }
+  .powers-table th{ font-family:'JetBrains Mono',monospace; font-size:6px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-align:left; padding:3px 8px; border-bottom:1px solid var(--border); }
+  .powers-table td{ padding:3.5px 8px; border-bottom:1px solid rgba(212,201,176,0.4); vertical-align:top; line-height:1.5; }
+  .powers-table tr:last-child td{ border-bottom:none; }
+  .powers-table td:first-child{ color:var(--text); }
+  .powers-table td:last-child{ font-family:'JetBrains Mono',monospace; font-size:7px; color:var(--navy); white-space:nowrap; }
+  .powers-table td.note{ color:var(--muted); font-size:6.8px; }
+  .powers-table tr:nth-child(even){ background:rgba(245,240,232,0.5); }
+
+  /* TWO-COL LAYOUT */
+  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+
+  /* THRESHOLD TABLE */
+  .thresh-table{ width:100%; border-collapse:collapse; font-size:7.5px; }
+  .thresh-table td{ padding:3px 7px; border-bottom:1px solid rgba(212,201,176,0.4); line-height:1.5; vertical-align:top; }
+  .thresh-table tr:last-child td{ border-bottom:none; }
+  .thresh-table td:first-child{ font-family:'JetBrains Mono',monospace; font-size:7px; font-weight:500; color:var(--navy); white-space:nowrap; }
+  .thresh-table td:last-child{ color:var(--muted); font-size:7px; }
+  .thresh-table tr:nth-child(even){ background:rgba(245,240,232,0.5); }
+
+  /* FACTS */
+  .facts-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:6px; }
+  .fact-card{ background:var(--navy); color:#f5f0e8; padding:8px 9px; border-radius:3px; }
+  .fact-num{ font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; color:var(--gold); line-height:1; margin-bottom:2px; }
+  .fact-text{ font-size:7px; color:rgba(245,240,232,0.8); line-height:1.5; }
+  .fact-text strong{ color:#f5f0e8; }
+
+  /* NOTABLE PROVISIONS */
+  .notable-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+  .notable-item{ font-size:7.4px; line-height:1.6; color:var(--muted); border-left:2px solid var(--border); padding-left:6px; }
+  .notable-item .np{ font-family:'JetBrains Mono',monospace; font-size:7px; font-weight:700; color:var(--navy); display:block; margin-bottom:2px; }
+
+  /* FOOTER */
+  .qs-footer{ margin-top:auto; border-top:1.5px solid var(--border); padding:7px 0.5in 0.24in; display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer-left{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--muted); line-height:1.6; letter-spacing:0.02em; }
+  .footer-left strong{ color:var(--navy); }
+  .footer-right{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:9.5px; color:var(--muted); text-align:right; max-width:2.6in; line-height:1.4; }
+
+  /* SECTION WRAPPERS */
+  .qs-section{ }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<div class="qs-page-controls">
+  <a href="annotated.html" class="back-link">← Annotated Edition</a>
+  <a href="quicksheet-article-3.pdf" download class="qs-download-btn">Download PDF</a>
+</div>
+
+<div class="qs-scale-wrap">
+<div class="page" id="main-content">
+
+  <div class="qs-header">
+    <div class="qs-eyebrow">Quick Sheet · Constitution of the Federated Republic</div>
+    <div class="qs-title">Article III — The Legislature</div>
+    <div class="qs-subtitle">Two chambers, one bill path. The Assembly proposes; the Senate ratifies, confirms, and tries. Neither can act for the other — and the constitution specifies exactly what each requires to act at all.</div>
+    <div class="qs-header-meta">
+      <div class="prov-range">§3.1 — §3.15</div>
+      <div class="prov-count">15 provisions</div>
+    </div>
+  </div>
+
+  <div class="qs-body">
+
+    <!-- THE TWO CHAMBERS -->
+    <div class="qs-section">
+      <div class="qs-section-label">The Two Chambers</div>
+      <div class="chambers-grid">
+
+        <div class="chamber-card assembly">
+          <div class="chamber-name">The Assembly</div>
+          <span class="chamber-badge">Lower Chamber · §3.1–3.3</span>
+          <div class="chamber-facts">
+            <strong>200 members</strong> · proportional (Webster method) · <strong>4-year terms</strong><br>
+            All legislation <strong>originates</strong> in the Assembly<br>
+            Speaker elected by absolute majority of full seated membership<br>
+            Member financial interests disclosed to <strong>LM</strong>, published to NRS<br>
+            Expulsion: 2/3 of full seated Assembly · Quorum: absolute majority<br>
+            Districts drawn by States subject to 5 constitutional criteria (§3.3)
+          </div>
+        </div>
+
+        <div class="chamber-card senate">
+          <div class="chamber-name">The Senate</div>
+          <span class="chamber-badge">Upper Chamber · §3.5–3.6</span>
+          <div class="chamber-facts">
+            <strong>2 senators per State</strong> regardless of population · <strong>6-year staggered terms</strong> (3 classes)<br>
+            Reviews, may amend <em>within the bill's subject matter</em> · Confirms appointments<br>
+            Member financial interests disclosed to <strong>LM</strong>, published to NRS<br>
+            Expulsion: 2/3 of full seated Senate<br>
+            Treaty ratification: 2/3 of full seated Senate · Trade agreements: simple majority both chambers<br>
+            Acts as trial chamber for Assembly-initiated removal proceedings (§3.10)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HOW A BILL PASSES -->
+    <div class="qs-section">
+      <div class="qs-section-label">How a Bill Becomes Law</div>
+      <div class="bill-path">
+        <div class="bill-flow">
+          <span class="flow-step">Assembly introduces</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Single-subject check §3.4</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Assembly vote (abs. majority)</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Senate review ≤90 days</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Final passage both chambers</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step light">Dual consul review 10 bus. days → see Art. II</span>
+        </div>
+        <div class="bill-notes">
+          <div class="bill-note"><strong>§3.1 — Senate window</strong><br>Senate must act within period defined by statute, not to exceed 90 days. Inaction triggers automatic deemed approval — both consuls still review.</div>
+          <div class="bill-note"><strong>§3.4 — Single subject</strong><br>Every bill addresses one clearly defined subject. Either Speaker may request an LM assessment of compliance, published to NRS. Violation voids the bill.</div>
+          <div class="bill-note"><strong>§3.7 — Passage floor</strong><br>Absolute majority of full seated membership of both chambers. Higher thresholds (2/3, 60%) apply to full seated membership — including single-chamber votes.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SENATE POWERS + THRESHOLDS side by side -->
+    <div class="two-col">
+
+      <div class="qs-section">
+        <div class="qs-section-label">Senate's Distinct Powers</div>
+        <table class="powers-table">
+          <thead>
+            <tr><th>Action</th><th>Threshold</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Treaty ratification</td><td>2/3 full seated Senate</td></tr>
+            <tr><td>Treaty withdrawal affirmation</td><td>2/3 full seated Senate · ≤90 days</td></tr>
+            <tr><td>Trade agreement approval</td><td>Simple majority · both chambers</td></tr>
+            <tr><td>SC justice confirmation</td><td>2/3 full seated Senate · ≤120 days</td></tr>
+            <tr><td>Inferior court confirmation</td><td>2/3 full seated Senate · ≤90 days</td></tr>
+            <tr><td>Monitor General confirmation</td><td>Simple majority · Senate</td></tr>
+            <tr><td>LC domain veto override</td><td>2/3 full seated Senate · any time that session</td></tr>
+            <tr><td>CC formation Stage 2</td><td>2/3 full seated Senate · names sitting Assembly member</td></tr>
+            <tr><td>Removal trial verdict</td><td>2/3 of both chambers in concurrent vote</td></tr>
+            <tr><td>Member expulsion</td><td>2/3 full seated Senate</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qs-section">
+        <div class="qs-section-label">Assembly-Initiated Removal · §3.10</div>
+        <div class="bill-path" style="margin-bottom:7px">
+          <div class="bill-flow" style="margin-bottom:0">
+            <span class="flow-step">Assembly charges (abs. majority)</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">Senate trial</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">2/3 both chambers concurrent</span>
+          </div>
+        </div>
+        <div class="bill-note" style="font-size:7px;color:var(--muted);line-height:1.55;margin-bottom:8px">Assembly may charge officers in the LC domain and inferior court judges. The LC is removed exclusively under §2.13; the CC under §2.6. Simple majority may bar from office post-conviction. Removal does not bar criminal prosecution.</div>
+
+        <div class="qs-section-label" style="margin-top:4px">Delegation · §3.15</div>
+        <div class="bill-note" style="font-size:7px;color:var(--muted);line-height:1.6">Legislature may delegate defined authorities to either consul or independent agencies. Delegation must specify: <strong>scope · subject · duration</strong>. Rescindable at any time by simple majority of both chambers. Delegate may not sub-delegate beyond what statute authorizes.</div>
+      </div>
+
+    </div>
+
+    <!-- NUMBERS WORTH REMEMBERING -->
+    <div class="qs-section">
+      <div class="qs-section-label">Numbers Worth Remembering</div>
+      <div class="facts-grid">
+        <div class="fact-card">
+          <div class="fact-num">200</div>
+          <div class="fact-text">Assembly seats · proportional · Webster method · 4-year terms</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-num">2</div>
+          <div class="fact-text">Senate seats per State regardless of population · 6-year staggered terms · 3 classes</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-num">90</div>
+          <div class="fact-text">Day ceiling on Senate action on Assembly bills (§3.1) · Also: treaty withdrawal Senate window (§3.6)</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-num">§3.8</div>
+          <div class="fact-text">Monitor access · All three Monitors have full access to legislative records; Legislature may not withhold</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTABLE PROVISIONS -->
+    <div class="qs-section">
+      <div class="qs-section-label">Notable Provisions</div>
+      <div class="notable-grid">
+        <div class="notable-item">
+          <span class="np">§3.9 — Independent Agencies</span>
+          Legislature may establish agencies outside both executives. Qualification standards must be <strong>facially neutral</strong> — may not exclude candidates on basis of policy view, party affiliation, or prior public criticism of the Legislature or either executive.
+        </div>
+        <div class="notable-item">
+          <span class="np">§3.11 — Electoral Mandate Inviolability</span>
+          No act of the Legislature, either executive, any court, or any Monitor may shorten a constitutionally defined term. Removal under constitutionally specified processes is the only exception.
+        </div>
+        <div class="notable-item">
+          <span class="np">§3.14 — Legislative Competence</span>
+          General authority for peace, order, and good governance. May not enact legislation that destroys States' capacity to govern their reserved functions, or that is incompatible with the constitutionally entrenched rights floor.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end qs-body -->
+
+  <div class="qs-footer">
+    <div class="footer-left">
+      <strong>THE FEDERATED REPUBLIC</strong> · QUICK SHEET SERIES · ARTICLE III<br>
+      Full provision text: Annotated Edition, §3.1–§3.15 · thefederatedrepublic.org
+    </div>
+    <div class="footer-right">A theoretical constitutional design project — not the law of any existing nation.</div>
+  </div>
+
+</div><!-- end page -->
+</div><!-- end qs-scale-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+<script>
+function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+</script>
+</body>
+</html>

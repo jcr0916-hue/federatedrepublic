@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torenthia — The Federated Republic</title>
+  <meta name="description" content="The Federated Republic of Torenthia — an interactive globe. Year 13.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #1B2A4A;
+      --gold: #C9A84C;
+      --cream: #F5F0E8;
+    }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: #050810;
+    }
+    canvas { display: block; }
+
+    /* ── TOP NAV ── */
+    .g-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: linear-gradient(to bottom, rgba(5,8,16,0.85) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    .g-nav a { pointer-events: all; }
+    .g-logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none; opacity: 0.9;
+    }
+    .g-logo img { width: 22px; height: 22px; }
+    .g-back {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(245,240,232,0.4); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .g-back:hover { color: var(--gold); }
+
+    /* ── TITLE ── */
+    .g-title {
+      position: fixed; top: 4.5rem; left: 50%;
+      transform: translateX(-50%);
+      z-index: 100; text-align: center;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .g-title-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 2.5vw, 1.6rem);
+      font-weight: 300; color: rgba(245,240,232,0.88);
+      letter-spacing: 0.04em;
+    }
+    .g-title-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.52rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold); margin-top: 0.4rem; opacity: 0.75;
+    }
+
+    /* ── LOCATION BUTTONS ── */
+    .g-locations {
+      position: fixed; bottom: 1.75rem; left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: flex; gap: 0.4rem; flex-wrap: wrap;
+      justify-content: center; max-width: 700px;
+      padding: 0 1rem;
+    }
+    .loc-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(245,240,232,0.45);
+      background: rgba(5,8,16,0.55);
+      border: 1px solid rgba(201,168,76,0.18);
+      padding: 0.3rem 0.7rem;
+      cursor: pointer; transition: all 0.2s;
+      backdrop-filter: blur(6px);
+    }
+    .loc-btn:hover {
+      color: var(--gold);
+      border-color: rgba(201,168,76,0.5);
+      background: rgba(5,8,16,0.8);
+    }
+    .loc-btn.active {
+      color: var(--gold);
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.08);
+    }
+
+    /* ── DRAG HINT ── */
+    .g-hint {
+      position: fixed; bottom: 1.75rem; right: 1.5rem; z-index: 100;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.5rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(245,240,232,0.18); pointer-events: none;
+    }
+
+    /* ── LOADING ── */
+    .g-loading {
+      position: fixed; inset: 0; z-index: 200;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: #050810; transition: opacity 0.8s;
+    }
+    .g-loading.hidden { opacity: 0; pointer-events: none; }
+    .g-loading-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.6;
+    }
+    .g-loading-bar {
+      width: 120px; height: 1px; background: rgba(201,168,76,0.15);
+      margin-top: 1.25rem; overflow: hidden;
+    }
+    .g-loading-fill {
+      height: 100%; background: var(--gold);
+      animation: loadFill 1.8s ease-in-out forwards;
+    }
+    @keyframes loadFill { from { width: 0; } to { width: 100%; } }
+
+    /* ── PULSING DOTS ── */
+    .globe-dot { position: absolute; width: 0; height: 0; cursor: pointer; }
+    .globe-dot-core {
+      position: absolute; left: 50%; top: 50%;
+      width: 11px; height: 11px;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.9);
+      box-shadow: 0 0 6px rgba(0,0,0,0.6);
+      transition: transform 0.2s;
+    }
+    .globe-dot:hover .globe-dot-core { transform: translate(-50%,-50%) scale(1.5); }
+    .globe-dot-ring {
+      position: absolute; left: 50%; top: 50%;
+      width: 11px; height: 11px;
+      border-radius: 50%; border: 2px solid;
+      pointer-events: none;
+      animation: globeRing 2.2s infinite ease-out;
+    }
+    .globe-dot-ring2 { animation-delay: 0.9s; }
+    @keyframes globeRing {
+      0%   { transform: translate(-50%,-50%) scale(1);   opacity: 0.8; }
+      100% { transform: translate(-50%,-50%) scale(3.2); opacity: 0;   }
+    }
+
+    @media (max-width: 600px) {
+      .g-title { top: 3.5rem; }
+      .g-title-main { font-size: 0.9rem; }
+      .g-locations { bottom: 1.25rem; }
+      .g-hint { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .g-loading-fill { animation: none; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOADING -->
+  <div class="g-loading" id="loadingScreen">
+    <div class="g-loading-text">Rendering Torenthia</div>
+    <div class="g-loading-bar"><div class="g-loading-fill"></div></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="g-nav">
+    <a href="index.html" class="g-logo">
+      <img src="seal.png" alt="">
+      The Federated Republic
+    </a>
+    <a href="torenthia.html" class="g-back">← The World</a>
+  </nav>
+
+  <!-- TITLE -->
+  <div class="g-title">
+    <div class="g-title-main">The Federated Republic of Torenthia</div>
+    <div class="g-title-sub">Year 13 · Living Map</div>
+  </div>
+
+  <!-- LOCATION NAV -->
+  <!-- data-u, data-v: UV coordinates in the terrain texture (0–1)            -->
+  <!-- Torenthia now occupies ~U 0.19–0.26, V 0.38–0.48 in the world map.   -->
+  <!-- All values are estimates — tune after seeing the globe in browser.     -->
+  <div class="g-locations">
+    <button class="loc-btn active"  data-u="0.22" data-v="0.43">Torenthia</button>
+    <button class="loc-btn"         data-u="0.20" data-v="0.47">Korda</button>
+    <button class="loc-btn"         data-u="0.21" data-v="0.44">Harren</button>
+    <button class="loc-btn"         data-u="0.22" data-v="0.44">Caldris</button>
+    <button class="loc-btn"         data-u="0.21" data-v="0.41">Varek</button>
+    <button class="loc-btn"         data-u="0.23" data-v="0.43">Arvane</button>
+    <button class="loc-btn"         data-u="0.23" data-v="0.40">Orath</button>
+    <button class="loc-btn"         data-u="0.24" data-v="0.41">Merath</button>
+    <button class="loc-btn"         data-u="0.25" data-v="0.43">Corindal</button>
+  </div>
+
+  <div class="g-hint">Drag to rotate</div>
+
+  <!-- THREE.JS -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls }  from 'three/addons/controls/OrbitControls.js';
+    import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+    // ── SCENE ──────────────────────────────────────────────────────────
+    const scene   = new THREE.Scene();
+    const camera  = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 100);
+    camera.position.set(0, 0, 2.6);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.setClearColor(0x050810, 1);
+    document.body.appendChild(renderer.domElement);
+
+    // CSS2D renderer — sits on top of the WebGL canvas, renders HTML dots
+    const labelRenderer = new CSS2DRenderer();
+    labelRenderer.setSize(innerWidth, innerHeight);
+    labelRenderer.domElement.style.cssText =
+      'position:absolute;top:0;left:0;pointer-events:none;overflow:hidden;z-index:10;';
+    document.body.appendChild(labelRenderer.domElement);
+
+    // ── CONTROLS ───────────────────────────────────────────────────────
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping    = true;
+    controls.dampingFactor    = 0.06;
+    controls.enableZoom       = true;
+    controls.minDistance      = 1.5;
+    controls.maxDistance      = 4.5;
+    controls.autoRotate       = true;
+    controls.autoRotateSpeed  = 0.25;
+    controls.addEventListener('start', () => { controls.autoRotate = false; });
+
+    // ── LIGHTING ───────────────────────────────────────────────────────
+    scene.add(new THREE.AmbientLight(0xffffff, 0.45));
+    const sun = new THREE.DirectionalLight(0xfff4e0, 0.9);
+    sun.position.set(5, 3, 5);
+    scene.add(sun);
+
+    // ── GLOBE GROUP ────────────────────────────────────────────────────
+    // We rotate the group (not the camera) for location navigation.
+    // This keeps the fog reveal always aligned with the terrain.
+    const globeGroup = new THREE.Group();
+    scene.add(globeGroup);
+
+    // ── TEXTURE LOAD ───────────────────────────────────────────────────
+    const loader = new THREE.TextureLoader();
+    let loadedCount = 0;
+    const TOTAL = 1;  // only terrain — colors and fog are shader-generated
+    function onLoad() {
+      loadedCount++;
+      if (loadedCount === TOTAL) {
+        document.getElementById('loadingScreen').classList.add('hidden');
+      }
+    }
+
+    // Terrain only
+    const terrainTex = loader.load('torenthia-globe-terrain.png', onLoad);
+    terrainTex.colorSpace = THREE.SRGBColorSpace;
+
+    // ── LAYER 1: TERRAIN SPHERE ────────────────────────────────────────
+    const terrainGeo = new THREE.SphereGeometry(1, 72, 72);
+    const terrainMat = new THREE.MeshStandardMaterial({
+      map: terrainTex, roughness: 0.88, metalness: 0.0,
+    });
+    globeGroup.add(new THREE.Mesh(terrainGeo, terrainMat));
+
+    // ── LAYER 2: PULSING DOT MARKERS (CSS2DRenderer) ───────────────────
+    //
+    // Each dot is an HTML element projected onto a 3D sphere-surface point.
+    // Positioned by UV coordinates (same system as navigation buttons).
+    // Dots on the back of the globe are hidden in the render loop.
+    //
+    // dot types → colors (matches torenthia.html legend):
+    //   crisis     #e8185a  red
+    //   political  #7c3aed  purple
+    //   legal      #0ea5e9  blue
+    //   diplomatic #f59e0b  amber/gold
+    //
+    const DOT_DATA = [
+      { u: 0.20, v: 0.47, color: '#e8185a', type: 'crisis',     title: 'Korda — Northern Zone' },
+      { u: 0.24, v: 0.43, color: '#e8185a', type: 'crisis',     title: 'Rhondel' },
+      { u: 0.22, v: 0.44, color: '#7c3aed', type: 'political',  title: 'Verentum' },
+      { u: 0.22, v: 0.41, color: '#0ea5e9', type: 'legal',      title: 'Corindal' },
+      { u: 0.21, v: 0.45, color: '#0ea5e9', type: 'legal',      title: 'Korda — Southern Zone' },
+      { u: 0.21, v: 0.46, color: '#f59e0b', type: 'diplomatic', title: 'Lake Varda' },
+      { u: 0.22, v: 0.39, color: '#f59e0b', type: 'diplomatic', title: 'Valedon Border' },
+      { u: 0.21, v: 0.47, color: '#f59e0b', type: 'diplomatic', title: 'Toren River' },
+    ];
+
+    // Convert UV → 3D point on sphere surface
+    // Matches the SphereGeometry UV mapping used by the terrain texture.
+    function uvTo3D(u, v, r = 1.025) {
+      const phi   = u * Math.PI * 2;
+      const theta = (1.0 - v) * Math.PI;
+      return new THREE.Vector3(
+        -Math.sin(theta) * Math.sin(phi),
+         Math.cos(theta),
+         Math.cos(phi) * Math.sin(theta)
+      ).multiplyScalar(r);
+    }
+
+    // Build dot elements and add to globe group
+    const dotObjects = []; // { obj: CSS2DObject, el: HTMLElement }
+
+    DOT_DATA.forEach(d => {
+      const el = document.createElement('div');
+      el.className = 'globe-dot';
+      el.title = d.title;
+
+      const core = document.createElement('div');
+      core.className = 'globe-dot-core';
+      core.style.background = d.color;
+
+      const ring1 = document.createElement('div');
+      ring1.className = 'globe-dot-ring';
+      ring1.style.borderColor = d.color;
+
+      const ring2 = document.createElement('div');
+      ring2.className = 'globe-dot-ring globe-dot-ring2';
+      ring2.style.borderColor = d.color;
+
+      el.appendChild(core);
+      el.appendChild(ring1);
+      el.appendChild(ring2);
+
+      const obj = new CSS2DObject(el);
+      obj.position.copy(uvTo3D(d.u, d.v));
+      globeGroup.add(obj);
+      dotObjects.push({ obj, el });
+    });
+
+    // ── LAYER 3: FOG SPHERE (shader-generated, no PNG) ─────────────────
+    //
+    // Pure math fog — distance from revealCenter controls opacity.
+    // GLSL value noise adds organic cloud variation without any texture.
+    //
+    const FOG_VERT = /* glsl */`
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `;
+
+    const FOG_FRAG = /* glsl */`
+      uniform vec2  revealCenter;
+      uniform float revealRadius;
+      varying vec2  vUv;
+
+      // Value noise for organic fog texture
+      float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
+      float noise(vec2 p){
+        vec2 i=floor(p), f=fract(p);
+        f=f*f*(3.0-2.0*f);
+        return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),
+                   mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y);
+      }
+
+      void main() {
+        vec2 d = vUv - revealCenter;
+        d.x *= 0.5;
+        float dist = length(d);
+
+        // Reveal zone mask
+        float mask = smoothstep(revealRadius - 0.10, revealRadius + 0.07, dist);
+
+        // Layered noise for organic cloud look
+        float n  = noise(vUv * 6.0)  * 0.50
+                 + noise(vUv * 12.0) * 0.30
+                 + noise(vUv * 24.0) * 0.20;
+        float cloudVar = 0.78 + n * 0.22;
+
+        vec3 fogColor = vec3(0.04, 0.07, 0.14);
+        gl_FragColor = vec4(fogColor, mask * cloudVar * 0.92);
+      }
+    `;
+
+    const fogGeo = new THREE.SphereGeometry(1.018, 72, 72);
+    const fogMat = new THREE.ShaderMaterial({
+      uniforms: {
+        revealCenter: { value: new THREE.Vector2(0.22, 0.43) },
+        revealRadius: { value: 0.16 },  // tight window — Torenthia + surrounding ocean
+      },
+      vertexShader:   FOG_VERT,
+      fragmentShader: FOG_FRAG,
+      transparent:    true,
+      depthWrite:     false,
+      side:           THREE.FrontSide,
+    });
+    globeGroup.add(new THREE.Mesh(fogGeo, fogMat));
+
+    // ── INITIAL ORIENTATION ────────────────────────────────────────────
+    // Rotate so Torenthia (terrain U≈0.30) faces the camera.
+    // Formula: rotation.y = U * 2π
+    // Adjust data-u on buttons to shift focus per location.
+    setGlobeRotation(0.22, 0.43, false);
+
+    // ── NAVIGATION ────────────────────────────────────────────────────
+    // Convert UV coordinates to globe group rotation angles.
+    // rotation.y = U * 2π  (longitude)
+    // rotation.x = -(V - 0.5) * π  (latitude, inverted)
+    function uvToRot(u, v) {
+      return {
+        y: u * Math.PI * 2,
+        x: -(v - 0.5) * Math.PI,
+      };
+    }
+
+    function setGlobeRotation(u, v, animate) {
+      const target = uvToRot(u, v);
+      if (!animate) {
+        globeGroup.rotation.y = target.y;
+        globeGroup.rotation.x = target.x;
+        return;
+      }
+      // Simple eased animation without a dependency on GSAP
+      const startY = globeGroup.rotation.y;
+      const startX = globeGroup.rotation.x;
+      const duration = 1100;
+      const startTime = performance.now();
+
+      // Shortest-path wrap for Y rotation
+      let dy = target.y - startY;
+      if (dy >  Math.PI) dy -= Math.PI * 2;
+      if (dy < -Math.PI) dy += Math.PI * 2;
+      const endY = startY + dy;
+
+      function ease(t) { return t < 0.5 ? 2*t*t : -1 + (4 - 2*t)*t; }
+
+      (function step(now) {
+        const t = Math.min((now - startTime) / duration, 1);
+        const e = ease(t);
+        globeGroup.rotation.y = startY + (endY - startY) * e;
+        globeGroup.rotation.x = startX + (target.x - startX) * e;
+        if (t < 1) requestAnimationFrame(step);
+      })(performance.now());
+    }
+
+    document.querySelectorAll('.loc-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.loc-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        controls.autoRotate = false;
+        setGlobeRotation(
+          parseFloat(btn.dataset.u),
+          parseFloat(btn.dataset.v),
+          true
+        );
+      });
+    });
+
+    // ── RESIZE ────────────────────────────────────────────────────────
+    window.addEventListener('resize', () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+      labelRenderer.setSize(innerWidth, innerHeight);
+    });
+
+    // ── RENDER LOOP ───────────────────────────────────────────────────
+    const _camNorm = new THREE.Vector3();
+    const _dotPos  = new THREE.Vector3();
+
+    (function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+
+      // Hide dots on the back hemisphere (behind the globe from camera's view)
+      _camNorm.copy(camera.position).normalize();
+      dotObjects.forEach(({ obj, el }) => {
+        obj.getWorldPosition(_dotPos);
+        el.style.display = _dotPos.dot(_camNorm) > 0.05 ? 'block' : 'none';
+      });
+
+      renderer.render(scene, camera);
+      labelRenderer.render(scene, camera);
+    })();
+  </script>
+</body>
+</html>

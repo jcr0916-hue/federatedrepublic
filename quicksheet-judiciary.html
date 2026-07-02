@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Sheet — The Judiciary — The Federated Republic</title>
+<meta name="description" content="One pool, two destinations. How the Republic's judges are selected, what happens when a Supreme Court seat opens unexpectedly, and the three ways a judge can be removed.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quick Sheet — The Judiciary">
+<meta property="og:description" content="One Judicial Pool feeds every federal court. The selection cascade, the vacancy fallback, and judicial removal at a glance.">
+<meta property="og:url" content="https://thefederatedrepublic.org/quicksheet-judiciary.html">
+<meta property="og:site_name" content="The Federated Republic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --purple:#5c3d7a; --purplelight:#ece3f0; --purpleborder:#cdb8da;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{ font-family:'Jost',sans-serif; color:var(--text); background:#e8e2d4; }
+  .page{ width:8.5in; min-height:11in; margin:0 auto; background:var(--cream); position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.15); display:flex; flex-direction:column; }
+  @media screen{ .page{ margin:24px auto; } }
+  .qs-scale-wrap{ overflow:hidden; }
+  @page{ size:Letter; margin:0; }
+  @media print{
+    .site-nav, .site-footer, .qs-page-controls{ display:none !important; }
+    body{ background:none; }
+    .page{ box-shadow:none; margin:0; width:8.5in; min-height:11in; }
+  }
+  .qs-page-controls{ max-width:8.5in; margin:0 auto; padding:72px 24px 0; display:flex; justify-content:space-between; align-items:center; }
+  .qs-page-controls .back-link{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--gold); text-decoration:none; text-transform:uppercase; }
+  .qs-page-controls .back-link:hover{ color:var(--navy); }
+  .qs-download-btn{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy2); background:var(--gold); padding:0.5rem 1rem; border-radius:3px; text-decoration:none; }
+  .qs-download-btn:hover{ background:var(--gold2); }
+
+  .qs-header{ background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding:0.4in 0.5in 0.28in; color:#f5f0e8; position:relative; overflow:hidden; }
+  .qs-header::after{ content:""; position:absolute; right:-40px; top:-60px; width:220px; height:220px; border:2px solid rgba(201,168,76,0.18); border-radius:50%; }
+  .qs-eyebrow{ font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; display:flex; gap:10px; align-items:center; }
+  .qs-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .qs-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:32px; line-height:1.05; margin-bottom:4px; }
+  .qs-tagline{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; font-size:13.5px; color:rgba(245,240,232,0.78); max-width:6.4in; line-height:1.35; }
+  .qs-scope{ position:absolute; right:0.5in; bottom:0.26in; text-align:right; font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(201,168,76,0.85); letter-spacing:0.08em; line-height:1.6; }
+
+  .qs-body{ padding:0.24in 0.5in 0.2in; flex:1; display:flex; flex-direction:column; gap:0.15in; }
+  .section-label{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold2); display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .section-label::after{ content:""; flex:1; height:1px; background:var(--border); }
+
+  /* ---- Tier ribbon ---- */
+  .tier-ribbon{ display:flex; align-items:center; gap:0; background:var(--white); border:1.5px solid var(--border); border-radius:6px; overflow:hidden; }
+  .tier-step{ flex:1; padding:8px 12px; text-align:center; border-right:1px solid var(--border); }
+  .tier-step:last-child{ border-right:none; background:var(--navy); }
+  .tier-step:last-child .tier-name, .tier-step:last-child .tier-detail{ color:#f5f0e8; }
+  .tier-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:13px; color:var(--navy); }
+  .tier-detail{ font-size:7.6px; color:var(--muted); margin-top:1px; }
+  .tier-arrow{ color:var(--gold2); font-size:13px; padding:0 2px; flex-shrink:0; }
+
+  /* ---- Pool funnel ---- */
+  .pool-block{ background:var(--purplelight); border:1.5px solid var(--purpleborder); border-radius:6px; padding:11px 16px; }
+  .pool-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:15px; color:var(--purple); margin-bottom:4px; }
+  .pool-body{ font-size:9px; line-height:1.5; color:var(--text); }
+  .pool-body strong{ color:var(--navy); }
+  .pool-split{ display:flex; gap:0; margin-top:9px; }
+  .split-arm{ flex:1; text-align:center; padding:7px 8px; }
+  .split-arm:first-child{ border-right:1.5px dashed var(--purpleborder); }
+  .split-num{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:16px; color:var(--navy); }
+  .split-label{ font-family:'JetBrains Mono',monospace; font-size:7px; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); margin-top:1px; }
+
+  /* ---- SC cascade ---- */
+  .cascade-row{ display:flex; gap:7px; align-items:stretch; }
+  .cas-step{ flex:1; background:var(--white); border:1.5px solid var(--border); border-radius:6px; padding:8px 9px; display:flex; flex-direction:column; gap:2px; }
+  .cas-step.final{ background:var(--navy); border-color:var(--navy); }
+  .cas-step.final .cas-num, .cas-step.final .cas-title, .cas-step.final .cas-detail{ color:#f5f0e8; }
+  .cas-num{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--gold2); letter-spacing:0.06em; }
+  .cas-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:11.5px; color:var(--navy); }
+  .cas-detail{ font-size:7.8px; color:var(--muted); line-height:1.3; }
+  .cas-arrow{ display:flex; align-items:center; color:var(--gold); font-size:12px; padding:0 1px; }
+
+  /* ---- Removal comparison ---- */
+  .veto-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .veto-card{ border-radius:6px; padding:10px 13px; border:1.5px solid var(--border); background:var(--white); }
+  .veto-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:13.5px; color:var(--navy); margin-bottom:5px; }
+  .veto-flow{ display:flex; align-items:center; gap:5px; flex-wrap:wrap; margin-bottom:6px; }
+  .flow-step{ font-family:'JetBrains Mono',monospace; font-size:7.4px; background:var(--cream2); border:1px solid var(--border); border-radius:3px; padding:3px 6px; color:var(--text); white-space:nowrap; }
+  .flow-arrow{ color:var(--gold2); font-size:8.5px; }
+  .veto-body{ font-size:8.3px; color:var(--muted); line-height:1.4; }
+  .veto-body strong{ color:var(--navy); }
+
+  /* ---- Facts strip ---- */
+  .facts-row{ display:flex; gap:10px; }
+  .fact-pill{ flex:1; background:var(--navy); color:#f5f0e8; border-radius:6px; padding:7px 10px; display:flex; align-items:center; gap:8px; }
+  .fact-num{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:18px; color:var(--gold); line-height:1; min-width:36px; }
+  .fact-text{ font-size:8px; line-height:1.3; color:rgba(245,240,232,0.92); }
+  .fact-text strong{ color:#fff; }
+
+  .qs-footer-bar{ margin-top:auto; border-top:1.5px solid var(--border); padding:9px 0.5in 0.3in; display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer-left{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--muted); line-height:1.6; letter-spacing:0.02em; }
+  .footer-left strong{ color:var(--navy); }
+  .footer-right{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:9.5px; color:var(--muted); text-align:right; max-width:2.6in; line-height:1.4; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<div class="qs-page-controls">
+  <a href="annotated.html" class="back-link">&larr; Annotated Edition</a>
+  <a href="quicksheet-judiciary.pdf" download class="qs-download-btn">Download PDF</a>
+</div>
+
+<main id="main-content">
+<div class="qs-scale-wrap">
+<div class="page" id="qsPage">
+
+  <div class="qs-header">
+    <div class="qs-eyebrow"><span class="dot"></span>QUICK SHEET · CONSTITUTION OF THE FEDERATED REPUBLIC</div>
+    <div class="qs-title">The Judiciary</div>
+    <div class="qs-tagline">One Judicial Pool feeds every federal court. The same eligibility floor, the same nomination-and-confirmation pattern, all the way from a district bench to the Supreme Court — with a vacancy cascade that never leaves a seat empty.</div>
+    <div class="qs-scope">§4.1 – §4.6, §9.4.b<br>14 provisions</div>
+  </div>
+
+  <div class="qs-body">
+
+    <div>
+      <div class="section-label">Three Tiers, One Source</div>
+      <div class="tier-ribbon">
+        <div class="tier-step">
+          <div class="tier-name">District Courts</div>
+          <div class="tier-detail">Established by statute · trial-level jurisdiction</div>
+        </div>
+        <div class="tier-arrow">→</div>
+        <div class="tier-step">
+          <div class="tier-name">Appellate Courts</div>
+          <div class="tier-detail">Senior judge auto-fills any SC vacancy</div>
+        </div>
+        <div class="tier-arrow">→</div>
+        <div class="tier-step">
+          <div class="tier-name">Supreme Court</div>
+          <div class="tier-detail">9 justices · 3 staggered classes · final word</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pool-block">
+      <div class="pool-title">The Judicial Pool — §4.2, §9.4.b</div>
+      <div class="pool-body">One unified pool feeds <strong>every</strong> federal judicial appointment. Entry requires 15 years of legal practice or 10 years of judicial service, no current government position, and no disqualifying financial interest — the same floor for an inferior court nominee and a Supreme Court nominee alike. The Elections Panel administers it; the JM audits it; the pool is publicly accessible on the NRS at all times.</div>
+      <div class="pool-split">
+        <div class="split-arm">
+          <div class="split-num">Inferior Court Judge</div>
+          <div class="split-label">CC nominates → Senate confirms 2/3 → 12-year term</div>
+        </div>
+        <div class="split-arm">
+          <div class="split-num">Supreme Court Justice</div>
+          <div class="split-label">CC nominates → Senate confirms 2/3 (120 days) → 12-year term</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">When a Supreme Court Seat Opens Unexpectedly — §4.4, §4.4.a</div>
+      <div class="cascade-row">
+        <div class="cas-step">
+          <div class="cas-num">STAGE 1 · 5 DAYS</div>
+          <div class="cas-title">Auto-Designation</div>
+          <div class="cas-detail">Most senior Appellate judge becomes Temporary Associate Justice — full voting rights, no nomination needed.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step">
+          <div class="cas-num">NORMAL PATH</div>
+          <div class="cas-title">CC Nominates</div>
+          <div class="cas-detail">Within 60–90 days, from the Judicial Pool. Senate must vote within 120 days — no deemed confirmation.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step">
+          <div class="cas-num">IF CC FAILS TO NOMINATE</div>
+          <div class="cas-title">Senate Direct Selection</div>
+          <div class="cas-detail">CC misses the 30-day window after an LM finding of CC breach: Senate selects from the Pool directly, 2/3 vote — no further CC nomination needed.</div>
+        </div>
+        <div class="cas-arrow" style="font-family:'JetBrains Mono',monospace;font-size:8px;font-style:normal">or</div>
+        <div class="cas-step final">
+          <div class="cas-num">IF SENATE FAILS TO CONFIRM</div>
+          <div class="cas-title">Public Confirmation</div>
+          <div class="cas-detail">LM finds a Senate breach: CC + 2/3 Assembly may put the Temporary Justice on the next ballot — 60% of votes cast confirms.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">How a Judge Leaves</div>
+      <div class="veto-grid">
+        <div class="veto-card">
+          <div class="veto-name">Supreme Court Justice <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§4.3.b</span></div>
+          <div class="veto-flow">
+            <span class="flow-step">Cause required</span><span class="flow-arrow">→</span>
+            <span class="flow-step">Concurrent vote</span><span class="flow-arrow">→</span>
+            <span class="flow-step">2/3 both chambers</span>
+          </div>
+          <div class="veto-body">Three grounds only: constitutional breach, certified permanent incapacity (EM + LM jointly), or disqualifying conviction. <strong>Judicial disagreement is never grounds</strong> — independence of judgment is absolute.</div>
+        </div>
+        <div class="veto-card">
+          <div class="veto-name">Inferior Court Judge <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§4.2</span></div>
+          <div class="veto-flow">
+            <span class="flow-step">Legislative</span><span class="flow-arrow">/</span>
+            <span class="flow-step">Judicial discipline</span><span class="flow-arrow">/</span>
+            <span class="flow-step">Criminal</span>
+          </div>
+          <div class="veto-body">Three independent tracks: legislative removal (2/3 both chambers), SC-overseen discipline process by statute, or criminal conviction. <strong>Policy disagreement is never cause</strong> on any track.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Numbers Worth Remembering</div>
+      <div class="facts-row">
+        <div class="fact-pill">
+          <div class="fact-num">12</div>
+          <div class="fact-text">years — single non-renewable term, <strong>identical</strong> for inferior court judges and SC justices alike. No reappointment, ever.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">5</div>
+          <div class="fact-text">justices minimum to decide a <strong>constitutional question</strong> — regardless of how many seats are currently filled.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">3</div>
+          <div class="fact-text">justices minimum to sit the <strong>emergency panel</strong> reviewing immediate defensive military authority — must rule within 48 hours.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="qs-footer-bar">
+    <div class="footer-left">
+      <strong>THE FEDERATED REPUBLIC</strong> · QUICK SHEET SERIES · THE JUDICIARY<br>
+      Full provision text: Annotated Edition, §4.1–§4.6, §9.4.b · thefederatedrepublic.org
+    </div>
+    <div class="footer-right">A theoretical constitutional design project — not the law of any existing nation.</div>
+  </div>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
+<script>
+  function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+  document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+
+  function fitPage(){
+    var page = document.getElementById('qsPage');
+    var wrap = page.parentElement;
+    var natural = 816;
+    var avail = wrap.clientWidth;
+    if (avail < natural) {
+      var scale = avail / natural;
+      page.style.transform = 'scale(' + scale + ')';
+      page.style.transformOrigin = 'top left';
+      wrap.style.height = (page.offsetHeight * scale) + 'px';
+    } else {
+      page.style.transform = 'none';
+      wrap.style.height = 'auto';
+    }
+  }
+  window.addEventListener('resize', fitPage);
+  window.addEventListener('load', fitPage);
+  fitPage();
+</script>
+</body>
+</html>

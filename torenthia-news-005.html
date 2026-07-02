@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mak Tells Rhovane Town Hall 'This City Is Carrying Too Much' — RNN</title>
+  <meta name="description" content="Assembly member Seren Mak addressed a packed hall in Vardenmere, telling constituents Rhondel cannot keep absorbing a regional crisis without a constitutional response from Verentum.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    /* RNN masthead — distinct from The Torenthian */
+    .rnn-masthead{background:#070c14;border-bottom:3px solid #c02020;padding:0}
+    .rnn-top-bar{background:#c02020;padding:.35rem 2rem;display:flex;align-items:center;gap:1.5rem}
+    .rnn-live{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;color:white;font-weight:500;background:rgba(255,255,255,.2);padding:.15rem .45rem}
+    .rnn-top-meta{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;color:rgba(255,255,255,.8);text-transform:uppercase}
+    .rnn-main{max-width:900px;margin:0 auto;padding:.9rem 2rem 1rem;display:flex;align-items:center;gap:2rem}
+    .rnn-logo-block{display:flex;flex-direction:column}
+    .rnn-name{font-family:'Jost',sans-serif;font-size:clamp(2.2rem,5vw,3rem);font-weight:600;color:white;letter-spacing:.04em;line-height:1}
+    .rnn-fullname{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.2rem}
+    .rnn-divider{width:1px;height:48px;background:rgba(255,255,255,.15);flex-shrink:0}
+    .rnn-tagline{font-family:'Jost',sans-serif;font-size:.8rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.5}
+
+    /* Article */
+    .article-wrap{max-width:700px;margin:0 auto;padding:3rem 2rem 5rem}
+    .rnn-section{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:#c02020;margin-bottom:.85rem;padding-bottom:.6rem;border-bottom:2px solid #c02020}
+    .article-headline{font-family:'Jost',sans-serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:.75rem}
+    .article-deck{font-family:'Jost',sans-serif;font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+    .article-byline{display:flex;flex-wrap:wrap;gap:.75rem;align-items:baseline;padding:.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:1.75rem}
+    .byline-outlet{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;color:#c02020;letter-spacing:.08em;text-transform:uppercase}
+    .byline-sep{color:var(--border)}
+    .byline-date{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.05em;margin-left:auto}
+    .article-body p{font-family:'Jost',sans-serif;font-size:.95rem;line-height:1.85;color:#1a1a1a;margin-bottom:1.25rem;font-weight:300}
+    .article-body p strong{font-weight:500;color:var(--navy)}
+    .dateline{font-family:'Jost',sans-serif;font-size:.82rem;font-weight:600;color:var(--navy)}
+    .pull-quote{border-left:3px solid #c02020;padding:.85rem 1.25rem;margin:1.75rem 0;background:#fdfbf5}
+    .pull-quote p{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;color:var(--navy);line-height:1.6;margin-bottom:0}
+    .rnn-subhead{font-family:'Jost',sans-serif;font-size:.82rem;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;margin:2rem 0 .85rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}
+    .article-rule{border:none;border-top:1px solid var(--border);margin:2rem 0}
+    .rnn-footer-note{background:#f8f4f0;border-top:2px solid #c02020;padding:.85rem 1.25rem;margin-top:2.5rem;font-size:.78rem;color:var(--muted);font-family:'Jost',sans-serif;line-height:1.65}
+    .rnn-footer-note strong{color:var(--text);font-weight:500}
+    .article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-top:1px solid var(--border);margin-top:1.5rem}
+    .article-nav a{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:#c02020;text-decoration:none;text-transform:uppercase}
+    .article-nav a:hover{color:var(--navy)}
+    @media(max-width:820px){.rnn-main{padding:.75rem 1rem;gap:1rem}.rnn-divider{display:none}.rnn-top-bar{padding:.3rem 1rem}.article-wrap{padding:2rem 1rem 4rem}.byline-date{margin-left:0;width:100%}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html" class="active">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="advisor.html">Advisor</a>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="rnn-masthead" role="banner">
+    <div class="rnn-top-bar">
+      <span class="rnn-live">LIVE</span>
+      <span class="rnn-top-meta">Year 12 · Month 11</span>
+      <span class="rnn-top-meta">·</span>
+      <span class="rnn-top-meta">Torenthia · Verentum · Rhondel · Calden</span>
+    </div>
+    <div class="rnn-main">
+      <div class="rnn-logo-block">
+        <div class="rnn-name">RNN</div>
+        <div class="rnn-fullname">Republic News Network</div>
+      </div>
+      <div class="rnn-divider"></div>
+      <div class="rnn-tagline">Breaking news and live coverage<br>from across the Federated Republic</div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <div class="article-wrap">
+
+    <div class="rnn-section">Politics · Eastern Lake · Year 13 Field</div>
+
+    <h1 class="article-headline">Rhovane Town Hall: Mak Tells Constituents 'This City Is Carrying Too Much' — Crowd Sees More Than a Local Meeting</h1>
+    <p class="article-deck">Assembly member seen as potential LC candidate addresses packed hall in Vardenmere. Does not declare. Does not deflect.</p>
+
+    <div class="article-byline">
+      <span class="byline-outlet">RNN Digital</span>
+      <span class="byline-sep">·</span>
+      <span class="byline-date">Vardenmere, Rhovane — Year 12, Month 11</span>
+    </div>
+
+    <div class="article-body">
+
+      <p><span class="dateline">VARDENMERE, RHOVANE —</span> Assembly member Seren Mak did not announce a run for Legat Consul on Tuesday night. She also did not deny one. What she did was stand in front of four hundred constituents in a packed community hall in Vardenmere and tell them, in careful and specific language, that Rhondel cannot keep absorbing a regional crisis without a constitutional response from Verentum.</p>
+
+      <p>The crowd, by all accounts, heard something more.</p>
+
+      <div class="pull-quote">
+        <p>"This is not a Rhovane problem. This is a Republic problem, and the Republic has not yet decided to treat it like one."</p>
+      </div>
+
+      <p>The town hall, billed as a constituent services meeting, drew attendees from across the state — including, several in the room noted, faces not typically seen at Rhovane events. Mak did not address her political future directly. When a constituent asked whether she intended to run, she smiled and said she was there to talk about Vardenmere. The room laughed. The questioner sat down looking satisfied.</p>
+
+      <div class="rnn-subhead">The Specifics</div>
+
+      <p>Mak spent the first forty minutes on specifics. Asylum Court overflow in Rhondel is now in its second year of "temporary" operation. Coast guard capacity in Vardenmere harbor has not been materially increased since Year 9. The refugee intake infrastructure in northern Korda Territory — the primary arrival zone for those crossing Lake Varda — is operating above designed capacity and drawing on State resources Rhovane did not budget for.</p>
+
+      <p>"When Verentum looks at this situation, they see a foreign affairs file," Mak said. "When I stand in Vardenmere, I see an infrastructure problem, a housing problem, an Asylum Court problem, and a coast guard problem. Those are not foreign. Those are ours."</p>
+
+      <p>She cited three NRS-published petitions from Rhondel to Verentum in the past eighteen months. She did not editorialize about the response. She did not need to.</p>
+
+      <div class="rnn-subhead">On Sunderland</div>
+
+      <p>On the question of Sunderland and the Lake Varda vessel incursions, Mak was notably precise. She praised the LC's office for publishing each diplomatic note to the NRS — "the record matters," she said — and said nothing further about how those notes had been received. The restraint was, in its way, as pointed as anything she said about infrastructure.</p>
+
+      <p>Mak represents a Rhovane district that runs along the lake's western shore. Her constituents fish the lake, crew the harbor, and staff the coast guard installation at Vardenmere's north end. They track the vessel incursions the way people track weather — not because they can change it, but because it determines what they can do.</p>
+
+      <div class="rnn-subhead">The Field</div>
+
+      <p>Senator Tobias Vael of Harren declared for Legat Consul last month, making him the first in the field. Director of Foreign Affairs Ines Carrow addressed the Verentum Forum two weeks ago with remarks many observers read as a de facto campaign address; she has not declared. Mak has not declared.</p>
+
+      <p>She left the hall to a standing ovation.</p>
+
+      <p>Outside, asked by RNN whether Tuesday night felt like the beginning of something, a Vardenmere city councillor who attended said: "Ask me that again in thirty days."</p>
+
+    </div>
+
+    <hr class="article-rule">
+
+    <div class="rnn-footer-note">
+      <strong>RNN Digital</strong> covers breaking news and political developments across the Federated Republic. RNN will continue coverage of the Year 13 field as it develops.
+    </div>
+
+    <div class="article-nav">
+      <a href="torenthia-news-004.html">← Rehn on the River</a>
+      <a href="torenthia-news-006.html">Carrow at the Forum →</a>
+    </div>
+
+  </div>
+  </main>
+
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html">The World</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="advisor.html">Advisor</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+</body>
+</html>
