@@ -104,7 +104,7 @@
    "capital"
   ],
   "Dorven": [
-   800,
+   985,
    520
   ],
   "Calden": [
@@ -114,6 +114,10 @@
   "Rhondel": [
    1180,
    610
+  ],
+  "Ostara": [
+   148,
+   892
   ]
  },
  "country_label": [
