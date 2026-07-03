@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Atlas — The Federated Republic</title>
-  <meta name="description" content="The world of Torenthia in two tiers: the wider world, and the Republic in full — twelve states, four territories, and the nations around it.">
+  <meta name="description" content="The world Torenthia lives in — the Republic's place on the map of the known world.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -28,37 +28,6 @@
     .hs-label::before{content:"";position:absolute;left:-24px;top:50%;width:20px;height:1px;background:rgba(201,168,76,.6)}
     .tier1-caption{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(233,221,186,.55)}
 
-    /* ---- Tier 2: the Republic ---- */
-    #tier2{touch-action:none}
-    #viewport{position:absolute;inset:0;overflow:hidden;cursor:grab}
-    #viewport.dragging{cursor:grabbing}
-    #world{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}
-    #world img,#world svg{position:absolute;top:0;left:0;display:block}
-    .map-ui{position:absolute;z-index:5;font-family:'JetBrains Mono',monospace}
-    .back-btn{top:16px;left:16px;background:rgba(10,15,26,.82);border:1px solid rgba(201,168,76,.5);color:#e9ddba;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;padding:.55rem .9rem;cursor:pointer;border-radius:2px;backdrop-filter:blur(3px)}
-    .back-btn:hover{border-color:var(--gold);color:#fff}
-    .zoom-ui{top:16px;right:16px;display:flex;flex-direction:column;gap:6px}
-    .zoom-ui button{width:34px;height:34px;background:rgba(10,15,26,.82);border:1px solid rgba(201,168,76,.5);color:#e9ddba;font-size:1rem;cursor:pointer;border-radius:2px}
-    .zoom-ui button:hover{border-color:var(--gold);color:#fff}
-    .atlas-legend{bottom:16px;left:16px;background:rgba(10,15,26,.82);border:1px solid rgba(201,168,76,.35);padding:.6rem .8rem;border-radius:2px;backdrop-filter:blur(3px)}
-    .atlas-legend div{display:flex;align-items:center;gap:.5rem;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(233,221,186,.85);margin:.2rem 0}
-    .lg-line{display:inline-block;width:22px;height:0}
-    .lg-nat{border-top:2.5px solid #a8261c}
-    .lg-st{border-top:2px solid #2c2824}
-    .lg-cap{width:9px;height:9px;border-radius:50%;background:#C9A84C;border:1.5px solid #1B2A4A}
-    .atlas-hint{bottom:16px;right:16px;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(233,221,186,.45)}
-    @media(max-width:640px){.atlas-hint{display:none}.hs-label{font-size:.75rem}}
-
-    /* SVG overlay text */
-    text{font-family:'Cormorant Garamond',serif}
-    .t-state{fill:#ffffff;letter-spacing:3px;paint-order:stroke;stroke:#C9A84C;stroke-width:2.8px;stroke-linejoin:round}
-    .t-country{fill:#ffffff;letter-spacing:6px;paint-order:stroke;stroke:#a8843a;stroke-width:3.2px;stroke-linejoin:round}
-    .t-neighbor{fill:#ffffff;letter-spacing:5px;paint-order:stroke;stroke:#8c2018;stroke-width:2.8px;stroke-linejoin:round}
-    .t-water{fill:#ffffff;font-style:italic;letter-spacing:1.5px;paint-order:stroke;stroke:#3d5a7a;stroke-width:2.4px;stroke-linejoin:round}
-    .t-city{fill:#ffffff;letter-spacing:1px;paint-order:stroke;stroke:#3d5a7a;stroke-width:2.4px;stroke-linejoin:round}
-    .b-halo{fill:none;stroke:#f3ecdc;stroke-linecap:round;stroke-linejoin:round}
-    .b-nat{fill:none;stroke:#a8261c;stroke-linecap:round;stroke-linejoin:round}
-    .b-st{fill:none;stroke:#2c2824;stroke-linecap:round;stroke-linejoin:round}
   </style>
 </head>
 <body>
@@ -97,148 +66,24 @@
     <div class="tier" id="tier1">
       <div class="frame">
         <img src="world-map-tier1.webp" alt="World map. Torenthia's region is marked on the western coast of the crescent continent." onerror="this.onerror=null;this.src='world-map-tier1.jpg'">
-        <button class="hotspot" id="hotspot" aria-label="Open the Federated Republic region map">
+        <button class="hotspot" id="hotspot" aria-label="Return to the Federated Republic">
           <span class="hs-ring"></span><span class="hs-ring r2"></span>
           <span class="hs-dot"></span>
           <span class="hs-label">THE FEDERATED REPUBLIC</span>
         </button>
       </div>
-      <div class="tier1-caption">The Known World &middot; Select the Republic to descend</div>
+      <div class="tier1-caption">The Known World &middot; Select the Republic to return home</div>
     </div>
 
-    <!-- Tier 2 -->
-    <div class="tier hidden" id="tier2">
-      <div id="viewport">
-        <div id="world"></div>
-      </div>
-      <button class="map-ui back-btn" id="backBtn">&larr; The World</button>
-      <div class="map-ui zoom-ui">
-        <button id="zin" aria-label="Zoom in">+</button>
-        <button id="zout" aria-label="Zoom out">&minus;</button>
-      </div>
-      <div class="map-ui atlas-legend">
-        <div><span class="lg-line lg-nat"></span> National border</div>
-        <div><span class="lg-line lg-st"></span> State border</div>
-        <div><span class="lg-cap"></span> Verentum &middot; capital</div>
-      </div>
-      <div class="map-ui atlas-hint">Drag to pan &middot; Scroll or pinch to zoom</div>
-    </div>
-  </div>
 
   <script src="map-data.js"></script>
   <script>
   (function(){
-    const D = MAP_DATA, T1 = D.tier1, T2 = D.tier2;
-
-    /* ---- Tier 1 hotspot position ---- */
+    const T1 = MAP_DATA.tier1;
     const hs = document.getElementById('hotspot');
     hs.style.left = (T1.hotspot.x / T1.w * 100) + '%';
     hs.style.top  = (T1.hotspot.y / T1.h * 100) + '%';
-
-    /* ---- Build Tier 2 world: base image + SVG overlay ---- */
-    const world = document.getElementById('world');
-    world.style.width = T2.w + 'px'; world.style.height = T2.h + 'px';
-    const img = new Image();
-    img.src = 'region-map-tier2-base.webp'; img.alt = '';
-    img.width = T2.w; img.height = T2.h;
-    world.appendChild(img);
-
-    const NS = 'http://www.w3.org/2000/svg';
-    const svg = document.createElementNS(NS,'svg');
-    svg.setAttribute('viewBox', `0 0 ${T2.w} ${T2.h}`);
-    svg.setAttribute('width', T2.w); svg.setAttribute('height', T2.h);
-    function path(pts, cls, wd){
-      const p = document.createElementNS(NS,'path');
-      p.setAttribute('d','M'+pts.map(q=>q[0]+' '+q[1]).join('L'));
-      p.setAttribute('class',cls); p.setAttribute('stroke-width',wd);
-      svg.appendChild(p);
-    }
-    D.borders.state.forEach(l=>path(l,'b-halo',5));
-    D.borders.state.forEach(l=>path(l,'b-st',2.6));
-    D.borders.national.forEach(l=>path(l,'b-halo',7));
-    D.borders.national.forEach(l=>path(l,'b-nat',3));
-    function text(str,x,y,cls,size){
-      const t = document.createElementNS(NS,'text');
-      t.setAttribute('x',x); t.setAttribute('y',y);
-      t.setAttribute('text-anchor','middle');
-      t.setAttribute('class',cls); t.setAttribute('font-size',size);
-      t.textContent = str; svg.appendChild(t); return t;
-    }
-    const L = D.labels;
-    Object.entries(L.states).forEach(([name,[x,y]])=>{
-      const nm = name.replace(' (S)','');
-      text(nm, x, y+8, 't-state', nm.includes('TERRITORY') ? 23 : 25);
-    });
-    text('THE FEDERATED REPUBLIC OF', L.country_label[0], L.country_label[1]-24, 't-country', 17);
-    text('T O R E N T H I A', L.country_label[0], L.country_label[1]+10, 't-country', 36);
-    Object.entries(L.neighbors).forEach(([n,[x,y]])=>text(n,x,y+8,'t-neighbor',n==='CALDRIS'||n==='VALEDON'?31:23));
-    Object.entries(L.water).forEach(([n,[x,y]])=>text(n,x,y+7,'t-water',n==='Western Sea'?27:24));
-    Object.entries(L.cities).forEach(([n,v])=>{
-      const cap = v[2]==='capital';
-      const c = document.createElementNS(NS,'circle');
-      c.setAttribute('cx',v[0]); c.setAttribute('cy',v[1]); c.setAttribute('r',cap?7:5);
-      c.setAttribute('fill',cap?'#C9A84C':'#f6f1e6'); c.setAttribute('stroke','#1B2A4A'); c.setAttribute('stroke-width',2);
-      svg.appendChild(c);
-      text(cap?n.toUpperCase():n, v[0], v[1]+26, 't-city', cap?20:19);
-    });
-    world.appendChild(svg);
-
-    /* ---- Tier swap ---- */
-    const tier1 = document.getElementById('tier1'), tier2 = document.getElementById('tier2');
-    function show(elIn, elOut){ elOut.classList.add('hidden'); elIn.classList.remove('hidden'); }
-    hs.addEventListener('click', ()=>{ show(tier2, tier1); requestAnimationFrame(fitInitial); });
-    document.getElementById('backBtn').addEventListener('click', ()=>show(tier1, tier2));
-
-    /* ---- Pan / zoom ---- */
-    const vp = document.getElementById('viewport');
-    let scale = 1, min = 1, max = 5, tx = 0, ty = 0, fitted = false;
-    function apply(){ world.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; }
-    function clamp(){
-      const r = vp.getBoundingClientRect();
-      const w = T2.w*scale, h = T2.h*scale;
-      tx = w <= r.width  ? (r.width - w)/2  : Math.min(0, Math.max(r.width  - w, tx));
-      ty = h <= r.height ? (r.height - h)/2 : Math.min(0, Math.max(r.height - h, ty));
-    }
-    function fitInitial(){
-      if (fitted) return; fitted = true;
-      const r = vp.getBoundingClientRect();
-      min = Math.min(r.width / T2.w, r.height / T2.h);
-      scale = min; clamp(); apply();
-    }
-    function zoomAt(cx, cy, factor){
-      const ns = Math.min(max, Math.max(min, scale*factor));
-      const k = ns/scale;
-      tx = cx - k*(cx - tx); ty = cy - k*(cy - ty);
-      scale = ns; clamp(); apply();
-    }
-    vp.addEventListener('wheel', e=>{
-      e.preventDefault();
-      const r = vp.getBoundingClientRect();
-      zoomAt(e.clientX-r.left, e.clientY-r.top, e.deltaY < 0 ? 1.18 : 1/1.18);
-    }, {passive:false});
-    document.getElementById('zin').addEventListener('click', ()=>{const r=vp.getBoundingClientRect();zoomAt(r.width/2,r.height/2,1.35)});
-    document.getElementById('zout').addEventListener('click', ()=>{const r=vp.getBoundingClientRect();zoomAt(r.width/2,r.height/2,1/1.35)});
-
-    const ptrs = new Map(); let lastMid = null, lastDist = 0;
-    vp.addEventListener('pointerdown', e=>{ vp.setPointerCapture(e.pointerId); ptrs.set(e.pointerId,[e.clientX,e.clientY]); vp.classList.add('dragging'); });
-    vp.addEventListener('pointermove', e=>{
-      if(!ptrs.has(e.pointerId)) return;
-      const prev = ptrs.get(e.pointerId); ptrs.set(e.pointerId,[e.clientX,e.clientY]);
-      if(ptrs.size === 1){
-        tx += e.clientX - prev[0]; ty += e.clientY - prev[1]; clamp(); apply();
-      } else if(ptrs.size === 2){
-        const [a,b] = [...ptrs.values()];
-        const mid = [(a[0]+b[0])/2,(a[1]+b[1])/2];
-        const dist = Math.hypot(a[0]-b[0], a[1]-b[1]);
-        const r = vp.getBoundingClientRect();
-        if(lastDist) zoomAt(mid[0]-r.left, mid[1]-r.top, dist/lastDist);
-        if(lastMid){ tx += mid[0]-lastMid[0]; ty += mid[1]-lastMid[1]; clamp(); apply(); }
-        lastMid = mid; lastDist = dist;
-      }
-    });
-    function up(e){ ptrs.delete(e.pointerId); if(ptrs.size<2){lastMid=null;lastDist=0;} if(!ptrs.size) vp.classList.remove('dragging'); }
-    vp.addEventListener('pointerup', up); vp.addEventListener('pointercancel', up);
-    window.addEventListener('resize', ()=>{ if(!tier2.classList.contains('hidden')){ fitted=false; fitInitial(); } });
+    hs.addEventListener('click', ()=>{ window.location.href = 'torenthia.html'; });
   })();
   </script>
 

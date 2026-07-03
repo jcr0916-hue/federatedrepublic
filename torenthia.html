@@ -24,7 +24,17 @@
     /* Map */
     .map-wrap{position:relative;border:3px solid #6a5a38;border-radius:3px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.7)}
     .map-scale-wrap{width:100%;position:relative;overflow:hidden}
-    .map-inner{position:absolute;top:0;left:0;width:1000px;height:666px;background:#c9dfaf;transform-origin:top left;cursor:crosshair}
+    #mapOverlay text{font-family:'Cormorant Garamond',serif}
+    .t-state{fill:#fff;letter-spacing:3px;paint-order:stroke;stroke:#C9A84C;stroke-width:2.8px;stroke-linejoin:round}
+    .t-country{fill:#fff;letter-spacing:6px;paint-order:stroke;stroke:#a8843a;stroke-width:3.2px;stroke-linejoin:round}
+    .t-neighbor{fill:#fff;letter-spacing:5px;paint-order:stroke;stroke:#8c2018;stroke-width:2.8px;stroke-linejoin:round}
+    .t-water{fill:#fff;font-style:italic;letter-spacing:1.5px;paint-order:stroke;stroke:#3d5a7a;stroke-width:2.4px;stroke-linejoin:round}
+    .t-city{fill:#fff;letter-spacing:1px;paint-order:stroke;stroke:#3d5a7a;stroke-width:2.4px;stroke-linejoin:round}
+    .b-halo{fill:none;stroke:#f3ecdc;stroke-linecap:round;stroke-linejoin:round}
+    .b-nat{fill:none;stroke:#a8261c;stroke-linecap:round;stroke-linejoin:round}
+    .b-st{fill:none;stroke:#2c2824;stroke-linecap:round;stroke-linejoin:round}
+  
+    .map-inner{position:absolute;top:0;left:0;width:1536px;height:1024px;background:#c9dfaf;transform-origin:top left;cursor:crosshair}
     .map-inner img{position:absolute;top:0;left:0;width:100%;height:100%;display:block}
 
     /* Dots */
@@ -148,7 +158,7 @@
       <div class="ms-left">
         <div class="ms-eye">The Living World · Year 13</div><!-- WORLD_YEAR -->
         <h1>The Federated Republic of Torenthia</h1>
-        <a href="torenthia-atlas.html" style="display:inline-block;margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(201,168,76,.5);padding:.45rem .85rem;border-radius:2px">Open the Atlas &mdash; the world in full &rarr;</a>
+        <a href="torenthia-atlas.html" style="display:inline-block;margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(201,168,76,.5);padding:.45rem .85rem;border-radius:2px">See the world Torenthia lives in &rarr;</a>
       </div>
       <div class="ms-note">Click any dot<br>to inspect</div>
     </div>
@@ -158,51 +168,52 @@
         <div class="map-wrap">
           <div class="map-scale-wrap" id="mapScaleWrap">
             <div class="map-inner" id="mapInner">
-              <img src="torenthia-map-roads.png" id="baseImg" alt="Federated Republic of Torenthia — Interactive Map">
+              <img src="region-map-tier2-base.webp" id="baseImg" alt="Federated Republic of Torenthia — Interactive Map">
+              <svg id="mapOverlay" style="position:absolute;top:0;left:0" width="1536" height="1024" viewBox="0 0 1536 1024" aria-hidden="true"></svg>
 
               <!-- Crisis dots (red) -->
-              <div class="dot" data-key="korda-north" style="top:28%;left:76%">
+              <div class="dot" data-key="korda-north" style="top:66.4%;left:85.3%">
                 <div class="dot-core" style="background:#e8185a"></div>
                 <div class="dot-ring" style="border-color:#e8185a"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
               </div>
-              <div class="dot" data-key="rhondel" style="top:53%;left:76%">
+              <div class="dot" data-key="rhondel" style="top:59.6%;left:76.8%">
                 <div class="dot-core" style="background:#e8185a"></div>
                 <div class="dot-ring" style="border-color:#e8185a"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
               </div>
 
               <!-- Political dots (purple) -->
-              <div class="dot" data-key="verentum" style="top:57%;left:55%">
+              <div class="dot" data-key="verentum" style="top:64.3%;left:50.3%">
                 <div class="dot-core" style="background:#7c3aed"></div>
                 <div class="dot-ring" style="border-color:#7c3aed"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
               </div>
 
               <!-- Legal dots (blue) -->
-              <div class="dot" data-key="corindal" style="top:73%;left:34%">
+              <div class="dot" data-key="corindal" style="top:72.3%;left:45.2%">
                 <div class="dot-core" style="background:#0ea5e9"></div>
                 <div class="dot-ring" style="border-color:#0ea5e9"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
               </div>
-              <div class="dot" data-key="korda-south" style="top:73%;left:71%">
+              <div class="dot" data-key="korda-south" style="top:71.8%;left:76.8%">
                 <div class="dot-core" style="background:#0ea5e9"></div>
                 <div class="dot-ring" style="border-color:#0ea5e9"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
               </div>
 
               <!-- Diplomatic dots (gold) -->
-              <div class="dot" data-key="lake-varda" style="top:44%;left:82%">
+              <div class="dot" data-key="lake-varda" style="top:48.8%;left:87.9%">
                 <div class="dot-core" style="background:#f59e0b"></div>
                 <div class="dot-ring" style="border-color:#f59e0b"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
               </div>
-              <div class="dot" data-key="valedon" style="top:88%;left:50%">
+              <div class="dot" data-key="valedon" style="top:88.4%;left:57.3%">
                 <div class="dot-core" style="background:#f59e0b"></div>
                 <div class="dot-ring" style="border-color:#f59e0b"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
               </div>
-              <div class="dot" data-key="toren-river" style="top:19%;left:50%">
+              <div class="dot" data-key="toren-river" style="top:9.5%;left:65.1%">
                 <div class="dot-core" style="background:#f59e0b"></div>
                 <div class="dot-ring" style="border-color:#f59e0b"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
@@ -383,15 +394,34 @@
     <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
   </footer>
 
+  <script src="map-data.js"></script>
+  <script>
+  (function(){
+    const D=MAP_DATA,NS='http://www.w3.org/2000/svg',svg=document.getElementById('mapOverlay');
+    if(!svg)return;
+    function path(pts,cls,wd){const p=document.createElementNS(NS,'path');p.setAttribute('d','M'+pts.map(q=>q[0]+' '+q[1]).join('L'));p.setAttribute('class',cls);p.setAttribute('stroke-width',wd);svg.appendChild(p);}
+    D.borders.state.forEach(l=>path(l,'b-halo',5));D.borders.state.forEach(l=>path(l,'b-st',2.6));
+    D.borders.national.forEach(l=>path(l,'b-halo',7));D.borders.national.forEach(l=>path(l,'b-nat',3));
+    function text(str,x,y,cls,size){const t=document.createElementNS(NS,'text');t.setAttribute('x',x);t.setAttribute('y',y);t.setAttribute('text-anchor','middle');t.setAttribute('class',cls);t.setAttribute('font-size',size);t.textContent=str;svg.appendChild(t);}
+    const L=D.labels;
+    Object.entries(L.states).forEach(([n,[x,y]])=>{const nm=n.replace(' (S)','');text(nm,x,y+8,'t-state',nm.includes('TERRITORY')?23:25);});
+    text('THE FEDERATED REPUBLIC OF',L.country_label[0],L.country_label[1]-24,'t-country',17);
+    text('T O R E N T H I A',L.country_label[0],L.country_label[1]+10,'t-country',36);
+    Object.entries(L.neighbors).forEach(([n,[x,y]])=>text(n,x,y+8,'t-neighbor',n==='CALDRIS'||n==='VALEDON'?31:23));
+    Object.entries(L.water).forEach(([n,[x,y]])=>text(n,x,y+7,'t-water',n==='Western Sea'?27:24));
+    Object.entries(L.cities).forEach(([n,v])=>{const cap=v[2]==='capital';const c=document.createElementNS(NS,'circle');c.setAttribute('cx',v[0]);c.setAttribute('cy',v[1]);c.setAttribute('r',cap?7:5);c.setAttribute('fill',cap?'#C9A84C':'#f6f1e6');c.setAttribute('stroke','#1B2A4A');c.setAttribute('stroke-width',2);svg.appendChild(c);text(cap?n.toUpperCase():n,v[0],v[1]+26,'t-city',cap?20:19);});
+  })();
+  </script>
+
   <script>
   (function(){
     function scaleMap(){
       var wrap=document.getElementById('mapScaleWrap');
       var inner=document.getElementById('mapInner');
       if(!wrap||!inner) return;
-      var scale=wrap.offsetWidth/1000;
+      var scale=wrap.offsetWidth/1536;
       inner.style.transform='scale('+scale+')';
-      wrap.style.height=Math.ceil(666*scale)+'px';
+      wrap.style.height=Math.ceil(1024*scale)+'px';
     }
     scaleMap();
     window.addEventListener('resize',scaleMap);
@@ -401,16 +431,16 @@
   document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
 
   const DATA = {
-    "korda-north":{title:"Korda Territory — Northern Zone",type:"crisis",typeLabel:"Active Crisis",
-      body:`<p><strong>Northeastern strip — Torenthian Alps foothill zone, northern Lake Varda shore.</strong></p><p>The Republic's most pressured Territory. Primary arrival point for Sunderland refugees crossing Lake Varda. Asylum Court overflow operating here. Elections Panel administered the last federal election directly due to NVS compliance failures. Statehood Audit due — Article I compliance under severe strain from refugee infrastructure pressure.</p>`,
+    "korda-north":{title:"Korda Territory — Lake Frontier",type:"crisis",typeLabel:"Active Crisis",
+      body:`<p><strong>Eastern frontier — Lake Varda's southern shore, facing Sunderland.</strong></p><p>The Republic's most pressured Territory. Primary arrival point for Sunderland refugees crossing Lake Varda. Asylum Court overflow operating here. Elections Panel administered the last federal election directly due to NVS compliance failures. Statehood Audit due — Article I compliance under severe strain from refugee infrastructure pressure.</p>`,
       provisions:["§6.1 Asylum","§11.3 Elections Panel","§15.2 Statehood Audit","§10.3 Classification"]},
     "rhondel":{title:"Rhondel — Eastern Lake City",type:"crisis",typeLabel:"Active Crisis",
-      body:`<p><strong>Kelvant/Rhovane border city. Coast guard command. Asylum Court overflow chamber.</strong></p><p>Rhondel is the Republic's most pressured urban center. Three petitions to Verentum in eighteen months for emergency infrastructure support. The coast guard command for the eastern lake operates from Rhondel's harbor. Sunderland naval vessels have been moving through the contested Lake Varda midline — each incursion is logged and published to the NRS. The Asylum Court overflow chamber opened in Year 11 as temporary. It is still operating.</p>`,
+      body:`<p><strong>Kelvant State — eastern lake-shore city. Coast guard command. Asylum Court overflow chamber.</strong></p><p>Rhondel is the Republic's most pressured urban center. Three petitions to Verentum in eighteen months for emergency infrastructure support. The coast guard command for the eastern lake operates from Rhondel's harbor. Sunderland naval vessels have been moving through the contested Lake Varda midline — each incursion is logged and published to the NRS. The Asylum Court overflow chamber opened in Year 11 as temporary. It is still operating.</p>`,
       provisions:["§6.1 Asylum","§2.4 LC Domain","§10.1 NRS"]},
     "verentum":{title:"Verentum — Seat of Government",type:"political",typeLabel:"Political · Electoral",
       body:`<p><strong>Aldenmere State. Year 13 LC election forming. Seat of government 20-year review — three-way bidding war active.</strong></p><p>Senator Tobias Vael (Harren) declared first for LC. Director of Foreign Affairs Ines Carrow addressed the Verentum Forum without declaring; the room treated it as a campaign address. Assembly member Seren Mak (Rhovane) has not declared but is winning rooms she shouldn't be winning yet. The 20-year seat of government review has produced bids from Aldenmere, Orath, and Solara Territory. Neither challenger can displace Aldenmere alone.</p>`,
       provisions:["§7.2 LC Election","§2.1 LC Term","§18.2 Seat of Government"]},
-    "korda-south":{title:"Korda Territory — Southern Zone",type:"legal",typeLabel:"Constitutional · Legal",
+    "korda-south":{title:"Korda Territory — Merger Petition",type:"legal",typeLabel:"Constitutional · Legal",
       body:`<p><strong>Southern ancestral zone adjacent to Kelvant. §15.4 partial merger petition active.</strong></p><p>Kelvant's Governor, of Korda heritage, has formally petitioned for the southern zone's incorporation into Kelvant State. §15.4 requires a 60% referendum with at least 50% participation, approval by Kelvant, a joint LM-JM audit, and Senate ratification. The Korda territorial government opposes the petition, arguing the vote would divide a people rather than represent them.</p>`,
       provisions:["§15.4 Voluntary Devolution","§15.5 Re-Qualification","§16.1 Indigenous Sovereignty","§9.11 JMC"]},
     "lake-varda":{title:"Lake Varda — Contested Midline",type:"diplomatic",typeLabel:"Diplomatic · Foreign Affairs",
