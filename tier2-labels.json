@@ -1,0 +1,123 @@
+{
+ "states": {
+  "VERDMONT TERRITORY": [
+   485,
+   143
+  ],
+  "VAREK": [
+   775,
+   197
+  ],
+  "KORDA TERRITORY": [
+   1255,
+   715
+  ],
+  "ARVANE": [
+   545,
+   338
+  ],
+  "HARREN": [
+   780,
+   320
+  ],
+  "RHOVANE": [
+   1055,
+   320
+  ],
+  "MERATH": [
+   730,
+   468
+  ],
+  "ORATH": [
+   1008,
+   493
+  ],
+  "KELVANT": [
+   1195,
+   519
+  ],
+  "CALDENMERE": [
+   500,
+   536
+  ],
+  "SELVANE": [
+   908,
+   608
+  ],
+  "ALDENMERE": [
+   680,
+   661
+  ],
+  "CORINDAL": [
+   668,
+   780
+  ],
+  "MORANTINE TERRITORY": [
+   968,
+   780
+  ],
+  "SOLARA TERRITORY": [
+   172,
+   932
+  ],
+  "KORDA TERRITORY (S)": [
+   1255,
+   715
+  ]
+ },
+ "neighbors": {
+  "CALDRIS": [
+   880,
+   52
+  ],
+  "SUNDERLAND": [
+   1425,
+   440
+  ],
+  "VALEDON": [
+   880,
+   942
+  ],
+  "SERONNE": [
+   1440,
+   905
+  ]
+ },
+ "water": {
+  "Lake Varda": [
+   1345,
+   380
+  ],
+  "Toren River": [
+   990,
+   118
+  ],
+  "Western Sea": [
+   225,
+   620
+  ]
+ },
+ "cities": {
+  "Verentum": [
+   772,
+   658,
+   "capital"
+  ],
+  "Dorven": [
+   800,
+   520
+  ],
+  "Calden": [
+   472,
+   640
+  ],
+  "Rhondel": [
+   1180,
+   610
+  ]
+ },
+ "country_label": [
+  870,
+  428
+ ]
+}

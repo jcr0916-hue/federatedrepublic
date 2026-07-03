@@ -1,444 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Federated Republic of Torenthia — Interactive Atlas</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Jost",sans-serif;background:#111820;display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:1.5rem 1rem}
-.page-header{width:100%;max-width:1340px;display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:.75rem;margin-bottom:1rem;border-bottom:1px solid #2a3040}
-.ph-title{font-family:"Cormorant Garamond",serif;font-size:1.6rem;font-weight:700;color:#f0e8d8;letter-spacing:.04em;text-transform:uppercase}
-.ph-sub{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#b45309;margin-top:.2rem}
-.ph-note{font-family:"JetBrains Mono",monospace;font-size:.6rem;color:#4a5a6a;letter-spacing:.1em;text-align:right;line-height:1.8}
-.layout{display:grid;grid-template-columns:1fr 320px;gap:1rem;width:100%;max-width:1340px}
-.map-wrap{position:relative;border:3px solid #6a5a38;border-radius:3px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.6)}
-.map-scale-wrap{width:100%;position:relative;overflow:hidden}
-.map-inner{
-  position:absolute;top:0;left:0;width:1000px;height:666px;transform-origin:top left;
-  background:#c9dfaf;
-  font-family:"Georgia",serif;cursor:crosshair
-}
-/* SVG OVERLAY */
-.map-vectors{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2}
-/* LABELS */
-.lbl{position:absolute;font-family:"Georgia",serif;font-weight:bold;font-size:13px;color:#0f120a;user-select:none;z-index:4;text-shadow:1px 1px 3px rgba(255,255,255,.7),-1px -1px 3px rgba(255,255,255,.7)}
-.lbl-sov{font-family:"Times New Roman",serif;font-size:22px;letter-spacing:4px;text-transform:uppercase;opacity:.85;color:#1a1a1a;text-shadow:1px 1px 4px rgba(255,255,255,.6),-1px -1px 4px rgba(255,255,255,.6)}
-.lbl-reg{font-size:12px;font-style:italic;font-weight:normal;opacity:.85;color:#2a2a2a}
-.lbl-water{font-family:"Times New Roman",serif;font-size:18px;letter-spacing:2px;color:#1a4a6a;text-shadow:none;font-style:italic;font-weight:normal}
-.lbl-geo{font-family:"Times New Roman",serif;font-size:16px;font-style:italic;letter-spacing:2px;opacity:.9;color:#2a2a2a}
-/* CITY NODES */
-.city-node{position:absolute;display:flex;align-items:center;gap:5px;z-index:5}
-.city-dot{width:9px;height:9px;background:#fff;border:2px solid #1e2417;border-radius:50%;flex-shrink:0}
-.city-star{width:13px;height:13px;background:#fff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);border:1px solid #1e2417;flex-shrink:0}
-/* PANELS */
-.map-title-panel{position:absolute;top:22px;left:22px;background:rgba(253,251,247,.92);border:2px solid #1e2417;padding:12px 20px;z-index:10;box-shadow:2px 2px 0 rgba(0,0,0,.15)}
-.map-title-panel .t1{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#555;font-weight:normal;display:block}
-.map-title-panel .t2{font-size:26px;font-family:"Times New Roman",serif;text-transform:uppercase;letter-spacing:1px;color:#0f120a;display:block}
-.solara-inset{position:absolute;bottom:22px;left:22px;width:130px;height:130px;background:#8ab5cc;border:2px solid #1e2417;z-index:6}
-.solara-island{position:absolute;top:25%;left:22%;width:54%;height:54%;background:#a8bf9a;border:1px solid #1e2417;border-radius:40% 55% 35% 50%}
-.solara-label{position:absolute;top:6px;left:6px;font-size:10px;text-transform:uppercase;font-weight:bold;background:rgba(253,251,247,.9);padding:2px 4px;border:1px solid #1e2417;font-family:"Georgia",serif}
-.map-legend{position:absolute;bottom:22px;right:22px;background:rgba(253,251,247,.92);border:2px solid #1e2417;padding:10px 13px;width:175px;font-size:10px;z-index:6;box-shadow:2px 2px 0 rgba(0,0,0,.15);font-family:"Georgia",serif}
-.leg-title{font-weight:bold;text-transform:uppercase;border-bottom:1px solid #1e2417;padding-bottom:3px;margin-bottom:5px;letter-spacing:1px;font-size:10px}
-.leg-row{display:flex;align-items:center;margin:4px 0;gap:8px}
-.lr-river{width:22px;height:3px;background:#6a9ab5;border:1px solid #4a80a5;border-radius:2px}
-.lr-intl{width:22px;height:2.5px;background:#1e2417}
-.lr-state{width:22px;height:1px;border-bottom:1px dashed #444}
-/* DOTS */
-.dot{position:absolute;cursor:pointer;width:0;height:0;z-index:10}
-.dot-core{position:absolute;width:13px;height:13px;border-radius:50%;border:2px solid white;transform:translate(-50%,-50%);transition:transform .2s;box-shadow:0 0 6px rgba(0,0,0,.5)}
-.dot:hover .dot-core{transform:translate(-50%,-50%) scale(1.4)}
-.dot.active .dot-core{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 12px rgba(255,255,255,.5)}
-.dot-ring{position:absolute;border-radius:50%;border:2px solid;transform:translate(-50%,-50%);animation:expandRing 2.2s infinite ease-out;pointer-events:none}
-.dot-ring2{animation-delay:.9s}
-@keyframes expandRing{0%{width:13px;height:13px;opacity:.8}100%{width:42px;height:42px;opacity:0}}
-/* SIDEBAR */
-.sidebar{display:flex;flex-direction:column;gap:.75rem}
-.info-panel{background:#0e1420;border:1px solid #2a3a50;border-radius:5px;overflow:hidden;flex:1}
-.info-header{background:#0a0f1a;padding:.65rem 1rem;border-bottom:1px solid #1e2a3a}
-.info-eyebrow{font-family:"JetBrains Mono",monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:#6a7a8a;margin-bottom:.2rem}
-.info-title{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600;color:#f0e8d8}
-.info-body{padding:.9rem 1rem;font-size:.78rem;color:#8898a8;line-height:1.7}
-.info-body p{margin-bottom:.6rem;color:#90a0b0}
-.info-body strong{color:#c8d8e8;font-weight:500}
-.alerts-panel{background:#0c1018;border:1px solid #2a3a50;border-radius:5px;padding:.75rem 1rem}
-.alerts-title{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:.6rem}
-.alert-row{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.5rem;font-size:.72rem;color:#a09080;line-height:1.55}
-.alert-row strong{color:#e8c8c8;font-weight:500}
-@media(max-width:900px){.layout{grid-template-columns:1fr}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Atlas — The Federated Republic</title>
+  <meta name="description" content="The world of Torenthia in two tiers: the wider world, and the Republic in full — twelve states, four territories, and the nations around it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    body{background:#0a0f1a}
+    .atlas-stage{position:relative;width:100%;height:calc(100vh - 62px);min-height:480px;margin-top:62px;overflow:hidden;background:#0a0f1a}
+    .tier{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .65s ease, transform .65s ease}
+    .tier.hidden{opacity:0;pointer-events:none}
+    @media (prefers-reduced-motion: reduce){.tier{transition:none}}
+
+    /* ---- Tier 1: the world ---- */
+    #tier1 .frame{position:relative;max-width:min(96vw, calc((100vh - 130px) * 2));width:100%}
+    #tier1 img{width:100%;height:auto;display:block;border:3px solid #6a5a38;border-radius:3px;box-shadow:0 10px 42px rgba(0,0,0,.75)}
+    .hotspot{position:absolute;transform:translate(-50%,-50%);cursor:pointer;background:none;border:none;padding:22px}
+    .hs-dot{position:relative;display:block;width:11px;height:11px;border-radius:50%;background:var(--gold);border:2px solid rgba(255,255,255,.85);box-shadow:0 0 8px rgba(201,168,76,.9)}
+    .hs-ring{position:absolute;left:50%;top:50%;width:11px;height:11px;border-radius:50%;border:2px solid var(--gold);transform:translate(-50%,-50%);animation:hsRing 2.4s infinite ease-out;pointer-events:none}
+    .hs-ring.r2{animation-delay:1.2s}
+    @keyframes hsRing{0%{transform:translate(-50%,-50%) scale(1);opacity:.85}100%{transform:translate(-50%,-50%) scale(4.2);opacity:0}}
+    .hs-label{position:absolute;left:34px;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.22em;color:#e9ddba;text-shadow:0 1px 6px rgba(0,0,0,.8);border-bottom:1px solid rgba(201,168,76,.6);padding-bottom:2px}
+    .hs-label::before{content:"";position:absolute;left:-24px;top:50%;width:20px;height:1px;background:rgba(201,168,76,.6)}
+    .tier1-caption{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(233,221,186,.55)}
+
+    /* ---- Tier 2: the Republic ---- */
+    #tier2{touch-action:none}
+    #viewport{position:absolute;inset:0;overflow:hidden;cursor:grab}
+    #viewport.dragging{cursor:grabbing}
+    #world{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}
+    #world img,#world svg{position:absolute;top:0;left:0;display:block}
+    .map-ui{position:absolute;z-index:5;font-family:'JetBrains Mono',monospace}
+    .back-btn{top:16px;left:16px;background:rgba(10,15,26,.82);border:1px solid rgba(201,168,76,.5);color:#e9ddba;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;padding:.55rem .9rem;cursor:pointer;border-radius:2px;backdrop-filter:blur(3px)}
+    .back-btn:hover{border-color:var(--gold);color:#fff}
+    .zoom-ui{top:16px;right:16px;display:flex;flex-direction:column;gap:6px}
+    .zoom-ui button{width:34px;height:34px;background:rgba(10,15,26,.82);border:1px solid rgba(201,168,76,.5);color:#e9ddba;font-size:1rem;cursor:pointer;border-radius:2px}
+    .zoom-ui button:hover{border-color:var(--gold);color:#fff}
+    .atlas-legend{bottom:16px;left:16px;background:rgba(10,15,26,.82);border:1px solid rgba(201,168,76,.35);padding:.6rem .8rem;border-radius:2px;backdrop-filter:blur(3px)}
+    .atlas-legend div{display:flex;align-items:center;gap:.5rem;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(233,221,186,.85);margin:.2rem 0}
+    .lg-line{display:inline-block;width:22px;height:0}
+    .lg-nat{border-top:2.5px solid #a8261c}
+    .lg-st{border-top:2px solid #2c2824}
+    .lg-cap{width:9px;height:9px;border-radius:50%;background:#C9A84C;border:1.5px solid #1B2A4A}
+    .atlas-hint{bottom:16px;right:16px;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(233,221,186,.45)}
+    @media(max-width:640px){.atlas-hint{display:none}.hs-label{font-size:.75rem}}
+
+    /* SVG overlay text */
+    text{font-family:'Cormorant Garamond',serif}
+    .t-state{fill:#1f2c48;letter-spacing:3px;paint-order:stroke;stroke:#f6f1e6;stroke-width:2.6px;stroke-linejoin:round}
+    .t-country{fill:#1f2c48;letter-spacing:6px;paint-order:stroke;stroke:#f6f1e6;stroke-width:3px;stroke-linejoin:round}
+    .t-neighbor{fill:#8c2018;letter-spacing:5px;paint-order:stroke;stroke:#f6f1e6;stroke-width:2.6px;stroke-linejoin:round}
+    .t-water{fill:#526680;font-style:italic;letter-spacing:1.5px;paint-order:stroke;stroke:#f6f1e6;stroke-width:2.2px;stroke-linejoin:round}
+    .t-city{fill:#1f2c48;letter-spacing:1px;paint-order:stroke;stroke:#f6f1e6;stroke-width:2.2px;stroke-linejoin:round}
+    .b-halo{fill:none;stroke:#f3ecdc;stroke-linecap:round;stroke-linejoin:round}
+    .b-nat{fill:none;stroke:#a8261c;stroke-linecap:round;stroke-linejoin:round}
+    .b-st{fill:none;stroke:#2c2824;stroke-linecap:round;stroke-linejoin:round}
+  </style>
 </head>
 <body>
-<a href="#main-content" class="skip-nav">Skip to main content</a>
-<nav>
-  <a class='nav-logo' href='/'><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
-  <div class="nav-links">
-    <a href='/annotated'>Annotated Edition</a>
-    <a href='/scenarios'>Scenarios</a>
-    <a class='active' href='/torenthia'>The World</a>
-    <a href='/diagrams'>Diagrams</a>
-    <a href='/constitutional-history'>Constitutional History</a>
-    <a href='/sources'>Sources</a>
-    <a href='/glossary'>Glossary</a>
-  </div>
-  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href='/annotated'>Annotated Edition</a>
-  <a href='/scenarios'>Scenarios</a>
-  <a href='/torenthia'>The World</a>
-  <a href='/diagrams'>Diagrams</a>
-  <a href='/constitutional-history'>Constitutional History</a>
-  <a href='/sources'>Sources</a>
-  <a href='/glossary'>Glossary</a>
-  <a href='/contact'>Contact</a>
-  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
-</div>
-
-<div class="page-header">
-  <div>
-    <div class="ph-sub">NRS Cartographic Registry · Year 12 · Interactive Regional View</div>
-    <div class="ph-title">Federated Republic of Torenthia</div>
-  </div>
-  <div class="ph-note" id="main-content">Click any dot<br>to inspect</div>
-</div>
-
-<div class="layout">
-<div class="map-wrap">
-  <div class="map-scale-wrap" id="mapScaleWrap">
-    <div class="map-inner" id="mapInner">
-      <img src="torenthia-map-roads.png" id="baseImg" alt="Federated Republic of Torenthia" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;">
-
-      <!-- Image has all labels, borders, rivers baked in. Dots only for interactivity. -->
-
-      <!-- Crisis dots (red) -->
-      <div class="dot" data-key="korda-north" style="top:28%;left:76%">
-        <div class="dot-core" style="background:#e8185a"></div>
-        <div class="dot-ring" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
-        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
-      </div>
-      <div class="dot" data-key="rhondel" style="top:53%;left:74%">
-        <div class="dot-core" style="background:#e8185a"></div>
-        <div class="dot-ring" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
-        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#e8185a;margin-left:-11px;margin-top:-11px"></div>
-      </div>
-
-      <!-- Political dots (purple) -->
-      <div class="dot" data-key="verentum" style="top:57%;left:53%">
-        <div class="dot-core" style="background:#7c3aed"></div>
-        <div class="dot-ring" style="width:22px;height:22px;border-color:#7c3aed;margin-left:-11px;margin-top:-11px"></div>
-        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#7c3aed;margin-left:-11px;margin-top:-11px"></div>
-      </div>
-
-      <!-- Legal dots (blue) -->
-      <div class="dot" data-key="corindal" style="top:73%;left:34%">
-        <div class="dot-core" style="background:#0ea5e9"></div>
-        <div class="dot-ring" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
-        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
-      </div>
-      <div class="dot" data-key="korda-south" style="top:73%;left:71%">
-        <div class="dot-core" style="background:#0ea5e9"></div>
-        <div class="dot-ring" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
-        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#0ea5e9;margin-left:-11px;margin-top:-11px"></div>
-      </div>
-
-      <!-- Diplomatic dots (gold) -->
-      <div class="dot" data-key="lake-varda" style="top:44%;left:82%">
-        <div class="dot-core" style="background:#f59e0b"></div>
-        <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-      </div>
-      <div class="dot" data-key="valedon" style="top:88%;left:50%">
-        <div class="dot-core" style="background:#f59e0b"></div>
-        <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-      </div>
-      <div class="dot" data-key="toren-river" style="top:19%;left:50%">
-        <div class="dot-core" style="background:#f59e0b"></div>
-        <div class="dot-ring" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-        <div class="dot-ring dot-ring2" style="width:22px;height:22px;border-color:#f59e0b;margin-left:-11px;margin-top:-11px"></div>
-      </div>
-
-
-
-    </div><!-- /map-inner -->
-  </div><!-- /map-scale-wrap -->
-</div><!-- /map-wrap -->
-
-<div class="sidebar">
-  <div class="alerts-panel">
-    <div class="alerts-title">Activity Legend</div>
-    <div class="alert-row"><div class="adot" style="background:#e8185a;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Active Crisis</strong> — conflict spillover, emergency operations, humanitarian pressure</div></div>
-    <div class="alert-row"><div class="adot" style="background:#7c3aed;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Political · Electoral</strong> — elections, appointments, governance disputes</div></div>
-    <div class="alert-row"><div class="adot" style="background:#0ea5e9;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Constitutional · Legal</strong> — SC cases, audits, Article XVI proceedings</div></div>
-    <div class="alert-row"><div class="adot" style="background:#f59e0b;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Diplomatic · Foreign Affairs</strong> — treaties, border tensions, foreign negotiations</div></div>
-  </div>
-
-
-  <div class="info-panel">
-    <div class="info-header">
-      <div class="info-eyebrow" id="infoEye">Activity Inspector</div>
-      <div class="info-title" id="infoTitle">Click any dot</div>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="torenthia.html" class="active">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
     </div>
-    <div class="info-body" id="infoBody">Click an activity dot on the map to inspect the situation, constitutional provisions, and current status.</div>
-  </div>
-</div>
-</div>
-
-<script>
-const DATA = {
-  "korda-north":{title:"Korda Territory — Northern Zone",type:"crisis",
-    typeLabel:"Active Crisis",
-    body:`<p><strong>Northeastern strip — Torenthian Alps foothill zone, northern Lake Varda shore.</strong></p>
-    <p>The Republic's most pressured Territory. Primary arrival point for Sunderland refugees crossing Lake Varda. Asylum Court overflow operating here. Elections Panel administered the last federal election directly due to NVS compliance failures. Statehood Audit due — Article I compliance under severe strain from refugee infrastructure pressure. The LC has flagged Korda in classified intelligence assessments approaching their §10.3 classification ceiling.</p>`,
-    provisions:["§6.1 Asylum","§11.3 Elections Panel","§15.2 Statehood Audit","§10.3 Classification"]},
-
-  "rhondel":{title:"Rhondel — Eastern Lake City",type:"crisis",
-    typeLabel:"Active Crisis",
-    body:`<p><strong>Kelvant/Rhovane border city. Coast guard command. Asylum Court overflow chamber.</strong></p>
-    <p>Rhondel is now the Republic's most pressured urban center. Three petitions to Verentum in eighteen months for emergency infrastructure support. The coast guard command for the entire eastern lake operates from Rhondel's harbor. Sunderland naval vessels have been moving through the contested Lake Varda midline — each incursion is logged, reported to the LC's office, and published to the NRS. The city's Asylum Court overflow chamber opened in Year 11 as a temporary measure. It is still operating.</p>`,
-    provisions:["§6.1 Asylum","§2.4 LC Domain","§10.1 NRS"]},
-
-  "verentum":{title:"Verentum — Seat of Government",type:"political",
-    typeLabel:"Political · Electoral",
-    body:`<p><strong>Aldenmere State. Year 13 LC election forming. Seat of government 20-year review — three-way bidding war active.</strong></p>
-    <p>Senator Tobias Vael (Harren) declared first for LC — sovereignty wing, confrontational Caldris posture. Director of Foreign Affairs Ines Carrow addressed the Verentum Forum without declaring; the room treated it as a campaign address. Assembly member Seren Mak (Rhovane) has not declared but is winning rooms she shouldn't be winning yet. CC Nadia Sorrel has made no public statement on Year 13 intentions.</p>
-    <p>The 20-year seat of government review under §18.2 has produced three formal bids. Aldenmere defends on continuity grounds. Orath challenges on democratic legitimacy — "the Republic should sit among its people, not among its contractors." Solara Territory has submitted a bid on constitutional right — §18.2 permits any State or Territory to bid; the Legislature selects by ordinary statute. Solara has Assembly seats but no Senate votes, which complicates the arithmetic in a bicameral selection. Neither Orath nor Solara can displace Aldenmere alone — together they might block retention, but cannot both win. Nobody is publicly discussing the coalition question yet.</p>`,
-    provisions:["§7.2 LC Election","§2.1 LC Term","§18.2 Seat of Government","§3.14 Legislative Competence"]},
-
-  "korda-south":{title:"Korda Territory — Southern Zone",type:"legal",
-    typeLabel:"Constitutional · Legal",
-    body:`<p><strong>Southern ancestral zone adjacent to Kelvant. §15.4 partial merger petition active.</strong></p>
-    <p>The Korda people entered the Republic as a Territory at founding under Article XVI's indigenous sovereignty framework. Their ancestral land comprises two zones. The southern zone is the subject of a §15.4 partial merger petition — Kelvant's Governor, of Korda heritage, has formally petitioned for the southern zone's incorporation into Kelvant State.</p>
-    <p>§15.4 requires a 60% referendum with at least 50% participation in the merging zone, approval by Kelvant through its own process, a joint LM-JM audit confirming Kelvant's integrity, and Senate ratification by simple majority. The Korda territorial government opposes the petition, arguing the vote would divide a people rather than represent them. §15.5 protects the northern zone's Statehood progress if the merger proceeds.</p>`,
-    provisions:["§15.4 Voluntary Devolution and Merger","§15.5 Re-Qualification","§16.1 Indigenous Sovereignty","§9.11 JMC"]},
-
-  "lake-varda":{title:"Lake Varda — Contested Midline",type:"diplomatic",
-    typeLabel:"Diplomatic · Foreign Affairs",
-    body:`<p><strong>Eastern lake shared with Sunderland. Midline boundary disputed. Naval incursions logged.</strong></p>
-    <p>Sunderland naval vessels have been moving through the contested lake midline, using it as a supply route for internal military operations. The LC has issued two formal diplomatic notes. Each incursion is published to the NRS. The coast guard command in Rhondel operates under standing emergency protocols. Torenthia's administrative claim to the western shore is unrecognized — Sunderland has agreed to no boundary arrangement and the Sunderland government's instability makes any negotiated resolution unlikely in the near term.</p>`,
-    provisions:["§2.4 LC Domain","§10.3 Classification","§10.1 NRS"]},
-
-  "corindal":{title:"Corindal — Provisional Status",type:"legal",
-    typeLabel:"Constitutional · Legal",
-    body:`<p><strong>Southwestern border State. Second consecutive failed Statehood Audit. Provisional Audit Council active.</strong></p>
-    <p>Corindal has failed two consecutive Statehood Audits for persistent electoral district non-compliance. Now in Provisional status. The Provisional Audit Council — two CC officers and two Corindal State delegates — is publishing findings to the NRS. A forced devolution election was held and rejected by 71% of citizens. Year 14 audit approaching. The audit failure is a political deadlock about electoral reform that Corindal's legislature has refused to break. The Audit Council's most recent report named the deadlock directly.</p>`,
-    provisions:["§15.1.a Provisional Status","§15.2 Statehood Audit","§15.3 Mandatory Devolution","§9.11 JMC"]},
-
-  "valedon":{title:"Valedon Border — §15.6 Unresolved",type:"diplomatic",
-    typeLabel:"Diplomatic · Foreign Affairs",
-    body:`<p><strong>Southern border. Valedon referendum wound — Year 18. §15.6 petition question before the SC.</strong></p>
-    <p>Eighteen years ago Valedon's citizens voted to join the Republic. The parliament rejected the result. The pro-Republic faction has grown since the anniversary. Whether a citizen referendum can constitute a constructive §15.6 petition from the governing body has never been put to the SC. The LC declined a formal acknowledgment request without closing the door. Caldris was involved in the original rejection through back-channels — never proven, never closed by the LC's intelligence services. Cultural overlap with Corindal, Selvane, and Morantine Territory means the wound is lived daily on both sides of the border.</p>`,
-    provisions:["§15.6 Voluntary Incorporation","§4.5 SC Jurisdiction","§2.4 LC Domain"]},
-
-  "toren-river":{title:"Northern River — Caldris Treaty Renewal",type:"diplomatic",
-    typeLabel:"Diplomatic · Foreign Affairs",
-    body:`<p><strong>The Toren River runs east-west along the northern border. The Republic is downstream from Caldris.</strong></p>
-    <p>The Northern River treaty is due for renewal. Caldris has proposed upstream dam infrastructure that would give it effective control over Torenthia's downstream water supply in drought conditions. The LC objected formally within 48 hours. The Senate passed a resolution directing minimum guaranteed flow thresholds. The LC and Senate do not agree on what that threshold is. Caldris also holds economic investment in Sunderland — the water negotiation and the eastern situation are not separate files in the LC's office.</p>`,
-    provisions:["§3.6 Treaty Ratification","§2.4 LC Domain","§3.6.a Classification"]}
-};
-
-const TYPE_COLORS = {
-  crisis:"#e8185a", political:"#7c3aed", legal:"#0ea5e9", diplomatic:"#f59e0b"
-};
-const TYPE_LABELS = {
-  crisis:"Active Crisis", political:"Political · Electoral",
-  legal:"Constitutional · Legal", diplomatic:"Diplomatic · Foreign Affairs"
-};
-
-let activeDot = null;
-
-function selectDot(key){
-  document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
-  const el = document.querySelector('[data-key="'+key+'"]');
-  if(el) el.classList.add("active");
-  activeDot = key;
-
-  const d = DATA[key];
-  if(!d) return;
-
-  const color = TYPE_COLORS[d.type] || "#888";
-  document.getElementById("infoEye").textContent = d.typeLabel;
-  document.getElementById("infoEye").style.color = color;
-  document.getElementById("infoTitle").textContent = d.title;
-
-  const provs = d.provisions ? d.provisions.map(p=>`<span style="font-family:'JetBrains Mono',monospace;font-size:.6rem;background:#1B2A4A;color:#C9A84C;padding:.15rem .5rem;margin:.1rem .1rem 0;display:inline-block">${p}</span>`).join("") : "";
-  document.getElementById("infoBody").innerHTML =
-    `<span style="font-family:'JetBrains Mono',monospace;font-size:.62rem;padding:.25rem .5rem;border-radius:2px;display:inline-block;margin-bottom:.65rem;background:${color}22;color:${color}">${d.typeLabel}</span>`
-    + d.body
-    + (provs ? `<div style="margin-top:.75rem">${provs}</div>` : "");
-
-}
-
-function clearDot(){
-  activeDot = null;
-  document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
-  document.getElementById("infoEye").textContent="Activity Inspector";
-  document.getElementById("infoEye").style.color="";
-  document.getElementById("infoTitle").textContent="Click any dot";
-  document.getElementById("infoBody").textContent="Click an activity dot on the map to inspect the situation, constitutional provisions, and current status.";
-}
-
-document.querySelectorAll(".dot").forEach(el=>{
-  el.addEventListener("click",()=>selectDot(el.dataset.key));
-});
-</script>
-</body>
-</html
-
-    </div><!-- /map-inner -->
-  </div><!-- /map-scale-wrap -->
-</div><!-- /map-wrap -->
-
-<div class="sidebar">
-  <div class="alerts-panel">
-    <div class="alerts-title">Activity Legend</div>
-    <div class="alert-row"><div class="adot" style="background:#e8185a;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Active Crisis</strong> — conflict spillover, emergency operations, humanitarian pressure</div></div>
-    <div class="alert-row"><div class="adot" style="background:#7c3aed;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Political · Electoral</strong> — elections, appointments, governance disputes</div></div>
-    <div class="alert-row"><div class="adot" style="background:#0ea5e9;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Constitutional · Legal</strong> — SC cases, audits, Article XVI proceedings</div></div>
-    <div class="alert-row"><div class="adot" style="background:#f59e0b;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Diplomatic · Foreign Affairs</strong> — treaties, border tensions, foreign negotiations</div></div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
   </div>
 
+  <div class="atlas-stage" id="main-content">
 
-  <div class="info-panel">
-    <div class="info-header">
-      <div class="info-eyebrow" id="infoEye">Activity Inspector</div>
-      <div class="info-title" id="infoTitle">Click any dot</div>
+    <!-- Tier 1 -->
+    <div class="tier" id="tier1">
+      <div class="frame">
+        <img src="world-map-tier1.webp" alt="World map. Torenthia's region is marked on the western coast of the crescent continent." onerror="this.onerror=null;this.src='world-map-tier1.jpg'">
+        <button class="hotspot" id="hotspot" aria-label="Open the Federated Republic region map">
+          <span class="hs-ring"></span><span class="hs-ring r2"></span>
+          <span class="hs-dot"></span>
+          <span class="hs-label">THE FEDERATED REPUBLIC</span>
+        </button>
+      </div>
+      <div class="tier1-caption">The Known World &middot; Select the Republic to descend</div>
     </div>
-    <div class="info-body" id="infoBody">Click an activity dot on the map to inspect the situation, constitutional provisions, and current status.</div>
+
+    <!-- Tier 2 -->
+    <div class="tier hidden" id="tier2">
+      <div id="viewport">
+        <div id="world"></div>
+      </div>
+      <button class="map-ui back-btn" id="backBtn">&larr; The World</button>
+      <div class="map-ui zoom-ui">
+        <button id="zin" aria-label="Zoom in">+</button>
+        <button id="zout" aria-label="Zoom out">&minus;</button>
+      </div>
+      <div class="map-ui atlas-legend">
+        <div><span class="lg-line lg-nat"></span> National border</div>
+        <div><span class="lg-line lg-st"></span> State border</div>
+        <div><span class="lg-cap"></span> Verentum &middot; capital</div>
+      </div>
+      <div class="map-ui atlas-hint">Drag to pan &middot; Scroll or pinch to zoom</div>
+    </div>
   </div>
-</div>
 
-</div><!-- /layout -->
+  <script src="map-data.js"></script>
+  <script>
+  (function(){
+    const D = MAP_DATA, T1 = D.tier1, T2 = D.tier2;
 
-<script>
-(function(){
-  function scaleMap(){
-    var wrap=document.getElementById('mapScaleWrap');
-    var inner=document.getElementById('mapInner');
-    if(!wrap||!inner) return;
-    var scale=wrap.offsetWidth/1000;
-    inner.style.transform='scale('+scale+')';
-    wrap.style.height=Math.ceil(666*scale)+'px';
-  }
-  scaleMap();
-  window.addEventListener('resize',scaleMap);
-})();
-function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
-document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
-const DATA = {
-  "korda-north":{title:"Korda Territory — Northern Zone",type:"crisis",
-    typeLabel:"Active Crisis",
-    body:`<p><strong>Northeastern strip — Torenthian Alps foothill zone, northern Lake Varda shore.</strong></p>
-    <p>The Republic's most pressured Territory. Primary arrival point for Sunderland refugees crossing Lake Varda. Asylum Court overflow operating here. Elections Panel administered the last federal election directly due to NVS compliance failures. Statehood Audit due — Article I compliance under severe strain from refugee infrastructure pressure. The LC has flagged Korda in classified intelligence assessments approaching their §10.3 classification ceiling.</p>`,
-    provisions:["§6.1 Asylum","§11.3 Elections Panel","§15.2 Statehood Audit","§10.3 Classification"]},
+    /* ---- Tier 1 hotspot position ---- */
+    const hs = document.getElementById('hotspot');
+    hs.style.left = (T1.hotspot.x / T1.w * 100) + '%';
+    hs.style.top  = (T1.hotspot.y / T1.h * 100) + '%';
 
-  "rhondel":{title:"Rhondel — Eastern Lake City",type:"crisis",
-    typeLabel:"Active Crisis",
-    body:`<p><strong>Kelvant/Rhovane border city. Coast guard command. Asylum Court overflow chamber.</strong></p>
-    <p>Rhondel is now the Republic's most pressured urban center. Three petitions to Verentum in eighteen months for emergency infrastructure support. The coast guard command for the entire eastern lake operates from Rhondel's harbor. Sunderland naval vessels have been moving through the contested Lake Varda midline — each incursion is logged, reported to the LC's office, and published to the NRS. The city's Asylum Court overflow chamber opened in Year 11 as a temporary measure. It is still operating.</p>`,
-    provisions:["§6.1 Asylum","§2.4 LC Domain","§10.1 NRS"]},
+    /* ---- Build Tier 2 world: base image + SVG overlay ---- */
+    const world = document.getElementById('world');
+    world.style.width = T2.w + 'px'; world.style.height = T2.h + 'px';
+    const img = new Image();
+    img.src = 'region-map-tier2-base.webp'; img.alt = '';
+    img.width = T2.w; img.height = T2.h;
+    world.appendChild(img);
 
-  "verentum":{title:"Verentum — Seat of Government",type:"political",
-    typeLabel:"Political · Electoral",
-    body:`<p><strong>Aldenmere State. Year 13 LC election forming. Seat of government 20-year review — three-way bidding war active.</strong></p>
-    <p>Senator Tobias Vael (Harren) declared first for LC — sovereignty wing, confrontational Caldris posture. Director of Foreign Affairs Ines Carrow addressed the Verentum Forum without declaring; the room treated it as a campaign address. Assembly member Seren Mak (Rhovane) has not declared but is winning rooms she shouldn't be winning yet. CC Nadia Sorrel has made no public statement on Year 13 intentions.</p>
-    <p>The 20-year seat of government review under §18.2 has produced three formal bids. Aldenmere defends on continuity grounds. Orath challenges on democratic legitimacy — "the Republic should sit among its people, not among its contractors." Solara Territory has submitted a bid on constitutional right — §18.2 permits any State or Territory to bid; the Legislature selects by ordinary statute. Solara has Assembly seats but no Senate votes, which complicates the arithmetic in a bicameral selection. Neither Orath nor Solara can displace Aldenmere alone — together they might block retention, but cannot both win. Nobody is publicly discussing the coalition question yet.</p>`,
-    provisions:["§7.2 LC Election","§2.1 LC Term","§18.2 Seat of Government","§3.14 Legislative Competence"]},
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(NS,'svg');
+    svg.setAttribute('viewBox', `0 0 ${T2.w} ${T2.h}`);
+    svg.setAttribute('width', T2.w); svg.setAttribute('height', T2.h);
+    function path(pts, cls, wd){
+      const p = document.createElementNS(NS,'path');
+      p.setAttribute('d','M'+pts.map(q=>q[0]+' '+q[1]).join('L'));
+      p.setAttribute('class',cls); p.setAttribute('stroke-width',wd);
+      svg.appendChild(p);
+    }
+    D.borders.state.forEach(l=>path(l,'b-halo',5));
+    D.borders.state.forEach(l=>path(l,'b-st',2.6));
+    D.borders.national.forEach(l=>path(l,'b-halo',7));
+    D.borders.national.forEach(l=>path(l,'b-nat',3));
+    function text(str,x,y,cls,size){
+      const t = document.createElementNS(NS,'text');
+      t.setAttribute('x',x); t.setAttribute('y',y);
+      t.setAttribute('text-anchor','middle');
+      t.setAttribute('class',cls); t.setAttribute('font-size',size);
+      t.textContent = str; svg.appendChild(t); return t;
+    }
+    const L = D.labels;
+    Object.entries(L.states).forEach(([name,[x,y]])=>{
+      const nm = name.replace(' (S)','');
+      text(nm, x, y+8, 't-state', nm.includes('TERRITORY') ? 23 : 25);
+    });
+    text('THE FEDERATED REPUBLIC OF', L.country_label[0], L.country_label[1]-24, 't-country', 17);
+    text('T O R E N T H I A', L.country_label[0], L.country_label[1]+10, 't-country', 36);
+    Object.entries(L.neighbors).forEach(([n,[x,y]])=>text(n,x,y+8,'t-neighbor',n==='CALDRIS'||n==='VALEDON'?31:23));
+    Object.entries(L.water).forEach(([n,[x,y]])=>text(n,x,y+7,'t-water',n==='Western Sea'?27:24));
+    Object.entries(L.cities).forEach(([n,v])=>{
+      const cap = v[2]==='capital';
+      const c = document.createElementNS(NS,'circle');
+      c.setAttribute('cx',v[0]); c.setAttribute('cy',v[1]); c.setAttribute('r',cap?7:5);
+      c.setAttribute('fill',cap?'#C9A84C':'#f6f1e6'); c.setAttribute('stroke','#1B2A4A'); c.setAttribute('stroke-width',2);
+      svg.appendChild(c);
+      text(cap?n.toUpperCase():n, v[0], v[1]+26, 't-city', cap?20:19);
+    });
+    world.appendChild(svg);
 
-  "korda-south":{title:"Korda Territory — Southern Zone",type:"legal",
-    typeLabel:"Constitutional · Legal",
-    body:`<p><strong>Southern ancestral zone adjacent to Kelvant. §15.4 partial merger petition active.</strong></p>
-    <p>The Korda people entered the Republic as a Territory at founding under Article XVI's indigenous sovereignty framework. Their ancestral land comprises two zones. The southern zone is the subject of a §15.4 partial merger petition — Kelvant's Governor, of Korda heritage, has formally petitioned for the southern zone's incorporation into Kelvant State.</p>
-    <p>§15.4 requires a 60% referendum with at least 50% participation in the merging zone, approval by Kelvant through its own process, a joint LM-JM audit confirming Kelvant's integrity, and Senate ratification by simple majority. The Korda territorial government opposes the petition, arguing the vote would divide a people rather than represent them. §15.5 protects the northern zone's Statehood progress if the merger proceeds.</p>`,
-    provisions:["§15.4 Voluntary Devolution and Merger","§15.5 Re-Qualification","§16.1 Indigenous Sovereignty","§9.11 JMC"]},
+    /* ---- Tier swap ---- */
+    const tier1 = document.getElementById('tier1'), tier2 = document.getElementById('tier2');
+    function show(elIn, elOut){ elOut.classList.add('hidden'); elIn.classList.remove('hidden'); }
+    hs.addEventListener('click', ()=>{ show(tier2, tier1); requestAnimationFrame(fitInitial); });
+    document.getElementById('backBtn').addEventListener('click', ()=>show(tier1, tier2));
 
-  "lake-varda":{title:"Lake Varda — Contested Midline",type:"diplomatic",
-    typeLabel:"Diplomatic · Foreign Affairs",
-    body:`<p><strong>Eastern lake shared with Sunderland. Midline boundary disputed. Naval incursions logged.</strong></p>
-    <p>Sunderland naval vessels have been moving through the contested lake midline, using it as a supply route for internal military operations. The LC has issued two formal diplomatic notes. Each incursion is published to the NRS. The coast guard command in Rhondel operates under standing emergency protocols. Torenthia's administrative claim to the western shore is unrecognized — Sunderland has agreed to no boundary arrangement and the Sunderland government's instability makes any negotiated resolution unlikely in the near term.</p>`,
-    provisions:["§2.4 LC Domain","§10.3 Classification","§10.1 NRS"]},
+    /* ---- Pan / zoom ---- */
+    const vp = document.getElementById('viewport');
+    let scale = 1, min = 1, max = 5, tx = 0, ty = 0, fitted = false;
+    function apply(){ world.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; }
+    function clamp(){
+      const r = vp.getBoundingClientRect();
+      const w = T2.w*scale, h = T2.h*scale;
+      tx = w <= r.width  ? (r.width - w)/2  : Math.min(0, Math.max(r.width  - w, tx));
+      ty = h <= r.height ? (r.height - h)/2 : Math.min(0, Math.max(r.height - h, ty));
+    }
+    function fitInitial(){
+      if (fitted) return; fitted = true;
+      const r = vp.getBoundingClientRect();
+      min = Math.min(r.width / T2.w, r.height / T2.h);
+      scale = min; clamp(); apply();
+    }
+    function zoomAt(cx, cy, factor){
+      const ns = Math.min(max, Math.max(min, scale*factor));
+      const k = ns/scale;
+      tx = cx - k*(cx - tx); ty = cy - k*(cy - ty);
+      scale = ns; clamp(); apply();
+    }
+    vp.addEventListener('wheel', e=>{
+      e.preventDefault();
+      const r = vp.getBoundingClientRect();
+      zoomAt(e.clientX-r.left, e.clientY-r.top, e.deltaY < 0 ? 1.18 : 1/1.18);
+    }, {passive:false});
+    document.getElementById('zin').addEventListener('click', ()=>{const r=vp.getBoundingClientRect();zoomAt(r.width/2,r.height/2,1.35)});
+    document.getElementById('zout').addEventListener('click', ()=>{const r=vp.getBoundingClientRect();zoomAt(r.width/2,r.height/2,1/1.35)});
 
-  "corindal":{title:"Corindal — Provisional Status",type:"legal",
-    typeLabel:"Constitutional · Legal",
-    body:`<p><strong>Southwestern border State. Second consecutive failed Statehood Audit. Provisional Audit Council active.</strong></p>
-    <p>Corindal has failed two consecutive Statehood Audits for persistent electoral district non-compliance. Now in Provisional status. The Provisional Audit Council — two CC officers and two Corindal State delegates — is publishing findings to the NRS. A forced devolution election was held and rejected by 71% of citizens. Year 14 audit approaching. The audit failure is a political deadlock about electoral reform that Corindal's legislature has refused to break. The Audit Council's most recent report named the deadlock directly.</p>`,
-    provisions:["§15.1.a Provisional Status","§15.2 Statehood Audit","§15.3 Mandatory Devolution","§9.11 JMC"]},
+    const ptrs = new Map(); let lastMid = null, lastDist = 0;
+    vp.addEventListener('pointerdown', e=>{ vp.setPointerCapture(e.pointerId); ptrs.set(e.pointerId,[e.clientX,e.clientY]); vp.classList.add('dragging'); });
+    vp.addEventListener('pointermove', e=>{
+      if(!ptrs.has(e.pointerId)) return;
+      const prev = ptrs.get(e.pointerId); ptrs.set(e.pointerId,[e.clientX,e.clientY]);
+      if(ptrs.size === 1){
+        tx += e.clientX - prev[0]; ty += e.clientY - prev[1]; clamp(); apply();
+      } else if(ptrs.size === 2){
+        const [a,b] = [...ptrs.values()];
+        const mid = [(a[0]+b[0])/2,(a[1]+b[1])/2];
+        const dist = Math.hypot(a[0]-b[0], a[1]-b[1]);
+        const r = vp.getBoundingClientRect();
+        if(lastDist) zoomAt(mid[0]-r.left, mid[1]-r.top, dist/lastDist);
+        if(lastMid){ tx += mid[0]-lastMid[0]; ty += mid[1]-lastMid[1]; clamp(); apply(); }
+        lastMid = mid; lastDist = dist;
+      }
+    });
+    function up(e){ ptrs.delete(e.pointerId); if(ptrs.size<2){lastMid=null;lastDist=0;} if(!ptrs.size) vp.classList.remove('dragging'); }
+    vp.addEventListener('pointerup', up); vp.addEventListener('pointercancel', up);
+    window.addEventListener('resize', ()=>{ if(!tier2.classList.contains('hidden')){ fitted=false; fitInitial(); } });
+  })();
+  </script>
 
-  "valedon":{title:"Valedon Border — §15.6 Unresolved",type:"diplomatic",
-    typeLabel:"Diplomatic · Foreign Affairs",
-    body:`<p><strong>Southern border. Valedon referendum wound — Year 18. §15.6 petition question before the SC.</strong></p>
-    <p>Eighteen years ago Valedon's citizens voted to join the Republic. The parliament rejected the result. The pro-Republic faction has grown since the anniversary. Whether a citizen referendum can constitute a constructive §15.6 petition from the governing body has never been put to the SC. The LC declined a formal acknowledgment request without closing the door. Caldris was involved in the original rejection through back-channels — never proven, never closed by the LC's intelligence services. Cultural overlap with Corindal, Selvane, and Morantine Territory means the wound is lived daily on both sides of the border.</p>`,
-    provisions:["§15.6 Voluntary Incorporation","§4.5 SC Jurisdiction","§2.4 LC Domain"]},
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
 
-  "toren-river":{title:"Northern River — Caldris Treaty Renewal",type:"diplomatic",
-    typeLabel:"Diplomatic · Foreign Affairs",
-    body:`<p><strong>The Toren River runs east-west along the northern border. The Republic is downstream from Caldris.</strong></p>
-    <p>The Northern River treaty is due for renewal. Caldris has proposed upstream dam infrastructure that would give it effective control over Torenthia's downstream water supply in drought conditions. The LC objected formally within 48 hours. The Senate passed a resolution directing minimum guaranteed flow thresholds. The LC and Senate do not agree on what that threshold is. Caldris also holds economic investment in Sunderland — the water negotiation and the eastern situation are not separate files in the LC's office.</p>`,
-    provisions:["§3.6 Treaty Ratification","§2.4 LC Domain","§3.6.a Classification"]}
-};
-
-const TYPE_COLORS = {
-  crisis:"#e8185a", political:"#7c3aed", legal:"#0ea5e9", diplomatic:"#f59e0b"
-};
-const TYPE_LABELS = {
-  crisis:"Active Crisis", political:"Political · Electoral",
-  legal:"Constitutional · Legal", diplomatic:"Diplomatic · Foreign Affairs"
-};
-
-let activeDot = null;
-
-function selectDot(key){
-  document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
-  const el = document.querySelector('[data-key="'+key+'"]');
-  if(el) el.classList.add("active");
-  activeDot = key;
-
-  const d = DATA[key];
-  if(!d) return;
-
-  const color = TYPE_COLORS[d.type] || "#888";
-  document.getElementById("infoEye").textContent = d.typeLabel;
-  document.getElementById("infoEye").style.color = color;
-  document.getElementById("infoTitle").textContent = d.title;
-
-  const provs = d.provisions ? d.provisions.map(p=>`<span style="font-family:'JetBrains Mono',monospace;font-size:.6rem;background:#1B2A4A;color:#C9A84C;padding:.15rem .5rem;margin:.1rem .1rem 0;display:inline-block">${p}</span>`).join("") : "";
-  document.getElementById("infoBody").innerHTML =
-    `<span style="font-family:'JetBrains Mono',monospace;font-size:.62rem;padding:.25rem .5rem;border-radius:2px;display:inline-block;margin-bottom:.65rem;background:${color}22;color:${color}">${d.typeLabel}</span>`
-    + d.body
-    + (provs ? `<div style="margin-top:.75rem">${provs}</div>` : "");
-
-}
-
-function clearDot(){
-  activeDot = null;
-  document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
-  document.getElementById("infoEye").textContent="Activity Inspector";
-  document.getElementById("infoEye").style.color="";
-  document.getElementById("infoTitle").textContent="Click any dot";
-  document.getElementById("infoBody").textContent="Click an activity dot on the map to inspect the situation, constitutional provisions, and current status.";
-}
-
-document.querySelectorAll(".dot").forEach(el=>{
-  el.addEventListener("click",()=>selectDot(el.dataset.key));
-});
-</script>
-<footer>
-  <span class="footer-logo">The Federated Republic</span>
-  <div class="footer-links">
-    <a href='/annotated'>Annotated Edition</a>
-    <a href='/scenarios'>Scenarios</a>
-    <a href='/torenthia'>The World</a>
-    <a href='/constitutional-history'>Constitutional History</a>
-    <a href='/glossary'>Glossary</a>
-    <a href='/diagrams'>Diagrams</a>
-    <a href='/sources'>Sources</a>
-  </div>
-  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
-</footer>
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+  </script>
 </body>
 </html>
