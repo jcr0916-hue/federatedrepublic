@@ -8,10 +8,6 @@
    775,
    197
   ],
-  "KORDA TERRITORY": [
-   1255,
-   715
-  ],
   "ARVANE": [
    545,
    338
@@ -63,6 +59,10 @@
   "KORDA TERRITORY (S)": [
    1255,
    715
+  ],
+  "NORVANE": [
+   1175,
+   197
   ]
  },
  "neighbors": {
