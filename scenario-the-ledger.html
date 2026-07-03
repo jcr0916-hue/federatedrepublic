@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ledger — The Federated Republic</title>
+  <meta name="description" content="Year 12. An Elections Panel disclosure audit finds 214 contributions at just under the cap, all from employees of one conglomerate, all reimbursed. §8.1's wall against corporate money, and the records that routing around it leaves behind.">
+  <meta property="og:title" content="The Ledger">
+  <meta property="og:description" content="Year 12. A straw-donor scheme meets a disclosure architecture where every contribution is a public record. The ledger convicts itself.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-ledger.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Ledger">
+  <meta name="twitter:description" content="Year 12. §8.1 — corporate contributions prohibited, anonymity prohibited, and money is not speech. The audit that proved why all three clauses exist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="torenthia.html">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §8.1 &middot; Elections &amp; Campaigns &middot; Electoral Finance</span>
+      <h1 class="scenario-title">The Ledger</h1>
+      <p class="scenario-premise">Year 12. Eight months before the Assembly elections, the Elections Panel's routine disclosure audit flags a pattern in a Senate campaign's ledger: 214 individual contributions, each just under the statutory cap, all from employees of the Marveth Logistics Group, clustered across nine days. §8.1 prohibits corporate contributions. It also prohibits anonymity — which means the scheme's own camouflage was published to the NRS, one record at a time.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§8.1 Electoral Finance</span>
+        <span class="prov-tag">§8.2 Campaign Conduct</span>
+        <span class="prov-tag">§11.1 NRS Panel and Elections Panel</span>
+        <span class="prov-tag">§9.1.a The Legislative Monitor</span>
+        <span class="prov-tag">§1.5 Civil and Political Liberties</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>§8.1 builds a wall with three courses. Corporate, organizational, and foreign contributions are prohibited outright — only citizens and residents may fund campaigns, and only up to a statutory cap. Every contribution above the de minimis threshold must be disclosed to the Elections Panel and published to the NRS — anonymity in electoral finance is constitutionally prohibited, not merely regulated. And the whole structure is explicitly reserved from §1.5: financial contributions are not protected speech and not protected association. The Republic's founders had watched constitutional orders elsewhere reason themselves into treating money as expression and then discover that the reasoning could not be walked back. They closed the argument in the text.</p>
+
+      <p>Year 12, Month 6. The Senate seat for Delvane was open, and the leading campaign — a former state finance minister named Corvin Aldt — filed its periodic disclosure with the Elections Panel on schedule. Every contribution above the de minimis line, name and amount, published to the NRS as §8.1 requires. The filing was complete, punctual, and formally impeccable. That is what made it auditable.</p>
+
+      <p>The Elections Panel's disclosure audit — a standing statistical review it runs across all federal campaign filings, itself audited annually by the JM under §9.4 — flagged the Aldt ledger in Month 7. The pattern was not subtle once isolated: 214 contributions at between 94 and 99 percent of the individual statutory cap, received across nine days in Month 5, from contributors whose listed addresses concentrated in three towns. Cross-referencing the public records took the Panel's analysts a week. All 214 contributors were employees of the Marveth Logistics Group or its two subsidiaries — a freight conglomerate with terminal operations in Delvane and a direct interest in the internal-commerce standards legislation expected before the next Senate.</p>
+
+      <h2>The Reimbursement</h2>
+
+      <p>An employer whose employees independently favor a candidate has done nothing unconstitutional; enthusiasm clusters. The question was whether the contributions were the employees' own money. The Panel's formal inquiry, with document authority defined by statute, found the answer in Marveth's own payroll records: a discretionary logistics performance bonus, paid in Month 5 to precisely the contributing employees, in amounts that netted — after standard withholding — to within a narrow band of the contributed sums. Three employees, interviewed under the inquiry's procedures, described the arrangement directly: the bonus was communicated alongside a suggested contribution, and participation was understood.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Elections Panel Finding &mdash; Year 12, Month 9</div>
+        FINDING — Electoral Finance Violation, Delvane Senate Campaign (Aldt)<br>
+        Published under §8.1 — Electoral Finance; §8.2 — Campaign Conduct<br><br>
+        The Panel finds that 214 contributions received by the Aldt campaign in Month 5 were reimbursed by the Marveth Logistics Group through directed bonus payments. Contributions made with funds provided or reimbursed by a corporate entity are corporate contributions within the meaning of §8.1 and are prohibited. The nominal contributors' names on the disclosure record do not alter the source of the funds.<br><br>
+        The full contribution set is referred for sanction under the statutory schedule. The question of campaign knowledge is referred to the Federal Prosecution Service. All inquiry records are published to the NRS.<br><br>
+        &mdash; Elections Panel
+      </div>
+
+      <h2>The Knowledge Question</h2>
+
+      <p>The constitutional finding — that the money was corporate — did not depend on what the campaign knew. §8.1 addresses sources, not states of mind: a prohibited contribution is prohibited whoever is fooled. The campaign returned the full sum under the statutory sanction schedule and absorbed the reporting consequences. Whether Aldt or his finance director had solicited the arrangement was a separate question, criminal rather than constitutional, and it went where §2.16 sends such questions: to the Federal Prosecution Service, independent in its individual charging decisions. The prosecution of Marveth's government-affairs director concluded in Year 13. Aldt was not charged; he was also not elected.</p>
+
+      <div class="beat">
+        <div class="beat-label">§8.1 — Why Disclosure Caught What Prohibition Alone Could Not</div>
+        <div class="beat-title">The scheme's camouflage was 214 public records.</div>
+        <p>A straw-donor scheme defeats the corporate prohibition by wearing individual faces. But §8.1's anonymity ban forced every face onto the NRS — name, amount, date — where pattern analysis could see what no single record showed. The scheme's designers needed the contributions to look ordinary one at a time. The disclosure architecture guaranteed they would also be visible all at once. Routing around the wall left a ledger, and the ledger was public by constitutional command.</p>
+        <p>This is the Informational Power Test running in the citizen's favor: the same transparency that binds officials binds the money that seeks them.</p>
+      </div>
+
+      <h2>The Argument That Was Not Available</h2>
+
+      <p>Marveth's counsel filed one constitutional challenge before the sanction schedule applied: that the prohibition on its participation in electoral finance burdened expressive and associational rights. The challenge failed at the district court on the text and was not appealed, because there was nothing to appeal to. §8.1's final sentence reserves electoral finance from §1.5's speech and association protections explicitly. The Republic's constitution does not ask courts to balance money against expression; it answers the question in the document. A corporation in the Republic may say anything it wishes about internal-commerce legislation. It may not pay for a senator's campaign, in its own name or in 214 borrowed ones.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§8.1's three courses work as a system. The source prohibition defines what may not enter; the cap limits what any one person may add; the disclosure mandate makes the whole flow a permanent public dataset. Remove any course and the other two weaken: prohibition without disclosure is unenforceable, disclosure without prohibition is a spectator sport, caps without source rules invite aggregation. The scenario shows the enforcement seam — reimbursed contributions — and the audit architecture that closes it.</p>
+        <p>The explicit reservation from §1.5 is the provision's deepest design choice. By settling in constitutional text that contributions are neither speech nor protected association, the Republic removed electoral finance from the domain of judicial balancing entirely. No future court can discover a protection the text withholds; no future Legislature can be told its finance statutes are presumptively suspect. The rule is pre-political in the way the design principles require: it was set before any particular interest needed it bent.</p>
+        <p>And the sanction ran through institutions, not discretion: a Panel finding on the NRS, a statutory schedule, an independent prosecution decision. No official chose to pursue Aldt's campaign, and none could have chosen to spare it.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+  </script>
+</body>
+</html>

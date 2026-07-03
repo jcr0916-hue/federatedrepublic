@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Successor — The Federated Republic</title>
+  <meta name="description" content="Year 9. The Assembly moves a constructive vote of no confidence against the Civic Consul. The motion names a successor. The vote reaches 58 percent — and fails. What a failed removal vote does anyway.">
+  <meta property="og:title" content="The Successor">
+  <meta property="og:description" content="Year 9. A constructive no-confidence vote names a successor and falls nine votes short of 60 percent. The government survives. The count is permanent.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-successor.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Successor">
+  <meta name="twitter:description" content="Year 9. The constructive vote under §2.6 — removal requires 60 percent and a named replacement. This one had the replacement.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="torenthia.html">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §2.6 &middot; Constructive Vote &middot; The Failed Removal</span>
+      <h1 class="scenario-title">The Successor</h1>
+      <p class="scenario-premise">Year 9. The Civic Consul's coalition fractures over the freight levy. The opposition assembles a constructive no-confidence motion, names a successor, and brings it to the floor. The vote reaches 291 of 500 — 58.2 percent. The threshold is 60. The government survives. What a removal vote that fails is designed to do.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§2.6 Constructive Vote of No Confidence</span>
+        <span class="prov-tag">§2.5 The Civic Consul — Domain and Term</span>
+        <span class="prov-tag">§2.6.a Government Formation</span>
+        <span class="prov-tag">§3.2 The Assembly</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The constructive vote of no confidence is deliberately asymmetric. The Assembly elects a Civic Consul by absolute majority under §2.6.a — 251 of 500 seats. It removes one only by 60 percent of full seated membership — 300 votes — and only by simultaneously electing a named replacement. Forming a government is meant to be easy. Destroying one is meant to require an organized supermajority that has already agreed on what comes next. The gap between 251 and 300 is not an accident of drafting. It is the constitution's answer to the parliamentary death spiral, where a bare and shifting majority can topple governments faster than anyone can govern.</p>
+
+      <p>Year 9, Month 4. Civic Consul Edda Voss was in the third year of her second government, and the government's signature freight levy — a per-tonne charge on long-haul road transport, funding the rail modernization program — had just published its first full-year revenue figures. They were 22 percent below projection. The shortfall was not a scandal. It was a forecasting failure with a budget consequence, and it landed on a coalition that had been assembled around exactly one promise: the rail program would not require general revenue.</p>
+
+      <p>Eleven members of the coalition's agrarian wing, whose districts carried the levy's heaviest incidence, announced they could no longer support the government's fiscal direction. The opposition — 214 seats across two formations — had been waiting for precisely this. Within a week, negotiations between the opposition leadership and the defecting bloc produced a motion. It did what §2.6 requires a motion to do: it named a successor. Aren Kolt, chair of the budget committee, a serving Assembly member of nine years, acceptable to the agrarian bloc for his early opposition to the levy's rate structure and acceptable to the opposition because he was not Voss.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Assembly Motion &mdash; Year 9, Month 4</div>
+        MOTION — Constructive Vote of No Confidence<br>
+        Filed under §2.6 — Constructive Vote of No Confidence<br><br>
+        This motion, upon passage by 60 percent of the full seated membership of the Assembly, simultaneously: (1) removes Civic Consul Edda Voss from the office of Civic Consul; and (2) elects Assembly Member Aren Kolt to the office of Civic Consul.<br><br>
+        Sponsoring members: 226. Vote scheduled under Assembly procedure.<br><br>
+        &mdash; Office of the Assembly Speaker
+      </div>
+
+      <h2>The Arithmetic</h2>
+
+      <p>The motion's sponsors could count. The opposition's 214, plus the eleven defectors, plus a scatter of independents, put the plausible ceiling somewhere near 290 — short of 300, but close enough that three days of open floor debate might move it. Voss governed through all of it, as §2.6 contemplates: a Civic Consul under active confidence challenge does not enter caretaker status, does not suspend the budget process, does not stop being the Civic Consul. She attended the Council of Ministers. She answered questions on the levy figures in terms that conceded the forecast error and defended the program. She did not negotiate with the defectors. Her whip did.</p>
+
+      <p>The vote came on Day 3 of the formal period. Every member's vote, published to the NRS by name, as with any constitutional threshold vote. The count: 291 in favor of the motion, 186 opposed, 23 abstaining or absent. Under §3.7's rule that higher thresholds apply to full seated membership, abstentions and absences functioned as votes against removal — the motion needed 300 affirmative votes of the 500 seats, not 60 percent of those voting. It fell nine short.</p>
+
+      <div class="beat">
+        <div class="beat-label">§2.6 — The Constitutional Effect of Failure</div>
+        <div class="beat-title">A failed constructive vote removes no one, installs no one, and triggers nothing. It only records.</div>
+        <p>Voss remained Civic Consul at 291 votes exactly as she would have at 20. Kolt remained the budget committee chair. No formation period opened, because no vacancy existed. The constitution attaches no formal consequence to a failed removal vote — no cooling-off period before the next motion, no censure, no weakened status. What it attaches is a permanent, member-by-member public record that 58.2 percent of the Assembly voted to replace the sitting government with a specific alternative.</p>
+        <p>That record is the mechanism. A government that survives at 291-186 has been told, in the most formal register the constitution possesses, exactly how much of its chamber has already agreed on its replacement.</p>
+      </div>
+
+      <h2>What 291 Did</h2>
+
+      <p>Voss did not treat survival as vindication, because the NRS made vindication impossible to claim. Within two months, the government published a revised levy schedule with a hardship rate for agricultural freight and a two-year revenue review trigger. Seven of the eleven defectors returned to supporting the government on budget votes. The opposition did not bring a second motion; the arithmetic had gotten worse for them, not better, and every member who had voted to install Kolt was now on the record beside a policy correction that addressed the stated grievance.</p>
+
+      <p>Kolt's position deserves its own note. Being the named successor in a failed motion carried no constitutional penalty — he kept his seat, his committee, his standing. §2.6 requires the successor to be named precisely so that a removal vote is a choice between two governments rather than a referendum on one. The design accepts that some named successors will be named in losing motions, and it declines to punish them for it. A chamber where being the alternative is dangerous is a chamber where no one agrees to be the alternative, and the constructive mechanism dies of caution.</p>
+
+      <h2>Year 9, Month 11: The Question Nobody Filed</h2>
+
+      <p>One constitutional question surfaced in commentary and went nowhere, which is itself instructive. Could the opposition have avoided the 60 percent threshold by seeking Voss's removal some other way — a censure with practical force, a budget blockade to force resignation? The constitution's answer is structural. §2.6 says the Assembly may remove the Civic Consul <em>only</em> through the constructive vote. §3.11 makes elected mandates inviolable outside the enumerated exceptions. There is no second door. A Legislature that wants a different government must either assemble 300 votes or win the next election. The Republic's founders considered a government surviving at 58 percent support an acceptable cost; a government removable by simple majority whenever a coalition wobbled was not.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§2.6's two requirements operate together: the 60 percent threshold and the named successor. The threshold means removal requires more consensus than formation — the asymmetry is the point, not a quirk. The successor requirement means the Assembly can never vote merely against; it must vote for. A motion that expresses pure opposition — remove Voss, decide the rest later — has no constitutional effect no matter how many votes it gathers.</p>
+        <p>The failed vote is not a malfunction of the mechanism. It is one of the mechanism's two intended outputs. A constructive vote that passes changes the government; one that fails publishes a precise, permanent measurement of how close the government stands to replacement, and by whom. Voss's policy correction was not constitutionally required. It was politically compelled by a number sitting on the NRS. The constitution governs here the way it prefers to govern everywhere: by making the true state of things impossible to obscure, and letting the actors respond to it.</p>
+        <p>The membership rule matters too. §2.6 requires the Civic Consul to be and remain a serving Assembly member, and §2.5 caps any person's total service as Civic Consul at 8 years across all periods. Kolt, had the motion passed, would have begun consuming his own 8-year total from the day of the vote. The office is held from inside the chamber, on a clock that never resets.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+  </script>
+</body>
+</html>

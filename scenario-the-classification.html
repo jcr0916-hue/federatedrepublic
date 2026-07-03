@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Classification — The Federated Republic</title>
+  <meta name="description" content="Year 9. The Legat Consul's office classifies a procurement audit citing operational security. The EM finds the real ground is embarrassment. Under §10.3, that classification is not merely improper — it is void.">
+  <meta property="og:title" content="The Classification">
+  <meta property="og:description" content="Year 9. A classified audit, an EM finding, and the constitutional rule that classification to conceal embarrassment never legally happened.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-classification.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Classification">
+  <meta name="twitter:description" content="Year 9. §10.3's void rule — the record was never validly classified, so the NRS simply publishes it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="torenthia.html">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §10.3 &middot; The Public Record &middot; Classification</span>
+      <h1 class="scenario-title">The Classification</h1>
+      <p class="scenario-premise">Year 9. An internal audit of the coastal radar procurement finds a 40 percent cost overrun and an undisclosed contractor relationship. The Legat Consul's office classifies the audit, citing the operational-security ground. A staff member publishes a minority report. The EM investigates. §10.3 does not say improper classification is punished. It says it is void.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§10.3 Classification Criteria</span>
+        <span class="prov-tag">§10.1 National Record System</span>
+        <span class="prov-tag">§9.6 Monitor Operations</span>
+        <span class="prov-tag">§9.1.b The Executive Monitor</span>
+        <span class="prov-tag">§2.10 Executive Transparency</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The constitution's information architecture rests on a presumption most governments run in reverse: publication is the default, and secrecy is the exception that must justify itself. §10.1 makes every constitutional act a permanent NRS record. §10.3 permits classification only on grounds the Legislature has defined by statute, requires the classifying authority to state the statutory ground at the moment of classification, caps everything at 25 years with one 5-year extension, and prohibits three motives outright: concealing a constitutional violation, concealing a policy disagreement, and concealing political embarrassment. Classification for a prohibited purpose is not an offense to be prosecuted after the fact. It is void — a legal act that never occurred.</p>
+
+      <p>Year 9, Month 2. The coastal radar modernization program — a Legat Consul domain procurement, four years running, replacing the maritime early-warning network along the Halvern and Neldrath coasts — completed its scheduled internal audit. The audit found what internal audits sometimes find: a 40 percent cost overrun against the authorized baseline, attributable partly to specification changes and partly to a prime contractor that had subcontracted critical components to a firm in which the program's former deputy director had acquired an interest eleven months after leaving the program. Nothing in the audit touched radar coverage, capability gaps, system vulnerabilities, or deployment locations. It was a document about money and conduct.</p>
+
+      <p>The Legat Consul's office classified it in full. The stated statutory ground, entered on the classification record as §10.3 requires: operational security of active defense infrastructure.</p>
+
+      <h2>The Minority Report</h2>
+
+      <p>§9.6 contains a provision that changes the arithmetic of institutional secrecy: any staff member may publish a minority report directly to the NRS if they believe a finding has been improperly omitted or suppressed, and cannot be disciplined for doing so. Nineteen days after the classification, an analyst in the program's audit division did exactly that. Her report was two pages. It did not reproduce the classified audit. It stated that an audit existed, that it contained no operational content, that its findings concerned cost and contractor conduct, and that in her assessment the classification's stated ground did not describe the document.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Staff Minority Report &mdash; Year 9, Month 3</div>
+        MINORITY REPORT — Filed under §9.6, Monitor Operations<br><br>
+        The undersigned served on the audit team for the Coastal Radar Modernization Program internal audit, completed Year 9, Month 1, and classified Year 9, Month 2, on the stated ground of operational security.<br><br>
+        The audit contains no information concerning system capabilities, coverage, vulnerabilities, or deployment. Its findings concern (1) program cost performance against the authorized baseline and (2) a contractor relationship disclosed in Annex C. In the undersigned's assessment, the stated classification ground does not describe the classified material.<br><br>
+        This report is published as of right and is permanently exempt from classification.<br><br>
+        &mdash; Program Audit Division
+      </div>
+
+      <p>The minority report was itself unclassifiable — §9.6 exempts Monitor-channel reports from classification permanently. The Legat Consul's office could not suppress the two pages saying a document was hidden, which is the position the architecture is designed to produce: secrecy about content may sometimes be legitimate; secrecy about the existence of secrecy is structurally unavailable.</p>
+
+      <h2>The EM Assessment</h2>
+
+      <p>The Executive Monitor audits both executives under §9.1.b, with full access rights the executive cannot refuse. The EM obtained the classified audit — classification does not run against Monitors — and assessed the classification against its stated ground. Its finding, published to the NRS in Month 5, was written with the flatness the Monitors cultivate: the audit contained no material falling within the operational-security statute's definition; the classification's practical effect was to withhold from public view a cost overrun and a contractor-conduct finding; withholding findings of that character serves the interest §10.3 names as political embarrassment.</p>
+
+      <div class="beat">
+        <div class="beat-label">§10.3 — The Void Rule</div>
+        <div class="beat-title">Classification to conceal a constitutional violation, policy disagreement, or political embarrassment is prohibited and void.</div>
+        <p>Void is the operative word, and it does the work a sanction cannot. If improper classification were merely punishable, the record would stay sealed while the punishment process ran — and a government could buy years of secrecy at the price of eventual censure. Void means the classification never took legal effect. The audit was, as a constitutional matter, an unclassified record from the moment of its completion, subject to §10.1's ordinary publication rule the entire time.</p>
+        <p>On the EM's finding, the NRS Panel published the audit. No declassification order was needed, because there was nothing to declassify.</p>
+      </div>
+
+      <h2>What Followed</h2>
+
+      <p>The published audit produced what the classification had tried to prevent: coverage, an Assembly committee inquiry into the procurement, a referral of the contractor-conduct finding to the Federal Prosecution Service, and a §12.4 disclosure review of the former deputy director. It also produced something the Legat Consul's office had perhaps not weighed. The classification record itself — the stated ground, the date, the authorizing signature — was a permanent NRS document under §2.10, sitting beside the EM's finding that the ground was false. The overrun was a program failure. The classification was a constitutional one, and unlike the overrun, it had a signature on it.</p>
+
+      <p>No removal proceeding followed; the responsible domain officer resigned before the committee inquiry concluded. The radar program continued under a restructured contract. The audit division analyst was, as §9.6 guarantees, not disciplined. Her two-page report remains on the NRS beside the audit it surfaced.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§10.3 is the constitution's Sunlight Test written as law: no permanent secrecy, temporary secrecy only on stated statutory grounds, hard ceilings of 25 and 30 years, and automatic publication on expiry requiring no further government act. The three prohibited motives target the three ways classification actually gets abused — and the void rule means abuse fails retroactively, not just prospectively. A government cannot purchase time with an improper classification, because an improper classification purchases nothing.</p>
+        <p>The mechanism that surfaces abuse is layered by design. The classifying authority must state its ground in writing at the moment of classification, creating the record against which the claim is later tested. Monitors hold access that classification cannot block. Staff hold an unclassifiable publication channel that no supervisor can close. Each layer assumes the others might fail; together they make the concealment of concealment the hardest act in the Republic's information system.</p>
+        <p>Note what the scenario does not require: bad faith at the top. The classification may have been reflexive rather than corrupt — a domain office treating everything inside a defense program as presumptively secret. §10.3 is indifferent to the distinction. The test is the stated ground against the actual content, assessed by an institution the classifier does not control, on a record the classifier cannot edit.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+  </script>
+</body>
+</html>

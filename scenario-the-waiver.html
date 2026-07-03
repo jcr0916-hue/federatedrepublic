@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Waiver — The Federated Republic</title>
+  <meta name="description" content="Year 13. A consular candidate's final-round RCV total reaches 61.8 percent and the State plurality requirement is waived under §7.2. The losing campaign argues the waiver requires 60 percent of first preferences. What a national RCV majority actually means.">
+  <meta property="og:title" content="The Waiver">
+  <meta property="og:description" content="Year 13. §7.2's waiver triggers for the first time — and the fight is over what kind of 60 percent the constitution meant.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-waiver.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Waiver">
+  <meta name="twitter:description" content="Year 13. A 60 percent RCV majority waives the State plurality test. The Elections Panel certifies. The SC declines the case in one paragraph.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
+    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
+    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
+    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
+    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    .beat p:last-child{margin-bottom:0}
+    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
+    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
+    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
+    .verdict-box p:last-child{margin-bottom:0}
+    .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
+    .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
+    .scenario-nav a:hover{opacity:1;color:var(--navy)}
+    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html" class="active">Scenarios</a>
+      <a href="torenthia.html">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-wrap" id="main-content">
+    <div class="scenario-meta">
+      <span class="scenario-tag">Scenario &middot; §7.2 &middot; Elections &amp; Campaigns &middot; Consular Election</span>
+      <h1 class="scenario-title">The Waiver</h1>
+      <p class="scenario-premise">Year 13. The consular election produces a candidate with 47 percent of first preferences — and 61.8 percent after final-round transfers. Under §7.2, a national RCV majority at or above 60 percent waives the State plurality qualification. She carried pluralities in only 19 of 50 States. The runner-up's campaign petitions: the waiver, they argue, means first preferences. The text says otherwise.</p>
+      <div class="provisions-tested">
+        <span class="prov-tag">§7.2 Consular Election System</span>
+        <span class="prov-tag">§7.3 Federal Elections</span>
+        <span class="prov-tag">§7.4 Electoral Supermajority Threshold</span>
+        <span class="prov-tag">§11.2 NVS Properties and Voting Rights</span>
+      </div>
+    </div>
+
+    <div class="scenario-body">
+
+      <p>The consular election system runs two tests at once. A candidate for Legat Consul must win a national RCV majority — a majority of active ballots after ranked-choice transfers — and must separately qualify by carrying State pluralities, a geographic breadth requirement that prevents the office from being won by piling up margin in the population centers alone. §7.2 then carves one exception: where a candidate's national RCV majority reaches or exceeds 60 percent of votes cast, the State plurality requirement is waived. The logic of the waiver is the logic of the requirement inverted. The plurality test exists to guarantee breadth in close elections; a 60 percent national majority is breadth, demonstrated arithmetically rather than geographically.</p>
+
+      <p>For twelve years the waiver sat untriggered. The Year 7 election was the close, contested kind the dual requirement was built for. Year 13 was different. Admiral Tessa Varn — retired from fleet command after leading the Halvern Strait convoy protection operation, politically unaffiliated until eighteen months before the vote — entered the field against four candidates and consolidated everything the moment the count began transferring.</p>
+
+      <h2>The Count</h2>
+
+      <p>First preferences told one story: Varn 47.1 percent, the Norrath senator Delen Roos 26.4, three others splitting the remainder. No first-preference majority, so the RCV transfers ran under the Elections Panel's published procedure, every round of the count auditable on the NRS as §11.2 requires. Eliminations proceeded; preferences flowed; the final round settled at Varn 61.8 percent of active ballots, Roos 38.2.</p>
+
+      <p>Geography told a second story. Varn's support ran deep in the coastal and northern States and merely solid elsewhere. She carried State pluralities in 19 of 50 States — well short of the qualification threshold that would have applied in an ordinary win. If the waiver read on her result, she was Legat Consul outright. If it did not, §7.2's runoff machinery engaged — a second contest between the top two, decided by national RCV alone. Roos's campaign, reading the same arithmetic everyone else read, needed the runoff. Its petition to the Elections Panel supplied the only argument available: that a national RCV majority reaching 60 percent means 60 percent of first preferences — genuine, unmediated first-choice support — and that a total assembled from other candidates' transferred ballots is a different and lesser thing the waiver was never meant to reward.</p>
+
+      <div class="nrs-doc">
+        <div class="nrs-header">National Record System &mdash; Elections Panel Determination &mdash; Year 13, Month 5</div>
+        DETERMINATION — Consular Election Certification, Waiver Question<br>
+        Issued under §7.2 — Consular Election System<br><br>
+        §7.2 conditions the waiver on a candidate's national RCV majority reaching or exceeding 60% of votes cast. The national RCV majority is the majority produced by the ranked-choice count — the final-round total after transfers. It is the same majority the provision requires for election itself; the 60% figure is a magnitude of that majority, not a separate first-preference measure. No first-preference test appears in the text.<br><br>
+        Candidate Varn's national RCV majority is certified at 61.8% of votes cast. The State plurality qualification is waived by constitutional operation. The candidate is elected outright. Full round-by-round tabulation is published to the NRS.<br><br>
+        &mdash; Elections Panel
+      </div>
+
+      <h2>The Petition Upstairs</h2>
+
+      <p>Roos's campaign took the question to the Supreme Court, which resolved it in a single published paragraph declining expedited review: the Panel's reading followed the text; a ranked ballot's transferred preference is a preference, marked by the voter, counted by the method the constitution itself prescribes for every federal election under §7.3. The constitution knows how to specify first preferences when it wants them — §7.2 uses first-preference totals expressly to select the two runoff candidates, in the very next sentence. Where the waiver clause says national RCV majority, it means what the count produces.</p>
+
+      <div class="beat">
+        <div class="beat-label">§7.2 — What the Dual Requirement Is For</div>
+        <div class="beat-title">The plurality test guards breadth in close elections. The waiver recognizes that 60 percent is breadth.</div>
+        <p>A candidate at 50.1 percent nationally could, in principle, owe the entire margin to three metropolitan States — which is why the ordinary path demands State pluralities as a second, geographic proof of consent. But the arithmetic of 60 percent forecloses the concentration scenario the plurality test exists to prevent: no candidate reaches three-fifths of a national RCV count from the cities alone. Varn's 61.8 included second and third preferences from voters in all fifty States, including the thirty-one whose pluralities she lost. The waiver does not excuse her from demonstrating breadth. It accepts a different demonstration.</p>
+        <p>§7.4 makes the number principled rather than arbitrary: 60 percent of votes cast is the constitution's uniform threshold for every direct electoral supermajority determination. The waiver is that single threshold appearing in one more place.</p>
+      </div>
+
+      <h2>Certification</h2>
+
+      <p>The certification was published with the complete round-by-round count attached — every transfer verifiable by anyone with NRS access, no vote traceable to any voter, exactly the pairing §11.2 demands. Roos conceded on the certification's publication and returned to the Senate, where §8.2's rule for constitutional officeholders standing in a different race had governed her candidacy throughout. Varn took the consular oath in Month 6. The waiver clause returned to dormancy, now with a construction on the record for the next time sixty percent of the Republic agrees on someone.</p>
+
+      <div class="verdict-box">
+        <p><strong>What This Scenario Tests</strong></p>
+        <p>§7.2's dual requirement and its waiver are one design, not a rule and an exception. The system wants two assurances before handing anyone the military and foreign-policy domain: a genuine national majority, and consent that is broad rather than concentrated. In close elections it collects the second assurance geographically. At 60 percent it holds the second assurance in hand already. Reading the waiver narrowly — as the losing petition urged — would have forced a runoff whose only possible outcome was the same candidate winning by the same method, a proceduralism the text does not require and the design does not want.</p>
+        <p>The interpretive point generalizes. The constitution prescribes RCV for all federal elections and repeatedly attaches thresholds to votes cast. A transferred preference is not a diluted vote; it is the voter's recorded instruction for exactly this circumstance. Any reading that ranks first preferences above the count's result quietly replaces the constitution's chosen electoral method with a plurality system it deliberately rejected.</p>
+        <p>And the dispute's path is worth noticing: a Panel determination on the NRS, one SC paragraph, a concession, an oath. Election disputes are institutional poison when the machinery for resolving them is improvised. §7.2 pre-answers its own edge cases — ties by public lot, runoff rules, the waiver — so that the Republic's most powerful office changes hands on arithmetic everyone can check.</p>
+      </div>
+
+    </div>
+
+    <div class="scenario-nav">
+      <a href="scenarios.html">&larr; All Scenarios</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+
+  <script>
+    function toggleMobileNav(){
+      var m=document.getElementById('mobileMenu');
+      var b=document.querySelector('.hamburger');
+      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
+    }
+  </script>
+</body>
+</html>

@@ -103,7 +103,7 @@ const SCENARIOS = [
   {title:'The Objection',file:'scenario-the-objection.html',kw:['fiscal','objection','cc','budget','assembly','override']},
   {title:'The Direction',file:'scenario-the-direction.html',kw:['direction','cc','prosecution','solicitor','written']},
   {title:'The Formation',file:'scenario-formation.html',kw:['formation','government','election','assembly','confidence','coalition']},
-  {title:'The Recall',file:'scenario-recall.html',kw:['no-confidence','recall','cc','assembly','successor']},
+  {title:'The Successor',file:'scenario-the-successor.html',kw:['no-confidence','constructive vote','cc','assembly','successor','removal','60 percent']},
   {title:'The First Nomination',file:'scenario-first-nomination.html',kw:['nomination','judicial','pool','senate','confirmation','sc','vacancy']},
   {title:'The Finality Act',file:'scenario-finality-act.html',kw:['judicial','review','strip','immigration','court']},
   {title:'The Critical Finding',file:'scenario-critical-finding.html',kw:['lm','legislative monitor','critical','failure','fiscal']},
@@ -128,6 +128,12 @@ const SCENARIOS = [
   {title:'The Return',file:'scenario-the-return.html',kw:['immigration','return','resident','re-entry','discrimination']},
   {title:'The Four Elections',file:'scenario-indigenous.html',kw:['indigenous','nation','election','compact']},
   {title:'The Departure',file:'scenario-the-departure.html',kw:['indigenous','independence','sovereign','compact']},
+  {title:'The Classification',file:'scenario-the-classification.html',kw:['classification','secrecy','nrs','void','em','audit','transparency']},
+  {title:'The Ledger',file:'scenario-the-ledger.html',kw:['electoral finance','contribution','disclosure','corporate','campaign','elections panel','straw donor']},
+  {title:'The Contraction',file:'scenario-the-contraction.html',kw:['endowment','monetary authority','ma','revenue','social state','recession','backstop']},
+  {title:'The Waiver',file:'scenario-the-waiver.html',kw:['consular','election','rcv','waiver','state plurality','60','runoff']},
+  {title:'The Unremovable',file:'scenario-the-unremovable.html',kw:['removal order','detention','asylum','refoulement','stateless','security','judicial review']},
+  {title:'The Second Renewal',file:'scenario-the-second-renewal.html',kw:['military','authorization','renewal','transition','reconstruction','withdrawal','senate']},
 ];
 
 const CORS = {
