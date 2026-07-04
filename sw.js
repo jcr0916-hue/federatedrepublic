@@ -3,7 +3,7 @@
    On first visit: cache everything. On repeat visits: instant load.
    On offline: serve cached version. */
 
-const CACHE = 'fr-v10';
+const CACHE = 'fr-v11';
 
 const PAGES = [
   '/', '/index.html',
