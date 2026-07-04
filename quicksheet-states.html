@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Sheet — States, Territories & Indigenous Nations — The Federated Republic</title>
+<meta name="description" content="How a place joins, rises, falls, or leaves: the Statehood Audit with no political vote, Provisional status, mandatory and voluntary devolution, the independence exit, and the acknowledged — not granted — sovereignty of Indigenous Nations.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quick Sheet — States, Territories & Indigenous Nations">
+<meta property="og:description" content="The Statehood Audit, Provisional status, mandatory and voluntary devolution, the independence exit, and acknowledged Indigenous sovereignty — Articles XV and XVI at a glance.">
+<meta property="og:url" content="https://thefederatedrepublic.org/quicksheet-states.html">
+<meta property="og:site_name" content="The Federated Republic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --blue:#1B4A7A; --bluelight:#dde9f3; --blueborder:#a9c3da;
+    --green:#2d6a4f; --greenlight:#dcebe3; --greenborder:#a8cdba;
+    --purple:#5c3d7a; --purplelight:#ece3f0; --purpleborder:#cdb8da;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{ font-family:'Jost',sans-serif; color:var(--text); background:#e8e2d4; }
+  .page{ width:8.5in; min-height:11in; margin:0 auto; background:var(--cream); position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.15); display:flex; flex-direction:column; }
+  @media screen{ .page{ margin:24px auto; } }
+  .qs-scale-wrap{ overflow:hidden; }
+  @page{ size:Letter; margin:0; }
+  @media print{
+    .site-nav, .site-footer, .qs-page-controls{ display:none !important; }
+    body{ background:none; }
+    .page{ box-shadow:none; margin:0; width:8.5in; min-height:11in; }
+  }
+  .qs-page-controls{ max-width:8.5in; margin:0 auto; padding:72px 24px 0; display:flex; justify-content:space-between; align-items:center; }
+  .qs-page-controls .back-link{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--gold); text-decoration:none; text-transform:uppercase; }
+  .qs-page-controls .back-link:hover{ color:var(--navy); }
+  .qs-download-btn{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy2); background:var(--gold); padding:0.5rem 1rem; border-radius:3px; text-decoration:none; }
+  .qs-download-btn:hover{ background:var(--gold2); }
+
+  .qs-header{ background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding:0.4in 0.5in 0.28in; color:#f5f0e8; position:relative; overflow:hidden; }
+  .qs-header::after{ content:""; position:absolute; right:-40px; top:-60px; width:220px; height:220px; border:2px solid rgba(201,168,76,0.18); border-radius:50%; }
+  .qs-eyebrow{ font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; display:flex; gap:10px; align-items:center; }
+  .qs-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .qs-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:29px; line-height:1.05; margin-bottom:4px; }
+  .qs-tagline{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; font-size:13.5px; color:rgba(245,240,232,0.78); max-width:6.4in; line-height:1.35; }
+  .qs-scope{ position:absolute; right:0.5in; bottom:0.26in; text-align:right; font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(201,168,76,0.85); letter-spacing:0.08em; line-height:1.6; }
+
+  .qs-body{ padding:0.22in 0.5in 0.2in; flex:1; display:flex; flex-direction:column; gap:0.14in; }
+  .section-label{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold2); display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .section-label::after{ content:""; flex:1; height:1px; background:var(--border); }
+
+  /* ---- Status ladder cascade ---- */
+  .cascade-row{ display:flex; gap:7px; align-items:stretch; }
+  .cas-step{ flex:1; background:var(--white); border:1.5px solid var(--border); border-radius:6px; padding:8px 9px; display:flex; flex-direction:column; gap:2px; }
+  .cas-step.hi{ background:var(--greenlight); border-color:var(--greenborder); }
+  .cas-num{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--gold2); letter-spacing:0.06em; }
+  .cas-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:11px; color:var(--navy); line-height:1.05; }
+  .cas-detail{ font-size:7.6px; color:var(--muted); line-height:1.3; }
+  .cas-arrow{ display:flex; align-items:center; color:var(--gold); font-size:11px; padding:0 1px; }
+
+  /* ---- Exits grid ---- */
+  .duo-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .duo-card{ border-radius:6px; padding:10px 13px; border:1.5px solid var(--border); background:var(--white); }
+  .duo-card.a{ background:var(--bluelight); border-color:var(--blueborder); }
+  .duo-card.b{ background:var(--cream2); border-color:var(--gold2); }
+  .duo-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:13px; color:var(--navy); margin-bottom:4px; }
+  .a .duo-name{ color:var(--blue); }
+  .duo-flow{ display:flex; align-items:center; gap:5px; flex-wrap:wrap; margin-bottom:6px; }
+  .flow-step{ font-family:'JetBrains Mono',monospace; font-size:7.2px; background:var(--white); border:1px solid var(--border); border-radius:3px; padding:3px 6px; color:var(--text); white-space:nowrap; }
+  .a .flow-step{ background:var(--white); }
+  .flow-arrow{ color:var(--gold2); font-size:8.5px; }
+  .duo-body{ font-size:8.2px; color:var(--muted); line-height:1.45; }
+  .duo-body strong{ color:var(--navy); }
+
+  /* ---- Indigenous band ---- */
+  .indig-band{ background:var(--purple); border-radius:6px; padding:9px 13px; display:flex; gap:12px; align-items:flex-start; }
+  .indig-key{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:14px; color:#fff; line-height:1.15; min-width:1.55in; }
+  .indig-key span{ display:block; font-family:'JetBrains Mono',monospace; font-size:7px; letter-spacing:0.1em; color:var(--gold); text-transform:uppercase; margin-top:3px; }
+  .indig-body{ font-size:8.2px; color:rgba(255,255,255,0.94); line-height:1.5; }
+  .indig-body strong{ color:var(--gold); }
+
+  /* ---- Facts strip ---- */
+  .facts-row{ display:flex; gap:10px; }
+  .fact-pill{ flex:1; background:var(--navy); color:#f5f0e8; border-radius:6px; padding:7px 10px; display:flex; align-items:center; gap:8px; }
+  .fact-num{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:15px; color:var(--gold); line-height:1; min-width:36px; }
+  .fact-text{ font-size:7.3px; line-height:1.3; color:rgba(245,240,232,0.92); }
+  .fact-text strong{ color:#fff; }
+
+  .qs-footer-bar{ margin-top:auto; border-top:1.5px solid var(--border); padding:9px 0.5in 0.3in; display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer-left{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--muted); line-height:1.6; letter-spacing:0.02em; }
+  .footer-left strong{ color:var(--navy); }
+  .footer-right{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:9.5px; color:var(--muted); text-align:right; max-width:2.6in; line-height:1.4; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="torenthia.html">The World</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<div class="qs-page-controls">
+  <a href="annotated.html" class="back-link">&larr; Annotated Edition</a>
+  <a href="quicksheet-states.pdf" download class="qs-download-btn">Download PDF</a>
+</div>
+
+<main id="main-content">
+<div class="qs-scale-wrap">
+<div class="page" id="qsPage">
+
+  <div class="qs-header">
+    <div class="qs-eyebrow"><span class="dot"></span>QUICK SHEET · CONSTITUTION OF THE FEDERATED REPUBLIC</div>
+    <div class="qs-title">States, Territories &amp; Indigenous Nations</div>
+    <div class="qs-tagline">How a place rises to statehood, falls from it, or leaves entirely — all by audited standards rather than political favor. Statehood is earned by passing an audit, not granted by a vote; and Indigenous sovereignty is acknowledged as something that precedes the Republic, not conferred by it.</div>
+    <div class="qs-scope">Article XV · §15.1–§15.9<br>Article XVI · §16.1, §16.7</div>
+  </div>
+
+  <div class="qs-body">
+
+    <div>
+      <div class="section-label">The Status Ladder — Statehood Is Earned, Not Voted — §15.1–§15.3</div>
+      <div class="cascade-row">
+        <div class="cas-step">
+          <div class="cas-num">§15.1</div>
+          <div class="cas-title">Territory</div>
+          <div class="cas-detail">Elected local authority, Article I protections, social-state access, proportional Assembly seats (no Senate seats). May begin the Statehood pathway.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step hi">
+          <div class="cas-num">§15.2 · THE AUDIT</div>
+          <div class="cas-title">Statehood Audit</div>
+          <div class="cas-detail">The <strong>JMC administers</strong> — pass it and you advance. <strong>No political vote required.</strong> Fail and you get published findings and may resubmit.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step">
+          <div class="cas-num">§15.1.a</div>
+          <div class="cas-title">Provisional Status</div>
+          <div class="cas-detail">Full self-government continues uninterrupted. Statehood becomes automatic on a <strong>second consecutive clean audit</strong> — no ceremony, no gatekeeper.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step">
+          <div class="cas-num">§15.3 · DECLINE</div>
+          <div class="cas-title">Mandatory Devolution</div>
+          <div class="cas-detail"><strong>Three consecutive failed audits</strong> (each with an Early Warning + Remediation Plan) send a State back to Provisional status. The ladder runs both ways.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">The Voluntary Exits — §15.4, §15.9</div>
+      <div class="duo-grid">
+        <div class="duo-card a">
+          <div class="duo-name">Devolution &amp; Merger <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§15.4</span></div>
+          <div class="duo-flow">
+            <span class="flow-step">60% State referendum</span><span class="flow-arrow">→</span>
+            <span class="flow-step">2/3 Senate ratifies</span>
+          </div>
+          <div class="duo-body">A State may restructure its relationship with the Republic. A binding, NRS-published agreement sets asset allocation, timeline, successor status, and continuing obligations.</div>
+        </div>
+        <div class="duo-card b">
+          <div class="duo-name">Independence <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§15.9</span></div>
+          <div class="duo-flow">
+            <span class="flow-step">2/3 legislature</span><span class="flow-arrow">→</span>
+            <span class="flow-step">60% vote, 60% turnout</span><span class="flow-arrow">→</span>
+            <span class="flow-step">irrevocable</span>
+          </div>
+          <div class="duo-body">A State may leave entirely. Once the Elections Panel publishes the petition, the choice is <strong>irrevocable</strong> — and the Republic may not prefer, discourage, or obstruct it. Failed? Barred 5 years.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Indigenous Nations — Sovereignty Acknowledged, Not Granted — §16.1, §16.7</div>
+      <div class="indig-band">
+        <div class="indig-key">Prior sovereignty, recognized<span>§16.1 · Bilateral Compact</span></div>
+        <div class="indig-body">The Republic's framework <strong>does not create</strong> Indigenous sovereignty — it recognizes sovereignty that precedes it. The relationship is bilateral: the Republic acknowledges prior sovereignty; the Nation acknowledges the Republic's framework within its compact's scope. Each Nation may choose its own path by its own governance (§16.7): <strong>continued status</strong> (the default, no election needed), <strong>territorial integration</strong> (entering via §15.6 with the Statehood pathway open), or <strong>full sovereign independence</strong> outside the Republic entirely.</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Numbers Worth Remembering</div>
+      <div class="facts-row">
+        <div class="fact-pill">
+          <div class="fact-num">0</div>
+          <div class="fact-text">political votes to become a State — <strong>the Audit alone</strong> decides (§15.2).</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">2</div>
+          <div class="fact-text">consecutive clean audits from Provisional status = <strong>automatic Statehood</strong> (§15.1.a).</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">3</div>
+          <div class="fact-text">consecutive failures trigger <strong>Mandatory Devolution</strong> back to Provisional (§15.3).</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">60%</div>
+          <div class="fact-text">referendum bar for devolution and for independence (with 60% turnout) (§15.4, §15.9).</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="qs-footer-bar">
+    <div class="footer-left">
+      <strong>THE FEDERATED REPUBLIC</strong> · QUICK SHEET SERIES · STATES, TERRITORIES &amp; INDIGENOUS NATIONS<br>
+      Full provision text: Annotated Edition, Articles XV &amp; XVI · thefederatedrepublic.org
+    </div>
+    <div class="footer-right">A theoretical constitutional design project — not the law of any existing nation.</div>
+  </div>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
+<script>
+  function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+  document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+
+  function fitPage(){
+    var page = document.getElementById('qsPage');
+    var wrap = page.parentElement;
+    var natural = 816;
+    var avail = wrap.clientWidth;
+    if (avail < natural) {
+      var scale = avail / natural;
+      page.style.transform = 'scale(' + scale + ')';
+      page.style.transformOrigin = 'top left';
+      wrap.style.height = (page.offsetHeight * scale) + 'px';
+    } else {
+      page.style.transform = 'none';
+      wrap.style.height = 'auto';
+    }
+  }
+  window.addEventListener('resize', fitPage);
+  window.addEventListener('load', fitPage);
+  fitPage();
+</script>
+</body>
+</html>

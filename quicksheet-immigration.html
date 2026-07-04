@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Sheet — Immigration & Asylum — The Federated Republic</title>
+<meta name="description" content="The two-stage residency system, the separate asylum track that begins at filing, the ministerial credential the executive cannot block, and the absolute bars: no ideological screening, no nationality quotas, no indefinite stateless detention.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quick Sheet — Immigration & Asylum">
+<meta property="og:description" content="Two-stage residency, the independent asylum track, the ministerial credential, and the hard bars on detention and discrimination — Article VI at a glance.">
+<meta property="og:url" content="https://thefederatedrepublic.org/quicksheet-immigration.html">
+<meta property="og:site_name" content="The Federated Republic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --blue:#1B4A7A; --bluelight:#dde9f3; --blueborder:#a9c3da;
+    --green:#2d6a4f; --greenlight:#dcebe3; --greenborder:#a8cdba;
+    --crimson:#8c2018; --crimsonlight:#f2e0dd; --crimsonborder:#d9b3ad;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{ font-family:'Jost',sans-serif; color:var(--text); background:#e8e2d4; }
+  .page{ width:8.5in; min-height:11in; margin:0 auto; background:var(--cream); position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.15); display:flex; flex-direction:column; }
+  @media screen{ .page{ margin:24px auto; } }
+  .qs-scale-wrap{ overflow:hidden; }
+  @page{ size:Letter; margin:0; }
+  @media print{
+    .site-nav, .site-footer, .qs-page-controls{ display:none !important; }
+    body{ background:none; }
+    .page{ box-shadow:none; margin:0; width:8.5in; min-height:11in; }
+  }
+  .qs-page-controls{ max-width:8.5in; margin:0 auto; padding:72px 24px 0; display:flex; justify-content:space-between; align-items:center; }
+  .qs-page-controls .back-link{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--gold); text-decoration:none; text-transform:uppercase; }
+  .qs-page-controls .back-link:hover{ color:var(--navy); }
+  .qs-download-btn{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy2); background:var(--gold); padding:0.5rem 1rem; border-radius:3px; text-decoration:none; }
+  .qs-download-btn:hover{ background:var(--gold2); }
+
+  .qs-header{ background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding:0.4in 0.5in 0.28in; color:#f5f0e8; position:relative; overflow:hidden; }
+  .qs-header::after{ content:""; position:absolute; right:-40px; top:-60px; width:220px; height:220px; border:2px solid rgba(201,168,76,0.18); border-radius:50%; }
+  .qs-eyebrow{ font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; display:flex; gap:10px; align-items:center; }
+  .qs-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .qs-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:32px; line-height:1.05; margin-bottom:4px; }
+  .qs-tagline{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; font-size:13.5px; color:rgba(245,240,232,0.78); max-width:6.4in; line-height:1.35; }
+  .qs-scope{ position:absolute; right:0.5in; bottom:0.26in; text-align:right; font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(201,168,76,0.85); letter-spacing:0.08em; line-height:1.6; }
+
+  .qs-body{ padding:0.22in 0.5in 0.2in; flex:1; display:flex; flex-direction:column; gap:0.14in; }
+  .section-label{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold2); display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .section-label::after{ content:""; flex:1; height:1px; background:var(--border); }
+
+  /* ---- Two-track cascade ---- */
+  .cascade-row{ display:flex; gap:7px; align-items:stretch; }
+  .cas-step{ flex:1; background:var(--white); border:1.5px solid var(--border); border-radius:6px; padding:8px 9px; display:flex; flex-direction:column; gap:2px; }
+  .cas-step.final{ background:var(--navy); border-color:var(--navy); }
+  .cas-step.final .cas-num, .cas-step.final .cas-title, .cas-step.final .cas-detail{ color:#f5f0e8; }
+  .cas-num{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--gold2); letter-spacing:0.06em; }
+  .cas-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:11px; color:var(--navy); line-height:1.05; }
+  .cas-detail{ font-size:7.7px; color:var(--muted); line-height:1.3; }
+  .cas-arrow{ display:flex; align-items:center; color:var(--gold); font-size:11px; padding:0 1px; }
+
+  /* ---- Asylum highlight band ---- */
+  .asylum-band{ background:var(--green); border-radius:6px; padding:9px 13px; display:flex; gap:12px; align-items:flex-start; }
+  .asylum-key{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:14px; color:#fff; line-height:1.15; min-width:1.5in; }
+  .asylum-key span{ display:block; font-family:'JetBrains Mono',monospace; font-size:7px; letter-spacing:0.1em; color:var(--gold); text-transform:uppercase; margin-top:3px; }
+  .asylum-body{ font-size:8.3px; color:rgba(255,255,255,0.94); line-height:1.5; }
+  .asylum-body strong{ color:var(--gold); }
+
+  /* ---- Bars grid ---- */
+  .abs-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+  .abs-card{ background:var(--crimsonlight); border:1.5px solid var(--crimsonborder); border-radius:6px; padding:8px 9px; }
+  .abs-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:11.5px; color:var(--crimson); line-height:1.1; }
+  .abs-note{ font-size:7.4px; color:var(--muted); line-height:1.3; margin-top:3px; }
+
+  /* ---- Facts strip ---- */
+  .facts-row{ display:flex; gap:10px; }
+  .fact-pill{ flex:1; background:var(--navy); color:#f5f0e8; border-radius:6px; padding:7px 10px; display:flex; align-items:center; gap:8px; }
+  .fact-num{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:16px; color:var(--gold); line-height:1; min-width:32px; }
+  .fact-text{ font-size:7.4px; line-height:1.3; color:rgba(245,240,232,0.92); }
+  .fact-text strong{ color:#fff; }
+
+  .qs-footer-bar{ margin-top:auto; border-top:1.5px solid var(--border); padding:9px 0.5in 0.3in; display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer-left{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--muted); line-height:1.6; letter-spacing:0.02em; }
+  .footer-left strong{ color:var(--navy); }
+  .footer-right{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:9.5px; color:var(--muted); text-align:right; max-width:2.6in; line-height:1.4; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="torenthia.html">The World</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<div class="qs-page-controls">
+  <a href="annotated.html" class="back-link">&larr; Annotated Edition</a>
+  <a href="quicksheet-immigration.pdf" download class="qs-download-btn">Download PDF</a>
+</div>
+
+<main id="main-content">
+<div class="qs-scale-wrap">
+<div class="page" id="qsPage">
+
+  <div class="qs-header">
+    <div class="qs-eyebrow"><span class="dot"></span>QUICK SHEET · CONSTITUTION OF THE FEDERATED REPUBLIC</div>
+    <div class="qs-title">Immigration &amp; Asylum</div>
+    <div class="qs-tagline">Two gates to residency, and a separate track for protection that opens the moment a claim is filed. The executive issues credentials but cannot withhold them; the courts stay in every loop; and some doors are nailed shut — no ideological screening, no nationality quotas, no indefinite stateless detention.</div>
+    <div class="qs-scope">Article VI · §6.1–§6.2,<br>§6.3, §6.3.b</div>
+  </div>
+
+  <div class="qs-body">
+
+    <div>
+      <div class="section-label">The Two-Stage Residency System — §6.1, §6.2</div>
+      <div class="cascade-row">
+        <div class="cas-step">
+          <div class="cas-num">STAGE 1</div>
+          <div class="cas-title">State Sponsorship</div>
+          <div class="cas-detail">A State sponsors. It keeps discretion over whom — but sponsorship criteria may not violate §1.6 equality. Denials on discriminatory grounds are challengeable.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step">
+          <div class="cas-num">STAGE 2</div>
+          <div class="cas-title">Federal Certification</div>
+          <div class="cas-detail">Federal categories set by statute. Denials must state the exact ground in writing and are judicially reviewable — including <strong>in-camera review</strong> of any national-security assessment.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step">
+          <div class="cas-num">ISSUANCE</div>
+          <div class="cas-title">Ministerial Credential</div>
+          <div class="cas-detail">Clear both stages and the Legat Consul <strong>must</strong> issue credentials. Interference is constitutionally prohibited — no executive discretion at the finish line.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step final">
+          <div class="cas-num">REMOVAL</div>
+          <div class="cas-title">Federal, Law-Based Only</div>
+          <div class="cas-detail">Only the federal government removes, only for statutory violations. Detention without statutory basis is unlawful — habeas applies. Counsel appointed if unaffordable.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">The Separate Asylum Track — §6.3</div>
+      <div class="asylum-band">
+        <div class="asylum-key">Inhabitant from the date of filing<span>§1.21 · Own Constitutional Track</span></div>
+        <div class="asylum-body">Asylum bypasses the dual gate entirely — <strong>no State can extinguish a claim</strong> by refusing to sponsor. From filing, the claimant holds full Article I protection and social-state access; claims are decided <strong>before any removal</strong>. Manner of entry is irrelevant, and no penalty may attach to irregular entry while a claim is pending or granted. The <strong>Asylum Court is independent of both executives</strong> — the Legislature may not make it a subdivision of either. Unaccompanied minors are Inhabitants from first contact, get a federal guardian within <strong>72 hours</strong>, and may never be held in a facility not built for children.</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Doors Nailed Shut — §6.1, §6.3, §6.3.b</div>
+      <div class="abs-grid">
+        <div class="abs-card">
+          <div class="abs-name">No Ideological Screening</div>
+          <div class="abs-note">At no stage, ever.</div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-name">No Nationality Quotas</div>
+          <div class="abs-note">Prohibited at every stage.</div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-name">No Indefinite Stateless Detention</div>
+          <div class="abs-note">Constitutionally barred, always.</div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-name">No §1.6 Discrimination in Tax or Sponsorship</div>
+          <div class="abs-note">Equality reaches into both.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Numbers Worth Remembering</div>
+      <div class="facts-row">
+        <div class="fact-pill">
+          <div class="fact-num">2</div>
+          <div class="fact-text">gates to residency — <strong>State sponsorship + federal certification</strong>. Asylum uses neither.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">72</div>
+          <div class="fact-text">hours to appoint a federal guardian for an <strong>unaccompanied minor</strong> (§6.3).</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">90</div>
+          <div class="fact-text">days — first mandatory judicial review of any unresolvable-case detention (§6.3.b).</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">180</div>
+          <div class="fact-text">days — the recurring review interval thereafter; never over 5 years without annual review.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="qs-footer-bar">
+    <div class="footer-left">
+      <strong>THE FEDERATED REPUBLIC</strong> · QUICK SHEET SERIES · IMMIGRATION &amp; ASYLUM<br>
+      Full provision text: Annotated Edition, Article VI · thefederatedrepublic.org
+    </div>
+    <div class="footer-right">A theoretical constitutional design project — not the law of any existing nation.</div>
+  </div>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
+<script>
+  function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+  document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+
+  function fitPage(){
+    var page = document.getElementById('qsPage');
+    var wrap = page.parentElement;
+    var natural = 816;
+    var avail = wrap.clientWidth;
+    if (avail < natural) {
+      var scale = avail / natural;
+      page.style.transform = 'scale(' + scale + ')';
+      page.style.transformOrigin = 'top left';
+      wrap.style.height = (page.offsetHeight * scale) + 'px';
+    } else {
+      page.style.transform = 'none';
+      wrap.style.height = 'auto';
+    }
+  }
+  window.addEventListener('resize', fitPage);
+  window.addEventListener('load', fitPage);
+  fitPage();
+</script>
+</body>
+</html>

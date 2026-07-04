@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Sheet — Amendments & Direct Democracy — The Federated Republic</title>
+<meta name="description" content="How the people legislate and how the constitution changes itself: the referendum, the citizen initiative, the two amendment paths with their escalating thresholds, the provisions entrenched against easy change, and the one thing no amendment can ever do.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quick Sheet — Amendments & Direct Democracy">
+<meta property="og:description" content="Referendum, citizen initiative, and the two amendment paths with escalating thresholds — plus the provisions entrenched against easy change and the limit no amendment can cross. Articles XIII and XVII at a glance.">
+<meta property="og:url" content="https://thefederatedrepublic.org/quicksheet-amendments.html">
+<meta property="og:site_name" content="The Federated Republic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --blue:#1B4A7A; --bluelight:#dde9f3; --blueborder:#a9c3da;
+    --green:#2d6a4f; --greenlight:#dcebe3; --greenborder:#a8cdba;
+    --purple:#5c3d7a; --purplelight:#ece3f0; --purpleborder:#cdb8da;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{ font-family:'Jost',sans-serif; color:var(--text); background:#e8e2d4; }
+  .page{ width:8.5in; min-height:11in; margin:0 auto; background:var(--cream); position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.15); display:flex; flex-direction:column; }
+  @media screen{ .page{ margin:24px auto; } }
+  .qs-scale-wrap{ overflow:hidden; }
+  @page{ size:Letter; margin:0; }
+  @media print{
+    .site-nav, .site-footer, .qs-page-controls{ display:none !important; }
+    body{ background:none; }
+    .page{ box-shadow:none; margin:0; width:8.5in; min-height:11in; }
+  }
+  .qs-page-controls{ max-width:8.5in; margin:0 auto; padding:72px 24px 0; display:flex; justify-content:space-between; align-items:center; }
+  .qs-page-controls .back-link{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--gold); text-decoration:none; text-transform:uppercase; }
+  .qs-page-controls .back-link:hover{ color:var(--navy); }
+  .qs-download-btn{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy2); background:var(--gold); padding:0.5rem 1rem; border-radius:3px; text-decoration:none; }
+  .qs-download-btn:hover{ background:var(--gold2); }
+
+  .qs-header{ background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding:0.4in 0.5in 0.28in; color:#f5f0e8; position:relative; overflow:hidden; }
+  .qs-header::after{ content:""; position:absolute; right:-40px; top:-60px; width:220px; height:220px; border:2px solid rgba(201,168,76,0.18); border-radius:50%; }
+  .qs-eyebrow{ font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; display:flex; gap:10px; align-items:center; }
+  .qs-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .qs-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:31px; line-height:1.05; margin-bottom:4px; }
+  .qs-tagline{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; font-size:13.5px; color:rgba(245,240,232,0.78); max-width:6.4in; line-height:1.35; }
+  .qs-scope{ position:absolute; right:0.5in; bottom:0.26in; text-align:right; font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(201,168,76,0.85); letter-spacing:0.08em; line-height:1.6; }
+
+  .qs-body{ padding:0.22in 0.5in 0.2in; flex:1; display:flex; flex-direction:column; gap:0.14in; }
+  .section-label{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold2); display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .section-label::after{ content:""; flex:1; height:1px; background:var(--border); }
+
+  /* ---- Direct democracy: two tools ---- */
+  .duo-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .duo-card{ border-radius:6px; padding:9px 12px; }
+  .duo-card.a{ background:var(--bluelight); border:1.5px solid var(--blueborder); }
+  .duo-card.b{ background:var(--greenlight); border:1.5px solid var(--greenborder); }
+  .duo-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:14px; margin-bottom:2px; }
+  .a .duo-name{ color:var(--blue); } .b .duo-name{ color:var(--green); }
+  .duo-sub{ font-family:'JetBrains Mono',monospace; font-size:6.8px; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
+  .duo-body{ font-size:8.2px; line-height:1.45; color:var(--text); }
+  .duo-body strong{ color:var(--navy); }
+
+  /* ---- Amendment paths: escalating tiers ---- */
+  .tier-row{ display:flex; gap:8px; align-items:stretch; }
+  .tier-card{ flex:1; border:1.5px solid var(--border); border-radius:6px; padding:9px 11px; background:var(--white); display:flex; flex-direction:column; gap:3px; }
+  .tier-card.hi{ background:var(--purplelight); border-color:var(--purpleborder); }
+  .tier-tag{ font-family:'JetBrains Mono',monospace; font-size:6.8px; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold2); }
+  .tier-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:12.5px; color:var(--navy); line-height:1.05; }
+  .hi .tier-name{ color:var(--purple); }
+  .tier-thresh{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:16px; color:var(--gold2); line-height:1; margin:1px 0; }
+  .hi .tier-thresh{ color:var(--purple); }
+  .tier-body{ font-size:7.7px; color:var(--muted); line-height:1.35; }
+  .tier-body strong{ color:var(--navy); }
+
+  /* ---- Comparison / entrenchment ---- */
+  .veto-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .veto-card{ border-radius:6px; padding:10px 13px; border:1.5px solid var(--border); background:var(--white); }
+  .veto-card.highlight{ background:var(--cream2); border-color:var(--gold2); }
+  .veto-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:13px; color:var(--navy); margin-bottom:5px; }
+  .veto-body{ font-size:8.2px; color:var(--muted); line-height:1.45; }
+  .veto-body strong{ color:var(--navy); }
+  .veto-body .em{ color:var(--crimson,#8c2018); font-weight:600; }
+
+  /* ---- Facts strip ---- */
+  .facts-row{ display:flex; gap:10px; }
+  .fact-pill{ flex:1; background:var(--navy); color:#f5f0e8; border-radius:6px; padding:7px 10px; display:flex; align-items:center; gap:8px; }
+  .fact-num{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:16px; color:var(--gold); line-height:1; min-width:34px; }
+  .fact-text{ font-size:7.4px; line-height:1.3; color:rgba(245,240,232,0.92); }
+  .fact-text strong{ color:#fff; }
+
+  .qs-footer-bar{ margin-top:auto; border-top:1.5px solid var(--border); padding:9px 0.5in 0.3in; display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer-left{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--muted); line-height:1.6; letter-spacing:0.02em; }
+  .footer-left strong{ color:var(--navy); }
+  .footer-right{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:9.5px; color:var(--muted); text-align:right; max-width:2.6in; line-height:1.4; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="torenthia.html">The World</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<div class="qs-page-controls">
+  <a href="annotated.html" class="back-link">&larr; Annotated Edition</a>
+  <a href="quicksheet-amendments.pdf" download class="qs-download-btn">Download PDF</a>
+</div>
+
+<main id="main-content">
+<div class="qs-scale-wrap">
+<div class="page" id="qsPage">
+
+  <div class="qs-header">
+    <div class="qs-eyebrow"><span class="dot"></span>QUICK SHEET · CONSTITUTION OF THE FEDERATED REPUBLIC</div>
+    <div class="qs-title">Amendments &amp; Direct Democracy</div>
+    <div class="qs-tagline">How the people legislate directly, and how the document rewrites itself — with thresholds that climb as the change grows more permanent, some provisions entrenched against easy amendment, and one limit no amendment can ever cross.</div>
+    <div class="qs-scope">Article XIII · §13.1–§13.2<br>Article XVII · §17.1–§17.4</div>
+  </div>
+
+  <div class="qs-body">
+
+    <div>
+      <div class="section-label">The People Legislate Directly — §13.1, §13.2</div>
+      <div class="duo-grid">
+        <div class="duo-card a">
+          <div class="duo-name">Optional Referendum</div>
+          <div class="duo-sub">§13.1 · Repeal an enacted law</div>
+          <div class="duo-body">Two petition phases (State-distributed, then <strong>5% national</strong>), then a vote: <strong>simple majority</strong> repeals, subject to a 30–50% turnout floor set by statute. Off-limits: laws expanding an Article I right, budget laws, constitutionally mandated obligations. A failed referendum can't be re-run on the same grounds.</div>
+        </div>
+        <div class="duo-card b">
+          <div class="duo-name">Citizen Initiative</div>
+          <div class="duo-sub">§13.2 · Propose a new law</div>
+          <div class="duo-body">Two phases (State-distributed, then <strong>10% national</strong>). The Legislature must vote within 90 days; if it refuses or fails, the proposal goes to the people — passing at <strong>60% with ≥50% participation</strong>. The chamber can't quietly bury a qualified proposal by ignoring it.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Three Ways to Amend — Thresholds Climb With Permanence — §17.1</div>
+      <div class="tier-row">
+        <div class="tier-card">
+          <div class="tier-tag">Parliamentary · State Ratify</div>
+          <div class="tier-name">Legislature + States</div>
+          <div class="tier-thresh">2/3 · 2/3</div>
+          <div class="tier-body">2/3 of the full seated membership of both chambers, then ratification by <strong>2/3 of States</strong> within the statutory period.</div>
+        </div>
+        <div class="tier-card">
+          <div class="tier-tag">Parliamentary · Popular Ratify</div>
+          <div class="tier-name">Legislature + the People</div>
+          <div class="tier-thresh">2/3 → 2/3</div>
+          <div class="tier-body">2/3 of both chambers, then a national referendum at <strong>2/3 affirmative, ≥55% participation</strong> within 180 days.</div>
+        </div>
+        <div class="tier-card hi">
+          <div class="tier-tag">Citizen Initiative</div>
+          <div class="tier-name">The People Alone</div>
+          <div class="tier-thresh">15% → 70%</div>
+          <div class="tier-body">Petition to <strong>15% national</strong>, then straight to referendum with <strong>no legislative or executive gate</strong> — passing at 70% with ≥65% participation. Miss the floor and it's barred 5 years.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">What's Entrenched, and the Line No Amendment Crosses — §17.1, §17.3</div>
+      <div class="veto-grid">
+        <div class="veto-card">
+          <div class="veto-name">Entrenched Provisions <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§17.1</span></div>
+          <div class="veto-body">Some provisions can't be changed by the States alone — amending them <strong>requires Popular Ratification</strong> regardless of origin: the Monitor selection, independence, mandate, and funding guarantees (§9.1–§9.4, §9.10), the NRS architecture (§10.1), and the Elections Panel / NRS Panel independence (§11.1). The watchdogs and the public record can't be quietly weakened by an inter-State deal — the people themselves must consent.</div>
+        </div>
+        <div class="veto-card highlight">
+          <div class="veto-name">The Unamendable Core <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§17.3</span></div>
+          <div class="veto-body">No amendment — however large its majority — <span class="em">may extinguish a §1.19.b non-derogable right</span>. Any amendment purporting to do so is void to the extent of the extinguishment, and the SC must so rule. An amendment that meets its thresholds otherwise can't be refused, and takes only <strong>prospective</strong> effect. The JM publishes a consistency analysis of every amendment — advisory, but a permanent record of exactly what changed.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Numbers Worth Remembering</div>
+      <div class="facts-row">
+        <div class="fact-pill">
+          <div class="fact-num">0</div>
+          <div class="fact-text">executive role in amendments — <strong>no signature, no veto</strong> (§17.2). Consuls are absent from the process entirely.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">2</div>
+          <div class="fact-text">amendments may run at once; if both pass, the <strong>later-ratified prevails</strong> on conflict (§17.3).</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">70%</div>
+          <div class="fact-text">the ceiling: citizen-initiated amendment passage, ≥65% participation — the hardest bar in the document.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">§17.4</div>
+          <div class="fact-text">supremacy — every act, order, treaty, and decision must conform; anything inconsistent is <strong>void</strong>.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="qs-footer-bar">
+    <div class="footer-left">
+      <strong>THE FEDERATED REPUBLIC</strong> · QUICK SHEET SERIES · AMENDMENTS &amp; DIRECT DEMOCRACY<br>
+      Full provision text: Annotated Edition, §13.1–§13.2 and §17.1–§17.4 · thefederatedrepublic.org
+    </div>
+    <div class="footer-right">A theoretical constitutional design project — not the law of any existing nation.</div>
+  </div>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
+<script>
+  function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+  document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+
+  function fitPage(){
+    var page = document.getElementById('qsPage');
+    var wrap = page.parentElement;
+    var natural = 816;
+    var avail = wrap.clientWidth;
+    if (avail < natural) {
+      var scale = avail / natural;
+      page.style.transform = 'scale(' + scale + ')';
+      page.style.transformOrigin = 'top left';
+      wrap.style.height = (page.offsetHeight * scale) + 'px';
+    } else {
+      page.style.transform = 'none';
+      wrap.style.height = 'auto';
+    }
+  }
+  window.addEventListener('resize', fitPage);
+  window.addEventListener('load', fitPage);
+  fitPage();
+</script>
+</body>
+</html>

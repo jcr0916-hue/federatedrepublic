@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Sheet — Elections Infrastructure & the NVS — The Federated Republic</title>
+<meta name="description" content="The machinery under the vote: two independent panels, a voting system that must be secret, auditable, and resilient at once, credentials that store no names, and the federal takeover that follows a State that won't meet the standard.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quick Sheet — Elections Infrastructure & the NVS">
+<meta property="og:description" content="Independent panels, the three-property voting system, name-free credentials, and the non-compliance takeover — Article XI at a glance.">
+<meta property="og:url" content="https://thefederatedrepublic.org/quicksheet-nvs.html">
+<meta property="og:site_name" content="The Federated Republic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --blue:#1B4A7A; --bluelight:#dde9f3; --blueborder:#a9c3da;
+    --green:#2d6a4f; --greenlight:#dcebe3; --greenborder:#a8cdba;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{ font-family:'Jost',sans-serif; color:var(--text); background:#e8e2d4; }
+  .page{ width:8.5in; min-height:11in; margin:0 auto; background:var(--cream); position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.15); display:flex; flex-direction:column; }
+  @media screen{ .page{ margin:24px auto; } }
+  .qs-scale-wrap{ overflow:hidden; }
+  @page{ size:Letter; margin:0; }
+  @media print{
+    .site-nav, .site-footer, .qs-page-controls{ display:none !important; }
+    body{ background:none; }
+    .page{ box-shadow:none; margin:0; width:8.5in; min-height:11in; }
+  }
+  .qs-page-controls{ max-width:8.5in; margin:0 auto; padding:72px 24px 0; display:flex; justify-content:space-between; align-items:center; }
+  .qs-page-controls .back-link{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--gold); text-decoration:none; text-transform:uppercase; }
+  .qs-page-controls .back-link:hover{ color:var(--navy); }
+  .qs-download-btn{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy2); background:var(--gold); padding:0.5rem 1rem; border-radius:3px; text-decoration:none; }
+  .qs-download-btn:hover{ background:var(--gold2); }
+
+  .qs-header{ background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding:0.4in 0.5in 0.28in; color:#f5f0e8; position:relative; overflow:hidden; }
+  .qs-header::after{ content:""; position:absolute; right:-40px; top:-60px; width:220px; height:220px; border:2px solid rgba(201,168,76,0.18); border-radius:50%; }
+  .qs-eyebrow{ font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; display:flex; gap:10px; align-items:center; }
+  .qs-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .qs-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:30px; line-height:1.05; margin-bottom:4px; }
+  .qs-tagline{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; font-size:13.5px; color:rgba(245,240,232,0.78); max-width:6.4in; line-height:1.35; }
+  .qs-scope{ position:absolute; right:0.5in; bottom:0.26in; text-align:right; font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(201,168,76,0.85); letter-spacing:0.08em; line-height:1.6; }
+
+  .qs-body{ padding:0.22in 0.5in 0.2in; flex:1; display:flex; flex-direction:column; gap:0.14in; }
+  .section-label{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold2); display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .section-label::after{ content:""; flex:1; height:1px; background:var(--border); }
+
+  /* ---- Two panels ---- */
+  .duo-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .duo-card{ border-radius:6px; padding:10px 13px; border:1.5px solid var(--border); }
+  .duo-card.a{ background:var(--bluelight); border-color:var(--blueborder); }
+  .duo-card.b{ background:var(--greenlight); border-color:var(--greenborder); }
+  .duo-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:13.5px; margin-bottom:4px; }
+  .a .duo-name{ color:var(--blue); } .b .duo-name{ color:var(--green); }
+  .duo-body{ font-size:8.3px; color:var(--text); line-height:1.45; }
+  .duo-body strong{ color:var(--navy); }
+
+  /* ---- Three properties ---- */
+  .abs-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:9px; }
+  .abs-card{ background:var(--white); border:1.5px solid var(--gold2); border-radius:6px; padding:9px 11px; }
+  .abs-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:13px; color:var(--navy); line-height:1.1; }
+  .abs-note{ font-size:7.8px; color:var(--muted); line-height:1.35; margin-top:3px; }
+  .abs-note strong{ color:var(--navy); }
+
+  /* ---- Non-compliance cascade ---- */
+  .cascade-row{ display:flex; gap:7px; align-items:stretch; }
+  .cas-step{ flex:1; background:var(--white); border:1.5px solid var(--border); border-radius:6px; padding:8px 9px; display:flex; flex-direction:column; gap:2px; }
+  .cas-step.final{ background:var(--navy); border-color:var(--navy); }
+  .cas-step.final .cas-num, .cas-step.final .cas-title, .cas-step.final .cas-detail{ color:#f5f0e8; }
+  .cas-num{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--gold2); letter-spacing:0.06em; }
+  .cas-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:11px; color:var(--navy); line-height:1.05; }
+  .cas-detail{ font-size:7.6px; color:var(--muted); line-height:1.3; }
+  .cas-arrow{ display:flex; align-items:center; color:var(--gold); font-size:11px; padding:0 1px; }
+
+  /* ---- Facts strip ---- */
+  .facts-row{ display:flex; gap:10px; }
+  .fact-pill{ flex:1; background:var(--navy); color:#f5f0e8; border-radius:6px; padding:7px 10px; display:flex; align-items:center; gap:8px; }
+  .fact-num{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:16px; color:var(--gold); line-height:1; min-width:30px; }
+  .fact-text{ font-size:7.4px; line-height:1.3; color:rgba(245,240,232,0.92); }
+  .fact-text strong{ color:#fff; }
+
+  .qs-footer-bar{ margin-top:auto; border-top:1.5px solid var(--border); padding:9px 0.5in 0.3in; display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer-left{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--muted); line-height:1.6; letter-spacing:0.02em; }
+  .footer-left strong{ color:var(--navy); }
+  .footer-right{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:9.5px; color:var(--muted); text-align:right; max-width:2.6in; line-height:1.4; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="torenthia.html">The World</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<div class="qs-page-controls">
+  <a href="annotated.html" class="back-link">&larr; Annotated Edition</a>
+  <a href="quicksheet-nvs.pdf" download class="qs-download-btn">Download PDF</a>
+</div>
+
+<main id="main-content">
+<div class="qs-scale-wrap">
+<div class="page" id="qsPage">
+
+  <div class="qs-header">
+    <div class="qs-eyebrow"><span class="dot"></span>QUICK SHEET · CONSTITUTION OF THE FEDERATED REPUBLIC</div>
+    <div class="qs-title">Elections Infrastructure &amp; the NVS</div>
+    <div class="qs-tagline">The machinery beneath the vote. Two independent panels no single authority can capture, a voting system engineered to be secret and auditable and resilient at the same time, credentials that hold no names — and, for a State that won't meet the standard, a federal takeover that lasts exactly one election.</div>
+    <div class="qs-scope">Article XI · §11.1, §11.2, §11.3</div>
+  </div>
+
+  <div class="qs-body">
+
+    <div>
+      <div class="section-label">Two Independent Panels — §11.1</div>
+      <div class="duo-grid">
+        <div class="duo-card a">
+          <div class="duo-name">Elections Panel</div>
+          <div class="duo-body">Builds and runs the <strong>National Voting System</strong>, sets federal election standards, certifies equipment, audits State compliance, administers referenda and confirmation votes, and certifies every federal result. Independent of both executives, the Legislature, and the other panel.</div>
+        </div>
+        <div class="duo-card b">
+          <div class="duo-name">NRS Panel</div>
+          <div class="duo-body">Operates the <strong>National Record System</strong> — the Republic's permanent, tamper-evident public record. Independent in the same way. Both panels take temporary emergency technical measures only, expiring in <strong>72 hours</strong> unless the panel ratifies — and never changing rules, timelines, or record permanence.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">The Three Properties the NVS Must Hold at Once — §11.2</div>
+      <div class="abs-grid">
+        <div class="abs-card">
+          <div class="abs-name">Ballot Secrecy</div>
+          <div class="abs-note"><strong>Technically impossible</strong> to link any vote to any voter — even in post-election audits.</div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-name">Public Auditability</div>
+          <div class="abs-note">Aggregate results verifiable by <strong>anyone</strong> with NRS access; each voter can verify their own vote without revealing it.</div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-name">Resilience</div>
+          <div class="abs-note">Keeps working in <strong>degraded conditions</strong> without sacrificing secrecy or auditability.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">The Credential, and What Cannot Leave the System — §11.2</div>
+      <div class="duo-grid">
+        <div class="duo-card a">
+          <div class="duo-name">The Citizen Voting Credential</div>
+          <div class="duo-body">Stores <strong>only cryptographic identifiers</strong> — no names, no biometrics. Eligibility is confirmed by cryptographic matching against citizenship records held <strong>separately</strong> from the NVS and reachable only for that check.</div>
+        </div>
+        <div class="duo-card b">
+          <div class="duo-name">The Data Firewall</div>
+          <div class="duo-body">No NVS information — <strong>including who participated</strong> — may go to any government body or foreign entity for any purpose but running that election. No State may add intermediaries or burdens that quietly reduce NVS access.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">When a State Won't Comply — §11.3</div>
+      <div class="cascade-row">
+        <div class="cas-step">
+          <div class="cas-num">FINDING</div>
+          <div class="cas-title">Audit &amp; Publish</div>
+          <div class="cas-detail">The Panel finds material failure, publishes it to the NRS, and formally notifies the State.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step">
+          <div class="cas-num">CURE</div>
+          <div class="cas-title">Statutory Window</div>
+          <div class="cas-detail">The State gets a defined period to fix the identified failures.</div>
+        </div>
+        <div class="cas-arrow">→</div>
+        <div class="cas-step final">
+          <div class="cas-num">TAKEOVER</div>
+          <div class="cas-title">One Election Only</div>
+          <div class="cas-detail">No cure? The Panel runs that federal election <strong>directly</strong> in the State — then State administration <strong>resumes automatically</strong>. Votes already cast stay valid; the State may challenge the finding at the SC.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Numbers Worth Remembering</div>
+      <div class="facts-row">
+        <div class="fact-pill">
+          <div class="fact-num">5</div>
+          <div class="fact-text">member floor for each panel — the Legislature <strong>may never</strong> reduce either below it (§11.1).</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">1</div>
+          <div class="fact-text">appointing authority may never hold a <strong>majority</strong> of a panel within one electoral term.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">72</div>
+          <div class="fact-text">hours — emergency technical measures expire unless the panel ratifies; rules never change.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">180</div>
+          <div class="fact-text">days — max term for a CC-appointed Acting member if a panel drops below floor.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="qs-footer-bar">
+    <div class="footer-left">
+      <strong>THE FEDERATED REPUBLIC</strong> · QUICK SHEET SERIES · ELECTIONS INFRASTRUCTURE &amp; THE NVS<br>
+      Full provision text: Annotated Edition, Article XI · thefederatedrepublic.org
+    </div>
+    <div class="footer-right">A theoretical constitutional design project — not the law of any existing nation.</div>
+  </div>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
+<script>
+  function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+  document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+
+  function fitPage(){
+    var page = document.getElementById('qsPage');
+    var wrap = page.parentElement;
+    var natural = 816;
+    var avail = wrap.clientWidth;
+    if (avail < natural) {
+      var scale = avail / natural;
+      page.style.transform = 'scale(' + scale + ')';
+      page.style.transformOrigin = 'top left';
+      wrap.style.height = (page.offsetHeight * scale) + 'px';
+    } else {
+      page.style.transform = 'none';
+      wrap.style.height = 'auto';
+    }
+  }
+  window.addEventListener('resize', fitPage);
+  window.addEventListener('load', fitPage);
+  fitPage();
+</script>
+</body>
+</html>
