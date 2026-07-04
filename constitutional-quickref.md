@@ -192,6 +192,7 @@
 
 **§2.5 — The Civic Consul: Domestic Executive Domain**
 - Domain: all executive functions not enumerated to LC
+- Prepares a **proposed civic-domain budget**, submitted to the Assembly under §12.2 (budget originates in the Assembly, not the CC)
 - Must be serving Assembly member when elected CC
 - **8-year cumulative limit** (total across all periods of service — single rule, not per-term)
 - Elected by Assembly through confidence mechanism
@@ -607,6 +608,7 @@
 - Territories access social state systems under same terms as States
 
 **§12.2 — The National Revenue Fund**
+- **Budget originates in the Assembly**; each Consul submits a domain budget proposal (NRS-published) by statutory deadline — default **120 days** before fiscal year; Assembly gives proposals **due consideration**, not bound; Consul failure to submit cannot delay process (published to NRS, Assembly proceeds)
 - Legislature holds exclusive taxing authority
 - All public money into NRF; no withdrawal without appropriation
 - EM audits; no discriminatory taxes
@@ -681,7 +683,8 @@
 
 **§14.2 — Defense Authorization**
 - LC commands military under Article II constraints
-- CC certification of expenditure applies from moment of action
+- Military expenditure requires §14.1 authorization + budget passage under **§12.2**; LC submits the defense-domain budget proposal to the Assembly under §12.2 and executes the enacted funding
+- Where authorization specifies categories/amounts, LC bound by them; otherwise LC allocates within authorized total; LC keeps CC informed via Council of Ministers
 - Treaties: Senate ratification constitutes authorization for treaty-obligated operations; no separate vote required
 
 **§14.3 — Military Accountability (Transition Plan)**
