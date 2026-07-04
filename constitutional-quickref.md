@@ -267,7 +267,7 @@
 - Members capped at 6 consecutive terms (12 years) before cooling-off cycle
 
 **§3.2 — Assembly Operations**
-- Member financial disclosures to LM; ethics committee assessments within LM framework
+- Member financial disclosures: consolidated to §12.4 (route: LM, per respective-Monitor rule)
 - Expulsion by 2/3 of full seated membership; published to NRS; effective immediately
 - State recall mechanism: must be punitive or political process; must not violate Constitution; final decision by State legislature or eligible voters; no executive/admin/court recall alone; recalled seat treated as vacant
 - Cooling-off: 6 consecutive terms maximum before sitting out one full electoral cycle
@@ -279,7 +279,7 @@
 
 **§3.4 — Legislative Standards**
 - Single-subject rule: legislation must address one subject
-- Member financial disclosures to LM
+- Member financial disclosures: consolidated to §12.4 (route: LM)
 - Ethics committee assessments by LM
 
 **§3.5 — The Senate**
@@ -618,15 +618,28 @@
 - Legislature establishes taxing framework; EM audits annually
 
 **§12.4 — Ethics and Conflict of Interest**
-- All constitutional officers must disclose financial interests to EM
-- Records published to NRS
-- Recusal for direct financial interest
+- Consolidated home for financial-interest disclosure; defines "financial interest" and "disqualifying financial interest" (statute may specify further within that standard)
+- Disclosure routes to **respective Monitor**: LM (Legislature), EM (both Consuls, executive officers, military), JM (judicial officers)
+- Monitor candidate pools are the exception: audited by the *other two* Monitors jointly, not the respective Monitor (§9.3, §9.4)
+- Self-executing recusal; unrecused decisions voidable by relevant chamber (simple majority, 90 days of respective Monitor's finding)
+- 2-year minimum post-service restriction on monetizing non-public access; gifts above de minimis disclosed to respective Monitor and deposited to treasury
+- Each Monitor investigates violations within its own jurisdiction
 
 **§12.4.a — Codes of Conduct and Recusal**
 - Legislature may establish conduct rules and recusal standards for any constitutionally established office outside the Legislature
 - Rules must be consistent with office's independence protections
 - Default recusal standard applies in absence of statute
 - Amending or repealing such rules requires one-session cooling period then 2/3 of both chambers
+
+**§12.4.b — Monitor General Disclosure**
+- Special case: Monitors disclose under §12.4's requirements but publish directly to NRS — **no peer Monitor reviews another's disclosure** (collegiality risk from close JMC working relationship)
+- Voidable-decision remedy doesn't fit Monitor functions; instead, statute must make concealment or unrecused conflict a §9.14 removal category for Monitor Generals
+- Enforcement then runs through §9.14's existing trigger (1/3 either chamber OR 2-of-3 Monitors → SC review within 14 days, 6-month refiling cooldown) — no new institution invented
+
+**§12.4.c — Federal Employee and Military Disclosure**
+- Legislature must by statute extend disclosure/recusal duties to federal employees and military in conflict-risk roles (procurement, regulatory, senior civil service)
+- Respective Monitor audits the *administering agency's* systemic compliance, not individual filings — keeps Monitor offices information-only/small, consistent with their design elsewhere
+
 
 **§12.5 — National Endowment**
 - Constitutionally established reserve fund

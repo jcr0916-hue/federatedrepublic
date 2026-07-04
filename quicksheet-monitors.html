@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Sheet — The Monitors — The Federated Republic</title>
+<meta name="description" content="Three watchdogs, each selected by someone other than the body it watches. How the LM, EM, and JM are chosen, cross-audited, replaced when compromised, and — since the Ethics Consolidation — how a Monitor's own conflict of interest is handled.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quick Sheet — The Monitors">
+<meta property="og:description" content="No Monitor is selected by the body it watches. Selection, cross-audit, compromise protocol, and removal — including the new Monitor General disclosure rule — at a glance.">
+<meta property="og:url" content="https://thefederatedrepublic.org/quicksheet-monitors.html">
+<meta property="og:site_name" content="The Federated Republic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --blue:#1B4A7A; --bluelight:#dde9f3; --blueborder:#a9c3da;
+    --green:#2d6a4f; --greenlight:#dcebe3; --greenborder:#a8cdba;
+    --purple:#5c3d7a; --purplelight:#ece3f0; --purpleborder:#cdb8da;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{ font-family:'Jost',sans-serif; color:var(--text); background:#e8e2d4; }
+  .page{ width:8.5in; min-height:11in; margin:0 auto; background:var(--cream); position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.15); display:flex; flex-direction:column; }
+  @media screen{ .page{ margin:24px auto; } }
+  .qs-scale-wrap{ overflow:hidden; }
+  @page{ size:Letter; margin:0; }
+  @media print{
+    .site-nav, .site-footer, .qs-page-controls{ display:none !important; }
+    body{ background:none; }
+    .page{ box-shadow:none; margin:0; width:8.5in; min-height:11in; }
+  }
+  .qs-page-controls{ max-width:8.5in; margin:0 auto; padding:72px 24px 0; display:flex; justify-content:space-between; align-items:center; }
+  .qs-page-controls .back-link{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:var(--gold); text-decoration:none; text-transform:uppercase; }
+  .qs-page-controls .back-link:hover{ color:var(--navy); }
+  .qs-download-btn{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy2); background:var(--gold); padding:0.5rem 1rem; border-radius:3px; text-decoration:none; }
+  .qs-download-btn:hover{ background:var(--gold2); }
+
+  .qs-header{ background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding:0.4in 0.5in 0.28in; color:#f5f0e8; position:relative; overflow:hidden; }
+  .qs-header::after{ content:""; position:absolute; right:-40px; top:-60px; width:220px; height:220px; border:2px solid rgba(201,168,76,0.18); border-radius:50%; }
+  .qs-eyebrow{ font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; display:flex; gap:10px; align-items:center; }
+  .qs-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .qs-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:32px; line-height:1.05; margin-bottom:4px; }
+  .qs-tagline{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; font-size:13.5px; color:rgba(245,240,232,0.78); max-width:6.4in; line-height:1.35; }
+  .qs-scope{ position:absolute; right:0.5in; bottom:0.26in; text-align:right; font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(201,168,76,0.85); letter-spacing:0.08em; line-height:1.6; }
+
+  .qs-body{ padding:0.22in 0.5in 0.2in; flex:1; display:flex; flex-direction:column; gap:0.14in; }
+  .section-label{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold2); display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .section-label::after{ content:""; flex:1; height:1px; background:var(--border); }
+
+  /* ---- Trio grid: three parallel Monitors ---- */
+  .trio-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:9px; }
+  .trio-card{ border-radius:6px; padding:10px 11px; display:flex; flex-direction:column; gap:5px; }
+  .trio-card.lm{ background:var(--bluelight); border:1.5px solid var(--blueborder); }
+  .trio-card.em{ background:var(--greenlight); border:1.5px solid var(--greenborder); }
+  .trio-card.jm{ background:var(--purplelight); border:1.5px solid var(--purpleborder); }
+  .trio-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:15px; }
+  .lm .trio-name{ color:var(--blue); } .em .trio-name{ color:var(--green); } .jm .trio-name{ color:var(--purple); }
+  .trio-row{ font-size:8px; line-height:1.4; color:var(--text); }
+  .trio-row strong{ display:block; font-family:'JetBrains Mono',monospace; font-size:6.6px; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:1px; }
+  .trio-audit{ margin-top:auto; padding-top:5px; border-top:1px dashed; font-size:7.4px; font-family:'JetBrains Mono',monospace; color:var(--muted); }
+  .lm .trio-audit{ border-color:var(--blueborder); } .em .trio-audit{ border-color:var(--greenborder); } .jm .trio-audit{ border-color:var(--purpleborder); }
+  .trio-audit strong{ color:var(--text); }
+
+  /* ---- Cascade row (reused pattern) ---- */
+  .cascade-row{ display:flex; gap:7px; align-items:stretch; }
+  .cas-step{ flex:1; background:var(--white); border:1.5px solid var(--border); border-radius:6px; padding:8px 9px; display:flex; flex-direction:column; gap:2px; }
+  .cas-step.final{ background:var(--navy); border-color:var(--navy); }
+  .cas-step.final .cas-num, .cas-step.final .cas-title, .cas-step.final .cas-detail{ color:#f5f0e8; }
+  .cas-num{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--gold2); letter-spacing:0.06em; }
+  .cas-title{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:11.5px; color:var(--navy); }
+  .cas-detail{ font-size:7.8px; color:var(--muted); line-height:1.3; }
+  .cas-arrow{ display:flex; align-items:center; color:var(--gold); font-size:12px; padding:0 1px; }
+
+  /* ---- Veto/comparison grid (reused pattern) ---- */
+  .veto-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .veto-card{ border-radius:6px; padding:10px 13px; border:1.5px solid var(--border); background:var(--white); }
+  .veto-card.highlight{ background:var(--cream2); border-color:var(--gold2); }
+  .veto-name{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:13.5px; color:var(--navy); margin-bottom:5px; }
+  .veto-flow{ display:flex; align-items:center; gap:5px; flex-wrap:wrap; margin-bottom:6px; }
+  .flow-step{ font-family:'JetBrains Mono',monospace; font-size:7.4px; background:var(--cream2); border:1px solid var(--border); border-radius:3px; padding:3px 6px; color:var(--text); white-space:nowrap; }
+  .veto-card.highlight .flow-step{ background:var(--white); }
+  .flow-arrow{ color:var(--gold2); font-size:8.5px; }
+  .veto-body{ font-size:8.3px; color:var(--muted); line-height:1.4; }
+  .veto-body strong{ color:var(--navy); }
+
+  /* ---- Facts strip (reused pattern) ---- */
+  .facts-row{ display:flex; gap:10px; }
+  .fact-pill{ flex:1; background:var(--navy); color:#f5f0e8; border-radius:6px; padding:7px 10px; display:flex; align-items:center; gap:8px; }
+  .fact-num{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:18px; color:var(--gold); line-height:1; min-width:30px; }
+  .fact-text{ font-size:7.6px; line-height:1.3; color:rgba(245,240,232,0.92); }
+  .fact-text strong{ color:#fff; }
+
+  .qs-footer-bar{ margin-top:auto; border-top:1.5px solid var(--border); padding:9px 0.5in 0.3in; display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer-left{ font-family:'JetBrains Mono',monospace; font-size:7.3px; color:var(--muted); line-height:1.6; letter-spacing:0.02em; }
+  .footer-left strong{ color:var(--navy); }
+  .footer-right{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:9.5px; color:var(--muted); text-align:right; max-width:2.6in; line-height:1.4; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="torenthia.html">The World</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<div class="qs-page-controls">
+  <a href="annotated.html" class="back-link">&larr; Annotated Edition</a>
+  <a href="quicksheet-monitors.pdf" download class="qs-download-btn">Download PDF</a>
+</div>
+
+<main id="main-content">
+<div class="qs-scale-wrap">
+<div class="page" id="qsPage">
+
+  <div class="qs-header">
+    <div class="qs-eyebrow"><span class="dot"></span>QUICK SHEET · CONSTITUTION OF THE FEDERATED REPUBLIC</div>
+    <div class="qs-title">The Monitors</div>
+    <div class="qs-tagline">Three watchdogs, each constituted by a body other than the one it watches. Information-only — they publish, they don't decide — until a Monitor's own conflict of interest turns the design in on itself, and the closeness of the three Monitors' own working relationship becomes the problem.</div>
+    <div class="qs-scope">§9.1 – §9.14, §12.4.b<br>15 provisions</div>
+  </div>
+
+  <div class="qs-body">
+
+    <div>
+      <div class="section-label">Three Monitors, One Rule — §9.1, §9.1.a–c</div>
+      <div class="trio-grid">
+        <div class="trio-card lm">
+          <div class="trio-name">Legislative Monitor</div>
+          <div class="trio-row"><strong>Watches</strong>The Legislature — census, redistricting, mandate compliance, referendum eligibility</div>
+          <div class="trio-row"><strong>Selected by</strong>SC nominates → national popular vote</div>
+          <div class="trio-audit"><strong>Own candidate pool audited by:</strong> EM + JM jointly</div>
+        </div>
+        <div class="trio-card em">
+          <div class="trio-name">Executive Monitor</div>
+          <div class="trio-row"><strong>Watches</strong>Both Consuls + the Monetary Authority — military compliance, appointments, electoral finance</div>
+          <div class="trio-row"><strong>Selected by</strong>Assembly + Senate Speakers jointly → national popular vote</div>
+          <div class="trio-audit"><strong>Own candidate pool audited by:</strong> LM + JM jointly</div>
+        </div>
+        <div class="trio-card jm">
+          <div class="trio-name">Judicial Monitor</div>
+          <div class="trio-row"><strong>Watches</strong>Courts, Elections Panel, Article XVI/XX compacts — administers every constitutional lottery</div>
+          <div class="trio-row"><strong>Selected by</strong>Public lottery, former-judges pool → national popular vote</div>
+          <div class="trio-audit"><strong>Own candidate pool audited by:</strong> LM (service record) + EM (financial disclosure)</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">If a Monitor Is Compromised, Vacant, or Underfunded — §9.1.d, §9.10, §9.11.a</div>
+      <div class="cascade-row">
+        <div class="cas-step">
+          <div class="cas-num">TERM EXPIRY</div>
+          <div class="cas-title">Automatic Void</div>
+          <div class="cas-detail">Authority ends the instant a term expires — no further act needed. Any act taken after is constitutionally void.</div>
+        </div>
+        <div class="cas-arrow">/</div>
+        <div class="cas-step">
+          <div class="cas-num">MID-TERM VACANCY</div>
+          <div class="cas-title">Acting by Seniority</div>
+          <div class="cas-detail">Most senior candidate-pool member by continuous tenure serves as Acting until a successor is confirmed under §9.3.</div>
+        </div>
+        <div class="cas-arrow">/</div>
+        <div class="cas-step">
+          <div class="cas-num">BAD FAITH — §9.11.a</div>
+          <div class="cas-title">2-of-3 Petition</div>
+          <div class="cas-detail">Two Monitors jointly report demonstrable bad faith → petition SC → <strong style="color:var(--navy)">Acting Monitor designated immediately upon filing</strong>, before the SC even rules.</div>
+        </div>
+        <div class="cas-arrow" style="font-family:'JetBrains Mono',monospace;font-size:8px;font-style:normal">→</div>
+        <div class="cas-step final">
+          <div class="cas-num">FUNDING FLOOR — §9.10</div>
+          <div class="cas-title">Self-Executing</div>
+          <div class="cas-detail">Budget below the MA-certified inflation floor without 2/3 override? Prior year's funding takes effect automatically — no Monitor has to ask.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Removal — And Where a Monitor's Own Ethics Fits</div>
+      <div class="veto-grid">
+        <div class="veto-card">
+          <div class="veto-name">Standard Track <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§9.14</span></div>
+          <div class="veto-flow">
+            <span class="flow-step">1/3 either chamber, or 2-of-3 Monitors</span><span class="flow-arrow">→</span>
+            <span class="flow-step">SC: category only, 14 days</span><span class="flow-arrow">→</span>
+            <span class="flow-step">2/3 both chambers</span>
+          </div>
+          <div class="veto-body">The <strong>same track</strong> governs every constitutionally confirmed independent officer, Monitor Generals included. If the SC declines to confirm grounds, the matter can't be refiled on the same grounds for <strong>6 months</strong> — the built-in defense against harassment filings.</div>
+        </div>
+        <div class="veto-card highlight">
+          <div class="veto-name">Monitor Self-Disclosure <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§12.4.b — new</span></div>
+          <div class="veto-flow">
+            <span class="flow-step">Publish direct to NRS</span><span class="flow-arrow">→</span>
+            <span class="flow-step">No peer review</span><span class="flow-arrow">→</span>
+            <span class="flow-step">§9.14 if concealed</span>
+          </div>
+          <div class="veto-body">Monitors disclose like any officer, but <strong>no Monitor reviews another's disclosure</strong> — the JMC's close, years-long working relationship makes peer review the wrong tool here. Concealment or an unrecused conflict must be a statutory §9.14 removal category. No new institution invented; the existing track just gained one more ground.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Numbers Worth Remembering</div>
+      <div class="facts-row">
+        <div class="fact-pill">
+          <div class="fact-num">10</div>
+          <div class="fact-text">years — single <strong>non-renewable</strong> term for every Monitor General, no exceptions.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">2/3</div>
+          <div class="fact-text">of both chambers to <strong>cut Monitor funding</strong> below its inflation-adjusted floor — otherwise the cut simply doesn't take effect.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">2</div>
+          <div class="fact-text">of 3 Monitors is <strong>JMC quorum</strong> — no joint function can be permanently blocked by one Monitor's non-participation.</div>
+        </div>
+        <div class="fact-pill">
+          <div class="fact-num">0</div>
+          <div class="fact-text">findings are <strong>binding</strong> on anyone. Monitors publish; they never enforce, direct, or decide.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="qs-footer-bar">
+    <div class="footer-left">
+      <strong>THE FEDERATED REPUBLIC</strong> · QUICK SHEET SERIES · THE MONITORS<br>
+      Full provision text: Annotated Edition, §9.1–§9.14, §12.4.b · thefederatedrepublic.org
+    </div>
+    <div class="footer-right">A theoretical constitutional design project — not the law of any existing nation.</div>
+  </div>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
+<script>
+  function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+  document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+
+  function fitPage(){
+    var page = document.getElementById('qsPage');
+    var wrap = page.parentElement;
+    var natural = 816;
+    var avail = wrap.clientWidth;
+    if (avail < natural) {
+      var scale = avail / natural;
+      page.style.transform = 'scale(' + scale + ')';
+      page.style.transformOrigin = 'top left';
+      wrap.style.height = (page.offsetHeight * scale) + 'px';
+    } else {
+      page.style.transform = 'none';
+      wrap.style.height = 'auto';
+    }
+  }
+  window.addEventListener('resize', fitPage);
+  window.addEventListener('load', fitPage);
+  fitPage();
+</script>
+</body>
+</html>
