@@ -487,67 +487,93 @@
 
 ## ARTICLE IX — THE MONITORS
 
-**§9.1 — The Three Monitors**
-- Legislative Monitor (LM): constitutional compliance of legislative functions
-- Executive Monitor (EM): fiscal compliance and executive constitutional compliance
-- Judicial Monitor (JM): judicial system integrity and Article I compliance
-- All operate independently; cannot be directed by any elected officer
+**§9.1 — Three Monitors**
+- Legislative (LM), Executive (EM), Judicial (JM); each selected by bodies other than those it oversees
+- **Information-only mandate**: observe, verify, publish to NRS — findings not binding, not a prerequisite for any proceeding
+- 10-year non-renewable term each; constitutionally protected funding floor
+- Monitor inaction does not extinguish authority or suspend any obligation
+- Any officer/body may request a focused assessment; requester may proceed whether or not it's published; persistent non-responsiveness publishable by the other two
 
-**§9.1.a — LM Mandate**
-- Audits legislative compliance; publishes findings to NRS
-- Compliance notices, Early Warnings, constitutional assessments
-- Annual audit of State electoral compliance
+**§9.1.a — The Legislative Monitor**
+- Audits the Legislature for fiscal accuracy and constitutional compliance
+- Census compliance; Assembly district maps against §3.3; referendum eligibility administration; mandate compliance; annual NRS compliance report
 
-**§9.1.b — EM Mandate**
-- Audits fiscal integrity; publishes annual fiscal assessments
-- Audits emergency declarations and classification decisions
-- Monitors executive compliance with constitutional obligations
+**§9.1.b — The Executive Monitor**
+- Audits both executives and the Monetary Authority
+- Military compliance (§14.1 purpose, §14.2 authorization, §2.3 warrant, NRS publication); clemency background reports; appointment disclosure review; electoral finance
+- Audits constitutional officers for dereliction (political disagreement is not a defense)
 
-**§9.2 — Monitor General Selection**
-- Each Monitor headed by a Monitor General
-- Elected by national popular vote (not Senate confirmation — important)
-- Staggered terms; single non-renewable term
+**§9.1.c — The Judicial Monitor**
+- Audits courts for scope and independence; annual Elections Panel electoral-integrity audit incl. Judicial Pool and all constitutional pools
+- Reviews Article XVI and Article XX compact compliance
+- **Administers all constitutional lottery draws and candidate certification**
 
-**§9.3 — Monitor Operations**
-- Monitors operate independently with own staff and budget
-- Cannot be defunded to impair constitutional mandate
+**§9.1.d — Monitor General Term Expiry and Incapacity**
+- Authority terminates automatically at term expiry; any act after is void
+- Mid-term vacancy → most senior candidate-pool member by continuous tenure serves as Acting until successor confirmed under §9.3 (not eligible for permanent appointment to that seat)
+- Incapacity certified by the other two Monitors jointly → authority suspended, acting mechanism activates immediately
 
-**§9.4 — LM Specific Functions**
-- LM-certified: electoral maps, legislative compliance findings
-- LM publishes Early Warnings on statehood audit failures
+**§9.2 — Selection and Independence**
+- Structurally excludes the watched body from selecting its watchers
+- LM: SC nominates → national popular vote
+- EM: Assembly + Senate Speakers jointly nominate → national popular vote (JM publishes disclosure findings first)
+- JM: public lottery from a pool of former judges, audited by LM and EM
 
-**§9.4.b — JM-Certified Matters**
-- JM certifies Article I compliance components
+**§9.3 — Monitor General Selection**
+- All confirmations: national popular vote at next federal electoral period, simple majority; failed vote → §9.1.d acting mechanism, new selection within 60 days
+- EM Speaker-nomination deadlock (60 days) → Senate selects from pool by 2/3
+- JM selected by public lottery under §9.12 from the JM pool under §9.4
+- No two MG terms begin within 18 months of each other
 
-**§9.5 — Classification Review**
-- EM reviews classification decisions
-- EM publishes findings on classification approaching constitutional ceiling
+**§9.4 — Judicial Monitor Audit and Lottery Administration Mandate**
+- Two mandates: **auditor** (information-only) and **lottery/certification administrator** (ministerial — administers and certifies, cannot influence outcome)
+- Annual audits: court scope/independence, Elections Panel integrity, SC independence, inferior-court jurisdiction, Art. XIV/XIX/XX compacts
+- **JM Candidate Pool**: former Republic judges (trial court of record or above), out of judicial office ≥1 year; former SC justices out ≥5 years; JM holds no role in constituting its own pool; LM verifies service records, EM reviews disclosures
 
-**§9.6 — Monitor Operations Detail**
-- Monitors may initiate proceedings; findings published to NRS with dissents
+**§9.4.b — Judicial Pool — Eligibility Criteria**
+- Elections Panel maintains the standing **Judicial Pool** for all federal judicial appointments
+- Apply directly: ≥15 years legal practice or 10 years judicial service; no current government position; no disqualifying financial interest (as defined in §12.4)
+- JM audits Panel's administration; EM audits financial disclosure; both publish to NRS
+- Exclusion appealable to SC within 14 days (sole ground: criteria misapplied); pool publicly accessible on NRS
 
-**§9.10 — JMC Quorum and Decisions**
-- JMC = all three Monitor Generals collectively
-- Majority vote for assigned-function authority
-- Publishes determinations with dissents to NRS
+**§9.6 — Monitor Operations**
+- Every finding published to NRS permanently, free of charge; no suppression, delay, classification, or alteration; reports permanently exempt from classification
+- Critical Failure finding → Legislature must publish remediation plan (failure = compliance breach)
+- Any staff member may publish a minority report directly to NRS; no discipline for doing so
+- All three jointly publish an annual State of the Republic report; unrestricted access to records/personnel/systems within mandate (obstruction = breach)
 
-**§9.11 — The Joint Monitor Committee (JMC)**
-- Where constitution assigns function to JMC, exercises by majority vote
-- Publishes determinations with dissents; delegates operational responsibility without transferring constitutional accountability
-- Administers the Statehood Audit
-- Coordinates resources across Monitor offices (no Monitor's mandate capacity diminished)
+**§9.10 — Monitor Minimum Funding Guarantee**
+- Appropriation for each Monitor, Elections Panel, and NRS Panel may not fall below prior-year inflation-adjusted level without **2/3 of both chambers**
+- MA certifies each floor and publishes before the budget process
+- Budget below floor without the supermajority → prior-year level takes effect automatically
+
+**§9.11 — Joint Monitor Council**
+- The three MGs jointly constitute the JMC; houses all jointly administered functions (lottery draws, selection processes)
+- **Two of three = quorum**; no mandatory joint function permanently blockable by one MG's non-participation (non-participant's position published if stated)
+- Conducts the annual NRS audit (operational compliance + content integrity), published to both chambers
+- Exercises assigned functions by majority vote of participating MGs; may delegate operationally without transferring accountability; **no authority to override any Monitor's individual mandate**
 
 **§9.11.a — Institutional Compromise Protocol**
-- Two Monitors jointly assess and report that third Monitor is operating in bad faith → petition SC under §4.5 original jurisdiction for confirmation; SC rules within 14 days
-- Upon petition filing: two petitioning Monitors designate Acting Monitor General (most senior pool member by continuous pool tenure who accepts); full authority from moment of designation
-- If SC rules **not confirmed**: Acting Monitor stands down, functions return to original Monitor General
-- If SC **neither rules nor files extension** within applicable period: Acting Monitor stands down, petition may be refiled (silence ≠ confirmed)
-- If SC **confirms**: Acting Monitor serves until original MG restored or new permanent MG confirmed
+- Two Monitors jointly report the third is in demonstrable bad faith → petition SC under §4.5; SC rules within 14 days
+- On filing: two petitioners designate an Acting MG (most senior pool member by continuous tenure who accepts); full authority from designation
+- SC **not confirmed** → Acting stands down, functions return
+- SC **neither rules nor files extension** in period → Acting stands down, petition may be refiled (silence ≠ confirmed)
+- SC **confirms** → Acting serves until original restored or new permanent MG confirmed
 
-**§9.14 — Constitutional Officer Removal**
-- Standard Track: 1/3 Assembly files → SC categorical review (14 days) → Senate trial (2/3 both chambers)
-- Judicial Track: Two Monitors jointly assess → SC petition → SC rules 14 days → Senate 3/5 within 60 days OR national ballot
-- SC's role is categorical (do stated grounds fit a statutory removal category), not factual determination
+**§9.12 — Constitutional Pool Framework**
+- Elections Panel maintains all constitutional pools/registries (incl. Judicial Pool); each subject to ongoing Monitor audit
+- Lottery draws conducted by the JMC in public session, published to NRS
+- **Minimum five eligible members per pool**; below five → JM publishes compliance breach, nominating bodies must restore; pool at zero → most senior eligible federal judge serves as Acting (judicial/Monitor pools only)
+- Eligibility **strictly objective** (years of service, office status, financial interests per §12.4); no philosophy/temperament/ideology/association criteria — any such exclusion void
+- Exclusion grounds published within 14 days; appeal within 30 days; criteria changes prospective only
+
+**§9.14 — Constitutional Officer Removal — Standard Track**
+- Governs for-cause removal of all constitutionally confirmed independent officers **except** SC justices (§4.3.b) and elected executives
+- Trigger: **1/3 of either chamber OR two of three Monitors jointly** file stated grounds with SC
+- SC determines within 14 days whether grounds fit at least one statutory removal category (**category only, not factual merits**)
+- Confirmed → duty suspension immediate, removal requires **2/3 concurrent vote of both chambers**; not confirmed → closed, no reinitiation on same grounds for 6 months
+- No removal vote within 180 days of a major national election without prior SC review within 48 hours
+- Monitor Generals removable under this track; Judicial Track additionally available for them (two Monitors jointly report grounds)
 
 ---
 
