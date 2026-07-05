@@ -87,6 +87,10 @@
   .s-result h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.9rem,5vw,2.6rem);color:var(--navy);line-height:1.14;margin:0 0 .3rem}
   .s-result h2 strong{font-weight:700;color:var(--gold2)}
   .s-result-sub{font-family:'Jost',sans-serif;font-size:1rem;color:var(--muted);line-height:1.6;margin:0 0 1.8rem;padding-bottom:1.4rem;border-bottom:2px solid var(--navy)}
+  .s-discuss{display:inline-block;margin:0.4rem 0 0.2rem;padding:0;background:none;border:none;cursor:pointer;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.12rem;color:var(--gold2);transition:color 0.15s}
+  .s-discuss:hover{color:var(--navy)}
+  #resultBodyFull{margin-top:0.6rem;animation:sFade 0.35s ease}
+  @keyframes sFade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
   .s-result h3{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:1.8rem 0 .8rem}
   .s-result p{font-family:'Jost',sans-serif;font-size:.98rem;line-height:1.7;color:var(--text);margin:0 0 1rem}
   .s-traits{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-direction:column;gap:.6rem}
@@ -189,6 +193,8 @@
 
     <h3>What this kind of government is like</h3>
     <div id="resultBody"></div>
+    <button class="s-discuss" id="discussToggle" onclick="toggleDiscuss()" hidden>Let's discuss the results in more detail →</button>
+    <div id="resultBodyFull" hidden></div>
 
     <h3>Defining features</h3>
     <ul class="s-traits" id="resultTraits"></ul>
@@ -221,7 +227,13 @@
     <a href="diagrams.html">Diagrams</a>
     <a href="sources.html">Sources</a>
   </div>
-  <span class="footer-note">A constitutional framework built from first principles &nbsp;·&nbsp; A theoretical project, not the law of any existing nation</span>
+    <div class="footer-social">
+      <span class="footer-social-label">Follow</span>
+      <a href="https://bsky.app/profile/federatedrepublic.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://x.com/TheFedRepublic" target="_blank" rel="noopener">X</a>
+      <a href="https://www.facebook.com/profile.php?id=61591764057032" target="_blank" rel="noopener">Facebook</a>
+    </div>
+      <span class="footer-note">A constitutional framework built from first principles &nbsp;·&nbsp; A theoretical project, not the law of any existing nation</span>
 </footer>
 
 <script>
@@ -582,15 +594,38 @@ async function finish(){
 
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
+function toggleDiscuss(){
+  const btn = document.getElementById('discussToggle');
+  const box = document.getElementById('resultBodyFull');
+  box.hidden = false;
+  btn.hidden = true;
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
 function renderResult(data){
   document.getElementById('resultTitle').innerHTML =
     'Your answers describe <strong>' + esc(data.archetype || 'a government of your own') + '</strong>';
   document.getElementById('resultSub').textContent = data.tagline || '';
+  // restore section headers (renderError may have hidden them on a prior attempt)
+  document.querySelectorAll('#resultScreen h3').forEach(h=>h.style.display='');
 
-  // summary may contain paragraph breaks
-  const paras = String(data.summary || '').split(/\n\n+/).filter(Boolean);
+  // short summary shows by default; full lives behind the "discuss" expander
+  const shortText = String(data.summary_short || data.summary || '');
+  const shortParas = shortText.split(/\n\n+/).filter(Boolean);
   document.getElementById('resultBody').innerHTML =
-    (paras.length ? paras : [String(data.summary||'')]).map(p=>'<p>'+esc(p)+'</p>').join('');
+    (shortParas.length ? shortParas : [shortText]).map(p=>'<p>'+esc(p)+'</p>').join('');
+
+  const fullText = String(data.summary_full || '').trim();
+  const discussBtn = document.getElementById('discussToggle');
+  const fullBox = document.getElementById('resultBodyFull');
+  if(fullText){
+    const fullParas = fullText.split(/\n\n+/).filter(Boolean);
+    fullBox.innerHTML = (fullParas.length ? fullParas : [fullText]).map(p=>'<p>'+esc(p)+'</p>').join('');
+    discussBtn.hidden = false; discussBtn.textContent = "Let's discuss the results in more detail →";
+    fullBox.hidden = true;
+  } else {
+    discussBtn.hidden = true; fullBox.hidden = true; fullBox.innerHTML = '';
+  }
 
   const traits = Array.isArray(data.traits) ? data.traits : [];
   document.getElementById('resultTraits').innerHTML =
@@ -622,6 +657,9 @@ function renderError(){
   document.getElementById('resultTraits').style.display = 'none';
   document.querySelectorAll('#resultScreen h3').forEach(h=>h.style.display='none');
   document.getElementById('resultExamples').innerHTML = '';
+  document.getElementById('discussToggle').hidden = true;
+  document.getElementById('resultBodyFull').hidden = true;
+  document.getElementById('resultBodyFull').innerHTML = '';
   document.getElementById('frNote').hidden = true;
   document.getElementById('thinkingScreen').hidden = true;
   document.getElementById('resultScreen').hidden = false;
