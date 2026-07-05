@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Sheets — The Federated Republic</title>
+  <meta name="description" content="Twelve one-page visual guides to how the constitution actually works — the dual executive, the courts, the Monitors, elections, rights, the budget, and more. Plain-language reference sheets, each a single page.">
+  <meta property="og:title" content="Quick Sheets — The Federated Republic">
+  <meta property="og:description" content="Twelve one-page visual guides to how the constitution actually works. The dual executive, courts, Monitors, elections, rights, the budget, and more.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/quicksheets.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Quick Sheets — The Federated Republic">
+  <meta name="twitter:description" content="Twelve one-page visual guides to how the constitution actually works.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-header{background:linear-gradient(135deg,var(--navy2),var(--navy));color:var(--cream);padding:5.5rem 2rem 3rem}
+    .page-header-inner{max-width:1000px;margin:0 auto}
+    .page-header .eyebrow{font-family:'JetBrains Mono',monospace;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
+    .page-header h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.1;margin:0 0 1rem}
+    .page-header p{font-family:'Jost',sans-serif;font-size:1.02rem;line-height:1.7;color:rgba(245,240,232,.82);max-width:40rem;margin:0}
+    .qs-main{max-width:1000px;margin:0 auto;padding:3rem 2rem 5rem}
+    .qs-group-label{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);margin:2.2rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+    .qs-group-label:first-of-type{margin-top:0}
+    .qs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+    .qs-card{display:block;background:var(--white,#fff);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.3rem;text-decoration:none;color:inherit;transition:border-color .15s,transform .1s,box-shadow .15s}
+    .qs-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 18px rgba(27,42,74,.08)}
+    .qs-card .qs-ref{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:.45rem}
+    .qs-card .qs-name{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;color:var(--navy);line-height:1.15;display:block;margin-bottom:.4rem}
+    .qs-card .qs-desc{font-family:'Jost',sans-serif;font-size:.86rem;line-height:1.55;color:var(--muted);display:block}
+    .qs-card .qs-open{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:block;margin-top:.7rem}
+    .qs-intro{font-family:'Jost',sans-serif;font-size:.92rem;color:var(--muted);line-height:1.65;max-width:44rem;margin:0 0 2.2rem}
+    .qs-intro a{color:var(--gold2)}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+    <div class="nav-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="quicksheets.html" class="active">Quick Sheets</a>
+      <a href="torenthia.html">The World</a>
+      <a href="diagrams.html">Diagrams</a>
+      <a href="sources.html">Sources</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="quicksheets.html">Quick Sheets</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="survey.html">So You Want a Constitution?</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a href="contact.html">Contact</a>
+    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+  </div>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="eyebrow">One Page Each</span>
+      <h1>Quick Sheets</h1>
+      <p>Twelve plain-language visual guides to how the constitution actually works — one page apiece. Each distills a whole area of the document into what you'd want on a single sheet: the dual executive, the courts, the Monitors, elections, rights, the budget, and more.</p>
+    </div>
+  </div>
+
+  <main class="qs-main" id="main-content">
+    <p class="qs-intro">These are companions to the <a href="annotated.html">Annotated Edition</a> — where each sheet is also linked from the article it summarizes — and to the <a href="scenarios.html">Scenario Library</a>, which shows the same mechanisms under pressure. Every sheet is printable and self-contained.</p>
+
+    <div class="qs-group-label">The Branches</div>
+    <div class="qs-grid">
+      <a href="quicksheet-article-2.html" class="qs-card">
+        <span class="qs-ref">Article II · The Executive</span>
+        <span class="qs-name">The Dual Executive</span>
+        <span class="qs-desc">The Legat Consul and Civic Consul domains side by side, both legislative vetoes compared, and how a divided executive is meant to hold together.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-article-3.html" class="qs-card">
+        <span class="qs-ref">Article III · The Legislature</span>
+        <span class="qs-name">Assembly &amp; Senate</span>
+        <span class="qs-desc">How a bill passes, what makes the two chambers different, and the Senate's distinct ratification and confirmation powers.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-judiciary.html" class="qs-card">
+        <span class="qs-ref">The Courts</span>
+        <span class="qs-name">The Judiciary</span>
+        <span class="qs-desc">One pool, two destinations: how the Republic's judges are selected, and what happens when a Supreme Court seat opens unexpectedly.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-monitors.html" class="qs-card">
+        <span class="qs-ref">Article IX · Oversight</span>
+        <span class="qs-name">The Monitors</span>
+        <span class="qs-desc">Three watchdogs, each chosen by someone other than the body it watches. How the LM, EM, and JM are selected, cross-audited, and replaced.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+    </div>
+
+    <div class="qs-group-label">The People &amp; the Vote</div>
+    <div class="qs-grid">
+      <a href="quicksheet-elections.html" class="qs-card">
+        <span class="qs-ref">Elections</span>
+        <span class="qs-name">Electing the Executive</span>
+        <span class="qs-desc">How the Legat Consul is actually chosen: the dual test, the 60% waiver, the runoff, the public lot, and the election calendar.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-nvs.html" class="qs-card">
+        <span class="qs-ref">The Voting System</span>
+        <span class="qs-name">The Machinery Under the Vote</span>
+        <span class="qs-desc">Two independent panels and a voting system that must be secret, auditable, and resilient at once — plus how credentials work.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-amendments.html" class="qs-card">
+        <span class="qs-ref">Change</span>
+        <span class="qs-name">Referendum &amp; Amendment</span>
+        <span class="qs-desc">How the people legislate directly and how the constitution changes itself: the referendum, the citizen initiative, and the two amendment paths.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-rights.html" class="qs-card">
+        <span class="qs-ref">Article I · Rights</span>
+        <span class="qs-name">The Rights Floor</span>
+        <span class="qs-desc">The six absolute rights no emergency can breach, and the sovereignty presumption that puts the burden on government.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+    </div>
+
+    <div class="qs-group-label">Territory, Money &amp; Accountability</div>
+    <div class="qs-grid">
+      <a href="quicksheet-states.html" class="qs-card">
+        <span class="qs-ref">States &amp; Territories</span>
+        <span class="qs-name">Joining, Rising, Leaving</span>
+        <span class="qs-desc">How a place joins, rises, falls, or leaves: the Statehood Audit with no political vote, Provisional status, and voluntary exit.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-immigration.html" class="qs-card">
+        <span class="qs-ref">Residency &amp; Asylum</span>
+        <span class="qs-name">Immigration</span>
+        <span class="qs-desc">The two-stage residency system, the separate asylum track that begins at filing, and the credential the executive cannot block.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-fiscal.html" class="qs-card">
+        <span class="qs-ref">Article XII · Money</span>
+        <span class="qs-name">The Fiscal System</span>
+        <span class="qs-desc">Where the money comes from and where it can go: the Assembly-originated budget, dual-domain proposals, and the independent Monetary Authority.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+      <a href="quicksheet-recall-removal.html" class="qs-card">
+        <span class="qs-ref">Leaving Office</span>
+        <span class="qs-name">Recall &amp; Removal</span>
+        <span class="qs-desc">Every way a constitutional officer leaves office before their term ends — seven distinct mechanisms, one guide.</span>
+        <span class="qs-open">Open sheet →</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-links">
+      <a href="annotated.html">Annotated Edition</a>
+      <a href="scenarios.html">Scenarios</a>
+      <a href="quicksheets.html">Quick Sheets</a>
+      <a href="torenthia.html">The World</a>
+      <a href="constitutional-history.html">Constitutional History</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="sources.html">Sources</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;·&nbsp; A theoretical project, not the law of any existing nation</span>
+  </footer>
+  <script>
+  function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+  document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About the AI Features — The Federated Republic</title>
+<meta name="description" content="How this site uses AI, which models run each feature, who operates them, and what happens to your input. The site's developers do not collect or store your responses; a commercial AI provider processes them under its own policies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --blue:#1B4A7A; --bluelight:#dde9f3; --blueborder:#a9c3da;
+  }
+  *{box-sizing:border-box}
+  .ai-hero{background:linear-gradient(135deg,var(--navy2),var(--navy));padding:5.5rem 1.5rem 3rem;color:#f5f0e8}
+  .ai-hero-inner{max-width:720px;margin:0 auto}
+  .ai-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+  .ai-hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.1rem,5.5vw,3.1rem);line-height:1.12;margin:0 0 1rem}
+  .ai-hero p{font-family:'Jost',sans-serif;font-size:1.05rem;line-height:1.7;color:rgba(245,240,232,.82);max-width:38rem;margin:0}
+  .ai-main{max-width:720px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  .ai-section{margin-bottom:2.6rem}
+  .ai-section h2{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:0 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--navy)}
+  .ai-section p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.75;color:var(--text);margin:0 0 1rem}
+  .ai-section p strong{color:var(--navy);font-weight:600}
+  .ai-lead{font-family:'Cormorant Garamond',serif!important;font-style:italic;font-size:1.2rem!important;color:var(--navy)!important;line-height:1.55!important}
+
+  .ai-two-kinds{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+  .ai-kind{border:1.5px solid var(--border);border-radius:8px;padding:1.1rem 1.2rem;background:var(--white)}
+  .ai-kind.interp{background:var(--bluelight);border-color:var(--blueborder)}
+  .ai-kind h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.15rem;color:var(--navy);margin:0 0 .4rem}
+  .ai-kind.interp h3{color:var(--blue)}
+  .ai-kind p{font-size:.88rem;line-height:1.6;color:var(--muted);margin:0}
+
+  .ai-table{border:1.5px solid var(--border);border-radius:8px;overflow:hidden;margin:1.2rem 0}
+  .ai-row{display:grid;grid-template-columns:1fr 1.3fr;gap:0;border-bottom:1px solid var(--border)}
+  .ai-row:last-child{border-bottom:none}
+  .ai-row>div{padding:.85rem 1.1rem}
+  .ai-row-head{background:var(--cream2);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center}
+  .ai-feat{font-family:'Jost',sans-serif}
+  .ai-feat .n{display:block;font-weight:600;color:var(--navy);font-size:.96rem}
+  .ai-feat .m{display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--muted);margin-top:.2rem;letter-spacing:.02em}
+  .ai-feat .d{display:block;font-size:.85rem;color:var(--muted);line-height:1.5;margin-top:.35rem}
+
+  .ai-callout{background:var(--cream2);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1.1rem 1.3rem;margin:1.2rem 0}
+  .ai-callout p{margin:0;font-size:.95rem;line-height:1.7}
+  .ai-callout p+p{margin-top:.7rem}
+
+  .ai-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+  .ai-link-btn{font-family:'Jost',sans-serif;font-weight:500;font-size:.9rem;color:var(--navy);background:none;border:1.5px solid var(--border);border-radius:6px;padding:.65rem 1.2rem;text-decoration:none;transition:border-color .15s,color .15s;display:inline-flex;align-items:center;gap:.4rem}
+  .ai-link-btn:hover{border-color:var(--gold2);color:var(--gold2)}
+  .ai-link-btn.primary{background:var(--gold);border-color:var(--gold);color:var(--navy2)}
+  .ai-link-btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--navy2)}
+  .ai-external::after{content:"↗";font-size:.75em;opacity:.7}
+
+  .ai-backlink{display:inline-block;margin-top:1rem;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2);text-decoration:none}
+  .ai-backlink:hover{color:var(--navy)}
+  @media(max-width:600px){.ai-two-kinds{grid-template-columns:1fr}.ai-row{grid-template-columns:1fr}.ai-row-head{display:none}}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="quicksheets.html">Quick Sheets</a>
+    <a href="torenthia.html">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="quicksheets.html">Quick Sheets</a>
+  <a href="torenthia.html">The World</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="survey.html">So You Want a Constitution?</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+
+<div class="ai-hero">
+  <div class="ai-hero-inner">
+    <div class="ai-eyebrow">Transparency</div>
+    <h1>About the AI features</h1>
+    <p>A few features on this site use artificial intelligence. Here is exactly what they do, which models run them, who operates those models, and what happens to what you type. No surprises.</p>
+  </div>
+</div>
+
+<main id="main-content" class="ai-main">
+
+  <div class="ai-section">
+    <p class="ai-lead">Two very different kinds of AI live on this site — and the difference matters.</p>
+    <div class="ai-two-kinds">
+      <div class="ai-kind">
+        <h3>Retrieval</h3>
+        <p>Most AI here just fetches and organizes what already exists — pointing you to the right provision or scenario. It's an automated table of contents. It doesn't form opinions.</p>
+      </div>
+      <div class="ai-kind interp">
+        <h3>Interpretation</h3>
+        <p>One feature — the questionnaire — is different. It reads your answers and offers a response: a reading of what kind of government those answers describe. That's interpretation, not lookup, and it deserves to be flagged plainly.</p>
+      </div>
+    </div>
+    <p>When you see <strong>AI Feature*</strong> with an asterisk, it points here. We'd rather over-explain than have you wonder.</p>
+  </div>
+
+  <div class="ai-section">
+    <h2>What each feature does, and which model runs it</h2>
+    <div class="ai-table">
+      <div class="ai-row">
+        <div class="ai-row-head">Feature</div>
+        <div class="ai-row-head">What it does</div>
+      </div>
+      <div class="ai-row">
+        <div class="ai-feat"><span class="n">Provision Annotator</span><span class="m">Claude Haiku 4.5 · Anthropic</span></div>
+        <div class="ai-feat"><span class="d">Explains the design rationale behind a specific provision, drawn from the constitution's own text. Retrieval and explanation — it doesn't judge you or anyone.</span></div>
+      </div>
+      <div class="ai-row">
+        <div class="ai-feat"><span class="n">Scenario Navigator</span><span class="m">Claude Sonnet 4.6 · Anthropic</span></div>
+        <div class="ai-feat"><span class="d">Suggests which scenarios and provisions match a question you ask. A recommendation engine — it points, it doesn't opine.</span></div>
+      </div>
+      <div class="ai-row">
+        <div class="ai-feat"><span class="n">Government Questionnaire</span><span class="m">Claude · Anthropic</span></div>
+        <div class="ai-feat"><span class="d">Reads your answers to the survey and writes a short response describing the kind of government those answers point toward. This is the interpretive one.</span></div>
+      </div>
+    </div>
+    <p>All of these run on <strong>Claude</strong>, a family of AI models built and operated by <strong>Anthropic</strong>, a commercial company. When a feature runs, the text it needs is sent to Anthropic's systems, processed, and the response is returned to you.</p>
+  </div>
+
+  <div class="ai-section">
+    <h2>The questionnaire evaluates your answers — not you</h2>
+    <div class="ai-callout">
+      <p>The result at the end of the questionnaire is <strong>a response to the answers you selected</strong>, nothing more. It is not a judgment of your beliefs, your character, or your politics.</p>
+      <p>You might pick answers from across the spectrum of political thought, or out of curiosity, or to see what happens — and you'd likely answer differently if you took it again. That's expected. The result reads the answers on the table in that one sitting; it doesn't claim to know you. It's one reasonable interpretation among many, offered to spark thought, not to settle anything.</p>
+    </div>
+  </div>
+
+  <div class="ai-section">
+    <h2>What happens to what you type</h2>
+    <p><strong>This site's developers do not collect, store, log, or sell your responses.</strong> There is no database of answers here, no analytics on what you choose, and no interest in it. Your questionnaire answers exist in your browser for the length of your session and are gone when you close the tab.</p>
+    <p>However — and this is the honest part — the AI features can't work without sending your input to <strong>Anthropic</strong>, the company that operates the Claude models. That processing happens under <strong>Anthropic's own privacy and usage policies, not ours</strong>. We can point you to those policies, but we don't control them, and we can't make promises on Anthropic's behalf. If how your input is handled by the model provider matters to you, please read their policy before using the interpretive feature.</p>
+    <div class="ai-links">
+      <a class="ai-link-btn primary ai-external" href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener noreferrer">Anthropic's Privacy Policy</a>
+      <a class="ai-link-btn ai-external" href="https://www.anthropic.com/legal/consumer-terms" target="_blank" rel="noopener noreferrer">Anthropic's Usage Terms</a>
+      <a class="ai-link-btn" href="contact.html">Contact this site</a>
+    </div>
+  </div>
+
+  <div class="ai-section">
+    <h2>The short version</h2>
+    <p>The site uses Claude, made by Anthropic, for a few features — mostly to help you find things, and once to offer a reading of your questionnaire answers. We keep none of your data. Anthropic processes what you type under its own policies. And the questionnaire result is a response to your answers, not a verdict on you. That's the whole story.</p>
+    <a class="ai-backlink" href="survey.html">← Back to the questionnaire</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+  <div class="footer-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="quicksheets.html">Quick Sheets</a>
+    <a href="torenthia.html">The World</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="sources.html">Sources</a>
+      <a href="survey.html">Take the Questionnaire</a>
+  </div>
+  <span class="footer-note">A constitutional framework built from first principles &nbsp;·&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+<script>
+function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+</script>
+</body>
+</html>
