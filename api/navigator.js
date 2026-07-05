@@ -142,6 +142,7 @@ const SCENARIOS = [
   {title:'The Referendum',file:'scenario-the-referendum.html',kw:['independence','referendum','irrevocable','state','elections panel','nrs','§15.9','§2.14']},
   {title:'The Restoration',file:'scenario-the-restoration.html',kw:['statehood','restoration','provisional','clean audit','automatic','devolution','§15.1','§15.2','§15.3']},
   {title:'The Vote',file:'scenario-the-vote.html',kw:['suspensive veto','cc','tabled','senate','2/3','override','bill lapses','§2.7','§2.6']},
+  {title:'The Three Recusals',file:'scenario-the-three-recusals.html',kw:['conflict of interest','recusal','financial disclosure','ethics','monitor general','procurement','§12.4','§12.4.b','§12.4.c','§9.14','voidable','gift']},
 ];
 
 const CORS = {
