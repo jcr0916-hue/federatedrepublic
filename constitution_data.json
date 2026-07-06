@@ -116,7 +116,12 @@
 "num": "§1.21",
 "name": "Non-Refoulement",
 "text": "No person within the Republic's jurisdiction may be returned, expelled, or extradited to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the nature of the receiving territory's government. This right is non-derogable under §1.19.b."
-}
+},
+    {
+      "num": "§1.22",
+      "name": "Official Capacity Protection",
+      "text": "Constitutional officers and persons acting within the authority of a constitutional office in the performance of official functions hold protection from civil proceedings arising from those official acts. This protection does not extend to criminal conduct, acts performed outside official capacity or authority, or acts that violate any provision of this constitution. Nothing in this provision bars legal remedies otherwise available under this constitution or statute."
+    }
 ]
 },
 {
@@ -260,7 +265,7 @@
 {
 "num": "§3.8",
 "name": "Legislative Oversight",
-"text": "All three Monitors have full access to legislative records, committee deliberations, voting records, and draft legislation; the Legislature may not withhold records from the Monitors. The LM publishes a constitutional compliance analysis of any enacted law during the legislative review period; members may request LM analysis of any bill at any stage; the LM does not initiate pre-enactment review on its own motion. Standing committees are mandated for constitutionally assigned functions and may not be abolished while they hold a constitutional mandate. Legislative privilege protects members from civil proceedings arising from acts performed in their legislative capacity but does not extend to criminal conduct or acts the LM has assessed as constitutional breaches."
+"text": "All three Monitors have full access to legislative records, committee deliberations, voting records, and draft legislation; the Legislature may not withhold records from the Monitors. The LM publishes a constitutional compliance analysis of any enacted law during the legislative review period; members may request LM analysis of any bill at any stage; the LM does not initiate pre-enactment review on its own motion. Standing committees are mandated for constitutionally assigned functions and may not be abolished while they hold a constitutional mandate. Legislative privilege protects members from civil proceedings arising from acts performed in their legislative capacity consistent with §1.22; it does not extend to criminal conduct or acts the LM has assessed as constitutional breaches."
 },
 {
 "num": "§3.9",
@@ -431,6 +436,11 @@
 "num": "§8.3",
 "name": "Public Spectrum Access for Campaigns",
 "text": "Licensees operating on public broadcast spectrum — including television, radio, and licensed carriers of automated political communications — shall provide equal free access to qualified candidates during the federal electoral period. The terms and quantity of access are defined by statute. The Elections Panel certifies compliance and publishes findings to the NRS."
+},
+{
+  "num": "§8.4",
+  "name": "Public Campaign Financing",
+  "text": "The Legislature shall by statute establish a public campaign financing system available to all qualified candidates for federal office on equal terms. The system must provide a genuine alternative to private fundraising; no candidate may be structurally disadvantaged by choosing to participate. The Elections Panel administers the system and publishes annual compliance findings to the NRS."
 }
 ]
 },

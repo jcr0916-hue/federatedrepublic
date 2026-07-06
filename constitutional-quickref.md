@@ -1,5 +1,5 @@
 # Federated Republic Constitution — Quick Reference
-**158 provisions · 20 Articles · For rapid consultation**
+**160 provisions · 20 Articles · For rapid consultation**
 *Use this first. Go to annotated.html for precise language.*
 
 ---
@@ -155,6 +155,16 @@
 - No person returned where they face genuine risk of persecution, torture, or death
 - Applies regardless of status or conduct
 
+**§1.21 — Non-Refoulement** *(non-derogable)*
+- No person returned where they face genuine risk of persecution, torture, or death
+- Applies regardless of status or conduct
+
+**§1.22 — Official Capacity Protection**
+- Constitutional officers and persons acting within authority of a constitutional office hold protection from civil proceedings arising from official acts
+- Does not extend to: criminal conduct, acts outside official capacity or authority, acts that violate any provision of this constitution
+- Civil servants covered to extent they act within the authority of the constitutional office they serve under (consistent with §2.8 Duty of Refusal)
+- Nothing bars legal remedies otherwise available under this constitution or statute
+
 ---
 
 ## ARTICLE II — THE DUAL EXECUTIVE
@@ -261,12 +271,17 @@
 
 ## ARTICLE III — THE LEGISLATURE
 
-**§3.1 — The Assembly**
+**§3.1 — The Legislature**
+- Legislature comprises the Assembly and the Senate
+- All legislation originates in the Assembly
+- Senate must act on every Assembly-passed bill within 90 days; inaction triggers deemed approval
+- Senate may extend review period for any bill by one additional period not to exceed 30 days, by majority of full seated membership, with stated cause published to NRS; no further extension; deemed approval applies at expiry
+- Neither chamber may indefinitely delay business assigned to it by this constitution
+
+**§3.2 — The Assembly**
 - Lower chamber; proportional representation
 - 2-year terms
 - Members capped at 6 consecutive terms (12 years) before cooling-off cycle
-
-**§3.2 — Assembly Operations**
 - Member financial disclosures: consolidated to §12.4 (route: LM, per respective-Monitor rule)
 - Expulsion by 2/3 of full seated membership; published to NRS; effective immediately
 - State recall mechanism: must be punitive or political process; must not violate Constitution; final decision by State legislature or eligible voters; no executive/admin/court recall alone; recalled seat treated as vacant
@@ -303,9 +318,12 @@
 - Ordinary statute: simple majority of both chambers
 - Budget: same; failure triggers continuity mechanism
 
-**§3.8 — Legislative Conduct**
-- Legislative conduct breach assessment by LM
-- EM audits annually for delegation compliance
+**§3.8 — Legislative Oversight**
+- All three Monitors have full access to legislative records; Legislature may not withhold records from Monitors
+- LM publishes constitutional compliance analysis of enacted laws; members may request LM analysis at any stage
+- Standing committees mandated for constitutionally assigned functions; cannot be abolished while holding a constitutional mandate
+- Legislative privilege protects members from civil proceedings arising from acts performed in their legislative capacity consistent with §1.22; does not extend to criminal conduct or LM-assessed constitutional breaches
+
 
 **§3.9 — Independent Agencies**
 - Legislature may establish independent agencies with defined mandate
@@ -476,12 +494,25 @@
 - Published to NRS on disclosure schedule defined by statute
 - No anonymous electoral finance
 
-**§8.2 — Public Campaign Financing**
-- Public financing system available to all registered candidates
-- Equal baseline funding
+**§8.2 — Campaign Conduct**
+- Candidates must comply with Elections Panel conduct standards
+- Prohibited: impersonating other candidates, vote suppression, interference with electoral administration
+- Campaign communications must clearly identify their sponsor
+- Foreign government/national/entity election interference is a constitutional violation; knowing acceptance = disqualification
+- Constitutional officeholders standing for election must separate official functions from campaign activity
+- This constitution does not bar private civil litigation arising from campaign communications
 
-**§8.3 — Enforcement**
-- Elections Panel monitors and enforces compliance
+**§8.3 — Public Spectrum Access for Campaigns**
+- Licensees operating on public broadcast spectrum must provide equal free access to qualified candidates during the federal electoral period
+- Terms and quantity of access defined by statute
+- Elections Panel certifies compliance and publishes findings to NRS
+
+§8.4 — Public Campaign Financing
+
+Legislature must establish public financing system by statute
+Available to all qualified candidates on equal terms
+Must provide genuine alternative to private fundraising; no candidate structurally disadvantaged by participating
+Elections Panel administers; annual compliance findings published to NRS
 
 ---
 
@@ -965,6 +996,7 @@
 | Action | Threshold |
 |--------|-----------|
 | Ordinary legislation | Simple majority both chambers |
+| Senate bill extension | Majority of full seated Senate; one extension only; max 30 days; stated cause published to NRS |
 | Treaty ratification | 2/3 Senate |
 | Trade agreement | Simple majority both chambers |
 | LC veto override | Simple majority re-passage |
