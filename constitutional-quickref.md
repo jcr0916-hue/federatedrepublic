@@ -6,7 +6,7 @@
 
 ## THEMATIC INDEX
 
-**Elections & Terms:** §2.1, §2.6, §3.1, §3.2, §7.1–7.3, §8.1–8.3, §9.2–9.3, §11.1–11.3
+**Elections & Terms:** §2.1, §2.6, §3.1, §3.2, §7.1–7.3, §8.1–8.4, §9.2–9.3, §11.1–11.3
 **Emergency Powers:** §1.19, §1.19.a–f, §2.2, §4.5
 **Territory & Statehood:** §15.1–15.9, §16.7, §19.6
 **Indigenous Sovereignty:** §16.1–16.7.a
@@ -507,9 +507,10 @@
 - Terms and quantity of access defined by statute
 - Elections Panel certifies compliance and publishes findings to NRS
 
-§8.4 — Public Campaign Financing
-
-Legislature must establish public financing system by statute
+**§8.4 — Public Campaign Financing**
+- Legislature must establish, by statute, a public campaign financing system available to all qualified federal candidates on equal terms
+- Must provide a genuine alternative to private fundraising; no participant structurally disadvantaged
+- Elections Panel administers and publishes annual compliance findings to NRS
 Available to all qualified candidates on equal terms
 Must provide genuine alternative to private fundraising; no candidate structurally disadvantaged by participating
 Elections Panel administers; annual compliance findings published to NRS
