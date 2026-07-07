@@ -501,6 +501,8 @@
 - Foreign government/national/entity election interference is a constitutional violation; knowing acceptance = disqualification
 - Constitutional officeholders standing for election must separate official functions from campaign activity
 - This constitution does not bar private civil litigation arising from campaign communications
+- Elections Panel publishes violation findings (of the enumerated prohibitions) to NRS; Legislature defines sanctions by statute
+- Enforcement does NOT reach the truthfulness/content of campaign speech — that stays a civil matter only (see above)
 
 **§8.3 — Public Spectrum Access for Campaigns**
 - Licensees operating on public broadcast spectrum must provide equal free access to qualified candidates during the federal electoral period
@@ -510,10 +512,8 @@
 **§8.4 — Public Campaign Financing**
 - Legislature must establish, by statute, a public campaign financing system available to all qualified federal candidates on equal terms
 - Must provide a genuine alternative to private fundraising; no participant structurally disadvantaged
+- Funding floor: no less than the average total campaign expenditure recorded in the NRS for that office (or a comparable office if no prior cycle) across the preceding election cycle
 - Elections Panel administers and publishes annual compliance findings to NRS
-Available to all qualified candidates on equal terms
-Must provide genuine alternative to private fundraising; no candidate structurally disadvantaged by participating
-Elections Panel administers; annual compliance findings published to NRS
 
 ---
 
