@@ -1,5 +1,5 @@
 // Vercel Serverless Function: Constitutional Annotation
-// Haiku generates design rationale for any provision on demand
+// Sonnet generates design rationale for any provision on demand
 
 const path = require('path');
 
@@ -71,8 +71,8 @@ module.exports = async (req, res) => {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 400,
+        model: 'claude-sonnet-4-6',
+        max_tokens: 700,
         system: SYSTEM + getConstitutionText(),
         messages: [{
           role: 'user',
