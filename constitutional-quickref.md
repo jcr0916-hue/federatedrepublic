@@ -570,9 +570,21 @@
 
 **§9.6 — Monitor Operations**
 - Every finding published to NRS permanently, free of charge; no suppression, delay, classification, or alteration; reports permanently exempt from classification
-- Critical Failure finding → Legislature must publish remediation plan (failure = compliance breach)
 - Any staff member may publish a minority report directly to NRS; no discipline for doing so
 - All three jointly publish an annual State of the Republic report; unrestricted access to records/personnel/systems within mandate (obstruction = breach)
+
+**§9.6.a — Compliance Standards and Findings**
+- JMC defines and publishes the Pass/Fail compliance standard for each audit category — per-aspect, not whole-entity
+- **No published standard, no finding** — a Monitor cannot issue a Pass/Fail for a category the JMC hasn't defined yet; the audit itself still happens, just produces no determination until the standard exists. Self-enforcing: forecloses any Assembly-fallback (the Assembly is itself an audited body) and makes JMC inaction its own visible failure
+- May adopt one standard or several tailored to distinct audit categories; both the criteria AND the methodology behind them are published in advance
+- Multiple standards → every finding names which standard applied; standard changes are prospective only — **and creating a brand-new category for a subject with a pending finding is covered by the same rule**, closing the carve-out-a-lenient-category workaround
+- Each Fail reported to the body responsible for that aspect, which publishes its own account — information only, no mandated remedy or timeline
+- JMC deadlock → each Monitor General's proposed standard published individually under §9.11 dissent procedure
+
+**§9.6.b — Agency Accountability**
+- Every Legislature-created agency is bound both by what the constitution specifies for it AND by whatever mandate the Legislature has assigned by statute
+- A Fail reported under §9.6.a is not a substitute for the responsible body's own independent duty to fix what's within its operational control — publishing a hollow "report" doesn't discharge that separate obligation
+- General principle, not MA-specific — applies to any agency the Legislature creates
 
 **§9.10 — Monitor Minimum Funding Guarantee**
 - Appropriation for each Monitor, Elections Panel, and NRS Panel may not fall below prior-year inflation-adjusted level without **2/3 of both chambers**
@@ -657,13 +669,22 @@
 
 ## ARTICLE XII — THE SOCIAL STATE
 
-**§12.1 — Social State Obligations**
-- Every Inhabitant entitled to: healthcare, housing support, education (§1.17), social insurance, emergency assistance
-- EM audits compliance; publishes annually
-- MA certifies whether funding mechanism is operating
+**§12.1 — The Social State and Monetary Authority**
+- Every Inhabitant entitled to: universally accessible healthcare insurance, social assistance sufficient for basic material conditions, free compulsory education
+- Legislature establishes the framework for each system by statute
 
-**§12.1.a — Social State Access in Territories**
-- Territories access social state systems under same terms as States
+**§12.1.a — The Monetary Authority**
+- Legislature must establish the MA as an independent agency under §3.9 — monetary policy, currency issuance, fiscal integrity certification
+- MA has exclusive currency-issuance authority; no State/Territory/other body may issue competing legal tender
+- Legislature may not define MA independence standards in a way that compromises its certification credibility
+- EM audits MA operations and independence annually, publishes to NRS
+
+**§12.1.b — Monetary Authority Reporting**
+- MA publishes a State of the Economy report to the **Assembly, Legat Consul, and Civic Consul** — no less than semi-annually (statute may require more often)
+- Each report includes the MA's account of relevant §9.1.b EM findings and any applicable §9.6.a compliance findings
+- MA may publish additional reports any time circumstances warrant, same recipients
+- Where **the publishing Monitor identifies** a Fail as relevant to the MA's mandate, MA must submit an addressing report to all three recipients within **30 days**, published to NRS — relevance is the publishing Monitor's call, not an open dispute
+- Submitting that report discharges the MA's §12.1.b obligation — no mandated remedy plan or timeline; further action is the Legislature's call. Per §9.6.b, this does NOT discharge the MA's own separate duty to fix whatever is within its own operational control
 
 **§12.2 — The National Revenue Fund**
 - **Budget originates in the Assembly**; each Consul submits a domain budget proposal (NRS-published) by statutory deadline — default **120 days** before fiscal year; Assembly gives proposals **due consideration**, not bound; Consul failure to submit cannot delay process (published to NRS, Assembly proceeds)
@@ -715,9 +736,9 @@
 - Legislature may establish uniform commerce standards
 
 **§12.8 — Fiscal Equalization**
-- Following an EM failure finding, MA must submit a remedy plan to the CC and Speaker of each chamber within 30 days, published to the NRS
 - Legislature must establish mechanism ensuring every State and Territory has fiscal capacity to fulfill social state and Article I obligations
 - EM certifies annually; Legislature must respond within 90 days of EM finding of failure
+- MA's response duty for a relevant Fail now runs through §12.1.b, not this section
 
 ---
 
