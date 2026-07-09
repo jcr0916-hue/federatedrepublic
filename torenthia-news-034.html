@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somebody Explain the Rate to Me — The Dorven Ledger</title>
+  <meta name="description" content="A small Orath paper's editor grumbles about credit rates ahead of planting season, gives Lake Varda one dismissive paragraph, and wants to know why nobody elected the people setting his interest rate. (They didn't. That's the point.)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .ledger-masthead{background:#f2eee2;border-bottom:3px double #3a3428;padding:1.1rem 2rem}
+    .ledger-inner{max-width:680px;margin:0 auto}
+    .ledger-top{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#6a6252;padding-bottom:.6rem;margin-bottom:.6rem;border-bottom:1px solid #d8cfb8}
+    .ledger-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(1.8rem,4.5vw,2.6rem);color:#2a2416;text-align:center;letter-spacing:.03em}
+    .ledger-tagline{font-family:'Jost',sans-serif;font-size:.78rem;color:#6a6252;text-align:center;margin-top:.2rem;font-style:italic}
+    .article-wrap{max-width:640px;margin:0 auto;padding:2.5rem 2rem 5rem}
+    .article-section{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#8a5a2a;margin-bottom:.8rem;padding-bottom:.55rem;border-bottom:2px solid #3a3428}
+    .article-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.6vw,2.15rem);font-weight:700;color:#2a2416;line-height:1.2;margin-bottom:.65rem}
+    .article-deck{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#5a5040;line-height:1.6;margin-bottom:1.1rem}
+    .article-byline{display:flex;flex-wrap:wrap;gap:.7rem;align-items:baseline;padding:.65rem 0;border-top:1px solid #d8cfb8;border-bottom:1px solid #d8cfb8;margin-bottom:1.5rem}
+    .byline-author{font-family:'Jost',sans-serif;font-size:.8rem;font-weight:600;color:#2a2416}
+    .byline-role{font-family:'Jost',sans-serif;font-size:.76rem;color:#6a6252}
+    .byline-sep{color:#d8cfb8}
+    .byline-date{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:#6a6252;letter-spacing:.05em;margin-left:auto}
+    .article-body p{font-family:'Georgia',serif;font-size:.98rem;line-height:1.85;color:#221e16;margin-bottom:1.3rem}
+    .article-body p:first-child::first-letter{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:#8a5a2a;float:left;line-height:.8;margin:.05em .1em 0 0}
+    .article-rule{border:none;border-top:1px solid #d8cfb8;margin:1.75rem 0}
+    .author-bio{background:#ece6d6;border-top:2px solid #8a5a2a;padding:.9rem 1.1rem;margin-top:2.25rem;font-size:.78rem;color:#6a6252;font-family:'Jost',sans-serif;line-height:1.6}
+    .author-bio strong{color:#2a2416;font-weight:500}
+    .article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;border-top:1px solid #d8cfb8;margin-top:1.4rem}
+    .article-nav a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.1em;color:#8a5a2a;text-decoration:none;text-transform:uppercase}
+    .article-nav a:hover{color:#2a2416}
+    @media(max-width:820px){.ledger-masthead{padding:1rem}.article-wrap{padding:2rem 1rem 4rem}.byline-date{margin-left:0;width:100%}}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
+  <div class="nav-links">
+    <a href="annotated.html">Annotated Edition</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="quicksheets.html">Quick Sheets</a>
+    <a href="torenthia.html" class="active">The World</a>
+    <a href="diagrams.html">Diagrams</a>
+    <a href="constitutional-history.html">Constitutional History</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="annotated.html">Annotated Edition</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="quicksheets.html">Quick Sheets</a>
+  <a href="torenthia.html">The World</a>
+  <a href="diagrams.html">Diagrams</a>
+  <a href="constitutional-history.html">Constitutional History</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="survey.html">So You Want a Constitution?</a>
+  <a href="contact.html">Contact</a>
+  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
+</div>
+<div class="ledger-masthead">
+  <div class="ledger-inner">
+    <div class="ledger-top">
+      <span>Founded Year 4 &middot; Dorven, Orath</span>
+      <span>Year 13 &middot; Month 6</span>
+    </div>
+    <div class="ledger-name">The Dorven Ledger</div>
+    <div class="ledger-tagline">Grain prices, weather, and whatever else Dorven needs to know about</div>
+  </div>
+</div>
+<main id="main-content">
+<div class="article-wrap">
+  <div class="article-section">From the Editor's Desk</div>
+  <h1 class="article-headline">Somebody Explain the Rate to Me</h1>
+  <p class="article-deck">Planting season is six weeks out, the Monetary Authority just tightened credit for the third time this year, and nobody in this office can name a single person who voted for the man making that call. Maybe that's the point. It's still not making it easier to buy seed.</p>
+  <div class="article-byline">
+    <span class="byline-author">Corwin Hale</span>
+    <span class="byline-role">Editor &amp; Publisher</span>
+    <span class="byline-sep">&middot;</span>
+    <span>Dorven</span>
+    <span class="byline-date">Year 13, Month 6</span>
+  </div>
+  <div class="article-body">
+    <p>I will say the obligatory thing first so the letters column doesn't fill up with people accusing me of not saying it: yes, we all saw what happened at Lake Varda, and this paper's sympathies are with the two Korda families who won't get their people back. It is a genuine tragedy and I do not intend to make light of it. I also do not intend to spend four columns on it, because every other paper in the Republic is going to do that for me, and somebody has to write about the thing that is actually going to affect whether the co-op down the road makes payroll through harvest.</p>
+
+    <p>That thing is the Monetary Authority's third rate tightening this year, announced Tuesday with the usual two paragraphs of language about "fiscal integrity certification" that I have read four times and still could not explain to you in a way that would survive a conversation at the feed store. What I can explain is what it does to a farmer in this county who needs an operating loan to buy seed and fertilizer before the ground is workable: it makes that loan cost more, at the exact moment of the year when he has the least room to say no to it. The price of feed corn is up. The price of borrowing to plant feed corn is now also up. Nobody I have spoken to in Dorven thinks these two facts are unrelated to each other, and nobody at the Authority has bothered to come out here and explain why they think it's worth it.</p>
+
+    <p>Here is the part that actually irritates me, and I'll admit it might not be entirely fair. I went and asked our county clerk's office who, exactly, appoints the people who make this call, thinking I'd write a strongly worded letter to whichever Consul was responsible. The answer I got back was that neither Consul appoints them, exactly — the Legislature establishes the Authority as an independent body specifically so that no sitting Consul can lean on it before an election, and the Executive Monitor audits it every year to make sure that independence holds. Which is, I am told, the entire point: an Authority that answered to whoever currently held office would set rates to win votes instead of to keep the currency honest. I understand the logic. I even mostly believe it. It does not change the fact that I have no one to write the strongly worded letter to, and strongly worded letters are most of what this paper has to offer a man staring at a loan rate six weeks before planting.</p>
+
+    <p>I will grant the Authority this much, because fairness costs nothing and this is an editorial, not a eulogy: the money in the co-op's till has been worth the same for as long as anyone here can remember, and my father used to tell me that wasn't always true everywhere, in every place, under every arrangement. Boring currency is apparently a feature and not an accident. I suppose I'm glad someone designed it that way. I would still like it if the boring currency were a little cheaper to borrow this month, and I don't especially care whose job it is to hear that. Somebody ought to.</p>
+  </div>
+  <div class="author-bio"><strong>Corwin Hale</strong> is editor and publisher of The Dorven Ledger, Orath's oldest continuously running weekly.</div>
+  <div class="article-nav">
+    <a href="torenthia-news-033.html">&larr; The Torenthian</a>
+    <a href="torenthia.html">The World &rarr;</a>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-social">
+      <span class="footer-social-label">Follow</span>
+      <a href="https://bsky.app/profile/federatedrepublic.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://x.com/TheFedRepublic" target="_blank" rel="noopener">X</a>
+      <a href="https://www.facebook.com/profile.php?id=61591764057032" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+<script>
+function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+</script>
+</body>
+</html>
