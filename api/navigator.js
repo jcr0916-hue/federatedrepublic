@@ -137,6 +137,8 @@ const SCENARIOS = [
   {title:'The Graduation',file:'scenario-the-graduation.html',kw:['voting','residency','nvs','student','ordinary','individual sovereignty','§1.2','§11.2','ballot']},
   {title:'The Holdout',file:'scenario-the-holdout.html',kw:['sc nomination','senate','refuses vote','day 120','judicial','confirmation','§4.4','holdout']},
   {title:'The Prior Claim',file:'scenario-the-prior-claim.html',kw:['indigenous','prior sovereignty','compact','federal mandate','state','§16.1','§16.2','§15.7','§4.5']},
+  {title:'The Departure',file:'scenario-the-departure.html',kw:['indigenous','associated community','independence','sovereign','withdrawal','§20.4','exit','citizenship']},
+  {title:'The Founding Choice',file:'scenario-the-founding-choice.html',kw:['indigenous','status election','associated community','territory','§16.2','founding','inducement','sovereignty']},
   {title:'The Referendum',file:'scenario-the-referendum.html',kw:['independence','referendum','irrevocable','state','elections panel','nrs','§15.9','§2.14']},
   {title:'The Restoration',file:'scenario-the-restoration.html',kw:['statehood','restoration','provisional','clean audit','automatic','devolution','§15.1','§15.2','§15.3']},
   {title:'The Vote',file:'scenario-the-vote.html',kw:['suspensive veto','cc','tabled','senate','2/3','override','bill lapses','§2.7','§2.6']},

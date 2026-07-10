@@ -125,15 +125,6 @@
 - §1.3 (torture), §1.4 (slavery), §1.11 (habeas), §1.13 (public trial), §1.14 (retroactive law), §1.21 (non-refoulement)
 - No declaration, order, or statute can touch these six
 
-**§1.19.c — Monitor Continuity**
-- All three Monitors operate with full authority throughout any emergency
-- Cannot be suspended or have mandates reduced by emergency declaration
-
-**§1.19.d — Automatic Expiry**
-- Emergency measures lapse automatically at Declaration expiry
-- Legislature may extend once, max 60 days, by 2/3 of full seated membership of both chambers
-- No further extension available
-
 **§1.19.b — No Permanent Emergency**
 - No emergency measure made permanent by legislative act
 - Legislature cannot re-declare within 60 days of expiry
@@ -324,7 +315,6 @@
 - Standing committees mandated for constitutionally assigned functions; cannot be abolished while holding a constitutional mandate
 - Legislative privilege protects members from civil proceedings arising from acts performed in their legislative capacity consistent with §1.22; does not extend to criminal conduct or LM-assessed constitutional breaches
 
-
 **§3.9 — Independent Agencies**
 - Legislature may establish independent agencies with defined mandate
 - Cause required for removal of agency heads
@@ -401,13 +391,6 @@
 - Limited non-recognition grounds: lack of jurisdiction, fraud, or categorically unenforceable acts
 - NRS-published judgments are self-authenticating
 
-**§4.7 — Jury Service**
-- Citizens required to serve when called
-- Compensated by statute
-- Not forced labor under §1.4
-
----
-
 ## ARTICLE V — CITIZENSHIP
 
 **§5.1 — Citizenship**
@@ -416,13 +399,6 @@
 - Full rights (vote, stand for office) at 18
 - Natural-born citizenship cannot be stripped
 - Stateless prevention: citizenship from birth if no other citizenship would apply
-
-**§5.1.a — Naturalization**
-- Continuous residency + clean record (statute-defined period) + civic/constitutional proficiency assessment
-- Alternative: honorable completion of military or civil emergency service
-
-**§5.1.b — Derivative Status**
-- Child born before parent acquired status may receive derivative status within Legislature-defined window
 
 **§5.2 — Legal Resident Rights**
 - Inhabitant = any person within jurisdiction; holds all Article I rights
@@ -487,7 +463,6 @@
 - Applies to: LC first-round threshold (§7.1); SC public confirmation under Senate bypass (§4.4.a); constitutional officer removal by public election (§9.9)
 - Legislature may not raise or lower this threshold without constitutional amendment
 - Does not govern optional referendum (§13.1, simple majority) or citizen initiative (§13.2, 60% with 50% participation)
-
 
 **§8.1 — Disclosure Requirements**
 - All contributions above de minimis must be publicly disclosed
@@ -637,17 +612,6 @@
 - EM reviews; publishes findings when classification approaches constitutional ceiling
 - Temporary only; no permanent withholding (Sunlight Test: ceiling required)
 
-**§10.3.a — EM Classification Review**
-- EM assesses whether classification ground is valid and duration is within ceiling
-
-**§10.4 — NRS Panel**
-- Administers NRS integrity and public access
-
-**§10.5 — Failed Recusal Consequence**
-- If officer fails to recuse when required, action taken is voidable; published to NRS
-
----
-
 ## ARTICLE XI — ELECTIONS PANEL AND NRS PANEL
 
 **§11.1 — NRS Panel and Elections Panel**
@@ -719,7 +683,6 @@
 - Legislature must by statute extend disclosure/recusal duties to federal employees and military in conflict-risk roles (procurement, regulatory, senior civil service)
 - Respective Monitor audits the *administering agency's* systemic compliance, not individual filings — keeps Monitor offices information-only/small, consistent with their design elsewhere
 
-
 **§12.5 — National Endowment**
 - Constitutionally established reserve fund
 - Backstops social state during Severe Revenue Contraction (MA-certified)
@@ -753,20 +716,6 @@
 **§13.2 — Citizen Legislative Initiative**
 - Citizens may propose legislation by petition of 10% of eligible voters
 - Legislature must act or put to referendum within period defined by statute
-
-**§13.4 — Recall Restrictions**
-- No recall in first 12 months or last 12 months of term
-- One recall attempt per officer per term
-
-**§13.5 — Referendum Administration**
-- Elections Panel administers all referenda
-- NRS-verified petition process
-
-**§13.6 — Pressure Prohibition**
-- No official may use public resources to influence referendum outcome
-- Specific pressure prohibition on LC/CC during recall
-
----
 
 ## ARTICLE XIV — MILITARY
 

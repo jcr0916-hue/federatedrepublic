@@ -7,52 +7,45 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Departure — The Federated Republic</title>
-  <meta name="description" content="Year 11. The Alenvari Nation elects Full Sovereign Independence under §16.7(c). The Republic must negotiate a treaty within 24 months covering borders, trade, citizenship, and infrastructure. What happens when 24 months isn't enough?">
-  <meta property="og:title" content="The Departure">
-  <meta property="og:description" content="Year 11. The Alenvari Nation elects Full Sovereign Independence. The Republic has 24 months to negotiate a treaty. The clock is running.">
-  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-departure.html">
+  <meta name="description" content="Year 14. The Vaskeld Nation, an Associated Community since founding, invokes its unconditional right to leave the Republic under §20.4. The exit is absolute — but the disentangling is not. A study in how an unconditional right meets a tangled reality.">
+  <meta property="og:title" content="The Prior Claim">
+  <meta property="og:description" content="A founding State argues it retained pre-Republic sovereignty and should hold a compact-level relationship like indigenous nations. The SC dismantles both arguments — and finds a partial win for the State anyway.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/scenario-the-prior-claim.html">
   <meta property="og:site_name" content="The Federated Republic">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Departure">
-  <meta name="twitter:description" content="Year 11. The Alenvari Nation elects Full Sovereign Independence under §16.7(c). 24 months to negotiate a treaty. What happens if they run out of time?">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <style>
-    .page-wrap{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
-    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
-    .scenario-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem}
-    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--navy);line-height:1.15;margin-bottom:0.75rem}
-    .scenario-premise{font-size:0.95rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:1rem}
-    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.5rem}
-    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;background:var(--navy);color:var(--gold);padding:0.2rem 0.6rem;letter-spacing:0.05em}
-    .scenario-body p{margin-bottom:1.5rem;font-size:1.02rem;line-height:1.9}
-    .scenario-body p:first-of-type::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;float:left;line-height:0.75;margin:0.1em 0.08em 0 0;color:var(--gold)}
-    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
-    .beat{background:rgba(27,42,74,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:2rem 0}
-    .beat-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7A5800;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace}
-    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}
-    .beat p{font-size:0.92rem;color:#3a3530;margin-bottom:0.75rem;line-height:1.75}
+    main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
+    .scenario-meta{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .scenario-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem}
+    .scenario-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+    .scenario-subtitle{font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem}
+    .provisions-tested{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .prov-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px}
+    .scenario-body p{margin-bottom:1.5rem;font-size:1rem;line-height:1.9}
+    .scenario-body h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+    .beat{background:var(--cream);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0}
+    .beat-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem}
+    .beat-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem}
+    .beat p{margin-bottom:0.8rem;font-size:0.92rem;line-height:1.75}
     .beat p:last-child{margin-bottom:0}
-    .nrs-doc{background:#f7f5f0;border:1px solid var(--border);padding:1.25rem 1.5rem;margin:2rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;line-height:1.8;color:var(--navy)}
-    .nrs-doc .nrs-header{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
-    .timeline{margin:2rem 0;border-left:2px solid var(--gold);padding-left:1.5rem}
-    .tl-entry{margin-bottom:1.25rem;position:relative}
-    .tl-entry::before{content:'';position:absolute;left:-1.6rem;top:0.35rem;width:8px;height:8px;border-radius:50%;background:var(--gold)}
-    .tl-month{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem}
-    .tl-event{font-size:0.9rem;color:var(--text);line-height:1.6}
-    .verdict-box{border:2px solid var(--gold);padding:1.5rem 1.75rem;margin:2.5rem 0}
-    .verdict-box p{font-size:0.95rem;margin-bottom:0.75rem;line-height:1.75}
-    .verdict-box p:last-child{margin-bottom:0}
+    .opinion{background:var(--navy);color:white;padding:2rem;margin:2.5rem 0;border-top:3px solid var(--gold)}
+    .opinion-header{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;line-height:1.8}
+    .opinion p{margin-bottom:1rem;font-size:0.92rem;line-height:1.8;color:rgba(245,240,232,0.9);font-family:'Cormorant Garamond',serif;font-size:1rem}
+    .opinion p:last-child{margin-bottom:0}
+    .opinion-cite{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:rgba(201,168,76,0.7);margin-top:1.2rem;letter-spacing:0.08em}
     .scenario-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem}
     .scenario-nav a{text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75}
     .scenario-nav a:hover{opacity:1;color:var(--navy)}
-    @media(max-width:640px){.page-wrap{padding:76px 1.25rem 60px}}
+    @media(max-width:820px){main{padding:76px 1rem 60px}.scenario-title{font-size:1.75rem}.opinion{padding:1.5rem}}
   </style>
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
+
   <nav>
     <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
     <div class="nav-links">
@@ -78,117 +71,78 @@
     <a href="sources.html">Sources</a>
     <a href="glossary.html">Glossary</a>
     <a href="survey.html">So You Want a Constitution?</a>
-    <span class="menu-divider" aria-hidden="true"></span>
     <a href="contact.html">Contact</a>
     <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
   </div>
 
-  <div class="page-wrap" id="main-content">
+    <main id="main-content">
     <div class="scenario-meta">
-      <span class="scenario-tag">Scenario &middot; §16.7 &middot; Indigenous Nation Status &middot; Full Sovereign Independence</span>
+      <span class="scenario-tag">Associated Communities · §20.4 · §20.5 · §5.1 · §16.2 · Sovereign Exit</span>
       <h1 class="scenario-title">The Departure</h1>
-      <p class="scenario-premise">Year 11. The Alenvari Nation — a recognized Article XVI indigenous nation in the Republic's northeast — elects Full Sovereign Independence under §16.7(c). The Republic is constitutionally obligated to negotiate a treaty within 24 months covering borders, trade, citizenship, and infrastructure. The constitution has an extension mechanism. It also has a provisional framework if negotiations fail entirely. Neither outcome is clean.</p>
+      <p class="scenario-subtitle">Year 14. The Vaskeld Nation gives notice that it is leaving the Republic. As an Associated Community, its right to go is unconditional — no vote of the Legislature, no permission, no cause required. What follows is not a fight over whether Vaskeld may leave, but over everything that must be untangled before it can: shared infrastructure, cross-border obligations, and the twelve thousand Vaskeld members who are also, by birth, citizens of the Republic.</p>
       <div class="provisions-tested">
-        <span class="prov-tag">§16.7 Indigenous Nation Status Elections</span>
-        <span class="prov-tag">§16.7.a Status Election Process</span>
-        <span class="prov-tag">§16.1 Acknowledgment of Prior Sovereignty</span>
-        <span class="prov-tag">§2.14 Council of Ministers</span>
-        <span class="prov-tag">§2.1 The Legat Consul — Domain and Term</span>
-        <span class="prov-tag">§2.5 The Civic Consul</span>
-        <span class="prov-tag">§3.6 Treaty Ratification and Withdrawal</span>
+        <span class="prov-tag">§20.4 Associated Community Withdrawal</span>
+        <span class="prov-tag">§20.5 Compact Obligations</span>
+        <span class="prov-tag">§16.2 Founding Status Election</span>
+        <span class="prov-tag">§5.1 Citizenship Continuity</span>
+        <span class="prov-tag">§20.3 Non-Derogable Floor</span>
       </div>
     </div>
 
     <div class="scenario-body">
 
-      <p>The Alenvari Nation had held Article XVI compact status since Year 2 of the Republic. Their territory — 4,200 square kilometers of forested upland in the northeast — had been a compact territory since ratification, the terms negotiated under the Republic's first Legat Consul and ratified without controversy. The compact was functional. The Alenvari operated their own governance, their own courts, their own schools. The Republic maintained a single roads authority at the compact's boundary and honored the land use restrictions within it. For nine years, the relationship worked in the way that good compact relationships work: mostly invisibly.</p>
+      <p>When the Republic was constituted, the Vaskeld Nation faced the choice every recognized indigenous nation faced during the Transition Window under §16.2: default into Associated Community status, or integrate as a Territory with the Statehood pathway open. Vaskeld chose the default. It had governed itself for longer than the Republic had existed, and it wanted the relationship of one sovereign to another — inside a compact, not inside the constitutional structure. For fourteen years that relationship held. Vaskeld sent no members to the Assembly and paid no federal tax; in return it received none of the Republic's social-state guarantees. What crossed the border was defined entirely by the compact: a shared hydroelectric grid, a customs arrangement, mutual recognition of professional credentials, and a standing agreement on emergency response.</p>
 
-      <p>The status election was not, in retrospect, surprising. The Alenvari Nation's governance council had been debating it for three years. A younger cohort of elected council members had argued consistently that compact status — however well administered — still placed the Nation within a constitutional framework it had not chosen, subject to rights guarantees it had not authored and to a judicial system whose ultimate authority it had not consented to. The older cohort was more cautious: independence was a one-way door, and the provisional framework if negotiations failed was an uncertain destination.</p>
+      <p>Then a new Vaskeld council, elected on a platform of full independence, filed a notice of withdrawal.</p>
 
-      <p>The council voted 9-3 in favor of initiating a status election. A community referendum followed the council vote, as the Nation's own governance standards required for major decisions. 74% of participating community members — on 81% participation — chose Full Sovereign Independence.</p>
+      <div class="scenario-section">
+        <h2>The Right That Cannot Be Refused</h2>
+        <p>The first thing the Republic's lawyers established was what they could not do. §20.4 is one of the few provisions in the constitution that grants an unconditional power to a body outside the Republic: an Associated Community may withdraw from its compact relationship by its own governance decision, on twelve months' notice, with no requirement of Republic consent and no cause required. There is no ratification vote. There is no supermajority. There is no reviewing body that can find the withdrawal improper. The Legat Consul cannot veto it and the Senate cannot block it.</p>
 
-      <div class="nrs-doc">
-        <div class="nrs-header">National Record System &mdash; Status Election Publication &mdash; Year 11, Month 3</div>
-        STATUS ELECTION — ALENVARI NATION<br>
-        Article XVI Indigenous Nation Status Election under §16.7<br><br>
-        Elected status: Full Sovereign Independence (§16.7(c))<br>
-        Governance decision: Alenvari Nation Council — 9-3, Year 11 Month 2<br>
-        Community referendum: 74% in favor, 81% participation, Year 11 Month 3<br>
-        This election is irrevocable under §16.7.a.<br><br>
-        The Republic is obligated under §16.7(c) to negotiate a treaty within 24 months covering borders, trade, citizenship, and infrastructure. Negotiations are conducted jointly through the Council of Ministers.<br><br>
-        Independence takes effect upon treaty conclusion, or upon provisional framework activation if no treaty is concluded within the extended period.
+        <p>This is deliberate, and it is the structural expression of §16.1's central claim — that indigenous sovereignty is acknowledged, not granted. A sovereignty the Republic could refuse to release would not be a sovereignty that preceded the Republic; it would be a permission the Republic extended and could revoke. The unconditional exit is what makes the Associated Community a genuine compact between sovereigns rather than a subordinate status dressed up in the language of one.</p>
+
+        <p>So the Republic did not contest the departure. It contested nothing about the departure. The twelve-month clock started on the day Vaskeld's notice was published, and the only question left was what the border would look like when it stopped.</p>
       </div>
 
-      <h2>The Obligation</h2>
+      <div class="scenario-section">
+        <h2>What §20.4 Does Not Resolve</h2>
+        <p>An unconditional right to leave is not an unconditional right to leave <em>on any terms one likes</em>. §20.5 provides that the obligations running between the Republic and an Associated Community are whatever the compact says they are — and a compact does not evaporate the moment one party gives notice. The hydroelectric grid did not stop being shared. The customs arrangement did not lapse. For twelve months, the compact remained in force, and its wind-down terms — not the fact of withdrawal — became the entire substance of the negotiation.</p>
 
-      <p>The constitution's language was clear. "The Republic is obligated to negotiate a treaty within 24 months governing borders, trade, citizenship, and infrastructure." Obligated — not invited, not encouraged. The Republic had no constitutional authority to delay, refuse, or condition the negotiations. §16.7 also specified: "The Republic may not prefer, discourage, or offer inducements toward any option." The status election had occurred. The obligation was active.</p>
+        <p>Three knots had to be untied. The power grid served communities on both sides of the border and could not be severed without leaving Republic towns dark; the compact's own terms required continuity of supply during any transition, and Vaskeld could not unilaterally cut it off without breaching an obligation that survived its notice. The customs and credentials arrangements needed replacement instruments or an orderly lapse. And the emergency-response agreement — which had twice sent Republic teams into Vaskeld during floods — had to be either renewed as a treaty between the now-fully-separate parties or allowed to end.</p>
 
-      <p>The negotiations were conducted through the Council of Ministers, with the Legat Consul holding primary authority on border and defense terms and the Civic Consul holding primary authority on domestic implementation. In practice this meant two separate negotiating tracks that the Council of Ministers was responsible for integrating. The Alenvari Nation sent a delegation of seven, led by Council Chair Mala Tren, a former compact administrator who knew the Republic's bureaucratic vocabulary well enough to navigate it and her own community's priorities well enough to hold firm on the things that mattered.</p>
-
-      <p>The four treaty subjects — borders, trade, citizenship, and infrastructure — were not equally difficult.</p>
-
-      <p>Borders were straightforward. The compact boundaries were documented, surveyed, and agreed. The treaty simply needed to confirm them as sovereign borders, establish a crossing regime, and specify what Republic officers could and could not do within 5 kilometers of the boundary. This was concluded in six weeks.</p>
-
-      <p>Trade took three months. The Alenvari economy was small — forestry, craft production, some tourism — and deeply integrated with the surrounding Republic market. The Nation needed favorable trade terms; the Republic had no particular interest in a punitive trade relationship with a small sovereign neighbor. A trade framework based on existing compact arrangements, with tariff-free movement for goods historically traded and a review mechanism every five years, was agreed at Month 9.</p>
-
-      <p>Infrastructure was harder. The Republic's roads authority maintained the primary road connecting the Alenvari territory to the Republic's highway network. A river ran through both territories. Electricity came through Republic grid infrastructure. Each of these required either transition agreements (the Nation would build its own), service continuation agreements (the Republic would keep providing at negotiated cost), or hybrid arrangements. The infrastructure chapter of the treaty draft ran to 84 pages and was still being revised at Month 16.</p>
-
-      <p>Citizenship was the problem that was not going to be solved in 24 months.</p>
-
-      <h2>The Citizenship Question</h2>
-
-      <p>The Republic's constitution resolved one part of the citizenship question automatically. §5.1 is unambiguous: citizenship may not be stripped from a natural-born citizen. The approximately 1,900 Alenvari members who held Republic citizenship by birth or naturalization kept it. Independence did not change that. They would hold both Alenvari nationality and Republic citizenship without any treaty provision being required — the constitution handled it.</p>
-
-      <p>What the treaty needed to address was everything else. Approximately 1,500 Alenvari members living in Republic territory held Republic residency credentials but not citizenship. When independence took effect, their credentials would expire — they would become foreign nationals without residency standing. The treaty needed a transition framework that gave them time to apply for naturalization, maintain their current status pending a decision, or voluntarily return to the Alenvari Nation without loss of status there.</p>
-
-      <p>The opt-out mechanism was equally contested. Republic citizens who wished to hold Alenvari nationality only — renouncing their Republic citizenship — needed a bilateral framework specifying how renunciation worked, what it meant for their property and pension rights in the Republic, and whether it was reversible. Neither party had a clean precedent for this. The Alenvari Nation wanted the opt-out window to stay open for ten years after independence. The Republic's position was two years. The negotiators spent four months on that specific number.</p>
-
-      <p>By Month 18, borders and trade were concluded. Infrastructure was 70% resolved. The residency credential transition and the opt-out window were the last open subjects, and neither party was moving.</p>
-
-      <div class="beat">
-        <div class="beat-label">Month 20 — The Extension</div>
-        <div class="beat-title">Both parties agree to one 12-month extension.</div>
-        <p>At Month 20, with four months left on the 24-month clock and no resolution to the citizenship question in sight, both parties published a joint notice to the NRS invoking §16.7.a's extension provision: "either party may propose one 12-month extension by mutual agreement published to the NRS." The extension was the first exercise of that provision in the Republic's history.</p>
-        <p>Council Chair Mala Tren's published statement accompanying the extension notice was precise: the Alenvari Nation was not extending the timeline because of uncertainty about independence. Independence remained the elected status. The extension was for the specific purpose of resolving the citizenship question in a way consistent with the Nation's obligation to its members who lived in the Republic. She did not say what would happen if the extension period also failed to produce a resolution. She didn't need to — the constitution already specified it.</p>
+        <p>None of this constrained the <em>right</em> to leave. All of it constrained the <em>speed and shape</em> of leaving. The distinction is the whole lesson of the case: the constitution makes the exit absolute precisely so that the exit itself is never the bargaining chip, which forces both parties to negotiate the disentangling in good faith rather than holding departure hostage to terms.</p>
       </div>
 
-      <h2>The Legislature Acts</h2>
+      <div class="scenario-section">
+        <h2>The Twelve Thousand</h2>
+        <p>The hardest question was not infrastructure. It was people. Roughly twelve thousand Vaskeld members had been citizens of a predecessor government at Day Zero, which made them citizens of the Republic under the transition — and §5.1 provides that citizenship, once held, cannot be stripped. Vaskeld's withdrawal changed the status of Vaskeld's <em>territory</em>; it did not and could not change the status of Vaskeld's <em>people</em> as Republic citizens.</p>
 
-      <p>The residency credential question was resolved first. At Month 21, the Civic Consul proposed a statutory instrument: Alenvari members holding Republic residency credentials at the time of independence would retain those credentials for a five-year transition period, during which they could apply for naturalization under the standard §5.1 process, return to the Alenvari Nation without penalty, or allow their credentials to lapse. The Assembly passed the enabling statute 198-102 at Month 23. The Senate passed it 38-23.</p>
+        <p>This produced a population that, after departure, would live in a fully sovereign foreign nation while holding Republic citizenship — able to enter the Republic freely, to vote in Republic elections, to carry every Article I right in their dealings with the Republic. What they would lose was Article I as a constraint on Vaskeld's own government, since a sovereign Vaskeld outside the compact is bound only by the non-derogable floor that §20.3 preserved while the compact ran, and after full separation, by nothing in the Republic's constitution at all.</p>
 
-      <p>The opt-out window — how long Republic citizens who wished to renounce could do so — required the Legislature's position to be settled before the treaty could finalize the bilateral framework. The Civic Consul's recommendation was five years. The Assembly amended it to seven years on the floor, 173-127. The Republic's negotiating team updated the treaty draft. The Alenvari delegation accepted seven years — it was more than they had initially asked for.</p>
-
-      <p>With both statutory instruments in place, the citizenship chapter of the treaty was concluded in three weeks. The chapter specified the residency credential transition, the seven-year opt-out window for Republic citizens wishing to hold Alenvari nationality only, the bilateral process for Alenvari nationals seeking Republic naturalization after independence, and the property and pension protections applicable to those who renounced Republic citizenship during the opt-out period.</p>
-
-      <h2>The Treaty</h2>
-
-      <p>The treaty was concluded at Month 31 — seven months inside the extended 36-month window. Its four chapters covered 217 pages. The border regime, trade framework, infrastructure transition schedule, and citizenship protocol were all addressed. The Legat Consul published the treaty to the NRS at 3:41 PM on a Thursday. The Senate ratified it by the required 2/3 majority, 41-20, eleven days later.</p>
-
-      <div class="beat">
-        <div class="beat-label">§16.7 — The Effect of Independence</div>
-        <div class="beat-title">Treaty ratification concludes the process.</div>
-        <p>Independence took effect from the moment of Senate ratification. The NRS timestamp at 6:18 PM on the day of ratification was the moment the Alenvari Nation ceased to be within the Republic's constitutional framework and became a fully independent sovereign nation. The compact authority that had governed the territory since Year 2 terminated simultaneously. Republic officers withdrew from the territory according to the treaty's transition schedule.</p>
-        <p>Under the treaty, the Republic maintained a trade representative office at the border crossing. The Alenvari Nation maintained a corresponding liaison at the Republic's foreign affairs office in the capital. The border was defined, crossed, and managed. The river was jointly managed under the infrastructure chapter's natural resources annex. The roads authority transition completed over 18 months.</p>
+        <p>The council had run on independence without quite reckoning with this: that it could take Vaskeld out of the Republic, but it could not take the Republic out of twelve thousand Vaskeld citizens. The final separation agreement did not resolve the tension so much as name it — a formal acknowledgment that dual status would persist, that the Republic would maintain a consular presence, and that any Vaskeld member who wished to relocate into the Republic as a full resident retained the absolute right to do so.</p>
       </div>
 
-      <p>The Alenvari Nation's first act as an independent sovereign was to ratify the treaty it had just concluded. This was, technically, the treaty's own ratification mechanism — the Alenvari Nation's governance council ratified it simultaneously with the Republic's Senate, as specified in the treaty's final provisions. Both ratifications were published to the NRS and to the Alenvari Nation's own public record system within hours of each other.</p>
+      <div class="scenario-section">
+        <h2>Month Twelve</h2>
+        <p>The compact ended on schedule. The grid was re-engineered into two interconnected but independently governed systems under a new bilateral supply treaty. Customs and credentials lapsed into a thinner treaty arrangement. The emergency-response agreement was renewed, sovereign to sovereign. On the day the compact terminated, the Republic's territorial extent contracted by the area of the Vaskeld Nation — and because §20.4 withdrawal is not a reduction imposed by the Republic but an exit taken by a sovereign under a right the Republic acknowledged from the founding, no constitutional amendment was required and none was sought.</p>
 
-      <p>Council Chair Mala Tren's statement on independence day was brief. She thanked the Republic's negotiating teams for working in good faith through a difficult process. She noted that the citizenship question — the last and hardest problem — had ultimately required the Republic's Legislature to act, and that the Legislature had acted. She said the Alenvari Nation would be a good neighbor. She did not say the departure had been easy.</p>
+        <p>Vaskeld left as it had arrived: a sovereign, dealing with the Republic as an equal.</p>
+      </div>
 
-      <div class="verdict-box">
-        <p><strong>What This Scenario Tests</strong></p>
-        <p>§16.7(c) is one of the constitution's most unusual provisions — a designed-in mechanism for a recognized nation to exit the constitutional framework entirely. The design rests on a specific premise: that the right of a nation with prior sovereignty to determine its own future is not contingent on the Republic's consent. The status election is irrevocable. The Republic cannot prefer, discourage, or offer inducements. All the Republic can control is whether the treaty gets negotiated in good faith.</p>
-        <p>The citizenship chapter illustrates how the constitution divides the work. §5.1's non-stripping rule handles one large subset automatically — citizens keep their citizenship. The treaty handles everything the constitution doesn't predetermine: the residency credential holders, the opt-out window, and the bilateral naturalization pathway. The Legislature's role was to establish the statutory instruments that gave the treaty's citizenship chapter domestic legal effect. That division — constitutional floor, statutory implementation, treaty framework — is the design working as intended.</p>
-        <p>The provisional framework is not a failure mode — it's a designed fallback that keeps practical functions operating while the harder questions are resolved. But the constitution is clear that provisional terms don't become permanent: either a treaty eventually replaces them or the parties remain in an indefinite provisional relationship, which neither party can escape unilaterally. The Alenvari Nation and the Republic avoided that outcome. It wasn't guaranteed.</p>
-        <p>The most important design choice in §16.7 is the one that received the least debate during the negotiations: the Republic's obligation to negotiate is unconditional. The Republic cannot use the negotiations as leverage to pressure the Nation into a different status choice. The moment the status election is published to the NRS, the Nation's choice is made, and the Republic's job is to help that choice take effect cleanly.</p>
+      <div class="scenario-section">
+        <h2>What the Case Established</h2>
+        <p>That the Associated Community exit right under §20.4 is exactly as unconditional as it reads — no consent, no cause, no veto, no reviewing body — and that this is a feature of acknowledging prior sovereignty, not a gap in the Republic's authority. That §20.5 leaves the <em>terms</em> of separation to the compact, so that an absolute right to leave coexists with a real obligation to leave in an orderly way. And that §5.1 citizenship continuity means a nation can withdraw its territory from the Republic without withdrawing its people's citizenship — producing dual status that no separation agreement can erase, only manage.</p>
+
+        <p>The founding choice under §16.2 gave Vaskeld this door. §20.4 guaranteed the door could always be opened. The rest of Article XX made sure that opening it did not bring the roof down on either side.</p>
       </div>
 
     </div>
+  </main>
 
-    <div class="scenario-nav">
-      <a href="scenarios.html">&larr; All Scenarios</a>
-    </div>
-  </div>
+  <script>
+    function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
+    document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
+  </script>
 
   <footer>
     <span class="footer-logo">The Federated Republic</span>
@@ -201,12 +155,5 @@
     <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
   </footer>
 
-  <script>
-    function toggleMobileNav(){
-      var m=document.getElementById('mobileMenu');
-      var b=document.querySelector('.hamburger');
-      if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
-    }
-  </script>
 </body>
 </html>
