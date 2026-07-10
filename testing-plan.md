@@ -178,7 +178,7 @@ For each of the 21 Article I rights:
 - §1.8 (Privacy): does it survive the intelligence authority granted to the Legat Consul?
 - §1.14 (Assembly/Expression): does it protect political speech against government actors with direct NRS authority?
 - §1.16 (Social State floor): is it justiciable? Can someone sue the government for failing to provide it?
-- Non-derogable rights (§1.19.b): is the list complete? Are all the most fundamental rights on it?
+- Non-derogable rights (§1.19.a): is the list complete? Are all the most fundamental rights on it?
 
 **Output:** Rights enforceability map; derogation vulnerability list; non-derogable rights adequacy assessment.
 

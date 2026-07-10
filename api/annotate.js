@@ -71,8 +71,8 @@ module.exports = async (req, res) => {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 700,
+        model: 'claude-sonnet-5',
+        max_tokens: 2000,
         system: SYSTEM + getConstitutionText(),
         messages: [{
           role: 'user',
@@ -82,8 +82,26 @@ module.exports = async (req, res) => {
     });
 
     const data = await upstream.json();
-    const annotation = data.content?.[0]?.text?.trim() || '';
-    return res.status(200).json({ annotation });
+
+    if (!upstream.ok || data.error) {
+      return res.status(502).json({
+        error: 'Upstream error',
+        detail: data.error?.message || `status ${upstream.status}`,
+      });
+    }
+
+    // Concatenate every text block, not just the first — a multi-block
+    // response would otherwise be silently truncated after block [0].
+    const annotation = (data.content || [])
+      .filter((b) => b.type === 'text')
+      .map((b) => b.text)
+      .join('')
+      .trim();
+
+    // Surface truncation instead of returning a cut-off answer that looks complete.
+    const truncated = data.stop_reason === 'max_tokens';
+
+    return res.status(200).json({ annotation, truncated });
 
   } catch (err) {
     return res.status(502).json({ error: 'Upstream error', detail: String(err) });

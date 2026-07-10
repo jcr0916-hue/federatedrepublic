@@ -72,7 +72,7 @@ module.exports = async (req, res) => {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
+        model: 'claude-sonnet-5',
         max_tokens: 900,
         system: SYSTEM,
         messages: [{
@@ -88,7 +88,11 @@ module.exports = async (req, res) => {
     }
 
     const data = await upstream.json();
-    let text = data.content?.[0]?.text?.trim() || '';
+    let text = (data.content || [])
+      .filter((b) => b.type === 'text')
+      .map((b) => b.text)
+      .join('')
+      .trim();
 
     // Strip accidental code fences, then parse the JSON payload.
     text = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();

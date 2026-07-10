@@ -126,8 +126,6 @@ const SCENARIOS = [
   {title:'The Third Strike',file:'scenario-the-third-strike.html',kw:['mandatory devolution','provisional','audit failure','state','statehood','devolution','three','strike']},
   {title:'The Administrator',file:'scenario-the-administrator.html',kw:['election','state','nvs','compliance','elections panel','§11.3','administrator']},
   {title:'The Return',file:'scenario-the-return.html',kw:['immigration','return','resident','re-entry','discrimination']},
-  {title:'The Four Elections',file:'scenario-indigenous.html',kw:['indigenous','nation','election','compact']},
-  {title:'The Departure',file:'scenario-the-departure.html',kw:['indigenous','independence','sovereign','compact']},
   {title:'The Classification',file:'scenario-the-classification.html',kw:['classification','secrecy','nrs','void','em','audit','transparency']},
   {title:'The Ledger',file:'scenario-the-ledger.html',kw:['electoral finance','contribution','disclosure','corporate','campaign','elections panel','straw donor']},
   {title:'The Contraction',file:'scenario-the-contraction.html',kw:['endowment','monetary authority','ma','revenue','social state','recession','backstop']},
@@ -142,7 +140,7 @@ const SCENARIOS = [
   {title:'The Referendum',file:'scenario-the-referendum.html',kw:['independence','referendum','irrevocable','state','elections panel','nrs','§15.9','§2.14']},
   {title:'The Restoration',file:'scenario-the-restoration.html',kw:['statehood','restoration','provisional','clean audit','automatic','devolution','§15.1','§15.2','§15.3']},
   {title:'The Vote',file:'scenario-the-vote.html',kw:['suspensive veto','cc','tabled','senate','2/3','override','bill lapses','§2.7','§2.6']},
-  {title:'The Three Recusals',file:'scenario-the-three-recusals.html',kw:['conflict of interest','recusal','financial disclosure','ethics','monitor general','procurement','§12.4','§12.4.b','§12.4.c','§9.14','voidable','gift']},
+  {title:'The Three Recusals',file:'scenario-the-three-recusals.html',kw:['conflict of interest','recusal','financial disclosure','ethics','monitor general','procurement','§12.4','§12.4.b','§12.4.c','§9.9','voidable','gift']},
 ];
 
 const CORS = {
