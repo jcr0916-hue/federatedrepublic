@@ -8,9 +8,9 @@
 
 **Elections & Terms:** §2.1, §2.6, §3.1, §3.2, §7.1–7.3, §8.1–8.4, §9.2–9.3, §11.1–11.3
 **Emergency Powers:** §1.19, §1.19.a–f, §2.2, §4.5
-**Territory & Statehood:** §15.1–15.9, §16.7, §19.6
-**Indigenous Sovereignty:** §16.1–16.7.a
-**Removal of Officers:** §3.10, §3.11, §9.14
+**Territory & Statehood:** §15.1–15.9, §16.2, §19.6
+**Indigenous Sovereignty:** §16.1–16.5
+**Removal of Officers:** §3.10, §3.11, §9.9
 **Monitors:** §9.1–9.14
 **Foreign Affairs & Military:** §2.1–2.4, §3.6, §3.6.a, §14.1–14.4
 **Fiscal & Budget:** §12.1–12.3, §12.5, §12.8
@@ -114,14 +114,14 @@
 **§1.19 — Emergency Derogation** *(framework)*
 - No emergency suspends the Individual Sovereignty Floor in full
 - Derogation permitted only under strict conditions
-- §1.19.b rights are absolute — cannot be derogated under any circumstances
+- §1.19.a rights are absolute — cannot be derogated under any circumstances
 
 **§1.19.a — Emergency Declaration Requirements**
 - Must specify: nature of emergency, which rights limited, geographic scope, duration
 - Blanket declarations constitutionally invalid
 - Published to NRS immediately
 
-**§1.19.b — Non-Derogable Rights** *(six absolute)*
+**§1.19.a — Non-Derogable Rights** *(six absolute)*
 - §1.3 (torture), §1.4 (slavery), §1.11 (habeas), §1.13 (public trial), §1.14 (retroactive law), §1.21 (non-refoulement)
 - No declaration, order, or statute can touch these six
 
@@ -134,7 +134,7 @@
 - Legislature may extend once, max 60 days, by 2/3 of full seated membership of both chambers
 - No further extension available
 
-**§1.19.e — No Permanent Emergency**
+**§1.19.b — No Permanent Emergency**
 - No emergency measure made permanent by legislative act
 - Legislature cannot re-declare within 60 days of expiry
 - New declaration within 60 days with substantially same scope = relabeling; EM must assess within 14 days
@@ -216,7 +216,7 @@
 
 **§2.6.a — Government Formation**
 - Assembly elects CC by absolute majority within statutory period following election or vacancy; constitutional default 21 days
-- If Assembly fails: Acting CC designated by outgoing CC from confirmed ministers or serving Assembly member; published to NRS
+- If Assembly fails: Assembly Speaker serves as Acting CC by constitutional operation (maintain-existing-policy only) until a CC is elected/designated; published to NRS. NOTE: Speaker as acting exec may not exercise legislative functions; retains seat + Speakership; chamber covers Speaker duties internally; ordinary electoral calendar still applies. Same no-dual-function rule for Senate Speaker acting as LC (§2.9). LC FULL succession (death/removal/resignation) vacates the Senate seat.
 - Seniority fallback: **most senior Assembly member by continuous service** who meets CC requirements; tiebreaker determined by statute
 - Senate may designate a serving Assembly member as CC by 2/3 supermajority if Assembly fails within statutory period; Assembly absolute majority terminates Senate designation
 - If no CC elected and Senate has not designated within 45 days: LC nominates serving Assembly member; Senate confirms by simple majority within 21 days; appointee holds full CC authority subject to removal under §2.6
@@ -333,7 +333,7 @@
 - 1/3 of Assembly files Articles of Removal → SC categorical review (14 days) → Senate trial
 - 2/3 of both chambers required to remove
 - Grounds must fit statutory removal category (SC's gate)
-- See also §9.14 for Monitor-initiated path
+- See also §9.9 for Monitor-initiated path
 
 **§3.11 — Inviolability of Electoral Mandates**
 - Elected members cannot be removed by executive action; mandate is inviolable except by specified mechanisms
@@ -376,7 +376,7 @@
 **§4.3.a — SC Appointments**
 - Vacancies filled by election; LM-certified interim appointment pending election
 
-**§4.3.b — SC Operations**
+**§4.3.a — SC Operations**
 - LM certification of SC legitimacy (quorum, vacancy, conflict)
 
 **§4.4 — Supreme Court Selection**
@@ -390,7 +390,7 @@
 
 **§4.5 — Judicial Review and Scope**
 - Courts may declare acts unconstitutional and void; no political actor may override a constitutional ruling
-- **SC original jurisdiction** covers: State-State and State-federal disputes; federal statute challenges; LC-CC domain disputes (§2.1); challenges to constitutionally independent institutions; emergency rights claims under §16.5; amendment consistency under §17.3
+- **SC original jurisdiction** covers: State-State and State-federal disputes; federal statute challenges; LC-CC domain disputes (§2.1); challenges to constitutionally independent institutions; emergency rights claims under §16.2 (Transition Window); amendment consistency under §17.3
 - **Extension mechanism**: majority of seated justices may file extension request within any required ruling period (reason + additional time, NRS published); maximum **not to exceed 30 days per extension**; statute defines the specific ceiling within that cap
 - **Interim protective orders**: available in original jurisdiction matters where delay would cause irreparable harm
 - **SC inaction never produces a constitutional outcome**: failure to rule within any required period does not resolve the matter; petitioner may reinitiate
@@ -459,7 +459,7 @@
 - Elections Panel administers all federal elections
 - (Note: Right to vote absorbed into §1.9)
 
-**§7.2 — LC Election Mechanics**
+**§7.1 — LC Election Mechanics**
 - Requires: national RCV majority AND State plurality (first-preference in majority of States)
 - 60% national vote → State plurality requirement waived
 - No winner → runoff between top two by national first-preference totals; no State plurality in runoff
@@ -470,7 +470,7 @@
 - First-preference plurality in majority of Republic's States
 - Redistricting by lottery-based commission every decade
 
-**§7.3 — Federal Elections**
+**§7.2 — Federal Elections**
 - Assembly: every 2 years
 - Senate: staggered 6-year cycle
 - Consular (LC): every 6 years
@@ -482,9 +482,9 @@
 
 ## ARTICLE VIII — ELECTORAL FINANCE
 
-**§7.4 — Electoral Supermajority Threshold**
+**§7.3 — Electoral Supermajority Threshold**
 - 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations
-- Applies to: LC first-round threshold (§7.2); SC public confirmation under Senate bypass (§4.4.a); constitutional officer removal by public election (§9.14)
+- Applies to: LC first-round threshold (§7.1); SC public confirmation under Senate bypass (§4.4.a); constitutional officer removal by public election (§9.9)
 - Legislature may not raise or lower this threshold without constitutional amendment
 - Does not govern optional referendum (§13.1, simple majority) or citizen initiative (§13.2, 60% with 50% participation)
 
@@ -554,7 +554,7 @@
 **§9.3 — Monitor General Selection**
 - All confirmations: national popular vote at next federal electoral period, simple majority; failed vote → §9.1.d acting mechanism, new selection within 60 days
 - EM Speaker-nomination deadlock (60 days) → Senate selects from pool by 2/3
-- JM selected by public lottery under §9.12 from the JM pool under §9.4
+- JM selected by public lottery under §9.8 from the JM pool under §9.4
 - No two MG terms begin within 18 months of each other
 
 **§9.4 — Judicial Monitor Audit and Lottery Administration Mandate**
@@ -562,57 +562,57 @@
 - Annual audits: court scope/independence, Elections Panel integrity, SC independence, inferior-court jurisdiction, Art. XIV/XIX/XX compacts
 - **JM Candidate Pool**: former Republic judges (trial court of record or above), out of judicial office ≥1 year; former SC justices out ≥5 years; JM holds no role in constituting its own pool; LM verifies service records, EM reviews disclosures
 
-**§9.4.b — Judicial Pool — Eligibility Criteria**
+**§9.4.a — Judicial Pool — Eligibility Criteria**
 - Elections Panel maintains the standing **Judicial Pool** for all federal judicial appointments
 - Apply directly: ≥15 years legal practice or 10 years judicial service; no current government position; no disqualifying financial interest (as defined in §12.4)
 - JM audits Panel's administration; EM audits financial disclosure; both publish to NRS
 - Exclusion appealable to SC within 14 days (sole ground: criteria misapplied); pool publicly accessible on NRS
 
-**§9.6 — Monitor Operations**
+**§9.5 — Monitor Operations**
 - Every finding published to NRS permanently, free of charge; no suppression, delay, classification, or alteration; reports permanently exempt from classification
 - Any staff member may publish a minority report directly to NRS; no discipline for doing so
 - All three jointly publish an annual State of the Republic report; unrestricted access to records/personnel/systems within mandate (obstruction = breach)
 
-**§9.6.a — Compliance Standards and Findings**
+**§9.5.a — Compliance Standards and Findings**
 - JMC defines and publishes the Pass/Fail compliance standard for each audit category — per-aspect, not whole-entity
 - **No published standard, no finding** — a Monitor cannot issue a Pass/Fail for a category the JMC hasn't defined yet; the audit itself still happens, just produces no determination until the standard exists. Self-enforcing: forecloses any Assembly-fallback (the Assembly is itself an audited body) and makes JMC inaction its own visible failure
 - May adopt one standard or several tailored to distinct audit categories; both the criteria AND the methodology behind them are published in advance
 - Multiple standards → every finding names which standard applied; standard changes are prospective only — **and creating a brand-new category for a subject with a pending finding is covered by the same rule**, closing the carve-out-a-lenient-category workaround
 - Each Fail reported to the body responsible for that aspect, which publishes its own account — information only, no mandated remedy or timeline
-- JMC deadlock → each Monitor General's proposed standard published individually under §9.11 dissent procedure
+- JMC deadlock → each Monitor General's proposed standard published individually under §9.7 dissent procedure
 
-**§9.6.b — Agency Accountability**
+**§9.5.b — Agency Accountability**
 - Every Legislature-created agency is bound both by what the constitution specifies for it AND by whatever mandate the Legislature has assigned by statute
-- A Fail reported under §9.6.a is not a substitute for the responsible body's own independent duty to fix what's within its operational control — publishing a hollow "report" doesn't discharge that separate obligation
+- A Fail reported under §9.5.a is not a substitute for the responsible body's own independent duty to fix what's within its operational control — publishing a hollow "report" doesn't discharge that separate obligation
 - General principle, not MA-specific — applies to any agency the Legislature creates
 
-**§9.10 — Monitor Minimum Funding Guarantee**
+**§9.6 — Monitor Minimum Funding Guarantee**
 - Appropriation for each Monitor, Elections Panel, and NRS Panel may not fall below prior-year inflation-adjusted level without **2/3 of both chambers**
 - MA certifies each floor and publishes before the budget process
 - Budget below floor without the supermajority → prior-year level takes effect automatically
 
-**§9.11 — Joint Monitor Council**
+**§9.7 — Joint Monitor Council**
 - The three MGs jointly constitute the JMC; houses all jointly administered functions (lottery draws, selection processes)
 - **Two of three = quorum**; no mandatory joint function permanently blockable by one MG's non-participation (non-participant's position published if stated)
 - Conducts the annual NRS audit (operational compliance + content integrity), published to both chambers
 - Exercises assigned functions by majority vote of participating MGs; may delegate operationally without transferring accountability; **no authority to override any Monitor's individual mandate**
 
-**§9.11.a — Institutional Compromise Protocol**
+**§9.7.a — Institutional Compromise Protocol**
 - Two Monitors jointly report the third is in demonstrable bad faith → petition SC under §4.5; SC rules within 14 days
 - On filing: two petitioners designate an Acting MG (most senior pool member by continuous tenure who accepts); full authority from designation
 - SC **not confirmed** → Acting stands down, functions return
 - SC **neither rules nor files extension** in period → Acting stands down, petition may be refiled (silence ≠ confirmed)
 - SC **confirms** → Acting serves until original restored or new permanent MG confirmed
 
-**§9.12 — Constitutional Pool Framework**
+**§9.8 — Constitutional Pool Framework**
 - Elections Panel maintains all constitutional pools/registries (incl. Judicial Pool); each subject to ongoing Monitor audit
 - Lottery draws conducted by the JMC in public session, published to NRS
 - **Minimum five eligible members per pool**; below five → JM publishes compliance breach, nominating bodies must restore; pool at zero → most senior eligible federal judge serves as Acting (judicial/Monitor pools only)
 - Eligibility **strictly objective** (years of service, office status, financial interests per §12.4); no philosophy/temperament/ideology/association criteria — any such exclusion void
 - Exclusion grounds published within 14 days; appeal within 30 days; criteria changes prospective only
 
-**§9.14 — Constitutional Officer Removal — Standard Track**
-- Governs for-cause removal of all constitutionally confirmed independent officers **except** SC justices (§4.3.b) and elected executives
+**§9.9 — Constitutional Officer Removal — Standard Track**
+- Governs for-cause removal of all constitutionally confirmed independent officers **except** SC justices (§4.3.a) and elected executives
 - Trigger: **1/3 of either chamber OR two of three Monitors jointly** file stated grounds with SC
 - SC determines within 14 days whether grounds fit at least one statutory removal category (**category only, not factual merits**)
 - Confirmed → duty suspension immediate, removal requires **2/3 concurrent vote of both chambers**; not confirmed → closed, no reinitiation on same grounds for 6 months
@@ -632,7 +632,7 @@
 - All legislative acts, executive orders, Monitor findings, SC opinions, JMC determinations
 - Treaty publications, electoral results, statehood audit findings
 
-**§10.3 — Classification**
+**§10.2 — Classification**
 - LC may classify intelligence materials
 - EM reviews; publishes findings when classification approaches constitutional ceiling
 - Temporary only; no permanent withholding (Sunlight Test: ceiling required)
@@ -681,10 +681,10 @@
 
 **§12.1.b — Monetary Authority Reporting**
 - MA publishes a State of the Economy report to the **Assembly, Legat Consul, and Civic Consul** — no less than semi-annually (statute may require more often)
-- Each report includes the MA's account of relevant §9.1.b EM findings and any applicable §9.6.a compliance findings
+- Each report includes the MA's account of relevant §9.1.b EM findings and any applicable §9.5.a compliance findings
 - MA may publish additional reports any time circumstances warrant, same recipients
 - Where **the publishing Monitor identifies** a Fail as relevant to the MA's mandate, MA must submit an addressing report to all three recipients within **30 days**, published to NRS — relevance is the publishing Monitor's call, not an open dispute
-- Submitting that report discharges the MA's §12.1.b obligation — no mandated remedy plan or timeline; further action is the Legislature's call. Per §9.6.b, this does NOT discharge the MA's own separate duty to fix whatever is within its own operational control
+- Submitting that report discharges the MA's §12.1.b obligation — no mandated remedy plan or timeline; further action is the Legislature's call. Per §9.5.b, this does NOT discharge the MA's own separate duty to fix whatever is within its own operational control
 
 **§12.2 — The National Revenue Fund**
 - **Budget originates in the Assembly**; each Consul submits a domain budget proposal (NRS-published) by statutory deadline — default **120 days** before fiscal year; Assembly gives proposals **due consideration**, not bound; Consul failure to submit cannot delay process (published to NRS, Assembly proceeds)
@@ -712,8 +712,8 @@
 
 **§12.4.b — Monitor General Disclosure**
 - Special case: Monitors disclose under §12.4's requirements but publish directly to NRS — **no peer Monitor reviews another's disclosure** (collegiality risk from close JMC working relationship)
-- Voidable-decision remedy doesn't fit Monitor functions; instead, statute must make concealment or unrecused conflict a §9.14 removal category for Monitor Generals
-- Enforcement then runs through §9.14's existing trigger (1/3 either chamber OR 2-of-3 Monitors → SC review within 14 days, 6-month refiling cooldown) — no new institution invented
+- Voidable-decision remedy doesn't fit Monitor functions; instead, statute must make concealment or unrecused conflict a §9.9 removal category for Monitor Generals
+- Enforcement then runs through §9.9's existing trigger (1/3 either chamber OR 2-of-3 Monitors → SC review within 14 days, 6-month refiling cooldown) — no new institution invented
 
 **§12.4.c — Federal Employee and Military Disclosure**
 - Legislature must by statute extend disclosure/recusal duties to federal employees and military in conflict-risk roles (procurement, regulatory, senior civil service)
@@ -833,18 +833,18 @@
 **§15.6 — Voluntary Incorporation**
 - Sovereign entity may petition to join Republic as Territory
 - Requires: 2/3 petition from entity's own legislature + citizen referendum (simple majority, 50% participation) + Legislature acceptance by 2/3 of full seated membership of both chambers
-- JM assessment of §1.19.b compliance available on request
-- SC challenge available on systematic §1.19.b violation grounds
+- JM assessment of §1.19.a compliance available on request
+- SC challenge available on systematic §1.19.a violation grounds
 - Transition period not exceeding 48 months
 - No constitutional officer may condition foreign relations on incorporation decisions
-- Indigenous nations: §16.7 status election applies before §15.6
+- Indigenous nations: §16.2 founding election during Transition Window; thereafter AC nations petition §15.6 as sovereigns
 
 **§15.7 — State Immutability and Territorial Integrity**
 - State boundaries are fixed
 - State cannot divide directly into two States; separating portion must first become Territory
 - Republic's territorial extent reducible only by affected population consent through parliamentary amendment with Popular Ratification (State Ratification alone insufficient)
 - No executive action may alter territorial extent
-- §16.7 status election constitutes the consent mechanism for indigenous territorial transitions
+- §16.2 founding election = consent mechanism for indigenous territorial transitions during the window; post-founding transitions require Article XVII; a completed §15.9 process (incl. its national referendum) also satisfies §15.7
 
 **§15.8 — Local Government**
 - Cities, counties, municipalities constitutionally recognized
@@ -852,61 +852,31 @@
 - States cannot systematically defund local governments for de facto centralization
 
 **§15.9 — Voluntary State Independence**
-- Two-stage process: 60% State referendum → concurrent ratification by both chambers → negotiated transition agreement
-- SC reviews constitutionality of transition agreement
-
----
+Three stages. (1) State legislature 2/3 → State referendum 60% of votes cast / 60% participation; failed referendum barred 5 yrs. Petition published to NRS, may not be withdrawn by the State while process continues. No federal inducements either way. (2) Both chambers concurrent vote within 90 days, 60% each, petitioning State's Assembly members and senators recused (thresholds from remaining seated); failure/lapse → State may reinitiate Stage One without restriction. (3) National referendum (Elections Panel, within 180 days), ALL Republic voters incl. petitioning State, 60% of votes cast under §7.3, 50% participation floor; failure → lapse, reinitiate freely. On approval: separation agreement (assets/liabilities, borders, timeline, fiscal + continuing obligations), Senate 2/3, NRS; independence effective per agreement.
 
 ## ARTICLE XVI — INDIGENOUS SOVEREIGNTY
 
-**§16.1 — Recognition of Indigenous Sovereignty**
-- Republic recognizes pre-existing sovereignty of indigenous nations
-- Sovereignty preserved through compact framework, not extinguished by Republic's formation
-- This is explicit preservation, not a general principle applying to any pre-Republic entity (see Republic v. Harren — founding State sovereignty argument rejected)
+**§16.1 — Acknowledgment of Prior Sovereignty and Recognition**
+Prior sovereignty acknowledged, not granted; may not be extinguished. Recognized nation = Day Zero predecessor treaty/compact/formal recognition, or §16.4 recognition. Joint Monitor panel (§19.3) compiles founding register, ministerial, published by end of Phase 1; omission appealable to SC (sole ground: record misapplied). Recognition itself confers no territory; alters no person's rights, citizenship, property, or residency.
 
-**§16.2 — The Compact**
-- Compact-based relationship between Republic and recognized Indigenous Nations
-- Senate: must begin compact negotiations or publish written reasons within 90 days of Nation proposal; declined proposal may be resubmitted after 5 years or material change
-- Compacts negotiated between Nation and CC (with JM oversight)
-- Compact takes effect: 2/3 Senate ratification + Nation ratification by own constitutional process
+**§16.2 — Founding Status Election**
+Founding status election, open Day Zero → close of Transition Window (§19.2), by nation's own governance process: (a) Associated Community (Article XX) — THE DEFAULT, holds by constitutional operation if no election; (b) Territorial Integration — enters as Territory (§15.1), election constitutes the §15.6 petition/confirmation, incorporation agreement ratified 2/3 both chambers, §15.2 Statehood path available. No preference/discouragement/inducements. Article I applies in nation territory during the window unless positively rejected (rejection = early assertion of default). Emergency Rights Writ to SC (7 days) while Article I applies. Membership + citizenship compatible; §5.1 protected.
 
-**§16.3 — Rights and Governance in Compact Territories**
-- Article I applies in full within all compact territories; no compact may limit any Article I right
-- Indigenous Nations hold governance, judicial, and resource sovereignty within compact territories subject to compact terms
-- Nations may establish own courts; citizens may bring Article I claims to federal courts regardless of compact scope
-- Compact must include: land and resource sovereignty provisions; Republic cannot alter land provisions without Nation consent; resource extraction requires both approvals
-- Compacts must include language and cultural preservation provisions
+**§16.3 — Treaty Supremacy and Continuity**
+All predecessor treaties bind the Republic regardless of status. Not diminishable by legislation — honored, renegotiated with consent, or superseded by mutual agreement (LC negotiates, Senate ratifies under §3.6). Orphaned treaty institutions: substantive rights continue; LC + nation identify substitute in first year; LC-designated ministerial counterpart administers interim. EM audits treaty compliance annually.
 
-**§16.4 — Compact Administration**
-- Joint Compact Review Council: equal representation of Nation and Republic
-- CC's Compact Officer for domestic/governance matters; LC's representative for LC domain matters
-- Council decisions binding within compact scope; neither party may unilaterally declare dispute resolved
+**§16.4 — Post-Founding Recognition**
+Post-founding recognition. Claim of prior sovereignty → JMC (published) → JMC investigates vs. predecessor record + §16.1 criteria, publishes findings — information-only, binds no one, compels nothing. Claimants may take findings to LC recognition petition or to court under Article I. LC determines petition within statute (≤180 days), written grounds published either way. Recognition activates §16.3, creates collective legal personality (statute + §18.4 arrangements), and is the factual predicate for any Article XVII territorial/sovereignty amendment. NO territorial effect — territory moves only by amendment (§15.7). Declined: resubmit after 5 years or material record change.
 
-**§16.5 — Compact Disputes**
-- Joint Compact Review Council is primary dispute mechanism
-- SC jurisdiction preserved for Article I violations
-
-**§16.6 — Nation-to-Nation Relations**
-- Republic treats compact Nations as nation-to-nation relationships within constitutional framework
-
-**§16.7 — Indigenous Status Election**
-- Nation may elect status: maintain compact, seek Territory status (§15.6), or pursue other arrangements
-- Democratic or traditional governance process determines election (Nation's own tradition defines)
-- Nation's governance decision constitutes §15.6 principle step directly
-- Once published, negotiation and Senate ratification follow as for any Territory incorporation
-
-**§16.7.a — Status Election Mechanics**
-- Nation's governance decision aligned with §15.6 structure
-- Explicit protection of Nation's own governance tradition in defining process
-
----
+**§16.5 — Transition of Existing Arrangements**
+Transition bridge: predecessor arrangements (governance, services, land use, borders, trade, infrastructure) continue provisionally until Article XX compact / §16.2 incorporation / §16.3 treaty instrument. AC-status nations: Republic must open Article XX negotiations within 90 days, good faith. Citizenship per §5.1 throughout. SC available for provisional-framework disputes. Nothing delays §16.3 obligations.
 
 ## ARTICLE XVII — AMENDMENT
 
 **§17.1 — Amendment Process**
 - Path A (Parliamentary): 2/3 both chambers + 2/3 of States ratify; or
 - Path B (Popular): 2/3 both chambers + national referendum 60% (50% participation)
-- No amendment may derogate §1.19.b rights
+- No amendment may derogate §1.19.a rights
 
 **§17.2 — Legislature Selects Seat**
 - Legislature selects seat of government by ordinary statute (see §18.2)
