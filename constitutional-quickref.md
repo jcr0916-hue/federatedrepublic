@@ -254,6 +254,15 @@
 - Default recusal standard applies in absence of statute
 - Recusal decision published to NRS
 
+**§2.14.b — Cross-Domain Assistance**
+- Either Consul may REQUEST the other exercise authority in the other's domain for a need in the requester's domain; request + response both published to NRS
+- Neither may COMPEL the other (preserves co-equality + external-check principle)
+- Duration ≤90 days; renewal only by fresh published request/response (no indefinite standing arrangements)
+- LIGHT RAIL (allowed): only capability in SUPPORT of persons — logistics, transport, materiel, technical, medical, disaster, search-and-rescue
+- BLACKLIST (routes to §1.19 only): capability to compel/detain/direct persons, to surveil/monitor/collect intelligence on persons within the Republic, or to commandeer civilian resources
+- Provided capability: responding Consul commands MEANS, requesting Consul directs PURPOSE/limits; Article I in full
+- Foreign invasion / both-domain threat → §2.14.a; disputes → §2.14.a mechanism
+
 **§2.15 — Compensation**
 - All official compensation set by statute, public record on NRS
 - Benefits reflect functional requirements, not status
