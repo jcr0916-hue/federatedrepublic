@@ -158,6 +158,11 @@
 
 ---
 
+**§1.23 — Separation of Branch Authority**
+- No person exercises the voting/decisional authority of >1 branch at once
+- Permits a non-voting seat during such service (blesses the CC's ceremonial seat); permits resuming office/vote on leaving the conflicting position
+- Covers: CC/Acting-CC not voting in Assembly, Acting-LC not voting in Senate, no executive/legislator as judge
+
 ## ARTICLE II — THE DUAL EXECUTIVE
 
 **§2.1 — The Legat Consul: Domain and Term**
@@ -195,15 +200,15 @@
 - Domain: all executive functions not enumerated to LC
 - Prepares a **proposed civic-domain budget**, submitted to the Assembly under §12.2 (budget originates in the Assembly, not the CC)
 - Must be serving Assembly member when elected CC
-- **8-year cumulative limit** (total across all periods of service — single rule, not per-term)
+- **CC term limits**: 6 years consecutive AND 8 years cumulative (lifetime max); one-Assembly-cycle cooling-off triggered by serving ≥4 years (continuous or cumulative) before leaving for any reason — closes the resign-early-to-dodge loophole; under 4 years = no cooling-off but still bound by both caps
 - Elected by Assembly through confidence mechanism
 - Temporary incapacity: CC's designated Acting CC (who must meet eligibility requirements for the office) serves; where no designation exists or designee is unavailable, **Assembly Speaker** serves as Acting CC with same authority limitation (maintaining existing policy and emergency functions only)
 
 **§2.6 — Constructive Vote of No Confidence**
-- Assembly removes CC only through constructive vote: single vote simultaneously removes CC and installs named replacement
-- Removal threshold: **60 percent** of full seated Assembly membership (formation threshold remains absolute majority under §2.6.a)
-- A vote that does not name and elect a successor has no constitutional effect
-- CC must remain a serving Assembly member throughout tenure
+- Removal ONLY by constructive no-confidence: one vote removes CC + installs named successor, by ABSOLUTE MAJORITY of full seated Assembly (reverted from 60% — term + constructive requirement now supply the stability). Grounds published NRS; political act, not judicially reviewable
+- CC must be a serving Assembly member to be ELECTED; on election VACATES the seat (State refills as mid-term vacancy under §3.2); that Assembly term deemed fully served (anti-gaming)
+- While in office: holds the OFFICE's ceremonial seat — sit/speak/be accountable, NO VOTE (§1.23)
+- Leaving office = OUT of the Assembly entirely (no reversion; vacated seat stays filled). May run again for a seat or (subject to §2.5) CC
 
 **§2.6.a — Government Formation**
 - Assembly elects CC by absolute majority within statutory period following election or vacancy; constitutional default 21 days

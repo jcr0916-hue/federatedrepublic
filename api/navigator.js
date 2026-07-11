@@ -102,8 +102,6 @@ const SCENARIOS = [
   {title:'The Alliance Clause',file:'scenario-alliance-clause.html',kw:['military','treaty','lc','deploy','alliance','defense','foreign']},
   {title:'The Objection',file:'scenario-the-objection.html',kw:['fiscal','objection','cc','budget','assembly','override']},
   {title:'The Direction',file:'scenario-the-direction.html',kw:['direction','cc','prosecution','solicitor','written']},
-  {title:'The Formation',file:'scenario-formation.html',kw:['formation','government','election','assembly','confidence','coalition']},
-  {title:'The Successor',file:'scenario-the-successor.html',kw:['no-confidence','constructive vote','cc','assembly','successor','removal','60 percent']},
   {title:'The First Nomination',file:'scenario-first-nomination.html',kw:['nomination','judicial','pool','senate','confirmation','sc','vacancy']},
   {title:'The Finality Act',file:'scenario-finality-act.html',kw:['judicial','review','strip','immigration','court']},
   {title:'The Critical Finding',file:'scenario-critical-finding.html',kw:['lm','legislative monitor','critical','failure','fiscal']},
