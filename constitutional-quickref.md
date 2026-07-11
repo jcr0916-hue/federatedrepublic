@@ -473,7 +473,18 @@
 ## ARTICLE VIII — ELECTORAL FINANCE
 
 **§7.3 — Electoral Supermajority Threshold**
-- 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations
+
+
+**§7.4 — Eligibility and Disclosure for Federal Office** (universal, all federal offices)
+- CRIMINAL-HISTORY DISCLOSURE at candidacy/acceptance, under penalty of perjury, published NRS; false/incomplete disclosure is itself a federal offense. Reaches elected candidates AND selected/elevated officeholders (CC path); a current disclosure re-uses for elevation to another office
+- NO conviction bars from office EXCEPT the enumerated bar below — weight of disclosed history is for voters/selecting body to judge (converts felony prohibition → transparency)
+- ENUMERATED CONVICTION BAR (exhaustive, amendment-only to change): insurrection, rebellion, treason, or subversion of a federal election → barred from any federal office. Conviction required, not accusation
+- REMOVAL COOLING-OFF: removed by affirmative process (impeachment, for-cause, constructive no-confidence, recall) → barred from THAT office for remainder of current electoral cycle + one full cycle. Ordinary term expiry and electoral loss are NOT removals
+- Replaces the old blanket felony bar that was on §2.1 (LC) and §2.5 (CC)
+
+**Eligibility split (coherence):**
+- §2.1 LC: KEEPS 7-year citizenship (different selection method — national, not chamber-internal; security function justifies a citizenship floor). Felony bar removed → §7.4
+- §2.5 CC: citizenship requirement REMOVED (CC elected from/by Assembly; re-checking a sitting member is incoherent). Felony bar removed → §7.4. Keeps: serving-Assembly-member-at-election- 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations
 - Applies to: LC first-round threshold (§7.1); SC public confirmation under Senate bypass (§4.4.a); constitutional officer removal by public election (§9.9)
 - Legislature may not raise or lower this threshold without constitutional amendment
 - Does not govern optional referendum (§13.1, simple majority) or citizen initiative (§13.2, 60% with 50% participation)
