@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Living Crossroads — The Federated Republic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,500&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy2:#0f1e38; --gold:#C9A84C; --gold2:#a8843a;
+    --cream:#F5F0E8; --cream2:#EDE7D8; --text:#2a2a2a; --muted:#7a7060;
+    --border:#d4c9b0; --white:#ffffff;
+    --rise:#3f7d54; --fall:#b0553f; --ink:#141d30;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--text);font-family:'Jost',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:44rem;margin:0 auto;padding:2rem 1.25rem 5rem}
+
+  /* ---- Masthead ---- */
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin-bottom:.9rem}
+  h1.title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2.1rem,6vw,3rem);color:var(--navy);line-height:1.08;margin-bottom:1rem}
+  h1.title em{font-style:italic;color:var(--gold2)}
+
+  /* ---- Premise / on-ramp ---- */
+  .premise{font-size:1.05rem;line-height:1.75;color:#40372c;margin-bottom:1.5rem}
+  .scope{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.8rem}
+  .scope .chip{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--cream2);border:1px solid var(--border);border-radius:999px;padding:.3rem .7rem}
+  .start-btn{font-family:'Jost',sans-serif;font-weight:600;font-size:1rem;color:var(--navy2);background:var(--gold);border:none;border-radius:6px;padding:.9rem 2.2rem;cursor:pointer;transition:background .15s,transform .1s}
+  .start-btn:hover{background:var(--gold2)}
+  .start-btn:active{transform:translateY(1px)}
+
+  /* ---- Inline definitions (the on-ramp) ---- */
+  def-term, .def{border-bottom:1px dotted var(--gold2);cursor:help;position:relative;color:var(--navy)}
+  .def:hover .def-pop, .def:focus .def-pop{opacity:1;visibility:visible;transform:translateY(0)}
+  .def-pop{position:absolute;left:0;bottom:calc(100% + .5rem);width:min(18rem,80vw);background:var(--ink);color:#eee;font-family:'Jost',sans-serif;font-size:.82rem;line-height:1.5;padding:.6rem .8rem;border-radius:7px;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .16s,transform .16s,visibility .16s;z-index:20;box-shadow:0 8px 24px rgba(15,30,56,.28);letter-spacing:normal;text-transform:none;font-weight:400}
+  .def-pop::after{content:"";position:absolute;top:100%;left:1.2rem;border:6px solid transparent;border-top-color:var(--ink)}
+
+  /* ---- Meters ---- */
+  .meters{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;position:sticky;top:0;background:var(--cream);padding:1rem 0 .9rem;z-index:10;border-bottom:1px solid var(--border);margin-bottom:1.6rem}
+  .meter-label{font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem;display:flex;justify-content:space-between;align-items:baseline}
+  .meter-val{font-weight:700;color:var(--navy);font-size:.72rem}
+  .meter-val.flash-up{color:var(--rise)}
+  .meter-val.flash-down{color:var(--fall)}
+  .meter-bar{height:5px;background:var(--cream2);border-radius:3px;overflow:hidden}
+  .meter-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));width:0;transition:width .6s cubic-bezier(.4,0,.2,1)}
+
+  /* ---- Scene ---- */
+  .scene-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);margin-bottom:.7rem}
+  .scene-body{font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,3.4vw,1.6rem);line-height:1.45;color:var(--ink);margin-bottom:1.6rem;font-weight:500}
+  .response{background:var(--white);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1rem 1.15rem;margin-bottom:1.5rem;font-size:1.02rem;line-height:1.7;color:#3a3226;animation:fadeIn .4s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ---- Choices ---- */
+  .choices{display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.3rem}
+  .choice{position:relative;text-align:left;font-family:'Jost',sans-serif;font-size:.98rem;background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:.9rem 1.1rem;cursor:pointer;transition:border-color .14s,background .14s,transform .08s;color:var(--ink)}
+  .choice:hover{border-color:var(--gold2);background:#fffdf7}
+  .choice:active{transform:translateY(1px)}
+  .freetext-wrap{margin-top:.4rem}
+  .freetext-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+  textarea.freetext{width:100%;min-height:3.4rem;font-family:'Jost',sans-serif;font-size:.98rem;line-height:1.5;color:var(--ink);background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:.8rem 1rem;resize:vertical;transition:border-color .14s}
+  textarea.freetext:focus{outline:none;border-color:var(--gold2)}
+  .ft-row{display:flex;gap:.6rem;align-items:center;margin-top:.6rem}
+  .ft-send{font-family:'Jost',sans-serif;font-weight:600;font-size:.9rem;color:var(--navy2);background:var(--gold);border:none;border-radius:6px;padding:.6rem 1.4rem;cursor:pointer;transition:background .15s}
+  .ft-send:hover{background:var(--gold2)}
+  .ft-send:disabled{opacity:.5;cursor:default}
+  .ft-hint{font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:.06em;color:var(--muted)}
+  .thinking{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;color:var(--muted);padding:.5rem 0}
+  .thinking span{animation:pulse 1.2s infinite}
+  @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+  /* ---- Ending ---- */
+  .ending{background:var(--navy);color:var(--cream);border-radius:12px;padding:2rem 1.6rem;margin-top:1rem}
+  .ending h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.9rem;color:var(--gold);margin-bottom:1rem}
+  .ending p{font-size:1.02rem;line-height:1.75;color:#e8e0d0;margin-bottom:1.2rem}
+  .ending .final-meters{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.3rem 0}
+  .ending .fm{text-align:center}
+  .ending .fm-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold)}
+  .ending .fm-label{font-family:'JetBrains Mono',monospace;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:#b8ac93}
+  .replay{font-family:'Jost',sans-serif;font-weight:500;font-size:.9rem;color:var(--navy2);background:var(--gold);border:none;border-radius:6px;padding:.7rem 1.6rem;cursor:pointer}
+
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="eyebrow">Living Crossroads · A choice in real time</div>
+    <h1 class="title" id="introTitle"></h1>
+    <p class="premise" id="introPremise"></p>
+    <div class="scope" id="introScope"></div>
+    <button class="start-btn" onclick="CR.start()">Step in →</button>
+    <p class="ft-hint" style="margin-top:1.2rem">Hover any <span class="def" style="border-bottom:1px dotted var(--gold2)">underlined term<span class="def-pop">Terms you might not know are defined on hover, so you can start without reading anything else first.</span></span> for a quick definition. Nothing you do here is saved.</p>
+  </div>
+
+  <!-- PLAY -->
+  <div id="play" class="hidden">
+    <div class="meters" id="meters"></div>
+    <div id="sceneArea"></div>
+  </div>
+</div>
+
+<script>
+const CR = (function(){
+  let data=null, meters={}, current=null, busy=false;
+
+  async function load(){
+    const res = await fetch('test-crossroads.json');
+    data = await res.json();
+    document.getElementById('introTitle').innerHTML = data.title;
+    document.getElementById('introPremise').innerHTML = defify(data.premise);
+    document.getElementById('introScope').innerHTML =
+      data.articles.map(a=>`<span class="chip">${a}</span>`).join('');
+  }
+
+  // Replace <def term="X">label</def> with hover spans from glossary
+  function defify(html){
+    return html.replace(/<def term="([^"]+)">([^<]+)<\/def>/g, (m, term, label)=>{
+      const d = (data.glossary && data.glossary[term]) || term;
+      return `<span class="def" tabindex="0">${label}<span class="def-pop">${d}</span></span>`;
+    });
+  }
+
+  function start(){
+    meters = {};
+    data.meters.forEach(m=> meters[m.id]=m.start);
+    document.getElementById('intro').classList.add('hidden');
+    document.getElementById('play').classList.remove('hidden');
+    renderMeters(true);
+    goScene(data.scenes[0].id);
+  }
+
+  function renderMeters(init, deltas){
+    const el = document.getElementById('meters');
+    el.innerHTML = data.meters.map(m=>{
+      const v = meters[m.id];
+      const pct = Math.max(0,Math.min(100,(v-m.min)/(m.max-m.min)*100));
+      let cls='';
+      if(deltas && deltas[m.id]>0) cls='flash-up';
+      else if(deltas && deltas[m.id]<0) cls='flash-down';
+      return `<div class="meter">
+        <div class="meter-label"><span>${m.label}</span><span class="meter-val ${cls}">${v}</span></div>
+        <div class="meter-bar"><div class="meter-fill" style="width:${pct}%"></div></div>
+      </div>`;
+    }).join('');
+  }
+
+  function applyDeltas(deltas){
+    if(!deltas) return;
+    Object.entries(deltas).forEach(([k,v])=>{
+      if(meters[k]!==undefined) meters[k]=Math.max(0,Math.min(100,meters[k]+v));
+    });
+    renderMeters(false, deltas);
+  }
+
+  function scene(id){ return data.scenes.find(s=>s.id===id); }
+
+  function goScene(id){
+    current = scene(id);
+    const area = document.getElementById('sceneArea');
+    area.innerHTML = `
+      <div class="scene-tag">${current.title}</div>
+      <div class="scene-body">${defify(current.body)}</div>
+      <div class="choices" id="choices">
+        ${current.buttons.map(b=>`<button class="choice" data-route="${b.route}">${defify(b.label)}</button>`).join('')}
+      </div>
+      ${current.freetext ? freetextBlock() : ''}
+    `;
+    area.querySelectorAll('.choice').forEach(btn=>{
+      btn.addEventListener('click', ()=> chooseButton(btn.dataset.route));
+    });
+    if(current.freetext){
+      const send = document.getElementById('ftSend');
+      const ta = document.getElementById('ftInput');
+      send.addEventListener('click', ()=> chooseFreeText(ta.value));
+      ta.addEventListener('keydown', e=>{ if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)) chooseFreeText(ta.value); });
+    }
+  }
+
+  function freetextBlock(){
+    return `<div class="freetext-wrap">
+      <div class="freetext-label">— or say it in your own words</div>
+      <textarea class="freetext" id="ftInput" placeholder="Describe the move you want to make…"></textarea>
+      <div class="ft-row">
+        <button class="ft-send" id="ftSend">Make this move</button>
+        <span class="ft-hint">The game reads your intent and routes to a written outcome. It never invents new text.</span>
+      </div>
+    </div>`;
+  }
+
+  function chooseButton(route){
+    if(busy) return;
+    const frag = current.fragments[route];
+    if(!frag){ console.warn('no fragment for', route); return; }
+    resolve(frag);
+  }
+
+  async function chooseFreeText(text){
+    if(busy) return;
+    text = (text||'').trim();
+    if(!text) return;
+    busy = true;
+    const choices = document.getElementById('choices');
+    const ftwrap = document.querySelector('.freetext-wrap');
+    ftwrap.innerHTML = `<div class="thinking">reading your move<span>.</span><span>.</span><span>.</span></div>`;
+
+    let route;
+    try {
+      route = await classify(text);
+    } catch(e){
+      route = null;
+    }
+
+    if(route === 'needs_detail'){
+      // ask for the missing piece, keep the player in the scene
+      const ftwrap = document.querySelector('.freetext-wrap');
+      if(ftwrap){ ftwrap.innerHTML = ''; }
+      showResponse("That's a real move — but who are you bringing it to, or how public do you want it? Say a little more and I'll play it out.", null, ()=> goScene(current.id), true);
+      busy=false;
+      return;
+    }
+    if(route === 'out_of_bounds' || !route || !current.fragments[route]){
+      // graceful in-world redirect, replay the scene
+      const oob = current.outOfBounds;
+      showResponse(oob.text, null, ()=> goScene(oob.next), true);
+      busy=false;
+      return;
+    }
+    const frag = current.fragments[route];
+    resolve(frag);
+    busy=false;
+  }
+
+  // REAL CLASSIFIER — calls /api/crossroads (Sonnet 5). Returns a fragment id.
+  // Falls back to a local keyword stub if the API is unreachable (e.g. local file view).
+  async function classify(text){
+    // Build the fragment descriptor list for the classifier (id + desc only — never the text)
+    const fragments = Object.entries(current.fragments).map(([id,f])=>({ id, desc: f.desc || '' }));
+    try {
+      const res = await fetch('/api/crossroads', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+          move: text,
+          sceneTitle: current.title,
+          sceneBody: current.body.replace(/<[^>]+>/g,''),
+          dimensions: current.dimensions || ['who','what','how'],
+          fragments
+        })
+      });
+      if(!res.ok) throw new Error('api '+res.status);
+      const data = await res.json();
+      if(data && data.fragment) return data.fragment; // 'out_of_bounds' | 'needs_detail' | fragmentId
+      throw new Error('no fragment');
+    } catch(e){
+      // fallback: local keyword stub so the harness still runs offline
+      return stubClassify(text);
+    }
+  }
+
+  // Offline fallback only. The deployed feature uses the Sonnet classifier above.
+  async function stubClassify(text){
+    await new Promise(r=>setTimeout(r, 400));
+    const t = text.toLowerCase();
+    if(current.id==='scene1'){
+      if(/(bridge|both camp|trusted in two|someone who|span|straddle|hawk with rural|carry it|their own idea|proxy)/.test(t)) return 's1_bridge';
+      if(/(hawk|sunset|budget line|fiscal)/.test(t)) return 's1_hawks';
+      if(/(rural|road|farm)/.test(t)) return 's1_rural';
+      if(/(reformer|what it would take|ask)/.test(t)) return 's1_reformers';
+      return 'out_of_bounds';
+    }
+    if(current.id==='scene2'){
+      if(/(reframe|sunset.*feature|off-ramp|future.*leverage|weakness.*strength|sell.*sunset)/.test(t)) return 's2_reframe';
+      if(/(open|own it|transparen|publicly)/.test(t)) return 's2_open';
+      if(/(proxy|ally|background|someone else)/.test(t)) return 's2_proxy';
+      if(/(brief|private|pre-empt|preempt|tell them first|warn)/.test(t)) return 's2_preempt';
+      return 'out_of_bounds';
+    }
+    if(current.id==='scene3'){
+      if(/(room|together|convene|both.*same|solve each other|split|let them|co-author|adversar)/.test(t)) return 's3_convene';
+      if(/(hawk|number|cost|cheaper|shave)/.test(t)) return 's3_hawk';
+      if(/(rural|apolog|repair|betray)/.test(t)) return 's3_rural';
+      if(/(reformer|straight|ask.*vote|personal yes)/.test(t)) return 's3_reformer';
+      return 'out_of_bounds';
+    }
+    return 'out_of_bounds';
+  }
+
+  function resolve(frag){
+    applyDeltas(frag.deltas);
+    showResponse(frag.text, frag.deltas, ()=>{
+      if(frag.next && data.endings[frag.next]) showEnding(frag.next);
+      else if(frag.next) goScene(frag.next);
+    });
+  }
+
+  function showResponse(text, deltas, cont, isRedirect){
+    const area = document.getElementById('sceneArea');
+    area.innerHTML = `
+      <div class="scene-tag">${current.title}</div>
+      <div class="response">${defify(text)}</div>
+      <button class="start-btn" id="contBtn">${isRedirect ? 'Try another move' : 'Continue →'}</button>
+    `;
+    document.getElementById('contBtn').addEventListener('click', cont);
+  }
+
+  function showEnding(id){
+    const e = data.endings[id];
+    const area = document.getElementById('sceneArea');
+    area.innerHTML = `
+      <div class="ending">
+        <h2>${e.title}</h2>
+        <p>${defify(e.text)}</p>
+        <div class="final-meters">
+          ${data.meters.map(m=>`<div class="fm"><div class="fm-val">${meters[m.id]}</div><div class="fm-label">${m.label}</div></div>`).join('')}
+        </div>
+        <button class="replay" onclick="CR.replay()">Play again</button>
+      </div>`;
+    document.querySelector('.meters').style.display='none';
+  }
+
+  function replay(){
+    document.querySelector('.meters').style.display='';
+    start();
+  }
+
+  load();
+  return { start, replay };
+})();
+</script>
+</body>
+</html>
