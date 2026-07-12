@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Living Crossroads — The Federated Republic</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,7 +107,7 @@ const CR = (function(){
   let data=null, meters={}, current=null, busy=false;
 
   async function load(){
-    const res = await fetch('test-crossroads.json');
+    const res = await fetch('thoss-crossroads.json');
     data = await res.json();
     document.getElementById('introTitle').innerHTML = data.title;
     document.getElementById('introPremise').innerHTML = defify(data.premise);
@@ -265,25 +264,35 @@ const CR = (function(){
   async function stubClassify(text){
     await new Promise(r=>setTimeout(r, 400));
     const t = text.toLowerCase();
-    if(current.id==='scene1'){
-      if(/(bridge|both camp|trusted in two|someone who|span|straddle|hawk with rural|carry it|their own idea|proxy)/.test(t)) return 's1_bridge';
-      if(/(hawk|sunset|budget line|fiscal)/.test(t)) return 's1_hawks';
-      if(/(rural|road|farm)/.test(t)) return 's1_rural';
-      if(/(reformer|what it would take|ask)/.test(t)) return 's1_reformers';
+    if(current.id==='s1'){
+      if(/(caucus|territorial|convene|listen|bloc|base)/.test(t)) return 's1_caucus';
+      if(/(count|who would follow|arithmetic|orin.*who|how many|whip)/.test(t)) return 's1_count';
+      if(/(press|substance|policy|interview|serious|why.*vulnerable)/.test(t)) return 's1_press_terms';
+      if(/(legat|lc race|the race|haven't ruled|signal.*race|fourth candidate)/.test(t)) return 's1_lc_flirt';
+      if(/(nothing|quiet|stay|let the bill|two.sentence|discipline)/.test(t)) return 's1_quiet';
       return 'out_of_bounds';
     }
-    if(current.id==='scene2'){
-      if(/(reframe|sunset.*feature|off-ramp|future.*leverage|weakness.*strength|sell.*sunset)/.test(t)) return 's2_reframe';
-      if(/(open|own it|transparen|publicly)/.test(t)) return 's2_open';
-      if(/(proxy|ally|background|someone else)/.test(t)) return 's2_proxy';
-      if(/(brief|private|pre-empt|preempt|tell them first|warn)/.test(t)) return 's2_preempt';
+    if(current.id==='s2'){
+      if(/(own it|honor to be considered|chamber.*gift|take the question|serious.*out loud)/.test(t)) return 's2_own_it';
+      if(/(orin.*answer|proxy|through orin|let orin|someone else.*say)/.test(t)) return 's2_orin_shield';
+      if(/(hang|neither|don't confirm|nothing to add|leave it open|ambiguit)/.test(t)) return 's2_hang';
+      if(/(deny|focused on.*district|rule.*out|close the door)/.test(t)) return 's2_deny';
+      if(/(pivot|redirect|point.*legat|their race|send.*back)/.test(t)) return 's2_pivot_lc';
       return 'out_of_bounds';
     }
-    if(current.id==='scene3'){
-      if(/(room|together|convene|both.*same|solve each other|split|let them|co-author|adversar)/.test(t)) return 's3_convene';
-      if(/(hawk|number|cost|cheaper|shave)/.test(t)) return 's3_hawk';
-      if(/(rural|apolog|repair|betray)/.test(t)) return 's3_rural';
-      if(/(reformer|straight|ask.*vote|personal yes)/.test(t)) return 's3_reformer';
+    if(current.id==='s3'){
+      if(/(rival|convert|partner|co-architect|fault line|split.*base|opponent.*role)/.test(t)) return 's3_rival_convert';
+      if(/(proxy|through orin|let.*known|indirect|ahead of|discover)/.test(t)) return 's3_speaker_proxy';
+      if(/(speaker.*direct|go to the speaker|the speaker|hinge|make.*case)/.test(t)) return 's3_speaker';
+      if(/(outward|bloc first|caucus first|build.*out|later)/.test(t)) return 's3_bloc';
+      if(/(hold|powder|not sure|pause|wait.*want|uncertain)/.test(t)) return 's3_hold';
+      return 'out_of_bounds';
+    }
+    if(current.id==='s4'){
+      if(/(conditional|only if.*stable|genuine.*majority|not.*fragile|quality|won't take.*lose)/.test(t)) return 's4_conditional';
+      if(/(commit|yes.*stand|tell them yes|if they build|i will stand)/.test(t)) return 's4_commit';
+      if(/(king|decline.*deliver|give.*bloc|orin.*instead|hand.*to|worthy)/.test(t)) return 's4_kingmaker';
+      if(/(more time|wait|another count|not yet|be sure)/.test(t)) return 's4_wait';
       return 'out_of_bounds';
     }
     return 'out_of_bounds';

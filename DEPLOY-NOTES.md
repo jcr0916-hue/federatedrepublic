@@ -1,31 +1,24 @@
-# Living Crossroads — harness deploy notes (TEST BUILD)
+# Living Crossroads — THOSS (the real feature)
 
-This is the HARNESS on THROWAWAY test content (Provincial Delegate infrastructure story).
-NOT Thoss, NOT canon. Purpose: prove the real Sonnet classifier works end-to-end.
+The harness, now carrying the sealed Thoss crossroads. Same proven mechanic
+you tested; real Torenthia content.
 
 ## Files
-- crossroads.html — the stateless page (fetches test-crossroads.json)
-- test-crossroads.json — the throwaway test content
-- api/crossroads.js — the Sonnet 5 classifier endpoint (routing decisions only, never prose)
+- crossroads.html — the page (fetches thoss-crossroads.json). Renamed from the test page.
+- thoss-crossroads.json — the Thoss content.
+- api/crossroads.js — the Sonnet 5 classifier (unchanged from the test build; routing decisions only).
 
-## vercel.json — ADD these two lines (mirrors survey.js pattern):
-In "builds":  { "src": "api/crossroads.js", "use": "@vercel/node", "config": { "maxDuration": 30 } },
-In "routes":  { "src": "/api/crossroads", "dest": "/api/crossroads.js" },
+## vercel.json — the /api/crossroads route should already be registered from the test deploy.
+If not, add (mirrors survey.js):
+  builds: { "src": "api/crossroads.js", "use": "@vercel/node", "config": { "maxDuration": 30 } }
+  routes: { "src": "/api/crossroads", "dest": "/api/crossroads.js" }
 
-## What to test once deployed
-Free text that the BUTTONS DON'T OFFER should route to the clever-move fragments:
-- Scene 1 → type a "bridge actor" move (find a hawk trusted by farmers to carry it) → should hit s1_bridge
-- Scene 2 → type "sell the sunset as a feature / future leverage" → should hit s2_reframe
-- Scene 3 → type "put the hawk and the rural delegate in a room together" → should hit s3_convene
-Out-of-bounds test: type something off-topic (e.g. "threaten to leak their records") → graceful redirect.
+## Launch sequencing (John's plan)
+- Goes navigable ~2 weeks before the canon piece publishes.
+- Keep it unlinked until you're ready, then wire it into nav/feature card when you launch the window.
+- 2-3 World pieces/day through the window, >=1 mundane, building toward the resolution.
+- Retires when the canon news piece publishes.
 
-## Safety properties (verify held)
-- The endpoint returns ONLY {fragment, confidence, missing, read} — never story prose.
-- Invalid/unknown fragment ids are coerced to out_of_bounds.
-- Bad JSON from the model fails safe to out_of_bounds.
-- No data stored anywhere. Stateless.
-
-## Local preview (no API)
-crossroads-harness.html (self-contained, in outputs) runs offline using a keyword STUB
-fallback — good for checking layout/flow/on-ramp, but the REAL intent-reading only works
-once api/crossroads.js is deployed.
+## What stays sealed
+The canon outcome is sealed (Claude only). John plays as a player. Do not surface the
+canon path in any player-facing text.
