@@ -131,6 +131,7 @@ const SCENARIOS = [
   {title:'The Unremovable',file:'scenario-the-unremovable.html',kw:['removal order','detention','asylum','refoulement','stateless','security','judicial review']},
   {title:'The Second Renewal',file:'scenario-the-second-renewal.html',kw:['military','authorization','renewal','transition','reconstruction','withdrawal','senate']},
   {title:'The Fallback',file:'scenario-the-fallback.html',kw:['formation','assembly','senate','nominee rejected','cc','governing','deadlock','§2.5','§2.6','§3.1']},
+  {title:'The Coalition',file:'scenario-the-coalition.html',kw:['no confidence','constructive','removal','civic consul','successor','majority','accountability','§2.6','§2.6.a']},
   {title:'The Formula',file:'scenario-the-formula.html',kw:['fiscal equalization','em','fiscal capacity','social state','90 days','§12.8','§12.1','monetary authority']},
   {title:'The Graduation',file:'scenario-the-graduation.html',kw:['voting','residency','nvs','student','ordinary','individual sovereignty','§1.2','§11.2','ballot']},
   {title:'The Holdout',file:'scenario-the-holdout.html',kw:['sc nomination','senate','refuses vote','day 120','judicial','confirmation','§4.4','holdout']},
