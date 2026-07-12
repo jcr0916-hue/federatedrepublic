@@ -78,6 +78,7 @@
   .ending .fm{text-align:center}
   .ending .fm-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold)}
   .ending .fm-label{font-family:'JetBrains Mono',monospace;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:#b8ac93}
+    .ending-coda{font-family:'Jost',sans-serif;font-size:.82rem;line-height:1.6;color:#b8ac93;font-style:italic;margin:1.2rem 0 1.4rem;padding-top:1.1rem;border-top:1px solid rgba(201,168,76,0.2)}
   .replay{font-family:'Jost',sans-serif;font-weight:500;font-size:.9rem;color:var(--navy2);background:var(--gold);border:none;border-radius:6px;padding:.7rem 1.6rem;cursor:pointer}
 
   .hidden{display:none}
@@ -194,7 +195,7 @@ const CR = (function(){
     if(busy) return;
     const frag = current.fragments[route];
     if(!frag){ console.warn('no fragment for', route); return; }
-    resolve(frag);
+    resolve(frag, route);
   }
 
   async function chooseFreeText(text){
@@ -229,7 +230,7 @@ const CR = (function(){
       return;
     }
     const frag = current.fragments[route];
-    resolve(frag);
+    resolve(frag, route);
     busy=false;
   }
 
@@ -298,7 +299,9 @@ const CR = (function(){
     return 'out_of_bounds';
   }
 
-  function resolve(frag){
+  let lastFragmentId = null;
+  function resolve(frag, fragId){
+    lastFragmentId = fragId || lastFragmentId;
     applyDeltas(frag.deltas);
     showResponse(frag.text, frag.deltas, ()=>{
       if(frag.next && data.endings[frag.next]) showEnding(frag.next);
@@ -316,8 +319,29 @@ const CR = (function(){
     document.getElementById('contBtn').addEventListener('click', cont);
   }
 
+  function selectEnding(){
+    const S = meters.standing, A = meters.allies, I = meters.intent;
+    const last = lastFragmentId || '';
+    // Explicit final-choice outcomes first
+    if(last === 's4_kingmaker') return 'kingmaker';
+    // If she never committed and the coalition dispersed -> back to legislator
+    if(I < 25 || A < 30) return 'legislator';
+    // Long game: high standing, real allies, but intent kept deliberately mid — both doors open
+    if(I >= 30 && I < 52 && A >= 55) return 'long_game';
+    // A path that leaned onto the public/Legat stage (high standing, intent present, allies not chamber-deep)
+    if(last === 's4_wait' && I >= 30 && A < 60) return 'legat_run';
+    // Committed to the quiet office:
+    if(I >= 52){
+      return A >= 65 ? 'commit_civic' : 'commit_civic_thin';
+    }
+    // Fallbacks by shape
+    if(A >= 55) return 'long_game';
+    return 'legislator';
+  }
+
   function showEnding(id){
-    const e = data.endings[id];
+    const key = (id === 'resolve') ? selectEnding() : id;
+    const e = data.endings[key] || data.endings['resolve'];
     const area = document.getElementById('sceneArea');
     area.innerHTML = `
       <div class="ending">
@@ -326,6 +350,7 @@ const CR = (function(){
         <div class="final-meters">
           ${data.meters.map(m=>`<div class="fm"><div class="fm-val">${meters[m.id]}</div><div class="fm-label">${m.label}</div></div>`).join('')}
         </div>
+        <div class="ending-coda">The real Elin Thoss walked one of these roads too. When her story publishes, you'll know which — and whether the path you chose was the one that became true.</div>
         <button class="replay" onclick="CR.replay()">Play again</button>
       </div>`;
     document.querySelector('.meters').style.display='none';
