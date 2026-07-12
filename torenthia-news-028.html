@@ -24,6 +24,11 @@
     .article-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:.75rem}
     .article-deck{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--muted);line-height:1.65;margin-bottom:1.25rem}
     .article-byline{display:flex;flex-wrap:wrap;gap:.75rem;align-items:baseline;padding:.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:1.75rem}
+    
+    .subject-portrait{margin:0 0 1.75rem;display:flex;flex-direction:column;align-items:center}
+    .subject-portrait img{width:190px;height:190px;object-fit:cover;border-radius:4px;border:1px solid var(--border);filter:grayscale(15%);box-shadow:0 4px 18px rgba(15,30,56,.14)}
+    .subject-portrait figcaption{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.6rem;text-align:center}
+    @media(min-width:720px){.subject-portrait{float:right;margin:0 0 1rem 1.75rem;width:190px}}
     .byline-author{font-family:'Jost',sans-serif;font-size:.82rem;font-weight:600;color:var(--navy)}
     .byline-role{font-family:'Jost',sans-serif;font-size:.78rem;color:var(--muted)}
     .byline-sep{color:var(--border)}
@@ -93,6 +98,10 @@
     <span>Verentum</span>
     <span class="byline-date">Year 13, Month 5</span>
   </div>
+  <figure class="subject-portrait">
+    <img src="Ines-Carrow.png" alt="Ines Carrow, Director" loading="lazy">
+    <figcaption>Ines Carrow &middot; Director</figcaption>
+  </figure>
   <div class="article-body">
     <p>The Sunderland Interim Authority's response to Director Ines Carrow's Foreign Affairs Directorate inquiry arrived on a Tuesday, twelve days after she filed it, addressed to the Directorate's formal correspondence office and not to Carrow directly. It was three paragraphs. The first acknowledged receipt. The second described the matter as "noted and currently under review within the appropriate inter-authority channels." The third expressed the SIA's "continued regard for the diplomatic framework governing relations between the Interim Authority and the Federated Republic."</p>
 
