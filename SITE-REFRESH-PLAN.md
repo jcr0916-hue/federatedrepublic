@@ -67,3 +67,35 @@ Kill the "library page" feel WITHOUT touching the easy back end:
 - American English; house typography/palette; no Playfair.
 - site.css is the home for shared styles; fix bugs there so all pages benefit.
 - Batch commits; deliver zips to outputs; John pushes (no push token for Claude).
+
+---
+
+## PHASE 4 — Template System (DECIDED: build-step, after Phases 1-3)
+*Added 260712. John decided in favor of a real build step. Context: non-commercial hobby project, values simplicity + easy updates + consistency; recurring drift is the pain point; cost must stay ~$0.*
+
+### The decision
+Migrate the ~110 shared-skeleton pages to a **static site generator with a build step** (Eleventy / 11ty is the lightweight default candidate — free, open-source; Vercel runs the build for free on the hobby tier, so $0 added cost). One template per page type; a new page becomes "write content, pick template." This is the structural cure for the recurring drift — shared parts live in ONE place by construction, so there is nothing to drift from.
+
+### The tradeoff John accepted (record it plainly)
+Currently what John pushes IS what's served. With a build step, John pushes SOURCE (content + templates) and Vercel GENERATES the served pages. A layer sits between "what I wrote" and "what's live." Builds are fast; a failed build keeps the old version live rather than breaking the site. Conceptual shift, but John delegates the building anyway.
+
+### WHY NOT NOW (sequencing discipline — important)
+1. The site still has drift/surprises (e.g. 7 empty news pages found 260712). Templating on an unstable base bakes the mess into the template. CONSOLIDATE FIRST (Phases 1-3), TEMPLATE SECOND. The nav + CSS consolidation IS the prep — every layer centralized is a layer the template won't fight.
+2. A build migration is a real project, not a session: pick the generator, build templates from the now-consolidated shared parts, migrate page-type by page-type (news -> nrs -> scenario -> quicksheet, same order as CSS), verify each type renders identically before/after, keep exception pages hand-authored.
+
+### The exception pages (John's own list, correct instinct — these stay bespoke, NOT templated)
+- **Annotated Edition** — sticky nav + search behavior (own interactive chrome)
+- **Glossary** — sticky nav + search behavior
+- **Homepage (index)** — landing page: hero, featured cards, not a document
+- **The World (torenthia.html)** — feed/index, not a single article
+- **Feature pages** — crossroads.html, survey.html (apps, not documents)
+- Likely also: quicksheets hub, atlas/map pages, diagrams, contact/sources (evaluate each)
+
+### The templatable ~90% (share one skeleton)
+news, NRS, scenario, quicksheet article pages — these are documents with identical chrome and only their content differing. This is the set that becomes template-driven.
+
+### Open decisions for Phase 4 build time
+- Generator choice: Eleventy (leading candidate) vs alternatives. Confirm it builds cleanly on Vercel hobby tier at $0.
+- Whether to keep the plain .html files as the source format (Eleventy supports HTML+data) so John's mental model barely changes, vs. moving to markdown/nunjucks templates.
+- Migration order and per-type render-parity verification.
+
