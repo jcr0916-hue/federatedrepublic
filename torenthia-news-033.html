@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Quiet Bill Isn't Quiet Anymore — The Torenthian</title>
+  <meta name="description" content="Elin Thoss's border-infrastructure measure was a footnote a month ago. It clears committee this week with a Korda co-sponsor attached, and now every other Legat Consul candidate has to have an opinion on a bill that isn't even about their race.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .masthead{background:var(--navy2);padding:1.5rem 2rem 1.25rem;border-bottom:3px solid var(--gold)}
+    .masthead-inner{max-width:860px;margin:0 auto}
+    .masthead-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid rgba(201,168,76,.3)}
+    .masthead-meta{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(201,168,76,.7)}
+    .masthead-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:#f5f0e8;letter-spacing:.08em;text-align:center;text-transform:uppercase;line-height:1}
+    .masthead-tagline{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-style:italic;color:rgba(245,240,232,.5);text-align:center;margin-top:.35rem}
+    .article-wrap{max-width:700px;margin:0 auto;padding:3rem 2rem 5rem}
+    .article-section{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem;padding-bottom:.6rem;border-bottom:2px solid var(--navy)}
+    .article-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:.75rem}
+    .article-deck{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--muted);line-height:1.65;margin-bottom:1.25rem}
+    .article-byline{display:flex;flex-wrap:wrap;gap:.75rem;align-items:baseline;padding:.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:1.75rem}
+    
+    .subject-portrait{margin:0 0 1.75rem;display:flex;flex-direction:column;align-items:center}
+    .subject-portrait img{width:190px;height:190px;object-fit:cover;border-radius:4px;border:1px solid var(--border);filter:grayscale(15%);box-shadow:0 4px 18px rgba(15,30,56,.14)}
+    .subject-portrait figcaption{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.6rem;text-align:center}
+    @media(min-width:720px){.subject-portrait{float:right;margin:0 0 1rem 1.75rem;width:190px}}
+    .byline-author{font-family:'Jost',sans-serif;font-size:.82rem;font-weight:600;color:var(--navy)}
+    .byline-role{font-family:'Jost',sans-serif;font-size:.78rem;color:var(--muted)}
+    .byline-sep{color:var(--border)}
+    .byline-date{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--muted);letter-spacing:.05em;margin-left:auto}
+    .article-body p{font-family:'Georgia',serif;font-size:1rem;line-height:1.95;color:#1a1a1a;margin-bottom:1.4rem}
+    .article-body p:first-child::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:700;color:var(--navy);float:left;line-height:.8;margin:.05em .12em 0 0}
+    .pull-quote{border-left:3px solid var(--gold);padding:.85rem 1.25rem;margin:1.75rem 0;background:#fdfbf5}
+    .pull-quote p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--navy);line-height:1.6;margin-bottom:0}
+    .article-subhead{font-family:'Cormorant Garamond',serif;font-size:.88rem;font-weight:700;color:var(--navy);margin:2.25rem 0 .85rem;padding-bottom:.4rem;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.06em}
+    .article-rule{border:none;border-top:1px solid var(--border);margin:2rem 0}
+    .author-bio{background:var(--cream);border-top:2px solid var(--navy);padding:1rem 1.25rem;margin-top:2.5rem;font-size:.8rem;color:var(--muted);font-family:'Jost',sans-serif;line-height:1.65}
+    .author-bio strong{color:var(--text);font-weight:500}
+    .article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-top:1px solid var(--border);margin-top:1.5rem}
+    .article-nav a{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--gold);text-decoration:none;text-transform:uppercase}
+    .article-nav a:hover{color:var(--navy)}
+    @media(max-width:820px){.masthead{padding:1.25rem 1rem 1rem}.article-wrap{padding:2rem 1rem 4rem}.byline-date{margin-left:0;width:100%}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div id="site-nav"></div>
+<div class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-top">
+      <span class="masthead-meta">Independent Founded Year 2 &middot; Verentum</span>
+      <span class="masthead-meta">Year 13 &middot; Month 6</span>
+    </div>
+    <div class="masthead-name">The Torenthian</div>
+    <div class="masthead-tagline">The Republic's newspaper of record</div>
+  </div>
+</div>
+<main id="main-content">
+<div class="article-wrap">
+  <div class="article-section">LC Race &middot; Analysis</div>
+  <h1 class="article-headline">The Quiet Bill Isn't Quiet Anymore</h1>
+  <p class="article-deck">A month ago, Elin Thoss's border-infrastructure measure was the least remarked-upon thing to come out of Varda Crossing week. It clears committee today with a Korda co-sponsor attached — and now the three people actually running for Legat Consul have to say what they think of a bill that isn't about their race at all.</p>
+  <div class="article-byline">
+    <span class="byline-author">Petra Vend</span>
+    <span class="byline-role">Political Correspondent</span>
+    <span class="byline-sep">&middot;</span>
+    <span>Verentum</span>
+    <span class="byline-date">Year 13, Month 6</span>
+  </div>
+  <figure class="subject-portrait">
+    <img src="Elin-Thoss.png" alt="Elin Thoss, Assembly, Selvane 3rd" loading="lazy">
+    <figcaption>Elin Thoss &middot; Assembly, Selvane 3rd</figcaption>
+  </figure>
+  <div class="article-body">
+    <p>Legislation is supposed to be the boring part. That was certainly the assumption when Assembly member Elin Thoss introduced her measure the same week as Varda Crossing — a narrow, procedural instrument requiring that executive domain budget proposals under §12.2 include a standing, annually reviewed line for border-territory infrastructure and emergency capacity. The political desks covered the four candidates' reactions to the crossing and gave Thoss's bill two sentences, if that. It read like the kind of thing a conscientious backbencher files and nobody outside the committee room ever thinks about again.</p>
+
+    <p>It cleared the Territories and Fiscal Affairs Committee this week on an 11–2 vote. That alone would be a modest story. What makes it a real one is who put their name on it alongside hers: Committee member Dessa Orin, one of Korda Territory's own Assembly delegates, signed on as co-sponsor two days before the vote — the first time since the crossing that anyone from Korda has attached their name to anything connected to it that wasn't a statement of grief. Orin's office was blunt about why. "This isn't about Sunderland," a spokesperson said. "It's about why our roads and our capacity requests have been sitting in a queue for four years while the equalization mechanism the Monitor already flagged goes unaddressed. Member Thoss is the first person in the capital who wrote a bill about that instead of a statement about the lake."</p>
+
+    <p class="article-subhead">A Bill Nobody Running Can Ignore</p>
+
+    <p>That single co-sponsorship is what turned a footnote into a floor vote, and a floor vote is what forces the three declared Legat Consul candidates to have an opinion on a bill in the Civic Consul's domain — the office none of them are running for.</p>
+
+    <p>Seren Mak's office called it "a reasonable step that does not substitute for a hardened posture," which is Mak finding a way to praise a bill without conceding that it addresses anything her §14.2 authorization plan does not. Tobias Vael, characteristically, said less and meant it more: a one-line statement calling the measure "overdue" and nothing further, which several capital observers read as the closest thing to an endorsement Vael has issued of anyone else's work all cycle. Director Carrow's response was the most pointed, precisely because her own Directorate is the body that produced the finding the bill responds to. "The Executive Monitor identified this gap before any formation crossed a marker," her statement read. "It is good that the Assembly is finally acting on its own Monitor's finding. It should not have taken a body count to do it." It is, in its way, a compliment to Thoss and an indictment of everyone else at once — including, a few commentators noted, the Directorate itself, which flagged the §12.8 failure without introducing legislation to fix it.</p>
+
+    <div class="pull-quote"><p>"It is good that the Assembly is finally acting on its own Monitor's finding. It should not have taken a body count to do it."</p></div>
+
+    <p>Thoss herself said nothing beyond a two-sentence statement thanking the committee and Member Orin by name. She did not answer, and was not asked on the record, whether a bill with this much sudden momentum changes anything about her plans for the Legat Consul race she has spent a month declining to discuss. Her office did not respond to a request for comment on that specific question, which by now is itself a kind of answer, though not the kind anyone can print.</p>
+
+    <p>The measure goes to a full Assembly floor vote within thirty days. If it passes — and an 11–2 committee margin plus a Korda co-sponsor suggests it will — it becomes the first concrete legislative product to come out of Varda Crossing, authored by the one candidate who never said a word about Varda Crossing at all. Whatever Thoss decides to do next, the Republic now has a data point it did not have a month ago: when she picked up a different tool than the other three, the tool worked.</p>
+  </div>
+  <div class="author-bio"><strong>Petra Vend</strong> is The Torenthian's political correspondent, based in Verentum.</div>
+  <div class="article-nav">
+    <a href="torenthia-news-032.html">&larr; Four Rooms, Four Answers</a>
+    <a href="torenthia-news-035.html">The First Bill Out of the Crossing &rarr;</a>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <span class="footer-logo">The Federated Republic</span>
+    <div class="footer-social">
+      <span class="footer-social-label">Follow</span>
+      <a href="https://bsky.app/profile/federatedrepublic.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://x.com/TheFedRepublic" target="_blank" rel="noopener">X</a>
+      <a href="https://www.facebook.com/profile.php?id=61591764057032" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
+</footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
