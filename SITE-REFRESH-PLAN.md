@@ -99,3 +99,26 @@ news, NRS, scenario, quicksheet article pages — these are documents with ident
 - Whether to keep the plain .html files as the source format (Eleventy supports HTML+data) so John's mental model barely changes, vs. moving to markdown/nunjucks templates.
 - Migration order and per-type render-parity verification.
 
+
+---
+
+## PHASE 4 PRE-FLIGHT — Runway to reduce migration pain (added 260713, John)
+*John plans to start Phase 4 end of this week or early next week. This section is the prep checklist that puts us in the best position to transfer with least burden. Core principle: a template migration is easy in proportion to how UNIFORM and CLEAN the pages already are. Most of the prep IS the rest of Phase 1 — consolidation is not a detour from templating, it's what makes templating not-awful. Every inconsistency we don't fix BEFORE Phase 4 is one we'd have to handle DURING, at the worst time.*
+
+### Pre-flight checklist (roughly by leverage)
+1. **Finish CSS consolidation (highest leverage).** Shared styles are still split between site.css and drifted inline blocks (same selector, different values across pages — confirmed during the masthead pass). Resolve the drift and move shared rules to site.css FIRST, so the template just links site.css and every page renders right. Migrating with drift unresolved forces resolving it mid-build (worst time). Masthead done; article-body/byline/article-nav rules still drifted and deferred — this is the pass to finish. Go page-type by page-type (news -> nrs -> scenario -> quicksheet), verifying each type renders identically before/after.
+2. **Lock the exact page-type "shapes."** Before migrating, document precisely what each templatable type (news, nrs, scenario, quicksheet) consists of, skeleton minus content. Confirm "every news page is IDENTICALLY structured except content." FIND weird one-offs now, not mid-build. (The 7 empty pages + 5 stale-nav pages found 260713 are exactly the kind of surprise to surface early — assume more exist.)
+3. **Separate content from chrome cleanly.** Ideal pre-Phase-4 state: each page = identical boilerplate + ONE clean content block (<main id="main-content">...</main>). The nav sweep moved us toward this. Get every templatable page to "boilerplate + one content block" so extraction is copy-paste, not surgery.
+4. **Lock the inventory + exception list.** Walk each exception candidate (Annotated, Glossary, homepage/index, The World/torenthia.html, feature pages crossroads/survey; also evaluate quicksheets hub, atlas/map, diagrams, contact, sources) and decide DEFINITIVELY templated-vs-bespoke. Produce a manifest: which page uses which template.
+5. **Pick the generator + PROVE ON ONE PAGE (the only genuinely new pre-flight step).** Choose the tool (Eleventy leading candidate; confirm $0 on Vercel hobby build). Set it up, run ONE news page through the full pipeline (source -> build -> served output), confirm byte-identical to current. Prove the machine on one page before feeding it 110. Contained experiment; does not touch the live site.
+
+### The honest framing (for John + future Claude)
+- Items 1-4 are largely the rest of Phase 1 (CSS consolidation + "Latest" strip) plus inventory. Doing Phase 1 IS the Phase 4 prep. Only item 5 is genuinely new, and it's a safe contained experiment.
+- The migration will still be tedious (110 pages). The prep can't make it fun, only mechanical-instead-of-surgical. Aim: by the time we migrate, a page is "boilerplate + one content block" and the template is fill-in-the-blank.
+- Sequence discipline holds: consolidate/clean FIRST, template SECOND. Don't bake current drift into the template.
+
+### Known state as of 260713 (starting point for pre-flight)
+- 124 pages on shared nav.js (single source). skip-nav standardized. Nav drift fixed.
+- Masthead CSS consolidated to site.css (30 news pages). Other shared rules still inline/drifted.
+- 0 empty files (7 recovered 260713). Scenario count 44. 165 provisions.
+- Exception list (John's, to confirm): Annotated, Glossary, index, The World, crossroads, survey.
