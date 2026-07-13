@@ -72,3 +72,71 @@ Legat Consul into the domestic executive — in tension with §2.6's "CC is acco
   rule wording; the reversion clause.
 - Workflow: draft replacement text → John approves WORDING → unpack.py/pack.py DOCX edit → JSON →
   parity → annotated.html + search-index.js → new dated DOCX → changelog entry → package.
+
+---
+
+## STRESS TEST + HARDENING (added 260712, same session — all resolved by John)
+
+Ran an adversarial stress test on the proposed fallback (exploits / edge cases /
+collisions / failure states). Core design held — the big stall-to-win exploit is
+genuinely closed — but the test surfaced gaps in rare states. All resolved below.
+These resolutions are PART OF THE DECIDED SPEC; draft must implement them.
+
+### Resolved gaps (fold into the draft)
+
+**G1 — Degenerate straw poll (candidate count).**
+- Floor is TWO candidates, ceiling is FOUR (was "top three; cap 5" — now top-two-to-four).
+- Ties extend the advancing set within that band; a tie that would exceed FOUR breaks by
+  continuous service (existing §2.6.a seniority tiebreaker), statutory tie-break if equally senior.
+- **One-candidate case (G1a): if only one person receives straw-poll votes, that single
+  candidate goes to the public as a RATIFICATION vote (yes/no on the one name).** Still routes
+  the decision to the people; still embarrasses the Assembly.
+
+**G2 — No Speaker (the dead-end John flagged first).**
+- If there is no sitting Speaker, the MOST SENIOR Assembly member by continuous service both
+  (a) serves as Acting Civic Consul (caretaker, maintain-existing-policy only) AND
+  (b) administers the straw poll. One person covers both roles.
+- The Senate stays OUT entirely — the earlier "Senate Speaker could administer" idea is REJECTED
+  because it reintroduces another chamber into CC formation, violating the redesign's core principle.
+- Seniority uses "most senior by continuous service," statutory tie-break if equal.
+
+**G3 — Elections Panel can't deliver / paralysis returns.**
+- The national-vote window has a FLOOR and a CEILING.
+- Default: 45 days. Hard ceiling: 90 days absolute maximum, even with extension.
+- The Elections Panel may extend beyond the default ONLY with justification PUBLISHED TO THE NRS
+  (same shape as the §3.1 Senate extension: stated cause, published, reviewable) — never a
+  unilateral silent extension. The 90-day wall cannot be exceeded regardless.
+- This kills the "caretaker forever" failure: worst case is bounded at ~3 months, not indefinite.
+
+### The Speaker/administrator role is PURELY ADMINISTRATIVE
+- Whoever runs the straw poll (Speaker, or senior member if no Speaker) ADMINISTERS a fixed
+  mechanical procedure and nothing more — no discretion over candidate order, timing, or what
+  counts. This closes the "partisan Speaker shapes the outcome" exploit. Draft must make the
+  straw-poll procedure mechanical and Speaker-proof.
+- No quorum/turnout requirement on the straw poll: it produces its result regardless of turnout,
+  so a boycott cannot veto it (boycotters simply forfeit influence over which candidates advance).
+
+### Conscious design choices CONFIRMED (not gaps — accepted with eyes open)
+- **Deterrent is not universal:** a nationally-popular-but-Assembly-minority faction may COURT the
+  fallback rather than fear it. ACCEPTED as a feature — it routes around an Assembly out of step
+  with the country. The embarrassment engine deters factions that would lose nationally; that's fine.
+- **No turnout floor on the national vote:** plurality/RCV-winner is sufficient, no minimum turnout.
+  ACCEPTED — the fallback is the penalty outcome; no mandate is claimed for it.
+- **Reversion cutoff:** the Assembly may reclaim the process by electing a CC by absolute majority
+  only UP TO THE START of the national vote. Once the public is voting, the vote finishes — the
+  Assembly cannot snatch it back mid-count. (Draft must define "start of the national vote" as the
+  cutoff, not "conclusion.")
+- **Acting Speaker/senior-member CC is NOT removable via §2.6** — they are Acting, temporary by
+  construction, not "the Civic Consul." Draft should be explicit so no one tries a §2.6 motion
+  against the caretaker.
+- **Backfill:** if a top-N candidate becomes disqualified between the straw poll and the national
+  vote, the ballot proceeds with those who remain qualified (next-highest does not auto-backfill
+  unless the set would drop below two, in which case re-run is a draft-detail to settle).
+
+### Draft checklist now includes (in addition to the earlier notes)
+- Straw-poll: mechanical procedure, no quorum, top-two-to-four, one-candidate→ratification.
+- No-Speaker branch: senior member does both roles; Senate excluded.
+- Window: 45 default / 90 ceiling / NRS-justified extension only.
+- Reversion cutoff = start of national vote.
+- Acting caretaker explicitly not §2.6-removable.
+- Disqualification-before-vote: ballot proceeds with remaining qualified.
