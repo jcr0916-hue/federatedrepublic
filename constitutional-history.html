@@ -56,36 +56,11 @@
   </section>
   <div class="ch-wrap" id="main-content">
   <p class="ch-intro">This record covers the full development of the Federated Republic's constitution: from its initial drafting through terminology reform, article reordering, and seven sessions of systematic stress-testing. Entries run chronologically, oldest first. The constitutional text itself is available in the <a href="annotated.html">annotated edition</a>.</p>
-  
-    
-  
-  
+
   <div style="margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:var(--cream2);border:1px solid var(--border);border-radius:4px;font-family:'Jost',sans-serif;font-size:.9rem;color:var(--muted)">
     Showing the most recent changes. The complete record of all constitutional changes is in the <a href="constitutional-history-archive.html">full history archive</a>.
   </div>
-<article class="hist-entry">
-  <div class="hist-tag">Session 260709 · Constitutional</div>
-  <h2 class="hist-title">Master DOCX sync: Article XV and §9.11 brought into line</h2>
-  <div class="hist-body">
-    <p><strong>Background:</strong> a full site sweep — the first comprehensive check across DOCX, JSON, annotated.html, search-index.js, and the quick sheets since the recent run of amendments — found that constitution_data.json, constitutional-quickref.md, annotated.html, three Scenarios (The Audit, The Third Strike, The Restoration), and the Article XV Quick Sheet all agreed on a design the master DOCX had never actually received. This wasn't drift from a recent edit; it predates this session's amendment work and was only caught now because a full authority-chain sweep hadn't been run in some time.</p>
 
-    <p><strong>§15.1.a — Provisional Status: added to the DOCX.</strong> This provision — the intermediate constitutional stage between Territory and full State, with its own Senate-seat and self-governance rules — existed in every other file but had never been written into the master document at all.</p>
-
-    <p><strong>§15.2 — The Statehood Audit: DOCX brought into line.</strong> The DOCX's old text used a different, superseded concept — a Legislature-defined "Provisional Membership Period" of one to three years — rather than routing through §15.1.a's Provisional status. Updated to match: the JMC (not just the LM) administers the Statehood Audit, and passage leads directly into Provisional status under §15.1.a.</p>
-
-    <p><strong>§15.3 — Mandatory Devolution: DOCX brought into line.</strong> The old DOCX text had a genuinely different mechanism — three failures triggered a citizen choice between a two-year federal remediation commission or Provisional status, with a devolution vote only after a full year of continued failure. The adopted design instead creates a <strong>Provisional Audit Council</strong> automatically upon entering Provisional status (two Civic-Consul-appointed officers, two State-legislature-appointed delegates, advisory only, dissolves on Statehood restoration), with an immediate citizen vote on devolution and annual re-votes on continued failure. Findings are now published by the JMC, not the LM alone.</p>
-
-    <p><strong>§15.4 — Voluntary Devolution and Merger: one clarifying sentence added.</strong> "Where devolution is initiated under this section without prior entry into Provisional status under §15.3, the State retains full State status — including Senate representation — throughout; State status is unchanged unless and until the restructuring agreement takes effect upon Senate ratification." Confirms the ordinary voluntary path doesn't touch a State's status until the agreement actually takes effect.</p>
-
-    <p><strong>§15.5 — Re-Qualification Pathway: minor wording reconciled</strong> to match the adopted phrasing exactly (no substantive change).</p>
-
-    <p><strong>§9.11 — Joint Monitor Council: missing dissent-procedure text added.</strong> The DOCX was missing the sentences describing how the JMC exercises a function this constitution assigns to it collectively — by majority vote of participating Monitor Generals, with a dissenting Monitor General's position published alongside — plus its delegation and resource-coordination powers. This mattered immediately: §9.6.a, added earlier this session, explicitly cross-references "§9.11's dissent procedure," a mechanism that was missing from the document it cited.</p>
-
-    <p><strong>Why the JSON version was trusted as correct, not the DOCX:</strong> the design was already load-bearing across the live site — built into three Scenarios and a Quick Sheet — meaning it had been adopted and built upon at some point; the DOCX simply never caught up. Same failure shape as the project's original reconciliation problem, just surfaced later through a routine sweep rather than flagged at the time.</p>
-
-    <p>Provision count: 165 (unchanged — §15.1.a already existed in every file except the DOCX; this session brought the DOCX current, it did not add anything new to the constitution).</p>
-  </div>
-</article>
   <article class="hist-entry">
     <div class="hist-tag">Session 260709 · Constitutional</div>
     <h2 class="hist-title">Full review resolution &amp; sequential renumbering</h2>
@@ -105,6 +80,11 @@
     <div class="hist-tag">Session 260711 · Constitutional</div>
     <h2 class="hist-title">Federal-office eligibility &amp; disclosure (§7.4)</h2>
     <div class="hist-body"><p>A new <strong>§7.4 Eligibility and Disclosure for Federal Office</strong> replaces the blanket felony bar with a transparency rule that applies to every federal office. Candidates &mdash; and persons selected or elevated to office without standing for election &mdash; must disclose their criminal history under penalty of perjury, published to the NRS; the weight of a disclosed history is for the voters, or the selecting body, to judge. No conviction bars a person from office except a narrow, exhaustive list that can only be changed by amendment: insurrection, rebellion, treason, or subversion of a federal election, and only on conviction rather than accusation. A person removed from office by an affirmative process &mdash; impeachment, for-cause removal, constructive no confidence, or recall &mdash; must sit out the remainder of the current electoral cycle and one full cycle thereafter before seeking that office again; ordinary term expiry and electoral loss are not removals. The 7-year citizenship requirement was removed from the Civic Consul (who is elected from and by the Assembly, making a second eligibility check incoherent) and retained for the Legat Consul (chosen by a different method, with a security function that justifies a citizenship floor). 165 provisions.</p></div>
+  </article>
+  <article class="hist-entry">
+    <div class="hist-tag">Session 260713 · Constitutional</div>
+    <h2 class="hist-title">§2.6.a redesign: government-formation fallback</h2>
+    <p class="hist-body">Replaced the five-rung government-formation cascade (Assembly election &rarr; Speaker acting &rarr; Senate 2/3 designation &rarr; Legat Consul nomination with Senate confirmation &rarr; seniority backstop) with a simpler two-stage fallback kept entirely within the Assembly and the people. On an Assembly failure to elect a Civic Consul, the Speaker (or, absent a Speaker, the most senior member) acts as a caretaker and administers a straw poll; the two-to-four leading candidates advance to a national ranked-choice election run by the Elections Panel within a 45-day default window (90-day hard ceiling, extension only for cause published to the NRS), whose winner becomes a Civic Consul removable only under &sect;2.6. The national vote is the deliberate consequence of Assembly failure, not a competing mandate; the Assembly may reclaim the process by electing a Civic Consul at any time before the national vote begins. Removed the Senate and Legat Consul from the domestic executive's formation entirely. The now-obsolete scenario dramatizing the old cascade was retired.</p>
   </article>
 
 </div>
