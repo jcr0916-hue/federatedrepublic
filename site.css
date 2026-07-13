@@ -303,3 +303,11 @@ footer { background: var(--navy2); border-top: 1px solid rgba(201,168,76,0.15); 
 .search-result-snippet { font-size: 0.8rem; color: var(--muted); line-height: 1.5; display: block; }
 .search-empty { padding: 2rem; text-align: center; color: var(--muted); font-size: 0.9rem; }
 mark { background: rgba(201,168,76,0.3); color: inherit; padding: 0 1px; border-radius: 1px; }
+
+/* ===== News masthead (consolidated from 30 news pages) ===== */
+.masthead{background:var(--navy2);padding:1.5rem 2rem 1.25rem;border-bottom:3px solid var(--gold)}
+.masthead-inner{max-width:860px;margin:0 auto}
+.masthead-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid rgba(201,168,76,.3)}
+.masthead-meta{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(201,168,76,.7)}
+.masthead-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:#f5f0e8;letter-spacing:.08em;text-align:center;text-transform:uppercase;line-height:1}
+.masthead-tagline{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-style:italic;color:rgba(245,240,232,.5);text-align:center;margin-top:.35rem}
