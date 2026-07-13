@@ -61,6 +61,17 @@
     if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
   };
 
+  // Close the mobile menu when clicking outside of it.
+  document.addEventListener("click", function (e) {
+    var m = document.getElementById("mobileMenu");
+    if (m && m.classList.contains("open") &&
+        !e.target.closest("nav") && !e.target.closest("#mobileMenu")) {
+      m.classList.remove("open");
+      var btn = document.querySelector(".hamburger");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+  });
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", inject);
   } else {

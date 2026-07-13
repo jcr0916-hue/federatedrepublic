@@ -36,35 +36,8 @@ main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
 </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
-        <div class="nav-links">
-      <a href="annotated.html">Annotated Edition</a>
-      <a href="scenarios.html">Scenarios</a>
-      <a href="quicksheets.html">Quick Sheets</a>
-      <a href="torenthia.html">The World</a>
-      <a href="diagrams.html">Diagrams</a>
-      <a href="constitutional-history.html">Constitutional History</a>
-      <a href="sources.html">Sources</a>
-      <a href="glossary.html">Glossary</a>
-    </div>
-    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-    <div class="mobile-menu" id="mobileMenu">
-    <a href="annotated.html">Annotated Edition</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="quicksheets.html">Quick Sheets</a>
-    <a href="torenthia.html">The World</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="constitutional-history.html">Constitutional History</a>
-    <a href="sources.html">Sources</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="survey.html">So You Want a Constitution?</a>
-    <a href="contact.html">Contact</a>
-    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
-  </div>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div id="site-nav"></div>
 
   
   <main>
@@ -142,11 +115,6 @@ main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
     </div>
   </main>
   <script>
-  function toggleMobileNav(){
-    var m=document.getElementById('mobileMenu');
-    var b=document.querySelector('.hamburger');
-    if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}
-  }
       document.addEventListener('click',function(e){
       const menu=document.getElementById('mobileMenu');
       if(menu&&menu.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu')){
@@ -166,5 +134,6 @@ main{max-width:740px;margin:0 auto;padding:88px 2rem 80px}
     <span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation</span>
 </footer>
 
+  <script src="nav.js"></script>
 </body>
 </html>

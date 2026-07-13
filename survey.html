@@ -116,33 +116,8 @@
 </style>
 </head>
 <body>
-<a href="#main-content" class="skip-nav">Skip to main content</a>
-<nav class="site-nav">
-  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>
-  <div class="nav-links">
-    <a href="annotated.html">Annotated Edition</a>
-    <a href="scenarios.html">Scenarios</a>
-    <a href="quicksheets.html">Quick Sheets</a>
-    <a href="torenthia.html">The World</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="constitutional-history.html">Constitutional History</a>
-    <a href="sources.html">Sources</a>
-    <a href="glossary.html">Glossary</a>
-  </div>
-  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="annotated.html">Annotated Edition</a>
-  <a href="scenarios.html">Scenarios</a>
-  <a href="quicksheets.html">Quick Sheets</a>
-  <a href="torenthia.html">The World</a>
-  <a href="diagrams.html">Diagrams</a>
-  <a href="constitutional-history.html">Constitutional History</a>
-  <a href="sources.html">Sources</a>
-  <a href="glossary.html">Glossary</a>
-  <a href="contact.html">Contact</a>
-  <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>
-</div>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div id="site-nav"></div>
 
 <main id="main-content" class="survey-main">
   <!-- INTRO -->
@@ -227,33 +202,7 @@
     <span class="footer-note">A constitutional framework built from first principles &nbsp;·&nbsp; A theoretical project, not the law of any existing nation</span>
 </footer>
 
-<script>
-function toggleMobileNav(){var m=document.getElementById('mobileMenu');var b=document.querySelector('.hamburger');if(m){var open=m.classList.toggle('open');b&&b.setAttribute('aria-expanded',String(open));}}
-document.addEventListener('click',function(e){const m=document.getElementById('mobileMenu');if(m&&m.classList.contains('open')&&!e.target.closest('nav')&&!e.target.closest('#mobileMenu'))m.classList.remove('open');});
-
-/* =========================================================================
-   PROTOTYPE LOGIC
-   The question bank is organized by hidden AXES. Each answer carries a
-   lightweight score toward a "lean" on that axis. The engine picks the next
-   question from the LEAST-covered axis (adaptive breadth), choosing a random
-   unseen question within that axis (variety). After enough coverage it stops
-   and produces a placeholder evaluation. In production, the final evaluation
-   is written by the model from the full answer transcript; here it's a simple
-   rule-based stand-in so you can feel the flow and voice.
-   ========================================================================= */
-
-const TARGET_QUESTIONS = 9;      // how many to ask
-const SIGNALS_PER_AXIS = 2;      // "heard enough" threshold per axis
-
-// Each axis: a dimension of constitutional design. lean accumulates from answers.
-const AXES = {
-  legitimacy: {tag:"On where authority comes from"},
-  power:      {tag:"On dividing power"},
-  trust:      {tag:"On who restrains power"},
-  change:     {tag:"On changing the rules"},
-  liberty:    {tag:"On the individual and the group"},
-  scale:      {tag:"On where power should sit"}
-};
+<script>;
 
 // Question bank — six axes, structural not partisan. Each option's `score`
 // nudges the axis lean via named poles. Every question also permits a free-text
@@ -664,5 +613,6 @@ function restart(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>
+  <script src="nav.js"></script>
 </body>
 </html>
