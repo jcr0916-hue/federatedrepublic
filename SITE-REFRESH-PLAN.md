@@ -122,3 +122,50 @@ news, NRS, scenario, quicksheet article pages — these are documents with ident
 - Masthead CSS consolidated to site.css (30 news pages). Other shared rules still inline/drifted.
 - 0 empty files (7 recovered 260713). Scenario count 44. 165 provisions.
 - Exception list (John's, to confirm): Annotated, Glossary, index, The World, crossroads, survey.
+
+---
+
+## GENERATOR DECISION LOCKED (260714, John) — Eleventy / Build Awesome + Nunjucks
+
+John researched the open-source generator and chose it. **DECISION: Eleventy (11ty)** is the
+generator for Phase 4. Verified current state (web search, 260714):
+
+- **Eleventy (11ty)** — open-source static site generator, **MIT License**, free for any use incl.
+  commercial. Created/maintained by Zach Leatherman (github zachleat; repo 11ty/eleventy, ~19.7k stars).
+- **Rebrand in progress:** "Eleventy is now Build Awesome" (announced 2026-03-03). SAME project, same
+  MIT core, same 11ty repo lineage — just a new name. If setup/branding shows "Build Awesome," it's the
+  same tool John researched as Eleventy. Don't be thrown by the name.
+- **Current version:** v3.1.x (v3.0 landed late 2024, stabilized through 2025; ESM-based). Needs
+  **Node.js 18+** for LOCAL builds only — Vercel handles the build environment, so this likely never
+  affects John unless he builds locally.
+- **Fits every constraint:** zero client-side JS by default (pure static HTML out); smallest deployed
+  output of any major SSG; deploys free to Vercel/Netlify/GH Pages; incremental migration supported
+  (convert a few templates at a time, migrate as fast/slow as wanted); doesn't hold content hostage
+  (decoupled template languages — easy to leave later if ever needed). No telemetry.
+
+### Template language: NUNJUCKS (John spotted it on the 11ty site)
+- **Nunjucks** is NOT a separate program — it's a **templating language Eleventy reads** (one of
+  several: Nunjucks, Liquid, Markdown, etc.). Free, open-source (BSD, originally Mozilla). Ships with
+  Eleventy; nothing separate to install/choose.
+- **Its job = the shared-layout cure.** Write nav/header/footer ONCE in `base.njk`; every content page
+  says "wrap me in base" via front matter. Change nav once -> all pages update on next build. This is
+  the structural fix for the 123-page nav-duplication problem in this plan.
+- The 11ty migration guide describes OUR EXACT migration in one sentence: copy each page into src/,
+  move the repeated <head>/header/nav/footer into base.njk + partials, delete that boilerplate per page,
+  add a little front matter. Fiddly HTML (embeds, custom markup, the exception pages) stays as-is.
+  => confirms all the consolidation work (shared nav.js, masthead CSS, readability structure) IS the
+  boilerplate-extraction prep. Nothing wasted.
+
+### Open Phase-4 build-time decision (unchanged, noted): keep pages as plain `.html` with Nunjucks
+layout-wrapping (minimal change to John's mental model) vs. writing more heavily in Nunjucks templates.
+Decide at build time. Lean: keep `.html` + layout wrap for the ~90% templatable pages.
+
+### DONATION (John wants to support the project — good instinct; it's an indie/community-funded tool)
+Verified official channels (beware SEO lookalike "eleventy-11ty" repos — these are the real ones):
+- **Open Collective (preferred): https://opencollective.com/11ty** (transparent open finances)
+- **GitHub Sponsors: https://github.com/sponsors/11ty**
+- Funding history has shifted (independent Open Collective 2024 -> briefly Font Awesome -> now the
+  "Build Awesome" era 2026 with a Build Awesome Kickstarter + new sponsor tiers). For the CURRENT
+  preferred channel, start at 11ty.dev and follow its own support links. TODO (optional, next session):
+  pull the live Build Awesome Kickstarter link and confirm it's still open, if John wants to back that
+  specifically rather than the standing Open Collective.
