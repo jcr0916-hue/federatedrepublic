@@ -1,28 +1,94 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/navigator.js",  "use": "@vercel/node", "config": { "maxDuration": 30 } },
-    { "src": "api/annotate.js",   "use": "@vercel/node", "config": { "maxDuration": 30 } },
-    { "src": "api/survey.js",     "use": "@vercel/node", "config": { "maxDuration": 30 } },
-    { "src": "api/crossroads.js", "use": "@vercel/node", "config": { "maxDuration": 30 } },
-    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "_site" } }
+    {
+      "src": "api/navigator.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30,
+        "includeFiles": [
+          "constitution_data.json"
+        ]
+      }
+    },
+    {
+      "src": "api/annotate.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30,
+        "includeFiles": [
+          "constitution_data.json"
+        ]
+      }
+    },
+    {
+      "src": "api/survey.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30
+      }
+    },
+    {
+      "src": "api/crossroads.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30
+      }
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "_site"
+      }
+    }
   ],
   "routes": [
-    { "src": "/api/navigator",  "dest": "/api/navigator.js"  },
-    { "src": "/api/annotate",   "dest": "/api/annotate.js"   },
-    { "src": "/api/survey",     "dest": "/api/survey.js"     },
-    { "src": "/api/crossroads", "dest": "/api/crossroads.js" },
-    { "src": "/",              "dest": "/index.html" },
-    { "src": "/(.*)\\.(.+)",   "dest": "/$1.$2"      },
-    { "src": "/(.*)",          "dest": "/$1.html"    }
+    {
+      "src": "/api/navigator",
+      "dest": "/api/navigator.js"
+    },
+    {
+      "src": "/api/annotate",
+      "dest": "/api/annotate.js"
+    },
+    {
+      "src": "/api/survey",
+      "dest": "/api/survey.js"
+    },
+    {
+      "src": "/api/crossroads",
+      "dest": "/api/crossroads.js"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)\\.(.+)",
+      "dest": "/$1.$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1.html"
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]
