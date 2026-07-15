@@ -415,3 +415,9 @@ html,body { background:#e8e2d4; color:var(--text); font-family:'Jost',sans-serif
 .byline-sep { color:var(--border); }
 .pull-quote { background:#fdfbf5; border-left:3px solid var(--gold); margin:1.75rem 0; padding:.85rem 1.25rem; }
 .pull-quote p { color:var(--navy); font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-style:italic; line-height:1.6; margin-bottom:0; }
+
+
+/* No global img rule existed. news-005 and news-011 (RNN) carry .subject-portrait markup
+   with no CSS of their own, so a 1024x1024 portrait rendered at natural size into a 740px
+   column. This is the safety net, not a redesign. */
+img { max-width:100%; height:auto; }
