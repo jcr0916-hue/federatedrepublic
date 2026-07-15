@@ -390,3 +390,28 @@ mark { background: rgba(201,168,76,0.3); color: inherit; padding: 0 1px; border-
 .section-label { align-items:center; color:var(--gold2); display:flex; font-family:'JetBrains Mono',monospace; font-size:9px; gap:8px; letter-spacing:0.16em; margin-bottom:7px; text-transform:uppercase; }
 .section-label::after { background:var(--border); content:""; flex:1; height:1px; }
 html,body { background:#e8e2d4; color:var(--text); font-family:'Jost',sans-serif; }
+
+
+/* --- The Torenthian (30 news pages).
+   Torenthia has FOUR in-world outlets and each keeps its own identity:
+   RNN/Republic News Network (005,007,011,021,026) - broadcast, sans-serif, no drop cap
+   TNB/Torenthian Network Broadcast (009) - regional affiliate
+   The Dorven Ledger (034) - small Orath paper
+   Those seven are EXCLUDED; properties that would reach them are withheld. --- */
+.article-body p { color:#1a1a1a; font-family:'Georgia',serif; font-size:1rem; line-height:1.95; margin-bottom:1.4rem; }
+.article-byline { align-items:baseline; border-bottom:1px solid var(--border); border-top:1px solid var(--border); display:flex; flex-wrap:wrap; gap:.75rem; margin-bottom:1.75rem; padding:.75rem 0; }
+.article-deck { color:var(--muted); font-family:'Cormorant Garamond',serif; font-size:1.1rem; line-height:1.65; margin-bottom:1.25rem; }
+.article-headline { color:var(--navy); font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,4vw,2.6rem); font-weight:700; line-height:1.15; margin-bottom:.75rem; }
+.article-nav { align-items:center; border-top:1px solid var(--border); display:flex; justify-content:space-between; margin-top:1.5rem; padding:1.25rem 0; }
+.article-nav a { color:var(--gold); font-family:'JetBrains Mono',monospace; font-size:.65rem; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; }
+.article-nav a:hover { color:var(--navy); }
+.article-rule { border:none; border-top:1px solid var(--border); margin:2rem 0; }
+.article-section { border-bottom:2px solid var(--navy); color:var(--gold); font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.22em; margin-bottom:.85rem; padding-bottom:.6rem; text-transform:uppercase; }
+.article-wrap { margin:0 auto; max-width:700px; padding:3rem 2rem 5rem; }
+.author-bio { background:var(--cream); border-top:2px solid var(--navy); color:var(--muted); font-family:'Jost',sans-serif; font-size:.8rem; line-height:1.65; margin-top:2.5rem; padding:1rem 1.25rem; }
+.author-bio strong { color:var(--text); font-weight:500; }
+.byline-author { color:var(--navy); font-family:'Jost',sans-serif; font-size:.82rem; font-weight:600; }
+.byline-role { color:var(--muted); font-family:'Jost',sans-serif; font-size:.78rem; }
+.byline-sep { color:var(--border); }
+.pull-quote { background:#fdfbf5; border-left:3px solid var(--gold); margin:1.75rem 0; padding:.85rem 1.25rem; }
+.pull-quote p { color:var(--navy); font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-style:italic; line-height:1.6; margin-bottom:0; }
