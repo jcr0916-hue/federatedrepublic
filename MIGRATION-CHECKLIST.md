@@ -103,3 +103,45 @@ how @vercel/node traces its own inputs — but this is the one thing the local t
 prove. Step 6's `/api/navigator` check is what catches it: a 500 instead of a 400 means
 the json did not make it into the lambda, and the fix is `includeFiles` in the function
 config.
+
+---
+
+## POST-DEPLOY FIX (the preview caught two things)
+
+### 1. "type": "module" broke two API functions — MY BUG
+
+I put `"type": "module"` in package.json so Eleventy's ESM config would load. That flag makes
+Node treat EVERY .js file in the project as ESM — and in ESM, `require` is not defined.
+
+    api/navigator.js   const path = require('path');   -> ReferenceError, function dead
+    api/annotate.js    const path = require('path');   -> ReferenceError, function dead
+    api/crossroads.js  no require()                    -> fine
+    api/survey.js      no require()                    -> fine
+
+Perfect correlation, and NOT the one I first diagnosed. I blamed constitution_data.json not
+being traced into the lambda, because the two failing functions are also the two that load
+it. Coincidence. The real variable was `require()`.
+
+Reproduced locally: a file with `require('path')` under `{"type":"module"}` throws
+"require is not defined"; remove the flag and it loads.
+
+**FIX:** drop `"type": "module"` from package.json; rename `eleventy.config.js` ->
+`eleventy.config.mjs`. The .mjs extension makes THAT ONE FILE ESM without forcing ESM on the
+whole project. Eleventy 3 reads eleventy.config.mjs natively.
+
+Verified after the fix: all four api/*.js load under `node -e "require(...)"`, and the build
+is still 127/127 byte-identical against live main.
+
+### 2. includeFiles — keep it, but it was not the cause
+
+The `includeFiles: ["constitution_data.json"]` entries on navigator and annotate are harmless
+and arguably correct belt-and-braces: they make the data dependency explicit rather than
+relying on Vercel's tracer to infer a computed `require(path.join(__dirname,'..',...))`.
+Keeping them. But they did not fix anything — the type:module flag did.
+
+### Lesson
+
+Two functions failed; two worked. I found a variable that split them perfectly
+(constitution_data.json) and stopped looking. There was a SECOND variable that split them
+identically (require()), and it was the real one. When two hypotheses both explain the data,
+the one you introduced yourself this session is the better suspect.

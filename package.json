@@ -1,7 +1,6 @@
 {
   "name": "federatedrepublic",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "eleventy"
   },
