@@ -406,7 +406,6 @@ html,body { background:#e8e2d4; color:var(--text); font-family:'Jost',sans-serif
 .article-nav a { color:var(--gold); font-family:'JetBrains Mono',monospace; font-size:.65rem; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; }
 .article-nav a:hover { color:var(--navy); }
 .article-rule { border:none; border-top:1px solid var(--border); margin:2rem 0; }
-.article-section { border-bottom:2px solid var(--navy); color:var(--gold); font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.22em; margin-bottom:.85rem; padding-bottom:.6rem; text-transform:uppercase; }
 .article-wrap { margin:0 auto; max-width:700px; padding:3rem 2rem 5rem; }
 .author-bio { background:var(--cream); border-top:2px solid var(--navy); color:var(--muted); font-family:'Jost',sans-serif; font-size:.8rem; line-height:1.65; margin-top:2.5rem; padding:1rem 1.25rem; }
 .author-bio strong { color:var(--text); font-weight:500; }
