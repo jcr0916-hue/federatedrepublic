@@ -350,3 +350,7 @@ mark { background: rgba(201,168,76,0.3); color: inherit; padding: 0 1px; border-
 
 /* scenario intro line (was .scenario-premise on 15 pages, unmeasured) */
 .scenario-subtitle { font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem; }
+
+/* scenario document container (was <main>/<div class=page-wrap>, 740px, hand-copied 43x) */
+.doc-wrap { max-width:740px; margin:0 auto; padding:88px 2rem 80px; }
+@media (max-width:820px){ .doc-wrap { padding:76px 1rem 60px; } }
