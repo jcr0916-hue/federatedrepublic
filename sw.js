@@ -3,7 +3,7 @@
    On first visit: cache everything. On repeat visits: instant load.
    On offline: serve cached version. */
 
-const CACHE = 'fr-v29';
+const CACHE = 'fr-v30';
 
 const PAGES = [
   '/', '/index.html',
@@ -14,8 +14,8 @@ const PAGES = [
 ];
 
 const ASSETS = [
-  '/site.css', '/search-index.js', '/seal.png',
-  'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap'
+  '/site.css', '/nav.js', '/search-index.js', '/seal.png',
+  'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap'
 ];
 
 /* Install: cache all pages and assets */

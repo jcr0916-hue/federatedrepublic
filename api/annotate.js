@@ -1,7 +1,6 @@
 // Vercel Serverless Function: Constitutional Annotation
 // Sonnet generates design rationale for any provision on demand
 
-const path = require('path');
 
 const SYSTEM = `You are a constitutional design analyst for the Federated Republic. When a user clicks on a provision, you explain the design rationale behind it — the why, not just the what.
 
@@ -33,8 +32,7 @@ let cachedText = null;
 
 function getConstitutionText() {
   if (cachedText) return cachedText;
-  const dataPath = path.join(__dirname, '..', 'constitution_data.json');
-  cachedData = require(dataPath);
+  cachedData = require('../constitution_data.json');
   const lines = [];
   for (const article of cachedData) {
     for (const prov of article.provisions) {

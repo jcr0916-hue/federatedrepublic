@@ -153,8 +153,7 @@ let cachedProvisions = null;
 
 async function getProvisions() {
   if (cachedProvisions) return cachedProvisions;
-  const dataPath = path.join(__dirname, '..', 'constitution_data.json');
-  const data = require(dataPath);
+  const data = require('../constitution_data.json');
   cachedProvisions = data.flatMap(a => a.provisions);
   return cachedProvisions;
 }
