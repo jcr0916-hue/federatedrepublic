@@ -322,6 +322,13 @@ const CR = (function(){
   function selectEnding(){
     const S = meters.standing, A = meters.allies, I = meters.intent;
     const last = lastFragmentId || '';
+    // --- Legat Consul branch. Checked BEFORE the allies floor below: the LC
+    //     path spends allies by construction, so a gutted chamber is the PRICE
+    //     of the loud door, not evidence she never ran.
+    if(last === 's4lc_declare')     return 'legat_run';
+    if(last === 's4lc_withdraw')    return 'returned';
+    if(last === 's4lc_wait')        return 'legislator';
+    if(last === 's4lc_conditional') return 'legislator';
     // Explicit final-choice outcomes first
     if(last === 's4_kingmaker') return 'kingmaker';
     // If she never committed and the coalition dispersed -> back to legislator
