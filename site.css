@@ -343,3 +343,10 @@ mark { background: rgba(201,168,76,0.3); color: inherit; padding: 0 1px; border-
 .scenario-nav a:hover { opacity:1;color:var(--navy); }
 .scenario-tag { font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem; }
 .scenario-title { font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem; }
+
+/* scenario nav (consolidated: was dead CSS on 18 pages, absent on 19) */
+.scenario-nav { display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid var(--border);margin-top:3rem; }
+.scenario-nav a { text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;color:var(--gold);opacity:0.75; }
+
+/* scenario intro line (was .scenario-premise on 15 pages, unmeasured) */
+.scenario-subtitle { font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.7;max-width:600px;margin-bottom:1.2rem; }
