@@ -328,3 +328,18 @@ mark { background: rgba(201,168,76,0.3); color: inherit; padding: 0 1px; border-
 .prov-list { margin: .2rem 0 .7rem 1.5rem; padding: 0; list-style: none; }
 .prov-list li { margin: .15rem 0; padding-left: 1rem; text-indent: -1rem; }
 .prov-list li::before { content: "— "; color: var(--muted); }
+
+
+/* --- scenario pages (consolidated from 44 pages, generation-1 canonical) --- */
+.beat { background:var(--cream2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 4px 4px 0; }
+.beat p { margin-bottom:0.8rem;font-size:0.92rem;line-height:1.75; }
+.beat-label { font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem; }
+.beat-title { font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem; }
+.prov-tag { font-family:'JetBrains Mono',monospace;font-size:0.65rem;background:var(--navy);color:var(--gold);padding:0.25rem 0.6rem;border-radius:2px; }
+.provisions-tested { display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem; }
+.scenario-body h2 { font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border); }
+.scenario-body p { margin-bottom:1.5rem;font-size:1rem;line-height:1.9; }
+.scenario-meta { margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy); }
+.scenario-nav a:hover { opacity:1;color:var(--navy); }
+.scenario-tag { font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.8rem; }
+.scenario-title { font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:1rem; }
