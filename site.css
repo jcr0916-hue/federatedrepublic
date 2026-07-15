@@ -315,6 +315,7 @@ mark { background: rgba(201,168,76,0.3); color: inherit; padding: 0 1px; border-
 /* ===== Numbered-paragraph provision structure (readability sweep) ===== */
 .prov-para { margin: 0 0 .7rem 0; }
 .prov-para:last-child { margin-bottom: 0; }
+.prov-subpara { margin: 0 0 .45rem 1.5rem; }
 .prov-list { margin: .2rem 0 .7rem 1.5rem; padding: 0; list-style: none; }
 .prov-list li { margin: .15rem 0; padding-left: 1rem; text-indent: -1rem; }
 .prov-list li::before { content: "— "; color: var(--muted); }
