@@ -198,7 +198,19 @@
     <span class="footer-note">A constitutional framework built from first principles &nbsp;·&nbsp; A theoretical project, not the law of any existing nation</span>
 </footer>
 
-<script>;
+<script>
+const TARGET_QUESTIONS = 9;      // how many to ask
+const SIGNALS_PER_AXIS = 2;      // "heard enough" threshold per axis
+
+// Each axis: a dimension of constitutional design. lean accumulates from answers.
+const AXES = {
+  legitimacy: {tag:"On where authority comes from"},
+  power:      {tag:"On dividing power"},
+  trust:      {tag:"On who restrains power"},
+  change:     {tag:"On changing the rules"},
+  liberty:    {tag:"On the individual and the group"},
+  scale:      {tag:"On where power should sit"}
+};
 
 // Question bank — six axes, structural not partisan. Each option's `score`
 // nudges the axis lean via named poles. Every question also permits a free-text
