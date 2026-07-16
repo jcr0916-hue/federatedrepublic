@@ -3,7 +3,7 @@
    On first visit: cache everything. On repeat visits: instant load.
    On offline: serve cached version. */
 
-const CACHE = 'fr-v30';
+const CACHE = 'fr-v31';
 
 const PAGES = [
   '/', '/index.html',
@@ -42,13 +42,23 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
 
+  // Never touch the API. These are POSTs to Node functions; the Cache API rejects
+  // cache.put() on a POST, and a stale answer from an AI endpoint is worse than none.
+  if (url.pathname.startsWith('/api/')) return;
+
   // Only handle same-origin + Google Fonts
   if (url.origin !== location.origin &&
       !url.hostname.includes('fonts.g')) return;
 
   const isHTML = e.request.headers.get('accept')?.includes('text/html');
 
-  if (isHTML) {
+  // JSON is DATA, not an asset — it changes. thoss-crossroads.json was being served
+  // cache-first, so a reader who played the crossroads once kept that version of the
+  // story forever: the Legat Consul branch was invisible to anyone who had visited
+  // before it shipped. Data goes network-first, with cache as the offline fallback.
+  const isData = url.pathname.endsWith('.json');
+
+  if (isHTML || isData) {
     // Network-first: fresh HTML when online, cached fallback offline
     e.respondWith(
       fetch(e.request)
