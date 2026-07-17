@@ -40,7 +40,7 @@ Public realizes what passed. A grassroots group forms to repeal it — ordinary 
 Norvane citizens, the dawning "wait, Riverglow was never actually protected?" A reporter draws
 the Argent-Ridge-vs-Riverglow contrast. The group announces it will invoke §13.1.
 
-**BEAT 3 — NRS (Elections Panel): the machinery.** [later]
+**BEAT 3 — NRS (Elections Panel): the machinery.** [PUBLISHED — torenthia-nrs-013.html, NRS-Y13-0302, Y13 M8]
 Phase One petition certified. The dry procedural record of §13.1 turning: signature thresholds
 (0.5-3% in >=1/3 of States/Territories), the two-phase structure, eligibility confirmed
 (a development statute is not an Article I expansion / budget / mandated-obligation law).
@@ -98,3 +98,59 @@ and it will not save Riverglow.
 a §18.4 problem, and the second one is Norvane, and Norvane is sympathetic.
 
 **New voice:** Aleth Fenn, Northern Correspondent, The Torenthian, filed from Varek.
+
+
+---
+
+## BEAT 3 AS PUBLISHED (Y13 M8) — the eligibility fight came BEFORE the signatures
+
+The arc outline had Beat 3 as "Phase One petition certified." Reading §13.1 properly moved it
+earlier and made it better. Before a single signature may be gathered, the Elections Panel must
+determine under §13.1(5) whether the statute is eligible at all — and §13.1(4) makes BUDGET LAWS
+ineligible. The Argent Ridge Act directs revenue to Varek and Norvane by a formula written into
+the Act. So Norvane's route to killing the petition was never the signatures; it was arguing the
+Act is a budget law and cannot be petitioned.
+
+**The Panel ruled it ELIGIBLE** (NRS-Y13-0302), on three grounds:
+1. A budget law appropriates or authorises expenditure. This Act disposes of an asset and directs
+   where the proceeds land. Generating revenue is not spending it.
+2. The allocation is consequential, not the object. Strike the formula and a conveyance remains;
+   strike the conveyance and nothing remains. §13.1(4) reaches a law's character, not its incidents.
+3. **The construction urged would swallow the provision.** Almost every statute of consequence moves
+   money. If a revenue clause made a law a budget law, the Legislature could place ANY statute beyond
+   citizen repeal by attaching a formula. The Panel declined a reading under which a right may be
+   extinguished by drafting.
+
+The Panel also REJECTED Norvane's §13.1(4)(c) argument (law implementing a constitutionally mandated
+obligation): "An obligation that a State feels is not an obligation that this Constitution mandates.
+Necessity is not the same thing as mandate." Norvane's need is real and it is not a mandate.
+
+**LIVE HOOK — the 14-day challenge window.** §13.1(5): any eligibility determination is challengeable
+in the Appellate Court within 14 days. The window closes Y13 M9 D12. Norvane has not said whether it
+will. THIS IS AN OPEN THREAD — Beat 4 can be the challenge, or the conspicuous absence of one.
+
+## THE JURISDICTIONAL THRESHOLD BECAME THE STORY (Y13 M9, news-039 + news-040)
+
+§13.1(2) requires Phase One signatures in ONE-THIRD OF ALL STATES AND TERRITORIES — jurisdictions,
+not population. This turned out to be the arc's richest vein and it now has two voices:
+
+- **news-039 (Hale, The Dorven Ledger, MUNDANE):** the petition table reaches Orath, four hundred
+  miles away. Nine signatures in four hours. Hale works out that they didn't come because Dorven
+  cares — they came because Dorven COUNTS, and there is no route to the threshold that skips a
+  Territory for being small. "I have spent eleven years complaining that nobody in Verentum knows
+  this Territory exists." The counter-argument is in the same piece: the bar doesn't measure whether
+  the country agrees with you, it measures whether you can afford the petrol.
+- **news-040 (Vend/Orin, The Torenthian):** the same table reaches Korda. Orin sets §13.1 against
+  §12.8 — one provision obliges a stranger to drive eight hundred miles and ask; the other obliges
+  a chamber to send her a letter. Neither is a malfunction. That's the design.
+
+**§12.8 CORRECTION (important, was nearly published wrong):** §12.8 does NOT stop at a Monitor
+finding. "Where the EM finds the mechanism has failed, the Legislature publishes its response to the
+NRS within 90 days." The Legislature IS obliged to answer. It answered, on time, in full compliance —
+and the answer was that the mechanism is under review. The grievance is not silence. It is that
+§12.8 can compel a legislature to SPEAK and cannot compel it to MEAN it. That is sharper than the
+"nothing follows" version and it is what the text actually says.
+
+**Also fixed while here:** nrs-010 and nrs-011 both carried a masthead eyebrow reading "Foreign
+Affairs Directorate" (copy-paste from nrs-009) while their own Publishing Authority fields said
+"Office of the Clerk of the Assembly." Both corrected. All NRS mastheads now match their own records.
