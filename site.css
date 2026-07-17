@@ -420,3 +420,12 @@ html,body { background:#e8e2d4; color:var(--text); font-family:'Jost',sans-serif
    with no CSS of their own, so a 1024x1024 portrait rendered at natural size into a 740px
    column. This is the safety net, not a redesign. */
 img { max-width:100%; height:auto; }
+
+/* AI feature notice — every feature that sends what a reader types to a commercial
+   provider must link the disclosure page. Shared because it appears on index (Navigator),
+   annotated (rationale), crossroads and survey. */
+.ai-note{font-family:'Jost',sans-serif;font-size:.72rem;line-height:1.5;color:var(--muted);margin-top:.75rem}
+.ai-note a{color:var(--gold2);text-decoration:none;border-bottom:1px solid rgba(168,132,58,.35)}
+.ai-note a:hover{border-bottom-color:var(--gold2)}
+.ai-note--onDark{color:rgba(245,240,232,.6)}
+.ai-note--onDark a{color:var(--gold);border-bottom-color:rgba(201,168,76,.4)}
