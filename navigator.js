@@ -100,6 +100,7 @@ const SCENARIOS = [
   {title:'Ordinary Law',file:'scenario-ordinary.html',kw:['assembly','budget','bill','formation','nrs','ordinary']},
   {title:'The Stalemate',file:'scenario-coordination-failure.html',kw:['lc','cc','domain','conflict','coordination','dual executive']},
   {title:'The Alliance Clause',file:'scenario-alliance-clause.html',kw:['military','treaty','lc','deploy','alliance','defense','foreign']},
+  {title:'The Twenty-Four Hours',file:'scenario-the-twenty-four-hours.html',kw:['incapacity','council of ministers','restoration','succession','declination','acting','unable','2.16','executive incapacity','ministers']},
   {title:'The Objection',file:'scenario-the-objection.html',kw:['fiscal','objection','cc','budget','assembly','override']},
   {title:'The Direction',file:'scenario-the-direction.html',kw:['direction','cc','prosecution','solicitor','written']},
   {title:'The First Nomination',file:'scenario-first-nomination.html',kw:['nomination','judicial','pool','senate','confirmation','sc','vacancy']},
