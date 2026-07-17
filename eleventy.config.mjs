@@ -13,8 +13,14 @@ export default function (eleventyConfig) {
   ];
   passthrough.forEach(p => eleventyConfig.addPassthroughCopy(p));
 
-  // globs: every image and PDF at root
+  // globs: every image and document format at root.
+  // NOTE: *.jpg is NOT optional — torenthia-atlas.html serves world-map-tier1.webp with
+  // an onerror fallback to world-map-tier1.jpg. Drop the glob and the fallback 404s, so
+  // the world map vanishes on exactly the older browsers the fallback exists for.
   eleventyConfig.addPassthroughCopy("*.png");
+  eleventyConfig.addPassthroughCopy("*.jpg");
+  eleventyConfig.addPassthroughCopy("*.jpeg");
+  eleventyConfig.addPassthroughCopy("*.gif");
   eleventyConfig.addPassthroughCopy("*.webp");
   eleventyConfig.addPassthroughCopy("*.svg");
   eleventyConfig.addPassthroughCopy("*.pdf");
