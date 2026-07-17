@@ -5,14 +5,20 @@
       "src": "api/navigator.js",
       "use": "@vercel/node",
       "config": {
-        "maxDuration": 30
+        "maxDuration": 30,
+        "includeFiles": [
+          "constitution_data.json"
+        ]
       }
     },
     {
       "src": "api/annotate.js",
       "use": "@vercel/node",
       "config": {
-        "maxDuration": 30
+        "maxDuration": 30,
+        "includeFiles": [
+          "constitution_data.json"
+        ]
       }
     },
     {
@@ -30,8 +36,11 @@
       }
     },
     {
-      "src": "**/*",
-      "use": "@vercel/static"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "_site"
+      }
     }
   ],
   "routes": [
