@@ -232,10 +232,31 @@
 
     <div class="intro-block">
       <p>Torenthia is the Federated Republic placed in the world — a specific nation, in a specific moment, with real neighbors and real pressures. The constitution operates here, not as theory, but as the framework a country actually uses.</p>
-      <div style="margin:2rem 0;border-left:2px solid var(--gold);padding:.85rem 0 .85rem 1.25rem">
-          <div style="font-family:'Jost',sans-serif;font-size:.9rem;color:var(--text);line-height:1.6;margin-bottom:.5rem">Everything that has happened here is on the permanent record, in the order it happened.</div>
-          <a href="torenthia-record.html" style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);text-decoration:none;border-bottom:1px solid rgba(168,132,58,.4)">Read The Record &rarr;</a>
+      <div class="section-header" style="margin:2rem 0 1rem">
+        <div class="section-eye">The Record</div>
+        <div class="section-title">Latest from Torenthia</div>
+      </div>
+      <div class="wcar">
+        <button class="wcar-btn wcar-prev" aria-label="Scroll left" onclick="wcarScroll(-1)">&larr;</button>
+        <div class="wcar-track" id="wcarTrack">
+        {%- set world = collections.world | reverse -%}
+        {%- for p in world -%}{%- if loop.index <= 8 %}
+          <a class="wcar-card" href="{{ p.url | replace('/', '') }}">
+            <div class="wcar-img" style="background-image:url('{% if p.data.worldImage %}{{ p.data.worldImage }}{% else %}world-map-card.webp{% endif %}')"></div>
+            <div class="wcar-body">
+              <span class="wcar-badge">{% if p.data.worldKind == 'news' %}News{% elif p.data.worldKind == 'nrs' %}NRS{% elif p.data.worldKind == 'dispatch' %}Dispatch{% else %}Court{% endif %}</span>
+              <div class="wcar-title">{{ p.data.worldTitle }}</div>
+              <div class="wcar-meta">{{ p.data.worldOutlet }} &middot; Year {{ p.data.worldDate.split('.')[0] }}, Month {{ p.data.worldDate.split('.')[1] | int }}</div>
+            </div>
+          </a>
+        {%- endif -%}{%- endfor %}
+          <a class="wcar-card wcar-card-more" href="torenthia-record.html">
+            <div class="wcar-more-inner"><div class="wcar-more-text">Read the full Record</div><div class="wcar-more-arrow">&rarr;</div></div>
+          </a>
         </div>
+        <button class="wcar-btn wcar-next" aria-label="Scroll right" onclick="wcarScroll(1)">&rarr;</button>
+      </div>
+      <script>function wcarScroll(d){var t=document.getElementById('wcarTrack');t.scrollBy({left:d*300,behavior:'smooth'});}</script>
     </div>
 
     <!-- ── DISPATCHES ── -->
