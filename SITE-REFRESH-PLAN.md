@@ -169,3 +169,128 @@ Verified official channels (beware SEO lookalike "eleventy-11ty" repos — these
   preferred channel, start at 11ty.dev and follow its own support links. TODO (optional, next session):
   pull the live Build Awesome Kickstarter link and confirm it's still open, if John wants to back that
   specifically rather than the standing Open Collective.
+
+---
+
+# STATUS UPDATE — 260717 (end of day)
+
+**This section supersedes anything above it that conflicts. Several decisions recorded earlier
+in this document are now WRONG — they were correct when written and were overtaken by Phase 4
+actually shipping. They are listed here rather than deleted, because knowing what we decided and
+why we reversed it is worth more than a tidy document.**
+
+## PHASE 4 IS DONE AND LIVE (merged to main 260717, commit 8b9f40e)
+
+The site is now BUILT, not copied. Eleventy 3.1.6, ~1s build, $0 added cost, on every push.
+Proof gate at merge: **133/133 pages BYTE-IDENTICAL**. Nobody can tell, which was the promise.
+
+- `package.json` (no `"type":"module"`), `eleventy.config.mjs` (ESM by extension),
+  `vercel.json` (@vercel/static-build → `_site`, distDir; 4× api @vercel/node maxDuration 30).
+- Permalink override forces `page.html` (NOT pretty `page/index.html`) — otherwise vercel.json's
+  `/(.*) → /$1.html` route breaks on every page.
+- `templateFormats: ["html"]`, `htmlTemplateEngine: "njk"` — **Nunjucks already runs on every
+  page**. Templating needs no migration; it needs front matter.
+- **BONUS SECURITY WIN, unplanned:** under the old `@vercel/static` `**/*`, every file in the repo
+  was publicly served. Now only `_site` is. `constitution_data.json`, `package.json`,
+  `vercel.json`, `eleventy.config.mjs` and `api/` all 404 publicly. The stray root `survey.js`
+  fixed itself by never being built.
+- Bug the proof caught: `*.jpg` was missing from passthrough. `torenthia-atlas.html` serves
+  `world-map-tier1.webp` with an `onerror` fallback to `world-map-tier1.jpg` — the fallback would
+  have 404'd, so the world map would vanish on exactly the old browsers the fallback exists for.
+  Fixed, with the reason in a comment so nobody strips it.
+
+## REVERSED: "manifest, NOT auto-discovery"
+
+The plan says (Phase 1, tickers): *"DECISION: manifest approach, NOT true auto-discovery (for
+now)... True auto-discovery is a LATER upgrade once pages are clean enough to scrape."*
+
+**That decision is retired. Phase 4 IS the build step it was waiting for.** A manifest is still a
+file you have to remember to update — i.e. the same failure mode with extra steps. The answer is
+front matter + an Eleventy collection.
+
+**PROVEN 260717, not theorised:** front matter was added to `torenthia-news-041.html`, built, and
+compared byte-for-byte against the pre-front-matter original: **IDENTICAL, 15,536 bytes both
+sides.** Eleventy strips it. The reader sees nothing. The build gains a queryable record.
+Extraction across all 57 world pages resolves **46 automatically** (type/date/title/outlet/blurb
+already present in the page); **11 need a hand** — 6 news pages whose outlet sits in a masthead
+class the scraper doesn't know, and 5 early NRS pages (001–005) that predate the `nrs-doc-id`
+structure entirely.
+
+## REVERSED: The World gets a "Latest" strip
+
+**The World's job is CURATION, not recency. The Record is the feed.** Decided 260717 and acted on
+the same day when John's phone screenshot showed the strip serving **Month 7 content two months
+late — 9 of 57 pieces, missing Thoss entirely**, three inches under the intro paragraph.
+
+- Strip DELETED (7,417 bytes). Curated Dispatch cards KEPT — they're bios, not dated entries.
+- Replaced with an evergreen door to The Record. **Nothing dated survives on that page.**
+- **A near-miss worth recording:** the first replacement was a "Most recent" line with news-041
+  hardcoded in it. That is the same bug at 1/7 scale, and *worse than the strip because it looks
+  maintained*. Anything with a headline in it must be DERIVED. Caught before shipping.
+
+**Recency is legible only to someone who already has the context.** A newcomer doesn't know Orin,
+or Korda, or why a petition table matters. Curation serves them; recency serves returning readers;
+The Record already does recency properly (55/57).
+
+## CLOSED: the globe
+
+**Deleted, 260717.** 8 files, 22 MB — a third of the repo (61M → 40M). Nothing referenced any of
+them; the page only ever loaded 2 of its 7 images. Will be re-approached from scratch later if at
+all. The "Open Decisions" entry about its fate is now answered.
+
+## ALSO CLOSED 260717
+
+- `thoss-crossroads-preview.html` DELETED — a stale, publicly playable duplicate of a live feature,
+  missing the entire Legat Consul branch (s3lc/s4lc absent).
+- Stray root `navigator.js` and `survey.js` DELETED (GitHub web uploads that landed at the root
+  instead of `api/` — a recurring hazard: **the upload goes wherever you are when you click
+  "Add file", so click INTO `api/` first**).
+- **`.eleventyignore` CREATED** — this is the retirement step the site never had. A file can now
+  stop being a page without being deleted. Currently: `feed-snippets.html` (dev scaffolding, no
+  title/nav/footer, was publicly reachable) and `*.md`.
+- **The Living Crossroads RETIRED** — "The Dark Horse" canon published (news-041). Both feature
+  cards removed from index.html and torenthia.html. **The harness is KEPT and unlinked**
+  (`crossroads.html`, `thoss-crossroads.json`, `api/crossroads.js`): the next crossroads only needs
+  a new JSON. Deleting the machine because one story ended would be throwing away the build.
+
+## THE NEXT STRUCTURAL JOB (do this before any visual work)
+
+**Front matter on the 57 world pages → `collections.world` → The Record renders itself.**
+De-risked 260717 (see above). This is the last thing standing between John and *publishing = drop
+the file in*. Everything on the visual roadmap gets cheaper afterwards, because the wire/carousel
+is the same collection with a different stylesheet — and **a derived widget cannot go stale**,
+which is the entire lesson of the strip we just deleted.
+
+Then Step 2 templating, news first: 1 base + 4 outlet mastheads + 37 content files.
+
+### A concrete argument for templating, found today
+
+**`ai-features.html` should be linked from the footer** (every AI feature links it now, but a
+reader who wants the privacy page without touching a feature can't find it; it isn't in the nav
+either). That is ONE link. **The footer is on 131 pages in SEVEN distinct variants:**
+
+    76  plain <footer> + <span class="footer-logo">      <- canonical
+    45  <footer class="site-footer"> + <span>            <- print @media hiding, deliberate
+     5  plain <footer> + <div class="footer-logo">       <- drift
+     2  site-footer, slight variant (ai-features, survey)
+     1  quicksheets.html — near-canonical variant
+     1  404.html — BARE footer, NO disclaimer at all
+     1  diagrams.html — different wording AND a hardcoded "166 provisions · 20 articles"
+
+**That last one is the point.** A hand-typed constitutional count, in a footer, that no one will
+ever think to check. It is correct today (verified 260717). It is one amendment away from being a
+lie. Adding the link by hand means editing 131 files across 7 variants and then editing them all
+again during templating. **Deferred deliberately: Step 2 collapses all 7 to one include, and then
+it's a one-file change — the link, 404's missing disclaimer, and diagrams' hardcoded count all fix
+at once, for free.**
+
+## GUARDRAIL EARNED THE HARD WAY (260717)
+
+`constitutional-quickref.md` was found to be **25% wrong** — 41 of 166 provisions had the wrong
+name, Article XX described an article that no longer exists, and the threshold table contained a
+Monitor-removal rule ("3/5 Senate, Judicial Track") that **appears nowhere in the constitution**.
+Invented law, in the working reference. It is now **GENERATED** by `scripts/build-quickref.py`
+from `constitution_data.json` and cannot drift again.
+
+**The general rule, which the strip and the quickref both prove: if a file restates something
+another file already knows, it will eventually lie. Derive it or delete it.**
