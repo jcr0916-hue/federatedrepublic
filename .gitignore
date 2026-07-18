@@ -1,3 +1,6 @@
 node_modules/
 _site/
 .netlify/
+.DS_Store
+**/.DS_Store
+*.zip
