@@ -12,37 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
-  <style>
-    .rnn-masthead{background:var(--navy2);border-bottom:4px solid #b91c1c;padding:1rem 2rem}
-    .rnn-masthead-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-    .rnn-logo{font-family:'JetBrains Mono',monospace;font-size:1.1rem;font-weight:500;letter-spacing:.15em;color:#f5f0e8}
-    .rnn-logo span{color:#b91c1c}
-    .rnn-tagline{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,240,232,.45)}
-    .rnn-timestamp{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:rgba(201,168,76,.8)}
-    .breaking-bar{background:#b91c1c;padding:.4rem 2rem;text-align:center}
-    .breaking-bar-inner{max-width:860px;margin:0 auto;font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#fff}
-    .article-wrap{max-width:700px;margin:0 auto;padding:2.5rem 2rem 5rem}
-    .rnn-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#b91c1c;margin-bottom:.7rem;display:flex;align-items:center;gap:.6rem}
-    .rnn-label::after{content:'';flex:1;height:1px;background:#b91c1c;opacity:.3}
-    .article-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:.75rem}
-    .article-deck{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);line-height:1.65;margin-bottom:1.25rem}
-    .rnn-byline{display:flex;gap:1rem;align-items:baseline;padding:.6rem 0;border-top:2px solid var(--navy);border-bottom:1px solid var(--border);margin-bottom:1.75rem;flex-wrap:wrap}
-    .rnn-byline-source{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;letter-spacing:.08em;color:var(--navy)}
-    .rnn-byline-date{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);margin-left:auto}
-    .article-body p{font-family:'Georgia',serif;font-size:1rem;line-height:1.9;color:#1a1a1a;margin-bottom:1.3rem}
-    .article-body p:first-child::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:700;color:var(--navy);float:left;line-height:.8;margin:.05em .12em 0 0}
-    .fact-block{background:var(--cream);border:1px solid var(--border);border-left:3px solid var(--navy);padding:.9rem 1.1rem;margin:1.5rem 0}
-    .fact-block-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
-    .fact-block ul{margin:0;padding-left:1.1rem}
-    .fact-block li{font-family:'Jost',sans-serif;font-size:.85rem;line-height:1.7;color:var(--text);margin-bottom:.2rem}
-    .developing{background:var(--navy2);color:rgba(245,240,232,.7);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:.5rem 1rem;margin:1.5rem 0;display:inline-block}
-    .article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-top:1px solid var(--border);margin-top:1.5rem}
-    .article-nav a{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--gold);text-decoration:none;text-transform:uppercase}
-    .article-nav a:hover{color:var(--navy)}
-    @media(max-width:820px){.rnn-masthead{padding:.8rem 1rem}.article-wrap{padding:2rem 1rem 4rem}.rnn-byline-date{margin-left:0}}
-  </style>
 </head>
-<body>
+<body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   <div id="site-nav"></div>
 <div class="rnn-masthead" role="banner">
