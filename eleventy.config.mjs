@@ -2,6 +2,32 @@
 // Proven: 37/37 news pages rebuild byte-identical (see PROOF-RESULT.md).
 export default function (eleventyConfig) {
 
+  // ── THE WORLD COLLECTION ──────────────────────────────────────────────────
+  // Every world-content page declares itself in front matter (worldKind, worldDate,
+  // worldTitle, worldOutlet, worldBlurb). Eleventy STRIPS that front matter from the
+  // output — verified: all 57 pages build byte-identical to their pre-front-matter
+  // originals — so the reader sees nothing and the build gains a queryable record.
+  //
+  // WHY THIS EXISTS: The Record and The World were hand-maintained. The World fell
+  // 48 pieces and two months behind and did not know the biggest story of the year
+  // had happened. A feed that restates what the pages already know will always
+  // eventually lie. Derive it or delete it.
+  //
+  // Publishing is now: drop the file in. Nothing to remember.
+  eleventyConfig.addCollection("world", (api) =>
+    api.getAll()
+      .filter((p) => p.data.worldKind && p.data.worldDate)
+      // worldDate is "YY.MM" as a STRING — quoted in the front matter on purpose.
+      // Unquoted, YAML reads 13.09 as the float 13.09 and 13.10 as 13.1, which sorts
+      // Month 10 BEFORE Month 9. String compare on zero-padded "13.09" is correct.
+      .sort((a, b) =>
+        a.data.worldDate === b.data.worldDate
+          ? a.inputPath.localeCompare(b.inputPath)
+          : a.data.worldDate.localeCompare(b.data.worldDate)
+      )
+  );
+
+
   // Assets Eleventy does not template — copy through untouched.
   // If any of these is missing from _site, every page that uses it 404s.
   const passthrough = [
