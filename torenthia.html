@@ -242,7 +242,7 @@
         {%- set world = collections.world | reverse -%}
         {%- for p in world -%}{%- if loop.index <= 8 %}
           <a class="wcar-card" href="{{ p.url | replace('/', '') }}">
-            <div class="wcar-img" style="background-image:url('{% if p.data.worldImage %}{{ p.data.worldImage }}{% else %}world-map-card.webp{% endif %}')"></div>
+            <div class="wcar-img" style="background-image:url('{% if p.data.worldImage %}{{ p.data.worldImage }}{% elif p.data.worldOutlet == 'The Torenthian' %}logos/the-torenthian-logo.svg{% elif p.data.worldOutlet == 'RNN' %}logos/rnn-logo.svg{% elif p.data.worldOutlet == 'TNB Caldenmere' %}logos/tnb-logo.svg{% elif p.data.worldOutlet == 'The Dorven Ledger' %}logos/the-dorven-ledger-logo.svg{% elif p.data.worldKind == 'nrs' %}logos/nrs-logo.svg{% elif p.data.worldKind == 'sc' %}logos/supreme-court-logo.svg{% else %}world-map-card.webp{% endif %}')"></div>
             <div class="wcar-body">
               <span class="wcar-badge">{% if p.data.worldKind == 'news' %}News{% elif p.data.worldKind == 'nrs' %}NRS{% elif p.data.worldKind == 'dispatch' %}Dispatch{% else %}Court{% endif %}</span>
               <div class="wcar-title">{{ p.data.worldTitle }}</div>

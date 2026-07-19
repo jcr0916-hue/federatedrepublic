@@ -49,6 +49,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.gif");
   eleventyConfig.addPassthroughCopy("*.webp");
   eleventyConfig.addPassthroughCopy("*.svg");
+  eleventyConfig.addPassthroughCopy("logos");
   eleventyConfig.addPassthroughCopy("*.pdf");
   eleventyConfig.addPassthroughCopy("*.txt");
 
