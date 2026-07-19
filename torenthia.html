@@ -149,7 +149,7 @@
               <svg id="mapOverlay" style="position:absolute;top:0;left:0" width="1536" height="1024" viewBox="0 0 1536 1024" aria-hidden="true"></svg>
 
               <!-- Crisis dots (red) -->
-              <div class="dot" data-key="korda-north" style="top:66.4%;left:85.3%">
+              <div class="dot" data-key="norvane" style="top:19.2%;left:76.5%">
                 <div class="dot-core" style="background:#e8185a"></div>
                 <div class="dot-ring" style="border-color:#e8185a"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
@@ -402,25 +402,38 @@
   })();;
 
   const TYPE_COLORS={crisis:"#e8185a",political:"#7c3aed",legal:"#0ea5e9",diplomatic:"#f59e0b"};
+  // Dot -> relevant World entries, injected from _data/mapdots.js (derived from the collection).
+  const MAPDOTS={
+  {% for key, d in mapdots %}{% if not loop.first %},{% endif %}
+    "{{ key }}":{label:"{{ d.label }}",type:"{{ d.type }}",typeLabel:"{{ d.typeLabel }}",entries:[{% for e in d.entries %}{% if not loop.first %},{% endif %}{url:"{{ e.url }}",title:{{ e.title | dump | safe }},date:"{{ e.date }}"}{% endfor %}]}{% endfor %}
+  };
   let activeDot=null;
-
   function selectDot(key){
     document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
     const el=document.querySelector('[data-key="'+key+'"]');
     if(el) el.classList.add("active");
     activeDot=key;
-    const d=DATA[key];
+    const d=MAPDOTS[key];
     if(!d) return;
     const color=TYPE_COLORS[d.type]||"#888";
     document.getElementById("infoEye").textContent=d.typeLabel;
     document.getElementById("infoEye").style.color=color;
-    document.getElementById("infoTitle").textContent=d.title;
-    const provs=d.provisions?d.provisions.map(p=>`<span style="font-family:'JetBrains Mono',monospace;font-size:.6rem;background:#1B2A4A;color:#C9A84C;padding:.15rem .5rem;margin:.1rem .1rem 0;display:inline-block">${p}</span>`).join(""):"";
-    document.getElementById("infoBody").innerHTML=
-      `<span style="font-family:'JetBrains Mono',monospace;font-size:.62rem;padding:.25rem .5rem;border-radius:2px;display:inline-block;margin-bottom:.65rem;background:${color}22;color:${color}">${d.typeLabel}</span>`
-      +d.body+(provs?`<div style="margin-top:.75rem">${provs}</div>`:"");
+    document.getElementById("infoTitle").textContent=d.label;
+    let html='<span style="font-family:\'JetBrains Mono\',monospace;font-size:.62rem;padding:.25rem .5rem;border-radius:2px;display:inline-block;margin-bottom:.75rem;background:'+color+'22;color:'+color+'">'+d.typeLabel+'</span>';
+    if(d.entries.length){
+      html+='<div style="font-family:\'Jost\',sans-serif;font-size:.8rem;color:var(--muted);margin-bottom:.6rem">Latest coverage:</div>';
+      d.entries.forEach(e=>{
+        const ym=e.date.split(".");
+        html+='<a href="'+e.url+'" style="display:block;text-decoration:none;padding:.5rem 0;border-bottom:1px solid var(--border)">'
+          +'<span style="font-family:\'Cormorant Garamond\',serif;font-size:1.05rem;color:var(--navy);font-weight:600;line-height:1.2">'+e.title+'</span>'
+          +'<span style="display:block;font-family:\'JetBrains Mono\',monospace;font-size:.6rem;color:var(--muted);margin-top:.15rem">Year '+parseInt(ym[0])+', Month '+parseInt(ym[1])+' &rarr;</span></a>';
+      });
+      html+='<a href="torenthia-record.html" style="display:inline-block;margin-top:.75rem;font-family:\'JetBrains Mono\',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);text-decoration:none">More on The Record &rarr;</a>';
+    } else {
+      html+='<div style="font-family:\'Jost\',sans-serif;font-size:.85rem;color:var(--muted);line-height:1.5">No entries on the record yet. This place is on the map for stories still to come.</div>';
+    }
+    document.getElementById("infoBody").innerHTML=html;
   }
-
   document.querySelectorAll(".dot").forEach(el=>{
     el.addEventListener("click",()=>selectDot(el.dataset.key));
   });
