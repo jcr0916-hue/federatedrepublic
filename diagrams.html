@@ -505,9 +505,8 @@
   
 /* Diagram carousel picker */
 .dcar{display:flex;align-items:stretch;gap:0.5rem;max-width:1100px;margin:0 auto 1rem;padding:0 1rem}
-.dcar-track{display:flex;gap:0.75rem;overflow-x:auto;scroll-behavior:smooth;padding:0.5rem 0.25rem;flex:1;scrollbar-width:thin}
-.dcar-track::-webkit-scrollbar{height:6px}
-.dcar-track::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.dcar-track{display:flex;gap:0.75rem;overflow-x:auto;scroll-behavior:smooth;padding:0.5rem 0.25rem;flex:1;scrollbar-width:none;-ms-overflow-style:none}
+.dcar-track::-webkit-scrollbar{display:none}
 .dcard{flex:0 0 200px;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:0.4rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:4px;cursor:pointer;transition:border-color .2s,box-shadow .2s;font-family:'Jost',sans-serif}
 .dcard:hover{border-color:var(--gold2);box-shadow:0 2px 10px rgba(27,42,74,0.08)}
 .dcard-active{border-color:var(--gold2);border-width:2px;box-shadow:0 3px 14px rgba(201,168,76,0.18)}
@@ -517,6 +516,21 @@
 .dcar-btn{flex:0 0 auto;align-self:center;background:#fff;border:1px solid var(--border);border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:1.1rem;color:var(--navy);transition:border-color .2s}
 .dcar-btn:hover{border-color:var(--gold2);color:var(--gold2)}
 @media(max-width:820px){.dcard{flex:0 0 170px}.dcar{padding:0 0.5rem}}
+
+/* Diagram tooltips — navy underline = hover for context (matches annotated conventions) */
+.dfn{border-bottom:2px dotted var(--navy);cursor:help;position:relative;display:inline}
+.dfn:hover .dfn-box, .dfn.dfn-open .dfn-box{opacity:1;pointer-events:auto}
+.dfn-box{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--navy);color:var(--cream);font-size:0.74rem;line-height:1.5;padding:0.55rem 0.8rem;border-radius:3px;width:220px;z-index:600;pointer-events:none;opacity:0;transition:opacity 0.15s;box-shadow:0 4px 16px rgba(0,0,0,0.3);font-family:'Jost',sans-serif;font-weight:400;text-transform:none;letter-spacing:normal}
+.dfn-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--navy)}
+.dfn-box .dfn-ref{display:block;margin-top:0.3rem;font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold)}
+/* legend */
+.dgm-legend{max-width:760px;margin:0 auto 1.5rem;padding:0 1rem;text-align:center;font-family:'Jost',sans-serif;font-size:0.78rem;color:var(--muted)}
+.dgm-legend .leg-gold{border-bottom:2px solid var(--gold);padding:0 2px}
+.dgm-legend .leg-navy{border-bottom:2px dotted var(--navy);padding:0 2px}
+
+.sref{position:relative;border-bottom:1px dotted var(--navy)}
+.sref:hover .dfn-box{opacity:1}
+.sref .dfn-box{width:200px}
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -576,6 +590,9 @@
   </div>
   <button class="dcar-btn dcar-next" aria-label="Next" onclick="dcarScroll(1)">&rarr;</button>
 </div>
+  <div class="dgm-legend">
+    <span class="leg-gold">gold underline</span> opens the provision &nbsp;·&nbsp; <span class="leg-navy">navy underline</span> hover for context
+  </div>
 <!-- ═══════════════════════════════
      DIAGRAM 1: GOVERNMENT STRUCTURE
 ═══════════════════════════════ -->
@@ -624,7 +641,7 @@
         <span class="node-sub">Defense & Diplomacy only<br>6-year term, 1 term · Elected by People</span>
       </div>
       <div style="display:flex;flex-direction:column;justify-content:center;padding:0 0.5rem">
-        <div style="font-size:0.7rem;color:var(--muted);text-align:center;letter-spacing:0.08em">DOMAIN<br>SEPARATION</div>
+        <div style="font-size:0.7rem;color:var(--muted);text-align:center;letter-spacing:0.08em"><span class="dfn">DOMAIN<span class="dfn-box">Each executive's exclusive sphere — the Legat Consul's defense and diplomacy, the Civic Consul's domestic affairs.<span class="dfn-ref">§2.1</span></span></span><br>SEPARATION</div>
         <div style="height:2px;background:var(--border);margin:0.4rem 0"></div>
       </div>
       <div class="gov-node node-pm" onclick="showPanel('pm')">
@@ -706,126 +723,72 @@
      DIAGRAM 2: LEGISLATIVE LIFECYCLE
 ═══════════════════════════════ -->
 <div class="diagram-section" id="tab-lifecycle">
-  <div class="section-intro">
-    <h2>How a Law Is Made</h2>
-    <p>Every law originates in the Assembly and passes through multiple constitutional gates before enactment. Click any stage to explore the provisions behind it.</p>
+  <div class="section-intro" style="max-width:760px;margin:0 auto 2rem;text-align:center;padding:0 1rem">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;color:var(--navy);margin-bottom:0.6rem">How a Law Is Made</h3>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">Every law starts in the Assembly and clears five gates before it takes effect.</p>
   </div>
-
-  <div class="flow-chart">
-
-    <div class="flow-step step-intro">
-      <div class="flow-num">1</div>
-      <div class="flow-body">
-        <div class="flow-title">Bill Introduced in the Assembly</div>
-        <div class="flow-desc">All legislation originates in the Assembly. Every bill must address a single, clearly defined subject — unrelated riders nullify the entire act. The full bill text must be published to the NRS for the minimum exposure period before any final vote.</div>
-        <span class="flow-ref">§3.4 Legislative Standards</span>
-      </div>
-    </div>
-
-    <div class="flow-step step-house">
-      <div class="flow-num">2</div>
-      <div class="flow-body">
-        <div class="flow-title">Assembly Passage</div>
-        <div class="flow-desc">The Assembly votes. An absolute majority of the full seated membership — not merely those present — is required to pass.</div>
-        <span class="flow-ref">§3.7 — Standard Passage</span>
-        <div class="flow-branch">
-          <span class="branch-label">Vote Outcome</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-pass">✓ Passes — proceeds to Senate</div>
-            <div class="branch-outcome outcome-fail">✗ Fails — bill dies; sponsor may re-introduce next session</div>
-          </div>
+  <div style="max-width:720px;margin:0 auto 1rem;padding:0 1rem">
+    <div style="display:flex;gap:1rem;margin-bottom:0.8rem;align-items:flex-start">
+      <div style="flex:0 0 32px;height:32px;border-radius:50%;background:var(--navy);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.85rem">1</div>
+      <div style="flex:1;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:0.9rem 1.1rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--navy)">Introduced in the Assembly</strong>
+          <span><a href="annotated.html#s3-4" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§3.4</a></span>
         </div>
+        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem">Every law starts here and must address a single subject.</div>
+        
       </div>
     </div>
-
-    <div class="flow-step step-senate">
-      <div class="flow-num">3</div>
-      <div class="flow-body">
-        <div class="flow-title">Senate Review</div>
-        <div class="flow-desc">The Senate must take up every Assembly-passed bill within the statutory period. It may pass, amend, decline, or allow Deemed Approval to trigger. Senate amendments must be germane — limited to the subject matter of the original bill. The LM publishes a germaneness analysis for any amended bill returned to the Assembly.</div>
-        <span class="flow-ref">§3.1 Legislature · §3.7 Legislative Process · §9.1.a LM Germaneness Analysis</span>
-        <div class="flow-branch">
-          <span class="branch-label">Senate Options</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-pass">✓ Passes — proceeds to Legislative Review Period</div>
-            <div class="branch-outcome outcome-neutral">↩ Amends — returns to Assembly for acceptance or rejection</div>
-            <div class="branch-outcome outcome-fail">✗ Declines — bill dies</div>
-            <div class="branch-outcome outcome-delay">⏱ No action in statutory period — Deemed Approved</div>
-          </div>
+    <div style="display:flex;gap:1rem;margin-bottom:0.8rem;align-items:flex-start">
+      <div style="flex:0 0 32px;height:32px;border-radius:50%;background:var(--navy);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.85rem">2</div>
+      <div style="flex:1;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:0.9rem 1.1rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--navy)">Assembly Passage</strong>
+          <span><a href="annotated.html#s3-7" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§3.7</a></span>
         </div>
+        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem"><span class="dfn">Absolute majority<span class="dfn-box">More than half of the full seated membership — not just those present and voting.<span class="dfn-ref">§3.7</span></span></span> of the full seated Assembly.</div>
+        <div style="margin-top:0.5rem;font-size:0.74rem;color:var(--ink);line-height:1.7">✓ passes &rarr; Senate &nbsp;·&nbsp; ✗ fails &rarr; dies</div>
       </div>
     </div>
-
-    <div class="flow-step step-pm">
-      <div class="flow-num">4</div>
-      <div class="flow-body">
-        <div class="flow-title">Legislative Review Period — Civic Consul</div>
-        <div class="flow-desc">The Civic Consul reviews every bill during the statutory review period. The Civic Consul may sign, remain silent (Deemed Enacted), issue a Fiscal Objection, or issue a Suspensive Veto. The Civic Consul must give the LM's germaneness analysis due consideration where one was published.</div>
-        <span class="flow-ref">§2.7 Civic Consul Legislative Instruments</span>
-        <div class="flow-branch">
-          <span class="branch-label">Civic Consul Options</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-pass">✓ Signs or silent — bill proceeds to enactment</div>
-            <div class="branch-outcome outcome-delay">📋 Fiscal Notice — CC publishes NRS statement of structural deficit risk; Assembly Speaker may recall bill within remaining window</div>
-            <div class="branch-outcome outcome-neutral">↩ Suspensive Veto — bill tabled one month; Senate may override by 2/3 during that month</div>
-          </div>
+    <div style="display:flex;gap:1rem;margin-bottom:0.8rem;align-items:flex-start">
+      <div style="flex:0 0 32px;height:32px;border-radius:50%;background:var(--navy);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.85rem">3</div>
+      <div style="flex:1;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:0.9rem 1.1rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--navy)">Senate Review</strong>
+          <span><a href="annotated.html#s3-1" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§3.1</a> <a href="annotated.html#s3-7" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§3.7</a></span>
         </div>
+        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem">Senate must take it up within the statutory window.</div>
+        <div style="margin-top:0.5rem;font-size:0.74rem;color:var(--ink);line-height:1.7">✓ passes &nbsp;·&nbsp; ↩ amends &rarr; back to Assembly &nbsp;·&nbsp; ⏱ no action &rarr; deemed approved</div>
       </div>
     </div>
-
-    <div class="flow-step step-legat-consul">
-      <div class="flow-num">5</div>
-      <div class="flow-body">
-        <div class="flow-title">Consular Review <span style="font-size:0.82em;font-weight:400;opacity:0.7">(Security Domain Bills Only)</span></div>
-        <div class="flow-desc">The Legat Consul may veto only bills raising a genuine constitutional concern within the Legat Consul's domain — military operations, intelligence, treaty obligations, or border security. A general or speculative connection to security is not sufficient. Either Speaker may petition the SC for an expedited domain determination of a disputed veto; the SC must rule within 7 days.</div>
-        <span class="flow-ref">§2.3 Consular Intelligence and Veto</span>
-        <div class="flow-branch">
-          <span class="branch-label">Consular Options</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-pass">✓ Signs, or bill not in domain — enacted</div>
-            <div class="branch-outcome outcome-fail">✗ Vetoes — 2/3 both chambers to override; SC reviews within 7 days on petition</div>
-          </div>
+    <div style="display:flex;gap:1rem;margin-bottom:0.8rem;align-items:flex-start">
+      <div style="flex:0 0 32px;height:32px;border-radius:50%;background:var(--navy);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.85rem">4</div>
+      <div style="flex:1;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:0.9rem 1.1rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--navy)">Civic Consul Review</strong>
+          <span><a href="annotated.html#s2-7" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§2.7</a></span>
         </div>
+        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem">10 days to sign, stay silent, or act.</div>
+        <div style="margin-top:0.5rem;font-size:0.74rem;color:var(--ink);line-height:1.7">✓ signs / silent &rarr; enacts &nbsp;·&nbsp; ↩ suspensive veto &rarr; tabled, Senate can override 2/3</div>
       </div>
     </div>
-
-    <div class="flow-step step-enact">
-      <div class="flow-num">6</div>
-      <div class="flow-body">
-        <div class="flow-title">Enactment and NRS Publication</div>
-        <div class="flow-desc">The enacted law is published to the National Record System — permanently, tamper-evidently, and publicly accessible to every Inhabitant at no cost. All prior versions, votes, Monitor findings, and veto records are indexed alongside it.</div>
-        <span class="flow-ref">§10.1 — National Record System Mandate</span>
-      </div>
-    </div>
-
-    <div class="flow-step step-challenge">
-      <div class="flow-num">7</div>
-      <div class="flow-body">
-        <div class="flow-title">Post-Enactment Challenge</div>
-        <div class="flow-desc">Enacted law remains subject to constitutional challenge and citizen repeal. These are independent paths — both may run concurrently.</div>
-        <span class="flow-ref">§4.5 Judicial Review · §13.1 Optional Referendum</span>
-        <div class="flow-branch">
-          <span class="branch-label">Challenge Paths</span>
-          <div class="branch-outcomes">
-            <div class="branch-outcome outcome-neutral">⚖ Supreme Court — any party with standing may challenge; court may strike as unconstitutional</div>
-            <div class="branch-outcome outcome-neutral">🗳 Optional Referendum — two-phase citizen petition (0.5–3% per-State, then 5% nationally) beginning within 90 days of enactment; simple majority, subject to a turnout cap, repeals</div>
-          </div>
+    <div style="display:flex;gap:1rem;margin-bottom:0.8rem;align-items:flex-start">
+      <div style="flex:0 0 32px;height:32px;border-radius:50%;background:var(--navy);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.85rem">5</div>
+      <div style="flex:1;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:0.9rem 1.1rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--navy)">Enactment</strong>
+          <span><a href="annotated.html#s2-7" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§2.7</a></span>
         </div>
+        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem">No action within 10 days enacts by operation of law.</div>
+        
       </div>
     </div>
-    <div class="diagram-footer">
-      <div class="diagram-scenarios">
-        <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Single-Subject Rule &middot; &sect;3.4</span></div>
-        <div><span class="diagram-sc-tag">Civic Consul's Veto &middot; &sect;2.7</span></div>
-      </div>
-    </div>
-
   </div>
   <div class="diagram-refs" style="max-width:760px;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
     <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
     <a href="quicksheet-article-3.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: Legislation</a>
-    <a href="annotated.html#s3-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article III &rarr;</a><a href="scenario-ordinary.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Scenario: The Ordinary Day</a>
+    <a href="annotated.html#s3-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article III &rarr;</a>
+    <a href="scenario-ordinary.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Scenario: The Ordinary Day &rarr;</a>
   </div>
 </div>
 
@@ -840,104 +803,47 @@
      DIAGRAM 5: MILITARY AUTHORIZATION TIERS
 ═══════════════════════════════ -->
 <div class="diagram-section" id="tab-tiers">
-  <div class="section-intro">
-    <h2>Military Authorization Framework</h2>
-    <p>Military force operates under two authorized purposes and two authorization paths. The Legat Consul may act immediately in defense — but all sustained operations require legislative authorization or an existing treaty trigger, and run under continuous Senate oversight. Cessation is the constitutional default.</p>
+  <div class="section-intro" style="max-width:760px;margin:0 auto 2rem;text-align:center;padding:0 1rem">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;color:var(--navy);margin-bottom:0.6rem">Military Authorization</h3>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">One immediate power, and every other use of force gated behind authorization. Cessation is always the default.</p>
   </div>
-
-  <div class="tier-chart">
-
-    <!-- PRINCIPLE 1 & 2 -->
-    <div class="tier-stack">
-
-      <div class="tier-block tier1">
-        <div class="tier-header">
-          <div class="tier-badge">1</div>
-          <div class="tier-col-label">Immediate Defensive Force</div>
-        </div>
-        <div class="tier-body">
-          <p><strong>Legat Consul acts immediately</strong> in response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies.</p>
-          <p>Must notify both chambers and the Civic Consul within 24 hours, or sooner if statute sets a shorter period. <strong>Strictly bounded to defensive response.</strong></p>
-          <div class="tier-tags">
-            <span class="tier-tag">§2.2</span>
-            <span class="tier-tag">No prior authorization</span>
-          </div>
-        </div>
+  <div style="max-width:760px;margin:0 auto 1rem;padding:0 1rem">
+    <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.1rem 1.3rem;margin-bottom:0.8rem">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.3rem">
+        <strong style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy)">Immediate Defensive Force</strong>
+        <span><a href="annotated.html#s2-2" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§2.2</a></span>
       </div>
-
-      <div class="tier-arrow">↓</div>
-
-      <div class="tier-block tier2">
-        <div class="tier-header">
-          <div class="tier-badge">2</div>
-          <div class="tier-col-label">All Other Force — Legislative Authorization Required</div>
-        </div>
-        <div class="tier-body">
-          <p><strong>Any military force beyond immediate defense requires legislative authorization</strong> stating which §14.1 authorized purpose it serves. Authorization not linked to a purpose is constitutionally void.</p>
-          <p><strong>Cessation is the constitutional default.</strong> The burden is always on authorization, never on termination. Operations cease automatically on expiry.</p>
-          <div class="tier-tags">
-            <span class="tier-tag">§2.2</span>
-            <span class="tier-tag">§14.1</span>
-            <span class="tier-tag">Legislature defines timelines</span>
-          </div>
-        </div>
-      </div>
-
+      <div style="color:var(--muted);font-size:0.8rem;line-height:1.45">Legat Consul acts alone against an active or imminent attack — notify both chambers within 24 hours. Strictly defensive.</div>
     </div>
-
-    <!-- TREATY-BASED PATH -->
-    <div class="tier-trigger" style="margin-top:1.5rem">
-      <h3>Or: Treaty-Based Authorization</h3>
-      <p>Where an existing treaty requires military action, the Legat Consul may act immediately — notifying both chambers and the Civic Consul within 12 hours and citing the specific treaty obligation triggered. Senate ratification of the treaty already constitutes legislative authorization; no separate vote is needed when its obligations are triggered. If the SC later finds the trigger conditions were not met, operations are limited to a defensive posture and both chambers must vote within 30 days on whether to authorize continuation — absent an affirmative vote, §14.2's expiration and wind-down rules apply.</p>
-      <div class="tier-tags">
-        <span class="tier-tag">§14.4</span>
-        <span class="tier-tag">§3.6</span>
+    <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.1rem 1.3rem;margin-bottom:0.8rem">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.3rem">
+        <strong style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy)">All Other Force</strong>
+        <span><a href="annotated.html#s2-2" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§2.2</a> <a href="annotated.html#s14-1" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§14.1</a></span>
       </div>
+      <div style="color:var(--muted);font-size:0.8rem;line-height:1.45">Anything beyond immediate defense needs legislative authorization naming a §14.1 purpose. Cessation is the default — the burden is on authorizing, never on stopping.</div>
     </div>
-
-    <!-- FUNDING & OVERSIGHT -->
-    <div class="tier-trigger" style="margin-top:1rem">
-      <h3>Funding &amp; Senate Oversight — Throughout All Operations</h3>
-      <p>Military expenditure requires legislative authorization plus ordinary budget passage under §12.2; the Legat Consul executes the funding, bound by any categories or amounts the authorization specifies. The Legat Consul answers public Senate questions at statutory intervals and gives classified briefings during active operations — the Civic Consul is kept informed through the Council of Ministers, but holds no certification or veto over military funding. The EM audits expenditure throughout and publishes a full accountability report within 180 days of an operation's conclusion. On expiry or lapse, all expenditure ceases; existing contracts may wind down for up to 90 days with no new commitments.</p>
-      <div class="tier-tags">
-        <span class="tier-tag">§14.2</span>
-        <span class="tier-tag">§2.5</span>
-        <span class="tier-tag">§2.14</span>
+    <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.1rem 1.3rem;margin-bottom:0.8rem">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.3rem">
+        <strong style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy)">Treaty-Based Path</strong>
+        <span><a href="annotated.html#s14-4" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§14.4</a> <a href="annotated.html#s3-6" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§3.6</a></span>
       </div>
+      <div style="color:var(--muted);font-size:0.8rem;line-height:1.45">Where an existing treaty requires action, the Legat Consul may act on that authority alone.</div>
     </div>
-
-    <!-- TRANSITION PLAN -->
-    <div class="tier-trigger" style="margin-top:1rem">
-      <h3>On Second Renewal: Transition &amp; Reconstruction Plan</h3>
-      <p>Once legislative authorization has been renewed a second time, the Legat Consul must submit a Transition and Reconstruction Plan to the Senate — covering alliance obligations, civilian reconstruction support, transitional justice, and withdrawal timeline. The Senate reviews and approves the Plan; the approved Plan binds both executives within their respective domains. Authorization may not be renewed again without an approved Plan.</p>
-      <div class="tier-tags">
-        <span class="tier-tag">§14.3</span>
+    <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.1rem 1.3rem;margin-bottom:0.8rem">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.3rem">
+        <strong style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy)">Funding &amp; Oversight</strong>
+        <span><a href="annotated.html#s14-2" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§14.2</a></span>
       </div>
+      <div style="color:var(--muted);font-size:0.8rem;line-height:1.45">All military spending needs legislative authorization plus ordinary budget approval — Senate oversees throughout.</div>
     </div>
-
-    <!-- AUTHORIZED PURPOSES -->
-    <div class="tier-trigger" style="margin-top:1rem">
-      <h3>Authorized Purposes <span style="color:rgba(245,240,232,0.5);font-weight:400;font-size:0.85em">§14.1</span></h3>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto;text-align:left">
-        <div>
-          <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#81c784;margin-bottom:0.6rem;font-family:'JetBrains Mono',monospace">✓ Permitted</div>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Protection of Republic territory, citizens, and treaty allies</p>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6">Response to crimes against humanity, with legislative authorization stating the specific grounds</p>
-        </div>
-        <div>
-          <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#ef9a9a;margin-bottom:0.6rem;font-family:'JetBrains Mono',monospace">✕ Prohibited</div>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Installing or propping up a government in another sovereign state</p>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6;margin-bottom:0.5rem">Resource extraction</p>
-          <p style="font-size:0.88rem;color:rgba(245,240,232,0.85);line-height:1.6">Ideological imposition</p>
-        </div>
+    <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.1rem 1.3rem;margin-bottom:0.8rem">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.3rem">
+        <strong style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy)">Second Renewal</strong>
+        <span><a href="annotated.html#s14-3" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§14.3</a></span>
       </div>
+      <div style="color:var(--muted);font-size:0.8rem;line-height:1.45">After authorization is renewed twice, the Legat Consul must submit a transition and reconstruction plan.</div>
     </div>
-
   </div>
-
-  <div class="diagram-footer">
-  </div>
-
   <div class="diagram-refs" style="max-width:760px;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
     <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
     <a href="quicksheet-article-14.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: The Military</a>
@@ -949,7 +855,7 @@
 <!-- ═══════════════════════════════
      DIAGRAM 6: DUAL EXECUTIVE
 ═══════════════════════════════ -->
-<div class="diagram-section" id="tab-dual" style="display:none">
+<div class="diagram-section" id="tab-dual">
   <div class="section-intro" style="max-width:760px;margin:0 auto 2rem;text-align:center;padding:0 1rem">
     <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;color:var(--navy);margin-bottom:0.6rem">The Dual Executive</h3>
     <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">Two executives, distinct domains. Neither may claim the other's. When one event touches both, each acts within its own domain — the shared band is where they meet.</p>
@@ -1073,7 +979,7 @@
 
 
 
-<div class="diagram-section" id="tab-sc-appointment" style="display:none">
+<div class="diagram-section" id="tab-sc-appointment">
   <div class="section-intro" style="max-width:760px;margin:0 auto 2rem;text-align:center;padding:0 1rem">
     <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;color:var(--navy);margin-bottom:0.6rem">Court Structure &amp; Original Jurisdiction</h3>
     <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">Three tiers of courts — and a short list of matters that start <em>at</em> the Supreme Court, skipping the tiers entirely.</p>
@@ -1186,7 +1092,7 @@
 
 <!-- STATES & FEDERATION -->
 </div>
-<div class="diagram-section" id="tab-states-fed" style="display:none">
+<div class="diagram-section" id="tab-states-fed">
   <div class="section-intro" style="max-width:760px;margin:0 auto 2rem;text-align:center;padding:0 1rem">
     <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;color:var(--navy);margin-bottom:0.6rem">States &amp; Federation</h3>
     <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">What States control, what the federal government controls, and the contested boundary between them. Follow any reference to the exact provision.</p>
@@ -1412,6 +1318,29 @@ function closePanel() {
       );
     }
   </script>
-  <script src="nav.js"></script>
+  <script src="nav.js">
+// Diagram tooltips: tap-to-toggle on touch devices (hover handles desktop)
+document.addEventListener('click', function(e){
+  var dfn = e.target.closest('.dfn');
+  document.querySelectorAll('.dfn.dfn-open').forEach(function(d){ if(d!==dfn) d.classList.remove('dfn-open'); });
+  if(dfn){ dfn.classList.toggle('dfn-open'); e.stopPropagation(); }
+});
+</script>
+
+  <script>
+  const PROVNAMES = {{ provnames | dump | safe }};
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.diagram-section a[href^="annotated.html#s"]').forEach(function(a){
+      var anchor = a.getAttribute('href').split('#')[1];
+      var name = PROVNAMES[anchor];
+      if(!name) return;
+      a.classList.add('sref');
+      var box = document.createElement('span');
+      box.className = 'dfn-box';
+      box.innerHTML = name + '<span class="dfn-ref">' + a.textContent.trim() + ' &rarr; open</span>';
+      a.appendChild(box);
+    });
+  });
+  </script>
 </body>
 </html>
