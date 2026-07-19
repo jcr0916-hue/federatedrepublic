@@ -502,7 +502,22 @@
     .monitor-columns{grid-template-columns:1fr}
     .sc-principle{grid-template-columns:1fr}
   }
-  </style>
+  
+/* Diagram carousel picker */
+.dcar{display:flex;align-items:stretch;gap:0.5rem;max-width:1100px;margin:0 auto 1rem;padding:0 1rem}
+.dcar-track{display:flex;gap:0.75rem;overflow-x:auto;scroll-behavior:smooth;padding:0.5rem 0.25rem;flex:1;scrollbar-width:thin}
+.dcar-track::-webkit-scrollbar{height:6px}
+.dcar-track::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.dcard{flex:0 0 200px;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:0.4rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:4px;cursor:pointer;transition:border-color .2s,box-shadow .2s;font-family:'Jost',sans-serif}
+.dcard:hover{border-color:var(--gold2);box-shadow:0 2px 10px rgba(27,42,74,0.08)}
+.dcard-active{border-color:var(--gold2);border-width:2px;box-shadow:0 3px 14px rgba(201,168,76,0.18)}
+.dcard-icon{flex-shrink:0}
+.dcard-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);line-height:1.1}
+.dcard-hook{font-size:0.76rem;color:var(--muted);line-height:1.4}
+.dcar-btn{flex:0 0 auto;align-self:center;background:#fff;border:1px solid var(--border);border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:1.1rem;color:var(--navy);transition:border-color .2s}
+.dcar-btn:hover{border-color:var(--gold2);color:var(--gold2)}
+@media(max-width:820px){.dcard{flex:0 0 170px}.dcar{padding:0 0.5rem}}
+</style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -520,21 +535,47 @@
 </div>
 
 <!-- TAB NAVIGATION -->
-<div class="tab-nav">
-  <button class="tab-btn active" onclick="showTab('structure')">Government Structure</button>
-  <button class="tab-btn" onclick="showTab('lifecycle')">Legislative Lifecycle</button>
-  <button class="tab-btn" onclick="showTab('devolution')">State Pathways</button>
-  <button class="tab-btn" onclick="showTab('immigration')">Immigration Tracks</button>
-  <button class="tab-btn" onclick="showTab('tiers')">Military Tiers</button>
-  <button class="tab-btn" onclick="showTab('dual')">Dual Executive</button>
-  <button class="tab-btn" onclick="showTab('amendment')">Amendment Paths</button>
-  <button class="tab-btn" onclick="showTab('monitors')">Monitors</button>
-  <button class="tab-btn" onclick="showTab('sc-appointment')">SC Appointment</button>
-  <button class="tab-btn" onclick="showTab('social')">Social State</button>
-  <button class="tab-btn" onclick="showTab('pool')">Pool Process</button>
-  <button class="tab-btn" onclick="showTab('states-fed')">States &amp; Federation</button>
+<div class="dcar">
+  <button class="dcar-btn dcar-prev" aria-label="Previous" onclick="dcarScroll(-1)">&larr;</button>
+  <div class="dcar-track" id="dcarTrack">
+    <button class="dcard dcard-active" data-tab="structure" onclick="showTab('structure', this)">
+      <svg class="dcard-icon" viewBox="0 0 48 48" width="46" height="46"><path d="M10 34h28M12 34V16M20 34V16M28 34V16M36 34V16M9 16h30l-15-8z" stroke="var(--gold2)" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+      <span class="dcard-title">Government Structure</span>
+      <span class="dcard-hook">The whole machine at a glance — who holds power, who checks whom, and how it all connects.</span>
+    </button>
+    <button class="dcard" data-tab="lifecycle" onclick="showTab('lifecycle', this)">
+      <svg class="dcard-icon" viewBox="0 0 48 48" width="46" height="46"><path d="M8 24h24m0 0l-6-6m6 6l-6 6M34 14v20" stroke="var(--gold2)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="24" r="3" stroke="var(--gold2)" stroke-width="2" fill="none"/></svg>
+      <span class="dcard-title">How a Law Is Made</span>
+      <span class="dcard-hook">Follow a bill from the Assembly floor through both chambers, the veto, and the override math.</span>
+    </button>
+    <button class="dcard" data-tab="tiers" onclick="showTab('tiers', this)">
+      <svg class="dcard-icon" viewBox="0 0 48 48" width="46" height="46"><path d="M24 8l14 5v9c0 8-6 14-14 17-8-3-14-9-14-17v-9z" stroke="var(--gold2)" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M18 24l4 4 8-8" stroke="var(--gold2)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="dcard-title">Military Authorization</span>
+      <span class="dcard-hook">Two purposes, two paths to authorize force — and the line the Legat Consul cannot cross alone.</span>
+    </button>
+    <button class="dcard" data-tab="dual" onclick="showTab('dual', this)">
+      <svg class="dcard-icon" viewBox="0 0 48 48" width="46" height="46"><circle cx="19" cy="24" r="10" stroke="var(--gold2)" stroke-width="2" fill="none"/><circle cx="29" cy="24" r="10" stroke="var(--gold2)" stroke-width="2" fill="none"/></svg>
+      <span class="dcard-title">The Dual Executive</span>
+      <span class="dcard-hook">Two executives, distinct domains — and the shared ground where they meet without merging.</span>
+    </button>
+    <button class="dcard" data-tab="sc-appointment" onclick="showTab('sc-appointment', this)">
+      <svg class="dcard-icon" viewBox="0 0 48 48" width="46" height="46"><path d="M24 8v28M14 36h20M24 12l-11 4 11 4 11-4zM13 16l-4 8h8zM35 16l-4 8h8z" stroke="var(--gold2)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="dcard-title">Court Structure</span>
+      <span class="dcard-hook">Three tiers of courts — plus the short list of disputes that start at the Supreme Court itself.</span>
+    </button>
+    <button class="dcard" data-tab="pool" onclick="showTab('pool', this)">
+      <svg class="dcard-icon" viewBox="0 0 48 48" width="46" height="46"><circle cx="24" cy="12" r="3" stroke="var(--gold2)" stroke-width="2" fill="none"/><circle cx="12" cy="32" r="3" stroke="var(--gold2)" stroke-width="2" fill="none"/><circle cx="36" cy="32" r="3" stroke="var(--gold2)" stroke-width="2" fill="none"/><circle cx="24" cy="30" r="3" stroke="var(--gold2)" stroke-width="2" fill="none"/><path d="M24 15v12M22 14l-8 15M26 14l8 15" stroke="var(--gold2)" stroke-width="1.5"/></svg>
+      <span class="dcard-title">The Constitutional Pool</span>
+      <span class="dcard-hook">How eight pools fill the Republic's offices through one shared framework — entry to confirmation.</span>
+    </button>
+    <button class="dcard" data-tab="states-fed" onclick="showTab('states-fed', this)">
+      <svg class="dcard-icon" viewBox="0 0 48 48" width="46" height="46"><path d="M10 14l9-3 10 3 9-3v23l-9 3-10-3-9 3zM19 11v23M29 14v23" stroke="var(--gold2)" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+      <span class="dcard-title">States & Federation</span>
+      <span class="dcard-hook">What states control, what the federation controls, and the contested boundary in between.</span>
+    </button>
+  </div>
+  <button class="dcar-btn dcar-next" aria-label="Next" onclick="dcarScroll(1)">&rarr;</button>
 </div>
-
 <!-- ═══════════════════════════════
      DIAGRAM 1: GOVERNMENT STRUCTURE
 ═══════════════════════════════ -->
@@ -653,6 +694,11 @@
         <div><a href="scenario-ordinary.html" class="diagram-sc-link">The Ordinary Week &rarr;</a><span class="diagram-sc-tag">Ordinary Governance &middot; &sect;3.3</span></div>
       </div>
     </div>
+  </div>
+  <div class="diagram-refs" style="max-width:760px;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
+    <a href="quicksheet-article-1.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: The Structure</a>
+    <a href="annotated.html#s1-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article I &rarr;</a>
   </div>
 </div>
 
@@ -776,275 +822,18 @@
     </div>
 
   </div>
-</div>
-
-<div class="diagram-section" id="tab-devolution">
-  <div class="section-intro">
-    <h2>State Pathways</h2>
-    <p>The constitutional paths between Territory and Statehood — entry via the Statehood Audit, voluntary exit through devolution, and involuntary devolution on repeated audit failure. States may pursue full independence through §15.9 — a two-stage process requiring a 60% State referendum and concurrent ratification by both chambers, followed by a negotiated transition agreement.</p>
-  </div>
-
-  <div class="dev-chart">
-    <div class="dev-tabs">
-      <button class="dev-tab active" onclick="showDevPath('statehood')">Territory → Statehood</button>
-      <button class="dev-tab" onclick="showDevPath('voluntary')">Voluntary Devolution</button>
-      <button class="dev-tab" onclick="showDevPath('mandatory')">Mandatory Devolution</button>
-    </div>
-
-    <!-- PATH A: Statehood -->
-    <div class="dev-path active" id="dev-statehood">
-      <div class="pathway">
-        <div class="pathway-step step-trigger">
-          <span class="ps-label">Step 1 — Entry</span>
-          <span class="ps-title">Territory Status</span>
-          <p class="ps-desc">A Territory operates under a Territorial Compact providing an elected local governing authority, full Article I protections, and access to social state systems. Territories hold proportional Assembly seats but no Senate seats.</p>
-          <span class="ps-ref">§15.1 — Territorial Compact</span>
-        </div>
-        <div class="pathway-step step-audit">
-          <span class="ps-label">Step 2 — Evaluation</span>
-          <span class="ps-title">The Statehood Audit</span>
-          <p class="ps-desc">Two components, both must pass: the LM audits fiscal integrity; the JM audits legal compliance with every Article I right. A Territory that fails receives published findings and may resubmit after addressing them — there is no scored Baseline and no fixed percentage threshold; the Legislature defines audit methodology and resubmission timelines by statute. A geographic subdivision of a Territory may petition for Statehood independently of the rest.</p>
-          <span class="ps-ref">§15.2 — The Statehood Audit</span>
-        </div>
-        <div class="path-threshold">Both audit components must pass; no political vote is required once they do</div>
-        <div class="pathway-step step-effect">
-          <span class="ps-label">Step 3 — Provisional Period</span>
-          <span class="ps-title">Provisional Membership Period</span>
-          <p class="ps-desc">On passing the audit, the Territory enters a Provisional Membership Period of one to three years, as the Legislature defines. Clean completion results in automatic Statehood — no further vote required.</p>
-          <span class="ps-ref">§15.2 — Provisional Membership Period</span>
-        </div>
-        <div class="pathway-step step-restore">
-          <span class="ps-label">Final — Full Membership</span>
-          <span class="ps-title">Statehood Confirmed</span>
-          <p class="ps-desc">The State receives two Senate seats, retains proportional Assembly seats, and accesses social state systems under Article XII. Every State must then maintain three ongoing conditions — functioning elections, basic rule of law, and Article I compliance — verified by annual audit.</p>
-          <span class="ps-ref">§15.2 — Statehood is automatic on clean completion of the Provisional Period</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- PATH B: Voluntary Devolution -->
-    <div class="dev-path" id="dev-voluntary">
-      <div class="pathway">
-        <div class="pathway-step step-vote">
-          <span class="ps-label">Step 1 — Democratic Authorization</span>
-          <span class="ps-title">60% State Referendum on the Principle</span>
-          <p class="ps-desc">A State may voluntarily restructure its relationship with the Republic. The process begins with a State referendum achieving 60% approval of eligible voters on the principle of pursuing devolution.</p>
-          <span class="ps-ref">§15.4 — Voluntary Devolution and Merger</span>
-        </div>
-        <div class="pathway-step step-negotiate">
-          <span class="ps-label">Step 2 — Negotiation</span>
-          <span class="ps-title">Restructuring Agreement</span>
-          <p class="ps-desc">On approval, the State and the Legislature negotiate a restructuring agreement specifying asset and liability allocation, transition timeline, the constitutional status of successor jurisdictions, fiscal obligations to the Republic, and continuing obligations. It is published to the NRS and is legally binding.</p>
-          <span class="ps-ref">§15.4 — Restructuring Agreement</span>
-        </div>
-        <div class="path-threshold">Senate ratification by 2/3 majority required to finalize</div>
-        <div class="pathway-step step-effect">
-          <span class="ps-label">Step 3 — Effect</span>
-          <span class="ps-title">Territory Status</span>
-          <p class="ps-desc">Social state protections and Article I rights continue uninterrupted through the transition. A separate, related path lets a Territory or part of one merge with a contiguous existing State — requiring a 60% referendum with at least 50% participation, the existing State's own approval, a joint LM-JM audit confirming the existing State's integrity is maintained, and Senate ratification by simple majority.</p>
-          <span class="ps-ref">§15.4 — Effect of Devolution; Territory/State Merger</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- PATH C: Mandatory Devolution -->
-    <div class="dev-path" id="dev-mandatory">
-      <div class="pathway">
-        <div class="pathway-step step-trigger">
-          <span class="ps-label">Step 1 — Three Consecutive Failures</span>
-          <span class="ps-title">Repeated Audit Failure</span>
-          <p class="ps-desc">A State enters Mandatory Devolution upon three consecutive annual Statehood Audit findings of failure published by the LM. After each failing audit, the LM publishes an Early Warning specifying compliance requirements, and the State must publish a Remediation Plan within the statutory period.</p>
-          <span class="ps-ref">§15.3 — Mandatory Devolution</span>
-        </div>
-        <div class="pathway-step step-effect">
-          <span class="ps-label">Step 2 — Automatic Entry</span>
-          <span class="ps-title">Provisional Status — No Vote Required</span>
-          <p class="ps-desc">After the third consecutive failure, the State automatically enters Provisional status. No citizen vote is required. Sitting senators complete their current elected terms — Senate seats are not vacated — but no new Senate elections may be held until Statehood is restored. Existing Assembly members complete their current terms.</p>
-          <span class="ps-ref">§15.3 — Mandatory Devolution</span>
-        </div>
-        <div class="path-threshold">Article I rights and social state protections continue without interruption throughout</div>
-        <div class="pathway-step step-restore">
-          <span class="ps-label">Step 3 — Restoration</span>
-          <span class="ps-title">Automatic Return to Statehood</span>
-          <p class="ps-desc">Restoration to Statehood is automatic upon passing the Statehood Audit and completing the Provisional Membership Period — no political vote required. The State continues under the annual audit cycle; any passing audit triggers the restoration pathway immediately.</p>
-          <span class="ps-ref">§15.3 — Restoration is automatic on passing the audit</span>
-        </div>
-        <div class="pathway-step step-vote">
-          <span class="ps-label">Parallel — Judicial Review</span>
-          <span class="ps-title">SC Petition Within 30 Days</span>
-          <p class="ps-desc">Within 30 days of Provisional status taking effect, the affected State may petition the Supreme Court on the sole ground that the audit findings are factually insufficient to establish three consecutive failures. The Court reviews only the factual basis and must rule within 14 days. This is the only avenue for challenging the devolution finding.</p>
-          <span class="ps-ref">§15.3 — Judicial Review</span>
-        </div>
-      </div>
-    </div>
-    <div class="diagram-footer">
-      <div class="diagram-scenarios">
-        <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Voluntary Devolution &middot; &sect;15.4</span></div>
-        <div><span class="diagram-sc-tag">Statehood Audit &middot; &sect;15.2</span></div>
-      </div>
-    </div>
-
+  <div class="diagram-refs" style="max-width:760px;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
+    <a href="quicksheet-article-3.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: Legislation</a>
+    <a href="annotated.html#s3-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article III &rarr;</a><a href="scenario-ordinary.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Scenario: The Ordinary Day</a>
   </div>
 </div>
+
+
 <!-- ═══════════════════════════════
      DIAGRAM 4: IMMIGRATION TRACKS
 ═══════════════════════════════ -->
-<div class="diagram-section" id="tab-immigration">
-  <div class="section-intro">
-    <h2>Two Paths to Residency</h2>
-    <p>The Republic has two constitutionally distinct immigration tracks. They operate independently and both lead to the same federal residency credential — but through entirely different constitutional foundations.</p>
-  </div>
 
-  <div class="imm-chart">
-
-    <!-- ENTRY POINT -->
-    <div class="imm-entry">
-      <h3>Applicant</h3>
-      <p>Any person seeking to reside in the Republic permanently</p>
-    </div>
-
-    <!-- TWO TRACKS -->
-    <div class="imm-split">
-
-      <!-- LEFT: REGULAR IMMIGRATION -->
-      <div class="imm-track track-regular">
-        <div class="imm-track-label">Regular Immigration · Two-Stage System</div>
-
-        <div class="imm-step step-gate1">
-          <span class="imm-step-num">State Sponsorship</span>
-          <div class="imm-step-title">State Sponsorship</div>
-          <div class="imm-step-desc">A sponsoring State certifies the applicant through its own vetting process. States retain discretion over whom they sponsor but may not apply criteria that violate §1.6. The Legislature may also establish a Federal Sponsorship Category, where federal agencies serve as the sponsorship stage for applicants serving a defined federal interest — this does not bypass federal certification.</div>
-          <span class="imm-step-ref">§6.1 — The Two-Stage Immigration System</span>
-        </div>
-
-        <div class="imm-callout">
-          <strong>Genuine Connection Requirement</strong>
-          Applicant must maintain a genuine connection to the sponsoring State during processing. Credentials are federal once issued — not tied to the sponsoring State.
-        </div>
-
-        <div class="imm-challenge">
-          <strong>§1.6 Discrimination Challenge:</strong> A State sponsorship denial isn't reviewable on its merits, but is challengeable as a constitutional violation where made on §1.6 discriminatory grounds — a court may order reconsideration free of discriminatory criteria but may not compel sponsorship. · §6.2
-        </div>
-
-        <div class="imm-arrow-down">↓</div>
-
-        <div class="imm-step step-gate2">
-          <span class="imm-step-num">Federal Certification</span>
-          <div class="imm-step-title">Federal Certification</div>
-          <div class="imm-step-desc">Federal certification categories are established by statute. No ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing.</div>
-          <span class="imm-step-ref">§6.1</span>
-        </div>
-
-        <div class="imm-callout">
-          <strong>Certification Denials Are Reviewable</strong>
-          Challengeable on three grounds: the criterion wasn't properly established; discriminatory grounds under §1.6; or a procedural violation affecting the outcome. For national-security denials, a court may examine the classified assessment in camera and vacate the denial if it's insufficient. · §6.2
-        </div>
-
-        <div class="imm-callout">
-          <strong>Aggregate Limits</strong>
-          The Legislature may set aggregate limits on total applications processed in a period, provided they're applied without §1.6 discrimination. Asylum proceedings are exempt from any such cap. · §6.1
-        </div>
-
-        <div class="imm-arrow-down">↓</div>
-
-        <div class="imm-step step-credentials">
-          <span class="imm-step-num">Outcome</span>
-          <div class="imm-step-title">Federal Residency Credentials</div>
-          <div class="imm-step-desc">Once both stages clear, the Legat Consul must ministerially issue residency credentials — interference with issuance is constitutionally prohibited. Credentials are federal, valid throughout the Republic, and carry the freedom of movement protected for every person under §1.5.</div>
-          <span class="imm-step-ref">§6.1 · §1.5 Civil and Political Liberties</span>
-        </div>
-
-      </div>
-
-      <!-- RIGHT: ASYLUM TRACK -->
-      <div class="imm-track track-asylum">
-        <div class="imm-track-label">Asylum Track · §1.21 Non-Refoulement</div>
-
-        <span class="imm-exempt">State Sponsorship Not Required</span>
-
-        <div class="imm-step step-file">
-          <span class="imm-step-num">Step 1</span>
-          <div class="imm-step-title">File §1.21 Asylum Claim</div>
-          <div class="imm-step-desc">Any person may claim asylum under the non-refoulement protection, regardless of point or manner of entry. No state sponsorship is required, and no State's refusal to sponsor can extinguish this right.</div>
-          <span class="imm-step-ref">§1.21 — Non-Refoulement · §6.3</span>
-        </div>
-
-        <div class="imm-arrow-down">↓</div>
-
-        <div class="imm-step step-inhabit">
-          <span class="imm-step-num">Immediate Effect</span>
-          <div class="imm-step-title">Inhabitant Status — from date of filing</div>
-          <div class="imm-step-desc">The person becomes an Inhabitant the moment the claim is filed — not when it is decided — with full Article I protections and social state access. Claims must be determined before any removal order takes effect. An unaccompanied minor is an Inhabitant from the moment of contact, with a federal guardian appointed within 72 hours.</div>
-          <span class="imm-step-ref">§6.3 — Asylum and Protection</span>
-        </div>
-
-        <div class="imm-arrow-down">↓</div>
-
-        <div class="imm-step step-court">
-          <span class="imm-step-num">Step 2</span>
-          <div class="imm-step-title">Asylum Court Determination</div>
-          <div class="imm-step-desc">The Asylum Court — a federal judicial institution constitutionally independent of both executives, with judges appointed under §4.2 and full tenure protection — determines the claim, providing a qualified adjudicator, interpreter access, the right to present evidence, appointed counsel where needed, and a right of appeal.</div>
-          <span class="imm-step-ref">§6.3 — Asylum Court</span>
-        </div>
-
-        <div class="imm-arrow-down">↓</div>
-
-        <div class="imm-step">
-          <span class="imm-step-num">Outcome</span>
-          <div class="imm-step-title">Asylum Court Decision</div>
-          <div class="imm-branch">
-            <div class="imm-branch-item branch-grant">
-              <strong>Grant</strong><br>
-              Federal residency credentials by operation of the grant. State sponsorship and federal certification are not required. · §6.3
-            </div>
-            <div class="imm-branch-item branch-deny">
-              <strong>Denial</strong><br>
-              Removal may proceed under the standard framework. Where removal can't actually be executed, or would itself violate §1.21, indefinite stateless detention is prohibited — judicial review applies at 90 days, then every 180 days, with a 5-year cap absent annual SC review. · §6.2, §6.3.a
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- MERGE POINT -->
-    <div class="imm-merge">
-      <h4>Federal Residency Credentials</h4>
-      <p>Both tracks lead to the same outcome: federal credentials valid throughout the Republic · §1.5 freedom of movement applies to all credential holders</p>
-    </div>
-
-    <!-- KEY NOTES BAR -->
-    <div class="imm-note-bar">
-      <h4>Key Constitutional Distinctions</h4>
-      <div class="imm-notes-grid">
-        <div class="imm-note-item">
-          <strong>Asylum is constitutionally independent</strong>
-          The asylum track's foundation is §1.21, a non-derogable Article I right under §1.19.a. No legislation can extinguish the right to claim and have determined an asylum claim. The immigration pathway cannot be used to block asylum proceedings.
-        </div>
-        <div class="imm-note-item">
-          <strong>Credentials are always federal</strong>
-          Whether granted through the two-stage immigration process or the Asylum Court, residency credentials are issued by the federal government and are valid in every State. No State may create a separate residency tier.
-        </div>
-        <div class="imm-note-item">
-          <strong>Aggregate limits apply to the sponsorship/certification track only</strong>
-          The Legislature may set aggregate limits on immigration applications processed — these apply to the two-stage immigration track. Asylum proceedings are not subject to aggregate caps. · §6.1
-        </div>
-        <div class="imm-note-item">
-          <strong>Discrimination is always reviewable</strong>
-          §1.6 non-discrimination applies throughout both tracks. State sponsorship denials are not subject to federal review on the merits, but §1.6 discrimination claims always have a federal court pathway. · §6.2
-        </div>
-      </div>
-    </div>
-    <div class="diagram-footer">
-      <div class="diagram-scenarios">
-        <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Immigration &middot; &sect;6.1</span></div>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 
 <!-- ═══════════════════════════════
@@ -1149,180 +938,123 @@
   <div class="diagram-footer">
   </div>
 
+  <div class="diagram-refs" style="max-width:760px;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
+    <a href="quicksheet-article-14.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: The Military</a>
+    <a href="annotated.html#s14-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article XIV &rarr;</a>
+  </div>
 </div>
 
 
 <!-- ═══════════════════════════════
      DIAGRAM 6: DUAL EXECUTIVE
 ═══════════════════════════════ -->
-<div class="diagram-section" 
-id="tab-dual">
-  <div class="section-intro">
-    <h2>The Dual Executive</h2>
-    <p>The Republic has two executives with distinct constitutional domains. Neither may claim the other's domain. When a single event touches both, each executive acts within their own domain concurrently.</p>
+<div class="diagram-section" id="tab-dual" style="display:none">
+  <div class="section-intro" style="max-width:760px;margin:0 auto 2rem;text-align:center;padding:0 1rem">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;color:var(--navy);margin-bottom:0.6rem">The Dual Executive</h3>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">Two executives, distinct domains. Neither may claim the other's. When one event touches both, each acts within its own domain — the shared band is where they meet.</p>
   </div>
-
-  <div class="dual-chart">
-
-    <div class="dual-columns">
-
-      <!-- PRESIDENT'S DOMAIN -->
-      <div class="dual-col col-legat-consul">
-        <div class="dual-col-header">
-          The Legat Consul
-          <span class="dual-col-sub">National Defense &amp; Diplomacy · 6-year term</span>
-        </div>
-
-        <div class="dual-item item-president">
-          <strong>Military Command</strong>
-          <span>Immediate defensive force; all other force requires legislative authorization or an existing treaty trigger. · §2.1, §2.2, §14.1, §14.4</span>
-        </div>
-        <div class="dual-item item-president">
-          <strong>Foreign Affairs &amp; Diplomacy</strong>
-          <span>Conducts international relations, receives ambassadors, manages diplomatic channels. · §2.1</span>
-        </div>
-        <div class="dual-item item-president">
-          <strong>Treaty Negotiation</strong>
-          <span>Negotiates and concludes international treaties, subject to 2/3 Senate ratification. · §3.6</span>
-        </div>
-        <div class="dual-item item-president">
-          <strong>International Agreements</strong>
-          <span>Negotiates and concludes treaties and trade agreements. Treaties subject to 2/3 Senate ratification; trade agreements subject to simple majority in both chambers. · §2.4, §3.6</span>
-        </div>
-        <div class="dual-item item-president">
-          <strong>Intelligence Oversight</strong>
-          <span>Directs foreign intelligence. Domestic operations against Republic citizens require independent judicial authorization. · §2.3</span>
-        </div>
-        <div class="dual-item item-president">
-          <strong>Consular Domain Officers</strong>
-          <span>Nominates Director of Intelligence, Director of Foreign Affairs, Director of Defense from an Elections Panel-maintained pool. Senate confirms. · §2.4</span>
-        </div>
-        <div class="dual-item item-president">
-          <strong>Consular Veto</strong>
-          <span>Domain-scoped only — military, intelligence, treaty, border security. Either Speaker may petition the SC for an expedited domain determination; the SC must rule within 7 days. · §2.3</span>
-        </div>
-        <div class="dual-item item-president">
-          <strong>Clemency</strong>
-          <span>Military law and national security offenses only. EM publishes factual report before any grant. · §2.12</span>
-        </div>
-
-        <div class="dual-cannot">
-          <strong>Cannot</strong>
-          Spend domestic funds · Direct domestic policy · Veto legislation outside their domain · Conduct domestic intelligence operations
-        </div>
+  <div class="dual-columns" style="display:grid;grid-template-columns:1fr 0.85fr 1fr;gap:1.25rem;max-width:1000px;margin:0 auto 2rem;padding:0 1rem;align-items:start">
+    <div class="dual-col" style="padding:1.4rem;background:rgba(201,168,76,0.06);border-radius:2px">
+      <div class="dual-col-header" style="margin-bottom:1rem">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy)">Legat Consul</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-top:0.2rem">Defense &amp; Diplomacy · 6-year term</div>
       </div>
-
-      <!-- SHARED / CONCURRENT ZONE -->
-      <div class="dual-col col-shared">
-        <div class="dual-col-header">
-          Concurrent
-          <span class="dual-col-sub">Both act within their own domain</span>
-        </div>
-
-        <div class="item-shared">
-          <strong>Trade Agreement Approval</strong>
-          <span>Legat Consul negotiates; Civic Consul consulted on domestic implications; both chambers approve by simple majority under §3.6. · §2.4, §3.6</span>
-        </div>
-        <div class="item-shared">
-          <strong>Border Security Legislation</strong>
-          <span>Domestic implementation is Civic Consul domain; Consular Veto applies where genuine border security nexus exists. · §2.3</span>
-        </div>
-        <div class="item-shared">
-          <strong>Emergency Situations</strong>
-          <span>During active military operations, the Legat Consul's domain governs operational decisions. For cross-domain emergencies generally, either executive may propose a temporary operational lead through the Council of Ministers — see Conflict Resolution below. · §2.1, §2.14</span>
-        </div>
-        <div class="item-shared">
-          <strong>NRS Publication</strong>
-          <span>Both executives publish all orders, vetoes, and decisions to the National Record System. · §10.1</span>
-        </div>
-        <div class="item-shared">
-          <strong>Article I Rights</strong>
-          <span>Neither executive may abridge Article I rights. Both are bound by the Individual Sovereignty Floor. · Article I</span>
-        </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Military Command</strong> <a href="annotated.html#s2-2" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.2</a> <a href="annotated.html#s14-1" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§14.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">immediate defense; more needs authorization</span>
       </div>
-
-      <!-- CIVIC CONSUL'S DOMAIN -->
-      <div class="dual-col col-pm">
-        <div class="dual-col-header" style="color:#1a4a1a;border-color:var(--green)">
-          The Civic Consul
-          <span class="dual-col-sub">Domestic Affairs · Serves at Assembly confidence</span>
-        </div>
-
-        <div class="dual-item item-pm">
-          <strong>Domestic Policy</strong>
-          <span>All domestic affairs — healthcare, education, infrastructure, housing, labor, environment. The broadest executive mandate. · §2.5</span>
-        </div>
-        <div class="dual-item item-pm">
-          <strong>Fiscal Policy &amp; Budget</strong>
-          <span>Prepares and submits the national budget proposal to the Assembly under §12.2. Kept informed of military expenditure through the Council of Ministers — no certification role over it. · §2.5, §14.2</span>
-        </div>
-        <div class="dual-item item-pm">
-          <strong>Social State Systems</strong>
-          <span>Administers social assistance and coordinates social state delivery under §12.1. Domestic Affairs Council coordinates delivery. · §12.1</span>
-        </div>
-        <div class="dual-item item-pm">
-          <strong>Legislation</strong>
-          <span>Reviews all legislation following final passage. May withhold assent within 10 business days — bill is tabled one month (Senate 2/3 override, or re-passage required) — and may issue a fiscal notice entitling the Assembly Speaker to recall a bill. Neither applies to the budget, constitutionally-required bills, or emergency legislation. No action within 10 days enacts the bill by operation of law. · §2.7</span>
-        </div>
-        <div class="dual-item item-pm">
-          <strong>Judicial Nominations</strong>
-          <span>Nominates inferior court judges from the Judicial Pool. Senate confirms by 2/3. Civic Consul failure to nominate can trigger a Senate nomination pathway. · §4.2</span>
-        </div>
-        <div class="dual-item item-pm">
-          <strong>Independent Agency Appointments</strong>
-          <span>Nominates statutory independent officers from Elections Panel-maintained pools. Senate confirms. · §3.9</span>
-        </div>
-        <div class="dual-item item-pm">
-          <strong>Civic Consul Clemency</strong>
-          <span>Domestic offenses. EM publishes factual report before any grant. · §2.12</span>
-        </div>
-        <div class="dual-item item-pm">
-          <strong>Trade Agreement Consultation</strong>
-          <span>Consulted on domestic implications during negotiation; response published to NRS. · §2.4</span>
-        </div>
-
-        <div class="dual-cannot">
-          <strong>Cannot</strong>
-          Direct military operations · Conduct foreign affairs · Veto legislation outside their domain · Certify or condition military expenditure
-        </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Foreign Affairs</strong> <a href="annotated.html#s2-1" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">diplomacy, ambassadors, channels</span>
       </div>
-
-    </div>
-
-    <!-- CONFLICT RESOLUTION -->
-    <div class="dual-conflict">
-      <h4>§2.14 — Cross-Domain Coordination and Conflict Resolution</h4>
-      <div class="conflict-steps">
-        <div class="conflict-step">
-          <strong>During Active Military Operations</strong>
-          The Legat Consul's domain governs operational decisions directly. Either executive may petition the SC for an expedited domain determination if the boundary is disputed. · §2.1
-        </div>
-        <div class="conflict-step">
-          <strong>General Domain Disputes</strong>
-          The Council of Ministers under §2.14 is the first forum. Pending resolution, each executive continues only functions clearly within their own established domain; the specific disputed action is suspended pending SC determination. · §2.1, §2.14
-        </div>
-        <div class="conflict-step">
-          <strong>Cross-Domain Emergency Lead</strong>
-          Either executive may propose a temporary operational lead to the Council of Ministers; the other must respond in writing within 12 hours — non-response counts as objection. Concurrence makes the designation effective, published to the NRS immediately; it assigns coordination, not constitutional supremacy. · §2.14.a
-        </div>
-        <div class="conflict-step">
-          <strong>SC Resolution</strong>
-          Where executives cannot agree, either may petition the SC for expedited resolution under §4.5. Judicial review of any lead designation happens after the emergency stabilizes, not during it, but must be initiated within 90 days of the designation taking effect. · §2.14.a, §4.5
-        </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Treaties</strong> <a href="annotated.html#s3-6" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§3.6</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">negotiates; Senate ratifies 2/3</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Intelligence</strong> <a href="annotated.html#s2-3" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.3</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">foreign; domestic needs a warrant</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Domain Officers</strong> <a href="annotated.html#s2-4" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.4</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">nominates from pool; Senate confirms</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Consular Veto</strong> <a href="annotated.html#s2-3" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.3</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">domain-scoped; SC rules in 7 days</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Clemency</strong> <a href="annotated.html#s2-12" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.12</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">military / security offenses only</span>
       </div>
     </div>
-
-    <div class="dual-note">
-      <strong>The key asymmetry:</strong> The Legat Consul's domain is bounded and defined — defense, diplomacy, intelligence, trade agreements. The Civic Consul's domain is residual — everything else. A question about which executive has authority almost always resolves to the Civic Consul unless the Legat Consul can point to a specific defense, intelligence, or foreign affairs nexus.
-    </div>
-    <div class="diagram-footer">
-      <div class="diagram-scenarios">
-        <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Dual Executive &middot; &sect;2.1</span></div>
-        <div><span class="diagram-sc-tag">Treaty Power &middot; &sect;2.1.h</span></div>
+    <div class="dual-col" style="padding:1.4rem;background:rgba(27,42,74,0.05);border-radius:2px">
+      <div class="dual-col-header" style="margin-bottom:1rem">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy)">Shared Ground</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-top:0.2rem">where the domains meet</div>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Concurrent Action</strong> <a href="annotated.html#s2-14" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.14</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">each acts within its own domain</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Trade Agreements</strong> <a href="annotated.html#s3-6" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§3.6</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">LC negotiates, CC consulted, chambers approve</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Border Security</strong> <a href="annotated.html#s2-3" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.3</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">CC implements; Consular Veto where nexus exists</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">NRS Publication</strong> <a href="annotated.html#s10-1" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§10.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">both publish every order and decision</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Rights Floor</strong> <a href="annotated.html#s1-1" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">Art. I</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">neither may abridge Article I</span>
       </div>
     </div>
-
+    <div class="dual-col" style="padding:1.4rem;background:rgba(201,168,76,0.06);border-radius:2px">
+      <div class="dual-col-header" style="margin-bottom:1rem">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy)">Civic Consul</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-top:0.2rem">Domestic Affairs · Assembly confidence</div>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Domestic Policy</strong> <a href="annotated.html#s2-5" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.5</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">the broad mandate — all domestic affairs</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Budget</strong> <a href="annotated.html#s12-2" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§12.2</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">prepares, submits to Assembly</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Social State</strong> <a href="annotated.html#s12-1" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§12.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">administers assistance and delivery</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Legislation</strong> <a href="annotated.html#s2-7" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.7</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">10-day assent; may withhold, Senate can override</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Judicial Nominations</strong> <a href="annotated.html#s4-2" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§4.2</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">inferior judges; Senate confirms 2/3</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Agency Appointments</strong> <a href="annotated.html#s3-9" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§3.9</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">statutory officers from pools</span>
+      </div>
+      <div class="dual-item" style="margin-bottom:0.85rem;line-height:1.4">
+        <strong style="font-size:0.83rem">Clemency</strong> <a href="annotated.html#s2-12" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§2.12</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">domestic offenses</span>
+      </div>
+    </div>
+  </div>
+  <div class="diagram-refs" style="max-width:760px;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
+    <a href="quicksheet-article-2.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: The Executive</a>
+    <a href="annotated.html#s2-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article II &rarr;</a>
+    <a href="scenario-the-formation.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Scenario: The Formation &rarr;</a>
   </div>
 </div>
 
@@ -1330,588 +1062,77 @@ id="tab-dual">
 <!-- ═══════════════════════════════
      DIAGRAM 7: AMENDMENT PATHS
 ═══════════════════════════════ -->
-<div class="diagram-section" id="tab-amendment">
-  <div class="section-intro">
-    <h2>Amending the Constitution</h2>
-    <p>Three paths to constitutional amendment — parliamentary via State ratification, parliamentary via popular ratification, and citizen-led. No executive may veto an amendment. All amendments require genuine democratic consensus.</p>
-  </div>
 
-  <div class="amend-chart">
-
-    <!-- NO EXECUTIVE VETO BANNER -->
-    <div class="amend-noveto">
-      <div>
-        <strong>§17.2 — No Executive Veto</strong>
-        Neither the Legat Consul nor the Civic Consul holds any veto authority over constitutional amendments. An amendment takes immediate effect the moment the LM or Elections Panel certifies ratification and publishes it to the NRS.
-      </div>
-    </div>
-
-    <!-- TWO PATHS -->
-    <div class="amend-paths">
-
-      <div class="amend-path">
-        <div class="amend-path-head">Path A</div>
-        <div class="amend-path-label">Parliamentary and State Ratification</div>
-        <div class="amend-path-body">
-          <div class="amend-step">
-            <div class="amend-step-num">1</div>
-            <div><strong>2/3 supermajority</strong> of the full seated membership of both chambers in a single concurrent vote</div>
-          </div>
-          <div class="amend-step">
-            <div class="amend-step-num">2</div>
-            <div>Ratification by <strong>2/3 of States</strong> within the period defined by statute</div>
-          </div>
-          <div class="amend-tags">
-            <span class="diagram-sc-tag">§17.1 Path A</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="amend-path">
-        <div class="amend-path-head">Path B</div>
-        <div class="amend-path-label">Parliamentary and Popular Ratification</div>
-        <div class="amend-path-body">
-          <div class="amend-step">
-            <div class="amend-step-num">1</div>
-            <div><strong>2/3 supermajority</strong> of the full seated membership of both chambers</div>
-          </div>
-          <div class="amend-step">
-            <div class="amend-step-num">2</div>
-            <div>National popular referendum: <strong>2/3 affirmative</strong> support with at least <strong>55% citizen participation</strong>, within 180 days</div>
-          </div>
-          <div class="amend-tags">
-            <span class="diagram-sc-tag">§17.1 Path B</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="amend-path">
-        <div class="amend-path-head">Path C</div>
-        <div class="amend-path-label">Citizen Initiative Amendment</div>
-        <div class="amend-path-body">
-          <div class="amend-step">
-            <div class="amend-step-num">1</div>
-            <div>Same two-phase petition process as the §13.2 legislative initiative, but Phase Two requires <strong>15%</strong> of eligible voters nationally (not 10%) — no legislative or executive action needed to reach the ballot</div>
-          </div>
-          <div class="amend-step">
-            <div class="amend-step-num">2</div>
-            <div>National referendum: <strong>70% of votes cast</strong>, with at least <strong>65% citizen participation</strong> — falling short of the participation floor bars resubmission on similar grounds for 5 years</div>
-          </div>
-          <div class="amend-tags">
-            <span class="diagram-sc-tag">§17.1 Path C</span>
-            <span class="diagram-sc-tag">JM advisory review under §17.3</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- SPECIAL PROTECTIONS -->
-    <div class="amend-nonderogable" style="background:var(--cream2);border-left:3px solid var(--gold);padding:1rem 1.25rem;margin-top:1rem;font-size:0.85rem;line-height:1.6">
-      <strong>Institutional-Integrity Provisions Require Popular Ratification</strong> — Regardless of an amendment's origin, changes to the Monitor selection and independence mechanisms (§9.2–§9.4), the Monitor information-only mandate (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture (§10.1), or Elections Panel/NRS Panel independence (§11.1) cannot rely on State Ratification alone — they must clear a popular vote. A Citizen Initiative Amendment satisfies this through its own referendum without separately clearing the Path B threshold.
-    </div>
-
-    <!-- NON-DEROGABLE NOTE -->
-    <div class="amend-nonderogable" style="margin-top:1.5rem;padding:1rem 1.25rem;background:var(--cream2);border-left:3px solid var(--gold);font-size:0.9rem">
-      <strong>Non-Derogable Rights</strong> — Six rights (§1.19.a) cannot be suspended during emergencies. Under §17.3, no amendment may extinguish a non-derogable right — any amendment purporting to do so is void to the extent of the extinguishment.
-    </div>
-
-    <!-- LM CERTIFICATION -->
-    <div class="amend-certify" style="margin-top:1rem;padding:1rem 1.25rem;background:var(--navy);color:rgba(245,240,232,0.9);font-size:0.88rem">
-      <strong style="color:var(--gold)">LM Certification (Path A) · Elections Panel Certification (Paths B &amp; C)</strong><br>
-      The appropriate Monitor certifies ratification and publishes to the NRS. The amendment takes effect immediately on publication. Every member's vote is published to the NRS.
-    </div>
-
-  </div>
-
-  <div class="diagram-footer">
-  </div>
-
-</div>
 
 
 <!-- ═══════════════════════════════
      DIAGRAM 8: MONITORS
 ═══════════════════════════════ -->
-<div class="diagram-section" 
-id="tab-monitors">
-  <div class="section-intro">
-    <h2>The Three Monitors</h2>
-    <p>One for each branch. Each is selected by the branches it does not watch. None has enforcement power. Their sole constitutional output is published fact.</p>
+
+
+
+
+
+<div class="diagram-section" id="tab-sc-appointment" style="display:none">
+  <div class="section-intro" style="max-width:760px;margin:0 auto 2rem;text-align:center;padding:0 1rem">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;color:var(--navy);margin-bottom:0.6rem">Court Structure &amp; Original Jurisdiction</h3>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">Three tiers of courts — and a short list of matters that start <em>at</em> the Supreme Court, skipping the tiers entirely.</p>
   </div>
-
-  <div class="monitor-chart">
-
-    <!-- KEY PRINCIPLE -->
-    <div class="monitor-principle">
-      <strong>The Governing Rule</strong>
-      No branch controls its own oversight. The Legislature does not select the Legislative Monitor General. The Executive does not select the Executive Monitor General. No political actor controls the Judicial Monitor General — they are chosen by random lottery.
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:920px;margin:0 auto 2rem;padding:0 1rem;align-items:start">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem;text-align:center">The Three Tiers</div>
+      <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1rem 1.25rem;margin-bottom:0.6rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy)">District Courts</strong>
+          <a href="annotated.html#s4-1" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§4.1</a>
+        </div>
+        <div style="color:var(--muted);font-size:0.78rem;margin-top:0.25rem">trial level; where most cases begin</div>
+      </div>
+      <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1rem 1.25rem;margin-bottom:0.6rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy)">Appellate Courts</strong>
+          <a href="annotated.html#s4-1" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§4.1</a>
+        </div>
+        <div style="color:var(--muted);font-size:0.78rem;margin-top:0.25rem">review district decisions</div>
+      </div>
+      <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1rem 1.25rem;margin-bottom:0.6rem">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy)">Supreme Court</strong>
+          <a href="annotated.html#s4-3" style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold2);text-decoration:none">§4.3</a>
+        </div>
+        <div style="color:var(--muted);font-size:0.78rem;margin-top:0.25rem">nine justices, three classes, 12-year terms; final word on constitutional questions</div>
+      </div>
+      <div style="text-align:center;color:var(--muted);font-size:0.72rem;margin-top:0.5rem">Cases climb: district &rarr; appellate &rarr; Supreme</div>
     </div>
-
-    <!-- CROSS-NOMINATION LOGIC -->
-    <div class="insp-cross">
-      <strong>How selection works:</strong>
-      <div class="cross-row">
-        <span class="cross-from sc">Supreme Court</span>
-        <span class="cross-arrow">nominates →</span>
-        <span class="cross-from li">LM Monitor General</span>
-        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · 24 months pre-term nomination · Assembly excluded · §9.3</span>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem;text-align:center">Original Jurisdiction &mdash; starts at the SC</div>
+      <div style="padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.8rem;line-height:1.4">
+        <span style="color:var(--ink)">Disputes between States, or State v. federal, and challenges to federal statutes</span>
+        <a href="annotated.html#s4-5" style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);text-decoration:none;margin-left:0.4rem">§4.5(5)</a>
       </div>
-      <div class="cross-row">
-        <span class="cross-from house">Both Chamber Speakers</span>
-        <span class="cross-arrow">jointly nominate →</span>
-        <span class="cross-from ei">EM Monitor General</span>
-        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">national popular vote · simple majority · JM disclosure findings published pre-vote · if Speakers can't agree within 60 days, Senate selects from pool by 2/3 · §9.3</span>
+      <div style="padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.8rem;line-height:1.4">
+        <span style="color:var(--ink)">Domain disputes between the two Consuls</span>
+        <a href="annotated.html#s2-1" style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);text-decoration:none;margin-left:0.4rem">§2.1</a>
       </div>
-      <div class="cross-row">
-        <span class="cross-from lottery">Random Lottery</span>
-        <span class="cross-arrow">selects →</span>
-        <span class="cross-from ji">JM Monitor General</span>
-        <span style="color:rgba(245,240,232,0.5);font-size:0.72rem">Elections Panel-maintained pool · JMC public lottery · outgoing Monitor General excluded · §9.4</span>
+      <div style="padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.8rem;line-height:1.4">
+        <span style="color:var(--ink)">Challenges touching constitutionally independent institutions</span>
+        <a href="annotated.html#s4-5" style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);text-decoration:none;margin-left:0.4rem">§4.5(5)</a>
       </div>
-    </div>
-
-    <!-- THREE MONITOR COLUMNS -->
-    <div class="monitor-columns">
-
-      <!-- LM -->
-      <div class="insp-col col-li">
-        <div class="insp-col-header">
-          <span class="insp-col-abbr">LI</span>
-          <span class="insp-col-name">Legislative Monitor</span>
-          <span class="insp-col-domain">Watches the Legislature</span>
-        </div>
-        <div class="insp-selection">
-          <span class="insp-selection-label">Nominated by</span>
-          <span class="insp-selection-who">The Supreme Court</span>
-          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority. Nomination must begin 24 months before term end to ensure seamless succession under §3.13. Assembly is entirely excluded from nomination. · §9.3</span>
-        </div>
-        <div class="insp-body">
-          <div class="insp-function">
-            <strong>Fiscal Accuracy</strong>
-            <span>Audits the Assembly and Senate for fiscal accuracy in legislative records and budgetary claims.</span>
-          </div>
-          <div class="insp-function">
-            <strong>Constitutional Compliance</strong>
-            <span>Reviews enacted legislation for constitutional compliance. Finds are published — courts enforce.</span>
-          </div>
-          <div class="insp-function">
-            <strong>NRS Integrity</strong>
-            <span>Audits the National Record System's parliamentary records for accuracy and completeness.</span>
-          </div>
-          <div class="insp-function">
-            <strong>Population Census</strong>
-            <span>Conducts the national census. Assigned to the LM precisely because the census determines Assembly seat allocation — giving that function to a body the Assembly nominates would create a conflict of interest.</span>
-          </div>
-          <div class="insp-function">
-            <strong>Assembly District Maps</strong>
-            <span>Reviews State-drawn federal Assembly district maps for compliance with redistricting criteria. · §3.4</span>
-          </div>
-          <div class="insp-function">
-            <strong>Germaneness Analysis</strong>
-            <span>Publishes germaneness analysis for any bill returned to the Assembly with Senate amendments. Civic Consul must give it due consideration. · §3.4</span>
-          </div>
-          <div class="insp-special">
-            <strong>State Remediation Plans</strong>
-            Reviews State Remediation Plans under §15.3 and Consular Election Region maps — drawn by the State redistricting process, reviewed by LM for compliance. · §7.1
-          </div>
-        </div>
+      <div style="padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.8rem;line-height:1.4">
+        <span style="color:var(--ink)">Emergency rights claims brought directly</span>
+        <a href="annotated.html#s16-2" style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);text-decoration:none;margin-left:0.4rem">§16.2</a>
       </div>
-
-      <!-- EM -->
-      <div class="insp-col col-ei">
-        <div class="insp-col-header">
-          <span class="insp-col-abbr">EI</span>
-          <span class="insp-col-name">Executive Monitor</span>
-          <span class="insp-col-domain">Watches both Executives + MA</span>
-        </div>
-        <div class="insp-selection">
-          <span class="insp-selection-label">Nominated by</span>
-          <span class="insp-selection-who">Both Chamber Speakers, Jointly</span>
-          <span class="insp-selection-confirm">Confirmed by national popular vote, simple majority — the same process for all three Monitor types. JM publishes disclosure findings on the nominee before the vote. If the Assembly Speaker and Senate Speaker can't jointly agree within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote instead. · §9.3</span>
-        </div>
-        <div class="insp-body">
-          <div class="insp-function">
-            <strong>Executive Constitutional Compliance</strong>
-            <span>Audits both the Legat Consul and Civic Consul for domain boundary compliance, NRS mandate adherence, ethics provisions, and classification rules.</span>
-          </div>
-          <div class="insp-function">
-            <strong>Military Compliance</strong>
-            <span>Annual assessment: was military force used for an authorized purpose under §14.1? Were legislative authorization and allocation requirements under §14.2 observed? Was the §2.3 intelligence warrant requirement maintained? Were all military orders published to the NRS within the required period? · §9.1.b</span>
-          </div>
-          <div class="insp-function">
-            <strong>Monetary Authority Audit</strong>
-            <span>Audits the MA for constitutional compliance including mandate adherence and NRS publication requirements. · §12.1</span>
-          </div>
-          <div class="insp-function">
-            <strong>Clemency Reports</strong>
-            <span>Publishes a factual background report on every clemency petition before either executive acts — petitioner's record, conviction, prior EM findings. Published to NRS simultaneously. · §2.12</span>
-          </div>
-          <div class="insp-function">
-            <strong>Candidate Disclosure Review</strong>
-            <span>Reviews candidate disclosure records for factual accuracy for MA board members, independent agency nominees, and other constitutional appointments. Publishes findings to NRS before confirmation votes.</span>
-          </div>
-          <div class="insp-special">
-            <strong>Annual State of the Republic Report</strong>
-            Publishes the executive compliance section of the joint annual report — including the dedicated military constitutional compliance assessment. · §9.5
-          </div>
-        </div>
+      <div style="padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.8rem;line-height:1.4">
+        <span style="color:var(--ink)">Whether a ratified amendment conflicts with entrenched provisions</span>
+        <a href="annotated.html#s17-3" style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);text-decoration:none;margin-left:0.4rem">§17.3</a>
       </div>
-
-      <!-- JM -->
-      <div class="insp-col col-ji">
-        <div class="insp-col-header">
-          <span class="insp-col-abbr">JM</span>
-          <span class="insp-col-name">Judicial Monitor</span>
-          <span class="insp-col-domain">Watches the Courts</span>
-        </div>
-        <div class="insp-selection">
-          <span class="insp-selection-label">Selected by</span>
-          <span class="insp-selection-who">Random Public Lottery</span>
-          <span class="insp-selection-confirm">Selected by JMC public lottery from Elections Panel-maintained pool. Outgoing JM Monitor General does not participate in the draw. Result published to NRS immediately. · §9.4</span>
-        </div>
-        <div class="insp-body">
-          <div class="insp-function">
-            <strong>Judicial Scope and Independence Audit</strong>
-            <span>Audits the court system for compliance with judicial scope — are courts deciding constitutional questions only, staying within their jurisdiction, and maintaining independence from political pressure?</span>
-          </div>
-          <div class="insp-function">
-            <strong>Judicial Pool Audit</strong>
-            <span>Audits the Elections Panel's administration of the Judicial Pool — the eligibility pool any qualified citizen may join, from which the Civic Consul nominates and the Senate confirms SC justices. The JM has no role in constituting or certifying the pool itself. · §9.4.a</span>
-          </div>
-          <div class="insp-function">
-            <strong>Judicial Nominee Vetting</strong>
-            <span>Vets inferior court judicial nominees and NRS Panel and Elections Panel pool candidates before confirmation votes.</span>
-          </div>
-          <div class="insp-function">
-            <strong>Referendum Petition Eligibility</strong>
-            <span>Screens citizen referendum petitions for eligibility — specifically, whether the targeted law solely or primarily expands an Article I right (ineligible for referendum). · §13.1</span>
-          </div>
-          <div class="insp-function">
-            <strong>NRS/Elections Panel Audit</strong>
-            <span>Audits the Elections Panel for electoral integrity compliance annually. The JMC audits NRS Panel operations and NRS integrity compliance. · §9.1.c / §9.7</span>
-          </div>
-          <div class="insp-special">
-            <strong>Compact Compliance Reviews</strong>
-            Annual compliance reviews for §20 Associated Community compacts and Article XVI indigenous compact obligations — Article I rights protections and compact terms. · §9.4
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- UNIVERSAL RULES -->
-    <div class="insp-rules">
-      <div class="insp-rules-header">§9.5 — The Information-Only Mandate: What All Three Can and Cannot Do</div>
-      <div class="insp-rules-grid">
-        <div class="insp-rule rule-can">
-          <strong>✓ Publish facts to the NRS</strong>
-          <span>Every finding, report, and discrepancy notice is published permanently and freely accessible to all Inhabitants. No official may suppress, delay, classify, or alter a Report before publication.</span>
-        </div>
-        <div class="insp-rule rule-cannot">
-          <strong>✗ Issue binding orders</strong>
-          <span>Monitor findings are not legal determinations. They state observed facts. Courts, the Legislature, and the People decide what to do with them.</span>
-        </div>
-        <div class="insp-rule rule-can">
-          <strong>✓ Publish Annual State of the Republic Reports</strong>
-          <span>Every year, automatically, on a constitutionally fixed date — regardless of whether any official requests it. Content includes compliance rates, investigation summaries, constitutional strains, and a risk register.</span>
-        </div>
-        <div class="insp-rule rule-cannot">
-          <strong>✗ Arrest, prosecute, or enforce</strong>
-          <span>No arrest authority. No prosecutorial function. No enforcement power of any kind. Their sole constitutional output is published factual information.</span>
-        </div>
-        <div class="insp-rule rule-can">
-          <strong>✓ Receive minority reports from staff</strong>
-          <span>Any staff member may publish a Minority Report directly to the NRS if they believe a finding has been improperly omitted or suppressed. Staff cannot be disciplined for doing so — the protection is absolute.</span>
-        </div>
-        <div class="insp-rule rule-cannot">
-          <strong>✗ Classify their reports</strong>
-          <span>Monitor Reports are permanently exempt from classification. If an investigation involves classified material, the Report describes the issue's nature without reproducing classified content, and flags it for the relevant executive.</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- TERM AND FUNDING STRIP -->
-    <div class="insp-term">
-      <div class="insp-term-item">
-        <strong>Term Length</strong>
-        10 years · Single non-renewable term
-      </div>
-      <div class="insp-term-item">
-        <strong>Staggering</strong>
-        No two Monitor General terms may begin within 18 months of each other
-      </div>
-      <div class="insp-term-item">
-        <strong>Funding</strong>
-        Cannot be cut below prior year without 2/3 vote of both chambers · §9.6
-      </div>
-      <div class="insp-term-item">
-        <strong>Removal</strong>
-        For-cause only: 1/3 of either chamber, or two of three Monitors jointly, files grounds with the SC; SC confirms the statutory category within 14 days; removal then requires a 2/3 concurrent vote of both chambers. No no-cause removal exists. · §9.9
-      </div>
-    </div>
-    <div class="diagram-footer">
-      <div class="diagram-scenarios">
-        <span class="diagram-footer-label">See this in action</span>
-        <div><a href="scenario-sdp-removal.html" class="diagram-sc-link">The Record &rarr;</a><span class="diagram-sc-tag">NRS Compliance &middot; &sect;9.1</span></div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="diagram-section" id="tab-social">
-  <div class="section-intro">
-    <h2>The Social State</h2>
-    <p>The Republic's constitutional commitment that every Inhabitant is entitled to conditions of life consistent with human dignity — implemented through three mandatory systems and backstopped by the National Endowment.</p>
-  </div>
-
-  <div class="diagram-detail-box" style="max-width:800px;margin:0 auto 2rem">
-
-    <!-- THREE SYSTEMS -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem">
-      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
-        <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 1</div>
-        <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Healthcare Insurance</div>
-        <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Every Inhabitant enrolled from birth. No premium. No exclusions based on pre-existing conditions. Portable across all States.</div>
-        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§12.1</div>
-      </div>
-      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
-        <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 2</div>
-        <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Social Assistance</div>
-        <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Income floor ensuring every Inhabitant can meet basic material needs. The Legislature defines the framework by statute; the MA's fiscal integrity certification covers the system's funding adequacy.</div>
-        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§12.1</div>
-      </div>
-      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1.2rem;text-align:center">
-        <div style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">System 3</div>
-        <div style="font-size:1rem;font-weight:600;margin-bottom:0.5rem">Compulsory Education</div>
-        <div style="font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.5">Free through secondary level. State-funded, constitutionally guaranteed. No child may be excluded on financial grounds.</div>
-        <div style="font-size:0.65rem;color:var(--gold);margin-top:0.75rem">§12.1</div>
-      </div>
-    </div>
-
-    <!-- FUNDING ARCHITECTURE -->
-    <div style="border:1px solid var(--border);border-radius:6px;padding:1.2rem;margin-bottom:1.5rem">
-      <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:1rem">Funding Architecture</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-        <div>
-          <div style="font-size:0.85rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem">Normal Operation</div>
-          <div style="font-size:0.8rem;color:#555;line-height:1.5">All three systems funded through the ordinary annual budget. The Legislature appropriates; the MA certifies that the appropriation meets the constitutional dignity standard. If any system falls short, the MA publishes a compliance gap and the Legislature must address it.</div>
-        </div>
-        <div>
-          <div style="font-size:0.85rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem">Severe Revenue Contraction</div>
-          <div style="font-size:0.8rem;color:#555;line-height:1.5">When the MA certifies a Severe Revenue Contraction, the National Endowment activates automatically — disbursing from its constitutionally maintained reserve to backstop all three systems. Emergency reduction of social state access is constitutionally prohibited. <span style="color:var(--gold);font-size:0.7rem">§12.1</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MA ROLE -->
-    <div style="background:var(--cream2);border-radius:6px;padding:1rem;margin-bottom:1.5rem">
-      <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:0.5rem">Monetary Authority Certification Role</div>
-      <div style="font-size:0.8rem;color:#555;line-height:1.5">The MA independently certifies: (1) that healthcare insurance is financially solvent; (2) that social assistance meets the constitutionally required adequacy standard; (3) whether a Severe Revenue Contraction exists that triggers Endowment activation. The MA cannot be directed by either executive in its certification function — these findings are constitutional facts, not political judgments.</div>
-    </div>
-
-    <div class="diagram-footer">
-      <div class="diagram-scenarios">
-        <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">National Endowment &middot; §12.5</span></div>
-        <div><span class="diagram-sc-tag">Social State &middot; §12.1</span></div>
-      </div>
+      <div style="text-align:center;color:var(--muted);font-size:0.72rem;margin-top:0.75rem">Plus a 4-justice emergency panel for defensive-force challenges &mdash; rules within 48 hours <a href="annotated.html#s4-5" style="color:var(--gold2);text-decoration:none">§4.5(6)</a></div>
     </div>
   </div>
-</div>
-
-
-<div class="diagram-section" id="tab-sc-appointment">
-  <div class="section-intro">
-    <h2>Supreme Court — Appointment Process</h2>
-    <p>Justices are nominated by the Civic Consul from the Judicial Pool — maintained by the Elections Panel, audited by the JM — and confirmed by the Senate by 2/3 supermajority. Nine justices serve staggered 12-year non-renewable terms.</p>
-  </div>
-  <div class="sc-chart">
-
-    <!-- THREE DESIGN PRINCIPLES -->
-    <div class="sc-principle">
-      <div class="sc-principle-item">
-        <strong>Open Pool</strong>
-        <span>No political branch controls who enters the pool. Any citizen with 15+ years legal practice or 10+ years judicial service, holding no current government position and no disqualifying financial interest, may apply directly to the Elections Panel. The pool is public, permanent, and freely accessible on the NRS.</span>
-      </div>
-      <div class="sc-principle-item">
-        <strong>JM Audits, Doesn't Gatekeep</strong>
-        <span>The JM's ongoing audit of the Elections Panel's pool administration is published to the NRS, and the Senate may consider any published findings on a nominee before confirmation. The JM holds no role in constituting or certifying the pool, and no veto over nomination or confirmation.</span>
-      </div>
-      <div class="sc-principle-item">
-        <strong>Civic Consul Nomination + 2/3 Senate Confirmation</strong>
-        <span>The Civic Consul nominates from the Elections Panel-maintained pool. The Senate confirms by 2/3 supermajority of full seated membership. The 2/3 threshold requires broad Senate consensus — the Civic Consul cannot pack the Court without extraordinary legislative support.</span>
-      </div>
-    </div>
-
-    <!-- APPOINTMENT PIPELINE -->
-    <div class="sc-pipeline">
-      <div class="sc-pipeline-header">The Appointment Process — Open Seat or Class Confirmation</div>
-      <div class="sc-steps">
-
-        <div class="sc-step">
-          <div class="sc-step-num">1</div>
-          <div class="sc-step-title">Judicial Pool</div>
-          <div class="sc-step-body">Any citizen with 15+ years legal practice (or 10+ years judicial service) who holds no current government position and has no disqualifying financial interest may apply directly to the Elections Panel, which applies the criteria and enters qualifying applicants. The pool is public on the NRS.</div>
-          <span class="sc-step-ref">§9.4.a · Maintained by Elections Panel</span>
-          <div class="sc-step-arrow">›</div>
-        </div>
-
-        <div class="sc-step">
-          <div class="sc-step-num">2</div>
-          <div class="sc-step-title">EM Disclosure Review</div>
-          <div class="sc-step-body">Pool members' financial disclosures fall within the EM's ongoing audit of constitutional appointments. Findings publish to the NRS as part of that audit, not as a one-time gate before nomination.</div>
-          <span class="sc-step-ref">§9.4.a · EM disclosure audit</span>
-          <div class="sc-step-arrow">›</div>
-        </div>
-
-        <div class="sc-step">
-          <div class="sc-step-num">3</div>
-          <div class="sc-step-title">Civic Consul Nominates</div>
-          <div class="sc-step-body">The Civic Consul nominates any pool member within 90 days of an anticipated vacancy, or 60 days for an unanticipated one. The nominee must be a pool member — the Civic Consul may not nominate outside it.</div>
-          <span class="sc-step-ref">§4.4 · 90/60-day window</span>
-          <div class="sc-step-arrow">›</div>
-        </div>
-
-        <div class="sc-step">
-          <div class="sc-step-num">4</div>
-          <div class="sc-step-title">JM Findings Available</div>
-          <div class="sc-step-body">The JM's ongoing audit of the Judicial Pool is published to the NRS; the Senate may consider any published JM findings on the nominee before voting. There is no separate certifying body and no advisory board — the JM's audit is informational, not a precondition to confirmation.</div>
-          <span class="sc-step-ref">§4.4 · NRS-published, informational only</span>
-          <div class="sc-step-arrow">›</div>
-        </div>
-
-        <div class="sc-step">
-          <div class="sc-step-num">5</div>
-          <div class="sc-step-title">Senate Confirmation (2/3)</div>
-          <div class="sc-step-body">The Senate must vote within 120 days of nomination. Confirmation requires 2/3 of full seated membership — broad consensus, no deemed confirmation. Failure to vote within the period is itself a constitutional compliance breach. If declined, the Civic Consul nominates again.</div>
-          <span class="sc-step-ref">§4.4 · 2/3 of full Senate, 120-day window</span>
-          <div class="sc-step-arrow">›</div>
-        </div>
-
-        <div class="sc-step">
-          <div class="sc-step-num">6</div>
-          <div class="sc-step-title">Official Oath</div>
-          <div class="sc-step-body">The confirmed justice takes the Official Oath. The complete appointment record — pool entry, nomination, JM findings, Senate vote — is permanently published to the NRS. The justice serves a single non-renewable 12-year term from this date.</div>
-          <span class="sc-step-ref">§4.4 · NRS publication</span>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- STAGGER TIMELINE -->
-    <div class="sc-stagger">
-      <div class="sc-stagger-header">
-        The Three-Class Stagger
-        <span>Three seats confirmed every 4 years · Six justices always carry continuing tenure</span>
-      </div>
-      <div class="sc-timeline">
-        <div class="sc-timeline-inner">
-
-          <!-- HEADER ROW: YEAR MARKERS -->
-          <div class="sc-timeline-header">
-            <div class="sc-thlabel">Year</div>
-            <div class="sc-thcells">
-              <div class="sc-thcell">0</div>
-              <div class="sc-thcell">4</div>
-              <div class="sc-thcell">8</div>
-              <div class="sc-thcell">12</div>
-              <div class="sc-thcell">16</div>
-              <div class="sc-thcell">20</div>
-              <div class="sc-thcell">24</div>
-            </div>
-          </div>
-
-          <!-- CLASS A: 4-year initial, then 12-year -->
-          <div class="sc-year-row">
-            <div class="sc-year-label">Class A<br><span style="font-size:0.6rem;opacity:0.6">3 seats</span></div>
-            <div class="sc-year-cells">
-              <div class="sc-cell election-a" style="flex:1">Phase 3<br>All 9 fill</div>
-              <div class="sc-cell election-a" style="flex:1">Confirm.<br>Year 4</div>
-              <div class="sc-cell serving-a" style="flex:3" title="Serving: Year 4–16">Serving 12-year term</div>
-              <div class="sc-cell election-a" style="flex:1">Confirm.<br>Year 16</div>
-              <div class="sc-cell serving-a" style="flex:2">Serving…</div>
-            </div>
-          </div>
-
-          <!-- CLASS B: 8-year initial, then 12-year -->
-          <div class="sc-year-row">
-            <div class="sc-year-label">Class B<br><span style="font-size:0.6rem;opacity:0.6">3 seats</span></div>
-            <div class="sc-year-cells">
-              <div class="sc-cell election-b" style="flex:1">Phase 3<br>All 9 fill</div>
-              <div class="sc-cell serving-b" style="flex:2">Serving 8-year initial term</div>
-              <div class="sc-cell election-b" style="flex:1">Confirm.<br>Year 8</div>
-              <div class="sc-cell serving-b" style="flex:3">Serving 12-year term</div>
-              <div class="sc-cell election-b" style="flex:1">Conf.<br>Y.20</div>
-            </div>
-          </div>
-
-          <!-- CLASS C: 12-year initial, then 12-year -->
-          <div class="sc-year-row">
-            <div class="sc-year-label">Class C<br><span style="font-size:0.6rem;opacity:0.6">3 seats</span></div>
-            <div class="sc-year-cells">
-              <div class="sc-cell election-c" style="flex:1">Phase 3<br>All 9 fill</div>
-              <div class="sc-cell serving-c" style="flex:3">Serving 12-year initial term</div>
-              <div class="sc-cell election-c" style="flex:1">Confirm.<br>Year 12</div>
-              <div class="sc-cell serving-c" style="flex:3">Serving 12-year term</div>
-            </div>
-          </div>
-
-          <!-- SEATS IN ELECTION ROW -->
-          <div class="sc-year-row" style="background:var(--cream2)">
-            <div class="sc-year-label" style="font-size:0.65rem;color:var(--muted)">Seats<br>confirmed</div>
-            <div class="sc-year-cells">
-              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">9</div>
-              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
-              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
-              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
-              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
-              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
-              <div class="sc-cell" style="flex:1;font-size:0.7rem;color:var(--navy);font-weight:700">3</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="sc-legend">
-        <div class="sc-legend-item"><div class="sc-legend-dot" style="background:#1a5c2a"></div>Class A confirmation</div>
-        <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--blue)"></div>Class B confirmation</div>
-        <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--purple)"></div>Class C confirmation</div>
-        <div class="sc-legend-item"><div class="sc-legend-dot" style="background:var(--cream2);border:1px solid var(--border)"></div>Serving (mid-term)</div>
-        <span style="color:var(--muted);font-size:0.75rem;margin-left:auto">Class assignment by JMC public lot draw at Phase 3 · published to NRS before any justice takes oath · §4.4</span>
-      </div>
-    </div>
-
-    <!-- VACANCY AND SPECIAL PROVISIONS -->
-    <div class="sc-vacancy">
-      <div class="sc-vacancy-header">Mid-Term Vacancies and Special Provisions</div>
-      <div class="sc-vacancy-grid">
-        <div class="sc-vacancy-item">
-          <strong>Mid-Term Vacancy — Special Nomination and Confirmation</strong>
-          <span>Death, resignation, removal, or expulsion triggers the §4.4 appointment process: Civic Consul nominates within 60 days (vs. 90 days for an anticipated vacancy); Senate must vote within 120 days of nomination, the same window as any other vacancy. The replacement serves only the remainder of the original 12-year term. · §4.4</span>
-        </div>
-        <div class="sc-vacancy-item">
-          <strong>Temporary Associate Justice</strong>
-          <span>During the vacancy, the most senior Appellate Court judge (by continuous service) is automatically designated as Temporary Associate Justice within 5 days — no nomination or confirmation required. They hold a full vote in all cases. They cannot stand as a candidate for the seat they are temporarily filling. · §4.4</span>
-        </div>
-        <div class="sc-vacancy-item">
-          <strong>Emergency Panel — Immediate Defensive Authority Scope</strong>
-          <span>Four justices drawn by rotation hold sole jurisdiction over constitutional challenges to immediate defensive military authority under §2.2 during active operations, and must rule within a period defined by statute, not to exceed 48 hours. Where the Court has fewer than four seated justices, the full Court sits as the panel; quorum for emergency review is three. · §4.5</span>
-        </div>
-        <div class="sc-vacancy-item">
-          <strong>Non-Renewable Terms</strong>
-          <span>Every term — initial or subsequent — is non-renewable. A justice confirmed to an initial short class term (4 or 8 years) is eligible to be nominated again; if confirmed, they serve a full new 12-year term through the same appointment process. A justice who has served a full 12-year term may not be nominated again. · §4.3 / §4.4</span>
-        </div>
-      </div>
-    </div>
-    <div class="diagram-footer">
-      <div class="diagram-scenarios">
-        <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Judicial Removal &middot; &sect;4.3.b</span></div>
-      </div>
-    </div>
-
+  <div class="diagram-refs" style="max-width:760px;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
+    <a href="quicksheet-article-4.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: The Judiciary</a>
+    <a href="annotated.html#s4-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article IV &rarr;</a>
   </div>
 </div>
 
@@ -1919,280 +1140,120 @@ id="tab-monitors">
 
 <div class="diagram-section" id="tab-pool">
   <div class="section-intro">
-    <h2>The Constitutional Pool Framework</h2>
-    <p>Eight constitutional pools operate through the same framework under §9.8. The table shows each pool across five dimensions: who fills it, what qualifications are required, who vets applicants, how someone is chosen from the pool, and what confirmation is needed. The Elections Panel maintains all pools administratively; the Elections Panel applies qualification criteria and administers pool entry; Monitors audit EP administration.</p>
-  </div>
-
-  <div class="diagram-detail-box" style="max-width:900px;margin:0 auto 2rem">
-
-    <!-- FOUR STAGES -->
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;margin-bottom:2rem">
-      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1rem;text-align:center">
-        <div style="font-size:1.5rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">1</div>
-        <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Entry</div>
-        <div style="font-size:0.72rem;color:rgba(255,255,255,0.8);line-height:1.5">Who may join the pool? Self-nominated, State-designated, or executive-nominated. <span style="color:rgba(255,200,100,0.9)">Never requires Senate confirmation.</span></div>
-      </div>
-      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1rem;text-align:center">
-        <div style="font-size:1.5rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">2</div>
-        <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Certification</div>
-        <div style="font-size:0.72rem;color:rgba(255,255,255,0.8);line-height:1.5">JM reviews and publishes a qualification report within 30 days. EM reviews financial disclosure for offices with significant financial authority.</div>
-      </div>
-      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1rem;text-align:center">
-        <div style="font-size:1.5rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">3</div>
-        <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Selection</div>
-        <div style="font-size:0.72rem;color:rgba(255,255,255,0.8);line-height:1.5">JMC public lottery (independence-critical roles) or deliberate nomination from pool (accountability-critical roles). All draws publicly certified and NRS-published.</div>
-      </div>
-      <div style="background:var(--navy);color:var(--white);border-radius:6px;padding:1rem;text-align:center">
-        <div style="font-size:1.5rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem">4</div>
-        <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Confirmation</div>
-        <div style="font-size:0.72rem;color:rgba(255,255,255,0.8);line-height:1.5">Where required, Senate confirms the selected individual only — never pool entry. Some pools require no confirmation at all.</div>
-      </div>
-    </div>
-
-    <!-- SIX POOLS TABLE -->
-    <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:0.75rem">The Eight Constitutional Pools</div>
-    <div style="overflow-x:auto">
-    <table style="width:100%;border-collapse:collapse;font-size:0.78rem">
-      <thead>
-        <tr style="background:var(--navy);color:var(--white)">
-          <th style="padding:0.6rem 0.8rem;text-align:left;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Pool</th>
-          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Entry<br><span style="font-size:0.65rem;font-weight:400;opacity:0.7">who fills the pool</span></th>
-          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Qualifications<br><span style="font-size:0.65rem;font-weight:400;opacity:0.7">what is required</span></th>
-          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Vetting<br><span style="font-size:0.65rem;font-weight:400;opacity:0.7">who checks it</span></th>
-          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Selection<br><span style="font-size:0.65rem;font-weight:400;opacity:0.7">how chosen from pool</span></th>
-          <th style="padding:0.6rem 0.8rem;text-align:center;font-weight:500;border:1px solid rgba(255,255,255,0.1)">Confirmation<br><span style="font-size:0.65rem;font-weight:400;opacity:0.7">Senate threshold</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Judicial Pool</strong><br><span class="pool-prov">§9.4.a · §4.4</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">15+ yrs legal practice<br>or 10 yrs judicial service;<br>no current govt position;<br>no disqualifying financial interest</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Civic Consul nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate 2/3<br><span style="font-size:0.68rem;color:var(--muted)">120 days</span></td>
-        </tr>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>JM Monitor General</strong><br><span class="pool-prov">§9.4 · §9.3</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Former judge<br>(trial court or above);<br>1yr cooling-off;<br>5yr for former SC justices</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">JMC lottery<br><span style="font-size:0.68rem;color:var(--muted)">outgoing Monitor General excluded</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">National vote<br><span style="font-size:0.68rem;color:var(--muted)">simple majority · next electoral period</span></td>
-        </tr>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>LM Monitor General</strong><br><span class="pool-prov">§9.3</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Legislature defines<br>by statute</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Appropriate Monitor<br>certifies eligibility</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">SC nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">National vote<br><span style="font-size:0.68rem;color:var(--muted)">simple majority · next electoral period</span></td>
-        </tr>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>EM Monitor General</strong><br><span class="pool-prov">§9.3</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Legislature defines<br>by statute</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Appropriate Monitor<br>certifies eligibility</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Both Speakers jointly nominate<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">National vote<br><span style="font-size:0.68rem;color:var(--muted)">simple majority · next electoral period</span></td>
-        </tr>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Inferior Court Judges</strong><br><span class="pool-prov">§4.2</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Legislature defines<br>by statute</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Civic Consul nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate 2/3</td>
-        </tr>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>Consular Domain Officers</strong><br><span class="pool-prov">§2.4</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Legislature defines<br>by statute</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Legat Consul nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate confirms<br><span style="font-size:0.68rem;color:var(--muted)">Legislature defines</span></td>
-        </tr>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>MA Board Members</strong><br><span class="pool-prov">§12.1</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">Legislature defines<br>by statute</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Civic Consul nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate confirms<br><span style="font-size:0.68rem;color:var(--muted)">Legislature defines</span></td>
-        </tr>
-        <tr>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)"><strong>NRS/Elections Panels</strong><br><span class="pool-prov">§11.1, §3.9</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Self-nominated</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border)">NRS Panel: 12 yrs cryptography,<br>distributed systems, or public records;<br>Elections Panel: 12 yrs elections<br>administration or electoral technology;<br>civic proficiency assessment passed; no partisan affiliation</td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">EP applies criteria<br><span style="font-size:0.68rem;color:var(--muted)">Monitors audit EP administration</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Civic Consul nominates<br><span style="font-size:0.68rem;color:var(--muted)">deliberate</span></td>
-          <td style="padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:center">Senate 2/3<br><span style="font-size:0.68rem;color:var(--muted)">90 days</span></td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-
-    <div style="margin-top:1.2rem;padding:0.8rem;background:var(--cream2);border-radius:6px;font-size:0.78rem;color:#555">
-      <strong style="color:var(--navy)">Constitutional principle:</strong> Pool entry never requires Senate confirmation — that would create double confirmation and undermine the pool model's independence rationale. Confirmation applies only to the selected individual. If an office needs Senate confirmation at entry, it should be elected, not pooled.
-    </div>
-
-    <div class="diagram-footer" style="margin-top:1.5rem">
-      <div class="diagram-scenarios">
-        <span class="diagram-footer-label">See this in action</span>
-        <div><span class="diagram-sc-tag">Registry Integrity &middot; §9.8</span></div>
-        <div><span class="diagram-sc-tag">Pool Process &middot; §9.8</span></div>
+        <div style="max-width:820px;margin:2rem auto 0;padding:0 1rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem;text-align:center">The Eight Pools &mdash; all run on the framework above</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.7rem">
+      <a href="annotated.html#s9-4" style="display:block;padding:0.6rem 0.8rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:2px;text-decoration:none">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--navy)">Judicial Pool</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);display:block;margin-top:0.15rem">§9.4.a</span>
+      </a>
+      <a href="annotated.html#s9-3" style="display:block;padding:0.6rem 0.8rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:2px;text-decoration:none">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--navy)">Monitor Pool</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);display:block;margin-top:0.15rem">§9.3</span>
+      </a>
+      <a href="annotated.html#s11-1" style="display:block;padding:0.6rem 0.8rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:2px;text-decoration:none">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--navy)">Elections Pool</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);display:block;margin-top:0.15rem">§11.1</span>
+      </a>
+      <a href="annotated.html#s2-4" style="display:block;padding:0.6rem 0.8rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:2px;text-decoration:none">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--navy)">Foreign Affairs</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);display:block;margin-top:0.15rem">§2.4</span>
+      </a>
+      <a href="annotated.html#s2-4" style="display:block;padding:0.6rem 0.8rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:2px;text-decoration:none">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--navy)">Defense</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);display:block;margin-top:0.15rem">§2.4</span>
+      </a>
+      <a href="annotated.html#s2-4" style="display:block;padding:0.6rem 0.8rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:2px;text-decoration:none">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--navy)">Intelligence</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);display:block;margin-top:0.15rem">§2.4</span>
+      </a>
+      <a href="annotated.html#s3-9" style="display:block;padding:0.6rem 0.8rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:2px;text-decoration:none">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--navy)">Independent Agency</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);display:block;margin-top:0.15rem">§3.9</span>
+      </a>
+      <a href="annotated.html#s12-1" style="display:block;padding:0.6rem 0.8rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:2px;text-decoration:none">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--navy)">Social/Ministerial</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold2);display:block;margin-top:0.15rem">§12.1</span>
+      </a>
       </div>
     </div>
+  <div class="diagram-refs" style="max-width:760px;margin:2rem auto 0;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
+    <a href="quicksheet-article-9.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: The Pools</a>
+    <a href="annotated.html#s9-8" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: §9.8 &rarr;</a>
   </div>
 </div>
 
 <!-- STATES & FEDERATION -->
-<div id="tab-states-fed" class="diagram-section">
-  <div class="section-intro">
-    <h2>States &amp; Federation</h2>
-    <p>The Republic's constitution gives States significant autonomy — but within explicit, enforceable limits. This diagram maps what States control, what the federal government controls, and the contested boundary where they interact.</p>
+</div>
+<div class="diagram-section" id="tab-states-fed" style="display:none">
+  <div class="section-intro" style="max-width:760px;margin:0 auto 2rem;text-align:center;padding:0 1rem">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;color:var(--navy);margin-bottom:0.6rem">States &amp; Federation</h3>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">What States control, what the federal government controls, and the contested boundary between them. Follow any reference to the exact provision.</p>
   </div>
-
-  <div class="sf-layout" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto 2.5rem;padding:0 1rem">
-
-    <!-- STATE AUTHORITY -->
+  <div class="sf-layout" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto 2rem;padding:0 1rem">
     <div class="sf-col" style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.25rem">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem">State Authority</div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>State Sponsorship</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">States sponsor applicants at their own discretion — but not on §1.6 discriminatory grounds. §6.1</span>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem">State Authority</div>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>State Sponsorship</strong> <a href="annotated.html#s6-1" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§6.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">states choose who they back</span>
       </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Assembly District Maps</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">States draw their own maps subject to five constitutional criteria; LM reviews for compliance. §3.3</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>District Maps</strong> <a href="annotated.html#s3-3" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§3.3</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">states draw, LM reviews</span>
       </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Senator Recall</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">States may establish recall mechanisms by their own law; the Republic treats a recalled seat as vacant. §3.5</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Senator Recall</strong> <a href="annotated.html#s3-5" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§3.5</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">states may, by their own law</span>
       </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>State Court Systems</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">States may maintain their own court structures; constitutional questions always escalate to federal courts. §4.1</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>State Courts</strong> <a href="annotated.html#s4-1" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§4.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">own systems; constitutional questions escalate</span>
       </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Electoral Frameworks</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">States may offer early voting, mail-in ballots, and alternative methods — as long as all connect to the NVS. §7.2</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Electoral Methods</strong> <a href="annotated.html#s7-2" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§7.2</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">early / mail-in, all tied to the NVS</span>
       </div>
-      <div class="sf-item" style="font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Voluntary Devolution</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">A State may restructure its relationship with the Republic through referendum and Senate ratification. §15.4</span>
-      </div>
-    </div>
-
-    <!-- CONTESTED BOUNDARY -->
-    <div class="sf-col" style="background:rgba(27,42,74,0.04);border:1px solid rgba(27,42,74,0.15);border-radius:2px;padding:1.25rem">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.9rem;opacity:0.7">The Boundary</div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Redistricting</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">State draws; LM reviews; Elections Panel draws an interim map where the State's map fails. §3.3</span>
-      </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Immigration Sponsorship</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">State controls State sponsorship stage; federal government controls certification and credential issuance. §6.1–6.2</span>
-      </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Statehood Audit</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">LM audits fiscal integrity; JM audits Article I compliance. Pass both → automatic Statehood. §15.2</span>
-      </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Federal Property</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">Federal government holds functional use rights over a registered footprint; State retains sovereignty beyond it. §18.1</span>
-      </div>
-      <div class="sf-item" style="font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Amendment Ratification</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">Path A amendments require 2/3 of States to ratify; States hold direct constitutional power over amendment. §17.1</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Voluntary Devolution</strong> <a href="annotated.html#s15-4" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§15.4</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">restructure by referendum + Senate</span>
       </div>
     </div>
-
-    <!-- FEDERAL AUTHORITY -->
-    <div class="sf-col" style="background:rgba(27,42,74,0.06);border:1px solid rgba(27,42,74,0.2);border-radius:2px;padding:1.25rem">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.9rem">Federal Authority</div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Removal from the Republic</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">Only the federal government may remove individuals. State law cannot authorize removal. §6.2</span>
+    <div class="sf-col" style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.25rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem">The Boundary</div>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Redistricting</strong> <a href="annotated.html#s3-3" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§3.3</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">state draws; LM reviews; Panel backstops</span>
       </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Residency Credentials</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">Federal credentials are valid throughout the Republic; no State may create a secondary residency tier. §6.1</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Immigration</strong> <a href="annotated.html#s6-1" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§6.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">state sponsors; federal certifies</span>
       </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>NVS Administration</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">No State may reduce NVS access, functionality, or availability within its territory. §7.2, §11.2</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Statehood Audit</strong> <a href="annotated.html#s4-1" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§4.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">LM fiscal, JM rights</span>
       </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Article I Rights</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">Article I rights apply in full within all State territory. State law cannot abridge them. Article I</span>
+    </div>
+    <div class="sf-col" style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1.25rem">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem">Federal Authority</div>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Credentials</strong> <a href="annotated.html#s6-2" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§6.2</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">federal issues, not states</span>
       </div>
-      <div class="sf-item" style="margin-bottom:0.75rem;font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Territorial Integrity</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">A State may not secede by ordinary statute or State referendum alone. §15.7</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Rights Floor</strong> <a href="annotated.html#s1-6" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§1.6</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">no state may drop below §1</span>
       </div>
-      <div class="sf-item" style="font-size:0.82rem;line-height:1.5;color:var(--ink)">
-        <strong>Local Government Protection</strong><br>
-        <span style="color:var(--muted);font-size:0.77rem">States may not systematically defund local governments to achieve de facto centralization. §15.8</span>
+      <div class="sf-item" style="margin-bottom:0.9rem;font-size:0.82rem;line-height:1.4">
+        <strong>Court of Last Resort</strong> <a href="annotated.html#s4-1" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§4.1</a><br>
+        <span style="color:var(--muted);font-size:0.76rem">constitutional questions end federal</span>
       </div>
     </div>
   </div>
-
-  <!-- What States Cannot Do -->
-  <div style="max-width:860px;margin:0 auto 2.5rem;padding:0 1rem">
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:1rem;color:var(--navy)">What States Cannot Do</h3>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem 2rem">
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Set immigration policy or conduct removal proceedings <span style="color:var(--muted)">§6.1–6.2</span></div>
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Apply State sponsorship criteria that violate §1.6 <span style="color:var(--muted)">§6.1</span></div>
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Reduce NVS access or impose additional voting burdens <span style="color:var(--muted)">§7.2</span></div>
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Draw district maps using partisan registration or racial composition as a primary criterion <span style="color:var(--muted)">§3.3</span></div>
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Divide directly into two States — the portion must become a Territory first <span style="color:var(--muted)">§15.7</span></div>
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Systematically defund local governments to centralize functions at State level <span style="color:var(--muted)">§15.8</span></div>
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Abridge Article I rights within their territory for any reason <span style="color:var(--muted)">Article I</span></div>
-      <div style="font-size:0.82rem;color:var(--ink);padding:0.5rem 0;border-top:1px solid var(--rule)">Block asylum proceedings by refusing State sponsorship <span style="color:var(--muted)">§6.3</span></div>
-    </div>
-  </div>
-
-  <!-- State Lifecycle -->
-  <div style="max-width:860px;margin:0 auto 2.5rem;padding:0 1rem">
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:1.25rem;color:var(--navy)">The State Lifecycle</h3>
-    <div style="display:flex;align-items:flex-start;gap:0;overflow-x:auto;padding-bottom:0.5rem">
-      <div class="lc-step" style="flex:1;min-width:130px;padding:1rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px 0 0 2px;position:relative">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Entry</div>
-        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.3rem">Territory</div>
-        <div style="font-size:0.75rem;color:var(--muted);line-height:1.4">Article I rights apply. Social state access. Assembly seats. No Senate seats. §15.1</div>
-      </div>
-      <div style="width:1.5rem;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold);flex-shrink:0;margin-top:1.5rem">›</div>
-      <div class="lc-step" style="flex:1;min-width:130px;padding:1rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-left:none;position:relative">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Audit</div>
-        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.3rem">Statehood Audit</div>
-        <div style="font-size:0.75rem;color:var(--muted);line-height:1.4">LM: fiscal integrity. JM: Article I compliance. Both must pass. No political vote required once passed. §15.2</div>
-      </div>
-      <div style="width:1.5rem;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold);flex-shrink:0;margin-top:1.5rem">›</div>
-      <div class="lc-step" style="flex:1;min-width:130px;padding:1rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-left:none;position:relative">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Probation</div>
-        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.3rem">Provisional Period</div>
-        <div style="font-size:0.75rem;color:var(--muted);line-height:1.4">1–3 years as Legislature defines. Full rights. Annual audit. Clean completion → automatic Statehood. §15.2</div>
-      </div>
-      <div style="width:1.5rem;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold);flex-shrink:0;margin-top:1.5rem">›</div>
-      <div class="lc-step" style="flex:1;min-width:130px;padding:1rem;background:rgba(27,42,74,0.08);border:1px solid rgba(27,42,74,0.2);border-left:none;border-radius:0 2px 2px 0">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:0.4rem;opacity:0.7">Full Member</div>
-        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.3rem">State</div>
-        <div style="font-size:0.75rem;color:var(--muted);line-height:1.4">Two Senate seats. Proportional Assembly seats. Amendment ratification power. Annual ongoing audit. §15.2</div>
-      </div>
-    </div>
-    <div style="font-size:0.78rem;color:var(--muted);margin-top:1rem;font-style:italic">Devolution paths: Voluntary (§15.4 — referendum + Senate ratification) · Mandatory (§15.3 — three consecutive audit failures). Both return the jurisdiction to Territory status; re-qualification begins immediately.</div>
-  </div>
-
-  <div class="scenario-links" style="max-width:860px;margin:0 auto;padding:0 1rem 1rem;border-top:1px solid var(--rule);padding-top:1.5rem">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">See this in action</div>
-    <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
-      <a href="scenario-the-map.html" style="font-size:0.82rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,0.3)">The Map &rarr; Redistricting &middot; §3.3</a>
-      <a href="scenario-sponsoring-state.html" style="font-size:0.82rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,0.3)">The Sponsoring State &rarr; State Sponsorship &middot; §6.1</a>
-      <a href="scenario-the-audit.html" style="font-size:0.82rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,0.3)">The Audit &rarr; Statehood &middot; §15.2</a>
-      <a href="scenario-the-petition.html" style="font-size:0.82rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,0.3)">The Petition &rarr; Devolution &middot; §15.4</a>
-    </div>
+  <div class="diagram-refs" style="max-width:760px;margin:0 auto;padding:1.5rem 1rem 0;border-top:1px solid var(--border);text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
+    <a href="quicksheet-states.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: States &amp; Devolution</a>
+    <a href="annotated.html#s15-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article XV &rarr;</a>
   </div>
 </div>
 
@@ -2215,12 +1276,22 @@ id="tab-monitors">
 </footer>
 <script>
 // Tab switching
-function showTab(id) {
+function showTab(id, el) {
   document.querySelectorAll('.diagram-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.dcard').forEach(b => b.classList.remove('dcard-active'));
   document.getElementById('tab-' + id).classList.add('active');
-  event.target.classList.add('active');
-  closePanel();
+  var card = el || document.querySelector('.dcard[data-tab="' + id + '"]');
+  if (card) { card.classList.add('dcard-active'); card.scrollIntoView({inline:'center', block:'nearest', behavior:'smooth'}); }
+  if (typeof closePanel === 'function') closePanel();
+}
+// Looping carousel scroll
+function dcarScroll(dir) {
+  var track = document.getElementById('dcarTrack');
+  var cards = track.querySelectorAll('.dcard');
+  var active = track.querySelector('.dcard-active');
+  var idx = Array.prototype.indexOf.call(cards, active);
+  idx = (idx + dir + cards.length) % cards.length;
+  cards[idx].click();
 }
 
 // Devolution sub-tabs
