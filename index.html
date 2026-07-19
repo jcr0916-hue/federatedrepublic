@@ -213,18 +213,27 @@
 
   <!-- WHAT'S NEW -->
   <section class="whats-new">
-    <div class="whats-new-inner">
-      <span class="whats-new-label">What's New</span>
-      <ul class="whats-new-list">
-        <li><span class="wn-tag">New</span> <a href="torenthia-atlas.html">The Atlas</a> — The world of Torenthia, mapped in full: twelve states, four territories, and the world the Republic lives in.</li>
-        <li><span class="wn-tag">New</span> <a href="scenarios.html">Seven scenarios added</a> — The Successor, The Classification, The Ledger, The Contraction, The Waiver, The Unremovable, The Second Renewal. Elections, records, fiscal, and military accountability join the library.</li>
-        <li><span class="wn-tag">World</span> <a href="torenthia.html">The World</a> — The Federated Republic of Torenthia: a living world running on this constitution. Year 13, a consular election forming.</li>
-        <li><span class="wn-tag">Constitution</span> <a href="annotated.html">Trimming review complete</a> — 182 provisions reduced to 158 across five phases. Every provision earning its place.</li>
-        <li><span class="wn-tag">Constitution</span> <a href="annotated.html#s12-4">Ethics consolidated</a> — Financial disclosure now has one home in §12.4, routed by branch to its respective Monitor; Monitor Generals’ own disclosure is a named special case at §12.4.b.</li>
-        <li><span class="wn-tag">Constitution</span> <a href="annotated.html#s12-4a">§12.4.a added</a> — Legislature may establish conduct rules and recusal standards for any constitutionally established office.</li>
-      </ul>
-    </div>
-  </section>
+      <div class="whats-new-inner">
+        <span class="whats-new-label">What's New</span>
+        <div class="wcar" style="margin-top:1.25rem">
+          <button class="wcar-btn wcar-prev" aria-label="Scroll left" onclick="hcarScroll(-1)">&larr;</button>
+          <div class="wcar-track" id="hcarTrack">
+          {%- for u in updates %}
+            <a class="wcar-card" href="{{ u.href }}">
+              <div class="wcar-img" style="background-image:url('{{ u.image }}')"></div>
+              <div class="wcar-body">
+                <span class="wcar-badge">{{ u.badge }}</span>
+                <div class="wcar-title">{{ u.title }}</div>
+                <div class="wcar-meta">{{ u.blurb }}</div>
+              </div>
+            </a>
+          {%- endfor %}
+          </div>
+          <button class="wcar-btn wcar-next" aria-label="Scroll right" onclick="hcarScroll(1)">&rarr;</button>
+        </div>
+      </div>
+      <script>function hcarScroll(d){var t=document.getElementById('hcarTrack');t.scrollBy({left:d*300,behavior:'smooth'});}</script>
+    </section>
 
   <!-- EXPLORE -->
   <section class="paths">
