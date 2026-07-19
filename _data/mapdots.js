@@ -10,8 +10,9 @@ const PLACES = {
   'verentum':   { label:'Verentum',    type:'political',  aliases:['Verentum'] },
   'selvane':    { label:'Selvane',     type:'political',  aliases:['Selvane','Thoss'] },
   'corindal':   { label:'Corindal',    type:'legal',      aliases:['Corindal'] },
+  'argent-ridge':{ label:'Argent Ridge', type:'legal',    aliases:['Argent Ridge','Riverglow'] },
   'korda-south':{ label:'Korda',       type:'legal',      aliases:['Korda','Varenne','Varda Crossing'] },
-  'lake-varda': { label:'Lake Varda',  type:'diplomatic', aliases:['Lake Varda','Varda'] },
+  'lake-varda': { label:'Lake Varda',  type:'diplomatic', aliases:['Lake Varda','Sunderland'] },
   'valedon':    { label:'Valedon',     type:'diplomatic', aliases:['Valedon'] },
   'toren-river':{ label:'Toren River', type:'diplomatic', aliases:['Toren River'] },
 };
@@ -22,13 +23,14 @@ function field(t, name){ const m = t.match(new RegExp(name+':\\s*"([^"]*)"')); r
 const pieces = readdirSync(".")
   .filter(f => /^torenthia-(news|nrs|dispatch|sc).*\.html$/.test(f))
   .map(f => { const t = readFileSync(f,"utf8"); if(!t.startsWith('---')) return null;
-    return { url:f, title:field(t,'worldTitle'), blurb:field(t,'worldBlurb'), date:field(t,'worldDate') }; })
+    return { url:f, title:field(t,'worldTitle'), blurb:field(t,'worldBlurb'), date:field(t,'worldDate'),
+             places:field(t,'worldPlaces').split(',').map(s=>s.trim()).filter(Boolean) }; })
   .filter(Boolean);
 
 const out = {};
 for (const [key, p] of Object.entries(PLACES)) {
   const hits = pieces
-    .filter(pc => p.aliases.some(a => (pc.title+' '+pc.blurb).toLowerCase().includes(a.toLowerCase())))
+    .filter(pc => pc.places.includes(key) || p.aliases.some(a => (pc.title+' '+pc.blurb).toLowerCase().includes(a.toLowerCase())))
     .sort((a,b) => b.date.localeCompare(a.date))
     .slice(0,3)
     .map(pc => ({ url:pc.url, title:pc.title, date:pc.date }));
