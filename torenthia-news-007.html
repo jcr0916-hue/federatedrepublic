@@ -5,3 +5,135 @@ worldTitle: "Three Dead in Lake Varda After Sunderland Patrol Vessel Opens Fire 
 worldOutlet: "RNN"
 worldBlurb: "Seven survivors have been pulled from Lake Varda following a pre-dawn incident in which a Sunderland patrol vessel fired on civilian craft attempting to cross. Three are confirmed dead. The Sunderland government has not commented."
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Dead in Lake Varda After Sunderland Patrol Vessel Opens Fire on Civilian Craft — RNN</title>
+  <meta name="description" content="Seven survivors have been pulled from Lake Varda following a pre-dawn incident in which a Sunderland patrol vessel fired on civilian craft attempting to cross. Three are confirmed dead. The Sunderland government has not commented.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .rnn-masthead{background:#070c14;border-bottom:3px solid #c02020;padding:0}
+    .rnn-top-bar{background:#c02020;padding:.35rem 2rem;display:flex;align-items:center;gap:1.5rem}
+    .rnn-live{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;color:white;font-weight:500;background:rgba(255,255,255,.2);padding:.15rem .45rem}
+    .rnn-top-meta{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;color:rgba(255,255,255,.8);text-transform:uppercase}
+    .rnn-main{max-width:900px;margin:0 auto;padding:.9rem 2rem 1rem;display:flex;align-items:center;gap:2rem}
+    .rnn-logo-block{display:flex;flex-direction:column}
+    .rnn-name{font-family:'Jost',sans-serif;font-size:clamp(2.2rem,5vw,3rem);font-weight:600;color:white;letter-spacing:.04em;line-height:1}
+    .rnn-fullname{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.2rem}
+    .rnn-divider{width:1px;height:48px;background:rgba(255,255,255,.15);flex-shrink:0}
+    .rnn-tagline{font-family:'Jost',sans-serif;font-size:.8rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.5}
+    .article-wrap{max-width:700px;margin:0 auto;padding:3rem 2rem 5rem}
+    .rnn-section{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:#c02020;margin-bottom:.85rem;padding-bottom:.6rem;border-bottom:2px solid #c02020}
+    .article-headline{font-family:'Jost',sans-serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:.75rem}
+    .article-deck{font-family:'Jost',sans-serif;font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+    .article-byline{display:flex;flex-wrap:wrap;gap:.75rem;align-items:baseline;padding:.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:1.75rem}
+    .byline-outlet{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;color:#c02020;letter-spacing:.08em;text-transform:uppercase}
+    .byline-sep{color:var(--border)}
+    .byline-date{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.05em;margin-left:auto}
+    .article-body p{font-family:'Jost',sans-serif;font-size:.95rem;line-height:1.85;color:#1a1a1a;margin-bottom:1.25rem;font-weight:300}
+    .article-body p strong{font-weight:500;color:var(--navy)}
+    .dateline{font-family:'Jost',sans-serif;font-size:.82rem;font-weight:600;color:var(--navy)}
+    .pull-quote{border-left:3px solid #c02020;padding:.85rem 1.25rem;margin:1.75rem 0;background:#fdfbf5}
+    .pull-quote p{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;color:var(--navy);line-height:1.6;margin-bottom:0}
+    .rnn-subhead{font-family:'Jost',sans-serif;font-size:.82rem;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;margin:2rem 0 .85rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}
+    .developing-bar{background:#c02020;color:white;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;padding:.4rem 1.25rem;margin-bottom:1.5rem;display:inline-block}
+    .article-rule{border:none;border-top:1px solid var(--border);margin:2rem 0}
+    .rnn-footer-note{background:#f8f4f0;border-top:2px solid #c02020;padding:.85rem 1.25rem;margin-top:2.5rem;font-size:.78rem;color:var(--muted);font-family:'Jost',sans-serif;line-height:1.65}
+    .article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-top:1px solid var(--border);margin-top:1.5rem}
+    .article-nav a{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:#c02020;text-decoration:none;text-transform:uppercase}
+    .article-nav a:hover{color:var(--navy)}
+    @media(max-width:820px){.rnn-main{padding:.75rem 1rem;gap:1rem}.rnn-divider{display:none}.rnn-top-bar{padding:.3rem 1rem}.article-wrap{padding:2rem 1rem 4rem}.byline-date{margin-left:0;width:100%}}
+  </style>
+</head>
+<body class="paper-rnn">
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div id="site-nav"></div>
+
+  <div class="rnn-masthead" role="banner">
+    <div class="rnn-top-bar">
+      <span class="rnn-live">BREAKING</span>
+      <span class="rnn-top-meta">Lake Varda Incident · Year 12, Month 12 · Developing</span>
+    </div>
+    <div class="rnn-main">
+      <div class="rnn-logo-block">
+        <div class="rnn-name">RNN</div>
+        <div class="rnn-fullname">Republic News Network</div>
+      </div>
+      <div class="rnn-divider"></div>
+      <div class="rnn-tagline">Breaking coverage of a developing situation.<br>This story is being updated as information becomes available.</div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <div class="article-wrap">
+
+    <div class="developing-bar">Story developing — last updated 1417 hours</div>
+
+    <div class="rnn-section">Lake Varda · Breaking · Year 12, Month 12</div>
+
+    <h1 class="article-headline">Three Dead in Lake Varda After Sunderland Patrol Vessel Opens Fire on Civilian Craft</h1>
+    <p class="article-deck">Seven survivors have been pulled from the water near the contested midline. Four are in Torenthian coast guard custody at Varenne Station, Korda Territory. Two bodies have been recovered. One person remains missing and is presumed dead. The Sunderland government has not commented.</p>
+
+    <div class="article-byline">
+      <span class="byline-outlet">RNN Digital</span>
+      <span class="byline-sep">·</span>
+      <span class="byline-date">Varenne Station, Korda Territory / Verentum — Year 12, Month 12</span>
+    </div>
+
+    <div class="article-body">
+
+      <p><span class="dateline">VARENNE STATION, KORDA TERRITORY —</span> A Sunderland naval patrol vessel opened fire on a group of three civilian craft in Lake Varda at approximately 0512 on Thursday, killing at least three people and triggering a coast guard rescue operation that is continuing as of this report. Seven survivors have been pulled from the water. Four of them are currently at Varenne Station, the Torenthian coast guard post on Korda Territory's lake shore. The remaining three survivors were recovered in contested waters and their location and status are not confirmed at time of publication.</p>
+
+      <p>Coast guard command received a distress signal at 0527 and reached the site at 0541. The Sunderland patrol vessel had already withdrawn. Officers found one capsized vessel, two craft adrift with survivors aboard, and bodies in the water. Coast guard Commander Elia Dorn confirmed the recovery in a brief statement at 0730: <strong>"We recovered seven survivors and two deceased from the water. We are still accounting for all persons who were in those vessels."</strong> A third body has not been found; coast guard personnel are treating the individual as missing presumed dead.</p>
+
+      <div class="pull-quote">
+        <p>"We recovered seven survivors and two deceased from the water. We are still accounting for all persons who were in those vessels."</p>
+      </div>
+
+      <p>The three civilian craft were attempting to cross from Sunderland-controlled waters toward the Torenthian shore. The identities and nationalities of those aboard have not been confirmed. The Sunderland patrol vessel involved is reported to be of the same class as the vessel that held position in Lake Varda for six hours in Month 10 before withdrawing. Whether it is the same vessel has not been established.</p>
+
+      <div class="rnn-subhead">The LC's Response</div>
+
+      <p>The Legat Consul's office issued a formal statement at 0900, three and a half hours after the incident. The statement was published to the NRS simultaneously with its release. In it, the LC characterized the incident as <strong>"an act of lethal force against unarmed civilians in internationally contested waters"</strong> and demanded that the Sunderland governing authority provide a full accounting within 72 hours. The statement did not use the language of prior diplomatic notes. It did not offer an expectation of diplomatic response. It stated what the Republic observed, what it demands, and what it is doing: the survivors at Varenne Station are receiving medical care; a formal incident report is being compiled; the Monitors have been notified of the NRS publication.</p>
+
+      <p>The statement did not address the legal status of the survivors. It did not use the word asylum. It did not commit the Republic to any specific course of action beyond medical care and the 72-hour demand. What it did not say is being read in Verentum as carefully as what it did.</p>
+
+      <div class="rnn-subhead">No Response from Sunderland</div>
+
+      <p>As of publication, the Sunderland governing authority has issued no statement. Diplomatic channels have not produced a response to the LC's demand. The prior diplomatic notes — NRS-Y12-1203, NRS-Y12-1844, and NRS-Y12-2847 — received formal acknowledgment from Sunderland's foreign ministry without substantive reply. This incident has produced nothing.</p>
+
+      <div class="rnn-subhead">The Political Field</div>
+
+      <p>RNN has contacted the offices of Senator Tobias Vael of Harren and Assembly member Seren Mak of Rhovane for comment. Neither office had responded at time of publication. Director of Foreign Affairs Ines Carrow has not issued a statement in her official capacity. Legat Consul Casimir Rehn's term ends at the close of Year 12. The election to determine his successor is six months away.</p>
+
+      <hr class="article-rule">
+
+      <p style="font-size:.82rem;color:var(--muted);font-style:italic;">This story is developing. RNN will update as information becomes available. The NRS record of the LC's statement is published at the link in the official record.</p>
+
+    </div>
+
+    <div class="rnn-footer-note">
+      <strong>Republic News Network</strong> provides continuous coverage of Republic affairs. This report reflects information available as of 1417 hours, Year 12, Month 12. Updates will be published as the situation develops.
+    </div>
+
+    <div class="article-nav">
+      <a href="torenthia-news-006.html">← Carrow at the Forum</a>
+      <a href="torenthia-news-008.html">Three Responses →</a>
+    </div>
+
+  </div>
+  </main>
+
+
+  {% include "footer.njk" %}
+  <script src="nav.js"></script>
+</body>
+</html>
