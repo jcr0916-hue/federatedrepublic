@@ -92,6 +92,35 @@
 .cat-chip{font-family:'Jost',sans-serif;font-size:0.78rem;padding:0.45rem 0.9rem;background:#fff;border:1px solid var(--border);border-radius:16px;cursor:pointer;color:var(--ink);transition:all .15s}
 .cat-chip:hover{border-color:var(--gold2);color:var(--gold2)}
 .cat-chip-active{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+
+/* scenario picker carousel + stage */
+.sc-picker{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 0}
+.dcar{display:flex;align-items:stretch;gap:0.5rem}
+.dcar-track{display:flex;gap:0.75rem;overflow-x:auto;scroll-behavior:smooth;padding:0.5rem 0.25rem;flex:1;scrollbar-width:none;-ms-overflow-style:none}
+.dcar-track::-webkit-scrollbar{display:none}
+.dcar-btn{flex:0 0 auto;align-self:center;background:#fff;border:1px solid var(--border);border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:1.1rem;color:var(--navy);transition:border-color .2s}
+.dcar-btn:hover{border-color:var(--gold2);color:var(--gold2)}
+.sccard{flex:0 0 210px;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:0.35rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:4px;cursor:pointer;transition:border-color .2s,box-shadow .2s;font-family:'Jost',sans-serif;text-decoration:none;color:var(--ink);position:relative}
+.sccard:hover{border-color:var(--gold2);box-shadow:0 2px 10px rgba(27,42,74,0.08)}
+.sccard-feat{border-color:rgba(201,168,76,0.55)}
+.sccard-active{border-color:var(--navy);border-width:2px}
+.sc-star{position:absolute;top:0.7rem;right:0.7rem}
+.sc-kicker{font-family:'JetBrains Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2)}
+.sccard-num{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+.sccard-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);line-height:1.1}
+.sccard-desc{font-size:0.74rem;color:var(--muted);line-height:1.4}
+.sc-legend{text-align:center;font-family:'Jost',sans-serif;font-size:0.72rem;color:var(--muted);margin-top:0.6rem}
+.sc-legend-star svg{vertical-align:-3px}
+.sc-stage{max-width:760px;margin:1.5rem auto 3rem;padding:0 1rem;min-height:40px}
+.stage-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.3rem}
+.stage-hook{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem}
+.stage-list{display:flex;flex-direction:column;gap:0.5rem}
+.stage-item{display:flex;flex-direction:column;gap:0.15rem;padding:0.9rem 1.1rem;background:#fff;border:1px solid var(--border);border-radius:3px;text-decoration:none;position:relative;transition:border-color .15s}
+.stage-item:hover{border-color:var(--gold2)}
+.stage-item-title{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:600;color:var(--navy)}
+.stage-item-desc{font-size:0.78rem;color:var(--muted);line-height:1.45;font-family:'Jost',sans-serif}
+.stage-item-arrow{position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--gold2)}
+@media(max-width:820px){.sccard{flex:0 0 180px}}
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,185 +146,158 @@
 <main>
 
   <!-- FEATURED -->
-  <section class="featured-section" aria-labelledby="featured-label">
-    <span class="featured-label" id="featured-label">Start Here &middot; Currently Relevant</span>
-    <div class="featured-grid">
-    <a href="scenario-the-formation.html" class="featured-entry">
-      <span class="fe-kicker" style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:0.3rem">In the world right now</span><span class="fe-num">§2.6.a · Government Formation</span>
-      <span class="fe-title">The Formation</span>
-      <span class="fe-desc">A general election leaves the Assembly split four ways. Twenty-one days pass with no Civic Consul. The constitution routes the choice to the people.</span>
-      <span class="fe-arrow">&rarr;</span>
+  <section class="sc-picker" aria-label="Scenario picker">
+  <div class="dcar">
+    <button class="dcar-btn" aria-label="Previous" onclick="scScroll(-1)">&larr;</button>
+    <div class="dcar-track" id="scTrack">
+    <a href="scenario-the-formation.html" class="sccard sccard-feat">
+      <svg class="sc-star" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.5l2.7 6.1 6.6.6-5 4.4 1.5 6.5L12 16.7 6.2 20.1l1.5-6.5-5-4.4 6.6-.6z" fill="var(--gold)"/></svg><span class="sc-kicker">In the world right now</span>
+      <span class="sccard-num">§2.6.a · Government Formation</span>
+      <span class="sccard-title">The Formation</span>
+      <span class="sccard-desc">A four-way Assembly split, twenty-one days without a Consul — the constitution routes the choice to the people.</span>
     </a>
-    <a href="scenario-ordinary.html" class="featured-entry">
-      <span class="fe-num">01 · Ordinary Governance</span>
-      <span class="fe-title">The Ordinary Day</span>
-      <span class="fe-desc">A bill, a budget dispute, a formation, a foreign policy action. The constitutional system working exactly as designed. Start here.</span>
-      <span class="fe-arrow">&rarr;</span>
+    <a href="scenario-ordinary.html" class="sccard sccard-feat">
+      <svg class="sc-star" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.5l2.7 6.1 6.6.6-5 4.4 1.5 6.5L12 16.7 6.2 20.1l1.5-6.5-5-4.4 6.6-.6z" fill="var(--gold)"/></svg>
+      <span class="sccard-num">01 · Ordinary Governance</span>
+      <span class="sccard-title">The Ordinary Day</span>
+      <span class="sccard-desc">The constitutional system working exactly as designed. Start here.</span>
     </a>
-    <a href="scenario-the-three-recusals.html" class="featured-entry">
-      <span class="fe-num">Ethics · Three Branches</span>
-      <span class="fe-title">The Three Recusals</span>
-      <span class="fe-desc">One disqualifying financial interest, three officers, three branches — and three different machines for handling the same conflict.</span>
-      <span class="fe-arrow">&rarr;</span>
+    <a href="scenario-the-three-recusals.html" class="sccard sccard-feat">
+      <svg class="sc-star" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.5l2.7 6.1 6.6.6-5 4.4 1.5 6.5L12 16.7 6.2 20.1l1.5-6.5-5-4.4 6.6-.6z" fill="var(--gold)"/></svg>
+      <span class="sccard-num">Ethics · Three Branches</span>
+      <span class="sccard-title">The Three Recusals</span>
+      <span class="sccard-desc">One financial interest, three officers — three different machines for the same conflict.</span>
     </a>
-    <a href="scenario-the-twenty-four-hours.html" class="featured-entry">
-      <span class="fe-num">§2.16 · Executive Incapacity</span>
-      <span class="fe-title">The Twenty-Four Hours</span>
-      <span class="fe-desc">The Council determines the Civic Consul cannot exercise authority. Twenty-four hours later he is back at his desk — and both moments were constitutional.</span>
-      <span class="fe-arrow">&rarr;</span>
+    <a href="scenario-the-twenty-four-hours.html" class="sccard sccard-feat">
+      <svg class="sc-star" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.5l2.7 6.1 6.6.6-5 4.4 1.5 6.5L12 16.7 6.2 20.1l1.5-6.5-5-4.4 6.6-.6z" fill="var(--gold)"/></svg>
+      <span class="sccard-num">§2.16 · Executive Incapacity</span>
+      <span class="sccard-title">The Twenty-Four Hours</span>
+      <span class="sccard-desc">Declared unable at dawn, back at his desk by midnight — both moments constitutional.</span>
     </a>
-    <a href="scenario-the-unremovable.html" class="featured-entry">
-      <span class="fe-num">Rights · Hard Cases</span>
-      <span class="fe-title">The Unremovable</span>
-      <span class="fe-desc">A final removal order that cannot be executed: no country will take him, and the one that would violates §1.21. The document handles its hardest case.</span>
-      <span class="fe-arrow">&rarr;</span>
+    <a href="scenario-the-unremovable.html" class="sccard sccard-feat">
+      <svg class="sc-star" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.5l2.7 6.1 6.6.6-5 4.4 1.5 6.5L12 16.7 6.2 20.1l1.5-6.5-5-4.4 6.6-.6z" fill="var(--gold)"/></svg>
+      <span class="sccard-num">Rights · Hard Cases</span>
+      <span class="sccard-title">The Unremovable</span>
+      <span class="sccard-desc">A removal order no country will accept. The document's hardest case.</span>
     </a>
+    <button class="sccard sccard-shelf" data-cat="0" onclick="openShelf(0, this)">
+      <span class="sccard-num">1 scenario</span>
+      <span class="sccard-title">Starting Point</span>
+      <span class="sccard-desc">One ordinary day — begin here</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="1" onclick="openShelf(1, this)">
+      <span class="sccard-num">5 scenarios</span>
+      <span class="sccard-title">Legislature &amp; Lawmaking</span>
+      <span class="sccard-desc">Bills, vetoes, overrides — the lawmaking machine</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="2" onclick="openShelf(2, this)">
+      <span class="sccard-num">8 scenarios</span>
+      <span class="sccard-title">Dual Executive</span>
+      <span class="sccard-desc">Two executives, one government — the seams and the shared ground</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="3" onclick="openShelf(3, this)">
+      <span class="sccard-num">3 scenarios</span>
+      <span class="sccard-title">Elections &amp; Campaigns</span>
+      <span class="sccard-desc">Ballots, thresholds, and the money around them</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="4" onclick="openShelf(4, this)">
+      <span class="sccard-num">2 scenarios</span>
+      <span class="sccard-title">Judiciary</span>
+      <span class="sccard-desc">Courts, nominations, and the limits of review</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="5" onclick="openShelf(5, this)">
+      <span class="sccard-num">5 scenarios</span>
+      <span class="sccard-title">Monitors &amp; Accountability</span>
+      <span class="sccard-desc">The watchers — findings, removals, and teeth</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="6" onclick="openShelf(6, this)">
+      <span class="sccard-num">1 scenario</span>
+      <span class="sccard-title">The Public Record</span>
+      <span class="sccard-desc">The NRS — what must be published, and what happens when it isn't</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="7" onclick="openShelf(7, this)">
+      <span class="sccard-num">1 scenario</span>
+      <span class="sccard-title">Fiscal &amp; Monetary</span>
+      <span class="sccard-desc">Budgets, floors, and the equalization queue</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="8" onclick="openShelf(8, this)">
+      <span class="sccard-num">2 scenarios</span>
+      <span class="sccard-title">Immigration &amp; Rights</span>
+      <span class="sccard-desc">Two gates, one person — sponsorship meets certification</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="9" onclick="openShelf(9, this)">
+      <span class="sccard-num">2 scenarios</span>
+      <span class="sccard-title">Indigenous &amp; Minority Rights</span>
+      <span class="sccard-desc">Sovereignty that precedes the Republic</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="10" onclick="openShelf(10, this)">
+      <span class="sccard-num">5 scenarios</span>
+      <span class="sccard-title">Rights &amp; Emergency Architecture</span>
+      <span class="sccard-desc">The floor that does not move, even in a crisis</span>
+    </button>
+    <button class="sccard sccard-shelf" data-cat="11" onclick="openShelf(11, this)">
+      <span class="sccard-num">11 scenarios</span>
+      <span class="sccard-title">States &amp; Territories</span>
+      <span class="sccard-desc">Statehood, mergers, secession — the federation's edges</span>
+    </button>
     </div>
-  </section>
+    <button class="dcar-btn" aria-label="Next" onclick="scScroll(1)">&rarr;</button>
+  </div>
+  <div class="sc-legend"><span class="sc-legend-star"><svg class="sc-star" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2.5l2.7 6.1 6.6.6-5 4.4 1.5 6.5L12 16.7 6.2 20.1l1.5-6.5-5-4.4 6.6-.6z" fill="var(--gold)"/></svg></span> featured &mdash; opens directly &nbsp;&middot;&nbsp; other cards open a shelf below</div>
+</section>
 
-  <!-- LIBRARY ACCORDION -->
-  <section class="library-section fr-page" aria-labelledby="library-label">
-    <h2 class="library-heading" id="library-label">All 46 Scenarios by Category</h2>
+<section class="sc-stage" id="scStage" aria-live="polite"></section>
 
-    <div class="scenario-grid">
-      <div class="cat-picker">
-  <button class="cat-chip cat-chip-active" data-cat="cat-0" onclick="showCat('cat-0', this)">Starting Point</button>
-  <button class="cat-chip" data-cat="cat-1" onclick="showCat('cat-1', this)">Legislature & Lawmaking</button>
-  <button class="cat-chip" data-cat="cat-2" onclick="showCat('cat-2', this)">Dual Executive</button>
-  <button class="cat-chip" data-cat="cat-3" onclick="showCat('cat-3', this)">Elections & Campaigns</button>
-  <button class="cat-chip" data-cat="cat-4" onclick="showCat('cat-4', this)">Judiciary</button>
-  <button class="cat-chip" data-cat="cat-5" onclick="showCat('cat-5', this)">Monitors & Accountability</button>
-  <button class="cat-chip" data-cat="cat-6" onclick="showCat('cat-6', this)">The Public Record</button>
-  <button class="cat-chip" data-cat="cat-7" onclick="showCat('cat-7', this)">Fiscal & Monetary</button>
-  <button class="cat-chip" data-cat="cat-8" onclick="showCat('cat-8', this)">Immigration & Rights</button>
-  <button class="cat-chip" data-cat="cat-9" onclick="showCat('cat-9', this)">Indigenous & Minority Rights</button>
-  <button class="cat-chip" data-cat="cat-10" onclick="showCat('cat-10', this)">Rights & Emergency Architecture</button>
-  <button class="cat-chip" data-cat="cat-11" onclick="showCat('cat-11', this)">States & Territories</button>
-</div>
-
-<div class="scenario-category" id="cat-0">
-        <h3 class="scenario-cat-title">Starting Point</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-ordinary.html" class="scenario-entry"><div class="se-info"><span class="se-title">Ordinary Law</span><span class="se-desc">A bill passes, a budget dispute triggers the automatic floor, a Civic Consul is formed, and the Legat Consul acts in the foreign domain — the constitutional system on a normal working day.</span></div></a>
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-1" style="display:none">
-        <h3 class="scenario-cat-title">Legislature &amp; Lawmaking</h3>
-        <div class="scenario-cat-grid">
-
-          <a href="scenario-organized-third.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Organized Third</span><span class="se-desc">Year 4. Citizens organize a §13.1 petition against a federal certification statute. Phase One requires geographic spread across a third of all States and Territories. The Elections Panel administers the referendum. The Act is repealed. The Legislature re-enacts.</span></div></a>
-          <a href="scenario-the-second-path.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Second Path</span><span class="se-desc">Year 8. Citizens petition under §13.2 to place electoral finance reform before the Legislature. It fails the Assembly vote. The initiative goes to referendum — 63% in favor on 57% participation. The Assembly then passes a competing bill on the same subject.</span></div></a>
-
-        <a href="scenario-the-direction.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Direction</span><span class="se-desc">Year 3. The Civic Consul issues a written direction suspending a prosecution against a political ally — published to the NRS within the hour. Tests §2.15 under maximum pressure.</span></div></a>
-          
-          <a href="scenario-the-graduation.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Graduation</span><span class="se-desc">A student graduates, moves across state lines, and tries to vote six months later. The NVS, residency rules, and §1.2 under ordinary pressure — no crisis, just the system working.</span></div></a>
-          <a href="scenario-recalled-senator.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Recalled Senator</span><span class="se-desc">Year 6. Carenthal invokes its recall mechanism against Senator Cyrus Veld. He disputes the procedure. T</span></div></a>
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-2" style="display:none">
-        <h3 class="scenario-cat-title">Dual Executive</h3>
-        <div class="scenario-cat-grid">
-
-        <a href="scenario-the-formation.html" class="scenario-entry">
-<div class="se-info">
-<span class="se-title">The Formation</span>
-<span class="se-desc">A general election splits the Assembly four ways and twenty-one days pass with no Civic Consul. The office never falls vacant and no one seizes it — §2.6.a turns the deadlock into a national election.</span>
-</div>
-</a>
-<a href="scenario-the-coalition.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Coalition</span><span class="se-desc">The Assembly has the votes to remove the Civic Consul but cannot agree on a successor — and under a constructive vote of no confidence, that is the same as having no votes at all.</span></div></a>
-          <a href="scenario-coordination-failure.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Stalemate</span><span class="se-desc">Year 7. The Legat Consul concludes a mutual defense treaty requiring domestic infrastructure commitment</span></div></a>
-          <a href="scenario-alliance-clause.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Alliance Clause</span><span class="se-desc">Year 6. A treaty ally is struck. The Legat Consul deploys immediately — Senate ratification of the mutual defense treaty is the authorization. The SC reviews only whether the trigger conditions were met.</span></div></a><a href="scenario-the-twenty-four-hours.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Twenty-Four Hours</span><span class="se-desc">The Council determines the Civic Consul cannot exercise authority. He publishes a declaration and is back in a day — because §2.16 makes restoration his own act. It works exactly once.</span></div></a>
-
-          <a href="scenario-the-second-renewal.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Second Renewal</span><span class="se-desc">Year 8. The Halvern Strait escort operation comes up for its second renewal — and §14.3 presents its bill: no renewal without a Senate-approved Transition and Reconstruction Plan. The constitution's answer to the forever war.</span></div></a>          <a href="scenario-the-vote.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Vote</span><span class="se-desc">The CC returns a bill within 10 business days. Tabled for one month — bypass-proof. The Senate tries for 2/3. Falls short by one vote. The bill lapses. What §2.7's suspensive veto requires at every step.</span></div></a>
-          <a href="scenario-the-objection.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Objection</span><span class="se-desc">Year 5. The Civic Consul issues a §2.7 fiscal notice against the Universal Care Expansion Act. The Assembly Speaker declines to recall. The law takes effect. Seven years later, the MA finds the structural deficit the notice predicted.</span></div></a>
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-3" style="display:none">
-        <h3 class="scenario-cat-title">Elections &amp; Campaigns</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-harder-ballot.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Harder Ballot</span><span class="se-desc">Year 7. Neldrath State introduces an in-person verification requirement that effectively reduces NVS ac</span></div></a>
-          <a href="scenario-the-waiver.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Waiver</span><span class="se-desc">Year 13. A consular candidate reaches 61.8 percent after RCV transfers and the State plurality requirement is waived under §7.1. The losing campaign argues the waiver means first preferences. The text says otherwise.</span></div></a>
-          <a href="scenario-the-ledger.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Ledger</span><span class="se-desc">Year 12. An Elections Panel audit finds 214 contributions at just under the cap — all from employees of one conglomerate, all reimbursed. §8.1's wall against corporate money, and the records that routing around it leaves.</span></div></a>
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-4" style="display:none">
-        <h3 class="scenario-cat-title">Judiciary</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-the-holdout.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Holdout</span><span class="se-desc">Year 7. The Senate refuses to schedule a confirmation vote for nine months. Day 120 arrives with no vote. The LM certifies a breach. What §4.4.a requires — and why a Senate that says nothing is different from a Senate that says no.</span></div></a>
-          <a href="scenario-first-nomination.html" class="scenario-entry"><div class="se-info"><span class="se-title">The First Nomination</span><span class="se-desc">Year 2. The first scheduled SC vacancy. The Civic Consul nominates from the Elections Panel-maintained Judicial Pool</span></div></a>
-
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-5" style="display:none">
-        <h3 class="scenario-cat-title">Monitors &amp; Accountability</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-critical-finding.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Critical Finding</span><span class="se-desc">Year 11. The LM's annual legislative audit fails the Legislature on fiscal accuracy — nothing requires</span></div></a>
-          <a href="scenario-sdp-removal.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Grounds Review</span><span class="se-desc">Year 5. The Assembly initiates removal proceedings against the EM Monitor General. A concurrent resol</span></div></a>
-          
-          <a href="scenario-deadlock.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Deadlock</span><span class="se-desc">Year 5. The EM Monitor General's term ends. The Assembly Speaker and Senate Speaker cannot agree on a</span></div></a>
-          <a href="scenario-long-count.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Long Count</span><span class="se-desc">Year 9. The JM Monitor General lottery selects a candidate. The public rejects her. Then rejects t</span></div></a>
-          <a href="scenario-the-three-recusals.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Three Recusals</span><span class="se-desc">One conflict of interest, three branches. §12.4 routes each differently — and the Monitor General discloses to no one but the public record.</span></div></a>
-        
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-6" style="display:none">
-        <h3 class="scenario-cat-title">The Public Record</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-the-classification.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Classification</span><span class="se-desc">Year 9. The Legat Consul's office classifies a procurement audit citing operational security. The EM finds the real ground is embarrassment. Under §10.2, that classification is not merely improper — it is void.</span></div></a>
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-7" style="display:none">
-        <h3 class="scenario-cat-title">Fiscal &amp; Monetary</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-the-contraction.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Contraction</span><span class="se-desc">Year 11. Export revenue collapses 14 percent in three quarters. The MA certifies Severe Revenue Contraction and the National Endowment activates — the social state floor holds while the budget fight rages.</span></div></a>
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-8" style="display:none">
-        <h3 class="scenario-cat-title">Immigration &amp; Rights</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-the-return.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Return</span><span class="se-desc">A legal resident leaves the Republic to visit a friend in Europe. She is not allowed back in. The government cites national security. She cites her religion, her family name, and §1.6.</span></div></a>
-
-          <a href="scenario-the-unremovable.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Unremovable</span><span class="se-desc">Year 5. A final removal order that cannot be executed: no country will take him, and the one that would violates §1.21. He is also a documented security concern. §6.3.a closes both easy exits.</span></div></a>        </div>
-      </div>
-      <div class="scenario-category" id="cat-9" style="display:none">
-        <h3 class="scenario-cat-title">Indigenous &amp; Minority Rights</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-the-founding-choice.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Founding Choice</span><span class="se-desc">The Transition Window. The Corrin Nation must elect its status under §16.2 — Associated Community or Territorial Integration — as a federal officer makes an inducement the constitution forbids. A study in the founding choice and the no-inducements rule.</span></div></a>
-          <a href="scenario-the-departure.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Departure</span><span class="se-desc">Year 14. The Vaskeld Nation, an Associated Community since founding, invokes its unconditional §20.4 right to leave the Republic. The exit cannot be refused — but shared infrastructure, cross-border obligations, and twelve thousand dual citizens must still be untangled.</span></div></a>
-
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-10" style="display:none">
-        <h3 class="scenario-cat-title">Rights &amp; Emergency Architecture</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-second-declaration.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Second Declaration</span><span class="se-desc">Year 3. A regional emergency expires. 72 hours later, a new emergency issues — same geography, same rights, different label. The EM publishes its assessment. The SC rules.</span></div></a>
-          <a href="scenario-automatic-floor.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Automatic Floor</span><span class="se-desc">Year 7. The budget deadline passes with no enacted budget. The interim automatic appropriation takes effect by constitutional operation. What continues. What stops.</span></div></a>
-          <a href="scenario-finality-act.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Finality Act</span><span class="se-desc">Year 8. The Legislature strips judicial review from intelligence-based residency denials. A permanent resident with no forum petitions the SC directly under §4.5.</span></div></a>
-          <a href="scenario-void-exception.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Void Exception</span><span class="se-desc">Year 18. A valid amendment — 2/3 supermajority, state ratification — contains a 90-day habeas carve-out. The SC applies the amendment and voids only the carve-out.</span></div></a>
-        
-          <a href="scenario-the-order.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Order</span><span class="se-desc">Year 9. A military officer refuses a rendition order under §2.8 — compliance would violate §1.1 and §6.2. Her superior initiates disciplinary proceedings. §2.8's fourth sentence: any penalty imposed for a lawful refusal is itself a constitutional breach.</span></div></a>
-        </div>
-      </div>
-      <div class="scenario-category" id="cat-11" style="display:none">
-        <h3 class="scenario-cat-title">States &amp; Territories</h3>
-        <div class="scenario-cat-grid">
-          <a href="scenario-the-map.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Map</span><span class="se-desc">Year 2. A State's redistricting map fails the LM's compactness test. The LM publishes — that's all it can do. But publication gives standing. The Elections Panel is ready to draw an interim map if needed.</span></div></a>
-          <a href="scenario-sponsoring-state.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Sponsoring State</span><span class="se-desc">Year 4. A State legislature passes an act purporting to revoke State sponsorship for 340 existing residents. Federal credentials are federal. The State's role ended when the credentials were issued.</span></div></a>
-          <a href="scenario-the-audit.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Audit</span><span class="se-desc">Year 3. A Territory passes both Statehood Audit components. No political vote required — the pathway is automatic. What triggers, what's guaranteed, and what no political coalition can block.</span></div></a>
-          <a href="scenario-the-petition.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Petition</span><span class="se-desc">Year 7. A State initiates voluntary devolution — converting from State to Territory status. Two requirements: 60% referendum and Senate ratification. What the federal government can and cannot do about it.</span></div></a>
-          <a href="scenario-the-sixty-percent.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Sixty Percent</span><span class="se-desc">Year 12. A geothermal reserve sits beneath National Trust land. The Legislature clears two-thirds. Then the citizenry votes.</span></div></a>
-          <a href="scenario-the-third-strike.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Third Strike</span><span class="se-desc">Year 13. Valdrath fails its Statehood Audit for the third consecutive year. No automatic devolution — citizens vote on two paths: a federal remediation commission or Provisional status. The constitution gives the decision to Valdrath's own voters.</span></div></a>
-          <a href="scenario-the-administrator.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Administrator</span><span class="se-desc">Year 7. Haverford refuses NVS compliance for the third year running. The cure period expires. The Elections Panel announces it will administer the federal election in Haverford directly. Haverford petitions the SC. The election proceeds anyway.</span></div></a>
-          <a href="scenario-the-referendum.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Referendum</span><span class="se-desc">Year 9. Carenthal's independence referendum passes: 61.3% in favor, 62.1% participation. The Elections Panel publishes to the NRS. The election is irrevocable from that moment. What §15.9 requires next — and what it absolutely prohibits.</span></div></a>
-          <a href="scenario-the-restoration.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Restoration</span><span class="se-desc">Year 16. Valdrath passes its second consecutive clean Statehood Audit while in Provisional status. Statehood restored automatically — no vote, no ratification, no executive action. The same audit mechanism that triggered mandatory devolution triggers restoration.</span></div></a>
-          <a href="scenario-the-formula.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Formula</span><span class="se-desc">Year 8. The EM certifies that Evantine and Norrath lack fiscal capacity for their §12.1 social state obligations. The Legislature responds. The formula is certified adequate. A year later, Halvern still cannot deliver universal healthcare. What the constitution requires — and where it runs out.</span></div></a>
-          <a href="scenario-the-prior-claim.html" class="scenario-entry"><div class="se-info"><span class="se-title">The Prior Claim</span><span class="se-desc">Year 9. Halvern refuses a federal infrastructure mandate. Its argument: it was sovereign before the Republic, never gave up that sovereignty, and should hold the same compact-level relationship as indigenous nations. The SC rules unanimously.</span></div></a>
-
-        </div>
-      </div>
-    </div>
-
-        </section>
+<noscript>
+  <div style="max-width:860px;margin:0 auto;padding:0 1rem">
+<h3>Starting Point</h3><ul><li><a href="scenario-ordinary.html">Ordinary Law</a> — A bill passes, a budget dispute triggers the automatic floor, a Civic Consul is formed, and the Legat Consul acts in the foreign domain — the constitutional sys</li></ul>
+<h3>Legislature &amp; Lawmaking</h3><ul><li><a href="scenario-organized-third.html">The Organized Third</a> — Year 4. Citizens organize a §13.1 petition against a federal certification statute. Phase One requires geographic spread across a third of all States and Territ</li>
+<li><a href="scenario-the-second-path.html">The Second Path</a> — Year 8. Citizens petition under §13.2 to place electoral finance reform before the Legislature. It fails the Assembly vote. The initiative goes to referendum — </li>
+<li><a href="scenario-the-direction.html">The Direction</a> — Year 3. The Civic Consul issues a written direction suspending a prosecution against a political ally — published to the NRS within the hour. Tests §2.15 under </li>
+<li><a href="scenario-the-graduation.html">The Graduation</a> — A student graduates, moves across state lines, and tries to vote six months later. The NVS, residency rules, and §1.2 under ordinary pressure — no crisis, just </li>
+<li><a href="scenario-recalled-senator.html">The Recalled Senator</a> — Year 6. Carenthal invokes its recall mechanism against Senator Cyrus Veld. He disputes the procedure. T</li></ul>
+<h3>Dual Executive</h3><ul><li><a href="scenario-the-formation.html">The Formation</a> — A general election splits the Assembly four ways and twenty-one days pass with no Civic Consul. The office never falls vacant and no one seizes it — §2.6.a turn</li>
+<li><a href="scenario-the-coalition.html">The Coalition</a> — The Assembly has the votes to remove the Civic Consul but cannot agree on a successor — and under a constructive vote of no confidence, that is the same as havi</li>
+<li><a href="scenario-coordination-failure.html">The Stalemate</a> — Year 7. The Legat Consul concludes a mutual defense treaty requiring domestic infrastructure commitment</li>
+<li><a href="scenario-alliance-clause.html">The Alliance Clause</a> — Year 6. A treaty ally is struck. The Legat Consul deploys immediately — Senate ratification of the mutual defense treaty is the authorization. The SC reviews on</li>
+<li><a href="scenario-the-twenty-four-hours.html">The Twenty-Four Hours</a> — The Council determines the Civic Consul cannot exercise authority. He publishes a declaration and is back in a day — because §2.16 makes restoration his own act</li>
+<li><a href="scenario-the-second-renewal.html">The Second Renewal</a> — Year 8. The Halvern Strait escort operation comes up for its second renewal — and §14.3 presents its bill: no renewal without a Senate-approved Transition and R</li>
+<li><a href="scenario-the-vote.html">The Vote</a> — The CC returns a bill within 10 business days. Tabled for one month — bypass-proof. The Senate tries for 2/3. Falls short by one vote. The bill lapses. What §2.</li>
+<li><a href="scenario-the-objection.html">The Objection</a> — Year 5. The Civic Consul issues a §2.7 fiscal notice against the Universal Care Expansion Act. The Assembly Speaker declines to recall. The law takes effect. Se</li></ul>
+<h3>Elections &amp; Campaigns</h3><ul><li><a href="scenario-harder-ballot.html">The Harder Ballot</a> — Year 7. Neldrath State introduces an in-person verification requirement that effectively reduces NVS ac</li>
+<li><a href="scenario-the-waiver.html">The Waiver</a> — Year 13. A consular candidate reaches 61.8 percent after RCV transfers and the State plurality requirement is waived under §7.1. The losing campaign argues the </li>
+<li><a href="scenario-the-ledger.html">The Ledger</a> — Year 12. An Elections Panel audit finds 214 contributions at just under the cap — all from employees of one conglomerate, all reimbursed. §8.1&#x27;s wall against co</li></ul>
+<h3>Judiciary</h3><ul><li><a href="scenario-the-holdout.html">The Holdout</a> — Year 7. The Senate refuses to schedule a confirmation vote for nine months. Day 120 arrives with no vote. The LM certifies a breach. What §4.4.a requires — and </li>
+<li><a href="scenario-first-nomination.html">The First Nomination</a> — Year 2. The first scheduled SC vacancy. The Civic Consul nominates from the Elections Panel-maintained Judicial Pool</li></ul>
+<h3>Monitors &amp; Accountability</h3><ul><li><a href="scenario-critical-finding.html">The Critical Finding</a> — Year 11. The LM&#x27;s annual legislative audit fails the Legislature on fiscal accuracy — nothing requires</li>
+<li><a href="scenario-sdp-removal.html">The Grounds Review</a> — Year 5. The Assembly initiates removal proceedings against the EM Monitor General. A concurrent resol</li>
+<li><a href="scenario-deadlock.html">The Deadlock</a> — Year 5. The EM Monitor General&#x27;s term ends. The Assembly Speaker and Senate Speaker cannot agree on a</li>
+<li><a href="scenario-long-count.html">The Long Count</a> — Year 9. The JM Monitor General lottery selects a candidate. The public rejects her. Then rejects t</li>
+<li><a href="scenario-the-three-recusals.html">The Three Recusals</a> — One conflict of interest, three branches. §12.4 routes each differently — and the Monitor General discloses to no one but the public record.</li></ul>
+<h3>The Public Record</h3><ul><li><a href="scenario-the-classification.html">The Classification</a> — Year 9. The Legat Consul&#x27;s office classifies a procurement audit citing operational security. The EM finds the real ground is embarrassment. Under §10.2, that c</li></ul>
+<h3>Fiscal &amp; Monetary</h3><ul><li><a href="scenario-the-contraction.html">The Contraction</a> — Year 11. Export revenue collapses 14 percent in three quarters. The MA certifies Severe Revenue Contraction and the National Endowment activates — the social st</li></ul>
+<h3>Immigration &amp; Rights</h3><ul><li><a href="scenario-the-return.html">The Return</a> — A legal resident leaves the Republic to visit a friend in Europe. She is not allowed back in. The government cites national security. She cites her religion, he</li>
+<li><a href="scenario-the-unremovable.html">The Unremovable</a> — Year 5. A final removal order that cannot be executed: no country will take him, and the one that would violates §1.21. He is also a documented security concern</li></ul>
+<h3>Indigenous &amp; Minority Rights</h3><ul><li><a href="scenario-the-founding-choice.html">The Founding Choice</a> — The Transition Window. The Corrin Nation must elect its status under §16.2 — Associated Community or Territorial Integration — as a federal officer makes an ind</li>
+<li><a href="scenario-the-departure.html">The Departure</a> — Year 14. The Vaskeld Nation, an Associated Community since founding, invokes its unconditional §20.4 right to leave the Republic. The exit cannot be refused — b</li></ul>
+<h3>Rights &amp; Emergency Architecture</h3><ul><li><a href="scenario-second-declaration.html">The Second Declaration</a> — Year 3. A regional emergency expires. 72 hours later, a new emergency issues — same geography, same rights, different label. The EM publishes its assessment. Th</li>
+<li><a href="scenario-automatic-floor.html">The Automatic Floor</a> — Year 7. The budget deadline passes with no enacted budget. The interim automatic appropriation takes effect by constitutional operation. What continues. What st</li>
+<li><a href="scenario-finality-act.html">The Finality Act</a> — Year 8. The Legislature strips judicial review from intelligence-based residency denials. A permanent resident with no forum petitions the SC directly under §4.</li>
+<li><a href="scenario-void-exception.html">The Void Exception</a> — Year 18. A valid amendment — 2/3 supermajority, state ratification — contains a 90-day habeas carve-out. The SC applies the amendment and voids only the carve-o</li>
+<li><a href="scenario-the-order.html">The Order</a> — Year 9. A military officer refuses a rendition order under §2.8 — compliance would violate §1.1 and §6.2. Her superior initiates disciplinary proceedings. §2.8&#x27;</li></ul>
+<h3>States &amp; Territories</h3><ul><li><a href="scenario-the-map.html">The Map</a> — Year 2. A State&#x27;s redistricting map fails the LM&#x27;s compactness test. The LM publishes — that&#x27;s all it can do. But publication gives standing. The Elections Pane</li>
+<li><a href="scenario-sponsoring-state.html">The Sponsoring State</a> — Year 4. A State legislature passes an act purporting to revoke State sponsorship for 340 existing residents. Federal credentials are federal. The State&#x27;s role e</li>
+<li><a href="scenario-the-audit.html">The Audit</a> — Year 3. A Territory passes both Statehood Audit components. No political vote required — the pathway is automatic. What triggers, what&#x27;s guaranteed, and what no</li>
+<li><a href="scenario-the-petition.html">The Petition</a> — Year 7. A State initiates voluntary devolution — converting from State to Territory status. Two requirements: 60% referendum and Senate ratification. What the f</li>
+<li><a href="scenario-the-sixty-percent.html">The Sixty Percent</a> — Year 12. A geothermal reserve sits beneath National Trust land. The Legislature clears two-thirds. Then the citizenry votes.</li>
+<li><a href="scenario-the-third-strike.html">The Third Strike</a> — Year 13. Valdrath fails its Statehood Audit for the third consecutive year. No automatic devolution — citizens vote on two paths: a federal remediation commissi</li>
+<li><a href="scenario-the-administrator.html">The Administrator</a> — Year 7. Haverford refuses NVS compliance for the third year running. The cure period expires. The Elections Panel announces it will administer the federal elect</li>
+<li><a href="scenario-the-referendum.html">The Referendum</a> — Year 9. Carenthal&#x27;s independence referendum passes: 61.3% in favor, 62.1% participation. The Elections Panel publishes to the NRS. The election is irrevocable f</li>
+<li><a href="scenario-the-restoration.html">The Restoration</a> — Year 16. Valdrath passes its second consecutive clean Statehood Audit while in Provisional status. Statehood restored automatically — no vote, no ratification, </li>
+<li><a href="scenario-the-formula.html">The Formula</a> — Year 8. The EM certifies that Evantine and Norrath lack fiscal capacity for their §12.1 social state obligations. The Legislature responds. The formula is certi</li>
+<li><a href="scenario-the-prior-claim.html">The Prior Claim</a> — Year 9. Halvern refuses a federal infrastructure mandate. Its argument: it was sovereign before the Republic, never gave up that sovereignty, and should hold th</li></ul>
+  </div>
+</noscript>
 
 </main>
 
@@ -329,6 +331,27 @@ function showCat(id, el){
   document.querySelectorAll('.cat-chip').forEach(function(b){ b.classList.remove('cat-chip-active'); });
   document.getElementById(id).style.display='block';
   if(el) el.classList.add('cat-chip-active');
+}
+</script>
+<script>
+const SCENARIO_CATS = [{"name": "Starting Point", "hook": "One ordinary day \u2014 begin here", "entries": [{"href": "scenario-ordinary.html", "title": "Ordinary Law", "desc": "A bill passes, a budget dispute triggers the automatic floor, a Civic Consul is formed, and the Legat Consul acts in the foreign domain \u2014 the constitutional sys"}]}, {"name": "Legislature & Lawmaking", "hook": "Bills, vetoes, overrides \u2014 the lawmaking machine", "entries": [{"href": "scenario-organized-third.html", "title": "The Organized Third", "desc": "Year 4. Citizens organize a \u00a713.1 petition against a federal certification statute. Phase One requires geographic spread across a third of all States and Territ"}, {"href": "scenario-the-second-path.html", "title": "The Second Path", "desc": "Year 8. Citizens petition under \u00a713.2 to place electoral finance reform before the Legislature. It fails the Assembly vote. The initiative goes to referendum \u2014 "}, {"href": "scenario-the-direction.html", "title": "The Direction", "desc": "Year 3. The Civic Consul issues a written direction suspending a prosecution against a political ally \u2014 published to the NRS within the hour. Tests \u00a72.15 under "}, {"href": "scenario-the-graduation.html", "title": "The Graduation", "desc": "A student graduates, moves across state lines, and tries to vote six months later. The NVS, residency rules, and \u00a71.2 under ordinary pressure \u2014 no crisis, just "}, {"href": "scenario-recalled-senator.html", "title": "The Recalled Senator", "desc": "Year 6. Carenthal invokes its recall mechanism against Senator Cyrus Veld. He disputes the procedure. T"}]}, {"name": "Dual Executive", "hook": "Two executives, one government \u2014 the seams and the shared ground", "entries": [{"href": "scenario-the-formation.html", "title": "The Formation", "desc": "A general election splits the Assembly four ways and twenty-one days pass with no Civic Consul. The office never falls vacant and no one seizes it \u2014 \u00a72.6.a turn"}, {"href": "scenario-the-coalition.html", "title": "The Coalition", "desc": "The Assembly has the votes to remove the Civic Consul but cannot agree on a successor \u2014 and under a constructive vote of no confidence, that is the same as havi"}, {"href": "scenario-coordination-failure.html", "title": "The Stalemate", "desc": "Year 7. The Legat Consul concludes a mutual defense treaty requiring domestic infrastructure commitment"}, {"href": "scenario-alliance-clause.html", "title": "The Alliance Clause", "desc": "Year 6. A treaty ally is struck. The Legat Consul deploys immediately \u2014 Senate ratification of the mutual defense treaty is the authorization. The SC reviews on"}, {"href": "scenario-the-twenty-four-hours.html", "title": "The Twenty-Four Hours", "desc": "The Council determines the Civic Consul cannot exercise authority. He publishes a declaration and is back in a day \u2014 because \u00a72.16 makes restoration his own act"}, {"href": "scenario-the-second-renewal.html", "title": "The Second Renewal", "desc": "Year 8. The Halvern Strait escort operation comes up for its second renewal \u2014 and \u00a714.3 presents its bill: no renewal without a Senate-approved Transition and R"}, {"href": "scenario-the-vote.html", "title": "The Vote", "desc": "The CC returns a bill within 10 business days. Tabled for one month \u2014 bypass-proof. The Senate tries for 2/3. Falls short by one vote. The bill lapses. What \u00a72."}, {"href": "scenario-the-objection.html", "title": "The Objection", "desc": "Year 5. The Civic Consul issues a \u00a72.7 fiscal notice against the Universal Care Expansion Act. The Assembly Speaker declines to recall. The law takes effect. Se"}]}, {"name": "Elections & Campaigns", "hook": "Ballots, thresholds, and the money around them", "entries": [{"href": "scenario-harder-ballot.html", "title": "The Harder Ballot", "desc": "Year 7. Neldrath State introduces an in-person verification requirement that effectively reduces NVS ac"}, {"href": "scenario-the-waiver.html", "title": "The Waiver", "desc": "Year 13. A consular candidate reaches 61.8 percent after RCV transfers and the State plurality requirement is waived under \u00a77.1. The losing campaign argues the "}, {"href": "scenario-the-ledger.html", "title": "The Ledger", "desc": "Year 12. An Elections Panel audit finds 214 contributions at just under the cap \u2014 all from employees of one conglomerate, all reimbursed. \u00a78.1's wall against co"}]}, {"name": "Judiciary", "hook": "Courts, nominations, and the limits of review", "entries": [{"href": "scenario-the-holdout.html", "title": "The Holdout", "desc": "Year 7. The Senate refuses to schedule a confirmation vote for nine months. Day 120 arrives with no vote. The LM certifies a breach. What \u00a74.4.a requires \u2014 and "}, {"href": "scenario-first-nomination.html", "title": "The First Nomination", "desc": "Year 2. The first scheduled SC vacancy. The Civic Consul nominates from the Elections Panel-maintained Judicial Pool"}]}, {"name": "Monitors & Accountability", "hook": "The watchers \u2014 findings, removals, and teeth", "entries": [{"href": "scenario-critical-finding.html", "title": "The Critical Finding", "desc": "Year 11. The LM's annual legislative audit fails the Legislature on fiscal accuracy \u2014 nothing requires"}, {"href": "scenario-sdp-removal.html", "title": "The Grounds Review", "desc": "Year 5. The Assembly initiates removal proceedings against the EM Monitor General. A concurrent resol"}, {"href": "scenario-deadlock.html", "title": "The Deadlock", "desc": "Year 5. The EM Monitor General's term ends. The Assembly Speaker and Senate Speaker cannot agree on a"}, {"href": "scenario-long-count.html", "title": "The Long Count", "desc": "Year 9. The JM Monitor General lottery selects a candidate. The public rejects her. Then rejects t"}, {"href": "scenario-the-three-recusals.html", "title": "The Three Recusals", "desc": "One conflict of interest, three branches. \u00a712.4 routes each differently \u2014 and the Monitor General discloses to no one but the public record."}]}, {"name": "The Public Record", "hook": "The NRS \u2014 what must be published, and what happens when it isn't", "entries": [{"href": "scenario-the-classification.html", "title": "The Classification", "desc": "Year 9. The Legat Consul's office classifies a procurement audit citing operational security. The EM finds the real ground is embarrassment. Under \u00a710.2, that c"}]}, {"name": "Fiscal & Monetary", "hook": "Budgets, floors, and the equalization queue", "entries": [{"href": "scenario-the-contraction.html", "title": "The Contraction", "desc": "Year 11. Export revenue collapses 14 percent in three quarters. The MA certifies Severe Revenue Contraction and the National Endowment activates \u2014 the social st"}]}, {"name": "Immigration & Rights", "hook": "Two gates, one person \u2014 sponsorship meets certification", "entries": [{"href": "scenario-the-return.html", "title": "The Return", "desc": "A legal resident leaves the Republic to visit a friend in Europe. She is not allowed back in. The government cites national security. She cites her religion, he"}, {"href": "scenario-the-unremovable.html", "title": "The Unremovable", "desc": "Year 5. A final removal order that cannot be executed: no country will take him, and the one that would violates \u00a71.21. He is also a documented security concern"}]}, {"name": "Indigenous & Minority Rights", "hook": "Sovereignty that precedes the Republic", "entries": [{"href": "scenario-the-founding-choice.html", "title": "The Founding Choice", "desc": "The Transition Window. The Corrin Nation must elect its status under \u00a716.2 \u2014 Associated Community or Territorial Integration \u2014 as a federal officer makes an ind"}, {"href": "scenario-the-departure.html", "title": "The Departure", "desc": "Year 14. The Vaskeld Nation, an Associated Community since founding, invokes its unconditional \u00a720.4 right to leave the Republic. The exit cannot be refused \u2014 b"}]}, {"name": "Rights & Emergency Architecture", "hook": "The floor that does not move, even in a crisis", "entries": [{"href": "scenario-second-declaration.html", "title": "The Second Declaration", "desc": "Year 3. A regional emergency expires. 72 hours later, a new emergency issues \u2014 same geography, same rights, different label. The EM publishes its assessment. Th"}, {"href": "scenario-automatic-floor.html", "title": "The Automatic Floor", "desc": "Year 7. The budget deadline passes with no enacted budget. The interim automatic appropriation takes effect by constitutional operation. What continues. What st"}, {"href": "scenario-finality-act.html", "title": "The Finality Act", "desc": "Year 8. The Legislature strips judicial review from intelligence-based residency denials. A permanent resident with no forum petitions the SC directly under \u00a74."}, {"href": "scenario-void-exception.html", "title": "The Void Exception", "desc": "Year 18. A valid amendment \u2014 2/3 supermajority, state ratification \u2014 contains a 90-day habeas carve-out. The SC applies the amendment and voids only the carve-o"}, {"href": "scenario-the-order.html", "title": "The Order", "desc": "Year 9. A military officer refuses a rendition order under \u00a72.8 \u2014 compliance would violate \u00a71.1 and \u00a76.2. Her superior initiates disciplinary proceedings. \u00a72.8'"}]}, {"name": "States & Territories", "hook": "Statehood, mergers, secession \u2014 the federation's edges", "entries": [{"href": "scenario-the-map.html", "title": "The Map", "desc": "Year 2. A State's redistricting map fails the LM's compactness test. The LM publishes \u2014 that's all it can do. But publication gives standing. The Elections Pane"}, {"href": "scenario-sponsoring-state.html", "title": "The Sponsoring State", "desc": "Year 4. A State legislature passes an act purporting to revoke State sponsorship for 340 existing residents. Federal credentials are federal. The State's role e"}, {"href": "scenario-the-audit.html", "title": "The Audit", "desc": "Year 3. A Territory passes both Statehood Audit components. No political vote required \u2014 the pathway is automatic. What triggers, what's guaranteed, and what no"}, {"href": "scenario-the-petition.html", "title": "The Petition", "desc": "Year 7. A State initiates voluntary devolution \u2014 converting from State to Territory status. Two requirements: 60% referendum and Senate ratification. What the f"}, {"href": "scenario-the-sixty-percent.html", "title": "The Sixty Percent", "desc": "Year 12. A geothermal reserve sits beneath National Trust land. The Legislature clears two-thirds. Then the citizenry votes."}, {"href": "scenario-the-third-strike.html", "title": "The Third Strike", "desc": "Year 13. Valdrath fails its Statehood Audit for the third consecutive year. No automatic devolution \u2014 citizens vote on two paths: a federal remediation commissi"}, {"href": "scenario-the-administrator.html", "title": "The Administrator", "desc": "Year 7. Haverford refuses NVS compliance for the third year running. The cure period expires. The Elections Panel announces it will administer the federal elect"}, {"href": "scenario-the-referendum.html", "title": "The Referendum", "desc": "Year 9. Carenthal's independence referendum passes: 61.3% in favor, 62.1% participation. The Elections Panel publishes to the NRS. The election is irrevocable f"}, {"href": "scenario-the-restoration.html", "title": "The Restoration", "desc": "Year 16. Valdrath passes its second consecutive clean Statehood Audit while in Provisional status. Statehood restored automatically \u2014 no vote, no ratification, "}, {"href": "scenario-the-formula.html", "title": "The Formula", "desc": "Year 8. The EM certifies that Evantine and Norrath lack fiscal capacity for their \u00a712.1 social state obligations. The Legislature responds. The formula is certi"}, {"href": "scenario-the-prior-claim.html", "title": "The Prior Claim", "desc": "Year 9. Halvern refuses a federal infrastructure mandate. Its argument: it was sovereign before the Republic, never gave up that sovereignty, and should hold th"}]}];
+function openShelf(i, el){
+  document.querySelectorAll('.sccard-shelf').forEach(b=>b.classList.remove('sccard-active'));
+  if(el) el.classList.add('sccard-active');
+  const c = SCENARIO_CATS[i];
+  let h = '<div class="stage-eyebrow">'+c.name+' &middot; '+c.entries.length+' scenario'+(c.entries.length!==1?'s':'')+'</div>';
+  h += '<div class="stage-hook">'+c.hook+'</div><div class="stage-list">';
+  for(const e of c.entries){
+    h += '<a class="stage-item" href="'+e.href+'"><span class="stage-item-title">'+e.title+'</span><span class="stage-item-desc">'+e.desc+'</span><span class="stage-item-arrow">&rarr;</span></a>';
+  }
+  h += '</div>';
+  const st=document.getElementById('scStage');
+  st.innerHTML=h;
+  st.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+function scScroll(dir){
+  const track=document.getElementById('scTrack');
+  track.scrollBy({left: dir*240, behavior:'smooth'});
 }
 </script>
 </body>
