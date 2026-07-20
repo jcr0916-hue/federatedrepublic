@@ -8,9 +8,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scenario Library — The Federated Republic</title>
   <meta name="description" content="46 scenarios testing the Federated Republic constitution — from ordinary governance to institutional crisis. Long-form narratives and focused constitutional tests.">
-  <div class="featured-section">
-  <div class="featured-label">Start Here &middot; Currently Relevant</div>
-  <div class="featured-grid">
+  <style>
+/* ── NAV ── */
+    .mobile-menu a:first-child{}
+    @media(max-width:820px){
+      main{padding:1.5rem 1rem 3rem}
+      .hero-stats{gap:1.5rem}
+      .scenario-cat-title{font-size:0.85rem}
+      .library-heading{font-size:1.1rem}
+    }
+    /* ── HERO ── */
+    .page-header{background:var(--navy);padding:5rem 2rem 2.5rem;margin-top:56px}
+    .page-header-inner{max-width:900px;margin:0 auto}
+    .page-header h1{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--cream);margin-bottom:0.75rem;line-height:1.15}
+    .page-header p{color:rgba(245,240,232,0.6);font-size:0.98rem;max-width:620px;line-height:1.75}
+    .hero-stats{display:flex;gap:2rem;margin-top:1.5rem;flex-wrap:wrap}
+    .hero-stat{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:rgba(245,240,232,0.4);letter-spacing:0.06em;text-transform:uppercase}
+    .hero-stat strong{color:var(--gold);font-size:1.4rem;display:block;margin-bottom:0.2rem;font-family:'Cormorant Garamond',serif;font-weight:400;letter-spacing:0}
+    /* ── MAIN ── */
+    main{max-width:960px;margin:0 auto;padding:0 2rem 5rem}
+    /* ── FEATURED ── */
+    .featured-section{padding:2.5rem 0 0}
+    .featured-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.25rem;font-family:'JetBrains Mono',monospace}
+    .featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-bottom:1rem}
+    .featured-entry{display:flex;flex-direction:column;gap:0.4rem;padding:1.25rem 1.4rem;border:1px solid var(--border);background:rgba(255,255,255,0.5);text-decoration:none;transition:border-color 0.2s,background 0.2s;border-top:3px solid var(--gold)}
+    .featured-entry:hover{border-color:var(--navy);background:white}
+    .fe-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);letter-spacing:0.1em}
+    .fe-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);line-height:1.2}
+    .fe-desc{font-size:0.82rem;color:var(--muted);line-height:1.55}
+    .fe-arrow{margin-top:auto;font-size:0.75rem;color:var(--gold);font-family:'Cormorant Garamond',serif}
+    /* ── LIBRARY HEADING ── */
+    .library-heading{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid var(--navy)}
+    /* ── ACCORDION ── */
+    .library-section{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .library-section:first-of-type{margin-top:1rem}
+    .accordion-controls{display:flex;justify-content:flex-end;margin-bottom:0.5rem}
+    .toggle-all-btn{background:none;border:none;font-size:0.7rem;color:var(--muted);cursor:pointer;font-family:'Jost',sans-serif;letter-spacing:0.05em;padding:0.25rem 0;text-decoration:underline;text-underline-offset:3px}
+    .toggle-all-btn:hover{color:var(--navy)}
+    .accordion{border:1px solid var(--border);background:rgba(255,255,255,0.4)}
+    .accordion+.accordion{border-top:none}
+    .accordion-header{display:flex;align-items:center;padding:1rem 1.25rem;cursor:pointer;gap:1rem;user-select:none;transition:background 0.15s}
+    .accordion-header:hover{background:rgba(255,255,255,0.7)}
+    .accordion-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy);flex:1}
+    .accordion-meta{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+    .accordion-count{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted);background:var(--cream2);padding:0.2rem 0.6rem;border-radius:2px;letter-spacing:0.05em}
+    .accordion-chevron{width:18px;height:18px;flex-shrink:0;color:var(--gold);transition:transform 0.25s;margin-left:0.25rem}
+    .accordion-chevron path{stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .accordion.open .accordion-chevron{transform:rotate(180deg)}
+    .accordion-desc{padding:0 1.25rem;font-size:0.85rem;color:var(--muted);line-height:1.65;max-height:0;overflow:hidden;transition:max-height 0.25s ease,padding 0.25s}
+    .accordion.open .accordion-desc{max-height:60px;padding-bottom:0.75rem}
+    .accordion-body{display:flex;flex-direction:column;border-top:1px solid var(--border)}
+    .scenario-entry{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.25rem;text-decoration:none;border-bottom:1px solid rgba(212,201,176,0.4);transition:background 0.15s;background:rgba(255,255,255,0.3)}
+    .scenario-entry:hover{background:rgba(255,255,255,0.8)}
+    .scenario-entry:last-child{border-bottom:none}
+    .se-info{flex:1;min-width:0}
+    .se-tag{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold);letter-spacing:0.06em;display:block;margin-bottom:0.2rem}
+    .se-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .se-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;margin-top:0.15rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .se-arrow{font-size:1.1rem;color:var(--gold);flex-shrink:0;font-family:'Cormorant Garamond',serif}
+    @media(max-width:700px){
+      .page-header{padding:4.5rem 1.25rem 2rem}
+      .page-header h1{font-size:2rem}
+      main{padding:0 1.25rem 4rem}
+      .featured-grid{grid-template-columns:1fr}
+      .accordion-title{font-size:1rem}
+      .se-desc{font-size:0.78rem;margin-top:0.2rem;-webkit-line-clamp:2}
+      .hero-stats{gap:1.25rem}
+    }
+  
+    .scenario-grid{display:flex;flex-direction:column;gap:2rem}
+    .scenario-category{border-bottom:1px solid var(--border);padding-bottom:1.5rem}
+    .scenario-cat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);letter-spacing:0.04em;margin-bottom:0.8rem;padding-bottom:0.4rem;border-bottom:2px solid var(--gold)}
+    .scenario-cat-grid{display:flex;flex-direction:column;gap:0.1rem}
+    .scenario-entry{display:block;text-decoration:none;padding:0.75rem 0;border-bottom:1px solid rgba(212,201,176,0.4)}
+    .scenario-entry:hover .se-title{color:var(--gold)}
+    .scenario-entry:last-child{border-bottom:none}
+    .se-info{display:flex;flex-direction:column;gap:0.2rem}
+    .se-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--navy)}
+    .se-desc{font-size:0.82rem;color:var(--muted);line-height:1.5}
+
+/* category picker */
+.cat-picker{display:flex;flex-wrap:wrap;gap:0.5rem;max-width:900px;margin:0 auto 2rem;padding:0 1rem;justify-content:center}
+.cat-chip{font-family:'Jost',sans-serif;font-size:0.78rem;padding:0.45rem 0.9rem;background:#fff;border:1px solid var(--border);border-radius:16px;cursor:pointer;color:var(--ink);transition:all .15s}
+.cat-chip:hover{border-color:var(--gold2);color:var(--gold2)}
+.cat-chip-active{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div id="site-nav"></div>
+
+<div class="page-header" id="main-content">
+  <div class="page-header-inner">
+    <h1>The Scenario Library</h1>
+    <p>Constitutional provisions under pressure — from ordinary governance to institutional crisis. Start with the featured scenarios below. They give the fullest picture of how the system works and why it was designed this way.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>46</strong>Total scenarios</div>
+      <div class="hero-stat"><strong>12</strong>Categories</div>
+      <div class="hero-stat"><strong>90</strong>Provisions tested</div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- FEATURED -->
+  <section class="featured-section" aria-labelledby="featured-label">
+    <span class="featured-label" id="featured-label">Start Here &middot; Currently Relevant</span>
+    <div class="featured-grid">
     <a href="scenario-the-formation.html" class="featured-entry">
       <span class="fe-kicker" style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:0.3rem">In the world right now</span><span class="fe-num">§2.6.a · Government Formation</span>
       <span class="fe-title">The Formation</span>
@@ -41,10 +150,15 @@
       <span class="fe-desc">A final removal order that cannot be executed: no country will take him, and the one that would violates §1.21. The document handles its hardest case.</span>
       <span class="fe-arrow">&rarr;</span>
     </a>
-  </div>
-</div>
+    </div>
+  </section>
 
-<div class="cat-picker" style="display:flex;flex-wrap:wrap;gap:0.5rem;max-width:900px;margin:0 auto 2rem;padding:0 1rem;justify-content:center">
+  <!-- LIBRARY ACCORDION -->
+  <section class="library-section fr-page" aria-labelledby="library-label">
+    <h2 class="library-heading" id="library-label">All 46 Scenarios by Category</h2>
+
+    <div class="scenario-grid">
+      <div class="cat-picker">
   <button class="cat-chip cat-chip-active" data-cat="cat-0" onclick="showCat('cat-0', this)">Starting Point</button>
   <button class="cat-chip" data-cat="cat-1" onclick="showCat('cat-1', this)">Legislature & Lawmaking</button>
   <button class="cat-chip" data-cat="cat-2" onclick="showCat('cat-2', this)">Dual Executive</button>
@@ -179,6 +293,7 @@
 
         </div>
       </div>
+    </div>
 
         </section>
 
@@ -208,7 +323,6 @@
     }
   </script>
   <script src="nav.js"></script>
-
 <script>
 function showCat(id, el){
   document.querySelectorAll('.scenario-category').forEach(function(c){ c.style.display='none'; });
@@ -218,8 +332,4 @@ function showCat(id, el){
 }
 </script>
 </body>
-</html
-.cat-chip{font-family:'Jost',sans-serif;font-size:0.78rem;padding:0.45rem 0.9rem;background:#fff;border:1px solid var(--border);border-radius:16px;cursor:pointer;color:var(--ink);transition:all .15s}
-.cat-chip:hover{border-color:var(--gold2);color:var(--gold2)}
-.cat-chip-active{background:var(--navy);color:var(--cream);border-color:var(--navy)}
->
+</html>
