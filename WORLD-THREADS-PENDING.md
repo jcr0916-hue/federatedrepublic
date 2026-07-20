@@ -38,3 +38,9 @@
 - Ties to the Use Doctrine paper (§18.1 "No Land of Its Own") in the design-rationale series.
 
 **Status:** flagged, ~7 in-world years out, NOT activated. Longest-horizon scheduled event on the board. When ready to shape: promote to SEAT-OF-GOVERNMENT-ARC.md. The 20-year clock and the Ostara bid are the anchors. NOT today's work.
+
+**Visual assets ready (both capitals staged, carded, do NOT regenerate):**
+- **Verentum (incumbent):** verentum-card.webp (the capital city, river kept — Aldenmere reaches the sea), verentum-civic-campus-card.webp (the seat of government campus). Full-size: verentum.png, verentum-cIvic-campus.png.
+- **Ostara (challenger):** ostara-card.webp (the ancient Solaran capital — clifftop old town, harbor, cathedral), ostara-civic-proposal-card.webp (the artist/watercolor VISION of its civic bid — the lead; reads as a proposal, not a built place), ostara-civic-plan-card.webp (the formal presentation BOARD — legend, diagrams, floor plans, elevations; reads as a submitted document). Full-size: ostara.png, ostara-civic-proposal.png, ostara-civic-plan.png. Held in reserve: ostara-civic-realized.png (photoreal "if it wins / once built" — NOT for the proposal itself).
+- **Riverglow** images also available if the northern ridge factors in.
+- **Pairing guidance:** for Ostara's bid, use proposal (vision) + plan (document) together; the city image establishes the place. Verentum: city + campus. The visual argument for "should the seat move?" is pre-built on both sides.
