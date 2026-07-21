@@ -75,14 +75,14 @@ Every person holds the rights of expression, thought, conscience, religion, asso
 Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status in the provision of any governmental benefit, the imposition of any burden, or the application of any law.
 
 
-### §1.7 — Bodily Sovereignty and Privacy
+### §1.7 — Bodily Sovereignty
 
 Medical decisions are the province of the individual and their chosen provider. The state may promote public health through information, licensing, and access; it may not compel medical decisions or penalize their exercise.
 
 
-### §1.8 — Property and Security of the Home
+### §1.8 — Privacy, Property, and Security of the Home
 
-Every person holds the right to own property and to security in their home. The state may take private property for public use only upon payment of just compensation determined by independent process, not by the taking authority.
+Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. The home may not be entered, nor any person, communication, or data searched, surveilled, or collected by government, without consent or prior independent judicial authorization based on specific, articulable grounds.
 
 
 ### §1.9 — Democratic Participation and Family
@@ -566,7 +566,7 @@ Every immigration application must clear two sequential stages: State sponsorshi
 
 (1) Only the federal government may remove individuals from the Republic. Removal occurs only for violations of laws the Legislature has defined — executive detention without statutory basis is unlawful detention subject to habeas corpus.
 
-- **Cross-refs:** §1.6, §1.7
+- **Cross-refs:** §1.6, §1.8
 
 ### §6.3 — Asylum and Protection
 
