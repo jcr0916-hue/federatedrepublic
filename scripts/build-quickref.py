@@ -56,7 +56,7 @@ def main(src, dst):
     L.append("> because the hand-written version drifted 25% out of sync and invented a threshold that")
     L.append("> does not exist in the constitution.")
     L.append(">")
-    L.append(f"> **{len(d)} articles · {total} provisions**")
+    L.append(f"> **{sum(1 for a in d if not a.get('preamble'))} articles · {total} provisions**")
     L.append("")
     L.append("---")
     L.append("")
@@ -65,7 +65,12 @@ def main(src, dst):
     L.append("## INDEX")
     L.append("")
     for i, a in enumerate(d, 1):
+        if a.get('preamble'):
+            L.append("- **Preamble**")
+            continue
         nums = [p['num'] for p in a['provisions']]
+        if not nums:
+            continue
         rng = f"{nums[0]}–{nums[-1]}" if len(nums) > 1 else nums[0]
         L.append(f"- **{a.get('heading','(untitled)')}**  ·  {rng}  ({len(nums)} provisions)")
     L.append("")
@@ -107,6 +112,8 @@ def main(src, dst):
     L.append("| § | Provision | Threshold clause (verbatim) |")
     L.append("|---|---|---|")
     for a in d:
+        if a.get("preamble"):
+            continue
         for p in a['provisions']:
             for x in dict.fromkeys(thresholds_in(clean(p['text']))):
                 L.append(f"| {p['num']} | {p.get('name','')} | {x.replace('|','/')} |")

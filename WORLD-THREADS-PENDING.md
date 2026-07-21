@@ -44,3 +44,46 @@
 - **Ostara (challenger):** ostara-card.webp (the ancient Solaran capital — clifftop old town, harbor, cathedral), ostara-civic-proposal-card.webp (the artist/watercolor VISION of its civic bid — the lead; reads as a proposal, not a built place), ostara-civic-plan-card.webp (the formal presentation BOARD — legend, diagrams, floor plans, elevations; reads as a submitted document). Full-size: ostara.png, ostara-civic-proposal.png, ostara-civic-plan.png. Held in reserve: ostara-civic-realized.png (photoreal "if it wins / once built" — NOT for the proposal itself).
 - **Riverglow** images also available if the northern ridge factors in.
 - **Pairing guidance:** for Ostara's bid, use proposal (vision) + plan (document) together; the city image establishes the place. Verentum: city + campus. The visual argument for "should the seat move?" is pre-built on both sides.
+
+---
+
+## PARKED FEATURE — The Who's Who (world cast reference)
+
+**Status:** parked by John (13.09, real-time July 2026). Not scheduled. Build when the cast/story
+volume warrants — suggested trigger: after the formation beats + §12.8 fight land (cast will exceed
+~20 named figures with office changes behind them, exactly when newcomers need placement).
+
+**The design (decided in outline):**
+- NOT a single org chart — a Who's Who page whose GOVERNMENT section literally renders the
+  constitutional structure with current officeholders in the boxes (dual executive side by side:
+  Thoss / Rehn; her §2.5 ministers; his domain officers; Monitors; Court). Teaches Article II while
+  placing characters — the constitution as cast list. Below it: the LC field, the press gallery
+  (Vend/Torenthian, Voss/RNN, Hale/Ledger), state figures.
+- DERIVED, not hand-drawn: characters as data (world-canon.md section or small JSON), page renders
+  from it. Office changes = one data edit (Sorrel -> Thoss already demonstrates why).
+- worldPeople front-matter tag on pieces (same mechanism as worldPlaces/map dots): each entry
+  auto-lists that character's appearances -> the page becomes a per-character navigation surface.
+- Natural home for the portrait pipeline (house-style portraits; Sarn, Sollis, Hale, Orin queued;
+  Thoss cards exist).
+- **PORTRAITS REQUIRED for the active cast** (John, 13.09): anyone who will keep producing content
+  gets a house-style portrait — the Who's Who is their destination. House style (verbatim, use for
+  every generation): "Photorealistic editorial portrait, professional headshot, muted natural
+  lighting, neutral seamless background in soft navy-grey or warm cream, no stylization, no fantasy
+  elements, 3/4 or straight-on framing, natural skin texture and detail, contemporary formal/
+  business attire, composed expression, shot as if for a newspaper archive or official government
+  photo."
+  **Priority order** (recurrence x future activity):
+  1. The LC field — Vael, Carrow (f), Mak, Sandris (the race is live; heaviest mention counts)
+  2. The executives — Rehn (sitting LC), Sorrel (ongoing thread: will Aldenmere send her back?)
+     [Thoss cards already exist]
+  3. The press gallery — Petra Vend (Torenthian), Dara Voss (RNN), Corwin Hale (Ledger)
+  4. The new ministers — Rews (Korda), Casta (Morantine), Verel (retained, Health) — active through
+     the §12.8 fight
+  5. Queued Tier 2 — Sarn, Sollis, Orin
+  NOTE: published text establishes almost no physical descriptions — the first generation DEFINES
+  each character's canonical appearance. Generate, John approves, then the portrait IS canon;
+  record chosen appearance notes in world-canon.md so later art (scene images, Gemini scene-context
+  work) stays consistent.
+- Current cast size for reference (13.09): 16 recurring named figures. Vael 185 / Carrow 162 /
+  Mak 108 / Vend 81 / Sandris 56 / Thoss 44 / Rehn 13 / Sorrel 12 / Hale 8 / Voss 8 / Sarn 7 /
+  Sollis 6 / Orin 5 / + new ministers Rews, Casta, Verel (news-043).
