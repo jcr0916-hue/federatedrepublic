@@ -175,3 +175,35 @@ continuity liability instead of an asset.
 build day, re-check it against news-041/042 and scenario-the-coalition.html's "251 of 500" /
 "274 of 500" facts before finalizing — those three pieces are the load-bearing continuity anchor.
 
+**SETTLED ARCHITECTURE (three sections, ordered by volatility — most-dynamic FIRST):** the POC
+(torenthia-draft.html) proved the visual language but ordered content backwards. Corrected:
+1. **THE EXECUTIVE** (most dynamic, TOP): Thoss Assembly support as a LIVE dial (274/500 now, moves
+   with legislation — not a frozen vote); Thoss public approval; Legat Consul (Rehn) public approval.
+   Both executives, per co-equal design. The gap between Assembly support and public approval is
+   itself a story (winning the chamber, losing the country).
+2. **THE OPEN SLOT** (dynamic, editorial): whatever is contested now; currently the §12.8 formula
+   fight. Comes off the page when it stops mattering. This is what makes the page a narrative
+   instrument, not a fixed dashboard.
+3. **STATES & TERRITORIES** (most stable, BOTTOM): the reconciled 500-seat structural table as
+   reference bedrock — populations/seats change rarely, so it is reference, not headline.
+Rationale: a returning visitor checks what CHANGED, so front-load by volatility.
+
+**POC CORRECTIONS (John, reacting to the proof of concept):**
+- KEEP wholesale: the visual language (dark treatment reads as same-site, vote-tier badges
+  green/yellow/red/unseated, scale bars, derived-always-current note), the reconciled 500-seat table.
+- CUT the Delegation Vote from the stats page ENTIRELY (POC showed it twice — one too many; it should
+  not appear even once). A historical roll call by delegation is EVENT HISTORY (already in news-042),
+  not current state, and splitting by delegation is visually noisy for a recurring surface. Delegation
+  detail lives in the piece that discusses it.
+- The three missing dials (Thoss Assembly support live, Thoss public approval, Rehn public approval)
+  ARE the feature — the POC lacked all three.
+- VERIFY before build: POC cited "Relationship (Article XV)" — confirm Article XV is the
+  statehood/territories article before baking it into a launched feature.
+
+**ANNOUNCEMENT POLICY (binding on all future sessions):** ONE announcement, at launch. After that,
+data changes are NEVER announced or posted — the numbers just shift. Announcing a change destroys the
+artifact (posting "Thoss drops to 258" writes the story the number existed to tell). But DO preserve
+history (prior values, entered/left dates) — an archive lets a reader discover; a post tells them what
+to conclude. Consistent with the silent Preamble and unposted mundanes: the site rewards attention
+rather than demanding it.
+
