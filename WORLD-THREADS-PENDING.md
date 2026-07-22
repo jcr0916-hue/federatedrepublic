@@ -140,6 +140,28 @@ at exactly 500 total Assembly seats with no minimum-seat overrides triggered.
 
 **Totals:** Population 51.8M &middot; Senate 23/24 filled &middot; Assembly 500 seats.
 
+**Expanded scope (John, 13.09 — second pass):** the value is that *data tells story without
+narrative*. Additions to track beyond the static structural table:
+- **Assembly support for the sitting CC** (Thoss currently 274 of 500). The DELTA is the story: a
+  reader seeing 274 -> 258 between pieces infers the §12.8 fight is costing her, with nothing
+  written. Story moves on days we don't publish.
+- **Public polling** — on policies and on public figures. The GAP is a story: Assembly support and
+  public approval diverging means she can be winning the chamber and losing the country, told
+  purely by two numbers side by side.
+- **Population changes per State/Territory**, which is the sleeper: §3.2 apportions Assembly seats
+  by the Webster method, so sustained population change (Lake Varda arrivals landing in Norvane and
+  Varek, Argent Ridge development) eventually MOVES SEATS — and therefore moves the §2.6 absolute-
+  majority threshold itself. The number a Civic Consul needs to survive becomes a function of a
+  migration crisis. The constitution responding mechanically to the story, visible only in the
+  stats table.
+- Rationale John gave for the whole feature: the executive stories, while fun, show only a small
+  piece of a functioning republic of 51.8M. The stats show the whole machine at once.
+
+**THE GOVERNING DISCIPLINE (non-negotiable if built):** once a number is published it BINDS every
+future piece. The ledger must be the source of truth we write FROM, not a record reconciled after
+the fact. Same rule as constitution_data.json: one source, everything derives. Backwards = a
+continuity liability instead of an asset.
+
 **Open design questions, unresolved (pressure-test when build day comes):**
 - Health/audit-standing field: likely its own red/yellow/green status per State/Territory (tied to
   the Statehood Audit mechanism, Corindal's failed-audit case) — same status-color language as
