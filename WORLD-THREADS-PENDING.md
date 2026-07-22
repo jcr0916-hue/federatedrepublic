@@ -207,3 +207,32 @@ history (prior values, entered/left dates) — an archive lets a reader discover
 to conclude. Consistent with the silent Preamble and unposted mundanes: the site rewards attention
 rather than demanding it.
 
+---
+
+## PARKED FEATURE — The Atlas as Expandable Frontier
+
+**Status:** concept, no trigger. Emerges from the homepage-declutter work (torenthia-draft-v3.html):
+"The Nations Around It" moves OFF the homepage and ONTO the larger Tier-1 atlas/world-map page, which
+turns that page from "a bigger map" into "the place you go to STUDY the region." Homepage map = the
+glance; atlas = the study, and it holds the neighbor context (Sunderland, Caldris, Toren headwaters,
+the upstream dam).
+
+**Why it matters beyond decluttering:** empty space on a map is an invitation. An atlas with room in it
+implies everything not yet named — ocean routes, the far side of Caldris, past the northern frontier.
+A reader who senses more world than they've seen comes back. The atlas becomes a FRONTIER, not just a
+reference.
+
+**The community angle (much later, audience-dependent):** the project can't crowdsource Torenthia
+itself — it's rigorous authored canon where every §ref must hold. But the WORLD AROUND Torenthia has no
+such constraint. A visitor-named neighbor with a visitor-sketched history touches no constitution,
+breaks no canon, needs no §-verification — it just fills the frontier. So the atlas is the ONE place the
+project can safely open to participation (name-a-country, contribute-a-neighbor, etc.) without diluting
+the serious core. Rigor stays authored; the edges become shared. A real attachment/retention mechanism
+IF an audience ever exists to use it.
+
+**BUILD-DRIVING FLAG (matters even if participation never happens):** build the atlas DATA-DRIVEN from
+day one — neighbors as data entries (a JSON or world-canon section), page renders from them. Then adding
+a country is adding a RECORD, not editing a page. Costs nothing now, keeps the participation door open,
+and matches the site's existing derive-from-data discipline (constitution_data.json, _data/mapdots.js,
+provnames.js). Same pattern as everything else on the site.
+
