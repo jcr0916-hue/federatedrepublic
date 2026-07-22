@@ -87,3 +87,69 @@ volume warrants — suggested trigger: after the formation beats + §12.8 fight 
 - Current cast size for reference (13.09): 16 recurring named figures. Vael 185 / Carrow 162 /
   Mak 108 / Vend 81 / Sandris 56 / Thoss 44 / Rehn 13 / Sorrel 12 / Hale 8 / Voss 8 / Sarn 7 /
   Sollis 6 / Orin 5 / + new ministers Rews, Casta, Verel (news-043).
+
+---
+
+## PARKED FEATURE — Torenthia Stats (world reference + dynamic dials)
+
+**Status:** concept only, 13.09. Not scheduled, no trigger set. Sibling to the Who's Who (above) —
+together the two ideas are "make the world legible" infrastructure: Who's Who places the PEOPLE,
+Torenthia Stats places the STRUCTURE and tracks the FORTUNES.
+
+**The concept has two halves, meant to share one visual vocabulary:**
+
+1. **Structural/reference data** (static, changes rarely): the 12 States + 4 Territories, with
+   population, Senate seats, and Assembly seats. Relationship taxonomy: four labels describing
+   three real stages — State, Territory, Provisional (from Territory, advancing toward statehood),
+   Provisional (from State, regressing after failed audit — Corindal's case). Senate stays flat at
+   2/State regardless of population (§3.5, untouched by any of this). Assembly seats by Webster
+   method (§3.2, divisor set/adjustable by statute).
+
+2. **Dynamic backend dials** (from the earlier same-session discussion): Thoss's coalition
+   strength and public standing, tracked as an AUTHORED backend ledger (not a live simulation —
+   the number is a note-to-self, the color is what ships) and displayed the same way the
+   State/Territory status indicators already work on the map: red/yellow/green, qualitative gloss
+   on hover, no raw numbers shown to the reader.
+
+**Reference table (divisor-corrected to preserve the already-published Assembly-of-500 facts in
+news-041, news-042 — headline and all — and scenario-the-coalition.html):** same population
+figures as originally drafted, divisor retuned to ~103,600/seat instead of 300,000/seat, landing
+at exactly 500 total Assembly seats with no minimum-seat overrides triggered.
+
+| State | Pop | Senate | Assembly | Relationship |
+|---|---|---|---|---|
+| Harren | 6.2M | 2 | 60 | State |
+| Merath | 5.8M | 2 | 56 | State |
+| Orath | 5.4M | 2 | 52 | State |
+| Aldenmere | 4.9M | 2 | 47 | State |
+| Caldenmere | 4.6M | 2 | 44 | State |
+| Kelvant | 4.1M | 2 | 40 | State |
+| Selvane | 3.6M | 2 | 35 | State |
+| Arvane | 3.3M | 2 | 32 | State |
+| Varek | 2.7M | 2 | 26 | State |
+| Rhovane | 2.2M | 2 | 21 | State |
+| Norvane | 1.6M | 2 | 15 | State |
+| Corindal | 1.1M | 1 (1 vacant, expires Y15) | 11 | Provisional (from State) |
+
+| Territory | Pop | Senate | Assembly | Relationship |
+|---|---|---|---|---|
+| Korda | 3.4M | 0 | 33 | Territory |
+| Morantine | 1.6M | 0 | 15 | Provisional (from Territory) |
+| Solara | 0.9M | 0 | 9 | Provisional (from Territory) |
+| Verdmont | 0.4M | 0 | 4 | Territory |
+
+**Totals:** Population 51.8M &middot; Senate 23/24 filled &middot; Assembly 500 seats.
+
+**Open design questions, unresolved (pressure-test when build day comes):**
+- Health/audit-standing field: likely its own red/yellow/green status per State/Territory (tied to
+  the Statehood Audit mechanism, Corindal's failed-audit case) — same status-color language as
+  everything else, a third use of the vocabulary.
+- Delegation Vote data: keep SEPARATE from this structural table. This table is "who you are, how
+  big you are" (rarely changes); delegation votes are event history ("what you did, on a specific
+  day" — Korda voting entire, Selvane splitting 2-against). Mixing static structure with one-time
+  vote events muddies both. Likely its own growing event-log card.
+
+**STANDING NOTE for whenever this is built:** if the population/divisor model changes again before
+build day, re-check it against news-041/042 and scenario-the-coalition.html's "251 of 500" /
+"274 of 500" facts before finalizing — those three pieces are the load-bearing continuity anchor.
+
