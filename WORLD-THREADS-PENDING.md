@@ -175,6 +175,50 @@ continuity liability instead of an asset.
 build day, re-check it against news-041/042 and scenario-the-coalition.html's "251 of 500" /
 "274 of 500" facts before finalizing — those three pieces are the load-bearing continuity anchor.
 
+**STATE PROFILES — presentation design (John, 13.09, reacting to the Caldenmere/Orath sandbox
+experiments — the frameworks themselves remain SANDBOX ONLY, not canon):**
+
+Three-tier presentation, same shape as the rest of the site:
+1. **Stats table row** (the glance) — a state with a built-out government gets a small marker
+   (e.g. a "Profile" tag) next to its name. Most states never get one; it's as selective as the
+   Featured shelf on Scenarios.
+2. **A full State Profile page** (the study) — reuses the Diagrams picker-then-stage pattern:
+   cards across the top (Executive / Legislature / Judiciary / Local Government / Rights &
+   Economy), click one, it opens below. No new interaction language to learn.
+3. **Dramatized story content** (the payoff) — a Torenthian piece, a scenario, an NRS filing that
+   USES the state's structure rather than explains it, cross-linked to the profile the same way
+   news-041/042 link to the Formation scenario.
+
+**Register on the way in:** sandbox docs are bible material (dry, bulleted, internal). A published
+profile reads like a Quick Sheet — structural and precise, actual site prose, not an operating-
+manual bullet list.
+
+**Build principles (cheap to decide now, expensive to retrofit):**
+- Build DATA-DRIVEN from day one, same discipline as constitution_data.json / mapdots.js /
+  provnames.js — a per-state data source the page renders from, so fixing a wrong citation later
+  is a data edit, not a rewrite.
+- Every federal citation gets RE-VERIFIED against constitution_data.json before publish. Both
+  sandbox docs have real, fixable errors already found (Caldenmere: none flagged yet; Orath: §2.1
+  cited for citizenship, but the real §2.1 is the Legat Consul's domain and term; §VI.6.1 and
+  §IV.3 don't exist anywhere and use a citation FORMAT the real document doesn't — the tell that a
+  smaller model fabricated a plausible-sounding cite once it ran out of real material). Population
+  figures also need reconciling against the parked Torenthia Stats table (Orath sandbox: ~3.2M;
+  stats table: 5.4M).
+- Launching this feature is a genuine ONE-TIME "Feature:" announcement — distinct from the Stats
+  page's own never-announce-a-change rule. Keep the two policies separate; don't conflate them.
+
+**GOVERNING PRINCIPLE — introduce a state like a character, not like a database entry (John,
+13.09):** a state's profile can be fully BUILT long before it's REVEALED. What's gated is
+discoverability — the Stats-table marker and any cross-link — not the writing. A state becomes
+visible only when the live story gives a reader a reason to want to know more about it. Same
+instinct as the silent Preamble, the unposted mundanes, and the rotating "Newest" star card on
+Scenarios, applied to a new object type. A live candidate trigger already exists: the §12.8 fight's
+"advantaged states" pushing back on formula reform is a natural entry point for a wealthy,
+institutionally proud state (Caldenmere-shaped) to earn its debut; Orath's likelier trigger is
+something closer to its own texture (a cooperative rights dispute, a water-access question) rather
+than the fiscal fight.
+
+
 **SETTLED ARCHITECTURE (three sections, ordered by volatility — most-dynamic FIRST):** the POC
 (torenthia-draft.html) proved the visual language but ordered content backwards. Corrected:
 1. **THE EXECUTIVE** (most dynamic, TOP): Thoss Assembly support as a LIVE dial (274/500 now, moves
