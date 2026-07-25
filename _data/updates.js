@@ -14,6 +14,20 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Nobody has found anything wrong with it",
+    blurb: "A handful of states doing well under the current equalization formula are asking why a full review is happening now — absent any Executive Monitor finding the mechanism has failed.",
+    href: "torenthia-news-045.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
+    title: "The question nobody running can answer",
+    blurb: "Every Legat Consul candidate keeps getting asked who will balance the new Civic Consul. The honest answer: the office can't. Four candidates handled that differently — only one named the real check.",
+    href: "torenthia-news-044.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Thoss names her Council — and the receipt",
     blurb: "Eleven days after the vote, her ministers publish to the record. The surprise isn't who's on the list — it's how she intends to pay her debts. \u00a712.8 heads back to the floor, in public.",
     href: "torenthia-news-043.html",
