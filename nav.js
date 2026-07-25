@@ -9,6 +9,7 @@
     { href: "scenarios.html",             label: "Scenarios" },
     { href: "quicksheets.html",           label: "Quick Sheets" },
     { href: "torenthia.html",             label: "The World" },
+    { href: "atlas.html",                 label: "Atlas" },
     { href: "diagrams.html",              label: "Diagrams" },
     { href: "constitutional-history.html", label: "Constitutional History" },
     { href: "sources.html",               label: "Sources" },

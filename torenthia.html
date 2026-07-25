@@ -185,6 +185,16 @@
     .sblock-vol{display:none}
     .stbl-char{display:none}
   }
+
+  /* atlas link card */
+  .atlas-link{display:block;text-decoration:none;border:1px solid var(--border);border-radius:3px;background:var(--cream2);padding:1.4rem 1.6rem;transition:border-color .2s,background .2s}
+  .atlas-link:hover{border-color:var(--gold);background:#f3eee1}
+  .atlas-link-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--navy);margin-bottom:.4rem}
+  .atlas-link-desc{font-size:.85rem;color:var(--muted);line-height:1.7;max-width:640px}
+
+  .stbl-link{background:none;border:none;padding:0;margin:0;cursor:pointer;text-align:left;font:inherit;color:#f0ead8;border-bottom:1px dotted rgba(201,168,76,.5);transition:color .15s,border-color .15s}
+  .stbl-link:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  .t-state.map-flash{fill:var(--gold)!important;font-weight:700}
 </style>
 </head>
 <body>
@@ -348,50 +358,17 @@
       </a>
     </div>
 
-    <!-- ── NEIGHBORING NATIONS ── -->
+    <!-- ── THE ATLAS (neighbors moved to atlas.html) ── -->
     <div class="section-header">
       <div class="section-eye">Neighboring Sovereignties</div>
       <h2 class="section-title">The Nations Around It</h2>
     </div>
-
-    <div class="nations-grid">
-      <div class="nation-card nc-caldris">
-        <div class="nation-name">Caldris</div>
-        <div class="nation-tag">North &amp; Northeast · Upstream Power · ~85 million</div>
-        <div class="nation-body">The Republic's largest neighbor. Caldris controls the Toren River headwaters — Torenthia is downstream. It also holds economic investment in Sunderland, giving it interests in the eastern war the Republic cannot ignore.</div>
-        <div class="nation-tension"><strong>Now:</strong> Proposed upstream dam infrastructure on the Toren. Treaty renewal active. The water talks and the Sunderland situation are not separate files.</div>
+    <a class="atlas-link" href="atlas.html">
+      <div class="atlas-link-body">
+        <div class="atlas-link-title">The Atlas &rarr;</div>
+        <div class="atlas-link-desc">Caldris upstream, Sunderland fracturing, Marisvia across the water, Valedon in the south, Seronne between. The region the Republic sits inside &mdash; and the part of the map nobody has needed yet.</div>
       </div>
-      <div class="nation-card nc-marisvia">
-        <div class="nation-name">Marisvia</div>
-        <div class="nation-tag">West · Maritime Democracy · Across the Western Sea</div>
-        <div class="nation-body">The Republic's closest peer in constitutional values. They need each other — on trade, on Sunderland refugee coordination — more than either fully acknowledges.</div>
-        <div class="nation-tension"><strong>Now:</strong> Historical claims on Solara Territory unresolved. Refugee burden-sharing from the eastern war is an active coordination problem.</div>
-      </div>
-      <div class="nation-card nc-valedon">
-        <div class="nation-name">Valedon</div>
-        <div class="nation-tag">South · ~25–30 million · The Nation That Almost Joined</div>
-        <div class="nation-body">Eighteen years ago, Valedon's citizens voted to join the Republic. The parliament rejected the result. The pro-Republic faction believes they already voted to join and were denied.</div>
-        <div class="nation-tension"><strong>Now:</strong> Whether a citizen referendum constitutes a constructive §15.6 petition has never been put to the SC. Several parties are waiting to see who moves first.</div>
-      </div>
-      <div class="nation-card nc-sunderland">
-        <div class="nation-name">Sunderland</div>
-        <div class="nation-tag">East · Authoritarian · Fracturing · At War</div>
-        <div class="nation-body">A nation coming apart. Civil conflict has produced refugees crossing Lake Varda for two years. Naval vessels have been using the lake as a supply route through contested waters.</div>
-        <div class="nation-tension"><strong>Now:</strong> Three LC diplomatic notes on vessel incursions. Coast guard in Rhondel on standing emergency protocols. The classification ceiling on the LC's intelligence assessment is approaching.</div>
-      </div>
-      <div class="nation-card nc-seronne">
-        <div class="nation-name">Seronne</div>
-        <div class="nation-tag">Southeast · ~5–8 million · Buffer State</div>
-        <div class="nation-body">Small, diplomatically sophisticated, deliberately ambiguous. Has survived between larger powers for two centuries by being useful to everyone. Its northwestern corner touches Lake Varda.</div>
-        <div class="nation-tension"><strong>Now:</strong> Quiet inquiries about §15.6 incorporation — not because they want to join, but to signal to Sunderland that they have options.</div>
-      </div>
-      <div class="nation-card nc-solara">
-        <div class="nation-name">Solara Territory</div>
-        <div class="nation-tag">Western Sea Island · Distinct Culture · Torenthian Territory</div>
-        <div class="nation-body">An island with its own language and a sun-liturgical history. Chose to join the Republic as a Territory. The oldest continuously inhabited settlement in Torenthian territory, Ostara, is eight hundred years old.</div>
-        <div class="nation-tension"><strong>Now:</strong> Statehood debate active within Solara itself. Has submitted a formal bid to host the seat of government under §18.2. Marisvia has never accepted the island's choice.</div>
-      </div>
-    </div>
+    </a>
 
     <!-- ── TORENTHIA STATS ── -->
     <div class="stats-band">
@@ -478,7 +455,7 @@
               <tbody>
                 {%- for s in stats.states %}
                 <tr>
-                  <td class="c-name"><span class="stbl-name">{{ s.name }}</span><span class="stbl-char">{{ s.char | safe }}</span></td>
+                  <td class="c-name"><button class="stbl-name stbl-link" data-place="{{ s.name | lower }}" onclick="showOnMap('{{ s.name | lower }}')" title="Show {{ s.name }} on the map">{{ s.name }}</button><span class="stbl-char">{{ s.char | safe }}</span></td>
                   <td class="c-num">{{ s.pop }}M</td>
                   <td class="c-num">{{ s.senate }}{% if s.senateNote %}<span class="stbl-fn" title="{{ s.senateNote }}">*</span>{% endif %}</td>
                   <td class="c-num">{{ s.assembly }}</td>
@@ -489,7 +466,7 @@
                 <tr class="stbl-sep"><td colspan="6">Territories</td></tr>
                 {%- for s in stats.territories %}
                 <tr>
-                  <td class="c-name"><span class="stbl-name">{{ s.name }}</span><span class="stbl-char">{{ s.char | safe }}</span></td>
+                  <td class="c-name"><button class="stbl-name stbl-link" data-place="{{ s.name | lower }}" onclick="showOnMap('{{ s.name | lower }}')" title="Show {{ s.name }} on the map">{{ s.name }}</button><span class="stbl-char">{{ s.char | safe }}</span></td>
                   <td class="c-num">{{ s.pop }}M</td>
                   <td class="c-num">{{ s.senate }}</td>
                   <td class="c-num">{{ s.assembly }}</td>
@@ -529,9 +506,9 @@
     function path(pts,cls,wd){const p=document.createElementNS(NS,'path');p.setAttribute('d','M'+pts.map(q=>q[0]+' '+q[1]).join('L'));p.setAttribute('class',cls);p.setAttribute('stroke-width',wd);svg.appendChild(p);}
     D.borders.state.forEach(l=>path(l,'b-halo',5));D.borders.state.forEach(l=>path(l,'b-st',2.6));
     D.borders.national.forEach(l=>path(l,'b-halo',7));D.borders.national.forEach(l=>path(l,'b-nat',3));
-    function text(str,x,y,cls,size){const t=document.createElementNS(NS,'text');t.setAttribute('x',x);t.setAttribute('y',y);t.setAttribute('text-anchor','middle');t.setAttribute('class',cls);t.setAttribute('font-size',size);t.textContent=str;svg.appendChild(t);}
+    function text(str,x,y,cls,size){const t=document.createElementNS(NS,'text');t.setAttribute('x',x);t.setAttribute('y',y);t.setAttribute('text-anchor','middle');t.setAttribute('class',cls);t.setAttribute('font-size',size);t.textContent=str;svg.appendChild(t);return t;}
     const L=D.labels;
-    Object.entries(L.states).forEach(([n,[x,y]])=>{const nm=n.replace(' (S)','');text(nm,x,y+8,'t-state',nm.includes('TERRITORY')?23:25);});
+    Object.entries(L.states).forEach(([n,[x,y]])=>{const nm=n.replace(' (S)','');const el=text(nm,x,y+8,'t-state',nm.includes('TERRITORY')?23:25);if(el)el.setAttribute('data-place',nm.replace(' TERRITORY','').trim().toLowerCase());});
     text('THE FEDERATED REPUBLIC OF',L.country_label[0],L.country_label[1]-24,'t-country',17);
     text('T O R E N T H I A',L.country_label[0],L.country_label[1]+10,'t-country',36);
     Object.entries(L.neighbors).forEach(([n,[x,y]])=>text(n,x,y+8,'t-neighbor',n==='CALDRIS'||n==='VALEDON'?31:23));
@@ -592,5 +569,19 @@
   });
   </script>
   <script src="nav.js"></script>
+
+  <script>
+  /* Stats table -> map: scroll to the living map and flash the named place's label. */
+  function showOnMap(place){
+    var map = document.querySelector('.map-section') || document.getElementById('mapOverlay');
+    if(map) map.scrollIntoView({behavior:'smooth', block:'center'});
+    var el = document.querySelector('#mapOverlay [data-place="'+place+'"]');
+    if(!el) return;
+    el.classList.remove('map-flash');
+    void el.getBBox();            // force reflow so a repeat click re-triggers
+    el.classList.add('map-flash');
+    setTimeout(function(){ el.classList.remove('map-flash'); }, 2600);
+  }
+  </script>
 </body>
 </html>

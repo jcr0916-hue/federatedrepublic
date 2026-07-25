@@ -253,9 +253,20 @@ rather than demanding it.
 
 ---
 
-## PARKED FEATURE — The Atlas as Expandable Frontier
+## BUILT — The Atlas as Expandable Frontier
 
-**Status:** concept, no trigger. Emerges from the homepage-declutter work (torenthia-draft-v3.html):
+**Status:** BUILT and live (atlas.html, Y13 M9 / real-time July 2026). Neighbors moved off the World
+hub into a data-driven page rendering from `_data/atlas.js` — adding a nation is adding a RECORD, never
+editing the page, exactly as the build-driving flag required. The World hub now carries a link card in
+the old section's place. Nav updated. The "Beyond the Edge" closing block states the frontier framing
+in-world (unmapped ocean routes west of Marisvia, country beyond Caldris, land north of the Alps), so
+the invitation exists on the page rather than only in this doc.
+
+REMAINING (unbuilt, still parked): the community participation angle below — name-a-country /
+contribute-a-neighbor. The data-driven foundation is now in place to support it whenever an audience
+exists. Original concept notes retained below for that reason.
+
+**Original concept, no trigger:** Emerges from the homepage-declutter work (torenthia-draft-v3.html):
 "The Nations Around It" moves OFF the homepage and ONTO the larger Tier-1 atlas/world-map page, which
 turns that page from "a bigger map" into "the place you go to STUDY the region." Homepage map = the
 glance; atlas = the study, and it holds the neighbor context (Sunderland, Caldris, Toren headwaters,

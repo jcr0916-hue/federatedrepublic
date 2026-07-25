@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Atlas — The Federated Republic</title>
+  <meta name="description" content="The world beyond the Republic — the nations around Torenthia, the pressures between them, and the space still unmapped.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Atlas">
+  <meta property="og:description" content="The world beyond the Republic — the nations around Torenthia, the pressures between them, and the space still unmapped.">
+  <meta property="og:url" content="https://thefederatedrepublic.org/atlas.html">
+  <meta property="og:site_name" content="The Federated Republic">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Atlas">
+  <meta name="twitter:description" content="The world beyond the Republic — the nations around Torenthia, the pressures between them, and the space still unmapped.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .page-header{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:2px solid var(--navy)}
+    .page-header h1{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--navy);margin-bottom:0.75rem;line-height:1.1}
+    .page-intro{font-size:1rem;color:var(--muted);line-height:1.85;max-width:720px}
+    .page-intro p+p{margin-top:1rem}
+
+    /* ── the map ── */
+    .atlas-map{margin:0 0 3.5rem;border:1px solid var(--border);border-radius:3px;overflow:hidden;background:var(--navy2)}
+    .atlas-map img{display:block;width:100%;height:auto}
+    .atlas-map-cap{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);padding:.7rem .9rem;background:var(--cream2);border-top:1px solid var(--border)}
+
+    /* ── section furniture ── */
+    .atlas-section{margin-bottom:3.5rem}
+    .section-label{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.9rem}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--navy);margin-bottom:.7rem;line-height:1.2}
+    .section-intro{font-size:0.95rem;color:var(--muted);line-height:1.8;margin-bottom:2rem;max-width:720px}
+
+    /* ── nation entries ── */
+    .nation{padding:1.6rem 0;border-bottom:1px solid var(--border)}
+    .nation:first-of-type{border-top:1px solid var(--border)}
+    .nation-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.45rem}
+    .nation-nm{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--navy);line-height:1.1}
+    .nation-rg{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
+    .nation-tg{font-size:.75rem;color:var(--muted);margin-bottom:.7rem}
+    .nation-bd{font-size:.95rem;color:var(--text);line-height:1.8;max-width:720px}
+    .nation-now{margin-top:.9rem;padding:.75rem 1rem;background:var(--cream2);border-left:3px solid var(--gold);font-size:.85rem;color:var(--text);line-height:1.7;max-width:720px}
+    .nation-now strong{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:.25rem}
+
+    /* ── the frontier note ── */
+    .frontier{margin-top:1rem;padding:1.8rem 2rem;background:var(--navy2);border-radius:3px;color:#c2cbd8}
+    .frontier-eye{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+    .frontier-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:#f0ead8;margin-bottom:.7rem}
+    .frontier p{font-size:.9rem;line-height:1.8;margin:0 0 .8rem;max-width:680px}
+    .frontier p:last-child{margin-bottom:0}
+
+    .backlink{display:inline-block;margin-top:.5rem;font-family:'Jost',sans-serif;font-size:.85rem;color:var(--gold2);text-decoration:none;border-bottom:1px solid rgba(168,132,58,.4)}
+    .backlink:hover{color:var(--navy)}
+
+    @media(max-width:700px){
+      .page-header h1{font-size:2.1rem}
+      .frontier{padding:1.4rem 1.2rem}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div id="site-nav"></div>
+
+  <main class="fr-page" id="main-content">
+
+    <header class="page-header">
+      <h1>The Atlas</h1>
+      <div class="page-intro">
+        <p>Torenthia is a specific nation in a specific place, and the place has neighbors. Some of them are friendly, one of them is coming apart, and one of them holds the headwaters of the river the Republic drinks from.</p>
+        <p>This is the study. The <a href="torenthia.html">living map</a> on the World page is the glance &mdash; where things are happening right now. Here is the region those events sit inside.</p>
+      </div>
+    </header>
+
+    <div class="atlas-map">
+      <img src="world-map-tier1.webp" alt="Map of Torenthia and the surrounding region, showing neighboring nations, the Western Sea, Lake Varda, and the Toren River system." loading="lazy">
+      <div class="atlas-map-cap">The region at Year 13 &middot; Torenthia and its neighbors</div>
+    </div>
+
+    <section class="atlas-section">
+      <span class="section-label">Neighboring Sovereignties</span>
+      <h2 class="section-title">The Nations Around It</h2>
+      <p class="section-intro">Five sovereign neighbors, each with its own relationship to the Republic &mdash; and each with something currently unresolved. The <em>Now</em> line on each entry is the live situation, and it changes as the world does.</p>
+
+      {%- for n in atlas.nations %}
+      <div class="nation" id="{{ n.key }}">
+        <div class="nation-head">
+          <span class="nation-nm">{{ n.name }}</span>
+          <span class="nation-rg">{{ n.region }}</span>
+        </div>
+        <div class="nation-tg">{{ n.tag | safe }}</div>
+        <div class="nation-bd">{{ n.body | safe }}</div>
+        <div class="nation-now"><strong>Now</strong>{{ n.now | safe }}</div>
+      </div>
+      {%- endfor %}
+    </section>
+
+    <section class="atlas-section">
+      <span class="section-label">Within the Republic, Contested Without</span>
+      <h2 class="section-title">The Island in the Middle</h2>
+      <p class="section-intro">Not a foreign sovereignty &mdash; a Torenthian Territory that sits in contested water, which is why it belongs on the atlas rather than only in the Republic's own tables.</p>
+
+      {%- for n in atlas.contested %}
+      <div class="nation" id="{{ n.key }}">
+        <div class="nation-head">
+          <span class="nation-nm">{{ n.name }}</span>
+          <span class="nation-rg">{{ n.region }}</span>
+        </div>
+        <div class="nation-tg">{{ n.tag | safe }}</div>
+        <div class="nation-bd">{{ n.body | safe }}</div>
+        <div class="nation-now"><strong>Now</strong>{{ n.now | safe }}</div>
+      </div>
+      {%- endfor %}
+    </section>
+
+    <section class="atlas-section">
+      <div class="frontier">
+        <div class="frontier-eye">Beyond the Edge</div>
+        <div class="frontier-title">The Map Is Not Finished</div>
+        <p>What is drawn here is what the Republic has had reason to name. There are ocean routes west of Marisvia that appear on no chart in Verentum, country beyond the far side of Caldris that Torenthian maps mark only as a direction, and land north of the frontier that the Alps have kept nobody's business but its own.</p>
+        <p>The Republic's own law is settled and exacting &mdash; every provision of the Constitution holds or it does not. The world outside its borders is under no such obligation. It is simply the part of the map nobody has needed yet.</p>
+      </div>
+      <a class="backlink" href="torenthia.html">&larr; Back to the living map</a>
+    </section>
+
+  </main>
+
+  {% include "footer.njk" %}
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () =>
+        navigator.serviceWorker.register('/sw.js')
+          .catch(() => {}) // fail silently if blocked
+      );
+    }
+  </script>
+  <script src="nav.js"></script>
+</body>
+</html>
