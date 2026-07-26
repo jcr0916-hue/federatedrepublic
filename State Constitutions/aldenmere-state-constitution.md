@@ -4,7 +4,7 @@
 
 ## **PREAMBLE**
 
-We, the people of Aldenmere, in order to establish justice, ensure domestic tranquility, promote the general welfare, provide for the common defense, and secure the blessings of liberty and self-governance for ourselves and our posterity, do ordain and establish this Constitution for the Territory of Aldenmere.
+We, the people of Aldenmere, in order to establish justice, ensure domestic tranquility, promote the general welfare, provide for the common defense, and secure the blessings of liberty and self-governance for ourselves and our posterity, do ordain and establish this Constitution for the State of Aldenmere.
 
 ---
 
@@ -24,7 +24,7 @@ No person shall be deprived of life, liberty, or property without due process of
 
 ### §1.4 — Freedom of Expression and Assembly
 
-The rights of speech, press, peaceful assembly, and petition may not be abridged. The Territorial Legislature may regulate the time, place, and manner of assembly for compelling public safety purposes, but may not discriminate on the basis of viewpoint.
+The rights of speech, press, peaceful assembly, and petition may not be abridged. The State Legislature may regulate the time, place, and manner of assembly for compelling public safety purposes, but may not discriminate on the basis of viewpoint.
 
 ---
 
@@ -49,10 +49,10 @@ No person may serve more than two consecutive terms as Governor. A person who ha
 The Governor holds authority over:
 - The territorial civil service and all executive agencies;
 - Preparation and submission of the annual territorial budget to the Legislature;
-- Faithful execution of all laws enacted by the Territorial Legislature and all applicable federal laws;
+- Faithful execution of all laws enacted by the State Legislature and all applicable federal laws;
 - Appointment of department heads, agency directors, and members of boards and commissions, subject to Senate confirmation as provided in this Constitution;
 - Negotiation of compacts and agreements with other States, Territories, and the federal government, subject to legislative ratification;
-- Command of the Territorial Guard, subject to federal authority under Article XIV of the federal Constitution.
+- Command of the State Guard, subject to federal authority under Article XIV of the federal Constitution.
 
 ### §2.3 — Executive Departments
 
@@ -114,7 +114,7 @@ Assembly districts are redrawn every ten years following the territorial census.
 - Reasonably compact;
 - Drawn without intentional dilution of minority voting power.
 
-The Territorial Redistricting Commission, established under §3.7, draws all Assembly district maps.
+The State Redistricting Commission, established under §3.7, draws all Assembly district maps.
 
 **(c) Term**  
 Assembly members serve two-year terms. No term limits apply.
@@ -152,7 +152,7 @@ The full text of every bill must be published and available to the public for at
 ### §3.5 — Fiscal Responsibility
 
 **(a) Balanced Budget Requirement**  
-The Legislature must pass a balanced budget annually. Total appropriations may not exceed projected revenue as certified by the Territorial Auditor.
+The Legislature must pass a balanced budget annually. Total appropriations may not exceed projected revenue as certified by the State Auditor.
 
 **(b) Emergency Deficit Spending**  
 The Legislature may authorize deficit spending only:
@@ -162,20 +162,20 @@ The Legislature may authorize deficit spending only:
 - With a published plan for return to balance.
 
 **(c) Budget Deadline**  
-The Legislature must pass the annual budget before the start of the fiscal year. Where the Legislature fails to do so, the prior year's budget continues at the same funding levels, adjusted for inflation as certified by the Territorial Auditor, until a new budget is enacted.
+The Legislature must pass the annual budget before the start of the fiscal year. Where the Legislature fails to do so, the prior year's budget continues at the same funding levels, adjusted for inflation as certified by the State Auditor, until a new budget is enacted.
 
 ### §3.6 — Confirmation Authority
 
 The Senate holds exclusive authority to confirm or reject:
 - All executive department Secretaries (simple majority required);
 - All judges of the Supreme Court and appellate courts (2/3 majority required);
-- The Territorial Auditor (2/3 majority required);
+- The State Auditor (2/3 majority required);
 - Members of independent boards and commissions as specified by statute.
 
-### §3.7 — Territorial Redistricting Commission
+### §3.7 — State Redistricting Commission
 
 **(a) Composition**  
-The Territorial Redistricting Commission consists of seven members:
+The State Redistricting Commission consists of seven members:
 - Two appointed by the Governor;
 - Two appointed by the Speaker of the Assembly;
 - Two appointed by the President of the Senate;
@@ -187,7 +187,7 @@ No member may be a current elected official, lobbyist, or party official. Member
 The Commission draws all Assembly and Senate district maps following each decennial census. Maps must comply with the criteria established in §3.2(b). The Commission publishes draft maps for public comment before final adoption.
 
 **(c) Judicial Review**  
-Any citizen may challenge an adopted map before the Territorial Supreme Court within 30 days of adoption on the grounds that the map violates the criteria of §3.2(b).
+Any citizen may challenge an adopted map before the State Supreme Court within 30 days of adoption on the grounds that the map violates the criteria of §3.2(b).
 
 ---
 
@@ -252,27 +252,27 @@ The courts of Aldenmere have authority to declare legislative acts, executive or
 
 ### §5.1 — Taxing Power
 
-The Legislature holds exclusive authority to levy taxes, fees, duties, and assessments. All revenue collected by the Territory is deposited into the Territorial Treasury.
+The Legislature holds exclusive authority to levy taxes, fees, duties, and assessments. All revenue collected by the State is deposited into the State Treasury.
 
 ### §5.2 — Appropriations
 
-No money may be withdrawn from the Territorial Treasury except by legislative appropriation enacted through the ordinary legislative process.
+No money may be withdrawn from the State Treasury except by legislative appropriation enacted through the ordinary legislative process.
 
 ### §5.3 — Debt and Borrowing
 
 **(a) General Obligation Bonds**  
-The Territory may issue general obligation bonds for capital projects with 2/3 approval of both chambers of the Legislature.
+The State may issue general obligation bonds for capital projects with 2/3 approval of both chambers of the Legislature.
 
 **(b) Debt Ceiling**  
-Total outstanding territorial debt may not exceed 10% of the Territory's annual Gross Domestic Product as certified by the Territorial Auditor.
+Total outstanding territorial debt may not exceed 10% of the State's annual Gross Domestic Product as certified by the State Auditor.
 
 **(c) Voter Approval**  
 General obligation bonds exceeding $100 million (adjusted for inflation every five years) require approval by simple majority in a territorial referendum.
 
-### §5.4 — The Territorial Auditor
+### §5.4 — The State Auditor
 
 **(a) Selection**  
-The Territorial Auditor is selected by the Legislature from a pool of qualified candidates maintained by the Federated Republic's Legislative Monitor, confirmed by 2/3 vote of both chambers, and serves a single non-renewable term of six years.
+The State Auditor is selected by the Legislature from a pool of qualified candidates maintained by the Federated Republic's Legislative Monitor, confirmed by 2/3 vote of both chambers, and serves a single non-renewable term of six years.
 
 **(b) Independence**  
 The Auditor may be removed only for cause by 2/3 vote of both chambers. The Auditor's appropriation may not be reduced below the prior year's inflation-adjusted level without 2/3 vote of both chambers.
@@ -298,7 +298,7 @@ The Legislature shall by statute establish a framework for county and municipal 
 ### §6.2 — Fiscal Equalization
 
 **(a) Obligation**  
-The Territory shall provide fiscal equalization transfers to counties and municipalities to ensure reasonable capacity to deliver basic services, including public safety, infrastructure maintenance, and local administration.
+The State shall provide fiscal equalization transfers to counties and municipalities to ensure reasonable capacity to deliver basic services, including public safety, infrastructure maintenance, and local administration.
 
 **(b) Formula**  
 The equalization formula is established by statute and must be based on:
@@ -329,7 +329,7 @@ The Legislature must appropriate funds sufficient to maintain the public school 
 
 ### §7.4 — Higher Education
 
-The Territory shall maintain at least one public university and one public community college system, accessible to all residents at reasonable cost.
+The State shall maintain at least one public university and one public community college system, accessible to all residents at reasonable cost.
 
 ---
 
@@ -337,11 +337,11 @@ The Territory shall maintain at least one public university and one public commu
 
 ### §8.1 — Healthcare Access
 
-The Territory shall provide access to healthcare services for all residents consistent with the social state obligations of the Federated Republic under Article XII of the federal Constitution.
+The State shall provide access to healthcare services for all residents consistent with the social state obligations of the Federated Republic under Article XII of the federal Constitution.
 
 ### §8.2 — Social Assistance
 
-The Territory shall provide social assistance sufficient to maintain basic material conditions for all residents, including:
+The State shall provide social assistance sufficient to maintain basic material conditions for all residents, including:
 - Emergency housing assistance;
 - Food security programs;
 - Income support for persons unable to work due to disability, age, or caregiving responsibilities.
@@ -356,7 +356,7 @@ The Legislature must appropriate funds sufficient to fulfill the obligations of 
 
 ### §9.1 — Environmental Rights
 
-All persons in Aldenmere hold the right to a clean and healthful environment. The Territory may not cause or permit environmental harm to persons within its jurisdiction through its own actions or through the actions of those it licenses.
+All persons in Aldenmere hold the right to a clean and healthful environment. The State may not cause or permit environmental harm to persons within its jurisdiction through its own actions or through the actions of those it licenses.
 
 ### §9.2 — Environmental Protection Framework
 
@@ -386,7 +386,7 @@ Petition signed by 10% of registered voters, followed by ratification in a terri
 
 ### §10.2 — Effective Date
 
-An amendment takes effect immediately upon certification of the referendum result by the Territorial Elections Commission.
+An amendment takes effect immediately upon certification of the referendum result by the State Elections Commission.
 
 ---
 
