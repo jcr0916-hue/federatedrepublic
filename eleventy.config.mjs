@@ -20,11 +20,28 @@ export default function (eleventyConfig) {
       // worldDate is "YY.MM" as a STRING — quoted in the front matter on purpose.
       // Unquoted, YAML reads 13.09 as the float 13.09 and 13.10 as 13.1, which sorts
       // Month 10 BEFORE Month 9. String compare on zero-padded "13.09" is correct.
-      .sort((a, b) =>
-        a.data.worldDate === b.data.worldDate
-          ? a.inputPath.localeCompare(b.inputPath)
-          : a.data.worldDate.localeCompare(b.data.worldDate)
-      )
+      //
+      // TIEBREAK ON worldSeq, NOT FILENAME. worldDate is month-granular, so every piece
+      // published in the same month ties. The old tiebreak was inputPath, and since
+      // "news" < "nrs" alphabetically, reversing for display put EVERY nrs piece ahead of
+      // EVERY news piece in the same month — which buried news-045 behind two older NRS
+      // filings on both the World carousel and the Record.
+      //
+      // worldSeq is a global publication counter, backfilled once from git first-commit
+      // order and set on every new piece thereafter. Deliberately NOT derived from git at
+      // build time: hosts that shallow-clone would silently lose the history and fall back
+      // to the broken alphabetical order with no visible failure.
+      //
+      // Files missing worldSeq sort last within their month rather than crashing the build.
+      .sort((a, b) => {
+        if (a.data.worldDate !== b.data.worldDate)
+          return a.data.worldDate.localeCompare(b.data.worldDate);
+        const as = a.data.worldSeq, bs = b.data.worldSeq;
+        if (typeof as === "number" && typeof bs === "number") return as - bs;
+        if (typeof as === "number") return -1;
+        if (typeof bs === "number") return 1;
+        return a.inputPath.localeCompare(b.inputPath);
+      })
   );
 
 
