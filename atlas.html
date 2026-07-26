@@ -62,7 +62,19 @@
       .page-header h1{font-size:2.1rem}
       .frontier{padding:1.4rem 1.2rem}
     }
-  </style>
+  
+    /* ── the Republic hotspot (carried from the original atlas page) ── */
+    .atlas-map .frame{position:relative;line-height:0}
+    .hotspot{position:absolute;transform:translate(-50%,-50%);cursor:pointer;background:none;border:none;padding:22px}
+    .hs-dot{position:relative;display:block;width:11px;height:11px;border-radius:50%;background:var(--gold);border:2px solid rgba(255,255,255,.85);box-shadow:0 0 8px rgba(201,168,76,.9)}
+    .hs-ring{position:absolute;left:50%;top:50%;width:11px;height:11px;border-radius:50%;border:2px solid var(--gold);transform:translate(-50%,-50%);animation:hsRing 2.4s infinite ease-out;pointer-events:none}
+    .hs-ring.r2{animation-delay:1.2s}
+    .hs-label{position:absolute;left:34px;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.22em;color:#e9ddba;text-shadow:0 1px 6px rgba(0,0,0,.8);border-bottom:1px solid rgba(201,168,76,.6);padding-bottom:2px}
+    .hs-label::before{content:"";position:absolute;left:-24px;top:50%;width:20px;height:1px;background:rgba(201,168,76,.6)}
+    @keyframes hsRing{0%{transform:translate(-50%,-50%) scale(1);opacity:.85}100%{transform:translate(-50%,-50%) scale(4.2);opacity:0}}
+    @media(prefers-reduced-motion:reduce){.hs-ring{animation:none;opacity:0}}
+    @media(max-width:700px){.hs-label{font-size:.7rem;letter-spacing:.14em;left:26px}}
+</style>
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -79,8 +91,15 @@
     </header>
 
     <div class="atlas-map">
-      <img src="world-map-tier1.webp" alt="Map of Torenthia and the surrounding region, showing neighboring nations, the Western Sea, Lake Varda, and the Toren River system." loading="lazy">
-      <div class="atlas-map-cap">The region at Year 13 &middot; Torenthia and its neighbors</div>
+      <div class="frame">
+        <img src="world-map-tier1.webp" alt="World map. Torenthia's region is marked on the western coast of the crescent continent." onerror="this.onerror=null;this.src='world-map-tier1.jpg'">
+        <button class="hotspot" id="hotspot" aria-label="Return to the Federated Republic">
+          <span class="hs-ring"></span><span class="hs-ring r2"></span>
+          <span class="hs-dot"></span>
+          <span class="hs-label">THE FEDERATED REPUBLIC</span>
+        </button>
+      </div>
+      <div class="atlas-map-cap">The Known World &middot; Select the Republic to return to the living map</div>
     </div>
 
     <section class="atlas-section">
@@ -141,6 +160,19 @@
       );
     }
   </script>
+  
+  <script src="map-data.js"></script>
+  <script>
+  (function(){
+    var T1 = (window.MAP_DATA && MAP_DATA.tier1) || null;
+    var hs = document.getElementById('hotspot');
+    if(!T1 || !hs) return;
+    hs.style.left = (T1.hotspot.x / T1.w * 100) + '%';
+    hs.style.top  = (T1.hotspot.y / T1.h * 100) + '%';
+    hs.addEventListener('click', function(){ window.location.href = 'torenthia.html'; });
+  })();
+  </script>
+
   <script src="nav.js"></script>
 </body>
 </html>
