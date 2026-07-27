@@ -359,3 +359,49 @@ committing to the full build -- confirm the interaction feels clean rather than 
 **Sequencing:** this cannot be built well without the data-driven glossary conversion happening
 first -- term-marking has to run off a clean term-to-definition data file, not scraped HTML. That
 conversion is now this feature's actual prerequisite, not just a nice-to-have alongside it.
+
+
+---
+
+## PARKED CHARACTERS — The Three Monitor Generals (John, 13.09)
+
+**Status:** names and portrait prompts decided, backstory/introduction NOT yet written. Pick up
+tomorrow or Wednesday. Genuinely blank slate before this -- confirmed zero existing names or
+portraits for any of the three despite how central they're about to become (the live Korda
+remainder-viability assessment under §15.5.a is a JMC function -- all three jointly -- and the
+§12.8 EM ruling, already planned for this week, is the Executive Monitor acting alone).
+
+**Legislative Monitor — Aldric Feyn.** Watches the Legislature. Male, 50s-60s. Characterization: a
+decade-plus of watching legislative sessions and learning that reporting the truth and having it
+matter are two different jobs -- patient, unreadable, worn smooth rather than embittered by it.
+Portrait prompt (house style): "Photorealistic editorial portrait, professional headshot, muted
+natural lighting, neutral seamless background in soft navy-grey, no stylization, no fantasy
+elements, 3/4 framing, natural skin texture and detail, plain formal attire, patient and unreadable
+expression."
+
+**Executive Monitor — Reya Solt.** Watches both Consuls. Female, 40s-50s. Characterization: reputation
+built entirely on getting the numbers right before anyone else does -- exacting, precise, the one
+whose office is about to deliver this week's §12.8 ruling. Portrait prompt: "Photorealistic editorial
+portrait, professional headshot, muted natural lighting, neutral seamless background in soft
+navy-grey, no stylization, no fantasy elements, straight-on framing, natural skin texture and detail,
+precise formal attire, sharp exacting expression."
+
+**Judicial Monitor — Kessa Vray.** Watches the judiciary. Female, 40s. Characterization: comfortable
+sitting with hard questions rather than rushing to answer them. Portrait prompt: "Photorealistic
+editorial portrait, professional headshot, muted natural lighting, neutral seamless background in
+warm cream, no stylization, no fantasy elements, 3/4 framing, natural skin texture and detail,
+understated formal attire, quietly watchful expression."
+
+**The live hook, not yet committed:** Vray is the natural candidate to have grown up in Korda's
+ancestral inland zone or in Kelvant specifically. Her whole domain (functioning courts, rule of law)
+is exactly what the §15.5.a remainder-viability assessment tests -- if she has personal roots in the
+region, she becomes the one Monitor on the JMC who has to render a supposedly-neutral technical
+judgment on whether her own home can stand on its own. Strong hook, deliberately left undecided --
+John's call whether and how to use it.
+
+**Practical note on sequencing:** the §12.8 EM ruling (already planned as a beat this week) is a
+clean, ready-made moment to debut Solt by name and face rather than keep writing "the Executive
+Monitor's office" institutionally -- worth using if the timing lines up when this gets picked back up.
+
+John is generating the three portraits now; backstory writing and actual world-content introduction
+both wait for a future session.
