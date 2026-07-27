@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The committee that has to decide",
+    blurb: "The joint committee on fiscal equalization met for the first time. Before a single line of the formula, it had to answer whether it needed the Executive Monitor's word first — and asked for it directly.",
+    href: "torenthia-news-046.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Nobody has found anything wrong with it",
     blurb: "A handful of states doing well under the current equalization formula are asking why a full review is happening now — absent any Executive Monitor finding the mechanism has failed.",
     href: "torenthia-news-045.html",
