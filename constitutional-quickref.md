@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 166 provisions**
+> **20 articles · 167 provisions**
 
 ---
 
@@ -28,7 +28,7 @@
 - **Article XII — Social State and Economic Rights**  ·  §12.1–§12.8  (13 provisions)
 - **Article XIII — Direct Democracy**  ·  §13.1–§13.2  (2 provisions)
 - **Article XIV — Military Authorization and Accountability**  ·  §14.1–§14.4  (4 provisions)
-- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.9  (10 provisions)
+- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.9  (11 provisions)
 - **Article XVI — Indigenous Sovereignty**  ·  §16.1–§16.5  (5 provisions)
 - **Article XVII — Constitutional Amendments**  ·  §17.1–§17.4  (4 provisions)
 - **Article XVIII — Federal Property and National Trust**  ·  §18.1–§18.5  (5 provisions)
@@ -999,12 +999,23 @@ A State may voluntarily restructure its relationship with the Republic. The proc
 
 - **Thresholds:**
   - and second, upon approval, negotiation of a restructuring agreement between the State and the Legislature, ratified by Senate approval by 2/3 majority
+- **Time limits:**
+  - Following certification of any referendum under this section, any party with standing has 30 days to file a legal challenge to the process or result
 - **Cross-refs:** §15.3
 
 ### §15.5 — Re-Qualification Pathway
 
 A Territory resulting from mandatory or voluntary devolution enters the §15.2 pathway immediately upon the effective date of devolution — no additional political vote is required. Where a defined geographic subdivision of the Territory separately achieves Statehood under §15.2 or merges with an existing State under §15.4, the remainder continues as Territory without interruption.
 
+- **Cross-refs:** §15.2, §15.4
+
+### §15.5.a — Remainder Viability
+
+(1) Before any referendum is held under §15.4, or before a defined geographic subdivision of a Territory may petition for Statehood under §15.2, the JMC must, within 90 days of petition certification, assess whether the Territory's remaining portion could realistically satisfy the conditions of the §15.2 Statehood Audit on its own administrative and economic resources, and publish its assessment to the NRS before…
+
+- **Time limits:**
+  - 2, the JMC must, within 90 days of petition certification, assess whether the Territory's remaining portion could realistically satisfy the conditions of the §15
+  - The Convention has 90 days from its first session to produce a proposed resolution
 - **Cross-refs:** §15.2, §15.4
 
 ### §15.6 — Voluntary Incorporation
