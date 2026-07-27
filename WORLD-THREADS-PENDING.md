@@ -291,3 +291,71 @@ a country is adding a RECORD, not editing a page. Costs nothing now, keeps the p
 and matches the site's existing derive-from-data discipline (constitution_data.json, _data/mapdots.js,
 provnames.js). Same pattern as everything else on the site.
 
+---
+
+## PARKED FEATURE — Data-Driven Glossary
+
+**Status:** concept only, 13.09 (John, reacting to the glossary audit). Not scheduled, no trigger.
+
+**The problem it solves:** glossary.html is hand-authored prose, structurally outside the site's own
+discipline (constitution_data.json -> stats.js / atlas.js / provnames.js / mapdots.js). A full audit
+this session found 13+ confirmed fabrications in the first 23 of 54 entries alone -- invented
+thresholds, wrong section citations, entire procedures that don't exist in the real text (a
+"Coordination Failure Protocol" with a fictional 14-day Council-of-Ministers window; a "Deemed
+Confirmed" mechanism that's the opposite of how judicial confirmation actually works). This isn't
+staleness, it's drift with no structural guard against it -- nothing forces the glossary to stay in
+sync when the constitution changes, unlike every other reference surface on the site.
+
+**The reframe:** this isn't "glossary page vs. tooltips" as an either/or. It's making the glossary's
+CONTENT data-driven, the same way everything else on the site already is. One data file, generated
+from real provision text, can power multiple surfaces:
+- the standalone glossary page (discovery from world content with no prior context needed; the only
+  sane home for cross-cutting concepts that synthesize several provisions rather than restating one
+  -- e.g. "Dual Executive" is really §2.1 + §2.5 + §2.14 together, not any single provision's tooltip)
+- inline tooltips on annotated.html (in-context lookup for a reader already deep in a provision)
+
+Same source, zero chance the two disagree with each other, and no more manual-audit days like this
+one required every time the constitution amends.
+
+**Note on annotated.html:** it already has UNUSED tooltip CSS (.tooltip-wrap/.tooltip-box, confirmed
+zero actual usages in the page) -- dormant scaffolding from some earlier, never-completed plan.
+Worth knowing before building anything new here: the CSS shell exists, wiring and data do not.
+
+**Not urgent:** today's glossary content-accuracy fixes remain valuable regardless of which way this
+eventually goes -- accurate definitions are the raw material a data-driven version would need too.
+Nothing done today is wasted if this gets built later, or if it never does.
+
+**EXTENSION -- Site-Wide Select-to-Define (John, 13.09, after the audit finished):** the data-driven
+glossary isn't just for the standalone page and annotated.html tooltips -- it could power a much more
+ambitious feature: select ANY marked term ANYWHERE on the site (a news piece, an NRS filing, a Quick
+Sheet) and get an inline definition, the same way OS-level "look up this word" already works. The
+framing that sold this: it's a natural extension of a gesture people already know, not a new pattern
+that needs teaching.
+
+**Design, as worked out:**
+- Build-time term-marking, not runtime fuzzy matching. Scan each page against the glossary's term
+  list (same data file as everything else) and wrap recognized terms in an invisible marker span.
+  Deterministic -- no ambiguity about what counts as a match, no partial-phrase guessing.
+- Trigger on the browser's native `selectionchange` event -- the same one that already fires on
+  long-press (mobile) or click-drag (desktop). If the selection touches a marked span, show a small
+  floating "Define" chip beside it, iOS-"Look Up"-style. If it doesn't touch a marked term, nothing
+  happens -- normal copy/select behavior continues untouched. The feature should be invisible until
+  relevant, never in the way otherwise.
+- Selection doesn't need to be exact. Long-press or double-tap ANY word inside "Constructive Vote of
+  No Confidence" and because that word sits inside the marked span, the whole term's definition
+  surfaces -- no need to know in advance to drag-select the full phrase.
+- Visual convention: reuse the Diagrams page's existing gold-underline/navy-dotted-underline
+  language site-wide rather than inventing a new one. Anyone who's used Diagrams already knows the
+  pattern before meeting it again elsewhere.
+- Noise control: only auto-mark distinctive multi-word terms (not bare "Assembly" or "State"), and
+  probably only the FIRST occurrence per page -- same discipline as an encyclopedia linking a term
+  once rather than every time it appears.
+
+**Real risk flagged, not yet resolved:** mobile browsers own the text-selection UI, and the native
+context menu (Copy / Look Up / Share) can be finicky to layer a custom bubble alongside without
+visual conflict, especially iOS Safari. A quick working prototype on an actual phone is needed before
+committing to the full build -- confirm the interaction feels clean rather than fighting the OS.
+
+**Sequencing:** this cannot be built well without the data-driven glossary conversion happening
+first -- term-marking has to run off a clean term-to-definition data file, not scraped HTML. That
+conversion is now this feature's actual prerequisite, not just a nice-to-have alongside it.
