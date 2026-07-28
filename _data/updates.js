@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The man who filed the requests",
+    blurb: "Halden Rews spent nine years filing Korda's capacity requests into a federal queue where they sat. He's now the minister responsible — and the corridor he ran has petitioned to leave Korda entirely.",
+    href: "torenthia-news-048.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "The committee that has to decide",
     blurb: "The joint committee on fiscal equalization met for the first time. Before a single line of the formula, it had to answer whether it needed the Executive Monitor's word first — and asked for it directly.",
     href: "torenthia-news-046.html",
