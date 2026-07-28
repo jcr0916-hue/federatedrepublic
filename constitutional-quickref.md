@@ -1011,9 +1011,10 @@ A Territory resulting from mandatory or voluntary devolution enters the §15.2 p
 
 ### §15.5.a — Remainder Viability
 
-(1) Before any referendum is held under §15.4, or before a defined geographic subdivision of a Territory may petition for Statehood under §15.2, the JMC must, within 90 days of petition certification, assess whether the Territory's remaining portion could realistically satisfy the conditions of the §15.2 Statehood Audit on its own administrative and economic resources, and publish its assessment to the NRS before…
+(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them; all such petitions are addressed together under subsection (4). (2) Where subsection (1) does not apply: before any referendum is held under §15.4, or before a defined geographic subdivision of a Territory…
 
 - **Time limits:**
+  - 2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them
   - 2, the JMC must, within 90 days of petition certification, assess whether the Territory's remaining portion could realistically satisfy the conditions of the §15
   - The Convention has 90 days from its first session to produce a proposed resolution
 - **Cross-refs:** §15.2, §15.4
