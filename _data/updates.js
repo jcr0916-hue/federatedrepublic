@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Not a failure. Not nothing, either.",
+    blurb: "The Executive Monitor has ruled on the fiscal equalization mechanism — no failure found, but for the first time, real interval data neither side of the fight anticipated.",
+    href: "torenthia-news-049.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "The man who filed the requests",
     blurb: "Halden Rews spent nine years filing Korda's capacity requests into a federal queue where they sat. He's now the minister responsible — and the corridor he ran has petitioned to leave Korda entirely.",
     href: "torenthia-news-048.html",
