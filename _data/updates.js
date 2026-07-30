@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The difference between wrong and not enough",
+    blurb: "A new civics blog launches with the question three news outlets skipped: if the numbers are getting worse, why doesn't the constitution force a fix? The answer is the whole point.",
+    href: "torenthia-news-050.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Not a failure. Not nothing, either.",
     blurb: "The Executive Monitor has ruled on the fiscal equalization mechanism — no failure found, but for the first time, real interval data neither side of the fight anticipated.",
     href: "torenthia-news-049.html",
