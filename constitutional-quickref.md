@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 168 provisions**
+> **20 articles · 169 provisions**
 
 ---
 
@@ -15,7 +15,7 @@
 
 - **Preamble**
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.24  (26 provisions)
-- **Article II — The Dual Executive**  ·  §2.1–§2.16  (20 provisions)
+- **Article II — The Dual Executive**  ·  §2.1–§2.16  (21 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.15  (16 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (3 provisions)
@@ -236,7 +236,13 @@ The Legat Consul may veto legislation that raises a genuine constitutional conce
 
 The Legat Consul negotiates and concludes treaties and trade agreements. Treaties are subject to ratification under §3.6.
 
-- **Cross-refs:** §3.6, §9.8
+- **Cross-refs:** §3.6
+
+### §2.4.a — Domain Officers
+
+The Legat Consul nominates senior domain officers — Director of Intelligence, Director of Foreign Affairs, Director of Defense — from a pool of qualified candidates maintained by the Elections Panel under §9.8. The Legislature defines qualifications and confirmation procedures for each office by statute; acting appointments may be made pending confirmation for the period and under the conditions the Legislature…
+
+- **Cross-refs:** §9.8
 
 ### §2.5 — The Civic Consul — Domain and Term
 
@@ -380,8 +386,11 @@ States draw their own Assembly district maps subject to five criteria: populatio
 Every bill must address a single, clearly defined subject. Any member or approval body in the legislative process may request an LM assessment of single-subject compliance, published to the NRS.
 
 - **Thresholds:**
-  - emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber
+  - Emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber
   - removal requires 2/3 of the relevant chamber
+- **Time limits:**
+  - Each chamber of the Legislature sits in regular session on every business day of the year, except for periods of recess for the purpose of constituent engagement, not to exceed 45 days per year
+  - Each period of recess must be scheduled in advance and published to the NRS at least 30 days before it begins
 - **Cross-refs:** §9.1
 
 ### §3.5 — The Senate
@@ -391,6 +400,7 @@ Every bill must address a single, clearly defined subject. Any member or approva
 - **Thresholds:**
   - The Senate may expel a member by 2/3 vote of full seated membership
   - — treaty ratification by 2/3 of full seated membership
+- **Cross-refs:** §3.1
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
@@ -414,6 +424,8 @@ Bills pass by absolute majority of the full seated membership of both chambers. 
 
 - **Thresholds:**
   - Bills pass by absolute majority of the full seated membership of both chambers
+- **Time limits:**
+  - Where the constitution requires the Legislature to enact specific legislation and the Legislature has not done so within 1 year of the obligation arising, the LM publishes a non-compliance finding
 
 ### §3.8 — Legislative Oversight
 
@@ -431,7 +443,7 @@ The Legislature may establish independent agencies operating outside the authori
 
 Removal of constitutional officers proceeds exclusively as this Constitution provides: the Legat Consul under §2.13; the Civic Consul under §2.6; Supreme Court justices under §4.3.a; inferior court judges under §4.2; members of the Legislature by their own chamber under §3.2 or §3.5, or by State recall as recognized there;
 
-- **Cross-refs:** §2.13, §2.4, §2.5, §2.6, §3.2, §3.5, §4.2, §4.3.a, §9.9
+- **Cross-refs:** §2.13, §2.4.a, §2.5, §2.6, §3.2, §3.5, §4.2, §4.3.a, §9.9
 
 ### §3.11 — Inviolability of Electoral Mandates
 
@@ -1307,7 +1319,7 @@ Extracted verbatim. If a threshold is not in this table, it is not in the consti
 | §2.15 | Federal Prosecution | The Legislature may not reduce the Service’s appropriation below the prior year’s level without a 2/3 vote of both chambers |
 | §2.16 | Executive Incapacity | the incapacity ends only when the Consul's accountability chamber — the Assembly for the Civic Consul, the Senate for the Legat Consul — so resolves by absolute majority of its full seated membership |
 | §3.2 | The Assembly | The Assembly may expel a member by 2/3 vote of full seated membership |
-| §3.4 | Legislative Standards | emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber |
+| §3.4 | Legislative Standards | Emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber |
 | §3.4 | Legislative Standards | removal requires 2/3 of the relevant chamber |
 | §3.5 | The Senate | The Senate may expel a member by 2/3 vote of full seated membership |
 | §3.5 | The Senate | — treaty ratification by 2/3 of full seated membership |

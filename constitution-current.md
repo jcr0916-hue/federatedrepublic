@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 168 provisions**
+> **20 articles · 169 provisions**
 
 thefederatedrepublic.org
 
@@ -159,7 +159,11 @@ The Legat Consul may veto legislation that raises a genuine constitutional conce
 
 ### §2.4 — Legat Consul International Agreements
 
-The Legat Consul negotiates and concludes treaties and trade agreements. Treaties are subject to ratification under §3.6. Trade agreements are subject to legislative approval under §3.6. During negotiation of any trade agreement, the Legat Consul must consult the Civic Consul on its domestic implications; the Civic Consul's response is published to the NRS. The Legat Consul nominates senior domain officers — Director of Intelligence, Director of Foreign Affairs, Director of Defense — from a pool of qualified candidates maintained by the Elections Panel under §9.8. The Legislature defines qualifications and confirmation procedures for each office by statute; acting appointments may be made pending confirmation for the period and under the conditions the Legislature defines. A domain officer is a person appointed by the Legat Consul to exercise a portion of the Legat Consul's constitutional domain authority and confirmed by the Senate; persons employed in the civil service or military under a domain officer's direction are not domain officers. The Senate may remove a domain officer by majority of full seated membership; the grounds are stated and published to the NRS. The Legat Consul may dismiss a domain officer at any time, published to the NRS.
+The Legat Consul negotiates and concludes treaties and trade agreements. Treaties are subject to ratification under §3.6. Trade agreements are subject to legislative approval under §3.6. During negotiation of any trade agreement, the Legat Consul must consult the Civic Consul on its domestic implications; the Civic Consul's response is published to the NRS.
+
+### §2.4.a — Domain Officers
+
+The Legat Consul nominates senior domain officers — Director of Intelligence, Director of Foreign Affairs, Director of Defense — from a pool of qualified candidates maintained by the Elections Panel under §9.8. The Legislature defines qualifications and confirmation procedures for each office by statute; acting appointments may be made pending confirmation for the period and under the conditions the Legislature defines. A domain officer is a person appointed by the Legat Consul to exercise a portion of the Legat Consul's constitutional domain authority and confirmed by the Senate; persons employed in the civil service or military under a domain officer's direction are not domain officers. The Senate may remove a domain officer by majority of full seated membership; the grounds are stated and published to the NRS. The Legat Consul may dismiss a domain officer at any time, published to the NRS.
 
 ### §2.5 — The Civic Consul — Domain and Term
 
@@ -279,7 +283,7 @@ The Civic Consul is responsible for the enforcement of federal law and sets gene
 
 (2) Council of Ministers determination:
 
-(a) The Council may, by majority of members then in office provided no fewer than five are in office, determine that a Consul is temporarily unable to exercise authority. This function is a constitutional function of the Council and is not an exercise of executive authority.
+(a) The Council may, by majority of members then in office provided no fewer than five are in office, determine that a Consul is temporarily unable to exercise authority. This function is a constitutional function of the Council and is not an exercise of executive authority. Where fewer than five members are then in office, the determination may instead be made jointly by the other Consul and the Chief Justice, published to the NRS.
 
 (b) The determination is published to the NRS; upon publication, acting authority vests in accordance with the applicable succession provision.
 
@@ -331,7 +335,7 @@ States draw their own Assembly district maps subject to five criteria: populatio
 
 ### §3.4 — Legislative Standards
 
-Every bill must address a single, clearly defined subject. Any member or approval body in the legislative process may request an LM assessment of single-subject compliance, published to the NRS. The full text of every bill must be published to the NRS for a minimum period defined by statute before any final passage vote; a substantially amended bill resets the clock. The Legislature must sit for a minimum number of days per year defined by statute; emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber. The Legislature must establish a joint ethics committee with authority to sanction and refer members; removal requires 2/3 of the relevant chamber; under §9.1, the chamber may request an LM assessment to inform the proceeding.
+Every bill must address a single, clearly defined subject. Any member or approval body in the legislative process may request an LM assessment of single-subject compliance, published to the NRS. The full text of every bill must be published to the NRS for a minimum period defined by statute before any final passage vote; a substantially amended bill resets the clock. Each chamber of the Legislature sits in regular session on every business day of the year, except for periods of recess for the purpose of constituent engagement, not to exceed 45 days per year. Each period of recess must be scheduled in advance and published to the NRS at least 30 days before it begins. Emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber. The Legislature must establish a joint ethics committee with authority to sanction and refer members; removal requires 2/3 of the relevant chamber; under §9.1, the chamber may request an LM assessment to inform the proceeding.
 
 ### §3.5 — The Senate
 
@@ -357,7 +361,7 @@ Every bill must address a single, clearly defined subject. Any member or approva
 
 — and, in the absence of a functioning Elections Panel, administration of the consular election.
 
-(9) The Senate may not initiate legislation; all bills originate in the Assembly.
+(9) The Senate may not initiate legislation, consistent with §3.1.
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
@@ -369,7 +373,7 @@ Where the Senate disputes the Legat Consul's classification of an international 
 
 ### §3.7 — Legislative Process and Passage
 
-Bills pass by absolute majority of the full seated membership of both chambers. Higher thresholds apply to constitutional amendments, veto overrides, removal proceedings, and other matters specified in this constitution; where a higher threshold is specified for a vote of a single chamber, it applies to the full seated membership of that chamber. The Speaker of each chamber must publish the final text of every enacted law to the NRS within the period defined by statute. All prior versions, committee reports, Monitor findings, and veto records are indexed alongside the enacted text. Where the constitution requires the Legislature to enact specific legislation and the Legislature fails to do so, the LM publishes a non-compliance finding; the mandate becomes justiciable in the SC; and, for mandates whose non-fulfillment directly impairs the exercise of a right guaranteed in Article I, affected parties may bring direct constitutional claims.
+Bills pass by absolute majority of the full seated membership of both chambers. Higher thresholds apply to constitutional amendments, veto overrides, removal proceedings, and other matters specified in this constitution; where a higher threshold is specified for a vote of a single chamber, it applies to the full seated membership of that chamber. The Speaker of each chamber must publish the final text of every enacted law to the NRS within the period defined by statute. All prior versions, committee reports, Monitor findings, and veto records are indexed alongside the enacted text. Where the constitution requires the Legislature to enact specific legislation and the Legislature has not done so within 1 year of the obligation arising, the LM publishes a non-compliance finding; the mandate becomes justiciable in the SC; and, for mandates whose non-fulfillment directly impairs the exercise of a right guaranteed in Article I, affected parties may bring direct constitutional claims.
 
 ### §3.8 — Legislative Oversight
 
@@ -381,7 +385,7 @@ The Legislature may establish independent agencies operating outside the authori
 
 ### §3.10 — Removal Pathways
 
-Removal of constitutional officers proceeds exclusively as this Constitution provides: the Legat Consul under §2.13; the Civic Consul under §2.6; Supreme Court justices under §4.3.a; inferior court judges under §4.2; members of the Legislature by their own chamber under §3.2 or §3.5, or by State recall as recognized there; Legat Consul domain officers by the Senate under §2.4; ministers at the pleasure of the Civic Consul under §2.5; and constitutionally confirmed independent officers under §9.9. Criminal liability remains separately pursuable. No removal mechanism not provided for in this Constitution may be created by statute.
+Removal of constitutional officers proceeds exclusively as this Constitution provides: the Legat Consul under §2.13; the Civic Consul under §2.6; Supreme Court justices under §4.3.a; inferior court judges under §4.2; members of the Legislature by their own chamber under §3.2 or §3.5, or by State recall as recognized there; Legat Consul domain officers by the Senate under §2.4.a; ministers at the pleasure of the Civic Consul under §2.5; and constitutionally confirmed independent officers under §9.9. Criminal liability remains separately pursuable. No removal mechanism not provided for in this Constitution may be created by statute.
 
 ### §3.11 — Inviolability of Electoral Mandates
 

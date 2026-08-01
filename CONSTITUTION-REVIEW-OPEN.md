@@ -11,6 +11,26 @@ provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
 
+## RESOLVED — incorporated 260801 (batch two)
+
+- **§3.4** — no floor on statutory minimum sitting days. Inverted the default: regular session on every
+  business day, recess capped at 45 days/year, reserved for constituent engagement specifically (not
+  general leave), each period scheduled in advance and published to the NRS 30 days ahead.
+- **§3.7** — non-compliance mechanism had a response but no trigger point. Now runs from 1 year after
+  the obligation arises.
+- **§2.4** — domain officer framework was hidden inside "International Agreements." Split into §2.4
+  (treaties/trade only) and new §2.4.a (Domain Officers). §3.10's citation repointed.
+- **§3.5(9)** — restated §3.1's origination rule instead of cross-referencing it. Now defers to §3.1.
+- **§2.16(2)(a)** — five-member floor for Council incapacity determination had no fallback. Added:
+  where fewer than five are in office, the other Consul and Chief Justice may determine jointly.
+- **§12.6 confirmed already covers recess travel** — "benefits reflect the functional requirements of
+  the office" already reaches constituent-engagement travel; no new text needed, just confirmed.
+
+**Set aside, not forced through:** §2.5(6)/§2.9(6) looked like a simple duplication but isn't — shared
+procedural machinery, genuinely different succession chains and tiebreakers by chamber. A real fix
+needs extracting the shared mechanics into §2.16, not a cross-reference swap. Moved back to open findings
+below rather than incorrectly closed.
+
 ## RESOLVED — incorporated 260731
 
 - **§1.13** — sealed proceedings had no ceiling (Sunlight Test). Now 10 years from final judgment,
@@ -157,7 +177,6 @@ same rule stated twice — amend one, forget the other.
   including asylum seekers under §1.20. Probably intended; worth confirming.
 - **§1.3** — "within the Republic's jurisdiction": territorial only, or following Republic agents
   abroad? This exact ambiguity produced decades of real-world offshore-detention litigation.
-- **§2.16(2)(a)** — Council incapacity determination requires ≥5 members in office, with no
-  alternative path if fewer are. Plausible in exactly the mass-casualty scenario it exists for.
-  *(Flagged Tier 1 originally; a fallback was drafted but not incorporated — reconsider during
-  Article II follow-up.)*
+- **§1.10, §2.15, §1.15** — three of the original four Tier 4 confirmations still genuinely
+  unanswered (only the legislator-cap question was re-asked above; these three haven't been asked
+  again since the first pass). Re-ask directly rather than fold into a future batch.
