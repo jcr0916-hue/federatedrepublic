@@ -7,14 +7,14 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 167 provisions**
+> **20 articles · 168 provisions**
 
 ---
 
 ## INDEX
 
 - **Preamble**
-- **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.23  (25 provisions)
+- **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.24  (26 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.16  (20 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.15  (16 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
@@ -85,11 +85,10 @@ Medical decisions are the province of the individual and their chosen provider. 
 Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. The home may not be entered, nor any person, communication, or data searched, surveilled, or collected by government, without consent or prior independent judicial authorization based on specific, articulable grounds.
 
 
-### §1.9 — Democratic Participation and Family
+### §1.9 — Democratic Participation
 
-Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution, and the right to have that vote counted. Government at every level is prohibited from taking any action that makes voting more difficult, less accessible, or less secure; no law, rule, administrative decision, or practice…
+Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution, and the right to have that vote counted. Government at every level is prohibited from taking any action for the purpose of, or having the substantial effect of, suppressing or reducing access to the franchise; no law, rule,…
 
-- **Cross-refs:** §1.6
 
 ### §1.10 — Right to Bear Arms
 
@@ -193,6 +192,11 @@ Constitutional officers and persons acting within the authority of a constitutio
 ### §1.23 — Separation of Branch Authority
 
 No person may exercise the voting or decisional authority of more than one branch of government at the same time; a person holding or acting in an office of one branch may not cast a vote or exercise a decisional power reserved to another branch for so long as they hold or act in that office. This section does not bar a person from holding a seat that carries no exercisable vote during such service, nor from…
+
+
+### §1.24 — Family
+
+Every person holds the right to found a family.
 
 
 ---

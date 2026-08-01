@@ -50,8 +50,8 @@
       },
       {
         "num": "§1.9",
-        "name": "Democratic Participation and Family",
-        "text": "Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution, and the right to have that vote counted. Government at every level is prohibited from taking any action that makes voting more difficult, less accessible, or less secure; no law, rule, administrative decision, or practice that reduces access to the franchise is constitutionally valid. The Republic holds an affirmative obligation to make voting as accessible as possible consistent with security — it may not compel citizens to vote, but it must provide conditions in which doing so is genuinely possible. Federal election periods are public holidays. Every person holds the right to marry and found a family, free from governmental discrimination on the basis of the characteristics listed in §1.6. Children born within and outside of formal partnership hold equal legal status."
+        "name": "Democratic Participation",
+        "text": "Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution, and the right to have that vote counted. Government at every level is prohibited from taking any action for the purpose of, or having the substantial effect of, suppressing or reducing access to the franchise; no law, rule, administrative decision, or practice adopted for such purpose or having such effect is constitutionally valid. The Republic holds an affirmative obligation to make voting as accessible as possible consistent with security — it may not compel citizens to vote, but it must provide conditions in which doing so is genuinely possible. Federal election periods are public holidays."
       },
       {
         "num": "§1.10",
@@ -132,6 +132,11 @@
         "num": "§1.23",
         "name": "Separation of Branch Authority",
         "text": "No person may exercise the voting or decisional authority of more than one branch of government at the same time; a person holding or acting in an office of one branch may not cast a vote or exercise a decisional power reserved to another branch for so long as they hold or act in that office. This section does not bar a person from holding a seat that carries no exercisable vote during such service, nor from resuming an office or vote upon leaving the position that created the conflict."
+      },
+      {
+        "num": "§1.24",
+        "name": "Family",
+        "text": "Every person holds the right to found a family."
       }
     ]
   },

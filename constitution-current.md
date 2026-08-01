@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 167 provisions**
+> **20 articles · 168 provisions**
 
 thefederatedrepublic.org
 
@@ -65,9 +65,9 @@ Medical decisions are the province of the individual and their chosen provider. 
 
 Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. The home may not be entered, nor any person, communication, or data searched, surveilled, or collected by government, without consent or prior independent judicial authorization based on specific, articulable grounds. The Legislature establishes the warrant framework by statute. Encryption is lawful and may not be prohibited. The state may take private property for public use only upon payment of just compensation determined by independent process, not by the taking authority.
 
-### §1.9 — Democratic Participation and Family
+### §1.9 — Democratic Participation
 
-Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution, and the right to have that vote counted. Government at every level is prohibited from taking any action that makes voting more difficult, less accessible, or less secure; no law, rule, administrative decision, or practice that reduces access to the franchise is constitutionally valid. The Republic holds an affirmative obligation to make voting as accessible as possible consistent with security — it may not compel citizens to vote, but it must provide conditions in which doing so is genuinely possible. Federal election periods are public holidays. Every person holds the right to marry and found a family, free from governmental discrimination on the basis of the characteristics listed in §1.6. Children born within and outside of formal partnership hold equal legal status.
+Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution, and the right to have that vote counted. Government at every level is prohibited from taking any action for the purpose of, or having the substantial effect of, suppressing or reducing access to the franchise; no law, rule, administrative decision, or practice adopted for such purpose or having such effect is constitutionally valid. The Republic holds an affirmative obligation to make voting as accessible as possible consistent with security — it may not compel citizens to vote, but it must provide conditions in which doing so is genuinely possible. Federal election periods are public holidays.
 
 ### §1.10 — Right to Bear Arms
 
@@ -132,6 +132,10 @@ Constitutional officers and persons acting within the authority of a constitutio
 ### §1.23 — Separation of Branch Authority
 
 No person may exercise the voting or decisional authority of more than one branch of government at the same time; a person holding or acting in an office of one branch may not cast a vote or exercise a decisional power reserved to another branch for so long as they hold or act in that office. This section does not bar a person from holding a seat that carries no exercisable vote during such service, nor from resuming an office or vote upon leaving the position that created the conflict.
+
+### §1.24 — Family
+
+Every person holds the right to found a family.
 
 ---
 
