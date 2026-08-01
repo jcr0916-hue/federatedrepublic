@@ -3,13 +3,24 @@
 **Started 260731.** Systematic provision-by-provision review against the ten design principles in
 `CONSTITUTIONAL-DESIGN-PRINCIPLES.md`.
 
-**Progress:** Article I complete · Article II complete · **Article III is next**
+**Progress:** Articles I, II, III complete. Working through the I-III backlog before starting IV.
 
 **Standing filter:** constitutional language states the obligation and its floor; statute states the
 machinery. A finding only counts if statute *couldn't* fix it. A conflict between two constitutional
 provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
+
+## RESOLVED — incorporated 260801 (§1.9 split)
+
+- **§1.9 internal contradiction** — absolute bar on any action making voting "more difficult, less
+  accessible, or less secure" collided with a separate "consistent with security" balancing clause.
+  Fixed: the bar now turns on purpose or substantial effect of suppressing access, so a genuine
+  security measure no longer competes with an absolute rule that caught everything.
+- **§1.9 two-subject bundling** — voting and marriage/family shared one provision, and the provision's
+  own name ("Democratic Participation and Family") named both. Split: §1.9 is voting only, renamed
+  Democratic Participation; family right moved to new §1.24 ("Every person holds the right to found
+  a family"), appended rather than inserted so nothing renumbered.
 
 ## RESOLVED — incorporated 260801 (batch two)
 
@@ -119,19 +130,19 @@ CC suspensive veto (§2.7) requires only "written grounds" — no substantive st
 review. **Open question:** is the asymmetry justified by the CC holding residual authority, or should
 §2.7 come to parity?
 
+### §3.3 — "primary criteria" / "intentional dilution" may gut the redistricting ban (Bad-Faith Test)
+"Maps may not be drawn using [banned data] **as primary criteria**" and "no **intentional** dilution."
+Both bans turn on the mapmaker's internal reasoning — nearly unprovable, and both words permit
+secondary/incidental use of exactly the data being banned. The rest of §3.3 is objective and testable
+(population equality, contiguity, compactness, LM review, standing to challenge before the SC) —
+the intent-based softeners sit oddly against that.
+**Open question:** deliberate softening, or should these be effects-based instead?
+**Note:** this entry was accidentally dropped from the tracker during the 260801 batch-two edit and
+has been restored from the original Article III review findings.
+
 ---
 
 ## TIER 3 — genuine design questions, not drafting errors
-
-### §1.9 — internal contradiction (strongest Article I finding)
-Prohibits any action making voting "more difficult, less accessible, **or less secure**" — then
-separately requires accessibility "consistent with security." Most real security measures add
-friction, so adopting one violates the first clause and omitting it also violates the first clause.
-The absolute framing and the balancing framing cannot both govern.
-
-### §1.9 — two unrelated subjects (One Home Rule)
-Voting rights and marriage/family formation share one provision. Marriage, family, and equal status
-of children are not democratic-participation rights.
 
 ### §2.13 — popular removal track
 Legislative removal requires 2/3 of both chambers **and stated grounds**. Popular track requires a
