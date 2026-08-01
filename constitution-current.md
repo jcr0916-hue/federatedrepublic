@@ -15,11 +15,15 @@ thefederatedrepublic.org
 
 We built a Republic worth living in — and worth adopting. Here is why.
 
-We came from different places, and out of that difference we made something none of us could have made alone: a government strong enough to act, restrained enough to trust, and answerable — always — to you.
+We came from different nations, communities, and traditions, and out of that difference we made something none of us could have made alone: a government strong enough to act, restrained enough to trust, and answerable — always — to you.
 
 We built it on one conviction: the person comes before the state. You are whole and equal. You hold rights no government granted and none can take away. Behind those rights we placed the entire weight of the Republic, so that no one among you is ever left without remedy, without a voice, or without the conditions of a decent life.
 
-And we did not ask you to trust us. We gave power to the people and made it return to them. We opened the state to the light, so you can see how you are governed. We bound every office we created — even the ones we admired most — so this Republic stays yours whether it is governed well or badly. That is the difference: most governments ask for your faith. This one gives you the means to withhold it.
+We founded it on the consent of the governed, the self-government of its constituent communities, and the recognition of sovereignty that came before us and was never surrendered.
+
+And we did not ask you to trust us. We divided public authority, limited it, and subjected it to independent courts, open government, democratic election, permanent public record, and effective remedy — so that no office and no institution stands above this Constitution. We opened the state to the light, so you can see how you are governed. We bound every office we created — even the ones we admired most — so this Republic stays yours whether it is governed well or badly. That is the difference: most governments ask for your faith. This one gives you the means to withhold it.
+
+We made these things to hold not only in times of wise government and public accord, but against error, abuse, emergency, and division.
 
 What follows is long because your freedom is detailed, and every page of it exists to keep a promise made to you.
 
