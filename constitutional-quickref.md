@@ -113,6 +113,10 @@ Every person accused of a criminal offense holds: the right to be informed promp
 
 Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings may be held in camera only to the minimum extent necessary to protect a compelling interest identified in advance by the court; the existence of any proceeding may not be concealed.
 
+- **Time limits:**
+  - No portion of a proceeding may remain sealed beyond 10 years from final judgment
+  - No portion may remain sealed beyond 15 years under any circumstances
+  - On expiry, the NRS Panel publishes the sealed record within 30 days
 - **Cross-refs:** §1.19.a
 
 ### §1.14 — Freedom from Retroactive Criminal Law
@@ -130,7 +134,7 @@ No person may be tried or punished twice for the same offense following a final 
 
 Every Inhabitant is entitled to access the Republic's social state systems under Article XII. No government may exclude any person from social assistance on the basis of the characteristics listed in §1.6.
 
-- **Cross-refs:** §1.6, §12.1, §12.5
+- **Cross-refs:** §1.6, §12.5
 
 ### §1.17 — Education
 

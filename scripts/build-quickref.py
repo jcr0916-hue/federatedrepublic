@@ -119,7 +119,8 @@ def main(src, dst):
                 L.append(f"| {p['num']} | {p.get('name','')} | {x.replace('|','/')} |")
     L.append("")
     open(dst,'w').write('\n'.join(L) + '\n')
-    print(f"wrote {dst}: {len(d)} articles, {total} provisions, {len(L)} lines")
+    n_articles = sum(1 for a in d if not a.get('preamble'))
+    print(f"wrote {dst}: {n_articles} articles, {total} provisions, {len(L)} lines")
 
 if __name__ == '__main__':
     main(sys.argv[1], sys.argv[2])

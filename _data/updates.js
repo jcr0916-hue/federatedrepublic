@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Four answers, one correct",
+    blurb: "All four Legat Consul candidates were asked what Wednesday's certification actually found. Three understood it. The one who didn't gave the answer that will travel furthest.",
+    href: "torenthia-news-051.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "The difference between wrong and not enough",
     blurb: "A new civics blog launches with the question three news outlets skipped: if the numbers are getting worse, why doesn't the constitution force a fix? The answer is the whole point.",
     href: "torenthia-news-050.html",
