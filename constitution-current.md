@@ -43,7 +43,7 @@ Every person possesses an inviolable sphere of personal sovereignty over their o
 
 ### §1.3 — Prohibition of Torture and Cruel Treatment
 
-Torture and cruel, inhuman, or degrading treatment are absolutely prohibited. No person within the Republic's jurisdiction may be subjected to any such treatment. This right is non-derogable under §1.19.a.
+Torture and cruel, inhuman, or degrading treatment are absolutely prohibited. No person, wherever located, may be subjected to any such treatment by an agent or officer of the Republic acting in that capacity, nor by any person acting at the direction or with the acquiescence of the Republic. This right is non-derogable under §1.19.a.
 
 ### §1.4 — Prohibition of Slavery and Forced Labor
 
@@ -51,11 +51,11 @@ Slavery, involuntary servitude, and forced labor are absolutely prohibited. Pris
 
 ### §1.5 — Civil and Political Liberties
 
-Every person holds the rights of expression, thought, conscience, religion, association, assembly, petition, and movement. Government may regulate the time, place, and manner of expression and assembly for compelling public-order purposes, subject to strict scrutiny and without discriminating on the basis of viewpoint. No government may compel expression or penalize expression through intermediaries it controls or has directed to suppress expression. Freedom of religion protects belief absolutely; it protects practice against limitation except where practice causes direct harm to others. The Legislature establishes by statute any framework for exercising these rights, provided that framework does not burden the right itself.
+Every person holds the rights of expression, thought, conscience, religion, association, assembly, petition, and movement. Government may regulate the time, place, and manner of expression and assembly for compelling public-order purposes, subject to intermediate scrutiny and without discriminating on the basis of viewpoint. No government may compel expression or penalize expression through intermediaries it controls or has directed to suppress expression. Freedom of religion protects belief absolutely; it protects practice against limitation except where practice causes direct harm to others. The Legislature establishes by statute any framework for exercising these rights, provided that framework does not burden the right itself.
 
 ### §1.6 — Equality and Non-Discrimination
 
-Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status in the provision of any governmental benefit, the imposition of any burden, or the application of any law. Distinctions rationally related to a legitimate governmental purpose that do not turn on these characteristics are permissible. Distinctions that do turn on these characteristics require compelling justification and are subject to strict scrutiny. Age distinctions rationally related to developmental capacity, lifecycle considerations, or demonstrated actuarial risk are subject to rational basis review rather than strict scrutiny.
+Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status in the provision of any governmental benefit, the imposition of any burden, or the application of any law. Distinctions rationally related to a legitimate governmental purpose that do not turn on these characteristics are permissible. Distinctions that do turn on these characteristics require compelling justification and are subject to strict scrutiny. Age distinctions rationally related to developmental capacity, lifecycle considerations, or demonstrated actuarial risk are subject to rational basis review rather than strict scrutiny. Economic-status distinctions that extend additional benefits, assistance, or support to persons of lesser economic means, including the social state obligations under §12.1, are subject to rational basis review rather than strict scrutiny; economic-status distinctions that impose additional burdens or restrict access based on wealth remain subject to strict scrutiny.
 
 ### §1.7 — Bodily Sovereignty
 
@@ -91,7 +91,7 @@ No person may be convicted of an act that was not a criminal offense when commit
 
 ### §1.15 — Double Jeopardy
 
-No person may be tried or punished twice for the same offense following a final acquittal or conviction. Same offense means the same conduct regardless of how it is labeled or charged; the protection applies to any charge that does not require proof of an element distinct from those required for the original charge. The Legislature defines by statute the scope of this protection above this constitutional floor, including its application across jurisdictions.
+No person may be tried or punished twice for the same offense following a final acquittal or conviction. Same offense means the same conduct regardless of how it is labeled or charged; the protection applies to any charge that does not require proof of an element distinct from those required for the original charge. A State and the Republic may each prosecute the same conduct under their own respective laws. Where a State and the Republic each obtain a conviction arising from substantially the same conduct, any sentences imposed run concurrently, and the person serves only the greater of the two terms; time served under either sentence counts toward both. An acquittal or conviction in one jurisdiction does not bar or otherwise affect the other's separate prosecution of the same conduct. The Legislature defines by statute the scope of this protection above this constitutional floor.
 
 ### §1.16 — Social Assistance Floor
 

@@ -11,6 +11,59 @@ provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
 
+## RESOLVED — incorporated 260801 (§1.6)
+
+- **§1.6** — economic status sat at strict scrutiny alongside race, religion, and the rest, which
+  put §1.6 in tension with the Republic's own §12.1 social-state mandate: means-tested assistance
+  only functions as a concept if eligibility/amount are calibrated to economic need, which is exactly
+  the distinction §1.6 subjected to its highest bar. Fixed by direction, mirroring the age carve-out
+  already in the same provision: distinctions that extend additional benefits/assistance/support to
+  persons of lesser economic means (§12.1 named as the clearest example, not the only one) drop to
+  rational basis review; distinctions that burden or restrict access based on wealth stay at strict
+  scrutiny, undiminished. Confirmed via full-text check that §12.3's taxing power does NOT
+  constitutionally mandate progressive rates — that potential collision is avoidable by statute and
+  wasn't part of the actual fix needed.
+
+## RESOLVED — incorporated 260801 (§1.3)
+
+- **§1.3** — "within the Republic's jurisdiction" was a territorial test on the document's absolute,
+  non-derogable torture prohibition, the exact ambiguity behind real-world offshore-detention and
+  rendition controversy. Fixed: the test now runs on who is acting, not where the victim is — no
+  person, wherever located, may be subjected to such treatment by a Republic agent or officer acting
+  in that capacity, extended to anyone acting at the Republic's direction or with its acquiescence
+  (closing the third-party outsourcing route). Mirrors §1.5's existing anti-jawboning pattern
+  (intermediaries acting on the government's behalf). Non-derogable, so this now binds Republic
+  military and intelligence personnel operating anywhere, with no emergency exception ever available.
+
+## RESOLVED — incorporated 260801 (§1.4, §1.5)
+
+- **§1.4** — confirmed no change needed. Original concern was three-part: safety, voluntariness,
+  compensation. On review: safety is already §1.3's job (unsafe/dangerous conditions read as cruel or
+  inhuman treatment); voluntariness was never actually missing — §1.4's entire function is carving
+  prison labor out of the forced-labor prohibition, so compulsion is the deliberate point, not a gap;
+  compensation is a genuine policy choice (John declined to mandate a figure, correctly noting any
+  number would be arbitrary and belongs to statute if anywhere). Nothing left to fix once each piece
+  is properly credited to where it actually lives.
+- **§1.5** — the only scrutiny standard in the provision (governing time/place/manner regulation of
+  expression and assembly) was strict scrutiny outright, an unusually high bar for routine, content-
+  neutral regulation like permits and noise ordinances. Fixed: that clause now requires intermediate
+  scrutiny specifically; every other protection (viewpoint non-discrimination, the anti-jawboning
+  clause, religion's belief/practice split) is unchanged. Note: an earlier verbal "reminder" of this
+  provision's text was inaccurate — the actual JSON text was checked and confirmed before any edit
+  was made, and the fix was re-confirmed against the real text before incorporation.
+
+## RESOLVED — incorporated 260801 (§1.15)
+
+- **§1.15** — silent on dual State/Republic prosecution for the same conduct. Now explicit: both may
+  prosecute independently, but where both convict, sentences run concurrently and the person serves
+  only the greater term. Acquittal or conviction in one doesn't affect the other's case, symmetric in
+  both directions. Deliberately excludes Territories and local governments — §15.1's local-concern-only
+  authority and §15.8's fiscal-protection-without-sovereignty mean neither is a genuine second sovereign;
+  both stay governed by the original same-offense bar. Cross-checked against real dual-sovereignty
+  doctrine (Gamble v. United States; Puerto Rico v. Sánchez Valle for the Territory-exclusion logic
+  specifically) — the concurrent/greater-term cap is a genuine improvement over the real-world doctrine,
+  which has no such safeguard and has drawn sustained scholarly criticism for exactly that gap.
+
 ## RESOLVED — incorporated 260801 (§1.9 split)
 
 - **§1.9 internal contradiction** — absolute bar on any action making voting "more difficult, less
@@ -160,6 +213,13 @@ resolved *after* the merits, protecting nobody at the pleading stage. Either tha
 (protection only against liability for lawful acts — real but narrow), or it needs a different
 standard to have threshold effect.
 
+### §3.2(4) / §3.5(3) — no lifetime cap on legislators
+Six consecutive Assembly terms or two consecutive Senate terms, sit out one cycle, repeat
+indefinitely — no cumulative lifetime restriction, unlike every other constitutional office (CC 8yr
+cumulative, LC single 6yr term, SC justices single 12yr term, Monitors 10yr non-renewable).
+Defensible — legislators face voters regularly, the others don't — and stated explicitly enough to
+read as intentional. **Asked twice this session, never actually answered either time.**
+
 ### §2.5(6) / §2.9(6) — near-identical duplication (One Home Rule)
 The two temporary-incapacity succession provisions run in close parallel, differing only in chamber
 and tiebreaker, both depending on §2.16 for the trigger. Parallelism aids readability, but it is the
@@ -169,25 +229,13 @@ same rule stated twice — amend one, forget the other.
 
 ## TIER 4 — probably resolve as "no change," but John should confirm
 
-- **§2.15** — FPS budget floor protected at 2/3, but the Service is "established by statute" and
-  nothing bars restructuring it by simple majority. Money protected; institutional shape not.
-  Arguably correct that a statutory body's shape stays statutory.
-- **§1.15** — dual State/Republic prosecution for identical conduct is not constitutionally barred;
-  statute may bar it and can only expand protection. Coherent, but the floor is silent on the
-  scenario most likely to arise in a federation.
-- **§1.4** — prison-labor carve-out is unconditioned: no compensation, voluntariness, or safety
-  floor, inside a non-derogable right. Confirm whether deliberate.
-- **§1.5** — strict scrutiny applied to time, place, and manner restrictions is far above the usual
-  bar and would apply to ordinary permit and noise regulation. Confirm whether deliberate.
-- **§1.6** — "economic status" as a strict-scrutiny classification may collide with Article XII's
-  means-tested design. **This one may be Tier 3 rather than Tier 4** — a genuine conflict between
-  constitutional provisions cannot be fixed by statute.
 - **§1.7** — "may not compel medical decisions" is unqualified, apparently foreclosing vaccination
   requirements outside emergencies (§1.7 is derogable, so the epidemic case is covered).
-- **§1.10** — "every person" rather than "every citizen" extends arms rights to all Inhabitants
-  including asylum seekers under §1.20. Probably intended; worth confirming.
-- **§1.3** — "within the Republic's jurisdiction": territorial only, or following Republic agents
-  abroad? This exact ambiguity produced decades of real-world offshore-detention litigation.
-- **§1.10, §2.15, §1.15** — three of the original four Tier 4 confirmations still genuinely
-  unanswered (only the legislator-cap question was re-asked above; these three haven't been asked
-  again since the first pass). Re-ask directly rather than fold into a future batch.
+- **§1.10** — confirmed, leave as-is: "every person" (not "every citizen") for arms rights is
+  consistent with the document's own pattern — "citizen" gates political rights, "person" gates rights
+  treated as inherent. Working correctly, not an inconsistency.
+- **§2.15** — confirmed, leave as-is: the funding-floor/shape-alterable asymmetry is the right design.
+  Definancing is the classic way to neuter an independent prosecutor without touching formal
+  independence, so that's exactly the lever worth constitutional protection; ordinary restructuring by
+  simple majority is legitimate flexibility.
+- **§1.15** — resolved, see above.
