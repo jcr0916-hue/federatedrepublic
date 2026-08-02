@@ -3,6 +3,30 @@
 
 ---
 
+## LC TERM LENGTH: 6-YEAR → 4-YEAR RECONCILIATION (resolved 260801, John)
+**Not a pending thread — a closed decision, recorded so it never looks like an unresolved
+inconsistency in a future session.** §2.1 was amended from a single non-renewable 6-year LC term to
+4-year terms (2 max, mandatory gap between them). This creates a real 2-year arithmetic gap against
+already-published content: Rehn's term is established as running Year 7–13 (Carrow "Director of
+Foreign Affairs since Year 8," Year 13 explicitly his final year in news-001, dozens of pieces
+dated/numbered Year 13 including NRS document IDs like NRS-Y13-0047).
+
+**Decision: no retcon, no grandfather clause, no explanation written anywhere.** John's framing:
+we've already resolved an equivalent question once before (the original term-length reconciliation),
+and it doesn't need re-litigating with precise arithmetic each time — "Year 13 could be year 13 from
+any point in history." Nothing published needs to change. The 4-year rule simply applies going
+forward, starting with whoever wins the current Year 13 election. Rehn's own 6-year tenure is never
+addressed on the page and never needs to be — "his final year" remains true and does no arithmetic
+work beyond that.
+
+**If a future piece ever wants to address it directly** (a retrospective on Rehn's tenure, a civics
+piece on the term-length reform), the grandfather-clause framing discussed and rejected here is still
+available and consistent if needed: the reform passed during Rehn's tenure, his term completed under
+the rule he was elected under, the current election is the first under the new system. Not required,
+just banked in case a specific piece ever wants the texture.
+
+---
+
 ## KORDA / KELVANT LAKE-CORRIDOR MERGER (flagged 260712, John)
 **The hook — timing:** the §15.4 merger question heating up *while* the Lake Varda crisis strains the same region. The crisis gives the merger real weight — not an abstract territorial-restructuring debate, but "do we redraw these lines while the people on them are under wartime pressure from across the lake?" The two threads amplify each other.
 
