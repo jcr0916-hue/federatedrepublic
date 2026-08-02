@@ -289,7 +289,7 @@ No civil servant, military member, or person acting under direct federal authori
 
 (1) Full succession activates on the Legat Consul's death, resignation, removal, or certified permanent incapacity. The Senate Speaker holds the office of Legat Consul from the moment the triggering event is published to the NRS — no active assumption is required or permitted; the transfer is instantaneous and self-executing by constitutional operation.
 
-- **Cross-refs:** §2.16, §2.9
+- **Cross-refs:** §2.1, §2.16, §2.9
 
 ### §2.10 — Executive Transparency
 

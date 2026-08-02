@@ -11,6 +11,27 @@ provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
 
+## RESOLVED — incorporated 260801 (§2.9(5) successor eligibility)
+
+- **§2.9(5)** — written under the old single-non-renewable-LC-term system; "may stand for and serve
+  a full elected term" (singular) never got reconciled against today's §2.1 two-term restructuring,
+  and read as capping a former successor at one elected term while everyone else gets two. Caught by
+  running a stress test of the new term structure rather than by the original cross-reference search
+  (which caught §7.2's citation but missed this substantive rule stated in different words). Fixed:
+  §2.9(5) now points directly at §2.1, eligible on the same terms as any other candidate subject to
+  the full two-term limit. Cooling-off requirement itself unchanged.
+
+## STRESS TEST FINDINGS, 260801 — run against the day's term-limit changes as a set
+
+- **Chamber-switching (Assembly ↔ Senate) to reset lifetime caps — CONFIRMED NOT AN ISSUE, no fix
+  needed.** Neither §3.2(4) nor §3.5(3) cross-references the other chamber, so someone maxing out 18
+  Assembly years could immediately run for Senate for a fresh 18. John's read, and I agree: the
+  chambers hold genuinely different power (Assembly originates legislation, Senate reviews and can't
+  initiate under §3.1/§3.5(9)) and face genuinely different electorates (Assembly is district-based
+  proportional representation; Senate is statewide, two per State regardless of population) — an
+  Assembly district record doesn't guarantee anything in a statewide race. Every term in either
+  chamber still requires winning a real, separate election. Closed as working-as-intended.
+
 ## RESOLVED — incorporated 260801 (legislator lifetime caps corrected)
 
 - **§3.2(4) / §3.5(3)** — both had drifted to "no cumulative lifetime restriction applies" after
@@ -260,6 +281,17 @@ establishing that violation is usually the entire point of the suit. Immunity ca
 resolved *after* the merits, protecting nobody at the pleading stage. Either that is intended
 (protection only against liability for lawful acts — real but narrow), or it needs a different
 standard to have threshold effect.
+
+### Legislator cooling-off has no §2.17-equivalent executive-branch bar
+Surfaced during the 260801 term-limit stress test, not yet resolved. §2.17 bars a cooling-off CC or
+LC from serving as minister, domain officer, or in an acting executive capacity during their gap.
+Nothing analogous bars a termed-out Assembly member or Senator from being appointed to exactly those
+same executive positions during their own mandatory legislative cooling-off — trading forced-out
+elected accountability for an appointed, unelected executive role instead. Different in kind from the
+CC/LC case (not "staying adjacent to the same power," but "moving from elected to unelected power"),
+but arguably the same underlying loophole §2.17 exists to close, just left open on the legislative
+side. **Open question for John:** worth its own express bar, or is this acceptable since it still
+requires someone else — the sitting executive — to choose to make the appointment?
 
 ### §2.5(6) / §2.9(6) — near-identical duplication (One Home Rule)
 The two temporary-incapacity succession provisions run in close parallel, differing only in chamber
