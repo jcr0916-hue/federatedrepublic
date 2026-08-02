@@ -3,13 +3,36 @@
 **Started 260731.** Systematic provision-by-provision review against the ten design principles in
 `CONSTITUTIONAL-DESIGN-PRINCIPLES.md`.
 
-**Progress:** Articles I, II, III complete. Working through the I-III backlog before starting IV.
+**Progress:** Articles I, II, III, IV complete.
 
 **Standing filter:** constitutional language states the obligation and its floor; statute states the
 machinery. A finding only counts if statute *couldn't* fix it. A conflict between two constitutional
 provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
+
+## RESOLVED — Article IV review, incorporated 260801
+
+- **§4.5(6)** — four-justice emergency panel conflicted with §4.3's separate five-justice floor for
+  constitutional questions (military-authority disputes are inherently constitutional). Fixed by
+  removing the fixed number entirely: SC now holds jurisdiction with a bounded 48-hour deadline, and
+  establishes its own procedures for panel composition. Dissolves the conflict rather than picking a
+  number that reconciles with five.
+- **§4.3's five-justice floor at the Court's 3-justice minimum — confirmed NOT AN ISSUE, no change.**
+  §4.4(7) already auto-backfills any vacancy within 5 days with a full-voting Temporary Associate
+  Justice, and §4.3 already counts temps toward seated membership. The 3-justice floor bounds
+  permanent-seat shrinkage via attrition; it was never describing actual functional headcount, which
+  stays near full authorized size at all times. Traced through the actual mechanism rather than
+  assumed either way.
+- **§4.4.a** — "may advocate for their own confirmation" changed to "may publicly campaign for their
+  own confirmation." Not a substance change — a precision fix. Nominees already self-advocate in
+  ordinary confirmations; that was never restricted and needed no special permission. The genuinely
+  novel thing this bypass permits is soliciting public votes directly, which "advocate" didn't name.
+- **§4.2(5)** — confirmed no change. No-consequence-for-influencing-a-judge language is a floor;
+  consequence is properly left to whichever existing accountability structure governs the offending
+  official's own category, not a bespoke penalty per prohibition.
+- **§4.1** — confirmed no change. "Inferior courts" covering both district and appellate tiers is
+  standard usage, not an internal ambiguity.
 
 ## RESOLVED — incorporated 260801 (one turn per pool: judicial + Monitor General)
 
