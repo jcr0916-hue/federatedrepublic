@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
-    "sync": "python3 scripts/build-constitution-md.py constitution_data.json constitution-current.md && python3 scripts/build-quickref.py constitution_data.json constitutional-quickref.md && python3 scripts/build-search-index.py"
+    "sync": "python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6"
