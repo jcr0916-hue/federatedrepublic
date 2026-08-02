@@ -325,7 +325,7 @@ The Legislature comprises two chambers: the Assembly and the Senate. All legisla
 
 (3) The Assembly selects a Speaker from its own members by a method it establishes, provided the Speaker holds the support of a majority of full seated membership; the Speakership is a standing office, and its holder serves as Acting Civic Consul under §2.5 and §2.6.a. Quorum is a majority of full seated membership. The Assembly establishes its own internal procedures.
 
-(4) Members serve two-year terms. No member may serve more than six consecutive terms without sitting out one full electoral cycle; no cumulative lifetime restriction applies after the cooling-off period.
+(4) Members serve two-year terms. No member may serve more than six consecutive terms without sitting out one full electoral cycle; upon return, a member may serve up to three additional terms, after which no further service in the Assembly is permitted.
 
 (5) Any Assembly member who resigns, is expelled, or is removed by state recall at any point during a term shall be deemed to have served that full term for purposes of the consecutive-term limit.
 
@@ -347,7 +347,7 @@ Every bill must address a single, clearly defined subject. Any member or approva
 
 (2) At the first Senate seating, senators are assigned to three approximately equal cohorts by public lot: the first cohort serves an initial term of two years, the second four years, the third six years; thereafter all Senate terms are six years. The lot is conducted by the Elections Panel and published to the NRS before the first senators take the constitutional oath.
 
-(3) No senator may serve more than two consecutive terms without sitting out one full term; no cumulative lifetime restriction applies after the cooling-off period.
+(3) No senator may serve more than two consecutive terms without sitting out one full term; upon return, a senator may serve up to one additional term, after which no further service in the Senate is permitted.
 
 (4) Any senator who resigns, is expelled, or is removed by state recall at any point during a term shall be deemed to have served that full term for purposes of the consecutive-term limit.
 

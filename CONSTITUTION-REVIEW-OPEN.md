@@ -11,6 +11,16 @@ provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
 
+## RESOLVED — incorporated 260801 (legislator lifetime caps corrected)
+
+- **§3.2(4) / §3.5(3)** — both had drifted to "no cumulative lifetime restriction applies" after
+  cooling-off, meaning unlimited return service — a real divergence from the 18-year symmetric design
+  actually agreed on earlier in the design conversation, caught only when John compared the live text
+  against that decision directly. Fixed: Assembly gets up to 3 additional terms after cooling-off (6
+  consecutive + 3 = 9 terms x 2 years = 18-year max); Senate gets up to 1 additional term (2
+  consecutive + 1 = 3 terms x 6 years = 18-year max). Both chambers converge on the same lifetime
+  ceiling by design, despite different term lengths.
+
 ## RESOLVED — incorporated 260801 (LC term restructuring + general cooling-off rule)
 
 Emerged organically during discussion, not originally a tracked finding — worth recording fully
@@ -250,13 +260,6 @@ establishing that violation is usually the entire point of the suit. Immunity ca
 resolved *after* the merits, protecting nobody at the pleading stage. Either that is intended
 (protection only against liability for lawful acts — real but narrow), or it needs a different
 standard to have threshold effect.
-
-### §3.2(4) / §3.5(3) — no lifetime cap on legislators
-Six consecutive Assembly terms or two consecutive Senate terms, sit out one cycle, repeat
-indefinitely — no cumulative lifetime restriction, unlike every other constitutional office (CC 8yr
-cumulative, LC single 6yr term, SC justices single 12yr term, Monitors 10yr non-renewable).
-Defensible — legislators face voters regularly, the others don't — and stated explicitly enough to
-read as intentional. **Asked twice this session, never actually answered either time.**
 
 ### §2.5(6) / §2.9(6) — near-identical duplication (One Home Rule)
 The two temporary-incapacity succession provisions run in close parallel, differing only in chamber
