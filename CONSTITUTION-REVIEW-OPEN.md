@@ -11,6 +11,44 @@ provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
 
+## RESOLVED — incorporated 260801 (LC term restructuring + general cooling-off rule)
+
+Emerged organically during discussion, not originally a tracked finding — worth recording fully
+since it's a substantial structural change.
+
+- **§2.1** — LC's single non-renewable 6-year term (absolute lifetime bar, no re-election ever)
+  restructured to 4-year terms, up to 2, 8-year lifetime maximum matching the CC's own cumulative
+  cap. A former LC may not seek a second term at the NEXT election, but may at any election
+  thereafter — a mandatory gap, not simple immediate re-eligibility. Deliberately NOT copying the
+  CC's exact mechanic (CC's gap is open-ended/multi-stint, tied to Assembly cycles since CC is
+  Assembly-selected; LC's is a clean 2-term cap given LC's fixed-length terms).
+- **§7.2(1)** — "Consular elections every six years" updated to "every four years" to match. Checked
+  and confirmed this is the ONLY other cross-reference to the old LC term length anywhere in the
+  document (CC has no fixed election cycle at all, tied to Assembly confidence instead).
+- **§7.4(9)** (NEW) — general rule: a cooling-off period from one office does not bar holding/seeking
+  any OTHER office for which a person is otherwise eligible, unless expressly provided otherwise.
+  Placed in §7.4 (Eligibility and Disclosure for Federal Office) since it's a general eligibility
+  default, not something that belongs to any one office's own provision.
+- **§2.17** (NEW) — the express exception to §7.4(9) for the executive branch: a person cooling off
+  from CC or LC may not serve as a minister, domain officer, or in an acting executive capacity
+  during that period. Closes a live loophole the general rule alone would have reopened: an outgoing
+  LC serving as Director of Intelligence/Defense during their own gap, staying adjacent to the same
+  military/intelligence apparatus the gap exists to create distance from. Legislature, judiciary, and
+  other offices remain open. Appended as new provision (matches the §1.24 pattern — new provision,
+  not inserted mid-sequence) rather than buried inside either Consul's own term provision, since it
+  governs both.
+- **§2.5(2)** — trimmed now-redundant "may hold an Assembly seat but may not be elected or designated
+  Civic Consul" clause; covered twice over now by §7.4(9)'s general default and §2.17's confirmation
+  that only the executive branch is restricted.
+
+**Process note:** the annotated.html insertion for §2.17 went wrong twice before landing correctly —
+first inserted in the wrong location entirely (after Article III's own header/intro instead of before
+it, a semantic placement error not caught by div-balance checks alone), then a "removal" script that
+computed the fix correctly but never wrote it to disk, leaving a duplicate. Both caught by re-running
+full verification from scratch rather than trusting intermediate state, including a stack-based
+open/close scan that pinpointed the exact unmatched tag. Final state fully verified: 170 provisions,
+divs balanced via strict stack scan (not just count), all 21 intros and 16 qs-icons intact.
+
 ## RESOLVED — incorporated 260801 (§1.6)
 
 - **§1.6** — economic status sat at strict scrutiny alongside race, religion, and the rest, which

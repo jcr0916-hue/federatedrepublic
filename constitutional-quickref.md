@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 169 provisions**
+> **20 articles · 170 provisions**
 
 ---
 
@@ -15,7 +15,7 @@
 
 - **Preamble**
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.24  (26 provisions)
-- **Article II — The Dual Executive**  ·  §2.1–§2.16  (21 provisions)
+- **Article II — The Dual Executive**  ·  §2.1–§2.17  (22 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.15  (16 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (3 provisions)
@@ -353,6 +353,12 @@ The Civic Consul is responsible for the enforcement of federal law and sets gene
   - A person who does not publish a declination within 48 hours is deemed to have accepted
   - An incapacity under this section that has continued for 90 days ends by constitutional operation unless, before expiry, a removal process under §2
 - **Cross-refs:** §2.13, §2.5, §2.6, §2.9
+
+### §2.17 — Cooling-Off from Executive Service
+
+During any period in which this Constitution bars a person from holding or seeking the office of Civic Consul or Legat Consul under a cooling-off requirement, that person may not serve in any other capacity within the executive branch, including as a minister, domain officer, or in an acting executive capacity. This section is the express exception to §7.4(9) for executive branch service; it does not bar service…
+
+- **Cross-refs:** §7.4
 
 ---
 

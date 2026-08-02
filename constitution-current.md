@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 169 provisions**
+> **20 articles · 170 provisions**
 
 thefederatedrepublic.org
 
@@ -143,7 +143,7 @@ Every person holds the right to found a family.
 
 ### §2.1 — The Legat Consul — Domain and Term
 
-To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. No other eligibility requirement applies. The Legat Consul holds enumerated authority over: military command and force employment; foreign affairs, treaty negotiation, recognition of foreign governments, and the receipt of foreign delegations; intelligence; trade agreements subject to §2.4; and relations with recognized indigenous nations under Article XVI, including recognition determinations under §16.4; and appointments within the Legat Consul’s domain. Where the domain of a proposed action is disputed, the Council of Ministers under §2.14 is the first forum; pending resolution, each executive continues only those functions clearly within their established domain; the specific action giving rise to the dispute is suspended. Either executive may petition the SC under its original jurisdiction in §4.5 for domain determination. During active military operations, the Legat Consul's domain governs operational decisions. The Legat Consul serves a single non-renewable term of six years. No person who has served an elected term as Legat Consul may again hold the office of Legat Consul or exercise its authority; the bar is a lifetime bar. Service as a successor under §2.9 does not constitute an elected term for this purpose. Upon expiration of the term, all authority transfers immediately to the incoming Legat Consul. The outgoing Legat Consul retains no access to classified information, government systems, or official functions beyond the time of transfer.
+To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. No other eligibility requirement applies. The Legat Consul holds enumerated authority over: military command and force employment; foreign affairs, treaty negotiation, recognition of foreign governments, and the receipt of foreign delegations; intelligence; trade agreements subject to §2.4; and relations with recognized indigenous nations under Article XVI, including recognition determinations under §16.4; and appointments within the Legat Consul’s domain. Where the domain of a proposed action is disputed, the Council of Ministers under §2.14 is the first forum; pending resolution, each executive continues only those functions clearly within their established domain; the specific action giving rise to the dispute is suspended. Either executive may petition the SC under its original jurisdiction in §4.5 for domain determination. During active military operations, the Legat Consul's domain governs operational decisions. The Legat Consul serves a term of four years. No person may serve more than two terms as Legat Consul; the limit is a lifetime maximum. A person who has served one term as Legat Consul may not seek election to a second term at the next occurring election for that office, but may seek election at any subsequent election. Service as a successor under §2.9 does not constitute an elected term for this purpose. Upon expiration of the term, all authority transfers immediately to the incoming Legat Consul. The outgoing Legat Consul retains no access to classified information, government systems, or official functions beyond the time of transfer.
 
 ### §2.2 — Military Authorization Framework
 
@@ -169,7 +169,7 @@ The Legat Consul nominates senior domain officers — Director of Intelligence, 
 
 (1) The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul. To hold the office of Civic Consul, a person must be a serving member of the Assembly at the time of election as required by §2.6. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. No other eligibility requirement applies. The Civic Consul serves at the confidence of the Assembly, subject to removal under §2.6.
 
-(2) No person may serve more than 8 years as Civic Consul across all periods of service; the limit is a lifetime maximum. Service in an acting capacity does not count toward this limit. A person who leaves the office of Civic Consul may not serve again as Civic Consul until one full Assembly electoral cycle has passed since they left the office; during that interval they may hold an Assembly seat but may not be elected or designated Civic Consul.
+(2) No person may serve more than 8 years as Civic Consul across all periods of service; the limit is a lifetime maximum. Service in an acting capacity does not count toward this limit. A person who leaves the office of Civic Consul may not serve again as Civic Consul until one full Assembly electoral cycle has passed since they left the office.
 
 (3) The Civic Consul's domestic authority includes:
 
@@ -304,6 +304,10 @@ The Civic Consul is responsible for the enforcement of federal law and sets gene
 (d) The person last in the order of succession may not decline.
 
 (5) Duration. An incapacity under this section that has continued for 90 days ends by constitutional operation unless, before expiry, a removal process under §2.6 or §2.13 has been initiated against the Consul, in which case the incapacity continues until that process concludes.
+
+### §2.17 — Cooling-Off from Executive Service
+
+During any period in which this Constitution bars a person from holding or seeking the office of Civic Consul or Legat Consul under a cooling-off requirement, that person may not serve in any other capacity within the executive branch, including as a minister, domain officer, or in an acting executive capacity. This section is the express exception to §7.4(9) for executive branch service; it does not bar service in the Legislature, the judiciary, or any other constitutional office for which the person is otherwise eligible.
 
 ---
 
@@ -597,7 +601,7 @@ The Legislature must define a minimum status, material conditions, and periodic 
 
 ### §7.2 — Federal Elections
 
-(1) Federal elections are held at regular intervals: Assembly elections every two years; Senate elections on the staggered six-year cycle; Consular elections every six years.
+(1) Federal elections are held at regular intervals: Assembly elections every two years; Senate elections on the staggered six-year cycle; Consular elections every four years.
 
 (2) All federal elections use Ranked Choice Voting — majority required, not plurality; Consular elections use RCV within the framework of §7.1, which adds the State plurality requirement.
 
@@ -634,6 +638,8 @@ Special elections for vacancies are administered by the Elections Panel under pr
 (7) A person removed from a federal office by an affirmative removal process -- including impeachment, a for-cause removal, a constructive vote of no confidence, or recall -- may not hold or seek that office until the remainder of the electoral cycle in which the removal occurred and one full electoral cycle thereafter have passed. The ordinary expiration of a term, and loss of office through an election, are not removals for purposes of this section.
 
 (8) Where this Constitution bars a person from holding an office, no election, succession, elevation, designation, or automatic assumption may place that person in that office or in an acting exercise of its authority, except where this Constitution expressly provides otherwise. Where an order of succession or acting authority would otherwise place a barred person, the role passes to the next eligible person in the applicable order as if that person were unable to serve.
+
+(9) A cooling-off period constitutionally required before a person may again hold or seek a specific office does not bar that person from holding or seeking any other constitutional office for which they are otherwise eligible during that period, except where this Constitution expressly provides otherwise.
 
 ---
 
