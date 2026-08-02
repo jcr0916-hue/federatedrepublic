@@ -11,6 +11,27 @@ provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
 
+## RESOLVED — incorporated 260801 (one turn per pool: judicial + Monitor General)
+
+Emerged from continued discussion after the term-limit stress test, not originally tracked items.
+
+- **§9.4.a** — the shared Judicial Pool fed both SC justices (§4.4) and inferior court judges (§4.2),
+  each individually barred from repeating their own tier, but nothing stopped crossing tiers (former
+  SC justice later an inferior judge, or reverse). Fixed: nominated-and-confirmed to any federal
+  judicial appointment bars re-entry to the pool and nomination to any other judicial appointment.
+  Acting/temporary service explicitly excluded.
+- **§9.3** — same underlying concern, different structure: the three Monitor General pools (LM/EM/JM)
+  are separate registries, so a pool-reentry rule wouldn't have closed cross-office movement the way
+  it did for judges. Stated directly instead: confirmed to a full MG term in any capacity bars entry
+  to any MG pool. Two proportionality carve-outs, deliberately mirroring the §2.9(5) logic: (1) a
+  person confirmed only to serve a vacancy's remainder (not a full scheduled term) is barred only from
+  that same office, not the other two — a 2-year fill-in isn't the same turn as a full decade; (2)
+  acting service under §9.1.d never triggers the bar at all, consistent with §9.1.d's own existing
+  treatment of acting service as a non-event.
+- Domain officers (§2.4.a) deliberately excluded from this principle — at-will, indefinite-term
+  appointments dismissable at any time, not fixed-term slots drawn from a scarce pool; the scarcity
+  logic behind the judicial/MG rules doesn't map onto them the same way.
+
 ## RESOLVED — incorporated 260801 (§2.9(5) successor eligibility)
 
 - **§2.9(5)** — written under the old single-non-renewable-LC-term system; "may stand for and serve
