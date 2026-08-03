@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 170 provisions**
+> **20 articles · 169 provisions**
 
 thefederatedrepublic.org
 
@@ -123,7 +123,7 @@ Every person who reaches the Republic's jurisdiction has the right to claim asyl
 
 ### §1.21 — Non-Refoulement
 
-No person within the Republic's jurisdiction may be returned, expelled, or extradited to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the nature of the receiving territory's government. This right is non-derogable under §1.19.a.
+No person, wherever located, may be returned, expelled, or extradited by the Republic, or by any person acting at the direction or with the acquiescence of the Republic, to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the nature of the receiving territory's government. This right is non-derogable under §1.19.a.
 
 ### §1.22 — Official Capacity Protection
 
@@ -137,13 +137,17 @@ No person may exercise the voting or decisional authority of more than one branc
 
 Every person holds the right to found a family.
 
+### §1.25 — Inviolability of Electoral Mandates
+
+Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate. The only permitted exceptions are: expulsion by the relevant chamber under §3.2 or §3.5; recall under a mechanism established by State law as recognized in §3.2 or §3.5; and removal under the provisions enumerated in §3.10. Any mechanism enabling the people themselves to shorten an elected mandate not already provided in this Constitution requires a constitutional amendment under Article XVII and may not be established by ordinary statute. Expulsion, recall, and removal under any provision of this Constitution are civil and political processes; they do not constitute criminal or civil legal proceedings and do not protect the removed officer from criminal prosecution or civil liability for underlying conduct.
+
 ---
 
 ## Article II — The Dual Executive
 
 ### §2.1 — The Legat Consul — Domain and Term
 
-To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. No other eligibility requirement applies. The Legat Consul holds enumerated authority over: military command and force employment; foreign affairs, treaty negotiation, recognition of foreign governments, and the receipt of foreign delegations; intelligence; trade agreements subject to §2.4; and relations with recognized indigenous nations under Article XVI, including recognition determinations under §16.4; and appointments within the Legat Consul’s domain. Where the domain of a proposed action is disputed, the Council of Ministers under §2.14 is the first forum; pending resolution, each executive continues only those functions clearly within their established domain; the specific action giving rise to the dispute is suspended. Either executive may petition the SC under its original jurisdiction in §4.5 for domain determination. During active military operations, the Legat Consul's domain governs operational decisions. The Legat Consul serves a term of four years. No person may serve more than two terms as Legat Consul; the limit is a lifetime maximum. A person who has served one term as Legat Consul may not seek election to a second term at the next occurring election for that office, but may seek election at any subsequent election. Service as a successor under §2.9 does not constitute an elected term for this purpose. Upon expiration of the term, all authority transfers immediately to the incoming Legat Consul. The outgoing Legat Consul retains no access to classified information, government systems, or official functions beyond the time of transfer.
+To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. The Legat Consul holds enumerated authority over: military command and force employment; foreign affairs, treaty negotiation, recognition of foreign governments, and the receipt of foreign delegations; intelligence; trade agreements subject to §2.4; and relations with recognized indigenous nations under Article XVI, including recognition determinations under §16.4; and appointments within the Legat Consul’s domain. Where the domain of a proposed action is disputed, the Council of Ministers under §2.14 is the first forum; pending resolution, each executive continues only those functions clearly within their established domain; the specific action giving rise to the dispute is suspended. Either executive may petition the SC under its original jurisdiction in §4.5 for domain determination. During active military operations, the Legat Consul's domain governs operational decisions. The Legat Consul serves a term of four years. No person may serve more than two terms as Legat Consul; the limit is a lifetime maximum. A person who has served one term as Legat Consul may not seek election to a second term at the next occurring election for that office, but may seek election at any subsequent election. Service as a successor under §2.9 does not constitute an elected term for this purpose. Upon expiration of the term, all authority transfers immediately to the incoming Legat Consul. The outgoing Legat Consul retains no access to classified information, government systems, or official functions beyond the time of transfer.
 
 ### §2.2 — Military Authorization Framework
 
@@ -167,7 +171,7 @@ The Legat Consul nominates senior domain officers — Director of Intelligence, 
 
 ### §2.5 — The Civic Consul — Domain and Term
 
-(1) The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul. To hold the office of Civic Consul, a person must be a serving member of the Assembly at the time of election as required by §2.6. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. No other eligibility requirement applies. The Civic Consul serves at the confidence of the Assembly, subject to removal under §2.6.
+(1) The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul. To hold the office of Civic Consul, a person must be a serving member of the Assembly at the time of election as required by §2.6. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. The Civic Consul serves at the confidence of the Assembly, subject to removal under §2.6.
 
 (2) No person may serve more than 8 years as Civic Consul across all periods of service; the limit is a lifetime maximum. Service in an acting capacity does not count toward this limit. A person who leaves the office of Civic Consul may not serve again as Civic Consul until one full Assembly electoral cycle has passed since they left the office.
 
@@ -255,7 +259,7 @@ Each executive holds clemency authority within their own domain only. Consular c
 
 ### §2.13 — Consular Removal
 
-The Legat Consul may be removed on two independent tracks. Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or conviction for a disqualifying offense. Either chamber may request a JMC assessment as part of the proceedings; any such assessment is published to the NRS. Under the popular track, a Senate majority may refer the question to a national recall referendum administered within the period defined by statute. The Legat Consul is removed if the referendum achieves 60% of votes cast under §7.3 with a minimum 55% citizen participation. A failed referendum may not be re-initiated within the same Legat Consul's term. The Senate Speaker holds Acting Consular Authority from the moment of Senate referral published to the NRS — no active assumption is required or permitted. The military compliance obligations established in §2.9 apply to this transfer.
+The Legat Consul may be removed on two independent tracks. Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct. Either chamber may request a JMC assessment as part of the proceedings; any such assessment is published to the NRS. Under the popular track, a Senate majority may refer the question to a national recall referendum administered within the period defined by statute. The Legat Consul is removed if the referendum achieves 60% of votes cast under §7.3 with a minimum 55% citizen participation. A failed referendum may not be re-initiated within the same Legat Consul's term. The Senate Speaker holds Acting Consular Authority from the moment of Senate referral published to the NRS — no active assumption is required or permitted. The military compliance obligations established in §2.9 apply to this transfer.
 
 ### §2.14 — Council of Ministers
 
@@ -385,19 +389,11 @@ All three Monitors have full access to legislative records, committee deliberati
 
 ### §3.9 — Independent Statutory Agencies
 
-The Legislature may establish independent agencies operating outside the authority of both executives. Where this Constitution assigns a function to an independent agency, the Legislature must establish it. Directors of constitutionally mandated independent agencies serve fixed terms defined by statute and are removable for cause only; cause must relate to conduct, competence, or a disqualifying offense under §3.12 and may not include policy disagreement with the Legislature or either executive. The appointment process and oversight mechanism for each agency are established by statute in a manner consistent with this independence protection. Qualification standards established by statute for appointment to a constitutionally mandated independent agency must be facially neutral and may not be designed to exclude otherwise qualified candidates on the basis of policy view, party affiliation, or prior public criticism of the Legislature or either executive.
+The Legislature may establish independent agencies operating outside the authority of both executives. Where this Constitution assigns a function to an independent agency, the Legislature must establish it. Directors of constitutionally mandated independent agencies serve fixed terms defined by statute and are removable for cause only; cause must relate to conduct or competence and may not include policy disagreement with the Legislature or either executive. The appointment process and oversight mechanism for each agency are established by statute in a manner consistent with this independence protection. Qualification standards established by statute for appointment to a constitutionally mandated independent agency must be facially neutral and may not be designed to exclude otherwise qualified candidates on the basis of policy view, party affiliation, or prior public criticism of the Legislature or either executive.
 
 ### §3.10 — Removal Pathways
 
 Removal of constitutional officers proceeds exclusively as this Constitution provides: the Legat Consul under §2.13; the Civic Consul under §2.6; Supreme Court justices under §4.3.a; inferior court judges under §4.2; members of the Legislature by their own chamber under §3.2 or §3.5, or by State recall as recognized there; Legat Consul domain officers by the Senate under §2.4.a; ministers at the pleasure of the Civic Consul under §2.5; and constitutionally confirmed independent officers under §9.9. Criminal liability remains separately pursuable. No removal mechanism not provided for in this Constitution may be created by statute.
-
-### §3.11 — Inviolability of Electoral Mandates
-
-Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate. The only permitted exceptions are: expulsion by the relevant chamber under §3.2 or §3.5; recall under a mechanism established by State law as recognized in §3.2 or §3.5; and removal under the provisions enumerated in §3.10. Any mechanism enabling the people themselves to shorten an elected mandate not already provided in this Constitution requires a constitutional amendment under Article XVII and may not be established by ordinary statute. Expulsion, recall, and removal under any provision of this Constitution are civil and political processes; they do not constitute criminal or civil legal proceedings and do not protect the removed officer from criminal prosecution or civil liability for underlying conduct.
-
-### §3.12 — Disqualifying Offense
-
-A disqualifying offense, wherever that term appears in this Constitution, means a conviction for a federal felony under the laws of the Republic. No state-level or foreign conviction constitutes a disqualifying offense for constitutional purposes. A disqualifying offense is a ground for the removal of a person already holding office under the provisions that reference it; it does not govern eligibility to seek or hold federal office, which is governed exclusively by §7.4. A pardon granted under §2.12 does not clear the offense's status as a disqualifying offense unless the pardoning instrument expressly states that this status is cleared and the EM publishes to the NRS that the pardoning instrument expressly so states. Where a conviction is under appeal at the time a relevant constitutional determination is made, the conviction stands for constitutional purposes unless and until it is reversed by a court of competent jurisdiction.
 
 ### §3.13 — Continuity of Constitutionally Mandated Offices
 
@@ -425,7 +421,7 @@ The Republic's judiciary operates at three levels: district courts, appellate co
 
 (2) The Civic Consul nominates inferior court judges from the Judicial Pool maintained by the Elections Panel under §9.8. The Civic Consul must nominate within the period defined by statute following a vacancy, not to exceed 90 days where no statutory period has been defined. The Senate confirms by 2/3.
 
-(3) Inferior court judges serve a single non-renewable term of 12 years and may be removed only for cause. Cause for judicial removal must relate to conduct, competence, or a disqualifying offense under §3.12; policy disagreement with judicial decisions does not constitute cause, consistent with the principle established in §3.9. The Legislature may establish a mandatory retirement age by statute, not below 70.
+(3) Inferior court judges serve a single non-renewable term of 12 years and may be removed only for cause. Cause for judicial removal must relate to conduct or competence; policy disagreement with judicial decisions does not constitute cause, consistent with the principle established in §3.9. The Legislature may establish a mandatory retirement age by statute, not below 70.
 
 (4) Judicial removal occurs through three tracks:
 
@@ -433,7 +429,7 @@ The Republic's judiciary operates at three levels: district courts, appellate co
 
 — judicial discipline through a process established by statute under SC oversight;
 
-— or criminal conviction for a disqualifying offense.
+— or serious misconduct.
 
 (5) No public official may direct, threaten, or seek to influence a judge's decision in any pending matter. Judicial compensation may not be reduced during a judge's term.
 
@@ -443,7 +439,7 @@ The Supreme Court consists initially of nine justices organized into three stagg
 
 ### §4.3.a — Supreme Court Justice Removal
 
-A Supreme Court justice may be removed only for cause. Three grounds constitute sufficient cause: constitutional breach in the exercise of judicial authority, as assessed by the EM under §9.1 or as determined by the removing chambers; certified permanent incapacity jointly certified by the EM and LM; or conviction for a disqualifying offense. Removal requires a 2/3 vote of both chambers in a concurrent vote following publication of the relevant ground. No removal vote may be held within 180 days of a major national election without prior SC review under §4.5; the SC must rule within 48 hours of petition. Judicial disagreement — however profound — does not constitute grounds for removal; the independence of SC judicial judgment is absolute and may not itself be invoked as grounds for removal. Upon removal, the most senior Appellate Court judge auto-designates as Temporary Associate Justice under §4.4 until the vacancy is filled.
+A Supreme Court justice may be removed only for cause. Three grounds constitute sufficient cause: constitutional breach in the exercise of judicial authority, as assessed by the EM under §9.1 or as determined by the removing chambers; certified permanent incapacity jointly certified by the EM and LM; or serious misconduct. Removal requires a 2/3 vote of both chambers in a concurrent vote following publication of the relevant ground. No removal vote may be held within 180 days of a major national election without prior SC review under §4.5; the SC must rule within 48 hours of petition. Judicial disagreement — however profound — does not constitute grounds for removal; the independence of SC judicial judgment is absolute and may not itself be invoked as grounds for removal. Upon removal, the most senior Appellate Court judge auto-designates as Temporary Associate Justice under §4.4 until the vacancy is filled.
 
 ### §4.4 — Supreme Court Selection
 
@@ -505,7 +501,7 @@ Judicial judgments, official records, and authenticated documents are recognized
 
 ### §5.1 — Citizenship
 
-Citizenship is acquired by birth, by parentage, or by naturalization. A child is automatically a citizen if at least one parent is a citizen or legal resident at birth. Citizens acquire their full citizenship rights, including the right to vote and stand for office, at 18. Citizenship may not be stripped from a natural-born citizen. Where a child born on Republic territory would hold no other citizenship, or would otherwise be stateless regardless of birthplace, citizenship is granted from birth. A legal resident may earn citizenship after the continuous residency period and clean legal record established by statute, upon passing a standardized assessment of civic and constitutional proficiency established by statute. A legal resident may alternatively earn citizenship through honorable completion of military or national service. The assessment tests knowledge of constitutional principles and civic structure — not political opinions or cultural loyalty. It is administered by a statutory independent agency under §3.9. No citizenship may be revoked as punishment once granted; the Republic may not manufacture statelessness as a punitive tool. A child born before a parent acquired legal residency or citizenship, who accompanies that parent to the Republic within a Legislature-defined window, receives derivative status.
+Citizenship is acquired by birth, by parentage, or by naturalization. A child is automatically a citizen if at least one parent is a citizen or legal resident at birth. Citizens acquire their full citizenship rights, including the right to vote and stand for office, at 18. Citizenship may not be stripped from any citizen except as provided in this section. Where a child born on Republic territory would hold no other citizenship, or would otherwise be stateless regardless of birthplace, citizenship is granted from birth. A legal resident may earn citizenship after the continuous residency period and clean legal record established by statute, upon passing a standardized assessment of civic and constitutional proficiency established by statute. A legal resident may alternatively earn citizenship through honorable completion of military or national service. The assessment tests knowledge of constitutional principles and civic structure — not political opinions or cultural loyalty. It is administered by a statutory independent agency under §3.9. No citizenship may be revoked as punishment, and the Republic may not manufacture statelessness as a punitive tool. Citizenship acquired by naturalization may be revoked only upon a judicial finding, by clear and convincing evidence, that it was obtained through material fraud in the application itself. No revocation may occur where it would render the person stateless. Revocation does not extend to any person who acquired citizenship derivatively through the naturalized person. A child born before a parent acquired legal residency or citizenship, who accompanies that parent to the Republic within a window defined by statute at not less than five years, receives derivative status.
 
 ### §5.2 — Legal Resident Rights
 
@@ -513,7 +509,7 @@ Legal residents hold a Residency Credential allowing them to work, enter contrac
 
 ### §5.3 — Custodial Care of Citizen Children
 
-Where a parent or guardian who is the primary caregiver of a citizen child is removed from the Republic, the Republic accepts responsibility for that citizen child — housing, care, and connection to remaining family. The Republic may not separate citizen children from their sole caregivers without providing for them. Where a removal order would deprive an Inhabitant child of their primary caregiver, that order is stayed pending resolution of custodial arrangements.
+Where a parent or guardian who is the primary caregiver of a citizen child is removed from the Republic, the Republic accepts responsibility for that citizen child — housing, care, and connection to remaining family. The Republic may not separate citizen children from their sole caregivers without providing for them. Where a removal order would deprive a citizen or Inhabitant child of their primary caregiver, that order is stayed pending resolution of custodial arrangements.
 
 ---
 
@@ -619,7 +615,7 @@ Special elections for vacancies are administered by the Elections Panel under pr
 
 ### §7.3 — Electoral Supermajority Threshold
 
-60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. This threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State plurality requirement is waived (§7.1); public confirmation of a Supreme Court justice under the Senate bypass mechanism (§4.4.a); public recall of the Legat Consul under §2.13; and the national independence referendum under §15.9. The Legislature may not set a higher or lower threshold for any direct electoral supermajority determination without a constitutional amendment. This provision does not govern the optional referendum under §13.1 (simple majority of votes cast subject to a 50% turnout ceiling) or the citizen legislative initiative under §13.2 (60% of votes cast with at least 50% participation where the Legislature has not acted); it governs determinations that require constitutional supermajority democratic consent.
+60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. This threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State plurality requirement is waived (§7.1); public confirmation of a Supreme Court justice under the Senate bypass mechanism (§4.4.a); public recall of the Legat Consul under §2.13; and the national independence referendum under §15.9. The Legislature may not set a higher or lower threshold for any direct electoral supermajority determination without a constitutional amendment. This provision governs the supermajority threshold itself. It does not govern participation floors or turnout ceilings, which are established in the provisions requiring them, and does not govern the optional referendum under §13.1, which requires only a simple majority of votes cast.
 
 ### §7.4 — Eligibility and Disclosure for Federal Office
 
@@ -713,7 +709,7 @@ All Monitor General confirmations follow the same process: the nominated or lott
 
 ### §9.4.a — Judicial Pool — Eligibility Criteria
 
-The Elections Panel maintains the standing Judicial Pool from which all federal judicial appointments are drawn. Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel: at least 15 years of legal practice or 10 years of judicial service; no current government position; no disqualifying financial interest as defined in §12.4. The Elections Panel applies the stated eligibility criteria and enters qualifying applicants into the Judicial Pool. The JM's ongoing audit of the Elections Panel encompasses the administration of the Judicial Pool; audit findings on the registry and its members are published to the NRS as part of that audit. The EM's ongoing audit of constitutional appointments encompasses financial disclosure review; findings are published to the NRS. Any applicant excluded from or removed from the registry may appeal to the SC within 14 days on the sole ground that the eligibility criteria were misapplied. The Judicial Pool is publicly accessible on the NRS at all times. A person nominated and confirmed to any federal judicial appointment from the Judicial Pool may not subsequently re-enter the Judicial Pool or be nominated to any other federal judicial appointment. Temporary or acting judicial service does not constitute a nomination and confirmation for purposes of this provision.
+The Elections Panel maintains the standing Judicial Pool from which all federal judicial appointments are drawn. Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel: at least 15 years of legal practice or 10 years of judicial service; no current government position; no disqualifying financial interest as defined in §12.4. The Elections Panel applies the stated eligibility criteria and enters qualifying applicants into the Judicial Pool. The JM's ongoing audit of the Elections Panel encompasses the administration of the Judicial Pool; audit findings on the registry and its members are published to the NRS as part of that audit. The EM's ongoing audit of constitutional appointments encompasses financial disclosure review; findings are published to the NRS. Any applicant excluded from or removed from the registry may appeal to the SC within 14 days on the sole ground that the eligibility criteria were misapplied. The Judicial Pool is publicly accessible on the NRS at all times. A person who has served as a Supreme Court justice may not subsequently re-enter the Judicial Pool or be nominated to any federal judicial appointment. A person who has served in any other federal judicial appointment may not be nominated again to the same court, but remains eligible for nomination to a different federal court. Temporary or acting judicial service does not constitute service for purposes of this provision.
 
 ### §9.5 — Monitor Operations
 
