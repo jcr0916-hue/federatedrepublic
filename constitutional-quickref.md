@@ -635,8 +635,8 @@ Special elections for vacancies are administered by the Elections Panel under pr
 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. This threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State plurality requirement is waived (§7.1); public confirmation of a Supreme Court justice under the Senate bypass mechanism…
 
 - **Thresholds:**
-  - 1 (simple majority of votes cast subject to a 50% turnout ceiling) or the citizen legislative initiative under §13
-- **Cross-refs:** §13.1, §13.2, §15.9, §2.13, §4.4.a, §7.1
+  - 1, which requires only a simple majority of votes cast
+- **Cross-refs:** §13.1, §15.9, §2.13, §4.4.a, §7.1
 
 ### §7.4 — Eligibility and Disclosure for Federal Office
 
@@ -1336,7 +1336,7 @@ Extracted verbatim. If a threshold is not in this table, it is not in the consti
 | §4.3.a | Supreme Court Justice Removal | Removal requires a 2/3 vote of both chambers in a concurrent vote following publication of the relevant ground |
 | §4.4.a | Senate Bypass — Public Confirmation | 4, the Civic Consul may — with 2/3 Assembly consent — place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation |
 | §7.2.a | Special Elections and Postponements | No further postponement may be granted without a new Elections Panel finding of impossibility and a new 2/3 legislative determination |
-| §7.3 | Electoral Supermajority Threshold | 1 (simple majority of votes cast subject to a 50% turnout ceiling) or the citizen legislative initiative under §13 |
+| §7.3 | Electoral Supermajority Threshold | 1, which requires only a simple majority of votes cast |
 | §9.3 | Monitor General Selection | All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority |
 | §9.3 | Monitor General Selection | where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote |
 | §9.9 | Constitutional Officer Removal — Standard Track | (2) A concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC |
