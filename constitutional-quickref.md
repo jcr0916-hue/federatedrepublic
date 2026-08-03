@@ -181,7 +181,7 @@ Every person who reaches the Republic's jurisdiction has the right to claim asyl
 
 ### §1.21 — Non-Refoulement
 
-No person within the Republic's jurisdiction may be returned, expelled, or extradited to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the nature of the receiving territory's government.
+No person, wherever located, may be returned, expelled, or extradited by the Republic, or by any person acting at the direction or with the acquiescence of the Republic, to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the nature of the receiving territory's government.
 
 - **Cross-refs:** §1.19.a
 
