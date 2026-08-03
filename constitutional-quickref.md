@@ -7,16 +7,16 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 170 provisions**
+> **20 articles · 169 provisions**
 
 ---
 
 ## INDEX
 
 - **Preamble**
-- **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.24  (26 provisions)
+- **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.25  (27 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.17  (22 provisions)
-- **Article III — The Legislature**  ·  §3.1–§3.15  (16 provisions)
+- **Article III — The Legislature**  ·  §3.1–§3.15  (14 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (3 provisions)
 - **Article VI — Immigration and Residency**  ·  §6.1–§6.3.a  (4 provisions)
@@ -200,6 +200,12 @@ No person may exercise the voting or decisional authority of more than one branc
 Every person holds the right to found a family.
 
 
+### §1.25 — Inviolability of Electoral Mandates
+
+Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate.
+
+- **Cross-refs:** §3.10, §3.2, §3.5
+
 ---
 
 ## ARTICLE II — THE DUAL EXECUTIVE
@@ -308,10 +314,10 @@ Each executive holds clemency authority within their own domain only. Consular c
 
 ### §2.13 — Consular Removal
 
-The Legat Consul may be removed on two independent tracks. Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or conviction for a disqualifying offense.
+The Legat Consul may be removed on two independent tracks. Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct.
 
 - **Thresholds:**
-  - Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or conviction for a disqualifying offense
+  - Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct
 - **Cross-refs:** §2.9, §7.3
 
 ### §2.14 — Council of Ministers
@@ -444,25 +450,12 @@ All three Monitors have full access to legislative records, committee deliberati
 
 The Legislature may establish independent agencies operating outside the authority of both executives. Where this Constitution assigns a function to an independent agency, the Legislature must establish it.
 
-- **Cross-refs:** §3.12
 
 ### §3.10 — Removal Pathways
 
 Removal of constitutional officers proceeds exclusively as this Constitution provides: the Legat Consul under §2.13; the Civic Consul under §2.6; Supreme Court justices under §4.3.a; inferior court judges under §4.2; members of the Legislature by their own chamber under §3.2 or §3.5, or by State recall as recognized there;
 
 - **Cross-refs:** §2.13, §2.4.a, §2.5, §2.6, §3.2, §3.5, §4.2, §4.3.a, §9.9
-
-### §3.11 — Inviolability of Electoral Mandates
-
-Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate.
-
-- **Cross-refs:** §3.10, §3.2, §3.5
-
-### §3.12 — Disqualifying Offense
-
-A disqualifying offense, wherever that term appears in this Constitution, means a conviction for a federal felony under the laws of the Republic. No state-level or foreign conviction constitutes a disqualifying offense for constitutional purposes.
-
-- **Cross-refs:** §2.12, §7.4
 
 ### §3.13 — Continuity of Constitutionally Mandated Offices
 
@@ -504,7 +497,7 @@ The Republic's judiciary operates at three levels: district courts, appellate co
 - **Time limits:**
   - The Civic Consul must nominate within the period defined by statute following a vacancy, not to exceed 90 days where no statutory period has been defined
   - (3) Inferior court judges serve a single non-renewable term of 12 years and may be removed only for cause
-- **Cross-refs:** §3.12, §3.9, §9.1, §9.4.a, §9.8
+- **Cross-refs:** §3.9, §9.1, §9.4.a, §9.8
 
 ### §4.3 — The Supreme Court
 
@@ -518,7 +511,7 @@ The Supreme Court consists initially of nine justices organized into three stagg
 
 ### §4.3.a — Supreme Court Justice Removal
 
-A Supreme Court justice may be removed only for cause. Three grounds constitute sufficient cause: constitutional breach in the exercise of judicial authority, as assessed by the EM under §9.1 or as determined by the removing chambers; certified permanent incapacity jointly certified by the EM and LM; or conviction for a disqualifying offense.
+A Supreme Court justice may be removed only for cause. Three grounds constitute sufficient cause: constitutional breach in the exercise of judicial authority, as assessed by the EM under §9.1 or as determined by the removing chambers; certified permanent incapacity jointly certified by the EM and LM; or serious misconduct.
 
 - **Thresholds:**
   - Removal requires a 2/3 vote of both chambers in a concurrent vote following publication of the relevant ground
@@ -1322,7 +1315,7 @@ Extracted verbatim. If a threshold is not in this table, it is not in the consti
 | §2.6.a | Government Formation | the Assembly may withdraw the bill by simple majority within the pause period |
 | §2.6.a | Government Formation | (7) At any time before the national election begins, the Assembly may elect a Civic Consul by absolute majority, which terminates the fallback and returns the office to the ordinary process |
 | §2.7 | Civic Consul Legislative Instruments | The Senate may override by 2/3 during that month |
-| §2.13 | Consular Removal | Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or conviction for a disqualifying offense |
+| §2.13 | Consular Removal | Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct |
 | §2.15 | Federal Prosecution | The Legislature may not reduce the Service’s appropriation below the prior year’s level without a 2/3 vote of both chambers |
 | §2.16 | Executive Incapacity | the incapacity ends only when the Consul's accountability chamber — the Assembly for the Civic Consul, the Senate for the Legat Consul — so resolves by absolute majority of its full seated membership |
 | §3.2 | The Assembly | The Assembly may expel a member by 2/3 vote of full seated membership |

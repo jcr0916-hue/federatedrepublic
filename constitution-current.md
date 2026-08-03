@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 170 provisions**
+> **20 articles · 169 provisions**
 
 thefederatedrepublic.org
 
@@ -137,6 +137,10 @@ No person may exercise the voting or decisional authority of more than one branc
 
 Every person holds the right to found a family.
 
+### §1.25 — Inviolability of Electoral Mandates
+
+Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate. The only permitted exceptions are: expulsion by the relevant chamber under §3.2 or §3.5; recall under a mechanism established by State law as recognized in §3.2 or §3.5; and removal under the provisions enumerated in §3.10. Any mechanism enabling the people themselves to shorten an elected mandate not already provided in this Constitution requires a constitutional amendment under Article XVII and may not be established by ordinary statute. Expulsion, recall, and removal under any provision of this Constitution are civil and political processes; they do not constitute criminal or civil legal proceedings and do not protect the removed officer from criminal prosecution or civil liability for underlying conduct.
+
 ---
 
 ## Article II — The Dual Executive
@@ -255,7 +259,7 @@ Each executive holds clemency authority within their own domain only. Consular c
 
 ### §2.13 — Consular Removal
 
-The Legat Consul may be removed on two independent tracks. Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or conviction for a disqualifying offense. Either chamber may request a JMC assessment as part of the proceedings; any such assessment is published to the NRS. Under the popular track, a Senate majority may refer the question to a national recall referendum administered within the period defined by statute. The Legat Consul is removed if the referendum achieves 60% of votes cast under §7.3 with a minimum 55% citizen participation. A failed referendum may not be re-initiated within the same Legat Consul's term. The Senate Speaker holds Acting Consular Authority from the moment of Senate referral published to the NRS — no active assumption is required or permitted. The military compliance obligations established in §2.9 apply to this transfer.
+The Legat Consul may be removed on two independent tracks. Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct. Either chamber may request a JMC assessment as part of the proceedings; any such assessment is published to the NRS. Under the popular track, a Senate majority may refer the question to a national recall referendum administered within the period defined by statute. The Legat Consul is removed if the referendum achieves 60% of votes cast under §7.3 with a minimum 55% citizen participation. A failed referendum may not be re-initiated within the same Legat Consul's term. The Senate Speaker holds Acting Consular Authority from the moment of Senate referral published to the NRS — no active assumption is required or permitted. The military compliance obligations established in §2.9 apply to this transfer.
 
 ### §2.14 — Council of Ministers
 
@@ -385,19 +389,11 @@ All three Monitors have full access to legislative records, committee deliberati
 
 ### §3.9 — Independent Statutory Agencies
 
-The Legislature may establish independent agencies operating outside the authority of both executives. Where this Constitution assigns a function to an independent agency, the Legislature must establish it. Directors of constitutionally mandated independent agencies serve fixed terms defined by statute and are removable for cause only; cause must relate to conduct, competence, or a disqualifying offense under §3.12 and may not include policy disagreement with the Legislature or either executive. The appointment process and oversight mechanism for each agency are established by statute in a manner consistent with this independence protection. Qualification standards established by statute for appointment to a constitutionally mandated independent agency must be facially neutral and may not be designed to exclude otherwise qualified candidates on the basis of policy view, party affiliation, or prior public criticism of the Legislature or either executive.
+The Legislature may establish independent agencies operating outside the authority of both executives. Where this Constitution assigns a function to an independent agency, the Legislature must establish it. Directors of constitutionally mandated independent agencies serve fixed terms defined by statute and are removable for cause only; cause must relate to conduct or competence and may not include policy disagreement with the Legislature or either executive. The appointment process and oversight mechanism for each agency are established by statute in a manner consistent with this independence protection. Qualification standards established by statute for appointment to a constitutionally mandated independent agency must be facially neutral and may not be designed to exclude otherwise qualified candidates on the basis of policy view, party affiliation, or prior public criticism of the Legislature or either executive.
 
 ### §3.10 — Removal Pathways
 
 Removal of constitutional officers proceeds exclusively as this Constitution provides: the Legat Consul under §2.13; the Civic Consul under §2.6; Supreme Court justices under §4.3.a; inferior court judges under §4.2; members of the Legislature by their own chamber under §3.2 or §3.5, or by State recall as recognized there; Legat Consul domain officers by the Senate under §2.4.a; ministers at the pleasure of the Civic Consul under §2.5; and constitutionally confirmed independent officers under §9.9. Criminal liability remains separately pursuable. No removal mechanism not provided for in this Constitution may be created by statute.
-
-### §3.11 — Inviolability of Electoral Mandates
-
-Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate. The only permitted exceptions are: expulsion by the relevant chamber under §3.2 or §3.5; recall under a mechanism established by State law as recognized in §3.2 or §3.5; and removal under the provisions enumerated in §3.10. Any mechanism enabling the people themselves to shorten an elected mandate not already provided in this Constitution requires a constitutional amendment under Article XVII and may not be established by ordinary statute. Expulsion, recall, and removal under any provision of this Constitution are civil and political processes; they do not constitute criminal or civil legal proceedings and do not protect the removed officer from criminal prosecution or civil liability for underlying conduct.
-
-### §3.12 — Disqualifying Offense
-
-A disqualifying offense, wherever that term appears in this Constitution, means a conviction for a federal felony under the laws of the Republic. No state-level or foreign conviction constitutes a disqualifying offense for constitutional purposes. A disqualifying offense is a ground for the removal of a person already holding office under the provisions that reference it; it does not govern eligibility to seek or hold federal office, which is governed exclusively by §7.4. A pardon granted under §2.12 does not clear the offense's status as a disqualifying offense unless the pardoning instrument expressly states that this status is cleared and the EM publishes to the NRS that the pardoning instrument expressly so states. Where a conviction is under appeal at the time a relevant constitutional determination is made, the conviction stands for constitutional purposes unless and until it is reversed by a court of competent jurisdiction.
 
 ### §3.13 — Continuity of Constitutionally Mandated Offices
 
@@ -425,7 +421,7 @@ The Republic's judiciary operates at three levels: district courts, appellate co
 
 (2) The Civic Consul nominates inferior court judges from the Judicial Pool maintained by the Elections Panel under §9.8. The Civic Consul must nominate within the period defined by statute following a vacancy, not to exceed 90 days where no statutory period has been defined. The Senate confirms by 2/3.
 
-(3) Inferior court judges serve a single non-renewable term of 12 years and may be removed only for cause. Cause for judicial removal must relate to conduct, competence, or a disqualifying offense under §3.12; policy disagreement with judicial decisions does not constitute cause, consistent with the principle established in §3.9. The Legislature may establish a mandatory retirement age by statute, not below 70.
+(3) Inferior court judges serve a single non-renewable term of 12 years and may be removed only for cause. Cause for judicial removal must relate to conduct or competence; policy disagreement with judicial decisions does not constitute cause, consistent with the principle established in §3.9. The Legislature may establish a mandatory retirement age by statute, not below 70.
 
 (4) Judicial removal occurs through three tracks:
 
@@ -433,7 +429,7 @@ The Republic's judiciary operates at three levels: district courts, appellate co
 
 — judicial discipline through a process established by statute under SC oversight;
 
-— or criminal conviction for a disqualifying offense.
+— or serious misconduct.
 
 (5) No public official may direct, threaten, or seek to influence a judge's decision in any pending matter. Judicial compensation may not be reduced during a judge's term.
 
@@ -443,7 +439,7 @@ The Supreme Court consists initially of nine justices organized into three stagg
 
 ### §4.3.a — Supreme Court Justice Removal
 
-A Supreme Court justice may be removed only for cause. Three grounds constitute sufficient cause: constitutional breach in the exercise of judicial authority, as assessed by the EM under §9.1 or as determined by the removing chambers; certified permanent incapacity jointly certified by the EM and LM; or conviction for a disqualifying offense. Removal requires a 2/3 vote of both chambers in a concurrent vote following publication of the relevant ground. No removal vote may be held within 180 days of a major national election without prior SC review under §4.5; the SC must rule within 48 hours of petition. Judicial disagreement — however profound — does not constitute grounds for removal; the independence of SC judicial judgment is absolute and may not itself be invoked as grounds for removal. Upon removal, the most senior Appellate Court judge auto-designates as Temporary Associate Justice under §4.4 until the vacancy is filled.
+A Supreme Court justice may be removed only for cause. Three grounds constitute sufficient cause: constitutional breach in the exercise of judicial authority, as assessed by the EM under §9.1 or as determined by the removing chambers; certified permanent incapacity jointly certified by the EM and LM; or serious misconduct. Removal requires a 2/3 vote of both chambers in a concurrent vote following publication of the relevant ground. No removal vote may be held within 180 days of a major national election without prior SC review under §4.5; the SC must rule within 48 hours of petition. Judicial disagreement — however profound — does not constitute grounds for removal; the independence of SC judicial judgment is absolute and may not itself be invoked as grounds for removal. Upon removal, the most senior Appellate Court judge auto-designates as Temporary Associate Justice under §4.4 until the vacancy is filled.
 
 ### §4.4 — Supreme Court Selection
 
