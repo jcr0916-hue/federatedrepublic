@@ -5,9 +5,8 @@
 
 ## PENDING: FUNDING THE §8.4 PUBLIC FINANCING SYSTEM (idea captured 260804, John)
 
-§8.4 was rewritten this session to state its purpose (get a candidacy off the ground, not fund a
-campaign in full) and deliberately says NOTHING about how the system is funded — that's statutory,
-and left open on purpose.
+§8.4 was rewritten to state its purpose (get a candidacy off the ground, not fund a campaign in full)
+and deliberately says NOTHING about how the system is funded — that's statutory, and left open on purpose.
 
 **John's idea, worth using as world content:** a small levy on private contributions above a certain
 amount, diverted to the public financing fund. Elegant because it self-scales — heavy private money
