@@ -14,6 +14,20 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The question nobody asked until she did",
+    blurb: "Four Legat Consul candidates were asked about the two Korda court seats a Monitor General says aren't ready to relocate. Three had opinions about the finding. One had a plan for the seats.",
+    href: "torenthia-news-053.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
+    title: "The Council said yes. One member said wait.",
+    blurb: "The Joint Monitor Council cleared the Kelvant-Korda referendum to proceed. The vote was two to one — and the dissent was published alongside the finding, because the Constitution gives no way to leave it out.",
+    href: "torenthia-news-052.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Four answers, one correct",
     blurb: "All four Legat Consul candidates were asked what Wednesday's certification actually found. Three understood it. The one who didn't gave the answer that will travel furthest.",
     href: "torenthia-news-051.html",

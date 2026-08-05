@@ -3,6 +3,30 @@
 
 ---
 
+## PENDING: FUNDING THE §8.4 PUBLIC FINANCING SYSTEM (idea captured 260804, John)
+
+§8.4 was rewritten to state its purpose (get a candidacy off the ground, not fund a campaign in full)
+and deliberately says NOTHING about how the system is funded — that's statutory, and left open on purpose.
+
+**John's idea, worth using as world content:** a small levy on private contributions above a certain
+amount, diverted to the public financing fund. Elegant because it self-scales — heavy private money
+years generate more public money automatically, quiet years need less and raise less. No appropriation
+fight each cycle. Notably, comparative research found no real-world system that does this; the
+dominant model is matching funds (Germany, Canada), where public money matches small donations rather
+than being drawn from large ones. So this would be genuinely novel rather than borrowed.
+
+**Why it's a story:** a Legislature debating how to fund the §8.4 system, with a contribution levy as
+the proposal, has real opposition built in — large donors, plus anyone framing it as a tax on political
+speech (note §8.1 explicitly says electoral finance is NOT protected speech, so that argument fails
+constitutionally but would still be made politically). Also a natural vehicle for showing the
+Legislature actually legislating, which world content has shown less often than the executive and the
+Monitors.
+
+**Not yet activated.** No date, no characters attached. Available whenever a legislative-process story
+is wanted.
+
+---
+
 ## LC TERM LENGTH: 6-YEAR → 4-YEAR RECONCILIATION (resolved 260801, John)
 **Not a pending thread — a closed decision, recorded so it never looks like an unresolved
 inconsistency in a future session.** §2.1 was amended from a single non-renewable 6-year LC term to

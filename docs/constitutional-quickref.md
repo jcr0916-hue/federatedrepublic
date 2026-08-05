@@ -649,7 +649,7 @@ Special elections for vacancies are administered by the Elections Panel under pr
 
 ### §8.1 — Electoral Finance
 
-All contributions above the de minimis threshold must be publicly disclosed to the Elections Panel and published to the NRS — anonymity in electoral finance is prohibited. Individual contributions to electoral campaigns are capped at a level defined by statute.
+All contributions to electoral campaigns must be disclosed in full to the Elections Panel, including the identity of every contributor and the amount given, without threshold or exception. The Elections Panel publishes contribution records to the NRS; publication may present contributions below a threshold defined by statute in aggregate or generalized form to protect the privacy of individual contributors, but…
 
 - **Cross-refs:** §1.5
 
@@ -665,8 +665,9 @@ Licensees operating on public broadcast spectrum — including television, radio
 
 ### §8.4 — Public Campaign Financing
 
-The Legislature shall by statute establish a public campaign financing system available to all qualified candidates for federal office on equal terms. The system must provide a genuine alternative to private fundraising; no candidate may be structurally disadvantaged by choosing to participate.
+The Legislature shall by statute establish a public campaign financing system available to all qualified candidates for federal office on equal terms. The system exists to make candidacy possible for those without existing access to private funding; it is not intended to fund a campaign in full.
 
+- **Cross-refs:** §8.1, §8.3
 
 ---
 
