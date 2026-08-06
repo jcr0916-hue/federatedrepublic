@@ -24,6 +24,8 @@ MISSING=0
 # find_file NAME_HINT   — finds the MOST RECENTLY DOWNLOADED file matching a
 # loose name, checking every naming variant (exact, underscore-to-space, and
 # any " (1)", " (2)" copies from repeat downloads) and picking the newest.
+# Uses bash's own -nt (newer-than) test rather than external stat/xargs,
+# since those tools take different flags on macOS versus Linux.
 find_file () {
     local hint="$1"
     local base="${hint%.*}"
@@ -31,14 +33,24 @@ find_file () {
     local spaced
     spaced=$(echo "$base" | tr '_' ' ')
 
-    # gather every plausible candidate, then sort ALL of them by modification
-    # time and take the newest — never stop at the first name that matches.
-    {
-        [ -f "$DOWNLOADS/$hint" ] && echo "$DOWNLOADS/$hint"
-        [ -f "$DOWNLOADS/$spaced.$ext" ] && echo "$DOWNLOADS/$spaced.$ext"
-        ls -1 "$DOWNLOADS/$base"*."$ext" 2>/dev/null
-        ls -1 "$DOWNLOADS/$spaced"*."$ext" 2>/dev/null
-    } | sort -u | xargs -I{} stat -f '%m %N' {} 2>/dev/null | sort -rn | head -1 | cut -d' ' -f2-
+    shopt -s nullglob
+    local candidates=(
+        "$DOWNLOADS/$hint"
+        "$DOWNLOADS/$spaced.$ext"
+        "$DOWNLOADS/$base"*."$ext"
+        "$DOWNLOADS/$spaced"*."$ext"
+    )
+    shopt -u nullglob
+
+    local best=""
+    local candidate
+    for candidate in "${candidates[@]}"; do
+        [ -f "$candidate" ] || continue
+        if [ -z "$best" ] || [ "$candidate" -nt "$best" ]; then
+            best="$candidate"
+        fi
+    done
+    echo "$best"
 }
 
 # place SOURCE_HINT DEST_PATH
