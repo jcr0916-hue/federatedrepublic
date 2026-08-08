@@ -699,7 +699,7 @@ The JM audits the courts for judicial scope and independence, and conducts annua
 
 A Monitor General’s constitutional authority terminates automatically at the moment their term expires — no further act or proceeding is required. Any official act taken after term expiry is constitutionally void.
 
-- **Cross-refs:** §3.13, §9.3
+- **Cross-refs:** §3.13, §9.3, §9.9
 
 ### §9.2 — Selection and Independence
 
@@ -783,16 +783,17 @@ Where two of the three Monitors jointly assess and report that the third is oper
 
 ### §9.9 — Constitutional Officer Removal — Standard Track
 
-(1) This section governs for-cause removal of all constitutionally confirmed independent officers except Supreme Court justices under §4.3.a and elected executives. Monitor Generals are subject to for-cause removal under this section.
+(1) This section governs for-cause removal of all constitutionally confirmed independent officers except Supreme Court justices under §4.3.a and elected executives. Removal of Monitor Generals proceeds under subsections (2) through (6); removal of all other officers within this section's scope proceeds under subsections (7) through (11).
 
 - **Thresholds:**
-  - (2) A concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC
-  - (4) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers
+  - (7) For all other officers within this section's scope: a concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC
+  - (9) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers
 - **Time limits:**
-  - (3) The SC determines within 14 days whether the stated grounds constitute at least one statutory removal category for the subject office
+  - (4) A national referendum on removal is administered no later than 90 days from filing, or at the next regularly scheduled federal election, whichever comes first
+  - (8) The SC determines within 14 days whether the stated grounds constitute at least one statutory removal category for the subject office
   - no removal vote may be held within 180 days of a major national election without prior SC review within 48 hours
-  - (6) The SC must rule within 14 days
-- **Cross-refs:** §4.3.a
+  - (11) The SC must rule within 14 days
+- **Cross-refs:** §4.3.a, §7.3, §9.1.d
 
 ---
 
@@ -1340,8 +1341,8 @@ Extracted verbatim. If a threshold is not in this table, it is not in the consti
 | §7.3 | Electoral Supermajority Threshold | 1, which requires only a simple majority of votes cast |
 | §9.3 | Monitor General Selection | All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority |
 | §9.3 | Monitor General Selection | where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote |
-| §9.9 | Constitutional Officer Removal — Standard Track | (2) A concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC |
-| §9.9 | Constitutional Officer Removal — Standard Track | (4) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers |
+| §9.9 | Constitutional Officer Removal — Standard Track | (7) For all other officers within this section's scope: a concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC |
+| §9.9 | Constitutional Officer Removal — Standard Track | (9) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers |
 | §12.4 | Ethics and Conflict of Interest | the relevant chamber may void the decision by simple majority within 90 days of the conflict becoming a matter of public record on the NRS |
 | §12.4.a | Codes of Conduct and Recusal | thereafter, amendment or repeal requires a 2/3 majority of both chambers |
 | §13.1 | Optional Referendum | A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification |

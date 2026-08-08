@@ -1,88 +1,89 @@
 #!/bin/bash
 #
-# place-downloads.sh — run this after downloading files from Claude, before
-# opening GitHub Desktop. Finds each expected file in ~/Downloads (however
-# it got renamed on the way down) and copies it to the correct spot in the
-# repo. Then runs the consistency checker automatically.
+# place-downloads.sh  (v3 — written for bash 3.2, which is what macOS ships)
 #
-# Usage, from the repo root:
+# Copies files you downloaded from Claude into their correct spots in the repo.
+# Handles downloads that got renamed (spaces, "(1)" suffixes) and always picks
+# the most recently downloaded copy.
+#
+# Deliberately avoids arrays, nullglob, and anything newer than bash 3.2.
+#
+# Run from the repo root:
 #   bash scripts/place-downloads.sh
-#
-# Safe to run any time — it only touches files it finds a match for, and it
-# tells you plainly about anything it couldn't find rather than failing silently.
 
 DOWNLOADS="$HOME/Downloads"
-REPO="$(pwd)"
+REPO=`pwd`
 
-echo "Looking in: $DOWNLOADS"
+echo "Looking in:   $DOWNLOADS"
 echo "Placing into: $REPO"
 echo ""
 
 FOUND=0
 MISSING=0
 
-# find_file NAME_HINT   — finds the MOST RECENTLY DOWNLOADED file matching a
-# loose name, checking every naming variant (exact, underscore-to-space, and
-# any " (1)", " (2)" copies from repeat downloads) and picking the newest.
-# Uses bash's own -nt (newer-than) test rather than external stat/xargs,
-# since those tools take different flags on macOS versus Linux.
-find_file () {
-    local hint="$1"
-    local base="${hint%.*}"
-    local ext="${hint##*.}"
-    local spaced
-    spaced=$(echo "$base" | tr '_' ' ')
+place () {
+    hint="$1"
+    dest="$2"
 
-    shopt -s nullglob
-    local candidates=(
-        "$DOWNLOADS/$hint"
-        "$DOWNLOADS/$spaced.$ext"
-        "$DOWNLOADS/$base"*."$ext"
-        "$DOWNLOADS/$spaced"*."$ext"
-    )
-    shopt -u nullglob
+    base=`echo "$hint" | sed 's/\.[^.]*$//'`
+    ext=`echo "$hint" | sed 's/.*\.//'`
+    spaced=`echo "$base" | tr '_' ' '`
 
-    local best=""
-    local candidate
-    for candidate in "${candidates[@]}"; do
+    best=""
+
+    for candidate in "$DOWNLOADS"/*."$ext"; do
         [ -f "$candidate" ] || continue
-        if [ -z "$best" ] || [ "$candidate" -nt "$best" ]; then
+        fname=`basename "$candidate"`
+        keep=no
+        case "$fname" in
+            "$base".*|"$base"\ *|"$base"-*) keep=yes ;;
+        esac
+        case "$fname" in
+            "$spaced".*|"$spaced"\ *|"$spaced"-*) keep=yes ;;
+        esac
+        [ "$keep" = "yes" ] || continue
+
+        if [ -z "$best" ]; then
+            best="$candidate"
+        elif [ "$candidate" -nt "$best" ]; then
             best="$candidate"
         fi
     done
-    echo "$best"
-}
 
-# place SOURCE_HINT DEST_PATH
-place () {
-    local hint="$1"
-    local dest="$2"
-    local src
-    src=$(find_file "$hint")
-    if [ -n "$src" ]; then
-        cp "$src" "$REPO/$dest"
-        echo "  OK    $hint  ->  $dest"
-        FOUND=$((FOUND+1))
+    if [ -n "$best" ]; then
+        cp "$best" "$REPO/$dest"
+        echo "  OK    `basename \"$best\"`  ->  $dest"
+        FOUND=`expr $FOUND + 1`
     else
-        echo "  ----  $hint  NOT FOUND in Downloads (skipped)"
-        MISSING=$((MISSING+1))
+        echo "  ----  $hint  not in Downloads (skipped)"
+        MISSING=`expr $MISSING + 1`
     fi
 }
 
 echo "Placing files:"
-place "constitution_data.json"        "constitution_data.json"
-place "annotated.html"                "annotated.html"
-place "constitutional-history.html"   "constitutional-history.html"
-place "search-index.js"               "search-index.js"
-place "constitution-current.md"       "docs/constitution-current.md"
-place "constitutional-quickref.md"    "docs/constitutional-quickref.md"
-place "updates.js"                    "_data/updates.js"
-place "WORLD-THREADS-PENDING.md"      "docs/WORLD-THREADS-PENDING.md"
+place "constitution_data.json"       "constitution_data.json"
+place "annotated.html"               "annotated.html"
+place "constitutional-history.html"  "constitutional-history.html"
+place "search-index.js"              "search-index.js"
+place "constitution-current.md"      "docs/constitution-current.md"
+place "constitutional-quickref.md"   "docs/constitutional-quickref.md"
+place "updates.js"                   "_data/updates.js"
+place "WORLD-THREADS-PENDING.md"     "docs/WORLD-THREADS-PENDING.md"
 
 echo ""
-echo "Placed: $FOUND   Not found: $MISSING"
-echo "(Not found is fine if that file wasn't part of today's delivery.)"
+echo "Placed: $FOUND    Not found: $MISSING"
+echo "(Not found is expected for any file that wasn't part of today's delivery.)"
 echo ""
+
+if [ "$FOUND" -eq 0 ]; then
+    echo "NOTHING WAS PLACED. Either the files aren't downloaded yet, or they"
+    echo "landed somewhere other than $DOWNLOADS."
+    echo ""
+    echo "Files currently in Downloads matching our names:"
+    ls -la "$DOWNLOADS" 2>/dev/null | grep -i "constitution\|annotated\|search-index\|quickref\|updates\|WORLD-THREADS"
+    echo ""
+    exit 1
+fi
 
 if [ -f "scripts/check-consistency.py" ]; then
     echo "Running consistency check..."
@@ -91,5 +92,5 @@ if [ -f "scripts/check-consistency.py" ]; then
     echo ""
 fi
 
-echo "Next: open GitHub Desktop. It will show the changed files —"
-echo "check they look right, then Commit and Push."
+echo "Next: open GitHub Desktop, confirm the changed files look right,"
+echo "then Commit and Push."

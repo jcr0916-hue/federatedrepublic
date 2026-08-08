@@ -307,7 +307,7 @@ The Civic Consul is responsible for the enforcement of federal law and sets gene
 
 (d) The person last in the order of succession may not decline.
 
-(5) Duration. An incapacity under this section that has continued for 90 days ends by constitutional operation unless, before expiry, a removal process under §2.6 or §2.13 has been initiated against the Consul, in which case the incapacity continues until that process concludes.
+(5) Duration. An incapacity under this section that has continued for 90 days ends by constitutional operation unless, before expiry, a removal process under §2.6 or §2.13 has been initiated against the Consul, in which case the incapacity continues until that process concludes. Determination of incapacity under this section suspends the Consul's authority but does not affect their compensation, benefits, or the running of their term.
 
 ### §2.17 — Cooling-Off from Executive Service
 
@@ -679,7 +679,7 @@ The JM audits the courts for judicial scope and independence, and conducts annua
 
 ### §9.1.d — Monitor General Term Expiry and Incapacity
 
-A Monitor General’s constitutional authority terminates automatically at the moment their term expires — no further act or proceeding is required. Any official act taken after term expiry is constitutionally void. Where an unexpected vacancy arises mid-term — through death, resignation, removal, or certified incapacity — the most senior eligible member of the affected Monitor’s candidate pool by continuous pool tenure who accepts designation serves as Acting Monitor General until a successor is confirmed under §9.3; where two or more pool members have equal continuous pool tenure, the tiebreaker is defined by statute. The Acting Monitor General holds full constitutional authority of the office. The Acting Monitor General is not eligible for permanent appointment to the position in which they serve; upon conclusion of acting service they return to the candidate pool. The JMC confirms the designation and both executives are notified immediately; notice does not condition the designation’s effectiveness. Pool membership satisfies the eligibility requirement of §3.13. Where a Monitor General is certified incapacitated by the other two Monitors jointly, the incapacitated Monitor General’s authority is suspended from the moment of joint certification and the acting mechanism under this provision activates immediately.
+A Monitor General’s constitutional authority terminates automatically at the moment their term expires — no further act or proceeding is required. Any official act taken after term expiry is constitutionally void. Where an unexpected vacancy arises mid-term — through death, resignation, removal, or certified incapacity — the most senior eligible member of the affected Monitor’s candidate pool by continuous pool tenure who accepts designation serves as Acting Monitor General until a successor is confirmed under §9.3; where two or more pool members have equal continuous pool tenure, the tiebreaker is defined by statute. The Acting Monitor General holds full constitutional authority of the office. The Acting Monitor General is not eligible for permanent appointment to the position in which they serve; upon conclusion of acting service they return to the candidate pool. The JMC confirms the designation and both executives are notified immediately; notice does not condition the designation’s effectiveness. Pool membership satisfies the eligibility requirement of §3.13. Where a Monitor General is certified incapacitated by the other two Monitors jointly, the incapacitated Monitor General’s authority is suspended from the moment of joint certification and the acting mechanism under this provision activates immediately. Where a Monitor General's authority is suspended under §9.9, the acting mechanism under this provision activates for the duration of the suspension. Suspension of authority under this provision or under §9.9 does not affect the Monitor General's compensation, benefits, or the running of their term.
 
 ### §9.2 — Selection and Independence
 
@@ -769,19 +769,29 @@ Where two of the three Monitors jointly assess and report that the third is oper
 
 ### §9.9 — Constitutional Officer Removal — Standard Track
 
-(1) This section governs for-cause removal of all constitutionally confirmed independent officers except Supreme Court justices under §4.3.a and elected executives. Monitor Generals are subject to for-cause removal under this section.
+(1) This section governs for-cause removal of all constitutionally confirmed independent officers except Supreme Court justices under §4.3.a and elected executives. Removal of Monitor Generals proceeds under subsections (2) through (6); removal of all other officers within this section's scope proceeds under subsections (7) through (11).
 
-(2) A concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC.
+(2) Removal of a Monitor General is initiated by the branch or branches that Monitor does not audit: for the Legislative Monitor General, jointly by both executives; for the Executive Monitor General, by the Supreme Court; for the Judicial Monitor General, jointly by the Legislature by concurrent resolution of both chambers and by both executives. The initiating authority files stated grounds to the NRS.
 
-(3) The SC determines within 14 days whether the stated grounds constitute at least one statutory removal category for the subject office; the SC reviews constitutional category only, not factual merits.
+(3) Filing suspends the Monitor General's constitutional authority immediately, and the acting mechanism under §9.1.d activates from that moment and continues until the referendum result is certified. Suspension is not removal. Suspension does not affect the Monitor General's compensation, benefits, or the running of their term, all of which continue in full unless and until removal is certified.
 
-(4) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers; no removal vote may be held within 180 days of a major national election without prior SC review within 48 hours.
+(4) A national referendum on removal is administered no later than 90 days from filing, or at the next regularly scheduled federal election, whichever comes first. The Monitor General is removed if the referendum achieves 60% of votes cast under §7.3 with a minimum 55% citizen participation.
 
-(5) If grounds are not confirmed, the process closes and may not be reinitiated on the same or substantially similar grounds within six months.
+(5) Where the referendum fails, or where no referendum is administered within the period required by subsection (4), the suspension lapses automatically and the Monitor General resumes full authority by constitutional operation, with no further act required.
 
-(6) The SC must rule within 14 days; where the SC requires additional time, a majority of seated justices may file an extension request within the 14-day period specifying the reason and the additional period required, published to the NRS; the maximum extension period is defined by statute. Where the SC neither rules nor files an extension request within the applicable period, the removal proceeding lapses for that session and may be reinitiated under this section.
+(6) Removal may not be reinitiated against the same Monitor General on the same or substantially similar grounds for the remainder of that Monitor General's term.
 
-(7) The Legislature defines enumerated removal categories for each constitutionally confirmed office by statute.
+(7) For all other officers within this section's scope: a concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC.
+
+(8) The SC determines within 14 days whether the stated grounds constitute at least one statutory removal category for the subject office; the SC reviews constitutional category only, not factual merits.
+
+(9) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers; no removal vote may be held within 180 days of a major national election without prior SC review within 48 hours. Suspension under this subsection does not affect the officer's compensation, benefits, or the running of their term, all of which continue in full unless and until removal takes effect.
+
+(10) If grounds are not confirmed, the process closes and may not be reinitiated on the same or substantially similar grounds within six months.
+
+(11) The SC must rule within 14 days; where the SC requires additional time, a majority of seated justices may file an extension request within the 14-day period specifying the reason and the additional period required, published to the NRS; the maximum extension period is defined by statute. Where the SC neither rules nor files an extension request within the applicable period, the removal proceeding lapses for that session and may be reinitiated under this section.
+
+(12) The Legislature defines enumerated removal categories for each constitutionally confirmed office by statute.
 
 ---
 
@@ -799,7 +809,7 @@ Where two of the three Monitors jointly assess and report that the third is oper
 
 (5) Records may not be deleted, altered, or reclassified after publication; corrections are published as new entries alongside the original.
 
-(6) Where the NRS Panel determines by unanimous vote that a record poses an imminent, specific, and documented threat to individual safety, it may temporarily restrict access for up to 30 days pending judicial review; the reviewing court must rule within 14 days; the record is permanently restored unless the court confirms the restriction on the narrowest possible grounds; the applicable court is designated by statute. The original timestamp and the restriction record both remain as permanent NRS entries.
+(6) Where the NRS Panel determines by unanimous vote that a record poses an imminent, specific, and documented threat to individual safety, it may temporarily restrict access for up to 30 days pending judicial review; the reviewing court must rule within 14 days; the record is permanently restored unless the court confirms the restriction on the narrowest possible grounds; the applicable court is designated by statute. The original timestamp and the restriction record both remain as permanent NRS entries. Where the reviewing court declines to confirm a restriction, the same record may not be restricted again under this subsection on the same or substantially similar grounds.
 
 (7) Government acts take legal effect from the moment of issuance regardless of NRS status — the NRS is the record of government, not a condition of it.
 
@@ -809,7 +819,7 @@ Where two of the three Monitors jointly assess and report that the third is oper
 
 ### §10.2 — Classification Criteria
 
-Government records may be classified only on grounds the Legislature defines by statute. Classification to conceal a constitutional violation, policy disagreement, or political embarrassment is prohibited and void. The classifying authority must state the statutory ground at the time of classification. No record may remain classified beyond 25 years from the date of original classification. A single 5-year extension may be granted where the responsible executive publishes a justification to the EM; the EM assesses whether the justification meets the statutory standard and publishes its finding to the NRS. No material may remain classified beyond 30 years under any circumstances. On expiry, the NRS Panel publishes the declassified record within 30 days of the classification ceiling date; this obligation is automatic and requires no further government act. All other classification periods, procedures, and review mechanisms are defined by statute within this ceiling.
+Government records may be classified only on grounds the Legislature defines by statute. Classification to conceal a constitutional violation, policy disagreement, or political embarrassment is prohibited and void. The classifying authority must state the statutory ground at the time of classification. No record may remain classified beyond 25 years from the date of original classification. A single 5-year extension may be granted where the responsible executive publishes a justification to the EM; the EM assesses whether the justification meets the statutory standard and publishes its finding to the NRS. No material may remain classified beyond 30 years under any circumstances. On expiry, the NRS Panel publishes the declassified record within 30 days of the classification ceiling date; this obligation is automatic and requires no further government act. All other classification periods, procedures, and review mechanisms are defined by statute within this ceiling. Any person with standing may petition the applicable court for release of a classified record in redacted form, at any time during the classification period. The court orders release of any portion whose disclosure would not itself satisfy the statutory ground under which the record was classified. Where a record is released in redacted form, the redactions and the statutory ground for each are published to the NRS with the released portion. Any person with standing may additionally petition for full declassification of a specific record during an extension period granted under this section; the court reviews whether the stated statutory ground continues to justify classification of that record, and orders declassification where it does not. Any EM finding published under this section is admissible in such a proceeding. The applicable court is designated by statute.
 
 ---
 
