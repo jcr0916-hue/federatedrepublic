@@ -833,7 +833,7 @@ Government records may be classified only on grounds the Legislature defines by 
 
 (3) The Elections Panel establishes and maintains the National Voting System, sets administrative and technical standards for federal elections, certifies election equipment for state procurement, audits state compliance with federal election standards, administers referenda and confirmation votes, and certifies all federal election results.
 
-(4) Where the Elections Panel certifies a State's election system as non-compliant before an election, the Panel may withhold result certification for affected districts pending compliance or a special election under §7.2.a.
+(4) Where the Elections Panel certifies a State's election system as non-compliant before an election, the Panel may withhold result certification for affected districts pending compliance or a special election under §7.2.a. This authority is exercised only through the process established in §11.3, including its notice, cure period, and challenge provisions. Withholding certification does not affect the validity of votes cast.
 
 (5) Each panel is operationally independent of the other, of both executives, and of the Legislature in the exercise of its functions.
 
@@ -843,7 +843,7 @@ Government records may be classified only on grounds the Legislature defines by 
 
 (8) Each panel exercises only those ministerial functions expressly granted by this Constitution and by statute. The Legislature must establish by statute a procedure for each panel to adopt temporary technical measures in response to imminent security threats or system failures within its domain; such measures may not change electoral rules, timelines, or NRS record permanence, and expire within 72 hours unless ratified by a majority of the panel's seated members.
 
-(9) Where either Panel falls below the five-member floor through resignation, removal, disqualification, or any other cause, the Civic Consul may appoint a qualified civil servant employed by that Panel to serve as Acting member, not to exceed the period defined by statute, which may not exceed 180 days; the Acting member may exercise all authorities of a full member during that period and the appointment does not affect the ordinary process for filling the vacancy permanently.
+(9) Where either Panel falls below the five-member floor through resignation, removal, disqualification, or any other cause, the remaining members may by majority vote designate a qualified civil servant employed by that Panel as an Acting member, not to exceed the period defined by statute, which may not exceed 180 days. Where the remaining members are unable to designate, the Civic Consul designates. Acting members designated by the Civic Consul may not at any time constitute a majority of the Panel's seated membership. An Acting member exercises all authorities of a full member during the designation, and the designation does not affect the ordinary process for filling the vacancy permanently.
 
 ### §11.2 — NVS Properties and Voting Rights
 

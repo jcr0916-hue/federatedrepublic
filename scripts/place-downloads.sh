@@ -11,7 +11,10 @@
 # Run from the repo root:
 #   bash scripts/place-downloads.sh
 
+# Browsers may save to the local Downloads folder OR to iCloud Drive's
+# Downloads folder, depending on system settings. Check both.
 DOWNLOADS="$HOME/Downloads"
+ICLOUD_DOWNLOADS="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
 REPO=`pwd`
 
 echo "Looking in:   $DOWNLOADS"
@@ -31,7 +34,7 @@ place () {
 
     best=""
 
-    for candidate in "$DOWNLOADS"/*."$ext"; do
+    for candidate in "$DOWNLOADS"/*."$ext" "$ICLOUD_DOWNLOADS"/*."$ext"; do
         [ -f "$candidate" ] || continue
         fname=`basename "$candidate"`
         keep=no
@@ -76,11 +79,17 @@ echo "(Not found is expected for any file that wasn't part of today's delivery.)
 echo ""
 
 if [ "$FOUND" -eq 0 ]; then
-    echo "NOTHING WAS PLACED. Either the files aren't downloaded yet, or they"
-    echo "landed somewhere other than $DOWNLOADS."
+    echo "NOTHING WAS PLACED. The files may not be downloaded yet."
     echo ""
-    echo "Files currently in Downloads matching our names:"
+    echo "Checked both:"
+    echo "  $DOWNLOADS"
+    echo "  $ICLOUD_DOWNLOADS"
+    echo ""
+    echo "Matching files found in local Downloads:"
     ls -la "$DOWNLOADS" 2>/dev/null | grep -i "constitution\|annotated\|search-index\|quickref\|updates\|WORLD-THREADS"
+    echo ""
+    echo "Matching files found in iCloud Downloads:"
+    ls -la "$ICLOUD_DOWNLOADS" 2>/dev/null | grep -i "constitution\|annotated\|search-index\|quickref\|updates\|WORLD-THREADS"
     echo ""
     exit 1
 fi

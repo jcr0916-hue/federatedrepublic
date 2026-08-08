@@ -827,7 +827,7 @@ Government records may be classified only on grounds the Legislature defines by 
 
 - **Time limits:**
   - such measures may not change electoral rules, timelines, or NRS record permanence, and expire within 72 hours unless ratified by a majority of the panel's seated members
-- **Cross-refs:** §3.9, §7.2.a
+- **Cross-refs:** §11.3, §3.9, §7.2.a
 
 ### §11.2 — NVS Properties and Voting Rights
 
