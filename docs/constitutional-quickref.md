@@ -1127,7 +1127,7 @@ Existing arrangements between a recognized nation and the predecessor government
   - (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers
 - **Time limits:**
   - the Elections Panel administers the referendum within 180 days of Phase Two threshold verification
-- **Cross-refs:** §10.1, §11.1, §13.2, §17.3, §9.1, §9.2, §9.4, §9.5
+- **Cross-refs:** §10.1, §11.1, §13.2, §17.3, §9.1, §9.2, §9.4, §9.6
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
