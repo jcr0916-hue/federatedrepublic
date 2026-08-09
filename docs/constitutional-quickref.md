@@ -944,12 +944,13 @@ The Legislature shall by statute establish a mechanism ensuring that every State
 
 ### §13.2 — Citizen Legislative Initiative
 
-Citizens may propose legislation directly to the Legislature. The petition process proceeds in two phases, each authenticated through the NVS using Citizen Voting Credentials.
+(1) Citizens may propose legislation directly to the Legislature. The petition process proceeds in two phases, each authenticated through the NVS using Citizen Voting Credentials.
 
 - **Time limits:**
-  - Phase One, lasting up to 10 months, requires signatures from citizens equal to a percentage of eligible voters — defined by statute at not less than 0
-  - Phase Two, lasting up to 10 months following Phase One’s completion, requires signatures from 10% of eligible voters nationally
-  - Once the threshold is met, the Legislature must vote on the proposal within 90 days
+  - (2) Phase One, lasting up to 10 months, requires signatures from citizens equal to a percentage of eligible voters — defined by statute at not less than 0
+  - (3) Phase Two, lasting up to 10 months following Phase One's completion, requires signatures from 10% of eligible voters nationally
+  - (4) Once the threshold is met, the Legislature must vote on the proposal within 90 days
+- **Cross-refs:** §1.19.a, §4.5
 
 ---
 
