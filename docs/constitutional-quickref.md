@@ -740,6 +740,7 @@ The Elections Panel maintains the standing Judicial Pool from which all federal 
 
 Every finding, report, and discrepancy notice must be published to the NRS permanently and free of charge; no official may suppress, delay, classify, or alter a Monitor report before publication. Monitor reports are permanently exempt from classification.
 
+- **Cross-refs:** §9.5.a
 
 ### §9.5.a — Compliance Standards and Findings
 
@@ -879,10 +880,6 @@ The Legislature has exclusive authority to levy taxes, duties, and tariffs by st
 
 (1) A financial interest includes any holding, income source, liability, business relationship, or similar economic interest; a financial interest is disqualifying where it creates a direct and material conflict between an officer's personal economic interest and the impartial exercise of their official duties, with statute permitted to further specify categories and thresholds consistent with this standard. (2)…
 
-- **Thresholds:**
-  - the relevant chamber may void the decision by simple majority within 90 days of the conflict becoming a matter of public record on the NRS
-- **Time limits:**
-  - the relevant chamber may void the decision by simple majority within 90 days of the conflict becoming a matter of public record on the NRS
 - **Cross-refs:** §9.3, §9.4
 
 ### §12.4.a — Codes of Conduct and Recusal
@@ -1343,7 +1340,6 @@ Extracted verbatim. If a threshold is not in this table, it is not in the consti
 | §9.3 | Monitor General Selection | where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote |
 | §9.9 | Constitutional Officer Removal — Standard Track | (7) For all other officers within this section's scope: a concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC |
 | §9.9 | Constitutional Officer Removal — Standard Track | (9) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers |
-| §12.4 | Ethics and Conflict of Interest | the relevant chamber may void the decision by simple majority within 90 days of the conflict becoming a matter of public record on the NRS |
 | §12.4.a | Codes of Conduct and Recusal | thereafter, amendment or repeal requires a 2/3 majority of both chambers |
 | §13.1 | Optional Referendum | A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification |
 | §15.2 | The Statehood Audit | the Legislature defines audit components, methodology, and resubmission timelines by statute, subject to 2/3 majority of both chambers |

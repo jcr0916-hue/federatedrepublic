@@ -229,7 +229,7 @@ The Civic Consul may withhold assent by returning a bill within 10 business days
 
 ### §2.8 — Duty of Refusal
 
-No civil servant, military member, or person acting under direct federal authorization in the performance of a specific federal function may comply with an order from either executive that would require violation of any constitutional provision or statute. Refusal of such an order creates no civil or criminal liability and is no basis for dismissal or penalty. The refusing person may report the order to the EM, which may investigate and publish findings to the NRS. Any penalty imposed for a lawful refusal is itself a constitutional breach. The Legislature establishes by statute the framework for protecting and supporting civil servants who exercise this duty.
+No civil servant, military member, or person acting under direct federal authorization in the performance of a specific federal function may comply with an order from either executive that would require violation of any constitutional provision or statute. Refusal of such an order creates no civil or criminal liability and is no basis for dismissal or penalty. The refusing person may report the order to the EM, which may investigate and publish findings to the NRS. Any penalty imposed for a lawful refusal is void. The Legislature establishes by statute the framework for protecting and supporting civil servants who exercise this duty.
 
 ### §2.9 — Legat Consul Succession and Incapacity
 
@@ -247,7 +247,7 @@ No civil servant, military member, or person acting under direct federal authori
 
 ### §2.10 — Executive Transparency
 
-Both executives must publish all official acts — orders, certifications, vetoes, objections, determinations, and refusals to certify — to the NRS within the period defined by statute. No executive may classify, delay, or suppress publication of an act this constitution requires to be published. Acts of non-consent — refusals to certify, objections, escalation denials, and declinations to act within a constitutional mandate — carry the same attribution and publication requirements as acts of authority. An executive who declines certification, withholds approval, or refuses to perform a constitutionally required function is constitutionally responsible for that act to the same degree as an executive who issues an order. The NRS record of every executive act of non-consent is permanent, attributed to the individual officer, and may not be reclassified or removed. A late-published act is not void, but late publication is a constitutional compliance breach.
+Both executives must publish all official acts — orders, certifications, vetoes, objections, determinations, and refusals to certify — to the NRS within the period defined by statute. No executive may classify, delay, or suppress publication of an act this constitution requires to be published. Acts of non-consent — refusals to certify, objections, escalation denials, and declinations to act within a constitutional mandate — carry the same attribution and publication requirements as acts of authority. An executive who declines certification, withholds approval, or refuses to perform a constitutionally required function is constitutionally responsible for that act to the same degree as an executive who issues an order. The NRS record of every executive act of non-consent is permanent, attributed to the individual officer, and may not be reclassified or removed. A late-published act is not void.
 
 ### §2.11 — Emergency Governance
 
@@ -713,7 +713,7 @@ The Elections Panel maintains the standing Judicial Pool from which all federal 
 
 ### §9.5 — Monitor Operations
 
-Every finding, report, and discrepancy notice must be published to the NRS permanently and free of charge; no official may suppress, delay, classify, or alter a Monitor report before publication. Monitor reports are permanently exempt from classification. Any staff member may publish a minority report directly to the NRS if they believe a finding has been improperly omitted or suppressed — staff cannot be disciplined for doing so. All three Monitors jointly publish an annual State of the Republic report on a fixed date regardless of whether any political actor requests it. Where a compliance question spans multiple Monitor mandates, the Monitors may conduct a joint investigation; neither Monitor General may veto the other's contribution. All three Monitors have unrestricted access to records, personnel, facilities, and systems within their audit mandate; obstruction is a constitutional breach. Every finding, report, and assessment published under this Article is delivered on publication to the body or officer responsible for the subject matter, and to the Speaker of each legislative chamber. Delivery is a matter of record and imposes no obligation to act.
+Every finding, report, and discrepancy notice must be published to the NRS permanently and free of charge; no official may suppress, delay, classify, or alter a Monitor report before publication. Monitor reports are permanently exempt from classification. Any staff member may publish a minority report directly to the NRS if they believe a finding has been improperly omitted or suppressed — staff cannot be disciplined for doing so. All three Monitors jointly publish an annual State of the Republic report on a fixed date regardless of whether any political actor requests it. Where a compliance question spans multiple Monitor mandates, the Monitors may conduct a joint investigation; neither Monitor General may veto the other's contribution. All three Monitors have unrestricted access to records, personnel, facilities, and systems within their audit mandate; obstruction is recorded as a Fail under §9.5.a and reported to the responsible body. Every finding, report, and assessment published under this Article is delivered on publication to the body or officer responsible for the subject matter, and to the Speaker of each legislative chamber. Delivery is a matter of record and imposes no obligation to act.
 
 ### §9.5.a — Compliance Standards and Findings
 
@@ -891,7 +891,9 @@ The Monetary Authority publishes a State of the Economy report to the Assembly, 
 
 (7) The interim appropriation continues at the prior fiscal year's inflation-adjusted level until a budget is enacted; no new programs may be initiated or expanded under the interim appropriation.
 
-(8) Where discretionary government spending is suspended due to budget failure, the pay of all members of both chambers is withheld from the same date on which government employee pay is withheld and released only upon budget enactment. The Legislature must fund the National Endowment by appropriation in years of fiscal surplus; failure to adequately fund the Endowment is a constitutional compliance breach.
+(8) Where discretionary government spending is suspended due to budget failure, the pay of all members of both chambers is withheld from the same date on which government employee pay is withheld and released only upon budget enactment.
+
+(9) The Legislature must fund the National Endowment by appropriation in years of fiscal surplus. The EM assesses compliance with this requirement annually and publishes its assessment to the NRS.
 
 ### §12.3 — Taxing Power and National Revenue Fund
 
@@ -907,15 +909,13 @@ The Legislature has exclusive authority to levy taxes, duties, and tariffs by st
 
 (4) Any officer with a direct financial interest in a decision within their authority must recuse themselves; recusal is self-executing.
 
-(5) Any decision made without required recusal is voidable; the relevant chamber may void the decision by simple majority within 90 days of the conflict becoming a matter of public record on the NRS.
+(5) Constitutional officers may not, for a period defined by statute after leaving office — which may not be less than two years — engage in any activity that monetizes or draws on non-public information, relationships, or access accumulated during service; the respective Monitor audits post-service activities of constitutional officers for compliance with this restriction and publishes findings to the NRS; enforcement is through the appropriate legal authority.
 
-(6) Constitutional officers may not, for a period defined by statute after leaving office — which may not be less than two years — engage in any activity that monetizes or draws on non-public information, relationships, or access accumulated during service; the respective Monitor audits post-service activities of constitutional officers for compliance with this restriction and publishes findings to the NRS; enforcement is through the appropriate legal authority.
+(6) Officers may not accept gifts above a de minimis threshold; all gifts above the threshold must be disclosed to their respective Monitor and deposited with the relevant treasury.
 
-(7) Officers may not accept gifts above a de minimis threshold; all gifts above the threshold must be disclosed to their respective Monitor and deposited with the relevant treasury.
+(7) All records created in the exercise of official functions are public records and may not be retained, destroyed, or removed by departing officers.
 
-(8) All records created in the exercise of official functions are public records and may not be retained, destroyed, or removed by departing officers.
-
-(9) Each Monitor investigates alleged violations of this section within their respective jurisdiction and publishes findings to the NRS; where findings warrant further action, the Monitor refers to the appropriate authority.
+(8) Each Monitor investigates alleged violations of this section within their respective jurisdiction and publishes findings to the NRS; where findings warrant further action, the Monitor refers to the appropriate authority.
 
 ### §12.4.a — Codes of Conduct and Recusal
 
