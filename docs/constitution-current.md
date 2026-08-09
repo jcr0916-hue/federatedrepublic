@@ -1171,7 +1171,7 @@ The National Trust holds all federal land not conveyed by statute to States, rec
 
 ### §18.5 — Federal Property in Territories
 
-Federal operational use rights in Territories follow the same framework as in States under §18.3 and §18.4. Where §18.4 requires host State legislative consent, that consent is not required for a Territory because Territories have no State legislature; instead, the Territory's representative body must publish a written position to the NRS within 60 days of the proposed use right registration; where no position is published within 60 days, registration may proceed; the LM's ongoing audit of territorial use rights encompasses verification of Territory publication compliance and publishes findings to the NRS.
+Federal operational use rights in Territories follow the same framework as in States under §18.1 and §18.3. Where §18.4 requires host State consent for National Trust designation, that consent is not required for a Territory, which has no State legislature; instead, the Territory's representative body must publish a written position to the NRS within 60 days of the proposed designation. Where no position is published within 60 days, designation may proceed. The LM's ongoing audit of territorial use rights encompasses verification of Territory publication compliance and publishes findings to the NRS.
 
 ---
 
