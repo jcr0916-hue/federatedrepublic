@@ -982,7 +982,7 @@ Where an existing treaty requires military action, the Legat Consul may act imme
 
 - **Time limits:**
   - Where an existing treaty requires military action, the Legat Consul may act immediately and must notify both chambers and the Civic Consul within 12 hours, citing the specific treaty obligation triggered
-- **Cross-refs:** §14.2, §3.6
+- **Cross-refs:** §14.1, §14.2, §14.3, §3.6
 
 ---
 
