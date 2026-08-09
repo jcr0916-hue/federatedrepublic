@@ -1020,6 +1020,7 @@ A State may voluntarily restructure its relationship with the Republic. The proc
 - **Thresholds:**
   - and second, upon approval, negotiation of a restructuring agreement between the State and the Legislature, ratified by Senate approval by 2/3 majority
 - **Time limits:**
+  - The petition period may not exceed 12 months
   - Following certification of any referendum under this section, any party with standing has 30 days to file a legal challenge to the process or result
 - **Cross-refs:** §15.3
 
@@ -1070,7 +1071,7 @@ Local governments — cities, counties, municipalities, and other subdivisions �
 - **Time limits:**
   - (5) Stage Two requires both chambers to hold a concurrent ratification vote within 90 days of NRS publication
   - if either chamber fails to achieve 60% or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
-- **Cross-refs:** §7.2
+- **Cross-refs:** §7.3
 
 ---
 

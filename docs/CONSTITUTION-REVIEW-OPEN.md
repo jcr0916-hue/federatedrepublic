@@ -124,6 +124,15 @@ full verification from scratch rather than trusting intermediate state, includin
 open/close scan that pinpointed the exact unmatched tag. Final state fully verified: 170 provisions,
 divs balanced via strict stack scan (not just count), all 21 intros and 16 qs-icons intact.
 
+## RESOLVED — incorporated 260808 (§15.4 threshold — the self-inflicted item)
+
+- **§15.4** — the 25% hardcoded petition threshold is fixed. Now "defined by statute at not less than
+  5% nor more than 15%," matching the document's own range-plus-delegation convention (§13.1, §13.2,
+  §3.4). Petition period bounded at 12 months, which had been unlimited. Also corrected the world
+  content that depended on it: nrs-016 said signatures met "at least 25%... as required under §15.4,"
+  which is no longer accurate; it now states signatures exceeded the statutory threshold, leaving the
+  certification and everything built on it intact.
+
 ## RESOLVED — incorporated 260801 (§1.6)
 
 - **§1.6** — economic status sat at strict scrutiny alongside race, religion, and the rest, which
