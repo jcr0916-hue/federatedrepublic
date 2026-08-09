@@ -1095,7 +1095,7 @@ Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty
 
 (4) The Republic may not prefer, discourage, or offer inducements toward any status; it must provide factual information about each status upon request.
 
-(5) Article I applies within the territory of each recognized nation throughout the Transition Window unless the nation, by its own governance process, positively rejects that application, published to the NRS; rejection constitutes an early assertion of the default status.
+(5) Article I applies within the territory of each recognized nation throughout the Transition Window unless the nation, by its own governance process, positively rejects that application, published to the NRS; rejection constitutes an early assertion of the default status. Following the close of the Transition Window, the rights position within a nation's territory is governed by the status the nation holds — §20.3 for a nation holding Associated Community status, or the ordinary provisions of this Constitution for a nation that has elected Territorial Integration under §16.2(2)(b).
 
 (6) While Article I so applies, any resident of the nation's territory who believes an Article I right has been violated may bring an Emergency Rights Writ directly to the SC under its original jurisdiction in §4.5; the SC must rule within 7 days; the extension and interim protective order provisions of §4.5 apply.
 

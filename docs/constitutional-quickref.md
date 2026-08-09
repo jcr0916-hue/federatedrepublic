@@ -1091,7 +1091,7 @@ Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty
   - 6, and the nation and the Legislature proceed directly to negotiation of the incorporation agreement, ratified by 2/3 of both chambers
 - **Time limits:**
   - the SC must rule within 7 days
-- **Cross-refs:** §15.1, §15.2, §15.6, §19.2, §4.5, §5.1
+- **Cross-refs:** §15.1, §15.2, §15.6, §16.2, §19.2, §20.3, §4.5, §5.1
 
 ### §16.3 — Treaty Supremacy and Continuity
 
