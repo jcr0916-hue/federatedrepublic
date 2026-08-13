@@ -892,7 +892,7 @@ The Legislature may by statute establish codes of conduct and procedural rules f
 
 ### §12.4.b — Monitor General Disclosure
 
-Monitor Generals disclose under the same requirements and schedule as other constitutional officers under §12.4, published directly to the NRS; no Monitor reviews another Monitor's disclosure. Self-executing recusal applies as under §12.4.
+Monitor Generals disclose under the same requirements and schedule as other constitutional officers under §12.4, published directly to the NRS; no Monitor reviews another Monitor's disclosure. Self-executing recusal applies as under §12.4, but the voidable-decision remedy does not apply to Monitor General functions.
 
 - **Cross-refs:** §12.4, §9.9
 
