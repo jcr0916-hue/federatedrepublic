@@ -3,13 +3,107 @@
 **Started 260731.** Systematic provision-by-provision review against the ten design principles in
 `CONSTITUTIONAL-DESIGN-PRINCIPLES.md`.
 
-**Progress:** Articles I, II, III, IV complete.
+**Progress: COMPLETE.** All twenty articles reviewed provision by provision, 260731–260813. This file was not kept current past the 260801 session; the summary below was reconstructed 260813 from `constitutional-history.html`, the changelog, which was correct and verified throughout. For full reasoning on any item below, see the changelog entry of the same name.
 
 **Standing filter:** constitutional language states the obligation and its floor; statute states the
 machinery. A finding only counts if statute *couldn't* fix it. A conflict between two constitutional
 provisions is always genuine; a missing implementation detail usually isn't.
 
 ---
+
+## RESOLVED — Articles V through XX, incorporated 260802–260808
+
+Full reasoning for each is in `constitutional-history.html`; this is an index, not a duplicate.
+
+- **Article V** — §5.1's citizenship revocation asymmetry closed (naturalized citizens had
+  weaker protection than natural-born); narrow judicial-finding fraud exception added. §5.3's stay
+  clause corrected — it protected Inhabitant children while omitting the citizen children the
+  provision opens by naming. §5.1's derivative-status window bounded at 5 years minimum.
+- **Article VI** — §1.21 (non-refoulement) brought in line with §1.3's already-revised
+  extraterritorial scope; both non-derogable protections now run on the same "who is acting," not
+  "where," test.
+- **Article VII** — §7.3 no longer excludes §13.2 while describing it using the very
+  threshold being excluded; restated as a division of labor. Two "no other eligibility requirement
+  applies" sentences removed from §2.1/§2.5 — both had become false once term limits and
+  §2.17 existed.
+- **Article VIII** — §8.4's public financing floor was indexed to total campaign spending
+  including its own public spending — a self-compounding ratchet. Rewritten around actual purpose
+  (viable candidacy, not full funding). §8.1 disclosure restructured: full disclosure to the
+  Elections Panel always, publication threshold governs only public presentation granularity.
+- **Article IX** — Monitor General removal fully restructured. Previously routed through the SC
+  for all three Monitors, which made the Court gatekeeper for removing its own auditor (the JM).
+  Now: initiation by the branch not audited, suspension only (pay/benefits/term protected), removal by
+  national referendum at §2.13's threshold. Non-Monitor officers keep the SC-category-review track.
+- **Article X** — New petition routes under §10.2: redacted release at any time (redactions
+  themselves published with grounds), and full declassification during an extension period with EM
+  findings admissible. §10.1(6)'s safety restriction gained a repeat-restriction bar.
+- **Article XI** — §11.1(9) let the Civic Consul unilaterally appoint a majority of Acting
+  Panel members, directly undermining §11.1(6)'s own anti-capture rule. Panel now self-designates
+  first; CC is fallback only, capped below a majority. §11.1(4) (certification withholding) routed
+  through §11.3's full notice/cure/challenge process, which it previously lacked entirely.
+- **Article XII** — §12.4(5)'s voidable-decision remedy deleted (self-policing, 90-day
+  window, no external route, wildly disproportionate to the defect). Document-wide cleanup of
+  "constitutional breach" as an undefined label with no interpreter attached — kept only where a
+  named body exercises real judgment on it (§2.13, §4.2, §4.3.a, §12.4.a).
+  §12.2(8) split; Endowment funding now its own subsection with an EM compliance assessment.
+- **Article XIII** — §13.2 (citizen initiative) had no eligibility limits at all while
+  §13.1 (repeal) had three — backwards, since enacting is the stronger power. Added SC review
+  mirroring §17.3's amendment model: Court may not refuse to apply an initiative that met its
+  thresholds except for stated limits, void only to the extent of the conflict. Permanent re-initiation
+  bars in both §13.1 and §13.2 bounded to 3 years.
+- **Article XIV** — §14.4 treaty-based military authorization had no boundary at all —
+  indefinite duration, bypassing both §14.1's authorization and §14.3's Transition Plan
+  requirement. Now scoped to what the treaty actually obligates; action beyond that requires ordinary
+  §14.1 authorization and §14.3 discipline.
+- **Article XV** — §15.4's 25% petition threshold (this review's own earlier error, justified
+  by a comparison to §13.1/§13.2 that didn't hold) corrected to a 5–15% statutory range.
+  §15.3(5)'s annual re-vote on a Provisional State's own dissolution bounded to trigger on 3
+  consecutive failures, mirroring the 3 failures required to enter that status. §15.9(6)'s citation
+  to §7.2 corrected to §7.3 (the actual threshold provision).
+- **Article XVI** — §16.2(5) gained a cross-reference for what governs rights after the
+  Transition Window closes (§20.3 for Associated Community status, ordinary provisions for
+  Territorial Integration) — the underlying design was already coherent, just unstated.
+  §16.4's lack of an appeal route (unlike §16.1's founding-register appeal) confirmed as
+  intentional: recognition is a discretionary §2.1 executive act, not ministerial compilation.
+- **Article XVII** — §17.1(4) cited §9.5 for the Monitor funding guarantee; the actual
+  provision is §9.6, meaning the entrenchment protecting the Monitors' funding floor from being
+  gutted had been sitting on the wrong provision. §17.3(2) gained a floor: no ratification vote on
+  a parliamentary amendment before the JM's consistency analysis is published or 30 days pass.
+- **Article XVIII** — §18.5's Territory consent-substitute was triggered by "use right
+  registration," but §18.4's actual consent requirement governs National Trust designation —
+  a different act. Corrected; Territories now have a real voice on designation specifically.
+- **Article XIX, XX** — Reviewed, no changes. XIX's compliance-finding mechanism already attaches
+  real consequences to every deadline. XX (Associated Communities) needed nothing — the strongest
+  article in the document for internal consistency.
+
+## RESOLVED — Term-limit family, incorporated 260801–260802
+
+- **Legat Consul restructured**: single non-renewable 6-year term → 4-year terms, 2-term/8-year
+  cap matching the CC, mandatory gap before a second term (not immediate re-eligibility).
+  §7.2's election cycle updated to match.
+- **Legislator lifetime caps corrected**: both §3.2(4) and §3.5(3) had drifted to "no
+  cumulative lifetime restriction" (unlimited) instead of the intended 18-year symmetric ceiling
+  (6+3 Assembly terms, 2+1 Senate terms). Caught by comparing live text against the original design
+  decision.
+- **§2.9(5) successor eligibility**: leftover single-term-era language capped former successors
+  at one elected term while everyone else got two under the new §2.1. Now points to §2.1
+  directly, same terms as any other candidate.
+- **One turn per pool**: §9.4.a (Judicial Pool) revised twice — first barred all cross-tier
+  movement entirely (which would have penalized taking a district judgeship on the way to the SC),
+  then corrected so the SC alone is terminal while promotion up the bench stays open. §9.3
+  (Monitor General pools) gained an equivalent "one full term, any capacity" bar, with proportionality
+  carve-outs for partial vacancy-fill service and acting service.
+- **§2.17 (new) + §7.4(9) (new)**: general rule that a cooling-off period from one office
+  doesn't bar another (§7.4(9)), with an express executive-branch exception (§2.17) closing
+  the loophole where an outgoing CC/LC could take a domain-officer or minister role during their own
+  gap.
+
+## RESOLVED — stress-test findings on the term-limit family, 260802
+
+- **Chamber-switching (Assembly ↔ Senate) to reset lifetime caps — confirmed not an issue,
+  no change.** Different powers (Assembly originates, Senate cannot), different electorates (district
+  vs. statewide), every term still requires a real, separate election.
+
 
 ## RESOLVED — Article IV review, incorporated 260801
 
@@ -235,48 +329,6 @@ below rather than incorrectly closed.
 
 ## SELF-INFLICTED — introduced by Claude, needs correction
 
-### §15.4 signature threshold — 25%, hardcoded, justified with a fabricated precedent
-**Priority: fix during Article XV review, or sooner.**
-
-During the §15.5.a design session I proposed a 25% signature threshold for a portion-of-Territory
-merger referendum, and justified it by telling John that §13.1/§13.2 use 15%. **They do not. There
-is no 15% figure anywhere in the document.** I invented the comparator.
-
-**What the real petition thresholds are:**
-
-| Provision | Phase One | Phase Two | Form |
-|---|---|---|---|
-| §13.1 Optional Referendum | 0.5%–3%, across ≥1/3 of States and Territories | 5% nationally | range, statute picks figure |
-| §13.2 Citizen Legislative Initiative | 0.5%–3%, across ≥1/3 of States and Territories | 10% nationally | range, statute picks figure |
-| §15.4 (as I wrote it) | **25%, single phase** | — | **fixed number in constitutional text** |
-
-**Three distinct problems:**
-1. **Hardcoded figure where the document uses range-plus-delegation.** §13.1/§13.2 say "not less than
-   X nor more than Y — defined by statute." That is the drafting-level principle exactly. I put a
-   single hard number into constitutional text.
-2. **Fabricated precedent.** The 15% claim was invented, and John had no reason to doubt it since
-   everything else was being checked against the JSON.
-3. **No time limit.** §13.1 bounds collection at 8 months, §13.2 at 10. §15.4 has none — a petition
-   could collect indefinitely.
-
-**The one legitimate argument for a higher figure, which I owed John at the time instead of a fake
-citation:** §13.1/§13.2 percentages are of the *national* electorate, so 10% is millions of
-signatures. §15.4's pool is a defined portion of one Territory — possibly a few thousand people, all
-directly affected. A higher percentage of a much smaller, concentrated pool is defensible.
-
-**Proposed correction (John to set the range):**
-> "...is triggered by a petition signed by citizens equal to a percentage of eligible voters within
-> the defined portion — defined by statute at not less than 5% nor more than 15% — authenticated
-> through the NVS using Citizen Voting Credentials, and certified by the Elections Panel. The
-> petition period may not exceed 12 months."
-
-**Note:** world content (nrs-016) describes this as a certified petition threshold without naming a
-figure, so correcting the constitutional text does not create a canon conflict. nrs-020's reference
-to an LC ballot-access "signature threshold established by statute" is a *different* matter and is
-fine as written — that is ordinary delegation, not an invented constitutional number.
-
----
-
 ## TIER 2 — clean fix available, but the design question needs John's call first
 
 ### §2.11 — expedited emergency activation bypasses its own trigger
@@ -317,6 +369,17 @@ has been restored from the original Article III review findings.
 
 ---
 
+## RESOLVED — §2.5(6) / §2.9(6), incorporated 260813
+
+- **§2.5(6) / §2.9(6)** — ~80% identical text (CC/LC acting-authority provisions), but two genuine
+  divergences found on close comparison, not just office-name substitution: the tiebreaker (CC
+  delegates to statute; LC hardcodes age) and the ending condition (CC's acting status also ends on a
+  new CC being elected under §2.6 — a real possibility given the Assembly's fast internal removal path;
+  LC has no equivalent, since LC removal runs through the slower §2.13 track or full succession under
+  §2.9(1)–(2) instead). Both preserved untouched. What was genuinely identical — the conduct bar,
+  mandate-protection, and the already-duplicated "last person may not decline" restatement — extracted
+  to new §2.16(6). Each provision now states only what's actually its own, plus a cross-reference.
+
 ## TIER 3 — genuine design questions, not drafting errors
 
 ### §2.13 — popular removal track
@@ -346,17 +409,12 @@ but arguably the same underlying loophole §2.17 exists to close, just left open
 side. **Open question for John:** worth its own express bar, or is this acceptable since it still
 requires someone else — the sitting executive — to choose to make the appointment?
 
-### §2.5(6) / §2.9(6) — near-identical duplication (One Home Rule)
-The two temporary-incapacity succession provisions run in close parallel, differing only in chamber
-and tiebreaker, both depending on §2.16 for the trigger. Parallelism aids readability, but it is the
-same rule stated twice — amend one, forget the other.
-
 ---
 
 ## TIER 4 — probably resolve as "no change," but John should confirm
+(§1.7 resolved — see "Bodily Sovereignty and Privacy Separated" in the changelog. Confirmed leave-as-is: near-absolute medical autonomy outside a declared emergency is coherent given §1.7 is derogable, so the epidemic case is already covered by the emergency-derogation window.)
 
-- **§1.7** — "may not compel medical decisions" is unqualified, apparently foreclosing vaccination
-  requirements outside emergencies (§1.7 is derogable, so the epidemic case is covered).
+
 - **§1.10** — confirmed, leave as-is: "every person" (not "every citizen") for arms rights is
   consistent with the document's own pattern — "citizen" gates political rights, "person" gates rights
   treated as inherent. Working correctly, not an inconsistency.
