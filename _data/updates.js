@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "A date, not an answer",
+    blurb: "The Kelvant-Korda referendum has a date. The transition framework for the two court seats still doesn't. Voters will decide the merger before anyone tells them what happens to the courts.",
+    href: "torenthia-news-055.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "The system says it was already working on it",
     blurb: "A candidate published a transition plan the sitting judiciary hadn't. Three days later, the JMC confirms a framework has been in development since the referendum was certified — and won't say when it will be ready.",
     href: "torenthia-news-054.html",
