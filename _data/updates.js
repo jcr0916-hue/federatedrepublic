@@ -12,6 +12,13 @@ const CATEGORY_IMAGE = {
 
 const updates = [
   {
+    category: "constitution",
+    badge: "Amendment",
+    title: "The Full Review — Complete",
+    blurb: "All twenty articles, provision by provision. Four citations that pointed at the wrong section entirely, each one adjacent enough to look right until you actually read the target.",
+    href: "constitutional-history.html",
+  },
+  {
     category: "world",
     badge: "The World",
     title: "A date, not an answer",
