@@ -923,7 +923,7 @@ The Legislature may by statute establish codes of conduct and procedural rules f
 
 ### §12.4.b — Monitor General Disclosure
 
-Monitor Generals disclose under the same requirements and schedule as other constitutional officers under §12.4, published directly to the NRS; no Monitor reviews another Monitor's disclosure. Self-executing recusal applies as under §12.4, but the voidable-decision remedy does not apply to Monitor General functions. The Legislature must include concealment of a disqualifying financial interest, or failure to recuse where required, among the statutory removal categories established for Monitor Generals under §9.9.
+Monitor Generals disclose under the same requirements and schedule as other constitutional officers under §12.4, published directly to the NRS; no Monitor reviews another Monitor's disclosure. Self-executing recusal applies as under §12.4. Concealment of a disqualifying financial interest, or failure to recuse where required, is grounds for removal under §9.9.
 
 ### §12.4.c — Federal Employee and Military Disclosure
 

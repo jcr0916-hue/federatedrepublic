@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The system says it was already working on it",
+    blurb: "A candidate published a transition plan the sitting judiciary hadn't. Three days later, the JMC confirms a framework has been in development since the referendum was certified — and won't say when it will be ready.",
+    href: "torenthia-news-054.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "The question nobody asked until she did",
     blurb: "Four Legat Consul candidates were asked about the two Korda court seats a Monitor General says aren't ready to relocate. Three had opinions about the finding. One had a plan for the seats.",
     href: "torenthia-news-053.html",
