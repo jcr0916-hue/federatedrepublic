@@ -28,6 +28,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "A routine filing, an unnamed case",
+    blurb: "The Federal Prosecution Service asks the Assembly for supplemental funding on an open investigation. What it's investigating is, by design, the one thing the filing doesn't say.",
+    href: "torenthia-nrs-025.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "The system says it was already working on it",
     blurb: "A candidate published a transition plan the sitting judiciary hadn't. Three days later, the JMC confirms a framework has been in development since the referendum was certified — and won't say when it will be ready.",
     href: "torenthia-news-054.html",
