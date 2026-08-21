@@ -1,0 +1,44 @@
+{
+  "absolute-majority": {
+    "label": "Absolute Majority",
+    "citation": ["§3.7", "§2.6"],
+    "autoMatch": true,
+    "popup": "A majority of a chamber's full seated membership — counted against every seat filled, not just the members present or voting.",
+    "detail": "The standard threshold for passing legislation under §3.7, and the bar for removing a Civic Consul under §2.6's constructive vote of no confidence. Counting against full membership rather than attendance means a thin turnout cannot lower the bar — abstaining or being absent has the same practical effect as voting no."
+  },
+  "dual-executive": {
+    "label": "Dual Executive",
+    "citation": ["§2.1", "§2.5", "§2.14"],
+    "autoMatch": true,
+    "popup": "Two separately selected executives with enumerated, non-overlapping domains — neither one is head of government alone.",
+    "detail": "The Legat Consul (§2.1) holds military command, foreign affairs, and intelligence. The Civic Consul (§2.5) holds residual authority over everything else. They are selected differently, removed differently, and neither can act in the other's domain. The Council of Ministers (§2.14) is where their domains coordinate — it recommends and aligns positions, but exercises no executive authority of its own."
+  },
+  "classification-ceiling": {
+    "label": "Classification Ceiling",
+    "citation": ["§10.2"],
+    "autoMatch": true,
+    "popup": "25 years maximum, extendable once by five — and never past 30 under any circumstances.",
+    "detail": "On expiry the NRS Panel publishes the record automatically, with no government act required. The single 5-year extension requires the responsible executive to publish a justification, which the EM assesses and reports on — though that finding binds no one. Two petition routes run alongside: any person with standing may seek release in redacted form at any time, and may seek full declassification during an extension period, where the EM's finding is admissible."
+  },
+  "officer-removal": {
+    "label": "Constitutional Officer Removal",
+    "citation": ["§9.9"],
+    "autoMatch": true,
+    "popup": "Two separate tracks: Monitor Generals are removed by national referendum, every other officer by legislative supermajority after SC review.",
+    "detail": "For Monitor Generals, removal is initiated by the branch that Monitor does not audit, suspends authority immediately without touching pay or term, and can only be completed by a national referendum at 60% with 55% participation. For all other constitutionally confirmed officers, the SC first confirms the stated grounds fit a statutory category — reviewing category only, never the facts — and removal then requires a 2/3 concurrent legislative vote."
+  },
+  "electoral-mandate-inviolability": {
+    "label": "Inviolability of Electoral Mandates",
+    "citation": ["§1.25"],
+    "autoMatch": true,
+    "popup": "An elected officer serves their full term — no branch, court, Monitor, or agency can cut it short outside the paths this Constitution names.",
+    "detail": "The only exceptions are chamber expulsion, State-law recall, and the removal provisions enumerated in §3.10. Creating any new way for the people to shorten a mandate requires a constitutional amendment, not a statute. Expulsion, recall, and removal are political processes rather than legal ones — they end an officer's tenure without shielding them from criminal prosecution or civil liability for the underlying conduct."
+  },
+  "constructive-vote-no-confidence": {
+    "label": "Constructive Vote of No Confidence",
+    "citation": ["§2.6"],
+    "autoMatch": true,
+    "popup": "The Assembly can only remove a Civic Consul by naming their replacement in the same vote.",
+    "detail": "A confidence vote that does not name a successor has no effect. This makes removal an act of choosing a different government rather than simply ending the current one — the office never falls vacant, and a coalition that can agree on removal but not on a replacement cannot force a crisis."
+  }
+}
