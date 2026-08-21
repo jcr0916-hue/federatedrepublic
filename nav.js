@@ -12,8 +12,7 @@
     { href: "atlas.html",                 label: "Atlas" },
     { href: "diagrams.html",              label: "Diagrams" },
     { href: "constitutional-history.html", label: "Constitutional History" },
-    { href: "sources.html",               label: "Sources" },
-    { href: "glossary.html",              label: "Glossary" }
+    { href: "sources.html",               label: "Sources" }
   ];
   // Mobile menu carries the desktop links plus a few extras.
   var MOBILE_EXTRA = [
