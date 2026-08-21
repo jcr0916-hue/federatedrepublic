@@ -144,7 +144,7 @@ The Steward holds no authority to:
 ## ARTICLE IV — THE JUDICIAL BRANCH
 
 ### §4.1 Judicial Power
-The judicial power of Orath is vested in the **Orath High Court**, **District Courts**, and such **Labor Arbitration Tribunals** and other inferior courts as the General Assembly establishes by statute, consistent with the Republic's Constitution §3.14's recognition of the States' authority to govern themselves as self-governing communities, which this Constitution reads to include the authority to structure a State's own judiciary.
+The judicial power of Orath is vested in the **Orath High Court**, **District Courts**, and such **Labor Arbitration Tribunals** and other inferior courts as the General Assembly establishes by statute, consistent with the Republic's Constitution §3.12's recognition of the States' authority to govern themselves as self-governing communities, which this Constitution reads to include the authority to structure a State's own judiciary.
 
 ### §4.2 The Orath High Court
 (a) The High Court consists of **seven justices**, appointed by the Steward and confirmed by the General Assembly by majority vote, serving **single, non-renewable twelve-year terms**.
@@ -176,7 +176,7 @@ Consistent with the Republic's Constitution §15.8, the municipalities, counties
 ### §5.2 Near-Parity of State and Local Power
 Orath is founded on the principle that local governments are not mere administrative subdivisions of the State but co-equal partners in governance within their own domain. Accordingly:
 (a) Matters of **purely local concern** — including local land use, local infrastructure, local licensing, and the internal governance of rural cooperatives — belong presumptively to local governments; the General Assembly may legislate in these areas only upon a finding, stated in the enacting legislation, that a state-wide interest requires uniformity.
-(b) The General Assembly may establish **minimum standards** local governments must meet (e.g., minimum wage floors, environmental baselines, election administration standards) but may not direct local officials as mere instruments of state administration, mirroring the anti-commandeering principle of the Republic's Constitution §3.14 as applied between the Republic and its States.
+(b) The General Assembly may establish **minimum standards** local governments must meet (e.g., minimum wage floors, environmental baselines, election administration standards) but may not direct local officials as mere instruments of state administration, mirroring the anti-commandeering principle of the Republic's Constitution §3.12 as applied between the Republic and its States.
 
 ### §5.3 Municipal Councils
 (a) Every incorporated municipality in Orath is governed by an elected council, chosen by its residents under a charter the municipality adopts for itself, subject only to the requirements of this Article and general state election law.

@@ -16,7 +16,7 @@
 - **Preamble**
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.25  (27 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.17  (22 provisions)
-- **Article III — The Legislature**  ·  §3.1–§3.15  (14 provisions)
+- **Article III — The Legislature**  ·  §3.1–§3.13  (14 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (3 provisions)
 - **Article VI — Immigration and Residency**  ·  §6.1–§6.3.a  (4 provisions)
@@ -457,17 +457,17 @@ Removal of constitutional officers proceeds exclusively as this Constitution pro
 
 - **Cross-refs:** §2.13, §2.4.a, §2.5, §2.6, §3.2, §3.5, §4.2, §4.3.a, §9.9
 
-### §3.13 — Continuity of Constitutionally Mandated Offices
+### §3.11 — Continuity of Constitutionally Mandated Offices
 
 For every office established by this Constitution with a fixed term, the confirmed or elected successor’s term begins at the precise moment the incumbent’s term concludes — no gap exists between the end of one term and the commencement of the next. The selection and confirmation processes for each such office must be initiated and completed with sufficient lead time to ensure seamless succession before the…
 
 
-### §3.14 — Federal Legislative Competence
+### §3.12 — Federal Legislative Competence
 
 The Legislature holds general authority to legislate for the peace, order, and good governance of the Republic. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities.
 
 
-### §3.15 — Delegation of Authority
+### §3.13 — Delegation of Authority
 
 The Legislature may by statute delegate defined authorities within its legislative competence to the Legat Consul, the Civic Consul, or independent agencies established under §3.9. Any delegation must specify the exact scope of authority delegated, the conditions on its exercise, and a maximum duration not to exceed the term of the Legislature that enacted it.
 
@@ -699,7 +699,7 @@ The JM audits the courts for judicial scope and independence, and conducts annua
 
 A Monitor General’s constitutional authority terminates automatically at the moment their term expires — no further act or proceeding is required. Any official act taken after term expiry is constitutionally void.
 
-- **Cross-refs:** §3.13, §9.3, §9.9
+- **Cross-refs:** §3.11, §9.3, §9.9
 
 ### §9.2 — Selection and Independence
 
@@ -1328,7 +1328,7 @@ Extracted verbatim. If a threshold is not in this table, it is not in the consti
 | §3.6 | Treaty and Trade Agreement Ratification | Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers |
 | §3.6 | Treaty and Trade Agreement Ratification | The Senate must affirm withdrawal by 2/3 of its full seated membership within the period defined by statute, not to exceed 90 days |
 | §3.7 | Legislative Process and Passage | Bills pass by absolute majority of the full seated membership of both chambers |
-| §3.15 | Delegation of Authority | The Legislature may rescind any delegation by simple majority of both chambers at any time |
+| §3.13 | Delegation of Authority | The Legislature may rescind any delegation by simple majority of both chambers at any time |
 | §4.1 | Court Structure | judges whose courts are abolished may be reassigned to other inferior courts by the Civic Consul with Senate confirmation at 2/3 |
 | §4.2 | Judicial Appointments and Independence | The Senate confirms by 2/3 |
 | §4.2 | Judicial Appointments and Independence | (4) Judicial removal occurs through three tracks: — legislative removal by 2/3 of both chambers on grounds of constitutional breach or demonstrated incapacity |

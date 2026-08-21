@@ -91,7 +91,7 @@ const SYNONYMS = {
   'treaty':['ratification','senate','international','foreign','trade agreement'],
   'trade agreement':['treaty','ratification','lc','§3.6','§2.4'],
   'monetary':['ma','monetary authority','currency','fiscal integrity'],
-  'federalism':['state','devolution','federal','§3.14'],
+  'federalism':['state','devolution','federal','§3.12'],
   'indigenous':['nation','compact','article xvi','§16.1'],
   'native':['indigenous','nation','compact'],
 };

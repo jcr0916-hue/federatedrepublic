@@ -1,6 +1,6 @@
 # THE CONSTITUTION OF THE STATE OF CALDENMERE
 
-*Adopted under the authority reserved to the States by the Constitution of the Federated Republic, Article III §3.14, and consistent with the Statehood Audit standard of Article XV §15.2.*
+*Adopted under the authority reserved to the States by the Constitution of the Federated Republic, Article III §3.12, and consistent with the Statehood Audit standard of Article XV §15.2.*
 
 ---
 
