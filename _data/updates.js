@@ -12,6 +12,20 @@ const CATEGORY_IMAGE = {
 
 const updates = [
   {
+    category: "world",
+    badge: "The World",
+    title: "You live in a defined portion now",
+    blurb: "Every outlet covering the referendum uses the phrase like it's scenery. For forty thousand people it's an address — and it decides who gets to vote and who only gets an assessment.",
+    href: "torenthia-news-057.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
+    title: "Thirty more days, and a reason on the record",
+    blurb: "The Senate extended its review of a licensing bill this week — the only extension it gets, and it had to say why in public. Nobody covered it. That's roughly the point.",
+    href: "torenthia-news-056.html",
+  },
+  {
     category: "constitution",
     badge: "Amendment",
     title: "The Full Review — Complete",
