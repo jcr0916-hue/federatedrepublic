@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Nobody ever had to write it",
+    blurb: "Five weeks of asking when the JMC will publish its transition framework — and §15.5.a never required one. What Vray's dissent actually bought was a record, not a remedy.",
+    href: "torenthia-news-059.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "The other half of the ballot",
     blurb: "The Legat Consul race has been covered as a national contest. It's two contests at once — and the candidate driving the substance has the narrowest geographic base of the four.",
     href: "torenthia-news-058.html",
