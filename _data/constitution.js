@@ -5,7 +5,11 @@
 import { readFileSync } from "node:fs";
 
 const data = JSON.parse(readFileSync("./constitution_data.json", "utf8"));
-const provisions = data.reduce((n, article) => n + article.provisions.length, 0);
-const articles = data.length;
+// The Preamble is a top-level entry in constitution_data.json but is not an
+// Article, so it must be excluded from the article count. (It carries no
+// provisions, so the provision count was never affected.)
+const realArticles = data.filter((entry) => !entry.preamble);
+const provisions = realArticles.reduce((n, article) => n + article.provisions.length, 0);
+const articles = realArticles.length;
 
 export default { provisions, articles };
