@@ -51,6 +51,17 @@ just banked in case a specific piece ever wants the texture.
 
 ---
 
+## KORDA CONVENTION ARC — competing whole-territory petition (agreed 260819, John)
+
+**Promoted to its own file: `docs/KORDA-CONVENTION-ARC.md`.** A competing §15.2 whole-territory
+statehood petition, certified inside the 90-day window, triggers §15.5.a(1) and cancels the
+already-scheduled Day 8 corridor referendum — forcing the Republic's first Territory Convention
+under §15.5.a(4). Grievance already exists in canon (Orin's four-year capacity-request queue).
+Timing verified: corridor petition certified 13.09.30, window closes ~13.12.30, referendum
+scheduled 13.12.08. To begin by Thursday 260821. John ruminating on opening shape.
+
+---
+
 ## KORDA / KELVANT LAKE-CORRIDOR MERGER (flagged 260712, John)
 **The hook — timing:** the §15.4 merger question heating up *while* the Lake Varda crisis strains the same region. The crisis gives the merger real weight — not an abstract territorial-restructuring debate, but "do we redraw these lines while the people on them are under wartime pressure from across the lake?" The two threads amplify each other.
 

@@ -1,0 +1,114 @@
+# The Korda Convention Arc — Storyline Framework
+
+*A competing whole-territory statehood petition collides with the already-scheduled
+Kelvant-Korda corridor merger referendum, triggering §15.5.a(1) and forcing the Republic's
+first Territory Convention. Dramatizes the machinery nobody has used — and turns a settled
+process into a contested one three weeks before a vote.*
+
+*STATUS: agreed in principle 260819 (John). Arc to begin by Thursday 260821 at the latest.
+John ruminating on shape; this file is MATERIAL, not a locked plan. Nothing below is
+committed canon until published.*
+
+---
+
+## THE MECHANISM (verified against constitution_data.json, 260819)
+
+**§15.5.a(1)** — where two or more petitions under §15.4 or §15.2 affect *different defined
+portions of the same Territory* and are certified **within 90 days of one another**,
+subsections (2) and (3) do not apply to any of them. All are addressed together under (4).
+
+**§15.5.a(4)** — the consequence chain:
+- The underlying referendum(s) **do not proceed** — even one already scheduled
+- The **Civic Consul convenes a Territory Convention**
+- Composition: **the Assembly members representing districts within the Territory**
+- **90 days** from first session to produce a proposed resolution
+- No resolution in 90 days → all petitions **lapse together**, Territory continues undivided,
+  and nothing with substantially the same geographic scope may be reinitiated **for three years**
+- *"This Constitution does not prescribe the Convention's terms"* — deliberately open
+- Any resolution must be **ratified by referendum of the eligible voters it affects**, then
+  proceeds under §15.2 or §15.4 including all their approval/audit/ratification steps
+
+**§15.2** — the whole-territory statehood path: Statehood Audit administered by the JMC,
+no political vote required, Provisional status on passing. This is what a competing
+whole-territory petition would be seeking.
+
+## THE TIMING CONSTRAINT (this is what makes it work)
+
+- Korda corridor petition certified: **Year 13, Month 9, Day 30** (NRS-Y13-0371 / nrs-016)
+- 90-day window therefore closes: **~Year 13, Month 12, Day 30**
+- Corridor referendum currently scheduled: **Year 13, Month 12, Day 8** (NRS-Y13-0502 / nrs-024)
+- **A competing petition certifying before Day 8 cancels a vote that is already scheduled,
+  days out.** That is the drama. It is not contrived — it is what the provision says.
+
+## WHY THE GRIEVANCE ALREADY EXISTS (established canon — do not invent motive)
+
+**Dessa Orin** — Korda Territory Assembly delegate, Territories and Fiscal Affairs Committee,
+co-sponsor of Elin Thoss's fiscal equalization bill. Her office, on the record (news-046 era):
+
+> "This isn't about Sunderland. It's about why our roads and our capacity requests have been
+> sitting in a queue for four years while the equalization mechanism the Monitor already
+> flagged goes unaddressed."
+
+That is *already* the argument for whole-territory statehood. A Territory that cannot get its
+capacity requests answered has a structural problem that splitting off its wealthiest corridor
+makes **worse** — the remainder loses ~44% of assessed economic activity and most through-freight
+(established in nrs-021, restated in Kade's news-057).
+
+**The natural constituency:** the inland districts. Under §15.4 they get **no vote** on the
+corridor merger — Kade's piece (news-057) made this explicit: *"the people not voting got an
+assessment instead of a veto."* A competing petition is the one tool that gives them a say.
+The grievance was manufactured by the existing structure, not by us.
+
+## THE CONFLICT (real stakes on both sides — do not make either side villains)
+
+- **Corridor residents** organized, petitioned, cleared the threshold, survived a viability
+  assessment, and are three weeks from voting. Having that cancelled by people who don't get a
+  vote under §15.4 is a genuine grievance.
+- **Inland districts** are losing 44% of the economy in a decision they have no vote in, on the
+  strength of a JMC finding that one Monitor General dissented from.
+- Neither is wrong. §15.5.a(4) exists precisely because the Constitution anticipated that both
+  claims could be legitimate at once and declined to rank them.
+
+## THREADS IT TOUCHES (rich, but do not force all of them)
+
+- **Thoss** — her fiscal equalization bill's beneficiary changes shape mid-passage if Korda
+  becomes a State rather than a Territory. She has declined four times on the record to say
+  whether she's running for anything; a Convention involving her own co-sponsor is another
+  pressure point. **Claude has narrative control of the Thoss outcome (standing delegation).**
+- **LC race** — Sandris built his campaign on the corridor transition question and has the
+  narrowest geographic base of the four (9 of 12 States, per nrs-020, surfaced in news-058).
+  A cancelled referendum removes his signature issue weeks before a vote.
+- **Vray's dissent** — if the corridor merger never happens, the judicial transition question
+  she raised becomes moot, and what her dissent bought (a record, not a remedy — news-059) is
+  tested differently than expected.
+- **Article XVI** — Korda is indigenous territory (world-canon). Whole-territory statehood has a
+  different relationship to indigenous sovereignty than a corridor split does. **Handle with
+  care; do not open casually.**
+- **Varda Crossing** — the incursion site borders Korda. Established, live, unresolved.
+
+## FIRST BEAT — the likely opening (not yet committed)
+
+The petition needs to **exist before it certifies.** A piece introducing the organizers in the
+inland districts, with Orin's four-year-queue grievance as the stated rationale, and explicit
+awareness that certifying inside the 90-day window kills the Day 8 vote. This lets the corridor
+react *before* the thing lands, rather than after.
+
+Alternative openings worth considering:
+- Start with the NRS certification itself and let the news catch up to it (mundane-first)
+- Start with the corridor's reaction to a *rumored* petition, before anything is filed
+- Start with Orin being asked directly and declining to confirm
+
+## WHAT NOBODY HAS SEEN YET (the payoff)
+
+- The Republic's **first Territory Convention** — no precedent, and the Constitution
+  deliberately does not prescribe its terms
+- NRS records framing a body that has never convened
+- A 90-day clock with a hard lapse-and-3-year-bar failure state
+- What Assembly members do when seated as something other than Assembly members
+
+---
+
+*Cross-references: nrs-016 (petition certification), nrs-021 (viability + Vray dissent),
+nrs-022/024 (scheduling + date), nrs-023 (JMC status filing), news-053/054/055 (transition
+thread), news-057 (Kade on defined portions), news-058 (LC race geography), news-059 (what
+the dissent bought).*
