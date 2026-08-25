@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The other half of the ballot",
+    blurb: "The Legat Consul race has been covered as a national contest. It's two contests at once — and the candidate driving the substance has the narrowest geographic base of the four.",
+    href: "torenthia-news-058.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "You live in a defined portion now",
     blurb: "Every outlet covering the referendum uses the phrase like it's scenery. For forty thousand people it's an address — and it decides who gets to vote and who only gets an assessment.",
     href: "torenthia-news-057.html",
