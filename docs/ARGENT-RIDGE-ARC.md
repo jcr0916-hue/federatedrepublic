@@ -125,9 +125,12 @@ The Panel also REJECTED Norvane's §13.1(4)(c) argument (law implementing a cons
 obligation): "An obligation that a State feels is not an obligation that this Constitution mandates.
 Necessity is not the same thing as mandate." Norvane's need is real and it is not a mandate.
 
-**LIVE HOOK — the 14-day challenge window.** §13.1(5): any eligibility determination is challengeable
-in the Appellate Court within 14 days. The window closes Y13 M9 D12. Norvane has not said whether it
-will. THIS IS AN OPEN THREAD — Beat 4 can be the challenge, or the conspicuous absence of one.
+**RESOLVED (news-060, Y13 M9) — the window closed unused.** Norvane let the 14-day challenge
+period lapse without filing. Not surrender — its delegation has been aggressive about every OTHER
+arrival-corridor need all year — but a deliberate choice about where fourteen days of a strapped
+state's capacity belonged. The eligibility ruling now stands unchallengeable through this route.
+Phase One proceeds. The §18.4 consent problem is untouched and unmentioned by anyone yet in-world;
+it remains the real fight, still ahead.
 
 ## THE JURISDICTIONAL THRESHOLD BECAME THE STORY (Y13 M9, news-039 + news-040)
 
