@@ -1001,11 +1001,11 @@ Provisional status is the intermediate constitutional stage between Territory an
 
 ### §15.2 — The Statehood Audit
 
-The pathway from Territory to State proceeds through Provisional status under §15.1.a upon passing the Statehood Audit — no political vote is required. The JMC administers the Statehood Audit; the Legislature defines audit components, methodology, and resubmission timelines by statute, subject to 2/3 majority of both chambers.
+(1) A Territory's elected governing authority under §15.1 may by resolution request a Statehood Audit for the whole Territory. Alternatively, a citizen petition — signed by a percentage of eligible voters within the Territory defined by statute at not less than 5% nor more than 15%, authenticated through the NVS using Citizen Voting Credentials, and certified by the Elections Panel — achieves the same effect.
 
 - **Thresholds:**
   - the Legislature defines audit components, methodology, and resubmission timelines by statute, subject to 2/3 majority of both chambers
-- **Cross-refs:** §15.1.a
+- **Cross-refs:** §15.1, §15.1.a
 
 ### §15.3 — Mandatory Devolution
 

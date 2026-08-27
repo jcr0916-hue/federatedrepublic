@@ -13,6 +13,30 @@ committed canon until published.*
 
 ## THE MECHANISM (verified against constitution_data.json, 260819)
 
+**UPDATE 260819 — §15.2 was a genuine gap, now fixed.** The provision described what happens
+once a Statehood Audit occurs, but never said who could request one. Restructured into (1)-(4):
+a Territory's own elected governing authority (§15.1) may request by resolution, OR a citizen
+petition (5–15% statutory threshold, mirroring §15.4's range, NVS-authenticated, Elections
+Panel certified) achieves the same effect. **A defined subdivision may only use the citizen
+petition route** — there is no subdivision-level legislature that could pass a resolution on
+behalf of an arbitrary portion, so the mechanism available to the inland districts is
+necessarily the grassroots one. This was not a retrofit to justify the story; it was a real
+absence in the document that the story surfaced. Full reasoning in constitutional-history.html
+("§15.2 — Who Actually Asks for the Audit").
+
+**OPEN QUESTION, DELIBERATELY LEFT UNRESOLVED (260819, John's catch):** nothing in §15.4 or
+§15.2 requires a petition's self-declared geographic boundary to be non-overlapping with
+another petition's boundary. The Elections Panel certifies signatures within whatever area a
+petition's own organizers define — it does not adjudicate boundary disputes between competing
+petitions. This means the corridor petition (§15.4) and the inland petition (§15.2) may or may
+not cleanly divide Korda with no overlap; nrs-027 deliberately does NOT assert they're
+independent or non-overlapping. **This is available as a live plot thread** — a boundary dispute
+between the two petitions could plausibly become an SC question, though not a clean one: §4.5's
+enumerated original jurisdiction doesn't obviously cover a dispute between two pending petitions
+(neither party is a State yet). The closest fit is a challenge to the Elections Panel's own
+certification as a constitutionally independent institution — arguable, not automatic. Do not
+resolve this thread until/unless a beat actually needs to.
+
 **§15.5.a(1)** — where two or more petitions under §15.4 or §15.2 affect *different defined
 portions of the same Territory* and are certified **within 90 days of one another**,
 subsections (2) and (3) do not apply to any of them. All are addressed together under (4).
