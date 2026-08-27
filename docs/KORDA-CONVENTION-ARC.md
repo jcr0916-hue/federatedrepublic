@@ -110,17 +110,54 @@ The grievance was manufactured by the existing structure, not by us.
   care; do not open casually.**
 - **Varda Crossing** — the incursion site borders Korda. Established, live, unresolved.
 
-## FIRST BEAT — the likely opening (not yet committed)
+## ARC STARTED 260819 — first beats published
+
+- **nrs-027**: Elections Panel certification of the inland petition under §15.2(1). Deliberately
+  does not assert the two petitions' boundaries are non-overlapping or independent — that
+  ambiguity stays open, per the note above.
+- **news-061** ("Certified," The Korda Press, Mara Iset): the paper's inaugural piece. Ground-
+  level, no mechanism explanation, no mention of §15.5.a or the Convention. A corridor organizer
+  is quoted dismissively ("nothing about the lake side changes because of a stack of paper in
+  Adren") — this is the "will never fly" attitude, planted now for later payoff once someone
+  points out that certification alone may already have triggered §15.5.a(1).
+- New named character: **Bern Calloway**, grain operation forty minutes north of Adren, signed
+  in person rather than via NVS. Motivated by roads/infrastructure grievance, not by anything
+  about Kelvant or the corridor — consistent with the "local stakes, not connect-the-dots"
+  storytelling rule agreed 260819.
+
+## STORYTELLING RULE (agreed 260819, John — applies to this whole arc)
+
+Events get reported straight. Quoted people may explain their own concrete stake in their own
+words — a farmer whose freight route gets longer, a shipper whose infrastructure plan depends
+on the merger — but the narration itself never connects the dots across threads (Convention,
+Thoss, LC race, the eventual SC suit). Local-news logic: the paper tells you your eggs cost
+more: it does not cross-reference the trade policy that caused it. Synthesis is allowed only as
+one reporter's attributed, arguable opinion — never as settled narrative fact.
+
+## PLANNED — SC suit (agreed 260819, John, not yet triggered)
+
+Once the inland petition "flies" (i.e., someone — JMC, Civic Consul, or a reporter — points out
+that §15.5.a(1) already applies and the Day 8 referendum cannot proceed as scheduled), the
+corridor's original petitioners, joined by Kelvant business interests who backed the merger,
+sue the SC. **Likely strongest argument: the two petitions' boundaries aren't genuinely "different
+defined portions of the same Territory"** — reaching directly into the boundary ambiguity left
+open in nrs-027. Jurisdictional theory is itself contested (see "THE MECHANISM" section above);
+this is a feature, not a gap to resolve before writing it.
+
+**Lakeland Journal placeholder (John, 260819):** a few beats out, a Lakeland Journal piece
+(Kelvant's own outlet) should surface a fishery or shipping executive with concrete infrastructure
+stakes riding on the merger — Varenne Station and the coast-guard/arrival zone make this a natural
+fit. This voice can become one of the named business interests in the eventual SC suit. Hold until
+its own beat; do not force it into the certification/Korda Press beats.
+
 
 The petition needs to **exist before it certifies.** A piece introducing the organizers in the
 inland districts, with Orin's four-year-queue grievance as the stated rationale, and explicit
 awareness that certifying inside the 90-day window kills the Day 8 vote. This lets the corridor
 react *before* the thing lands, rather than after.
 
-Alternative openings worth considering:
-- Start with the NRS certification itself and let the news catch up to it (mundane-first)
-- Start with the corridor's reaction to a *rumored* petition, before anything is filed
-- Start with Orin being asked directly and declining to confirm
+**Resolved 260819 — certification-first was the opening used**, matching the second of the three
+alternatives originally listed here. See "ARC STARTED" above for what was actually published.
 
 ## WHAT NOBODY HAS SEEN YET (the payoff)
 
