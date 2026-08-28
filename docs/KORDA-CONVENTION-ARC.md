@@ -17,22 +17,32 @@ committed canon until published.*
 once a Statehood Audit occurs, but never said who could request one. Restructured into (1)-(4):
 a Territory's own elected governing authority (§15.1) may request by resolution, OR a citizen
 petition (5–15% statutory threshold, mirroring §15.4's range, NVS-authenticated, Elections
-Panel certified) achieves the same effect. **A defined subdivision may only use the citizen
-petition route** — there is no subdivision-level legislature that could pass a resolution on
-behalf of an arbitrary portion, so the mechanism available to the inland districts is
-necessarily the grassroots one. This was not a retrofit to justify the story; it was a real
-absence in the document that the story surfaced. Full reasoning in constitutional-history.html
-("§15.2 — Who Actually Asks for the Audit").
+Panel certified) achieves the same effect **for the whole Territory**. A defined subdivision has
+a separate, narrower clause available to it — citizen petition only, no resolution route, since
+there is no subdivision-level legislature that could speak for an arbitrary portion. This was
+not a retrofit to justify the story; it was a real absence in the document that the story
+surfaced. Full reasoning in constitutional-history.html ("§15.2 — Who Actually Asks for the
+Audit").
 
-**OPEN QUESTION, DELIBERATELY LEFT UNRESOLVED (260819, John's catch):** nothing in §15.4 or
-§15.2 requires a petition's self-declared geographic boundary to be non-overlapping with
-another petition's boundary. The Elections Panel certifies signatures within whatever area a
-petition's own organizers define — it does not adjudicate boundary disputes between competing
-petitions. This means the corridor petition (§15.4) and the inland petition (§15.2) may or may
-not cleanly divide Korda with no overlap; nrs-027 deliberately does NOT assert they're
-independent or non-overlapping. **This is available as a live plot thread** — a boundary dispute
-between the two petitions could plausibly become an SC question, though not a clean one: §4.5's
-enumerated original jurisdiction doesn't obviously cover a dispute between two pending petitions
+**CORRECTION 260820 — the arc uses the whole-Territory route, not the subdivision route.**
+Early drafting (this file, nrs-027 v1) mistakenly had the interior petitioning under the
+subdivision clause, excluding the lake corridor. That was never the intent — John's original
+framing was explicitly "the whole of the territory becomes a State instead of the split," and
+the whole-Territory citizen petition is what actually delivers that. nrs-027 and news-061 were
+both corrected. **The petition now certified covers all of Korda, corridor included** — the
+interior organized and signed it, but its stated scope is the whole Territory, not a carve-out
+that excludes the very portion currently trying to leave.
+
+**OPEN QUESTION, SHARPER THAN FIRST FRAMED (260819, John's original catch; refined 260820):**
+the question is no longer "do two self-declared boundaries happen to overlap." It is starker:
+**does "the whole Territory" count as a "different defined portion" from "just the corridor"
+at all**, when the whole-Territory claim doesn't merely overlap the corridor's claim but
+entirely encompasses it? §15.5.a(1) requires petitions "affecting different defined portions of
+the same Territory" — a textualist could argue "the whole" isn't a *portion* in the sense the
+provision means (distinct, non-overlapping pieces), while a purposivist could argue the whole
+plainly qualifies since the two claims are directly incompatible outcomes for the same ground,
+which is exactly what (1) exists to catch. **This is the live thread for the eventual SC suit**
+— see "PLANNED — SC suit" below. §4.5's enumerated original jurisdiction doesn't obviously cover
 (neither party is a State yet). The closest fit is a challenge to the Elections Panel's own
 certification as a constitutionally independent institution — arguable, not automatic. Do not
 resolve this thread until/unless a beat actually needs to.
@@ -110,20 +120,24 @@ The grievance was manufactured by the existing structure, not by us.
   care; do not open casually.**
 - **Varda Crossing** — the incursion site borders Korda. Established, live, unresolved.
 
-## ARC STARTED 260819 — first beats published
+## ARC STARTED 260819 — first beats published (corrected 260820)
 
-- **nrs-027**: Elections Panel certification of the inland petition under §15.2(1). Deliberately
-  does not assert the two petitions' boundaries are non-overlapping or independent — that
-  ambiguity stays open, per the note above.
+- **nrs-027**: Elections Panel certification of a whole-Territory petition under §15.2(1) —
+  corridor included, not carved out. Corrected 260820 from an earlier draft that mistakenly
+  used the subdivision clause instead.
 - **news-061** ("Certified," The Korda Press, Mara Iset): the paper's inaugural piece. Ground-
-  level, no mechanism explanation, no mention of §15.5.a or the Convention. A corridor organizer
-  is quoted dismissively ("nothing about the lake side changes because of a stack of paper in
-  Adren") — this is the "will never fly" attitude, planted now for later payoff once someone
-  points out that certification alone may already have triggered §15.5.a(1).
+  level, no mechanism explanation, no mention of §15.5.a or the Convention. Reports plainly that
+  the petition covers the whole Territory, corridor included, while keeping individual signers'
+  own motivations local (roads, a hospital, a school district) rather than about Kelvant. A
+  corridor organizer is quoted dismissively — "a petition signed inland doesn't speak for people
+  who already cast their own" — reflecting that the corridor's objection is to being *claimed*
+  by a petition it didn't sign, not to being ignored by an unrelated one. This is the "will never
+  fly" attitude, planted now for later payoff once someone points out that certification alone
+  may already have triggered §15.5.a(1).
 - New named character: **Bern Calloway**, grain operation forty minutes north of Adren, signed
   in person rather than via NVS. Motivated by roads/infrastructure grievance, not by anything
-  about Kelvant or the corridor — consistent with the "local stakes, not connect-the-dots"
-  storytelling rule agreed 260819.
+  about Kelvant — consistent with the "local stakes, not connect-the-dots" storytelling rule
+  agreed 260819. His own reason for signing is unaffected by the whole-Territory correction.
 
 ## STORYTELLING RULE (agreed 260819, John — applies to this whole arc)
 
@@ -139,10 +153,12 @@ one reporter's attributed, arguable opinion — never as settled narrative fact.
 Once the inland petition "flies" (i.e., someone — JMC, Civic Consul, or a reporter — points out
 that §15.5.a(1) already applies and the Day 8 referendum cannot proceed as scheduled), the
 corridor's original petitioners, joined by Kelvant business interests who backed the merger,
-sue the SC. **Likely strongest argument: the two petitions' boundaries aren't genuinely "different
-defined portions of the same Territory"** — reaching directly into the boundary ambiguity left
-open in nrs-027. Jurisdictional theory is itself contested (see "THE MECHANISM" section above);
-this is a feature, not a gap to resolve before writing it.
+sue the SC. **Likely strongest argument: "the whole Territory" isn't genuinely a "different
+defined portion" from "just the corridor,"** since the whole-Territory claim doesn't merely
+overlap the corridor's claim but entirely encompasses it — a textualist reading of "portion" as
+meaning a distinct, non-overlapping piece would exclude "the whole" from qualifying at all. See
+the sharpened open question in "THE MECHANISM" section above. Jurisdictional theory is itself
+contested; this is a feature, not a gap to resolve before writing it.
 
 **Lakeland Journal placeholder (John, 260819):** a few beats out, a Lakeland Journal piece
 (Kelvant's own outlet) should surface a fishery or shipping executive with concrete infrastructure

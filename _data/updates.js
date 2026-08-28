@@ -15,7 +15,7 @@ const updates = [
     category: "world",
     badge: "The World",
     title: "Certified",
-    blurb: "The inland districts' own statehood petition clears the Elections Panel — ten thousand signatures, none of them about the lake corridor. One corridor organizer says it changes nothing.",
+    blurb: "A statehood petition for the whole of Korda — corridor included — clears the Elections Panel. The people organizing it were thinking about roads, not the lake. The corridor wasn't asked.",
     href: "torenthia-news-061.html",
   },
   {
