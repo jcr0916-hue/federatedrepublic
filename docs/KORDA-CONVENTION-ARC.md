@@ -139,6 +139,15 @@ The grievance was manufactured by the existing structure, not by us.
   about Kelvant — consistent with the "local stakes, not connect-the-dots" storytelling rule
   agreed 260819. His own reason for signing is unaffected by the whole-Territory correction.
 
+- **nrs-028**: JMC procedural notice, filed same day. Acknowledges both petitions exist within
+  the relevant window and states the Council is "reviewing the relationship between the two"
+  before proceeding on either. Explicitly does not constitute a §15.5.a finding, does not touch
+  referendum scheduling, does not affect either petition's certified status. This is the
+  institution noticing without yet acting — consistent with the JMC being the body positioned to
+  know first (it administers the §15.2 audit and does the §15.5.a viability assessment), while
+  keeping the "will it actually trigger the Convention" question genuinely open rather than
+  resolved by this beat. No timeline given for when review concludes.
+
 ## STORYTELLING RULE (agreed 260819, John — applies to this whole arc)
 
 Events get reported straight. Quoted people may explain their own concrete stake in their own

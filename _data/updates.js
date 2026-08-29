@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Reviewing the relationship between the two",
+    blurb: "The Joint Monitor Council acknowledges both Korda petitions exist within the same window and says it's reviewing. No finding. No timeline. No word on the referendum.",
+    href: "torenthia-nrs-028.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Certified",
     blurb: "A statehood petition for the whole of Korda — corridor included — clears the Elections Panel. The people organizing it were thinking about roads, not the lake. The corridor wasn't asked.",
     href: "torenthia-news-061.html",
