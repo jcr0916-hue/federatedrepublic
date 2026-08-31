@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 169 provisions**
+> **20 articles · 170 provisions**
 
 thefederatedrepublic.org
 
@@ -1084,6 +1084,10 @@ Local governments — cities, counties, municipalities, and other subdivisions �
 (6) Stage Three requires a national referendum administered by the Elections Panel within 180 days of the Stage Two vote, in which all eligible voters of the Republic — including those of the petitioning State — participate; independence is approved by 60% of votes cast under §7.3 with a minimum 50% citizen participation. Where the referendum fails, the petition lapses and the State may reinitiate Stage One without restriction.
 
 (7) Upon certification of an affirmative Stage Three result, the State and the Legislature negotiate a separation agreement specifying asset and liability allocation, borders, transition timeline, fiscal obligations, and continuing obligations, ratified by the Senate by 2/3 of full seated membership and published to the NRS; independence takes effect on the date the agreement specifies.
+
+### §15.10 — State Government Incapacity
+
+Where a State's constitutional government has become incapable of exercising governmental authority and cannot be restored through its own constitutional continuity mechanisms, the Republic may temporarily administer only those functions necessary to preserve rights, essential services, and restoration of democratic State government. The State's constitutional identity and status remain unaffected. Temporary administration ends automatically when constitutional State government is restored. Procedures are established by statute.
 
 ---
 

@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 169 provisions**
+> **20 articles · 170 provisions**
 
 ---
 
@@ -28,7 +28,7 @@
 - **Article XII — Social State and Economic Rights**  ·  §12.1–§12.8  (13 provisions)
 - **Article XIII — Direct Democracy**  ·  §13.1–§13.2  (2 provisions)
 - **Article XIV — Military Authorization and Accountability**  ·  §14.1–§14.4  (4 provisions)
-- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.9  (11 provisions)
+- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.10  (12 provisions)
 - **Article XVI — Indigenous Sovereignty**  ·  §16.1–§16.5  (5 provisions)
 - **Article XVII — Constitutional Amendments**  ·  §17.1–§17.4  (4 provisions)
 - **Article XVIII — Federal Property and National Trust**  ·  §18.1–§18.5  (5 provisions)
@@ -1072,6 +1072,11 @@ Local governments — cities, counties, municipalities, and other subdivisions �
   - (5) Stage Two requires both chambers to hold a concurrent ratification vote within 90 days of NRS publication
   - if either chamber fails to achieve 60% or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
 - **Cross-refs:** §7.3
+
+### §15.10 — State Government Incapacity
+
+Where a State's constitutional government has become incapable of exercising governmental authority and cannot be restored through its own constitutional continuity mechanisms, the Republic may temporarily administer only those functions necessary to preserve rights, essential services, and restoration of democratic State government. The State's constitutional identity and status remain unaffected.
+
 
 ---
 

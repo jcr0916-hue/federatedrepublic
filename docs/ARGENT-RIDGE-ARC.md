@@ -83,7 +83,7 @@ world-canon.md: Norvane is the "newest-named state" and the "NORTHERN ARRIVAL ZO
 refugees crossing Lake Varda." The residential half of the Argent Ridge footprint is the
 only large buildable federal tract within reach of the arrival corridor. Norvane's
 delegation did not vote for a resort — they voted for somewhere to put people who are
-currently in a converted freight shed at Varenne with winter coming.
+currently in a converted freight shed with winter coming.
 This wires Argent Ridge directly into the live Varda thread and makes the deadlock
 genuinely tragic rather than merely obstructive: Varek would consent to §18.4 tomorrow,
 because Varek is river country. Norvane cannot, because Norvane has people.
@@ -131,6 +131,22 @@ arrival-corridor need all year — but a deliberate choice about where fourteen 
 state's capacity belonged. The eligibility ruling now stands unchallengeable through this route.
 Phase One proceeds. The §18.4 consent problem is untouched and unmentioned by anyone yet in-world;
 it remains the real fight, still ahead.
+
+**OPENED (news-063 + nrs-029, Y13 M10) — the §18.4 consent fight finally surfaces.** The
+Legislature approved a National Trust designation request by 2/3 vote of both chambers (nrs-029,
+dry procedural record) and forwarded it to Varek and Norvane for host State consent. news-063
+(Fenn) is the piece that finally states plainly what winning the repeal actually does and doesn't
+accomplish — repeal undoes the disposal statute; it does not itself protect the land, which
+requires this separate §18.4 designation. Neither State has responded as of this filing. No
+statutory deadline governs how long a State can take to decide.
+
+**Correction 260822:** earlier drafting (this file, news-060, news-063 draft) placed Norvane's
+refugee facility at "Varenne" — this is a real geographic error. Varenne Station is established
+world-canon.md as being in **Korda's** lake corridor, the southeast arrival zone. Norvane is the
+**northern** arrival zone, an entirely separate location with no established named facility yet.
+Fixed across all three; Norvane's facility is now referred to generically ("a converted freight
+shed," "the crossing intake") rather than given an invented name, consistent with the editorial
+rule that map/place detail follows coverage rather than getting ahead of the story.
 
 ## THE JURISDICTIONAL THRESHOLD BECAME THE STORY (Y13 M9, news-039 + news-040)
 

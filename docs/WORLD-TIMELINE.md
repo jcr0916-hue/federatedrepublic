@@ -4,27 +4,51 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260822, against 93 published entries (seq 1–93, contiguous, no gaps).*
+*Last verified: 260822, against 95 published entries (seq 1–95, contiguous, no gaps).*
+
+---
+
+## WHERE WE ARE
+
+**Current world date: Year 13, Month 11.** This is the furthest date reached by any published
+piece as of 260822. Some threads sit behind this (Argent Ridge, Thoss, Lake Varda, Toren River)
+because they run quieter or on their own clock — that's normal, not a gap by itself. Check the
+status board below for which threads are behind on purpose versus behind by neglect.
+
+## WHAT'S SCHEDULED — projected events already established in canon
+
+*Things that will happen at a specific future world-date whether or not a beat has been written
+covering them yet. This is the forward-looking half of this file — the status board below is
+backward-looking (where each thread left off). Both matter for deciding what's due.*
+
+| World Date | Event | Source |
+|---|---|---|
+| **Year 13, Month 12, Day 8** | Kelvant-Korda corridor referendum (§15.4). Currently still scheduled to proceed as-is — the JMC's procedural notice (nrs-028) has not yet made any finding that would stop it. | nrs-024 |
+| **Unscheduled** | Legat Consul election. §7.2 sets a 4-year cycle following the amendment, but no specific date has been set in canon yet. | news-058 |
+| **No clock at all** | §18.4 Trust designation consent, Argent Ridge parcel. Request filed to both host States (Varek, Norvane) as of Month 10 (nrs-029). No statutory deadline governs how long a State can take to respond — this could resolve in weeks or sit unanswered indefinitely. | nrs-029, news-063 |
+| **Uncertain — flagged, not calculated** | Argent Ridge Phase One signature-gathering window (up to 8 months) began once the eligibility challenge period closed unused, Year 13 Month 9 Day 12 (news-060). Eight months from that date lands past Month 12, meaning the deadline crosses into a following year — **this world's calendar has never established a year-transition convention** (only "Year 13" has ever been referenced). Do not invent "Year 14" confidently; confirm with John before a beat depends on it. |
+| **Not yet started** | Territory Convention 90-day clock (§15.5.a(4)) — only begins if/when the Convention actually convenes, which hasn't happened. The JMC is still reviewing (nrs-028); no clock is running yet. |
+| **No clock at all** | Fiscal Equalization formula reform. §12.8 only obligates a response to a *failure* finding, and none exists. This is genuinely open-ended — there is no deadline forcing the committee back into session, which is itself the story (news-062). |
 
 ---
 
 ## HOW TO USE THIS FILE
 
-**Before opening a new beat on an existing thread**, check its row below. If the "Last Touched"
-date is more than ~2 in-world months behind the current furthest date, that's a real signal —
-either the thread is intentionally dormant (noted), or it's been neglected and might be due
-for a check-in beat (exactly what caught the Fiscal Equalization gap on 260822).
+**Check "What's Scheduled" first** for anything with a real date attached — those take priority
+regardless of how long a thread has been quiet, since they're clocks already running.
+
+**Then check the status board** for threads without a hard date. If a thread's last-touched date
+is more than ~2 in-world months behind the current furthest date, that's a signal — either it's
+intentionally dormant (noted in its row) or it's been neglected and may be due for a check-in
+(exactly what caught the Fiscal Equalization gap on 260822).
 
 **Before inventing a new character**, check CHARACTER-REFERENCE.md first. The Kade/Sollis
 duplication (260822) happened because a new civics-teacher character was invented without
 checking whether one already existed. It did.
 
-**worldSeq is reading order, not necessarily world-time order.** Some arcs (Argent Ridge,
-Sollis's dispatch) run on their own internal clock and get published out of date-sequence
-relative to the main thread. Always check `worldDate` in addition to `worldSeq` before assuming
-recency.
-
----
+**worldSeq is reading/publication order, not world-time order.** Some arcs (Argent Ridge,
+Sollis's dispatch) run on their own internal clock and publish out of date-sequence relative to
+the main thread. Always check `worldDate` in addition to `worldSeq` before assuming recency.
 
 ## LIVE THREAD STATUS BOARD
 
@@ -36,7 +60,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | **Korda Convention arc** (competing petitions, JMC review) | 92 / 13.11 | **LIVE.** JMC reviewing relationship between §15.4 and §15.2 petitions. Convention not yet triggered. Next: Orin's Convention decision (once triggered), or someone forcing "this already applies" recognition. |
 | **LC Race** (Vael/Carrow/Mak/Sandris) | 87 / 13.10 | **LIVE.** State-plurality mechanics covered (news-058). No date set for the actual election. |
 | **Fiscal Equalization (§12.8)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
-| **Argent Ridge** (Norvane, §13.1/§18.4) | 89 / 13.09* | **LIVE, slow-burn by design.** Eligibility challenge window lapsed unused. Real fight (§18.4 Norvane consent) still ahead, not yet opened. *Runs on its own clock — published seq 89 but dated 13.09, same month as its own Month 9 events. |
+| **Argent Ridge** (Norvane, §13.1/§18.4) | 95 / 13.10 | **LIVE.** §18.4 Trust designation request now filed, forwarded to Varek and Norvane for host State consent (news-063, nrs-029). Neither State has responded; no statutory deadline governs the timing. Next: either State consenting/declining, or the repeal petition itself resolving first with the land still unprotected either way. |
 | **Thoss / Civic Consul standing** | 68 / 13.09 | **QUIET since Month 9.** Her position on the Korda Convention/whole-statehood question is explicitly unresolved (agreed 260821 — Claude has narrative control, no early reveal). Watch for a forcing moment: a vote on her own bill, Orin's Convention seating, or a direct question she can't fully dodge. |
 | **Lake Varda / Sunderland crisis** | 43 / 13.06 | **QUIET since Month 6.** No resolution published; also no active beat. Genuinely dormant rather than deliberately held — worth a decision on whether to revisit or let lapse into background color. |
 | **Toren River negotiation** | 32 / 13.05 | **QUIET since Month 5.** "Provisional formula agreement... one item remains" — the remaining item was never resolved on-page. Same status as Lake Varda: dormant, not deliberately held. |
@@ -97,7 +121,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 46 | 13.06 | News | Somebody Explain the Rate to Me | The Dorven Ledger |
 | 47 | 13.07 | News | The First Bill Out of the Crossing | The Torenthian |
 | 48 | 13.07 | News | The Office Nobody Is Running For | The Torenthian |
-| 49 | 13.07 | News | The Rhondel Ferry Timetable, Explained (Sort Of) | The Torenthian |
+| 49 | 13.07 | News | The Rhondel Ferry Timetable, Explained (Sort Of) | The Dorven Ledger |
 | 50 | 13.07 | NRS | Procedural Reference: Filling an Executive Vacancy | National Record System |
 | 51 | 13.07 | NRS | Statute Filed for Consular Review | National Record System |
 | 52 | 13.08 | News | The Ridge Nobody Calls Argent | The Torenthian |
@@ -142,6 +166,8 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 91 | 13.11 | News | Certified | The Korda Press |
 | 92 | 13.11 | NRS | JMC — Procedural Notice, Korda Territory Petitions | National Record System |
 | 93 | 13.11 | News | The Committee Has Not Met Since | RNN |
+| 94 | 13.10 | News | Winning Doesn't Fix It | The Torenthian |
+| 95 | 13.10 | NRS | Legislature — National Trust Designation Request, Argent Ridge Parcel | National Record System |
 
 ---
 

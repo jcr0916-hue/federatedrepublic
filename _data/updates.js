@@ -14,6 +14,20 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Winning doesn't fix it",
+    blurb: "The Argent Ridge repeal petition may well win. It was never going to save the land by itself — the reason sits with Norvane's own refugee crisis, not anything Varek has done.",
+    href: "torenthia-news-063.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
+    title: "The committee has not met since",
+    blurb: "Two months after the EM handed the fiscal equalization committee a widening gap and no obligation to act, it hasn't reconvened. Nothing required it to.",
+    href: "torenthia-news-062.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Reviewing the relationship between the two",
     blurb: "The Joint Monitor Council acknowledges both Korda petitions exist within the same window and says it's reviewing. No finding. No timeline. No word on the referendum.",
     href: "torenthia-nrs-028.html",
