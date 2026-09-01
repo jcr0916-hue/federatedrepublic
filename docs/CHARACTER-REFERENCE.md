@@ -89,6 +89,29 @@ do not confuse with the four above.
 
 ---
 
+## NAME-COLLISION WARNINGS (found in the 260831 audit — verify before writing)
+
+**Two unrelated people share the surname Fenn.** They have never appeared in the same piece,
+and "Senator Fenn" is currently unambiguous because only one is a senator — but this is a real
+trap for future beats:
+- **Aldous Fenn** — Senator, Caldenmere. Senate appointee to the Joint Committee on Fiscal
+  Equalization.
+- **Aleth Fenn** — journalist, The Torenthian, northern correspondent. Covers the Argent Ridge /
+  Norvane thread specifically.
+
+If both ever need to appear in the same piece, use full names throughout. Do not write a bare
+"Fenn" in any piece that touches both the fiscal committee and the northern beat.
+
+**Dara Voss changed outlets — this is intentional, not an error.** The Torenthian through
+Year 13 Month 6 (seq 38, 41), then RNN from Month 9 onward (seq 64, 70, 79, 88, 93). Clean
+chronological split with no reversions. **Do not "correct" this to a single outlet.** Contrast
+with the Corwin Hale case (news-037), which was a genuine one-off mis-attribution against five
+consistent pieces — that one was fixed 260822.
+
+**RNN pieces before seq 46 have no byline, by design.** Every RNN piece through news-043 is
+unattributed; Dara Voss appears from news-046 onward and is consistent thereafter. Reads as a
+correspondent joining the beat. Not a metadata gap to backfill.
+
 ## RECURRING OFFICIALS (non-candidate)
 
 | Name | Role |
