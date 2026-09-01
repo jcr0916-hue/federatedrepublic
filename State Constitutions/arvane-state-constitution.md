@@ -320,9 +320,9 @@ No person may simultaneously exercise the powers of more than one branch of Stat
 
 ### §4.3 Supreme Court Selection and Continuity
 
-(a) The Governor nominates a qualified person for each Supreme Court vacancy. A nominee takes office upon approval by a majority of electors voting statewide on the question at the next statewide election, or at a special statewide election as provided by law.
+(a) The Governor shall nominate a qualified person for each Supreme Court vacancy within ninety days after the vacancy occurs. A nominee takes office upon approval by a majority of electors voting statewide on the question at the next statewide election, or at a special statewide election as provided by law.
 
-(b) Upon a vacancy, or when a seat otherwise lacks a qualified justice, the qualified judge of the highest inferior court with the longest continuous judicial service automatically serves as Acting Justice until a permanent justice qualifies. Equal continuous service is resolved by age, with the older judge serving. If more than one Acting Justice is required, the same order applies successively.
+(b) Upon a vacancy, or when a seat otherwise lacks a qualified justice, the qualified judge of the highest inferior court designated by law with the longest continuous judicial service automatically serves as Acting Justice until a permanent justice qualifies. If no highest inferior court has been designated by law, the qualified inferior-court judge in the State with the longest continuous judicial service serves. Equal continuous service is resolved by age, with the older judge serving. If more than one Acting Justice is required, the same order applies successively.
 
 (c) An Acting Justice retains the underlying judicial office, but exercise of its powers and duties is suspended during service on the Supreme Court.
 
