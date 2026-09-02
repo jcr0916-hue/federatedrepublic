@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Somebody still has to print the ballots",
+    blurb: "The corridor referendum is four weeks out. Whether it is legally still happening is unresolved — and the Elections Panel doesn't have the option of waiting to find out.",
+    href: "torenthia-news-064.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Winning doesn't fix it",
     blurb: "The Argent Ridge repeal petition may well win. It was never going to save the land by itself — the reason sits with Norvane's own refugee crisis, not anything Varek has done.",
     href: "torenthia-news-063.html",

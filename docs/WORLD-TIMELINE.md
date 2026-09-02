@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260822, against 95 published entries (seq 1–95, contiguous, no gaps).*
+*Last verified: 260831, against 96 published entries (seq 1–96, contiguous, no gaps).*
 
 ---
 
@@ -23,7 +23,7 @@ backward-looking (where each thread left off). Both matter for deciding what's d
 
 | World Date | Event | Source |
 |---|---|---|
-| **Year 13, Month 12, Day 8** | Kelvant-Korda corridor referendum (§15.4). Currently still scheduled to proceed as-is — the JMC's procedural notice (nrs-028) has not yet made any finding that would stop it. | nrs-024 |
+| **Year 13, Month 12, Day 8** | Kelvant-Korda corridor referendum (§15.4). ~4 weeks out as of Month 11. Elections Panel is actively preparing (ballot stock, polling places, voter rolls) on its unwithdrawn Month 10 certification. §15.5.a(1) arguably already stopped it on certification alone, but no finding has issued and nothing requires anyone to announce one. | nrs-024, news-064 |
 | **Unscheduled** | Legat Consul election. §7.2 sets a 4-year cycle following the amendment, but no specific date has been set in canon yet. | news-058 |
 | **No clock at all** | §18.4 Trust designation consent, Argent Ridge parcel. Request filed to both host States (Varek, Norvane) as of Month 10 (nrs-029). No statutory deadline governs how long a State can take to respond — this could resolve in weeks or sit unanswered indefinitely. | nrs-029, news-063 |
 | **Uncertain — flagged, not calculated** | Argent Ridge Phase One signature-gathering window (up to 8 months) began once the eligibility challenge period closed unused, Year 13 Month 9 Day 12 (news-060). Eight months from that date lands past Month 12, meaning the deadline crosses into a following year — **this world's calendar has never established a year-transition convention** (only "Year 13" has ever been referenced). Do not invent "Year 14" confidently; confirm with John before a beat depends on it. |
@@ -57,7 +57,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 
 | Thread | Last Touched (Seq / Date) | Status |
 |---|---|---|
-| **Korda Convention arc** (competing petitions, JMC review) | 92 / 13.11 | **LIVE.** JMC reviewing relationship between §15.4 and §15.2 petitions. Convention not yet triggered. Next: Orin's Convention decision (once triggered), or someone forcing "this already applies" recognition. |
+| **Korda Convention arc** (competing petitions, JMC review) | 96 / 13.11 | **LIVE, clock running.** JMC still reviewing, no timeline given. news-064 surfaced the operational bind: the Elections Panel is preparing a Day 8 referendum that a plain reading of §15.5.a(1) says already cannot proceed, because no finding has been issued and its certification stands. Next: the JMC concluding, the Convention convening, or the referendum simply happening — the last of which Article XV has no mechanism to undo. |
 | **LC Race** (Vael/Carrow/Mak/Sandris) | 87 / 13.10 | **LIVE.** State-plurality mechanics covered (news-058). No date set for the actual election. |
 | **Fiscal Equalization (§12.8)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 95 / 13.10 | **LIVE.** §18.4 Trust designation request now filed, forwarded to Varek and Norvane for host State consent (news-063, nrs-029). Neither State has responded; no statutory deadline governs the timing. Next: either State consenting/declining, or the repeal petition itself resolving first with the land still unprotected either way. |
@@ -168,6 +168,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 93 | 13.11 | News | The Committee Has Not Met Since | RNN |
 | 94 | 13.10 | News | Winning Doesn't Fix It | The Torenthian |
 | 95 | 13.10 | NRS | Legislature — National Trust Designation Request, Argent Ridge Parcel | National Record System |
+| 96 | 13.11 | News | Somebody Still Has to Print the Ballots | The Torenthian |
 
 ---
 

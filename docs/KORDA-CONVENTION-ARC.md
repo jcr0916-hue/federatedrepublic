@@ -148,6 +148,15 @@ The grievance was manufactured by the existing structure, not by us.
   keeping the "will it actually trigger the Convention" question genuinely open rather than
   resolved by this beat. No timeline given for when review concludes.
 
+- **news-064** ("Somebody Still Has to Print the Ballots," The Torenthian, Vend, Y13 M11):
+  the operational bind made explicit. The Elections Panel is preparing the Day 8 referendum —
+  ballot stock, polling places, voter rolls — on a Month 10 certification that has never been
+  withdrawn, while §15.5.a(1) arguably stopped the vote the moment the second petition certified.
+  The Panel's written statement is the piece's center: every sentence true, none of them able to
+  answer the question. Establishes the genuinely uncomfortable possibility that **nobody stops it
+  and it simply happens** — Article XV has no mechanism to un-hold a referendum already held.
+  Also confirms the JMC declined to say whether its review concludes before Day 8.
+
 ## STORYTELLING RULE (agreed 260819, John — applies to this whole arc)
 
 Events get reported straight. Quoted people may explain their own concrete stake in their own
