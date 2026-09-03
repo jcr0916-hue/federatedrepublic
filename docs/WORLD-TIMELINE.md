@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260831, against 96 published entries (seq 1–96, contiguous, no gaps).*
+*Last verified: 260901, against 97 published entries (seq 1–97, contiguous, no gaps).*
 
 ---
 
@@ -28,6 +28,7 @@ backward-looking (where each thread left off). Both matter for deciding what's d
 | **No clock at all** | §18.4 Trust designation consent, Argent Ridge parcel. Request filed to both host States (Varek, Norvane) as of Month 10 (nrs-029). No statutory deadline governs how long a State can take to respond — this could resolve in weeks or sit unanswered indefinitely. | nrs-029, news-063 |
 | **Uncertain — flagged, not calculated** | Argent Ridge Phase One signature-gathering window (up to 8 months) began once the eligibility challenge period closed unused, Year 13 Month 9 Day 12 (news-060). Eight months from that date lands past Month 12, meaning the deadline crosses into a following year — **this world's calendar has never established a year-transition convention** (only "Year 13" has ever been referenced). Do not invent "Year 14" confidently; confirm with John before a beat depends on it. |
 | **Not yet started** | Territory Convention 90-day clock (§15.5.a(4)) — only begins if/when the Convention actually convenes, which hasn't happened. The JMC is still reviewing (nrs-028); no clock is running yet. |
+| **No clock at all** | §10.2 redaction petition on the Varda Crossing summary (nrs-030). Filed Month 11 Day 19. The Directorate has not responded and no hearing date is set; §10.2 sets no deadline for either. | nrs-030 |
 | **No clock at all** | Fiscal Equalization formula reform. §12.8 only obligates a response to a *failure* finding, and none exists. This is genuinely open-ended — there is no deadline forcing the committee back into session, which is itself the story (news-062). |
 
 ---
@@ -62,7 +63,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | **Fiscal Equalization (§12.8)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 95 / 13.10 | **LIVE.** §18.4 Trust designation request now filed, forwarded to Varek and Norvane for host State consent (news-063, nrs-029). Neither State has responded; no statutory deadline governs the timing. Next: either State consenting/declining, or the repeal petition itself resolving first with the land still unprotected either way. |
 | **Thoss / Civic Consul standing** | 68 / 13.09 | **QUIET since Month 9.** Her position on the Korda Convention/whole-statehood question is explicitly unresolved (agreed 260821 — Claude has narrative control, no early reveal). Watch for a forcing moment: a vote on her own bill, Orin's Convention seating, or a direct question she can't fully dodge. |
-| **Lake Varda / Sunderland crisis** | 43 / 13.06 | **QUIET since Month 6.** No resolution published; also no active beat. Genuinely dormant rather than deliberately held — worth a decision on whether to revisit or let lapse into background color. |
+| **Lake Varda / Sunderland crisis** | 97 / 13.11 | **REOPENED (260901).** Was dormant since Month 6 by neglect, not design — reopened via the §10.2 redaction petition (nrs-030) on the Varda Crossing intelligence summary, filed by the sister of one of the two killed border personnel. Directorate has not responded; no hearing set. This is the first time §10.2's redaction-petition mechanism (added in the Article X review) appears in world content. Next: the Directorate's response, or a court ruling on whether the source-protection ground still holds five months on. |
 | **Toren River negotiation** | 32 / 13.05 | **QUIET since Month 5.** "Provisional formula agreement... one item remains" — the remaining item was never resolved on-page. Same status as Lake Varda: dormant, not deliberately held. |
 | **Corindal Industrial Partners** | 33 / 13.03 | **DELIBERATELY HELD.** Long-game arc built around a future SC composition and future election cycles that haven't happened yet (per WORLD-THREADS-PENDING.md). Do not open early. |
 | **Maren Sollis's Corindal dispatch** | 11 / up to 13.05 internally | **LIVE, irregular.** Single accumulating file (torenthia-dispatch-sollis.html), not discrete pieces. Also now writes "Show Your Work" as a separate, more formal explainer blog (seq 71, 85) — same person, two registers. |
@@ -169,6 +170,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 94 | 13.10 | News | Winning Doesn't Fix It | The Torenthian |
 | 95 | 13.10 | NRS | Legislature — National Trust Designation Request, Argent Ridge Parcel | National Record System |
 | 96 | 13.11 | News | Somebody Still Has to Print the Ballots | The Torenthian |
+| 97 | 13.11 | NRS | Petition for Redacted Release — Varda Crossing Intelligence Summary | National Record System |
 
 ---
 

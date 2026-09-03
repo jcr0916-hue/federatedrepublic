@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Petition for redacted release",
+    blurb: "Five months after the Varda Crossing incursion, the sister of one of the two border personnel killed asks a court to unseal what was withheld. The Directorate said nothing would be withheld permanently.",
+    href: "torenthia-nrs-030.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Somebody still has to print the ballots",
     blurb: "The corridor referendum is four weeks out. Whether it is legally still happening is unresolved — and the Elections Panel doesn't have the option of waiting to find out.",
     href: "torenthia-news-064.html",
