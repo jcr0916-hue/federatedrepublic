@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260901, against 97 published entries (seq 1–97, contiguous, no gaps).*
+*Last verified: 260901, against 98 published entries (seq 1–98, contiguous, no gaps).*
 
 ---
 
@@ -65,6 +65,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | **Thoss / Civic Consul standing** | 68 / 13.09 | **QUIET since Month 9.** Her position on the Korda Convention/whole-statehood question is explicitly unresolved (agreed 260821 — Claude has narrative control, no early reveal). Watch for a forcing moment: a vote on her own bill, Orin's Convention seating, or a direct question she can't fully dodge. |
 | **Lake Varda / Sunderland crisis** | 97 / 13.11 | **REOPENED (260901).** Was dormant since Month 6 by neglect, not design — reopened via the §10.2 redaction petition (nrs-030) on the Varda Crossing intelligence summary, filed by the sister of one of the two killed border personnel. Directorate has not responded; no hearing set. This is the first time §10.2's redaction-petition mechanism (added in the Article X review) appears in world content. Next: the Directorate's response, or a court ruling on whether the source-protection ground still holds five months on. |
 | **Toren River negotiation** | 32 / 13.05 | **QUIET since Month 5.** "Provisional formula agreement... one item remains" — the remaining item was never resolved on-page. Same status as Lake Varda: dormant, not deliberately held. |
+| **Supreme Court composition** | 98 / 13.11 | **INTRODUCED.** All nine justices named in sc-001 (Y13 M3); profiled in news-065 ahead of any Korda filing. Pivotal voice: **Pael Doran**, whose *Corindal* dissent refused the merits while a threshold question was unresolved — directly relevant to the §15.5.a(1) question. Court gives no interviews; all contact routes through the clerk. See CHARACTER-REFERENCE.md for the full roster and what is/isn't established. |
 | **Corindal Industrial Partners** | 33 / 13.03 | **DELIBERATELY HELD.** Long-game arc built around a future SC composition and future election cycles that haven't happened yet (per WORLD-THREADS-PENDING.md). Do not open early. |
 | **Maren Sollis's Corindal dispatch** | 11 / up to 13.05 internally | **LIVE, irregular.** Single accumulating file (torenthia-dispatch-sollis.html), not discrete pieces. Also now writes "Show Your Work" as a separate, more formal explainer blog (seq 71, 85) — same person, two registers. |
 
@@ -171,6 +172,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 95 | 13.10 | NRS | Legislature — National Trust Designation Request, Argent Ridge Parcel | National Record System |
 | 96 | 13.11 | News | Somebody Still Has to Print the Ballots | The Torenthian |
 | 97 | 13.11 | NRS | Petition for Redacted Release — Varda Crossing Intelligence Summary | National Record System |
+| 98 | 13.11 | News | Nine People, One Public Question, and Almost No Public Record | The Torenthian |
 
 ---
 

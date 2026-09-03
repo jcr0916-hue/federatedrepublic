@@ -89,6 +89,38 @@ do not confuse with the four above.
 
 ---
 
+## THE SUPREME COURT — nine justices (§4.3: three staggered classes, single non-renewable 12-year terms)
+
+Established in `torenthia-sc-001.html` (*Corindal Industrial Partners v. NRS Panel*, decided
+Y13 M3, 7–2) and profiled in news-065. **That one case is the entire substantial public record
+of this Court** — be careful about characterizing any justice beyond what it actually shows.
+
+| Justice | Position in *Corindal* | What the record shows |
+|---|---|---|
+| **Ola Vrentis** | Wrote the majority | Textualist. §10.1 says what it says; the Court doesn't read in exceptions the drafters omitted. Opinion is deliberately narrow — declines invitations to say more than the question required. |
+| **Pael Doran** | Wrote the dissent | **The pivotal voice for the Korda case.** Agreed with the majority on §10.1's text, but refused to reach the merits while a *threshold* question sat unanswered underneath — whether the EM was authorized to publish at all under §9.1.b. Would have remanded, and said explicitly he'd join the majority if the threshold resolved the other way. Quote on record: "An act that exceeds the constitutional mandate is not a constitutional act in the relevant sense." |
+| **Careth** | Joined Doran's dissent | No separate writing. First name not established — do not invent one. |
+| **Aldren, Corse, Halvath, Imen, Mevra, Norven** | Joined Vrentis's majority | Six joiners, none wrote separately. First names not established for any — **do not invent them.** |
+
+**Majority arithmetic (verified):** Vrentis authored + 6 joiners = 7. Doran + Careth = 2. Total 9.
+An early draft of news-065 miscounted this as "seven joined"; corrected before publication.
+
+**Why Doran matters for Korda:** the §15.5.a(1) question — whether two certifications inside 90
+days already triggered the Convention mechanism, and whether "the whole Territory" counts as a
+"different defined portion" from a piece of it — is a threshold question almost entirely. Doran's
+published instinct is to refuse the merits until the threshold is settled. news-065 raises this
+while explicitly cautioning that one dissent in one records case does not predict a vote on
+territorial procedure.
+
+**The Court gives no interviews.** No appearances, no explanatory statements, no clarifying
+remarks. All nine chambers respond through the Court's clerk with a standard refusal. This is
+established in news-065 and should stay consistent — a justice speaking publicly would be a
+significant departure, not a casual beat.
+
+**Seat openings:** §4.3's staggered classes mean seats open predictably. When one does, the
+Judicial Pool / §9.8 nomination process is the route, and Herbert Sole is already seeded as a
+future candidate (see Korda arc file).
+
 ## NAME-COLLISION WARNINGS (found in the 260831 audit — verify before writing)
 
 **Two unrelated people share the surname Fenn.** They have never appeared in the same piece,

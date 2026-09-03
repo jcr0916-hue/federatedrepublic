@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Nine people, one public question, and almost no public record",
+    blurb: "If Korda reaches the Supreme Court, nine justices decide what 'different defined portions' means. Most citizens can't name three of them. One dissent may matter more than the rest.",
+    href: "torenthia-news-065.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Petition for redacted release",
     blurb: "Five months after the Varda Crossing incursion, the sister of one of the two border personnel killed asks a court to unseal what was withheld. The Directorate said nothing would be withheld permanently.",
     href: "torenthia-nrs-030.html",
