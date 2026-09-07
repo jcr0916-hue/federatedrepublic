@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 170 provisions**
+> **20 articles · 172 provisions**
 
 ---
 
@@ -15,7 +15,7 @@
 
 - **Preamble**
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.25  (27 provisions)
-- **Article II — The Dual Executive**  ·  §2.1–§2.17  (22 provisions)
+- **Article II — The Dual Executive**  ·  §2.1–§2.18  (23 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.13  (14 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (3 provisions)
@@ -27,7 +27,7 @@
 - **Article XI — NRS Panel and Elections Panel**  ·  §11.1–§11.3  (3 provisions)
 - **Article XII — Social State and Economic Rights**  ·  §12.1–§12.8  (13 provisions)
 - **Article XIII — Direct Democracy**  ·  §13.1–§13.2  (2 provisions)
-- **Article XIV — Military Authorization and Accountability**  ·  §14.1–§14.4  (4 provisions)
+- **Article XIV — Military Authorization and Accountability**  ·  §14.1–§14.5  (5 provisions)
 - **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.10  (12 provisions)
 - **Article XVI — Indigenous Sovereignty**  ·  §16.1–§16.5  (5 provisions)
 - **Article XVII — Constitutional Amendments**  ·  §17.1–§17.4  (4 provisions)
@@ -365,6 +365,12 @@ The Civic Consul is responsible for the enforcement of federal law and sets gene
 During any period in which this Constitution bars a person from holding or seeking the office of Civic Consul or Legat Consul under a cooling-off requirement, that person may not serve in any other capacity within the executive branch, including as a minister, domain officer, or in an acting executive capacity. This section is the express exception to §7.4(9) for executive branch service; it does not bar service…
 
 - **Cross-refs:** §7.4
+
+### §2.18 — Domestic Insurrection
+
+Where armed insurrection against the constitutional order occurs within the Republic, both Consuls act within their respective domains and the Council of Ministers convenes and remains in session for the duration. Neither Consul may direct the other's domain.
+
+- **Cross-refs:** §14.2, §2.1, §2.5
 
 ---
 
@@ -983,6 +989,12 @@ Where an existing treaty requires military action, the Legat Consul may act imme
 - **Time limits:**
   - Where an existing treaty requires military action, the Legat Consul may act immediately and must notify both chambers and the Civic Consul within 12 hours, citing the specific treaty obligation triggered
 - **Cross-refs:** §14.1, §14.2, §14.3, §3.6
+
+### §14.5 — State Forces
+
+A State may maintain organized forces for disaster response, civil emergency, and the preservation of public order within the State. Such forces are subject to Article I and to the prohibitions of §14.1 in all circumstances.
+
+- **Cross-refs:** §14.1
 
 ---
 
