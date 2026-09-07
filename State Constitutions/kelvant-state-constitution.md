@@ -18,9 +18,9 @@ This Constitution binds Kelvant's government to the people of Kelvant. It is ado
 
 ## ARTICLE I — DECLARATION OF RIGHTS
 
-### §1.1 Supremacy of the Federated Republic's Constitution
+### §1.1 Federal Rights Floor
 
-Nothing in this Article, or in this Constitution, may be construed to diminish, limit, or fall below any right guaranteed under Article I of the Federated Republic's Constitution. Where this Article is silent, the Republic's Constitution governs directly and of its own force. Where this Article speaks further than the Republic's Constitution, the greater protection applies within Kelvant. This Constitution is a floor beneath the Republic's floor, never a ceiling above it.
+The Constitution of the Federated Republic establishes the minimum rights secured throughout the Republic. Kelvant may secure greater protection, but never less. Where this Constitution provides greater protection, that greater protection governs within Kelvant to the extent consistent with federal constitutional law.
 
 ### §1.2 Inherent Rights
 
@@ -28,29 +28,33 @@ All persons within Kelvant are born free and equal, and possess inherent rights 
 
 ### §1.3 Equality Before the Law
 
-No law of this State, and no act of any State or local officer, may discriminate against any person on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status, consistent with §1.6 of the Federated Republic Constitution.
+No law of this State, and no act of any State or local officer, may discriminate against any person contrary to the equality and non-discrimination guarantees of the Constitution of the Federated Republic.
 
 ### §1.4 Freedom of Expression, Assembly, and the Press
 
-The rights of expression, thought, conscience, religion, assembly, petition, and a free press within Kelvant are coextensive with §1.5 of the Federated Republic Constitution and may not be further restricted by State or local law.
+The rights of expression, thought, conscience, religion, assembly, petition, and a free press are secured throughout Kelvant and may not be restricted below the federal constitutional floor.
 
 ### §1.5 Right to Bear Arms and the State Militia
 
-(a) Every person holds the right to keep and bear arms for lawful purposes including self-defense, consistent with §1.10 of the Federated Republic Constitution. The State may establish licensing and safety frameworks, provided that lawful ownership for self-defense remains available to every citizen and legal resident.
+(a) Every person holds the right to keep and bear arms for lawful purposes including self-defense, subject to lawful licensing and safety frameworks consistent with the Constitution of the Federated Republic.
 
-(b) A well-regulated militia being necessary to the security of a free state, the people of Kelvant retain the right to organize, maintain, and serve in a State Militia. The Legislature shall provide by statute for the organization, discipline, equipment, and activation of the Militia. The Governor is Commander-in-Chief of the State Militia except when it is called into the service of the Federated Republic.
+(b) A well-regulated militia being necessary to the security of a free state, Kelvant may organize and maintain a State Militia. The Legislature shall provide by law for its organization, discipline, equipment, training, funding, and activation. The State Militia is at all times subordinate to civil authority.
+
+(c) The Governor is Commander-in-Chief of the State Militia except while any part thereof is lawfully called into the service of the Federated Republic pursuant to the Constitution of the Federated Republic.
+
+(d) Private organization or membership does not independently confer authority to enforce law or exercise governmental power absent lawful activation or authorization.
 
 ### §1.6 Searches and Seizures
 
-No person, home, or place of business within Kelvant may be searched, and no person or property may be seized, without a warrant issued upon specific, articulable grounds by an independent Kelvant court, except as the Federated Republic Constitution otherwise provides. The right of the people to be secure in their persons, houses, papers, effects, and data against unreasonable searches and seizures shall not be violated.
+No person, home, place of business, communication, data, or property may be searched, surveilled, collected, or seized without prior independent judicial authorization based on specific, articulable grounds, except where immediate necessity or another constitutionally sufficient circumstance makes prior authorization impracticable. Any exception shall be narrowly construed and subject to prompt judicial review.
 
 ### §1.7 Due Process and Access to Courts
 
-No person may be deprived of life, liberty, or property without due process of law. Every person has the right to seek remedy for injury before an independent and impartial Kelvant court, consistent with §1.1 of the Federated Republic Constitution. Where a person cannot afford counsel in a criminal matter or a civil matter affecting liberty or subsistence, the court shall appoint counsel at public expense.
+No person may be deprived of life, liberty, or property without due process of law. Every person has the right to seek remedy before an independent and impartial Kelvant court. Where a person cannot afford counsel in a criminal matter or a civil matter affecting liberty or subsistence, the court shall appoint counsel at public expense.
 
 ### §1.8 Rights of the Accused
 
-In all criminal prosecutions, the accused shall have the right to a speedy and public trial by an impartial jury of the county; to be informed of the nature and cause of the accusation; to be confronted with the witnesses against them; to have compulsory process for obtaining witnesses in their favor; and to have the assistance of counsel for their defense, consistent with §1.12 and §1.13 of the Federated Republic Constitution.
+In all criminal prosecutions, the accused shall have the right to a speedy and public trial by an impartial jury drawn from the lawful venue; to be informed of the nature and cause of the accusation; to confront witnesses; to compulsory process for obtaining witnesses; and to the assistance of counsel. Venue may be transferred as provided by law where necessary to secure a fair and impartial trial.
 
 ### §1.9 Freedom from Excessive Punishment
 
@@ -58,11 +62,11 @@ Excessive bail shall not be required, nor excessive fines imposed, nor cruel or 
 
 ### §1.10 Property Rights and Just Compensation
 
-Private property may not be taken for public use without just compensation, determined by a process independent of the taking authority, consistent with §1.8 of the Federated Republic Constitution.
+Private property may not be taken for public use without just compensation determined by a process independent of the taking authority.
 
 ### §1.11 Freedom of Contract and Commerce
 
-The right to enter into lawful contracts, to engage in trade, and to pursue a lawful business or profession is protected. The State may regulate commerce for the public health, safety, and welfare, but may not impose a burden on out-of-state goods, services, or persons greater than that imposed on its own, consistent with §12.7 of the Federated Republic Constitution.
+The right to enter into lawful contracts, to engage in trade, and to pursue a lawful business or profession is protected. The State may regulate commerce for public health, safety, and welfare, but may not discriminate against goods, services, or persons of another State or Territory contrary to the Constitution of the Federated Republic.
 
 ### §1.12 Labor Rights
 
@@ -70,11 +74,11 @@ Every worker in Kelvant holds the right to organize, to bargain collectively thr
 
 ### §1.13 Right of Local Petition
 
-Every resident of a municipality or county holds the right to petition their local governing body directly and to receive a public response within sixty days.
+Every resident of a municipality or county holds the right to petition the local governing body directly and to receive, within sixty days, a public response addressing the substance of the petition. The Legislature may provide reasonable procedures for repetitive, abusive, or substantially identical petitions, but may not burden the right itself.
 
-### §1.14 Non-Derogation
+### §1.14 Limitation and Derogation
 
-No right enumerated in this Article may be suspended, limited, or derogated except as, and to the extent that, Article I §1.19 of the Federated Republic Constitution permits derogation of the corresponding federal right, and never below the federal non-derogable floor of §1.19.a.
+Rights corresponding to rights secured by the Constitution of the Federated Republic may be limited or derogated only to the extent that Constitution permits and never below its non-derogable floor. Rights secured independently or more broadly by this Constitution may be limited only by law for a legitimate constitutional purpose, where reasonably necessary and consistent with this Constitution.
 
 ---
 
@@ -86,11 +90,11 @@ The executive power of the State of Kelvant is vested in the Governor.
 
 ### §2.2 Election and Term
 
-(a) The Governor is elected by the qualified electors of the State at large for a term of four years, by ranked-choice ballot administered consistent with the National Voting System standards under Article XI of the Federated Republic Constitution.
+(a) The Governor is elected by the qualified electors of the State at large for a term of four years by ranked-choice ballot administered consistent with federal election standards.
 
 (b) No person may serve more than two consecutive terms as Governor. After sitting out one full term, a former Governor may again seek the office.
 
-(c) To hold the office of Governor, a person must be a citizen of the Federated Republic, a resident of Kelvant for at least five years, and at least thirty years of age at the time of taking office. The Governor must meet the disclosure requirements established by §7.4 of the Federated Republic Constitution as applied to state office by statute.
+(c) To hold the office of Governor, a person must be a citizen of the Federated Republic, a resident of Kelvant for at least five years, and at least thirty years of age at the time of taking office, and shall satisfy lawful disclosure requirements applicable to State office.
 
 ### §2.3 Powers and Duties of the Governor
 
@@ -98,153 +102,135 @@ The Governor shall:
 
 (a) faithfully execute the laws of Kelvant;
 
-(b) serve as Commander-in-Chief of the State Militia, except when it is called into the service of the Federated Republic;
+(b) serve as Commander-in-Chief of the State Militia, subject to §1.5 and the Constitution of the Federated Republic;
 
 (c) appoint the heads of executive departments, with the advice and consent of the Senate;
 
-(d) appoint judges to fill vacancies, subject to confirmation as provided in Article IV;
+(d) appoint judges to fill vacancies, subject to Article IV;
 
-(e) grant reprieves, commutations, and pardons for offenses against the State, except in cases of impeachment, and subject to the same prohibition on self-clemency established in §2.12 of the Federated Republic Constitution;
+(e) grant reprieves, commutations, and pardons for offenses against the State, except in cases of impeachment, and may not grant self-clemency;
 
 (f) convene the Legislature in special session upon extraordinary occasions;
 
-(g) deliver to the Legislature information on the state of the State, and recommend measures the Governor considers necessary and expedient;
+(g) deliver to the Legislature information on the state of the State and recommend measures the Governor considers necessary and expedient;
 
-(h) represent Kelvant in relations with other States, with the federal government, and with local governments within Kelvant, subject always to the federal government's exclusive authority over foreign affairs, immigration, and matters reserved to it under the Republic's Constitution;
+(h) represent Kelvant in relations with other States, the federal government, and local governments, subject to the constitutional authority of the Federated Republic;
 
-(i) prepare and submit an annual proposed budget to the Legislature.
+(i) prepare and submit an annual proposed budget to the Legislature; and
+
+(j) declare a State emergency in response to natural disaster, civil emergency, infrastructure failure, or other grave threat as provided by law.
 
 ### §2.4 The Veto
 
-(a) Every bill passed by both houses of the Legislature shall be presented to the Governor. The Governor may sign the bill, in which case it becomes law; or may return it, with written objections, to the house in which it originated within ten business days of presentment.
+(a) Every bill passed by both houses shall be presented to the Governor. The Governor may sign the bill or return it with written objections to the house in which it originated within ten business days.
 
-(b) A bill returned by the Governor may become law only upon passage by a two-thirds vote of the members elected to each house.
+(b) A returned bill may become law upon repassage by two-thirds of the authorized membership of each house.
 
-(c) If the Governor neither signs nor returns a bill within ten business days of presentment, it becomes law without the Governor's signature, unless the Legislature by adjournment prevents its return, in which case it does not become law.
+(c) If the Governor neither signs nor returns a bill within ten business days, it becomes law without signature. If adjournment prevents physical return, the Governor may within the same period file the bill and written objections in the Kelvant State Record, and the bill shall be treated as returned.
 
-(d) The Governor may approve an appropriation bill in whole, or may veto one or more items of appropriation while approving the remainder. An item so vetoed may be restored only by a two-thirds vote of the members elected to each house.
+(d) The Governor may veto one or more items of appropriation while approving the remainder. A vetoed item may be restored by two-thirds of the authorized membership of each house.
 
 ### §2.5 Lieutenant Governor
 
-(a) A Lieutenant Governor shall be elected jointly with the Governor, on the same ticket and for the same term, by the qualified electors of the State.
+(a) A Lieutenant Governor shall be elected jointly with the Governor, on the same ticket and for the same term.
 
-(b) The Lieutenant Governor shall be President of the Senate and shall have no vote except to break a tie.
+(b) The Lieutenant Governor is President of the Senate and has no vote except to break a tie.
 
-(c) In the event of the death, resignation, removal, or incapacity of the Governor, the Lieutenant Governor shall become Governor for the remainder of the term.
+(c) Upon the death, resignation, removal, or permanent incapacity of the Governor, the Lieutenant Governor becomes Governor for the remainder of the term.
 
-(d) The Lieutenant Governor shall perform such other duties as the Governor may assign and as the Legislature may prescribe by law.
+(d) During temporary incapacity of the Governor, the Lieutenant Governor serves as Acting Governor until the incapacity ends.
+
+(e) While exercising the authority of Governor or Acting Governor, the Lieutenant Governor may not exercise the presidency or tie-breaking vote of the Senate; the President Pro Tempore shall preside.
 
 ### §2.6 Succession
 
-(a) If both the Governor and Lieutenant Governor are unable to serve, the President Pro Tempore of the Senate shall act as Governor until the disability is removed or a Governor is elected.
+(a) If both the Governor and Lieutenant Governor are unable to serve, the President Pro Tempore of the Senate shall act as Governor until the disability is removed or a successor assumes office. During such service, the President Pro Tempore may not exercise legislative voting or decisional authority.
 
-(b) The Legislature shall provide by law for further succession and for the determination of incapacity.
+(b) The Legislature shall provide by law for further succession and for the determination of temporary and permanent incapacity.
 
 ### §2.7 Executive Departments
 
-The Legislature shall organize the executive branch into departments and may create, consolidate, or abolish departments by law. The principal officer of each department shall be appointed by the Governor with the advice and consent of the Senate, and shall serve at the pleasure of the Governor unless otherwise provided by law.
+The Legislature shall organize the executive branch into departments and may create, consolidate, or abolish departments by law, but may not materially extinguish or transfer the core executive authority vested in the Governor by this Constitution. Department heads shall be appointed by the Governor with the advice and consent of the Senate and shall serve at the Governor's pleasure unless otherwise provided by law.
 
 ### §2.8 Removal
 
-The Governor, Lieutenant Governor, and other civil officers of the State may be removed from office through impeachment for cause. The Assembly has the sole power of impeachment by majority vote of members elected. The Senate has the sole power to try impeachments; conviction requires a two-thirds vote of members elected. Judgment upon conviction extends only to removal from office and disqualification from holding any office of honor, trust, or profit under this State; the party convicted remains liable to prosecution and punishment according to law.
+The Governor, Lieutenant Governor, and other civil officers of the State may be removed through impeachment for cause. The Assembly has the sole power of impeachment by majority of its authorized membership. The Senate has the sole power to try impeachments; conviction requires two-thirds of its authorized membership. Judgment extends only to removal and disqualification from State office; the convicted person remains liable to prosecution and punishment according to law.
+
+### §2.9 State Emergencies and Militia Activation
+
+(a) A State emergency declaration shall state its legal basis, nature, geographic scope, and duration and shall be published promptly to the Kelvant State Record. Duration, renewal, and termination shall be governed by law consistent with this Constitution.
+
+(b) The Legislature and courts remain operative during an emergency. No emergency declaration transfers legislative power to the Governor or suspends constitutional rights except as lawfully permitted by this Constitution and the Constitution of the Federated Republic.
+
+(c) A domestic activation of the State Militia shall identify its legal basis, purpose, geographic scope, and expected duration and shall be published promptly to the Kelvant State Record.
+
+(d) Activation alone does not confer ordinary police authority. Any domestic law-enforcement function of the Militia must be specifically authorized by law and remains subject to civilian command, constitutional rights, judicial review, and the federal duty of refusal applicable to unlawful orders.
+
+(e) The Governor may consent on behalf of Kelvant to a request by the Civic Consul for assistance of the State Militia within Kelvant under the Constitution of the Federated Republic, and may withdraw that consent as federal law permits. Federal call-up into federal service is governed exclusively by the Constitution of the Federated Republic.
 
 ---
 
 ## ARTICLE III — THE LEGISLATIVE BRANCH
 
-### §3.1 The Legislature
+### §3.1 The Legislature and Authorized Membership
 
-The legislative power of the State of Kelvant is vested in a Legislature consisting of two houses: a Senate and an Assembly.
+The legislative power of the State is vested in a Senate and an Assembly. For purposes of this Constitution, the authorized membership of a house means the total number of seats lawfully established for that house, whether filled or vacant, unless this Constitution expressly provides otherwise.
 
 ### §3.2 The Assembly
 
-(a) The Assembly consists of members elected from single-member districts of substantially equal population, apportioned following each federal census.
-
-(b) Members of the Assembly serve two-year terms.
-
-(c) The number of Assembly members shall be not fewer than sixty nor more than one hundred, as the Legislature provides by law.
-
-(d) To be eligible for the Assembly, a person must be a qualified elector of the district, at least twenty-one years of age, and a resident of the district for at least one year prior to election.
+The Assembly consists of not fewer than sixty nor more than one hundred members elected from single-member districts of substantially equal population. Members serve two-year terms. Eligibility requirements shall remain as provided by law consistent with this Constitution.
 
 ### §3.3 The Senate
 
-(a) The Senate consists of members elected from single-member districts, each Senate district comprising two contiguous Assembly districts.
-
-(b) Members of the Senate serve four-year staggered terms, with approximately half elected every two years.
-
-(c) To be eligible for the Senate, a person must be a qualified elector of the district, at least twenty-five years of age, and a resident of the district for at least one year prior to election.
+The Senate consists of members elected from single-member districts, each Senate district comprising two contiguous Assembly districts. Senators serve staggered four-year terms, with approximately half elected every two years. The Legislature shall maintain an Assembly size compatible with this district structure.
 
 ### §3.4 Apportionment and Districting
 
-(a) Following each federal census, the Legislature shall reapportion the Assembly and Senate districts to reflect population changes.
-
-(b) Districts shall be drawn consistent with the criteria established in §3.3 of the Federated Republic Constitution: population equality within reasonable tolerance, geographic contiguity, compliance with non-discrimination requirements, no intentional dilution of minority voting power, and reasonable compactness.
-
-(c) Districts may not be drawn using political affiliation, voting history, incumbent residence, or racial composition as a primary criterion.
-
-(d) The Legislature shall establish by law an independent redistricting process.
+Following each federal census, districts shall be reapportioned to reflect population change and comply with federal and State constitutional standards. The Legislature shall establish by law an independent commission or equivalent body, independent of the Legislature and Governor in the drawing and adoption of maps. Plans shall be public and subject to judicial review. Districts may not be drawn primarily to favor political affiliation, voting history, incumbency, or racial composition, and shall satisfy lawful equality, contiguity, minority-vote protection, and reasonable compactness requirements.
 
 ### §3.5 Sessions
 
-(a) The Legislature shall meet in regular session annually at such time as provided by law.
-
-(b) The Governor may convene the Legislature in special session by proclamation, specifying the purpose of the session. No business other than that specified may be transacted in a special session.
-
-(c) Either house may be convened by its presiding officer upon written request of a majority of its members.
+The Legislature shall meet annually as provided by law. The Governor may convene a special session by proclamation specifying its purpose, and either house may be convened by its presiding officer upon written request of a majority of its authorized membership.
 
 ### §3.6 Officers
 
-(a) The Assembly shall choose a Speaker from among its members and such other officers as it deems necessary.
-
-(b) The Lieutenant Governor is President of the Senate. The Senate shall choose a President Pro Tempore from among its members to preside in the absence of the Lieutenant Governor, and such other officers as it deems necessary.
+The Assembly shall choose a Speaker. The Lieutenant Governor is President of the Senate, subject to Article II. The Senate shall choose a President Pro Tempore and such other officers as it deems necessary.
 
 ### §3.7 Quorum and Rules
 
-(a) A majority of the members elected to each house constitutes a quorum to do business.
-
-(b) Each house shall determine its own rules of procedure, may compel the attendance of absent members, and may punish its members for disorderly conduct.
-
-(c) Each house may, with the concurrence of two-thirds of its members elected, expel a member.
+A majority of the authorized membership of each house constitutes a quorum. Each house determines its rules, may compel attendance, and may punish disorderly conduct. Expulsion requires two-thirds of the authorized membership of the house.
 
 ### §3.8 Legislative Process
 
-(a) Every bill must address a single subject, which shall be expressed in its title.
+(a) Every bill shall address a single subject expressed in its title.
 
-(b) No bill may become law until it has been printed and available to members and the public for at least three days before final passage, except in cases of emergency declared by a two-thirds vote of each house.
+(b) No bill may receive final passage until it has been available to members and the public for at least three days, except where two-thirds of the authorized membership of each house declares an emergency requiring earlier action.
 
 (c) Bills may originate in either house and may be amended by the other.
 
-(d) No law shall be enacted except by bill, and no bill shall become law unless it receives a majority of the votes of all members elected to each house, unless this Constitution requires a higher threshold.
+(d) No bill becomes law unless it receives a majority of the authorized membership of each house, unless this Constitution requires a higher threshold.
 
-(e) Every enacted law shall be published to the Kelvant State Record and, where the subject matter touches federal compliance obligations, cross-referenced to the National Record System consistent with §10.1 of the Federated Republic Constitution.
+(e) Every enacted law shall be published to the Kelvant State Record and interfaced with the National Record System where federal law requires.
 
 ### §3.9 Compensation
 
-Members of the Legislature shall receive such compensation as provided by law. No increase in compensation shall take effect until after the next general election following its enactment.
+Legislative compensation shall be set by law. No increase takes effect until after the next general election following enactment.
 
 ### §3.10 Privileges and Immunities
 
-Members of the Legislature shall be privileged from arrest during sessions and in going to and returning from the same, except for treason, felony, or breach of the peace. For any speech or debate in either house, they shall not be questioned in any other place.
+For speech or debate in either house, members shall not be questioned in any other place. No member holds immunity from criminal law. The Legislature may by law protect members from civil detention or process deliberately used to obstruct attendance or legislative service.
 
 ### §3.11 Conflicts of Interest
 
-(a) No member of the Legislature may vote on any matter in which they hold a direct and material financial interest that has not been disclosed.
-
-(b) The Legislature shall establish by law an independent ethics body with authority to investigate and sanction members, consistent with the disclosure principles of §12.4 of the Federated Republic Constitution.
+Members shall disclose direct and material financial interests. A member shall recuse where a direct material personal financial interest substantially impairs impartial judgment; an interest shared generally with a broad class does not alone require recusal. The Legislature shall establish an independent ethics body by law.
 
 ### §3.12 Limitations on Legislative Power
 
-The Legislature may not:
+The Legislature may not enact law contrary to either Constitution, grant titles of nobility, pass bills of attainder or ex post facto laws, or impair contractual obligations contrary to constitutional law. It may not transfer its essential lawmaking power, but may authorize administrative rulemaking within intelligible statutory standards.
 
-(a) enact any law that conflicts with or diminishes any right guaranteed by the Federated Republic Constitution;
+### §3.13 Militia and Sponsorship Frameworks
 
-(b) grant any title of nobility;
-
-(c) pass any bill of attainder or ex post facto law;
-
-(d) impair the obligation of contracts;
-
-(e) delegate to any single person or body the power to make laws.
+The Legislature shall establish by law the conditions, limits, organization, funding, and accountability governing the State Militia and the criteria, procedures, review, and recordkeeping governing State immigration sponsorship. Execution of those laws belongs to the executive branch.
 
 ---
 
@@ -252,87 +238,69 @@ The Legislature may not:
 
 ### §4.1 Judicial Power
 
-The judicial power of the State of Kelvant is vested in a Supreme Court, a Court of Appeals, Circuit Courts, and such other courts as the Legislature may establish by law, subject at all times to the original and appellate jurisdiction of the Supreme Court of the Federated Republic under §4.1 and §4.5 of the Federated Republic Constitution.
+The judicial power of Kelvant is vested in a Supreme Court, Court of Appeals, Circuit Courts, and such other courts as the Legislature establishes by law. Federal judicial authority applies as provided by the Constitution of the Federated Republic.
 
 ### §4.2 The Supreme Court
 
-(a) The Supreme Court consists of seven justices elected by the qualified electors of the State at large.
-
-(b) Justices serve ten-year terms and may be re-elected.
-
-(c) The justice with the longest continuous service on the Court serves as Chief Justice, unless the justices by majority vote select another from among their number.
-
-(d) The Supreme Court has appellate jurisdiction over all courts of the State and original jurisdiction in such cases as provided by law. Any constitutional question arising in a Kelvant proceeding may be referred to, or appealed to, the Supreme Court of the Federated Republic consistent with §4.5 of the Federated Republic Constitution.
+The Supreme Court consists of seven justices elected statewide for ten-year terms and eligible for re-election. The justice with the longest continuous service serves as Chief Justice unless the justices choose another by majority vote. The Court has appellate jurisdiction over State courts and original jurisdiction as provided by law.
 
 ### §4.3 Court of Appeals
 
-(a) The Court of Appeals consists of judges elected from appellate districts as provided by law.
-
-(b) Judges of the Court of Appeals serve six-year terms and may be re-elected.
-
-(c) The Court of Appeals has appellate jurisdiction as provided by law.
+The Court of Appeals consists of judges elected from appellate districts as provided by law. Judges serve six-year terms and may be re-elected. Jurisdiction is provided by law.
 
 ### §4.4 Circuit Courts
 
-(a) Circuit Courts are courts of general jurisdiction, with original jurisdiction in all civil and criminal matters except as otherwise provided by law.
+Circuit Courts are courts of general jurisdiction. Circuit judges are elected from circuits for six-year terms. The Legislature may organize circuits by law, but may not alter judicial districts for the purpose of affecting a particular judge, pending case, or electoral outcome.
 
-(b) Circuit Court judges are elected from circuits as provided by law and serve six-year terms.
+### §4.5 Judicial Qualifications and Elections
 
-(c) The Legislature shall organize the State into circuits and may create, consolidate, or abolish circuits by law.
+The Legislature shall establish objective minimum professional qualifications for judicial office, including legal authorization or bar standing and reasonable legal or judicial experience. Judicial elections shall be governed by laws requiring transparent campaign financing and meaningful recusal standards. No partisan or ideological loyalty test may be imposed as a condition of judicial candidacy.
 
-### §4.5 Judicial Vacancies
+### §4.6 Judicial Vacancies and Quorum Continuity
 
-(a) A vacancy in any judicial office shall be filled by appointment by the Governor, with the advice and consent of the Senate.
+(a) A judicial vacancy shall be filled by appointment by the Governor with the advice and consent of the Senate until a successor is elected at the next general election occurring more than sixty days after the vacancy and has qualified.
 
-(b) A judge so appointed shall serve until a successor is elected at the next general election occurring more than sixty days after the vacancy and has qualified.
+(b) If vacancies, incapacity, or recusals prevent the Supreme Court from achieving quorum, the senior eligible judges of the Court of Appeals, in order of continuous judicial service and as further provided by law, shall serve temporarily only so long as necessary to restore quorum. Temporary service creates no right or preference to permanent appointment or election.
 
-### §4.6 Judicial Independence
+### §4.7 Judicial Independence and Discipline
 
-(a) No public official may direct, threaten, or seek to influence the decision of any judge in a pending matter.
+No public official may direct, threaten, or seek to influence the decision of any judge in a pending matter. Judicial compensation may not be reduced during a term. Inferior judges may be disciplined or removed for cause through an independent process established by law, subject to appropriate judicial review. Supreme Court justices may be removed through impeachment and may also be subject to an independent conduct tribunal established by law; no justice may participate in adjudicating disciplinary charges against themselves.
 
-(b) Judicial compensation may not be reduced during a judge's term.
+### §4.8 Recognition of Judgments
 
-(c) Judges may be removed only for cause — misconduct, incapacity, or conviction of a disqualifying offense as defined by §3.12 of the Federated Republic Constitution — through impeachment under Article II, §2.8, or through a judicial discipline process established by the Supreme Court.
-
-### §4.7 Recognition of Judgments
-
-Judgments of Kelvant's courts are entitled to recognition throughout the Republic consistent with §4.6 of the Federated Republic Constitution, and Kelvant recognizes the judgments of every other State and Territory on the same terms.
+Kelvant shall recognize judgments of other States and Territories, and its judgments shall receive recognition throughout the Republic, as federal constitutional law requires.
 
 ---
 
 ## ARTICLE V — LOCAL GOVERNMENT
 
-### §5.1 Counties
+### §5.1 Counties and Municipalities
 
-(a) The State of Kelvant is divided into counties, which are bodies corporate and politic.
+Kelvant is divided into counties and may contain cities, villages, towns, and other municipalities as provided by law. Counties shall have elected governing bodies. The Legislature shall provide for local organization consistent with democratic accountability.
 
-(b) The Legislature shall provide by law for the organization, powers, and duties of counties.
+### §5.2 Home Rule
 
-(c) Each county shall have a county board elected by the qualified electors of the county, which shall be the legislative body of the county.
+A county or municipality may adopt a home-rule charter by majority vote of its qualified electors. A home-rule unit may exercise powers pertaining to its government and affairs. State law may limit home-rule authority by general law where uniform regulation is reasonably necessary to address a substantial statewide interest.
 
-### §5.2 Municipalities
+### §5.3 Protection from Fiscal Centralization
 
-(a) Cities, villages, and towns are municipal corporations with the powers granted by law and such additional powers as are consistent with the Constitution.
+The State may not systematically withhold fiscal support from local governments for the purpose of destroying meaningful local self-government or achieving de facto centralization. This section does not guarantee any local government a particular subsidy or funding level.
 
-(b) The Legislature shall provide by law for the incorporation, organization, and classification of municipalities.
+### §5.4 Local Petition
 
-### §5.3 Home Rule
+Each local governing body shall maintain a lawful process for receiving, recording, and answering petitions under §1.13 and shall publish substantive responses as provided by law and Article IX.
 
-(a) Any county or municipality may adopt a home-rule charter by majority vote of its qualified electors, establishing its own form of local government, provided the charter maintains democratic accountability and does not conflict with this Constitution or the Federated Republic Constitution.
+### §5.5 Dissolution and Consolidation
 
-(b) A home-rule unit may exercise any power and perform any function pertaining to its government and affairs, except as limited by this Constitution or by law.
+The dissolution or compulsory consolidation of an existing municipality requires general law and meaningful participation by the affected community and shall ordinarily require approval of affected voters. Law may provide a court-supervised exception for sustained fiscal or legal incapacity that makes continued independent government impracticable.
 
-### §5.4 Protection from Defunding
+### §5.6 Local Elections and Cooperation
 
-The State may not systematically withhold fiscal support from counties or municipalities for the purpose of centralizing State-level functions, consistent with §15.8 of the Federated Republic Constitution.
+Local elections shall comply with Article VI. Local governments may contract and cooperate with one another and with the State to provide services and exercise lawful powers.
 
-### §5.5 Local Elections
+### §5.7 Statewide Functions and Immigration Reception
 
-All local elections shall be conducted consistent with the election standards established in Article VI of this Constitution.
-
-### §5.6 Intergovernmental Cooperation
-
-Counties, municipalities, and other governmental units may contract with one another and with the State to provide services and exercise powers, as provided by law.
+The State may consult and coordinate with local governments concerning sponsorship capacity, settlement, reception, housing, schools, and services. Local governments may participate in implementation but hold no independent veto over State immigration sponsorship.
 
 ---
 
@@ -340,61 +308,55 @@ Counties, municipalities, and other governmental units may contract with one ano
 
 ### §6.1 Suffrage
 
-(a) Every citizen of the Federated Republic who is eighteen years of age or older and a resident of Kelvant is a qualified elector of this State.
-
-(b) The Legislature may by law establish reasonable residency requirements for voting in State and local elections, not to exceed thirty days.
-
-(c) No law, rule, or practice of this State may make voting more difficult, less accessible, or less secure, consistent with §1.9 of the Federated Republic Constitution.
+Every citizen of the Federated Republic who is eighteen years of age or older and a resident of Kelvant is a qualified elector, subject to reasonable residency requirements established by law not exceeding thirty days. No law, rule, or practice may impose an unreasonable burden on voting, materially reduce accessibility, or compromise election security or integrity.
 
 ### §6.2 Elections
 
-(a) All State elections shall be conducted using ranked-choice or majority-vote methods as the Legislature provides by law, and shall connect to and operate through the National Voting System established under Article XI of the Federated Republic Constitution.
-
-(b) General elections shall be held in even-numbered years at such time as provided by law.
-
-(c) The Legislature shall provide by law for the registration of electors and the conduct of elections.
+State elections shall use ranked-choice or other majority-producing methods as provided by law and shall operate consistently with the National Voting System and applicable federal standards. General elections shall be held in even-numbered years as provided by law.
 
 ### §6.3 State Election Commission
 
-The Legislature shall establish an independent State Election Commission to administer State and local elections within the standards set by the federal Elections Panel.
+The Legislature shall establish an independent State Election Commission with fixed terms and removal only for cause. The Commission shall be independent of the Governor and Legislature in counting, recounting, and certification. Major rules, final results, certifications, and recount determinations shall be published to the Kelvant State Record. Final certification disputes are subject to prompt judicial review.
 
 ### §6.4 Ballot Access
 
-The Legislature shall provide by law for reasonable and non-discriminatory procedures for candidates and political parties to access the ballot.
+The Legislature shall provide reasonable and nondiscriminatory procedures for candidates and political parties to access the ballot and shall preserve a meaningful route for independent candidacy.
+
+### §6.5 Status and Voting Eligibility
+
+Humanitarian reception, temporary assistance, submission of an immigration sponsorship application, or State sponsorship alone does not establish citizenship, legal residency, or voter eligibility. Voting eligibility is determined under this Article and federal law.
 
 ---
 
 ## ARTICLE VII — FINANCE AND TAXATION
 
-### §7.1 Taxing Power
+### §7.1 Taxing and Appropriations Power
 
-(a) The Legislature has the exclusive authority to levy State taxes, subject to §12.3 and §12.7 of the Federated Republic Constitution.
-
-(b) No tax may discriminate against goods, services, or persons of another State or Territory.
-
-(c) The rule of uniform taxation shall apply to all taxes, except as otherwise provided by this Constitution.
+The Legislature has exclusive authority to levy State taxes and make appropriations, subject to the Constitution of the Federated Republic. Taxes may not unlawfully discriminate against goods, services, or persons of another State or Territory.
 
 ### §7.2 The State Treasury
 
-All public money received by the State shall be deposited into the State Treasury and may be withdrawn only by appropriation made by law.
+All public money received by the State shall be deposited into the State Treasury and withdrawn only pursuant to lawful appropriation or a constitutionally permitted continuity mechanism.
 
-### §7.3 The Budget
+### §7.3 The Budget and Continuity
 
-(a) The Governor shall submit to the Legislature, at such time as provided by law, a proposed budget for the ensuing fiscal year.
-
-(b) The budget shall contain a complete plan of proposed expenditures and anticipated revenues.
-
-(c) No money shall be paid out of the State Treasury except pursuant to an appropriation made by law.
+The Governor shall submit an annual proposed budget containing anticipated revenues and proposed expenditures. If appropriations expire before replacement appropriations take effect, essential operations and existing legal obligations may continue temporarily, as provided by law, at no more than the corresponding lawful rate of the preceding fiscal year. No new program or material expansion may be initiated under this fallback.
 
 ### §7.4 State Debt
 
-(a) The State may not contract debt except as authorized by law for purposes and in amounts approved by the Legislature.
+State debt must be authorized by law and serve a public purpose. Long-term debt authorization shall disclose its principal terms and repayment source. Long-term borrowing may not be used as a continuing device to conceal recurring operating deficits. Further debt limits and procedures may be established by law.
 
-(b) The Legislature may by law establish limits on State indebtedness and provide for the management of State debt.
+### §7.5 Independent Audit
 
-### §7.5 Local Taxation
+The Legislature shall establish an independent financial and performance audit function with access to State accounts. Regular audit reports shall be published to the Kelvant State Record.
 
-Counties and municipalities retain independent taxing authority within their own jurisdictions, as provided by law and subject to the non-discrimination requirements of this Constitution.
+### §7.6 Local Taxation
+
+Local governments retain taxing authority as provided by law. State regulation of local taxation shall preserve lawful revenue capacity reasonably sufficient for assigned local functions and meaningful local self-government.
+
+### §7.7 Emergency Expenditure
+
+Law may authorize limited emergency expenditures necessary to protect life, safety, essential services, and continuity of government. Such expenditures shall be promptly recorded, subsequently audited, and may not substitute indefinitely for ordinary appropriations.
 
 ---
 
@@ -402,17 +364,15 @@ Counties and municipalities retain independent taxing authority within their own
 
 ### §8.1 Public Education
 
-(a) The State shall provide for the establishment and maintenance of a system of free public schools sufficient to give every child an education adequate to enable full civic participation, consistent with §1.17 of the Federated Republic Constitution.
-
-(b) The Legislature shall provide by law for the organization and governance of public schools.
+The State shall maintain free public schools sufficient to give every child an education adequate for full civic participation and shall provide substantially equitable access to educational opportunity throughout Kelvant. The Legislature shall provide by law for organization, governance, and funding and may preserve substantial local administration.
 
 ### §8.2 State Superintendent
 
-There shall be a State Superintendent of Public Instruction, elected by the qualified electors of the State, who shall supervise public instruction as provided by law.
+There shall be a State Superintendent of Public Instruction elected statewide. The Superintendent shall supervise public instruction, administer State education programs, and oversee compliance with education law independently of gubernatorial direction in individual educational decisions. Law may establish objective professional qualifications and procedures for vacancy and removal consistent with this Constitution.
 
 ### §8.3 Higher Education
 
-The State recognizes and supports its public institutions of higher learning and may provide funding, land, or other support to such institutions by law, provided that admission and public funding comply with §1.6 of the Federated Republic Constitution.
+Kelvant recognizes and supports public institutions of higher learning. Such institutions shall possess reasonable academic and institutional independence subject to law, public accountability, and constitutional equality requirements.
 
 ---
 
@@ -420,15 +380,23 @@ The State recognizes and supports its public institutions of higher learning and
 
 ### §9.1 Establishment
 
-The State shall maintain the Kelvant State Record as the permanent public record of State governmental action, equivalent in permanence and public accessibility to the National Record System established under Article X of the Federated Republic Constitution.
+The State shall maintain the Kelvant State Record as the permanent, publicly accessible, tamper-evident record of State governmental action, interoperable with the National Record System as federal law requires.
 
-### §9.2 Publication Requirement
+### §9.2 Required Publication
 
-Every State and local governmental act required to be published under this Constitution shall be entered into the Record as a permanent record. Records may not be deleted or altered after publication; corrections are entered as new records alongside the original.
+The Record shall contain, at minimum: enacted laws; executive orders and proclamations; veto objections; emergency declarations; militia activation orders; administrative rules; significant final administrative determinations; adopted budgets and appropriations; emergency expenditures; legislative proceedings and recorded votes; election results, certifications, and recount determinations; independent audit reports; and other governmental acts required by this Constitution or law. Immigration sponsorship rules and final sponsorship dispositions shall be recorded in a manner that preserves legally protected personal information.
 
-### §9.3 Federal Interface
+### §9.3 Integrity and Correction
 
-The Record shall maintain export protocols fully compatible with the National Record System, ensuring that all federally required disclosures are available to federal Monitors and auditors without delay or reformatting burden.
+Records may not be silently deleted, overwritten, or altered. Corrections, redactions, restorations, and technical migrations shall preserve an auditable history alongside the original record.
+
+### §9.4 Confidentiality
+
+Access may be restricted only as authorized by law and only to the extent reasonably necessary to protect individual privacy, public safety, or another compelling constitutional interest. Restrictions shall be narrowly tailored, no broader or longer than necessary, and subject to judicial review. The existence, legal authority, general purpose, scope, and duration of a militia activation shall be publicly recorded promptly even where genuinely sensitive operational details are temporarily withheld.
+
+### §9.5 Federal Interface
+
+The State Record shall maintain compatibility sufficient to satisfy all lawful federal disclosure, audit, and interoperability obligations without avoidable reformatting burden.
 
 ---
 
@@ -436,23 +404,19 @@ The Record shall maintain export protocols fully compatible with the National Re
 
 ### §10.1 Legislative Proposal
 
-An amendment to this Constitution may be proposed by a majority of the members elected to each house of the Legislature.
+An amendment may be proposed by a majority of the authorized membership of each house of the Legislature.
 
 ### §10.2 Ratification
 
-A proposed amendment takes effect upon ratification by a majority of the qualified electors voting on the question at the next general election.
+A proposed amendment takes effect upon ratification by a majority of qualified electors voting on the question at the next general election.
 
 ### §10.3 Constitutional Convention
 
-(a) The Legislature may, by a two-thirds vote of the members elected to each house, submit to the electors the question of whether a constitutional convention shall be called.
+The Legislature may, by two-thirds of the authorized membership of each house, submit to the electors the question of calling a constitutional convention. If approved by a majority voting on the question, delegates shall be elected and the convention convened as provided by law. Any revision proposed by a convention takes effect only upon ratification by a majority voting on the question.
 
-(b) If a majority of electors voting on the question approve, the Legislature shall provide by law for the election of delegates and the convening of the convention.
+### §10.4 Federal Consistency and Popular Authority
 
-(c) Any revision proposed by a convention shall take effect only upon ratification by a majority of the qualified electors voting on the question.
-
-### §10.4 Federal Consistency
-
-No amendment to this Constitution may take effect if it conflicts with, or purports to diminish, any right, structure, or requirement of the Federated Republic Constitution. Any such amendment is void to the extent of the conflict.
+No amendment may take effect to the extent it conflicts with the Constitution of the Federated Republic or any binding federal constitutional requirement applicable to the States. Subject to that limitation, no institution created by this Constitution is immune from amendment by the people of Kelvant through this Article.
 
 ---
 
@@ -460,23 +424,35 @@ No amendment to this Constitution may take effect if it conflicts with, or purpo
 
 ### §11.1 Oath of Office
 
-Every person elected or appointed to any office in this State shall, before entering upon the duties of the office, take and subscribe an oath or affirmation to support the Constitution of the Federated Republic and the Constitution of the State of Kelvant, and to faithfully discharge the duties of the office.
+Every person elected or appointed to State office shall take and subscribe an oath or affirmation to support the Constitution of the Federated Republic and this Constitution and faithfully discharge the duties of office. Failure or delay in administering the oath does not prevent constitutional succession or the automatic vesting of office where this Constitution otherwise provides, though the oath remains a mandatory duty before ordinary exercise of authority where practicable.
 
 ### §11.2 Official Records
 
-All official records of the State and its subdivisions are public records, except as otherwise provided by law for the protection of individual privacy or public safety, consistent with §1.8 of the Federated Republic Constitution.
+Official records are public except for narrow exemptions established by law consistent with Article IX, constitutional privacy, and public safety requirements.
 
 ### §11.3 Continuity of Government
 
-The Legislature shall provide by law for the continuity of State and local government in periods of emergency.
+The Legislature shall provide by law for continuity of State and local government during emergencies, including succession for essential offices, temporary relocation, continuity of courts and the Legislature, preservation of records, emergency communications, temporary acting authority, and restoration of ordinary constitutional procedures as soon as practicable. No continuity law may abolish courts, transfer permanent constitutional authority, indefinitely extend elective terms, or suspend a constitutionally scheduled election except to the extent expressly permitted by controlling federal constitutional law.
 
 ### §11.4 Non-Confusion of Offices
 
-No State office shall bear a title that creates confusion with a federal constitutional office. Where a State office shares a name with a federal office, official records shall clearly distinguish between them.
+No State office shall bear a title that creates confusion with a federal constitutional office. Where a State office shares a name with a federal office, official records shall clearly distinguish them.
 
 ### §11.5 Seat of Government
 
-The seat of government of the State of Kelvant is the City of Rhondel, unless otherwise provided by law enacted by a two-thirds vote of each house and approved by the Governor.
+The seat of government is the City of Rhondel unless changed by law enacted by two-thirds of the authorized membership of each house and approved by the Governor. Temporary relocation during disaster, evacuation, attack, or other emergency does not constitute a change of the seat of government.
+
+### §11.6 State Immigration Sponsorship and Reception
+
+(a) Kelvant participates in the federal immigration system through the State sponsorship stage established by the Constitution of the Federated Republic. State sponsorship does not itself confer legal residency, which requires federal certification as provided by federal law.
+
+(b) The Legislature shall establish public, lawful, and nondiscriminatory sponsorship criteria and procedures consistent with federal equality guarantees and the federal prohibitions on ideological screening and nationality-based quotas. The Governor or an executive department designated by law shall administer sponsorship as an administrative function under those criteria.
+
+(c) A denial of State sponsorship shall state the precise legal ground in writing. State courts may review sponsorship decisions for constitutional or procedural illegality but shall not substitute their policy judgment for lawful State discretion.
+
+(d) Federal certification, removal, deportation, and asylum remain within federal authority as provided by the Constitution of the Federated Republic.
+
+(e) Rescue, shelter, emergency medical treatment, temporary aid, or other humanitarian assistance by Kelvant or its subdivisions does not itself constitute State sponsorship, federal certification, or legal residency. Nothing in this section limits the duty or authority of the State or its subdivisions to rescue, shelter, medically assist, or otherwise protect persons arriving in distress.
 
 ---
 
@@ -492,11 +468,11 @@ All laws in force at the time this Constitution takes effect, and not inconsiste
 
 ### Section 3. Existing Officers
 
-All officers holding office at the time this Constitution takes effect shall continue in office until their successors are elected or appointed and qualified.
+All officers holding office at the time this Constitution takes effect continue in office until their successors are elected or appointed and qualified, subject to the succession provisions of this Constitution.
 
 ### Section 4. First Elections
 
-The first elections under this Constitution shall be held at such time and in such manner as the Legislature provides by law, consistent with the transition requirements of the Federated Republic Constitution.
+The first elections under this Constitution shall be held as provided by law consistent with the Constitution of the Federated Republic.
 
 ### Section 5. Transition
 
