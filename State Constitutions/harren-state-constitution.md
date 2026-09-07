@@ -226,6 +226,22 @@ The State Administrator shall:
 
 (c) An emergency does not subordinate either executive officer to the other, transfer the ordinary constitutional powers of one to the other, suspend the Legislature or courts, or authorize suspension of constitutional rights except to the extent lawfully permitted by the Federated Republic Constitution and this Constitution.
 
+### §2.13 State Immigration Sponsorship
+
+(a) Harren participates in the immigration system of the Federated Republic through the State sponsorship stage established by the federal Constitution. State sponsorship does not itself confer legal residency, which requires federal certification.
+
+(b) The Legislature shall establish by law public, lawful, and nondiscriminatory criteria and procedures governing State sponsorship, consistent with federal equality guarantees and the federal prohibitions on ideological screening and nationality-based quotas.
+
+(c) The State Administrator shall administer State sponsorship through the administrative departments of the State. Individual sponsorship determinations are administrative acts governed by law and may not be directed or overridden by the Governor on political or personal grounds.
+
+(d) The Governor may publicly recommend sponsorship priorities to the Legislature and may communicate the State's political or demographic priorities in the same manner as other policy recommendations, but such recommendations do not bind the State Administrator absent law.
+
+(e) A denial of sponsorship shall state the precise legal ground in writing. State courts may review sponsorship decisions for constitutional or procedural illegality but shall not substitute their policy judgment for lawful State discretion.
+
+(f) Federal certification, removal, deportation, and asylum remain within federal authority as provided by the Constitution of the Federated Republic.
+
+(g) Emergency shelter, medical care, disaster assistance, or other humanitarian aid provided by Harren or its subdivisions does not itself constitute State sponsorship, federal certification, or legal residency.
+
 ---
 
 ## ARTICLE III — THE LEGISLATIVE BRANCH
