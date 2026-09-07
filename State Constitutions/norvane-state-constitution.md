@@ -606,7 +606,7 @@ An ordinary amendment becomes part of this Constitution when ratified by a major
 (a) This Constitution shall take effect upon ratification by the qualified electors and certification that:
 
 (i) initial Assembly electoral districts have been lawfully established;
-(ii) the Norvane State Record is operational or a lawful temporary public-publication substitute is available;
+(ii) the Norvane State Record is operational or a lawful temporary public publication substitute is available;
 (iii) the first elections for Governor, Deputy Governor, and Assembly have been scheduled; and
 (iv) the full ratified text has been publicly published.
 
