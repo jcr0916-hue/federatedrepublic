@@ -382,7 +382,7 @@ The judicial power of the State of Harren is vested in a High Court, District Co
 
 (b) A judge so appointed shall serve until a successor is elected at the next general election occurring more than ninety days after the vacancy and has qualified.
 
-(c) If vacancies, incapacity, or recusal prevent the High Court from forming a quorum, the longest continuously serving eligible judge of the highest inferior court who is able and willing to serve shall act as a justice only for the period necessary to restore a quorum. If two or more judges have equal continuous service, the older shall have priority. Temporary service creates no right or preference to permanent appointment or election.
+(c) If vacancies, incapacity, or recusal prevent the High Court from forming a quorum, eligible judges of the highest inferior court shall serve temporarily in order of longest continuous judicial service, with age breaking equal-service ties, until enough acting justices have been designated to restore a quorum. Each acting justice serves only for the period necessary to resolve the quorum deficiency. Temporary service creates no right or preference to permanent appointment or election.
 
 ### §4.6 Judicial Independence and Discipline
 
@@ -502,7 +502,7 @@ All public money received by the State shall be deposited into the State Treasur
 
 ### §7.4 State Debt
 
-(a) The State may contract debt only as authorized by law for a public purpose and in purposes and amounts approved by the Legislature.
+(a) The State may contract debt only as authorized by law, for a public purpose, and in amounts approved by the Legislature.
 
 (b) Every authorization of long-term State debt shall disclose its principal terms, repayment source, and material fiscal obligations. Law shall provide for management and limits of State indebtedness.
 
