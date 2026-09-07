@@ -155,7 +155,21 @@ The Governor shall:
 
 (d) The temporary administration of a department during a vacancy in its principal office shall be provided by law and shall not confer a right to permanent appointment.
 
-### §2.8 Removal
+### §2.8 State Immigration Sponsorship
+
+(a) Corindal participates in the immigration system of the Federated Republic through the State sponsorship stage established by the federal Constitution. State sponsorship does not itself confer legal residency, which requires federal certification.
+
+(b) The State Senate shall establish by law public, lawful, and nondiscriminatory criteria and procedures governing State sponsorship, consistent with federal equality guarantees and the federal prohibitions on ideological screening and nationality-based quotas.
+
+(c) The Governor shall administer sponsorship through an executive department or subordinate office designated by law. Individual sponsorship determinations are administrative acts governed by the criteria established by law and are not personal gubernatorial prerogatives.
+
+(d) A denial of sponsorship shall state the precise legal ground in writing. State courts may review sponsorship decisions for constitutional or procedural illegality but shall not substitute their policy judgment for lawful State discretion.
+
+(e) Federal certification, removal, deportation, and asylum remain within federal authority as provided by the Constitution of the Federated Republic.
+
+(f) Employment, an offer of employment, private sponsorship assistance, emergency aid, or other humanitarian assistance does not itself constitute State sponsorship, federal certification, or legal residency.
+
+### §2.9 Removal
 
 (a) The Governor, Lieutenant Governor, and other civil officers of the State may be removed from office through impeachment for cause.
 
@@ -299,7 +313,7 @@ The judicial power of the State of Corindal is vested in a Supreme Court and in 
 
 (a) The compensation of justices and judges shall not be diminished during their continuance in office.
 
-(b) A justice of the Supreme Court may be removed only by impeachment under §2.8.
+(b) A justice of the Supreme Court may be removed only by impeachment under §2.9.
 
 (c) Judges of inferior courts may be removed by impeachment or through an independent judicial-discipline process established by law for incapacity or serious misconduct. Such process shall provide notice, a fair opportunity to be heard, and independent adjudication or review.
 
