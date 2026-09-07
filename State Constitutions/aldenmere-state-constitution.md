@@ -461,7 +461,24 @@ The Legislature shall provide by law for continuity of State government during c
 
 Where this Constitution requires a majority, supermajority, or other fractional vote of a collegial body, the threshold is calculated from the full authorized membership of that body unless this Constitution expressly provides otherwise. A vacancy does not reduce the required constitutional threshold.
 
-### §11.6 — Effective Date
+### §11.6 — State Immigration Sponsorship
+
+**(a) State Sponsorship**  
+Aldenmere participates in the immigration system of the Federated Republic through the State sponsorship stage established by the federal Constitution. The Legislature shall establish by law public and lawful criteria and procedures governing sponsorship. State sponsorship does not itself confer legal residency, which requires federal certification.
+
+**(b) Administration**  
+The Governor, through an executive department or agency designated by law, shall administer State sponsorship according to the criteria established by law. Individual sponsorship determinations are administrative acts and shall not be made as personal gubernatorial prerogatives.
+
+**(c) Equality and Decisions**  
+Sponsorship criteria and decisions shall comply with the equality guarantees and immigration limitations of the Constitution of the Federated Republic. A denial shall state its precise legal ground in writing. State courts may review a decision for constitutional or procedural illegality without substituting their policy judgment for lawful State discretion.
+
+**(d) Federal Authority**  
+Federal certification, removal, deportation, and asylum remain within federal authority as provided by the Constitution of the Federated Republic.
+
+**(e) Humanitarian Assistance**  
+Emergency shelter, medical care, social assistance, or other humanitarian aid provided by Aldenmere or its subdivisions does not itself constitute State sponsorship, federal certification, or legal residency.
+
+### §11.7 — Effective Date
 
 This Constitution takes effect upon ratification by simple majority of Aldenmere voters in a State referendum with at least 50% participation.
 
