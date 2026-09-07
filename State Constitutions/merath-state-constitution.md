@@ -24,7 +24,7 @@ This Constitution belongs to the workers of Merath and to all who make their hom
 
 ### §1.1 Supremacy of the Federated Republic's Constitution
 
-Nothing in this Article, or in this Constitution, may be construed to diminish, limit, or fall below any right guaranteed under Article I of the Federated Republic's Constitution. Where this Article is silent, the Republic's Constitution governs directly and of its own force. Where this Article speaks further than the Republic's Constitution, the greater protection applies within Merath. This Constitution is a floor beneath the Republic's floor, never a ceiling above it.
+Nothing in this Article, or in this Constitution, may be construed to diminish, limit, or fall below any right guaranteed under Article I of the Federated Republic's Constitution. Where this Article is silent, the Republic's Constitution governs directly and of its own force. Where this Article speaks further than the Republic's Constitution, the greater protection applies within Merath. The Federated Republic Constitution establishes the minimum protection applicable within Merath; this Constitution may provide greater protection but never less.
 
 ### §1.2 Inherent Dignity and Equality
 
@@ -32,15 +32,15 @@ All persons possess inherent dignity and are entitled to equal respect. No law o
 
 ### §1.3 Freedom of Expression and Assembly
 
-Every person may freely speak, write, publish, and assemble. The rights of workers to meet, to organize, to publish, and to advocate for their interests are specially protected as essential to the democratic character of the State. No law shall criminalize peaceful labor advocacy or treat collective action by workers as conspiracy.
+Every person may freely speak, write, publish, and assemble. The rights of workers to meet, to organize, to publish, and to advocate for their interests are specially protected as essential to the democratic character of the State. No law shall criminalize peaceful labor advocacy or treat collective action by workers as conspiracy. Nothing in this section protects violence, threats, or coercion otherwise lawfully prohibited consistent with the Federated Republic Constitution.
 
 ### §1.4 Right to Organize
 
-Every worker holds the inviolable right to form, join, and participate in labor organizations of their own choosing; to bargain collectively through representatives they select; to engage in collective action including the withholding of labor; and to be free from retaliation for exercising these rights. No employer operating within Merath may interfere with, restrain, or coerce workers in the exercise of these rights. This right extends to all workers regardless of industry, occupation, or employment classification.
+Every worker holds the inviolable right to form, join, and participate in labor organizations of their own choosing; to bargain collectively through representatives they select; to engage in collective action including the withholding of labor; and to be free from retaliation for exercising these rights. No employer operating within Merath may interfere with, restrain, or coerce workers in the exercise of these rights. This right extends to all workers regardless of industry, occupation, or employment classification. Any limitation on collective action necessary to maintain genuinely essential emergency functions shall be established by law, narrowly tailored, and accompanied by an effective alternative means of resolving the labor dispute.
 
 ### §1.5 Right to Work
 
-Every person willing and able to work has the right to employment or, where employment is unavailable, to adequate support from the State. The State shall pursue policies of full employment and shall maintain programs ensuring that no person is left without the means of subsistence due to unemployment. This right does not compel any specific employer to hire any specific person, but obligates the State to serve as employer of last resort or provider of adequate support.
+Every person willing and able to work has the right to access suitable employment through the ordinary economy or through a public employment mechanism maintained by the State. Where suitable employment cannot presently be provided, the person is entitled to adequate support sufficient to prevent loss of the means of subsistence. This right does not compel any specific private employer to hire any specific person. The General Assembly shall provide by law for its administration.
 
 ### §1.6 Right to Fair Wages and Safe Conditions
 
@@ -72,7 +72,7 @@ The right of the people to be secure in their persons, houses, papers, effects, 
 
 ### §1.12 Due Process and Access to Courts
 
-No person shall be deprived of life, liberty, or property without due process of law. Every person has the right to seek remedy before an independent and impartial court. Where a person cannot afford counsel in any matter affecting their liberty, housing, employment, or access to essential services, the State shall provide counsel at public expense.
+No person shall be deprived of life, liberty, or property without due process of law. Every person has the right to seek remedy before an independent and impartial court. Where a person cannot afford counsel in a proceeding in which they face a substantial loss of liberty, housing, employment, or access to essential services, the State shall provide counsel at public expense.
 
 ### §1.13 Rights of the Accused
 
@@ -84,11 +84,17 @@ Excessive bail shall not be required, nor excessive fines imposed, nor cruel or 
 
 ### §1.15 Right to Property
 
-Every person has the right to own property, alone or in association with others. Private property shall not be taken for public use without just compensation. This right is subject to the social obligations established in this Constitution; property rights do not include the right to exploit workers or to monopolize resources essential to the common welfare.
+Every person has the right to own property, alone or in association with others. Private property shall not be taken for public use without just compensation. Property remains subject to laws protecting labor rights, competition, consumers, the environment, public utilities, essential resources, and other legitimate constitutional purposes. Nothing in this section creates a right to use property in violation of those laws.
 
-### §1.16 Non-Derogation
+### §1.16 Non-Derogation and Enforcement
 
-No right enumerated in this Article may be suspended, limited, or derogated except as, and to the extent that, Article I §1.19 of the Federated Republic Constitution permits derogation of the corresponding federal right, and never below the federal non-derogable floor. The economic and social rights established in this Article are justiciable and enforceable, subject to the principle of progressive realization within available resources.
+(a) Rights guaranteed by the Federated Republic Constitution may be limited or derogated only as that Constitution permits and never below its non-derogable floor.
+
+(b) A right protected more broadly or independently by this Constitution may be limited only by law for a legitimate constitutional purpose and only to the extent reasonably necessary and consistent with this Constitution.
+
+(c) The economic and social rights established in this Article are justiciable and enforceable. Immediate minimum obligations expressly stated in this Constitution are binding. Broader resource-dependent obligations are subject to progressive realization within available resources.
+
+(d) The State may alter the means by which an economic or social right is fulfilled, but may not deliberately and materially regress from its constitutional protection without substantial fiscal or operational justification, applied lawfully and without discrimination, while preserving the applicable constitutional minimum.
 
 ---
 
@@ -118,17 +124,19 @@ The executive power of the State of Merath is vested in an Executive Council of 
 
 ### §2.4 Assembly Councillors — Election and Tenure
 
-(a) Assembly Councillors are elected by the General Assembly by absolute majority of members elected.
+(a) Assembly Councillors are elected by the General Assembly by absolute majority of its authorized membership.
 
 (b) Assembly Councillors serve at the confidence of the General Assembly and hold no fixed term.
 
-(c) The General Assembly may remove an Assembly Councillor only through a constructive vote of no confidence: a single vote that simultaneously removes the sitting Councillor and elects a named replacement. A vote that does not name and elect a successor has no effect.
+(c) The General Assembly may remove an Assembly Councillor only through a constructive vote of no confidence: a single vote that simultaneously removes the sitting Councillor and elects a named replacement by absolute majority of the authorized membership. A vote that does not name and elect a successor has no effect.
 
 (d) To be eligible, a person must be a citizen of the Federated Republic, a resident of Merath for at least three years, and at least twenty-five years of age. Membership in the General Assembly is not required.
 
 (e) No person may serve more than eight cumulative years as Assembly Councillor.
 
-### §2.5 Council Procedures
+(f) A member of the General Assembly elected as an Assembly Councillor may not exercise legislative voting or decisional authority while serving on the Executive Council, consistent with the separation-of-branch requirements of the Federated Republic Constitution.
+
+### §2.5 Council Procedures and Continuity
 
 (a) The Executive Council acts by majority vote. Three Councillors constitute a quorum.
 
@@ -138,13 +146,17 @@ The executive power of the State of Merath is vested in an Executive Council of 
 
 (d) Where the Council is equally divided, the matter is tabled for further deliberation; no executive action may be taken on a tied vote.
 
+(e) The General Assembly shall by law establish objective procedures for temporary incapacity and for acting service where vacancies or incapacity leave fewer than three Councillors able to act. Acting service shall restore only the number necessary for quorum, shall preserve the source of the affected seat where practicable, and ends automatically when the elected or selected Councillor returns or a successor qualifies.
+
+(f) If no statutory acting procedure is available when fewer than three Councillors can act, the eligible head of an executive department with the longest continuous service shall serve as Acting Councillor only to the extent necessary to restore quorum; ties are resolved in favor of the older eligible officer. Acting service creates no claim to permanent office.
+
 ### §2.6 The Council Chair
 
 (a) The Council shall elect a Chair from among its members to serve a one-year term, renewable.
 
 (b) The Chair presides over Council meetings, represents the State in ceremonial functions, and coordinates the Council's work, but holds no greater vote or authority than any other Councillor.
 
-(c) The Chair serves as the primary point of contact with the federal government and other States, but may not bind the Council without its authorization.
+(c) The Chair serves as the primary point of contact with the federal government and other States, but may not bind the Council without its authorization. Representation or communication by the Chair does not itself constitute an exercise of Council authority unless previously authorized by the Council or limited to ministerial communication of existing State policy.
 
 ### §2.7 Powers and Duties of the Council
 
@@ -164,17 +176,21 @@ The Executive Council shall:
 
 (g) grant reprieves, commutations, and pardons for offenses against the State, by majority vote, except in cases of impeachment; no Councillor may vote on clemency in a case in which they have a personal interest;
 
-(h) convene the General Assembly in special session upon extraordinary occasions.
+(h) convene the General Assembly in special session upon extraordinary occasions; and
+
+(i) serve as the State authority whose consent is required for assistance within Merath by State forces requested by the Civic Consul under Article XIV §14.5 of the Federated Republic Constitution. Such consent requires a majority vote of the Council and may be withdrawn by majority vote at any time.
 
 ### §2.8 The Council's Relation to Legislation
 
 (a) Every bill passed by the General Assembly shall be presented to the Executive Council.
 
-(b) The Council may, by majority vote within ten business days of presentment, return a bill with written objections. A returned bill becomes law only upon passage by a two-thirds vote of the General Assembly.
+(b) The Council may, by majority vote within ten business days of presentment, return a bill with written objections. A returned bill becomes law only upon passage by two-thirds of the authorized membership of the General Assembly.
 
 (c) If the Council does not return a bill within ten business days, it becomes law without Council action.
 
-(d) The Council may not exercise a line-item veto; bills must be accepted or returned in whole.
+(d) If adjournment prevents physical return of a bill, publication of the bill and the Council's written objections to the Merath State Record within the ten-business-day period constitutes return.
+
+(e) The Council may not exercise a line-item veto; bills must be accepted or returned in whole.
 
 ### §2.9 Vacancies
 
@@ -182,23 +198,55 @@ The Executive Council shall:
 
 (b) A vacancy among Assembly Councillors shall be filled by the General Assembly within thirty days.
 
-(c) During any vacancy, the remaining Councillors continue to exercise executive power; three Councillors remain a quorum.
+(c) An Assembly Councillor serving when a newly elected General Assembly first meets remains in office until that Assembly elects a successor, subject to the eight-year cumulative limit. Such holdover service is not a new term.
+
+(d) During any vacancy, the remaining Councillors continue to exercise executive power subject to the quorum and continuity rules of §2.5.
 
 ### §2.10 Removal of Popular Councillors
 
-(a) A Popular Councillor may be removed by impeachment for cause. The General Assembly has the sole power of impeachment by two-thirds vote of members elected. The High Court has the sole power to try impeachments of Popular Councillors; conviction requires a two-thirds vote of justices.
+(a) A Popular Councillor may be removed by impeachment for cause. The General Assembly has the sole power of impeachment by two-thirds of its authorized membership. The High Court has the sole power to try impeachments of Popular Councillors; conviction requires two-thirds of the justices participating, provided a lawful quorum is present.
 
 (b) Grounds for impeachment are malfeasance, corruption, neglect of duty, or other high crimes.
 
 (c) Judgment upon conviction extends only to removal from office and disqualification from holding any office under this State; the party convicted remains liable to prosecution according to law.
 
-### §2.11 Executive Departments
+### §2.11 Executive Departments and Administration
 
 (a) The General Assembly shall organize the executive branch into departments, which shall include at minimum: Labor, Industry, Social Services, Health, Education, and Public Safety.
 
-(b) Department heads are appointed by the Executive Council with the advice and consent of the General Assembly and serve at the pleasure of the Council.
+(b) Department heads are appointed by the Executive Council with the advice and consent of a majority of the authorized membership of the General Assembly and serve at the pleasure of the Council.
 
-(c) The Council may assign oversight of specific departments to individual Councillors, but all major decisions remain subject to Council vote.
+(c) The Council may assign administrative supervision of specific departments to individual Councillors and may delegate implementation of law to departments and officers. No assignment or delegation confers independent constitutional executive authority upon an individual Councillor.
+
+(d) Policy decisions reserved to the Executive Council by this Constitution or by law shall be made by Council vote. Ministerial, professional, and routine administrative decisions may be made by departments and officers under law.
+
+(e) Law may provide for a qualified senior civil servant to serve temporarily as acting department head during a vacancy or while an appointment awaits confirmation. Acting service does not alter the Council's collective executive authority and creates no claim to permanent appointment.
+
+### §2.12 State Immigration Sponsorship
+
+(a) Merath participates in the immigration system of the Federated Republic through the State sponsorship stage established by Article VI §6.1 of the federal Constitution. State sponsorship is an exercise of State discretion and does not itself confer legal residency, which requires federal certification.
+
+(b) The General Assembly shall establish by law public, lawful, and nondiscriminatory sponsorship criteria. Such criteria may reflect legitimate State interests including labor needs, skills, family and community ties, cooperative or public-service needs, demographic conditions, and similar neutral considerations, but shall comply with federal equality requirements and the prohibitions on ideological screening and nationality-based quotas.
+
+(c) The Executive Council is collectively responsible for faithful administration of the sponsorship system. Individual applications shall be administered through a department or subordinate office designated by law. No individual Councillor may direct, override, or determine an individual application on political, personal, union, employer, or patronage grounds.
+
+(d) A denial of State sponsorship shall state the precise legal ground in writing. Courts may review legality and procedure but shall not substitute their preferred sponsorship policy for criteria lawfully established by the General Assembly.
+
+(e) Federal certification, removal, deportation, and asylum remain within federal authority as provided by the Constitution of the Federated Republic.
+
+(f) Employment, an offer of employment, union membership, cooperative membership, private sponsorship assistance, healthcare, shelter, emergency assistance, or humanitarian aid does not itself constitute State sponsorship, federal certification, or legal residency.
+
+(g) Sponsorship criteria, regulations, and significant precedential decisions shall be published to the Merath State Record consistent with Article X. Individual applicant records remain subject to lawful privacy protections.
+
+### §2.13 Emergency Authority
+
+(a) The Executive Council may declare a State emergency by majority vote where an actual or imminent emergency threatens life, health, essential services, or the constitutional functioning of the State. The declaration shall state its legal basis, scope, duration, and principal measures and shall be published promptly to the Merath State Record.
+
+(b) Emergency authority remains subject to this Constitution, the Federated Republic Constitution, judicial review, and legislative control. No emergency transfers legislative power to the Council or creates independent executive authority in the Chair or any individual Councillor.
+
+(c) The General Assembly may by law regulate or terminate State emergency authority.
+
+(d) Where catastrophe temporarily prevents a Council quorum, law may authorize strictly provisional administrative action necessary to protect life, maintain essential services, preserve public property, and carry out existing legal obligations. Such authority may not establish major new policy and ends when a Council quorum is restored.
 
 ---
 
@@ -210,11 +258,11 @@ The legislative power of the State of Merath is vested in a unicameral General A
 
 ### §3.2 Composition
 
-(a) The General Assembly consists of members elected by proportional representation from the State at large, combined with members elected from geographic districts.
+(a) The General Assembly consists of members elected from geographic districts and members elected from statewide party lists.
 
-(b) Sixty percent of seats shall be allocated to geographic districts of substantially equal population; forty percent shall be allocated by proportional representation from party lists to ensure that the overall composition of the Assembly reflects the statewide vote.
+(b) Sixty percent of seats shall be allocated to geographic districts of substantially equal population. Forty percent shall be compensatory list seats allocated with district results taken into account so that the overall composition of the Assembly reflects the statewide proportional vote as nearly as practicable.
 
-(c) The total number of seats shall be not fewer than one hundred nor more than one hundred fifty, as provided by law.
+(c) The total number of seats shall be not fewer than one hundred nor more than one hundred fifty, as provided by law. Law shall establish the precise allocation method, reasonable ballot-access threshold, treatment of overhang or adjustment seats, and related mechanics. Such rules shall be neutral and may not be designed to favor or disadvantage a particular party or candidate.
 
 ### §3.3 Elections and Terms
 
@@ -226,27 +274,29 @@ The legislative power of the State of Merath is vested in a unicameral General A
 
 ### §3.4 Officers
 
-(a) The General Assembly shall elect a Speaker from among its members by majority vote.
+(a) The General Assembly shall elect a Speaker from among its members by majority of the authorized membership.
 
 (b) The Speaker presides over sessions, maintains order, and certifies enacted legislation.
 
 (c) The Assembly shall elect such other officers as it deems necessary.
 
-### §3.5 Quorum and Rules
+### §3.5 Quorum, Membership, and Rules
 
-(a) A majority of members elected constitutes a quorum.
+(a) A majority of the authorized membership constitutes a quorum.
 
 (b) The Assembly shall determine its own rules of procedure.
 
-(c) The Assembly may, by two-thirds vote, expel a member.
+(c) The Assembly may, by two-thirds of its authorized membership, expel a member for cause. A final determination that a person is not entitled to a seat is subject to judicial review for constitutional or legal error.
+
+(d) For this Constitution, "authorized membership" means the total number of seats lawfully established for the General Assembly, whether filled or vacant, except where the Federated Republic Constitution requires another denominator.
 
 ### §3.6 Legislative Process
 
 (a) Every bill must address a single subject, expressed in its title.
 
-(b) No bill may become law until it has been available to members and the public for at least five days before final passage, except in declared emergencies.
+(b) No bill may become law until it has been available to members and the public for at least five days before final passage. The Assembly may waive this period only by two-thirds of its authorized membership upon a recorded finding of urgent public necessity. The waiver and finding shall be published to the Merath State Record.
 
-(c) Bills pass by majority of members elected, unless this Constitution requires a higher threshold.
+(c) Bills pass by majority of the authorized membership, unless this Constitution requires a higher threshold.
 
 (d) Every enacted law shall be published to the Merath State Record.
 
@@ -258,21 +308,37 @@ The legislative power of the State of Merath is vested in a unicameral General A
 
 (c) The Speaker presides over the election.
 
+(d) An incumbent Assembly Councillor may remain temporarily under §2.9(c) until a successor is elected. Failure of the Assembly to agree upon a replacement does not create authority to remove the incumbent except through the constructive process in §2.4 or by operation of an express eligibility limit.
+
 ### §3.8 Oversight
 
 (a) The General Assembly shall maintain standing committees for oversight of executive departments.
 
-(b) The Assembly may compel testimony and production of records from any State officer or employee.
+(b) The Assembly may compel testimony and production of records from any State officer or employee. Lawful legislative subpoenas are enforceable through the courts.
 
 (c) The Assembly shall receive and review the Executive Council's annual reports and budget proposals.
+
+(d) Oversight authority permits investigation, legislation, appropriation, and lawful sanction, but does not authorize the Assembly or any committee or member to direct the disposition of an individual executive or administrative matter except through law.
 
 ### §3.9 Compensation and Ethics
 
 (a) Members shall receive compensation as provided by law; no increase shall take effect until after the next general election.
 
-(b) No member may vote on a matter in which they hold an undisclosed material financial interest.
+(b) Members shall disclose direct and material financial interests as provided by law and shall recuse where a direct personal financial interest substantially impairs impartial judgment. An interest shared with a broad class, including status as a worker, union member, tenant, pensioner, consumer, or recipient of a generally available public program, does not by itself require recusal.
 
-(c) The Assembly shall establish an independent ethics body with authority to investigate and sanction members.
+(c) The Assembly shall establish an independent ethics body with authority to investigate and impose sanctions other than expulsion, subject to due process. Expulsion remains governed by §3.5.
+
+### §3.10 Electoral Districts
+
+(a) Geographic Assembly districts shall be drawn by an independent redistricting body established by law and shall comply with the Federated Republic Constitution.
+
+(b) Districts shall be substantially equal in population, contiguous, reasonably compact, nondiscriminatory, and drawn without intentional dilution of protected voting power or partisan manipulation.
+
+(c) Proposed maps, relevant non-protected data, and final maps shall be public. Final maps are subject to judicial and federal constitutional review.
+
+### §3.11 Delegation of Rulemaking
+
+The General Assembly may not transfer its essential legislative power. It may authorize the Executive Council, departments, local governments, industrial districts, or independent bodies to adopt rules within authority and intelligible standards established by law. All such rules remain subject to judicial review and the publication requirements of Article X.
 
 ---
 
@@ -286,7 +352,7 @@ The judicial power of the State of Merath is vested in a High Court, District Co
 
 (a) The High Court of Merath consists of nine justices.
 
-(b) Justices are appointed by the Executive Council, by majority vote, with the advice and consent of the General Assembly.
+(b) Justices are appointed by the Executive Council, by majority vote, with the advice and consent of a majority of the authorized membership of the General Assembly.
 
 (c) Justices serve twelve-year non-renewable terms.
 
@@ -296,7 +362,7 @@ The judicial power of the State of Merath is vested in a High Court, District Co
 
 (a) District Courts are courts of general jurisdiction.
 
-(b) District judges are appointed by the Executive Council with the advice and consent of the General Assembly and serve ten-year terms, renewable once.
+(b) District judges are appointed by the Executive Council with the advice and consent of a majority of the authorized membership of the General Assembly and serve ten-year terms, renewable once.
 
 (c) The General Assembly shall organize the State into judicial districts.
 
@@ -304,27 +370,45 @@ The judicial power of the State of Merath is vested in a High Court, District Co
 
 (a) The General Assembly shall establish Labor Tribunals with specialized jurisdiction over employment disputes, workplace safety violations, and enforcement of the rights established in Article I, §§1.4–1.6 and §1.10.
 
-(b) Labor Tribunal judges are appointed by the Executive Council with the advice and consent of the General Assembly and serve eight-year terms.
+(b) Labor Tribunal judges are appointed by the Executive Council with the advice and consent of a majority of the authorized membership of the General Assembly and serve eight-year terms.
 
-(c) Proceedings before Labor Tribunals shall be accessible, expeditious, and without cost to workers bringing claims.
+(c) Proceedings before Labor Tribunals shall be accessible and expeditious. Filing and tribunal costs may not be imposed on workers in a manner that materially deters the assertion of a claim.
 
-(d) Appeals from Labor Tribunals lie to the High Court.
+(d) Labor Tribunal judges are independent judicial officers bound by impartiality and due process. Accessibility to workers does not diminish the procedural rights of any opposing party.
 
-### §4.5 Judicial Independence
+(e) Appeals from Labor Tribunals lie to the High Court.
 
-(a) No public official may direct, threaten, or seek to influence the decision of any judge.
+(f) The specialized jurisdiction of the Labor Tribunals does not prevent another court from deciding a labor-rights issue that arises incidentally in a matter otherwise properly before it.
+
+### §4.5 Judicial Independence and Discipline
+
+(a) No public official may direct, threaten, retaliate against, or seek to influence the decision of any judge.
 
 (b) Judicial compensation may not be reduced during a judge's term.
 
-(c) Judges may be removed only for cause — misconduct, incapacity, or conviction of a disqualifying offense — through impeachment by two-thirds of the General Assembly and trial before a special tribunal constituted as provided by law.
+(c) A High Court justice may be removed only for cause — misconduct, incapacity, or conviction of a disqualifying offense — through impeachment by two-thirds of the authorized membership of the General Assembly and trial before an independent special tribunal established by law. The tribunal shall provide neutral selection, notice, counsel, an opportunity to present evidence, written findings, and public proceedings except to the narrow extent lawfully required to protect a compelling interest.
+
+(d) The General Assembly shall establish an independent Judicial Conduct Commission to investigate District Court and Labor Tribunal judges and to impose proportionate discipline, including removal for serious cause, subject to due process and judicial review. Impeachment remains available for exceptionally serious misconduct.
+
+(e) The General Assembly may organize lower courts but may not abolish, restructure, or redraw a court or judicial district for the purpose of punishing a particular judge, altering the result of a pending case, or evading constitutionally protected judicial tenure.
 
 ### §4.6 Access to Justice
 
 (a) The courts of Merath shall be open to all persons without regard to ability to pay.
 
-(b) The State shall fund legal aid sufficient to ensure that no person is denied access to justice by reason of poverty.
+(b) The State shall fund legal aid sufficient to ensure that no person is denied meaningful access to justice by reason of poverty. The specific right to appointed counsel in proceedings involving substantial deprivation is governed by §1.12.
 
 (c) Court fees may not be set at levels that effectively deny access to persons of limited means.
+
+### §4.7 Judicial Qualifications, Recusal, and Continuity
+
+(a) Judges shall satisfy objective professional qualifications established by law, including authorization to exercise judicial office, substantial relevant experience, competence, and integrity.
+
+(b) A judge shall recuse from a matter where law or constitutional due process requires recusal.
+
+(c) Where vacancy, incapacity, or recusal prevents the High Court from forming a lawful quorum, eligible judges of the highest inferior court shall serve temporarily in order of longest continuous judicial service, with age breaking ties, only in the number necessary to restore quorum. Temporary service creates no claim to permanent appointment.
+
+(d) A temporary judge serving in an impeachment trial or other matter must be independent of the parties and subject to ordinary recusal requirements.
 
 ---
 
@@ -340,17 +424,29 @@ The judicial power of the State of Merath is vested in a High Court, District Co
 
 (a) Any municipality may adopt a home-rule charter by majority vote of its qualified electors.
 
-(b) A home-rule municipality may exercise any power pertaining to its government and affairs not denied by this Constitution or by law.
+(b) A home-rule municipality may exercise any power pertaining to its government and affairs not denied by this Constitution or expressly preempted by State law enacted for a genuine statewide interest.
 
 ### §5.3 Industrial Districts
 
-(a) The General Assembly may establish industrial districts for the coordination of economic planning, infrastructure, and worker services across municipal boundaries.
+(a) The General Assembly may establish industrial districts for the coordination of economic planning, infrastructure, transit, utilities, environmental remediation, workforce development, and worker services across municipal boundaries.
 
-(b) Industrial district governance shall include representation of workers, enterprises, and municipalities within the district.
+(b) Industrial districts exercise only powers expressly granted by law and do not possess general police power or general municipal legislative authority.
+
+(c) Industrial district governance shall include meaningful representation of workers, enterprises, municipalities, and the public. Worker representatives shall be chosen through democratic or genuinely representative procedures. Enterprise participation may not be weighted by wealth, ownership, or economic size so as to confer governmental control, and no private enterprise acquires coercive governmental power merely by representation on a district body.
+
+(d) Creation, expansion, consolidation, or dissolution of an industrial district requires public notice and a meaningful opportunity for participation by affected municipalities and residents.
+
+(e) Where district authority conflicts with municipal authority, the district prevails only within an expressly delegated regional function.
 
 ### §5.4 Protection of Local Government
 
-Local governments are entitled to fiscal capacity sufficient to carry out their functions. The State may not systematically defund local governments to achieve centralization.
+Local governments are entitled to sufficient lawful fiscal capacity to carry out the functions assigned to them. The State may not systematically withhold, preempt, or restructure funding or revenue authority for the purpose of extinguishing meaningful local self-government.
+
+### §5.5 Democratic and Transparency Minimums
+
+(a) Every municipality shall maintain an elected governing authority, periodic elections, public records, lawful budgeting, and judicially reviewable governmental action, while remaining free to choose its form of government consistent with this Constitution.
+
+(b) Industrial districts shall publish budgets, major contracts, governance votes, major infrastructure decisions, and final regulatory acts to the Merath State Record or to an interoperable public record as provided by law.
 
 ---
 
@@ -358,31 +454,49 @@ Local governments are entitled to fiscal capacity sufficient to carry out their 
 
 ### §6.1 Suffrage
 
-(a) Every citizen of the Federated Republic who is eighteen years of age or older and a resident of Merath is a qualified elector.
+(a) Every citizen of the Federated Republic who is eighteen years of age or older and a resident of Merath is a qualified elector. Law may establish a reasonable residency period not exceeding thirty days for ordinary State elections.
 
-(b) No law, rule, or practice may make voting more difficult, less accessible, or less secure.
+(b) No law, rule, or practice may impose an unreasonable or discriminatory burden on voting, materially reduce lawful accessibility, or materially compromise election security or integrity.
 
-(c) Election day shall be a paid holiday for all workers in Merath.
+(c) Election day shall be a paid holiday for all workers in Merath. Workers required to perform genuinely essential services shall receive reasonable paid voting leave or an equivalent paid opportunity to vote.
 
 ### §6.2 Elections
 
-(a) All State elections shall use ranked-choice or proportional methods as provided by law and shall connect to the National Voting System.
+(a) Single-office State elections shall use ranked-choice or another majority-producing method consistent with law. Multimember and party-list elections may use proportional methods. General Assembly elections shall comply with Article III.
 
-(b) General elections are held in even-numbered years.
+(b) All State elections shall connect to the National Voting System and comply with federal standards.
 
-(c) The General Assembly shall provide by law for voter registration and election administration.
+(c) General elections are held in even-numbered years.
+
+(d) The General Assembly shall provide by law for voter registration, ballot access, recounts, certification, vacancies, election administration, and election disputes. Final certification decisions are subject to judicial review.
 
 ### §6.3 Public Campaign Financing
 
-(a) The State shall establish a system of public campaign financing available to all qualified candidates on equal terms.
+(a) The State shall establish a system of public campaign financing available on equal terms to candidates who satisfy neutral qualification requirements established by law.
 
-(b) Candidates accepting public financing shall be subject to spending limits as provided by law.
+(b) Qualification rules may require reasonable evidence of public support but may not discriminate by party, ideology, wealth, or incumbency.
 
-(c) The purpose of this section is to ensure that wealth does not determine who may effectively seek office.
+(c) Candidates accepting public financing shall be subject to spending limits as provided by law. Acceptance of public financing is not compulsory.
+
+(d) The purpose of this section is to ensure that wealth does not determine who may effectively seek office.
 
 ### §6.4 State Election Commission
 
-The General Assembly shall establish an independent State Election Commission to administer elections within federal standards.
+(a) An independent State Election Commission shall administer elections within federal standards and perform such redistricting functions as law assigns consistent with §3.10.
+
+(b) Commissioners shall serve fixed terms and may be removed only for cause under procedures established by law. No current elected official or current officer of a political party may serve as Commissioner.
+
+(c) No single political actor or institution may control appointment of a majority of the Commission.
+
+(d) The Commission shall act independently of the Executive Council and General Assembly in counting, recounting, certification, and other adjudicative election functions. Material decisions and final results shall be published to the Merath State Record and remain subject to judicial review.
+
+### §6.5 Campaign Disclosure
+
+Contributions, expenditures, major independent political spending, and sources required by law to be disclosed shall be reported promptly under neutral rules and made publicly available through the Merath State Record or an interoperable election record.
+
+### §6.6 Election Continuity
+
+Law may provide temporary alternative polling arrangements, delayed certification where genuinely necessary, and other continuity measures during disaster or disruption. No continuity measure may cancel a constitutionally required election, alter a lawful result, or extend an elected mandate beyond the period strictly necessary to conduct and certify a lawful election.
 
 ---
 
@@ -392,35 +506,39 @@ The General Assembly shall establish an independent State Election Commission to
 
 (a) The economy of Merath shall serve the welfare of all its people, not merely the accumulation of private wealth.
 
-(b) Economic activity is subject to regulation for the common good, including the protection of workers, consumers, and the environment.
+(b) Economic activity is subject to regulation for the common good, including the protection of workers, consumers, competition, public health, and the environment.
 
-(c) Competition and enterprise are valued, but not at the cost of exploitation or the degradation of labor.
+(c) Competition and enterprise are valued, but not at the cost of violations of labor rights, abusive market power, coercive employment practices, unsafe working conditions, wage theft, or comparable exploitation defined by law.
 
 ### §7.2 Worker Cooperatives
 
 (a) Worker cooperatives — enterprises owned and democratically governed by their workers — are recognized and encouraged as a form of economic organization consistent with the values of this Constitution.
 
-(b) The State shall provide technical assistance, favorable financing, and other support to worker cooperatives.
+(b) The State shall provide technical assistance, favorable financing, and other support to worker cooperatives under general law.
 
-(c) When a privately-owned enterprise is to be sold or closed, the workers of that enterprise shall have the right of first refusal to purchase and continue it as a cooperative, under terms and conditions established by law.
+(c) When a privately owned enterprise is to be sold or closed, the workers of that enterprise shall have a right of first refusal to purchase and continue it as a cooperative under procedures established by law. The law shall provide reasonable rules for notice, timing, valuation, existing contracts, and creditor rights. The right of first refusal does not itself transfer ownership or require sale below lawful terms.
 
 ### §7.3 Public Utilities
 
 (a) Essential utilities — including water, electricity, and public transit — may be owned and operated by the State or by municipalities for the benefit of the public.
 
-(b) Where utilities are privately operated, they are subject to regulation ensuring universal access, fair pricing, and adequate service.
+(b) Acquisition of private property for public ownership remains subject to the just-compensation requirement of §1.15.
+
+(c) Where utilities are privately operated, they are subject to regulation ensuring universal access, fair pricing, adequate service, labor protections, and other lawful public obligations.
 
 ### §7.4 Economic Planning
 
 (a) The General Assembly may establish an Economic Planning Council, advisory to the Executive Council and the Assembly, to coordinate industrial policy, infrastructure investment, and workforce development.
 
-(b) The Planning Council shall include representatives of workers, enterprises, municipalities, and the public.
+(b) The Planning Council shall include representatives of workers, enterprises, municipalities, and the public. Representation may not be weighted by wealth or ownership so as to confer governmental control.
 
-(c) Planning is indicative, not directive; the State coordinates and incentivizes but does not command private economic decisions except as otherwise authorized by law.
+(c) The Planning Council shall conduct its formal work openly and publish final recommendations, votes, and reports to the Merath State Record, subject to lawful privacy and confidentiality protections.
+
+(d) Planning is indicative, not directive; the State coordinates and incentivizes but does not command private economic decisions except as otherwise authorized by law.
 
 ### §7.5 Anti-Monopoly
 
-Concentrations of economic power that threaten competition, exploit workers or consumers, or undermine democratic governance are contrary to the public interest. The General Assembly shall provide by law for the prevention and dissolution of monopolies and for the regulation of dominant enterprises.
+Concentrations of economic power that threaten competition, violate labor or consumer rights, or undermine democratic governance are contrary to the public interest. The General Assembly shall provide by general law for the prevention and dissolution of monopolies and for the regulation of dominant enterprises. Major coercive remedies require notice, an opportunity to be heard, findings based on evidence, proportionate relief, and judicial review.
 
 ---
 
@@ -436,7 +554,7 @@ Merath is a social state. The State bears responsibility for ensuring that every
 
 (b) The system may include public provision, public insurance, or regulated private insurance, as the General Assembly provides by law, so long as universal access is achieved.
 
-(c) Healthcare funding shall be adequate to meet the needs of the population; the General Assembly may not reduce healthcare appropriations below the prior year's level without a two-thirds vote.
+(c) Healthcare appropriations are subject to the social-state funding protections of §9.6.
 
 ### §8.3 Housing
 
@@ -444,7 +562,7 @@ Merath is a social state. The State bears responsibility for ensuring that every
 
 (b) The State may build, finance, or subsidize housing; regulate rents; and take other measures to prevent homelessness and housing insecurity.
 
-(c) No person shall be evicted into homelessness without provision for alternative shelter.
+(c) No person shall be evicted into homelessness by State action without provision for alternative shelter.
 
 ### §8.4 Education
 
@@ -452,19 +570,27 @@ Merath is a social state. The State bears responsibility for ensuring that every
 
 (b) The State shall ensure that higher education and vocational training are accessible to all qualified persons, with financial barriers progressively eliminated.
 
-(c) Education funding shall be adequate to ensure quality; the General Assembly may not reduce education appropriations below the prior year's level without a two-thirds vote.
+(c) Education appropriations are subject to the social-state funding protections of §9.6.
 
 ### §8.5 Social Insurance
 
 (a) The State shall maintain systems of social insurance providing income support during unemployment, disability, and retirement.
 
-(b) Benefits shall be adequate to maintain a decent standard of living, indexed to the cost of living.
+(b) Benefits shall be established by law using public criteria, shall be adequate to maintain a decent standard of living, and shall be periodically adjusted for the cost of living.
 
 ### §8.6 Childcare and Family Support
 
-(a) The State shall ensure access to affordable childcare for all families.
+(a) The State shall ensure access to affordable childcare for all families through public provision, subsidy, cooperative provision, regulated private provision, or other lawful means.
 
-(b) Parents are entitled to paid leave for the birth or adoption of a child, as provided by law.
+(b) Parents are entitled to paid leave for the birth or adoption of a child, with duration, financing, eligibility, and administration established by law.
+
+### §8.7 Administration and Due Process
+
+(a) Programs under this Article shall be administered according to public criteria and without unlawful discrimination.
+
+(b) A person receiving an essential housing, healthcare, income-support, or similar benefit may not have that benefit materially terminated without reasonable notice, stated grounds, and a meaningful opportunity for review where termination would materially affect subsistence or another protected right.
+
+(c) Courts enforcing this Article shall protect constitutional minimums, lawful administration, non-discrimination, and the anti-regression principle of §1.16, but shall not substitute their preferred tax rates, appropriations, benefit formulas, or delivery systems for choices lawfully made by the political branches.
 
 ---
 
@@ -472,17 +598,19 @@ Merath is a social state. The State bears responsibility for ensuring that every
 
 ### §9.1 Taxing Power
 
-(a) The General Assembly has the exclusive authority to levy State taxes.
+(a) The General Assembly has the exclusive authority to levy State taxes by general law.
 
 (b) Taxation shall be according to ability to pay. Progressive taxation — under which higher incomes and greater wealth bear proportionally greater burdens — is authorized and encouraged.
 
-(c) No tax may discriminate against goods, services, or persons of another State or Territory.
+(c) Taxes shall operate under public criteria and be administered with due process.
+
+(d) No tax may discriminate against goods, services, or persons of another State or Territory in violation of the Federated Republic Constitution.
 
 ### §9.2 Income Taxation
 
 (a) The State may levy a graduated income tax with rates increasing as income increases.
 
-(b) Income from labor and income from capital may be taxed at different rates; the General Assembly may provide that income from capital is taxed at rates no lower than income from labor.
+(b) Income from labor and income from capital may be taxed at different rates. The General Assembly may provide that comparable income from capital bears an equal or greater effective tax burden than comparable income from labor, with classifications and calculation methods established by law.
 
 ### §9.3 Wealth and Inheritance Taxation
 
@@ -490,29 +618,57 @@ Merath is a social state. The State bears responsibility for ensuring that every
 
 (b) The State may levy taxes on inheritances and gifts above thresholds established by law.
 
-(c) The purpose of such taxes is to prevent the excessive concentration of wealth across generations and to fund the social state.
+(c) Thresholds, valuation methods, dispute procedures, and any installment or hardship mechanisms shall be established by law and are subject to judicial review.
+
+(d) The purpose of such taxes is to prevent the excessive concentration of wealth across generations and to fund the social state.
 
 ### §9.4 Corporate Taxation
 
 (a) The State may levy taxes on corporate profits and on the privilege of doing business in Merath.
 
-(b) The General Assembly may provide for differential taxation of enterprises based on their treatment of workers, their environmental practices, or their form of organization, including favorable treatment for worker cooperatives.
+(b) The General Assembly may provide differential taxation of enterprises based on general, published criteria concerning treatment of workers, environmental practices, or form of organization, including favorable treatment for worker cooperatives.
+
+(c) Eligibility for differential treatment shall be determined administratively under law and may not be awarded or withheld as personal or political patronage by a Councillor or other officer.
 
 ### §9.5 The State Treasury
 
-All public money received by the State shall be deposited into the State Treasury and may be withdrawn only by appropriation made by law.
+(a) All public money received by the State shall be deposited into the State Treasury and may be withdrawn only by appropriation made by law.
 
-### §9.6 The Budget
+(b) If a new general appropriation has not taken effect when a fiscal year begins, essential government operations, constitutional minimums, and existing legal obligations continue temporarily at no more than the corresponding prior-year inflation-adjusted lawful rate until a new appropriation takes effect.
+
+(c) Temporary continuation under subsection (b) may maintain existing programs and adjust for obligations imposed by law, demographic change, or immediate necessity, but may not create substantial new programs or serve as an alternate general budget.
+
+### §9.6 The Budget and Social-State Funding
 
 (a) The Executive Council shall submit to the General Assembly an annual proposed budget.
 
-(b) The budget shall be balanced or shall include a plan for addressing any deficit.
+(b) The proposed and enacted budget shall identify any projected deficit, its means of financing, material debt consequences, and a medium-term fiscal plan. Nothing in this Constitution requires a balanced budget in every fiscal year.
 
-(c) Social services appropriations under Article VIII may not be reduced below the prior year's inflation-adjusted level without a two-thirds vote of the General Assembly.
+(c) Appropriations necessary to maintain the constitutional social-state functions protected by Article VIII may not be reduced below the corresponding prior-year inflation-adjusted level except by two-thirds of the authorized membership of the General Assembly.
 
-### §9.7 Local Taxation
+(d) Legislation making a reduction under subsection (c) shall state the fiscal, demographic, programmatic, or other substantial justification for the reduction and publish that finding to the Merath State Record.
 
-Municipalities retain taxing authority within their jurisdictions as provided by law, subject to the non-discrimination requirements of this Constitution.
+### §9.7 Borrowing and Debt
+
+(a) The State may incur debt for lawful public purposes only as authorized by law.
+
+(b) Each material borrowing authorization shall disclose its principal amount or authorized ceiling, public purpose, expected repayment source, and material terms.
+
+(c) Long-term borrowing may not be used for the purpose of concealing recurring operating deficits without public disclosure and a fiscal plan.
+
+### §9.8 Local Taxation
+
+Municipalities retain sufficient lawful taxing and revenue authority within their jurisdictions to perform their assigned functions, as structured by law and subject to the non-discrimination requirements of this Constitution and the Federated Republic Constitution. State law may coordinate local taxation but may not use preemption for the purpose of extinguishing meaningful home rule.
+
+### §9.9 Independent Audit
+
+(a) The State shall maintain an independent public audit function with authority to audit State revenues, expenditures, debt, material social-program finances, and public enterprises where public funds or liabilities are substantially implicated.
+
+(b) The auditor or audit body shall be independent of the Executive Council and the institutions being audited. Final reports shall be published to the Merath State Record.
+
+### §9.10 Public Enterprises
+
+Public enterprises may possess operational autonomy as provided by law, but material debt, subsidies, guarantees, losses, and other obligations ultimately borne by the State shall be disclosed in the manner required by law and included in public fiscal reporting.
 
 ---
 
@@ -520,19 +676,33 @@ Municipalities retain taxing authority within their jurisdictions as provided by
 
 ### §10.1 Establishment
 
-The State shall maintain the Merath State Record as the permanent public record of State governmental action, freely accessible to every Inhabitant at no cost.
+The State shall maintain the Merath State Record as the permanent public record of significant State governmental action, freely accessible to every Inhabitant at no cost, searchable in practical form, and maintained for permanent public reference.
 
 ### §10.2 Publication Requirement
 
-(a) Every law, executive action, judicial decision, and administrative determination shall be published to the Record.
+(a) The Record shall include enacted laws; Executive Council votes and formal resolutions; final executive orders and emergency declarations; final regulations and generally applicable administrative rules; significant final administrative decisions having public or precedential consequence; judicial opinions and dispositive orders subject to lawful privacy protections; budgets and appropriations; final audit reports; election certifications; and other material governmental acts required by law.
 
-(b) All Executive Council votes shall be recorded and published.
+(b) Every Executive Council vote shall identify participating Councillors, votes cast, recusals, and the final text or legal effect of the decision.
 
-(c) Records may not be deleted or altered; corrections are entered as new records alongside the original.
+(c) Individual benefit files, medical records, personnel files, immigration applicant files, and other personal records are not made public merely because they are used in governmental decision-making.
 
-### §10.3 Federal Interface
+(d) An entry may not be silently deleted, overwritten, or altered. A correction, amendment, reversal, or superseding action shall be entered as a new record permanently linked to the original.
 
-The Record shall maintain compatibility with the National Record System.
+### §10.3 Confidentiality and Legal Effect
+
+(a) Law may provide narrowly tailored protections for personal privacy, medical information, personnel matters, privileged legal communications, active investigations, legitimate public security interests, and legally protected commercial information where disclosure would cause substantial lawful harm. Such protections may not be used merely to conceal governmental error, controversy, or embarrassment.
+
+(b) Where practicable, the existence and legal effect of an official governmental act shall remain publicly identifiable even where protected portions of supporting material are withheld.
+
+(c) A law or generally applicable regulation may not ordinarily be enforced against a person before official publication. Emergency measures necessary to protect life or safety may take immediate effect where law so provides, but shall be published as soon as practicable.
+
+(d) Failure to publish an act for which publication serves transparency rather than legal notice does not automatically void an otherwise lawful individual determination, but the publication duty remains enforceable according to law.
+
+### §10.4 Federal and Local Interface
+
+(a) The Merath State Record shall maintain compatibility with the National Record System and shall transmit information required by the Federated Republic Constitution or lawful federal process.
+
+(b) Municipalities, industrial districts, and other public bodies shall maintain interoperable public records or transmit constitutionally significant acts to the Merath State Record as provided by law.
 
 ---
 
@@ -540,23 +710,33 @@ The Record shall maintain compatibility with the National Record System.
 
 ### §11.1 Legislative Proposal
 
-An amendment may be proposed by a two-thirds vote of the General Assembly.
+An amendment may be proposed by two-thirds of the authorized membership of the General Assembly.
 
 ### §11.2 Ratification
 
-A proposed amendment takes effect upon ratification by a majority of qualified electors voting on the question at the next general election.
+A proposed amendment under §11.1 takes effect upon ratification by a majority of qualified electors voting on the question at the next general election, unless §11.4 requires a higher threshold. The amendment takes effect upon certification unless its text specifies a later date.
 
 ### §11.3 Citizen Initiative
 
-(a) The people may propose amendments by petition signed by qualified electors equal to eight percent of votes cast in the last gubernatorial-equivalent election.
+(a) The people may propose amendments by petition signed by qualified electors equal to eight percent of the qualified electors who participated in the most recent general election, as determined by law without counting any elector more than once.
 
-(b) A qualifying petition proceeds to referendum; passage requires sixty percent of votes cast.
+(b) A qualifying petition proceeds to referendum; passage requires sixty percent of votes cast on the question.
 
 ### §11.4 Protected Provisions
 
-(a) The economic and social rights established in Article I, §§1.4–1.10, and the social services obligations established in Article VIII, may not be repealed or diminished by amendment except by a two-thirds vote of the General Assembly followed by ratification by sixty percent of electors voting.
+(a) The economic and social rights established in Article I, §§1.4–1.10, and the social services obligations established in Article VIII may not be materially repealed, abolished, or diminished by amendment except through proposal by two-thirds of the authorized membership of the General Assembly followed by ratification by sixty percent of electors voting on the question.
 
-(b) No amendment may conflict with the Federated Republic Constitution.
+(b) A change in the statutory or administrative means by which a protected right is delivered does not itself constitute diminution of the constitutional protection.
+
+(c) No amendment may conflict with the Federated Republic Constitution.
+
+### §11.5 Amendment Procedure
+
+(a) Every proposed amendment shall embrace one reasonably related subject and identify the provisions it would alter.
+
+(b) The complete text of a proposed amendment shall be published to the Merath State Record for the minimum period established by law before the referendum.
+
+(c) Courts may review compliance with petition requirements, procedural thresholds, the single-subject rule, and constitutional eligibility for the ballot, but may not review the political wisdom of a proposed amendment.
 
 ---
 
@@ -564,15 +744,21 @@ A proposed amendment takes effect upon ratification by a majority of qualified e
 
 ### §12.1 Oath of Office
 
-Every person elected or appointed to office shall take an oath to support the Constitution of the Federated Republic and the Constitution of Merath, and to faithfully discharge the duties of the office.
+Every person elected or appointed to office shall promptly take an oath to support the Constitution of the Federated Republic and the Constitution of Merath, and to faithfully discharge the duties of the office. The oath is a duty of office and not a condition precedent to the constitutional transfer of authority. Refusal or unjustified failure to take the oath may be grounds for lawful discipline, removal, or disqualification.
 
 ### §12.2 Official Records
 
-All official records are public records except as provided by law for the protection of privacy or public safety.
+All official records are public records except as provided by law through narrowly tailored protections for privacy, public safety, privilege, active investigations, or other substantial lawful interests consistent with Article X.
 
 ### §12.3 Continuity of Government
 
-The General Assembly shall provide by law for the continuity of government in emergencies.
+(a) The State shall maintain lawful continuity of its constitutional institutions during emergency, disaster, vacancy, incapacity, or disruption. The General Assembly shall provide by law for continuity consistent with the specific mechanisms established in this Constitution.
+
+(b) Continuity measures may preserve essential functions and permit temporary procedural adjustments but may not alter the constitutional allocation of power, create a single executive in place of the Executive Council, suspend constitutional accountability, or extend elected terms except for the period strictly necessary to conduct and certify a lawful election.
+
+(c) No emergency suspends this Constitution. Rights may be limited or derogated only as Article I and the Federated Republic Constitution permit.
+
+(d) Constitutional bodies may temporarily meet or operate away from the ordinary seat of government where necessity requires without impairing the validity of lawful governmental acts.
 
 ### §12.4 Seat of Government
 
@@ -580,7 +766,11 @@ The seat of government shall be established by law.
 
 ### §12.5 Workers' Commonwealth
 
-Merath declares itself a workers' commonwealth — a state built by labor, governed for labor, and committed to the dignity of all who work. This declaration is a statement of identity and aspiration; it does not create legal obligations beyond those established elsewhere in this Constitution.
+Merath declares itself a workers' commonwealth — a state built by labor, governed for labor, and committed to the dignity of all who work. This declaration is a statement of identity and aspiration; it does not create legal obligations beyond those established elsewhere in this Constitution. Nothing in this declaration diminishes the equal citizenship or constitutional protection of persons who are retired, disabled, caregivers, students, unemployed, or otherwise outside paid employment.
+
+### §12.6 Severability
+
+If a provision or application of this Constitution is held invalid under the Constitution of the Federated Republic, the remaining provisions and applications remain in force unless they cannot function as intended without the invalid portion.
 
 ---
 
