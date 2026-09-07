@@ -14,6 +14,20 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The plan he wanted might not have an election to attach to",
+    blurb: "Sandris built his campaign on a court-transition plan for a referendum that may already be legally void. He's the only candidate willing to say so.",
+    href: "torenthia-news-066.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
+    title: "The session that was supposed to happen in Month 6",
+    blurb: "The Toren River working group scheduled its next meeting for the spring. It's Month 11. The dispute mechanism for low-rainfall years is exactly as unresolved as it was then.",
+    href: "torenthia-news-067.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Nine people, one public question, and almost no public record",
     blurb: "If Korda reaches the Supreme Court, nine justices decide what 'different defined portions' means. Most citizens can't name three of them. One dissent may matter more than the rest.",
     href: "torenthia-news-065.html",

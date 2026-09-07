@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260901, against 98 published entries (seq 1–98, contiguous, no gaps).*
+*Last verified: 260907, against 101 published entries (seq 1–101, contiguous, no gaps).*
 
 ---
 
@@ -59,12 +59,12 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | Thread | Last Touched (Seq / Date) | Status |
 |---|---|---|
 | **Korda Convention arc** (competing petitions, JMC review) | 96 / 13.11 | **LIVE, clock running.** JMC still reviewing, no timeline given. news-064 surfaced the operational bind: the Elections Panel is preparing a Day 8 referendum that a plain reading of §15.5.a(1) says already cannot proceed, because no finding has been issued and its certification stands. Next: the JMC concluding, the Convention convening, or the referendum simply happening — the last of which Article XV has no mechanism to undo. |
-| **LC Race** (Vael/Carrow/Mak/Sandris) | 87 / 13.10 | **LIVE.** State-plurality mechanics covered (news-058). No date set for the actual election. |
+| **LC Race** (Vael/Carrow/Mak/Sandris) | 99 / 13.11 | **LIVE, now entangled with Korda.** news-066: Sandris is the only candidate who engaged directly with the §15.5.a(1) question, reframing his transition-plan platform as useful "twice" — once for the referendum, once for a Convention if one convenes instead. Carrow called it premature, Vael did not respond, Mak deflected to the Elections Panel. No election date set. |
 | **Fiscal Equalization (§12.8)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 95 / 13.10 | **LIVE.** §18.4 Trust designation request now filed, forwarded to Varek and Norvane for host State consent (news-063, nrs-029). Neither State has responded; no statutory deadline governs the timing. Next: either State consenting/declining, or the repeal petition itself resolving first with the land still unprotected either way. |
 | **Thoss / Civic Consul standing** | 68 / 13.09 | **QUIET since Month 9.** Her position on the Korda Convention/whole-statehood question is explicitly unresolved (agreed 260821 — Claude has narrative control, no early reveal). Watch for a forcing moment: a vote on her own bill, Orin's Convention seating, or a direct question she can't fully dodge. |
 | **Lake Varda / Sunderland crisis** | 97 / 13.11 | **REOPENED (260901).** Was dormant since Month 6 by neglect, not design — reopened via the §10.2 redaction petition (nrs-030) on the Varda Crossing intelligence summary, filed by the sister of one of the two killed border personnel. Directorate has not responded; no hearing set. This is the first time §10.2's redaction-petition mechanism (added in the Article X review) appears in world content. Next: the Directorate's response, or a court ruling on whether the source-protection ground still holds five months on. |
-| **Toren River negotiation** | 32 / 13.05 | **QUIET since Month 5.** "Provisional formula agreement... one item remains" — the remaining item was never resolved on-page. Same status as Lake Varda: dormant, not deliberately held. |
+| **Toren River negotiation** | 100 / 13.11 | **REOPENED (260907) — still unresolved, not advanced.** news-067 confirms the Month 6 follow-up session never happened; Caldris-side scheduling conflicts, no replacement date set. The dispute-resolution-mechanism gap remains exactly as open as Month 5. Untested so far — this year's flow has stayed within tolerance. Next: either side reconvening, or a low-rainfall year making the gap suddenly consequential. |
 | **Supreme Court composition** | 98 / 13.11 | **INTRODUCED.** All nine justices named in sc-001 (Y13 M3); profiled in news-065 ahead of any Korda filing. Pivotal voice: **Pael Doran**, whose *Corindal* dissent refused the merits while a threshold question was unresolved — directly relevant to the §15.5.a(1) question. Court gives no interviews; all contact routes through the clerk. See CHARACTER-REFERENCE.md for the full roster and what is/isn't established. |
 | **Corindal Industrial Partners** | 33 / 13.03 | **DELIBERATELY HELD.** Long-game arc built around a future SC composition and future election cycles that haven't happened yet (per WORLD-THREADS-PENDING.md). Do not open early. |
 | **Maren Sollis's Corindal dispatch** | 11 / up to 13.05 internally | **LIVE, irregular.** Single accumulating file (torenthia-dispatch-sollis.html), not discrete pieces. Also now writes "Show Your Work" as a separate, more formal explainer blog (seq 71, 85) — same person, two registers. |
@@ -173,6 +173,9 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 96 | 13.11 | News | Somebody Still Has to Print the Ballots | The Torenthian |
 | 97 | 13.11 | NRS | Petition for Redacted Release — Varda Crossing Intelligence Summary | National Record System |
 | 98 | 13.11 | News | Nine People, One Public Question, and Almost No Public Record | The Torenthian |
+| 99 | 13.11 | News | The Plan He Wanted Might Not Have an Election to Attach To | The Torenthian |
+| 100 | 13.11 | News | The Session That Was Supposed to Happen in Month 6 | The Torenthian |
+| 101 | 13.11 | NRS | Monetary Authority — State of the Economy Report, Second Half Year 13 | National Record System |
 
 ---
 
