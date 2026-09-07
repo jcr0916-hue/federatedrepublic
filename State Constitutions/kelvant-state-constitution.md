@@ -178,11 +178,19 @@ The legislative power of the State is vested in a Senate and an Assembly. For pu
 
 ### §3.2 The Assembly
 
-The Assembly consists of not fewer than sixty nor more than one hundred members elected from single-member districts of substantially equal population. Members serve two-year terms. Eligibility requirements shall remain as provided by law consistent with this Constitution.
+(a) The Assembly consists of not fewer than sixty nor more than one hundred members elected from single-member districts of substantially equal population.
+
+(b) Members of the Assembly serve two-year terms.
+
+(c) To be eligible for the Assembly, a person must be a qualified elector of the district, at least twenty-one years of age, and a resident of the district for at least one year prior to election.
 
 ### §3.3 The Senate
 
-The Senate consists of members elected from single-member districts, each Senate district comprising two contiguous Assembly districts. Senators serve staggered four-year terms, with approximately half elected every two years. The Legislature shall maintain an Assembly size compatible with this district structure.
+(a) The Senate consists of members elected from single-member districts, each Senate district comprising two contiguous Assembly districts. The Legislature shall maintain an Assembly size compatible with this district structure.
+
+(b) Senators serve staggered four-year terms, with approximately half elected every two years.
+
+(c) To be eligible for the Senate, a person must be a qualified elector of the district, at least twenty-five years of age, and a resident of the district for at least one year prior to election.
 
 ### §3.4 Apportionment and Districting
 
