@@ -288,7 +288,21 @@ No person may simultaneously exercise the powers of more than one branch of Stat
 
 (c) No agency, board, or commission may be created except by law. Except for constitutionally independent bodies and entities assigned to another constitutional officer, each such body shall be organized within a principal department.
 
-### §3.11 Removal by the People
+### §3.11 State Immigration Sponsorship
+
+(a) Arvane shall administer the State sponsorship stage of the immigration system established by the Constitution of the Federated Republic. State sponsorship is an exercise of State discretion and does not itself confer legal residency.
+
+(b) The Legislature shall establish by law public, objective, and nondiscriminatory sponsorship criteria and a simple administrative process consistent with this Constitution. Administration shall be assigned to a department or agency within the Governor's administrative branch. No separate constitutional office or independent commission is required.
+
+(c) Sponsorship criteria and decisions shall comply with federal equality requirements and the federal prohibitions on ideological screening and nationality-based quotas. A denial shall state the precise legal ground in writing.
+
+(d) State courts may review sponsorship decisions for constitutional or procedural illegality, but shall not substitute their policy judgment for lawful State discretion.
+
+(e) Federal certification, removal, deportation, and asylum remain within federal authority as provided by the Constitution of the Federated Republic.
+
+(f) Private employment, housing, charity, sponsorship assistance, or other voluntary activity does not itself constitute State sponsorship. Emergency humanitarian assistance by the State or its subdivisions likewise does not itself confer sponsorship or legal residency.
+
+### §3.12 Removal by the People
 
 (a) An elected constitutional executive officer may be referred to the people for removal by an absolute majority of the full authorized membership of the Assembly.
 

@@ -74,6 +74,14 @@ Nothing in this Constitution shall be construed to diminish, abridge, or conflic
 
 **§2.8 — State Ministers.** The Governor shall appoint State Ministers to lead the administrative departments of the State — including, at minimum, Maritime Affairs, Treasury, Justice, and Interior — upon recommendation of the President of the State Senate. Ministers serve at the pleasure of the President of the State Senate. The Governor shall formally dismiss a Minister upon the President's recommendation. Ministerial appointments, dismissals, and final directives are published to the Caldenmere Registry.
 
+**§2.9 — State Immigration Sponsorship.**
+(a) Caldenmere participates in the immigration system of the Federated Republic through the State sponsorship stage established by the federal Constitution. State sponsorship does not itself confer legal residency, which requires federal certification.
+(b) The Legislature shall establish by law public, lawful, and nondiscriminatory criteria and procedures governing State sponsorship, consistent with federal equality guarantees and the federal prohibitions on ideological screening and nationality-based quotas.
+(c) State sponsorship shall be administered through the Ministry of Interior, or another Ministry designated by law, under the administrative authority of the President of the State Senate. Individual sponsorship determinations are administrative acts and are not subject to personal direction by the Governor or by an individual Senator.
+(d) A denial of sponsorship shall state the precise legal ground in writing. State courts may review sponsorship decisions for constitutional or procedural illegality but shall not substitute their policy judgment for lawful State discretion.
+(e) Federal certification, removal, deportation, and asylum remain within federal authority as provided by the Constitution of the Federated Republic.
+(f) Municipal assistance, emergency shelter, medical care, maritime rescue, or other humanitarian action does not itself constitute State sponsorship, federal certification, or legal residency.
+
 ---
 
 ## ARTICLE III — THE LEGISLATURE
