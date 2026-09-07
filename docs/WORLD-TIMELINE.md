@@ -51,6 +51,28 @@ checking whether one already existed. It did.
 Sollis's dispatch) run on their own internal clock and publish out of date-sequence relative to
 the main thread. Always check `worldDate` in addition to `worldSeq` before assuming recency.
 
+## ON CONVERGENCE — don't artificially space things out (John, 260907)
+
+Multiple threads landing in the same world-time window is not a problem to manage away — it's
+how the actual world works, and Torenthia doesn't need to be denied that kind of density. The
+instinct to spread things out for tidiness is a bias to resist, not a default to follow.
+
+**Concretely, right now:** Day 8 (Month 12) is the one fixed anchor. Everything Korda-adjacent —
+the JMC concluding, the Convention triggering, Orin's seating, Sandris's platform going from
+hypothetical to live, a possible Thoss forcing-moment, the eventual SC suit — could plausibly
+land inside the same few weeks, because none of them have independent deadlines holding them
+apart. Argent Ridge and the Lake Varda petition are genuinely uncoupled from that window (no
+deadline at all) — which means real editorial choice over whether they join the pile-up or stay
+quiet, not an obligation either way.
+
+**What this doesn't mean:** publish everything the moment it's ready with no thought to order.
+The actual safeguard against convergence becoming unreadable is what's already built —
+the storytelling rule (local stakes carry each piece, no piece is required to explain the whole
+web), the character reference (name collisions are most likely exactly when pressure is
+highest), and this file itself (know what's converging before writing blind into it). Those
+tools exist so density doesn't require sacrificing clarity. Use them; don't use the fear of
+clutter as a reason to hold threads apart that would naturally collide.
+
 ## LIVE THREAD STATUS BOARD
 
 *Curated, not auto-generated — verify against the full index before trusting a "last touched"
