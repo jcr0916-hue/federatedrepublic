@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 172 provisions**
+> **20 articles · 173 provisions**
 
 thefederatedrepublic.org
 
@@ -508,6 +508,10 @@ Judicial judgments, official records, and authenticated documents are recognized
 ### §5.1 — Citizenship
 
 Citizenship is acquired by birth, by parentage, or by naturalization. A child is automatically a citizen if at least one parent is a citizen or legal resident at birth. Citizens acquire their full citizenship rights, including the right to vote and stand for office, at 18. Citizenship may not be stripped from any citizen except as provided in this section. Where a child born on Republic territory would hold no other citizenship, or would otherwise be stateless regardless of birthplace, citizenship is granted from birth. A legal resident may earn citizenship after the continuous residency period and clean legal record established by statute, upon passing a standardized assessment of civic and constitutional proficiency established by statute. A legal resident may alternatively earn citizenship through honorable completion of military or national service. The assessment tests knowledge of constitutional principles and civic structure — not political opinions or cultural loyalty. It is administered by a statutory independent agency under §3.9. No citizenship may be revoked as punishment, and the Republic may not manufacture statelessness as a punitive tool. Citizenship acquired by naturalization may be revoked only upon a judicial finding, by clear and convincing evidence, that it was obtained through material fraud in the application itself. No revocation may occur where it would render the person stateless. Revocation does not extend to any person who acquired citizenship derivatively through the naturalized person. A child born before a parent acquired legal residency or citizenship, who accompanies that parent to the Republic within a window defined by statute at not less than five years, receives derivative status.
+
+### §5.1.a — State and Territory Voting Citizenship
+
+A citizen of the Republic is, at all times, a voting citizen of exactly one State or Territory: the one of their residence or domicile as defined by that State's or Territory's statute, consistent with this Constitution and federal law. No statute may leave a citizen of the Republic without a State or Territory of voting citizenship. Resolution of conflicting claims of voting citizenship is established by statute. Recognition as a voting citizen of a State or Territory terminates any prior recognition in another.
 
 ### §5.2 — Legal Resident Rights
 

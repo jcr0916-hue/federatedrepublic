@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 172 provisions**
+> **20 articles · 173 provisions**
 
 ---
 
@@ -18,7 +18,7 @@
 - **Article II — The Dual Executive**  ·  §2.1–§2.18  (23 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.13  (14 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
-- **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (3 provisions)
+- **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (4 provisions)
 - **Article VI — Immigration and Residency**  ·  §6.1–§6.3.a  (4 provisions)
 - **Article VII — Elections**  ·  §7.1–§7.4  (5 provisions)
 - **Article VIII — Electoral Finance and Campaign Conduct**  ·  §8.1–§8.4  (4 provisions)
@@ -567,6 +567,11 @@ Judicial judgments, official records, and authenticated documents are recognized
 Citizenship is acquired by birth, by parentage, or by naturalization. A child is automatically a citizen if at least one parent is a citizen or legal resident at birth.
 
 - **Cross-refs:** §3.9
+
+### §5.1.a — State and Territory Voting Citizenship
+
+A citizen of the Republic is, at all times, a voting citizen of exactly one State or Territory: the one of their residence or domicile as defined by that State's or Territory's statute, consistent with this Constitution and federal law. No statute may leave a citizen of the Republic without a State or Territory of voting citizenship.
+
 
 ### §5.2 — Legal Resident Rights
 
