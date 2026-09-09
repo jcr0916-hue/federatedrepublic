@@ -5,97 +5,109 @@
 
 ## PREAMBLE
 
-We, the people of Rhovane, dwell where the land meets the water. For generations, our lives have been shaped by Lake Varda — by its fisheries and its storms, its crossings and its calms, its gift of connection to peoples beyond our shore. The lake gave us our livelihood; the land gave us our rootedness. Together they made a people who value steadiness without fearing change, who understand that what is old must earn its keep and what is new must prove its worth.
+We, the people of Rhovane, dwell where the land meets the water. For generations, our lives have been shaped by Lake Varda — by its storms and crossings, its harbors and fisheries, its commerce and its calms. The lake gave us connection; the land gave us rootedness. Together they made a people who value steadiness without fearing change, who understand that what is old must earn its keep and what is new must prove its worth.
 
-We built our governance on the institutions of those who first worked this soil and sailed these waters. Their legacy endures in the estates and counties that still structure our common life. We honor that legacy by preserving what remains serviceable and reforming what must be opened to all who now call Rhovane home.
+We built our governance on institutions inherited from those who first worked this soil, sailed these waters, and organized the estates and counties that still mark our common life. We preserve their useful habits, not their privileges. What was inherited by some belongs, as a public inheritance, to all who now call Rhovane home.
 
-We have learned that a constitution must be strong enough to govern a settled people and flexible enough to welcome those who arrive. We bind ourselves to neither the frozen past nor the untested future, but to the living present — to a government that deliberates before it acts, that checks power with power, and that belongs, in every chamber and at every level, to the people of Rhovane.
+We have learned that a constitution must be stable enough that families, communities, and enterprise may build upon it, yet open enough to welcome those who arrive and wise enough to correct what time makes obsolete. We bind ourselves to neither a frozen past nor an untested future, but to a living present — to government that deliberates before it acts, checks power with power, keeps the common field fair and usable, and otherwise leaves the people free to build upon it.
 
-We ordain and establish this Constitution to secure self-government within the Federated Republic, to protect the rights of every person within our borders, and to preserve Lake Varda and our lands for those who will come after us. We do so as a State bound by the Constitution of the Federated Republic in all matters committed to it, and sovereign in all matters reserved to us.
+We ordain and establish this Constitution to secure self-government within the Federated Republic, to protect the rights of every person within our borders, to preserve lawful private inheritance, and to hold Lake Varda and our other public inheritances in trust for generations yet to come. We do so as a State bound by the Constitution of the Federated Republic in all matters committed to it and self-governing in all matters reserved to us.
 
-This Constitution is adopted, and may be amended, only by the people of Rhovane.
+This Constitution may be altered only through the processes established herein and only with the consent of the people of Rhovane.
 
 ---
 
 ## ARTICLE I — DECLARATION OF RIGHTS
 
-### §1.1 Supremacy of the Federated Republic's Constitution
+### §1.1 Federal Rights Floor
 
-Nothing in this Article, or in this Constitution, may be construed to diminish, limit, or fall below any right guaranteed under Article I of the Federated Republic's Constitution. Where this Article is silent, the Republic's Constitution governs directly and of its own force. Where this Article speaks further than the Republic's Constitution, the greater protection applies within Rhovane. This Constitution is a floor beneath the Republic's floor, never a ceiling above it.
+Nothing in this Constitution may be construed to diminish any right guaranteed by the Constitution of the Federated Republic. Federal rights apply directly and of their own force. Rhovane may provide greater protection, but never less.
 
 ### §1.2 Inherent Rights
 
-All persons are by nature free and independent, and possess certain inherent rights, among which are those of enjoying and defending life and liberty; acquiring, possessing, and protecting property; and pursuing and obtaining safety and happiness. Government is instituted for the protection, security, and benefit of the people, and derives its just powers from the consent of the governed.
+All persons are by nature free and independent and possess inherent rights, including life and liberty; acquiring, possessing, transferring, and protecting property; pursuing lawful enterprise and occupation; and seeking safety and happiness. Government is instituted for the protection, security, and benefit of the people and derives its just powers from the consent of the governed.
 
 ### §1.3 Equality Before the Law
 
-No law of this State, and no act of any State or local officer, may discriminate against any person on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status, consistent with §1.6 of the Federated Republic Constitution. All political power is inherent in the people.
+No law of this State, and no act of any State or local officer, may discriminate against any person contrary to the equality guarantees of the Federated Republic Constitution. All political power is inherent in the people. No political right or public office may depend upon ancestry, hereditary status, ownership of land or property, membership in a family, or membership in a closed hereditary class.
 
-### §1.4 Freedom of Expression, Conscience, and Assembly
+### §1.4 Expression, Conscience, Assembly, and Petition
 
-Every person may freely speak, write, and publish on all subjects. The people have the right peaceably to assemble and to petition the government for redress of grievances. The rights of conscience shall not be infringed, and no person shall be compelled to attend, erect, or support any place of worship, or to maintain any ministry, against their consent. These rights are coextensive with §1.5 of the Federated Republic Constitution and may not be further restricted by State or local law.
+Every person may freely speak, write, and publish on all subjects; peaceably assemble; petition government for redress of grievances; and exercise freedom of conscience. No religious test shall be imposed for public right or office. These protections supplement and do not limit the corresponding rights secured by the Federated Republic Constitution.
 
 ### §1.5 Right to Bear Arms
 
-Every person holds the right to keep and bear arms for lawful purposes including self-defense, consistent with §1.10 of the Federated Republic Constitution. The State may establish licensing and safety frameworks, provided that lawful ownership for self-defense remains available to every citizen and legal resident.
+Every person holds the right to keep and bear arms for lawful purposes, including self-defense, consistent with the Federated Republic Constitution. The State may establish lawful licensing and safety frameworks consistent with that right.
 
 ### §1.6 Security from Unreasonable Search and Seizure
 
 The right of the people to be secure in their persons, houses, papers, effects, and data against unreasonable searches and seizures shall not be violated. No warrant shall issue but upon probable cause, supported by oath or affirmation, particularly describing the place to be searched and the persons or things to be seized.
 
-### §1.7 Due Process of Law
+### §1.7 Due Process and Remedy
 
-No person shall be deprived of life, liberty, or property without due process of law. Every person has the right to a certain remedy in the laws for all injuries or wrongs which they may receive in their person, property, or character. Justice shall be administered freely and without denial, promptly and without delay.
+No person shall be deprived of life, liberty, or property without due process of law. Every person has a right to an effective remedy for unlawful injury to person, property, liberty, or protected right. Justice shall be administered freely and without denial, promptly and without unreasonable delay.
 
 ### §1.8 Rights of the Accused
 
-In all criminal prosecutions, the accused has the right to a speedy and public trial by an impartial jury; to be informed of the nature and cause of the accusation; to be confronted with the witnesses against them; to have compulsory process for obtaining witnesses in their favor; and to have the assistance of counsel for their defense. No person shall be compelled in any criminal case to be a witness against themselves. Where a person cannot afford counsel, the court shall appoint counsel at public expense.
+In all criminal prosecutions, the accused has the right to a speedy and public trial by an impartial jury; notice of the accusation; confrontation of adverse witnesses; compulsory process for favorable witnesses; assistance of counsel; and freedom from compelled self-incrimination. Where a person cannot afford counsel, counsel shall be provided at public expense as required by law and the Federated Republic Constitution.
 
-### §1.9 Freedom from Excessive Punishment
+### §1.9 Excessive Punishment
 
-Excessive bail shall not be required, nor excessive fines imposed, nor cruel or unusual punishments inflicted. Bail shall be calibrated to ensure appearance and protect public safety, not as punishment.
+Excessive bail shall not be required, excessive fines imposed, nor cruel or unusual punishments inflicted. Bail shall be calibrated to lawful purposes of appearance and public safety and shall not be used as punishment.
 
-### §1.10 Property and Just Compensation
+### §1.10 Property, Succession, and Just Compensation
 
-Private property shall not be taken for public use without just compensation, determined by a process independent of the taking authority, consistent with §1.8 of the Federated Republic Constitution. No person shall be deprived of their property except by the judgment of their peers or the law of the land.
+(a) Private property shall not be taken for public use without just compensation determined through a process independent of the taking authority.
 
-### §1.11 Freedom of Contract and Commerce
+(b) Every person may acquire, possess, use, transfer, devise, and inherit lawful property, subject to general law protecting creditors, spouses, dependents, public safety, and the rights of others.
 
-The right to enter into lawful contracts, to engage in trade, and to pursue a lawful occupation is protected. The State may regulate commerce for the public health, safety, and welfare, but may not impose a burden on out-of-state goods, services, or persons greater than that imposed on its own, consistent with §12.7 of the Federated Republic Constitution.
+(c) Neither the State nor any political subdivision shall impose a tax solely by reason of the transfer of property at death or its receipt by inheritance. This subsection does not exempt income, gains, transactions, or subsequent use of inherited property from otherwise lawful taxation.
+
+### §1.11 Contract, Commerce, and Enterprise
+
+(a) Every person may enter lawful contracts, engage in lawful trade and enterprise, invest, form or transfer a lawful business, and pursue a lawful occupation.
+
+(b) The State may regulate economic activity by general law to protect health and safety; prevent fraud, coercion, monopoly abuse, and unfair restraint of trade; protect public resources; and secure the rights of others.
+
+(c) Regulation of lawful enterprise shall be public, administered under known standards, and prospective where reasonably practicable. Government shall not confer arbitrary advantage upon favored firms, families, occupations, or classes.
+
+(d) No burden may be imposed upon out-of-state goods, services, or persons greater than that imposed upon comparable in-state goods, services, or persons, except as permitted by the Federated Republic Constitution.
 
 ### §1.12 Labor Rights
 
-Every worker in Rhovane holds the right to organize, to bargain collectively through representatives of their own choosing, and to engage in peaceable collective action. No person shall be denied employment on account of membership or non-membership in any labor organization.
+Every worker holds the right to organize, bargain collectively through representatives of their choosing, and engage in lawful and peaceable collective action. No person shall be unlawfully discriminated or retaliated against solely because of lawful membership or non-membership in a labor organization. Detailed labor relations shall be governed by law consistent with this Constitution and the Federated Republic Constitution.
 
-### §1.13 Right of Lakeshore Access
+### §1.13 Lakeshore and Navigable-Water Access
 
-(a) The public holds a right of reasonable access to and along the shore of Lake Varda and all navigable waterways within the State, for purposes of fishing, navigation, recreation, and passage.
+(a) The public holds a right of reasonable access to and along the shore of Lake Varda and other navigable waters within the State for navigation, passage, recreation, and other lawful public use.
 
-(b) No person or entity may enclose, obstruct, or deny public passage along the shore below the ordinary high-water mark.
+(b) No person or entity may permanently enclose or obstruct public passage below the ordinary high-water mark except as reasonably necessary for lawful navigation, safety, harbor operation, conservation, or another public purpose consistent with the public trust.
 
-(c) The Legislature shall by statute establish the framework for access points, easements, and the accommodation of private property rights above the high-water mark, consistent with the public right guaranteed by this section.
+(c) The Legislature shall establish by law a framework for access points, easements, harbors, and accommodation of private property above the ordinary high-water mark. Property required for public access shall be acquired by lawful process and compensation where constitutionally required.
 
 ### §1.14 Lake Varda Public Trust
 
-(a) Lake Varda, its waters, its fisheries, and its shoreline within the jurisdiction of this State are held in public trust for the people of Rhovane, including generations yet to come.
+(a) Lake Varda, its waters, bed, navigable channels, shoreline below the ordinary high-water mark, and living resources within the jurisdiction of Rhovane are held in public trust for present and future generations.
 
-(b) The State may not alienate, sell, or grant exclusive rights to the bed of Lake Varda or the shoreline below the ordinary high-water mark.
+(b) The State shall not alienate or surrender control of the trust in a manner that defeats public navigation, reasonable access, water quality, ecological continuity, or long-term public use. Lawful leases, permits, concessions, docks, harbor facilities, and similar uses are permitted where consistent with the trust.
 
-(c) The State shall exercise its trust obligations to preserve water quality, sustain fisheries, and protect the ecological integrity of Lake Varda for present and future generations.
+(c) The State shall preserve reasonable public and commercial navigation, maintain the long-term usability of principal harbors and navigable channels, and protect the ecological integrity and water quality upon which those uses depend.
 
-(d) Any person may bring an action to enforce the public trust obligations of this section; standing is not contingent on individualized harm.
+(d) Any person may bring an action to enforce the public trust obligations of this section without showing individualized harm. Courts shall enforce constitutional and legal duties but shall not substitute their preferred technical policy for lawful expert judgment.
 
 ### §1.15 Right to Local Petition
 
-Every resident of a county or municipality holds the right to petition their local governing body directly. The governing body shall provide a public written response within sixty days of receipt. This section does not create a right to any particular outcome.
+Every resident of a county or municipality may petition the local governing body directly. The governing body shall provide a public written response within sixty days unless law provides a shorter period. This section creates no right to a particular outcome.
 
-### §1.16 Right to Transparency
+### §1.16 Transparency and Anti-Retaliation
 
-The people have the right to know how they are governed. All official acts of the State and its subdivisions shall be matters of public record. No governmental action shall be concealed from the people except upon grounds narrowly defined by law and subject to judicial review. The State Record established in Article VIII gives effect to this right.
+(a) The people have a right to know how they are governed. Official acts of the State and its subdivisions are public records except on grounds narrowly defined by law and subject to judicial review.
 
-### §1.17 Non-Derogation
+(b) No person shall suffer unlawful retaliation for exercising a right secured by this Article, seeking a lawful remedy, petitioning government, obtaining public records, or bringing a lawful public-trust action.
 
-No right enumerated in this Article may be suspended, limited, or derogated except as, and to the extent that, Article I §1.19 of the Federated Republic Constitution permits derogation of the corresponding federal right, and never below the federal non-derogable floor of §1.19.a. The enumeration of certain rights shall not be construed to deny or disparage others retained by the people.
+### §1.17 Emergency Limitation of State Rights
+
+State rights may be temporarily limited during a lawful emergency only where necessary, proportionate, and permitted by the Federated Republic Constitution. No emergency may be used to permanently alienate the Lake Varda public trust, extinguish the right of judicial remedy, or evade a right declared non-derogable by the Federated Republic Constitution.
 
 ---
 
@@ -103,105 +115,109 @@ No right enumerated in this Article may be suspended, limited, or derogated exce
 
 ### §2.1 The Governor
 
-The executive power of the State of Rhovane is vested in the Governor, who shall be the chief executive of the State and shall see that the laws are faithfully executed.
+The executive power of Rhovane is vested in the Governor, who is chief executive of the State and shall see that the laws are faithfully executed.
 
-### §2.2 Election and Term
+### §2.2 Election, Qualification, and Term
 
-(a) The Governor shall be elected by the qualified electors of the State at large for a term of four years, by ranked-choice ballot administered consistent with the National Voting System standards under the Federated Republic Constitution.
+(a) The Governor shall be elected statewide by ranked-choice ballot for a term of four years under election law consistent with the National Voting System.
 
-(b) No person may serve more than two consecutive terms as Governor. After sitting out one full term, a former Governor may again seek the office.
+(b) No person may serve more than two consecutive terms as Governor. After one full intervening term, a former Governor may again seek the office.
 
-(c) To hold the office of Governor, a person must be a citizen of the Federated Republic, a resident of Rhovane for at least five years, and at least thirty years of age at the time of taking office. The Governor must meet the disclosure requirements established by federal law as applied to state office.
+(c) A Governor must be at least thirty years of age, a citizen of the Federated Republic, a voting citizen of Rhovane, and have resided in Rhovane for at least three years before taking office.
 
-### §2.3 Powers and Duties of the Governor
+### §2.3 Powers and Duties
 
 The Governor shall:
 
-(a) faithfully execute the laws of Rhovane;
+(a) faithfully execute the laws;
 
-(b) serve as Commander-in-Chief of the organized militia of the State, except when it is called into the service of the Federated Republic;
+(b) exercise authority over organized State forces only as permitted by the Federated Republic Constitution and State law;
 
-(c) appoint the heads of executive departments, subject to confirmation by the Estate Council as provided in Article III;
+(c) appoint principal executive officers as provided by this Constitution and law;
 
-(d) appoint judges to fill vacancies, subject to the process established in Article IV;
+(d) make judicial appointments as provided in Article IV;
 
-(e) grant reprieves, commutations, and pardons for offenses against the State, except in cases of impeachment, and subject to the same prohibition on self-clemency established in §2.12 of the Federated Republic Constitution;
+(e) grant reprieves, commutations, and pardons for offenses against the State, except in impeachment matters and except where prohibited by the Federated Republic Constitution; where the Governor has a direct material personal interest, clemency shall be exercised by the lawful successor or other neutral authority provided by law;
 
-(f) convene the Legislature in special session upon extraordinary occasions, specifying the purpose of the session;
+(f) convene the Legislature in special session upon extraordinary occasion and state the purpose of the call, without limiting the constitutional authority of the Legislature to consider other lawful matters;
 
-(g) deliver to the Legislature, at the opening of each regular session, information on the state of the State and recommend such measures as the Governor considers necessary and expedient;
+(g) address the Legislature at the opening of each regular session on the condition of the State and recommend measures;
 
-(h) prepare and submit to the Legislature an annual proposed budget;
+(h) submit an annual proposed budget;
 
-(i) represent Rhovane in relations with other States, with the federal government, and with foreign delegations received through federal channels;
+(i) represent Rhovane in lawful intergovernmental relations, subject to exclusive federal authority; and
 
-(j) declare a state of emergency in response to natural disaster, public health crisis, or other severe threat to public safety, such declaration to specify its geographic scope, duration not exceeding thirty days, and the measures authorized; any extension beyond thirty days requires approval by a majority of the Estate Council.
+(j) exercise emergency authority only as provided in §2.4.
 
-### §2.4 The Lieutenant Governor
+### §2.4 Emergency Authority
 
-(a) A Lieutenant Governor shall be elected jointly with the Governor, on the same ticket and for the same term, by the qualified electors of the State.
+(a) The Governor may declare an emergency in response to natural disaster, public-health crisis, attack, infrastructure failure, or another severe and immediate threat to life, safety, essential public function, or constitutional order.
 
-(b) The Lieutenant Governor shall be President of the Estate Council and shall have no vote except to break a tie.
+(b) The declaration shall state the factual basis, geographic scope, measures authorized, and duration, which shall not exceed fourteen days without legislative extension.
 
-(c) In the event of the death, resignation, removal, or permanent incapacity of the Governor, the Lieutenant Governor shall become Governor for the remainder of the term.
+(c) Extension requires approval of a majority of the authorized membership of each chamber for a period fixed by law or resolution. The Legislature may terminate an emergency at any time by the same vote.
 
-(d) The Lieutenant Governor shall perform such other duties as the Governor may assign and as the Legislature may prescribe by law.
+(d) No substantially identical emergency may be reissued to evade expiration, legislative refusal, or constitutional limits.
 
-### §2.5 The Governor's Veto
+(e) Emergency authority does not extend to general direction of ordinary economic activity merely because prices change, markets decline, a lawful strike occurs, or an industry suffers loss, except to the extent strictly necessary to secure essential goods, services, infrastructure, or public safety during the emergency.
 
-(a) Every bill passed by both chambers of the Legislature shall be presented to the Governor. The Governor may sign the bill, in which case it becomes law; or may return it, with written objections, to the chamber in which it originated within ten business days of presentment.
+### §2.5 The Lieutenant Governor
 
-(b) A bill returned by the Governor may become law upon:
+(a) The Lieutenant Governor shall be elected jointly with the Governor for the same term.
 
-&emsp;(i) passage by a two-thirds vote of the members elected to the Chamber of Deputies; or
+(b) The Lieutenant Governor shall be President of the Estate Council and may preside and perform non-decisional procedural duties, but shall possess no legislative vote or other legislative decisional authority.
 
-&emsp;(ii) passage by a three-fifths vote of the members elected to the Chamber of Deputies together with a majority vote of the members elected to the Estate Council.
+(c) Upon the death, resignation, removal, or permanent incapacity of the Governor, the Lieutenant Governor immediately becomes Governor for the remainder of the term.
 
-(c) If the Governor neither signs nor returns a bill within ten business days of presentment, it becomes law without the Governor's signature, unless the Legislature by adjournment prevents its return, in which case it does not become law.
+(d) The Lieutenant Governor shall perform other duties prescribed by this Constitution or law that are consistent with separation of governmental authority.
 
-(d) The Governor may approve an appropriation bill in whole, or may veto one or more items of appropriation while approving the remainder. An item so vetoed may be restored only under the same thresholds as subsection (b).
+### §2.6 Veto
 
-(e) The Governor may not exercise a substantive veto on a bill that has already been presented and returned in a prior session, where that bill has been reintroduced and passed in substantially the same form; such a bill may be returned only on grounds of new constitutional concern arising from changed circumstances, stated in writing and published to the State Record.
+(a) Every bill passed by the Legislature shall be presented to the Governor. Within ten business days the Governor may sign it or return it with written objections. A bill not returned within that period becomes law without signature regardless of legislative adjournment.
 
-### §2.6 Succession
+(b) A returned bill becomes law upon either:
 
-(a) If both the Governor and Lieutenant Governor are unable to serve, the Speaker of the Chamber of Deputies shall act as Governor until the disability is removed or a Governor is elected.
+&emsp;(i) a two-thirds vote of the authorized membership of the Chamber of Deputies; or
 
-(b) The Legislature shall provide by law for further succession and for the determination of incapacity, consistent with §2.16 of the Federated Republic Constitution.
+&emsp;(ii) a three-fifths vote of the authorized membership of the Chamber together with a majority vote of the authorized membership of the Estate Council.
 
-### §2.7 Executive Departments
+(c) The Governor may veto one or more distinct items of appropriation while approving the remainder. An item is restored under the thresholds in subsection (b).
 
-(a) The Legislature shall organize the executive branch into departments by law. Each department shall be headed by a principal officer appointed by the Governor with the confirmation of the Estate Council.
+### §2.7 Succession and Incapacity
 
-(b) Department heads serve at the pleasure of the Governor unless otherwise provided by law, provided that the Governor shall publish to the State Record the grounds for any dismissal.
+(a) If both the Governor and Lieutenant Governor are unable to serve, the Speaker of the Chamber of Deputies shall act as Governor until the disability is removed or a lawful successor assumes office.
 
-(c) The Governor may establish by executive order such subordinate offices, boards, and commissions within the departments as are necessary for the efficient administration of the State, subject to appropriation by the Legislature.
+(b) While acting as Governor, the Speaker's legislative vote and decisional authority are suspended and another Deputy shall exercise the duties of Speaker.
 
-### §2.8 Council of State
+(c) The Legislature shall provide by law for further succession and for voluntary and involuntary determinations of temporary or permanent incapacity, restoration to office, and neutral resolution of disputes. No oath or administrative formality shall delay a succession that occurs by operation of this Constitution.
 
-(a) There shall be a Council of State, composed of the heads of the executive departments, the Lieutenant Governor, and such other officers as the Legislature may designate by law.
+### §2.8 Executive Departments and Confirmation
 
-(b) The Governor shall preside over the Council of State.
+(a) The Legislature shall organize the executive branch into departments by law. Each principal department head shall be appointed by the Governor and confirmed by the Estate Council.
 
-(c) The Council of State shall meet:
+(b) If the Estate Council neither confirms nor rejects a nomination within sixty days after submission, the nominee is deemed confirmed. Upon rejection, the Governor shall submit another nomination as provided by law. Law shall provide acting-service rules sufficient to prevent administrative vacancy without defeating the confirmation power.
 
-&emsp;(i) at the call of the Governor;
+(c) Ordinary department heads serve at the pleasure of the Governor unless law provides otherwise. The grounds for dismissal shall be published to the State Record. Independent, adjudicative, election, ethics, records, or other constitutionally protected officers may be removed only as provided by this Constitution or law consistent with their independence.
 
-&emsp;(ii) upon the written request of a majority of its members; or
+(d) The Governor may establish subordinate offices, boards, and commissions by executive order where authorized by law and appropriation.
 
-&emsp;(iii) as the Legislature may require by law.
+### §2.9 Council of State
 
-(d) The Council of State is a consultative body. It does not exercise executive authority independent of the Governor. Its deliberations and recommendations shall be recorded and published to the State Record, except where the Governor certifies that publication of specific matters would compromise public safety or ongoing law enforcement operations.
+(a) There shall be a Council of State composed of the principal executive officers, the Lieutenant Governor, and such other officers as law may provide. The Governor shall preside.
 
-### §2.9 Removal
+(b) The Council is consultative and possesses no executive authority independent of the Governor.
 
-(a) The Governor, Lieutenant Governor, and other civil officers of the State may be removed from office through impeachment for cause.
+(c) Formal recommendations and decisions shall be recorded and published. Deliberative material may be temporarily withheld only on grounds defined by law, including personal privacy, privileged legal advice, security, active investigation, procurement, negotiation, or protected commercial information, and shall be subject to preservation and lawful review.
 
-(b) The Chamber of Deputies has the sole power of impeachment by majority vote of members elected.
+### §2.10 Impeachment and Removal
 
-(c) The Estate Council has the sole power to try impeachments. Conviction requires a two-thirds vote of members elected. The Chief Justice of the High Court shall preside when the Governor or Lieutenant Governor is tried.
+(a) The Governor, Lieutenant Governor, and other civil officers may be impeached for grave misconduct, corruption, abuse of office, serious constitutional violation, or other cause defined by law consistent with this Constitution.
 
-(d) Judgment upon conviction extends only to removal from office and disqualification from holding any office of honor, trust, or profit under this State. The party convicted remains liable to prosecution and punishment according to law.
+(b) The Chamber of Deputies has the sole power of impeachment by majority of its authorized membership.
+
+(c) The Estate Council has the sole power to try impeachments. Conviction requires two-thirds of its authorized membership. The Chief Justice shall preside when the Governor or Lieutenant Governor is tried.
+
+(d) Conviction removes the officer. Disqualification from future State office requires a separate two-thirds vote of the Estate Council. Criminal or civil liability remains unaffected.
 
 ---
 
@@ -209,129 +225,103 @@ The Governor shall:
 
 ### §3.1 The Legislature
 
-The legislative power of the State of Rhovane is vested in a Legislature consisting of two chambers: the Chamber of Deputies and the Estate Council.
+The legislative power of Rhovane is vested in a Legislature consisting of the Chamber of Deputies and the Estate Council.
 
 ### §3.2 General Provisions
 
-(a) Each chamber shall be the sole judge of the elections, returns, and qualifications of its own members.
+(a) Each chamber shall initially judge the elections, returns, and qualifications of its members, subject to independent election administration and judicial review.
 
-(b) A majority of the members elected to each chamber constitutes a quorum to do business.
+(b) A majority of the authorized membership constitutes a quorum. "Authorized membership" means the total number of seats established by Constitution or law for the body, whether or not every seat is occupied.
 
-(c) Each chamber shall determine its own rules of procedure, may compel the attendance of absent members, and may punish its members for disorderly conduct.
+(c) Each chamber shall determine its rules, compel attendance, discipline members, and, by two-thirds of its authorized membership, expel a member for stated cause after fair process.
 
-(d) Each chamber may, with the concurrence of two-thirds of its members elected, expel a member.
+(d) The Legislature shall meet in regular session at least annually. The Governor or a majority of the authorized membership of each chamber may call a special session.
 
-(e) The Legislature shall meet in regular session at least once annually at such time as provided by law. Special sessions may be convened by the Governor or upon written request of a majority of the members elected to each chamber.
+(e) Compensation shall be fixed by law and shall not be changed for a member during the term then being served.
 
-(f) Members of each chamber shall receive compensation as provided by law, which may not be increased or decreased during the term for which they were elected. No member may hold any other office of profit under the State during their term.
+(f) No member may simultaneously exercise the voting or decisional authority of another branch or hold an incompatible office under the Federated Republic or another State.
 
-(g) No person holding an office under the Federated Republic, or any other State, may simultaneously serve as a member of the Legislature. A member who accepts any such office shall be deemed to have vacated their legislative seat.
+### §3.3 Chamber of Deputies
 
-### §3.3 The Chamber of Deputies
+(a) The Chamber of Deputies shall consist of not fewer than sixty nor more than ninety members elected statewide by open-list proportional representation under law consistent with the National Voting System.
 
-(a) The Chamber of Deputies shall consist of members elected by the qualified electors of the State at large by open-list proportional representation, administered consistent with the National Voting System standards under the Federated Republic Constitution.
+(b) Deputies serve four-year terms and may serve no more than three consecutive terms. After one full intervening term, a former Deputy may again serve.
 
-(b) The Chamber shall have seventy-five members unless altered by law, provided that the number shall not fall below sixty nor exceed ninety.
+(c) A Deputy must be at least twenty-one years of age, a citizen of the Federated Republic, and a voting citizen of Rhovane. Law may require a reasonable period of State residence not exceeding one year before election.
 
-(c) Members of the Chamber shall serve four-year terms. No member may serve more than three consecutive terms. After sitting out one full term, a former member may again seek election.
+(d) The Chamber shall elect a Speaker from among its members. The Speaker shall preside and shall enter the executive succession only as provided in Article II.
 
-(d) To be eligible for the Chamber, a person must be a qualified elector of the State, at least twenty-one years of age, and a resident of the State for at least two years prior to election.
+### §3.4 Estate Council
 
-(e) The Chamber shall elect a Speaker from among its members. The Speaker shall preside over the Chamber, shall serve as Acting Governor when the line of succession so requires, and shall perform such other duties as the Chamber's rules provide.
+(a) The Estate Council is the chamber of territorial continuity, local institutional experience, and civic review. It shall consist of thirty members selected under this section.
 
-(f) Elections to the Chamber shall be held concurrently with elections for the federal Assembly, unless the Chamber by law establishes a different schedule consistent with the Federated Republic Constitution.
+(b) Fifteen members shall be elected from geographic Estate constituencies. The Estates are historic regions of Rhovane and confer no proprietary, ancestral, or hereditary status. Every eligible voter within an Estate constituency votes on equal terms.
 
-### §3.4 The Estate Council
+(c) Estate constituency boundaries shall be established and periodically adjusted by an independent process under law. They shall comply with federal and State equality requirements, substantial population equality, contiguity, and reasonable geographic coherence. Historic Estate geography, county boundaries, watersheds, settlement patterns, and cultural continuity may be considered where consistent with those requirements.
 
-(a) The Estate Council shall consist of thirty members, apportioned and selected as provided in this section.
+(d) Ten members shall represent county government. County governing bodies shall select qualified persons through a public process established by law. Law shall provide a fair system of grouping or rotation if the number of counties differs from the number of county seats, and shall ensure every county regular participation over time. A county representative need not simultaneously hold county office.
 
-(b) Fifteen members shall be elected from the historic estates of Rhovane. The Legislature shall by law define the boundaries of the estates, which shall reflect the historic landholding geography of the State, provided that:
+(e) Five civic members shall be appointed by the Governor from public shortlists produced under law by open and qualifying civic organizations within the following broad domains:
 
-&emsp;(i) no estate shall contain fewer than three entire counties;
+&emsp;(i) education, research, and knowledge;
 
-&emsp;(ii) each estate shall elect at least one member; and
+&emsp;(ii) commerce, enterprise, and productive life;
 
-&emsp;(iii) the remaining seats shall be apportioned among the estates as the Legislature provides by law, taking account of both population and historic boundaries.
+&emsp;(iii) labor, professions, and skilled vocations;
 
-(c) Ten members shall be elected by the governing bodies of the counties from among their own membership. Each county shall elect one member, provided that where the number of counties exceeds the seats available, the Legislature shall by law establish a rotation or grouping of counties. Where the number of counties is fewer than the seats available, the remaining seats shall be apportioned among the historic estates under subsection (b). A county member ceases to hold office in the Estate Council upon ceasing to be a member of the county governing body.
+&emsp;(iv) Lake Varda, navigation, environment, and public-resource stewardship; and
 
-(d) Five members shall be appointed by the Governor from nominees submitted by the recognized civic institutions of Rhovane:
+&emsp;(v) civic, cultural, and community institutions.
 
-&emsp;(i) one from nominees submitted by the University of Rhovane and other institutions of higher learning recognized by law;
+No named organization owns a nomination right. Law shall provide a neutral fallback nomination process if qualifying organizations fail to produce a timely shortlist.
 
-&emsp;(ii) one from nominees submitted by the chambers of commerce and agricultural societies of the State;
+(f) Estate Councillors serve staggered six-year terms, with approximately one-third of seats filled every two years. No person may serve more than twelve consecutive years; after one full intervening term, a former Councillor may again serve.
 
-&emsp;(iii) one from nominees submitted by the professional guilds and learned societies recognized by law;
+(g) A Councillor must be at least twenty-five years of age, a citizen of the Federated Republic, and a voting citizen of Rhovane. Civic seats may require relevant experience by objective law but may not require membership in a particular organization.
 
-&emsp;(iv) one from nominees submitted by the Lake Varda Fisheries Council established under Article VI; and
+(h) No seat, vote, nomination right, or qualification in the Estate Council may depend upon ancestry, hereditary title or status, ownership of land, membership in a family, or membership in a closed hereditary class.
 
-&emsp;(v) one from nominees submitted by such other civic bodies as the Legislature may by law designate.
-
-(e) Each recognized civic institution shall submit no fewer than three nominees for each seat. The Governor shall select one appointee from among the nominees submitted. If an institution fails to submit nominees within ninety days of a vacancy, the Governor may appoint any qualified person.
-
-(f) Members of the Estate Council shall serve staggered six-year terms. The Legislature shall by law establish the initial staggering such that approximately one-third of the seats are filled every two years.
-
-(g) To be eligible for the Estate Council, a person must be a qualified elector of the State, at least twenty-five years of age, and a resident of the State for at least three years prior to election or appointment.
-
-(h) No person may serve on the Estate Council for more than twelve consecutive years. After sitting out one full term, a former member may again serve.
+(i) The Estate Council shall elect from among its members an officer to exercise any decisional function that cannot constitutionally be exercised by the Lieutenant Governor as President.
 
 ### §3.5 Legislative Process
 
-(a) Every bill shall address a single subject, which shall be expressed in its title.
+(a) Every bill shall address one reasonably related subject expressed in its title.
 
-(b) No bill may become law until it has been printed and available to members and the public for at least three calendar days before final passage, except in cases of emergency declared by a two-thirds vote of the members elected to each chamber.
+(b) Except in an emergency declared by two-thirds of the authorized membership of each chamber with published reasons, the final text of a bill shall be publicly available for at least seven calendar days before final passage.
 
-(c) Bills may originate in either chamber, except that all bills for raising revenue and all appropriation bills shall originate in the Chamber of Deputies. The Estate Council may propose amendments to revenue and appropriation bills as to other bills.
+(c) Bills may originate in either chamber, except revenue and appropriation bills, which shall originate in the Chamber of Deputies. The Estate Council may amend them subject to this Constitution.
 
-(d) No law shall be enacted except by bill. No bill shall become law unless it receives a majority of the votes of all members elected to each chamber, unless this Constitution provides otherwise.
+(d) With a quorum present, an ordinary bill passes a chamber by majority of members present and voting unless this Constitution requires a greater threshold.
 
-### §3.6 Inter-Chamber Resolution
+(e) Conference reports shall be published and voted upon without amendment after such public-review period as law or joint rule provides.
 
-(a) When a bill passed by one chamber is amended by the other, the originating chamber may accept the amendments by majority vote, or may request a committee of conference.
+### §3.6 Deliberative Override of the Estate Council
 
-(b) A committee of conference shall consist of an equal number of members from each chamber. The committee shall endeavor to reconcile differences and report a single text to both chambers. If the committee is unable to agree within the period established by joint rule, the bill fails for that session.
+(a) If the Estate Council rejects, fails for ninety days to act upon, or adopts amendments unacceptable to the Chamber on a Chamber-passed bill, the Chamber may place the bill on a deliberative-override calendar.
 
-(c) Conference reports shall be voted on by each chamber without amendment.
+(b) A six-month cooling-off period shall follow. During that period the bill shall receive public hearings, the objections of both chambers shall be published, and the full text and material testimony shall be available through the State Record.
 
-### §3.7 Estate Council Override
+(c) At the end of the period, the Chamber may pass the bill by three-fifths of its authorized membership. The bill is then deemed passed by the Legislature and shall be presented to the Governor.
 
-(a) The Chamber of Deputies may override the rejection, failure to act, or unacceptable amendment of a bill by the Estate Council under the following procedure:
+(d) This override may not be used to alter the Constitution, the composition or selection of the Estate Council, or the constitutional amendment and convention process.
 
-&emsp;(i) Following the Estate Council's action or, in the case of inaction, following the expiration of ninety days from the date the bill was received by the Estate Council, the Chamber may by resolution place the bill on the override calendar.
+(e) The Estate Council may originate, amend, reject, and delay legislation, but may not enact a bill over the ultimate rejection of the Chamber of Deputies.
 
-&emsp;(ii) A cooling-off period of six calendar months, commencing on the date of the resolution, shall elapse.
+### §3.7 Budget and Appropriation
 
-&emsp;(iii) During the cooling-off period, the bill shall be the subject of public hearings conducted jointly by the relevant committees of each chamber, and the State Record shall publish the text of the bill and summaries of all testimony received.
+(a) The Governor shall submit a proposed budget as provided by law. The Chamber shall consider it first and may amend it.
 
-&emsp;(iv) At the conclusion of the cooling-off period, the Chamber may pass the bill by a three-fifths vote of the members elected. Upon such passage, the bill is deemed to have passed both chambers and shall be presented to the Governor.
+(b) The Estate Council may amend a budget passed by the Chamber but may not increase total appropriations beyond the total approved by the Chamber.
 
-(b) The override procedure under this section may not be used on:
+(c) If no new budget has taken effect at the beginning of a fiscal year, lawful existing programs, debt obligations, and constitutional duties continue month to month at levels provided by law based on the preceding budget until a new budget takes effect. No new initiative arises solely from this continuation.
 
-&emsp;(i) a bill proposing an amendment to this Constitution;
+### §3.8 Investigations
 
-&emsp;(ii) a bill altering the boundaries or representation of the historic estates; or
+Each chamber and its authorized committees may investigate matters within State legislative competence, issue subpoenas, compel testimony and documents, and administer oaths. Judicial enforcement and lawful privileges shall be governed by law.
 
-&emsp;(iii) a bill that has been the subject of an override under this section within the preceding two calendar years.
+### §3.9 Legislative Immunity
 
-(c) The cooling-off and override procedure applies symmetrically to the Estate Council: where the Chamber of Deputies rejects or fails to act on a bill originated in the Estate Council, the Estate Council may, following the same procedure and thresholds, override the Chamber's inaction. The Chamber of Deputies may not use the override procedure on a bill originated in the Estate Council and overridden under this subsection.
-
-### §3.8 Appropriation and Budget
-
-(a) The Governor shall submit a proposed budget to the Legislature not later than the date prescribed by law.
-
-(b) The Chamber of Deputies shall consider the proposed budget and may amend it before passage.
-
-(c) The Estate Council may amend the budget as passed by the Chamber of Deputies, but may not increase total appropriations beyond the total enacted by the Chamber.
-
-(d) If the Legislature has not enacted a budget by the start of the fiscal year, the previous year's budget shall continue in effect on a month-to-month basis at the level of the preceding month's expenditures until a budget is enacted.
-
-### §3.9 Investigations
-
-Each chamber, and each committee of each chamber duly authorized, may conduct investigations into any matter within the legislative competence of the State. For this purpose, each chamber may issue subpoenas, compel the attendance of witnesses, require the production of documents, and administer oaths. A person who refuses to comply with a duly issued subpoena may be brought before the High Court for enforcement.
-
-### §3.10 Legislative Immunity
-
-No member of the Legislature shall be questioned in any other place for any speech, debate, or vote in either chamber or in any committee thereof. This immunity does not extend to the publication of speech outside the chamber.
+No member shall be questioned elsewhere for speech, debate, or vote in a chamber or committee. This immunity does not extend to republication or conduct outside the legislative function.
 
 ---
 
@@ -339,65 +329,61 @@ No member of the Legislature shall be questioned in any other place for any spee
 
 ### §4.1 Judicial Power
 
-The judicial power of the State of Rhovane is vested in a High Court and in such inferior courts as the Legislature may establish by law.
+The judicial power of Rhovane is vested in a High Court and such inferior courts as law establishes. Courts may issue injunctions, stays, writs, declaratory relief, and other lawful remedies necessary to enforce this Constitution and State law.
 
-### §4.2 The High Court
+### §4.2 High Court
 
-(a) The High Court shall consist of seven justices.
+(a) The High Court consists of seven justices.
 
-(b) The High Court shall have:
+(b) It has original jurisdiction over construction of this Constitution, disputes between legislative chambers, disputes between the State and its political subdivisions, and such other matters as law provides; appellate jurisdiction as provided by law; and authority to issue necessary writs.
 
-&emsp;(i) original jurisdiction in cases involving the construction of this Constitution, disputes between chambers of the Legislature, disputes between the State and its political subdivisions, and such other matters as the Legislature may prescribe;
+(c) A majority of justices participating in a case may declare a State or local law or governmental act void to the extent inconsistent with this Constitution or the Constitution of the Federated Republic.
 
-&emsp;(ii) appellate jurisdiction from the inferior courts, as provided by law; and
+(d) Law shall provide expedited access or review where delay threatens irreversible impairment of an election, constitutional function, or the Lake Varda public trust.
 
-&emsp;(iii) the power to issue such writs as are necessary to the exercise of its jurisdiction.
+### §4.3 Appointment and Term of High Court Justices
 
-(c) The High Court may declare a law enacted by the Legislature, or an act of the executive, void if it finds that law or act inconsistent with this Constitution or with the Constitution of the Federated Republic. Such a declaration requires the concurrence of a majority of the justices.
+(a) Upon vacancy, the Judicial Nominating Commission shall submit to the Governor a public list of not fewer than three and not more than five qualified nominees.
 
-### §4.3 Appointment of Justices
+(b) The Governor shall appoint one nominee, subject to confirmation by majority of the authorized membership of the Legislature sitting in joint session. If the Legislature neither confirms nor rejects the nominee within sixty days, the nominee is deemed confirmed.
 
-(a) Justices of the High Court shall be appointed by the Governor from a list of qualified nominees prepared by the Judicial Nominating Commission.
+(c) Upon rejection, the Governor shall select another available nominee or the Commission shall produce a new list as provided by law. No rejection or inaction may create an indefinite vacancy.
 
-(b) Each appointment is subject to confirmation by a majority vote of the Legislature sitting in joint session. If the Legislature does not confirm or reject a nominee within sixty days of the Governor's submission, the nominee is deemed confirmed.
+(d) A confirmed justice serves one nonrenewable term of twelve years.
 
-(c) A justice confirmed under this section shall serve a single term of twelve years and is not eligible for reappointment.
-
-(d) To be eligible for appointment as a justice, a person must be a citizen of the Federated Republic, a resident of Rhovane, and a member in good standing of the State bar for at least fifteen years, or have served as a judge of an inferior court of this State for at least ten years.
+(e) A justice must be a citizen of the Federated Republic, a voting citizen of Rhovane, and possess substantial legal experience and professional qualifications established by law.
 
 ### §4.4 Judicial Nominating Commission
 
-(a) There shall be a Judicial Nominating Commission composed of seven members:
+(a) There shall be a seven-member Judicial Nominating Commission: three appointed by the Governor, two by the Estate Council, and two by the Chamber of Deputies. No single appointing authority may hold a majority of the Commission.
 
-&emsp;(i) three members appointed by the Governor;
+(b) Members serve staggered six-year nonrenewable terms and may hold no incompatible public office. Law may require representation of legal experience and members of the public without reserving appointment to a named private organization.
 
-&emsp;(ii) two members appointed by the Estate Council;
+(c) The Commission shall use published criteria and disclose conflicts. Sensitive applicant material and deliberations may remain confidential as provided by law, but final shortlists and such recommendation records as law requires shall be public.
 
-&emsp;(iii) two members appointed by the Chamber of Deputies.
+(d) The Legislature may extend the Commission's nomination function to inferior courts.
 
-(b) Members shall serve staggered terms of six years and may not be reappointed.
+### §4.5 Inferior Courts and Retention
 
-(c) No member may hold any other office under the State or the Federated Republic while serving on the Commission.
+(a) Inferior courts and their appointment methods shall be established by law consistent with judicial independence. Where the Nominating Commission has jurisdiction, appointments shall be made from its nominees.
 
-(d) The Commission shall, upon a vacancy on the High Court, submit to the Governor a list of not fewer than three and not more than five qualified nominees. The Commission's deliberations shall be confidential, but the list of nominees submitted to the Governor shall be published to the State Record at the time of submission.
+(b) Inferior-court judges shall face a noncompetitive retention election after an initial term not exceeding four years and, if retained, at intervals not exceeding six years thereafter.
 
-(e) The Legislature may by law extend the jurisdiction of the Commission to nominations for inferior courts.
+(c) The State shall provide voters independent and useful judicial-performance information before retention elections. Judges may not make commitments concerning the outcome of cases or classes of cases as a condition of retention.
 
-### §4.5 Inferior Courts
+### §4.6 Judicial Conduct and Independence
 
-(a) The Legislature shall establish by law inferior courts as necessary for the administration of justice. Judges of inferior courts shall be appointed by the Governor from nominees submitted by the Judicial Nominating Commission where the Legislature has extended the Commission's jurisdiction, or by such other method as the Legislature prescribes by law.
+(a) Judicial compensation shall not be diminished during a judge's term. The judicial budget, once enacted, shall not be reduced by executive action.
 
-(b) Judges of inferior courts shall be subject to retention election by the qualified electors following an initial term not to exceed four years. Upon retention, a judge shall serve a term of six years, after which further retention elections shall be held. The Legislature shall by law establish the timing and procedure for retention elections.
+(b) There shall be an independent Judicial Conduct Commission established by law to investigate incapacity, serious misconduct, conflicts, and judicial ethics. The Nominating Commission shall not exercise judicial discipline merely by virtue of its nomination function.
 
-(c) Retention elections shall be non-competitive: the question put to the electors is whether the judge shall be retained in office. A judge receiving a majority of affirmative votes shall be retained. A judge not retained shall vacate the office at the conclusion of the term; the resulting vacancy shall be filled by the Governor in accordance with this Article.
+(c) An inferior-court judge may be disciplined or removed through a fair process established by law with ultimate judicial review. A High Court justice accused of conduct requiring adjudication shall be heard by a special tribunal of qualified inferior-court judges selected by objective seniority, rotation, or another neutral method fixed by law.
 
-### §4.6 Judicial Independence
+(d) Impeachment remains available for grave misconduct as provided in Article II.
 
-(a) The compensation of justices and judges shall not be diminished during their continuance in office.
+(e) No judge may be disciplined, removed, have compensation reduced, or be subjected to retaliatory restructuring merely because a lawful decision displeases another branch. The Legislature may reorganize inferior courts prospectively for legitimate public purposes but may not abolish or manipulate a court solely to remove a judge or defeat a pending case.
 
-(b) The Legislature shall provide adequate resources for the operation of the courts. The judicial budget, once enacted, may not be reduced by executive action.
-
-(c) No justice or judge may be removed from office except by impeachment under §2.9 or by the High Court upon a finding of incapacity or serious misconduct, following a proceeding initiated by the Judicial Nominating Commission or by the Legislature.
+(f) Law shall provide neutral temporary assignment of qualified inferior-court judges when recusals or vacancies prevent a High Court quorum.
 
 ---
 
@@ -405,181 +391,279 @@ The judicial power of the State of Rhovane is vested in a High Court and in such
 
 ### §5.1 Counties
 
-(a) The State is divided into counties, whose boundaries are those existing at the adoption of this Constitution and as altered by law. The Legislature may create, consolidate, or alter counties by law.
+(a) Rhovane is divided into counties. The Legislature may alter, consolidate, or create counties by general law after public notice and consultation. Abolition or merger of an existing county shall require approval of the affected voters as provided by law.
 
-(b) Each county shall be governed by a Board of Commissioners or such other governing body as the Legislature may provide by law. Members of the county governing body shall be elected by the qualified electors of the county.
+(b) Each county shall have a directly elected governing body and a protected sphere of ordinary local administration, including local roads, basic public services, emergency administration, local records, and other functions established by law.
 
-(c) Counties shall have such powers of local self-government as the Legislature confers by law, including the power to levy property taxes, to provide services, to enact ordinances consistent with State law, and to sue and be sued.
+(c) Counties remain subject to this Constitution and general State law and possess no sovereignty independent of the State.
 
 ### §5.2 Municipalities
 
-(a) The Legislature shall by law provide for the incorporation of municipalities upon petition of the residents of the area proposed for incorporation, subject to approval by the governing body of the county or counties in which the municipality would be situated.
+(a) Law shall provide for municipal incorporation upon resident petition, public review of service and fiscal effects, and approval of the voters of the proposed municipality. A county may state objections and findings but shall not possess an absolute veto over incorporation.
 
-(b) Municipalities shall have such powers of local self-government as the Legislature confers by law, which may include home-rule powers for municipalities meeting criteria established by law.
+(b) Municipal powers, including home-rule authority for qualifying municipalities, shall be established by law.
 
-(c) The Legislature may not dissolve a municipality without the consent of its governing body or its qualified electors expressed through a referendum.
+(c) No municipality may be dissolved without approval of its voters or other local consent expressly provided by this Constitution and law.
 
-### §5.3 Local Fiscal Authority
+### §5.3 Local Fiscal Capacity
 
-(a) Counties and municipalities may levy taxes and incur debt as authorized by law. The Legislature shall establish limits on local indebtedness and shall provide for the oversight of local finances.
+(a) Counties and municipalities may levy taxes, charges, and incur debt as authorized by law and shall have reasonable access to own-source or shared revenue sufficient to perform functions assigned to them.
 
-(b) Property taxes shall be the principal source of local revenue unless the Legislature provides otherwise. The Legislature may establish supplemental revenue mechanisms.
+(b) The State may provide equalization based on population, fiscal capacity, infrastructure and service burden, geographic cost, harbor or shoreline obligations, and other neutral factors. Equalization formulas shall receive periodic independent review as provided by law.
 
-(c) The State shall distribute to counties and municipalities such funds as the Legislature appropriates for local purposes, which may include equalization payments to address disparities in local fiscal capacity. The formula for any such equalization shall be established by law and reviewed at intervals not exceeding ten years.
+### §5.4 Local Elections and Equality
 
-### §5.4 Local Elections
+Local elections shall be administered under uniform State law consistent with the National Voting System. No locality may create a separate voter qualification inconsistent with this Constitution or federal law, nor condition voting, officeholding, or public service on ancestry, inherited status, family membership, or property ownership.
 
-Elections for county and municipal offices shall be conducted by the State in accordance with uniform standards prescribed by law, consistent with the National Voting System standards under the Federated Republic Constitution. Local governments shall not establish independent electoral systems or voter qualification requirements.
+### §5.5 Interlocal and Regional Cooperation
 
-### §5.5 Interlocal Cooperation
+Counties and municipalities may enter public agreements and participate in regional authorities for shared services, transportation, harbors, water treatment, shoreline protection, emergency response, or other lawful purposes. Such bodies remain subject to public-law accountability, transparency, and State constitutional requirements.
 
-Counties and municipalities may enter into agreements with each other for the joint provision of services, subject to such conditions as the Legislature may prescribe by law. The State shall not impair the obligation of such agreements.
+### §5.6 Local Emergency Authority
+
+Counties and municipalities may exercise temporary emergency powers granted by law for storms, floods, fires, contamination, infrastructure failure, and comparable local dangers without awaiting State action. Such measures remain subject to rights, State coordination, necessity, proportionality, and judicial review.
 
 ---
 
-## ARTICLE VI — LAKE VARDA
+## ARTICLE VI — LAKE VARDA, NAVIGATION, AND PUBLIC STEWARDSHIP
 
-### §6.1 Lake Varda Public Trust
+### §6.1 Public Trust
 
-The provisions of §1.14 of this Constitution, establishing Lake Varda and its waters, fisheries, and shoreline as a public trust, are carried into effect through this Article.
+The Lake Varda public trust established in Article I is a continuing constitutional obligation of the State. Its protection is a function of government and shall not depend upon the continued importance of any particular industry, occupation, or method of using the lake.
 
-### §6.2 Lake Varda Fisheries Council
+### §6.2 Stewardship Function
 
-(a) There is established the Lake Varda Fisheries Council, a body of the State charged with the stewardship of the fisheries of Lake Varda within the jurisdiction of Rhovane.
+(a) The Legislature shall by law provide an independent, expert, and publicly accountable stewardship function for Lake Varda and other waters subject to the State's public trust.
 
-(b) The Council shall consist of seven members:
+(b) The stewardship function shall include long-term monitoring and advice concerning water quality, living resources, shoreline conditions, navigation, harbor access, ecological integrity, invasive threats, and conflicts among lawful public and private uses.
 
-&emsp;(i) three members elected by persons holding commercial fishing licenses issued by the State;
+(c) Law may create, combine, alter, or abolish boards, commissions, agencies, or technical councils carrying out particular parts of this function. No particular fishery, harbor, profession, industry, or private organization is constitutionally entitled to control or permanent representation.
 
-&emsp;(ii) two members appointed by the Governor, at least one of whom shall have scientific expertise in fisheries or aquatic ecology;
+(d) Delegated technical regulation shall operate under published statutory standards, scientific or factual support where appropriate, public notice, and judicial review. Law may permit temporary emergency technical measures when delay would materially threaten the trust.
 
-&emsp;(iii) one member appointed by the Estate Council; and
+### §6.3 Navigation, Harbors, and Access
 
-&emsp;(iv) one member appointed by the Chamber of Deputies.
+(a) The State shall preserve reasonable public and commercial navigation of Lake Varda and maintain or provide for the long-term usability of principal harbors and navigable channels.
 
-(c) Members shall serve staggered six-year terms.
+(b) Public harbor and navigation functions may be carried out by State, local, regional, or private operators under lawful concessions or agreements, but essential public access and navigation shall not be permanently surrendered to private control.
 
-(d) The Council shall:
+(c) The State and affected local governments shall provide for long-term planning concerning shoreline resilience, storms, flooding, erosion, navigation, and essential water-dependent infrastructure.
 
-&emsp;(i) recommend to the Legislature and the Governor measures for the sustainable management of Lake Varda fisheries;
+### §6.4 Water Quality and Responsibility for Harm
 
-&emsp;(ii) establish, subject to approval by the Legislature, rules for fishing seasons, catch limits, and gear restrictions;
+The State shall establish, monitor, publish, and enforce water-quality standards for Lake Varda and its tributaries. Where a person or entity is lawfully shown to have caused pollution or other remediable injury to the public trust, law may require that person or entity to bear reasonable remediation costs consistent with due process and proof of causation.
 
-&emsp;(iii) advise the State on the implementation of the public trust obligations under §1.14;
+### §6.5 Interstate and International Cooperation
 
-&emsp;(iv) submit nominees to the Governor for the civic-institution seat on the Estate Council under §3.4(d)(iv); and
-
-&emsp;(v) report annually to the Legislature and the public on the state of Lake Varda's fisheries.
-
-(e) The Legislature may not abolish the Fisheries Council except by constitutional amendment.
-
-### §6.3 Lake Water Quality
-
-The State shall, by law, establish standards for water quality in Lake Varda and its tributaries, and shall monitor and enforce those standards. The standing conferred by §1.14(d) extends to enforcement of water quality standards established under this section.
-
-### §6.4 Interstate Cooperation
-
-The Governor, with the advice and consent of the Estate Council, may enter into compacts and agreements with other lake-adjacent States and, through federal channels, with neighboring nations, for the coordinated stewardship of Lake Varda. Such compacts shall be published to the State Record and shall have the force of law upon ratification.
+The Governor may negotiate compacts and agreements concerning Lake Varda with other States and, through federal channels, with neighboring nations. A compact having the force of State law requires ratification by a majority of the authorized membership of each legislative chamber and compliance with all applicable federal requirements. Ratified agreements shall be published to the State Record.
 
 ---
 
 ## ARTICLE VII — AMENDMENT
 
-### §7.1 Proposal
+### §7.1 Sole Method
 
-Amendments to this Constitution may be proposed by:
+This Constitution may be amended only by an amendment proposed by a Constitutional Convention convened under Article VIII, approved through the legislative review required by this Article, and ratified by the people of Rhovane. No ordinary statute, initiative, emergency declaration, or legislative resolution may amend this Constitution directly.
 
-(a) a resolution passed by a two-thirds vote of the members elected to the Chamber of Deputies; or
+### §7.2 Convention Proposals
 
-(b) an initiative petition signed by qualified electors of the State equal in number to at least ten percent of the votes cast in the most recent gubernatorial election, and containing the full text of the proposed amendment.
+(a) A Convention may propose any number of amendments it determines appropriate, including none. Each proposal shall state its text and subject with sufficient clarity for independent consideration.
 
-### §7.2 Ratification
+(b) A proposal becomes a formal Convention proposal upon approval by three-fifths of the delegates then lawfully serving, unless a greater threshold is established by this Constitution for a particular subject.
 
-(a) A proposed amendment shall be submitted to the qualified electors of the State at a general election or a special election called for that purpose.
+(c) Unrelated subjects shall not be combined in one proposal. Related provisions may be consolidated where necessary to create a coherent amendment.
 
-(b) An amendment is adopted if it receives:
+### §7.3 Legislative Review and Distillation
 
-&emsp;(i) sixty percent of the votes cast on the amendment statewide; and
+(a) Every formal Convention proposal shall be transmitted promptly to the Legislature and published to the State Record.
 
-&emsp;(ii) a majority of the votes cast on the amendment in a majority of the counties of the State.
+(b) The Legislature shall provide by law an orderly public process to review and distill Convention proposals. It may approve or reject a proposal, return it to a sitting Convention for revision, or, with the Convention's assent while in session, consolidate substantially related proposals. It may not substitute a materially different proposal and represent it as the work of the Convention.
 
-(c) The Legislature shall by law establish the procedure for initiative petitions, including signature verification and the timing of the referendum.
+(c) A proposal advances to ratification upon approval by a majority of the authorized membership of each legislative chamber.
 
-### §7.3 Constitutional Convention
+(d) The Legislature shall take a recorded disposition on every formal Convention proposal within one hundred eighty days after adjournment of the Convention. Inaction shall not constitute rejection or permit a proposal to be buried without a vote.
 
-(a) The question of whether to call a constitutional convention shall be submitted to the qualified electors of the State at the general election held in every twentieth year following the adoption of this Constitution.
+### §7.4 Ratification
 
-(b) If a majority of those voting on the question approve the calling of a convention, the Legislature shall by law provide for the election of delegates and the convening of the convention within two years.
+(a) Every proposal advanced by the Legislature shall be submitted separately to the voters at a general or special statewide election under procedures established by law.
 
-(c) Any constitution or amendment proposed by the convention shall be submitted to the qualified electors and shall be adopted if it receives the same majorities required for amendment under §7.2.
+(b) An amendment is ratified by a majority of valid votes cast on that amendment statewide.
 
-### §7.4 Entrenched Provisions
+(c) Exact text, the provisions affected, and a neutral public explanation shall be published sufficiently before the vote to permit informed consideration.
 
-The following provisions may not be suspended, and may be repealed or amended only through the procedure established in this Article:
-
-(a) the public trust status of Lake Varda established in §1.14;
-
-(b) the right of lakeshore access established in §1.13;
-
-(c) the bicameral structure of the Legislature established in §3.1; and
-
-(d) the existence of the Lake Varda Fisheries Council established in §6.2.
+(d) An amendment takes effect upon certification unless it provides a later date.
 
 ---
 
-## ARTICLE VIII — GENERAL PROVISIONS
+## ARTICLE VIII — CONSTITUTIONAL CONVENTION
 
-### §8.1 State Record
+### §8.1 Decennial Convention
 
-(a) There shall be a State Record, which shall be the permanent public repository of all official acts of the State.
+A Constitutional Convention shall convene automatically every tenth year following the first Convention held under this Constitution. No preliminary referendum is required. Its purpose is to review the operation of this Constitution and determine whether any amendment should be proposed.
 
-(b) The following shall be published to the State Record:
+### §8.2 Early Convention
 
-&emsp;(i) all laws enacted by the Legislature;
+(a) An early Convention may be called before the next decennial Convention by a resolution approved by two-thirds of the authorized membership of each legislative chamber and thereafter by a majority of valid votes cast statewide on the call.
 
-&emsp;(ii) all executive orders, proclamations, and official acts of the Governor;
+(b) The resolution and ballot shall state precisely the constitutional issue or reasonably related issues for which the Convention is called.
 
-&emsp;(iii) all opinions, orders, and judgments of the High Court;
+(c) An early Convention may investigate, deliberate upon, and propose amendments only within the voter-approved mandate. It otherwise operates under this Article and Article VII.
 
-&emsp;(iv) all rules and regulations promulgated by executive departments;
+### §8.3 Delegate Qualifications and Public Pools
 
-&emsp;(v) the annual budget and all appropriation acts;
+(a) Qualifications for Convention delegates shall be established by statute and published before applications open. They shall be objective, reasonable, generally attainable by ordinary citizens, and consistent with this Constitution and the Federated Republic Constitution.
 
-&emsp;(vi) the proceedings of the Legislature, including votes cast;
+(b) No qualification may depend upon wealth, property ownership, ancestry, hereditary status, political affiliation, ideology, occupation, membership in a favored private organization, or another arbitrary class distinction.
 
-&emsp;(vii) the proceedings and recommendations of the Council of State;
+(c) Any eligible person may apply through the public process established by law. Applications, qualification decisions, and the reasons for rejection shall be public except for narrowly protected personal information.
 
-&emsp;(viii) the reports of the Lake Varda Fisheries Council;
+(d) The Elections Panel shall apply the statutory qualifications and shall not add discretionary standards of character, suitability, political acceptability, or merit. A rejected applicant is entitled to expedited judicial review.
 
-&emsp;(ix) the agenda, minutes, and votes of every State board, commission, and agency; and
+(e) No person holding elected public office may serve as a Convention delegate. Public employment, including ordinary civil service, does not disqualify a person from service.
 
-&emsp;(x) such other matters as the Legislature may prescribe by law.
+### §8.4 County Delegates
 
-(c) The State Record shall be maintained in a form freely accessible to the public at all times. No part of the State Record may be classified, withheld, or removed except as narrowly provided by law for the protection of personal privacy or ongoing law enforcement operations, and any such withholding must be reviewed by the High Court upon the petition of any person.
+(a) Each county shall elect two Convention delegates from the qualified county applicant pool.
 
-### §8.2 Oath of Office
+(b) Where the number of qualified applicants does not exceed the maximum ballot size established by law, every qualified applicant shall appear on the ballot.
 
-Every officer of the State, before taking up the duties of office, shall take and subscribe the following oath or affirmation:
+(c) Where the qualified pool exceeds that maximum, a public and auditable drawing by lot shall select a manageable slate from which county voters elect the two delegates.
 
-"I do solemnly swear (or affirm) that I will support and defend the Constitution of the Federated Republic and the Constitution of the State of Rhovane, and that I will faithfully discharge the duties of the office to which I am called, to the best of my ability."
+(d) County delegate elections shall be nonpartisan in form and shall provide voters standardized public information concerning each candidate as provided by law.
 
-No other oath shall be required. No religious test shall be imposed as a qualification for any office.
+### §8.5 At-Large Delegates
 
-### §8.3 Supremacy of Federal Constitution
+(a) In addition to county delegates, the Convention shall include at-large delegates equal in number to one-third of the total number of county delegates, rounded to a whole number as provided by law.
 
-This Constitution is subordinate to the Constitution of the Federated Republic in all matters. Where a provision of this Constitution is found to conflict with the Republic's Constitution, the Republic's Constitution shall prevail, and the conflicting provision shall be void to the extent of the conflict, without affecting the validity of the remaining provisions.
+(b) At-large delegates shall be selected by public and auditable lot from a separate statewide pool of qualified applicants. Law shall provide alternates selected in the same drawing and a neutral order of succession.
 
-### §8.4 Continuity of Laws
+(c) No geographic quota shall apply to the at-large pool; county representation is secured by §8.4.
 
-All laws, ordinances, regulations, and rules in effect in the territory now comprising the State of Rhovane at the time this Constitution takes effect shall continue in force until amended, repealed, or superseded, insofar as they are consistent with this Constitution.
+### §8.6 Preparation and Constituent Review
 
-### §8.5 Continuity of Offices
+(a) Delegates shall be selected not less than nine months before the formal Convention session. Law may provide a longer preparatory period for a regular decennial Convention.
 
-All persons holding office in the territory now comprising the State of Rhovane at the time this Constitution takes effect shall continue to hold their respective offices until their terms expire and until their successors are elected or appointed and qualified, insofar as those offices are preserved by this Constitution or by law.
+(b) During preparation, delegates shall have authority and resources provided by law to study the Constitution, receive public and institutional submissions, consult constituents, hold public meetings, obtain lawful public records, request testimony and technical assistance, and publish issues identified for possible consideration.
 
-### §8.6 Effective Date
+(c) Preparation does not confer ordinary governmental authority and does not bind a delegate to support any amendment before formal deliberation.
 
-This Constitution shall take effect on the date of its ratification by the qualified electors of Rhovane, as certified by the Elections Panel under the Federated Republic Constitution.
+### §8.7 Protected Civic Service
+
+(a) Convention service is protected civic service. No public or private employer may discharge, demote, retaliate against, or materially disadvantage an employee because of lawful application, selection, preparation, or service as a delegate.
+
+(b) Law shall protect reasonable continuity of employment, benefits, seniority, pension interests, union status, and return to the same or a substantially equivalent position.
+
+(c) Delegates shall receive compensation and reimbursement sufficient to make service reasonably available to ordinary citizens. Law may distinguish between preparatory duties and the formal session.
+
+(d) A civil servant serving as delegate acts in a personal civic capacity and may not use public employment, authority, or resources to obtain selection or improperly influence the Convention.
+
+### §8.8 Formal Session
+
+(a) The Convention shall sit in formal session for no more than ninety calendar days. Law may suspend the running of that period only when physical meeting or lawful deliberation is materially impossible because of disaster or comparable emergency; in no event may a Convention remain in existence beyond one hundred fifty calendar days after formal opening.
+
+(b) The Convention may establish committees, receive testimony, deliberate, draft, revise, and vote upon proposed amendments.
+
+(c) Proceedings, votes, draft proposals, testimony, and final proposals shall be preserved in and made publicly accessible through the State Record, subject only to narrow protections established by law.
+
+(d) The Convention may propose any number of amendments, including none.
+
+### §8.9 Limits and Termination
+
+(a) A Convention possesses no authority to enact ordinary law, appropriate money, impose taxes, appoint or remove public officers, direct an agency, adjudicate a case, exercise executive power, or otherwise govern the State.
+
+(b) A Convention may not extend its own existence or enlarge the mandate of an early Convention.
+
+(c) Upon expiration of its lawful session, the Convention ceases to exist automatically. Its remaining proposals continue through Article VII without extending the Convention's authority.
+
+---
+
+## ARTICLE IX — STATE SPONSORSHIP AND RESIDENCY
+
+### §9.1 State Sponsorship
+
+Rhovane may sponsor prospective residents as part of the immigration process established by the Federated Republic Constitution. State sponsorship alone does not create federal certification, legal residency, citizenship, or a right to remain contrary to federal law.
+
+### §9.2 Standards
+
+(a) Sponsorship shall be administered under general, published, prospective, and reviewable standards established by law and consistent with federal equality requirements.
+
+(b) The State may consider lawful factors concerning family and community connection, employment, education, skills, entrepreneurship, self-support, public capacity, and other neutral matters reasonably related to sponsorship.
+
+(c) No sponsorship rule may impose ideological screening, nationality quotas, hereditary or class preference, or preference for a constitutionally favored industry or occupation.
+
+### §9.3 Employers and Private Sponsors
+
+An employer, educational institution, family member, civic body, or other lawful person may support an application as provided by law, but no private sponsor controls federal certification or a person's continued legal status. Loss of employment or private support does not by itself terminate status otherwise lawfully held.
+
+### §9.4 Decisions and Review
+
+State sponsorship decisions shall identify the governing rule and, upon denial, provide precise written reasons sufficient for administrative and judicial review. Review concerns legality and compliance with published standards and does not create an entitlement to sponsorship.
+
+---
+
+## ARTICLE X — GENERAL PROVISIONS
+
+### §10.1 State Record and National Records System
+
+(a) There shall be a State Record serving as Rhovane's authoritative public record within or through the National Records System established by the Federated Republic Constitution.
+
+(b) The State Record shall include laws; executive orders and proclamations; High Court opinions and major orders; administrative rules; budgets and appropriations; legislative proceedings and recorded votes; formal Council of State recommendations; constitutional commission and board records; Convention applications, proceedings, reports, votes, and proposals; and other matters required by law.
+
+(c) Records shall be promptly published, permanently preserved, and freely accessible except where law narrowly protects privacy, sealed judicial material, security, privileged communications, active investigations, or other legitimate confidential interests. Withholding is subject to judicial review.
+
+(d) Correction shall not silently erase the historical record. The original entry, correction, date, responsible authority, and corrected text shall remain traceable as provided by law.
+
+(e) Law shall provide continuity and fallback publication during a systems outage. Failure of a records system does not by itself extinguish lawful public authority.
+
+### §10.2 Elections Panel
+
+(a) State and local elections, Convention applicant qualification, public drawings, certification, and other election functions assigned by this Constitution shall be administered by the Elections Panel or other independent election authority established consistently with the Federated Republic Constitution.
+
+(b) The Panel administers law; it does not create qualifications delegated to the Legislature. Qualification decisions shall be written, public, and subject to expedited judicial review.
+
+(c) Every selection by lot required by this Constitution shall be conducted under procedures fixed in advance by law and shall be public, neutral, and auditable.
+
+### §10.3 Oath or Affirmation
+
+Every public officer shall promptly take an oath or affirmation to support the Constitutions of the Federated Republic and Rhovane and faithfully discharge the office. No religious test shall be imposed. Failure or delay in administering an oath does not prevent succession or authority that has already transferred by operation of law.
+
+### §10.4 Duty of Lawful Refusal
+
+(a) No State or local civil servant, officer, employee, member of an organized State force, or other direct public agent performing a specific public function is required to obey an order that would require violation of this Constitution, the Constitution of the Federated Republic, or valid law.
+
+(b) Lawful refusal and good-faith reporting through lawful channels shall not create liability, forfeiture, dismissal, or retaliation. Law shall provide remedies and procedures consistent with the corresponding federal duty of refusal.
+
+### §10.5 Institutional Access and Public Delegation
+
+(a) Constitutional branches, courts, Conventions, and lawful oversight bodies are entitled to access records reasonably necessary to perform their constitutional functions, subject to lawful privilege, privacy, security, and judicial supervision.
+
+(b) The State may contract with private persons and entities, but final authority over election certification, constitutional adjudication, taxation, criminal punishment, constitutional appointment decisions, and authentication of the official State Record shall remain subject to public law and accountable public authority.
+
+### §10.6 Voting Citizenship
+
+"Voting citizen of Rhovane" means a citizen of the Federated Republic whose State or Territory voting citizenship is Rhovane under the Federated Republic Constitution and laws enacted pursuant to it. No provision of this Constitution creates a separate State nationality or naturalization process.
+
+### §10.7 Federal Supremacy and Severability
+
+(a) The Constitution of the Federated Republic and valid federal law prevail in matters of conflict.
+
+(b) If a provision of this Constitution is invalid, the remainder continues to the greatest extent it can function coherently and consistently with the evident constitutional structure. A court shall not preserve a fragment whose operation would defeat the function of an inseparable provision.
+
+### §10.8 Continuity of Laws, Offices, and Authority
+
+(a) Laws and regulations in force when this Constitution takes effect continue until amended, repealed, superseded, or held inconsistent with this Constitution.
+
+(b) Existing public officers continue until lawful successors assume office or the office is lawfully abolished or reorganized.
+
+(c) Vacancy, delayed appointment, failed confirmation, missing oath, records outage, or temporary incapacity shall not invalidate governmental authority where this Constitution or law provides a lawful successor, acting officer, or continuity mechanism.
+
+### §10.9 Future-Facing Construction
+
+Terms and institutions in this Constitution shall be construed to preserve their constitutional function as technology, economic activity, public administration, and forms of communication change, without enlarging governmental power beyond that granted by the text.
+
+### §10.10 Effective Date and Transition
+
+This Constitution takes effect upon ratification and certification under lawful election procedures. Transitional schedules may provide for orderly implementation of new institutions, staggering of terms, the first decennial Convention, and continuity of existing offices and laws without becoming part of the permanent constitutional text unless expressly adopted as such.
 
 ---
 
