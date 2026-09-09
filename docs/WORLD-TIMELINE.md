@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260907, against 101 published entries (seq 1–101, contiguous, no gaps).*
+*Last verified: 260914, against 103 published entries (seq 1–103, contiguous, no gaps).*
 
 ---
 
@@ -85,7 +85,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | **Fiscal Equalization (§12.8)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 95 / 13.10 | **LIVE.** §18.4 Trust designation request now filed, forwarded to Varek and Norvane for host State consent (news-063, nrs-029). Neither State has responded; no statutory deadline governs the timing. Next: either State consenting/declining, or the repeal petition itself resolving first with the land still unprotected either way. |
 | **Thoss / Civic Consul standing** | 68 / 13.09 | **QUIET since Month 9.** Her position on the Korda Convention/whole-statehood question is explicitly unresolved (agreed 260821 — Claude has narrative control, no early reveal). Watch for a forcing moment: a vote on her own bill, Orin's Convention seating, or a direct question she can't fully dodge. |
-| **Lake Varda / Sunderland crisis** | 97 / 13.11 | **REOPENED (260901).** Was dormant since Month 6 by neglect, not design — reopened via the §10.2 redaction petition (nrs-030) on the Varda Crossing intelligence summary, filed by the sister of one of the two killed border personnel. Directorate has not responded; no hearing set. This is the first time §10.2's redaction-petition mechanism (added in the Article X review) appears in world content. Next: the Directorate's response, or a court ruling on whether the source-protection ground still holds five months on. |
+| **Lake Varda / Sunderland crisis** | 102 / 13.11 | **LIVE — new diplomatic front opened (260914).** nrs-032: Foreign Affairs proposes a trilateral conference with Caldris and Valedon after bilateral inquiry to the Sunderland Interim Authority went nowhere (twelve-day response, answered none of three questions). First appearance of Caldris in a diplomatic role and first appearance of Valedon at all beyond a road name. Neither government has responded; no timeline given. The §10.2 redaction petition (nrs-030) remains separately open, Directorate still hasn't responded, no hearing set. Next: either government responding to the conference proposal, or the redaction petition getting a hearing date — two independent open threads on the same crisis. |
 | **Toren River negotiation** | 100 / 13.11 | **REOPENED (260907) — still unresolved, not advanced.** news-067 confirms the Month 6 follow-up session never happened; Caldris-side scheduling conflicts, no replacement date set. The dispute-resolution-mechanism gap remains exactly as open as Month 5. Untested so far — this year's flow has stayed within tolerance. Next: either side reconvening, or a low-rainfall year making the gap suddenly consequential. |
 | **Supreme Court composition** | 98 / 13.11 | **INTRODUCED.** All nine justices named in sc-001 (Y13 M3); profiled in news-065 ahead of any Korda filing. Pivotal voice: **Pael Doran**, whose *Corindal* dissent refused the merits while a threshold question was unresolved — directly relevant to the §15.5.a(1) question. Court gives no interviews; all contact routes through the clerk. See CHARACTER-REFERENCE.md for the full roster and what is/isn't established. |
 | **Corindal Industrial Partners** | 33 / 13.03 | **DELIBERATELY HELD.** Long-game arc built around a future SC composition and future election cycles that haven't happened yet (per WORLD-THREADS-PENDING.md). Do not open early. |
@@ -198,6 +198,8 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 99 | 13.11 | News | The Plan He Wanted Might Not Have an Election to Attach To | The Torenthian |
 | 100 | 13.11 | News | The Session That Was Supposed to Happen in Month 6 | The Torenthian |
 | 101 | 13.11 | NRS | Monetary Authority — State of the Economy Report, Second Half Year 13 | National Record System |
+| 102 | 13.11 | NRS | Diplomatic Communication — Proposal for Trilateral Conference on Lake Varda | National Record System |
+| 103 | 13.11 | NRS | Elections Panel — Judicial Pool Quarterly Admission Notice | National Record System |
 
 ---
 

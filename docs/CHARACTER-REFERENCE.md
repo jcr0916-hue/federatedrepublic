@@ -57,7 +57,7 @@ audit failures over a contested electoral-district redraw, senators not yet seat
 
 | Name | Notes |
 |---|---|
-| **Ines Carrow** | Also referred to as **"Director Carrow"** in earlier pieces — **same person.** She held (holds?) an intelligence-directorship role and published a redacted intelligence summary on Sunderland military factions before/during her candidacy. Confirmed same person via her office's confirmations in news-006/008/022/028/031. Do not treat "Director Carrow" as a separate character. |
+| **Ines Carrow** | Also referred to as **"Director Carrow"** in earlier pieces — **same person.** Her actual title, established consistently since first appearance: **Director of Foreign Affairs under LC Casimir Rehn, since Year 8** (news-002/006, nrs-008) — not a separate "intelligence director" role as an earlier version of this entry incorrectly summarized (corrected 260914). Foreign Affairs handles intelligence on foreign military structures as part of that portfolio, which is why she published the redacted Sunderland intelligence summary (nrs-004) — that was Foreign Affairs' own work product, not evidence of a separate title. As of nrs-032 (Month 11), still filing diplomatic communications in this capacity while also an LC candidate — meaning she is simultaneously the sitting official handling Sunderland/Lake Varda and a candidate to replace her own boss. Confirmed same person as "Director Carrow" via her office's confirmations in news-006/008/022/028/031. |
 | **Seren Mak** | Rhovane-based. Prone to overstating findings for effect — publicly mischaracterized the EM's "no failure" certification as a "failure" (news-051), a mistake Petra Vend called out directly. |
 | **Tobias Vael** | Terse, deliberately hard to quote. Sovereignty-wing associated (seq 1). |
 | **Pell Sandris** | Narrowest ballot-access base of the four (9 of 12 States, nrs-020) despite driving the most substantive policy content of the race — the Korda transition-plan proposal. **Naming note: appears as "Jorin Sandris" in news-028/029/030 — this was a continuity slip, corrected 260819. He is Pell throughout.** |
@@ -120,6 +120,18 @@ significant departure, not a casual beat.
 **Seat openings:** §4.3's staggered classes mean seats open predictably. When one does, the
 Judicial Pool / §9.8 nomination process is the route, and Herbert Sole is already seeded as a
 future candidate (see Korda arc file).
+
+## NEIGHBORING COUNTRIES — introduced 260914 (nrs-032)
+
+Per world-canon.md's Neighbors section: Caldris (north), Sunderland (east, at war, source of the
+refugee crisis), Valedon (south), Seronne (southeast buffer), Marisvia (west). Only Sunderland had
+any diplomatic presence in world content before nrs-032.
+
+| Country | Established role | Notes |
+|---|---|---|
+| **Caldris** | Upstream treaty partner (Toren River framework); "economic stakes in Sunderland" per canon. Now also invited to a proposed trilateral conference on Lake Varda (nrs-032) — **first time invited into a diplomatic role beyond the river treaty.** | Also the subject of Vael's LC-race "Caldris speech" (news-010) and Asdal's "wrong border" challenge (news-011/012) — a real, pre-existing political thread distinct from the new Lake Varda angle. Do not conflate the two without a reason. |
+| **Valedon** | "The nation that almost joined" (Year 18 referendum, §15.6). No prior diplomatic content — only appeared before as a road name near Morantine Territory (dispatch-sarn). nrs-032 invites Valedon as **proposed venue and co-convener**, explicitly not as a stakeholder — the Directorate states it is not aware of any direct Valedon interest in Sunderland and the invitation does not presume one. | **This is genuinely the first Valedon diplomatic content in the project.** No capital city, government structure, or named official exists yet — do not invent one without checking world-canon.md's editorial rule that map/place detail follows coverage. |
+| **Sunderland Interim Authority** | Established antagonist-by-neglect, not villain — fracturing, at war, has not substantively answered any Republic inquiry. Twelve-day response to nrs-008 "confirmed receipt, answered nothing" (news-028). | Do not have the SIA suddenly become responsive without a real story beat justifying the change — the pattern of non-response is now load-bearing characterization. |
 
 ## NAME-COLLISION WARNINGS (found in the 260831 audit — verify before writing)
 
