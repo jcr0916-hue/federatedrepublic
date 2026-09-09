@@ -6,349 +6,953 @@
 
 ## PREAMBLE
 
-We, the people of the Counties of Varek, being one State within the Federated Republic, and desiring a government close to those it governs — accountable to its counties, unconcealed in its records, and undivided in the hands of any single officer — do ordain and establish this Constitution of Varek, subordinate always to the Constitution of the Federated Republic, and superior to every law, ordinance, and act made under our own authority.
+We, the people of the Counties of Varek, being one State within the Federated Republic, and desiring a government close to those it governs, accountable to its Counties, unconcealed in its records, and undivided in the hands of any single officer, do ordain and establish this Constitution of Varek.
+
+We establish a cantonal republic in which statewide authority exists where common action is necessary, local authority remains where government is properly local, and neither may absorb the other merely for convenience.
+
+We establish no general executive. Legislative authority shall be exercised collectively, administration shall remain confined to law, Counties shall govern within their constitutional sphere, and courts shall determine the boundaries between them.
+
+We recognize that emergencies may require temporary concentration of coordination where delay itself becomes dangerous. Such authority shall remain narrow, visible, reviewable, and self-terminating.
+
+We affirm the Constitution of the Federated Republic as supreme law and establish this Constitution as the supreme law of Varek beneath it.
 
 ---
 
-## ARTICLE I — VAREK AND THE FEDERATED REPUBLIC
+# ARTICLE I — VAREK AND THE FEDERATED REPUBLIC
 
-### §1.1 Status as a State
-Varek is a State of the Federated Republic. This Constitution governs the internal structure, powers, and processes of Varek's government; it does not diminish, condition, or supersede any right, protection, or obligation established by the Constitution of the Federated Republic. Where any provision of this Constitution conflicts with the Federated Republic's Constitution, the Federated Republic's Constitution governs to the extent of the conflict.
+## §1.1 Status as a State
 
-### §1.2 Territory and Counties
-Varek's territory is composed of Counties, each a body politic with the governing authority this Constitution assigns to it. A County may be divided, merged, or newly created only by statute enacted by the Varek Assembly under §5.7, subject to the population-equality safeguard stated there. The map of Counties in effect at ratification is filed with the Varek Record System as the founding record.
+Varek is a State of the Federated Republic. This Constitution governs Varek's internal institutions, powers, and processes subject to the Constitution of the Federated Republic and valid federal law.
 
-### §1.3 No Single Executive
-Varek vests no single office with general executive authority. Governing power is held by the Varek Assembly, exercised through the courts under Article VII, administered through the Directorate under Article VI, and exercised locally by the Counties under Article V. No office, position, or acting designation created under this Constitution or by statute may accumulate powers across these functions in a manner equivalent to a general executive; any statute purporting to do so is void.
+Where this Constitution conflicts with the Constitution of the Federated Republic, the federal Constitution governs to the extent of the conflict.
 
-### §1.4 Compliance with the Statehood Audit
-Varek's institutions are designed and must be maintained to satisfy the three ongoing conditions of the federal Statehood Audit: functioning electoral processes, basic rule of law and judicial function, and compliance with Article I of the Federated Republic's Constitution. No amendment, statute, or Assembly act may knowingly place Varek at risk of an audit failure. The Varek Monitor under Article XI reports annually on Varek's continued compliance with these three conditions, independent of and in addition to any federal audit.
+## §1.2 Territory and Counties
 
-### §1.5 Supremacy Within Varek
-This Constitution is the supreme law of Varek. Every statute, ordinance, county charter, judicial rule, and directorate regulation must conform to it. Any act inconsistent with this Constitution is void to the extent of the inconsistency, and any Varek court may so declare in a matter properly before it.
+(a) Varek consists of Counties, each of which is a body politic exercising the authority reserved or assigned to it by this Constitution.
 
-### §1.6 Inhabitants and Residents
-Every citizen, legal resident, and Inhabitant of Varek, as those terms are defined by the Federated Republic's Constitution, holds within Varek's jurisdiction every right guaranteed by the Federated Republic's Constitution and every right guaranteed by Article II of this Constitution. Where the two differ, the more protective standard governs.
+(b) Counties are constituent units of Varek's internal constitutional order and are not merely administrative districts of the State.
 
----
+(c) A County may be created, divided, merged, or have its boundaries materially altered only through the process established by Article V.
 
-## ARTICLE II — THE VAREK CHARTER OF RIGHTS
+(d) The County boundaries existing when this Constitution takes effect shall be entered into the Varek Record System as the founding County map.
 
-*This Article restates the Article I floor of the Federated Republic's Constitution as directly enforceable Varek law — so that a Varek court may act on these rights without first resolving whether a claim "arises under" federal law — and adds protections specific to Varek's cantonal structure. Nothing here may be read to permit any right narrower than the federal floor.*
+## §1.3 No General Executive
 
-### §2.1 Incorporation of the Federal Floor
-Every right guaranteed by Article I of the Federated Republic's Constitution is incorporated into this Constitution as directly enforceable Varek law, enforceable in Varek's own courts under Article VII without regard to the forum or procedure otherwise available at the federal level. A Varek statute, ordinance, or Directorate act that would violate any incorporated right is void.
+(a) Varek vests no single office with general executive authority.
 
-### §2.2 Right to Local Participation
-Every eligible voter in a County holds the right to participate in that County's governance under Article V, including the right to petition for a county initiative or referendum under Article IV. No County may adopt a charter, ordinance, or procedure that makes participation in county governance less accessible than participation in Assembly elections.
+(b) Legislative authority is vested in the Varek Assembly; administrative authority is exercised through the Directorates; judicial authority is exercised through the courts; and local authority is exercised through the Counties according to this Constitution.
 
-### §2.3 Right to Records
-Every Inhabitant holds the right to access the Varek Record System established under Article X without cost, and to receive a written explanation where a requested record is withheld. This right may be limited only on the grounds stated in §10.4, and any such limitation is subject to judicial review.
+(c) Executive and administrative functions may exist only within constitutionally or statutorily defined fields. No officer possesses residual executive authority.
 
-### §2.4 Right Against Concentration of Power
-Every Inhabitant holds a standing right to challenge, before the Varek courts, any statute, ordinance, or administrative act that concentrates governing authority in a manner inconsistent with §1.3's prohibition on a general executive. This right does not require a showing of individualized injury beyond the structural violation itself.
+(d) No office, acting designation, coordinating position, or statutory arrangement may accumulate authority substantially equivalent to that of a general executive.
 
-### §2.5 Environmental Stewardship
-Varek's river systems, watersheds, and agricultural lands are held in trust for present and future Inhabitants. The Assembly must not enact a statute that systematically permits environmental harm to a defined County or community, consistent with the Federated Republic's Constitution's environmental obligations. Counties may adopt stricter environmental ordinances than the Assembly's statutory floor.
+(e) Any person within Varek has standing to challenge an alleged violation of this section as provided by Article II.
 
-### §2.6 Language and Local Custom
-No County ordinance, Assembly statute, or Directorate regulation may burden a community's use of its local language, custom, or traditional governance practice except on a showing of compelling public interest applied without discrimination under §1.6 of the Federated Republic's Constitution.
+## §1.4 Institutional Continuity
 
----
+Varek shall continuously maintain functioning democratic elections, courts capable of enforcing law and constitutional rights, and institutions sufficient to carry out the lawful obligations of State government.
 
-## ARTICLE III — THE VAREK ASSEMBLY
+The Varek Monitor shall report upon the condition of those institutions as provided by Article XI.
 
-**Composition and Terms**
+## §1.5 Supremacy Within Varek
 
-### §3.1 Composition
-The legislative authority of Varek is vested in a single chamber, the Varek Assembly. Each County elects three representatives to the Assembly, regardless of the County's population. The Assembly's total membership is therefore three times the number of Counties then established under §1.2.
+This Constitution is the supreme law of Varek.
 
-### §3.2 Rationale and Population Safeguard
-Representation by County rather than by population is a deliberate feature of Varek's cantonal design: it guarantees every County an equal voice regardless of size. To prevent this design from producing extreme disparities in the weight of an individual vote, the Legislative review under §5.7 must include, at each ten-year interval, a published finding on the population ratio between Varek's largest and smallest County; where that ratio exceeds 8:1, the Assembly must consider County boundary adjustment, division, or merger under §5.7 at its next session.
+Every statute, County charter, ordinance, Directorate regulation, administrative act, and judicial rule must conform to it.
 
-### §3.3 Terms
-Representatives serve four-year terms, staggered so that approximately half the Assembly's seats are contested at each biennial election. No representative may serve more than four consecutive terms without sitting out one full term; a representative who resigns, is expelled, or is recalled during a term is deemed to have served that full term for purposes of this limit.
+A Varek court may declare an act inconsistent with this Constitution void to the extent of the inconsistency in a matter properly before it.
 
-### §3.4 Eligibility
-A candidate for the Assembly must be a citizen of the Federated Republic, an eligible voter, and a resident of the County they seek to represent for at least one year before the election. Eligibility and disclosure requirements applicable to federal office under the Federated Republic's Constitution apply equally here.
+## §1.6 Persons Within Varek
 
-**Organization**
+Every person within Varek is entitled to the rights and protections guaranteed by the Constitution of the Federated Republic, this Constitution, and valid law.
 
-### §3.5 Presiding Officer
-The Assembly elects a Presiding Officer from among its members by a method it establishes, provided the Presiding Officer holds majority support of full seated membership. The Presiding Officer chairs sessions, certifies enacted statutes to the Varek Record System, and holds the limited emergency authority of Article XII. The Presiding Officer holds no vote except to break a tie and no authority beyond what this Constitution states.
-
-### §3.6 Committees
-The Assembly organizes standing committees by County-delegation rotation to ensure no committee is dominated by representatives of any single County. Committees may hold hearings, request records from the Directorate under Article VI, and report legislation to the full Assembly; a committee may not itself enact or block a statute.
-
-### §3.7 Quorum and Procedure
-A majority of full seated membership constitutes quorum. The Assembly establishes its own procedures by statute, provided those procedures do not permit indefinite delay of any matter this Constitution requires it to address.
-
-**Legislative Process**
-
-### §3.8 Passage
-A bill becomes statute upon passage by a majority of full seated membership, except where this Constitution requires a higher threshold. Every bill must address a single, clearly defined subject; any representative may request a single-subject compliance finding from the Varek Monitor under Article XI.
-
-### §3.9 No Suspensive Veto
-Because Varek vests no single office with executive authority, no statute is subject to veto by any officer. An enacted statute takes effect on the date it states, or otherwise 30 days after certification to the Varek Record System, whichever the statute specifies.
-
-### §3.10 Publication Before Passage
-The full text of a bill must be published to the Varek Record System for a minimum period fixed by Assembly rule, not less than 10 days, before a final passage vote; a substantially amended bill resets that period.
-
-### §3.11 Constitutional Amendment Threshold
-A bill amending this Constitution requires two-thirds of full seated membership and is subject to the ratification requirement of Article XIII.
-
-**Removal and Discipline**
-
-### §3.12 Expulsion
-The Assembly may expel a member by two-thirds vote of full seated membership on grounds published to the Varek Record System; expulsion is effective immediately.
-
-### §3.13 County Recall
-A County may establish by its own charter a recall mechanism for representatives it elects. Any such mechanism must operate as a political process, not a judicial proceeding, and must place the final decision with the County's eligible voters. A recalled seat is filled under §3.14.
-
-### §3.14 Vacancies
-A vacancy in a County's Assembly delegation is filled by special election administered under Article VIII within 90 days, unless fewer than 180 days remain before the next general election, in which case the County Council appoints a qualified interim representative to serve until that election.
+Where this Constitution provides greater protection than the applicable federal floor, the greater protection governs within Varek to the extent permitted by federal law.
 
 ---
 
-## ARTICLE IV — DIRECT DEMOCRACY
+# ARTICLE II — THE VAREK CHARTER OF RIGHTS
 
-*Reflecting Varek's cantonal inheritance, this Article gives residents tools beyond electing representatives — at both the state and county level.*
+## §2.1 Incorporation of Federal Rights
 
-### §4.1 State Referendum
-Eligible voters equal to 5% of Varek's electorate, gathered across at least half of all Counties, may petition to place an enacted statute before a state-wide referendum within one year of its enactment. A simple majority of votes cast, with turnout of at least 25%, repeals the statute upon certification. A statute implementing an obligation of the Federated Republic's Constitution, or a budget enacted under Article IX, is not subject to this section.
+Every right guaranteed by the Constitution of the Federated Republic is enforceable in Varek as a right under this Constitution.
 
-### §4.2 State Citizen Initiative
-Eligible voters equal to 8% of Varek's electorate, gathered across at least half of all Counties, may place a proposed statute directly before the Assembly. The Assembly must vote on the proposal within 90 days; if it fails or the Assembly does not vote, the proposal proceeds to a state-wide referendum, where passage requires 55% of votes cast with turnout of at least 30%.
+No Varek statute, County ordinance, Directorate act, or other exercise of State or local authority may diminish the federal constitutional floor.
 
-### §4.3 County Initiative and Referendum
-Each County must, by charter under Article V, establish an initiative and referendum process for its own ordinances, at thresholds no more restrictive than those stated in §4.1 and §4.2, scaled to the County's own electorate. A County may adopt more permissive thresholds than the state-wide figures.
+## §2.2 Right to Local Participation
 
-### §4.4 Administration
-The Elections Directorate under Article VI administers all petitions and referenda under this Article, applying objective, published eligibility criteria only. A petition determination may be challenged before the Varek courts on the ground that the criteria were misapplied.
+(a) Every eligible voter has the right to meaningful participation in the government of their County.
 
----
+(b) Each County shall maintain lawful procedures for local elections, petition, initiative, referendum, and other forms of public participation required by this Constitution.
 
-## ARTICLE V — COUNTIES AND LOCAL GOVERNMENT
+(c) Such procedures may differ among Counties but may not be structured so as to materially frustrate genuine public access to County government.
 
-### §5.1 County Councils
-Each County is governed by an elected County Council, the size and electoral method of which are fixed by County charter, provided every County Council is elected by a method meeting the accessibility standards of §1.9 of the Federated Republic's Constitution.
+## §2.3 Right to Public Records
 
-### §5.2 Reserved County Powers
-Each County holds authority over matters of local concern, including local ordinances, local taxation under Article IX, local public services, county courts of limited jurisdiction consistent with Article VII, and county law enforcement. The Assembly may set minimum statewide standards but may not direct County institutions as instruments of Assembly administration.
+Every person has the right to access the Varek Record System without cost and to receive a written legal basis for any restriction or withholding of a record.
 
-### §5.3 Fiscal Protection
-The Assembly may not systematically defund Counties to achieve de facto centralization of county-level functions. Every County is entitled to reasonable fiscal capacity to carry out its constitutional functions, secured through the equalization mechanism of §9.6.
+Any restriction is subject to judicial review.
 
-### §5.4 County Charters
-Each County adopts its own charter, ratified by a majority of the County's eligible voters, governing its internal structure consistent with this Article. A charter may not conflict with this Constitution or any statute lawfully enacted within the Assembly's authority under §5.2.
+## §2.4 Right Against Concentration of Power
 
-### §5.5 Municipalities
-A County may recognize municipalities within its territory and delegate to them authority over matters of strictly local concern, consistent with the County's charter.
+(a) Every person within Varek has standing to challenge a statute, administrative arrangement, office, or practice alleged to violate §1.3.
 
-### §5.6 Intercounty Cooperation
-Counties may enter cooperative agreements for shared services, infrastructure, and resource management. No such agreement may bind a County's legislative authority beyond the agreement's stated terms, and any County may withdraw on the notice period the agreement specifies.
+(b) No individualized injury beyond the alleged structural violation is required.
 
-### §5.7 County Division, Merger, and Boundary Review
-The Assembly may create, divide, or merge Counties by statute passed with two-thirds of full seated membership and ratified by referendum of the affected County's or Counties' eligible voters at a simple majority. Any such statute must be reviewed by the Varek Monitor for consistency with the population-equality concern of §3.2 before the Assembly vote.
+(c) Mere administrative discretion within a lawfully confined field does not constitute general executive authority.
 
----
+## §2.5 Environmental Stewardship
 
-## ARTICLE VI — ADMINISTRATION AND PUBLIC SERVICE
+(a) Varek's waters, watersheds, agricultural lands, and other natural systems of substantial common importance shall be governed with regard to the interests of present and future generations.
 
-*Varek has no executive branch. This Article creates the machinery that implements statutes without creating a second political authority. Directors serve the Assembly; they do not govern independently of it.*
+(b) The Assembly may establish statewide environmental minimums where effects cross County boundaries or common protection is reasonably necessary.
 
-### §6.1 The Directorate
-The Varek Directorate comprises the directors of the administrative departments the Assembly establishes by statute — including, at minimum, an Elections Directorate, a Revenue Directorate, and a Public Works Directorate. Each Directorate implements statutes within its assigned area and holds no authority beyond what statute delegates to it.
+(c) Counties may adopt more protective standards within their constitutional authority.
 
-### §6.2 Appointment and Removal
-Each director is appointed by the Assembly by majority vote from candidates meeting statutory qualifications, and serves at the pleasure of the Assembly. A director may be removed by majority vote at any time, without cause required. No director holds a fixed term, an independent political mandate, or authority to decline a lawful Assembly directive within their department's assigned area.
+## §2.6 Language, Culture, and Custom
 
-### §6.3 Limits on Directorate Authority
-No Directorate may adopt a regulation exceeding the scope its enabling statute defines. No Directorate may exercise authority over another Directorate's assigned area. A dispute between Directorates over the scope of their respective areas is resolved by the Assembly's relevant committee under §3.6, and, if unresolved, by the Varek courts under Article VII.
+(a) No public authority may discriminate against the lawful use of a local language or the practice of local culture or custom.
 
-### §6.4 Duty of Refusal
-No civil servant or Directorate employee may comply with a directive that would require violation of this Constitution or statute. Refusal creates no liability and is no basis for dismissal. A person refusing such a directive may report it to the Varek Monitor under Article XI.
+(b) Cultural and customary practices remain subject to constitutional rights and valid law.
 
-### §6.5 Transparency of Administration
-Every Directorate regulation, appointment, and removal is published to the Varek Record System under Article X. A Directorate may not classify or withhold a record except on the grounds stated in §10.4.
+(c) Where a traditional practice exercises coercive or governmental authority, it is fully subject to the constitutional requirements applicable to public power.
 
-### §6.6 Civil Service Protections
-The Assembly establishes by statute a civil service framework protecting Directorate employees, other than directors themselves, from removal for reasons unrelated to conduct or competence, and from political pressure to act contrary to their statutory duties.
+## §2.7 Enforcement
+
+A person whose rights under this Article are violated may seek appropriate relief in a Varek court.
+
+The State may not assert sovereign immunity as a bar to a claim arising directly under this Constitution.
 
 ---
 
-## ARTICLE VII — THE JUDICIARY
+# ARTICLE III — THE VAREK ASSEMBLY
 
-### §7.1 Court Structure
-Varek's judiciary comprises County Courts of limited jurisdiction, a Varek Superior Court, and the Varek Supreme Court. The Assembly may establish, abolish, and define the jurisdiction of County Courts and the Superior Court by statute; it may not abolish the Varek Supreme Court, reduce it below three justices, or eliminate any right of appeal to it in a matter properly within its jurisdiction.
+## §3.1 Composition
 
-### §7.2 Judicial Selection
-Candidates for judicial office apply to the Varek Judicial Nominating Council, a body of seven members — two selected by the Assembly, two by the Counties collectively through a method the Counties establish, two practicing attorneys selected by the Varek bar, and one retired judge selected by lot from those eligible. The Council certifies a list of qualified candidates for each vacancy; the Assembly appoints from that list by majority vote.
+The legislative authority of Varek is vested in a unicameral Varek Assembly.
 
-### §7.3 Terms and Removal
-Judges of the Varek Supreme Court and Superior Court serve single, non-renewable ten-year terms. County Court judges serve six-year terms, renewable once. A judge may be removed only for cause — conduct, incompetence, or a disqualifying offense as defined by the Federated Republic's Constitution — by two-thirds vote of the Assembly following a finding by the Varek Monitor, or through a judicial discipline process the Assembly establishes by statute.
+Each County elects three representatives.
 
-### §7.4 Independence
-No representative, director, or County official may direct, threaten, or seek to influence a judge's decision in a pending matter. Judicial compensation may not be reduced during a judge's term.
+## §3.2 County Equality and Population Review
 
-### §7.5 Right of Access
-Any person with a concrete, articulable legal injury has the right to seek relief from a Varek court of competent jurisdiction. No statute may leave a category of legal injury without a forum for relief.
+(a) Equal representation of Counties is a deliberate feature of Varek's cantonal order.
 
-### §7.6 Relationship to Federal Courts
-A constitutional question arising in any Varek proceeding may be referred to the Federated Republic's Supreme Court consistent with that Constitution's Article IV. A judgment of a Varek court is subject to the judgment-recognition provisions of the Federated Republic's Constitution.
+(b) At intervals established by law and at least once every ten years, an independent population review shall publish the ratio between Varek's most and least populous Counties.
 
-### §7.7 Public Defense
-Varek establishes a public defender system, funded through the Revenue Directorate, ensuring that every person unable to afford counsel receives competent representation consistent with the Federated Republic's Constitution's Article I guarantees.
+(c) If that ratio exceeds eight to one, a mandatory County-boundary review shall commence.
 
----
+(d) The review shall produce one or more lawful proposals reasonably capable of reducing extreme disparity while preserving the viability of affected Counties.
 
-## ARTICLE VIII — ELECTIONS
+(e) No change takes effect except through the process required by Article V.
 
-### §8.1 Method
-Each County elects its three Assembly representatives through a single transferable vote among candidates standing for that County's delegation, ensuring that a County's representation reflects a range of support within it rather than a single winner-take-all outcome.
+(f) The Assembly may not satisfy this section merely by considering the disparity and declining to proceed.
 
-### §8.2 Administration
-The Elections Directorate administers Assembly elections, County elections upon a County's request, and all referenda and initiatives under Article IV, applying uniform published standards. Varek's voting system connects to the Federated Republic's National Voting System for any federal election held concurrently, without alteration to federal election administration.
+## §3.3 Terms
 
-### §8.3 Independence of Elections Administration
-The Director of the Elections Directorate serves a fixed six-year term and may be removed by the Assembly only for cause, notwithstanding §6.2's general removal rule — elections administration requires insulation from the ordinary at-will removal that governs other Directorates.
+Representatives serve four-year terms.
 
-### §8.4 Campaign Finance
-Contributions to Assembly and County campaigns are subject to disclosure requirements the Assembly establishes by statute, consistent with the foreign-contribution prohibition and disclosure floor of the Federated Republic's Constitution's Article VIII.
+Terms shall be staggered so that approximately half the Assembly is elected at each biennial election.
 
-### §8.5 Election Holidays
-Varek election days are public holidays within Varek, consistent with the Federated Republic's Constitution's accessibility guarantee.
+A representative may serve no more than four consecutive full terms without sitting out one full term.
 
----
+## §3.4 Eligibility
 
-## ARTICLE IX — PUBLIC FINANCE
+A representative must be:
 
-### §9.1 Taxing Authority
-The Assembly holds authority to levy state-wide taxes, duties, and fees by statute. Counties retain authority to tax within their own jurisdictions, subject to §9.4 and the non-discrimination requirements of Article II.
+- a citizen of the Federated Republic;
+- eligible to vote in Varek;
+- a resident of the County represented for the period established by law, not exceeding one year immediately before election.
 
-### §9.2 Budget Process Without an Executive
-Because no officer proposes a budget on the Assembly's behalf, the Assembly's Finance Committee prepares a draft budget from Directorate submissions and County fiscal reports, and reports it to the full Assembly no later than 120 days before the start of the fiscal year. The budget is enacted as an ordinary statute under Article III.
+No qualification may create an hereditary, property, ideological, cultural, or patronage barrier to office.
 
-### §9.3 Balanced Budget
-The Assembly must pass a balanced budget or publish a structural deficit justification reviewed by the Revenue Directorate for fiscal accuracy. Where the Assembly fails to enact a budget by the statutory deadline, an interim appropriation continues prior-year funding, adjusted for inflation, until a budget is enacted; no new program may begin under an interim appropriation.
+## §3.5 Presiding Officer
 
-### §9.4 Internal Commerce
-No County may impose requirements on goods, services, or economic activity originating in another County that are more burdensome than those it applies to its own.
+(a) The Assembly elects a Presiding Officer from among its members by majority of its seated membership.
 
-### §9.5 Public Treasury and Audit
-All public money received by Varek is deposited into the Varek Treasury; no money may be withdrawn except by Assembly appropriation. The Varek Monitor audits the Treasury's receipts and disbursements annually and publishes findings to the Varek Record System.
+(b) The Presiding Officer:
 
-### §9.6 County Fiscal Equalization
-The Assembly establishes by statute a mechanism ensuring every County has fiscal capacity reasonably sufficient to fulfill its obligations under Article V and Article II. The Varek Monitor certifies annually whether the mechanism is operating as required.
+- chairs the Assembly;
+- certifies enacted legislation;
+- performs duties expressly assigned by this Constitution;
+- exercises the temporary emergency authority of Article XII.
 
-### §9.7 Compensation
-No representative, director, or judge may set their own compensation. All compensation is set by statute and published to the Varek Record System.
+(c) The Presiding Officer has no residual executive authority and no authority beyond that expressly conferred by this Constitution or necessary to preside over the Assembly.
 
----
+(d) The Presiding Officer votes only to break a tie unless this Constitution provides otherwise.
 
-## ARTICLE X — THE VAREK RECORD SYSTEM (VRS)
+## §3.6 Committees
 
-### §10.1 Establishment
-The Varek Record System is the permanent, tamper-evident public record of Varek's government, freely accessible to every Inhabitant at no cost. Every statute, ordinance, Directorate act, judicial decision, appointment, removal, and Assembly vote is published to the VRS as a permanent record.
+(a) The Assembly may organize committees.
 
-### §10.2 Synchronization with the Federal NRS
-The VRS is synchronized with the National Record System of the Federated Republic for every record of shared relevance — including election certifications, judicial appointments referable to federal courts, and any matter the Federated Republic's Constitution requires to be recorded nationally. Synchronization does not subordinate the VRS to federal administration; Varek retains full authority over records of purely internal concern.
+(b) Committee composition and rotation shall prevent domination by a single County.
 
-### §10.3 Permanence
-Records may not be deleted, altered, or reclassified after publication; corrections are published as new entries alongside the original.
+(c) Committees may investigate, hold hearings, request records, prepare legislation, and oversee administration.
 
-### §10.4 Limited Restriction
-A record may be temporarily restricted only where the VRS Administrator, appointed under §10.5, finds it poses an imminent, specific, and documented threat to individual safety, subject to judicial review within 14 days. No record may be classified to conceal a constitutional violation, policy disagreement, or political embarrassment; any such classification is void.
+(d) No committee may enact law or permanently prevent the full Assembly from considering a matter. Assembly rules shall provide a reasonable discharge mechanism.
 
-### §10.5 Administration
-The VRS is operated by a VRS Administrator appointed by the Assembly for a fixed six-year term, removable only for cause, operationally independent of the Directorate and every other Varek institution in the exercise of VRS functions.
+## §3.7 Quorum and Procedure
 
-### §10.6 Acts Effective Regardless of VRS Status
-A government act takes legal effect from the moment of issuance regardless of VRS publication status; the VRS is the record of government, not a condition of it. Late publication is nonetheless a compliance breach, reportable by the Varek Monitor.
+A majority of seated membership constitutes quorum unless this Constitution expressly provides otherwise.
 
----
+Assembly procedure may not permit indefinite delay of a matter the Constitution affirmatively requires the Assembly to decide.
 
-## ARTICLE XI — THE VAREK MONITOR
+## §3.8 Passage of Legislation
 
-*Where the Federated Republic maintains three Monitors to watch three branches, Varek — smaller, and without an executive branch — maintains one, mirroring the same information-only philosophy at a scale appropriate to a single State.*
+Except where a higher threshold is required, a bill passes by majority of seated membership.
 
-### §11.1 Mandate
-The Varek Monitor observes the Assembly, the Directorate, the Counties, and the courts for compliance with this Constitution, verifies compliance, and publishes findings to the Varek Record System. Findings are not binding on any Varek institution and are not a prerequisite for any legal proceeding.
+Every bill shall address one clearly defined subject.
 
-### §11.2 Selection
-The Varek Monitor is selected by lot from a pool of eligible former judges and auditors maintained by the Elections Directorate under objective criteria, confirmed by a simple majority popular vote at the next general election. The Monitor serves a single eight-year term.
+## §3.9 No Executive Veto
 
-### §11.3 Independence
-The Monitor's funding may not fall below the prior year's inflation-adjusted level without a two-thirds Assembly vote. The Monitor may be removed before term's end only for cause, following a Varek Supreme Court finding confirming the stated grounds.
+No officer may veto, suspend, or return legislation after lawful passage by the Assembly.
 
-### §11.4 Access
-The Monitor has unrestricted access to records, personnel, and facilities across every Varek institution within its audit mandate; obstruction of that access is itself a compliance breach, reportable to the Assembly and published to the VRS.
+A statute takes effect according to its terms and any applicable publication requirement.
 
-### §11.5 Annual Report
-The Monitor publishes an annual State of Varek report, including the Statehood Audit self-assessment required by §1.4, regardless of whether any Assembly member requests it.
+## §3.10 Publication Before Passage
 
----
+The full text of a bill shall be publicly available through the Varek Record System before final passage for a period established by law and not less than ten days.
 
-## ARTICLE XII — EMERGENCY PROVISIONS
+A substantial amendment resets that period unless immediate action is constitutionally authorized during an emergency.
 
-*Without a single executive, emergency response cannot rest in one officer's hands by default — but genuine emergencies cannot wait for a full Assembly session either. This Article gives the Presiding Officer a narrow, short-fused bridge, not a standing power.*
+## §3.11 Constitutional Amendments
 
-### §12.1 Presiding Officer's Limited Authority
-In response to a natural disaster, public health emergency, or infrastructure failure, the Presiding Officer may issue emergency directives strictly necessary to protect life and safety, for a period not to exceed 72 hours, published immediately to the Varek Record System.
+A legislatively proposed constitutional amendment requires two-thirds of the authorized membership of the Assembly and ratification under Article XIII.
 
-### §12.2 Emergency Advisory Council
-Upon issuing an emergency directive under §12.1, the Presiding Officer shall immediately convene an Emergency Advisory Council, consisting of one representative from each County other than the Presiding Officer's own, selected by that County's own Assembly delegation. The Council reviews the directive and reports its recommendation to the Assembly before any vote to ratify or extend the directive under §12.3. The Council holds no authority to issue, block, or independently modify a directive, and nothing in this section alters the Presiding Officer's authority or its limits under §12.1.
+## §3.12 Expulsion
 
-### §12.3 Assembly Ratification Required
-Any emergency directive lapses automatically at 72 hours unless the Assembly, convened on an expedited basis, ratifies it by majority vote for a period it specifies, not to exceed 30 days without a fresh ratification vote.
+The Assembly may expel a representative by two-thirds of authorized membership for stated grounds published to the Varek Record System.
 
-### §12.4 Assembly-Declared Statewide Emergency
-The Assembly may, by majority vote of full seated membership, declare a statewide emergency independent of any directive issued under §12.1, upon finding that a natural disaster, public health emergency, infrastructure failure, or comparable crisis affects Varek as a whole rather than a single County or defined group of Counties. The declaration must state the specific emergency authorities it activates; no declaration may grant open-ended or undefined authority, and any authority not stated in the declaration is not conferred. The declaration lapses automatically 30 days after adoption unless the Assembly, by a fresh majority vote of full seated membership taken before that date, positively extends it for an additional period the extension specifies; the declaration does not continue by default, and Assembly inaction or silence never extends it. The Presiding Officer administers the authorities the declaration states, and the Emergency Advisory Council established under §12.2 shall be convened for the declaration's duration.
+## §3.13 County Recall
 
-### §12.5 No Derogation of Rights
-No emergency directive, declaration, or ratification under this Article may derogate any right under Article II beyond what the Federated Republic's Constitution's Article I permits during a lawfully declared federal emergency, and never any right that Article designates non-derogable.
+A County may establish recall of its Assembly representatives by County charter.
 
-### §12.6 Judicial Review
-Any Inhabitant may challenge an emergency directive or declaration under this Article before the Varek courts at any time; a court may rule it unconstitutional during the emergency itself.
+The final decision must rest with the eligible voters of that County.
 
-### §12.7 County-Level Emergencies
-A County Council holds the equivalent authority under this Article for emergencies confined to that County's territory, subject to the same 72-hour limit and ratification requirement before the County Council itself.
+## §3.14 Vacancies
 
-### §12.8 Joint County Emergencies
-Two or more Counties whose territories are jointly affected by a single natural disaster, public health emergency, or infrastructure failure may declare a joint emergency by concurrent resolution of each participating County Council, in lieu of declaring separately under §12.7, consistent with the cooperative authority Counties otherwise hold under §5.6. A joint declaration operates as a single emergency for purposes of the 72-hour limit and the ratification requirement, and the participating County Councils may coordinate Directorate resources across their territories for its duration. A County may join or withdraw from a joint declaration by its own Council's resolution at any time, without affecting the declarations of the remaining participating Counties.
+A vacant Assembly seat shall be filled by special election within the period established by law.
+
+Where little time remains before the next general election, a County may provide a temporary method by charter that preserves the voters' prior electoral choice as nearly as practicable.
 
 ---
 
-## ARTICLE XIII — AMENDMENT
+# ARTICLE IV — DIRECT DEMOCRACY
 
-### §13.1 Assembly Path
-An amendment requires two-thirds of full seated Assembly membership and ratification by a simple majority of Varek's eligible voters in a referendum administered by the Elections Directorate within 180 days of passage.
+## §4.1 State Referendum
 
-### §13.2 County Initiative Path
-An amendment may also be proposed by petition of eligible voters equal to 10% of Varek's electorate, gathered across at least two-thirds of all Counties, proceeding directly to a referendum requiring 55% of votes cast with turnout of at least 35%.
+(a) Eligible voters equal to five percent of the statewide electorate, with qualifying support distributed across at least half of the Counties, may petition for referendum on an enacted statute within one year of enactment.
 
-### §13.3 Entrenched Provisions
-No amendment may authorize a single office to hold general executive authority contrary to §1.3, reduce a right below the federal Article I floor incorporated by §2.1, or eliminate the Varek Monitor's independence under Article XI, without also amending this Constitution's structure to preserve equivalent safeguards; any amendment purporting to do so without such provision is void to the extent of the conflict.
+(b) A simple majority of valid votes cast statewide repeals the statute.
 
-### §13.4 Effect
-An amendment takes effect upon certification by the Elections Directorate and publication to the Varek Record System.
+(c) A referendum may not repeal a measure constitutionally required to fulfill an unavoidable federal obligation or an interim appropriation necessary to preserve constitutional continuity.
+
+## §4.2 State Citizen Initiative
+
+(a) Eligible voters equal to eight percent of the statewide electorate, with qualifying support distributed across at least half of the Counties, may propose legislation.
+
+(b) The Assembly shall consider the proposal within the period established by law.
+
+(c) If the Assembly enacts the proposal, it becomes law in the ordinary manner.
+
+(d) If the Assembly rejects the proposal or fails to act within the required period, the certified proposal proceeds automatically to statewide referendum.
+
+(e) Ratification requires 55 percent of valid votes cast.
+
+## §4.3 Assembly Counterproposal
+
+The Assembly may place a counterproposal before the electorate alongside a certified citizen initiative.
+
+The original citizen proposal may not be altered, withdrawn, delayed, or replaced without the consent of its lawful sponsors.
+
+Election law shall permit voters to express support for either proposal or for neither.
+
+## §4.4 County Initiative and Referendum
+
+Every County shall establish initiative and referendum procedures in its charter.
+
+County thresholds may be more permissive than statewide requirements but may not materially frustrate practical access to direct democracy.
+
+## §4.5 Qualification and Administration
+
+(a) Petition verification shall use objective, published criteria.
+
+(b) Once a petition satisfies constitutional and lawful requirements, further processing and ballot placement are ministerial.
+
+(c) No political officer or Assembly committee may veto a qualified measure.
+
+(d) Petition determinations are subject to prompt judicial review.
+
+## §4.6 Constitutional Limits
+
+An initiative or referendum exercising ordinary lawmaking authority may not do what the Assembly itself lacks constitutional authority to do.
+
+Constitutional change must proceed under Article XIII.
 
 ---
 
-## ARTICLE XIV — RATIFICATION AND TRANSITION
+# ARTICLE V — COUNTIES AND LOCAL GOVERNMENT
 
-### §14.1 Ratification
-This Constitution takes effect upon ratification by a majority of Varek's eligible voters, administered by the interim Elections Directorate, consistent with the Federated Republic's Constitution's requirements for State governance.
+## §5.1 County Councils
 
-### §14.2 Transition Period
-Existing County governments continue as caretakers for 180 days following ratification, during which the first Assembly election, the first Judicial Nominating Council, and the first Varek Monitor selection must be completed.
+Each County shall be governed by an elected County Council under a voter-ratified charter.
 
-### §14.3 Founding County Map
-The Counties existing at ratification are recognized as the founding Counties for purposes of §1.2 and Article III apportionment, filed to the Varek Record System before the first Assembly is seated.
+The size and electoral method of a County Council shall be determined locally subject to constitutional rights and statewide election-integrity standards.
 
-### §14.4 Continuity of Obligations
-Varek assumes the pre-existing lawful obligations of its prior government structure, consistent with the transition principles of the Federated Republic's Constitution.
+## §5.2 Reserved County Authority
+
+Counties possess authority over matters principally local in character, including:
+
+- local ordinances;
+- local taxation;
+- local public services;
+- County institutions;
+- County law enforcement;
+- local courts of jurisdiction authorized by law.
+
+## §5.3 Statewide Standards and Non-Commandeering
+
+(a) The Assembly may establish statewide minimum standards where necessary to protect constitutional rights, election integrity, fiscal integrity, statewide systems, cross-County interests, or other matters properly within State authority.
+
+(b) The State may not convert County institutions into ordinary instruments of State administration by directing their day-to-day operation for matters outside constitutionally valid statewide requirements.
+
+(c) Statewide regulation establishes law; it does not erase the constitutional distinction between State and County government.
+
+## §5.4 Fiscal Capacity
+
+Every County is entitled to reasonable fiscal capacity sufficient to perform its constitutional functions.
+
+The Assembly may not use taxation, grants, equalization, withholding, or other fiscal means to punish lawful political opposition or achieve de facto centralization.
+
+## §5.5 County Charters
+
+Each County shall adopt a charter ratified by its eligible voters.
+
+A charter governs local structure subject to this Constitution and valid State law enacted within State authority.
+
+## §5.6 Municipalities
+
+A County may establish or recognize municipalities and delegate local powers to them according to its charter and valid law.
+
+Municipalities do not possess the constitutional status of Counties unless this Constitution is amended to provide otherwise.
+
+## §5.7 Intercounty Cooperation
+
+Counties may form agreements for shared infrastructure, services, environmental protection, emergency response, and other lawful purposes.
+
+Withdrawal and duration shall be governed by the agreement and valid law.
+
+## §5.8 Creation, Division, Merger, and Boundary Change
+
+(a) A County reorganization may be initiated by:
+
+- the Assembly;
+- the governing bodies of affected Counties;
+- a lawful petition of affected voters.
+
+(b) A proposal must receive two-thirds approval of the authorized membership of the Assembly.
+
+(c) It must also be approved by a majority of voters in each affected County unless a more protective procedure is established by law.
+
+(d) No boundary change may be used to punish political opposition, manipulate Assembly representation, or evade the population review required by Article III.
+
+## §5.9 Temporary County Administration
+
+(a) Temporary State-supported administration may be imposed only upon a judicial finding that a County has become constitutionally incapable of maintaining basic government and that ordinary judicial orders, elections, fiscal support, or intercounty assistance are inadequate.
+
+(b) Temporary administration exists solely to:
+
+- preserve essential services;
+- protect constitutional rights;
+- safeguard records and public funds;
+- restore lawful elections and County institutions.
+
+(c) It shall be exercised by a temporary body or professional administration established by law and shall not vest general County authority in a single State officer.
+
+(d) Temporary administration may not permanently amend a County charter, alter County boundaries, dispose of major County assets except from necessity, or make long-term policy commitments unrelated to restoration.
+
+(e) Authority shall return to ordinary County institutions as soon as constitutional government is restored.
 
 ---
 
-*Adopted by the people of Varek. Subject to ratification consistent with Article XIV.*
+# ARTICLE VI — ADMINISTRATION AND PUBLIC SERVICE
+
+## §6.1 The Directorates
+
+(a) Administrative functions of Varek shall be exercised through separate Directorates established by law.
+
+(b) Varek shall maintain at least those administrative functions necessary for elections, public revenue, public works, records, State sponsorship, and continuity of government.
+
+(c) A Directorate possesses only authority constitutionally or statutorily assigned to its field.
+
+(d) No Director possesses residual authority or command over another Directorate merely by virtue of office.
+
+## §6.2 Directors
+
+(a) Directors shall be appointed by the Assembly from candidates meeting qualifications established by law.
+
+(b) Directors of major administrative departments shall serve fixed terms established by law.
+
+(c) Removal shall require publicly stated grounds and the procedure established by structural law.
+
+(d) Directors remain accountable to enacted law and lawful Assembly oversight but may not be removed for refusing illegal political interference.
+
+(e) Constitutionally sensitive Directorates may receive stronger appointment and removal protections under this Constitution or structural law.
+
+## §6.3 Assembly and Administration
+
+(a) The Assembly establishes law, appropriations, standards, and general governmental policy.
+
+(b) A Directorate administers the law within its assigned field.
+
+(c) The Assembly may amend the law governing a Directorate but may not exercise an individual administrative function assigned by law to that Directorate except through a constitutionally authorized oversight, emergency, or removal process.
+
+## §6.4 Directorate Conflicts
+
+No Directorate may exercise authority assigned to another.
+
+Inter-Directorate disputes may be resolved by statutory coordination, Assembly clarification of law or appropriation, or judicial determination where the dispute concerns legal authority.
+
+No permanent coordinating officer may exercise general command over the Directorates.
+
+## §6.5 Duty of Refusal
+
+(a) No State or County officer or employee may comply with an order requiring violation of this Constitution, the Constitution of the Federated Republic, or valid law applicable to the act.
+
+(b) Good-faith refusal stating a legal basis, or lawful reporting of such an order, shall not itself create liability or grounds for retaliation.
+
+(c) Law shall provide prompt review of disputed refusals.
+
+(d) Once an authoritative determination establishes that an order is lawful, continued refusal may be treated according to ordinary public-employment law.
+
+(e) Policy disagreement alone does not create a right of refusal.
+
+## §6.6 Civil Service
+
+The Assembly shall establish a professional civil service framework protecting ordinary employees from patronage, political retaliation, and dismissal for reasons unrelated to competence, conduct, lawful restructuring, or legitimate public need.
+
+Varek's civil service shall remain professional without becoming an independent political authority.
+
+## §6.7 State Immigration Sponsorship
+
+(a) Varek shall administer the State sponsorship stage of the federal immigration system established by §6.1 of the Constitution of the Federated Republic.
+
+(b) The Assembly shall establish public sponsorship criteria by law. Criteria shall comply with federal equality guarantees and may not employ ideological screening or nationality-based quotas.
+
+(c) Individual sponsorship determinations shall be administered by a professional Directorate under published procedures and may not be directed for partisan, personal, or private favor by a representative, Director outside the responsible administrative process, or other political officer.
+
+(d) Every denial shall identify the precise legal ground in writing.
+
+(e) A Varek court may review a sponsorship determination for constitutional or procedural illegality but may not compel sponsorship merely because it would have reached a different policy judgment.
+
+(f) State sponsorship does not itself confer federal certification, legal residency, citizenship, or any federal immigration status.
+
+---
+
+# ARTICLE VII — THE JUDICIARY
+
+## §7.1 Courts
+
+Varek shall maintain:
+
+- County Courts of limited jurisdiction where established by law;
+- a Varek Superior Court;
+- a Varek Supreme Court.
+
+The Assembly may reorganize lower courts but may not abolish the Supreme Court or eliminate meaningful judicial review of constitutional claims.
+
+## §7.2 Judicial Nominating Council
+
+(a) Judicial candidates shall be screened by an independent Judicial Nominating Council of seven members.
+
+(b) Two members shall be selected by the Assembly, two by the Counties collectively, two through the organized legal profession under public rules, and one qualified former judge shall be selected by public lot.
+
+(c) Terms shall be staggered.
+
+(d) Conflict-of-interest and recusal rules shall apply.
+
+(e) The Council shall certify qualified candidates for each vacancy.
+
+## §7.3 Judicial Appointment and Inaction
+
+(a) The Assembly appoints a judge from the certified candidates within the period established by law.
+
+(b) If the Assembly fails to act within that period, the appointment shall be made by public lot from the certified candidates.
+
+(c) An affirmative rejection is not equivalent to inaction and may require the Nominating Council to produce a new certified list according to law.
+
+## §7.4 Terms
+
+Supreme Court and Superior Court judges serve single nonrenewable ten-year terms.
+
+County Court judges serve terms established by law consistent with judicial independence.
+
+## §7.5 Judicial Conduct
+
+(a) Judicial discipline shall be administered through an independent Judicial Conduct Commission or equivalent process established by structural law.
+
+(b) The Varek Monitor may report suspected misconduct but shall not adjudicate it.
+
+(c) Removal of a State judge for grave misconduct, incapacity, or serious incompetence may require a formal conduct finding followed by a two-thirds vote of the authorized membership of the Assembly.
+
+## §7.6 Independence and Funding
+
+(a) No public officer may improperly direct, threaten, or interfere with a judge concerning a pending matter.
+
+(b) Judicial compensation may not be reduced during a judge's term.
+
+(c) The Assembly shall provide funding reasonably sufficient for the courts to exercise their constitutional jurisdiction.
+
+## §7.7 Right of Access
+
+No category of legal injury recognized by law may be left without a court or lawful forum capable of providing appropriate relief.
+
+## §7.8 Quorum and Recusal Fallback
+
+Where the Supreme Court cannot form quorum because of vacancy, incapacity, or recusal, qualified Superior Court judges shall temporarily serve according to an objective order established by law, with ties resolved by public lot.
+
+Temporary service ends when no longer necessary.
+
+## §7.9 Public Defense
+
+Varek shall maintain a system of competent public defense for persons constitutionally entitled to counsel and unable to afford representation.
+
+---
+
+# ARTICLE VIII — ELECTIONS
+
+## §8.1 Assembly Elections
+
+Each County elects its three Assembly representatives by single transferable vote.
+
+## §8.2 County Electoral Autonomy
+
+Counties may choose the electoral systems governing their own institutions subject to:
+
+- equal political rights;
+- accessibility;
+- fair counting;
+- transparent certification;
+- lawful judicial review;
+- statewide standards necessary to protect election integrity.
+
+## §8.3 Elections Directorate
+
+(a) An independent Elections Directorate shall administer statewide elections, Assembly elections, initiatives, referenda, constitutional petitions, and public lots assigned to it by law.
+
+(b) It may administer County elections where required by law or requested by a County.
+
+(c) It shall coordinate with federal election systems where State and federal elections intersect without assuming federal authority.
+
+## §8.4 Elections Director
+
+(a) The Elections Director serves a fixed six-year term.
+
+(b) Qualified candidates shall be certified under an objective independent process established by structural law.
+
+(c) The Assembly appoints from that qualified pool.
+
+(d) Failure of the Assembly to act within the required period results in selection by public lot from the certified pool.
+
+(e) The Elections Director may be removed only for constitutional or statutory cause under a public process subject to judicial review.
+
+## §8.5 Campaign Finance
+
+Campaign finance and disclosure requirements shall be established by law consistent with the Constitution of the Federated Republic.
+
+## §8.6 Election Accessibility
+
+State election days shall be public holidays or receive equivalent accessibility protection established by law.
+
+## §8.7 State Voting Citizenship
+
+(a) Varek shall recognize as a voting citizen of the State a citizen of the Federated Republic whose State of voting citizenship is Varek under §5.1.a of the federal Constitution.
+
+(b) Residence or domicile for State voting citizenship shall be defined by Varek law consistent with the Constitution of the Federated Republic and valid federal law.
+
+(c) Varek shall not create a separate State nationality or recognize simultaneous State voting citizenship contrary to federal law.
+
+---
+
+# ARTICLE IX — PUBLIC FINANCE
+
+## §9.1 State and County Taxation
+
+The Assembly may levy statewide taxes, duties, and fees by law.
+
+Counties retain local taxing authority within their constitutional sphere.
+
+## §9.2 Budget Preparation
+
+(a) Because Varek has no general executive, the Assembly's Finance Committee shall prepare the State budget from public Directorate submissions, revenue information, County fiscal information, and other lawful sources.
+
+(b) The Finance Committee proposes the budget but exercises no administrative spending authority.
+
+(c) Law may establish an independent professional fiscal office to publish revenue estimates, cost legislation, and provide nonbinding fiscal analysis.
+
+## §9.3 Budget Passage and Continuity
+
+(a) The State budget is enacted by statute.
+
+(b) If a budget is not enacted before the beginning of the fiscal period, prior lawful appropriations continue on an interim basis according to the formula established by law.
+
+(c) No new program may begin solely under an interim appropriation.
+
+(d) An interim appropriation grants spending authority but does not require expenditure of funds that do not lawfully exist.
+
+## §9.4 Deficits
+
+A deficit budget may be enacted where authorized by law and accompanied by a published justification.
+
+Professional fiscal authorities may verify factual and numerical assumptions but do not possess authority to veto the Assembly's fiscal policy judgment.
+
+## §9.5 Internal Commerce
+
+No County may discriminate against goods, services, persons, or lawful economic activity originating in another County merely because of County origin.
+
+## §9.6 Treasury
+
+All State money shall be deposited into a public treasury.
+
+No State expenditure may occur without lawful appropriation or emergency authority permitted by this Constitution.
+
+## §9.7 County Fiscal Equalization
+
+(a) Varek shall maintain a published formula ensuring reasonable fiscal capacity among Counties.
+
+(b) The formula may account for population, geography, service burden, revenue capacity, infrastructure need, and other neutral factors.
+
+(c) Fiscal equalization may not be manipulated to reward political support or punish lawful political opposition.
+
+## §9.8 Audit
+
+State finances shall be independently audited and the results published to the Varek Record System.
+
+The Varek Monitor may examine and report upon fiscal compliance but possesses no spending authority.
+
+## §9.9 Public Debt
+
+State borrowing shall require statutory authorization and public disclosure of its terms.
+
+No debt obligation may be concealed outside the public treasury and records systems.
+
+---
+
+# ARTICLE X — THE VAREK RECORD SYSTEM
+
+## §10.1 Establishment
+
+The Varek Record System is the permanent public record of Varek's government.
+
+Records required by this Constitution or valid law shall be freely accessible except where lawful restriction applies.
+
+## §10.2 Required Records
+
+The VRS shall include, at minimum:
+
+- enacted statutes;
+- County ordinances required by law;
+- Assembly votes;
+- election certifications;
+- constitutional petitions and public lots;
+- major Directorate regulations and final administrative acts required by law;
+- appointments and removals;
+- final judicial decisions;
+- emergency declarations and directives;
+- Monitor reports;
+- public financial and audit records.
+
+## §10.3 Relationship to the National Records System
+
+The VRS shall synchronize with or publish through the National Records System where federal constitutional or statutory law requires.
+
+Varek retains administration of records that remain exclusively within State authority.
+
+## §10.4 Permanence and Correction
+
+A public record may not be silently altered or deleted.
+
+Corrections shall be entered as new records preserving the original entry and identifying the correction.
+
+## §10.5 Restriction
+
+(a) A record may be withheld or restricted only where disclosure is prohibited by constitutional right or valid law, or where disclosure would create a specific and substantial legally recognized harm.
+
+(b) Any restriction shall be narrowly tailored, supported by written reasons, and subject to judicial review.
+
+(c) No record may be withheld merely to conceal illegality, political embarrassment, policy disagreement, or official misconduct.
+
+(d) Access by a constitutionally authorized oversight body does not necessarily require public disclosure of protected content.
+
+## §10.6 VRS Administrator
+
+(a) The VRS shall be administered by an independent VRS Administrator serving a fixed term.
+
+(b) Candidates shall be selected through a qualified process established by structural law.
+
+(c) The Assembly shall appoint from the qualified pool within the required period.
+
+(d) Failure to act results in public-lot selection from that pool.
+
+(e) The Administrator may be removed only for cause.
+
+## §10.7 Legal Effect of Publication
+
+Publication records and proves public acts and fulfills applicable publication duties.
+
+Failure to publish does not invalidate an act unless this Constitution, the Constitution of the Federated Republic, or valid law expressly makes publication a condition of effectiveness for that class of act.
+
+---
+
+# ARTICLE XI — THE VAREK MONITOR
+
+## §11.1 Mandate
+
+The Varek Monitor observes the Assembly, Directorates, Counties, courts, elections administration, public finances, and other State institutions for constitutional compliance and publishes findings to the VRS.
+
+A Monitor finding:
+
+- is informational;
+- is not legally binding;
+- does not invalidate an act;
+- does not remove an officer;
+- does not compel a public institution;
+- is not a prerequisite to litigation or prosecution.
+
+## §11.2 Selection
+
+(a) The Monitor shall be selected by public lot from a qualified pool established under objective criteria.
+
+(b) The pool may include persons with substantial experience in law, judicial service, audit, accounting, investigation, public administration, records oversight, or constitutional compliance.
+
+(c) The selected candidate shall be submitted to the people for confirmation at the next available statewide election.
+
+(d) If rejected, another candidate shall be selected by lot.
+
+(e) Law shall provide an objective acting mechanism during any interval in which no confirmed Monitor is serving.
+
+## §11.3 Term
+
+The Monitor serves one nonrenewable eight-year term.
+
+## §11.4 Removal
+
+(a) Removal proceedings may be initiated by two-thirds of the authorized membership of the Assembly for stated constitutional cause.
+
+(b) The Varek Supreme Court shall determine whether the stated cause is established.
+
+(c) Removal becomes effective upon judicial confirmation.
+
+(d) Political disagreement with a Monitor report is not cause.
+
+## §11.5 Independence
+
+The Monitor's ordinary operating appropriation may not be reduced below the prior year's inflation-adjusted level except by two-thirds of the authorized membership of the Assembly or as part of a generally applicable fiscal emergency law not targeted at the office.
+
+## §11.6 Access
+
+(a) The Monitor has access to records, personnel, and facilities reasonably necessary to perform its constitutional mandate.
+
+(b) Protected information may be subject to handling procedures established by law.
+
+(c) Access does not itself authorize public disclosure of material lawfully protected from publication.
+
+(d) Obstruction of lawful Monitor access shall itself be reported publicly.
+
+## §11.7 Reports
+
+The Monitor shall publish at least one annual report on the constitutional condition of Varek.
+
+The report may include elections, courts, public administration, County government, rights protection, finances, records compliance, and institutional continuity.
+
+---
+
+# ARTICLE XII — EMERGENCY PROVISIONS
+
+## §12.1 Temporary Statewide Emergency Authority
+
+(a) In response to a natural disaster, public health emergency, severe infrastructure failure, or comparable event threatening life, safety, essential public systems, or continuity of constitutional government, the Presiding Officer may issue temporary emergency directives.
+
+(b) A directive must be strictly necessary to address the emergency and may not exercise authority unrelated to the stated crisis.
+
+(c) Every directive shall be published through the VRS or, where normal publication systems are unavailable, through an authenticated emergency publication method established by law.
+
+(d) Emergency authority under this section expires automatically after 72 hours unless continued under this Article.
+
+## §12.2 Emergency Advisory Council
+
+(a) Upon exercise of §12.1 authority, an Emergency Advisory Council shall convene consisting of one Assembly representative from each County other than that of the Presiding Officer.
+
+(b) The Council advises, reviews, and reports but may not issue, veto, or independently alter emergency directives.
+
+(c) The Council may conduct business with available members when emergency conditions prevent participation by one or more Counties.
+
+(d) Unavailable Counties may join when communication or participation becomes possible.
+
+## §12.3 Assembly Ratification
+
+The Assembly may continue, modify, or terminate emergency directives.
+
+A continuation may not exceed 30 days and requires a fresh affirmative vote for each additional period.
+
+Silence or inaction never extends emergency authority.
+
+## §12.4 Statewide Emergency Declaration
+
+The Assembly may independently declare a statewide emergency by majority of seated membership.
+
+The declaration shall identify:
+
+- the emergency;
+- the specific authorities activated;
+- the period of activation.
+
+Undefined or residual emergency authority is not conferred.
+
+## §12.5 Renewal
+
+Each renewal of a Statewide emergency shall contain a fresh finding identifying the continuing emergency conditions and the authorities that remain necessary.
+
+## §12.6 Emergency Assembly Incapacity
+
+(a) Where the emergency itself renders enough Assembly members physically unreachable or incapacitated that ordinary quorum cannot be achieved, the available membership may form an emergency quorum solely to continue, modify, or terminate emergency authority and to preserve essential constitutional continuity.
+
+(b) Political boycott, deliberate absence, or refusal to participate does not reduce quorum.
+
+(c) The existence of emergency incapacity shall be documented through an objective procedure established by law and is immediately subject to judicial review.
+
+(d) Normal quorum requirements resume automatically once sufficient members can reasonably participate.
+
+## §12.7 Emergency Succession
+
+If the Presiding Officer is unavailable or incapacitated during circumstances permitting §12.1 authority, emergency authority transfers immediately according to an objective succession line established by this Constitution or structural law.
+
+No vote or publication is required to create the succession itself.
+
+## §12.8 County Emergencies
+
+A County may exercise equivalent temporary emergency authority within its own jurisdiction through the officer or body designated by its charter, subject to equivalent limits of necessity, duration, transparency, ratification, and judicial review.
+
+## §12.9 Joint County Emergencies
+
+Two or more Counties may coordinate a common emergency by concurrent action of their County governments.
+
+Such coordination does not transfer their general authority to the State and may terminate separately for each participating County.
+
+## §12.10 Rights and Judicial Review
+
+Emergency action remains subject to constitutional rights and judicial review during the emergency itself.
+
+Courts may invalidate or limit emergency action before the emergency ends.
+
+## §12.11 Reversion
+
+Expiration or termination of emergency authority immediately restores the ordinary constitutional distribution of powers.
+
+No emergency directive, administrative arrangement, precedent, or acting status creates residual executive authority.
+
+---
+
+# ARTICLE XIII — CONSTITUTIONAL AMENDMENT
+
+## §13.1 Legislative Proposal
+
+The Assembly may propose an amendment by two-thirds of its authorized membership.
+
+Ratification requires a majority of valid votes cast statewide.
+
+## §13.2 Citizen Proposal
+
+(a) Eligible voters equal to ten percent of the statewide electorate, with qualifying support distributed across at least two-thirds of the Counties, may propose a constitutional amendment.
+
+(b) Once the Elections Directorate certifies constitutional qualification, ballot placement is automatic.
+
+(c) Ratification requires 55 percent of valid votes cast statewide.
+
+## §13.3 Counterproposal
+
+The Assembly may place a counterproposal before voters alongside a citizen-proposed amendment.
+
+It may not alter or suppress the citizen proposal.
+
+## §13.4 Fundamental Structural Change
+
+(a) No provision of this Constitution is permanently unamendable.
+
+(b) An amendment that would:
+
+- create a general executive;
+- materially abolish the constitutional status of Counties;
+- materially alter equal County representation;
+- abolish the Varek Monitor;
+- substantially replace Varek's basic governmental structure,
+
+must expressly identify that structural consequence in the amendment text and official ballot description.
+
+(c) A structural change may not occur by implication or concealed amendment.
+
+(d) Every amendment remains subject to the Constitution of the Federated Republic.
+
+## §13.5 Effect
+
+An amendment takes effect upon certification and publication to the VRS unless the amendment specifies a later date.
+
+---
+
+# ARTICLE XIV — RATIFICATION AND TRANSITION
+
+## §14.1 Ratification
+
+This Constitution takes effect upon lawful ratification by the people of Varek subject to the Constitution of the Federated Republic.
+
+## §14.2 Continuity of Government
+
+Existing institutions continue temporarily to the extent necessary to preserve lawful government until their constitutional successors assume authority.
+
+Caretaker institutions may not make extraordinary appointments, dispose of major public assets, or undertake long-term commitments except where reasonably necessary for continuity, emergency, or existing legal obligation.
+
+## §14.3 First Assembly and Constitutional Institutions
+
+Transition law shall provide for the first Assembly election and constitution of:
+
+- the Directorates;
+- Judicial Nominating Council;
+- Judicial Conduct Commission or equivalent body;
+- Elections Directorate;
+- VRS administration;
+- Varek Monitor;
+- other institutions required by this Constitution.
+
+## §14.4 Continuity of Law and Obligations
+
+Existing laws, contracts, judgments, debts, proceedings, public records, public property, and lawful obligations continue unless inconsistent with this Constitution or lawfully altered.
+
+## §14.5 Public Employment
+
+Existing public employees continue in their lawful positions subject to transition legislation and later lawful reorganization.
+
+Ratification does not itself constitute dismissal or require wholesale reappointment.
+
+## §14.6 Record Transition
+
+Existing State records shall be preserved and transferred into the Varek Record System with their historical authenticity and chronology intact.
+
+## §14.7 Founding County Map
+
+The Counties and boundaries existing at ratification constitute the founding County map and shall be recorded before the first Assembly is seated.
+
+## §14.8 Anti-Inaction During Transition
+
+Failure to complete an appointment or organizational step does not suspend this Constitution.
+
+Transition law shall provide objective acting, succession, or public-lot mechanisms sufficient to preserve constitutional function until the regular process is completed.
+
+## §14.9 Principle of Transition
+
+The adoption of this Constitution replaces the lawful structure of authority; it does not interrupt the existence, obligations, services, or continuity of the State.
+
+## §14.10 Authorized Membership
+
+"Authorized membership" means the number of seats lawfully authorized for a constitutional body whether or not every seat is occupied. A threshold stated as a fraction or majority of authorized membership is not reduced by vacancy.
+
+---
+
+*Adopted by the people of Varek.*
