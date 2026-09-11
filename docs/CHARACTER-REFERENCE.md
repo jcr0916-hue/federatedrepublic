@@ -20,7 +20,8 @@ doesn't happen again, for any character.*
 | **Mara Iset** | The Korda Press | Adren, interior Korda | New outlet (launched 260819). Openly sympathetic to whole-territory statehood — Korda's own voice, not an outside observer. | 91 |
 | **Yena Corran** | The Torenthian | — | One-off byline (seq 32, Toren River). Not yet recurring. | 32 |
 | **Mira Kael** | The Torenthian | — | One-off byline (seq 3, early Lake Varda). Not yet recurring. | 3 |
-| **Yelka Sarn** | Dispatch | — | One-off Dispatch entry (seq 44), separate from Sollis's ongoing Dispatch. | 44 |
+| **Yelka Sarn** | Dispatch | Morantine Territory | First-person citizen blog from a hardware/feed-store owner; practical border-Territory perspective. | 44 |
+| **Neris Vann** | Dispatch | Calden, Caldenmere | First-person citizen blog from a harbor pilot. Ships, weather, machinery, delays, port work, and ordinary coastal life; not a constitutional explainer. | 104 |
 | **Maren Sollis** | Dispatch **and** Show Your Work | Ardenmere Secondary, Corindal State | **The civics teacher.** Two registers, same person — see full entry below. | 11 |
 
 ---
