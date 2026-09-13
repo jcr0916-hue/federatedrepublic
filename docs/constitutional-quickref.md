@@ -1109,8 +1109,9 @@ Local governments — cities, counties, municipalities, and other subdivisions �
 
 ### §15.10 — State Government Incapacity
 
-Where a State's constitutional government has become incapable of exercising governmental authority and cannot be restored through its own constitutional continuity mechanisms, the Republic may temporarily administer only those functions necessary to preserve rights, essential services, and restoration of democratic State government. The State's constitutional identity and status remain unaffected.
+Where a State's constitutional government has become incapable of exercising governmental authority and cannot be restored through its own constitutional continuity mechanisms, the Republic may temporarily administer only those functions necessary to preserve rights, essential services, and restoration of democratic State government. Where the State maintains forces under §14.5 not otherwise in federal service,…
 
+- **Cross-refs:** §14.5
 
 ---
 
