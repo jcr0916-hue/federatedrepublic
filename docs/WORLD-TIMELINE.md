@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260914, against 103 published entries (seq 1–103, contiguous, no gaps).*
+*Last verified: 260922, against 107 published entries (seq 1–107, contiguous, no gaps).*
 
 ---
 
@@ -83,7 +83,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | **Korda Convention arc** (competing petitions, JMC review) | 96 / 13.11 | **LIVE, clock running.** JMC still reviewing, no timeline given. news-064 surfaced the operational bind: the Elections Panel is preparing a Day 8 referendum that a plain reading of §15.5.a(1) says already cannot proceed, because no finding has been issued and its certification stands. Next: the JMC concluding, the Convention convening, or the referendum simply happening — the last of which Article XV has no mechanism to undo. |
 | **LC Race** (Vael/Carrow/Mak/Sandris) | 99 / 13.11 | **LIVE, now entangled with Korda.** news-066: Sandris is the only candidate who engaged directly with the §15.5.a(1) question, reframing his transition-plan platform as useful "twice" — once for the referendum, once for a Convention if one convenes instead. Carrow called it premature, Vael did not respond, Mak deflected to the Elections Panel. No election date set. |
 | **Fiscal Equalization (§12.6)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
-| **Argent Ridge** (Norvane, §13.1/§18.4) | 95 / 13.10 | **LIVE.** §18.4 Trust designation request now filed, forwarded to Varek and Norvane for host State consent (news-063, nrs-029). Neither State has responded; no statutory deadline governs the timing. Next: either State consenting/declining, or the repeal petition itself resolving first with the land still unprotected either way. |
+| **Argent Ridge** (Norvane, §13.1/§18.4) | 107 / 13.11 | **LIVE, half resolved.** Varek's Assembly granted §18.4 consent (news-069) — committee hearing, one founding county's testimony, floor vote, no single executive involved anywhere in the process. Norvane's consent is the only one still missing; nothing about Varek's vote changes Norvane's own refugee-housing need for the same parcel. Next: Norvane's decision (or continued silence) is now the entire remaining question. |
 | **Thoss / Civic Consul standing** | 68 / 13.09 | **QUIET since Month 9.** Her position on the Korda Convention/whole-statehood question is explicitly unresolved (agreed 260821 — Claude has narrative control, no early reveal). Watch for a forcing moment: a vote on her own bill, Orin's Convention seating, or a direct question she can't fully dodge. |
 | **Lake Varda / Sunderland crisis** | 102 / 13.11 | **LIVE — new diplomatic front opened (260914).** nrs-032: Foreign Affairs proposes a trilateral conference with Caldris and Valedon after bilateral inquiry to the Sunderland Interim Authority went nowhere (twelve-day response, answered none of three questions). First appearance of Caldris in a diplomatic role and first appearance of Valedon at all beyond a road name. Neither government has responded; no timeline given. The §10.2 redaction petition (nrs-030) remains separately open, Directorate still hasn't responded, no hearing set. Next: either government responding to the conference proposal, or the redaction petition getting a hearing date — two independent open threads on the same crisis. |
 | **Toren River negotiation** | 100 / 13.11 | **REOPENED (260907) — still unresolved, not advanced.** news-067 confirms the Month 6 follow-up session never happened; Caldris-side scheduling conflicts, no replacement date set. The dispute-resolution-mechanism gap remains exactly as open as Month 5. Untested so far — this year's flow has stayed within tolerance. Next: either side reconvening, or a low-rainfall year making the gap suddenly consequential. |
@@ -200,6 +200,10 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 101 | 13.11 | NRS | Monetary Authority — State of the Economy Report, Second Half Year 13 | National Record System |
 | 102 | 13.11 | NRS | Diplomatic Communication — Proposal for Trilateral Conference on Lake Varda | National Record System |
 | 103 | 13.11 | NRS | Elections Panel — Judicial Pool Quarterly Admission Notice | National Record System |
+| 104 | 13.11 | Dispatch | Neris Vann | Dispatch |
+| 105 | 13.11 | NRS | Joint Monitor Council — Determination on Concurrent Korda Petitions | National Record System |
+| 106 | 13.11 | News | Two Hundred Sixty-Six | The Torenthian |
+| 107 | 13.11 | News | Varek Says Yes, and Says It the Only Way It Knows How | The Torenthian |
 
 ---
 

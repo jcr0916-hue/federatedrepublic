@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Varek says yes, and says it the only way it knows how",
+    blurb: "No governor to sign anything — a committee hearing, one county's testimony, and a floor vote instead. Varek's half of the Argent Ridge consent is filed. Norvane's still isn't.",
+    href: "torenthia-news-069.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Two Hundred Sixty-Six",
     blurb: "Elin Thoss took office with 274 Assembly votes. Two months later, her government's working count is 266 — still secure, but the cushion has started moving.",
     href: "torenthia-news-068.html",

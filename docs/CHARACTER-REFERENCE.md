@@ -134,6 +134,19 @@ any diplomatic presence in world content before nrs-032.
 | **Valedon** | "The nation that almost joined" (Year 18 referendum, §15.6). No prior diplomatic content — only appeared before as a road name near Morantine Territory (dispatch-sarn). nrs-032 invites Valedon as **proposed venue and co-convener**, explicitly not as a stakeholder — the Directorate states it is not aware of any direct Valedon interest in Sunderland and the invitation does not presume one. | **This is genuinely the first Valedon diplomatic content in the project.** No capital city, government structure, or named official exists yet — do not invent one without checking world-canon.md's editorial rule that map/place detail follows coverage. |
 | **Sunderland Interim Authority** | Established antagonist-by-neglect, not villain — fracturing, at war, has not substantively answered any Republic inquiry. Twelve-day response to nrs-008 "confirmed receipt, answered nothing" (news-028). | Do not have the SIA suddenly become responsive without a real story beat justifying the change — the pattern of non-response is now load-bearing characterization. |
 
+## VAREK GOVERNMENT — introduced 260922 (news-069)
+
+Varek's constitution vests no single executive; governing power sits with the Assembly, and
+counties hold protected local authority (§5.2/§5.3 of Varek's own constitution). First named
+Varek officials — do not invent a governor or single "leader" figure for Varek in any future
+piece; the structure explicitly bars it.
+
+| Name | Role |
+|---|---|
+| **Reyna Oskitt** | Assembly delegate, Kell's Hollow County — the founding county whose territory includes Varek's half of the Argent Ridge tract. Testified for consent with no drama: no competing use for the land. |
+| **Corren Vask** | Assembly delegate, unrelated county. Raised process objection (why does the whole Assembly vote on one county's land) without opposing the outcome — a structural, not substantive, dissent. Useful voice if Varek's cantonal tension needs raising again later. |
+| **Kell's Hollow County** | Founding county containing Varek's half of Argent Ridge. First named Varek county. |
+
 ## NAME-COLLISION WARNINGS (found in the 260831 audit — verify before writing)
 
 **Two unrelated people share the surname Fenn.** They have never appeared in the same piece,
