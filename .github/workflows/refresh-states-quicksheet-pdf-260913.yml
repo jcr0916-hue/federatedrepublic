@@ -1,0 +1,65 @@
+name: Refresh States quicksheet PDF 260913
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-states-quicksheet-pdf-260913.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build site and install Chromium renderer
+        run: |
+          npm ci
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+          npm run build
+      - name: Render only States quicksheet PDF
+        run: |
+          python3 -m http.server 8765 --directory _site >/tmp/qs-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          node - <<'JS'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({headless:true});
+            try {
+              const page = await browser.newPage();
+              await page.goto('http://localhost:8765/quicksheet-states.html', {waitUntil:'networkidle'});
+              await page.evaluate(() => document.fonts.ready);
+              await page.pdf({path:'pdf/quicksheet-states.pdf', printBackground:true, preferCSSPageSize:true});
+            } finally { await browser.close(); }
+          })().catch(e => { console.error(e); process.exit(1); });
+          JS
+      - name: Verify PDF exists and is one page
+        run: |
+          test -s pdf/quicksheet-states.pdf
+          python3 - <<'PY'
+          import re
+          b=open('pdf/quicksheet-states.pdf','rb').read()
+          # Chromium PDFs contain /Type /Page markers; exclude /Pages.
+          pages=len(re.findall(rb'/Type\s*/Page(?!s)',b))
+          if pages != 1:
+              raise SystemExit(f'Expected one-page States quicksheet PDF, found {pages}')
+          print('Verified one-page States quicksheet PDF.')
+          PY
+      - name: Remove one-shot workflow and commit PDF
+        run: |
+          rm -f .github/workflows/refresh-states-quicksheet-pdf-260913.yml
+          git config user.name 'jcr0916-hue'
+          git config user.email 'jcr0916@gmail.com'
+          git add pdf/quicksheet-states.pdf .github/workflows/refresh-states-quicksheet-pdf-260913.yml
+          git commit -m 'Refresh States quicksheet PDF for two-audit Statehood'
+          git push origin HEAD:main
