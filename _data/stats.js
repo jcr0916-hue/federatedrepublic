@@ -103,8 +103,8 @@ const states = [
 
 const territories = [
   { name: "Korda",      pop: 3.4, senate: 0, assembly: 33, rel: "Territory", audit: "Crisis", char: "Indigenous · Southeastern lake shore · Incorporation dispute" },
-  { name: "Morantine",  pop: 1.6, senate: 0, assembly: 15, rel: "Territory (statehood process)", audit: null, char: "Southern border · Valedon country" },
-  { name: "Solara",     pop: 0.9, senate: 0, assembly:  9, rel: "Territory (statehood process)", audit: null, char: "Western Sea island · Distinct culture" },
+  { name: "Morantine",  pop: 1.6, senate: 0, assembly: 15, rel: "Territory (statehood process)", audit: "First audit passed · awaiting second", char: "Southern border · Valedon country" },
+  { name: "Solara",     pop: 0.9, senate: 0, assembly:  9, rel: "Territory (statehood process)", audit: "First audit passed · awaiting second", char: "Western Sea island · Distinct culture" },
   { name: "Verdmont",   pop: 0.4, senate: 0, assembly:  4, rel: "Territory", audit: null, char: "Northern Alps · Resource extraction" },
 ];
 

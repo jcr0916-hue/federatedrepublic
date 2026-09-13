@@ -1049,13 +1049,17 @@ Provisional status is a remedial constitutional status applicable only to an exi
 
 (2) Each Monitor conducts the portion of the Statehood Audit within that Monitor's constitutional domain and publishes an individual finding. The audit examines: free, lawful, and competitive elections; functioning constitutional government capable of State responsibilities; effective rule of law and lawful administration; substantial compliance with Article I; and other objective constitutional-capacity criteria established by statute. An overall failed audit requires at least two of the three Monitors to find a material failure within their respective domains. A single material-failure finding is published as a warning requiring remediation but does not constitute overall audit failure. All findings and dissents are published to the NRS.
 
-(3) A Territory that passes the Statehood Audit becomes a State immediately by constitutional operation. No additional political vote, legislative act, executive confirmation, or Provisional stage is required. The Statehood change is recorded to the NRS as soon as possible.
+(3) Initiation under subsection (1) opens a Statehood proceeding. The Territory must receive a successful Statehood Audit within two years after initiation. If no successful audit is achieved within that period, the proceeding lapses and may be initiated again under subsection (1).
 
-(4) Statehood immediately creates two Senate seats. The Elections Panel assigns the two seats by public lot to two distinct existing Senate classes and administers a special election within 90 days. The first senators serve only the remainder of the assigned class terms; the classes and terms of existing States are unaffected.
+(4) After the first successful Statehood Audit, the Territory remains a Territory and no Provisional status arises. A second successful Statehood Audit must be completed within two years after publication of the first successful audit. A failed audit or warning during that period does not by itself terminate the proceeding; the Territory may achieve the required second successful audit at any time before the deadline. If the second successful audit is not achieved within that period, the proceeding lapses and may be initiated again under subsection (1).
 
-(5) Every State is subject to an annual Statehood Audit under the same Monitor structure and criteria. Judicial review is available for legality, process, jurisdiction, and application of the stated criteria; a court may not substitute its policy judgment for a Monitor's domain assessment.
+(5) Upon publication of the second successful Statehood Audit, the Territory becomes a State immediately by constitutional operation. No additional political vote, legislative act, executive confirmation, or Provisional stage is required. The Statehood change is recorded to the NRS as soon as possible.
 
-(6) Where active conflict prevents completion of an annual audit in a significant portion of a State's territory, the Monitors may publish a provisional audit-status finding for that cycle. A provisional audit status is unavailable where the State materially contributed to the conflict conditions.
+(6) Statehood immediately creates two Senate seats. The Elections Panel assigns the two seats by public lot to two distinct existing Senate classes and administers a special election within 90 days. The first senators serve only the remainder of the assigned class terms; the classes and terms of existing States are unaffected.
+
+(7) Every State is subject to an annual Statehood Audit under the same Monitor structure and criteria. Judicial review is available for legality, process, jurisdiction, and application of the stated criteria; a court may not substitute its policy judgment for a Monitor's domain assessment.
+
+(8) Where active conflict prevents completion of an annual audit in a significant portion of a State's territory, the Monitors may publish a provisional audit-status finding for that cycle. A provisional audit status is unavailable where the State materially contributed to the conflict conditions.
 
 ### §15.3 — Mandatory Devolution
 
