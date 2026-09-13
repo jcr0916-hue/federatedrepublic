@@ -1,5 +1,5 @@
 /* Service Worker — The Federated Republic
-   Strategy: network-first for HTML, cache-first for assets
+   Strategy: network-first for HTML and current documents, cache-first for assets
    On first visit: cache everything. On repeat visits: instant load.
    On offline: serve cached version. */
 
@@ -38,7 +38,7 @@ self.addEventListener('activate', e => {
   );
 });
 
-/* Fetch: network-first for HTML, cache-first for everything else */
+/* Fetch: network-first for HTML, data, and PDF editions */
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
 
@@ -58,7 +58,9 @@ self.addEventListener('fetch', e => {
   // before it shipped. Data goes network-first, with cache as the offline fallback.
   const isData = url.pathname.endsWith('.json') || url.pathname === '/search-index.js';
 
-  if (isHTML || isData) {
+  const isPDF = url.pathname.endsWith('.pdf');
+
+  if (isHTML || isData || isPDF) {
     // Network-first: fresh HTML when online, cached fallback offline
     e.respondWith(
       fetch(e.request)
