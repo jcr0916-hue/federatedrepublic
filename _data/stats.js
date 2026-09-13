@@ -39,7 +39,7 @@ const executive = [
       },
     ],
     note:
-      "Her working Assembly count is fifteen votes above the survival line, down from the 274 that installed her. The §12.8 review remains the pressure point.",
+      "Her working Assembly count is fifteen votes above the survival line, down from the 274 that installed her. The §12.6 review remains the pressure point.",
   },
   {
     name: "Casimir Rehn",
@@ -64,7 +64,7 @@ const executive = [
 //    is a history of what the Republic cared about, narrated by nothing.
 // ─────────────────────────────────────────────────────────────────────────────
 const openSlot = {
-  flag: "§12.8 · Fiscal Equalization",
+  flag: "§12.6 · Fiscal Equalization",
   headline: "The Formula Goes Back to the Floor",
   body:
     "The Civic Consul has sent the equalization mechanism to the Legislature for its full statutory review, in public, rather than move the queue by discretion. Any formula that lifts Korda and Morantine moves someone down — and the advantaged states were in the 198.",
@@ -103,8 +103,8 @@ const states = [
 
 const territories = [
   { name: "Korda",      pop: 3.4, senate: 0, assembly: 33, rel: "Territory", audit: "Crisis", char: "Indigenous · Southeastern lake shore · Incorporation dispute" },
-  { name: "Morantine",  pop: 1.6, senate: 0, assembly: 15, rel: "Provisional (from Territory)", audit: null, char: "Southern border · Valedon country" },
-  { name: "Solara",     pop: 0.9, senate: 0, assembly:  9, rel: "Provisional (from Territory)", audit: null, char: "Western Sea island · Distinct culture" },
+  { name: "Morantine",  pop: 1.6, senate: 0, assembly: 15, rel: "Territory (statehood process)", audit: null, char: "Southern border · Valedon country" },
+  { name: "Solara",     pop: 0.9, senate: 0, assembly:  9, rel: "Territory (statehood process)", audit: null, char: "Western Sea island · Distinct culture" },
   { name: "Verdmont",   pop: 0.4, senate: 0, assembly:  4, rel: "Territory", audit: null, char: "Northern Alps · Resource extraction" },
 ];
 

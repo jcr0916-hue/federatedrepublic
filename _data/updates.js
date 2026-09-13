@@ -233,7 +233,7 @@ const updates = [
     category: "world",
     badge: "The World",
     title: "Thoss names her Council — and the receipt",
-    blurb: "Eleven days after the vote, her ministers publish to the record. The surprise isn't who's on the list — it's how she intends to pay her debts. §12.8 heads back to the floor, in public.",
+    blurb: "Eleven days after the vote, her ministers publish to the record. The surprise isn't who's on the list — it's how she intends to pay her debts. §12.6 heads back to the floor, in public.",
     href: "torenthia-news-043.html",
   },
   {

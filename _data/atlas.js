@@ -47,7 +47,7 @@ const nations = [
     region: "South",
     tag: "~25\u201330 million &middot; The Nation That Almost Joined",
     body:
-      "The nation that almost joined. Valedon's incorporation question has never fully closed, and the border states of Corindal and Morantine sit in its cultural shadow.",
+      "The nation that almost joined. Valedon's incorporation question has never fully closed, and the border State of Corindal and Territory of Morantine sit in its cultural shadow.",
     now:
       "Whether a citizen referendum constitutes a constructive &sect;15.6 petition has never been put to the SC. Several in Valedon would like to find out.",
   },

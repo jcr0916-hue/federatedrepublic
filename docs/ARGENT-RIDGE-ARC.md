@@ -160,14 +160,14 @@ not population. This turned out to be the arc's richest vein and it now has two 
   this Territory exists." The counter-argument is in the same piece: the bar doesn't measure whether
   the country agrees with you, it measures whether you can afford the petrol.
 - **news-040 (Vend/Orin, The Torenthian):** the same table reaches Korda. Orin sets §13.1 against
-  §12.8 — one provision obliges a stranger to drive eight hundred miles and ask; the other obliges
+  §12.6 — one provision obliges a stranger to drive eight hundred miles and ask; the other obliges
   a chamber to send her a letter. Neither is a malfunction. That's the design.
 
-**§12.8 CORRECTION (important, was nearly published wrong):** §12.8 does NOT stop at a Monitor
+**§12.6 CORRECTION (important, was nearly published wrong):** §12.6 does NOT stop at a Monitor
 finding. "Where the EM finds the mechanism has failed, the Legislature publishes its response to the
 NRS within 90 days." The Legislature IS obliged to answer. It answered, on time, in full compliance —
 and the answer was that the mechanism is under review. The grievance is not silence. It is that
-§12.8 can compel a legislature to SPEAK and cannot compel it to MEAN it. That is sharper than the
+§12.6 can compel a legislature to SPEAK and cannot compel it to MEAN it. That is sharper than the
 "nothing follows" version and it is what the text actually says.
 
 **Also fixed while here:** nrs-010 and nrs-011 both carried a masthead eyebrow reading "Foreign

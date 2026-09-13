@@ -63,7 +63,7 @@ subsections (2) and (3) do not apply to any of them. All are addressed together 
   proceeds under §15.2 or §15.4 including all their approval/audit/ratification steps
 
 **§15.2** — the whole-territory statehood path: Statehood Audit administered by the JMC,
-no political vote required, Provisional status on passing. This is what a competing
+no political vote required, full Statehood immediately by constitutional operation on passing. This is what a competing
 whole-territory petition would be seeking.
 
 ## THE TIMING CONSTRAINT (this is what makes it work)

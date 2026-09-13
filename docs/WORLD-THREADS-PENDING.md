@@ -109,7 +109,7 @@ scheduled 13.12.08. To begin by Thursday 260821. John ruminating on opening shap
 ## PARKED FEATURE — The Who's Who (world cast reference)
 
 **Status:** parked by John (13.09, real-time July 2026). Not scheduled. Build when the cast/story
-volume warrants — suggested trigger: after the formation beats + §12.8 fight land (cast will exceed
+volume warrants — suggested trigger: after the formation beats + §12.6 fight land (cast will exceed
 ~20 named figures with office changes behind them, exactly when newcomers need placement).
 
 **The design (decided in outline):**
@@ -137,7 +137,7 @@ volume warrants — suggested trigger: after the formation beats + §12.8 fight 
      [Thoss cards already exist]
   3. The press gallery — Petra Vend (Torenthian), Dara Voss (RNN), Corwin Hale (Ledger)
   4. The new ministers — Rews (Korda), Casta (Morantine), Verel (retained, Health) — active through
-     the §12.8 fight
+     the §12.6 fight
   5. Queued Tier 2 — Sarn, Sollis, Orin
   NOTE: published text establishes almost no physical descriptions — the first generation DEFINES
   each character's canonical appearance. Generate, John approves, then the portrait IS canon;
@@ -158,10 +158,11 @@ Torenthia Stats places the STRUCTURE and tracks the FORTUNES.
 **The concept has two halves, meant to share one visual vocabulary:**
 
 1. **Structural/reference data** (static, changes rarely): the 12 States + 4 Territories, with
-   population, Senate seats, and Assembly seats. Relationship taxonomy: four labels describing
-   three real stages — State, Territory, Provisional (from Territory, advancing toward statehood),
-   Provisional (from State, regressing after failed audit — Corindal's case). Senate stays flat at
-   2/State regardless of population (§3.5, untouched by any of this). Assembly seats by Webster
+   population, Senate seats, and Assembly seats. Relationships are State and Territory, with
+   Provisional status applying only to an existing State after repeated failed audits (Corindal).
+   Morantine and Solara remain Territories pursuing statehood, with no Senate seats. States
+   ordinarily have two Senate seats regardless of population (§3.5); under Provisional status,
+   sitting Senators finish their terms but no new terms begin (§15.1.a). Assembly seats by Webster
    method (§3.2, divisor set/adjustable by statute).
 
 2. **Dynamic backend dials** (from the earlier same-session discussion): Thoss's coalition
@@ -193,8 +194,8 @@ at exactly 500 total Assembly seats with no minimum-seat overrides triggered.
 | Territory | Pop | Senate | Assembly | Relationship |
 |---|---|---|---|---|
 | Korda | 3.4M | 0 | 33 | Territory |
-| Morantine | 1.6M | 0 | 15 | Provisional (from Territory) |
-| Solara | 0.9M | 0 | 9 | Provisional (from Territory) |
+| Morantine | 1.6M | 0 | 15 | Territory (statehood process) |
+| Solara | 0.9M | 0 | 9 | Territory (statehood process) |
 | Verdmont | 0.4M | 0 | 4 | Territory |
 
 **Totals:** Population 51.8M &middot; Senate 23/24 filled &middot; Assembly 500 seats.
@@ -202,7 +203,7 @@ at exactly 500 total Assembly seats with no minimum-seat overrides triggered.
 **Expanded scope (John, 13.09 — second pass):** the value is that *data tells story without
 narrative*. Additions to track beyond the static structural table:
 - **Assembly support for the sitting CC** (Thoss currently 274 of 500). The DELTA is the story: a
-  reader seeing 274 -> 258 between pieces infers the §12.8 fight is costing her, with nothing
+  reader seeing 274 -> 258 between pieces infers the §12.6 fight is costing her, with nothing
   written. Story moves on days we don't publish.
 - **Public polling** — on policies and on public figures. The GAP is a story: Assembly support and
   public approval diverging means she can be winning the chamber and losing the country, told
@@ -271,7 +272,7 @@ manual bullet list.
 discoverability — the Stats-table marker and any cross-link — not the writing. A state becomes
 visible only when the live story gives a reader a reason to want to know more about it. Same
 instinct as the silent Preamble, the unposted mundanes, and the rotating "Newest" star card on
-Scenarios, applied to a new object type. A live candidate trigger already exists: the §12.8 fight's
+Scenarios, applied to a new object type. A live candidate trigger already exists: the §12.6 fight's
 "advantaged states" pushing back on formula reform is a natural entry point for a wealthy,
 institutionally proud state (Caldenmere-shaped) to earn its debut; Orath's likelier trigger is
 something closer to its own texture (a cooperative rights dispute, a water-access question) rather
@@ -284,7 +285,7 @@ than the fiscal fight.
    with legislation — not a frozen vote); Thoss public approval; Legat Consul (Rehn) public approval.
    Both executives, per co-equal design. The gap between Assembly support and public approval is
    itself a story (winning the chamber, losing the country).
-2. **THE OPEN SLOT** (dynamic, editorial): whatever is contested now; currently the §12.8 formula
+2. **THE OPEN SLOT** (dynamic, editorial): whatever is contested now; currently the §12.6 formula
    fight. Comes off the page when it stops mattering. This is what makes the page a narrative
    instrument, not a fixed dashboard.
 3. **STATES & TERRITORIES** (most stable, BOTTOM): the reconciled 500-seat structural table as
@@ -428,7 +429,7 @@ conversion is now this feature's actual prerequisite, not just a nice-to-have al
 tomorrow or Wednesday. Genuinely blank slate before this -- confirmed zero existing names or
 portraits for any of the three despite how central they're about to become (the live Korda
 remainder-viability assessment under §15.5.a is a JMC function -- all three jointly -- and the
-§12.8 EM ruling, already planned for this week, is the Executive Monitor acting alone).
+§12.6 EM ruling, already planned for this week, is the Executive Monitor acting alone).
 
 **Legislative Monitor — Aldric Feyn.** Watches the Legislature. Male, 50s-60s. Characterization: a
 decade-plus of watching legislative sessions and learning that reporting the truth and having it
@@ -440,7 +441,7 @@ expression."
 
 **Executive Monitor — Reya Solt.** Watches both Consuls. Female, 40s-50s. Characterization: reputation
 built entirely on getting the numbers right before anyone else does -- exacting, precise, the one
-whose office is about to deliver this week's §12.8 ruling. Portrait prompt: "Photorealistic editorial
+whose office is about to deliver this week's §12.6 ruling. Portrait prompt: "Photorealistic editorial
 portrait, professional headshot, muted natural lighting, neutral seamless background in soft
 navy-grey, no stylization, no fantasy elements, straight-on framing, natural skin texture and detail,
 precise formal attire, sharp exacting expression."
@@ -458,7 +459,7 @@ region, she becomes the one Monitor on the JMC who has to render a supposedly-ne
 judgment on whether her own home can stand on its own. Strong hook, deliberately left undecided --
 John's call whether and how to use it.
 
-**Practical note on sequencing:** the §12.8 EM ruling (already planned as a beat this week) is a
+**Practical note on sequencing:** the §12.6 EM ruling (already planned as a beat this week) is a
 clean, ready-made moment to debut Solt by name and face rather than keep writing "the Executive
 Monitor's office" institutionally -- worth using if the timing lines up when this gets picked back up.
 

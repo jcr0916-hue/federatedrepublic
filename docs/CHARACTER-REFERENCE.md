@@ -30,7 +30,7 @@ doesn't happen again, for any character.*
 
 Civics teacher, Ardenmere Secondary School, Corindal State. Corindal is landlocked, interior,
 agricultural, and has been in **Provisional status for the entire span of her writing** —
-audit failures over a contested electoral-district redraw, senators not yet seated.
+audit failures over a contested electoral-district redraw, one Senate seat vacant while the other sitting senator completes the current term.
 
 **Two separate publications, same person, deliberately different registers:**
 - **Dispatch** (`torenthia-dispatch-sollis.html`) — one long, single, accumulating file running
