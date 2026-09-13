@@ -51,4 +51,4 @@ Run `python3 scripts/build-scenario-index.py`, `npm run build`, `python3 scripts
 
 The checks confirm rendering, references, links, and synchronization; they do not turn the fictional scenarios into constitutional text. Statutory details and fictional judicial outcomes remain examples subordinate to the current Constitution. External AI-provider calls were not exercised. The build retains its existing module-type warning for `_data/atlas.js`.
 
-Publication is separate from this local checkpoint and requires the outstanding explicit approval for a push to GitHub main.
+The user explicitly approved publication. All reviewed website updates through commit `bdee3af` were published to GitHub main on 13 September 2026. Production deployment is not verified by this report.
