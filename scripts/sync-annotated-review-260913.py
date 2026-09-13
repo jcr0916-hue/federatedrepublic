@@ -30,17 +30,20 @@ starts=list(re.finditer(r'<div id="art(\d+)" class="article-section">',s))
 for idx in range(len(starts)-1,-1,-1):
     m=starts[idx]
     n=int(m.group(1))
-    end=starts[idx+1].start() if idx+1<len(starts) else s.find('<script',m.start())
-    if end<0: end=len(s)
+    if idx+1<len(starts):
+        end=starts[idx+1].start()
+    else:
+        end=s.find('\n</main>',m.start())
+        if end<0:
+            raise SystemExit('Could not locate annotated main-content close after Article XX')
     section=s[m.start():end]
     article=next(a for a in data if a.get('heading','').startswith(f'Article {ROMAN[n]} '))
     first=section.find('<div class="provision"')
     if first<0:
         raise SystemExit(f'Article {n}: no provision block found')
     prefix=section[:first].rstrip()
-    # Keep the existing intro, but ensure the heading itself follows canonical data.
     prefix=re.sub(r'(<h2 class="article-header">)Article [^<]+',lambda z:z.group(1)+html.escape(article['heading']),prefix,count=1)
-    newsec=prefix+'\n\n'+'\n\n'.join(render(p) for p in article['provisions'])+'\n</div>\n\n'
+    newsec=prefix+'\n\n'+'\n\n'.join(render(p) for p in article['provisions'])+'\n</div>\n'
     s=s[:m.start()]+newsec+s[end:]
 
 path.write_text(s,encoding='utf-8')
