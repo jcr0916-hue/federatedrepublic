@@ -25,6 +25,8 @@
     .atlas-layout{display:grid;grid-template-columns:1fr 310px;gap:1rem;align-items:start}
 
     /* Map */
+    .state-map-link{position:absolute;z-index:4;transform:translate(-50%,-50%);color:#e9ddba;background:#0a0f1a;border:1px solid var(--gold);padding:5px 9px;font-size:14px;text-decoration:underline}
+    .state-map-link:focus-visible{outline:3px solid white;outline-offset:3px}
     .map-wrap{position:relative;border:3px solid #6a5a38;border-radius:3px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.7)}
     .map-scale-wrap{width:100%;position:relative;overflow:hidden}
     #mapOverlay text{font-family:'Cormorant Garamond',serif}
@@ -220,6 +222,7 @@
               <img src="region-map-tier2-base.webp" id="baseImg" alt="Federated Republic of Torenthia — Interactive Map">
               <svg id="mapOverlay" style="position:absolute;top:0;left:0" width="1536" height="1024" viewBox="0 0 1536 1024" aria-hidden="true"></svg>
 
+              {% for s in statepages %}<a class="state-map-link" href="{{ s.url }}" style="left:{{ s.left }}%;top:{{ s.top }}%" aria-label="Explore {{ s.name }}">{{ s.name }}</a>{% endfor %}
               <!-- Crisis dots (red) -->
               <div class="dot" data-key="norvane" style="top:19.2%;left:76.5%">
                 <div class="dot-core" style="background:#e8185a"></div>
@@ -447,6 +450,7 @@
           <p class="sblock-sub">Population, representation, and constitutional relationship. Slow to change &mdash; but population drives Assembly seats by the Webster method (&sect;3.2), so a migration that persists eventually moves the seats, and the threshold above with them.</p>
 
           <div class="stbl-wrap">
+            <p style="font-size:.85rem;line-height:1.6">State profiles: {% for profile in statepages %}<a href="{{ profile.url }}" style="color:var(--gold)">{{ profile.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}. Other State and Territory names locate them on the map.</p>
             <table class="stbl">
               <thead>
                 <tr>
@@ -461,7 +465,7 @@
               <tbody>
                 {%- for s in stats.states %}
                 <tr>
-                  <td class="c-name"><button class="stbl-name stbl-link" data-place="{{ s.name | lower }}" onclick="showOnMap('{{ s.name | lower }}')" title="Show {{ s.name }} on the map">{{ s.name }}</button><span class="stbl-char">{{ s.char | safe }}</span></td>
+                  <td class="c-name">{% set profileUrl = "" %}{% for profile in statepages %}{% if profile.name == s.name %}{% set profileUrl = profile.url %}{% endif %}{% endfor %}{% if profileUrl %}<a class="stbl-name stbl-link" href="{{ profileUrl }}" aria-label="Read the {{ s.name }} State profile">{{ s.name }} <span aria-hidden="true">↗</span></a>{% else %}<button class="stbl-name stbl-link" data-place="{{ s.name | lower }}" onclick="showOnMap('{{ s.name | lower }}')" title="Show {{ s.name }} on the map">{{ s.name }}</button>{% endif %}<span class="stbl-char">{{ s.char | safe }}</span></td>
                   <td class="c-num">{{ s.pop }}M</td>
                   <td class="c-num">{{ s.senate }}{% if s.senateNote %}<span class="stbl-fn" title="{{ s.senateNote }}">*</span>{% endif %}</td>
                   <td class="c-num">{{ s.assembly }}</td>

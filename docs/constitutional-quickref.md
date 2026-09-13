@@ -372,7 +372,7 @@ The Legislature comprises two chambers: the Assembly and the Senate. All legisla
 
 ### §3.2 — The Assembly
 
-(1) The Assembly is the proportionally elected chamber. Both States and Territories send voting members.
+(1) Members of the federal Assembly are elected by proportional representation. States and Territories each elect voting members.
 
 - **Thresholds:**
   - The Assembly may expel a member by 2/3 vote of full seated membership

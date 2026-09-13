@@ -329,7 +329,7 @@ The Legislature comprises two chambers: the Assembly and the Senate. All legisla
 
 ### §3.2 — The Assembly
 
-(1) The Assembly is the proportionally elected chamber. Both States and Territories send voting members. Seats are allocated by the Webster method based on population, with a minimum of one seat per State and Territory. The constituency divisor is established and may be adjusted by statute, subject to the minimum-seat guarantee.
+(1) Members of the federal Assembly are elected by proportional representation. States and Territories each elect voting members. Seats are allocated by the Webster method based on population, with a minimum of one seat per State and Territory. The constituency divisor is established and may be adjusted by statute, subject to the minimum-seat guarantee.
 
 (2) The census, conducted every ten years by a statutory independent agency, is the basis for reapportionment. The LM audits the census and allocation process.
 

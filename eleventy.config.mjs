@@ -48,6 +48,19 @@ export default function (eleventyConfig) {
   );
 
 
+  // Related State coverage follows published World content, including body mentions.
+  eleventyConfig.addFilter("stateCoverage", (pieces, name) => {
+    const re = new RegExp(`\\b${name}\\b`, 'i');
+    return [...pieces].reverse().filter(piece => {
+      const text = fs.readFileSync(piece.inputPath, 'utf8')
+        .replace(/<script\b[^>]*>[\s\S]*?<\/script>|<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
+        .replace(/<[^>]+>/g, ' ');
+      return re.test(text);
+    });
+  });
+  eleventyConfig.addPassthroughCopy("State Constitutions/harren-state-constitution.md");
+  eleventyConfig.addPassthroughCopy("State Constitutions/varek-state-constitution.md");
+
   // Assets Eleventy does not template — copy through untouched.
   // If any of these is missing from _site, every page that uses it 404s.
   const passthrough = [
