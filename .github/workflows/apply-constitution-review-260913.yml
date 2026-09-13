@@ -1,3 +1,4 @@
+# one-shot application; retry after annotated wrapper preservation fix
 name: Apply constitutional review 260913
 
 on:
