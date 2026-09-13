@@ -514,7 +514,7 @@
 </div>
 <div id="art3" class="article-section">
   <h2 class="article-header">Article III — The Legislature<a href="quicksheet-article-3.html" class="qs-icon" title="Quick Sheet: Article III — The Legislature" aria-label="Quick Sheet: Article III — The Legislature" target="_blank" rel="noopener">📋</a></h2>
-  <p class="article-intro">The Legislature comprises two chambers: the Assembly (proportional) and the Senate (two senators per State). Federal legislative competence is plenary subject to the limits established in this Article. Article III also houses several rules that reach beyond the Legislature itself &mdash; the map of removal pathways for all constitutional officers, and the continuity requirements for every fixed-term office. They sit here because the Legislature is the branch closest to the people, because it is the body that legislates conduct and ethics standards, and because each of these rules operates principally as a constraint on legislative power: removal mechanisms may not be invented by statute, and confirmation processes must be timed so that no office falls vacant between terms.</p>
+  <p class="article-intro">The Assembly and Senate exercise federal legislative authority under this Article. The general rules for removal, continuity, ethics, and federal office now reside in Article VII.</p>
 
   <div class="provision" id="s3-1">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §3.1" onclick="copyProvLink('s3-1')" style="cursor:pointer">§3.1<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">The Legislature</span></div>
@@ -599,7 +599,7 @@
 </div>
 <div id="art4" class="article-section">
   <h2 class="article-header">Article IV — The Judicial Architecture<a href="quicksheet-judiciary.html" class="qs-icon" title="Quick Sheet: The Judiciary" aria-label="Quick Sheet: The Judiciary" target="_blank" rel="noopener">📋</a></h2>
-  <p class="article-intro">Courts resolve disputes, enforce rights, and resolve inter-branch disputes. Judicial independence is structurally protected: selection is removed from executive appointment, removal requires a supermajority.</p>
+  <p class="article-intro">Courts enforce rights and resolve constitutional disputes. Article IV defines judicial selection, confirmation, temporary service, independence, and removal.</p>
 
   <div class="provision" id="s4-1">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §4.1" onclick="copyProvLink('s4-1')" style="cursor:pointer">§4.1<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Court Structure</span></div>
@@ -678,7 +678,7 @@
 </div>
 <div id="art5" class="article-section">
   <h2 class="article-header">Article V — Citizenship and National Identity</h2>
-  <p class="article-intro">Citizenship is acquired by birth, parentage, or naturalization. Legal residents hold all Article I rights as Inhabitants.</p>
+  <p class="article-intro">Citizenship is acquired by parentage, protection against statelessness, or naturalization under §5.1. Legal residents hold Article I rights as Inhabitants.</p>
 
   <div class="provision" id="s5-1">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §5.1" onclick="copyProvLink('s5-1')" style="cursor:pointer">§5.1<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Citizenship</span></div>
@@ -745,7 +745,7 @@
 </div>
 <div id="art7" class="article-section">
   <h2 class="article-header">Article VII — Elections and Federal Office<a href="quicksheet-elections.html" class="qs-icon" title="Quick Sheet: Elections & Electoral Finance" aria-label="Quick Sheet: Elections & Electoral Finance" target="_blank" rel="noopener">📋</a></h2>
-  <p class="article-intro">All federal elections on National Election Day, every two years. All elections for Assembly, Senate, and SC use Ranked Choice Voting — majority required, not plurality.</p>
+  <p class="article-intro">Article VII governs federal elections and the general rules of federal office, including eligibility, removal, continuity, ethics, compensation, and authority by constitutional operation.</p>
 
   <div class="provision" id="s7-1">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §7.1" onclick="copyProvLink('s7-1')" style="cursor:pointer">§7.1<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Consular Election System</span></div>
@@ -1053,7 +1053,7 @@
 </div>
 <div id="art11" class="article-section">
   <h2 class="article-header">Article XI — NRS Panel and Elections Panel<a href="quicksheet-nvs.html" class="qs-icon" title="Quick Sheet: Elections Infrastructure & the NVS" aria-label="Quick Sheet: Elections Infrastructure & the NVS" target="_blank" rel="noopener">📋</a></h2>
-  <p class="article-intro">Two constitutionally independent panels operate the Republic's permanent infrastructure: the NRS Panel maintains the record system; the Elections Panel administers all elections and constitutional pools.</p>
+  <p class="article-intro">The independent NRS Panel operates the public record system. The independent Elections Panel operates electoral systems and performs the functions specifically assigned to it.</p>
 
   <div class="provision" id="s11-1">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §11.1" onclick="copyProvLink('s11-1')" style="cursor:pointer">§11.1<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">NRS Panel and Elections Panel</span></div>
@@ -1461,7 +1461,7 @@
 </div>
 <div id="art20" class="article-section">
   <h2 class="article-header">Article XX — Associated Communities</h2>
-  <p class="article-intro">An Associated Community is a polity that has entered a compact relationship with the Republic — below Territory status, above a treaty relationship.</p>
+  <p class="article-intro">An Associated Community is a sovereign independent political community in a consensual compact relationship with the Republic. Neither party is constitutionally superior to the other.</p>
 
   <div class="provision" id="s20-1">
     <div class="prov-label"><span class="prov-num" title="Click to copy link to §20.1" onclick="copyProvLink('s20-1')" style="cursor:pointer">§20.1<span class="prov-permalink" aria-hidden="true">¶</span></span><span class="prov-name">Associated Community Status</span></div>
@@ -1615,7 +1615,7 @@
       }
       container.innerHTML = results.map(function(p){
         var snippet = p.text.substring(0, 160);
-        var pid = p.num.replace(/§/,'s').replace(/\./g,'-');
+        var pid = p.id;
         return '<a href="annotated.html#' + pid + '" class="search-result" onclick="closeSearch()">' +
           '<span class="search-result-num">' + hl(p.num, terms) + '</span>' +
           '<span class="search-result-name">' + hl(p.name, terms) + '</span>' +
@@ -1679,7 +1679,7 @@
       panel.style.display = 'block';
       if (backdrop) backdrop.style.display = 'block';
 
-      var cacheKey = 'ann-v2-' + num;
+      var cacheKey = 'ann-' + CONSTITUTION_REVISION + '-' + num;
 
       // Check in-memory cache first (instant)
       if (annCache[cacheKey]) {

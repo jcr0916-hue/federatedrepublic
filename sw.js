@@ -3,7 +3,7 @@
    On first visit: cache everything. On repeat visits: instant load.
    On offline: serve cached version. */
 
-const CACHE = 'fr-v32';
+const CACHE = 'fr-v33';
 
 const PAGES = [
   '/', '/index.html',
@@ -56,7 +56,7 @@ self.addEventListener('fetch', e => {
   // cache-first, so a reader who played the crossroads once kept that version of the
   // story forever: the Legat Consul branch was invisible to anyone who had visited
   // before it shipped. Data goes network-first, with cache as the offline fallback.
-  const isData = url.pathname.endsWith('.json');
+  const isData = url.pathname.endsWith('.json') || url.pathname === '/search-index.js';
 
   if (isHTML || isData) {
     // Network-first: fresh HTML when online, cached fallback offline

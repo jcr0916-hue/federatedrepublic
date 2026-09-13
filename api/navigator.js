@@ -24,7 +24,7 @@ const SYNONYMS = {
   'recall':['removal','referendum','popular track','legat consul removal','§2.13'],
   'remove legat':['§2.13','recall','popular track','legislative track','consular removal'],
   'remove consul':['§2.13','no-confidence','consular removal','recall'],
-  'assembly-initiated':['removal','charges','articles of removal','senate trial','§3.10'],
+  'assembly-initiated':['removal','charges','articles of removal','senate trial','§7.5'],
   'articles of removal':['assembly','senate','removal','charges'],
   'veto':['fiscal objection','written direction'],
   'law':['statute','legislation','assembly','legislative'],
@@ -51,7 +51,7 @@ const SYNONYMS = {
   'healthcare':['social state','health','universal','insurance'],
   'education':['social state','school','compulsory','universal'],
   'immigration':['certification','removal','non-refoulement','border','dual gate'],
-  'asylum':['non-refoulement','refugee','certification','removal','asylum court'],
+  'asylum':['non-refoulement','refugee','certification','removal','independent adjudicative process'],
   'deportation':['removal','non-refoulement','certification'],
   'refugee':['asylum','non-refoulement','protection'],
   'resident':['legal resident','certification','sponsorship','dual gate'],
@@ -135,7 +135,7 @@ const SCENARIOS = [
   {title:'The Unremovable',file:'scenario-the-unremovable.html',kw:['removal order','detention','asylum','refoulement','stateless','security','judicial review']},
   {title:'The Second Renewal',file:'scenario-the-second-renewal.html',kw:['military','authorization','renewal','transition','reconstruction','withdrawal','senate']},
   {title:'The Coalition',file:'scenario-the-coalition.html',kw:['no confidence','constructive','removal','civic consul','successor','majority','accountability','§2.6','§2.6.a']},
-  {title:'The Formula',file:'scenario-the-formula.html',kw:['fiscal equalization','em','fiscal capacity','social state','90 days','§12.8','§12.1','monetary authority']},
+  {title:'The Formula',file:'scenario-the-formula.html',kw:['fiscal equalization','em','fiscal capacity','social state','90 days','§12.6','§12.1','monetary authority']},
   {title:'The Graduation',file:'scenario-the-graduation.html',kw:['voting','residency','nvs','student','ordinary','individual sovereignty','§1.2','§11.2','ballot']},
   {title:'The Holdout',file:'scenario-the-holdout.html',kw:['sc nomination','senate','refuses vote','day 120','judicial','confirmation','§4.4','holdout']},
   {title:'The Prior Claim',file:'scenario-the-prior-claim.html',kw:['indigenous','prior sovereignty','compact','federal mandate','state','§16.1','§16.2','§15.7','§4.5']},
@@ -144,7 +144,7 @@ const SCENARIOS = [
   {title:'The Referendum',file:'scenario-the-referendum.html',kw:['independence','referendum','irrevocable','state','elections panel','nrs','§15.9','§2.14']},
   {title:'The Restoration',file:'scenario-the-restoration.html',kw:['statehood','restoration','provisional','clean audit','automatic','devolution','§15.1','§15.2','§15.3']},
   {title:'The Vote',file:'scenario-the-vote.html',kw:['suspensive veto','cc','tabled','senate','2/3','override','bill lapses','§2.7','§2.6']},
-  {title:'The Three Recusals',file:'scenario-the-three-recusals.html',kw:['conflict of interest','recusal','financial disclosure','ethics','monitor general','procurement','§12.4','§12.4.b','§12.4.c','§9.9','voidable','gift']},
+  {title:'The Three Recusals',file:'scenario-the-three-recusals.html',kw:['conflict of interest','recusal','financial disclosure','ethics','monitor general','procurement','§7.10','§7.11','§7.12','§7.13','§9.9','voidable','gift']},
 ];
 
 const CORS = {
@@ -177,9 +177,11 @@ function expandQuery(raw) {
 
 function scoreProvision(prov, terms) {
   const nameL = prov.name.toLowerCase();
+  const numL = prov.num.toLowerCase();
   const textL = prov.text.toLowerCase();
   let score = 0;
   for (const term of terms) {
+    if (numL === term || numL === "§" + term) score += 20;
     if (nameL.includes(term)) score += 3;
     if (textL.includes(term)) score += 1;
   }

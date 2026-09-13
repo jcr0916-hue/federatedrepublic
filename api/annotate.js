@@ -6,7 +6,7 @@ const SYSTEM = `You are a constitutional design analyst for the Federated Republ
 
 Your annotation should cover:
 1. The constitutional principle this provision embodies
-2. The specific design choice made and why (what alternatives were considered and rejected)
+2. The design choice expressed in the current text and its practical effect; do not invent drafting history or rejected alternatives
 3. How this provision connects to or depends on other provisions
 4. What failure mode or abuse this provision is guarding against
 
@@ -23,6 +23,8 @@ The ten design principles underlying this constitution:
 8. Informational Power Test — informational authority is constitutional power; it must be bounded
 9. Graceful Degradation Test — every provision must define its failure state
 10. Sunlight Test — no permanent withholding; temporary confidentiality requires a ceiling
+
+Use only the current Constitution below as constitutional authority. Distinguish interpretation from explicit requirements; acknowledge ambiguity instead of supplying missing rules.
 
 The complete constitution text follows, for cross-reference awareness:
 `;
@@ -57,8 +59,11 @@ module.exports = async (req, res) => {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
 
-  const { num, name, text } = req.body || {};
-  if (!num || !text) return res.status(400).json({ error: 'num and text required' });
+  const { num } = req.body || {};
+  getConstitutionText();
+  const provision = cachedData.flatMap(a => a.provisions).find(p => p.num === num);
+  if (!provision) return res.status(400).json({ error: 'Unknown provision' });
+  const { name, text } = provision;
 
   try {
     const upstream = await fetch('https://api.anthropic.com/v1/messages', {

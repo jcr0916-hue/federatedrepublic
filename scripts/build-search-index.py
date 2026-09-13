@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Rebuild search-index.js from constitution_data.json.
 ID convention matches annotated.html anchors: §1.19.b -> s1-19b, §2.14.a -> s2-14a.
-Text truncated to <=300 chars at a word boundary, no ellipsis."""
+Full text is searchable; the revision invalidates annotations after constitutional changes."""
 import json
+import hashlib
 
 def prov_id(num):
     parts = num.replace('§','').split('.')
@@ -21,7 +22,8 @@ entries = []
 for article in data:
     for p in article['provisions']:
         entries.append({'id': prov_id(p['num']), 'num': p['num'],
-                        'name': p['name'], 'text': truncate(p['text'])})
-out = 'const SEARCH_INDEX = ' + json.dumps(entries, ensure_ascii=False, separators=(',',':')) + ';'
+                        'name': p['name'], 'text': p['text']})
+revision = hashlib.sha256(json.dumps(data, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:16]
+out = 'const CONSTITUTION_REVISION = ' + json.dumps(revision) + ';\nconst SEARCH_INDEX = ' + json.dumps(entries, ensure_ascii=False, separators=(',',':')) + ';'
 open('search-index.js','w').write(out)
 print(f'Wrote {len(entries)} entries')
