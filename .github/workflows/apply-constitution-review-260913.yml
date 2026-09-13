@@ -1,0 +1,73 @@
+name: Apply constitutional review 260913
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-constitution-review-260913.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Apply approved review
+        run: python3 scripts/apply-constitution-review-260913.py
+
+      - name: Rebuild generated constitutional files
+        run: |
+          python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md
+          python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md
+          python3 scripts/build-search-index.py
+
+      - name: Validate JSON and repository consistency
+        run: |
+          python3 -m json.tool constitution_data.json >/dev/null
+          python3 scripts/check-consistency.py
+          python3 - <<'PY'
+          import json, re
+          d=json.load(open('constitution_data.json',encoding='utf-8'))
+          nums={p['num'] for a in d for p in a.get('provisions',[])}
+          refs=[]
+          for a in d:
+              for p in a.get('provisions',[]):
+                  refs += [(p['num'],r) for r in re.findall(r'§\d+\.\d+(?:\.[a-z])?',p.get('text',''))]
+          missing=sorted(set((src,r) for src,r in refs if r not in nums))
+          allowed=set()
+          missing=[x for x in missing if x not in allowed]
+          if missing:
+              print('Missing provision references:')
+              for x in missing[:40]: print(x)
+              raise SystemExit(1)
+          print(f'Validated {len(nums)} unique provisions and all section references.')
+          PY
+
+      - name: Remove one-shot application machinery
+        run: |
+          rm -f scripts/apply-constitution-review-260913.py
+          rm -f .github/workflows/apply-constitution-review-260913.yml
+
+      - name: Commit applied review
+        run: |
+          git config user.name 'jcr0916-hue'
+          git config user.email 'jcr0916@gmail.com'
+          git add -A constitution_data.json docs/constitution-current.md docs/constitutional-quickref.md search-index.js annotated.html scripts/apply-constitution-review-260913.py .github/workflows/apply-constitution-review-260913.yml
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Apply completed constitutional review'
+          git push origin HEAD:main
