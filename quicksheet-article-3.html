@@ -29,7 +29,10 @@
   .page{ width:8.5in; min-height:11in; margin:0 auto; background:var(--cream); position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.15); display:flex; flex-direction:column; }
   @media screen{ .page{ margin:24px auto; } }
   @page{ size:Letter; margin:0; }
-  @media print{ .site-nav, .site-footer, .qs-page-controls{ display:none !important; } body{ background:none; } .page{ box-shadow:none; margin:0; } }
+  @media print{
+    body > :not(main):not(.qs-scale-wrap){display:none !important;}
+    main{padding:0 !important;}
+    .qs-body > div{break-inside:avoid;} .site-nav, .site-footer, .qs-page-controls{ display:none !important; } body{ background:none; } .page{ box-shadow:none; margin:0; } }
 
   /* HEADER */
   .qs-header{ background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding:0.32in 0.5in 0.22in; color:#f5f0e8; position:relative; overflow:hidden; }
@@ -209,11 +212,11 @@
             <tr><td>Treaty withdrawal affirmation</td><td>2/3 full seated Senate · ≤90 days</td></tr>
             <tr><td>Trade agreement approval</td><td>Simple majority · both chambers</td></tr>
             <tr><td>SC justice confirmation</td><td>2/3 full seated Senate · ≤120 days</td></tr>
-            <tr><td>Inferior court confirmation</td><td>2/3 full seated Senate · ≤90 days</td></tr>
-            <tr><td>Monitor General confirmation</td><td>Simple majority · national popular vote</td></tr>
+            <tr><td>Inferior court confirmation</td><td>2/3 full seated Senate</td></tr>
+
             <tr><td>LC domain veto override</td><td>2/3 full seated Senate · any time that session</td></tr>
 
-            <tr><td>LC domain officer removal</td><td>Senate majority of full seated (§2.4)</td></tr>
+            <tr><td>LC domain officer removal</td><td>Senate majority of full seated (§2.4.a)</td></tr>
             <tr><td>Member expulsion</td><td>2/3 full seated Senate</td></tr>
           </tbody>
         </table>

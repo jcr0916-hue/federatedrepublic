@@ -21,6 +21,9 @@
   @media screen{ .page{ margin:24px auto; } }
   @page{ size:Letter; margin:0; }
   @media print{
+    body > :not(main){display:none !important;}
+    main{padding:0 !important;}
+    .qs-body > div{break-inside:avoid;}
     .site-nav, .site-footer, .qs-page-controls{ display:none !important; }
     body{ background:none; }
     .page{ box-shadow:none; margin:0; width:8.5in; min-height:11in; }

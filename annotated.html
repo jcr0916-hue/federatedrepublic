@@ -1600,6 +1600,9 @@
       var results = searchIndex.filter(function(p){
         var haystack = (p.num + ' ' + p.name + ' ' + p.text).toLowerCase();
         return terms.every(function(t){ return haystack.indexOf(t) >= 0; });
+      }).sort(function(a, b){
+        var exact = q.trim().toLowerCase().replace(/^§/, '');
+        return Number(b.num.slice(1).toLowerCase() === exact) - Number(a.num.slice(1).toLowerCase() === exact);
       }).slice(0, 30);
 
       if(!results.length){

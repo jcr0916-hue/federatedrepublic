@@ -21,6 +21,9 @@
   @media screen{ .page{ margin:24px auto; } }
   @page{ size:Letter; margin:0; }
   @media print{
+    body > :not(main){display:none !important;}
+    main{padding:0 !important;}
+    .qs-body > div{break-inside:avoid;}
     .site-nav, .site-footer, .qs-page-controls{ display:none !important; }
     body{ background:none; }
     .page{ box-shadow:none; margin:0; width:8.5in; min-height:11in; }
@@ -134,7 +137,7 @@
     <div class="qs-eyebrow"><span class="dot"></span>QUICK SHEET · CONSTITUTION OF THE FEDERATED REPUBLIC</div>
     <div class="qs-title">Article II — The Dual Executive</div>
     <div class="qs-tagline">Two consuls, two domains, one Legislature both must answer to. Neither runs the Republic alone — and neither can be removed the same way.</div>
-    <div class="qs-scope">Article II · §7.4<br>Article II + federal eligibility</div>
+    <div class="qs-scope">§2.1–§2.17<br>Article II + §7.4</div>
   </div>
 
   <div class="qs-body">
@@ -253,8 +256,8 @@
           <div class="fact-text"><strong>Federal Prosecution</strong> — the CC sets general policy; the Service is independent in individual cases. Any direction on a specific case is published to the NRS.</div>
         </div>
         <div class="fact-pill">
-          <div class="fact-num">§7.4</div>
-          <div class="fact-text">Eligibility and cooling-off rules are in §7.4. A bar on a particular office also bars acting service in it; other offices remain available where the person is otherwise eligible, unless the Constitution expressly provides otherwise.</div>
+          <div class="fact-num">§2.17</div>
+          <div class="fact-text">Executive cooling-off bars other executive service, including minister, domain officer, and acting roles. This is the express exception to §7.4(9); otherwise eligible legislative, judicial, and other service remains available.</div>
         </div>
       </div>
     </div>
@@ -280,7 +283,8 @@
             <span class="flow-step">Limited emergency legislative authority</span>
           </div>
           <div style="font-size:8.6px;color:var(--muted);line-height:1.4">Under §2.11, Senate emergency legislative authority covers only election administration, social-state funding continuity, and active national-security obligations, with Acting CC co-signature. The ordinary trigger is statutory, defaulting to 30 days without Assembly quorum. Catastrophic activation needs joint Acting CC–Chief Justice certification, lasts 14 days, and cannot exceed 30 days without the ordinary trigger.</div>
-                <div class="veto-card" style="border-color:var(--border);grid-column:1/-1">
+        </div>
+        <div class="veto-card" style="border-color:var(--border);grid-column:1/-1">
           <div class="veto-name">Executive Incapacity <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted)">§2.16</span></div>
           <div class="veto-flow">
             <span class="flow-step">Consul declares — or Council determines</span><span class="flow-arrow">→</span>
@@ -289,7 +293,6 @@
           </div>
           <div style="font-size:8.6px;color:var(--muted);line-height:1.4">Incapacity begins on NRS publication by the Consul or Council. If fewer than five Council members hold office, the other Consul and Chief Justice may determine it jointly. Restoration normally takes 24 hours; repeat incapacity within 90 days requires the accountability chamber to restore authority. The last successor cannot decline. Incapacity ends after 90 days unless a removal process has begun; pay, benefits, and term continue (§2.16).</div>
         </div>
-</div>
       </div>
     </div>
 
