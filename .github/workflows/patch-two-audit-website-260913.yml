@@ -21,7 +21,9 @@ jobs:
         with:
           python-version: '3.x'
       - name: Apply targeted website patch
-        run: python3 scripts/patch-two-audit-website-260913.py
+        run: |
+          python3 scripts/patch-two-audit-website-260913.py
+          python3 scripts/fix-two-audit-scenario-index-260913.py
       - name: Validate website build and stale wording
         run: |
           npm ci
@@ -48,6 +50,7 @@ jobs:
             'quicksheet-states.html': 'First Successful Audit',
             'scenario-the-audit.html': 'second successful Statehood Audit',
             'scenarios.html': 'The first success kept it a Territory',
+            'scenarios-FINAL.html': 'The first success kept it a Territory',
           }
           for path, phrase in required.items():
               if phrase not in Path(path).read_text(encoding='utf-8'):
@@ -57,11 +60,12 @@ jobs:
       - name: Remove temporary patch machinery
         run: |
           rm -f scripts/patch-two-audit-website-260913.py
+          rm -f scripts/fix-two-audit-scenario-index-260913.py
           rm -f .github/workflows/patch-two-audit-website-260913.yml
       - name: Commit targeted website correction
         run: |
           git config user.name 'jcr0916-hue'
           git config user.email 'jcr0916@gmail.com'
-          git add -A glossary.html quicksheet-states.html scenario-the-audit.html scenarios.html scenarios-FINAL.html api/navigator.js scripts/patch-two-audit-website-260913.py .github/workflows/patch-two-audit-website-260913.yml
+          git add -A glossary.html quicksheet-states.html scenario-the-audit.html scenarios.html scenarios-FINAL.html api/navigator.js scripts/patch-two-audit-website-260913.py scripts/fix-two-audit-scenario-index-260913.py .github/workflows/patch-two-audit-website-260913.yml
           git commit -m 'Align website with two-audit Statehood pathway'
           git push origin HEAD:main
