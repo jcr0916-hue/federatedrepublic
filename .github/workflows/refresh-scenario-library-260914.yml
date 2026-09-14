@@ -1,0 +1,37 @@
+name: Refresh scenario library 260914
+on:
+  push:
+    paths:
+      - '.github/workflows/refresh-scenario-library-260914.yml'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Reorganize scenario categories
+        run: python3 scripts/refresh-scenario-library-260914.py
+      - name: Synchronize scenario indexes
+        run: python3 scripts/build-scenario-index.py
+      - name: Validate scenarios
+        run: python3 scripts/check-scenarios.py
+      - name: Install site dependencies
+        run: npm ci
+      - name: Build site
+        run: npm run build
+      - name: Remove temporary refresh machinery
+        run: |
+          rm scripts/refresh-scenario-library-260914.py
+          rm .github/workflows/refresh-scenario-library-260914.yml
+      - name: Commit refreshed library
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m 'Expand and rebalance scenario library'
+          git push
