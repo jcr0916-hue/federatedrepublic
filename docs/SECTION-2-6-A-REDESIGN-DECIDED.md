@@ -1,5 +1,7 @@
 # §2.6.a Government Formation — Redesign (DECIDED 260712, HOLD publish until 260713 PM earliest)
 
+> **Status update — 14 September 2026:** Historical design record. The government-formation redesign is implemented; the old hold and drafting checklist below are not current instructions. Current completion record: `CONSTITUTION-AUDIT-260914.md`. The canonical JSON controls.
+
 **Status:** Fully decided in devil's-advocate discussion. NOT yet drafted into DOCX/JSON.
 John's instruction: treat as decided, but publish nothing before tomorrow afternoon at the
 earliest. Sleep on it. This file captures the decision so it survives compaction / a new chat;

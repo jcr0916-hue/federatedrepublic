@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 175 provisions**
+> **20 articles · 176 provisions**
 
 ---
 
@@ -16,7 +16,7 @@
 - **Preamble**
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.22  (24 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.18  (23 provisions)
-- **Article III — The Legislature**  ·  §3.1–§3.13  (12 provisions)
+- **Article III — The Legislature**  ·  §3.1–§3.11  (12 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (4 provisions)
 - **Article VI — Immigration and Residency**  ·  §6.1–§6.3.a  (4 provisions)
@@ -32,7 +32,7 @@
 - **Article XVI — Indigenous Sovereignty**  ·  §16.1–§16.5  (5 provisions)
 - **Article XVII — Constitutional Amendments**  ·  §17.1–§17.4  (4 provisions)
 - **Article XVIII — Federal Property and National Trust**  ·  §18.1–§18.5  (5 provisions)
-- **Article XIX — Transition and Ratification**  ·  §19.1–§19.9  (9 provisions)
+- **Article XIX — Transition and Ratification**  ·  §19.1–§19.10  (10 provisions)
 - **Article XX — Associated Communities**  ·  §20.1–§20.7  (7 provisions)
 
 ---
@@ -248,7 +248,7 @@ The Legat Consul appoints domain officers to exercise defined portions of the Le
 
 (1) The Civic Consul is accountable to the Assembly. The Assembly may remove the Civic Consul only through a constructive vote of no confidence: a single vote that simultaneously removes the sitting Civic Consul and installs a named replacement, by absolute majority of full seated Assembly membership.
 
-- **Cross-refs:** §2.5, §2.6.a, §3.2, §7.5, §7.8
+- **Cross-refs:** §2.5, §2.6.a, §3.2, §7.8
 
 ### §2.6.a — Government Formation
 
@@ -400,12 +400,12 @@ Every bill must address a single, clearly defined subject. Any member or approva
 
 ### §3.5 — The Senate
 
-(1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. (2) At the first Senate seating, senators are assigned to three approximately equal cohorts by public lot: the first cohort serves an initial term of two years, the second four years, the third six years; thereafter all Senate terms are six years.
+(1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. (2) Founding Senate cohorts and initial terms are established under §19.10.
 
 - **Thresholds:**
   - The Senate may expel a member by 2/3 vote of full seated membership
   - — treaty ratification by 2/3 of full seated membership
-- **Cross-refs:** §3.1
+- **Cross-refs:** §19.10, §3.1
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
@@ -443,12 +443,12 @@ All three Monitors have full access to legislative records, committee deliberati
 The Legislature may establish independent agencies operating outside the authority of both executives. Where this Constitution assigns a function to an independent agency, the Legislature must establish and maintain an institution capable of performing that function.
 
 
-### §3.12 — Federal Legislative Competence
+### §3.10 — Federal Legislative Competence
 
 The Legislature holds general authority to legislate for the peace, order, and good governance of the Republic. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities.
 
 
-### §3.13 — Delegation of Authority
+### §3.11 — Delegation of Authority
 
 The Legislature may by statute delegate defined authorities within its legislative competence to the Legat Consul, the Civic Consul, or independent agencies established under §3.9. Any delegation must specify the exact scope of authority delegated, the conditions on its exercise, and a maximum duration not to exceed the term of the Legislature that enacted it.
 
@@ -510,7 +510,7 @@ A Supreme Court justice may be removed only for cause. Three grounds constitute 
   - (3) The Senate must vote within the period defined by statute following nomination, not to exceed 120 days
   - The Assembly has 30 days to approve public confirmation by 2/3 of its full seated membership
   - if the Assembly does not act within 30 days, certification for the ballot occurs automatically
-- **Cross-refs:** §7.3, §9.8
+- **Cross-refs:** §19.10, §7.3, §9.8
 
 ### §4.4.a — Senate Bypass — Public Confirmation
 
@@ -620,11 +620,11 @@ Special elections for vacancies are administered by the Elections Panel under pr
 
 ### §7.3 — Electoral Supermajority Threshold
 
-60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. This threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State plurality requirement is waived (§7.1); public confirmation of a Supreme Court justice under the Senate bypass mechanism…
+Except for constitutional-amendment referendums, whose thresholds are established in §17.1, 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. Subject to that exception, this threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State…
 
 - **Thresholds:**
   - 1, which requires only a simple majority of votes cast
-- **Cross-refs:** §13.1, §15.9, §2.13, §4.4.a, §7.1
+- **Cross-refs:** §13.1, §15.9, §17.1, §2.13, §4.4.a, §7.1
 
 ### §7.4 — Eligibility and Disclosure for Federal Office
 
@@ -663,7 +663,6 @@ Elected constitutional officers serve their constitutionally defined terms. No a
 
 (1) A financial interest includes any holding, income source, liability, business relationship, or similar economic interest; a financial interest is disqualifying where it creates a direct and material conflict between an officer's personal economic interest and the impartial exercise of official duties. Statute may further specify categories and thresholds consistent with this standard.
 
-- **Cross-refs:** §7.11
 
 ### §7.11 — Codes of Conduct and Recusal
 
@@ -675,7 +674,7 @@ The Legislature may by statute establish codes of conduct and procedural rules f
 
 ### §7.12 — Post-Service Restrictions
 
-Constitutional officers may not, for a period defined by statute after leaving office — which may not be less than two years — engage in activity that monetizes or draws on non-public information, relationships, or access accumulated during service. The respective Monitor audits post-service activities within its mandate for compliance and publishes findings to the NRS; enforcement is through the appropriate…
+Constitutional officers may not, for a period defined by statute after leaving office — which may not be less than two years — engage in activity that monetizes or draws on non-public information, relationships, or access obtained by virtue of their service. The respective Monitor audits post-service activities within its mandate for compliance and publishes findings to the NRS; enforcement is through the…
 
 
 ### §7.13 — Federal Public Service Ethics
@@ -782,8 +781,7 @@ The Elections Panel maintains the standing Judicial Pool from which all federal 
 
 - **Time limits:**
   - Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel: at least 15 years of legal practice or 10 years of judicial service
-  - Any applicant excluded from or removed from the registry may appeal to the SC within 14 days on the sole ground that the eligibility criteria were misapplied
-- **Cross-refs:** §7.10
+- **Cross-refs:** §7.10, §9.8
 
 ### §9.5 — Monitor Operations
 
@@ -820,7 +818,7 @@ Where two of the three Monitors jointly assess and report that the third is oper
 
 - **Time limits:**
   - The SC shall rule within 14 days
-- **Cross-refs:** §4.5, §9.3
+- **Cross-refs:** §4.5, §9.1.d, §9.3
 
 ### §9.8 — Constitutional Pool Framework
 
@@ -833,7 +831,7 @@ Where two of the three Monitors jointly assess and report that the third is oper
 
 ### §9.9 — Constitutional Officer Removal — Standard Track
 
-(1) This section governs for-cause removal of all constitutionally confirmed independent officers except Supreme Court justices under §4.3.a and elected executives. Removal of Monitor Generals proceeds under subsections (2) through (6); removal of all other officers within this section's scope proceeds under subsections (7) through (11).
+(1) This section governs for-cause removal of all constitutionally confirmed independent officers except federal judges, whose removal is governed by §4.2 or §4.3.a, and elected executives. Removal of Monitor Generals proceeds under subsections (2) through (6); removal of all other officers within this section's scope proceeds under subsections (7) through (11).
 
 - **Thresholds:**
   - (7) For all other officers within this section's scope: a concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC
@@ -843,7 +841,7 @@ Where two of the three Monitors jointly assess and report that the third is oper
   - (8) The SC determines within 14 days whether the stated grounds constitute at least one statutory removal category for the subject office
   - no removal vote may be held within 180 days of a major national election without prior SC review within 48 hours
   - (11) The SC must rule within 14 days
-- **Cross-refs:** §4.3.a, §7.3, §9.1.d
+- **Cross-refs:** §4.2, §4.3.a, §7.3, §9.1.d
 
 ### §9.9.a — Monitor General Disclosure
 
@@ -1039,7 +1037,7 @@ Provisional status is a remedial constitutional status applicable only to an exi
 
 - **Time limits:**
   - The Elections Panel assigns the two seats by public lot to two distinct existing Senate classes and administers a special election within 90 days
-- **Cross-refs:** §15.1
+- **Cross-refs:** §15.1, §15.5.a
 
 ### §15.3 — Mandatory Devolution
 
@@ -1066,11 +1064,11 @@ A Territory resulting from mandatory or voluntary devolution enters the §15.2 p
 
 ### §15.5.a — Remainder Viability
 
-(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them; all such petitions are addressed together under subsection (4). (2) Where subsection (1) does not apply: before any referendum is held under §15.4, or before a defined geographic subdivision of a Territory…
+(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them; all such petitions are addressed together under subsection (4). (2) Where subsection (1) does not apply: after certification of a petition under §15.4 or a defined geographic subdivision's petition under…
 
 - **Time limits:**
   - 2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them
-  - 2, the JMC must, within 90 days of petition certification, assess whether the Territory's remaining portion could realistically satisfy the conditions of the §15
+  - 2, the JMC must, within 90 days of that certification, assess whether the Territory's remaining portion could realistically satisfy the conditions of the §15
   - The Convention has 90 days from its first session to produce a proposed resolution
 - **Cross-refs:** §15.2, §15.4
 
@@ -1121,7 +1119,7 @@ Where a State's constitutional government has become incapable of exercising gov
 
 Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted — the Republic's constitutional framework does not create it and may not extinguish it.
 
-- **Cross-refs:** §16.4, §19.3
+- **Cross-refs:** §16.4, §19.7
 
 ### §16.2 — Founding Status Election
 
@@ -1197,10 +1195,8 @@ Federal government holds no territorial sovereignty within any State or Territor
 
 ### §18.2 — Seat of Government
 
-The Republic holds no territorial sovereignty at its Seat of Government. The Seat is hosted by a State or Territory selected through a competitive process defined by statute; any State or Territory may submit a bid, and the selected host must satisfy minimum requirements published to the NRS in advance of the selection.
+The Republic holds no territorial sovereignty at its Seat of Government. The Seat is hosted by a State or Territory.
 
-- **Time limits:**
-  - The host selection must be reconsidered through a new competitive process no less often than every 20 years
 - **Cross-refs:** §18.1
 
 ### §18.3 — Operational Use Rights
@@ -1272,7 +1268,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.7 — Transition Candidate Registers
 
-The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. The panel performs the register-assembly and qualification-review function required during transition; it compiles the founding register of recognized Indigenous nations under §16.1 and publishes it to the NRS before the close of Phase 1.
+The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. The panel performs the register-assembly and qualification-review function required during transition; it compiles the founding register of recognized Indigenous nations under §16.1 from the predecessor record and publishes it to the NRS before the close of Phase 1.
 
 - **Cross-refs:** §12.1.a, §16.1
 
@@ -1294,15 +1290,20 @@ Where this Constitution requires a statutory independent agency or other permane
   - a, 180 days
 - **Cross-refs:** §12.1.a, §3.2, §5.1
 
+### §19.10 — Founding Senate and Judicial Classes
+
+(1) At the first Senate seating, senators are assigned to three approximately equal cohorts by public lot: the first cohort serves an initial term of two years, the second four years, the third six years; thereafter all Senate terms are six years. The lot is conducted by the Elections Panel and published to the NRS before the first senators take the constitutional oath.
+
+
 ---
 
 ## ARTICLE XX — ASSOCIATED COMMUNITIES
 
 ### §20.1 — Associated Community Status
 
-Exclusively for sovereign entities — not a form of State or Territory status, not transitional, not incorporation. Available to recognized indigenous nations holding Associated Community status under §16.2, to sovereign nations that have achieved full sovereignty through the constitutional amendment process, and to independent nations outside the Republic seeking a defined relationship.
+Exclusively for sovereign entities — not a form of State or Territory status, not transitional, not incorporation. Available to recognized indigenous nations holding Associated Community status under §16.2, to sovereign nations that have achieved full sovereignty through the constitutional amendment process or the independence process under §15.9, and to independent nations outside the Republic seeking a defined…
 
-- **Cross-refs:** §16.2
+- **Cross-refs:** §15.9, §16.2
 
 ### §20.2 — Compact Terms and Equal Sovereignty
 
@@ -1342,9 +1343,9 @@ Compacts in force at the time of any government transition continue without inte
 
 ---
 
-## EVERY THRESHOLD IN THE CONSTITUTION
+## SELECTED THRESHOLD CLAUSES
 
-Extracted verbatim. If a threshold is not in this table, it is not in the constitution.
+Selected short clauses extracted verbatim. This index is not exhaustive; consult the full provision for all thresholds, exceptions, and conditions.
 
 | § | Provision | Threshold clause (verbatim) |
 |---|---|---|
@@ -1366,7 +1367,7 @@ Extracted verbatim. If a threshold is not in this table, it is not in the consti
 | §3.6 | Treaty and Trade Agreement Ratification | Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers |
 | §3.6 | Treaty and Trade Agreement Ratification | The Senate must affirm withdrawal by 2/3 of its full seated membership within the period defined by statute, not to exceed 90 days |
 | §3.7 | Legislative Process and Passage | Bills pass by absolute majority of the full seated membership of both chambers |
-| §3.13 | Delegation of Authority | The Legislature may rescind any delegation by simple majority of both chambers at any time |
+| §3.11 | Delegation of Authority | The Legislature may rescind any delegation by simple majority of both chambers at any time |
 | §4.1 | Court Structure | judges whose courts are abolished may be reassigned to other inferior courts by the Civic Consul with Senate confirmation at 2/3 |
 | §4.2 | Judicial Appointments and Independence | The Senate confirms by 2/3 |
 | §4.3 | The Supreme Court | The Legislature may increase or decrease the number of justices only by a statute requiring 2/3 of both chambers |

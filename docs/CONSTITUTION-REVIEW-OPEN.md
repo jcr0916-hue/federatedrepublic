@@ -1,5 +1,7 @@
 # Constitution Review — Open Findings
 
+> **Status update — 14 September 2026:** Historical review tracker. Its open/closed labels predate the completed September review and do not represent the current backlog. Current completion record: `CONSTITUTION-AUDIT-260914.md`. The canonical JSON controls.
+
 **Started 260731.** Systematic provision-by-provision review against the ten design principles in
 `CONSTITUTIONAL-DESIGN-PRINCIPLES.md`.
 

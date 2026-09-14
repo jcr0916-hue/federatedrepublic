@@ -105,9 +105,9 @@ def main(src, dst):
         L.append("")
 
     # ---------- every threshold in the document ----------
-    L.append("## EVERY THRESHOLD IN THE CONSTITUTION")
+    L.append("## SELECTED THRESHOLD CLAUSES")
     L.append("")
-    L.append("Extracted verbatim. If a threshold is not in this table, it is not in the constitution.")
+    L.append("Selected short clauses extracted verbatim. This index is not exhaustive; consult the full provision for all thresholds, exceptions, and conditions.")
     L.append("")
     L.append("| § | Provision | Threshold clause (verbatim) |")
     L.append("|---|---|---|")

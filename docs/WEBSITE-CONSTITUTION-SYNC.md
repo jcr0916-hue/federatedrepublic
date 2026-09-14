@@ -1,5 +1,7 @@
 # Website alignment with the applied constitutional review
 
+> **Status update — 14 September 2026:** Historical publication checkpoint for the initial September rollout. Its one-audit Statehood description was superseded by the two-audit revision. Current completion record: `CONSTITUTION-AUDIT-260914.md`. The canonical JSON controls.
+
 Constitutional source: current `constitution_data.json`, containing 20 articles and 175 provisions. The constitutional text itself was not edited. Work began from `a758403` and incorporated current main `0e5ef6e`; that newer commit removed the historical Markdown archive but did not change the Constitution. The archive was not restored over that repository change.
 
 ## 1. Annotated edition and search
