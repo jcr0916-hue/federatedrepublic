@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260922, against 110 published entries (seq 1–108, contiguous, no gaps).*
+*Last verified: 260928, against 113 published entries (seq 1–111, contiguous, no gaps).*
 
 ---
 
@@ -81,11 +81,11 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | Thread | Last Touched (Seq / Date) | Status |
 |---|---|---|
 | **Korda Convention arc** (competing petitions, JMC review) | 96 / 13.11 | **LIVE, clock running.** JMC still reviewing, no timeline given. news-064 surfaced the operational bind: the Elections Panel is preparing a Day 8 referendum that a plain reading of §15.5.a(1) says already cannot proceed, because no finding has been issued and its certification stands. Next: the JMC concluding, the Convention convening, or the referendum simply happening — the last of which Article XV has no mechanism to undo. |
-| **LC Race** (Vael/Carrow/Mak/Sandris) | 99 / 13.11 | **LIVE, now entangled with Korda.** news-066: Sandris is the only candidate who engaged directly with the §15.5.a(1) question, reframing his transition-plan platform as useful "twice" — once for the referendum, once for a Convention if one convenes instead. Carrow called it premature, Vael did not respond, Mak deflected to the Elections Panel. No election date set. |
+| **LC Race** (Vael/Carrow/Mak/Sandris) | 111 / 13.11 | **LIVE, now also entangled with Lake Varda.** news-072: Carrow's own diplomatic proposal got its first acceptance (Caldris) mid-campaign — she didn't campaign on it, her office deflected credit, and only Sandris was willing to name the structural advantage directly on record rather than dodge it. Still entangled with Korda too (news-066). No election date set. |
 | **Fiscal Equalization (§12.6)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 108 / 13.11 | **LIVE, half resolved.** Varek's Assembly granted §18.4 consent (news-069, formal filing nrs-035) — committee hearing, one founding county's testimony, floor vote, no single executive involved anywhere in the process. Norvane's consent is the only one still missing; nothing about Varek's vote changes Norvane's own refugee-housing need for the same parcel. Next: Norvane's decision (or continued silence) is now the entire remaining question. |
 | **Thoss / Civic Consul standing** | 68 / 13.09 | **QUIET since Month 9.** Her position on the Korda Convention/whole-statehood question is explicitly unresolved (agreed 260821 — Claude has narrative control, no early reveal). Watch for a forcing moment: a vote on her own bill, Orin's Convention seating, or a direct question she can't fully dodge. |
-| **Lake Varda / Sunderland crisis** | 102 / 13.11 | **LIVE — new diplomatic front opened (260914).** nrs-032: Foreign Affairs proposes a trilateral conference with Caldris and Valedon after bilateral inquiry to the Sunderland Interim Authority went nowhere (twelve-day response, answered none of three questions). First appearance of Caldris in a diplomatic role and first appearance of Valedon at all beyond a road name. Neither government has responded; no timeline given. The §10.2 redaction petition (nrs-030) remains separately open, Directorate still hasn't responded, no hearing set. Next: either government responding to the conference proposal, or the redaction petition getting a hearing date — two independent open threads on the same crisis. |
+| **Lake Varda / Sunderland crisis** | 111 / 13.11 | **LIVE — one of two invited governments has responded.** news-070: Caldris accepted the conference proposal, narrowly — talks only, no endorsement of Torenthia's account of the Varda incidents, no date or venue set. Valedon still hasn't responded. The §10.2 redaction petition (nrs-030) remains separately open, Directorate still hasn't responded, no hearing set. Next: Valedon's answer, a date/venue for the now-accepted talks, or the redaction petition getting a hearing — three independent open threads on the same crisis now. |
 | **Toren River negotiation** | 100 / 13.11 | **REOPENED (260907) — still unresolved, not advanced.** news-067 confirms the Month 6 follow-up session never happened; Caldris-side scheduling conflicts, no replacement date set. The dispute-resolution-mechanism gap remains exactly as open as Month 5. Untested so far — this year's flow has stayed within tolerance. Next: either side reconvening, or a low-rainfall year making the gap suddenly consequential. |
 | **Supreme Court composition** | 98 / 13.11 | **INTRODUCED.** All nine justices named in sc-001 (Y13 M3); profiled in news-065 ahead of any Korda filing. Pivotal voice: **Pael Doran**, whose *Corindal* dissent refused the merits while a threshold question was unresolved — directly relevant to the §15.5.a(1) question. Court gives no interviews; all contact routes through the clerk. See CHARACTER-REFERENCE.md for the full roster and what is/isn't established. |
 | **Corindal Industrial Partners** | 33 / 13.03 | **DELIBERATELY HELD.** Long-game arc built around a future SC composition and future election cycles that haven't happened yet (per WORLD-THREADS-PENDING.md). Do not open early. |
@@ -207,6 +207,9 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 106 | 13.11 | News | Two Hundred Sixty-Six | The Torenthian |
 | 107 | 13.11 | News | Varek Says Yes, and Says It the Only Way It Knows How | The Torenthian |
 | 108 | 13.11 | NRS | Notice of Consent — Varek, National Trust Designation, Argent Ridge Parcel | National Record System |
+| 109 | 13.11 | News | Caldris Says Yes to the Meeting. Valedon Hasn't. | The Torenthian |
+| 110 | 13.11 | News | The South Loop Is Back on Schedule | TNB Verentum |
+| 111 | 13.11 | News | The Candidate Whose Day Job Just Had a Good Week | The Torenthian |
 
 ---
 

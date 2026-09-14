@@ -14,6 +14,20 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The candidate whose day job just had a good week",
+    blurb: "Caldris said yes to Carrow's own diplomatic proposal this week. She's also running for the office that oversees it. Sandris is the only rival willing to say the advantage is real.",
+    href: "torenthia-news-072.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
+    title: "Caldris says yes to the meeting. Valedon hasn't.",
+    blurb: "The first answer to Torenthia's proposed regional conference is an acceptance — narrow, talks only, no endorsement of anything Torenthia has said about the Varda incidents. Valedon still hasn't responded.",
+    href: "torenthia-news-070.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "Varek says yes, and says it the only way it knows how",
     blurb: "No governor to sign anything — a committee hearing, one county's testimony, and a floor vote instead. Varek's half of the Argent Ridge consent is filed. Norvane's still isn't.",
     href: "torenthia-news-069.html",
