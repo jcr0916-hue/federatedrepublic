@@ -49,6 +49,4 @@ for i, category in enumerate(categories):
     pattern = r'(<button[^>]*data-cat="' + str(i) + r'"[^>]*>\s*<span class="sccard-num">).*?(</span>)'
     page = re.sub(pattern, lambda m: m[1] + str(n) + (' scenario' if n == 1 else ' scenarios') + m[2], page, flags=re.S)
 library.write_text(page)
-# Retain the legacy URL as an identical, current library rather than a stale second index.
-Path('scenarios-FINAL.html').write_text(page)
-print(f'Synchronized {len(entries)} scenarios and {len(featured["entries"])} featured entries in both libraries.')
+print(f'Synchronized {len(entries)} scenarios and {len(featured["entries"])} featured entries in the scenario library.')

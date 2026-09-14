@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check scenario references, built links, and synchronization of the two libraries."""
+"""Check scenario references, built links, and scenario-library metadata."""
 import html
 import json
 import re
@@ -21,7 +21,6 @@ for page in pages:
             assert f'id="{anchor}"' in target.read_text(), (page, href)
 
 library = Path('scenarios.html').read_text()
-assert library == Path('scenarios-FINAL.html').read_text()
 categories = json.loads(re.search(r'const SCENARIO_CATS = (.*);', library)[1])
 entries = [e for c in categories for e in c['entries']]
 assert len(entries) == len(pages) == len({e['href'] for e in entries})
