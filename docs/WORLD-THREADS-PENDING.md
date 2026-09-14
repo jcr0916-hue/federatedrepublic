@@ -75,15 +75,15 @@ scheduled 13.12.08. To begin by Thursday 260821. John ruminating on opening shap
 
 ---
 
-## SEAT OF GOVERNMENT RESELECTION (flagged 260712, John — ~7 Torenthia years out)
-**The hook — a constitutionally-mandated, un-cancellable competition approaching.** §18.2 requires the Seat of Government host selection to be reconsidered through a NEW competitive process **no less often than every 20 years**, and explicitly bars the Legislature from suspending or indefinitely extending that requirement. So this isn't optional political drama — it's a deadline the constitution forces. John tracks it as ~7 in-world years out.
+## SEAT OF GOVERNMENT RESELECTION (flagged 260712, John — optional future initiative)
+**The hook — an optional contest over the Seat of Government.** States and Territories may bid under §18.2, but the Constitution requires no timetable, mandatory recompetition or relocation. A future competition depends on a political initiative and the statutory selection process. Existing bids and the Ostara concept remain usable story material.
 
 **Constitutional spine (§18.2):**
 - The Republic holds NO territorial sovereignty at its Seat — it only gets Operational Use Rights (§18.1) over a designated footprint; the host State/Territory keeps full sovereignty outside it.
 - Host chosen by a COMPETITIVE BID process defined by statute; any State or Territory may bid; host must meet minimum requirements published to the NRS in advance.
 - A rejected bidder may CHALLENGE the selection before the SC — but only on the ground that the winning bid didn't meet the published requirements (narrow, procedural review, not merits).
 - Within the footprint: federal control exclusive; host can't tax federal ops or apply its own law to federal functions; footprint residents keep full Article I rights.
-- **The forcing clause:** reselection at least every 20 years, Legislature may NOT suspend/extend. Absent a qualifying new selection, the existing arrangement just continues.
+- **Continuity:** no constitutional recompetition clock. Absent a qualifying new selection, the existing arrangement continues.
 
 **Pre-seeded conflict (already in world-canon.md):**
 - CURRENT host: **Verentum**, in **Aldenmere** (SW coast, capital region, reaches the sea).
@@ -96,7 +96,7 @@ scheduled 13.12.08. To begin by Thursday 260821. John ruminating on opening shap
 - Ostara (ancient capital, distinct island culture) vs. Verentum (current, mainland, coastal) = identity/heritage vs. incumbency/practicality. Other States/Territories could enter too — it's an open bid.
 - Ties to the Use Doctrine paper (§18.1 "No Land of Its Own") in the design-rationale series.
 
-**Status:** flagged, ~7 in-world years out, NOT activated. Longest-horizon scheduled event on the board. When ready to shape: promote to SEAT-OF-GOVERNMENT-ARC.md. The 20-year clock and the Ostara bid are the anchors. NOT today's work.
+**Status:** optional future arc, not activated or scheduled by constitutional deadline. When ready to shape: promote to SEAT-OF-GOVERNMENT-ARC.md. A political decision to open a competition and the Ostara bid can provide the story anchors.
 
 **Visual assets ready (both capitals staged, carded, do NOT regenerate):**
 - **Verentum (incumbent):** verentum-card.webp (the capital city, river kept — Aldenmere reaches the sea), verentum-civic-campus-card.webp (the seat of government campus). Full-size: verentum.png, verentum-cIvic-campus.png.

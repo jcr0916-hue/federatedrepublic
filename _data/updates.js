@@ -17,6 +17,7 @@ const updates = [
     title: "Varek says yes, and says it the only way it knows how",
     blurb: "No governor to sign anything — a committee hearing, one county's testimony, and a floor vote instead. Varek's half of the Argent Ridge consent is filed. Norvane's still isn't.",
     href: "torenthia-news-069.html",
+    image: "varek-flag.png",
   },
   {
     category: "world",
