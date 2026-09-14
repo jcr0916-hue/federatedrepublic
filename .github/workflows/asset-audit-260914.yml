@@ -1,0 +1,71 @@
+name: Asset audit 260914
+on:
+  push:
+    paths:
+      - '.github/workflows/asset-audit-260914.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit image and logo references
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from collections import defaultdict
+          import hashlib
+
+          asset_roots = [Path('images'), Path('logos')]
+          assets = []
+          for root in asset_roots:
+              if root.exists():
+                  assets += [p for p in root.rglob('*') if p.is_file()]
+
+          text_exts = {'.html','.js','.mjs','.cjs','.json','.md','.css','.py','.sh','.yml','.yaml','.txt'}
+          text_files = [p for p in Path('.').rglob('*') if p.is_file() and p.suffix.lower() in text_exts and '.git' not in p.parts and '_site' not in p.parts]
+          corpus = {}
+          for p in text_files:
+              try:
+                  corpus[p] = p.read_text(errors='ignore')
+              except Exception:
+                  pass
+
+          refs = defaultdict(list)
+          for asset in assets:
+              probes = {asset.as_posix(), asset.name}
+              for p, text in corpus.items():
+                  if p == asset:
+                      continue
+                  if any(probe in text for probe in probes):
+                      refs[asset].append(p)
+
+          hashes = defaultdict(list)
+          for asset in assets:
+              h=hashlib.sha256(asset.read_bytes()).hexdigest()
+              hashes[h].append(asset)
+
+          print('=== SUMMARY ===')
+          print('assets', len(assets))
+          print('referenced', sum(bool(refs[a]) for a in assets))
+          print('zero_ref', sum(not refs[a] for a in assets))
+          print('bytes_total', sum(a.stat().st_size for a in assets))
+          print('bytes_zero_ref', sum(a.stat().st_size for a in assets if not refs[a]))
+          print()
+          print('=== ZERO-REFERENCE ASSETS (largest first) ===')
+          for a in sorted((a for a in assets if not refs[a]), key=lambda p:p.stat().st_size, reverse=True):
+              print(f'{a.stat().st_size:>9}  {a.as_posix()}')
+          print()
+          print('=== EXACT DUPLICATE GROUPS ===')
+          groups=[g for g in hashes.values() if len(g)>1]
+          if not groups:
+              print('none')
+          for g in groups:
+              print('DUP', g[0].stat().st_size, ' | '.join(p.as_posix() for p in g))
+          print()
+          print('=== REFERENCED ASSETS ===')
+          for a in sorted((a for a in assets if refs[a]), key=lambda p:p.as_posix().lower()):
+              print(a.as_posix(), '<-', ', '.join(str(p) for p in refs[a][:8]))
+          PY
