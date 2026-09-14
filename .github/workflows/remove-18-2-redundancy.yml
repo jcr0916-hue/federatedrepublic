@@ -1,0 +1,68 @@
+name: Remove redundant Section 18.2 sentence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/remove-18-2-redundancy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Archive current Constitution
+        run: cp docs/constitution-current.md docs/archive/constitution/Constitution-260914-a.md
+      - name: Remove redundant sentence from Section 18.2
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          target = "This Constitution requires no scheduled reconsideration, recompetition, rotation, or relocation of the Seat. Absent a qualifying new selection, the existing arrangement continues."
+          path = Path('constitution_data.json')
+          data = json.loads(path.read_text())
+          hits = 0
+          for article in data:
+              for p in article.get('provisions', []):
+                  if p.get('num') == '§18.2':
+                      if target not in p['text']:
+                          raise SystemExit('Target sentence not found in §18.2')
+                      p['text'] = p['text'].replace(target, '').strip()
+                      p['text'] = ' '.join(p['text'].split())
+                      hits += 1
+          if hits != 1:
+              raise SystemExit(f'Expected one §18.2 edit, got {hits}')
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
+          PY
+      - name: Regenerate constitutional surfaces
+        run: |
+          npm ci
+          npm run sync
+          pip install reportlab pypdf
+          python3 scripts/build-constitution-pdf.py
+      - name: Validate
+        run: |
+          python3 scripts/check-consistency.py
+          python3 scripts/check-constitutional-site.py
+          python3 scripts/check-constitution-pdf.py
+          npm run build
+          ! grep -R -F "This Constitution requires no scheduled reconsideration, recompetition, rotation, or relocation of the Seat. Absent a qualifying new selection, the existing arrangement continues." constitution_data.json docs/constitution-current.md annotated.html search-index.js
+      - name: Commit constitutional cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/remove-18-2-redundancy.yml
+          git add constitution_data.json docs/constitution-current.md docs/constitutional-quickref.md annotated.html search-index.js pdf/constitution-current.pdf docs/archive/constitution/Constitution-260914-a.md
+          git commit -m "Remove redundant Seat reconsideration sentence from 18.2"
+          git push
