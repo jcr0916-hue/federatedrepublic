@@ -625,3 +625,34 @@ img { max-width:100%; height:auto; }
 /* near the right edge, flip the bubble so it doesn't overflow the viewport */
 .def:nth-last-child(-n+3) .def-pop{left:auto;right:0}
 @media print{ .def-pop{display:none} .def{border-bottom:none} }
+
+/* Transparent hit areas over the atlas's ordinary SVG state labels.
+   Match the label typography so the whole name remains clickable. */
+.state-map-link,
+.state-map-link:hover,
+.state-map-link:focus,
+.state-map-link:active,
+.state-map-link:visited {
+  position: absolute;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 8px 9px;
+  color: transparent;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  text-shadow: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.state-map-link:focus-visible {
+  outline: 2px solid #5a4524;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
