@@ -2,10 +2,16 @@
   "name": "federatedrepublic",
   "private": true,
   "scripts": {
-    "build": "eleventy",
-    "sync": "python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py"
+    "build": "node scripts/public-assets.mjs --clean && eleventy",
+    "sync": "python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py",
+    "check:assets": "node scripts/public-assets.mjs",
+    "test:assets": "node --test scripts/public-assets.test.mjs",
+    "stats:assets": "node scripts/asset-stats.mjs"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.6",
+    "acorn": "^8.18.0",
+    "acorn-walk": "^8.3.5",
+    "htmlparser2": "^9.1.0"
   }
 }

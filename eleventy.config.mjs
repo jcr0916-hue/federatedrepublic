@@ -2,6 +2,7 @@
 // Proven: 37/37 news pages rebuild byte-identical (see PROOF-RESULT.md).
 import fs from "node:fs";
 import path from "node:path";
+import { collect } from "./scripts/public-assets.mjs";
 
 export default function (eleventyConfig) {
 
@@ -72,13 +73,29 @@ export default function (eleventyConfig) {
   ];
   passthrough.forEach(p => eleventyConfig.addPassthroughCopy(p));
 
-  // globs: every image and document format at root.
-  // NOTE: *.jpg is NOT optional — torenthia-atlas.html serves world-map-tier1.webp with
-  // an onerror fallback to world-map-tier1.jpg. Drop the glob and the fallback 404s, so
-  // the world map vanishes on exactly the older browsers the fallback exists for.
-  eleventyConfig.addPassthroughCopy({ "images": "." });
-  eleventyConfig.addPassthroughCopy("logos");
-  eleventyConfig.addPassthroughCopy({ "pdf": "." });
+  // Only rendered public pages and their runtime dependencies select library assets.
+  // Keep legacy flattened image/PDF URLs and /logos/ URLs unchanged.
+  eleventyConfig.ignores.add("docs/**");
+  eleventyConfig.ignores.add("scripts/**");
+  eleventyConfig.addWatchTarget("images/");
+  eleventyConfig.addWatchTarget("logos/");
+  eleventyConfig.addWatchTarget("pdf/");
+  let assetMetadata = [];
+  eleventyConfig.on("eleventy.before", () => { assetMetadata = []; });
+  eleventyConfig.addCollection("publicAssetMetadata", api => {
+    assetMetadata = api.getAll().filter(p => p.url).map(p => ({
+      url: p.url,
+      // Front matter is stripped from HTML. In particular worldImage must survive
+      // even when a piece is outside the currently visible feed window.
+      values: Object.entries(p.data)
+        .filter(([key, value]) => /(?:image|asset|icon|poster)$/i.test(key) && typeof value === "string")
+        .map(([, value]) => value)
+    }));
+    return [];
+  });
+  eleventyConfig.on("eleventy.after", ({ dir }) => {
+    collect({ output: dir.output, metadata: assetMetadata });
+  });
   eleventyConfig.addPassthroughCopy("*.txt");
 
   // ---- GLOSSARY AUTO-DEFINE ----------------------------------------------

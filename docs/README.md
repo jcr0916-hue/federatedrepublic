@@ -17,6 +17,10 @@ Edit the canonical structured source and regenerate derived constitutional surfa
 
 Current design principles, world canon, character references, timelines, arc notes, deployment notes, and active queues remain directly under `docs/` until a later structural reorganization is worthwhile.
 
+## Backend operations
+
+- [Public asset deployment](ASSET-DEPLOYMENT.md) — referenced-asset collection, protected runtime paths, validation, and deployment size measurements.
+
 ## Archive
 
 - `archive/constitution/` — dated snapshots of earlier constitutional text.

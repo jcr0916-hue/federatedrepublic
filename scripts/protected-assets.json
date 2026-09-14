@@ -1,0 +1,10 @@
+{
+  "description": "Public URL paths, not source paths. Preserve implicit browser requests, map fallbacks/infrastructure, seals and the service worker's offline entry points. Literal dependencies inside these files are followed automatically.",
+  "assets": [
+    "favicon.ico", "favicon-32.png", "apple-touch-icon.png",
+    "seal.png", "seal.svg", "seal-watermark.png",
+    "world-map-tier1.webp", "world-map-tier1.jpg", "region-map-tier2-base.webp",
+    "map-data.js", "tier2-borders.json", "tier2-labels.json",
+    "sw.js", "site.css", "nav.js", "search-index.js", "constitution-current.pdf"
+  ]
+}
