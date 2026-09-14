@@ -18,7 +18,8 @@
     .state-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:24px 0;border-block:1px solid var(--gold)}
     .state-facts dd{margin:8px 0 0;font-size:1.4rem}
     .state-profile blockquote{margin:24px 0;padding:4px 24px;border-left:3px solid var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.5rem}
-    .state-flag{margin:28px 0;max-width:600px}.state-flag img{display:block;width:100%;height:auto}.state-flag figcaption{font-size:.85rem;line-height:1.6;margin-top:10px}
+    .state-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:20px 0}.state-heading h1{margin:0}.state-flag{margin:0;width:210px;flex-shrink:0}.state-flag img{display:block;width:100%;height:auto;box-shadow:0 2px 10px #0002}.state-flag figcaption{font-size:.8rem;line-height:1.4;margin-top:8px}
+    @media(max-width:600px){.state-heading{align-items:flex-start;flex-wrap:wrap}.state-flag{width:150px}}
     .state-coverage{padding-left:20px}.state-coverage li{margin:12px 0}
     .state-coverage small{display:block;opacity:.75}
     @media(max-width:600px){.state-facts{grid-template-columns:repeat(2,1fr)}}
@@ -31,7 +32,10 @@
   <div role="navigation" aria-label="State navigation"><a href="torenthia.html">Torenthia</a> / States{% for s in statepages %} · <a href="{{ s.url }}"{% if s.name == stateName %} aria-current="page"{% endif %}>{{ s.name }}</a>{% endfor %}</div>
   {% for s in statepages %}{% if s.name == stateName %}
   <p class="state-kicker">{{ s.char }}</p>
-  <h1>{{ s.name }}</h1>
+  <div class="state-heading">
+    <h1>{{ s.name }}</h1>
+    {% if stateFlag %}<figure class="state-flag"><a href="{{ stateFlag }}" aria-label="View {{ s.name }} flag at full size"><img src="{{ stateFlag }}" width="1536" height="1024" alt="{{ stateFlagAlt }}"></a><figcaption>Flag of {{ s.name }}</figcaption></figure>{% endif %}
+  </div>
   <dl class="state-facts">
     <div><dt>Population</dt><dd>{{ s.pop }}M</dd></div>
     <div><dt>Federal Senate</dt><dd>{{ s.senate }} seats</dd></div>
