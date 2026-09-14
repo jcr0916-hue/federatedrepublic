@@ -1,0 +1,65 @@
+name: Asset cleanup 260914
+on:
+  push:
+    paths:
+      - '.github/workflows/asset-cleanup-260914.yml'
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Remove unreferenced generated card derivatives
+        run: |
+          rm -f \
+            images/riverglow-alt-card.webp \
+            images/Yelka-Sarn-card.webp \
+            images/Thomas-Verel-card.webp \
+            images/Petra-Vend-card.webp \
+            images/Ivenne-Casta-card.webp \
+            images/Halden-Rews-card.webp \
+            images/Lenne-Akar-card.webp \
+            images/Corwin-Hale-card.webp \
+            images/Aldous-Fenn-card.webp \
+            images/Maren-Sollis-card.webp \
+            images/casimir-rehn-card.webp \
+            images/Dessa-Orin-card.webp
+      - name: Remove temporary audit and cleanup workflows
+        run: |
+          rm -f .github/workflows/asset-audit-260914.yml .github/workflows/asset-cleanup-260914.yml
+      - name: Install dependencies and build
+        run: |
+          npm ci
+          npx @11ty/eleventy
+      - name: Validate no removed derivative is referenced
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          removed = [
+            'riverglow-alt-card.webp','Yelka-Sarn-card.webp','Thomas-Verel-card.webp','Petra-Vend-card.webp',
+            'Ivenne-Casta-card.webp','Halden-Rews-card.webp','Lenne-Akar-card.webp','Corwin-Hale-card.webp',
+            'Aldous-Fenn-card.webp','Maren-Sollis-card.webp','casimir-rehn-card.webp','Dessa-Orin-card.webp'
+          ]
+          exts={'.html','.js','.mjs','.cjs','.json','.md','.css','.py','.sh','.yml','.yaml','.txt'}
+          hits=[]
+          for p in Path('.').rglob('*'):
+              if not p.is_file() or p.suffix.lower() not in exts or '.git' in p.parts or '_site' in p.parts: continue
+              text=p.read_text(errors='ignore')
+              for name in removed:
+                  if name in text: hits.append((str(p),name))
+          assert not hits, hits
+          print('No removed derivative remains referenced.')
+          PY
+      - name: Commit cleanup
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Remove unused generated image derivatives'
+          git push
