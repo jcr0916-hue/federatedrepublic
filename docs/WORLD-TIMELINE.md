@@ -4,14 +4,14 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260928, against 113 published entries (seq 1–111, contiguous, no gaps).*
+*Last verified: 260915, against 113 published entries (seq 1–113, contiguous, no gaps). State profiles are reference pages, not timeline entries.*
 
 ---
 
 ## WHERE WE ARE
 
 **Current world date: Year 13, Month 11.** This is the furthest date reached by any published
-piece as of 260822. Some threads sit behind this (Argent Ridge, Thoss, Lake Varda, Toren River)
+piece as of this batch. Some threads sit behind this
 because they run quieter or on their own clock — that's normal, not a gap by itself. Check the
 status board below for which threads are behind on purpose versus behind by neglect.
 
@@ -23,11 +23,11 @@ backward-looking (where each thread left off). Both matter for deciding what's d
 
 | World Date | Event | Source |
 |---|---|---|
-| **Year 13, Month 12, Day 8** | Kelvant-Korda corridor referendum (§15.4). ~4 weeks out as of Month 11. Elections Panel is actively preparing (ballot stock, polling places, voter rolls) on its unwithdrawn Month 10 certification. §15.5.a(1) arguably already stopped it on certification alone, but no finding has issued and nothing requires anyone to announce one. | nrs-024, news-064 |
+| **Year 13, Month 12, Day 8 — canceled** | The corridor referendum does not proceed under the JMC’s Month 11 Day 26 determination. The Panel is notifying staff, releasing room bookings, replacing notices, and retaining election materials. No replacement polling date. | nrs-034, news-073 |
 | **Unscheduled** | Legat Consul election. §7.2 sets a 4-year cycle following the amendment, but no specific date has been set in canon yet. | news-058 |
-| **No clock at all** | §18.4 Trust designation consent, Argent Ridge parcel. Request filed to both host States (Varek, Norvane) as of Month 10 (nrs-029). No statutory deadline governs how long a State can take to respond — this could resolve in weeks or sit unanswered indefinitely. | nrs-029, news-063 |
+| **No clock at all** | Argent Ridge Trust designation: Varek has consented; Norvane’s consent remains outstanding, with no response deadline. The Norvane profile supplies context without announcing a decision. | nrs-029, news-069, nrs-035 |
 | **Uncertain — flagged, not calculated** | Argent Ridge Phase One signature-gathering window (up to 8 months) began once the eligibility challenge period closed unused, Year 13 Month 9 Day 12 (news-060). Eight months from that date lands past Month 12, meaning the deadline crosses into a following year — **this world's calendar has never established a year-transition convention** (only "Year 13" has ever been referenced). Do not invent "Year 14" confidently; confirm with John before a beat depends on it. |
-| **Not yet started** | Territory Convention 90-day clock (§15.5.a(4)) — only begins if/when the Convention actually convenes, which hasn't happened. The JMC is still reviewing (nrs-028); no clock is running yet. |
+| **Not yet started** | Territory Convention 90-day clock (§15.5.a(4)): the JMC has determined both petitions must enter the Convention process. No first-session date announced; the clock begins at that session, not at the determination. | nrs-034, news-073 |
 | **No clock at all** | §10.2 redaction petition on the Varda Crossing summary (nrs-030). Filed Month 11 Day 19. The Directorate has not responded and no hearing date is set; §10.2 sets no deadline for either. | nrs-030 |
 | **No clock at all** | Fiscal Equalization formula reform. §12.6 only obligates a response to a *failure* finding, and none exists. This is genuinely open-ended — there is no deadline forcing the committee back into session, which is itself the story (news-062). |
 
@@ -80,11 +80,11 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 
 | Thread | Last Touched (Seq / Date) | Status |
 |---|---|---|
-| **Korda Convention arc** (competing petitions, JMC review) | 96 / 13.11 | **LIVE, clock running.** JMC still reviewing, no timeline given. news-064 surfaced the operational bind: the Elections Panel is preparing a Day 8 referendum that a plain reading of §15.5.a(1) says already cannot proceed, because no finding has been issued and its certification stands. Next: the JMC concluding, the Convention convening, or the referendum simply happening — the last of which Article XV has no mechanism to undo. |
+| **Korda Convention arc** (competing petitions, Convention pending) | 112 / 13.11 | **LIVE, referendum stopped; Convention clock not started.** nrs-034 made the determination on Day 26. news-073 follows the Panel unwinding polling preparations and informing residents. Both petitions remain certified. No first-session date, judicial filing, or resolution announced. Next: convening arrangements or a separately developed challenge. |
 | **LC Race** (Vael/Carrow/Mak/Sandris) | 111 / 13.11 | **LIVE, now also entangled with Lake Varda.** news-072: Carrow's own diplomatic proposal got its first acceptance (Caldris) mid-campaign — she didn't campaign on it, her office deflected credit, and only Sandris was willing to name the structural advantage directly on record rather than dodge it. Still entangled with Korda too (news-066). No election date set. |
 | **Fiscal Equalization (§12.6)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 108 / 13.11 | **LIVE, half resolved.** Varek's Assembly granted §18.4 consent (news-069, formal filing nrs-035) — committee hearing, one founding county's testimony, floor vote, no single executive involved anywhere in the process. Norvane's consent is the only one still missing; nothing about Varek's vote changes Norvane's own refugee-housing need for the same parcel. Next: Norvane's decision (or continued silence) is now the entire remaining question. |
-| **Thoss / Civic Consul standing** | 68 / 13.09 | **QUIET since Month 9.** Her position on the Korda Convention/whole-statehood question is explicitly unresolved (agreed 260821 — Claude has narrative control, no early reveal). Watch for a forcing moment: a vote on her own bill, Orin's Convention seating, or a direct question she can't fully dodge. |
+| **Thoss / Civic Consul standing** | 106 / 13.11 | **LIVE.** news-068 puts working Assembly support at 266, down from 274 at formation. Her substantive position on Korda’s competing outcomes remains unresolved; the duty to convene does not establish which outcome she favors. |
 | **Lake Varda / Sunderland crisis** | 111 / 13.11 | **LIVE — one of two invited governments has responded.** news-070: Caldris accepted the conference proposal, narrowly — talks only, no endorsement of Torenthia's account of the Varda incidents, no date or venue set. Valedon still hasn't responded. The §10.2 redaction petition (nrs-030) remains separately open, Directorate still hasn't responded, no hearing set. Next: Valedon's answer, a date/venue for the now-accepted talks, or the redaction petition getting a hearing — three independent open threads on the same crisis now. |
 | **Toren River negotiation** | 100 / 13.11 | **REOPENED (260907) — still unresolved, not advanced.** news-067 confirms the Month 6 follow-up session never happened; Caldris-side scheduling conflicts, no replacement date set. The dispute-resolution-mechanism gap remains exactly as open as Month 5. Untested so far — this year's flow has stayed within tolerance. Next: either side reconvening, or a low-rainfall year making the gap suddenly consequential. |
 | **Supreme Court composition** | 98 / 13.11 | **INTRODUCED.** All nine justices named in sc-001 (Y13 M3); profiled in news-065 ahead of any Korda filing. Pivotal voice: **Pael Doran**, whose *Corindal* dissent refused the merits while a threshold question was unresolved — directly relevant to the §15.5.a(1) question. Court gives no interviews; all contact routes through the clerk. See CHARACTER-REFERENCE.md for the full roster and what is/isn't established. |
@@ -97,8 +97,6 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 
 | Seq | Date | Kind | Title | Outlet |
 |---|---|---|---|---|
-| 0 |  |  |  |  |
-| 0 |  |  |  |  |
 | 1 | 12.09 | News | Vael Enters LC Race, Putting Sovereignty Wing at Center of Year 13 Field | The Torenthian |
 | 2 | 12.10 | News | Carrow Gives the Speech. Doesn't Announce. | The Torenthian |
 | 3 | 12.10 | News | Sunderland Vessel Holds Lake Varda Position for Six Hours. Coast Guard Tracked It. Then It Left. | The Torenthian |
@@ -123,7 +121,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 22 | 13.01 | News | The Other Negotiation | The Torenthian |
 | 23 | 12.12 | NRS | EM Interim Fiscal Review — Korda Territory | National Record System |
 | 24 | 13.02 | News | What Rehn Wants to Finish | The Torenthian |
-| 25 | 13.03 | News | Mak on the MA Plan: \ | The Torenthian |
+| 25 | 13.03 | News | Mak on the MA Plan: "This Is What I've Been Saying" | The Torenthian |
 | 26 | 13.02 | NRS | MA Remedy Plan — Korda Territory Fiscal Equalization Failure | National Record System |
 | 27 | 13.04 | News | Assembly Passes Korda Emergency Transfer. Formula Review Is Not Taken Up. | The Torenthian |
 | 28 | 13.05 | News | Sunderland Armed Formation Crosses Korda Border. One Torenthian Officer Wounded. | RNN |
@@ -132,7 +130,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 31 | 13.05 | NRS | Notice of Candidacy — Legat Consul — Year 13 Federal Electoral Period | National Record System |
 | 32 | 13.05 | News | Toren River Working Group Reaches Provisional Formula Agreement. One Item Remains. | The Torenthian |
 | 33 | 13.03 | SC | Corindal Industrial Partners v. NRS Panel of the Federated Republic | Supreme Court |
-| 34 | 13.05 | News | Sandris on the Formula Deferral: \ | The Torenthian |
+| 34 | 13.05 | News | Sandris on the Formula Deferral: "I Said This in Month 12" | The Torenthian |
 | 35 | 13.05 | News | The Race, Reshaped: Reading the Field After the Crossing | RNN |
 | 36 | 13.05 | NRS | Diplomatic Communication — Formal Inquiry to the Sunderland Interim Authority | National Record System |
 | 37 | 13.05 | News | The Assembly Member Nobody Was Covering Said the Quiet Part | The Torenthian |
@@ -210,35 +208,26 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 109 | 13.11 | News | Caldris Says Yes to the Meeting. Valedon Hasn't. | The Torenthian |
 | 110 | 13.11 | News | The South Loop Is Back on Schedule | TNB Verentum |
 | 111 | 13.11 | News | The Candidate Whose Day Job Just Had a Good Week | The Torenthian |
+| 112 | 13.11 | News | The Notices Have to Come Down | The Torenthian |
+| 113 | 13.11 | News | The Large-Print Shelves Move Downstairs | TNB Verentum |
 
 ---
 
 ## RE-EXTRACTING THIS TABLE
 
 ```python
-import re, glob, json
-
-def field_q(t, name):
-    m = re.search(name + r':\s*"([^"]*)"', t)
-    return m.group(1) if m else ''
-
-def field_bare(t, name):
-    m = re.search(name + r':\s*([a-zA-Z_-]+)', t)
-    return m.group(1) if m else ''
+import glob, re, yaml
 
 entries = []
 for f in sorted(glob.glob('torenthia-*.html')):
-    if 'record.html' in f: continue
-    t = open(f, encoding='utf-8').read()
-    if not t.startswith('---'): continue
-    m = re.search(r'worldSeq:\s*(\d+)', t)
-    seq = int(m.group(1)) if m else 0
-    entries.append({
-        'file': f, 'seq': seq, 'date': field_q(t, 'worldDate'),
-        'kind': field_bare(t, 'worldKind'), 'title': field_q(t, 'worldTitle'),
-        'outlet': field_q(t, 'worldOutlet'), 'author': field_q(t, 'worldAuthor'),
-    })
-entries.sort(key=lambda e: e['seq'])
+    text = open(f, encoding='utf-8').read()
+    if not text.startswith('---\n'):
+        continue
+    data = yaml.safe_load(text.split('---\n', 2)[1])
+    if not data.get('worldKind') or not data.get('worldSeq'):
+        continue  # State profiles are not World entries.
+    entries.append({'file': f, **data})
+entries.sort(key=lambda e: e['worldSeq'])
 ```
 
 **Known extraction pitfall (found 260822):** `worldKind` is written WITHOUT quotes in frontmatter

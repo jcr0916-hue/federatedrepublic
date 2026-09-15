@@ -9,6 +9,25 @@ process into a contested one three weeks before a vote.*
 John ruminating on shape; this file is MATERIAL, not a locked plan. Nothing below is
 committed canon until published.*
 
+## CURRENT PUBLISHED POSITION — Y13 M11 (updated 260915)
+
+The planning material below is historical where superseded by these publications:
+
+- **nrs-034 (seq 105), Month 11 Day 26:** the JMC determined that §15.5.a(1) applies.
+  The Day 8 corridor referendum does not proceed; both certified petitions enter the
+  Convention process. The Civic Consul must convene it. Its ninety-day clock starts at
+  the first session, not at the determination.
+- **news-073 (seq 112), “The Notices Have to Come Down”:** the Elections Panel begins
+  unwinding polling preparations: staff and premises notifications, released bookings,
+  replacement public notices, and retention of ballot materials and the preparation record.
+  Signatures remain valid. Residents have no replacement polling date.
+- **Still open:** first-session date, Convention proceedings and resolution, Thoss’s
+  preferred outcome, and any judicial challenge. No suit or court disposition is introduced
+  by this batch. The planned Lakeland Journal business-interest voice remains unused.
+
+This is the practical aftermath of an already-published determination, not another
+certification or a Convention opening. The mundane library entry (news-074) is unrelated.
+
 ---
 
 ## THE MECHANISM (verified against constitution_data.json, 260819)

@@ -49,6 +49,10 @@ export default function (eleventyConfig) {
   );
 
 
+  // Mundane entries remain in The Record without promotion on the World hub.
+  eleventyConfig.addFilter("worldHighlights", pieces =>
+    pieces.filter(piece => !piece.data.worldMundane));
+
   // Related State coverage follows published World content, including body mentions.
   eleventyConfig.addFilter("stateCoverage", (pieces, name) => {
     const re = new RegExp(`\\b${name}\\b`, 'i');
@@ -61,6 +65,7 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy("State Constitutions/harren-state-constitution.md");
   eleventyConfig.addPassthroughCopy("State Constitutions/varek-state-constitution.md");
+  eleventyConfig.addPassthroughCopy("State Constitutions/norvane-state-constitution.md");
 
   // Assets Eleventy does not template — copy through untouched.
   // If any of these is missing from _site, every page that uses it 404s.

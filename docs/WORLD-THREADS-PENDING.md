@@ -1,6 +1,24 @@
 # Pending World Threads — Capture File
 *Storyline threads flagged but not yet activated or fully shaped. Captured here (not memory) so they survive compaction / new chats. When one is ready to activate and shape fully, promote it to its own ARC file like ARGENT-RIDGE-ARC.md / CORINDAL-ARC.md.*
 
+## NEXT BATCH HANDOFF — 260915 / Y13 M11
+
+- **Norvane profile established:** `torenthia-state-norvane.html`, based on the existing
+  State constitution and shared statistics. Argent Ridge provides its discovery trigger.
+  **Flag awaits the user’s design choice or supplied file.** Add it only after that choice;
+  set `stateFlag` and descriptive `stateFlagAlt` in the profile. No interim emblem.
+- **Norvane’s Argent Ridge response remains unwritten.** Varek has consented; Norvane
+  has neither consented nor refused in published canon. Do not mistake the planned refusal
+  in ARGENT-RIDGE-ARC.md for an event that has happened.
+- **Korda:** nrs-034 already stopped the referendum. news-073 now follows the practical
+  cancellation notices. Convention first session, ninety-day clock, and any SC filing remain
+  ahead; see the updated KORDA-CONVENTION-ARC.md.
+- **Mundane:** news-074, the library’s large-print shelves moving downstairs, is complete
+  ordinary-life texture. No hidden hook or follow-up obligation. `worldMundane: true` keeps it
+  in The Record while excluding it from the World page’s latest carousel and map alerts.
+- **Publishing:** the substantive entry appears on the World page through its derived feed.
+  Neither entry warrants a main-site announcement; `_data/updates.js` is unchanged.
+
 ---
 
 ## PENDING: FUNDING THE §8.4 PUBLIC FINANCING SYSTEM (idea captured 260804, John)

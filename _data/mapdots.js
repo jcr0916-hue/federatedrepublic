@@ -23,6 +23,8 @@ function field(t, name){ const m = t.match(new RegExp(name+':\\s*"([^"]*)"')); r
 const pieces = readdirSync(".")
   .filter(f => /^torenthia-(news|nrs|dispatch|sc).*\.html$/.test(f))
   .map(f => { const t = readFileSync(f,"utf8"); if(!t.startsWith('---')) return null;
+    // Unposted mundane entries are discoverable in The Record, not hub alerts.
+    if (/^worldMundane:\s*true\s*$/m.test(t.split('---')[1])) return null;
     return { url:f, title:field(t,'worldTitle'), blurb:field(t,'worldBlurb'), date:field(t,'worldDate'),
              places:field(t,'worldPlaces').split(',').map(s=>s.trim()).filter(Boolean) }; })
   .filter(Boolean);

@@ -4,6 +4,20 @@ A slow-burn background thread demonstrating the constitution working as narrativ
 Runs alongside and OUTLIVES the Thoss crossroads window. No connection to Thoss.
 Cadence: beats spaced across time (this is background texture, not a rushed subplot).
 
+## CURRENT PUBLISHED POSITION — Y13 M11 (updated 260915)
+
+- Varek’s Assembly granted consent in **news-069**, formally filed in **nrs-035**
+  (seq 107–108). The response came through its Assembly, not a governor.
+- Norvane has **not responded**. References below to a future refusal remain arc planning,
+  not a published event. Phase One repeal signatures and the separate Trust request remain open.
+- **torenthia-state-norvane.html** now establishes the State through its existing constitution,
+  shared statistics, northern arrival geography, and housing pressures. It uses the Varek/Harren
+  profile layout and is discoverable through the existing State navigation, map, and table.
+- **Flag pending the user’s choice/supplied asset.** No flag invented, generated, or substituted.
+  Once chosen, add the asset and the profile’s `stateFlag` / `stateFlagAlt` fields; the shared
+  layout already supports them. This profile introduces no consent decision, named governor,
+  or named arrival facility.
+
 ## The place
 - **Argent Ridge** — official/map name. A ridge jutting from the northern Torenthian Alps,
   between Varek and Norvane, overlooking the Toren River plains.
