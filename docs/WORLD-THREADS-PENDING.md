@@ -13,8 +13,10 @@
 - **Korda:** nrs-034 already stopped the referendum. news-073 now follows the practical
   cancellation notices. Convention first session, ninety-day clock, and any SC filing remain
   ahead; see the updated KORDA-CONVENTION-ARC.md.
-- **Mundane:** news-074, the library’s large-print shelves moving downstairs, is complete
-  ordinary-life texture. No hidden hook or follow-up obligation. `worldMundane: true` keeps it
+- **Mundane:** news-074, a federal matching-grant program for large-print library books, is
+  ordinary national public-service news. Federal funds cover half of eligible purchases within
+  an enacted appropriation; States/Territories and local acquisition budgets supply the match,
+  and local libraries choose titles. No hidden hook or follow-up obligation. `worldMundane: true` keeps it
   in The Record while excluding it from the World page’s latest carousel and map alerts.
 - **Publishing:** the substantive entry appears on the World page through its derived feed.
   Neither entry warrants a main-site announcement; `_data/updates.js` is unchanged.

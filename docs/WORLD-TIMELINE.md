@@ -209,7 +209,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 110 | 13.11 | News | The South Loop Is Back on Schedule | TNB Verentum |
 | 111 | 13.11 | News | The Candidate Whose Day Job Just Had a Good Week | The Torenthian |
 | 112 | 13.11 | News | The Notices Have to Come Down | The Torenthian |
-| 113 | 13.11 | News | The Large-Print Shelves Move Downstairs | TNB Verentum |
+| 113 | 13.11 | News | Matching Grants Open for Large-Print Library Books | TNB Verentum |
 
 ---
 
