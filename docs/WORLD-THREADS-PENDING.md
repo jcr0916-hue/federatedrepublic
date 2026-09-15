@@ -5,8 +5,9 @@
 
 - **Norvane profile established:** `torenthia-state-norvane.html`, based on the existing
   State constitution and shared statistics. Argent Ridge provides its discovery trigger.
-  **Flag awaits the user’s design choice or supplied file.** Add it only after that choice;
-  set `stateFlag` and descriptive `stateFlagAlt` in the profile. No interim emblem.
+  **Flag supplied and selected by John, 260915:** `images/norvane-flag.png`, a white mountain
+  ridge on navy above a light blue band. Original supplied PNG preserved unchanged;
+  `stateFlag` and descriptive `stateFlagAlt` now wire it into the profile.
 - **Norvane’s Argent Ridge response remains unwritten.** Varek has consented; Norvane
   has neither consented nor refused in published canon. Do not mistake the planned refusal
   in ARGENT-RIDGE-ARC.md for an event that has happened.

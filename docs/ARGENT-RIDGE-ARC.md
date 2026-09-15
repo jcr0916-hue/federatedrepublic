@@ -13,10 +13,10 @@ Cadence: beats spaced across time (this is background texture, not a rushed subp
 - **torenthia-state-norvane.html** now establishes the State through its existing constitution,
   shared statistics, northern arrival geography, and housing pressures. It uses the Varek/Harren
   profile layout and is discoverable through the existing State navigation, map, and table.
-- **Flag pending the user’s choice/supplied asset.** No flag invented, generated, or substituted.
-  Once chosen, add the asset and the profile’s `stateFlag` / `stateFlagAlt` fields; the shared
-  layout already supports them. This profile introduces no consent decision, named governor,
-  or named arrival facility.
+- **Flag supplied and selected by John, 260915:** `images/norvane-flag.png`, preserved unchanged
+  and linked through the profile’s `stateFlag` / `stateFlagAlt` fields. White mountain ridge
+  on navy above a light blue band. No additional symbolism is established by the profile.
+  This profile introduces no consent decision, named governor, or named arrival facility.
 
 ## The place
 - **Argent Ridge** — official/map name. A ridge jutting from the northern Torenthian Alps,
