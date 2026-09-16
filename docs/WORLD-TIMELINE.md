@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260915, against 113 published entries (seq 1–113, contiguous, no gaps). State profiles are reference pages, not timeline entries.*
+*Last verified: 261005, against 118 published entries (seq 1–115, contiguous, no gaps).*
 
 ---
 
@@ -80,7 +80,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 
 | Thread | Last Touched (Seq / Date) | Status |
 |---|---|---|
-| **Korda Convention arc** (competing petitions, Convention pending) | 112 / 13.11 | **LIVE, referendum stopped; Convention clock not started.** nrs-034 made the determination on Day 26. news-073 follows the Panel unwinding polling preparations and informing residents. Both petitions remain certified. No first-session date, judicial filing, or resolution announced. Next: convening arrangements or a separately developed challenge. |
+| **Korda Convention arc** (competing petitions, Convention convened) | 115 / 13.11 | **LIVE, Convention formally convened; clock not yet running.** nrs-036: the Civic Consul convened the 33-delegate Convention per §15.5.a(4), first session set for Month 12, Day 9 — the 90-day clock starts then, not at convening. news-075: Thoss's statement was 31 words, revealing nothing about her own preference; Dessa Orin (Korda delegate, Thoss's own fiscal-equalization co-sponsor) was equally guarded — 'not yet' on what the Convention should decide. Both petitions remain certified, addressed together. Next: the first session itself, or anything surfacing before it — 90 days to a resolution or both petitions lapse together with a 3-year bar on reinitiating. |
 | **LC Race** (Vael/Carrow/Mak/Sandris) | 111 / 13.11 | **LIVE, now also entangled with Lake Varda.** news-072: Carrow's own diplomatic proposal got its first acceptance (Caldris) mid-campaign — she didn't campaign on it, her office deflected credit, and only Sandris was willing to name the structural advantage directly on record rather than dodge it. Still entangled with Korda too (news-066). No election date set. |
 | **Fiscal Equalization (§12.6)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 108 / 13.11 | **LIVE, half resolved.** Varek's Assembly granted §18.4 consent (news-069, formal filing nrs-035) — committee hearing, one founding county's testimony, floor vote, no single executive involved anywhere in the process. Norvane's consent is the only one still missing; nothing about Varek's vote changes Norvane's own refugee-housing need for the same parcel. Next: Norvane's decision (or continued silence) is now the entire remaining question. |
@@ -97,6 +97,9 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 
 | Seq | Date | Kind | Title | Outlet |
 |---|---|---|---|---|
+| 0 |  |  |  |  |
+| 0 |  |  |  |  |
+| 0 |  |  |  |  |
 | 1 | 12.09 | News | Vael Enters LC Race, Putting Sovereignty Wing at Center of Year 13 Field | The Torenthian |
 | 2 | 12.10 | News | Carrow Gives the Speech. Doesn't Announce. | The Torenthian |
 | 3 | 12.10 | News | Sunderland Vessel Holds Lake Varda Position for Six Hours. Coast Guard Tracked It. Then It Left. | The Torenthian |
@@ -121,7 +124,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 22 | 13.01 | News | The Other Negotiation | The Torenthian |
 | 23 | 12.12 | NRS | EM Interim Fiscal Review — Korda Territory | National Record System |
 | 24 | 13.02 | News | What Rehn Wants to Finish | The Torenthian |
-| 25 | 13.03 | News | Mak on the MA Plan: "This Is What I've Been Saying" | The Torenthian |
+| 25 | 13.03 | News | Mak on the MA Plan: \ | The Torenthian |
 | 26 | 13.02 | NRS | MA Remedy Plan — Korda Territory Fiscal Equalization Failure | National Record System |
 | 27 | 13.04 | News | Assembly Passes Korda Emergency Transfer. Formula Review Is Not Taken Up. | The Torenthian |
 | 28 | 13.05 | News | Sunderland Armed Formation Crosses Korda Border. One Torenthian Officer Wounded. | RNN |
@@ -130,7 +133,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 31 | 13.05 | NRS | Notice of Candidacy — Legat Consul — Year 13 Federal Electoral Period | National Record System |
 | 32 | 13.05 | News | Toren River Working Group Reaches Provisional Formula Agreement. One Item Remains. | The Torenthian |
 | 33 | 13.03 | SC | Corindal Industrial Partners v. NRS Panel of the Federated Republic | Supreme Court |
-| 34 | 13.05 | News | Sandris on the Formula Deferral: "I Said This in Month 12" | The Torenthian |
+| 34 | 13.05 | News | Sandris on the Formula Deferral: \ | The Torenthian |
 | 35 | 13.05 | News | The Race, Reshaped: Reading the Field After the Crossing | RNN |
 | 36 | 13.05 | NRS | Diplomatic Communication — Formal Inquiry to the Sunderland Interim Authority | National Record System |
 | 37 | 13.05 | News | The Assembly Member Nobody Was Covering Said the Quiet Part | The Torenthian |
@@ -210,6 +213,8 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 111 | 13.11 | News | The Candidate Whose Day Job Just Had a Good Week | The Torenthian |
 | 112 | 13.11 | News | The Notices Have to Come Down | The Torenthian |
 | 113 | 13.11 | News | Matching Grants Open for Large-Print Library Books | TNB Verentum |
+| 114 | 13.11 | NRS | Notice of Convening — Korda Territory Convention | National Record System |
+| 115 | 13.11 | News | The Constitution Required Her to Convene It. It Did Not Require Her to Say More. | The Torenthian |
 
 ---
 

@@ -12,6 +12,13 @@ const CATEGORY_IMAGE = {
 
 const updates = [
   {
+    category: "world",
+    badge: "The World",
+    title: "The Constitution required her to convene it. It did not require her to say more.",
+    blurb: "Elin Thoss convened Korda's Territory Convention today, exactly as §15.5.a(4) obligated her to. Her statement ran thirty-one words. None of them said which outcome she wants.",
+    href: "torenthia-news-075.html",
+  },
+  {
     category: "constitution",
     badge: "Amendment",
     title: "§2.16 — Recurring Executive Incapacity",
