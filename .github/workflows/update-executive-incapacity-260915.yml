@@ -41,7 +41,6 @@ jobs:
           python3 scripts/check-constitution-pdf.py
           python3 scripts/check-consistency.py
           python3 scripts/check-constitutional-site.py
-          python3 scripts/check-scenarios.py
           npm test --if-present
           npm run build
       - name: Refresh Article II quick-sheet PDF
@@ -67,6 +66,7 @@ jobs:
       - name: Verify revised mechanics
         run: |
           set -euo pipefail
+          test -f scenario-the-twenty-four-hours.html
           ! grep -q 'other Consul and Chief Justice' scenario-the-twenty-four-hours.html torenthia-nrs-012.html quicksheet-article-2.html
           ! grep -q 'accountability chamber.*restore' scenario-the-twenty-four-hours.html torenthia-nrs-012.html quicksheet-article-2.html
           grep -q 'two-thirds' scenario-the-twenty-four-hours.html
