@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 261005, against 118 published entries (seq 1–115, contiguous, no gaps).*
+*Last verified: 261005, against 119 published entries (seq 1–116, contiguous, no gaps).*
 
 ---
 
@@ -80,7 +80,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 
 | Thread | Last Touched (Seq / Date) | Status |
 |---|---|---|
-| **Korda Convention arc** (competing petitions, Convention convened) | 115 / 13.11 | **LIVE, Convention formally convened; clock not yet running.** nrs-036: the Civic Consul convened the 33-delegate Convention per §15.5.a(4), first session set for Month 12, Day 9 — the 90-day clock starts then, not at convening. news-075: Thoss's statement was 31 words, revealing nothing about her own preference; Dessa Orin (Korda delegate, Thoss's own fiscal-equalization co-sponsor) was equally guarded — 'not yet' on what the Convention should decide. Both petitions remain certified, addressed together. Next: the first session itself, or anything surfacing before it — 90 days to a resolution or both petitions lapse together with a 3-year bar on reinitiating. |
+| **Korda Convention arc** (competing petitions, Convention convened, SC challenge filed) | 116 / 13.12 | **LIVE, SC suit filed day of first session — clock expected to be stayed next.** nrs-037: corridor petitioners + Kelvant business interests (Herbert Sole, counsel) sue the JMC, arguing 'the whole Territory' can't be a 'different defined portion' since it entirely encompasses the corridor's own claim rather than merely overlapping it. Filed the same day as the Convention's first session specifically to establish concrete injury under §4.5(4) — the Convention now actively exercising authority in place of the corridor's certified referendum. Court has not yet acted. Next: an interim stay under §4.5(8) pausing the Convention's clock is the expected next beat, then the Court's ruling on the merits — agreed direction (John, 261005) is that the Court upholds the JMC's determination and the Convention continues. |
 | **LC Race** (Vael/Carrow/Mak/Sandris) | 111 / 13.11 | **LIVE, now also entangled with Lake Varda.** news-072: Carrow's own diplomatic proposal got its first acceptance (Caldris) mid-campaign — she didn't campaign on it, her office deflected credit, and only Sandris was willing to name the structural advantage directly on record rather than dodge it. Still entangled with Korda too (news-066). No election date set. |
 | **Fiscal Equalization (§12.6)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 108 / 13.11 | **LIVE, half resolved.** Varek's Assembly granted §18.4 consent (news-069, formal filing nrs-035) — committee hearing, one founding county's testimony, floor vote, no single executive involved anywhere in the process. Norvane's consent is the only one still missing; nothing about Varek's vote changes Norvane's own refugee-housing need for the same parcel. Next: Norvane's decision (or continued silence) is now the entire remaining question. |
@@ -215,6 +215,7 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | 113 | 13.11 | News | Matching Grants Open for Large-Print Library Books | TNB Verentum |
 | 114 | 13.11 | NRS | Notice of Convening — Korda Territory Convention | National Record System |
 | 115 | 13.11 | News | The Constitution Required Her to Convene It. It Did Not Require Her to Say More. | The Torenthian |
+| 116 | 13.12 | NRS | Notice of Filing — Korda Corridor Petitioners v. Joint Monitor Council | National Record System |
 
 ---
 
