@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/update-executive-incapacity-260915.yml'
-      - 'scripts/update-executive-incapacity-260915.py'
+      - 'scripts/update-executive-incapacity-260915-v2.py'
 
 permissions:
   contents: write
@@ -29,7 +29,7 @@ jobs:
         run: |
           set -euo pipefail
           git pull --ff-only origin main
-          python3 scripts/update-executive-incapacity-260915.py
+          python3 scripts/update-executive-incapacity-260915-v2.py
       - name: Regenerate and validate constitutional artifacts
         run: |
           set -euo pipefail
@@ -75,7 +75,7 @@ jobs:
       - name: Commit synchronized changes
         run: |
           set -euo pipefail
-          rm -f .github/workflows/update-executive-incapacity-260915.yml scripts/update-executive-incapacity-260915.py
+          rm -f .github/workflows/update-executive-incapacity-260915.yml scripts/update-executive-incapacity-260915.py scripts/update-executive-incapacity-260915-v2.py
           git config user.name 'federated-republic-maintenance'
           git config user.email 'actions@users.noreply.github.com'
           git add -A
