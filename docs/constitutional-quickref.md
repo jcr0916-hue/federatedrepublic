@@ -334,17 +334,17 @@ The Civic Consul is responsible for the enforcement of federal law and sets gene
 
 ### §2.16 — Executive Incapacity
 
-(1) A Consul is temporarily unable to exercise authority when either of the following is published to the National Record System: (a) a declaration of incapacity by the Consul; or (b) a determination of incapacity by the Council of Ministers under subsection (2). (2) Council of Ministers determination: (a) The Council may, by majority of members then in office provided no fewer than five are in office, determine…
+(1) A Consul is temporarily unable to exercise authority upon the Consul’s declaration or upon determination by a majority of the Council of Ministers, with at least five participating. The determination is published to the NRS and acting authority vests immediately under the applicable succession provision.
 
 - **Thresholds:**
-  - the incapacity ends only when the Consul's accountability chamber — the Assembly for the Civic Consul, the Senate for the Legat Consul — so resolves by absolute majority of its full seated membership
+  - (4) By simple majority of each chamber, the Legislature may set a longer period for a determination under subsection (3), not exceeding six months from the heightened determination
 - **Time limits:**
-  - full authority returns to the Consul 24 hours after publication
-  - (b) Where the Council determines incapacity on the same or substantially similar grounds within 90 days of a restoration declaration, the Consul may not end that incapacity by restoration declaration alone
+  - Full authority returns 24 hours after publication
+  - (3) Where incapacity is again determined on the same or substantially similar grounds within 90 days of restoration, the determination requires two-thirds of the deciding body
+  - For 30 days thereafter, the Consul may resume authority only upon a restoration declaration approved by a majority of that body, or through relief granted by the SC
   - 9(6) may decline by publishing a declination to the NRS within 48 hours of the incapacity publication
   - A person who does not publish a declination within 48 hours is deemed to have accepted
-  - An incapacity under this section that has continued for 90 days ends by constitutional operation unless, before expiry, a removal process under §2
-- **Cross-refs:** §2.13, §2.5, §2.6, §2.9
+- **Cross-refs:** §2.5, §2.9
 
 ### §2.17 — Cooling-Off from Executive Service
 
@@ -1357,7 +1357,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §2.7 | Civic Consul Legislative Instruments | The Senate may override by 2/3 during that month |
 | §2.13 | Consular Removal | Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct |
 | §2.15 | Federal Prosecution | The Legislature may not reduce the Service’s appropriation below the prior year’s level without a 2/3 vote of both chambers |
-| §2.16 | Executive Incapacity | the incapacity ends only when the Consul's accountability chamber — the Assembly for the Civic Consul, the Senate for the Legat Consul — so resolves by absolute majority of its full seated membership |
+| §2.16 | Executive Incapacity | (4) By simple majority of each chamber, the Legislature may set a longer period for a determination under subsection (3), not exceeding six months from the heightened determination |
 | §3.2 | The Assembly | The Assembly may expel a member by 2/3 vote of full seated membership |
 | §3.4 | Legislative Standards | Emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber |
 | §3.4 | Legislative Standards | removal requires 2/3 of the relevant chamber |
