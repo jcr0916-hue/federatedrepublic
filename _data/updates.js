@@ -23,7 +23,7 @@ const updates = [
     badge: "Amendment",
     title: "§2.16 — Recurring Executive Incapacity",
     blurb: "Executive incapacity now separates a first temporary interruption from a repeated dispute: recurrence inside 90 days requires 2/3, adds SC review, and permits time-limited legislative extensions without turning incapacity into removal.",
-    href: "scenario-the-twenty-four-hours.html",
+    href: "constitutional-history.html#s2-16-recurring-incapacity",
   },
   {
     category: "world",
