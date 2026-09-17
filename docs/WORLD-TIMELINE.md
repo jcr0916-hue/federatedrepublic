@@ -4,13 +4,13 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 261005, against 119 published entries (seq 1–116, contiguous, no gaps).*
+*Last verified: 260917, against published world front matter through seq 120.*
 
 ---
 
 ## WHERE WE ARE
 
-**Current world date: Year 13, Month 11.** This is the furthest date reached by any published
+**Current world date: Year 13, Month 12.** This is the furthest date reached by any published
 piece as of this batch. Some threads sit behind this
 because they run quieter or on their own clock — that's normal, not a gap by itself. Check the
 status board below for which threads are behind on purpose versus behind by neglect.
@@ -25,9 +25,9 @@ backward-looking (where each thread left off). Both matter for deciding what's d
 |---|---|---|
 | **Year 13, Month 12, Day 8 — canceled** | The corridor referendum does not proceed under the JMC’s Month 11 Day 26 determination. The Panel is notifying staff, releasing room bookings, replacing notices, and retaining election materials. No replacement polling date. | nrs-034, news-073 |
 | **Unscheduled** | Legat Consul election. §7.2 sets a 4-year cycle following the amendment, but no specific date has been set in canon yet. | news-058 |
-| **No clock at all** | Argent Ridge Trust designation: Varek has consented; Norvane’s consent remains outstanding, with no response deadline. The Norvane profile supplies context without announcing a decision. | nrs-029, news-069, nrs-035 |
+| **No clock at all** | Argent Ridge Trust designation: Varek consented; Norvane has now refused, so the §18.4 designation cannot take effect unless Norvane later changes position. The separate §13.1 repeal campaign continues. | nrs-029, news-069, nrs-035, nrs-038, news-076 |
 | **Uncertain — flagged, not calculated** | Argent Ridge Phase One signature-gathering window (up to 8 months) began once the eligibility challenge period closed unused, Year 13 Month 9 Day 12 (news-060). Eight months from that date lands past Month 12, meaning the deadline crosses into a following year — **this world's calendar has never established a year-transition convention** (only "Year 13" has ever been referenced). Do not invent "Year 14" confidently; confirm with John before a beat depends on it. |
-| **Not yet started** | Territory Convention 90-day clock (§15.5.a(4)): the JMC has determined both petitions must enter the Convention process. No first-session date announced; the clock begins at that session, not at the determination. | nrs-034, news-073 |
+| **Started Year 13, Month 12, Day 9** | Territory Convention 90-day clock (§15.5.a(4)) began with the first session. A same-day SC challenge now contests the JMC trigger; no stay has yet been published. | nrs-034, news-075, nrs-036, nrs-037 |
 | **No clock at all** | §10.2 redaction petition on the Varda Crossing summary (nrs-030). Filed Month 11 Day 19. The Directorate has not responded and no hearing date is set; §10.2 sets no deadline for either. | nrs-030 |
 | **No clock at all** | Fiscal Equalization formula reform. §12.6 only obligates a response to a *failure* finding, and none exists. This is genuinely open-ended — there is no deadline forcing the committee back into session, which is itself the story (news-062). |
 
@@ -83,9 +83,9 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 | **Korda Convention arc** (competing petitions, Convention convened, SC challenge filed) | 116 / 13.12 | **LIVE, SC suit filed day of first session — clock expected to be stayed next.** nrs-037: corridor petitioners + Kelvant business interests (Herbert Sole, counsel) sue the JMC, arguing 'the whole Territory' can't be a 'different defined portion' since it entirely encompasses the corridor's own claim rather than merely overlapping it. Filed the same day as the Convention's first session specifically to establish concrete injury under §4.5(4) — the Convention now actively exercising authority in place of the corridor's certified referendum. Court has not yet acted. Next: an interim stay under §4.5(8) pausing the Convention's clock is the expected next beat, then the Court's ruling on the merits — agreed direction (John, 261005) is that the Court upholds the JMC's determination and the Convention continues. |
 | **LC Race** (Vael/Carrow/Mak/Sandris) | 111 / 13.11 | **LIVE, now also entangled with Lake Varda.** news-072: Carrow's own diplomatic proposal got its first acceptance (Caldris) mid-campaign — she didn't campaign on it, her office deflected credit, and only Sandris was willing to name the structural advantage directly on record rather than dodge it. Still entangled with Korda too (news-066). No election date set. |
 | **Fiscal Equalization (§12.6)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
-| **Argent Ridge** (Norvane, §13.1/§18.4) | 108 / 13.11 | **LIVE, half resolved.** Varek's Assembly granted §18.4 consent (news-069, formal filing nrs-035) — committee hearing, one founding county's testimony, floor vote, no single executive involved anywhere in the process. Norvane's consent is the only one still missing; nothing about Varek's vote changes Norvane's own refugee-housing need for the same parcel. Next: Norvane's decision (or continued silence) is now the entire remaining question. |
+| **Argent Ridge** (Norvane, §13.1/§18.4) | 118 / 13.12 | **LIVE, Trust designation blocked.** nrs-038/news-076: Norvane refused §18.4 consent because the residential side of the tract remains its best large housing option near the northern arrival corridor. Varek has already consented. The separate §13.1 repeal campaign continues; even a repeal would not itself create Trust protection. |
 | **Thoss / Civic Consul standing** | 106 / 13.11 | **LIVE.** news-068 puts working Assembly support at 266, down from 274 at formation. Her substantive position on Korda’s competing outcomes remains unresolved; the duty to convene does not establish which outcome she favors. |
-| **Lake Varda / Sunderland crisis** | 111 / 13.11 | **LIVE — one of two invited governments has responded.** news-070: Caldris accepted the conference proposal, narrowly — talks only, no endorsement of Torenthia's account of the Varda incidents, no date or venue set. Valedon still hasn't responded. The §10.2 redaction petition (nrs-030) remains separately open, Directorate still hasn't responded, no hearing set. Next: Valedon's answer, a date/venue for the now-accepted talks, or the redaction petition getting a hearing — three independent open threads on the same crisis now. |
+| **Lake Varda / Sunderland crisis** | 119 / 13.12 | **LIVE — all three proposed conference participants now agree to meet in principle.** news-077: Valedon accepted and offered to host, while narrowing the opening agenda to civilian navigation, rescue coordination, and risk reduction rather than accepting Torenthia's account of prior incidents. Caldris had already accepted on similarly narrow terms. No date, final agenda, or delegation level is set. The §10.2 redaction petition remains separately open. |
 | **Toren River negotiation** | 100 / 13.11 | **REOPENED (260907) — still unresolved, not advanced.** news-067 confirms the Month 6 follow-up session never happened; Caldris-side scheduling conflicts, no replacement date set. The dispute-resolution-mechanism gap remains exactly as open as Month 5. Untested so far — this year's flow has stayed within tolerance. Next: either side reconvening, or a low-rainfall year making the gap suddenly consequential. |
 | **Supreme Court composition** | 98 / 13.11 | **INTRODUCED.** All nine justices named in sc-001 (Y13 M3); profiled in news-065 ahead of any Korda filing. Pivotal voice: **Pael Doran**, whose *Corindal* dissent refused the merits while a threshold question was unresolved — directly relevant to the §15.5.a(1) question. Court gives no interviews; all contact routes through the clerk. See CHARACTER-REFERENCE.md for the full roster and what is/isn't established. |
 | **Corindal Industrial Partners** | 33 / 13.03 | **DELIBERATELY HELD.** Long-game arc built around a future SC composition and future election cycles that haven't happened yet (per WORLD-THREADS-PENDING.md). Do not open early. |
@@ -239,3 +239,8 @@ entries.sort(key=lambda e: e['worldSeq'])
 **Known extraction pitfall (found 260822):** `worldKind` is written WITHOUT quotes in frontmatter
 (`worldKind: news`), unlike every other field. A quoted-string regex will silently return empty
 for this field — verify against a real file before trusting output.
+
+| 117 | 13.12 | NRS | Notice of Refusal — Norvane, National Trust Designation, Argent Ridge Parcel | National Record System |
+| 118 | 13.12 | News | Norvane Says No to Riverglow. The Reason Is a Freight Shed. | The Torenthian |
+| 119 | 13.12 | News | Valedon Says Yes, but Not to Torenthia's Agenda | The Torenthian |
+| 120 | 13.12 | News | The Winter Timetable Starts Monday | TNB Caldenmere |

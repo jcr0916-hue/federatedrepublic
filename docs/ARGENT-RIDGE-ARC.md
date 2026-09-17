@@ -8,8 +8,9 @@ Cadence: beats spaced across time (this is background texture, not a rushed subp
 
 - Varek’s Assembly granted consent in **news-069**, formally filed in **nrs-035**
   (seq 107–108). The response came through its Assembly, not a governor.
-- Norvane has **not responded**. References below to a future refusal remain arc planning,
-  not a published event. Phase One repeal signatures and the separate Trust request remain open.
+- Norvane **refused consent** in **nrs-038**, with the human consequences covered in **news-076**
+  (seq 117–118). The refusal preserves the residential development option near the northern arrival
+  corridor while reception capacity remains under pressure. Phase One repeal signatures remain open.
 - **torenthia-state-norvane.html** now establishes the State through its existing constitution,
   shared statistics, northern arrival geography, and housing pressures. It uses the Varek/Harren
   profile layout and is discoverable through the existing State navigation, map, and table.
@@ -63,9 +64,10 @@ Phase One petition certified. The dry procedural record of §13.1 turning: signa
 Referendum happens. Whichever way it lands, the movement discovers repeal wasn't enough — the
 land is still not protected. They pivot to the real fight: §18.4 Trust designation.
 
-**BEAT 5+ — the two-state deadlock.** [ongoing background thread]
-Varek consents. Norvane refuses. The human politics of WHY each state lands where it does.
-This can run indefinitely as background texture — the Republic visibly continuing after Thoss.
+**BEAT 5+ — the two-state deadlock.** [PUBLISHED OPENING — nrs-038 + news-076, Y13 M12]
+Varek consents. Norvane refuses. The first deadlock beat is now public: Norvane ties its refusal
+to arrival-corridor housing capacity, not hostility to Riverglow. The thread can continue as
+background texture through the separate repeal campaign and any later change in State position.
 
 ## Naming line for the News beats (the emotional stake in one sentence)
 "The statute calls it Argent Ridge. Nobody who has ever proposed there calls it anything but Riverglow."

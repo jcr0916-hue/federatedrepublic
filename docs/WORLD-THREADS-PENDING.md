@@ -1,26 +1,22 @@
 # Pending World Threads — Capture File
 *Storyline threads flagged but not yet activated or fully shaped. Captured here (not memory) so they survive compaction / new chats. When one is ready to activate and shape fully, promote it to its own ARC file like ARGENT-RIDGE-ARC.md / CORINDAL-ARC.md.*
 
-## NEXT BATCH HANDOFF — 260915 / Y13 M11
+## NEXT BATCH HANDOFF — 260917 / Y13 M12
 
-- **Norvane profile established:** `torenthia-state-norvane.html`, based on the existing
-  State constitution and shared statistics. Argent Ridge provides its discovery trigger.
-  **Flag supplied and selected by John, 260915:** `images/norvane-flag.png`, a white mountain
-  ridge on navy above a light blue band. Original supplied PNG preserved unchanged;
-  `stateFlag` and descriptive `stateFlagAlt` now wire it into the profile.
-- **Norvane’s Argent Ridge response remains unwritten.** Varek has consented; Norvane
-  has neither consented nor refused in published canon. Do not mistake the planned refusal
-  in ARGENT-RIDGE-ARC.md for an event that has happened.
-- **Korda:** nrs-034 already stopped the referendum. news-073 now follows the practical
-  cancellation notices. Convention first session, ninety-day clock, and any SC filing remain
-  ahead; see the updated KORDA-CONVENTION-ARC.md.
-- **Mundane:** news-074, a federal matching-grant program for large-print library books, is
-  ordinary national public-service news. Federal funds cover half of eligible purchases within
-  an enacted appropriation; States/Territories and local acquisition budgets supply the match,
-  and local libraries choose titles. No hidden hook or follow-up obligation. `worldMundane: true` keeps it
-  in The Record while excluding it from the World page’s latest carousel and map alerts.
-- **Publishing:** the substantive entry appears on the World page through its derived feed.
-  Neither entry warrants a main-site announcement; `_data/updates.js` is unchanged.
+- **Argent Ridge:** Norvane's outstanding §18.4 response is now resolved. `torenthia-nrs-038.html`
+  records refusal; `torenthia-news-076.html` carries the human angle. Varek consented earlier, so
+  the National Trust designation is blocked unless Norvane later changes position. The separate
+  citizen-repeal campaign remains open.
+- **Lake Varda conference:** `torenthia-news-077.html` records Valedon's acceptance and offer to
+  host. All three proposed participants now agree to meet in principle; date, final agenda, and
+  delegation level remain open. Valedon does not adopt Torenthia's account of the prior incidents.
+- **Mundane:** `torenthia-news-078.html` is an ordinary Caldenmere winter rail-timetable change.
+  `worldMundane: true`; no hidden hook or follow-up obligation.
+- **Korda:** no extra procedural beat added in this batch because canon had already advanced past
+  the earlier suggestion: the Convention opened and `torenthia-nrs-037.html` records the same-day
+  Supreme Court challenge. That live arc remains governed by `KORDA-CONVENTION-ARC.md`.
+- **Publishing:** the two substantive news entries and the Norvane filing belong in the World/Record
+  surfaces. The mundane rail item stays Record-only. None warrants a main-site What's New entry.
 
 ---
 
