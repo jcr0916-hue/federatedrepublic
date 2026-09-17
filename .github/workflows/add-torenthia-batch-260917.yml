@@ -1,0 +1,58 @@
+name: Add Torenthia September 17 batch
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/add-torenthia-batch-260917.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Apply Torenthia batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          python3 scripts/add-torenthia-batch-260917.py
+      - name: Validate and build
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+          python3 scripts/check-consistency.py
+          npm test --if-present
+          npm run build
+          test -f _site/torenthia-news-076.html
+          test -f _site/torenthia-news-077.html
+          test -f _site/torenthia-news-078.html
+          test -f _site/torenthia-nrs-038.html
+          grep -q 'Norvane Says No to Riverglow' _site/torenthia.html
+          grep -q 'Valedon Says Yes' _site/torenthia.html
+          ! grep -q 'The Winter Timetable Starts Monday' _site/torenthia.html
+          grep -q 'The Winter Timetable Starts Monday' _site/torenthia-record.html
+      - name: Commit batch and remove maintenance files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "jcr0916-hue"
+          git config user.email "jcr0916@gmail.com"
+          rm -f scripts/add-torenthia-batch-260917.py .github/workflows/add-torenthia-batch-260917.yml
+          git add -A
+          git status --short
+          git commit -m 'Advance Argent Ridge and Lake Varda threads'
+          git push origin main
