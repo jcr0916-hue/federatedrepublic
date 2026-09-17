@@ -14,6 +14,20 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "The Court affirms it. The Convention continues.",
+    blurb: "6–3, the Supreme Court holds that a whole-Territory petition is a \"different defined portion\" under §15.5.a(1) — the JMC's determination stands, and Korda's Convention keeps its clock. Doran dissents on jurisdiction, not the merits.",
+    href: "torenthia-sc-002.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
+    title: "The Court pauses the clock while it decides",
+    blurb: "An interim order stops the Convention's ninety-day period from running — the Convention itself keeps meeting — while the Court weighs the corridor petitioners' challenge to the JMC's determination.",
+    href: "torenthia-nrs-039.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "The Constitution required her to convene it. It did not require her to say more.",
     blurb: "Elin Thoss convened Korda's Territory Convention today, exactly as §15.5.a(4) obligated her to. Her statement ran thirty-one words. None of them said which outcome she wants.",
     href: "torenthia-news-075.html",

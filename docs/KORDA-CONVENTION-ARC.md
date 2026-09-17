@@ -9,7 +9,7 @@ process into a contested one three weeks before a vote.*
 John ruminating on shape; this file is MATERIAL, not a locked plan. Nothing below is
 committed canon until published.*
 
-## CURRENT PUBLISHED POSITION — Y13 M11 (updated 260915)
+## CURRENT PUBLISHED POSITION — Y13 M12 (updated 260917)
 
 The planning material below is historical where superseded by these publications:
 
@@ -21,12 +21,33 @@ The planning material below is historical where superseded by these publications
   unwinding polling preparations: staff and premises notifications, released bookings,
   replacement public notices, and retention of ballot materials and the preparation record.
   Signatures remain valid. Residents have no replacement polling date.
-- **Still open:** first-session date, Convention proceedings and resolution, Thoss’s
-  preferred outcome, and any judicial challenge. No suit or court disposition is introduced
-  by this batch. The planned Lakeland Journal business-interest voice remains unused.
-
-This is the practical aftermath of an already-published determination, not another
-certification or a Convention opening. The mundane library entry (news-074) is unrelated.
+- **nrs-036 (seq 114), Notice of Convening:** Convention convened, 33 Korda delegates,
+  first session Month 12 Day 9, **at Verentum** (not Korda itself — sets up the relocation
+  vote below).
+- **nrs-037 (seq 116), Notice of Filing:** corridor petitioners + Kelvant business interests
+  (Herbert Sole, counsel) sue the JMC same-day as the first session, arguing "the whole
+  Territory" can't be a "different defined portion" since it entirely encompasses the
+  corridor's claim rather than merely overlapping it. §4.5(5) original-jurisdiction theory.
+- **nrs-039 (seq 121), Month 12 Day 12:** interim stay under §4.5(8) pauses the 90-day
+  clock pending the ruling. The Convention itself is NOT enjoined — it can keep meeting,
+  seating delegates, deliberating. Only the deadline consequence is frozen.
+- **sc-002 (seq 122), Month 12 Day 26, 6–3:** **RESOLVED — the Court upholds the JMC.**
+  Vrentis for the majority (Aldren, Corse, Halvath, Imen, Mevra): a whole-Territory
+  petition IS a "different defined portion." Stay dissolved, clock resumes with 3 days
+  credited (~87 days left from Day 26). Doran dissents on jurisdiction only (joined by
+  Careth, Norven) — doesn't reach the merits, flags that the JMC may not itself be a
+  "constitutionally independent institution" under §4.5(5) the way §11.1's named panels
+  are, but says he'd likely agree with the majority's textual reading if jurisdiction were
+  settled. **This outcome was locked by John (261005): the Convention continues — this is
+  not open for reinterpretation in future beats.**
+- **Still open:** the Convention's actual proceedings and resolution, Thoss's preferred
+  outcome, the relocation vote (Verentum → Korda), venue coverage once relocated, public
+  opinion polling, coverage of delegates beyond Orin. The planned Lakeland Journal
+  business-interest voice remains unused. ~87 in-world days remain on the Convention
+  clock as of Day 26 — plenty of runway for background beats before any lapse risk.
+- **Next up (per John, 260917):** get a few of these background beats in, then build the
+  Dessa Orin crossroads feature on top of this — target Monday. Weekend (and possibly
+  starting Friday 260918) is backend work (stats redesign), not world content.
 
 ---
 

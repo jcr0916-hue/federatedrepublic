@@ -92,26 +92,29 @@ do not confuse with the four above.
 
 ## THE SUPREME COURT — nine justices (§4.3: three staggered classes, single non-renewable 12-year terms)
 
-Established in `torenthia-sc-001.html` (*Corindal Industrial Partners v. NRS Panel*, decided
-Y13 M3, 7–2) and profiled in news-065. **That one case is the entire substantial public record
-of this Court** — be careful about characterizing any justice beyond what it actually shows.
+Two cases on the record now: `torenthia-sc-001.html` (*Corindal Industrial Partners v. NRS
+Panel*, decided Y13 M3, 7–2, profiled in news-065) and `torenthia-sc-002.html` (*Korda Corridor
+Petitioners v. Joint Monitor Council*, decided Y13 M12, 6–3, preceded by an interim stay in
+nrs-039).
 
-| Justice | Position in *Corindal* | What the record shows |
-|---|---|---|
-| **Ola Vrentis** | Wrote the majority | Textualist. §10.1 says what it says; the Court doesn't read in exceptions the drafters omitted. Opinion is deliberately narrow — declines invitations to say more than the question required. |
-| **Pael Doran** | Wrote the dissent | **The pivotal voice for the Korda case.** Agreed with the majority on §10.1's text, but refused to reach the merits while a *threshold* question sat unanswered underneath — whether the EM was authorized to publish at all under §9.1.b. Would have remanded, and said explicitly he'd join the majority if the threshold resolved the other way. Quote on record: "An act that exceeds the constitutional mandate is not a constitutional act in the relevant sense." |
-| **Careth** | Joined Doran's dissent | No separate writing. First name not established — do not invent one. |
-| **Aldren, Corse, Halvath, Imen, Mevra, Norven** | Joined Vrentis's majority | Six joiners, none wrote separately. First names not established for any — **do not invent them.** |
+| Justice | *Corindal* | *Korda* | What the record shows |
+|---|---|---|---|
+| **Ola Vrentis** | Wrote the majority | Wrote the majority | Textualist across both cases — refuses to read an exception INTO §10.1 in *Corindal*, refuses to read a narrowing qualifier INTO "portion" in *Korda*. Same method, different provisions, superficially opposite-looking outcomes. Consistent, not flip-floppy. |
+| **Pael Doran** | Wrote the dissent | Wrote the dissent (jurisdiction only) | **The Court's threshold-first voice.** In *Corindal*, refused the merits pending whether the EM's publication was authorized at all. In *Korda*, refused the merits again — this time on whether the JMC even counts as a "constitutionally independent institution" under §4.5(5) the way §11.1's named panels (NRS Panel, Elections Panel) do, since §9.7 describes the JMC only as a coordination body the three Monitor Generals jointly constitute. Both times he's explicit that he might join the majority's substantive reasoning if the threshold resolved the other way — in *Korda*: "Were I persuaded jurisdiction properly lies here, I would have little quarrel with the majority's textual point." Do not write him deciding a merits question while a threshold sits open underneath it — that's the one thing this character never does. |
+| **Careth** | Joined Doran | Joined Doran | No separate writing either time. First name not established — do not invent one. |
+| **Norven** | Joined Vrentis | Joined Doran | **The one lineup shift between the two cases** — deliberate, not an error. No separate writing in either case, so no stated reason on the record; the shift is itself the point (see news-065's caution below). Do not invent a rationale for it. |
+| **Aldren, Corse, Halvath, Imen, Mevra** | Joined Vrentis | Joined Vrentis | Held in the majority both times. None wrote separately in either case — **do not invent first names or motivations.** |
 
-**Majority arithmetic (verified):** Vrentis authored + 6 joiners = 7. Doran + Careth = 2. Total 9.
-An early draft of news-065 miscounted this as "seven joined"; corrected before publication.
+**Majority arithmetic (verified):** *Corindal* — Vrentis + 6 joiners (incl. Norven) = 7; Doran +
+Careth = 2. *Korda* — Vrentis + 5 joiners (Aldren, Corse, Halvath, Imen, Mevra) = 6; Doran +
+Careth + Norven = 3. Total 9 both times.
 
-**Why Doran matters for Korda:** the §15.5.a(1) question — whether two certifications inside 90
-days already triggered the Convention mechanism, and whether "the whole Territory" counts as a
-"different defined portion" from a piece of it — is a threshold question almost entirely. Doran's
-published instinct is to refuse the merits until the threshold is settled. news-065 raises this
-while explicitly cautioning that one dissent in one records case does not predict a vote on
-territorial procedure.
+**Why Doran mattered for Korda, confirmed:** the §15.5.a(1) merits question sat on top of a real
+jurisdictional threshold (is the JMC itself a "constitutionally independent institution"?), and
+Doran again declined to reach the former without resolving the latter — exactly the instinct
+news-065 flagged in advance, while correctly cautioning that one dissent in one records case
+doesn't predict a vote on territorial procedure. It didn't predict the vote count (Norven moved),
+but it did predict Doran's own move precisely.
 
 **The Court gives no interviews.** No appearances, no explanatory statements, no clarifying
 remarks. All nine chambers respond through the Court's clerk with a standard refusal. This is
