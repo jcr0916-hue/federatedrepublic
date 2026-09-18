@@ -187,6 +187,12 @@
   .dfn-box{position:absolute;bottom:calc(100% + 8px);right:0;background:#0c1524;color:#e6ecf4;font-size:.7rem;line-height:1.65;padding:.65rem .85rem;border-radius:3px;width:240px;z-index:600;pointer-events:none;opacity:0;transition:opacity .15s;box-shadow:0 4px 18px rgba(0,0,0,.5);font-family:'Jost',sans-serif;font-weight:400;text-transform:none;letter-spacing:normal;white-space:normal;text-align:left;border:1px solid rgba(201,168,76,.35)}
   .dfn-box::after{content:'';position:absolute;top:100%;right:18px;border:5px solid transparent;border-top-color:#0c1524}
   .dfn:hover .dfn-box,.dfn.dfn-open .dfn-box{opacity:1;pointer-events:auto}
+  /* .stbl-wrap uses overflow-x:auto, which per spec computes overflow-y to auto as well — so
+     the wrap clips vertically and a popup on the first row has nowhere to go. .dfn-flip drops
+     the box below its pill instead; placeDfn() applies it when there isn't room above. */
+  .dfn-flip .dfn-box{bottom:auto;top:calc(100% + 8px)}
+  .dfn-flip .dfn-box::after{top:auto;bottom:100%;border-top-color:transparent;border-bottom-color:#0c1524}
+  .stbl-hint{font-size:.78rem;line-height:1.6;color:#9fb0c4;margin-bottom:.8rem}
   /* Repeated column labels for the Territories half — the last column means something
      different there ("Progress", statehood-process) than it does for States ("Status"). */
   .stbl-subhead th{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);text-align:left;padding:.5rem .6rem;border-bottom:1px solid rgba(201,168,76,.3);font-weight:400;white-space:nowrap}
@@ -465,7 +471,7 @@
           <p class="sblock-sub">Population, representation, and constitutional relationship. Slow to change &mdash; but population drives Assembly seats by the Webster method (&sect;3.2), so a migration that persists eventually moves the seats, and the threshold above with them.</p>
 
           <div class="stbl-wrap">
-            <p style="font-size:.85rem;line-height:1.6;color:#9fb0c4">State profiles: {% for profile in statepages %}<a href="{{ profile.url }}" style="color:var(--gold)">{{ profile.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}. Other State and Territory names locate them on the map.</p>
+            <p class="stbl-hint">Select a State or Territory name for its profile where one exists &mdash; otherwise the name locates it on the map.</p>
             <table class="stbl">
               <thead>
                 <tr>
@@ -606,10 +612,26 @@
   <script>
   /* Status/Progress popups: tap-to-toggle on touch devices (hover handles desktop).
      Same pattern as annotated.html / diagrams.html. */
+
+  /* Open the box downward when there isn't room above it inside the scroll container —
+     otherwise the top row's popup is clipped by .stbl-wrap. */
+  function placeDfn(dfn){
+    if(!dfn) return;
+    var box = dfn.querySelector('.dfn-box');
+    var wrap = dfn.closest('.stbl-wrap');
+    if(!box || !wrap) return;
+    dfn.classList.remove('dfn-flip');
+    var needed = box.offsetHeight + 12;
+    var available = dfn.getBoundingClientRect().top - wrap.getBoundingClientRect().top;
+    if(available < needed) dfn.classList.add('dfn-flip');
+  }
+  document.querySelectorAll('.stbl .dfn').forEach(function(d){
+    d.addEventListener('mouseenter', function(){ placeDfn(d); });
+  });
   document.addEventListener('click', function(e){
     var dfn = e.target.closest('.dfn');
     document.querySelectorAll('.dfn.dfn-open').forEach(function(d){ if(d!==dfn) d.classList.remove('dfn-open'); });
-    if(dfn){ dfn.classList.toggle('dfn-open'); e.stopPropagation(); }
+    if(dfn){ placeDfn(dfn); dfn.classList.toggle('dfn-open'); e.stopPropagation(); }
   });
   </script>
 
