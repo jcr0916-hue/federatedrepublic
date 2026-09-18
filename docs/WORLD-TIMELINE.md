@@ -4,7 +4,7 @@
 status board for the currently-live threads. Rebuild the index table by re-running the
 extraction script below whenever this drifts — do not hand-maintain the table long-term.*
 
-*Last verified: 260917, against published world front matter through seq 122.*
+*Last verified: 260918, against published world front matter through seq 126.*
 
 ---
 
@@ -80,8 +80,8 @@ claim, since threads share entries and keyword-matching over-attributes them.*
 
 | Thread | Last Touched (Seq / Date) | Status |
 |---|---|---|
-| **Korda Convention arc** (competing petitions, Convention convened, SC challenge resolved) | 122 / 13.12 | **LIVE — SC has ruled; Convention continues, clock resumed.** nrs-039: interim stay (§4.5(8)) paused the 90-day clock Day 12, without enjoining the Convention itself. sc-002 (6–3, Vrentis for the Court): whole-Territory petitions ARE a "different defined portion" under §15.5.a(1) — JMC's determination affirmed, stay dissolved, clock resumed Day 26 with 3 days credited. Doran dissents (joined by Careth, Norven) on jurisdiction only — argues the JMC isn't itself a "constitutionally independent institution" under §4.5(5) the way §11.1's named panels are, and would not have reached the merits; says he'd likely agree with the majority's textual point if jurisdiction were settled. Next: the Convention's own substantive work — relocation vote (it convened at Verentum; delegates may vote to move proceedings to Korda itself), venue coverage, a poll or two, brief coverage of delegates beyond Orin, interspersed with unrelated world content — before the crossroads feature builds on top of this. |
-| **LC Race** (Vael/Carrow/Mak/Sandris) | 111 / 13.11 | **LIVE, now also entangled with Lake Varda.** news-072: Carrow's own diplomatic proposal got its first acceptance (Caldris) mid-campaign — she didn't campaign on it, her office deflected credit, and only Sandris was willing to name the structural advantage directly on record rather than dodge it. Still entangled with Korda too (news-066). No election date set. |
+| **Korda Convention arc** (competing petitions, Convention active in Korda, SC challenge resolved) | 125 / 13.12 | **LIVE — venue moved; delegate positions beginning to emerge.** news-079: Convention votes 25–8 to relocate remaining sessions from Verentum to Korda; move changes venue only and clock continues. news-081 introduces Jalen Mire (corridor) and Tomas Rell (inland) alongside Orin, with distinct constituency concerns but no locked final positions. Next: confirm/use a Korda venue, hearings/evidence, polling, or first substantive Convention proposal without forcing a premature resolution. |
+| **LC Race** (Vael/Carrow/Mak/Sandris) | 124 / 13.12 | **LIVE, now campaigning around a real Lake Varda conference.** news-080: after Caldris and Valedon both accepted in principle, Carrow keeps Directorate scheduling separate from her campaign; Vael emphasizes negotiating limits, Mak asks for a civilian-navigation timetable, Sandris again names Carrow's structural incumbency advantage without alleging impropriety. No election date set. |
 | **Fiscal Equalization (§12.6)** | 93 / 13.11 | **LIVE, stalled.** Joint Committee has not reconvened since receiving the EM's certification in Month 9. No obligation to act; genuinely open whether it ever does. |
 | **Argent Ridge** (Norvane, §13.1/§18.4) | 118 / 13.12 | **LIVE, Trust designation blocked.** nrs-038/news-076: Norvane refused §18.4 consent because the residential side of the tract remains its best large housing option near the northern arrival corridor. Varek has already consented. The separate §13.1 repeal campaign continues; even a repeal would not itself create Trust protection. |
 | **Thoss / Civic Consul standing** | 106 / 13.11 | **LIVE.** news-068 puts working Assembly support at 266, down from 274 at formation. Her substantive position on Korda’s competing outcomes remains unresolved; the duty to convene does not establish which outcome she favors. |
@@ -246,3 +246,7 @@ for this field — verify against a real file before trusting output.
 | 120 | 13.12 | News | The Winter Timetable Starts Monday | TNB Caldenmere |
 | 121 | 13.12 | NRS | Order — Interim Stay of Convention Clock, §4.5(8) | National Record System |
 | 122 | 13.12 | SC | Korda Corridor Petitioners v. Joint Monitor Council | Supreme Court |
+| 123 | 13.12 | News | The Convention Is Going Home | The Torenthian |
+| 124 | 13.12 | News | Now There Is Actually Going to Be a Meeting | The Torenthian |
+| 125 | 13.12 | News | Thirty-Three Delegates, Three Kordas | The Korda Press |
+| 126 | 13.12 | News | Line 4 Adds Two Saturday Cars | TNB Verentum |

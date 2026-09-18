@@ -40,9 +40,11 @@ The planning material below is historical where superseded by these publications
   are, but says he'd likely agree with the majority's textual reading if jurisdiction were
   settled. **This outcome was locked by John (261005): the Convention continues — this is
   not open for reinterpretation in future beats.**
+- **news-079 (seq 123):** Convention relocation passes 25–8. Remaining sessions move from Verentum into Korda once a public venue/records facility is confirmed. This decides venue only; the clock continues and no substantive petition position is implied.
+- **news-081 (seq 125):** first delegate-texture piece beyond Orin. Jalen Mire (lake-corridor district) insists the canceled referendum remains a constitutional accomplishment that must be respected; Tomas Rell (inland agricultural district) stresses the interests of residents who had no vote in that referendum. Neither is locked to a final Convention outcome.
 - **Still open:** the Convention's actual proceedings and resolution, Thoss's preferred
-  outcome, the relocation vote (Verentum → Korda), venue coverage once relocated, public
-  opinion polling, coverage of delegates beyond Orin. The planned Lakeland Journal
+  outcome, the exact Korda venue and first session there, public opinion polling, and deeper
+  delegate coverage. The planned Lakeland Journal
   business-interest voice remains unused. ~87 in-world days remain on the Convention
   clock as of Day 26 — plenty of runway for background beats before any lapse risk.
 - **Next up (per John, 260917):** get a few of these background beats in, then build the
