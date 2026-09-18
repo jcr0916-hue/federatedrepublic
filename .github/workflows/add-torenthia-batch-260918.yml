@@ -1,0 +1,54 @@
+name: Add Torenthia September 18 batch
+on:
+  push:
+    paths:
+      - "scripts/add-torenthia-batch-260918.py"
+      - ".github/workflows/add-torenthia-batch-260918.yml"
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Apply Torenthia batch
+        run: python3 scripts/add-torenthia-batch-260918.py
+      - name: Validate and build
+        run: |
+          npm ci
+          npm run build
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          files = [Path(f"torenthia-news-{n:03d}.html") for n in range(79,83)]
+          seqs = []
+          for p in files:
+              s=p.read_text()
+              m=re.search(r"worldSeq:\s*(\d+)",s)
+              assert m, p
+              seqs.append(int(m.group(1)))
+          assert seqs == [123,124,125,126], seqs
+          assert "worldMundane: true" in Path("torenthia-news-082.html").read_text()
+          assert "Jalen Mire" in Path("docs/CHARACTER-REFERENCE.md").read_text()
+          assert "Tomas Rell" in Path("docs/CHARACTER-REFERENCE.md").read_text()
+          assert "through seq 126" in Path("docs/WORLD-TIMELINE.md").read_text()
+          PY
+      - name: Commit batch and remove maintenance files
+        run: |
+          rm scripts/add-torenthia-batch-260918.py
+          rm .github/workflows/add-torenthia-batch-260918.yml
+          git config user.name "jcr0916-hue"
+          git config user.email "jcr0916@gmail.com"
+          git add -A
+          git commit -m "Advance Korda Convention and Lake Varda campaign"
+          git push origin main
