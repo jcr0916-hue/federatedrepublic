@@ -1,6 +1,15 @@
 # Pending World Threads — Capture File
 *Storyline threads flagged but not yet activated or fully shaped. Captured here (not memory) so they survive compaction / new chats. When one is ready to activate and shape fully, promote it to its own ARC file like ARGENT-RIDGE-ARC.md / CORINDAL-ARC.md.*
 
+## LATEST WORLD BATCH — 260918 / Y13 M12
+
+- **Korda relocation:** news-079 (seq 123) moves the Territory Convention from Verentum to Korda by a 25–8 procedural vote. It does not resolve either petition. Exact local venue remains open until a later beat needs it.
+- **LC race / Varda:** news-080 (seq 124) has all four candidates react after both Caldris and Valedon accepted the conference in principle. Carrow keeps official scheduling separate from campaign activity; Vael stresses negotiating limits, Mak wants a civilian-navigation timetable, Sandris again names Carrow's structural incumbency advantage without alleging impropriety.
+- **Convention delegates:** news-081 (seq 125) introduces Jalen Mire (corridor) and Tomas Rell (inland) alongside Dessa Orin. They establish different constituencies without locking three neat factions or pre-deciding the Convention.
+- **Mundane:** news-082 (seq 126), TNB Verentum, adds two Saturday cars to Line 4 through Month 12. worldMundane: true; no hook and no follow-up obligation.
+- **Publishing:** the three substantive entries belong in the World feed through front matter. The mundane entry remains Record-only. No main-site _data/updates.js announcement added.
+
+
 ## NEXT BATCH HANDOFF — 260917 / Y13 M12
 
 - **Argent Ridge:** Norvane's outstanding §18.4 response is now resolved. `torenthia-nrs-038.html`
