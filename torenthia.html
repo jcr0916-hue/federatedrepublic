@@ -173,11 +173,24 @@
   .stbl-fn{color:var(--gold);cursor:help}
   .rel-tag{font-size:.65rem;color:#9fb0c4;white-space:nowrap}
   .rel-tag.rel-prov{color:#fbbf24}
-  .aud{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.06em;padding:.16rem .42rem;border-radius:2px;white-space:nowrap}
-  .aud-passing{background:#0e2a18;color:#4ade80}
-  .aud-watch,.aud-review,.aud-strained{background:#2a180a;color:#fbbf24}
-  .aud-crisis{background:#2a080e;color:#fca5a5}
-  .aud-none{color:#4a5a6a}
+  /* Status/Progress column: color answers "should I be concerned", the popup answers "why".
+     States use "Status" (audit-compliance meaning); Territories use "Progress" (statehood-
+     process meaning) — deliberately separate vocabularies so the same word never means two
+     unrelated things (Corindal and Korda both used to read "Crisis" for unrelated reasons). */
+  .stat-pill{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.06em;padding:.16rem .42rem;border-radius:2px;white-space:nowrap}
+  .stat-green{background:#0e2a18;color:#4ade80}
+  .stat-yellow{background:#2a180a;color:#fbbf24}
+  .stat-red{background:#2a080e;color:#fca5a5}
+  .stat-none{color:#4a5a6a}
+  /* Hover/tap popup — same .dfn/.dfn-box pattern used on annotated.html and diagrams.html. */
+  .dfn{position:relative;display:inline-block;cursor:help}
+  .dfn-box{position:absolute;bottom:calc(100% + 8px);right:0;background:#0c1524;color:#e6ecf4;font-size:.7rem;line-height:1.65;padding:.65rem .85rem;border-radius:3px;width:240px;z-index:600;pointer-events:none;opacity:0;transition:opacity .15s;box-shadow:0 4px 18px rgba(0,0,0,.5);font-family:'Jost',sans-serif;font-weight:400;text-transform:none;letter-spacing:normal;white-space:normal;text-align:left;border:1px solid rgba(201,168,76,.35)}
+  .dfn-box::after{content:'';position:absolute;top:100%;right:18px;border:5px solid transparent;border-top-color:#0c1524}
+  .dfn:hover .dfn-box,.dfn.dfn-open .dfn-box{opacity:1;pointer-events:auto}
+  /* Repeated column labels for the Territories half — the last column means something
+     different there ("Progress", statehood-process) than it does for States ("Status"). */
+  .stbl-subhead th{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);text-align:left;padding:.5rem .6rem;border-bottom:1px solid rgba(201,168,76,.3);font-weight:400;white-space:nowrap}
+  .stbl-subhead th.c-num{text-align:right}
   .stbl-note{font-size:.68rem;color:#6f7f95;line-height:1.6;margin-top:1rem}
 
   @media(max-width:700px){
@@ -192,7 +205,11 @@
   .atlas-link-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--navy);margin-bottom:.4rem}
   .atlas-link-desc{font-size:.85rem;color:var(--muted);line-height:1.7;max-width:640px}
 
-  .stbl-link{background:none;border:none;padding:0;margin:0;cursor:pointer;text-align:left;font:inherit;color:#f0ead8;border-bottom:1px dotted rgba(201,168,76,.5);transition:color .15s,border-color .15s}
+  /* width:fit-content keeps the dotted gold underline hugging the name. Without it the <a>
+     variant (state-profile links) inherits display:block from .stbl-name and stretches its
+     border the full width of the cell, drawing a long gold line across the row. The <button>
+     variant shrink-wraps on its own, which is why only profile-linked States showed it. */
+  .stbl-link{background:none;border:none;padding:0;margin:0;cursor:pointer;text-align:left;font:inherit;color:#f0ead8;border-bottom:1px dotted rgba(201,168,76,.5);transition:color .15s,border-color .15s;width:fit-content;text-decoration:none}
   .stbl-link:hover{color:var(--gold);border-bottom-color:var(--gold)}
   .t-state.map-flash{fill:var(--gold)!important;font-weight:700}
 </style>
@@ -448,7 +465,7 @@
           <p class="sblock-sub">Population, representation, and constitutional relationship. Slow to change &mdash; but population drives Assembly seats by the Webster method (&sect;3.2), so a migration that persists eventually moves the seats, and the threshold above with them.</p>
 
           <div class="stbl-wrap">
-            <p style="font-size:.85rem;line-height:1.6">State profiles: {% for profile in statepages %}<a href="{{ profile.url }}" style="color:var(--gold)">{{ profile.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}. Other State and Territory names locate them on the map.</p>
+            <p style="font-size:.85rem;line-height:1.6;color:#9fb0c4">State profiles: {% for profile in statepages %}<a href="{{ profile.url }}" style="color:var(--gold)">{{ profile.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}. Other State and Territory names locate them on the map.</p>
             <table class="stbl">
               <thead>
                 <tr>
@@ -457,7 +474,7 @@
                   <th class="c-num">Sen.</th>
                   <th class="c-num">Assy.</th>
                   <th class="c-rel">Relationship</th>
-                  <th class="c-aud">Audit</th>
+                  <th class="c-aud">Status</th>
                 </tr>
               </thead>
               <tbody>
@@ -468,10 +485,18 @@
                   <td class="c-num">{{ s.senate }}{% if s.senateNote %}<span class="stbl-fn" title="{{ s.senateNote }}">*</span>{% endif %}</td>
                   <td class="c-num">{{ s.assembly }}</td>
                   <td class="c-rel"><span class="rel-tag{% if 'Provisional' in s.rel %} rel-prov{% endif %}">{{ s.rel }}</span></td>
-                  <td class="c-aud">{% if s.audit %}<span class="aud aud-{{ s.audit | lower }}">{{ s.audit }}</span>{% else %}<span class="aud-none">&mdash;</span>{% endif %}</td>
+                  <td class="c-aud">{% if s.audit %}<span class="dfn stat-pill stat-{{ s.statusColor }}">{{ s.audit }}<span class="dfn-box">{{ s.summary }}</span></span>{% else %}<span class="stat-none">&mdash;</span>{% endif %}</td>
                 </tr>
                 {%- endfor %}
                 <tr class="stbl-sep"><td colspan="6">Territories</td></tr>
+                <tr class="stbl-subhead">
+                  <th class="c-name" scope="col">Territory</th>
+                  <th class="c-num" scope="col">Pop.</th>
+                  <th class="c-num" scope="col">Sen.</th>
+                  <th class="c-num" scope="col">Assy.</th>
+                  <th class="c-rel" scope="col">Relationship</th>
+                  <th class="c-aud" scope="col">Progress</th>
+                </tr>
                 {%- for s in stats.territories %}
                 <tr>
                   <td class="c-name"><button class="stbl-name stbl-link" data-place="{{ s.name | lower }}" onclick="showOnMap('{{ s.name | lower }}')" title="Show {{ s.name }} on the map">{{ s.name }}</button><span class="stbl-char">{{ s.char | safe }}</span></td>
@@ -479,7 +504,7 @@
                   <td class="c-num">{{ s.senate }}</td>
                   <td class="c-num">{{ s.assembly }}</td>
                   <td class="c-rel"><span class="rel-tag{% if 'Provisional' in s.rel %} rel-prov{% endif %}">{{ s.rel }}</span></td>
-                  <td class="c-aud">{% if s.audit %}<span class="aud aud-{{ s.audit | lower }}">{{ s.audit }}</span>{% else %}<span class="aud-none">&mdash;</span>{% endif %}</td>
+                  <td class="c-aud">{% if s.audit %}<span class="dfn stat-pill stat-{{ s.statusColor }}">{{ s.audit }}<span class="dfn-box">{{ s.summary }}</span></span>{% else %}<span class="stat-none">&mdash;</span>{% endif %}</td>
                 </tr>
                 {%- endfor %}
               </tbody>
@@ -494,7 +519,7 @@
               </tfoot>
             </table>
           </div>
-          <div class="stbl-note">Senate seats are flat at two per State under &sect;3.5 regardless of population; Territories hold none. Assembly seats apportioned by the Webster method under &sect;3.2. Relationship per Article XV &mdash; Territorial Structure and Statehood. Audit standing is the separate &sect;15.2 Statehood Audit condition. <span class="stbl-fn">*</span> Corindal holds one Senate seat; the second is vacant and expires Y15.</div>
+          <div class="stbl-note">Senate seats are flat at two per State under &sect;3.5 regardless of population; Territories hold none. Assembly seats apportioned by the Webster method under &sect;3.2. Relationship per Article XV &mdash; Territorial Structure and Statehood. Status (States) and Progress (Territories) are separate &sect;15.2 Statehood Audit conditions, labeled differently because they mean different things &mdash; the color says whether it is worth a second look; hover or tap a pill for why. <span class="stbl-fn">*</span> Corindal holds one Senate seat; the second is vacant and expires Y15.</div>
         </section>
 
       </div>
@@ -577,6 +602,16 @@
   });
   </script>
   <script src="nav.js"></script>
+
+  <script>
+  /* Status/Progress popups: tap-to-toggle on touch devices (hover handles desktop).
+     Same pattern as annotated.html / diagrams.html. */
+  document.addEventListener('click', function(e){
+    var dfn = e.target.closest('.dfn');
+    document.querySelectorAll('.dfn.dfn-open').forEach(function(d){ if(d!==dfn) d.classList.remove('dfn-open'); });
+    if(dfn){ dfn.classList.toggle('dfn-open'); e.stopPropagation(); }
+  });
+  </script>
 
   <script>
   /* Stats table -> map: scroll to the living map and flash the named place's label. */
