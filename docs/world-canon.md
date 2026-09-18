@@ -34,7 +34,7 @@ south (Valedon). Torenthia is **not** a peninsula.
 
 | Territory | Position | Notes |
 |---|---|---|
-| Verdmont | Northwest, along the Alps to the coast | Resource extraction. Provisional. |
+| Verdmont | Northwest, along the Alps to the coast | Resource extraction. Territory — statehood process not yet initiated. |
 | Korda | **Southeast only** — southern Lake Varda shore | Indigenous. Borders Sunderland by land at its southeast (site of the Year 13 crossing; "Korda border marker"). Internal geography: **lake corridor** (arrival + coast-guard zone; Varenne Station on the lake shore) and **ancestral inland zone** adjacent to Kelvant. §15.4 petition: Kelvant's Governor seeks incorporation of **the lake corridor only** — Korda government objects that the vote would divide a people. Primary refugee arrival point; EM fiscal review / MA §12.6 remedy plan apply here. There is **no northern Korda** — the old northern zone's geography now belongs to Norvane. |
 | Morantine | South, along the Valedon border | Valedon country. Territory pursuing statehood. |
 | Solara | Island in the Western Sea | Territory pursuing statehood. Distinct culture and language. **Ostara**, the ancient capital, is its city. Bid for seat of government. |

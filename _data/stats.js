@@ -86,26 +86,33 @@ const openSlot = {
 //    Relationship (Article XV — Territorial Structure and Statehood) is CONSTITUTIONAL status.
 //    Audit is Statehood-Audit HEALTH (§15.2) — a separate dimension, deliberately not conflated.
 // ─────────────────────────────────────────────────────────────────────────────
+// statusColor: green | yellow | red — the "should I be concerned" signal, shown for every
+// entry. audit: the specific label text (compliance vocabulary for States, process vocabulary
+// for Territories — deliberately NOT shared vocabulary; that collision, esp. both Corindal and
+// Korda once carrying the identical word "Crisis" to mean unrelated things, was the bug this
+// redesign fixes). summary: the popup content, shown via hover/tap on the status pill. Write a
+// real summary only where there's actual published coverage to draw on; everyone else gets an
+// honest, minimal, non-manufactured placeholder. See docs/STATS-STATUS-REDESIGN-PINNED.md.
 const states = [
-  { name: "Harren",     pop: 6.2, senate: 2, assembly: 60, rel: "State", audit: "Passing",  char: "Northern heartland · Founding State" },
-  { name: "Merath",     pop: 5.8, senate: 2, assembly: 56, rel: "State", audit: "Passing",  char: "Interior · Industrial" },
-  { name: "Orath",      pop: 5.4, senate: 2, assembly: 52, rel: "State", audit: "Passing",  char: "Interior · Agricultural heartland" },
-  { name: "Aldenmere",  pop: 4.9, senate: 2, assembly: 47, rel: "State", audit: "Review",   char: "Capital region · Southwestern coast" },
-  { name: "Caldenmere", pop: 4.6, senate: 2, assembly: 44, rel: "State", audit: "Passing",  char: "Western coast · Calden port" },
-  { name: "Kelvant",    pop: 4.1, senate: 2, assembly: 40, rel: "State", audit: "Strained", char: "Eastern lake · Rhondel city" },
-  { name: "Selvane",    pop: 3.6, senate: 2, assembly: 35, rel: "State", audit: "Passing",  char: "Central heartland · Mixed heritage" },
-  { name: "Arvane",     pop: 3.3, senate: 2, assembly: 32, rel: "State", audit: "Passing",  char: "Western coast · Maritime" },
-  { name: "Varek",      pop: 2.7, senate: 2, assembly: 26, rel: "State", audit: "Passing",  char: "Northern border · River country" },
-  { name: "Rhovane",    pop: 2.2, senate: 2, assembly: 21, rel: "State", audit: "Watch",    char: "Eastern lake · Under pressure" },
-  { name: "Norvane",    pop: 1.6, senate: 2, assembly: 15, rel: "State", audit: "Watch",    char: "Northern lake · Arrival zone" },
-  { name: "Corindal",   pop: 1.1, senate: 1, assembly: 11, rel: "Provisional (from State)", audit: "Crisis", char: "Southern border · Valedon adjacent", senateNote: "1 vacant, expires Y15" },
+  { name: "Harren",     pop: 6.2, senate: 2, assembly: 60, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Founding State. Its own profile page covers its history and the federal preamble's studied neutrality toward it — no other current story.", char: "Northern heartland · Founding State" },
+  { name: "Merath",     pop: 5.8, senate: 2, assembly: 56, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Passing — nothing notable on record.", char: "Interior · Industrial" },
+  { name: "Orath",      pop: 5.4, senate: 2, assembly: 52, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Passing — nothing notable on record.", char: "Interior · Agricultural heartland" },
+  { name: "Aldenmere",  pop: 4.9, senate: 2, assembly: 47, rel: "State", audit: "Review",   statusColor: "yellow", summary: "Under statutory Review — no further detail published yet.", char: "Capital region · Southwestern coast" },
+  { name: "Caldenmere", pop: 4.6, senate: 2, assembly: 44, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Passing — nothing notable on record.", char: "Western coast · Calden port" },
+  { name: "Kelvant",    pop: 4.1, senate: 2, assembly: 40, rel: "State", audit: "Strained", statusColor: "yellow", summary: "Actively absorbing the Korda corridor under a certified §15.4 merger petition — now contested by a competing whole-Territory claim before the Territory Convention.", char: "Eastern lake · Rhondel city" },
+  { name: "Selvane",    pop: 3.6, senate: 2, assembly: 35, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Passing — nothing notable on record.", char: "Central heartland · Mixed heritage" },
+  { name: "Arvane",     pop: 3.3, senate: 2, assembly: 32, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Passing — nothing notable on record.", char: "Western coast · Maritime" },
+  { name: "Varek",      pop: 2.7, senate: 2, assembly: 26, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Consented to §18.4 National Trust designation for its portion of Argent Ridge. No single-executive government, by its own constitution.", char: "Northern border · River country" },
+  { name: "Rhovane",    pop: 2.2, senate: 2, assembly: 21, rel: "State", audit: "Watch",    statusColor: "yellow", summary: "Feeling direct spillover from the Lake Varda crisis — \"this city is carrying too much,\" per its own Assembly delegate.", char: "Eastern lake · Under pressure" },
+  { name: "Norvane",    pop: 1.6, senate: 2, assembly: 15, rel: "State", audit: "Watch",    statusColor: "yellow", summary: "Refused §18.4 National Trust consent for its Argent Ridge parcel — the residential portion remains its best large housing option near the northern arrival corridor.", char: "Northern lake · Arrival zone" },
+  { name: "Corindal",   pop: 1.1, senate: 1, assembly: 11, rel: "Provisional (from State)", audit: "Provisional", statusColor: "red", summary: "Provisional since a failed §15.3 Statehood Audit. Subject of Maren Sollis's ongoing dispatch and the site of the Corindal Industrial Partners record.", char: "Southern border · Valedon adjacent", senateNote: "1 vacant, expires Y15" },
 ];
 
 const territories = [
-  { name: "Korda",      pop: 3.4, senate: 0, assembly: 33, rel: "Territory", audit: "Crisis", char: "Indigenous · Southeastern lake shore · Incorporation dispute" },
-  { name: "Morantine",  pop: 1.6, senate: 0, assembly: 15, rel: "Territory (statehood process)", audit: "First audit passed · awaiting second", char: "Southern border · Valedon country" },
-  { name: "Solara",     pop: 0.9, senate: 0, assembly:  9, rel: "Territory (statehood process)", audit: "First audit passed · awaiting second", char: "Western Sea island · Distinct culture" },
-  { name: "Verdmont",   pop: 0.4, senate: 0, assembly:  4, rel: "Territory", audit: null, char: "Northern Alps · Resource extraction" },
+  { name: "Korda",      pop: 3.4, senate: 0, assembly: 33, rel: "Territory", audit: "Contested", statusColor: "red",    summary: "Two certified petitions — a corridor merger and a whole-Territory statehood bid — triggered §15.5.a(1). The Territory Convention is underway; the Supreme Court has affirmed it continues (SC-Y13-0119).", char: "Indigenous · Southeastern lake shore · Incorporation dispute" },
+  { name: "Morantine",  pop: 1.6, senate: 0, assembly: 15, rel: "Territory (statehood process)", audit: "First audit passed · awaiting second", statusColor: "green", summary: "First Statehood Audit passed; second audit due within the §15.2(4) two-year window. No material failure on record.", char: "Southern border · Valedon country" },
+  { name: "Solara",     pop: 0.9, senate: 0, assembly:  9, rel: "Territory (statehood process)", audit: "First audit passed · awaiting second", statusColor: "green", summary: "First Statehood Audit passed; second audit due within the §15.2(4) two-year window. No material failure on record.", char: "Western Sea island · Distinct culture" },
+  { name: "Verdmont",   pop: 0.4, senate: 0, assembly:  4, rel: "Territory", audit: "Not started", statusColor: "yellow", summary: "Territory — statehood process not yet initiated.", char: "Northern Alps · Resource extraction" },
 ];
 
 // ── derived totals (never hand-maintained) ──────────────────────────────────
