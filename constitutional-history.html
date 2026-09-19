@@ -58,6 +58,19 @@
   <div class="ch-wrap" id="main-content"><p class="status-panel">This is the real project’s design history, distinct from Torenthia’s fictional <a href="torenthia-record.html">public Record</a>. The current edition contains {{ constitution.provisions }} provisions in {{ constitution.articles }} articles. <a href="annotated.html">Read the operative project text</a>.</p><label id="historySearch" hidden>Search changes by provision, subject, or change type<input type="search" placeholder="For example: Article XV, relocated, incapacity"></label><p id="historyCount" role="status"></p>
   <p class="ch-intro">This record covers the full development of the Federated Republic's constitution: from its initial drafting through terminology reform, article reordering, and seven sessions of systematic stress-testing. Recent entries run chronologically, newest first. The constitutional text itself is available in the <a href="annotated.html">annotated edition</a>.</p>
 
+  {% set relatedRailId = 'history-context' %}
+  {% set relatedRailEyebrow = 'From the design record' %}
+  {% set relatedRailTitle = 'Continue from the history' %}
+  {% set relatedRailIntro = 'Move from the change log into the operative text, mechanisms, and stress tests that show what those design decisions do.' %}
+  {% set relatedItems = [
+    { kicker:'Operative text', title:'Read the current Constitution', url:'annotated.html', text:'Open the annotated Constitution and move directly between articles and provisions.', cta:'Read the Constitution' },
+    { kicker:'Pressure tests', title:'Scenario Library', url:'scenarios.html', text:'See constitutional mechanisms tested through ordinary governance and institutional crisis.', cta:'Browse scenarios' },
+    { kicker:'Visual structure', title:'Diagrams', url:'diagrams.html', text:'Use visual flows for the dual executive, lawmaking, courts, States, and other mechanisms.', cta:'Open diagrams' },
+    { kicker:'Reference', title:'Quick Sheets', url:'quicksheets.html', text:'Use compact references for institutions, thresholds, rights, elections, and fiscal structure.', cta:'Browse Quick Sheets' },
+    { kicker:'Complete record', title:'Full history archive', url:'constitutional-history-archive.html', text:'Go beyond the recent entries into the full constitutional development record.', cta:'Open archive' }
+  ] %}
+  {% include "related-rail.njk" %}
+
   <div style="margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:var(--cream2);border:1px solid var(--border);border-radius:4px;font-family:'Jost',sans-serif;font-size:.9rem;color:var(--muted)">
     Showing the most recent changes. The complete record of all constitutional changes is in the <a href="constitutional-history-archive.html">full history archive</a>.
   </div>
@@ -389,6 +402,6 @@
 
   {% include "footer.njk" %}
 
-  <script src="nav.js"></script><script src="discovery.js"></script>
+  <script src="nav.js"></script><script src="discovery.js"></script><script src="related-rail.js"></script>
 </body>
 </html>
