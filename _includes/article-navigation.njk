@@ -1,1 +1,12 @@
-<aside class="article-navigation" aria-label="Browse Constitution articles"><details open id="articleMenu"><summary>Browse articles</summary><a href="#preamble">Preamble</a>{% for a in reading %}<a href="#art{{ a.number }}">{{ a.title }}</a>{% endfor %}</details></aside>
+<aside class="article-navigation" aria-label="Constitution table of contents">
+  <details open id="articleMenu">
+    <summary>Inside the Constitution</summary>
+    <p class="contents-intro">A table of contents for the full text. Each article covers a part of the constitutional framework. Select a heading to jump to it.</p>
+    <div role="navigation" aria-label="Constitution sections">
+      <a href="#preamble">Preamble</a>
+      {% for a in reading %}
+      <a href="#art{{ a.number }}">{{ a.title }}</a>
+      {% endfor %}
+    </div>
+  </details>
+</aside>
