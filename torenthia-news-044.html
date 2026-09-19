@@ -7,6 +7,11 @@ worldOutlet: "TNB Caldenmere"
 worldAuthor: "Lenne Akar"
 worldImage: "world-map-card.webp"
 worldBlurb: "For three months the Legat Consul race was about the lake. Since the vote it has been about one woman who is not in it — and the question voters keep asking at every stop is one the office they are filling has no power to answer. Three candidates handled that differently this week, and the difference is the race now."
+worldId: "torenthia-news-044"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Orath", "Caldenmere", "Rhovane"]
+worldProvisions: ["§2.1", "§2.5", "§12.6", "§2.14", "§2.14.b", "§2.6"]
+worldRelated: ["torenthia-news-043.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "For three months the Legat Consul race was about the lake. Since th
 </head>
 <body class="paper-tnb">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="tnb-masthead" role="banner">
     <div class="tnb-top-bar">
@@ -108,6 +113,7 @@ worldBlurb: "For three months the Legat Consul race was about the lake. Since th
     </div>
   </div>
   </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

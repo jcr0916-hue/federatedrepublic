@@ -5,6 +5,11 @@ worldDate: "12.12"
 worldTitle: "Candidacy Declaration — Legat Consul — Ines Carrow"
 worldOutlet: "National Record System"
 worldBlurb: "NRS-Y12-3041. Elections Panel candidacy declaration. Office sought: Legat Consul. Declarant: Ines Carrow, Director of Foreign Affairs."
+worldId: "torenthia-nrs-002"
+worldArcs: ["lake-varda"]
+worldJurisdictions: []
+worldProvisions: ["§7.1", "§11.1", "§2.1", "§8.2", "§10.1"]
+worldRelated: ["torenthia-news-008.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +55,7 @@ worldBlurb: "NRS-Y12-3041. Elections Panel candidacy declaration. Office sought:
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main id="main-content">
   <div class="nrs-wrap">
@@ -139,7 +144,8 @@ worldBlurb: "NRS-Y12-3041. Elections Panel candidacy declaration. Office sought:
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

@@ -536,16 +536,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
-</head>
+<noscript><style>.diagram-section{display:block!important}.dcar{display:none}</style></noscript></head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
   <span id="main-content" aria-hidden="true" style="position:absolute;top:56px"></span>
 
 <div class="page-hero">
   <span class="eyebrow">Constitutional Architecture</span>
   <h1>How the Republic Works</h1>
-  <p>Nine interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
+  <p>{{ site.diagrams }} interactive diagrams — click any element to explore the constitutional provisions behind it.</p>
 </div>
 
 <!-- TAB NAVIGATION -->
@@ -606,8 +606,8 @@
 
     <!-- ROW 1: The People — Sovereign authority -->
     <div class="gov-row" style="margin-bottom:8px">
-      <div class="gov-node" style="border-color:var(--gold);color:var(--gold);max-width:340px" onclick="showPanel('people')">
-        <span class="node-icon">👥</span>
+      <div role="button" tabindex="0" class="gov-node" style="border-color:var(--gold);color:var(--gold);max-width:340px" onclick="showPanel('people')">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title" style="color:var(--gold)">The People</span>
         <span class="node-sub">Citizens — the source of all legitimate authority<br>Elections and constitutional consent</span>
       </div>
@@ -616,17 +616,17 @@
 
     <!-- ROW 2: the Legislature — Most direct democratic link -->
     <div class="gov-row" style="margin-bottom:8px">
-      <div class="gov-node node-house" onclick="showPanel('house')">
-        <span class="node-icon">🏠</span>
+      <div role="button" tabindex="0" class="gov-node node-house" onclick="showPanel('house')">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title">The Assembly</span>
-        <span class="node-sub">Proportional representation<br>Min. 1 per 750K citizens · Elects Civic Consul</span>
+        <span class="node-sub">Proportional representation<br>Webster allocation · At least 1 seat per jurisdiction</span>
       </div>
       <div style="display:flex;flex-direction:column;justify-content:center;padding:0 0.5rem">
         <div style="font-size:0.7rem;color:var(--muted);text-align:center;letter-spacing:0.08em">LEGISLATURE</div>
         <div style="height:2px;background:var(--border);margin:0.4rem 0"></div>
       </div>
-      <div class="gov-node node-senate" onclick="showPanel('senate')">
-        <span class="node-icon">🏛</span>
+      <div role="button" tabindex="0" class="gov-node node-senate" onclick="showPanel('senate')">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title">The Senate</span>
         <span class="node-sub">2 senators per State<br>Staggered 6-year terms · Treaty ratification</span>
       </div>
@@ -635,8 +635,8 @@
 
     <!-- ROW 3: Dual Executive — Constrained, separated domains -->
     <div class="gov-row" style="margin-bottom:8px">
-      <div class="gov-node node-legat-consul" onclick="showPanel('president')">
-        <span class="node-icon">🏛️</span>
+      <div role="button" tabindex="0" class="gov-node node-legat-consul" onclick="showPanel('president')">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title">Legat Consul</span>
         <span class="node-sub">Defense & Diplomacy only<br>4-year terms · Two-term lifetime limit</span>
       </div>
@@ -644,8 +644,8 @@
         <div style="font-size:0.7rem;color:var(--muted);text-align:center;letter-spacing:0.08em"><span class="dfn">DOMAIN<span class="dfn-box">Each executive's exclusive sphere — the Legat Consul's defense and diplomacy, the Civic Consul's domestic affairs.<span class="dfn-ref">§2.1</span></span></span><br>SEPARATION</div>
         <div style="height:2px;background:var(--border);margin:0.4rem 0"></div>
       </div>
-      <div class="gov-node node-pm" onclick="showPanel('pm')">
-        <span class="node-icon">⚖️</span>
+      <div role="button" tabindex="0" class="gov-node node-pm" onclick="showPanel('pm')">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title">Civic Consul</span>
         <span class="node-sub">Domestic Affairs<br>Max 8 years as CC · Serves at Assembly confidence</span>
       </div>
@@ -654,8 +654,8 @@
 
     <!-- ROW 4: Supreme Court -->
     <div class="gov-row" style="margin-bottom:8px">
-      <div class="gov-node node-court" onclick="showPanel('court')" style="max-width:300px">
-        <span class="node-icon">⚖</span>
+      <div role="button" tabindex="0" class="gov-node node-court" onclick="showPanel('court')" style="max-width:300px">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title">Supreme Court</span>
         <span class="node-sub">Judicial Pool · At least 5 justices<br>Senate confirmed · 12-year non-renewable terms</span>
       </div>
@@ -664,18 +664,18 @@
 
     <!-- ROW 5: Monitors — Horizontal oversight of all branches -->
     <div class="gov-row" style="margin-bottom:24px">
-      <div class="gov-node node-ei" onclick="showPanel('ei')">
-        <span class="node-icon">🔍</span>
+      <div role="button" tabindex="0" class="gov-node node-ei" onclick="showPanel('ei')">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title">Executive Monitor</span>
         <span class="node-sub">Audits both executives<br>Information only</span>
       </div>
-      <div class="gov-node node-li" onclick="showPanel('li')">
-        <span class="node-icon">📊</span>
+      <div role="button" tabindex="0" class="gov-node node-li" onclick="showPanel('li')">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title">Legislative Monitor</span>
         <span class="node-sub">Audits Legislature<br>Redistricting compliance</span>
       </div>
-      <div class="gov-node node-ji" onclick="showPanel('ji')">
-        <span class="node-icon">📋</span>
+      <div role="button" tabindex="0" class="gov-node node-ji" onclick="showPanel('ji')">
+        <svg class="node-icon" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><path d="M3 12L20 3l17 9H3zm4 4v11m9-11v11m9-11v11m8-11v11M3 29h34" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         <span class="node-title">Judicial Monitor</span>
         <span class="node-sub">Audits courts<br>Audits Judicial Pool admin</span>
       </div>
@@ -765,11 +765,11 @@
       <div style="flex:0 0 32px;height:32px;border-radius:50%;background:var(--navy);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.85rem">4</div>
       <div style="flex:1;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:0.9rem 1.1rem">
         <div style="display:flex;justify-content:space-between;align-items:baseline">
-          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--navy)">Civic Consul Review</strong>
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--navy)">Concurrent Executive Review</strong>
           <span><a href="annotated.html#s2-7" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§2.7</a></span>
         </div>
-        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem">10 business days from final passage; concurrent executive review.</div>
-        <div style="margin-top:0.5rem;font-size:0.74rem;color:var(--ink);line-height:1.7">✓ signs / silent &rarr; enacts &nbsp;·&nbsp; ↩ suspensive veto &rarr; tabled, Senate can override 2/3</div>
+        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem">Both executives review within 10 business days of final passage. The CC may use its suspensive veto except on excluded bills; the LC may veto on a genuine concern within its specified security domain.</div>
+        <div style="margin-top:0.5rem;font-size:0.74rem;color:var(--ink);line-height:1.7">CC return: tabled one month; Senate may override by 2/3. LC veto: Senate may override by 2/3 during that session; otherwise the bill lapses for the session. Repassage and one-use limits differ — <a href="annotated.html#s2-3a">§2.3.a</a> and <a href="annotated.html#s2-7">§2.7</a> govern.</div>
       </div>
     </div>
     <div style="display:flex;gap:1rem;margin-bottom:0.8rem;align-items:flex-start">
@@ -779,7 +779,7 @@
           <strong style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--navy)">Enactment</strong>
           <span><a href="annotated.html#s2-7" style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold2);text-decoration:none">§2.7</a></span>
         </div>
-        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem">No action within 10 days enacts by operation of law.</div>
+        <div style="color:var(--muted);font-size:0.8rem;line-height:1.45;margin-top:0.2rem">Absent an applicable blocking veto or recall, enactment follows the concurrent 10-business-day review rules. A CC fiscal notice is informational but permits the Assembly Speaker to recall the bill within the remaining window.</div>
         
       </div>
     </div>
@@ -788,7 +788,7 @@
     <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Go deeper</div>
     <a href="quicksheet-article-3.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Quick Sheet: Legislation</a>
     <a href="annotated.html#s3-1" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Annotated: Article III &rarr;</a>
-    <a href="scenario-ordinary.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Scenario: The Ordinary Day &rarr;</a>
+    <a href="scenario-ordinary.html" style="font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--gold2);text-decoration:none;margin:0 0.75rem">Scenario: Ordinary Law &rarr;</a>
   </div>
 </div>
 
@@ -1138,32 +1138,25 @@
 </div>
 
 
-<footer>
-<span class="footer-logo">The Federated Republic</span>
-<div class="footer-social">
-<span class="footer-social-label">Follow</span>
-<a href="https://bsky.app/profile/federatedrepublic.bsky.social" target="_blank" rel="noopener">Bluesky</a>
-<a href="https://x.com/TheFedRepublic" target="_blank" rel="noopener">X</a>
-<a href="https://www.facebook.com/profile.php?id=61591764057032" target="_blank" rel="noopener">Facebook</a>
-</div>
-<div style="margin-top:0.5rem">
-<a href="constitution-current.pdf" download style="display:inline-flex;align-items:center;gap:1rem;border:1px solid rgba(201,168,76,0.3);padding:0.75rem 1.25rem;border-radius:2px;text-decoration:none">
-<span style="color:rgba(245,240,232,0.8);font-size:0.88rem">Constitution of the Federated Republic</span>
-<span style="background:var(--gold);color:var(--navy2);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;font-weight:600;font-family:'Jost',sans-serif;white-space:nowrap">Download a copy</span>
-</a>
-</div>
-<span class="footer-note">A constitutional framework built from first principles &nbsp;&middot;&nbsp; A theoretical project, not the law of any existing nation<br><a class="footer-meta-link" href="ai-features.html">About the AI features &amp; your privacy</a></span>
-</footer>
+{% include "footer.njk" %}
 <script>
+document.querySelectorAll('.dcard').forEach(b=>b.setAttribute('aria-pressed',String(b.classList.contains('dcard-active'))));
+document.querySelectorAll('.dfn').forEach(el=>{el.tabIndex=0;el.addEventListener('keydown',e=>{if(e.key==='Escape')el.classList.remove('dfn-open');});});
+// Keyboard activation for the existing institution controls.
+document.querySelectorAll('.gov-node').forEach(node=>node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();node.click();}}));
 // Tab switching
 function showTab(id, el) {
   document.querySelectorAll('.diagram-section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.dcard').forEach(b => b.classList.remove('dcard-active'));
   document.getElementById('tab-' + id).classList.add('active');
+  document.querySelectorAll('.dcard').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.tab===id)));
+  history.replaceState(null,'','#tab-'+id);
   var card = el || document.querySelector('.dcard[data-tab="' + id + '"]');
   if (card) { card.classList.add('dcard-active'); card.scrollIntoView({inline:'center', block:'nearest', behavior:'smooth'}); }
   if (typeof closePanel === 'function') closePanel();
 }
+const initialDiagram=location.hash.slice(1).replace(/^tab-/,'');
+if(initialDiagram && document.getElementById('tab-'+initialDiagram))showTab(initialDiagram);
 // Looping carousel scroll
 function dcarScroll(dir) {
   var track = document.getElementById('dcarTrack');
@@ -1292,7 +1285,8 @@ function closePanel() {
       );
     }
   </script>
-  <script src="nav.js">
+  <script src="nav.js"></script>
+<script>
 // Diagram tooltips: tap-to-toggle on touch devices (hover handles desktop)
 document.addEventListener('click', function(e){
   var dfn = e.target.closest('.dfn');

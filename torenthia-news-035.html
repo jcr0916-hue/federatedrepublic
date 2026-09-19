@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Elin-Thoss-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Elin Thoss's border-infrastructure measure clears the Assembly floor by a lopsided margin — the first concrete legislative product of the Varda Crossing cycle, authored by the one candidate who never made a speech about it."
+worldId: "torenthia-news-035"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Selvane", "Korda"]
+worldProvisions: ["§3.7", "§12.6"]
+worldRelated: ["torenthia-news-033.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Elin Thoss's border-infrastructure measure clears the Assembly floo
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -74,6 +79,7 @@ worldBlurb: "Elin Thoss's border-infrastructure measure clears the Assembly floo
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

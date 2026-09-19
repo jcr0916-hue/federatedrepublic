@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Aleth Fenn"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Argent Ridge repeal petition may well win. It was never going to save the land by itself — and the reason it can't sits in a converted freight shed at the northern crossing, not in anything Varek has done."
+worldId: "torenthia-news-063"
+worldArcs: ["lake-varda", "argent-ridge"]
+worldJurisdictions: ["Varek", "Norvane"]
+worldProvisions: ["§13.1", "§18.4"]
+worldRelated: ["torenthia-news-060.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Argent Ridge repeal petition may well win. It was never going t
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -73,6 +78,7 @@ worldBlurb: "The Argent Ridge repeal petition may well win. It was never going t
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

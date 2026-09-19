@@ -6,6 +6,11 @@ worldTitle: "'The Domestic Side Has a Clock Too'"
 worldOutlet: "TNB Caldenmere"
 worldAuthor: "Lenne Akar"
 worldBlurb: "Civic Consul Nadia Sorrel sits down with TNB Caldenmere's Lenne Akar — a reporter she's known since her Assembly days — to discuss the domestic fiscal picture behind the Lake Varda crisis."
+worldId: "torenthia-news-009"
+worldArcs: ["lake-varda", "fiscal-equalization"]
+worldJurisdictions: ["Caldenmere", "Varek", "Korda"]
+worldProvisions: ["§2.5"]
+worldRelated: ["torenthia-nrs-003.html", "torenthia-news-010.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "Civic Consul Nadia Sorrel sits down with TNB Caldenmere's Lenne Aka
 </head>
 <body class="paper-tnb">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="tnb-masthead" role="banner">
     <div class="tnb-top-bar">
@@ -146,7 +151,8 @@ worldBlurb: "Civic Consul Nadia Sorrel sits down with TNB Caldenmere's Lenne Aka
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

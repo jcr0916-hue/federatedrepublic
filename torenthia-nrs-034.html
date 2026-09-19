@@ -5,6 +5,11 @@ worldDate: "13.11"
 worldTitle: "Joint Monitor Council — Determination on Concurrent Korda Petitions"
 worldOutlet: "National Record System"
 worldBlurb: "The Joint Monitor Council determines that the two certified Korda petitions trigger §15.5.a(1). The scheduled corridor referendum does not proceed, and both petitions move into the Territory Convention process."
+worldId: "torenthia-nrs-034"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.5.a"]
+worldRelated: ["torenthia-nrs-033.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +45,7 @@ worldBlurb: "The Joint Monitor Council determines that the two certified Korda p
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -96,6 +101,7 @@ worldBlurb: "The Joint Monitor Council determines that the two certified Korda p
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 <script src="nav.js"></script>
 </body>

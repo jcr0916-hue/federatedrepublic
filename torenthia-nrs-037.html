@@ -5,6 +5,11 @@ worldDate: "13.12"
 worldTitle: "Notice of Filing — Korda Corridor Petitioners v. Joint Monitor Council"
 worldOutlet: "National Record System"
 worldBlurb: "Corridor petitioners and Kelvant business interests file suit challenging the JMC's §15.5.a(1) determination, filed the day the Territory Convention's first session opened."
+worldId: "torenthia-nrs-037"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.5.a", "§4.5"]
+worldRelated: ["torenthia-nrs-036.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "Corridor petitioners and Kelvant business interests file suit chall
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -78,6 +83,7 @@ worldBlurb: "Corridor petitioners and Kelvant business interests file suit chall
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

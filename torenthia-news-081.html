@@ -6,6 +6,11 @@ worldTitle: "Thirty-Three Delegates, Three Kordas"
 worldOutlet: "The Korda Press"
 worldAuthor: "Mara Iset"
 worldBlurb: "A closer look at three Korda Convention delegates shows why the body cannot be reduced to two petition camps: corridor, inland, and federal-capacity grievances overlap without lining up neatly."
+worldId: "torenthia-news-081"
+worldArcs: ["korda", "fiscal-equalization"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: []
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "A closer look at three Korda Convention delegates shows why the bod
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
   <main id="main-content">
     <div class="article-wrap">
       <div class="article-section">The Convention &middot; Delegates</div>
@@ -51,7 +56,8 @@ worldBlurb: "A closer look at three Korda Convention delegates shows why the bod
       </div>
     </div>
   </main>
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

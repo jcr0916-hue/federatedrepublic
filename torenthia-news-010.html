@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Tobias-Vael-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Senator Tobias Vael addressed a Varek foreign policy forum on the Toren River treaty and Caldris water negotiations. It was a serious speech about the wrong crisis."
+worldId: "torenthia-news-010"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Harren", "Varek", "Korda"]
+worldProvisions: ["§2.1", "§3.6", "§2.5"]
+worldRelated: ["torenthia-news-009.html", "torenthia-news-011.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Senator Tobias Vael addressed a Varek foreign policy forum on the T
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -111,7 +116,8 @@ worldBlurb: "Senator Tobias Vael addressed a Varek foreign policy forum on the T
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

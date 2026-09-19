@@ -7,6 +7,11 @@ worldOutlet: "RNN"
 worldAuthor: "Dara Voss"
 worldImage: "world-map-card.webp"
 worldBlurb: "A candidate published a transition plan the sitting judiciary hadn't. Three days later, the JMC says a framework has been in development since the referendum was certified — and declines to say when it will be ready."
+worldId: "torenthia-news-054"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.5.a"]
+worldRelated: ["torenthia-news-053.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "A candidate published a transition plan the sitting judiciary hadn'
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -83,6 +88,7 @@ worldBlurb: "A candidate published a transition plan the sitting judiciary hadn'
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

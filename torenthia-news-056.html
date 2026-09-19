@@ -7,6 +7,11 @@ worldOutlet: "The Dorven Ledger"
 worldAuthor: "Corwin Hale"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Senate extended its review of a licensing bill by thirty days this week — the only extension it gets, and it had to say why in public. Nobody covered it. That is roughly the point."
+worldId: "torenthia-news-056"
+worldArcs: []
+worldJurisdictions: []
+worldProvisions: ["§3.1"]
+worldRelated: ["torenthia-news-055.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Senate extended its review of a licensing bill by thirty days t
 </head>
 <body class="paper-dorven">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -75,6 +80,7 @@ worldBlurb: "The Senate extended its review of a licensing bill by thirty days t
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

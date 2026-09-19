@@ -6,6 +6,11 @@ worldTitle: "Vael Responds to the Intelligence Summary. It Was Not His Best Week
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "Senator Tobias Vael addressed the Carrow intelligence summary in a statement issued forty-eight hours after publication. He said the right things. The gap between his words and his record remained visible."
+worldId: "torenthia-news-014"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Aldenmere", "Korda"]
+worldProvisions: ["§2.3"]
+worldRelated: ["torenthia-news-013.html", "torenthia-news-015.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "Senator Tobias Vael addressed the Carrow intelligence summary in a 
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -92,7 +97,8 @@ worldBlurb: "Senator Tobias Vael addressed the Carrow intelligence summary in a 
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

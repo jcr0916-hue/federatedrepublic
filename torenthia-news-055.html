@@ -7,6 +7,11 @@ worldOutlet: "TNB Caldenmere"
 worldAuthor: "Lenne Akar"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Kelvant-Korda referendum has a date. The transition framework for the two court seats still doesn't. Voters will decide the merger before anyone tells them what happens to the courts."
+worldId: "torenthia-news-055"
+worldArcs: ["korda"]
+worldJurisdictions: ["Caldenmere", "Kelvant", "Korda"]
+worldProvisions: ["§15.4", "§15.5.a"]
+worldRelated: ["torenthia-news-054.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Kelvant-Korda referendum has a date. The transition framework f
 </head>
 <body class="paper-tnb">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -77,6 +82,7 @@ worldBlurb: "The Kelvant-Korda referendum has a date. The transition framework f
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

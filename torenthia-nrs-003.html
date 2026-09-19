@@ -5,6 +5,11 @@ worldDate: "12.12"
 worldTitle: "Executive Communication Record — LC Domestic Notification — Lake Varda"
 worldOutlet: "National Record System"
 worldBlurb: "NRS-Y12-3089. Legat Consul notification to Civic Consul of domestic-interest matters arising from the Lake Varda incident. Constitutional basis: §2.5."
+worldId: "torenthia-nrs-003"
+worldArcs: ["lake-varda", "fiscal-equalization"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§2.5", "§2.3", "§6.3", "§12.6"]
+worldRelated: ["torenthia-nrs-002.html", "torenthia-news-009.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +53,7 @@ worldBlurb: "NRS-Y12-3089. Legat Consul notification to Civic Consul of domestic
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main id="main-content">
   <div class="nrs-wrap">
@@ -131,7 +136,8 @@ worldBlurb: "NRS-Y12-3089. Legat Consul notification to Civic Consul of domestic
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

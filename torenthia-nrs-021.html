@@ -5,6 +5,11 @@ worldDate: "13.10"
 worldTitle: "JMC Remainder Viability Assessment — Kelvant-Korda Lake Corridor"
 worldOutlet: "National Record System"
 worldBlurb: "The Joint Monitor Council finds that Korda's remaining portion could satisfy the §15.2 conditions on its own resources. The referendum proceeds. The finding was not unanimous, and the dissent is published with it."
+worldId: "torenthia-nrs-021"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.5.a", "§15.2", "§15.4"]
+worldRelated: ["torenthia-nrs-019.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +47,7 @@ worldBlurb: "The Joint Monitor Council finds that Korda's remaining portion coul
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -100,6 +105,7 @@ worldBlurb: "The Joint Monitor Council finds that Korda's remaining portion coul
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

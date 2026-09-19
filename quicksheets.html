@@ -41,43 +41,43 @@
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="page-header">
     <div class="page-header-inner">
       <span class="eyebrow">One Page Each</span>
       <h1>Quick Sheets</h1>
-      <p>Twelve plain-language visual guides to how the constitution actually works — one page apiece. Each distills a whole area of the document into what you'd want on a single sheet: the dual executive, the courts, the Monitors, elections, rights, the budget, and more.</p>
+      <p>One-page constitutional reference guides to how the constitution actually works — one page apiece. Each distills a whole area of the document into what you'd want on a single sheet: the dual executive, the courts, the Monitors, elections, rights, the budget, and more.</p>
     </div>
   </div>
 
   <main class="qs-main" id="main-content">
     <p class="qs-intro">These are companions to the <a href="annotated.html">Annotated Edition</a> — where each sheet is also linked from the article it summarizes — and to the <a href="scenarios.html">Scenario Library</a>, which shows the same mechanisms under pressure. Every sheet is printable and self-contained.</p>
 
-    <div class="qs-group-label">The Branches</div>
+    <section class="status-panel"><span class="section-kicker">Start here</span><h2><a href="quicksheet-article-3.html">Assembly &amp; Senate</a></h2><p>Use this if you want to follow an ordinary bill from proposal to law.</p><div class="link-row"><a href="quicksheet-article-3.pdf" download>Download the one-page PDF</a><a href="diagrams.html#tab-lifecycle">See the mechanism</a><a href="scenario-ordinary.html">Read Ordinary Law</a></div></section>{% include "lawmaking-fragment.njk" %}<div class="qs-group-label">The Branches</div>
     <div class="qs-grid">
       <a href="quicksheet-article-2.html" class="qs-card">
         <span class="qs-ref">Article II · The Executive</span>
         <span class="qs-name">The Dual Executive</span>
-        <span class="qs-desc">The Legat Consul and Civic Consul domains side by side, both legislative vetoes compared, and how a divided executive is meant to hold together.</span>
+        <span class="qs-desc">Use this if you want to understand: The Legat Consul and Civic Consul domains side by side, both legislative vetoes compared, and how a divided executive is meant to hold together.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-article-3.html" class="qs-card">
         <span class="qs-ref">Article III · The Legislature</span>
         <span class="qs-name">Assembly &amp; Senate</span>
-        <span class="qs-desc">How a bill passes, what makes the two chambers different, and the Senate's distinct ratification and confirmation powers.</span>
+        <span class="qs-desc">Use this if you want to understand: How a bill passes, what makes the two chambers different, and the Senate's distinct ratification and confirmation powers.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-judiciary.html" class="qs-card">
         <span class="qs-ref">The Courts</span>
         <span class="qs-name">The Judiciary</span>
-        <span class="qs-desc">One pool, two destinations: how the Republic's judges are selected, and what happens when a Supreme Court seat opens unexpectedly.</span>
+        <span class="qs-desc">Use this if you want to understand: One pool, two destinations: how the Republic's judges are selected, and what happens when a Supreme Court seat opens unexpectedly.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-monitors.html" class="qs-card">
         <span class="qs-ref">Article IX · Oversight</span>
         <span class="qs-name">The Monitors</span>
-        <span class="qs-desc">Three watchdogs, each chosen by someone other than the body it watches. How the LM, EM, and JM are selected, cross-audited, and replaced.</span>
+        <span class="qs-desc">Use this if you want to understand: Three watchdogs, each chosen by someone other than the body it watches. How the LM, EM, and JM are selected, cross-audited, and replaced.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
     </div>
@@ -87,25 +87,25 @@
       <a href="quicksheet-elections.html" class="qs-card">
         <span class="qs-ref">Elections</span>
         <span class="qs-name">Electing the Executive</span>
-        <span class="qs-desc">How the Legat Consul is actually chosen: the dual test, the 60% waiver, the runoff, the public lot, and the election calendar.</span>
+        <span class="qs-desc">Use this if you want to understand: How the Legat Consul is actually chosen: the dual test, the 60% waiver, the runoff, the public lot, and the election calendar.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-nvs.html" class="qs-card">
         <span class="qs-ref">The Voting System</span>
         <span class="qs-name">The Machinery Under the Vote</span>
-        <span class="qs-desc">Two independent panels and a voting system that must be secret, auditable, and resilient at once — plus how credentials work.</span>
+        <span class="qs-desc">Use this if you want to understand: Two independent panels and a voting system that must be secret, auditable, and resilient at once — plus how credentials work.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-amendments.html" class="qs-card">
         <span class="qs-ref">Change</span>
         <span class="qs-name">Referendum &amp; Amendment</span>
-        <span class="qs-desc">How the people legislate directly and how the constitution changes itself: the referendum, the citizen initiative, and the two amendment paths.</span>
+        <span class="qs-desc">Use this if you want to understand: How the people legislate directly and how the constitution changes itself: the referendum, the citizen initiative, and the two amendment paths.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-rights.html" class="qs-card">
         <span class="qs-ref">Article I · Rights</span>
         <span class="qs-name">The Rights Floor</span>
-        <span class="qs-desc">The six absolute rights no emergency can breach, and the sovereignty presumption that puts the burden on government.</span>
+        <span class="qs-desc">Use this if you want to understand: The six absolute rights no emergency can breach, and the sovereignty presumption that puts the burden on government.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
     </div>
@@ -115,25 +115,25 @@
       <a href="quicksheet-states.html" class="qs-card">
         <span class="qs-ref">States &amp; Territories</span>
         <span class="qs-name">Joining, Rising, Leaving</span>
-        <span class="qs-desc">How a place joins, rises, falls, or leaves: the Statehood Audit with no political vote, Provisional status, and voluntary exit.</span>
+        <span class="qs-desc">Use this if you want to understand: How a place joins, rises, falls, or leaves: the Statehood Audit with no political vote, Provisional status, and voluntary exit.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-immigration.html" class="qs-card">
         <span class="qs-ref">Residency &amp; Asylum</span>
         <span class="qs-name">Immigration</span>
-        <span class="qs-desc">The two-stage residency system, the separate asylum track that begins at filing, and the credential the executive cannot block.</span>
+        <span class="qs-desc">Use this if you want to understand: The two-stage residency system, the separate asylum track that begins at filing, and the credential the executive cannot block.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-fiscal.html" class="qs-card">
         <span class="qs-ref">Article XII · Money</span>
         <span class="qs-name">The Fiscal System</span>
-        <span class="qs-desc">Where the money comes from and where it can go: the Assembly-originated budget, dual-domain proposals, and the independent Monetary Authority.</span>
+        <span class="qs-desc">Use this if you want to understand: Where the money comes from and where it can go: the Assembly-originated budget, dual-domain proposals, and the independent Monetary Authority.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
       <a href="quicksheet-recall-removal.html" class="qs-card">
         <span class="qs-ref">Leaving Office</span>
         <span class="qs-name">Recall &amp; Removal</span>
-        <span class="qs-desc">Every way a constitutional officer leaves office before their term ends — seven distinct mechanisms, one guide.</span>
+        <span class="qs-desc">Use this if you want to understand: Every way a constitutional officer leaves office before their term ends — seven distinct mechanisms, one guide.</span>
         <span class="qs-open">Open sheet →</span>
       </a>
     </div>

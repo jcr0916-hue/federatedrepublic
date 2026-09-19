@@ -5,6 +5,11 @@ worldDate: "13.10"
 worldTitle: "Elections Panel — Kelvant-Korda Referendum Date Certification"
 worldOutlet: "National Record System"
 worldBlurb: "The referendum date is set. Sixty percent approval with fifty percent participation, per §15.4, on a single question."
+worldId: "torenthia-nrs-022"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.4", "§15.5.a"]
+worldRelated: ["torenthia-nrs-021.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "The referendum date is set. Sixty percent approval with fifty perce
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -76,6 +81,7 @@ worldBlurb: "The referendum date is set. Sixty percent approval with fifty perce
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

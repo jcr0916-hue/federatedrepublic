@@ -143,18 +143,18 @@
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   
-<div class="layout" id="main-content">
+<div class="layout reader-layout" id="main-content">{% include "article-navigation.njk" %}
 
 <main class="main">
 <div class="doc-header">
   <h1>The Constitution of the Federated Republic</h1>
-  <p>Annotated Edition — 176 provisions &nbsp;·&nbsp; 20 articles</p>
+  <p>Annotated Edition — {{ constitution.provisions }} provisions &nbsp;·&nbsp; {{ constitution.articles }} articles</p>
   <p class="doc-hover-instructions">Click any <span style="border-bottom:2px solid var(--navy);padding:0 2px;font-size:0.85em">provision title</span> for AI-generated design rationale <span class="ann-ai-marker">AI Feature*</span></p>
 </div>
-<div class="legend">
+<div class="link-row"><a href="#reading-paths">Explore by topic</a><button type="button" class="secondary-action" onclick="openSearch()">Search the text</button><a href="constitution-current.pdf" download>Download the Constitution (PDF)</a></div>{% include "reading-paths.njk" %}<div class="legend">
   <div class="legend-item"><div class="legend-swatch ls-design"></div>Click any provision — design rationale</div>
 </div>
 
@@ -212,6 +212,7 @@
 
 <div id="art1" class="article-section">
   <h2 class="article-header">Article I — Individual Sovereignty and Rights<a href="quicksheet-rights.html" class="qs-icon" title="Quick Sheet: Rights & Non-Derogable Floor" aria-label="Quick Sheet: Rights & Non-Derogable Floor" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[0] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">Article I is a floor, not a ceiling — every right listed is a minimum. The Legislature may expand these protections by statute; it may never reduce them below this constitutional floor.</p>
 
   <div class="provision" id="s1-1">
@@ -336,6 +337,7 @@
 </div>
 <div id="art2" class="article-section">
   <h2 class="article-header">Article II — The Dual Executive<a href="quicksheet-article-2.html" class="qs-icon" title="Quick Sheet: The Dual Executive" aria-label="Quick Sheet: The Dual Executive" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[1] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">Two executives — the Legat Consul and the Civic Consul — hold separate, enumerated domains. Neither can act in the other's domain without triggering a constitutional dispute mechanism.</p>
 
   <div class="provision" id="s2-1">
@@ -507,6 +509,7 @@
 </div>
 <div id="art3" class="article-section">
   <h2 class="article-header">Article III — The Legislature<a href="quicksheet-article-3.html" class="qs-icon" title="Quick Sheet: Article III — The Legislature" aria-label="Quick Sheet: Article III — The Legislature" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[2] %}{% include "lawmaking-fragment.njk" %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The Assembly and Senate exercise federal legislative authority under this Article. The general rules for removal, continuity, ethics, and federal office now reside in Article VII.</p>
 
   <div class="provision" id="s3-1">
@@ -594,6 +597,7 @@
 </div>
 <div id="art4" class="article-section">
   <h2 class="article-header">Article IV — The Judicial Architecture<a href="quicksheet-judiciary.html" class="qs-icon" title="Quick Sheet: The Judiciary" aria-label="Quick Sheet: The Judiciary" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[3] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">Courts enforce rights and resolve constitutional disputes. Article IV defines judicial selection, confirmation, temporary service, independence, and removal.</p>
 
   <div class="provision" id="s4-1">
@@ -673,6 +677,7 @@
 </div>
 <div id="art5" class="article-section">
   <h2 class="article-header">Article V — Citizenship and National Identity</h2>
+<div class="article-opening">{% set a = reading[4] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">Citizenship is acquired by parentage, protection against statelessness, or naturalization under §5.1. Legal residents hold Article I rights as Inhabitants.</p>
 
   <div class="provision" id="s5-1">
@@ -697,6 +702,7 @@
 </div>
 <div id="art6" class="article-section">
   <h2 class="article-header">Article VI — Immigration and Residency<a href="quicksheet-immigration.html" class="qs-icon" title="Quick Sheet: Immigration & Asylum" aria-label="Quick Sheet: Immigration & Asylum" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[5] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">Every immigration application must clear two sequential stages: State sponsorship and federal certification. Asylum operates on a separate constitutional track.</p>
 
   <div class="provision" id="s6-1">
@@ -740,6 +746,7 @@
 </div>
 <div id="art7" class="article-section">
   <h2 class="article-header">Article VII — Elections and Federal Office<a href="quicksheet-elections.html" class="qs-icon" title="Quick Sheet: Elections & Electoral Finance" aria-label="Quick Sheet: Elections & Electoral Finance" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[6] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">Article VII governs federal elections and the general rules of federal office, including eligibility, removal, continuity, ethics, compensation, and authority by constitutional operation.</p>
 
   <div class="provision" id="s7-1">
@@ -868,6 +875,7 @@
 </div>
 <div id="art8" class="article-section">
   <h2 class="article-header">Article VIII — Electoral Finance and Campaign Conduct<a href="quicksheet-elections.html" class="qs-icon" title="Quick Sheet: Elections & Electoral Finance" aria-label="Quick Sheet: Elections & Electoral Finance" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[7] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">Electoral finance is regulated to prevent structural distortion of democratic accountability through concentrated financial influence.</p>
 
   <div class="provision" id="s8-1">
@@ -892,6 +900,7 @@
 </div>
 <div id="art9" class="article-section">
   <h2 class="article-header">Article IX — The Monitors<a href="quicksheet-monitors.html" class="qs-icon" title="Quick Sheet: The Monitors" aria-label="Quick Sheet: The Monitors" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[8] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The three Monitors audit different branches. None has enforcement power. All publish findings permanently to the NRS. Their power is the power of complete, public disclosure.</p>
 
   <div class="provision" id="s9-1">
@@ -1024,6 +1033,7 @@
 </div>
 <div id="art10" class="article-section">
   <h2 class="article-header">Article X — The National Record System</h2>
+<div class="article-opening">{% set a = reading[9] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The National Record System — the constitutional backbone of transparency. Permanent, tamper-evident, freely accessible to every Inhabitant at no cost.</p>
 
   <div class="provision" id="s10-1">
@@ -1048,6 +1058,7 @@
 </div>
 <div id="art11" class="article-section">
   <h2 class="article-header">Article XI — NRS Panel and Elections Panel<a href="quicksheet-nvs.html" class="qs-icon" title="Quick Sheet: Elections Infrastructure & the NVS" aria-label="Quick Sheet: Elections Infrastructure & the NVS" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[10] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The independent NRS Panel operates the public record system. The independent Elections Panel operates electoral systems and performs the functions specifically assigned to it.</p>
 
   <div class="provision" id="s11-1">
@@ -1077,6 +1088,7 @@
 </div>
 <div id="art12" class="article-section">
   <h2 class="article-header">Article XII — Social State and Economic Rights<a href="quicksheet-fiscal.html" class="qs-icon" title="Quick Sheet: Fiscal Architecture" aria-label="Quick Sheet: Fiscal Architecture" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[11] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The Basic Needs Floor — a constitutional guarantee that the federal government will ensure every Inhabitant has access to a minimum basket of goods and services at a level adequate for a dignified life.</p>
 
   <div class="provision" id="s12-1">
@@ -1134,6 +1146,7 @@
 </div>
 <div id="art13" class="article-section">
   <h2 class="article-header">Article XIII — Direct Democracy<a href="quicksheet-amendments.html" class="qs-icon" title="Quick Sheet: Amendments & Direct Democracy" aria-label="Quick Sheet: Amendments & Direct Democracy" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[12] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The Republic's direct democracy provisions establish the mechanisms by which Inhabitants may petition for referenda and participate directly in constitutional governance.</p>
 
   <div class="provision" id="s13-1">
@@ -1163,6 +1176,7 @@
 </div>
 <div id="art14" class="article-section">
   <h2 class="article-header">Article XIV — Military Authorization and Accountability</h2>
+<div class="article-opening">{% set a = reading[13] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The military operates under civilian constitutional authority at all times. No military order contrary to this Constitution is valid; no member is required to comply with an unconstitutional order.</p>
 
   <div class="provision" id="s14-1">
@@ -1197,6 +1211,7 @@
 </div>
 <div id="art15" class="article-section">
   <h2 class="article-header">Article XV — Territorial Structure and Statehood<a href="quicksheet-states.html" class="qs-icon" title="Quick Sheet: States, Territories & Indigenous Nations" aria-label="Quick Sheet: States, Territories & Indigenous Nations" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[14] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The Republic may expand through the admission of new States, the elevation of Territories, and the recognition of Associated Communities.</p>
 
   <div class="provision" id="s15-1">
@@ -1291,6 +1306,7 @@
 </div>
 <div id="art16" class="article-section">
   <h2 class="article-header">Article XVI — Indigenous Sovereignty<a href="quicksheet-states.html" class="qs-icon" title="Quick Sheet: States, Territories & Indigenous Nations" aria-label="Quick Sheet: States, Territories & Indigenous Nations" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[15] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">Indigenous sovereignty is acknowledged, not granted — the Republic's constitutional framework does not create indigenous sovereignty; it recognizes sovereignty that precedes it.</p>
 
   <div class="provision" id="s16-1">
@@ -1329,6 +1345,7 @@
 </div>
 <div id="art17" class="article-section">
   <h2 class="article-header">Article XVII — Constitutional Amendments<a href="quicksheet-amendments.html" class="qs-icon" title="Quick Sheet: Amendments & Direct Democracy" aria-label="Quick Sheet: Amendments & Direct Democracy" target="_blank" rel="noopener">📋</a></h2>
+<div class="article-opening">{% set a = reading[16] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The Three Amendment Paths — the constitution may be amended only through procedures requiring broad democratic consensus. No amendment may extinguish the non-derogable rights under §1.19.a.</p>
 
   <div class="provision" id="s17-1">
@@ -1365,6 +1382,7 @@
 </div>
 <div id="art18" class="article-section">
   <h2 class="article-header">Article XVIII — Federal Property and National Trust</h2>
+<div class="article-opening">{% set a = reading[17] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The federal government holds property in trust for the Republic's Inhabitants. The Seat of Government is constitutionally established as a federal district.</p>
 
   <div class="provision" id="s18-1">
@@ -1394,6 +1412,7 @@
 </div>
 <div id="art19" class="article-section">
   <h2 class="article-header">Article XIX — Transition and Ratification</h2>
+<div class="article-opening">{% set a = reading[18] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">The constitution takes effect upon ratification. Transition provisions establish the founding Republic's initial institutional structure.</p>
 
   <div class="provision" id="s19-1">
@@ -1466,6 +1485,7 @@
 </div>
 <div id="art20" class="article-section">
   <h2 class="article-header">Article XX — Associated Communities</h2>
+<div class="article-opening">{% set a = reading[19] %}<p>{{ a.summary }}</p><div class="link-row">{% for label,url in a.links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}</div></div>
   <p class="article-intro">An Associated Community is a sovereign independent political community in a consensual compact relationship with the Republic. Neither party is constitutionally superior to the other.</p>
 
   <div class="provision" id="s20-1">
@@ -1517,66 +1537,6 @@
 {% include "footer.njk" %}
 
     <script>
-    // ── MINIMAP ──────────────────────────────────────
-    if (document.querySelector('.minimap')) document.body.classList.add('has-minimap');
-
-    function toggleMinimap(){
-      var m = document.getElementById('minimap');
-      var o = document.getElementById('minimapOverlay');
-      var open = m.classList.toggle('open');
-      if(o) o.classList.toggle('open', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-      var btn = document.getElementById('minimapToggle');
-      if(btn) btn.setAttribute('aria-expanded', String(open));
-    }
-    function closeMinimap(){
-      var m = document.getElementById('minimap');
-      var o = document.getElementById('minimapOverlay');
-      if(m) m.classList.remove('open');
-      if(o) o.classList.remove('open');
-      document.body.style.overflow = '';
-      var btn = document.getElementById('minimapToggle');
-      if(btn) btn.setAttribute('aria-expanded', 'false');
-    }
-
-    // Highlight current article in minimap as user scrolls
-    (function(){
-      var links = document.querySelectorAll('.minimap-link, nav.minimap a[data-art]');
-      if(!links.length) return;
-      var sections = Array.from(document.querySelectorAll('.article-section[id]'));
-      function onScroll(){
-        var scrollY = window.scrollY + 100;
-        var current = sections[0];
-        for(var i = 0; i < sections.length; i++){
-          if(sections[i].offsetTop <= scrollY) current = sections[i];
-        }
-        links.forEach(function(l){
-          var artNum = l.getAttribute('data-art') || '';
-          var active = artNum === current.id || l.getAttribute('href') === '#' + current.id;
-          l.classList.toggle('active', active);
-        });
-      }
-      window.addEventListener('scroll', onScroll, {passive:true});
-      onScroll();
-    })();
-
-    // Close minimap on outside click
-    document.addEventListener('click', function(e){
-      var mm = document.getElementById('minimap');
-      var toggle = document.getElementById('minimapToggle');
-      if(mm && mm.classList.contains('open') &&
-         !mm.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)){
-        closeMinimap();
-      }
-    });
-
-    // Minimap link click: close on mobile after navigation
-    document.querySelectorAll('nav.minimap a').forEach(function(a){
-      a.addEventListener('click', function(){
-        if(window.innerWidth <= 1200) setTimeout(closeMinimap, 150);
-      });
-    });
-
     // ── SEARCH ───────────────────────────────────────
     var searchIndex = (typeof SEARCH_INDEX !== 'undefined') ? SEARCH_INDEX : [];
 
@@ -1773,38 +1733,12 @@
   </script>
 
   <!-- Fixed UI elements — body level for reliable position:fixed across all browsers -->
-  <nav class="minimap" id="minimap" aria-label="Article navigation">
-    <button class="minimap-close" onclick="closeMinimap()" aria-label="Close navigation">✕</button>
-    <span class="minimap-title">Articles</span>
-    <a href="#preamble" data-art="preamble">Preamble</a>
-      <a href="#art1" data-art="art1">I &middot; Rights & Floor</a>
-    <a href="#art2" data-art="art2">II &middot; Dual Executive</a>
-    <a href="#art3" data-art="art3">III &middot; Legislature</a>
-    <a href="#art4" data-art="art4">IV &middot; Judiciary</a>
-    <a href="#art5" data-art="art5">V &middot; Citizenship</a>
-    <a href="#art6" data-art="art6">VI &middot; Immigration</a>
-    <a href="#art7" data-art="art7">VII &middot; Elections</a>
-    <a href="#art8" data-art="art8">VIII &middot; El. Finance</a>
-    <a href="#art9" data-art="art9">IX &middot; Monitors</a>
-    <a href="#art10" data-art="art10">X &middot; NRS</a>
-    <a href="#art11" data-art="art11">XI &middot; Panels</a>
-    <a href="#art12" data-art="art12">XII &middot; Social State</a>
-    <a href="#art13" data-art="art13">XIII &middot; Direct Democracy</a>
-    <a href="#art14" data-art="art14">XIV &middot; Defense</a>
-    <a href="#art15" data-art="art15">XV &middot; Territorial</a>
-    <a href="#art16" data-art="art16">XVI &middot; Indigenous</a>
-    <a href="#art17" data-art="art17">XVII &middot; Amendments</a>
-    <a href="#art18" data-art="art18">XVIII &middot; Property</a>
-    <a href="#art19" data-art="art19">XIX &middot; Transition</a>
-    <a href="#art20" data-art="art20">XX &middot; Assoc. Communities</a>
-  </nav>
-  <button class="minimap-toggle" id="minimapToggle" onclick="toggleMinimap()" aria-label="Toggle article navigation">≡</button>
-  <div class="minimap-overlay" id="minimapOverlay" onclick="closeMinimap()"></div>
+
   <button id="searchBtn" onclick="openSearch()" aria-label="Search constitution" class="search-fab"><span aria-hidden="true">⌕</span></button>
   <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search provisions">
     <div class="search-inner">
       <div class="search-bar">
-        <input type="search" id="searchInput" class="search-input" placeholder="Search provisions…" oninput="runSearch(this.value)" autocomplete="off" spellcheck="false">
+        <input aria-label="Search constitutional provisions" type="search" id="searchInput" class="search-input" placeholder="Search provisions…" oninput="runSearch(this.value)" autocomplete="off" spellcheck="false">
         <button class="search-close" onclick="closeSearch()" aria-label="Close search">✕</button>
       </div>
       <div class="search-results" id="searchResults"></div>
@@ -1829,5 +1763,5 @@
   </div>
 
   <script src="nav.js"></script>
-</body>
+<script>if(matchMedia('(max-width:900px)').matches)document.getElementById('articleMenu').open=false;</script></body>
 </html>

@@ -4,6 +4,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { collect } from "./scripts/public-assets.mjs";
 
+import {validateWorld, chronology, relatedWorld} from './lib/world.mjs';
+
 export default function (eleventyConfig) {
 
   // ── THE WORLD COLLECTION ──────────────────────────────────────────────────
@@ -18,51 +20,43 @@ export default function (eleventyConfig) {
   // eventually lie. Derive it or delete it.
   //
   // Publishing is now: drop the file in. Nothing to remember.
-  eleventyConfig.addCollection("world", (api) =>
-    api.getAll()
-      .filter((p) => p.data.worldKind && p.data.worldDate)
-      // worldDate is "YY.MM" as a STRING — quoted in the front matter on purpose.
-      // Unquoted, YAML reads 13.09 as the float 13.09 and 13.10 as 13.1, which sorts
-      // Month 10 BEFORE Month 9. String compare on zero-padded "13.09" is correct.
-      //
-      // TIEBREAK ON worldSeq, NOT FILENAME. worldDate is month-granular, so every piece
-      // published in the same month ties. The old tiebreak was inputPath, and since
-      // "news" < "nrs" alphabetically, reversing for display put EVERY nrs piece ahead of
-      // EVERY news piece in the same month — which buried news-045 behind two older NRS
-      // filings on both the World carousel and the Record.
-      //
-      // worldSeq is a global publication counter, backfilled once from git first-commit
-      // order and set on every new piece thereafter. Deliberately NOT derived from git at
-      // build time: hosts that shallow-clone would silently lose the history and fall back
-      // to the broken alphabetical order with no visible failure.
-      //
-      // Files missing worldSeq sort last within their month rather than crashing the build.
-      .sort((a, b) => {
-        if (a.data.worldDate !== b.data.worldDate)
-          return a.data.worldDate.localeCompare(b.data.worldDate);
-        const as = a.data.worldSeq, bs = b.data.worldSeq;
-        if (typeof as === "number" && typeof bs === "number") return as - bs;
-        if (typeof as === "number") return -1;
-        if (typeof bs === "number") return 1;
-        return a.inputPath.localeCompare(b.inputPath);
-      })
-  );
+  const constitutionData=JSON.parse(fs.readFileSync('constitution_data.json','utf8'));
+  const provisionNumbers=new Set(constitutionData.flatMap(a=>a.provisions.map(p=>p.num)));
+  const currentFiles=JSON.parse(fs.readFileSync('_data/currentFiles.json','utf8'));
+  const validArcs=new Set(currentFiles.map(f=>f.id));
+  eleventyConfig.addCollection("world", api => {
+    const pieces=validateWorld(api.getAll().filter(p=>p.data.worldKind),provisionNumbers).sort(chronology);
+    const ids=new Set(pieces.map(p=>p.data.worldId));
+    for(const p of pieces)for(const arc of p.data.worldArcs)if(!validArcs.has(arc))throw Error(`Unknown arc ${arc}: ${p.inputPath}`);
+    for(const file of currentFiles){
+      if(!/^\d{2,}\.(0[1-9]|1[0-2])$/.test(file.asOf))throw Error(`Invalid briefing date: ${file.id}`);
+      for(const id of file.records)if(!ids.has(id))throw Error(`Missing briefing record ${id}`);
+      for(const ref of file.provisions)if(!provisionNumbers.has(ref))throw Error(`Missing briefing provision ${ref}`);
+    }
+    return pieces;
+  });
+  eleventyConfig.addFilter("relatedWorld", relatedWorld);
+  eleventyConfig.addFilter("mapEntries", (pieces,key,dot)=>[...pieces].reverse().filter(p=>{
+    if(p.data.worldMundane)return false;
+    const places=String(p.data.worldPlaces || '').split(/[ ,]+/);
+    const text=(p.data.worldTitle+' '+p.data.worldBlurb).toLowerCase();
+    return places.includes(key) || dot.aliases.some(alias=>text.includes(alias.toLowerCase()));
+  }).slice(0,3).map(p=>({url:p.url,title:p.data.worldTitle,date:p.data.worldDate})));
 
+  eleventyConfig.addFilter("arcRecords", (pieces,arc)=>pieces.filter(p=>p.data.worldArcs.includes(arc)));
+  eleventyConfig.addFilter("jurisdictionRecords", (pieces,name)=>pieces.filter(p=>p.data.worldJurisdictions.includes(name)));
+  eleventyConfig.addFilter("take", (items,n)=>items.slice(0,n));
+  eleventyConfig.addFilter("worldDateLabel", value=>{const [y,m]=value.split('.');return `Year ${Number(y)}, Month ${Number(m)}`;});
+  eleventyConfig.addFilter("provisionAnchor", ref=>'s'+ref.slice(1).replace('.', '-').replaceAll('.',''));
+  eleventyConfig.addFilter("recordById", (pieces,id)=>pieces.find(p=>p.data.worldId===id));
+  eleventyConfig.addFilter("worldNewest", pieces=>pieces.at(-1)?.data.worldDate || '13.12');
 
   // Mundane entries remain in The Record without promotion on the World hub.
   eleventyConfig.addFilter("worldHighlights", pieces =>
     pieces.filter(piece => !piece.data.worldMundane));
 
   // Related State coverage follows published World content, including body mentions.
-  eleventyConfig.addFilter("stateCoverage", (pieces, name) => {
-    const re = new RegExp(`\\b${name}\\b`, 'i');
-    return [...pieces].reverse().filter(piece => {
-      const text = fs.readFileSync(piece.inputPath, 'utf8')
-        .replace(/<script\b[^>]*>[\s\S]*?<\/script>|<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
-        .replace(/<[^>]+>/g, ' ');
-      return re.test(text);
-    });
-  });
+  eleventyConfig.addFilter("stateCoverage", (pieces,name)=>[...pieces].reverse().filter(p=>p.data.worldJurisdictions.includes(name)));
   eleventyConfig.addPassthroughCopy("State Constitutions/harren-state-constitution.md");
   eleventyConfig.addPassthroughCopy("State Constitutions/varek-state-constitution.md");
   eleventyConfig.addPassthroughCopy("State Constitutions/norvane-state-constitution.md");
@@ -71,7 +65,7 @@ export default function (eleventyConfig) {
   // Assets Eleventy does not template — copy through untouched.
   // If any of these is missing from _site, every page that uses it 404s.
   const passthrough = [
-    "site.css", "nav.js", "map-data.js", "search-index.js", "sw.js",
+    "site.css", "republic.css", "nav.js", "discovery.js", "map-data.js", "search-index.js", "sw.js",
     "favicon.ico", "favicon-32.png", "apple-touch-icon.png",
     "crossroads-engine.js", "korda-crossroads.json", "tier2-borders.json", "tier2-labels.json",
     "test-crossroads.json",

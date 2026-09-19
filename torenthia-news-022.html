@@ -6,6 +6,11 @@ worldTitle: "After the Crossing: Three Candidates, Three Responses, One Race Tha
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "Vael issued a statement through a spokesperson. Mak drove to Korda. Carrow said nothing. Thirty-six hours after Sunderland's armed formation crossed the Torenthian border, the LC race has a new shape."
+worldId: "torenthia-news-022"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Rhovane", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-021.html", "torenthia-nrs-007.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +38,7 @@ worldBlurb: "Vael issued a statement through a spokesperson. Mak drove to Korda.
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead" role="banner">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -105,6 +110,7 @@ worldBlurb: "Vael issued a statement through a spokesperson. Mak drove to Korda.
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

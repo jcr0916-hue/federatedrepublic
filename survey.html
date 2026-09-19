@@ -113,17 +113,17 @@
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content" class="survey-main">
   <!-- INTRO -->
   <section class="s-intro" id="introScreen">
     <div class="s-eyebrow">A Constitutional Questionnaire</div>
     <h1>What kind of government would <em>you</em> build?</h1>
-    <p>A short set of questions about how you think power should be arranged — who holds it, who checks it, and what it must never touch. There are no right answers and nothing political here.</p>
+    <p>A short set of questions about how you think power should be arranged — who holds it, who checks it, and what it must never touch. There are no right answers and no party affiliation required.</p>
     <div class="s-librarian"><span class="dot"></span>Your guide: a curious librarian, not a pundit</div>
     <div><button class="s-btn" onclick="startSurvey()">Begin</button></div>
-    <div class="s-note">About 9 questions · 3–4 minutes · A one-page result at the end</div>
+    <div class="s-note">{{ site.questions }} questions · 3–4 minutes · A one-page result at the end</div>
     <div class="s-note" style="margin-top:.6rem"><a href="ai-features.html" style="color:var(--gold2);text-decoration:none">AI Feature* — how it works &amp; your privacy</a></div>
   </section>
 
@@ -131,7 +131,7 @@
   <section class="s-q" id="questionScreen" hidden>
     <div class="s-progress">
       <div class="s-track"><div class="s-fill" id="progressFill"></div></div>
-      <div class="s-count" id="progressCount">1 / 8</div>
+      <div class="s-count" id="progressCount">1 / {{ site.questions }}</div>
     </div>
     <div class="s-axis-tag" id="axisTag">On power</div>
     <h2 class="s-prompt" id="promptText">…</h2>
@@ -141,7 +141,7 @@
       <div class="s-custom-body">
         <div class="s-custom-inner">
           <div class="s-custom-hint">Want a mix of options, or something not listed? Say it however you like — the librarian reads these.</div>
-          <textarea id="customText" placeholder="e.g. A blend of A and C — mostly A, but with C's safeguard…" oninput="onCustomInput()"></textarea>
+          <label class="sr-only" for="customText">Your answer in your own words</label><p class="privacy-hint">Your answer will be sent to the site’s server and AI provider for interpretation. Avoid personal or confidential details. <a href="ai-features.html">How requests are handled</a>.</p><textarea id="customText" placeholder="e.g. A blend of A and C — mostly A, but with C's safeguard…" oninput="onCustomInput()"></textarea>
           <div style="margin-top:.6rem"><button class="s-custom-submit" id="customSubmit" onclick="submitCustom()" disabled>Use this answer</button></div>
         </div>
       </div>
@@ -178,19 +178,19 @@
       <p id="frNoteText"></p>
     </div>
 
-    <div class="s-result-actions">
+    <section id="surveyRoutes"><h2>Keep exploring</h2><p>Curated routes through the topics you considered. These are reading suggestions, not a classification of you.</p><div id="surveyRouteLinks" class="link-row"></div></section><div class="s-result-actions">
       <button class="s-btn" onclick="printResult()">Save / print result</button>
       <button class="s-btn-ghost" onclick="restart()">Take it again</button>
       <a class="s-btn-ghost" href="annotated.html" style="text-decoration:none;display:inline-flex;align-items:center">Read the constitution</a>
     </div>
-    <div class="s-disclaimer">This result is a response to the answers you selected — not a judgment of you, your beliefs, or your politics. It's one reasonable reading among many, and you'd likely get a different result answering differently. <a href="ai-features.html" style="color:var(--gold2)">AI Feature*</a> — this site keeps none of your data; a commercial AI provider processes your answers under its own policies.</div>
+    <div class="s-disclaimer">This result is a response to the answers you selected — not a judgment of you, your beliefs, or your politics. It's one reasonable reading among many, and you'd likely get a different result answering differently. <a href="ai-features.html" style="color:var(--gold2)">AI Feature*</a> — your answers are sent to the site’s server and a commercial AI provider; infrastructure processing and retention policies apply.</div>
   </section>
 </main>
 
 {% include "footer.njk" %}
 
 <script>
-const TARGET_QUESTIONS = 9;      // how many to ask
+const TARGET_QUESTIONS = {{ site.questions }};      // how many to ask
 const SIGNALS_PER_AXIS = 2;      // "heard enough" threshold per axis
 
 // Each axis: a dimension of constitutional design. lean accumulates from answers.
@@ -433,7 +433,8 @@ function renderQuestion(q){
   document.getElementById('progressCount').textContent = n + ' / ' + TARGET_QUESTIONS;
   document.getElementById('progressFill').style.width = ((n-1)/TARGET_QUESTIONS*100) + '%';
   document.getElementById('axisTag').textContent = AXES[q.axis].tag;
-  document.getElementById('promptText').textContent = q.prompt;
+  const prompt=document.getElementById('promptText');
+  prompt.textContent=q.prompt;prompt.tabIndex=-1;prompt.focus();
   const wrap = document.getElementById('optionsWrap');
   wrap.innerHTML = '';
   q.options.forEach(opt=>{
@@ -541,7 +542,23 @@ function toggleDiscuss(){
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 
+const TOPIC_ROUTES = {
+ legitimacy: [['Citizen lawmaking','annotated.html#art13'],['The Second Path','scenario-the-second-path.html']],
+ power: [['The dual executive','diagrams.html#tab-dual'],['Executive Quick Sheet','quicksheet-article-2.html']],
+ trust: [['Independent Monitors','quicksheet-monitors.html'],['Fiscal equalization in Torenthia','dossier-fiscal-equalization.html']],
+ change: [['Amendment routes','quicksheet-amendments.html'],['The Void Exception','scenario-void-exception.html']],
+ liberty: [['Rights and protections','annotated.html#art1'],['Rights Quick Sheet','quicksheet-rights.html']],
+ scale: [['States and Territories','diagrams.html#tab-states-fed'],['Korda’s competing futures','dossier-korda.html']]
+};
+function showTopicRoutes(){
+ const topics=[...new Set(asked.map(q=>q.axis))];
+ const links=(topics.length?topics:['power','liberty','scale']).flatMap(t=>TOPIC_ROUTES[t]||[]);
+ const wrap=document.getElementById('surveyRouteLinks');wrap.replaceChildren();
+ links.forEach(([label,url])=>{const a=document.createElement('a');a.href=url;a.textContent=label;wrap.appendChild(a);});
+}
+
 function renderResult(data){
+  showTopicRoutes();
   document.getElementById('resultTitle').innerHTML =
     'Your answers describe <strong>' + esc(data.archetype || 'a government of your own') + '</strong>';
   document.getElementById('resultSub').textContent = data.tagline || '';
@@ -588,6 +605,7 @@ function renderResult(data){
 }
 
 function renderError(){
+  showTopicRoutes();
   document.getElementById('resultTitle').innerHTML = 'The librarian stepped away';
   document.getElementById('resultSub').textContent =
     "Something went wrong reaching the shelves — the reading of your answers didn't come through.";

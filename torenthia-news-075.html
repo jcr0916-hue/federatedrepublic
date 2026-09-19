@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldImage: "world-map-card.webp"
 worldBlurb: "Elin Thoss convened Korda's Territory Convention today, as §15.5.a(4) obligated her to. Her statement was thirty-one words long, and none of them said what she wants the thirty-three delegates to decide."
+worldId: "torenthia-news-075"
+worldArcs: ["korda", "fiscal-equalization"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§15.5.a"]
+worldRelated: ["torenthia-nrs-036.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Elin Thoss convened Korda's Territory Convention today, as §15.5.a
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -71,6 +76,7 @@ worldBlurb: "Elin Thoss convened Korda's Territory Convention today, as §15.5.a
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

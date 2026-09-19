@@ -6,6 +6,11 @@ worldTitle: "Sunderland Vessel Holds Lake Varda Position for Six Hours. Coast Gu
 worldOutlet: "The Torenthian"
 worldAuthor: "Mira Kael"
 worldBlurb: "A Sunderland naval vessel crossed the contested Lake Varda midline and held position for six hours. The coast guard tracked it throughout. The LC's diplomatic note was published to the NRS before it withdrew."
+worldId: "torenthia-news-003"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Harren", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-nrs-001.html", "torenthia-news-002.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +37,7 @@ worldBlurb: "A Sunderland naval vessel crossed the contested Lake Varda midline 
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -112,7 +117,8 @@ worldBlurb: "A Sunderland naval vessel crossed the contested Lake Varda midline 
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

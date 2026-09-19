@@ -6,6 +6,11 @@ worldTitle: "Maren Sollis"
 worldOutlet: "Dispatch"
 worldAuthor: "Maren Sollis"
 worldBlurb: "Maren Sollis teaches civics at Ardenmere Secondary in Corindal State. Her State has been in Provisional status for three years. She teaches the Senate unit anyway."
+worldId: "torenthia-dispatch-sollis"
+worldArcs: ["lake-varda", "fiscal-equalization"]
+worldJurisdictions: ["Corindal", "Korda"]
+worldProvisions: ["§2.1", "§2.2", "§2.3", "§6.3"]
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +47,7 @@ worldBlurb: "Maren Sollis teaches civics at Ardenmere Secondary in Corindal Stat
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main id="main-content">
   <div class="dispatch-wrap">
@@ -167,7 +172,8 @@ worldBlurb: "Maren Sollis teaches civics at Ardenmere Secondary in Corindal Stat
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldImage: "world-map-card.webp"
 worldBlurb: "If the Korda petitions reach the Supreme Court, nine people will decide what 'different defined portions' means. Most citizens could not name three of them. Here is what the record actually shows."
+worldId: "torenthia-news-065"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Corindal", "Korda"]
+worldProvisions: ["§4.3", "§10.1", "§9.1.b", "§15.5.a"]
+worldRelated: ["torenthia-sc-001.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "If the Korda petitions reach the Supreme Court, nine people will de
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -93,6 +98,7 @@ worldBlurb: "If the Korda petitions reach the Supreme Court, nine people will de
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

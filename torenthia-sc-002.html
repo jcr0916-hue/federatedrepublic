@@ -5,6 +5,11 @@ worldDate: "13.12"
 worldTitle: "Korda Corridor Petitioners v. Joint Monitor Council"
 worldOutlet: "Supreme Court"
 worldBlurb: "Supreme Court of the Federated Republic. Whether a whole-Territory statehood petition is a \"different defined portion\" of a Territory from a corridor merger petition under §15.5.a(1). Decided Year 13, Month 12. Holding: Yes — the Convention continues."
+worldId: "torenthia-sc-002"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Varek", "Korda"]
+worldProvisions: ["§4.5", "§15.2", "§15.4", "§15.5.a", "§11.1", "§9.7"]
+worldRelated: ["torenthia-nrs-039.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +63,7 @@ worldBlurb: "Supreme Court of the Federated Republic. Whether a whole-Territory 
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="sc-masthead">
   <div class="sc-masthead-inner">
@@ -68,7 +73,7 @@ worldBlurb: "Supreme Court of the Federated Republic. Whether a whole-Territory 
   </div>
 </div>
 
-<main id="main-content">
+<main id="main-content"><div class="court-toc" role="navigation" aria-label="Opinion contents"><a href="#holding">Holding</a><a href="#opinion">Opinion</a><a href="#dissent">Dissent</a><a href="torenthia-record.html?type=sc">Court archive</a></div>
 
   <div class="opinion-header">
     <h1 class="case-name">Korda Corridor Petitioners, et al.<br>v.<br>Joint Monitor Council</h1>
@@ -106,14 +111,14 @@ worldBlurb: "Supreme Court of the Federated Republic. Whether a whole-Territory 
       <p>Whether a certified whole-Territory statehood petition under §15.2 affects a "different defined portion of the same Territory" from a certified corridor merger petition under §15.4, within the meaning of §15.5.a(1) — such that the Joint Monitor Council correctly determined the corridor referendum could not proceed and the Civic Consul was required to convene a Territory Convention under §15.5.a(4).</p>
     </div>
 
-    <div class="holding-box">
+    <div class="holding-box" id="holding">
       <div class="holding-label">Holding</div>
       <p>Yes. A whole-Territory petition affects a "different defined portion" of the Territory from a corridor petition for purposes of §15.5.a(1), because the two claims describe incompatible dispositions of the same ground. The Joint Monitor Council's determination is affirmed. The Territory Convention continues. The interim stay of NRS-Y13-0671 is dissolved; the ninety-day period established under §15.5.a(4) resumes running as of this order, credited for the three days that had elapsed before the stay took effect.</p>
     </div>
   </div>
 
   <div class="opinion-section">
-    <div class="section-head">Opinion of the Court</div>
+    <h2 class="section-head" id="opinion">Opinion of the Court</h2>
     <div class="opinion-byline">Justice Ola Vrentis</div>
     <div class="opinion-joined">Joined by Justices Aldren, Corse, Halvath, Imen, and Mevra</div>
 
@@ -142,7 +147,7 @@ worldBlurb: "Supreme Court of the Federated Republic. Whether a whole-Territory 
   </div>
 
   <div class="dissent">
-    <div class="section-head">Dissenting Opinion</div>
+    <h2 class="section-head" id="dissent">Dissenting Opinion</h2>
     <div class="opinion-byline">Justice Pael Doran</div>
     <div class="opinion-joined">Joined by Justices Careth and Norven</div>
 
@@ -168,6 +173,7 @@ worldBlurb: "Supreme Court of the Federated Republic. Whether a whole-Territory 
 
 </main>
 
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

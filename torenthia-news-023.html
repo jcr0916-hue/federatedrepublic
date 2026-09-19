@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Tobias-Vael-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Senator Vael gave an address in Varek on the Caldris water situation. He referenced the western tributary. The active negotiation is on the eastern tributary. RNN noticed."
+worldId: "torenthia-news-023"
+worldArcs: []
+worldJurisdictions: ["Varek"]
+worldProvisions: []
+worldRelated: ["torenthia-nrs-007.html", "torenthia-news-024.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Senator Vael gave an address in Varek on the Caldris water situatio
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead" role="banner">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -85,6 +90,7 @@ worldBlurb: "Senator Vael gave an address in Varek on the Caldris water situatio
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

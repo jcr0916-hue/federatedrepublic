@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldImage: "world-map-card.webp"
 worldBlurb: "Halden Rews spent nine years running the corridor authority that filed Korda's capacity requests into a federal queue where they sat. He is now the Minister for Territorial Infrastructure — and the corridor he ran has just petitioned to leave Korda entirely. He has views about what those two facts have to do with each other."
+worldId: "torenthia-news-048"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.5.a", "§12.6"]
+worldRelated: ["torenthia-news-046.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Halden Rews spent nine years running the corridor authority that fi
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -87,6 +92,7 @@ worldBlurb: "Halden Rews spent nine years running the corridor authority that fi
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

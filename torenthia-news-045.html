@@ -7,6 +7,11 @@ worldOutlet: "The Dorven Ledger"
 worldAuthor: "Corwin Hale"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Civic Consul wants the fiscal-equalization formula reviewed in the open. A handful of states that do well under the current one have started asking a quieter, sharper question: reviewed because of what, exactly? No Executive Monitor finding says the mechanism has failed. The pushback isn't against helping Korda and Morantine. It's against doing it this way, on this timeline, for this reason."
+worldId: "torenthia-news-045"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Harren", "Merath", "Caldenmere", "Korda", "Morantine"]
+worldProvisions: ["§12.6"]
+worldRelated: ["torenthia-news-044.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Civic Consul wants the fiscal-equalization formula reviewed in 
 </head>
 <body class="paper-ledger">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -79,6 +84,7 @@ worldBlurb: "The Civic Consul wants the fiscal-equalization formula reviewed in 
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

@@ -5,6 +5,11 @@ worldDate: "12.12"
 worldTitle: "EM Interim Fiscal Review — Korda Territory"
 worldOutlet: "National Record System"
 worldBlurb: "NRS-Y13-0047. Executive Monitor interim fiscal review of Korda Territory. Social state infrastructure below federal minimum. Coast guard expenditure at 312% of standing appropriation. Legislature has 90 days to respond."
+worldId: "torenthia-nrs-005"
+worldArcs: ["lake-varda", "fiscal-equalization"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§12.6", "§12.1.a", "§12.1", "§6.3", "§1.20", "§12.3", "§10.1"]
+worldRelated: ["torenthia-news-017.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +55,7 @@ worldBlurb: "NRS-Y13-0047. Executive Monitor interim fiscal review of Korda Terr
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main id="main-content">
   <div class="nrs-wrap">
@@ -193,7 +198,8 @@ worldBlurb: "NRS-Y13-0047. Executive Monitor interim fiscal review of Korda Terr
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

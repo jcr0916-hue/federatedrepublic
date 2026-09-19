@@ -5,6 +5,11 @@ worldDate: "13.10"
 worldTitle: "Legislature — National Trust Designation Request, Argent Ridge Parcel"
 worldOutlet: "National Record System"
 worldBlurb: "A National Trust designation request for the Argent Ridge parcel, forwarded to Varek and Norvane for host State consent under §18.4."
+worldId: "torenthia-nrs-029"
+worldArcs: ["argent-ridge"]
+worldJurisdictions: ["Varek", "Norvane"]
+worldProvisions: ["§18.4", "§13.1"]
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "A National Trust designation request for the Argent Ridge parcel, f
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -75,6 +80,7 @@ worldBlurb: "A National Trust designation request for the Argent Ridge parcel, f
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

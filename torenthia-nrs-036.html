@@ -5,6 +5,11 @@ worldDate: "13.11"
 worldTitle: "Notice of Convening — Korda Territory Convention"
 worldOutlet: "National Record System"
 worldBlurb: "The Civic Consul has convened the Territory Convention required under §15.5.a(4), composed of Korda's 33 Assembly delegates. First session set."
+worldId: "torenthia-nrs-036"
+worldArcs: ["korda"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§15.5.a", "§15.2", "§15.4"]
+worldRelated: ["torenthia-news-073.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "The Civic Consul has convened the Territory Convention required und
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -80,6 +85,7 @@ worldBlurb: "The Civic Consul has convened the Territory Convention required und
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

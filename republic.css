@@ -1,0 +1,203 @@
+/* ── MAP SECTION ── */
+    .map-section{background:#0a0f1a;width:100%}
+    .map-section-header{max-width:1360px;margin:0 auto;padding:1.5rem 1.5rem .85rem;display:flex;justify-content:space-between;align-items:flex-end}
+    .ms-left .ms-eye{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
+    .ms-left h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:300;color:#f0ead8;letter-spacing:.03em}
+    .ms-note{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:#3a4a5a;letter-spacing:.12em;line-height:1.8;text-align:right}
+    .atlas-wrap{max-width:1360px;margin:0 auto;padding:0 1rem 1.25rem}
+    .atlas-layout{display:grid;grid-template-columns:1fr 310px;gap:1rem;align-items:start}
+
+    /* Map */
+    .map-wrap{position:relative;border:3px solid #6a5a38;border-radius:3px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.7)}
+    .map-scale-wrap{width:100%;position:relative;overflow:hidden}
+    #mapOverlay text{font-family:'Cormorant Garamond',serif}
+    .t-state{fill:#fff;letter-spacing:3px;paint-order:stroke;stroke:#C9A84C;stroke-width:2.8px;stroke-linejoin:round}
+    .t-country{fill:#fff;letter-spacing:6px;paint-order:stroke;stroke:#a8843a;stroke-width:3.2px;stroke-linejoin:round}
+    .t-neighbor{fill:#fff;letter-spacing:5px;paint-order:stroke;stroke:#8c2018;stroke-width:2.8px;stroke-linejoin:round}
+    .t-water{fill:#fff;font-style:italic;letter-spacing:1.5px;paint-order:stroke;stroke:#3d5a7a;stroke-width:2.4px;stroke-linejoin:round}
+    .t-city{fill:#fff;letter-spacing:1px;paint-order:stroke;stroke:#3d5a7a;stroke-width:2.4px;stroke-linejoin:round}
+    .b-halo{fill:none;stroke:#f3ecdc;stroke-linecap:round;stroke-linejoin:round}
+    .b-nat{fill:none;stroke:#a8261c;stroke-linecap:round;stroke-linejoin:round}
+    .b-st{fill:none;stroke:#2c2824;stroke-linecap:round;stroke-linejoin:round}
+  
+    .map-inner{position:absolute;top:0;left:0;width:1536px;height:1024px;background:#c9dfaf;transform-origin:top left;cursor:crosshair}
+    .map-inner img{position:absolute;top:0;left:0;width:100%;height:100%;display:block}
+
+    /* Dots */
+    .dot{position:absolute;cursor:pointer;width:0;height:0;z-index:10}
+    .dot-core{position:absolute;left:50%;top:50%;width:13px;height:13px;transform:translate(-50%,-50%);border-radius:50%;border:2px solid rgba(255,255,255,.9);transition:transform .2s;box-shadow:0 0 6px rgba(0,0,0,.5)}
+    .dot:hover .dot-core{transform:translate(-50%,-50%) scale(1.4)}
+    .dot.active .dot-core{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 12px rgba(255,255,255,.5)}
+    .dot-ring{position:absolute;left:50%;top:50%;width:13px;height:13px;border-radius:50%;border:2px solid;transform:translate(-50%,-50%);animation:expandRing 2.2s infinite ease-out;pointer-events:none}
+    .dot-ring2{animation-delay:.9s}
+    @keyframes expandRing{0%{transform:translate(-50%,-50%) scale(1);opacity:.8}100%{transform:translate(-50%,-50%) scale(3.4);opacity:0}}
+
+    /* Sidebar */
+    .atlas-sidebar{display:flex;flex-direction:column;gap:.75rem}
+    .alerts-panel{background:#0c1018;border:1px solid #2a3a50;border-radius:5px;padding:.75rem 1rem}
+    .alerts-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+    .alert-row{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.5rem;font-size:.72rem;color:#a09080;line-height:1.55}
+    .alert-row strong{color:#e8c8c8;font-weight:500}
+    .info-panel{background:#0e1420;border:1px solid #2a3a50;border-radius:5px;overflow:hidden;flex:1;min-height:200px}
+    .info-header{background:#0a0f1a;padding:.65rem 1rem;border-bottom:1px solid #1e2a3a}
+    .info-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:#6a7a8a;margin-bottom:.2rem}
+    .info-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#f0e8d8}
+    .info-body{padding:.9rem 1rem;font-size:.78rem;color:#8898a8;line-height:1.7}
+    .info-body p{margin-bottom:.6rem;color:#90a0b0}
+    .info-body strong{color:#c8d8e8;font-weight:500}
+
+    /* ── MAIN CONTENT ── */
+    .world-main{max-width:1020px;margin:0 auto;padding:0 2rem 5rem}
+    .intro-block{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--border);max-width:680px}
+    .intro-block p{font-size:1.05rem;line-height:1.95;color:var(--text);margin-bottom:1.4rem}
+    .intro-block p:last-child{margin-bottom:0}
+    .section-header{padding:3rem 0 1.75rem;border-bottom:2px solid var(--navy)}
+    .section-eye{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--navy)}
+
+    /* Nation Cards */
+    .nations-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
+    .nation-card{border:1px solid var(--border);padding:1.5rem;background:white;position:relative}
+    .nation-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px}
+    .nc-caldris::before{background:#6a8aa8}
+    .nc-marisvia::before{background:#5a8880}
+    .nc-valedon::before{background:#6a8850}
+    .nc-sunderland::before{background:#a07858}
+    .nc-seronne::before{background:#8878a0}
+    .nc-solara::before{background:#b8a870}
+    .nation-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);margin-bottom:.3rem}
+    .nation-tag{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
+    .nation-body{font-size:.88rem;line-height:1.8;color:var(--text)}
+    .nation-tension{margin-top:.85rem;padding:.65rem .85rem;background:var(--cream);border-left:2px solid var(--gold);font-size:.8rem;color:var(--muted);line-height:1.65}
+    .nation-tension strong{color:var(--text);font-weight:500}
+
+    /* Situations */
+    .situations-list{margin:2rem 0}
+    .situation{border-left:3px solid var(--border);padding:1.5rem 1.5rem 1.5rem 1.75rem;margin-bottom:1.25rem;background:white;border-bottom:1px solid var(--border);position:relative}
+    .situation.crisis{border-left-color:#ef4444}
+    .situation.pressure{border-left-color:#f59e0b}
+    .situation.watch{border-left-color:#60a5fa}
+    .sit-status{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem}
+    .status-crisis{color:#dc2626}
+    .status-pressure{color:#d97706}
+    .status-watch{color:#2563eb}
+    .sit-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:.6rem}
+    .sit-body{font-size:.88rem;line-height:1.8;color:var(--text)}
+    .sit-provisions{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.85rem}
+    .sit-prov{font-family:'JetBrains Mono',monospace;font-size:.6rem;background:var(--navy);color:var(--gold);padding:.15rem .5rem}
+
+    @media(max-width:900px){
+      .atlas-layout{grid-template-columns:1fr}
+      .ms-note{display:none}
+    }
+    @media(max-width:820px){
+      .nations-grid{grid-template-columns:1fr}
+      .world-main{padding:0 1rem 4rem}
+      .map-section-header{padding:1.25rem 1rem .6rem}
+    }
+  
+  /* ══════════ TORENTHIA STATS ══════════ */
+  .stats-band{background:var(--navy2);margin:4rem -2rem 0;padding:3.5rem 2rem 4rem}
+  .stats-inner{max-width:900px;margin:0 auto}
+  .stats-head{margin-bottom:2.5rem}
+  .stats-eye{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+  .stats-title{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:300;color:#f0ead8;margin:0 0 .6rem}
+  .stats-desc{font-size:.88rem;color:#8fa0b8;line-height:1.7;max-width:640px;margin:0}
+
+  .sblock{margin-top:3rem;position:relative}
+  .sblock:first-of-type{margin-top:0}
+  .sblock-vol{position:absolute;top:.15rem;right:0;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:#5a7a9a}
+  .sblock-eye{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+  .sblock-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:#f0ead8;margin:0 0 .4rem}
+  .sblock-sub{font-size:.8rem;color:#8fa0b8;line-height:1.6;max-width:640px;margin:0 0 1.3rem}
+
+  /* executive dials */
+  .dial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1rem}
+  .dial-card{background:#0c1524;border:1px solid rgba(201,168,76,.2);border-radius:4px;padding:1.3rem 1.4rem}
+  .dial-who{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:#f0ead8;line-height:1.2}
+  .dial-role{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.13em;text-transform:uppercase;color:#7f8fa6;margin-bottom:1.1rem}
+  .dial-metric{margin-bottom:1.05rem}
+  .dial-label{display:flex;justify-content:space-between;align-items:baseline;font-size:.75rem;color:#b9c4d4;margin-bottom:.4rem}
+  .dial-val{font-family:'JetBrains Mono',monospace;font-size:.95rem;font-weight:700}
+  .dial-val .dial-of{opacity:.5;font-size:.68rem;font-weight:400}
+  .dial-bar{height:9px;background:rgba(255,255,255,.08);border-radius:5px;position:relative}
+  .dial-fill{height:100%;border-radius:5px 0 0 5px}
+  .dial-thresh{position:absolute;top:-3px;bottom:-3px;width:2px;background:#f0ead8;opacity:.55}
+  .dial-thresh-lbl{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:.5rem;color:#f0ead8;opacity:.7;white-space:nowrap}
+  .tier-high{color:#4ade80} .fill-high{background:linear-gradient(90deg,#166534,#4ade80)}
+  .tier-mid{color:#facc15}  .fill-mid{background:linear-gradient(90deg,#a16207,#facc15)}
+  .tier-low{color:#fca5a5}  .fill-low{background:linear-gradient(90deg,#991b1b,#f87171)}
+  .dial-note{font-size:.72rem;color:#8b97a8;line-height:1.6;font-style:italic;margin-top:1rem;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.07)}
+
+  /* open slot */
+  .slot-card{background:#0c1524;border:1px solid rgba(201,168,76,.28);border-radius:4px;padding:1.5rem 1.6rem}
+  .slot-flag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.13em;text-transform:uppercase;color:#0a0f1a;background:var(--gold);padding:.22rem .55rem;border-radius:2px;margin-bottom:.9rem}
+  .slot-head{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:#f0ead8;margin-bottom:.55rem}
+  .slot-body{font-size:.85rem;color:#c2cbd8;line-height:1.7;margin:0 0 1.2rem}
+  .slot-track{display:flex;gap:.6rem;flex-wrap:wrap}
+  .slot-stage{flex:1;min-width:105px;background:#080f1c;border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:.7rem .6rem;text-align:center}
+  .slot-stage.active{border-color:var(--gold);background:#141c10}
+  .slot-stage-n{font-family:'JetBrains Mono',monospace;font-size:.5rem;letter-spacing:.11em;text-transform:uppercase;color:#7f8fa6;margin-bottom:.28rem}
+  .slot-stage.active .slot-stage-n{color:var(--gold)}
+  .slot-stage-l{font-size:.72rem;color:#d5dae3}
+  .slot-meta{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.07em;color:#5a7a9a;margin-top:1.1rem}
+
+  /* structural table */
+  .stbl-wrap{overflow-x:auto}
+  .stbl{width:100%;border-collapse:collapse;font-size:.8rem}
+  .stbl th{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);text-align:left;padding:.5rem .6rem;border-bottom:1px solid rgba(201,168,76,.3);font-weight:400;white-space:nowrap}
+  .stbl td{padding:.6rem;border-bottom:1px solid rgba(255,255,255,.06);color:#c2cbd8;vertical-align:top}
+  .stbl .c-num{text-align:right;font-family:'JetBrains Mono',monospace;white-space:nowrap}
+  .stbl th.c-num{text-align:right}
+  .stbl-name{display:block;font-family:'Cormorant Garamond',serif;font-size:1rem;color:#f0ead8}
+  .stbl-char{display:block;font-size:.68rem;color:#7f8fa6;line-height:1.4;margin-top:.1rem}
+  .stbl-sep td{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);padding-top:1.1rem;border-bottom:1px solid rgba(201,168,76,.3)}
+  .stbl tfoot td{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#f0ead8;border-top:1px solid rgba(201,168,76,.35);border-bottom:none;padding-top:.75rem}
+  .stbl-fn{color:var(--gold);cursor:help}
+  .rel-tag{font-size:.65rem;color:#9fb0c4;white-space:nowrap}
+  .rel-tag.rel-prov{color:#fbbf24}
+  /* Status/Progress column: color answers "should I be concerned", the popup answers "why".
+     States use "Status" (audit-compliance meaning); Territories use "Progress" (statehood-
+     process meaning) — deliberately separate vocabularies so the same word never means two
+     unrelated things (Corindal and Korda both used to read "Crisis" for unrelated reasons). */
+  .stat-pill{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.06em;padding:.16rem .42rem;border-radius:2px;white-space:nowrap}
+  .stat-green{background:#0e2a18;color:#4ade80}
+  .stat-yellow{background:#2a180a;color:#fbbf24}
+  .stat-red{background:#2a080e;color:#fca5a5}
+  .stat-none{color:#4a5a6a}
+  /* Hover/tap popup — same .dfn/.dfn-box pattern used on annotated.html and diagrams.html. */
+  .dfn{position:relative;display:inline-block;cursor:help}
+  .dfn-box{position:absolute;bottom:calc(100% + 8px);right:0;background:#0c1524;color:#e6ecf4;font-size:.7rem;line-height:1.65;padding:.65rem .85rem;border-radius:3px;width:240px;z-index:600;pointer-events:none;opacity:0;transition:opacity .15s;box-shadow:0 4px 18px rgba(0,0,0,.5);font-family:'Jost',sans-serif;font-weight:400;text-transform:none;letter-spacing:normal;white-space:normal;text-align:left;border:1px solid rgba(201,168,76,.35)}
+  .dfn-box::after{content:'';position:absolute;top:100%;right:18px;border:5px solid transparent;border-top-color:#0c1524}
+  .dfn:hover .dfn-box,.dfn.dfn-open .dfn-box{opacity:1;pointer-events:auto}
+  /* .stbl-wrap uses overflow-x:auto, which per spec computes overflow-y to auto as well — so
+     the wrap clips vertically and a popup on the first row has nowhere to go. .dfn-flip drops
+     the box below its pill instead; placeDfn() applies it when there isn't room above. */
+  .dfn-flip .dfn-box{bottom:auto;top:calc(100% + 8px)}
+  .dfn-flip .dfn-box::after{top:auto;bottom:100%;border-top-color:transparent;border-bottom-color:#0c1524}
+  .stbl-hint{font-size:.78rem;line-height:1.6;color:#9fb0c4;margin-bottom:.8rem}
+  /* Repeated column labels for the Territories half — the last column means something
+     different there ("Progress", statehood-process) than it does for States ("Status"). */
+  .stbl-subhead th{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);text-align:left;padding:.5rem .6rem;border-bottom:1px solid rgba(201,168,76,.3);font-weight:400;white-space:nowrap}
+  .stbl-subhead th.c-num{text-align:right}
+  .stbl-note{font-size:.68rem;color:#6f7f95;line-height:1.6;margin-top:1rem}
+
+  @media(max-width:700px){
+    .stats-band{margin-left:-1.2rem;margin-right:-1.2rem;padding:2.5rem 1.2rem 3rem}
+    .sblock-vol{display:none}
+    .stbl-char{display:none}
+  }
+
+  /* atlas link card */
+  .atlas-link{display:block;text-decoration:none;border:1px solid var(--border);border-radius:3px;background:var(--cream2);padding:1.4rem 1.6rem;transition:border-color .2s,background .2s}
+  .atlas-link:hover{border-color:var(--gold);background:#f3eee1}
+  .atlas-link-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--navy);margin-bottom:.4rem}
+  .atlas-link-desc{font-size:.85rem;color:var(--muted);line-height:1.7;max-width:640px}
+
+  /* width:fit-content keeps the dotted gold underline hugging the name. Without it the <a>
+     variant (state-profile links) inherits display:block from .stbl-name and stretches its
+     border the full width of the cell, drawing a long gold line across the row. The <button>
+     variant shrink-wraps on its own, which is why only profile-linked States showed it. */
+  .stbl-link{background:none;border:none;padding:0;margin:0;cursor:pointer;text-align:left;font:inherit;color:#f0ead8;border-bottom:1px dotted rgba(201,168,76,.5);transition:color .15s,border-color .15s;width:fit-content;text-decoration:none}
+  .stbl-link:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  .t-state.map-flash{fill:var(--gold)!important;font-weight:700}

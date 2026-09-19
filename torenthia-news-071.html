@@ -8,6 +8,11 @@ worldAuthor: "TNB City Desk"
 worldImage: "verentum-card.webp"
 worldPlaces: "verentum"
 worldBlurb: "Three nights of rail grinding, switch replacement, and platform work are finished. The South Loop returned to its regular timetable this morning, which is news mainly to the people who had to take the bus instead."
+worldId: "torenthia-news-071"
+worldArcs: []
+worldJurisdictions: []
+worldProvisions: []
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +31,7 @@ worldBlurb: "Three nights of rail grinding, switch replacement, and platform wor
 </head>
 <body class="paper-tnb">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -70,6 +75,7 @@ worldBlurb: "Three nights of rail grinding, switch replacement, and platform wor
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
 <script src="nav.js"></script>

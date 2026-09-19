@@ -5,6 +5,11 @@ worldDate: "13.05"
 worldTitle: "Sunderland Armed Formation Crosses Korda Border. One Torenthian Officer Wounded."
 worldOutlet: "RNN"
 worldBlurb: "Sunderland Internal Security Forces crossed approximately 800 meters into Korda Territory on Month 5 Day 8. One Torenthian coast guard officer wounded. LC Rehn has filed a formal note of protest."
+worldId: "torenthia-news-021"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§9.1"]
+worldRelated: ["torenthia-news-020.html", "torenthia-news-022.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +28,7 @@ worldBlurb: "Sunderland Internal Security Forces crossed approximately 800 meter
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="rnn-masthead" role="banner">
   <div class="rnn-masthead-inner">
     <div>
@@ -76,6 +81,7 @@ worldBlurb: "Sunderland Internal Security Forces crossed approximately 800 meter
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

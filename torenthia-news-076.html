@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Aleth Fenn"
 worldBlurb: "Norvane has refused the consent needed to protect Argent Ridge as a National Trust. The State says the same land is its best remaining housing option near the northern arrival corridor."
 worldPlaces: "argent-ridge,norvane,varek"
+worldId: "torenthia-news-076"
+worldArcs: ["lake-varda", "argent-ridge"]
+worldJurisdictions: ["Varek", "Norvane"]
+worldProvisions: ["§18.4"]
+worldRelated: ["torenthia-nrs-038.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +21,7 @@ worldPlaces: "argent-ridge,norvane,varek"
   <meta name="description" content="Norvane refuses consent to the Argent Ridge National Trust designation because it wants to preserve the tract's housing option for the northern arrival corridor.">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="site.css">
 </head>
-<body class="paper-torenthian"><a href="#main-content" class="skip-nav">Skip to main content</a><div id="site-nav"></div>
+<body class="paper-torenthian"><a href="#main-content" class="skip-nav">Skip to main content</a>{% include "nav.njk" %}
 <main id="main-content"><div class="article-wrap">
   <div class="article-section">The North &middot; Argent Ridge</div>
   <h1 class="article-headline">Norvane Says No to Riverglow. The Reason Is a Freight Shed.</h1>
@@ -34,4 +39,5 @@ worldPlaces: "argent-ridge,norvane,varek"
     <p>The citizen-repeal campaign continues on its separate track. If it succeeds, the Argent Ridge Act falls. The land would still be federal, still undesignated, and still capable of becoming the subject of another disposal statute later. The two processes now sit beside each other in public: one may stop a law, and the other is blocked by a State that needs the land for something most of the campaign's own supporters do not want to dismiss.</p>
   </div>
   <div class="article-nav"><a href="torenthia-nrs-038.html">&larr; Norvane's filing</a><a href="torenthia-state-norvane.html">Norvane profile &rarr;</a></div>
-</div></main>{% include "footer.njk" %}<script src="nav.js"></script></body></html>
+</div></main>{% include "related-world.njk" %}
+{% include "footer.njk" %}<script src="nav.js"></script></body></html>

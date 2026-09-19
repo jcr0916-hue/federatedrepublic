@@ -6,6 +6,11 @@ worldTitle: "Forty-Seven Words"
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "Three days after her off-mic remark went viral, Elin Thoss released a statement. It mentioned bridges. It mentioned Tuesday constituent meetings. It had nothing further to add about the Legat Consul race."
+worldId: "torenthia-news-029"
+worldArcs: []
+worldJurisdictions: ["Kelvant", "Selvane"]
+worldProvisions: []
+worldRelated: ["torenthia-news-028.html", "torenthia-news-030.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "Three days after her off-mic remark went viral, Elin Thoss released
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -106,6 +111,7 @@ worldBlurb: "Three days after her off-mic remark went viral, Elin Thoss released
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

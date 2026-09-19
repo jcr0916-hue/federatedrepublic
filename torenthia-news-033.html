@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Elin-Thoss-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Elin Thoss's border-infrastructure measure was a footnote a month ago. It clears committee this week with a Korda co-sponsor attached, and now every other Legat Consul candidate has to have an opinion on a bill that isn't even about their race."
+worldId: "torenthia-news-033"
+worldArcs: ["lake-varda", "fiscal-equalization"]
+worldJurisdictions: ["Selvane", "Korda"]
+worldProvisions: ["§12.2", "§14.2", "§12.6"]
+worldRelated: ["torenthia-news-032.html", "torenthia-news-035.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Elin Thoss's border-infrastructure measure was a footnote a month a
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -76,6 +81,7 @@ worldBlurb: "Elin Thoss's border-infrastructure measure was a footnote a month a
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

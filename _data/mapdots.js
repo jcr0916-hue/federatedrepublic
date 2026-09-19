@@ -1,9 +1,4 @@
-// Map dot -> relevant World entries, derived at BUILD TIME from the world collection by
-// keyword-matching each place's aliases against piece titles + blurbs. Newest 3 per dot.
-// Self-updating: publish a piece naming a place, it appears under that dot on next build.
-// korda-north was retired (canon: no northern Korda); its storyline folds into Norvane.
-import { readFileSync, readdirSync } from "node:fs";
-
+// Map labels and aliases only; record ordering comes from the shared world collection.
 const PLACES = {
   'norvane':    { label:'Norvane',     type:'crisis',     aliases:['Norvane'] },
   'rhondel':    { label:'Rhondel',     type:'crisis',     aliases:['Rhondel'] },
@@ -18,24 +13,4 @@ const PLACES = {
 };
 const TYPE_LABEL = { crisis:'Crisis', political:'Political', legal:'Legal', diplomatic:'Diplomatic' };
 
-function field(t, name){ const m = t.match(new RegExp(name+':\\s*"([^"]*)"')); return m ? m[1] : ''; }
-
-const pieces = readdirSync(".")
-  .filter(f => /^torenthia-(news|nrs|dispatch|sc).*\.html$/.test(f))
-  .map(f => { const t = readFileSync(f,"utf8"); if(!t.startsWith('---')) return null;
-    // Unposted mundane entries are discoverable in The Record, not hub alerts.
-    if (/^worldMundane:\s*true\s*$/m.test(t.split('---')[1])) return null;
-    return { url:f, title:field(t,'worldTitle'), blurb:field(t,'worldBlurb'), date:field(t,'worldDate'),
-             places:field(t,'worldPlaces').split(',').map(s=>s.trim()).filter(Boolean) }; })
-  .filter(Boolean);
-
-const out = {};
-for (const [key, p] of Object.entries(PLACES)) {
-  const hits = pieces
-    .filter(pc => pc.places.includes(key) || p.aliases.some(a => (pc.title+' '+pc.blurb).toLowerCase().includes(a.toLowerCase())))
-    .sort((a,b) => b.date.localeCompare(a.date))
-    .slice(0,3)
-    .map(pc => ({ url:pc.url, title:pc.title, date:pc.date }));
-  out[key] = { label:p.label, type:p.type, typeLabel:TYPE_LABEL[p.type], entries:hits };
-}
-export default out;
+export default Object.fromEntries(Object.entries(PLACES).map(([key,p])=>[key,{...p,typeLabel:TYPE_LABEL[p.type]}]));

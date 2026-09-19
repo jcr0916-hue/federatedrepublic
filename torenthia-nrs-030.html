@@ -5,6 +5,11 @@ worldDate: "13.11"
 worldTitle: "Petition for Redacted Release — Varda Crossing Intelligence Summary"
 worldOutlet: "National Record System"
 worldBlurb: "A petition under §10.2 seeking release of the redacted portions of the Month 6 Varda Crossing summary, filed by the sister of one of the two border personnel killed."
+worldId: "torenthia-nrs-030"
+worldArcs: ["korda", "lake-varda"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§10.2", "§1.19.b"]
+worldRelated: ["torenthia-nrs-029.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "A petition under §10.2 seeking release of the redacted portions of
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -77,6 +82,7 @@ worldBlurb: "A petition under §10.2 seeking release of the redacted portions of
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

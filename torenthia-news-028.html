@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Ines-Carrow-card.webp"
 worldAuthor: "Dara Voss"
 worldBlurb: "Twelve days after Ines Carrow filed a formal inquiry through the Foreign Affairs Directorate, the Sunderland Interim Authority responded. It confirmed receipt. It answered nothing she asked."
+worldId: "torenthia-news-028"
+worldArcs: []
+worldJurisdictions: ["Rhovane", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-027.html", "torenthia-news-029.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Twelve days after Ines Carrow filed a formal inquiry through the Fo
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -86,6 +91,7 @@ worldBlurb: "Twelve days after Ines Carrow filed a formal inquiry through the Fo
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

@@ -28,9 +28,9 @@
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
-<div id="site-nav"></div>
-<main class="state-profile" id="main-content">
-  <div role="navigation" aria-label="State navigation"><a href="torenthia.html">Torenthia</a> / States{% for s in statepages %} · <a href="{{ s.url }}"{% if s.name == stateName %} aria-current="page"{% endif %}>{{ s.name }}</a>{% endfor %}</div>
+{% include "nav.njk" %}
+<main class="state-profile state-{{ stateName | lower }}" id="main-content">
+  <div role="navigation" aria-label="State navigation"><a href="torenthia.html">Torenthia</a> / <a href="republic-at-a-glance.html">States and Territories</a>{% for s in statepages %} · <a href="{{ s.url }}"{% if s.name == stateName %} aria-current="page"{% endif %}>{{ s.name }}</a>{% endfor %}</div>
   {% for s in statepages %}{% if s.name == stateName %}
   <p class="state-kicker">{{ s.char }}</p>
   <div class="state-heading">
@@ -42,17 +42,17 @@
     <div><dt>Federal Senate</dt><dd>{{ s.senate }} seats</dd></div>
     <div><dt>Federal Assembly</dt><dd>{{ s.assembly }} seats</dd></div>
     <div><dt>State audit</dt><dd>{{ s.audit }}</dd></div>
-  </dl>
+  </dl><figure class="state-map-crop"><svg viewBox="{{ s.left * 15.36 - 220 }} {{ s.top * 10.24 - 120 }} 440 240" role="img" aria-label="Location of {{ s.name }} in the Republic"><image href="region-map-tier2-base.webp" width="1536" height="1024"/><circle cx="{{ s.left * 15.36 }}" cy="{{ s.top * 10.24 }}" r="12" fill="var(--gold)" stroke="var(--navy)" stroke-width="4"/></svg><figcaption>{{ s.name }} · location marker, not a boundary. <a href="republic-at-a-glance.html#{{ s.name | lower }}">Full labeled map and directory</a>.</figcaption></figure><section class="status-panel"><h2>State Position</h2><p>{{ s.summary }}</p><p><a href="republic-at-a-glance.html#{{ s.name | lower }}">Locate {{ s.name }} in the Republic →</a></p></section><div class="mechanism-strip"><a href="annotated.html#s15-1">State powers</a><a href="annotated.html#s3-2">Assembly representation</a><a href="annotated.html#s15-2">Statehood Audit</a></div>
   {% endif %}{% endfor %}
   {{ content | safe }}
   <h2>Read the Constitution</h2>
   <p><a href="State%20Constitutions/{{ stateName | lower }}-state-constitution.md">{{ stateName }} State Constitution (Markdown)</a>. This profile summarizes the State text; the <a href="annotated.html">federal Constitution</a> governs wherever the two conflict.</p>
   <h2>In the public record</h2>
   <ul class="state-coverage">
-  {% for piece in collections.world | stateCoverage(stateName) %}
+  {% for piece in collections.world | stateCoverage(stateName) | take(6) %}
     <li><a href="{{ piece.url }}">{{ piece.data.worldTitle }}</a><small>{{ piece.data.worldOutlet }} · {{ piece.data.worldDate }}</small></li>
   {% endfor %}
-  </ul>
+  </ul><p><a href="torenthia-record.html?place={{ stateName }}">Complete related archive →</a></p>
 </main>
 {% include "footer.njk" %}
 <script src="nav.js"></script>

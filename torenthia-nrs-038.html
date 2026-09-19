@@ -6,6 +6,11 @@ worldTitle: "Notice of Refusal — Norvane, National Trust Designation, Argent R
 worldOutlet: "National Record System"
 worldBlurb: "Norvane declines consent to the proposed Argent Ridge National Trust designation, citing the State's immediate need to preserve the parcel's residential development option for the northern arrival corridor."
 worldPlaces: "argent-ridge,norvane"
+worldId: "torenthia-nrs-038"
+worldArcs: ["lake-varda", "argent-ridge"]
+worldJurisdictions: ["Varek", "Norvane"]
+worldProvisions: ["§18.4"]
+worldRelated: ["torenthia-nrs-035.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +32,7 @@ worldPlaces: "argent-ridge,norvane"
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
   <div class="nrs-masthead"><div class="nrs-masthead-inner"><div class="nrs-eyebrow">National Record System &middot; State Consent &middot; Year 13</div><div class="nrs-doc-id">NRS-Y13-0664</div><div class="nrs-doc-subtitle">National Trust Designation &mdash; Host State Response</div></div></div>
   <main id="main-content"><div class="nrs-body">
     <div class="nrs-section-head">Record Identification</div>
@@ -44,6 +49,7 @@ worldPlaces: "argent-ridge,norvane"
     <p>The host-State consent requirement of &sect;18.4 is not satisfied. The proposed National Trust designation does not take effect.</p>
     <p><em>End of record.</em></p>
   </div><div class="nrs-nav"><a href="torenthia-nrs-035.html">&larr; Varek Consent</a><a href="torenthia-record.html">The Record &rarr;</a></div></main>
-  {% include "footer.njk" %}<script src="nav.js"></script>
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}<script src="nav.js"></script>
 </body>
 </html>

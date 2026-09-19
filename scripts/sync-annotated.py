@@ -53,6 +53,6 @@ for a in source:
 count = sum(len(a['provisions']) for a in source)
 articles = sum(not a.get('preamble', False) for a in source)
 page = re.sub(r'Annotated Edition — \d+ provisions &nbsp;·&nbsp; \d+ articles',
-              f'Annotated Edition — {count} provisions &nbsp;·&nbsp; {articles} articles', page)
+              'Annotated Edition — {{ constitution.provisions }} provisions &nbsp;·&nbsp; {{ constitution.articles }} articles', page)
 Path('annotated.html').write_text(page)
 print('Annotated provisions synchronized.')

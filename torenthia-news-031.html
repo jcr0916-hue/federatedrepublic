@@ -6,6 +6,11 @@ worldTitle: "Nine Minutes at Varda Crossing"
 worldOutlet: "The Torenthian"
 worldAuthor: "Dara Voss"
 worldBlurb: "A second Sunderland incursion — larger, longer, and this time with casualties. Two Korda border personnel are dead and the formation held Republic ground for nine minutes before withdrawing. The Legat Consul race stops being about a river."
+worldId: "torenthia-news-031"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§14.2"]
+worldRelated: ["torenthia-news-030.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "A second Sunderland incursion — larger, longer, and this time wit
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -77,6 +82,7 @@ worldBlurb: "A second Sunderland incursion — larger, longer, and this time wit
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldImage: "Elin-Thoss-card.webp"
 worldBlurb: "The count nobody outside her rooms had seen became public at 4:14 on Thursday afternoon. Elin Thoss is Civic Consul. The number was not close, and the distance between it and the bare majority she refused to settle for is the first thing to know about the government she is now going to build."
+worldId: "torenthia-news-042"
+worldArcs: ["korda"]
+worldJurisdictions: ["Aldenmere", "Selvane", "Korda", "Morantine"]
+worldProvisions: ["§3.7", "§2.6", "§12.6", "§3.2", "§2.5", "§2.7"]
+worldRelated: ["torenthia-news-041.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The count nobody outside her rooms had seen became public at 4:14 o
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -116,6 +121,7 @@ worldBlurb: "The count nobody outside her rooms had seen became public at 4:14 o
     </div>
   </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

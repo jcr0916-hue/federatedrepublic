@@ -5,6 +5,11 @@ worldDate: "13.02"
 worldTitle: "MA Remedy Plan — Korda Territory Fiscal Equalization Failure"
 worldOutlet: "National Record System"
 worldBlurb: "NRS-Y13-0089. Monetary Authority remedy plan submitted to the Assembly and both Consuls following the EM's interim fiscal review of Korda Territory. Submitted Year 13, Month 2."
+worldId: "torenthia-nrs-006"
+worldArcs: ["lake-varda", "fiscal-equalization"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§12.6", "§12.1.b", "§6.3"]
+worldRelated: ["torenthia-nrs-005.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +44,7 @@ worldBlurb: "NRS-Y13-0089. Monetary Authority remedy plan submitted to the Assem
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -97,6 +102,7 @@ worldBlurb: "NRS-Y13-0089. Monetary Authority remedy plan submitted to the Assem
 </div>
 </main>
 
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

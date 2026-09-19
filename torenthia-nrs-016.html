@@ -5,6 +5,11 @@ worldDate: "13.09"
 worldTitle: "Kelvant-Korda Lake Corridor Petition — Signature Threshold Certified"
 worldOutlet: "National Record System"
 worldBlurb: "The petition to hold a referendum on merging Korda's lake-corridor territory with Kelvant has cleared its signature threshold — no vote has happened yet. Before any referendum can be held, the JMC must now determine whether what remains of Korda could ever stand as a State in its own right."
+worldId: "torenthia-nrs-016"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.4", "§15.5.a", "§15.2"]
+worldRelated: ["torenthia-nrs-015.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "The petition to hold a referendum on merging Korda's lake-corridor 
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -79,6 +84,7 @@ worldBlurb: "The petition to hold a referendum on merging Korda's lake-corridor 
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

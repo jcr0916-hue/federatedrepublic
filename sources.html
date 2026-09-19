@@ -86,7 +86,7 @@
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 
   <main class="fr-page" id="main-content">
@@ -99,10 +99,10 @@
       </div>
     </header>
 
-    <!-- SECTION 1: FOUNDATIONAL DOCUMENTS -->
+    <div class="link-row" aria-label="Sources sections"><a href="#foundational">Foundational Documents</a><a href="#tradition">Political and Philosophical Tradition</a><a href="#reading">Suggested Reading</a><a href="#origins">AI origins</a></div><!-- SECTION 1: FOUNDATIONAL DOCUMENTS -->
     <div class="sources-section">
       <span class="section-label">Section I</span>
-      <h2 class="section-title">Foundational Documents</h2>
+      <h2 class="section-title" id="foundational">Foundational Documents</h2>
       <p class="section-intro">The constitutional texts this document draws from directly — as design ancestors, as instructive successes, and in one case as a study in technically sophisticated design deployed in the service of a catastrophic wrong.</p>
 
       <div class="source-entry">
@@ -148,7 +148,7 @@
       </div>
 
       <div class="source-entry">
-        <div class="source-title">The Constitution of the Confederate States of America</div>
+        <span class="section-kicker">Negative design case</span><div class="source-title">The Constitution of the Confederate States of America</div>
         <div class="source-author">Montgomery Convention · 1861</div>
         <div class="source-note">Instructive in a way its authors did not intend. The Confederate constitution improved on the US constitution in several technical respects — a single non-renewable Legat Consul's term, a line-item veto, explicit budget transparency requirements — while enshrining the catastrophic wrong at its center. The lesson is not only moral. It is that technically sophisticated constitutional design can serve fundamentally unjust ends, and that the quality of institutional design and the justice of the purposes it serves are entirely separable questions. The six non-derogable rights in this document exist partly because of that lesson.</div>
       </div>
@@ -208,7 +208,7 @@
     <!-- SECTION 2: PHILOSOPHICAL TRADITION -->
     <div class="sources-section">
       <span class="section-label">Section II</span>
-      <h2 class="section-title">The Philosophical Tradition</h2>
+      <h2 class="section-title" id="tradition">The Philosophical Tradition</h2>
       <p class="section-intro">Organised not by philosopher but by the question each addresses in this document. Constitutional design is applied political philosophy — these are the thinkers whose questions shaped the provisions.</p>
 
       <div class="phil-grid">
@@ -291,7 +291,7 @@
     <!-- SECTION 3: SUGGESTED READING -->
     <div class="sources-section">
       <span class="section-label">Section III</span>
-      <h2 class="section-title">Suggested Reading</h2>
+      <h2 class="section-title" id="reading">Suggested Reading</h2>
       <p class="section-intro">A curated list for readers who want to go further. Not exhaustive and not academic — chosen because each book is genuinely readable and addresses a question this document takes seriously.</p>
 
       <div class="reading-entry">
@@ -368,7 +368,7 @@
 
     </div>
 
-    <div class="closing-note">
+    <div class="closing-note" id="origins"><p><a href="ai-features.html">How the optional AI features handle requests and privacy →</a></p>
       <p><strong>On this document's own origins — and the role of AI.</strong> The constitution of the Federated Republic was developed through an extended collaborative process between its author and two AI systems: Claude (Anthropic) and Google Gemini. The author brought a lifetime of reading across the traditions listed above — the philosophical texts, constitutional documents, and political theory that form this document's intellectual inheritance. The AI systems contributed the capacity to organize, synthesize, draft, stress-test, and iteratively refine that material at a scale and pace that would not have been possible working alone.</p>
       <p>This is not a disclaimer. It is an accurate description of how the document was made. The constitutional judgments — what to include, what to discard, where to draw the line between honest obligation and false promise, what the document should be — belong to its author. The AI assistance made it possible to work through the implications of those judgments systematically, to catch internal contradictions, to draft and revise provisions through dozens of iterations, and to build the accompanying essays, scenarios, and website alongside the document itself.</p>
       <p>We think that kind of transparency about AI involvement in intellectual work is the right standard. Constitutional design is serious work. The people who engage with this document deserve to know how it was produced. The traditions listed on this page — Cicero, Arendt, Paine, the Federalist Papers — were all produced by people working with the tools available to them. These are ours.</p>

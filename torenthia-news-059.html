@@ -7,6 +7,11 @@ worldOutlet: "RNN"
 worldAuthor: "Dara Voss"
 worldImage: "world-map-card.webp"
 worldBlurb: "Five weeks of coverage has asked when the JMC will publish its judicial transition framework. The better question, which nobody asked, is whether it was ever obliged to produce one at all."
+worldId: "torenthia-news-059"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.5.a", "§15.2", "§9.7", "§9.1"]
+worldRelated: ["torenthia-news-058.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Five weeks of coverage has asked when the JMC will publish its judi
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -91,6 +96,7 @@ worldBlurb: "Five weeks of coverage has asked when the JMC will publish its judi
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

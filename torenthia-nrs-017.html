@@ -5,6 +5,11 @@ worldDate: "13.09"
 worldTitle: "Council of Ministers — Ordinary Session Summary"
 worldOutlet: "National Record System"
 worldBlurb: "The Council of Ministers met in ordinary session. Six items, four dispositions, one deferral. No cross-domain lead designation was proposed or made."
+worldId: "torenthia-nrs-017"
+worldArcs: ["lake-varda"]
+worldJurisdictions: []
+worldProvisions: ["§2.14", "§2.14.a", "§2.14.b"]
+worldRelated: ["torenthia-nrs-016.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "The Council of Ministers met in ordinary session. Six items, four d
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -80,6 +85,7 @@ worldBlurb: "The Council of Ministers met in ordinary session. Six items, four d
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

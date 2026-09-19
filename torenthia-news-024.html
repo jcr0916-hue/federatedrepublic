@@ -6,6 +6,11 @@ worldTitle: "Toren River Working Group Reaches Provisional Formula Agreement. On
 worldOutlet: "The Torenthian"
 worldAuthor: "Yena Corran"
 worldBlurb: "After twelve sessions over eighteen months, the joint Torenthia-Caldris working group on the eastern tributary has reached provisional agreement on the dry-season minimum flow formula. One item remains outstanding."
+worldId: "torenthia-news-024"
+worldArcs: []
+worldJurisdictions: ["Aldenmere", "Varek"]
+worldProvisions: ["§3.6"]
+worldRelated: ["torenthia-news-023.html", "torenthia-nrs-008.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +37,7 @@ worldBlurb: "After twelve sessions over eighteen months, the joint Torenthia-Cal
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead" role="banner">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -79,6 +84,7 @@ worldBlurb: "After twelve sessions over eighteen months, the joint Torenthia-Cal
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

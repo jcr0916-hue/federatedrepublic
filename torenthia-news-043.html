@@ -6,6 +6,11 @@ worldTitle: "Thoss Names Her Ministers, and the List Is the Receipt"
 worldOutlet: "RNN"
 worldImage: "Elin-Thoss-Press-Conference-card.webp"
 worldBlurb: "Eleven days after the tally, the Civic Consul's side of the Council of Ministers published to the National Record System — and the names answer the question the whole Republic has been asking about what the 274 were promised. The surprise is not who is on the list. It is how she intends to pay."
+worldId: "torenthia-news-043"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Korda", "Morantine"]
+worldProvisions: ["§2.14", "§2.5", "§12.6"]
+worldRelated: ["torenthia-news-042.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "Eleven days after the tally, the Civic Consul's side of the Council
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="rnn-masthead" role="banner">
   <div class="rnn-masthead-inner">
     <div>
@@ -92,6 +97,7 @@ worldBlurb: "Eleven days after the tally, the Civic Consul's side of the Council
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

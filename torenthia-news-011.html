@@ -5,6 +5,11 @@ worldDate: "12.12"
 worldTitle: "Asdal: 'Is Vael Looking at the Right Border?'"
 worldOutlet: "RNN"
 worldBlurb: "RNN anchor Renn Asdal's Thursday night segment on Tobias Vael's Varek speech ran four minutes. In Verentum, people watched it twice."
+worldId: "torenthia-news-011"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Varek", "Rhovane", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-010.html", "torenthia-news-012.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +61,7 @@ worldBlurb: "RNN anchor Renn Asdal's Thursday night segment on Tobias Vael's Var
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="rnn-masthead" role="banner">
     <div class="rnn-top-bar">
@@ -147,7 +152,8 @@ worldBlurb: "RNN anchor Renn Asdal's Thursday night segment on Tobias Vael's Var
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

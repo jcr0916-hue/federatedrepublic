@@ -6,6 +6,11 @@ worldTitle: "The Arithmetic of Being Counted"
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "A petition table reached Korda Territory this week. Member Dessa Orin will not say whether she signed. What she will say is that Korda counts for exactly one thing under §13.1, counts for rather less under §12.6, and that she has noticed which."
+worldId: "torenthia-news-040"
+worldArcs: ["korda"]
+worldJurisdictions: ["Aldenmere", "Kelvant", "Varek", "Korda"]
+worldProvisions: ["§13.1", "§12.6"]
+worldRelated: ["torenthia-news-039.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "A petition table reached Korda Territory this week. Member Dessa Or
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -124,6 +129,7 @@ worldBlurb: "A petition table reached Korda Territory this week. Member Dessa Or
     </div>
   </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

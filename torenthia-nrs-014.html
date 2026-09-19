@@ -5,6 +5,11 @@ worldDate: "13.09"
 worldTitle: "Council of Ministers — Session Summary Record"
 worldOutlet: "National Record System"
 worldBlurb: "The Council's first session with the new ministers seated. A summary record is required for every session and the subject of every session is unclassifiable — so the Republic gets to read, in the ordinary bureaucratic register, exactly which matters crossed between the two executives in the fortnight after a government changed hands."
+worldId: "torenthia-nrs-014"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Norvane"]
+worldProvisions: ["§2.14", "§2.1", "§12.6", "§2.14.b"]
+worldRelated: ["torenthia-nrs-013.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "The Council's first session with the new ministers seated. A summar
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -96,6 +101,7 @@ worldBlurb: "The Council's first session with the new ministers seated. A summar
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

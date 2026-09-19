@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Ines-Carrow-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Director of Foreign Affairs Ines Carrow addressed the Verentum Forum on the Republic's eastern policy at Year 12. She did not announce a candidacy for Legat Consul. She did not need to."
+worldId: "torenthia-news-006"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Aldenmere", "Rhovane"]
+worldProvisions: []
+worldRelated: ["torenthia-news-005.html", "torenthia-news-007.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Director of Foreign Affairs Ines Carrow addressed the Verentum Foru
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -113,7 +118,8 @@ worldBlurb: "Director of Foreign Affairs Ines Carrow addressed the Verentum Foru
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

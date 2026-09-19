@@ -7,6 +7,11 @@ worldOutlet: "TNB Caldenmere"
 worldAuthor: "Lenne Akar"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Joint Monitor Council cleared the Kelvant-Korda referendum to proceed. The vote was two to one, and the dissent — published alongside the finding, as the Constitution requires — is the part people are actually reading."
+worldId: "torenthia-news-052"
+worldArcs: ["korda"]
+worldJurisdictions: ["Caldenmere", "Kelvant", "Korda"]
+worldProvisions: ["§15.5.a", "§15.2", "§15.4"]
+worldRelated: ["torenthia-news-051.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Joint Monitor Council cleared the Kelvant-Korda referendum to p
 </head>
 <body class="paper-tnb">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -89,6 +94,7 @@ worldBlurb: "The Joint Monitor Council cleared the Kelvant-Korda referendum to p
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

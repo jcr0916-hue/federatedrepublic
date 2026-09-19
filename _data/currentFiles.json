@@ -1,0 +1,91 @@
+[
+  {
+    "id": "korda",
+    "title": "Korda: One Territory, Competing Futures",
+    "short": "Korda",
+    "asOf": "13.12",
+    "summary": "The Supreme Court has upheld the concurrent-petition determination. The Convention has voted to move its remaining sessions into Korda; neither petition has been decided.",
+    "records": [
+      "torenthia-nrs-034",
+      "torenthia-news-075",
+      "torenthia-nrs-039",
+      "torenthia-sc-002",
+      "torenthia-news-079",
+      "torenthia-news-081"
+    ],
+    "provisions": [
+      "§15.4",
+      "§15.5.a"
+    ],
+    "jurisdictions": [
+      "Korda",
+      "Kelvant"
+    ],
+    "question": "Can one proposed resolution address the corridor and the whole Territory together?"
+  },
+  {
+    "id": "lake-varda",
+    "title": "Lake Varda: Diplomacy After the Crisis",
+    "short": "Lake Varda",
+    "asOf": "13.12",
+    "summary": "Caldris and Valedon have accepted the proposed conference. Valedon offers to host and wants navigation and civilian safety on the agenda; participation has not settled the dispute.",
+    "records": [
+      "torenthia-nrs-032",
+      "torenthia-news-070",
+      "torenthia-news-077",
+      "torenthia-news-080"
+    ],
+    "provisions": [
+      "§2.1",
+      "§14.1",
+      "§10.2"
+    ],
+    "jurisdictions": [
+      "Norvane",
+      "Rhovane"
+    ],
+    "question": "What can diplomacy resolve while the public record remains contested?"
+  },
+  {
+    "id": "fiscal-equalization",
+    "title": "Fiscal Equalization: The Domestic Test",
+    "short": "Fiscal Equalization",
+    "asOf": "13.11",
+    "summary": "The Executive Monitor published interval data without finding a constitutional failure. Subsequent reporting describes a committee that has not reconvened; publication alone has not produced a revised formula.",
+    "records": [
+      "torenthia-news-043",
+      "torenthia-news-046",
+      "torenthia-news-049",
+      "torenthia-news-062"
+    ],
+    "provisions": [
+      "§12.6"
+    ],
+    "jurisdictions": [
+      "Korda",
+      "Morantine"
+    ],
+    "question": "What happens when the evidence changes but no constitutional trigger compels a response?"
+  },
+  {
+    "id": "argent-ridge",
+    "title": "Argent Ridge: Consent, Housing, and the National Trust",
+    "short": "Argent Ridge",
+    "asOf": "13.12",
+    "summary": "Varek has consented to National Trust designation for its portion. Norvane has refused consent for its parcel, citing housing needs near the northern arrival corridor. The two positions remain distinct.",
+    "records": [
+      "torenthia-news-060",
+      "torenthia-news-063",
+      "torenthia-news-069",
+      "torenthia-news-076"
+    ],
+    "provisions": [
+      "§18.4"
+    ],
+    "jurisdictions": [
+      "Varek",
+      "Norvane"
+    ],
+    "question": "How does preservation proceed when the affected States disagree about what the land must do?"
+  }
+]

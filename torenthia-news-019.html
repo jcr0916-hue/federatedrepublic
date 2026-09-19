@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Seren-Mak-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Assembly member Seren Mak responded to the Monetary Authority's Korda remedy plan within hours of its NRS publication. She was the first declared candidate to do so."
+worldId: "torenthia-news-019"
+worldArcs: ["korda", "lake-varda"]
+worldJurisdictions: ["Rhovane", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-018.html", "torenthia-news-020.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Assembly member Seren Mak responded to the Monetary Authority's Kor
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="masthead" role="banner">
   <div class="masthead-inner">
@@ -90,6 +95,7 @@ worldBlurb: "Assembly member Seren Mak responded to the Monetary Authority's Kor
 </div>
 </main>
 
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

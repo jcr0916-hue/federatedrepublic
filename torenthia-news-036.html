@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Elin-Thoss-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Everyone has spent the cycle watching the Legat Consul race. A handful of Assembly members have started asking whether the more interesting question is about the other chair — the one the Assembly fills itself."
+worldId: "torenthia-news-036"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Selvane"]
+worldProvisions: []
+worldRelated: ["torenthia-news-035.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Everyone has spent the cycle watching the Legat Consul race. A hand
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -79,6 +84,7 @@ worldBlurb: "Everyone has spent the cycle watching the Legat Consul race. A hand
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

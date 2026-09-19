@@ -8,6 +8,11 @@ worldAuthor: "Aleth Fenn"
 worldImage: "world-map-card.webp"
 worldPlaces: "caldris lake-varda"
 worldBlurb: "Caldris has accepted Torenthia's proposal for a regional conference on Lake Varda. That is enough to make the idea real, but not enough to give it a date, a venue, or a third chair."
+worldId: "torenthia-news-070"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-nrs-032.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +31,7 @@ worldBlurb: "Caldris has accepted Torenthia's proposal for a regional conference
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -76,6 +81,7 @@ worldBlurb: "Caldris has accepted Torenthia's proposal for a regional conference
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
 <script src="nav.js"></script>

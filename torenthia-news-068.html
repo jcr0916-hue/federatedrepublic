@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldImage: "Elin-Thoss-card.webp"
 worldBlurb: "Elin Thoss took office with 274 Assembly votes. Two months later, an internal count puts her working support at 266 — still a majority, still a cushion, but no longer the same government she started with."
+worldId: "torenthia-news-068"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Korda", "Morantine"]
+worldProvisions: ["§2.6", "§12.6"]
+worldRelated: ["torenthia-news-067.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Elin Thoss took office with 274 Assembly votes. Two months later, a
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="masthead">
   <div class="masthead-inner">
@@ -121,6 +126,7 @@ worldBlurb: "Elin Thoss took office with 274 Assembly votes. Two months later, a
   </div>
 </main>
 
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 <script src="nav.js"></script>
 </body>
