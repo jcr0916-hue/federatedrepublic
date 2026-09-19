@@ -65,7 +65,7 @@ export default function (eleventyConfig) {
   // Assets Eleventy does not template — copy through untouched.
   // If any of these is missing from _site, every page that uses it 404s.
   const passthrough = [
-    "site.css", "links.css", "republic.css", "nav.js", "discovery.js", "map-data.js", "search-index.js", "sw.js",
+    "site.css", "links.css", "republic.css", "nav.js", "discovery.js", "related-rail.js", "map-data.js", "search-index.js", "sw.js",
     "favicon.ico", "favicon-32.png", "apple-touch-icon.png",
     "crossroads-engine.js", "korda-crossroads.json", "tier2-borders.json", "tier2-labels.json",
     "test-crossroads.json",
