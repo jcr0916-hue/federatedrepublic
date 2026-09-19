@@ -1,7 +1,7 @@
 # Constitutional Design Principles — Review Reference
 
-**Status:** working reference, assembled 13.09. The ten principles have been in active use across
-scenarios and amendment rationales for months, but had never been written down in one place. This
+**Status:** working reference, assembled 13.09 and expanded 19.09. The twelve principles have been in active use across
+scenarios, amendment rationales, and design sessions, but had never been written down in one place. This
 document reconstructs them from actual usage in `scenario-the-ledger.html`,
 `scenario-the-classification.html`, `constitutional-history-archive.html`, and prior design sessions.
 
@@ -122,9 +122,46 @@ The void rule means "abuse fails retroactively, not just prospectively."*
 
 ---
 
+## FAMILY D — "Does this process feel like it belongs to the same Constitution?"
+
+Tests for procedural coherence across the document. They do not require every mechanism to be identical;
+they require differences to be deliberate rather than accidental.
+
+### 11. Process Symmetry  [CORE]
+**Canonical form:** where constitutional functions are materially similar, their procedures should be
+materially similar unless a meaningful difference in role, legitimacy, consequence, or risk requires
+divergence.
+**Asks:** if two constitutional mechanisms perform the same kind of function, do they follow the same
+basic architecture unless there is a real constitutional reason not to?
+**Catches:** arbitrary procedural divergence; parallel offices governed by unrelated rules; hidden
+policy choices created simply because one process was drafted at a different time from another.
+*Standing example: Civic Consul and Legat Consul incapacity procedures should mirror one another where
+the constitutional problem is the same, with differences only where the offices' roles or succession
+structures actually require them.*
+
+### 12. Procedural Familiarity  [CORE]
+**Canonical form:** constitutional procedures should reuse familiar actors, thresholds, stages, and
+failure mechanisms so that citizens can recognize the structure of a process even where its application
+differs.
+**Asks:** does this process use the Constitution's established procedural grammar, or invent a new one
+without a meaningful reason?
+**Catches:** one-off machinery; unnecessary new thresholds; unfamiliar decision stages; bespoke
+fallbacks where an established constitutional mechanism would do the same work.
+**Review rule:** differences should reflect constitutional purpose, consequence, legitimacy, or risk —
+not novelty for its own sake.
+
+**Shared test question:** *Does this process feel like it belongs to the same Constitution?*
+
+**Working distinction:** Process Symmetry compares two materially similar functions to each other.
+Procedural Familiarity asks whether any process, even a unique one, is built from recognizable pieces of
+the Constitution's existing procedural language. In shorthand: **similar function, familiar process;
+different process only for a meaningful reason.**
+
+---
+
 ## DRAFTING-LEVEL PRINCIPLE  (added 13.09, John)
 
-**Not one of the ten** — this operates on a different axis. The ten ask whether a provision is
+**Not one of the twelve** — this operates on a different axis. The twelve ask whether a provision is
 *designed* correctly. This asks whether it is *pitched* at the right level.
 
 **Constitutional language specifies the obligation and its floor. Statute specifies the machinery.**
@@ -161,7 +198,8 @@ its drafting scrutinized:
 2. **Family A** — should this exist here, in one place, as its own thing?
 3. **Family B** — what does a bad-faith actor do with it, and what happens when it fails?
 4. **Family C** — where does its legitimacy come from, and who can see it operate?
-5. **Internal consistency** — does it contradict itself, or any other provision?
+5. **Family D** — does its procedure match comparable functions and reuse familiar constitutional machinery?
+6. **Internal consistency** — does it contradict itself, or any other provision?
 
 **Open boundary questions — already flagged in standing notes, still unresolved:**
 1. **Actor Test vs Institution Test** may be *sequential* rather than parallel — Institution Test
@@ -172,6 +210,6 @@ its drafting scrutinized:
 3. **Bad-Faith Test may be a subspecies of Graceful Degradation** — bad-faith exploitation is
    arguably just one category of failure state.
 
-None of this has been run through a structured analytic technique. The Ten Tests are themselves the
+None of this has been run through a structured analytic technique. The Twelve Tests are themselves the
 first paper in the design-rationale series, and that paper is where the clustering should be settled
 rather than assumed.
