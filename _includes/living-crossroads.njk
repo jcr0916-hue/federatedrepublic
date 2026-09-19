@@ -1,11 +1,21 @@
 <section class="living-crossroads" aria-labelledby="crossroads-heading">
-  <div class="crossroads-eyebrow">Play the constitutional crossroads · Non-canon</div>
+  <div class="crossroads-eyebrow">An interactive series · Non-canon</div>
   <h2 id="crossroads-heading">Living Crossroads</h2>
-  <p class="crossroads-intro">Step into the room where a constitutional question becomes a political choice. The decisions are yours; the real story proceeds independently.</p>
-  <a class="crossroads-feature" href="crossroads.html?game=korda-crossroads.json">
-    <span class="crossroads-label">Now playing · Two delegates · Six scenes · Five endings</span>
-    <h3>The Korda Convention</h3>
-    <p>Two petitions. Thirty-three delegates. Eighty-seven days. Play Sena Threll or Davin Kesh and try to bring Korda’s competing claims to a resolution—before the clock runs out.</p>
-    <span class="crossroads-action">Enter the Convention &rarr;</span>
-  </a>
+  {% if crossroads.active %}
+  <a class="crossroads-feature" href="{{ crossroads.url }}" aria-label="Play Living Crossroads: {{ crossroads.title }}">
+  {% else %}
+  <div class="crossroads-feature crossroads-inactive">
+  {% endif %}
+    <img class="crossroads-art" src="living-crossroads.jpg" width="1536" height="1024" alt="Stone paths branching toward illuminated doors of a civic assembly" loading="lazy" decoding="async">
+    <div class="crossroads-caption">
+      {% if crossroads.active %}
+      <span class="crossroads-label">Now playing</span>
+      <h3>{{ crossroads.title }}</h3>
+      <p>{{ crossroads.description }}</p>
+      <span class="crossroads-action">Play this crossroads &rarr;</span>
+      {% else %}
+      <p>A new crossroads will open here when the next story is ready.</p>
+      {% endif %}
+    </div>
+  {% if crossroads.active %}</a>{% else %}</div>{% endif %}
 </section>

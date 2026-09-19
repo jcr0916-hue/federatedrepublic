@@ -1,9 +1,9 @@
 /* Service Worker — The Federated Republic
-   Strategy: network-first for HTML and current documents, cache-first for assets
+   Strategy: network-first for pages, current documents, styles and scripts; cache-first for media
    On first visit: cache everything. On repeat visits: instant load.
    On offline: serve cached version. */
 
-const CACHE = 'fr-v34';
+const CACHE = 'fr-v35';
 
 const PAGES = [
   '/', '/index.html',
@@ -38,7 +38,7 @@ self.addEventListener('activate', e => {
   );
 });
 
-/* Fetch: network-first for HTML, data, and PDF editions */
+/* Fetch: network-first for HTML, data, code, and PDF editions */
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
 
@@ -58,9 +58,12 @@ self.addEventListener('fetch', e => {
   // before it shipped. Data goes network-first, with cache as the offline fallback.
   const isData = url.pathname.endsWith('.json') || url.pathname === '/search-index.js';
 
+  // Unversioned site styles and scripts must stay in step with fresh HTML.
+  const isCode = url.origin === location.origin && /\.(css|m?js)$/.test(url.pathname);
+
   const isPDF = url.pathname.endsWith('.pdf');
 
-  if (isHTML || isData || isPDF) {
+  if (isHTML || isData || isPDF || isCode) {
     // Network-first: fresh HTML when online, cached fallback offline
     e.respondWith(
       fetch(e.request)
@@ -72,7 +75,7 @@ self.addEventListener('fetch', e => {
         .catch(() => caches.match(e.request))
     );
   } else {
-    // Cache-first: instant load for CSS, JS, fonts, images
+    // Cache-first: instant load for fonts and images
     e.respondWith(
       caches.match(e.request).then(cached => {
         if (cached) return cached;
