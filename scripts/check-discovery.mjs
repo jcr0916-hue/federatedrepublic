@@ -29,5 +29,18 @@ assert.equal(records.length,published.length,'Every published world item must ap
 for(const file of ['index.html','annotated.html','torenthia.html','torenthia-record.html','dossier-korda.html','republic-at-a-glance.html']){
  const doc=docs.get(file);assert.ok(DomUtils.findOne(n=>n.attribs?.id==='site-nav',doc.children,true),file);
 }
+// Keep the complete scenario library connected as stories are added or renamed.
+const bridges=JSON.parse(fs.readFileSync('_data/scenarioBridges.json','utf8'));
+const scenarioFiles=files.filter(f=>/^scenario-.*\.html$/.test(f));
+const provisions=new Set(JSON.parse(fs.readFileSync('constitution_data.json','utf8')).flatMap(a=>a.provisions.map(p=>p.num)));
+assert.deepEqual(Object.keys(bridges).sort(),scenarioFiles.map(f=>f.replace(/\.html$/,'')).sort(),'Every scenario needs curated reading guidance');
+for(const file of scenarioFiles){
+ const bridge=bridges[file.replace(/\.html$/,'')];
+ assert.ok(bridge.summary?.trim()&&bridge.provisions?.length&&bridge.links?.length,`${file}: incomplete guidance`);
+ for(const ref of bridge.provisions)assert.ok(provisions.has(ref.ref),`${file}: unknown provision ${ref.ref}`);
+ for(const link of bridge.links)assert.notEqual(link.url,file,`${file}: next read must not link to itself`);
+ const headings=DomUtils.findAll(n=>n.attribs?.id==='scenario-learning-title',docs.get(file).children);
+ assert.equal(headings.length,1,`${file}: render one reading bridge`);
+}
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 console.log(`Verified ${files.length} built pages: local links, anchors, inline script syntax, and all ${records.length} public records.`);
