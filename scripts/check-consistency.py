@@ -128,16 +128,9 @@ if os.path.exists('_data/updates.js'):
         if not os.path.exists(href):
             fail(f"_data/updates.js links to {href}, which does not exist in the repo")
 
-    # newest world file not in the feed? probably an un-landed updates.js
-    world = sorted(
-        f for f in os.listdir('.')
-        if re.match(r'torenthia-news-\d+\.html$', f)
-    )
-    if world:
-        newest = world[-1]
-        if newest not in linked:
-            warn(f"newest world piece ({newest}) is not in _data/updates.js "
-                 f"— intentional, or did updates.js not land?")
+    # Homepage world chronology is generated from collections.world. The separate
+    # updates feed is an editorial selection of project changes, not a latest feed.
+
 else:
     warn("_data/updates.js not found")
 

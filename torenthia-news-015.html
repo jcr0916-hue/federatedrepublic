@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Seren-Mak-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Assembly member Seren Mak responded to Director Carrow's intelligence summary in a statement that did not say 'I told you so.' It didn't need to."
+worldId: "torenthia-news-015"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Rhovane", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-014.html", "torenthia-news-016.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Assembly member Seren Mak responded to Director Carrow's intelligen
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -95,7 +100,8 @@ worldBlurb: "Assembly member Seren Mak responded to Director Carrow's intelligen
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

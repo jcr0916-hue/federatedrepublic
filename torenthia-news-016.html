@@ -6,6 +6,11 @@ worldTitle: "Sandris Is Still Running. People Are Starting to Notice Why."
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "The fourth declared candidate for Legat Consul has been running for three weeks. He has no national profile, no foreign affairs record, and no moment. What he has is an argument that the last two weeks made stronger."
+worldId: "torenthia-news-016"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Aldenmere", "Korda"]
+worldProvisions: ["§6.3"]
+worldRelated: ["torenthia-news-015.html", "torenthia-news-017.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "The fourth declared candidate for Legat Consul has been running for
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -102,7 +107,8 @@ worldBlurb: "The fourth declared candidate for Legat Consul has been running for
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

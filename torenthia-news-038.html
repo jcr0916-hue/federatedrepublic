@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "riverglow-card.webp"
 worldAuthor: "Aleth Fenn"
 worldBlurb: "A statute conveyed the Argent Ridge highlands a month ago, 271 to 194, and almost nobody noticed. The people who noticed do not call it Argent Ridge. What they can actually do about it is a harder question than they think."
+worldId: "torenthia-news-038"
+worldArcs: ["lake-varda", "argent-ridge"]
+worldJurisdictions: ["Varek", "Norvane", "Solara"]
+worldProvisions: ["§18.1", "§18.4", "§13.1"]
+worldRelated: ["torenthia-nrs-011.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +31,7 @@ worldBlurb: "A statute conveyed the Argent Ridge highlands a month ago, 271 to 1
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -120,6 +125,7 @@ worldBlurb: "A statute conveyed the Argent Ridge highlands a month ago, 271 to 1
     </div>
   </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

@@ -6,6 +6,11 @@ worldTitle: "Neris Vann"
 worldOutlet: "Dispatch"
 worldAuthor: "Neris Vann"
 worldBlurb: "Neris Vann is a harbor pilot in Calden. She writes about ships, weather, delays, paperwork, and the thousand ordinary decisions that keep a port moving."
+worldId: "torenthia-dispatch-vann"
+worldArcs: []
+worldJurisdictions: ["Caldenmere"]
+worldProvisions: []
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +47,7 @@ worldBlurb: "Neris Vann is a harbor pilot in Calden. She writes about ships, wea
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main id="main-content" class="dispatch-wrap">
     <a href="torenthia.html" class="back-link">&larr; The World</a>
@@ -87,7 +92,8 @@ worldBlurb: "Neris Vann is a harbor pilot in Calden. She writes about ships, wea
 
   </main>
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

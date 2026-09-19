@@ -6,6 +6,11 @@ worldTitle: "The Rhondel Ferry Timetable, Explained (Sort Of)"
 worldOutlet: "The Dorven Ledger"
 worldAuthor: "Corwin Hale"
 worldBlurb: "The lake ferry changed its schedule again, nobody was told the same thing twice, and the answer involves three jurisdictions who each think one of the others is in charge."
+worldId: "torenthia-news-037"
+worldArcs: []
+worldJurisdictions: ["Kelvant"]
+worldProvisions: []
+worldRelated: ["torenthia-news-036.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "The lake ferry changed its schedule again, nobody was told the same
 </head>
 <body class="paper-ledger">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -72,6 +77,7 @@ worldBlurb: "The lake ferry changed its schedule again, nobody was told the same
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

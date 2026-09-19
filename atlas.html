@@ -78,7 +78,7 @@
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main class="fr-page" id="main-content">
 
@@ -86,11 +86,11 @@
       <h1>The Atlas</h1>
       <div class="page-intro">
         <p>Torenthia is a specific nation in a specific place, and the place has neighbors. Some of them are friendly, one of them is coming apart, and one of them holds the headwaters of the river the Republic drinks from.</p>
-        <p>This is the study. The <a href="torenthia.html">living map</a> on the World page is the glance &mdash; where things are happening right now. Here is the region those events sit inside.</p>
+        <p>This is the study. The <a href="torenthia.html">Republic at a Glance</a> is the domestic directory &mdash; where things are happening right now. Here is the region those events sit inside.</p>
       </div>
     </header>
 
-    <div class="atlas-map">
+    <p class="link-row"><a href="republic-at-a-glance.html">Republic at a Glance · domestic map and jurisdictions →</a><a href="torenthia.html#republic-now">The Republic Now →</a></p><div class="atlas-map">
       <div class="frame">
         <img src="world-map-tier1.webp" alt="World map. Torenthia's region is marked on the western coast of the crescent continent." onerror="this.onerror=null;this.src='world-map-tier1.jpg'">
         <button class="hotspot" id="hotspot" aria-label="Return to the Federated Republic">

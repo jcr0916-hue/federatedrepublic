@@ -7,6 +7,11 @@ worldOutlet: "Show Your Work"
 worldAuthor: "Maren Sollis"
 worldImage: "world-map-card.webp"
 worldBlurb: "Everyone covering the Kelvant-Korda referendum uses the phrase 'defined portion' as though it were scenery. A student in Corindal asked what it actually means. It took the whole class period to answer honestly."
+worldId: "torenthia-news-057"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Corindal", "Korda"]
+worldProvisions: ["§15.4"]
+worldRelated: ["torenthia-news-055.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +36,7 @@ worldBlurb: "Everyone covering the Kelvant-Korda referendum uses the phrase 'def
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="blog-masthead">
   <div class="blog-masthead-inner">
@@ -98,6 +103,7 @@ worldBlurb: "Everyone covering the Kelvant-Korda referendum uses the phrase 'def
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

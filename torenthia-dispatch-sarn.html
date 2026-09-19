@@ -6,6 +6,11 @@ worldTitle: "Yelka Sarn"
 worldOutlet: "Dispatch"
 worldAuthor: "Yelka Sarn"
 worldBlurb: "Yelka Sarn runs a hardware and feed supply on the Valedon road in Morantine Territory. She has opinions about the Monetary Authority, the roads, and what it means to be a Territory instead of a State — some grateful, some not."
+worldId: "torenthia-dispatch-sarn"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Morantine"]
+worldProvisions: ["§12.6"]
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +47,7 @@ worldBlurb: "Yelka Sarn runs a hardware and feed supply on the Valedon road in M
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main id="main-content" class="dispatch-wrap">
     <a href="torenthia.html" class="back-link">&larr; The World</a>
@@ -77,7 +82,8 @@ worldBlurb: "Yelka Sarn runs a hardware and feed supply on the Valedon road in M
 
   </main>
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
 
   <script src="nav.js"></script>
 </body>

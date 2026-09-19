@@ -6,6 +6,11 @@ worldTitle: "What Rehn Wants to Finish"
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "Casimir Rehn has five months left as Legat Consul. A profile of the outgoing consul, the Toren River treaty he is racing to close, and what he thinks the next office holder will inherit."
+worldId: "torenthia-news-018"
+worldArcs: ["lake-varda"]
+worldJurisdictions: []
+worldProvisions: ["§2.3"]
+worldRelated: ["torenthia-nrs-005.html", "torenthia-news-019.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "Casimir Rehn has five months left as Legat Consul. A profile of the
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -92,7 +97,8 @@ worldBlurb: "Casimir Rehn has five months left as Legat Consul. A profile of the
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

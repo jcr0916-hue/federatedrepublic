@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Elin-Thoss-Press-Conference-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "For three months the Republic watched three people run for Legat Consul. On Tuesday a motion was filed under §2.6 that removes the sitting Civic Consul and installs a named replacement in the same vote. The name in it belongs to a member who never entered the race everyone was watching."
+worldId: "torenthia-news-041"
+worldArcs: ["korda", "fiscal-equalization"]
+worldJurisdictions: ["Selvane", "Korda", "Morantine"]
+worldProvisions: ["§2.6", "§12.6", "§2.5", "§3.7"]
+worldRelated: ["torenthia-news-036.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "For three months the Republic watched three people run for Legat Co
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -153,6 +158,7 @@ worldBlurb: "For three months the Republic watched three people run for Legat Co
     </div>
   </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

@@ -13,21 +13,12 @@
     .ai-page th,.ai-page td{text-align:left;vertical-align:top;padding:1rem;border:1px solid #d4c9b0}
   </style>
 </head>
-<body>
-  <main class="ai-page">
+<body><a href="#main-content" class="skip-nav">Skip to main content</a>{% include "nav.njk" %}
+  <main class="ai-page" id="main-content" style="padding-top:90px">
     <p><a href="index.html">The Federated Republic</a></p>
     <h1>AI features &amp; your privacy</h1>
     <p>The features marked “AI Feature*” send a request to a commercial AI provider through this site’s server. Their roles differ. Generated explanations are interpretive aids; they do not amend the constitution or establish World canon.</p>
-    <div class="ai-table"><table>
-      <thead><tr><th>Feature</th><th>What it does</th><th>What is sent</th></tr></thead>
-      <tbody>
-        <tr><td><a href="annotated.html">Provision Annotator</a></td><td>Generates an explanation of a provision’s constitutional design and practical effect.</td><td>The selected provision and the context supplied with the request.</td></tr>
-        <tr><td><a href="index.html">Scenario Navigator</a></td><td>Helps connect a constitutional question to relevant provisions and an explanatory response.</td><td>Your question and constitutional context selected by the service.</td></tr>
-        <tr><td><a href="survey.html">Government Questionnaire</a></td><td>Generates an interpretation of the government described by your answers. It is not a judgment of your identity or beliefs.</td><td>The answer transcript submitted for interpretation.</td></tr>
-        <tr><td><a href="crossroads.html">Living Crossroads</a></td><td><strong>Classifier-only routing to pre-authored fragments.</strong> The model selects an allowed fragment ID, or asks for more detail or an in-scope move. It never generates narrative prose. The browser selects authored scenes, responses, and endings using deterministic rules.</td><td>Your typed move, the current scene context, decision dimensions, and the IDs and short descriptions of currently available fragments. In Korda, this list is filtered by your selected role and applicable state. Choice buttons do not call the AI.</td></tr>
-      </tbody>
-    </table></div>
-    <h2>Living Crossroads: authored outcomes</h2>
+<div class="transparency-grid"><article class="transparency-card"><h2><a href="annotated.html">Provision Annotator</a></h2><dl><dt>What it does</dt><dd>Explains a selected provision’s design and practical effect.</dd><dt>What it does not do</dt><dd>Does not amend the text or establish an authoritative interpretation.</dd><dt>What is sent</dt><dd>The selected provision and supplied constitutional context.</dd><dt>Non-AI alternative</dt><dd>Read the text, Quick Sheets, and curated learning routes.</dd></dl></article><article class="transparency-card"><h2><a href="index.html">Constitution Navigator</a></h2><dl><dt>What it does</dt><dd>Connects a question to provisions and an explanatory response.</dd><dt>What it does not do</dt><dd>Does not replace the constitutional text or establish World canon.</dd><dt>What is sent</dt><dd>Your question and constitutional context selected by the service.</dd><dt>Non-AI alternative</dt><dd>Browse articles, search the text, or explore by question.</dd></dl></article><article class="transparency-card"><h2><a href="survey.html">Constitution Questionnaire</a></h2><dl><dt>What it does</dt><dd>Interprets the government described by your answers.</dd><dt>What it does not do</dt><dd>Does not judge your identity, affiliations, or beliefs.</dd><dt>What is sent</dt><dd>Your submitted answer transcript, including any free text.</dd><dt>Non-AI alternative</dt><dd>Use the Constitution’s curated question paths and scenarios.</dd></dl></article><article class="transparency-card"><h2><a href="crossroads.html">Living Crossroads</a></h2><dl><dt>What it does</dt><dd>Classifies a typed move into an available, pre-authored fragment. Choice buttons do not call AI.</dd><dt>What it does not do</dt><dd>Never writes narrative prose, changes canon, or selects the public Convention outcome.</dd><dt>What is sent</dt><dd>The typed move, scene context, decision dimensions, and available fragment IDs and descriptions.</dd><dt>Non-AI alternative</dt><dd>Play entirely with authored choice buttons; no classifier request is needed.</dd></dl></article></div>    <h2>Living Crossroads: authored outcomes</h2>
     <p>The classifier cannot introduce a new event, change a meter, or write an ending. Its selected ID is checked against the offered choices, and the browser checks availability again before applying the authored result. Model explanations, internal notes, and error details are never displayed as story text.</p>
     <p>If Korda’s classifier is unavailable, the game asks you to choose an available move; its buttons remain playable. Korda is explicitly non-canon, and all proposed Convention resolutions still face the constitutional ratification process. No playthrough advances the public storyline.</p>
     <h2>Requests and privacy</h2>
@@ -35,5 +26,5 @@
     <p>You can play Living Crossroads entirely through the written choice buttons without sending a move to the classifier.</p>
   </main>
   {% include "footer.njk" %}
-</body>
+<script src="nav.js"></script></body>
 </html>

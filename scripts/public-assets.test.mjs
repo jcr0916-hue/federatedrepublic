@@ -77,7 +77,8 @@ test('fails on missing references, missing protected assets and unresolved gener
 test('actual Eleventy config includes front matter and data/templates but excludes docs HTML', t => {
   const { root, write } = fixture(t);
   const repo = process.cwd();
-  for (const name of ['eleventy.config.mjs','scripts/public-assets.mjs','scripts/protected-assets.json']) write(name, fs.readFileSync(path.join(repo, name)));
+  for (const name of ['eleventy.config.mjs','lib/world.mjs','constitution_data.json','scripts/public-assets.mjs','scripts/protected-assets.json']) write(name, fs.readFileSync(path.join(repo, name)));
+  write('_data/currentFiles.json', '[]');
   fs.symlinkSync(path.join(repo, 'node_modules'), path.join(root, 'node_modules'), 'dir');
   const protectedAssets = JSON.parse(fs.readFileSync(path.join(repo, 'scripts/protected-assets.json'))).assets;
   for (const name of protectedAssets) {

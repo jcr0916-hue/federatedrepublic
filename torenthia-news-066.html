@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldImage: "world-map-card.webp"
 worldBlurb: "Sandris built his candidacy on a transition plan for a referendum that may already be legally void. We asked him what a candidate does with a signature issue that might not have a vote left to attach to."
+worldId: "torenthia-news-066"
+worldArcs: []
+worldJurisdictions: []
+worldProvisions: ["§15.5.a"]
+worldRelated: ["torenthia-news-064.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Sandris built his candidacy on a transition plan for a referendum t
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -73,6 +78,7 @@ worldBlurb: "Sandris built his candidacy on a transition plan for a referendum t
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

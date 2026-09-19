@@ -6,6 +6,11 @@ worldTitle: "Rehn Tells Senate River Negotiations Will Not Be Surrendered at the
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "Legat Consul Casimir Rehn addressed the Senate's Foreign Relations Committee on the Toren River treaty renewal, offering what observers described as measured language with an unmistakable edge."
+worldId: "torenthia-news-004"
+worldArcs: ["lake-varda"]
+worldJurisdictions: []
+worldProvisions: []
+worldRelated: ["torenthia-news-003.html", "torenthia-news-005.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "Legat Consul Casimir Rehn addressed the Senate's Foreign Relations 
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -102,7 +107,8 @@ worldBlurb: "Legat Consul Casimir Rehn addressed the Senate's Foreign Relations 
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

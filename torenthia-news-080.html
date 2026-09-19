@@ -6,6 +6,11 @@ worldTitle: "Now There Is Actually Going to Be a Meeting"
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "With both Caldris and Valedon now willing to attend the Lake Varda conference, all four Legat Consul candidates have to campaign around a diplomatic process that is finally real but still unresolved."
+worldId: "torenthia-news-080"
+worldArcs: ["lake-varda"]
+worldJurisdictions: []
+worldProvisions: []
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "With both Caldris and Valedon now willing to attend the Lake Varda 
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
   <main id="main-content">
     <div class="article-wrap">
       <div class="article-section">LC Race &middot; Lake Varda</div>
@@ -52,7 +57,8 @@ worldBlurb: "With both Caldris and Valedon now willing to attend the Lake Varda 
       </div>
     </div>
   </main>
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

@@ -6,6 +6,11 @@ worldTitle: "A Fourth Name on the Registry. Almost Nobody Noticed."
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "While Senator Vael addressed the press and Director Carrow's intelligence summary moved through Verentum, Pell Sandris of the Aldenmere State Assembly filed a candidacy declaration for Legat Consul."
+worldId: "torenthia-news-013"
+worldArcs: ["lake-varda", "fiscal-equalization"]
+worldJurisdictions: ["Aldenmere"]
+worldProvisions: []
+worldRelated: ["torenthia-nrs-004.html", "torenthia-news-014.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "While Senator Vael addressed the press and Director Carrow's intell
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -90,7 +95,8 @@ worldBlurb: "While Senator Vael addressed the press and Director Carrow's intell
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

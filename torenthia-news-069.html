@@ -8,6 +8,11 @@ worldAuthor: "Aleth Fenn"
 worldImage: "varek-flag.png"
 worldPlaces: "varek"
 worldBlurb: "Varek's Assembly consented to the Argent Ridge Trust designation. Getting there meant a committee hearing, a county delegate testifying first, and one member asking why the whole chamber was voting on land that wasn't hers to begin with."
+worldId: "torenthia-news-069"
+worldArcs: ["argent-ridge"]
+worldJurisdictions: ["Varek", "Norvane"]
+worldProvisions: ["§18.4"]
+worldRelated: ["torenthia-nrs-029.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +31,7 @@ worldBlurb: "Varek's Assembly consented to the Argent Ridge Trust designation. G
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -79,6 +84,7 @@ worldBlurb: "Varek's Assembly consented to the Argent Ridge Trust designation. G
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

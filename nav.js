@@ -1,80 +1,59 @@
-/* nav.js — single source of truth for site navigation.
-   Injects the header nav + mobile menu into <div id="site-nav"></div>,
-   defines toggleMobileNav(), and auto-highlights the current page.
-   Keep skip-nav static in each page's HTML (first body child) for
-   accessibility and no-JS crawlability. */
-(function () {
-  var LINKS = [
-    { href: "annotated.html",             label: "Annotated Edition" },
-    { href: "scenarios.html",             label: "Scenarios" },
-    { href: "quicksheets.html",           label: "Quick Sheets" },
-    { href: "torenthia.html",             label: "The World" },
-    { href: "atlas.html",                 label: "Atlas" },
-    { href: "diagrams.html",              label: "Diagrams" },
-    { href: "constitutional-history.html", label: "Constitutional History" },
-    { href: "sources.html",               label: "Sources" }
-  ];
-  // Mobile menu carries the desktop links plus a few extras.
-  var MOBILE_EXTRA = [
-    { href: "survey.html",  label: "So You Want a Constitution?" },
-    { href: "contact.html", label: "Contact" }
-  ];
-
-  // current page filename (default to index.html at site root)
-  var path = window.location.pathname.split("/").pop() || "index.html";
-
-  function isActive(href) {
-    return href === path;
+/* Navigation markup is rendered from _data/navigation.json by Eleventy. */
+(function(){
+  function closeMenu(restore){
+    const menu=document.getElementById('mobileMenu'), button=document.querySelector('.hamburger');
+    if(menu) menu.classList.remove('open');
+    if(button){button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Open navigation');if(restore)button.focus();}
   }
-  function anchors(list) {
-    return list.map(function (l) {
-      var active = isActive(l.href) ? ' class="active"' : "";
-      var current = isActive(l.href) ? ' aria-current="page"' : "";
-      return '<a href="' + l.href + '"' + active + current + ">" + l.label + "</a>";
-    }).join("\n      ");
-  }
-
-  var navHTML =
-    '<nav>\n' +
-    '  <a href="index.html" class="nav-logo"><img src="seal.png" alt="" class="nav-seal" width="32" height="32" aria-hidden="true">The Federated Republic</a>\n' +
-    '  <div class="nav-links">\n      ' + anchors(LINKS) + '\n  </div>\n' +
-    '  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">\n' +
-    '    <span></span><span></span><span></span>\n' +
-    '  </button>\n' +
-    '</nav>\n' +
-    '<div class="mobile-menu" id="mobileMenu">\n    ' +
-    anchors(LINKS.concat(MOBILE_EXTRA)) + '\n' +
-    '    <a href="constitution-current.pdf" download class="mobile-cta">Formal Document (PDF)</a>\n' +
-    '</div>';
-
-  function inject() {
-    var mount = document.getElementById("site-nav");
-    if (mount) mount.innerHTML = navHTML;
-  }
-
-  // Define the toggle globally so inline onclick keeps working.
-  window.toggleMobileNav = function () {
-    var m = document.getElementById("mobileMenu");
-    if (!m) return;
-    var open = m.classList.toggle("open");
-    var btn = document.querySelector(".hamburger");
-    if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+  window.toggleMobileNav=function(){
+    const menu=document.getElementById('mobileMenu'),button=document.querySelector('.hamburger');
+    if(!menu)return;
+    const open=menu.classList.toggle('open');
+    menu.removeAttribute('aria-hidden');
+    button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Close navigation':'Open navigation');
   };
-
-  // Close the mobile menu when clicking outside of it.
-  document.addEventListener("click", function (e) {
-    var m = document.getElementById("mobileMenu");
-    if (m && m.classList.contains("open") &&
-        !e.target.closest("nav") && !e.target.closest("#mobileMenu")) {
-      m.classList.remove("open");
-      var btn = document.querySelector(".hamburger");
-      if (btn) btn.setAttribute("aria-expanded", "false");
-    }
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Escape')return;
+    const detail=e.target.closest('#site-nav details[open]');
+    if(detail){detail.open=false;detail.querySelector('summary').focus();return;}
+    if(document.getElementById('mobileMenu')?.classList.contains('open'))closeMenu(true);
   });
+  document.addEventListener('click',function(e){
+    document.querySelectorAll('#site-nav details[open]').forEach(d=>{if(!d.contains(e.target))d.open=false;});
+    if(!e.target.closest('#site-nav'))closeMenu(false);
+    if(e.target.closest('#mobileMenu a'))closeMenu(false);
+  });
+  document.querySelectorAll('#site-nav details').forEach(d=>d.addEventListener('toggle',()=>{
+    if(d.open)document.querySelectorAll('#site-nav details[open]').forEach(other=>{if(other!==d)other.open=false;});
+  }));
+  const mq=matchMedia('(min-width: 901px)');mq.addEventListener('change',()=>closeMenu(false));
+})();
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", inject);
-  } else {
-    inject();
+/* Keyboard parity and focus containment for optional reading tools. */
+(function(){
+ document.querySelectorAll('.prov-name,.prov-num[onclick]').forEach(el=>{
+  el.tabIndex=0;el.setAttribute('role','button');
+  if(el.classList.contains('prov-name'))el.setAttribute('aria-label',el.textContent.trim()+': optional AI rationale');
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}});
+ });
+ for(const [id,closeName] of [['navResults','closeNav'],['searchOverlay','closeSearch'],['annPanel','closeAnnotation']]){
+  const panel=document.getElementById(id);if(!panel)continue;
+  let wasOpen=false,trigger=null;
+  const visible=()=>id==='annPanel'?getComputedStyle(panel).display!=='none':panel.classList.contains('open');
+  function sync(){
+   const open=visible();panel.inert=!open;panel.setAttribute('aria-hidden',String(!open));
+   if(open&&!wasOpen){trigger=document.activeElement;panel.setAttribute('aria-modal','true');panel.querySelector('input,button,a[href]')?.focus();}
+   if(!open&&wasOpen&&trigger?.isConnected)trigger.focus();
+   wasOpen=open;
   }
+  new MutationObserver(sync).observe(panel,{attributes:true,attributeFilter:['class','style']});sync();
+  panel.addEventListener('keydown',e=>{
+   if(e.key==='Escape'){e.preventDefault();window[closeName]?.();return;}
+   if(e.key!=='Tab')return;
+   const items=[...panel.querySelectorAll('input,button,a[href],[tabindex="0"]')].filter(el=>!el.disabled&&el.getClientRects().length);
+   if(!items.length)return;const first=items[0],last=items.at(-1);
+   if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+   else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+ }
 })();

@@ -6,6 +6,11 @@ worldTitle: "Sandris on the Formula Deferral: \"I Said This in Month 12\""
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "Three months after the MA's Korda remedy plan, and weeks after the Assembly deferred the formula review, Pell Sandris has issued his first direct response — not to the plan, but to what happened to it."
+worldId: "torenthia-news-025"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Aldenmere", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-nrs-008.html", "torenthia-news-026.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "Three months after the MA's Korda remedy plan, and weeks after the 
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -79,6 +84,7 @@ worldBlurb: "Three months after the MA's Korda remedy plan, and weeks after the 
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

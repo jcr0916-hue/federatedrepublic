@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Elin-Thoss-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Elin Thoss wasn't answering a question about the Legat Consul race. She wasn't asked about it. Somebody recorded her anyway, and it's the most-watched thing to come out of the Assembly in months."
+worldId: "torenthia-news-027"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Kelvant", "Selvane", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-026.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Elin Thoss wasn't answering a question about the Legat Consul race.
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -84,6 +89,7 @@ worldBlurb: "Elin Thoss wasn't answering a question about the Legat Consul race.
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

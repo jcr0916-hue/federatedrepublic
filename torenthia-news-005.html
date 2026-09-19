@@ -5,6 +5,11 @@ worldDate: "12.11"
 worldTitle: "Rhovane Town Hall: Mak Tells Constituents 'This City Is Carrying Too Much' — Crowd Sees More Than a Local Meeting"
 worldOutlet: "RNN"
 worldBlurb: "Assembly member Seren Mak addressed a packed hall in Vardenmere, telling constituents Rhondel cannot keep absorbing a regional crisis without a constitutional response from Verentum."
+worldId: "torenthia-news-005"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Harren", "Rhovane", "Norvane"]
+worldProvisions: []
+worldRelated: ["torenthia-news-004.html", "torenthia-news-006.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +64,7 @@ worldBlurb: "Assembly member Seren Mak addressed a packed hall in Vardenmere, te
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="rnn-masthead" role="banner">
     <div class="rnn-top-bar">
@@ -147,7 +152,8 @@ worldBlurb: "Assembly member Seren Mak addressed a packed hall in Vardenmere, te
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

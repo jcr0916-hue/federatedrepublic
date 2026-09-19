@@ -5,6 +5,11 @@ worldDate: "13.09"
 worldTitle: "Kelvant-Korda Lake Corridor Petition — JMC Assessment Status"
 worldOutlet: "National Record System"
 worldBlurb: "The JMC's remainder-viability assessment for the Kelvant-Korda lake corridor petition remains open. No extension has been requested. No finding has been published."
+worldId: "torenthia-nrs-019"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.5.a", "§15.4"]
+worldRelated: ["torenthia-nrs-017.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "The JMC's remainder-viability assessment for the Kelvant-Korda lake
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -69,6 +74,7 @@ worldBlurb: "The JMC's remainder-viability assessment for the Kelvant-Korda lake
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

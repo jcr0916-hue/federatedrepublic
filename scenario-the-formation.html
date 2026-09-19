@@ -22,7 +22,7 @@
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   
   <main class="doc-wrap" id="main-content">
@@ -127,7 +127,7 @@
     </div>
   </main>
 
-{% include "footer.njk" %}
+<section class="scenario-end"><h2>What this tested</h2><div class="link-row"><a href="annotated.html#s2-6a">§2.6.a</a></div><h2>Go deeper</h2><div class="link-row"><a href="diagrams.html#tab-dual">The Dual Executive</a><a href="quicksheet-article-2.html">Dual Executive Quick Sheet</a><a href="scenarios.html">Browse related scenarios</a></div></section>{% include "footer.njk" %}
 
   <script src="nav.js"></script>
 </body>

@@ -6,6 +6,11 @@ worldTitle: "Certified"
 worldOutlet: "The Korda Press"
 worldAuthor: "Mara Iset"
 worldBlurb: "The signatures were verified this week — for the whole of Korda, corridor included. Whatever happens next, the interior just asked a question the corridor thought it had already answered for itself."
+worldId: "torenthia-news-061"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: []
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +35,7 @@ worldBlurb: "The signatures were verified this week — for the whole of Korda, 
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="kp-masthead">
   <div class="kp-masthead-inner">
@@ -86,6 +91,7 @@ worldBlurb: "The signatures were verified this week — for the whole of Korda, 
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

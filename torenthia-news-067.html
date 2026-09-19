@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Yena Corran"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Toren River working group scheduled its next session for Month 6. It is Month 11. The dispute resolution mechanism for low-rainfall years is exactly as unresolved as it was in the spring."
+worldId: "torenthia-news-067"
+worldArcs: []
+worldJurisdictions: []
+worldProvisions: []
+worldRelated: ["torenthia-news-024.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Toren River working group scheduled its next session for Month 
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -69,6 +74,7 @@ worldBlurb: "The Toren River working group scheduled its next session for Month 
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

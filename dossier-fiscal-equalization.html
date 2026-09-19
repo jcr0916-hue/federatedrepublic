@@ -1,0 +1,13 @@
+---
+layout: editorial.njk
+title: "Fiscal Equalization: The Domestic Test"
+description: "The Executive Monitor published interval data without finding a constitutional failure. Subsequent reporting describes a committee that has not reconvened; publication alone has not produced a revised formula."
+eyebrow: "Torenthia · Current constitutional file"
+---
+{% set file = currentFiles[2] %}
+<p class="meta">Editorial briefing · As of {{ file.asOf | worldDateLabel }} · Fictional public record</p><h2>The question</h2><p>{{ file.question }}</p>
+
+<h2>Key records, in sequence</h2><ol class="record-timeline">{% for id in file.records %}{% set p = collections.world | recordById(id) %}<li>{% include "record-card.njk" %}</li>{% endfor %}</ol>
+<h2>Read the rule</h2><div class="link-row">{% for ref in file.provisions %}<a href="annotated.html#{{ ref | provisionAnchor }}">{{ ref }}</a>{% endfor %}<a href="quicksheet-{% if file.id == 'fiscal-equalization' %}fiscal{% elif file.id == 'lake-varda' %}article-2{% else %}states{% endif %}.html">Related Quick Sheet</a></div>
+<h2>Affected jurisdictions</h2><div class="link-row">{% for name in file.jurisdictions %}<a href="republic-at-a-glance.html#{{ name | lower }}">{{ name }}</a>{% endfor %}</div>
+<h2>Continue investigating</h2><p><a href="torenthia-record.html?file={{ file.id }}">Search all records tagged {{ file.short }} →</a></p><p class="meta">Tags identify related coverage, including historical context. They do not imply that every record describes the present position.</p>

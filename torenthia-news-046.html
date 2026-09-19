@@ -7,6 +7,11 @@ worldOutlet: "RNN"
 worldAuthor: "Dara Voss"
 worldImage: "world-map-card.webp"
 worldBlurb: "The joint committee on fiscal equalization met for the first time this week. Before it reached a single line of the formula, it had to answer the question that followed it into the room: does this committee need the Executive Monitor's word before it can act, or does the Civic Consul's 274 votes already settle that? It answered by asking the EM directly — and gave itself a deadline to hear back."
+worldId: "torenthia-news-046"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Orath", "Caldenmere", "Korda", "Morantine"]
+worldProvisions: ["§12.6"]
+worldRelated: ["torenthia-news-045.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The joint committee on fiscal equalization met for the first time t
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -69,6 +74,7 @@ worldBlurb: "The joint committee on fiscal equalization met for the first time t
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

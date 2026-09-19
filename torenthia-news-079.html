@@ -6,6 +6,11 @@ worldTitle: "The Convention Is Going Home"
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "The Korda Territory Convention votes 25–8 to move its remaining sessions from Verentum into Korda, changing the venue without deciding either petition."
+worldId: "torenthia-news-079"
+worldArcs: ["korda"]
+worldJurisdictions: ["Korda"]
+worldProvisions: []
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@ worldBlurb: "The Korda Territory Convention votes 25–8 to move its remaining s
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
   <main id="main-content">
     <div class="article-wrap">
       <div class="article-section">Korda &middot; Territory Convention</div>
@@ -52,7 +57,8 @@ worldBlurb: "The Korda Territory Convention votes 25–8 to move its remaining s
       </div>
     </div>
   </main>
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

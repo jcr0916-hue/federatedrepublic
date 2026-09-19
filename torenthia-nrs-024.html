@@ -5,6 +5,11 @@ worldDate: "13.10"
 worldTitle: "Elections Panel — Kelvant-Korda Referendum Date Set"
 worldOutlet: "National Record System"
 worldBlurb: "The referendum date is certified: Year 13, Month 12, Day 8. All prerequisites under §15.4 and §15.5.a are satisfied."
+worldId: "torenthia-nrs-024"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.4", "§15.5.a"]
+worldRelated: ["torenthia-nrs-023.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "The referendum date is certified: Year 13, Month 12, Day 8. All pre
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -75,6 +80,7 @@ worldBlurb: "The referendum date is certified: Year 13, Month 12, Day 8. All pre
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

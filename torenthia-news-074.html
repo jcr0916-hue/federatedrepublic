@@ -7,6 +7,11 @@ worldOutlet: "TNB Verentum"
 worldAuthor: "TNB News Desk"
 worldBlurb: "A new federal program will match State and Territory spending on large-print books for public libraries. Local librarians will choose the titles."
 worldMundane: true
+worldId: "torenthia-news-074"
+worldArcs: []
+worldJurisdictions: []
+worldProvisions: []
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldMundane: true
 </head>
 <body class="paper-tnb">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -53,6 +58,7 @@ worldMundane: true
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

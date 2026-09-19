@@ -7,6 +7,11 @@ worldOutlet: "Show Your Work"
 worldAuthor: "Maren Sollis"
 worldImage: "world-map-card.webp"
 worldBlurb: "A civics teacher in Corindal starts a second blog, separate from her classroom dispatches, because three outlets covered Wednesday's certification and none of them stayed long enough to explain why 'no failure was found' and 'everything is fine' are not the same claim."
+worldId: "torenthia-news-050"
+worldArcs: []
+worldJurisdictions: ["Corindal", "Korda"]
+worldProvisions: ["§12.6"]
+worldRelated: ["torenthia-news-049.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +36,7 @@ worldBlurb: "A civics teacher in Corindal starts a second blog, separate from he
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="blog-masthead">
   <div class="blog-masthead-inner">
@@ -94,6 +99,7 @@ worldBlurb: "A civics teacher in Corindal starts a second blog, separate from he
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

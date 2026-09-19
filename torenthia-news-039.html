@@ -8,6 +8,11 @@ worldImage: "riverglow-card.webp"
 worldPlaces: "argent-ridge"
 worldAuthor: "Corwin Hale"
 worldBlurb: "Two young people set up a table in the square on market day with a clipboard about a hillside four hundred miles from here. They were polite. They were serious. And the reason they came to Dorven is the most interesting thing about the whole business."
+worldId: "torenthia-news-039"
+worldArcs: ["argent-ridge"]
+worldJurisdictions: ["Orath", "Aldenmere", "Varek"]
+worldProvisions: ["§13.1"]
+worldRelated: ["torenthia-nrs-013.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +31,7 @@ worldBlurb: "Two young people set up a table in the square on market day with a 
 </head>
 <body class="paper-ledger">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="ledger-masthead">
   <div class="ledger-inner">
     <div class="ledger-top">
@@ -103,6 +108,7 @@ worldBlurb: "Two young people set up a table in the square on market day with a 
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

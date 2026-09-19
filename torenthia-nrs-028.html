@@ -5,6 +5,11 @@ worldDate: "13.11"
 worldTitle: "JMC — Procedural Notice, Korda Territory Petitions"
 worldOutlet: "National Record System"
 worldBlurb: "The Joint Monitor Council notes that two statehood-track petitions affecting Korda Territory are now on file within the same period, and states it is reviewing the matter before further proceeding."
+worldId: "torenthia-nrs-028"
+worldArcs: ["korda"]
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§15.4", "§15.2", "§15.5.a"]
+worldRelated: ["torenthia-nrs-027.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "The Joint Monitor Council notes that two statehood-track petitions 
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -75,6 +80,7 @@ worldBlurb: "The Joint Monitor Council notes that two statehood-track petitions 
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

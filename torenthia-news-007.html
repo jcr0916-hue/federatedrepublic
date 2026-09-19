@@ -5,6 +5,11 @@ worldDate: "12.12"
 worldTitle: "Three Dead in Lake Varda After Sunderland Patrol Vessel Opens Fire on Civilian Craft"
 worldOutlet: "RNN"
 worldBlurb: "Seven survivors have been pulled from Lake Varda following a pre-dawn incident in which a Sunderland patrol vessel fired on civilian craft attempting to cross. Three are confirmed dead. The Sunderland government has not commented."
+worldId: "torenthia-news-007"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Harren", "Rhovane", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-006.html", "torenthia-news-008.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +61,7 @@ worldBlurb: "Seven survivors have been pulled from Lake Varda following a pre-da
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="rnn-masthead" role="banner">
     <div class="rnn-top-bar">
@@ -134,7 +139,8 @@ worldBlurb: "Seven survivors have been pulled from Lake Varda following a pre-da
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

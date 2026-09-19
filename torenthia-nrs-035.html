@@ -5,6 +5,11 @@ worldDate: "13.11"
 worldTitle: "Notice of Consent — Varek, National Trust Designation, Argent Ridge Parcel"
 worldOutlet: "National Record System"
 worldBlurb: "Varek's Assembly has filed its consent to the Argent Ridge Trust designation under §18.4. Norvane's consent remains outstanding."
+worldId: "torenthia-nrs-035"
+worldArcs: ["argent-ridge"]
+worldJurisdictions: ["Varek", "Norvane"]
+worldProvisions: ["§18.4"]
+worldRelated: ["torenthia-nrs-029.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ worldBlurb: "Varek's Assembly has filed its consent to the Argent Ridge Trust de
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -74,6 +79,7 @@ worldBlurb: "Varek's Assembly has filed its consent to the Argent Ridge Trust de
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

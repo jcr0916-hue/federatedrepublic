@@ -126,7 +126,7 @@
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main id="main-content" tabindex="-1">
 
@@ -138,9 +138,9 @@
         <div class="hero-content">
           <span class="hero-eyebrow">A Constitutional Project &nbsp;&middot;&nbsp; {{ constitution.provisions }} Provisions &nbsp;&middot;&nbsp; {{ constitution.articles }} Articles</span>
           <h1 class="hero-title">What would a <em>better</em><br>republic look like?</h1>
-          <p class="hero-sub">A constitution built from first principles. Ask anything. Explore everything.</p>
+          <p class="hero-sub">A living constitutional-design project. Read a complete proposed constitution, see its institutions under pressure, and follow the fictional republic that lives under it.</p>
 
-          <div class="nav-bar-wrap">
+          <div class="hero-actions"><a class="primary-action" href="scenario-the-formation.html">Start with a story →</a><a class="secondary-action" href="annotated.html">Read the Constitution</a></div><details class="navigator-disclosure"><summary>Ask the Constitution · optional AI tool</summary><div class="nav-bar-wrap">
             <div class="nav-bar-row">
               <input class="nav-bar-input" id="navQ" type="text" placeholder="Who controls foreign policy?" autocomplete="off" aria-label="Ask the constitution a question" />
               <button class="nav-bar-btn" id="navBtn" onclick="runNav()" aria-label="Ask">Ask</button>
@@ -154,7 +154,7 @@
             </div>
           
         <div class="ai-note ai-note--onDark"><a href="ai-features.html">AI Feature* — how it works &amp; your privacy</a></div>
-      </div>
+      </div></details>
         </div>
         <div class="hero-seal-wrap">
           <img src="seal.png" alt="The Federated Republic seal" class="hero-seal-img" width="300" height="300">
@@ -177,97 +177,28 @@
     <div class="nav-result-body" id="navBody"></div>
   </div>
 
-  <!-- LIVING CROSSROADS -->
-  <div class="crossroads-home">
-    {% include "living-crossroads.njk" %}
-  </div>
-
   <!-- START HERE -->
-  <section class="featured">
+  <section class="featured" id="start-here">
     <div class="featured-inner">
       <span class="featured-label">Start Here &nbsp;&middot;&nbsp; An Introduction</span>
-      <a href="scenario-ordinary.html" class="featured-card" aria-label="Read Ordinary Law — an introduction to the Federated Republic">
+      <a href="scenario-the-formation.html" class="featured-card" aria-label="Read The Formation — an introduction to the Federated Republic">
         <div class="featured-text">
-          <span class="featured-eyebrow">&#8776; 12 minute read &nbsp;&middot;&nbsp; NRS &middot; Social State &middot; Asylum Process &middot; Monitors</span>
-          <div class="featured-title">Ordinary Law</div>
-          <p class="featured-desc">Four people. One week. The Republic doing what it was designed to do — not a crisis, not a transition. The constitutional system on a normal Thursday.</p>
+          <span class="featured-eyebrow">Government Formation &nbsp;&middot;&nbsp; Civic Consul &middot; Elections Panel</span>
+          <div class="featured-title">The Formation</div>
+          <p class="featured-desc">Four blocs. No majority. Twenty-one days to choose a Civic Consul. When the Assembly cannot agree, the Constitution puts the choice to the people.</p>
           <span class="featured-read">Read the scenario &rarr;</span>
         </div>
         <div class="featured-quote">
-          <blockquote>&ldquo;His phone produced 340 notifications over the following six hours. He read none of them. He had said what he meant to say, and the record had it.&rdquo;</blockquote>
-          <cite>The National Record System &middot; Permanent &middot; Public &middot; Unalterable</cite>
+          <blockquote>&ldquo;The people, once asked, are not un-asked.&rdquo;</blockquote>
+          <cite>The Formation &middot; A constitutional scenario</cite>
         </div>
       </a>
 
-      <span class="featured-label" style="margin-top:2.5rem">Try It Yourself &nbsp;&middot;&nbsp; A Questionnaire</span>
-      <a href="survey.html" class="featured-card" aria-label="Take the questionnaire — So You Want a Constitution?">
-        <div class="featured-text">
-          <span class="featured-eyebrow">&#8776; 3&ndash;4 minutes &nbsp;&middot;&nbsp; Interactive &middot; No politics &middot; A one-page result</span>
-          <div class="featured-title">So You Want a Constitution?</div>
-          <p class="featured-desc">A short, friendly set of questions about how you think power should be arranged &mdash; who holds it, who checks it, what it must never touch. At the end, a curious-librarian reading of the kind of government your answers describe.</p>
-          <span class="featured-read">Take the questionnaire &rarr;</span>
-        </div>
-        <div class="featured-quote">
-          <blockquote>&ldquo;Your answers sketch a government that trusts structure over saints &mdash; power split, watched, and kept off the things that matter most.&rdquo;</blockquote>
-          <cite>A response to your answers &middot; Not a judgment of you</cite>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- WHAT'S NEW -->
-  <section class="whats-new">
-      <div class="whats-new-inner">
-        <span class="whats-new-label">What's New</span>
-        <div class="wcar" style="margin-top:1.25rem">
-          <button class="wcar-btn wcar-prev" aria-label="Scroll left" onclick="hcarScroll(-1)">&larr;</button>
-          <div class="wcar-track" id="hcarTrack">
-          {%- for u in updates %}
-            <a class="wcar-card" href="{{ u.href }}">
-              <div class="wcar-img" style="background-image:url('{{ u.image }}')"></div>
-              <div class="wcar-body">
-                <span class="wcar-badge">{{ u.badge }}</span>
-                <div class="wcar-title">{{ u.title }}</div>
-                <div class="wcar-meta">{{ u.blurb }}</div>
-              </div>
-            </a>
-          {%- endfor %}
-          </div>
-          <button class="wcar-btn wcar-next" aria-label="Scroll right" onclick="hcarScroll(1)">&rarr;</button>
-        </div>
-      </div>
-      <script>function hcarScroll(d){var t=document.getElementById('hcarTrack');t.scrollBy({left:d*300,behavior:'smooth'});}</script>
-    </section>
-
-  <!-- EXPLORE -->
-  <section class="paths">
-    <div class="paths-inner">
-      <h2 class="paths-label">Explore</h2>
-      <div class="paths-grid">
-        <a href="annotated.html" class="path-card">
-          <span class="path-icon">Read It</span>
-          <div class="path-title">Annotated Constitution</div>
-          <p class="path-desc">Every provision with its design rationale. Click any navy text for the reasoning behind each choice.</p>
-        </a>
-        <a href="scenarios.html" class="path-card">
-          <span class="path-icon">Test It</span>
-          <div class="path-title">Scenario Library</div>
-          <p class="path-desc">45 scenarios — ordinary governance to constitutional crisis. The document under real pressure.</p>
-        </a>
-        <a href="diagrams.html" class="path-card">
-          <span class="path-icon">See It</span>
-          <div class="path-title">Diagrams</div>
-          <p class="path-desc">Visual maps of the dual executive, amendment paths, monitor system, and more.</p>
-        </a>
-        <a href="torenthia.html" class="path-card" style="background:var(--navy);border-color:var(--navy)">
-          <span class="path-icon" style="color:var(--gold)">Live It</span>
-          <div class="path-title" style="color:#f5f0e8">The World</div>
-          <p class="path-desc" style="color:rgba(245,240,232,0.7)">The Republic exists. An election. A crisis on the eastern lake. A water treaty nobody is covering. The constitution running in the background.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
+    </div></section>
+<section class="refresh-wrap featured-now"><span class="section-kicker">Featured Now · an optional way in</span>{% include "living-crossroads.njk" %}</section>
+<section class="refresh-wrap gateways" aria-label="Three ways to explore"><article><span class="section-kicker">Read</span><h2><a href="annotated.html">The constitutional rule</a></h2><p>{{ constitution.articles }} articles. {{ constitution.provisions }} provisions. A complete framework, with optional annotations.</p></article><article><span class="section-kicker">Understand</span><h2><a href="diagrams.html">The institutional mechanism</a></h2><p>Follow the process visually, keep a Quick Sheet, or test it through {{ site.scenarios }} scenarios.</p></article><article><span class="section-kicker">Follow</span><h2><a href="torenthia.html">A living republic</a></h2><p>Meet Torenthia: the fictional country where decisions leave a public record.</p></article></section>
+<section class="refresh-wrap"><span class="section-kicker">From the fictional public record</span><h2>Latest from the Republic</h2><div class="latest-grid">{% for p in collections.world | reverse | take(4) %}{% include "record-card.njk" %}{% endfor %}</div><a class="text-link" href="torenthia-record.html">Explore the complete Record →</a></section>
+<section class="refresh-wrap quiet-tools"><h2>Reference and tools</h2><div class="link-row"><a href="quicksheets.html">One-page reference guides</a><a href="survey.html">Constitution Questionnaire</a><a href="glossary.html">Glossary</a><a href="constitutional-history.html">Design History &amp; Change Log</a></div><details><summary>Featured project updates</summary><div class="record-grid">{% for u in updates | take(3) %}<article class="record-card"><span class="meta">{{ u.badge }} · Editorial selection</span><h3><a href="{{ u.href }}">{{ u.title }}</a></h3><p>{{ u.blurb }}</p></article>{% endfor %}</div></details></section>
   </main>
 
 
@@ -311,7 +242,7 @@
         let html=`<p class="nav-summary">${p.summary||''}</p>`;
         if(p.provisions?.length){
           html+=`<p class="nav-section-label">Provisions</p><div class="nav-prov-list">`;
-          p.provisions.forEach(v=>{const a=(v.num||'').replace('§','').replace(/\./g,'-');html+=`<div class="nav-prov"><div class="nav-prov-num">${v.num||''}</div><div class="nav-prov-name">${v.name||''}</div><div class="nav-prov-note">${v.relevance||''}</div><a class="nav-prov-link" href="annotated.html#s${a}">Read in Annotated Edition &rarr;</a></div>`;});
+          p.provisions.forEach(v=>{const a=(v.num||'').replace('§','').replace('.','-').replace(/\./g,'');html+=`<div class="nav-prov"><div class="nav-prov-num">${v.num||''}</div><div class="nav-prov-name">${v.name||''}</div><div class="nav-prov-note">${v.relevance||''}</div><a class="nav-prov-link" href="annotated.html#s${a}">Read in Annotated Edition &rarr;</a></div>`;});
           html+=`</div>`;
         }
         if(p.scenarios?.length){

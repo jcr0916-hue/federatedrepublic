@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Tobias-Vael-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Senator Tobias Vael held a brief press availability in Verentum to respond to the Asdal Report segment. He addressed the question. He did not fully answer it."
+worldId: "torenthia-news-012"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Varek"]
+worldProvisions: ["§2.1", "§2.2"]
+worldRelated: ["torenthia-news-011.html", "torenthia-nrs-004.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Senator Tobias Vael held a brief press availability in Verentum to 
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -93,7 +98,8 @@ worldBlurb: "Senator Tobias Vael held a brief press availability in Verentum to 
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

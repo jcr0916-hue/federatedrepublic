@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Legat Consul candidates were asked what they'd do about the two Korda court seats a Monitor General says aren't ready to move. Three had an opinion about the finding. One had a plan for the seats."
+worldId: "torenthia-news-053"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-052.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Legat Consul candidates were asked what they'd do about the two
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -97,6 +102,7 @@ worldBlurb: "The Legat Consul candidates were asked what they'd do about the two
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

@@ -5,6 +5,11 @@ worldDate: "12.10"
 worldTitle: "LC Diplomatic Note — Sunderland No. 3"
 worldOutlet: "National Record System"
 worldBlurb: "National Record System. Legat Consul Diplomatic Communication to Sunderland. Lake Varda Administrative Midline. Year 12, Month 10."
+worldId: "torenthia-nrs-001"
+worldArcs: ["lake-varda"]
+worldJurisdictions: []
+worldProvisions: ["§10.1", "§2.1"]
+worldRelated: ["torenthia-news-003.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +77,7 @@ worldBlurb: "National Record System. Legat Consul Diplomatic Communication to Su
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <!-- NRS DOCUMENT HEADER -->
   <div class="nrs-header" role="banner">
@@ -193,7 +198,8 @@ worldBlurb: "National Record System. Legat Consul Diplomatic Communication to Su
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

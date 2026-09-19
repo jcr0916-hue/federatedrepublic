@@ -1,0 +1,102 @@
+[
+  {
+    "label": "Start Here",
+    "url": "index.html#start-here"
+  },
+  {
+    "label": "Constitution",
+    "links": [
+      [
+        "Read the Constitution",
+        "annotated.html"
+      ],
+      [
+        "Explore by question",
+        "annotated.html#reading-paths"
+      ],
+      [
+        "Design History & Change Log",
+        "constitutional-history.html"
+      ],
+      [
+        "Download the Constitution (PDF)",
+        "constitution-current.pdf"
+      ]
+    ]
+  },
+  {
+    "label": "Learn",
+    "links": [
+      [
+        "Scenario Library",
+        "scenarios.html"
+      ],
+      [
+        "Diagrams",
+        "diagrams.html"
+      ],
+      [
+        "Quick Sheets",
+        "quicksheets.html"
+      ],
+      [
+        "Living Crossroads \u00b7 non-canon",
+        "crossroads.html"
+      ],
+      [
+        "Constitution Questionnaire",
+        "survey.html"
+      ]
+    ]
+  },
+  {
+    "label": "Torenthia",
+    "links": [
+      [
+        "The Republic Now",
+        "torenthia.html"
+      ],
+      [
+        "The Record",
+        "torenthia-record.html"
+      ],
+      [
+        "Atlas",
+        "atlas.html"
+      ],
+      [
+        "States and Territories",
+        "republic-at-a-glance.html"
+      ],
+      [
+        "Korda: competing futures",
+        "dossier-korda.html"
+      ],
+      [
+        "Dispatches / Voices",
+        "torenthia.html#dispatches"
+      ]
+    ]
+  },
+  {
+    "label": "Explore",
+    "links": [
+      [
+        "Sources & Inspiration",
+        "sources.html"
+      ],
+      [
+        "AI Features & Privacy",
+        "ai-features.html"
+      ],
+      [
+        "Contact",
+        "contact.html"
+      ],
+      [
+        "Project repository",
+        "https://github.com/jcr0916-hue/federatedrepublic"
+      ]
+    ]
+  }
+]

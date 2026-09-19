@@ -5,6 +5,11 @@ worldDate: "13.05"
 worldTitle: "The Race, Reshaped: Reading the Field After the Crossing"
 worldOutlet: "RNN"
 worldBlurb: "Three weeks after the Sunderland border crossing, RNN's first analytical piece looks at how the four declared LC candidates responded — and what each response revealed."
+worldId: "torenthia-news-026"
+worldArcs: []
+worldJurisdictions: ["Varek", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-025.html", "torenthia-news-027.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +28,7 @@ worldBlurb: "Three weeks after the Sunderland border crossing, RNN's first analy
 </head>
 <body class="paper-rnn">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="rnn-masthead" role="banner">
   <div class="rnn-masthead-inner">
     <div>
@@ -85,6 +90,7 @@ worldBlurb: "Three weeks after the Sunderland border crossing, RNN's first analy
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

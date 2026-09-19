@@ -6,6 +6,11 @@ worldTitle: "Three Responses to Lake Varda. Three Different Races."
 worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "Senator Vael called for a Senate briefing. Assembly member Mak declared for Legat Consul. Ines Carrow filed with the Elections Panel and added one sentence. The field has defined itself."
+worldId: "torenthia-news-008"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Harren", "Korda"]
+worldProvisions: ["§12.6"]
+worldRelated: ["torenthia-news-007.html", "torenthia-nrs-003.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +36,7 @@ worldBlurb: "Senator Vael called for a Senate briefing. Assembly member Mak decl
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <div class="masthead" role="banner">
     <div class="masthead-inner">
@@ -111,7 +116,8 @@ worldBlurb: "Senator Vael called for a Senate briefing. Assembly member Mak decl
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

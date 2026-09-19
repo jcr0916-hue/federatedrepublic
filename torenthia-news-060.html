@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Aleth Fenn"
 worldImage: "world-map-card.webp"
 worldBlurb: "Norvane had fourteen days to challenge the eligibility ruling on the Argent Ridge petition. It let them pass without a filing. The reason has nothing to do with the ridge."
+worldId: "torenthia-news-060"
+worldArcs: ["argent-ridge"]
+worldJurisdictions: ["Varek", "Norvane"]
+worldProvisions: ["§13.1", "§18.4"]
+worldRelated: ["torenthia-news-040.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Norvane had fourteen days to challenge the eligibility ruling on th
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -75,6 +80,7 @@ worldBlurb: "Norvane had fourteen days to challenge the eligibility ruling on th
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

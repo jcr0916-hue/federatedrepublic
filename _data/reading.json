@@ -1,0 +1,329 @@
+[
+  {
+    "number": 1,
+    "title": "Article I \u2014 Individual Sovereignty and Rights",
+    "summary": "The rights that constrain every public authority.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-rights.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-finality-act.html"
+      ]
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Article II \u2014 The Dual Executive",
+    "summary": "How domestic and external executive authority are divided and checked.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-article-2.html"
+      ],
+      [
+        "See the mechanism",
+        "diagrams.html#tab-dual"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-formation.html"
+      ],
+      [
+        "Follow it in Torenthia",
+        "dossier-lake-varda.html"
+      ]
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Article III \u2014 The Legislature",
+    "summary": "How elected chambers make laws and hold government accountable.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-article-3.html"
+      ],
+      [
+        "See the mechanism",
+        "diagrams.html#tab-lifecycle"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-vote.html"
+      ]
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Article IV \u2014 The Judicial Architecture",
+    "summary": "How courts resolve disputes and how judges enter and leave office.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-judiciary.html"
+      ],
+      [
+        "See the mechanism",
+        "diagrams.html#tab-sc-appointment"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-holdout.html"
+      ]
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Article V \u2014 Citizenship and National Identity",
+    "summary": "Who belongs to the Republic and how citizenship is protected.",
+    "links": []
+  },
+  {
+    "number": 6,
+    "title": "Article VI \u2014 Immigration and Residency",
+    "summary": "Separate routes for residency, asylum, and protection against unlawful removal.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-immigration.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-unremovable.html"
+      ]
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Article VII \u2014 Elections and Federal Office",
+    "summary": "How elections, federal office, and continuity of authority work.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-elections.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-waiver.html"
+      ]
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Article VIII \u2014 Electoral Finance and Campaign Conduct",
+    "summary": "How campaign funding and electoral conduct are constrained.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-elections.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-ledger.html"
+      ]
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Article IX \u2014 The Monitors",
+    "summary": "Independent scrutiny of the Legislature, executives, and courts.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-monitors.html"
+      ],
+      [
+        "See the mechanism",
+        "diagrams.html#tab-structure"
+      ],
+      [
+        "Read a scenario",
+        "scenario-critical-finding.html"
+      ]
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Article X \u2014 The National Record System",
+    "summary": "What the public record preserves, and the limits on secrecy.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-nvs.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-redaction.html"
+      ],
+      [
+        "Follow it in Torenthia",
+        "dossier-lake-varda.html"
+      ]
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Article XI \u2014 NRS Panel and Elections Panel",
+    "summary": "The independent infrastructure for records, elections, and voting.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-nvs.html"
+      ],
+      [
+        "See the mechanism",
+        "diagrams.html#tab-pool"
+      ]
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Article XII \u2014 Social State and Economic Rights",
+    "summary": "Social provision, fiscal capacity, and the Republic\u2019s economic obligations.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-fiscal.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-formula.html"
+      ],
+      [
+        "Follow it in Torenthia",
+        "dossier-fiscal-equalization.html"
+      ]
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Article XIII \u2014 Direct Democracy",
+    "summary": "How citizens repeal laws or initiate legislation.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-amendments.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-second-path.html"
+      ]
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Article XIV \u2014 Military Authorization and Accountability",
+    "summary": "The conditions for authorizing force and maintaining accountability.",
+    "links": [
+      [
+        "See the mechanism",
+        "diagrams.html#tab-tiers"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-second-renewal.html"
+      ],
+      [
+        "Follow it in Torenthia",
+        "dossier-lake-varda.html"
+      ]
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Article XV \u2014 Territorial Structure and Statehood",
+    "summary": "How jurisdictions join, change status, restructure, or leave.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-states.html"
+      ],
+      [
+        "See the mechanism",
+        "diagrams.html#tab-states-fed"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-audit.html"
+      ],
+      [
+        "Follow it in Torenthia",
+        "dossier-korda.html"
+      ]
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Article XVI \u2014 Indigenous Sovereignty",
+    "summary": "Indigenous sovereignty and the choice of constitutional relationship.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-states.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-founding-choice.html"
+      ]
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Article XVII \u2014 Constitutional Amendments",
+    "summary": "The routes to amendment and the rights they cannot displace.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-amendments.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-void-exception.html"
+      ]
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Article XVIII \u2014 Federal Property and National Trust",
+    "summary": "Federal use of land, the seat of government, and National Trust protection.",
+    "links": [
+      [
+        "Quick Sheet",
+        "quicksheet-states.html"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-sixty-percent.html"
+      ],
+      [
+        "Follow it in Torenthia",
+        "dossier-argent-ridge.html"
+      ]
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Article XIX \u2014 Transition and Ratification",
+    "summary": "How the constitutional order is ratified and brought into operation.",
+    "links": [
+      [
+        "Read a scenario",
+        "scenario-the-founding-choice.html"
+      ]
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Article XX \u2014 Associated Communities",
+    "summary": "Compacts with sovereign communities and their continuing right to leave.",
+    "links": [
+      [
+        "Read a scenario",
+        "scenario-the-departure.html"
+      ]
+    ]
+  }
+]

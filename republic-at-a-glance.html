@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Republic at a Glance — Torenthia</title>
+  <meta name="description" content="The Federated Republic of Torenthia — a constitutional republic running on the FR constitution in a world with real neighbors, real pressures, and a record being written in real time.">
+  <meta property="og:title" content="The Federated Republic of Torenthia">
+  <meta property="og:description" content="A constitutional republic in the world. Year 13. The constitution operates here — not as theory, but as the framework a real nation uses to navigate a collapsing eastern neighbor, a disputed river treaty, a southern nation that almost joined, and an audit failure in its own southwest.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css?v=crossroads-art-1">
+  <link rel="stylesheet" href="republic.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  {% include "nav.njk" %}
+
+  <!-- ── INTERACTIVE MAP ── -->
+  <div class="map-section" id="republic-map">
+    <div class="map-section-header">
+      <div class="ms-left">
+        <div class="ms-eye">The Living World · Year 13</div><!-- WORLD_YEAR -->
+        <h1>Republic at a Glance</h1>
+        <a href="atlas.html" style="display:inline-block;margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(201,168,76,.5);padding:.45rem .85rem;border-radius:2px">See the world Torenthia lives in &rarr;</a>
+      </div>
+      <div class="ms-note">Explore the map or use the directory below</div>
+    </div>
+    <div class="atlas-wrap">
+      <div class="atlas-layout">
+
+        <div class="map-wrap">
+          <div class="map-scale-wrap" id="mapScaleWrap">
+            <div class="map-inner" id="mapInner">
+              <img src="region-map-tier2-base.webp" id="baseImg" alt="Federated Republic of Torenthia — Interactive Map">
+              <svg id="mapOverlay" style="position:absolute;top:0;left:0" width="1536" height="1024" viewBox="0 0 1536 1024" aria-hidden="true"></svg>
+
+              {% for s in statepages %}<a class="state-map-link" href="{{ s.url }}" style="left:{{ s.left }}%;top:{{ s.top }}%" aria-label="Explore {{ s.name }}">{{ s.name }}</a>{% endfor %}
+              <!-- Crisis dots (red) -->
+              <div role="button" tabindex="0" class="dot" data-key="norvane" style="top:19.2%;left:76.5%">
+                <div class="dot-core" style="background:#e8185a"></div>
+                <div class="dot-ring" style="border-color:#e8185a"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
+              </div>
+              <div role="button" tabindex="0" class="dot" data-key="rhondel" style="top:59.6%;left:76.8%">
+                <div class="dot-core" style="background:#e8185a"></div>
+                <div class="dot-ring" style="border-color:#e8185a"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
+              </div>
+
+              <!-- Political dots (purple) -->
+              <div role="button" tabindex="0" class="dot" data-key="verentum" style="top:64.3%;left:50.3%">
+                <div class="dot-core" style="background:#7c3aed"></div>
+                <div class="dot-ring" style="border-color:#7c3aed"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
+              </div>
+              <div role="button" tabindex="0" class="dot" data-key="selvane" style="top:57.6%;left:59.1%">
+                <div class="dot-core" style="background:#7c3aed"></div>
+                <div class="dot-ring" style="border-color:#7c3aed"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
+              </div>
+
+              <!-- Legal dots (blue) -->
+              <div role="button" tabindex="0" class="dot" data-key="corindal" style="top:72.3%;left:45.2%">
+                <div class="dot-core" style="background:#0ea5e9"></div>
+                <div class="dot-ring" style="border-color:#0ea5e9"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
+              </div>
+              <div role="button" tabindex="0" class="dot" data-key="argent-ridge" style="top:22.5%;left:63.5%">
+                <div class="dot-core" style="background:#0ea5e9"></div>
+                <div class="dot-ring" style="border-color:#0ea5e9"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
+              </div>
+              <div role="button" tabindex="0" class="dot" data-key="korda-south" style="top:71.8%;left:76.8%">
+                <div class="dot-core" style="background:#0ea5e9"></div>
+                <div class="dot-ring" style="border-color:#0ea5e9"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
+              </div>
+
+              <!-- Diplomatic dots (gold) -->
+              <div role="button" tabindex="0" class="dot" data-key="lake-varda" style="top:48.8%;left:87.9%">
+                <div class="dot-core" style="background:#f59e0b"></div>
+                <div class="dot-ring" style="border-color:#f59e0b"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
+              </div>
+              <div role="button" tabindex="0" class="dot" data-key="valedon" style="top:88.4%;left:57.3%">
+                <div class="dot-core" style="background:#f59e0b"></div>
+                <div class="dot-ring" style="border-color:#f59e0b"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
+              </div>
+              <div role="button" tabindex="0" class="dot" data-key="toren-river" style="top:9.5%;left:65.1%">
+                <div class="dot-core" style="background:#f59e0b"></div>
+                <div class="dot-ring" style="border-color:#f59e0b"></div>
+                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="atlas-sidebar">
+          <div class="alerts-panel">
+            <div class="alerts-title">Activity Legend</div>
+            <div class="alert-row"><div style="background:#e8185a;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Active Crisis</strong> — conflict spillover, emergency operations, humanitarian pressure</div></div>
+            <div class="alert-row"><div style="background:#7c3aed;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Political · Electoral</strong> — elections, appointments, governance disputes</div></div>
+            <div class="alert-row"><div style="background:#0ea5e9;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Constitutional · Legal</strong> — SC cases, audits, Article XVI proceedings</div></div>
+            <div class="alert-row"><div style="background:#f59e0b;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Diplomatic · Foreign Affairs</strong> — treaties, border tensions, foreign negotiations</div></div>
+          </div>
+          <div class="info-panel">
+            <div class="info-header">
+              <div class="info-eyebrow" id="infoEye">Activity Inspector</div>
+              <div class="info-title" id="infoTitle">Click any dot</div>
+            </div>
+            <div class="info-body" id="infoBody" aria-live="polite">Click an activity dot on the map to inspect the situation, constitutional provisions, and current status.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<main id="main-content" class="refresh-wrap"><h2>States and Territories</h2><p>{{ stats.totals.population }} million inhabitants · {{ stats.totals.assembly }} Assembly seats · {{ stats.totals.senateFilled }} occupied Senate seats of {{ stats.totals.senateTotal }}. The directory offers the same geographic routes without requiring map interaction.</p><div class="jurisdiction-grid">{% for s in stats.states %}<article class="jurisdiction-card" id="{{ s.name | lower }}"><span class="meta">{{ s.rel }}</span><h3>{{ s.name }}</h3><p>{{ s.char }}</p><dl><dt>Population</dt><dd>{{ s.pop }} million</dd><dt>Assembly / Senate</dt><dd>{{ s.assembly }} / {{ s.senate }} seats{% if s.senateNote %} · {{ s.senateNote }}{% endif %}</dd><dt>State audit</dt><dd>{{ s.audit }}</dd></dl><p>{{ s.summary }}</p><div class="link-row">{% for profile in statepages %}{% if profile.name == s.name %}<a href="{{ profile.url }}">State profile</a>{% endif %}{% endfor %}<a href="torenthia-record.html?place={{ s.name }}">Public records</a></div></article>{% endfor %}</div><h2>Territories · a distinct constitutional relationship</h2><p>Territories have voting Assembly representation and no Senate seats. Their constitutional processes are described separately from State audit status.</p><div class="jurisdiction-grid">{% for s in stats.territories %}<article class="jurisdiction-card" id="{{ s.name | lower }}"><span class="meta">{{ s.rel }}</span><h3>{{ s.name }}</h3><p>{{ s.char }}</p><dl><dt>Population</dt><dd>{{ s.pop }} million</dd><dt>Assembly / Senate</dt><dd>{{ s.assembly }} / 0 seats</dd><dt>Territorial process</dt><dd>{{ s.audit }}</dd></dl><p>{{ s.summary }}</p><div class="link-row">{% if s.name == 'Korda' %}<a href="dossier-korda.html">Korda dossier</a>{% elif s.name == 'Solara' or s.name == 'Morantine' %}<a href="territory-{{ s.name | lower }}.html">Territory profile</a>{% endif %}<a href="torenthia-record.html?place={{ s.name }}">Public records</a><a href="annotated.html#s15-2">Statehood process</a></div></article>{% endfor %}</div><p><a href="atlas.html">The world beyond Torenthia →</a></p></main>{% include "footer.njk" %}
+  <script src="map-data.js"></script>
+  <script>
+  (function(){
+    const D=MAP_DATA,NS='http://www.w3.org/2000/svg',svg=document.getElementById('mapOverlay');
+    if(!svg)return;
+    function path(pts,cls,wd){const p=document.createElementNS(NS,'path');p.setAttribute('d','M'+pts.map(q=>q[0]+' '+q[1]).join('L'));p.setAttribute('class',cls);p.setAttribute('stroke-width',wd);svg.appendChild(p);}
+    D.borders.state.forEach(l=>path(l,'b-halo',5));D.borders.state.forEach(l=>path(l,'b-st',2.6));
+    D.borders.national.forEach(l=>path(l,'b-halo',7));D.borders.national.forEach(l=>path(l,'b-nat',3));
+    function text(str,x,y,cls,size){const t=document.createElementNS(NS,'text');t.setAttribute('x',x);t.setAttribute('y',y);t.setAttribute('text-anchor','middle');t.setAttribute('class',cls);t.setAttribute('font-size',size);t.textContent=str;svg.appendChild(t);return t;}
+    const L=D.labels;
+    Object.entries(L.states).forEach(([n,[x,y]])=>{const nm=n.replace(' (S)','');const el=text(nm,x,y+8,'t-state',nm.includes('TERRITORY')?23:25);if(el)el.setAttribute('data-place',nm.replace(' TERRITORY','').trim().toLowerCase());});
+    text('THE FEDERATED REPUBLIC OF',L.country_label[0],L.country_label[1]-24,'t-country',17);
+    text('T O R E N T H I A',L.country_label[0],L.country_label[1]+10,'t-country',36);
+    Object.entries(L.neighbors).forEach(([n,[x,y]])=>text(n,x,y+8,'t-neighbor',n==='CALDRIS'||n==='VALEDON'?31:23));
+    Object.entries(L.water).forEach(([n,[x,y]])=>text(n,x,y+7,'t-water',n==='Western Sea'?27:24));
+    Object.entries(L.cities).forEach(([n,v])=>{const cap=v[2]==='capital';const c=document.createElementNS(NS,'circle');c.setAttribute('cx',v[0]);c.setAttribute('cy',v[1]);c.setAttribute('r',cap?7:5);c.setAttribute('fill',cap?'#C9A84C':'#f6f1e6');c.setAttribute('stroke','#1B2A4A');c.setAttribute('stroke-width',2);svg.appendChild(c);text(cap?n.toUpperCase():n,v[0],v[1]+26,'t-city',cap?20:19);});
+  })();
+  </script>
+
+  <script>
+  (function(){
+    function scaleMap(){
+      var wrap=document.getElementById('mapScaleWrap');
+      var inner=document.getElementById('mapInner');
+      if(!wrap||!inner) return;
+      var scale=wrap.offsetWidth/1536;
+      inner.style.transform='scale('+scale+')';
+      wrap.style.height=Math.ceil(1024*scale)+'px';
+    }
+    scaleMap();
+    window.addEventListener('resize',scaleMap);
+  })();;
+
+  const TYPE_COLORS={crisis:"#e8185a",political:"#7c3aed",legal:"#0ea5e9",diplomatic:"#f59e0b"};
+  // Dot -> relevant World entries, injected from _data/mapdots.js (derived from the collection).
+  const MAPDOTS={
+  {% for key, d in mapdots %}{% if not loop.first %},{% endif %}
+    "{{ key }}":{label:"{{ d.label }}",type:"{{ d.type }}",typeLabel:"{{ d.typeLabel }}",entries:[{% for e in collections.world | mapEntries(key,d) %}{% if not loop.first %},{% endif %}{url:"{{ e.url }}",title:{{ e.title | dump | safe }},date:"{{ e.date }}"}{% endfor %}]}{% endfor %}
+  };
+  let activeDot=null;
+  function selectDot(key){
+    document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
+    const el=document.querySelector('[data-key="'+key+'"]');
+    if(el) el.classList.add("active");
+    activeDot=key;
+    const d=MAPDOTS[key];
+    if(!d) return;
+    const color=TYPE_COLORS[d.type]||"#888";
+    document.getElementById("infoEye").textContent=d.typeLabel;
+    document.getElementById("infoEye").style.color=color;
+    document.getElementById("infoTitle").textContent=d.label;
+    let html='<span style="font-family:\'JetBrains Mono\',monospace;font-size:.62rem;padding:.25rem .5rem;border-radius:2px;display:inline-block;margin-bottom:.75rem;background:'+color+'22;color:'+color+'">'+d.typeLabel+'</span>';
+    if(d.entries.length){
+      html+='<div style="font-family:\'Jost\',sans-serif;font-size:.8rem;color:#8898a8;margin-bottom:.6rem">Latest coverage:</div>';
+      d.entries.forEach(e=>{
+        const ym=e.date.split(".");
+        html+='<a href="'+e.url+'" style="display:block;text-decoration:none;padding:.5rem 0;border-bottom:1px solid #2a3a50">'
+          +'<span style="font-family:\'Cormorant Garamond\',serif;font-size:1.05rem;color:#f0e8d8;font-weight:600;line-height:1.2">'+e.title+'</span>'
+          +'<span style="display:block;font-family:\'JetBrains Mono\',monospace;font-size:.6rem;color:#8898a8;margin-top:.15rem">Year '+parseInt(ym[0])+', Month '+parseInt(ym[1])+' &rarr;</span></a>';
+      });
+      html+='<a href="torenthia-record.html" style="display:inline-block;margin-top:.75rem;font-family:\'JetBrains Mono\',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);text-decoration:none">More on The Record &rarr;</a>';
+    } else {
+      html+='<div style="font-family:\'Jost\',sans-serif;font-size:.85rem;color:#8898a8;line-height:1.5">No entries on the record yet. This place is on the map for stories still to come.</div>';
+    }
+    document.getElementById("infoBody").innerHTML=html;
+  }
+  document.querySelectorAll(".dot").forEach(el=>{
+    el.setAttribute('aria-label',MAPDOTS[el.dataset.key]?.label || el.dataset.key);
+    el.addEventListener("click",()=>selectDot(el.dataset.key));
+    el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectDot(el.dataset.key);}});
+  });
+  </script>
+  <script src="nav.js"></script>
+
+  <script>
+  /* Status/Progress popups: tap-to-toggle on touch devices (hover handles desktop).
+     Same pattern as annotated.html / diagrams.html. */
+
+  /* Open the box downward when there isn't room above it inside the scroll container —
+     otherwise the top row's popup is clipped by .stbl-wrap. */
+  function placeDfn(dfn){
+    if(!dfn) return;
+    var box = dfn.querySelector('.dfn-box');
+    var wrap = dfn.closest('.stbl-wrap');
+    if(!box || !wrap) return;
+    dfn.classList.remove('dfn-flip');
+    var needed = box.offsetHeight + 12;
+    var available = dfn.getBoundingClientRect().top - wrap.getBoundingClientRect().top;
+    if(available < needed) dfn.classList.add('dfn-flip');
+  }
+  document.querySelectorAll('.stbl .dfn').forEach(function(d){
+    d.addEventListener('mouseenter', function(){ placeDfn(d); });
+  });
+  document.addEventListener('click', function(e){
+    var dfn = e.target.closest('.dfn');
+    document.querySelectorAll('.dfn.dfn-open').forEach(function(d){ if(d!==dfn) d.classList.remove('dfn-open'); });
+    if(dfn){ placeDfn(dfn); dfn.classList.toggle('dfn-open'); e.stopPropagation(); }
+  });
+  </script>
+
+  <script>
+  /* Stats table -> map: scroll to the living map and flash the named place's label. */
+  function showOnMap(place){
+    var map = document.querySelector('.map-section') || document.getElementById('mapOverlay');
+    if(map) map.scrollIntoView({behavior:'smooth', block:'center'});
+    var el = document.querySelector('#mapOverlay [data-place="'+place+'"]');
+    if(!el) return;
+    el.classList.remove('map-flash');
+    void el.getBBox();            // force reflow so a repeat click re-triggers
+    el.classList.add('map-flash');
+    setTimeout(function(){ el.classList.remove('map-flash'); }, 2600);
+  }
+  </script>
+</body>
+</html>

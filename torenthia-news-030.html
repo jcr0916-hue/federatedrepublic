@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldImage: "Tobias-Vael-card.webp"
 worldAuthor: "Petra Vend"
 worldBlurb: "Four days of silence on Sunderland ended with a press conference, not a statement. Senator Tobias Vael owned the tributary error plainly. The question he didn't handle as well was why today."
+worldId: "torenthia-news-030"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Varek", "Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-news-029.html", "torenthia-news-031.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "Four days of silence on Sunderland ended with a press conference, n
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 <div class="masthead">
   <div class="masthead-inner">
     <div class="masthead-top">
@@ -82,6 +87,7 @@ worldBlurb: "Four days of silence on Sunderland ended with a press conference, n
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

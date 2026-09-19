@@ -5,6 +5,11 @@ worldDate: "13.11"
 worldTitle: "Diplomatic Communication — Proposal for Trilateral Conference on Lake Varda"
 worldOutlet: "National Record System"
 worldBlurb: "The Foreign Affairs Directorate proposes a trilateral conference with Caldris and Valedon to address the Lake Varda situation, following the Sunderland Interim Authority's non-response to Director Carrow's formal inquiry."
+worldId: "torenthia-nrs-032"
+worldArcs: ["lake-varda"]
+worldJurisdictions: ["Korda"]
+worldProvisions: []
+worldRelated: ["torenthia-nrs-030.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +45,7 @@ worldBlurb: "The Foreign Affairs Directorate proposes a trilateral conference wi
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -90,6 +95,7 @@ worldBlurb: "The Foreign Affairs Directorate proposes a trilateral conference wi
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

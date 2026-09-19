@@ -7,6 +7,11 @@ worldOutlet: "TNB Verentum"
 worldAuthor: "TNB News Desk"
 worldBlurb: "Verentum Transit adds two Saturday cars to Line 4 through the end of Month 12 after midday ridership ran above the seasonal schedule."
 worldMundane: true
+worldId: "torenthia-news-082"
+worldArcs: []
+worldJurisdictions: []
+worldProvisions: []
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldMundane: true
 </head>
 <body class="paper-tnb">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
   <main id="main-content">
     <div class="article-wrap">
       <div class="article-section">Verentum &middot; Transit</div>
@@ -51,7 +56,8 @@ worldMundane: true
       </div>
     </div>
   </main>
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

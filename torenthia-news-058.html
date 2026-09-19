@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Legat Consul race has been covered as a national contest. It is two contests at once, and the second one is where three of the four candidates have a problem."
+worldId: "torenthia-news-058"
+worldArcs: []
+worldJurisdictions: ["Korda"]
+worldProvisions: ["§7.1", "§7.2"]
+worldRelated: ["torenthia-news-057.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Legat Consul race has been covered as a national contest. It is
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -91,6 +96,7 @@ worldBlurb: "The Legat Consul race has been covered as a national contest. It is
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

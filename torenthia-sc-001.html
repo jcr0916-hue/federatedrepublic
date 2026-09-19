@@ -5,6 +5,11 @@ worldDate: "13.03"
 worldTitle: "Corindal Industrial Partners v. NRS Panel of the Federated Republic"
 worldOutlet: "Supreme Court"
 worldBlurb: "Supreme Court of the Federated Republic. Corindal Industrial Partners v. NRS Panel. Whether §10.1's permanence protection admits exceptions for records containing proprietary commercial information. Decided Year 13, Month 3. Holding: No."
+worldId: "torenthia-sc-001"
+worldArcs: []
+worldJurisdictions: ["Corindal"]
+worldProvisions: ["§4.5", "§10.1", "§15.1.a", "§9.1.b"]
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +63,7 @@ worldBlurb: "Supreme Court of the Federated Republic. Corindal Industrial Partne
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="sc-masthead">
   <div class="sc-masthead-inner">
@@ -68,7 +73,7 @@ worldBlurb: "Supreme Court of the Federated Republic. Corindal Industrial Partne
   </div>
 </div>
 
-<main id="main-content">
+<main id="main-content"><div class="court-toc" role="navigation" aria-label="Opinion contents"><a href="#holding">Holding</a><a href="#opinion">Opinion</a><a href="#dissent">Dissent</a><a href="torenthia-record.html?type=sc">Court archive</a></div>
 
   <div class="opinion-header">
     <h1 class="case-name">Corindal Industrial Partners<br>v.<br>NRS Panel of the Federated Republic</h1>
@@ -106,14 +111,14 @@ worldBlurb: "Supreme Court of the Federated Republic. Corindal Industrial Partne
       <p>Whether §10.1's protection of National Record System documents from alteration or removal admits any exception for records that were lawfully published but contain proprietary commercial information belonging to a private party.</p>
     </div>
 
-    <div class="holding-box">
+    <div class="holding-box" id="holding">
       <div class="holding-label">Holding</div>
       <p>No. §10.1's permanence protection is absolute with respect to records that were lawfully published to the NRS. The Panel may publish corrections, clarifications, and addenda; it may not remove or alter the underlying record. Commercial confidentiality interests, while cognizable and entitled to statutory protection, do not override a constitutional record obligation. The judgment of the Third Appellate Court is affirmed.</p>
     </div>
   </div>
 
   <div class="opinion-section">
-    <div class="section-head">Opinion of the Court</div>
+    <h2 class="section-head" id="opinion">Opinion of the Court</h2>
     <div class="opinion-byline">Justice Ola Vrentis</div>
     <div class="opinion-joined">Joined by Justices Aldren, Corse, Halvath, Imen, Mevra, and Norven</div>
 
@@ -146,7 +151,7 @@ worldBlurb: "Supreme Court of the Federated Republic. Corindal Industrial Partne
   </div>
 
   <div class="dissent">
-    <div class="section-head">Dissenting Opinion</div>
+    <h2 class="section-head" id="dissent">Dissenting Opinion</h2>
     <div class="opinion-byline">Justice Pael Doran</div>
     <div class="opinion-joined">Joined by Justice Careth</div>
 
@@ -172,6 +177,7 @@ worldBlurb: "Supreme Court of the Federated Republic. Corindal Industrial Partne
 
 </main>
 
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

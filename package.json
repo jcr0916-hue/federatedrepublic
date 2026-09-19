@@ -7,7 +7,9 @@
     "check:assets": "node scripts/public-assets.mjs",
     "test:assets": "node --test scripts/public-assets.test.mjs",
     "stats:assets": "node scripts/asset-stats.mjs",
-    "test:crossroads": "node --test scripts/crossroads.test.cjs"
+    "test:crossroads": "node --test scripts/crossroads.test.cjs",
+    "test:world": "node --test scripts/world.test.mjs",
+    "check:discovery": "node scripts/check-discovery.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",

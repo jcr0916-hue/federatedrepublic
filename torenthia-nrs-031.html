@@ -5,6 +5,11 @@ worldDate: "13.11"
 worldTitle: "Monetary Authority — State of the Economy Report, Second Half Year 13"
 worldOutlet: "National Record System"
 worldBlurb: "The Monetary Authority's semi-annual report to the Assembly, the Legat Consul, and the Civic Consul under §12.1.b."
+worldId: "torenthia-nrs-031"
+worldArcs: []
+worldJurisdictions: []
+worldProvisions: ["§12.1.b", "§9.1.b", "§9.5.a", "§12.6"]
+worldRelated: []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +45,7 @@ worldBlurb: "The Monetary Authority's semi-annual report to the Assembly, the Le
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <div class="nrs-masthead">
   <div class="nrs-masthead-inner">
@@ -78,6 +83,7 @@ worldBlurb: "The Monetary Authority's semi-annual report to the Assembly, the Le
   <a href="torenthia-record.html">The Record &rarr;</a>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

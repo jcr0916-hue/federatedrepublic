@@ -7,6 +7,11 @@ worldOutlet: "The Torenthian"
 worldAuthor: "Petra Vend"
 worldBlurb: "The Elections Panel is unwinding preparations for the Day 8 corridor vote. Residents are being told where they will no longer be voting; there is no replacement date to give them."
 worldPlaces: "korda-south"
+worldId: "torenthia-news-073"
+worldArcs: ["korda"]
+worldJurisdictions: ["Kelvant", "Korda"]
+worldProvisions: ["§15.5.a"]
+worldRelated: ["torenthia-nrs-034.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldPlaces: "korda-south"
 </head>
 <body class="paper-torenthian">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -55,6 +60,7 @@ worldPlaces: "korda-south"
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>

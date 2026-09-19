@@ -5,6 +5,11 @@ worldDate: "12.12"
 worldTitle: "Intelligence Summary (Redacted) — Sunderland Internal Military Structure"
 worldOutlet: "National Record System"
 worldBlurb: "NRS-Y12-3198. Director of Foreign Affairs Ines Carrow publishes a redacted intelligence summary on Sunderland's internal military faction structure to the National Record System."
+worldId: "torenthia-nrs-004"
+worldArcs: ["lake-varda"]
+worldJurisdictions: []
+worldProvisions: ["§2.3"]
+worldRelated: ["torenthia-news-012.html", "torenthia-news-013.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +52,7 @@ worldBlurb: "NRS-Y12-3198. Director of Foreign Affairs Ines Carrow publishes a r
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
   <main id="main-content">
   <div class="nrs-wrap">
@@ -132,7 +137,8 @@ worldBlurb: "NRS-Y12-3198. Director of Foreign Affairs Ines Carrow publishes a r
   </main>
 
 
-  {% include "footer.njk" %}
+  {% include "related-world.njk" %}
+{% include "footer.njk" %}
   <script src="nav.js"></script>
 </body>
 </html>

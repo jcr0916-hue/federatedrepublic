@@ -7,6 +7,11 @@ worldOutlet: "The Dorven Ledger"
 worldAuthor: "Corwin Hale"
 worldImage: "world-map-card.webp"
 worldBlurb: "The Legat Consul candidates were asked the same question about Wednesday's Executive Monitor certification. Three gave answers that will play well. One gave the answer that is actually right. They were not the same answer."
+worldId: "torenthia-news-051"
+worldArcs: ["fiscal-equalization"]
+worldJurisdictions: ["Orath"]
+worldProvisions: ["§12.6"]
+worldRelated: ["torenthia-news-050.html"]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ worldBlurb: "The Legat Consul candidates were asked the same question about Wedn
 </head>
 <body class="paper-ledger">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="site-nav"></div>
+  {% include "nav.njk" %}
 
 <main id="main-content">
 <div class="article-wrap">
@@ -91,6 +96,7 @@ worldBlurb: "The Legat Consul candidates were asked the same question about Wedn
   </div>
 </div>
 </main>
+{% include "related-world.njk" %}
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>
