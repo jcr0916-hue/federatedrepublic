@@ -204,3 +204,8 @@ No-concession witness routes:
 - Threll can replace the explicit clean commitment with `s5_tentative` and still secure the qualifying resolution at Scene 6.
 
 These are narrative balancing assumptions, not predictions about the real Convention or a simulated 33-member roll call. Temporary authoring scripts are not part of the repository; authored Markdown and production JSON are retained together.
+
+
+## 10. Thoss public retirement — 260918
+
+At the author’s request, the sealed Thoss installment is now archived at `docs/archive/crossroads/thoss-crossroads.json`, outside the public build. Its bytes remain unchanged. Public cards and game navigation no longer link to it, the runtime game allowlist accepts Korda only, and the build no longer copies Thoss JSON. Old game-query links display an unavailable/archive message with a Korda link. The earlier dual-game availability notes describe the launch state, not the current public offering. Legacy compatibility tests continue against the repository archive. Public Thoss news and canon remain intact.

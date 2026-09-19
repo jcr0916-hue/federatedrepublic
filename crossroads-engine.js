@@ -1,10 +1,10 @@
 /* Deterministic rules only. All player-visible narrative lives in authored game data. */
 (function(root){
   'use strict';
-  const games = ['korda-crossroads.json', 'thoss-crossroads.json'];
+  const games = ['korda-crossroads.json'];
   function gameFile(search){
     const name = new URLSearchParams(search).get('game') || games[0];
-    if(!games.includes(name)) throw Error('Unknown game. Choose Korda or Thoss below.');
+    if(!games.includes(name)) throw Error('This installment is unavailable or archived. Choose Korda below.');
     return name;
   }
   function initialize(data, role){
