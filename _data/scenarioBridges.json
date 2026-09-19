@@ -14,7 +14,7 @@
       },
       {
         "url": "quicksheet-article-2.html",
-        "label": "Keep the Dual Executive Quick Sheet"
+        "label": "Keep the Article II — The Dual Executive Quick Sheet"
       },
       {
         "url": "scenario-the-coalition.html",
@@ -33,7 +33,7 @@
     "links": [
       {
         "url": "quicksheet-states.html",
-        "label": "Keep the States and Territories Quick Sheet"
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
       },
       {
         "url": "scenario-the-third-strike.html",
@@ -58,7 +58,7 @@
       },
       {
         "ref": "§6.3",
-        "label": "Residency pathways"
+        "label": "Asylum and Protection"
       },
       {
         "ref": "§9.1",
@@ -68,7 +68,7 @@
     "links": [
       {
         "url": "quicksheet-fiscal.html",
-        "label": "Keep the Social State Quick Sheet"
+        "label": "Keep the Fiscal Architecture Quick Sheet"
       },
       {
         "url": "scenario-the-formation.html",
@@ -91,7 +91,7 @@
     "links": [
       {
         "url": "quicksheet-article-2.html",
-        "label": "Keep the Dual Executive Quick Sheet"
+        "label": "Keep the Article II — The Dual Executive Quick Sheet"
       },
       {
         "url": "diagrams.html#tab-dual",
@@ -126,7 +126,7 @@
       },
       {
         "url": "quicksheet-elections.html",
-        "label": "Keep the Elections Quick Sheet"
+        "label": "Keep the Elections & Electoral Finance Quick Sheet"
       }
     ]
   },
@@ -145,7 +145,7 @@
     "links": [
       {
         "url": "quicksheet-rights.html",
-        "label": "Keep the Rights Quick Sheet"
+        "label": "Keep the Rights & the Non-Derogable Floor Quick Sheet"
       },
       {
         "url": "scenario-void-exception.html",
@@ -168,7 +168,7 @@
     "links": [
       {
         "url": "quicksheet-states.html",
-        "label": "Keep the States and Territories Quick Sheet"
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
       },
       {
         "url": "scenario-the-petition.html",
@@ -199,7 +199,7 @@
     "links": [
       {
         "url": "quicksheet-states.html",
-        "label": "Keep the States and Territories Quick Sheet"
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
       },
       {
         "url": "scenario-the-restoration.html",
@@ -208,6 +208,1175 @@
       {
         "url": "scenario-the-audit.html",
         "label": "Compare: The Audit — a Territory’s route to Statehood"
+      }
+    ]
+  },
+  "scenario-alliance-clause": {
+    "summary": "A ratified defense treaty supplies authorization when its stated trigger is met. The Court checks that trigger, while appropriations and treaty withdrawal remain separate legislative powers.",
+    "provisions": [
+      {
+        "ref": "§14.4",
+        "label": "Treaty-Based Military Authorization"
+      },
+      {
+        "ref": "§3.6",
+        "label": "Treaty and Trade Agreement Ratification"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-second-renewal.html",
+        "label": "Compare: The Second Renewal"
+      },
+      {
+        "url": "scenario-coordination-failure.html",
+        "label": "Read next: The Stalemate"
+      },
+      {
+        "url": "quicksheet-article-2.html",
+        "label": "Keep the Article II — The Dual Executive Quick Sheet"
+      }
+    ]
+  },
+  "scenario-automatic-floor": {
+    "summary": "A missed budget deadline activates the constitutional interim appropriation. It preserves the specified services while the Legislature remains responsible for resolving the budget impasse.",
+    "provisions": [
+      {
+        "ref": "§12.2",
+        "label": "Fiscal Accountability"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-objection.html",
+        "label": "Compare: The Objection"
+      },
+      {
+        "url": "scenario-the-contraction.html",
+        "label": "Read next: The Contraction"
+      },
+      {
+        "url": "quicksheet-fiscal.html",
+        "label": "Keep the Fiscal Architecture Quick Sheet"
+      }
+    ]
+  },
+  "scenario-coordination-failure": {
+    "summary": "Two executives can disagree while acting within their own domains. Council coordination and public recording expose the dispute; implementation still requires the institutions with lawful authority to act.",
+    "provisions": [
+      {
+        "ref": "§2.14",
+        "label": "Council of Ministers"
+      },
+      {
+        "ref": "§2.14.a",
+        "label": "Cross-Domain Emergency Lead"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-second-renewal.html",
+        "label": "Compare: The Second Renewal"
+      },
+      {
+        "url": "scenario-the-vote.html",
+        "label": "Read next: The Vote"
+      },
+      {
+        "url": "quicksheet-article-2.html",
+        "label": "Keep the Article II — The Dual Executive Quick Sheet"
+      }
+    ]
+  },
+  "scenario-critical-finding": {
+    "summary": "An adverse legislative audit creates a public finding, not an automatic sanction or a power to compel a response. The story tests the political force—and limits—of scrutiny on a permanent record.",
+    "provisions": [
+      {
+        "ref": "§9.5.a",
+        "label": "Compliance Standards and Findings"
+      },
+      {
+        "ref": "§9.1.a",
+        "label": "The Legislative Monitor"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-formula.html",
+        "label": "Compare: The Formula"
+      },
+      {
+        "url": "scenario-the-suspension.html",
+        "label": "Read next: The Suspension"
+      },
+      {
+        "url": "quicksheet-monitors.html",
+        "label": "Keep the The Monitors Quick Sheet"
+      }
+    ]
+  },
+  "scenario-deadlock": {
+    "summary": "When the two Speakers cannot jointly nominate an Executive Monitor General within the prescribed window, selection passes to the Senate. Public confirmation remains a separate requirement.",
+    "provisions": [
+      {
+        "ref": "§9.3",
+        "label": "Monitor General Selection"
+      },
+      {
+        "ref": "§9.1.d",
+        "label": "Monitor General Term Expiry and Incapacity"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-long-count.html",
+        "label": "Compare: The Long Count"
+      },
+      {
+        "url": "scenario-the-holdout.html",
+        "label": "Read next: The Holdout"
+      },
+      {
+        "url": "quicksheet-monitors.html",
+        "label": "Keep the The Monitors Quick Sheet"
+      }
+    ]
+  },
+  "scenario-finality-act": {
+    "summary": "The Legislature can allocate jurisdiction, but it cannot leave a concrete constitutional injury without a court to hear it. Sensitive evidence changes how review proceeds, not whether a remedy is available.",
+    "provisions": [
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
+      },
+      {
+        "ref": "§1.1",
+        "label": "Right to Courts and Legal Remedy"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-return.html",
+        "label": "Compare: The Return"
+      },
+      {
+        "url": "scenario-the-redaction.html",
+        "label": "Read next: The Redaction"
+      },
+      {
+        "url": "quicksheet-judiciary.html",
+        "label": "Keep the The Judiciary Quick Sheet"
+      }
+    ]
+  },
+  "scenario-first-nomination": {
+    "summary": "A timely Senate rejection leaves the judicial nomination process running with temporary service preserving the Court’s work. Rejection does not trigger the bypass reserved for a missed voting deadline.",
+    "provisions": [
+      {
+        "ref": "§4.4",
+        "label": "Supreme Court Selection"
+      },
+      {
+        "ref": "§4.4.a",
+        "label": "Senate Bypass — Public Confirmation"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-holdout.html",
+        "label": "Compare: The Holdout"
+      },
+      {
+        "url": "scenario-the-cause.html",
+        "label": "Read next: The Cause"
+      },
+      {
+        "url": "quicksheet-judiciary.html",
+        "label": "Keep the The Judiciary Quick Sheet"
+      }
+    ]
+  },
+  "scenario-harder-ballot": {
+    "summary": "A voting-access restriction can face both a citizen’s rights challenge and independent election-compliance scrutiny. Those routes reinforce one another while addressing different constitutional duties.",
+    "provisions": [
+      {
+        "ref": "§1.9",
+        "label": "Democratic Participation"
+      },
+      {
+        "ref": "§11.3",
+        "label": "State Election Non-Compliance"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-graduation.html",
+        "label": "Compare: The Graduation"
+      },
+      {
+        "url": "scenario-the-administrator.html",
+        "label": "Read next: The Administrator"
+      },
+      {
+        "url": "quicksheet-elections.html",
+        "label": "Keep the Elections & Electoral Finance Quick Sheet"
+      }
+    ]
+  },
+  "scenario-long-count": {
+    "summary": "Lottery selection does not replace public consent. Rejected Judicial Monitor candidates lead to renewed selection, while acting arrangements preserve the institution’s work.",
+    "provisions": [
+      {
+        "ref": "§9.3",
+        "label": "Monitor General Selection"
+      },
+      {
+        "ref": "§9.1.d",
+        "label": "Monitor General Term Expiry and Incapacity"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-deadlock.html",
+        "label": "Compare: The Deadlock"
+      },
+      {
+        "url": "scenario-the-suspension.html",
+        "label": "Read next: The Suspension"
+      },
+      {
+        "url": "quicksheet-monitors.html",
+        "label": "Keep the The Monitors Quick Sheet"
+      }
+    ]
+  },
+  "scenario-organized-third": {
+    "summary": "Citizens can organize to repeal an eligible law through the optional referendum. A successful repeal does not permanently prevent the Legislature from legislating again—or citizens from challenging the new law by referendum.",
+    "provisions": [
+      {
+        "ref": "§13.1",
+        "label": "Optional Referendum"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-second-path.html",
+        "label": "Compare: The Second Path"
+      },
+      {
+        "url": "scenario-the-severed-clause.html",
+        "label": "Read next: The Severed Clause"
+      },
+      {
+        "url": "quicksheet-amendments.html",
+        "label": "Keep the Amendments & Direct Democracy Quick Sheet"
+      }
+    ]
+  },
+  "scenario-recalled-senator": {
+    "summary": "State recall, Senate vacancies, and judicial remedies are distinct questions. The legal resolution must respect elected service and the constitutional limit of two senators per State.",
+    "provisions": [
+      {
+        "ref": "§3.5",
+        "label": "The Senate"
+      },
+      {
+        "ref": "§7.6",
+        "label": "Continuity and Acting Service"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-cause.html",
+        "label": "Compare: The Cause"
+      },
+      {
+        "url": "scenario-the-coalition.html",
+        "label": "Read next: The Coalition"
+      },
+      {
+        "url": "quicksheet-recall-removal.html",
+        "label": "Keep the Recall & Removal Quick Sheet"
+      }
+    ]
+  },
+  "scenario-sponsoring-state": {
+    "summary": "State participation in the immigration pathway does not make issued federal credentials dependent on continuing State approval. State discretion remains constrained by equality and access to legal remedy.",
+    "provisions": [
+      {
+        "ref": "§6.1",
+        "label": "The Two-Stage Immigration System"
+      },
+      {
+        "ref": "§6.2",
+        "label": "Enforcement, Removal, and Appeals"
+      },
+      {
+        "ref": "§1.6",
+        "label": "Equality and Non-Discrimination"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-return.html",
+        "label": "Compare: The Return"
+      },
+      {
+        "url": "scenario-the-unremovable.html",
+        "label": "Read next: The Unremovable"
+      },
+      {
+        "url": "quicksheet-immigration.html",
+        "label": "Keep the Immigration & Asylum Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-administrator": {
+    "summary": "After material election non-compliance and an expired cure period, the Elections Panel can administer the federal election directly. A dispute about administration does not erase the votes cast.",
+    "provisions": [
+      {
+        "ref": "§11.3",
+        "label": "State Election Non-Compliance"
+      },
+      {
+        "ref": "§1.9",
+        "label": "Democratic Participation"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-harder-ballot.html",
+        "label": "Compare: The Harder Ballot"
+      },
+      {
+        "url": "scenario-the-graduation.html",
+        "label": "Read next: The Graduation"
+      },
+      {
+        "url": "quicksheet-elections.html",
+        "label": "Keep the Elections & Electoral Finance Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-cause": {
+    "summary": "Misconduct can support removal of a Supreme Court justice; disagreement with a ruling cannot. Review of constitutional grounds does not substitute for the required removal votes in both chambers.",
+    "provisions": [
+      {
+        "ref": "§4.3.a",
+        "label": "Supreme Court Justice Removal"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-first-nomination.html",
+        "label": "Compare: The First Nomination"
+      },
+      {
+        "url": "scenario-the-suspension.html",
+        "label": "Read next: The Suspension"
+      },
+      {
+        "url": "quicksheet-judiciary.html",
+        "label": "Keep the The Judiciary Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-classification": {
+    "summary": "Classification must satisfy its lawful grounds. Monitor access and staff publication help expose misuse, but an oversight finding is distinct from an enforceable legal remedy.",
+    "provisions": [
+      {
+        "ref": "§10.2",
+        "label": "Classification Criteria"
+      },
+      {
+        "ref": "§9.5",
+        "label": "Monitor Operations"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-redaction.html",
+        "label": "Compare: The Redaction"
+      },
+      {
+        "url": "scenario-the-direction.html",
+        "label": "Read next: The Direction"
+      },
+      {
+        "url": "annotated.html#art10",
+        "label": "Read Article X — The National Record System"
+      }
+    ]
+  },
+  "scenario-the-contraction": {
+    "summary": "Certified Severe Revenue Contraction activates the National Endowment’s social-state backstop. Its restricted purpose and rules for continuation constrain how the reserve can be used during a fiscal shock.",
+    "provisions": [
+      {
+        "ref": "§12.4",
+        "label": "National Endowment"
+      },
+      {
+        "ref": "§12.1.a",
+        "label": "The Monetary Authority"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-automatic-floor.html",
+        "label": "Compare: The Automatic Floor"
+      },
+      {
+        "url": "scenario-the-formula.html",
+        "label": "Read next: The Formula"
+      },
+      {
+        "url": "quicksheet-fiscal.html",
+        "label": "Keep the Fiscal Architecture Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-departure": {
+    "summary": "An Associated Community can terminate its Compact without Republic consent, on the required notice. Ending the Compact leaves transition obligations to resolve and does not itself extinguish members’ Republic citizenship.",
+    "provisions": [
+      {
+        "ref": "§20.4",
+        "label": "Sovereign Mobility"
+      },
+      {
+        "ref": "§20.5",
+        "label": "Reciprocal Obligations and Review"
+      },
+      {
+        "ref": "§5.1",
+        "label": "Citizenship"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-founding-choice.html",
+        "label": "Compare: The Founding Choice"
+      },
+      {
+        "url": "scenario-the-referendum.html",
+        "label": "Read next: The Referendum"
+      },
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-direction": {
+    "summary": "Publication makes an executive direction visible, but accountability depends on several institutions acting within their powers. Conflict rules, judicial review, refusal of unlawful orders, and political removal serve different purposes.",
+    "provisions": [
+      {
+        "ref": "§2.15",
+        "label": "Federal Prosecution"
+      },
+      {
+        "ref": "§7.11",
+        "label": "Codes of Conduct and Recusal"
+      },
+      {
+        "ref": "§2.8",
+        "label": "Duty of Refusal"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-order.html",
+        "label": "Compare: The Order"
+      },
+      {
+        "url": "scenario-the-coalition.html",
+        "label": "Read next: The Coalition"
+      },
+      {
+        "url": "quicksheet-article-2.html",
+        "label": "Keep the Article II — The Dual Executive Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-formula": {
+    "summary": "A fiscal-equalization failure requires a published legislative response. The story follows the gap between a funding model and actual delivery, showing why repeated scrutiny matters even after a formula changes.",
+    "provisions": [
+      {
+        "ref": "§12.6",
+        "label": "Fiscal Equalization"
+      },
+      {
+        "ref": "§12.1",
+        "label": "The Social State and Monetary Authority"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-critical-finding.html",
+        "label": "Compare: The Critical Finding"
+      },
+      {
+        "url": "scenario-the-contraction.html",
+        "label": "Read next: The Contraction"
+      },
+      {
+        "url": "quicksheet-fiscal.html",
+        "label": "Keep the Fiscal Architecture Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-founding-choice": {
+    "summary": "An indigenous nation’s founding choice distinguishes a sovereign Compact relationship from Territorial Integration. The no-inducements rule protects that choice; the two relationships do not carry interchangeable exit rights.",
+    "provisions": [
+      {
+        "ref": "§16.2",
+        "label": "Founding Status Election"
+      },
+      {
+        "ref": "§20.4",
+        "label": "Sovereign Mobility"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-departure.html",
+        "label": "Compare: The Departure"
+      },
+      {
+        "url": "scenario-the-prior-claim.html",
+        "label": "Read next: The Prior Claim"
+      },
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-graduation": {
+    "summary": "A change of address tests voting access in everyday life. Administrative verification must respect the franchise and direct NVS access; the story’s processing time is not a constitutional waiting period.",
+    "provisions": [
+      {
+        "ref": "§1.9",
+        "label": "Democratic Participation"
+      },
+      {
+        "ref": "§11.2",
+        "label": "NVS Properties and Voting Rights"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-harder-ballot.html",
+        "label": "Compare: The Harder Ballot"
+      },
+      {
+        "url": "scenario-the-waiver.html",
+        "label": "Read next: The Waiver"
+      },
+      {
+        "url": "quicksheet-elections.html",
+        "label": "Keep the Elections & Electoral Finance Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-holdout": {
+    "summary": "Senate inaction can open a public-confirmation route that a timely rejection would not. Senate confirmation of a Judicial Pool nominee before the public vote is certified ends that bypass.",
+    "provisions": [
+      {
+        "ref": "§4.4",
+        "label": "Supreme Court Selection"
+      },
+      {
+        "ref": "§4.4.a",
+        "label": "Senate Bypass — Public Confirmation"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-first-nomination.html",
+        "label": "Compare: The First Nomination"
+      },
+      {
+        "url": "scenario-deadlock.html",
+        "label": "Read next: The Deadlock"
+      },
+      {
+        "url": "quicksheet-judiciary.html",
+        "label": "Keep the The Judiciary Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-ledger": {
+    "summary": "Campaign source restrictions, contribution limits, and disclosure work together. Published records make a disguised funding pattern examinable; enforcement still runs through the responsible institutions and statutory procedures.",
+    "provisions": [
+      {
+        "ref": "§8.1",
+        "label": "Electoral Finance"
+      },
+      {
+        "ref": "§11.1",
+        "label": "NRS Panel and Elections Panel"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-second-path.html",
+        "label": "Compare: The Second Path"
+      },
+      {
+        "url": "scenario-the-three-recusals.html",
+        "label": "Read next: The Three Recusals"
+      },
+      {
+        "url": "quicksheet-elections.html",
+        "label": "Keep the Elections & Electoral Finance Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-map": {
+    "summary": "A Monitor’s criticism of a district map is informational. Citizens retain a route to challenge, and the Elections Panel’s interim-map duty supplies a separate backstop when a map fails the constitutional criteria.",
+    "provisions": [
+      {
+        "ref": "§3.3",
+        "label": "Electoral Districts"
+      },
+      {
+        "ref": "§9.1.a",
+        "label": "The Legislative Monitor"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-harder-ballot.html",
+        "label": "Compare: The Harder Ballot"
+      },
+      {
+        "url": "scenario-the-administrator.html",
+        "label": "Read next: The Administrator"
+      },
+      {
+        "url": "quicksheet-elections.html",
+        "label": "Keep the Elections & Electoral Finance Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-objection": {
+    "summary": "A fiscal notice records a concern and gives the Assembly Speaker an option to recall the bill. It is not a veto: declining recall leaves the warning on the record without giving it independent blocking force.",
+    "provisions": [
+      {
+        "ref": "§2.7",
+        "label": "Civic Consul Legislative Instruments"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-vote.html",
+        "label": "Compare: The Vote"
+      },
+      {
+        "url": "scenario-automatic-floor.html",
+        "label": "Read next: The Automatic Floor"
+      },
+      {
+        "url": "quicksheet-article-3.html",
+        "label": "Keep the Article III — The Legislature Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-order": {
+    "summary": "The duty to refuse concerns unlawful orders, not personal disagreement. A lawful refusal is protected against penalty; investigation and the institutions responsible for remedy make that protection effective.",
+    "provisions": [
+      {
+        "ref": "§2.8",
+        "label": "Duty of Refusal"
+      },
+      {
+        "ref": "§1.1",
+        "label": "Right to Courts and Legal Remedy"
+      },
+      {
+        "ref": "§6.2",
+        "label": "Enforcement, Removal, and Appeals"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-direction.html",
+        "label": "Compare: The Direction"
+      },
+      {
+        "url": "scenario-second-declaration.html",
+        "label": "Read next: The Second Declaration"
+      },
+      {
+        "url": "quicksheet-rights.html",
+        "label": "Keep the Rights & the Non-Derogable Floor Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-petition": {
+    "summary": "Devolution changes a State’s relationship within the Republic. A referendum, negotiated agreement, and Senate ratification are distinct steps; becoming a Territory opens the re-qualification pathway rather than guaranteeing immediate Statehood.",
+    "provisions": [
+      {
+        "ref": "§15.4",
+        "label": "Voluntary Devolution and Merger"
+      },
+      {
+        "ref": "§15.5",
+        "label": "Re-Qualification Pathway"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-referendum.html",
+        "label": "Compare: The Referendum"
+      },
+      {
+        "url": "scenario-the-audit.html",
+        "label": "Read next: The Audit"
+      },
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-prior-claim": {
+    "summary": "Constitutional membership and an indigenous Compact relationship confer different powers. Federal technical standards must also be distinguished from commandeering State agencies to administer federal programs.",
+    "provisions": [
+      {
+        "ref": "§3.10",
+        "label": "Federal Legislative Competence"
+      },
+      {
+        "ref": "§16.1",
+        "label": "Acknowledgment of Prior Sovereignty and Recognition"
+      },
+      {
+        "ref": "§19.6",
+        "label": "Transition Territories"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-founding-choice.html",
+        "label": "Compare: The Founding Choice"
+      },
+      {
+        "url": "scenario-the-petition.html",
+        "label": "Read next: The Petition"
+      },
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-rate": {
+    "summary": "Monetary independence protects constitutional functions, not every detail of statutory organization. Reorganization cannot become a way to punish lawful policy judgment or undermine protected decision-making.",
+    "provisions": [
+      {
+        "ref": "§12.1.a",
+        "label": "The Monetary Authority"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-contraction.html",
+        "label": "Compare: The Contraction"
+      },
+      {
+        "url": "scenario-the-suspension.html",
+        "label": "Read next: The Suspension"
+      },
+      {
+        "url": "quicksheet-fiscal.html",
+        "label": "Keep the Fiscal Architecture Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-redaction": {
+    "summary": "A lawful period of classification does not make every page secret. A person can seek segregable public material and reasons for withholding; Monitor findings can inform a case without becoming disclosure orders.",
+    "provisions": [
+      {
+        "ref": "§10.2",
+        "label": "Classification Criteria"
+      },
+      {
+        "ref": "§1.1",
+        "label": "Right to Courts and Legal Remedy"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-classification.html",
+        "label": "Compare: The Classification"
+      },
+      {
+        "url": "scenario-finality-act.html",
+        "label": "Read next: The Finality Act"
+      },
+      {
+        "url": "annotated.html#art10",
+        "label": "Read Article X — The National Record System"
+      }
+    ]
+  },
+  "scenario-the-restoration": {
+    "summary": "Two consecutive fully clean annual audits restore ordinary State status by constitutional operation. This is the restoration of an existing State, not a Territory’s admission to Statehood.",
+    "provisions": [
+      {
+        "ref": "§15.1.a",
+        "label": "Provisional Status"
+      },
+      {
+        "ref": "§15.2",
+        "label": "The Statehood Audit"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-third-strike.html",
+        "label": "Compare: The Third Strike"
+      },
+      {
+        "url": "scenario-the-audit.html",
+        "label": "Read next: The Audit"
+      },
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-return": {
+    "summary": "Border-security authority remains subject to equality and legal remedy. The story also exposes a procedural question about returning credential holders that requires statutory clarity rather than an invented constitutional rule.",
+    "provisions": [
+      {
+        "ref": "§5.2",
+        "label": "Legal Resident Rights"
+      },
+      {
+        "ref": "§1.6",
+        "label": "Equality and Non-Discrimination"
+      },
+      {
+        "ref": "§6.2",
+        "label": "Enforcement, Removal, and Appeals"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-sponsoring-state.html",
+        "label": "Compare: The Sponsoring State"
+      },
+      {
+        "url": "scenario-finality-act.html",
+        "label": "Read next: The Finality Act"
+      },
+      {
+        "url": "quicksheet-immigration.html",
+        "label": "Keep the Immigration & Asylum Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-second-renewal": {
+    "summary": "An extended military commitment must confront how it ends. The required Transition and Reconstruction Plan makes continuing authorization depend on an approved account of the Republic’s obligations across executive domains.",
+    "provisions": [
+      {
+        "ref": "§14.3",
+        "label": "Military Accountability"
+      },
+      {
+        "ref": "§14.2",
+        "label": "Defense Authorization and Allocation"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-alliance-clause.html",
+        "label": "Compare: The Alliance Clause"
+      },
+      {
+        "url": "scenario-coordination-failure.html",
+        "label": "Read next: The Stalemate"
+      },
+      {
+        "url": "quicksheet-article-2.html",
+        "label": "Keep the Article II — The Dual Executive Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-severed-clause": {
+    "summary": "An initiative’s success does not authorize it to narrow protected rights. The Court identifies the specific constitutional conflict while leaving the lawful remainder of the voters’ decision in effect.",
+    "provisions": [
+      {
+        "ref": "§13.2",
+        "label": "Citizen Legislative Initiative"
+      },
+      {
+        "ref": "§1.8",
+        "label": "Privacy, Property, and Security of the Home"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-second-path.html",
+        "label": "Compare: The Second Path"
+      },
+      {
+        "url": "scenario-void-exception.html",
+        "label": "Read next: The Void Exception"
+      },
+      {
+        "url": "quicksheet-amendments.html",
+        "label": "Keep the Amendments & Direct Democracy Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-sixty-percent": {
+    "summary": "Removing a National Trust designation requires both legislative and public approval at the constitutional thresholds. A referendum majority below the required threshold leaves the designation and stewardship duty in place.",
+    "provisions": [
+      {
+        "ref": "§18.4",
+        "label": "The National Trust"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-referendum.html",
+        "label": "Compare: The Referendum"
+      },
+      {
+        "url": "scenario-the-severed-clause.html",
+        "label": "Read next: The Severed Clause"
+      },
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States, Territories & Indigenous Nations Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-suspension": {
+    "summary": "Initiating a Monitor General’s removal suspends authority, not pay or the term. The public decides removal; failure or a missed referendum deadline restores authority under the constitutional process.",
+    "provisions": [
+      {
+        "ref": "§9.9",
+        "label": "Constitutional Officer Removal — Standard Track"
+      },
+      {
+        "ref": "§9.1.d",
+        "label": "Monitor General Term Expiry and Incapacity"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-cause.html",
+        "label": "Compare: The Cause"
+      },
+      {
+        "url": "scenario-the-three-recusals.html",
+        "label": "Read next: The Three Recusals"
+      },
+      {
+        "url": "quicksheet-monitors.html",
+        "label": "Keep the The Monitors Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-three-hours": {
+    "summary": "Succession takes effect at the constitutional triggering event even during a records outage. The NRS must record that actual moment as soon as possible; delayed publication does not create a vacancy.",
+    "provisions": [
+      {
+        "ref": "§2.9",
+        "label": "Legat Consul Succession and Incapacity"
+      },
+      {
+        "ref": "§7.15",
+        "label": "Authority by Constitutional Operation"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-twenty-four-hours.html",
+        "label": "Compare: The Twenty-Four Hours"
+      },
+      {
+        "url": "scenario-deadlock.html",
+        "label": "Read next: The Deadlock"
+      },
+      {
+        "url": "quicksheet-article-2.html",
+        "label": "Keep the Article II — The Dual Executive Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-three-recusals": {
+    "summary": "Disclosure and recusal duties apply across offices, but their enforcement differs. Direct publication, challenges to affected decisions, workforce oversight, and prescribed removal procedures address different kinds of responsibility.",
+    "provisions": [
+      {
+        "ref": "§7.11",
+        "label": "Codes of Conduct and Recusal"
+      },
+      {
+        "ref": "§9.9.a",
+        "label": "Monitor General Disclosure"
+      },
+      {
+        "ref": "§7.13",
+        "label": "Federal Public Service Ethics"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-direction.html",
+        "label": "Compare: The Direction"
+      },
+      {
+        "url": "scenario-the-suspension.html",
+        "label": "Read next: The Suspension"
+      },
+      {
+        "url": "quicksheet-monitors.html",
+        "label": "Keep the The Monitors Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-twenty-four-hours": {
+    "summary": "Temporary incapacity suspends the exercise of authority while the Consul remains in office. A recurring determination raises the thresholds and opens judicial review; political removal remains a separate process.",
+    "provisions": [
+      {
+        "ref": "§2.16",
+        "label": "Executive Incapacity"
+      },
+      {
+        "ref": "§2.6",
+        "label": "Constructive Vote of No Confidence"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-three-hours.html",
+        "label": "Compare: The Three Hours"
+      },
+      {
+        "url": "scenario-the-coalition.html",
+        "label": "Read next: The Coalition"
+      },
+      {
+        "url": "quicksheet-article-2.html",
+        "label": "Keep the Article II — The Dual Executive Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-unremovable": {
+    "summary": "An unresolvable removal case still has a constitutional floor. Non-refoulement, judicial supervision, and the prohibition on indefinite stateless detention constrain the treatment of a person whose removal is not possible.",
+    "provisions": [
+      {
+        "ref": "§6.3.a",
+        "label": "Unresolvable and Security Cases"
+      },
+      {
+        "ref": "§1.21",
+        "label": "Non-Refoulement"
+      },
+      {
+        "ref": "§1.11",
+        "label": "Habeas Corpus"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-sponsoring-state.html",
+        "label": "Compare: The Sponsoring State"
+      },
+      {
+        "url": "scenario-the-return.html",
+        "label": "Read next: The Return"
+      },
+      {
+        "url": "quicksheet-immigration.html",
+        "label": "Keep the Immigration & Asylum Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-vote": {
+    "summary": "A suspensive veto creates a bounded delay with specified routes back to enactment. A fiscal notice is a separate instrument, and replacing the Civic Consul does not bypass tabling attached to the bill.",
+    "provisions": [
+      {
+        "ref": "§2.7",
+        "label": "Civic Consul Legislative Instruments"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-objection.html",
+        "label": "Compare: The Objection"
+      },
+      {
+        "url": "scenario-the-coalition.html",
+        "label": "Read next: The Coalition"
+      },
+      {
+        "url": "quicksheet-article-3.html",
+        "label": "Keep the Article III — The Legislature Quick Sheet"
+      }
+    ]
+  },
+  "scenario-the-waiver": {
+    "summary": "The consular election’s 60% waiver uses the national ranked-choice result. It is distinct from the first-preference State plurality test, so transferred preferences can determine whether the waiver applies.",
+    "provisions": [
+      {
+        "ref": "§7.1",
+        "label": "Consular Election System"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-graduation.html",
+        "label": "Compare: The Graduation"
+      },
+      {
+        "url": "scenario-harder-ballot.html",
+        "label": "Read next: The Harder Ballot"
+      },
+      {
+        "url": "quicksheet-elections.html",
+        "label": "Keep the Elections & Electoral Finance Quick Sheet"
+      }
+    ]
+  },
+  "scenario-void-exception": {
+    "summary": "A procedurally valid amendment can still contain a clause that extinguishes a non-derogable right. The Court applies the amendment while treating only the conflicting part as void.",
+    "provisions": [
+      {
+        "ref": "§17.3",
+        "label": "Amendment Consistency and Supremacy"
+      },
+      {
+        "ref": "§1.19.a",
+        "label": "Non-Derogable Rights"
+      },
+      {
+        "ref": "§1.11",
+        "label": "Habeas Corpus"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-severed-clause.html",
+        "label": "Compare: The Severed Clause"
+      },
+      {
+        "url": "scenario-second-declaration.html",
+        "label": "Read next: The Second Declaration"
+      },
+      {
+        "url": "quicksheet-amendments.html",
+        "label": "Keep the Amendments & Direct Democracy Quick Sheet"
       }
     ]
   }
