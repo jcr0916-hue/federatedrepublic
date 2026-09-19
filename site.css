@@ -852,3 +852,28 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 .court-guide a:focus-visible,.court-guide summary:focus-visible { outline:2px solid var(--gold2);outline-offset:2px; }
 .court-page #question,.court-page #holding,.court-page #opinion,.court-page #disposition,.court-page #dissent { scroll-margin-top:125px; }
 @media print { .court-guide { display:none; } }
+
+
+/* Related-content rails: browse horizontally; never hide essential context here. */
+.related-rail{margin:2.25rem 0;padding:1.5rem 0;border-block:1px solid var(--border)}
+.related-rail-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.related-rail-head h2{margin:.15rem 0 .25rem;font-size:2rem}
+.related-rail-head p{max-width:680px;margin:0;font-size:.9rem;line-height:1.6;color:var(--text)}
+.related-rail-controls{display:flex;gap:.45rem;flex-shrink:0}
+.related-rail-control{display:none;width:42px;height:42px;align-items:center;justify-content:center;border:1px solid var(--navy);background:var(--cream);color:var(--navy);font:600 1.15rem 'Jost',sans-serif;cursor:pointer}
+.related-rail.is-enhanced.is-scrollable .related-rail-control{display:inline-flex}
+.related-rail-control:disabled{opacity:.3;cursor:default}
+.related-rail-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(255px,32%);gap:1rem;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:inline mandatory;scroll-padding-inline:.15rem;padding:.15rem .15rem .7rem;scrollbar-width:thin;scrollbar-color:var(--gold2) var(--cream2)}
+.related-rail-track:focus-visible{outline:2px solid var(--gold2);outline-offset:4px}
+.related-rail-card{scroll-snap-align:start;display:flex;flex-direction:column;min-height:220px;background:var(--cream2);border-top:3px solid var(--gold2)}
+.related-rail-image{display:block;aspect-ratio:16/8;overflow:hidden;background:#ddd}
+.related-rail-image img{width:100%;height:100%;object-fit:cover;display:block}
+.related-rail-card-body{display:flex;flex:1;flex-direction:column;padding:1rem}
+.related-rail-kicker{font:500 .64rem 'JetBrains Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#765817}
+.related-rail-card h3{margin:.45rem 0;font:600 1.35rem/1.2 'Cormorant Garamond',serif}
+.related-rail-card h3 a{color:var(--navy);text-decoration:none}
+.related-rail-card p{margin:.25rem 0 .9rem;font-size:.88rem;line-height:1.55}
+.related-rail-link{margin-top:auto;color:#765817;font-size:.88rem;text-underline-offset:3px}
+@media(max-width:900px){.related-rail-track{grid-auto-columns:minmax(255px,68%)}}
+@media(max-width:600px){.related-rail{margin:1.75rem 0}.related-rail-head{align-items:flex-start}.related-rail-head p{display:none}.related-rail-track{grid-auto-columns:84%}.related-rail-control{width:40px;height:40px}}
+@media print{.related-rail-track{display:grid;grid-template-columns:repeat(2,1fr);overflow:visible}.related-rail-card{break-inside:avoid}.related-rail-controls{display:none}}
