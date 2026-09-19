@@ -20,7 +20,23 @@
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   {% include "nav.njk" %}
 
-<main id="main-content" class="torenthia-home"><section class="world-orientation refresh-wrap"><div><span class="section-kicker">The living world</span><h1>The Federated Republic of Torenthia</h1><p>Torenthia is the fictional republic where this Constitution is put into practice. Elections proceed, courts decide, territories seek statehood, and every major act leaves a public record.</p><div class="link-row"><a href="torenthia-record.html">Investigate the Record</a><a href="republic-at-a-glance.html">Republic at a Glance</a><a href="atlas.html">Explore the Atlas</a></div></div><figure class="torenthia-context-figure"><a class="torenthia-context-map" href="republic-at-a-glance.html" aria-label="Open the full labeled map and jurisdiction directory"><span class="torenthia-context-frame"><img src="region-map-tier2-base.webp" alt="Context map of Torenthia with State and Territory boundaries, neighboring countries, and major geographic labels"><svg id="torenthiaContextOverlay" class="torenthia-context-overlay" viewBox="0 0 1536 1024" aria-hidden="true"></svg></span></a><figcaption>Current pressure points: <a href="dossier-korda.html">Korda</a> · <a href="dossier-lake-varda.html">Lake Varda</a> · <a href="dossier-argent-ridge.html">Argent Ridge</a></figcaption></figure></section><div class="refresh-wrap">{% include "current-files.njk" %}</div><section class="refresh-wrap"><h2 id="the-record">Latest from Torenthia</h2><div class="record-grid">{% for p in collections.world | reverse | take(4) %}{% include "record-card.njk" %}{% endfor %}</div><a href="torenthia-record.html">Read the complete Record →</a></section><div class="stats-band"><div class="stats-inner">        <!-- 1 · THE EXECUTIVE (most dynamic) -->
+<main id="main-content" class="torenthia-home"><section class="world-orientation refresh-wrap"><div><span class="section-kicker">The living world</span><h1>The Federated Republic of Torenthia</h1><p>Torenthia is the fictional republic where this Constitution is put into practice. Elections proceed, courts decide, territories seek statehood, and every major act leaves a public record.</p><div class="link-row"><a href="torenthia-record.html">Investigate the Record</a><a href="republic-at-a-glance.html">Republic at a Glance</a><a href="atlas.html">Explore the Atlas</a></div></div><figure class="torenthia-context-figure"><a class="torenthia-context-map" href="republic-at-a-glance.html" aria-label="Open the full labeled map and jurisdiction directory"><span class="torenthia-context-frame"><img src="region-map-tier2-base.webp" alt="Context map of Torenthia with State and Territory boundaries, neighboring countries, and major geographic labels"><svg id="torenthiaContextOverlay" class="torenthia-context-overlay" viewBox="0 0 1536 1024" aria-hidden="true"></svg></span></a><figcaption>Current pressure points: <a href="dossier-korda.html">Korda</a> · <a href="dossier-lake-varda.html">Lake Varda</a> · <a href="dossier-argent-ridge.html">Argent Ridge</a></figcaption></figure></section>
+<section class="refresh-wrap visual-world-rail">
+  {% set relatedRailId = 'faces-places' %}
+  {% set relatedRailEyebrow = 'Faces & places' %}
+  {% set relatedRailTitle = 'See the Republic' %}
+  {% set relatedRailIntro = 'A visual route into the people, cities, landscapes, and institutions already present in the public record.' %}
+  {% set relatedItems = [
+    { kicker:'Capital', title:'Verentum', url:'torenthia-record.html?q=Verentum', image:'verentum-card.webp', imageAlt:'View of Verentum', text:'The federal capital and seat of the Republic’s national institutions.', cta:'Follow Verentum' },
+    { kicker:'Eastern lake', title:'Rhondel', url:'torenthia-state-kelvant.html', image:'rhondel-cityscape.png', imageAlt:'Cityscape of Rhondel', text:'Kelvant’s principal city on Lake Varda and a recurring point in the eastern story.', cta:'Explore Kelvant' },
+    { kicker:'Current file', title:'Lake Varda', url:'dossier-lake-varda.html', image:'lake-varda-crossing.png', imageAlt:'Crossing near Lake Varda', text:'The lake corridor where constitutional, humanitarian, and regional pressures meet.', cta:'Open the dossier' },
+    { kicker:'Northern State', title:'Varek & Argent Ridge', url:'torenthia-state-varek.html', image:'varek-mountain-landscape.png', imageAlt:'Mountain landscape in Varek', text:'A State whose northern geography is tied directly to the Argent Ridge file.', cta:'Explore Varek' },
+    { kicker:'Territory', title:'Ostara, Solara', url:'territory-solara.html', image:'ostara-card.webp', imageAlt:'View of Ostara in Solara', text:'The western island Territory and its civic center.', cta:'Explore Solara' },
+    { kicker:'Government', title:'The Civic Consul', url:'torenthia-record.html?q=Elin%20Thoss', image:'Elin-Thoss-Press-Conference-card.webp', imageAlt:'Civic Consul Elin Thoss at a press conference', text:'Follow the domestic executive through the public record rather than a static biography.', cta:'Follow the record' }
+  ] %}
+  {% include "related-rail.njk" %}
+</section>
+<div class="refresh-wrap">{% include "current-files.njk" %}</div><section class="refresh-wrap"><h2 id="the-record">Latest from Torenthia</h2><div class="record-grid">{% for p in collections.world | reverse | take(4) %}{% include "record-card.njk" %}{% endfor %}</div><a href="torenthia-record.html">Read the complete Record →</a></section><div class="stats-band"><div class="stats-inner">        <!-- 1 · THE EXECUTIVE (most dynamic) -->
         <section class="sblock">
           <span class="sblock-vol">most dynamic</span>
           <div class="sblock-eye">The Executive</div>
@@ -99,4 +115,4 @@
     label(name,x,y+7,'context-label context-label-water');
   });
 })();
-</script><script src="nav.js"></script></body></html>
+</script><script src="nav.js"></script><script src="related-rail.js"></script></body></html>
