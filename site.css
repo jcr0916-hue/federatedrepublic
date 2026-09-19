@@ -656,3 +656,20 @@ img { max-width:100%; height:auto; }
   outline-offset: 2px;
   border-radius: 3px;
 }
+
+/* Shared invitation on the homepage and Torenthia hub. */
+.living-crossroads{max-width:780px;margin:0 auto;padding:2.5rem 0;color:var(--navy,#1B2A4A)}
+.crossroads-home{padding:0 1.25rem;background:var(--cream,#F5F0E8)}
+.crossroads-eyebrow,.crossroads-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
+.crossroads-eyebrow{color:var(--muted,#7a7060);margin-bottom:.6rem}
+.living-crossroads h2{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;margin:0 0 .6rem}
+.crossroads-intro{font-size:.95rem;line-height:1.7;margin:0 0 1.4rem}
+.crossroads-feature{display:block;padding:clamp(1.25rem,4vw,2rem);background:#1B2A4A;color:#F5F0E8;border:2px solid #C9A84C;text-decoration:none;transition:background .15s}
+.crossroads-feature:hover{background:#253b60}
+.crossroads-feature:focus-visible,.crossroads-archive a:focus-visible{outline:3px solid #a8843a;outline-offset:4px}
+.crossroads-label{color:#dfc679;line-height:1.8}
+.crossroads-feature h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:500;margin:.6rem 0}
+.crossroads-feature p{font-size:.95rem;line-height:1.75;max-width:40rem;margin:0 0 1.2rem}
+.crossroads-action{font-weight:600;color:#dfc679}
+.crossroads-archive{font-size:.85rem;line-height:1.7;margin:1rem 0 0;color:var(--muted,#7a7060)}
+.crossroads-archive a{color:var(--navy,#1B2A4A);text-underline-offset:3px}
