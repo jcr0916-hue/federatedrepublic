@@ -1,0 +1,26 @@
+/* Baseline for every page, including standalone layouts.
+   Inherit the surrounding ink on paper, cream on dark panels, and local
+   publication colors. Page-specific link and card styles take precedence.
+   Explicit author styling applies equally to unvisited and visited links. */
+:where(a:any-link) {
+  color: inherit;
+  text-decoration-color: currentColor;
+  text-underline-offset: .2em;
+  text-decoration-thickness: 1px;
+}
+:where(a:any-link:hover) {
+  text-decoration-thickness: 2px;
+}
+:where(a:any-link:focus-visible) {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Standalone pages also use the shared footer markup. */
+:where(.footer-utilities, .footer-social) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem 1.25rem;
+  margin: .75rem auto;
+}
