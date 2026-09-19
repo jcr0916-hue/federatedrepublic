@@ -1,1 +1,62 @@
-<aside class="related-world refresh-wrap" aria-label="Related public records"><h2>Follow this file</h2><div class="link-row">{% for file in currentFiles %}{% if file.id in worldArcs %}<a href="dossier-{{ file.id }}.html">{{ file.short }} dossier</a>{% endif %}{% endfor %}{% for name in worldJurisdictions %}<a href="torenthia-record.html?place={{ name }}">{{ name }}</a>{% endfor %}</div><div class="record-grid">{% for p in collections.world | relatedWorld(worldId) %}{% include "record-card.njk" %}{% endfor %}</div><div class="link-row">{% for ref in worldProvisions | take(5) %}<a href="annotated.html#{{ ref | provisionAnchor }}">{{ ref }}</a>{% endfor %}<a href="torenthia-record.html">Complete public archive →</a></div><div class="link-row">{% for p in collections.world %}{% if p.data.worldId == worldId %}{% if not loop.first %}<a href="{{ collections.world[loop.index0 - 1].url }}">← Previous in the public record</a>{% endif %}{% if not loop.last %}<a href="{{ collections.world[loop.index0 + 1].url }}">Next in the public record →</a>{% endif %}{% endif %}{% endfor %}</div></aside>
+<aside class="related-world refresh-wrap" aria-label="Related public records">
+  <section class="related-rail" aria-labelledby="follow-this-file-title" data-related-rail>
+    <div class="related-rail-head">
+      <div>
+        <span class="section-kicker">Continue exploring</span>
+        <h2 id="follow-this-file-title">Follow this file</h2>
+        <p>Related dossiers, places, records, and constitutional provisions from the same public file.</p>
+      </div>
+      <div class="related-rail-controls" aria-label="Related public record controls">
+        <button class="related-rail-control" type="button" data-rail-prev aria-label="Show previous related items">←</button>
+        <button class="related-rail-control" type="button" data-rail-next aria-label="Show more related items">→</button>
+      </div>
+    </div>
+    <div class="related-rail-track" data-rail-track tabindex="0">
+      {% for file in currentFiles %}{% if file.id in worldArcs %}
+      <article class="related-rail-card"><div class="related-rail-card-body">
+        <span class="related-rail-kicker">Dossier</span>
+        <h3><a href="dossier-{{ file.id }}.html">{{ file.short }}</a></h3>
+        <p>{{ file.summary }}</p>
+        <a class="related-rail-link" href="dossier-{{ file.id }}.html">Open dossier →</a>
+      </div></article>
+      {% endif %}{% endfor %}
+      {% for name in worldJurisdictions %}
+      <article class="related-rail-card"><div class="related-rail-card-body">
+        <span class="related-rail-kicker">Place</span>
+        <h3><a href="torenthia-record.html?place={{ name }}">{{ name }}</a></h3>
+        <p>See the public record associated with this jurisdiction.</p>
+        <a class="related-rail-link" href="torenthia-record.html?place={{ name }}">Browse {{ name }} →</a>
+      </div></article>
+      {% endfor %}
+      {% for p in collections.world | relatedWorld(worldId) %}
+      <article class="related-rail-card"><div class="related-rail-card-body">
+        <span class="related-rail-kicker">{{ p.data.worldOutlet }} · {{ p.data.worldDate }}</span>
+        <h3><a href="{{ p.url }}">{{ p.data.worldTitle }}</a></h3>
+        <p>{{ p.data.worldBlurb }}</p>
+        <a class="related-rail-link" href="{{ p.url }}">Read this record →</a>
+      </div></article>
+      {% endfor %}
+      {% for ref in worldProvisions | take(5) %}
+      <article class="related-rail-card"><div class="related-rail-card-body">
+        <span class="related-rail-kicker">Constitution</span>
+        <h3><a href="annotated.html#{{ ref | provisionAnchor }}">{{ ref }}</a></h3>
+        <p>Read the constitutional provision connected to this public record.</p>
+        <a class="related-rail-link" href="annotated.html#{{ ref | provisionAnchor }}">Open provision →</a>
+      </div></article>
+      {% endfor %}
+      <article class="related-rail-card"><div class="related-rail-card-body">
+        <span class="related-rail-kicker">Archive</span>
+        <h3><a href="torenthia-record.html">The complete public record</a></h3>
+        <p>Search and browse the full Torenthian record across institutions, places, and files.</p>
+        <a class="related-rail-link" href="torenthia-record.html">Open the archive →</a>
+      </div></article>
+    </div>
+    <div class="link-row related-rail-sequence">
+      {% for p in collections.world %}{% if p.data.worldId == worldId %}
+        {% if not loop.first %}<a href="{{ collections.world[loop.index0 - 1].url }}">← Previous in the public record</a>{% endif %}
+        {% if not loop.last %}<a href="{{ collections.world[loop.index0 + 1].url }}">Next in the public record →</a>{% endif %}
+      {% endif %}{% endfor %}
+    </div>
+  </section>
+</aside>
+<script src="related-rail.js"></script>
