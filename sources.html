@@ -64,6 +64,7 @@
     }
   
     /* ══ MOBILE RESPONSIVE ══ */
+    @media(max-width:640px){
     .mobile-menu a:hover,.mobile-menu a.active{color:var(--gold)}
     
       .page-wrap{padding:76px 1.25rem 60px}
@@ -73,7 +74,7 @@
       .phil-grid{grid-template-columns:1fr!important}
       .phil-entry:nth-child(even){padding-left:0!important;border-left:none!important}
       .reading-entry{flex-direction:column;gap:0.5rem}
-  }}
+  }
     
   
     /* ── Accessibility ── */
@@ -84,7 +85,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body class="sources-page">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   {% include "nav.njk" %}
 
@@ -99,7 +100,7 @@
       </div>
     </header>
 
-    <div class="link-row" aria-label="Sources sections"><a href="#foundational">Foundational Documents</a><a href="#tradition">Political and Philosophical Tradition</a><a href="#reading">Suggested Reading</a><a href="#origins">AI origins</a></div><!-- SECTION 1: FOUNDATIONAL DOCUMENTS -->
+    <div class="link-row" aria-label="Sources sections"><a href="#foundational">Foundational Documents</a><a href="#tradition">Political and Philosophical Tradition</a><a href="#reading">Suggested Reading</a><a href="#origins">AI origins</a></div><p class="sources-help">Select “Why it matters here” or “Why read this” to open a note. These explain the project’s interpretation of each source.</p><button type="button" id="sourceNotesToggle" class="secondary-action" hidden>Show all notes</button><!-- SECTION 1: FOUNDATIONAL DOCUMENTS -->
     <div class="sources-section">
       <span class="section-label">Section I</span>
       <h2 class="section-title" id="foundational">Foundational Documents</h2>
@@ -108,78 +109,78 @@
       <div class="source-entry">
         <div class="source-title">The Federalist Papers</div>
         <div class="source-author">Hamilton, Madison, Jay · 1787–1788</div>
-        <div class="source-note">The most rigorous defense of constitutional design in the democratic tradition. Papers 10 (faction and representation), 51 (the internal structure of government), and 78 (the judiciary) are the essential three. The dual executive, separated powers, and bicameral legislature in this document all engage the Federalist arguments directly — and in some cases answer objections Hamilton and Madison did not fully resolve.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The most rigorous defense of constitutional design in the democratic tradition. Papers 10 (faction and representation), 51 (the internal structure of government), and 78 (the judiciary) are the essential three. The dual executive, separated powers, and bicameral legislature in this document all engage the Federalist arguments directly — and in some cases answer objections Hamilton and Madison did not fully resolve.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Anti-Federalist Papers</div>
         <div class="source-author">Brutus, Centinel, Federal Farmer, and others · 1787–1788</div>
-        <div class="source-note">Underread and underappreciated. Brutus's argument — that a large republic cannot sustain genuine democratic accountability, that geographic distance from government produces oligarchy regardless of formal structure — was never fully answered by Hamilton. The National Record System and the Monitor architecture are a better answer to Brutus than the Federalist Papers provide: the information infrastructure addresses the accountability gap that distance creates.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">Underread and underappreciated. Brutus's argument — that a large republic cannot sustain genuine democratic accountability, that geographic distance from government produces oligarchy regardless of formal structure — was never fully answered by Hamilton. The National Record System and the Monitor architecture are a better answer to Brutus than the Federalist Papers provide: the information infrastructure addresses the accountability gap that distance creates.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The United States Constitution</div>
         <div class="source-author">1787, with amendments through 1992</div>
-        <div class="source-note">A masterpiece of political architecture — the most consequential act of constitutional design in the modern era, and the foundational inspiration for this project. It established principles that remain the bedrock of democratic governance: separated powers, enumerated authority, individual rights, and the sovereignty of the people over their government. That it has held, adapted, and endured for two and a half centuries of extraordinary stress is testament to the genius of its framers. This document stands in dialogue with it — taking its principles seriously enough to ask what they require when applied to the specific challenges two hundred and fifty years of experience have revealed. The dual executive, the combined-score election, the amendment architecture — each reflects the tradition the Constitution established, followed further toward its own conclusions.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">A masterpiece of political architecture — the most consequential act of constitutional design in the modern era, and the foundational inspiration for this project. It established principles that remain the bedrock of democratic governance: separated powers, enumerated authority, individual rights, and the sovereignty of the people over their government. That it has held, adapted, and endured for two and a half centuries of extraordinary stress is testament to the genius of its framers. This document stands in dialogue with it — taking its principles seriously enough to ask what they require when applied to the specific challenges two hundred and fifty years of experience have revealed. The dual executive, the combined-score election, the amendment architecture — each reflects the tradition the Constitution established, followed further toward its own conclusions.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Basic Law of the Federal Republic of Germany</div>
         <div class="source-author">Parliamentary Council · 1949</div>
-        <div class="source-note">The most instructive post-Weimar constitutional design. The constructive vote of no confidence — which this document adopts directly — was the Basic Law's answer to Weimar's fatal instability: you cannot remove a government without simultaneously electing its replacement. The eternity clauses protecting human dignity and the federal structure provided the model for this document's non-derogable provisions. The Basic Law understood that constitutional design must anticipate its own failure modes.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The most instructive post-Weimar constitutional design. The constructive vote of no confidence — which this document adopts directly — was the Basic Law's answer to Weimar's fatal instability: you cannot remove a government without simultaneously electing its replacement. The eternity clauses protecting human dignity and the federal structure provided the model for this document's non-derogable provisions. The Basic Law understood that constitutional design must anticipate its own failure modes.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Canadian Charter of Rights and Freedoms and the Clarity Act</div>
         <div class="source-author">1982 · 2000</div>
-        <div class="source-note">The Charter's rights framework informed the structure of Article I. The Clarity Act — the Legislature's codification of the Supreme Court's 1998 reference opinion on Quebec secession — provided the model for this document's independence framework: a clear democratic majority on a clear question creates a constitutional obligation to negotiate. The lesson is that governed exit is more stable than impossible exit.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The Charter's rights framework informed the structure of Article I. The Clarity Act — the Legislature's codification of the Supreme Court's 1998 reference opinion on Quebec secession — provided the model for this document's independence framework: a clear democratic majority on a clear question creates a constitutional obligation to negotiate. The lesson is that governed exit is more stable than impossible exit.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Constitution of the Republic of South Africa</div>
         <div class="source-author">Constitutional Assembly · 1996</div>
-        <div class="source-note">Among the most progressive constitutions ever written. Its justiciable socioeconomic rights and the Constitutional Court's "progressive realisation" doctrine were instructive in a specific way: they demonstrated that the aspiration behind positive rights is correct and that the mechanism of aspirational text without material guarantee is not. The Social State in this document is the answer to what South Africa's constitution identified as the design problem.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">Among the most progressive constitutions ever written. Its justiciable socioeconomic rights and the Constitutional Court's "progressive realisation" doctrine were instructive in a specific way: they demonstrated that the aspiration behind positive rights is correct and that the mechanism of aspirational text without material guarantee is not. The Social State in this document is the answer to what South Africa's constitution identified as the design problem.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The UN Declaration on the Rights of Indigenous Peoples</div>
         <div class="source-author">United Nations General Assembly · 2007</div>
-        <div class="source-note">The source of the Free, Prior, and Informed Consent framework in Article XVI. FPIC as a constitutional standard — consent withheld is final — goes further than the Declaration requires, but the Declaration provided the framework and the vocabulary.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The source of the Free, Prior, and Informed Consent framework in Article XVI. FPIC as a constitutional standard — consent withheld is final — goes further than the Declaration requires, but the Declaration provided the framework and the vocabulary.</div></details>
       </div>
 
       <div class="source-entry">
         <span class="section-kicker">Negative design case</span><div class="source-title">The Constitution of the Confederate States of America</div>
         <div class="source-author">Montgomery Convention · 1861</div>
-        <div class="source-note">Instructive in a way its authors did not intend. The Confederate constitution improved on the US constitution in several technical respects — a single non-renewable Legat Consul's term, a line-item veto, explicit budget transparency requirements — while enshrining the catastrophic wrong at its center. The lesson is not only moral. It is that technically sophisticated constitutional design can serve fundamentally unjust ends, and that the quality of institutional design and the justice of the purposes it serves are entirely separable questions. The six non-derogable rights in this document exist partly because of that lesson.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">Instructive in a way its authors did not intend. The Confederate constitution improved on the US constitution in several technical respects — a single non-renewable Legat Consul's term, a line-item veto, explicit budget transparency requirements — while enshrining the catastrophic wrong at its center. The lesson is not only moral. It is that technically sophisticated constitutional design can serve fundamentally unjust ends, and that the quality of institutional design and the justice of the purposes it serves are entirely separable questions. The six non-derogable rights in this document exist partly because of that lesson.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Declaration of the Rights of Man and of the Citizen</div>
         <div class="source-author">French National Constituent Assembly · 1789</div>
-        <div class="source-note">The Enlightenment's most consequential constitutional statement. The universalist claim — that rights belong to humans as humans, not as citizens of a particular state — is reflected in this document's application of Article I protections to every person within the Republic's jurisdiction, not only to citizens. The Declaration's architects understood something the American founders hedged: if rights are natural, they cannot be conditional on citizenship.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The Enlightenment's most consequential constitutional statement. The universalist claim — that rights belong to humans as humans, not as citizens of a particular state — is reflected in this document's application of Article I protections to every person within the Republic's jurisdiction, not only to citizens. The Declaration's architects understood something the American founders hedged: if rights are natural, they cannot be conditional on citizenship.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">Estonia's Digital Governance Framework</div>
         <div class="source-author">Republic of Estonia · 1997 onwards</div>
-        <div class="source-note">The most advanced implementation of digital public infrastructure in the democratic world. The National Record System's cryptographic architecture, distributed node structure, and immutable publication model draw directly on Estonia's X-Road infrastructure and digital identity framework. Estonia demonstrated that the technical requirements for trustworthy permanent public records are achievable at national scale.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The most advanced implementation of digital public infrastructure in the democratic world. The National Record System's cryptographic architecture, distributed node structure, and immutable publication model draw directly on Estonia's X-Road infrastructure and digital identity framework. Estonia demonstrated that the technical requirements for trustworthy permanent public records are achievable at national scale.</div></details>
       </div>
       <div class="source-entry">
         <div class="source-title">The Constitution of the Weimar Republic</div>
         <div class="source-author">German Reich · 1919</div>
-        <div class="source-note">The most instructive constitutional failure in the democratic tradition — not because it was poorly designed but because it was well designed and still fell. Its Article 48 emergency powers, the absence of a constructive vote of no confidence, and its low amendment threshold together constitute the primary negative brief this document was built against. The Basic Law and the Federated Republic's emergency architecture are both, in different ways, Weimar's answer to itself.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The most instructive constitutional failure in the democratic tradition — not because it was poorly designed but because it was well designed and still fell. Its Article 48 emergency powers, the absence of a constructive vote of no confidence, and its low amendment threshold together constitute the primary negative brief this document was built against. The Basic Law and the Federated Republic's emergency architecture are both, in different ways, Weimar's answer to itself.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Constitution of India</div>
         <div class="source-author">Republic of India · 1950, with amendments</div>
-        <div class="source-note">The longest written constitution in the democratic world — and the most direct prior engagement with the questions this document addresses. The Directive Principles versus justiciable rights debate, the emergency powers provisions and their abuse in 1975-1977, the collegium system's contested legitimacy, the reservations framework, and the Basic Structure doctrine developed in <em>Kesavananda Bharati</em> — India's constitutional scholars have been arguing about every fundamental design choice in the Federated Republic for seventy-five years. The Social State is the honest answer to the Directive Principles. The elected Supreme Court is the democratic answer to the collegium.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The longest written constitution in the democratic world — and the most direct prior engagement with the questions this document addresses. The Directive Principles versus justiciable rights debate, the emergency powers provisions and their abuse in 1975-1977, the collegium system's contested legitimacy, the reservations framework, and the Basic Structure doctrine developed in <em>Kesavananda Bharati</em> — India's constitutional scholars have been arguing about every fundamental design choice in the Federated Republic for seventy-five years. The Social State is the honest answer to the Directive Principles. The elected Supreme Court is the democratic answer to the collegium.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Constitution of the Federal Republic of Nigeria</div>
         <div class="source-author">Federal Republic of Nigeria · 1999</div>
-        <div class="source-note">The most practically instructive case for constitutional design under conditions of thin institutional capacity, deep ethnic and religious diversity, and oil-driven fiscal distortion. Nigeria's 1999 constitution — drafted by a military government transitioning to civilian rule — is formally democratic, formally federal, and formally rights-protective. The gap between constitutional text and constitutional delivery is the defining fact of Nigerian constitutional life. The NRS's function as a transparency mechanism rather than a provision guarantee, the social state floor's role in documenting what governments actually spend, and the FPIC standard's operation in a resource-extraction context are all illuminated by Nigeria's constitutional experience.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The most practically instructive case for constitutional design under conditions of thin institutional capacity, deep ethnic and religious diversity, and oil-driven fiscal distortion. Nigeria's 1999 constitution — drafted by a military government transitioning to civilian rule — is formally democratic, formally federal, and formally rights-protective. The gap between constitutional text and constitutional delivery is the defining fact of Nigerian constitutional life. The NRS's function as a transparency mechanism rather than a provision guarantee, the social state floor's role in documenting what governments actually spend, and the FPIC standard's operation in a resource-extraction context are all illuminated by Nigeria's constitutional experience.</div></details>
       </div>
 
       
@@ -190,19 +191,19 @@
       <div class="source-entry">
         <div class="source-title">The Compacts of Free Association — United States with Palau, FSM, and Marshall Islands</div>
         <div class="source-author">United States · 1986, 1994, renewed 2023</div>
-        <div class="source-note">The most directly relevant real-world precedent for the Article XX Associated Community framework. Three sovereign Pacific island nations maintain defense relationships, currency arrangements, and citizen mobility rights with the United States through compact agreements that either party can renegotiate. The compacts specify with precision what each party provides — financial assistance, military access, exclusive economic zone rights — and include ten-year review mechanisms. Their operation over forty years demonstrates both the viability of voluntary subsidiary relationships between unequal parties and the importance of explicit, material reciprocal terms.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">The most directly relevant real-world precedent for the Article XX Associated Community framework. Three sovereign Pacific island nations maintain defense relationships, currency arrangements, and citizen mobility rights with the United States through compact agreements that either party can renegotiate. The compacts specify with precision what each party provides — financial assistance, military access, exclusive economic zone rights — and include ten-year review mechanisms. Their operation over forty years demonstrates both the viability of voluntary subsidiary relationships between unequal parties and the importance of explicit, material reciprocal terms.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Cook Islands and Niue — Free Association with New Zealand</div>
         <div class="source-author">New Zealand · 1965, 1974</div>
-        <div class="source-note">Self-governing states in free association with New Zealand, each with its own parliament, legal system, and foreign policy capacity. New Zealand handles defense by agreement and provides citizenship rights. The Cook Islands and Niue may modify or terminate the relationship by unilateral democratic decision. Their experience demonstrates that small sovereign entities can maintain genuine autonomy within a compact relationship — and that the relationship's voluntary character is its constitutional foundation.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">Self-governing states in free association with New Zealand, each with its own parliament, legal system, and foreign policy capacity. New Zealand handles defense by agreement and provides citizenship rights. The Cook Islands and Niue may modify or terminate the relationship by unilateral democratic decision. Their experience demonstrates that small sovereign entities can maintain genuine autonomy within a compact relationship — and that the relationship's voluntary character is its constitutional foundation.</div></details>
       </div>
 
       <div class="source-entry">
         <div class="source-title">The Crown Dependencies — Jersey, Guernsey, Isle of Man</div>
         <div class="source-author">United Kingdom · Constitutional relationship developed over centuries</div>
-        <div class="source-note">Self-governing jurisdictions that are neither part of the United Kingdom nor British overseas territories, but maintain a constitutional relationship through the Crown. Each has its own legislature, legal system, and tax regime. The Crown handles defense and certain foreign affairs. No representation in Westminster. The Crown Dependencies demonstrate that compact-like relationships can be durable, constitutionally grounded, and genuinely autonomous — though their relationship evolved through history rather than through explicit compact negotiation, which is precisely the gap the Article XX framework is designed to address.</div>
+        <details class="source-disclosure"><summary>Why it matters here</summary><div class="source-note">Self-governing jurisdictions that are neither part of the United Kingdom nor British overseas territories, but maintain a constitutional relationship through the Crown. Each has its own legislature, legal system, and tax regime. The Crown handles defense and certain foreign affairs. No representation in Westminster. The Crown Dependencies demonstrate that compact-like relationships can be durable, constitutionally grounded, and genuinely autonomous — though their relationship evolved through history rather than through explicit compact negotiation, which is precisely the gap the Article XX framework is designed to address.</div></details>
       </div>
 
     <!-- SECTION 2: PHILOSOPHICAL TRADITION -->
@@ -299,7 +300,7 @@
         <div class="reading-body">
           <div class="reading-title">How Democracies Die</div>
           <div class="reading-author">Steven Levitsky and Daniel Ziblatt · 2018</div>
-          <div class="reading-note">The best recent account of democratic backsliding — how democracies end not through dramatic coups but through the gradual erosion of norms by elected officials. The constitutional violation architecture and the Monitors' permanent record mandate are designed specifically against the mechanisms Levitsky and Ziblatt document.</div>
+          <details class="source-disclosure"><summary>Why read this</summary><div class="reading-note">The best recent account of democratic backsliding — how democracies end not through dramatic coups but through the gradual erosion of norms by elected officials. The constitutional violation architecture and the Monitors' permanent record mandate are designed specifically against the mechanisms Levitsky and Ziblatt document.</div></details>
         </div>
       </div>
 
@@ -308,7 +309,7 @@
         <div class="reading-body">
           <div class="reading-title">Why Nations Fail</div>
           <div class="reading-author">Daron Acemoglu and James A. Robinson · 2012</div>
-          <div class="reading-note">The economic and institutional argument for why inclusive institutions produce prosperity and extractive institutions produce failure — regardless of geography, culture, or natural resources. The distinction between inclusive and extractive political institutions maps directly onto the design choices in this document.</div>
+          <details class="source-disclosure"><summary>Why read this</summary><div class="reading-note">The economic and institutional argument for why inclusive institutions produce prosperity and extractive institutions produce failure — regardless of geography, culture, or natural resources. The distinction between inclusive and extractive political institutions maps directly onto the design choices in this document.</div></details>
         </div>
       </div>
 
@@ -317,7 +318,7 @@
         <div class="reading-body">
           <div class="reading-title">How to Save a Constitutional Democracy</div>
           <div class="reading-author">Tom Ginsburg and Aziz Huq · 2018</div>
-          <div class="reading-note">The most rigorous recent work on constitutional design as a tool for democratic survival. Ginsburg and Huq identify the specific mechanisms through which constitutional democracy fails and the design features that resist those mechanisms. Required reading for anyone who wants to understand why this document makes the choices it makes.</div>
+          <details class="source-disclosure"><summary>Why read this</summary><div class="reading-note">The most rigorous recent work on constitutional design as a tool for democratic survival. Ginsburg and Huq identify the specific mechanisms through which constitutional democracy fails and the design features that resist those mechanisms. Required reading for anyone who wants to understand why this document makes the choices it makes.</div></details>
         </div>
       </div>
 
@@ -326,7 +327,7 @@
         <div class="reading-body">
           <div class="reading-title">The Federalist Papers — Numbers 10, 51, and 78</div>
           <div class="reading-author">Hamilton, Madison, Jay · 1787–1788</div>
-          <div class="reading-note">Read in full if you haven't. If you have, read them again with this document in hand. Federalist 10 on faction, 51 on the internal structure of government, and 78 on the judiciary are the three that most directly address the design questions this document engages. The arguments are 237 years old and most of them are still right.</div>
+          <details class="source-disclosure"><summary>Why read this</summary><div class="reading-note">Read in full if you haven't. If you have, read them again with this document in hand. Federalist 10 on faction, 51 on the internal structure of government, and 78 on the judiciary are the three that most directly address the design questions this document engages. The arguments are 237 years old and most of them are still right.</div></details>
         </div>
       </div>
 
@@ -335,7 +336,7 @@
         <div class="reading-body">
           <div class="reading-title">The Origins of Totalitarianism</div>
           <div class="reading-author">Hannah Arendt · 1951</div>
-          <div class="reading-note">The most important 20th century work on what political catastrophe actually is and how it develops. The six non-derogable rights in this document — the absolute floor — make no sense without understanding what Arendt documented: that the destruction of those specific rights was not incidental to totalitarianism but its constitutive act.</div>
+          <details class="source-disclosure"><summary>Why read this</summary><div class="reading-note">The most important 20th century work on what political catastrophe actually is and how it develops. The six non-derogable rights in this document — the absolute floor — make no sense without understanding what Arendt documented: that the destruction of those specific rights was not incidental to totalitarianism but its constitutive act.</div></details>
         </div>
       </div>
 
@@ -344,7 +345,7 @@
         <div class="reading-body">
           <div class="reading-title">Custer Died for Your Sins: An Indian Manifesto</div>
           <div class="reading-author">Vine Deloria Jr. · 1969</div>
-          <div class="reading-note">The foundational work of modern Native American political thought. Article XVI of this document exists in part because of the tradition Deloria helped establish — the argument that indigenous sovereignty is not a historical curiosity or a welfare question but a live constitutional matter with specific legal and political content. Any serious engagement with indigenous rights in constitutional design should begin here.</div>
+          <details class="source-disclosure"><summary>Why read this</summary><div class="reading-note">The foundational work of modern Native American political thought. Article XVI of this document exists in part because of the tradition Deloria helped establish — the argument that indigenous sovereignty is not a historical curiosity or a welfare question but a live constitutional matter with specific legal and political content. Any serious engagement with indigenous rights in constitutional design should begin here.</div></details>
         </div>
       </div>
 
@@ -353,7 +354,7 @@
         <div class="reading-body">
           <div class="reading-title">The Spirit of the Laws</div>
           <div class="reading-author">Montesquieu · 1748</div>
-          <div class="reading-note">Long, sprawling, and worth it. Book XI, on the constitution of England and the separation of powers, is the direct ancestor of this document's dual executive architecture. Montesquieu understood something Hamilton and Madison sometimes obscured: that the point of separated powers is not efficiency but liberty, and that the friction between branches is the mechanism, not the problem.</div>
+          <details class="source-disclosure"><summary>Why read this</summary><div class="reading-note">Long, sprawling, and worth it. Book XI, on the constitution of England and the separation of powers, is the direct ancestor of this document's dual executive architecture. Montesquieu understood something Hamilton and Madison sometimes obscured: that the point of separated powers is not efficiency but liberty, and that the friction between branches is the mechanism, not the problem.</div></details>
         </div>
       </div>
 
@@ -362,7 +363,7 @@
         <div class="reading-body">
           <div class="reading-title">Rights of Man</div>
           <div class="reading-author">Thomas Paine · 1791</div>
-          <div class="reading-note">Still the most readable case for constitutional democracy as a universal good rather than a Western particular. Paine wrote for ordinary readers because he believed ordinary readers were capable of following political arguments — the same bet this project makes. Two hundred and thirty years later the bet still seems worth making.</div>
+          <details class="source-disclosure"><summary>Why read this</summary><div class="reading-note">Still the most readable case for constitutional democracy as a universal good rather than a Western particular. Paine wrote for ordinary readers because he believed ordinary readers were capable of following political arguments — the same bet this project makes. Two hundred and thirty years later the bet still seems worth making.</div></details>
         </div>
       </div>
 
@@ -396,5 +397,18 @@
     }
   </script>
   <script src="nav.js"></script>
+  <script>
+  (function(){
+    const notes=[...document.querySelectorAll('.source-disclosure')];
+    const button=document.getElementById('sourceNotesToggle');
+    button.hidden=false;
+    function update(){button.textContent=notes.every(n=>n.open)?'Collapse all notes':'Show all notes';}
+    button.addEventListener('click',()=>{const open=!notes.every(n=>n.open);notes.forEach(n=>n.open=open);update();});
+    notes.forEach(n=>n.addEventListener('toggle',update));
+    let closed=[];
+    addEventListener('beforeprint',()=>{closed=notes.filter(n=>!n.open);notes.forEach(n=>n.open=true);});
+    addEventListener('afterprint',()=>{closed.forEach(n=>n.open=false);update();});
+  })();
+  </script>
 </body>
 </html>
