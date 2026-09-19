@@ -427,6 +427,366 @@ No Scene 1 path is a disguised concession. A player should be able to hold their
 
 The next scene, **Orin's Offer**, should be the first place where a genuinely substantive package appears and where the player has to distinguish a policy concession from a procedural or fiscal guarantee.
 
+
+---
+
+# Scene 2 — Orin's Offer
+
+## Shared scene setup
+
+Three sittings later, Dessa Orin puts four pages on every delegate's desk.
+
+It is not a Statehood resolution.
+
+It is not merger language.
+
+It does not tell the Convention which map to choose.
+
+That is why everyone reads it.
+
+The proposal says that any resolution preserving Korda as a single political unit should carry a binding transition commitment on infrastructure and public capacity: a published project list, protected funding treatment during the transition, regular progress reporting, and a mechanism requiring the successor government to explain publicly when a listed project slips.
+
+If the Convention instead proposes a territorial split, the same package would require the resolution to say which side inherits each listed obligation and how shared freight and service links continue during transition.
+
+Orin has very carefully not solved the national fiscal equalization dispute. Her paper does not rewrite §12.6, set a national formula, or bind the Legislature beyond whatever authority the eventual constitutional process permits. It does something narrower.
+
+It refuses to let status change become an excuse for the same roads, transfer capacity, and public-service requests to disappear into another queue.
+
+Rell calls it overdue.
+
+Mire calls it incomplete.
+
+Neither calls it irrelevant.
+
+Orin closes her explanation with the line everyone repeats afterward:
+
+"People should know what changes because of the map, and what government still owes them no matter where the line ends up."
+
+### Player prompt
+
+**What do you do with Orin's offer?**
+
+You can make it central to your coalition, narrow it so the Convention does not become a fiscal conference, use it as leverage for something your side wants, or insist that status must be decided before obligations are attached.
+
+This is the first choice where substance and procedure begin to overlap.
+
+---
+
+## Fragment set — Sena Threll
+
+### `s2_threll_champion`
+**Classifier descriptor:** Champion Orin's full infrastructure/capacity commitment as part of a whole-Korda Statehood package; argue that unity has to come with enforceable delivery, not another promise.
+
+**Provisional deltas:** interior +8 · corridor +3 · swing +8 · days -8 · trust +2  
+**State flags:** infrastructureCommitment = "full"
+
+**Response prose:**
+
+You sign onto the paper before lunch.
+
+Not because it guarantees Statehood.
+
+Because it answers the question you know the corridor will eventually ask: why should anyone trust a unified Korda to distribute attention differently after Statehood than the Territory did before it?
+
+You stand with Orin when she presents the revised draft.
+
+"If we ask people to keep one Korda," you say, "we should be able to tell them what one Korda is promising to do."
+
+Some of your own allies hear danger immediately. They wanted the Convention to decide status, not write an infrastructure compact. One tells you afterward that you are bargaining against yourself by admitting the whole-Territory case needs sweetening.
+
+You disagree.
+
+A Statehood resolution that says only *become a State* asks voters to trust the same institutions whose failures helped produce both petitions. Orin's language gives you something harder than reassurance: obligations somebody can later point to.
+
+Mire still says the corridor's canceled vote cannot be compensated with road projects.
+
+He also stops calling your Statehood position an offer of nothing.
+
+That is movement, even if it is not agreement.
+
+---
+
+### `s2_threll_narrow`
+**Classifier descriptor:** Support the principle but narrow Orin's package to a transition schedule, published project inventory, and reporting requirements; avoid embedding a large fiscal bargain in the Convention resolution.
+
+**Provisional deltas:** interior +5 · corridor +2 · swing +7 · days -5 · trust +1  
+**State flags:** infrastructureCommitment = "narrow"
+
+**Response prose:**
+
+You take a pencil to Orin's draft.
+
+The project list stays.
+
+The publication requirement stays.
+
+The obligation to identify who inherits each commitment stays.
+
+The parts that begin to look like a permanent fiscal architecture do not.
+
+"This room has ninety days," you tell her. "We can make government show its work. We cannot solve every budget Korda will ever have."
+
+Orin does not argue.
+
+That surprises you more than if she had.
+
+By the next sitting the paper is shorter and, because it is shorter, harder to dismiss as a rival constitution hiding inside the Convention resolution.
+
+Rell thinks you cut too much.
+
+Several swing delegates say privately that they can now imagine voting for it.
+
+Mire's objection changes too. He no longer attacks the package as overreach. He asks what equivalent protection the corridor gets if Korda stays whole.
+
+That is a better problem.
+
+It means he is reading the text as something that might matter.
+
+---
+
+### `s2_threll_leverage`
+**Classifier descriptor:** Keep Orin's package off the formal agenda for now and use support for it as bargaining leverage with corridor/swing delegates; offer infrastructure guarantees only in exchange for movement toward whole-Korda Statehood.
+
+**Provisional deltas:** interior +4 · corridor -3 · swing +5 · days -4 · trust -1  
+**State flags:** infrastructureCommitment = "conditional"
+
+**Response prose:**
+
+You tell Orin not yet.
+
+She knows exactly what you mean.
+
+Her paper is popular enough to attract delegates who are not ready to choose a map. Once it is adopted separately, that attraction disappears. So you keep it attached to the larger question.
+
+Privately, your message is simple: if the corridor wants guaranteed freight links, a protected project schedule, and public accounting during transition, then it should be prepared to discuss those protections inside a whole-Korda settlement.
+
+The tactic works on two delegates almost immediately.
+
+It irritates Mire just as quickly.
+
+"You are taking an obligation you already think government owes people," he tells you, "and offering it back to them in exchange for their constitutional position."
+
+You tell him every Convention bargain connects things that would otherwise be decided separately.
+
+He says that does not make every connection honorable.
+
+Orin does not rebuke you in public.
+
+She does ask you, privately, whether you are prepared to publish the same commitments if you get the votes you want.
+
+You say yes.
+
+She writes the answer down.
+
+For the first time, the Convention's trust problem has your name in it.
+
+---
+
+### `s2_threll_status_first`
+**Classifier descriptor:** Reject attaching Orin's infrastructure package at this stage; argue the Convention should decide Korda's status first and leave implementation/fiscal commitments to the appropriate later government and Legislature.
+
+**Provisional deltas:** interior +6 · corridor -5 · swing -3 · days -2 · trust -1  
+**State flags:** infrastructureCommitment = "none"
+
+**Response prose:**
+
+You vote to table the paper.
+
+Not kill it.
+
+Table it.
+
+The distinction does not survive the hallway.
+
+By the evening headline, you have "blocked Orin's infrastructure guarantee."
+
+Your argument in the room is cleaner than that.
+
+The Convention exists to reconcile two incompatible status petitions. If it starts writing funding rules, project schedules, and administrative obligations before it knows whether Korda remains whole, it risks producing a beautifully detailed answer to a question voters never asked.
+
+"Decide the structure," you say. "Then make the structure carry its obligations."
+
+Rell backs you.
+
+Orin does not.
+
+She says only that deferring an obligation has been Korda's governing habit for years and that the Convention should be careful about reproducing it procedurally.
+
+The corridor seats do not suddenly become supporters of her package. They simply notice that the delegate arguing hardest for whole-Korda Statehood has just asked them to trust that the details will be handled later.
+
+You save time.
+
+You do not save confidence.
+
+---
+
+## Fragment set — Davin Kesh
+
+### `s2_kesh_accept`
+**Classifier descriptor:** Accept Orin's Territory-wide infrastructure/capacity commitment as a legitimate part of any settlement, while explicitly preserving the corridor's status claim.
+
+**Provisional deltas:** interior +7 · corridor -3 · swing +8 · days -7 · trust +2  
+**State flags:** infrastructureCommitment = "full"
+
+**Response prose:**
+
+You surprise your own side first.
+
+"The corridor should sign this."
+
+Three heads turn toward you.
+
+You continue before anyone can translate agreement into surrender.
+
+Orin's package does not require the corridor to remain in Korda. It requires the Convention to stop pretending infrastructure obligations vanish when jurisdiction changes. If the corridor joins Kelvant, someone still has to say what happens to shared freight links, service contracts, and projects already promised to communities on both sides. If Korda remains whole, someone still has to explain why the old queue will be different next time.
+
+"That question exists under every map," you say.
+
+Mire reads the draft again.
+
+He eventually agrees.
+
+The harder corridor delegates accuse you of helping the interior make unity look more competent than it has been.
+
+Maybe you are.
+
+But several inland delegates who had treated the corridor bloc as interested only in departure now have to revise that picture. You just supported an obligation that protects places your preferred map might leave behind.
+
+You have not moved one inch on merger.
+
+The room notices anyway.
+
+---
+
+### `s2_kesh_equivalent`
+**Classifier descriptor:** Support Orin's infrastructure package only if it is paired with a corridor-specific structural guarantee, such as protected local authority or durable control over defined local functions inside any unified Korda.
+
+**Provisional deltas:** interior -2 · corridor +8 · swing +6 · days -8 · trust +1  
+**State flags:** infrastructureCommitment = "full"; corridorGuarantee = "requested"
+
+**Response prose:**
+
+You tell Orin the paper solves the wrong half of the problem.
+
+Not because roads do not matter.
+
+Because the corridor petition was not filed for a better project dashboard.
+
+"If Korda stays whole," you say, "what stops every corridor question from becoming a Korda-wide question again the moment this Convention adjourns?"
+
+You offer an amendment.
+
+The infrastructure commitments remain. In exchange, any unified-Korda resolution must also define a protected sphere of corridor local authority to be carried into the next constitutional stage: specified local functions that cannot simply be reclaimed by the central State government after ratification.
+
+The room changes.
+
+This is no longer a conversation about whether Orin's paper is sensible. It is the first time someone has tried to connect the paper to an institutional answer for the corridor grievance.
+
+Rell objects immediately. He calls it "a State inside the State."
+
+You answer that protected local authority is not sovereignty and that pretending the two are identical is how the Convention ends with nothing.
+
+Orin does not endorse your amendment.
+
+She also does not reject it.
+
+She asks for language.
+
+That is enough to keep everybody at the table another day.
+
+---
+
+### `s2_kesh_trade`
+**Classifier descriptor:** Treat support for Orin's package as bargaining currency; offer corridor votes for the infrastructure commitment only if the interior preserves merger language or another concrete corridor option in the eventual resolution.
+
+**Provisional deltas:** interior -4 · corridor +6 · swing +4 · days -4 · trust -1  
+**State flags:** infrastructureCommitment = "conditional"; corridorGuarantee = "status_option"
+
+**Response prose:**
+
+You tell Orin you can probably deliver six corridor votes for the package.
+
+Then you tell her the price.
+
+The final resolution must preserve a real corridor status option. Not a paragraph promising consultation. Not a study. Something voters can recognize as descended from the petition they signed.
+
+Orin leans back.
+
+"You are pricing roads in constitutional language."
+
+"No," you say. "I'm pricing my votes."
+
+There is a difference, though not enough of one to make the exchange comfortable.
+
+The offer travels through the room faster than you intended. By evening, interior delegates are accusing the corridor of holding infrastructure obligations hostage to merger. Corridor organizers answer that the interior has spent years asking them to accept shared obligations without shared leverage.
+
+Both claims contain enough truth to be dangerous.
+
+You gain discipline at home.
+
+You also make every future promise more expensive, because now everyone knows you are willing to connect unrelated things if that is what it takes to preserve the corridor's place on the page.
+
+---
+
+### `s2_kesh_status_first`
+**Classifier descriptor:** Reject Orin's package as premature; insist that the Convention first decide whether Korda stays whole or the corridor leaves before attaching transition spending, project, or governance commitments.
+
+**Provisional deltas:** interior -5 · corridor +5 · swing -4 · days -2 · trust -1  
+**State flags:** infrastructureCommitment = "none"
+
+**Response prose:**
+
+You do something the interior did not expect.
+
+You agree with its most procedural members.
+
+Not on outcome.
+
+On order.
+
+The Convention cannot know which government owes what until it knows which governments will exist. Writing a detailed obligation matrix first, you argue, lets everyone postpone the one decision the clock actually requires.
+
+"Pick the constitutional direction," you say. "Then make the transition honest."
+
+Several corridor delegates approve. They are tired of every discussion becoming another way to make merger sound administratively inconvenient.
+
+Orin asks whether you believe the old infrastructure obligations disappear if the corridor leaves.
+
+"No."
+
+"Then why is naming them premature?"
+
+"Because naming who owns them is impossible until we decide who exists."
+
+It is your best answer.
+
+It is also incomplete.
+
+Swing delegates who were looking for evidence that the Convention could solve practical problems now see another status-first argument from a bloc already accused of caring more about the map than the people living on it.
+
+You save days.
+
+The room gets no closer.
+
+---
+
+# Scene 2 balancing notes
+
+Scene 2 introduces the first substantive package without making the package synonymous with compromise or with a particular status outcome.
+
+- **Champion / Accept** treats infrastructure obligations as valid under any map and builds trust across blocs.
+- **Narrow** is a Threll-specific governance move: preserve enforceability while stopping the Convention from becoming a shadow fiscal legislature.
+- **Equivalent** is a Kesh-specific bridge into the later autonomy/split question: accepting shared obligations while demanding institutional recognition of corridor distinctness.
+- **Leverage / Trade** can be politically effective but damages trust because an obligation framed as universally owed becomes bargaining currency.
+- **Status first** is fast and internally coherent for either role, but it spends cross-bloc confidence.
+
+The package does **not** resolve the live national §12.6 equalization dispute. It concerns the Convention's own resolution and transition obligations only.
+
+For ending logic, `infrastructureCommitment` is an internal state variable with values `full`, `narrow`, `conditional`, or `none`. It contributes to a later `broadPackage` determination but does not by itself trigger the Grand Bargain ending. Kesh's `corridorGuarantee` request is likewise an open bargaining position, not an accomplished constitutional term.
+
+The next scene, **The Corridor Line**, is where status itself becomes unavoidable and where a player can choose concession, persuasion, or escalation.
+
+
 ---
 
 # Engine-data notes for later transfer
