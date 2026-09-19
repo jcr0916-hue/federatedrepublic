@@ -757,3 +757,65 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 @media (max-width: 600px) {
   .scenario-end { padding: 1.25rem .5rem; }
 }
+
+/* Constitution reader: consistent ink links and an integrated contents rail. */
+.constitution-reader .reader-layout a,
+.constitution-reader .reader-layout a:visited,
+.constitution-reader .ann-panel a,
+.constitution-reader .ann-panel a:visited {
+  color: var(--navy);
+  text-decoration-color: var(--gold2);
+  text-underline-offset: .2em;
+  text-decoration-thickness: 1px;
+}
+.constitution-reader .reader-layout a:hover,
+.constitution-reader .ann-panel a:hover {
+  color: var(--navy2);
+  text-decoration-color: currentColor;
+}
+.constitution-reader .reader-layout a:focus-visible {
+  outline: 2px solid var(--gold2);
+  outline-offset: 3px;
+}
+.constitution-reader .article-navigation {
+  background: var(--cream2);
+  border-top: 2px solid var(--gold2);
+  border-right: 1px solid var(--border);
+  padding: 1.1rem .85rem 1.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold2) var(--cream2);
+  scrollbar-gutter: stable;
+}
+.constitution-reader .article-navigation summary {
+  color: var(--navy);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  padding: .25rem 0;
+}
+.constitution-reader .contents-intro {
+  font-size: .78rem;
+  line-height: 1.55;
+  margin: .75rem 0 1rem;
+  color: #5d5549;
+}
+.constitution-reader .article-navigation a {
+  padding: .65rem .35rem;
+  border-top: 1px solid var(--border);
+  line-height: 1.45;
+}
+.constitution-reader .article-navigation a:hover,
+.constitution-reader .article-navigation a:focus-visible {
+  background: var(--cream);
+  text-decoration: underline;
+}
+.constitution-reader .article-navigation::-webkit-scrollbar { width: 8px; }
+.constitution-reader .article-navigation::-webkit-scrollbar-track { background: var(--cream2); }
+.constitution-reader .article-navigation::-webkit-scrollbar-thumb {
+  background: var(--gold2);
+  border: 2px solid var(--cream2);
+  border-radius: 8px;
+}
+@media (max-width: 900px) {
+  .constitution-reader .article-navigation { border: 1px solid var(--border); border-top: 2px solid var(--gold2); }
+}

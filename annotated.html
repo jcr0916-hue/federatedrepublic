@@ -141,7 +141,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body class="constitution-reader">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   {% include "nav.njk" %}
 
@@ -154,7 +154,7 @@
   <p>Annotated Edition — {{ constitution.provisions }} provisions &nbsp;·&nbsp; {{ constitution.articles }} articles</p>
   <p class="doc-hover-instructions">Click any <span style="border-bottom:2px solid var(--navy);padding:0 2px;font-size:0.85em">provision title</span> for AI-generated design rationale <span class="ann-ai-marker">AI Feature*</span></p>
 </div>
-<div class="link-row"><a href="#reading-paths">Explore by topic</a><button type="button" class="secondary-action" onclick="openSearch()">Search the text</button><a href="constitution-current.pdf" download>Download the Constitution (PDF)</a></div>{% include "reading-paths.njk" %}<div class="legend">
+<div class="link-row"><a href="#reading-paths">Explore by topic</a><button type="button" id="searchBtn" class="secondary-action" onclick="openSearch()">Search the text</button><a href="constitution-current.pdf" download>Download the Constitution (PDF)</a></div>{% include "reading-paths.njk" %}<div class="legend">
   <div class="legend-item"><div class="legend-swatch ls-design"></div>Click any provision — design rationale</div>
 </div>
 
@@ -1734,7 +1734,6 @@
 
   <!-- Fixed UI elements — body level for reliable position:fixed across all browsers -->
 
-  <button id="searchBtn" onclick="openSearch()" aria-label="Search constitution" class="search-fab"><span aria-hidden="true">⌕</span></button>
   <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search provisions">
     <div class="search-inner">
       <div class="search-bar">
