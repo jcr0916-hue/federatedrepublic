@@ -748,3 +748,12 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 .torenthia-home .stats-band{width:100%;margin-left:0;margin-right:0}.world-orientation figcaption a{color:#765817}
 .korda-map{display:block;width:100%;max-height:440px}.korda-map text{font:600 22px 'Jost',sans-serif;fill:#1b2a4a;paint-order:stroke;stroke:#f5f0e8;stroke-width:4px}.court-toc{display:flex;flex-wrap:wrap;gap:1rem;position:sticky;top:56px;z-index:5;background:var(--cream);padding:.8rem 0;border-bottom:1px solid var(--border)}.court-toc a{color:#765817;padding:.25rem}.section-head,.holding-box{scroll-margin-top:130px}#surveyRoutes a{color:var(--gold)}
 @media print{.court-toc{display:none}#surveyRoutes a{color:#111}}
+
+/* Scenario reading bridges: quiet, readable links after the story. */
+.scenario-end p { line-height: 1.7; }
+.scenario-end ul { padding-left: 1.25rem; }
+.scenario-end li { margin: .7rem 0; line-height: 1.6; }
+.scenario-end a { color: var(--navy); text-underline-offset: .18em; }
+@media (max-width: 600px) {
+  .scenario-end { padding: 1.25rem .5rem; }
+}
