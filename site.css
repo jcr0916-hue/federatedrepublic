@@ -892,3 +892,15 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 @media(max-width:900px){.article-opening .article-related-rail .related-rail-track{grid-auto-columns:68%}}
 @media(max-width:600px){.article-opening .article-related-rail .related-rail-track{grid-auto-columns:86%}.article-opening .article-related-rail .related-rail-head>div:first-child{min-width:0}}
 @media print{.article-related-rail{display:none!important}}
+
+
+/* Visual world/source rails */
+.visual-world-rail .related-rail{margin-top:.75rem}
+.visual-world-rail .related-rail-card{min-height:300px}
+.visual-world-rail .related-rail-image{aspect-ratio:16/9}
+.source-identity-rail .related-rail{margin-top:.5rem}
+.source-identity-rail .related-rail-card{min-height:250px}
+.source-identity-rail .related-rail-image{aspect-ratio:16/7;background:#fff;padding:.8rem 1rem;border-bottom:1px solid var(--border)}
+.source-identity-rail .related-rail-image img{object-fit:contain}
+.source-identity-rail .related-rail-card p{font-size:.82rem}
+@media(max-width:600px){.source-identity-rail .related-rail-card{min-height:235px}.source-identity-rail .related-rail-image{aspect-ratio:16/6}}
