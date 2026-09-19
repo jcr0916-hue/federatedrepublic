@@ -4,11 +4,11 @@
  if(form){
   form.hidden=false;
   const rows=[...document.querySelectorAll('.archive-item')], more=document.getElementById('archiveMore');let limit=24;
-  const names=['q','type','file','place'];
+  const names=['q','type','file','place','source'];
   function restore(){const params=new URLSearchParams(location.search);names.forEach(n=>form.elements[n].value=params.get(n)||'');}
   function filter(updateURL){
-   const q=form.elements.q.value.toLowerCase().trim(),type=form.elements.type.value,arc=form.elements.file.value,place=form.elements.place.value;
-   const matches=rows.filter(r=>(!q||(r.textContent+' '+r.dataset.refs).toLowerCase().includes(q))&&(!type||(type==='civic'?r.dataset.civic==='true':r.dataset.type===type))&&(!arc||r.dataset.files.split('|').includes(arc))&&(!place||r.dataset.places.split('|').includes(place)));
+   const q=form.elements.q.value.toLowerCase().trim(),type=form.elements.type.value,arc=form.elements.file.value,place=form.elements.place.value,source=form.elements.source.value;
+   const matches=rows.filter(r=>(!q||(r.textContent+' '+r.dataset.refs).toLowerCase().includes(q))&&(!type||(type==='civic'?r.dataset.civic==='true':r.dataset.type===type))&&(!arc||r.dataset.files.split('|').includes(arc))&&(!place||r.dataset.places.split('|').includes(place))&&(!source||(source==='TNB'?r.dataset.outlet.startsWith('TNB'):r.dataset.outlet===source)));
    const visible=new Set(matches.slice(0,limit));rows.forEach(r=>r.hidden=!visible.has(r));
    document.getElementById('archiveCount').textContent=`${matches.length} matching records · ${Math.min(limit,matches.length)} shown · newest first`;
    document.getElementById('archiveEmpty').hidden=matches.length>0;more.hidden=matches.length<=limit;
