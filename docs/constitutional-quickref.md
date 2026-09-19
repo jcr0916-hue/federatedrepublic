@@ -277,9 +277,9 @@ No civil servant, military member, or person acting under direct federal authori
 
 ### §2.9 — Legat Consul Succession and Incapacity
 
-(1) Full succession activates on the Legat Consul's death, resignation, removal, or certified permanent incapacity. The Senate Speaker holds the office of Legat Consul from the moment the triggering event occurs — no active assumption, oath, publication, or other implementing act is required.
+(1) Full succession activates on the Legat Consul's death, resignation, or removal, including removal on grounds of demonstrated permanent incapacity under §2.13. The Senate Speaker holds the office of Legat Consul from the moment the triggering event occurs — no active assumption, oath, publication, or other implementing act is required.
 
-- **Cross-refs:** §2.1, §2.16, §2.9
+- **Cross-refs:** §2.1, §2.13, §2.16, §2.9
 
 ### §2.10 — Executive Transparency
 
@@ -1064,11 +1064,11 @@ A Territory resulting from mandatory or voluntary devolution enters the §15.2 p
 
 ### §15.5.a — Remainder Viability
 
-(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them; all such petitions are addressed together under subsection (4). (2) Where subsection (1) does not apply: after certification of a petition under §15.4 or a defined geographic subdivision's petition under…
+(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them; all such petitions are addressed together under subsection (4). (2) Where subsection (1) does not apply, the JMC must assess whether the Territory's remaining portion could realistically satisfy the…
 
 - **Time limits:**
   - 2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them
-  - 2, the JMC must, within 90 days of that certification, assess whether the Territory's remaining portion could realistically satisfy the conditions of the §15
+  - The assessment is due within 90 days of the certification of the petition under §15
   - The Convention has 90 days from its first session to produce a proposed resolution
 - **Cross-refs:** §15.2, §15.4
 
