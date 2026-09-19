@@ -787,6 +787,466 @@ For ending logic, `infrastructureCommitment` is an internal state variable with 
 The next scene, **The Corridor Line**, is where status itself becomes unavoidable and where a player can choose concession, persuasion, or escalation.
 
 
+
+---
+
+# Scene 3 — The Corridor Line
+
+## Shared scene setup
+
+The first real status language arrives on a Thursday morning.
+
+It is not filed by the chair.
+
+It comes from the corridor caucus.
+
+One paragraph says that any Convention resolution must preserve a distinct constitutional choice for the lake corridor: merger with Kelvant, or—if Korda remains whole—a defined sphere of protected local authority substantial enough that the corridor is not simply returned to the arrangement it petitioned to leave.
+
+The second paragraph is shorter.
+
+Without one of those two things, the corridor caucus will not support a Convention resolution.
+
+The word *walkout* does not appear.
+
+Nobody needs it to.
+
+Eight corridor delegates sit together when the paper is read. Mire speaks for them.
+
+"We did not come here to erase the petition that put us here."
+
+Rell answers from across the room.
+
+"And the rest of Korda did not come here to ratify it without a vote."
+
+For the first time, the Convention is no longer arguing about process, project lists, or what questions need answering.
+
+It is arguing about the map.
+
+### Player prompt
+
+**Where do you draw your line?**
+
+You can concede structure, hold your position and persuade, escalate the confrontation, or try to break the ultimatum without giving the other side what it demanded.
+
+This choice is not simply about being moderate or hard-line. The same substantive position can be played well or badly.
+
+---
+
+## Fragment set — Sena Threll
+
+### `s3_threll_autonomy`
+**Classifier descriptor:** Offer protected corridor local authority inside a unified Korda as a substantive concession; preserve whole-Territory Statehood while giving the corridor durable control over defined local functions.
+
+**Provisional deltas:** interior -7 · corridor +12 · swing +9 · days -9 · trust +2  
+**State flags:** corridorStructure = "autonomy"; ultimatumEscalated = false
+
+**Response prose:**
+
+You ask for the corridor language.
+
+Not the merger clause.
+
+The other one.
+
+You spend the afternoon taking apart the phrase *protected local authority* until it stops being a slogan and becomes a list.
+
+Local transport planning.
+
+Specified port and freight administration.
+
+Defined service functions.
+
+A requirement that the future State constitution preserve those powers unless the corridor itself consents to changing them.
+
+Rell hates it.
+
+He says you are building a permanent exception into the State before the State exists.
+
+You answer that the alternative is asking the corridor to abandon a certified exit petition in exchange for nothing more durable than goodwill.
+
+Mire reads the language twice.
+
+"So the corridor stays in Korda."
+
+"Yes."
+
+"And Korda cannot simply take these powers back after ratification."
+
+"Not without the process we write."
+
+It is the first time the two of you have disagreed about the map while talking about the same text.
+
+Some interior delegates peel away from you immediately. They wanted Statehood to mean one government with one ordinary set of rules.
+
+Others stay because the map is still whole.
+
+The corridor does not say yes.
+
+It stops saying no.
+
+For today, that is enough.
+
+---
+
+### `s3_threll_persuade`
+**Classifier descriptor:** Refuse special corridor autonomy or merger language, but actively persuade corridor and swing delegates that clean whole-Korda Statehood can answer the underlying grievance through representation, ratification, and enforceable transition commitments.
+
+**Provisional deltas:** interior +7 · corridor +3 · swing +11 · days -8 · trust +1  
+**State flags:** corridorStructure = "none"; ultimatumEscalated = false
+
+**Response prose:**
+
+You do not offer a carve-out.
+
+You also do not tell the corridor to get over it.
+
+Instead, you ask the clerk to put three facts on the board.
+
+The old referendum never occurred.
+
+Any Convention resolution still goes to the voters it affects.
+
+And if the Convention proposes whole-Korda Statehood, the corridor votes on that proposition as part of Korda before anything proceeds to the remaining Statehood process.
+
+"You were denied one vote by the collision of two petitions," you say. "I am not asking you to pretend that did not happen. I am asking you to use the vote the Constitution now gives you on the resolution that replaces it."
+
+Mire objects that a Korda-wide ratification is not the same electorate as the corridor-only referendum.
+
+You agree.
+
+That takes some force out of his reply.
+
+Then you turn to Orin's package and the representation question. Your case is not that the corridor has no distinct grievance. Your case is that Statehood, enforceable commitments, and a ratification vote can answer it without drawing a new border or creating a permanent constitutional sub-unit.
+
+You do not win the corridor caucus.
+
+You do make two of its members stop treating the caucus paper as the only legitimate response to the canceled referendum.
+
+More importantly, several swing delegates hear a whole-Korda argument that is not just *no*.
+
+You kept your line.
+
+You finally gave it content.
+
+---
+
+### `s3_threll_call_bluff`
+**Classifier descriptor:** Publicly call the corridor caucus's ultimatum; refuse merger or autonomy language and challenge corridor delegates to explain whether they will really let both petitions lapse rather than negotiate.
+
+**Provisional deltas:** interior +11 · corridor -12 · swing +3 · days -4 · trust -3  
+**State flags:** corridorStructure = "none"; ultimatumEscalated = true; walkoutRisk = "high"
+
+**Response prose:**
+
+You ask Mire one question.
+
+"Are you prepared to kill your own petition?"
+
+The room goes silent because everyone understands the arithmetic.
+
+If the Convention produces no resolution, the corridor does not get its old referendum back. Both petitions lapse. The Territory continues undivided. The same geographic claims cannot simply be restarted next month.
+
+Mire knows it.
+
+So does every organizer sitting behind him.
+
+You continue.
+
+"If eight delegates would rather have no vote, no merger, no Statehood, and a three-year bar than negotiate a resolution without their preferred language, say that plainly."
+
+The corridor seats erupt.
+
+Mire does not.
+
+He waits until the noise falls and answers in a voice quiet enough to make the room listen.
+
+"You are confusing our exposure to failure with your entitlement to our votes."
+
+That line is in every evening broadcast.
+
+Your own bloc loves what you did. You stripped the ultimatum down to its cost and made the corridor own it.
+
+Swing delegates are less comfortable.
+
+They now know the corridor's threat is expensive.
+
+They also know you are willing to test whether it is real.
+
+The Convention has clarity.
+
+It has less trust than it had this morning.
+
+---
+
+### `s3_threll_split_caucus`
+**Classifier descriptor:** Hold the line against merger/autonomy but privately peel corridor or swing delegates away from the caucus ultimatum; exploit differences inside the corridor without publicly humiliating it.
+
+**Provisional deltas:** interior +5 · corridor -2 · swing +12 · days -7 · trust 0  
+**State flags:** corridorStructure = "none"; ultimatumEscalated = false; corridorCohesion = "fractured"
+
+**Response prose:**
+
+You do not answer the caucus paper on the floor.
+
+You answer it in hallways.
+
+The corridor's eight delegates agree on one sentence: the final resolution must recognize corridor distinctness.
+
+They do not agree on what recognition means.
+
+You already know that from the first caucus.
+
+So you stop arguing with the sentence and start asking about the noun.
+
+Merger?
+
+Local authority?
+
+A separate ratification condition?
+
+A binding freight compact?
+
+A guarantee that certain functions cannot be centralized without corridor consent?
+
+By the second day, one delegate tells you privately that merger was always a means, not a sacrament.
+
+Another says autonomy is meaningless unless the powers are written precisely.
+
+A third wants the final resolution to preserve the history of the canceled petition more than he wants a new jurisdictional line.
+
+You promise none of them anything.
+
+You simply make it harder for the caucus to pretend it has one demand.
+
+Mire realizes what you are doing.
+
+He does not accuse you publicly. That would advertise the fracture.
+
+Instead he tightens the caucus meeting schedule.
+
+The ultimatum remains on paper.
+
+It no longer means exactly the same thing to all eight names beneath it.
+
+You have not conceded the map.
+
+You have changed the coalition defending the other one.
+
+---
+
+## Fragment set — Davin Kesh
+
+### `s3_kesh_ultimatum`
+**Classifier descriptor:** Personally make the corridor ultimatum public and explicit: no corridor support for a resolution that omits either merger or protected autonomy; use confrontation to force the room to address corridor distinctness.
+
+**Provisional deltas:** interior -10 · corridor +12 · swing +5 · days -4 · trust -2  
+**State flags:** corridorStructure = "demanded"; ultimatumEscalated = true; walkoutRisk = "medium"
+
+**Response prose:**
+
+Mire gives you the floor.
+
+You make the threat explicit.
+
+Not a walkout.
+
+Something harder to dismiss.
+
+"No corridor vote for erasure."
+
+You say the caucus will support a resolution that preserves merger as the proposed outcome, or one that keeps Korda whole while protecting a real sphere of corridor authority. You will not support a document that mentions the canceled petition in its findings and then recreates the same institutional arrangement underneath it.
+
+The corridor seats are with you.
+
+The interior is furious.
+
+Rell asks whether eight delegates now claim a veto over twenty-five.
+
+"No," you say. "I am telling twenty-five delegates what it will cost to get eight votes."
+
+That answer travels.
+
+It also hardens the room.
+
+For the first time, delegates begin talking openly about whether a resolution can survive without any corridor support at all.
+
+You wanted the Convention to understand that your bloc has leverage.
+
+It does.
+
+So do your opponents.
+
+---
+
+### `s3_kesh_autonomy`
+**Classifier descriptor:** Pull the corridor back from merger-or-nothing and make protected local authority inside a unified Korda the serious fallback; negotiate substance without abandoning corridor distinctness.
+
+**Provisional deltas:** interior +6 · corridor +6 · swing +11 · days -9 · trust +2  
+**State flags:** corridorStructure = "autonomy"; ultimatumEscalated = false
+
+**Response prose:**
+
+You ask Mire to strike one word from the caucus paper.
+
+*Merger.*
+
+Not forever.
+
+From the minimum demand.
+
+The room notices before he answers.
+
+You explain the distinction carefully. The original petition remains legitimate. Merger remains your preferred result. But if the Convention can write a unified-Korda settlement that gives the corridor protected authority over defined local functions—and makes those protections durable through the next constitutional stage—then the corridor should be willing to negotiate the text before deciding it is insufficient.
+
+One corridor delegate calls that retreat.
+
+You call it leverage with somewhere to go.
+
+Threll asks which powers.
+
+You give her a list instead of a speech.
+
+Transport planning.
+
+Port and freight administration.
+
+Specified local services.
+
+Consent before the future State reclaims those functions.
+
+Rell immediately says no.
+
+Orin asks who enforces the boundary.
+
+That is a better question.
+
+The debate moves from whether the corridor deserves recognition to what recognition would actually do.
+
+You have not won merger.
+
+You have made the fallback real enough that the interior has to negotiate with it.
+
+---
+
+### `s3_kesh_persuade`
+**Classifier descriptor:** Keep merger as the preferred outcome but reject an ultimatum; persuade swing/interior delegates through the legitimacy of the canceled referendum and the corridor's willingness to shoulder transition obligations.
+
+**Provisional deltas:** interior +5 · corridor +5 · swing +12 · days -8 · trust +1  
+**State flags:** corridorStructure = "status_option"; ultimatumEscalated = false
+
+**Response prose:**
+
+You refuse to sign the caucus threat.
+
+That costs you an ugly hour.
+
+You tell your own side that the corridor's strongest argument is not that eight delegates can stop the room.
+
+It is that thousands of residents followed the constitutional process they were given and reached the point where ballots were being prepared.
+
+"If we turn that into a threat from eight politicians," you say, "we make the petition smaller than it was."
+
+Then you make the argument to the room.
+
+The corridor is willing to negotiate freight continuity.
+
+It is willing to allocate existing obligations fairly.
+
+It is willing to live with whatever ratification and transition steps the Constitution requires.
+
+What it is not willing to do is accept a resolution that treats the canceled referendum as an administrative inconvenience.
+
+You ask delegates who oppose merger to vote against merger on its merits, not to erase it procedurally.
+
+That distinction lands with swing members.
+
+It also gives Threll an opening to answer you without first defending herself against an ultimatum.
+
+Some corridor organizers accuse you of surrendering leverage.
+
+Mire does not.
+
+He says, quietly, that a claim people believe in should be able to survive being argued instead of threatened.
+
+For once, the caucus meeting ends without a common press line.
+
+That may be progress.
+
+---
+
+### `s3_kesh_walkout`
+**Classifier descriptor:** Escalate beyond a voting ultimatum and lead or threaten an actual corridor walkout from Convention proceedings unless merger language is restored; maximize pressure at high trust and lapse risk.
+
+**Provisional deltas:** interior -14 · corridor +9 · swing -6 · days -3 · trust -4  
+**State flags:** corridorStructure = "demanded"; ultimatumEscalated = true; walkoutRisk = "high"
+
+**Response prose:**
+
+You stand before the chair recognizes the next speaker.
+
+"The corridor caucus will not participate in a process that has already decided our petition is expendable."
+
+Then you leave.
+
+Six delegates follow immediately.
+
+Mire stays seated for three seconds longer than the others.
+
+Then he closes the folder with the old referendum notices inside and follows you out.
+
+The cameras are waiting.
+
+For the rest of the day, the Convention continues with empty corridor seats in every frame.
+
+That is the point.
+
+It is also the danger.
+
+Nothing in the constitutional clock stops because you are in the hallway.
+
+The interior can keep meeting.
+
+The days keep disappearing.
+
+And if no resolution emerges, the old corridor petition does not revive. It lapses with everything else.
+
+By evening, supporters in the corridor are praising you for finally refusing to legitimize a process they think displaced their vote.
+
+Swing delegates are asking a colder question:
+
+If the corridor leaves the room whenever the room will not guarantee its outcome, what exactly is there left to negotiate?
+
+You have created pressure.
+
+You have also made failure easier to imagine.
+
+---
+
+# Scene 3 balancing notes
+
+Scene 3 is the first point where the player directly touches the status settlement.
+
+The four strategic families are deliberately different:
+
+- **Structural concession** (`threll_autonomy`, `kesh_autonomy`) changes what the player's preferred outcome would contain. It buys broad access and trust but costs purity with the home bloc.
+- **Persuasion without concession** (`threll_persuade`, `kesh_persuade`) keeps the substantive goal intact and invests in making the other blocs see it as legitimate. This should be a fully viable winning route, not a consolation path.
+- **Escalation** (`threll_call_bluff`, `kesh_ultimatum`, especially `kesh_walkout`) strengthens home-bloc identity and forces attention, but damages trust and raises the probability of an ugly or failed ending.
+- **Coalition fracture / procedural maneuver** (`threll_split_caucus`) attacks the opposing coalition rather than its policy demand. It is another no-concession route, with high swing upside but no automatic trust gain.
+
+Internal state added here:
+
+- `corridorStructure`: `autonomy`, `status_option`, `demanded`, or `none`.
+- `ultimatumEscalated`: whether the player has turned the corridor dispute into an explicit threat.
+- `walkoutRisk`: `medium` or `high` where relevant.
+- `corridorCohesion`: may become `fractured` if Threll successfully works around the caucus.
+
+These flags shape Scene 4's count narration and Scene 5's available deal forms. They do not themselves select an ending.
+
+**Important:** an actual walkout does not stop the constitutional clock. The game should never imply otherwise. If the player chooses that route, Scene 4 must make the lost-time/failure risk concrete.
+
+The next scene, **The Count**, should not ask the player to make another major bargain immediately. It should tell them—in role-specific prose—what their choices have actually bought, what they have damaged, and where the room now stands. That is the designed pivot point before final dealmaking.
+
+
 ---
 
 # Engine-data notes for later transfer
