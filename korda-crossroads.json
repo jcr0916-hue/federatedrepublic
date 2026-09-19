@@ -1,0 +1,1078 @@
+{
+  "id": "korda-convention",
+  "title": "The Convention",
+  "premise": "Korda has two certified claims on the same ground and one room in which to reconcile them.<br><br>The lake corridor qualified a petition to join Kelvant. The referendum was scheduled. Then a second petition covering all of Korda qualified inside the same constitutional window. The Joint Monitor Council sent both claims into a Territory Convention instead. The corridor challenged that decision. The Supreme Court let it stand.<br><br>Now the litigation is over. The Convention has moved from Verentum into Korda. Thirty-three Assembly delegates have about eighty-seven days left to produce one proposed resolution addressing all affected portions together. If they fail, both petitions lapse.<br><br>You are one of those delegates.<br><br>You do not control the room. You do not control the clock. And even if you win inside the Convention, the voters affected by the resolution still get the final word before the ordinary constitutional process continues.",
+  "note": "This is a non-canon constitutional simulation built from the live Korda situation. The real Convention proceeds independently in the World. Your choices here do not alter canon.",
+  "endingCoda": "Non-canon simulation. The real Korda Convention proceeds independently in the World. No referendum result or public outcome is established here.",
+  "glossary": {
+    "Support": "Credibility and coalition access, not referendum polling or a literal delegate count."
+  },
+  "articles": [
+    "§15.5.a(4) Territory Convention",
+    "§15.2 Statehood",
+    "§15.4 Merger"
+  ],
+  "rules": "korda",
+  "initialState": {
+    "trust": 0,
+    "resolutionLocked": false,
+    "deliberateLapse": false,
+    "infrastructureCommitment": "none",
+    "corridorStructure": "none",
+    "walkoutRisk": "none",
+    "ultimatumEscalated": false,
+    "corridorCohesion": "intact",
+    "corridorGuarantee": "none",
+    "broadPackage": false
+  },
+  "roles": [
+    {
+      "id": "threll",
+      "name": "Sena Threll",
+      "card": "<strong>Sena Threll</strong>   Interior delegate · Adren region<br><br>You spent years routing grain around roads that were always on somebody else's funding list. You came to the Convention believing Korda should remain whole and become a State. The corridor's petition is lawful. You also think it would leave the rest of Korda weaker.<br><br><strong>Starting position:</strong> Whole-Territory Statehood, no special corridor carve-out.",
+      "introduction": "The first thing you learn in agricultural logistics is that maps lie.<br><br>A road can exist on a map and still be useless six weeks every year. A bridge can be open and still cost a cooperative half a day because the approach cannot take a loaded truck. A federal capacity plan can list your district for four years and still leave you calling three drivers at dawn because somebody has to get grain around the washout.<br><br>You did that work before anyone put your name on a ballot.<br><br>Dessa Orin did some of it too, later and from the Assembly. She learned how to get the problem into committee records. You learned how to get a shipment to market anyway. You respect her. Some days you also resent how easily a capital can turn years of other people's improvisation into one politician's good sentence.<br><br>The lake corridor has a different complaint. Its residents organized a petition to join Kelvant, cleared the threshold, survived the required assessment, and got a referendum date. Then the whole-Territory petition arrived and the Constitution forced both claims into this room. The corridor never got its vote.<br><br>You do not think that makes the corridor wrong.<br><br>You think it makes the choice dangerous.<br><br>If the corridor leaves, inland Korda loses freight, assessed economic activity, and the part of the Territory that received the investment everyone else was told would eventually spread outward. Your district would not have had a vote on the merger. It would have lived with the result.<br><br>So you arrive wanting one thing: Korda whole, Korda a State, and no bargain that solves the corridor's grievance by making the interior permanently dependent on it.<br><br>The problem is that wanting one thing and having seventeen other delegates want enough of it are not the same skill.",
+      "meters": {
+        "interior": 58,
+        "corridor": 30
+      },
+      "state": {
+        "proposal": "clean"
+      }
+    },
+    {
+      "id": "kesh",
+      "name": "Davin Kesh",
+      "card": "<strong>Davin Kesh</strong>   Lake-corridor delegate · Varenne Station area<br><br>You helped collect signatures for the petition that was supposed to put the corridor's future to a vote. It certified, cleared review, and received a referendum date. Then another petition erased the ballot before anyone could find out whether you would win.<br><br><strong>Starting position:</strong> Preserve corridor distinctness — negotiated merger if possible, entrenched autonomy at minimum.",
+      "introduction": "You know exactly how many signatures fit in the metal case under the passenger seat of your old freight van.<br><br>You know because for three months you drove that case between depots, market yards, ferry approaches, and warehouse offices whenever the day's hauling left you an hour to spare. You were not the face of the corridor petition. You were one of the people who made sure there was a petition to have a face.<br><br>It certified.<br><br>The viability assessment cleared it.<br><br>The Elections Panel set the vote.<br><br>Then, before anyone cast a ballot, the whole of Korda qualified a second petition and the constitutional machinery changed tracks underneath you.<br><br>You did not lose a referendum.<br><br>That would almost be easier.<br><br>You lost the chance to find out.<br><br>People inland tell you they were facing a decision that would strip away too much of Korda's freight and tax base without giving them a vote. You understand the argument. You hauled enough inland freight to know those towns are not imaginary lines beyond the corridor. But your voters followed the process available to them. They signed. They waited. They cleared every gate. Now some of the same people who had no vote in the corridor referendum sit in a Convention empowered to decide what replaces it.<br><br>The Court says that is constitutional.<br><br>Constitutional is not the same thing as settled.<br><br>You arrive determined that the corridor will not disappear into a whole-Korda resolution as a footnote. A negotiated split remains your preferred answer. If that cannot command the room, you want structural protections strong enough that the corridor does not spend the next generation being told its distinct interests are merely local complaints.<br><br>Thirty-two other delegates have their own version of fairness.<br><br>You have eighty-seven days to make enough of them live with yours.",
+      "meters": {
+        "interior": 42,
+        "corridor": 64
+      },
+      "state": {
+        "proposal": "split"
+      }
+    }
+  ],
+  "meters": [
+    {
+      "id": "interior",
+      "label": "Interior Support",
+      "start": 58,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "corridor",
+      "label": "Corridor Support",
+      "start": 30,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "swing",
+      "label": "Swing Votes",
+      "start": 35,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "days",
+      "label": "Days Remaining",
+      "start": 87,
+      "min": 0,
+      "max": 87
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1_korda",
+      "title": "Scene 1 · First Sitting in Korda",
+      "body": "The first sitting after relocation begins without ceremony.<br><br>The room is larger than the temporary chamber in Verentum and less polished. The press seats are full anyway. Residents line the back wall until staff stop adding chairs. Outside, people who spent weeks traveling to the capital to watch their own constitutional proceeding are discovering that proximity does not make the arguments simpler.<br><br>The clerk reads the Supreme Court disposition into the Convention record, then the relocation vote, then the calendar.<br><br>About eighty-seven days remain.<br><br>No one has filed a resolution.<br><br>That fact hangs in the room longer than the clerk's voice does.<br><br>Dessa Orin is three seats to your left. Jalen Mire, from the lake corridor, has a folder open in front of him with the old referendum notices still clipped inside. Tomas Rell has already filled half a page with names and arrows.<br><br>The chair asks for motions concerning the Convention's order of business.<br><br>This is the first moment since the Court ruling when nobody else has decided what happens next.<br><br><br><br><strong>What do you do first?</strong><br><br>You can force the substantive question into the open, build a cross-bloc working group, spend the opening days counting and persuading quietly, or organize your own side before bargaining begins.<br><br>No option requires you to change what you want. The question is how you intend to move the room.",
+      "freetext": true,
+      "dimensions": [
+        "substantive goal",
+        "coalition target",
+        "public or private method"
+      ],
+      "buttons": [
+        {
+          "label": "Put status on the agenda now",
+          "route": "s1_threll_force"
+        },
+        {
+          "label": "Build a cross-bloc working group",
+          "route": "s1_threll_workgroup"
+        },
+        {
+          "label": "Count and persuade privately",
+          "route": "s1_threll_count"
+        },
+        {
+          "label": "Organize your own bloc",
+          "route": "s1_threll_caucus"
+        },
+        {
+          "label": "Put status on the agenda now",
+          "route": "s1_kesh_force"
+        },
+        {
+          "label": "Build a cross-bloc working group",
+          "route": "s1_kesh_workgroup"
+        },
+        {
+          "label": "Count and persuade privately",
+          "route": "s1_kesh_count"
+        },
+        {
+          "label": "Organize your own bloc",
+          "route": "s1_kesh_caucus"
+        }
+      ],
+      "fragments": {
+        "s1_threll_force": {
+          "role": "threll",
+          "desc": "Publicly move to put whole-Territory Statehood on the agenda immediately; force an early debate or test vote without offering corridor concessions.",
+          "text": "You stand before anyone can build a procedural wall around the morning.<br><br>\"Put Statehood first.\"<br><br>There is an audible reaction from the corridor seats, but not surprise. Everyone in the room knew where you started.<br><br>You keep the motion narrower than some of your own allies wanted. No final vote today. No language pretending the corridor petition never existed. You ask only that the Convention make whole-Territory Statehood the first substantive proposal formally debated.<br><br>Rell seconds.<br><br>Mire does not.<br><br>Orin waits until the chair recognizes her and then asks the question that changes the temperature of the room: whether your motion is intended to establish priority or entitlement.<br><br>\"Priority,\" you say.<br><br>It costs you nothing with the interior. If anything, delegates who worried the relocation would become weeks of process now have proof that somebody intends to use the clock.<br><br>The corridor hears something else: the first local sitting has barely opened and the interior is already trying to decide which claim gets to speak first.<br><br>The motion does not settle anything. It does what you wanted.<br><br>It makes everyone choose where to sit for the first argument.",
+          "deltas": {
+            "interior": 10,
+            "corridor": -8,
+            "swing": 2,
+            "days": -4,
+            "trust": 0
+          },
+          "state": {},
+          "next": "s2_korda"
+        },
+        "s1_threll_workgroup": {
+          "role": "threll",
+          "desc": "Propose a cross-bloc working group or small drafting group before any substantive resolution; seek information and relationships without conceding whole-Territory Statehood.",
+          "text": "You ask for six chairs.<br><br>Not metaphorically. Six actual delegates: two from districts identified with the whole-Territory petition, two from the corridor, two who have managed not to be claimed by either side.<br><br>The motion is procedural enough that nobody can call it surrender and political enough that everybody knows what it is for.<br><br>\"Forty-eight hours,\" you tell the room. \"Not to write a compromise. To write the questions any resolution has to answer.\"<br><br>Mire looks at you for several seconds before nodding.<br><br>Rell looks less pleased.<br><br>That is useful information.<br><br>By the end of the sitting the working group exists, and its mandate is deliberately modest: freight, fiscal transition, representation, public services, and what legal steps follow each possible resolution. No one is authorized to trade away anybody else's position.<br><br>Some interior delegates tell you afterward that you have given the corridor a veto before negotiations even begin.<br><br>You tell them you have given the corridor a chair.<br><br>The difference will matter only if you can keep it that way.",
+          "deltas": {
+            "interior": -2,
+            "corridor": 7,
+            "swing": 9,
+            "days": -7,
+            "trust": 1
+          },
+          "state": {},
+          "next": "s2_korda"
+        },
+        "s1_threll_count": {
+          "role": "threll",
+          "desc": "Avoid a public opening move; privately count votes, talk to undecided delegates, and map what might move them while holding the whole-Statehood position.",
+          "text": "You let three other delegates make speeches.<br><br>While they are doing it, you start writing numbers.<br><br>Not the meter the press will publish later. The useful numbers: who keeps looking toward Orin before speaking, who applauds Mire's point about the canceled referendum but not his implied conclusion, who talks about Korda as \"we\" and who talks about their district by name.<br><br>Rell catches on first.<br><br>\"You're counting.\"<br><br>\"Obviously.\"<br><br>By lunch you have learned more than the morning debate would have told you.<br><br>Several delegates who signed statements sympathetic to whole-Territory Statehood do not want a clean Statehood resolution if the corridor walks out of the process. Two corridor members who defend the old referendum are privately open to remaining in Korda if the settlement changes how infrastructure and local authority are handled. Three members appear to want whichever proposal can survive the eventual referendum.<br><br>You have not changed one word of your position.<br><br>You have changed your idea of where the votes might come from.",
+          "deltas": {
+            "interior": 3,
+            "corridor": 1,
+            "swing": 10,
+            "days": -5,
+            "trust": 0
+          },
+          "state": {},
+          "next": "s2_korda"
+        },
+        "s1_threll_caucus": {
+          "role": "threll",
+          "desc": "Organize the inland/whole-Korda bloc first; consolidate allies, coordinate message, or establish negotiating discipline before engaging the corridor.",
+          "text": "You do not begin with the corridor.<br><br>You begin in a side room with eleven delegates who have spent the last month being described collectively as \"the interior\" despite representing places that disagree about nearly everything except not wanting to be ignored.<br><br>Your pitch is not unity for its own sake.<br><br>It is discipline.<br><br>No freelancing promises. No delegate tells the press that Statehood is inevitable. No one dismisses the certified corridor petition as a tantrum. And nobody trades away the whole-Territory position before the bloc has decided what it actually needs to protect.<br><br>Orin attends and says very little.<br><br>Rell approves immediately.<br><br>By the time the group breaks, you have something closer to a negotiating bloc than you had that morning.<br><br>You also have Mire telling reporters that the first organized act of the relocated Convention was the interior deciding what it would say to the corridor before asking the corridor what it wanted.<br><br>Both descriptions are fair.<br><br>That is going to be a recurring problem.",
+          "deltas": {
+            "interior": 9,
+            "corridor": -4,
+            "swing": 4,
+            "days": -5,
+            "trust": 0
+          },
+          "state": {},
+          "next": "s2_korda"
+        },
+        "s1_kesh_force": {
+          "role": "kesh",
+          "desc": "Publicly demand that the Convention begin from the certified corridor petition or preserve merger as the first substantive option; force early debate without softening the corridor claim.",
+          "text": "You put the old referendum notice on the desk before you speak.<br><br>Not dramatically. Flat. Paper on wood.<br><br>\"The Convention exists because this was canceled,\" you say. \"So begin there.\"<br><br>Your motion asks the chair to place preservation of the corridor petition's substance first on the agenda: not automatic merger, not a declaration that the Convention is bound by a vote that never happened, but a rule that any resolution must address the certified claim explicitly rather than absorb it into a whole-Korda proposal.<br><br>Mire seconds before you finish sitting down.<br><br>The interior reaction is immediate.<br><br>Rell calls the motion an attempt to give one petition priority over the other after the Court has already said they must be addressed together.<br><br>You answer that \"together\" cannot mean \"one of them disappears.\"<br><br>The room divides exactly as everyone expected.<br><br>But the question is now unavoidable: whether the corridor petition is merely background to the Convention or one of the things the Convention must preserve in recognizable form.<br><br>You have made sure nobody gets to postpone that argument.",
+          "deltas": {
+            "interior": -8,
+            "corridor": 10,
+            "swing": 2,
+            "days": -4,
+            "trust": 0
+          },
+          "state": {},
+          "next": "s2_korda"
+        },
+        "s1_kesh_workgroup": {
+          "role": "kesh",
+          "desc": "Propose a cross-bloc working group or joint drafting table before pushing merger; seek shared facts and bargaining space while preserving the corridor's position.",
+          "text": "You propose a table with six seats.<br><br>The corridor members nearest you look annoyed before you finish describing it.<br><br>That is probably healthy.<br><br>Two corridor delegates. Two interior delegates. Two members neither side gets to name as its own. Forty-eight hours to produce a common list of consequences every serious resolution must address: freight, revenue, courts, representation, public services, and what happens to obligations already attached to Korda as a Territory.<br><br>\"No compromise mandate,\" you say. \"Facts first.\"<br><br>Threll—who has spent the morning looking as if she expected you to open with the old referendum notice held over your head—asks whether merger remains on the table.<br><br>\"Everything certified remains on the table.\"<br><br>She nods once.<br><br>Afterward, one of your corridor colleagues tells you that the interior will use the working group to turn a simple question into twelve complicated ones.<br><br>You tell him the question stopped being simple the moment a second petition certified.<br><br>He does not like the answer.<br><br>Mire does.<br><br>For the first time since the Convention began, that distinction feels useful.",
+          "deltas": {
+            "interior": 7,
+            "corridor": -2,
+            "swing": 9,
+            "days": -7,
+            "trust": 1
+          },
+          "state": {},
+          "next": "s2_korda"
+        },
+        "s1_kesh_count": {
+          "role": "kesh",
+          "desc": "Hold off on a public demand; privately count delegates, identify persuadable interior/swing members, and learn what protections might move them without abandoning corridor distinctness.",
+          "text": "You do not make a motion.<br><br>Several corridor organizers watching from the back of the room will hate that.<br><br>You spend the sitting learning who actually needs what.<br><br>The loudest whole-Korda speeches are not the problem. Those votes are probably gone unless the room changes dramatically. The useful delegates are the ones who keep attaching conditions to their sentences.<br><br>Statehood, <strong>if</strong> the corridor does not hollow out.<br><br>Unity, <strong>if</strong> local authority changes.<br><br>No merger, <strong>unless</strong> freight access is guaranteed.<br><br>No special status, <strong>but</strong> something has to replace the vote that was canceled.<br><br>You mark each one.<br><br>By the end of the day, you have a list of delegates who may not want the corridor to leave but clearly understand why it tried.<br><br>That is not support.<br><br>It is better than being treated as a petition that already lost.",
+          "deltas": {
+            "interior": 2,
+            "corridor": 3,
+            "swing": 10,
+            "days": -5,
+            "trust": 0
+          },
+          "state": {},
+          "next": "s2_korda"
+        },
+        "s1_kesh_caucus": {
+          "role": "kesh",
+          "desc": "Convene the corridor bloc first; coordinate demands, prevent members from bargaining separately, and establish a common floor before negotiating with the rest of Korda.",
+          "text": "The first real negotiation happens with people who mostly agree with you.<br><br>That is intentional.<br><br>The corridor delegation meets before the afternoon sitting and discovers quickly that \"preserve the corridor claim\" means at least four different things.<br><br>One delegate wants merger language or nothing.<br><br>Another would accept a unified Korda with entrenched local authority.<br><br>A third cares less about status than about guaranteeing that the old referendum petition cannot simply vanish from the final record.<br><br>Mire listens longer than anyone expects, then says the sentence that becomes the caucus rule:<br><br>\"We do not have to agree on the destination today. We do have to stop negotiating against ourselves.\"<br><br>You leave with a common floor: no Convention resolution gets corridor support unless it recognizes that the canceled petition represented a lawful, certified claim requiring a concrete answer.<br><br>It is not merger.<br><br>It is enough to make the interior notice that the corridor has stopped speaking in eight voices.",
+          "deltas": {
+            "interior": -4,
+            "corridor": 9,
+            "swing": 4,
+            "days": -5,
+            "trust": 0
+          },
+          "state": {},
+          "next": "s2_korda"
+        }
+      },
+      "outOfBounds": {
+        "text": "That move is outside the choices this sitting can resolve. Choose an available approach, or describe it more precisely.",
+        "next": "s1_korda"
+      }
+    },
+    {
+      "id": "s2_korda",
+      "title": "Scene 2 · Orin's Offer",
+      "body": "Three sittings later, Dessa Orin puts four pages on every delegate's desk.<br><br>It is not a Statehood resolution.<br><br>It is not merger language.<br><br>It does not tell the Convention which map to choose.<br><br>That is why everyone reads it.<br><br>The proposal says that any resolution preserving Korda as a single political unit should carry a binding transition commitment on infrastructure and public capacity: a published project list, protected funding treatment during the transition, regular progress reporting, and a mechanism requiring the successor government to explain publicly when a listed project slips.<br><br>If the Convention instead proposes a territorial split, the same package would require the resolution to say which side inherits each listed obligation and how shared freight and service links continue during transition.<br><br>Orin has very carefully not solved the national fiscal equalization dispute. Her paper does not rewrite §12.6, set a national formula, or bind the Legislature beyond whatever authority the eventual constitutional process permits. It does something narrower.<br><br>It refuses to let status change become an excuse for the same roads, transfer capacity, and public-service requests to disappear into another queue.<br><br>Rell calls it overdue.<br><br>Mire calls it incomplete.<br><br>Neither calls it irrelevant.<br><br>Orin closes her explanation with the line everyone repeats afterward:<br><br>\"People should know what changes because of the map, and what government still owes them no matter where the line ends up.\"<br><br><br><br><strong>What do you do with Orin's offer?</strong><br><br>You can make it central to your coalition, narrow it so the Convention does not become a fiscal conference, use it as leverage for something your side wants, or insist that status must be decided before obligations are attached.<br><br>This is the first choice where substance and procedure begin to overlap.",
+      "freetext": true,
+      "dimensions": [
+        "substantive goal",
+        "coalition target",
+        "public or private method"
+      ],
+      "buttons": [
+        {
+          "label": "Champion binding infrastructure commitments",
+          "route": "s2_threll_champion"
+        },
+        {
+          "label": "Narrow the package to enforceable obligations",
+          "route": "s2_threll_narrow"
+        },
+        {
+          "label": "Hold infrastructure as bargaining leverage",
+          "route": "s2_threll_leverage"
+        },
+        {
+          "label": "Decide status before obligations",
+          "route": "s2_threll_status_first"
+        },
+        {
+          "label": "Accept infrastructure obligations under either map",
+          "route": "s2_kesh_accept"
+        },
+        {
+          "label": "Demand a corridor structural guarantee too",
+          "route": "s2_kesh_equivalent"
+        },
+        {
+          "label": "Trade infrastructure support for a real merger option",
+          "route": "s2_kesh_trade"
+        },
+        {
+          "label": "Decide status before obligations",
+          "route": "s2_kesh_status_first"
+        }
+      ],
+      "fragments": {
+        "s2_threll_champion": {
+          "role": "threll",
+          "desc": "Champion Orin's full infrastructure/capacity commitment as part of a whole-Korda Statehood package; argue that unity has to come with enforceable delivery, not another promise.",
+          "text": "You sign onto the paper before lunch.<br><br>Not because it guarantees Statehood.<br><br>Because it answers the question you know the corridor will eventually ask: why should anyone trust a unified Korda to distribute attention differently after Statehood than the Territory did before it?<br><br>You stand with Orin when she presents the revised draft.<br><br>\"If we ask people to keep one Korda,\" you say, \"we should be able to tell them what one Korda is promising to do.\"<br><br>Some of your own allies hear danger immediately. They wanted the Convention to decide status, not write an infrastructure compact. One tells you afterward that you are bargaining against yourself by admitting the whole-Territory case needs sweetening.<br><br>You disagree.<br><br>A Statehood resolution that says only <em>become a State</em> asks voters to trust the same institutions whose failures helped produce both petitions. Orin's language gives you something harder than reassurance: obligations somebody can later point to.<br><br>Mire still says the corridor's canceled vote cannot be compensated with road projects.<br><br>He also stops calling your Statehood position an offer of nothing.<br><br>That is movement, even if it is not agreement.",
+          "deltas": {
+            "interior": 8,
+            "corridor": 3,
+            "swing": 8,
+            "days": -8,
+            "trust": 2
+          },
+          "state": {
+            "infrastructureCommitment": "full"
+          },
+          "next": "s3_korda"
+        },
+        "s2_threll_narrow": {
+          "role": "threll",
+          "desc": "Support the principle but narrow Orin's package to a transition schedule, published project inventory, and reporting requirements; avoid embedding a large fiscal bargain in the Convention resolution.",
+          "text": "You take a pencil to Orin's draft.<br><br>The project list stays.<br><br>The publication requirement stays.<br><br>The obligation to identify who inherits each commitment stays.<br><br>The parts that begin to look like a permanent fiscal architecture do not.<br><br>\"This room has ninety days,\" you tell her. \"We can make government show its work. We cannot solve every budget Korda will ever have.\"<br><br>Orin does not argue.<br><br>That surprises you more than if she had.<br><br>By the next sitting the paper is shorter and, because it is shorter, harder to dismiss as a rival constitution hiding inside the Convention resolution.<br><br>Rell thinks you cut too much.<br><br>Several swing delegates say privately that they can now imagine voting for it.<br><br>Mire's objection changes too. He no longer attacks the package as overreach. He asks what equivalent protection the corridor gets if Korda stays whole.<br><br>That is a better problem.<br><br>It means he is reading the text as something that might matter.",
+          "deltas": {
+            "interior": 5,
+            "corridor": 2,
+            "swing": 7,
+            "days": -5,
+            "trust": 1
+          },
+          "state": {
+            "infrastructureCommitment": "narrow"
+          },
+          "next": "s3_korda"
+        },
+        "s2_threll_leverage": {
+          "role": "threll",
+          "desc": "Keep Orin's package off the formal agenda for now and use support for it as bargaining leverage with corridor/swing delegates; offer infrastructure guarantees only in exchange for movement toward whole-Korda Statehood.",
+          "text": "You tell Orin not yet.<br><br>She knows exactly what you mean.<br><br>Her paper is popular enough to attract delegates who are not ready to choose a map. Once it is adopted separately, that attraction disappears. So you keep it attached to the larger question.<br><br>Privately, your message is simple: if the corridor wants guaranteed freight links, a protected project schedule, and public accounting during transition, then it should be prepared to discuss those protections inside a whole-Korda settlement.<br><br>The tactic works on two delegates almost immediately.<br><br>It irritates Mire just as quickly.<br><br>\"You are taking an obligation you already think government owes people,\" he tells you, \"and offering it back to them in exchange for their constitutional position.\"<br><br>You tell him every Convention bargain connects things that would otherwise be decided separately.<br><br>He says that does not make every connection honorable.<br><br>Orin does not rebuke you in public.<br><br>She does ask you, privately, whether you are prepared to publish the same commitments if you get the votes you want.<br><br>You say yes.<br><br>She writes the answer down.<br><br>For the first time, the Convention's trust problem has your name in it.",
+          "deltas": {
+            "interior": 4,
+            "corridor": -3,
+            "swing": 5,
+            "days": -4,
+            "trust": -1
+          },
+          "state": {
+            "infrastructureCommitment": "conditional"
+          },
+          "next": "s3_korda"
+        },
+        "s2_threll_status_first": {
+          "role": "threll",
+          "desc": "Reject attaching Orin's infrastructure package at this stage; argue the Convention should decide Korda's status first and leave implementation/fiscal commitments to the appropriate later government and Legislature.",
+          "text": "You vote to table the paper.<br><br>Not kill it.<br><br>Table it.<br><br>The distinction does not survive the hallway.<br><br>By the evening headline, you have \"blocked Orin's infrastructure guarantee.\"<br><br>Your argument in the room is cleaner than that.<br><br>The Convention exists to reconcile two incompatible status petitions. If it starts writing funding rules, project schedules, and administrative obligations before it knows whether Korda remains whole, it risks producing a beautifully detailed answer to a question voters never asked.<br><br>\"Decide the structure,\" you say. \"Then make the structure carry its obligations.\"<br><br>Rell backs you.<br><br>Orin does not.<br><br>She says only that deferring an obligation has been Korda's governing habit for years and that the Convention should be careful about reproducing it procedurally.<br><br>The corridor seats do not suddenly become supporters of her package. They simply notice that the delegate arguing hardest for whole-Korda Statehood has just asked them to trust that the details will be handled later.<br><br>You save time.<br><br>You do not save confidence.",
+          "deltas": {
+            "interior": 6,
+            "corridor": -5,
+            "swing": -3,
+            "days": -2,
+            "trust": -1
+          },
+          "state": {
+            "infrastructureCommitment": "none"
+          },
+          "next": "s3_korda"
+        },
+        "s2_kesh_accept": {
+          "role": "kesh",
+          "desc": "Accept Orin's Territory-wide infrastructure/capacity commitment as a legitimate part of any settlement, while explicitly preserving the corridor's status claim.",
+          "text": "You surprise your own side first.<br><br>\"The corridor should sign this.\"<br><br>Three heads turn toward you.<br><br>You continue before anyone can translate agreement into surrender.<br><br>Orin's package does not require the corridor to remain in Korda. It requires the Convention to stop pretending infrastructure obligations vanish when jurisdiction changes. If the corridor joins Kelvant, someone still has to say what happens to shared freight links, service contracts, and projects already promised to communities on both sides. If Korda remains whole, someone still has to explain why the old queue will be different next time.<br><br>\"That question exists under every map,\" you say.<br><br>Mire reads the draft again.<br><br>He eventually agrees.<br><br>The harder corridor delegates accuse you of helping the interior make unity look more competent than it has been.<br><br>Maybe you are.<br><br>But several inland delegates who had treated the corridor bloc as interested only in departure now have to revise that picture. You just supported an obligation that protects places your preferred map might leave behind.<br><br>You have not moved one inch on merger.<br><br>The room notices anyway.",
+          "deltas": {
+            "interior": 7,
+            "corridor": -3,
+            "swing": 8,
+            "days": -7,
+            "trust": 2
+          },
+          "state": {
+            "infrastructureCommitment": "full"
+          },
+          "next": "s3_korda"
+        },
+        "s2_kesh_equivalent": {
+          "role": "kesh",
+          "desc": "Support Orin's infrastructure package only if it is paired with a corridor-specific structural guarantee, such as protected local authority or durable control over defined local functions inside any unified Korda.",
+          "text": "You tell Orin the paper solves the wrong half of the problem.<br><br>Not because roads do not matter.<br><br>Because the corridor petition was not filed for a better project dashboard.<br><br>\"If Korda stays whole,\" you say, \"what stops every corridor question from becoming a Korda-wide question again the moment this Convention adjourns?\"<br><br>You offer an amendment.<br><br>The infrastructure commitments remain. In exchange, any unified-Korda resolution must also define a protected sphere of corridor local authority to be carried into the next constitutional stage: specified local functions that cannot simply be reclaimed by the central State government after ratification.<br><br>The room changes.<br><br>This is no longer a conversation about whether Orin's paper is sensible. It is the first time someone has tried to connect the paper to an institutional answer for the corridor grievance.<br><br>Rell objects immediately. He calls it \"a State inside the State.\"<br><br>You answer that protected local authority is not sovereignty and that pretending the two are identical is how the Convention ends with nothing.<br><br>Orin does not endorse your amendment.<br><br>She also does not reject it.<br><br>She asks for language.<br><br>That is enough to keep everybody at the table another day.",
+          "deltas": {
+            "interior": -2,
+            "corridor": 8,
+            "swing": 6,
+            "days": -8,
+            "trust": 1
+          },
+          "state": {
+            "infrastructureCommitment": "full",
+            "corridorGuarantee": "requested"
+          },
+          "next": "s3_korda"
+        },
+        "s2_kesh_trade": {
+          "role": "kesh",
+          "desc": "Treat support for Orin's package as bargaining currency; offer corridor votes for the infrastructure commitment only if the interior preserves merger language or another concrete corridor option in the eventual resolution.",
+          "text": "You tell Orin you can probably deliver six corridor votes for the package.<br><br>Then you tell her the price.<br><br>The final resolution must preserve a real corridor status option. Not a paragraph promising consultation. Not a study. Something voters can recognize as descended from the petition they signed.<br><br>Orin leans back.<br><br>\"You are pricing roads in constitutional language.\"<br><br>\"No,\" you say. \"I'm pricing my votes.\"<br><br>There is a difference, though not enough of one to make the exchange comfortable.<br><br>The offer travels through the room faster than you intended. By evening, interior delegates are accusing the corridor of holding infrastructure obligations hostage to merger. Corridor organizers answer that the interior has spent years asking them to accept shared obligations without shared leverage.<br><br>Both claims contain enough truth to be dangerous.<br><br>You gain discipline at home.<br><br>You also make every future promise more expensive, because now everyone knows you are willing to connect unrelated things if that is what it takes to preserve the corridor's place on the page.",
+          "deltas": {
+            "interior": -4,
+            "corridor": 6,
+            "swing": 4,
+            "days": -4,
+            "trust": -1
+          },
+          "state": {
+            "infrastructureCommitment": "conditional",
+            "corridorGuarantee": "status_option"
+          },
+          "next": "s3_korda"
+        },
+        "s2_kesh_status_first": {
+          "role": "kesh",
+          "desc": "Reject Orin's package as premature; insist that the Convention first decide whether Korda stays whole or the corridor leaves before attaching transition spending, project, or governance commitments.",
+          "text": "You do something the interior did not expect.<br><br>You agree with its most procedural members.<br><br>Not on outcome.<br><br>On order.<br><br>The Convention cannot know which government owes what until it knows which governments will exist. Writing a detailed obligation matrix first, you argue, lets everyone postpone the one decision the clock actually requires.<br><br>\"Pick the constitutional direction,\" you say. \"Then make the transition honest.\"<br><br>Several corridor delegates approve. They are tired of every discussion becoming another way to make merger sound administratively inconvenient.<br><br>Orin asks whether you believe the old infrastructure obligations disappear if the corridor leaves.<br><br>\"No.\"<br><br>\"Then why is naming them premature?\"<br><br>\"Because naming who owns them is impossible until we decide who exists.\"<br><br>It is your best answer.<br><br>It is also incomplete.<br><br>Swing delegates who were looking for evidence that the Convention could solve practical problems now see another status-first argument from a bloc already accused of caring more about the map than the people living on it.<br><br>You save days.<br><br>The room gets no closer.",
+          "deltas": {
+            "interior": -5,
+            "corridor": 5,
+            "swing": -4,
+            "days": -2,
+            "trust": -1
+          },
+          "state": {
+            "infrastructureCommitment": "none"
+          },
+          "next": "s3_korda"
+        }
+      },
+      "outOfBounds": {
+        "text": "That move is outside the choices this sitting can resolve. Choose an available approach, or describe it more precisely.",
+        "next": "s2_korda"
+      }
+    },
+    {
+      "id": "s3_korda",
+      "title": "Scene 3 · The Corridor Line",
+      "body": "The first real status language arrives on a Thursday morning.<br><br>It is not filed by the chair.<br><br>It comes from the corridor caucus.<br><br>One paragraph says that any Convention resolution must preserve a distinct constitutional choice for the lake corridor: merger with Kelvant, or—if Korda remains whole—a defined sphere of protected local authority substantial enough that the corridor is not simply returned to the arrangement it petitioned to leave.<br><br>The second paragraph is shorter.<br><br>Without one of those two things, the corridor caucus will not support a Convention resolution.<br><br>The word <em>walkout</em> does not appear.<br><br>Nobody needs it to.<br><br>Eight corridor delegates sit together when the paper is read. Mire speaks for them.<br><br>\"We did not come here to erase the petition that put us here.\"<br><br>Rell answers from across the room.<br><br>\"And the rest of Korda did not come here to ratify it without a vote.\"<br><br>For the first time, the Convention is no longer arguing about process, project lists, or what questions need answering.<br><br>It is arguing about the map.<br><br><br><br><strong>Where do you draw your line?</strong><br><br>You can concede structure, hold your position and persuade, escalate the confrontation, or try to break the ultimatum without giving the other side what it demanded.<br><br>This choice is not simply about being moderate or hard-line. The same substantive position can be played well or badly.",
+      "freetext": true,
+      "dimensions": [
+        "substantive goal",
+        "coalition target",
+        "public or private method"
+      ],
+      "buttons": [
+        {
+          "label": "Negotiate protected corridor autonomy",
+          "route": "s3_threll_autonomy"
+        },
+        {
+          "label": "Hold your position and persuade",
+          "route": "s3_threll_persuade"
+        },
+        {
+          "label": "Publicly call the corridor’s bluff",
+          "route": "s3_threll_call_bluff"
+        },
+        {
+          "label": "Privately fracture the corridor ultimatum",
+          "route": "s3_threll_split_caucus"
+        },
+        {
+          "label": "Make the corridor ultimatum explicit",
+          "route": "s3_kesh_ultimatum"
+        },
+        {
+          "label": "Negotiate protected corridor autonomy",
+          "route": "s3_kesh_autonomy"
+        },
+        {
+          "label": "Hold your position and persuade",
+          "route": "s3_kesh_persuade"
+        },
+        {
+          "label": "Lead the corridor out of the room",
+          "route": "s3_kesh_walkout"
+        }
+      ],
+      "fragments": {
+        "s3_threll_autonomy": {
+          "role": "threll",
+          "desc": "Offer protected corridor local authority inside a unified Korda as a substantive concession; preserve whole-Territory Statehood while giving the corridor durable control over defined local functions.",
+          "text": "You ask for the corridor language.<br><br>Not the merger clause.<br><br>The other one.<br><br>You spend the afternoon taking apart the phrase <em>protected local authority</em> until it stops being a slogan and becomes a list.<br><br>Local transport planning.<br><br>Specified port and freight administration.<br><br>Defined service functions.<br><br>A requirement that the future State constitution preserve those powers unless the corridor itself consents to changing them.<br><br>Rell hates it.<br><br>He says you are building a permanent exception into the State before the State exists.<br><br>You answer that the alternative is asking the corridor to abandon a certified exit petition in exchange for nothing more durable than goodwill.<br><br>Mire reads the language twice.<br><br>\"So the corridor stays in Korda.\"<br><br>\"Yes.\"<br><br>\"And Korda cannot simply take these powers back after ratification.\"<br><br>\"Not without the process we write.\"<br><br>It is the first time the two of you have disagreed about the map while talking about the same text.<br><br>Some interior delegates peel away from you immediately. They wanted Statehood to mean one government with one ordinary set of rules.<br><br>Others stay because the map is still whole.<br><br>The corridor does not say yes.<br><br>It stops saying no.<br><br>For today, that is enough.",
+          "deltas": {
+            "interior": -7,
+            "corridor": 12,
+            "swing": 9,
+            "days": -9,
+            "trust": 2
+          },
+          "state": {
+            "corridorStructure": "autonomy",
+            "ultimatumEscalated": false
+          },
+          "next": "s4_korda"
+        },
+        "s3_threll_persuade": {
+          "role": "threll",
+          "desc": "Refuse special corridor autonomy or merger language, but actively persuade corridor and swing delegates that clean whole-Korda Statehood can answer the underlying grievance through representation, ratification, and enforceable transition commitments.",
+          "text": "You do not offer a carve-out.<br><br>You also do not tell the corridor to get over it.<br><br>Instead, you ask the clerk to put three facts on the board.<br><br>The old referendum never occurred.<br><br>Any Convention resolution still goes to the voters it affects.<br><br>And if the Convention proposes whole-Korda Statehood, the corridor votes on that proposition as part of Korda before anything proceeds to the remaining Statehood process.<br><br>\"You were denied one vote by the collision of two petitions,\" you say. \"I am not asking you to pretend that did not happen. I am asking you to use the vote the Constitution now gives you on the resolution that replaces it.\"<br><br>Mire objects that a Korda-wide ratification is not the same electorate as the corridor-only referendum.<br><br>You agree.<br><br>That takes some force out of his reply.<br><br>Then you turn to Orin's package and the representation question. Your case is not that the corridor has no distinct grievance. Your case is that Statehood, enforceable commitments, and a ratification vote can answer it without drawing a new border or creating a permanent constitutional sub-unit.<br><br>You do not win the corridor caucus.<br><br>You do make two of its members stop treating the caucus paper as the only legitimate response to the canceled referendum.<br><br>More importantly, several swing delegates hear a whole-Korda argument that is not just <em>no</em>.<br><br>You kept your line.<br><br>You finally gave it content.",
+          "deltas": {
+            "interior": 7,
+            "corridor": 3,
+            "swing": 11,
+            "days": -8,
+            "trust": 1
+          },
+          "state": {
+            "corridorStructure": "none",
+            "ultimatumEscalated": false
+          },
+          "next": "s4_korda"
+        },
+        "s3_threll_call_bluff": {
+          "role": "threll",
+          "desc": "Publicly call the corridor caucus's ultimatum; refuse merger or autonomy language and challenge corridor delegates to explain whether they will really let both petitions lapse rather than negotiate.",
+          "text": "You ask Mire one question.<br><br>\"Are you prepared to kill your own petition?\"<br><br>The room goes silent because everyone understands the arithmetic.<br><br>If the Convention produces no resolution, the corridor does not get its old referendum back. Both petitions lapse. The Territory continues undivided. The same geographic claims cannot simply be restarted next month.<br><br>Mire knows it.<br><br>So does every organizer sitting behind him.<br><br>You continue.<br><br>\"If eight delegates would rather have no vote, no merger, no Statehood, and a three-year bar than negotiate a resolution without their preferred language, say that plainly.\"<br><br>The corridor seats erupt.<br><br>Mire does not.<br><br>He waits until the noise falls and answers in a voice quiet enough to make the room listen.<br><br>\"You are confusing our exposure to failure with your entitlement to our votes.\"<br><br>That line is in every evening broadcast.<br><br>Your own bloc loves what you did. You stripped the ultimatum down to its cost and made the corridor own it.<br><br>Swing delegates are less comfortable.<br><br>They now know the corridor's threat is expensive.<br><br>They also know you are willing to test whether it is real.<br><br>The Convention has clarity.<br><br>It has less trust than it had this morning.",
+          "deltas": {
+            "interior": 11,
+            "corridor": -12,
+            "swing": 3,
+            "days": -4,
+            "trust": -3
+          },
+          "state": {
+            "corridorStructure": "none",
+            "ultimatumEscalated": true,
+            "walkoutRisk": "high"
+          },
+          "next": "s4_korda"
+        },
+        "s3_threll_split_caucus": {
+          "role": "threll",
+          "desc": "Hold the line against merger/autonomy but privately peel corridor or swing delegates away from the caucus ultimatum; exploit differences inside the corridor without publicly humiliating it.",
+          "text": "You do not answer the caucus paper on the floor.<br><br>You answer it in hallways.<br><br>The corridor's eight delegates agree on one sentence: the final resolution must recognize corridor distinctness.<br><br>They do not agree on what recognition means.<br><br>You already know that from the first caucus.<br><br>So you stop arguing with the sentence and start asking about the noun.<br><br>Merger?<br><br>Local authority?<br><br>A separate ratification condition?<br><br>A binding freight compact?<br><br>A guarantee that certain functions cannot be centralized without corridor consent?<br><br>By the second day, one delegate tells you privately that merger was always a means, not a sacrament.<br><br>Another says autonomy is meaningless unless the powers are written precisely.<br><br>A third wants the final resolution to preserve the history of the canceled petition more than he wants a new jurisdictional line.<br><br>You promise none of them anything.<br><br>You simply make it harder for the caucus to pretend it has one demand.<br><br>Mire realizes what you are doing.<br><br>He does not accuse you publicly. That would advertise the fracture.<br><br>Instead he tightens the caucus meeting schedule.<br><br>The ultimatum remains on paper.<br><br>It no longer means exactly the same thing to all eight names beneath it.<br><br>You have not conceded the map.<br><br>You have changed the coalition defending the other one.",
+          "deltas": {
+            "interior": 5,
+            "corridor": -2,
+            "swing": 12,
+            "days": -7,
+            "trust": 0
+          },
+          "state": {
+            "corridorStructure": "none",
+            "ultimatumEscalated": false,
+            "corridorCohesion": "fractured"
+          },
+          "next": "s4_korda"
+        },
+        "s3_kesh_ultimatum": {
+          "role": "kesh",
+          "desc": "Personally make the corridor ultimatum public and explicit: no corridor support for a resolution that omits either merger or protected autonomy; use confrontation to force the room to address corridor distinctness.",
+          "text": "Mire gives you the floor.<br><br>You make the threat explicit.<br><br>Not a walkout.<br><br>Something harder to dismiss.<br><br>\"No corridor vote for erasure.\"<br><br>You say the caucus will support a resolution that preserves merger as the proposed outcome, or one that keeps Korda whole while protecting a real sphere of corridor authority. You will not support a document that mentions the canceled petition in its findings and then recreates the same institutional arrangement underneath it.<br><br>The corridor seats are with you.<br><br>The interior is furious.<br><br>Rell asks whether eight delegates now claim a veto over twenty-five.<br><br>\"No,\" you say. \"I am telling twenty-five delegates what it will cost to get eight votes.\"<br><br>That answer travels.<br><br>It also hardens the room.<br><br>For the first time, delegates begin talking openly about whether a resolution can survive without any corridor support at all.<br><br>You wanted the Convention to understand that your bloc has leverage.<br><br>It does.<br><br>So do your opponents.",
+          "deltas": {
+            "interior": -10,
+            "corridor": 12,
+            "swing": 5,
+            "days": -4,
+            "trust": -2
+          },
+          "state": {
+            "corridorStructure": "demanded",
+            "ultimatumEscalated": true,
+            "walkoutRisk": "medium"
+          },
+          "next": "s4_korda"
+        },
+        "s3_kesh_autonomy": {
+          "role": "kesh",
+          "desc": "Pull the corridor back from merger-or-nothing and make protected local authority inside a unified Korda the serious fallback; negotiate substance without abandoning corridor distinctness.",
+          "text": "You ask Mire to strike one word from the caucus paper.<br><br><em>Merger.</em><br><br>Not forever.<br><br>From the minimum demand.<br><br>The room notices before he answers.<br><br>You explain the distinction carefully. The original petition remains legitimate. Merger remains your preferred result. But if the Convention can write a unified-Korda settlement that gives the corridor protected authority over defined local functions—and makes those protections durable through the next constitutional stage—then the corridor should be willing to negotiate the text before deciding it is insufficient.<br><br>One corridor delegate calls that retreat.<br><br>You call it leverage with somewhere to go.<br><br>Threll asks which powers.<br><br>You give her a list instead of a speech.<br><br>Transport planning.<br><br>Port and freight administration.<br><br>Specified local services.<br><br>Consent before the future State reclaims those functions.<br><br>Rell immediately says no.<br><br>Orin asks who enforces the boundary.<br><br>That is a better question.<br><br>The debate moves from whether the corridor deserves recognition to what recognition would actually do.<br><br>You have not won merger.<br><br>You have made the fallback real enough that the interior has to negotiate with it.",
+          "deltas": {
+            "interior": 6,
+            "corridor": 6,
+            "swing": 11,
+            "days": -9,
+            "trust": 2
+          },
+          "state": {
+            "corridorStructure": "autonomy",
+            "ultimatumEscalated": false
+          },
+          "next": "s4_korda"
+        },
+        "s3_kesh_persuade": {
+          "role": "kesh",
+          "desc": "Keep merger as the preferred outcome but reject an ultimatum; persuade swing/interior delegates through the legitimacy of the canceled referendum and the corridor's willingness to shoulder transition obligations.",
+          "text": "You refuse to sign the caucus threat.<br><br>That costs you an ugly hour.<br><br>You tell your own side that the corridor's strongest argument is not that eight delegates can stop the room.<br><br>It is that thousands of residents followed the constitutional process they were given and reached the point where ballots were being prepared.<br><br>\"If we turn that into a threat from eight politicians,\" you say, \"we make the petition smaller than it was.\"<br><br>Then you make the argument to the room.<br><br>The corridor is willing to negotiate freight continuity.<br><br>It is willing to allocate existing obligations fairly.<br><br>It is willing to live with whatever ratification and transition steps the Constitution requires.<br><br>What it is not willing to do is accept a resolution that treats the canceled referendum as an administrative inconvenience.<br><br>You ask delegates who oppose merger to vote against merger on its merits, not to erase it procedurally.<br><br>That distinction lands with swing members.<br><br>It also gives Threll an opening to answer you without first defending herself against an ultimatum.<br><br>Some corridor organizers accuse you of surrendering leverage.<br><br>Mire does not.<br><br>He says, quietly, that a claim people believe in should be able to survive being argued instead of threatened.<br><br>For once, the caucus meeting ends without a common press line.<br><br>That may be progress.",
+          "deltas": {
+            "interior": 5,
+            "corridor": 5,
+            "swing": 12,
+            "days": -8,
+            "trust": 1
+          },
+          "state": {
+            "corridorStructure": "status_option",
+            "ultimatumEscalated": false
+          },
+          "next": "s4_korda"
+        },
+        "s3_kesh_walkout": {
+          "role": "kesh",
+          "desc": "Escalate beyond a voting ultimatum and lead or threaten an actual corridor walkout from Convention proceedings unless merger language is restored; maximize pressure at high trust and lapse risk.",
+          "text": "You stand before the chair recognizes the next speaker.<br><br>\"The corridor caucus will not participate in a process that has already decided our petition is expendable.\"<br><br>Then you leave.<br><br>Six delegates follow immediately.<br><br>Mire stays seated for three seconds longer than the others.<br><br>Then he closes the folder with the old referendum notices inside and follows you out.<br><br>The cameras are waiting.<br><br>For the rest of the day, the Convention continues with empty corridor seats in every frame.<br><br>That is the point.<br><br>It is also the danger.<br><br>Nothing in the constitutional clock stops because you are in the hallway.<br><br>The interior can keep meeting.<br><br>The days keep disappearing.<br><br>And if no resolution emerges, the old corridor petition does not revive. It lapses with everything else.<br><br>By evening, supporters in the corridor are praising you for finally refusing to legitimize a process they think displaced their vote.<br><br>Swing delegates are asking a colder question:<br><br>If the corridor leaves the room whenever the room will not guarantee its outcome, what exactly is there left to negotiate?<br><br>You have created pressure.<br><br>You have also made failure easier to imagine.",
+          "deltas": {
+            "interior": -14,
+            "corridor": 9,
+            "swing": -6,
+            "days": -3,
+            "trust": -4
+          },
+          "state": {
+            "corridorStructure": "demanded",
+            "ultimatumEscalated": true,
+            "walkoutRisk": "high"
+          },
+          "next": "s4_korda"
+        }
+      },
+      "outOfBounds": {
+        "text": "That move is outside the choices this sitting can resolve. Choose an available approach, or describe it more precisely.",
+        "next": "s3_korda"
+      }
+    },
+    {
+      "id": "s4_korda",
+      "title": "Scene 4 · The Count",
+      "body": "Orin does not bring a speech. She brings a sheet with three columns.<br><br>“People who will speak with you. People who might move with you. People who have actually agreed to a text. Those are different lists.”<br><br>She puts the third column where you can see it. It is still empty.<br><br>The clerk has charged the intervening drafting days to the calendar. No adjournment, private meeting, or empty chair has stopped it.<br><br>“Tell me which argument you want counted,” Orin says. “Then tell me who you intend to ask.”",
+      "freetext": true,
+      "dimensions": [
+        "proposed settlement",
+        "commitment on record",
+        "time and trust"
+      ],
+      "buttons": [
+        {
+          "label": "Work the undecided names without conceding",
+          "route": "s4_threll_persuade"
+        },
+        {
+          "label": "Test the other map",
+          "route": "s4_threll_pivot"
+        },
+        {
+          "label": "Work the undecided names without conceding",
+          "route": "s4_kesh_persuade"
+        },
+        {
+          "label": "Test the other map",
+          "route": "s4_kesh_pivot"
+        },
+        {
+          "label": "Repair the damaged working relationship",
+          "route": "s4_repair"
+        },
+        {
+          "label": "Keep repeating the demand and wait",
+          "route": "s4_wait"
+        },
+        {
+          "label": "Choose lapse over the available settlements",
+          "route": "s4_deliberate_lapse"
+        }
+      ],
+      "fragments": {
+        "s4_threll_persuade": {
+          "desc": "Keep the original substantive goal and privately persuade undecided delegates; turn the count into targeted outreach.",
+          "text": "You take the sheet, not the microphone.<br><br>Whole Korda still heads your notes. You ask each undecided member what would let them defend that proposition at home. You offer reasons and responsibility, not a corridor carve-out.<br><br>Several agree to hear the final text. Nobody has signed it yet. Orin moves their names into the second column and leaves the third alone.",
+          "deltas": {
+            "interior": 6,
+            "swing": 9,
+            "days": -6
+          },
+          "state": {},
+          "next": "s5_korda",
+          "role": "threll"
+        },
+        "s4_threll_pivot": {
+          "desc": "Explicitly explore the opposite status settlement after reading the count; this is a real change of proposal, not a completed bargain.",
+          "text": "You cross out the heading.<br><br>“If we cannot keep Korda whole, I want the inland obligations written before anyone draws a line.” Mire does not celebrate. He knows how much that sentence cost you.<br><br>You have given the other side a hearing. Your own side notices. A different map is now on your desk; it has no more signatures than the first.",
+          "deltas": {
+            "interior": -8,
+            "corridor": 15,
+            "swing": 6,
+            "days": -9
+          },
+          "state": {
+            "proposal": "split"
+          },
+          "next": "s5_korda",
+          "role": "threll"
+        },
+        "s4_kesh_persuade": {
+          "desc": "Keep the original substantive goal and privately persuade undecided delegates; turn the count into targeted outreach.",
+          "text": "You take the sheet, not the microphone.<br><br>Merger still heads your notes. You ask each undecided member what would let them defend a negotiated boundary at home. You offer transition responsibility, not abandonment of the petition.<br><br>Several agree to hear the final text. Nobody has signed it yet. Orin moves their names into the second column and leaves the third alone.",
+          "deltas": {
+            "corridor": 6,
+            "swing": 9,
+            "days": -6
+          },
+          "state": {},
+          "next": "s5_korda",
+          "role": "kesh"
+        },
+        "s4_kesh_pivot": {
+          "desc": "Explicitly explore the opposite status settlement after reading the count; this is a real change of proposal, not a completed bargain.",
+          "text": "You cross out the heading.<br><br>“If the room will not propose merger, show me the strongest whole-Korda case.” Threll answers without asking you to renounce the petition. That makes it possible to keep listening.<br><br>You have given the other side a hearing. Your own side notices. A different map is now on your desk; it has no more signatures than the first.",
+          "deltas": {
+            "corridor": -8,
+            "interior": 15,
+            "swing": 6,
+            "days": -9
+          },
+          "state": {
+            "proposal": "clean"
+          },
+          "next": "s5_korda",
+          "role": "kesh"
+        },
+        "s4_repair": {
+          "desc": "Acknowledge escalation or distrust, bring delegates back into working sessions, and rebuild cross-bloc access without settling status.",
+          "text": "You ask for a meeting with no cameras and no agreed conclusion.<br><br>“The days we lost are gone,” you say. “The next ones do not have to be.”<br><br>Mire wants an assurance that participation will not be reported as consent. Rell wants an assurance that another disagreement will not empty the room. You put both assurances in the minutes.<br><br>People return to the drafting table. Nobody withdraws a substantive claim. Orin stops keeping a separate list of people who will not sit together.<br><br>You have repaired a method, not won a map.",
+          "deltas": {
+            "interior": 6,
+            "corridor": 6,
+            "swing": 6,
+            "trust": 2,
+            "days": -12
+          },
+          "state": {
+            "walkoutRisk": "none",
+            "ultimatumEscalated": false
+          },
+          "next": "s5_korda"
+        },
+        "s4_wait": {
+          "desc": "Hold the substantive demand without outreach or concession; spend weeks waiting for the other bloc to move.",
+          "text": "You tell Orin the names will change when the other side understands you are serious.<br><br>“They already know,” she says.<br><br>You issue the same statement again. Your supporters applaud it again. The clerk circulates another calendar.<br><br>Nobody moves into the third column.<br><br>Outside, a freight operator asks which government will be maintaining the road next year. You give the answer you gave three weeks ago. This time he does not wait for the end.",
+          "deltas": {
+            "swing": -12,
+            "days": -35,
+            "trust": -1
+          },
+          "state": {},
+          "next": "s5_korda"
+        },
+        "s4_deliberate_lapse": {
+          "desc": "Deliberately abandon a Convention resolution and accept both petitions lapsing together, including the three-year bar.",
+          "text": "You put the sheet down.<br><br>“Then let these petitions end.”<br><br>Orin asks you to say what that means. You do: no restoration of the old corridor ballot, no whole-Territory victory by default, and no immediate restart of the same geographic claims. Both petitions lapse together; the three-year bar follows.<br><br>She writes your answer in the empty column. It is the first thing you have committed to without a condition.",
+          "deltas": {
+            "days": -87
+          },
+          "state": {
+            "deliberateLapse": true
+          },
+          "next": "s5_korda"
+        }
+      },
+      "outOfBounds": {
+        "text": "The chair asks for a move the Convention can act on. Try one of the available approaches; no new constitutional power can stop this clock.",
+        "next": "s4_korda"
+      },
+      "enterDeltas": {
+        "days": -15
+      },
+      "riskDays": {
+        "medium": 10,
+        "high": 25
+      },
+      "roleBodies": {
+        "threll": "The inland names are familiar. You used to telephone some of them about grain. It is harder to ask them to trust a map than a delivery time. You look first at the names outside your own column.",
+        "kesh": "You recognize the corridor names from petition nights. Their signatures once meant a ballot would happen. Now you need to know what they will support in a room where they cannot decide alone."
+      }
+    },
+    {
+      "id": "s5_korda",
+      "title": "Scene 5 · Put It in Writing",
+      "body": "The clerk will accept one proposed resolution addressing all affected portions together. The margins are full of phrases everyone remembers differently.<br><br>Orin draws a line through “understood.”<br><br>Mire draws another through “in due course.”<br><br>Rell asks who is prepared to put a name beside what remains.<br><br>You can write a settlement, make one last argument without changing your goal, or leave the undertaking private. A signature cannot manufacture a coalition. An unwritten understanding cannot reserve time.",
+      "freetext": true,
+      "dimensions": [
+        "proposed settlement",
+        "commitment on record",
+        "time and trust"
+      ],
+      "buttons": [
+        {
+          "label": "Put clean whole-Statehood to the room",
+          "route": "s5_threll_clean"
+        },
+        {
+          "label": "Put clean whole-Statehood to the room",
+          "route": "s5_kesh_clean"
+        },
+        {
+          "label": "Write the whole-Korda protection package",
+          "route": "s5_bargain"
+        },
+        {
+          "label": "Write a negotiated split with transition duties",
+          "route": "s5_split"
+        },
+        {
+          "label": "Force a split and break the working assurances",
+          "route": "s5_force_split"
+        },
+        {
+          "label": "Keep the understanding private for now",
+          "route": "s5_tentative"
+        },
+        {
+          "label": "Restate the demand; make no undertaking",
+          "route": "s5_restate"
+        },
+        {
+          "label": "Put refusal on record and accept lapse",
+          "route": "s5_deliberate_lapse"
+        }
+      ],
+      "fragments": {
+        "s5_threll_clean": {
+          "desc": "Publicly commit a clean whole-Korda Statehood resolution without entrenched corridor autonomy; persuade delegates and ask for signatures.",
+          "text": "You write “whole Territory” and leave no space for an autonomy rider.<br><br>This is the proposition you brought into the room. You ask members to defend it as a positive choice: a State responsible for all its districts, with any agreed infrastructure obligations still binding.<br><br>The resolution records the canceled referendum honestly. It also sends a different proposition to the voters if the Convention can secure it. You put your name on the text and ask who will join you.",
+          "deltas": {
+            "interior": 18,
+            "corridor": -8,
+            "swing": 7,
+            "days": -8
+          },
+          "state": {
+            "proposal": "clean",
+            "corridorStructure": "none",
+            "broadPackage": false
+          },
+          "next": "s6_korda",
+          "role": "threll",
+          "lockResolution": true
+        },
+        "s5_kesh_clean": {
+          "desc": "Publicly commit a clean whole-Korda Statehood resolution without entrenched corridor autonomy; persuade delegates and ask for signatures.",
+          "text": "You write “whole Territory” and leave no space for an autonomy rider.<br><br>This is not the proposition you collected signatures for. You tell the corridor why you are putting it forward anyway: the available whole-Korda coalition is stronger than the claim you failed to carry. Mire asks you not to call that victory. You do not.<br><br>The resolution records the canceled referendum honestly. It also sends a different proposition to the voters if the Convention can secure it. You put your name on the text and ask who will join you.",
+          "deltas": {
+            "interior": 18,
+            "corridor": -8,
+            "swing": 7,
+            "days": -8
+          },
+          "state": {
+            "proposal": "clean",
+            "corridorStructure": "none",
+            "broadPackage": false
+          },
+          "next": "s6_korda",
+          "role": "kesh",
+          "lockResolution": true
+        },
+        "s5_bargain": {
+          "desc": "Commit whole-Korda Statehood with defined corridor autonomy and binding infrastructure obligations, accepting a substantive package across blocs.",
+          "text": "You replace the margin notes with clauses.<br><br>Korda remains whole. The corridor receives defined authority over local transport, port and freight administration, and specified services. The proposed settlement requires those protections in the future State constitution, with corridor consent before they can be reclaimed.<br><br>The infrastructure schedule names obligations, responsible institutions, and public reporting. It does not rewrite the national §12.6 formula.<br><br>Rell objects to the exception. Mire objects to how much merger has become a fallback nobody is taking. Orin asks each of them which clause they would strike and still expect the other to sign.<br><br>Neither answers quickly.<br><br>You sign the package as a package. Whether enough others follow depends on the work done before this morning.",
+          "deltas": {
+            "interior": 10,
+            "corridor": 10,
+            "swing": 8,
+            "trust": 2,
+            "days": -14
+          },
+          "state": {
+            "proposal": "bargain",
+            "corridorStructure": "autonomy",
+            "infrastructureCommitment": "full",
+            "corridorGuarantee": "written",
+            "broadPackage": true
+          },
+          "next": "s6_korda",
+          "lockResolution": true
+        },
+        "s5_split": {
+          "desc": "Publicly commit a corridor merger proposal and a settlement for remaining Korda, with freight continuity and allocated obligations; seek consent across the room.",
+          "text": "You draw the boundary only after writing what must cross it.<br><br>Freight access. Existing obligations. A transition schedule for services that do not stop at the proposed line. The remaining Territory has its own stated path in the resolution; it is not the blank space left after the corridor leaves.<br><br>“This does not give Kelvant our signature,” Orin says.<br><br>“No. It gives the next constitutional stages a proposal worth deciding.”<br><br>You leave every required ratification and receiving-State step intact. No delegate can sign those away.<br><br>Mire puts the old referendum notice beside the new text. It is not the same ballot. It is at least a proposition he can explain without pretending the interior does not exist.",
+          "deltas": {
+            "interior": 5,
+            "corridor": 15,
+            "swing": 8,
+            "trust": 1,
+            "days": -10
+          },
+          "state": {
+            "proposal": "split",
+            "corridorStructure": "merger",
+            "broadPackage": false
+          },
+          "next": "s6_korda",
+          "lockResolution": true
+        },
+        "s5_force_split": {
+          "desc": "Use the fractured or escalated coalition to push a split while abandoning earlier assurances; accept damaged trust for a fast settlement.",
+          "text": "You use the divisions everyone had agreed not to exploit.<br><br>One group hears that its signatures are needed before the other side changes its mind. The other hears that the first group has already conceded. The written proposal still addresses both portions, but the understandings that made people willing to read it are gone.<br><br>Mire asks which account you intend to defend in public.<br><br>“The text,” you say.<br><br>He folds the working minutes shut. Orin does not let you call the result a reconciliation. If the count holds, the Convention may still produce a resolution. It will send the argument outside in worse condition than it found it.",
+          "deltas": {
+            "interior": -8,
+            "corridor": 16,
+            "swing": 6,
+            "trust": -4,
+            "days": -6
+          },
+          "state": {
+            "proposal": "split",
+            "corridorStructure": "merger",
+            "broadPackage": false
+          },
+          "next": "s6_korda",
+          "requires": {
+            "anyState": {
+              "ultimatumEscalated": true,
+              "corridorCohesion": "fractured",
+              "infrastructureCommitment": "conditional"
+            }
+          },
+          "lockResolution": true
+        },
+        "s5_tentative": {
+          "desc": "Continue the current proposed settlement and gather quiet assurances, but do not commit or lock a resolution on the record.",
+          "text": "You ask for assurances without signatures.<br><br>Several delegates give them. One asks you not to use their name. Another says that what they promised depends on what everyone else promised.<br><br>Orin writes the names in pencil.<br><br>“You may have the room,” she says. “You have not yet given the clerk a resolution.”<br><br>There is still a final sitting if the clock allows it. You will have to carry this same proposal there; you cannot count private agreement as a completed act.",
+          "deltas": {
+            "interior": 3,
+            "corridor": 3,
+            "swing": 7,
+            "days": -7
+          },
+          "state": {},
+          "next": "s6_korda"
+        },
+        "s5_restate": {
+          "desc": "Refuse drafting and persuasion, repeat the current demand, and wait for the opposition to yield.",
+          "text": "You say the terms have been clear from the beginning.<br><br>The clerk agrees that they have been clear. She asks whether a text is being submitted.<br><br>“Not on these conditions.”<br><br>She records that answer too.<br><br>The next weeks produce cleaner statements and fewer conversations. Nobody can accuse you of changing your position. Nobody can tell the clerk when that position will become a resolution.",
+          "deltas": {
+            "swing": -18,
+            "trust": -1,
+            "days": -30
+          },
+          "state": {},
+          "next": "s6_korda"
+        },
+        "s5_deliberate_lapse": {
+          "desc": "Deliberately refuse every remaining deal and let both petitions lapse; the canceled corridor referendum does not revive.",
+          "text": "You ask the clerk to record that you prefer no resolution to these settlements.<br><br>For once there is no ambiguity to edit.<br><br>Both petitions will lapse. Korda will remain a Territory, undivided. The old referendum will not return. The three-year bar on the same geographic claims is part of the choice, not a footnote.<br><br>Outside, people are still waiting to learn which question they will be asked. You have decided that this Convention will give them none.",
+          "deltas": {
+            "days": -87
+          },
+          "state": {
+            "deliberateLapse": true
+          },
+          "next": "s6_korda"
+        }
+      },
+      "outOfBounds": {
+        "text": "The chair asks for a move the Convention can act on. Try one of the available approaches; no new constitutional power can stop this clock.",
+        "next": "s5_korda"
+      }
+    },
+    {
+      "id": "s6_korda",
+      "title": "Scene 6 · The Clock",
+      "body": "The final sitting begins with the clerk reading the calendar, then the record.<br><br>A resolution secured in time is still a resolution. A private understanding is still private. Empty chairs have purchased no extra days.<br><br>Orin closes her folder. There is no seventh round of bargaining in it.<br><br>The chair asks for the Convention’s last act.",
+      "freetext": false,
+      "dimensions": [
+        "proposed settlement",
+        "commitment on record",
+        "time and trust"
+      ],
+      "buttons": [
+        {
+          "label": "Read the final record",
+          "route": "s6_record"
+        }
+      ],
+      "fragments": {
+        "s6_record": {
+          "desc": "Close the simulation: preserve a timely locked resolution, or attempt the same qualifying proposal at the last sitting before time expires.",
+          "text": "The clerk reads the names against the submitted terms. Nobody is permitted to add an assurance after their name has been called.<br><br>Then she dates the record.<br><br>That small act separates what the Convention managed to do from everything its members meant to do.",
+          "deltas": {},
+          "state": {},
+          "next": "resolve",
+          "lockResolution": true,
+          "exhaustIfUnlocked": true
+        }
+      },
+      "outOfBounds": {
+        "text": "The chair asks for a move the Convention can act on. Try one of the available approaches; no new constitutional power can stop this clock.",
+        "next": "s6_korda"
+      }
+    }
+  ],
+  "endings": {
+    "clean_statehood": {
+      "title": "Clean Whole Statehood",
+      "variants": {
+        "threll": {
+          "text": "The Convention proposes whole-Korda Statehood without an entrenched corridor carve-out.<br><br>You kept the map you brought into the room. The hard part was making it an argument other delegates could carry, rather than asking them to admire your refusal to move.<br><br>Rell shakes your hand. Orin looks at the transition obligations. Mire asks for a copy of the ratification notice when it exists. None of those gestures means the same thing.<br><br>You think about the road near Adren. It is still a road that needs work. A resolution has not repaired it.",
+          "coda": "You will have to explain this to the inland towns. The Convention route still requires a ratifying referendum of the eligible voters it affects under §15.5.a(4), before the remaining §15.2 Statehood process. Your resolution does not itself make Korda a State."
+        },
+        "kesh": {
+          "text": "The Convention proposes whole-Korda Statehood without an entrenched corridor carve-out.<br><br>You helped put that resolution within reach. That is the fact the corridor will ask you to explain. The petition you carried in the van has not become the ballot you wanted; your work in this room helped replace it with another proposition.<br><br>Threll does not congratulate you. She gives you the final text and waits while you read it. That courtesy is harder to bear than triumph would have been.<br><br>You can defend a choice without calling it your original victory.",
+          "coda": "You will have to explain this to the people who signed the corridor petition. The Convention route still requires a ratifying referendum of the eligible voters it affects under §15.5.a(4), before the remaining §15.2 Statehood process. Your resolution does not itself make Korda a State."
+        }
+      }
+    },
+    "grand_bargain": {
+      "title": "The Grand Bargain",
+      "variants": {
+        "threll": {
+          "text": "The Convention proposes a whole Korda with protected corridor authority and binding transition commitments.<br><br>You did not get an ordinary State with no exceptions. Rell makes sure you hear that before you leave. You did get a whole-Territory proposition whose corridor protections are defined well enough to enforce, and whose inland obligations are harder to postpone.<br><br>Orin lets you answer the first question from the press. You mention the work before the names.<br><br>Mire stands beside you, still disagreeing about what each side conceded. For today, he is willing to disagree beside you.",
+          "coda": "You will have to explain this to the inland towns. The eligible affected voters must still ratify this Convention resolution under §15.5.a(4). Only then can the applicable Statehood steps continue. The breadth of the bargain gives you a case to take outside, not a referendum result."
+        },
+        "kesh": {
+          "text": "The Convention proposes a whole Korda with protected corridor authority and binding transition commitments.<br><br>Merger is not the proposition leaving the room. You cannot show the petition organizers their original destination on this map. You can show them the powers the corridor would keep and the consent needed to take them away.<br><br>One organizer asks if that is enough. You give her the text instead of telling her how grateful she should be.<br><br>Threll is explaining the infrastructure schedule to an inland reporter. For once the two explanations do not depend on concealing each other.",
+          "coda": "You will have to explain this to the people who signed the corridor petition. The eligible affected voters must still ratify this Convention resolution under §15.5.a(4). Only then can the applicable Statehood steps continue. The breadth of the bargain gives you a case to take outside, not a referendum result."
+        }
+      }
+    },
+    "negotiated_split": {
+      "title": "Negotiated Split",
+      "variants": {
+        "threll": {
+          "text": "The Convention proposes a negotiated corridor merger with Kelvant and a defined settlement for the remaining Territory, with freight continuity and transition obligations written together.<br><br>Korda would not remain whole. You say that before anyone can soften it for you. But the inland towns have not been left as an afterthought at the edge of somebody else’s victory.<br><br>Orin asks whether you can defend the result at home. You say you can defend what you required before agreeing to it.<br><br>That is a smaller claim than the one you arrived with. It is also a claim you can substantiate.",
+          "coda": "You will have to explain this to the inland towns. The resolution still requires ratification by the eligible voters it affects under §15.5.a(4), followed by the applicable §15.4 merger and other constitutional steps. Kelvant’s required role is not waived. No border moves because delegates signed a page."
+        },
+        "kesh": {
+          "text": "The Convention proposes a negotiated corridor merger with Kelvant and a defined settlement for the remaining Territory, with freight continuity and transition obligations written together.<br><br>You did not recover the canceled ballot. You won a new proposal after answering people who would have lived with the consequences of the old one without voting on it.<br><br>Mire asks if you kept the referendum notice. Of course you did.<br><br>You put the new resolution behind it in the folder. The distance between those pages is the work you will have to explain.",
+          "coda": "You will have to explain this to the people who signed the corridor petition. The resolution still requires ratification by the eligible voters it affects under §15.5.a(4), followed by the applicable §15.4 merger and other constitutional steps. Kelvant’s required role is not waived. No border moves because delegates signed a page."
+        }
+      }
+    },
+    "ugly_split": {
+      "title": "Ugly Split",
+      "variants": {
+        "threll": {
+          "text": "The Convention produces a split proposal. It carries freight and transition terms, but it leaves behind incompatible accounts of how the votes were obtained.<br><br>You came to keep Korda whole. You leave defending a boundary and explaining why people who worked with you no longer trust your explanation of it.<br><br>Rell will not stand beside you. Mire will stand beside the text, which is different. Orin hands you the minutes containing the assurance you abandoned.<br><br>There is no clerical correction for that part of the record.",
+          "coda": "You will have to explain this to the inland towns. The affected eligible voters still must ratify under §15.5.a(4), and the applicable §15.4 and receiving-State requirements remain. A damaged coalition cannot promise that those steps will succeed. The real fight may just have moved outside."
+        },
+        "kesh": {
+          "text": "The Convention produces a split proposal. It carries freight and transition terms, but it leaves behind incompatible accounts of how the votes were obtained.<br><br>The corridor has a merger proposition to take forward. Some supporters call that vindication. You remember who had to be told something different to get it onto the page.<br><br>Mire asks you to handle the first public explanation alone. That is when you understand what the coalition spent.<br><br>You have something to campaign for. You have also furnished its opponents with witnesses.",
+          "coda": "You will have to explain this to the people who signed the corridor petition. The affected eligible voters still must ratify under §15.5.a(4), and the applicable §15.4 and receiving-State requirements remain. A damaged coalition cannot promise that those steps will succeed. The real fight may just have moved outside."
+        }
+      }
+    },
+    "hung_convention": {
+      "title": "Hung Convention",
+      "variants": {
+        "threll": {
+          "text": "The deadline passes without a secured resolution. Both petitions lapse together. Korda remains an undivided Territory, and the same geographic claims face the three-year bar.<br><br>You kept Korda whole in the narrowest possible sense. You did not win Statehood. The distinction will matter every time someone calls the result a victory.<br><br>Orin carries out the infrastructure folder. Its problems have survived the proceeding intended to resolve their constitutional setting.<br><br>The road near Adren will still need an answer in the morning.",
+          "coda": "You will have to explain this to the inland towns. There is no Convention resolution to put to ratification. The affected voters receive no new ballot from this proceeding. Their future choices remain beyond this simulation; lapse is not popular approval of the status quo."
+        },
+        "kesh": {
+          "text": "The deadline passes without a secured resolution. Both petitions lapse together. Korda remains an undivided Territory, and the same geographic claims face the three-year bar.<br><br>The canceled corridor referendum does not return. You knew that in the room. It is harder to explain in the depot where people signed because you told them the process could reach a vote.<br><br>Mire keeps the old notice. There is no new document to put behind it.<br><br>You leave with the grievance intact and the available proceeding exhausted.",
+          "coda": "You will have to explain this to the people who signed the corridor petition. There is no Convention resolution to put to ratification. The affected voters receive no new ballot from this proceeding. Their future choices remain beyond this simulation; lapse is not popular approval of the status quo."
+        }
+      }
+    }
+  },
+  "countText": {
+    "clean_ready": "“The whole-Korda proposal has a workable coalition if you put it on record. That is access you can turn into signatures, not votes already cast.”",
+    "bargain_ready": "“The protection package has enough support across the blocs. Preserve the obligations and the trust together; signatures are the remaining job.”",
+    "split_ready": "“There is a workable coalition for a split proposal. The remaining Territory and the corridor both need terms in the same document.”",
+    "ugly_ready": "“A split may carry, but members no longer agree on what was promised. A majority assembled this way will send its distrust into ratification.”",
+    "short": "“You do not yet have a workable coalition for the proposal on your desk. More applause from your own side will not fill that gap. Work the undecided names, repair the relationship, or test another map.”",
+    "escalated": "“The confrontation cost us additional sitting days. The constitutional clock kept running. Returning now can repair a relationship; it cannot refund the calendar.”",
+    "fractured": "“The corridor paper no longer binds all its signatories to the same demand. A fracture is an opening for persuasion, not eight votes transferred to you.”",
+    "guarantee": "“The corridor guarantee is still a request. Put its powers and enforcement in writing before you count it as a protection.”",
+    "expired": "“Time has expired without a secured resolution. No later signature can revive either petition in this Convention.”"
+  },
+  "lockText": {
+    "locked": "The clerk accepts the signed resolution while time remains. The Convention result is secured; ratification is not.",
+    "short": "The signatures do not establish a workable coalition. The proposal remains on the desk, unlocked.",
+    "expired": "Time has expired. The clerk cannot accept a late settlement.",
+    "lapse": "The refusal remains on record. No resolution is secured."
+  },
+  "ratificationTone": {
+    "confident": "You have promises that have survived contact with one another. You are cautiously hopeful about taking them to voters.",
+    "uneasy": "You have enough names in the room. You are less certain how their arguments will sound outside it.",
+    "damaged": "You hear the promises opponents will quote back to you. You cannot assume the voters will forgive what the room accepted."
+  }
+}

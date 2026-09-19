@@ -72,7 +72,7 @@ export default function (eleventyConfig) {
   const passthrough = [
     "site.css", "nav.js", "map-data.js", "search-index.js", "sw.js",
     "favicon.ico", "favicon-32.png", "apple-touch-icon.png",
-    "thoss-crossroads.json", "tier2-borders.json", "tier2-labels.json",
+    "crossroads-engine.js", "korda-crossroads.json", "thoss-crossroads.json", "tier2-borders.json", "tier2-labels.json",
     "test-crossroads.json",
     "Flag Options", "Previous Versions Constitution DOCX",
   ];

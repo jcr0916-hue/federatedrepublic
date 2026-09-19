@@ -1,6 +1,6 @@
 # Korda Crossroads — Authored Content Draft
 
-*Status: DRAFT · 260918. Non-canon interactive content. This file is source prose for the future `korda-crossroads.json`; it is not published World canon and does not advance the real Convention.*
+*Status: COMPLETE · 260918. Non-canon interactive content. This file is source prose for `korda-crossroads.json`; it is not published World canon and does not advance the real Convention.*
 
 *Canon anchors for this draft: the Supreme Court has affirmed the JMC; the stay is dissolved; roughly 87 days remain on the Convention clock; the Convention has voted 25–8 to move its remaining sessions from Verentum into Korda; Dessa Orin, Jalen Mire, and Tomas Rell are established delegates. Exact local venue remains intentionally unnamed.*
 
@@ -1263,3 +1263,623 @@ Role-conditional fragment groups:
 - `s1_kesh_*`
 
 The future classifier receives only fragments valid for the selected role. It continues to return a pre-authored fragment ID only; no generated narrative prose is added to the Crossroads feature.
+
+---
+
+*Completion pass: all six scenes and five dual-role endings authored. Production balance and engine semantics are documented in the plan’s implementation addendum.*
+
+# Scene 4 — The Count
+
+## Shared scene setup
+
+Orin does not bring a speech. She brings a sheet with three columns.
+
+“People who will speak with you. People who might move with you. People who have actually agreed to a text. Those are different lists.”
+
+She puts the third column where you can see it. It is still empty.
+
+The clerk has charged the intervening drafting days to the calendar. No adjournment, private meeting, or empty chair has stopped it.
+
+“Tell me which argument you want counted,” Orin says. “Then tell me who you intend to ask.”
+
+### `s4_threll_persuade`
+**Choice:** Work the undecided names without conceding
+
+**Classifier descriptor:** Keep the original substantive goal and privately persuade undecided delegates; turn the count into targeted outreach.
+
+**Role:** threll
+
+**Deltas:** {"interior": 6, "swing": 9, "days": -6}
+
+**State:** {}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You take the sheet, not the microphone.
+
+Whole Korda still heads your notes. You ask each undecided member what would let them defend that proposition at home. You offer reasons and responsibility, not a corridor carve-out.
+
+Several agree to hear the final text. Nobody has signed it yet. Orin moves their names into the second column and leaves the third alone.
+
+### `s4_threll_pivot`
+**Choice:** Test the other map
+
+**Classifier descriptor:** Explicitly explore the opposite status settlement after reading the count; this is a real change of proposal, not a completed bargain.
+
+**Role:** threll
+
+**Deltas:** {"interior": -8, "corridor": 15, "swing": 6, "days": -9}
+
+**State:** {"proposal": "split"}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You cross out the heading.
+
+“If we cannot keep Korda whole, I want the inland obligations written before anyone draws a line.” Mire does not celebrate. He knows how much that sentence cost you.
+
+You have given the other side a hearing. Your own side notices. A different map is now on your desk; it has no more signatures than the first.
+
+### `s4_kesh_persuade`
+**Choice:** Work the undecided names without conceding
+
+**Classifier descriptor:** Keep the original substantive goal and privately persuade undecided delegates; turn the count into targeted outreach.
+
+**Role:** kesh
+
+**Deltas:** {"corridor": 6, "swing": 9, "days": -6}
+
+**State:** {}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You take the sheet, not the microphone.
+
+Merger still heads your notes. You ask each undecided member what would let them defend a negotiated boundary at home. You offer transition responsibility, not abandonment of the petition.
+
+Several agree to hear the final text. Nobody has signed it yet. Orin moves their names into the second column and leaves the third alone.
+
+### `s4_kesh_pivot`
+**Choice:** Test the other map
+
+**Classifier descriptor:** Explicitly explore the opposite status settlement after reading the count; this is a real change of proposal, not a completed bargain.
+
+**Role:** kesh
+
+**Deltas:** {"corridor": -8, "interior": 15, "swing": 6, "days": -9}
+
+**State:** {"proposal": "clean"}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You cross out the heading.
+
+“If the room will not propose merger, show me the strongest whole-Korda case.” Threll answers without asking you to renounce the petition. That makes it possible to keep listening.
+
+You have given the other side a hearing. Your own side notices. A different map is now on your desk; it has no more signatures than the first.
+
+### `s4_repair`
+**Choice:** Repair the damaged working relationship
+
+**Classifier descriptor:** Acknowledge escalation or distrust, bring delegates back into working sessions, and rebuild cross-bloc access without settling status.
+
+**Role:** both
+
+**Deltas:** {"interior": 6, "corridor": 6, "swing": 6, "trust": 2, "days": -12}
+
+**State:** {"walkoutRisk": "none", "ultimatumEscalated": false}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You ask for a meeting with no cameras and no agreed conclusion.
+
+“The days we lost are gone,” you say. “The next ones do not have to be.”
+
+Mire wants an assurance that participation will not be reported as consent. Rell wants an assurance that another disagreement will not empty the room. You put both assurances in the minutes.
+
+People return to the drafting table. Nobody withdraws a substantive claim. Orin stops keeping a separate list of people who will not sit together.
+
+You have repaired a method, not won a map.
+
+### `s4_wait`
+**Choice:** Keep repeating the demand and wait
+
+**Classifier descriptor:** Hold the substantive demand without outreach or concession; spend weeks waiting for the other bloc to move.
+
+**Role:** both
+
+**Deltas:** {"swing": -12, "days": -35, "trust": -1}
+
+**State:** {}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You tell Orin the names will change when the other side understands you are serious.
+
+“They already know,” she says.
+
+You issue the same statement again. Your supporters applaud it again. The clerk circulates another calendar.
+
+Nobody moves into the third column.
+
+Outside, a freight operator asks which government will be maintaining the road next year. You give the answer you gave three weeks ago. This time he does not wait for the end.
+
+### `s4_deliberate_lapse`
+**Choice:** Choose lapse over the available settlements
+
+**Classifier descriptor:** Deliberately abandon a Convention resolution and accept both petitions lapsing together, including the three-year bar.
+
+**Role:** both
+
+**Deltas:** {"days": -87}
+
+**State:** {"deliberateLapse": true}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You put the sheet down.
+
+“Then let these petitions end.”
+
+Orin asks you to say what that means. You do: no restoration of the old corridor ballot, no whole-Territory victory by default, and no immediate restart of the same geographic claims. Both petitions lapse together; the three-year bar follows.
+
+She writes your answer in the empty column. It is the first thing you have committed to without a condition.
+
+# Scene 5 — Put It in Writing
+
+## Shared scene setup
+
+The clerk will accept one proposed resolution addressing all affected portions together. The margins are full of phrases everyone remembers differently.
+
+Orin draws a line through “understood.”
+
+Mire draws another through “in due course.”
+
+Rell asks who is prepared to put a name beside what remains.
+
+You can write a settlement, make one last argument without changing your goal, or leave the undertaking private. A signature cannot manufacture a coalition. An unwritten understanding cannot reserve time.
+
+### `s5_threll_clean`
+**Choice:** Put clean whole-Statehood to the room
+
+**Classifier descriptor:** Publicly commit a clean whole-Korda Statehood resolution without entrenched corridor autonomy; persuade delegates and ask for signatures.
+
+**Role:** threll
+
+**Deltas:** {"interior": 18, "corridor": -8, "swing": 7, "days": -8}
+
+**State:** {"proposal": "clean", "corridorStructure": "none", "broadPackage": false}
+
+**Requires:** {}
+
+**Lock attempt:** True
+
+**Response prose:**
+
+You write “whole Territory” and leave no space for an autonomy rider.
+
+This is the proposition you brought into the room. You ask members to defend it as a positive choice: a State responsible for all its districts, with any agreed infrastructure obligations still binding.
+
+The resolution records the canceled referendum honestly. It also sends a different proposition to the voters if the Convention can secure it. You put your name on the text and ask who will join you.
+
+### `s5_kesh_clean`
+**Choice:** Put clean whole-Statehood to the room
+
+**Classifier descriptor:** Publicly commit a clean whole-Korda Statehood resolution without entrenched corridor autonomy; persuade delegates and ask for signatures.
+
+**Role:** kesh
+
+**Deltas:** {"interior": 18, "corridor": -8, "swing": 7, "days": -8}
+
+**State:** {"proposal": "clean", "corridorStructure": "none", "broadPackage": false}
+
+**Requires:** {}
+
+**Lock attempt:** True
+
+**Response prose:**
+
+You write “whole Territory” and leave no space for an autonomy rider.
+
+This is not the proposition you collected signatures for. You tell the corridor why you are putting it forward anyway: the available whole-Korda coalition is stronger than the claim you failed to carry. Mire asks you not to call that victory. You do not.
+
+The resolution records the canceled referendum honestly. It also sends a different proposition to the voters if the Convention can secure it. You put your name on the text and ask who will join you.
+
+### `s5_bargain`
+**Choice:** Write the whole-Korda protection package
+
+**Classifier descriptor:** Commit whole-Korda Statehood with defined corridor autonomy and binding infrastructure obligations, accepting a substantive package across blocs.
+
+**Role:** both
+
+**Deltas:** {"interior": 10, "corridor": 10, "swing": 8, "trust": 2, "days": -14}
+
+**State:** {"proposal": "bargain", "corridorStructure": "autonomy", "infrastructureCommitment": "full", "corridorGuarantee": "written", "broadPackage": true}
+
+**Requires:** {}
+
+**Lock attempt:** True
+
+**Response prose:**
+
+You replace the margin notes with clauses.
+
+Korda remains whole. The corridor receives defined authority over local transport, port and freight administration, and specified services. The proposed settlement requires those protections in the future State constitution, with corridor consent before they can be reclaimed.
+
+The infrastructure schedule names obligations, responsible institutions, and public reporting. It does not rewrite the national §12.6 formula.
+
+Rell objects to the exception. Mire objects to how much merger has become a fallback nobody is taking. Orin asks each of them which clause they would strike and still expect the other to sign.
+
+Neither answers quickly.
+
+You sign the package as a package. Whether enough others follow depends on the work done before this morning.
+
+### `s5_split`
+**Choice:** Write a negotiated split with transition duties
+
+**Classifier descriptor:** Publicly commit a corridor merger proposal and a settlement for remaining Korda, with freight continuity and allocated obligations; seek consent across the room.
+
+**Role:** both
+
+**Deltas:** {"interior": 5, "corridor": 15, "swing": 8, "trust": 1, "days": -10}
+
+**State:** {"proposal": "split", "corridorStructure": "merger", "broadPackage": false}
+
+**Requires:** {}
+
+**Lock attempt:** True
+
+**Response prose:**
+
+You draw the boundary only after writing what must cross it.
+
+Freight access. Existing obligations. A transition schedule for services that do not stop at the proposed line. The remaining Territory has its own stated path in the resolution; it is not the blank space left after the corridor leaves.
+
+“This does not give Kelvant our signature,” Orin says.
+
+“No. It gives the next constitutional stages a proposal worth deciding.”
+
+You leave every required ratification and receiving-State step intact. No delegate can sign those away.
+
+Mire puts the old referendum notice beside the new text. It is not the same ballot. It is at least a proposition he can explain without pretending the interior does not exist.
+
+### `s5_force_split`
+**Choice:** Force a split and break the working assurances
+
+**Classifier descriptor:** Use the fractured or escalated coalition to push a split while abandoning earlier assurances; accept damaged trust for a fast settlement.
+
+**Role:** both
+
+**Deltas:** {"interior": -8, "corridor": 16, "swing": 6, "trust": -4, "days": -6}
+
+**State:** {"proposal": "split", "corridorStructure": "merger", "broadPackage": false}
+
+**Requires:** {"anyState": {"ultimatumEscalated": true, "corridorCohesion": "fractured", "infrastructureCommitment": "conditional"}}
+
+**Lock attempt:** True
+
+**Response prose:**
+
+You use the divisions everyone had agreed not to exploit.
+
+One group hears that its signatures are needed before the other side changes its mind. The other hears that the first group has already conceded. The written proposal still addresses both portions, but the understandings that made people willing to read it are gone.
+
+Mire asks which account you intend to defend in public.
+
+“The text,” you say.
+
+He folds the working minutes shut. Orin does not let you call the result a reconciliation. If the count holds, the Convention may still produce a resolution. It will send the argument outside in worse condition than it found it.
+
+### `s5_tentative`
+**Choice:** Keep the understanding private for now
+
+**Classifier descriptor:** Continue the current proposed settlement and gather quiet assurances, but do not commit or lock a resolution on the record.
+
+**Role:** both
+
+**Deltas:** {"interior": 3, "corridor": 3, "swing": 7, "days": -7}
+
+**State:** {}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You ask for assurances without signatures.
+
+Several delegates give them. One asks you not to use their name. Another says that what they promised depends on what everyone else promised.
+
+Orin writes the names in pencil.
+
+“You may have the room,” she says. “You have not yet given the clerk a resolution.”
+
+There is still a final sitting if the clock allows it. You will have to carry this same proposal there; you cannot count private agreement as a completed act.
+
+### `s5_restate`
+**Choice:** Restate the demand; make no undertaking
+
+**Classifier descriptor:** Refuse drafting and persuasion, repeat the current demand, and wait for the opposition to yield.
+
+**Role:** both
+
+**Deltas:** {"swing": -18, "trust": -1, "days": -30}
+
+**State:** {}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You say the terms have been clear from the beginning.
+
+The clerk agrees that they have been clear. She asks whether a text is being submitted.
+
+“Not on these conditions.”
+
+She records that answer too.
+
+The next weeks produce cleaner statements and fewer conversations. Nobody can accuse you of changing your position. Nobody can tell the clerk when that position will become a resolution.
+
+### `s5_deliberate_lapse`
+**Choice:** Put refusal on record and accept lapse
+
+**Classifier descriptor:** Deliberately refuse every remaining deal and let both petitions lapse; the canceled corridor referendum does not revive.
+
+**Role:** both
+
+**Deltas:** {"days": -87}
+
+**State:** {"deliberateLapse": true}
+
+**Requires:** {}
+
+**Lock attempt:** False
+
+**Response prose:**
+
+You ask the clerk to record that you prefer no resolution to these settlements.
+
+For once there is no ambiguity to edit.
+
+Both petitions will lapse. Korda will remain a Territory, undivided. The old referendum will not return. The three-year bar on the same geographic claims is part of the choice, not a footnote.
+
+Outside, people are still waiting to learn which question they will be asked. You have decided that this Convention will give them none.
+
+# Scene 6 — The Clock
+
+## Shared scene setup
+
+The final sitting begins with the clerk reading the calendar, then the record.
+
+A resolution secured in time is still a resolution. A private understanding is still private. Empty chairs have purchased no extra days.
+
+Orin closes her folder. There is no seventh round of bargaining in it.
+
+The chair asks for the Convention’s last act.
+
+### `s6_record`
+
+**Clock rule:** Attempt the current proposal while time remains. If no resolution locks, the remaining days expire and the final meter is zero.
+**Choice:** Read the final record
+
+**Classifier descriptor:** Close the simulation: preserve a timely locked resolution, or attempt the same qualifying proposal at the last sitting before time expires.
+
+**Role:** both
+
+**Deltas:** {}
+
+**State:** {}
+
+**Requires:** {}
+
+**Lock attempt:** True
+
+**Response prose:**
+
+The clerk reads the names against the submitted terms. Nobody is permitted to add an assurance after their name has been called.
+
+Then she dates the record.
+
+That small act separates what the Convention managed to do from everything its members meant to do.
+
+# Ending — Clean Whole Statehood (`clean_statehood`)
+
+## Threll
+
+The Convention proposes whole-Korda Statehood without an entrenched corridor carve-out.
+
+You kept the map you brought into the room. The hard part was making it an argument other delegates could carry, rather than asking them to admire your refusal to move.
+
+Rell shakes your hand. Orin looks at the transition obligations. Mire asks for a copy of the ratification notice when it exists. None of those gestures means the same thing.
+
+You think about the road near Adren. It is still a road that needs work. A resolution has not repaired it.
+
+**Ratification coda:** You will have to explain this to the inland towns. The Convention route still requires a ratifying referendum of the eligible voters it affects under §15.5.a(4), before the remaining §15.2 Statehood process. Your resolution does not itself make Korda a State.
+
+## Kesh
+
+The Convention proposes whole-Korda Statehood without an entrenched corridor carve-out.
+
+You helped put that resolution within reach. That is the fact the corridor will ask you to explain. The petition you carried in the van has not become the ballot you wanted; your work in this room helped replace it with another proposition.
+
+Threll does not congratulate you. She gives you the final text and waits while you read it. That courtesy is harder to bear than triumph would have been.
+
+You can defend a choice without calling it your original victory.
+
+**Ratification coda:** You will have to explain this to the people who signed the corridor petition. The Convention route still requires a ratifying referendum of the eligible voters it affects under §15.5.a(4), before the remaining §15.2 Statehood process. Your resolution does not itself make Korda a State.
+
+# Ending — The Grand Bargain (`grand_bargain`)
+
+## Threll
+
+The Convention proposes a whole Korda with protected corridor authority and binding transition commitments.
+
+You did not get an ordinary State with no exceptions. Rell makes sure you hear that before you leave. You did get a whole-Territory proposition whose corridor protections are defined well enough to enforce, and whose inland obligations are harder to postpone.
+
+Orin lets you answer the first question from the press. You mention the work before the names.
+
+Mire stands beside you, still disagreeing about what each side conceded. For today, he is willing to disagree beside you.
+
+**Ratification coda:** You will have to explain this to the inland towns. The eligible affected voters must still ratify this Convention resolution under §15.5.a(4). Only then can the applicable Statehood steps continue. The breadth of the bargain gives you a case to take outside, not a referendum result.
+
+## Kesh
+
+The Convention proposes a whole Korda with protected corridor authority and binding transition commitments.
+
+Merger is not the proposition leaving the room. You cannot show the petition organizers their original destination on this map. You can show them the powers the corridor would keep and the consent needed to take them away.
+
+One organizer asks if that is enough. You give her the text instead of telling her how grateful she should be.
+
+Threll is explaining the infrastructure schedule to an inland reporter. For once the two explanations do not depend on concealing each other.
+
+**Ratification coda:** You will have to explain this to the people who signed the corridor petition. The eligible affected voters must still ratify this Convention resolution under §15.5.a(4). Only then can the applicable Statehood steps continue. The breadth of the bargain gives you a case to take outside, not a referendum result.
+
+# Ending — Negotiated Split (`negotiated_split`)
+
+## Threll
+
+The Convention proposes a negotiated corridor merger with Kelvant and a defined settlement for the remaining Territory, with freight continuity and transition obligations written together.
+
+Korda would not remain whole. You say that before anyone can soften it for you. But the inland towns have not been left as an afterthought at the edge of somebody else’s victory.
+
+Orin asks whether you can defend the result at home. You say you can defend what you required before agreeing to it.
+
+That is a smaller claim than the one you arrived with. It is also a claim you can substantiate.
+
+**Ratification coda:** You will have to explain this to the inland towns. The resolution still requires ratification by the eligible voters it affects under §15.5.a(4), followed by the applicable §15.4 merger and other constitutional steps. Kelvant’s required role is not waived. No border moves because delegates signed a page.
+
+## Kesh
+
+The Convention proposes a negotiated corridor merger with Kelvant and a defined settlement for the remaining Territory, with freight continuity and transition obligations written together.
+
+You did not recover the canceled ballot. You won a new proposal after answering people who would have lived with the consequences of the old one without voting on it.
+
+Mire asks if you kept the referendum notice. Of course you did.
+
+You put the new resolution behind it in the folder. The distance between those pages is the work you will have to explain.
+
+**Ratification coda:** You will have to explain this to the people who signed the corridor petition. The resolution still requires ratification by the eligible voters it affects under §15.5.a(4), followed by the applicable §15.4 merger and other constitutional steps. Kelvant’s required role is not waived. No border moves because delegates signed a page.
+
+# Ending — Ugly Split (`ugly_split`)
+
+## Threll
+
+The Convention produces a split proposal. It carries freight and transition terms, but it leaves behind incompatible accounts of how the votes were obtained.
+
+You came to keep Korda whole. You leave defending a boundary and explaining why people who worked with you no longer trust your explanation of it.
+
+Rell will not stand beside you. Mire will stand beside the text, which is different. Orin hands you the minutes containing the assurance you abandoned.
+
+There is no clerical correction for that part of the record.
+
+**Ratification coda:** You will have to explain this to the inland towns. The affected eligible voters still must ratify under §15.5.a(4), and the applicable §15.4 and receiving-State requirements remain. A damaged coalition cannot promise that those steps will succeed. The real fight may just have moved outside.
+
+## Kesh
+
+The Convention produces a split proposal. It carries freight and transition terms, but it leaves behind incompatible accounts of how the votes were obtained.
+
+The corridor has a merger proposition to take forward. Some supporters call that vindication. You remember who had to be told something different to get it onto the page.
+
+Mire asks you to handle the first public explanation alone. That is when you understand what the coalition spent.
+
+You have something to campaign for. You have also furnished its opponents with witnesses.
+
+**Ratification coda:** You will have to explain this to the people who signed the corridor petition. The affected eligible voters still must ratify under §15.5.a(4), and the applicable §15.4 and receiving-State requirements remain. A damaged coalition cannot promise that those steps will succeed. The real fight may just have moved outside.
+
+# Ending — Hung Convention (`hung_convention`)
+
+## Threll
+
+The deadline passes without a secured resolution. Both petitions lapse together. Korda remains an undivided Territory, and the same geographic claims face the three-year bar.
+
+You kept Korda whole in the narrowest possible sense. You did not win Statehood. The distinction will matter every time someone calls the result a victory.
+
+Orin carries out the infrastructure folder. Its problems have survived the proceeding intended to resolve their constitutional setting.
+
+The road near Adren will still need an answer in the morning.
+
+**Ratification coda:** You will have to explain this to the inland towns. There is no Convention resolution to put to ratification. The affected voters receive no new ballot from this proceeding. Their future choices remain beyond this simulation; lapse is not popular approval of the status quo.
+
+## Kesh
+
+The deadline passes without a secured resolution. Both petitions lapse together. Korda remains an undivided Territory, and the same geographic claims face the three-year bar.
+
+The canceled corridor referendum does not return. You knew that in the room. It is harder to explain in the depot where people signed because you told them the process could reach a vote.
+
+Mire keeps the old notice. There is no new document to put behind it.
+
+You leave with the grievance intact and the available proceeding exhausted.
+
+**Ratification coda:** You will have to explain this to the people who signed the corridor petition. There is no Convention resolution to put to ratification. The affected voters receive no new ballot from this proceeding. Their future choices remain beyond this simulation; lapse is not popular approval of the status quo.
+
+# Authored conditional narration
+
+All entries below are fixed prose selected by state, never generated by the classifier.
+
+- `countText.clean_ready`: “The whole-Korda proposal has a workable coalition if you put it on record. That is access you can turn into signatures, not votes already cast.”
+
+- `countText.bargain_ready`: “The protection package has enough support across the blocs. Preserve the obligations and the trust together; signatures are the remaining job.”
+
+- `countText.split_ready`: “There is a workable coalition for a split proposal. The remaining Territory and the corridor both need terms in the same document.”
+
+- `countText.ugly_ready`: “A split may carry, but members no longer agree on what was promised. A majority assembled this way will send its distrust into ratification.”
+
+- `countText.short`: “You do not yet have a workable coalition for the proposal on your desk. More applause from your own side will not fill that gap. Work the undecided names, repair the relationship, or test another map.”
+
+- `countText.escalated`: “The confrontation cost us additional sitting days. The constitutional clock kept running. Returning now can repair a relationship; it cannot refund the calendar.”
+
+- `countText.fractured`: “The corridor paper no longer binds all its signatories to the same demand. A fracture is an opening for persuasion, not eight votes transferred to you.”
+
+- `countText.guarantee`: “The corridor guarantee is still a request. Put its powers and enforcement in writing before you count it as a protection.”
+
+- `countText.expired`: “Time has expired without a secured resolution. No later signature can revive either petition in this Convention.”
+
+- `lockText.locked`: The clerk accepts the signed resolution while time remains. The Convention result is secured; ratification is not.
+
+- `lockText.short`: The signatures do not establish a workable coalition. The proposal remains on the desk, unlocked.
+
+- `lockText.expired`: Time has expired. The clerk cannot accept a late settlement.
+
+- `lockText.lapse`: The refusal remains on record. No resolution is secured.
+
+- `ratificationTone.confident`: You have promises that have survived contact with one another. You are cautiously hopeful about taking them to voters.
+
+- `ratificationTone.uneasy`: You have enough names in the room. You are less certain how their arguments will sound outside it.
+
+- `ratificationTone.damaged`: You hear the promises opponents will quote back to you. You cannot assume the voters will forgive what the room accepted.
+
+- Scene 4 `threll` framing: The inland names are familiar. You used to telephone some of them about grain. It is harder to ask them to trust a map than a delivery time. You look first at the names outside your own column.
+
+- Scene 4 `kesh` framing: You recognize the corridor names from petition nights. Their signatures once meant a ballot would happen. Now you need to know what they will support in a room where they cannot decide alone.

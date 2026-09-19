@@ -1,6 +1,6 @@
 # Crossroads: The Korda Convention — Feature Plan
 *Second installment of the "Living Crossroads" interactive format. First installment: `thoss-crossroads.json`, now SEALED.*
-*Status: ACTIVE DRAFTING, revised 260918 — updated to current Korda canon after the relocation vote and delegate-profile beat. Structural plan is greenlit; role introductions and Scene 1 are now being authored in `docs/KORDA-CROSSROADS-CONTENT-DRAFT.md`.*
+*Status: IMPLEMENTED · 260918. Six scenes, both roles, five dual-role endings, ratification codas, reusable engine, and focused validation complete. The implementation addendum below supersedes provisional trigger shapes and drafting status; earlier planning remains as design history.*
 
 ---
 
@@ -162,3 +162,45 @@ Drafting order from here:
 4. Only then wire role selection into the engine and move authored fragments into `korda-crossroads.json`.
 
 The current public Korda storyline remains on the back burner while this feature is built. The Crossroads piece is non-canon and must not advance the real Convention.
+
+
+## 9. Production implementation and balancing — 260918
+
+All six scenes and ten ending variants are authored in `KORDA-CROSSROADS-CONTENT-DRAFT.md` and transferred into `korda-crossroads.json`. Scenes 1–3 retain their authored prose and provisional numeric deltas unchanged. Starting meters remain Threll 58/30/35/87 and Kesh 42/64/35/87. No public World record, canon event, statistic, or Convention result is added.
+
+`crossroads.html` loads Korda by default. Explicit `?game=korda-crossroads.json` and `?game=thoss-crossroads.json` select the allowlisted installments; unknown values fail closed with links to both games. The intro requires a role for Korda, displays that role’s full introduction, and resets all meters and state on replay. `crossroads-engine.js` contains deterministic state and selection rules shared by the browser and tests. The Thoss selector is preserved, with its sealed data unchanged; the engine still accepts the legacy single-role schema and keyword fallback. Build passthrough includes both game files and the shared engine.
+
+Buttons, classifier descriptor lists, and returned fragment IDs all use the same role/state availability checks. The classifier receives no response or ending prose and cannot set state. `api/crossroads.js` is unchanged. Korda fails safely to the authored retry response when classification is unavailable; buttons work offline. `ai-features.html` replaces an erroneous duplicate World page with the transparency page for all four features, including classifier-only routing and request/privacy details.
+
+### Final thresholds (supersede §6’s provisional pseudocode)
+
+Support measures credibility and coalition access, not a policy preference, literal vote count, or public polling. A chosen **proposal** is therefore required. High corridor respect no longer disqualifies clean whole-Statehood: this deliberately removes the provisional `<35` corridor ceiling, including the 65/35 boundary trap, so effective persuasion is not punished.
+
+| Proposal | Required coalition and terms | Ending |
+|---|---|---|
+| Clean whole-Statehood | Interior ≥65, swing ≥55, no autonomy rider | Clean Whole Statehood |
+| Whole-Korda package | Interior ≥60, corridor ≥45, swing ≥55, trust ≥0, written broad package with autonomy and infrastructure | The Grand Bargain |
+| Split | Interior ≥30, corridor ≥50, swing ≥55, trust ≥0 | Negotiated Split |
+| Split with damaged trust | Interior ≥25, corridor ≥40, swing ≥45, trust <0 | Ugly Split |
+| Any unsupported/expired proposal, or deliberate lapse | No timely secured resolution | Hung Convention |
+
+The modest interior and swing floors prevent a corridor-only statement from automatically becoming a Convention resolution. A split can be won without conceding merger, by accepting responsibility for transition obligations and persuading the other blocs. Threll can likewise win clean Statehood without autonomy or merger concessions.
+
+The midpoint charges 15 compressed drafting days once. Escalation charges another 10 days at medium walkout risk or 25 at high risk, also once; retrying free text cannot repeat that cost. Scene 4 explicitly diagnoses readiness, distrust, fractures, and unfulfilled guarantees before offering persuasion, repair, an opposite-map pivot, passive waiting, or deliberate lapse. Later repair cannot refund lost days.
+
+Scene 5’s public commitments attempt to set `resolutionLocked` **only if** the coalition clears the corresponding thresholds and days remain after the drafting cost. A submitted but unsupported text is explicitly reported as unlocked. Its proposal still survives to Scene 6. Private assurances never lock in Scene 5; Scene 6 independently attempts to secure the same qualifying proposal while time remains. Exactly zero days is too late for a new lock. If the final attempt lacks a coalition, Scene 6 exhausts the remaining days so the lapse ending’s meter agrees with its text. A previously secured resolution survives later calendar expiry. The locked ending is recorded so a subsequent step cannot silently change its substance.
+
+Deliberate lapse is persistent state, not an inspection of the last fragment ID (which Scene 6 necessarily replaces). Expiry skips further bargaining and goes to The Clock. Passive repetition consumes enough time and swing access to make deadlock meaningful. A threatened or actual walkout can still be recovered through timely coalition work; it is neither a free leverage bonus nor an automatic loss.
+
+Grand Bargain requires the completed package, not merely accepting Orin’s offer. The fast, trust-damaging split is available only after escalation, coalition fracture, or infrastructure bargaining leverage. Normal negotiated-split drafting can also lead to Ugly Split if accumulated trust remains negative. Ratification tone uses trust and coalition margin. All endings include role-specific codas; Hung Convention correctly has no resolution to ratify. No coda predicts a referendum result or bypasses subsequent constitutional steps.
+
+### Verification and reproducible routes
+
+Run `npm run test:crossroads`, `npm run test:assets`, and `npm run build`. The focused suite enumerates every legal Korda route (1,670 Threll, 1,664 Kesh), requiring all five endings for each role. It checks both schemas, role/state gates, starting values, clocks, locks, substantive package requirements, replay, real-page classifier payloads and reply rejection, and the unchanged API’s routing contract. A sealed Thoss hash and legacy-selector boundary comparisons guard compatibility.
+
+No-concession witness routes:
+- Threll: `s1_threll_count` → `s2_threll_narrow` → `s3_threll_persuade` → `s4_threll_persuade` → `s5_threll_clean` → `s6_record`.
+- Kesh: `s1_kesh_count` → `s2_kesh_accept` → `s3_kesh_persuade` → `s4_kesh_persuade` → `s5_split` → `s6_record`.
+- Threll can replace the explicit clean commitment with `s5_tentative` and still secure the qualifying resolution at Scene 6.
+
+These are narrative balancing assumptions, not predictions about the real Convention or a simulated 33-member roll call. Temporary authoring scripts are not part of the repository; authored Markdown and production JSON are retained together.
