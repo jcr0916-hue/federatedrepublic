@@ -1,6 +1,7 @@
 # Constitutional Design Principles — Review Reference
 
-**Status:** working reference, assembled 13.09 and expanded 19.09. The twelve principles have been in active use across
+**Status:** working reference, assembled 13.09, expanded 19.09, worked examples re-verified
+against the live text 19.09. The twelve principles have been in active use across
 scenarios, amendment rationales, and design sessions, but had never been written down in one place. This
 document reconstructs them from actual usage in `scenario-the-ledger.html`,
 `scenario-the-classification.html`, `constitutional-history-archive.html`, and prior design sessions.
@@ -27,8 +28,10 @@ the document.
 **Catches:** a provision covering two unrelated subjects; a subject scattered across several
 provisions; duplicate treatment that can drift apart under later amendment.
 **Review use:** if a provision needs "and also" to describe what it covers, it may be two provisions.
-*Example flagged in Article I review: §1.9 bundles voting rights with marriage and family formation —
-unrelated subjects sharing one home.*
+*Retired 19.09: the standing example here was §1.9 bundling voting rights with marriage and family
+formation. Re-checked against the live text — §1.9 is now purely democratic participation, so the
+bundle was resolved at some point and the example no longer illustrates anything. No replacement
+example found; the current text did not surface another instance.*
 
 ### 2. Institution Test  [RECONSTRUCTED]
 **Asks:** does this body need to exist as a distinct institution, or is it a function some existing
@@ -54,6 +57,21 @@ when they don't.
 **Catches:** provisions that work only on cooperative assumptions.
 *Example flagged in Article I review: §1.4's prison-labor carve-out is unconditioned — assume a
 legislature that wants cheap compulsory labor, and nothing in the provision prevents it.*
+**Re-verified 19.09 — still open, and sharper than first recorded.** §1.4 is one of the six
+non-derogable rights under §1.19.a. The document declares it absolute and forbids derogating it in any
+emergency, then leaves the Legislature an unconditioned definitional exit: no compensation floor, no
+voluntariness requirement, no limit on hours or conditions, no bar on labor for private profit. The
+neighbouring carve-outs are bounded by enumeration; this one is bounded by nothing. An emergency cannot
+touch this right, but an ordinary statute can hollow it out — which makes it a conflict between two
+constitutional provisions rather than a missing implementation detail.
+
+**Pattern worth naming — self-defeating delegation.** Where this test meets Graceful Degradation: a
+limit on the Legislature whose only activation is a statute the Legislature must pass. Absent the
+statute the limit does not bite, and the body that would be constrained is the body that must act.
+Live instances found 19.09: §8.4 (public campaign financing "shall" be established by statute, with no
+deadline and no consequence for never acting) and §7.10(4) (gift prohibition keyed to a "de minimis
+threshold defined by statute" that may never exist; partly mitigated by the following sentence, which
+makes official-capacity gifts Republic property regardless of statute).*
 
 ### 5. Actor Test  [CORE + ATTESTED]
 **Canonical form: holder, check, consequence.**
@@ -77,6 +95,19 @@ coordination failure (executives can't agree → SC petition). Each names its ow
 around it.*
 *Example flagged in Article I review: §1.1 does this well — Legislature doesn't fund legal aid →
 courts appoint anyway.*
+*Attested catch, 19.09 — this test found and fixed a real gap. §2.5(6)(iii) resolved a tie on equal
+continuous service by deferring entirely to statute, with no constitutional fallback, while the exactly
+parallel §2.9(6)(iii) resolved it self-executingly ("the oldest by age holds the office"). With no
+tiebreaker statute enacted, acting Civic Consul authority was indeterminate at the moment the office
+needed filling. §2.6.a(2) carried the identical gap. Both now state a floor. A related tie in §2.6.a(4)
+was reviewed and deliberately left to statute: it is second-order, reachable only where vote counts and
+continuous service are both tied, and its consequence is bounded.*
+*Scan note, 19.09: all 129 statutory delegations were checked for this. Most are correctly pitched and
+need nothing. §10.1(4) supplies a global fallback for publication timing — "Otherwise a constitutionally
+required record is published as soon as possible" — which alone rescues roughly twenty delegations that
+look exposed in isolation. The genuinely exposed remainder is small: §15.3(2) (Remediation Plan clock on
+the devolution ladder), §9.8 (pool restoration clock), §11.1 (no deadline to establish the emergency
+procedure).*
 
 ---
 
@@ -138,6 +169,17 @@ policy choices created simply because one process was drafted at a different tim
 *Standing example: Civic Consul and Legat Consul incapacity procedures should mirror one another where
 the constitutional problem is the same, with differences only where the offices' roles or succession
 structures actually require them.*
+*Live instance found 19.09, in exactly that place.* §2.5(6)(iii) and §2.9(6)(iii) now reach the same
+outcome on the same problem — a tie on equal continuous service resolves to the oldest by age — but by
+two different architectures. §2.9 states the rule directly and self-executingly; §2.5 routes through
+statute, with the age rule as a floor behind it. Same function, same result, two procedural shapes. The
+divergence is an artifact of the order they were drafted and amended in, not a difference in role or
+risk, which is precisely what this test is for. Worth deciding whether they should be made to match.
+*Pass example, same review.* The three Monitor Generals are selected three different ways — the LM
+nominated by the SC, the EM jointly by the two Speakers, the JM by public lottery. That divergence is
+principled rather than arbitrary: §9.1 requires each Monitor be "selected by bodies other than those it
+oversees," and each method is what that constraint produces for its branch. A textbook case of
+difference reflecting constitutional purpose.
 
 ### 12. Procedural Familiarity  [CORE]
 **Canonical form:** constitutional procedures should reuse familiar actors, thresholds, stages, and
