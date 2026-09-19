@@ -57,7 +57,9 @@ when they don't.
 **Catches:** provisions that work only on cooperative assumptions.
 *Example flagged in Article I review: §1.4's prison-labor carve-out is unconditioned — assume a
 legislature that wants cheap compulsory labor, and nothing in the provision prevents it.*
-**Re-verified 19.09 — still open, and sharper than first recorded.** §1.4 is one of the six
+**Resolved 19.09.** The carve-out now requires conviction by a court, and labor for the benefit of a
+private party requires the person's consent. Recorded here because the finding, not just the fix, is
+what this test is for. As it stood: §1.4 is one of the six
 non-derogable rights under §1.19.a. The document declares it absolute and forbids derogating it in any
 emergency, then leaves the Legislature an unconditioned definitional exit: no compensation floor, no
 voluntariness requirement, no limit on hours or conditions, no bar on labor for private profit. The

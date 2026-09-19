@@ -47,7 +47,7 @@ Torture and cruel, inhuman, or degrading treatment are absolutely prohibited. No
 
 ### §1.4 — Prohibition of Slavery and Forced Labor
 
-Slavery, involuntary servitude, and forced labor are absolutely prohibited. Prison labor authorized by statute and civic obligations lawfully required of citizens by the Legislature — including jury service, military conscription, and civil emergency duties — do not constitute forced labor under this provision. This right is non-derogable under §1.19.a.
+Slavery, involuntary servitude, and forced labor are absolutely prohibited. Labor required of a person convicted of an offense by a court, and civic obligations lawfully required of citizens by the Legislature — including jury service, military conscription, and civil emergency duties — do not constitute forced labor under this provision. Labor for the benefit of a private party requires the person's consent. This right is non-derogable under §1.19.a.
 
 ### §1.5 — Civil and Political Liberties
 
@@ -303,7 +303,7 @@ During any period in which this Constitution bars a person from holding or seeki
 
 ### §2.18 — Domestic Insurrection
 
-Where armed insurrection against the constitutional order occurs within the Republic, both Consuls act within their respective domains and the Council of Ministers convenes and remains in session for the duration. Neither Consul may direct the other's domain. The Civic Consul reports to the Assembly at intervals defined by statute for as long as the response continues, as the Legat Consul reports to the Senate under §14.2. No report under this section may be omitted on grounds that the response is ongoing. This section confers no authority beyond that already held under §2.1 and §2.5.
+Where armed insurrection against the constitutional order occurs within the Republic, the Council of Ministers convenes and remains in session for the duration. Neither Consul may direct the other's domain. The Civic Consul reports to the Assembly at intervals defined by statute for as long as the response continues, as the Legat Consul reports to the Senate under §14.2. No report under this section may be omitted on grounds that the response is ongoing.
 
 ---
 

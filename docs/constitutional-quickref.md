@@ -61,7 +61,7 @@ Torture and cruel, inhuman, or degrading treatment are absolutely prohibited. No
 
 ### §1.4 — Prohibition of Slavery and Forced Labor
 
-Slavery, involuntary servitude, and forced labor are absolutely prohibited. Prison labor authorized by statute and civic obligations lawfully required of citizens by the Legislature — including jury service, military conscription, and civil emergency duties — do not constitute forced labor under this provision.
+Slavery, involuntary servitude, and forced labor are absolutely prohibited. Labor required of a person convicted of an offense by a court, and civic obligations lawfully required of citizens by the Legislature — including jury service, military conscription, and civil emergency duties — do not constitute forced labor under this provision.
 
 - **Cross-refs:** §1.19.a
 
