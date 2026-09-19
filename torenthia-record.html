@@ -64,19 +64,35 @@
   <main id="main-content">
     <a href="torenthia.html" class="back-link">← Back to The World</a>
 
+    <div class="source-identity-rail">
+      {% set relatedRailId = 'record-sources' %}
+      {% set relatedRailEyebrow = 'Who published it?' %}
+      {% set relatedRailTitle = 'Sources in the public record' %}
+      {% set relatedRailIntro = 'The Record mixes national reporting, broadcasters, local outlets, and official publication. Choose a source to filter the archive.' %}
+      {% set relatedItems = [
+        { kicker:'National press', title:'The Torenthian', url:'torenthia-record.html?source=The%20Torenthian', image:'logos/the-torenthian-logo.svg', imageAlt:'The Torenthian logo', text:'National newspaper coverage of politics, institutions, and public affairs.', cta:'Filter to source' },
+        { kicker:'Broadcast', title:'RNN', url:'torenthia-record.html?source=RNN', image:'logos/rnn-logo.svg', imageAlt:'RNN logo', text:'Republic-wide broadcast reporting and analysis.', cta:'Filter to source' },
+        { kicker:'Official record', title:'National Record System', url:'torenthia-record.html?source=National%20Record%20System', image:'logos/nrs-logo.svg', imageAlt:'National Record System logo', text:'Official notices, filings, findings, and records published through the NRS.', cta:'Filter to source' },
+        { kicker:'Local press', title:'The Dorven Ledger', url:'torenthia-record.html?source=The%20Dorven%20Ledger', image:'logos/the-dorven-ledger-logo.svg', imageAlt:'The Dorven Ledger logo', text:'Dorven and Orath reporting with a local civic and economic angle.', cta:'Filter to source' },
+        { kicker:'Territorial press', title:'The Korda Press', url:'torenthia-record.html?source=The%20Korda%20Press', image:'logos/the-korda-press-logo.svg', imageAlt:'The Korda Press logo', text:'Reporting from inside Korda during the Territory’s active constitutional dispute.', cta:'Filter to source' },
+        { kicker:'Broadcaster', title:'TNB', url:'torenthia-record.html?source=TNB', image:'logos/tnb-logo.svg', imageAlt:'TNB logo', text:'Regional TNB reporting from Verentum and Caldenmere editions.', cta:'Filter to source' }
+      ] %}
+      {% include "related-rail.njk" %}
+    </div>
+
     <form class="archive-filters" id="archiveFilters" role="search" hidden>
 <label>Search the archive<input type="search" name="q" placeholder="Title, person, provision or phrase"></label>
 <label>Document type<select name="type"><option value="">All types</option><option value="news">News</option><option value="nrs">NRS</option><option value="sc">Court</option><option value="dispatch">Dispatch</option><option value="civic">Civic Life / Ordinary Republic</option></select></label>
 <label>Active file<select name="file"><option value="">All files</option>{% for f in currentFiles %}<option value="{{ f.id }}">{{ f.short }}</option>{% endfor %}</select></label>
-<label>Jurisdiction<select name="place"><option value="">All jurisdictions</option>{% for s in stats.states %}<option>{{ s.name }}</option>{% endfor %}{% for s in stats.territories %}<option>{{ s.name }}</option>{% endfor %}</select></label><button type="reset" class="secondary-action">Clear filters</button></form>
+<label>Jurisdiction<select name="place"><option value="">All jurisdictions</option>{% for s in stats.states %}<option>{{ s.name }}</option>{% endfor %}{% for s in stats.territories %}<option>{{ s.name }}</option>{% endfor %}</select></label><label>Source<select name="source"><option value="">All sources</option><option>The Torenthian</option><option>RNN</option><option>National Record System</option><option>The Dorven Ledger</option><option>The Korda Press</option><option value="TNB">TNB</option></select></label><button type="reset" class="secondary-action">Clear filters</button></form>
 <div class="link-row">{% for f in currentFiles %}<a href="dossier-{{ f.id }}.html">{{ f.short }}</a>{% endfor %}</div>
 <p id="archiveCount" role="status">{{ collections.world | length }} public records · newest first</p>
-<div id="archiveResults">{% for p in collections.world | reverse %}<div class="archive-item" data-type="{{ p.data.worldKind }}" data-civic="{{ p.data.worldMundane or false }}" data-files="{{ p.data.worldArcs | join('|') }}" data-places="{{ p.data.worldJurisdictions | join('|') }}" data-refs="{{ p.data.worldProvisions | join(' ') }}">{% include "record-card.njk" %}</div>{% endfor %}</div>
+<div id="archiveResults">{% for p in collections.world | reverse %}<div class="archive-item" data-type="{{ p.data.worldKind }}" data-civic="{{ p.data.worldMundane or false }}" data-files="{{ p.data.worldArcs | join('|') }}" data-places="{{ p.data.worldJurisdictions | join('|') }}" data-refs="{{ p.data.worldProvisions | join(' ') }}" data-outlet="{{ p.data.worldOutlet }}">{% include "record-card.njk" %}</div>{% endfor %}</div>
 <p id="archiveEmpty" hidden>No records match these filters. Try a broader search or clear the filters.</p><button type="button" class="secondary-action" id="archiveMore" hidden>Show more records</button>
   </main>
 
 
   {% include "footer.njk" %}
-  <script src="nav.js"></script><script src="discovery.js"></script>
+  <script src="nav.js"></script><script src="discovery.js"></script><script src="related-rail.js"></script>
 </body>
 </html>
