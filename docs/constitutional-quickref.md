@@ -1022,7 +1022,7 @@ A State may maintain organized forces for disaster response, civil emergency, an
 
 ### §15.1 — Territorial Compact
 
-A Territory operates under a Territorial Compact — the restructuring agreement under §15.4 or the incorporation agreement under §15.6 where the Territory results from one of those processes, or otherwise a standard statutory framework the Legislature defines, which must provide for an elected local governing authority over matters of local concern — has federal protections under Article I, accesses social state…
+A Territory operates under a Territorial Compact: the restructuring agreement under §15.4 or the incorporation agreement under §15.6 where the Territory results from one of those processes, or otherwise a standard statutory framework the Legislature defines. Every Compact must provide for an elected local governing authority over matters of local concern.
 
 - **Cross-refs:** §12.1, §15.2, §15.4, §15.6
 
