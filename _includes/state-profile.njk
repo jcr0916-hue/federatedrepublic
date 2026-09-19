@@ -52,8 +52,8 @@
     { kicker: 'Primary text', title: stateName ~ ' State Constitution', url: 'State%20Constitutions/' ~ stateSlug ~ '-state-constitution.md', text: 'Read the State’s own constitutional text and institutional design.', cta: 'Read the Constitution' },
     { kicker: 'Geography', title: 'Locate ' ~ stateName ~ ' in the Republic', url: 'republic-at-a-glance.html#' ~ stateSlug, text: 'Open the labeled political map and jurisdiction directory.', cta: 'Open the map' },
     { kicker: 'Public record', title: 'What is happening in ' ~ stateName, url: 'torenthia-record.html?place=' ~ stateName, text: 'Browse published NRS records, reporting, court material, and other entries tied to this State.', cta: 'Browse the record' },
-    { kicker: 'Federal relationship', title: 'State powers and audit', url: 'annotated.html#s15-2', text: 'Follow the constitutional framework governing State status, audits, and remediation.', cta: 'Read §15.2' }
-    {% if stateFlag %},{ kicker: 'Identity', title: 'Flag of ' ~ stateName, url: stateFlag, image: stateFlag, imageAlt: stateFlagAlt, text: 'View the State flag at full size.', cta: 'View flag' }{% endif %}
+    { kicker: 'Federal relationship', title: 'State powers and audit', url: 'annotated.html#s15-2', text: 'Follow the constitutional framework governing State status, audits, and remediation.', cta: 'Read §15.2' },
+    { kicker: 'Identity', title: 'Flag of ' ~ stateName, url: stateFlag, image: stateFlag, imageAlt: stateFlagAlt, text: 'View the State flag at full size.', cta: 'View flag' }
   ] %}
   {% include "related-rail.njk" %}
   {% endif %}{% endfor %}
