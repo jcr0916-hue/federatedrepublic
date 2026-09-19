@@ -877,3 +877,18 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 @media(max-width:900px){.related-rail-track{grid-auto-columns:minmax(255px,68%)}}
 @media(max-width:600px){.related-rail{margin:1.75rem 0}.related-rail-head{align-items:flex-start}.related-rail-head p{display:none}.related-rail-track{grid-auto-columns:84%}.related-rail-control{width:40px;height:40px}}
 @media print{.related-rail-track{display:grid;grid-template-columns:repeat(2,1fr);overflow:visible}.related-rail-card{break-inside:avoid}.related-rail-controls{display:none}}
+
+
+/* Constitution discovery rails: contextual connections without interrupting the text. */
+.article-opening .article-related-rail{margin:1rem 0 .25rem;padding:1rem 0;border-bottom:0}
+.article-opening .article-related-rail .related-rail-head{margin-bottom:.7rem;align-items:center}
+.article-opening .article-related-rail .related-rail-head h3{margin:.1rem 0;font:600 1.25rem/1.2 'Cormorant Garamond',serif;color:var(--navy)}
+.article-opening .article-related-rail .related-rail-track{grid-auto-columns:minmax(210px,31%);gap:.75rem}
+.article-opening .article-related-rail .related-rail-card{min-height:175px;background:var(--cream)}
+.article-opening .article-related-rail .related-rail-card-body{padding:.85rem}
+.article-opening .article-related-rail .related-rail-card h4{margin:.35rem 0;font:600 1.08rem/1.25 'Cormorant Garamond',serif}
+.article-opening .article-related-rail .related-rail-card h4 a{color:var(--navy);text-decoration:none}
+.article-opening .article-related-rail .related-rail-card p{font-style:normal;font-size:.8rem;line-height:1.45;margin:.2rem 0 .65rem}
+@media(max-width:900px){.article-opening .article-related-rail .related-rail-track{grid-auto-columns:68%}}
+@media(max-width:600px){.article-opening .article-related-rail .related-rail-track{grid-auto-columns:86%}.article-opening .article-related-rail .related-rail-head>div:first-child{min-width:0}}
+@media print{.article-related-rail{display:none!important}}
