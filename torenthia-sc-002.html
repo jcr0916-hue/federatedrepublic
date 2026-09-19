@@ -61,7 +61,7 @@ worldRelated: ["torenthia-nrs-039.html"]
     @media(max-width:820px){.sc-masthead{padding:1rem}.opinion-meta{grid-template-columns:1fr}.main{padding:2rem 1rem 4rem}}
   </style>
 </head>
-<body>
+<body class="court-page">
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   {% include "nav.njk" %}
 
@@ -73,7 +73,7 @@ worldRelated: ["torenthia-nrs-039.html"]
   </div>
 </div>
 
-<main id="main-content"><div class="court-toc" role="navigation" aria-label="Opinion contents"><a href="#holding">Holding</a><a href="#opinion">Opinion</a><a href="#dissent">Dissent</a><a href="torenthia-record.html?type=sc">Court archive</a></div>
+<main id="main-content">{% include "court-navigation.njk" %}
 
   <div class="opinion-header">
     <h1 class="case-name">Korda Corridor Petitioners, et al.<br>v.<br>Joint Monitor Council</h1>
@@ -106,19 +106,19 @@ worldRelated: ["torenthia-nrs-039.html"]
       </div>
     </div>
 
-    <div class="question-box">
+    <div class="question-box" id="question" tabindex="-1">
       <div class="question-box-label">Constitutional Question Presented</div>
       <p>Whether a certified whole-Territory statehood petition under §15.2 affects a "different defined portion of the same Territory" from a certified corridor merger petition under §15.4, within the meaning of §15.5.a(1) — such that the Joint Monitor Council correctly determined the corridor referendum could not proceed and the Civic Consul was required to convene a Territory Convention under §15.5.a(4).</p>
     </div>
 
-    <div class="holding-box" id="holding">
+    <div class="holding-box" id="holding" tabindex="-1">
       <div class="holding-label">Holding</div>
       <p>Yes. A whole-Territory petition affects a "different defined portion" of the Territory from a corridor petition for purposes of §15.5.a(1), because the two claims describe incompatible dispositions of the same ground. The Joint Monitor Council's determination is affirmed. The Territory Convention continues. The interim stay of NRS-Y13-0671 is dissolved; the ninety-day period established under §15.5.a(4) resumes running as of this order, credited for the three days that had elapsed before the stay took effect.</p>
     </div>
   </div>
 
   <div class="opinion-section">
-    <h2 class="section-head" id="opinion">Opinion of the Court</h2>
+    <h2 class="section-head" id="opinion" tabindex="-1">Opinion of the Court</h2>
     <div class="opinion-byline">Justice Ola Vrentis</div>
     <div class="opinion-joined">Joined by Justices Aldren, Corse, Halvath, Imen, and Mevra</div>
 
@@ -141,13 +141,13 @@ worldRelated: ["torenthia-nrs-039.html"]
     </div>
   </div>
 
-  <div class="disposition">
+  <div class="disposition" id="disposition" tabindex="-1">
     <div class="disposition-label">Disposition</div>
     The petition for a declaration that §15.5.a(1) was not properly triggered, and the alternative request to restore the corridor referendum to the calendar, are denied. The Joint Monitor Council's determination is affirmed. The interim stay of NRS-Y13-0671 is dissolved; the ninety-day period under §15.5.a(4) resumes running as of this order, credited for the three days elapsed before the stay took effect. Costs to Plaintiffs.
   </div>
 
   <div class="dissent">
-    <h2 class="section-head" id="dissent">Dissenting Opinion</h2>
+    <h2 class="section-head" id="dissent" tabindex="-1">Dissenting Opinion</h2>
     <div class="opinion-byline">Justice Pael Doran</div>
     <div class="opinion-joined">Joined by Justices Careth and Norven</div>
 
@@ -177,5 +177,14 @@ worldRelated: ["torenthia-nrs-039.html"]
 {% include "footer.njk" %}
 
   <script src="nav.js"></script>
+<script>
+document.querySelectorAll('.court-guide a[href^="#"]').forEach(link=>{
+  link.addEventListener('click',()=>{
+    document.getElementById('courtContents').open=false;
+    const target=document.getElementById(link.hash.slice(1));
+    if(target)requestAnimationFrame(()=>target.focus({preventScroll:true}));
+  });
+});
+</script>
 </body>
 </html>

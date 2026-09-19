@@ -836,3 +836,16 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
   .source-disclosure::details-content { content-visibility:visible; }
   .source-disclosure > div { display:block!important; }
 }
+
+/* A compact guide to the structure of a Court opinion. */
+.court-guide { position:sticky;top:56px;z-index:5;background:var(--cream2);border-top:2px solid var(--gold2);border-bottom:1px solid var(--border);margin-bottom:1.5rem; }
+.court-guide summary { cursor:pointer;padding:.8rem 1rem;font:600 1.2rem 'Cormorant Garamond',serif;color:var(--navy); }
+.court-guide-links { max-height:45vh;overflow:auto;padding:0 1rem .75rem;scrollbar-width:thin;scrollbar-color:var(--gold2) var(--cream2); }
+.court-guide-links a { display:block;padding:.65rem 0;border-top:1px solid var(--border);text-decoration:none; }
+.court-guide-links strong,.court-guide-links span { display:block; }
+.court-guide-links strong { font-size:.88rem;text-decoration:underline;text-decoration-color:var(--gold2);text-underline-offset:.2em; }
+.court-guide-links span { color:var(--text);font-size:.8rem; }
+.court-page main a,.court-page main a:visited { color:var(--navy);text-decoration-color:var(--gold2);text-underline-offset:.2em; }
+.court-guide a:focus-visible,.court-guide summary:focus-visible { outline:2px solid var(--gold2);outline-offset:2px; }
+.court-page #question,.court-page #holding,.court-page #opinion,.court-page #disposition,.court-page #dissent { scroll-margin-top:125px; }
+@media print { .court-guide { display:none; } }
