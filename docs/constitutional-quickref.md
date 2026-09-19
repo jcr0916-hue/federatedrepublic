@@ -354,9 +354,9 @@ During any period in which this Constitution bars a person from holding or seeki
 
 ### §2.18 — Domestic Insurrection
 
-Where armed insurrection against the constitutional order occurs within the Republic, both Consuls act within their respective domains and the Council of Ministers convenes and remains in session for the duration. Neither Consul may direct the other's domain.
+Where armed insurrection against the constitutional order occurs within the Republic, the Council of Ministers convenes and remains in session for the duration. Neither Consul may direct the other's domain.
 
-- **Cross-refs:** §14.2, §2.1, §2.5
+- **Cross-refs:** §14.2
 
 ---
 
