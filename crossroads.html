@@ -38,7 +38,7 @@
   .def-pop::after{content:"";position:absolute;top:100%;left:1.2rem;border:6px solid transparent;border-top-color:var(--ink)}
 
   /* ---- Meters ---- */
-  .meters{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;position:sticky;top:0;background:var(--cream);padding:1rem 0 .9rem;z-index:10;border-bottom:1px solid var(--border);margin-bottom:1.6rem}
+  .meters{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.8rem;position:sticky;top:0;background:var(--cream);padding:1rem 0 .9rem;z-index:10;border-bottom:1px solid var(--border);margin-bottom:1.6rem}
   .meter-label{font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem;display:flex;justify-content:space-between;align-items:baseline}
   .meter-val{font-weight:700;color:var(--navy);font-size:.72rem}
   .meter-val.flash-up{color:var(--rise)}
@@ -74,7 +74,7 @@
   .ending{background:var(--navy);color:var(--cream);border-radius:12px;padding:2rem 1.6rem;margin-top:1rem}
   .ending h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.9rem;color:var(--gold);margin-bottom:1rem}
   .ending p{font-size:1.02rem;line-height:1.75;color:#e8e0d0;margin-bottom:1.2rem}
-  .ending .final-meters{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.3rem 0}
+  .ending .final-meters{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.8rem;margin:1.3rem 0}
   .ending .fm{text-align:center}
   .ending .fm-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold)}
   .ending .fm-label{font-family:'JetBrains Mono',monospace;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:#b8ac93}
@@ -92,10 +92,14 @@
     <h1 class="title" id="introTitle"></h1>
     <p class="premise" id="introPremise"></p>
     <div class="scope" id="introScope"></div>
-    <button class="start-btn" onclick="CR.start()">Step in →</button>
+    <p id="gameNote" class="premise"></p>
+    <div id="rolePicker"></div>
+    <p id="loadError" role="alert"></p>
+    <button id="startButton" class="start-btn" disabled onclick="CR.start()">Step in →</button>
     <p class="ft-hint" style="margin-top:1.2rem">Hover any <span class="def" style="border-bottom:1px dotted var(--gold2)">underlined term<span class="def-pop">Terms you might not know are defined on hover, so you can start without reading anything else first.</span></span> for a quick definition. Nothing you do here is saved.</p>
   </div>
 
+  <p style="margin:1rem 0"><a href="crossroads.html?game=korda-crossroads.json">Korda Convention</a> · <a href="crossroads.html?game=thoss-crossroads.json">The Dark Horse (sealed)</a></p>
   <!-- PLAY -->
   <div id="play" class="hidden">
     <div class="meters" id="meters"></div>
@@ -103,17 +107,24 @@
   </div>
 </div>
 
+<script src="crossroads-engine.js"></script>
 <script>
 const CR = (function(){
-  let data=null, meters={}, current=null, busy=false;
+  let data=null, meters={}, current=null, busy=false, run=null;
+  const engine=CrossroadsEngine;
 
   async function load(){
-    const res = await fetch('thoss-crossroads.json');
+    const res = await fetch(engine.gameFile(location.search));
+    if(!res.ok) throw Error('Unable to load this game. Please reload to try again.');
     data = await res.json();
     document.getElementById('introTitle').innerHTML = data.title;
     document.getElementById('introPremise').innerHTML = defify(data.premise);
     document.getElementById('introScope').innerHTML =
       data.articles.map(a=>`<span class="chip">${a}</span>`).join('');
+    document.getElementById('gameNote').textContent=data.note || '';
+    document.getElementById('rolePicker').innerHTML=data.roles ? `<fieldset style="padding:1rem;margin-bottom:1rem"><legend>Who are you walking into the room as?</legend>${data.roles.map(r=>`<label class="choice" style="display:block;margin:.6rem 0"><input type="radio" name="role" value="${r.id}"> ${r.card}</label>`).join('')}</fieldset>` : '';
+    document.getElementById('startButton').disabled=!!data.roles;
+    document.querySelectorAll('input[name="role"]').forEach(input=>input.addEventListener('change',()=>{document.getElementById('startButton').disabled=false;}));
   }
 
   // Replace <def term="X">label</def> with hover spans from glossary
@@ -125,12 +136,20 @@ const CR = (function(){
   }
 
   function start(){
-    meters = {};
-    data.meters.forEach(m=> meters[m.id]=m.start);
+    if(!data || busy) return;
+    const role=document.querySelector('input[name="role"]:checked')?.value;
+    try { run=engine.initialize(data,role); } catch(e){ document.getElementById('loadError').textContent=e.message; return; }
+    meters=run.meters;
+    document.getElementById('loadError').textContent='';
+    document.getElementById('meters').style.display='';
     document.getElementById('intro').classList.add('hidden');
     document.getElementById('play').classList.remove('hidden');
     renderMeters(true);
-    goScene(data.scenes[0].id);
+    const roleData=data.roles?.find(r=>r.id===run.role);
+    if(roleData){
+      current={title:roleData.name};
+      showResponse(roleData.introduction,null,()=>goScene(data.scenes[0].id));
+    } else goScene(data.scenes[0].id);
   }
 
   function renderMeters(init, deltas){
@@ -148,24 +167,23 @@ const CR = (function(){
     }).join('');
   }
 
-  function applyDeltas(deltas){
-    if(!deltas) return;
-    Object.entries(deltas).forEach(([k,v])=>{
-      if(meters[k]!==undefined) meters[k]=Math.max(0,Math.min(100,meters[k]+v));
-    });
-    renderMeters(false, deltas);
-  }
-
   function scene(id){ return data.scenes.find(s=>s.id===id); }
 
   function goScene(id){
+    if(data.rules==='korda' && id!=='s6_korda' && (run.meters.days<=0 || run.state.deliberateLapse)) id='s6_korda';
     current = scene(id);
+    engine.enter(data,run,current);
+    if(data.rules==='korda' && id!=='s6_korda' && meters.days<=0){ goScene('s6_korda'); return; }
+    renderMeters(false);
+    const allowed=engine.fragments(current,run);
+    const extra=data.rules==='korda' && id==='s4_korda' ? `<div class="response">${defify(current.roleBodies[run.role])}<br><br>${engine.count(data,run)}<br><br>Coalition access: interior ${meters.interior}, corridor ${meters.corridor}, swing ${meters.swing}. Days remaining: ${meters.days}. These are game indicators, not delegate votes or referendum polling.</div>` : '';
     const area = document.getElementById('sceneArea');
     area.innerHTML = `
       <div class="scene-tag">${current.title}</div>
       <div class="scene-body">${defify(current.body)}</div>
+      ${extra}
       <div class="choices" id="choices">
-        ${current.buttons.map(b=>`<button class="choice" data-route="${b.route}">${defify(b.label)}</button>`).join('')}
+        ${current.buttons.filter(b=>allowed[b.route]).map(b=>`<button class="choice" data-route="${b.route}">${defify(b.label)}</button>`).join('')}
       </div>
       ${current.freetext ? freetextBlock() : ''}
     `;
@@ -195,7 +213,7 @@ const CR = (function(){
   function chooseButton(route){
     if(busy) return;
     const frag = current.fragments[route];
-    if(!frag){ console.warn('no fragment for', route); return; }
+    if(!Object.hasOwn(current.fragments,route) || !engine.available(frag,run)){ console.warn('no fragment for', route); return; }
     resolve(frag, route);
   }
 
@@ -223,7 +241,7 @@ const CR = (function(){
       busy=false;
       return;
     }
-    if(route === 'out_of_bounds' || !route || !current.fragments[route]){
+    if(route === 'out_of_bounds' || !route || !Object.hasOwn(current.fragments,route) || !engine.available(current.fragments[route],run)){
       // graceful in-world redirect, replay the scene
       const oob = current.outOfBounds;
       showResponse(oob.text, null, ()=> goScene(oob.next), true);
@@ -239,7 +257,7 @@ const CR = (function(){
   // Falls back to a local keyword stub if the API is unreachable (e.g. local file view).
   async function classify(text){
     // Build the fragment descriptor list for the classifier (id + desc only — never the text)
-    const fragments = Object.entries(current.fragments).map(([id,f])=>({ id, desc: f.desc || '' }));
+    const fragments = Object.entries(engine.fragments(current,run)).map(([id,f])=>({ id, desc: f.desc || '' }));
     try {
       const res = await fetch('/api/crossroads', {
         method:'POST',
@@ -265,6 +283,7 @@ const CR = (function(){
   // Offline fallback only. The deployed feature uses the Sonnet classifier above.
   async function stubClassify(text){
     await new Promise(r=>setTimeout(r, 400));
+    if(data.rules==='korda') return 'out_of_bounds'; // No guessed cross-role routing offline.
     const t = text.toLowerCase();
     if(current.id==='s1'){
       if(/(caucus|territorial|convene|listen|bloc|base)/.test(t)) return 's1_caucus';
@@ -300,12 +319,12 @@ const CR = (function(){
     return 'out_of_bounds';
   }
 
-  let lastFragmentId = null;
   function resolve(frag, fragId){
-    lastFragmentId = fragId || lastFragmentId;
-    applyDeltas(frag.deltas);
-    showResponse(frag.text, frag.deltas, ()=>{
-      if(frag.next && data.endings[frag.next]) showEnding(frag.next);
+    const status=engine.apply(data,run,current,fragId);
+    renderMeters(false,frag.deltas);
+    const suffix=status && data.lockText ? '<br><br>'+data.lockText[status] : '';
+    showResponse(frag.text+suffix, frag.deltas, ()=>{
+      if(frag.next==='resolve' || (frag.next && data.endings[frag.next])) showEnding(frag.next);
       else if(frag.next) goScene(frag.next);
     });
   }
@@ -320,45 +339,22 @@ const CR = (function(){
     document.getElementById('contBtn').addEventListener('click', cont);
   }
 
-  function selectEnding(){
-    const S = meters.standing, A = meters.allies, I = meters.intent;
-    const last = lastFragmentId || '';
-    // --- Legat Consul branch. Checked BEFORE the allies floor below: the LC
-    //     path spends allies by construction, so a gutted chamber is the PRICE
-    //     of the loud door, not evidence she never ran.
-    if(last === 's4lc_declare')     return 'legat_run';
-    if(last === 's4lc_withdraw')    return 'returned';
-    if(last === 's4lc_wait')        return 'legislator';
-    if(last === 's4lc_conditional') return 'legislator';
-    // Explicit final-choice outcomes first
-    if(last === 's4_kingmaker') return 'kingmaker';
-    // If she never committed and the coalition dispersed -> back to legislator
-    if(I < 25 || A < 30) return 'legislator';
-    // Long game: high standing, real allies, but intent kept deliberately mid — both doors open
-    if(I >= 30 && I < 52 && A >= 55) return 'long_game';
-    // A path that leaned onto the public/Legat stage (high standing, intent present, allies not chamber-deep)
-    if(last === 's4_wait' && I >= 30 && A < 60) return 'legat_run';
-    // Committed to the quiet office:
-    if(I >= 52){
-      return A >= 65 ? 'commit_civic' : 'commit_civic_thin';
-    }
-    // Fallbacks by shape
-    if(A >= 55) return 'long_game';
-    return 'legislator';
-  }
+  function selectEnding(){ return engine.selectEnding(data,run); }
 
   function showEnding(id){
     const key = (id === 'resolve') ? selectEnding() : id;
-    const e = data.endings[key] || data.endings['resolve'];
+    const base = data.endings[key] || data.endings['resolve'];
+    const e = {...base,...base.variants?.[run.role]};
     const area = document.getElementById('sceneArea');
     area.innerHTML = `
       <div class="ending">
         <h2>${e.title}</h2>
         <p>${defify(e.text)}</p>
+        ${e.coda ? `<p>${e.coda} ${key!=='hung_convention' ? engine.tone(data,run) : ''}</p>` : ''}
         <div class="final-meters">
           ${data.meters.map(m=>`<div class="fm"><div class="fm-val">${meters[m.id]}</div><div class="fm-label">${m.label}</div></div>`).join('')}
         </div>
-        <div class="ending-coda">The real Elin Thoss walked one of these roads too. When her story publishes, you'll know which — and whether the path you chose was the one that became true.</div>
+        <div class="ending-coda">${data.endingCoda || "The real Elin Thoss walked one of these roads too. When her story publishes, you'll know which — and whether the path you chose was the one that became true."}</div>
         <button class="replay" onclick="CR.replay()">Play again</button>
       </div>`;
     document.querySelector('.meters').style.display='none';
@@ -366,10 +362,15 @@ const CR = (function(){
 
   function replay(){
     document.querySelector('.meters').style.display='';
-    start();
+    if(data.roles){
+      run=null; meters={}; current=null; busy=false;
+      document.getElementById('sceneArea').innerHTML='';
+      document.getElementById('play').classList.add('hidden');
+      document.getElementById('intro').classList.remove('hidden');
+    } else start();
   }
 
-  load();
+  load().catch(e=>{document.getElementById('loadError').textContent=e.message;});
   return { start, replay };
 })();
 </script>

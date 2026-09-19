@@ -1,12 +1,12 @@
 # Crossroads: The Korda Convention — Feature Plan
 *Second installment of the "Living Crossroads" interactive format. First installment: `thoss-crossroads.json`, now SEALED.*
-*Status: PLANNING, revised 260917 (twice) — fixed canon/factual errors, named real engine scope, and added the two-lever coalition-building distinction and the ratification coda. Nothing below is authored prose yet — this is the structural plan to greenlight before fragment-writing begins.*
+*Status: IMPLEMENTED · 260918. Six scenes, both roles, five dual-role endings, ratification codas, reusable engine, and focused validation complete. The implementation addendum below supersedes provisional trigger shapes and drafting status; earlier planning remains as design history.*
 
 ---
 
 ## 1. What this is
 
-A branching, meter-driven interactive piece letting a reader play a Korda Territory Assembly delegate seated at the Territory Convention. The Convention convened under §15.5.a(4) following the Joint Monitor Council's determination that §15.5.a(1) applies (nrs-034); corridor petitioners then sued the JMC over that determination (nrs-037), the Court paused the Convention's clock while it decided (nrs-039), and ultimately affirmed the JMC 6–3 (*Korda Corridor Petitioners, et al. v. Joint Monitor Council*, SC-Y13-0119, decided Y13 M12 — `torenthia-sc-002.html`). The Convention has 90 days from its first session to produce a resolution or all petitions lapse together. The reader plays through a compressed version of that clock and reaches one of five possible endings.
+A branching, meter-driven interactive piece letting a reader play a Korda Territory Assembly delegate seated at the Territory Convention. The Convention convened under §15.5.a(4) following the Joint Monitor Council's determination that §15.5.a(1) applies (nrs-034); corridor petitioners then sued the JMC over that determination (nrs-037), the Court paused the Convention's clock while it decided (nrs-039), and ultimately affirmed the JMC 6–3 (*Korda Corridor Petitioners, et al. v. Joint Monitor Council*, SC-Y13-0119, decided Y13 M12 — `torenthia-sc-002.html`). The Convention has 90 days from its first session to produce a resolution or all petitions lapse together. After the Supreme Court dissolved the interim stay on Month 12 Day 26, three days were credited and roughly 87 days remained. Since then the Convention has voted 25–8 to relocate its remaining sessions from Verentum into Korda (`torenthia-news-079.html`), and the public record has begun to establish delegates beyond Orin (`torenthia-news-081.html`). The interactive therefore begins at the first sitting in Korda after relocation, with the litigation settled and approximately 87 days on the clock. The reader plays through a compressed version of that remaining period and reaches one of five possible endings.
 
 **Corrected 260917:** the previous draft of this plan cited the case as *Kelvant Corridor Committee v. Elections Panel* (SC-Y13-0144) — that citation came from a discarded AI test opinion, never adopted as canon, and named the wrong defendant (Elections Panel instead of the JMC) with the wrong docket. The real case is above. It also framed the Convention as "triggered by" the court case; it wasn't — the JMC's determination triggered the Convention, and the court case is a challenge to that determination that the Convention survived.
 
@@ -57,38 +57,44 @@ Both roles must be able to reach all five endings. A Kesh playthrough reaching C
 | `interior` | Interior Support | 58 | 42 | 0 | 100 |
 | `corridor` | Corridor Support | 30 | 64 | 0 | 100 |
 | `swing` | Swing Votes | 35 | 35 | 0 | 100 |
-| `days` | Days Remaining | 90 | 90 | 0 | 90 |
+| `days` | Days Remaining | 87 | 87 | 0 | 87 |
 
-Starting values are placeholders for balancing, not final — tune once fragment deltas are written so neither role trivially wins or trivially loses. `days` counts **down**; confrontational/rushed choices cost more days, careful coalition-building costs fewer per action but more total actions.
+Starting values are placeholders for balancing, not final — tune once fragment deltas are written so neither role trivially wins or trivially loses. `days` begins at **87**, matching the published post-stay position, and counts down. The number is a compressed game clock, not a promise that every fictional scene maps one-for-one to a published calendar day.
 
 A fifth internal-only flag (not shown as a meter bar, tracked in the ending logic) — `trust`: starts neutral, damaged by broken promises or a mishandled walkout threat, repaired by honored conditional commitments. This is what separates Negotiated Split from Ugly Split at the ending stage without needing a fifth visible bar.
+
+### What the support meters mean — added 260918
+
+`interior`, `corridor`, and `swing` are **not direct referendum polling and not literal vote counts for a particular constitutional outcome.** They track the playable delegate's credibility, coalition access, and ability to move members within those blocs. A Kesh playthrough can build corridor credibility and spend it selling a compromise; a Threll playthrough can earn corridor respect without abandoning whole-Territory Statehood. This keeps persuasion distinct from concession and prevents the meters from becoming disguised policy sliders.
+
+Public polling may exist elsewhere in the live World/Stats layer, but it is environmental context only. It is not a fifth player-controlled meter and does not determine the Convention ending.
 
 ---
 
 ## 5. Scene outline (6 decision scenes + resolve)
 
-### Scene 1 — "Opening Session"
-First convocation. Procedural choice: push for an immediate resolution vote, open with a cross-bloc working group, or (role-specific) — Threll can propose seating Orin's rider language on the agenda immediately; Kesh can propose a corridor caucus meeting first to agree a common position before engaging.
-*Dimensions: who (Speaker-analog convening officer, own bloc, opposing bloc) / what (fast vote, working group, pre-caucus) / how (public motion, private outreach).*
+### Scene 1 — "First Sitting in Korda"
+The move from Verentum is complete. The Court case is over; the room now has to do political work. The player chooses how to use the first local sitting: force the substantive question early, build a cross-bloc working group, or spend the opening days organizing and persuading without changing the role's stated goal. Role-specific options let Threll consolidate the inland case while reaching toward Mire/Rell-type delegates, while Kesh can organize the corridor around the fact that its certified referendum was canceled before a ballot. **No concession is required in Scene 1.** This is the first place the game teaches the difference between holding a position and merely repeating it.
+*Dimensions: own bloc / opposing bloc / swing delegates; public motion / working group / private whip count; speed versus information.*
 
-### Scene 2 — "Orin's Rider"
-Orin proposes entrenching a permanent fiscal equalization formula into any Statehood resolution. Threll can champion it outright, water it down to buy corridor goodwill, or hold it back as leverage. Kesh can only react: accept it as the price of being taken seriously, demand a corridor-side equivalent, or read it as proof the interior won't compromise on anything else.
-*This is the scene that reactivates the stalled Fiscal Equalization thread regardless of ending — worth preserving even in "bad" endings.*
+### Scene 2 — "Orin's Offer"
+Orin proposes that any Convention resolution carry an enforceable fiscal/infrastructure commitment addressing the capacity queue that helped produce the whole-Territory grievance. It is **not** a permanent constitutional entrenchment of the national §12.6 formula and does not resolve that stalled federal fight by side door. Threll can champion the commitment, narrow it to avoid turning the Convention into a fiscal conference, or hold it back as leverage. Kesh can accept a Territory-wide infrastructure guarantee, demand a corridor-side equivalent, or argue that the Convention should decide status before attaching spending commitments.
+*This scene can echo the stalled Fiscal Equalization thread without hijacking or resolving it.*
 
-### Scene 3 — "The Corridor Ultimatum"
+### Scene 3 — "The Corridor Line"
 A corridor delegate (Kesh's own bloc, or — if playing Kesh — Kesh himself as the one making it) threatens to walk without merger language preserved in some form. Options: offer a carve-out/autonomy zone, hold the line for full unity, or let them walk. Kesh-specific option: make the threat *himself*, publicly, spending `corridor` support to spike `swing` attention. Threll-specific option: call the bluff directly.
 
 **Added 260917 — two separate levers, not one.** Fragment deltas across Scenes 1, 3, and 5 should distinguish *concession* moves (which soften the character's own stated goal to buy support) from *persuasion/procedural* moves (direct outreach to `swing`, exploiting an opposing bloc's misstep, making an ultimatum backfire on whoever issued it) that can move the same meters without touching the goal at all. This is what keeps an uncompromising playthrough genuinely winnable rather than just harder-then-punished: holding the line *and* actively working the room is a real path to Clean Whole Statehood or the corridor's best outcome; holding the line and doing nothing else is what should reliably produce Hung Convention. Two immovable sides that only restate themselves get deadlock by default — that's the equilibrium this piece is actually about. Scenes 1 and 3 are the natural homes for the no-concession persuasion options; don't let every meter-moving choice route through "what will you give up."
 
-### Scene 4 — "The Math Check"
+### Scene 4 — "The Count"
 Midpoint. The scene narrates the actual tally in plain language (not just meter bars) — a fellow delegate states where things stand relative to what's needed for a resolution. This is the designed moment for a pivot: if a player's initial path is visibly failing, they get an explicit, in-fiction opportunity to change strategy rather than being told to. No forced branch — just information.
 
-### Scene 5 — "Last Dealmaking"
-Final trade before time runs out: a public concession, a promise on record, a favor called in. Highest-variance scene — big deltas in both directions. This is where `trust` moves most.
+### Scene 5 — "Put It in Writing"
+Final coalition-building before time runs out: a concession, a procedural guarantee, a promise on record, or a last persuasion push that asks for votes without changing the player's substantive goal. Highest-variance scene — big deltas in both directions. This is where `trust` moves most and where tentative understandings become actual resolution language.
 
 **Added 260917 — resolutionLocked spec.** The ending logic in §6 branches on a `resolutionLocked` flag that the original draft never assigned anywhere. Fix: each Scene 5 branch that closes a deal on the record (as opposed to a tentative or exploratory move) sets `resolutionLocked: true` as part of its delta. A move that extracts a promise but stops short of committing it publicly should NOT set the flag — that distinction is exactly what should separate "a deal that holds" from "a deal that talk radio later says never really existed."
 
-### Scene 6 — "Day 90"
+### Scene 6 — "The Clock"
 Either a resolution is locked in (per accumulated state) or the clock simply runs out. If `days` hits 0 before a resolution was secured in an earlier scene, this scene resolves straight to Hung Convention regardless of support levels.
 
 **Added 260917.** Also give Scene 6 its own independent check: if no Scene 5 fragment set `resolutionLocked`, but accumulated support has clearly cleared one side's threshold (the same numeric bars §6 already uses for ending selection), Scene 6 can itself lock the resolution at the last moment — a quietly-successful playthrough shouldn't be forced into Hung Convention purely because the player never hit an explicit "close the deal" button earlier.
@@ -105,7 +111,7 @@ Five outcomes, each with two text variants (Interior-flavored / Corridor-flavore
 | Ending id | Title | Trigger shape |
 |---|---|---|
 | `clean_statehood` | Clean Whole Statehood | `interior` high, `corridor` low, rider not entrenched or entrenchment failed |
-| `grand_bargain` | The Grand Bargain | `interior` high, rider secured in Scene 2, `trust` neutral-or-better at Scene 5 |
+| `grand_bargain` | The Grand Bargain | broad support across blocs, a substantive package of protections/commitments, and `trust` neutral-or-better |
 | `negotiated_split` | Negotiated Split | `corridor` held reasonably high, concessions extracted, `trust` neutral-or-better |
 | `ugly_split` | Ugly Split | `corridor` outcome reached but `trust` damaged — mishandled ultimatum or broken promise |
 | `hung_convention` | Hung Convention | `days` reaches 0 with no resolution locked, OR a deliberate late pivot to this outcome at Scene 4/5 |
@@ -116,7 +122,7 @@ Five outcomes, each with two text variants (Interior-flavored / Corridor-flavore
 function selectEnding() {
   if (days <= 0 && !resolutionLocked) return 'hung_convention';
   if (lastFragmentId === 's5_deliberate_lapse') return 'hung_convention';
-  if (riderSecured && interior >= 65 && trust >= 0) return 'grand_bargain';
+  if (broadPackage && interior >= 60 && corridor >= 45 && swing >= 55 && trust >= 0) return 'grand_bargain';
   if (interior >= 65 && corridor < 35) return 'clean_statehood';
   if (corridor >= 50 && trust >= 0) return 'negotiated_split';
   if (corridor >= 40 && trust < 0) return 'ugly_split';
@@ -140,4 +146,61 @@ The **tone** of what follows this line (confident, uneasy, openly doubtful) trac
 
 **Keep the coda speculative, never a verdict.** Consistent with §1's non-canon framing: this piece should never assert whether a hypothetical referendum passes or fails, only how confident the delegate is walking into one. The real Convention's real outcome, whenever it publishes, is under no obligation to agree with anything a reader chose here — that tension is the point, not a bug to smooth over.
 
-**Scope note:** this is a text addition to existing endings, not a new interactive scene. A playable ratification-campaign scene (an actual Scene 7) is a legitimate future idea but is new scope on top of everything already in this plan — don't reach for it unless the Monday target moves.
+**Scope note:** this is a text addition to existing endings, not a new interactive scene. A playable ratification-campaign scene (an actual Scene 7) remains legitimate future scope, but it is not part of this build. Do not add it until the six-scene Convention game, role picker, and ending balance are working.
+
+
+---
+
+## 8. Authored-content status — 260918
+
+The structural plan is now approved for drafting. Full role-picker copy, both playable-role introductions, Scene 1, Scene 2 (`Orin's Offer`), and Scene 3 (`The Corridor Line`) now live in `docs/KORDA-CROSSROADS-CONTENT-DRAFT.md`.
+
+Drafting order from here:
+1. Balance Scenes 1–3 against both roles, especially the no-concession persuasion paths and escalation risks.
+2. Author Scene 4 (`The Count`) as the explicit midpoint diagnosis/pivot.
+3. Author Scene 5 (`Put It in Writing`) and Scene 6 (`The Clock`).
+4. Only then wire role selection into the engine and move authored fragments into `korda-crossroads.json`.
+
+The current public Korda storyline remains on the back burner while this feature is built. The Crossroads piece is non-canon and must not advance the real Convention.
+
+
+## 9. Production implementation and balancing — 260918
+
+All six scenes and ten ending variants are authored in `KORDA-CROSSROADS-CONTENT-DRAFT.md` and transferred into `korda-crossroads.json`. Scenes 1–3 retain their authored prose and provisional numeric deltas unchanged. Starting meters remain Threll 58/30/35/87 and Kesh 42/64/35/87. No public World record, canon event, statistic, or Convention result is added.
+
+`crossroads.html` loads Korda by default. Explicit `?game=korda-crossroads.json` and `?game=thoss-crossroads.json` select the allowlisted installments; unknown values fail closed with links to both games. The intro requires a role for Korda, displays that role’s full introduction, and resets all meters and state on replay. `crossroads-engine.js` contains deterministic state and selection rules shared by the browser and tests. The Thoss selector is preserved, with its sealed data unchanged; the engine still accepts the legacy single-role schema and keyword fallback. Build passthrough includes both game files and the shared engine.
+
+Buttons, classifier descriptor lists, and returned fragment IDs all use the same role/state availability checks. The classifier receives no response or ending prose and cannot set state. `api/crossroads.js` is unchanged. Korda fails safely to the authored retry response when classification is unavailable; buttons work offline. `ai-features.html` replaces an erroneous duplicate World page with the transparency page for all four features, including classifier-only routing and request/privacy details.
+
+### Final thresholds (supersede §6’s provisional pseudocode)
+
+Support measures credibility and coalition access, not a policy preference, literal vote count, or public polling. A chosen **proposal** is therefore required. High corridor respect no longer disqualifies clean whole-Statehood: this deliberately removes the provisional `<35` corridor ceiling, including the 65/35 boundary trap, so effective persuasion is not punished.
+
+| Proposal | Required coalition and terms | Ending |
+|---|---|---|
+| Clean whole-Statehood | Interior ≥65, swing ≥55, no autonomy rider | Clean Whole Statehood |
+| Whole-Korda package | Interior ≥60, corridor ≥45, swing ≥55, trust ≥0, written broad package with autonomy and infrastructure | The Grand Bargain |
+| Split | Interior ≥30, corridor ≥50, swing ≥55, trust ≥0 | Negotiated Split |
+| Split with damaged trust | Interior ≥25, corridor ≥40, swing ≥45, trust <0 | Ugly Split |
+| Any unsupported/expired proposal, or deliberate lapse | No timely secured resolution | Hung Convention |
+
+The modest interior and swing floors prevent a corridor-only statement from automatically becoming a Convention resolution. A split can be won without conceding merger, by accepting responsibility for transition obligations and persuading the other blocs. Threll can likewise win clean Statehood without autonomy or merger concessions.
+
+The midpoint charges 15 compressed drafting days once. Escalation charges another 10 days at medium walkout risk or 25 at high risk, also once; retrying free text cannot repeat that cost. Scene 4 explicitly diagnoses readiness, distrust, fractures, and unfulfilled guarantees before offering persuasion, repair, an opposite-map pivot, passive waiting, or deliberate lapse. Later repair cannot refund lost days.
+
+Scene 5’s public commitments attempt to set `resolutionLocked` **only if** the coalition clears the corresponding thresholds and days remain after the drafting cost. A submitted but unsupported text is explicitly reported as unlocked. Its proposal still survives to Scene 6. Private assurances never lock in Scene 5; Scene 6 independently attempts to secure the same qualifying proposal while time remains. Exactly zero days is too late for a new lock. If the final attempt lacks a coalition, Scene 6 exhausts the remaining days so the lapse ending’s meter agrees with its text. A previously secured resolution survives later calendar expiry. The locked ending is recorded so a subsequent step cannot silently change its substance.
+
+Deliberate lapse is persistent state, not an inspection of the last fragment ID (which Scene 6 necessarily replaces). Expiry skips further bargaining and goes to The Clock. Passive repetition consumes enough time and swing access to make deadlock meaningful. A threatened or actual walkout can still be recovered through timely coalition work; it is neither a free leverage bonus nor an automatic loss.
+
+Grand Bargain requires the completed package, not merely accepting Orin’s offer. The fast, trust-damaging split is available only after escalation, coalition fracture, or infrastructure bargaining leverage. Normal negotiated-split drafting can also lead to Ugly Split if accumulated trust remains negative. Ratification tone uses trust and coalition margin. All endings include role-specific codas; Hung Convention correctly has no resolution to ratify. No coda predicts a referendum result or bypasses subsequent constitutional steps.
+
+### Verification and reproducible routes
+
+Run `npm run test:crossroads`, `npm run test:assets`, and `npm run build`. The focused suite enumerates every legal Korda route (1,670 Threll, 1,664 Kesh), requiring all five endings for each role. It checks both schemas, role/state gates, starting values, clocks, locks, substantive package requirements, replay, real-page classifier payloads and reply rejection, and the unchanged API’s routing contract. A sealed Thoss hash and legacy-selector boundary comparisons guard compatibility.
+
+No-concession witness routes:
+- Threll: `s1_threll_count` → `s2_threll_narrow` → `s3_threll_persuade` → `s4_threll_persuade` → `s5_threll_clean` → `s6_record`.
+- Kesh: `s1_kesh_count` → `s2_kesh_accept` → `s3_kesh_persuade` → `s4_kesh_persuade` → `s5_split` → `s6_record`.
+- Threll can replace the explicit clean commitment with `s5_tentative` and still secure the qualifying resolution at Scene 6.
+
+These are narrative balancing assumptions, not predictions about the real Convention or a simulated 33-member roll call. Temporary authoring scripts are not part of the repository; authored Markdown and production JSON are retained together.
