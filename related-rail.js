@@ -1,5 +1,7 @@
 (function(){
   function initRail(rail){
+    if(rail.dataset.railReady==='true')return;
+    rail.dataset.railReady='true';
     var track=rail.querySelector('[data-rail-track]');
     var prev=rail.querySelector('[data-rail-prev]');
     var next=rail.querySelector('[data-rail-next]');
