@@ -5,12 +5,12 @@ Implements the September 19 website review through shared navigation, clearer en
 ## Reader-facing changes
 
 - Shared grouped navigation is rendered at build time across the site and remains usable without JavaScript.
-- The homepage separates Read / Understand / Follow, Ordinary Law, Featured Now, recent fictional records, and real project updates.
+- The homepage separates Read / Understand / Follow, The Formation, Featured Now, recent fictional records, and real project updates.
 - Republic Now provides four dated editorial briefs: Korda, Lake Varda, Fiscal Equalization, and Argent Ridge. Each dossier links evidence and constitutional mechanisms.
 - The Republic at a Glance combines the domestic map with an accessible directory of twelve states and four territories. State pages include location context and related coverage; Solara and Morantine have dedicated pages.
 - The Record supports text, type, file, and jurisdiction filters with shareable URLs. All records remain available without scripting.
 - The Constitution reader provides article introductions, a compact article index, question-based paths, search, and references into the fictional Republic.
-- Scenario categories use expandable lists. Ordinary Law remains a permanent starting point; Crossroads is distinguished as a non-canonical interactive companion. Three scenario endings pilot “What this tested” and “Go deeper.”
+- Scenario categories use expandable lists. The Formation is the suggested first read; Ordinary Law remains in the Everyday Governance category; Crossroads is distinguished as a non-canonical interactive companion. Three scenario endings pilot “What this tested” and “Go deeper.”
 - Diagrams gain keyboard controls and corrected allocation/review wording. A simplified lawmaking fragment connects the reader and Quick Sheets.
 - History search, sources labeling, AI disclosures, and questionnaire follow-through clarify the supporting tools.
 
