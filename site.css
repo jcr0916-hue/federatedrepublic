@@ -819,3 +819,20 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 @media (max-width: 900px) {
   .constitution-reader .article-navigation { border: 1px solid var(--border); border-top: 2px solid var(--gold2); }
 }
+
+/* Research notes use the same ink-and-gold links as the reader. */
+.sources-page .fr-page a,
+.sources-page .fr-page a:visited { color:var(--navy); text-decoration-color:var(--gold2); text-underline-offset:.2em; }
+.sources-page .closing-note a,
+.sources-page .closing-note a:visited { color:var(--cream); }
+.sources-help { margin:1rem 0; font-size:.85rem; color:var(--text); }
+.source-disclosure summary { cursor:pointer; color:var(--navy); padding:.5rem 0; font-size:.85rem; text-decoration:underline; text-decoration-color:var(--gold2); text-underline-offset:.2em; }
+.source-disclosure[open] summary { margin-bottom:.5rem; }
+.source-disclosure summary:focus-visible { outline:2px solid var(--gold2); outline-offset:3px; }
+.sources-page #sourceNotesToggle { margin-bottom:1.5rem; }
+.sources-page [id] { scroll-margin-top:80px; }
+@media print {
+  #sourceNotesToggle,.sources-help { display:none!important; }
+  .source-disclosure::details-content { content-visibility:visible; }
+  .source-disclosure > div { display:block!important; }
+}
