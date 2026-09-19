@@ -10,7 +10,7 @@ Implements the September 19 website review through shared navigation, clearer en
 - The Republic at a Glance combines the domestic map with an accessible directory of twelve states and four territories. State pages include location context and related coverage; Solara and Morantine have dedicated pages.
 - The Record supports text, type, file, and jurisdiction filters with shareable URLs. All records remain available without scripting.
 - The Constitution reader provides article introductions, a compact article index, question-based paths, search, and references into the fictional Republic.
-- Scenario categories use expandable lists. The Formation is the suggested first read; Ordinary Law remains in the Everyday Governance category; Crossroads is distinguished as a non-canonical interactive companion. Three scenario endings pilot “What this tested” and “Go deeper.”
+- Scenario categories use expandable lists. The Formation is the suggested first read; Ordinary Law remains in the Everyday Governance category; Crossroads is distinguished as a non-canonical interactive companion. Eight scenario endings use shared “What this tested” and “Go deeper” reading bridges.
 - Diagrams gain keyboard controls and corrected allocation/review wording. A simplified lawmaking fragment connects the reader and Quick Sheets.
 - History search, sources labeling, AI disclosures, and questionnaire follow-through clarify the supporting tools.
 
@@ -32,4 +32,4 @@ The discovery checker covers all built local links, fragments, inline JavaScript
 
 ## Follow-up editorial work
 
-Expand the three scenario-ending pilots after reviewing their usefulness. News and NRS article bodies retain their existing presentation; their shared navigation, metadata, and related-reading sections are improved without a wholesale article-template migration. More detailed maps require verified geography. Full assistive-technology testing and live AI-provider testing remain separate release checks. This branch does not change deployment settings or publish production.
+Continue the incremental scenario-ending rollout beyond the first eight stories. Curated summaries, labeled provision links, and specific next reads live in `_data/scenarioBridges.json`; pages opt in with `_includes/scenario-end.njk`. Summaries must be checked against the story and current constitutional text. World links describe a related mechanism, not a claim that a standalone scenario is part of Torenthian canon. News and NRS article bodies retain their existing presentation; their shared navigation, metadata, and related-reading sections are improved without a wholesale article-template migration. More detailed maps require verified geography. Full assistive-technology testing and live AI-provider testing remain separate release checks. This branch does not change deployment settings or publish production.

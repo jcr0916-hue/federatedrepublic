@@ -1,0 +1,19 @@
+{% set bridge = scenarioBridges[page.fileSlug] %}
+{% if bridge %}
+<section class="scenario-end" aria-labelledby="scenario-learning-title">
+  <h2 id="scenario-learning-title">What this tested</h2>
+  <p>{{ bridge.summary }}</p>
+  <ul>
+    {% for provision in bridge.provisions %}
+    <li><a href="annotated.html#{{ provision.ref | provisionAnchor }}">{{ provision.ref }} — {{ provision.label }}</a></li>
+    {% endfor %}
+  </ul>
+  <h2>Go deeper</h2>
+  <ul>
+    {% for link in bridge.links %}
+    <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="scenarios.html">Browse all scenarios →</a>
+</section>
+{% endif %}

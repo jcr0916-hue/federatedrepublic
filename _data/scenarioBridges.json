@@ -1,0 +1,214 @@
+{
+  "scenario-the-formation": {
+    "summary": "A divided Assembly reaches its formation deadline. A limited caretaker keeps existing policy running while the choice passes to a national election.",
+    "provisions": [
+      {
+        "ref": "§2.6.a",
+        "label": "Government formation and the fallback election"
+      }
+    ],
+    "links": [
+      {
+        "url": "diagrams.html#tab-dual",
+        "label": "See the dual executive"
+      },
+      {
+        "url": "quicksheet-article-2.html",
+        "label": "Keep the Dual Executive Quick Sheet"
+      },
+      {
+        "url": "scenario-the-coalition.html",
+        "label": "Read next: The Coalition — replacing a sitting Consul"
+      }
+    ]
+  },
+  "scenario-the-audit": {
+    "summary": "A Territory completes the successful audits required for Statehood. Publication of the second qualifying audit brings the constitutional change into effect.",
+    "provisions": [
+      {
+        "ref": "§15.2",
+        "label": "The Statehood Audit and admission requirements"
+      }
+    ],
+    "links": [
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States and Territories Quick Sheet"
+      },
+      {
+        "url": "scenario-the-third-strike.html",
+        "label": "Compare: The Third Strike — audits of an existing State"
+      },
+      {
+        "url": "dossier-korda.html",
+        "label": "Follow Korda — where concurrent petitions complicate the path"
+      }
+    ]
+  },
+  "scenario-ordinary": {
+    "summary": "Public records, social provision, asylum procedures, and independent monitoring shape an ordinary week. The story follows the people who rely on those institutions.",
+    "provisions": [
+      {
+        "ref": "§10.1",
+        "label": "The public record"
+      },
+      {
+        "ref": "§12.1",
+        "label": "The Social State"
+      },
+      {
+        "ref": "§6.3",
+        "label": "Residency pathways"
+      },
+      {
+        "ref": "§9.1",
+        "label": "Independent monitoring"
+      }
+    ],
+    "links": [
+      {
+        "url": "quicksheet-fiscal.html",
+        "label": "Keep the Social State Quick Sheet"
+      },
+      {
+        "url": "scenario-the-formation.html",
+        "label": "Read next: The Formation"
+      },
+      {
+        "url": "torenthia-record.html",
+        "label": "Explore Torenthia’s public record"
+      }
+    ]
+  },
+  "scenario-the-coalition": {
+    "summary": "Opposition to a Civic Consul does not itself install a government. A constructive vote must unite an absolute majority behind a named successor in the same vote.",
+    "provisions": [
+      {
+        "ref": "§2.6",
+        "label": "Constructive vote of no confidence"
+      }
+    ],
+    "links": [
+      {
+        "url": "quicksheet-article-2.html",
+        "label": "Keep the Dual Executive Quick Sheet"
+      },
+      {
+        "url": "diagrams.html#tab-dual",
+        "label": "See the dual executive"
+      },
+      {
+        "url": "scenario-the-formation.html",
+        "label": "Compare: The Formation — choosing a government after an election"
+      }
+    ]
+  },
+  "scenario-the-second-path": {
+    "summary": "A successful citizen initiative can enact lawful reforms, but popular approval cannot authorize an appropriation that the initiative power excludes. Later legislation remains subject to constitutional disclosure duties.",
+    "provisions": [
+      {
+        "ref": "§13.2",
+        "label": "Citizen initiative and its constitutional limits"
+      },
+      {
+        "ref": "§8.1",
+        "label": "Electoral-finance disclosure"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-organized-third.html",
+        "label": "Compare: The Organized Third — repealing an existing law"
+      },
+      {
+        "url": "scenario-the-severed-clause.html",
+        "label": "Read next: The Severed Clause — an initiative’s lawful remainder"
+      },
+      {
+        "url": "quicksheet-elections.html",
+        "label": "Keep the Elections Quick Sheet"
+      }
+    ]
+  },
+  "scenario-second-declaration": {
+    "summary": "Renaming an emergency does not evade the bar on relabeled continuation. The Monitor publishes an assessment; judicial review and the prohibition on discriminatory emergency measures remain available.",
+    "provisions": [
+      {
+        "ref": "§1.19.b",
+        "label": "Expiry, relabeling, and judicial review"
+      },
+      {
+        "ref": "§1.19.a",
+        "label": "Absolute rights and discriminatory emergency measures"
+      }
+    ],
+    "links": [
+      {
+        "url": "quicksheet-rights.html",
+        "label": "Keep the Rights Quick Sheet"
+      },
+      {
+        "url": "scenario-void-exception.html",
+        "label": "Compare: The Void Exception — an amendment meets an absolute right"
+      },
+      {
+        "url": "scenario-the-order.html",
+        "label": "Read next: The Order — refusing an unlawful instruction"
+      }
+    ]
+  },
+  "scenario-the-referendum": {
+    "summary": "A State’s independence referendum starts a process rather than completing it. Chamber approval, a national vote, and a ratified separation agreement are still required; failure at a later voting stage can end the petition.",
+    "provisions": [
+      {
+        "ref": "§15.9",
+        "label": "The three-stage independence process"
+      }
+    ],
+    "links": [
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States and Territories Quick Sheet"
+      },
+      {
+        "url": "scenario-the-petition.html",
+        "label": "Compare: The Petition — devolution within the Republic"
+      },
+      {
+        "url": "scenario-the-departure.html",
+        "label": "Compare: The Departure — an Associated Community’s different right to leave"
+      }
+    ]
+  },
+  "scenario-the-third-strike": {
+    "summary": "Three consecutive overall audit failures put an existing State into Provisional status. The State keeps its government and rights; an advisory council supports remediation, while devolution requires a separate process.",
+    "provisions": [
+      {
+        "ref": "§15.1.a",
+        "label": "Provisional status and restoration"
+      },
+      {
+        "ref": "§15.3",
+        "label": "Remediation and the devolution referendum"
+      },
+      {
+        "ref": "§15.4",
+        "label": "Negotiation and ratification of devolution"
+      }
+    ],
+    "links": [
+      {
+        "url": "quicksheet-states.html",
+        "label": "Keep the States and Territories Quick Sheet"
+      },
+      {
+        "url": "scenario-the-restoration.html",
+        "label": "Read next: The Restoration — returning to ordinary State status"
+      },
+      {
+        "url": "scenario-the-audit.html",
+        "label": "Compare: The Audit — a Territory’s route to Statehood"
+      }
+    ]
+  }
+}
