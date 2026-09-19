@@ -113,11 +113,27 @@
   ],
   "Rhondel": [
    1180,
-   610
+   610,
+   "state-capital"
   ],
   "Ostara": [
    148,
    892
+  ],
+  "Hadrin": [
+   760,
+   350,
+   "state-capital"
+  ],
+  "Kellor": [
+   760,
+   220,
+   "state-capital"
+  ],
+  "Ilyr": [
+   1185,
+   220,
+   "state-capital"
   ]
  },
  "country_label": [
