@@ -153,12 +153,12 @@ The **tone** of what follows this line (confident, uneasy, openly doubtful) trac
 
 ## 8. Authored-content status — 260918
 
-The structural plan is now approved for drafting. Full role-picker copy, both playable-role introductions, the shared Scene 1 setup, and the first role-conditional fragment set live in `docs/KORDA-CROSSROADS-CONTENT-DRAFT.md`.
+The structural plan is now approved for drafting. Full role-picker copy, both playable-role introductions, Scene 1, and Scene 2 (`Orin's Offer`) now live in `docs/KORDA-CROSSROADS-CONTENT-DRAFT.md`.
 
 Drafting order from here:
-1. Finish and balance Scene 1 against both roles.
-2. Author Scene 2 (Orin's Offer) without resolving the live §12.6 storyline.
-3. Author Scene 3 and stress-test persuasion-versus-concession paths.
+1. Balance Scenes 1–2 against both roles.
+2. Author Scene 3 (`The Corridor Line`) and stress-test persuasion-versus-concession paths.
+3. Author the midpoint count and final deal scenes.
 4. Only then wire role selection into the engine and move authored fragments into `korda-crossroads.json`.
 
 The current public Korda storyline remains on the back burner while this feature is built. The Crossroads piece is non-canon and must not advance the real Convention.
