@@ -14,15 +14,15 @@
     {% for item in relatedItems %}
     <article class="related-rail-card">
       {% if item.image %}
-      <a class="related-rail-image" href="{{ item.url }}" aria-label="{{ item.title }}">
-        <img src="{{ item.image }}" alt="{{ item.imageAlt or '' }}" loading="lazy">
+      <a class="related-rail-image" href="{{ item.url }}" aria-hidden="true" tabindex="-1">
+        <img src="{{ item.image }}" alt="" loading="lazy">
       </a>
       {% endif %}
       <div class="related-rail-card-body">
         {% if item.kicker %}<span class="related-rail-kicker">{{ item.kicker }}</span>{% endif %}
         <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
         {% if item.text %}<p>{{ item.text }}</p>{% endif %}
-        <a class="related-rail-link" href="{{ item.url }}">{{ item.cta or 'Explore' }} →</a>
+        <a class="related-rail-link" href="{{ item.url }}" aria-hidden="true" tabindex="-1">{{ item.cta or 'Explore' }} →</a>
       </div>
     </article>
     {% endfor %}
