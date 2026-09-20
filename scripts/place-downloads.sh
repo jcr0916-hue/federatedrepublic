@@ -71,7 +71,7 @@ place "search-index.js"              "search-index.js"
 place "constitution-current.md"      "docs/constitution-current.md"
 place "constitutional-quickref.md"   "docs/constitutional-quickref.md"
 place "updates.js"                   "_data/updates.js"
-place "WORLD-THREADS-PENDING.md"     "docs/WORLD-THREADS-PENDING.md"
+place "WORLD-STORY-STATUS.md"        "docs/WORLD-STORY-STATUS.md"
 
 echo ""
 echo "Placed: $FOUND    Not found: $MISSING"
