@@ -1,0 +1,30 @@
+<section class="related-rail" aria-labelledby="{{ relatedRailId or 'related-content' }}-title" data-related-rail>
+  <div class="related-rail-head">
+    <div>
+      <span class="section-kicker">{{ relatedRailEyebrow or 'Keep exploring' }}</span>
+      <h2 id="{{ relatedRailId or 'related-content' }}-title">{{ relatedRailTitle or 'Related material' }}</h2>
+      {% if relatedRailIntro %}<p>{{ relatedRailIntro }}</p>{% endif %}
+    </div>
+    <div class="related-rail-controls" aria-label="Related content controls">
+      <button class="related-rail-control" type="button" data-rail-prev aria-label="Show previous related items">←</button>
+      <button class="related-rail-control" type="button" data-rail-next aria-label="Show more related items">→</button>
+    </div>
+  </div>
+  <div class="related-rail-track" data-rail-track tabindex="0">
+    {% for item in relatedItems %}
+    <article class="related-rail-card">
+      {% if item.image %}
+      <a class="related-rail-image" href="{{ item.url }}" aria-hidden="true" tabindex="-1">
+        <img src="{{ item.image }}" alt="" loading="lazy">
+      </a>
+      {% endif %}
+      <div class="related-rail-card-body">
+        {% if item.kicker %}<span class="related-rail-kicker">{{ item.kicker }}</span>{% endif %}
+        <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+        {% if item.text %}<p>{{ item.text }}</p>{% endif %}
+        <a class="related-rail-link" href="{{ item.url }}" aria-hidden="true" tabindex="-1">{{ item.cta or 'Explore' }} →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

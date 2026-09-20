@@ -20,17 +20,29 @@
     .state-profile blockquote{margin:24px 0;padding:4px 24px;border-left:3px solid var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.5rem}
     .state-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:20px 0}.state-heading h1{margin:0}.state-flag{margin:0;width:210px;flex-shrink:0}.state-flag img{display:block;width:100%;height:auto;box-shadow:0 2px 10px #0002}.state-flag figcaption{font-size:.8rem;line-height:1.4;margin-top:8px}
     .state-flag-crop{display:block;position:relative;overflow:hidden;box-shadow:0 2px 10px #0002}.state-flag-crop img{position:absolute;max-width:none;box-shadow:none}
-    @media(max-width:600px){.state-heading{align-items:flex-start;flex-wrap:wrap}.state-flag{width:150px}}
+    @media(max-width:600px){.state-profile{margin-top:82px;padding:0 18px}.state-heading{align-items:flex-start;flex-wrap:wrap;gap:14px}.state-flag{width:132px}.state-breadcrumbs{font-size:.82rem;line-height:1.55}.state-profile-siblings{display:none}.state-profile-current{display:inline}.state-profile h1{font-size:2.8rem}.state-facts{gap:14px;padding:18px 0}.state-facts dd{font-size:1.18rem}}
     .state-coverage{padding-left:20px}.state-coverage li{margin:12px 0}
     .state-coverage small{display:block;opacity:.75}
-    @media(max-width:600px){.state-facts{grid-template-columns:repeat(2,1fr)}}
+    .state-map-crop{margin:1.5rem 0}.state-map-crop>a{display:block;color:inherit;text-decoration:none}.state-map-crop svg{display:block;width:100%;max-height:340px;background:#c9dfaf;border:1px solid var(--border)}
+    .state-map-crop .ctx-border-halo{fill:none;stroke:#f3ecdc;stroke-linecap:round;stroke-linejoin:round}
+    .state-map-crop .ctx-border-state{fill:none;stroke:#34302b;stroke-linecap:round;stroke-linejoin:round}
+    .state-map-crop .ctx-border-national{fill:none;stroke:#9e2b21;stroke-linecap:round;stroke-linejoin:round}
+    .state-map-crop .ctx-label{font-family:'Cormorant Garamond',serif;text-anchor:middle;paint-order:stroke;stroke:#f5f0e8;stroke-width:5px;stroke-linejoin:round;fill:var(--navy)}
+    .state-map-crop .ctx-label-current{font-size:34px;font-weight:600;letter-spacing:2px;fill:#765817}
+    .state-map-crop .ctx-label-neighbor{font-size:24px;font-weight:600;letter-spacing:1px;opacity:.8}
+    .state-map-crop .ctx-label-water{font-size:23px;font-style:italic;fill:#38546b;stroke-width:4px}
+    .state-map-crop .ctx-city-dot{fill:var(--gold);stroke:var(--navy);stroke-width:3px}
+    .state-map-crop .ctx-city-label{font:600 22px 'Jost',sans-serif;fill:var(--navy);paint-order:stroke;stroke:#f5f0e8;stroke-width:4px}
+    .state-map-crop figcaption{font-size:.82rem;line-height:1.55;margin:.65rem 0}
+    .state-profile-current{display:none}
+    @media(max-width:600px){.state-facts{grid-template-columns:repeat(2,1fr)}.state-profile-current{display:inline}.state-map-crop{margin:1.1rem 0}.state-map-crop svg{max-height:260px}.state-map-crop .ctx-label-current{font-size:31px;letter-spacing:1px}.state-map-crop .ctx-label-neighbor{font-size:20px;letter-spacing:.5px}.state-map-crop .ctx-label-water{font-size:19px}.state-map-crop .ctx-city-label{font-size:21px}.state-map-crop figcaption{font-size:.78rem}}
   </style>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 {% include "nav.njk" %}
 <main class="state-profile state-{{ stateName | lower }}" id="main-content">
-  <div role="navigation" aria-label="State navigation"><a href="torenthia.html">Torenthia</a> / <a href="republic-at-a-glance.html">States and Territories</a>{% for s in statepages %} · <a href="{{ s.url }}"{% if s.name == stateName %} aria-current="page"{% endif %}>{{ s.name }}</a>{% endfor %}</div>
+  <div class="state-breadcrumbs" role="navigation" aria-label="State navigation"><a href="torenthia.html">Torenthia</a> / <a href="republic-at-a-glance.html">States and Territories</a><span class="state-profile-siblings">{% for s in statepages %} · <a href="{{ s.url }}"{% if s.name == stateName %} aria-current="page"{% endif %}>{{ s.name }}</a>{% endfor %}</span><span class="state-profile-current"> / {{ stateName }}</span></div>
   {% for s in statepages %}{% if s.name == stateName %}
   <p class="state-kicker">{{ s.char }}</p>
   <div class="state-heading">
@@ -42,7 +54,20 @@
     <div><dt>Federal Senate</dt><dd>{{ s.senate }} seats</dd></div>
     <div><dt>Federal Assembly</dt><dd>{{ s.assembly }} seats</dd></div>
     <div><dt>State audit</dt><dd>{{ s.audit }}</dd></div>
-  </dl><figure class="state-map-crop"><svg viewBox="{{ s.left * 15.36 - 220 }} {{ s.top * 10.24 - 120 }} 440 240" role="img" aria-label="Location of {{ s.name }} in the Republic"><image href="region-map-tier2-base.webp" width="1536" height="1024"/><circle cx="{{ s.left * 15.36 }}" cy="{{ s.top * 10.24 }}" r="12" fill="var(--gold)" stroke="var(--navy)" stroke-width="4"/></svg><figcaption>{{ s.name }} · location marker, not a boundary. <a href="republic-at-a-glance.html#{{ s.name | lower }}">Full labeled map and directory</a>.</figcaption></figure><section class="status-panel"><h2>State Position</h2><p>{{ s.summary }}</p><p><a href="republic-at-a-glance.html#{{ s.name | lower }}">Locate {{ s.name }} in the Republic →</a></p></section><div class="mechanism-strip"><a href="annotated.html#s15-1">State powers</a><a href="annotated.html#s3-2">Assembly representation</a><a href="annotated.html#s15-2">Statehood Audit</a></div>
+  </dl><figure class="state-map-crop"><a href="republic-at-a-glance.html#{{ s.name | lower }}" aria-label="Open {{ s.name }} on the full labeled map"><svg class="state-context-map" data-state="{{ s.name }}" data-capital="{{ s.capital }}" data-capital-x="{{ s.capitalX }}" data-capital-y="{{ s.capitalY }}" viewBox="{{ s.left * 15.36 - 260 }} {{ s.top * 10.24 - 160 }} 520 320" role="img" aria-label="{{ s.name }} with State borders, nearby jurisdictions, and {{ s.capital }}"><image href="region-map-tier2-base.webp" width="1536" height="1024"/></svg></a><figcaption>{{ s.name }} shown with its surrounding State borders and State seat, {{ s.capital }}. <a href="republic-at-a-glance.html#{{ s.name | lower }}">Open the full labeled map and directory</a>.</figcaption></figure><section class="status-panel"><h2>State Position</h2><p>{{ s.summary }}</p><p><a href="republic-at-a-glance.html#{{ s.name | lower }}">Locate {{ s.name }} in the Republic →</a></p></section><div class="mechanism-strip"><a href="annotated.html#s15-1">State powers</a><a href="annotated.html#s3-2">Assembly representation</a><a href="annotated.html#s15-2">Statehood Audit</a></div>
+  {% set stateSlug = stateName | lower %}
+  {% set relatedRailId = stateSlug ~ '-related' %}
+  {% set relatedRailEyebrow = 'From this State' %}
+  {% set relatedRailTitle = 'Explore ' ~ stateName %}
+  {% set relatedRailIntro = 'The most useful next destinations are surfaced here before the longer profile continues.' %}
+  {% set relatedItems = [
+    { kicker: 'Primary text', title: stateName ~ ' State Constitution', url: 'State%20Constitutions/' ~ stateSlug ~ '-state-constitution.md', text: 'Read the State’s own constitutional text and institutional design.', cta: 'Read the Constitution' },
+    { kicker: 'Geography', title: 'Locate ' ~ stateName ~ ' in the Republic', url: 'republic-at-a-glance.html#' ~ stateSlug, text: 'Open the labeled political map and jurisdiction directory.', cta: 'Open the map' },
+    { kicker: 'Public record', title: 'What is happening in ' ~ stateName, url: 'torenthia-record.html?place=' ~ stateName, text: 'Browse published NRS records, reporting, court material, and other entries tied to this State.', cta: 'Browse the record' },
+    { kicker: 'Federal relationship', title: 'State powers and audit', url: 'annotated.html#s15-2', text: 'Follow the constitutional framework governing State status, audits, and remediation.', cta: 'Read §15.2' },
+    { kicker: 'Identity', title: 'Flag of ' ~ stateName, url: stateFlag, image: stateFlag, imageAlt: stateFlagAlt, text: 'View the State flag at full size.', cta: 'View flag' }
+  ] %}
+  {% include "related-rail.njk" %}
   {% endif %}{% endfor %}
   {{ content | safe }}
   <h2>Read the Constitution</h2>
@@ -55,6 +80,54 @@
   </ul><p><a href="torenthia-record.html?place={{ stateName }}">Complete related archive →</a></p>
 </main>
 {% include "footer.njk" %}
+<script src="map-data.js"></script>
+<script>
+(function(){
+  if(typeof MAP_DATA==='undefined') return;
+  const NS='http://www.w3.org/2000/svg';
+  function addPath(svg,points,cls,width){
+    const p=document.createElementNS(NS,'path');
+    p.setAttribute('d','M'+points.map(q=>q[0]+' '+q[1]).join('L'));
+    p.setAttribute('class',cls);
+    p.setAttribute('stroke-width',width);
+    svg.appendChild(p);
+  }
+  function addText(svg,text,x,y,cls){
+    const t=document.createElementNS(NS,'text');
+    t.setAttribute('x',x); t.setAttribute('y',y);
+    t.setAttribute('class',cls); t.textContent=text;
+    svg.appendChild(t); return t;
+  }
+  document.querySelectorAll('.state-context-map').forEach(svg=>{
+    const state=svg.dataset.state.toUpperCase();
+    const capital=svg.dataset.capital;
+    const cx=Number(svg.dataset.capitalX), cy=Number(svg.dataset.capitalY);
+    const vb=svg.viewBox.baseVal;
+    const inView=(x,y,pad=0)=>x>=vb.x-pad&&x<=vb.x+vb.width+pad&&y>=vb.y-pad&&y<=vb.y+vb.height+pad;
+
+    MAP_DATA.borders.state.forEach(line=>addPath(svg,line,'ctx-border-halo',7));
+    MAP_DATA.borders.state.forEach(line=>addPath(svg,line,'ctx-border-state',3.2));
+    MAP_DATA.borders.national.forEach(line=>addPath(svg,line,'ctx-border-halo',9));
+    MAP_DATA.borders.national.forEach(line=>addPath(svg,line,'ctx-border-national',4.2));
+
+    Object.entries(MAP_DATA.labels.states).forEach(([raw,[x,y]])=>{
+      const name=raw.replace(' (S)','').replace(' TERRITORY','');
+      if(!inView(x,y,55)) return;
+      addText(svg,name,x,y+8,'ctx-label '+(name===state?'ctx-label-current':'ctx-label-neighbor'));
+    });
+    Object.entries(MAP_DATA.labels.water).forEach(([name,[x,y]])=>{
+      if(inView(x,y,35)) addText(svg,name,x,y+7,'ctx-label ctx-label-water');
+    });
+
+    const dot=document.createElementNS(NS,'circle');
+    dot.setAttribute('cx',cx); dot.setAttribute('cy',cy); dot.setAttribute('r',9);
+    dot.setAttribute('class','ctx-city-dot'); svg.appendChild(dot);
+    const label=addText(svg,capital,cx+15,cy-12,'ctx-city-label');
+    label.setAttribute('text-anchor','start');
+  });
+})();
+</script>
 <script src="nav.js"></script>
+<script src="related-rail.js"></script>
 </body>
 </html>

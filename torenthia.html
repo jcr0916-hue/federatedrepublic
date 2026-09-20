@@ -20,7 +20,23 @@
   <a href="#main-content" class="skip-nav">Skip to main content</a>
   {% include "nav.njk" %}
 
-<main id="main-content" class="torenthia-home"><section class="world-orientation refresh-wrap"><div><span class="section-kicker">The living world</span><h1>The Federated Republic of Torenthia</h1><p>Torenthia is the fictional republic where this Constitution is put into practice. Elections proceed, courts decide, territories seek statehood, and every major act leaves a public record.</p><div class="link-row"><a href="torenthia-record.html">Investigate the Record</a><a href="republic-at-a-glance.html">Republic at a Glance</a><a href="atlas.html">Explore the Atlas</a></div></div><figure><a href="republic-at-a-glance.html"><img src="region-map-tier2-base.webp" alt="Torenthia’s regional map; open the labeled map and jurisdiction directory"></a><figcaption>Current pressure points: <a href="dossier-korda.html">Korda</a> · <a href="dossier-lake-varda.html">Lake Varda</a> · <a href="dossier-argent-ridge.html">Argent Ridge</a></figcaption></figure></section><div class="refresh-wrap">{% include "current-files.njk" %}</div><section class="refresh-wrap"><h2 id="the-record">Latest from Torenthia</h2><div class="record-grid">{% for p in collections.world | reverse | take(4) %}{% include "record-card.njk" %}{% endfor %}</div><a href="torenthia-record.html">Read the complete Record →</a></section><div class="stats-band"><div class="stats-inner">        <!-- 1 · THE EXECUTIVE (most dynamic) -->
+<main id="main-content" class="torenthia-home"><section class="world-orientation refresh-wrap"><div><span class="section-kicker">The living world</span><h1>The Federated Republic of Torenthia</h1><p>Torenthia is the fictional republic where this Constitution is put into practice. Elections proceed, courts decide, territories seek statehood, and every major act leaves a public record.</p><div class="link-row"><a href="torenthia-record.html">Investigate the Record</a><a href="republic-at-a-glance.html">Republic at a Glance</a><a href="atlas.html">Explore the Atlas</a></div></div><figure class="torenthia-context-figure"><a class="torenthia-context-map" href="republic-at-a-glance.html" aria-label="Open the full labeled map and jurisdiction directory"><span class="torenthia-context-frame"><img src="region-map-tier2-base.webp" alt="Context map of Torenthia with State and Territory boundaries, neighboring countries, and major geographic labels"><svg id="torenthiaContextOverlay" class="torenthia-context-overlay" viewBox="0 0 1536 1024" aria-hidden="true"></svg></span></a><figcaption>Current pressure points: <a href="dossier-korda.html">Korda</a> · <a href="dossier-lake-varda.html">Lake Varda</a> · <a href="dossier-argent-ridge.html">Argent Ridge</a></figcaption></figure></section>
+<section class="refresh-wrap visual-world-rail">
+  {% set relatedRailId = 'faces-places' %}
+  {% set relatedRailEyebrow = 'Faces & places' %}
+  {% set relatedRailTitle = 'See the Republic' %}
+  {% set relatedRailIntro = 'A visual route into the people, cities, landscapes, and institutions already present in the public record.' %}
+  {% set relatedItems = [
+    { kicker:'Capital', title:'Verentum', url:'torenthia-record.html?q=Verentum', image:'verentum-card.webp', imageAlt:'View of Verentum', text:'The federal capital and seat of the Republic’s national institutions.', cta:'Follow Verentum' },
+    { kicker:'Eastern lake', title:'Rhondel', url:'torenthia-state-kelvant.html', image:'rhondel-cityscape.png', imageAlt:'Cityscape of Rhondel', text:'Kelvant’s principal city on Lake Varda and a recurring point in the eastern story.', cta:'Explore Kelvant' },
+    { kicker:'Current file', title:'Lake Varda', url:'dossier-lake-varda.html', image:'lake-varda-crossing.png', imageAlt:'Crossing near Lake Varda', text:'The lake corridor where constitutional, humanitarian, and regional pressures meet.', cta:'Open the dossier' },
+    { kicker:'Northern State', title:'Varek & Argent Ridge', url:'torenthia-state-varek.html', image:'varek-mountain-landscape.png', imageAlt:'Mountain landscape in Varek', text:'A State whose northern geography is tied directly to the Argent Ridge file.', cta:'Explore Varek' },
+    { kicker:'Territory', title:'Ostara, Solara', url:'territory-solara.html', image:'ostara-card.webp', imageAlt:'View of Ostara in Solara', text:'The western island Territory and its civic center.', cta:'Explore Solara' },
+    { kicker:'Government', title:'The Civic Consul', url:'torenthia-record.html?q=Elin%20Thoss', image:'Elin-Thoss-Press-Conference-card.webp', imageAlt:'Civic Consul Elin Thoss at a press conference', text:'Follow the domestic executive through the public record rather than a static biography.', cta:'Follow the record' }
+  ] %}
+  {% include "related-rail.njk" %}
+</section>
+<div class="refresh-wrap">{% include "current-files.njk" %}</div><section class="refresh-wrap"><h2 id="the-record">Latest from Torenthia</h2><div class="record-grid">{% for p in collections.world | reverse | take(4) %}{% include "record-card.njk" %}{% endfor %}</div><a href="torenthia-record.html">Read the complete Record →</a></section><div class="stats-band"><div class="stats-inner">        <!-- 1 · THE EXECUTIVE (most dynamic) -->
         <section class="sblock">
           <span class="sblock-vol">most dynamic</span>
           <div class="sblock-eye">The Executive</div>
@@ -51,4 +67,52 @@
           </div>
         </section>
 
-<section class="sblock"><h2>The Open Question</h2><p>{{ currentFiles[2].question }}</p><p>{{ currentFiles[2].summary }}</p><a href="dossier-fiscal-equalization.html">Follow the fiscal equalization file →</a></section></div></div><section class="refresh-wrap" id="dispatches"><h2>Dispatches / Voices</h2><div class="record-grid">{% for p in collections.world | reverse %}{% if p.data.worldKind == 'dispatch' %}{% include "record-card.njk" %}{% endif %}{% endfor %}</div></section></main>{% include "footer.njk" %}<script src="nav.js"></script></body></html>
+<section class="sblock"><h2>The Open Question</h2><p>{{ currentFiles[2].question }}</p><p>{{ currentFiles[2].summary }}</p><a href="dossier-fiscal-equalization.html">Follow the fiscal equalization file →</a></section></div></div><section class="refresh-wrap" id="dispatches"><h2>Dispatches / Voices</h2><div class="record-grid">{% for p in collections.world | reverse %}{% if p.data.worldKind == 'dispatch' %}{% include "record-card.njk" %}{% endif %}{% endfor %}</div></section></main>{% include "footer.njk" %}<script src="map-data.js"></script><script>
+(function(){
+  const svg=document.getElementById('torenthiaContextOverlay');
+  if(!svg || typeof MAP_DATA==='undefined') return;
+  const NS='http://www.w3.org/2000/svg';
+  function path(points,cls,width){
+    const p=document.createElementNS(NS,'path');
+    p.setAttribute('d','M'+points.map(q=>q[0]+' '+q[1]).join('L'));
+    p.setAttribute('class',cls);
+    p.setAttribute('stroke-width',width);
+    svg.appendChild(p);
+  }
+  MAP_DATA.borders.state.forEach(l=>path(l,'context-border-halo',7));
+  MAP_DATA.borders.state.forEach(l=>path(l,'context-border-state',3.2));
+  MAP_DATA.borders.national.forEach(l=>path(l,'context-border-halo',9));
+  MAP_DATA.borders.national.forEach(l=>path(l,'context-border-national',4.2));
+
+  function label(str,x,y,cls){
+    const t=document.createElementNS(NS,'text');
+    t.setAttribute('x',x);
+    t.setAttribute('y',y);
+    t.setAttribute('text-anchor','middle');
+    t.setAttribute('class',cls);
+    t.textContent=str;
+    svg.appendChild(t);
+    return t;
+  }
+  Object.entries(MAP_DATA.labels.states).forEach(([raw,[x,y]])=>{
+    const name=raw.replace(' (S)','');
+    if(name.endsWith(' TERRITORY')){
+      const base=name.replace(' TERRITORY','');
+      const t=label('',x,y-8,'context-label context-label-state context-label-territory');
+      const a=document.createElementNS(NS,'tspan');
+      a.setAttribute('x',x); a.setAttribute('dy','0'); a.textContent=base;
+      const b=document.createElementNS(NS,'tspan');
+      b.setAttribute('x',x); b.setAttribute('dy','1.05em'); b.textContent='TERRITORY';
+      t.appendChild(a); t.appendChild(b);
+    } else {
+      label(name,x,y+8,'context-label context-label-state');
+    }
+  });
+  Object.entries(MAP_DATA.labels.neighbors).forEach(([name,[x,y]])=>{
+    label(name,x,y+8,'context-label context-label-neighbor');
+  });
+  Object.entries(MAP_DATA.labels.water).forEach(([name,[x,y]])=>{
+    label(name,x,y+7,'context-label context-label-water');
+  });
+})();
+</script><script src="nav.js"></script><script src="related-rail.js"></script></body></html>

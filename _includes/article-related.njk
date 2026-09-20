@@ -1,0 +1,26 @@
+{% if a.links | length %}
+<section class="related-rail article-related-rail" aria-labelledby="article-{{ a.number }}-connections-title" data-related-rail>
+  <div class="related-rail-head">
+    <div>
+      <span class="section-kicker">Explore this article</span>
+      <h3 id="article-{{ a.number }}-connections-title">Related material</h3>
+    </div>
+    <div class="related-rail-controls" aria-label="Article related content controls">
+      <button class="related-rail-control" type="button" data-rail-prev aria-label="Show previous related items">←</button>
+      <button class="related-rail-control" type="button" data-rail-next aria-label="Show more related items">→</button>
+    </div>
+  </div>
+  <div class="related-rail-track" data-rail-track tabindex="0">
+    {% for label,url in a.links %}
+    <article class="related-rail-card">
+      <div class="related-rail-card-body">
+        <span class="related-rail-kicker">{% if 'scenario-' in url %}Scenario{% elif 'quicksheet-' in url %}Quick Sheet{% elif 'diagrams.html' in url %}Diagram{% elif 'dossier-' in url or 'torenthia' in url %}Torenthia{% else %}Related reading{% endif %}</span>
+        <h4><a href="{{ url }}">{{ label }}</a></h4>
+        <p>{% if 'scenario-' in url %}See this constitutional mechanism under pressure in a worked scenario.{% elif 'quicksheet-' in url %}Use a compact reference for the article’s main structures and thresholds.{% elif 'diagrams.html' in url %}See the institutional mechanism as a visual flow or structure.{% elif 'dossier-' in url or 'torenthia' in url %}Follow the same constitutional issue inside the fictional Republic’s public record.{% else %}Continue into closely related project material.{% endif %}</p>
+        <a class="related-rail-link" href="{{ url }}">Open →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

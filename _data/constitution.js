@@ -12,4 +12,4 @@ const realArticles = data.filter((entry) => !entry.preamble);
 const provisions = realArticles.reduce((n, article) => n + article.provisions.length, 0);
 const articles = realArticles.length;
 
-export default { provisions, articles };
+export default { provisions, articles, entries: data };

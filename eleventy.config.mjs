@@ -65,7 +65,7 @@ export default function (eleventyConfig) {
   // Assets Eleventy does not template — copy through untouched.
   // If any of these is missing from _site, every page that uses it 404s.
   const passthrough = [
-    "site.css", "links.css", "republic.css", "nav.js", "discovery.js", "map-data.js", "search-index.js", "sw.js",
+    "site.css", "links.css", "republic.css", "nav.js", "discovery.js", "related-rail.js", "map-data.js", "search-index.js", "sw.js",
     "favicon.ico", "favicon-32.png", "apple-touch-icon.png",
     "crossroads-engine.js", "korda-crossroads.json", "tier2-borders.json", "tier2-labels.json",
     "test-crossroads.json",
@@ -160,6 +160,62 @@ export default function (eleventyConfig) {
       }
     }
     return pieces.map((p) => p.text).join("");
+  });
+
+  // Accessibility: Quick Sheets are visually designed like one-page infographics.
+  // Preserve that layout while exposing the same hierarchy and sequence in the DOM.
+  eleventyConfig.addTransform("quickSheetSemantics", function(content) {
+    const input=this.page.inputPath || "";
+    if(!/quicksheet-[^/]+\.html$/i.test(input)) return content;
+
+    content=content
+      .replace(/<a([^>]*class="[^"]*qs-download-btn[^"]*"[^>]*)>\s*Download PDF\s*<\/a>/gi,'<a$1 aria-label="Download PDF version. This page is the accessible HTML version.">Download PDF<span class="sr-only">; optional, this page contains the HTML version</span></a>')
+      .replace(/<div class="qs-title">([\s\S]*?)<\/div>/gi,'<h1 class="qs-title">$1</h1>')
+      .replace(/<div class="section-label">([\s\S]*?)<\/div>/gi,'<h2 class="section-label">$1</h2>')
+      .replace(/<div class="facts-row">/gi,'<div class="facts-row" role="list">')
+      .replace(/<div class="fact-pill">/gi,'<div class="fact-pill" role="listitem">')
+      .replace(/<div class="cascade-row">/gi,'<div class="cascade-row" role="list" aria-label="Sequence">')
+      .replace(/<div class="cas-step([^"]*)">/gi,'<div class="cas-step$1" role="listitem">')
+      .replace(/<div class="abs-grid">/gi,'<div class="abs-grid" role="list">')
+      .replace(/<div class="abs-card">/gi,'<div class="abs-card" role="listitem">')
+      .replace(/<div class="tier-row">/gi,'<div class="tier-row" role="list">')
+      .replace(/<div class="tier-card([^"]*)">/gi,'<div class="tier-card$1" role="listitem">')
+      .replace(/<div class="floor-grid">/gi,'<div class="floor-grid" role="list">')
+      .replace(/<div class="floor-card">/gi,'<div class="floor-card" role="listitem">')
+      .replace(/<([a-z0-9]+) class="(cas-arrow|flow-arrow)"([^>]*)>/gi,'<$1 class="$2"$3 aria-hidden="true">');
+
+    return content;
+  });
+
+  // Accessibility: NRS seals and watermarks repeat adjacent institutional text.
+  // Keep the visual identity while avoiding duplicate announcements.
+  eleventyConfig.addTransform("decorativeInstitutionalSeals", function(content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/<img\b(?=[^>]*\bclass="[^"]*\bnrs-seal\b)[^>]*>/gi, tag => {
+      let out=tag.replace(/\s+alt="[^"]*"/i,' alt=""');
+      if(!/\saria-hidden=/i.test(out)) out=out.replace(/>$/,' aria-hidden="true">');
+      return out;
+    });
+  });
+
+  // Accessibility: visual section labels in long-form World documents become
+  // semantic headings without changing their existing classes or appearance.
+  eleventyConfig.addTransform("longFormSemanticHeadings", function(content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    content = content.replace(/<div class="article-subhead">([\s\S]*?)<\/div>/gi, '<h2 class="article-subhead">$1</h2>');
+    content = content.replace(/<div class="doc-section-label">([\s\S]*?)<\/div>/gi, '<h2 class="doc-section-label">$1</h2>');
+    return content;
+  });
+
+  // Accessibility: metadata tables use their first cell as a row label.
+  // Convert those labels to semantic row headers at build time across all NRS/public documents.
+  eleventyConfig.addTransform("metadataTableRowHeaders", function(content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/(<table\b[^>]*class="[^"]*meta-table[^"]*"[^>]*>[\s\S]*?<\/table>)/gi, table => {
+      let upgraded=table.replace(/<tr>([\s\S]*?)<td>([\s\S]*?)<\/td>/gi, '<tr>$1<th scope="row">$2</th>');
+      if(!/<caption\b/i.test(upgraded)) upgraded=upgraded.replace(/(<table\b[^>]*>)/i,'$1<caption class="sr-only">Document metadata</caption>');
+      return upgraded;
+    });
   });
 
   // Eleventy defaults to "pretty" permalinks (page.html -> page/index.html), which would

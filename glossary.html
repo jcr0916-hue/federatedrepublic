@@ -82,6 +82,13 @@
   
     
 
+  <nav class="companion-links" aria-label="Related constitutional resources">
+    <a href="annotated.html">Read the Constitution</a>
+    <a href="quicksheets.html">Quick Sheets</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="constitutional-history.html">Design History</a>
+  </nav>
+
     <div class="glossary-wrap"><div class="glossary-content" id="main-content">
       <div id="noResults" class="no-results" style="display:none">No terms match that search.</div>
 
@@ -438,28 +445,40 @@
   <!-- Mobile FABs -->
   <script>
   // ── Nav Drawer ─────────────────────────────────────
+  var glossaryLastFocus=null;
   function openNavDrawer(){
-    document.getElementById('navDrawer').classList.add('open');
+    glossaryLastFocus=document.activeElement;
+    var drawer=document.getElementById('navDrawer');
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden','false');
     document.getElementById('navDrawerOverlay').classList.add('open');
     document.body.style.overflow='hidden';
     var btn=document.getElementById('navDrawerToggle');
     if(btn) btn.setAttribute('aria-expanded','true');
+    var first=drawer.querySelector('a');
+    if(first) setTimeout(function(){first.focus();},0);
   }
   function closeNavDrawer(){
-    document.getElementById('navDrawer').classList.remove('open');
+    var drawer=document.getElementById('navDrawer');
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden','true');
     document.getElementById('navDrawerOverlay').classList.remove('open');
     document.body.style.overflow='';
     var btn=document.getElementById('navDrawerToggle');
     if(btn) btn.setAttribute('aria-expanded','false');
+    if(glossaryLastFocus && glossaryLastFocus.focus) glossaryLastFocus.focus();
   }
 
   // ── Mobile nav ────────────────────────────────────
   // ── Search overlay ──────────────────────────────────
+  var glossarySearchLastFocus=null;
   function openSearch(){
     var overlay = document.getElementById('searchOverlay');
     var input = document.getElementById('searchInput');
     if(!overlay) return;
+    glossarySearchLastFocus=document.activeElement;
     overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
     if(input){ input.value = ''; setTimeout(function(){ input.focus(); }, 50); }
     document.getElementById('searchResults').innerHTML = '';
@@ -468,7 +487,9 @@
     var overlay = document.getElementById('searchOverlay');
     if(!overlay) return;
     overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
     document.body.style.overflow = '';
+    if(glossarySearchLastFocus && glossarySearchLastFocus.focus) glossarySearchLastFocus.focus();
   }
   function runGlossarySearch(q){
     var container = document.getElementById('searchResults');
@@ -522,8 +543,8 @@
 </div>
 
 <div class="nav-drawer-overlay" id="navDrawerOverlay" onclick="closeNavDrawer()"></div>
-<div class="nav-drawer" id="navDrawer" aria-label="Jump to letter">
-  <div class="nav-drawer-header">Letters</div>
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-labelledby="navDrawerTitle" aria-hidden="true">
+  <div class="nav-drawer-header" id="navDrawerTitle">Jump to letter</div>
     <a href="#g-A" class="nav-drawer-link" onclick="closeNavDrawer()">A</a>
     <a href="#g-C" class="nav-drawer-link" onclick="closeNavDrawer()">C</a>
     <a href="#g-D" class="nav-drawer-link" onclick="closeNavDrawer()">D</a>
@@ -544,14 +565,16 @@
   <!-- Fixed UI elements — body level for reliable position:fixed -->
   <button class="minimap-toggle" id="navDrawerToggle" onclick="openNavDrawer()" aria-label="Jump to letter" aria-expanded="false">A–Z</button>
   <button class="search-fab" onclick="openSearch()" aria-label="Search glossary"><span aria-hidden="true">⌕</span></button>
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search glossary">
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-labelledby="glossarySearchTitle" aria-hidden="true">
     <div class="search-inner">
+      <h2 id="glossarySearchTitle" class="sr-only">Search glossary</h2>
       <div class="search-bar">
-        <input type="search" id="searchInput" class="search-input" placeholder="Search glossary…"
+        <label for="searchInput" class="sr-only">Search glossary terms</label>
+        <input type="search" id="searchInput" class="search-input" placeholder="Search glossary…" aria-label="Search glossary terms"
                oninput="runGlossarySearch(this.value)" autocomplete="off" spellcheck="false">
         <button class="search-close" onclick="closeSearch()" aria-label="Close search">✕</button>
       </div>
-      <div class="search-results" id="searchResults"></div>
+      <div class="search-results" id="searchResults" aria-live="polite" aria-atomic="false"></div>
     </div>
   </div>
 

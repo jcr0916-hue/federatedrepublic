@@ -10,8 +10,14 @@ const fs = require('node:fs');
     for (const file of fs.readdirSync('.').filter(f => /^quicksheet-.*\.html$/.test(f))) {
       await page.goto(`${base}/${file}`);
       await page.evaluate(() => document.fonts.ready);
-      await page.pdf({ path: `pdf/${file.replace('.html', '.pdf')}`, printBackground: true, preferCSSPageSize: true });
-      console.log(`Rendered ${file}`);
+      await page.pdf({
+        path: `pdf/${file.replace('.html', '.pdf')}`,
+        printBackground: true,
+        preferCSSPageSize: true,
+        tagged: true,
+        outline: true
+      });
+      console.log(`Rendered tagged PDF ${file}`);
     }
   } finally {
     await browser.close();
