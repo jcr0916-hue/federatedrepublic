@@ -10,7 +10,7 @@ Implements the September 19 website review through shared navigation, clearer en
 - The Republic at a Glance combines the domestic map with an accessible directory of twelve states and four territories. State pages include location context and related coverage; Solara and Morantine have dedicated pages.
 - The Record supports text, type, file, and jurisdiction filters with shareable URLs. All records remain available without scripting.
 - The Constitution reader provides article introductions, a compact article index, question-based paths, search, and references into the fictional Republic.
-- Scenario categories use expandable lists. The Formation is the suggested first read; Ordinary Law remains in the Everyday Governance category; Crossroads is distinguished as a non-canonical interactive companion. All 51 scenario endings use shared “What this tested” and “Go deeper” reading bridges.
+- Scenario categories use expandable lists. `before-the-republic.html` is the primary story-first introduction; The Formation remains a constitutional scenario; Ordinary Law remains in the Everyday Governance category; Crossroads is distinguished as a non-canonical interactive companion. All 51 scenario endings use shared “What this tested” and “Go deeper” reading bridges.
 - Diagrams gain keyboard controls and corrected allocation/review wording. A simplified lawmaking fragment connects the reader and Quick Sheets.
 - History search, sources labeling, AI disclosures, and questionnaire follow-through clarify the supporting tools.
 
