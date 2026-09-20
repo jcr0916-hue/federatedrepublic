@@ -162,13 +162,24 @@ export default function (eleventyConfig) {
     return pieces.map((p) => p.text).join("");
   });
 
+  // Accessibility: visual section labels in long-form World documents become
+  // semantic headings without changing their existing classes or appearance.
+  eleventyConfig.addTransform("longFormSemanticHeadings", function(content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    content = content.replace(/<div class="article-subhead">([\s\S]*?)<\/div>/gi, '<h2 class="article-subhead">$1</h2>');
+    content = content.replace(/<div class="doc-section-label">([\s\S]*?)<\/div>/gi, '<h2 class="doc-section-label">$1</h2>');
+    return content;
+  });
+
   // Accessibility: metadata tables use their first cell as a row label.
   // Convert those labels to semantic row headers at build time across all NRS/public documents.
   eleventyConfig.addTransform("metadataTableRowHeaders", function(content) {
     if (!(this.page.outputPath || "").endsWith(".html")) return content;
-    return content.replace(/(<table\b[^>]*class="[^"]*meta-table[^"]*"[^>]*>[\s\S]*?<\/table>)/gi, table =>
-      table.replace(/<tr>([\s\S]*?)<td>([\s\S]*?)<\/td>/gi, '<tr>$1<th scope="row">$2</th>')
-    );
+    return content.replace(/(<table\b[^>]*class="[^"]*meta-table[^"]*"[^>]*>[\s\S]*?<\/table>)/gi, table => {
+      let upgraded=table.replace(/<tr>([\s\S]*?)<td>([\s\S]*?)<\/td>/gi, '<tr>$1<th scope="row">$2</th>');
+      if(!/<caption\b/i.test(upgraded)) upgraded=upgraded.replace(/(<table\b[^>]*>)/i,'$1<caption class="sr-only">Document metadata</caption>');
+      return upgraded;
+    });
   });
 
   // Eleventy defaults to "pretty" permalinks (page.html -> page/index.html), which would
