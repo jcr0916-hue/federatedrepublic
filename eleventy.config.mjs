@@ -162,6 +162,15 @@ export default function (eleventyConfig) {
     return pieces.map((p) => p.text).join("");
   });
 
+  // Accessibility: metadata tables use their first cell as a row label.
+  // Convert those labels to semantic row headers at build time across all NRS/public documents.
+  eleventyConfig.addTransform("metadataTableRowHeaders", function(content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/(<table\b[^>]*class="[^"]*meta-table[^"]*"[^>]*>[\s\S]*?<\/table>)/gi, table =>
+      table.replace(/<tr>([\s\S]*?)<td>([\s\S]*?)<\/td>/gi, '<tr>$1<th scope="row">$2</th>')
+    );
+  });
+
   // Eleventy defaults to "pretty" permalinks (page.html -> page/index.html), which would
   // break vercel.json's /(.*) -> /$1.html route on EVERY page. Force output filenames to
   // mirror the source exactly.
