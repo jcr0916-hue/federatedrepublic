@@ -92,7 +92,7 @@ const openSlot = {
 // Korda once carrying the identical word "Crisis" to mean unrelated things, was the bug this
 // redesign fixes). summary: the popup content, shown via hover/tap on the status pill. Write a
 // real summary only where there's actual published coverage to draw on; everyone else gets an
-// honest, minimal, non-manufactured placeholder. See docs/STATS-STATUS-REDESIGN-PINNED.md.
+// honest, minimal, non-manufactured placeholder. Keep summaries grounded in published coverage.
 const states = [
   { name: "Harren",     pop: 6.2, senate: 2, assembly: 60, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Founding State. Its own profile page covers its history and the federal preamble's studied neutrality toward it — no other current story.", char: "Northern heartland · Founding State" },
   { name: "Merath",     pop: 5.8, senate: 2, assembly: 56, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Passing — nothing notable on record.", char: "Interior · Industrial" },
