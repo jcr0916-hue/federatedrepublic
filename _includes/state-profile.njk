@@ -20,7 +20,7 @@
     .state-profile blockquote{margin:24px 0;padding:4px 24px;border-left:3px solid var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.5rem}
     .state-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:20px 0}.state-heading h1{margin:0}.state-flag{margin:0;width:210px;flex-shrink:0}.state-flag img{display:block;width:100%;height:auto;box-shadow:0 2px 10px #0002}.state-flag figcaption{font-size:.8rem;line-height:1.4;margin-top:8px}
     .state-flag-crop{display:block;position:relative;overflow:hidden;box-shadow:0 2px 10px #0002}.state-flag-crop img{position:absolute;max-width:none;box-shadow:none}
-    @media(max-width:600px){.state-heading{align-items:flex-start;flex-wrap:wrap}.state-flag{width:150px}}
+    @media(max-width:600px){.state-profile{margin-top:82px;padding:0 18px}.state-heading{align-items:flex-start;flex-wrap:wrap;gap:14px}.state-flag{width:132px}.state-breadcrumbs{font-size:.82rem;line-height:1.55}.state-profile-siblings{display:none}.state-profile-current{display:inline}.state-profile h1{font-size:2.8rem}.state-facts{gap:14px;padding:18px 0}.state-facts dd{font-size:1.18rem}}
     .state-coverage{padding-left:20px}.state-coverage li{margin:12px 0}
     .state-coverage small{display:block;opacity:.75}
     .state-map-crop{margin:1.5rem 0}.state-map-crop>a{display:block;color:inherit;text-decoration:none}.state-map-crop svg{display:block;width:100%;max-height:340px;background:#c9dfaf;border:1px solid var(--border)}
@@ -34,14 +34,15 @@
     .state-map-crop .ctx-city-dot{fill:var(--gold);stroke:var(--navy);stroke-width:3px}
     .state-map-crop .ctx-city-label{font:600 22px 'Jost',sans-serif;fill:var(--navy);paint-order:stroke;stroke:#f5f0e8;stroke-width:4px}
     .state-map-crop figcaption{font-size:.82rem;line-height:1.55;margin:.65rem 0}
-    @media(max-width:600px){.state-facts{grid-template-columns:repeat(2,1fr)}.state-map-crop svg{max-height:300px}.state-map-crop .ctx-label-current{font-size:38px}.state-map-crop .ctx-label-neighbor{font-size:28px}.state-map-crop .ctx-label-water{font-size:27px}.state-map-crop .ctx-city-label{font-size:26px}}
+    .state-profile-current{display:none}
+    @media(max-width:600px){.state-facts{grid-template-columns:repeat(2,1fr)}.state-profile-current{display:inline}.state-map-crop{margin:1.1rem 0}.state-map-crop svg{max-height:260px}.state-map-crop .ctx-label-current{font-size:31px;letter-spacing:1px}.state-map-crop .ctx-label-neighbor{font-size:20px;letter-spacing:.5px}.state-map-crop .ctx-label-water{font-size:19px}.state-map-crop .ctx-city-label{font-size:21px}.state-map-crop figcaption{font-size:.78rem}}
   </style>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 {% include "nav.njk" %}
 <main class="state-profile state-{{ stateName | lower }}" id="main-content">
-  <div role="navigation" aria-label="State navigation"><a href="torenthia.html">Torenthia</a> / <a href="republic-at-a-glance.html">States and Territories</a>{% for s in statepages %} · <a href="{{ s.url }}"{% if s.name == stateName %} aria-current="page"{% endif %}>{{ s.name }}</a>{% endfor %}</div>
+  <div class="state-breadcrumbs" role="navigation" aria-label="State navigation"><a href="torenthia.html">Torenthia</a> / <a href="republic-at-a-glance.html">States and Territories</a><span class="state-profile-siblings">{% for s in statepages %} · <a href="{{ s.url }}"{% if s.name == stateName %} aria-current="page"{% endif %}>{{ s.name }}</a>{% endfor %}</span><span class="state-profile-current"> / {{ stateName }}</span></div>
   {% for s in statepages %}{% if s.name == stateName %}
   <p class="state-kicker">{{ s.char }}</p>
   <div class="state-heading">
