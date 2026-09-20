@@ -1,6 +1,6 @@
 /* _data/atlas.js — the world beyond the Republic.
  *
- * BUILD PRINCIPLE (see WORLD-THREADS-PENDING.md, "The Atlas as Expandable Frontier"):
+ * BUILD PRINCIPLE (see WORLD-STORY-BIBLE.md):
  *   Data-driven from day one. Adding a nation is adding a RECORD here, never editing the page.
  *   This is what keeps the participation door open — a visitor-named neighbor touches no
  *   constitution, breaks no canon, and needs no §-verification. Rigor stays authored in the
