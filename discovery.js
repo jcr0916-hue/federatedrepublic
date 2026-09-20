@@ -15,6 +15,12 @@
    if(updateURL){const params=new URLSearchParams();names.forEach(n=>{if(form.elements[n].value)params.set(n,form.elements[n].value);});history.replaceState(null,'',location.pathname+(params.size?'?'+params:''));}
   }
   restore();filter(false);
+  const filterDisclosure=document.getElementById('archiveFilterDisclosure');
+  if(filterDisclosure && matchMedia('(max-width:600px)').matches){
+   const params=new URLSearchParams(location.search);
+   const hasActive=names.some(n=>params.get(n));
+   if(!hasActive) filterDisclosure.open=false;
+  }
   form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',()=>{limit=24;filter(true);});
   form.addEventListener('reset',()=>setTimeout(()=>{limit=24;filter(true);},0));
   more.addEventListener('click',()=>{const firstHidden=rows.filter(r=>r.hidden);limit+=24;filter(false);const revealed=firstHidden.find(r=>!r.hidden);revealed?.querySelector('a')?.focus();});
