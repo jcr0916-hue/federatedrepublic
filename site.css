@@ -965,3 +965,12 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
   .related-rail-card,.record-card,.status-panel,.archive-filter-disclosure,.article-navigation{border:1px solid CanvasText}
   .dot-core,.dot-ring{forced-color-adjust:auto}
 }
+
+
+/* Semantic accessibility pass */
+.meta-table th[scope="row"]{padding:.5rem .75rem;vertical-align:top;border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);width:32%;white-space:nowrap;text-align:left;font-weight:500}
+.meta-table tr:first-child th[scope="row"]{border-top:2px solid var(--navy)}
+.dcard[role="tab"]:focus-visible{outline:3px solid var(--gold2);outline-offset:-3px}
+.diagram-section[role="tabpanel"]:focus-visible{outline:2px solid var(--gold2);outline-offset:-2px}
+.node-panel[hidden]{display:none!important}
+@media(max-width:600px){.meta-table th[scope="row"]{white-space:normal;width:40%}}
