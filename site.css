@@ -935,3 +935,33 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
   .mechanism-strip{gap:.5rem}
   .mechanism-strip>*{min-width:calc(50% - .5rem)}
 }
+
+
+/* Accessibility reinforcement */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.companion-links{max-width:900px;margin:1rem auto 0;padding:0 2rem;display:flex;flex-wrap:wrap;gap:.55rem 1rem}
+.companion-links--inset{padding:0;margin:-2rem 0 3rem}
+.companion-links a{display:inline-flex;align-items:center;min-height:44px;color:#5f4512;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.companion-links a:hover,.companion-links a:focus-visible{text-decoration-thickness:2px}
+@media(max-width:640px){.companion-links{padding:0 1rem}.companion-links--inset{padding:0;margin:-2rem 0 2.25rem}}
+
+.dot[data-type="political"] .dot-core{border-radius:2px!important}
+.dot[data-type="legal"] .dot-core{border-radius:1px!important;transform:rotate(45deg)}
+.dot[data-type="diplomatic"] .dot-core{background:transparent!important;border:3px solid #f59e0b}
+.dot:focus-visible .dot-core{outline:3px solid #fff;outline-offset:3px}
+
+.search-close,.alpha-close,.nav-drawer-link{min-width:44px;min-height:44px}
+.search-close{display:inline-flex;align-items:center;justify-content:center}
+.nav-drawer-link{display:flex;align-items:center}
+
+@media(prefers-contrast:more){
+  :root{--muted:#454545;--border:#7f7564}
+  a{text-decoration-thickness:2px}
+  .section-kicker,.related-rail-kicker,.meta{font-weight:700}
+  .related-rail-card,.status-panel,.record-card{border-width:2px}
+}
+@media(forced-colors:active){
+  :focus-visible{outline:3px solid Highlight!important;outline-offset:3px!important}
+  .related-rail-card,.record-card,.status-panel,.archive-filter-disclosure,.article-navigation{border:1px solid CanvasText}
+  .dot-core,.dot-ring{forced-color-adjust:auto}
+}
