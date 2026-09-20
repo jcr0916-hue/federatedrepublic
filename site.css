@@ -983,3 +983,8 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 h2.article-subhead,h2.doc-section-label{font-weight:inherit}
 .s-custom-body[hidden]{display:none!important}
 [role="progressbar"]{position:relative}
+
+
+/* Quick Sheet semantic elements */
+h1.qs-title,h2.section-label{padding-block:0}
+h1.qs-title:focus,h2.section-label:focus{outline:none}
