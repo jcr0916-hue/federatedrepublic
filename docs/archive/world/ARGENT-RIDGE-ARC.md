@@ -1,0 +1,191 @@
+# The Argent Ridge Arc — Background Storyline Outline
+
+A slow-burn background thread demonstrating the constitution working as narrative.
+Runs alongside and OUTLIVES the Thoss crossroads window. No connection to Thoss.
+Cadence: beats spaced across time (this is background texture, not a rushed subplot).
+
+## CURRENT PUBLISHED POSITION — Y13 M11 (updated 260915)
+
+- Varek’s Assembly granted consent in **news-069**, formally filed in **nrs-035**
+  (seq 107–108). The response came through its Assembly, not a governor.
+- Norvane **refused consent** in **nrs-038**, with the human consequences covered in **news-076**
+  (seq 117–118). The refusal preserves the residential development option near the northern arrival
+  corridor while reception capacity remains under pressure. Phase One repeal signatures remain open.
+- **torenthia-state-norvane.html** now establishes the State through its existing constitution,
+  shared statistics, northern arrival geography, and housing pressures. It uses the Varek/Harren
+  profile layout and is discoverable through the existing State navigation, map, and table.
+- **Flag supplied and selected by John, 260915:** `images/norvane-flag.png`, preserved unchanged
+  and linked through the profile’s `stateFlag` / `stateFlagAlt` fields. White mountain ridge
+  on navy above a light blue band. No additional symbolism is established by the profile.
+  This profile introduces no consent decision, named governor, or named arrival facility.
+
+## The place
+- **Argent Ridge** — official/map name. A ridge jutting from the northern Torenthian Alps,
+  between Varek and Norvane, overlooking the Toren River plains.
+- **Riverglow** — the local name. Unwritten, never on a statute. The place people go to propose.
+  "Argent Ridge on the survey; Riverglow to everyone who's ever courted there."
+- The land is federal, Trust-ELIGIBLE, but was never designated (nobody thought to check —
+  everyone assumed a place that beloved was already protected). That gap is the engine.
+
+## The constitutional spine (each mechanism teaches the next constraint)
+1. Land disposal requires statute (§18.4). A development statute conveys/encumbers the parcel.
+2. §13.1 optional referendum can repeal an enacted statute — the citizens' first tool.
+3. But repeal only STOPS development; it does not PROTECT the land.
+4. Protection requires §18.4 Trust designation: 2/3 both chambers + HOST STATE CONSENT.
+5. Argent Ridge straddles TWO states. Both must consent. Varek consents, Norvane refuses.
+   -> The deadlock. Even with national support and the 2/3 vote, one state's refusal blocks it.
+6. The referendum was never the real question. The two-state consent problem is.
+
+## The state split (both sympathetic — no villain)
+- **Varek consents** — established "river country," bound to the Toren watershed; the overlook
+  and the courting-tradition are part of Varek's identity. Protecting Riverglow = protecting itself.
+- **Norvane refuses** — newest state, quiet, undeveloped, under arrival-zone population pressure,
+  hungry for tax base and housing. The development IS the growth it needs. Not villainy — a young
+  state fighting for room.
+
+## The beats (spaced across time)
+
+**BEAT 1 — NRS (dry): the statute.** [PUBLISHED — torenthia-nrs-011.html, NRS-Y13-0294, Y13 M7]
+An Assembly development-authorization statute enters/passes its review cycle — conveying
+development rights over the "Argent Ridge federal parcel." Dry, procedural, easy to miss.
+Names only "Argent Ridge." Never mentions Riverglow. The gap surfaces for the attentive reader.
+
+**BEAT 2 — News (human): the movement.** [PUBLISHED — torenthia-news-038.html, "The Ridge Nobody Calls Argent", Aleth Fenn, Y13 M8]
+Public realizes what passed. A grassroots group forms to repeal it — ordinary Varek and
+Norvane citizens, the dawning "wait, Riverglow was never actually protected?" A reporter draws
+the Argent-Ridge-vs-Riverglow contrast. The group announces it will invoke §13.1.
+
+**BEAT 3 — NRS (Elections Panel): the machinery.** [PUBLISHED — torenthia-nrs-013.html, NRS-Y13-0302, Y13 M8]
+Phase One petition certified. The dry procedural record of §13.1 turning: signature thresholds
+(0.5-3% in >=1/3 of States/Territories), the two-phase structure, eligibility confirmed
+(a development statute is not an Article I expansion / budget / mandated-obligation law).
+
+**BEAT 4 — News: the referendum resolves + the pivot.** [later, past Thoss window]
+Referendum happens. Whichever way it lands, the movement discovers repeal wasn't enough — the
+land is still not protected. They pivot to the real fight: §18.4 Trust designation.
+
+**BEAT 5+ — the two-state deadlock.** [PUBLISHED OPENING — nrs-038 + news-076, Y13 M12]
+Varek consents. Norvane refuses. The first deadlock beat is now public: Norvane ties its refusal
+to arrival-corridor housing capacity, not hostility to Riverglow. The thread can continue as
+background texture through the separate repeal campaign and any later change in State position.
+
+## Naming line for the News beats (the emotional stake in one sentence)
+"The statute calls it Argent Ridge. Nobody who has ever proposed there calls it anything but Riverglow."
+
+
+---
+
+## CORRECTION FROM BEAT 2 DRAFTING (Y13 M8) — the §13.1 timeline was wrong
+
+Drafting Beat 2 against the actual provision text turned up two errors in the arc's
+assumptions. Both make the arc BETTER; both are now canon in news-038.
+
+**1. §13.1 is not a 90-day process. It is ~19 months.**
+The 90 days is only the window in which the petition may BEGIN. What begins is:
+  Phase One  — up to 8 months, signatures in at least ONE-THIRD OF ALL STATES AND
+               TERRITORIES (not one-third of the population — Varek's outrage is worth
+               exactly what Solara's indifference is worth)
+  Phase Two  — up to 8 further months, 5% of eligible voters nationally
+  then       — Elections Panel administers the vote within 90 days of verification
+**And nothing in §13.1 suspends the statute.** §13.1(6) repeals "immediately upon
+certification" — meaning the Act is law through Phase One, Phase Two, verification and
+the vote. Nineteen months is long enough to clear a footprint. The citizens can win the
+referendum and lose the ridge.
+Add §13.1(7): the Legislature may re-enact a repealed law. So even a win returns the
+parcel to the general inventory, undesignated, conveyable again by ordinary statute.
+
+**2. Norvane's motive is not tax base. It is the Lake Varda crisis.**
+world-canon.md: Norvane is the "newest-named state" and the "NORTHERN ARRIVAL ZONE for
+refugees crossing Lake Varda." The residential half of the Argent Ridge footprint is the
+only large buildable federal tract within reach of the arrival corridor. Norvane's
+delegation did not vote for a resort — they voted for somewhere to put people who are
+currently in a converted freight shed with winter coming.
+This wires Argent Ridge directly into the live Varda thread and makes the deadlock
+genuinely tragic rather than merely obstructive: Varek would consent to §18.4 tomorrow,
+because Varek is river country. Norvane cannot, because Norvane has people.
+
+**The arc's thesis, restated:** nobody wrote this to be cruel. Land shouldn't be locked up
+by the executive; a Trust designation shouldn't be imposed on a State that must live with
+it; a repeal shouldn't permanently bind a future legislature. Each is sensible. Together,
+over one highland tract, they mean the referendum is real, the citizens may well win it,
+and it will not save Riverglow.
+
+**BEAT 3 onward — unchanged, but reframed.** The movement now has a 19-month problem and
+a §18.4 problem, and the second one is Norvane, and Norvane is sympathetic.
+
+**New voice:** Aleth Fenn, Northern Correspondent, The Torenthian, filed from Varek.
+
+
+---
+
+## BEAT 3 AS PUBLISHED (Y13 M8) — the eligibility fight came BEFORE the signatures
+
+The arc outline had Beat 3 as "Phase One petition certified." Reading §13.1 properly moved it
+earlier and made it better. Before a single signature may be gathered, the Elections Panel must
+determine under §13.1(5) whether the statute is eligible at all — and §13.1(4) makes BUDGET LAWS
+ineligible. The Argent Ridge Act directs revenue to Varek and Norvane by a formula written into
+the Act. So Norvane's route to killing the petition was never the signatures; it was arguing the
+Act is a budget law and cannot be petitioned.
+
+**The Panel ruled it ELIGIBLE** (NRS-Y13-0302), on three grounds:
+1. A budget law appropriates or authorises expenditure. This Act disposes of an asset and directs
+   where the proceeds land. Generating revenue is not spending it.
+2. The allocation is consequential, not the object. Strike the formula and a conveyance remains;
+   strike the conveyance and nothing remains. §13.1(4) reaches a law's character, not its incidents.
+3. **The construction urged would swallow the provision.** Almost every statute of consequence moves
+   money. If a revenue clause made a law a budget law, the Legislature could place ANY statute beyond
+   citizen repeal by attaching a formula. The Panel declined a reading under which a right may be
+   extinguished by drafting.
+
+The Panel also REJECTED Norvane's §13.1(4)(c) argument (law implementing a constitutionally mandated
+obligation): "An obligation that a State feels is not an obligation that this Constitution mandates.
+Necessity is not the same thing as mandate." Norvane's need is real and it is not a mandate.
+
+**RESOLVED (news-060, Y13 M9) — the window closed unused.** Norvane let the 14-day challenge
+period lapse without filing. Not surrender — its delegation has been aggressive about every OTHER
+arrival-corridor need all year — but a deliberate choice about where fourteen days of a strapped
+state's capacity belonged. The eligibility ruling now stands unchallengeable through this route.
+Phase One proceeds. The §18.4 consent problem is untouched and unmentioned by anyone yet in-world;
+it remains the real fight, still ahead.
+
+**OPENED (news-063 + nrs-029, Y13 M10) — the §18.4 consent fight finally surfaces.** The
+Legislature approved a National Trust designation request by 2/3 vote of both chambers (nrs-029,
+dry procedural record) and forwarded it to Varek and Norvane for host State consent. news-063
+(Fenn) is the piece that finally states plainly what winning the repeal actually does and doesn't
+accomplish — repeal undoes the disposal statute; it does not itself protect the land, which
+requires this separate §18.4 designation. Neither State has responded as of this filing. No
+statutory deadline governs how long a State can take to decide.
+
+**Correction 260822:** earlier drafting (this file, news-060, news-063 draft) placed Norvane's
+refugee facility at "Varenne" — this is a real geographic error. Varenne Station is established
+world-canon.md as being in **Korda's** lake corridor, the southeast arrival zone. Norvane is the
+**northern** arrival zone, an entirely separate location with no established named facility yet.
+Fixed across all three; Norvane's facility is now referred to generically ("a converted freight
+shed," "the crossing intake") rather than given an invented name, consistent with the editorial
+rule that map/place detail follows coverage rather than getting ahead of the story.
+
+## THE JURISDICTIONAL THRESHOLD BECAME THE STORY (Y13 M9, news-039 + news-040)
+
+§13.1(2) requires Phase One signatures in ONE-THIRD OF ALL STATES AND TERRITORIES — jurisdictions,
+not population. This turned out to be the arc's richest vein and it now has two voices:
+
+- **news-039 (Hale, The Dorven Ledger, MUNDANE):** the petition table reaches Orath, four hundred
+  miles away. Nine signatures in four hours. Hale works out that they didn't come because Dorven
+  cares — they came because Dorven COUNTS, and there is no route to the threshold that skips a
+  Territory for being small. "I have spent eleven years complaining that nobody in Verentum knows
+  this Territory exists." The counter-argument is in the same piece: the bar doesn't measure whether
+  the country agrees with you, it measures whether you can afford the petrol.
+- **news-040 (Vend/Orin, The Torenthian):** the same table reaches Korda. Orin sets §13.1 against
+  §12.6 — one provision obliges a stranger to drive eight hundred miles and ask; the other obliges
+  a chamber to send her a letter. Neither is a malfunction. That's the design.
+
+**§12.6 CORRECTION (important, was nearly published wrong):** §12.6 does NOT stop at a Monitor
+finding. "Where the EM finds the mechanism has failed, the Legislature publishes its response to the
+NRS within 90 days." The Legislature IS obliged to answer. It answered, on time, in full compliance —
+and the answer was that the mechanism is under review. The grievance is not silence. It is that
+§12.6 can compel a legislature to SPEAK and cannot compel it to MEAN it. That is sharper than the
+"nothing follows" version and it is what the text actually says.
+
+**Also fixed while here:** nrs-010 and nrs-011 both carried a masthead eyebrow reading "Foreign
+Affairs Directorate" (copy-paste from nrs-009) while their own Publishing Authority fields said
+"Office of the Clerk of the Assembly." Both corrected. All NRS mastheads now match their own records.
