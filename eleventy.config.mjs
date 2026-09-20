@@ -169,6 +169,7 @@ export default function (eleventyConfig) {
     if(!/quicksheet-[^/]+\.html$/i.test(input)) return content;
 
     content=content
+      .replace(/<a([^>]*class="[^"]*qs-download-btn[^"]*"[^>]*)>\s*Download PDF\s*<\/a>/gi,'<a$1 aria-label="Download PDF version. This page is the accessible HTML version.">Download PDF<span class="sr-only">; optional, this page contains the HTML version</span></a>')
       .replace(/<div class="qs-title">([\s\S]*?)<\/div>/gi,'<h1 class="qs-title">$1</h1>')
       .replace(/<div class="section-label">([\s\S]*?)<\/div>/gi,'<h2 class="section-label">$1</h2>')
       .replace(/<div class="facts-row">/gi,'<div class="facts-row" role="list">')
@@ -184,6 +185,17 @@ export default function (eleventyConfig) {
       .replace(/<([a-z0-9]+) class="(cas-arrow|flow-arrow)"([^>]*)>/gi,'<$1 class="$2"$3 aria-hidden="true">');
 
     return content;
+  });
+
+  // Accessibility: NRS seals and watermarks repeat adjacent institutional text.
+  // Keep the visual identity while avoiding duplicate announcements.
+  eleventyConfig.addTransform("decorativeInstitutionalSeals", function(content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/<img\b(?=[^>]*\bclass="[^"]*\bnrs-seal\b)[^>]*>/gi, tag => {
+      let out=tag.replace(/\s+alt="[^"]*"/i,' alt=""');
+      if(!/\saria-hidden=/i.test(out)) out=out.replace(/>$/,' aria-hidden="true">');
+      return out;
+    });
   });
 
   // Accessibility: visual section labels in long-form World documents become
