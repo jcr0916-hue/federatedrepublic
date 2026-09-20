@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>The Federated Republic — Constitution</title>
+  <style>
+    @page { size: Letter; margin: .7in .8in .65in; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #191919; font-family: Georgia, "Times New Roman", serif; font-size: 10.5pt; line-height: 1.42; }
+    .cover { min-height: 8.3in; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; break-after: page; }
+    .cover h1 { margin: 0; font-size: 27pt; line-height: 1.1; color: #1b2b4b; }
+    .cover p { margin: .25rem 0; }
+    .cover .subtitle { font-size: 17pt; color: #8a691d; letter-spacing: .08em; text-transform: uppercase; }
+    .cover .meta { color: #5e5a54; font-size: 9pt; margin-top: 1rem; }
+    article { break-before: page; }
+    article:first-of-type { break-before: auto; }
+    h2 { font-size: 17pt; color: #1b2b4b; margin: 0 0 1rem; border-bottom: 1px solid #b28b2e; padding-bottom: .28rem; }
+    h3 { font-size: 11pt; line-height: 1.25; color: #1b2b4b; margin: 1rem 0 .28rem; break-after: avoid; }
+    p { margin: 0 0 .45rem; orphans: 3; widows: 3; }
+    .preamble p { font-size: 11pt; line-height: 1.55; }
+    footer { display: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="cover" aria-labelledby="constitution-title">
+      <h1 id="constitution-title">The Federated Republic</h1>
+      <p class="subtitle">Constitution</p>
+      <p class="meta">{{ constitution.provisions }} provisions · {{ constitution.articles }} articles<br>thefederatedrepublic.org</p>
+    </section>
+
+    {% for entry in constitution.entries %}
+      {% if entry.preamble %}
+      <article class="preamble">
+        <h2>{{ entry.heading }}</h2>
+        {% for paragraph in entry.text.split('\n\n') %}
+          {% if paragraph.trim() %}<p>{{ paragraph }}</p>{% endif %}
+        {% endfor %}
+      </article>
+      {% else %}
+      <article>
+        <h2>{{ entry.heading }}</h2>
+        {% for provision in entry.provisions %}
+          <section>
+            <h3>{{ provision.num }} — {{ provision.name }}</h3>
+            {% for paragraph in provision.text.split('\n') %}
+              {% if paragraph.trim() %}<p>{{ paragraph }}</p>{% endif %}
+            {% endfor %}
+          </section>
+        {% endfor %}
+      </article>
+      {% endif %}
+    {% endfor %}
+  </main>
+</body>
+</html>
