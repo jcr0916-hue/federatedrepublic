@@ -43,9 +43,15 @@
     .back-link:hover{color:var(--navy)}
 
     @media(max-width:820px){
-      main{padding:2rem 1rem 4rem}
-      .record-hero{padding:1.75rem 1rem 1.5rem}
+      main{padding:1.5rem 1rem 4rem}
+      .record-hero{padding:1.45rem 1rem 1.25rem}
+      .record-sub{font-size:.84rem}
       .entry-deck{display:none}
+      .back-link{margin-bottom:1rem}
+    }
+    @media(max-width:600px){
+      .source-identity-rail .related-rail{margin-top:.25rem}
+      .archive-filter-disclosure{margin:1rem 0}
     }
   </style>
 </head>
@@ -80,11 +86,14 @@
       {% include "related-rail.njk" %}
     </div>
 
-    <form class="archive-filters" id="archiveFilters" role="search" hidden>
+    <details class="archive-filter-disclosure" id="archiveFilterDisclosure" open>
+      <summary>Filter the Record</summary>
+      <form class="archive-filters" id="archiveFilters" role="search" hidden>
 <label>Search the archive<input type="search" name="q" placeholder="Title, person, provision or phrase"></label>
 <label>Document type<select name="type"><option value="">All types</option><option value="news">News</option><option value="nrs">NRS</option><option value="sc">Court</option><option value="dispatch">Dispatch</option><option value="civic">Civic Life / Ordinary Republic</option></select></label>
 <label>Active file<select name="file"><option value="">All files</option>{% for f in currentFiles %}<option value="{{ f.id }}">{{ f.short }}</option>{% endfor %}</select></label>
 <label>Jurisdiction<select name="place"><option value="">All jurisdictions</option>{% for s in stats.states %}<option>{{ s.name }}</option>{% endfor %}{% for s in stats.territories %}<option>{{ s.name }}</option>{% endfor %}</select></label><label>Source<select name="source"><option value="">All sources</option><option>The Torenthian</option><option>RNN</option><option>National Record System</option><option>The Dorven Ledger</option><option>The Korda Press</option><option value="TNB">TNB</option></select></label><button type="reset" class="secondary-action">Clear filters</button></form>
+    </details>
 <div class="link-row">{% for f in currentFiles %}<a href="dossier-{{ f.id }}.html">{{ f.short }}</a>{% endfor %}</div>
 <p id="archiveCount" role="status">{{ collections.world | length }} public records · newest first</p>
 <div id="archiveResults">{% for p in collections.world | reverse %}<div class="archive-item" data-type="{{ p.data.worldKind }}" data-civic="{{ p.data.worldMundane or false }}" data-files="{{ p.data.worldArcs | join('|') }}" data-places="{{ p.data.worldJurisdictions | join('|') }}" data-refs="{{ p.data.worldProvisions | join(' ') }}" data-outlet="{{ p.data.worldOutlet }}">{% include "record-card.njk" %}</div>{% endfor %}</div>
