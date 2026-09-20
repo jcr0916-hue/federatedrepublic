@@ -1,6 +1,6 @@
 /* _data/stats.js — Torenthia Stats: the single source of truth.
  *
- * GOVERNING DISCIPLINE (see WORLD-THREADS-PENDING.md):
+ * GOVERNING DISCIPLINE (see WORLD-STORY-BIBLE.md):
  *   Once a number here is published, it BINDS every future piece. This ledger is what we
  *   write FROM, not a record reconciled afterward. Same rule as constitution_data.json.
  *
