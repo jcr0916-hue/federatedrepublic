@@ -18,19 +18,25 @@ Edit the canonical structured source and regenerate derived constitutional surfa
 - `WORLD-STORY-BIBLE.md` — durable Torenthia geography, recurring characters, continuity warnings, and established story-arc constraints.
 - `WORLD-STORY-STATUS.md` — current world date, live-thread status, running clocks, open decisions, and next-beat handoff.
 - `CONSTITUTIONAL-DESIGN-PRINCIPLES.md` — durable constitutional-design principles.
-- `WEBSITE-REFRESH.md` and backend notes — current site/publishing operations where still applicable.
+- `WEBSITE-REFRESH.md` — current site/discovery/publishing contracts retained from the September refresh.
 
 For World content, use the Bible for **what is true**, Status for **what is happening now**, published World front matter for **what happened**, and `constitution_data.json` for constitutional mechanism.
 
 ## Backend operations
 
 - [Public asset deployment](ASSET-DEPLOYMENT.md) — referenced-asset collection, protected runtime paths, validation, and deployment size measurements.
+- [Living Crossroads operations](operations/CROSSROADS.md) — recurring installment activation and shared feature wiring.
+
+## World visual references
+
+- `world/visual-identity/KELVANT-FLAG.md` — Kelvant flag symbolism, provenance, and canon guardrails.
+- `world/visual-identity/VAREK-FLAG.md` — Varek flag symbolism, provenance, and canon guardrails.
 
 ## Archive
 
 - `archive/constitution/` — dated snapshots of earlier constitutional text.
 - `archive/reviews/` — completed constitutional review and audit records.
-- `archive/project/` — completed or superseded implementation/content/reorganization plans.
+- `archive/project/` — completed or superseded implementation/content/reorganization plans, including Crossroads launch and content-planning material.
 - `archive/decisions/` — resolved design-decision records retained for rationale and history.
 - `archive/world/` — superseded World canon, character, timeline, pending-thread, and individual arc-planning files retained verbatim for historical reference.
 
