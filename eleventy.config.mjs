@@ -162,6 +162,30 @@ export default function (eleventyConfig) {
     return pieces.map((p) => p.text).join("");
   });
 
+  // Accessibility: Quick Sheets are visually designed like one-page infographics.
+  // Preserve that layout while exposing the same hierarchy and sequence in the DOM.
+  eleventyConfig.addTransform("quickSheetSemantics", function(content) {
+    const input=this.page.inputPath || "";
+    if(!/quicksheet-[^/]+\.html$/i.test(input)) return content;
+
+    content=content
+      .replace(/<div class="qs-title">([\s\S]*?)<\/div>/gi,'<h1 class="qs-title">$1</h1>')
+      .replace(/<div class="section-label">([\s\S]*?)<\/div>/gi,'<h2 class="section-label">$1</h2>')
+      .replace(/<div class="facts-row">/gi,'<div class="facts-row" role="list">')
+      .replace(/<div class="fact-pill">/gi,'<div class="fact-pill" role="listitem">')
+      .replace(/<div class="cascade-row">/gi,'<div class="cascade-row" role="list" aria-label="Sequence">')
+      .replace(/<div class="cas-step([^"]*)">/gi,'<div class="cas-step$1" role="listitem">')
+      .replace(/<div class="abs-grid">/gi,'<div class="abs-grid" role="list">')
+      .replace(/<div class="abs-card">/gi,'<div class="abs-card" role="listitem">')
+      .replace(/<div class="tier-row">/gi,'<div class="tier-row" role="list">')
+      .replace(/<div class="tier-card([^"]*)">/gi,'<div class="tier-card$1" role="listitem">')
+      .replace(/<div class="floor-grid">/gi,'<div class="floor-grid" role="list">')
+      .replace(/<div class="floor-card">/gi,'<div class="floor-card" role="listitem">')
+      .replace(/<([a-z0-9]+) class="(cas-arrow|flow-arrow)"([^>]*)>/gi,'<$1 class="$2"$3 aria-hidden="true">');
+
+    return content;
+  });
+
   // Accessibility: visual section labels in long-form World documents become
   // semantic headings without changing their existing classes or appearance.
   eleventyConfig.addTransform("longFormSemanticHeadings", function(content) {
