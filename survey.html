@@ -129,16 +129,16 @@
 
   <!-- QUESTION -->
   <section class="s-q" id="questionScreen" hidden>
-    <div class="s-progress">
-      <div class="s-track"><div class="s-fill" id="progressFill"></div></div>
-      <div class="s-count" id="progressCount">1 / {{ site.questions }}</div>
+    <div class="s-progress" id="surveyProgress" role="progressbar" aria-label="Questionnaire progress" aria-valuemin="1" aria-valuemax="{{ site.questions }}" aria-valuenow="1" aria-valuetext="Question 1 of {{ site.questions }}">
+      <div class="s-track" aria-hidden="true"><div class="s-fill" id="progressFill"></div></div>
+      <div class="s-count" id="progressCount" aria-hidden="true">1 / {{ site.questions }}</div>
     </div>
     <div class="s-axis-tag" id="axisTag">On power</div>
     <h2 class="s-prompt" id="promptText">…</h2>
-    <div class="s-options" id="optionsWrap"></div>
+    <div class="s-options" id="optionsWrap" role="group" aria-labelledby="promptText"></div>
     <div class="s-custom" id="customBox">
-      <button class="s-custom-toggle" onclick="toggleCustom()">In my own words, or a blend…</button>
-      <div class="s-custom-body">
+      <button class="s-custom-toggle" id="customToggle" onclick="toggleCustom()" aria-expanded="false" aria-controls="customAnswerBody">In my own words, or a blend…</button>
+      <div class="s-custom-body" id="customAnswerBody" hidden>
         <div class="s-custom-inner">
           <div class="s-custom-hint">Want a mix of options, or something not listed? Say it however you like — the librarian reads these.</div>
           <label class="sr-only" for="customText">Your answer in your own words</label><p class="privacy-hint">Your answer will be sent to the site’s server and AI provider for interpretation. Avoid personal or confidential details. <a href="ai-features.html">How requests are handled</a>.</p><textarea id="customText" placeholder="e.g. A blend of A and C — mostly A, but with C's safeguard…" oninput="onCustomInput()"></textarea>
@@ -150,14 +150,14 @@
   </section>
 
   <!-- THINKING -->
-  <section class="s-thinking" id="thinkingScreen" hidden>
+  <section class="s-thinking" id="thinkingScreen" role="status" aria-live="polite" aria-atomic="true" hidden>
     <div class="s-eyebrow">The librarian is reading your answers</div>
     <div class="s-dots"><span></span><span></span><span></span></div>
     <p id="thinkingLine">Pulling a few books off the shelf…</p>
   </section>
 
   <!-- RESULT -->
-  <section class="s-result" id="resultScreen" hidden>
+  <section class="s-result" id="resultScreen" aria-live="polite" aria-atomic="false" tabindex="-1" hidden>
     <div class="s-result-eyebrow">Your Result</div>
     <h2 id="resultTitle">Your answers describe a <strong>—</strong></h2>
     <p class="s-result-sub" id="resultSub"></p>
@@ -432,6 +432,9 @@ function renderQuestion(q){
   const n = asked.length;
   document.getElementById('progressCount').textContent = n + ' / ' + TARGET_QUESTIONS;
   document.getElementById('progressFill').style.width = ((n-1)/TARGET_QUESTIONS*100) + '%';
+  const progress=document.getElementById('surveyProgress');
+  progress.setAttribute('aria-valuenow',String(n));
+  progress.setAttribute('aria-valuetext','Question '+n+' of '+TARGET_QUESTIONS);
   document.getElementById('axisTag').textContent = AXES[q.axis].tag;
   const prompt=document.getElementById('promptText');
   prompt.textContent=q.prompt;prompt.tabIndex=-1;prompt.focus();
@@ -448,6 +451,8 @@ function renderQuestion(q){
   });
   // reset custom box
   const cb = document.getElementById('customBox'); cb.classList.remove('open');
+  document.getElementById('customToggle').setAttribute('aria-expanded','false');
+  document.getElementById('customAnswerBody').hidden=true;
   document.getElementById('customText').value = '';
   document.getElementById('customSubmit').disabled = true;
   document.getElementById('backBtn').disabled = asked.length<=1;
@@ -465,7 +470,16 @@ function choose(q, opt){
   nextQuestion();
 }
 
-function toggleCustom(){ document.getElementById('customBox').classList.toggle('open'); }
+function toggleCustom(){
+  const box=document.getElementById('customBox');
+  const body=document.getElementById('customAnswerBody');
+  const toggle=document.getElementById('customToggle');
+  const open=!box.classList.contains('open');
+  box.classList.toggle('open',open);
+  body.hidden=!open;
+  toggle.setAttribute('aria-expanded',String(open));
+  if(open) setTimeout(()=>document.getElementById('customText').focus(),0);
+}
 function onCustomInput(){ document.getElementById('customSubmit').disabled = !document.getElementById('customText').value.trim(); }
 function submitCustom(){
   const q = asked[asked.length-1];
@@ -512,6 +526,9 @@ async function finish(){
   document.getElementById('questionScreen').hidden = true;
   const t = document.getElementById('thinkingScreen'); t.hidden = false;
   document.getElementById('progressFill').style.width = '100%';
+  const progress=document.getElementById('surveyProgress');
+  progress.setAttribute('aria-valuenow',String(TARGET_QUESTIONS));
+  progress.setAttribute('aria-valuetext','All '+TARGET_QUESTIONS+' questions answered');
   let i = 0; const line = document.getElementById('thinkingLine');
   line.textContent = THINKING_LINES[0];
   const iv = setInterval(()=>{ i=(i+1)%THINKING_LINES.length; line.textContent = THINKING_LINES[i]; }, 1400);
@@ -600,7 +617,9 @@ function renderResult(data){
   else { frn.hidden = true; }
 
   document.getElementById('thinkingScreen').hidden = true;
-  document.getElementById('resultScreen').hidden = false;
+  const resultScreen=document.getElementById('resultScreen');
+  resultScreen.hidden = false;
+  resultScreen.focus();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -619,7 +638,9 @@ function renderError(){
   document.getElementById('resultBodyFull').innerHTML = '';
   document.getElementById('frNote').hidden = true;
   document.getElementById('thinkingScreen').hidden = true;
-  document.getElementById('resultScreen').hidden = false;
+  const resultScreen=document.getElementById('resultScreen');
+  resultScreen.hidden = false;
+  resultScreen.focus();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -627,6 +648,8 @@ function printResult(){ window.print(); }
 function restart(){
   document.getElementById('resultScreen').hidden = true;
   document.getElementById('introScreen').hidden = false;
+  const title=document.querySelector('#introScreen h1');
+  if(title){title.tabIndex=-1;title.focus();}
   window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>
