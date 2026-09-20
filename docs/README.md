@@ -15,7 +15,12 @@ Edit the canonical structured source and regenerate derived constitutional surfa
 
 ## Active project references
 
-Current design principles, world canon, character references, timelines, arc notes, deployment notes, and active queues remain directly under `docs/` until a later structural reorganization is worthwhile.
+- `WORLD-STORY-BIBLE.md` — durable Torenthia geography, recurring characters, continuity warnings, and established story-arc constraints.
+- `WORLD-STORY-STATUS.md` — current world date, live-thread status, running clocks, open decisions, and next-beat handoff.
+- `CONSTITUTIONAL-DESIGN-PRINCIPLES.md` — durable constitutional-design principles.
+- `WEBSITE-REFRESH.md` and backend notes — current site/publishing operations where still applicable.
+
+For World content, use the Bible for **what is true**, Status for **what is happening now**, published World front matter for **what happened**, and `constitution_data.json` for constitutional mechanism.
 
 ## Backend operations
 
@@ -27,5 +32,6 @@ Current design principles, world canon, character references, timelines, arc not
 - `archive/reviews/` — completed constitutional review and audit records.
 - `archive/project/` — completed or superseded implementation/content/reorganization plans.
 - `archive/decisions/` — resolved design-decision records retained for rationale and history.
+- `archive/world/` — superseded World canon, character, timeline, pending-thread, and individual arc-planning files retained verbatim for historical reference.
 
 Archive material may describe older file counts, institutional wording, workflows, or site architecture. The current repository and current Constitution control where they differ.
