@@ -41,58 +41,58 @@
 
               {% for s in statepages %}<a class="state-map-link" href="{{ s.url }}" style="left:{{ s.left }}%;top:{{ s.top }}%" aria-label="Explore {{ s.name }}">{{ s.name }}</a>{% endfor %}
               <!-- Crisis dots (red) -->
-              <div role="button" tabindex="0" class="dot" data-key="norvane" style="top:19.2%;left:76.5%">
+              <div role="button" tabindex="0" class="dot" data-key="norvane" data-type="crisis" aria-label="Norvane — active crisis" style="top:19.2%;left:76.5%">
                 <div class="dot-core" style="background:#e8185a"></div>
                 <div class="dot-ring" style="border-color:#e8185a"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
               </div>
-              <div role="button" tabindex="0" class="dot" data-key="rhondel" style="top:59.6%;left:76.8%">
+              <div role="button" tabindex="0" class="dot" data-key="rhondel" data-type="crisis" aria-label="Rhondel — active crisis" style="top:59.6%;left:76.8%">
                 <div class="dot-core" style="background:#e8185a"></div>
                 <div class="dot-ring" style="border-color:#e8185a"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
               </div>
 
               <!-- Political dots (purple) -->
-              <div role="button" tabindex="0" class="dot" data-key="verentum" style="top:64.3%;left:50.3%">
+              <div role="button" tabindex="0" class="dot" data-key="verentum" data-type="political" aria-label="Verentum — political and electoral activity" style="top:64.3%;left:50.3%">
                 <div class="dot-core" style="background:#7c3aed"></div>
                 <div class="dot-ring" style="border-color:#7c3aed"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
               </div>
-              <div role="button" tabindex="0" class="dot" data-key="selvane" style="top:57.6%;left:59.1%">
+              <div role="button" tabindex="0" class="dot" data-key="selvane" data-type="political" aria-label="Selvane — political and electoral activity" style="top:57.6%;left:59.1%">
                 <div class="dot-core" style="background:#7c3aed"></div>
                 <div class="dot-ring" style="border-color:#7c3aed"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
               </div>
 
               <!-- Legal dots (blue) -->
-              <div role="button" tabindex="0" class="dot" data-key="corindal" style="top:72.3%;left:45.2%">
+              <div role="button" tabindex="0" class="dot" data-key="corindal" data-type="legal" aria-label="Corindal — constitutional and legal activity" style="top:72.3%;left:45.2%">
                 <div class="dot-core" style="background:#0ea5e9"></div>
                 <div class="dot-ring" style="border-color:#0ea5e9"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
               </div>
-              <div role="button" tabindex="0" class="dot" data-key="argent-ridge" style="top:22.5%;left:63.5%">
+              <div role="button" tabindex="0" class="dot" data-key="argent-ridge" data-type="legal" aria-label="Argent Ridge — constitutional and legal activity" style="top:22.5%;left:63.5%">
                 <div class="dot-core" style="background:#0ea5e9"></div>
                 <div class="dot-ring" style="border-color:#0ea5e9"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
               </div>
-              <div role="button" tabindex="0" class="dot" data-key="korda-south" style="top:71.8%;left:76.8%">
+              <div role="button" tabindex="0" class="dot" data-key="korda-south" data-type="legal" aria-label="Korda South — constitutional and legal activity" style="top:71.8%;left:76.8%">
                 <div class="dot-core" style="background:#0ea5e9"></div>
                 <div class="dot-ring" style="border-color:#0ea5e9"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
               </div>
 
               <!-- Diplomatic dots (gold) -->
-              <div role="button" tabindex="0" class="dot" data-key="lake-varda" style="top:48.8%;left:87.9%">
+              <div role="button" tabindex="0" class="dot" data-key="lake-varda" data-type="diplomatic" aria-label="Lake Varda — diplomatic and foreign-affairs activity" style="top:48.8%;left:87.9%">
                 <div class="dot-core" style="background:#f59e0b"></div>
                 <div class="dot-ring" style="border-color:#f59e0b"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
               </div>
-              <div role="button" tabindex="0" class="dot" data-key="valedon" style="top:88.4%;left:57.3%">
+              <div role="button" tabindex="0" class="dot" data-key="valedon" data-type="diplomatic" aria-label="Valedon — diplomatic and foreign-affairs activity" style="top:88.4%;left:57.3%">
                 <div class="dot-core" style="background:#f59e0b"></div>
                 <div class="dot-ring" style="border-color:#f59e0b"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
               </div>
-              <div role="button" tabindex="0" class="dot" data-key="toren-river" style="top:9.5%;left:65.1%">
+              <div role="button" tabindex="0" class="dot" data-key="toren-river" data-type="diplomatic" aria-label="Toren River — diplomatic and foreign-affairs activity" style="top:9.5%;left:65.1%">
                 <div class="dot-core" style="background:#f59e0b"></div>
                 <div class="dot-ring" style="border-color:#f59e0b"></div>
                 <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
@@ -191,7 +191,9 @@
     document.getElementById("infoBody").innerHTML=html;
   }
   document.querySelectorAll(".dot").forEach(el=>{
-    el.setAttribute('aria-label',MAPDOTS[el.dataset.key]?.label || el.dataset.key);
+    const mapLabel=MAPDOTS[el.dataset.key]?.label || el.dataset.key;
+    const typeLabel=MAPDOTS[el.dataset.key]?.typeLabel;
+    el.setAttribute('aria-label',typeLabel ? mapLabel+' — '+typeLabel : mapLabel);
     el.addEventListener("click",()=>selectDot(el.dataset.key));
     el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectDot(el.dataset.key);}});
   });
