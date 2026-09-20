@@ -90,10 +90,10 @@ status color + honest placeholder text, nothing invented.
 
 ## SEPARATE, SMALLER ITEM FOUND ALONG THE WAY — not part of this redesign's scope
 
-`world-canon.md` still describes Verdmont as "Provisional." `stats.js` correctly has it as a
+`WORLD-STORY-BIBLE.md` still describes Verdmont as "Provisional." `stats.js` correctly has it as a
 plain `Territory`. Under the corrected Territory-State rules (Provisional applies only to a
 demoted State, never to a Territory pursuing statehood), one of these is stale. `stats.js` is
-almost certainly the one that's right; `world-canon.md`'s line needs updating to match. Small,
+almost certainly the one that's right; `WORLD-STORY-BIBLE.md`'s line needs updating to match. Small,
 independent fix — doesn't need to happen in the same pass as the status redesign, but shouldn't
 be forgotten either.
 
@@ -117,6 +117,6 @@ not backfill all sixteen speculatively.
    mechanism for the summary text.
 4. Add whatever CSS is needed for the green/yellow/red indicators, consistent with the site's
    existing visual language.
-5. Fix the Verdmont `world-canon.md` inconsistency while in this area, since it's cheap and
+5. Fix the Verdmont `WORLD-STORY-BIBLE.md` inconsistency while in this area, since it's cheap and
    related.
 6. Do not touch the NRS-publication gap in this pass — separate, later effort.
