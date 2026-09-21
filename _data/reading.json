@@ -1,7 +1,7 @@
 [
   {
     "number": 1,
-    "title": "Article I \u2014 Individual Sovereignty and Rights",
+    "title": "Article I — Individual Sovereignty and Rights",
     "summary": "The rights that constrain every public authority.",
     "links": [
       [
@@ -16,7 +16,7 @@
   },
   {
     "number": 2,
-    "title": "Article II \u2014 The Dual Executive",
+    "title": "Article II — The Dual Executive",
     "summary": "How domestic and external executive authority are divided and checked.",
     "links": [
       [
@@ -39,7 +39,7 @@
   },
   {
     "number": 3,
-    "title": "Article III \u2014 The Legislature",
+    "title": "Article III — The Legislature",
     "summary": "How elected chambers make laws and hold government accountable.",
     "links": [
       [
@@ -58,7 +58,7 @@
   },
   {
     "number": 4,
-    "title": "Article IV \u2014 The Judicial Architecture",
+    "title": "Article IV — The Judicial Architecture",
     "summary": "How courts resolve disputes and how judges enter and leave office.",
     "links": [
       [
@@ -77,13 +77,13 @@
   },
   {
     "number": 5,
-    "title": "Article V \u2014 Citizenship and National Identity",
+    "title": "Article V — Citizenship and National Identity",
     "summary": "Who belongs to the Republic and how citizenship is protected.",
     "links": []
   },
   {
     "number": 6,
-    "title": "Article VI \u2014 Immigration and Residency",
+    "title": "Article VI — Immigration and Residency",
     "summary": "Separate routes for residency, asylum, and protection against unlawful removal.",
     "links": [
       [
@@ -98,7 +98,7 @@
   },
   {
     "number": 7,
-    "title": "Article VII \u2014 Elections and Federal Office",
+    "title": "Article VII — Elections and Federal Office",
     "summary": "How elections, federal office, and continuity of authority work.",
     "links": [
       [
@@ -113,7 +113,7 @@
   },
   {
     "number": 8,
-    "title": "Article VIII \u2014 Electoral Finance and Campaign Conduct",
+    "title": "Article VIII — Electoral Finance and Campaign Conduct",
     "summary": "How campaign funding and electoral conduct are constrained.",
     "links": [
       [
@@ -128,7 +128,7 @@
   },
   {
     "number": 9,
-    "title": "Article IX \u2014 The Monitors",
+    "title": "Article IX — The Monitors",
     "summary": "Independent scrutiny of the Legislature, executives, and courts.",
     "links": [
       [
@@ -147,7 +147,7 @@
   },
   {
     "number": 10,
-    "title": "Article X \u2014 The National Record System",
+    "title": "Article X — The National Record System",
     "summary": "What the public record preserves, and the limits on secrecy.",
     "links": [
       [
@@ -166,7 +166,7 @@
   },
   {
     "number": 11,
-    "title": "Article XI \u2014 NRS Panel and Elections Panel",
+    "title": "Article XI — NRS Panel and Elections Panel",
     "summary": "The independent infrastructure for records, elections, and voting.",
     "links": [
       [
@@ -181,8 +181,8 @@
   },
   {
     "number": 12,
-    "title": "Article XII \u2014 Social State and Economic Rights",
-    "summary": "Social provision, fiscal capacity, and the Republic\u2019s economic obligations.",
+    "title": "Article XII — Social State and Economic Rights",
+    "summary": "Social provision, fiscal capacity, and the Republic’s economic obligations.",
     "links": [
       [
         "Quick Sheet",
@@ -200,7 +200,7 @@
   },
   {
     "number": 13,
-    "title": "Article XIII \u2014 Direct Democracy",
+    "title": "Article XIII — Direct Democracy",
     "summary": "How citizens repeal laws or initiate legislation.",
     "links": [
       [
@@ -215,7 +215,7 @@
   },
   {
     "number": 14,
-    "title": "Article XIV \u2014 Military Authorization and Accountability",
+    "title": "Article XIV — Military Authorization and Accountability",
     "summary": "The conditions for authorizing force and maintaining accountability.",
     "links": [
       [
@@ -234,7 +234,7 @@
   },
   {
     "number": 15,
-    "title": "Article XV \u2014 Territorial Structure and Statehood",
+    "title": "Article XV — Territorial Structure and Statehood",
     "summary": "How jurisdictions join, change status, restructure, or leave.",
     "links": [
       [
@@ -257,7 +257,7 @@
   },
   {
     "number": 16,
-    "title": "Article XVI \u2014 Indigenous Sovereignty",
+    "title": "Article XVI — Indigenous Sovereignty",
     "summary": "Indigenous sovereignty and the choice of constitutional relationship.",
     "links": [
       [
@@ -272,7 +272,7 @@
   },
   {
     "number": 17,
-    "title": "Article XVII \u2014 Constitutional Amendments",
+    "title": "Article XVII — Constitutional Amendments",
     "summary": "The routes to amendment and the rights they cannot displace.",
     "links": [
       [
@@ -287,7 +287,7 @@
   },
   {
     "number": 18,
-    "title": "Article XVIII \u2014 Federal Property and National Trust",
+    "title": "Article XVIII — Federal Property and National Trust",
     "summary": "Federal use of land, the seat of government, and National Trust protection.",
     "links": [
       [
@@ -306,18 +306,22 @@
   },
   {
     "number": 19,
-    "title": "Article XIX \u2014 Transition and Ratification",
+    "title": "Article XIX — Transition and Ratification",
     "summary": "How the constitutional order is ratified and brought into operation.",
     "links": [
       [
         "Read a scenario",
+        "scenario-the-first-twelve-years.html"
+      ],
+      [
+        "Compare a transition choice",
         "scenario-the-founding-choice.html"
       ]
     ]
   },
   {
     "number": 20,
-    "title": "Article XX \u2014 Associated Communities",
+    "title": "Article XX — Associated Communities",
     "summary": "Compacts with sovereign communities and their continuing right to leave.",
     "links": [
       [
