@@ -9,12 +9,15 @@
     "stats:assets": "node scripts/asset-stats.mjs",
     "test:crossroads": "node --test scripts/crossroads.test.cjs",
     "test:world": "node --test scripts/world.test.mjs",
-    "check:discovery": "node scripts/check-discovery.mjs"
+    "check:discovery": "node scripts/check-discovery.mjs",
+    "test:scenarios": "node --test scripts/scenarios.test.mjs",
+    "check:scenarios": "python3 scripts/check-scenarios.py"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
     "acorn": "^8.18.0",
     "acorn-walk": "^8.3.5",
-    "htmlparser2": "^9.1.0"
+    "htmlparser2": "^9.1.0",
+    "gray-matter": "^4.0.3"
   }
 }

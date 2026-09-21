@@ -3,6 +3,7 @@
 import html
 import json
 import re
+import subprocess
 from pathlib import Path
 
 provisions = {p['num'] for a in json.loads(Path('constitution_data.json').read_text()) for p in a['provisions']}
@@ -20,15 +21,20 @@ for page in pages:
         if anchor and target.suffix == '.html':
             assert f'id="{anchor}"' in target.read_text(), (page, href)
 
-library = Path('scenarios.html').read_text()
-categories = json.loads(re.search(r'const SCENARIO_CATS = (.*);', library)[1])
-entries = [e for c in categories for e in c['entries']]
+library = Path('_site/scenarios.html').read_text()
+data = json.loads(subprocess.check_output(['node', '--input-type=module', '-e',
+    "import {loadScenarios} from './lib/scenarios.mjs'; console.log(JSON.stringify(loadScenarios()));"], text=True))
+entries = data['entries']
+visible = html.unescape(re.sub(r'<[^>]+>', '', re.sub(r'<span class="def-pop">.*?</span>', '', library, flags=re.S)))
 assert len(entries) == len(pages) == len({e['href'] for e in entries})
 assert {e['href'] for e in entries} == {p.name for p in pages}
+assert 'crossroads.html' not in library and 'Living Crossroads' not in library
+assert 'SCENARIO_CATS' not in library
 for entry in entries:
-    source = Path(entry['href']).read_text()
-    match = re.search(r'<p class="scenario-subtitle">(.*?)</p>', source, re.S)
-    if match:
-        expected = re.sub(r'\s+', ' ', html.unescape(re.sub('<[^>]+>', '', match[1]))).strip()
-        assert entry['desc'] == expected, entry['href']
-print(f'All {len(pages)} scenario references, built links, and library descriptions are consistent.')
+    assert f'href="{entry["href"]}"' in library, entry['href']
+    assert entry['title'] in html.unescape(library), entry['href']
+    assert entry['desc'] in visible, entry['href']
+    assert entry['minutes'] >= 1
+    assert set(entry['refs']) <= provisions, entry['href']
+assert 'Calder did not seek re-election' not in Path('_site/scenario-the-direction.html').read_text()
+print(f'All {len(pages)} scenario references, built links, and generated library entries are consistent.')

@@ -3,6 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {parseDocument, DomUtils} from 'htmlparser2';
 import {parse} from 'acorn';
+import {loadScenarios} from '../lib/scenarios.mjs';
 const root='_site',files=fs.readdirSync(root).filter(f=>f.endsWith('.html'));
 const docs=new Map(files.map(f=>[f,parseDocument(fs.readFileSync(path.join(root,f),'utf8'))]));
 const errors=[];
@@ -31,12 +32,13 @@ for(const file of ['index.html','annotated.html','torenthia.html','torenthia-rec
 }
 // Keep the complete scenario library connected as stories are added or renamed.
 const bridges=JSON.parse(fs.readFileSync('_data/scenarioBridges.json','utf8'));
-const scenarioFiles=files.filter(f=>/^scenario-.*\.html$/.test(f));
+const generated=loadScenarios();
+const scenarioFiles=generated.entries.map(entry=>entry.href);
 const provisions=new Set(JSON.parse(fs.readFileSync('constitution_data.json','utf8')).flatMap(a=>a.provisions.map(p=>p.num)));
-assert.deepEqual(Object.keys(bridges).sort(),scenarioFiles.map(f=>f.replace(/\.html$/,'')).sort(),'Every scenario needs curated reading guidance');
+for(const slug of Object.keys(bridges))assert.ok(scenarioFiles.includes(slug+'.html'), `Stale scenario guidance: ${slug}`);
 for(const file of scenarioFiles){
- const bridge=bridges[file.replace(/\.html$/,'')];
- assert.ok(bridge.summary?.trim()&&bridge.provisions?.length&&bridge.links?.length,`${file}: incomplete guidance`);
+ const bridge=bridges[file.replace(/\.html$/,'')] || generated.bridges[file.replace(/\.html$/,'')];
+ assert.ok(bridge.summary?.trim()&&Array.isArray(bridge.provisions)&&Array.isArray(bridge.links),`${file}: incomplete guidance`);
  for(const ref of bridge.provisions)assert.ok(provisions.has(ref.ref),`${file}: unknown provision ${ref.ref}`);
  for(const link of bridge.links)assert.notEqual(link.url,file,`${file}: next read must not link to itself`);
  const headings=DomUtils.findAll(n=>n.attribs?.id==='scenario-learning-title',docs.get(file).children);

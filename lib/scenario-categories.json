@@ -1,0 +1,67 @@
+[
+  {
+    "id": "transition-ratification",
+    "name": "Transition & Ratification",
+    "hook": "How a constitutional order becomes a functioning government"
+  },
+  {
+    "id": "everyday-governance",
+    "name": "Everyday Governance",
+    "hook": "Public institutions in an ordinary week"
+  },
+  {
+    "id": "legislature-lawmaking",
+    "name": "Legislature & Lawmaking",
+    "hook": "Bills, vetoes, overrides — the lawmaking machine"
+  },
+  {
+    "id": "dual-executive",
+    "name": "Dual Executive",
+    "hook": "Two executives, one government — the seams and the shared ground"
+  },
+  {
+    "id": "elections-campaigns",
+    "name": "Elections & Campaigns",
+    "hook": "Ballots, thresholds, and the money around them"
+  },
+  {
+    "id": "judiciary",
+    "name": "Judiciary",
+    "hook": "Courts, nominations, and the limits of review"
+  },
+  {
+    "id": "monitors-accountability",
+    "name": "Monitors & Accountability",
+    "hook": "The watchers — findings, removals, and teeth"
+  },
+  {
+    "id": "the-public-record",
+    "name": "The Public Record",
+    "hook": "The NRS — what must be published, and what happens when it isn't"
+  },
+  {
+    "id": "fiscal-monetary",
+    "name": "Fiscal & Monetary",
+    "hook": "Budgets, floors, and the equalization queue"
+  },
+  {
+    "id": "immigration-rights",
+    "name": "Immigration & Rights",
+    "hook": "Two gates, one person — sponsorship meets certification"
+  },
+  {
+    "id": "indigenous-minority-rights",
+    "name": "Indigenous & Minority Rights",
+    "hook": "Sovereignty that precedes the Republic"
+  },
+  {
+    "id": "rights-emergency-architecture",
+    "name": "Rights & Emergency Architecture",
+    "hook": "The floor that does not move, even in a crisis"
+  },
+  {
+    "id": "states-territories",
+    "name": "States & Territories",
+    "hook": "Statehood, mergers, secession — the federation's edges"
+  }
+]

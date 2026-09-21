@@ -1,4 +1,4 @@
-{% set bridge = scenarioBridges[page.fileSlug] %}
+{% set bridge = scenarioBridges[page.fileSlug] or learning.bridges[page.fileSlug] %}
 {% if bridge %}
 <section class="scenario-end related-rail" aria-labelledby="scenario-learning-title" data-related-rail>
   <div class="related-rail-head">

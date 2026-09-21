@@ -1,3 +1,3 @@
 {% for group in navigation %}{% if group.url %}<a href="{{ group.url }}">{{ group.label }}</a>{% else %}
-<details class="nav-group"><summary>{{ group.label }}</summary><div class="nav-group-links">{% for label, url in group.links %}<a href="{{ url }}"{% if page.url == '/' + url %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}</div></details>
+<details class="nav-group"><summary>{{ group.label }}</summary><div class="nav-group-links">{% for label, url in group.links %}{% if page.url != '/scenarios.html' or url != 'crossroads.html' %}<a href="{{ url }}"{% if page.url == '/' + url %} aria-current="page"{% endif %}>{{ label }}</a>{% endif %}{% endfor %}</div></details>
 {% endif %}{% endfor %}

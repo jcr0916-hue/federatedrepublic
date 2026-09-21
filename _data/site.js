@@ -1,6 +1,6 @@
 import fs from 'node:fs';
-const pages=fs.readdirSync('.');
+import {loadScenarios} from '../lib/scenarios.mjs';
 const diagram=fs.readFileSync('diagrams.html','utf8');
-export default { scenarios:pages.filter(p=>/^scenario-.*\.html$/.test(p)).length,
+export default { scenarios:loadScenarios().count,
  diagrams:[...diagram.matchAll(/class="dcard(?: dcard-active)?" data-tab=/g)].length,
  questions:9 };
