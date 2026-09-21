@@ -42,8 +42,8 @@ Do not treat an archived plan as canon when it conflicts with a published piece 
 - **Tomas Arven** — Vardan transition negotiator and persistent skeptic of excessive federal concentration; remains a critic within the Republic after ratification.
 - **Sela Oran** — Calden records specialist involved in predecessor-record migration and NRS implementation. She helps make the adopted record architecture operational; she does not originate it.
 - **Anja Serin** — former Vardan foreign minister elected as the Republic's first Legat Consul.
-- **Mara Ellin** — Selvane Assembly member who becomes the first full-authority Civic Consul after the initial Assembly formation deadlock proceeds to the §2.6.a national fallback election.
-- **Aldric Senn** — first Legislative Monitor General; associated with the early institutional culture that Monitors disclose and assess rather than govern.
+- **Leva Coren** — Selvane Assembly member who becomes the first full-authority Civic Consul after the initial Assembly formation deadlock proceeds to the §2.6.a national fallback election.
+- **Ressa Korr** — first Legislative Monitor General; associated with the early institutional culture that Monitors disclose and assess rather than govern.
 - **Ilyan Seret** — Valedon Foreign Minister during union discussions; his government declines to join without becoming hostile to the Republic.
 
 ### Founding-story constraints
