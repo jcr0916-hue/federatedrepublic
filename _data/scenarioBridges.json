@@ -1379,5 +1379,48 @@
         "label": "Keep the Amendments & Direct Democracy Quick Sheet"
       }
     ]
+  },
+  "scenario-the-first-twelve-years": {
+    "summary": "Three sovereign predecessor countries adopt the constitutional framework and use Article XIX to merge without a gap in rights, obligations, elections, courts, records, or ordinary public services.",
+    "provisions": [
+      {
+        "ref": "§19.1",
+        "label": "Activation Threshold and Ratification"
+      },
+      {
+        "ref": "§19.2",
+        "label": "Day Zero and Transition"
+      },
+      {
+        "ref": "§19.3",
+        "label": "Caretaker Status"
+      },
+      {
+        "ref": "§19.5",
+        "label": "Pre-Existing Obligations"
+      },
+      {
+        "ref": "§19.6",
+        "label": "Transition Territories"
+      },
+      {
+        "ref": "§19.9",
+        "label": "Required Institutions and Temporary Continuity"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-formation.html",
+        "label": "Continue: The Formation — the first Assembly deadlock"
+      },
+      {
+        "url": "scenario-the-founding-choice.html",
+        "label": "Compare: The Founding Choice — an Indigenous nation during transition"
+      },
+      {
+        "url": "torenthia-news-001.html",
+        "label": "Continue into Torenthia’s published record"
+      }
+    ]
   }
 }
