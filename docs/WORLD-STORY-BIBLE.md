@@ -18,38 +18,41 @@ Do not treat an archived plan as canon when it conflicts with a published piece 
 
 ## Founding era
 
-The long-form prequel `before-the-republic.html` is canonical founding history.
+`scenario-the-first-twelve-years.html` is the canonical Torenthian account of ratification, transition, and the Republic's first government generation. It is a scenario using the same constitutional framework as the rest of the project; Torenthia did **not** develop or originate the Constitution.
 
 ### Predecessor order
 
 - The Federated Republic was created by the voluntary union of **three sovereign predecessor countries**: the **Harren Union**, the **Torenthian Commonwealth**, and the **Vardan Confederacy**.
-- **Valedon** participated fully in the constitutional negotiations and helped shape parts of the draft but declined to join. This is the origin of its durable identity as **“the nation that almost joined.”**
-- Predecessor-country borders do **not** map cleanly onto present State boundaries. The transition, Statehood rules, territorial choices, and later constitutional processes produced the current internal map.
-- Exploratory regional talks began in **Year -2**. The formal Convention for the Formation of a Federated Republic began in **Year -1**.
-- Ratification creates **Day Zero / Year 0** and begins the Article XIX transition. Full constitutional operation follows through the transition rather than appearing instantaneously on ratification.
-- The Republic’s first Assembly was fragmented and failed to elect a Civic Consul within the formation window. The §2.6.a fallback operated: the Assembly Speaker became Acting Civic Consul, the Assembly nominated candidates, and a national election supplied the first full-authority Civic Consul. This event is the in-world founding instance underlying the separate `scenario-the-formation.html` constitutional test.
-- By **Year 4**, the Republic was negotiating the Toren River relationship with Caldris as one sovereign counterparty.
-- By **Year 8**, Casimir Rehn was Legat Consul and Ines Carrow was serving in Foreign Affairs.
-- The founding prequel closes at **Year 12, Month 9**, immediately before `torenthia-news-001.html`.
+- **Valedon** participated in the regional union discussions but ultimately declined to enter. This is the origin of its durable identity as **“the nation that almost joined.”**
+- The predecessor governments choose the existing constitutional framework as the common order under which they will merge. Their Treaty of Union adapts Article XIX for simultaneous pooling of sovereignty as permitted by §19.1; it does not author the constitutional framework.
+- The practical reasons for union are security, common-market integration, infrastructure coordination, one external diplomatic position, and greater bargaining weight with larger neighbors. No single crisis or neighbor causes the merger.
+- Predecessor-country borders do **not** map cleanly onto present State boundaries. Article XIX transition mechanisms, predecessor political statuses, territorial choices, and later constitutional processes produce the current internal map.
+- Phase 0 begins before ratification: the interim Elections Panel, NVS readiness, transitional Monitor machinery, record migration, and continuity planning are prepared while the predecessor countries remain sovereign.
+- **Day Zero / Year 0** occurs when the adapted ratification requirements are certified. Sovereign authority changes immediately; predecessor institutions continue only as constitutional caretakers while the 24-month Transition Window runs.
+- The Republic's first Assembly fails to elect a Civic Consul within the formation window. The §2.6.a fallback operates: the Assembly Speaker serves as Acting Civic Consul, the Assembly nominates candidates, and a national election supplies the first full-authority Civic Consul. This is the in-world formation event also examined in `scenario-the-formation.html`.
+- Korda appears on the founding Indigenous register and elects **Territorial Integration** during the Transition Window, becoming an Indigenous Territory with the ordinary Statehood pathway available. The decision permanently ends the founding Compact/Associated Community option under §16.2.
+- By **Year 4**, the Republic negotiates the Toren River relationship with Caldris as one sovereign counterparty.
+- By **Year 8**, Casimir Rehn is Legat Consul and Ines Carrow serves as Director of Foreign Affairs.
+- The transition scenario closes at **Year 12, Month 9**, immediately before `torenthia-news-001.html`.
 
-### Founding-generation people
+### Transition-generation people
 
-- **Mira Venn** — Commonwealth administrative coordinator and central constitutional negotiator. Strong advocate for bounded institutions, direct rights enforcement, and a divided executive. She does not become a federal officeholder in the founding transition.
-- **Edran Vale** — Harren constitutional/political leader. Publicly names the project as a possible federated republic in Year -2. Later serves in the founding Senate and draws one of the shorter staggered founding terms.
-- **Tomas Arven** — Vardan negotiator and persistent skeptic of concentrated federal authority. Helps shape the external/domestic executive split and remains a public critic of the government he helped design.
-- **Sela Oran** — Calden municipal records specialist whose cross-border-record problem becomes the practical seed of the National Record System. She does not become a founding political officeholder.
-- **Ilyan Seret** — Valedon Foreign Minister and serious Convention participant. Leads a government that ultimately declines the Treaty of Union without becoming hostile to the new Republic.
-- **Ilyan Orre** — Korda representative who forces the Convention to confront prior Indigenous sovereignty and consent. His arrival and “fifth chair” become part of founding political memory.
+- **Mira Venn** — Commonwealth transition administrator who chairs much of the merger implementation work. She is an administrator of adoption and transition, not a constitutional author, and does not become a founding federal officeholder.
+- **Edran Vale** — Harren political figure involved in the union decision and later a founding senator. He draws one of the shorter initial Senate terms under the public lot.
+- **Tomas Arven** — Vardan transition negotiator and persistent skeptic of excessive federal concentration; remains a critic within the Republic after ratification.
+- **Sela Oran** — Calden records specialist involved in predecessor-record migration and NRS implementation. She helps make the adopted record architecture operational; she does not originate it.
+- **Anja Serin** — former Vardan foreign minister elected as the Republic's first Legat Consul.
+- **Mara Ellin** — Selvane Assembly member who becomes the first full-authority Civic Consul after the initial Assembly formation deadlock proceeds to the §2.6.a national fallback election.
+- **Aldric Senn** — first Legislative Monitor General; associated with the early institutional culture that Monitors disclose and assess rather than govern.
+- **Ilyan Seret** — Valedon Foreign Minister during union discussions; his government declines to join without becoming hostile to the Republic.
 
 ### Founding-story constraints
 
-- The Republic is not born from total state collapse or a single catastrophic war. The predecessor countries are viable governments that choose union because a combined order promises greater security, prosperity, bargaining power, and administrative coherence.
-- External pressures matter—Caldris’s scale, Sunderland’s increasing unpredictability, Lake Varda, the Toren, and maritime competition—but no neighbor alone “causes” the Republic.
-- Founding institutions emerge from concrete coordination problems rather than from one philosopher’s master plan.
-- The NRS originates in conflicting but authentic predecessor records. Its core lesson is that one government cannot safely depend on several competing official memories.
-- The Monitors arise from the refusal to let institutions grade their own constitutional compliance, while remaining information-first rather than a coercive fourth branch.
-- Indigenous sovereignty is acknowledged as prior to the Republic, not granted by it. Korda’s participation helps force this distinction into the constitutional settlement.
-- Valedon’s refusal is principled rather than antagonistic. It remains a close external neighbor and counterfactual to the Republic’s founding bargain.
+- Do not portray Torenthia as creating, inspiring, drafting, or supplying the rationale for the Constitution. The Constitution is the framework the predecessor polities decide to adopt.
+- Pre-ratification narrative should remain comparatively short. The central story is implementation: merger planning, Day Zero, Article XIX phases, first elections, formation of government, and the first twelve years of institutional normalization.
+- The predecessor countries are viable governments. Union is a strategic choice to combine capacity, security, markets, infrastructure, and external representation.
+- The strongest transition material is procedural and human: continuity of pensions and courts, caretaker limits, inherited debts and treaties, conflicting predecessor laws, classified-record review, State/Territory sorting, Indigenous status elections, candidate registers, the NVS, Monitor formation, founding Senate/judicial staggering, and first permanent budgets.
+- By Year 12, contemporary politicians should treat the Republic as an inherited operating order, not as an unfinished founding project. The narrative point of the first government generation is that transition eventually becomes ordinary government.
 
 ---
 
