@@ -1381,7 +1381,7 @@
     ]
   },
   "scenario-the-first-twelve-years": {
-    "summary": "Three sovereign predecessor countries adopt the constitutional framework and use Article XIX to merge without a gap in rights, obligations, elections, courts, records, or ordinary public services.",
+    "summary": "Three sovereign predecessor countries adopt the constitutional framework, merge through Article XIX, and spend the next twelve years turning immediate legal union into ordinary constitutional government.",
     "provisions": [
       {
         "ref": "§19.1",
@@ -1396,16 +1396,20 @@
         "label": "Caretaker Status"
       },
       {
-        "ref": "§19.5",
-        "label": "Pre-Existing Obligations"
-      },
-      {
         "ref": "§19.6",
         "label": "Transition Territories"
       },
       {
+        "ref": "§19.7",
+        "label": "Transition Candidate Registers"
+      },
+      {
         "ref": "§19.9",
         "label": "Required Institutions and Temporary Continuity"
+      },
+      {
+        "ref": "§19.10",
+        "label": "Founding Senate and Judicial Classes"
       }
     ],
     "links": [
@@ -1415,11 +1419,11 @@
       },
       {
         "url": "scenario-the-founding-choice.html",
-        "label": "Compare: The Founding Choice — an Indigenous nation during transition"
+        "label": "Compare: The Founding Choice — an Indigenous status election"
       },
       {
         "url": "torenthia-news-001.html",
-        "label": "Continue into Torenthia’s published record"
+        "label": "Enter the contemporary World record"
       }
     ]
   }
