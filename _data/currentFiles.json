@@ -1,28 +1,30 @@
 [
   {
-    "id": "korda",
-    "title": "Korda: One Territory, Competing Futures",
-    "short": "Korda",
-    "asOf": "13.12",
-    "summary": "The Supreme Court has upheld the concurrent-petition determination. The Convention has voted to move its remaining sessions into Korda; neither petition has been decided.",
-    "records": [
-      "torenthia-nrs-034",
-      "torenthia-news-075",
-      "torenthia-nrs-039",
-      "torenthia-sc-002",
-      "torenthia-news-079",
-      "torenthia-news-081"
-    ],
-    "provisions": [
-      "§15.4",
-      "§15.5.a"
-    ],
-    "jurisdictions": [
-      "Korda",
-      "Kelvant"
-    ],
-    "question": "Can one proposed resolution address the corridor and the whole Territory together?"
-  },
+  "id": "korda",
+  "title": "Korda: One Territory, Competing Futures",
+  "short": "Korda",
+  "asOf": "13.12",
+  "summary": "The Supreme Court has upheld the concurrent-petition determination. The Convention has moved its remaining sessions into Korda and formed an advisory Joint Committee on Transition Facts; neither petition has been decided.",
+  "records": [
+    "torenthia-nrs-034",
+    "torenthia-news-075",
+    "torenthia-nrs-039",
+    "torenthia-sc-002",
+    "torenthia-news-079",
+    "torenthia-news-081",
+    "torenthia-news-083",
+    "torenthia-nrs-040"
+  ],
+  "provisions": [
+    "§15.4",
+    "§15.5.a"
+  ],
+  "jurisdictions": [
+    "Korda",
+    "Kelvant"
+  ],
+  "question": "Can one proposed resolution address the corridor and the whole Territory together?"
+},
   {
     "id": "lake-varda",
     "title": "Lake Varda: Diplomacy After the Crisis",
