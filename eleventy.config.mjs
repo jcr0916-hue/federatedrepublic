@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { collect } from "./scripts/public-assets.mjs";
 
-import {validateWorld, chronology, relatedWorld} from './lib/world.mjs';
+import {validateWorld, chronology, relatedWorld, dossierRecords} from './lib/world.mjs';
 
 export default function (eleventyConfig) {
 
@@ -27,15 +27,21 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("world", api => {
     const pieces=validateWorld(api.getAll().filter(p=>p.data.worldKind),provisionNumbers).sort(chronology);
     const ids=new Set(pieces.map(p=>p.data.worldId));
-    for(const p of pieces)for(const arc of p.data.worldArcs)if(!validArcs.has(arc))throw Error(`Unknown arc ${arc}: ${p.inputPath}`);
+    for(const p of pieces){
+      for(const arc of p.data.worldArcs)if(!validArcs.has(arc))throw Error(`Unknown arc ${arc}: ${p.inputPath}`);
+      for(const dossier of (p.data.worldDossiers||[])){
+        if(!validArcs.has(dossier))throw Error(`Unknown dossier ${dossier}: ${p.inputPath}`);
+        if(!p.data.worldArcs.includes(dossier))throw Error(`Dossier ${dossier} must also appear in worldArcs: ${p.inputPath}`);
+      }
+    }
     for(const file of currentFiles){
-      if(!/^\d{2,}\.(0[1-9]|1[0-2])$/.test(file.asOf))throw Error(`Invalid briefing date: ${file.id}`);
-      for(const id of file.records)if(!ids.has(id))throw Error(`Missing briefing record ${id}`);
+      for(const id of (file.seedRecords||[]))if(!ids.has(id))throw Error(`Missing briefing seed record ${id}`);
       for(const ref of file.provisions)if(!provisionNumbers.has(ref))throw Error(`Missing briefing provision ${ref}`);
     }
     return pieces;
   });
   eleventyConfig.addFilter("relatedWorld", relatedWorld);
+  eleventyConfig.addFilter("dossierRecords", dossierRecords);
   eleventyConfig.addFilter("mapEntries", (pieces,key,dot)=>[...pieces].reverse().filter(p=>{
     if(p.data.worldMundane)return false;
     const places=String(p.data.worldPlaces || '').split(/[ ,]+/);
