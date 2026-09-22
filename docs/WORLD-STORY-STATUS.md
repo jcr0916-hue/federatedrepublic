@@ -2,7 +2,7 @@
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are archived under `docs/archive/world/`.
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **129** in the last verified batch (260921).
+**Current published frontier:** Year 13, Month 12 · worldSeq through **132** in the last verified batch (260922).
 
 ---
 
@@ -29,6 +29,7 @@ Last published:
 - Convention relocation approved 25–8; remaining sessions move from Verentum into Korda.
 - Jalen Mire and Tomas Rell joined Dessa Orin as named delegate voices (`torenthia-news-081.html`).
 - **Convention formed a Joint Committee on Transition Facts, 27–6** (`torenthia-news-083.html`, `torenthia-nrs-040.html` / NRS-Y13-0701). Co-chaired by **Jalen Mire** and **Tomas Rell** — first published instance of the two actively cooperating on process despite opposed substantive positions. Mandate: freight-capacity data, fiscal transfer records, transition-cost estimates, usable under either a whole-Territory or corridor-merger resolution. Advisory only; does not bind any delegate's vote and does not toll the constitutional clock. **Dessa Orin declined a chair**, intending to submit material to the committee instead rather than lead it — consistent with her established "held back from the public face" positioning.
+- **Committee membership roster filed**: eleven members total, co-chairs Mire and Rell plus nine apportioned seats; no new named delegates introduced (`torenthia-nrs-041.html` / NRS-Y13-0705). Committee set its own internal, non-binding 30-day target for a preliminary compilation — a usable future story beat, not a constitutional deadline.
 
 Open:
 - exact Korda venue / first local session details
@@ -59,12 +60,14 @@ Constraint: this thread never advances or references real canon, and real canon 
 
 Candidates: Carrow, Mak, Vael, Sandris. Latest posture: all four are now campaigning around a Lake Varda conference that is becoming real. Carrow must keep her sitting Foreign Affairs role institutionally separate from campaign activity. No election date is established.
 
+**All four candidates went on record about Korda specifically for the first time this week** (`torenthia-news-085.html`): Sandris sent a substantive policy memo consistent with his established granular-Korda focus; Vael kept it short and deliberately outside his stated priorities; Mak characterized the new committee's formation as a sign of stalemate, arguably overstating what the committee's own filing says — consistent with her established pattern of overstating findings for effect; Carrow declined comment, citing institutional separation from her sitting Foreign Affairs role.
+
 Good next beats:
 - conference scheduling becoming concrete
 - candidate reaction to actual agenda/delegation choices
 - ordinary campaign mechanics rather than another crisis reaction
 - ballot/electoral-finance mechanics if needed
-- candidate posture on the Korda Convention specifically (none have gone on record yet — a live gap worth using)
+- whether any candidate revisits or is pressed further on their Korda comments as the Convention nears its own resolution
 
 ### Lake Varda / Sunderland — LIVE
 
