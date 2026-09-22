@@ -23,6 +23,11 @@ test("suggests metadata without making it authoritative",()=>{
   assert.ok(s.provisions.includes("§15.5.a"));
 });
 
+test("rejects invalid dates and dossier/arc mismatches",()=>{
+  assert.throws(()=>buildWorldDraft({kind:"news",date:"13.13",title:"x",blurb:"x",outlet:"The Torenthian",arcs:[],jurisdictions:[],provisions:[],dossiers:[],related:[]},items),/world date/);
+  assert.throws(()=>buildWorldDraft({kind:"news",date:"13.12",title:"x",blurb:"x",outlet:"The Torenthian",arcs:[],jurisdictions:[],provisions:[],dossiers:["korda"],related:[]},items),/must also be included/);
+});
+
 test("draft keeps suggestions commented until explicitly accepted",()=>{
   const d=buildWorldDraft({kind:"news",date:"13.12",title:"Korda Territory Convention and §15.5.a",blurb:"Korda delegates meet again.",outlet:"The Torenthian",arcs:[],jurisdictions:[],provisions:[],dossiers:[],related:[]},items);
   assert.match(d.content,/worldArcs: \[\]/);
