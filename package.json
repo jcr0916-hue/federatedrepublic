@@ -2,7 +2,7 @@
   "name": "federatedrepublic",
   "private": true,
   "scripts": {
-    "build": "node scripts/public-assets.mjs --clean && eleventy",
+    "build": "node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy",
     "sync": "python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py",
     "check:assets": "node scripts/public-assets.mjs",
     "test:assets": "node --test scripts/public-assets.test.mjs",
@@ -11,7 +11,10 @@
     "test:world": "node --test scripts/world.test.mjs",
     "check:discovery": "node scripts/check-discovery.mjs",
     "test:scenarios": "node --test scripts/scenarios.test.mjs",
-    "check:scenarios": "python3 scripts/check-scenarios.py"
+    "check:scenarios": "python3 scripts/check-scenarios.py",
+    "check:world-meta": "node scripts/check-world-metadata.mjs",
+    "audit:world-meta": "node scripts/check-world-metadata.mjs --all",
+    "test:world-meta": "node --test scripts/world-metadata.test.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
