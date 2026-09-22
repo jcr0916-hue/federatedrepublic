@@ -14,7 +14,9 @@
     "check:scenarios": "python3 scripts/check-scenarios.py",
     "check:world-meta": "node scripts/check-world-metadata.mjs",
     "audit:world-meta": "node scripts/check-world-metadata.mjs --all",
-    "test:world-meta": "node --test scripts/world-metadata.test.mjs"
+    "test:world-meta": "node --test scripts/world-metadata.test.mjs",
+    "world:new": "node scripts/new-world.mjs",
+    "test:world-authoring": "node --test scripts/world-authoring.test.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
