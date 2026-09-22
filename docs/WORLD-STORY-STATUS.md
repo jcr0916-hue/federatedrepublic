@@ -153,5 +153,5 @@ Before writing a new World piece:
 3. Check the latest relevant published World records/front matter.
 4. Check `constitution_data.json` for any mechanism the story relies on.
 5. Search existing names before inventing a new character.
-6. After publishing, update **only the affected status entry here**. Do not append a prose session diary and do not recreate the full chronological index. The published front matter is the history. This file is the handoff.
+6. Set discovery metadata deliberately. `worldArcs`, `worldJurisdictions`, and `worldProvisions` drive automatic placement; add `worldDossiers` only when the piece is a core step in that dossier rather than supporting coverage. The build will warn on strong likely omissions but does not assign canon from keywords. After publishing, update **only the affected status entry here**. Do not append a prose session diary and do not recreate the full chronological index. The published front matter is the history.
 7. **Before any Korda or Crossroads piece specifically:** confirm which track (real canon vs. Living Crossroads) the piece belongs to, and confirm it does not leak the undecided real outcome or blur Threll/Kesh with Mire/Rell/Orin.
