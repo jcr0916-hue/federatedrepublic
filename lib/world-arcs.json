@@ -1,0 +1,38 @@
+{
+  "korda": {
+    "label": "Korda",
+    "keywords": [
+      "korda",
+      "territory convention",
+      "corridor petition",
+      "joint committee on transition facts"
+    ],
+    "dossier": true
+  },
+  "lake-varda": {
+    "label": "Lake Varda",
+    "keywords": [
+      "lake varda",
+      "varda crossing",
+      "sunderland"
+    ],
+    "dossier": true
+  },
+  "fiscal-equalization": {
+    "label": "Fiscal Equalization",
+    "keywords": [
+      "fiscal equalization",
+      "equalization mechanism",
+      "§12.6"
+    ],
+    "dossier": true
+  },
+  "argent-ridge": {
+    "label": "Argent Ridge",
+    "keywords": [
+      "argent ridge",
+      "national trust designation"
+    ],
+    "dossier": true
+  }
+}
