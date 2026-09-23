@@ -16,17 +16,25 @@ Implements the September 19 website review through shared navigation, clearer en
 
 ## Publishing records
 
+New World pieces can be started with the preview-first authoring helper:
+
+`npm run world:new -- --kind news --date 13.12 --title "..." --blurb "..." --outlet "The Torenthian"`
+
+The helper scans existing World files, assigns the next global `worldSeq`, chooses the next per-kind filename (for example `torenthia-news-087.html`), and prints advisory arc/jurisdiction/provision suggestions from the title and blurb. It does not create anything unless `--write` is supplied. When written, suggested metadata remains commented until explicitly accepted; the draft body is a minimal shell that must be replaced before publication. Optional accepted metadata can be passed with `--arcs`, `--jurisdictions`, `--provisions`, `--dossiers`, and `--related`. Dispatches use `--slug`; `--mundane` marks ordinary-life pieces.
+
 Every world record has a stable `worldId` matching its filename without `.html`, a unique integer `worldSeq`, and a quoted fictional `worldDate` (`13.12`: year 13, month 12). Chronology compares year, month, then sequence numerically.
 
 Required arrays are `worldArcs`, `worldJurisdictions`, `worldProvisions`, and `worldRelated`. Empty arrays are valid. Related references are existing filenames including `.html`; provisions must match canonical references. The build rejects missing/duplicate IDs or sequences, invalid dates, and unresolved provisions or related records.
 
-Arc and jurisdiction tags describe discovery relationships. They do not assert a current legal outcome. Review these tags when publishing; do not substitute body-text matches for editorial metadata. `_data/currentFiles.json` contains separately authored status summaries, explicit `asOf` dates, supporting record IDs, and constitutional references. Update a brief only after reviewing its supporting records. New records automatically enter chronology, recent lists, map coverage, and relevant tagged collections.
+Arc and jurisdiction tags describe discovery relationships. They do not assert a current legal outcome. Review these tags when publishing; body-text matches are advisory rather than authoritative. The normal build runs `scripts/check-world-metadata.mjs` against World records published after worldSeq 132 and warns when strong title/blurb/body signals suggest a missing arc, jurisdiction, or provision tag. Deliberate exceptions may use `worldSignalIgnore` for the specific suggestion rather than weakening a global rule.
+
+`_data/currentFiles.json` contains separately authored status summaries, constitutional references, affected jurisdictions, and a frozen `seedRecords` baseline. New core dossier records opt in from their own front matter with `worldDossiers: ["<dossier-id>"]`; dossier key-record timelines and their “As of” dates then derive automatically from the World collection. Supporting coverage uses `worldArcs` without `worldDossiers`. New records automatically enter chronology, recent lists, map coverage, relevant tagged collections, and—when explicitly marked—the appropriate dossier timeline.
 
 The existing map geometry supplies regional crops. Varenne coordinates and petition boundaries are not established by that geometry and are deliberately not drawn. Add those only after canon supplies them.
 
 ## Validation
 
-Run `npm run build`, `npm run check:discovery`, `npm run test:world`, `npm run test:assets`, and `npm run test:crossroads`. Also run the existing Python checks: `scripts/check-consistency.py`, `scripts/check-constitutional-site.py`, and `scripts/check-scenarios.py`.
+Run `npm run build`, `npm run check:world-meta`, `npm run test:world-meta`, `npm run test:world-authoring`, `npm run check:discovery`, `npm run test:world`, `npm run test:assets`, and `npm run test:crossroads`. Also run the existing Python checks: `scripts/check-consistency.py`, `scripts/check-constitutional-site.py`, and `scripts/check-scenarios.py`.
 
 The discovery checker covers all built local links, fragments, inline JavaScript syntax, and the complete record inventory. Browser checks covered fourteen page families at 390px and 1280px, archive filtering and pagination, reader search and focus restoration, diagram keyboard activation, map inspection, history links/search, and all nine questionnaire steps. The questionnaire response was mocked; live AI provider calls were not made. No-JavaScript checks covered navigation, records, scenarios, and diagrams.
 
