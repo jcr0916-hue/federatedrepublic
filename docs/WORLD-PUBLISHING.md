@@ -451,6 +451,21 @@ In the same publishing change, update the affected operational status entry in `
 
 ## 12. Validation commands
 
+Run the complete release check with:
+
+```bash
+npm run world:publish-check
+```
+
+This runs publishing-guard, World, metadata, authoring, asset, Crossroads, and scenario tests; the guarded build; rendered discovery checks; and constitutional/scenario consistency checks. Any failed step stops the command with a nonzero exit status. `.github/workflows/world-publishing.yml` runs the same command on pull requests and main pushes. Repository branch protection must require **World publishing check** if merges must be prevented until it passes; merely adding a workflow does not enable branch protection.
+
+Every `npm run build` now starts with `check:world-publish`, which blocks helper draft markers, explicit `draft: true` / `worldDraft: true`, missing or blank required text, invalid field types, filename/ID mismatches, nonpositive/duplicate sequences, invalid dates, broken related/provision references, and invalid arc/dossier assignments. Expected World filenames cannot bypass the check by omitting `worldKind`. This is a publication guard, not a private-draft rendering system.
+
+`npm run test:world-publish` exercises these guards. `npm run check:world-publish` runs the lightweight guard without building. The guard cannot determine whether prose is editorially finished after a marker is removed; human review remains required.
+
+Status frontier/date mismatches are warnings. A core record with a sequence beyond the Status frontier also prompts review of its dossier summary/question, Status section, and any durable Bible changes. These reminders neither block publication nor rewrite files. They do not detect every revision to older stories: review those manually. Updating the frontier acknowledges review; it is not proof that the summary is accurate.
+
+
 From the repository root, install locked dependencies first with `npm ci`.
 
 Normal build:
@@ -616,7 +631,7 @@ That division is intentional.
 - [ ] Fill every required field; explicitly choose core versus supporting coverage; leave frozen seeds unchanged.
 - [ ] Review related links, jurisdiction spelling, provisions, mundane treatment, map placement, images, and the related rail.
 - [ ] Update affected Status entries, durable Bible facts when applicable, and editorial dossier summaries/questions if needed.
-- [ ] Run `npm run test:world`, `npm run test:world-meta`, and `npm run test:world-authoring`; then `npm run build` and `npm run check:discovery`. Review advisory warnings even when the build succeeds.
+- [ ] Run `npm run world:publish-check`. Review advisory warnings even when all checks pass.
 - [ ] Inspect built Latest, Record, affected dossier, related rail, map activity, and relevant jurisdiction pages. Check supporting articles have not entered core timelines.
 - [ ] Run the additional release checks above; inspect `git diff --check` and the final diff for accidental canon or chronology edits.
 - [ ] Commit on a working branch, incorporate current main, validate the combined result, and merge/push to main under the project's publishing authorization.
