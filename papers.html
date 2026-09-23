@@ -1,0 +1,41 @@
+---
+title: "Design Papers"
+description: "Essays explaining the principles, architecture, tradeoffs, and constitutional design choices behind the Federated Republic framework."
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Papers — The Federated Republic</title>
+  <meta name="description" content="Essays explaining the principles, architecture, tradeoffs, and constitutional design choices behind the Federated Republic framework.">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+{% include "nav.njk" %}
+<main id="main-content">
+  <section class="refresh-wrap">
+    <span class="section-kicker">Constitutional design</span>
+    <h1>Design Papers</h1>
+    <p>Essays on the principles, mechanisms, tradeoffs, and design constraints behind the constitutional framework.</p>
+    {% if collections.designPapers.length %}
+    <div class="record-grid">
+      {% for p in collections.designPapers %}
+      <article class="record-card">
+        <span class="meta">{{ p.data.paperTopic }} · {{ p.data.paperDate }}</span>
+        <h2><a href="{{ p.url }}">{{ p.data.paperTitle }}</a></h2>
+        <p>{{ p.data.paperSummary }}</p>
+        {% if p.data.paperProvisions.length %}<p class="meta">Related provisions: {{ p.data.paperProvisions | join(", ") }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>No design papers have been published yet. The library is ready for the first paper.</p>
+    {% endif %}
+  </section>
+</main>
+{% include "footer.njk" %}
+<script src="nav.js"></script>
+</body>
+</html>
