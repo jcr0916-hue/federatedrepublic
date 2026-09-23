@@ -5,6 +5,7 @@ import path from "node:path";
 import { collect } from "./scripts/public-assets.mjs";
 
 import {validateWorld, chronology, relatedWorld, dossierRecords} from './lib/world.mjs';
+import {loadArcRegistry} from './lib/world-registry.mjs';
 
 export default function (eleventyConfig) {
 
@@ -23,14 +24,15 @@ export default function (eleventyConfig) {
   const constitutionData=JSON.parse(fs.readFileSync('constitution_data.json','utf8'));
   const provisionNumbers=new Set(constitutionData.flatMap(a=>a.provisions.map(p=>p.num)));
   const currentFiles=JSON.parse(fs.readFileSync('_data/currentFiles.json','utf8'));
-  const validArcs=new Set(currentFiles.map(f=>f.id));
+  const validArcs=new Set(Object.keys(loadArcRegistry()));
+  const validDossiers=new Set(currentFiles.map(f=>f.id));
   eleventyConfig.addCollection("world", api => {
     const pieces=validateWorld(api.getAll().filter(p=>p.data.worldKind),provisionNumbers).sort(chronology);
     const ids=new Set(pieces.map(p=>p.data.worldId));
     for(const p of pieces){
       for(const arc of p.data.worldArcs)if(!validArcs.has(arc))throw Error(`Unknown arc ${arc}: ${p.inputPath}`);
       for(const dossier of (p.data.worldDossiers||[])){
-        if(!validArcs.has(dossier))throw Error(`Unknown dossier ${dossier}: ${p.inputPath}`);
+        if(!validDossiers.has(dossier))throw Error(`Unknown dossier ${dossier}: ${p.inputPath}`);
         if(!p.data.worldArcs.includes(dossier))throw Error(`Dossier ${dossier} must also appear in worldArcs: ${p.inputPath}`);
       }
     }
