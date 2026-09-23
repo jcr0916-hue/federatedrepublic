@@ -1,0 +1,41 @@
+name: Sync Constitution Surfaces
+
+on:
+  push:
+    branches:
+      - biennial-statehood-audits
+    paths:
+      - .github/workflows/sync-constitution-surfaces.yml
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: biennial-statehood-audits
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run sync
+      - run: python3 scripts/check-constitutional-site.py
+      - name: Commit generated constitutional surfaces
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add annotated.html search-index.js docs/constitution-current.md docs/constitutional-quickref.md
+          if [ -f constitutional-quickref.md ]; then git add constitutional-quickref.md; fi
+          if git diff --cached --quiet; then
+            echo "Generated constitutional surfaces already current."
+          else
+            git commit -m "Sync generated constitutional surfaces"
+            git push origin HEAD:biennial-statehood-audits
+          fi
