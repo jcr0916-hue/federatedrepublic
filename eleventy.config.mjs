@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { collect } from "./scripts/public-assets.mjs";
 
-import {validateWorld, chronology, relatedWorld, dossierRecords} from './lib/world.mjs';
+import {validateWorld, chronology, relatedWorld, dossierRecords, validateDossiers, worldNewest} from './lib/world.mjs';
 
 export default function (eleventyConfig) {
 
@@ -19,25 +19,13 @@ export default function (eleventyConfig) {
   // had happened. A feed that restates what the pages already know will always
   // eventually lie. Derive it or delete it.
   //
-  // Publishing is now: drop the file in. Nothing to remember.
+  // Publishing: add a reviewed World file; see docs/WORLD-PUBLISHING.md.
   const constitutionData=JSON.parse(fs.readFileSync('constitution_data.json','utf8'));
   const provisionNumbers=new Set(constitutionData.flatMap(a=>a.provisions.map(p=>p.num)));
   const currentFiles=JSON.parse(fs.readFileSync('_data/currentFiles.json','utf8'));
-  const validArcs=new Set(currentFiles.map(f=>f.id));
   eleventyConfig.addCollection("world", api => {
     const pieces=validateWorld(api.getAll().filter(p=>p.data.worldKind),provisionNumbers).sort(chronology);
-    const ids=new Set(pieces.map(p=>p.data.worldId));
-    for(const p of pieces){
-      for(const arc of p.data.worldArcs)if(!validArcs.has(arc))throw Error(`Unknown arc ${arc}: ${p.inputPath}`);
-      for(const dossier of (p.data.worldDossiers||[])){
-        if(!validArcs.has(dossier))throw Error(`Unknown dossier ${dossier}: ${p.inputPath}`);
-        if(!p.data.worldArcs.includes(dossier))throw Error(`Dossier ${dossier} must also appear in worldArcs: ${p.inputPath}`);
-      }
-    }
-    for(const file of currentFiles){
-      for(const id of (file.seedRecords||[]))if(!ids.has(id))throw Error(`Missing briefing seed record ${id}`);
-      for(const ref of file.provisions)if(!provisionNumbers.has(ref))throw Error(`Missing briefing provision ${ref}`);
-    }
+    validateDossiers(pieces,currentFiles,provisionNumbers);
     return pieces;
   });
   eleventyConfig.addFilter("relatedWorld", relatedWorld);
@@ -52,16 +40,16 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("arcRecords", (pieces,arc)=>pieces.filter(p=>p.data.worldArcs.includes(arc)));
   eleventyConfig.addFilter("jurisdictionRecords", (pieces,name)=>pieces.filter(p=>p.data.worldJurisdictions.includes(name)));
   eleventyConfig.addFilter("take", (items,n)=>items.slice(0,n));
-  eleventyConfig.addFilter("worldDateLabel", value=>{const [y,m]=value.split('.');return `Year ${Number(y)}, Month ${Number(m)}`;});
+  eleventyConfig.addFilter("worldDateLabel", value=>{if(!value)return 'No published records';const [y,m]=value.split('.');return `Year ${Number(y)}, Month ${Number(m)}`;});
   eleventyConfig.addFilter("provisionAnchor", ref=>'s'+ref.slice(1).replace('.', '-').replaceAll('.',''));
   eleventyConfig.addFilter("recordById", (pieces,id)=>pieces.find(p=>p.data.worldId===id));
-  eleventyConfig.addFilter("worldNewest", pieces=>pieces.at(-1)?.data.worldDate || '13.12');
+  eleventyConfig.addFilter("worldNewest", worldNewest);
 
-  // Mundane entries remain in The Record without promotion on the World hub.
+  // Optional highlight views can exclude mundane records; latest feeds include them.
   eleventyConfig.addFilter("worldHighlights", pieces =>
     pieces.filter(piece => !piece.data.worldMundane));
 
-  // Related State coverage follows published World content, including body mentions.
+  // Related State coverage follows explicit jurisdiction metadata.
   eleventyConfig.addFilter("stateCoverage", (pieces,name)=>[...pieces].reverse().filter(p=>p.data.worldJurisdictions.includes(name)));
   eleventyConfig.addPassthroughCopy("State Constitutions/harren-state-constitution.md");
   eleventyConfig.addPassthroughCopy("State Constitutions/varek-state-constitution.md");

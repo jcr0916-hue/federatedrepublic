@@ -46,3 +46,23 @@ for(const file of scenarioFiles){
 }
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 console.log(`Verified ${files.length} built pages: local links, anchors, inline script syntax, and all ${records.length} public records.`);
+
+// Verify rendered dossier membership and dates against the same published metadata.
+const {default:matter}=await import('gray-matter');
+const {dossierRecords,worldNewest}=await import('../lib/world.mjs');
+const world=published.map(file=>({data:matter(fs.readFileSync(file,'utf8')).data}));
+const dossiers=JSON.parse(fs.readFileSync('_data/currentFiles.json','utf8'));
+for(const file of dossiers){
+ const doc=docs.get(`dossier-${file.id}.html`);
+ const timeline=DomUtils.findOne(n=>n.attribs?.class==='record-timeline',doc.children,true);
+ assert.ok(timeline,`${file.id}: timeline exists`);
+ const actual=DomUtils.findAll(n=>n.name==='a',timeline.children).map(n=>n.attribs.href.replace(/^\//,'').replace(/\.html$/,''));
+ const expected=dossierRecords(world,file);
+ assert.deepEqual(actual,expected.map(p=>p.data.worldId),`${file.id}: rendered core chronology`);
+ const [y,m]=worldNewest(expected).split('.').map(Number);
+ assert.ok(DomUtils.textContent(doc).includes(`As of Year ${y}, Month ${m}`),`${file.id}: derived date`);
+}
+const korda=dossierRecords(world,dossiers.find(f=>f.id==='korda')).map(p=>p.data.worldId);
+assert.ok(korda.includes('torenthia-nrs-041'));
+assert.ok(!korda.includes('torenthia-news-085'));
+console.log('Verified every dossier timeline/date; Korda roster is core and campaign coverage remains supporting.');

@@ -1,6 +1,9 @@
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
 import test from "node:test";
 import assert from "node:assert/strict";
-import { nextWorldSeq,nextWorldFilename,metadataSuggestions,buildWorldDraft } from "../lib/world-authoring.mjs";
+import { readWorldInventory,nextWorldSeq,nextWorldFilename,metadataSuggestions,buildWorldDraft } from "../lib/world-authoring.mjs";
 
 const items=[
   {name:"torenthia-news-086.html",data:{worldSeq:132}},
@@ -34,4 +37,19 @@ test("draft keeps suggestions commented until explicitly accepted",()=>{
   assert.match(d.content,/# suggested worldArcs: \["korda"\]/);
   assert.match(d.content,/worldSeq: 133/);
   assert.equal(d.filename,"torenthia-news-087.html");
+});
+
+
+test("inventory scans numbered records and dispatches from disk",()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'world-inventory-'));
+ try {
+  for(const item of [...items,{name:'torenthia-dispatch-example.html',data:{worldSeq:10}}])
+   fs.writeFileSync(path.join(dir,item.name),`---\nworldKind: news\nworldSeq: ${item.data.worldSeq}\n---\n`);
+  fs.writeFileSync(path.join(dir,'torenthia.html'),'---\nworldKind: news\nworldSeq: 999\n---\n');
+  const inventory=readWorldInventory(dir);
+  assert.equal(inventory.length,4);
+  assert.equal(nextWorldSeq(inventory),133);
+  for(const [kind,expected] of [['news','087'],['nrs','042'],['sc','003']])
+   assert.equal(nextWorldFilename(kind,inventory),`torenthia-${kind}-${expected}.html`);
+ } finally {fs.rmSync(dir,{recursive:true,force:true});}
 });

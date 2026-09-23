@@ -137,6 +137,8 @@ worldMundane: true
 worldSignalIgnore: []
 ```
 
+`worldTitle`, `worldOutlet`, and `worldBlurb` supply card titles, source labels, and summaries; keep them consistent with the finished body. All four required list fields must be arrays, even when empty. Use a quoted string for dates and an unquoted integer for sequence numbers.
+
 ### worldKind
 
 Record family:
@@ -148,7 +150,7 @@ Record family:
 
 ### worldSeq
 
-Global Torenthia chronology number.
+Global Torenthia chronology number. Rendering sorts by numeric fictional year, then month, then `worldSeq` within the month. Do not renumber existing records or move their dates to force placement.
 
 This is unique across all World record types, not just within news or NRS files.
 
@@ -212,7 +214,7 @@ Example:
 worldJurisdictions: ["Korda", "Kelvant"]
 ```
 
-These tags feed record filtering and jurisdiction-related discovery.
+These tags feed record filtering and jurisdiction-related discovery. Use the exact case-sensitive names in `_data/stats.json` (for example, `Korda`, not `korda`). Do not tag incidental mentions.
 
 ### worldProvisions
 
@@ -277,12 +279,14 @@ The dossier's **As of** date also advances automatically to the newest core doss
 
 A dossier cannot be assigned unless the same value appears in `worldArcs`. The authoring helper and build validation enforce this rule.
 
-Current active dossier IDs are:
+Valid arcs and dossier IDs both come from `_data/currentFiles.json`; arbitrary keywords are rejected by the build. Current active dossier IDs are:
 
 - `korda`
 - `lake-varda`
 - `fiscal-equalization`
 - `argent-ridge`
+
+For the established examples: `torenthia-nrs-041.html` files the committee roster and is core Korda coverage. `torenthia-news-085.html` reports candidate reactions and remains arc-tagged supporting coverage. Core means a material procedural step, official decision, filed evidence, or development needed to understand the constitutional timeline; commentary and reactions generally remain supporting. A seed record remains core even without a dossier tag.
 
 Existing historical dossier records remain preserved in `_data/currentFiles.json` as `seedRecords`. New core records should be added through their own `worldDossiers` metadata rather than by manually editing those arrays.
 
@@ -298,7 +302,7 @@ Mark an intentionally mundane World record with:
 worldMundane: true
 ```
 
-The record remains part of the complete public Record and chronology, while promotional/highlight surfaces can treat it differently.
+The record remains in the complete Record, chronology, and the current homepage and Torenthia latest-four feeds. Map activity excludes mundane records. The available `worldHighlights` filter excludes them wherever a template explicitly uses it; the current latest feeds do not. Mundane is not a draft/private flag.
 
 The authoring helper supports:
 
@@ -402,27 +406,22 @@ Use this narrowly. The purpose is to document an intentional exception, not to s
 
 ## 10. What becomes automatic after publication
 
-Once a valid World file is added, the existing metadata drives automatic placement.
+On the next successful build/deployment:
 
-Depending on the record's metadata, it can automatically enter:
+| Surface | Source and behavior |
+| --- | --- |
+| Homepage and Torenthia Latest | Four newest World records, including mundane pieces. |
+| Complete Record | Every World piece; date/sequence ordering and arc, jurisdiction, outlet, and kind filters derive from metadata. |
+| Dossiers and Republic Now cards | Frozen `seedRecords` union explicit `worldDossiers`, deduplicated and ordered by date/sequence. As-of is the newest date in this core set, not the newest supporting article. Empty dossier timelines fail validation. |
+| Map activity | Up to three newest non-mundane records per map dot. Matches explicit `worldPlaces` keys or dot aliases in title/blurb; `worldJurisdictions` alone does not drive map dots. Check keys/aliases in `_data/mapdots.js`. |
+| Jurisdiction discovery | Record links filter exact `worldJurisdictions`; existing State profiles show six newest tagged records and Solara/Morantine profiles show four. Directory summaries and geographic boundaries are editorial. |
+| Related World rails | Explicit `worldRelated` links, reverse links, and shared arcs qualify; direct outgoing links take priority, then newest first, capped at four. The rail also links applicable dossiers, jurisdictions, and provisions and supplies previous/next chronology links. |
 
-- global World chronology
-- Torenthia “Latest” feed
-- homepage “Latest from Torenthia”
-- complete public Record
-- arc-filtered Record views
-- jurisdiction-filtered Record views
-- related-record rails
-- State/Territory coverage
-- map/activity surfaces
-- core dossier timelines
-- dossier “As of” dates
+For explicit map placement, use a space-separated string such as `worldPlaces: "korda-south"`, after confirming the key exists in `_data/mapdots.js`. This optional field is distinct from jurisdiction tags. A newly named location does not automatically create a dot or profile page.
 
-The publishing principle is:
+Standalone story pages need `{% include "related-world.njk" %}` where the rail should appear; the authoring helper includes it. Copying an old page without the include will not acquire a rail merely by adding metadata.
 
-> The content file is the source of truth. Indexes and discovery surfaces are views of that file.
-
-Do not manually maintain a second chronology unless a surface is intentionally editorial.
+Do not maintain a second chronological list. Dossier titles, summaries, questions, provisions, and affected-jurisdiction lists in `_data/currentFiles.json`, plus dossier introductory prose and descriptions, remain editorial. A derived date means the timeline is current; it does not certify that the editorial summary has been rewritten. Counts of filtered records derive from the archive; there is no new standalone per-arc analytics dashboard.
 
 ---
 
@@ -446,11 +445,13 @@ Before writing or publishing a new World record:
 9. Confirm that Crossroads-only characters or outcomes have not leaked into real World canon.
 10. Replace the generated draft shell with finished content.
 
-After publishing, update only the affected operational status entry in `docs/WORLD-STORY-STATUS.md`. Do not recreate the chronological index there; the published front matter is the historical record.
+In the same publishing change, update the affected operational status entry in `docs/WORLD-STORY-STATUS.md`. Do not recreate the chronological index there; the published front matter is the historical record. Update `docs/WORLD-STORY-BIBLE.md` only when a piece establishes or changes durable canon (institutions, settled geography, enduring character facts, or constitutional-world rules). Routine developments belong in Status. Metadata warnings do not automatically update or certify either document.
 
 ---
 
 ## 12. Validation commands
+
+From the repository root, install locked dependencies first with `npm ci`.
 
 Normal build:
 
@@ -606,3 +607,19 @@ Automation should reduce maintenance without replacing editorial judgment.
 - final prose
 
 That division is intentional.
+
+
+## 15. Release checklist
+
+- [ ] Read Bible, Status, and the latest relevant records; choose the fictional date without changing established chronology.
+- [ ] Preview the helper, review identifiers and tags, then write and finish the HTML. Recheck uniqueness if other work landed meanwhile.
+- [ ] Fill every required field; explicitly choose core versus supporting coverage; leave frozen seeds unchanged.
+- [ ] Review related links, jurisdiction spelling, provisions, mundane treatment, map placement, images, and the related rail.
+- [ ] Update affected Status entries, durable Bible facts when applicable, and editorial dossier summaries/questions if needed.
+- [ ] Run `npm run test:world`, `npm run test:world-meta`, and `npm run test:world-authoring`; then `npm run build` and `npm run check:discovery`. Review advisory warnings even when the build succeeds.
+- [ ] Inspect built Latest, Record, affected dossier, related rail, map activity, and relevant jurisdiction pages. Check supporting articles have not entered core timelines.
+- [ ] Run the additional release checks above; inspect `git diff --check` and the final diff for accidental canon or chronology edits.
+- [ ] Commit on a working branch, incorporate current main, validate the combined result, and merge/push to main under the project's publishing authorization.
+- [ ] Wait for the Vercel Git deployment tied to the exact main commit to reach READY. Check the production alias and affected live pages; record commit SHA, deployment ID, and URL. A successful local build alone is not proof of deployment.
+
+The keyword checker normally examines filenames in the supported World families with `worldSeq > 132`; `audit:world-meta` includes older records. Its suggestions never add tags, promote a dossier record, advance a constitutional clock, or establish canon. All World HTML at the site root is publishable, including unfinished helper output: do not merge a draft shell.
