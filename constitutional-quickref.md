@@ -1041,7 +1041,7 @@ Provisional status is a remedial constitutional status applicable only to an exi
 
 ### §15.3 — Mandatory Devolution
 
-(1) An existing State enters the mandatory remediation track upon an overall failed annual Statehood Audit under §15.2. (2) A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute.
+(1) An existing State enters the mandatory remediation track upon an overall failed biennial Statehood Audit under §15.2. (2) A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute.
 
 - **Cross-refs:** §15.1.a, §15.2, §15.4
 
