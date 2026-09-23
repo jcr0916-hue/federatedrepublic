@@ -69,7 +69,7 @@ const SYNONYMS = {
   'provisional':['provisional status','statehood','audit','devolution','senate seats','§15.1.a'],
   'devolution':['mandatory','voluntary','provisional','statehood','territory','audit failure','§15.3','§15.4'],
   'statehood':['territory','audit','provisional','qualification','senate','§15.2'],
-  'audit':['statehood','jmc','monitor','compliance','provisional','failure','annual'],
+  'audit':['statehood','jmc','monitor','compliance','provisional','failure','biennial','annual'],
   'independence':['§15.9','referendum','sovereignty','state','petition','stage one'],
   'secession':['independence','§15.9','referendum','state','voluntary'],
   'local government':['municipality','city','state','fiscal','§15.8'],
