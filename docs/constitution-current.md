@@ -1259,7 +1259,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 (6) Political entities that held recognized State or equivalent status immediately prior to ratification and choose to enter the Republic as States do so as full States from Day Zero for the purpose of constituting the Senate and seating their legislators.
 
-(7) The annual Statehood Audit under §15.2 applies to all States from the first full audit cycle following Phase 4 activation; no founding status confers exemption from ongoing audit obligations or the consequences of audit failure. All other status determinations — Territory entry, Statehood qualification during the transition window, and post-founding pathways — follow §15.2.
+(7) The biennial Statehood Audit under §15.2 applies to all States from the first full audit cycle following Phase 4 activation; no founding status confers exemption from ongoing audit obligations or the consequences of audit failure. All other status determinations — Territory entry, Statehood qualification during the transition window, and post-founding pathways — follow §15.2.
 
 ### §19.7 — Transition Candidate Registers
 
