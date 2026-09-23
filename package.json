@@ -2,7 +2,7 @@
   "name": "federatedrepublic",
   "private": true,
   "scripts": {
-    "build": "node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy",
+    "build": "node scripts/check-world-publishing.mjs && node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy",
     "sync": "python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py",
     "check:assets": "node scripts/public-assets.mjs",
     "test:assets": "node --test scripts/public-assets.test.mjs",
@@ -16,7 +16,9 @@
     "audit:world-meta": "node scripts/check-world-metadata.mjs --all",
     "test:world-meta": "node --test scripts/world-metadata.test.mjs",
     "world:new": "node scripts/new-world.mjs",
-    "test:world-authoring": "node --test scripts/world-authoring.test.mjs"
+    "test:world-authoring": "node --test scripts/world-authoring.test.mjs",
+    "check:world-publish": "node scripts/check-world-publishing.mjs",
+    "world:publish-check": "npm run build && npm run test:world-meta && npm run test:world-authoring && npm run test:world && npm run check:discovery && npm run test:assets && npm run test:crossroads && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
