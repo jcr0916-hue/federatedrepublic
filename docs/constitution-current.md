@@ -1027,7 +1027,7 @@ A Territory operates under a Territorial Compact: the restructuring agreement un
 
 ### §15.1.a — Provisional Status
 
-Provisional status is a remedial constitutional status applicable only to an existing State under the remediation and devolution provisions of this Article; it is not an intermediate stage between Territory and Statehood. A State in Provisional status remains a State. Its constitution, government, courts, administrative functions, Assembly representation, social-state access, and Article I protections continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues. The State returns to ordinary State status upon publication of two consecutive annual Statehood Audits with no material failure finding by any Monitor. Further transition support, fiscal coordination, and administrative assistance during Provisional status are defined by statute.
+Provisional status is a remedial constitutional status applicable only to an existing State under the remediation and devolution provisions of this Article; it is not an intermediate stage between Territory and Statehood. A State in Provisional status remains a State. Its constitution, government, courts, administrative functions, Assembly representation, social-state access, and Article I protections continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues. The State returns to ordinary State status upon publication of two consecutive biennial Statehood Audits with no material failure finding by any Monitor. Further transition support, fiscal coordination, and administrative assistance during Provisional status are defined by statute.
 
 ### §15.2 — The Statehood Audit
 
@@ -1043,13 +1043,13 @@ Provisional status is a remedial constitutional status applicable only to an exi
 
 (6) Statehood immediately creates two Senate seats. The Elections Panel assigns the two seats by public lot to two distinct existing Senate classes and administers a special election within 90 days. The first senators serve only the remainder of the assigned class terms; the classes and terms of existing States are unaffected.
 
-(7) Every State is subject to an annual Statehood Audit under the same Monitor structure and criteria. Judicial review is available for legality, process, jurisdiction, and application of the stated criteria; a court may not substitute its policy judgment for a Monitor's domain assessment.
+(7) Every State is subject to a biennial Statehood Audit under the same Monitor structure and criteria. Judicial review is available for legality, process, jurisdiction, and application of the stated criteria; a court may not substitute its policy judgment for a Monitor's domain assessment.
 
-(8) Where active conflict prevents completion of an annual audit in a significant portion of a State's territory, the Monitors may publish a provisional audit-status finding for that cycle. A provisional audit status is unavailable where the State materially contributed to the conflict conditions.
+(8) Where active conflict prevents completion of a biennial audit in a significant portion of a State's territory, the Monitors may publish a provisional audit-status finding for that cycle. A provisional audit status is unavailable where the State materially contributed to the conflict conditions.
 
 ### §15.3 — Mandatory Devolution
 
-(1) An existing State enters the mandatory remediation track upon an overall failed annual Statehood Audit under §15.2.
+(1) An existing State enters the mandatory remediation track upon an overall failed biennial Statehood Audit under §15.2.
 
 (2) A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute. A second consecutive failed audit produces a renewed Early Warning and requires a revised Remediation Plan. A passing audit before a third consecutive failure breaks the sequence.
 
