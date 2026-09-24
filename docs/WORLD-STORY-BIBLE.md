@@ -70,7 +70,7 @@ Torenthia is not a peninsula.
 | **Varek** | North along the Alps; Caldris border; Toren watershed and “river country.” No single general executive: governing authority sits with its Assembly and protected local counties. Capital/seat: **Kellor**. |
 | **Norvane** | North-lake cell between the Alps and Lake Varda’s northern tip; northern refugee-arrival zone; newest-named State. Capital/seat: **Ilyr**. |
 | **Harren** | Northern heartland below Varek; founding State; does not touch the national border. Capital/seat: **Hadrin**. |
-| **Arvane** | Northwestern/western coast; maritime. |
+| **Arvane** | Northwestern/western coast; maritime. **Westport** is an established western freight port and State infrastructure/commercial center. |
 | **Rhovane** | Middle-northeast; touches Lake Varda’s upper-western shore; Seren Mak’s home State; under spillover pressure from Norvane. |
 | **Merath** | Center-west interior; industrial. |
 | **Orath** | Eastern-central interior; agricultural heartland; Dorven is here. |
