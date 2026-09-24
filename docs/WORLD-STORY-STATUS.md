@@ -2,7 +2,7 @@
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are archived under `docs/archive/world/`.
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **132** in the last verified batch (260922).
+**Current published frontier:** Year 13, Month 12 · worldSeq through **134** in the last verified batch (260923).
 
 ---
 
@@ -30,10 +30,10 @@ Last published:
 - Jalen Mire and Tomas Rell joined Dessa Orin as named delegate voices (`torenthia-news-081.html`).
 - **Convention formed a Joint Committee on Transition Facts, 27–6** (`torenthia-news-083.html`, `torenthia-nrs-040.html` / NRS-Y13-0701). Co-chaired by **Jalen Mire** and **Tomas Rell** — first published instance of the two actively cooperating on process despite opposed substantive positions. Mandate: freight-capacity data, fiscal transfer records, transition-cost estimates, usable under either a whole-Territory or corridor-merger resolution. Advisory only; does not bind any delegate's vote and does not toll the constitutional clock. **Dessa Orin declined a chair**, intending to submit material to the committee instead rather than lead it — consistent with her established "held back from the public face" positioning.
 - **Committee membership roster filed**: eleven members total, co-chairs Mire and Rell plus nine apportioned seats; no new named delegates introduced (`torenthia-nrs-041.html` / NRS-Y13-0705). Committee set its own internal, non-binding 30-day target for a preliminary compilation — a usable future story beat, not a constitutional deadline.
+- **First local Convention sitting held in Korda** (`torenthia-news-088.html`): the body met in Korda's existing Assembly chamber after relocation. Mire and Rell reported that committee information requests are going out; Orin confirmed she intends to submit fiscal material. No substantive status resolution was introduced, and the committee's fact-gathering remains neutral as to outcome.
 
 Open:
-- exact Korda venue / first local session details
-- hearings, evidence, polling, and internal procedure beyond the committee's formation
+- hearings, evidence, polling, and internal procedure beyond the committee's initial requests
 - first substantive resolution/proposal
 - Elin Thoss's preferred outcome
 - Lakeland Journal / Kelvant business-interest voice
@@ -130,7 +130,7 @@ Do **not** activate early. This is a decade-plus, mostly-record-driven arc that 
 
 ### Maren Sollis — LIVE, IRREGULAR
 
-Her Dispatch is one accumulating personal file; *Show Your Work* is a separate structured explainer series. Same person, two registers. Use only when a classroom/civics perspective genuinely adds value.
+Her Dispatch is one accumulating personal file; *Show Your Work* is a separate structured explainer series. Same person, two registers. Latest Dispatch entry uses the Korda Convention to distinguish shared fact-finding from substantive agreement and reinforces that the constitutional process structures judgment rather than supplying the political answer. Use only when a classroom/civics perspective genuinely adds value.
 
 ---
 
