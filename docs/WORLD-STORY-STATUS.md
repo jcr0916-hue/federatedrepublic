@@ -41,6 +41,27 @@ Open:
 
 Constraint: do not force a premature three-faction structure or treat the canceled corridor referendum as if it produced a vote result. It never occurred. Do not let the Joint Committee's work imply movement toward any particular resolution — its findings are advisory and its formation is a process story, not a direction signal.
 
+**Internal outcome direction — planning only, not published canon:**
+- Work toward a negotiated geographic split rather than clean whole-Territory statehood or full-corridor merger.
+- The likely settlement permits the **northern lake corridor** to proceed toward merger with Kelvant while the **southern lakefront remains with Korda**, preserving meaningful lake access for the remaining Territory.
+- The lake-access issue should be developed as more than economic. Seed that Korda's Indigenous population has cultural, historic, ceremonial, subsistence, or community ties to Lake Varda; do not over-specify those traditions before a story earns the detail.
+- If affected voters ratify the Convention resolution at the required turnout/approval thresholds, the remaining Korda Territory should **continue directly into the §15.2 Statehood Audit process on its revised boundaries**. The settlement is not itself statehood; it preserves the already-triggered statehood path while resolving the competing territorial claims.
+- The eventual referendum/results story should show strong geographic variation: northern corridor strongly pro-merger, central/transition districts more divided, southern lake communities less willing to leave Korda, and interior districts more accepting of a northern-only split once continued lake access is guaranteed.
+- **Elin Thoss** should quietly help build the Convention majority. This fits her established political character: coalition-building, vote-counting, and low-profile persuasion. The substantive compromise should still read as Korda delegates' work, not “Thoss's deal.”
+- Seed Thoss's role indirectly before the final vote: side-room conversations, repeated meetings with resistant delegates, unexpectedly softened hard-line language, or a throwaway participant quote implying that the Chair had been working the difficult votes for longer than observers realized. Avoid an explicit quid pro quo or definitive report that she brokered the deal.
+- A useful eventual tell is a final Convention margin broader than outside observers expected because several presumed hard “no” delegates support the compromise.
+
+**Setup beats to earn this outcome before publication:**
+1. Committee evidence should reveal that the “lake corridor” is not economically, culturally, or politically uniform from north to south.
+2. Publish at least one piece establishing why the remaining Territory cannot plausibly lose all meaningful Lake Varda access.
+3. Introduce Indigenous lake ties carefully through a Korda/Indigenous voice rather than exposition from Verentum.
+4. Let freight, infrastructure, fiscal-transfer, and transition-cost evidence show that a northern-only merger is more survivable for the remainder than a full-corridor departure.
+5. Show Mire moving from defense of the original corridor petition toward defense of the underlying democratic claim, allowing him to accept a narrower geographic settlement without appearing to abandon his constituents.
+6. Show Rell distinguishing between opposing any departure and opposing a departure that leaves the remainder structurally unviable.
+7. Keep Orin's whole-Territory statehood goal alive long enough that her eventual support for the compromise reads as preserving Korda's statehood future rather than surrendering it.
+8. Seed Thoss's quiet coalition work only as background texture until the final vote.
+
+
 ### Living Crossroads: The Korda Convention — LIVE, NON-CANON
 
 Interactive feature, content-complete and live on the site (`crossroads.html?game=korda-crossroads.json`, `_data/crossroads.json` active). Built on the classifier-routing engine (`crossroads-engine.js`, `/api/crossroads`) — routing only, never generates prose or selects an ending; documented publicly on `ai-features.html`.
