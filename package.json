@@ -19,7 +19,9 @@
     "test:world-authoring": "node --test scripts/world-authoring.test.mjs",
     "check:world-publish": "node scripts/check-world-publishing.mjs",
     "test:world-publish": "node --test scripts/world-publishing.test.mjs",
-    "world:publish-check": "npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:assets && npm run test:crossroads && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py"
+    "world:publish-check": "npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:assets && npm run test:crossroads && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py",
+    "republic:ingest": "node scripts/republic-ingest.mjs",
+    "test:ingest": "node --test scripts/republic-ingest.test.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",

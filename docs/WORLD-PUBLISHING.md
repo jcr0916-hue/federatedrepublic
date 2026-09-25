@@ -8,6 +8,8 @@ The goal of the publishing system is simple:
 
 The system deliberately separates **editorial judgment** from **automation**. Metadata is authoritative. Keyword analysis can suggest likely tags and warn about omissions, but it never silently changes canon.
 
+For downloaded files, use the preview-first [local Republic ingest workflow](operations/REPUBLIC-INGEST.md). It validates deterministic imports and stops before commit; it never overwrites existing files.
+
 ---
 
 ## 1. Start with the preview-first authoring helper

@@ -101,18 +101,28 @@ export function references(text, filename) {
   return [...refs];
 }
 
-export function collect({ root = process.cwd(), output = '_site', metadata = [], validateOnly = false } = {}) {
-  const out = path.resolve(root, output);
-  const manifest = path.join(root, '.cache/public-assets.json');
-  const config = JSON.parse(fs.readFileSync(path.join(root, 'scripts/protected-assets.json'), 'utf8'));
+export function publicAssetURL(source) {
+  if (/^(images|pdf)\//.test(source)) return source.replace(/^[^/]+\//, '');
+  return source;
+}
+
+export function assetInventory(root) {
   const inventory = new Map();
-  for (const [source, destination] of [['images', ''], ['logos', 'logos'], ['pdf', '']]) {
+  for (const source of ['images', 'logos', 'pdf']) {
     for (const file of files(path.join(root, source))) {
-      const url = path.posix.join(destination, path.relative(path.join(root, source), file).split(path.sep).join('/'));
+      const url = publicAssetURL(path.relative(root, file).split(path.sep).join('/'));
       if (inventory.has(url)) throw Error(`Duplicate public asset URL: ${url}`);
       inventory.set(url, file);
     }
   }
+  return inventory;
+}
+
+export function collect({ root = process.cwd(), output = '_site', metadata = [], validateOnly = false } = {}) {
+  const out = path.resolve(root, output);
+  const manifest = path.join(root, '.cache/public-assets.json');
+  const config = JSON.parse(fs.readFileSync(path.join(root, 'scripts/protected-assets.json'), 'utf8'));
+  const inventory = assetInventory(root);
   const wanted = new Set(), scanned = new Set(), errors = [];
   function requireAsset(value, base) {
     let url;
