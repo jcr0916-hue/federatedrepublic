@@ -988,3 +988,26 @@ h2.article-subhead,h2.doc-section-label{font-weight:inherit}
 /* Quick Sheet semantic elements */
 h1.qs-title,h2.section-label{padding-block:0}
 h1.qs-title:focus,h2.section-label:focus{outline:none}
+
+/* Complete-card rails: the gap is included in the page width at every size. */
+.related-rail-track,
+.article-opening .article-related-rail .related-rail-track{
+  --rail-columns:3; --rail-gap:1rem;
+  gap:var(--rail-gap);
+  grid-auto-columns:calc((100% - (var(--rail-columns) - 1) * var(--rail-gap)) / var(--rail-columns));
+  padding:0;scroll-padding-inline:0;scrollbar-width:none;
+}
+.related-rail-track::-webkit-scrollbar{display:none}
+.related-rail-card{min-width:0;overflow-wrap:anywhere}
+.related-rail-control{min-width:44px;min-height:44px}
+@media(max-width:1000px){
+  .related-rail-track,.article-opening .article-related-rail .related-rail-track{--rail-columns:2}
+}
+@media(max-width:600px){
+  .related-rail-track,.article-opening .article-related-rail .related-rail-track{--rail-columns:1}
+  .related-rail-controls{display:flex!important}
+}
+@media print{
+  .related-rail-track{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}
+  .related-rail-controls{display:none!important}
+}

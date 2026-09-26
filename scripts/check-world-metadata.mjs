@@ -13,7 +13,7 @@ for(const file of files){
   const parsed=matter(raw);
   if(!parsed.data.worldKind) continue;
   const seq=Number(parsed.data.worldSeq);
-  if(!auditAll && (!Number.isInteger(seq)||seq<=baseline)) continue;
+  if(!auditAll && (parsed.data.worldKind==='nrs' ? parsed.data.nrsSeq<=41 : (!Number.isInteger(seq)||seq<=baseline))) continue;
 
   const body=parsed.content
     .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi," ")

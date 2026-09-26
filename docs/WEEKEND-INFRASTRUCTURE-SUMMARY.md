@@ -1,7 +1,8 @@
 # Weekend infrastructure handoff
 
-Ready for review/commit on `weekend-infrastructure`. No implementation commit,
-push or deployment was made. Base: existing local ingest commit `b026f22`, directly
+Completed on `weekend-infrastructure`; authorized for branch-only commit and push.
+No merge or deployment is authorized. Vercel automatic deployment is disabled
+for this branch in `vercel.json`. Base: existing local ingest commit `b026f22`, directly
 above fetched main `ea62db7`; ingest is present locally but was not on main at the
 start of this work.
 

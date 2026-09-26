@@ -66,3 +66,23 @@ const korda=dossierRecords(world,dossiers.find(f=>f.id==='korda')).map(p=>p.data
 assert.ok(korda.includes('torenthia-nrs-041'));
 assert.ok(!korda.includes('torenthia-news-085'));
 console.log('Verified every dossier timeline/date; Korda roster is core and campaign coverage remains supporting.');
+
+// Latest feeds and Previous/Next follow publication streams; the archive above
+// intentionally still contains every record, including NRS.
+const {narrativeWorld,streamRecords}=await import('../lib/world.mjs');
+for(const file of ['index.html','torenthia.html']){
+ const doc=docs.get(file);
+ const latest=DomUtils.findOne(n=>n.name==='section'&&DomUtils.findOne(h=>h.name==='h2'&&DomUtils.textContent(h)==='Latest from Torenthia',n.children,true),doc.children,true);
+ const links=DomUtils.findAll(n=>n.name==='h3',latest.children).flatMap(h=>DomUtils.findAll(n=>n.name==='a',h.children)).map(a=>a.attribs.href.replace(/^\//,'').replace(/\.html$/,''));
+ assert.deepEqual(links,narrativeWorld(world).slice(-4).reverse().map(p=>p.data.worldId),`${file}: narrative Latest`);
+}
+for(const p of world){
+ const doc=docs.get(p.data.worldId+'.html');
+ const nav=DomUtils.findOne(n=>n.attribs?.class?.includes('related-rail-sequence'),doc.children,true);
+ if(!nav)continue;
+ const stream=streamRecords(world,p.data.worldKind),i=stream.findIndex(r=>r.data.worldId===p.data.worldId);
+ const expected=[stream[i-1],stream[i+1]].filter(Boolean).map(r=>r.data.worldId);
+ const actual=DomUtils.findAll(n=>n.name==='a',nav.children).map(a=>a.attribs.href.replace(/^\//,'').replace(/\.html$/,''));
+ assert.deepEqual(actual,expected,`${p.data.worldId}: stream navigation`);
+}
+console.log('Verified narrative Latest feeds and stream-specific Previous/Next links.');
