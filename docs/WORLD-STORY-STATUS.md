@@ -1,18 +1,36 @@
 # World Story Status
 
+The structured chronology and clock registries in `_data/worldChronology.json` and `_data/worldClocks.json`, together with published front matter, supply chronology and clock checks. The generated dashboard below is checked during publishing. Human narrative notes remain editorial.
+
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are archived under `docs/archive/world/`.
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **137** in the last verified batch (260924).
+**Current published frontier:** Year 13, Month 12 · worldSeq through **137** · nrsSeq through **41** in the last verified batch (260924).
 
 ---
 
 ## Hard clocks / scheduled mechanisms
 
+<!-- WORLD-CLOCKS:START -->
+### Structured clock dashboard
+
+- **Korda Convention** [korda-convention; open; relative]: Approximately 87 active-days from 13.12 day 26; calendar endpoint unresolved. Running; approximately 87 active days remain under §15.5.a(4). Next: Review elapsed active days and required Convention resolution; do not presume its outcome.
+- **Korda committee preliminary compilation** [korda-committee-target; open; relative]: 30 days from 13.12 (non-binding); calendar endpoint unresolved. Non-binding 30-day target; no constitutional deadline. Next: Review the preliminary compilation target without implying a required constitutional outcome.
+- **Argent Ridge repeal** [argent-repeal; open; relative]: Up to 8 months from 13.09 day 12; calendar endpoint unresolved. Phase One signatures remain open; calendar convention unresolved. Next: Review signature-period progress and establish calendar conversion before dating the endpoint.
+- **LC election** [lc-election; scheduled; window]: Window spring Y14 (month bounds unset). Spring Y14 window; no exact date. Next: Review election scheduling and electoral obligations within the spring window.
+- **Lake Varda conference** [lake-varda-conference; open; unscheduled]: Unscheduled. No date, venue, delegation or final agenda. Next: Await a published scheduling decision; do not infer one.
+- **Varda Crossing §10.2 redaction petition** [varda-redaction; open; none]: No timed obligation. No constitutional hearing or response deadline. Next: Track a response if one is published; no timed action is required.
+- **Fiscal Equalization** [fiscal-equalization; open; none]: No timed obligation. No forced action clock. Next: Track voluntary reconvening or another canonically established trigger.
+- **Supreme Court seat cycle** [sc-seat-cycle; planned; template]: Uninstantiated; no current seat or dated obligation. Framework only; no current justice or class selected. Next: When canon establishes a seat, create its term-expiration and nomination/Senate clocks from the constitutional rules.
+- **MA State of the Economy report** [ma-economy-report; scheduled; deadline]: Due 14.05. Next report due no later than Y14 M5, absent statutory change. Next: Review publication of the next report or a canonically established statutory change.
+- **Judicial Pool admission notice** [judicial-pool-notice; scheduled; deadline]: Due 14.02. Next notice due no later than Y14 M2. Next: Review publication of the next quarterly notice.
+<!-- WORLD-CLOCKS:END -->
+
+
 | Thread | Current clock |
 |---|---|
 | **Korda Convention** | Running again after the SC stay dissolved on Month 12 Day 26. Three active days were credited before the stay; approximately **87 active days remain** from Day 26 under §15.5.a(4). Formation of the Joint Committee on Transition Facts (Month 12) does not toll, pause, or extend this period. **Target real-world publication date for the actual Convention resolution: Monday, October 5, 2026.** |
 | **Argent Ridge repeal** | Phase One signature period began after the eligibility challenge window closed unused (Month 9 Day 12). It may run up to eight months. The calendar's next-year naming convention has not been established; do not invent a "Year 14" date without resolving that first. |
-| **LC election** | No specific election date established in canon. |
+| **LC election** | Spring Y14 is the established window; no exact election date or numbered-month season boundaries are established. |
 | **Lake Varda conference** | All proposed participants have agreed in principle, but no date/final agenda/delegation level is established. |
 | **Varda Crossing §10.2 redaction petition** | No constitutional response/hearing deadline established. |
 | **Fiscal Equalization** | No current action clock; the Joint Committee is not constitutionally forced to reconvene. |
@@ -81,7 +99,7 @@ Constraint: this thread never advances or references real canon, and real canon 
 
 ### Legat Consul race — LIVE
 
-Candidates: Carrow, Mak, Vael, Sandris. Latest posture: all four are now campaigning around a Lake Varda conference that is becoming real. Carrow must keep her sitting Foreign Affairs role institutionally separate from campaign activity. No election date is established.
+Candidates: Carrow, Mak, Vael, Sandris. Latest posture: all four are now campaigning around a Lake Varda conference that is becoming real. Carrow must keep her sitting Foreign Affairs role institutionally separate from campaign activity. The spring Y14 election window is established; no exact date is established.
 
 **All four candidates went on record about Korda specifically for the first time this week** (`torenthia-news-085.html`): Sandris sent a substantive policy memo consistent with his established granular-Korda focus; Vael kept it short and deliberately outside his stated priorities; Mak characterized the new committee's formation as a sign of stalemate, arguably overstating what the committee's own filing says — consistent with her established pattern of overstating findings for effect; Carrow declined comment, citing institutional separation from her sitting Foreign Affairs role.
 
@@ -171,7 +189,7 @@ Her Dispatch is one accumulating personal file; *Show Your Work* is a separate s
 ## Publishing discipline
 
 Before writing a new World piece:
-1. Start with the preview-first helper when practical: `npm run world:new -- --kind <news|nrs|sc|dispatch> --date YY.MM --title "..." --blurb "..."`. It calculates the next global sequence and filename and suggests metadata; add `--write` only after reviewing the preview.
+1. Start with the preview-first helper when practical: `npm run world:new -- --kind <news|nrs|sc|dispatch> --date YY.MM --title "..." --blurb "..."`. It calculates the next stream sequence and filename (NRS also requires an explicitly reviewed `--nrs-id`) and suggests metadata; add `--write` only after reviewing the preview.
 2. Read the relevant section of `WORLD-STORY-BIBLE.md`.
 3. Check this file for live status and clocks.
 4. Check the latest relevant published World records/front matter.

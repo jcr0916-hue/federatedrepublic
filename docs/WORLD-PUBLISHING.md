@@ -34,7 +34,7 @@ Supported kinds:
 
 The helper scans the existing World files and calculates:
 
-- the next global `worldSeq`
+- the next narrative `worldSeq`, or independent `nrsSeq` for NRS
 - the next filename for that record type
 - the corresponding `worldId`
 - likely arc tags
@@ -43,10 +43,11 @@ The helper scans the existing World files and calculates:
 
 The first run is **preview-only**. It does not create a file.
 
-At the current frontier after worldSeq 132, the next generated identifiers would begin with:
+At the migration frontier (worldSeq 137; nrsSeq 41), the next generated identifiers begin with:
 
-- global sequence: `133`
-- news: `torenthia-news-087.html`
+- narrative sequence: `138`
+- NRS sequence: `42` (no new narrative sequence)
+- news: `torenthia-news-092.html`
 - NRS: `torenthia-nrs-042.html`
 - Supreme Court: `torenthia-sc-003.html`
 
@@ -100,7 +101,7 @@ npm run world:new -- \
 The helper creates:
 
 - the next available filename
-- the next global `worldSeq`
+- the next narrative `worldSeq`, or independent `nrsSeq` for NRS
 - standard World front matter
 - a minimal HTML shell
 - commented metadata suggestions when suggestions were not explicitly accepted
@@ -117,7 +118,6 @@ Every World record requires:
 
 ```yaml
 worldKind:
-worldSeq:
 worldDate:
 worldTitle:
 worldOutlet:
@@ -128,6 +128,8 @@ worldJurisdictions: []
 worldProvisions: []
 worldRelated: []
 ```
+
+Narrative records require `worldSeq`. NRS records require `nrsSeq` and `nrsId`; historical `worldSeq` values remain optional compatibility metadata.
 
 Additional fields are used when appropriate:
 
@@ -152,11 +154,11 @@ Record family:
 
 ### worldSeq
 
-Global Torenthia chronology number. Rendering sorts by numeric fictional year, then month, then `worldSeq` within the month. Do not renumber existing records or move their dates to force placement.
+Narrative publication sequence for news, dispatch and SC. Existing values remain frozen, including NRS legacy values; the helper allocates above all retained values, preserving historical gaps. New NRS does not allocate this field. Any supplied legacy `worldSeq` must remain globally unique.
 
-This is unique across all World record types, not just within news or NRS files.
+`nrsSeq` is an independent positive integer publication sequence. `nrsId` is the document's explicit human-facing reference, such as `NRS-Y13-0705`; both are unique among NRS records. The reference suffix is an opaque registry number, not a date or sequence. Supply `--nrs-id` after editorial review; the helper cannot infer or reserve it.
 
-The authoring helper assigns the next value automatically.
+The combined archive sorts by numeric fictional year/month and optional `worldDay`. Unknown days sort before known days within a month, without assigning a day. Within equal precision, historical `worldSeq` retains interleaving; new independent NRS follows legacy records and uses `nrsSeq`. This deterministic tie-break does not assert cross-stream event timing. Narrative feeds/navigation sort by `worldSeq`; NRS navigation sorts by `nrsSeq`.
 
 ### worldDate
 
@@ -168,7 +170,7 @@ Example:
 worldDate: "13.12"
 ```
 
-Month must be `01` through `12`.
+Month must be `01` through `12`. Optional `worldDay` is a positive integer when explicitly established; old records remain month-only. Month lengths are not inferred.
 
 The authoring helper rejects malformed dates before writing a file.
 
@@ -304,7 +306,7 @@ Mark an intentionally mundane World record with:
 worldMundane: true
 ```
 
-The record remains in the complete Record, chronology, and the current homepage and Torenthia latest-four feeds. Map activity excludes mundane records. The available `worldHighlights` filter excludes them wherever a template explicitly uses it; the current latest feeds do not. Mundane is not a draft/private flag.
+The record remains in the complete Record and chronology. Narrative mundane pieces remain in the homepage and Torenthia latest-four feeds. Map activity excludes mundane records. The available `worldHighlights` filter excludes them wherever a template explicitly uses it; the current latest feeds do not. Mundane is not a draft/private flag.
 
 The authoring helper supports:
 
@@ -335,7 +337,7 @@ This would produce a filename such as:
 torenthia-dispatch-mara-iset.html
 ```
 
-Dispatches still receive the next global `worldSeq`.
+Dispatches still receive the next narrative `worldSeq`, or independent `nrsSeq` for NRS.
 
 ---
 
@@ -412,12 +414,12 @@ On the next successful build/deployment:
 
 | Surface | Source and behavior |
 | --- | --- |
-| Homepage and Torenthia Latest | Four newest World records, including mundane pieces. |
+| Homepage and Torenthia Latest | Four latest narrative records (news, dispatch, SC), including mundane pieces; NRS remains in the complete archive. |
 | Complete Record | Every World piece; date/sequence ordering and arc, jurisdiction, outlet, and kind filters derive from metadata. |
 | Dossiers and Republic Now cards | Frozen `seedRecords` union explicit `worldDossiers`, deduplicated and ordered by date/sequence. As-of is the newest date in this core set, not the newest supporting article. Empty dossier timelines fail validation. |
 | Map activity | Up to three newest non-mundane records per map dot. Matches explicit `worldPlaces` keys or dot aliases in title/blurb; `worldJurisdictions` alone does not drive map dots. Check keys/aliases in `_data/mapdots.js`. |
 | Jurisdiction discovery | Record links filter exact `worldJurisdictions`; existing State profiles show six newest tagged records and Solara/Morantine profiles show four. Directory summaries and geographic boundaries are editorial. |
-| Related World rails | Explicit `worldRelated` links, reverse links, and shared arcs qualify; direct outgoing links take priority, then newest first, capped at four. The rail also links applicable dossiers, jurisdictions, and provisions and supplies previous/next chronology links. |
+| Related World rails | Explicit `worldRelated` links, reverse links, and shared arcs qualify; direct outgoing links take priority, then newest first, capped at four. The rail also links applicable dossiers, jurisdictions, and provisions and supplies stream-specific previous/next chronology links. |
 
 For explicit map placement, use a space-separated string such as `worldPlaces: "korda-south"`, after confirming the key exists in `_data/mapdots.js`. This optional field is distinct from jurisdiction tags. A newly named location does not automatically create a dot or profile page.
 
@@ -542,6 +544,7 @@ npm run world:new -- \
 ```bash
 npm run world:new -- \
   --kind nrs \
+  --nrs-id NRS-Y13-0706 \
   --date 13.12 \
   --title "..." \
   --blurb "..."
@@ -639,4 +642,32 @@ That division is intentional.
 - [ ] Commit on a working branch, incorporate current main, validate the combined result, and merge/push to main under the project's publishing authorization.
 - [ ] Wait for the Vercel Git deployment tied to the exact main commit to reach READY. Check the production alias and affected live pages; record commit SHA, deployment ID, and URL. A successful local build alone is not proof of deployment.
 
-The keyword checker normally examines filenames in the supported World families with `worldSeq > 132`; `audit:world-meta` includes older records. Its suggestions never add tags, promote a dossier record, advance a constitutional clock, or establish canon. All World HTML at the site root is publishable, including unfinished helper output: do not merge a draft shell.
+The keyword checker normally examines filenames in the supported World families with `worldSeq > 132`, plus NRS records with `nrsSeq > 41`; `audit:world-meta` includes older records. Its suggestions never add tags, promote a dossier record, advance a constitutional clock, or establish canon. All World HTML at the site root is publishable, including unfinished helper output: do not merge a draft shell.
+
+
+## 16. Chronology, clocks, and Status
+
+`lib/world-chronology.mjs` combines existing front matter with `_data/worldChronology.json`. No historical day migration is needed. Entries have a stable `id`, `date: {year, month, day?}`, `stream`, `type`, `status`, source record IDs, and optional arcs, jurisdictions, note/consequence, people and offices. Published records are derived automatically rather than copied into a second history database.
+
+Statuses:
+
+- `published`: canonical event already happened; contributes to the frontier.
+- `open`: established unresolved process.
+- `scheduled`: established future obligation/window.
+- `planned`: editorial intention only; never advances the canonical frontier or raises overdue warnings.
+
+`_data/worldClocks.json` records `trigger -> timing -> status -> nextAction`, with stable IDs and source records. Timing supports exact/month-level `deadline`, bounded or named-season `window`, unresolved `relative` duration, `unscheduled`, `none`, and uninstantiated `template`. This accommodates term expirations, nominations and Senate windows once their triggers become canon; no justice/class is currently assigned.
+
+The checker does not convert active days to calendar dates or assign numbered months to spring. It warns about definite crossings only beyond a known endpoint. Remaining inside a bounded window does not warn. A named season without numeric bounds or a relative clock with unresolved calendar conversion produces a separate actionable review warning after its explicit review checkpoint. A month-only proposed date cannot prove passage of a deadline within that same month. No deadline is invented for the conference, redaction petition or Fiscal Equalization.
+
+The initial registry also captures already-published MA (Y14 M5) and Judicial Pool (Y14 M2) reporting deadlines. This is a seeded registry, not an automatic extraction of every obligation from prose. Add further clocks deliberately, with source records and a next action. When a clock is resolved, mark it `published`, record the resolution source, and add a successor clock if appropriate; the system never infers resolution from a story mentioning a topic.
+
+Normal build/publishing and ingest candidate validation check these registries. Authoring previews warn for the proposed date. Invalid dates, duplicate IDs, missing sources and impossible windows fail validation. Unresolved clocks only warn and do not block publishing.
+
+`npm run world:status` validates the frontier and checks the generated clock dashboard in `WORLD-STORY-STATUS.md`. `npm run world:status -- --write` updates only the marked dashboard block; it retains human summaries, questions, planning notes and constraints. Status also acknowledges narrative and NRS sequence frontiers independently. Existing editorial clock prose is retained as human notes; only the structured dashboard and numerical frontier are machine-checked. The Story Bible remains durable canon only.
+
+## 17. Migration and future work
+
+See [stream migration notes](WORLD-STREAM-MIGRATION.md). Optional `worldPeople` and `worldOffices` accept separate arrays of stable IDs; registry events accept `people` and `offices` too. These are forward-compatible references only, not generated names or verified facts. No current records require them. A future registry must distinguish persistent offices from people and their dated tenures; it can support clickable profile cards and a Government Structure page. No portraits, popups or org charts are implemented.
+
+State constitutional history remains roadmap only: State pages will distinguish actual constitutional text, canonical “How the Framers Tested It” history (roughly 300–500 words, at most 10–12 entries per State, Years 1–12), and explicitly non-canonical hypothetical tests. No history entries are authored in this infrastructure change.

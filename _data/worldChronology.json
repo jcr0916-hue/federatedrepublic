@@ -1,0 +1,46 @@
+[
+  {
+    "id": "korda-stay-dissolved",
+    "date": {
+      "year": 13,
+      "month": 12,
+      "day": 26
+    },
+    "stream": "institutional",
+    "type": "clock-trigger",
+    "status": "published",
+    "arcs": [
+      "korda"
+    ],
+    "jurisdictions": [
+      "Korda"
+    ],
+    "sources": [
+      "torenthia-sc-002"
+    ],
+    "note": "Stay dissolved. Three active days credited; approximately 87 remain. Committee formation does not toll the clock."
+  },
+  {
+    "id": "argent-signature-period-opened",
+    "date": {
+      "year": 13,
+      "month": 9,
+      "day": 12
+    },
+    "stream": "institutional",
+    "type": "clock-trigger",
+    "status": "published",
+    "arcs": [
+      "argent-ridge"
+    ],
+    "jurisdictions": [
+      "Varek",
+      "Norvane"
+    ],
+    "sources": [
+      "torenthia-nrs-013",
+      "torenthia-news-060"
+    ],
+    "note": "Challenge window closed unused; Phase One follows. Date documented in WORLD-STORY-STATUS.md; no calendar conversion to a final deadline."
+  }
+]

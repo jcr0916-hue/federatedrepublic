@@ -49,3 +49,24 @@ test('dossier publication rejects invalid values, missing arcs, and missing seed
  assert.throws(()=>validateDossiers([a],[{...files[0],seedRecords:['missing']}],refs),/Missing briefing seed/);
  assert.throws(()=>validateDossiers([],[{...files[0],seedRecords:[]}],refs),/Empty briefing/);
 });
+
+test('independent NRS ordering, combined chronology, and narrative navigation retain legacy sequences',async()=>{
+ const {narrativeWorld,nrsRecords,streamRecords}=await import('../lib/world.mjs');
+ const a=piece('news-a','13.12',137),b=piece('news-b','14.01',138);
+ const old=piece('old-nrs','13.12',130);Object.assign(old.data,{worldKind:'nrs',nrsSeq:41,nrsId:'NRS-Y13-0705'});
+ const n=piece('new-nrs','14.01',undefined);Object.assign(n.data,{worldKind:'nrs',nrsSeq:42,nrsId:'NRS-Y14-0001'});
+ const records=[n,b,old,a];validateWorld(records,new Set(['§15.2']));
+ assert.deepEqual(narrativeWorld(records).map(p=>p.data.worldId),['news-a','news-b']);
+ assert.deepEqual(nrsRecords(records).map(p=>p.data.worldId),['old-nrs','new-nrs']);
+ assert.equal([...records].sort(chronology).length,4);
+ assert.deepEqual(streamRecords(records,'news'),[a,b]);assert.deepEqual(streamRecords(records,'nrs'),[old,n]);
+ assert.equal(old.data.worldSeq,130);assert.equal(n.data.worldSeq,undefined);
+ for(const key of ['nrsSeq','nrsId']){const copy=structuredClone(n);copy.data[key]=old.data[key];assert.throws(()=>validateWorld([old,copy],new Set(['§15.2'])),new RegExp(key));}
+ const core={id:'korda',seedRecords:['old-nrs','new-nrs']};assert.deepEqual(dossierRecords(records,core),[old,n]);
+});
+
+test('known equal days retain a deterministic sequence tie-break without inventing days',()=>{
+ const a=piece('a','13.12',1),b=piece('b','13.12',2),month=piece('month','13.12',3);
+ a.data.worldDay=26;b.data.worldDay=26;
+ assert.deepEqual([b,month,a].sort(chronology).map(p=>p.data.worldId),['month','a','b']);
+});

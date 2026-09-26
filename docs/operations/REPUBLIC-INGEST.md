@@ -58,7 +58,7 @@ references require manual review. Dependency rejection propagates through the
 candidate set. If the shared World batch validator fails, all remaining World
 candidates are held; independently valid assets can still import.
 
-Missing/blank sequences receive distinct suggested numbers above both published
+Missing/blank narrative sequences receive distinct suggested numbers above both published
 and incoming sequences. They are **not assigned or reserved**: edit the inbox
 file, then preview again. Keyword metadata suggestions are advisory and never
 change tags. Explicit draft/review flags, helper draft markers and obvious
@@ -99,3 +99,10 @@ Do not run concurrent ingest/editor processes against the same inbox/repository.
 
 Focused regression tests: `npm run test:ingest`. Tests use temporary repositories
 and inboxes; they do not modify published content or your Downloads folder.
+
+
+NRS imports require explicit unique `nrsSeq` and `nrsId`; they do not need or
+consume narrative `worldSeq`. Existing legacy NRS `worldSeq` values remain valid.
+The same shared publishing validator checks NRS identities and structured clocks
+for repository records plus eligible inbox candidates. Clock warnings do not
+block imports. Unknown registry/document files remain report-only for manual review.

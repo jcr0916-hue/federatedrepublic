@@ -57,3 +57,13 @@ test('new core records trigger advisory editorial review, without blocking',()=>
  const withSeed={...options,dossiers:[{...options.dossiers[0],seedRecords:[a.data.worldId]}]};
  assert.ok(!checkWorldPublishing([a],withSeed).warnings.some(x=>x.includes('New core')));
 });
+
+test('independent NRS core records still prompt dossier review',()=>{
+ const r=record();r.inputPath='torenthia-nrs-001.html';Object.assign(r.data,{worldKind:'nrs',worldId:'torenthia-nrs-001',nrsSeq:42,nrsId:'NRS-Y13-0706'});delete r.data.worldSeq;
+ const result=check(r);assert.deepEqual(result.errors,[]);assert.ok(result.warnings.some(w=>w.includes('New core korda')));
+});
+test('crossing structured clocks warns without blocking finished publication',()=>{
+ const r=record();r.data.worldDate='14.04';
+ const registry={events:[],clocks:[{id:'required-notice',title:'Notice',summary:'Pending',status:'scheduled',sources:[r.data.worldId],trigger:{description:'Published obligation'},timing:{kind:'deadline',due:{year:14,month:2}},nextAction:'Publish notice.'}]};
+ const result=checkWorldPublishing([r],{...options,registry});assert.deepEqual(result.errors,[]);assert.ok(result.warnings.some(w=>/crosses.*required-notice/.test(w)));
+});

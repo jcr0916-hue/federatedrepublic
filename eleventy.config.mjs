@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { collect } from "./scripts/public-assets.mjs";
 
-import {validateWorld, chronology, relatedWorld, dossierRecords, validateDossiers, worldNewest} from './lib/world.mjs';
+import {validateWorld, chronology, relatedWorld, dossierRecords, validateDossiers, worldNewest, narrativeWorld, nrsRecords, streamRecords} from './lib/world.mjs';
 
 export default function (eleventyConfig) {
 
@@ -28,6 +28,9 @@ export default function (eleventyConfig) {
     validateDossiers(pieces,currentFiles,provisionNumbers);
     return pieces;
   });
+  eleventyConfig.addCollection("narrativeWorld", api => narrativeWorld(api.getAll().filter(p=>p.data.worldKind)));
+  eleventyConfig.addCollection("nrsRecords", api => nrsRecords(api.getAll().filter(p=>p.data.worldKind)));
+  eleventyConfig.addFilter("streamRecords", streamRecords);
   eleventyConfig.addFilter("relatedWorld", relatedWorld);
   eleventyConfig.addFilter("dossierRecords", dossierRecords);
   eleventyConfig.addFilter("mapEntries", (pieces,key,dot)=>[...pieces].reverse().filter(p=>{

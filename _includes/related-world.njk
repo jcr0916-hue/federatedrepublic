@@ -12,22 +12,6 @@
       </div>
     </div>
     <div class="related-rail-track" data-rail-track tabindex="0">
-      {% for file in currentFiles %}{% if file.id in worldArcs %}
-      <article class="related-rail-card"><div class="related-rail-card-body">
-        <span class="related-rail-kicker">Dossier</span>
-        <h3><a href="dossier-{{ file.id }}.html">{{ file.short }}</a></h3>
-        <p>{{ file.summary }}</p>
-        <a class="related-rail-link" href="dossier-{{ file.id }}.html">Open dossier →</a>
-      </div></article>
-      {% endif %}{% endfor %}
-      {% for name in worldJurisdictions %}
-      <article class="related-rail-card"><div class="related-rail-card-body">
-        <span class="related-rail-kicker">Place</span>
-        <h3><a href="torenthia-record.html?place={{ name }}">{{ name }}</a></h3>
-        <p>See the public record associated with this jurisdiction.</p>
-        <a class="related-rail-link" href="torenthia-record.html?place={{ name }}">Browse {{ name }} →</a>
-      </div></article>
-      {% endfor %}
       {% for p in collections.world | relatedWorld(worldId) %}
       <article class="related-rail-card"><div class="related-rail-card-body">
         <span class="related-rail-kicker">{{ p.data.worldOutlet }} · {{ p.data.worldDate }}</span>
@@ -36,12 +20,28 @@
         <a class="related-rail-link" href="{{ p.url }}">Read this record →</a>
       </div></article>
       {% endfor %}
+      {% for file in currentFiles %}{% if file.id in worldArcs %}
+      <article class="related-rail-card"><div class="related-rail-card-body">
+        <span class="related-rail-kicker">Dossier</span>
+        <h3><a href="dossier-{{ file.id }}.html">{{ file.short }}</a></h3>
+        <p>{{ file.summary }}</p>
+        <a class="related-rail-link" href="dossier-{{ file.id }}.html">Open dossier →</a>
+      </div></article>
+      {% endif %}{% endfor %}
       {% for ref in worldProvisions | take(5) %}
       <article class="related-rail-card"><div class="related-rail-card-body">
         <span class="related-rail-kicker">Constitution</span>
         <h3><a href="annotated.html#{{ ref | provisionAnchor }}">{{ ref }}</a></h3>
         <p>Read the constitutional provision connected to this public record.</p>
         <a class="related-rail-link" href="annotated.html#{{ ref | provisionAnchor }}">Open provision →</a>
+      </div></article>
+      {% endfor %}
+      {% for name in worldJurisdictions %}
+      <article class="related-rail-card"><div class="related-rail-card-body">
+        <span class="related-rail-kicker">Place</span>
+        <h3><a href="torenthia-record.html?place={{ name }}">{{ name }}</a></h3>
+        <p>See the public record associated with this jurisdiction.</p>
+        <a class="related-rail-link" href="torenthia-record.html?place={{ name }}">Browse {{ name }} →</a>
       </div></article>
       {% endfor %}
       <article class="related-rail-card"><div class="related-rail-card-body">
@@ -52,9 +52,10 @@
       </div></article>
     </div>
     <div class="link-row related-rail-sequence">
-      {% for p in collections.world %}{% if p.data.worldId == worldId %}
-        {% if not loop.first %}<a href="{{ collections.world[loop.index0 - 1].url }}">← Previous in the public record</a>{% endif %}
-        {% if not loop.last %}<a href="{{ collections.world[loop.index0 + 1].url }}">Next in the public record →</a>{% endif %}
+      {% set sequence = collections.world | streamRecords(worldKind) %}
+      {% for p in sequence %}{% if p.data.worldId == worldId %}
+        {% if not loop.first %}<a href="{{ sequence[loop.index0 - 1].url }}">← Previous in the {% if worldKind == "nrs" %}NRS{% else %}narrative{% endif %} record</a>{% endif %}
+        {% if not loop.last %}<a href="{{ sequence[loop.index0 + 1].url }}">Next in the {% if worldKind == "nrs" %}NRS{% else %}narrative{% endif %} record →</a>{% endif %}
       {% endif %}{% endfor %}
     </div>
   </section>

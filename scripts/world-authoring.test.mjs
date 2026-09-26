@@ -53,3 +53,13 @@ test("inventory scans numbered records and dispatches from disk",()=>{
    assert.equal(nextWorldFilename(kind,inventory),`torenthia-${kind}-${expected}.html`);
  } finally {fs.rmSync(dir,{recursive:true,force:true});}
 });
+
+test('NRS drafts consume only nrsSeq and require a reviewed unique reference',()=>{
+ const inventory=[...items,{name:'torenthia-nrs-042.html',data:{worldKind:'nrs',nrsSeq:42,nrsId:'NRS-Y13-0706'}}];
+ const opts={kind:'nrs',date:'13.12',title:'Example',blurb:'Example'};
+ assert.throws(()=>buildWorldDraft(opts,inventory),/nrs-id/);
+ assert.throws(()=>buildWorldDraft({...opts,nrsId:'NRS-Y13-0706'},inventory),/Duplicate/);
+ const draft=buildWorldDraft({...opts,nrsId:'NRS-Y13-0707'},inventory);
+ assert.match(draft.content,/nrsSeq: 43/);assert.doesNotMatch(draft.content,/worldSeq:/);
+ assert.equal(nextWorldSeq(inventory),133);
+});

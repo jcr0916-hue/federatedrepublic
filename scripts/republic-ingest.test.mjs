@@ -175,3 +175,14 @@ test('BOM, unsafe sequence integers and directory references require review',t=>
     f.put('torenthia-news-001.html',raw);assert.ok(f.plan().items[0].errors.length);
   }
 });
+
+test('NRS ingest needs no narrative sequence; duplicate NRS references are blocked',t=>{
+ const f=fixture(t);
+ const nrs=(number,reference)=>article(1,`nrsSeq: ${number}\nnrsId: ${reference}\n`,undefined,`torenthia-nrs-00${number}`).replace('worldKind: news','worldKind: nrs').replace('worldSeq: 1\n','');
+ f.put('torenthia-nrs-001.html',nrs(1,'NRS-Y13-0706'));
+ const before=[tree(f.root),tree(f.inbox)],p=f.plan();
+ assert.equal(p.errors.length,0);assert.equal(p.items[0].errors.length,0);
+ assert.deepEqual([tree(f.root),tree(f.inbox)],before);
+ f.put('torenthia-nrs-002.html',nrs(2,'NRS-Y13-0706'));
+ assert.match(f.plan().errors.join(),/nrsId/);
+});

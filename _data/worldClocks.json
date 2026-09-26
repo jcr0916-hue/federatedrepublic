@@ -1,0 +1,288 @@
+[
+  {
+    "id": "korda-convention",
+    "title": "Korda Convention",
+    "status": "open",
+    "trigger": {
+      "description": "SC stay dissolved; 3 active days credited before stay",
+      "date": {
+        "year": 13,
+        "month": 12,
+        "day": 26
+      }
+    },
+    "timing": {
+      "kind": "relative",
+      "amount": 87,
+      "unit": "active-days",
+      "approximate": true,
+      "reviewAfter": {
+        "year": 13,
+        "month": 12
+      },
+      "note": "Approximately 87 active days remain from Y13 M12 Day 26; month lengths and active-day accounting must be reviewed before claiming a deadline. Committee formation does not toll the clock."
+    },
+    "summary": "Running; approximately 87 active days remain under \u00a715.5.a(4).",
+    "nextAction": "Review elapsed active days and required Convention resolution; do not presume its outcome.",
+    "sources": [
+      "torenthia-sc-002",
+      "torenthia-nrs-040"
+    ],
+    "arcs": [
+      "korda"
+    ],
+    "jurisdictions": []
+  },
+  {
+    "id": "korda-committee-target",
+    "title": "Korda committee preliminary compilation",
+    "status": "open",
+    "trigger": {
+      "description": "Committee set an internal target after organizing; exact day not established",
+      "date": {
+        "year": 13,
+        "month": 12
+      }
+    },
+    "timing": {
+      "kind": "relative",
+      "amount": 30,
+      "unit": "days",
+      "binding": false,
+      "reviewAfter": {
+        "year": 13,
+        "month": 12
+      },
+      "note": "Internal non-binding 30-day target; exact organizing day not established. This does not toll the Convention clock."
+    },
+    "summary": "Non-binding 30-day target; no constitutional deadline.",
+    "nextAction": "Review the preliminary compilation target without implying a required constitutional outcome.",
+    "sources": [
+      "torenthia-nrs-041"
+    ],
+    "arcs": [
+      "korda"
+    ],
+    "jurisdictions": [
+      "Korda"
+    ]
+  },
+  {
+    "id": "argent-repeal",
+    "title": "Argent Ridge repeal",
+    "status": "open",
+    "trigger": {
+      "description": "Eligibility challenge closed unused; Phase One begins afterward",
+      "date": {
+        "year": 13,
+        "month": 9,
+        "day": 12
+      }
+    },
+    "timing": {
+      "kind": "relative",
+      "amount": 8,
+      "unit": "months",
+      "maximum": true,
+      "reviewAfter": {
+        "year": 13,
+        "month": 12
+      },
+      "note": "Up to eight months; next-year naming/date conversion remains unresolved. No exact deadline is asserted."
+    },
+    "summary": "Phase One signatures remain open; calendar convention unresolved.",
+    "nextAction": "Review signature-period progress and establish calendar conversion before dating the endpoint.",
+    "sources": [
+      "torenthia-nrs-013",
+      "torenthia-news-060"
+    ],
+    "arcs": [
+      "argent-ridge"
+    ],
+    "jurisdictions": []
+  },
+  {
+    "id": "lc-election",
+    "title": "LC election",
+    "status": "scheduled",
+    "trigger": {
+      "description": "Published campaign points to spring election"
+    },
+    "timing": {
+      "kind": "window",
+      "year": 14,
+      "season": "spring",
+      "note": "Spring Y14; no exact date or numbered-month season boundaries established."
+    },
+    "summary": "Spring Y14 window; no exact date.",
+    "nextAction": "Review election scheduling and electoral obligations within the spring window.",
+    "sources": [
+      "torenthia-news-044"
+    ],
+    "arcs": [],
+    "jurisdictions": []
+  },
+  {
+    "id": "lake-varda-conference",
+    "title": "Lake Varda conference",
+    "status": "open",
+    "trigger": {
+      "description": "Participants accepted in principle"
+    },
+    "timing": {
+      "kind": "unscheduled"
+    },
+    "summary": "No date, venue, delegation or final agenda.",
+    "nextAction": "Await a published scheduling decision; do not infer one.",
+    "sources": [
+      "torenthia-news-072"
+    ],
+    "arcs": [
+      "lake-varda"
+    ],
+    "jurisdictions": []
+  },
+  {
+    "id": "varda-redaction",
+    "title": "Varda Crossing \u00a710.2 redaction petition",
+    "status": "open",
+    "trigger": {
+      "description": "Redaction petition remains unresolved"
+    },
+    "timing": {
+      "kind": "none"
+    },
+    "summary": "No constitutional hearing or response deadline.",
+    "nextAction": "Track a response if one is published; no timed action is required.",
+    "sources": [
+      "torenthia-nrs-030"
+    ],
+    "arcs": [
+      "lake-varda"
+    ],
+    "jurisdictions": []
+  },
+  {
+    "id": "fiscal-equalization",
+    "title": "Fiscal Equalization",
+    "status": "open",
+    "trigger": {
+      "description": "Committee has not reconvened"
+    },
+    "timing": {
+      "kind": "none"
+    },
+    "summary": "No forced action clock.",
+    "nextAction": "Track voluntary reconvening or another canonically established trigger.",
+    "sources": [
+      "torenthia-news-020"
+    ],
+    "arcs": [
+      "fiscal-equalization"
+    ],
+    "jurisdictions": []
+  },
+  {
+    "id": "sc-seat-cycle",
+    "title": "Supreme Court seat cycle",
+    "status": "planned",
+    "trigger": {
+      "description": "Future known term expiration or vacancy; no current seat/class assigned"
+    },
+    "timing": {
+      "kind": "template",
+      "termYears": 12,
+      "stages": [
+        {
+          "id": "term-expiration",
+          "trigger": "confirmation or original seat term for mid-term replacement",
+          "duration": {
+            "amount": 12,
+            "unit": "years"
+          },
+          "note": "Mid-term replacement serves only the remainder of the original term."
+        },
+        {
+          "id": "nomination",
+          "trigger": "anticipated or unanticipated vacancy",
+          "maximumDays": {
+            "anticipated": 90,
+            "unanticipated": 60
+          },
+          "note": "Actual period defined by statute."
+        },
+        {
+          "id": "senate-vote",
+          "trigger": "nomination",
+          "maximumDays": 120,
+          "note": "Actual period defined by statute; no deemed confirmation."
+        }
+      ],
+      "note": "Instantiate only after the seat and trigger are established. Nomination and Senate periods are statutory with constitutional ceilings under \u00a74.4; no current seat/class or statutory duration is assigned."
+    },
+    "summary": "Framework only; no current justice or class selected.",
+    "nextAction": "When canon establishes a seat, create its term-expiration and nomination/Senate clocks from the constitutional rules.",
+    "sources": [
+      "torenthia-sc-002"
+    ],
+    "arcs": [],
+    "jurisdictions": [],
+    "provisions": [
+      "\u00a74.3",
+      "\u00a74.4",
+      "\u00a719.10"
+    ]
+  },
+  {
+    "id": "ma-economy-report",
+    "title": "MA State of the Economy report",
+    "status": "scheduled",
+    "trigger": {
+      "description": "Second Half Year 13 report specifies next reporting deadline",
+      "date": {
+        "year": 13,
+        "month": 11
+      }
+    },
+    "timing": {
+      "kind": "deadline",
+      "due": {
+        "year": 14,
+        "month": 5
+      }
+    },
+    "summary": "Next report due no later than Y14 M5, absent statutory change.",
+    "nextAction": "Review publication of the next report or a canonically established statutory change.",
+    "sources": [
+      "torenthia-nrs-031"
+    ],
+    "arcs": [],
+    "jurisdictions": []
+  },
+  {
+    "id": "judicial-pool-notice",
+    "title": "Judicial Pool admission notice",
+    "status": "scheduled",
+    "trigger": {
+      "description": "Quarterly notice specifies next deadline",
+      "date": {
+        "year": 13,
+        "month": 11
+      }
+    },
+    "timing": {
+      "kind": "deadline",
+      "due": {
+        "year": 14,
+        "month": 2
+      }
+    },
+    "summary": "Next notice due no later than Y14 M2.",
+    "nextAction": "Review publication of the next quarterly notice.",
+    "sources": [
+      "torenthia-nrs-033"
+    ],
+    "arcs": [],
+    "jurisdictions": []
+  }
+]
