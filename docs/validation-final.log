@@ -1,0 +1,465 @@
+
+> world:publish-check
+> npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:assets && npm run test:crossroads && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py
+
+
+> test:chronology
+> node --test scripts/world-chronology.test.mjs
+
+✔ month-only history remains imprecise; exact days are optional (0.636167ms)
+✔ crossing a deadline identifies clock and action; within a window does not warn (0.446625ms)
+✔ season and relative clocks report uncertainty rather than invented deadlines (0.113917ms)
+✔ planning never advances the canonical frontier; invalid registry states block (0.397ms)
+✔ published exact days trigger same-month warnings regardless of record order or unknown days (0.24925ms)
+✔ dashboard includes structured deadlines and changes when their bounds change (0.091833ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 53.425792
+
+> test:rail
+> node --test scripts/related-rail.test.mjs
+
+✔ arrows and keyboard move one whole card including its gap, respecting end bounds and reduced motion (0.762ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.594833
+
+> test:ingest
+> node --test scripts/republic-ingest.test.mjs
+
+✔ preview is byte-for-byte immutable, detects metadata and plans LF normalization (10.988667ms)
+✔ unknown files and ambiguous flat images are report-only (2.152584ms)
+✔ canonical routing recognizes docs, states, constitution and explicit asset folders (1.818625ms)
+✔ never overwrites, even identical content (2.416875ms)
+✔ duplicate sequences across repo and inbox are blocked (3.045416ms)
+✔ blank sequences get distinct suggestions above repo and inbox, never written (2.64325ms)
+✔ draft flags, placeholders and core dossier placement require review (4.022458ms)
+✔ shared validator blocks types, IDs, dates, provisions and broken related records (4.008ms)
+✔ references require existing or eligible assets; rejected dependencies do not qualify (3.926042ms)
+✔ apply checks before archive, leaves failed and unknown sources in inbox (3.366209ms)
+✔ assets depending on a World record rejected by shared validation are held (2.396209ms)
+✔ failed post-import checks preserve source and imported file for inspection (2.275041ms)
+✔ rechecks changed sources and destinations before writes (2.708084ms)
+✔ symlink sources and destinations are refused (2.314208ms)
+✔ empty and missing inbox gracefully produce no actions (1.438792ms)
+✔ executable front matter is rejected without execution (1.944ms)
+✔ post-import command selection uses native sync before build and narrow validators (1.809625ms)
+✔ asset references use flattened public URLs rather than source paths (2.988166ms)
+✔ command workflow previews without writes, applies, checks, then archives only successful files (321.003666ms)
+✔ command workflow reports a real build failure and preserves all sources (99.306916ms)
+✔ assets cannot shadow an existing root public URL (2.471625ms)
+✔ unexpected check errors never archive imported sources (3.629541ms)
+✔ BOM, unsafe sequence integers and directory references require review (2.674334ms)
+✔ NRS ingest needs no narrative sequence; duplicate NRS references are blocked (3.276083ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 547.027209
+
+> test:world-publish
+> node --test scripts/world-publishing.test.mjs
+
+✔ finished records pass without mutating content or editorial state (0.831083ms)
+✔ missing, blank, and malformed required metadata blocks publication (0.198ms)
+✔ generated draft shells and explicit draft flags cannot publish (3.059959ms)
+✔ scan catches expected World filenames with missing metadata and custom World files (0.916542ms)
+✔ relationships, dossier rules, dates, and duplicate sequences remain blocking (0.185458ms)
+✔ new core records trigger advisory editorial review, without blocking (0.185ms)
+✔ independent NRS core records still prompt dossier review (0.095208ms)
+✔ crossing structured clocks warns without blocking finished publication (0.386542ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 50.253333
+
+> test:world
+> node --test scripts/world.test.mjs
+
+✔ chronology orders numeric year/month and explicit within-month sequence (0.504625ms)
+✔ publication rejects ambiguous metadata and broken relationships (0.276917ms)
+✔ related records prioritize explicit relationships, exclude self and unrelated newest news (0.086084ms)
+✔ dossiers preserve seeds, opt in core records once, and exclude supporting coverage (0.349166ms)
+✔ dossier publication rejects invalid values, missing arcs, and missing seeds (0.151792ms)
+✔ independent NRS ordering, combined chronology, and narrative navigation retain legacy sequences (0.249583ms)
+✔ known equal days retain a deterministic sequence tie-break without inventing days (0.052209ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.646167
+
+> test:world-meta
+> node --test scripts/world-metadata.test.mjs
+
+✔ flags strong arc, jurisdiction, and provision signals (0.641542ms)
+✔ does not warn when metadata is present (0.246584ms)
+✔ supports deliberate suppression without changing global rules (0.061583ms)
+✔ new independent NRS records receive metadata warnings without worldSeq (41.462333ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 78.706459
+
+> test:world-authoring
+> node --test scripts/world-authoring.test.mjs
+
+✔ assigns the next global sequence and per-kind filename (0.4755ms)
+✔ suggests metadata without making it authoritative (0.371792ms)
+✔ rejects invalid dates and dossier/arc mismatches (0.246375ms)
+✔ draft keeps suggestions commented until explicitly accepted (0.138083ms)
+✔ inventory scans numbered records and dispatches from disk (2.407916ms)
+✔ NRS drafts consume only nrsSeq and require a reviewed unique reference (0.165208ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 47.912958
+
+> test:assets
+> node --test scripts/public-assets.test.mjs
+
+[assets] Validated 15 referenced/protected assets; 11/12 library files deployed.
+[assets] Validated 15 referenced/protected assets; 11/12 library files deployed.
+[assets] Validated 1 referenced/protected assets; 1/12 library files deployed.
+[assets] Validated 1 referenced/protected assets; 1/1 library files deployed.
+✔ HTML attributes, entities, srcset, CSS imports, fallbacks, social images and script HTML (3.019916ms)
+✔ graph follows CSS/JSON/JS/SVG, expands generated filenames and ignores internal docs (11.023083ms)
+✔ fails on missing references, missing protected assets and unresolved generated families (2.660584ms)
+✔ actual Eleventy config includes front matter and data/templates but excludes docs HTML (247.227375ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 307.530959
+
+> test:crossroads
+> node --test scripts/crossroads.test.cjs
+
+threll 1670 paths; witnesses {"clean_statehood":["s1_threll_force","s2_threll_champion","s3_threll_autonomy","s4_threll_persuade","s5_threll_clean","s6_record"],"grand_bargain":["s1_threll_force","s2_threll_champion","s3_threll_autonomy","s4_threll_persuade","s5_bargain","s6_record"],"negotiated_split":["s1_threll_force","s2_threll_champion","s3_threll_autonomy","s4_threll_persuade","s5_split","s6_record"],"hung_convention":["s1_threll_force","s2_threll_champion","s3_threll_autonomy","s4_threll_persuade","s5_tentative","s6_record"],"ugly_split":["s1_threll_force","s2_threll_champion","s3_threll_call_bluff","s4_threll_pivot","s5_force_split","s6_record"]}
+kesh 1664 paths; witnesses {"hung_convention":["s1_kesh_force","s2_kesh_accept","s3_kesh_ultimatum","s4_kesh_persuade","s5_kesh_clean","s6_record"],"negotiated_split":["s1_kesh_force","s2_kesh_accept","s3_kesh_ultimatum","s4_kesh_persuade","s5_split","s6_record"],"ugly_split":["s1_kesh_force","s2_kesh_accept","s3_kesh_ultimatum","s4_kesh_pivot","s5_force_split","s6_record"],"clean_statehood":["s1_kesh_force","s2_kesh_accept","s3_kesh_autonomy","s4_kesh_persuade","s5_kesh_clean","s6_record"],"grand_bargain":["s1_kesh_force","s2_kesh_accept","s3_kesh_autonomy","s4_kesh_pivot","s5_bargain","s6_record"]}
+✔ game allowlist, defaults, role selection, isolated starting state (1.193958ms)
+✔ both game files have valid buttons, targets and authored prose; Thoss stays sealed (0.230458ms)
+✔ role and state gates apply to classifier candidates and direct route application (0.177042ms)
+✔ all five endings reachable for both roles through legal paths (20.567542ms)
+✔ no-concession persuasion wins for both roles; repeated demands deadlock (0.181167ms)
+✔ clock, lock snapshot, late automatic lock, inclusive boundaries and substantive package (0.074667ms)
+✔ walkout consumes real days once, including on repeated scene rendering (0.04225ms)
+✔ sealed Thoss content hash and every reachable legacy ending remain stable (2.088083ms)
+✔ API remains classifier-only and rejects invented narrative routes (0.9875ms)
+✔ Thoss engine matches the sealed legacy selector across boundary states (0.343208ms)
+✔ actual page sends only eligible descriptors, rejects cross-role replies, and resets replay (3.20425ms)
+✔ a deal drafted at zero is late and deliberate lapse survives the final fragment (0.075958ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 64.481792
+
+> test:scenarios
+> node --test scripts/scenarios.test.mjs
+
+✔ new files supply catalog content, references, reading time and counts (9.322625ms)
+✔ explicit order precedes new unordered pages; ties sort by filename (1.409833ms)
+✔ invalid editorial metadata fails with the filename (0.846375ms)
+✔ legacy body layout and meta description remain discoverable (0.61225ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 60.58925
+
+> build
+> node scripts/check-world-publishing.mjs && node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy
+
+[world publish PASS] 137 records validated; 0 editorial reminder(s).
+[world metadata] torenthia-news-090.html: likely lake-varda coverage, but "lake-varda" is missing from worldArcs
+[world metadata] 1 suggestion(s) across 5 new World record(s). Review front matter or add worldSignalIgnore for a deliberate exception.
+(node:20051) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/john/.codex/.chatgpt-projects/g-p-6a8cb8a03b5881919f8ac39e6da1086d/weekend-infrastructure/_data/atlas.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/john/.codex/.chatgpt-projects/g-p-6a8cb8a03b5881919f8ac39e6da1086d/weekend-infrastructure/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[11ty] Writing ./_site/404.html from ./404.html (njk)
+[11ty] Writing ./_site/ai-features.html from ./ai-features.html (njk)
+[11ty] Writing ./_site/annotated.html from ./annotated.html (njk)
+[11ty] Writing ./_site/atlas.html from ./atlas.html (njk)
+[11ty] Writing ./_site/before-the-republic.html from ./before-the-republic.html (njk)
+[11ty] Writing ./_site/constitution-print.html from ./constitution-print.html (njk)
+[11ty] Writing ./_site/constitutional-history-archive.html from ./constitutional-history-archive.html (njk)
+[11ty] Writing ./_site/constitutional-history.html from ./constitutional-history.html (njk)
+[11ty] Writing ./_site/contact.html from ./contact.html (njk)
+[11ty] Writing ./_site/crossroads.html from ./crossroads.html (njk)
+[11ty] Writing ./_site/diagrams.html from ./diagrams.html (njk)
+[11ty] Writing ./_site/glossary.html from ./glossary.html (njk)
+[11ty] Writing ./_site/index.html from ./index.html (njk)
+[11ty] Writing ./_site/quicksheet-amendments.html from ./quicksheet-amendments.html (njk)
+[11ty] Writing ./_site/quicksheet-article-2.html from ./quicksheet-article-2.html (njk)
+[11ty] Writing ./_site/quicksheet-article-3.html from ./quicksheet-article-3.html (njk)
+[11ty] Writing ./_site/quicksheet-elections.html from ./quicksheet-elections.html (njk)
+[11ty] Writing ./_site/quicksheet-fiscal.html from ./quicksheet-fiscal.html (njk)
+[11ty] Writing ./_site/quicksheet-immigration.html from ./quicksheet-immigration.html (njk)
+[11ty] Writing ./_site/quicksheet-judiciary.html from ./quicksheet-judiciary.html (njk)
+[11ty] Writing ./_site/quicksheet-monitors.html from ./quicksheet-monitors.html (njk)
+[11ty] Writing ./_site/quicksheet-nvs.html from ./quicksheet-nvs.html (njk)
+[11ty] Writing ./_site/quicksheet-recall-removal.html from ./quicksheet-recall-removal.html (njk)
+[11ty] Writing ./_site/quicksheet-rights.html from ./quicksheet-rights.html (njk)
+[11ty] Writing ./_site/quicksheet-states.html from ./quicksheet-states.html (njk)
+[11ty] Writing ./_site/quicksheets.html from ./quicksheets.html (njk)
+[11ty] Writing ./_site/republic-at-a-glance.html from ./republic-at-a-glance.html (njk)
+[11ty] Writing ./_site/scenario-alliance-clause.html from ./scenario-alliance-clause.html (njk)
+[11ty] Writing ./_site/scenario-automatic-floor.html from ./scenario-automatic-floor.html (njk)
+[11ty] Writing ./_site/scenario-coordination-failure.html from ./scenario-coordination-failure.html (njk)
+[11ty] Writing ./_site/scenario-critical-finding.html from ./scenario-critical-finding.html (njk)
+[11ty] Writing ./_site/scenario-deadlock.html from ./scenario-deadlock.html (njk)
+[11ty] Writing ./_site/scenario-finality-act.html from ./scenario-finality-act.html (njk)
+[11ty] Writing ./_site/scenario-first-nomination.html from ./scenario-first-nomination.html (njk)
+[11ty] Writing ./_site/scenario-harder-ballot.html from ./scenario-harder-ballot.html (njk)
+[11ty] Writing ./_site/scenario-long-count.html from ./scenario-long-count.html (njk)
+[11ty] Writing ./_site/scenario-ordinary.html from ./scenario-ordinary.html (njk)
+[11ty] Writing ./_site/scenario-organized-third.html from ./scenario-organized-third.html (njk)
+[11ty] Writing ./_site/scenario-recalled-senator.html from ./scenario-recalled-senator.html (njk)
+[11ty] Writing ./_site/scenario-second-declaration.html from ./scenario-second-declaration.html (njk)
+[11ty] Writing ./_site/scenario-sponsoring-state.html from ./scenario-sponsoring-state.html (njk)
+[11ty] Writing ./_site/scenario-the-administrator.html from ./scenario-the-administrator.html (njk)
+[11ty] Writing ./_site/scenario-the-audit.html from ./scenario-the-audit.html (njk)
+[11ty] Writing ./_site/scenario-the-cause.html from ./scenario-the-cause.html (njk)
+[11ty] Writing ./_site/scenario-the-classification.html from ./scenario-the-classification.html (njk)
+[11ty] Writing ./_site/scenario-the-coalition.html from ./scenario-the-coalition.html (njk)
+[11ty] Writing ./_site/scenario-the-contraction.html from ./scenario-the-contraction.html (njk)
+[11ty] Writing ./_site/scenario-the-departure.html from ./scenario-the-departure.html (njk)
+[11ty] Writing ./_site/scenario-the-direction.html from ./scenario-the-direction.html (njk)
+[11ty] Writing ./_site/scenario-the-first-twelve-years.html from ./scenario-the-first-twelve-years.html (njk)
+[11ty] Writing ./_site/scenario-the-formation.html from ./scenario-the-formation.html (njk)
+[11ty] Writing ./_site/scenario-the-formula.html from ./scenario-the-formula.html (njk)
+[11ty] Writing ./_site/scenario-the-founding-choice.html from ./scenario-the-founding-choice.html (njk)
+[11ty] Writing ./_site/scenario-the-graduation.html from ./scenario-the-graduation.html (njk)
+[11ty] Writing ./_site/scenario-the-holdout.html from ./scenario-the-holdout.html (njk)
+[11ty] Writing ./_site/scenario-the-ledger.html from ./scenario-the-ledger.html (njk)
+[11ty] Writing ./_site/scenario-the-map.html from ./scenario-the-map.html (njk)
+[11ty] Writing ./_site/scenario-the-objection.html from ./scenario-the-objection.html (njk)
+[11ty] Writing ./_site/scenario-the-order.html from ./scenario-the-order.html (njk)
+[11ty] Writing ./_site/scenario-the-petition.html from ./scenario-the-petition.html (njk)
+[11ty] Writing ./_site/scenario-the-prior-claim.html from ./scenario-the-prior-claim.html (njk)
+[11ty] Writing ./_site/scenario-the-rate.html from ./scenario-the-rate.html (njk)
+[11ty] Writing ./_site/scenario-the-redaction.html from ./scenario-the-redaction.html (njk)
+[11ty] Writing ./_site/scenario-the-referendum.html from ./scenario-the-referendum.html (njk)
+[11ty] Writing ./_site/scenario-the-restoration.html from ./scenario-the-restoration.html (njk)
+[11ty] Writing ./_site/scenario-the-return.html from ./scenario-the-return.html (njk)
+[11ty] Writing ./_site/scenario-the-second-path.html from ./scenario-the-second-path.html (njk)
+[11ty] Writing ./_site/scenario-the-second-renewal.html from ./scenario-the-second-renewal.html (njk)
+[11ty] Writing ./_site/scenario-the-severed-clause.html from ./scenario-the-severed-clause.html (njk)
+[11ty] Writing ./_site/scenario-the-sixty-percent.html from ./scenario-the-sixty-percent.html (njk)
+[11ty] Writing ./_site/scenario-the-suspension.html from ./scenario-the-suspension.html (njk)
+[11ty] Writing ./_site/scenario-the-third-strike.html from ./scenario-the-third-strike.html (njk)
+[11ty] Writing ./_site/scenario-the-three-hours.html from ./scenario-the-three-hours.html (njk)
+[11ty] Writing ./_site/scenario-the-three-recusals.html from ./scenario-the-three-recusals.html (njk)
+[11ty] Writing ./_site/scenario-the-twenty-four-hours.html from ./scenario-the-twenty-four-hours.html (njk)
+[11ty] Writing ./_site/scenario-the-unremovable.html from ./scenario-the-unremovable.html (njk)
+[11ty] Writing ./_site/scenario-the-vote.html from ./scenario-the-vote.html (njk)
+[11ty] Writing ./_site/scenario-the-waiver.html from ./scenario-the-waiver.html (njk)
+[11ty] Writing ./_site/scenario-void-exception.html from ./scenario-void-exception.html (njk)
+[11ty] Writing ./_site/scenarios.html from ./scenarios.html (njk)
+[11ty] Writing ./_site/sources.html from ./sources.html (njk)
+[11ty] Writing ./_site/survey.html from ./survey.html (njk)
+[11ty] Writing ./_site/torenthia-atlas.html from ./torenthia-atlas.html (njk)
+[11ty] Writing ./_site/torenthia-dispatch-sarn.html from ./torenthia-dispatch-sarn.html (njk)
+[11ty] Writing ./_site/torenthia-dispatch-sollis.html from ./torenthia-dispatch-sollis.html (njk)
+[11ty] Writing ./_site/torenthia-dispatch-vann.html from ./torenthia-dispatch-vann.html (njk)
+[11ty] Writing ./_site/torenthia-news-001.html from ./torenthia-news-001.html (njk)
+[11ty] Writing ./_site/torenthia-news-002.html from ./torenthia-news-002.html (njk)
+[11ty] Writing ./_site/torenthia-news-003.html from ./torenthia-news-003.html (njk)
+[11ty] Writing ./_site/torenthia-news-004.html from ./torenthia-news-004.html (njk)
+[11ty] Writing ./_site/torenthia-news-005.html from ./torenthia-news-005.html (njk)
+[11ty] Writing ./_site/torenthia-news-006.html from ./torenthia-news-006.html (njk)
+[11ty] Writing ./_site/torenthia-news-007.html from ./torenthia-news-007.html (njk)
+[11ty] Writing ./_site/torenthia-news-008.html from ./torenthia-news-008.html (njk)
+[11ty] Writing ./_site/torenthia-news-009.html from ./torenthia-news-009.html (njk)
+[11ty] Writing ./_site/torenthia-news-010.html from ./torenthia-news-010.html (njk)
+[11ty] Writing ./_site/torenthia-news-011.html from ./torenthia-news-011.html (njk)
+[11ty] Writing ./_site/torenthia-news-012.html from ./torenthia-news-012.html (njk)
+[11ty] Writing ./_site/torenthia-news-013.html from ./torenthia-news-013.html (njk)
+[11ty] Writing ./_site/torenthia-news-014.html from ./torenthia-news-014.html (njk)
+[11ty] Writing ./_site/torenthia-news-015.html from ./torenthia-news-015.html (njk)
+[11ty] Writing ./_site/torenthia-news-016.html from ./torenthia-news-016.html (njk)
+[11ty] Writing ./_site/torenthia-news-017.html from ./torenthia-news-017.html (njk)
+[11ty] Writing ./_site/torenthia-news-018.html from ./torenthia-news-018.html (njk)
+[11ty] Writing ./_site/torenthia-news-019.html from ./torenthia-news-019.html (njk)
+[11ty] Writing ./_site/torenthia-news-020.html from ./torenthia-news-020.html (njk)
+[11ty] Writing ./_site/torenthia-news-021.html from ./torenthia-news-021.html (njk)
+[11ty] Writing ./_site/torenthia-news-022.html from ./torenthia-news-022.html (njk)
+[11ty] Writing ./_site/torenthia-news-023.html from ./torenthia-news-023.html (njk)
+[11ty] Writing ./_site/torenthia-news-024.html from ./torenthia-news-024.html (njk)
+[11ty] Writing ./_site/torenthia-news-025.html from ./torenthia-news-025.html (njk)
+[11ty] Writing ./_site/torenthia-news-026.html from ./torenthia-news-026.html (njk)
+[11ty] Writing ./_site/torenthia-news-027.html from ./torenthia-news-027.html (njk)
+[11ty] Writing ./_site/torenthia-news-028.html from ./torenthia-news-028.html (njk)
+[11ty] Writing ./_site/torenthia-news-029.html from ./torenthia-news-029.html (njk)
+[11ty] Writing ./_site/torenthia-news-030.html from ./torenthia-news-030.html (njk)
+[11ty] Writing ./_site/torenthia-news-031.html from ./torenthia-news-031.html (njk)
+[11ty] Writing ./_site/torenthia-news-032.html from ./torenthia-news-032.html (njk)
+[11ty] Writing ./_site/torenthia-news-033.html from ./torenthia-news-033.html (njk)
+[11ty] Writing ./_site/torenthia-news-034.html from ./torenthia-news-034.html (njk)
+[11ty] Writing ./_site/torenthia-news-035.html from ./torenthia-news-035.html (njk)
+[11ty] Writing ./_site/torenthia-news-036.html from ./torenthia-news-036.html (njk)
+[11ty] Writing ./_site/torenthia-news-037.html from ./torenthia-news-037.html (njk)
+[11ty] Writing ./_site/torenthia-news-038.html from ./torenthia-news-038.html (njk)
+[11ty] Writing ./_site/torenthia-news-039.html from ./torenthia-news-039.html (njk)
+[11ty] Writing ./_site/torenthia-news-040.html from ./torenthia-news-040.html (njk)
+[11ty] Writing ./_site/torenthia-news-041.html from ./torenthia-news-041.html (njk)
+[11ty] Writing ./_site/torenthia-news-042.html from ./torenthia-news-042.html (njk)
+[11ty] Writing ./_site/torenthia-news-043.html from ./torenthia-news-043.html (njk)
+[11ty] Writing ./_site/torenthia-news-044.html from ./torenthia-news-044.html (njk)
+[11ty] Writing ./_site/torenthia-news-045.html from ./torenthia-news-045.html (njk)
+[11ty] Writing ./_site/torenthia-news-046.html from ./torenthia-news-046.html (njk)
+[11ty] Writing ./_site/torenthia-news-047.html from ./torenthia-news-047.html (njk)
+[11ty] Writing ./_site/torenthia-news-048.html from ./torenthia-news-048.html (njk)
+[11ty] Writing ./_site/torenthia-news-049.html from ./torenthia-news-049.html (njk)
+[11ty] Writing ./_site/torenthia-news-050.html from ./torenthia-news-050.html (njk)
+[11ty] Writing ./_site/torenthia-news-051.html from ./torenthia-news-051.html (njk)
+[11ty] Writing ./_site/torenthia-news-052.html from ./torenthia-news-052.html (njk)
+[11ty] Writing ./_site/torenthia-news-053.html from ./torenthia-news-053.html (njk)
+[11ty] Writing ./_site/torenthia-news-054.html from ./torenthia-news-054.html (njk)
+[11ty] Writing ./_site/torenthia-news-055.html from ./torenthia-news-055.html (njk)
+[11ty] Writing ./_site/torenthia-news-056.html from ./torenthia-news-056.html (njk)
+[11ty] Writing ./_site/torenthia-news-057.html from ./torenthia-news-057.html (njk)
+[11ty] Writing ./_site/torenthia-news-058.html from ./torenthia-news-058.html (njk)
+[11ty] Writing ./_site/torenthia-news-059.html from ./torenthia-news-059.html (njk)
+[11ty] Writing ./_site/torenthia-news-060.html from ./torenthia-news-060.html (njk)
+[11ty] Writing ./_site/torenthia-news-061.html from ./torenthia-news-061.html (njk)
+[11ty] Writing ./_site/torenthia-news-062.html from ./torenthia-news-062.html (njk)
+[11ty] Writing ./_site/torenthia-news-063.html from ./torenthia-news-063.html (njk)
+[11ty] Writing ./_site/torenthia-news-064.html from ./torenthia-news-064.html (njk)
+[11ty] Writing ./_site/torenthia-news-065.html from ./torenthia-news-065.html (njk)
+[11ty] Writing ./_site/torenthia-news-066.html from ./torenthia-news-066.html (njk)
+[11ty] Writing ./_site/torenthia-news-067.html from ./torenthia-news-067.html (njk)
+[11ty] Writing ./_site/torenthia-news-068.html from ./torenthia-news-068.html (njk)
+[11ty] Writing ./_site/torenthia-news-069.html from ./torenthia-news-069.html (njk)
+[11ty] Writing ./_site/torenthia-news-070.html from ./torenthia-news-070.html (njk)
+[11ty] Writing ./_site/torenthia-news-071.html from ./torenthia-news-071.html (njk)
+[11ty] Writing ./_site/torenthia-news-072.html from ./torenthia-news-072.html (njk)
+[11ty] Writing ./_site/torenthia-news-073.html from ./torenthia-news-073.html (njk)
+[11ty] Writing ./_site/torenthia-news-074.html from ./torenthia-news-074.html (njk)
+[11ty] Writing ./_site/torenthia-news-075.html from ./torenthia-news-075.html (njk)
+[11ty] Writing ./_site/torenthia-news-076.html from ./torenthia-news-076.html (njk)
+[11ty] Writing ./_site/torenthia-news-077.html from ./torenthia-news-077.html (njk)
+[11ty] Writing ./_site/torenthia-news-078.html from ./torenthia-news-078.html (njk)
+[11ty] Writing ./_site/torenthia-news-079.html from ./torenthia-news-079.html (njk)
+[11ty] Writing ./_site/torenthia-news-080.html from ./torenthia-news-080.html (njk)
+[11ty] Writing ./_site/torenthia-news-081.html from ./torenthia-news-081.html (njk)
+[11ty] Writing ./_site/torenthia-news-082.html from ./torenthia-news-082.html (njk)
+[11ty] Writing ./_site/torenthia-news-083.html from ./torenthia-news-083.html (njk)
+[11ty] Writing ./_site/torenthia-news-084.html from ./torenthia-news-084.html (njk)
+[11ty] Writing ./_site/torenthia-news-085.html from ./torenthia-news-085.html (njk)
+[11ty] Writing ./_site/torenthia-news-086.html from ./torenthia-news-086.html (njk)
+[11ty] Writing ./_site/torenthia-news-087.html from ./torenthia-news-087.html (njk)
+[11ty] Writing ./_site/torenthia-news-088.html from ./torenthia-news-088.html (njk)
+[11ty] Writing ./_site/torenthia-news-089.html from ./torenthia-news-089.html (njk)
+[11ty] Writing ./_site/torenthia-news-090.html from ./torenthia-news-090.html (njk)
+[11ty] Writing ./_site/torenthia-news-091.html from ./torenthia-news-091.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-001.html from ./torenthia-nrs-001.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-002.html from ./torenthia-nrs-002.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-003.html from ./torenthia-nrs-003.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-004.html from ./torenthia-nrs-004.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-005.html from ./torenthia-nrs-005.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-006.html from ./torenthia-nrs-006.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-007.html from ./torenthia-nrs-007.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-008.html from ./torenthia-nrs-008.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-009.html from ./torenthia-nrs-009.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-010.html from ./torenthia-nrs-010.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-011.html from ./torenthia-nrs-011.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-012.html from ./torenthia-nrs-012.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-013.html from ./torenthia-nrs-013.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-014.html from ./torenthia-nrs-014.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-015.html from ./torenthia-nrs-015.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-016.html from ./torenthia-nrs-016.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-017.html from ./torenthia-nrs-017.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-018.html from ./torenthia-nrs-018.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-019.html from ./torenthia-nrs-019.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-020.html from ./torenthia-nrs-020.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-021.html from ./torenthia-nrs-021.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-022.html from ./torenthia-nrs-022.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-023.html from ./torenthia-nrs-023.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-024.html from ./torenthia-nrs-024.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-025.html from ./torenthia-nrs-025.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-026.html from ./torenthia-nrs-026.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-027.html from ./torenthia-nrs-027.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-028.html from ./torenthia-nrs-028.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-029.html from ./torenthia-nrs-029.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-030.html from ./torenthia-nrs-030.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-031.html from ./torenthia-nrs-031.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-032.html from ./torenthia-nrs-032.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-033.html from ./torenthia-nrs-033.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-034.html from ./torenthia-nrs-034.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-035.html from ./torenthia-nrs-035.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-036.html from ./torenthia-nrs-036.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-037.html from ./torenthia-nrs-037.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-038.html from ./torenthia-nrs-038.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-039.html from ./torenthia-nrs-039.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-040.html from ./torenthia-nrs-040.html (njk)
+[11ty] Writing ./_site/torenthia-nrs-041.html from ./torenthia-nrs-041.html (njk)
+[11ty] Writing ./_site/torenthia-record.html from ./torenthia-record.html (njk)
+[11ty] Writing ./_site/torenthia-sc-001.html from ./torenthia-sc-001.html (njk)
+[11ty] Writing ./_site/torenthia-sc-002.html from ./torenthia-sc-002.html (njk)
+[11ty] Writing ./_site/torenthia.html from ./torenthia.html (njk)
+[11ty] Writing ./_site/dossier-argent-ridge.html from ./dossier-argent-ridge.html (njk)
+[11ty] Writing ./_site/dossier-fiscal-equalization.html from ./dossier-fiscal-equalization.html (njk)
+[11ty] Writing ./_site/dossier-korda.html from ./dossier-korda.html (njk)
+[11ty] Writing ./_site/dossier-lake-varda.html from ./dossier-lake-varda.html (njk)
+[11ty] Writing ./_site/territory-morantine.html from ./territory-morantine.html (njk)
+[11ty] Writing ./_site/territory-solara.html from ./territory-solara.html (njk)
+[11ty] Writing ./_site/torenthia-state-harren.html from ./torenthia-state-harren.html (njk)
+[11ty] Writing ./_site/torenthia-state-kelvant.html from ./torenthia-state-kelvant.html (njk)
+[11ty] Writing ./_site/torenthia-state-norvane.html from ./torenthia-state-norvane.html (njk)
+[11ty] Writing ./_site/torenthia-state-varek.html from ./torenthia-state-varek.html (njk)
+[assets] Validated 296 referenced/protected assets; 49/96 library files deployed.
+[11ty] Benchmark    138ms  14%   232× (Configuration) "glossaryDefine" Transform
+[11ty] Copied 18 Wrote 232 files in 1.00 seconds (4.3ms each, v3.1.6)
+
+> check:discovery
+> node scripts/check-discovery.mjs
+
+Verified 232 built pages: local links, anchors, inline script syntax, and all 137 public records.
+Verified every dossier timeline/date; Korda roster is core and campaign coverage remains supporting.
+Verified narrative Latest feeds and stream-specific Previous/Next links.
+constitution_data.json: 20 articles, 176 provisions
+
+
+All consistent. Safe to push.
+Full text and search anchors verified for 176 provisions.
+All 52 scenario references, built links, and generated library entries are consistent.
