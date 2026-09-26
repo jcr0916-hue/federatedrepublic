@@ -41,6 +41,21 @@ test('planning never advances the canonical frontier; invalid registry states bl
  assert.match(registryWarnings([record],{events:[],clocks:[]},'Human notes')[1],/dashboard/);
 });
 
+test('published exact days trigger same-month warnings regardless of record order or unknown days',()=>{
+ const c=clock({kind:'deadline',due:{year:13,month:12,day:25}});
+ const status='**Current published frontier:** Year 13, Month 12\n'+clockDashboard([c]);
+ const dated={data:{...record.data,worldId:'dated-source',worldDay:26}};
+ const event={id:'dated-event',date:{year:13,month:12,day:26},stream:'institutional',type:'notice',status:'published',sources:['source']};
+ for(const records of [[record,dated],[dated,record]]){
+  const warnings=registryWarnings(records,{events:[],clocks:[c]},status);
+  assert.equal(warnings.length,1);assert.match(warnings[0],/13\.12 day 26.*crosses 1.*test-clock/);
+ }
+ assert.match(registryWarnings([record],{events:[event],clocks:[c]},status)[0],/13\.12 day 26.*crosses 1.*test-clock/);
+ assert.deepEqual(registryWarnings([record],{events:[],clocks:[c]},status),[]);
+ assert.deepEqual(registryWarnings([record],{events:[{...event,status:'planned'}],clocks:[c]},status),[]);
+ assert.equal(record.data.worldDay,undefined);
+});
+
 test('dashboard includes structured deadlines and changes when their bounds change',()=>{
  const c=clock({kind:'deadline',due:{year:14,month:2}});
  const before=clockDashboard([c]);assert.match(before,/Due 14.02/);
