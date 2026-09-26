@@ -1,0 +1,432 @@
+{
+  "baseline": "e3639d0fd93b664dc559c18a83d1dc8d39df5dd9",
+  "branch": "archive/legacy-project-material",
+  "retired": [
+    {
+      "path": "docs/archive/constitution/262727 FR Constitution .md",
+      "bytes": 191272,
+      "sha256": "34b08902df0853347a2772058a52b00a7145f9186def71dc192757dec4849141",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260805.md",
+      "bytes": 195722,
+      "sha256": "4aff1f7a8e4237112660b1037f3d0ac1f923d2bed9d6c295859826339adb844b",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260808.md",
+      "bytes": 199575,
+      "sha256": "f93766ee0202ce001387ea167c53a349771a9c7ff9ba0d879c4fa06bcb92c5a8",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260809.md",
+      "bytes": 201482,
+      "sha256": "a67e11082d5dc61d5254c245c5a8b95efac9e3ad2df643a98a2e1c752c6cb865",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260812.md",
+      "bytes": 201475,
+      "sha256": "854cb827ea3e776787d6f36ee45f55413e38e867dbb19c794e1dfdb9a455a636",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260813.md",
+      "bytes": 201319,
+      "sha256": "59837f19c70ba161b2b1a9192d4d23a0ebfb0a5e94ee7ab441f2689203f3eb75",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260820.md",
+      "bytes": 200983,
+      "sha256": "569f89263769bc845a0cd2f48d5e79c3dfe3577d49385fee1585739acb7c28d0",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260827.md",
+      "bytes": 200983,
+      "sha256": "bdcbd72b309ccc42f3b08726fe351c50f90e1489ebf0737c5910d31710388e58",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260831.md",
+      "bytes": 201514,
+      "sha256": "f8756a9ddada16f7d1f2f9f00846525708dc8138573848ab16febdae4d9cd976",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260906.md",
+      "bytes": 202095,
+      "sha256": "2b93e90f6b9826caadbf01725e57665016757064899d17e15d6c2f3f449ea45f",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260907.md",
+      "bytes": 203959,
+      "sha256": "b36bec2c92c26ef1dda96abb8530b583829d9aa8248b4f3b6d5e2c7cb09b9fe7",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260913-a.md",
+      "bytes": 212721,
+      "sha256": "d8ffadd3800f4bde80e34fa111dc9e2407e0329218cb58a0cdbe3a2c626e025f",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260913.md",
+      "bytes": 213595,
+      "sha256": "e5c663c2603d1f1cd170d6e45fed2adb1bf20e340494b406db19de3e9aadeb41",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260914-a.md",
+      "bytes": 214798,
+      "sha256": "e5a24cf89ffb853c1b3d4960f61208f126857c8ba2509b3e7f0899ebfb8d9c92",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260914.md",
+      "bytes": 213781,
+      "sha256": "57d0fd7af0108bc9e7e0e5e035b94a0ba17c1cd64d6ed15598599924b50ecb17",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260915-a.md",
+      "bytes": 214682,
+      "sha256": "e1ec786da1223c8381e4f9f9bf23565f69417532b079cf1a42d95fc236c7e56e",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260915.md",
+      "bytes": 214618,
+      "sha256": "a9fc30c478d87c60236dd8cc821d42de818d70dbf7fdbea321d16fc4794b8bd9",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260526c.docx",
+      "bytes": 2105270,
+      "sha256": "f6cb1a2d7a7f49ee00f784097ce57a423e4f9ada62cd940b998a4bf95462e95b",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260706.docx",
+      "bytes": 73932,
+      "sha256": "2ef401c78dc8ac5deeb907403de10b4dcc8a0f1da68f5cd27839d7fbe4cfd4eb",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260706b.docx",
+      "bytes": 69319,
+      "sha256": "01bc5b1ebb484b564194a6b77eaaf1614f8482582c5edc3e41faa3af7b395aee",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260708d.docx",
+      "bytes": 70192,
+      "sha256": "42047dd475849b72b1a39c0b116f9e9d36307de52db5d9d44dec05139d9330b7",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260709.docx",
+      "bytes": 70696,
+      "sha256": "e8e883d10432e95d069cc2588e4f2ba4b55932f9315b2a5e3578a5a93c599649",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260709b.docx",
+      "bytes": 71096,
+      "sha256": "06d079e35306fd8ee084dc7d999902f128556371c8327fe532ba9d520921e9a4",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260712.docx",
+      "bytes": 73170,
+      "sha256": "40dac53ee35950b09daa13c7f5acc0ab57614f20ca360f3a813ba10c0e9a729a",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260713-readable.docx",
+      "bytes": 73022,
+      "sha256": "69bdef1dbc32e715faabdd41f55b459718e4dace8cf8a6814006680498701122",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260713.docx",
+      "bytes": 75012,
+      "sha256": "eab83110697a840fae17a2881ec76f0b2e73d4395f874106e691e321f1d7d877",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/Federated Republic Constitution 260714.docx",
+      "bytes": 76960,
+      "sha256": "6f750ad73c14bf81736b828c1780c149bc260bf2760e611281fa8858fdd2caa9",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-260913-b.md",
+      "bytes": 213595,
+      "sha256": "e5c663c2603d1f1cd170d6e45fed2adb1bf20e340494b406db19de3e9aadeb41",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-260918-a.md",
+      "bytes": 214810,
+      "sha256": "7ad0e69d266ff335cff3954be3dc4e523186deb5750138895dcdfd0f29f05b43",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-260918-b.md",
+      "bytes": 214779,
+      "sha256": "c4bdae2e688c61dfbcc190a94d5aa4942502bb4d41aa0639cd4a7443d64140b0",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-260918.md",
+      "bytes": 214676,
+      "sha256": "2acef6f85f2385bea8fe9e65ead8fba9b96f75f61b74994b16fcee7595c997a6",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-current-1.pdf",
+      "bytes": 356295,
+      "sha256": "2735cf8482e9fc05cda31f8b92eed11ebf2530d5d61804afa871332f8efa9018",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-current.docx",
+      "bytes": 78921,
+      "sha256": "43c77dab497d08d999a10a75cd9372b10e058a027455b8c0d818b6a3fd8c7f46",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-current.pdf",
+      "bytes": 398802,
+      "sha256": "e8a7bc01cec1dd5e3b97e00fff2ebbe5fe470e80a6fe3ed23955fa708079ca89",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-v109b.docx",
+      "bytes": 102710,
+      "sha256": "321130fa176cb0b2bbf9e287912a95cc0ae8b81a0e7e4fffe5a194470a355ea4",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/constitution/constitution-v136.docx",
+      "bytes": 122678,
+      "sha256": "9492541a8fc817bdcf6439e05c97bbb64c7b1367a6f3e33426cf18c44f705b57",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/crossroads/README.md",
+      "bytes": 733,
+      "sha256": "a7dd9bb45b24227b26ea48ae4979e224bb725ea2d2abb12827233bd208f011fe",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/crossroads/thoss-crossroads.json",
+      "bytes": 44717,
+      "sha256": "3b66e1a72070e0b4aacb1c355eba55d4156bb6bad413506301aaa50266c17f19",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/decisions/SECTION-15-10-STATE-INCAPACITY-DECIDED.md",
+      "bytes": 15139,
+      "sha256": "0e953124f27534759767cede96edb246efc93eaef591993d7443c36a6377688c",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/decisions/SECTION-2-6-A-REDESIGN-DECIDED.md",
+      "bytes": 10726,
+      "sha256": "338b4281b2b49f7c0b9b6efbe9ee578072361fb522c62e5b1f458afa9c739645",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/decisions/SUCCESSION-ELIGIBILITY-PRINCIPLE.md",
+      "bytes": 14908,
+      "sha256": "1033c3ea2bba4c20a9637060b3be48f888244e6eea905615762c3deca255c8ae",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/CONTENT-PLAN-13-09.md",
+      "bytes": 7058,
+      "sha256": "e9c0aeed059658abba705f5b17187e4daa5a76d7547cd5a24cefd9c2e9634a20",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/DIAGRAM-AUDIT-QUEUE.md",
+      "bytes": 5239,
+      "sha256": "7f581502902d9db472e286f68755b6fa71b49bb4f68dda6aae2efda2e90a1f99",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/MIGRATION-CHECKLIST.md",
+      "bytes": 7220,
+      "sha256": "47e8c6f7e89ac114ee6d64485e792ab254dec05793b5780e81e6f9b4f1a2b24e",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/REORG-PLAN.md",
+      "bytes": 5613,
+      "sha256": "3ee2d594416372eb0a400e8693bc1f90249c73208d12c54ce5a7af3ab34520d3",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/SITE-REFRESH-PLAN.md",
+      "bytes": 26066,
+      "sha256": "b3f464b30e865d0a765fc7df09fdbcffb9d5e731a046d506dd6468b53bebbfeb",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/STATE-PAGES-PLAN.md",
+      "bytes": 8317,
+      "sha256": "437b0062719ef898d99850c1f7a8dd874120ca8c35310c3fa54942767a01d8dd",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/STATS-STATUS-REDESIGN-PINNED.md",
+      "bytes": 7443,
+      "sha256": "49b77daca5167ae9e5de75eb0b67977b5bed01048e3e893daa2cab3f31d610c9",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/WEBSITE-CONSTITUTION-SYNC.md",
+      "bytes": 5656,
+      "sha256": "9b4806160200766c6159360ae8f3e3b511a429daae24615b912c609781e4bfa8",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/crossroads/DEPLOY-NOTES.md",
+      "bytes": 1191,
+      "sha256": "524297ea3ae2472487e8e2b45c0bbb460eb299acf51270b21bf4617082555757",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/crossroads/KORDA-CROSSROADS-CONTENT-DRAFT.md",
+      "bytes": 81617,
+      "sha256": "0cadec1bf42c6f0a716180529ee82a079a0588fc1dd1f212cd5bd1ef146a740c",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/crossroads/KORDA-CROSSROADS-PLAN.md",
+      "bytes": 27967,
+      "sha256": "44f53d9d33b7897c662634f1c4886f105e6de42a62258679b33363a744e742af",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/crossroads/LAUNCH-WINDOW-GUIDE.md",
+      "bytes": 2303,
+      "sha256": "cde785493b6a7f2caa5ee170f88a7166d1c6cea571ace2aad7abaf8ca8092eaf",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/project/federated_republic_website_review_2026-09-19.md",
+      "bytes": 32171,
+      "sha256": "805ccd4d15724954f7fe02d1aae32b41c5dab6b0371deaaa6850046f89a41f1a",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/reviews/CONSTITUTION-AUDIT-260914.md",
+      "bytes": 5746,
+      "sha256": "e31d79fee7567e9a9ea5e1b1657478f58cf5a82929d7ce58e20a20ff8eccbb02",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/reviews/CONSTITUTION-EDITORIAL-REVIEW-PLAN.md",
+      "bytes": 9404,
+      "sha256": "fea0adb16bd4d9d5db2a747f0f034d8466872516194ba2d990ade586bf5d94ce",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/reviews/CONSTITUTION-REVIEW-OPEN.md",
+      "bytes": 32695,
+      "sha256": "c09cee9dddad6f3328b0c0e019c1e6d9d54d7c412ff7009a194c981bb2051f68",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/reviews/PASS-1-FINDINGS.md",
+      "bytes": 8303,
+      "sha256": "0b15a075b6ba874bbe3c40b3bf2cd7552deb412ed407eaa5427c6fb8d6d8bc79",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/world/ARGENT-RIDGE-ARC.md",
+      "bytes": 13307,
+      "sha256": "2dea9914cd9f1b80a182c2203db93b2bd2ad1783e73df9c82ba70b86b7818d3f",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/world/CHARACTER-REFERENCE.md",
+      "bytes": 17284,
+      "sha256": "a7a572296c89bcf7e2c0806bc484e7ff9e28f3886fdc977695585114a046bdf2",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/world/CORINDAL-ARC.md",
+      "bytes": 10074,
+      "sha256": "e60d1a7aff1e7eb52c4f5a6846fb2286635a0ae5f2b1f640fcb946cdbb965337",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/world/KORDA-CONVENTION-ARC.md",
+      "bytes": 18104,
+      "sha256": "4248409fbc06fad62fdbff4e1a5356abacea284979fc52680062735b199bbc27",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/world/WORLD-THREADS-PENDING.md",
+      "bytes": 37568,
+      "sha256": "8c680d270fe2af372a1dd3cfc93e88ab938d25f5977b4ee2974791fb6ff79d0f",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/world/WORLD-TIMELINE.md",
+      "bytes": 22878,
+      "sha256": "b658e77496cd23ffa24340fb23ffbf9f8ac75b7c3bf247e17ee0124665964a94",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/archive/world/world-canon.md",
+      "bytes": 5886,
+      "sha256": "4ab0293be7d709bd405b3a48e41c43221d068a8890b25cb5723323ec110e07fd",
+      "mainAction": "remove"
+    },
+    {
+      "path": "constitutional-quickref.md",
+      "bytes": 94542,
+      "sha256": "29e569283db7fce6e84486e9086ad80a22f21cd7549c3e88e30f979b330a077d",
+      "mainAction": "remove"
+    },
+    {
+      "path": "torenthia-atlas.html",
+      "bytes": 4387,
+      "sha256": "5db9cce111ec5cd60dd9dc5438a272f3a90d64966a6aa8b87ef9bc53832f6875",
+      "mainAction": "compatibility-page"
+    },
+    {
+      "path": "docs/WEBSITE-REFRESH.md",
+      "bytes": 6472,
+      "sha256": "a6b8afb3adc23a325e1b03035a08e86eb8dc50cc7adcc4771fc734da5acb982b",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/WEEKEND-INFRASTRUCTURE-SUMMARY.md",
+      "bytes": 4434,
+      "sha256": "2223ac8c17024e24a469474d769b02b28b9351de5c55e2aef4132d86ea00964c",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/federated-republic-status-and-next-steps-2026-09-26.md",
+      "bytes": 19930,
+      "sha256": "8dc7b282ce2fa6ac1993f05f427ed5944e2ea005f5b44b385e9ec938095408d3",
+      "mainAction": "remove"
+    },
+    {
+      "path": "docs/validation-final.log",
+      "bytes": 32042,
+      "sha256": "a44747119307c6a34a0d4104b5fd340e74878812e627a5b9480ce35f30fb3fbb",
+      "mainAction": "remove"
+    }
+  ]
+}
