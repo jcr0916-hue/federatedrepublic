@@ -42,6 +42,7 @@ Use the roles below: automated test fixtures and hypotheticals do not establish 
 - Assets/deployment: [`docs/ASSET-DEPLOYMENT.md`](docs/ASSET-DEPLOYMENT.md).
 - Run `npm run world:publish-check` and relevant additional tests before publishing.
 - The documentation index is [`docs/README.md`](docs/README.md).
+- Current project-wide progress and working ideas: [`docs/PROJECT-PROGRESS.md`](docs/PROJECT-PROGRESS.md). This is a non-authoritative implementation handoff, not constitutional or Torenthia canon.
 
 ## Cold storage
 
