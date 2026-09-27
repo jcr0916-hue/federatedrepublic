@@ -55,7 +55,7 @@
     <div><dt>Federal Senate</dt><dd>{{ s.senate }} seats</dd></div>
     <div><dt>Federal Assembly</dt><dd>{{ s.assembly }} seats</dd></div>
     <div><dt>State audit</dt><dd>{{ s.audit }}</dd></div>
-  </dl><figure class="state-map-crop"><a href="republic-at-a-glance.html#{{ s.name | lower }}" aria-label="Open {{ s.name }} on the full labeled map"><svg class="state-context-map" data-state="{{ s.name }}" data-capital="{{ s.capital }}" data-capital-x="{{ s.capitalX }}" data-capital-y="{{ s.capitalY }}" viewBox="{{ s.left * 15.36 - 260 }} {{ s.top * 10.24 - 160 }} 520 320" role="img" aria-label="{{ s.name }} with State borders, nearby jurisdictions, and {{ s.capital }}"><image href="{{ geography.baseImage }}" width="1536" height="1024"/></svg></a><figcaption>{{ s.name }} shown with its surrounding State borders and State seat, {{ s.capital }}. <a href="republic-at-a-glance.html#{{ s.name | lower }}">Open the full labeled map and directory</a>.</figcaption></figure><section class="status-panel"><h2>State Position</h2><p>{{ s.summary }}</p><p><a href="republic-at-a-glance.html#{{ s.name | lower }}">Locate {{ s.name }} in the Republic →</a></p></section><div class="mechanism-strip"><a href="annotated.html#s15-1">State powers</a><a href="annotated.html#s3-2">Assembly representation</a><a href="annotated.html#s15-2">Statehood Audit</a></div>
+  </dl><figure class="state-map-crop"><a href="republic-at-a-glance.html#{{ s.name | lower }}" aria-label="Open {{ s.name }} on the full labeled map"><svg class="state-context-map" data-state="{{ s.name }}"{% if s.capital %} data-capital="{{ s.capital }}" data-capital-x="{{ s.capitalX }}" data-capital-y="{{ s.capitalY }}"{% endif %} viewBox="{{ s.left * 15.36 - 260 }} {{ s.top * 10.24 - 160 }} 520 320" role="img" aria-label="{{ s.name }} with State borders and nearby jurisdictions{% if s.capital %}, including the State seat {{ s.capital }}{% endif %}"><image href="{{ geography.baseImage }}" width="1536" height="1024"/></svg></a><figcaption>{{ s.name }} shown with its surrounding State borders{% if s.capital %} and State seat, {{ s.capital }}{% endif %}. <a href="republic-at-a-glance.html#{{ s.name | lower }}">Open the full labeled map and directory</a>.</figcaption></figure><section class="status-panel"><h2>State Position</h2><p>{{ s.summary }}</p><p><a href="republic-at-a-glance.html#{{ s.name | lower }}">Locate {{ s.name }} in the Republic →</a></p></section><div class="mechanism-strip"><a href="annotated.html#s15-1">State powers</a><a href="annotated.html#s3-2">Assembly representation</a><a href="annotated.html#s15-2">Statehood Audit</a></div>
   {% set relatedRailId = stateSlug ~ '-related' %}
   {% set relatedRailEyebrow = 'From this State' %}
   {% set relatedRailTitle = 'Explore ' ~ stateName %}
@@ -64,9 +64,13 @@
     { kicker: 'Primary text', title: stateName ~ ' State Constitution', url: stateConstitutionPage or ('State%20Constitutions/' ~ stateSlug ~ '-state-constitution.md'), text: 'Read the State’s own constitutional text and institutional design.', cta: 'Read the Constitution' },
     { kicker: 'Geography', title: 'Locate ' ~ stateName ~ ' in the Republic', url: 'republic-at-a-glance.html#' ~ stateSlug, text: 'Open the labeled political map and jurisdiction directory.', cta: 'Open the map' },
     { kicker: 'Public record', title: 'What is happening in ' ~ stateName, url: 'torenthia-record.html?place=' ~ stateName, text: 'Browse published NRS records, reporting, court material, and other entries tied to this State.', cta: 'Browse the record' },
-    { kicker: 'Federal relationship', title: 'State powers and audit', url: 'annotated.html#s15-2', text: 'Follow the constitutional framework governing State status, audits, and remediation.', cta: 'Read §15.2' },
-    { kicker: 'Identity', title: 'Flag of ' ~ stateName, url: stateFlag, image: stateFlag, imageAlt: stateFlagAlt, text: 'View the State flag at full size.', cta: 'View flag' }
+    { kicker: 'Federal relationship', title: 'State powers and audit', url: 'annotated.html#s15-2', text: 'Follow the constitutional framework governing State status, audits, and remediation.', cta: 'Read §15.2' }
   ] %}
+  {% if stateFlag %}
+    {% set relatedItems = relatedItems.concat([
+      { kicker: 'Identity', title: 'Flag of ' ~ stateName, url: stateFlag, image: stateFlag, imageAlt: stateFlagAlt, text: 'View the State flag at full size.', cta: 'View flag' }
+    ]) %}
+  {% endif %}
   {% include "related-rail.njk" %}
   {% endif %}{% endfor %}
   {{ content | safe }}
@@ -124,8 +128,9 @@
   }
   document.querySelectorAll('.state-context-map').forEach(svg=>{
     const state=svg.dataset.state.toUpperCase();
-    const capital=svg.dataset.capital;
-    const cx=Number(svg.dataset.capitalX), cy=Number(svg.dataset.capitalY);
+    const capital=svg.dataset.capital || '';
+    const cx=svg.dataset.capitalX ? Number(svg.dataset.capitalX) : null;
+    const cy=svg.dataset.capitalY ? Number(svg.dataset.capitalY) : null;
     const vb=svg.viewBox.baseVal;
     const inView=(x,y,pad=0)=>x>=vb.x-pad&&x<=vb.x+vb.width+pad&&y>=vb.y-pad&&y<=vb.y+vb.height+pad;
 
@@ -143,12 +148,14 @@
       if(inView(x,y,35)) addText(svg,name,x,y+7,'ctx-label ctx-label-water');
     });
 
-    const dot=document.createElementNS(NS,'circle');
-    dot.setAttribute('cx',cx); dot.setAttribute('cy',cy); dot.setAttribute('r',9);
-    dot.setAttribute('class','ctx-city-dot'); svg.appendChild(dot);
-    // Keep the city caption below its marker, clear of the nearby State name.
-    const label=addText(svg,capital,cx+15,cy+32,'ctx-city-label');
-    label.setAttribute('text-anchor','start');
+    if(capital && Number.isFinite(cx) && Number.isFinite(cy)){
+      const dot=document.createElementNS(NS,'circle');
+      dot.setAttribute('cx',cx); dot.setAttribute('cy',cy); dot.setAttribute('r',9);
+      dot.setAttribute('class','ctx-city-dot'); svg.appendChild(dot);
+      // Keep the city caption below its marker, clear of the nearby State name.
+      const label=addText(svg,capital,cx+15,cy+32,'ctx-city-label');
+      label.setAttribute('text-anchor','start');
+    }
   });
 })();
 </script>
