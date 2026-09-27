@@ -51,7 +51,7 @@ test('duplicate State numbers and IDs are refused across filenames; different St
   assert.match(errors([original,differentId]),/Duplicate testNumber/);
   const differentNumber={...copy,data:{...copy.data,testNumber:2}};
   assert.match(errors([original,differentNumber]),/Duplicate testId/);
-  const other={...record({state:'harren',testId:'harren-test-01',stateProvisions:['1.1']}),inputPath:'state-tests/harren/harren-test-01-river.html'};
+  const other={...record({state:'harren',testId:'harren-test-01',stateProvisions:['1.1'],displayProvision:'1.1'}),inputPath:'state-tests/harren/harren-test-01-river.html'};
   assert.equal(errors([original,other]),'');
 });
 test('paths and filename numbering are strict and cannot silently rename a State test',()=>{
