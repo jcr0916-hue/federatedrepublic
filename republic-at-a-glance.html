@@ -36,7 +36,7 @@
         <div class="map-wrap">
           <div class="map-scale-wrap" id="mapScaleWrap">
             <div class="map-inner" id="mapInner">
-              <img src="region-map-tier2-base.webp" id="baseImg" alt="Federated Republic of Torenthia — Interactive Map">
+              <img src="{{ geography.baseImage }}" id="baseImg" width="1536" height="1024" alt="Federated Republic of Torenthia — Interactive Map">
               <svg id="mapOverlay" style="position:absolute;top:0;left:0" width="1536" height="1024" viewBox="0 0 1536 1024" aria-hidden="true"></svg>
 
               {% for s in statepages %}<a class="state-map-link" href="{{ s.url }}" style="left:{{ s.left }}%;top:{{ s.top }}%" aria-label="Explore {{ s.name }}">{{ s.name }}</a>{% endfor %}
