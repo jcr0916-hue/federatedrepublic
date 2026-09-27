@@ -35,7 +35,7 @@ test('State constitutional body renderer preserves paragraphs and lists without 
 
 
 test('published State profiles have formatted Constitution entry pages',()=>{
-  for(const id of ['harren','varek','norvane','kelvant']){
+  for(const id of ['harren','varek','norvane','kelvant','rhovane','corindal']){
     const page='state-constitution-'+id+'.html';
     const profile='torenthia-state-'+id+'.html';
     assert.ok(fs.existsSync(page),page);
