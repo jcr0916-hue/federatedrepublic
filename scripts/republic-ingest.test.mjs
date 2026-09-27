@@ -116,9 +116,11 @@ test('executable front matter is rejected without execution',t=>{
   const p=f.plan();assert.match(p.items[0].errors.join(),/plain YAML/);assert.doesNotMatch(p.items[0].errors.join(),/EXECUTED/);
 });
 test('post-import command selection uses native sync before build and narrow validators',t=>{
-  const f=fixture(t);fs.writeFileSync(path.join(f.root,'package.json'),JSON.stringify({scripts:{'check:world-meta':'x','check:world-publish':'x','check:discovery':'x'}}));
-  const c=checkCommands(f.root,['constitution_data.json','torenthia-news-001.html']).map(x=>x.flat().join(' '));
-  assert.equal(c[0],'npm run sync');assert.ok(c.indexOf('npm run build')>c.indexOf('npm run check:world-meta'));assert.ok(c.includes('npm run check:discovery'));
+  const f=fixture(t);fs.writeFileSync(path.join(f.root,'package.json'),JSON.stringify({scripts:{'check:world-meta':'x','check:world-publish':'x','check:discovery':'x','check:scenarios':'x'}}));
+  const c=checkCommands(f.root,['constitution_data.json']).map(x=>x.flat().join(' '));
+  assert.deepEqual(c,['npm run sync','python3 scripts/check-consistency.py','python3 scripts/check-constitutional-site.py','npm run check:world-meta','npm run check:world-publish','npm run build','npm run check:discovery','npm run check:scenarios']);
+  const state=checkCommands(f.root,['state-tests/varek/varek-test-01-flood.html']).map(x=>x.flat().join(' '));
+  assert.deepEqual(state,['npm run check:state-tests','npm run check:world-meta','npm run check:world-publish','npm run build','npm run check:discovery']);
 });
 
 test('asset references use flattened public URLs rather than source paths',t=>{
@@ -185,4 +187,148 @@ test('NRS ingest needs no narrative sequence; duplicate NRS references are block
  assert.deepEqual([tree(f.root),tree(f.inbox)],before);
  f.put('torenthia-nrs-002.html',nrs(2,'NRS-Y13-0706'));
  assert.match(f.plan().errors.join(),/nrsId/);
+});
+
+// New content families exercise the same preview/apply/archive boundary.
+function stateFixture(t) {
+  const f=fixture(t);
+  fs.copyFileSync('State Constitutions/varek-state-constitution.md',path.join(f.root,'State Constitutions/varek-state-constitution.md'));
+  const source=fs.readFileSync('state-tests/varek/varek-test-01-the-72-hour-flood.html','utf8');
+  const header=source.slice(0,source.indexOf('\n---\n',4)+5);
+  return {...f,article:()=>header+'<p>Finished historical account.</p>\n',name:'varek-test-01-the-72-hour-flood.html'};
+}
+test('State test routes from flat or canonical nested path; preview creates no directories',t=>{
+  const f=stateFixture(t),dest='state-tests/varek/'+f.name;
+  for(const source of [f.name,dest]) assert.deepEqual(classify(source,f.root),{kind:'state-test',destination:dest});
+  f.put(dest,f.article());const before=[tree(f.root),tree(f.inbox)],p=f.plan();
+  assert.deepEqual([tree(f.root),tree(f.inbox)],before);
+  assert.equal(p.items[0].errors.length,0);assert.equal(p.errors.length,0);
+  assert.equal(fs.existsSync(path.join(f.root,'state-tests')),false);
+});
+test('new State-test imports validate before archiving; existing files never overwrite',t=>{
+  const f=stateFixture(t);f.put(f.name,f.article());
+  const result=applyIngest(f.plan(),{archive:true,runChecks:files=>{
+    assert.deepEqual(files,['state-tests/varek/'+f.name]);
+    assert.equal(fs.readFileSync(path.join(f.root,files[0]),'utf8'),f.article());
+    assert.ok(fs.existsSync(path.join(f.inbox,f.name)));return pass();
+  }});
+  assert.equal(result.archived.length,1);
+  f.put(f.name,f.article().replace('Finished','Changed'));
+  const before=tree(f.root),p=f.plan();assert.match(p.items[0].errors.join(),/collision/);
+  assert.deepEqual(applyIngest(p,{runChecks:pass}).applied,[]);assert.deepEqual(tree(f.root),before);
+});
+test('State-test bad metadata and broken relative references are held during preview',t=>{
+  const f=stateFixture(t);
+  for(const text of [f.article().replace('state: varek','state: unknown'),f.article().replace('"3.5"','"99.1"'),f.article().replace('testNumber: 1','testNumber: 2'),f.article().replace('"The 72-Hour Flood"','" "'),f.article().replace('"6.09"','"6.13"'),f.article().replace('stateTest: true','stateTest: false'),f.article().replace('Finished','TODO'),f.article()+'<img src="missing.png">',f.article().replace('stateTest: true','draft: true\nstateTest: true')]) {
+    f.put(f.name,text);const p=f.plan();assert.ok(p.errors.length||p.items[0].errors.length,text);
+    assert.deepEqual(applyIngest(p,{runChecks:pass}).applied,[]);
+  }
+});
+test('State tests refuse duplicate IDs/numbers in inbox or repository, including a different slug',t=>{
+  const f=stateFixture(t);f.put(f.name,f.article());f.put('varek-test-01-another.html',f.article());
+  let p=f.plan();assert.match(p.errors.join(),/Duplicate testId/);assert.match(p.errors.join(),/Duplicate testNumber/);
+  fs.rmSync(path.join(f.inbox,'varek-test-01-another.html'));
+  fs.mkdirSync(path.join(f.root,'state-tests/varek'),{recursive:true});
+  fs.writeFileSync(path.join(f.root,'state-tests/varek/varek-test-01-another.html'),f.article());
+  p=f.plan();assert.match(p.errors.join(),/Duplicate testId/);assert.deepEqual(applyIngest(p,{runChecks:pass}).applied,[]);
+});
+test('State tests recheck changed provision sources and newly introduced duplicates before apply',t=>{
+  const f=stateFixture(t);f.put(f.name,f.article());const p=f.plan();
+  fs.writeFileSync(path.join(f.root,'State Constitutions/varek-state-constitution.md'),'# No matching provisions');
+  assert.throws(()=>applyIngest(p,{runChecks:pass}),/State tests changed since preview/);
+});
+test('nested State-test destinations refuse symlink traversal and failed checks preserve inbox sources',t=>{
+  const f=stateFixture(t);f.put(f.name,f.article());
+  fs.mkdirSync(path.join(f.root,'state-tests'));fs.symlinkSync(f.inbox,path.join(f.root,'state-tests/varek'));
+  assert.match(f.plan().items[0].errors.join(),/Symlink/);
+  fs.unlinkSync(path.join(f.root,'state-tests/varek'));
+  const r=applyIngest(f.plan(),{archive:true,runChecks:()=>[{command:'State discovery',ok:false}]});
+  assert.equal(r.archived.length,0);assert.ok(fs.existsSync(path.join(f.inbox,f.name)));assert.match(r.errors.join(),/NOT ready/);
+});
+
+function constitutionFixture(t) {
+  const f=fixture(t);
+  const files=['constitution_data.json','docs/constitution-current.md','docs/constitutional-quickref.md','annotated.html','search-index.js','scripts/build-constitution-md.py','scripts/build-quickref.py','scripts/build-search-index.py','scripts/sync-annotated.py','scripts/check-consistency.py','scripts/check-constitutional-site.py'];
+  for(const file of files) {const dest=path.join(f.root,file);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(file,dest);}
+  const native=JSON.parse(fs.readFileSync('package.json','utf8')).scripts;
+  fs.writeFileSync(path.join(f.root,'package.json'),JSON.stringify({scripts:{sync:native.sync,build:'node -e "process.exit(0)"'}}));
+  const incoming=JSON.parse(fs.readFileSync(path.join(f.root,'constitution_data.json'),'utf8'));
+  incoming[1].provisions[0].text+=' Fixture-only amendment for an isolated test.';
+  f.put('constitution_data.json',JSON.stringify(incoming,null,2)+'\n');
+  return {...f,plan:()=>planIngest({root:f.root,inbox:f.inbox,updateConstitution:true,now:new Date('2026-09-26T12:00:00Z')})};
+}
+test('Federal update is explicit, immutable in preview, compares JSON, and proposes an external dated snapshot',t=>{
+  const f=constitutionFixture(t),before=[tree(f.root),tree(f.inbox)];
+  assert.ok(planIngest({root:f.root,inbox:f.inbox}).items[0].errors.length);
+  const p=f.plan();assert.equal(p.items[0].errors.length,0);assert.equal(p.items[0].action,'update-constitution');
+  assert.match(p.items[0].update.snapshot,/Federated-Republic-Archive\/constitution\/Constitution-260926\.md$/);
+  assert.deepEqual([tree(f.root),tree(f.inbox)],before);
+  assert.ok(!fs.existsSync(path.dirname(p.items[0].update.snapshot)));
+  f.put('constitution_data.json',JSON.stringify(JSON.parse(fs.readFileSync(path.join(f.root,'constitution_data.json'),'utf8'))));
+  const same=f.plan();assert.equal(same.items[0].action,'unchanged');
+  assert.deepEqual(applyIngest(same,{archive:true,runChecks:()=>assert.fail('No checks for unchanged source')}).applied,[]);
+  assert.ok(fs.existsSync(path.join(f.inbox,'constitution_data.json')));
+});
+test('Federal update preserves exact prior Markdown before replacement, then runs real sync and constitutional checks',t=>{
+  const f=constitutionFixture(t),old=fs.readFileSync(path.join(f.root,'docs/constitution-current.md'));
+  const lines=[],commands=[];
+  const result=runIngest(['--update-constitution','--apply','--archive'],{root:f.root,inbox:f.inbox,log:s=>lines.push(s),runCommand:(cmd,args,root)=>{
+    const snapshotDir=path.join(path.dirname(f.inbox),'Federated-Republic-Archive/constitution');
+    assert.ok(fs.readdirSync(snapshotDir).some(name=>fs.readFileSync(path.join(snapshotDir,name)).equals(old)));
+    commands.push([cmd,...args].join(' '));return spawnSync(cmd,args,{cwd:root,encoding:'utf8'});
+  }});
+  assert.equal(result,0,lines.join('\n'));
+  assert.deepEqual(commands,['npm run sync','python3 scripts/check-consistency.py','python3 scripts/check-constitutional-site.py','npm run build']);
+  assert.match(fs.readFileSync(path.join(f.root,'docs/constitution-current.md'),'utf8'),/Fixture-only amendment/);
+  assert.ok(!fs.existsSync(path.join(f.inbox,'constitution_data.json')));
+  assert.ok(!fs.existsSync(path.join(f.root,'docs/archive')));
+  assert.ok(lines.some(line=>line.includes('Preserved previous Constitution Markdown')));
+});
+test('same-day Federal snapshots are exclusive and get collision-safe names',t=>{
+  const f=constitutionFixture(t),first=f.plan().items[0].update.snapshot;
+  fs.mkdirSync(path.dirname(first),{recursive:true});fs.writeFileSync(first,'Previously saved history');
+  const p=f.plan();assert.notEqual(p.items[0].update.snapshot,first);assert.match(p.items[0].update.snapshot,/Constitution-260926-01\.md$/);
+  const r=applyIngest(p,{runChecks:pass});assert.equal(r.preserved.length,1);
+  assert.equal(fs.readFileSync(first,'utf8'),'Previously saved history');
+});
+test('explicit Federal updates still hold draft/review flags and placeholder content',t=>{
+  const f=constitutionFixture(t),incoming=fs.readFileSync(path.join(f.inbox,'constitution_data.json'),'utf8');
+  for(const key of ['draft','review','needsReview','ingestReview']) {
+    const data=JSON.parse(incoming);data[1].provisions[0][key]=true;
+    f.put('constitution_data.json',JSON.stringify(data));assert.match(f.plan().items[0].errors.join(),/human review/);
+  }
+  f.put('constitution_data.json',incoming.replace('Fixture-only amendment','placeholder'));
+  assert.match(f.plan().items[0].errors.join(),/placeholder/);
+});
+test('Federal update refuses stale Markdown, malformed JSON structures, mixed batches and snapshot symlinks',t=>{
+  const f=constitutionFixture(t);const old=fs.readFileSync(path.join(f.root,'docs/constitution-current.md'));
+  fs.writeFileSync(path.join(f.root,'docs/constitution-current.md'),'Stale text');assert.match(f.plan().items[0].errors.join(),/out of sync/);
+  fs.writeFileSync(path.join(f.root,'docs/constitution-current.md'),old);
+  f.put('notes.txt','Keep');assert.match(f.plan().errors.join(),/only constitution_data/);fs.rmSync(path.join(f.inbox,'notes.txt'));
+  const dest=path.dirname(f.plan().items[0].update.snapshot);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.symlinkSync(f.root,dest);
+  assert.match(f.plan().items[0].errors.join(),/Symlink/);fs.unlinkSync(dest);
+  f.put('constitution_data.json','{"heading":"incomplete"}');assert.match(f.plan().items[0].errors.join(),/article array/);
+});
+test('Federal update rechecks canonical, generated and incoming bytes plus snapshot collisions before replacing anything',t=>{
+  for(const target of ['constitution_data.json','docs/constitution-current.md','inbox','snapshot']) {
+    const f=constitutionFixture(t),p=f.plan(),old=fs.readFileSync(path.join(f.root,'constitution_data.json'));
+    if(target==='inbox') f.put('constitution_data.json','[]');
+    else if(target==='snapshot') {fs.mkdirSync(path.dirname(p.items[0].update.snapshot),{recursive:true});fs.writeFileSync(p.items[0].update.snapshot,'Earlier save');}
+    else fs.appendFileSync(path.join(f.root,target),'\n');
+    assert.throws(()=>applyIngest(p,{runChecks:pass}),/changed|appeared/i);
+    if(target!=='constitution_data.json') assert.ok(fs.readFileSync(path.join(f.root,'constitution_data.json')).equals(old));
+  }
+});
+test('failed Federal validation leaves incoming source and previous Markdown intact and reports not ready',t=>{
+  const f=constitutionFixture(t),old=fs.readFileSync(path.join(f.root,'docs/constitution-current.md')),lines=[],commands=[];
+  const code=runIngest(['--update-constitution','--apply','--archive'],{root:f.root,inbox:f.inbox,log:s=>lines.push(s),runCommand:(cmd,args,root)=>{
+    commands.push([cmd,...args].join(' '));
+    if(cmd==='python3') return {status:1};
+    return spawnSync(cmd,args,{cwd:root,encoding:'utf8'});
+  }});
+  assert.equal(code,1);assert.match(lines.join('\n'),/FAIL python3 scripts\/check-consistency.py/);assert.match(lines.join('\n'),/NOT ready to commit/);
+  assert.ok(fs.existsSync(path.join(f.inbox,'constitution_data.json')));
+  const dir=path.join(path.dirname(f.inbox),'Federated-Republic-Archive/constitution');
+  assert.ok(fs.readdirSync(dir).some(name=>fs.readFileSync(path.join(dir,name)).equals(old)));
+  assert.deepEqual(commands,['npm run sync','python3 scripts/check-consistency.py']);
 });

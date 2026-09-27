@@ -3,10 +3,36 @@
 import fs from "node:fs";
 import path from "node:path";
 import { collect } from "./scripts/public-assets.mjs";
+import {loadStateTestIndex, stateTestCitations} from './lib/state-tests.mjs';
 
 import {validateWorld, chronology, relatedWorld, dossierRecords, validateDossiers, worldNewest, narrativeWorld, nrsRecords, streamRecords} from './lib/world.mjs';
 
 export default function (eleventyConfig) {
+
+  let stateIndex;
+  const stateTests = () => stateIndex ||= loadStateTestIndex();
+  eleventyConfig.on('eleventy.before', () => { stateIndex = undefined; });
+  // Fictional date remains the original Year.MM string in data. Eleventy's
+  // page.date is only filesystem metadata, never a canonical event date.
+  eleventyConfig.addDateParsing(function() {
+    if(this.page.inputPath.replace(/^\.\//,'').startsWith('state-tests/')) return 'created';
+  });
+  eleventyConfig.addCollection('stateTests', api => {
+    const pieces=api.getAll().filter(p=>p.data.stateTest);
+    for(const p of pieces) if(stateTests().byId[p.data.testId]?.url !== '/'+p.inputPath.replace(/^\.\//,''))
+      throw Error(`State test outside its validated source path: ${p.inputPath}`);
+    return pieces.sort((a,b)=>a.data.state.localeCompare(b.data.state)||a.data.testNumber-b.data.testNumber);
+  });
+  eleventyConfig.addTransform('stateTestCitations', function(content) {
+    const file=(this.page.inputPath||'').replace(/^\.\//,'');
+    if(!file.startsWith('state-tests/')) return content;
+    const entry=stateTests().entries.find(e=>e.url==='/'+file);
+    if(!entry) throw Error(`Unvalidated State test: ${file}`);
+    const links=stateTestCitations(entry);
+    if(content.includes('</main>')) return content.replace('</main>',links+'</main>');
+    if(content.includes('</body>')) return content.replace('</body>',links+'</body>');
+    return content+links;
+  });
 
   // ── THE WORLD COLLECTION ──────────────────────────────────────────────────
   // Every world-content page declares itself in front matter (worldKind, worldDate,

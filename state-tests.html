@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Constitutional History — The Federated Republic</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  {% include "nav.njk" %}
+  <main id="main-content" style="max-width:58rem;margin:7rem auto 3rem;padding:0 1.25rem">
+    <h1>State Constitutional History</h1>
+    <p>Historical tests show State constitutional provisions operating in Torenthia's published past. Dates identify fictional years and months.</p>
+    {% if not stateTests.entries.length %}<p>No State historical tests have been published.</p>{% endif %}
+    {% for test in stateTests.entries %}
+    <article id="{{ test.testId | escape }}">
+      <h2><a href="{{ test.url | escape }}">{{ test.title | escape }}</a></h2>
+      <p>{{ test.state | capitalize }} · Test {{ test.testNumber }} · {{ test.date | escape }}</p>
+      <ul>{% for provision in test.provisions %}<li><a href="{{ provision.url | escape }}">§{{ provision.number | escape }} — {{ provision.title | escape }}</a></li>{% endfor %}</ul>
+    </article>
+    {% endfor %}
+    {% for state in stateTests.states %}
+    <section aria-labelledby="{{ state.id }}-constitution">
+      <h2 id="{{ state.id }}-constitution">{{ state.id | capitalize }} constitutional provisions</h2>
+      <p>Definitions below are drawn from the <a href="{{ state.sourceURL | escape }}">current State Constitution source</a>.</p>
+      {% for provision in state.provisions %}
+      <section id="{{ provision.anchor | escape }}">
+        <h3>§{{ provision.number | escape }} — {{ provision.title | escape }}</h3>
+        <p style="white-space:pre-line">{{ provision.text | escape }}</p>
+        <ul>{% for test in provision.tests %}<li>Historical test: <a href="{{ test.url | escape }}">{{ test.title | escape }}</a> ({{ test.date | escape }})</li>{% endfor %}</ul>
+      </section>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </main>
+  {% include "footer.njk" %}
+  <script src="/nav.js"></script>
+</body>
+</html>

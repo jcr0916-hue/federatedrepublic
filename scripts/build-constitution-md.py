@@ -31,8 +31,8 @@ def split_paras(text):
     parts = [clean(p) for p in text.split('\n')]
     return [p for p in parts if p]
 
-def main(src, dst):
-    d = json.load(open(src, encoding='utf-8'))
+def render(d):
+    """Render without filesystem writes, also used by ingest snapshot preflight."""
 
     articles = [a for a in d if not a.get('preamble')]
     preamble = next((a for a in d if a.get('preamble')), None)
@@ -83,7 +83,13 @@ def main(src, dst):
         L.pop()
     L.append("")
 
-    out = '\n'.join(L)
+    return '\n'.join(L)
+
+def main(src, dst):
+    d = json.load(open(src, encoding='utf-8'))
+    out = render(d)
+    articles = [a for a in d if not a.get('preamble')]
+    total_provisions = sum(len(a.get('provisions', [])) for a in articles)
     open(dst, 'w', encoding='utf-8').write(out)
     print(f"wrote {dst}: {len(articles)} articles, {total_provisions} provisions, "
           f"{len(out):,} chars")

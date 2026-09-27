@@ -2,7 +2,7 @@
   "name": "federatedrepublic",
   "private": true,
   "scripts": {
-    "build": "node scripts/check-world-publishing.mjs && node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy",
+    "build": "npm run check:state-tests && node scripts/check-world-publishing.mjs && node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy",
     "sync": "python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py",
     "check:assets": "node scripts/public-assets.mjs",
     "test:assets": "node --test scripts/public-assets.test.mjs",
@@ -19,12 +19,14 @@
     "test:world-authoring": "node --test scripts/world-authoring.test.mjs",
     "check:world-publish": "node scripts/check-world-publishing.mjs",
     "test:world-publish": "node --test scripts/world-publishing.test.mjs",
-    "world:publish-check": "npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:assets && npm run test:crossroads && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py",
+    "world:publish-check": "npm run test:state-tests && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:assets && npm run test:crossroads && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py",
     "republic:ingest": "node scripts/republic-ingest.mjs",
     "test:ingest": "node --test scripts/republic-ingest.test.mjs",
     "test:chronology": "node --test scripts/world-chronology.test.mjs",
     "world:status": "node scripts/world-status.mjs",
-    "test:rail": "node --test scripts/related-rail.test.mjs"
+    "test:rail": "node --test scripts/related-rail.test.mjs",
+    "check:state-tests": "node scripts/check-state-tests.mjs",
+    "test:state-tests": "node --test scripts/state-tests.test.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",

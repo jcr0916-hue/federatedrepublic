@@ -21,7 +21,8 @@ No mode commits, pushes or deploys. Unknown flags and `--archive` alone fail.
 | --- | --- |
 | `torenthia-news-NNN.html`, `torenthia-nrs-NNN.html`, `torenthia-sc-NNN.html`, `torenthia-dispatch-slug.html` | Same filename at the site root; matching `worldKind` and `worldId` required |
 | `WORLD-STORY-STATUS.md`, `WORLD-STORY-BIBLE.md` (flat or under `docs/`) | `docs/`; human-reviewed manual merge only |
-| `constitution_data.json` | Root canonical data file; human-reviewed manual merge only |
+| `constitution_data.json` | Manual by default; explicit `--update-constitution` preserves prior Markdown externally before replacement |
+| `<state>-test-NN-<slug>.html` (flat or under `state-tests/<state>/`) | `state-tests/<state>/`; validated new canonical historical test only |
 | Established `name-state-constitution.md` (flat or under `State Constitutions/`) | Existing `State Constitutions/`; human-reviewed manual merge only |
 | Image under inbox `images/` or `logos/` | Same existing canonical folder; no nested directories or inferred logo/map placement |
 | Flat images, other filenames/folders, new State names | Report only; destination is ambiguous |
@@ -34,10 +35,10 @@ not `images/new-map.webp`, in article HTML and `worldImage`. Logos retain their
 This is an explicit destination choice; the helper does not infer geography or
 caption/canon facts. It does not transcode or visually certify images.
 
-There are no automatic renames and **no overwrites, including identical files**.
+There are no automatic renames. Ordinary imports **never overwrite, including identical files**.
 Browser download suffixes are not stripped. Destination collisions (including flattened public asset URL collisions), symlinks,
 nonregular files and ambiguous paths require review. Existing canonical source
-files consequently remain manual merges; ingest is not a replacement editor.
+files remain manual merges except for the explicit Federal update below.
 The older `scripts/place-downloads.sh` is a separate legacy overwrite helper and
 is never invoked by this workflow. Use these npm commands for safe ingest.
 
@@ -77,11 +78,10 @@ Review affected Story Status and dossier summaries manually when warned.
 Apply rechecks source bytes and destination existence, then creates files
 exclusively. After any repository import it runs available `check:world-meta`,
 `check:world-publish`, and `build`; HTML imports also run `check:discovery`.
-The build includes the native public asset validation. The command selector runs
-native `sync` before build plus constitutional consistency/site checks if
-constitutional sources are imported; current conservative routing holds those
-sources for manual merge, so run `npm run sync` and the constitutional checks
-yourself after such a merge. No constitutional edits are authorized implicitly.
+The build includes State-test and native public asset validation. State-test
+imports also run `check:state-tests` before build. Checks stop at the first failure.
+Federal updates run the additional sequence below. State Constitution changes
+remain manual; their version preservation is optional/manual for now.
 
 Only a successful set of post-import checks permits archive. Successfully copied
 sources move to the sibling `~/Downloads/Federated-Republic-Archive/<UTC-time>/`,
@@ -97,7 +97,67 @@ failed checks produce exit code 1, even if other imports succeeded. A successful
 empty preview exits 0. Inspect `git status` and `git diff` before committing.
 Do not run concurrent ingest/editor processes against the same inbox/repository.
 
-Focused regression tests: `npm run test:ingest`. Tests use temporary repositories
+## Explicit Federal Constitution updates
+
+Put only the intentionally reviewed `constitution_data.json` into the inbox.
+This opt-in path does not decide or rewrite constitutional substance.
+
+```sh
+npm run republic:ingest -- --update-constitution
+npm run republic:ingest -- --update-constitution --apply
+# Optional: remove the incoming source from the inbox only after every check passes.
+npm run republic:ingest -- --update-constitution --apply --archive
+```
+
+Choose the apply command with or without `--archive`; they are alternatives.
+Preview compares parsed JSON, validates its structure, and reports the proposed
+snapshot path. Equivalent JSON is a no-op, including whitespace-only changes;
+it creates no snapshot and leaves the incoming source alone. Mixed inbox batches
+are refused. Stale generated Markdown must be reconciled before an update.
+
+Before touching the canonical JSON, apply copies the exact current
+`docs/constitution-current.md` bytes to:
+
+```text
+~/Downloads/Federated-Republic-Archive/constitution/Constitution-YYMMDD.md
+```
+
+Dates use UTC. Same-day collisions use `-01`, `-02`, and so on; existing snapshots
+are never overwritten. The snapshot must be written and verified successfully
+before replacement. Only Markdown is preserved, not the old JSON. Snapshot paths
+must be outside the repository and inbox, with no symlink traversal. Tests that
+override the inbox use its sibling `Federated-Republic-Archive/constitution/`.
+
+Apply rechecks the incoming source, canonical JSON and generated Markdown, then
+preserves the snapshot and replaces the JSON. It runs `npm run sync`, both
+`scripts/check-consistency.py` and `scripts/check-constitutional-site.py`, the
+normal World checks/build, and configured discovery/scenario checks, in that order.
+If a check fails, it reports the failure and leaves the incoming source in the
+inbox even with `--archive`. The prior Markdown snapshot remains safe. The new
+JSON and any regenerated files remain for inspection; there is no automatic rollback.
+Resolve the failure and rerun validation manually before committing. Rerunning
+ingest with now-identical JSON is a no-op, not proof that validation succeeded.
+
+Ingest never creates `docs/archive/`, commits, creates branches, or writes to
+`archive/legacy-project-material`. A later housekeeping operation may preserve
+local snapshots in cold storage without reintroducing them on `main`.
+
+## State historical tests
+
+Use the schema and authoring rules in [State-test publishing](../STATE-TEST-PUBLISHING.md).
+Only established States and real provision definitions in their current State
+Constitution are accepted. IDs and test numbers must be unique within their
+required naming convention. Draft/review flags, unfinished text, routing overrides
+and World/NRS sequence metadata are refused. Local references receive the shared
+preview checks; built links and anchors are checked after import.
+
+New validated tests import automatically. Existing test files, even identical
+ones, remain manual-review replacements. Invalid State-test batches are held
+together; they do not allocate a World or NRS sequence. Ingest never edits the
+Story Bible, Story Status, or State constitutional meaning.
+
+Focused regression tests: `npm run test:ingest` and `npm run test:state-tests`.
+Tests use temporary repositories
 and inboxes; they do not modify published content or your Downloads folder.
 
 

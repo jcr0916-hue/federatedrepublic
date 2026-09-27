@@ -3,7 +3,7 @@
 Start here for AI sessions and contributor work on the Federated Republic.
 Only files on `main` are current project authority. Other branches are proposals
 or historical snapshots; a filename containing “current” does not confer authority.
-Use the roles below: tests and hypotheticals on main do not establish canon.
+Use the roles below: automated test fixtures and hypotheticals do not establish canon.
 
 ## Constitution
 
@@ -21,6 +21,8 @@ Use the roles below: tests and hypotheticals on main do not establish canon.
 - Current operational state: [`docs/WORLD-STORY-STATUS.md`](docs/WORLD-STORY-STATUS.md).
 - Published World records and their front matter establish published events.
   Historical News, NRS, Court opinions, and Dispatches remain authoritative history.
+- Published `state-tests/` records marked `canonical-history` establish State history;
+  their cited provisions remain governed by the current State Constitution source.
 - The Constitution controls constitutional mechanisms; the Bible supplies continuity.
 - Dossiers and State/Territory pages remain active public references.
 - Chronology: [`_data/worldChronology.json`](_data/worldChronology.json).
@@ -34,6 +36,7 @@ Use the roles below: tests and hypotheticals on main do not establish canon.
 - World publishing: [`docs/WORLD-PUBLISHING.md`](docs/WORLD-PUBLISHING.md).
 - Stream compatibility: [`docs/WORLD-STREAM-MIGRATION.md`](docs/WORLD-STREAM-MIGRATION.md).
 - Conservative import: [`docs/operations/REPUBLIC-INGEST.md`](docs/operations/REPUBLIC-INGEST.md).
+- State historical tests: [`docs/STATE-TEST-PUBLISHING.md`](docs/STATE-TEST-PUBLISHING.md).
 - Scenarios: [`docs/SCENARIO-PUBLISHING.md`](docs/SCENARIO-PUBLISHING.md).
 - Crossroads: [`docs/operations/CROSSROADS.md`](docs/operations/CROSSROADS.md).
 - Assets/deployment: [`docs/ASSET-DEPLOYMENT.md`](docs/ASSET-DEPLOYMENT.md).
@@ -49,3 +52,5 @@ Do not periodically merge main into it or merge it back into main.
 Add material only when it retires; preserve original bytes and provenance first.
 Public historical canon, required fixtures, and compatibility URLs stay on main.
 Git history remains the ultimate backup.
+Federal ingest snapshots live outside the repository in `~/Downloads/Federated-Republic-Archive/constitution/`.
+They preserve prior Markdown, confer no current authority, and require separate cold-storage housekeeping.

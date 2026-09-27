@@ -21,6 +21,7 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 - [Chronology registry](../_data/worldChronology.json) and [clock registry](../_data/worldClocks.json) — current infrastructure.
 - [World publishing](WORLD-PUBLISHING.md) and [stream migration](WORLD-STREAM-MIGRATION.md).
 - [Republic ingest](operations/REPUBLIC-INGEST.md) — conservative import and review workflow.
+- [State historical tests](STATE-TEST-PUBLISHING.md) — canonical State history, provision validation, and discovery.
 - [Scenario publishing](SCENARIO-PUBLISHING.md).
 
 ## Operations and visual references

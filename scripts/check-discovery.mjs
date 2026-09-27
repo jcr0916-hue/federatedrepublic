@@ -4,7 +4,12 @@ import assert from 'node:assert/strict';
 import {parseDocument, DomUtils} from 'htmlparser2';
 import {parse} from 'acorn';
 import {loadScenarios} from '../lib/scenarios.mjs';
-const root='_site',files=fs.readdirSync(root).filter(f=>f.endsWith('.html'));
+import {loadStateTestIndex} from '../lib/state-tests.mjs';
+const root='_site';
+function pages(dir) {
+ return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?pages(path.join(dir,e.name)):e.isFile()&&e.name.endsWith('.html')?[path.relative(root,path.join(dir,e.name))]:[]);
+}
+const files=pages(root);
 const docs=new Map(files.map(f=>[f,parseDocument(fs.readFileSync(path.join(root,f),'utf8'))]));
 const errors=[];
 for(const [file,doc] of docs){
@@ -86,3 +91,19 @@ for(const p of world){
  assert.deepEqual(actual,expected,`${p.data.worldId}: stream navigation`);
 }
 console.log('Verified narrative Latest feeds and stream-specific Previous/Next links.');
+
+const stateIndex=loadStateTestIndex(),stateDiscovery=docs.get('state-tests.html');
+for(const entry of stateIndex.entries) {
+ const doc=docs.get(entry.url.slice(1));
+ assert.ok(doc,`${entry.testId}: built State test`);
+ const rail=DomUtils.findOne(n=>n.attribs?.class==='state-test-citations',doc.children,true);
+ assert.ok(rail,`${entry.testId}: generated State citations`);
+ const links=DomUtils.findAll(n=>n.name==='a',rail.children).map(n=>n.attribs.href);
+ for(const provision of entry.provisions) {
+  assert.ok(links.includes(provision.url));
+  const section=DomUtils.findOne(n=>n.attribs?.id===provision.anchor,stateDiscovery.children,true);
+  assert.ok(section,`${entry.testId}: discoverable State provision ${provision.number}`);
+  assert.ok(DomUtils.findOne(n=>n.name==='a'&&n.attribs.href===entry.url,section.children,true));
+ }
+}
+console.log(`Verified ${stateIndex.entries.length} State historical tests and bidirectional provision links.`);
