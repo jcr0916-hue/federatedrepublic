@@ -89,6 +89,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("State Constitutions/varek-state-constitution.md");
   eleventyConfig.addPassthroughCopy("State Constitutions/norvane-state-constitution.md");
   eleventyConfig.addPassthroughCopy("State Constitutions/kelvant-state-constitution.md");
+  eleventyConfig.addPassthroughCopy("State Constitutions/rhovane-state-constitution.md");
+  eleventyConfig.addPassthroughCopy("State Constitutions/corindal-state-constitution.md");
 
   // Assets Eleventy does not template — copy through untouched.
   // If any of these is missing from _site, every page that uses it 404s.
