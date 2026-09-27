@@ -9,11 +9,12 @@ const capitals = {
   Kelvant: 'Rhondel',
 };
 // Only published profiles belong here. Facts remain in the shared statistics ledger.
-export default ['Harren', 'Varek', 'Norvane', 'Kelvant'].map(name => {
+export default ['Harren', 'Varek', 'Norvane', 'Kelvant', 'Rhovane', 'Corindal'].map(name => {
   const key = name.toLowerCase();
   const [x, y] = labels[name.toUpperCase()];
-  const capital = capitals[name];
-  const [capitalX, capitalY] = mapLabels.cities[capital];
+  const capital = capitals[name] || null;
+  const capitalPoint = capital ? mapLabels.cities[capital] : null;
+  const [capitalX, capitalY] = capitalPoint || [null, null];
   return { ...stats.states.find(s => s.name === name), key, capital, capitalX, capitalY,
     url: `torenthia-state-${key}.html`, left: x / 1536 * 100, top: y / 1024 * 100 };
 });
