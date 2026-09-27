@@ -14,6 +14,7 @@
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 {% include "nav.njk" %}
 {% set constitution = stateConstitutions[stateConstitution] %}
+{% set constitutionHistoricalTests = stateTests.entries | stateTestsFor(stateConstitution) %}
 <main class="state-constitution-page" id="main-content">
   <header class="state-constitution-hero">
     <div>
@@ -23,7 +24,7 @@
       <div class="link-row">
         <a href="{{ stateProfileURL }}">← {{ stateConstitution | capitalize }} profile</a>
         <a href="{{ constitution.source | replace(' ', '%20') }}">Source Markdown</a>
-        <a href="/state-tests.html#{{ stateConstitution }}-constitution">Historical tests</a>
+        {% if constitutionHistoricalTests.length %}<a href="/state-tests.html#{{ stateConstitution }}-constitution">Historical tests</a>{% endif %}
       </div>
     </div>
     {% if stateFlag %}<img class="state-constitution-flag" src="{{ stateFlag }}" alt="{{ stateFlagAlt }}">{% endif %}
