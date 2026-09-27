@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  {% set constitution = stateConstitutions[stateConstitution] %}
+  <title>{{ constitution.title | title }} — The Federated Republic</title>
+  <meta name="description" content="{{ constitution.subtitle }}">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+{% include "nav.njk" %}
+{% set constitution = stateConstitutions[stateConstitution] %}
+<main class="state-constitution-page" id="main-content">
+  <header class="state-constitution-hero">
+    <div>
+      <p class="section-kicker">State Constitution · current text</p>
+      <h1>{{ constitution.title | title }}</h1>
+      <p class="state-constitution-subtitle">{{ constitution.subtitle }}</p>
+      <div class="link-row">
+        <a href="{{ stateProfileURL }}">← {{ stateConstitution | capitalize }} profile</a>
+        <a href="{{ constitution.source | replace(' ', '%20') }}">Source Markdown</a>
+        <a href="/state-tests.html#{{ stateConstitution }}-constitution">Historical tests</a>
+      </div>
+    </div>
+    {% if stateFlag %}<img class="state-constitution-flag" src="{{ stateFlag }}" alt="{{ stateFlagAlt }}">{% endif %}
+  </header>
+
+  <div class="state-constitution-layout">
+    <aside class="state-constitution-toc" aria-label="Articles">
+      <span class="section-kicker">Contents</span>
+      <a href="#{{ stateConstitution }}-preamble">Preamble</a>
+      {% for article in constitution.articles %}
+      <a href="#{{ stateConstitution }}-article-{{ article.number | lower }}">{{ article.number }} · {{ article.title }}</a>
+      {% endfor %}
+    </aside>
+
+    <div class="state-constitution-text">
+      <section class="state-constitution-preamble" id="{{ stateConstitution }}-preamble">
+        <span class="section-kicker">Preamble</span>
+        <div class="state-constitution-body">{{ constitution.preamble | stateConstitutionBody | safe }}</div>
+      </section>
+
+      {% for article in constitution.articles %}
+      <section class="state-constitution-article" id="{{ stateConstitution }}-article-{{ article.number | lower }}">
+        <header class="state-constitution-article-head">
+          <span>Article {{ article.number }}</span>
+          <h2>{{ article.title }}</h2>
+        </header>
+        {% for provision in article.provisions %}
+        <section class="state-constitution-provision" id="{{ stateConstitution }}-{{ provision.number | replace('.', '-') }}">
+          <div class="state-constitution-provision-head">
+            <a class="state-constitution-anchor" href="#{{ stateConstitution }}-{{ provision.number | replace('.', '-') }}" aria-label="Link to §{{ provision.number }}">§{{ provision.number }}</a>
+            <h3>{{ provision.title }}</h3>
+          </div>
+          <div class="state-constitution-body">{{ provision.body | stateConstitutionBody | safe }}</div>
+          {% set provisionTests = stateTests.entries | stateTestsForProvision(stateConstitution, provision.number) %}
+          {% if provisionTests.length %}
+          <aside class="state-tested" aria-label="Historical tests for §{{ provision.number }}">
+            <span class="state-tested-label">Tested in practice</span>
+            {% for test in provisionTests %}
+            <a href="{{ test.url }}"><strong>{{ test.title }}</strong><span>{{ test.date | stateTestDateLabel }} · {{ test.summary }}</span></a>
+            {% endfor %}
+          </aside>
+          {% endif %}
+        </section>
+        {% endfor %}
+      </section>
+      {% endfor %}
+      {% if constitution.adopted %}<p class="state-constitution-adopted">{{ constitution.adopted }}</p>{% endif %}
+    </div>
+  </div>
+</main>
+{% include "footer.njk" %}
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1025,3 +1025,38 @@ h1.qs-title:focus,h2.section-label:focus{outline:none}
   .related-rail-track{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}
   .related-rail-controls{display:none!important}
 }
+
+
+/* Polished State Constitution presentation */
+.state-constitution-page{max-width:1180px;margin:0 auto;padding:96px 28px 72px}
+.state-constitution-hero{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:2rem;align-items:start;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+.state-constitution-hero h1{font:600 clamp(2.6rem,6vw,4.6rem)/1 'Cormorant Garamond',serif;color:var(--navy);margin:.35rem 0 .65rem;max-width:850px}
+.state-constitution-subtitle{font:italic 1.25rem/1.5 'Cormorant Garamond',serif;color:#3d4a63;max-width:760px;margin-bottom:1rem}
+.state-constitution-flag{width:100%;height:auto;display:block;border:1px solid var(--border);box-shadow:0 2px 10px #0002}
+.state-constitution-layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:3rem;align-items:start;margin-top:2rem}
+.state-constitution-toc{position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto;padding-right:.5rem}
+.state-constitution-toc>a{display:block;color:var(--muted);text-decoration:none;font-size:.78rem;line-height:1.4;padding:.38rem .35rem;border-left:2px solid transparent}
+.state-constitution-toc>a:hover,.state-constitution-toc>a:focus-visible{color:var(--navy);border-left-color:var(--gold)}
+.state-constitution-text{min-width:0;max-width:760px}
+.state-constitution-preamble{padding:1.5rem 0 2.5rem}
+.state-constitution-article{margin:0 0 3rem;scroll-margin-top:78px}
+.state-constitution-article-head{border-bottom:2px solid var(--navy);padding-bottom:.65rem;margin-bottom:1.2rem}
+.state-constitution-article-head>span{font:500 .68rem 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
+.state-constitution-article-head h2{font:600 2rem/1.1 'Cormorant Garamond',serif;color:var(--navy);margin:.25rem 0 0}
+.state-constitution-provision{padding:1.25rem 0 1.65rem;border-bottom:1px solid var(--rule);scroll-margin-top:78px}
+.state-constitution-provision-head{display:flex;align-items:baseline;gap:.75rem;margin-bottom:.8rem}
+.state-constitution-anchor{font:500 .72rem 'JetBrains Mono',monospace;color:var(--gold2);text-decoration:none;white-space:nowrap}
+.state-constitution-provision-head h3{font:600 1.45rem/1.2 'Cormorant Garamond',serif;color:var(--navy);margin:0}
+.state-constitution-body p{margin:0 0 .9rem;line-height:1.8}
+.state-constitution-body ul{margin:.2rem 0 1rem 1.25rem;padding-left:1rem}.state-constitution-body li{margin:.25rem 0;line-height:1.7}
+.state-tested{margin:1rem 0 0;padding:1rem 1.1rem;background:var(--cream2);border-left:3px solid var(--gold)}
+.state-tested-label{display:block;font:500 .62rem 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#765817;margin-bottom:.55rem}
+.state-tested>a{display:block;color:var(--navy);text-decoration:none;padding:.35rem 0}.state-tested>a+a{border-top:1px solid var(--border)}
+.state-tested>a strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.05rem}.state-tested>a span{display:block;color:var(--muted);font-size:.82rem;line-height:1.5;margin-top:.1rem}
+.state-constitution-adopted{font:italic 1.1rem 'Cormorant Garamond',serif;color:var(--muted);padding-top:1rem}
+@media(max-width:820px){
+  .state-constitution-page{padding:78px 18px 56px}
+  .state-constitution-hero{grid-template-columns:1fr}.state-constitution-flag{width:150px}
+  .state-constitution-layout{grid-template-columns:1fr;gap:1rem}.state-constitution-toc{position:static;max-height:none;display:flex;gap:.35rem;overflow-x:auto;padding:.75rem 0 1rem;border-bottom:1px solid var(--border)}
+  .state-constitution-toc>.section-kicker{display:none}.state-constitution-toc>a{white-space:nowrap;border-left:0;border-bottom:2px solid transparent;padding:.4rem .55rem}.state-constitution-toc>a:hover,.state-constitution-toc>a:focus-visible{border-left:0;border-bottom-color:var(--gold)}
+}
