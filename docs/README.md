@@ -22,7 +22,6 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 - [World publishing](WORLD-PUBLISHING.md) and [stream migration](WORLD-STREAM-MIGRATION.md).
 - [Republic ingest](operations/REPUBLIC-INGEST.md) — conservative import and review workflow.
 - [Scenario publishing](SCENARIO-PUBLISHING.md).
-- [TypingMind knowledge sources](TYPINGMIND-KB.md) — current-main imports and retrieval tags.
 
 ## Operations and visual references
 

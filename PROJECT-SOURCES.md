@@ -37,7 +37,6 @@ Use the roles below: tests and hypotheticals on main do not establish canon.
 - Scenarios: [`docs/SCENARIO-PUBLISHING.md`](docs/SCENARIO-PUBLISHING.md).
 - Crossroads: [`docs/operations/CROSSROADS.md`](docs/operations/CROSSROADS.md).
 - Assets/deployment: [`docs/ASSET-DEPLOYMENT.md`](docs/ASSET-DEPLOYMENT.md).
-- Knowledge sync: [`docs/TYPINGMIND-KB.md`](docs/TYPINGMIND-KB.md); import main only.
 - Run `npm run world:publish-check` and relevant additional tests before publishing.
 - The documentation index is [`docs/README.md`](docs/README.md).
 
