@@ -16,6 +16,7 @@ state: varek
 testNumber: 1
 testId: varek-test-01
 title: "The 72-Hour Flood"
+summary: "A major flood tests Varek’s temporary emergency power, live judicial review, Assembly continuation, and automatic reversion."
 date: "6.09"
 stateProvisions:
   - "3.5"
@@ -32,7 +33,7 @@ Use the lowercase State slug from an established file in `State Constitutions/`.
 The positive integer number is unique within that State. Pad it to at least two
 digits in both filename and `testId`; use a lowercase hyphenated filename slug.
 The directory, filename, State and number must agree, and `testId` must be unique.
-Titles must be nonblank. Quote dates as fictional `Year.MM`, with a positive year
+Titles and summaries must be nonblank. The summary is the short public description used on State-profile historical-test cards. Quote dates as fictional `Year.MM`, with a positive year
 and a two-digit month from 01 to 12; `6.09` means Year 6, Month 9, not a real date.
 No historical day is inferred. Eleventy's filesystem page date is not canon.
 
@@ -66,5 +67,4 @@ The small public `state-tests.html` index displays cited current provisions and
 links back to their historical tests. Each test receives generated citation links.
 The Varek profile links to Test 01, **The 72-Hour Flood**, published as approved
 canonical history at `state-tests/varek/varek-test-01-the-72-hour-flood.html`.
-Its names and places are intentional historical additions. A polished State
-Constitution presentation can reuse these data without changing the schema.
+Its names and places are intentional historical additions. State profiles automatically present each published test as a compact historical-test card using the title, summary, fictional date, and cited provisions. A polished State Constitution presentation can reuse the same data without changing the schema.
