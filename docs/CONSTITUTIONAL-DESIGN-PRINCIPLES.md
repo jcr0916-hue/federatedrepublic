@@ -70,10 +70,20 @@ constitutional provisions rather than a missing implementation detail.
 **Pattern worth naming — self-defeating delegation.** Where this test meets Graceful Degradation: a
 limit on the Legislature whose only activation is a statute the Legislature must pass. Absent the
 statute the limit does not bite, and the body that would be constrained is the body that must act.
-Live instances found 19.09: §8.4 (public campaign financing "shall" be established by statute, with no
-deadline and no consequence for never acting) and §7.10(4) (gift prohibition keyed to a "de minimis
-threshold defined by statute" that may never exist; partly mitigated by the following sentence, which
-makes official-capacity gifts Republic property regardless of statute).*
+Two live instances found 19.09, resolved differently on 260926:
+
+- **§7.10(4) — resolved.** The gift prohibition was keyed to a "de minimis threshold defined by
+  statute" that might never exist. Fixed with the same statute-primary-plus-floor pattern used at the
+  §2.5/§2.9 tiebreaker gaps: the threshold defaults to zero until a statute sets one. The following
+  sentence already made official-capacity gifts Republic property regardless of statute, so the fix
+  closes the remaining personal-gift gap.
+- **§8.4 — left open, by choice.** Public campaign financing "shall" be established by statute, with
+  no deadline and no consequence for never acting — the same shape as §7.10(4). But §8.4's own text
+  ("the Elections Panel administers the system and publishes annual compliance findings") presumes the
+  statute is already enacted and running, so the gap is theoretical rather than live: nothing is
+  currently un-bitten. No constitutional floor was added; a floor here would mean inventing a fallback
+  financing mechanism or deadline the Constitution doesn't otherwise need. Recorded so it isn't
+  rediscovered as a fresh finding.
 
 ### 5. Actor Test  [CORE + ATTESTED]
 **Canonical form: holder, check, consequence.**

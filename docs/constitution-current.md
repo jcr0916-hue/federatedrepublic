@@ -649,7 +649,7 @@ Elected constitutional officers serve their constitutionally defined terms. No a
 
 (3) Any officer with a direct financial interest in a decision within their authority must recuse themselves; recusal is self-executing. Section 7.11 governs the broader codes of conduct and recusal framework.
 
-(4) Constitutional officers may not accept gifts above a de minimis threshold defined by statute. Any gift received by an officer in their official capacity is property of the Republic and must be disclosed and transferred to the appropriate public custodian or treasury as provided by law, regardless of value.
+(4) Constitutional officers may not accept gifts above a de minimis threshold defined by statute; until such statute is enacted, the threshold is zero. Any gift received by an officer in their official capacity is property of the Republic and must be disclosed and transferred to the appropriate public custodian or treasury as provided by law, regardless of value.
 
 (5) Each Monitor may investigate alleged violations within its mandate and publish findings to the NRS; where findings warrant further action, the Monitor refers the matter to the appropriate authority.
 
