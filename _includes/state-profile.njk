@@ -61,7 +61,7 @@
   {% set relatedRailTitle = 'Explore ' ~ stateName %}
   {% set relatedRailIntro = 'The most useful next destinations are surfaced here before the longer profile continues.' %}
   {% set relatedItems = [
-    { kicker: 'Primary text', title: stateName ~ ' State Constitution', url: 'State%20Constitutions/' ~ stateSlug ~ '-state-constitution.md', text: 'Read the State’s own constitutional text and institutional design.', cta: 'Read the Constitution' },
+    { kicker: 'Primary text', title: stateName ~ ' State Constitution', url: stateConstitutionPage or ('State%20Constitutions/' ~ stateSlug ~ '-state-constitution.md'), text: 'Read the State’s own constitutional text and institutional design.', cta: 'Read the Constitution' },
     { kicker: 'Geography', title: 'Locate ' ~ stateName ~ ' in the Republic', url: 'republic-at-a-glance.html#' ~ stateSlug, text: 'Open the labeled political map and jurisdiction directory.', cta: 'Open the map' },
     { kicker: 'Public record', title: 'What is happening in ' ~ stateName, url: 'torenthia-record.html?place=' ~ stateName, text: 'Browse published NRS records, reporting, court material, and other entries tied to this State.', cta: 'Browse the record' },
     { kicker: 'Federal relationship', title: 'State powers and audit', url: 'annotated.html#s15-2', text: 'Follow the constitutional framework governing State status, audits, and remediation.', cta: 'Read §15.2' },
@@ -95,7 +95,7 @@
   </section>
   {% endif %}
   <h2>Read the Constitution</h2>
-  <p><a href="State%20Constitutions/{{ stateName | lower }}-state-constitution.md">{{ stateName }} State Constitution (Markdown)</a>. This profile summarizes the State text; the <a href="annotated.html">federal Constitution</a> governs wherever the two conflict.</p>
+  {% if stateConstitutionPage %}<p><a href="{{ stateConstitutionPage }}">Read the formatted {{ stateName }} State Constitution</a>, or open the <a href="State%20Constitutions/{{ stateName | lower }}-state-constitution.md">source Markdown</a>. This profile summarizes the State text; the <a href="annotated.html">federal Constitution</a> governs wherever the two conflict.</p>{% else %}<p><a href="State%20Constitutions/{{ stateName | lower }}-state-constitution.md">{{ stateName }} State Constitution (Markdown)</a>. This profile summarizes the State text; the <a href="annotated.html">federal Constitution</a> governs wherever the two conflict.</p>{% endif %}
   <h2>In the public record</h2>
   <ul class="state-coverage">
   {% for piece in collections.world | stateCoverage(stateName) | take(6) %}
