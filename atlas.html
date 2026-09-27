@@ -86,7 +86,7 @@
       <h1>The Atlas</h1>
       <div class="page-intro">
         <p>Torenthia is a specific nation in a specific place, and the place has neighbors. Some of them are friendly, one of them is coming apart, and one of them holds the headwaters of the river the Republic drinks from.</p>
-        <p>This is the study. The <a href="torenthia.html">Republic at a Glance</a> is the domestic directory &mdash; where things are happening right now. Here is the region those events sit inside.</p>
+        <p>This is the study. The <a href="republic-at-a-glance.html">Republic at a Glance</a> is the domestic directory &mdash; where things are happening right now. Here is the region those events sit inside.</p>
       </div>
     </header>
 
@@ -165,12 +165,12 @@
   <script src="map-data.js"></script>
   <script>
   (function(){
-    var T1 = (window.MAP_DATA && MAP_DATA.tier1) || null;
+    var T1 = typeof MAP_DATA !== 'undefined' ? MAP_DATA.tier1 : null;
     var hs = document.getElementById('hotspot');
     if(!T1 || !hs) return;
     hs.style.left = (T1.hotspot.x / T1.w * 100) + '%';
     hs.style.top  = (T1.hotspot.y / T1.h * 100) + '%';
-    hs.addEventListener('click', function(){ window.location.href = 'torenthia.html'; });
+    hs.addEventListener('click', function(){ window.location.href = 'republic-at-a-glance.html'; });
   })();
   </script>
 

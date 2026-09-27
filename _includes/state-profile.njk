@@ -55,7 +55,7 @@
     <div><dt>Federal Senate</dt><dd>{{ s.senate }} seats</dd></div>
     <div><dt>Federal Assembly</dt><dd>{{ s.assembly }} seats</dd></div>
     <div><dt>State audit</dt><dd>{{ s.audit }}</dd></div>
-  </dl><figure class="state-map-crop"><a href="republic-at-a-glance.html#{{ s.name | lower }}" aria-label="Open {{ s.name }} on the full labeled map"><svg class="state-context-map" data-state="{{ s.name }}" data-capital="{{ s.capital }}" data-capital-x="{{ s.capitalX }}" data-capital-y="{{ s.capitalY }}" viewBox="{{ s.left * 15.36 - 260 }} {{ s.top * 10.24 - 160 }} 520 320" role="img" aria-label="{{ s.name }} with State borders, nearby jurisdictions, and {{ s.capital }}"><image href="region-map-tier2-base.webp" width="1536" height="1024"/></svg></a><figcaption>{{ s.name }} shown with its surrounding State borders and State seat, {{ s.capital }}. <a href="republic-at-a-glance.html#{{ s.name | lower }}">Open the full labeled map and directory</a>.</figcaption></figure><section class="status-panel"><h2>State Position</h2><p>{{ s.summary }}</p><p><a href="republic-at-a-glance.html#{{ s.name | lower }}">Locate {{ s.name }} in the Republic →</a></p></section><div class="mechanism-strip"><a href="annotated.html#s15-1">State powers</a><a href="annotated.html#s3-2">Assembly representation</a><a href="annotated.html#s15-2">Statehood Audit</a></div>
+  </dl><figure class="state-map-crop"><a href="republic-at-a-glance.html#{{ s.name | lower }}" aria-label="Open {{ s.name }} on the full labeled map"><svg class="state-context-map" data-state="{{ s.name }}" data-capital="{{ s.capital }}" data-capital-x="{{ s.capitalX }}" data-capital-y="{{ s.capitalY }}" viewBox="{{ s.left * 15.36 - 260 }} {{ s.top * 10.24 - 160 }} 520 320" role="img" aria-label="{{ s.name }} with State borders, nearby jurisdictions, and {{ s.capital }}"><image href="{{ geography.baseImage }}" width="1536" height="1024"/></svg></a><figcaption>{{ s.name }} shown with its surrounding State borders and State seat, {{ s.capital }}. <a href="republic-at-a-glance.html#{{ s.name | lower }}">Open the full labeled map and directory</a>.</figcaption></figure><section class="status-panel"><h2>State Position</h2><p>{{ s.summary }}</p><p><a href="republic-at-a-glance.html#{{ s.name | lower }}">Locate {{ s.name }} in the Republic →</a></p></section><div class="mechanism-strip"><a href="annotated.html#s15-1">State powers</a><a href="annotated.html#s3-2">Assembly representation</a><a href="annotated.html#s15-2">Statehood Audit</a></div>
   {% set relatedRailId = stateSlug ~ '-related' %}
   {% set relatedRailEyebrow = 'From this State' %}
   {% set relatedRailTitle = 'Explore ' ~ stateName %}
@@ -146,7 +146,8 @@
     const dot=document.createElementNS(NS,'circle');
     dot.setAttribute('cx',cx); dot.setAttribute('cy',cy); dot.setAttribute('r',9);
     dot.setAttribute('class','ctx-city-dot'); svg.appendChild(dot);
-    const label=addText(svg,capital,cx+15,cy-12,'ctx-city-label');
+    // Keep the city caption below its marker, clear of the nearby State name.
+    const label=addText(svg,capital,cx+15,cy+32,'ctx-city-label');
     label.setAttribute('text-anchor','start');
   });
 })();
