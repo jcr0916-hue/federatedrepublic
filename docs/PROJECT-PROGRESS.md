@@ -1,11 +1,11 @@
 # Project progress and working ideas
 
-**Session closeout:** 2026-09-26  
+**Session closeout:** 2026-09-27  
 **Purpose:** current project-wide implementation handoff and idea log. This file is not constitutional or Torenthia canon. Canon and source authority remain where `PROJECT-SOURCES.md` says they are.
 
-## Completed in this session
+## Current implementation state
 
-### Republic ingest expansion
+### Republic ingest and publication tooling
 
 The broader ingest work is live.
 
@@ -19,84 +19,89 @@ The broader ingest work is live.
 
 Operational details remain in `docs/operations/REPUBLIC-INGEST.md` and `docs/STATE-TEST-PUBLISHING.md`.
 
-### Varek historical-test prototype
+### State constitutional presentation
 
-`state-tests/varek/varek-test-01-the-72-hour-flood.html` is the first published canonical State historical test.
+The prototype phase is complete enough for normal use.
 
-The content was reviewed and left substantively unchanged in this session. Its role is now to serve as the prototype for how State constitutional history is displayed and connected to the underlying State Constitution.
+Published State profiles with formatted State Constitutions:
 
-State profiles now present historical tests as scalable cards rather than prose links. Each card can display:
+- Harren
+- Varek
+- Norvane
+- Kelvant
+- Rhovane
+- Corindal
 
-- fictional date and test number;
-- title;
-- short summary;
-- cited State provisions;
-- direct link to the full historical test.
+The presentation remains generated from each authoritative Markdown State Constitution; the formatted pages are not a second constitutional source.
 
-The cards are text-first. They do not require an image slot, so adding more State tests will not produce empty-looking media areas.
+State profiles automatically surface published historical tests as compact text-first cards. Formatted Constitutions can display **Tested in practice** callouts beside cited provisions. Related-content cards handle text-only and media content without empty image frames.
 
-### State profile presentation
+Rhovane and Corindal now also have published State flags and State-page accents.
 
-The Varek profile no longer carries a one-off sentence linking to the flood test.
+## State historical tests
 
-The State-profile template now generates the historical-test section from the State-test index. This makes the pattern reusable as other States gain canonical historical tests.
+Published canonical history:
 
-Related-content cards were also adjusted so text-only cards can size independently from cards with media. An absent image should not create an empty visual frame.
+- **Varek Test 01 — The 72-Hour Flood**
+- **Harren Test 01 — The Order Neither Executive Could Give**
+- **Rhovane Test 01 — The Harbor That Could Not Close**
 
-Merged implementation:
+Approved drafts awaiting weekday publication:
 
-- `67cd735` — **Improve State history cards and related rail layout**
+- **Norvane Test 01 — The Fourteenth Day**
+  - tests the Governor's fourteen-day emergency period, positive Assembly extension, selective continuation, and automatic lapse
+  - likely display provision: §6.2
+- **Kelvant Test 01 — The Item the Governor Crossed Out**
+  - tests the line-item appropriations veto and two-thirds restoration by both legislative houses
+  - likely display provision: §2.4
 
-### Polished Varek State Constitution
+These drafts should receive a final canon/metadata/formatting pass immediately before publication.
 
-Varek now has a formatted State Constitution presentation at `state-constitution-varek.html`.
+## Torenthia World content
 
-The page is generated from the authoritative Markdown in `State Constitutions/varek-state-constitution.md`; the presentation layer does not create a second constitutional source.
+The current published frontier remains Year 13, Month 12, with the Korda Convention as the main active narrative.
 
-The prototype includes:
+The Convention's Joint Committee on Transition Facts has begun producing evidence. Published material already establishes:
 
-- title treatment and State flag;
-- article navigation;
-- stable provision anchors;
-- formatted preamble, articles, provisions, paragraphs, and lists;
-- links back to the Varek State profile and source Markdown;
-- automatic **Tested in practice** callouts beside provisions cited by published State historical tests.
+- the certified lake corridor is not economically uniform north to south;
+- northern districts are more integrated with Kelvant;
+- southern lake districts remain more connected to Korda's interior;
+- meaningful southern Lake Varda access has cultural, family, Indigenous, and practical importance as well as economic value.
 
-The parser was made tolerant of the heading and provision formats already used across the established State Constitutions so the shell can be reused later without normalizing constitutional source text merely for presentation.
+The next content phase should emphasize **evidence before political convergence**.
 
-The full publishing workflow passed before merge.
+### Working Korda runway
 
-Merged implementation:
+**Week of September 28:**
+- fiscal-transfer and transition-cost records;
+- dry NRS/committee filings;
+- reporting that interprets evidence without implying a predetermined Convention result;
+- ordinary-life coverage to keep the Territory from becoming only a procedural story;
+- Norvane and Kelvant State-test releases during the week.
 
-- `c26776f` — **Add polished Varek State Constitution presentation**
+**Following week:**
+- gradual movement in Mire and Rell's public positions;
+- preserve Dessa Orin's whole-Territory statehood goal while creating a path for her to support a compromise that protects that future;
+- subtle, background indications of Elin Thoss's coalition work;
+- additional Convention process and factual compilation before a substantive resolution.
 
-## Design direction now established
+**Working editorial target for the Convention resolution:** Monday, October 12, 2026.
 
-The State constitutional experience should follow this basic flow:
+This is an internal target only. No publication has promised that date, and it should move later if the evidence or political convergence does not yet feel earned. The constitutional Convention clock, not the editorial calendar, remains the real timing constraint.
 
-**State profile → formatted State Constitution → historical constitutional tests**
-
-The same links should work in reverse:
-
-**Historical test → cited provisions → State Constitution / State profile**
-
-Historical-test cards should remain compact and text-first. Visual assets may be used where meaningful, but no card should imply that an image is missing simply because none was assigned.
-
-The formatted State Constitution is a presentation layer only. The Markdown State Constitution remains the authority.
+Full live-thread detail remains in `docs/WORLD-STORY-STATUS.md`.
 
 ## Website AI direction
 
-The public-site AI should primarily act as a **librarian**, not as an authority.
+The public-site AI remains planned primarily as a **librarian**, not as an authority.
 
-Its normal job would be to retrieve, explain, cite, and navigate the project's existing sources. A more demanding mode may support annotations on the annotated Constitution, but the model should still be grounded in canonical project data rather than inventing constitutional meaning.
+Its normal job would be to retrieve, explain, cite, and navigate the project's existing sources. A more demanding mode may support annotations on the annotated Constitution, but the model should remain grounded in canonical project data rather than inventing constitutional meaning.
 
-A likely tiered architecture remains:
+Likely architecture:
 
-1. inexpensive librarian / retrieval model for ordinary site questions;
+1. inexpensive librarian/retrieval model for ordinary site questions;
 2. stronger structured model for annotation and harder explanation;
 3. rare escalation to a premium API model for genuinely difficult cases.
-
-Model choice should remain provider-agnostic at the application layer where practical.
 
 Current procurement preference:
 
@@ -104,29 +109,22 @@ Current procurement preference:
 - open-weight is acceptable when necessary;
 - U.S. or European model developers are preferred;
 - Ollama compatibility is useful but not required;
-- GLM has been removed from consideration under the project's procurement criteria.
+- GLM is outside the current procurement preference.
 
-Current model families worth benchmarking include Mistral, IBM Granite, Microsoft Phi, and Meta Llama. This is a working shortlist, not a deployment decision.
+Candidate families for later benchmarking include Mistral, IBM Granite, Microsoft Phi, and Meta Llama. This is a working shortlist, not a deployment decision.
 
-A useful future benchmark would use Federated Republic material directly and measure:
-
-- factual grounding in retrieved sources;
-- correct citation/navigation behavior;
-- willingness to say when the sources do not establish an answer;
-- structured-output reliability;
-- annotation quality;
-- latency and operating cost.
+**AI work is intentionally parked until next weekend.** Do not bring it forward during the weekday content cycle unless deliberately reopened.
 
 ## Next likely work
 
 No further constitutional fine-detail review is pending unless deliberately reopened.
 
-Likely next work, when the project resumes:
+Immediate weekday queue:
 
-- inspect the live Varek State profile and formatted Constitution as a visual prototype;
-- make any small presentation corrections revealed by real deployment;
-- decide whether the State Constitution shell is ready to roll out to the other States;
-- add additional Varek historical tests gradually, with every proposed episode clearly separated from canon until published;
-- continue evaluating a low-cost/open model for the public-site librarian and annotation features.
+1. publish Norvane Test 01 after final verification;
+2. publish Kelvant Test 01 after final verification;
+3. continue Korda evidence through NRS and reporting;
+4. advance Lake Varda conference scheduling when useful without forcing Sunderland to become suddenly communicative;
+5. keep Argent Ridge, Fiscal Equalization, Judicial Pool, and the Monetary Authority in the background unless a natural trigger arises.
 
-The Varek prototype should be allowed to prove the pattern before mass-converting every State page.
+Further State-profile rollout is paused. The current rule remains: **publish a State profile when the reader has a reason to click on that State**, rather than filling every State page merely for completeness.
