@@ -117,9 +117,26 @@ continuous service are both tied, and its consequence is bounded.*
 *Scan note, 19.09: all 129 statutory delegations were checked for this. Most are correctly pitched and
 need nothing. §10.1(4) supplies a global fallback for publication timing — "Otherwise a constitutionally
 required record is published as soon as possible" — which alone rescues roughly twenty delegations that
-look exposed in isolation. The genuinely exposed remainder is small: §15.3(2) (Remediation Plan clock on
+look exposed in isolation. The genuinely exposed remainder was small: §15.3(2) (Remediation Plan clock on
 the devolution ladder), §9.8 (pool restoration clock), §11.1 (no deadline to establish the emergency
-procedure).*
+procedure). Resolved differently on 260926:*
+
+- **§15.3(2) — fixed.** The Remediation Plan clock sits inside the mandatory-devolution ladder, which is
+  already live once a State fails an audit — not a hypothetical delegation. Given a floor: 90 days until
+  statute defines the period, reusing §15.2(6)'s existing 90-day figure for the same kind of interim
+  window rather than inventing a new number (Process Symmetry).
+- **§9.8 — left as-is.** Unlike the other two, this one already has graceful degradation built in: the JM
+  publishes a compliance breach immediately regardless of statute, and §9.8(5) gives the actual worst case
+  (a pool at zero) a separate, statute-independent automatic fallback. A missing restoration "period"
+  degrades to sustained public findings on a below-minimum-but-not-zero pool, not silence or collapse.
+- **§11.1(8) — fixed, but not with a deadline.** The gap here wasn't a missing clock, it was a missing
+  actor: the substantive safety rails (no changes to electoral rules, timelines, or NRS permanence;
+  72-hour expiration unless ratified) were already written into the sentence, but nothing let a panel act
+  on them before the Legislature built the procedure. An imminent security threat doesn't wait for
+  legislative convenience, so this was the Bad-Faith Test's "assume the thing you're worried about
+  actually happens," not a Graceful Degradation clock question. Fix: until the statute exists, the panel
+  may adopt such a measure by majority vote of its own seated members — reusing the same majority-vote
+  mechanism §11.1(9) already uses for Acting-member designation, not a new decision procedure.
 
 ---
 

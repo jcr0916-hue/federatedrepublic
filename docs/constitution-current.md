@@ -883,7 +883,7 @@ Government records may be classified only on grounds the Legislature defines by 
 
 (7) The Chair of each panel is its most senior member by continuous service; where two or more members have equal continuous service, the Chair is determined by lot conducted by the JMC.
 
-(8) Each panel exercises only those ministerial functions expressly granted by this Constitution and by statute. The Legislature must establish by statute a procedure for each panel to adopt temporary technical measures in response to imminent security threats or system failures within its domain; such measures may not change electoral rules, timelines, or NRS record permanence, and expire within 72 hours unless ratified by a majority of the panel's seated members.
+(8) Each panel exercises only those ministerial functions expressly granted by this Constitution and by statute. The Legislature must establish by statute a procedure for each panel to adopt temporary technical measures in response to imminent security threats or system failures within its domain; until such statute is enacted, a panel may adopt such a measure by majority vote of its seated members; such measures may not change electoral rules, timelines, or NRS record permanence, and expire within 72 hours unless ratified by a majority of the panel's seated members.
 
 (9) Where either Panel falls below the five-member floor through resignation, removal, disqualification, or any other cause, the remaining members may by majority vote designate a qualified civil servant employed by that Panel as an Acting member, not to exceed the period defined by statute, which may not exceed 180 days. Where the remaining members are unable to designate, the Civic Consul designates. Acting members designated by the Civic Consul may not at any time constitute a majority of the Panel's seated membership. An Acting member exercises all authorities of a full member during the designation, and the designation does not affect the ordinary process for filling the vacancy permanently.
 
@@ -1051,7 +1051,7 @@ Provisional status is a remedial constitutional status applicable only to an exi
 
 (1) An existing State enters the mandatory remediation track upon an overall failed biennial Statehood Audit under §15.2.
 
-(2) A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute. A second consecutive failed audit produces a renewed Early Warning and requires a revised Remediation Plan. A passing audit before a third consecutive failure breaks the sequence.
+(2) A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute; until such statute is enacted, the period is 90 days. A second consecutive failed audit produces a renewed Early Warning and requires a revised Remediation Plan. A passing audit before a third consecutive failure breaks the sequence.
 
 (3) A third consecutive failed audit places the State in Provisional status automatically by constitutional operation. The State remains a State as provided in §15.1.a.
 
