@@ -3,6 +3,8 @@
 Start with [PROJECT-SOURCES.md](../PROJECT-SOURCES.md), the authoritative guide
 to current sources and their roles. Only `main` supplies current project authority.
 
+For the latest project-wide implementation handoff and working ideas, see [Project progress](PROJECT-PROGRESS.md). It is operational/planning context, not constitutional or Torenthia canon.
+
 ## Current constitutional sources
 
 - [Federal source](../constitution_data.json) — canonical structured Constitution.
