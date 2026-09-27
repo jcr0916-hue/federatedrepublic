@@ -28,3 +28,10 @@ Other files inherited from the snapshot are historical context, not current auth
 Historical plans can contain abandoned dates, outcomes, instructions, and workflows.
 Consult them only for explicitly requested historical work, never as new canon or
 current operating instructions.
+
+## Later retirements
+
+The TypingMind guide, tag planner, and its tests were retired from main at
+`82335e6a61378571de28dad9206900c31f5e603e` and preserved at their original paths.
+Their manifest entries record `retiredFrom` separately from the initial snapshot.
+This raises the preservation inventory to 74 files; no merge from main was made.
