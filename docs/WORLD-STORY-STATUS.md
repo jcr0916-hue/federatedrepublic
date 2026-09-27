@@ -28,7 +28,7 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 | Thread | Current clock |
 |---|---|
-| **Korda Convention** | Running again after the SC stay dissolved on Month 12 Day 26. Three active days were credited before the stay; approximately **87 active days remain** from Day 26 under §15.5.a(4). Formation of the Joint Committee on Transition Facts (Month 12) does not toll, pause, or extend this period. **Target real-world publication date for the actual Convention resolution: Monday, October 5, 2026.** |
+| **Korda Convention** | Running again after the SC stay dissolved on Month 12 Day 26. Three active days were credited before the stay; approximately **87 active days remain** from Day 26 under §15.5.a(4). Formation of the Joint Committee on Transition Facts (Month 12) does not toll, pause, or extend this period. **Working editorial target for the actual Convention resolution: Monday, October 12, 2026.** This is not a published promise or constitutional deadline; move it later if the evidentiary and political setup is not yet earned. |
 | **Argent Ridge repeal** | Phase One signature period began after the eligibility challenge window closed unused (Month 9 Day 12). It may run up to eight months. The calendar's next-year naming convention has not been established; do not invent a "Year 14" date without resolving that first. |
 | **LC election** | Spring Y14 is the established window; no exact election date or numbered-month season boundaries are established. |
 | **Lake Varda conference** | All proposed participants have agreed in principle, but no date/final agenda/delegation level is established. |
@@ -53,6 +53,8 @@ Last published:
 - **Southern lake ties established in ordinary-life coverage** (`torenthia-news-090.html`): Indigenous families and other residents in southern lake districts retain community, seasonal-food, family-history, and travel ties to Lake Varda. Coverage establishes that continued Korda lake access is a cultural and practical issue, not merely a freight question.
 
 Open:
+- **Immediate runway (week of Sept. 28):** fiscal-transfer and transition-cost evidence, dry committee/NRS filings, and continued ordinary-life coverage without implying an outcome
+- **Following runway:** visible but incomplete movement by Mire and Rell, preservation of Orin's statehood objective, and subtle background signs of Thoss coalition work before any final resolution
 - additional committee evidence, polling, and internal procedure beyond the first transportation records
 - first substantive resolution/proposal
 - Elin Thoss's preferred outcome
@@ -88,7 +90,7 @@ Interactive feature, content-complete and live on the site (`crossroads.html?gam
 
 Two playable delegates, **entirely fictional, never to appear in published World canon**: **Sena Threll** (interior) and **Davin Kesh** (corridor). Do not confuse with the real, canonical delegates Mire, Rell, or Orin. Five possible endings (Clean Whole Statehood, Grand Bargain, Negotiated Split, Ugly Split, Hung Convention), each with role-flavored text and a ratification-coda beat under §15.5.a(4) that deliberately never asserts whether a hypothetical referendum would pass.
 
-Launch sequencing (per the feature's own deploy notes): live ~2 weeks ahead of the real Convention resolution; retires/seals when the real canon outcome publishes. Target production cadence while both run concurrently: 2–3 World pieces per day, at least one mundane, building toward the October 5 resolution.
+Launch sequencing (per the feature's own deploy notes): live ~2 weeks ahead of the real Convention resolution; retires/seals when the real canon outcome publishes. Target production cadence while both run concurrently: roughly 2 World pieces per day on average, with regular mundane coverage, building toward a flexible October 12 editorial target for the real Convention resolution.
 
 Open:
 - the real Convention outcome remains undecided in canon — nothing published so far, in Crossroads or in World content, may imply which of the five shapes (or any other) the real resolution takes
