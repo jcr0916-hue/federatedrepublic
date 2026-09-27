@@ -32,3 +32,15 @@ test('State constitutional body renderer preserves paragraphs and lists without 
   assert.match(html,/<ul><li>one;<\/li><li>two\.<\/li><\/ul>/);
   assert.match(html,/&lt;b&gt;not markup&lt;\/b&gt;/);
 });
+
+
+test('published State profiles have formatted Constitution entry pages',()=>{
+  for(const id of ['harren','varek','norvane','kelvant']){
+    const page='state-constitution-'+id+'.html';
+    const profile='torenthia-state-'+id+'.html';
+    assert.ok(fs.existsSync(page),page);
+    assert.ok(fs.existsSync(profile),profile);
+    assert.ok(fs.readFileSync(page,'utf8').includes('stateConstitution: '+id));
+    assert.ok(fs.readFileSync(profile,'utf8').includes('stateConstitutionPage: '+page));
+  }
+});
