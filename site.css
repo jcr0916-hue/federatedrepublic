@@ -863,13 +863,27 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 .related-rail-control{display:none;width:42px;height:42px;align-items:center;justify-content:center;border:1px solid var(--navy);background:var(--cream);color:var(--navy);font:600 1.15rem 'Jost',sans-serif;cursor:pointer}
 .related-rail.is-enhanced.is-scrollable .related-rail-control{display:inline-flex}
 .related-rail-control:disabled{opacity:.3;cursor:default}
-.related-rail-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(255px,32%);gap:1rem;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:inline mandatory;scroll-padding-inline:.15rem;padding:.15rem .15rem .7rem;scrollbar-width:thin;scrollbar-color:var(--gold2) var(--cream2)}
+.related-rail-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(255px,32%);gap:1rem;align-items:start;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:inline mandatory;scroll-padding-inline:.15rem;padding:.15rem .15rem .7rem;scrollbar-width:thin;scrollbar-color:var(--gold2) var(--cream2)}
 .related-rail-track:focus-visible{outline:2px solid var(--gold2);outline-offset:4px}
-.related-rail-card{scroll-snap-align:start;display:flex;flex-direction:column;min-height:220px;background:var(--cream2);border-top:3px solid var(--gold2)}
+.related-rail-card{scroll-snap-align:start;display:flex;flex-direction:column;min-height:0;background:var(--cream2);border-top:3px solid var(--gold2)}
+.related-rail-card--text{min-height:190px}
 .related-rail-image{display:block;aspect-ratio:16/8;overflow:hidden;background:#ddd}
 .related-rail-image img{width:100%;height:100%;object-fit:cover;display:block}
 .related-rail-card-body{display:flex;flex:1;flex-direction:column;padding:1rem}
 .related-rail-kicker{font:500 .64rem 'JetBrains Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#765817}
+
+/* State constitutional-history cards */
+.state-history{margin:3rem 0 1rem;padding-top:.25rem;border-top:1px solid var(--border)}
+.state-history-head{max-width:700px;margin-bottom:1.25rem}.state-history-head h2{margin:.35rem 0 .5rem}.state-history-head p{color:var(--muted)}
+.state-test-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.state-test-card{display:flex;flex-direction:column;min-height:245px;padding:1.25rem;background:var(--cream2);border-top:3px solid var(--gold2)}
+.state-test-card-meta{font:500 .64rem 'JetBrains Mono',monospace!important;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem!important}
+.state-test-card h3{font:600 1.55rem/1.15 'Cormorant Garamond',serif;margin:.15rem 0 .6rem}.state-test-card h3 a{color:var(--navy);text-decoration:none}.state-test-card h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.state-test-card>p:not(.state-test-card-meta){margin:0 0 1rem;line-height:1.65;color:var(--text)}
+.state-test-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:auto 0 .9rem}.state-test-tags a{font:500 .64rem 'JetBrains Mono',monospace;color:var(--cream)!important;background:var(--navy);padding:.22rem .48rem;border-radius:2px;text-decoration:none}.state-test-tags a:hover{background:var(--navy2)}
+.state-test-card-link{font-size:.82rem;font-weight:600;text-decoration:none;margin-top:0}.state-history-more{margin-top:1rem!important;font-size:.88rem}
+@media(max-width:640px){.state-test-grid{grid-template-columns:1fr}.state-test-card{min-height:0}}
+
 .related-rail-card h3{margin:.45rem 0;font:600 1.35rem/1.2 'Cormorant Garamond',serif}
 .related-rail-card h3 a{color:var(--navy);text-decoration:none}
 .related-rail-card p{margin:.25rem 0 .9rem;font-size:.88rem;line-height:1.55}

@@ -42,6 +42,7 @@
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 {% include "nav.njk" %}
 <main class="state-profile state-{{ stateName | lower }}" id="main-content">
+  {% set stateSlug = stateName | lower %}
   <div class="state-breadcrumbs" role="navigation" aria-label="State navigation"><a href="torenthia.html">Torenthia</a> / <a href="republic-at-a-glance.html">States and Territories</a><span class="state-profile-siblings">{% for s in statepages %} · <a href="{{ s.url }}"{% if s.name == stateName %} aria-current="page"{% endif %}>{{ s.name }}</a>{% endfor %}</span><span class="state-profile-current"> / {{ stateName }}</span></div>
   {% for s in statepages %}{% if s.name == stateName %}
   <p class="state-kicker">{{ s.char }}</p>
@@ -55,7 +56,6 @@
     <div><dt>Federal Assembly</dt><dd>{{ s.assembly }} seats</dd></div>
     <div><dt>State audit</dt><dd>{{ s.audit }}</dd></div>
   </dl><figure class="state-map-crop"><a href="republic-at-a-glance.html#{{ s.name | lower }}" aria-label="Open {{ s.name }} on the full labeled map"><svg class="state-context-map" data-state="{{ s.name }}" data-capital="{{ s.capital }}" data-capital-x="{{ s.capitalX }}" data-capital-y="{{ s.capitalY }}" viewBox="{{ s.left * 15.36 - 260 }} {{ s.top * 10.24 - 160 }} 520 320" role="img" aria-label="{{ s.name }} with State borders, nearby jurisdictions, and {{ s.capital }}"><image href="region-map-tier2-base.webp" width="1536" height="1024"/></svg></a><figcaption>{{ s.name }} shown with its surrounding State borders and State seat, {{ s.capital }}. <a href="republic-at-a-glance.html#{{ s.name | lower }}">Open the full labeled map and directory</a>.</figcaption></figure><section class="status-panel"><h2>State Position</h2><p>{{ s.summary }}</p><p><a href="republic-at-a-glance.html#{{ s.name | lower }}">Locate {{ s.name }} in the Republic →</a></p></section><div class="mechanism-strip"><a href="annotated.html#s15-1">State powers</a><a href="annotated.html#s3-2">Assembly representation</a><a href="annotated.html#s15-2">Statehood Audit</a></div>
-  {% set stateSlug = stateName | lower %}
   {% set relatedRailId = stateSlug ~ '-related' %}
   {% set relatedRailEyebrow = 'From this State' %}
   {% set relatedRailTitle = 'Explore ' ~ stateName %}
@@ -70,6 +70,30 @@
   {% include "related-rail.njk" %}
   {% endif %}{% endfor %}
   {{ content | safe }}
+  {% set stateHistoricalTests = stateTests.entries | stateTestsFor(stateName) %}
+  {% if stateHistoricalTests.length %}
+  <section class="state-history" aria-labelledby="{{ stateSlug }}-history-title">
+    <div class="state-history-head">
+      <span class="section-kicker">How the framers tested it</span>
+      <h2 id="{{ stateSlug }}-history-title">Historical constitutional tests</h2>
+      <p>Canonical episodes from the State’s published past show its constitutional machinery operating under pressure.</p>
+    </div>
+    <div class="state-test-grid">
+      {% for test in stateHistoricalTests %}
+      <article class="state-test-card">
+        <p class="state-test-card-meta">{{ test.date | stateTestDateLabel }} · Test {{ test.testNumber }}</p>
+        <h3><a href="{{ test.url }}">{{ test.title }}</a></h3>
+        <p>{{ test.summary }}</p>
+        <div class="state-test-tags" aria-label="State provisions tested">
+          {% for provision in test.provisions %}<a href="{{ provision.url }}">§{{ provision.number }}</a>{% endfor %}
+        </div>
+        <a class="state-test-card-link" href="{{ test.url }}">Read the historical test →</a>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="state-history-more"><a href="/state-tests.html#{{ stateSlug }}-constitution">Browse {{ stateName }} provisions and historical tests →</a></p>
+  </section>
+  {% endif %}
   <h2>Read the Constitution</h2>
   <p><a href="State%20Constitutions/{{ stateName | lower }}-state-constitution.md">{{ stateName }} State Constitution (Markdown)</a>. This profile summarizes the State text; the <a href="annotated.html">federal Constitution</a> governs wherever the two conflict.</p>
   <h2>In the public record</h2>
