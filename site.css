@@ -875,7 +875,7 @@ a.crossroads-feature:hover .crossroads-action{text-decoration:underline;text-und
 /* State constitutional-history cards */
 .state-history{margin:3rem 0 1rem;padding-top:.25rem;border-top:1px solid var(--border)}
 .state-history-head{max-width:700px;margin-bottom:1.25rem}.state-history-head h2{margin:.35rem 0 .5rem}.state-history-head p{color:var(--muted)}
-.state-test-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.state-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1rem}
 .state-test-card{display:flex;flex-direction:column;min-height:245px;padding:1.25rem;background:var(--cream2);border-top:3px solid var(--gold2)}
 .state-test-card-meta{font:500 .64rem 'JetBrains Mono',monospace!important;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem!important}
 .state-test-card h3{font:600 1.55rem/1.15 'Cormorant Garamond',serif;margin:.15rem 0 .6rem}.state-test-card h3 a{color:var(--navy);text-decoration:none}.state-test-card h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
@@ -1054,9 +1054,16 @@ h1.qs-title:focus,h2.section-label:focus{outline:none}
 .state-tested>a{display:block;color:var(--navy);text-decoration:none;padding:.35rem 0}.state-tested>a+a{border-top:1px solid var(--border)}
 .state-tested>a strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.05rem}.state-tested>a span{display:block;color:var(--muted);font-size:.82rem;line-height:1.5;margin-top:.1rem}
 .state-constitution-adopted{font:italic 1.1rem 'Cormorant Garamond',serif;color:var(--muted);padding-top:1rem}
+.state-constitution-toc-mobile{display:none}
+.state-tested-provisions{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.55rem}.state-tested-provisions a{font:500 .62rem 'JetBrains Mono',monospace;color:#765817;text-decoration:none;border:1px solid var(--border);padding:.15rem .38rem}.state-tested-provisions a:hover{text-decoration:underline;text-underline-offset:2px}
 @media(max-width:820px){
   .state-constitution-page{padding:78px 18px 56px}
   .state-constitution-hero{grid-template-columns:1fr}.state-constitution-flag{width:150px}
-  .state-constitution-layout{grid-template-columns:1fr;gap:1rem}.state-constitution-toc{position:static;max-height:none;display:flex;gap:.35rem;overflow-x:auto;padding:.75rem 0 1rem;border-bottom:1px solid var(--border)}
-  .state-constitution-toc>.section-kicker{display:none}.state-constitution-toc>a{white-space:nowrap;border-left:0;border-bottom:2px solid transparent;padding:.4rem .55rem}.state-constitution-toc>a:hover,.state-constitution-toc>a:focus-visible{border-left:0;border-bottom-color:var(--gold)}
+  .state-constitution-layout{grid-template-columns:1fr;gap:1rem}.state-constitution-toc--desktop{display:none}
+  .state-constitution-toc-mobile{display:block;border-block:1px solid var(--border);margin:.25rem 0 1rem}
+  .state-constitution-toc-mobile summary{cursor:pointer;list-style:none;padding:.8rem 0;font:500 .72rem 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#765817}
+  .state-constitution-toc-mobile summary::-webkit-details-marker{display:none}.state-constitution-toc-mobile summary::after{content:' +';}.state-constitution-toc-mobile[open] summary::after{content:' −';}
+  .state-constitution-toc-mobile nav{display:grid;grid-template-columns:1fr;max-height:55vh;overflow:auto;padding:0 0 .75rem}
+  .state-constitution-toc-mobile a{color:var(--muted);text-decoration:none;font-size:.85rem;padding:.45rem 0;border-top:1px solid var(--rule)}
+  .state-constitution-toc-mobile a:hover,.state-constitution-toc-mobile a:focus-visible{color:var(--navy)}
 }

@@ -25,6 +25,7 @@ stateProvisions:
   - "12.3"
   - "12.10"
   - "12.11"
+displayProvision: "12.1"
 status: canonical-history
 ---
 ```
@@ -36,6 +37,8 @@ The directory, filename, State and number must agree, and `testId` must be uniqu
 Titles and summaries must be nonblank. The summary is the short public description used on State-profile historical-test cards. Quote dates as fictional `Year.MM`, with a positive year
 and a two-digit month from 01 to 12; `6.09` means Year 6, Month 9, not a real date.
 No historical day is inferred. Eleventy's filesystem page date is not canon.
+
+`displayProvision` is optional. When present, it must be one of the cited `stateProvisions`. It selects the single provision beside which the formatted State Constitution shows the test's **Tested in practice** callout. This keeps a test that cites several provisions from being repeated after every citation. Omit it when no Constitution callout is wanted yet.
 
 `stateProvisions` must be an array of quoted provision numbers. Each citation
 must match a definition in that State's constitutional Markdown source; incidental
@@ -67,4 +70,4 @@ The small public `state-tests.html` index displays cited current provisions and
 links back to their historical tests. Each test receives generated citation links.
 The Varek profile links to Test 01, **The 72-Hour Flood**, published as approved
 canonical history at `state-tests/varek/varek-test-01-the-72-hour-flood.html`.
-Its names and places are intentional historical additions. State profiles automatically present each published test as a compact historical-test card using the title, summary, fictional date, and cited provisions. A polished State Constitution presentation can reuse the same data without changing the schema.
+Its names and places are intentional historical additions. State profiles automatically present each published test as a compact historical-test card using the title, summary, fictional date, and cited provisions. Formatted State Constitutions use `displayProvision` for restrained **Tested in practice** placement while still listing every cited provision in the callout.

@@ -30,13 +30,22 @@
   </header>
 
   <div class="state-constitution-layout">
-    <aside class="state-constitution-toc" aria-label="Articles">
+    <aside class="state-constitution-toc state-constitution-toc--desktop" aria-label="Articles">
       <span class="section-kicker">Contents</span>
       <a href="#{{ stateConstitution }}-preamble">Preamble</a>
       {% for article in constitution.articles %}
       <a href="#{{ stateConstitution }}-article-{{ article.number | lower }}">{{ article.number }} · {{ article.title }}</a>
       {% endfor %}
     </aside>
+    <details class="state-constitution-toc-mobile">
+      <summary>Contents</summary>
+      <nav aria-label="Articles">
+        <a href="#{{ stateConstitution }}-preamble">Preamble</a>
+        {% for article in constitution.articles %}
+        <a href="#{{ stateConstitution }}-article-{{ article.number | lower }}">{{ article.number }} · {{ article.title }}</a>
+        {% endfor %}
+      </nav>
+    </details>
 
     <div class="state-constitution-text">
       <section class="state-constitution-preamble" id="{{ stateConstitution }}-preamble">
@@ -63,6 +72,9 @@
             <span class="state-tested-label">Tested in practice</span>
             {% for test in provisionTests %}
             <a href="{{ test.url }}"><strong>{{ test.title }}</strong><span>{{ test.date | stateTestDateLabel }} · {{ test.summary }}</span></a>
+            <div class="state-tested-provisions" aria-label="Provisions cited by {{ test.title }}">
+              {% for cited in test.provisions %}<a href="/state-constitution-{{ stateConstitution }}.html#{{ stateConstitution }}-{{ cited.number | replace('.', '-') }}">§{{ cited.number }}</a>{% endfor %}
+            </div>
             {% endfor %}
           </aside>
           {% endif %}

@@ -15,6 +15,7 @@ test('Varek canonical prototype validates against the real State Constitution',(
   for(const name of ['Deverin Hask','Toma Ilvest','Tessin','Tessin Ford','Hollowmere County']) assert.ok(original.content.includes(name));
   assert.equal(original.data.date,'6.09');
   assert.match(original.data.summary,/temporary emergency power/i);
+  assert.equal(original.data.displayProvision,'12.1');
 });
 test('State definitions are read across established heading formats without treating citations as definitions',()=>{
   assert.equal(Object.keys(states).length,12);
@@ -38,7 +39,8 @@ test('required State-test metadata rejects invalid types, identity, title, date,
     [{date:'6.13'},/fictional Year.MM/], [{date:'6.9'},/fictional Year.MM/], [{date:6.09},/fictional Year.MM/],
     [{date:'2026-09-26'},/fictional Year.MM/], [{date:'0.09'},/fictional Year.MM/],
     [{stateProvisions:'3.5'},/must be an array/], [{stateProvisions:['99.1']},/Unknown State provision/],
-    [{stateProvisions:[3.5]},/Unknown State provision/], [{status:'draft'},/canonical-history/]
+    [{stateProvisions:[3.5]},/Unknown State provision/], [{displayProvision:'99.1'},/displayProvision must be one/],
+    [{displayProvision:12.1},/displayProvision must be one/], [{status:'draft'},/canonical-history/]
   ]) assert.match(errors([record(change)]),expected,JSON.stringify(change));
 });
 test('duplicate State numbers and IDs are refused across filenames; different States can each have test 01',()=>{
@@ -49,7 +51,7 @@ test('duplicate State numbers and IDs are refused across filenames; different St
   assert.match(errors([original,differentId]),/Duplicate testNumber/);
   const differentNumber={...copy,data:{...copy.data,testNumber:2}};
   assert.match(errors([original,differentNumber]),/Duplicate testId/);
-  const other={...record({state:'harren',testId:'harren-test-01',stateProvisions:['1.1']}),inputPath:'state-tests/harren/harren-test-01-river.html'};
+  const other={...record({state:'harren',testId:'harren-test-01',stateProvisions:['1.1'],displayProvision:'1.1'}),inputPath:'state-tests/harren/harren-test-01-river.html'};
   assert.equal(errors([original,other]),'');
 });
 test('paths and filename numbering are strict and cannot silently rename a State test',()=>{

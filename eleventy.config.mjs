@@ -82,7 +82,7 @@ export default function (eleventyConfig) {
   // Related State coverage follows explicit jurisdiction metadata.
   eleventyConfig.addFilter("stateCoverage", (pieces,name)=>[...pieces].reverse().filter(p=>p.data.worldJurisdictions.includes(name)));
   eleventyConfig.addFilter("stateTestsFor", (entries,name)=>entries.filter(test=>test.state===String(name).toLowerCase()));
-  eleventyConfig.addFilter("stateTestsForProvision", (entries,state,number)=>entries.filter(test=>test.state===String(state).toLowerCase() && test.stateProvisions.includes(String(number))));
+  eleventyConfig.addFilter("stateTestsForProvision", (entries,state,number)=>entries.filter(test=>test.state===String(state).toLowerCase() && test.displayProvision===String(number)));
   eleventyConfig.addFilter("stateTestDateLabel", value=>{const [year,month]=String(value).split('.');return `Year ${Number(year)}, Month ${Number(month)}`;});
   eleventyConfig.addFilter("stateConstitutionBody", renderStateConstitutionBody);
   eleventyConfig.addPassthroughCopy("State Constitutions/harren-state-constitution.md");
