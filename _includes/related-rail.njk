@@ -12,7 +12,7 @@
   </div>
   <div class="related-rail-track" data-rail-track tabindex="0">
     {% for item in relatedItems %}
-    <article class="related-rail-card">
+    <article class="related-rail-card{% if item.image %} related-rail-card--media{% else %} related-rail-card--text{% endif %}">
       {% if item.image %}
       <a class="related-rail-image" href="{{ item.url }}" aria-hidden="true" tabindex="-1">
         <img src="{{ item.image }}" alt="" loading="lazy">
