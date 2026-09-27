@@ -5,7 +5,7 @@ const vm=require('node:vm');
 const crypto=require('node:crypto');
 const E=require('../crossroads-engine.js');
 const load=name=>JSON.parse(fs.readFileSync(name,'utf8'));
-const korda=load('korda-crossroads.json'),thoss=load('docs/archive/crossroads/thoss-crossroads.json');
+const korda=load('korda-crossroads.json'),thoss=load('scripts/fixtures/thoss-crossroads.json');
 function play(role,ids){
  const run=E.initialize(korda,role);
  for(const id of ids){
@@ -103,7 +103,7 @@ test('walkout consumes real days once, including on repeated scene rendering',()
  E.enter(korda,r,korda.scenes[3]);assert.equal(r.meters.days,before-40);
 });
 test('sealed Thoss content hash and every reachable legacy ending remain stable',()=>{
- assert.equal(crypto.createHash('sha256').update(fs.readFileSync('docs/archive/crossroads/thoss-crossroads.json')).digest('hex'),'3b66e1a72070e0b4aacb1c355eba55d4156bb6bad413506301aaa50266c17f19');
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync('scripts/fixtures/thoss-crossroads.json')).digest('hex'),'3b66e1a72070e0b4aacb1c355eba55d4156bb6bad413506301aaa50266c17f19');
  const result=walk(thoss);assert.ok(result.paths>100);assert.ok(Object.keys(result.found).length>=6);
 });
 

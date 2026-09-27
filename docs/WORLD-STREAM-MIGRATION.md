@@ -23,8 +23,8 @@ Two existing summaries (NRS 010 and 011) quote NRS-Y13-0291, whereas their docum
 identities are NRS-Y13-0293 and NRS-Y13-0294. The new metadata uses the documents'
 own identity fields. Those older summary errors are left for editorial review.
 
-The local ingest implementation is commit b026f22, one commit above the fetched
-main ea62db7 at implementation start. This work builds directly on it. Its three
-commands, read-only preview, exclusive creation, review boundaries and archive
-behavior are reused, not duplicated. The completed work is authorized for commit and push to
-`weekend-infrastructure` only; no merge or deployment is authorized.
+For current publishing and import procedures, use [WORLD-PUBLISHING.md](WORLD-PUBLISHING.md)
+and [Republic ingest operations](operations/REPUBLIC-INGEST.md). The ingest workflow
+retains read-only preview, exclusive creation, human-review boundaries, and
+archive-after-success behavior. Historical implementation and release handoffs
+are preserved on the `archive/legacy-project-material` cold-storage branch.

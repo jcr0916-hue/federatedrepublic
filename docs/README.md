@@ -1,43 +1,41 @@
 # Repository documentation map
 
-This directory contains both current project references and historical material. Files under `archive/` are retained for project history and should not be treated as current authority.
+Start with [PROJECT-SOURCES.md](../PROJECT-SOURCES.md), the authoritative guide
+to current sources and their roles. Only `main` supplies current project authority.
 
 ## Current constitutional sources
 
-- `../constitution_data.json` — canonical structured source for the current federal Constitution.
-- `constitution-current.md` — generated current Markdown text of the Constitution.
-- `constitutional-quickref.md` — generated current constitutional quick reference.
-- `../annotated.html` — generated/live annotated Constitution surface.
-- `../search-index.js` — generated search data derived from current constitutional text.
-- `../pdf/constitution-current.pdf` — current downloadable Constitution PDF.
+- [Federal source](../constitution_data.json) — canonical structured Constitution.
+- [Current text](constitution-current.md) and [quick reference](constitutional-quickref.md) — generated derivatives.
+- [State Constitutions](../State%20Constitutions/) — current State source area.
+- `../annotated.html`, `../search-index.js`, and `../pdf/constitution-current.pdf` — public derived surfaces.
+- [Constitutional design principles](CONSTITUTIONAL-DESIGN-PRINCIPLES.md).
 
-Edit the canonical structured source and regenerate derived constitutional surfaces rather than editing generated copies independently.
+Edit canonical sources and regenerate derivatives rather than editing generated copies independently.
 
-## Active project references
+## World sources and publishing
 
-- `WORLD-STORY-BIBLE.md` — durable Torenthia geography, recurring characters, continuity warnings, and established story-arc constraints.
-- `WORLD-STORY-STATUS.md` — current world date, live-thread status, running clocks, open decisions, and next-beat handoff.
-- `CONSTITUTIONAL-DESIGN-PRINCIPLES.md` — durable constitutional-design principles.
-- `WEBSITE-REFRESH.md` — current site/discovery/publishing contracts retained from the September refresh.
+- [Story Bible](WORLD-STORY-BIBLE.md) — durable canon and continuity constraints.
+- [Story Status](WORLD-STORY-STATUS.md) — live threads, clocks, open decisions, and current frontier.
+- Published World records and front matter — authoritative published history, including older records.
+- [Chronology registry](../_data/worldChronology.json) and [clock registry](../_data/worldClocks.json) — current infrastructure.
+- [World publishing](WORLD-PUBLISHING.md) and [stream migration](WORLD-STREAM-MIGRATION.md).
+- [Republic ingest](operations/REPUBLIC-INGEST.md) — conservative import and review workflow.
+- [Scenario publishing](SCENARIO-PUBLISHING.md).
+- [TypingMind knowledge sources](TYPINGMIND-KB.md) — current-main imports and retrieval tags.
 
-For World content, use the Bible for **what is true**, Status for **what is happening now**, published World front matter for **what happened**, and `constitution_data.json` for constitutional mechanism.
+## Operations and visual references
 
-## Backend operations
+- [Public asset deployment](ASSET-DEPLOYMENT.md).
+- [Living Crossroads operations](operations/CROSSROADS.md).
+- [Kelvant flag](world/visual-identity/KELVANT-FLAG.md) and [Varek flag](world/visual-identity/VAREK-FLAG.md).
 
-- [Public asset deployment](ASSET-DEPLOYMENT.md) — referenced-asset collection, protected runtime paths, validation, and deployment size measurements.
-- [Living Crossroads operations](operations/CROSSROADS.md) — recurring installment activation and shared feature wiring.
+## Superseded internal material
 
-## World visual references
-
-- `world/visual-identity/KELVANT-FLAG.md` — Kelvant flag symbolism, provenance, and canon guardrails.
-- `world/visual-identity/VAREK-FLAG.md` — Varek flag symbolism, provenance, and canon guardrails.
-
-## Archive
-
-- `archive/constitution/` — dated snapshots of earlier constitutional text.
-- `archive/reviews/` — completed constitutional review and audit records.
-- `archive/project/` — completed or superseded implementation/content/reorganization plans, including Crossroads launch and content-planning material.
-- `archive/decisions/` — resolved design-decision records retained for rationale and history.
-- `archive/world/` — superseded World canon, character, timeline, pending-thread, and individual arc-planning files retained verbatim for historical reference.
-
-Archive material may describe older file counts, institutional wording, workflows, or site architecture. The current repository and current Constitution control where they differ.
+The former archive tree, stale root quick reference, legacy Atlas implementation,
+and completed planning/release records are preserved on
+[`archive/legacy-project-material`](https://github.com/jcr0916-hue/federatedrepublic/tree/archive/legacy-project-material).
+Its preservation manifest records original paths and hashes. Do not treat that
+branch as current authority or merge it back into main. Public historical pages
+and published Torenthia records remain on main; sealed Crossroads data remains
+only as a [test fixture](../scripts/fixtures/README.md).

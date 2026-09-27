@@ -8,9 +8,10 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dossiers = JSON.parse(fs.readFileSync(path.join(root, '_data/currentFiles.json'), 'utf8'));
 const names = Object.fromEntries(dossiers.map(d => [d.id, d.short]));
 const kinds = { news: 'News', nrs: 'NRS', sc: 'Court Opinion', dispatch: 'Dispatch' };
+const retired = file => file.startsWith('docs/archive/') || file === 'constitutional-quickref.md';
 
 export function classify(file, data = {}, definitions = dossiers) {
-  if (file.startsWith('docs/archive/')) return ['Archive'];
+  if (retired(file)) throw new Error(`Cold-storage material is not a current KB source: ${file}`);
   if (/^torenthia-(news|nrs|sc|dispatch)-[^/]+\.html$/.test(file)) {
     if (!kinds[data.worldKind] || !data.worldId) throw new Error(`Missing World metadata: ${file}`);
     const tags = ['World Canon', kinds[data.worldKind]];
@@ -27,16 +28,17 @@ export function classify(file, data = {}, definitions = dossiers) {
     return [...new Set(tags)];
   }
   if (/\.(png|webp|jpe?g|svg|ico)$/i.test(file)) return ['Media Assets'];
-  if (file.startsWith('State Constitutions/') || /^(?:docs\/)?constitution(?:al-quickref|-current)\.md$/.test(file) || file === 'pdf/constitution-current.pdf' || /^(annotated|constitution-print)\.html$/.test(file) || /^(?:pdf\/)?quicksheets?(?:-.*)?\.(html|pdf)$/.test(file)) return ['Constitution'];
+  if (file === 'constitution_data.json' || file.startsWith('State Constitutions/') || /^docs\/constitution(?:al-quickref|-current)\.md$/.test(file) || file === 'pdf/constitution-current.pdf' || /^(annotated|constitution-print)\.html$/.test(file) || /^(?:pdf\/)?quicksheets?(?:-.*)?\.(html|pdf)$/.test(file)) return ['Constitution'];
   if (/^scenario(?:s|-.*)\.html$/.test(file)) return ['Scenarios'];
   if (file === 'crossroads.html' || file === 'korda-crossroads.json' || file === '_data/crossroads.json') return ['Crossroads Non-canon'];
   if (/^(?:dossier-|torenthia-state-|territory-).*\.html$/.test(file) || /^(?:torenthia(?:-atlas|-record)?|atlas|before-the-republic)\.html$/.test(file) || /^docs\/WORLD-STORY-(BIBLE|STATUS)\.md$/.test(file) || file.startsWith('docs/world/')) return ['World Reference'];
-  if (file.startsWith('docs/')) return ['Project Operations'];
+  if (file === 'PROJECT-SOURCES.md' || file.startsWith('docs/')) return ['Project Operations'];
   if (file.endsWith('.html')) return ['Website Pages'];
   return ['Website Code'];
 }
 
 export function buildPlan(files) {
+  files = files.filter(file => !retired(file));
   const counts = new Map();
   for (const file of files) counts.set(path.basename(file), (counts.get(path.basename(file)) || 0) + 1);
   return files.map(file => {

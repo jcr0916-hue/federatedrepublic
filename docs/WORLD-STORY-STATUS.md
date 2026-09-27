@@ -2,7 +2,7 @@
 
 The structured chronology and clock registries in `_data/worldChronology.json` and `_data/worldClocks.json`, together with published front matter, supply chronology and clock checks. The generated dashboard below is checked during publishing. Human narrative notes remain editorial.
 
-**Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are archived under `docs/archive/world/`.
+**Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
 **Current published frontier:** Year 13, Month 12 · worldSeq through **137** · nrsSeq through **41** in the last verified batch (260924).
 

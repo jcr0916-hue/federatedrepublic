@@ -4,7 +4,8 @@
 
 This is the working source for facts that must remain true across stories. It replaces the old
 active `world-canon.md`, `CHARACTER-REFERENCE.md`, and individual arc-framework files. Historical
-planning notes remain under `docs/archive/world/`.
+planning notes are preserved on the `archive/legacy-project-material` cold-storage branch,
+not in the active source tree. See [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
 **Authority order**
 1. Published World pieces and their front matter establish what actually happened.
