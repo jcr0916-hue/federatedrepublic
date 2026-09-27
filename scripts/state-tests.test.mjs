@@ -14,6 +14,7 @@ test('Varek canonical prototype validates against the real State Constitution',(
   assert.deepEqual(original.data.stateProvisions,['3.5','12.1','12.2','12.3','12.10','12.11']);
   for(const name of ['Deverin Hask','Toma Ilvest','Tessin','Tessin Ford','Hollowmere County']) assert.ok(original.content.includes(name));
   assert.equal(original.data.date,'6.09');
+  assert.match(original.data.summary,/temporary emergency power/i);
 });
 test('State definitions are read across established heading formats without treating citations as definitions',()=>{
   assert.equal(Object.keys(states).length,12);
@@ -33,6 +34,7 @@ test('required State-test metadata rejects invalid types, identity, title, date,
     [{testNumber:Number.MAX_SAFE_INTEGER+1},/positive safe integer/],
     [{testId:'varek-test-1'},/testId must match/], [{state:'harren'},/Filename\/path/],
     [{title:''},/title must be/], [{title:'  '},/title must be/], [{title:undefined},/title must be/],
+    [{summary:''},/summary must be/], [{summary:'  '},/summary must be/], [{summary:undefined},/summary must be/],
     [{date:'6.13'},/fictional Year.MM/], [{date:'6.9'},/fictional Year.MM/], [{date:6.09},/fictional Year.MM/],
     [{date:'2026-09-26'},/fictional Year.MM/], [{date:'0.09'},/fictional Year.MM/],
     [{stateProvisions:'3.5'},/must be an array/], [{stateProvisions:['99.1']},/Unknown State provision/],
