@@ -4,7 +4,7 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **138** · nrsSeq through **45** in the September 28 publication batch.
+**Current published frontier:** Year 13, Month 12 · worldSeq through **138** · nrsSeq through **46**.
 
 Publication verified on the public site after [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28) merged and its production deployment reached READY. All five new entries are present in the complete Record; see `PROJECT-PROGRESS.md` for the release handoff.
 
@@ -21,7 +21,7 @@ Publication verified on the public site after [PR #28](https://github.com/jcr091
 - **LC election** [lc-election; scheduled; window]: Window spring Y14 (month bounds unset). Spring Y14 window; no exact date. Next: Review election scheduling and electoral obligations within the spring window.
 - **Lake Varda conference** [lake-varda-conference; open; unscheduled]: Unscheduled. No date, venue, delegation or final agenda. Next: Await a published scheduling decision; do not infer one.
 - **Varda Crossing §10.2 redaction petition** [varda-redaction; open; none]: No timed obligation. No constitutional hearing or response deadline. Next: Track a response if one is published; no timed action is required.
-- **Fiscal Equalization** [fiscal-equalization; open; none]: No timed obligation. No forced action clock. Next: Track voluntary reconvening or another canonically established trigger.
+- **Fiscal Equalization** [fiscal-equalization; open; none]: Committee review active; no constitutional action deadline. Next: Track submissions, committee options and any proposed statutory amendment without implying a forced remedy.
 - **Supreme Court seat cycle** [sc-seat-cycle; planned; template]: Uninstantiated; no current seat or dated obligation. Framework only; no current justice or class selected. Next: When canon establishes a seat, create its term-expiration and nomination/Senate clocks from the constitutional rules.
 - **MA State of the Economy report** [ma-economy-report; scheduled; deadline]: Due 14.05. Next report due no later than Y14 M5, absent statutory change. Next: Review publication of the next report or a canonically established statutory change.
 - **Judicial Pool admission notice** [judicial-pool-notice; scheduled; deadline]: Due 14.02. Next notice due no later than Y14 M2. Next: Review publication of the next quarterly notice.
@@ -35,7 +35,7 @@ Publication verified on the public site after [PR #28](https://github.com/jcr091
 | **LC election** | Spring Y14 is the established window; no exact election date or numbered-month season boundaries are established. |
 | **Lake Varda conference** | All proposed participants have agreed in principle, but no date/final agenda/delegation level is established. |
 | **Varda Crossing §10.2 redaction petition** | No constitutional response/hearing deadline established. |
-| **Fiscal Equalization** | No current action clock; the Joint Committee is not constitutionally forced to reconvene. |
+| **Fiscal Equalization** | The Joint Committee has voluntarily reconvened in Year 13, Month 12. No EM failure finding is active and no 90-day constitutional response clock is running; any reform proceeds through ordinary legislation. |
 | **Argent Ridge Trust designation** | No clock. Varek consented; Norvane refused. It cannot take effect unless Norvane later changes position. |
 
 ---
@@ -155,10 +155,10 @@ Open:
 **Election strategy for Thoss — planning only, not published canon:**
 - **Party posture:** Thoss is affiliated with, but does not personally lead, one of the **two major parties in the coalition** that elected her (installed via §2.6(1) constructive no-confidence, not a national vote). This remains proposed party structure, compatible with the published broad coalition but not a published party or seat breakdown. The phrase leaves room for smaller unnamed partners without requiring a full party directory. The "both governing parties" wording in `scenario-the-cause.html` belongs to a hypothetical scenario and cannot establish Torenthian party canon.
 - **Public posture:** deliberate restraint. She uses the bully pulpit sparingly and reserves substantive comment on ideas and policy for the lead-up to the election rather than campaigning loudly as a national figure now that she's addressing the whole country instead of a single district. Proposed in-character line retained: *"I serve at the Assembly's pleasure, and I serve the whole country. I'll focus on ideas and policies specifically during the lead-up to the election. The people choose my bosses, not me."* The two clauses separate institutional accountability from public service. §2.5(1)'s actual wording is **"at the confidence of the Assembly"**; "pleasure" is colloquial in the proposed quote, not a constitutional term of art. Loss of a working count alone does not remove her: §2.6(1) requires an absolute majority to install a named successor.
-- **Personal electoral route — unresolved before campaign publication:** §2.6(2) required Thoss to vacate her Assembly seat; §2.6.a requires formation after a general election and §§2.5–2.6 require a serving Assembly member for election as Civic Consul. Read §2.6(5)'s continuing-tenure rule alongside §2.6.a's post-election formation requirement; their interaction must not be silently resolved by a campaign story. Check her candidacy, seat status, continuous-service position and the §2.5 cooling-off rule before promising a personal renewal mechanism. Do not invent an automatic incumbent exemption, a resignation-and-return shortcut, a new national Civic Consul ballot or a legislative vote for her ceremonial seat. Advocacy for an Assembly coalition is distinct from being directly elected Civic Consul.
-- **Record framing — Korda and Fiscal Equalization:** both credited to her as *process*-integrity, not outcome credit — "the process held, and I didn't cut corners" — never as personal wins.
-  - Korda: crediting her personally for the eventual outcome would contradict the Convention's own planning discipline that the compromise must read as Korda delegates' work, not "Thoss's deal" (see Korda Convention planning notes above). Her record is that she convened and sustained an intact process under real pressure, not that she engineered the result.
-  - Fiscal Equalization: the mechanism is explicitly stalled by design with no §12.6 resolution to claim credit for. Her record is that she sent the equalization mechanism to the Legislature for full statutory review, in public, rather than move the queue by discretion (established in `_data/stats.js`'s `openSlot` content) — an integrity claim, not a results claim.
+- **Election posture and tenure:** Thoss is not personally running for Civic Consul in the general election. Under §2.6(5), she continues in office until removed through a constructive vote of no confidence naming a successor, resignation, or exhaustion of the eight-year lifetime service limit in §2.5(2). Her relationship to the election is therefore political rather than electoral: she can state policy priorities and seek an Assembly willing to sustain them without appearing on a national Civic Consul ballot. A weaker party result does not itself remove her; replacement requires an absolute majority for a named successor.
+- **Record framing — Korda and Fiscal Equalization:** distinguish the two.
+  - Korda remains primarily a *process-integrity* record for Thoss. Crediting her personally for the eventual outcome would contradict the Convention's planning discipline that the compromise must read as Korda delegates' work, not "Thoss's deal."
+  - Fiscal Equalization should become a qualified governing success before the election. Her defensible claim is that she refused discretionary queue-jumping, forced the mechanism into public statutory review, and helped produce a workable legislative correction. The Legislature must still own the enacted formula and the EM must independently certify the mechanism; do not turn the reform into unilateral Civic Consul action.
 - **Policy priorities** for the "ideas and policies" content her restraint line commits her to discussing, grounded in actual Civic Consul authority (§2.5(3): domestic policy and regulatory frameworks, the civic budget, the civil service, Article XII social-state administration) rather than invented authority:
   - Civil service professionalization — insulating appointment and promotion from whoever holds the office; on-brand for someone installed by a no-confidence vote, who has every incentive to argue the civil service shouldn't be this sensitive to who's Civic Consul.
   - Regulatory clarity — converting standing discretionary gaps into settled statutory rules; a "good government" plank rather than an applause line, but consistent with an institutionalist office-holder.
@@ -167,11 +167,21 @@ Open:
   - Common thread across all four: competence and de-personalization of power — reinforces "the people choose my bosses, not me" rather than sitting next to it as an unrelated policy list.
 - **Political tension to retain:** process integrity is a defensible record, not an answer to every delivery complaint. Published support is a reported working count of 266, down from the official 274 installation vote; no successor motion is established. Allies waiting for services can press her without becoming villains or proving the constitutional process failed. Civil-service and regulatory planks should distinguish steps within existing authority from statutory reforms and appropriations she must win in the Legislature; independent agencies remain independent. Keep official administration separate from campaign activity.
 
-### Fiscal Equalization (§12.6) — LIVE, stalled by design
+### Fiscal Equalization (§12.6) — LIVE, ACTIVE REVIEW
 
-The Joint Committee has not reconvened since the EM certification. The absence of a constitutional clock is part of the story. §12.6 can force a response to a failure finding; it does not force a particular policy answer.
+The Joint Committee on Fiscal Equalization has reconvened in Year 13, Month 12 (`torenthia-nrs-046.html` / NRS-Y13-0710). The current governing fact remains the Executive Monitor's Year 13 certification: the mechanism is operating as the Legislature defined it and no §12.6 failure finding is active. Therefore no 90-day constitutional response period is running.
 
-Note: the Korda Convention's new Joint Committee on Transition Facts is a **separate body** — do not conflate it with the stalled §12.6 Joint Committee. Different mandate, different origin, different chairs.
+The committee is proceeding through ordinary legislative review. Its stated agenda covers the published interval data, long-pending capacity requests, sustained service burdens and other measurable factors the present formula may not capture. It may recommend statutory language, recommend no amendment, or request more evidence. Receipt of a submission does not make it the committee's position.
+
+**Working resolution path — planning only, not published canon:**
+- Month 12: committee reconvenes and opens a structured evidence/submission phase.
+- Year 14 Month 1: compare reform options and move toward one or more draft formula approaches.
+- Year 14 Month 2: committee report and statutory markup; this should be the main legislative fight.
+- Late Month 2 / early Month 3: enact a revised mechanism through ordinary legislation if the votes hold.
+- Around Month 3: seek an independent EM certification of the revised mechanism before the election campaign reaches its peak. A favorable certification may still identify implementation risks or monitoring needs.
+- Political objective: Thoss comes out mostly a winner because the government converts a visible institutional problem into a lawful statutory correction, while the Legislature and EM retain their independent roles.
+
+Note: the Korda Convention's Joint Committee on Transition Facts is a **separate body** — do not conflate it with the §12.6 Joint Committee. Different mandate, origin and chairs.
 
 Potential future story: statutory funding of the §8.4 public-financing system through a levy on larger private contributions. Captured idea only; not activated, dated, or attached to a character.
 
