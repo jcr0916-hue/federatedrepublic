@@ -59,13 +59,13 @@ The first historical test is now published for five States. Additional episodes 
 
 The current published frontier remains Year 13, Month 12, with the Korda Convention as the main active narrative.
 
-The September 28 batch is published through [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28), merged at `42ce339dd0de5d6af86633c43c93c4dadc8c299d`. It contains NRS 042–045 and news 092: one receipt of Korda fiscal/transition material, three routine administrative records, and Mara Iset's [fiscal explainer](https://thefederatedrepublic.org/torenthia-news-092.html). Narrative sequence is now 138; NRS sequence is 45. All five pages and their archive entries were verified on the public site after production deployment `dpl_5QiadzXG8hkLNn4SqPFpPzMytmQW` reached READY.
+The September 28 batch is published through [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28), merged at `42ce339dd0de5d6af86633c43c93c4dadc8c299d`. It contains NRS 042–045 and news 092: one receipt of Korda fiscal/transition material, three routine administrative records, and Mara Iset's [fiscal explainer](https://thefederatedrepublic.org/torenthia-news-092.html). Narrative sequence is now 138; NRS sequence is 46. All five pages and their archive entries were verified on the public site after production deployment `dpl_5QiadzXG8hkLNn4SqPFpPzMytmQW` reached READY.
 
 Publication checks passed locally and in the PR workflow: 100 tests, 249 built pages, 142 World records, discovery, constitutional and scenario consistency. Browser review also verified source links and NRS previous/next navigation. The Korda dossier and affected Story Status entries are current.
 
 The daily working cadence is now **3–5 NRS records plus one news story**, with most NRS items ordinary administration and only one or two advancing live threads. News selects records independently and may return to earlier filings. The NRS should not read as a sequence of story teasers.
 
-Thoss's new election strategy has been reviewed against current constitutional text and published coverage. Restraint, process integrity and domestic administrative competence fit her established character; the delivery pressure behind her reported 266-member working count should remain real. `WORLD-STORY-STATUS.md` now records the spring Year 14 chronology, proposed rather than established party structure, the precise Assembly-confidence wording, and distinct Trust/Endowment powers. Her personal electoral/formation route remains a planning question requiring resolution before coverage promises how she stays in office. No new campaign event or political compromise was published.
+Thoss's election strategy is now framed around policy signaling rather than a personal Civic Consul campaign. Under §2.6(5) she remains in office until constructive replacement, resignation, or the lifetime service ceiling; the general election changes the Assembly that can sustain or replace her, not her office directly. Her restrained style remains the working direction, including the possibility that her party later loses a few seats while her broader Assembly support increases modestly.
 
 The Convention's Joint Committee on Transition Facts has begun producing evidence. Published material already establishes:
 
@@ -128,10 +128,9 @@ No further constitutional fine-detail review is pending unless deliberately reop
 
 Immediate weekday queue:
 
-1. publish Norvane Test 01 after final verification;
-2. publish Kelvant Test 01 after final verification;
-3. reconcile and extend Korda evidence through NRS and reporting while sustaining ordinary administrative records;
-4. advance Lake Varda conference scheduling when useful without forcing Sunderland to become suddenly communicative;
-5. keep Argent Ridge, Fiscal Equalization, Judicial Pool, and the Monetary Authority in the background unless a natural trigger arises.
+1. Fiscal Equalization review is active again through NRS-Y13-0710; next steps are submissions, committee options and eventual statutory text, with resolution targeted well before the spring Year 14 election;
+2. reconcile and extend Korda evidence through NRS and reporting while sustaining ordinary administrative records;
+3. advance Lake Varda conference scheduling when useful without forcing Sunderland to become suddenly communicative;
+4. keep Argent Ridge, Judicial Pool and the Monetary Authority in the background unless a natural trigger arises.
 
 Further State-profile rollout is paused. The current rule remains: **publish a State profile when the reader has a reason to click on that State**, rather than filling every State page merely for completeness.
