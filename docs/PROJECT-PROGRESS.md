@@ -1,6 +1,7 @@
 # Project progress and working ideas
 
-**Session closeout:** 2026-09-27  
+**Publication handoff:** 2026-09-28
+
 **Purpose:** current project-wide implementation handoff and idea log. This file is not constitutional or Torenthia canon. Canon and source authority remain where `PROJECT-SOURCES.md` says they are.
 
 ## Current implementation state
@@ -61,19 +62,28 @@ These drafts should receive a final canon/metadata/formatting pass immediately b
 
 The current published frontier remains Year 13, Month 12, with the Korda Convention as the main active narrative.
 
+The September 28 batch is published through [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28), merged at `42ce339dd0de5d6af86633c43c93c4dadc8c299d`. It contains NRS 042–045 and news 092: one receipt of Korda fiscal/transition material, three routine administrative records, and Mara Iset's [fiscal explainer](https://thefederatedrepublic.org/torenthia-news-092.html). Narrative sequence is now 138; NRS sequence is 45. All five pages and their archive entries were verified on the public site after production deployment `dpl_5QiadzXG8hkLNn4SqPFpPzMytmQW` reached READY.
+
+Publication checks passed locally and in the PR workflow: 100 tests, 249 built pages, 142 World records, discovery, constitutional and scenario consistency. Browser review also verified source links and NRS previous/next navigation. The Korda dossier and affected Story Status entries are current.
+
+The daily working cadence is now **3–5 NRS records plus one news story**, with most NRS items ordinary administration and only one or two advancing live threads. News selects records independently and may return to earlier filings. The NRS should not read as a sequence of story teasers.
+
+Thoss's new election strategy has been reviewed against current constitutional text and published coverage. Restraint, process integrity and domestic administrative competence fit her established character; the delivery pressure behind her reported 266-member working count should remain real. `WORLD-STORY-STATUS.md` now records the spring Year 14 chronology, proposed rather than established party structure, the precise Assembly-confidence wording, and distinct Trust/Endowment powers. Her personal electoral/formation route remains a planning question requiring resolution before coverage promises how she stays in office. No new campaign event or political compromise was published.
+
 The Convention's Joint Committee on Transition Facts has begun producing evidence. Published material already establishes:
 
 - the certified lake corridor is not economically uniform north to south;
 - northern districts are more integrated with Kelvant;
 - southern lake districts remain more connected to Korda's interior;
 - meaningful southern Lake Varda access has cultural, family, Indigenous, and practical importance as well as economic value.
+- the first fiscal/transition submissions have arrived, including Orin's promised material; payments and pending requests are distinct, shared costs and asset evidence are incomplete, and no comparable option totals have been adopted.
 
-The next content phase should emphasize **evidence before political convergence**.
+The next content phase should emphasize **reconciliation and further evidence before political convergence**.
 
 ### Working Korda runway
 
 **Week of September 28:**
-- fiscal-transfer and transition-cost records;
+- further fiscal-transfer and transition-cost records, following the September 28 receipt and explainer;
 - dry NRS/committee filings;
 - reporting that interprets evidence without implying a predetermined Convention result;
 - ordinary-life coverage to keep the Territory from becoming only a procedural story;
@@ -123,7 +133,7 @@ Immediate weekday queue:
 
 1. publish Norvane Test 01 after final verification;
 2. publish Kelvant Test 01 after final verification;
-3. continue Korda evidence through NRS and reporting;
+3. reconcile and extend Korda evidence through NRS and reporting while sustaining ordinary administrative records;
 4. advance Lake Varda conference scheduling when useful without forcing Sunderland to become suddenly communicative;
 5. keep Argent Ridge, Fiscal Equalization, Judicial Pool, and the Monetary Authority in the background unless a natural trigger arises.
 
