@@ -46,17 +46,14 @@ Published canonical history:
 - **Varek Test 01 — The 72-Hour Flood**
 - **Harren Test 01 — The Order Neither Executive Could Give**
 - **Rhovane Test 01 — The Harbor That Could Not Close**
-
-Approved drafts awaiting weekday publication:
-
 - **Norvane Test 01 — The Fourteenth Day**
-  - tests the Governor's fourteen-day emergency period, positive Assembly extension, selective continuation, and automatic lapse
-  - likely display provision: §6.2
+  - tests the Governor's fourteen-day emergency period, positive Assembly extension, selective continuation, emergency logistics, and automatic lapse
+  - display provision: §6.2
 - **Kelvant Test 01 — The Item the Governor Crossed Out**
-  - tests the line-item appropriations veto and two-thirds restoration by both legislative houses
-  - likely display provision: §2.4
+  - tests the line-item appropriations veto, legislative control of spending, and two-thirds restoration by both legislative houses
+  - display provision: §2.4
 
-These drafts should receive a final canon/metadata/formatting pass immediately before publication.
+The first historical test is now published for five States. Additional episodes remain planning material until individually reviewed and published.
 
 ## Torenthia World content
 
