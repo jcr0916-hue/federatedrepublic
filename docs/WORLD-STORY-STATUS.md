@@ -4,7 +4,7 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **138** · nrsSeq through **46**.
+**Current published frontier:** Year 13, Month 12 · worldSeq through **138** · nrsSeq through **51**.
 
 Publication verified on the public site after [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28) merged and its production deployment reached READY. All five new entries are present in the complete Record; see `PROJECT-PROGRESS.md` for the release handoff.
 
@@ -54,9 +54,10 @@ Last published:
 - **First transportation evidence published** (`torenthia-news-089.html`): committee records show meaningful north-south differences within the certified lake corridor. Northern districts are more economically integrated with Kelvant; southern lake districts remain more tightly connected to Korda's interior. No boundary proposal has been made.
 - **Southern lake ties established in ordinary-life coverage** (`torenthia-news-090.html`): Indigenous families and other residents in southern lake districts retain community, seasonal-food, family-history, and travel ties to Lake Varda. Coverage establishes that continued Korda lake access is a cultural and practical issue, not merely a freight question.
 - **Fiscal and transition material received** (`torenthia-nrs-042.html` / NRS-Y13-0706): federal transfer schedules, territorial service and asset returns, transportation maintenance schedules, and Orin's promised fiscal submission are entered for compilation. Payments and pending requests are distinguished; shared costs, ownership evidence and transition assumptions remain incompletely reconciled. This is a receipt, not the committee's preliminary report, a viability finding or a boundary recommendation. `torenthia-news-092.html` explains the accounting questions without establishing comparable totals or political convergence.
+- **Reconciliation request issued** (`torenthia-nrs-047.html` / NRS-Y13-0711): the Committee requests comparable schedules for shared facilities, service obligations, maintenance responsibility, transportation contracts and transition-cost assumptions. A fourteen-day working request is internal only and does not alter either the committee's non-binding target or the Convention clock. No valuation, boundary proposal or status recommendation is adopted.
 
 Open:
-- **Immediate runway (week of Sept. 28):** reconciliation and further fiscal/transition evidence after the first receipt; dry committee/NRS filings and continued ordinary-life coverage without implying an outcome. No new boundary proposal, delegate compromise or final cost comparison is established.
+- **Immediate runway (week of Sept. 28):** responses to the reconciliation request and further fiscal/transition evidence; dry committee/NRS filings and continued ordinary-life coverage without implying an outcome. No new boundary proposal, delegate compromise or final cost comparison is established.
 - **Following runway:** visible but incomplete movement by Mire and Rell, preservation of Orin's statehood objective, and subtle background signs of Thoss coalition work before any final resolution
 - additional committee evidence, polling, and internal procedure beyond the first transportation records
 - first substantive resolution/proposal
@@ -172,6 +173,8 @@ Open:
 The Joint Committee on Fiscal Equalization has reconvened in Year 13, Month 12 (`torenthia-nrs-046.html` / NRS-Y13-0710). The current governing fact remains the Executive Monitor's Year 13 certification: the mechanism is operating as the Legislature defined it and no §12.6 failure finding is active. Therefore no 90-day constitutional response period is running.
 
 The committee is proceeding through ordinary legislative review. Its stated agenda covers the published interval data, long-pending capacity requests, sustained service burdens and other measurable factors the present formula may not capture. It may recommend statutory language, recommend no amendment, or request more evidence. Receipt of a submission does not make it the committee's position.
+
+Morantine has now filed the first named territorial submission in this reconvened review (`torenthia-nrs-048.html` / NRS-Y13-0712), providing request-aging schedules, service-load data and a request that the Committee consider those factors explicitly. The Committee has not adopted the proposed factors, assigned weights or drafted an amendment.
 
 **Working resolution path — planning only, not published canon:**
 - Month 12: committee reconvenes and opens a structured evidence/submission phase.
