@@ -1,6 +1,6 @@
 # Project progress and working ideas
 
-**Publication handoff:** 2026-09-28
+**Publication handoff:** 2026-09-29
 
 **Purpose:** current project-wide implementation handoff and idea log. This file is not constitutional or Torenthia canon. Canon and source authority remain where `PROJECT-SOURCES.md` says they are.
 
@@ -59,9 +59,13 @@ The first historical test is now published for five States. Additional episodes 
 
 The current published frontier remains Year 13, Month 12, with the Korda Convention as the main active narrative.
 
-The September 28 batch is published through [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28), merged at `42ce339dd0de5d6af86633c43c93c4dadc8c299d`. It contains NRS 042–045 and news 092: one receipt of Korda fiscal/transition material, three routine administrative records, and Mara Iset's [fiscal explainer](https://thefederatedrepublic.org/torenthia-news-092.html). Narrative sequence is now 138; NRS sequence is 46. All five pages and their archive entries were verified on the public site after production deployment `dpl_5QiadzXG8hkLNn4SqPFpPzMytmQW` reached READY.
+The September 29 news addition is Dara Voss's RNN report, [Morantine Asks the Formula to Count the Wait](https://thefederatedrepublic.org/torenthia-news-093.html), following the NRS material already on main through NRS 051 (`93b5e06`). Narrative sequence is now 139; NRS sequence remains 51. The story develops Fiscal Equalization from Morantine's NRS-Y13-0712 submission and the existing EM interval data. It adds no failure finding, constitutional clock, committee decision or funding award. It is supporting coverage; the affected Story Status entry is updated and the existing dossier summary and core-record selection remain accurate.
 
-Publication checks passed locally and in the PR workflow: 100 tests, 249 built pages, 142 World records, discovery, constitutional and scenario consistency. Browser review also verified source links and NRS previous/next navigation. The Korda dossier and affected Story Status entries are current.
+Local release validation passed: 100 tests, 258 built pages, 149 World records, discovery, constitutional and scenario consistency. The generated Fiscal Equalization clock summary is synchronized with its existing registry entry; no timed obligation is established. PR CI and production verification remain release gates, not facts inferred from the local build.
+
+The September 28 batch is published through [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28), merged at `42ce339dd0de5d6af86633c43c93c4dadc8c299d`. It contains NRS 042–045 and news 092: one receipt of Korda fiscal/transition material, three routine administrative records, and Mara Iset's [fiscal explainer](https://thefederatedrepublic.org/torenthia-news-092.html). All five pages and their archive entries were verified on the public site after production deployment `dpl_5QiadzXG8hkLNn4SqPFpPzMytmQW` reached READY.
+
+September 28 publication checks passed locally and in the PR workflow: 100 tests, 249 built pages, 142 World records, discovery, constitutional and scenario consistency. Browser review also verified source links and NRS previous/next navigation. The Korda dossier and affected Story Status entries were updated with that release.
 
 The daily working cadence is now **3–5 NRS records plus one news story**, with most NRS items ordinary administration and only one or two advancing live threads. News selects records independently and may return to earlier filings. The NRS should not read as a sequence of story teasers.
 
