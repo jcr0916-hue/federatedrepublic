@@ -4,9 +4,9 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **138** · nrsSeq through **51**.
+**Current published frontier:** Year 13, Month 12 · worldSeq through **139** · nrsSeq through **51**.
 
-Publication verified on the public site after [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28) merged and its production deployment reached READY. All five new entries are present in the complete Record; see `PROJECT-PROGRESS.md` for the release handoff.
+The September 29 news addition follows the NRS batch already on main through NRS 051. See `PROJECT-PROGRESS.md` for the release handoff and the previously verified September 28 publication.
 
 ---
 
@@ -21,7 +21,7 @@ Publication verified on the public site after [PR #28](https://github.com/jcr091
 - **LC election** [lc-election; scheduled; window]: Window spring Y14 (month bounds unset). Spring Y14 window; no exact date. Next: Review election scheduling and electoral obligations within the spring window.
 - **Lake Varda conference** [lake-varda-conference; open; unscheduled]: Unscheduled. No date, venue, delegation or final agenda. Next: Await a published scheduling decision; do not infer one.
 - **Varda Crossing §10.2 redaction petition** [varda-redaction; open; none]: No timed obligation. No constitutional hearing or response deadline. Next: Track a response if one is published; no timed action is required.
-- **Fiscal Equalization** [fiscal-equalization; open; none]: Committee review active; no constitutional action deadline. Next: Track submissions, committee options and any proposed statutory amendment without implying a forced remedy.
+- **Fiscal Equalization** [fiscal-equalization; open; none]: No timed obligation. Committee review active; no constitutional action deadline. Next: Track submissions, committee options and any proposed statutory amendment without implying a forced remedy.
 - **Supreme Court seat cycle** [sc-seat-cycle; planned; template]: Uninstantiated; no current seat or dated obligation. Framework only; no current justice or class selected. Next: When canon establishes a seat, create its term-expiration and nomination/Senate clocks from the constitutional rules.
 - **MA State of the Economy report** [ma-economy-report; scheduled; deadline]: Due 14.05. Next report due no later than Y14 M5, absent statutory change. Next: Review publication of the next report or a canonically established statutory change.
 - **Judicial Pool admission notice** [judicial-pool-notice; scheduled; deadline]: Due 14.02. Next notice due no later than Y14 M2. Next: Review publication of the next quarterly notice.
@@ -175,6 +175,8 @@ The Joint Committee on Fiscal Equalization has reconvened in Year 13, Month 12 (
 The committee is proceeding through ordinary legislative review. Its stated agenda covers the published interval data, long-pending capacity requests, sustained service burdens and other measurable factors the present formula may not capture. It may recommend statutory language, recommend no amendment, or request more evidence. Receipt of a submission does not make it the committee's position.
 
 Morantine has now filed the first named territorial submission in this reconvened review (`torenthia-nrs-048.html` / NRS-Y13-0712), providing request-aging schedules, service-load data and a request that the Committee consider those factors explicitly. The Committee has not adopted the proposed factors, assigned weights or drafted an amendment.
+
+`torenthia-news-093.html` brings this submission into the news coverage through Dara Voss's RNN report. It explains request age, recurring service burdens and the choices any proposed weighting would raise, using the existing EM interval data without presenting it as a Morantine-specific average. This is supporting coverage, not a new committee action or core dossier step; the current dossier summary remains accurate. No finding, deadline, funding award or amendment decision is added. Next: further submissions or a published committee comparison of options, if the review advances.
 
 **Working resolution path — planning only, not published canon:**
 - Month 12: committee reconvenes and opens a structured evidence/submission phase.
