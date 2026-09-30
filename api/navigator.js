@@ -4,7 +4,7 @@
 const path = require('path');
 const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transport.js');
 const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
-const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'openai/gpt-5.4-nano';
+const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-haiku-4.5';
 
 const { expandQuery, rankProvisions, retrievalGate } = require('./_navigator-core.js');
 
