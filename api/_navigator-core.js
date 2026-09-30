@@ -145,21 +145,24 @@ function retrievalGate(question, ranked) {
 
   const refs = explicitSectionRefs(question);
   const top = ranked[0].score;
-  const second = ranked[1]?.score || 0;
   const strongExplicit = refs.length === 1 && ranked[0].provision.num === refs[0];
-  const clearLead = top >= 6 && (second === 0 || top >= second * 1.75);
   const multiStrong = ranked.filter(x => x.score >= Math.max(4, top * 0.7)).length > 1;
 
   if (refs.length > 1 || hasInteractionLanguage(question) || hasInterpretiveLanguage(question)) {
     return { status: 'ESCALATE', reason: 'CROSS_PROVISION_OR_INTERPRETIVE' };
   }
-  if (multiStrong && !strongExplicit) {
+  if (strongExplicit) {
+    return { status: 'TIER_A_CANDIDATE', reason: 'EXPLICIT_SINGLE_SECTION' };
+  }
+  if (multiStrong) {
     return { status: 'ESCALATE', reason: 'MULTIPLE_STRONG_MATCHES' };
   }
-  if (strongExplicit || clearLead) {
-    return { status: 'TIER_A_CANDIDATE', reason: strongExplicit ? 'EXPLICIT_SINGLE_SECTION' : 'CLEAR_RETRIEVAL_LEAD' };
-  }
-  return { status: 'ESCALATE', reason: 'WEAK_OR_AMBIGUOUS_RETRIEVAL' };
+
+  // Initial rollout is intentionally conservative: a lexical lead alone is not
+  // sufficient to let a cheap model answer. Natural-language queries without an
+  // explicit single-section anchor remain on the escalation path until benchmark
+  // evidence establishes a safe threshold.
+  return { status: 'ESCALATE', reason: 'UNANCHORED_RETRIEVAL' };
 }
 
 module.exports = {
