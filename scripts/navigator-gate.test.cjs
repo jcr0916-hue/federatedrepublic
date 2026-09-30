@@ -6,6 +6,7 @@ const {
   expandQuery,
   rankProvisions,
   retrievalGate,
+  phrasePresent,
 } = require('../api/_navigator-core.js');
 
 const provisions = constitution.flatMap(a => a.provisions);
@@ -70,4 +71,11 @@ test('explicit single sections are Tier A candidates while cross-provision and i
 
   const ambiguity = cases.find(c => c.id === 'interpret-02');
   assert.equal(retrievalGate(ambiguity.question, rankProvisions(provisions, expandQuery(ambiguity.question), 5)).status, 'ESCALATE');
+});
+
+test('short synonym aliases match whole words, not substrings inside unrelated words', () => {
+  assert.equal(phrasePresent('Executive Monitor EM review', 'em'), true);
+  assert.equal(phrasePresent('Quembles?', 'em'), false);
+  assert.equal(phrasePresent('The CC forms a government', 'cc'), true);
+  assert.equal(phrasePresent('accountability', 'cc'), false);
 });
