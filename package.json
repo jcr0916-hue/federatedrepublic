@@ -19,7 +19,7 @@
     "test:world-authoring": "node --test scripts/world-authoring.test.mjs",
     "check:world-publish": "node scripts/check-world-publishing.mjs",
     "test:world-publish": "node --test scripts/world-publishing.test.mjs",
-    "world:publish-check": "npm run test:state-tests && npm run test:state-constitutions && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:assets && npm run test:crossroads && npm run test:ai-transport && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py",
+    "world:publish-check": "npm run test:state-tests && npm run test:state-constitutions && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:assets && npm run test:crossroads && npm run test:ai-transport && npm run test:navigator-gate && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py",
     "republic:ingest": "node scripts/republic-ingest.mjs",
     "test:ingest": "node --test scripts/republic-ingest.test.mjs",
     "test:chronology": "node --test scripts/world-chronology.test.mjs",
@@ -29,7 +29,8 @@
     "test:state-tests": "node --test scripts/state-tests.test.mjs",
     "test:state-constitutions": "node --test scripts/state-constitution-display.test.mjs",
     "test:ai-transport": "node --test scripts/ai-transport.test.cjs",
-    "benchmark:crossroads-ai": "node scripts/benchmark-crossroads-ai.mjs"
+    "benchmark:crossroads-ai": "node scripts/benchmark-crossroads-ai.mjs",
+    "test:navigator-gate": "node --test scripts/navigator-gate.test.cjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
