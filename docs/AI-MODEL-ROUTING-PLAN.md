@@ -369,6 +369,25 @@ Every current site AI feature runs on a Sonnet-class model. Direct code inspecti
 
 **Net:** two of four features can move essentially immediately (Crossroads trivially, Navigator with moderate work since its retrieval half already exists), one needs real benchmarking before touching (Annotate), and one should very likely stay on Sonnet permanently (Survey). This is a smaller, more concrete starting point than building out the full cascade architecture before touching anything live.
 
+### September 30, 2026 — live Gateway benchmark
+
+A fixed 18-case Navigator benchmark was run through Vercel AI Gateway against the same retrieved constitutional packets for three lower-cost candidates. The benchmark included direct single-section questions, cross-provision questions, interpretive questions, true no-match questions, and false-premise questions.
+
+| Model | Disposition correct | False non-escalations | Invalid returned source IDs | Typical batch median latency |
+| --- | ---: | ---: | ---: | ---: |
+| GPT-5.4 Nano | 12/18 (66.7%) | 3 | 7 | 1.59–1.76 s |
+| Gemini 3.5 Flash Lite | 11/18 (61.1%) | 2 | 5 | 0.99–1.04 s |
+| Claude Haiku 4.5 | 14/18 (77.8%) | 0 | 7 | 2.05–2.17 s |
+
+Important interpretation:
+- **False non-escalation remains the fatal metric.** Nano answered three cases that the benchmark required to escalate; Gemini did so twice. Neither should be promoted to Navigator Tier A on this evidence.
+- Haiku produced **zero false non-escalations** in this run and correctly handled all six explicit single-section Tier-A cases. It therefore becomes the preferred Navigator shadow comparator for the next benchmark stage, but is **not yet promoted to user-visible Tier A**.
+- Source-ID conformance still needs work across all candidates. The runtime validator must continue rejecting or filtering section IDs not present in the retrieved packet.
+- The sample is deliberately small. Promotion requires a broader direct-rule corpus and repeated runs, not one favorable 18-case result.
+- The Gateway key and cross-provider transport were verified in production. The temporary benchmark endpoint was removed immediately after measurement.
+
+This result favors the simpler two-tier hypothesis—verified retrieval + Haiku-class bounded answering + Sonnet escalation—over adding a more complex middle tier before the gate is proven.
+
 ### Phase 2 — model-to-task benchmark
 
 Test models according to the job they might actually perform.
