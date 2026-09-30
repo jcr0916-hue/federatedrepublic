@@ -10,7 +10,7 @@ function anthropicDirectModel(model) {
   return String(model || '').replace(/^anthropic\//, '');
 }
 
-async function anthropicMessage({
+async function gatewayMessage({
   model,
   max_tokens,
   system,
@@ -18,28 +18,39 @@ async function anthropicMessage({
   tags = [],
 }) {
   const token = gatewayToken();
+  if (!token) throw new Error('AI Gateway credential not configured');
 
-  if (token) {
-    const gatewayModel = String(model || '').includes('/') ? String(model) : `anthropic/${model}`;
-    const response = await fetch('https://ai-gateway.vercel.sh/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: gatewayModel,
-        max_tokens,
-        system,
-        messages,
-        providerOptions: {
-          gateway: {
-            tags: ['site:federated-republic', ...tags],
-          },
+  const gatewayModel = String(model || '').includes('/') ? String(model) : `anthropic/${model}`;
+  const response = await fetch('https://ai-gateway.vercel.sh/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: gatewayModel,
+      max_tokens,
+      system,
+      messages,
+      providerOptions: {
+        gateway: {
+          tags: ['site:federated-republic', ...tags],
         },
-      }),
-    });
-    return { response, route: 'gateway', model: gatewayModel };
+      },
+    }),
+  });
+  return { response, route: 'gateway', model: gatewayModel };
+}
+
+async function anthropicMessage({
+  model,
+  max_tokens,
+  system,
+  messages,
+  tags = [],
+}) {
+  if (gatewayToken()) {
+    return gatewayMessage({ model, max_tokens, system, messages, tags });
   }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -63,4 +74,4 @@ async function anthropicMessage({
   return { response, route: 'anthropic-direct', model: directModel };
 }
 
-module.exports = { anthropicMessage, gatewayToken, anthropicDirectModel };
+module.exports = { anthropicMessage, gatewayMessage, gatewayToken, anthropicDirectModel };
