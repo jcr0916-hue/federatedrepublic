@@ -135,8 +135,14 @@
     },
     "timing": {
       "kind": "window",
-      "year": 14,
-      "month": 1,
+      "start": {
+        "year": 14,
+        "month": 1
+      },
+      "end": {
+        "year": 14,
+        "month": 1
+      },
       "note": "Opening month and host are established; exact day and delegation lists remain unsettled."
     },
     "summary": "Scheduled to open in Valedon during Y14 M1; exact day and delegation lists remain unsettled.",
