@@ -143,8 +143,8 @@ export default function (eleventyConfig) {
   //   - only the first occurrence per page, so long pages don't get littered
   eleventyConfig.addTransform("glossaryDefine", function (content) {
     if (!(this.page.outputPath || "").endsWith(".html")) return content;
-    // the glossary page itself defines these terms; don't self-annotate
-    if ((this.page.inputPath || "").includes("glossary.html")) return content;
+    // The glossary defines these terms; the Constitution print page must contain only canonical text.
+    if (/\/(?:glossary|constitution-print)\.html$/.test(this.page.inputPath || "")) return content;
 
     let glossary;
     try {
