@@ -12,6 +12,13 @@ const CATEGORY_IMAGE = {
 
 const updates = [
   {
+    category: "constitution",
+    badge: "Amendment",
+    title: "§2.16(9) — When the Acting Executive Cannot Act",
+    blurb: "If an acting executive is determined temporarily incapacitated, authority passes immediately to the next qualified successor. The rule applies successively, using the existing incapacity procedure and succession orders.",
+    href: "constitutional-history.html#s2-16-acting-incapacity",
+  },
+  {
     category: "world",
     badge: "The World",
     title: "The Court affirms it. The Convention continues.",
