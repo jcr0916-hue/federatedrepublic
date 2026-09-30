@@ -29,6 +29,7 @@ async function evaluate(item, provisions) {
     model: HAIKU,
     max_tokens: 260,
     system: ANSWER_SYSTEM,
+    temperature: 0,
     messages:[{role:'user',content:`Question: ${item.question}\n\nDeterministic gate: ${gate.status} / ${gate.reason}\n\nProvisions:\n${packet}`}],
     tags:['feature:navigator-direct-benchmark','role:candidate',`case:${item.id}`],
   });
@@ -57,6 +58,7 @@ async function evaluate(item, provisions) {
       model: VERIFIER,
       max_tokens: 420,
       system: VERIFY_SYSTEM,
+      temperature: 0,
       messages:[{role:'user',content:`Question: ${item.question}\n\nSource packet:\n${packet}\n\nCandidate answer:\n${answer}`}],
       tags:['feature:navigator-direct-benchmark','role:verifier',`case:${item.id}`],
     });
