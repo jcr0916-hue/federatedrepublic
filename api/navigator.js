@@ -2,6 +2,8 @@
 // Node.js format — compatible with all Vercel project types
 
 const path = require('path');
+const { anthropicMessage } = require('./_ai-transport.js');
+const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
 
 const STOP = new Set(['a','an','the','is','are','was','were','be','been','being',
   'have','has','had','do','does','did','will','would','could','should','may',
@@ -213,9 +215,6 @@ module.exports = async (req, res) => {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
-
   const { question } = req.body || {};
   if (!question || !question.trim()) return res.status(400).json({ error: 'Question required' });
 
@@ -235,21 +234,20 @@ module.exports = async (req, res) => {
 
     const provisionContext = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
 
-    const upstream = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 320,
-        system: `You are a plain language guide to the Federated Republic constitution. A user asked a question. You have been given the relevant constitutional provisions. Write 3-4 sentences that directly answer the question using only those provisions. If the user asks about something that doesn't exist in the constitution (like a "president" or "impeachment"), explain what the equivalent constitutional mechanism is. Be accurate, clear, and direct. Plain text only — no headings, bullets, or formatting.`,
-        messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nProvisions:\n${provisionContext}` }],
-      }),
+    const { response: upstream, route, model } = await anthropicMessage({
+      model: MODEL,
+      max_tokens: 320,
+      system: `You are a plain language guide to the Federated Republic constitution. A user asked a question. You have been given the relevant constitutional provisions. Write 3-4 sentences that directly answer the question using only those provisions. If the user asks about something that doesn't exist in the constitution (like a "president" or "impeachment"), explain what the equivalent constitutional mechanism is. Be accurate, clear, and direct. Plain text only — no headings, bullets, or formatting.`,
+      messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nProvisions:\n${provisionContext}` }],
+      tags: ['feature:navigator', `env:${process.env.VERCEL_ENV || 'local'}`],
     });
 
+    if (!upstream.ok) {
+      const detail = await upstream.text().catch(() => '');
+      return res.status(502).json({ error: 'Upstream error', detail: detail.slice(0, 200) });
+    }
+
+    console.info('[navigator-ai]', { route, model });
     const data = await upstream.json();
     const summary = data.content?.[0]?.text?.trim() || '';
 
