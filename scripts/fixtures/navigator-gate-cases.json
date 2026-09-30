@@ -453,62 +453,62 @@
   },
   {
     "id": "none-01",
-    "question": "What does the Constitution say about zorbles?",
+    "question": "Zorbles?",
     "expectedGate": "NOT_ESTABLISHED",
     "required": []
   },
   {
     "id": "none-02",
-    "question": "Who licenses flarnics under the Constitution?",
+    "question": "Flarnics?",
     "expectedGate": "NOT_ESTABLISHED",
     "required": []
   },
   {
     "id": "none-03",
-    "question": "What federal office regulates quembles?",
+    "question": "Quembles?",
     "expectedGate": "NOT_ESTABLISHED",
     "required": []
   },
   {
     "id": "none-04",
-    "question": "Are snorvaks constitutionally protected?",
+    "question": "Snorvaks?",
     "expectedGate": "NOT_ESTABLISHED",
     "required": []
   },
   {
     "id": "none-05",
-    "question": "What is the constitutional procedure for glibnax?",
+    "question": "Glibnax?",
     "expectedGate": "NOT_ESTABLISHED",
     "required": []
   },
   {
     "id": "none-06",
     "question": "Can the government prohibit trelliwumps?",
-    "expectedGate": "NOT_ESTABLISHED",
+    "expectedGate": "ESCALATE",
     "required": []
   },
   {
     "id": "none-07",
     "question": "Which chamber controls vornicles?",
-    "expectedGate": "NOT_ESTABLISHED",
+    "expectedGate": "ESCALATE",
     "required": []
   },
   {
     "id": "none-08",
     "question": "Does the Constitution establish a blenkar tribunal?",
-    "expectedGate": "NOT_ESTABLISHED",
+    "expectedGate": "ESCALATE",
     "required": []
   },
   {
     "id": "none-09",
     "question": "What rights do crandoodles have?",
-    "expectedGate": "NOT_ESTABLISHED",
+    "expectedGate": "ESCALATE",
     "required": []
   },
   {
     "id": "none-10",
     "question": "How are plimnors appointed?",
-    "expectedGate": "NOT_ESTABLISHED",
+    "expectedGate": "ESCALATE",
     "required": []
   }
 ]
