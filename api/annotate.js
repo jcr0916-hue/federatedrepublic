@@ -1,6 +1,8 @@
 // Vercel Serverless Function: Constitutional Annotation
 // Sonnet generates design rationale for any provision on demand
 
+const { anthropicMessage } = require('./_ai-transport.js');
+const MODEL = process.env.AI_MODEL_ANNOTATE || 'anthropic/claude-sonnet-5';
 
 const SYSTEM = `You are a constitutional design analyst for the Federated Republic. When a user clicks on a provision, you explain the design rationale behind it — the why, not just the what.
 
@@ -58,9 +60,6 @@ module.exports = async (req, res) => {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
-
   const { num } = req.body || {};
   getConstitutionText();
   const provision = cachedData.flatMap(a => a.provisions).find(p => p.num === num);
@@ -68,24 +67,18 @@ module.exports = async (req, res) => {
   const { name, text } = provision;
 
   try {
-    const upstream = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-5',
-        max_tokens: 2000,
-        system: SYSTEM + getConstitutionText(),
-        messages: [{
-          role: 'user',
-          content: `Explain the design rationale for this provision:\n\n${num} — ${name}\n\n"${text}"`
-        }],
-      }),
+    const { response: upstream, route, model } = await anthropicMessage({
+      model: MODEL,
+      max_tokens: 2000,
+      system: SYSTEM + getConstitutionText(),
+      messages: [{
+        role: 'user',
+        content: `Explain the design rationale for this provision:\n\n${num} — ${name}\n\n"${text}"`
+      }],
+      tags: ['feature:annotate', `env:${process.env.VERCEL_ENV || 'local'}`],
     });
 
+    console.info('[annotate-ai]', { route, model });
     const data = await upstream.json();
 
     if (!upstream.ok || data.error) {
