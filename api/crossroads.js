@@ -8,8 +8,9 @@
 //
 // No data is stored. Stateless per request.
 
-const { anthropicMessage } = require('./_ai-transport.js');
+const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transport.js');
 const MODEL = process.env.AI_MODEL_CROSSROADS || 'anthropic/claude-sonnet-5';
+const SHADOW_MODEL = process.env.AI_MODEL_CROSSROADS_SHADOW || 'openai/gpt-5.4-nano';
 
 const SYSTEM = `You are the routing brain for an interactive constitutional-fiction feature called Living Crossroads. A player is role-playing a political decision. At each scene they may type a move in their own words. Your ONLY job is to read that move and decide which pre-written outcome it best matches — you are a classifier, not a writer. You never write story text. You output a single JSON routing decision.
 
@@ -72,13 +73,32 @@ THE PLAYER'S MOVE (their own words):
 
 Return the JSON routing decision.`;
 
-    const { response: upstream, route, model } = await anthropicMessage({
+    const envTag = `env:${process.env.VERCEL_ENV || 'local'}`;
+    const primaryPromise = anthropicMessage({
       model: MODEL,
       max_tokens: 200,
       system: SYSTEM,
       messages: [{ role: 'user', content: userMsg }],
-      tags: ['feature:crossroads', `env:${process.env.VERCEL_ENV || 'local'}`],
+      tags: ['feature:crossroads', 'role:primary', envTag],
     });
+
+    // Shadow classification is observational only. It never changes the fragment
+    // returned to the player. Run it in parallel so it normally adds no latency
+    // beyond the slower primary call, and only when Gateway credentials exist.
+    const shadowPromise = gatewayToken()
+      ? gatewayMessage({
+          model: SHADOW_MODEL,
+          max_tokens: 200,
+          system: SYSTEM,
+          messages: [{ role: 'user', content: userMsg }],
+          tags: ['feature:crossroads', 'role:shadow', envTag],
+        }).catch(error => ({ error }))
+      : Promise.resolve(null);
+
+    const [{ response: upstream, route, model }, shadowResult] = await Promise.all([
+      primaryPromise,
+      shadowPromise,
+    ]);
 
     if (!upstream.ok) {
       const errText = await upstream.text().catch(()=> '');
@@ -108,6 +128,44 @@ Return the JSON routing decision.`;
     if (!allowed.has(parsed.fragment)) {
       parsed.fragment = 'out_of_bounds';
       parsed.read = (parsed.read || '') + ' [invalid-id-coerced]';
+    }
+
+    if (shadowResult?.response) {
+      try {
+        if (shadowResult.response.ok) {
+          const shadowData = await shadowResult.response.json();
+          const shadowRaw = (shadowData.content || [])
+            .filter(b => b.type === 'text')
+            .map(b => b.text).join('').trim();
+          const shadowParsed = JSON.parse(shadowRaw.replace(/```json|```/g, '').trim());
+          const shadowFragment = allowed.has(shadowParsed.fragment)
+            ? shadowParsed.fragment
+            : 'out_of_bounds';
+          console.info('[crossroads-shadow]', {
+            primaryModel: model,
+            shadowModel: shadowResult.model,
+            primaryFragment: parsed.fragment,
+            shadowFragment,
+            agree: parsed.fragment === shadowFragment,
+          });
+        } else {
+          console.warn('[crossroads-shadow]', {
+            shadowModel: shadowResult.model,
+            status: shadowResult.response.status,
+            error: 'upstream-non-ok',
+          });
+        }
+      } catch (error) {
+        console.warn('[crossroads-shadow]', {
+          shadowModel: shadowResult.model,
+          error: 'parse-or-request-failure',
+        });
+      }
+    } else if (shadowResult?.error) {
+      console.warn('[crossroads-shadow]', {
+        shadowModel: SHADOW_MODEL,
+        error: 'request-failure',
+      });
     }
 
     return res.status(200).json({

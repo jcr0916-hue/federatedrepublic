@@ -84,3 +84,44 @@ test('AI transport retains direct Anthropic rollback when Gateway credentials ar
     if (originalAnthropic === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalAnthropic;
   }
 });
+
+test('Gateway-only transport accepts a non-Anthropic model for shadow benchmarking', async () => {
+  const originalFetch = global.fetch;
+  const originalGateway = process.env.VERCEL_OIDC_TOKEN;
+  const originalApi = process.env.AI_GATEWAY_API_KEY;
+
+  process.env.VERCEL_OIDC_TOKEN = 'oidc-test-token';
+  delete process.env.AI_GATEWAY_API_KEY;
+
+  let seen;
+  global.fetch = async (url, options) => {
+    seen = { url, body: JSON.parse(options.body) };
+    return { ok: true, json: async () => ({ content: [] }) };
+  };
+
+  try {
+    delete require.cache[require.resolve('../api/_ai-transport.js')];
+    const { gatewayMessage } = require('../api/_ai-transport.js');
+    const result = await gatewayMessage({
+      model: 'openai/gpt-5.4-nano',
+      max_tokens: 20,
+      system: 'system',
+      messages: [{ role: 'user', content: 'hello' }],
+      tags: ['feature:crossroads', 'role:shadow'],
+    });
+
+    assert.equal(result.route, 'gateway');
+    assert.equal(result.model, 'openai/gpt-5.4-nano');
+    assert.equal(seen.url, 'https://ai-gateway.vercel.sh/v1/messages');
+    assert.equal(seen.body.model, 'openai/gpt-5.4-nano');
+    assert.deepEqual(seen.body.providerOptions.gateway.tags, [
+      'site:federated-republic',
+      'feature:crossroads',
+      'role:shadow',
+    ]);
+  } finally {
+    global.fetch = originalFetch;
+    if (originalGateway === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalGateway;
+    if (originalApi === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalApi;
+  }
+});
