@@ -125,17 +125,26 @@
   {
     "id": "lake-varda-conference",
     "title": "Lake Varda conference",
-    "status": "open",
+    "status": "scheduled",
     "trigger": {
-      "description": "Participants accepted in principle"
+      "description": "Participating governments agreed to open the conference in Valedon during Year 14, Month 1",
+      "date": {
+        "year": 13,
+        "month": 12
+      }
     },
     "timing": {
-      "kind": "unscheduled"
+      "kind": "window",
+      "year": 14,
+      "month": 1,
+      "note": "Opening month and host are established; exact day and delegation lists remain unsettled."
     },
-    "summary": "No date, venue, delegation or final agenda.",
-    "nextAction": "Await a published scheduling decision; do not infer one.",
+    "summary": "Scheduled to open in Valedon during Y14 M1; exact day and delegation lists remain unsettled.",
+    "nextAction": "Track final scheduling, delegation designations and the opening conference agenda without implying agreement on responsibility for prior incidents.",
     "sources": [
-      "torenthia-news-072"
+      "torenthia-news-077",
+      "torenthia-nrs-052",
+      "torenthia-news-094"
     ],
     "arcs": [
       "lake-varda"
