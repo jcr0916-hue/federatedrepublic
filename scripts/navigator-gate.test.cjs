@@ -18,8 +18,8 @@ test('Navigator benchmark fixture has balanced coverage', () => {
     return m;
   }, {});
   assert.equal(counts.TIER_A_CANDIDATE, 24);
-  assert.equal(counts.ESCALATE, 30);
-  assert.equal(counts.NOT_ESTABLISHED, 10);
+  assert.equal(counts.ESCALATE, 35);
+  assert.equal(counts.NOT_ESTABLISHED, 5);
 });
 
 test('Navigator deterministic retrieval and escalation benchmark', () => {
