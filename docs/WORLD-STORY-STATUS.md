@@ -4,9 +4,9 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **139** · nrsSeq through **51**.
+**Current published frontier:** Year 13, Month 12 · worldSeq through **140** · nrsSeq through **56**.
 
-The September 29 news addition follows the NRS batch already on main through NRS 051. See `PROJECT-PROGRESS.md` for the release handoff and the previously verified September 28 publication.
+The September 30 release adds NRS 052–056 and news 094. Lake Varda now has a Valedon host and a Year 14, Month 1 opening window; Korda has supplied a partial facilities-reconciliation response. See `PROJECT-PROGRESS.md` for release detail.
 
 ---
 
@@ -19,7 +19,7 @@ The September 29 news addition follows the NRS batch already on main through NRS
 - **Korda committee preliminary compilation** [korda-committee-target; open; relative]: 30 days from 13.12 (non-binding); calendar endpoint unresolved. Non-binding 30-day target; no constitutional deadline. Next: Review the preliminary compilation target without implying a required constitutional outcome.
 - **Argent Ridge repeal** [argent-repeal; open; relative]: Up to 8 months from 13.09 day 12; calendar endpoint unresolved. Phase One signatures remain open; calendar convention unresolved. Next: Review signature-period progress and establish calendar conversion before dating the endpoint.
 - **LC election** [lc-election; scheduled; window]: Window spring Y14 (month bounds unset). Spring Y14 window; no exact date. Next: Review election scheduling and electoral obligations within the spring window.
-- **Lake Varda conference** [lake-varda-conference; open; unscheduled]: Unscheduled. No date, venue, delegation or final agenda. Next: Await a published scheduling decision; do not infer one.
+- **Lake Varda conference** [lake-varda-conference; scheduled; window]: Window Y14 M1. Scheduled to open in Valedon during Y14 M1; exact day and delegation lists remain unsettled. Next: Track final scheduling, delegation designations and the opening conference agenda without implying agreement on responsibility for prior incidents.
 - **Varda Crossing §10.2 redaction petition** [varda-redaction; open; none]: No timed obligation. No constitutional hearing or response deadline. Next: Track a response if one is published; no timed action is required.
 - **Fiscal Equalization** [fiscal-equalization; open; none]: No timed obligation. Committee review active; no constitutional action deadline. Next: Track submissions, committee options and any proposed statutory amendment without implying a forced remedy.
 - **Supreme Court seat cycle** [sc-seat-cycle; planned; template]: Uninstantiated; no current seat or dated obligation. Framework only; no current justice or class selected. Next: When canon establishes a seat, create its term-expiration and nomination/Senate clocks from the constitutional rules.
@@ -33,7 +33,7 @@ The September 29 news addition follows the NRS batch already on main through NRS
 | **Korda Convention** | Running again after the SC stay dissolved on Month 12 Day 26. Three active days were credited before the stay; approximately **87 active days remain** from Day 26 under §15.5.a(4). Formation of the Joint Committee on Transition Facts (Month 12) does not toll, pause, or extend this period. **Working editorial target for the actual Convention resolution: Monday, October 12, 2026.** This is not a published promise or constitutional deadline; move it later if the evidentiary and political setup is not yet earned. |
 | **Argent Ridge repeal** | Phase One signature period began after the eligibility challenge window closed unused (Month 9 Day 12). It may run up to eight months. The calendar's next-year naming convention has not been established; do not invent a "Year 14" date without resolving that first. |
 | **LC election** | Spring Y14 is the established window; no exact election date or numbered-month season boundaries are established. |
-| **Lake Varda conference** | All proposed participants have agreed in principle, but no date/final agenda/delegation level is established. |
+| **Lake Varda conference** | Torenthia, Caldris and Valedon have agreed to open the conference in Valedon during Year 14, Month 1. Exact day and delegation lists remain unsettled; the opening agenda is limited to civilian navigation, rescue coordination and risk reduction, without an agreed account of prior incidents. |
 | **Varda Crossing §10.2 redaction petition** | No constitutional response/hearing deadline established. |
 | **Fiscal Equalization** | The Joint Committee has voluntarily reconvened in Year 13, Month 12. No EM failure finding is active and no 90-day constitutional response clock is running; any reform proceeds through ordinary legislation. |
 | **Argent Ridge Trust designation** | No clock. Varek consented; Norvane refused. It cannot take effect unless Norvane later changes position. |
@@ -55,6 +55,7 @@ Last published:
 - **Southern lake ties established in ordinary-life coverage** (`torenthia-news-090.html`): Indigenous families and other residents in southern lake districts retain community, seasonal-food, family-history, and travel ties to Lake Varda. Coverage establishes that continued Korda lake access is a cultural and practical issue, not merely a freight question.
 - **Fiscal and transition material received** (`torenthia-nrs-042.html` / NRS-Y13-0706): federal transfer schedules, territorial service and asset returns, transportation maintenance schedules, and Orin's promised fiscal submission are entered for compilation. Payments and pending requests are distinguished; shared costs, ownership evidence and transition assumptions remain incompletely reconciled. This is a receipt, not the committee's preliminary report, a viability finding or a boundary recommendation. `torenthia-news-092.html` explains the accounting questions without establishing comparable totals or political convergence.
 - **Reconciliation request issued** (`torenthia-nrs-047.html` / NRS-Y13-0711): the Committee requests comparable schedules for shared facilities, service obligations, maintenance responsibility, transportation contracts and transition-cost assumptions. A fourteen-day working request is internal only and does not alter either the committee's non-binding target or the Convention clock. No valuation, boundary proposal or status recommendation is adopted.
+- **First partial reconciliation response received** (`torenthia-nrs-053.html` / NRS-Y13-0717): Korda's territorial administration supplies a first reconciled schedule of facility ownership, operation, service area and routine maintenance responsibility. Several title, contract and archive entries remain pending; no valuation, cost allocation, boundary proposal or status recommendation is established.
 
 Open:
 - **Immediate runway (week of Sept. 28):** responses to the reconciliation request and further fiscal/transition evidence; dry committee/NRS filings and continued ordinary-life coverage without implying an outcome. No new boundary proposal, delegate compromise or final cost comparison is established.
@@ -110,21 +111,20 @@ Candidates: Carrow, Mak, Vael, Sandris. Latest posture: all four are now campaig
 **All four candidates went on record about Korda specifically for the first time this week** (`torenthia-news-085.html`): Sandris sent a substantive policy memo consistent with his established granular-Korda focus; Vael kept it short and deliberately outside his stated priorities; Mak characterized the new committee's formation as a sign of stalemate, arguably overstating what the committee's own filing says — consistent with her established pattern of overstating findings for effect; Carrow declined comment, citing institutional separation from her sitting Foreign Affairs role.
 
 Good next beats:
-- conference scheduling becoming concrete
-- candidate reaction to actual agenda/delegation choices
+- candidate reaction to the now-established Month 1 conference window
+- reaction to actual delegation choices and detailed agenda
 - ordinary campaign mechanics rather than another crisis reaction
 - ballot/electoral-finance mechanics if needed
 - whether any candidate revisits or is pressed further on their Korda comments as the Convention nears its own resolution
 
 ### Lake Varda / Sunderland — LIVE
 
-Valedon and Caldris accepted a conference in principle. Valedon offered to host while narrowing the opening agenda to civilian navigation, rescue coordination, and risk reduction; it did not endorse Torenthia's account of previous incidents.
+Torenthia, Caldris and Valedon have now scheduled the conference to open in Valedon during Year 14, Month 1 (`torenthia-nrs-052.html`, `torenthia-news-094.html`). The opening agenda centers civilian navigation, rescue coordination and risk reduction; scheduling does not establish a common account of the prior incidents or any government's responsibility.
 
 Still open:
-- date
-- host venue
-- delegation level
-- final agenda
+- exact opening day
+- delegation level and names
+- detailed/final agenda beyond the agreed opening subjects
 - Sunderland participation/response
 - separate §10.2 redaction petition
 
