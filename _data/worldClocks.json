@@ -22,7 +22,7 @@
       },
       "note": "Approximately 87 active days remain from Y13 M12 Day 26; month lengths and active-day accounting must be reviewed before claiming a deadline. Committee formation does not toll the clock."
     },
-    "summary": "Running; approximately 87 active days remain under \u00a715.5.a(4).",
+    "summary": "Running; approximately 87 active days remain under §15.5.a(4).",
     "nextAction": "Review elapsed active days and required Convention resolution; do not presume its outcome.",
     "sources": [
       "torenthia-sc-002",
@@ -144,7 +144,7 @@
   },
   {
     "id": "varda-redaction",
-    "title": "Varda Crossing \u00a710.2 redaction petition",
+    "title": "Varda Crossing §10.2 redaction petition",
     "status": "open",
     "trigger": {
       "description": "Redaction petition remains unresolved"
@@ -167,15 +167,21 @@
     "title": "Fiscal Equalization",
     "status": "open",
     "trigger": {
-      "description": "Committee has not reconvened"
+      "description": "Joint Committee on Fiscal Equalization reconvened for statutory review",
+      "date": {
+        "year": 13,
+        "month": 12
+      }
     },
     "timing": {
       "kind": "none"
     },
-    "summary": "No forced action clock.",
-    "nextAction": "Track voluntary reconvening or another canonically established trigger.",
+    "summary": "Committee review active; no constitutional action deadline.",
+    "nextAction": "Track submissions, committee options and any proposed statutory amendment without implying a forced remedy.",
     "sources": [
-      "torenthia-news-020"
+      "torenthia-nrs-018",
+      "torenthia-news-068",
+      "torenthia-nrs-046"
     ],
     "arcs": [
       "fiscal-equalization"
@@ -218,7 +224,7 @@
           "note": "Actual period defined by statute; no deemed confirmation."
         }
       ],
-      "note": "Instantiate only after the seat and trigger are established. Nomination and Senate periods are statutory with constitutional ceilings under \u00a74.4; no current seat/class or statutory duration is assigned."
+      "note": "Instantiate only after the seat and trigger are established. Nomination and Senate periods are statutory with constitutional ceilings under §4.4; no current seat/class or statutory duration is assigned."
     },
     "summary": "Framework only; no current justice or class selected.",
     "nextAction": "When canon establishes a seat, create its term-expiration and nomination/Senate clocks from the constitutional rules.",
@@ -228,9 +234,9 @@
     "arcs": [],
     "jurisdictions": [],
     "provisions": [
-      "\u00a74.3",
-      "\u00a74.4",
-      "\u00a719.10"
+      "§4.3",
+      "§4.4",
+      "§19.10"
     ]
   },
   {

@@ -1,6 +1,7 @@
 # Project progress and working ideas
 
-**Session closeout:** 2026-09-27  
+**Publication handoff:** 2026-09-29
+
 **Purpose:** current project-wide implementation handoff and idea log. This file is not constitutional or Torenthia canon. Canon and source authority remain where `PROJECT-SOURCES.md` says they are.
 
 ## Current implementation state
@@ -45,21 +46,30 @@ Published canonical history:
 - **Varek Test 01 — The 72-Hour Flood**
 - **Harren Test 01 — The Order Neither Executive Could Give**
 - **Rhovane Test 01 — The Harbor That Could Not Close**
-
-Approved drafts awaiting weekday publication:
-
 - **Norvane Test 01 — The Fourteenth Day**
-  - tests the Governor's fourteen-day emergency period, positive Assembly extension, selective continuation, and automatic lapse
-  - likely display provision: §6.2
+  - tests the Governor's fourteen-day emergency period, positive Assembly extension, selective continuation, emergency logistics, and automatic lapse
+  - display provision: §6.2
 - **Kelvant Test 01 — The Item the Governor Crossed Out**
-  - tests the line-item appropriations veto and two-thirds restoration by both legislative houses
-  - likely display provision: §2.4
+  - tests the line-item appropriations veto, legislative control of spending, and two-thirds restoration by both legislative houses
+  - display provision: §2.4
 
-These drafts should receive a final canon/metadata/formatting pass immediately before publication.
+The first historical test is now published for five States. Additional episodes remain planning material until individually reviewed and published.
 
 ## Torenthia World content
 
 The current published frontier remains Year 13, Month 12, with the Korda Convention as the main active narrative.
+
+The September 29 news addition is Dara Voss's RNN report, [Morantine Asks the Formula to Count the Wait](https://thefederatedrepublic.org/torenthia-news-093.html), following the NRS material already on main through NRS 051 (`93b5e06`). Narrative sequence is now 139; NRS sequence remains 51. The story develops Fiscal Equalization from Morantine's NRS-Y13-0712 submission and the existing EM interval data. It adds no failure finding, constitutional clock, committee decision or funding award. It is supporting coverage; the affected Story Status entry is updated and the existing dossier summary and core-record selection remain accurate.
+
+Local release validation passed: 100 tests, 258 built pages, 149 World records, discovery, constitutional and scenario consistency. The generated Fiscal Equalization clock summary is synchronized with its existing registry entry; no timed obligation is established. PR CI and production verification remain release gates, not facts inferred from the local build.
+
+The September 28 batch is published through [PR #28](https://github.com/jcr0916-hue/federatedrepublic/pull/28), merged at `42ce339dd0de5d6af86633c43c93c4dadc8c299d`. It contains NRS 042–045 and news 092: one receipt of Korda fiscal/transition material, three routine administrative records, and Mara Iset's [fiscal explainer](https://thefederatedrepublic.org/torenthia-news-092.html). All five pages and their archive entries were verified on the public site after production deployment `dpl_5QiadzXG8hkLNn4SqPFpPzMytmQW` reached READY.
+
+September 28 publication checks passed locally and in the PR workflow: 100 tests, 249 built pages, 142 World records, discovery, constitutional and scenario consistency. Browser review also verified source links and NRS previous/next navigation. The Korda dossier and affected Story Status entries were updated with that release.
+
+The daily working cadence is now **3–5 NRS records plus one news story**, with most NRS items ordinary administration and only one or two advancing live threads. News selects records independently and may return to earlier filings. The NRS should not read as a sequence of story teasers.
+
+Thoss's election strategy is now framed around policy signaling rather than a personal Civic Consul campaign. Under §2.6(5) she remains in office until constructive replacement, resignation, or the lifetime service ceiling; the general election changes the Assembly that can sustain or replace her, not her office directly. Her restrained style remains the working direction, including the possibility that her party later loses a few seats while her broader Assembly support increases modestly.
 
 The Convention's Joint Committee on Transition Facts has begun producing evidence. Published material already establishes:
 
@@ -67,13 +77,14 @@ The Convention's Joint Committee on Transition Facts has begun producing evidenc
 - northern districts are more integrated with Kelvant;
 - southern lake districts remain more connected to Korda's interior;
 - meaningful southern Lake Varda access has cultural, family, Indigenous, and practical importance as well as economic value.
+- the first fiscal/transition submissions have arrived, including Orin's promised material; payments and pending requests are distinct, shared costs and asset evidence are incomplete, and no comparable option totals have been adopted.
 
-The next content phase should emphasize **evidence before political convergence**.
+The next content phase should emphasize **reconciliation and further evidence before political convergence**.
 
 ### Working Korda runway
 
 **Week of September 28:**
-- fiscal-transfer and transition-cost records;
+- further fiscal-transfer and transition-cost records, following the September 28 receipt and explainer;
 - dry NRS/committee filings;
 - reporting that interprets evidence without implying a predetermined Convention result;
 - ordinary-life coverage to keep the Territory from becoming only a procedural story;
@@ -121,10 +132,9 @@ No further constitutional fine-detail review is pending unless deliberately reop
 
 Immediate weekday queue:
 
-1. publish Norvane Test 01 after final verification;
-2. publish Kelvant Test 01 after final verification;
-3. continue Korda evidence through NRS and reporting;
-4. advance Lake Varda conference scheduling when useful without forcing Sunderland to become suddenly communicative;
-5. keep Argent Ridge, Fiscal Equalization, Judicial Pool, and the Monetary Authority in the background unless a natural trigger arises.
+1. Fiscal Equalization review is active again through NRS-Y13-0710; next steps are submissions, committee options and eventual statutory text, with resolution targeted well before the spring Year 14 election;
+2. reconcile and extend Korda evidence through NRS and reporting while sustaining ordinary administrative records;
+3. advance Lake Varda conference scheduling when useful without forcing Sunderland to become suddenly communicative;
+4. keep Argent Ridge, Judicial Pool and the Monetary Authority in the background unless a natural trigger arises.
 
 Further State-profile rollout is paused. The current rule remains: **publish a State profile when the reader has a reason to click on that State**, rather than filling every State page merely for completeness.

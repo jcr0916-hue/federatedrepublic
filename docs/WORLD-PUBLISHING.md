@@ -300,6 +300,8 @@ Existing historical dossier records remain preserved in `_data/currentFiles.json
 
 Ordinary-world pieces should not be forced into constitutional story arcs merely to make them appear useful.
 
+The working daily cadence is **3–5 NRS records plus one selectively chosen news story**. Most NRS entries should be ordinary administration; only one or two should quietly advance live threads. Routine procurement, staffing and technical filings need no hidden significance. News may use a record from the same day, return to one several days later, or ignore it entirely. Most NRS records should not feel like story beats. This is an editorial cadence, not a requirement to assign fictional days to month-only records.
+
 Mark an intentionally mundane World record with:
 
 ```yaml
