@@ -1,6 +1,6 @@
 # Project progress and working ideas
 
-**Publication handoff:** 2026-09-29
+**Publication handoff:** 2026-09-30
 
 **Purpose:** current project-wide implementation handoff and idea log. This file is not constitutional or Torenthia canon. Canon and source authority remain where `PROJECT-SOURCES.md` says they are.
 
@@ -59,7 +59,7 @@ The first historical test is now published for five States. Additional episodes 
 
 The current published frontier remains Year 13, Month 12, with the Korda Convention as the main active narrative.
 
-The September 29 news addition is Dara Voss's RNN report, [Morantine Asks the Formula to Count the Wait](https://thefederatedrepublic.org/torenthia-news-093.html), following the NRS material already on main through NRS 051 (`93b5e06`). Narrative sequence is now 139; NRS sequence remains 51. The story develops Fiscal Equalization from Morantine's NRS-Y13-0712 submission and the existing EM interval data. It adds no failure finding, constitutional clock, committee decision or funding award. It is supporting coverage; the affected Story Status entry is updated and the existing dossier summary and core-record selection remain accurate.
+The September 30 batch advances the narrative through worldSeq 140 and NRS through 56. NRS-Y13-0716 schedules the Lake Varda conference to open in Valedon during Year 14, Month 1, with civilian navigation, rescue coordination and risk reduction as the opening subjects; exact day and delegation lists remain unsettled. NRS-Y13-0717 records Korda's first partial response to the facilities-reconciliation request without adopting a valuation, boundary or status conclusion. NRS 054–056 are routine administration. Petra Vend's `torenthia-news-094.html` explains the conference scheduling without treating it as settlement of the underlying dispute.
 
 Local release validation passed: 100 tests, 258 built pages, 149 World records, discovery, constitutional and scenario consistency. The generated Fiscal Equalization clock summary is synchronized with its existing registry entry; no timed obligation is established. PR CI and production verification remain release gates, not facts inferred from the local build.
 
@@ -134,7 +134,7 @@ Immediate weekday queue:
 
 1. Fiscal Equalization review is active again through NRS-Y13-0710; next steps are submissions, committee options and eventual statutory text, with resolution targeted well before the spring Year 14 election;
 2. reconcile and extend Korda evidence through NRS and reporting while sustaining ordinary administrative records;
-3. advance Lake Varda conference scheduling when useful without forcing Sunderland to become suddenly communicative;
+3. follow the now-scheduled Lake Varda conference into delegation and detailed-agenda choices without forcing Sunderland to become suddenly communicative;
 4. keep Argent Ridge, Judicial Pool and the Monetary Authority in the background unless a natural trigger arises.
 
 Further State-profile rollout is paused. The current rule remains: **publish a State profile when the reader has a reason to click on that State**, rather than filling every State page merely for completeness.
