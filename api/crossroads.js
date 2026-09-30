@@ -1,5 +1,5 @@
 // Vercel Serverless Function: Living Crossroads — free-text move classifier
-// Node.js format. Uses Claude Sonnet 5.
+// Node.js format. Uses Vercel AI Gateway when available, with direct Anthropic rollback.
 //
 // SAFETY CEILING: this function returns ONLY a routing decision — which pre-written,
 // pre-vetted fragment the player's free text maps to. It NEVER returns story prose
@@ -7,6 +7,9 @@
 // in the client. The model's entire output is "which vetted bucket does this match."
 //
 // No data is stored. Stateless per request.
+
+const { anthropicMessage } = require('./_ai-transport.js');
+const MODEL = process.env.AI_MODEL_CROSSROADS || 'anthropic/claude-sonnet-5';
 
 const SYSTEM = `You are the routing brain for an interactive constitutional-fiction feature called Living Crossroads. A player is role-playing a political decision. At each scene they may type a move in their own words. Your ONLY job is to read that move and decide which pre-written outcome it best matches — you are a classifier, not a writer. You never write story text. You output a single JSON routing decision.
 
@@ -41,9 +44,6 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) return res.status(500).json({ error: 'Server not configured' });
-
     let body = req.body;
     if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
 
@@ -72,25 +72,21 @@ THE PLAYER'S MOVE (their own words):
 
 Return the JSON routing decision.`;
 
-    const upstream = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-5',
-        max_tokens: 200,
-        system: SYSTEM,
-        messages: [{ role: 'user', content: userMsg }],
-      }),
+    const { response: upstream, route, model } = await anthropicMessage({
+      model: MODEL,
+      max_tokens: 200,
+      system: SYSTEM,
+      messages: [{ role: 'user', content: userMsg }],
+      tags: ['feature:crossroads', `env:${process.env.VERCEL_ENV || 'local'}`],
     });
 
     if (!upstream.ok) {
       const errText = await upstream.text().catch(()=> '');
       return res.status(502).json({ error: 'Upstream error', detail: errText.slice(0,200) });
     }
+
+    // Route/model metadata is operational only; it never becomes player-visible prose.
+    console.info('[crossroads-ai]', { route, model });
 
     const dataUp = await upstream.json();
     // concatenate all text blocks (house pattern), then parse JSON

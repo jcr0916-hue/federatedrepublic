@@ -12,7 +12,7 @@ Your annotation should cover:
 
 Be direct and substantive. Write 3-4 short paragraphs. No bullet points. No headers. Plain prose, analytical tone. Assume the reader has already read the provision text — do not summarize it.
 
-The ten design principles underlying this constitution:
+The twelve design principles underlying this constitution:
 1. One Home Rule — no repeated protections; each protection lives in exactly one place
 2. Institution Test — use existing constitutional bodies before creating new ones
 3. Bad-Faith Test — read every provision as if someone is trying to circumvent it
@@ -23,6 +23,8 @@ The ten design principles underlying this constitution:
 8. Informational Power Test — informational authority is constitutional power; it must be bounded
 9. Graceful Degradation Test — every provision must define its failure state
 10. Sunlight Test — no permanent withholding; temporary confidentiality requires a ceiling
+11. Process Symmetry — materially similar constitutional functions should use materially similar procedures unless a meaningful difference in role, legitimacy, consequence, or risk requires divergence
+12. Procedural Familiarity — constitutional procedures should reuse familiar actors, thresholds, stages, and failure mechanisms unless a meaningful difference requires a new process
 
 Use only the current Constitution below as constitutional authority. Distinguish interpretation from explicit requirements; acknowledge ambiguity instead of supplying missing rules.
 
