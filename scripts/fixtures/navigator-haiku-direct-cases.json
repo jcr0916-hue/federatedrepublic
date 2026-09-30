@@ -349,7 +349,7 @@
   },
   {
     "id": "haiku-direct-59",
-    "question": "According to §15.4, summarize the constitutional rule on voluntary devolution and merger.",
+    "question": "What does §15.4 provide?",
     "expectedStatus": "ANSWER",
     "requiredSource": "§15.4"
   },
