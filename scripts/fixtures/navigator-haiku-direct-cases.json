@@ -1,0 +1,458 @@
+[
+  {
+    "id": "haiku-direct-01",
+    "question": "Under §1.1, what rule governs right to courts and legal remedy?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§1.1"
+  },
+  {
+    "id": "haiku-direct-02",
+    "question": "What does §1.5 establish about civil and political liberties?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§1.5"
+  },
+  {
+    "id": "haiku-direct-03",
+    "question": "According to §1.8, summarize the constitutional rule on privacy, property, and security of the home.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§1.8"
+  },
+  {
+    "id": "haiku-direct-04",
+    "question": "In §1.12, what is the Constitution's rule for rights of the accused and fair trial?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§1.12"
+  },
+  {
+    "id": "haiku-direct-05",
+    "question": "Under §1.19, what rule governs emergency derogation?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§1.19"
+  },
+  {
+    "id": "haiku-direct-06",
+    "question": "What does §1.20 establish about right to seek asylum?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§1.20"
+  },
+  {
+    "id": "haiku-direct-07",
+    "question": "According to §2.1, summarize the constitutional rule on the legat consul — domain and term.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§2.1"
+  },
+  {
+    "id": "haiku-direct-08",
+    "question": "In §2.5, what is the Constitution's rule for the civic consul — domain and term?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§2.5"
+  },
+  {
+    "id": "haiku-direct-09",
+    "question": "Under §2.6, what rule governs constructive vote of no confidence?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§2.6"
+  },
+  {
+    "id": "haiku-direct-10",
+    "question": "What does §2.10 establish about executive transparency?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§2.10"
+  },
+  {
+    "id": "haiku-direct-11",
+    "question": "According to §2.13, summarize the constitutional rule on consular removal.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§2.13"
+  },
+  {
+    "id": "haiku-direct-12",
+    "question": "In §2.16, what is the Constitution's rule for executive incapacity?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§2.16"
+  },
+  {
+    "id": "haiku-direct-13",
+    "question": "Under §3.1, what rule governs the legislature?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§3.1"
+  },
+  {
+    "id": "haiku-direct-14",
+    "question": "What does §3.4 establish about legislative standards?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§3.4"
+  },
+  {
+    "id": "haiku-direct-15",
+    "question": "According to §3.6, summarize the constitutional rule on treaty and trade agreement ratification.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§3.6"
+  },
+  {
+    "id": "haiku-direct-16",
+    "question": "In §3.9, what is the Constitution's rule for independent statutory agencies?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§3.9"
+  },
+  {
+    "id": "haiku-direct-17",
+    "question": "Under §3.10, what rule governs federal legislative competence?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§3.10"
+  },
+  {
+    "id": "haiku-direct-18",
+    "question": "What does §3.11 establish about delegation of authority?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§3.11"
+  },
+  {
+    "id": "haiku-direct-19",
+    "question": "According to §4.1, summarize the constitutional rule on court structure.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§4.1"
+  },
+  {
+    "id": "haiku-direct-20",
+    "question": "In §4.3, what is the Constitution's rule for the supreme court?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§4.3"
+  },
+  {
+    "id": "haiku-direct-21",
+    "question": "Under §4.4, what rule governs supreme court selection?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§4.4"
+  },
+  {
+    "id": "haiku-direct-22",
+    "question": "What does §4.5 establish about judicial review and scope?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§4.5"
+  },
+  {
+    "id": "haiku-direct-23",
+    "question": "According to §5.1, summarize the constitutional rule on citizenship.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§5.1"
+  },
+  {
+    "id": "haiku-direct-24",
+    "question": "In §5.2, what is the Constitution's rule for legal resident rights?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§5.2"
+  },
+  {
+    "id": "haiku-direct-25",
+    "question": "Under §5.3, what rule governs custodial care of citizen children?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§5.3"
+  },
+  {
+    "id": "haiku-direct-26",
+    "question": "What does §6.1 establish about the two-stage immigration system?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§6.1"
+  },
+  {
+    "id": "haiku-direct-27",
+    "question": "According to §6.2, summarize the constitutional rule on enforcement, removal, and appeals.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§6.2"
+  },
+  {
+    "id": "haiku-direct-28",
+    "question": "In §6.3, what is the Constitution's rule for asylum and protection?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§6.3"
+  },
+  {
+    "id": "haiku-direct-29",
+    "question": "Under §7.1, what rule governs consular election system?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§7.1"
+  },
+  {
+    "id": "haiku-direct-30",
+    "question": "What does §7.4 establish about eligibility and disclosure for federal office?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§7.4"
+  },
+  {
+    "id": "haiku-direct-31",
+    "question": "According to §7.10, summarize the constitutional rule on ethics and financial disclosure.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§7.10"
+  },
+  {
+    "id": "haiku-direct-32",
+    "question": "In §7.15, what is the Constitution's rule for authority by constitutional operation?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§7.15"
+  },
+  {
+    "id": "haiku-direct-33",
+    "question": "Under §8.1, what rule governs electoral finance?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§8.1"
+  },
+  {
+    "id": "haiku-direct-34",
+    "question": "What does §8.2 establish about campaign conduct?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§8.2"
+  },
+  {
+    "id": "haiku-direct-35",
+    "question": "According to §8.3, summarize the constitutional rule on public spectrum access for campaigns.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§8.3"
+  },
+  {
+    "id": "haiku-direct-36",
+    "question": "In §9.1, what is the Constitution's rule for three monitors?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§9.1"
+  },
+  {
+    "id": "haiku-direct-37",
+    "question": "Under §9.4, what rule governs judicial monitor audit mandate?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§9.4"
+  },
+  {
+    "id": "haiku-direct-38",
+    "question": "What does §9.5 establish about monitor operations?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§9.5"
+  },
+  {
+    "id": "haiku-direct-39",
+    "question": "According to §9.7, summarize the constitutional rule on joint monitor council.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§9.7"
+  },
+  {
+    "id": "haiku-direct-40",
+    "question": "In §9.9, what is the Constitution's rule for constitutional officer removal — standard track?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§9.9"
+  },
+  {
+    "id": "haiku-direct-41",
+    "question": "Under §10.1, what rule governs national record system?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§10.1"
+  },
+  {
+    "id": "haiku-direct-42",
+    "question": "What does §10.2 establish about classification criteria?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§10.2"
+  },
+  {
+    "id": "haiku-direct-43",
+    "question": "According to §11.1, summarize the constitutional rule on nrs panel and elections panel.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§11.1"
+  },
+  {
+    "id": "haiku-direct-44",
+    "question": "In §11.2, what is the Constitution's rule for nvs properties and voting rights?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§11.2"
+  },
+  {
+    "id": "haiku-direct-45",
+    "question": "Under §11.3, what rule governs state election non-compliance?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§11.3"
+  },
+  {
+    "id": "haiku-direct-46",
+    "question": "What does §12.1 establish about the social state and monetary authority?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§12.1"
+  },
+  {
+    "id": "haiku-direct-47",
+    "question": "According to §12.1.a, summarize the constitutional rule on the monetary authority.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§12.1.a"
+  },
+  {
+    "id": "haiku-direct-48",
+    "question": "In §12.2, what is the Constitution's rule for fiscal accountability?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§12.2"
+  },
+  {
+    "id": "haiku-direct-49",
+    "question": "Under §12.3, what rule governs taxing power and national revenue fund?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§12.3"
+  },
+  {
+    "id": "haiku-direct-50",
+    "question": "What does §12.6 establish about fiscal equalization?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§12.6"
+  },
+  {
+    "id": "haiku-direct-51",
+    "question": "According to §13.1, summarize the constitutional rule on optional referendum.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§13.1"
+  },
+  {
+    "id": "haiku-direct-52",
+    "question": "In §13.2, what is the Constitution's rule for citizen legislative initiative?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§13.2"
+  },
+  {
+    "id": "haiku-direct-53",
+    "question": "Under §14.1, what rule governs authorized purposes for military force?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§14.1"
+  },
+  {
+    "id": "haiku-direct-54",
+    "question": "What does §14.2 establish about defense authorization and allocation?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§14.2"
+  },
+  {
+    "id": "haiku-direct-55",
+    "question": "According to §14.4, summarize the constitutional rule on treaty-based military authorization.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§14.4"
+  },
+  {
+    "id": "haiku-direct-56",
+    "question": "In §15.1, what is the Constitution's rule for territorial compact?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§15.1"
+  },
+  {
+    "id": "haiku-direct-57",
+    "question": "Under §15.2, what rule governs the statehood audit?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§15.2"
+  },
+  {
+    "id": "haiku-direct-58",
+    "question": "What does §15.3 establish about mandatory devolution?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§15.3"
+  },
+  {
+    "id": "haiku-direct-59",
+    "question": "According to §15.4, summarize the constitutional rule on voluntary devolution and merger.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§15.4"
+  },
+  {
+    "id": "haiku-direct-60",
+    "question": "In §15.9, what is the Constitution's rule for voluntary state independence?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§15.9"
+  },
+  {
+    "id": "haiku-direct-61",
+    "question": "Under §16.1, what rule governs acknowledgment of prior sovereignty and recognition?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§16.1"
+  },
+  {
+    "id": "haiku-direct-62",
+    "question": "What does §16.2 establish about founding status election?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§16.2"
+  },
+  {
+    "id": "haiku-direct-63",
+    "question": "According to §16.3, summarize the constitutional rule on treaty supremacy and continuity.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§16.3"
+  },
+  {
+    "id": "haiku-direct-64",
+    "question": "In §16.5, what is the Constitution's rule for transition of existing arrangements?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§16.5"
+  },
+  {
+    "id": "haiku-direct-65",
+    "question": "Under §17.1, what rule governs amendment paths?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§17.1"
+  },
+  {
+    "id": "haiku-direct-66",
+    "question": "What does §17.2 establish about no executive veto; amendment takes effect?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§17.2"
+  },
+  {
+    "id": "haiku-direct-67",
+    "question": "According to §17.4, summarize the constitutional rule on supremacy of this constitution.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§17.4"
+  },
+  {
+    "id": "haiku-direct-68",
+    "question": "In §18.1, what is the Constitution's rule for the use doctrine?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§18.1"
+  },
+  {
+    "id": "haiku-direct-69",
+    "question": "Under §18.2, what rule governs seat of government?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§18.2"
+  },
+  {
+    "id": "haiku-direct-70",
+    "question": "What does §18.4 establish about the national trust?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§18.4"
+  },
+  {
+    "id": "haiku-direct-71",
+    "question": "According to §19.1, summarize the constitutional rule on activation threshold and ratification.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§19.1"
+  },
+  {
+    "id": "haiku-direct-72",
+    "question": "In §19.2, what is the Constitution's rule for day zero and transition?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§19.2"
+  },
+  {
+    "id": "haiku-direct-73",
+    "question": "Under §19.9, what rule governs required institutions and temporary continuity?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§19.9"
+  },
+  {
+    "id": "haiku-direct-74",
+    "question": "What does §20.1 establish about associated community status?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§20.1"
+  },
+  {
+    "id": "haiku-direct-75",
+    "question": "According to §20.3, summarize the constitutional rule on compact conditions and compliance.",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§20.3"
+  },
+  {
+    "id": "haiku-direct-76",
+    "question": "In §20.6, what is the Constitution's rule for compact ratification?",
+    "expectedStatus": "ANSWER",
+    "requiredSource": "§20.6"
+  }
+]
