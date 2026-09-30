@@ -15,6 +15,7 @@ async function gatewayMessage({
   max_tokens,
   system,
   messages,
+  temperature,
   tags = [],
 }) {
   const token = gatewayToken();
@@ -32,6 +33,7 @@ async function gatewayMessage({
       max_tokens,
       system,
       messages,
+      ...(temperature === undefined ? {} : { temperature }),
       providerOptions: {
         gateway: {
           tags: ['site:federated-republic', ...tags],
@@ -47,10 +49,11 @@ async function anthropicMessage({
   max_tokens,
   system,
   messages,
+  temperature,
   tags = [],
 }) {
   if (gatewayToken()) {
-    return gatewayMessage({ model, max_tokens, system, messages, tags });
+    return gatewayMessage({ model, max_tokens, system, messages, temperature, tags });
   }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -69,6 +72,7 @@ async function anthropicMessage({
       max_tokens,
       system,
       messages,
+      ...(temperature === undefined ? {} : { temperature }),
     }),
   });
   return { response, route: 'anthropic-direct', model: directModel };
