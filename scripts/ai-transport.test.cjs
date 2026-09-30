@@ -107,6 +107,7 @@ test('Gateway-only transport accepts a non-Anthropic model for shadow benchmarki
       max_tokens: 20,
       system: 'system',
       messages: [{ role: 'user', content: 'hello' }],
+      temperature: 0,
       tags: ['feature:crossroads', 'role:shadow'],
     });
 
@@ -114,6 +115,7 @@ test('Gateway-only transport accepts a non-Anthropic model for shadow benchmarki
     assert.equal(result.model, 'openai/gpt-5.4-nano');
     assert.equal(seen.url, 'https://ai-gateway.vercel.sh/v1/messages');
     assert.equal(seen.body.model, 'openai/gpt-5.4-nano');
+    assert.equal(seen.body.temperature, 0);
     assert.deepEqual(seen.body.providerOptions.gateway.tags, [
       'site:federated-republic',
       'feature:crossroads',
