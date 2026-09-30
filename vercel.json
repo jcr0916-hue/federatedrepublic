@@ -12,6 +12,17 @@
       }
     },
     {
+      "src": "api/_navigator-model-benchmark.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30,
+        "includeFiles": [
+          "constitution_data.json",
+          "scripts/fixtures/navigator-gate-cases.json"
+        ]
+      }
+    },
+    {
       "src": "api/annotate.js",
       "use": "@vercel/node",
       "config": {
@@ -47,6 +58,10 @@
     {
       "src": "/api/navigator",
       "dest": "/api/navigator.js"
+    },
+    {
+      "src": "/api/_navigator-model-benchmark",
+      "dest": "/api/_navigator-model-benchmark.js"
     },
     {
       "src": "/api/annotate",
