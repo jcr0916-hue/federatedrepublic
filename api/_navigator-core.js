@@ -92,13 +92,7 @@ const SYNONYMS = {
 };
 
 function phrasePresent(text, phrase) {
-  const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\function expandQuery(raw) {
-  const words = raw.toLowerCase().replace(/[^a-z0-9§.\s]/g, ' ').split(/\s+/).filter(w => w && !STOP.has(w));
-  const expanded = new Set(words);
-  const lc = raw.toLowerCase();
-  for (const [phrase, syns] of Object.entries(SYNONYMS)) {
-    if (lc.includes(phrase)) syns.forEach(s => s.split(' ').forEach(w => expanded.add(w)));
-  }');
+  const escaped = phrase.replace(/[.*+?^$\{\}()|[\]\\]/g, '\\$&');
   return new RegExp(`(^|[^a-z0-9])${escaped}([^a-z0-9]|$)`, 'i').test(text);
 }
 
