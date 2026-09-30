@@ -14,11 +14,7 @@ Use ANSWER only when the question is directly answered by the supplied text with
 sources must contain only section numbers present in the supplied packet.
 Keep answer under 90 words.`;
 
-const VERIFY_SYSTEM = `You are a strict constitutional-grounding verifier.
-Given a question, a retrieved source packet, and a candidate answer, decide whether EVERY material legal or factual claim in the candidate answer is explicitly supported by the supplied provisions.
-Do not reward plausible inference. Any invented power, procedure, deadline, remedy, exception, institution, threshold, historical fact, or reconciliation is unsupported.
-Ordinary faithful paraphrase is allowed.
-Return ONLY valid JSON: {"supported":true|false,"reason":"brief explanation"}.`;
+const VERIFY_SYSTEM = `You are a strict constitutional-grounding verifier.\nGiven a question, one controlling constitutional provision, and a candidate answer, decide whether EVERY material legal or factual claim in the candidate answer is explicitly supported by that provision.\nDo not reward plausible inference. Any invented power, procedure, deadline, remedy, exception, institution, threshold, historical fact, or reconciliation is unsupported.\nOrdinary faithful paraphrase is allowed.\nReturn exactly one line beginning with SUPPORTED or UNSUPPORTED. If unsupported, follow with a short reason after a colon.`;
 
 function textFrom(data) {
   return (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('').trim();
@@ -28,7 +24,9 @@ async function evaluate(item, provisions) {
   const ranked = rankProvisions(provisions, expandQuery(item.question), 5);
   const matched = ranked.slice(0,3).map(x=>x.provision);
   const gate = retrievalGate(item.question, ranked);
-  const packet = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
+  const controlling = provisions.find(p => p.num === item.requiredSource);
+  if (!controlling) return {id:item.id,requiredSource:item.requiredSource,ok:false,error:'controlling source missing'};
+  const packet = `[${controlling.num}] ${controlling.name}\n${controlling.text}`;
   const started = Date.now();
 
   const { response } = await gatewayMessage({
@@ -45,7 +43,7 @@ async function evaluate(item, provisions) {
 
   let parsed=null;
   try { parsed=JSON.parse(textFrom(data).replace(/```json|```/g,'').trim()); } catch {}
-  const available=new Set(matched.map(p=>p.num));
+  const available=new Set([item.requiredSource]);
   const returnedSources=Array.isArray(parsed?.sources)?parsed.sources:[];
   const validSources=returnedSources.filter(s=>available.has(s));
   const invalidSourceCount=returnedSources.length-validSources.length;
@@ -67,7 +65,10 @@ async function evaluate(item, provisions) {
     verifierLatencyMs=Date.now()-verifyStart;
     const vd=await vr.json().catch(()=>({}));
     if (vr.ok) {
-      try { verifier=JSON.parse(textFrom(vd).replace(/```json|```/g,'').trim()); } catch { verifier={supported:false,reason:'verifier parse failure'}; }
+      const verdict=textFrom(vd).trim();
+      if (/^SUPPORTED\b/i.test(verdict)) verifier={supported:true,reason:verdict.replace(/^SUPPORTED\s*:?\s*/i,'').trim()};
+      else if (/^UNSUPPORTED\b/i.test(verdict)) verifier={supported:false,reason:verdict.replace(/^UNSUPPORTED\s*:?\s*/i,'').trim()};
+      else verifier={supported:false,reason:'verifier parse failure: '+verdict.slice(0,160)};
     } else verifier={supported:false,reason:`verifier HTTP ${vr.status}`};
   }
 
@@ -75,7 +76,8 @@ async function evaluate(item, provisions) {
     id:item.id,
     question:item.question,
     requiredSource:item.requiredSource,
-    matched:[...available],
+    matched:matched.map(p=>p.num),
+    supplied:[...available],
     ok:true,
     disposition:parsed?.status||'INVALID',
     dispositionPass,
