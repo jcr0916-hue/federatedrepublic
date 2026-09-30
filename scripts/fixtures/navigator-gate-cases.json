@@ -1,0 +1,514 @@
+[
+  {
+    "id": "direct-01",
+    "question": "What does §1.8 protect?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§1.8"
+    ]
+  },
+  {
+    "id": "direct-02",
+    "question": "What does §1.19.a identify as non-derogable rights?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§1.19.a"
+    ]
+  },
+  {
+    "id": "direct-03",
+    "question": "What does §2.1 establish about the Legat Consul?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§2.1"
+    ]
+  },
+  {
+    "id": "direct-04",
+    "question": "What does §2.5 establish about the Civic Consul?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§2.5"
+    ]
+  },
+  {
+    "id": "direct-05",
+    "question": "What is the constructive vote of no confidence rule in §2.6?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§2.6"
+    ]
+  },
+  {
+    "id": "direct-06",
+    "question": "What does §2.16 provide for executive incapacity?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§2.16"
+    ]
+  },
+  {
+    "id": "direct-07",
+    "question": "What does §3.4 require for legislative standards?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§3.4"
+    ]
+  },
+  {
+    "id": "direct-08",
+    "question": "What does §3.10 say about federal legislative competence?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§3.10"
+    ]
+  },
+  {
+    "id": "direct-09",
+    "question": "What does §4.3 say about the Supreme Court?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§4.3"
+    ]
+  },
+  {
+    "id": "direct-10",
+    "question": "What does §4.4.a provide for Senate bypass and public confirmation?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§4.4.a"
+    ]
+  },
+  {
+    "id": "direct-11",
+    "question": "How is citizenship addressed in §5.1?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§5.1"
+    ]
+  },
+  {
+    "id": "direct-12",
+    "question": "What does §6.3 provide for asylum and protection?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§6.3"
+    ]
+  },
+  {
+    "id": "direct-13",
+    "question": "What does §7.4 say about eligibility and disclosure for federal office?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§7.4"
+    ]
+  },
+  {
+    "id": "direct-14",
+    "question": "What does §7.15 mean by authority by constitutional operation?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§7.15"
+    ]
+  },
+  {
+    "id": "direct-15",
+    "question": "What does §9.7 establish about the Joint Monitor Council?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§9.7"
+    ]
+  },
+  {
+    "id": "direct-16",
+    "question": "What is the National Record System under §10.1?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§10.1"
+    ]
+  },
+  {
+    "id": "direct-17",
+    "question": "What does §11.2 say about NVS properties and voting rights?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§11.2"
+    ]
+  },
+  {
+    "id": "direct-18",
+    "question": "What does §12.1.a establish about the Monetary Authority?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§12.1.a"
+    ]
+  },
+  {
+    "id": "direct-19",
+    "question": "What is fiscal equalization under §12.6?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§12.6"
+    ]
+  },
+  {
+    "id": "direct-20",
+    "question": "What does §13.2 provide for citizen legislative initiatives?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§13.2"
+    ]
+  },
+  {
+    "id": "direct-21",
+    "question": "What is the Statehood Audit under §15.2?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§15.2"
+    ]
+  },
+  {
+    "id": "direct-22",
+    "question": "What does §16.1 acknowledge about prior sovereignty?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§16.1"
+    ]
+  },
+  {
+    "id": "direct-23",
+    "question": "What amendment paths exist under §17.1?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§17.1"
+    ]
+  },
+  {
+    "id": "direct-24",
+    "question": "What does §20.1 establish about Associated Community status?",
+    "expectedGate": "TIER_A_CANDIDATE",
+    "required": [
+      "§20.1"
+    ]
+  },
+  {
+    "id": "cross-01",
+    "question": "How do §2.5 and §2.6 interact when the Assembly wants to replace the Civic Consul?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§2.5",
+      "§2.6"
+    ]
+  },
+  {
+    "id": "cross-02",
+    "question": "What happens when §2.6 and §2.6.a operate together during a government change?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§2.6",
+      "§2.6.a"
+    ]
+  },
+  {
+    "id": "cross-03",
+    "question": "How do §2.9 and §2.16 interact when executive incapacity affects succession?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§2.9",
+      "§2.16"
+    ]
+  },
+  {
+    "id": "cross-04",
+    "question": "How do §3.6 and §2.4 divide responsibility for international agreements?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§3.6",
+      "§2.4"
+    ]
+  },
+  {
+    "id": "cross-05",
+    "question": "How do §3.10 and §3.11 interact when legislative authority is delegated?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§3.10",
+      "§3.11"
+    ]
+  },
+  {
+    "id": "cross-06",
+    "question": "How do §4.4 and §4.4.a work together if Senate confirmation stalls?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§4.4",
+      "§4.4.a"
+    ]
+  },
+  {
+    "id": "cross-07",
+    "question": "How do §5.1 and §5.1.a interact for citizenship and state voting citizenship?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§5.1",
+      "§5.1.a"
+    ]
+  },
+  {
+    "id": "cross-08",
+    "question": "How do §6.2 and §6.3 interact in a removal case involving an asylum claim?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§6.2",
+      "§6.3"
+    ]
+  },
+  {
+    "id": "cross-09",
+    "question": "How do §7.4 and §7.6 interact if a barred person would otherwise serve in an acting capacity?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§7.4",
+      "§7.6"
+    ]
+  },
+  {
+    "id": "cross-10",
+    "question": "How do §7.10 and §7.11 work together on conflicts of interest and recusal?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§7.10",
+      "§7.11"
+    ]
+  },
+  {
+    "id": "cross-11",
+    "question": "How do §9.5.a and §9.5.b interact when a Monitor finds agency noncompliance?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§9.5.a",
+      "§9.5.b"
+    ]
+  },
+  {
+    "id": "cross-12",
+    "question": "How do §10.1 and §10.2 interact when a federal record is classified?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§10.1",
+      "§10.2"
+    ]
+  },
+  {
+    "id": "cross-13",
+    "question": "How do §11.2 and §11.3 interact when a State election system is noncompliant?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§11.2",
+      "§11.3"
+    ]
+  },
+  {
+    "id": "cross-14",
+    "question": "How do §12.1 and §12.6 interact when fiscal equalization affects the social-state floor?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§12.1",
+      "§12.6"
+    ]
+  },
+  {
+    "id": "cross-15",
+    "question": "How do §14.1 and §14.4 interact for treaty-based military force?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§14.1",
+      "§14.4"
+    ]
+  },
+  {
+    "id": "cross-16",
+    "question": "How do §15.1.a and §15.3 interact after repeated State audit failures?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§15.1.a",
+      "§15.3"
+    ]
+  },
+  {
+    "id": "cross-17",
+    "question": "How do §15.4 and §15.5.a interact when a merger affects the remainder territory?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§15.4",
+      "§15.5.a"
+    ]
+  },
+  {
+    "id": "cross-18",
+    "question": "How do §16.2 and §20.1 interact if a founding Indigenous nation chooses Associated Community status?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§16.2",
+      "§20.1"
+    ]
+  },
+  {
+    "id": "cross-19",
+    "question": "How do §17.2 and §17.3 work together once an amendment is ratified?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§17.2",
+      "§17.3"
+    ]
+  },
+  {
+    "id": "cross-20",
+    "question": "How do §19.9 and §7.15 interact when a required institution is not yet operational?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§19.9",
+      "§7.15"
+    ]
+  },
+  {
+    "id": "interpret-01",
+    "question": "Does §2.5 imply any authority that is not expressly listed?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§2.5"
+    ]
+  },
+  {
+    "id": "interpret-02",
+    "question": "Is there ambiguity in §2.16 about an already-serving acting executive becoming incapacitated?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§2.16"
+    ]
+  },
+  {
+    "id": "interpret-03",
+    "question": "How should §3.9 be interpreted if independence and statutory oversight point in different directions?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§3.9"
+    ]
+  },
+  {
+    "id": "interpret-04",
+    "question": "Does §4.5 imply that every constitutional dispute has the same scope of review?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§4.5"
+    ]
+  },
+  {
+    "id": "interpret-05",
+    "question": "What does §7.4 leave unstated about an office-specific cooling-off period?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§7.4"
+    ]
+  },
+  {
+    "id": "interpret-06",
+    "question": "Is §9.7.a ambiguous about when institutional compromise is exhausted?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§9.7.a"
+    ]
+  },
+  {
+    "id": "interpret-07",
+    "question": "Does §12.6 imply that statutory compliance automatically establishes constitutional compliance?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§12.6"
+    ]
+  },
+  {
+    "id": "interpret-08",
+    "question": "What does §15.4 not say about the final negotiation mechanics?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§15.4"
+    ]
+  },
+  {
+    "id": "interpret-09",
+    "question": "Is there ambiguity in §16.3 about continuity of older agreements?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§16.3"
+    ]
+  },
+  {
+    "id": "interpret-10",
+    "question": "Does §20.4 imply a route that is not expressly stated?",
+    "expectedGate": "ESCALATE",
+    "required": [
+      "§20.4"
+    ]
+  },
+  {
+    "id": "none-01",
+    "question": "Zorbles?",
+    "expectedGate": "NOT_ESTABLISHED",
+    "required": []
+  },
+  {
+    "id": "none-02",
+    "question": "Flarnics?",
+    "expectedGate": "NOT_ESTABLISHED",
+    "required": []
+  },
+  {
+    "id": "none-03",
+    "question": "Quembles?",
+    "expectedGate": "NOT_ESTABLISHED",
+    "required": []
+  },
+  {
+    "id": "none-04",
+    "question": "Snorvaks?",
+    "expectedGate": "NOT_ESTABLISHED",
+    "required": []
+  },
+  {
+    "id": "none-05",
+    "question": "Glibnax?",
+    "expectedGate": "NOT_ESTABLISHED",
+    "required": []
+  },
+  {
+    "id": "none-06",
+    "question": "Can the government prohibit trelliwumps?",
+    "expectedGate": "ESCALATE",
+    "required": []
+  },
+  {
+    "id": "none-07",
+    "question": "Which chamber controls vornicles?",
+    "expectedGate": "ESCALATE",
+    "required": []
+  },
+  {
+    "id": "none-08",
+    "question": "Does the Constitution establish a blenkar tribunal?",
+    "expectedGate": "ESCALATE",
+    "required": []
+  },
+  {
+    "id": "none-09",
+    "question": "What rights do crandoodles have?",
+    "expectedGate": "ESCALATE",
+    "required": []
+  },
+  {
+    "id": "none-10",
+    "question": "How are plimnors appointed?",
+    "expectedGate": "ESCALATE",
+    "required": []
+  }
+]

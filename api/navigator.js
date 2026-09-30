@@ -2,101 +2,11 @@
 // Node.js format — compatible with all Vercel project types
 
 const path = require('path');
-const { anthropicMessage } = require('./_ai-transport.js');
+const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transport.js');
 const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
+const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'openai/gpt-5.4-nano';
 
-const STOP = new Set(['a','an','the','is','are','was','were','be','been','being',
-  'have','has','had','do','does','did','will','would','could','should','may',
-  'might','can','shall','in','on','at','to','for','of','with','by','from',
-  'about','what','who','how','where','when','why','which','there','here',
-  'tell','me','us','give','show','explain','describe','i','you','we','they',
-  'this','that','these','those','and','or','but','if','not','no','any','all',
-  'some','just','also','it','its','my','your','our','their','please','want',
-  'need','find','get','know','think','say','see','make']);
-
-const SYNONYMS = {
-  'president':['legat consul','civic consul','executive','dual executive'],
-  'prime minister':['civic consul','government formation','assembly confidence'],
-  'foreign minister':['legat consul','foreign','defense'],
-  'chancellor':['civic consul','legat consul','executive'],
-  'lc':['legat consul','foreign','defense','border','intelligence'],
-  'cc':['civic consul','domestic','assembly','budget','social'],
-  'impeach':['removal','assembly-initiated removal','no-confidence','dereliction','grounds review','legat consul removal'],
-  'fire':['removal','dismissal','no-confidence'],
-  'recall':['removal','referendum','popular track','legat consul removal','§2.13'],
-  'remove legat':['§2.13','recall','popular track','legislative track','consular removal'],
-  'remove consul':['§2.13','no-confidence','consular removal','recall'],
-  'assembly-initiated':['removal','charges','articles of removal','senate trial','§7.5'],
-  'articles of removal':['assembly','senate','removal','charges'],
-  'veto':['fiscal objection','written direction'],
-  'law':['statute','legislation','assembly','legislative'],
-  'parliament':['assembly','senate','legislature','chamber'],
-  'congress':['assembly','senate','legislature','chamber'],
-  'senate':['upper chamber','ratification','treaty','states'],
-  'bill':['legislation','assembly','statute','passage'],
-  'filibuster':['assembly','debate','passage','legislative'],
-  'supreme court':['judicial','court','justice','pool'],
-  'judge':['judicial','court','justice','pool','appointment'],
-  'court':['judicial','sc','justice','appeal'],
-  'vote':['election','nvs','electoral','suffrage','franchise'],
-  'election':['voting','nvs','electoral','suffrage','elections panel'],
-  'ballot':['election','nvs','voting','access','suffrage'],
-  'franchise':['vote','election','access','suffrage'],
-  'rights':['individual','sovereignty','floor','liberty'],
-  'freedom':['expression','rights','individual','floor'],
-  'speech':['expression','publication','broadcast'],
-  'press':['expression','publication','media'],
-  'religion':['faith','expression','belief','non-discrimination','equality'],
-  'privacy':['personal','autonomy','information','data','surveillance'],
-  'discrimination':['equality','non-discrimination','protected'],
-  'property':['seizure','compensation','economic security'],
-  'healthcare':['social state','health','universal','insurance'],
-  'education':['social state','school','compulsory','universal'],
-  'immigration':['certification','removal','non-refoulement','border','dual gate'],
-  'asylum':['non-refoulement','refugee','certification','removal','independent adjudicative process'],
-  'deportation':['removal','non-refoulement','certification'],
-  'refugee':['asylum','non-refoulement','protection'],
-  'resident':['legal resident','certification','sponsorship','dual gate'],
-  'military':['defense','armed','legat consul','orders','treaty','authorized purposes'],
-  'army':['military','defense','armed'],
-  'war':['defense','military','emergency','treaty'],
-  'intelligence':['legat consul','foreign','surveillance','warrant'],
-  'security':['border','intelligence','military','emergency'],
-  'budget':['fiscal','appropriation','assembly','spending','nrf'],
-  'money':['fiscal','budget','appropriation','economic'],
-  'tax':['fiscal','revenue','budget','nrf','taxing power'],
-  'spending':['appropriation','budget','fiscal','nrf'],
-  'state':['territory','devolution','statehood','provisional','senate','audit'],
-  'territory':['provisional','statehood','devolution','state','incorporation'],
-  'provisional':['provisional status','statehood','audit','devolution','senate seats','§15.1.a'],
-  'devolution':['mandatory','voluntary','provisional','statehood','territory','audit failure','§15.3','§15.4'],
-  'statehood':['territory','audit','provisional','qualification','senate','§15.2'],
-  'audit':['statehood','jmc','monitor','compliance','provisional','failure','biennial','annual'],
-  'independence':['§15.9','referendum','sovereignty','state','petition','stage one'],
-  'secession':['independence','§15.9','referendum','state','voluntary'],
-  'local government':['municipality','city','state','fiscal','§15.8'],
-  'incorporation':['voluntary','territory','petition','§15.6','treaty'],
-  'nrs':['national record','publication','transparency','permanent','§10.1'],
-  'national record':['nrs','publication','transparency','permanent'],
-  'publication':['nrs','transparency','record','permanent'],
-  'monitor':['oversight','independent','lm','em','jm','jmc','ma'],
-  'watchdog':['monitor','oversight','independent'],
-  'transparency':['nrs','national record','publication'],
-  'lm':['legislative monitor','audit','legislature','compliance'],
-  'em':['executive monitor','audit','executive','compliance'],
-  'jm':['judicial monitor','audit','court','compliance'],
-  'jmc':['joint monitor council','statehood audit','coordination','assigned function'],
-  'amendment':['constitutional','entrenchment','ratification','popular ratification'],
-  'emergency':['declaration','measures','restriction','crisis','§1.19'],
-  'referendum':['citizen','petition','initiative','popular','vote'],
-  'citizen':['civic life','participation','referendum','petition','initiative'],
-  'treaty':['ratification','senate','international','foreign','trade agreement'],
-  'trade agreement':['treaty','ratification','lc','§3.6','§2.4'],
-  'monetary':['ma','monetary authority','currency','fiscal integrity'],
-  'federalism':['state','devolution','federal','§3.10'],
-  'indigenous':['nation','compact','article xvi','§16.1'],
-  'native':['indigenous','nation','compact'],
-};
+const { expandQuery, rankProvisions, retrievalGate } = require('./_navigator-core.js');
 
 const SCENARIOS = [
   {title:'The First Twelve Years',file:'scenario-the-first-twelve-years.html',kw:['transition','ratification','day zero','article xix','merger','founding','caretaker','predecessor','union','§19.1','§19.2','§19.3','§19.5','§19.6','§19.9']},
@@ -165,41 +75,6 @@ async function getProvisions() {
   return cachedProvisions;
 }
 
-function expandQuery(raw) {
-  const words = raw.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(w => w && !STOP.has(w));
-  const expanded = new Set(words);
-  const lc = raw.toLowerCase();
-  for (const [phrase, syns] of Object.entries(SYNONYMS)) {
-    if (lc.includes(phrase)) syns.forEach(s => s.split(' ').forEach(w => expanded.add(w)));
-  }
-  for (const word of words) {
-    if (SYNONYMS[word]) SYNONYMS[word].forEach(s => s.split(' ').forEach(w => expanded.add(w)));
-  }
-  return [...expanded].filter(w => w.length > 1);
-}
-
-function scoreProvision(prov, terms) {
-  const nameL = prov.name.toLowerCase();
-  const numL = prov.num.toLowerCase();
-  const textL = prov.text.toLowerCase();
-  let score = 0;
-  for (const term of terms) {
-    if (numL === term || numL === "§" + term) score += 20;
-    if (nameL.includes(term)) score += 3;
-    if (textL.includes(term)) score += 1;
-  }
-  return score;
-}
-
-function topProvisions(provisions, terms, n = 3) {
-  return provisions
-    .map(p => ({ p, s: scoreProvision(p, terms) }))
-    .filter(x => x.s > 0)
-    .sort((a, b) => b.s - a.s)
-    .slice(0, n)
-    .map(x => x.p);
-}
-
 function topScenarios(terms, n = 2) {
   return SCENARIOS
     .map(s => ({ s, score: s.kw.reduce((acc, kw) => acc + (terms.some(t => kw.includes(t) || t.includes(kw)) ? 1 : 0), 0) }))
@@ -221,7 +96,9 @@ module.exports = async (req, res) => {
   try {
     const provisions = await getProvisions();
     const terms = expandQuery(question);
-    const matched = topProvisions(provisions, terms, 3);
+    const ranked = rankProvisions(provisions, terms, 5);
+    const matched = ranked.slice(0, 3).map(x => x.provision);
+    const gate = retrievalGate(question, ranked);
     const scenarios = topScenarios(terms, 2);
 
     if (matched.length === 0) {
@@ -234,20 +111,64 @@ module.exports = async (req, res) => {
 
     const provisionContext = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
 
-    const { response: upstream, route, model } = await anthropicMessage({
+    const envTag = `env:${process.env.VERCEL_ENV || 'local'}`;
+    const primaryPromise = anthropicMessage({
       model: MODEL,
       max_tokens: 320,
       system: `You are a plain language guide to the Federated Republic constitution. A user asked a question. You have been given the relevant constitutional provisions. Write 3-4 sentences that directly answer the question using only those provisions. If the user asks about something that doesn't exist in the constitution (like a "president" or "impeachment"), explain what the equivalent constitutional mechanism is. Be accurate, clear, and direct. Plain text only — no headings, bullets, or formatting.`,
       messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nProvisions:\n${provisionContext}` }],
-      tags: ['feature:navigator', `env:${process.env.VERCEL_ENV || 'local'}`],
+      tags: ['feature:navigator', 'role:primary', envTag],
     });
+
+    const shadowPromise = gatewayToken()
+      ? gatewayMessage({
+          model: SHADOW_MODEL,
+          max_tokens: 260,
+          system: `You are a bounded constitutional QA evaluator. Use only the supplied provisions. Return ONLY valid JSON with keys: status, answer, sources. status must be ANSWER, ESCALATE, or NOT_ESTABLISHED. Use ANSWER only if the question can be answered directly from the supplied text without adding any unstated procedure, deadline, remedy, authority, or factual assumption. Use ESCALATE if multiple provisions must be reconciled, the text is ambiguous, or interpretation beyond explicit text is required. Use NOT_ESTABLISHED if the supplied text does not establish the requested fact. sources must contain only section numbers present in the supplied packet.`,
+          messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nDeterministic gate: ${gate.status} / ${gate.reason}\n\nProvisions:\n${provisionContext}` }],
+          tags: ['feature:navigator', 'role:shadow', envTag],
+        }).catch(error => ({ error }))
+      : Promise.resolve(null);
+
+    const [{ response: upstream, route, model }, shadowResult] = await Promise.all([
+      primaryPromise,
+      shadowPromise,
+    ]);
 
     if (!upstream.ok) {
       const detail = await upstream.text().catch(() => '');
       return res.status(502).json({ error: 'Upstream error', detail: detail.slice(0, 200) });
     }
 
-    console.info('[navigator-ai]', { route, model });
+    console.info('[navigator-ai]', { route, model, gateStatus: gate.status, gateReason: gate.reason, matched: matched.map(p => p.num) });
+
+    if (shadowResult?.response) {
+      try {
+        if (shadowResult.response.ok) {
+          const shadowData = await shadowResult.response.json();
+          const raw = (shadowData.content || []).filter(b => b.type === 'text').map(b => b.text).join('').trim();
+          const parsed = JSON.parse(raw.replace(/```json|```/g, '').trim());
+          const validStatus = ['ANSWER','ESCALATE','NOT_ESTABLISHED'].includes(parsed.status) ? parsed.status : 'INVALID';
+          const available = new Set(matched.map(p => p.num));
+          const sources = Array.isArray(parsed.sources) ? parsed.sources.filter(s => available.has(s)) : [];
+          console.info('[navigator-shadow]', {
+            shadowModel: shadowResult.model,
+            deterministicGate: gate.status,
+            deterministicReason: gate.reason,
+            shadowStatus: validStatus,
+            shadowSources: sources,
+            invalidSourceCount: Array.isArray(parsed.sources) ? parsed.sources.length - sources.length : 0,
+          });
+        } else {
+          console.warn('[navigator-shadow]', { shadowModel: shadowResult.model, status: shadowResult.response.status, error: 'upstream-non-ok' });
+        }
+      } catch {
+        console.warn('[navigator-shadow]', { shadowModel: shadowResult.model, error: 'parse-or-request-failure' });
+      }
+    } else if (shadowResult?.error) {
+      console.warn('[navigator-shadow]', { shadowModel: SHADOW_MODEL, error: 'request-failure' });
+    }
+
     const data = await upstream.json();
     const summary = data.content?.[0]?.text?.trim() || '';
 
