@@ -16,5 +16,5 @@ for article in source:
     for provision in article['provisions']:
         assert normalize(provision['text']) in normalized, provision['num']
         count += 1
-assert f'{count} Provisions' in text
+assert f'{count} provisions' in text.casefold()
 print(f'PDF: complete preamble and all {count} provisions verified across {len(reader.pages)} pages.')
