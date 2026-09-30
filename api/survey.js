@@ -4,6 +4,9 @@
 // one-page evaluation of the KIND OF GOVERNMENT their answers describe.
 // Uses Claude Sonnet: this is the marquee interpretive moment and quality matters.
 
+const { anthropicMessage } = require('./_ai-transport.js');
+const MODEL = process.env.AI_MODEL_SURVEY || 'anthropic/claude-sonnet-5';
+
 const SYSTEM = `You are the voice behind "So You Want a Constitution?", a short, playful questionnaire on a constitutional-design website. A person has answered a series of questions about how they think power should be structured. Your job is to read their answers and write a warm, thoughtful, ONE-PAGE response describing the kind of government those answers point toward.
 
 VOICE: A curious, well-read librarian — friendly, a little witty, never dry, never a pundit. You are delighted by ideas, not by winning arguments.
@@ -47,9 +50,6 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) return res.status(500).json({ error: 'Server not configured' });
-
     // Accept a transcript: [{ axis, prompt, choice, custom }]
     let body = req.body;
     if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
@@ -64,23 +64,18 @@ module.exports = async (req, res) => {
       return `${i + 1}. Q: ${q}\n   A: ${a}${custom}`;
     }).join('\n');
 
-    const upstream = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-5',
-        max_tokens: 900,
-        system: SYSTEM,
-        messages: [{
-          role: 'user',
-          content: `Here are the answers a person selected in the questionnaire. Read them and write the one-page response as specified, as valid JSON only.\n\n${lines}`
-        }],
-      }),
+    const { response: upstream, route, model } = await anthropicMessage({
+      model: MODEL,
+      max_tokens: 900,
+      system: SYSTEM,
+      messages: [{
+        role: 'user',
+        content: `Here are the answers a person selected in the questionnaire. Read them and write the one-page response as specified, as valid JSON only.\n\n${lines}`
+      }],
+      tags: ['feature:survey', `env:${process.env.VERCEL_ENV || 'local'}`],
     });
+
+    console.info('[survey-ai]', { route, model });
 
     if (!upstream.ok) {
       const detail = await upstream.text().catch(() => '');
