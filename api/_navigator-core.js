@@ -144,6 +144,9 @@ const SYNONYMS = {
   'split into two states':['state immutability','territorial integrity','§15.7'],
   'terminate its compact':['sovereign mobility','compact termination','§20.4'],
   'terminate compact':['sovereign mobility','compact termination','§20.4'],
+  'two executives':['dual executive','legat consul','civic consul','council of ministers','cross-domain'],
+  'dual executive':['legat consul','civic consul','council of ministers','cross-domain emergency lead'],
+  'both consuls':['legat consul','civic consul','council of ministers','cross-domain'],
 };
 
 function phrasePresent(text, phrase) {
@@ -297,6 +300,21 @@ function broadTopicMatch(question) {
 }
 
 
+
+function contextualSectionRefs(question) {
+  const q = normalizeTitleText(question);
+  const dualExecutive =
+    /\b(two|dual) executives?\b/.test(q) ||
+    /\bboth (?:the )?(?:consuls?|executives?)\b/.test(q) ||
+    (/\bcivic consul\b/.test(q) && /\blegat consul\b/.test(q));
+
+  if (dualExecutive) {
+    return ['§2.1', '§2.5', '§2.14', '§2.14.a', '§2.14.b'];
+  }
+
+  return [];
+}
+
 function baseQueryTerms(raw) {
   return String(raw || '')
     .toLowerCase()
@@ -420,6 +438,7 @@ module.exports = {
   titleEligible,
   uniqueTitleMatch,
   broadTopicMatch,
+  contextualSectionRefs,
   baseQueryTerms,
   subjectSpecificity,
   retrievalSufficiency,
