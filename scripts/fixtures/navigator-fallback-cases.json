@@ -1,0 +1,590 @@
+[
+  {
+    "id": "f01",
+    "question": "Can the government search my phone without judicial authorization?",
+    "expectedSufficient": true,
+    "required": [
+      "§1.8"
+    ]
+  },
+  {
+    "id": "f02",
+    "question": "How quickly must a detained person be brought before a court?",
+    "expectedSufficient": true,
+    "required": [
+      "§1.11"
+    ]
+  },
+  {
+    "id": "f03",
+    "question": "Can emergency powers suspend habeas corpus?",
+    "expectedSufficient": true,
+    "required": [
+      "§1.19",
+      "§1.19.a",
+      "§1.11"
+    ]
+  },
+  {
+    "id": "f04",
+    "question": "Can emergency measures be extended indefinitely?",
+    "expectedSufficient": true,
+    "required": [
+      "§1.19.b"
+    ]
+  },
+  {
+    "id": "f05",
+    "question": "What protection exists against being returned to a country where someone faces persecution?",
+    "expectedSufficient": true,
+    "required": [
+      "§1.21",
+      "§6.3"
+    ]
+  },
+  {
+    "id": "f06",
+    "question": "Can government discriminate in providing benefits?",
+    "expectedSufficient": true,
+    "required": [
+      "§1.6"
+    ]
+  },
+  {
+    "id": "f07",
+    "question": "Can the government compel someone to express a political view?",
+    "expectedSufficient": true,
+    "required": [
+      "§1.5"
+    ]
+  },
+  {
+    "id": "f08",
+    "question": "Can a legislature criminalize conduct retroactively?",
+    "expectedSufficient": true,
+    "required": [
+      "§1.14"
+    ]
+  },
+  {
+    "id": "f09",
+    "question": "What happens if the Senate refuses to act on a Supreme Court nomination?",
+    "expectedSufficient": true,
+    "required": [
+      "§4.4",
+      "§4.4.a"
+    ]
+  },
+  {
+    "id": "f10",
+    "question": "Can a Supreme Court justice be removed early?",
+    "expectedSufficient": true,
+    "required": [
+      "§4.3.a"
+    ]
+  },
+  {
+    "id": "f11",
+    "question": "Can ordinary judges be removed because the government dislikes their decisions?",
+    "expectedSufficient": true,
+    "required": [
+      "§4.2"
+    ]
+  },
+  {
+    "id": "f12",
+    "question": "Can courts review whether a law is constitutional?",
+    "expectedSufficient": true,
+    "required": [
+      "§4.5"
+    ]
+  },
+  {
+    "id": "f13",
+    "question": "Who decides recognition of judgments from other jurisdictions?",
+    "expectedSufficient": true,
+    "required": [
+      "§4.6"
+    ]
+  },
+  {
+    "id": "f14",
+    "question": "Can the Legat Consul use military force without legislative authorization during an imminent attack?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.2"
+    ]
+  },
+  {
+    "id": "f15",
+    "question": "Can the Legat Consul spy on citizens inside the Republic without a warrant?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.3"
+    ]
+  },
+  {
+    "id": "f16",
+    "question": "What happens if the two Consuls cannot agree on who should lead a cross-domain emergency?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.14.a",
+      "§4.5"
+    ]
+  },
+  {
+    "id": "f17",
+    "question": "Can one Consul order the other Consul to exercise authority in the other's domain?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.14.b"
+    ]
+  },
+  {
+    "id": "f18",
+    "question": "Can a public servant refuse an unconstitutional executive order?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.8"
+    ]
+  },
+  {
+    "id": "f19",
+    "question": "What happens if the Legat Consul dies in office?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.9"
+    ]
+  },
+  {
+    "id": "f20",
+    "question": "How is temporary executive incapacity determined?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.16"
+    ]
+  },
+  {
+    "id": "f21",
+    "question": "Can either Consul pardon themselves?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.12"
+    ]
+  },
+  {
+    "id": "f22",
+    "question": "Who sets general federal prosecution policy?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.15"
+    ]
+  },
+  {
+    "id": "f23",
+    "question": "What happens if the Senate does nothing on an Assembly bill?",
+    "expectedSufficient": true,
+    "required": [
+      "§3.1"
+    ]
+  },
+  {
+    "id": "f24",
+    "question": "Can the Senate amend a bill beyond its subject matter?",
+    "expectedSufficient": true,
+    "required": [
+      "§3.1"
+    ]
+  },
+  {
+    "id": "f25",
+    "question": "What voting threshold passes an ordinary bill?",
+    "expectedSufficient": true,
+    "required": [
+      "§3.7"
+    ]
+  },
+  {
+    "id": "f26",
+    "question": "Can a bill cover multiple unrelated subjects?",
+    "expectedSufficient": true,
+    "required": [
+      "§3.4"
+    ]
+  },
+  {
+    "id": "f27",
+    "question": "What vote is required to ratify a treaty?",
+    "expectedSufficient": true,
+    "required": [
+      "§3.6"
+    ]
+  },
+  {
+    "id": "f28",
+    "question": "Who resolves whether an international agreement is really a treaty rather than a trade agreement?",
+    "expectedSufficient": true,
+    "required": [
+      "§3.6.a"
+    ]
+  },
+  {
+    "id": "f29",
+    "question": "Can the Legislature delegate unlimited authority to an agency?",
+    "expectedSufficient": true,
+    "required": [
+      "§3.11"
+    ]
+  },
+  {
+    "id": "f30",
+    "question": "Can an independent statutory agency be abolished while it still has a constitutional function?",
+    "expectedSufficient": true,
+    "required": [
+      "§3.9"
+    ]
+  },
+  {
+    "id": "f31",
+    "question": "Can a federal officeholder keep undisclosed financial conflicts?",
+    "expectedSufficient": true,
+    "required": [
+      "§7.10"
+    ]
+  },
+  {
+    "id": "f32",
+    "question": "When must a federal official recuse from a matter?",
+    "expectedSufficient": true,
+    "required": [
+      "§7.11"
+    ]
+  },
+  {
+    "id": "f33",
+    "question": "Can someone barred by a cooling-off rule serve as an acting executive?",
+    "expectedSufficient": true,
+    "required": [
+      "§2.17",
+      "§7.6"
+    ]
+  },
+  {
+    "id": "f34",
+    "question": "Can campaign contributions be anonymous?",
+    "expectedSufficient": true,
+    "required": [
+      "§8.1"
+    ]
+  },
+  {
+    "id": "f35",
+    "question": "Can a campaign use public broadcast spectrum without rules?",
+    "expectedSufficient": true,
+    "required": [
+      "§8.3"
+    ]
+  },
+  {
+    "id": "f36",
+    "question": "Who selects Monitor Generals?",
+    "expectedSufficient": true,
+    "required": [
+      "§9.3"
+    ]
+  },
+  {
+    "id": "f37",
+    "question": "What happens when a Monitor finds an agency in constitutional noncompliance?",
+    "expectedSufficient": true,
+    "required": [
+      "§9.5.a",
+      "§9.5.b"
+    ]
+  },
+  {
+    "id": "f38",
+    "question": "Can the Legislature cut Monitor funding below the constitutional floor?",
+    "expectedSufficient": true,
+    "required": [
+      "§9.6"
+    ]
+  },
+  {
+    "id": "f39",
+    "question": "What happens if constitutional institutions reach an irreconcilable compromise failure?",
+    "expectedSufficient": true,
+    "required": [
+      "§9.7.a"
+    ]
+  },
+  {
+    "id": "f40",
+    "question": "Who qualifies for the Judicial Pool?",
+    "expectedSufficient": true,
+    "required": [
+      "§9.4.a"
+    ]
+  },
+  {
+    "id": "f41",
+    "question": "When may government classify a federal record?",
+    "expectedSufficient": true,
+    "required": [
+      "§10.2"
+    ]
+  },
+  {
+    "id": "f42",
+    "question": "What happens when a State election system violates national voting requirements?",
+    "expectedSufficient": true,
+    "required": [
+      "§11.3",
+      "§11.2"
+    ]
+  },
+  {
+    "id": "f43",
+    "question": "How is fiscal equalization assessed?",
+    "expectedSufficient": true,
+    "required": [
+      "§12.6"
+    ]
+  },
+  {
+    "id": "f44",
+    "question": "Can the federal government tax without depositing revenue into the National Revenue Fund?",
+    "expectedSufficient": true,
+    "required": [
+      "§12.3"
+    ]
+  },
+  {
+    "id": "f45",
+    "question": "What constitutional rules govern interstate commerce?",
+    "expectedSufficient": true,
+    "required": [
+      "§12.5"
+    ]
+  },
+  {
+    "id": "f46",
+    "question": "Can a State maintain its own organized emergency forces?",
+    "expectedSufficient": true,
+    "required": [
+      "§14.5"
+    ]
+  },
+  {
+    "id": "f47",
+    "question": "What happens after a State fails repeated Statehood Audits?",
+    "expectedSufficient": true,
+    "required": [
+      "§15.3"
+    ]
+  },
+  {
+    "id": "f48",
+    "question": "Can a State split directly into two States?",
+    "expectedSufficient": true,
+    "required": [
+      "§15.7"
+    ]
+  },
+  {
+    "id": "f49",
+    "question": "How can a sovereign outside entity join the Republic as a Territory?",
+    "expectedSufficient": true,
+    "required": [
+      "§15.6"
+    ]
+  },
+  {
+    "id": "f50",
+    "question": "Can an Associated Community terminate its compact without Republic consent?",
+    "expectedSufficient": true,
+    "required": [
+      "§20.4"
+    ]
+  },
+  {
+    "id": "w01",
+    "question": "What happens if the system breaks down?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w02",
+    "question": "Who has the final say?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w03",
+    "question": "What if the process fails?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w04",
+    "question": "Can they just ignore it?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w05",
+    "question": "What happens after that?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w06",
+    "question": "Who decides?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w07",
+    "question": "Can the government do that anyway?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w08",
+    "question": "What if nobody acts?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w09",
+    "question": "What is the fallback?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w10",
+    "question": "Can this be overridden?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w11",
+    "question": "What if there is a conflict?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w12",
+    "question": "Who is responsible when things go wrong?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w13",
+    "question": "Can they delay it forever?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w14",
+    "question": "What if the deadline passes?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w15",
+    "question": "Can someone challenge that?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w16",
+    "question": "What happens if the vote fails?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w17",
+    "question": "Who takes over?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w18",
+    "question": "Can they remove them?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w19",
+    "question": "What if the court says no?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w20",
+    "question": "Does that automatically happen?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w21",
+    "question": "Can they keep it secret?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w22",
+    "question": "What if the state refuses?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w23",
+    "question": "Can the legislature stop it?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w24",
+    "question": "What if there is an emergency?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w25",
+    "question": "Can the executive do it alone?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w26",
+    "question": "How long does it last?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w27",
+    "question": "Can voters reverse it?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w28",
+    "question": "What if both sides disagree?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w29",
+    "question": "What happens if the agency fails?",
+    "expectedSufficient": false,
+    "required": []
+  },
+  {
+    "id": "w30",
+    "question": "Is there another route?",
+    "expectedSufficient": false,
+    "required": []
+  }
+]
