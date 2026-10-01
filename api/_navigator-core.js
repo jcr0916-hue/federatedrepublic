@@ -143,6 +143,33 @@ function hasInterpretiveLanguage(question) {
   return /\b(ambiguous|ambiguity|interpret|interpretation|imply|implicit|silence|unstated|not say|doesn't say|does not say|infer|inference)\b/i.test(question);
 }
 
+
+function normalizeTitleText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
+function titleEligible(name) {
+  const tokens = normalizeTitleText(name).split(' ').filter(Boolean);
+  return tokens.length >= 2;
+}
+
+function uniqueTitleMatch(question, provisions) {
+  if (hasInteractionLanguage(question) || hasInterpretiveLanguage(question)) return null;
+
+  const q = ` ${normalizeTitleText(question)} `;
+  const matches = provisions.filter(p => {
+    if (!titleEligible(p.name)) return false;
+    const title = normalizeTitleText(p.name);
+    return q.includes(` ${title} `);
+  });
+
+  return matches.length === 1 ? matches[0] : null;
+}
+
 function retrievalGate(question, ranked) {
   if (!ranked.length) {
     return { status: 'NOT_ESTABLISHED', reason: 'NO_MATCH' };
@@ -180,5 +207,8 @@ module.exports = {
   hasInteractionLanguage,
   hasInterpretiveLanguage,
   phrasePresent,
+  normalizeTitleText,
+  titleEligible,
+  uniqueTitleMatch,
   retrievalGate,
 };
