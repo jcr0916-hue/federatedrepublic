@@ -39,9 +39,9 @@
     .nav-bar-btn{background:var(--gold);color:var(--navy2);border:none;padding:0 1.25rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;white-space:nowrap;transition:background 0.15s;flex-shrink:0}
     .nav-bar-btn:hover{background:rgba(201,168,76,0.85)}
     .nav-bar-btn:disabled{opacity:0.5;cursor:default}
-    .nav-chips{display:flex;flex-wrap:wrap;gap:0.4rem}
-    .nav-chip{font-size:0.7rem;padding:0.3rem 0.75rem;border:1px solid rgba(201,168,76,0.2);border-radius:20px;color:rgba(245,240,232,0.45);cursor:pointer;background:none;font-family:'Jost',sans-serif;letter-spacing:0.03em;transition:border-color 0.15s,color 0.15s;white-space:nowrap}
-    .nav-chip:hover{border-color:rgba(201,168,76,0.6);color:rgba(245,240,232,0.8)}
+    .nav-example{font-size:0.74rem;line-height:1.6;color:rgba(245,240,232,0.52);font-family:'Jost',sans-serif}
+    .nav-example strong{color:rgba(245,240,232,0.72);font-weight:500}
+    .nav-example em{color:rgba(245,240,232,0.62)}
 
     /* ── NAVIGATOR RESULTS PANEL ── */
     .nav-panel-overlay{display:none;position:fixed;inset:0;background:rgba(10,16,28,0.3);z-index:399;backdrop-filter:blur(1px)}
@@ -145,12 +145,9 @@
               <input class="nav-bar-input" id="navQ" type="text" placeholder="Who controls foreign policy?" autocomplete="off" aria-label="Ask the constitution a question" />
               <button class="nav-bar-btn" id="navBtn" onclick="runNav()" aria-label="Ask">Ask</button>
             </div>
-            <div class="nav-chips">
-              <button class="nav-chip" onclick="setNav('What is the Legat Consul?')">Legat Consul</button>
-              <button class="nav-chip" onclick="setNav('How are judges selected?')">Judicial selection</button>
-              <button class="nav-chip" onclick="setNav('What is the NRS?')">NRS</button>
-              <button class="nav-chip" onclick="setNav('How does impeachment work?')">Impeachment</button>
-              <button class="nav-chip" onclick="setNav('What are the emergency powers?')">Emergency powers</button>
+            <div class="nav-example">
+              <strong>Ask in your own words</strong> about offices, rights, procedures, institutional design, or how provisions interact.<br>
+              <em>Example: How do the Civic and Legat Consuls divide executive authority?</em>
             </div>
           
         <div class="ai-note ai-note--onDark"><a href="ai-features.html">AI Feature* — how it works &amp; your privacy</a></div>
@@ -219,7 +216,6 @@
 
   <script>
     function navEsc(v){ return String(v ?? '').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch])); }
-    function setNav(t){ document.getElementById('navQ').value=t; document.getElementById('navQ').focus(); }
     document.getElementById('navQ').addEventListener('keydown',function(e){if(e.key==='Enter')runNav();});
 
     async function runNav(){
@@ -240,21 +236,23 @@
         if(!res.ok) throw new Error(`HTTP ${res.status}`);
         const p=await res.json();
         if(p.error) throw new Error(p.error);
-        let html=`<p class="nav-summary">${navEsc(p.summary||'')}</p>`;
+        let html=`<p class="nav-section-label">Answer</p><p class="nav-summary">${navEsc(p.summary||'')}</p>`;
         if(p.provisions?.length){
-          html+=`<p class="nav-section-label">Provisions</p><div class="nav-prov-list">`;
+          html+=`<p class="nav-section-label">What the Constitution establishes</p><div class="nav-prov-list">`;
           p.provisions.forEach(v=>{
-            const a=(v.num||'').replace('§','').replace('.','-').replace(/\./g,'');
-            const verbatim=v.verbatim&&v.text
+            const note=v.verbatim&&v.text
               ? `<div class="nav-prov-note" style="white-space:pre-wrap">${navEsc(v.text)}</div>`
-              : `<div class="nav-prov-note">${navEsc(v.relevance||'')}</div>`;
-            html+=`<div class="nav-prov"><div class="nav-prov-num">${navEsc(v.num||'')}</div><div class="nav-prov-name">${navEsc(v.name||'')}</div>${verbatim}<a class="nav-prov-link" href="annotated.html#s${encodeURIComponent(a)}">Read in Annotated Edition &rarr;</a></div>`;
+              : (v.relevance ? `<div class="nav-prov-note">${navEsc(v.relevance)}</div>` : '');
+            html+=`<div class="nav-prov"><div class="nav-prov-num">${navEsc(v.num||'')}</div><div class="nav-prov-name">${navEsc(v.name||'')}</div>${note}</div>`;
           });
           html+=`</div>`;
         }
-        if(p.scenarios?.length){
-          html+=`<p class="nav-section-label">Related Scenarios</p><div class="nav-scen-list">`;
-          p.scenarios.forEach(s=>{html+=`<a class="nav-scen" href="${navEsc(s.file||'#')}"><div class="nav-scen-icon">&blacktriangleright;</div><div><div class="nav-scen-title">${navEsc(s.title||'')}</div><div class="nav-scen-note">${navEsc(s.relevance||'')}</div></div></a>`;});
+        if(p.resources?.length){
+          html+=`<p class="nav-section-label">Where to read more</p><div class="nav-scen-list">`;
+          p.resources.forEach(r=>{
+            const icon=r.kind==='provision'?'§':'&blacktriangleright;';
+            html+=`<a class="nav-scen" href="${navEsc(r.href||'#')}"><div class="nav-scen-icon">${icon}</div><div><div class="nav-scen-title">${navEsc(r.title||'')}</div><div class="nav-scen-note">${navEsc(r.note||'')}</div></div></a>`;
+          });
           html+=`</div>`;
         }
         html+=`<div class="nav-close"><button class="nav-close-btn" onclick="closeNav()">Close &times;</button></div>`;

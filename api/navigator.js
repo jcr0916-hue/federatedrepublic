@@ -6,13 +6,14 @@ const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transp
 const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
 const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-haiku-4.5';
 
-const { expandQuery, rankProvisions, retrievalGate, retrievalSufficiency, explicitSectionRefs, uniqueTitleMatch } = require('./_navigator-core.js');
+const { expandQuery, rankProvisions, retrievalGate, retrievalSufficiency, explicitSectionRefs, uniqueTitleMatch, contextualSectionRefs } = require('./_navigator-core.js');
 const { topicMatch } = require('./_navigator-topics.js');
+const { annotatedHref, resourceBundle } = require('./_navigator-resources.js');
 
 const SCENARIOS = [
   {title:'The First Twelve Years',file:'scenario-the-first-twelve-years.html',kw:['transition','ratification','day zero','article xix','merger','founding','caretaker','predecessor','union','§19.1','§19.2','§19.3','§19.5','§19.6','§19.9']},
   {title:'Ordinary Law',file:'scenario-ordinary.html',kw:['assembly','budget','bill','formation','nrs','ordinary']},
-  {title:'The Stalemate',file:'scenario-coordination-failure.html',kw:['lc','cc','domain','conflict','coordination','dual executive']},
+  {title:'The Stalemate',file:'scenario-coordination-failure.html',kw:['lc','cc','domain','conflict','coordination','dual executive','executive','crisis']},
   {title:'The Alliance Clause',file:'scenario-alliance-clause.html',kw:['military','treaty','lc','deploy','alliance','defense','foreign']},
   {title:'The Twenty-Four Hours',file:'scenario-the-twenty-four-hours.html',kw:['incapacity','council of ministers','restoration','succession','declination','acting','unable','2.16','executive incapacity','ministers']},
   {title:'The Objection',file:'scenario-the-objection.html',kw:['fiscal','objection','cc','budget','assembly','override']},
@@ -85,6 +86,34 @@ function topScenarios(terms, n = 2) {
     .map(x => ({ title: x.s.title, file: x.s.file }));
 }
 
+function provisionView(provision, extra = {}) {
+  return {
+    num: provision.num,
+    name: provision.name,
+    href: annotatedHref(provision.num),
+    ...extra,
+  };
+}
+
+function guideFallback(question, matched, scenarios, reason) {
+  const nearest = matched.slice(0, 3);
+  const names = nearest.map(p => `${p.num} — ${p.name}`);
+  const topic = names.length
+    ? `The closest constitutional material I found is ${names.join('; ')}.`
+    : 'I could not identify a controlling constitutional provision from the wording alone.';
+  const next = names.length
+    ? 'Those provisions and the related resources below are the best place to continue; if you want a more definite answer, ask about the relationship, event, or decision you want to test.'
+    : 'The Annotated Constitution is the best place to browse by office, right, or process, and you can rephrase the question around the specific relationship or event you want to test.';
+  return {
+    summary: `${topic} ${next}`,
+    provisions: nearest.map(p => provisionView(p)),
+    scenarios,
+    resources: resourceBundle(nearest, scenarios),
+    retrieval: { sufficient: false, reason },
+    answerState: names.length ? 'guided' : 'resource-only',
+  };
+}
+
 module.exports = async (req, res) => {
   Object.entries(CORS).forEach(([k, v]) => res.setHeader(k, v));
 
@@ -97,10 +126,20 @@ module.exports = async (req, res) => {
   try {
     const provisions = await getProvisions();
     const terms = expandQuery(question);
-    const ranked = rankProvisions(provisions, terms, 5);
-    const matched = ranked.slice(0, 5).map(x => x.provision);
+    const lexicalRanked = rankProvisions(provisions, terms, 5);
+    const contextualRefs = contextualSectionRefs(question);
+    const byNum = new Map(provisions.map(p => [p.num, p]));
+    const contextualRanked = contextualRefs
+      .map((num, index) => byNum.get(num) ? ({ provision: byNum.get(num), score: 100 - index, via: 'context' }) : null)
+      .filter(Boolean);
+    const contextualNums = new Set(contextualRanked.map(x => x.provision.num));
+    const ranked = [...contextualRanked, ...lexicalRanked.filter(x => !contextualNums.has(x.provision.num))].slice(0, 5);
+    const matched = ranked.map(x => x.provision);
     const gate = retrievalGate(question, ranked);
-    const scenarios = topScenarios(terms, 2);
+    let scenarios = topScenarios(terms, 2);
+    if (contextualRefs.length && !scenarios.some(s => s.file === 'scenario-coordination-failure.html')) {
+      scenarios = [{ title:'The Stalemate', file:'scenario-coordination-failure.html', relevance:'Tests cross-domain disagreement between the two executives.' }, ...scenarios].slice(0, 2);
+    }
 
     const topic = topicMatch(question);
     if (topic) {
@@ -121,14 +160,15 @@ module.exports = async (req, res) => {
         sections: topicProvisions.map(x => x.provision.num),
       });
 
+      const topicViews = topicProvisions.map(({ provision, relevance }) =>
+        provisionView(provision, { relevance })
+      );
       return res.status(200).json({
         summary: topic.answer,
-        provisions: topicProvisions.map(({ provision, relevance }) => ({
-          num: provision.num,
-          name: provision.name,
-          relevance,
-        })),
-        scenarios
+        provisions: topicViews,
+        scenarios,
+        resources: resourceBundle(topicProvisions, scenarios),
+        answerState: 'full',
       });
     }
 
@@ -144,22 +184,27 @@ module.exports = async (req, res) => {
 
       return res.status(200).json({
         summary: `Direct provision lookup: ${titleMatch.num} — ${titleMatch.name}. The constitutional text is reproduced verbatim below; no AI paraphrase was used.`,
-        provisions: [{
-          num: titleMatch.num,
-          name: titleMatch.name,
+        provisions: [provisionView(titleMatch, {
           relevance: 'Unique provision title matched',
           text: titleMatch.text,
           verbatim: true,
-        }],
-        scenarios
+        })],
+        scenarios,
+        resources: resourceBundle([{ provision:titleMatch, relevance:'Read the exact provision in the Annotated Constitution.' }], scenarios),
+        answerState: 'full',
       });
     }
 
     if (matched.length === 0) {
       return res.status(200).json({
-        summary: "That query didn't match any specific provisions. Try searching for a position (Legat Consul, Civic Consul), a right (expression, privacy), or a process (amendment, emergency, election, devolution).",
+        summary: 'I cannot identify a controlling constitutional provision from the wording alone. The Annotated Constitution is the best place to browse by office, right, or process; if you rephrase around the relationship, event, or decision you want to test, Navigator can usually narrow it further.',
         provisions: [],
-        scenarios: []
+        scenarios: [],
+        resources: [
+          { kind:'general', title:'Annotated Constitution', href:'annotated.html', note:'Browse the Constitution by article and provision.' },
+          { kind:'general', title:'Scenarios', href:'scenarios.html', note:'See constitutional mechanisms tested in concrete situations.' },
+        ],
+        answerState: 'resource-only',
       });
     }
 
@@ -181,19 +226,21 @@ module.exports = async (req, res) => {
 
         return res.status(200).json({
           summary: `Direct section lookup: ${controlling.num} — ${controlling.name}. The constitutional text is reproduced verbatim below; no AI paraphrase was used.`,
-          provisions: [{
-            num: controlling.num,
-            name: controlling.name,
+          provisions: [provisionView(controlling, {
             relevance: 'Exact section requested',
             text: controlling.text,
             verbatim: true,
-          }],
-          scenarios
+          })],
+          scenarios,
+          resources: resourceBundle([{ provision:controlling, relevance:'Read the exact provision in the Annotated Constitution.' }], scenarios),
+          answerState: 'full',
         });
       }
     }
 
-    const sufficiency = retrievalSufficiency(question, ranked);
+    const sufficiency = contextualRefs.length
+      ? { sufficient:true, reason:'VERIFIED_CONTEXT_PACKET', coverage:1 }
+      : retrievalSufficiency(question, ranked);
     if (!sufficiency.sufficient) {
       console.info('[navigator-retrieval]', {
         sufficient: false,
@@ -201,16 +248,7 @@ module.exports = async (req, res) => {
         coverage: sufficiency.coverage,
         matched: matched.map(p => p.num),
       });
-
-      return res.status(200).json({
-        summary: 'I cannot answer that reliably from the constitutional provisions retrieved for this question. Try naming the office, process, or section more specifically.',
-        provisions: [],
-        scenarios,
-        retrieval: {
-          sufficient: false,
-          reason: sufficiency.reason,
-        },
-      });
+      return res.status(200).json(guideFallback(question, matched, scenarios, sufficiency.reason));
     }
 
     const provisionContext = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
@@ -220,7 +258,7 @@ module.exports = async (req, res) => {
       model: MODEL,
       max_tokens: 420,
       temperature: 0,
-      system: `You are a plain language guide to the Federated Republic constitution. Answer the user's question in the first sentence. Use only the supplied constitutional provisions. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. If the supplied provisions do not establish the answer, say that directly rather than inferring. Preserve material qualifiers, thresholds, conditions, and distinctions. After answering directly, include every material consequence, exception, continuation rule, and fallback from the supplied provisions that is necessary to answer the question; do not omit a directly relevant downstream consequence merely for brevity. Where multiple supplied provisions govern different stages or mechanisms, distinguish them clearly. Write 3-5 concise sentences as needed. Plain text only — no headings, bullets, or formatting.`,
+      system: `You are a plain language guide to the Federated Republic constitution. Answer the user's question in the first sentence. Use only the supplied constitutional provisions. Answer fully where the supplied text establishes the answer. If it establishes only part of the answer, answer that part and state clearly what the Constitution does not establish. If the user asks why a structure exists or asks for design rationale, distinguish what the constitutional text establishes from any motive or rationale it does not state; do not invent an authorial purpose. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. Preserve material qualifiers, thresholds, conditions, and distinctions. After answering directly, include every material consequence, exception, continuation rule, and fallback from the supplied provisions that is necessary to answer the question; do not omit a directly relevant downstream consequence merely for brevity. Where multiple supplied provisions govern different stages or mechanisms, distinguish them clearly. Write 3-5 concise sentences as needed. Plain text only — no headings, bullets, or formatting.`,
       messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nProvisions:\n${provisionContext}` }],
       tags: ['feature:navigator', 'role:primary', envTag],
     });
@@ -279,8 +317,10 @@ module.exports = async (req, res) => {
 
     return res.status(200).json({
       summary,
-      provisions: matched.map(p => ({ num: p.num, name: p.name })),
-      scenarios
+      provisions: matched.map(p => provisionView(p)),
+      scenarios,
+      resources: resourceBundle(matched, scenarios),
+      answerState: 'full',
     });
 
   } catch (err) {
