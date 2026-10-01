@@ -132,8 +132,8 @@ test('supported fallback sends expanded five-provision evidence packet to Sonnet
     const prompt = requests[0].body.messages[0].content;
     assert.match(prompt, /\[§2\.14\.a\]/);
     assert.match(prompt, /\[§4\.5\]/);
-    assert.match(requests[0].body.system, /direct answer/i);
-    assert.match(requests[0].body.system, /Do not invent or generalize/i);
+    assert.match(requests[0].body.system, /Answer the user's question in the first sentence/i);
+    assert.match(requests[0].body.system, /Do not add any unstated/i);
     assert.ok(res.body.provisions.some(p => p.num === '§4.5'));
   } finally {
     global.fetch = originalFetch;
