@@ -27,7 +27,7 @@ public URL. To restore the previous artwork, change `geography.baseImage` back t
 | `torenthia.html` | Shared regional image under the existing SVG in a 3:2 frame. |
 | `_includes/state-profile.njk` | Harren, Varek, Norvane, and Kelvant use the same image. Existing 520 × 320 viewBoxes remain centered on their State labels. |
 | `dossier-korda.html` | Existing `1030 425 430 425` viewBox, State borders, labels, and Rhondel marker. |
-| `atlas.html` | Separate 1774 × 887 world-map coordinate system and existing world artwork. Its Republic hotspot now reads the lexical `MAP_DATA` binding and opens Republic at a Glance. |
+| `atlas.html` | Separate 1000 × 563 world-map coordinate system using the current continental artwork. Torenthia sits on the western side of the northwestern continent between the Western Sea and Lake Varda; the Republic hotspot reads the lexical `MAP_DATA` binding and opens Republic at a Glance. The Tier 2 regional map remains the detailed geographic authority where the two scales differ. |
 | `torenthia-atlas.html` | Existing redirect to `atlas.html`. |
 
 `tier2-labels.json` and `tier2-borders.json` remain unchanged. `_data/geography.js`
