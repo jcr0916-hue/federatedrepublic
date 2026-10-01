@@ -79,6 +79,8 @@ test('sufficient fallback query reaches Sonnet with a bounded evidence packet', 
     assert.equal(seenBody.temperature, 0);
     assert.match(seenBody.system, /Do not add any unstated power/i);
     assert.match(seenBody.system, /mechanism for changing or avoiding a constitutional rule/i);
+    assert.match(seenBody.system, /every material consequence, exception, continuation rule, and fallback/i);
+    assert.equal(seenBody.max_tokens, 420);
   } finally {
     global.fetch = originalFetch;
     if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
