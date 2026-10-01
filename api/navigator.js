@@ -6,7 +6,7 @@ const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transp
 const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
 const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-haiku-4.5';
 
-const { expandQuery, rankProvisions, retrievalGate, explicitSectionRefs, uniqueTitleMatch } = require('./_navigator-core.js');
+const { expandQuery, rankProvisions, retrievalGate, explicitSectionRefs, uniqueTitleMatch, broadTopicMatch } = require('./_navigator-core.js');
 
 const SCENARIOS = [
   {title:'The First Twelve Years',file:'scenario-the-first-twelve-years.html',kw:['transition','ratification','day zero','article xix','merger','founding','caretaker','predecessor','union','§19.1','§19.2','§19.3','§19.5','§19.6','§19.9']},
@@ -100,6 +100,32 @@ module.exports = async (req, res) => {
     const matched = ranked.slice(0, 3).map(x => x.provision);
     const gate = retrievalGate(question, ranked);
     const scenarios = topScenarios(terms, 2);
+
+    const broadTopic = broadTopicMatch(question);
+    if (broadTopic?.topic === 'judicial-selection') {
+      const topicProvisions = broadTopic.sections
+        .map(num => provisions.find(p => p.num === num))
+        .filter(Boolean);
+
+      console.info('[navigator-deterministic]', {
+        gateStatus: 'DISAMBIGUATE',
+        gateReason: 'BROAD_JUDICIAL_SELECTION_TOPIC',
+        sections: topicProvisions.map(p => p.num),
+      });
+
+      return res.status(200).json({
+        summary: 'Judicial selection is not a single procedure in this Constitution. Inferior-court judges are governed by §4.2; Supreme Court selection is governed by §4.4; and §4.4.a governs the Senate-bypass public-confirmation path for a Supreme Court vacancy.',
+        provisions: topicProvisions.map(p => ({
+          num: p.num,
+          name: p.name,
+          relevance:
+            p.num === '§4.2' ? 'Inferior-court appointments and judicial independence' :
+            p.num === '§4.4' ? 'Ordinary Supreme Court selection and vacancy process' :
+            'Supreme Court Senate-bypass public confirmation',
+        })),
+        scenarios
+      });
+    }
 
     // Deterministic title matching is independent of fuzzy retrieval, so it must
     // run before the no-match fallback.
