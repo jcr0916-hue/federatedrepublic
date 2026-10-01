@@ -89,6 +89,61 @@ const SYNONYMS = {
   'federalism':['state','devolution','federal','§3.10'],
   'indigenous':['nation','compact','article xvi','§16.1'],
   'native':['indigenous','nation','compact'],
+  'detained':['habeas corpus','detention','court','72 hours'],
+  'detention':['habeas corpus','detained','court','72 hours'],
+  'persecution':['non-refoulement','asylum','protection','removal'],
+  'returned':['non-refoulement','asylum','removal'],
+  'retroactively':['retroactive punishment','retroactive criminal law'],
+  'retroactive':['retroactive punishment','retroactive criminal law'],
+  'discriminate':['non-discrimination','equality','benefit','burden'],
+  'benefits':['non-discrimination','equality','governmental benefit'],
+  'nomination':['judicial','supreme court','selection','confirmation','vacancy'],
+  'refuses':['failure to act','bypass','fallback','deemed approval'],
+  'stall':['failure to act','bypass','fallback'],
+  'judges':['judicial','court','justice','appointment','independence'],
+  'decisions':['judicial independence','court','review'],
+  'cross-domain':['cross-domain emergency lead','council of ministers','§2.14.a'],
+  'agree':['conflict','coordination','cross-domain emergency lead'],
+  'order':['duty of refusal','unconstitutional order','executive'],
+  'refuse':['duty of refusal','unconstitutional order'],
+  'dies':['succession','death','legat consul','§2.9'],
+  'incapacity':['executive incapacity','succession','temporary unable'],
+  'pardon':['clemency','self-clemency'],
+  'pardons':['clemency','self-clemency'],
+  'subjects':['single subject','legislative standards'],
+  'unrelated':['single subject','legislative standards'],
+  'conflicts':['conflict of interest','ethics','financial disclosure'],
+  'recuse':['recusal','conflict of interest','code of conduct'],
+  'anonymous':['electoral finance','contribution','disclosure'],
+  'contributions':['electoral finance','campaign','disclosure'],
+  'classify':['classification criteria','record','nrs'],
+  'classified':['classification criteria','record','nrs'],
+  'noncompliance':['compliance standards','agency accountability','monitor'],
+  'non-compliance':['compliance standards','agency accountability','monitor'],
+  'other consul':['cross-domain assistance','§2.14.b'],
+  "other's domain":['cross-domain assistance','§2.14.b'],
+  'senate does nothing':['deemed approval','legislature','§3.1'],
+  'fails to act':['failure to act','deemed approval','bypass'],
+  'really a treaty':['classification dispute','§3.6.a'],
+  'trade agreement':['treaty','ratification','lc','§3.6','§2.4','classification','§3.6.a'],
+  'agency noncompliance':['agency accountability','§9.5.b','compliance standards'],
+  'constitutional noncompliance':['agency accountability','§9.5.b','compliance standards'],
+  'irreconcilable compromise':['institutional compromise protocol','§9.7.a'],
+  'compromise failure':['institutional compromise protocol','§9.7.a'],
+  'state election system':['state election non-compliance','§11.3','nvs','§11.2'],
+  'temporary inability':['executive incapacity','temporary unable','§2.16'],
+  'unable to exercise authority':['executive incapacity','temporary unable','§2.16'],
+  'spy on citizens':['consular intelligence','judicial authorization','§2.3'],
+  'spying on citizens':['consular intelligence','judicial authorization','§2.3'],
+  'senate amend':['legislature','subject matter','§3.1'],
+  'subject matter':['senate review','amend','§3.1'],
+  'monitor generals':['monitor general selection','§9.3'],
+  'selects monitor generals':['monitor general selection','§9.3'],
+  'interstate commerce':['internal commerce','§12.5'],
+  'split directly':['state immutability','territorial integrity','§15.7'],
+  'split into two states':['state immutability','territorial integrity','§15.7'],
+  'terminate its compact':['sovereign mobility','compact termination','§20.4'],
+  'terminate compact':['sovereign mobility','compact termination','§20.4'],
 };
 
 function phrasePresent(text, phrase) {
@@ -122,12 +177,44 @@ function scoreProvision(prov, terms) {
   return score;
 }
 
+function extractSectionRefs(text) {
+  return [...String(text || '').matchAll(/§\s*(\d+(?:\.\d+)*(?:\.[a-z])?)/gi)]
+    .map(m => '§' + m[1]);
+}
+
 function rankProvisions(provisions, terms, n = 5) {
-  return provisions
+  const ranked = provisions
     .map(p => ({ provision: p, score: scoreProvision(p, terms) }))
     .filter(x => x.score > 0)
-    .sort((a, b) => b.score - a.score || a.provision.num.localeCompare(b.provision.num))
-    .slice(0, n);
+    .sort((a, b) => b.score - a.score || a.provision.num.localeCompare(b.provision.num));
+
+  const selected = ranked.slice(0, Math.min(3, n));
+  const selectedNums = new Set(selected.map(x => x.provision.num));
+  const byNum = new Map(provisions.map(p => [p.num, p]));
+
+  // Cross-references from the strongest retrieved provisions are evidence, not
+  // model inference. Reserve packet space for them before lower-ranked lexical
+  // matches are added.
+  for (const source of ranked.slice(0, 3)) {
+    for (const ref of extractSectionRefs(source.provision.text)) {
+      if (selected.length >= n) break;
+      if (selectedNums.has(ref)) continue;
+      const provision = byNum.get(ref);
+      if (!provision) continue;
+      selected.push({ provision, score: Math.max(1, source.score - 1), via: source.provision.num });
+      selectedNums.add(ref);
+    }
+    if (selected.length >= n) break;
+  }
+
+  for (const item of ranked) {
+    if (selected.length >= n) break;
+    if (selectedNums.has(item.provision.num)) continue;
+    selected.push(item);
+    selectedNums.add(item.provision.num);
+  }
+
+  return selected.slice(0, n);
 }
 
 function explicitSectionRefs(question) {
@@ -209,6 +296,88 @@ function broadTopicMatch(question) {
   return null;
 }
 
+
+function baseQueryTerms(raw) {
+  return String(raw || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9§.\s]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w && !STOP.has(w) && w.length > 2);
+}
+
+function provisionContainsTerm(provision, term) {
+  const hay = `${provision.num} ${provision.name} ${provision.text}`.toLowerCase();
+  return hay.includes(term);
+}
+
+const GENERIC_FALLBACK_TERMS = new Set([
+  'happens','happen','system','process','fails','failed','failure','vote','voting',
+  'government','they','them','someone','somebody','nobody','acts','act','acting',
+  'decides','decide','decision','responsible','wrong','delay','delays','forever',
+  'deadline','passes','challenge','overridden','override','conflict','emergency',
+  'executive','legislature','state','court','agency','another','route','long',
+  'last','final','automatically','automatic','reverse','sides','disagree'
+]);
+
+function subjectSpecificity(question) {
+  const terms = baseQueryTerms(question);
+  const specific = terms.filter(t => !GENERIC_FALLBACK_TERMS.has(t));
+  return { terms, specific, score: specific.length };
+}
+
+function retrievalSufficiency(question, ranked) {
+  if (!ranked.length) {
+    return { sufficient: false, reason: 'NO_MATCH', coverage: 0 };
+  }
+
+  const specificity = subjectSpecificity(question);
+  if (specificity.score < 2) {
+    return { sufficient: false, reason: 'SUBJECT_UNDERSPECIFIED', coverage: 0, specificity: specificity.score };
+  }
+
+  const refs = explicitSectionRefs(question);
+  const topFive = ranked.slice(0, 5);
+  const topNums = new Set(topFive.map(x => x.provision.num));
+
+  if (refs.length && refs.some(ref => !topNums.has(ref))) {
+    return { sufficient: false, reason: 'EXPLICIT_SECTION_MISSING', coverage: 0 };
+  }
+
+  const rawTerms = baseQueryTerms(question);
+  const covered = rawTerms.filter(term =>
+    topFive.some(x => provisionContainsTerm(x.provision, term))
+  );
+  const coverage = rawTerms.length ? covered.length / rawTerms.length : 0;
+
+  const top = topFive[0]?.score || 0;
+  const second = topFive[1]?.score || 0;
+  const strongCount = topFive.filter(x => x.score >= 4).length;
+  const expanded = expandQuery(question);
+  const topConceptHits = expanded.filter(term =>
+    provisionContainsTerm(topFive[0].provision, term)
+  ).length;
+
+  if (hasInteractionLanguage(question)) {
+    if (strongCount < 2 || second < 4 || coverage < 0.45) {
+      return { sufficient: false, reason: 'INTERACTION_PACKET_WEAK', coverage };
+    }
+    return { sufficient: true, reason: 'INTERACTION_PACKET_SUPPORTED', coverage };
+  }
+
+  if (hasInterpretiveLanguage(question)) {
+    if (top < 6 || coverage < 0.5) {
+      return { sufficient: false, reason: 'INTERPRETIVE_PACKET_WEAK', coverage };
+    }
+    return { sufficient: true, reason: 'INTERPRETIVE_PACKET_SUPPORTED', coverage };
+  }
+
+  if (top < 6 || (coverage < 0.5 && topConceptHits < 3)) {
+    return { sufficient: false, reason: 'UNANCHORED_PACKET_WEAK', coverage };
+  }
+
+  return { sufficient: true, reason: 'UNANCHORED_PACKET_SUPPORTED', coverage };
+}
+
 function retrievalGate(question, ranked) {
   if (!ranked.length) {
     return { status: 'NOT_ESTABLISHED', reason: 'NO_MATCH' };
@@ -242,6 +411,7 @@ module.exports = {
   expandQuery,
   scoreProvision,
   rankProvisions,
+  extractSectionRefs,
   explicitSectionRefs,
   hasInteractionLanguage,
   hasInterpretiveLanguage,
@@ -250,5 +420,8 @@ module.exports = {
   titleEligible,
   uniqueTitleMatch,
   broadTopicMatch,
+  baseQueryTerms,
+  subjectSpecificity,
+  retrievalSufficiency,
   retrievalGate,
 };

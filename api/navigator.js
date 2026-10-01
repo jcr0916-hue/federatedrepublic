@@ -6,7 +6,7 @@ const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transp
 const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
 const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-haiku-4.5';
 
-const { expandQuery, rankProvisions, retrievalGate, explicitSectionRefs, uniqueTitleMatch } = require('./_navigator-core.js');
+const { expandQuery, rankProvisions, retrievalGate, retrievalSufficiency, explicitSectionRefs, uniqueTitleMatch } = require('./_navigator-core.js');
 const { topicMatch } = require('./_navigator-topics.js');
 
 const SCENARIOS = [
@@ -98,7 +98,7 @@ module.exports = async (req, res) => {
     const provisions = await getProvisions();
     const terms = expandQuery(question);
     const ranked = rankProvisions(provisions, terms, 5);
-    const matched = ranked.slice(0, 3).map(x => x.provision);
+    const matched = ranked.slice(0, 5).map(x => x.provision);
     const gate = retrievalGate(question, ranked);
     const scenarios = topScenarios(terms, 2);
 
@@ -193,13 +193,33 @@ module.exports = async (req, res) => {
       }
     }
 
+    const sufficiency = retrievalSufficiency(question, ranked);
+    if (!sufficiency.sufficient) {
+      console.info('[navigator-retrieval]', {
+        sufficient: false,
+        reason: sufficiency.reason,
+        coverage: sufficiency.coverage,
+        matched: matched.map(p => p.num),
+      });
+
+      return res.status(200).json({
+        summary: 'I cannot answer that reliably from the constitutional provisions retrieved for this question. Try naming the office, process, or section more specifically.',
+        provisions: [],
+        scenarios,
+        retrieval: {
+          sufficient: false,
+          reason: sufficiency.reason,
+        },
+      });
+    }
+
     const provisionContext = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
 
     const envTag = `env:${process.env.VERCEL_ENV || 'local'}`;
     const primaryPromise = anthropicMessage({
       model: MODEL,
       max_tokens: 320,
-      system: `You are a plain language guide to the Federated Republic constitution. A user asked a question. You have been given the relevant constitutional provisions. Write 3-4 sentences that directly answer the question using only those provisions. If the user asks about something that doesn't exist in the constitution (like a "president" or "impeachment"), explain what the equivalent constitutional mechanism is. Be accurate, clear, and direct. Plain text only — no headings, bullets, or formatting.`,
+      system: `You are a plain language guide to the Federated Republic constitution. Answer the user's question in the first sentence. Use only the supplied constitutional provisions. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, or reconciliation. If the supplied provisions do not establish the answer, say that directly rather than inferring. Preserve material qualifiers, thresholds, conditions, and distinctions. Write 3-4 concise sentences. Plain text only — no headings, bullets, or formatting.`,
       messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nProvisions:\n${provisionContext}` }],
       tags: ['feature:navigator', 'role:primary', envTag],
     });
@@ -224,7 +244,7 @@ module.exports = async (req, res) => {
       return res.status(502).json({ error: 'Upstream error', detail: detail.slice(0, 200) });
     }
 
-    console.info('[navigator-ai]', { route, model, gateStatus: gate.status, gateReason: gate.reason, matched: matched.map(p => p.num) });
+    console.info('[navigator-ai]', { route, model, gateStatus: gate.status, gateReason: gate.reason, retrievalReason: sufficiency.reason, retrievalCoverage: sufficiency.coverage, matched: matched.map(p => p.num) });
 
     if (shadowResult?.response) {
       try {
