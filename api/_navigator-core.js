@@ -162,13 +162,24 @@ function uniqueTitleMatch(question, provisions) {
   if (hasInteractionLanguage(question) || hasInterpretiveLanguage(question)) return null;
 
   const q = ` ${normalizeTitleText(question)} `;
-  const matches = provisions.filter(p => {
-    if (!titleEligible(p.name)) return false;
-    const title = normalizeTitleText(p.name);
-    return q.includes(` ${title} `);
-  });
+  const matches = provisions
+    .filter(p => {
+      if (!titleEligible(p.name)) return false;
+      const title = normalizeTitleText(p.name);
+      return q.includes(` ${title} `);
+    })
+    .map(p => ({ provision: p, title: normalizeTitleText(p.name) }))
+    .sort((a, b) => b.title.length - a.title.length);
 
-  return matches.length === 1 ? matches[0] : null;
+  if (!matches.length) return null;
+  if (matches.length === 1) return matches[0].provision;
+
+  const mostSpecific = matches[0];
+  const nestedOnly = matches.slice(1).every(m =>
+    ` ${mostSpecific.title} `.includes(` ${m.title} `)
+  );
+
+  return nestedOnly ? mostSpecific.provision : null;
 }
 
 function retrievalGate(question, ranked) {
