@@ -209,6 +209,64 @@ function broadTopicMatch(question) {
   return null;
 }
 
+
+function baseQueryTerms(raw) {
+  return String(raw || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9§.\s]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w && !STOP.has(w) && w.length > 2);
+}
+
+function provisionContainsTerm(provision, term) {
+  const hay = `${provision.num} ${provision.name} ${provision.text}`.toLowerCase();
+  return hay.includes(term);
+}
+
+function retrievalSufficiency(question, ranked) {
+  if (!ranked.length) {
+    return { sufficient: false, reason: 'NO_MATCH', coverage: 0 };
+  }
+
+  const refs = explicitSectionRefs(question);
+  const topFive = ranked.slice(0, 5);
+  const topNums = new Set(topFive.map(x => x.provision.num));
+
+  if (refs.length && refs.some(ref => !topNums.has(ref))) {
+    return { sufficient: false, reason: 'EXPLICIT_SECTION_MISSING', coverage: 0 };
+  }
+
+  const rawTerms = baseQueryTerms(question);
+  const covered = rawTerms.filter(term =>
+    topFive.some(x => provisionContainsTerm(x.provision, term))
+  );
+  const coverage = rawTerms.length ? covered.length / rawTerms.length : 0;
+
+  const top = topFive[0]?.score || 0;
+  const second = topFive[1]?.score || 0;
+  const strongCount = topFive.filter(x => x.score >= 4).length;
+
+  if (hasInteractionLanguage(question)) {
+    if (strongCount < 2 || second < 4 || coverage < 0.45) {
+      return { sufficient: false, reason: 'INTERACTION_PACKET_WEAK', coverage };
+    }
+    return { sufficient: true, reason: 'INTERACTION_PACKET_SUPPORTED', coverage };
+  }
+
+  if (hasInterpretiveLanguage(question)) {
+    if (top < 6 || coverage < 0.5) {
+      return { sufficient: false, reason: 'INTERPRETIVE_PACKET_WEAK', coverage };
+    }
+    return { sufficient: true, reason: 'INTERPRETIVE_PACKET_SUPPORTED', coverage };
+  }
+
+  if (top < 6 || coverage < 0.55) {
+    return { sufficient: false, reason: 'UNANCHORED_PACKET_WEAK', coverage };
+  }
+
+  return { sufficient: true, reason: 'UNANCHORED_PACKET_SUPPORTED', coverage };
+}
+
 function retrievalGate(question, ranked) {
   if (!ranked.length) {
     return { status: 'NOT_ESTABLISHED', reason: 'NO_MATCH' };
@@ -250,5 +308,7 @@ module.exports = {
   titleEligible,
   uniqueTitleMatch,
   broadTopicMatch,
+  baseQueryTerms,
+  retrievalSufficiency,
   retrievalGate,
 };
