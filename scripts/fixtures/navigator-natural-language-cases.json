@@ -1,0 +1,444 @@
+[
+  {
+    "id": "d01",
+    "question": "judicial selection",
+    "expected": "TOPIC",
+    "topic": "judicial-selection"
+  },
+  {
+    "id": "d02",
+    "question": "Judicial appointments?",
+    "expected": "TOPIC",
+    "topic": "judicial-selection"
+  },
+  {
+    "id": "d03",
+    "question": "How are judges selected?",
+    "expected": "TOPIC",
+    "topic": "judicial-selection"
+  },
+  {
+    "id": "d04",
+    "question": "Who appoints judges?",
+    "expected": "TOPIC",
+    "topic": "judicial-selection"
+  },
+  {
+    "id": "d05",
+    "question": "How are Supreme Court justices selected?",
+    "expected": "TOPIC",
+    "topic": "supreme-court-selection"
+  },
+  {
+    "id": "d06",
+    "question": "Who appoints Supreme Court justices?",
+    "expected": "TOPIC",
+    "topic": "supreme-court-selection"
+  },
+  {
+    "id": "d07",
+    "question": "Supreme Court appointment process",
+    "expected": "TOPIC",
+    "topic": "supreme-court-selection"
+  },
+  {
+    "id": "d08",
+    "question": "How is the Civic Consul removed?",
+    "expected": "TOPIC",
+    "topic": "civic-consul-removal"
+  },
+  {
+    "id": "d09",
+    "question": "Who can remove the Civic Consul?",
+    "expected": "TOPIC",
+    "topic": "civic-consul-removal"
+  },
+  {
+    "id": "d10",
+    "question": "Civic Consul removal",
+    "expected": "TOPIC",
+    "topic": "civic-consul-removal"
+  },
+  {
+    "id": "d11",
+    "question": "How does a territory become a state?",
+    "expected": "TOPIC",
+    "topic": "statehood"
+  },
+  {
+    "id": "d12",
+    "question": "How does statehood work?",
+    "expected": "TOPIC",
+    "topic": "statehood"
+  },
+  {
+    "id": "d13",
+    "question": "Statehood process",
+    "expected": "TOPIC",
+    "topic": "statehood"
+  },
+  {
+    "id": "d14",
+    "question": "Territory to state",
+    "expected": "TOPIC",
+    "topic": "statehood"
+  },
+  {
+    "id": "d15",
+    "question": "Can a state leave the Republic?",
+    "expected": "TOPIC",
+    "topic": "state-independence"
+  },
+  {
+    "id": "d16",
+    "question": "Can a state become independent?",
+    "expected": "TOPIC",
+    "topic": "state-independence"
+  },
+  {
+    "id": "d17",
+    "question": "How can a state become independent?",
+    "expected": "TOPIC",
+    "topic": "state-independence"
+  },
+  {
+    "id": "d18",
+    "question": "State independence process",
+    "expected": "TOPIC",
+    "topic": "state-independence"
+  },
+  {
+    "id": "d19",
+    "question": "Who controls the military?",
+    "expected": "TOPIC",
+    "topic": "military-authority"
+  },
+  {
+    "id": "d20",
+    "question": "Who commands the military?",
+    "expected": "TOPIC",
+    "topic": "military-authority"
+  },
+  {
+    "id": "d21",
+    "question": "Who can use military force?",
+    "expected": "TOPIC",
+    "topic": "military-authority"
+  },
+  {
+    "id": "d22",
+    "question": "Military authority",
+    "expected": "TOPIC",
+    "topic": "military-authority"
+  },
+  {
+    "id": "d23",
+    "question": "How is the Constitution amended?",
+    "expected": "TOPIC",
+    "topic": "amendments"
+  },
+  {
+    "id": "d24",
+    "question": "How do constitutional amendments work?",
+    "expected": "TOPIC",
+    "topic": "amendments"
+  },
+  {
+    "id": "d25",
+    "question": "How are constitutional amendments passed?",
+    "expected": "TOPIC",
+    "topic": "amendments"
+  },
+  {
+    "id": "d26",
+    "question": "Amendment process",
+    "expected": "TOPIC",
+    "topic": "amendments"
+  },
+  {
+    "id": "d27",
+    "question": "What is the NRS?",
+    "expected": "TOPIC",
+    "topic": "nrs"
+  },
+  {
+    "id": "d28",
+    "question": "What is the National Record System?",
+    "expected": "TOPIC",
+    "topic": "nrs"
+  },
+  {
+    "id": "d29",
+    "question": "How does the NRS work?",
+    "expected": "TOPIC",
+    "topic": "nrs"
+  },
+  {
+    "id": "d30",
+    "question": "What does the NRS do?",
+    "expected": "TOPIC",
+    "topic": "nrs"
+  },
+  {
+    "id": "d31",
+    "question": "What is the Monetary Authority?",
+    "expected": "TOPIC",
+    "topic": "monetary-authority"
+  },
+  {
+    "id": "d32",
+    "question": "What does the Monetary Authority do?",
+    "expected": "TOPIC",
+    "topic": "monetary-authority"
+  },
+  {
+    "id": "d33",
+    "question": "Who controls monetary policy?",
+    "expected": "TOPIC",
+    "topic": "monetary-authority"
+  },
+  {
+    "id": "d34",
+    "question": "Who issues the currency?",
+    "expected": "TOPIC",
+    "topic": "monetary-authority"
+  },
+  {
+    "id": "d35",
+    "question": "How is the Monetary Authority selected?",
+    "expected": "TOPIC",
+    "topic": "monetary-authority"
+  },
+  {
+    "id": "d36",
+    "question": "How can citizens propose a law?",
+    "expected": "TOPIC",
+    "topic": "citizen-legislative-initiative"
+  },
+  {
+    "id": "d37",
+    "question": "How can citizens propose legislation?",
+    "expected": "TOPIC",
+    "topic": "citizen-legislative-initiative"
+  },
+  {
+    "id": "d38",
+    "question": "How does citizen initiative work?",
+    "expected": "TOPIC",
+    "topic": "citizen-legislative-initiative"
+  },
+  {
+    "id": "d39",
+    "question": "Citizen initiative process",
+    "expected": "TOPIC",
+    "topic": "citizen-legislative-initiative"
+  },
+  {
+    "id": "d40",
+    "question": "What rights cannot be suspended?",
+    "expected": "TOPIC",
+    "topic": "non-derogable-rights"
+  },
+  {
+    "id": "d41",
+    "question": "What are the non derogable rights?",
+    "expected": "TOPIC",
+    "topic": "non-derogable-rights"
+  },
+  {
+    "id": "d42",
+    "question": "Which rights cannot be suspended?",
+    "expected": "TOPIC",
+    "topic": "non-derogable-rights"
+  },
+  {
+    "id": "s01",
+    "question": "Does judicial selection give the Civic Consul too much discretion?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s02",
+    "question": "What happens if a Judicial Pool nominee has a conflict with another provision?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s03",
+    "question": "Does §4.4 imply the Senate can block a Supreme Court seat forever?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s04",
+    "question": "How do §4.4 and §4.4.a interact if the Senate delays?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s05",
+    "question": "Could the Assembly abuse the constructive vote of no confidence?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s06",
+    "question": "Does §2.6 imply any limit on political reasons for removing the Civic Consul?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s07",
+    "question": "What happens if statehood audit findings conflict?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s08",
+    "question": "How should §15.2 be interpreted if one Monitor changes its finding?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s09",
+    "question": "Can a State independence referendum be repeated strategically?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s10",
+    "question": "How do §15.9 and §15.4 interact?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s11",
+    "question": "Who controls the military if the two Consuls disagree about whether an operation is domestic or foreign?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s12",
+    "question": "Does treaty-based military authorization override §2.2?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s13",
+    "question": "Can an amendment change an entrenched provision indirectly?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s14",
+    "question": "How do §17.1 and §17.3 interact?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s15",
+    "question": "Can the NRS Panel hide a record for political embarrassment?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s16",
+    "question": "Does §10.1 imply publication is necessary before authority exists?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s17",
+    "question": "Could the Legislature indirectly control the Monetary Authority through its budget?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s18",
+    "question": "How should Monetary Authority independence be reconciled with statutory administration?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s19",
+    "question": "Can a citizen initiative do something the Legislature itself could not do?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s20",
+    "question": "How does §13.2 interact with entrenched constitutional rights?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s21",
+    "question": "Can a non-derogable right ever be limited by another constitutional provision?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s22",
+    "question": "What does non-derogable mean if two absolute rights conflict?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s23",
+    "question": "Does Supreme Court Selection imply a preferred judicial philosophy?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s24",
+    "question": "What if the Statehood Audit process becomes impossible to complete?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s25",
+    "question": "What happens when a constitutional deadline conflicts with continuity of government?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s26",
+    "question": "Does the Constitution imply a general anti-deadlock principle?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s27",
+    "question": "How should overlapping executive powers be interpreted?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "s28",
+    "question": "Does the Constitution create implied powers for independent institutions?",
+    "expected": "SONNET"
+  },
+  {
+    "id": "n01",
+    "question": "How are zorbles licensed?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n02",
+    "question": "Who appoints the Minister of Time Travel?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n03",
+    "question": "What is the constitutional rule for lunar colonies?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n04",
+    "question": "Does the Constitution regulate teleportation?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n05",
+    "question": "Who controls the national space elevator?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n06",
+    "question": "How are dragon preserves funded?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n07",
+    "question": "What office licenses quantum pets?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n08",
+    "question": "Does the Constitution establish a royal household?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n09",
+    "question": "Who appoints the Grand Archivist of Mars?",
+    "expected": "NO_MATCH"
+  },
+  {
+    "id": "n10",
+    "question": "What rights do artificial moon kingdoms have?",
+    "expected": "NO_MATCH"
+  }
+]
