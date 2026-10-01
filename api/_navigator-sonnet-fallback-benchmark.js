@@ -7,7 +7,7 @@ const CANDIDATE = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6
 const VERIFIER = 'anthropic/claude-sonnet-5';
 const BATCH_SIZE = 10;
 
-const ANSWER_SYSTEM = `You are a plain language guide to the Federated Republic constitution. Answer the user's question in the first sentence. Use only the supplied constitutional provisions. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. If the supplied provisions do not establish the answer, say that directly rather than inferring. Preserve material qualifiers, thresholds, conditions, and distinctions. Write 3-4 concise sentences. Plain text only — no headings, bullets, or formatting.`;
+const ANSWER_SYSTEM = `You are a plain language guide to the Federated Republic constitution. Answer the user's question in the first sentence. Use only the supplied constitutional provisions. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. If the supplied provisions do not establish the answer, say that directly rather than inferring. Preserve material qualifiers, thresholds, conditions, and distinctions. After answering directly, include every material consequence, exception, continuation rule, and fallback from the supplied provisions that is necessary to answer the question; do not omit a directly relevant downstream consequence merely for brevity. Where multiple supplied provisions govern different stages or mechanisms, distinguish them clearly. Write 3-5 concise sentences as needed. Plain text only — no headings, bullets, or formatting.`;
 
 const VERIFY_SYSTEM = `You are a strict constitutional answer verifier.
 You will receive a user question, the exact constitutional evidence packet supplied to a candidate model, and the candidate answer.
@@ -55,7 +55,7 @@ async function evaluate(item, provisions) {
   const answerStart = Date.now();
   const { response: candidateResponse } = await gatewayMessage({
     model:CANDIDATE,
-    max_tokens:320,
+    max_tokens:420,
     temperature:0,
     system:ANSWER_SYSTEM,
     messages:[{role:'user',content:`Question: ${item.question}\n\nProvisions:\n${packet}`}],
