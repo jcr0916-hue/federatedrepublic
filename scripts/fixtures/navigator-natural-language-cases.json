@@ -368,7 +368,7 @@
   },
   {
     "id": "s24",
-    "question": "What if the Statehood Audit process becomes impossible to complete?",
+    "question": "What happens if the statehood process becomes impossible to complete?",
     "expected": "SONNET"
   },
   {
@@ -393,52 +393,52 @@
   },
   {
     "id": "n01",
-    "question": "How are zorbles licensed?",
+    "question": "Zorbles?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n02",
-    "question": "Who appoints the Minister of Time Travel?",
+    "question": "Flarnics?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n03",
-    "question": "What is the constitutional rule for lunar colonies?",
+    "question": "Quembles?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n04",
-    "question": "Does the Constitution regulate teleportation?",
+    "question": "Snorvaks?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n05",
-    "question": "Who controls the national space elevator?",
+    "question": "Glibnax?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n06",
-    "question": "How are dragon preserves funded?",
+    "question": "Trelliwumps?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n07",
-    "question": "What office licenses quantum pets?",
+    "question": "Vornicles?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n08",
-    "question": "Does the Constitution establish a royal household?",
+    "question": "Blenkar?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n09",
-    "question": "Who appoints the Grand Archivist of Mars?",
+    "question": "Crandoodles?",
     "expected": "NO_MATCH"
   },
   {
     "id": "n10",
-    "question": "What rights do artificial moon kingdoms have?",
+    "question": "Plimnors?",
     "expected": "NO_MATCH"
   }
 ]
