@@ -92,3 +92,48 @@ test('80-case natural-language routing benchmark', () => {
 
   assert.deepEqual(failures, []);
 });
+
+
+function makeRes() {
+  return {
+    statusCode: 200,
+    headers: {},
+    body: null,
+    setHeader(k,v){ this.headers[k]=v; },
+    status(code){ this.statusCode=code; return this; },
+    json(value){ this.body=value; return this; },
+    end(){ return this; },
+  };
+}
+
+test('all benchmarked topic answers are answer-first, source-bound, and make zero AI calls', async () => {
+  const originalFetch = global.fetch;
+  let fetchCalls = 0;
+  global.fetch = async () => {
+    fetchCalls++;
+    throw new Error('AI fetch must not run for deterministic topic answers');
+  };
+
+  try {
+    delete require.cache[require.resolve('../api/navigator.js')];
+    const handler = require('../api/navigator.js');
+
+    for (const item of cases.filter(c => c.expected === 'TOPIC')) {
+      const res = makeRes();
+      await handler({ method:'POST', body:{ question:item.question } }, res);
+
+      const topic = topicMatch(item.question);
+      assert.equal(res.statusCode, 200, item.id);
+      assert.ok(typeof res.body.summary === 'string' && res.body.summary.length > 30, item.id);
+      assert.deepEqual(
+        res.body.provisions.map(p => p.num),
+        topic.sections.map(([num]) => num),
+        item.id
+      );
+    }
+
+    assert.equal(fetchCalls, 0);
+  } finally {
+    global.fetch = originalFetch;
+  }
+});
