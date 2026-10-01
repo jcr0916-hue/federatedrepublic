@@ -10,6 +10,8 @@
  * change as the story moves. Keep it current; it is the atlas's equivalent of a dateline.
  */
 
+import { readFileSync } from 'node:fs';
+
 const nations = [
   {
     key: "caldris",
@@ -78,4 +80,9 @@ const contested = [
   },
 ];
 
-export default { nations, contested };
+export default function () {
+  // Share the browser's coordinate contract so the map link also works without JavaScript.
+  const source = readFileSync(new URL('../map-data.js', import.meta.url), 'utf8');
+  const { tier1 } = JSON.parse(source.replace(/^const MAP_DATA = /, '').replace(/;\s*$/, ''));
+  return { nations, contested, tier1 };
+}

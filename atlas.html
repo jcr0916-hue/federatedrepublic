@@ -29,7 +29,8 @@
     /* ── the map ── */
     .atlas-map{margin:0 0 3.5rem;border:1px solid var(--border);border-radius:3px;overflow:hidden;background:var(--navy2)}
     .atlas-map img{display:block;width:100%;height:auto}
-    .atlas-map-cap{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);padding:.7rem .9rem;background:var(--cream2);border-top:1px solid var(--border)}
+    .atlas-map-cap{font-size:.875rem;line-height:1.6;color:var(--muted);padding:.8rem 1rem;background:var(--cream2);border-top:1px solid var(--border)}
+    .atlas-map-cap a{color:var(--gold2);text-underline-offset:3px}
 
     /* ── section furniture ── */
     .atlas-section{margin-bottom:3.5rem}
@@ -63,17 +64,17 @@
       .frontier{padding:1.4rem 1.2rem}
     }
   
-    /* ── the Republic hotspot (carried from the original atlas page) ── */
+    /* ── the Republic map link ── */
     .atlas-map .frame{position:relative;line-height:0}
-    .hotspot{position:absolute;transform:translate(-50%,-50%);cursor:pointer;background:none;border:none;padding:22px}
+    .hotspot{position:absolute;display:block;transform:translate(-50%,-50%);cursor:pointer;background:none;border:none;padding:22px}
+    .hotspot:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:50%}
     .hs-dot{position:relative;display:block;width:11px;height:11px;border-radius:50%;background:var(--gold);border:2px solid rgba(255,255,255,.85);box-shadow:0 0 8px rgba(201,168,76,.9)}
     .hs-ring{position:absolute;left:50%;top:50%;width:11px;height:11px;border-radius:50%;border:2px solid var(--gold);transform:translate(-50%,-50%);animation:hsRing 2.4s infinite ease-out;pointer-events:none}
     .hs-ring.r2{animation-delay:1.2s}
-    .hs-label{position:absolute;left:34px;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.22em;color:#e9ddba;text-shadow:0 1px 6px rgba(0,0,0,.8);border-bottom:1px solid rgba(201,168,76,.6);padding-bottom:2px}
-    .hs-label::before{content:"";position:absolute;left:-24px;top:50%;width:20px;height:1px;background:rgba(201,168,76,.6)}
+    .hs-label{position:absolute;left:50%;top:100%;transform:translateX(-50%);white-space:nowrap;font-size:.875rem;line-height:1.3;color:#f0ead8;background:var(--navy2);border:1px solid var(--gold);border-radius:3px;padding:.35rem .55rem;opacity:0;pointer-events:none}
+    .hotspot:hover .hs-label,.hotspot:focus-visible .hs-label{opacity:1}
     @keyframes hsRing{0%{transform:translate(-50%,-50%) scale(1);opacity:.85}100%{transform:translate(-50%,-50%) scale(4.2);opacity:0}}
     @media(prefers-reduced-motion:reduce){.hs-ring{animation:none;opacity:0}}
-    @media(max-width:700px){.hs-label{font-size:.7rem;letter-spacing:.14em;left:26px}}
 </style>
 </head>
 <body>
@@ -92,15 +93,15 @@
 
     <p class="link-row"><a href="republic-at-a-glance.html">Republic at a Glance · domestic map and jurisdictions →</a><a href="torenthia.html#republic-now">The Republic Now →</a></p><div class="atlas-map">
       <div class="frame">
-        <img src="world-map-tier1.webp" alt="World map. Torenthia's region is marked on the western coast of the crescent continent." aria-describedby="atlas-map-description" onerror="this.onerror=null;this.src='world-map-tier1.jpg'">
-        <p id="atlas-map-description" class="sr-only">Torenthia occupies a coastal region on the western side of the large crescent-shaped continent. The map establishes regional orientation rather than detailed domestic boundaries. The sections following the map describe the five neighboring sovereign nations, their relationship to Torenthia, and the contested island territory; the Republic at a Glance page provides the accessible domestic State and Territory directory.</p>
-        <button class="hotspot" id="hotspot" aria-label="Return to the Federated Republic">
+        <img src="world-map-tier1.webp?v=2614f3c8408e" width="{{ atlas.tier1.w }}" height="{{ atlas.tier1.h }}" alt="World map showing Torenthia and its neighbors on the northwestern continent." aria-describedby="atlas-map-description" onerror="this.onerror=null;this.src='world-map-tier1.jpg?v=2614f3c8408e'">
+        <p id="atlas-map-description" class="sr-only">Torenthia occupies a temperate west-facing region of the northwestern continent, between the Western Sea to its west and Lake Varda to its east. Caldris lies beyond the northern mountain system, Sunderland east of Lake Varda, and Valedon to the south. The other continents and islands are largely unlabeled. This continental overview does not establish detailed domestic boundaries. Torenthia's regional map on Republic at a Glance remains the detailed geographic authority and includes an accessible State and Territory directory.</p>
+        <a class="hotspot" id="hotspot" href="republic-at-a-glance.html" aria-label="Explore Torenthia on the regional map" style="left:{{ atlas.tier1.hotspot.x / atlas.tier1.w * 100 }}%;top:{{ atlas.tier1.hotspot.y / atlas.tier1.h * 100 }}%">
           <span class="hs-ring"></span><span class="hs-ring r2"></span>
           <span class="hs-dot"></span>
-          <span class="hs-label">THE FEDERATED REPUBLIC</span>
-        </button>
+          <span class="hs-label" aria-hidden="true">Explore Torenthia</span>
+        </a>
       </div>
-      <div class="atlas-map-cap">The Known World &middot; Select the Republic to return to the living map</div>
+      <div class="atlas-map-cap">The Known World &middot; <a href="republic-at-a-glance.html">Explore Torenthia on the regional map</a>, the detailed geographic reference for the Republic.</div>
     </div>
 
     <section class="atlas-section">
@@ -170,7 +171,6 @@
     if(!T1 || !hs) return;
     hs.style.left = (T1.hotspot.x / T1.w * 100) + '%';
     hs.style.top  = (T1.hotspot.y / T1.h * 100) + '%';
-    hs.addEventListener('click', function(){ window.location.href = 'republic-at-a-glance.html'; });
   })();
   </script>
 
