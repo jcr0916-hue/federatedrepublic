@@ -149,7 +149,8 @@ function normalizeTitleText(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()
-    .replace(/\s+/g, ' ');
+    .replace(/\s+/g, ' ')
+    .replace(/^the\s+/, '');
 }
 
 function titleEligible(name) {
