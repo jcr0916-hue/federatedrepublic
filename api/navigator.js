@@ -114,14 +114,14 @@ module.exports = async (req, res) => {
       });
 
       return res.status(200).json({
-        summary: 'Judicial selection is not a single procedure in this Constitution. Inferior-court judges are governed by §4.2; Supreme Court selection is governed by §4.4; and §4.4.a governs the Senate-bypass public-confirmation path for a Supreme Court vacancy.',
+        summary: 'Judicial selection begins with the Judicial Pool. For inferior courts, the Civic Consul nominates a judge from the Judicial Pool and the Senate confirms by a two-thirds vote under §4.2. For the Supreme Court, the Civic Consul likewise nominates from the Judicial Pool under §4.4; the Senate then votes on the nomination within the constitutional/statutory deadline. If the ordinary Supreme Court process stalls, §4.4 and §4.4.a provide temporary-service and public-confirmation fallback mechanisms.',
         provisions: topicProvisions.map(p => ({
           num: p.num,
           name: p.name,
           relevance:
-            p.num === '§4.2' ? 'Inferior-court appointments and judicial independence' :
-            p.num === '§4.4' ? 'Ordinary Supreme Court selection and vacancy process' :
-            'Supreme Court Senate-bypass public confirmation',
+            p.num === '§4.2' ? 'Inferior courts: Civic Consul nomination from the Judicial Pool; Senate confirmation by 2/3' :
+            p.num === '§4.4' ? 'Supreme Court: Civic Consul nomination from the Judicial Pool; Senate vote plus vacancy-continuity rules' :
+            'Supreme Court fallback: Senate-bypass public confirmation in specified circumstances',
         })),
         scenarios
       });

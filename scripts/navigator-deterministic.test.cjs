@@ -211,9 +211,12 @@ test('judicial selection API response disambiguates procedures with zero AI call
 
     assert.equal(res.statusCode, 200);
     assert.equal(fetchCalls, 0);
-    assert.match(res.body.summary, /not a single procedure/i);
+    assert.match(res.body.summary, /Judicial Pool/i);
+    assert.match(res.body.summary, /Civic Consul nominates/i);
+    assert.match(res.body.summary, /Senate confirms by a two-thirds vote/i);
+    assert.match(res.body.summary, /Supreme Court/i);
     assert.deepEqual(res.body.provisions.map(p => p.num), ['§4.2', '§4.4', '§4.4.a']);
-    assert.match(res.body.provisions[0].relevance, /inferior-court/i);
+    assert.match(res.body.provisions[0].relevance, /inferior courts?/i);
     assert.match(res.body.provisions[1].relevance, /Supreme Court/i);
     assert.match(res.body.provisions[2].relevance, /Senate-bypass/i);
   } finally {
