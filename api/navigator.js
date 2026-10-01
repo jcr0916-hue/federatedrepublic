@@ -101,6 +101,29 @@ module.exports = async (req, res) => {
     const gate = retrievalGate(question, ranked);
     const scenarios = topScenarios(terms, 2);
 
+    // Deterministic title matching is independent of fuzzy retrieval, so it must
+    // run before the no-match fallback.
+    const titleMatch = uniqueTitleMatch(question, provisions);
+    if (titleMatch) {
+      console.info('[navigator-deterministic]', {
+        gateStatus: 'TIER_A_TITLE',
+        gateReason: 'UNIQUE_FULL_PROVISION_TITLE',
+        section: titleMatch.num,
+      });
+
+      return res.status(200).json({
+        summary: `Direct provision lookup: ${titleMatch.num} — ${titleMatch.name}. The constitutional text is reproduced verbatim below; no AI paraphrase was used.`,
+        provisions: [{
+          num: titleMatch.num,
+          name: titleMatch.name,
+          relevance: 'Unique provision title matched',
+          text: titleMatch.text,
+          verbatim: true,
+        }],
+        scenarios
+      });
+    }
+
     if (matched.length === 0) {
       return res.status(200).json({
         summary: "That query didn't match any specific provisions. Try searching for a position (Legat Consul, Civic Consul), a right (expression, privacy), or a process (amendment, emergency, election, devolution).",
@@ -137,27 +160,6 @@ module.exports = async (req, res) => {
           scenarios
         });
       }
-    }
-
-    const titleMatch = uniqueTitleMatch(question, provisions);
-    if (titleMatch) {
-      console.info('[navigator-deterministic]', {
-        gateStatus: 'TIER_A_TITLE',
-        gateReason: 'UNIQUE_FULL_PROVISION_TITLE',
-        section: titleMatch.num,
-      });
-
-      return res.status(200).json({
-        summary: `Direct provision lookup: ${titleMatch.num} — ${titleMatch.name}. The constitutional text is reproduced verbatim below; no AI paraphrase was used.`,
-        provisions: [{
-          num: titleMatch.num,
-          name: titleMatch.name,
-          relevance: 'Unique provision title matched',
-          text: titleMatch.text,
-          verbatim: true,
-        }],
-        scenarios
-      });
     }
 
     const provisionContext = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
