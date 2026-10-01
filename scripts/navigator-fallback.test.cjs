@@ -61,3 +61,84 @@ test('retrieval sufficiency benchmark', () => {
 
   assert.deepEqual(failures, []);
 });
+
+
+function makeRes() {
+  return {
+    statusCode: 200,
+    headers: {},
+    body: null,
+    setHeader(k,v){ this.headers[k]=v; },
+    status(code){ this.statusCode=code; return this; },
+    json(value){ this.body=value; return this; },
+    end(){ return this; },
+  };
+}
+
+test('underspecified fallback question returns guidance with zero AI calls', async () => {
+  const originalFetch = global.fetch;
+  let fetchCalls = 0;
+  global.fetch = async () => {
+    fetchCalls++;
+    throw new Error('AI must not run for insufficient retrieval');
+  };
+
+  try {
+    delete require.cache[require.resolve('../api/navigator.js')];
+    const handler = require('../api/navigator.js');
+    const res = makeRes();
+    await handler({ method:'POST', body:{ question:'What happens if the vote fails?' } }, res);
+
+    assert.equal(res.statusCode, 200);
+    assert.equal(fetchCalls, 0);
+    assert.match(res.body.summary, /can’t answer that reliably/i);
+    assert.match(res.body.summary, /make the subject more specific/i);
+  } finally {
+    global.fetch = originalFetch;
+  }
+});
+
+test('supported fallback sends expanded five-provision evidence packet to Sonnet', async () => {
+  const originalFetch = global.fetch;
+  const originalGateway = process.env.AI_GATEWAY_API_KEY;
+  const originalOidc = process.env.VERCEL_OIDC_TOKEN;
+  const originalAnthropic = process.env.ANTHROPIC_API_KEY;
+  delete process.env.AI_GATEWAY_API_KEY;
+  delete process.env.VERCEL_OIDC_TOKEN;
+  process.env.ANTHROPIC_API_KEY = 'test-key';
+
+  const requests = [];
+  global.fetch = async (url, options) => {
+    requests.push({ url:String(url), body:JSON.parse(options.body) });
+    return {
+      ok:true,
+      status:200,
+      json:async()=>({ content:[{ type:'text', text:'The two Consuls may petition the Supreme Court for expedited resolution.' }] }),
+      text:async()=>'',
+    };
+  };
+
+  try {
+    delete require.cache[require.resolve('../api/navigator.js')];
+    const handler = require('../api/navigator.js');
+    const res = makeRes();
+    await handler({
+      method:'POST',
+      body:{ question:'What happens if the two Consuls cannot agree on who should lead a cross-domain emergency?' }
+    }, res);
+
+    assert.equal(res.statusCode, 200);
+    assert.equal(requests.length, 1);
+    const prompt = requests[0].body.messages[0].content;
+    assert.match(prompt, /\[§2\.14\.a\]/);
+    assert.match(prompt, /\[§4\.5\]/);
+    assert.match(requests[0].body.system, /Answer the user's question in the first sentence/i);
+    assert.match(requests[0].body.system, /Do not add any unstated/i);
+    assert.ok(res.body.provisions.some(p => p.num === '§4.5'));
+  } finally {
+    global.fetch = originalFetch;
+    if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
+    if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
+    if (originalAnthropic === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalAnthropic;
+  }
+});

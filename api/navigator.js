@@ -203,7 +203,7 @@ module.exports = async (req, res) => {
       });
 
       return res.status(200).json({
-        summary: 'I cannot answer that reliably from the constitutional provisions retrieved for this question. Try naming the office, process, or section more specifically.',
+        summary: 'I cannot answer that reliably from the constitutional provisions retrieved for this question. Please make the subject more specific — for example, name the office, institution, right, process, or section you mean.',
         provisions: [],
         scenarios,
         retrieval: {
@@ -230,7 +230,7 @@ module.exports = async (req, res) => {
           model: SHADOW_MODEL,
           max_tokens: 260,
           system: `You are a bounded constitutional QA evaluator. Use only the supplied provisions. Return ONLY valid JSON with keys: status, answer, sources. status must be ANSWER, ESCALATE, or NOT_ESTABLISHED. Use ANSWER only if the question can be answered directly from the supplied text without adding any unstated procedure, deadline, remedy, authority, or factual assumption. Use ESCALATE if multiple provisions must be reconciled, the text is ambiguous, or interpretation beyond explicit text is required. Use NOT_ESTABLISHED if the supplied text does not establish the requested fact. sources must contain only section numbers present in the supplied packet.`,
-          messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nDeterministic gate: ${gate.status} / ${gate.reason}\n\nProvisions:\n${provisionContext}` }],
+          messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nDeterministic gate: ${gate.status} / ${gate.reason}\nRetrieval sufficiency: ${sufficiency.reason}\n\nProvisions:\n${provisionContext}` }],
           tags: ['feature:navigator', 'role:shadow', envTag],
         }).catch(error => ({ error }))
       : Promise.resolve(null);
