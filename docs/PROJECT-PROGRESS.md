@@ -1,6 +1,6 @@
 # Project progress and working ideas
 
-**Publication handoff:** 2026-09-30
+**Publication handoff:** 2026-10-01
 
 **Purpose:** current project-wide implementation handoff and idea log. This file is not constitutional or Torenthia canon. Canon and source authority remain where `PROJECT-SOURCES.md` says they are.
 
@@ -58,6 +58,8 @@ The first historical test is now published for five States. Additional episodes 
 ## Torenthia World content
 
 The current published frontier remains Year 13, Month 12, with the Korda Convention as the main active narrative.
+
+The October 1 batch advances the narrative through worldSeq 141 and NRS through 60. NRS-Y13-0721 cross-references Korda's first partial facilities return against the prior submissions and identifies outstanding source records without resolving title, allocating costs or recommending an outcome. NRS-Y13-0722 accepts the final twelve records-storage cabinets, NRS-Y13-0723 files the staggered water-laboratory calibration schedule, and NRS-Y13-0724 records installation of the first twelve Caldenmere backup power units, with twenty-four still outstanding. Mara Iset's `torenthia-news-095.html` explains the register and its evidentiary limits. No fictional day is assigned and the fictional month does not advance. Lake Varda's Year 14, Month 1 opening window remains the latest published position on that thread.
 
 The September 30 batch advances the narrative through worldSeq 140 and NRS through 56. NRS-Y13-0716 schedules the Lake Varda conference to open in Valedon during Year 14, Month 1, with civilian navigation, rescue coordination and risk reduction as the opening subjects; exact day and delegation lists remain unsettled. NRS-Y13-0717 records Korda's first partial response to the facilities-reconciliation request without adopting a valuation, boundary or status conclusion. NRS 054–056 are routine administration. Petra Vend's `torenthia-news-094.html` explains the conference scheduling without treating it as settlement of the underlying dispute.
 
