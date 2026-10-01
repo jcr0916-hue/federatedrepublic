@@ -1,4 +1,4 @@
-# Regional map artwork and coordinate contract
+# Atlas and regional map artwork and coordinate contract
 
 The temporary Torenthia base is the uploaded `ChatGPT Image Sep 26, 2026, 01_13_40 PM.png`,
 pending the Gaea replacement. It is presentation artwork; the swap does not change canon.
@@ -27,12 +27,12 @@ public URL. To restore the previous artwork, change `geography.baseImage` back t
 | `torenthia.html` | Shared regional image under the existing SVG in a 3:2 frame. |
 | `_includes/state-profile.njk` | Harren, Varek, Norvane, and Kelvant use the same image. Existing 520 × 320 viewBoxes remain centered on their State labels. |
 | `dossier-korda.html` | Existing `1030 425 430 425` viewBox, State borders, labels, and Rhondel marker. |
-| `atlas.html` | Planned 1000 × 563 continental world-map coordinate system on `site-new-world-map`; the approved replacement artwork is still pending (see below). Torenthia sits between the Western Sea and Lake Varda; the Republic hotspot reads the lexical `MAP_DATA` binding and opens Republic at a Glance. The Tier 2 regional map remains the detailed geographic authority where the two scales differ. |
+| `atlas.html` | Separate 1672 × 941 continental world-map canvas. Torenthia sits between the Western Sea and Lake Varda on the northwestern continent. Its native map link opens Republic at a Glance; build and browser both read the Tier 1 coordinate contract. The Tier 2 regional map remains the detailed geographic authority where the two scales differ. |
 | `torenthia-atlas.html` | Existing redirect to `atlas.html`. |
 
 `tier2-labels.json` and `tier2-borders.json` remain unchanged. `_data/geography.js`
 loads those full data sets; `map-data.js` retains its existing simplified border
-paths, identical label positions, and tier dimensions. The browser overlays contain
+paths, identical label positions, and Tier 2 dimensions. The browser overlays contain
 30 State-border paths and seven national-border paths. Korda uses the full 30 State
 polylines from the JSON. `_data/statepages.js` still derives percentages and capital
 points from the existing labels; no regional coordinate conversion or migration was needed.
@@ -41,48 +41,61 @@ State-crop city captions now sit below their markers to clear nearby State names
 Capital dots and regional geographic coordinates have not moved. The temporary
 regional swap did not change world-map thumbnails or published article artwork.
 
-## Continental world-map replacement — awaiting the approved source
+## Continental world map — accepted October 1, 2026
 
-The accepted source is `fantasy_atlas_of_caldris_and_beyond.png`, with the
-"Korda Frontier" label removed. The complete PNG did not carry over into the
-Work chat. The recovered JPEG still contains that label and is not a substitute
-for the accepted image.
+The accepted image is the user's `ChatGPT Image Oct 1, 2026, 07_10_50 AM.png`,
+supplied after the original `fantasy_atlas_of_caldris_and_beyond.png` handoff.
+It contains Torenthia, Caldris, Sunderland, Lake Varda, and Valedon on the
+northwestern continent, with the "Korda Frontier" label absent. Preserve this
+artwork as a continental overview. Torenthia's Tier 2 map, political overlays,
+State crops, and city coordinates remain the detailed geographic authority;
+the Atlas caption and accessible description both explain that relationship.
 
-`site-new-world-map` is based on main `7a10fb75a3d150993c4655c0cc05f8c5c5a82ea0`.
-Its Atlas copy and Tier 1 hotspot were committed before the artwork. The proposed
-coordinate canvas is 1000 × 563, with hotspot `(198, 169)` and radii `(62, 58)`;
-confirm these against the complete accepted image before publishing.
+| Repository asset | Dimensions | Bytes | SHA-256 |
+| --- | --- | --- | --- |
+| `assets/world-map-tier1-source.png` | 1672 × 941 | 2,635,758 | `2614f3c8408e5bfa3b4f9f09c0c5b58998ff637a2a6234c4e0c53ee5a781b7cf` |
+| `images/world-map-tier1.webp` | 1672 × 941 | 2,049,944 | `04146920aed5405492fa88040636901f6be7dc371ce002f494af85ee96a3d072` |
+| `images/world-map-tier1.jpg` | 1672 × 941 | 827,814 | `b08e01e1ed04741bd59e90b65194a585d7986c1b96a8fdaf0d9307c5e7bc0c91` |
+| `images/world-map-card.webp` | 560 × 315 | 76,478 | `f6114e1c14fc2b99c6ab64b7c1f9afd575be4d8dbea4c9c37686022bfbb7d59b` |
 
-The attempted upload supplied only `assets/world-map-tier1.b64.0` and `.1`,
-two of five expected chunks. They cannot decode to a complete image and have
-been removed from the branch. Their contents remain recoverable in commits
-`c8f7e156c802b05968fc84354751e6e5cbb9b724` and
-`705d15c0b557cfc1f60b28f0d27743b7528b8ab8`. Use ordinary binary Git commits
-for the replacement; the local checkout supports them without chunk files.
+The master PNG is an exact copy of the supplied file. It stays in Git's source
+library and is excluded from the public asset graph. The full WebP is lossless;
+its decoded RGB pixels were verified identical to the source. The JPG uses
+quality 95, 4:4:4 subsampling, and optimized encoding. The card resizes the full
+extent with Lanczos to 560 × 315 (the height rounded to a whole pixel), then
+encodes WebP at quality 92. No derivative crops or repaints the artwork.
 
-Before merging:
+`MAP_DATA.tier1` now uses the image's actual 1672 × 941 canvas. The Torenthia
+hotspot is `(304, 328)`, below its painted name, with descriptive radii `(104, 97)`.
+The displayed link has a 55 × 55 CSS-pixel target; the radii do not draw political
+boundaries or scale the target. `_data/atlas.js` reads the same JSON contract for
+image dimensions and initial link percentages, so the native anchor works before
+JavaScript loads and when scripting is disabled. The browser can refresh its
+position from the lexical `MAP_DATA` binding. The short tooltip appears only on
+hover or keyboard focus to keep the map's place names clear.
 
-1. Recover the approved PNG, inspect the absence of "Korda Frontier", and record
-   its dimensions and SHA-256 here. Preserve it as source artwork in the repository.
-2. Replace `images/world-map-tier1.webp` and `.jpg` with matching, uncropped
-   derivatives. The Atlas retains a JPG fallback if WebP fails. Generate
-   `images/world-map-card.webp` from the same source with its full extent intact.
-3. Match `MAP_DATA.tier1` to the final canvas and visually align the hotspot to
-   Torenthia. Retain every Tier 2 border, label, city, viewBox, and asset unchanged.
-4. Keep the alt text and map description accurate; make the regional map's
-   geographic authority visible as well as accessible to screen readers.
-5. Account for `sw.js` caching images first: use a new image URL or versioned
-   references, and verify a returning visitor receives the replacement artwork.
-6. Run `npm run world:publish-check`, `npm run check:assets`, and `git diff --check`.
-   Wait for GitHub and Vercel checks on the final commit. Inspect the Vercel preview
-   at desktop and phone sizes, test keyboard/pointer navigation and the fallback,
-   and confirm regional views still use the unchanged Tier 2 map.
+The existing public URLs `/world-map-tier1.webp`, `/world-map-tier1.jpg`, and
+`/world-map-card.webp` remain available. Every internal Atlas and card reference
+uses `?v=2614f3c8408e`, derived from the accepted PNG's checksum. This creates fresh
+image cache keys even under the already-installed cache-first service worker.
+The JPG error fallback uses the same version. Card front matter, the curated
+update feed, and the inline conference article image all use the new reference;
+article text, fictional dates, and constitutional sources are unchanged.
+The asset collector normalizes queries to the same files without publishing
+the master PNG. On a future artwork change, replace all derivatives together,
+update the query version and this table, and review Tier 1 coordinates again.
 
-**Current merge blocker:** the complete approved PNG is unavailable. The full
-publishing checks pass on the recovered branch, but the Vercel preview still
-serves the previous world artwork with the proposed continental hotspot. A
-green build alone does not make this replacement ready to merge. PR #63 remains
-a draft until the complete asset integration and visual checks pass.
+The two abandoned base64 chunks are removed. Their partial content remains
+recoverable from commits `c8f7e156c802b05968fc84354751e6e5cbb9b724` and
+`705d15c0b557cfc1f60b28f0d27743b7528b8ab8`; ordinary binary Git commits carry the
+complete source and derivatives. The branch began at main
+`7a10fb75a3d150993c4655c0cc05f8c5c5a82ea0`.
+
+Before publishing any subsequent map replacement, run `npm run world:publish-check`,
+`npm run check:assets`, and `git diff --check`; wait for GitHub and Vercel checks
+on the final commit. Inspect desktop and phone previews, keyboard/pointer and
+no-script navigation, JPG fallback, and a returning visitor with an older map in
+cache. Verify the regional map and every regional coordinate remain unchanged.
 
 ## Alignment limits and Gaea follow-up
 

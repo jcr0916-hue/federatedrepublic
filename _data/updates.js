@@ -6,7 +6,7 @@
 
 const CATEGORY_IMAGE = {
   constitution: "Federated-Republic-Parchment-card.webp",
-  world:        "world-map-card.webp",
+  world:        "world-map-card.webp?v=2614f3c8408e",
   site:         "seal-card.webp",
 };
 
