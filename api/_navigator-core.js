@@ -133,6 +133,17 @@ const SYNONYMS = {
   'state election system':['state election non-compliance','§11.3','nvs','§11.2'],
   'temporary inability':['executive incapacity','temporary unable','§2.16'],
   'unable to exercise authority':['executive incapacity','temporary unable','§2.16'],
+  'spy on citizens':['consular intelligence','judicial authorization','§2.3'],
+  'spying on citizens':['consular intelligence','judicial authorization','§2.3'],
+  'senate amend':['legislature','subject matter','§3.1'],
+  'subject matter':['senate review','amend','§3.1'],
+  'monitor generals':['monitor general selection','§9.3'],
+  'selects monitor generals':['monitor general selection','§9.3'],
+  'interstate commerce':['internal commerce','§12.5'],
+  'split directly':['state immutability','territorial integrity','§15.7'],
+  'split into two states':['state immutability','territorial integrity','§15.7'],
+  'terminate its compact':['sovereign mobility','compact termination','§20.4'],
+  'terminate compact':['sovereign mobility','compact termination','§20.4'],
 };
 
 function phrasePresent(text, phrase) {
