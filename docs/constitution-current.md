@@ -141,7 +141,7 @@ To hold the office of Legat Consul, a person must have been a citizen for at lea
 
 The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, all use of military force requires legislative authorization. The Legat Consul must notify both chambers and the Civic Consul promptly upon any use of force, not to exceed 24 hours; the Legislature may define a shorter period by statute. Legislative authorization expires unless affirmatively renewed at intervals the Legislature defines by statute; the constitutional default on expiry is cessation of all operations — the burden is always on authorization, never on termination. Military expenditure is governed by §14.2. All military operations must state and be consistent with an authorized purpose under §14.1.
 
-### §2.3 — Consular Intelligence and Veto
+### §2.3 — Consular Intelligence
 
 The Legat Consul directs foreign intelligence. No intelligence operation may be conducted against Republic citizens within Republic territory on the Legat Consul's authority; such operations require independent judicial authorization.
 

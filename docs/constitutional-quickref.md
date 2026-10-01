@@ -210,7 +210,7 @@ The Legat Consul may use military force in immediate response to an active or im
   - The Legat Consul must notify both chambers and the Civic Consul promptly upon any use of force, not to exceed 24 hours
 - **Cross-refs:** §14.1, §14.2
 
-### §2.3 — Consular Intelligence and Veto
+### §2.3 — Consular Intelligence
 
 The Legat Consul directs foreign intelligence. No intelligence operation may be conducted against Republic citizens within Republic territory on the Legat Consul's authority; such operations require independent judicial authorization.
 
