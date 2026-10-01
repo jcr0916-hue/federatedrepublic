@@ -12,6 +12,17 @@
       }
     },
     {
+      "src": "api/_navigator-sonnet-fallback-benchmark.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30,
+        "includeFiles": [
+          "constitution_data.json",
+          "scripts/fixtures/navigator-fallback-cases.json"
+        ]
+      }
+    },
+    {
       "src": "api/annotate.js",
       "use": "@vercel/node",
       "config": {
@@ -47,6 +58,10 @@
     {
       "src": "/api/navigator",
       "dest": "/api/navigator.js"
+    },
+    {
+      "src": "/api/_navigator-sonnet-fallback-benchmark",
+      "dest": "/api/_navigator-sonnet-fallback-benchmark.js"
     },
     {
       "src": "/api/annotate",
