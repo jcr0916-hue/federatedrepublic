@@ -1,7 +1,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const constitution = require('../constitution_data.json');
-const { uniqueTitleMatch, titleEligible } = require('../api/_navigator-core.js');
+const { uniqueTitleMatch, titleEligible, broadTopicMatch } = require('../api/_navigator-core.js');
 
 function makeRes() {
   return {
@@ -177,5 +177,46 @@ test('interpretive full-title question still uses the model path', async () => {
     if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
     if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
     if (originalAnthropic === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalAnthropic;
+  }
+});
+
+
+test('broad judicial-selection phrasing resolves to deterministic disambiguation', () => {
+  assert.deepEqual(broadTopicMatch('judicial selection'), {
+    topic: 'judicial-selection',
+    sections: ['§4.2', '§4.4', '§4.4.a'],
+  });
+  assert.deepEqual(broadTopicMatch('How are judges appointed?'), {
+    topic: 'judicial-selection',
+    sections: ['§4.2', '§4.4', '§4.4.a'],
+  });
+  assert.equal(broadTopicMatch('Supreme Court Selection'), null);
+});
+
+test('judicial selection API response disambiguates procedures with zero AI calls', async () => {
+  const originalFetch = global.fetch;
+  let fetchCalls = 0;
+  global.fetch = async () => {
+    fetchCalls++;
+    throw new Error('AI fetch must not run for deterministic judicial-selection disambiguation');
+  };
+
+  try {
+    delete require.cache[require.resolve('../api/navigator.js')];
+    const handler = require('../api/navigator.js');
+    const req = { method: 'POST', body: { question: 'judicial selection' } };
+    const res = makeRes();
+
+    await handler(req, res);
+
+    assert.equal(res.statusCode, 200);
+    assert.equal(fetchCalls, 0);
+    assert.match(res.body.summary, /not a single procedure/i);
+    assert.deepEqual(res.body.provisions.map(p => p.num), ['§4.2', '§4.4', '§4.4.a']);
+    assert.match(res.body.provisions[0].relevance, /inferior-court/i);
+    assert.match(res.body.provisions[1].relevance, /Supreme Court/i);
+    assert.match(res.body.provisions[2].relevance, /Senate-bypass/i);
+  } finally {
+    global.fetch = originalFetch;
   }
 });

@@ -182,6 +182,33 @@ function uniqueTitleMatch(question, provisions) {
   return nestedOnly ? mostSpecific.provision : null;
 }
 
+
+function broadTopicMatch(question) {
+  const q = normalizeTitleText(question)
+    .replace(/^what is /, '')
+    .replace(/^what are /, '')
+    .replace(/^explain /, '')
+    .replace(/^how does /, '')
+    .replace(/^how do /, '')
+    .trim();
+
+  if (/^(judicial selection|judicial appointments?|judge selection|judicial appointment process)$/.test(q)) {
+    return {
+      topic: 'judicial-selection',
+      sections: ['§4.2', '§4.4', '§4.4.a'],
+    };
+  }
+
+  if (/^(how are judges selected|how are judges appointed)$/.test(normalizeTitleText(question))) {
+    return {
+      topic: 'judicial-selection',
+      sections: ['§4.2', '§4.4', '§4.4.a'],
+    };
+  }
+
+  return null;
+}
+
 function retrievalGate(question, ranked) {
   if (!ranked.length) {
     return { status: 'NOT_ESTABLISHED', reason: 'NO_MATCH' };
@@ -222,5 +249,6 @@ module.exports = {
   normalizeTitleText,
   titleEligible,
   uniqueTitleMatch,
+  broadTopicMatch,
   retrievalGate,
 };
