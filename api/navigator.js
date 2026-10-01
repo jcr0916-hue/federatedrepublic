@@ -6,7 +6,8 @@ const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transp
 const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
 const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-haiku-4.5';
 
-const { expandQuery, rankProvisions, retrievalGate, explicitSectionRefs, uniqueTitleMatch, broadTopicMatch } = require('./_navigator-core.js');
+const { expandQuery, rankProvisions, retrievalGate, explicitSectionRefs, uniqueTitleMatch } = require('./_navigator-core.js');
+const { topicMatch } = require('./_navigator-topics.js');
 
 const SCENARIOS = [
   {title:'The First Twelve Years',file:'scenario-the-first-twelve-years.html',kw:['transition','ratification','day zero','article xix','merger','founding','caretaker','predecessor','union','§19.1','§19.2','§19.3','§19.5','§19.6','§19.9']},
@@ -101,27 +102,31 @@ module.exports = async (req, res) => {
     const gate = retrievalGate(question, ranked);
     const scenarios = topScenarios(terms, 2);
 
-    const broadTopic = broadTopicMatch(question);
-    if (broadTopic?.topic === 'judicial-selection') {
-      const topicProvisions = broadTopic.sections
-        .map(num => provisions.find(p => p.num === num))
+    const topic = topicMatch(question);
+    if (topic) {
+      const topicProvisions = topic.sections
+        .map(([num, relevance]) => {
+          const provision = provisions.find(p => p.num === num);
+          return provision ? { provision, relevance } : null;
+        })
         .filter(Boolean);
 
+      if (topicProvisions.length !== topic.sections.length) {
+        throw new Error(`Navigator topic registry references missing provision(s): ${topic.id}`);
+      }
+
       console.info('[navigator-deterministic]', {
-        gateStatus: 'DISAMBIGUATE',
-        gateReason: 'BROAD_JUDICIAL_SELECTION_TOPIC',
-        sections: topicProvisions.map(p => p.num),
+        gateStatus: 'TOPIC_REGISTRY',
+        topic: topic.id,
+        sections: topicProvisions.map(x => x.provision.num),
       });
 
       return res.status(200).json({
-        summary: 'Judicial selection begins with the Judicial Pool. For inferior courts, the Civic Consul nominates a judge from the Judicial Pool and the Senate confirms by a two-thirds vote under §4.2. For the Supreme Court, the Civic Consul likewise nominates from the Judicial Pool under §4.4; the Senate then votes on the nomination within the constitutional/statutory deadline. If the ordinary Supreme Court process stalls, §4.4 and §4.4.a provide temporary-service and public-confirmation fallback mechanisms.',
-        provisions: topicProvisions.map(p => ({
-          num: p.num,
-          name: p.name,
-          relevance:
-            p.num === '§4.2' ? 'Inferior courts: Civic Consul nomination from the Judicial Pool; Senate confirmation by 2/3' :
-            p.num === '§4.4' ? 'Supreme Court: Civic Consul nomination from the Judicial Pool; Senate vote plus vacancy-continuity rules' :
-            'Supreme Court fallback: Senate-bypass public confirmation in specified circumstances',
+        summary: topic.answer,
+        provisions: topicProvisions.map(({ provision, relevance }) => ({
+          num: provision.num,
+          name: provision.name,
+          relevance,
         })),
         scenarios
       });

@@ -140,7 +140,7 @@ function hasInteractionLanguage(question) {
 }
 
 function hasInterpretiveLanguage(question) {
-  return /\b(ambiguous|ambiguity|interpret|interpretation|imply|implicit|silence|unstated|not say|doesn't say|does not say|infer|inference)\b/i.test(question);
+  return /\b(ambiguous|ambiguity|interpret|interpretation|imply|implicit|silence|unstated|not say|doesn't say|does not say|infer|inference|could|should|abuse|abusive|reconcile|reconciled|reconciliation|indirect|indirectly|discretion|strategic|strategically|prefer|preferred)\b/i.test(question);
 }
 
 
