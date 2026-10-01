@@ -120,6 +120,17 @@ const SYNONYMS = {
   'classified':['classification criteria','record','nrs'],
   'noncompliance':['compliance standards','agency accountability','monitor'],
   'non-compliance':['compliance standards','agency accountability','monitor'],
+  'other consul':['cross-domain assistance','§2.14.b'],
+  "other's domain":['cross-domain assistance','§2.14.b'],
+  'senate does nothing':['deemed approval','legislature','§3.1'],
+  'fails to act':['failure to act','deemed approval','bypass'],
+  'really a treaty':['classification dispute','§3.6.a'],
+  'trade agreement':['treaty','ratification','lc','§3.6','§2.4','classification','§3.6.a'],
+  'agency noncompliance':['agency accountability','§9.5.b','compliance standards'],
+  'constitutional noncompliance':['agency accountability','§9.5.b','compliance standards'],
+  'irreconcilable compromise':['institutional compromise protocol','§9.7.a'],
+  'compromise failure':['institutional compromise protocol','§9.7.a'],
+  'state election system':['state election non-compliance','§11.3','nvs','§11.2'],
 };
 
 function phrasePresent(text, phrase) {
@@ -153,12 +164,36 @@ function scoreProvision(prov, terms) {
   return score;
 }
 
+function extractSectionRefs(text) {
+  return [...String(text || '').matchAll(/§\s*(\d+(?:\.\d+)*(?:\.[a-z])?)/gi)]
+    .map(m => '§' + m[1]);
+}
+
 function rankProvisions(provisions, terms, n = 5) {
-  return provisions
+  const ranked = provisions
     .map(p => ({ provision: p, score: scoreProvision(p, terms) }))
     .filter(x => x.score > 0)
-    .sort((a, b) => b.score - a.score || a.provision.num.localeCompare(b.provision.num))
-    .slice(0, n);
+    .sort((a, b) => b.score - a.score || a.provision.num.localeCompare(b.provision.num));
+
+  const selected = ranked.slice(0, n);
+  const selectedNums = new Set(selected.map(x => x.provision.num));
+  const byNum = new Map(provisions.map(p => [p.num, p]));
+
+  // Cross-references from the strongest retrieved provisions are evidence, not
+  // model inference. Pull them into the packet when space permits.
+  for (const source of ranked.slice(0, 3)) {
+    for (const ref of extractSectionRefs(source.provision.text)) {
+      if (selected.length >= n) break;
+      if (selectedNums.has(ref)) continue;
+      const provision = byNum.get(ref);
+      if (!provision) continue;
+      selected.push({ provision, score: Math.max(1, source.score - 1), via: source.provision.num });
+      selectedNums.add(ref);
+    }
+    if (selected.length >= n) break;
+  }
+
+  return selected.slice(0, n);
 }
 
 function explicitSectionRefs(question) {
@@ -296,6 +331,10 @@ function retrievalSufficiency(question, ranked) {
   const top = topFive[0]?.score || 0;
   const second = topFive[1]?.score || 0;
   const strongCount = topFive.filter(x => x.score >= 4).length;
+  const expanded = expandQuery(question);
+  const topConceptHits = expanded.filter(term =>
+    provisionContainsTerm(topFive[0].provision, term)
+  ).length;
 
   if (hasInteractionLanguage(question)) {
     if (strongCount < 2 || second < 4 || coverage < 0.45) {
@@ -311,7 +350,7 @@ function retrievalSufficiency(question, ranked) {
     return { sufficient: true, reason: 'INTERPRETIVE_PACKET_SUPPORTED', coverage };
   }
 
-  if (top < 6 || coverage < 0.55) {
+  if (top < 6 || (coverage < 0.5 && topConceptHits < 3)) {
     return { sufficient: false, reason: 'UNANCHORED_PACKET_WEAK', coverage };
   }
 
@@ -351,6 +390,7 @@ module.exports = {
   expandQuery,
   scoreProvision,
   rankProvisions,
+  extractSectionRefs,
   explicitSectionRefs,
   hasInteractionLanguage,
   hasInterpretiveLanguage,
