@@ -219,7 +219,8 @@ module.exports = async (req, res) => {
     const primaryPromise = anthropicMessage({
       model: MODEL,
       max_tokens: 320,
-      system: `You are a plain language guide to the Federated Republic constitution. Answer the user's question in the first sentence. Use only the supplied constitutional provisions. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, or reconciliation. If the supplied provisions do not establish the answer, say that directly rather than inferring. Preserve material qualifiers, thresholds, conditions, and distinctions. Write 3-4 concise sentences. Plain text only — no headings, bullets, or formatting.`,
+      temperature: 0,
+      system: `You are a plain language guide to the Federated Republic constitution. Answer the user's question in the first sentence. Use only the supplied constitutional provisions. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. If the supplied provisions do not establish the answer, say that directly rather than inferring. Preserve material qualifiers, thresholds, conditions, and distinctions. Write 3-4 concise sentences. Plain text only — no headings, bullets, or formatting.`,
       messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nProvisions:\n${provisionContext}` }],
       tags: ['feature:navigator', 'role:primary', envTag],
     });
