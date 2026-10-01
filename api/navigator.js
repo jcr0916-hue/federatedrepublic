@@ -6,7 +6,7 @@ const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transp
 const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
 const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-haiku-4.5';
 
-const { expandQuery, rankProvisions, retrievalGate, explicitSectionRefs } = require('./_navigator-core.js');
+const { expandQuery, rankProvisions, retrievalGate, explicitSectionRefs, uniqueTitleMatch } = require('./_navigator-core.js');
 
 const SCENARIOS = [
   {title:'The First Twelve Years',file:'scenario-the-first-twelve-years.html',kw:['transition','ratification','day zero','article xix','merger','founding','caretaker','predecessor','union','§19.1','§19.2','§19.3','§19.5','§19.6','§19.9']},
@@ -137,6 +137,27 @@ module.exports = async (req, res) => {
           scenarios
         });
       }
+    }
+
+    const titleMatch = uniqueTitleMatch(question, provisions);
+    if (titleMatch) {
+      console.info('[navigator-deterministic]', {
+        gateStatus: 'TIER_A_TITLE',
+        gateReason: 'UNIQUE_FULL_PROVISION_TITLE',
+        section: titleMatch.num,
+      });
+
+      return res.status(200).json({
+        summary: `Direct provision lookup: ${titleMatch.num} — ${titleMatch.name}. The constitutional text is reproduced verbatim below; no AI paraphrase was used.`,
+        provisions: [{
+          num: titleMatch.num,
+          name: titleMatch.name,
+          relevance: 'Unique provision title matched',
+          text: titleMatch.text,
+          verbatim: true,
+        }],
+        scenarios
+      });
     }
 
     const provisionContext = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
