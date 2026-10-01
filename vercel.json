@@ -12,17 +12,6 @@
       }
     },
     {
-      "src": "api/_navigator-haiku-direct-benchmark.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 30,
-        "includeFiles": [
-          "constitution_data.json",
-          "scripts/fixtures/navigator-haiku-direct-cases.json"
-        ]
-      }
-    },
-    {
       "src": "api/annotate.js",
       "use": "@vercel/node",
       "config": {
@@ -58,10 +47,6 @@
     {
       "src": "/api/navigator",
       "dest": "/api/navigator.js"
-    },
-    {
-      "src": "/api/_navigator-haiku-direct-benchmark",
-      "dest": "/api/_navigator-haiku-direct-benchmark.js"
     },
     {
       "src": "/api/annotate",

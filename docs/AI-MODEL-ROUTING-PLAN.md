@@ -388,6 +388,22 @@ Important interpretation:
 
 This result favors the simpler two-tier hypothesis—verified retrieval + Haiku-class bounded answering + Sonnet escalation—over adding a more complex middle tier before the gate is proven.
 
+### September 30, 2026 — Haiku direct-rule benchmark
+
+A broader direct-rule benchmark was run for the Constitution Navigator using 76 explicit-section questions spanning all 20 Articles. The intended Tier-A packet was progressively tightened during testing: one explicit controlling provision only, deterministic source attribution by the application, temperature 0, and a close-paraphrase prompt that forbids interpretive expansion.
+
+Final hardened result:
+- 76/76 returned the expected ANSWER disposition.
+- 74/76 were fully grounded under strict source verification (97.4%).
+- Two genuine precision failures remained:
+  - §3.9: dropped a conditional qualifier and stated a conditional tenure/removal rule as universal.
+  - §9.9: omitted an explicit exclusion from the standard removal track.
+- Earlier iterations also exposed smaller but material failure modes such as converting an Assembly electoral-cycle wait into "one year," flattening distinct electoral-finance categories, and misstating a military-authorization wind-down rule.
+- Deterministic source attribution is preferred over asking a model to reproduce section IDs.
+- Temperature 0 and close-paraphrase prompting materially improved behavior but did not eliminate constitutional precision errors.
+
+Decision: **do not promote Haiku to unattended public Tier A yet.** Sonnet remains the public Navigator answerer. Retain the 76-case corpus as a regression benchmark and continue using Haiku only for shadow evaluation until a bounded architecture can reach effectively zero material source-grounding errors on repeated runs.
+
 ### Phase 2 — model-to-task benchmark
 
 Test models according to the job they might actually perform.
