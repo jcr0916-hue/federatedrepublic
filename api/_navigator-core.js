@@ -89,6 +89,37 @@ const SYNONYMS = {
   'federalism':['state','devolution','federal','§3.10'],
   'indigenous':['nation','compact','article xvi','§16.1'],
   'native':['indigenous','nation','compact'],
+  'detained':['habeas corpus','detention','court','72 hours'],
+  'detention':['habeas corpus','detained','court','72 hours'],
+  'persecution':['non-refoulement','asylum','protection','removal'],
+  'returned':['non-refoulement','asylum','removal'],
+  'retroactively':['retroactive punishment','retroactive criminal law'],
+  'retroactive':['retroactive punishment','retroactive criminal law'],
+  'discriminate':['non-discrimination','equality','benefit','burden'],
+  'benefits':['non-discrimination','equality','governmental benefit'],
+  'nomination':['judicial','supreme court','selection','confirmation','vacancy'],
+  'refuses':['failure to act','bypass','fallback','deemed approval'],
+  'stall':['failure to act','bypass','fallback'],
+  'judges':['judicial','court','justice','appointment','independence'],
+  'decisions':['judicial independence','court','review'],
+  'cross-domain':['cross-domain emergency lead','council of ministers','§2.14.a'],
+  'agree':['conflict','coordination','cross-domain emergency lead'],
+  'order':['duty of refusal','unconstitutional order','executive'],
+  'refuse':['duty of refusal','unconstitutional order'],
+  'dies':['succession','death','legat consul','§2.9'],
+  'incapacity':['executive incapacity','succession','temporary unable'],
+  'pardon':['clemency','self-clemency'],
+  'pardons':['clemency','self-clemency'],
+  'subjects':['single subject','legislative standards'],
+  'unrelated':['single subject','legislative standards'],
+  'conflicts':['conflict of interest','ethics','financial disclosure'],
+  'recuse':['recusal','conflict of interest','code of conduct'],
+  'anonymous':['electoral finance','contribution','disclosure'],
+  'contributions':['electoral finance','campaign','disclosure'],
+  'classify':['classification criteria','record','nrs'],
+  'classified':['classification criteria','record','nrs'],
+  'noncompliance':['compliance standards','agency accountability','monitor'],
+  'non-compliance':['compliance standards','agency accountability','monitor'],
 };
 
 function phrasePresent(text, phrase) {
@@ -223,9 +254,29 @@ function provisionContainsTerm(provision, term) {
   return hay.includes(term);
 }
 
+const GENERIC_FALLBACK_TERMS = new Set([
+  'happens','happen','system','process','fails','failed','failure','vote','voting',
+  'government','they','them','someone','somebody','nobody','acts','act','acting',
+  'decides','decide','decision','responsible','wrong','delay','delays','forever',
+  'deadline','passes','challenge','overridden','override','conflict','emergency',
+  'executive','legislature','state','court','agency','another','route','long',
+  'last','final','automatically','automatic','reverse','sides','disagree'
+]);
+
+function subjectSpecificity(question) {
+  const terms = baseQueryTerms(question);
+  const specific = terms.filter(t => !GENERIC_FALLBACK_TERMS.has(t));
+  return { terms, specific, score: specific.length };
+}
+
 function retrievalSufficiency(question, ranked) {
   if (!ranked.length) {
     return { sufficient: false, reason: 'NO_MATCH', coverage: 0 };
+  }
+
+  const specificity = subjectSpecificity(question);
+  if (specificity.score < 2) {
+    return { sufficient: false, reason: 'SUBJECT_UNDERSPECIFIED', coverage: 0, specificity: specificity.score };
   }
 
   const refs = explicitSectionRefs(question);
@@ -309,6 +360,7 @@ module.exports = {
   uniqueTitleMatch,
   broadTopicMatch,
   baseQueryTerms,
+  subjectSpecificity,
   retrievalSufficiency,
   retrievalGate,
 };
