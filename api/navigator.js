@@ -203,7 +203,7 @@ module.exports = async (req, res) => {
       });
 
       return res.status(200).json({
-        summary: 'I cannot answer that reliably from the constitutional provisions retrieved for this question. Try naming the office, process, or section more specifically.',
+        summary: 'I cannot answer that reliably from the constitutional provisions retrieved for this question. Please make the subject more specific — for example, name the office, institution, right, process, or section you mean.',
         provisions: [],
         scenarios,
         retrieval: {
@@ -213,27 +213,7 @@ module.exports = async (req, res) => {
       });
     }
 
-    const sufficiency = retrievalSufficiency(question, ranked);
-    if (!sufficiency.sufficient) {
-      console.info('[navigator-retrieval]', {
-        sufficient: false,
-        reason: sufficiency.reason,
-        coverage: sufficiency.coverage,
-        matched: fallbackMatched.map(p => p.num),
-      });
-
-      return res.status(200).json({
-        summary: 'I can’t answer that reliably from the constitutional text retrieved for this question. Please make the subject more specific — for example, name the office, institution, right, process, or section you mean.',
-        provisions: fallbackMatched.map(p => ({
-          num: p.num,
-          name: p.name,
-          relevance: 'Possible related provision — retrieval was not sufficient for an answer',
-        })),
-        scenarios
-      });
-    }
-
-    const provisionContext = fallbackMatched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
+    const provisionContext = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
 
     const envTag = `env:${process.env.VERCEL_ENV || 'local'}`;
     const primaryPromise = anthropicMessage({
@@ -274,7 +254,7 @@ module.exports = async (req, res) => {
           const raw = (shadowData.content || []).filter(b => b.type === 'text').map(b => b.text).join('').trim();
           const parsed = JSON.parse(raw.replace(/```json|```/g, '').trim());
           const validStatus = ['ANSWER','ESCALATE','NOT_ESTABLISHED'].includes(parsed.status) ? parsed.status : 'INVALID';
-          const available = new Set(fallbackMatched.map(p => p.num));
+          const available = new Set(matched.map(p => p.num));
           const sources = Array.isArray(parsed.sources) ? parsed.sources.filter(s => available.has(s)) : [];
           console.info('[navigator-shadow]', {
             shadowModel: shadowResult.model,
@@ -299,7 +279,7 @@ module.exports = async (req, res) => {
 
     return res.status(200).json({
       summary,
-      provisions: fallbackMatched.map(p => ({ num: p.num, name: p.name })),
+      provisions: matched.map(p => ({ num: p.num, name: p.name })),
       scenarios
     });
 
