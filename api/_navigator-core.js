@@ -131,6 +131,8 @@ const SYNONYMS = {
   'irreconcilable compromise':['institutional compromise protocol','§9.7.a'],
   'compromise failure':['institutional compromise protocol','§9.7.a'],
   'state election system':['state election non-compliance','§11.3','nvs','§11.2'],
+  'temporary inability':['executive incapacity','temporary unable','§2.16'],
+  'unable to exercise authority':['executive incapacity','temporary unable','§2.16'],
 };
 
 function phrasePresent(text, phrase) {
@@ -175,12 +177,13 @@ function rankProvisions(provisions, terms, n = 5) {
     .filter(x => x.score > 0)
     .sort((a, b) => b.score - a.score || a.provision.num.localeCompare(b.provision.num));
 
-  const selected = ranked.slice(0, n);
+  const selected = ranked.slice(0, Math.min(3, n));
   const selectedNums = new Set(selected.map(x => x.provision.num));
   const byNum = new Map(provisions.map(p => [p.num, p]));
 
   // Cross-references from the strongest retrieved provisions are evidence, not
-  // model inference. Pull them into the packet when space permits.
+  // model inference. Reserve packet space for them before lower-ranked lexical
+  // matches are added.
   for (const source of ranked.slice(0, 3)) {
     for (const ref of extractSectionRefs(source.provision.text)) {
       if (selected.length >= n) break;
@@ -191,6 +194,13 @@ function rankProvisions(provisions, terms, n = 5) {
       selectedNums.add(ref);
     }
     if (selected.length >= n) break;
+  }
+
+  for (const item of ranked) {
+    if (selected.length >= n) break;
+    if (selectedNums.has(item.provision.num)) continue;
+    selected.push(item);
+    selectedNums.add(item.provision.num);
   }
 
   return selected.slice(0, n);
