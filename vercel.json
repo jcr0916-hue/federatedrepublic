@@ -33,13 +33,6 @@
       }
     },
     {
-      "src": "api/survey.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 30
-      }
-    },
-    {
       "src": "api/crossroads.js",
       "use": "@vercel/node",
       "config": {
@@ -66,10 +59,6 @@
     {
       "src": "/api/annotate",
       "dest": "/api/annotate.js"
-    },
-    {
-      "src": "/api/survey",
-      "dest": "/api/survey.js"
     },
     {
       "src": "/api/crossroads",
