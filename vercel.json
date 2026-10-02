@@ -23,6 +23,17 @@
       }
     },
     {
+      "src": "api/_annotator-model-benchmark.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30,
+        "includeFiles": [
+          "constitution_data.json",
+          "scripts/fixtures/annotator-ai-cases.json"
+        ]
+      }
+    },
+    {
       "src": "api/annotate.js",
       "use": "@vercel/node",
       "config": {
@@ -55,6 +66,10 @@
     {
       "src": "/api/_navigator-sonnet-fallback-benchmark",
       "dest": "/api/_navigator-sonnet-fallback-benchmark.js"
+    },
+    {
+      "src": "/api/_annotator-model-benchmark",
+      "dest": "/api/_annotator-model-benchmark.js"
     },
     {
       "src": "/api/annotate",
