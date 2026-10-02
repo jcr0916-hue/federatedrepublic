@@ -1,0 +1,147 @@
+[
+  {
+    "num": "§1.4",
+    "title": "Non-derogable forced-labor boundary",
+    "must": [
+      "Recognize that the right is non-derogable under §1.19.a.",
+      "Recognize that court-imposed labor after conviction and listed civic obligations are excluded from forced labor under this provision.",
+      "Recognize that labor for a private party requires the person's consent.",
+      "Connect the provision to bad-faith/boundary design without inventing protections absent from the text."
+    ],
+    "mustNot": [
+      "Do not claim the Constitution sets compensation, hours, workplace-condition, or voluntariness rules beyond the private-party consent rule actually stated.",
+      "Do not say all prison labor is prohibited."
+    ]
+  },
+  {
+    "num": "§2.14.a",
+    "title": "Cross-domain emergency coordination without domain transfer",
+    "must": [
+      "Recognize that a unified operational lead requires both executives' concurrence.",
+      "Recognize the expedited Supreme Court path when they cannot agree.",
+      "Recognize that the lead coordinates operations only and does not transfer either executive's constitutional domain authority.",
+      "Identify crisis deadlock and executive encroachment as the paired failure modes."
+    ],
+    "mustNot": [
+      "Do not claim either Consul can unilaterally seize the other's constitutional powers.",
+      "Do not claim the Supreme Court chooses policy or permanently reallocates executive authority."
+    ]
+  },
+  {
+    "num": "§3.9",
+    "title": "Independent statutory agencies",
+    "must": [
+      "Recognize that the Legislature may create independent agencies outside both executives.",
+      "Recognize that where the Constitution assigns an independent function, the Legislature must maintain an institution capable of performing it.",
+      "Recognize the fixed-term and for-cause removal floor when the Constitution has not itself supplied tenure/removal rules.",
+      "Recognize that appointment and oversight remain statutory but must preserve independence."
+    ],
+    "mustNot": [
+      "Do not claim every independent agency is itself constitutionally created.",
+      "Do not claim policy disagreement is valid cause for removal.",
+      "Do not invent a single constitutionally mandated appointment procedure for every independent agency."
+    ]
+  },
+  {
+    "num": "§4.4.a",
+    "title": "Judicial Senate-bypass fallback",
+    "must": [
+      "Recognize that the bypass activates only after Senate failure to vote within the §4.4 period.",
+      "Recognize the Civic Consul plus 2/3 Assembly step and 60% public-confirmation threshold.",
+      "Recognize that rejection makes the temporary justice step down and the next senior Appellate Court judge auto-designates.",
+      "Recognize that Senate confirmation before certification ends the bypass."
+    ],
+    "mustNot": [
+      "Do not describe the public confirmation as an ordinary election; the text expressly says it is not.",
+      "Do not claim the Senate permanently loses all judicial confirmation authority beyond that seat after a successful confirmation."
+    ]
+  },
+  {
+    "num": "§7.10",
+    "title": "Ethics gift floor and self-defeating delegation",
+    "must": [
+      "Recognize that the gift threshold defaults to zero until statute sets a de minimis amount.",
+      "Recognize that official-capacity gifts are Republic property regardless of value.",
+      "Recognize the role of NRS publication and Monitor investigation/referral.",
+      "Identify the zero default as a graceful-degradation response to legislative inaction."
+    ],
+    "mustNot": [
+      "Do not claim gifts of zero value are literally required or that every personal item is prohibited regardless of statutory threshold.",
+      "Do not invent criminal penalties or automatic removal."
+    ]
+  },
+  {
+    "num": "§8.4",
+    "title": "Public campaign financing without invented fallback",
+    "must": [
+      "Recognize that the Legislature is required to establish the system by statute.",
+      "Recognize that public support is an initial allocation for viable candidacy, not full campaign funding.",
+      "Recognize that candidates may still privately fundraise under §8.1 and may not be disadvantaged for participation.",
+      "Recognize Elections Panel administration and annual NRS compliance findings."
+    ],
+    "mustNot": [
+      "Do not claim the Constitution itself supplies an interim financing amount or self-executing fallback if the Legislature never enacts the statute.",
+      "Do not claim acceptance of public financing bars private fundraising."
+    ]
+  },
+  {
+    "num": "§9.8",
+    "title": "Constitutional pools and zero-member fallback",
+    "must": [
+      "Recognize the constitutional minimum of five members and the JM compliance publication when a pool falls below five.",
+      "Recognize that the restoration period is defined by statute.",
+      "Recognize that the zero-member acting fallback applies only to judicial and Monitor pools.",
+      "Recognize the objective-criteria rule and appeal for misapplication."
+    ],
+    "mustNot": [
+      "Do not claim the zero-member acting-judge fallback applies to every constitutional pool.",
+      "Do not invent a constitutional deadline for restoring a below-five pool.",
+      "Do not allow ideological or political criteria."
+    ]
+  },
+  {
+    "num": "§10.2",
+    "title": "Classification ceiling and automatic sunlight",
+    "must": [
+      "Recognize that classification grounds are statutory but concealment of violations, policy disagreement, or political embarrassment is prohibited and void.",
+      "Recognize the 25-year ceiling plus at most one 5-year extension and the absolute 30-year maximum.",
+      "Recognize automatic NRS publication on expiry without further government action.",
+      "Recognize judicial redaction/declassification review and the categories that may not be classified."
+    ],
+    "mustNot": [
+      "Do not claim all government information must be immediately public.",
+      "Do not override ballot secrecy or §11.2-protected information, which the provision expressly preserves.",
+      "Do not imply an executive can extend classification beyond 30 years."
+    ]
+  },
+  {
+    "num": "§11.1",
+    "title": "Independent panels and pre-statute emergency measures",
+    "must": [
+      "Recognize operational independence of both panels from each other, both executives, and the Legislature in their functions.",
+      "Recognize that the Legislature must create a statutory emergency-measures procedure, but until then a panel may act by majority of seated members.",
+      "Recognize that temporary technical measures cannot alter electoral rules, timelines, or NRS record permanence and expire within 72 hours unless ratified.",
+      "Recognize the separate acting-member fallback when a panel falls below five."
+    ],
+    "mustNot": [
+      "Do not claim panels have broad emergency policy power.",
+      "Do not claim the temporary technical measure can suspend election law or NRS permanence.",
+      "Do not claim Civic Consul acting appointees may form a majority of a panel."
+    ]
+  },
+  {
+    "num": "§15.3",
+    "title": "Mandatory devolution ladder",
+    "must": [
+      "Recognize the sequence: first failure warning/remediation, second failure renewed warning/revised plan, third consecutive failure automatic Provisional status.",
+      "Recognize the 90-day constitutional default for the first remediation plan until statute supplies a period.",
+      "Recognize that Provisional status does not itself end Statehood.",
+      "Recognize that devolution still requires an affirmative citizen referendum and then the §15.4 negotiation/ratification process."
+    ],
+    "mustNot": [
+      "Do not claim a third failed audit automatically devolves or dissolves the State.",
+      "Do not claim the advisory Provisional Audit Council replaces the State legislature.",
+      "Do not claim judicial review permits policy substitution for Monitor findings."
+    ]
+  }
+]
