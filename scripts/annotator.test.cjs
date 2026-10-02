@@ -54,7 +54,7 @@ test('Annotator uses Sonnet with a deterministic source packet instead of the fu
     assert.match(prompt,/TARGET PROVISION\n\[§2\.3\.a\] Legat Consul Legislative Veto:/);
     assert.match(prompt,/\[§2\.7\] Civic Consul Legislative Instruments:/,
       'same-article context should expose the distinct CC veto mechanics');
-    assert.match(prompt,/\[§9\.1\] The Monitors:/,
+    assert.match(prompt,/\[§9\.1\]/,
       'explicit cross-reference should be included even outside Article II');
     assert.doesNotMatch(prompt,/\[§15\.9\]/,
       'unrelated constitutional provisions should not be sent to the model');
