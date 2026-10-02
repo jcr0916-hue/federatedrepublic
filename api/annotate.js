@@ -1,10 +1,10 @@
 // Vercel Serverless Function: Constitutional Annotation
-// Sonnet generates design rationale for any provision on demand
+// Sonnet receives a deterministic constitutional context packet and generates design rationale.
 
 const { anthropicMessage } = require('./_ai-transport.js');
 const MODEL = process.env.AI_MODEL_ANNOTATE || 'anthropic/claude-sonnet-5';
 
-const SYSTEM = `You are a source-bound constitutional design analyst for the Federated Republic. When a user clicks on a provision, explain the structural rationale supported by the current constitutional text and the supplied design principles — the why only to the extent the sources support it.
+const SYSTEM = `You are a source-bound constitutional design analyst for the Federated Republic. When a user clicks on a provision, explain the structural rationale supported by the supplied current constitutional text and design principles — the why only to the extent the sources support it.
 
 Your annotation should cover:
 1. The constitutional principle this provision embodies
@@ -28,25 +28,84 @@ The twelve design principles underlying this constitution:
 11. Process Symmetry — materially similar constitutional functions should use materially similar procedures unless a meaningful difference in role, legitimacy, consequence, or risk requires divergence
 12. Procedural Familiarity — constitutional procedures should reuse familiar actors, thresholds, stages, and failure mechanisms unless a meaningful difference requires a new process
 
-Use only the current Constitution below as constitutional authority. Distinguish interpretation from explicit requirements; acknowledge ambiguity instead of supplying missing rules. Do not attribute motives to the drafters, historical lessons, rejected alternatives, or deliberate purposes unless the current text itself establishes them. Do not invent enforcement mechanisms, appointment rules, audit powers, deadlines, standards, remedies, or cross-reference effects. Never invent a provision number or label. Do not state that information is public, reviewable, enforceable, or justiciable unless the constitutional text actually provides that result. When a rationale is only a structural inference, say so plainly rather than presenting it as an explicit constitutional purpose. Prefer direct mechanics over speculative institutional storytelling.
+The application has already performed constitutional retrieval. Treat the supplied SOURCE PACKET as the complete research basis for this annotation. Do not search for or assume rules outside the packet. The target provision is authoritative; all other packet entries are exact current constitutional text supplied only for relationship and comparison analysis.
 
-The complete constitution text follows, for cross-reference awareness:
-`;
+Distinguish interpretation from explicit requirements; acknowledge ambiguity instead of supplying missing rules. Do not attribute motives to the drafters, historical lessons, rejected alternatives, or deliberate purposes unless the current text itself establishes them. Do not invent enforcement mechanisms, appointment rules, audit powers, deadlines, standards, remedies, or cross-reference effects. Never invent a provision number or label. Do not state that information is public, reviewable, enforceable, or justiciable unless the supplied constitutional text actually provides that result. When a rationale is only a structural inference, say so plainly rather than presenting it as an explicit constitutional purpose. Prefer direct mechanics over speculative institutional storytelling.
+
+When comparing procedures, track each stage separately. In particular, do not conflate an initial review/action window with the duration or legal effect of an instrument exercised during that window. Compare the actual trigger, action period, consequence, override, fallback, and repeat-use rule stated in the packet.`;
 
 let cachedData = null;
-let cachedText = null;
 
-function getConstitutionText() {
-  if (cachedText) return cachedText;
-  cachedData = require('../constitution_data.json');
-  const lines = [];
-  for (const article of cachedData) {
-    for (const prov of article.provisions) {
-      lines.push(`[${prov.num}] ${prov.name}: ${prov.text}`);
-    }
-  }
-  cachedText = lines.join('\n\n');
-  return cachedText;
+function getConstitutionData() {
+  if (!cachedData) cachedData = require('../constitution_data.json');
+  return cachedData;
+}
+
+function extractRefs(text) {
+  const refs = text.match(/§\d+(?:\.\d+)*(?:\.[a-z])?/gi) || [];
+  return [...new Set(refs)];
+}
+
+function exactRefRegex(num) {
+  const escaped = num.replace(/\./g, '\\.');
+  return new RegExp(escaped + '(?![\\w.])');
+}
+
+function formatProvision(prov) {
+  return `[${prov.num}] ${prov.name}: ${prov.text}`;
+}
+
+function buildContextPacket(num) {
+  const data = getConstitutionData();
+  const articles = data.filter((article) => Array.isArray(article.provisions));
+  const all = articles.flatMap((article) =>
+    article.provisions.map((prov) => ({ ...prov, article: article.heading }))
+  );
+  const target = all.find((prov) => prov.num === num);
+  if (!target) return null;
+
+  const sameArticle = all.filter(
+    (prov) => prov.article === target.article && prov.num !== target.num
+  );
+
+  const refs = extractRefs(target.text).filter((ref) => ref !== target.num);
+  const refSet = new Set(refs);
+  const explicitCrossRefs = all.filter(
+    (prov) => refSet.has(prov.num) && prov.article !== target.article
+  );
+
+  const targetRef = exactRefRegex(target.num);
+  const backlinks = all.filter(
+    (prov) =>
+      prov.num !== target.num &&
+      prov.article !== target.article &&
+      !refSet.has(prov.num) &&
+      targetRef.test(prov.text)
+  );
+
+  const sections = [
+    'SOURCE PACKET — generated deterministically from constitution_data.json',
+    '',
+    'TARGET PROVISION',
+    formatProvision(target),
+    '',
+    `SAME-ARTICLE CONTEXT — ${target.article}`,
+    sameArticle.length
+      ? sameArticle.map(formatProvision).join('\n\n')
+      : '(none)',
+    '',
+    'EXPLICIT CROSS-REFERENCES OUTSIDE THE TARGET ARTICLE',
+    explicitCrossRefs.length
+      ? explicitCrossRefs.map(formatProvision).join('\n\n')
+      : '(none)',
+    '',
+    'PROVISIONS OUTSIDE THE TARGET ARTICLE THAT EXPLICITLY CITE THE TARGET',
+    backlinks.length
+      ? backlinks.map(formatProvision).join('\n\n')
+      : '(none)',
+  ];
+
+  return { target, packet: sections.join('\n') };
 }
 
 const CORS = {
@@ -61,20 +120,18 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
   const { num } = req.body || {};
-  getConstitutionText();
-  const provision = cachedData.flatMap(a => a.provisions).find(p => p.num === num);
-  if (!provision) return res.status(400).json({ error: 'Unknown provision' });
-  const { name, text } = provision;
+  const context = buildContextPacket(num);
+  if (!context) return res.status(400).json({ error: 'Unknown provision' });
 
   try {
     const { response: upstream, route, model } = await anthropicMessage({
       model: MODEL,
       max_tokens: 1200,
       temperature: 0,
-      system: SYSTEM + getConstitutionText(),
+      system: SYSTEM,
       messages: [{
         role: 'user',
-        content: `Explain the design rationale for this provision:\n\n${num} — ${name}\n\n"${text}"`
+        content: `Explain the design rationale for ${context.target.num} — ${context.target.name}. Use only the verified source packet below.\n\n${context.packet}`
       }],
       tags: ['feature:annotate', `env:${process.env.VERCEL_ENV || 'local'}`],
     });
@@ -89,15 +146,12 @@ module.exports = async (req, res) => {
       });
     }
 
-    // Concatenate every text block, not just the first — a multi-block
-    // response would otherwise be silently truncated after block [0].
     const annotation = (data.content || [])
       .filter((b) => b.type === 'text')
       .map((b) => b.text)
       .join('')
       .trim();
 
-    // Surface truncation instead of returning a cut-off answer that looks complete.
     const truncated = data.stop_reason === 'max_tokens';
 
     return res.status(200).json({ annotation, truncated });
