@@ -238,10 +238,10 @@
     "expected": "out_of_bounds"
   },
   {
-    "name": "Ambiguous needs detail",
+    "name": "S5 tentative phrasing",
     "scene": "s5_korda",
     "role": "threll",
     "move": "I want to keep Korda together, but I am not sure what to put in writing yet.",
-    "expected": "needs_detail"
+    "expected": "s5_tentative"
   }
 ]
