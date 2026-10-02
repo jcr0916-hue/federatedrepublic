@@ -360,15 +360,14 @@ At the Phase 1 inventory, every live site AI feature ran on a Sonnet-class model
 **`api/navigator.js` — Constitution Navigator (free-text Q&A).** Task: user Q&A / retrieval. This is the feature the rest of this plan was implicitly designed around, and its retrieval layer is already built and already matches the recommended approach above — deterministic synonym-expanded keyword scoring against `constitution_data.json`, no embeddings, no vector search. The only model call left is the final step: write 3-4 grounded sentences from the top-matched provisions. Currently `claude-sonnet-4-6` (inconsistent with the other three files, which use `claude-sonnet-5` — likely just missed in an update, worth fixing regardless of the rest of this plan).
 - **Recommendation: best test bed for the actual escalation-gate prototype.** Route to a cheap model when there's a single clean top-scoring match; escalate to Sonnet when the match is weak, tied across multiple provisions, or empty. Most of Phase 4 (retrieval testing) is effectively already done in production here — what's untested is the generation/escalation split.
 
-**`api/annotate.js` — Constitutional annotation.** Task: annotation, bounded to one already-identified provision (the fuzzy part — which provision — is resolved server-side before the model is called). Asks for real synthesis: connect the provision to the current Twelve Tests, related provisions, and the failure mode it guards against, in 3-4 analytical paragraphs. Currently `claude-sonnet-5`.
-- **Recommendation: a real Tier B candidate, not an obvious swap.** This is exactly the shape of task where the GPT-OSS-120B testing above already found its worst failure mode — inventing a reconciliation, overextending past a correct point. Benchmark specifically against that risk (Phase 2/3) before touching it; don't assume a bounded single-provision task is automatically safe just because it's bounded.
+**`api/annotate.js` — Constitutional annotation.** Task: annotation, bounded to one already-identified provision (the fuzzy part — which provision — is resolved server-side before the model is called). Asks for synthesis across the selected provision, related provisions, and the Twelve Tests. **Benchmark complete 2026-10-01: keep Claude Sonnet 5.** Haiku 4.5 repeatedly introduced unsupported decision rules, enforcement mechanisms, audit powers, cross-reference effects, and institutional details even under a stricter source-bound prompt. The production Annotator now uses Sonnet 5 at temperature 0 with a tighter 350–500 word / 1,200-token response envelope and explicit instructions not to invent motives, remedies, cross-reference effects, or public/justiciable consequences absent from the text.
 
 **`api/survey.js` — "So You Want a Constitution?" survey evaluation.** Task: open-ended creative/interpretive synthesis — reads a full questionnaire transcript (including free-text answers) and writes a structured, voiced, multi-field JSON evaluation with specific tone constraints (never diagnose the person, stay apolitical, deflect adversarial free-text gracefully). The code comments already say why it's on Sonnet: "this is the marquee interpretive moment and quality matters." Currently `claude-sonnet-5`.
 - **Recommendation: leave on Sonnet, independent of the rest of this plan.** This is the one feature where "use a cheaper model" and "use the necessary model" genuinely diverge. It's the site's most visible single moment, the task is voice-controlled creative writing rather than grounded lookup, and a cheaper model is most likely to go generic or tonally flat exactly where it matters most. This isn't a routing problem to solve — it's the plan's own Tier C in its natural habitat.
 
 **Cold storage, 2026-10-01.** The Questionnaire has been removed from public navigation and the active AI-feature surface, its page is omitted from the public build, and its API route is no longer deployed. Source is retained in the repository so the feature can be restored later. Do not include it in active routing/model-optimization work unless it is deliberately reactivated.
 
-**Net, updated 2026-10-01:** Crossroads has moved to Haiku after benchmark validation; Navigator remains on Sonnet with deterministic retrieval and bounded escalation; Annotate still needs a dedicated benchmark before any model change; Survey is in cold storage and is no longer part of active routing work.
+**Net, updated 2026-10-01:** Crossroads has moved to Haiku after benchmark validation; Navigator remains on Sonnet with deterministic retrieval and bounded escalation; Annotator has completed its benchmark and remains on a hardened Sonnet configuration; Survey is in cold storage. There is no remaining planned model migration for the active public AI features.
 
 ### September 30, 2026 — live Gateway benchmark
 
@@ -425,6 +424,30 @@ Corrected hardened results:
 | GPT-5.4 Nano | 6/6 smoke only | — | highly variable | Dropped from hardened round because interactive latency was erratic |
 
 Decision: **promote Claude Haiku 4.5 to the public Crossroads classifier at temperature 0.** Crossroads is unusually suitable for this move because the model never writes public narrative, returned IDs are checked against the authored allowlist, invalid output fails safe, and the player can always use authored buttons if classification fails. The default shadow call is disabled so the migration actually reduces cost; Sonnet can be restored through the existing model override or enabled temporarily as a shadow comparator.
+
+### October 1, 2026 — Provision Annotator benchmark and grounding hardening
+
+The Annotator model-routing item is complete.
+
+A source-linked 10-case benchmark was built from the current Constitution, covering §1.4, §2.14.a, §3.9, §4.4.a, §7.10, §8.4, §9.8, §10.2, §11.1, and §15.3. Each case records both required mechanics and prohibited inventions. The corpus is checked against the live `constitution_data.json` so it fails if a benchmark provision disappears or the fixture becomes structurally invalid.
+
+The first Sonnet-vs-Haiku pass used the existing production prompt. Haiku was consistently fluent but too willing to complete the constitutional design from inference. Material examples included:
+- §2.14.a: inventing a Supreme Court decision rule that the Court chooses which executive should coordinate the emergency, and broadening “operational coordination only” toward binding cross-domain command;
+- §3.9: inventing audit/enforcement machinery and generalized appointment constraints not supplied by the provision;
+- §7.10: broadening the Republic-property rule from official-capacity gifts to “any gift,” and inventing referral destinations;
+- §8.4: inventing a specific justiciable fallback for legislative inaction;
+- §11.1 and §15.3: adding institutional consequences and timing rationales not established by the text.
+
+A second pass tested a stricter prompt against both models. The stronger instructions materially improved both, but Haiku still introduced unsupported structural rules in the same high-risk areas, especially §2.14.a and §3.9. It therefore does **not** meet the source-safety bar for public annotations.
+
+The stricter prompt improved Sonnet in two useful ways: it stopped most speculative “drafting story” language and made unresolved gaps explicit instead of filling them. It also eliminated the response-length problem observed in the first pass, where two Sonnet annotations hit the prior 2,000-token ceiling. Production is therefore hardened rather than downgraded:
+- model remains `anthropic/claude-sonnet-5`;
+- temperature is fixed at 0;
+- response target is three concise paragraphs, roughly 350–500 words;
+- `max_tokens` is reduced to 1,200;
+- the system prompt now forbids invented motives, historical lessons, enforcement mechanisms, appointment rules, audit powers, deadlines, remedies, cross-reference effects, and claims of publicity/reviewability/justiciability not established by the current text.
+
+Decision: **keep the Annotator on Sonnet 5 and close the cheaper-model migration item.** Revisit only if a materially stronger low-cost model or a different annotation architecture becomes available.
 
 ### Phase 2 — model-to-task benchmark
 
