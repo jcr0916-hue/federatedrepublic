@@ -47,7 +47,7 @@ function extractRefs(text) {
 }
 
 function exactRefRegex(num) {
-  const escaped = num.replace(/[.*+?^$()|[\]\\{}]/g, '\\$&');
+  const escaped = num.replace(/\./g, '\\.');
   return new RegExp(escaped + '(?![\\w.])');
 }
 
