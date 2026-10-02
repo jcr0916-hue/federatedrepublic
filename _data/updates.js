@@ -331,13 +331,6 @@ const updates = [
   {
     category: "site",
     badge: "Feature",
-    title: "So You Want a Constitution?",
-    blurb: "A short questionnaire on how you'd arrange power — who holds it, who checks it, what it must never touch. Nine questions, a one-page result, nothing political.",
-    href: "survey.html",
-  },
-  {
-    category: "site",
-    badge: "Feature",
     title: "Quick Sheets",
     blurb: "The constitution's core mechanics distilled to twelve one-page references — rights, elections, the judiciary, the monitors, and more, each at a glance.",
     href: "quicksheets.html",

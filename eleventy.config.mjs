@@ -108,6 +108,8 @@ export default function (eleventyConfig) {
   // Keep legacy flattened image/PDF URLs and /logos/ URLs unchanged.
   eleventyConfig.ignores.add("docs/**");
   eleventyConfig.ignores.add("scripts/**");
+  // Cold storage: source retained in-repo but omitted from the public build.
+  eleventyConfig.ignores.add("survey.html");
   eleventyConfig.addWatchTarget("images/");
   eleventyConfig.addWatchTarget("logos/");
   eleventyConfig.addWatchTarget("pdf/");
