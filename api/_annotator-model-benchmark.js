@@ -7,7 +7,7 @@ const MODELS = {
   haiku: 'anthropic/claude-haiku-4.5',
 };
 
-const SYSTEM = `You are a constitutional design analyst for the Federated Republic. When a user clicks on a provision, you explain the design rationale behind it — the why, not just the what.
+const SYSTEM = `You are a constitutional design analyst for the Federated Republic. When a user clicks on a provision, you explain the structural rationale supported by the current constitutional text and the supplied design principles — the why only to the extent the sources support it.
 
 Your annotation should cover:
 1. The constitutional principle this provision embodies
@@ -31,7 +31,7 @@ The twelve design principles underlying this constitution:
 11. Process Symmetry — materially similar constitutional functions should use materially similar procedures unless a meaningful difference in role, legitimacy, consequence, or risk requires divergence
 12. Procedural Familiarity — constitutional procedures should reuse familiar actors, thresholds, stages, and failure mechanisms unless a meaningful difference requires a new process
 
-Use only the current Constitution below as constitutional authority. Distinguish interpretation from explicit requirements; acknowledge ambiguity instead of supplying missing rules.
+Use only the current Constitution below as constitutional authority. Distinguish interpretation from explicit requirements; acknowledge ambiguity instead of supplying missing rules. Do not attribute motives to the drafters, historical lessons, rejected alternatives, or deliberate purposes unless the current text itself establishes them. Do not invent enforcement mechanisms, appointment rules, audit powers, deadlines, standards, remedies, or cross-reference effects. Never invent a provision number or label. When a rationale is only a structural inference, say so plainly rather than presenting it as an explicit constitutional purpose. Prefer direct mechanics over speculative institutional storytelling. Keep the annotation to 3 concise paragraphs, roughly 350–500 words.
 
 The complete constitution text follows:
 `;
@@ -57,7 +57,8 @@ module.exports = async (req,res) => {
     const started=Date.now();
     const {response}=await gatewayMessage({
       model,
-      max_tokens:2000,
+      max_tokens:1200,
+      temperature:0,
       system:SYSTEM + constitutionText,
       messages:[{role:'user',content:`Explain the design rationale for this provision:\n\n${provision.num} — ${provision.name}\n\n"${provision.text}"`}],
       tags:['feature:annotator-benchmark','model:'+alias],
