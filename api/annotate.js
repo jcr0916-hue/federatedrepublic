@@ -12,7 +12,7 @@ Your annotation should cover:
 3. How this provision connects to or depends on other provisions
 4. What failure mode or abuse this provision is guarding against
 
-Be direct and substantive. Write 3 concise paragraphs, roughly 350–500 words. No bullet points. No headers. Plain prose, analytical tone. Assume the reader has already read the provision text — do not summarize it.
+Be direct and substantive. Write 3 concise paragraphs, roughly 300–450 words, and always complete the final sentence within that limit. No bullet points. No headers. Plain prose, analytical tone. Assume the reader has already read the provision text — do not summarize it.
 
 The twelve design principles underlying this constitution:
 1. One Home Rule — no repeated protections; each protection lives in exactly one place
@@ -124,20 +124,27 @@ module.exports = async (req, res) => {
   if (!context) return res.status(400).json({ error: 'Unknown provision' });
 
   try {
-    const { response: upstream, route, model } = await anthropicMessage({
+    const request = (maxTokens, retry = false) => anthropicMessage({
       model: MODEL,
-      max_tokens: 1200,
+      max_tokens: maxTokens,
       temperature: 0,
       system: SYSTEM,
       messages: [{
         role: 'user',
-        content: `Explain the design rationale for ${context.target.num} — ${context.target.name}. Use only the verified source packet below.\n\n${context.packet}`
+        content: `Explain the design rationale for ${context.target.num} — ${context.target.name}. Use only the verified source packet below.${retry ? '\n\nYour previous response hit the output limit. Rewrite the full answer from the beginning in no more than 450 words and finish all three paragraphs.' : ''}\n\n${context.packet}`
       }],
-      tags: ['feature:annotate', `env:${process.env.VERCEL_ENV || 'local'}`],
+      tags: ['feature:annotate', retry ? 'role:completion-retry' : 'role:primary', `env:${process.env.VERCEL_ENV || 'local'}`],
     });
 
-    console.info('[annotate-ai]', { route, model });
-    const data = await upstream.json();
+    let { response: upstream, route, model } = await request(1600);
+    console.info('[annotate-ai]', { route, model, attempt: 1 });
+    let data = await upstream.json();
+
+    if (upstream.ok && !data.error && data.stop_reason === 'max_tokens') {
+      ({ response: upstream, route, model } = await request(2400, true));
+      console.info('[annotate-ai]', { route, model, attempt: 2, reason: 'max_tokens' });
+      data = await upstream.json();
+    }
 
     if (!upstream.ok || data.error) {
       return res.status(502).json({
