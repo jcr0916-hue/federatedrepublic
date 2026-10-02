@@ -1,7 +1,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 
-test('Annotator uses Sonnet with a deterministic source packet instead of the full Constitution', async () => {
+test('Annotator uses Sonnet with a deterministic source packet and enough output room', async () => {
   const handler = require('../api/annotate.js');
   const originalFetch = global.fetch;
   const originalKey = process.env.ANTHROPIC_API_KEY;
@@ -38,7 +38,7 @@ test('Annotator uses Sonnet with a deterministic source packet instead of the fu
     assert.equal(res.statusCode,200);
     assert.equal(body.annotation,'Grounded annotation.');
     assert.equal(payload.model,'claude-sonnet-5');
-    assert.equal(payload.max_tokens,1200);
+    assert.equal(payload.max_tokens,1600);
     assert.equal(payload.temperature,0);
 
     assert.match(payload.system,/source-bound constitutional design analyst/i);
@@ -46,7 +46,7 @@ test('Annotator uses Sonnet with a deterministic source packet instead of the fu
     assert.match(payload.system,/Do not invent enforcement mechanisms/i);
     assert.match(payload.system,/Never invent a provision number or label/i);
     assert.match(payload.system,/do not conflate an initial review\/action window with the duration or legal effect/i);
-    assert.match(payload.system,/roughly 350–500 words/i);
+    assert.match(payload.system,/roughly 300–450 words/i);
     assert.doesNotMatch(payload.system,/complete constitution text follows/i);
 
     const prompt = payload.messages[0].content;
