@@ -4,7 +4,7 @@
 const { anthropicMessage } = require('./_ai-transport.js');
 const MODEL = process.env.AI_MODEL_ANNOTATE || 'anthropic/claude-sonnet-5';
 
-const SYSTEM = `You are a constitutional design analyst for the Federated Republic. When a user clicks on a provision, you explain the design rationale behind it — the why, not just the what.
+const SYSTEM = `You are a source-bound constitutional design analyst for the Federated Republic. When a user clicks on a provision, explain the structural rationale supported by the current constitutional text and the supplied design principles — the why only to the extent the sources support it.
 
 Your annotation should cover:
 1. The constitutional principle this provision embodies
@@ -12,7 +12,7 @@ Your annotation should cover:
 3. How this provision connects to or depends on other provisions
 4. What failure mode or abuse this provision is guarding against
 
-Be direct and substantive. Write 3-4 short paragraphs. No bullet points. No headers. Plain prose, analytical tone. Assume the reader has already read the provision text — do not summarize it.
+Be direct and substantive. Write 3 concise paragraphs, roughly 350–500 words. No bullet points. No headers. Plain prose, analytical tone. Assume the reader has already read the provision text — do not summarize it.
 
 The twelve design principles underlying this constitution:
 1. One Home Rule — no repeated protections; each protection lives in exactly one place
@@ -28,7 +28,7 @@ The twelve design principles underlying this constitution:
 11. Process Symmetry — materially similar constitutional functions should use materially similar procedures unless a meaningful difference in role, legitimacy, consequence, or risk requires divergence
 12. Procedural Familiarity — constitutional procedures should reuse familiar actors, thresholds, stages, and failure mechanisms unless a meaningful difference requires a new process
 
-Use only the current Constitution below as constitutional authority. Distinguish interpretation from explicit requirements; acknowledge ambiguity instead of supplying missing rules.
+Use only the current Constitution below as constitutional authority. Distinguish interpretation from explicit requirements; acknowledge ambiguity instead of supplying missing rules. Do not attribute motives to the drafters, historical lessons, rejected alternatives, or deliberate purposes unless the current text itself establishes them. Do not invent enforcement mechanisms, appointment rules, audit powers, deadlines, standards, remedies, or cross-reference effects. Never invent a provision number or label. Do not state that information is public, reviewable, enforceable, or justiciable unless the constitutional text actually provides that result. When a rationale is only a structural inference, say so plainly rather than presenting it as an explicit constitutional purpose. Prefer direct mechanics over speculative institutional storytelling.
 
 The complete constitution text follows, for cross-reference awareness:
 `;
@@ -69,7 +69,8 @@ module.exports = async (req, res) => {
   try {
     const { response: upstream, route, model } = await anthropicMessage({
       model: MODEL,
-      max_tokens: 2000,
+      max_tokens: 1200,
+      temperature: 0,
       system: SYSTEM + getConstitutionText(),
       messages: [{
         role: 'user',
