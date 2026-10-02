@@ -353,10 +353,9 @@ Settle which application this architecture serves (see "Open scope question" abo
 
 ### Phase 1 — task inventory (complete, 2026-09-29)
 
-Every current site AI feature runs on a Sonnet-class model. Direct code inspection (`api/*.js`) found four live features, and they are not equivalent in risk or readiness. This settles the scope question above by example: the site's AI usage is a mix, not a single application, so tiering decisions should be made per feature.
+At the Phase 1 inventory, every live site AI feature ran on a Sonnet-class model. Direct code inspection (`api/*.js`) found four live features, and they were not equivalent in risk or readiness. This settled the scope question above by example: the site's AI usage is a mix, not a single application, so tiering decisions should be made per feature.
 
-**`api/crossroads.js` — Living Crossroads move classifier.** Task: bounded classification — match free-text player input to one of a small offered set of fragment IDs, or `out_of_bounds`/`needs_detail`. Already has real guardrails: output is validated against the allowed ID set, a parse failure fails safe to `out_of_bounds`, and the feature has a manual fallback (player picks a move) if the classifier is unavailable at all. Currently `claude-sonnet-5`, `max_tokens: 200`.
-- **Recommendation: move first, no architecture required.** This is close to a pure Tier A task and already degrades safely on a wrong answer. Doesn't need retrieval, tiering, or an escalation gate — just try a cheaper model directly and compare fragment-match accuracy against the existing Sonnet baseline.
+**`api/crossroads.js` — Living Crossroads move classifier.** Task: bounded classification — match free-text player input to one of a small offered set of fragment IDs, or `out_of_bounds`/`needs_detail`. It has strong guardrails: output is validated against the allowed ID set, a parse failure fails safe to `out_of_bounds`, and the feature has a manual fallback (player picks a move) if the classifier is unavailable at all. **Promoted 2026-10-01 to Claude Haiku 4.5 at temperature 0** after the hardened benchmark below; no always-on shadow model is enabled by default. `AI_MODEL_CROSSROADS` remains the rollback/override path and `AI_MODEL_CROSSROADS_SHADOW` can be set temporarily for observational comparison.
 
 **`api/navigator.js` — Constitution Navigator (free-text Q&A).** Task: user Q&A / retrieval. This is the feature the rest of this plan was implicitly designed around, and its retrieval layer is already built and already matches the recommended approach above — deterministic synonym-expanded keyword scoring against `constitution_data.json`, no embeddings, no vector search. The only model call left is the final step: write 3-4 grounded sentences from the top-matched provisions. Currently `claude-sonnet-4-6` (inconsistent with the other three files, which use `claude-sonnet-5` — likely just missed in an update, worth fixing regardless of the rest of this plan).
 - **Recommendation: best test bed for the actual escalation-gate prototype.** Route to a cheap model when there's a single clean top-scoring match; escalate to Sonnet when the match is weak, tied across multiple provisions, or empty. Most of Phase 4 (retrieval testing) is effectively already done in production here — what's untested is the generation/escalation split.
@@ -369,7 +368,7 @@ Every current site AI feature runs on a Sonnet-class model. Direct code inspecti
 
 **Cold storage, 2026-10-01.** The Questionnaire has been removed from public navigation and the active AI-feature surface, its page is omitted from the public build, and its API route is no longer deployed. Source is retained in the repository so the feature can be restored later. Do not include it in active routing/model-optimization work unless it is deliberately reactivated.
 
-**Net:** two of four features can move essentially immediately (Crossroads trivially, Navigator with moderate work since its retrieval half already exists), one needs real benchmarking before touching (Annotate), and one should very likely stay on Sonnet permanently (Survey). This is a smaller, more concrete starting point than building out the full cascade architecture before touching anything live.
+**Net, updated 2026-10-01:** Crossroads has moved to Haiku after benchmark validation; Navigator remains on Sonnet with deterministic retrieval and bounded escalation; Annotate still needs a dedicated benchmark before any model change; Survey is in cold storage and is no longer part of active routing work.
 
 ### September 30, 2026 — live Gateway benchmark
 
@@ -405,6 +404,27 @@ Final hardened result:
 - Temperature 0 and close-paraphrase prompting materially improved behavior but did not eliminate constitutional precision errors.
 
 Decision: **do not promote Haiku to unattended public Tier A yet.** Sonnet remains the public Navigator answerer. Retain the 76-case corpus as a regression benchmark and continue using Haiku only for shadow evaluation until a bounded architecture can reach effectively zero material source-grounding errors on repeated runs.
+
+### October 1, 2026 — Living Crossroads classifier benchmark and promotion
+
+The Crossroads model-routing item is complete.
+
+A first six-case smoke test used the exact production classifier prompt against Sonnet 5, Haiku 4.5, GPT-5.4 Nano, and Gemini 3.5 Flash Lite. All four scored 6/6, but GPT-5.4 Nano showed severe latency variance: the six-case batch took about 17.2 seconds because two calls ran roughly 15–17 seconds.
+
+The corpus was then rebuilt from the live `korda-crossroads.json` game data so each benchmark request uses the same role-filtered fragment descriptors the browser would send. The hardened corpus contains 35 cases across Scenes 1–5, both delegate roles, bargaining/persuasion/confrontation/lapse choices, prompt injection, and out-of-bounds input. A consistency test now fails if a benchmark case points to a fragment unavailable for its role/state.
+
+One initially expected `needs_detail` case was corrected after the first run. The move — wanting to keep Korda together while not yet being ready to put a resolution in writing — is directly covered by the authored `s5_tentative` fragment. This follows the production rule to choose the closest fragment when one clearly fits rather than ask for unnecessary clarification.
+
+Corrected hardened results:
+
+| Model | Hardened accuracy | Repeat | Median latency observed | Note |
+| --- | ---: | ---: | ---: | --- |
+| Claude Sonnet 5 | 35/35 | not repeated | ~1.74 s | Existing baseline |
+| Claude Haiku 4.5 | 35/35 | 35/35 | ~1.07–1.18 s | Matches authored routing in both runs |
+| Gemini 3.5 Flash Lite | 34/35 | 34/35 | ~0.79–0.84 s | Twice returned `needs_detail` where `s5_tentative` is the closer authored match |
+| GPT-5.4 Nano | 6/6 smoke only | — | highly variable | Dropped from hardened round because interactive latency was erratic |
+
+Decision: **promote Claude Haiku 4.5 to the public Crossroads classifier at temperature 0.** Crossroads is unusually suitable for this move because the model never writes public narrative, returned IDs are checked against the authored allowlist, invalid output fails safe, and the player can always use authored buttons if classification fails. The default shadow call is disabled so the migration actually reduces cost; Sonnet can be restored through the existing model override or enabled temporarily as a shadow comparator.
 
 ### Phase 2 — model-to-task benchmark
 
