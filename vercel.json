@@ -23,18 +23,6 @@
       }
     },
     {
-      "src": "api/_crossroads-hardened-benchmark.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 30,
-        "includeFiles": [
-          "scripts/fixtures/crossroads-ai-cases.json",
-          "korda-crossroads.json",
-          "crossroads-engine.js"
-        ]
-      }
-    },
-    {
       "src": "api/annotate.js",
       "use": "@vercel/node",
       "config": {
@@ -67,10 +55,6 @@
     {
       "src": "/api/_navigator-sonnet-fallback-benchmark",
       "dest": "/api/_navigator-sonnet-fallback-benchmark.js"
-    },
-    {
-      "src": "/api/_crossroads-hardened-benchmark",
-      "dest": "/api/_crossroads-hardened-benchmark.js"
     },
     {
       "src": "/api/annotate",

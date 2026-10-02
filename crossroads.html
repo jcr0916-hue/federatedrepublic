@@ -254,7 +254,7 @@ const CR = (function(){
     busy=false;
   }
 
-  // REAL CLASSIFIER — calls /api/crossroads (Sonnet 5). Returns a fragment id.
+  // REAL CLASSIFIER — calls /api/crossroads. Returns a fragment id.
   // Falls back to a local keyword stub if the API is unreachable (e.g. local file view).
   async function classify(text){
     // Build the fragment descriptor list for the classifier (id + desc only — never the text)

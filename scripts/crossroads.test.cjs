@@ -122,6 +122,8 @@ test('API remains classifier-only and rejects invented narrative routes',async()
   await handler(request,res);
   assert.match(payload.system,/classifier, not a writer/);
   assert.match(payload.system,/Never invent a fragment id/);
+  assert.equal(payload.model,'claude-haiku-4.5');
+  assert.equal(payload.temperature,0);
   return result;
  }
  try{
