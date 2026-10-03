@@ -48,7 +48,6 @@ function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit 
   }
 
   const explicitRelated = [];
-  const backlinks = [];
   const seenRelated = new Set();
 
   for (const item of primary) {
@@ -61,17 +60,6 @@ function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit 
       if (explicitRelated.length >= relatedLimit) break;
     }
     if (explicitRelated.length >= relatedLimit) break;
-  }
-
-  if (explicitRelated.length < relatedLimit) {
-    for (const candidate of provisions) {
-      if (seenPrimary.has(candidate.num) || seenRelated.has(candidate.num)) continue;
-      const citedPrimary = primary.find(item => exactRefRegex(item.provision.num).test(candidate.text));
-      if (!citedPrimary) continue;
-      backlinks.push({ provision: candidate, to: citedPrimary.provision.num });
-      seenRelated.add(candidate.num);
-      if (explicitRelated.length + backlinks.length >= relatedLimit) break;
-    }
   }
 
   const sections = [
@@ -104,7 +92,6 @@ function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit 
   const cueSources = [
     ...primary.map(x => x.provision),
     ...explicitRelated.map(x => x.provision),
-    ...backlinks.map(x => x.provision),
   ];
   const cueLines = [];
   const seenCueProvision = new Set();
@@ -124,24 +111,15 @@ function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit 
     ''
   );
 
-  sections.push('BACKLINKS — OTHER PROVISIONS THAT EXPLICITLY CITE A PRIMARY PROVISION');
-  if (backlinks.length) {
-    backlinks.forEach((item, index) => {
-      sections.push(formatProvision(item.provision, `BACKLINK ${index + 1} — cites ${item.to}`), '');
-    });
-  } else {
-    sections.push('(none)', '');
-  }
-
   sections.push(
     'PACKET RULE',
-    'Primary provisions are the retrieval layer\'s best evidence for the question. Related and backlink provisions are exact constitutional text supplied to expose dependencies and downstream consequences; they are not automatically controlling. If this packet does not establish a requested fact or resolution, say so rather than inventing one.'
+    'Primary provisions are the retrieval layer\'s best evidence for the question. Related provisions are exact constitutional text that a primary provision explicitly cites; they are not automatically controlling. Backlinks are intentionally excluded from Navigator synthesis because a provision that cites a primary rule is often downstream context rather than evidence for the question. If this packet does not establish a requested fact or resolution, say so rather than inventing one.'
   );
 
   return {
     packet: sections.join('\n').trim(),
     primary: primary.map(x => x.provision),
-    related: [...explicitRelated, ...backlinks].map(x => x.provision),
+    related: explicitRelated.map(x => x.provision),
   };
 }
 
