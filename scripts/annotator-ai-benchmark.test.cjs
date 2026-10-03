@@ -51,3 +51,25 @@ test('Every benchmark case can build a current deterministic source packet', () 
     assert.match(context.packet, new RegExp('TARGET PROVISION\\n\\[' + item.num.replace(/\./g,'\\.') + '\\]'));
   }
 });
+
+
+test('Annotator packet keeps target mechanics salient and related context bounded', () => {
+  const pools = buildContextPacket('§9.8');
+  assert.match(pools.packet, /TARGET COVERAGE CUES/);
+  assert.match(pools.packet, /restore the minimum within the period defined by statute/i);
+  assert.ok(pools.related.length <= 4);
+
+  const ethics = buildContextPacket('§7.10');
+  assert.match(ethics.packet, /regardless of value/i);
+  assert.equal(ethics.backlinks.length, 0);
+  assert.doesNotMatch(
+    ethics.packet,
+    /explicit backlink/i,
+    'downstream backlinks should not be injected into the Annotator packet'
+  );
+
+  const viability = buildContextPacket('§15.5.a');
+  assert.match(viability.packet, /must be ratified by referendum of the eligible voters it affects/i);
+  assert.match(viability.packet, /may not be reinitiated under substantially the same geographic scope for three years/i);
+  assert.ok(viability.related.length <= 4);
+});
