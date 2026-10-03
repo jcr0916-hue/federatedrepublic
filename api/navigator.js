@@ -307,6 +307,7 @@ module.exports = async (req, res) => {
     const provisionContext = contextPacket.packet;
 
     const envTag = `env:${process.env.VERCEL_ENV || 'local'}`;
+    const synthesisStartedAt = Date.now();
     const primaryPromise = anthropicMessage({
       model: MODEL,
       max_tokens: 600,
@@ -368,6 +369,10 @@ module.exports = async (req, res) => {
     let data = await upstream.json();
     let summary = data.content?.[0]?.text?.trim() || '';
     let completionRetried = false;
+    const usageTotals = {
+      inputTokens: Number(data.usage?.input_tokens || 0),
+      outputTokens: Number(data.usage?.output_tokens || 0),
+    };
 
     if (data.stop_reason === 'max_tokens') {
       completionRetried = true;
@@ -381,6 +386,8 @@ module.exports = async (req, res) => {
       });
       if (retry.response.ok) {
         data = await retry.response.json();
+        usageTotals.inputTokens += Number(data.usage?.input_tokens || 0);
+        usageTotals.outputTokens += Number(data.usage?.output_tokens || 0);
         summary = data.content?.[0]?.text?.trim() || summary;
         console.info('[navigator-ai-retry]', { route:retry.route, model:retry.model, reason:'max_tokens' });
       }
@@ -400,6 +407,10 @@ module.exports = async (req, res) => {
       packetPrimaryCount:contextPacket.primary.length,
       packetRelatedCount:contextPacket.related.length,
       shadowEnabled:SHADOW_ENABLED && Boolean(gatewayToken()),
+      durationMs:Date.now() - synthesisStartedAt,
+      inputTokens:usageTotals.inputTokens,
+      outputTokens:usageTotals.outputTokens,
+      completionRetried,
     });
 
     return res.status(200).json({

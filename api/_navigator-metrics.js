@@ -1,3 +1,5 @@
+const { navigatorEfficiencyFields } = require('./_ai-metrics.js');
+
 function navigatorMetric(data = {}) {
   const payload = {
     route: data.route || 'unknown',
@@ -12,6 +14,7 @@ function navigatorMetric(data = {}) {
     packetPrimaryCount: Number.isInteger(data.packetPrimaryCount) ? data.packetPrimaryCount : 0,
     packetRelatedCount: Number.isInteger(data.packetRelatedCount) ? data.packetRelatedCount : 0,
     shadowEnabled: Boolean(data.shadowEnabled),
+    ...navigatorEfficiencyFields(data),
   };
   console.info('[navigator-route]', payload);
   return payload;
