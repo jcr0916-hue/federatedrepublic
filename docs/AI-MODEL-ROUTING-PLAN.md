@@ -646,3 +646,22 @@ The intended flow is now:
 `current canon → deterministic arc packet → draft → deterministic draft validation → ordinary publishing checks → publication`
 
 The validator does not decide narrative quality or invent canon. Semantic guardrails are deliberately narrow; editorial review remains responsible for subtler continuity and characterization.
+
+
+### October 3, 2026 — Cross-feature AI efficiency audit
+
+The packet architecture now has a single repository audit command:
+
+```bash
+npm run ai:efficiency-report
+```
+
+The report measures the current architecture without making paid model calls. It compares Annotator packet sizes with the full constitutional corpus, reports the Navigator natural-language benchmark routing split and residual synthesis-packet sizes, and measures the four active Torenthia authoring packets. Character-derived token figures are explicitly labeled as rough size proxies rather than provider billing.
+
+Production telemetry is also standardized for the two public AI endpoints. Annotator emits `[annotator-metric]` records with model/transport route, packet size, related-provision count, model-call count, rewrite reason, provider-reported input/output tokens, and total request latency. Navigator's existing `[navigator-route]` record now also includes provider-reported input/output tokens, synthesis latency, and whether a max-token rewrite occurred. Neither metric contains the user's question, clicked provision text, generated answer, source packet, or other user-entered prose.
+
+Torenthia authoring makes no repository/public-API model call: its cost driver is the size of the deterministic packet handed to the external/editorial drafting step, followed by deterministic validation.
+
+At the time this telemetry was added, Vercel contained no production `[navigator-route]` or `[annotator-metric]` records in the preceding 24-hour query window. Therefore no production traffic share, retry rate, token total, latency percentile, or dollar-cost claim is made yet. Those values should be calculated only after real usage accumulates.
+
+Decision rule: **do not optimize from static token proxies alone.** Use the static report to catch architectural regressions, and use provider-reported runtime token/latency data to decide whether further packet reduction, caching, deterministic promotion, or model changes are worth the complexity.
