@@ -526,7 +526,7 @@ It is designing reliable retrieval, task routing, and escalation gates — and t
 The source-packet architecture is now applied beyond the Provision Annotator.
 
 - **Provision Annotator:** deterministic provision-centered packet from `constitution_data.json`; exact target, same-article context, explicit cross-references, and backlinks are assembled before Sonnet is called.
-- **Constitution Navigator:** the model path now receives a verified question-centered packet containing primary retrieved provisions plus bounded exact-text cross-references and backlinks. Direct deterministic lookup/topic routes remain model-free.
+- **Constitution Navigator:** the model path now receives a verified question-centered packet containing primary retrieved provisions plus bounded structural parent/sibling provisions and explicit cross-references. Downstream backlinks are intentionally excluded because they added noisy context. Direct deterministic lookup/topic routes remain model-free.
 - **Torenthia authoring:** `npm run world:packet -- --arc <arc>` generates an internal story-state packet from current World metadata, clocks, chronology, the relevant Story Bible and Story Status sections, recent published records, and exact referenced constitutional provisions.
 
 The operating rule is now: **canonical data → deterministic feature-specific packet → AI synthesis only where needed**.
@@ -558,3 +558,34 @@ npm run navigator:routing-report
 It reports route distributions separately for the natural-language, gate, and explicit-direct benchmark corpora. These percentages are benchmark distributions, **not production traffic estimates**. Production route shares should be measured from the `[navigator-route]` records after sufficient real usage accumulates.
 
 Decision rule for any additional cheap-model tier: do not add it merely because a model is cheaper. First measure how much traffic still reaches `sonnet-synthesis`, how large those verified packets are, and whether those remaining questions form a bounded class that a cheaper model can answer at effectively zero material grounding error. If Sonnet volume is already small, the simpler architecture wins.
+
+
+### October 2, 2026 — Residual Navigator packet benchmark
+
+After deterministic routing, source-packet retrieval, companion-resource selection, and shadow-cost cleanup were in place, the remaining natural-language synthesis cases were benchmarked again using the **actual production-style verified packet** rather than broad constitutional context.
+
+Corpus:
+- 28 cases previously classified as `SONNET` in the natural-language benchmark;
+- 4 of those no longer reached synthesis under the current retrieval/sufficiency rules;
+- 24 remained genuine synthesis cases.
+
+A full hardened-packet pass produced:
+- **Claude Haiku 4.5:** 16/24 verifier PASS (66.7%), with material unsupported and incomplete answers still present.
+- **Claude Sonnet 4.6:** 19/24 verifier PASS (79.2%) in the same pass. The remaining failures exposed packet/prompt weaknesses rather than a reason to downgrade the model.
+
+The benchmark was intentionally used diagnostically, not as a product SLA. Repeated runs showed some verifier/model variance, but the qualitative result was stable: **Haiku is not safe for the residual synthesis tier.** Its failures continued to include transferring a trigger or consequence between similar procedures, collapsing distinct failure states, omitting controlling qualifiers, and inferring symmetry between actors or mechanisms.
+
+The benchmark directly produced additional production hardening:
+- Navigator related context is capped and now prioritizes **structural parent/lettered-sibling provisions** (for example §4.4 with §4.4.a) and then exact citations.
+- General backlinks are excluded from synthesis packets because they frequently introduced downstream-but-irrelevant rules.
+- Packets include mechanically extracted **verbatim procedural cues** so triggers, deadlines, lapse rules, and fallback consequences remain attached to the provision that actually states them.
+- The synthesis prompt now explicitly forbids transferring triggers, deadlines, fallbacks, funding rules, cooldowns, or actor-specific restrictions between superficially similar mechanisms; it also treats failed, rejected, void, lapsed, withdrawn, and not-acted-on outcomes as distinct unless the text equates them.
+- Navigator's normal completion budget is 600 tokens. A `max_tokens` stop triggers one full rewrite with a 900-token budget rather than returning a cut-off answer.
+- The model is instructed not to invent a more specific factual scenario than the user supplied merely because another provision in the packet could apply to that hypothetical.
+
+Targeted reruns showed these changes resolving several benchmark defects, including stage-collapse errors in statehood/devolution, MA budget overreach, omission of the active-military Legat rule, and initiative-vs-Legislature symmetry errors. A Supreme Court vacancy/Senate-blocking question still showed occasional cross-trigger overreach across repeated runs, so common high-risk procedural paths remain candidates for further deterministic topic coverage if production traffic justifies it.
+
+Decision: **retain Sonnet 4.6 as Navigator's residual synthesis model and do not add a Haiku answer tier.** The simpler architecture remains preferred:
+`deterministic routing → bounded verified packet → Sonnet only when synthesis is genuinely required`.
+
+The temporary benchmark endpoints used for this measurement are removed after testing; benchmark code is not part of the public production API.
