@@ -12,7 +12,7 @@ function formatProvision(provision, label) {
   return `${label} [${provision.num}] ${provision.name}\n${provision.text}`;
 }
 
-function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit = 6) {
+function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit = 4) {
   const byNum = new Map(provisions.map(p => [p.num, p]));
   const primary = [];
   const seenPrimary = new Set();
