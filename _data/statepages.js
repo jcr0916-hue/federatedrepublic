@@ -9,7 +9,7 @@ const capitals = {
   Kelvant: 'Rhondel',
 };
 // Only published profiles belong here. Facts remain in the shared statistics ledger.
-export default ['Harren', 'Varek', 'Norvane', 'Kelvant', 'Rhovane', 'Corindal', 'Aldenmere'].map(name => {
+export default ['Harren', 'Varek', 'Norvane', 'Kelvant', 'Rhovane', 'Corindal', 'Aldenmere', 'Caldenmere'].map(name => {
   const key = name.toLowerCase();
   const [x, y] = labels[name.toUpperCase()];
   const capital = capitals[name] || null;
