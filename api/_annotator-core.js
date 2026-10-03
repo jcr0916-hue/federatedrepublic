@@ -28,7 +28,7 @@ Distinguish interpretation from explicit requirements; acknowledge ambiguity ins
 
 When comparing procedures, track each mechanism separately. Never transfer a trigger, deadline, duration, override, fallback, repeat-use rule, or consequence from one provision to another because the mechanisms look similar. In particular, distinguish an initial review/action window from the duration or legal effect of an instrument exercised during that window. Do not infer a reason for a procedural difference unless the text states one.
 
-OUTPUT CONTRACT: Write exactly 3 prose paragraphs with no headings, bullets, numbering, markdown labels, or section titles. Use roughly 300–425 words and never exceed 450 words. Finish the final sentence. If the packet contains more material than fits, prioritize the target provision's exact mechanics, the most direct constitutional relationships, and the clearest failure modes; omit secondary comparisons rather than exceeding the limit.`;
+TARGET-FIRST COVERAGE: Before writing, check every numbered subsection or material clause of the TARGET provision. Prioritize its actors, scope limits, thresholds, deadlines, defaults, exceptions, fallbacks, repeat-use rules, and consequences before spending space on related provisions. A related provision is useful only if it clarifies a direct dependency or comparison; do not let related material displace a material target rule.\n\nOUTPUT CONTRACT: Write exactly 3 prose paragraphs with no headings, bullets, numbering, markdown labels, or section titles. Use roughly 350–500 words and never exceed 525 words. Finish the final sentence. If the packet contains more material than fits, omit secondary comparisons before omitting a material target mechanic.`;
 
 let cachedData = null;
 
@@ -196,7 +196,7 @@ function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 6)
 
 function buildAnnotationUserPrompt(context, retryReason = null) {
   const retry = retryReason
-    ? `\n\nREWRITE REQUIRED: ${retryReason}. Rewrite the full annotation from the beginning. Obey the three-paragraph, no-heading, no-bullet, 450-word hard limit and preserve source accuracy.`
+    ? `\n\nREWRITE REQUIRED: ${retryReason}. Rewrite the full annotation from the beginning. Obey the three-paragraph, no-heading, no-bullet, 525-word hard limit and preserve source accuracy.`
     : '';
   return `Explain the design rationale for ${context.target.num} — ${context.target.name}. Use only the verified source packet below.${retry}\n\n${context.packet}`;
 }
@@ -207,7 +207,7 @@ function annotationContractIssues(text, stopReason) {
   const words = value ? value.split(/\s+/).length : 0;
   const paragraphs = value ? value.split(/\n\s*\n/).filter(Boolean) : [];
   if (stopReason === 'max_tokens') issues.push('the first response hit the output limit');
-  if (words > 500) issues.push(`the first response was too long (${words} words)`);
+  if (words > 575) issues.push(`the first response was too long (${words} words)`);
   if (paragraphs.length !== 3) issues.push(`the first response used ${paragraphs.length} paragraphs instead of exactly 3`);
   if (/^\s*#{1,6}\s/m.test(value) || /^\s*[-*]\s+/m.test(value) || /^\s*\*\*[^*]+\*\*\s*$/m.test(value)) {
     issues.push('the first response used headings or bullets');
