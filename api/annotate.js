@@ -6,6 +6,7 @@ const {
   SYSTEM,
   buildContextPacket,
   buildAnnotationUserPrompt,
+  annotationContractIssues,
 } = require('./_annotator-core.js');
 
 const MODEL = process.env.AI_MODEL_ANNOTATE || 'anthropic/claude-sonnet-5';
@@ -26,26 +27,35 @@ module.exports = async (req, res) => {
   if (!context) return res.status(400).json({ error: 'Unknown provision' });
 
   try {
-    const request = (maxTokens, retry = false) => anthropicMessage({
+    const request = (maxTokens, retryReason = null) => anthropicMessage({
       model: MODEL,
       max_tokens: maxTokens,
       temperature: 0,
       system: SYSTEM,
       messages: [{
         role: 'user',
-        content: buildAnnotationUserPrompt(context, retry),
+        content: buildAnnotationUserPrompt(context, retryReason),
       }],
-      tags: ['feature:annotate', retry ? 'role:completion-retry' : 'role:primary', `env:${process.env.VERCEL_ENV || 'local'}`],
+      tags: ['feature:annotate', retryReason ? 'role:completion-retry' : 'role:primary', `env:${process.env.VERCEL_ENV || 'local'}`],
     });
 
     let { response: upstream, route, model } = await request(1600);
     console.info('[annotate-ai]', { route, model, attempt: 1 });
     let data = await upstream.json();
 
-    if (upstream.ok && !data.error && data.stop_reason === 'max_tokens') {
-      ({ response: upstream, route, model } = await request(2400, true));
-      console.info('[annotate-ai]', { route, model, attempt: 2, reason: 'max_tokens' });
-      data = await upstream.json();
+    if (upstream.ok && !data.error) {
+      const firstText = (data.content || [])
+        .filter((b) => b.type === 'text')
+        .map((b) => b.text)
+        .join('')
+        .trim();
+      const issues = annotationContractIssues(firstText, data.stop_reason);
+      if (issues.length) {
+        const retryReason = issues.join('; ');
+        ({ response: upstream, route, model } = await request(2400, retryReason));
+        console.info('[annotate-ai]', { route, model, attempt: 2, reason: retryReason });
+        data = await upstream.json();
+      }
     }
 
     if (!upstream.ok || data.error) {
