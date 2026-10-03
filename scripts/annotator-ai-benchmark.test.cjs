@@ -1,13 +1,14 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const { buildContextPacket } = require('../api/_annotator-core.js');
 
 const constitution = JSON.parse(fs.readFileSync('constitution_data.json','utf8'));
 const cases = JSON.parse(fs.readFileSync('scripts/fixtures/annotator-ai-cases.json','utf8'));
 const provisions = new Map(constitution.flatMap(a => a.provisions).map(p => [p.num,p]));
 
 test('Provision Annotator benchmark corpus is source-linked and internally valid', () => {
-  assert.ok(cases.length >= 10, 'benchmark should contain at least 10 cases');
+  assert.ok(cases.length >= 16, 'benchmark should contain at least 16 cases');
   const seen = new Set();
 
   for (const item of cases) {
@@ -21,5 +22,32 @@ test('Provision Annotator benchmark corpus is source-linked and internally valid
       assert.equal(typeof line, 'string');
       assert.ok(line.length >= 20, `${item.num}: rubric line too short`);
     }
+  }
+});
+
+
+test('Expanded Annotator benchmark covers observed packet-era failure modes', () => {
+  const nums = new Set(cases.map(x => x.num));
+  for (const num of ['§2.3.a','§2.7','§4.4','§12.1.a','§13.2','§15.5.a']) {
+    assert.ok(nums.has(num), `missing expanded benchmark case: ${num}`);
+  }
+
+  const legat = buildContextPacket('§2.3.a');
+  assert.match(legat.packet, /\[§2\.7\] Civic Consul Legislative Instruments:/);
+  assert.match(legat.packet, /bill is tabled for one month/i);
+  assert.match(legat.packet, /\[§9\.1\]/);
+
+  const statehood = buildContextPacket('§15.5.a');
+  assert.match(statehood.packet, /\[§15\.2\] The Statehood Audit:/);
+  assert.match(statehood.packet, /three years/i);
+});
+
+test('Every benchmark case can build a current deterministic source packet', () => {
+  for (const item of cases) {
+    const context = buildContextPacket(item.num);
+    assert.ok(context, item.num);
+    assert.equal(context.target.num, item.num);
+    assert.match(context.packet, /SOURCE PACKET — generated deterministically from constitution_data\.json/);
+    assert.match(context.packet, new RegExp('TARGET PROVISION\\n\\[' + item.num.replace(/\./g,'\\.') + '\\]'));
   }
 });
