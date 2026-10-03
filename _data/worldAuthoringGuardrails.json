@@ -1,0 +1,59 @@
+[
+  {
+    "id": "korda-unresolved-outcome",
+    "arc": "korda",
+    "active": true,
+    "afterWorldSeq": 143,
+    "afterNrsSeq": 68,
+    "note": "Korda's Convention remains unresolved. Current canon supports evidence gathering and partial political narrowing, not a final status, boundary, viability determination, or Convention resolution.",
+    "patterns": [
+      "\\bConvention (?:approved|adopted|passed|ratified) (?:a |the )?(?:final )?resolution\\b",
+      "\\b(?:final )?boundary (?:was|is|has been) (?:adopted|agreed|fixed|settled|approved)\\b",
+      "\\bviability (?:finding|determination) (?:was|is|has been) (?:made|issued|adopted|approved)\\b",
+      "\\bpreliminary (?:compilation|report) (?:was|is|has been) (?:published|completed|issued|adopted)\\b",
+      "\\bThoss (?:brokered|secured|announced) (?:a |the )?(?:deal|agreement|compromise)\\b"
+    ],
+    "resolutionInstruction": "If a new record intentionally establishes one of these facts, update this guardrail in the same reviewed publication change."
+  },
+  {
+    "id": "lake-varda-unresolved-opening",
+    "arc": "lake-varda",
+    "active": true,
+    "afterWorldSeq": 143,
+    "afterNrsSeq": 68,
+    "note": "The Lake Varda conference is scheduled for Y14 M1, but its exact day, final delegation lists, and any agreed account of prior incidents remain unsettled.",
+    "patterns": [
+      "\\bLake Varda conference (?:opened|began|convened)\\b",
+      "\\b(?:final|complete) delegation (?:list|lists) (?:was|were|is|are|has been|have been) (?:published|announced|agreed|finalized)\\b",
+      "\\b(?:the parties|Torenthia|Caldris|Valedon) (?:agreed|accepted) (?:an |a |the )?(?:account|finding|allocation) of (?:responsibility|fault)\\b"
+    ],
+    "resolutionInstruction": "Advance the conference or delegation state only with an explicit reviewed canon update and retire or amend this guardrail at the same time."
+  },
+  {
+    "id": "fiscal-equalization-no-forced-clock",
+    "arc": "fiscal-equalization",
+    "active": true,
+    "afterWorldSeq": 143,
+    "afterNrsSeq": 68,
+    "note": "Fiscal Equalization review is active, but no EM failure finding or 90-day constitutional response clock is running.",
+    "patterns": [
+      "\\b90-day (?:constitutional )?(?:response )?clock (?:began|started|is running|was triggered)\\b",
+      "\\bEM failure finding (?:is|was|became) active\\b",
+      "\\bFiscal Equalization (?:amendment|reform) (?:was|is|has been) (?:enacted|adopted|ratified)\\b"
+    ],
+    "resolutionInstruction": "If later canon creates a timed obligation or enacts a reform, update the structured clock/guardrail sources in that publication."
+  },
+  {
+    "id": "argent-ridge-signature-window-open",
+    "arc": "argent-ridge",
+    "active": true,
+    "afterWorldSeq": 143,
+    "afterNrsSeq": 68,
+    "note": "Argent Ridge Phase One signatures remain open and the calendar conversion for the endpoint is unresolved.",
+    "patterns": [
+      "\\bPhase One signature period (?:closed|ended|expired|was completed)\\b",
+      "\\bArgent Ridge (?:signature|petition) deadline (?:is|was|falls on|has been set for)\\b"
+    ],
+    "resolutionInstruction": "Closing or dating the signature period requires an explicit canon/clock update rather than inference from the relative eight-month window."
+  }
+]
