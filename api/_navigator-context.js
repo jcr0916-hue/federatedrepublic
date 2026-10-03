@@ -111,11 +111,11 @@ function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit 
   for (const provision of cueSources) {
     if (seenCueProvision.has(provision.num)) continue;
     seenCueProvision.add(provision.num);
-    const cues = mechanicCues(provision.text, 2);
+    const cues = mechanicCues(provision.text, 3);
     if (!cues.length) continue;
     cueLines.push(`[${provision.num}] ${provision.name}`);
     cues.forEach(cue => cueLines.push(`- ${cue}`));
-    if (cueLines.length >= 18) break;
+    if (cueLines.length >= 24) break;
   }
 
   sections.push(
