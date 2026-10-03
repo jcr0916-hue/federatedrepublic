@@ -517,3 +517,16 @@ It is:
 
 The principal engineering problem is therefore not choosing one model.
 It is designing reliable retrieval, task routing, and escalation gates — and the escalation gate is likely the hardest of the three. Phase 5's three-way comparison should determine whether the added OSS tier earns its complexity relative to a simpler two-tier system, before committing to the full cascade.
+
+
+---
+
+## Implemented update — 2026-10-02
+
+The source-packet architecture is now applied beyond the Provision Annotator.
+
+- **Provision Annotator:** deterministic provision-centered packet from `constitution_data.json`; exact target, same-article context, explicit cross-references, and backlinks are assembled before Sonnet is called.
+- **Constitution Navigator:** the model path now receives a verified question-centered packet containing primary retrieved provisions plus bounded exact-text cross-references and backlinks. Direct deterministic lookup/topic routes remain model-free.
+- **Torenthia authoring:** `npm run world:packet -- --arc <arc>` generates an internal story-state packet from current World metadata, clocks, chronology, the relevant Story Bible and Story Status sections, recent published records, and exact referenced constitutional provisions.
+
+The operating rule is now: **canonical data → deterministic feature-specific packet → AI synthesis only where needed**.

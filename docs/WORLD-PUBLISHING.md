@@ -12,6 +12,29 @@ For downloaded files, use the preview-first [local Republic ingest workflow](ope
 
 ---
 
+## 0. Build an AI authoring source packet when using a model
+
+Before asking an AI system to draft or extend a live Torenthia thread, generate a bounded packet from the repository instead of giving the model the whole project or relying on conversational memory:
+
+```bash
+npm run world:packet -- --arc korda
+```
+
+The packet deterministically assembles:
+
+- the current World and NRS frontiers;
+- clocks and structured chronology for the selected arc;
+- the matching durable-canon section from `WORLD-STORY-BIBLE.md`;
+- the matching live editorial/guardrail section from `WORLD-STORY-STATUS.md`;
+- the latest relevant narrative and NRS records, including bounded body excerpts;
+- exact current constitutional text referenced by that recent material.
+
+Published World records and constitutional text remain canonical. The packet explicitly labels `WORLD-STORY-STATUS.md` as editorial material because it can contain planning-only outcomes and proposed future beats. An AI draft must not turn those planning notes into already-published facts.
+
+This is the World equivalent of the Constitution Annotator/Navigator source-packet architecture: repository code performs retrieval first; the model receives a small verified evidence bundle and spends its effort on writing and synthesis.
+
+---
+
 ## 1. Start with the preview-first authoring helper
 
 Use:
