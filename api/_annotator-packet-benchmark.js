@@ -56,16 +56,32 @@ async function evaluate(item, model) {
   if (!context) return { num:item.num, ok:false, error:'unknown provision' };
 
   const start = Date.now();
-  const { response:candidateResponse } = await gatewayMessage({
+  let { response:candidateResponse } = await gatewayMessage({
     model,
     max_tokens:1600,
     temperature:0,
     system:SYSTEM,
     messages:[{ role:'user', content:buildAnnotationUserPrompt(context, false) }],
-    tags:['feature:annotator-packet-benchmark','role:candidate',`case:${item.num}`],
+    tags:['feature:annotator-packet-benchmark','role:candidate',`case:${item.num}`,'attempt:1'],
   });
+  let candidateData = await candidateResponse.json().catch(()=>({}));
+  let completionRetried = false;
+  let firstUsage = candidateData.usage || null;
+
+  if (candidateResponse.ok && candidateData.stop_reason === 'max_tokens') {
+    completionRetried = true;
+    ({ response:candidateResponse } = await gatewayMessage({
+      model,
+      max_tokens:2400,
+      temperature:0,
+      system:SYSTEM,
+      messages:[{ role:'user', content:buildAnnotationUserPrompt(context, true) }],
+      tags:['feature:annotator-packet-benchmark','role:candidate',`case:${item.num}`,'attempt:2'],
+    }));
+    candidateData = await candidateResponse.json().catch(()=>({}));
+  }
+
   const candidateLatencyMs = Date.now() - start;
-  const candidateData = await candidateResponse.json().catch(()=>({}));
   if (!candidateResponse.ok) {
     return {
       num:item.num,
@@ -117,6 +133,8 @@ async function evaluate(item, model) {
     candidateLatencyMs,
     verifierLatencyMs,
     candidateStopReason:candidateData.stop_reason || null,
+    completionRetried,
+    firstUsage,
     candidateUsage:candidateData.usage || null,
     verifierUsage:verifierData.usage || null,
   };
