@@ -19,7 +19,7 @@ test('Annotator uses Sonnet with a deterministic source packet and enough output
       ok: true,
       status: 200,
       json: async () => ({
-        content:[{type:'text',text:'Grounded annotation.'}],
+        content:[{type:'text',text:'Grounded paragraph one.\n\nGrounded paragraph two.\n\nGrounded paragraph three.'}],
         stop_reason:'end_turn'
       })
     };
@@ -36,7 +36,7 @@ test('Annotator uses Sonnet with a deterministic source packet and enough output
   try {
     await handler({method:'POST',body:{num:'§2.3.a'}},res);
     assert.equal(res.statusCode,200);
-    assert.equal(body.annotation,'Grounded annotation.');
+    assert.equal(body.annotation,'Grounded paragraph one.\n\nGrounded paragraph two.\n\nGrounded paragraph three.');
     assert.equal(payload.model,'claude-sonnet-5');
     assert.equal(payload.max_tokens,1600);
     assert.equal(payload.temperature,0);
@@ -45,13 +45,13 @@ test('Annotator uses Sonnet with a deterministic source packet and enough output
     assert.match(payload.system,/application has already performed constitutional retrieval/i);
     assert.match(payload.system,/Do not invent enforcement mechanisms/i);
     assert.match(payload.system,/Never invent a provision number or label/i);
-    assert.match(payload.system,/do not conflate an initial review\/action window with the duration or legal effect/i);
-    assert.match(payload.system,/roughly 300–450 words/i);
+    assert.match(payload.system,/distinguish an initial review\/action window from the duration or legal effect/i);
+    assert.match(payload.system,/roughly 300–425 words/i);
     assert.doesNotMatch(payload.system,/complete constitution text follows/i);
 
     const prompt = payload.messages[0].content;
     assert.match(prompt,/SOURCE PACKET — generated deterministically from constitution_data\.json/);
-    assert.match(prompt,/TARGET PROVISION\n\[§2\.3\.a\] Legat Consul Legislative Veto:/);
+    assert.match(prompt,/TARGET PROVISION\nTARGET \[§2\.3\.a\] Legat Consul Legislative Veto/);
     assert.match(prompt,/\[§2\.7\] Civic Consul Legislative Instruments:/,
       'same-article context should expose the distinct CC veto mechanics');
     assert.match(prompt,/\[§9\.1\]/,
