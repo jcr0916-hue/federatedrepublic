@@ -50,12 +50,99 @@ function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit 
   const explicitRelated = [];
   const seenRelated = new Set();
 
+  // Keep parent/lettered-sibling provisions together before broader cross-references.
+  // These are structurally adjacent parts of the same numbered mechanism, not
+  // downstream backlinks from unrelated provisions.
+  for (const item of primary) {
+    const num = item.provision.num;
+    const lettered = num.match(/^(§\d+(?:\.\d+)*)\.([a-z])$/i);
+    const familyBase = lettered ? lettered[1] : num;
+    const family = provisions.filter(candidate => {
+      if (candidate.num === num || seenPrimary.has(candidate.num) || seenRelated.has(candidate.num)) return false;
+      if (lettered && candidate.num === familyBase) return true;
+      return new RegExp('^' + familyBase.replace(/\./g, '\\.') + '\\.[a-z]
+  const sections = [
+    'SOURCE PACKET — generated deterministically from constitution_data.json',
+    '',
+    'QUESTION',
+    String(question || '').trim(),
+    '',
+    'PRIMARY RETRIEVED PROVISIONS',
+  ];
+
+  if (primary.length) {
+    primary.forEach((item, index) => {
+      const route = item.via ? ` — included by cross-reference from ${item.via}` : '';
+      sections.push(formatProvision(item.provision, `PRIMARY ${index + 1}${route}`), '');
+    });
+  } else {
+    sections.push('(none)', '');
+  }
+
+  sections.push('RELATED EXACT-TEXT PROVISIONS FOUND BY CROSS-REFERENCE');
+  if (explicitRelated.length) {
+    explicitRelated.forEach((item, index) => {
+      sections.push(formatProvision(item.provision, `RELATED ${index + 1} — ${item.relation || 'related'} to ${item.from}`), '');
+    });
+  } else {
+    sections.push('(none)', '');
+  }
+
+  const cueSources = [
+    ...primary.map(x => x.provision),
+    ...explicitRelated.map(x => x.provision),
+  ];
+  const cueLines = [];
+  const seenCueProvision = new Set();
+  for (const provision of cueSources) {
+    if (seenCueProvision.has(provision.num)) continue;
+    seenCueProvision.add(provision.num);
+    const cues = mechanicCues(provision.text, 3);
+    if (!cues.length) continue;
+    cueLines.push(`[${provision.num}] ${provision.name}`);
+    cues.forEach(cue => cueLines.push(`- ${cue}`));
+    if (cueLines.length >= 24) break;
+  }
+
+  sections.push(
+    'PROCEDURAL CUES — verbatim excerpts extracted mechanically to keep triggers, deadlines, and fallback consequences attached to the provision that states them',
+    cueLines.length ? cueLines.join('\n') : '(none)',
+    ''
+  );
+
+  sections.push(
+    'PACKET RULE',
+    'Primary provisions are the retrieval layer\'s best evidence for the question. Related provisions are exact constitutional text that a primary provision explicitly cites; they are not automatically controlling. Backlinks are intentionally excluded from Navigator synthesis because a provision that cites a primary rule is often downstream context rather than evidence for the question. If this packet does not establish a requested fact or resolution, say so rather than inventing one.'
+  );
+
+  return {
+    packet: sections.join('\n').trim(),
+    primary: primary.map(x => x.provision),
+    related: explicitRelated.map(x => x.provision),
+  };
+}
+
+module.exports = {
+  extractRefs,
+  mechanicCues,
+  buildNavigatorContextPacket,
+};
+, 'i').test(candidate.num);
+    });
+    for (const provision of family) {
+      explicitRelated.push({ provision, from:item.provision.num, relation:'structural sibling' });
+      seenRelated.add(provision.num);
+      if (explicitRelated.length >= relatedLimit) break;
+    }
+    if (explicitRelated.length >= relatedLimit) break;
+  }
+
   for (const item of primary) {
     for (const ref of extractRefs(item.provision.text)) {
       if (seenPrimary.has(ref) || seenRelated.has(ref)) continue;
       const provision = byNum.get(ref);
       if (!provision) continue;
-      explicitRelated.push({ provision, from: item.provision.num });
+      explicitRelated.push({ provision, from: item.provision.num, relation:'explicit citation' });
       seenRelated.add(ref);
       if (explicitRelated.length >= relatedLimit) break;
     }
