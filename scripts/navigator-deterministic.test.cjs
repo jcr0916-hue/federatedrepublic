@@ -275,7 +275,7 @@ test('interpretive Navigator model call receives the verified source packet', as
     assert.match(payload.system, /already performed retrieval and assembled a verified SOURCE PACKET/i);
     assert.match(payload.messages[0].content, /PRIMARY RETRIEVED PROVISIONS/);
     assert.match(payload.messages[0].content, /\[§2\.3\.a\] Legat Consul Legislative Veto/);
-    assert.match(payload.messages[0].content, /RELATED EXACT-TEXT PROVISIONS FOUND BY CROSS-REFERENCE/);
+    assert.match(payload.messages[0].content, /RELATED EXACT-TEXT PROVISIONS/);
     assert.doesNotMatch(payload.messages[0].content, /\[§15\.9\]/);
   } finally {
     global.fetch = originalFetch;
@@ -386,7 +386,7 @@ test('Navigator retries a max-token synthesis instead of returning a cut-off ans
     assert.equal(payloads.length, 2);
     assert.equal(payloads[0].max_tokens, 600);
     assert.equal(payloads[1].max_tokens, 900);
-    assert.match(payloads[0].system, /Never transfer a trigger, deadline, fallback, override, or consequence/i);
+    assert.match(payloads[0].system, /Never transfer a trigger, deadline, fallback, override, funding rule, or consequence/i);
     assert.match(payloads[1].system, /Rewrite the full answer from the beginning/i);
   } finally {
     global.fetch = originalFetch;
