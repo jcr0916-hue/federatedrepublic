@@ -22,17 +22,6 @@
       }
     },
     {
-      "src": "api/_annotator-packet-benchmark.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 30,
-        "includeFiles": [
-          "constitution_data.json",
-          "scripts/fixtures/annotator-ai-cases.json"
-        ]
-      }
-    },
-    {
       "src": "api/crossroads.js",
       "use": "@vercel/node",
       "config": {
@@ -55,10 +44,6 @@
     {
       "src": "/api/annotate",
       "dest": "/api/annotate.js"
-    },
-    {
-      "src": "/api/_annotator-packet-benchmark",
-      "dest": "/api/_annotator-packet-benchmark.js"
     },
     {
       "src": "/api/crossroads",
