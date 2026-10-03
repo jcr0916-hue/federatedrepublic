@@ -8,6 +8,26 @@ function exactRefRegex(num) {
   return new RegExp(escaped + '(?![\\w.])');
 }
 
+
+function mechanicCues(text, limit = 3) {
+  const normalized = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!normalized) return [];
+  const clauses = normalized
+    .split(/(?<=[.!?;])\s+(?=(?:\(\d+\)\s*)?(?:If|Where|When|Upon|Unless|After|Before|Until|Failing)\b)/g)
+    .map(x => x.trim())
+    .filter(Boolean);
+
+  const cuePattern = /\b(?:if|where|when|upon|unless|failing|fails?|failure|lapses?|does not act|has not made|deadline|within \d+|automatically|automatic|may not|void)\b/i;
+  const out = [];
+  for (const clause of clauses) {
+    if (!cuePattern.test(clause)) continue;
+    const clipped = clause.length > 420 ? clause.slice(0, 417).replace(/\s+\S*$/, '') + '...' : clause;
+    out.push(clipped);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
 function formatProvision(provision, label) {
   return `${label} [${provision.num}] ${provision.name}\n${provision.text}`;
 }
@@ -81,6 +101,29 @@ function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit 
     sections.push('(none)', '');
   }
 
+  const cueSources = [
+    ...primary.map(x => x.provision),
+    ...explicitRelated.map(x => x.provision),
+    ...backlinks.map(x => x.provision),
+  ];
+  const cueLines = [];
+  const seenCueProvision = new Set();
+  for (const provision of cueSources) {
+    if (seenCueProvision.has(provision.num)) continue;
+    seenCueProvision.add(provision.num);
+    const cues = mechanicCues(provision.text, 2);
+    if (!cues.length) continue;
+    cueLines.push(`[${provision.num}] ${provision.name}`);
+    cues.forEach(cue => cueLines.push(`- ${cue}`));
+    if (cueLines.length >= 18) break;
+  }
+
+  sections.push(
+    'PROCEDURAL CUES — verbatim excerpts extracted mechanically to keep triggers, deadlines, and fallback consequences attached to the provision that states them',
+    cueLines.length ? cueLines.join('\n') : '(none)',
+    ''
+  );
+
   sections.push('BACKLINKS — OTHER PROVISIONS THAT EXPLICITLY CITE A PRIMARY PROVISION');
   if (backlinks.length) {
     backlinks.forEach((item, index) => {
@@ -104,5 +147,6 @@ function buildNavigatorContextPacket(question, ranked, provisions, relatedLimit 
 
 module.exports = {
   extractRefs,
+  mechanicCues,
   buildNavigatorContextPacket,
 };
