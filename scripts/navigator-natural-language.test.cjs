@@ -20,8 +20,8 @@ test('Navigator natural-language benchmark has 80 cases and expected coverage', 
     m[c.expected] = (m[c.expected] || 0) + 1;
     return m;
   }, {});
-  assert.equal(counts.TOPIC, 42);
-  assert.equal(counts.SONNET, 28);
+  assert.equal(counts.TOPIC, 46);
+  assert.equal(counts.SONNET, 24);
   assert.equal(counts.NO_MATCH, 10);
 });
 
