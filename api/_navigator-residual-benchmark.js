@@ -10,7 +10,7 @@ const constitution = require('../constitution_data.json');
 const cases = require('../scripts/fixtures/navigator-natural-language-cases.json');
 
 const VERIFIER = 'anthropic/claude-sonnet-5';
-const BATCH_SIZE = 4;
+const BATCH_SIZE = 3;
 const ALLOWED_MODELS = new Set([
   'anthropic/claude-haiku-4.5',
   'anthropic/claude-sonnet-4.6',
@@ -106,7 +106,7 @@ async function evaluate(item, model, provisions) {
   const verifyStart = Date.now();
   const { response: verifierResponse } = await gatewayMessage({
     model:VERIFIER,
-    max_tokens:500,
+    max_tokens:1200,
     temperature:0,
     system:VERIFY_SYSTEM,
     messages:[{
@@ -147,7 +147,7 @@ module.exports = async (req,res) => {
   const model = String(req.query?.model || 'anthropic/claude-haiku-4.5');
   if (!ALLOWED_MODELS.has(model)) return res.status(400).json({error:'Model not allowed'});
 
-  const batch = Math.min(7, Math.max(1, Number(req.query?.batch) || 1));
+  const batch = Math.min(10, Math.max(1, Number(req.query?.batch) || 1));
   const eligible = cases.filter(c => c.expected === 'SONNET');
   const selected = eligible.slice((batch-1)*BATCH_SIZE, batch*BATCH_SIZE);
   const provisions = constitution.flatMap(a => a.provisions);
