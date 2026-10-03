@@ -309,9 +309,9 @@ module.exports = async (req, res) => {
     const envTag = `env:${process.env.VERCEL_ENV || 'local'}`;
     const primaryPromise = anthropicMessage({
       model: MODEL,
-      max_tokens: 420,
+      max_tokens: 600,
       temperature: 0,
-      system: `You are a plain language guide to the Federated Republic constitution. The application has already performed retrieval and assembled a verified SOURCE PACKET. Answer the user's question in the first sentence. Use only the supplied packet. Answer fully where the supplied text establishes the answer. If it establishes only part of the answer, answer that part and state clearly what the Constitution does not establish. If the user asks why a structure exists or asks for design rationale, distinguish what the constitutional text establishes from any motive or rationale it does not state; do not invent an authorial purpose. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. Preserve material qualifiers, thresholds, conditions, and distinctions. After answering directly, include every material consequence, exception, continuation rule, and fallback from the supplied provisions that is necessary to answer the question; do not omit a directly relevant downstream consequence merely for brevity. Where multiple supplied provisions govern different stages or mechanisms, distinguish them clearly. Treat PRIMARY provisions as the retrieval layer's best evidence; RELATED and BACKLINK provisions expose explicit dependencies but are not automatically controlling. If the packet does not establish a requested fact or reconciliation, say so. Write 3-5 concise sentences as needed. Plain text only — no headings, bullets, or formatting.`,
+      system: `You are a plain language guide to the Federated Republic constitution. The application has already performed retrieval and assembled a verified SOURCE PACKET. Answer the user's question in the first sentence. Use only the supplied packet. Answer fully where the supplied text establishes the answer. If it establishes only part of the answer, answer that part and state clearly what the Constitution does not establish. If the user asks why a structure exists or asks for design rationale, distinguish what the constitutional text establishes from any motive or rationale it does not state; do not invent an authorial purpose. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. Preserve material qualifiers, thresholds, conditions, and distinctions. After answering directly, include every material consequence, exception, continuation rule, and fallback from the supplied provisions that is necessary to answer the question; do not omit a directly relevant downstream consequence merely for brevity. Where multiple supplied provisions govern different stages or mechanisms, distinguish them clearly. Treat PRIMARY provisions as the retrieval layer's best evidence; RELATED and BACKLINK provisions expose explicit dependencies but are not automatically controlling. Do not create a general rule or remedy by stitching together separate provisions merely because they appear in the same packet. Only state a cross-provision consequence when the text itself establishes the connection or the connection follows directly without adding a new rule. If the packet does not establish a requested fact or reconciliation, say so. Write 3-4 concise sentences as needed, and always complete the final sentence. Plain text only — no headings, bullets, or formatting.`,
       messages: [{ role: 'user', content: provisionContext }],
       tags: ['feature:navigator', 'role:primary', envTag],
     });
@@ -365,12 +365,29 @@ module.exports = async (req, res) => {
       console.warn('[navigator-shadow]', { shadowModel: SHADOW_MODEL, error: 'request-failure' });
     }
 
-    const data = await upstream.json();
-    const summary = data.content?.[0]?.text?.trim() || '';
+    let data = await upstream.json();
+    let summary = data.content?.[0]?.text?.trim() || '';
+
+    if (data.stop_reason === 'max_tokens') {
+      const retry = await anthropicMessage({
+        model: MODEL,
+        max_tokens: 900,
+        temperature: 0,
+        system: `You are a plain language guide to the Federated Republic constitution. The application has already performed retrieval and assembled a verified SOURCE PACKET. Use only the supplied packet. Do not invent or synthesize a rule that the text does not establish. Preserve material qualifiers, thresholds, exceptions, continuation rules, and fallbacks. Do not create a general rule or remedy by stitching together separate provisions merely because they appear in the packet. If the packet does not establish the requested fact or reconciliation, say so. Rewrite the full answer from the beginning in 3-4 concise sentences and complete the final sentence. Plain text only.`,
+        messages: [{ role:'user', content: provisionContext }],
+        tags: ['feature:navigator', 'role:completion-retry', envTag],
+      });
+      if (retry.response.ok) {
+        data = await retry.response.json();
+        summary = data.content?.[0]?.text?.trim() || summary;
+        console.info('[navigator-ai-retry]', { route:retry.route, model:retry.model, reason:'max_tokens' });
+      }
+    }
+
     const resources = resourceBundle(matched, scenarios);
     navigatorMetric({
       route:'sonnet-synthesis',
-      aiCalls:SHADOW_ENABLED && gatewayToken() ? 2 : 1,
+      aiCalls:(SHADOW_ENABLED && gatewayToken() ? 2 : 1) + (data.stop_reason === 'max_tokens' ? 1 : 0),
       answerState:'full',
       gateStatus:gate.status,
       gateReason:gate.reason,
