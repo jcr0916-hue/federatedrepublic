@@ -8,6 +8,7 @@ const {
   buildAnnotationUserPrompt,
   annotationContractIssues,
 } = require('./_annotator-core.js');
+const { usageTotals, annotatorMetric } = require('./_ai-metrics.js');
 
 const MODEL = process.env.AI_MODEL_ANNOTATE || 'anthropic/claude-sonnet-5';
 
@@ -27,6 +28,7 @@ module.exports = async (req, res) => {
   if (!context) return res.status(400).json({ error: 'Unknown provision' });
 
   try {
+    const startedAt = Date.now();
     const request = (maxTokens, retryReason = null) => anthropicMessage({
       model: MODEL,
       max_tokens: maxTokens,
@@ -42,6 +44,9 @@ module.exports = async (req, res) => {
     let { response: upstream, route, model } = await request(1600);
     console.info('[annotate-ai]', { route, model, attempt: 1 });
     let data = await upstream.json();
+    const usages = [data.usage || null];
+    let retried = false;
+    let retryKind = null;
 
     if (upstream.ok && !data.error) {
       const firstText = (data.content || [])
@@ -52,9 +57,12 @@ module.exports = async (req, res) => {
       const issues = annotationContractIssues(firstText, data.stop_reason);
       if (issues.length) {
         const retryReason = issues.join('; ');
+        retried = true;
+        retryKind = data.stop_reason === 'max_tokens' ? 'max_tokens' : 'output_contract';
         ({ response: upstream, route, model } = await request(2400, retryReason));
         console.info('[annotate-ai]', { route, model, attempt: 2, reason: retryReason });
         data = await upstream.json();
+        usages.push(data.usage || null);
       }
     }
 
@@ -72,6 +80,20 @@ module.exports = async (req, res) => {
       .trim();
 
     const truncated = data.stop_reason === 'max_tokens';
+    const usage = usageTotals(...usages);
+    annotatorMetric({
+      model,
+      route,
+      aiCalls: retried ? 2 : 1,
+      durationMs: Date.now() - startedAt,
+      packetChars: context.packet.length,
+      relatedCount: context.related.length,
+      inputTokens: usage.inputTokens,
+      outputTokens: usage.outputTokens,
+      retried,
+      retryKind,
+      stopReason: data.stop_reason || null,
+    });
 
     return res.status(200).json({ annotation, truncated });
 
