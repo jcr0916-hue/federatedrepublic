@@ -109,8 +109,59 @@ test('Annotator retries a max-token cutoff with a larger completion budget', asy
     assert.equal(payloads.length,2);
     assert.equal(payloads[0].max_tokens,1600);
     assert.equal(payloads[1].max_tokens,2400);
-    assert.match(payloads[1].messages[0].content,/previous response hit the output limit/i);
-    assert.match(payloads[1].messages[0].content,/no more than 450 words/i);
+    assert.match(payloads[1].messages[0].content,/REWRITE REQUIRED:/i);
+    assert.match(payloads[1].messages[0].content,/hit the output limit/i);
+    assert.match(payloads[1].messages[0].content,/450-word hard limit/i);
+  } finally {
+    global.fetch = originalFetch;
+    if (originalKey === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalKey;
+    if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
+    if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
+    delete require.cache[require.resolve('../api/annotate.js')];
+  }
+});
+
+
+test('Annotator rewrites end-turn output that violates the three-paragraph contract', async () => {
+  const handler = require('../api/annotate.js');
+  const originalFetch = global.fetch;
+  const originalKey = process.env.ANTHROPIC_API_KEY;
+  const originalGateway = process.env.AI_GATEWAY_API_KEY;
+  const originalOidc = process.env.VERCEL_OIDC_TOKEN;
+
+  delete process.env.AI_GATEWAY_API_KEY;
+  delete process.env.VERCEL_OIDC_TOKEN;
+  process.env.ANTHROPIC_API_KEY = 'test-only';
+
+  const payloads = [];
+  let call = 0;
+  global.fetch = async (_url, options) => {
+    payloads.push(JSON.parse(options.body));
+    call++;
+    return {
+      ok:true,
+      status:200,
+      json:async () => call === 1
+        ? { content:[{type:'text',text:'# Heading\n\nFirst paragraph only.'}], stop_reason:'end_turn' }
+        : { content:[{type:'text',text:'Paragraph one.\n\nParagraph two.\n\nParagraph three.'}], stop_reason:'end_turn' }
+    };
+  };
+
+  let body;
+  const res = {
+    setHeader(){},
+    status(n){ this.statusCode=n; return this; },
+    json(v){ body=v; return this; },
+    end(){}
+  };
+
+  try {
+    await handler({method:'POST',body:{num:'§2.6'}},res);
+    assert.equal(res.statusCode,200);
+    assert.equal(body.annotation,'Paragraph one.\n\nParagraph two.\n\nParagraph three.');
+    assert.equal(payloads.length,2);
+    assert.match(payloads[1].messages[0].content,/used 2 paragraphs instead of exactly 3/i);
+    assert.match(payloads[1].messages[0].content,/used headings or bullets/i);
   } finally {
     global.fetch = originalFetch;
     if (originalKey === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalKey;
