@@ -46,7 +46,7 @@ test('Annotator uses Sonnet with a deterministic source packet and enough output
     assert.match(payload.system,/Do not invent enforcement mechanisms/i);
     assert.match(payload.system,/Never invent a provision number or label/i);
     assert.match(payload.system,/distinguish an initial review\/action window from the duration or legal effect/i);
-    assert.match(payload.system,/roughly 300–425 words/i);
+    assert.match(payload.system,/roughly 350–500 words/i);
     assert.doesNotMatch(payload.system,/complete constitution text follows/i);
 
     const prompt = payload.messages[0].content;
@@ -111,7 +111,7 @@ test('Annotator retries a max-token cutoff with a larger completion budget', asy
     assert.equal(payloads[1].max_tokens,2400);
     assert.match(payloads[1].messages[0].content,/REWRITE REQUIRED:/i);
     assert.match(payloads[1].messages[0].content,/hit the output limit/i);
-    assert.match(payloads[1].messages[0].content,/450-word hard limit/i);
+    assert.match(payloads[1].messages[0].content,/525-word hard limit/i);
   } finally {
     global.fetch = originalFetch;
     if (originalKey === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalKey;
