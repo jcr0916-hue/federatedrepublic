@@ -107,21 +107,35 @@ async function evaluate(item, model) {
     ...item.mustNot.map(x => `- ${x}`),
   ].join('\n');
 
+  const verifyPrompt = `CASE: ${item.num} — ${item.title}\n\nRUBRIC:\n${rubric}\n\nSOURCE PACKET:\n${context.packet}\n\nCANDIDATE ANNOTATION:\n${annotation}`;
   const verifyStart = Date.now();
-  const { response:verifyResponse } = await gatewayMessage({
+  let { response:verifyResponse } = await gatewayMessage({
     model:VERIFIER_MODEL,
     max_tokens:900,
     temperature:0,
     system:VERIFY_SYSTEM,
-    messages:[{
-      role:'user',
-      content:`CASE: ${item.num} — ${item.title}\n\nRUBRIC:\n${rubric}\n\nSOURCE PACKET:\n${context.packet}\n\nCANDIDATE ANNOTATION:\n${annotation}`,
-    }],
-    tags:['feature:annotator-packet-benchmark','role:verifier',`case:${item.num}`],
+    messages:[{ role:'user', content:verifyPrompt }],
+    tags:['feature:annotator-packet-benchmark','role:verifier',`case:${item.num}`,'attempt:1'],
   });
+  let verifierData = await verifyResponse.json().catch(()=>({}));
+  let rawVerdict = verifyResponse.ok ? extractText(verifierData) : `INVALID: verifier HTTP ${verifyResponse.status}`;
+  let verifierRetried = false;
+
+  if (verifyResponse.ok && !rawVerdict) {
+    verifierRetried = true;
+    ({ response:verifyResponse } = await gatewayMessage({
+      model:VERIFIER_MODEL,
+      max_tokens:900,
+      temperature:0,
+      system:VERIFY_SYSTEM,
+      messages:[{ role:'user', content:`The previous verifier response was empty. Return exactly one required verdict line.\n\n${verifyPrompt}` }],
+      tags:['feature:annotator-packet-benchmark','role:verifier',`case:${item.num}`,'attempt:2'],
+    }));
+    verifierData = await verifyResponse.json().catch(()=>({}));
+    rawVerdict = verifyResponse.ok ? extractText(verifierData) : `INVALID: verifier HTTP ${verifyResponse.status}`;
+  }
+
   const verifierLatencyMs = Date.now() - verifyStart;
-  const verifierData = await verifyResponse.json().catch(()=>({}));
-  const rawVerdict = verifyResponse.ok ? extractText(verifierData) : `INVALID: verifier HTTP ${verifyResponse.status}`;
   const verdict = parseVerdict(rawVerdict);
 
   return {
@@ -131,6 +145,7 @@ async function evaluate(item, model) {
     verdict:verdict.verdict,
     verifierReason:verdict.reason,
     rawVerifier:rawVerdict,
+    verifierRetried,
     annotation,
     packetChars:context.packet.length,
     sameArticleCount:context.sameArticle.length,
