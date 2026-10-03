@@ -31,6 +31,7 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 - [Public asset deployment](ASSET-DEPLOYMENT.md).
 - [Living Crossroads operations](operations/CROSSROADS.md).
 - [Kelvant flag](world/visual-identity/KELVANT-FLAG.md) and [Varek flag](world/visual-identity/VAREK-FLAG.md).
+- [Caldenmere flag](world/visual-identity/CALDENMERE-FLAG.md).
 
 ## Superseded internal material
 

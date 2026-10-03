@@ -36,6 +36,16 @@ Do not treat an archived plan as canon when it conflicts with a published piece 
 - By **Year 8**, Casimir Rehn is Legat Consul and Ines Carrow serves as Director of Foreign Affairs.
 - The transition scenario closes at **Year 12, Month 9**, immediately before `torenthia-news-001.html`.
 
+### Selection of the federal seat
+
+[`The Winning Bid`](../scenario-winning-bid.html) is canonical historical seat-selection history, shared by the Aldenmere and Caldenmere profiles. No year or month is assigned to the episode.
+
+- **Harren** considered bidding, but its voters were not interested.
+- **Caldenmere** submitted a qualified premium shoreline proposal near Calden. Expensive land and development made it substantially dearer than Aldenmere’s qualified **Verentum** bid; cost largely decided the selection.
+- Caldenmere challenged and lost. The Supreme Court found that Verentum met the published minimum requirements and upheld lawful cost evaluation among qualified bids. Federal §18.2 permits a rejected-bid challenge on the ground that the selected bid failed those requirements, not judicial substitution of a preferred site.
+- Caldenmere then offered to absorb the full additional land and development premium and sought to reopen the matter. The bidding period had closed; the Court held that it could not resubmit a materially revised bid after closure under the statutory process. Aldenmere’s award stood.
+- **Terenne** is Aldenmere’s State capital on the coast. **Verentum** is the federal seat in Aldenmere, held under Operational Use Rights rather than federal territorial sovereignty. The two capitals remain distinct.
+
 ### Transition-generation people
 
 - **Mira Venn** — Commonwealth transition administrator who chairs much of the merger implementation work. She is an administrator of adoption and transition, not a constitutional author, and does not become a founding federal officeholder.
@@ -77,7 +87,7 @@ Torenthia is not a peninsula.
 | **Orath** | Eastern-central interior; agricultural heartland; Dorven is here. |
 | **Kelvant** | Eastern State on Lake Varda; **Rhondel** is its lake-shore city and State seat; adjacent to Korda. |
 | **Caldenmere** | Southwestern coast; Calden is its port/finance city. |
-| **Aldenmere** | Southwest coastal capital region; Verentum is the federal seat. |
+| **Aldenmere** | Southwest coastal capital region; **Terenne**, on the coast, is its State capital; **Verentum** is the federal seat within the State. |
 | **Selvane** | Central heartland; Elin Thoss’s home State. |
 | **Corindal** | Southern border with Valedon; Provisional State status in the published World record. |
 
