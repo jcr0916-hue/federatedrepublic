@@ -623,3 +623,26 @@ The benchmark was used diagnostically. The first packet-era pass exposed two dif
 Final hardened benchmark result with **Claude Sonnet 5: 16/16 verifier PASS** on the expanded corpus. The run required six format/completion rewrites; those retries are a product safeguard rather than evidence that the first draft is always publication-ready. The temporary benchmark API route is removed after measurement.
 
 Decision: **keep Sonnet 5 for Provision Annotator and retain the deterministic target-first packet architecture.** The next efficiency work should measure actual production retry frequency and packet size before changing model tier or further reducing context.
+
+
+### October 3, 2026 — Torenthia packet-first authoring and validation
+
+Torenthia authoring now uses a packet-first workflow rather than relying on broad project context during drafting.
+
+For new records created with `world:new` and at least one `worldArcs` value, the tool writes an ignored local source packet under `.world-authoring/` for each selected arc. The packet is generated from the current published World inventory, structured clocks and chronology, the mapped Story Bible/Story Status sections, recent relevant narrative/NRS records, exact referenced constitutional text, and active structured **still-open canon guardrails**.
+
+A deterministic draft validator is available with:
+
+```bash
+npm run world:validate-draft -- --file torenthia-news-098.html
+```
+
+The validator checks stream sequencing, fictional month placement, constitutional references in both front matter and body text, clock crossings/review conditions, and active unresolved-canon guardrails. Publication checks also enforce those active guardrails for records after each guardrail's activation frontier.
+
+The initial structured guardrails cover the live Korda Convention, Lake Varda conference, Fiscal Equalization review, and Argent Ridge signature period. They intentionally block only narrow positive assertions that would resolve facts currently marked open. If a new story deliberately advances one of those facts, the guardrail must be amended or retired in the same reviewed publication change; this makes canon advancement explicit rather than accidental.
+
+The intended flow is now:
+
+`current canon → deterministic arc packet → draft → deterministic draft validation → ordinary publishing checks → publication`
+
+The validator does not decide narrative quality or invent canon. Semantic guardrails are deliberately narrow; editorial review remains responsible for subtler continuity and characterization.
