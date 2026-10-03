@@ -48,7 +48,7 @@ test('Every benchmark case can build a current deterministic source packet', () 
     assert.ok(context, item.num);
     assert.equal(context.target.num, item.num);
     assert.match(context.packet, /SOURCE PACKET — generated deterministically from constitution_data\.json/);
-    assert.match(context.packet, new RegExp('TARGET PROVISION\\n\\[' + item.num.replace(/\./g,'\\.') + '\\]'));
+    assert.match(context.packet, new RegExp('TARGET PROVISION\\nTARGET \\[' + item.num.replace(/\./g,'\\.') + '\\]'));
   }
 });
 
@@ -72,4 +72,13 @@ test('Annotator packet keeps target mechanics salient and related context bounde
   assert.match(viability.packet, /must be ratified by referendum of the eligible voters it affects/i);
   assert.match(viability.packet, /may not be reinitiated under substantially the same geographic scope for three years/i);
   assert.ok(viability.related.length <= 4);
+});
+
+
+test('Annotator prompt preserves narrow textual scope instead of substituting adjacent concepts', () => {
+  const { SYSTEM } = require('../api/_annotator-core.js');
+  assert.match(SYSTEM, /do not turn consent into compensation/i);
+  assert.match(SYSTEM, /official capacity into all gifts/i);
+  assert.match(SYSTEM, /inaction into rejection/i);
+  assert.match(SYSTEM, /interpretive lenses, not evidence of drafting intent/i);
 });
