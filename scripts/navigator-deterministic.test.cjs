@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const constitution = require('../constitution_data.json');
 const { uniqueTitleMatch, titleEligible, broadTopicMatch } = require('../api/_navigator-core.js');
 const { buildNavigatorContextPacket } = require('../api/_navigator-context.js');
+const { deterministicCompanionResources } = require('../api/_navigator-resources.js');
 
 function makeRes() {
   return {
@@ -282,5 +283,42 @@ test('interpretive Navigator model call receives the verified source packet', as
     if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
     if (originalAnthropic === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalAnthropic;
     delete require.cache[require.resolve('../api/navigator.js')];
+  }
+});
+
+
+test('Navigator deterministically attaches companion resources from controlling provisions', () => {
+  const provisions = constitution.flatMap(a => a.provisions);
+  const byNum = new Map(provisions.map(p => [p.num, p]));
+
+  const veto = deterministicCompanionResources([byNum.get('§2.7')]);
+  assert.deepEqual(
+    veto.map(r => [r.kind, r.href]),
+    [
+      ['quicksheet','quicksheet-article-2.html'],
+      ['diagram','diagrams.html#tab-dual'],
+      ['glossary','glossary.html#term-suspensive-veto'],
+    ]
+  );
+
+  const court = deterministicCompanionResources([byNum.get('§4.4'), byNum.get('§4.4.a')]);
+  assert.equal(court[0].href, 'quicksheet-judiciary.html');
+  assert.ok(court.some(r => r.href === 'diagrams.html#tab-sc-appointment'));
+
+  const statehood = deterministicCompanionResources([byNum.get('§15.2')]);
+  assert.equal(statehood[0].href, 'quicksheet-states.html');
+  assert.ok(statehood.some(r => r.href === 'diagrams.html#tab-states-fed'));
+  assert.ok(statehood.some(r => r.href === 'glossary.html#term-provisional-membership-period'));
+});
+
+test('Navigator companion resource selection is bounded and contains no model-generated URLs', () => {
+  const provisions = constitution.flatMap(a => a.provisions);
+  const sample = provisions.filter(p => ['§2.1','§2.7','§3.1','§4.4','§15.2'].includes(p.num));
+  const resources = deterministicCompanionResources(sample);
+
+  assert.ok(resources.length <= 3);
+  for (const resource of resources) {
+    assert.match(resource.href, /^(?:quicksheet-|diagrams\.html#|glossary\.html#)/);
+    assert.ok(['quicksheet','diagram','glossary'].includes(resource.kind));
   }
 });
