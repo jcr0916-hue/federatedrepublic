@@ -20,8 +20,8 @@ test('Navigator natural-language benchmark has 80 cases and expected coverage', 
     m[c.expected] = (m[c.expected] || 0) + 1;
     return m;
   }, {});
-  assert.equal(counts.TOPIC, 42);
-  assert.equal(counts.SONNET, 28);
+  assert.equal(counts.TOPIC, 46);
+  assert.equal(counts.SONNET, 24);
   assert.equal(counts.NO_MATCH, 10);
 });
 
@@ -136,4 +136,23 @@ test('all benchmarked topic answers are answer-first, source-bound, and make zer
   } finally {
     global.fetch = originalFetch;
   }
+});
+
+
+test('high-risk deterministic topics preserve distinct constitutional triggers and failure states', () => {
+  const sc = topicMatch('How do §4.4 and §4.4.a interact if the Senate delays?');
+  assert.equal(sc.id, 'supreme-court-senate-inaction');
+  assert.match(sc.answer, /failure to vote is not the same as rejection/i);
+  assert.match(sc.answer, /separate fallback triggered when the Civic Consul fails to nominate/i);
+
+  const military = topicMatch('Who controls the military if the two Consuls disagree about whether an operation is domestic or foreign?');
+  assert.equal(military.id, 'military-domain-dispute');
+  assert.match(military.answer, /specific disputed action is suspended/i);
+  assert.match(military.answer, /During active military operations/i);
+
+  const statehood = topicMatch('What happens if the statehood process becomes impossible to complete?');
+  assert.equal(statehood.id, 'statehood-process-failure');
+  assert.match(statehood.answer, /missing either two-year Statehood Audit deadline/i);
+  assert.match(statehood.answer, /may not be reinitiated for three years/i);
+  assert.match(statehood.answer, /distinct failure states/i);
 });

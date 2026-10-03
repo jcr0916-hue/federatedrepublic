@@ -264,12 +264,14 @@
   {
     "id": "s03",
     "question": "Does §4.4 imply the Senate can block a Supreme Court seat forever?",
-    "expected": "SONNET"
+    "expected": "TOPIC",
+    "topic": "supreme-court-senate-inaction"
   },
   {
     "id": "s04",
     "question": "How do §4.4 and §4.4.a interact if the Senate delays?",
-    "expected": "SONNET"
+    "expected": "TOPIC",
+    "topic": "supreme-court-senate-inaction"
   },
   {
     "id": "s05",
@@ -304,7 +306,8 @@
   {
     "id": "s11",
     "question": "Who controls the military if the two Consuls disagree about whether an operation is domestic or foreign?",
-    "expected": "SONNET"
+    "expected": "TOPIC",
+    "topic": "military-domain-dispute"
   },
   {
     "id": "s12",
@@ -369,7 +372,8 @@
   {
     "id": "s24",
     "question": "What happens if the statehood process becomes impossible to complete?",
-    "expected": "SONNET"
+    "expected": "TOPIC",
+    "topic": "statehood-process-failure"
   },
   {
     "id": "s25",

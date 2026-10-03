@@ -589,3 +589,17 @@ Decision: **retain Sonnet 4.6 as Navigator's residual synthesis model and do not
 `deterministic routing → bounded verified packet → Sonnet only when synthesis is genuinely required`.
 
 The temporary benchmark endpoints used for this measurement are removed after testing; benchmark code is not part of the public production API.
+
+
+### October 2, 2026 — Deterministic coverage for repeated high-risk procedures
+
+The residual packet benchmark identified four common constitutional questions where the underlying rule is explicit but model synthesis repeatedly created avoidable risk. Those paths are now covered by narrow deterministic topics instead of Sonnet:
+
+- Senate failure to vote on a Supreme Court nomination, including the distinction between §4.4's ordinary/no-nomination mechanisms and the separate §4.4.a Senate-inaction bypass;
+- interaction of §4.4 and §4.4.a when the Senate delays;
+- executive military-domain disputes, including suspension of the disputed action and the explicit active-military-operations rule;
+- failure to complete Statehood, preserving the distinction between ordinary §15.2 lapse/reinitiation and the §15.5.a Territory Convention three-year cooldown.
+
+This moves four cases from the 80-case natural-language corpus from `SONNET` to `TOPIC`, changing the benchmark mix from 42 deterministic topics / 28 Sonnet / 10 no-match to **46 deterministic topics / 24 Sonnet / 10 no-match**.
+
+The governing principle is intentionally conservative: promote a question to deterministic handling only when the current text supplies a stable, bounded answer and repeated model synthesis adds more risk than value.

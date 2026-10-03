@@ -92,6 +92,53 @@ const TOPICS = [
       ['§15.9', 'Three-stage voluntary State independence process and separation agreement'],
     ],
   },
+
+  {
+    id: 'supreme-court-senate-inaction',
+    aliases: [
+      'does §4.4 imply the senate can block a supreme court seat forever',
+      'can the senate block a supreme court seat forever',
+      'what happens if the senate does not vote on a supreme court nominee',
+      'what happens if the senate fails to vote on a supreme court nominee',
+      'how do §4.4 and §4.4.a interact if the senate delays',
+      'what happens if the senate delays a supreme court nomination',
+    ],
+    answer: 'A Senate failure to vote is not the same as rejection. Under §4.4(3), the Senate must vote within the applicable period, not to exceed 120 days, and no deemed confirmation applies. If the Senate fails to vote within that period, §4.4.a allows the Civic Consul, with two-thirds Assembly consent, to place the serving Temporary Associate Justice on the next federal electoral-period ballot for public confirmation; Senate confirmation of a Judicial Pool nominee before the public vote is certified ends that bypass. By contrast, §4.4(5) is a separate fallback triggered when the Civic Consul fails to nominate by the applicable deadline, and these provisions do not say that an affirmative Senate rejection automatically triggers either bypass.',
+    sections: [
+      ['§4.4', 'Ordinary Supreme Court nomination and Senate-vote deadlines; temporary-service continuity; separate no-nomination fallback'],
+      ['§4.4.a', 'Specific public-confirmation bypass when the Senate fails to vote within its required period'],
+    ],
+  },
+  {
+    id: 'military-domain-dispute',
+    aliases: [
+      'who controls the military if the two consuls disagree about whether an operation is domestic or foreign',
+      'who controls the military during an executive domain dispute',
+      'what happens if the consuls disagree about military jurisdiction',
+      'what happens if the civic consul and legat consul disagree over a military operation',
+    ],
+    answer: 'If the executives dispute the domain of a proposed action, §2.1 makes the Council of Ministers the first forum for resolution; while the dispute is pending, each executive continues only functions clearly within that executive’s established domain and the specific disputed action is suspended. Either executive may ask the Supreme Court for a domain determination under §4.5. During active military operations, however, §2.1 expressly provides that the Legat Consul’s domain governs operational decisions.',
+    sections: [
+      ['§2.1', 'Executive domain-dispute procedure and the active-military-operations rule'],
+      ['§2.14', 'Council of Ministers as the joint executive coordination forum'],
+      ['§4.5', 'Supreme Court original jurisdiction for constitutional disputes'],
+    ],
+  },
+  {
+    id: 'statehood-process-failure',
+    aliases: [
+      'what happens if the statehood process becomes impossible to complete',
+      'what happens if a territory cannot complete statehood',
+      'what happens if a territory misses the statehood deadlines',
+      'what happens if the statehood audit process cannot be completed',
+    ],
+    answer: 'For the ordinary §15.2 pathway, missing either two-year Statehood Audit deadline causes that proceeding to lapse, after which it may be initiated again under §15.2(1). A different rule applies when §15.5.a sends affected petitions to a Territory Convention because of competing petitions or a remainder-viability problem: if that Convention produces no resolution within 90 days, the affected petitions lapse together, the Territory continues undivided, and substantially the same geographic petitions may not be reinitiated for three years. Those are distinct failure states and should not be collapsed into one general restart rule.',
+    sections: [
+      ['§15.2', 'Ordinary Statehood Audit deadlines, lapse, and reinitiation'],
+      ['§15.5.a', 'Territory Convention fallback and the three-year bar after Convention failure'],
+      ['§15.1', 'Territorial status that continues unless and until Statehood is completed'],
+    ],
+  },
   {
     id: 'military-authority',
     aliases: [
