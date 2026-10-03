@@ -5,6 +5,7 @@ const path = require('path');
 const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transport.js');
 const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
 const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-haiku-4.5';
+const SHADOW_ENABLED = process.env.AI_NAVIGATOR_SHADOW_ENABLED === '1';
 
 const { expandQuery, rankProvisions, retrievalGate, retrievalSufficiency, explicitSectionRefs, uniqueTitleMatch, contextualSectionRefs } = require('./_navigator-core.js');
 const { topicMatch } = require('./_navigator-topics.js');
@@ -265,7 +266,7 @@ module.exports = async (req, res) => {
       tags: ['feature:navigator', 'role:primary', envTag],
     });
 
-    const shadowPromise = gatewayToken()
+    const shadowPromise = SHADOW_ENABLED && gatewayToken()
       ? gatewayMessage({
           model: SHADOW_MODEL,
           max_tokens: 260,

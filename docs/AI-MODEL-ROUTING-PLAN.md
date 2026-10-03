@@ -530,3 +530,16 @@ The source-packet architecture is now applied beyond the Provision Annotator.
 - **Torenthia authoring:** `npm run world:packet -- --arc <arc>` generates an internal story-state packet from current World metadata, clocks, chronology, the relevant Story Bible and Story Status sections, recent published records, and exact referenced constitutional provisions.
 
 The operating rule is now: **canonical data → deterministic feature-specific packet → AI synthesis only where needed**.
+
+
+### October 2, 2026 — Navigator shadow cost cleanup
+
+Navigator's Haiku shadow evaluator is now **opt-in** rather than automatically running whenever AI Gateway credentials are present.
+
+Production behavior:
+- Sonnet remains the user-visible model for Navigator questions that require synthesis.
+- Deterministic direct lookups and topic-registry answers remain model-free.
+- Haiku shadow evaluation runs only when `AI_NAVIGATOR_SHADOW_ENABLED=1` is explicitly set for a measurement period.
+- The shadow result never controls the public answer.
+
+Rationale: the shadow benchmark has already established Haiku's current limits, so paying for a second model call on every Sonnet request no longer improves the user-facing product. The opt-in switch preserves the benchmark path without carrying its cost during normal operation.
