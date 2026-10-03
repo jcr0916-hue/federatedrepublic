@@ -2,7 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const constitution = require('../constitution_data.json');
 const { uniqueTitleMatch, titleEligible, broadTopicMatch } = require('../api/_navigator-core.js');
-const { buildNavigatorContextPacket } = require('../api/_navigator-context.js');
+const { buildNavigatorContextPacket, mechanicCues } = require('../api/_navigator-context.js');
 const { deterministicCompanionResources } = require('../api/_navigator-resources.js');
 
 function makeRes() {
@@ -242,7 +242,7 @@ test('Navigator context packet expands explicit constitutional relationships wit
     'the target provision\'s explicit external cross-reference should be supplied');
   assert.doesNotMatch(packet.packet, /\[§15\.9\]/,
     'an unrelated constitutional provision should not be supplied');
-  assert.ok(packet.related.length <= 6);
+  assert.ok(packet.related.length <= 4);
 });
 
 test('interpretive Navigator model call receives the verified source packet', async () => {
@@ -320,5 +320,79 @@ test('Navigator companion resource selection is bounded and contains no model-ge
   for (const resource of resources) {
     assert.match(resource.href, /^(?:quicksheet-|diagrams\.html#|glossary\.html#)/);
     assert.ok(['quicksheet','diagram','glossary'].includes(resource.kind));
+  }
+});
+
+
+test('Navigator context packet surfaces verbatim procedural cues for distinct triggers', () => {
+  const provisions = constitution.flatMap(a => a.provisions);
+  const byNum = new Map(provisions.map(p => [p.num, p]));
+  const packet = buildNavigatorContextPacket(
+    'How do §4.4 and §4.4.a interact if the Senate delays?',
+    [
+      { provision:byNum.get('§4.4'), score:20 },
+      { provision:byNum.get('§4.4.a'), score:19 },
+    ],
+    provisions
+  );
+
+  assert.match(packet.packet, /PROCEDURAL CUES — verbatim excerpts/i);
+  assert.match(packet.packet, /If the Civic Consul has not made a nomination by the applicable deadline/i);
+  assert.match(packet.packet, /Where the Senate has failed to vote on a nomination within the period required under §4\.4/i);
+});
+
+test('mechanic cue extraction stays verbatim and bounded', () => {
+  const cues = mechanicCues('(1) Ordinary rule. (2) If nobody acts within 30 days, certification occurs automatically. (3) Where the Senate fails to vote, a separate route applies. (4) Unrelated prose.');
+  assert.equal(cues.length, 2);
+  assert.match(cues[0], /If nobody acts within 30 days, certification occurs automatically/);
+  assert.match(cues[1], /Where the Senate fails to vote, a separate route applies/);
+});
+
+test('Navigator retries a max-token synthesis instead of returning a cut-off answer', async () => {
+  const originalFetch = global.fetch;
+  const originalGateway = process.env.AI_GATEWAY_API_KEY;
+  const originalOidc = process.env.VERCEL_OIDC_TOKEN;
+  const originalAnthropic = process.env.ANTHROPIC_API_KEY;
+  delete process.env.AI_GATEWAY_API_KEY;
+  delete process.env.VERCEL_OIDC_TOKEN;
+  process.env.ANTHROPIC_API_KEY = 'test-key';
+
+  const payloads = [];
+  let call = 0;
+  global.fetch = async (_url, options) => {
+    payloads.push(JSON.parse(options.body));
+    call++;
+    return {
+      ok:true,
+      status:200,
+      text:async () => '',
+      json:async () => call === 1
+        ? { content:[{type:'text',text:'Cut off answer'}], stop_reason:'max_tokens' }
+        : { content:[{type:'text',text:'Complete bounded answer.'}], stop_reason:'end_turn' },
+    };
+  };
+
+  try {
+    delete require.cache[require.resolve('../api/navigator.js')];
+    const handler = require('../api/navigator.js');
+    const res = makeRes();
+    await handler(
+      { method:'POST', body:{ question:'Does §2.5 imply authority that is not expressly listed?' } },
+      res
+    );
+
+    assert.equal(res.statusCode, 200);
+    assert.equal(res.body.summary, 'Complete bounded answer.');
+    assert.equal(payloads.length, 2);
+    assert.equal(payloads[0].max_tokens, 600);
+    assert.equal(payloads[1].max_tokens, 900);
+    assert.match(payloads[0].system, /Never transfer a trigger, deadline, fallback, override, or consequence/i);
+    assert.match(payloads[1].system, /Rewrite the full answer from the beginning/i);
+  } finally {
+    global.fetch = originalFetch;
+    if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
+    if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
+    if (originalAnthropic === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalAnthropic;
+    delete require.cache[require.resolve('../api/navigator.js')];
   }
 });
