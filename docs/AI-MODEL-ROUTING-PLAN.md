@@ -543,3 +543,18 @@ Production behavior:
 - The shadow result never controls the public answer.
 
 Rationale: the shadow benchmark has already established Haiku's current limits, so paying for a second model call on every Sonnet request no longer improves the user-facing product. The opt-in switch preserves the benchmark path without carrying its cost during normal operation.
+
+
+### October 2, 2026 — Navigator routing measurement
+
+Navigator now emits a privacy-safe structured route record for each successful answer. The log records only routing metadata — deterministic route, AI-call count, gate/retrieval reason, matched/resource counts, and for Sonnet requests the source-packet character count plus primary/related provision counts. It does **not** log the user's question.
+
+A deterministic benchmark report is available with:
+
+```bash
+npm run navigator:routing-report
+```
+
+It reports route distributions separately for the natural-language, gate, and explicit-direct benchmark corpora. These percentages are benchmark distributions, **not production traffic estimates**. Production route shares should be measured from the `[navigator-route]` records after sufficient real usage accumulates.
+
+Decision rule for any additional cheap-model tier: do not add it merely because a model is cheaper. First measure how much traffic still reaches `sonnet-synthesis`, how large those verified packets are, and whether those remaining questions form a bounded class that a cheaper model can answer at effectively zero material grounding error. If Sonnet volume is already small, the simpler architecture wins.
