@@ -147,14 +147,6 @@ function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 6)
     .sort((a,b) => b.score - a.score || a.provision.num.localeCompare(b.provision.num));
   for (const item of lexical.slice(0, 2)) add(item.provision, 'same-article lexical relative');
 
-  // One high-similarity backlink can expose a direct downstream dependency
-  // without recreating the noisy all-backlinks packet.
-  const backlinks = all
-    .filter(p => !seen.has(p.num) && exactRefRegex(target.num).test(p.text))
-    .map(p => ({ provision:p, score:similarityScore(target, p) }))
-    .sort((a,b) => b.score - a.score || a.provision.num.localeCompare(b.provision.num));
-  if (backlinks[0]) add(backlinks[0].provision, 'explicit backlink');
-
   const cueSources = [target, ...related.map(x => x.provision)];
   const cueLines = [];
   for (const provision of cueSources) {
@@ -189,7 +181,7 @@ function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 6)
     articleIndex || '(none)',
     '',
     'PACKET RULE',
-    'The target provision is the controlling subject. Related provisions are included only to illuminate an explicit or mechanically identified relationship. Never transfer a trigger, deadline, duration, override, fallback, repeat-use rule, or consequence from a related provision to the target. The Article index supplies names only and cannot support a claim about mechanics.',
+    'The target provision is the controlling subject. Related provisions are included only to illuminate a structural, explicit-citation, or same-article lexical relationship. Downstream backlinks are intentionally excluded because they often distract from the target mechanics. Never transfer a trigger, deadline, duration, override, fallback, repeat-use rule, or consequence from a related provision to the target. The Article index supplies names only and cannot support a claim about mechanics.',
   ];
 
   return {
@@ -198,7 +190,7 @@ function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 6)
     related,
     sameArticle,
     explicitCrossRefs: related.filter(x => x.relation === 'explicit citation').map(x => x.provision),
-    backlinks: related.filter(x => x.relation === 'explicit backlink').map(x => x.provision),
+    backlinks: [],
   };
 }
 
