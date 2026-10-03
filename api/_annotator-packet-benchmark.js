@@ -3,6 +3,7 @@ const {
   SYSTEM,
   buildContextPacket,
   buildAnnotationUserPrompt,
+  annotationContractIssues,
 } = require('./_annotator-core.js');
 const cases = require('../scripts/fixtures/annotator-ai-cases.json');
 
@@ -33,7 +34,7 @@ FORMAT: <brief reason>
 UNSUPPORTED means the annotation materially invents, transfers, broadens, or misstates a rule, motive, trigger, deadline, consequence, remedy, or cross-reference effect.
 INCOMPLETE means it misses a material rubric point needed for a reliable annotation.
 FORMAT means the answer is visibly cut off, not three prose paragraphs, or otherwise violates the production output contract in a material way.
-A clearly labeled structural inference is allowed only when it does not add a constitutional rule or unsupported historical/drafting motive.`;
+The candidate system prompt supplies named design principles (including One Home Rule, Institution Test, Bad-Faith Test, Actor Test, Democratic Legitimacy, Transparency, Graceful Degradation, Sunlight, Process Symmetry, and Procedural Familiarity) as interpretive lenses. References to those principles are allowed when framed as structural analysis. They are not evidence that the drafters deliberately chose, intended, anticipated, or preferred a result. A clearly labeled structural inference is allowed only when it does not add a constitutional rule or unsupported historical/drafting motive.`;
 
 function extractText(data) {
   return (data.content || [])
@@ -68,17 +69,21 @@ async function evaluate(item, model) {
   let completionRetried = false;
   let firstUsage = candidateData.usage || null;
 
-  if (candidateResponse.ok && candidateData.stop_reason === 'max_tokens') {
-    completionRetried = true;
-    ({ response:candidateResponse } = await gatewayMessage({
-      model,
-      max_tokens:2400,
-      temperature:0,
-      system:SYSTEM,
-      messages:[{ role:'user', content:buildAnnotationUserPrompt(context, true) }],
-      tags:['feature:annotator-packet-benchmark','role:candidate',`case:${item.num}`,'attempt:2'],
-    }));
-    candidateData = await candidateResponse.json().catch(()=>({}));
+  if (candidateResponse.ok) {
+    const firstText = extractText(candidateData);
+    const issues = annotationContractIssues(firstText, candidateData.stop_reason);
+    if (issues.length) {
+      completionRetried = true;
+      ({ response:candidateResponse } = await gatewayMessage({
+        model,
+        max_tokens:2400,
+        temperature:0,
+        system:SYSTEM,
+        messages:[{ role:'user', content:buildAnnotationUserPrompt(context, issues.join('; ')) }],
+        tags:['feature:annotator-packet-benchmark','role:candidate',`case:${item.num}`,'attempt:2'],
+      }));
+      candidateData = await candidateResponse.json().catch(()=>({}));
+    }
   }
 
   const candidateLatencyMs = Date.now() - start;
@@ -125,6 +130,7 @@ async function evaluate(item, model) {
     ok:true,
     verdict:verdict.verdict,
     verifierReason:verdict.reason,
+    rawVerifier:rawVerdict,
     annotation,
     packetChars:context.packet.length,
     sameArticleCount:context.sameArticle.length,
