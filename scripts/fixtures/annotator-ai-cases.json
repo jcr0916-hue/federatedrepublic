@@ -143,5 +143,95 @@
       "Do not claim the advisory Provisional Audit Council replaces the State legislature.",
       "Do not claim judicial review permits policy substitution for Monitor findings."
     ]
+  },
+  {
+    "num": "§2.3.a",
+    "title": "Legat veto timing, scope, and comparison discipline",
+    "must": [
+      "Recognize that the Legat Consul may veto only for a genuine constitutional concern within the listed security domain and that a general or speculative connection is insufficient.",
+      "Recognize that the 10-business-day period is the window to return the bill or object, not a ten-day duration of the veto itself.",
+      "Recognize that the Senate may override by 2/3 during that session and that without override the bill lapses for that session.",
+      "Recognize that the veto is single-use on a bill and that a bill reintroduced and passed in a later session proceeds without Legat Consul interference."
+    ],
+    "mustNot": [
+      "Do not describe the Civic Consul suspensive veto in §2.7 as lasting 10 business days; its exercised effect tables the bill for one month.",
+      "Do not invent a motive for why the Legat and Civic veto procedures differ, such as claiming security stakes explain the divergence unless the text itself says so.",
+      "Do not convert the EM assessment request into a binding adjudication of the domain question."
+    ]
+  },
+  {
+    "num": "§2.7",
+    "title": "Civic suspensive veto stages and nonblocking fiscal notice",
+    "must": [
+      "Recognize that the Civic Consul has a 10-business-day review window in which to return the bill or issue a fiscal notice.",
+      "Recognize that an exercised suspensive veto tables the bill for one month and that the Senate may override by 2/3 during that month.",
+      "Recognize that if there is no override, the bill returns to the Legislature and must pass both chambers again, after which the Civic Consul may not use the suspensive veto on that bill again.",
+      "Recognize that a fiscal notice does not block enactment and that both instruments may be used on the same bill."
+    ],
+    "mustNot": [
+      "Do not collapse the 10-business-day review window into the one-month duration of the suspensive veto.",
+      "Do not claim silence after 10 business days blocks the bill; the text says the bill is enacted by operation of law.",
+      "Do not transfer the Legat Consul veto's session-lapse consequence onto the Civic Consul process."
+    ]
+  },
+  {
+    "num": "§4.4",
+    "title": "Supreme Court vacancy continuity with distinct fallback triggers",
+    "must": [
+      "Recognize that a Temporary Associate Justice takes office immediately upon a vacancy with full voting rights until the vacancy is filled.",
+      "Recognize the Civic Consul nomination deadline and the separate Senate vote deadline without treating them as the same trigger.",
+      "Recognize that subsection (5)'s Assembly/public-confirmation path is triggered by the Civic Consul failing to nominate by the applicable deadline.",
+      "Recognize that the serving Temporary Associate Justice may not be nominated through the ordinary appointment process for the same seat, while the public-confirmation ballot remains available."
+    ],
+    "mustNot": [
+      "Do not claim Senate rejection automatically triggers the subsection (5) no-nomination public-confirmation path.",
+      "Do not claim Senate inaction and Civic Consul failure to nominate have identical constitutional consequences.",
+      "Do not say a vacancy leaves the Supreme Court without a voting replacement while the process continues."
+    ]
+  },
+  {
+    "num": "§12.1.a",
+    "title": "Monetary Authority independence with statutory administration boundary",
+    "must": [
+      "Recognize that the Monetary Authority is constitutionally independent of both executives and the Legislature in exercising its constitutional functions.",
+      "Recognize that statute may define internal organization, offices, staffing, administrative procedures, and operational structure only consistently with that independence.",
+      "Recognize the leadership safeguards: independent candidate process, 2/3 Senate confirmation, no single actor appointing or removing a majority, staggered terms, and for-cause removal excluding policy disagreement.",
+      "Recognize that vacancies do not suspend or transfer the Monetary Authority's constitutional functions."
+    ],
+    "mustNot": [
+      "Do not claim the Legislature has no role at all in Monetary Authority administration; the provision expressly leaves administrative structure to statute.",
+      "Do not invent a constitutional budget immunity, appropriation formula, or funding guarantee for the Monetary Authority.",
+      "Do not claim disagreement over lawful monetary policy is valid cause for removal."
+    ]
+  },
+  {
+    "num": "§13.2",
+    "title": "Citizen initiative constraints without false legislative symmetry",
+    "must": [
+      "Recognize the two-phase petition process and the Legislature's 90-day vote window after the threshold is met.",
+      "Recognize that failure or non-vote sends the proposal to referendum with the stated 60% passage and 50% participation thresholds.",
+      "Recognize the initiative-specific substantive bars on narrowing Article I rights, appropriating funds or altering revenue, and extinguishing non-derogable rights.",
+      "Recognize that the Supreme Court may resolve constitutional conflicts involving an enacted initiative under its original jurisdiction."
+    ],
+    "mustNot": [
+      "Do not claim the initiative-specific prohibition on appropriating funds or altering revenue is also a general prohibition on ordinary legislative appropriations.",
+      "Do not claim every restriction on citizen initiatives applies identically to the Legislature unless another supplied provision expressly says so.",
+      "Do not omit the three-year bar on reinitiating a failed initiative on the same or substantially similar grounds if discussing graceful degradation or repeat use."
+    ]
+  },
+  {
+    "num": "§15.5.a",
+    "title": "Remainder viability convention fallback and cooldown",
+    "must": [
+      "Recognize that competing petitions within 90 days or a finding that the remainder could not realistically satisfy Statehood Audit conditions sends the affected matters to a Territory Convention.",
+      "Recognize that the Convention has 90 days from its first session to produce a proposed resolution and that the Constitution does not prescribe the Convention's terms.",
+      "Recognize that if no resolution is produced, all petitions addressed there lapse together, the Territory continues undivided, and substantially the same geographic petitions face a three-year reinitiation bar.",
+      "Recognize that any Convention resolution must be ratified by the affected eligible voters and then proceeds through the otherwise applicable §15.2 or §15.4 process."
+    ],
+    "mustNot": [
+      "Do not claim ordinary §15.2 lapse and reinitiation automatically overrides the three-year cooldown created by this provision.",
+      "Do not claim the JMC itself chooses the final boundary or constitutional status.",
+      "Do not invent substantive terms the Territory Convention must adopt; the provision expressly leaves those terms open."
+    ]
   }
 ]

@@ -603,3 +603,23 @@ The residual packet benchmark identified four common constitutional questions wh
 This moves four cases from the 80-case natural-language corpus from `SONNET` to `TOPIC`, changing the benchmark mix from 42 deterministic topics / 28 Sonnet / 10 no-match to **46 deterministic topics / 24 Sonnet / 10 no-match**.
 
 The governing principle is intentionally conservative: promote a question to deterministic handling only when the current text supplies a stable, bounded answer and repeated model synthesis adds more risk than value.
+
+
+### October 3, 2026 — Provision Annotator packet benchmark
+
+The Provision Annotator benchmark was rerun against the **current production-style deterministic source packet**, rather than the older broad-context prompt. The corpus was expanded from 10 to 16 provisions, adding observed or analogous packet-era failure modes around §2.3.a, §2.7, §4.4, §12.1.a, §13.2, and §15.5.a.
+
+The benchmark was used diagnostically. The first packet-era pass exposed two different problems: output-contract failures (cut-off or headed responses) and source-grounding failures caused by too much neighboring Article context. Production hardening followed directly from those results:
+
+- the Annotator packet now keeps the target provision dominant and caps related exact-text provisions;
+- structural parent/sibling provisions and exact citations are preferred over broad same-Article context;
+- downstream backlinks are excluded from the default packet because they can encourage backward transfer of rules;
+- mechanically selected **TARGET COVERAGE CUES** keep thresholds, limits, defaults, exceptions, fallbacks, and consequences salient;
+- the prompt explicitly treats the twelve design principles as interpretive lenses rather than evidence of drafting intent;
+- scope qualifiers must be preserved rather than broadened (for example, official-capacity gifts cannot become all gifts, consent cannot become compensation, and inaction cannot become rejection);
+- target mechanics must be covered before secondary comparisons;
+- the output contract requires three plain-prose paragraphs and the server retries a full rewrite not only for `max_tokens`, but also for an empty, headed/bulleted, or wrong-paragraph-count response.
+
+Final hardened benchmark result with **Claude Sonnet 5: 16/16 verifier PASS** on the expanded corpus. The run required six format/completion rewrites; those retries are a product safeguard rather than evidence that the first draft is always publication-ready. The temporary benchmark API route is removed after measurement.
+
+Decision: **keep Sonnet 5 for Provision Annotator and retain the deterministic target-first packet architecture.** The next efficiency work should measure actual production retry frequency and packet size before changing model tier or further reducing context.
