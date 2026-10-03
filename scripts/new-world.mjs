@@ -2,6 +2,7 @@
 import {loadWorldRegistries,clockWarnings} from '../lib/world-chronology.mjs';
 import fs from "node:fs";
 import { readWorldInventory, buildWorldDraft } from "../lib/world-authoring.mjs";
+import { buildWorldContextPacket } from "../lib/world-context-packet.mjs";
 
 function argsOf(argv){
   const out={};
@@ -42,4 +43,14 @@ if(fs.existsSync(draft.filename)){
   process.exit(1);
 }
 fs.writeFileSync(draft.filename,draft.content,{flag:'wx'});
-console.log(`Created ${draft.filename}. Review suggested comments and replace the draft body before committing.`);
+const packetDir='.world-authoring';
+if((a.arcs||'').trim()){
+  fs.mkdirSync(packetDir,{recursive:true});
+  for(const arc of split(a.arcs)){
+    const packet=buildWorldContextPacket({arc,dir:'.'}).packet;
+    const packetFile=`${packetDir}/${draft.worldId}--${arc}.packet.txt`;
+    fs.writeFileSync(packetFile,packet+'\n');
+    console.log(`Authoring packet: ${packetFile}`);
+  }
+}
+console.log(`Created ${draft.filename}. Draft from the generated packet(s), replace the draft marker, then run: npm run world:validate-draft -- --file ${draft.filename}`);
