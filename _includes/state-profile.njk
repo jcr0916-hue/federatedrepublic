@@ -74,6 +74,25 @@
   {% include "related-rail.njk" %}
   {% endif %}{% endfor %}
   {{ content | safe }}
+  {% if stateScenarios and stateScenarios.length %}
+  <section class="state-history state-federal-scenarios" id="federal-scenarios" aria-labelledby="{{ stateSlug }}-federal-scenarios-title">
+    <div class="state-history-head">
+      <span class="section-kicker">Federal constitutional history</span>
+      <h2 id="{{ stateSlug }}-federal-scenarios-title">Scenarios involving {{ stateName }}</h2>
+      <p>These episodes belong to the Republic’s broader constitutional history rather than the State profile itself.</p>
+    </div>
+    <div class="state-test-grid">
+      {% for scenario in stateScenarios %}
+      <article class="state-test-card">
+        <p class="state-test-card-meta">Shared federal scenario</p>
+        <h3><a href="{{ scenario.url }}">{{ scenario.title }}</a></h3>
+        <p>{{ scenario.summary }}</p>
+        <a class="state-test-card-link" href="{{ scenario.url }}">Read the scenario →</a>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
   {% set stateHistoricalTests = stateTests.entries | stateTestsFor(stateName) %}
   {% if stateHistoricalTests.length %}
   <section class="state-history" aria-labelledby="{{ stateSlug }}-history-title">
