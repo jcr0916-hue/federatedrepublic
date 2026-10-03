@@ -2,6 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const constitution = require('../constitution_data.json');
 const { uniqueTitleMatch, titleEligible, broadTopicMatch } = require('../api/_navigator-core.js');
+const { buildNavigatorContextPacket } = require('../api/_navigator-context.js');
 
 function makeRes() {
   return {
@@ -221,5 +222,65 @@ test('judicial selection API response disambiguates procedures with zero AI call
     assert.match(res.body.provisions[2].relevance, /Senate-bypass/i);
   } finally {
     global.fetch = originalFetch;
+  }
+});
+
+
+test('Navigator context packet expands explicit constitutional relationships without sending the whole Constitution', () => {
+  const provisions = constitution.flatMap(a => a.provisions);
+  const target = provisions.find(p => p.num === '§2.3.a');
+  const packet = buildNavigatorContextPacket(
+    'How should the Legat Consul legislative veto be understood?',
+    [{ provision: target, score: 20 }],
+    provisions
+  );
+
+  assert.match(packet.packet, /SOURCE PACKET — generated deterministically from constitution_data\.json/);
+  assert.match(packet.packet, /PRIMARY 1 \[§2\.3\.a\] Legat Consul Legislative Veto/);
+  assert.match(packet.packet, /\[§9\.1\]/,
+    'the target provision\'s explicit external cross-reference should be supplied');
+  assert.doesNotMatch(packet.packet, /\[§15\.9\]/,
+    'an unrelated constitutional provision should not be supplied');
+  assert.ok(packet.related.length <= 6);
+});
+
+test('interpretive Navigator model call receives the verified source packet', async () => {
+  const originalFetch = global.fetch;
+  const originalGateway = process.env.AI_GATEWAY_API_KEY;
+  const originalOidc = process.env.VERCEL_OIDC_TOKEN;
+  const originalAnthropic = process.env.ANTHROPIC_API_KEY;
+  delete process.env.AI_GATEWAY_API_KEY;
+  delete process.env.VERCEL_OIDC_TOKEN;
+  process.env.ANTHROPIC_API_KEY = 'test-key';
+
+  let payload;
+  global.fetch = async (_url, options) => {
+    payload = JSON.parse(options.body);
+    return {
+      ok: true,
+      json: async () => ({ content: [{ type: 'text', text: 'Packet-grounded answer.' }] }),
+      text: async () => '',
+    };
+  };
+
+  try {
+    delete require.cache[require.resolve('../api/navigator.js')];
+    const handler = require('../api/navigator.js');
+    const res = makeRes();
+    await handler({ method:'POST', body:{ question:'Does §2.3.a imply broader veto authority than the text states?' } }, res);
+
+    assert.equal(res.statusCode, 200);
+    assert.equal(res.body.summary, 'Packet-grounded answer.');
+    assert.match(payload.system, /already performed retrieval and assembled a verified SOURCE PACKET/i);
+    assert.match(payload.messages[0].content, /PRIMARY RETRIEVED PROVISIONS/);
+    assert.match(payload.messages[0].content, /\[§2\.3\.a\] Legat Consul Legislative Veto/);
+    assert.match(payload.messages[0].content, /RELATED EXACT-TEXT PROVISIONS FOUND BY CROSS-REFERENCE/);
+    assert.doesNotMatch(payload.messages[0].content, /\[§15\.9\]/);
+  } finally {
+    global.fetch = originalFetch;
+    if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
+    if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
+    if (originalAnthropic === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalAnthropic;
+    delete require.cache[require.resolve('../api/navigator.js')];
   }
 });
