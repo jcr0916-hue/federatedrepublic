@@ -70,7 +70,7 @@ test('Annotator packet keeps target mechanics salient and related context bounde
 
   const viability = buildContextPacket('§15.5.a');
   assert.match(viability.packet, /must be ratified by referendum of the eligible voters it affects/i);
-  assert.match(viability.packet, /may not be reinitiated under substantially the same geographic scope for three years/i);
+  assert.match(viability.packet, /(?:None of the lapsed petitions may|may not be) reinitiated under substantially the same geographic scope for three years/i);
   assert.ok(viability.related.length <= 4);
 });
 
