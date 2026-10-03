@@ -65,14 +65,14 @@ const executive = [
 // ─────────────────────────────────────────────────────────────────────────────
 const openSlot = {
   flag: "§12.6 · Fiscal Equalization",
-  headline: "The Formula Goes Back to the Floor",
+  headline: "The Formula Is Back in Committee",
   body:
-    "The Civic Consul has sent the equalization mechanism to the Legislature for its full statutory review, in public, rather than move the queue by discretion. Any formula that lifts Korda and Morantine moves someone down — and the advantaged states were in the 198.",
+    "The Executive Monitor found no constitutional failure, so no ninety-day response clock is running. The Joint Committee has nevertheless reopened the statutory review, and Morantine has filed request-aging and service-burden data. No formula change or amendment position has been adopted.",
   stages: [
-    { when: "Now",   label: "Notice filed",  active: true  },
-    { when: "Next",  label: "Committee",     active: false },
-    { when: "Then",  label: "Floor vote",    active: false },
-    { when: "After", label: "EM certifies",  active: false },
+    { when: "Done", label: "Review requested",     active: false },
+    { when: "Done", label: "EM: no failure",      active: false },
+    { when: "Now",  label: "Committee reopened",  active: true  },
+    { when: "Next", label: "Options / legislation", active: false },
   ],
   entered: "Year 13, Month 9",
   status: "still open",
@@ -94,7 +94,7 @@ const openSlot = {
 // real summary only where there's actual published coverage to draw on; everyone else gets an
 // honest, minimal, non-manufactured placeholder. Keep summaries grounded in published coverage.
 const states = [
-  { name: "Harren",     pop: 6.2, senate: 2, assembly: 60, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Founding State. Its own profile page covers its history and the federal preamble's studied neutrality toward it — no other current story.", char: "Northern heartland · Founding State" },
+  { name: "Harren",     pop: 6.2, senate: 2, assembly: 60, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Founding State. Its federal audit position is Passing; Senator Tobias Vael is currently one of the declared Legat Consul candidates.", char: "Northern heartland · Founding State" },
   { name: "Merath",     pop: 5.8, senate: 2, assembly: 56, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Passing — nothing notable on record.", char: "Interior · Industrial" },
   { name: "Orath",      pop: 5.4, senate: 2, assembly: 52, rel: "State", audit: "Passing",  statusColor: "green",  summary: "Passing — nothing notable on record.", char: "Interior · Agricultural heartland" },
   { name: "Aldenmere",  pop: 4.9, senate: 2, assembly: 47, rel: "State", audit: "Review",   statusColor: "yellow", summary: "Under statutory Review — no further detail published yet.", char: "Capital region · Southwestern coast" },
