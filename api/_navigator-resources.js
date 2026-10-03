@@ -169,10 +169,15 @@ function relatedGlossary(provisions) {
 function deterministicCompanionResources(provisions = [], max = 3) {
   const out = [];
   const sheet = relatedQuickSheet(provisions);
-  if (sheet) out.push(sheet);
-  out.push(...relatedDiagrams(provisions));
+  const diagrams = relatedDiagrams(provisions);
   const glossary = relatedGlossary(provisions);
+
+  // Prefer one item of each complementary format before offering a second
+  // diagram. The goal is breadth of explanation, not a longer link list.
+  if (sheet) out.push(sheet);
+  if (diagrams[0]) out.push(diagrams[0]);
   if (glossary) out.push(glossary);
+  out.push(...diagrams.slice(1));
 
   const seen = new Set();
   return out.filter(resource => {
