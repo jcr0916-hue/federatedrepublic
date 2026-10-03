@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+<title id="title">Flag of Aldenmere</title>
+<desc id="desc">Deep navy field with a cream cross edged in gold, four gold eight-pointed stars, and a central gold-ringed medallion showing green mountains reflected in a dark blue lake.</desc>
+<defs>
+  <clipPath id="medallion"><circle cx="768" cy="512" r="286"/></clipPath>
+  <g id="star" fill="#E1AB30">
+    <path d="M0-92 20-32 65-65 32-20 92 0 32 20 65 65 20 32 0 92-20 32-65 65-32 20-92 0-32-20-65-65-20-32Z"/>
+  </g>
+</defs>
+
+<rect width="1536" height="1024" fill="#063A72"/>
+
+<!-- gold-edged cream cross -->
+<rect x="644" width="248" height="1024" fill="#E1AB30"/>
+<rect x="674" width="188" height="1024" fill="#F4EBDD"/>
+<rect y="388" width="1536" height="248" fill="#E1AB30"/>
+<rect y="418" width="1536" height="188" fill="#F4EBDD"/>
+
+<!-- four stars -->
+<use href="#star" transform="translate(300 225)"/>
+<use href="#star" transform="translate(1236 225)"/>
+<use href="#star" transform="translate(300 799)"/>
+<use href="#star" transform="translate(1236 799)"/>
+
+<!-- central medallion -->
+<circle cx="768" cy="512" r="316" fill="#E1AB30"/>
+<circle cx="768" cy="512" r="286" fill="#063A72"/>
+
+<g clip-path="url(#medallion)">
+  <!-- sky -->
+  <rect x="482" y="226" width="572" height="286" fill="#063A72"/>
+
+  <!-- mountain range -->
+  <path d="M482 492 560 420 622 446 705 338 768 414 845 360 908 438 970 400 1054 486 1054 544 482 544Z" fill="#416B55"/>
+  <path d="M482 512 585 445 650 474 720 403 786 454 854 407 925 465 994 434 1054 498 1054 553 482 553Z" fill="#24523F"/>
+  <path d="M700 353 721 322 748 359 770 391 744 377 728 360 714 372Z" fill="#F4EBDD"/>
+  <path d="M832 385 854 350 883 383 904 421 879 403 860 388 846 399Z" fill="#F4EBDD"/>
+
+  <!-- treeline -->
+  <g fill="#123E34">
+    <path d="M500 526 520 476 540 526Z"/><path d="M530 528 552 466 574 528Z"/>
+    <path d="M564 530 585 481 606 530Z"/><path d="M590 531 613 470 636 531Z"/>
+    <path d="M624 532 646 484 668 532Z"/><path d="M650 532 674 472 698 532Z"/>
+    <path d="M836 532 860 472 884 532Z"/><path d="M868 532 890 486 912 532Z"/>
+    <path d="M900 531 923 470 946 531Z"/><path d="M935 530 956 482 977 530Z"/>
+    <path d="M965 528 987 466 1009 528Z"/><path d="M997 526 1017 476 1037 526Z"/>
+  </g>
+
+  <!-- lake -->
+  <rect x="482" y="544" width="572" height="254" fill="#0A4D83"/>
+  <path d="M482 555H1054" stroke="#F4EBDD" stroke-width="10"/>
+  <g fill="#F4EBDD">
+    <path d="M520 578H1016L942 590H594Z"/>
+    <path d="M565 612H971L906 624H630Z"/>
+    <path d="M605 646H931L876 658H660Z"/>
+    <path d="M638 680H898L850 692H686Z"/>
+    <path d="M675 714H861L825 726H711Z"/>
+    <path d="M712 748H824L796 760H740Z"/>
+  </g>
+  <g fill="#2D6D9A">
+    <path d="M535 596H1001L930 605H606Z"/>
+    <path d="M587 630H949L890 639H646Z"/>
+    <path d="M627 664H909L862 673H674Z"/>
+    <path d="M666 698H870L834 707H702Z"/>
+  </g>
+</g>
+
+<circle cx="768" cy="512" r="286" fill="none" stroke="#E1AB30" stroke-width="8"/>
+</svg>
