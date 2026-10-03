@@ -11,6 +11,7 @@ const { expandQuery, rankProvisions, retrievalGate, retrievalSufficiency, explic
 const { topicMatch } = require('./_navigator-topics.js');
 const { annotatedHref, resourceBundle } = require('./_navigator-resources.js');
 const { buildNavigatorContextPacket } = require('./_navigator-context.js');
+const { navigatorMetric } = require('./_navigator-metrics.js');
 
 const SCENARIOS = [
   {title:'The First Twelve Years',file:'scenario-the-first-twelve-years.html',kw:['transition','ratification','day zero','article xix','merger','founding','caretaker','predecessor','union','§19.1','§19.2','§19.3','§19.5','§19.6','§19.9']},
@@ -165,11 +166,20 @@ module.exports = async (req, res) => {
       const topicViews = topicProvisions.map(({ provision, relevance }) =>
         provisionView(provision, { relevance })
       );
+      const resources = resourceBundle(topicProvisions, scenarios);
+      navigatorMetric({
+        route:'deterministic-topic',
+        aiCalls:0,
+        answerState:'full',
+        gateStatus:'TOPIC_REGISTRY',
+        matchedCount:topicProvisions.length,
+        resourceCount:resources.length,
+      });
       return res.status(200).json({
         summary: topic.answer,
         provisions: topicViews,
         scenarios,
-        resources: resourceBundle(topicProvisions, scenarios),
+        resources,
         answerState: 'full',
       });
     }
@@ -184,6 +194,16 @@ module.exports = async (req, res) => {
         section: titleMatch.num,
       });
 
+      const resources = resourceBundle([{ provision:titleMatch, relevance:'Read the exact provision in the Annotated Constitution.' }], scenarios);
+      navigatorMetric({
+        route:'deterministic-title',
+        aiCalls:0,
+        answerState:'full',
+        gateStatus:'TIER_A_TITLE',
+        gateReason:'UNIQUE_FULL_PROVISION_TITLE',
+        matchedCount:1,
+        resourceCount:resources.length,
+      });
       return res.status(200).json({
         summary: `Direct provision lookup: ${titleMatch.num} — ${titleMatch.name}. The constitutional text is reproduced verbatim below; no AI paraphrase was used.`,
         provisions: [provisionView(titleMatch, {
@@ -192,20 +212,29 @@ module.exports = async (req, res) => {
           verbatim: true,
         })],
         scenarios,
-        resources: resourceBundle([{ provision:titleMatch, relevance:'Read the exact provision in the Annotated Constitution.' }], scenarios),
+        resources,
         answerState: 'full',
       });
     }
 
     if (matched.length === 0) {
+      const resources = [
+        { kind:'general', title:'Annotated Constitution', href:'annotated.html', note:'Browse the Constitution by article and provision.' },
+        { kind:'general', title:'Scenarios', href:'scenarios.html', note:'See constitutional mechanisms tested in concrete situations.' },
+      ];
+      navigatorMetric({
+        route:'resource-only',
+        aiCalls:0,
+        answerState:'resource-only',
+        gateStatus:gate.status,
+        gateReason:gate.reason,
+        resourceCount:resources.length,
+      });
       return res.status(200).json({
         summary: 'I cannot identify a controlling constitutional provision from the wording alone. The Annotated Constitution is the best place to browse by office, right, or process; if you rephrase around the relationship, event, or decision you want to test, Navigator can usually narrow it further.',
         provisions: [],
         scenarios: [],
-        resources: [
-          { kind:'general', title:'Annotated Constitution', href:'annotated.html', note:'Browse the Constitution by article and provision.' },
-          { kind:'general', title:'Scenarios', href:'scenarios.html', note:'See constitutional mechanisms tested in concrete situations.' },
-        ],
+        resources,
         answerState: 'resource-only',
       });
     }
@@ -226,6 +255,16 @@ module.exports = async (req, res) => {
           section: controlling.num,
         });
 
+        const resources = resourceBundle([{ provision:controlling, relevance:'Read the exact provision in the Annotated Constitution.' }], scenarios);
+        navigatorMetric({
+          route:'deterministic-section',
+          aiCalls:0,
+          answerState:'full',
+          gateStatus:gate.status,
+          gateReason:gate.reason,
+          matchedCount:1,
+          resourceCount:resources.length,
+        });
         return res.status(200).json({
           summary: `Direct section lookup: ${controlling.num} — ${controlling.name}. The constitutional text is reproduced verbatim below; no AI paraphrase was used.`,
           provisions: [provisionView(controlling, {
@@ -234,7 +273,7 @@ module.exports = async (req, res) => {
             verbatim: true,
           })],
           scenarios,
-          resources: resourceBundle([{ provision:controlling, relevance:'Read the exact provision in the Annotated Constitution.' }], scenarios),
+          resources,
           answerState: 'full',
         });
       }
@@ -250,7 +289,18 @@ module.exports = async (req, res) => {
         coverage: sufficiency.coverage,
         matched: matched.map(p => p.num),
       });
-      return res.status(200).json(guideFallback(question, matched, scenarios, sufficiency.reason));
+      const fallback = guideFallback(question, matched, scenarios, sufficiency.reason);
+      navigatorMetric({
+        route:'guided-fallback',
+        aiCalls:0,
+        answerState:fallback.answerState,
+        gateStatus:gate.status,
+        gateReason:gate.reason,
+        retrievalReason:sufficiency.reason,
+        matchedCount:matched.length,
+        resourceCount:fallback.resources.length,
+      });
+      return res.status(200).json(fallback);
     }
 
     const contextPacket = buildNavigatorContextPacket(question, ranked, provisions);
@@ -317,12 +367,27 @@ module.exports = async (req, res) => {
 
     const data = await upstream.json();
     const summary = data.content?.[0]?.text?.trim() || '';
+    const resources = resourceBundle(matched, scenarios);
+    navigatorMetric({
+      route:'sonnet-synthesis',
+      aiCalls:SHADOW_ENABLED && gatewayToken() ? 2 : 1,
+      answerState:'full',
+      gateStatus:gate.status,
+      gateReason:gate.reason,
+      retrievalReason:sufficiency.reason,
+      matchedCount:matched.length,
+      resourceCount:resources.length,
+      packetChars:provisionContext.length,
+      packetPrimaryCount:contextPacket.primary.length,
+      packetRelatedCount:contextPacket.related.length,
+      shadowEnabled:SHADOW_ENABLED && Boolean(gatewayToken()),
+    });
 
     return res.status(200).json({
       summary,
       provisions: matched.map(p => provisionView(p)),
       scenarios,
-      resources: resourceBundle(matched, scenarios),
+      resources,
       answerState: 'full',
     });
 
