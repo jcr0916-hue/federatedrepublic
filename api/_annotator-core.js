@@ -102,11 +102,32 @@ function mechanicCues(text, limit = 3) {
   return out;
 }
 
+function targetCoverageCues(text, limit = 10) {
+  const normalized = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!normalized) return [];
+  const sentences = normalized
+    .split(/(?<=[.!?;])\s+/g)
+    .map(x => x.trim())
+    .filter(Boolean);
+  const priority = /\b(?:must|shall|may not|cannot|only|except|unless|within \d+|not exceed|automatic|automatically|lapse|void|override|ratif|regardless|by operation of law|defined by statute|requires?)\b/i;
+  const selected = sentences.filter(sentence => priority.test(sentence));
+  const source = selected.length ? selected : sentences;
+  const out = [];
+  for (const sentence of source) {
+    const clipped = sentence.length > 500
+      ? sentence.slice(0, 497).replace(/\s+\S*$/, '') + '...'
+      : sentence;
+    if (!out.includes(clipped)) out.push(clipped);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
 function formatProvision(prov, label) {
   return `${label} [${prov.num}] ${prov.name}\n${prov.text}`;
 }
 
-function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 6) {
+function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 4) {
   const articles = data.filter((article) => Array.isArray(article.provisions));
   const all = articles.flatMap((article) =>
     article.provisions.map((prov) => ({ ...prov, article: article.heading }))
@@ -160,12 +181,16 @@ function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 6)
   const articleIndex = sameArticle
     .map(p => `[${p.num}] ${p.name}`)
     .join('\n');
+  const targetCues = targetCoverageCues(target.text, 10);
 
   const sections = [
     'SOURCE PACKET — generated deterministically from constitution_data.json',
     '',
     'TARGET PROVISION',
     formatProvision(target, 'TARGET'),
+    '',
+    'TARGET COVERAGE CUES — verbatim target sentences selected mechanically for thresholds, limits, defaults, exceptions, fallbacks, and consequences; material cues should not be displaced by related-provision discussion',
+    targetCues.length ? targetCues.map(cue => `- ${cue}`).join('\n') : '(none)',
     '',
     'RELATED EXACT-TEXT PROVISIONS',
     related.length
@@ -221,6 +246,7 @@ module.exports = {
   getConstitutionData,
   extractRefs,
   mechanicCues,
+  targetCoverageCues,
   similarityScore,
   buildContextPacket,
   buildAnnotationUserPrompt,
