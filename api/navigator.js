@@ -9,6 +9,7 @@ const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-
 const { expandQuery, rankProvisions, retrievalGate, retrievalSufficiency, explicitSectionRefs, uniqueTitleMatch, contextualSectionRefs } = require('./_navigator-core.js');
 const { topicMatch } = require('./_navigator-topics.js');
 const { annotatedHref, resourceBundle } = require('./_navigator-resources.js');
+const { buildNavigatorContextPacket } = require('./_navigator-context.js');
 
 const SCENARIOS = [
   {title:'The First Twelve Years',file:'scenario-the-first-twelve-years.html',kw:['transition','ratification','day zero','article xix','merger','founding','caretaker','predecessor','union','§19.1','§19.2','§19.3','§19.5','§19.6','§19.9']},
@@ -251,15 +252,16 @@ module.exports = async (req, res) => {
       return res.status(200).json(guideFallback(question, matched, scenarios, sufficiency.reason));
     }
 
-    const provisionContext = matched.map(p => `[${p.num}] ${p.name}\n${p.text}`).join('\n\n');
+    const contextPacket = buildNavigatorContextPacket(question, ranked, provisions);
+    const provisionContext = contextPacket.packet;
 
     const envTag = `env:${process.env.VERCEL_ENV || 'local'}`;
     const primaryPromise = anthropicMessage({
       model: MODEL,
       max_tokens: 420,
       temperature: 0,
-      system: `You are a plain language guide to the Federated Republic constitution. Answer the user's question in the first sentence. Use only the supplied constitutional provisions. Answer fully where the supplied text establishes the answer. If it establishes only part of the answer, answer that part and state clearly what the Constitution does not establish. If the user asks why a structure exists or asks for design rationale, distinguish what the constitutional text establishes from any motive or rationale it does not state; do not invent an authorial purpose. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. Preserve material qualifiers, thresholds, conditions, and distinctions. After answering directly, include every material consequence, exception, continuation rule, and fallback from the supplied provisions that is necessary to answer the question; do not omit a directly relevant downstream consequence merely for brevity. Where multiple supplied provisions govern different stages or mechanisms, distinguish them clearly. Write 3-5 concise sentences as needed. Plain text only — no headings, bullets, or formatting.`,
-      messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nProvisions:\n${provisionContext}` }],
+      system: `You are a plain language guide to the Federated Republic constitution. The application has already performed retrieval and assembled a verified SOURCE PACKET. Answer the user's question in the first sentence. Use only the supplied packet. Answer fully where the supplied text establishes the answer. If it establishes only part of the answer, answer that part and state clearly what the Constitution does not establish. If the user asks why a structure exists or asks for design rationale, distinguish what the constitutional text establishes from any motive or rationale it does not state; do not invent an authorial purpose. Do not add any unstated power, procedure, deadline, remedy, exception, historical fact, reconciliation, or mechanism for changing or avoiding a constitutional rule. Do not infer that a rule can be altered only by amendment, repeal, reassignment, statute, or any other mechanism unless the supplied provisions expressly state that. Preserve material qualifiers, thresholds, conditions, and distinctions. After answering directly, include every material consequence, exception, continuation rule, and fallback from the supplied provisions that is necessary to answer the question; do not omit a directly relevant downstream consequence merely for brevity. Where multiple supplied provisions govern different stages or mechanisms, distinguish them clearly. Treat PRIMARY provisions as the retrieval layer's best evidence; RELATED and BACKLINK provisions expose explicit dependencies but are not automatically controlling. If the packet does not establish a requested fact or reconciliation, say so. Write 3-5 concise sentences as needed. Plain text only — no headings, bullets, or formatting.`,
+      messages: [{ role: 'user', content: provisionContext }],
       tags: ['feature:navigator', 'role:primary', envTag],
     });
 
@@ -268,7 +270,7 @@ module.exports = async (req, res) => {
           model: SHADOW_MODEL,
           max_tokens: 260,
           system: `You are a bounded constitutional QA evaluator. Use only the supplied provisions. Return ONLY valid JSON with keys: status, answer, sources. status must be ANSWER, ESCALATE, or NOT_ESTABLISHED. Use ANSWER only if the question can be answered directly from the supplied text without adding any unstated procedure, deadline, remedy, authority, or factual assumption. Use ESCALATE if multiple provisions must be reconciled, the text is ambiguous, or interpretation beyond explicit text is required. Use NOT_ESTABLISHED if the supplied text does not establish the requested fact. sources must contain only section numbers present in the supplied packet.`,
-          messages: [{ role: 'user', content: `Question: ${question.trim()}\n\nDeterministic gate: ${gate.status} / ${gate.reason}\n\nProvisions:\n${provisionContext}` }],
+          messages: [{ role: 'user', content: `Deterministic gate: ${gate.status} / ${gate.reason}\n\n${provisionContext}` }],
           tags: ['feature:navigator', 'role:shadow', envTag],
         }).catch(error => ({ error }))
       : Promise.resolve(null);
