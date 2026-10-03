@@ -367,13 +367,15 @@ module.exports = async (req, res) => {
 
     let data = await upstream.json();
     let summary = data.content?.[0]?.text?.trim() || '';
+    let completionRetried = false;
 
     if (data.stop_reason === 'max_tokens') {
+      completionRetried = true;
       const retry = await anthropicMessage({
         model: MODEL,
         max_tokens: 900,
         temperature: 0,
-        system: `You are a plain language guide to the Federated Republic constitution. The application has already performed retrieval and assembled a verified SOURCE PACKET. Use only the supplied packet. Do not invent or synthesize a rule that the text does not establish. Preserve material qualifiers, thresholds, exceptions, continuation rules, and fallbacks. Do not create a general rule or remedy by stitching together separate provisions merely because they appear in the packet. If the packet does not establish the requested fact or reconciliation, say so. Rewrite the full answer from the beginning in 3-4 concise sentences and complete the final sentence. Plain text only.`,
+        system: `You are a plain language guide to the Federated Republic constitution. The application has already performed retrieval and assembled a verified SOURCE PACKET. Use only the supplied packet. Do not invent or synthesize a rule that the text does not establish. Preserve material qualifiers, thresholds, exceptions, continuation rules, and fallbacks. Do not create a general rule or remedy by stitching together separate provisions merely because they appear in the packet. Never transfer a trigger, deadline, fallback, override, or consequence from one provision to another just because the mechanisms look similar. Before saying the packet provides no rule, no limit, or only one outcome, check every supplied provision for a narrower explicit rule that directly bears on the question. If the packet does not establish the requested fact or reconciliation, say so. Rewrite the full answer from the beginning in 3-4 concise sentences and complete the final sentence. Plain text only.`,
         messages: [{ role:'user', content: provisionContext }],
         tags: ['feature:navigator', 'role:completion-retry', envTag],
       });
@@ -387,7 +389,7 @@ module.exports = async (req, res) => {
     const resources = resourceBundle(matched, scenarios);
     navigatorMetric({
       route:'sonnet-synthesis',
-      aiCalls:(SHADOW_ENABLED && gatewayToken() ? 2 : 1) + (data.stop_reason === 'max_tokens' ? 1 : 0),
+      aiCalls:(SHADOW_ENABLED && gatewayToken() ? 2 : 1) + (completionRetried ? 1 : 0),
       answerState:'full',
       gateStatus:gate.status,
       gateReason:gate.reason,
