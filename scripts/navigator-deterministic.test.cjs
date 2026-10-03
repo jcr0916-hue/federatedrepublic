@@ -396,3 +396,17 @@ test('Navigator retries a max-token synthesis instead of returning a cut-off ans
     delete require.cache[require.resolve('../api/navigator.js')];
   }
 });
+
+
+test('Navigator packet includes structural sibling provisions before unrelated context', () => {
+  const provisions = constitution.flatMap(a => a.provisions);
+  const byNum = new Map(provisions.map(p => [p.num, p]));
+  const packet = buildNavigatorContextPacket(
+    'Can the Senate block a Supreme Court seat forever under §4.4?',
+    [{ provision:byNum.get('§4.4'), score:20 }],
+    provisions
+  );
+
+  assert.match(packet.packet, /\[§4\.4\.a\] Senate Bypass — Public Confirmation/);
+  assert.match(packet.packet, /structural sibling to §4\.4/);
+});
