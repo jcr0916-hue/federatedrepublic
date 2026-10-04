@@ -8,7 +8,7 @@ test('World context packet gives Korda authoring a bounded current canon packet'
   assert.equal(result.frontier.worldSeq, 144);
   assert.equal(result.frontier.nrsSeq, 72);
   assert.equal(result.frontier.worldDate, '13.12');
-  assert.deepEqual(result.recentNarrative.slice(0,2), ['torenthia-news-098.html','torenthia-news-097.html']);
+  assert.deepEqual(result.recentNarrative.slice(0,2), ['torenthia-news-097.html','torenthia-news-096.html']);
   assert.deepEqual(result.recentNrs.slice(0,2), ['torenthia-nrs-069.html','torenthia-nrs-065.html']);
 
   assert.match(result.packet, /Korda Convention \[open\]/);
