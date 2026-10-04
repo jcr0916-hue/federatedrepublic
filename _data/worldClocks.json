@@ -143,14 +143,16 @@
         "year": 14,
         "month": 1
       },
-      "note": "Opening month and host are established; exact day and delegation lists remain unsettled."
+      "note": "Opening month and host are established; Ines Carrow is designated to lead Torenthia's delegation. Exact day and complete delegation lists remain unsettled."
     },
-    "summary": "Scheduled to open in Valedon during Y14 M1; exact day and delegation lists remain unsettled.",
-    "nextAction": "Track final scheduling, delegation designations and the opening conference agenda without implying agreement on responsibility for prior incidents.",
+    "summary": "Scheduled to open in Valedon during Y14 M1; Carrow will lead Torenthia's delegation, while the exact day and complete delegation lists remain unsettled.",
+    "nextAction": "Track final scheduling, remaining delegation designations and the opening conference agenda without implying agreement on responsibility for prior incidents.",
     "sources": [
       "torenthia-news-077",
       "torenthia-nrs-052",
-      "torenthia-news-094"
+      "torenthia-news-094",
+      "torenthia-nrs-072",
+      "torenthia-news-098"
     ],
     "arcs": [
       "lake-varda"
