@@ -7,6 +7,7 @@ const capitals = {
   Varek: 'Kellor',
   Norvane: 'Ilyr',
   Kelvant: 'Rhondel',
+  Aldenmere: 'Terenne',
 };
 // Only published profiles belong here. Facts remain in the shared statistics ledger.
 export default ['Harren', 'Varek', 'Norvane', 'Kelvant', 'Rhovane', 'Corindal', 'Aldenmere', 'Caldenmere'].map(name => {
