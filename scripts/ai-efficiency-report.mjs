@@ -124,7 +124,7 @@ export function buildEfficiencySnapshot(options = {}) {
       averagePacketToFullConstitutionRatio:Number((annotationChars.reduce((a,b) => a+b,0) / annotationChars.length / fullConstitutionChars).toFixed(3)),
     },
     navigator:{
-      model:'anthropic/claude-sonnet-4.6',
+      model:'anthropic/claude-sonnet-5',
       benchmarkCases:natural.length,
       routeCounts:navCounts,
       zeroAICases:navRows.filter(x => x.aiCalls === 0).length,
