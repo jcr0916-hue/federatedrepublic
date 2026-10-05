@@ -3,7 +3,7 @@
 
 const path = require('path');
 const { anthropicMessage, gatewayMessage, gatewayToken } = require('./_ai-transport.js');
-const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-4.6';
+const MODEL = process.env.AI_MODEL_NAVIGATOR || 'anthropic/claude-sonnet-5';
 const SHADOW_MODEL = process.env.AI_MODEL_NAVIGATOR_SHADOW || 'anthropic/claude-haiku-4.5';
 const SHADOW_ENABLED = process.env.AI_NAVIGATOR_SHADOW_ENABLED === '1';
 
