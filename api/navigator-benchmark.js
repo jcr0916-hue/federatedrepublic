@@ -48,18 +48,37 @@ module.exports = async (req,res) => {
     const contextualNums = new Set(contextualRanked.map(x=>x.provision.num));
     const ranked = [...contextualRanked,...lexicalRanked.filter(x=>!contextualNums.has(x.provision.num))].slice(0,5);
     const context = buildNavigatorContextPacket(question, ranked, provisions);
-    const {response} = await anthropicMessage({
+    let {response} = await anthropicMessage({
       model, max_tokens:600, temperature:0, system:SYSTEM,
       messages:[{role:'user',content:context.packet}],
       tags:['feature:navigator-benchmark','role:comparison',`model:${modelKey}`]
     });
-    const data = await response.json();
+    let data = await response.json();
+    const first_stop_reason = data.stop_reason || null;
+    let input_tokens = Number(data.usage?.input_tokens || 0);
+    let output_tokens = Number(data.usage?.output_tokens || 0);
+    let retried = false;
+    if (response.ok && data.stop_reason === 'max_tokens') {
+      retried = true;
+      const retry = await anthropicMessage({
+        model, max_tokens:900, temperature:0,
+        system:'You are a plain language guide to the Federated Republic constitution. The application has already performed retrieval and assembled a verified SOURCE PACKET. Use only the supplied packet. Do not invent or synthesize a rule that the text does not establish. Preserve material qualifiers, thresholds, exceptions, continuation rules, and fallbacks. Do not create a general rule or remedy by stitching together separate provisions merely because they appear in the packet. Never transfer a trigger, deadline, fallback, override, or consequence from one provision to another just because the mechanisms look similar. Before saying the packet provides no rule, no limit, or only one outcome, check every supplied provision for a narrower explicit rule that directly bears on the question. If the packet does not establish the requested fact or reconciliation, say so. Rewrite the full answer from the beginning in 3-4 concise sentences and complete the final sentence. Plain text only.',
+        messages:[{role:'user',content:context.packet}],
+        tags:['feature:navigator-benchmark','role:completion-retry',`model:${modelKey}`]
+      });
+      response = retry.response;
+      data = await response.json();
+      input_tokens += Number(data.usage?.input_tokens || 0);
+      output_tokens += Number(data.usage?.output_tokens || 0);
+    }
     return {
       id, question, model,
       status: response.status,
+      first_stop_reason,
       stop_reason: data.stop_reason || null,
-      input_tokens: data.usage?.input_tokens || null,
-      output_tokens: data.usage?.output_tokens || null,
+      retried,
+      input_tokens,
+      output_tokens,
       primary: context.primary.map(p=>p.num),
       related: context.related.map(p=>p.num),
       packet: context.packet,
