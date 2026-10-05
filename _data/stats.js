@@ -67,12 +67,12 @@ const openSlot = {
   flag: "§12.6 · Fiscal Equalization",
   headline: "The Formula Is Back in Committee",
   body:
-    "The Executive Monitor found no constitutional failure, so no ninety-day response clock is running. The Joint Committee has nevertheless reopened the statutory review, and Morantine has filed request-aging and service-burden data. No formula change or amendment position has been adopted.",
+    "The Executive Monitor found no constitutional failure, so no ninety-day response clock is running. The Joint Committee has reopened the statutory review and registered its first Month 12 submissions, including request-aging, service-burden and infrastructure-backlog material. An options memorandum is next; no formula change or amendment position has been adopted.",
   stages: [
     { when: "Done", label: "Review requested",     active: false },
     { when: "Done", label: "EM: no failure",      active: false },
-    { when: "Now",  label: "Committee reopened",  active: true  },
-    { when: "Next", label: "Options / legislation", active: false },
+    { when: "Done", label: "Committee reopened",  active: false },
+    { when: "Now",  label: "Submissions / options", active: true },
   ],
   entered: "Year 13, Month 9",
   status: "still open",
