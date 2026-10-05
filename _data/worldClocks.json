@@ -55,10 +55,12 @@
       },
       "note": "Internal non-binding 30-day target; exact organizing day not established. This does not toll the Convention clock."
     },
-    "summary": "Non-binding 30-day target; no constitutional deadline.",
-    "nextAction": "Review the preliminary compilation target without implying a required constitutional outcome.",
+    "summary": "Committee has sufficient reconciled material to begin preparing the non-binding preliminary compilation; residual archive and cost-allocation entries remain open.",
+    "nextAction": "Track preparation and publication of the preliminary compilation without implying a boundary, viability finding or required constitutional outcome.",
     "sources": [
-      "torenthia-nrs-041"
+      "torenthia-nrs-041",
+      "torenthia-nrs-073",
+      "torenthia-news-099"
     ],
     "arcs": [
       "korda"
@@ -193,12 +195,13 @@
     "timing": {
       "kind": "none"
     },
-    "summary": "Committee review active; no constitutional action deadline.",
-    "nextAction": "Track submissions, committee options and any proposed statutory amendment without implying a forced remedy.",
+    "summary": "Committee review active; first Month 12 submissions are registered and an options memorandum is next. No constitutional action deadline.",
+    "nextAction": "Track the comparative options memorandum and any proposed statutory amendment without implying an EM failure or forced remedy.",
     "sources": [
       "torenthia-nrs-018",
       "torenthia-news-068",
-      "torenthia-nrs-046"
+      "torenthia-nrs-046",
+      "torenthia-nrs-074"
     ],
     "arcs": [
       "fiscal-equalization"
