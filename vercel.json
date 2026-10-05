@@ -12,6 +12,16 @@
       }
     },
     {
+      "src": "api/navigator-benchmark.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 60,
+        "includeFiles": [
+          "constitution_data.json"
+        ]
+      }
+    },
+    {
       "src": "api/annotate.js",
       "use": "@vercel/node",
       "config": {
@@ -40,6 +50,10 @@
     {
       "src": "/api/navigator",
       "dest": "/api/navigator.js"
+    },
+    {
+      "src": "/api/navigator-benchmark",
+      "dest": "/api/navigator-benchmark.js"
     },
     {
       "src": "/api/annotate",
