@@ -92,7 +92,7 @@ module.exports = async (req,res) => {
     let verdict = 'INVALID', verifier_reason = '', verifier_input_tokens = 0, verifier_output_tokens = 0;
     if (response.ok && answer) {
       const verify = await anthropicMessage({
-        model: verifierModel, max_tokens:180, temperature:0, system:VERIFY_SYSTEM,
+        model: verifierModel, max_tokens:500, temperature:0, system:VERIFY_SYSTEM,
         messages:[{role:'user',content:`Question: ${question}\n\nEvidence packet:\n${context.packet}\n\nCandidate answer:\n${answer}`}],
         tags:['feature:navigator-benchmark','role:verifier',`candidate:${modelKey}`,`verifier:${verifierKey}`]
       });
