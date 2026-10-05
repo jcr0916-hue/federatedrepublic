@@ -1,7 +1,7 @@
 # AI Model Routing and Escalation Plan
 
 Status: Planning / testing only
-Last updated: 2026-09-29
+Last updated: 2026-10-04
 
 ## Purpose
 
@@ -357,17 +357,16 @@ At the Phase 1 inventory, every live site AI feature ran on a Sonnet-class model
 
 **`api/crossroads.js` — Living Crossroads move classifier.** Task: bounded classification — match free-text player input to one of a small offered set of fragment IDs, or `out_of_bounds`/`needs_detail`. It has strong guardrails: output is validated against the allowed ID set, a parse failure fails safe to `out_of_bounds`, and the feature has a manual fallback (player picks a move) if the classifier is unavailable at all. **Promoted 2026-10-01 to Claude Haiku 4.5 at temperature 0** after the hardened benchmark below; no always-on shadow model is enabled by default. `AI_MODEL_CROSSROADS` remains the rollback/override path and `AI_MODEL_CROSSROADS_SHADOW` can be set temporarily for observational comparison.
 
-**`api/navigator.js` — Constitution Navigator (free-text Q&A).** Task: user Q&A / retrieval. This is the feature the rest of this plan was implicitly designed around, and its retrieval layer is already built and already matches the recommended approach above — deterministic synonym-expanded keyword scoring against `constitution_data.json`, no embeddings, no vector search. The only model call left is the final step: write 3-4 grounded sentences from the top-matched provisions. Currently `claude-sonnet-4-6` (inconsistent with the other three files, which use `claude-sonnet-5` — likely just missed in an update, worth fixing regardless of the rest of this plan).
-- **Recommendation: best test bed for the actual escalation-gate prototype.** Route to a cheap model when there's a single clean top-scoring match; escalate to Sonnet when the match is weak, tied across multiple provisions, or empty. Most of Phase 4 (retrieval testing) is effectively already done in production here — what's untested is the generation/escalation split.
+**`api/navigator.js` — Constitution Navigator (free-text Q&A).** Task: user Q&A / retrieval. This is the feature the rest of this plan was implicitly designed around, and its retrieval layer is already built and already matches the recommended approach above — deterministic synonym-expanded keyword scoring against `constitution_data.json`, no embeddings, no vector search. Deterministic topic/title/section routes answer without a model; only residual questions receive a verified packet for synthesis. **As of 2026-10-04 the residual synthesis model is Claude Sonnet 5**, promoted after the same 24-case residual corpus outperformed Sonnet 4.6 under cross-model verification (see the October 4 comparison below).
+- **Recommendation: keep deterministic routing as the primary efficiency layer.** Do not add a cheaper answer tier unless production telemetry shows enough residual synthesis volume to justify it and a same-corpus benchmark clears the source-grounding bar.
 
-**`api/annotate.js` — Constitutional annotation.** Task: annotation, bounded to one already-identified provision (the fuzzy part — which provision — is resolved server-side before the model is called). Asks for synthesis across the selected provision, related provisions, and the Twelve Tests. **Benchmark complete 2026-10-01: keep Claude Sonnet 5.** Haiku 4.5 repeatedly introduced unsupported decision rules, enforcement mechanisms, audit powers, cross-reference effects, and institutional details even under a stricter source-bound prompt. The production Annotator now uses Sonnet 5 at temperature 0 with a tighter 350–500 word / 1,200-token response envelope and explicit instructions not to invent motives, remedies, cross-reference effects, or public/justiciable consequences absent from the text.
+**`api/annotate.js` — Constitutional annotation.** Task: annotation, bounded to one already-identified provision (the fuzzy part — which provision — is resolved server-side before the model is called). Asks for synthesis across the selected provision, related provisions, and the Twelve Tests. **Benchmark complete 2026-10-01: keep Claude Sonnet 5.** Haiku 4.5 repeatedly introduced unsupported decision rules, enforcement mechanisms, audit powers, cross-reference effects, and institutional details even under a stricter source-bound prompt. The production Annotator uses Sonnet 5 at temperature 0 with a 350–500 word target and explicit instructions not to invent motives, remedies, cross-reference effects, or public/justiciable consequences absent from the text. The later October 3 output-contract hardening raised the model budget to **1,600 tokens on the first attempt and 2,400 on a full rewrite** when the first response is truncated or violates the three-paragraph contract; the earlier 1,200-token note is therefore historical, not the current runtime setting.
 
-**`api/survey.js` — "So You Want a Constitution?" survey evaluation.** Task: open-ended creative/interpretive synthesis — reads a full questionnaire transcript (including free-text answers) and writes a structured, voiced, multi-field JSON evaluation with specific tone constraints (never diagnose the person, stay apolitical, deflect adversarial free-text gracefully). The code comments already say why it's on Sonnet: "this is the marquee interpretive moment and quality matters." Currently `claude-sonnet-5`.
-- **Recommendation: leave on Sonnet, independent of the rest of this plan.** This is the one feature where "use a cheaper model" and "use the necessary model" genuinely diverge. It's the site's most visible single moment, the task is voice-controlled creative writing rather than grounded lookup, and a cheaper model is most likely to go generic or tonally flat exactly where it matters most. This isn't a routing problem to solve — it's the plan's own Tier C in its natural habitat.
+**`api/survey.js` — "So You Want a Constitution?" survey evaluation.** Task: open-ended creative/interpretive synthesis — reads a full questionnaire transcript (including free-text answers) and writes a structured, voiced, multi-field JSON evaluation with specific tone constraints. **Cold storage as of 2026-10-01:** `survey.html` is omitted from the public build and `/api/survey` is not deployed, so Survey is not part of the active AI surface. Its source remains in the repository on `claude-sonnet-5`. If the feature is deliberately revived, Sonnet 5 remains the recommended default because this is voice-controlled creative/interpretive synthesis rather than bounded constitutional lookup; benchmark any cheaper replacement before changing that default.
 
-**Cold storage, 2026-10-01.** The Questionnaire has been removed from public navigation and the active AI-feature surface, its page is omitted from the public build, and its API route is no longer deployed. Source is retained in the repository so the feature can be restored later. Do not include it in active routing/model-optimization work unless it is deliberately reactivated.
+The Questionnaire/Survey source is retained specifically so the feature can be restored later. Do not include it in active routing/model-optimization work unless it is deliberately reactivated.
 
-**Net, updated 2026-10-01:** Crossroads has moved to Haiku after benchmark validation; Navigator remains on Sonnet with deterministic retrieval and bounded escalation; Annotator has completed its benchmark and remains on a hardened Sonnet configuration; Survey is in cold storage. There is no remaining planned model migration for the active public AI features.
+**Net, updated 2026-10-04:** Crossroads runs on Haiku after benchmark validation; Navigator uses deterministic routing and Sonnet 5 only for residual synthesis; Annotator remains on a hardened Sonnet 5 configuration; Survey is in cold storage. There is no remaining planned model migration for the active public AI features.
 
 ### September 30, 2026 — live Gateway benchmark
 
@@ -585,11 +584,33 @@ The benchmark directly produced additional production hardening:
 
 Targeted reruns showed these changes resolving several benchmark defects, including stage-collapse errors in statehood/devolution, MA budget overreach, omission of the active-military Legat rule, and initiative-vs-Legislature symmetry errors. A Supreme Court vacancy/Senate-blocking question still showed occasional cross-trigger overreach across repeated runs, so common high-risk procedural paths remain candidates for further deterministic topic coverage if production traffic justifies it.
 
-Decision: **retain Sonnet 4.6 as Navigator's residual synthesis model and do not add a Haiku answer tier.** The simpler architecture remains preferred:
+Decision at that stage: **retain Sonnet 4.6 as Navigator's residual synthesis model and do not add a Haiku answer tier.** The simpler architecture remained preferred:
 `deterministic routing → bounded verified packet → Sonnet only when synthesis is genuinely required`.
+
+That model pin was superseded by the October 4 same-corpus Sonnet 5 comparison below.
 
 The temporary benchmark endpoints used for this measurement are removed after testing; benchmark code is not part of the public production API.
 
+
+### October 4, 2026 — Sonnet 5 vs Sonnet 4.6 residual comparison
+
+Navigator's **same 24 genuine residual synthesis cases** were rerun through the current production-style deterministic packet and current synthesis prompt at temperature 0. Both candidates used the normal 600-token budget with the same one-time 900-token full-rewrite fallback.
+
+To avoid letting Sonnet 5 grade itself, the primary comparison used **Sonnet 4.6 as the strict verifier** against the exact packet supplied to each candidate:
+
+- **Claude Sonnet 4.6:** 21/24 verifier PASS (87.5%); 3 answers were incomplete.
+- **Claude Sonnet 5:** 23/24 verifier PASS (95.8%); 1 answer was incomplete.
+
+The 4.6 misses were material to Navigator's risk model: one answer stopped short on a changed-Monitor-finding interpretation, one hedged away from the initiative-versus-Legislature distinction, and one omitted the appropriation/revenue restriction from §13.2. Sonnet 5 passed all three of those cases. Its single flagged answer concerned indirect budgetary control of the Monetary Authority: it stated the independence rule and the absence of a specific funding mechanism, but did not state strongly enough that any budget mechanism that compromises the MA's constitutional functions would itself violate §12.1.a.
+
+A reverse verifier check pointed in the same qualitative direction but was noisier because the Sonnet 5 verifier sometimes consumed its verdict budget before emitting the required one-line disposition. The cross-model 4.6-verifier result is therefore the cleaner decision basis.
+
+Provider-reported token usage also showed that lower Sonnet 5 unit pricing does **not** automatically mean a cheaper Navigator request. In one complete 24-case run, Sonnet 4.6 used 119,132 input / 7,592 output tokens (about $0.471 at then-current rates), while Sonnet 5 used 186,118 input / 10,017 output tokens (about $0.472). For this workload the measured cost was effectively neutral because Sonnet 5 reported more tokens, so the promotion is justified on **capability**, not an assumed 33% request-cost reduction.
+
+Decision: **promote Navigator residual synthesis to Claude Sonnet 5.** Keep the existing architecture unchanged otherwise:
+`deterministic routing → bounded verified packet → Sonnet 5 only when synthesis is genuinely required`.
+
+The comparison endpoint was temporary and is not part of the production API.
 
 ### October 2, 2026 — Deterministic coverage for repeated high-risk procedures
 
