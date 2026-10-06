@@ -1426,5 +1426,40 @@
         "label": "Enter the contemporary World record"
       }
     ]
+  },
+  "scenario-the-first-war": {
+    "summary": "An invasion begins during Phase 1 before the permanent defense chain is complete. The transition bridge permits immediate defense while forcing command, authorization and funding into the ordinary constitutional system as permanent institutions come online.",
+    "provisions": [
+      {
+        "ref": "§19.3.a",
+        "label": "Transition national-defense continuity"
+      },
+      {
+        "ref": "§19.3",
+        "label": "Caretaker authority and its limits"
+      },
+      {
+        "ref": "§14.1",
+        "label": "Authorized purposes for military force"
+      },
+      {
+        "ref": "§14.5",
+        "label": "State forces"
+      }
+    ],
+    "links": [
+      {
+        "url": "scenario-the-first-twelve-years.html",
+        "label": "Read the larger transition: The First Twelve Years"
+      },
+      {
+        "url": "scenario-alliance-clause.html",
+        "label": "Compare: The Alliance Clause — ordinary treaty-based military authority"
+      },
+      {
+        "url": "annotated.html#s19-3a",
+        "label": "Read §19.3.a in the annotated Constitution"
+      }
+    ]
   }
 }
