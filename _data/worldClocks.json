@@ -195,13 +195,15 @@
     "timing": {
       "kind": "none"
     },
-    "summary": "Committee review active; first Month 12 submissions are registered and an options memorandum is next. No constitutional action deadline.",
-    "nextAction": "Track the comparative options memorandum and any proposed statutory amendment without implying an EM failure or forced remedy.",
+    "summary": "Committee review active; a staff options memorandum now compares transparency-only, recurring-service-burden, and blended backlog/request-persistence approaches. No constitutional action deadline.",
+    "nextAction": "Track committee discussion, any request for distributional estimates, and any draft statutory language without implying an EM failure or forced remedy.",
     "sources": [
       "torenthia-nrs-018",
       "torenthia-news-068",
       "torenthia-nrs-046",
-      "torenthia-nrs-074"
+      "torenthia-nrs-074",
+      "torenthia-nrs-076",
+      "torenthia-news-100"
     ],
     "arcs": [
       "fiscal-equalization"
