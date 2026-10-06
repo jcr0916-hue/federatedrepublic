@@ -1255,9 +1255,9 @@ Day Zero is the date the ratification threshold is certified as achieved. Upon r
 
 ### §19.3.a — Transition National-Defense Continuity
 
-Before the ordinary constitutional defense actors are capable, predecessor national institutions may exercise only the military and defense authority reasonably necessary against actual or imminent invasion or armed attack, or to carry out a specifically required inherited treaty obligation. Existing command, defense funding, mobilization, procurement, and operational authorities continue only to that extent. State forces may be called into federal service for defense against invasion or armed attack until the Legislature is capable. Authority transfers automatically, function by function, as the responsible constitutional officers and institutions become capable.
+Before the ordinary constitutional defense actors are capable, predecessor national institutions may exercise only the military and defense authority reasonably necessary against actual or imminent invasion or armed attack, or to carry out a specifically required inherited treaty obligation. Existing command, defense funding, mobilization, procurement, and operational authorities continue only to that extent. State forces may be called into federal service for defense against invasion or armed attack until the Legislature is capable. Authority transfers automatically, function by function, as the responsible constitutional officers and institutions become capable. An operation begun under the transition bridge may continue for no more than 60 days after the Legislature becomes capable unless constitutionally authorized sooner; the Legat Consul must submit it for authorization or begin orderly cessation within 14 days of taking office.
 
-- **Cross-refs:** §14.1, §14.5, §19.3, §19.5
+- **Cross-refs:** §2.2, §14.1, §14.5, §19.3, §19.5
 - **Limits:** does not postpone elections or transition milestones, extend terms, alter territorial status, suspend Article I, or authorize unrelated hostilities
 
 ### §19.4 — Pre-Constitutional Classified Documents
