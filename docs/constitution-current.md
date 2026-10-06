@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 177 provisions**
+> **20 articles · 178 provisions**
 
 thefederatedrepublic.org
 
