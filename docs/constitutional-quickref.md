@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 176 provisions**
+> **20 articles · 177 provisions**
 
 ---
 
@@ -28,7 +28,7 @@
 - **Article XII — Social State and Economic Rights**  ·  §12.1–§12.6  (8 provisions)
 - **Article XIII — Direct Democracy**  ·  §13.1–§13.2  (2 provisions)
 - **Article XIV — Military Authorization and Accountability**  ·  §14.1–§14.5  (5 provisions)
-- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.10  (12 provisions)
+- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.10  (13 provisions)
 - **Article XVI — Indigenous Sovereignty**  ·  §16.1–§16.5  (5 provisions)
 - **Article XVII — Constitutional Amendments**  ·  §17.1–§17.4  (4 provisions)
 - **Article XVIII — Federal Property and National Trust**  ·  §18.1–§18.5  (5 provisions)
@@ -445,8 +445,9 @@ The Legislature may establish independent agencies operating outside the authori
 
 ### §3.10 — Federal Legislative Competence
 
-The Legislature holds general authority to legislate for the peace, order, and good governance of the Republic. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities.
+The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments and are allocated in accordance with §15.8 and §15.8.a.
 
+- **Cross-refs:** §15.8, §15.8.a
 
 ### §3.11 — Delegation of Authority
 
@@ -1093,8 +1094,14 @@ A State's constitutional boundaries are fixed. No constitutional mechanism permi
 
 ### §15.8 — Local Government
 
-Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as primary points of contact between citizens and government. They are entitled to reasonable fiscal capacity to carry out their constitutional functions.
+Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as primary points of contact between citizens and government. They are entitled to reasonable fiscal, legal, and administrative capacity to carry out the lawful functions assigned to them.
 
+
+### §15.8.a — Subsidiarity and Local Capacity
+
+(1) Public functions not expressly assigned by this Constitution to the Republic or another constitutional institution shall be exercised at the most local level of government reasonably capable of performing them effectively and consistently with this Constitution. (2) States retain authority to allocate ordinary governmental functions between State and local governments consistent with subsection (1), Article…
+
+- **Cross-refs:** §15.8, §3.10
 
 ### §15.9 — Voluntary State Independence
 
@@ -1238,12 +1245,12 @@ This constitution takes effect upon: (1) interim Elections Panel certification t
 
 ### §19.2 — Day Zero and Transition
 
-Day Zero is the date the ratification threshold is certified as achieved. Upon ratification, all laws conflicting with the Individual Sovereignty Floor are immediately null and void; all public assets transfer to the NRS; and the 24-month Transition Window begins.
+Day Zero is the date the ratification threshold is certified as achieved. Upon ratification, all laws conflicting with the Individual Sovereignty Floor are immediately null and void; all public assets, liabilities, rights, and obligations of the predecessor national government vest in the Republic by constitutional operation subject to this Constitution, and the authoritative records necessary to establish them…
 
 
 ### §19.3 — Caretaker Status
 
-All existing government officials serve as caretakers during the Transition Window — restricted to maintaining existing services only; no new permanent legislation. Legislation enacted in violation of this restriction is void; the joint Monitor panel's supervision includes monitoring for such violations and publishing findings to the NRS; any Inhabitant may challenge such legislation before a court of competent…
+(1) Officials and institutions of the predecessor national government whose authority is displaced or superseded by this Constitution continue during the Transition Window only in caretaker capacity as necessary to preserve lawful government, existing services, rights, obligations, and public safety. Existing State, territorial, Indigenous, and local governments continue under their own lawful authority except to…
 
 
 ### §19.4 — Pre-Constitutional Classified Documents
@@ -1264,7 +1271,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.6 — Transition Territories
 
-(1) Territories or subdivisions meeting the Statehood Audit by Phase 2 end may petition to enter as State or Territory. Those failing the Statehood Audit enter as Territory and may begin the Statehood Audit immediately.
+(1) Territories or subdivisions whose entry status depends upon qualification during the Transition Window may seek State status through a Statehood Audit completed by the end of Phase 2. An entity that does not achieve the required audit enters as a Territory and may begin the ordinary Statehood pathway under §15.2 immediately.
 
 - **Cross-refs:** §15.2
 
@@ -1296,6 +1303,7 @@ Where this Constitution requires a statutory independent agency or other permane
 
 (1) At the first Senate seating, senators are assigned to three approximately equal cohorts by public lot: the first cohort serves an initial term of two years, the second four years, the third six years; thereafter all Senate terms are six years. The lot is conducted by the Elections Panel and published to the NRS before the first senators take the constitutional oath.
 
+- **Cross-refs:** §4.3, §4.4
 
 ---
 
@@ -1396,4 +1404,3 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
 | §19.8 | Transitional Accountability Mechanism | no amendment may expand the scope without the same 2/3 majority |
 | §20.6 | Compact Ratification | A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3 |
-
