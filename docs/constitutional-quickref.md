@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 177 provisions**
+> **20 articles · 178 provisions**
 
 ---
 
@@ -32,7 +32,7 @@
 - **Article XVI — Indigenous Sovereignty**  ·  §16.1–§16.5  (5 provisions)
 - **Article XVII — Constitutional Amendments**  ·  §17.1–§17.4  (4 provisions)
 - **Article XVIII — Federal Property and National Trust**  ·  §18.1–§18.5  (5 provisions)
-- **Article XIX — Transition and Ratification**  ·  §19.1–§19.10  (10 provisions)
+- **Article XIX — Transition and Ratification**  ·  §19.1–§19.10  (11 provisions)
 - **Article XX — Associated Communities**  ·  §20.1–§20.7  (7 provisions)
 
 ---
@@ -445,7 +445,7 @@ The Legislature may establish independent agencies operating outside the authori
 
 ### §3.10 — Federal Legislative Competence
 
-The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments and are allocated in accordance with §15.8 and §15.8.a. Subsidiarity does not itself create federal legislative competence.
+The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments and are allocated in accordance with §15.8 and §15.8.a.
 
 - **Cross-refs:** §15.8, §15.8.a
 
@@ -1099,7 +1099,7 @@ Local governments — cities, counties, municipalities, and other subdivisions �
 
 ### §15.8.a — Subsidiarity and Local Capacity
 
-Public functions not constitutionally assigned elsewhere belong at the most local level reasonably capable of performing them. Responsibility may move upward for incapacity, material failure, cross-jurisdictional effects, or necessary coordination, but federal action still requires an independent source of federal competence under §3.10; this section does not itself create federal legislative competence.
+(1) Public functions not expressly assigned by this Constitution to the Republic or another constitutional institution shall be exercised at the most local level of government reasonably capable of performing them effectively and consistently with this Constitution. (2) States retain authority to allocate ordinary governmental functions between State and local governments consistent with subsection (1), Article…
 
 - **Cross-refs:** §15.8, §3.10
 
@@ -1255,10 +1255,11 @@ Day Zero is the date the ratification threshold is certified as achieved. Upon r
 
 ### §19.3.a — Transition National-Defense Continuity
 
-Before the ordinary constitutional defense actors are capable, predecessor national institutions may exercise only the military and defense authority reasonably necessary against actual or imminent invasion or armed attack, or to carry out a specifically required inherited treaty obligation. Existing command, defense funding, mobilization, procurement, and operational authorities continue only to that extent. State forces may be called into federal service for defense against invasion or armed attack until the Legislature is capable. Authority transfers automatically, function by function, as the responsible constitutional officers and institutions become capable. An operation begun under the transition bridge may continue for no more than 60 days after the Legislature becomes capable unless constitutionally authorized sooner; the Legat Consul must submit it for authorization or begin orderly cessation within 14 days of taking office.
+(1) Until the Legat Consul and Legislature are constitutionally capable of exercising their respective national-defense authorities, predecessor national institutions continuing under §19.3 may exercise only the military and defense authority reasonably necessary to defend the Republic, its territory, population, and forces against actual or imminent invasion or armed attack, or to carry out military action…
 
-- **Cross-refs:** §2.2, §14.1, §14.5, §19.3, §19.5
-- **Limits:** does not postpone elections or transition milestones, extend terms, alter territorial status, suspend Article I, or authorize unrelated hostilities
+- **Time limits:**
+  - within 14 days after taking office, the Legat Consul must submit the operation for legislative authorization or begin orderly cessation
+- **Cross-refs:** §14.1, §14.5, §19.3, §19.5, §2.2
 
 ### §19.4 — Pre-Constitutional Classified Documents
 
@@ -1269,16 +1270,16 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.5 — Pre-Existing Obligations
 
-(1) The Republic assumes the public debt obligations of its predecessor government as a constitutional matter — it does not inherit a clean slate. (2) Active military operations already underway on Day Zero continue under existing authorization pending ordinary constitutional review; new military action arising before the ordinary defense actors are capable is governed by §19.3.a.
+(1) The Republic assumes the public debt obligations of its predecessor government as a constitutional matter — it does not inherit a clean slate. (2) Active military operations of the prior government continue under existing authorization until the §2.2 military authorization framework can apply; the Legat Consul, once inaugurated, must assess each active operation against the authorized purposes under §14.1 and…
 
 - **Time limits:**
   - 1 and either link it to legislative authorization within 14 days or begin orderly cessation
   - operations not so linked within 60 days cease unless the Legislature grants a one-time authorization
-- **Cross-refs:** §1.19.a, §14.1, §2.2, §3.6
+- **Cross-refs:** §1.19.a, §14.1, §19.3.a, §2.2, §3.6
 
 ### §19.6 — Transition Territories
 
-Entities whose founding status depends on qualification use the Phase 2 audit route. Political entities entering as founding States under subsection (6) are full States for all constitutional purposes from Day Zero, including Senate constitution and legislative seating, and enter the ordinary biennial Statehood Audit cycle after Phase 4.
+(1) Territories or subdivisions whose entry status depends upon qualification during the Transition Window may seek State status through a Statehood Audit completed by the end of Phase 2. An entity that does not achieve the required audit enters as a Territory and may begin the ordinary Statehood pathway under §15.2 immediately.
 
 - **Cross-refs:** §15.2
 
@@ -1318,7 +1319,7 @@ Where this Constitution requires a statutory independent agency or other permane
 
 ### §20.1 — Nature of Associated Community Status
 
-An Associated Community is a sovereign political community that remains outside the Republic while maintaining a consensual compact relationship with it. Its compact may establish reciprocal rights, services, responsibilities, institutional cooperation, and other agreed relations without incorporating the community into the Republic or subjecting it to the Republic's constitutional governmental structure.
+An Associated Community is a sovereign political community that remains outside the Republic while maintaining a consensual compact relationship with it under this Article. The compact may establish reciprocal rights, services, responsibilities, institutional cooperation, and other agreed relations without incorporating the Associated Community into the Republic or subjecting it to the Republic's constitutional…
 
 - **Cross-refs:** §15.9, §16.2
 
@@ -1411,3 +1412,4 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
 | §19.8 | Transitional Accountability Mechanism | no amendment may expand the scope without the same 2/3 majority |
 | §20.6 | Compact Ratification | A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3 |
+
