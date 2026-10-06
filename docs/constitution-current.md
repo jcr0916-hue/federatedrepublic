@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 176 provisions**
+> **20 articles · 177 provisions**
 
 thefederatedrepublic.org
 
@@ -387,7 +387,7 @@ The Legislature may establish independent agencies operating outside the authori
 
 ### §3.10 — Federal Legislative Competence
 
-The Legislature holds general authority to legislate for the peace, order, and good governance of the Republic. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where federal law and State law conflict, federal law prevails to the extent of the conflict. The Legislature may set minimum standards that States must meet but may not direct State institutions as instruments of federal administration. Where this Constitution directs that a function, standard, procedure, or framework be established, defined, or regulated, that obligation is fulfilled by statute unless this Constitution specifies otherwise. No executive or administrative act may substitute for legislation where this Constitution requires statutory action.
+The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments and are allocated in accordance with §15.8 and §15.8.a. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where a valid federal law enacted within federal competence conflicts with State or local law, federal law prevails to the extent of the conflict. The Legislature may establish minimum standards only where this Constitution assigns the Republic responsibility for the subject, where necessary to secure Article I rights or another express constitutional obligation, or where §15.8.a authorizes action at the federal level. The Legislature may not direct State or local institutions as instruments of federal administration except where this Constitution expressly provides otherwise. Where this Constitution directs that a federal function, standard, procedure, or framework be established, defined, or regulated, that obligation is fulfilled by statute unless this Constitution specifies otherwise. No executive or administrative act may substitute for legislation where this Constitution requires statutory action.
 
 ### §3.11 — Delegation of Authority
 
@@ -1093,7 +1093,21 @@ A State's constitutional boundaries are fixed. No constitutional mechanism permi
 
 ### §15.8 — Local Government
 
-Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as primary points of contact between citizens and government. They are entitled to reasonable fiscal capacity to carry out their constitutional functions. States may not systematically defund local governments to achieve de facto centralization of State-level functions.
+Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as primary points of contact between citizens and government. They are entitled to reasonable fiscal, legal, and administrative capacity to carry out the lawful functions assigned to them. States may not systematically defund, disable, or preempt local governments for the purpose of achieving de facto centralization of functions that local government remains reasonably capable of performing.
+
+### §15.8.a — Subsidiarity and Local Capacity
+
+(1) Public functions not expressly assigned by this Constitution to the Republic or another constitutional institution shall be exercised at the most local level of government reasonably capable of performing them effectively and consistently with this Constitution.
+
+(2) States retain authority to allocate ordinary governmental functions between State and local governments consistent with subsection (1), Article I, and the constitutional status of local government under §15.8.
+
+(3) Responsibility may move to a higher level of government where the lower level lacks reasonable capacity to perform the function, materially fails a constitutional or lawful minimum standard applicable to it, the matter produces material effects across jurisdictions that cannot reasonably be resolved at the lower level, or coordination at the higher level is reasonably necessary to discharge an express constitutional obligation. Federal action additionally requires federal competence under §3.10.
+
+(4) Action by a higher level under subsection (3) shall be limited to the scope and duration reasonably necessary to address the incapacity, failure, cross-jurisdictional effect, or coordination need. Responsibility returns to the lower level when that justification no longer exists, except where lawfully reassigned under an independent constitutional authority.
+
+(5) No higher level of government may create or maintain lower-level incapacity through systematic denial of the fiscal, legal, or administrative means reasonably necessary to perform an assigned function and then rely on that incapacity as grounds for centralizing the function.
+
+(6) This section does not diminish Article I, Indigenous sovereignty under Article XVI, the self-government of States, or any function expressly assigned by this Constitution.
 
 ### §15.9 — Voluntary State Independence
 
@@ -1223,11 +1237,15 @@ This constitution takes effect upon: (1) interim Elections Panel certification t
 
 ### §19.2 — Day Zero and Transition
 
-Day Zero is the date the ratification threshold is certified as achieved. Upon ratification, all laws conflicting with the Individual Sovereignty Floor are immediately null and void; all public assets transfer to the NRS; and the 24-month Transition Window begins. The Republic exists the moment the Elections Panel certifies the threshold. The constitution is implemented through a four-phase transition: Phase 0 — pre-ratification preparation, during which the interim Elections Panel is constituted, the NVS certified operational, and the joint Monitor panel formed; Phase 1 — Emergency Stabilization (Days 1–90), during which existing officials serve as caretakers and social state continuity is the priority; Phase 2 — Institutional Construction (Days 91–270), during which Statehood Audits are conducted, Monitors formally constituted, and the NVS fully deployed; Phase 3 — First Elections (Days 271–450), encompassing the first federal electoral period and inaugural executive and judicial appointments; Phase 4 — Full Constitutional Operation, beginning the day the first Legislature convenes and the first executives take the constitutional oath.
+Day Zero is the date the ratification threshold is certified as achieved. Upon ratification, all laws conflicting with the Individual Sovereignty Floor are immediately null and void; all public assets, liabilities, rights, and obligations of the predecessor national government vest in the Republic by constitutional operation subject to this Constitution, and the authoritative records necessary to establish them are transferred or registered to the NRS as provided by law; and the 24-month Transition Window begins. The Republic exists the moment the Elections Panel certifies the threshold. The constitution is implemented through a four-phase transition: Phase 0 — pre-ratification preparation, during which the interim Elections Panel is constituted, the NVS certified operational, and the joint Monitor panel formed; Phase 1 — Emergency Stabilization (Days 1–90), during which predecessor national officials whose authority is displaced or superseded serve as caretakers and social state continuity is the priority; Phase 2 — Institutional Construction (Days 91–270), during which transition status determinations and any required Statehood Audits are conducted, Monitors formally constituted, and the NVS fully deployed; Phase 3 — First Elections (Days 271–450), encompassing the first federal electoral period and inaugural executive and judicial appointments; Phase 4 — Full Constitutional Operation, beginning the day the first Legislature convenes and the first executives take the constitutional oath.
 
 ### §19.3 — Caretaker Status
 
-All existing government officials serve as caretakers during the Transition Window — restricted to maintaining existing services only; no new permanent legislation. Legislation enacted in violation of this restriction is void; the joint Monitor panel's supervision includes monitoring for such violations and publishing findings to the NRS; any Inhabitant may challenge such legislation before a court of competent jurisdiction. Transition is supervised by a joint Monitor panel of one representative per Monitor; the panel dissolves automatically at the Transition Window's conclusion. During Phase 0, before Monitor Generals are constituted, the interim Elections Panel constitutes the panel from a pre-qualified pool established by the ratification convention; from Phase 2, each Monitor General appoints their representative to the panel for the remainder of the Transition Window. A Monitor General appointment supersedes any interim Elections Panel appointment for that Monitor's seat.
+(1) Officials and institutions of the predecessor national government whose authority is displaced or superseded by this Constitution continue during the Transition Window only in caretaker capacity as necessary to preserve lawful government, existing services, rights, obligations, and public safety. Existing State, territorial, Indigenous, and local governments continue under their own lawful authority except to the extent this Constitution expressly provides otherwise.
+
+(2) A caretaker legislature may enact only measures reasonably necessary for continuity, rights, existing obligations, public safety, or implementation of this Article. No such measure may permanently restructure the constitutional government or bind the first Legislature beyond what is reasonably necessary for continuity. A measure intended to continue after Phase 4 remains subject to continuation, amendment, or repeal by the first Legislature. Legislation enacted outside these limits is void; the joint Monitor panel's supervision includes monitoring for violations and publishing findings to the NRS; any Inhabitant may challenge such legislation before a court of competent jurisdiction.
+
+(3) Transition is supervised by a joint Monitor panel of one representative per Monitor; the panel dissolves automatically at the Transition Window's conclusion. During Phase 0, before Monitor Generals are constituted, the interim Elections Panel constitutes the panel from a pre-qualified pool established by the ratification convention; from Phase 2, each Monitor General appoints their representative to the panel for the remainder of the Transition Window. A Monitor General appointment supersedes any interim Elections Panel appointment for that Monitor's seat.
 
 ### §19.4 — Pre-Constitutional Classified Documents
 
@@ -1243,25 +1261,25 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 (4) All benefit obligations to persons who served in military or national service under the prior government are inherited and honored; the Legislature must pass a Veterans and National Service Benefits Act within the first budget cycle following Phase 4.
 
-(5) The Republic is the legal continuation of the prior government as a matter of international law; all international obligations, financial commitments, treaty relationships, and contractual obligations of the prior government are assumed as successor sovereign. Where an assumed international obligation conflicts with this constitution, the Republic is bound to renegotiate or formally supersede the obligation through the treaty process under §3.6; until that process is complete, the obligation is honored to the minimum extent required by international law without requiring any constitutional officer to violate Article I or any non-derogable right under §1.19.a.
+(5) The Republic succeeds to and shall act as the legal continuation of the prior government in its international relations; all international obligations, financial commitments, treaty relationships, and contractual obligations of the prior government are assumed as successor sovereign. Where an assumed international obligation conflicts with this constitution, the Republic is bound to renegotiate or formally supersede the obligation through the treaty process under §3.6; until that process is complete, the obligation is honored to the minimum extent required by international law without requiring any constitutional officer to violate Article I or any non-derogable right under §1.19.a.
 
 (6) From Day Zero, an independent judicial forum must remain continuously available for Article I claims arising from the nullification or displacement of predecessor law. Failure to establish or staff the permanent federal judiciary does not suspend jurisdiction or remedy. A temporary judicial mechanism may exercise only the authority necessary to preserve constitutional rights and ends automatically when the permanent judiciary is constitutionally capable of exercising the relevant jurisdiction.
 
 ### §19.6 — Transition Territories
 
-(1) Territories or subdivisions meeting the Statehood Audit by Phase 2 end may petition to enter as State or Territory. Those failing the Statehood Audit enter as Territory and may begin the Statehood Audit immediately.
+(1) Territories or subdivisions whose entry status depends upon qualification during the Transition Window may seek State status through a Statehood Audit completed by the end of Phase 2. An entity that does not achieve the required audit enters as a Territory and may begin the ordinary Statehood pathway under §15.2 immediately.
 
 (2) Any territory may choose Territory status by simple legislative vote regardless of whether it meets the Statehood Audit.
 
 (3) Prior government states or territories may voluntarily subdivide during the Transition Window by vote of their existing legislative body; new subdivisions are treated as separate petitioning entities.
 
-(4) Where a State fails the Phase 2 Statehood Audit, it enters as a Territory; its population retains all Article I rights and participates in first Assembly elections proportionally.
+(4) Subsections (1) through (3) apply only to entities whose entry status depends upon qualification or reorganization during the Transition Window. A political entity entering as a founding State under subsection (6) is not subject to a Phase 2 admission audit.
 
 (5) All prior government territories that had not achieved statehood by Day Zero enter as Territories from Phase 4 activation without undergoing Phase 2 Statehood Audits; any capital district or special administrative region is assigned Territory status and follows the §15.2 path.
 
 (6) Political entities that held recognized State or equivalent status immediately prior to ratification and choose to enter the Republic as States do so as full States from Day Zero for the purpose of constituting the Senate and seating their legislators.
 
-(7) The biennial Statehood Audit under §15.2 applies to all States from the first full audit cycle following Phase 4 activation; no founding status confers exemption from ongoing audit obligations or the consequences of audit failure. All other status determinations — Territory entry, Statehood qualification during the transition window, and post-founding pathways — follow §15.2.
+(7) The biennial Statehood Audit under §15.2 applies to all States from the first full audit cycle following Phase 4 activation; no founding status confers exemption from ongoing audit obligations or the consequences of audit failure. All other status determinations — Territory entry, Statehood qualification during the Transition Window, and post-founding pathways — follow §15.2.
 
 ### §19.7 — Transition Candidate Registers
 
@@ -1279,7 +1297,7 @@ Where this Constitution requires a statutory independent agency or other permane
 
 (1) At the first Senate seating, senators are assigned to three approximately equal cohorts by public lot: the first cohort serves an initial term of two years, the second four years, the third six years; thereafter all Senate terms are six years. The lot is conducted by the Elections Panel and published to the NRS before the first senators take the constitutional oath.
 
-(2) At founding, the initial justices are assigned as evenly as practicable to staggered classes by public lot administered by the Elections Panel.
+(2) At founding, the initial Supreme Court justices are assigned as evenly as practicable by public lot administered by the Elections Panel to three classes. The first class serves an initial term of four years, the second an initial term of eight years, and the third an initial term of twelve years. Thereafter each seat carries the single non-renewable twelve-year term established by §4.3 and §4.4. Founding service under this subsection constitutes the justice's single term for purposes of those provisions and creates no eligibility for later appointment to the Supreme Court.
 
 ---
 
