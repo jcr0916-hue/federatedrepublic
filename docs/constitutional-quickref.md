@@ -1322,8 +1322,6 @@ An Associated Community is a sovereign political community that remains outside 
 
 - **Cross-refs:** §15.9, §16.2
 
-- **Cross-refs:** §15.9, §16.2
-
 ### §20.2 — Compact Terms and Equal Sovereignty
 
 Equal parties; neither constitutionally superior. Observing delegates attend Assembly and Senate proceedings relevant to the compact — speaking rights, no vote, no quorum or threshold effect.
