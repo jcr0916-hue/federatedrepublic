@@ -445,7 +445,7 @@ The Legislature may establish independent agencies operating outside the authori
 
 ### §3.10 — Federal Legislative Competence
 
-The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments and are allocated in accordance with §15.8 and §15.8.a.
+The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments and are allocated in accordance with §15.8 and §15.8.a. Subsidiarity does not itself create federal legislative competence.
 
 - **Cross-refs:** §15.8, §15.8.a
 
@@ -1099,7 +1099,7 @@ Local governments — cities, counties, municipalities, and other subdivisions �
 
 ### §15.8.a — Subsidiarity and Local Capacity
 
-(1) Public functions not expressly assigned by this Constitution to the Republic or another constitutional institution shall be exercised at the most local level of government reasonably capable of performing them effectively and consistently with this Constitution. (2) States retain authority to allocate ordinary governmental functions between State and local governments consistent with subsection (1), Article…
+Public functions not constitutionally assigned elsewhere belong at the most local level reasonably capable of performing them. Responsibility may move upward for incapacity, material failure, cross-jurisdictional effects, or necessary coordination, but federal action still requires an independent source of federal competence under §3.10; this section does not itself create federal legislative competence.
 
 - **Cross-refs:** §15.8, §3.10
 
@@ -1253,6 +1253,13 @@ Day Zero is the date the ratification threshold is certified as achieved. Upon r
 (1) Officials and institutions of the predecessor national government whose authority is displaced or superseded by this Constitution continue during the Transition Window only in caretaker capacity as necessary to preserve lawful government, existing services, rights, obligations, and public safety. Existing State, territorial, Indigenous, and local governments continue under their own lawful authority except to…
 
 
+### §19.3.a — Transition National-Defense Continuity
+
+Before the ordinary constitutional defense actors are capable, predecessor national institutions may exercise only the military and defense authority reasonably necessary against actual or imminent invasion or armed attack, or to carry out a specifically required inherited treaty obligation. Existing command, defense funding, mobilization, procurement, and operational authorities continue only to that extent. State forces may be called into federal service for defense against invasion or armed attack until the Legislature is capable. Authority transfers automatically, function by function, as the responsible constitutional officers and institutions become capable.
+
+- **Cross-refs:** §14.1, §14.5, §19.3, §19.5
+- **Limits:** does not postpone elections or transition milestones, extend terms, alter territorial status, suspend Article I, or authorize unrelated hostilities
+
 ### §19.4 — Pre-Constitutional Classified Documents
 
 Predecessor classified material is subject from Day Zero to the standards of Article X. The Legislature must establish an independent review mechanism within 90 days of Phase 4 activation to apply those standards systematically.
@@ -1262,7 +1269,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.5 — Pre-Existing Obligations
 
-(1) The Republic assumes the public debt obligations of its predecessor government as a constitutional matter — it does not inherit a clean slate. (2) Active military operations of the prior government continue under existing authorization until the §2.2 military authorization framework can apply; the Legat Consul, once inaugurated, must assess each active operation against the authorized purposes under §14.1 and…
+(1) The Republic assumes the public debt obligations of its predecessor government as a constitutional matter — it does not inherit a clean slate. (2) Active military operations already underway on Day Zero continue under existing authorization pending ordinary constitutional review; new military action arising before the ordinary defense actors are capable is governed by §19.3.a.
 
 - **Time limits:**
   - 1 and either link it to legislative authorization within 14 days or begin orderly cessation
@@ -1271,7 +1278,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.6 — Transition Territories
 
-(1) Territories or subdivisions whose entry status depends upon qualification during the Transition Window may seek State status through a Statehood Audit completed by the end of Phase 2. An entity that does not achieve the required audit enters as a Territory and may begin the ordinary Statehood pathway under §15.2 immediately.
+Entities whose founding status depends on qualification use the Phase 2 audit route. Political entities entering as founding States under subsection (6) are full States for all constitutional purposes from Day Zero, including Senate constitution and legislative seating, and enter the ordinary biennial Statehood Audit cycle after Phase 4.
 
 - **Cross-refs:** §15.2
 
