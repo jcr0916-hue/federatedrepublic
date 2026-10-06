@@ -1317,9 +1317,9 @@ Where this Constitution requires a statutory independent agency or other permane
 
 ## Article XX — Associated Communities
 
-### §20.1 — Associated Community Status
+### §20.1 — Nature of Associated Community Status
 
-Exclusively for sovereign entities — not a form of State or Territory status, not transitional, not incorporation. Available to recognized indigenous nations holding Associated Community status under §16.2, to sovereign nations that have achieved full sovereignty through the constitutional amendment process or the independence process under §15.9, and to independent nations outside the Republic seeking a defined relationship.
+An Associated Community is a sovereign political community that remains outside the Republic while maintaining a consensual compact relationship with it under this Article. The compact may establish reciprocal rights, services, responsibilities, institutional cooperation, and other agreed relations without incorporating the Associated Community into the Republic or subjecting it to the Republic's constitutional governmental structure. Associated Community status is available to recognized indigenous nations electing or holding that status under §16.2, to sovereign nations that have achieved full sovereignty through the constitutional amendment process or the independence process under §15.9, and to independent nations outside the Republic seeking such a relationship. It is not State or Territory status, a transitional status, or a form of incorporation.
 
 ### §20.2 — Compact Terms and Equal Sovereignty
 
