@@ -355,20 +355,21 @@ During armed insurrection against the constitutional order, the Council of Minis
 
 ### §3.1 — The Legislature
 
-The Legislature comprises two chambers: the Assembly and the Senate. All legislation originates in the Assembly.
+The Legislature comprises the Assembly and the Senate. All legislation originates in the Assembly.
 
 - **Time limits:**
-  - In the absence of a statutory period, the Senate must act within 90 days of receipt
-  - The Senate may, by majority of full seated membership, extend the review period for any bill by one additional period not to exceed 30 days, with stated cause published to the NRS
+  - The Senate may review and amend an Assembly-passed bill within its subject matter and must act within the period defined by statute, not exceeding 90 days
+  - absent such statute, the period is 90 days
+  - By majority of full seated membership, the Senate may once extend review for up to 30 days upon stated cause published to the NRS
 
 ### §3.2 — The Assembly
 
 (1) Members of the federal Assembly are elected by proportional representation. States and Territories each elect voting members.
 
 - **Thresholds:**
-  - The Assembly may expel a member by 2/3 vote of full seated membership
+  - The Assembly may expel a member by 2/3 of full seated membership
 - **Time limits:**
-  - the Legislature establishes timing and procedures by statute, ensuring no seat remains vacant within the period defined by statute, not to exceed 90 days
+  - (6) Mid-term vacancies are filled by special election administered by the Elections Panel within the period defined by statute, not exceeding 90 days
 - **Cross-refs:** §2.5, §2.6.a
 
 ### §3.3 — Electoral Districts
@@ -379,14 +380,10 @@ States draw their own Assembly district maps subject to five criteria: populatio
 
 ### §3.4 — Legislative Standards
 
-Every bill must address a single, clearly defined subject. Any member or approval body in the legislative process may request an LM assessment of single-subject compliance, published to the NRS.
+Every bill must address a single clearly defined subject. Any member or approval body may request an LM assessment of compliance, published to the NRS.
 
 - **Thresholds:**
-  - Emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber
-  - removal requires 2/3 of the relevant chamber
-- **Time limits:**
-  - Each chamber of the Legislature sits in regular session on every business day of the year, except for periods of recess for the purpose of constituent engagement, not to exceed 45 days per year
-  - Each period of recess must be scheduled in advance and published to the NRS at least 30 days before it begins
+  - Removal requires 2/3 of the relevant chamber, which may request an LM assessment under §9
 - **Cross-refs:** §9.1
 
 ### §3.5 — The Senate
@@ -394,9 +391,8 @@ Every bill must address a single, clearly defined subject. Any member or approva
 (1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. (2) Founding Senate cohorts and initial terms are established under §19.10.
 
 - **Thresholds:**
-  - The Senate may expel a member by 2/3 vote of full seated membership
-  - — treaty ratification by 2/3 of full seated membership
-- **Cross-refs:** §19.10, §3.1
+  - It may expel a member by 2/3 of full seated membership
+- **Cross-refs:** §15.3, §19.10, §3.1, §3.6
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
@@ -1371,11 +1367,9 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §2.13 | Consular Removal | Legislative removal requires 2/3 of both chambers in concurrent vote for constitutional breach, demonstrated permanent incapacity, or serious misconduct |
 | §2.15 | Federal Prosecution | The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers |
 | §2.16 | Executive Incapacity | (3) By simple majority of each chamber, the Legislature may extend that heightened-restoration period, but not beyond six months from the renewed determination |
-| §3.2 | The Assembly | The Assembly may expel a member by 2/3 vote of full seated membership |
-| §3.4 | Legislative Standards | Emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber |
-| §3.4 | Legislative Standards | removal requires 2/3 of the relevant chamber |
-| §3.5 | The Senate | The Senate may expel a member by 2/3 vote of full seated membership |
-| §3.5 | The Senate | — treaty ratification by 2/3 of full seated membership |
+| §3.2 | The Assembly | The Assembly may expel a member by 2/3 of full seated membership |
+| §3.4 | Legislative Standards | Removal requires 2/3 of the relevant chamber, which may request an LM assessment under §9 |
+| §3.5 | The Senate | It may expel a member by 2/3 of full seated membership |
 | §3.6 | Treaty and Trade Agreement Ratification | Treaty and compact agreement ratification requires 2/3 of the full seated Senate |
 | §3.6 | Treaty and Trade Agreement Ratification | Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers |
 | §3.6 | Treaty and Trade Agreement Ratification | The Senate must affirm withdrawal by 2/3 of its full seated membership within the period defined by statute, not to exceed 90 days |
