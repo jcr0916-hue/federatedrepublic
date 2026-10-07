@@ -139,7 +139,7 @@ Every person holds the right to found a family.
 
 ### §2.1 — The Legat Consul — Domain and Term
 
-To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. The Legat Consul holds authority over military command and force employment; foreign affairs, including treaty negotiation, recognition of foreign governments, and receipt of foreign delegations; intelligence; trade agreements under §2.4; relations with recognized indigenous nations under Article XVI, including recognition determinations under §16.4; and appointments within the Legat Consul's domain. During active military operations, operational decisions within that domain belong to the Legat Consul. The Legat Consul serves a term of four years. No person may serve more than two terms as Legat Consul; the limit is a lifetime maximum. A person who has served one term as Legat Consul may not seek election to a second term at the next occurring election for that office, but may seek election at any subsequent election. Service as a successor under §2.9 does not constitute an elected term for this purpose. Upon expiration of the term, all authority transfers immediately to the incoming Legat Consul. The outgoing Legat Consul retains no authority after transfer.
+To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. The Legat Consul holds authority over military command and force employment; foreign affairs, including treaty negotiation, recognition of foreign governments, and receipt of foreign delegations; intelligence; trade agreements under §2.4; relations with recognized indigenous nations under Article XVI, including recognition determinations under §16.4; and appointments within the Legat Consul's domain. During active military operations, operational decisions within that domain belong to the Legat Consul. The Legat Consul serves a term of four years. No person may serve more than 12 years as Legat Consul across all periods of service. Service in an acting capacity does not count toward this limit. A person who completes an elected term may not seek election at the next occurring election for that office but may seek election at any subsequent election. Upon expiration of the term, all authority transfers immediately to the incoming Legat Consul. The outgoing Legat Consul retains no authority after transfer.
 
 ### §2.2 — Military Authorization Framework
 
@@ -165,7 +165,7 @@ The Legat Consul may appoint domain officers to exercise defined portions of the
 
 (1) The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul. To hold the office of Civic Consul, a person must be a serving member of the Assembly at the time of election as required by §2.6. Eligibility and disclosure requirements applicable to all federal offices are established in §7.4. The Civic Consul serves at the confidence of the Assembly, subject to removal under §2.6.
 
-(2) No person may serve more than 8 years as Civic Consul across all periods of service; the limit is a lifetime maximum. Service in an acting capacity does not count toward this limit. A person who leaves the office of Civic Consul may not serve again as Civic Consul until one full Assembly electoral cycle has passed.
+(2) No person may serve more than 12 years as Civic Consul across all periods of service. Service in an acting capacity does not count toward this limit. A person who leaves the office of Civic Consul may not serve again as Civic Consul until one full Assembly electoral cycle has passed.
 
 (3) The Civic Consul's domestic authority includes domestic policy and regulatory frameworks, preparation of the civic-domain budget under §12.2, the civil service, and administration of the social state under Article XII.
 
@@ -225,9 +225,9 @@ No civil servant, military member, or person exercising specific federal authori
 
 (4) The military chain of command recognizes succession from the constitutional moment of transfer. The NRS record is authoritative evidence of the change and does not create the authority. Any order issued in the name of the prior Legat Consul after transfer is void.
 
-(5) A successor serves the remainder of the current term. A successor who serves any portion of a predecessor's term must sit out one full term before standing for election as Legat Consul and remains subject to the lifetime two-term limit under §2.1.
+(5) A successor serves the remainder of the current term. Service through full succession counts toward the 12-year service limit under §2.1. A successor who serves any portion of a predecessor's term must sit out one full term before standing for election as Legat Consul.
 
-(6) During temporary incapacity under §2.16, acting authority vests in the Senate Speaker, then in any successors designated by statute, then in the most senior Senator by continuous service, with ties resolved by age. Acting service is otherwise governed by §2.16.
+(6) During temporary incapacity under §2.16, acting authority vests in the Senate Speaker, then in any successors designated by statute, then in the most senior Senator by continuous service, with ties resolved by age. Acting service does not count toward the §2.1 service limit and is otherwise governed by §2.16.
 
 ### §2.10 — Executive Transparency
 
