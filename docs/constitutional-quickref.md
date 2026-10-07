@@ -192,7 +192,8 @@ To hold the office of Legat Consul, a person must have been a citizen for at lea
 
 - **Time limits:**
   - To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office
-- **Cross-refs:** §16.4, §2.4, §2.9, §7.4
+  - No person may serve more than 12 years as Legat Consul across all periods of service
+- **Cross-refs:** §16.4, §2.4, §7.4
 
 ### §2.2 — Military Authorization Framework
 
@@ -232,7 +233,7 @@ The Legat Consul may appoint domain officers to exercise defined portions of the
 (1) The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul. To hold the office of Civic Consul, a person must be a serving member of the Assembly at the time of election as required by §2.6.
 
 - **Time limits:**
-  - (2) No person may serve more than 8 years as Civic Consul across all periods of service
+  - (2) No person may serve more than 12 years as Civic Consul across all periods of service
   - absent a statutory interval, the constitutional default is 30 days
 - **Cross-refs:** §12.2, §2.16, §2.6, §7.4
 
