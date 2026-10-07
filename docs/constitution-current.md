@@ -307,7 +307,7 @@ During armed insurrection against the constitutional order, the Council of Minis
 
 ### §3.1 — The Legislature
 
-The Legislature comprises two chambers: the Assembly and the Senate. All legislation originates in the Assembly. The Senate reviews, may amend within the subject matter of the bill, and must act on every Assembly-passed bill within the period defined by statute, not to exceed 90 days — inaction triggers automatic deemed approval. In the absence of a statutory period, the Senate must act within 90 days of receipt. The Senate may, by majority of full seated membership, extend the review period for any bill by one additional period not to exceed 30 days, with stated cause published to the NRS; no further extension is available and deemed approval applies at expiry. Neither chamber may indefinitely delay business assigned to it by this constitution.
+The Legislature comprises the Assembly and the Senate. All legislation originates in the Assembly. The Senate may review and amend an Assembly-passed bill within its subject matter and must act within the period defined by statute, not exceeding 90 days; absent such statute, the period is 90 days. By majority of full seated membership, the Senate may once extend review for up to 30 days upon stated cause published to the NRS. Failure to act by the applicable deadline constitutes approval. Neither chamber may indefinitely delay business constitutionally assigned to it.
 
 ### §3.2 — The Assembly
 
@@ -315,15 +315,15 @@ The Legislature comprises two chambers: the Assembly and the Senate. All legisla
 
 (2) The census, conducted every ten years by a statutory independent agency, is the basis for reapportionment. The LM audits the census and allocation process.
 
-(3) The Assembly selects a Speaker from its own members by a method it establishes, provided the Speaker holds the support of a majority of full seated membership; the Speakership is a standing office, and its holder serves as Acting Civic Consul under §2.5 and §2.6.a. Quorum is a majority of full seated membership. The Assembly establishes its own internal procedures.
+(3) The Assembly selects a Speaker from its own members by a method it establishes, provided the Speaker holds the support of a majority of full seated membership. The Speakership is a standing office, and its holder serves as Acting Civic Consul under §2.5 and §2.6.a. Quorum is a majority of full seated membership. The Assembly establishes its own internal procedures.
 
-(4) Members serve two-year terms. No member may serve more than six consecutive terms without sitting out one full electoral cycle; upon return, a member may serve up to three additional terms, after which no further service in the Assembly is permitted.
+(4) Members serve two-year terms. No member may serve more than six consecutive terms without sitting out one full electoral cycle; upon return, a member may serve up to three additional terms, after which no further Assembly service is permitted.
 
-(5) Any Assembly member who resigns, is expelled, or is removed by state recall at any point during a term shall be deemed to have served that full term for purposes of the consecutive-term limit.
+(5) A member who resigns, is expelled, or is recalled during a term is deemed to have served that full term for purposes of the term limit.
 
-(6) Mid-term vacancies in Assembly seats are filled by special election administered by the Elections Panel; the Legislature establishes timing and procedures by statute, ensuring no seat remains vacant within the period defined by statute, not to exceed 90 days. The Assembly may expel a member by 2/3 vote of full seated membership; expulsion is published to the NRS and is effective immediately.
+(6) Mid-term vacancies are filled by special election administered by the Elections Panel within the period defined by statute, not exceeding 90 days. The Assembly may expel a member by 2/3 of full seated membership; expulsion is published to the NRS and effective immediately.
 
-(7) A State may establish by law a recall mechanism for its Assembly members; any such mechanism must operate as a political process, not a judicial proceeding, must not violate this Constitution, and must place the final recall decision with the State legislature or the State's eligible voters; no recall may proceed on the decision of an executive officer, administrative body, or court alone; where an Assembly member is recalled the seat is treated as vacant under this Constitution.
+(7) A State may establish a political recall process for its Assembly members, with the final decision vested in the State legislature or eligible voters. No executive officer, administrative body, or court may alone recall a member. A recalled member's seat becomes vacant under this Constitution.
 
 ### §3.3 — Electoral Districts
 
@@ -331,7 +331,11 @@ States draw their own Assembly district maps subject to five criteria: populatio
 
 ### §3.4 — Legislative Standards
 
-Every bill must address a single, clearly defined subject. Any member or approval body in the legislative process may request an LM assessment of single-subject compliance, published to the NRS. The full text of every bill must be published to the NRS for a minimum period defined by statute before any final passage vote; a substantially amended bill resets the clock. Each chamber of the Legislature sits in regular session on every business day of the year, except for periods of recess for the purpose of constituent engagement, not to exceed 45 days per year. Each period of recess must be scheduled in advance and published to the NRS at least 30 days before it begins. Emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber. The Legislature must establish a joint ethics committee with authority to sanction and refer members; removal requires 2/3 of the relevant chamber; under §9.1, the chamber may request an LM assessment to inform the proceeding.
+Every bill must address a single clearly defined subject. Any member or approval body may request an LM assessment of compliance, published to the NRS. The full text of a bill must be published to the NRS for the minimum period defined by statute before final passage; substantial amendment restarts that period.
+
+Each chamber shall operate as a full-time legislative body and remain available to perform its constitutional duties. At the beginning of each two-year electoral cycle, its Speaker shall publish to the NRS the chamber's schedule for that cycle, identifying periods of legislative sitting and recess for constituent engagement. A chamber may revise its schedule through its internal procedures, but every revision shall be published to the NRS. No recess may be used to defeat or delay a constitutional duty or deadline. Emergency sessions may be called by the Civic Consul or by petition of one-third of either chamber.
+
+The Legislature shall maintain an ethics process capable of sanctioning and referring members. Removal requires 2/3 of the relevant chamber, which may request an LM assessment under §9.1.
 
 ### §3.5 — The Senate
 
@@ -339,21 +343,23 @@ Every bill must address a single, clearly defined subject. Any member or approva
 
 (2) Founding Senate cohorts and initial terms are established under §19.10.
 
-(3) No senator may serve more than two consecutive terms without sitting out one full term; upon return, a senator may serve up to one additional term, after which no further service in the Senate is permitted.
+(3) No senator may serve more than two consecutive terms without sitting out one full term; upon return, a senator may serve up to one additional term, after which no further Senate service is permitted.
 
-(4) Any senator who resigns, is expelled, or is removed by state recall at any point during a term shall be deemed to have served that full term for purposes of the consecutive-term limit.
+(4) A senator who resigns, is expelled, or is recalled during a term is deemed to have served that full term for purposes of the term limit.
 
 (5) The Senate Speaker is elected by senators and may not serve more than two consecutive full Senate terms as Speaker without sitting out one full Senate term.
 
-(6) The Senate defines its own internal procedures. The Senate may expel a member by 2/3 vote of full seated membership; expulsion is published to the NRS and is effective immediately.
+(6) The Senate defines its own internal procedures. It may expel a member by 2/3 of full seated membership; expulsion is published to the NRS and effective immediately.
 
-(7) A State may establish by law a recall mechanism for its senators; any such mechanism must operate as a political process, not a judicial proceeding, must not violate this Constitution, and must place the final recall decision with the State legislature or the State's eligible voters; no recall may proceed on the decision of an executive officer, administrative body, or court alone; where a senator is recalled the seat is treated as vacant under this Constitution.
+(7) A State may establish a political recall process for its senators, with the final decision vested in the State legislature or eligible voters. No executive officer, administrative body, or court may alone recall a senator. A recalled senator's seat becomes vacant under this Constitution.
 
 (8) The Senate holds exclusive authority over:
 
 — judicial confirmation;
 
-— treaty ratification by 2/3 of full seated membership;
+— treaty ratification under §3.6;
+
+— State-remediation determinations under §15.3;
 
 — and, in the absence of a functioning Elections Panel, administration of the consular election.
 
