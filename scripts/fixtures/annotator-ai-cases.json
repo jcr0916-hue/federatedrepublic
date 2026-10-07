@@ -131,17 +131,18 @@
   },
   {
     "num": "§15.3",
-    "title": "Mandatory devolution ladder",
+    "title": "State remediation and mandatory devolution review",
     "must": [
-      "Recognize the sequence: first failure warning/remediation, second failure renewed warning/revised plan, third consecutive failure automatic Provisional status.",
+      "Recognize the sequence: first failure warning/remediation, second failure renewed warning/revised plan, third consecutive failure certification to the Senate.",
       "Recognize the 90-day constitutional default for the first remediation plan until statute supplies a period.",
-      "Recognize that Provisional status does not itself end Statehood.",
+      "Recognize that the audit certification does not itself alter the State's political status and that Provisional status requires an absolute majority of the full seated Senate.",
+      "Recognize that following a failed audit the Republic and State must make available strictly advisory cooperation with no political, legal, or governing authority over the State government.",
       "Recognize that devolution still requires an affirmative citizen referendum and then the §15.4 negotiation/ratification process."
     ],
     "mustNot": [
-      "Do not claim a third failed audit automatically devolves or dissolves the State.",
-      "Do not claim the advisory Provisional Audit Council replaces the State legislature.",
-      "Do not claim judicial review permits policy substitution for Monitor findings."
+      "Do not claim a third failed audit automatically places the State in Provisional status or devolves the State.",
+      "Do not claim the advisory cooperation mechanism has authority over the State government.",
+      "Do not claim judicial review permits policy substitution for Monitor findings or review of the Senate's political judgment."
     ]
   },
   {
