@@ -396,38 +396,34 @@ Every bill must address a single clearly defined subject. Any member or approval
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
-Treaty and compact agreement ratification requires 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers; neither chamber may amend the terms of a concluded agreement.
+Treaties and compact agreements require ratification by 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by a majority of both chambers.
 
 - **Thresholds:**
-  - Treaty and compact agreement ratification requires 2/3 of the full seated Senate
-  - Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers
-  - The Senate must affirm withdrawal by 2/3 of its full seated membership within the period defined by statute, not to exceed 90 days
+  - Treaties and compact agreements require ratification by 2/3 of the full seated Senate
+  - Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days
 - **Time limits:**
-  - The Senate must affirm withdrawal by 2/3 of its full seated membership within the period defined by statute, not to exceed 90 days
+  - Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days
 
 ### §3.6.a — Classification and Dispute Resolution
 
-Where the Senate disputes the Legat Consul's classification of an international instrument as a trade agreement, the instrument is treated as a treaty pending resolution. Either party may seek expedited judicial determination of the classification; the applicable court and process are defined by statute.
+If the Senate disputes the Legat Consul's classification of an international instrument as a trade agreement, the instrument is treated as a treaty pending resolution. The Senate or Legat Consul may seek expedited judicial determination; jurisdiction and procedure are defined by statute.
 
 
 ### §3.7 — Legislative Process and Passage
 
-Bills pass by absolute majority of the full seated membership of both chambers. Higher thresholds apply to constitutional amendments, veto overrides, removal proceedings, and other matters specified in this constitution; where a higher threshold is specified for a vote of a single chamber, it applies to the full seated membership of that chamber.
+Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher constitutional thresholds apply to the full seated membership of the chamber or chambers specified.
 
 - **Thresholds:**
-  - Bills pass by absolute majority of the full seated membership of both chambers
-- **Time limits:**
-  - Where the constitution requires the Legislature to enact specific legislation and the Legislature has not done so within 1 year of the obligation arising, the LM publishes a non-compliance finding
+  - Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise
 
 ### §3.8 — Legislative Oversight
 
-All three Monitors have full access to legislative records, committee deliberations, voting records, and draft legislation; the Legislature may not withhold records from the Monitors. The LM publishes a constitutional compliance analysis of any enacted law during the legislative review period; members may request LM analysis of any bill at any stage; the LM does not initiate pre-enactment review on its own motion.
+The Legislature may not withhold legislative records, deliberations, votes, or draft legislation from the Monitors. The LM shall review enacted laws for constitutional compliance and may review pending legislation upon request by a member; it may not initiate pre-enactment review on its own motion.
 
-- **Cross-refs:** §7.7
 
 ### §3.9 — Independent Statutory Agencies
 
-The Legislature may establish independent agencies operating outside the authority of both executives. Where this Constitution assigns a function to an independent agency, the Legislature must establish and maintain an institution capable of performing that function.
+The Legislature may establish independent agencies outside the authority of either executive. Where this Constitution assigns a function to an independent agency, the Legislature shall maintain an institution capable of performing it and may not impair the independence of that function.
 
 
 ### §3.10 — Federal Legislative Competence
@@ -438,10 +434,8 @@ The Legislature may legislate only within powers assigned to the Republic by thi
 
 ### §3.11 — Delegation of Authority
 
-The Legislature may by statute delegate defined authorities within its legislative competence to the Legat Consul, the Civic Consul, or independent agencies established under §3.9. Any delegation must specify the exact scope of authority delegated, the conditions on its exercise, and a maximum duration not to exceed the term of the Legislature that enacted it.
+The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation shall state its scope, conditions, and duration and may not extend beyond the term of the Legislature that enacted it.
 
-- **Thresholds:**
-  - The Legislature may rescind any delegation by simple majority of both chambers at any time
 - **Cross-refs:** §3.9
 
 ---
@@ -1370,11 +1364,9 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §3.2 | The Assembly | The Assembly may expel a member by 2/3 of full seated membership |
 | §3.4 | Legislative Standards | Removal requires 2/3 of the relevant chamber, which may request an LM assessment under §9 |
 | §3.5 | The Senate | It may expel a member by 2/3 of full seated membership |
-| §3.6 | Treaty and Trade Agreement Ratification | Treaty and compact agreement ratification requires 2/3 of the full seated Senate |
-| §3.6 | Treaty and Trade Agreement Ratification | Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers |
-| §3.6 | Treaty and Trade Agreement Ratification | The Senate must affirm withdrawal by 2/3 of its full seated membership within the period defined by statute, not to exceed 90 days |
-| §3.7 | Legislative Process and Passage | Bills pass by absolute majority of the full seated membership of both chambers |
-| §3.11 | Delegation of Authority | The Legislature may rescind any delegation by simple majority of both chambers at any time |
+| §3.6 | Treaty and Trade Agreement Ratification | Treaties and compact agreements require ratification by 2/3 of the full seated Senate |
+| §3.6 | Treaty and Trade Agreement Ratification | Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days |
+| §3.7 | Legislative Process and Passage | Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise |
 | §4.1 | Court Structure | judges whose courts are abolished may be reassigned to other inferior courts by the Civic Consul with Senate confirmation at 2/3 |
 | §4.2 | Judicial Appointments and Independence | The Senate confirms by 2/3 |
 | §4.3 | The Supreme Court | The Legislature may increase or decrease the number of justices only by a statute requiring 2/3 of both chambers |
