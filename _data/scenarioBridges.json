@@ -134,7 +134,7 @@
     "summary": "Renaming an emergency does not evade the bar on relabeled continuation. The Monitor publishes an assessment; judicial review and the prohibition on discriminatory emergency measures remain available.",
     "provisions": [
       {
-        "ref": "§1.19.b",
+        "ref": "§1.19",
         "label": "Expiry, relabeling, and judicial review"
       },
       {
@@ -181,7 +181,7 @@
     ]
   },
   "scenario-the-third-strike": {
-    "summary": "Three consecutive overall audit failures put an existing State into Provisional status. The State keeps its government and rights; an advisory council supports remediation, while devolution requires a separate process.",
+    "summary": "Three consecutive overall audit failures require Senate review. Provisional status begins only on affirmative Senate authorization; the State keeps its government and rights, advisory cooperation supports remediation, and devolution still requires a separate popular process.",
     "provisions": [
       {
         "ref": "§15.1.a",
@@ -189,7 +189,7 @@
       },
       {
         "ref": "§15.3",
-        "label": "Remediation and the devolution referendum"
+        "label": "Remediation, Senate review, and the devolution referendum"
       },
       {
         "ref": "§15.4",
