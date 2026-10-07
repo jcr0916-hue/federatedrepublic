@@ -503,11 +503,17 @@ A judgment or status order published to the NRS is self-authenticating and effec
 
 ### §5.1 — Citizenship
 
-Citizenship is acquired as provided in this section by parentage, protection against statelessness, or naturalization. A child is automatically a citizen if at least one parent is a citizen or legal resident at birth. Citizens acquire their full citizenship rights, including the right to vote and stand for office, at 18. Citizenship may not be stripped from any citizen except as provided in this section. Where a child born on Republic territory would hold no other citizenship, or would otherwise be stateless regardless of birthplace, citizenship is granted from birth. A legal resident may earn citizenship after the continuous residency period and clean legal record established by statute, upon passing a standardized assessment of civic and constitutional proficiency established by statute. A legal resident may alternatively earn citizenship through honorable completion of military or national service. The assessment tests knowledge of constitutional principles and civic structure — not political opinions or cultural loyalty. It is administered by a statutory independent agency under §3.9. No citizenship may be revoked as punishment, and the Republic may not manufacture statelessness as a punitive tool. Citizenship acquired by naturalization may be revoked only upon a judicial finding, by clear and convincing evidence, that it was obtained through material fraud in the application itself. No revocation may occur where it would render the person stateless. Revocation does not extend to any person who acquired citizenship derivatively through the naturalized person. A child born before a parent acquired legal residency or citizenship, who accompanies that parent to the Republic within a window defined by statute at not less than five years, receives derivative status.
+Citizenship is acquired by parentage, protection against statelessness, or naturalization. A child is a citizen from birth if at least one parent is a citizen or legal resident, or if the child would otherwise be stateless. Citizens acquire full citizenship rights, including voting and eligibility for office, at 18.
+
+A legal resident may earn citizenship after the continuous residency period and legal qualifications established by statute upon demonstrating civic and constitutional proficiency, or through honorable completion of military or national service. Any required assessment shall test constitutional and civic knowledge, not political opinion or cultural loyalty, and shall be administered by an independent agency under §3.9.
+
+Citizenship may not be revoked as punishment. Naturalized citizenship may be revoked only by judicial finding, on clear and convincing evidence, that it was obtained through material fraud in the application, and never where revocation would cause statelessness. Revocation does not affect derivative citizenship previously acquired by another person.
+
+A child born before a parent acquired legal residency or citizenship who accompanies that parent to the Republic within the period defined by statute, which may not be less than five years, receives derivative status.
 
 ### §5.1.a — State and Territory Voting Citizenship
 
-A citizen of the Republic is, at all times, a voting citizen of exactly one State or Territory: the one of their residence or domicile as defined by that State's or Territory's statute, consistent with this Constitution and federal law. No statute may leave a citizen of the Republic without a State or Territory of voting citizenship. Resolution of conflicting claims of voting citizenship is established by statute. Recognition as a voting citizen of a State or Territory terminates any prior recognition in another.
+Every citizen of the Republic is a voting citizen of exactly one State or Territory, determined by residence or domicile under applicable law consistent with this Constitution. No law may leave a citizen without a State or Territory of voting citizenship. Statute shall resolve conflicting claims; recognition in one jurisdiction terminates prior recognition in another.
 
 ### §5.2 — Legal Resident Rights
 
@@ -515,7 +521,7 @@ Legal residents may work, enter contracts, own property, and access the social-s
 
 ### §5.3 — Custodial Care of Citizen Children
 
-Where a parent or guardian who is the primary caregiver of a citizen child is removed from the Republic, the Republic accepts responsibility for that citizen child — housing, care, and connection to remaining family. The Republic may not separate citizen children from their sole caregivers without providing for them. Where a removal order would deprive a citizen or Inhabitant child of their primary caregiver, that order is stayed pending resolution of custodial arrangements.
+Where removal of a parent or guardian would deprive a citizen or Inhabitant child of their primary caregiver, the Republic shall ensure the child's care, housing, and connection to remaining family. The Republic may not separate such a child from a sole caregiver without providing for the child's care. The removal order is stayed until custodial arrangements are resolved.
 
 ---
 
