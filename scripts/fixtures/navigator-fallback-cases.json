@@ -30,7 +30,7 @@
     "question": "Can emergency measures be extended indefinitely?",
     "expectedSufficient": true,
     "required": [
-      "§1.19.b"
+      "§1.19"
     ]
   },
   {
