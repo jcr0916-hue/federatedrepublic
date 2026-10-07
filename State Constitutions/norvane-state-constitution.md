@@ -547,7 +547,7 @@ No emergency power under Article VI or delegated authority under Section 2.6 may
 
 (f) Humanitarian reception, emergency shelter, healthcare, public-health assistance, transport assistance, education, private support, employment, or an offer of employment does not itself constitute State sponsorship, federal certification, or legal residency.
 
-(g) Once federal residency credentials issue following State sponsorship and federal certification, Norvane's sponsorship stage has completed its constitutional function. The State may not revoke, impair, or condition the resulting federal residency status.
+(g) Once federal legal residency vests following State sponsorship and federal certification, Norvane's sponsorship stage has completed its constitutional function. The State may not revoke, impair, or condition the resulting federal residency status.
 
 (h) Sponsorship criteria, regulations, aggregate reporting, and significant precedential State decisions shall be published consistent with this Article. Individual applicant records remain protected by lawful privacy requirements.
 
@@ -642,7 +642,7 @@ All municipalities, counties, and other local governmental bodies existing at th
 
 (b) Public debts, contracts, salaries, pensions, grants, property interests, and other lawful obligations of the State remain enforceable.
 
-(c) Lawful federal citizenship, residency credentials, asylum status, and other federally determined statuses are unaffected by adoption of this Constitution.
+(c) Lawful federal citizenship, legal residency, asylum status, and other federally determined statuses are unaffected by adoption of this Constitution.
 
 (d) An office or institution superseded by this Constitution continues only to the extent necessary to transfer records, property, staff, and pending matters to the lawful successor.
 
