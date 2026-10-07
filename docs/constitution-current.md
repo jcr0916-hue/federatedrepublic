@@ -439,15 +439,15 @@ A removal vote within 180 days of a major national election requires prior SC re
 
 ### §4.4 — Supreme Court Selection
 
-(1) SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.8 — any pool member meeting the statutory qualifications for Supreme Court appointment is eligible for SC nomination.
+(1) SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.8. Any pool member meeting the statutory qualifications for Supreme Court appointment is eligible.
 
 (2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days for an anticipated vacancy or 60 days for an unanticipated vacancy.
 
-(3) The Senate must vote within the period defined by statute following nomination, not to exceed 120 days. The JM's ongoing audit of the Judicial Pool is available on the NRS and the Senate may consider any published JM findings on the nominee. No deemed confirmation applies to a nomination.
+(3) The Senate must vote within the period defined by statute following nomination, not to exceed 120 days. The Senate may consider published JM findings on the nominee. No deemed confirmation applies.
 
-(4) Upon any SC vacancy, the most senior eligible Appellate Court judge by continuous service becomes Temporary Associate Justice immediately by constitutional operation, with full voting rights until the vacancy is filled; where two or more eligible judges have equal continuous service, the oldest by age serves. The change is recorded to the NRS as soon as possible. The Civic Consul may not nominate the serving Temporary Associate Justice for the seat they are temporarily filling through the ordinary appointment process; this bar does not affect a public confirmation ballot under this Article.
+(4) Upon an SC vacancy, the most senior eligible Appellate Court judge by continuous service becomes Temporary Associate Justice immediately by constitutional operation, with full voting rights until the vacancy is filled; ties are resolved by age. The Civic Consul may not nominate that Temporary Associate Justice to the seat they temporarily hold through the ordinary appointment process, but the justice remains eligible for public confirmation under this Article.
 
-(5) If the Civic Consul has not made a nomination by the applicable deadline, the Temporary Associate Justice remains in office. At the later of the next regular federal electoral period or the expiration of the nomination period, the Temporary Associate Justice is submitted to the Assembly. The Assembly has 30 days to approve public confirmation by 2/3 of its full seated membership. Approval certifies the Temporary Associate Justice for placement on the ballot; if the Assembly does not act within 30 days, certification for the ballot occurs automatically. Until the Elections Panel certifies the Temporary Associate Justice for the ballot, the Civic Consul retains authority to make an ordinary nomination. Elections Panel certification closes that supersession window. Public confirmation requires 60% of votes cast under §7.3. If the voters reject confirmation, the serving Temporary Associate Justice steps down, the next eligible Appellate Court judge becomes Temporary Associate Justice by constitutional operation, and the vacancy process restarts.
+(5) If the Civic Consul fails to nominate within the applicable period, the Temporary Associate Justice remains in office and is submitted to the Assembly at the later of that deadline or the next regular federal electoral period. The Assembly has 30 days to authorize public confirmation by 2/3 of full seated membership; failure to act within that period authorizes the ballot automatically. Until Elections Panel certification of the ballot, the Civic Consul may still make an ordinary nomination. Public confirmation requires 60% of votes cast under §7.3. Rejection removes the Temporary Associate Justice, the next eligible Appellate Court judge assumes temporary service, and the vacancy process restarts.
 
 (6) A confirmed justice serves a single non-renewable 12-year term from the date of confirmation. A mid-term replacement serves only the remainder of the original term.
 
@@ -455,23 +455,27 @@ A removal vote within 180 days of a major national election requires prior SC re
 
 ### §4.4.a — Senate Bypass — Public Confirmation
 
-Where the Senate has failed to vote on a nomination within the period required under §4.4, the Civic Consul may — with 2/3 Assembly consent — place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation. Confirmation requires 60% of votes cast under §7.3; the justice’s seniority-based designation is published to the NRS as ballot information. If confirmed, the justice serves the remainder of the original term and the Senate’s confirmation authority for that seat is extinguished. If not confirmed, the justice steps down, the next most senior Appellate Court judge auto-designates, and the process may repeat. Senate confirmation of a Judicial Pool nominee before the public vote is certified ends the bypass immediately. The Temporary Associate Justice may publicly campaign for their own confirmation once placed on the ballot under this section. A public confirmation vote under this section is not an election; §8.1's electoral finance framework does not apply. Rules governing advocacy conduct, contributions, and disclosure during a public confirmation vote are defined by statute, which must maintain the foreign contribution prohibition and disclosure requirements consistent with the principles of §8.1.
+If the Senate fails to vote on a nomination within the period required by §4.4, the Civic Consul may, with 2/3 Assembly consent, submit the serving Temporary Associate Justice at the next federal electoral period for public confirmation. Confirmation requires 60% of votes cast under §7.3.
+
+If confirmed, the justice serves the remainder of the original term and Senate confirmation authority for that seat ends. If rejected, the justice steps down, the next eligible Appellate Court judge becomes Temporary Associate Justice, and the process may repeat. Senate confirmation of a Judicial Pool nominee before certification of the public vote ends the bypass.
+
+The Temporary Associate Justice may advocate publicly for confirmation. A public confirmation vote is not an election for purposes of §8.1, but statute shall preserve its foreign-contribution prohibition and disclosure protections.
 
 ### §4.5 — Judicial Review and Scope
 
-(1) Courts have authority to declare legislative acts, executive orders, and administrative decisions unconstitutional and void. No political actor may override a constitutional ruling. The SC identifies the constitutional defect; the Legislature may respond by enacting legislation that addresses it.
+(1) Courts may declare legislative acts, executive orders, and administrative decisions unconstitutional and void. No political actor may override a constitutional ruling. The SC identifies the constitutional defect; the Legislature may respond through legislation consistent with the ruling.
 
-(2) Courts decide constitutional questions, not policy questions — Where a statute is ambiguous, courts apply the interpretation most consistent with this constitution. Courts may not rewrite clear statutory language.
+(2) Courts decide constitutional and legal questions, not policy questions. Where a statute is ambiguous, courts apply the interpretation most consistent with this Constitution and may not rewrite clear statutory language.
 
-(3) Monitor findings published to the NRS are admissible and must be given due consideration; where a court's conclusions differ from a prior finding, the court must address the inconsistency in its written decision.
+(3) Monitor findings published to the NRS are admissible and must receive due consideration; where a court reaches a different conclusion, it must address the inconsistency in its written decision.
 
-(4) Any person with a concrete, articulable legal injury has the right to seek relief from a court of competent jurisdiction; the Legislature may not structure the judicial system in a manner that leaves any category of legal injury without a forum for relief.
+(4) Courts adjudicate only cases involving a concrete, articulable legal injury and may not issue advisory opinions. An organization has standing where at least one member would have standing and the claim is germane to its established constitutional purpose. The Legislature may not leave any category of legal injury without a judicial forum.
 
 (5) The SC has original jurisdiction over:
 
 — constitutional disputes between States, between a State and the federal government, and constitutional challenges to federal statutes;
 
-— disputes between the Legat Consul and Civic Consul concerning their respective constitutional domains under §2.1;
+— disputes between the Legat Consul and Civic Consul concerning their respective constitutional domains under §2.14;
 
 — constitutional challenges involving constitutionally independent institutions where their independence protections make inferior court review structurally inappropriate;
 
@@ -479,17 +483,19 @@ Where the Senate has failed to vote on a nomination within the period required u
 
 — and disputes over the consistency of ratified amendments with entrenched provisions under §17.3.
 
-(6) The SC holds jurisdiction over constitutional challenges to immediate defensive military authority under §2.2 during active operations and must rule within the period defined by statute, not to exceed 48 hours. The SC establishes its own procedures for the composition and conduct of this expedited review.
+(6) The SC has jurisdiction over constitutional challenges to immediate defensive military authority under §2.2 during active operations and must rule within the period defined by statute, not to exceed 48 hours. The SC establishes its own procedures for this expedited review.
 
-(7) Where conflict between constitutional actors creates a risk of suspension of lawful governance or constitutionally mandated essential services, the constitutional default is continuity at existing scope pending formal resolution. No constitutional actor may use a refusal to certify, approve, or coordinate to achieve the functional suspension of a constitutional obligation. The SC holds expedited jurisdiction over any dispute in which continuity of lawful governance is at immediate risk.
+(7) Where conflict between constitutional actors threatens lawful governance or constitutionally required essential services, existing lawful operations continue pending resolution. No actor may use refusal to certify, approve, or coordinate to suspend a constitutional obligation. The SC has expedited jurisdiction over such disputes.
 
-(8) Where this Constitution establishes a deadline for an SC ruling, a majority of seated justices may file an extension request within that period specifying the reason and additional time required, published to the NRS; the maximum extension is defined by statute, not to exceed 30 days per extension. The SC may issue interim protective orders of limited scope in matters within its original jurisdiction where delay would cause irreparable harm pending its full ruling, published to the NRS.
+(8) Where this Constitution establishes a deadline for an SC ruling, a majority of seated justices may, before expiry and upon reasons published to the NRS, grant one extension for demonstrated necessity. The extension may not exceed the lesser of 30 days or the original period for decision. The SC may issue limited interim protective orders where delay would otherwise cause irreparable harm.
 
-(9) The SC's failure to rule within any constitutionally required period produces no substantive constitutional outcome by operation of that failure; the petitioning party may reinitiate under any procedure applicable to the underlying matter.
+(9) Failure of the SC to rule within a required period does not determine the merits or produce a substantive constitutional outcome. The parties retain any remedy otherwise available under this Constitution.
 
 ### §4.6 — Judgment Recognition
 
-Judicial judgments, official records, and authenticated documents are recognized across all jurisdictions within the Republic. A judgment valid in one jurisdiction must be recognized in all others. Non-recognition grounds are exhaustive: the issuing court lacked jurisdiction; the judgment was obtained by fraud; or enforcement would require an act defined by the Legislature as categorically unenforceable. Judgments contrary to Article I are void by operation of §17.4. A judgment or status order published to the NRS is self-authenticating in any Republic court and takes immediate effect without re-registration. No State or Territory may discriminate in recognition based on the nature of the parties or the subject matter recognized by the issuing jurisdiction.
+Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction, the judgment was obtained by fraud, or enforcement would require an act the Legislature has made categorically unenforceable. A judgment contrary to Article I is void under §17.4.
+
+A judgment or status order published to the NRS is self-authenticating and effective throughout the Republic without re-registration. No State or Territory may discriminate in recognition based on the parties or subject matter involved.
 
 ---
 
