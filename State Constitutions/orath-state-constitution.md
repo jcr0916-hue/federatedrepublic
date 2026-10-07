@@ -288,7 +288,7 @@ Orath participates in the two-stage immigration system established by the Republ
 (e) Employer fraud may be sanctioned without automatically attributing wrongdoing to a worker who acted in good faith. Such a worker shall receive notice and a reasonable opportunity, where law permits, to establish another lawful sponsorship basis before adverse State action.
 
 ### §6.5 Completion of Sponsorship and Federal Status
-Once State sponsorship and federal certification are complete, issuance of federal residency credentials is ministerial under federal law. Orath may not condition or delay that issuance and may not later purport to revoke federal residency by withdrawing completed State sponsorship.
+Once State sponsorship and federal certification are complete, federal legal residency vests by operation of federal law. Orath may not condition or delay that status and may not later purport to revoke federal residency by withdrawing completed State sponsorship.
 
 ### §6.6 Rights, Asylum, and Humanitarian Assistance
 (a) All workers physically present in Orath hold the labor rights of Article I regardless of sponsorship, certification, asylum, or other status.
