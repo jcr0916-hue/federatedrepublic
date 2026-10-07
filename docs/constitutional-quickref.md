@@ -444,41 +444,40 @@ The Legislature may by statute delegate defined authority within federal legisla
 
 ### §4.1 — Court Structure
 
-The Republic's judiciary operates at three levels: district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute.
+The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute, but abolition may not terminate or shorten a sitting judge's term.
 
 - **Thresholds:**
-  - judges whose courts are abolished may be reassigned to other inferior courts by the Civic Consul with Senate confirmation at 2/3
-- **Cross-refs:** §4.2
+  - A judge whose court is abolished may be reassigned to another inferior court by the Civic Consul with 2/3 Senate confirmation
 
 ### §4.2 — Judicial Appointments and Independence
 
-(1) Any citizen meeting the eligibility criteria established in §9.4.a may apply to the Elections Panel to enter the Judicial Pool; the JM's ongoing audit encompasses the Judicial Pool. Exceptions to pool eligibility — including persons currently holding government positions, those with disqualifying financial interests, and those removed from a court within a recent period — are defined by statute.
+(1) Any citizen meeting the eligibility criteria established in §9.4.a may apply to the Elections Panel to enter the Judicial Pool; the JM's ongoing audit encompasses the Judicial Pool. Exceptions to pool eligibility are defined by statute.
 
 - **Thresholds:**
   - The Senate confirms by 2/3
+  - (4) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight
 - **Time limits:**
   - The Civic Consul must nominate within the period defined by statute following a vacancy, not to exceed 90 days where no statutory period has been defined
-  - (3) Inferior court judges serve a single non-renewable term of 12 years and may be removed only for cause
 - **Cross-refs:** §9.1, §9.4.a, §9.8
 
 ### §4.3 — The Supreme Court
 
-The Supreme Court consists of the number of justices established by statute, which may not be fewer than five. Justices serve single non-renewable 12-year terms arranged in staggered classes as nearly equal in size as practicable.
+The Supreme Court consists of the number of justices established by statute, never fewer than five. Justices serve single non-renewable 12-year terms in staggered classes as nearly equal as practicable.
 
 - **Thresholds:**
-  - The Legislature may increase or decrease the number of justices only by a statute requiring 2/3 of both chambers
+  - Altering the number of seats requires 2/3 of both chambers
 - **Time limits:**
-  - Any seat added must be filled within 18 months from the statute's effective date or expires by constitutional operation
+  - A newly created seat expires if not filled within 18 months
 
 ### §4.3.a — Supreme Court Justice Removal
 
-A Supreme Court justice may be removed only for cause. Three grounds constitute sufficient cause: constitutional breach in the exercise of judicial authority; demonstrated permanent incapacity; or serious misconduct.
+A Supreme Court justice may be removed only for constitutional breach in judicial office, demonstrated permanent incapacity, or serious misconduct. Judicial disagreement does not constitute cause.
 
 - **Thresholds:**
-  - Removal requires a 2/3 vote of both chambers in a concurrent vote after the stated grounds are published to the NRS
+  - Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS
 - **Time limits:**
-  - No removal vote may be held within 180 days of a major national election without prior SC review under §4
-  - the SC must rule within 48 hours of petition
+  - A removal vote within 180 days of a major national election requires prior SC review under §4
+  - 5, with a ruling within 48 hours
 - **Cross-refs:** §4.5, §9.1
 
 ### §4.4 — Supreme Court Selection
@@ -1367,10 +1366,11 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §3.6 | Treaty and Trade Agreement Ratification | Treaties and compact agreements require ratification by 2/3 of the full seated Senate |
 | §3.6 | Treaty and Trade Agreement Ratification | Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days |
 | §3.7 | Legislative Process and Passage | Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise |
-| §4.1 | Court Structure | judges whose courts are abolished may be reassigned to other inferior courts by the Civic Consul with Senate confirmation at 2/3 |
+| §4.1 | Court Structure | A judge whose court is abolished may be reassigned to another inferior court by the Civic Consul with 2/3 Senate confirmation |
 | §4.2 | Judicial Appointments and Independence | The Senate confirms by 2/3 |
-| §4.3 | The Supreme Court | The Legislature may increase or decrease the number of justices only by a statute requiring 2/3 of both chambers |
-| §4.3.a | Supreme Court Justice Removal | Removal requires a 2/3 vote of both chambers in a concurrent vote after the stated grounds are published to the NRS |
+| §4.2 | Judicial Appointments and Independence | (4) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight |
+| §4.3 | The Supreme Court | Altering the number of seats requires 2/3 of both chambers |
+| §4.3.a | Supreme Court Justice Removal | Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS |
 | §4.4 | Supreme Court Selection | The Assembly has 30 days to approve public confirmation by 2/3 of its full seated membership |
 | §4.4.a | Senate Bypass — Public Confirmation | 4, the Civic Consul may — with 2/3 Assembly consent — place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation |
 | §7.2.a | Special Elections and Postponements | No further postponement may be granted without a new Elections Panel finding of impossibility and a new 2/3 legislative determination |
