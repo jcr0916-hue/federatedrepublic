@@ -511,7 +511,7 @@ A citizen of the Republic is, at all times, a voting citizen of exactly one Stat
 
 ### §5.2 — Legal Resident Rights
 
-Legal residents hold a Residency Credential allowing them to work, enter contracts, own property, and access social state systems under Article XII. They hold all Article I rights as Inhabitants. They do not hold federal voting rights or the right to stand for federal office. No child of a citizen or legal resident may be deported regardless of the child's own documentation status.
+Legal residents may work, enter contracts, own property, and access the social-state systems under Article XII. As Inhabitants, they hold all Article I rights. They do not hold federal voting rights or eligibility for federal office. No child of a citizen or legal resident may be deported because of the child's own documentation status.
 
 ### §5.3 — Custodial Care of Citizen Children
 
@@ -523,7 +523,7 @@ Where a parent or guardian who is the primary caregiver of a citizen child is re
 
 ### §6.1 — The Two-Stage Immigration System
 
-Every immigration application must clear two sequential stages: State sponsorship and federal certification. Legal residency requires passing both stages. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6. Federal certification categories are established by statute; no ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing. Once an applicant clears both stages, the Civic Consul must ministerially issue residency credentials; interference with credential issuance by either executive is constitutionally prohibited. The Legislature may establish a Federal Sponsorship Category where federal agencies serve as the State sponsorship stage for applicants serving a defined federal interest; this does not bypass federal certification. The Legislature may set aggregate limits on total applications received and processed in any period, provided limits are applied without §1.6 discrimination. Asylum proceedings under §6.3 are exempt from the State sponsorship stage — no State's refusal to sponsor can extinguish a §1.21 asylum claim.
+Every immigration application must clear two sequential stages: State sponsorship and federal certification. Legal residency requires passing both stages. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6. Federal certification categories are established by statute; no ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing. Upon completion of both stages, legal residency vests by operation of law; neither executive may delay, condition, or deny that status. The Legislature may establish a Federal Sponsorship Category where federal agencies serve as the State sponsorship stage for applicants serving a defined federal interest; this does not bypass federal certification. The Legislature may set aggregate limits on total applications received and processed in any period, provided limits are applied without §1.6 discrimination. Asylum proceedings under §6.3 are exempt from the State sponsorship stage — no State's refusal to sponsor can extinguish a §1.21 asylum claim.
 
 ### §6.2 — Enforcement, Removal, and Appeals
 
@@ -551,7 +551,7 @@ Every immigration application must clear two sequential stages: State sponsorshi
 
 (2) Claims must be determined before any removal order takes effect. A claim filed solely to delay a final removal order may be expedited under procedures the Legislature defines, consistent with the right to a fair hearing.
 
-(3) Where the independent federal asylum adjudicative process grants protection, the person receives federal residency credentials by operation of that determination; State sponsorship and federal certification are not required conditions.
+(3) Where the independent federal asylum adjudicative process grants protection, the person acquires legal residency by operation of that determination; State sponsorship and federal certification are not required conditions.
 
 (4) The manner of entry does not affect the right to claim asylum or have that claim determined. No penalty arising solely from irregular entry may be imposed on a person whose claim is pending or has been granted.
 
