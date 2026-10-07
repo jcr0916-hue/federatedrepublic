@@ -367,23 +367,33 @@ The Legislature shall maintain an ethics process capable of sanctioning and refe
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
-Treaty and compact agreement ratification requires 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by simple majority of both chambers; neither chamber may amend the terms of a concluded agreement. Where a treaty fails ratification, standalone domestic provisions may be transmitted to the Assembly as ordinary legislation unless the treaty is bilateral and its obligations are interdependent, in which case it must be renegotiated or abandoned in full. The Legat Consul initiates treaty withdrawal by published NRS notice. The Senate must affirm withdrawal by 2/3 of its full seated membership within the period defined by statute, not to exceed 90 days; where the Senate does not affirm within that period, the notice is void and the Legat Consul must resubmit. Indigenous treaties under Article XVI may not be unilaterally withdrawn.
+Treaties and compact agreements require ratification by 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by a majority of both chambers. Neither chamber may amend the terms of a concluded international agreement.
+
+The Legat Consul may initiate treaty withdrawal by notice published to the NRS. Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days; absent affirmation, the notice lapses. Treaties with recognized indigenous nations under Article XVI may not be unilaterally withdrawn.
 
 ### §3.6.a — Classification and Dispute Resolution
 
-Where the Senate disputes the Legat Consul's classification of an international instrument as a trade agreement, the instrument is treated as a treaty pending resolution. Either party may seek expedited judicial determination of the classification; the applicable court and process are defined by statute.
+If the Senate disputes the Legat Consul's classification of an international instrument as a trade agreement, the instrument is treated as a treaty pending resolution. The Senate or Legat Consul may seek expedited judicial determination; jurisdiction and procedure are defined by statute.
 
 ### §3.7 — Legislative Process and Passage
 
-Bills pass by absolute majority of the full seated membership of both chambers. Higher thresholds apply to constitutional amendments, veto overrides, removal proceedings, and other matters specified in this constitution; where a higher threshold is specified for a vote of a single chamber, it applies to the full seated membership of that chamber. The Speaker of each chamber must publish the final text of every enacted law to the NRS within the period defined by statute. All prior versions, committee reports, Monitor findings, and veto records are indexed alongside the enacted text. Where the constitution requires the Legislature to enact specific legislation and the Legislature has not done so within 1 year of the obligation arising, the LM publishes a non-compliance finding; the mandate becomes justiciable in the SC; and, for mandates whose non-fulfillment directly impairs the exercise of a right guaranteed in Article I, affected parties may bring direct constitutional claims.
+Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher constitutional thresholds apply to the full seated membership of the chamber or chambers specified.
+
+Every enacted law shall be published to the NRS.
+
+If the Legislature fails for one year to enact legislation expressly required by this Constitution, the LM shall publish a finding of non-compliance and the obligation becomes justiciable in the SC. Where the failure directly impairs an Article I right, an affected person may seek direct constitutional relief.
 
 ### §3.8 — Legislative Oversight
 
-All three Monitors have full access to legislative records, committee deliberations, voting records, and draft legislation; the Legislature may not withhold records from the Monitors. The LM publishes a constitutional compliance analysis of any enacted law during the legislative review period; members may request LM analysis of any bill at any stage; the LM does not initiate pre-enactment review on its own motion. Standing committees are mandated for constitutionally assigned functions and may not be abolished while they hold a constitutional mandate. Legislative privilege protects members from civil proceedings arising from acts performed in their legislative capacity consistent with §7.7; it does not extend to criminal conduct.
+The Legislature may not withhold legislative records, deliberations, votes, or draft legislation from the Monitors. The LM shall review enacted laws for constitutional compliance and may review pending legislation upon request by a member; it may not initiate pre-enactment review on its own motion.
+
+Where this Constitution assigns a function to a legislative committee or equivalent legislative body, the Legislature shall maintain a body capable of performing that function.
 
 ### §3.9 — Independent Statutory Agencies
 
-The Legislature may establish independent agencies operating outside the authority of both executives. Where this Constitution assigns a function to an independent agency, the Legislature must establish and maintain an institution capable of performing that function. Internal organization, offices, staffing, and administration are defined by statute unless this Constitution provides otherwise, and every such statute must preserve the constitutional independence of the assigned function. Where this Constitution does not itself establish the tenure and removal rules of the principal decision-makers exercising a constitutionally assigned independent function, those decision-makers serve fixed terms defined by statute and are removable for cause only. Cause must relate to conduct, incapacity, or competence and may not include policy disagreement with the Legislature or either executive. The appointment process and oversight mechanism for each agency are established by statute in a manner consistent with this independence protection. Qualification standards must be facially neutral and may not be designed to exclude otherwise qualified candidates on the basis of policy view, party affiliation, or prior public criticism of the Legislature or either executive.
+The Legislature may establish independent agencies outside the authority of either executive. Where this Constitution assigns a function to an independent agency, the Legislature shall maintain an institution capable of performing it and may not impair the independence of that function.
+
+Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. Principal decision-makers exercising a constitutionally assigned independent function shall serve fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements must be neutral and may not be designed to exclude candidates because of political or policy views or prior criticism of government.
 
 ### §3.10 — Federal Legislative Competence
 
@@ -391,7 +401,9 @@ The Legislature may legislate only within powers assigned to the Republic by thi
 
 ### §3.11 — Delegation of Authority
 
-The Legislature may by statute delegate defined authorities within its legislative competence to the Legat Consul, the Civic Consul, or independent agencies established under §3.9. Any delegation must specify the exact scope of authority delegated, the conditions on its exercise, and a maximum duration not to exceed the term of the Legislature that enacted it. The Legislature may rescind any delegation by simple majority of both chambers at any time; no recipient of delegated authority may obstruct or condition rescission. No delegation creates a permanent transfer of legislative competence. Every exercise of delegated authority is published to the NRS with attribution to both the legislative grant and the recipient's act. The EM audits the exercise of all delegated executive authority annually and publishes findings to the NRS.
+The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation shall state its scope, conditions, and duration and may not extend beyond the term of the Legislature that enacted it. No delegation permanently transfers legislative competence.
+
+The Legislature may rescind a delegation at any time by the ordinary legislative threshold, and the recipient may not obstruct rescission. Exercises of delegated authority shall be attributable in the NRS to both the legislative grant and the exercising authority. The EM shall audit delegated executive authority and publish its findings.
 
 ---
 
