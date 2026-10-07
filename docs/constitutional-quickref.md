@@ -192,14 +192,14 @@ To hold the office of Legat Consul, a person must have been a citizen for at lea
 
 - **Time limits:**
   - To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office
-- **Cross-refs:** §16.4, §2.14, §2.4, §2.9, §4.5, §7.4
+- **Cross-refs:** §16.4, §2.4, §2.9, §7.4
 
 ### §2.2 — Military Authorization Framework
 
-The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, all use of military force requires legislative authorization.
+The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, military force requires legislative authorization.
 
 - **Time limits:**
-  - The Legat Consul must notify both chambers and the Civic Consul promptly upon any use of force, not to exceed 24 hours
+  - The Legat Consul shall notify both chambers and the Civic Consul promptly, and no later than 24 hours after any use of force
 - **Cross-refs:** §14.1, §14.2
 
 ### §2.3 — Consular Intelligence
@@ -209,7 +209,7 @@ The Legat Consul directs foreign intelligence. No intelligence operation may be 
 
 ### §2.3.a — Legat Consul Legislative Veto
 
-The Legat Consul may veto legislation that raises a genuine constitutional concern within the Legat Consul's security domain — military operations, intelligence, treaty obligations, or border security — by returning the bill within 10 business days of final passage with a written statement of grounds, published to the NRS. A general or speculative security connection is insufficient.
+The Legat Consul may veto legislation that raises a genuine constitutional concern within the Legat Consul's security domain — military operations, intelligence, treaty obligations, or border security — by returning the bill within 10 business days of final passage with written grounds published to the NRS. A general or speculative security connection is insufficient.
 
 - **Thresholds:**
   - The Senate may override by 2/3 at any time during that session
@@ -217,13 +217,13 @@ The Legat Consul may veto legislation that raises a genuine constitutional conce
 
 ### §2.4 — Legat Consul International Agreements
 
-The Legat Consul negotiates and concludes treaties and trade agreements. Treaties are subject to ratification under §3.6.
+The Legat Consul negotiates and concludes treaties and trade agreements, subject to §3.6. During negotiation of a trade agreement, the Legat Consul shall consult the Civic Consul on domestic implications; the Civic Consul's response is published to the NRS.
 
 - **Cross-refs:** §3.6
 
 ### §2.4.a — Domain Officers
 
-The Legat Consul appoints domain officers to exercise defined portions of the Legat Consul's constitutional domain authority. Statute may create, alter, or abolish particular domain offices and defines qualifications and confirmation procedures, but may not transfer, diminish, or enlarge the Legat Consul's constitutional authority by changing the organization of those offices.
+The Legat Consul may appoint domain officers to exercise defined portions of the Legat Consul's authority. Domain officers are nominated from the qualified pool maintained under §9.8 and confirmed by the Senate.
 
 - **Cross-refs:** §9.8
 
@@ -233,120 +233,119 @@ The Legat Consul appoints domain officers to exercise defined portions of the Le
 
 - **Time limits:**
   - (2) No person may serve more than 8 years as Civic Consul across all periods of service
-  - in the absence of a statutory interval, the constitutional default is 30 days
+  - absent a statutory interval, the constitutional default is 30 days
 - **Cross-refs:** §12.2, §2.16, §2.6, §7.4
 
 ### §2.6 — Constructive Vote of No Confidence
 
-(1) The Civic Consul is accountable to the Assembly. The Assembly may remove the Civic Consul only through a constructive vote of no confidence: a single vote that simultaneously removes the sitting Civic Consul and installs a named replacement, by absolute majority of full seated Assembly membership.
+(1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly. A vote that does not elect a successor has no constitutional effect.
 
-- **Cross-refs:** §2.5, §2.6.a, §3.2, §7.8
+- **Thresholds:**
+  - (1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly
+- **Cross-refs:** §2.5, §2.6.a, §3.2, §7.4
 
 ### §2.6.a — Government Formation
 
-(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy; where no statutory period has been established, the constitutional default is 21 days. (2) If the Assembly does not elect a Civic Consul within that period, the acting role attaches automatically to the sitting Assembly Speaker, who serves as Acting Civic Consul by…
+(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy; absent such statute, the constitutional default is 21 days. (2) If the Assembly does not elect a Civic Consul within that period, the sitting Assembly Speaker becomes Acting Civic Consul by constitutional operation with authority limited to maintaining existing policy and…
 
 - **Thresholds:**
   - (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy
-  - the Assembly may withdraw the bill by simple majority within the pause period
-  - (7) At any time before the national election begins, the Assembly may elect a Civic Consul by absolute majority, which terminates the fallback and returns the office to the ordinary process
+  - The Assembly may withdraw the bill by simple majority
+  - (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback
 - **Time limits:**
-  - where no statutory period has been established, the constitutional default is 21 days
-  - The Elections Panel may extend the period beyond the default only for cause published to the NRS, and in no case beyond 90 days
+  - absent such statute, the constitutional default is 21 days
+  - The Elections Panel may extend beyond the default only for cause published to the NRS and never beyond 90 days
 - **Cross-refs:** §2.5, §2.6, §2.7, §7.4
 
 ### §2.7 — Civic Consul Legislative Instruments
 
-The Civic Consul may withhold assent by returning a bill within 10 business days of final passage with written grounds published to the NRS; the bill is tabled for one month regardless of any change in CC office. The Senate may override by 2/3 during that month; failing override, the bill returns to the Legislature and must pass both chambers again before returning to the Civic Consul, who may not exercise the…
+The Civic Consul may, within 10 business days of final passage, return a bill with written grounds published to the NRS. The bill is suspended for one month, during which the Senate may override by 2/3.
 
 - **Thresholds:**
-  - The Senate may override by 2/3 during that month
+  - The bill is suspended for one month, during which the Senate may override by 2/3
 
 ### §2.8 — Duty of Refusal
 
-No civil servant, military member, or person acting under direct federal authorization in the performance of a specific federal function may comply with an order from either executive that would require violation of any constitutional provision or statute. Refusal of such an order creates no civil or criminal liability and is no basis for dismissal or penalty.
+No civil servant, military member, or person exercising specific federal authority may comply with an order from either executive that would require violation of this Constitution or statute. Lawful refusal creates no civil or criminal liability and may not support dismissal or penalty; any such penalty is void.
 
 
 ### §2.9 — Legat Consul Succession and Incapacity
 
-(1) Full succession activates on the Legat Consul's death, resignation, or removal, including removal on grounds of demonstrated permanent incapacity under §2.13. The Senate Speaker holds the office of Legat Consul from the moment the triggering event occurs — no active assumption, oath, publication, or other implementing act is required.
+(1) Full succession activates upon the Legat Consul's death, resignation, or removal, including removal for demonstrated permanent incapacity under §2.13. The Senate Speaker holds the office from that moment by constitutional operation; no oath, publication, or implementing act is required.
 
-- **Cross-refs:** §2.1, §2.13, §2.16, §2.9
+- **Cross-refs:** §2.1, §2.13, §2.16
 
 ### §2.10 — Executive Transparency
 
-Both executives must publish all official acts — orders, certifications, vetoes, objections, determinations, and refusals to certify — to the NRS within the period defined by statute. No executive may classify, delay, or suppress publication of an act this constitution requires to be published.
+Both executives shall publish their official acts to the NRS within the period defined by statute. This obligation includes orders, certifications, vetoes, determinations, objections, refusals, and other acts of non-consent.
 
 
 ### §2.11 — Emergency Governance
 
-Where the Assembly is unable to function for an extended period — as defined by statute; in the absence of a statutory definition, the constitutional floor is 30 consecutive days during which the Assembly cannot achieve quorum — the Senate may assume joint emergency legislative authority for three functions only: election administration, social state funding continuity, and active national security obligations.…
+Where the Assembly cannot achieve quorum for the period defined by statute, or for 30 consecutive days absent such statute, the Senate may exercise emergency legislative authority only for election administration, continuity of social-state funding, and active national-security obligations. Senate action under this section requires the co-signature of the Acting Civic Consul and publication to the NRS, and ends…
 
 - **Time limits:**
-  - Expedited authority expires after 14 days unless the certifying officers publish a renewed certification of continuing necessity
+  - This expedited authority expires after 14 days unless renewed on a fresh certification and may not continue beyond 30 consecutive days except under the ordinary trigger above
 
 ### §2.12 — Clemency
 
-Each Consul holds clemency authority only within that Consul's constitutional domain. The Legat Consul may grant clemency for military-law and national-security offenses.
+Each Consul may grant clemency only for offenses within that Consul's constitutional domain: the Legat Consul for military-law and national-security offenses, and the Civic Consul for domestic federal offenses. No person may grant clemency to themselves; an attempted self-clemency is void.
 
 
 ### §2.13 — Consular Removal
 
-The Legat Consul may be removed on two independent tracks. Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct.
+The Legat Consul may be removed through either of two independent processes. Legislative removal requires 2/3 of both chambers in concurrent vote for constitutional breach, demonstrated permanent incapacity, or serious misconduct.
 
 - **Thresholds:**
-  - Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct
+  - Legislative removal requires 2/3 of both chambers in concurrent vote for constitutional breach, demonstrated permanent incapacity, or serious misconduct
 - **Cross-refs:** §2.9, §7.3
 
 ### §2.14 — Council of Ministers
 
-The Council of Ministers comprises the Legat Consul's domain officers and the Civic Consul's ministers meeting jointly as a standing cross-executive coordination body. The Council is the primary forum for matters that cross executive domains.
+The Council of Ministers consists of the Legat Consul's domain officers and the Civic Consul's ministers and serves as the standing forum for cross-domain coordination and disputes. It may coordinate positions and make recommendations but exercises no executive authority.
 
+- **Cross-refs:** §4.5
 
 ### §2.14.a — Cross-Domain Emergency Lead
 
-In a cross-domain emergency requiring unified operational authority, either executive may propose a temporary operational lead designation. Concurrence of both executives makes it effective and is published to the NRS.
+In a cross-domain emergency requiring unified operational authority, either Consul may propose a temporary operational lead. The designation requires concurrence of both Consuls and publication to the NRS.
 
 - **Cross-refs:** §4.5
 
 ### §2.14.b — Cross-Domain Assistance
 
-Either Consul may formally request that the other exercise specified authority within the other's domain in support of a need arising in the requesting Consul's domain. The request states the need, scope, and duration and is published to the NRS; the responding Consul determines whether and how to act within their own domain and publishes the response to the NRS.
+Either Consul may request assistance from the other within the responding Consul's constitutional domain. The request shall state its purpose, scope, and duration and be published to the NRS; the responding Consul determines whether and how to act and publishes the response.
 
 - **Time limits:**
-  - A request may specify a duration not to exceed 90 days
+  - Assistance remains subject to Article I, may not exceed 90 days without a fresh request and response, and disputes are resolved under §2
 - **Cross-refs:** §1.19, §2.14.a
 
 ### §2.15 — Federal Prosecution
 
-The Civic Consul is responsible for the enforcement of federal law and sets general prosecution policy. The Legislature shall by statute establish a Federal Prosecution Service independent in the exercise of individual prosecutorial decisions.
+The Civic Consul is responsible for enforcement of federal law and may set general prosecution policy. The Legislature shall establish by statute a Federal Prosecution Service independent in individual prosecutorial decisions.
 
 - **Thresholds:**
-  - The Legislature may not reduce the Service’s appropriation below the prior year’s level without a 2/3 vote of both chambers
+  - The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers
 
 ### §2.16 — Executive Incapacity
 
-(1) A Consul is temporarily unable to exercise authority upon the Consul’s declaration or upon determination by a majority of the Council of Ministers, with at least five participating. The determination is published to the NRS and acting authority vests immediately under the applicable succession provision.
+(1) A Consul is temporarily unable to exercise authority upon the Consul's declaration or a determination by a majority of the Council of Ministers, with at least five participating. The determination is published to the NRS and acting authority vests immediately under the applicable succession provision.
 
 - **Thresholds:**
-  - (4) By simple majority of each chamber, the Legislature may set a longer period for a determination under subsection (3), not exceeding six months from the heightened determination
+  - (3) By simple majority of each chamber, the Legislature may extend that heightened-restoration period, but not beyond six months from the renewed determination
 - **Time limits:**
-  - Full authority returns 24 hours after publication
-  - (3) Where incapacity is again determined on the same or substantially similar grounds within 90 days of restoration, the determination requires two-thirds of the deciding body
-  - For 30 days thereafter, the Consul may resume authority only upon a restoration declaration approved by a majority of that body, or through relief granted by the SC
-  - 9(6) may decline by publishing a declination to the NRS within 48 hours of the incapacity publication
-  - A person who does not publish a declination within 48 hours is deemed to have accepted
-- **Cross-refs:** §2.5, §2.9
+  - (2) The Consul may declare the incapacity ended, restoring authority 24 hours after publication
+  - (6) A person next in an acting succession order may decline within 48 hours by NRS publication, whereupon authority passes immediately to the next qualified person
 
 ### §2.17 — Cooling-Off from Executive Service
 
-During any period in which this Constitution bars a person from holding or seeking the office of Civic Consul or Legat Consul under a cooling-off requirement, that person may not serve in any other capacity within the executive branch, including as a minister, domain officer, or in an acting executive capacity. This section is the express exception to §7.4(9) for executive branch service; it does not bar service…
+During any constitutional cooling-off period barring a person from holding or seeking either Consular office, that person may not serve in any executive capacity, including as a minister, domain officer, or Acting Consul. This is the express exception to §7.4(9) and does not bar otherwise lawful service outside the executive branch.
 
 - **Cross-refs:** §7.4
 
 ### §2.18 — Domestic Insurrection
 
-Where armed insurrection against the constitutional order occurs within the Republic, the Council of Ministers convenes and remains in session for the duration. Neither Consul may direct the other's domain.
+During armed insurrection against the constitutional order, the Council of Ministers shall remain convened. Neither Consul may exercise authority assigned to the other.
 
 - **Cross-refs:** §14.2
 
@@ -1364,13 +1363,14 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 |---|---|---|
 | §1.19 | Emergency Derogation | thereafter, re-declaration requires 2/3 of both chambers |
 | §2.3.a | Legat Consul Legislative Veto | The Senate may override by 2/3 at any time during that session |
+| §2.6 | Constructive Vote of No Confidence | (1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly |
 | §2.6.a | Government Formation | (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy |
-| §2.6.a | Government Formation | the Assembly may withdraw the bill by simple majority within the pause period |
-| §2.6.a | Government Formation | (7) At any time before the national election begins, the Assembly may elect a Civic Consul by absolute majority, which terminates the fallback and returns the office to the ordinary process |
-| §2.7 | Civic Consul Legislative Instruments | The Senate may override by 2/3 during that month |
-| §2.13 | Consular Removal | Under the legislative track, removal requires 2/3 of both chambers in a concurrent vote on grounds of constitutional breach, demonstrated permanent incapacity, or serious misconduct |
-| §2.15 | Federal Prosecution | The Legislature may not reduce the Service’s appropriation below the prior year’s level without a 2/3 vote of both chambers |
-| §2.16 | Executive Incapacity | (4) By simple majority of each chamber, the Legislature may set a longer period for a determination under subsection (3), not exceeding six months from the heightened determination |
+| §2.6.a | Government Formation | The Assembly may withdraw the bill by simple majority |
+| §2.6.a | Government Formation | (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback |
+| §2.7 | Civic Consul Legislative Instruments | The bill is suspended for one month, during which the Senate may override by 2/3 |
+| §2.13 | Consular Removal | Legislative removal requires 2/3 of both chambers in concurrent vote for constitutional breach, demonstrated permanent incapacity, or serious misconduct |
+| §2.15 | Federal Prosecution | The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers |
+| §2.16 | Executive Incapacity | (3) By simple majority of each chamber, the Legislature may extend that heightened-restoration period, but not beyond six months from the renewed determination |
 | §3.2 | The Assembly | The Assembly may expel a member by 2/3 vote of full seated membership |
 | §3.4 | Legislative Standards | Emergency sessions may be called by the Civic Consul or by petition of 1/3 of either chamber |
 | §3.4 | Legislative Standards | removal requires 2/3 of the relevant chamber |
