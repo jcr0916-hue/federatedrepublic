@@ -482,37 +482,36 @@ A Supreme Court justice may be removed only for constitutional breach in judicia
 
 ### §4.4 — Supreme Court Selection
 
-(1) SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.8 — any pool member meeting the statutory qualifications for Supreme Court appointment is eligible for SC nomination. (2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days for an anticipated vacancy or 60 days for an unanticipated vacancy.
+(1) SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.8. Any pool member meeting the statutory qualifications for Supreme Court appointment is eligible.
 
 - **Thresholds:**
-  - The Assembly has 30 days to approve public confirmation by 2/3 of its full seated membership
+  - The Assembly has 30 days to authorize public confirmation by 2/3 of full seated membership
 - **Time limits:**
   - (2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days for an anticipated vacancy or 60 days for an unanticipated vacancy
   - (3) The Senate must vote within the period defined by statute following nomination, not to exceed 120 days
-  - The Assembly has 30 days to approve public confirmation by 2/3 of its full seated membership
-  - if the Assembly does not act within 30 days, certification for the ballot occurs automatically
+  - The Assembly has 30 days to authorize public confirmation by 2/3 of full seated membership
 - **Cross-refs:** §19.10, §7.3, §9.8
 
 ### §4.4.a — Senate Bypass — Public Confirmation
 
-Where the Senate has failed to vote on a nomination within the period required under §4.4, the Civic Consul may — with 2/3 Assembly consent — place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation. Confirmation requires 60% of votes cast under §7.3; the justice’s seniority-based designation is published to the NRS as ballot information.
+If the Senate fails to vote on a nomination within the period required by §4.4, the Civic Consul may, with 2/3 Assembly consent, submit the serving Temporary Associate Justice at the next federal electoral period for public confirmation. Confirmation requires 60% of votes cast under §7.3.
 
 - **Thresholds:**
-  - 4, the Civic Consul may — with 2/3 Assembly consent — place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation
+  - 4, the Civic Consul may, with 2/3 Assembly consent, submit the serving Temporary Associate Justice at the next federal electoral period for public confirmation
 - **Cross-refs:** §4.4, §7.3, §8.1
 
 ### §4.5 — Judicial Review and Scope
 
-(1) Courts have authority to declare legislative acts, executive orders, and administrative decisions unconstitutional and void. No political actor may override a constitutional ruling.
+(1) Courts may declare legislative acts, executive orders, and administrative decisions unconstitutional and void. No political actor may override a constitutional ruling.
 
 - **Time limits:**
   - 2 during active operations and must rule within the period defined by statute, not to exceed 48 hours
-  - the maximum extension is defined by statute, not to exceed 30 days per extension
-- **Cross-refs:** §16.2, §17.3, §2.1, §2.2
+  - The extension may not exceed the lesser of 30 days or the original period for decision
+- **Cross-refs:** §16.2, §17.3, §2.14, §2.2
 
 ### §4.6 — Judgment Recognition
 
-Judicial judgments, official records, and authenticated documents are recognized across all jurisdictions within the Republic. A judgment valid in one jurisdiction must be recognized in all others.
+Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction, the judgment was obtained by fraud, or enforcement would require an act the Legislature has made categorically unenforceable.
 
 - **Cross-refs:** §17.4
 
@@ -1371,8 +1370,8 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §4.2 | Judicial Appointments and Independence | (4) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight |
 | §4.3 | The Supreme Court | Altering the number of seats requires 2/3 of both chambers |
 | §4.3.a | Supreme Court Justice Removal | Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS |
-| §4.4 | Supreme Court Selection | The Assembly has 30 days to approve public confirmation by 2/3 of its full seated membership |
-| §4.4.a | Senate Bypass — Public Confirmation | 4, the Civic Consul may — with 2/3 Assembly consent — place the serving Temporary Associate Justice on the next federal electoral period ballot for public confirmation |
+| §4.4 | Supreme Court Selection | The Assembly has 30 days to authorize public confirmation by 2/3 of full seated membership |
+| §4.4.a | Senate Bypass — Public Confirmation | 4, the Civic Consul may, with 2/3 Assembly consent, submit the serving Temporary Associate Justice at the next federal electoral period for public confirmation |
 | §7.2.a | Special Elections and Postponements | No further postponement may be granted without a new Elections Panel finding of impossibility and a new 2/3 legislative determination |
 | §7.3 | Electoral Supermajority Threshold | 1, which requires only a simple majority of votes cast |
 | §7.11 | Codes of Conduct and Recusal | thereafter, amendment or repeal requires a 2/3 majority of both chambers |
