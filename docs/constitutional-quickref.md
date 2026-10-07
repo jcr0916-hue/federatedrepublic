@@ -522,13 +522,14 @@ Judgments, official records, and authenticated documents valid in one jurisdicti
 
 ### §5.1 — Citizenship
 
-Citizenship is acquired as provided in this section by parentage, protection against statelessness, or naturalization. A child is automatically a citizen if at least one parent is a citizen or legal resident at birth.
+Citizenship is acquired by parentage, protection against statelessness, or naturalization. A child is a citizen from birth if at least one parent is a citizen or legal resident, or if the child would otherwise be stateless.
 
 - **Cross-refs:** §3.9
 
+
 ### §5.1.a — State and Territory Voting Citizenship
 
-A citizen of the Republic is, at all times, a voting citizen of exactly one State or Territory: the one of their residence or domicile as defined by that State's or Territory's statute, consistent with this Constitution and federal law. No statute may leave a citizen of the Republic without a State or Territory of voting citizenship.
+Every citizen of the Republic is a voting citizen of exactly one State or Territory, determined by residence or domicile under applicable law consistent with this Constitution. No law may leave a citizen without a State or Territory of voting citizenship.
 
 
 ### §5.2 — Legal Resident Rights
@@ -538,7 +539,7 @@ Legal residents may work, enter contracts, own property, and access the social-s
 
 ### §5.3 — Custodial Care of Citizen Children
 
-Where a parent or guardian who is the primary caregiver of a citizen child is removed from the Republic, the Republic accepts responsibility for that citizen child — housing, care, and connection to remaining family. The Republic may not separate citizen children from their sole caregivers without providing for them.
+Where removal of a parent or guardian would deprive a citizen or Inhabitant child of their primary caregiver, the Republic shall ensure the child's care, housing, and connection to remaining family. The Republic may not separate such a child from a sole caregiver without providing for the child's care.
 
 
 ---
