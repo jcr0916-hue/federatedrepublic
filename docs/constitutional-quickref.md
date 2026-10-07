@@ -157,7 +157,7 @@ No emergency suspends the Individual Sovereignty Floor in full. Rights other tha
   - Either executive may issue such a declaration within their constitutional domain for no more than 14 days
   - Continuation beyond 14 days requires a statute enacted through the ordinary legislative process with a fixed expiration date
   - A substantially similar derogation may not be declared within 60 days after expiry
-  - The EM shall publish an assessment of any declaration made within 60 days of a prior declaration affecting substantially the same rights and geographic scope
+  - The EM shall, within 14 days of issuance, publish an assessment of any declaration made within 60 days of a prior declaration affecting substantially the same rights and geographic scope
 - **Cross-refs:** §1.19.a
 
 ### §1.19.a — Non-Derogable Rights
@@ -929,7 +929,7 @@ The Legislature has exclusive authority to levy taxes, duties, and tariffs by st
 
 The National Endowment is a constitutionally established reserve fund that backstops the Republic’s social state obligations under §12.1 during periods of Severe Revenue Contraction, as certified by the Monetary Authority. The Endowment operates independently of the annual budget process and is managed by the Monetary Authority as part of its constitutional mandate; the Monetary Authority’s sole obligation with…
 
-- **Cross-refs:** §1.16, §1.17, §12.1
+- **Cross-refs:** §1.17.a, §12.1
 
 ### §12.5 — Internal Commerce
 
