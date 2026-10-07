@@ -72,28 +72,27 @@ Every person holds the rights of expression, thought, conscience, religion, asso
 
 ### §1.6 — Equality and Non-Discrimination
 
-Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status in the provision of any governmental benefit, the imposition of any burden, or the application of any law.
+Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status.
 
-- **Cross-refs:** §12.1
 
 ### §1.7 — Bodily Sovereignty
 
-Medical decisions are the province of the individual and their chosen provider. The state may promote public health through information, licensing, and access; it may not compel medical decisions or penalize their exercise.
+Medical decisions belong to the individual and their chosen provider. Government may promote public health through information, licensing, and access, but may not compel medical decisions or penalize their exercise.
 
 
 ### §1.8 — Privacy, Property, and Security of the Home
 
-Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. The home may not be entered, nor any person, communication, or data searched, surveilled, or collected by government, without consent or prior independent judicial authorization based on specific, articulable grounds.
+Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home or search, surveil, or collect a person, communication, or data without consent or prior independent judicial authorization based on specific, articulable grounds.
 
 
 ### §1.9 — Democratic Participation
 
-Every citizen holds the right to vote, stand for office, and participate in the democratic processes of the Republic, subject to the eligibility requirements established in this constitution, and the right to have that vote counted. Government at every level is prohibited from taking any action for the purpose of, or having the substantial effect of, suppressing or reducing access to the franchise; no law, rule,…
+Every citizen has the right to vote, stand for office, participate in the democratic processes of the Republic subject to constitutional eligibility requirements, and have their vote counted. No governmental action whose purpose or substantial effect is to suppress or reduce access to the franchise is constitutionally valid.
 
 
 ### §1.10 — Right to Bear Arms
 
-Every person holds the right to keep and bear arms for lawful purposes including self-defense. States may establish licensing and safety frameworks.
+Every person holds the right to keep and bear arms for lawful purposes, including self-defense. States may establish licensing and safety frameworks.
 
 
 ### §1.11 — Habeas Corpus
@@ -102,59 +101,64 @@ Every person detained by public authority has the right to challenge that detent
 
 - **Time limits:**
   - The detaining authority must produce the person and justify the detention within the period established by statute, not to exceed 72 hours
-- **Cross-refs:** §1.19.a
 
 ### §1.12 — Rights of the Accused and Fair Trial
 
-Every person accused of a criminal offense holds: the right to be informed promptly of the charges; the right to counsel of their choosing, or to competent, adequately resourced counsel appointed at public expense where they cannot afford representation; the right to adequate time and means to prepare a defense; the right to examine witnesses; the right to silence without adverse inference; and the right to a…
+Every person accused of a criminal offense has the right to prompt notice of the charges; counsel of their choosing, or competent counsel at public expense if unable to afford representation; adequate time and means to prepare a defense; examination of witnesses; silence without adverse inference; and a speedy trial. No person may receive a greater penalty solely for exercising the right to trial.
 
 
 ### §1.13 — Right to a Public Trial
 
-Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings may be held in camera only to the minimum extent necessary to protect a compelling interest identified in advance by the court; the existence of any proceeding may not be concealed.
+Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings may be closed only to the minimum extent necessary to protect a compelling interest identified by the court; the grounds and expected duration of closure must be published to the NRS.
 
 - **Time limits:**
-  - No portion of a proceeding may remain sealed beyond 10 years from final judgment
-  - No portion may remain sealed beyond 15 years under any circumstances
-  - On expiry, the NRS Panel publishes the sealed record within 30 days
-- **Cross-refs:** §1.19.a
+  - No record may remain sealed beyond 10 years from final judgment unless a court grants one extension, not exceeding five years, upon published findings of continuing necessity
+  - No record may remain sealed beyond 15 years under any circumstances
 
 ### §1.14 — Freedom from Retroactive Criminal Law
 
-No person may be convicted of an act that was not a criminal offense when committed, or subjected to a penalty greater than that applicable at the time of the offense. No criminal law may be applied retroactively to the disadvantage of the accused.
+No person may be convicted for conduct that was not criminal when committed or subjected to a greater penalty than applied at that time. No criminal law may otherwise be applied retroactively to the disadvantage of the accused.
 
-- **Cross-refs:** §1.19.a
 
 ### §1.15 — Double Jeopardy
 
-No person may be tried or punished twice for the same offense following a final acquittal or conviction. Same offense means the same conduct regardless of how it is labeled or charged; the protection applies to any charge that does not require proof of an element distinct from those required for the original charge.
+No person may be tried or punished twice for the same offense following final acquittal or conviction. Offenses are the same where they arise from the same conduct and the later charge requires no element distinct from the earlier charge.
 
 
 ### §1.16 — Social Assistance Floor
 
-Every Inhabitant is entitled to access the Republic's social state systems under Article XII. No government may exclude any person from social assistance on the basis of the characteristics listed in §1.6.
+Every Inhabitant is entitled to access the Republic's social-state systems under Article XII. No government may exclude any person from social assistance on a ground prohibited by §1.6.
 
-- **Cross-refs:** §1.6, §12.4
+- **Cross-refs:** §1.6
 
 ### §1.17 — Education
 
-Every child has the right to education adequate to enable full civic participation. The state must ensure this education is available and accessible.
+Every child has the right to education adequate for full civic participation. The state shall ensure that education is available and accessible.
 
-- **Cross-refs:** §12.4
+
+### §1.17.a — Social Rights Implementation
+
+The Legislature shall establish adequate standards by statute for the rights protected by §§1.16 and 1.17. The EM shall assess those standards annually and publish its findings to the NRS.
+
+- **Cross-refs:** §1.16, §12.4
 
 ### §1.18 — Environmental Obligations
 
-Government holds an obligation not to cause environmental harm to persons within its jurisdiction through its own actions or through the actions of those it licenses. The Legislature establishes by statute the framework for environmental protection, and may not enact statutes that systematically permit environmental harm to defined communities.
+Government may not itself cause, or systematically permit through licensing, material environmental harm to persons within its jurisdiction. The Legislature shall establish environmental protections and may not systematically permit environmental harm to defined communities.
 
 
 ### §1.19 — Emergency Derogation
 
-No emergency — however severe — suspends the Individual Sovereignty Floor in full. Temporary derogation of certain rights is permitted only under the strict conditions of this section; the rights enumerated in §1.19.a may not be derogated.
+No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, geographic scope, and duration, published immediately to the NRS.
 
+- **Thresholds:**
+  - thereafter, re-declaration requires 2/3 of both chambers
 - **Time limits:**
-  - 5, effective on NRS publication, for a period not to exceed 14 days
-  - Derogation beyond 14 days requires a statute enacted through the ordinary legislative process
-- **Cross-refs:** §1.19.a, §1.19.b, §2.1, §2.5
+  - Either executive may issue such a declaration within their constitutional domain for no more than 14 days
+  - Continuation beyond 14 days requires a statute enacted through the ordinary legislative process with a fixed expiration date
+  - A substantially similar derogation may not be declared within 60 days after expiry
+  - The EM shall publish an assessment of any declaration made within 60 days of a prior declaration affecting substantially the same rights and geographic scope
+- **Cross-refs:** §1.19.a
 
 ### §1.19.a — Non-Derogable Rights
 
@@ -162,28 +166,16 @@ These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.
 
 - **Cross-refs:** §1.11, §1.13, §1.14, §1.21, §1.3, §1.4
 
-### §1.19.b — Emergency Declaration Lifecycle
-
-Emergency measures lapse automatically at the expiry of the Declaration. No Declaration — executive or statutory — may be extended; every Declaration expires on the terms stated at its issuance.
-
-- **Thresholds:**
-  - After 60 days, re-declaration requires a 2/3 majority of both chambers certifying continued necessity
-- **Time limits:**
-  - The Legislature may not re-declare an emergency measure within 60 days of its expiry
-  - the EM publishes an assessment of whether any new declaration constitutes a relabeled continuation of the prior emergency within 14 days of its issuance
-  - After 60 days, re-declaration requires a 2/3 majority of both chambers certifying continued necessity
-
 ### §1.20 — Right to Seek Asylum
 
-Every person who reaches the Republic's jurisdiction has the right to claim asylum and have that claim determined by an independent process under §6.3. The manner of entry does not affect this right.
+Every person who reaches the Republic's jurisdiction has the right to claim asylum and to an independent determination of that claim under §6.3. Manner of entry does not affect this right.
 
 - **Cross-refs:** §6.3
 
 ### §1.21 — Non-Refoulement
 
-No person, wherever located, may be returned, expelled, or extradited by the Republic, or by any person acting at the direction or with the acquiescence of the Republic, to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the nature of the receiving territory's government.
+No person, wherever located, may be returned, expelled, or extradited by the Republic, or by anyone acting at its direction or with its acquiescence, to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the nature of the receiving territory's government.
 
-- **Cross-refs:** §1.19.a
 
 ### §1.22 — Family
 
@@ -1040,12 +1032,15 @@ Provisional status is a remedial constitutional status applicable only to an exi
   - The Elections Panel assigns the two seats by public lot to two distinct existing Senate classes and administers a special election within 90 days
 - **Cross-refs:** §15.1, §15.5.a
 
-### §15.3 — Mandatory Devolution
+### §15.3 — State Remediation and Mandatory Devolution Review
 
 (1) An existing State enters the mandatory remediation track upon an overall failed biennial Statehood Audit under §15.2. (2) A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute; until such statute is enacted, the period is 90 days.
 
+- **Thresholds:**
+  - Entry into Provisional status requires an absolute majority of the full seated Senate
 - **Time limits:**
   - until such statute is enacted, the period is 90 days
+  - (5) The Senate must vote within the period defined by statute, not to exceed 90 days from certification, on whether to place the State in Provisional status under §15
 - **Cross-refs:** §15.1.a, §15.2, §15.4
 
 ### §15.4 — Voluntary Devolution and Merger
@@ -1367,7 +1362,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 
 | § | Provision | Threshold clause (verbatim) |
 |---|---|---|
-| §1.19.b | Emergency Declaration Lifecycle | After 60 days, re-declaration requires a 2/3 majority of both chambers certifying continued necessity |
+| §1.19 | Emergency Derogation | thereafter, re-declaration requires 2/3 of both chambers |
 | §2.3.a | Legat Consul Legislative Veto | The Senate may override by 2/3 at any time during that session |
 | §2.6.a | Government Formation | (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy |
 | §2.6.a | Government Formation | the Assembly may withdraw the bill by simple majority within the pause period |
@@ -1401,6 +1396,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §9.9 | Constitutional Officer Removal — Standard Track | (9) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers |
 | §12.1.a | The Monetary Authority | Principal decision-makers exercising the MA's constitutional authority must be selected through an independent candidate process and confirmed by 2/3 of the Senate |
 | §13.1 | Optional Referendum | A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification |
+| §15.3 | State Remediation and Mandatory Devolution Review | Entry into Provisional status requires an absolute majority of the full seated Senate |
 | §15.4 | Voluntary Devolution and Merger | and third, the Senate ratifies the agreement by 2/3 of full seated membership |
 | §15.6 | Voluntary Incorporation | The process requires a petition resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving simple majority on at least 50% participation |
 | §15.6 | Voluntary Incorporation | the Legislature ratifies the agreement by 2/3 of both chambers |
@@ -1412,4 +1408,3 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
 | §19.8 | Transitional Accountability Mechanism | no amendment may expand the scope without the same 2/3 majority |
 | §20.6 | Compact Ratification | A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3 |
-
