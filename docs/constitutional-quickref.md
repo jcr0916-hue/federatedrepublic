@@ -532,7 +532,7 @@ A citizen of the Republic is, at all times, a voting citizen of exactly one Stat
 
 ### §5.2 — Legal Resident Rights
 
-Legal residents hold a Residency Credential allowing them to work, enter contracts, own property, and access social state systems under Article XII. They hold all Article I rights as Inhabitants.
+Legal residents may work, enter contracts, own property, and access the social-state systems under Article XII. As Inhabitants, they hold all Article I rights.
 
 
 ### §5.3 — Custodial Care of Citizen Children
