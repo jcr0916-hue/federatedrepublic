@@ -34,7 +34,7 @@ test('Expanded Annotator benchmark covers observed packet-era failure modes', ()
 
   const legat = buildContextPacket('§2.3.a');
   assert.match(legat.packet, /\[§2\.7\] Civic Consul Legislative Instruments/);
-  assert.match(legat.packet, /bill is tabled for one month/i);
+  assert.match(legat.packet, /bill is suspended for one month/i);
   assert.match(legat.packet, /\[§9\.1\]/);
 
   const statehood = buildContextPacket('§15.5.a');
