@@ -519,7 +519,7 @@ Every citizen of the Republic is a voting citizen of exactly one State or Territ
 
 Legal residents may work, enter contracts, own property, and access the social-state systems under Article XII. As Inhabitants, they hold all Article I rights. They do not hold federal voting rights or eligibility for federal office. No child of a citizen or legal resident may be deported because of the child's own documentation status.
 
-### §5.3 — Custodial Care of Citizen Children
+### §5.3 — Custodial Care of Children
 
 Where removal of a parent or guardian would deprive a citizen or Inhabitant child of their primary caregiver, the Republic shall ensure the child's care, housing, and connection to remaining family. The Republic may not separate such a child from a sole caregiver without providing for the child's care. The removal order is stayed until custodial arrangements are resolved.
 
@@ -529,26 +529,18 @@ Where removal of a parent or guardian would deprive a citizen or Inhabitant chil
 
 ### §6.1 — The Two-Stage Immigration System
 
-Every immigration application must clear two sequential stages: State sponsorship and federal certification. Legal residency requires passing both stages. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6. Federal certification categories are established by statute; no ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing. Upon completion of both stages, legal residency vests by operation of law; neither executive may delay, condition, or deny that status. The Legislature may establish a Federal Sponsorship Category where federal agencies serve as the State sponsorship stage for applicants serving a defined federal interest; this does not bypass federal certification. The Legislature may set aggregate limits on total applications received and processed in any period, provided limits are applied without §1.6 discrimination. Asylum proceedings under §6.3 are exempt from the State sponsorship stage — no State's refusal to sponsor can extinguish a §1.21 asylum claim.
+Legal residency requires State sponsorship followed by federal certification, except as otherwise provided by this Constitution. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6. Federal certification categories are established by statute; no ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing. Upon completion of both stages, legal residency vests by operation of law; neither executive may delay, condition, or deny that status. The Legislature may establish a Federal Sponsorship Category where federal agencies serve as the State sponsorship stage for applicants serving a defined federal interest; this does not bypass federal certification. The Legislature may set aggregate limits on total applications received and processed in any period, provided limits are applied without §1.6 discrimination. Asylum claims under §1.21 are exempt from ordinary sponsorship, certification, and aggregate application limits; no refusal of sponsorship may extinguish such a claim. Immigration into Territories shall be administered under federal standards, with each Territory entitled to negotiate immigration volumes and applicant qualifications with the Republic, consistent with §1.6 and its Territorial Compact.
 
 ### §6.2 — Enforcement, Removal, and Appeals
 
-(1) Only the federal government may remove individuals from the Republic. Removal occurs only for violations of laws the Legislature has defined — executive detention without statutory basis is unlawful detention subject to habeas corpus.
-
+(1) Only the federal government may remove a person from the Republic. The Republic may remove a person or take other actions as established by statute and consistent with this Constitution.
 (2) Federal certification denials are judicially challengeable on three grounds:
-
 — criterion not established under the federal certification mandate;
-
 — discriminatory grounds contrary to §1.6;
-
 — or procedural violation affecting the outcome.
-
-(3) State sponsorship denials are not reviewable on the merits of the sponsorship decision but are challengeable as constitutional violations where made on §1.6 discriminatory grounds — a court finding discrimination may order reconsideration free of discriminatory criteria but may not compel sponsorship.
-
+(3) State sponsorship denials are not subject to judicial review on their merits but may be challenged for discrimination contrary to §1.6. A court may order reconsideration without discriminatory criteria but may not compel sponsorship.
 (4) Court decisions on State sponsorship challenges brought on §1.6 grounds are published to the NRS; personally identifying information of applicants who are not public figures as defined by statute is protected consistent with §1.8.
-
 (5) Where federal certification is denied on national security grounds, a reviewing court may examine the classified assessment in camera to determine whether it constitutes a credible, specific, and documented security concern; where the court finds the assessment insufficient, the denial is vacated and federal certification must be reconsidered on the remaining criteria.
-
 (6) All removal proceedings and challenge proceedings under this section carry the right to legal representation; where an applicant cannot afford representation, counsel is appointed at public expense.
 
 ### §6.3 — Asylum and Protection
@@ -569,13 +561,9 @@ Every immigration application must clear two sequential stages: State sponsorshi
 
 (8) No unaccompanied minor may be detained in a facility not specifically designated and resourced for children.
 
-### §6.3.a — Unresolvable and Security Cases
+### §6.3.a — Unexecuted Removal Orders
 
-The Legislature must define a minimum status, material conditions, and periodic judicial review for persons subject to final removal orders that cannot be executed — because the destination country will not accept them or execution would violate §1.21. Indefinite stateless detention is constitutionally prohibited. Where the independent federal asylum adjudicative process grants §1.21 protection to a person who poses a documented security threat, removal remains constitutionally barred and indefinite unreviewed detention is not available. Detention is permitted subject to: mandatory judicial review by an independent federal court within 90 days of initial detention; mandatory review every 180 days thereafter; statutory minimum conditions of humane treatment; and, for detention beyond 5 years, an affirmative judicial finding at each subsequent review that no less restrictive alternative exists; absent that finding, the person is released to the statutory minimum-status conditions defined under this section.
-
----
-
-## Article VII — Elections and Federal Office
+A person whose removal cannot be executed shall remain at liberty, subject to all applicable laws of the jurisdiction in which they reside. The Legislature may establish reasonable registration and reporting requirements consistent with Article I.
 
 ### §7.1 — Consular Election System
 
