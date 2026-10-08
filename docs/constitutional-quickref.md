@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 178 provisions**
+> **20 articles · 179 provisions**
 
 ---
 
@@ -17,7 +17,7 @@
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.22  (24 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.18  (23 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.11  (12 provisions)
-- **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (8 provisions)
+- **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (9 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (4 provisions)
 - **Article VI — Immigration and Residency**  ·  §6.1–§6.3.a  (4 provisions)
 - **Article VII — Elections and Federal Office**  ·  §7.1–§7.15  (16 provisions)
@@ -510,6 +510,12 @@ If the Senate fails to vote on a nomination within the period required by §4.4,
   - The extension may not exceed the lesser of 30 days or the original period for decision
 - **Cross-refs:** §16.2, §17.3, §2.14, §2.2
 
+### §4.5.a — Judicial Decisions and Privacy
+
+Judicial decisions shall be public. Courts shall protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability, consistent with §1.8 and Article X.
+
+- **Cross-refs:** §1.8
+
 ### §4.6 — Judgment Recognition
 
 Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction, the judgment was obtained by fraud, or enforcement would require an act the Legislature has made categorically unenforceable.
@@ -525,7 +531,6 @@ Judgments, official records, and authenticated documents valid in one jurisdicti
 Citizenship is acquired by parentage, protection against statelessness, or naturalization. A child is a citizen from birth if at least one parent is a citizen or legal resident, or if the child would otherwise be stateless.
 
 - **Cross-refs:** §3.9
-
 
 ### §5.1.a — State and Territory Voting Citizenship
 
@@ -548,19 +553,19 @@ Where removal of a parent or guardian would deprive a citizen or Inhabitant chil
 
 ### §6.1 — The Two-Stage Immigration System
 
-Every immigration application must clear two sequential stages: State sponsorship and federal certification. Legal residency requires passing both stages.
+Legal residency requires sponsorship under the applicable State or federal framework, followed by federal certification, except as otherwise provided by this Constitution. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6.
 
-- **Cross-refs:** §1.21, §1.6, §6.3
+- **Cross-refs:** §1.21, §1.6
 
 ### §6.2 — Enforcement, Removal, and Appeals
 
-(1) Only the federal government may remove individuals from the Republic. Removal occurs only for violations of laws the Legislature has defined — executive detention without statutory basis is unlawful detention subject to habeas corpus.
+(1) Only the federal government may remove a person from the Republic. The Republic may remove a person or take other actions as established by statute and consistent with this Constitution.
 
-- **Cross-refs:** §1.6, §1.8
+- **Cross-refs:** §1.1, §1.6
 
 ### §6.3 — Asylum and Protection
 
-(1) Asylum proceedings operate on a separate constitutional track from the dual-gate system. Any person who files an asylum claim under §1.21 is an Inhabitant from the date of filing — entitled to Article I protections and social state access.
+(1) A person who files an asylum claim under §1.21 retains all rights applicable to every person under Article I while the claim and any appeal are pending. The Legislature shall provide for necessary shelter, subsistence, and medical care during those proceedings.
 
 - **Time limits:**
   - A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours
@@ -568,13 +573,8 @@ Every immigration application must clear two sequential stages: State sponsorshi
 
 ### §6.3.a — Unexecuted Removal Orders
 
-The Legislature must define a minimum status, material conditions, and periodic judicial review for persons subject to final removal orders that cannot be executed — because the destination country will not accept them or execution would violate §1.21. Indefinite stateless detention is constitutionally prohibited.
+A person whose removal cannot be executed shall remain at liberty, subject to all applicable laws of the jurisdiction in which they reside. The Legislature may establish reasonable registration and reporting requirements consistent with Article I.
 
-- **Time limits:**
-  - Detention is permitted subject to: mandatory judicial review by an independent federal court within 90 days of initial detention
-  - mandatory review every 180 days thereafter
-  - and, for detention beyond 5 years, an affirmative judicial finding at each subsequent review that no less restrictive alternative exists
-- **Cross-refs:** §1.21
 
 ---
 
@@ -1395,3 +1395,4 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
 | §19.8 | Transitional Accountability Mechanism | no amendment may expand the scope without the same 2/3 majority |
 | §20.6 | Compact Ratification | A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3 |
+

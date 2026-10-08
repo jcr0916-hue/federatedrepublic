@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 178 provisions**
+> **20 articles · 179 provisions**
 
 thefederatedrepublic.org
 
@@ -548,7 +548,6 @@ Legal residency requires sponsorship under the applicable State or federal frame
 — or procedural violation affecting the outcome.
 
 (3) State sponsorship denials are not subject to judicial review on their merits but may be challenged for discrimination contrary to §1.6. A court may order reconsideration without discriminatory criteria but may not compel sponsorship.
-
 
 (4) Where federal certification is denied on national security grounds, a reviewing court may examine classified evidence in camera. If the evidence does not establish a credible, specific, and documented security concern, the denial is vacated and certification must be reconsidered on the remaining criteria.
 
