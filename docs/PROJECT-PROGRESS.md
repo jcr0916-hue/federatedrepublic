@@ -57,6 +57,9 @@ The first historical test is now published for five States. Additional episodes 
 
 ## Torenthia World content
 
+**October 7, 2026 publication batch (staged in PR):** Year 13, Month 12; worldSeq 147, nrsSeq 79. NRS-Y13-0741 records routine municipal access-terminal work; NRS-Y13-0742 records ordinary water-sampling equipment checks; NRS-Y13-0743 circulates Korda's working source index without issuing a territorial recommendation or changing the Convention clock. The Korda Press reports the narrowing documentary gaps in `torenthia-news-101.html`. Constitutional editorial changes to Articles V and VI accompany this publishing branch. No fictional day assigned.
+
+
 The current published frontier remains Year 13, Month 12, with the Korda Convention as the main active narrative and the Lake Varda conference moving into delegation preparation. The October 5 batch advances the narrative through worldSeq 145 and NRS through 75.
 
 The October 5 batch advances the narrative through worldSeq 145 and NRS through 75. NRS-Y13-0737 records that Korda's Joint Committee on Transition Facts now has enough reconciled material to begin preparing its non-binding preliminary compilation while carrying residual archive, contract-amendment and cost-allocation questions explicitly as unresolved. Mara Iset's `torenthia-news-099.html` treats that as a change in tempo rather than a compromise: Mire, Rell and Orin still hold distinct objectives, but incompleteness of the working record is becoming a weaker reason to postpone substantive argument. NRS-Y13-0738 registers the first Month 12 fiscal-equalization submissions and moves that committee toward a comparative options memorandum without any EM failure finding or ninety-day clock. NRS-Y13-0739 is routine archive facilities maintenance. No fictional day is assigned and the fictional month does not advance.
