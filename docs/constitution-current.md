@@ -555,7 +555,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (1) A person who files an asylum claim under §1.21 retains all rights applicable to every person under Article I while the claim and any appeal are pending. The Legislature shall provide for necessary shelter, subsistence, and medical care during those proceedings.
 
-(2) Claims must be determined before any removal order takes effect. A claim filed solely to delay a final removal order may be expedited under procedures the Legislature defines, consistent with the right to a fair hearing.
+(2) An asylum claim must be determined before removal may be executed. A claim found to have been filed solely to delay removal may be expedited under procedures established by statute, without diminishing the right to a fair hearing or the protections of §1.21.
 
 (3) Where the independent federal asylum adjudicative process grants protection, the person acquires legal residency by operation of that determination; State sponsorship and federal certification are not required conditions.
 
