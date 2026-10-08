@@ -27,6 +27,8 @@ const SYNONYMS = {
   'congress':['assembly','senate','legislature','chamber'],
   'senate':['upper chamber','ratification','treaty','states'],
   'bill':['legislation','assembly','statute','passage'],
+  'ordinary bill':['§3.7','absolute majority','legislative process'],
+  'join the republic':['§15.6','voluntary incorporation','petition'],
   'filibuster':['assembly','debate','passage','legislative'],
   'supreme court':['judicial','court','justice','pool'],
   'judge':['judicial','court','justice','pool','appointment'],
