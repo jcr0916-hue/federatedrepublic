@@ -537,7 +537,7 @@ Every citizen of the Republic is a voting citizen of exactly one State or Territ
 Legal residents may work, enter contracts, own property, and access the social-state systems under Article XII. As Inhabitants, they hold all Article I rights.
 
 
-### §5.3 — Custodial Care of Citizen Children
+### §5.3 — Custodial Care of Children
 
 Where removal of a parent or guardian would deprive a citizen or Inhabitant child of their primary caregiver, the Republic shall ensure the child's care, housing, and connection to remaining family. The Republic may not separate such a child from a sole caregiver without providing for the child's care.
 
@@ -566,7 +566,7 @@ Every immigration application must clear two sequential stages: State sponsorshi
   - A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours
 - **Cross-refs:** §1.21
 
-### §6.3.a — Unresolvable and Security Cases
+### §6.3.a — Unexecuted Removal Orders
 
 The Legislature must define a minimum status, material conditions, and periodic judicial review for persons subject to final removal orders that cannot be executed — because the destination country will not accept them or execution would violate §1.21. Indefinite stateless detention is constitutionally prohibited.
 
