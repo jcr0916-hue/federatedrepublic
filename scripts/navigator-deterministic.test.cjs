@@ -337,8 +337,8 @@ test('Navigator context packet surfaces verbatim procedural cues for distinct tr
   );
 
   assert.match(packet.packet, /PROCEDURAL CUES — verbatim excerpts/i);
-  assert.match(packet.packet, /If the Civic Consul has not made a nomination by the applicable deadline/i);
-  assert.match(packet.packet, /Where the Senate has failed to vote on a nomination within the period required under §4\.4/i);
+  assert.match(packet.packet, /If the Civic Consul fails to nominate within the applicable period/i);
+  assert.match(packet.packet, /If the Senate fails to vote on a nomination within the period required by §4\.4/i);
 });
 
 test('mechanic cue extraction stays verbatim and bounded', () => {
