@@ -585,9 +585,9 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (2) Where a candidate's national RCV majority reaches or exceeds 60% of votes cast, the State plurality requirement is waived.
 
-(3) Where no candidate wins outright, a runoff is conducted between the two candidates with the highest national first-preference totals, determined by national RCV only with no State plurality requirement; where two candidates are tied for the second position, the Elections Panel determines which advances by lot.
+(3) Where no candidate wins outright, a runoff is conducted between the two candidates with the highest national first-preference totals, determined by national RCV only with no State plurality requirement.
 
-(4) Where the runoff itself produces a tied result, the Elections Panel determines the winner by lot in a public session; the result is published to the NRS and is final. The Elections Panel administers and certifies all consular elections.
+(4) Electoral ties shall be resolved by lot under the supervision of the Elections Panel. The Elections Panel administers and certifies all consular elections.
 
 (5) Territory citizens vote in consular elections and their votes count in the national RCV total; Territories are not included in the State plurality calculation.
 
