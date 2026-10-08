@@ -553,7 +553,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 ### §6.3 — Asylum and Protection
 
-(1) Asylum proceedings operate on a separate constitutional track from the dual-gate system. Any person who files an asylum claim under §1.21 is an Inhabitant from the date of filing — entitled to Article I protections and social state access.
+(1) A person who files an asylum claim under §1.21 retains all rights applicable to every person under Article I while the claim and any appeal are pending. The Legislature shall provide for necessary shelter, subsistence, and medical care during those proceedings.
 
 (2) Claims must be determined before any removal order takes effect. A claim filed solely to delay a final removal order may be expedited under procedures the Legislature defines, consistent with the right to a fair hearing.
 
