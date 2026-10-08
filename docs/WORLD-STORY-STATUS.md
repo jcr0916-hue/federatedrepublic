@@ -4,7 +4,9 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **146** · nrsSeq through **76**.
+**Current published frontier:** Year 13, Month 12 · worldSeq through **147** · nrsSeq through **79**.
+
+The October 7 batch adds NRS 077–079 and news 101. Two routine filings record municipal service-desk accessibility equipment replacement and water-sampling instrument calibration without changing eligibility, deadlines, or inspection standards. Korda's Joint Committee on Transition Facts circulates the source index for its forthcoming preliminary compilation, identifying reconciled, provisional and still unsupported entries. Mara Iset reports that the index clarifies the evidence gaps without deciding any boundary or status question. The preliminary compilation remains unpublished, its internal target non-binding, and the Convention clock unaffected. The latest fictional month remains Year 13, Month 12.
 
 The October 6 batch adds NRS 076 and news 100. The Fiscal Equalization committee's staff options memorandum now puts three concrete statutory approaches into the public record: retain the current formula while standardizing queue-age reporting; add a recurring service-burden factor; or use a blended backlog/request-persistence factor. The memorandum recommends none of them, assigns no weights, starts no §12.6 remedy clock and leaves the Executive Monitor's existing no-failure finding untouched. Dara Voss's RNN coverage moves the public argument from whether the submissions describe a real problem to what a revised formula should actually measure. The latest fictional month remains Year 13, Month 12.
 
