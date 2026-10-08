@@ -55,13 +55,14 @@
       },
       "note": "Internal non-binding 30-day target; exact organizing day not established. This does not toll the Convention clock."
     },
-    "summary": "Committee source index circulated; preliminary compilation still unpublished and residual archival title, contract amendment, and cost allocation records remain open.",
-    "nextAction": "Track corrections to the working index and publication of the non-binding preliminary compilation without implying a boundary, viability finding or required constitutional outcome.",
+    "summary": "The non-binding preliminary compilation has been published; unresolved archival-title, contract-amendment and shared-cost entries remain identified.",
+    "nextAction": "Use the published preliminary compilation as an advisory record during Convention deliberations; no constitutional status outcome follows automatically.",
     "sources": [
       "torenthia-nrs-041",
       "torenthia-nrs-073",
       "torenthia-news-099",
-      "torenthia-nrs-079"
+      "torenthia-nrs-079",
+      "torenthia-nrs-082"
     ],
     "arcs": [
       "korda"

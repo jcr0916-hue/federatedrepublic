@@ -57,6 +57,9 @@ The first historical test is now published for five States. Additional episodes 
 
 ## Torenthia World content
 
+**October 8, 2026 publication batch:** Year 13, Month 12; worldSeq 148 and nrsSeq 82. Routine records NRS 080–081 cover public-counter systems and bridge-inspection scheduling. NRS 082 publishes the Korda Joint Committee's preliminary factual compilation with unresolved title, contract and shared-cost gaps; news 102 covers the transfer of responsibility from evidence assembly to Convention choice. No settlement, referendum or change to the active §15.5.a Convention clock is asserted. No fictional day assigned.
+
+
 **October 7, 2026 publication batch (staged in PR):** Year 13, Month 12; worldSeq 147, nrsSeq 79. NRS-Y13-0741 records routine municipal access-terminal work; NRS-Y13-0742 records ordinary water-sampling equipment checks; NRS-Y13-0743 circulates Korda's working source index without issuing a territorial recommendation or changing the Convention clock. The Korda Press reports the narrowing documentary gaps in `torenthia-news-101.html`. Constitutional editorial changes to Articles V and VI accompany this publishing branch. No fictional day assigned.
 
 
