@@ -491,6 +491,10 @@ The Temporary Associate Justice may advocate publicly for confirmation. A public
 
 (9) Failure of the SC to rule within a required period does not determine the merits or produce a substantive constitutional outcome. The parties retain any remedy otherwise available under this Constitution.
 
+### §4.5.a — Judicial Decisions and Privacy
+
+Judicial decisions shall be public. Courts shall protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability, consistent with §1.8 and Article X. The Legislature may establish implementing procedures by statute.
+
 ### §4.6 — Judgment Recognition
 
 Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction, the judgment was obtained by fraud, or enforcement would require an act the Legislature has made categorically unenforceable. A judgment contrary to Article I is void under §17.4.
@@ -545,11 +549,10 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (3) State sponsorship denials are not subject to judicial review on their merits but may be challenged for discrimination contrary to §1.6. A court may order reconsideration without discriminatory criteria but may not compel sponsorship.
 
-(4) Court decisions on State sponsorship challenges brought on §1.6 grounds are published to the NRS; personally identifying information of applicants who are not public figures as defined by statute is protected consistent with §1.8.
 
-(5) Where federal certification is denied on national security grounds, a reviewing court may examine classified evidence in camera. If the evidence does not establish a credible, specific, and documented security concern, the denial is vacated and certification must be reconsidered on the remaining criteria.
+(4) Where federal certification is denied on national security grounds, a reviewing court may examine classified evidence in camera. If the evidence does not establish a credible, specific, and documented security concern, the denial is vacated and certification must be reconsidered on the remaining criteria.
 
-(6) All persons subject to removal proceedings or challenging a decision under this section retain the protections of Article I, including the right to legal representation under §1.1. Where a person cannot afford counsel, counsel shall be appointed at public expense.
+(5) All persons subject to removal proceedings or challenging a decision under this section retain the protections of Article I, including the right to legal representation under §1.1. Where a person cannot afford counsel, counsel shall be appointed at public expense.
 
 ### §6.3 — Asylum and Protection
 
