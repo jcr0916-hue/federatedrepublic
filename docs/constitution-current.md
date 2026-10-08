@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 178 provisions**
+> **20 articles · 179 provisions**
 
 thefederatedrepublic.org
 
@@ -491,6 +491,10 @@ The Temporary Associate Justice may advocate publicly for confirmation. A public
 
 (9) Failure of the SC to rule within a required period does not determine the merits or produce a substantive constitutional outcome. The parties retain any remedy otherwise available under this Constitution.
 
+### §4.5.a — Judicial Decisions and Privacy
+
+Judicial decisions shall be public. Courts shall protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability, consistent with §1.8 and Article X. The Legislature may establish implementing procedures by statute.
+
 ### §4.6 — Judgment Recognition
 
 Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction, the judgment was obtained by fraud, or enforcement would require an act the Legislature has made categorically unenforceable. A judgment contrary to Article I is void under §17.4.
@@ -545,17 +549,15 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (3) State sponsorship denials are not subject to judicial review on their merits but may be challenged for discrimination contrary to §1.6. A court may order reconsideration without discriminatory criteria but may not compel sponsorship.
 
-(4) Court decisions on State sponsorship challenges brought on §1.6 grounds are published to the NRS; personally identifying information of applicants who are not public figures as defined by statute is protected consistent with §1.8.
+(4) Where federal certification is denied on national security grounds, a reviewing court may examine classified evidence in camera. If the evidence does not establish a credible, specific, and documented security concern, the denial is vacated and certification must be reconsidered on the remaining criteria.
 
-(5) Where federal certification is denied on national security grounds, a reviewing court may examine the classified assessment in camera to determine whether it constitutes a credible, specific, and documented security concern; where the court finds the assessment insufficient, the denial is vacated and federal certification must be reconsidered on the remaining criteria.
-
-(6) All removal proceedings and challenge proceedings under this section carry the right to legal representation; where an applicant cannot afford representation, counsel is appointed at public expense.
+(5) All persons subject to removal proceedings or challenging a decision under this section retain the protections of Article I, including the right to legal representation under §1.1. Where a person cannot afford counsel, counsel shall be appointed at public expense.
 
 ### §6.3 — Asylum and Protection
 
-(1) Asylum proceedings operate on a separate constitutional track from the dual-gate system. Any person who files an asylum claim under §1.21 is an Inhabitant from the date of filing — entitled to Article I protections and social state access.
+(1) A person who files an asylum claim under §1.21 retains all rights applicable to every person under Article I while the claim and any appeal are pending. The Legislature shall provide for necessary shelter, subsistence, and medical care during those proceedings.
 
-(2) Claims must be determined before any removal order takes effect. A claim filed solely to delay a final removal order may be expedited under procedures the Legislature defines, consistent with the right to a fair hearing.
+(2) An asylum claim must be determined before removal may be executed. A claim found to have been filed solely to delay removal may be expedited under procedures established by statute, without diminishing the right to a fair hearing or the protections of §1.21.
 
 (3) Where the independent federal asylum adjudicative process grants protection, the person acquires legal residency by operation of that determination; State sponsorship and federal certification are not required conditions.
 
@@ -563,11 +565,11 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (5) Asylum proceedings must provide a qualified adjudicator; interpreter access; the right to present evidence and witnesses; the right to legal representation with appointed counsel at public expense where the applicant cannot afford representation; a written decision with grounds; and a right of appeal — regardless of point of entry. The asylum proceedings statute must ensure accessibility to persons in Territories and geographically remote areas.
 
-(6) The Legislature shall establish by statute an independent federal asylum adjudicative process. The adjudicative body and its adjudicators must be institutionally independent from immigration enforcement, removal operations, foreign affairs, intelligence, and national-security operations. Adjudicators must receive tenure, removal, compensation, and decisional-independence protections sufficient to preserve impartial adjudication. The Legislature may determine organization and procedure but may not diminish independence, access, review, or the protections guaranteed by this section.
+(6) The Legislature shall establish an independent federal asylum adjudicative process by statute, institutionally separate from immigration enforcement, removal, foreign affairs, intelligence, and national-security operations. Adjudicators shall exercise independent judgment, with protections established by statute sufficient to preserve impartial decision-making. The Legislature may regulate organization and procedure but may not diminish the independence or procedural rights guaranteed by this section.
 
 (7) An unaccompanied minor arriving in the Republic is an Inhabitant from the moment of contact and holds full §1.21 protection. A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours.
 
-(8) No unaccompanied minor may be detained in a facility not specifically designated and resourced for children.
+(8) Detention of an unaccompanied minor must be lawful and necessary and may occur only in a facility specifically designated and resourced for children.
 
 ### §6.3.a — Unexecuted Removal Orders
 
