@@ -589,11 +589,10 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (4) Electoral ties shall be resolved by lot under the supervision of the Elections Panel. The Elections Panel administers and certifies all consular elections.
 
-(5) Territory citizens vote in consular elections and their votes count in the national RCV total; Territories are not included in the State plurality calculation.
+(5) Territory citizens vote in consular elections and their votes count in the national RCV total, but Territories are excluded from the State plurality calculation. A candidate satisfies the State plurality requirement by receiving more first-preference votes than any other candidate in a majority of the Republic's States. The Elections Panel certifies State-by-State first-preference results as part of overall election certification.
 
-(6) A candidate satisfies the State plurality requirement by receiving more first-preference votes than any other candidate in a majority of the Republic's States. The Elections Panel certifies State-by-State first-preference results as part of overall election certification.
 
-(7) Certification is final and may be challenged only before the SC within 14 days of certification by either candidate, any State or Territory government on the ground that the certification does not accurately reflect votes cast within its jurisdiction, or the Elections Panel itself where it identifies a material error in its own certification.
+(6) Certification is final and may be challenged only before the SC within 14 days of certification by either candidate, any State or Territory government on the ground that the certification does not accurately reflect votes cast within its jurisdiction, or the Elections Panel itself where it identifies a material error in its own certification.
 
 ### §7.2 — Federal Elections
 
