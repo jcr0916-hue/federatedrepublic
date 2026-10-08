@@ -36,7 +36,7 @@
   {
     "id": "korda-committee-target",
     "title": "Korda committee preliminary compilation",
-    "status": "completed",
+    "status": "open",
     "trigger": {
       "description": "Committee set an internal target after organizing; exact day not established",
       "date": {
