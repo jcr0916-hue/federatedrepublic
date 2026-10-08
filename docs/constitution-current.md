@@ -534,13 +534,21 @@ Legal residency requires State sponsorship followed by federal certification, ex
 ### §6.2 — Enforcement, Removal, and Appeals
 
 (1) Only the federal government may remove a person from the Republic. The Republic may remove a person or take other actions as established by statute and consistent with this Constitution.
+
 (2) Federal certification denials are judicially challengeable on three grounds:
+
 — criterion not established under the federal certification mandate;
+
 — discriminatory grounds contrary to §1.6;
+
 — or procedural violation affecting the outcome.
+
 (3) State sponsorship denials are not subject to judicial review on their merits but may be challenged for discrimination contrary to §1.6. A court may order reconsideration without discriminatory criteria but may not compel sponsorship.
+
 (4) Court decisions on State sponsorship challenges brought on §1.6 grounds are published to the NRS; personally identifying information of applicants who are not public figures as defined by statute is protected consistent with §1.8.
+
 (5) Where federal certification is denied on national security grounds, a reviewing court may examine the classified assessment in camera to determine whether it constitutes a credible, specific, and documented security concern; where the court finds the assessment insufficient, the denial is vacated and federal certification must be reconsidered on the remaining criteria.
+
 (6) All removal proceedings and challenge proceedings under this section carry the right to legal representation; where an applicant cannot afford representation, counsel is appointed at public expense.
 
 ### §6.3 — Asylum and Protection
@@ -564,6 +572,10 @@ Legal residency requires State sponsorship followed by federal certification, ex
 ### §6.3.a — Unexecuted Removal Orders
 
 A person whose removal cannot be executed shall remain at liberty, subject to all applicable laws of the jurisdiction in which they reside. The Legislature may establish reasonable registration and reporting requirements consistent with Article I.
+
+---
+
+## Article VII — Elections and Federal Office
 
 ### §7.1 — Consular Election System
 
