@@ -547,9 +547,9 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (4) Court decisions on State sponsorship challenges brought on §1.6 grounds are published to the NRS; personally identifying information of applicants who are not public figures as defined by statute is protected consistent with §1.8.
 
-(5) Where federal certification is denied on national security grounds, a reviewing court may examine the classified assessment in camera to determine whether it constitutes a credible, specific, and documented security concern; where the court finds the assessment insufficient, the denial is vacated and federal certification must be reconsidered on the remaining criteria.
+(5) Where federal certification is denied on national security grounds, a reviewing court may examine classified evidence in camera. If the evidence does not establish a credible, specific, and documented security concern, the denial is vacated and certification must be reconsidered on the remaining criteria.
 
-(6) All removal proceedings and challenge proceedings under this section carry the right to legal representation; where an applicant cannot afford representation, counsel is appointed at public expense.
+(6) All persons subject to removal proceedings or challenging a decision under this section retain the protections of Article I, including the right to legal representation under §1.1. Where a person cannot afford counsel, counsel shall be appointed at public expense.
 
 ### §6.3 — Asylum and Protection
 
