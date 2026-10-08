@@ -12,8 +12,8 @@ test('World context packet gives Korda authoring a bounded current canon packet'
   assert.deepEqual(result.recentNrs.slice(0,2), ['torenthia-nrs-082.html','torenthia-nrs-079.html']);
 
   assert.match(result.packet, /Korda Convention \[open\]/);
-  assert.match(result.packet, /NRS-Y13-0737/);
-  assert.match(result.packet, /The Committee Has Enough to Start Writing/);
+  assert.match(result.packet, /NRS-Y13-0746/);
+  assert.match(result.packet, /The Committee Publishes a Record, Not a Map/);
   assert.match(result.packet, /\[§15\.5\.a\]/);
   assert.match(result.packet, /planning only, not published canon/i);
   assert.doesNotMatch(result.packet, /Sena Threll/);
