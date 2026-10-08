@@ -567,7 +567,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (7) An unaccompanied minor arriving in the Republic is an Inhabitant from the moment of contact and holds full §1.21 protection. A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours.
 
-(8) No unaccompanied minor may be detained in a facility not specifically designated and resourced for children.
+(8) Detention of an unaccompanied minor must be lawful and necessary and may occur only in a facility specifically designated and resourced for children.
 
 ### §6.3.a — Unexecuted Removal Orders
 
