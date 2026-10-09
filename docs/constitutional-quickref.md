@@ -365,17 +365,17 @@ The Legislature comprises the Assembly and the Senate. All legislation originate
 
 ### §3.2 — The Assembly
 
-(1) Members of the federal Assembly are elected by proportional representation. States and Territories each elect voting members.
+(1) Members of the federal Assembly are elected by Ranked Choice Voting. States determine their own Assembly district arrangements, subject to §3.3;
 
 - **Thresholds:**
   - The Assembly may expel a member by 2/3 of full seated membership
 - **Time limits:**
   - (6) Mid-term vacancies are filled by special election administered by the Elections Panel within the period defined by statute, not exceeding 90 days
-- **Cross-refs:** §2.5, §2.6.a
+- **Cross-refs:** §2.5, §2.6.a, §3.3
 
 ### §3.3 — Electoral Districts
 
-States draw their own Assembly district maps subject to five criteria: population equality within reasonable tolerance; geographic contiguity; compliance with §1.6 non-discrimination; no material dilution of minority voting power; and reasonable compactness. Voter political affiliation data, voting history data, and incumbent residence may not be used as criteria in drawing district boundaries.
+States draw their own Assembly district maps subject to five criteria: substantially equal population per representative, accounting for the number of members elected by each district; geographic contiguity; compliance with §1.6 non-discrimination; no material dilution of minority voting power; and reasonable compactness. Voter political affiliation data, voting history data, and incumbent residence may not be…
 
 - **Cross-refs:** §1.6
 
@@ -676,12 +676,13 @@ All contributions to electoral campaigns must be disclosed in full to the Electi
 
 ### §8.2 — Campaign Conduct
 
-Candidates for constitutional office campaign in compliance with published Elections Panel conduct standards, which include: prohibition on impersonating other candidates; prohibition on vote suppression activities; and prohibition on interference with the electoral administration process. Campaign communications must clearly identify their sponsor.
+Candidates for constitutional office must comply with the prohibitions in this section and additional lawful conduct requirements established by the Legislature by statute. Candidate impersonation, vote suppression, and interference with election administration are prohibited.
 
+- **Cross-refs:** §1.5
 
 ### §8.3 — Public Spectrum Access for Campaigns
 
-Licensees operating on public broadcast spectrum — including television, radio, and licensed carriers of automated political communications — shall provide equal free access to qualified candidates during the federal electoral period. The terms and quantity of access are defined by statute.
+Licensees operating on public broadcast spectrum, including television, radio, and licensed carriers of automated political communications, shall provide qualified candidates equal free campaign access during the federal electoral period. The terms and quantity of access shall be established by statute.
 
 
 ### §8.4 — Public Campaign Financing
