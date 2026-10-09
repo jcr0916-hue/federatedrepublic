@@ -340,7 +340,7 @@ The Civic Consul is responsible for enforcement of federal law and may set gener
 
 ### §2.17 — Cooling-Off from Executive Service
 
-During any constitutional cooling-off period barring a person from holding or seeking either Consular office, that person may not serve in any executive capacity, including as a minister, domain officer, or Acting Consul. This is the express exception to §7.4(9) and does not bar otherwise lawful service outside the executive branch.
+During any constitutional cooling-off period barring a person from holding or seeking either Consular office, that person may not serve in any executive capacity, including as a minister, domain officer, or Acting Consul. This is the express exception to §7.4(5) and does not bar otherwise lawful service outside the executive branch.
 
 - **Cross-refs:** §7.4
 
@@ -589,89 +589,79 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (1) Federal elections are held at regular intervals: Assembly elections every two years; Senate elections on the staggered six-year cycle;
 
-- **Cross-refs:** §7.1
+- **Cross-refs:** §3.2, §7.1
 
 ### §7.2.a — Special Elections and Postponements
 
-Special elections for vacancies are administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that elections cannot be held across a substantial portion of the Republic due to a natural disaster or catastrophic infrastructure failure, the Legislature may by 2/3 of both chambers in a concurrent vote postpone the affected election for a period not to exceed 90…
+Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a two-thirds vote of each chamber.
 
-- **Thresholds:**
-  - No further postponement may be granted without a new Elections Panel finding of impossibility and a new 2/3 legislative determination
-- **Time limits:**
-  - elections must be held within 30 days of that publication
 
 ### §7.3 — Electoral Supermajority Threshold
 
-Except for constitutional-amendment referendums, whose thresholds are established in §17.1, 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. Subject to that exception, this threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State…
+Except for constitutional-amendment referendums governed by §17.1, any supermajority required by this Constitution in a direct vote of the citizens is 60% of votes cast. This threshold may be changed only by constitutional amendment and does not alter separately established participation or turnout requirements.
 
-- **Thresholds:**
-  - 1, which requires only a simple majority of votes cast
-- **Cross-refs:** §13.1, §15.9, §17.1, §2.13, §4.4.a, §7.1
+- **Cross-refs:** §17.1
 
 ### §7.4 — Eligibility and Disclosure for Federal Office
 
-(1) Every candidate for federal office, and every person selected or elevated to a federal office without standing for election, shall disclose their criminal history on the official candidacy or acceptance filing, under penalty of perjury; the disclosure is published to the NRS and is available to voters and to any body that selects the officeholder. (2) A person who has made a current disclosure for one federal…
+(1) Every candidate for federal office and every person assuming federal office without election shall publicly disclose their criminal history under penalty of perjury. A current and accurate disclosure satisfies this requirement for subsequent appointments or elevations.
 
 - **Time limits:**
-  - (10) Any candidate removed from a federal ballot by the Elections Panel may appeal to the Appellate Court within 14 days
-  - The Court reviews only whether the applicable eligibility criteria were correctly applied and must rule within 21 days
+  - (6) A candidate disqualified by the Elections Panel may appeal to the Appellate Court within 14 days, unless another period is established by statute
 
 ### §7.5 — Removal from Federal Office
 
-Where this Constitution governs the tenure or removal of a federal officeholder, that person may be removed only through a removal mechanism provided by this Constitution or through a statutory mechanism that this Constitution expressly authorizes. No additional removal mechanism may be created by statute.
+A federal officeholder whose tenure or removal is governed by this Constitution may be removed only through a mechanism established or expressly authorized by this Constitution. Criminal liability remains unaffected.
 
 
 ### §7.6 — Continuity and Acting Service
 
-For every office established by this Constitution with a fixed term, the successor selected under the applicable constitutional process begins the term at the precise moment the incumbent's term concludes. The applicable election, selection, or confirmation process must be completed with sufficient lead time to ensure seamless succession.
+Selection and confirmation procedures for fixed-term constitutional offices shall provide for uninterrupted succession. A person exercising acting authority must meet the substantive qualifications of the office, except for the selection or confirmation required for permanent appointment.
 
 
 ### §7.7 — Official Capacity Protection
 
-Constitutional officers and persons acting within the authority of a constitutional office in the performance of official functions hold protection from civil proceedings arising from those official acts. This protection does not extend to criminal conduct, acts performed outside official capacity or authority, or acts that violate any provision of this constitution.
+Constitutional officers and persons acting within the authority of a constitutional office are protected from personal civil liability for lawful acts performed within their official authority. This protection does not extend to criminal conduct, acts outside official authority, or violations of this Constitution.
 
 
 ### §7.8 — Separation of Branch Authority
 
-No person may exercise the voting or decisional authority of more than one branch of government at the same time; a person holding or acting in an office of one branch may not cast a vote or exercise a decisional power reserved to another branch for so long as they hold or act in that office. This section does not bar a person from holding a seat that carries no exercisable vote during such service, nor from…
+No person may simultaneously hold office in more than one branch of government, except when temporarily exercising acting authority under this Constitution. During such acting service, the person retains their original office or mandate but may not exercise any authority of that office.
 
 
 ### §7.9 — Inviolability of Electoral Mandates
 
-Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate except through expulsion by the relevant chamber where this Constitution provides it, recall under a State mechanism recognized by this Constitution, or removal under another mechanism…
+An elected constitutional mandate may not be shortened, suspended, or terminated except through a mechanism expressly provided or authorized by this Constitution. No additional mechanism for terminating an elected mandate, including popular recall, may be established by statute.
 
 
 ### §7.10 — Ethics and Financial Disclosure
 
-(1) A financial interest includes any holding, income source, liability, business relationship, or similar economic interest; a financial interest is disqualifying where it creates a direct and material conflict between an officer's personal economic interest and the impartial exercise of official duties. Statute may further specify categories and thresholds consistent with this standard.
+(1) A financial interest is disqualifying where it creates a direct and material conflict with the impartial exercise of official duties. Statute may define categories and thresholds consistent with this standard.
 
 
-### §7.11 — Codes of Conduct and Recusal
+### §7.11 — Codes of Conduct and Conflicts of Interest
 
-The Legislature may by statute establish codes of conduct and procedural rules for any constitutionally established office outside the Legislature, including standards for recusal from specific proceedings, disclosure obligations beyond those required by this Article, and disciplinary procedures short of removal. No such procedure may remove an officer, suspend or diminish constitutionally assigned authority,…
+The Legislature may establish codes of conduct, disclosure requirements, conflict-of-interest standards, and disciplinary procedures for constitutional offices outside the Legislature. Such rules may not diminish constitutional authority, tenure, or institutional independence, nor establish additional removal mechanisms, except where expressly authorized by this Constitution.
 
-- **Thresholds:**
-  - thereafter, amendment or repeal requires a 2/3 majority of both chambers
-- **Cross-refs:** §7.5
 
 ### §7.12 — Post-Service Restrictions
 
-Constitutional officers may not, for a period defined by statute after leaving office — which may not be less than two years — engage in activity that monetizes or draws on non-public information, relationships, or access obtained by virtue of their service. The respective Monitor audits post-service activities within its mandate for compliance and publishes findings to the NRS; enforcement is through the…
+Constitutional officers may not exploit non-public information, privileged access, or official influence obtained through their service for private benefit after leaving office. The Legislature shall establish post-service restrictions and cooling-off periods by statute.
 
 
 ### §7.13 — Federal Public Service Ethics
 
-The Legislature must by statute establish disclosure and recusal requirements for federal government employees and military personnel whose duties create material conflict-of-interest risk, including procurement, regulatory, and senior civil service positions. The respective Monitor audits the administering agency's compliance with this requirement and publishes findings to the NRS; this audit is systemic and…
+The Legislature shall establish disclosure and recusal requirements for federal employees and military personnel whose duties present material conflicts of interest. The responsible Monitor shall audit institutional compliance and publish findings to the NRS.
 
 
 ### §7.14 — Compensation of Federal Officials
 
-No federal official may set their own compensation or the compensation of their direct supervisors. Official compensation is set by statute and is a public record on the NRS.
+Federal officials may not determine their own compensation or that of their direct supervisors, except as expressly authorized by this Constitution. Compensation shall be established by statute and published to the NRS.
 
 
 ### §7.15 — Authority by Constitutional Operation
 
-Authority conferred, transferred, or assumed by operation of this Constitution vests at the moment the constitutional condition giving rise to it occurs. No oath, acceptance, publication, appointment instrument, or other implementing act is required unless this Constitution expressly makes publication or another act a condition of effect.
+Authority conferred, transferred, or assumed by operation of this Constitution vests immediately upon satisfaction of the constitutional conditions, without oath, acceptance, publication, or other implementing act unless expressly required by this Constitution. The change shall be recorded to the NRS as soon as practicable.
 
 
 ---
@@ -1374,9 +1364,6 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §4.3.a | Supreme Court Justice Removal | Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS |
 | §4.4 | Supreme Court Selection | The Assembly has 30 days to authorize public confirmation by 2/3 of full seated membership |
 | §4.4.a | Senate Bypass — Public Confirmation | 4, the Civic Consul may, with 2/3 Assembly consent, submit the serving Temporary Associate Justice at the next federal electoral period for public confirmation |
-| §7.2.a | Special Elections and Postponements | No further postponement may be granted without a new Elections Panel finding of impossibility and a new 2/3 legislative determination |
-| §7.3 | Electoral Supermajority Threshold | 1, which requires only a simple majority of votes cast |
-| §7.11 | Codes of Conduct and Recusal | thereafter, amendment or repeal requires a 2/3 majority of both chambers |
 | §9.3 | Monitor General Selection | All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority |
 | §9.3 | Monitor General Selection | where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote |
 | §9.9 | Constitutional Officer Removal — Standard Track | (7) For all other officers within this section's scope: a concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC |
@@ -1395,4 +1382,3 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
 | §19.8 | Transitional Accountability Mechanism | no amendment may expand the scope without the same 2/3 majority |
 | §20.6 | Compact Ratification | A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3 |
-
