@@ -631,11 +631,7 @@ Except for constitutional-amendment referendums governed by §17.1, any supermaj
 
 ### §7.5 — Removal from Federal Office
 
-Where this Constitution governs the tenure or removal of a federal officeholder, that person may be removed only through a removal mechanism provided by this Constitution or through a statutory mechanism that this Constitution expressly authorizes.
-
-No additional removal mechanism may be created by statute.
-
-Criminal liability remains separately pursuable.
+A federal officeholder whose tenure or removal is governed by this Constitution may be removed only through a mechanism established or expressly authorized by this Constitution. Criminal liability remains unaffected.
 
 ### §7.6 — Continuity and Acting Service
 
