@@ -604,9 +604,9 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (4) Federal elections are administered by the States within standards established and enforced by the Elections Panel; all state election systems must connect to and operate through the National Voting System, free from executive interference.
 
-(5) The Legat Consul may not declare, postpone, or influence the scheduling of elections — including declaring emergencies that have the effect of delaying them. No State may take any action that reduces NVS access, functionality, or availability within its territory. States may offer early voting, mail-in ballots, and alternative participation methods provided all methods connect to the NVS and meet Elections Panel standards.
+(5) Neither executive nor any State may interfere with the scheduling, administration, or accessibility of federal elections, except as expressly authorized by this Constitution. All electoral methods must comply with Elections Panel standards and preserve access to the National Voting System.
 
-(6) The Republic shall provide such financial and technical assistance as is necessary to ensure every State has the capacity to procure certified equipment and meet federal election standards; the Legislature establishes the assistance mechanism and eligibility criteria by statute; the Elections Panel certifies whether assistance has been sufficient to bring each State into compliance.
+(6) The Republic shall provide the financial and technical assistance necessary for every State to meet federal election standards. The Legislature shall establish the assistance framework by statute, subject to Elections Panel oversight.
 
 ### §7.2.a — Special Elections and Postponements
 
