@@ -702,20 +702,21 @@ The Republic maintains three constitutionally independent Monitors — Legislati
 
 ### §9.1.a — The Legislative Monitor
 
-The LM audits the Legislature for fiscal accuracy and constitutional compliance. Responsibilities include auditing the population census for constitutional compliance; reviewing Assembly district maps against §3.3 criteria and publishing germaneness analyses; auditing the Elections Panel’s administration of the referendum eligibility process; auditing legislative mandate compliance; and publishing an annual…
+The LM audits the Legislature for fiscal accuracy and constitutional compliance. Responsibilities include auditing the population census for constitutional compliance; reviewing Assembly district maps for compliance with the criteria established in §3.3 and publishing its findings; auditing the Elections Panel’s administration of the referendum eligibility process; auditing legislative mandate compliance; and…
 
 - **Cross-refs:** §3.3
 
 ### §9.1.b — The Executive Monitor
 
-The EM audits both executives and the Monetary Authority. Annual responsibilities include: military compliance assessment covering whether military force was used for an authorized purpose under §14.1, whether legislative authorization and allocation requirements under §14.2 were observed, whether the §2.3 intelligence warrant requirement was maintained, and whether all military orders were published to the NRS…
+The EM audits both executives and the Monetary Authority. Annual responsibilities include assessing military compliance under §§14.1 and 14.2, including whether military force was used for an authorized purpose, whether legislative authorization and allocation requirements were observed, and whether military orders were published to the NRS within the required period; independently auditing compliance with the…
 
-- **Cross-refs:** §14.1, §14.2, §2.12, §2.3
+- **Cross-refs:** §14.1, §2.12, §2.3
 
 ### §9.1.c — The Judicial Monitor
 
-The JM audits the courts for judicial scope and independence, and conducts annual audits of the Elections Panel for electoral integrity compliance, including the administration of the Judicial Pool and all constitutional pools. The JM reviews compliance with treaty obligations under Article XVI and Associated Community compact agreements under Article XX.
+The JM audits the courts for judicial scope and independence, the Elections Panel for electoral integrity compliance, and compliance with constitutional treaty and compact obligations. Its specific audit responsibilities are established under §9.4.
 
+- **Cross-refs:** §9.4
 
 ### §9.1.d — Monitor General Term Expiry and Incapacity
 
@@ -727,8 +728,9 @@ A Monitor General's constitutional authority terminates automatically at the mom
 
 ### §9.2 — Selection and Independence
 
-Each Monitor is constituted through a process that structurally excludes the body being watched from selecting its watchers. The SC nominates the LM Monitor General, confirmed by national popular vote.
+Each Monitor General shall be selected through a process that excludes the institution subject to that Monitor's oversight from controlling the selection. The nomination, confirmation, and lottery procedures are established under §9.3.
 
+- **Cross-refs:** §9.3
 
 ### §9.3 — Monitor General Selection
 
@@ -739,6 +741,7 @@ All Monitor General confirmations follow the same process: the nominated or lott
   - where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote
 - **Time limits:**
   - d acting mechanism activates and a new selection must begin within 60 days
+  - Where the SC fails to nominate an LM Monitor General within 60 days of a vacancy, the JMC shall select a nominee by public lottery from the eligible LM candidate pool
   - where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote
   - No two Monitor General full terms may be scheduled to begin within 18 months of each other
 - **Cross-refs:** §9.1.d, §9.4, §9.8
@@ -758,7 +761,7 @@ The Elections Panel maintains the standing Judicial Pool from which all federal 
 
 ### §9.5 — Monitor Operations
 
-Every finding, report, and discrepancy notice must be published to the NRS permanently and free of charge; no official may suppress, delay, classify, or alter a Monitor report before publication. Monitor reports are permanently exempt from classification.
+Every finding, report, and discrepancy notice must be published to the NRS permanently and free of charge. No official outside the issuing Monitor may suppress, delay, classify, or alter a Monitor report before publication.
 
 - **Cross-refs:** §9.5.a
 
