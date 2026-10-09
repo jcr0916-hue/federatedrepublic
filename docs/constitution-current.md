@@ -635,9 +635,7 @@ A federal officeholder whose tenure or removal is governed by this Constitution 
 
 ### §7.6 — Continuity and Acting Service
 
-For every office established by this Constitution with a fixed term, the successor selected under the applicable constitutional process begins the term at the precise moment the incumbent's term concludes. The applicable election, selection, or confirmation process must be completed with sufficient lead time to ensure seamless succession.
-
-A person serving in an acting capacity for an office established by this Constitution must satisfy all substantive qualifications for that office, except completion of the election, selection, or confirmation process otherwise required to hold it permanently. The acting mechanism for each office is governed by provisions applicable to that office.
+Selection and confirmation procedures for fixed-term constitutional offices shall provide for uninterrupted succession. A person exercising acting authority must meet the substantive qualifications of the office, except for the selection or confirmation required for permanent appointment.
 
 ### §7.7 — Official Capacity Protection
 
