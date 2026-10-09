@@ -295,7 +295,7 @@ The Civic Consul is responsible for enforcement of federal law and may set gener
 
 ### §2.17 — Cooling-Off from Executive Service
 
-During any constitutional cooling-off period barring a person from holding or seeking either Consular office, that person may not serve in any executive capacity, including as a minister, domain officer, or Acting Consul. This is the express exception to §7.4(9) and does not bar otherwise lawful service outside the executive branch.
+During any constitutional cooling-off period barring a person from holding or seeking either Consular office, that person may not serve in any executive capacity, including as a minister, domain officer, or Acting Consul. This is the express exception to §7.4(5) and does not bar otherwise lawful service outside the executive branch.
 
 ### §2.18 — Domestic Insurrection
 
@@ -621,13 +621,13 @@ Except for constitutional-amendment referendums governed by §17.1, any supermaj
 
 (2) No criminal conviction disqualifies a person from federal office except a conviction for insurrection, rebellion, or treason against the Republic, or subversion of a federal election. These grounds are exhaustive and require conviction rather than accusation or pending charges.
 
-(7) A person who leaves a constitutional office before the expiration of their term is deemed to have completed that term for purposes of term limits and required cooling-off periods. Departure from office does not shorten, waive, or extend any cooling-off period otherwise required by this Constitution.
+(3) A person who leaves a constitutional office before the expiration of their term is deemed to have completed that term for purposes of term limits and required cooling-off periods. Departure from office does not shorten, waive, or extend any cooling-off period otherwise required by this Constitution.
 
-(8) A person constitutionally ineligible for an office may not exercise its authority, including through succession or acting service, except where this Constitution expressly provides otherwise. Succession passes to the next eligible person.
+(4) A person constitutionally ineligible for an office may not exercise its authority, including through succession or acting service, except where this Constitution expressly provides otherwise. Succession passes to the next eligible person.
 
-(9) An office-specific restriction does not disqualify a person from another constitutional office unless this Constitution expressly provides otherwise.
+(5) An office-specific restriction does not disqualify a person from another constitutional office unless this Constitution expressly provides otherwise.
 
-(10) Any candidate removed from a federal ballot by the Elections Panel may appeal to the Appellate Court within 14 days. The Court reviews only whether the applicable eligibility criteria were correctly applied and must rule within 21 days.
+(6) A candidate disqualified by the Elections Panel may appeal to the Appellate Court within 14 days, unless another period is established by statute. The Court shall determine whether the applicable eligibility requirements were correctly applied and resolve the appeal in sufficient time to permit the candidate's participation in the scheduled election. The Legislature shall establish reasonable election-preparation deadlines by statute.
 
 ### §7.5 — Removal from Federal Office
 
