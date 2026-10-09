@@ -623,9 +623,9 @@ Except for constitutional-amendment referendums governed by §17.1, any supermaj
 
 (7) A person who leaves a constitutional office before the expiration of their term is deemed to have completed that term for purposes of term limits and required cooling-off periods. Departure from office does not shorten, waive, or extend any cooling-off period otherwise required by this Constitution.
 
-(8) Where this Constitution bars a person from holding an office, no election, succession, elevation, designation, or automatic assumption may place that person in that office or in an acting exercise of its authority, except where this Constitution expressly provides otherwise. Where an order of succession or acting authority would otherwise place a barred person, the role passes to the next eligible person in the applicable order as if that person were unable to serve.
+(8) A person constitutionally ineligible for an office may not exercise its authority, including through succession or acting service, except where this Constitution expressly provides otherwise. Succession passes to the next eligible person.
 
-(9) A cooling-off period constitutionally required before a person may again hold or seek a specific office does not bar that person from holding or seeking any other constitutional office for which they are otherwise eligible during that period, except where this Constitution expressly provides otherwise.
+(9) An office-specific restriction does not disqualify a person from another constitutional office unless this Constitution expressly provides otherwise.
 
 (10) Any candidate removed from a federal ballot by the Elections Panel may appeal to the Appellate Court within 14 days. The Court reviews only whether the applicable eligibility criteria were correctly applied and must rule within 21 days.
 
