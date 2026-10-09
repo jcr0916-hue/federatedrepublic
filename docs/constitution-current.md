@@ -585,7 +585,7 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (2) Where a candidate's national RCV majority reaches or exceeds 60% of votes cast, the State plurality requirement is waived.
 
-(3) Where no candidate wins outright, a runoff is conducted between the two candidates with the highest national first-preference totals, determined by national RCV only with no State plurality requirement.
+(3) Where no candidate wins outright, a runoff is conducted between the two candidates with the highest national first-preference vote totals. The runoff uses national Ranked Choice Voting without a State plurality requirement.
 
 (4) Electoral ties shall be resolved by lot under the supervision of the Elections Panel. The Elections Panel administers and certifies all consular elections.
 
@@ -595,21 +595,21 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 ### §7.2 — Federal Elections
 
-(1) Federal elections are held at regular intervals: Assembly elections every two years; Senate elections on the staggered six-year cycle; Consular elections every four years.
+(1) Federal elections are held at regular intervals: Assembly elections every two years; Senate elections on the staggered six-year cycle; Legat Consul elections every four years.
 
-(2) All federal elections use Ranked Choice Voting — majority required, not plurality; Consular elections use RCV within the framework of §7.1, which adds the State plurality requirement.
+(2) All federal elections shall use Ranked Choice Voting. Assembly elections shall preserve proportional representation under §3.2, and Consular elections shall follow §7.1.
 
 (3) The Legislature defines by statute the specific timing, duration, and structure of the federal electoral period within these constitutional floors.
 
-(4) Federal elections are administered by the States within standards established and enforced by the Elections Panel; all state election systems must connect to and operate through the National Voting System, free from executive interference.
+(4) States administer federal elections through the National Voting System under standards established and enforced by the Elections Panel.
 
-(5) Neither executive nor any State may interfere with the scheduling, administration, or accessibility of federal elections, except as expressly authorized by this Constitution. All electoral methods must comply with Elections Panel standards and preserve access to the National Voting System.
+(5) Neither executive nor any State may interfere with federal elections or restrict lawful access to the National Voting System, except as expressly authorized by this Constitution.
 
 (6) The Republic shall provide the financial and technical assistance necessary for every State to meet federal election standards. The Legislature shall establish the assistance framework by statute, subject to Elections Panel oversight.
 
 ### §7.2.a — Special Elections and Postponements
 
-Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a two-thirds vote of each chamber. The mandates of affected officeholders extend until certification of the postponed election. Any further postponement requires renewed certification of impossibility and renewed legislative approval by the same threshold. Elections shall proceed as soon as practicable once the impediment has ended. Elections Panel determinations are subject to expedited judicial review.
+Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a two-thirds vote of each chamber. The mandates of affected officeholders extend until certification of the postponed election. Any further postponement requires renewed Elections Panel certification that holding the affected election remains impossible and renewed legislative approval by the same threshold. Elections shall proceed as soon as practicable once the impediment has ended. Elections Panel determinations are subject to expedited judicial review.
 
 ### §7.3 — Electoral Supermajority Threshold
 
@@ -639,53 +639,49 @@ Selection and confirmation procedures for fixed-term constitutional offices shal
 
 ### §7.7 — Official Capacity Protection
 
-Constitutional officers and persons acting within the authority of a constitutional office in the performance of official functions hold protection from civil proceedings arising from those official acts. This protection does not extend to criminal conduct, acts performed outside official capacity or authority, or acts that violate any provision of this constitution. Nothing in this provision bars legal remedies otherwise available under this constitution or statute.
+Constitutional officers and persons acting within the authority of a constitutional office are protected from personal civil liability for lawful acts performed within their official authority. This protection does not extend to criminal conduct, acts outside official authority, or violations of this Constitution. Nothing in this provision restricts judicial review or legal remedies otherwise available under this Constitution or statute.
 
 ### §7.8 — Separation of Branch Authority
 
-No person may exercise the voting or decisional authority of more than one branch of government at the same time; a person holding or acting in an office of one branch may not cast a vote or exercise a decisional power reserved to another branch for so long as they hold or act in that office. This section does not bar a person from holding a seat that carries no exercisable vote during such service, nor from resuming an office or vote upon leaving the position that created the conflict.
+No person may simultaneously hold office in more than one branch of government, except when temporarily exercising acting authority under this Constitution. During such acting service, the person retains their original office or mandate but may not exercise any authority of that office. That authority resumes upon the conclusion of acting service.
 
 ### §7.9 — Inviolability of Electoral Mandates
 
-Elected constitutional officers serve their constitutionally defined terms. No act of the Legislature, either executive, any court, any Monitor, or any administrative body may shorten, suspend, or terminate an elected mandate except through expulsion by the relevant chamber where this Constitution provides it, recall under a State mechanism recognized by this Constitution, or removal under another mechanism expressly provided by this Constitution. Any mechanism enabling the people themselves to shorten an elected mandate not already provided in this Constitution requires a constitutional amendment under Article XVII and may not be established by ordinary statute. Expulsion, recall, and removal under this Constitution are civil and political processes; they do not constitute criminal or civil legal proceedings and do not protect the removed officer from criminal prosecution or civil liability for underlying conduct.
+An elected constitutional mandate may not be shortened, suspended, or terminated except through a mechanism expressly provided or authorized by this Constitution. No additional mechanism for terminating an elected mandate, including popular recall, may be established by statute.
 
 ### §7.10 — Ethics and Financial Disclosure
 
-(1) A financial interest includes any holding, income source, liability, business relationship, or similar economic interest; a financial interest is disqualifying where it creates a direct and material conflict between an officer's personal economic interest and the impartial exercise of official duties. Statute may further specify categories and thresholds consistent with this standard.
+(1) A financial interest is disqualifying where it creates a direct and material conflict with the impartial exercise of official duties. Statute may define categories and thresholds consistent with this standard.
 
-(2) Except for Monitor Generals as provided in Article IX, all constitutional officers must disclose financial interests, holdings, income sources, and liabilities to their respective Monitor — the LM for members of the Legislature; the EM for both Consuls, executive branch officers, military officers, and principal Monetary Authority decision-makers; and the JM for judicial officers — within the period defined by statute after taking office and annually thereafter. Disclosure records are published to the NRS.
+(2) Except for Monitor Generals as provided in Article IX, constitutional officers shall disclose their financial interests, holdings, income sources, and liabilities to the Monitor responsible for their office, within a period defined by statute after taking office and annually thereafter. Disclosures shall be published to the NRS.
 
-(3) Any officer with a direct financial interest in a decision within their authority must recuse themselves; recusal is self-executing. Section 7.11 governs the broader codes of conduct and recusal framework.
+(3) An officer with a direct financial interest in a decision within their authority must recuse themselves. This requirement is self-executing. Section 7.11 governs additional recusal requirements.
 
-(4) Constitutional officers may not accept gifts above a de minimis threshold defined by statute; until such statute is enacted, the threshold is zero. Any gift received by an officer in their official capacity is property of the Republic and must be disclosed and transferred to the appropriate public custodian or treasury as provided by law, regardless of value.
+(4) Constitutional officers may not accept gifts exceeding a de minimis threshold established by statute; absent such statute, the threshold is zero. Gifts received in an official capacity belong to the Republic and must be disclosed and transferred to the appropriate public authority regardless of value.
 
-(5) Each Monitor may investigate alleged violations within its mandate and publish findings to the NRS; where findings warrant further action, the Monitor refers the matter to the appropriate authority.
+(5) Each Monitor may investigate violations within its mandate, publish findings to the NRS, and refer matters warranting further action to the appropriate authority.
 
-### §7.11 — Codes of Conduct and Recusal
+### §7.11 — Codes of Conduct and Conflicts of Interest
 
-The Legislature may by statute establish codes of conduct and procedural rules for any constitutionally established office outside the Legislature, including standards for recusal from specific proceedings, disclosure obligations beyond those required by this Article, and disciplinary procedures short of removal. No such procedure may remove an officer, suspend or diminish constitutionally assigned authority, alter constitutional tenure, or otherwise operate as an additional removal mechanism contrary to §7.5.
+The Legislature may establish codes of conduct, disclosure requirements, conflict-of-interest standards, and disciplinary procedures for constitutional offices outside the Legislature. Such rules may not diminish constitutional authority, tenure, or institutional independence, nor establish additional removal mechanisms, except where expressly authorized by this Constitution.
 
-Such rules must be consistent with the independence protections of the relevant office and may not be used to constrain the substantive exercise of any constitutionally assigned function.
-
-In the absence of statute establishing recusal standards for a given office, an officer must recuse where their impartiality could reasonably be questioned. An officer who fails to recuse in circumstances requiring recusal — whether defined by statute or this default standard — acts in constitutional breach; the act or determination in which they participated remains subject to challenge on that ground.
-
-No statute enacted under this provision may be amended or repealed within the legislative session immediately following the session of its enactment; thereafter, amendment or repeal requires a 2/3 majority of both chambers.
+A constitutional officer with a personal, financial, or other material connection to a matter within their authority shall publicly disclose that connection and state whether they will participate or recuse themselves, with reasons for that decision. The disclosure and explanation shall be published to the NRS. Statute may establish additional standards and procedures consistent with this obligation.
 
 ### §7.12 — Post-Service Restrictions
 
-Constitutional officers may not, for a period defined by statute after leaving office — which may not be less than two years — engage in activity that monetizes or draws on non-public information, relationships, or access obtained by virtue of their service. The respective Monitor audits post-service activities within its mandate for compliance and publishes findings to the NRS; enforcement is through the appropriate legal authority.
+Constitutional officers may not exploit non-public information, privileged access, or official influence obtained through their service for private benefit after leaving office. The Legislature shall establish post-service restrictions and cooling-off periods by statute. The responsible Monitor shall audit compliance and publish findings to the NRS; enforcement rests with the appropriate legal authority.
 
 ### §7.13 — Federal Public Service Ethics
 
-The Legislature must by statute establish disclosure and recusal requirements for federal government employees and military personnel whose duties create material conflict-of-interest risk, including procurement, regulatory, and senior civil service positions. The respective Monitor audits the administering agency's compliance with this requirement and publishes findings to the NRS; this audit is systemic and does not require individual-filing review by the Monitor.
+The Legislature shall establish disclosure and recusal requirements for federal employees and military personnel whose duties present material conflicts of interest. The responsible Monitor shall audit institutional compliance and publish findings to the NRS.
 
 ### §7.14 — Compensation of Federal Officials
 
-No federal official may set their own compensation or the compensation of their direct supervisors. Official compensation is set by statute and is a public record on the NRS. The Legislature may set the compensation of elected constitutional officers by statute; no such change takes effect until after the next election for the relevant office following the session in which it was enacted. Official benefits and accommodations reflect the functional requirements of the office, not the status of the officeholder; no benefit may exceed what the function genuinely requires.
+Federal officials may not determine their own compensation or that of their direct supervisors, except as expressly authorized by this Constitution. Compensation shall be established by statute and published to the NRS. Changes to the compensation of elected constitutional officers take effect only after the next election for the affected office following enactment. Official benefits and accommodations must reflect the functional requirements of the office.
 
 ### §7.15 — Authority by Constitutional Operation
 
-Authority conferred, transferred, or assumed by operation of this Constitution vests at the moment the constitutional condition giving rise to it occurs. No oath, acceptance, publication, appointment instrument, or other implementing act is required unless this Constitution expressly makes publication or another act a condition of effect. A resulting change in office or authority must be recorded to the NRS as soon as possible. The NRS record is the authoritative public record of the change and does not itself create the authority.
+Authority conferred, transferred, or assumed by operation of this Constitution vests immediately upon satisfaction of the constitutional conditions, without oath, acceptance, publication, or other implementing act unless expressly required by this Constitution. The change shall be recorded to the NRS as soon as practicable. The NRS is the authoritative public record but does not confer authority.
 
 ---
 
