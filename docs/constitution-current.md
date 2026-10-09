@@ -591,7 +591,6 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (5) Territory citizens vote in consular elections and their votes count in the national RCV total, but Territories are excluded from the State plurality calculation. A candidate satisfies the State plurality requirement by receiving more first-preference votes than any other candidate in a majority of the Republic's States. The Elections Panel certifies State-by-State first-preference results as part of overall election certification.
 
-
 (6) Consular election certification is final, subject only to timely review by the Supreme Court for material errors in the certification of votes. Candidates, affected State or Territory governments, and the Elections Panel may seek such review under procedures established by statute.
 
 ### §7.2 — Federal Elections
@@ -614,21 +613,13 @@ Special elections shall be administered by the Elections Panel under procedures 
 
 ### §7.3 — Electoral Supermajority Threshold
 
-Except for constitutional-amendment referendums, whose thresholds are established in §17.1, 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. Subject to that exception, this threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State plurality requirement is waived (§7.1); public confirmation of a Supreme Court justice under the Senate bypass mechanism (§4.4.a); public recall of the Legat Consul under §2.13; and the national independence referendum under §15.9. The Legislature may not set a higher or lower threshold for any direct electoral supermajority determination without a constitutional amendment. This provision governs the supermajority threshold itself. It does not govern participation floors or turnout ceilings, which are established in the provisions requiring them, and does not govern the optional referendum under §13.1, which requires only a simple majority of votes cast.
+Except for constitutional-amendment referendums governed by §17.1, any supermajority required by this Constitution in a direct vote of the citizens is 60% of votes cast. This threshold may be changed only by constitutional amendment and does not alter separately established participation or turnout requirements.
 
 ### §7.4 — Eligibility and Disclosure for Federal Office
 
-(1) Every candidate for federal office, and every person selected or elevated to a federal office without standing for election, shall disclose their criminal history on the official candidacy or acceptance filing, under penalty of perjury; the disclosure is published to the NRS and is available to voters and to any body that selects the officeholder.
+(1) Every candidate for federal office and every person assuming federal office without election shall publicly disclose their criminal history under penalty of perjury. A current and accurate disclosure satisfies this requirement for subsequent appointments or elevations. Knowingly false or materially incomplete disclosure constitutes a federal offense.
 
-(2) A person who has made a current disclosure for one federal office satisfies this requirement for elevation to another so long as the disclosure remains accurate.
-
-(3) A false or incomplete disclosure is itself a federal offense.
-
-(4) No criminal conviction bars a person from federal office except as provided in this section; the weight of a disclosed history is for the voters, or for the selecting body, to judge.
-
-(5) A person convicted of insurrection against the Republic, rebellion against the Republic, treason against the Republic, or subversion of a federal election is barred from holding any federal office. These grounds are exhaustive; no other conviction bars a person from federal office, and any change to these grounds requires constitutional amendment.
-
-(6) This bar requires a conviction, not an accusation or a pending charge.
+(2) No criminal conviction disqualifies a person from federal office except a conviction for insurrection, rebellion, or treason against the Republic, or subversion of a federal election. These grounds are exhaustive and require conviction rather than accusation or pending charges.
 
 (7) A person removed from a federal office by an affirmative removal process -- including impeachment, a for-cause removal, a constructive vote of no confidence, or recall -- may not hold or seek that office until the remainder of the electoral cycle in which the removal occurred and one full electoral cycle thereafter have passed. The ordinary expiration of a term, and loss of office through an election, are not removals for purposes of this section.
 

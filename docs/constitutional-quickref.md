@@ -593,24 +593,18 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 ### §7.2.a — Special Elections and Postponements
 
-Special elections for vacancies are administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that elections cannot be held across a substantial portion of the Republic due to a natural disaster or catastrophic infrastructure failure, the Legislature may by 2/3 of both chambers in a concurrent vote postpone the affected election for a period not to exceed 90…
+Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a two-thirds vote of each chamber.
 
-- **Thresholds:**
-  - No further postponement may be granted without a new Elections Panel finding of impossibility and a new 2/3 legislative determination
-- **Time limits:**
-  - elections must be held within 30 days of that publication
 
 ### §7.3 — Electoral Supermajority Threshold
 
-Except for constitutional-amendment referendums, whose thresholds are established in §17.1, 60% of votes cast is the constitutional threshold for all direct electoral supermajority determinations. Subject to that exception, this threshold applies wherever this Constitution requires a supermajority outcome in a citizen vote rather than a legislative vote: the consular first-round threshold at which the State…
+Except for constitutional-amendment referendums governed by §17.1, any supermajority required by this Constitution in a direct vote of the citizens is 60% of votes cast. This threshold may be changed only by constitutional amendment and does not alter separately established participation or turnout requirements.
 
-- **Thresholds:**
-  - 1, which requires only a simple majority of votes cast
-- **Cross-refs:** §13.1, §15.9, §17.1, §2.13, §4.4.a, §7.1
+- **Cross-refs:** §17.1
 
 ### §7.4 — Eligibility and Disclosure for Federal Office
 
-(1) Every candidate for federal office, and every person selected or elevated to a federal office without standing for election, shall disclose their criminal history on the official candidacy or acceptance filing, under penalty of perjury; the disclosure is published to the NRS and is available to voters and to any body that selects the officeholder. (2) A person who has made a current disclosure for one federal…
+(1) Every candidate for federal office and every person assuming federal office without election shall publicly disclose their criminal history under penalty of perjury. A current and accurate disclosure satisfies this requirement for subsequent appointments or elevations.
 
 - **Time limits:**
   - (10) Any candidate removed from a federal ballot by the Elections Panel may appeal to the Appellate Court within 14 days
@@ -1374,8 +1368,6 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §4.3.a | Supreme Court Justice Removal | Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS |
 | §4.4 | Supreme Court Selection | The Assembly has 30 days to authorize public confirmation by 2/3 of full seated membership |
 | §4.4.a | Senate Bypass — Public Confirmation | 4, the Civic Consul may, with 2/3 Assembly consent, submit the serving Temporary Associate Justice at the next federal electoral period for public confirmation |
-| §7.2.a | Special Elections and Postponements | No further postponement may be granted without a new Elections Panel finding of impossibility and a new 2/3 legislative determination |
-| §7.3 | Electoral Supermajority Threshold | 1, which requires only a simple majority of votes cast |
 | §7.11 | Codes of Conduct and Recusal | thereafter, amendment or repeal requires a 2/3 majority of both chambers |
 | §9.3 | Monitor General Selection | All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority |
 | §9.3 | Monitor General Selection | where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote |
