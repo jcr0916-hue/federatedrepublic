@@ -42,5 +42,27 @@
       "torenthia-news-060"
     ],
     "note": "Challenge window closed unused; Phase One follows. Date documented in WORLD-STORY-STATUS.md; no calendar conversion to a final deadline."
+  },
+  {
+    "id": "korda-convention-resolution-adopted",
+    "date": {
+      "year": 13,
+      "month": 12
+    },
+    "stream": "institutional",
+    "type": "convention-decision",
+    "status": "published",
+    "arcs": [
+      "korda"
+    ],
+    "jurisdictions": [
+      "Korda",
+      "Kelvant"
+    ],
+    "sources": [
+      "torenthia-nrs-086",
+      "torenthia-news-108"
+    ],
+    "note": "Korda Convention adopts Northern Lake Settlement proposal 28–5. The Convention has resolved its required decision; affected-voter ratification and merger/Statehood steps remain separate and pending. No actual boundary or status change occurs."
   }
 ]
