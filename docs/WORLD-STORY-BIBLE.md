@@ -199,25 +199,15 @@ Nine justices. Two major published lineups currently matter:
 
 ## Durable story architecture
 
-### Korda Convention
+### Korda Convention — decision recorded, ratification pending
 
-**Premise:** a certified whole-Territory statehood petition collided with the already-scheduled
-Kelvant–Korda lake-corridor merger referendum inside §15.5.a’s 90-day window, forcing the
-Republic’s first Territory Convention.
+**Premise:** a certified whole-Territory statehood petition collided with the already-scheduled Kelvant–Korda lake-corridor merger referendum within §15.5.a's window. The JMC referred both petitions to a single thirty-three-delegate Territory Convention; the canceled corridor vote never occurred. The Supreme Court upheld the JMC decision 6–3, and a stay temporarily paused the Convention's constitutional clock.
 
-**Mechanism:** §15.5.a sends competing petitions affecting different defined portions into one
-Convention. The underlying referenda do not proceed. Korda’s Assembly delegates constitute the
-Convention; it has 90 active days from first session to produce a resolution. A resolution still
-requires the applicable ratification/approval path.
+**Published decision:** the Korda Convention has now adopted the amended **Northern Lake Settlement**, 28–5 (NRS-Y13-0750). The proposal identifies the certification-date districts LC-N1 (Varenne Station), LC-N2 (Upper Lake Road), and LC-N3 (North Freight Landing) as the limited proposed northern transfer area. Southern lake districts and interior Korda remain together with their Lake Varda access. The resolution protects continuity of public services and unresolved contractual/title accounting and preserves the remaining Territory's ability to pursue its existing Statehood procedure under §15.2. Its final political sponsors include Jalen Mire, Tomas Rell and Dessa Orin. Elin Thoss's private coalition role was observed but not presented as formal authorship or control.
 
-**Locked published law/story:** the JMC applied §15.5.a. The corridor vote was canceled.
-The Supreme Court upheld that application 6–3; the whole-Territory petition counts as a different
-defined portion. The stay paused only the clock, not the Convention. The Convention continues.
+**Constitutional boundary:** this is only an adopted **Convention proposal**, not a territorial transfer, Statehood, completed ratification, or final referendum result. Korda's existing borders and status remain unchanged. The next constitutional stage requires affected-voter ratification under §15.5.a(4), with §15.4's 60% approval / 50% participation standard applicable to the merger. Kelvant approval, LM–JM integrity assessment and Senate ratification by simple majority remain outstanding. Statehood remains subject to the independent audits, findings and timelines of §15.2. The Convention's decision clock has closed; no ratification date is established.
 
-**Conflict:** corridor residents had a certified, scheduled vote that disappeared before they could
-cast it; inland/whole-Territory advocates argue the corridor’s departure would structurally weaken
-the rest of Korda. Neither side is a villain. Do not turn the Convention into three tidy factions
-or predetermine its final settlement.
+**Continuity:** the Joint Committee on Transition Facts compiled neutral evidence and did not recommend a boundary. Mire's concession preserves meaningful democratic effect for a northern part of the canceled corridor claim while recognizing differences inside the original corridor. Rell accepted a narrower departure only with enforceable obligations safeguarding what remains. Orin continues to prefer whole-Territory Statehood and supported the proposal because southern access and the future Statehood process are protected. Dissent remains rooted in both full-corridor and intact-Korda principles. No fictional referendum outcome or date may be asserted until published.
 
 ### Argent Ridge / Riverglow
 
