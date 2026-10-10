@@ -3,7 +3,7 @@
     "num": "§1.4",
     "title": "Non-derogable forced-labor boundary",
     "must": [
-      "Recognize that the right is non-derogable under §1.19.a.",
+      "Recognize that §1.19.a lists the right as non-derogable.",
       "Recognize that court-imposed labor after conviction and listed civic obligations are excluded from forced labor under this provision.",
       "Recognize that labor for a private party requires the person's consent.",
       "Connect the provision to bad-faith/boundary design without inventing protections absent from the text."
@@ -44,12 +44,12 @@
   },
   {
     "num": "§4.4.a",
-    "title": "Judicial Senate-bypass fallback",
+    "title": "Judicial public-confirmation fallback",
     "must": [
-      "Recognize that the bypass activates only after Senate failure to vote within the §4.4 period.",
-      "Recognize the Civic Consul plus 2/3 Assembly step and 60% public-confirmation threshold.",
-      "Recognize that rejection makes the temporary justice step down and the next senior Appellate Court judge auto-designates.",
-      "Recognize that Senate confirmation before certification ends the bypass."
+      "Recognize that public confirmation opens when the Civic Consul fails to nominate or the Senate fails to vote within the applicable §4.4 period.",
+      "Recognize the 60% public-confirmation threshold and that no Assembly consent step applies.",
+      "Recognize that rejection installs the next eligible Appellate Court judge as Temporary Associate Justice and restarts the vacancy process.",
+      "Recognize that an ordinary nomination and Senate confirmation completed before certification ends the public route."
     ],
     "mustNot": [
       "Do not describe the public confirmation as an ordinary election; the text expressly says it is not.",
@@ -86,15 +86,14 @@
   },
   {
     "num": "§9.8",
-    "title": "Constitutional pools and zero-member fallback",
+    "title": "Constitutional pools and expedited restoration",
     "must": [
-      "Recognize the constitutional minimum of five members and the JM compliance publication when a pool falls below five.",
-      "Recognize that the restoration period is defined by statute.",
-      "Recognize that the zero-member acting fallback applies only to judicial and Monitor pools.",
-      "Recognize the objective-criteria rule and appeal for misapplication."
+      "Recognize the constitutional minimum of five members and the auditing Monitor's compliance-breach publication when a pool falls below five.",
+      "Recognize that the Elections Panel restores a below-minimum pool through expedited eligibility review under the ordinary criteria.",
+      "Recognize the objective-criteria rule and the appeal to the SC for misapplication.",
+      "Recognize that changes to eligibility criteria apply prospectively only, without exempting members from continuing disqualifications."
     ],
     "mustNot": [
-      "Do not claim the zero-member acting-judge fallback applies to every constitutional pool.",
       "Do not invent a constitutional deadline for restoring a below-five pool.",
       "Do not allow ideological or political criteria."
     ]
@@ -104,13 +103,12 @@
     "title": "Classification ceiling and automatic sunlight",
     "must": [
       "Recognize that classification grounds are statutory but concealment of violations, policy disagreement, or political embarrassment is prohibited and void.",
-      "Recognize the 25-year ceiling plus at most one 5-year extension and the absolute 30-year maximum.",
+      "Recognize the 25-year ceiling plus at most one 5-year extension and no further extension.",
       "Recognize automatic NRS publication on expiry without further government action.",
-      "Recognize judicial redaction/declassification review and the categories that may not be classified."
+      "Recognize that any person with standing may petition at any time for release of every portion whose disclosure would not satisfy the statutory ground, with redactions and their grounds published."
     ],
     "mustNot": [
       "Do not claim all government information must be immediately public.",
-      "Do not override ballot secrecy or §11.2-protected information, which the provision expressly preserves.",
       "Do not imply an executive can extend classification beyond 30 years."
     ]
   },
@@ -119,8 +117,8 @@
     "title": "Independent panels and pre-statute emergency measures",
     "must": [
       "Recognize operational independence of both panels from each other, both executives, and the Legislature in their functions.",
-      "Recognize that the Legislature must create a statutory emergency-measures procedure, but until then a panel may act by majority of seated members.",
-      "Recognize that temporary technical measures cannot alter electoral rules, timelines, or NRS record permanence and expire within 72 hours unless ratified.",
+      "Recognize that a panel may adopt temporary technical measures under any statutory procedure or, absent statute, by majority of its seated members.",
+      "Recognize that temporary technical measures cannot alter electoral rules, timelines, or NRS record permanence, expire after 72 hours, and may be renewed only on a fresh published determination.",
       "Recognize the separate acting-member fallback when a panel falls below five."
     ],
     "mustNot": [
@@ -135,13 +133,11 @@
     "must": [
       "Recognize the sequence: first failure warning/remediation, second failure renewed warning/revised plan, third consecutive failure certification to the Senate.",
       "Recognize the 90-day constitutional default for the first remediation plan until statute supplies a period.",
-      "Recognize that the audit certification does not itself alter the State's political status and that Provisional status requires an absolute majority of the full seated Senate.",
-      "Recognize that following a failed audit the Republic and State must make available strictly advisory cooperation with no political, legal, or governing authority over the State government.",
+      "Recognize that only Senate authorization by an absolute majority of the full seated Senate places the State in Provisional status.",
       "Recognize that devolution still requires an affirmative citizen referendum and then the §15.4 negotiation/ratification process."
     ],
     "mustNot": [
       "Do not claim a third failed audit automatically places the State in Provisional status or devolves the State.",
-      "Do not claim the advisory cooperation mechanism has authority over the State government.",
       "Do not claim judicial review permits policy substitution for Monitor findings or review of the Senate's political judgment."
     ]
   },
@@ -149,7 +145,7 @@
     "num": "§2.3.a",
     "title": "Legat veto timing, scope, and comparison discipline",
     "must": [
-      "Recognize that the Legat Consul may veto only for a genuine constitutional concern within the listed security domain and that a general or speculative connection is insufficient.",
+      "Recognize that the Legat Consul may veto only for a genuine constitutional concern within the listed security domain.",
       "Recognize that the 10-business-day period is the window to return the bill or object, not a ten-day duration of the veto itself.",
       "Recognize that the Senate may override by 2/3 during that session and that without override the bill lapses for that session.",
       "Recognize that the veto is single-use on a bill and that a bill reintroduced and passed in a later session proceeds without Legat Consul interference."
@@ -162,16 +158,16 @@
   },
   {
     "num": "§2.7",
-    "title": "Civic suspensive veto stages and nonblocking fiscal notice",
+    "title": "Civic suspensive veto stages and advisory reconsideration notice",
     "must": [
-      "Recognize that the Civic Consul has a 10-business-day review window in which to return the bill or issue a fiscal notice.",
+      "Recognize that the Civic Consul has a 10-business-day review window in which to return the bill or issue a reconsideration notice.",
       "Recognize that an exercised suspensive veto tables the bill for one month and that the Senate may override by 2/3 during that month.",
       "Recognize that if there is no override, the bill returns to the Legislature and must pass both chambers again, after which the Civic Consul may not use the suspensive veto on that bill again.",
-      "Recognize that a fiscal notice does not block enactment and that both instruments may be used on the same bill."
+      "Recognize that a reconsideration notice is advisory; the Assembly Speaker may pause the review period for up to 10 business days so the Assembly can withdraw the bill, after which the review period resumes."
     ],
     "mustNot": [
       "Do not collapse the 10-business-day review window into the one-month duration of the suspensive veto.",
-      "Do not claim silence after 10 business days blocks the bill; the text says the bill is enacted by operation of law.",
+      "Do not claim silence after the review period blocks the bill; the text says it becomes law by constitutional operation.",
       "Do not transfer the Legat Consul veto's session-lapse consequence onto the Civic Consul process."
     ]
   },
@@ -195,12 +191,12 @@
     "title": "Monetary Authority independence with statutory administration boundary",
     "must": [
       "Recognize that the Monetary Authority is constitutionally independent of both executives and the Legislature in exercising its constitutional functions.",
-      "Recognize that statute may define internal organization, offices, staffing, administrative procedures, and operational structure only consistently with that independence.",
+      "Recognize that the §3.9 independent-agency framework governs the Monetary Authority except as the section provides.",
       "Recognize the leadership safeguards: independent candidate process, 2/3 Senate confirmation, no single actor appointing or removing a majority, staggered terms, and for-cause removal excluding policy disagreement.",
       "Recognize that vacancies do not suspend or transfer the Monetary Authority's constitutional functions."
     ],
     "mustNot": [
-      "Do not claim the Legislature has no role at all in Monetary Authority administration; the provision expressly leaves administrative structure to statute.",
+      "Do not claim the Legislature has no role at all in Monetary Authority administration; §3.9 leaves organization to statute.",
       "Do not invent a constitutional budget immunity, appropriation formula, or funding guarantee for the Monetary Authority.",
       "Do not claim disagreement over lawful monetary policy is valid cause for removal."
     ]
@@ -209,15 +205,15 @@
     "num": "§13.2",
     "title": "Citizen initiative constraints without false legislative symmetry",
     "must": [
-      "Recognize the two-phase petition process and the Legislature's 90-day vote window after the threshold is met.",
-      "Recognize that failure or non-vote sends the proposal to referendum with the stated 60% passage and 50% participation thresholds.",
-      "Recognize the initiative-specific substantive bars on narrowing Article I rights, appropriating funds or altering revenue, and extinguishing non-derogable rights.",
+      "Recognize that the initiative uses §13.1's two-phase petition with 10-month phases and a 10% Phase Two threshold, and that the Legislature has 90 days after the threshold is met.",
+      "Recognize that if the Legislature does not enact the proposal within 90 days — including where it fails, is not voted on, or is vetoed — it goes to referendum at 60% of votes cast with 50% participation.",
+      "Recognize that an enacted initiative is subject to the Constitution like any statute and may not narrow Article I rights, appropriate funds, or alter revenue.",
       "Recognize that the Supreme Court may resolve constitutional conflicts involving an enacted initiative under its original jurisdiction."
     ],
     "mustNot": [
       "Do not claim the initiative-specific prohibition on appropriating funds or altering revenue is also a general prohibition on ordinary legislative appropriations.",
       "Do not claim every restriction on citizen initiatives applies identically to the Legislature unless another supplied provision expressly says so.",
-      "Do not omit the three-year bar on reinitiating a failed initiative on the same or substantially similar grounds if discussing graceful degradation or repeat use."
+      "Do not omit the §13.1(7) three-year bar on reinitiating a failed initiative on the same or substantially similar grounds if discussing graceful degradation or repeat use."
     ]
   },
   {
@@ -225,14 +221,14 @@
     "title": "Remainder viability convention fallback and cooldown",
     "must": [
       "Recognize that competing petitions within 90 days or a finding that the remainder could not realistically satisfy Statehood Audit conditions sends the affected matters to a Territory Convention.",
-      "Recognize that the Convention has 90 days from its first session to produce a proposed resolution and that the Constitution does not prescribe the Convention's terms.",
+      "Recognize that the Convention has 90 days from its first session to produce a proposed resolution.",
       "Recognize that if no resolution is produced, all petitions addressed there lapse together, the Territory continues undivided, and substantially the same geographic petitions face a three-year reinitiation bar.",
       "Recognize that any Convention resolution must be ratified by the affected eligible voters and then proceeds through the otherwise applicable §15.2 or §15.4 process."
     ],
     "mustNot": [
       "Do not claim ordinary §15.2 lapse and reinitiation automatically overrides the three-year cooldown created by this provision.",
       "Do not claim the JMC itself chooses the final boundary or constitutional status.",
-      "Do not invent substantive terms the Territory Convention must adopt; the provision expressly leaves those terms open."
+      "Do not invent substantive terms the Territory Convention must adopt; the provision sets none."
     ]
   }
 ]

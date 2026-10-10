@@ -30,7 +30,7 @@ const TOPICS = [
     sections: [
       ['§4.2', 'Inferior courts: Civic Consul nomination from the Judicial Pool; Senate confirmation by 2/3'],
       ['§4.4', 'Supreme Court: Civic Consul nomination from the Judicial Pool; Senate vote plus vacancy-continuity rules'],
-      ['§4.4.a', 'Supreme Court fallback: Senate-bypass public confirmation in specified circumstances'],
+      ['§4.4.a', 'Supreme Court fallback: public confirmation when a nomination or Senate vote stalls'],
     ],
   },
   {
@@ -45,7 +45,7 @@ const TOPICS = [
     answer: 'Supreme Court justices are nominated by the Civic Consul from the Judicial Pool. The Civic Consul must nominate within the applicable vacancy deadline, and the Senate must vote within the applicable confirmation deadline. A confirmed justice serves a single non-renewable 12-year term; §4.4 also provides temporary service and a public-confirmation fallback when the ordinary process stalls.',
     sections: [
       ['§4.4', 'Ordinary Supreme Court nomination, Senate vote, temporary service, and confirmation process'],
-      ['§4.4.a', 'Separate Senate-bypass public-confirmation mechanism'],
+      ['§4.4.a', 'Public confirmation when a nomination or Senate vote stalls'],
     ],
   },
   {
