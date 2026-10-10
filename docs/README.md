@@ -3,8 +3,6 @@
 Start with [PROJECT-SOURCES.md](../PROJECT-SOURCES.md), the authoritative guide
 to current sources and their roles. Only `main` supplies current project authority.
 
-For the latest project-wide implementation handoff and working ideas, see [Project progress](PROJECT-PROGRESS.md). It is operational/planning context, not constitutional or Torenthia canon.
-
 ## Current constitutional sources
 
 - [Federal source](../constitution_data.json) — canonical structured Constitution.
@@ -21,7 +19,7 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 - [Story Status](WORLD-STORY-STATUS.md) — live threads, clocks, open decisions, and current frontier.
 - Published World records and front matter — authoritative published history, including older records.
 - [Chronology registry](../_data/worldChronology.json) and [clock registry](../_data/worldClocks.json) — current infrastructure.
-- [World publishing](WORLD-PUBLISHING.md) and [stream migration](WORLD-STREAM-MIGRATION.md).
+- [World publishing](WORLD-PUBLISHING.md).
 - [Republic ingest](operations/REPUBLIC-INGEST.md) — conservative import and review workflow.
 - [State historical tests](STATE-TEST-PUBLISHING.md) — canonical State history, provision validation, and discovery.
 - [Scenario publishing](SCENARIO-PUBLISHING.md).
@@ -34,6 +32,9 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 - [Caldenmere flag](world/visual-identity/CALDENMERE-FLAG.md).
 
 ## Superseded internal material
+
+The dated constitutional text-economy review, project progress diary, and completed World-stream migration note were removed from current documentation in October 2026. Their Git history remains available; use the current source, operational guides, and structured World registries instead.
+
 
 The former archive tree, stale root quick reference, legacy Atlas implementation,
 and completed planning/release records are preserved on
