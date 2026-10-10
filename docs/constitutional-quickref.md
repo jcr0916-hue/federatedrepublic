@@ -130,7 +130,7 @@ Every Inhabitant is entitled to access the Republic's social-state systems under
 
 ### §1.17 — Education
 
-Every child has the right to education adequate for full civic participation. The state shall ensure that education is available and accessible.
+Every child has the right to education adequate for full civic participation. Parents have the right to direct the education of their children within public educational standards.
 
 
 ### §1.17.a — Social Rights Implementation
@@ -158,7 +158,7 @@ No emergency suspends the Individual Sovereignty Floor in full. Rights other tha
 
 ### §1.19.a — Non-Derogable Rights
 
-These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.11); the right to a public trial (§1.13); no retroactive punishment (§1.14); and non-refoulement (§1.21). No emergency measure, regardless of its stated purpose, may be applied in a discriminatory manner on the basis of race, ethnicity, religion, or national origin; any such application is constitutionally void.
+These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.11); the right to a public trial (§1.13); no retroactive punishment (§1.14); and non-refoulement (§1.21). No emergency measure, regardless of its stated purpose, may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such…
 
 - **Cross-refs:** §1.11, §1.13, §1.14, §1.21, §1.3, §1.4
 

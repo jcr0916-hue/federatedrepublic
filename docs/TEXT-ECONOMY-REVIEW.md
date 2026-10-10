@@ -443,3 +443,11 @@ Transition provisions are necessarily detailed and were recently reworked (§19.
 **Site updates in this batch:** scenario-the-severed-clause (its analysis rested on the old initiative near-immunity; now explains initiatives as ordinary statutes and contrasts them with amendments; citations updated) and scenario-the-second-path (citations). §2.7 "pause the review period" wording fix plus the glossary entry. Changelog entry 261010 (XIII–XX).
 
 **Added to John's list:** scenario-the-third-strike and _data/scenarioBridges.json describe the deleted §15.3 advisory-cooperation subsection.
+
+---
+
+## Follow-up — Article I open questions — APPROVED 2026-10-10
+
+- §1.19.a: emergency non-discrimination list adds sexual orientation and gender identity. Age, disability, sex, and economic need are left out deliberately (legitimate emergency triage).
+- §1.17: "The state shall ensure that education is available and accessible" deleted (§12.1 and §1.17.a are the home).
+- Changelog entries added: Oct 7 Consular service limits (Session 261007) and this follow-up (Session 261010).
