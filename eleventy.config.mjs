@@ -101,7 +101,7 @@ export default function (eleventyConfig) {
     "site.css", "links.css", "republic.css", "nav.js", "discovery.js", "related-rail.js", "map-data.js", "search-index.js", "sw.js",
     "favicon.ico", "favicon-32.png", "apple-touch-icon.png",
     "crossroads-engine.js", "korda-crossroads.json", "tier2-borders.json", "tier2-labels.json",
-    "rhovane-flag.svg", "corindal-flag.svg", "aldenmere-flag.svg",
+    "rhovane-flag.svg", "corindal-flag.svg", "aldenmere-flag.svg", "arvane-flag.svg",
     "test-crossroads.json",
     "Flag Options", "Previous Versions Constitution DOCX",
   ];
