@@ -245,10 +245,10 @@ The Legat Consul may appoint domain officers to exercise defined portions of the
 
 ### §2.6.a — Government Formation
 
-(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy; absent such statute, the constitutional default is 21 days. (2) If the Assembly does not elect a Civic Consul within that period, the sitting Assembly Speaker becomes Acting Civic Consul by constitutional operation with authority limited to maintaining existing policy.
+(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following a vacancy; absent such statute, the constitutional default is 21 days. (2) If the Assembly does not elect a Civic Consul within that period, the sitting Assembly Speaker becomes Acting Civic Consul by constitutional operation with authority limited to maintaining existing policy.
 
 - **Thresholds:**
-  - (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy
+  - (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following a vacancy
   - The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority
   - (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback
 - **Time limits:**
@@ -1328,7 +1328,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §1.19 | Emergency Derogation | thereafter, re-declaration requires 2/3 of both chambers |
 | §2.3.a | Legat Consul Legislative Veto | The Senate may override by 2/3 at any time during that session |
 | §2.6 | Constructive Vote of No Confidence | (1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly |
-| §2.6.a | Government Formation | (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy |
+| §2.6.a | Government Formation | (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following a vacancy |
 | §2.6.a | Government Formation | The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority |
 | §2.6.a | Government Formation | (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback |
 | §2.7 | Civic Consul Legislative Instruments | The bill is suspended for one month, during which the Senate may override by 2/3 |

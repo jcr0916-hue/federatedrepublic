@@ -187,7 +187,7 @@ The Legat Consul may appoint domain officers to exercise defined portions of the
 
 ### §2.6.a — Government Formation
 
-(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy; absent such statute, the constitutional default is 21 days.
+(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following a vacancy; absent such statute, the constitutional default is 21 days.
 
 (2) If the Assembly does not elect a Civic Consul within that period, the sitting Assembly Speaker becomes Acting Civic Consul by constitutional operation with authority limited to maintaining existing policy. If there is no sitting Speaker, the most senior Assembly member by continuous service acts instead; ties are resolved by age.
 

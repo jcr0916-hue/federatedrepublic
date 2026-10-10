@@ -6,20 +6,16 @@
 
 ---
 
-## A. The Formation Question — *needs a constitutional reading first*
+## A. The Working Majority — Thoss and the spring Assembly election
 
-**Premise.** §2.6.a(1): "The Assembly elects the Civic Consul by absolute majority within the period defined by statute following **any general election** or vacancy; absent such statute, the constitutional default is 21 days." Read literally, the spring Year 14 Assembly election obliges the new Assembly to elect a Civic Consul within 21 days, and if it cannot, the sitting Assembly Speaker becomes Acting Civic Consul under §2.6.a(2). That is the same machinery that failed at founding (Leva Coren, `scenario-the-formation.html`).
+**Settled (John, 10.10):** Thoss remains Civic Consul until removed by a constructive vote of no confidence (§2.6(1)), resignation, or the 12-year service limit. A general election does not trigger a new formation vote; §2.6.a(1) was corrected to read "following a vacancy."
 
-**Conflict with current planning.** WORLD-STORY-STATUS assumes Thoss simply continues after the election, relying on §2.6(3) ("serves until removal… resignation, or exhaustion of the service limit"). The two provisions point in different directions. Either reading is a legitimate design; the text should say which.
+**Premise.** The spring Year 14 Assembly election cannot remove Thoss by itself. It changes the arithmetic that could. The story is the working count (266 published, down from 274) and whether any coalition can agree on a named successor, the only way §2.6(1) removes her.
 
-- **Reading 1: re-formation after every Assembly election.** Thoss must win a formation vote in the new Assembly, which is a parliamentary-style reset. The story writes itself: coalition arithmetic, the 266 working count, Korda and Fiscal Equalization as her record, a possible §2.6.a fallback echoing founding.
-- **Reading 2: continuity.** §2.6.a(1) applies only to a vacancy (and the first Assembly). The CC continues until a constructive vote names a successor. The election then matters through its effect on the working majority, and §2.6.a(1) needs a one-word fix ("following any vacancy").
-
-**Decision needed from John before any piece:** which reading is the design?
-
-**Beats under Reading 1 (sketch):** Y14 M1–M3 campaign reporting frames the Assembly election as a referendum on Thoss's government → M4 election (bundled with LC race and EM confirmation) → results and coalition talks, with the 21-day clock running → formation vote. The outcome is to be chosen later; write both branches committed before selecting (Narrative-control rule).
-
-**Beats under Reading 2:** the same campaign, but post-election stories center the working count, and a constructive vote becomes a live threat only if a named successor emerges.
+**Beats.**
+1. Y14 M1–M3 — Campaign coverage frames the Assembly races as a verdict on her government without her name on any ballot (her restraint line from the status doc). Korda reads as process integrity; Fiscal Equalization as the governing success if the reform lands.
+2. Y14 M4 — Results. Reporting on the new working count; parties test whether a successor majority exists.
+3. Y14 M5 — Either the count holds or a constructive motion is floated. **Write both branches fully before choosing** (narrative-control rule). The constitutional point either way: losing seats is not losing office; only a named successor with an absolute majority is.
 
 ---
 
@@ -96,10 +92,5 @@
 
 - **Activate now (Y13 M12):** C (EM succession — first records are dry NRS notices) and B (housing bill introduction).
 - **Activate with the conference (Y14 M1):** D.
-- **Decide first:** A (constitutional reading), then plan the post-election formation arc.
+- **Run through the campaign:** A, as election coverage rather than separate set pieces.
 - **Seed lightly:** E (one petition-filing record) when cadence allows.
-
-## Status-doc corrections to make when publishing resumes
-
-- WORLD-STORY-STATUS still describes Thoss's limit as "the eight-year lifetime service limit in §2.5(2)"; it is now 12 years.
-- It quotes §2.5(1) for "at the confidence of the Assembly"; that sentence now lives only in §2.6(1) ("accountable to the Assembly").
