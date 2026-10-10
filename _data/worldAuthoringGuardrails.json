@@ -7,10 +7,10 @@
     "afterNrsSeq": 86,
     "note": "The Convention adopted a proposed Northern Lake Settlement 28–5. Neither affected-voter ratification, Kelvant consent, LM–JM integrity finding, Senate ratification nor Statehood Audit certification has occurred. No boundary/status change has taken effect.",
     "patterns": [
-      "\\\\bNorthern Lake Settlement (?:was|is|has been) (?:ratified|implemented|completed)\\\\b",
-      "\\\\b(?:merger|boundary transfer) (?:with|into) Kelvant (?:was|is|has been) (?:completed|approved|effected)\\\\b",
-      "\\\\bKorda (?:was|is|has been) (?:admitted as|made) (?:a )?State\\\\b",
-      "\\\\b(?:affected-voter|popular) referendum (?:approved|ratified|passed) the (?:settlement|resolution)\\\\b"
+      "\\bNorthern Lake Settlement (?:was|is|has been) (?:ratified|implemented|completed)\\b",
+      "\\b(?:merger|boundary transfer) (?:with|into) Kelvant (?:was|is|has been) (?:completed|approved|effected)\\b",
+      "\\bKorda (?:was|is|has been) (?:admitted as|made) (?:a )?State\\b",
+      "\\b(?:affected-voter|popular) referendum (?:approved|ratified|passed) the (?:settlement|resolution)\\b"
     ],
     "resolutionInstruction": "Advance this guardrail only with explicitly published, constitutional ratification/approval or Statehood facts; the Convention vote alone cannot establish them."
   },
