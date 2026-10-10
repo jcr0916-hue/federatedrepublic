@@ -55,7 +55,7 @@ The October 2 evening batch adds NRS 065–068 and news 097. The Committee's wor
 
 ## Live-thread board
 
-### Korda Settlement — CONVENTION DECISION RECORDED, RATIFICATION OPEN
+### Korda Convention — DECISION RECORDED, RATIFICATION OPEN
 
 The Convention's required §15.5.a(4) decision is complete. The adopted **Northern Lake Settlement** passed 28–5 among thirty-three delegates (NRS 086; News 108). The earlier draft (NRS 085), public debate (News 106) and late amendments after Orin's conditions (News 107) explain the final compromise. The proposed transfer covers only original Elections Panel certified northern corridor districts LC-N1, LC-N2 and LC-N3; all southern lake districts and interior Korda remain in the Territory. The settlement requires enforceable service continuity and honest accounting for title, contract and shared-cost gaps, and preserves the §15.2 Statehood process without deeming audits successful. Mire, Rell and Orin voted yes; Thoss's role is background coalition work, not authorship or formal decision-making.
 
