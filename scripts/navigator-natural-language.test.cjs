@@ -143,7 +143,7 @@ test('high-risk deterministic topics preserve distinct constitutional triggers a
   const sc = topicMatch('How do §4.4 and §4.4.a interact if the Senate delays?');
   assert.equal(sc.id, 'supreme-court-senate-inaction');
   assert.match(sc.answer, /failure to vote is not the same as rejection/i);
-  assert.match(sc.answer, /separate fallback triggered when the Civic Consul fails to nominate/i);
+  assert.match(sc.answer, /same route opens when the Civic Consul fails to nominate/i);
 
   const military = topicMatch('Who controls the military if the two Consuls disagree about whether an operation is domestic or foreign?');
   assert.equal(military.id, 'military-domain-dispute');

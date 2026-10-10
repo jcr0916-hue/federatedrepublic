@@ -337,8 +337,8 @@ test('Navigator context packet surfaces verbatim procedural cues for distinct tr
   );
 
   assert.match(packet.packet, /PROCEDURAL CUES — verbatim excerpts/i);
-  assert.match(packet.packet, /If the Civic Consul fails to nominate within the applicable period/i);
-  assert.match(packet.packet, /If the Senate fails to vote on a nomination within the period required by §4\.4/i);
+  assert.match(packet.packet, /If the Civic Consul fails to nominate, or the Senate fails to vote, within the applicable period/i);
+  assert.match(packet.packet, /not to exceed 120 days/i);
 });
 
 test('mechanic cue extraction stays verbatim and bounded', () => {
@@ -407,6 +407,6 @@ test('Navigator packet includes structural sibling provisions before unrelated c
     provisions
   );
 
-  assert.match(packet.packet, /\[§4\.4\.a\] Senate Bypass — Public Confirmation/);
+  assert.match(packet.packet, /\[§4\.4\.a\] Public Confirmation/);
   assert.match(packet.packet, /structural sibling to §4\.4/);
 });
