@@ -1,37 +1,32 @@
 [
   {
-    "id": "korda-convention",
-    "title": "Korda Convention",
+    "id": "korda-ratification",
+    "title": "Korda settlement ratification",
     "status": "open",
     "trigger": {
-      "description": "SC stay dissolved; 3 active days credited before stay",
+      "description": "Convention adopted Northern Lake Settlement proposal 28–5; no referendum or merger has occurred",
       "date": {
         "year": 13,
-        "month": 12,
-        "day": 26
+        "month": 12
       }
     },
     "timing": {
-      "kind": "relative",
-      "amount": 87,
-      "unit": "active-days",
-      "approximate": true,
-      "reviewAfter": {
-        "year": 13,
-        "month": 12
-      },
-      "note": "Approximately 87 active days remain from Y13 M12 Day 26; month lengths and active-day accounting must be reviewed before claiming a deadline. Committee formation does not toll the clock."
+      "kind": "none",
+      "note": "The Convention proposal is adopted, but no affected-voter ratification day or subsequent constitutional approval dates have been established."
     },
-    "summary": "Running; approximately 87 active days remain under §15.5.a(4).",
-    "nextAction": "Review elapsed active days and required Convention resolution; do not presume its outcome.",
+    "summary": "The Convention has adopted a proposed northern-lake settlement. Korda's boundaries and status are unchanged pending affected-voter ratification, Kelvant approval, LM–JM assessment and Senate ratification; Statehood Audits remain separate.",
+    "nextAction": "Establish Elections Panel authentication of the fixed district map, eligible referendum electorate and voting schedule; then track affected-voter decision and subsequent §15.4 approvals without asserting passage.",
     "sources": [
-      "torenthia-sc-002",
-      "torenthia-nrs-040"
+      "torenthia-nrs-086",
+      "torenthia-nrs-085"
     ],
     "arcs": [
       "korda"
     ],
-    "jurisdictions": []
+    "jurisdictions": [
+      "Korda",
+      "Kelvant"
+    ]
   },
   {
     "id": "argent-repeal",
