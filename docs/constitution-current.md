@@ -1,7 +1,7 @@
 # The Federated Republic — Constitution
 
 > **GENERATED FILE — DO NOT EDIT BY HAND.**
-> Built from `constitution_data.json` by `scripts/build-constitution-md.py`. 
+> Built from `constitution_data.json` by `scripts/build-constitution-md.py`.
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
