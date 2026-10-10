@@ -103,10 +103,10 @@ const TOPICS = [
       'how do §4.4 and §4.4.a interact if the senate delays',
       'what happens if the senate delays a supreme court nomination',
     ],
-    answer: 'A Senate failure to vote is not the same as rejection. Under §4.4(3), the Senate must vote within the applicable period, not to exceed 120 days, and no deemed confirmation applies. If the Senate fails to vote within that period, §4.4.a allows the Civic Consul, with two-thirds Assembly consent, to place the serving Temporary Associate Justice on the next federal electoral-period ballot for public confirmation; Senate confirmation of a Judicial Pool nominee before the public vote is certified ends that bypass. By contrast, §4.4(5) is a separate fallback triggered when the Civic Consul fails to nominate by the applicable deadline, and these provisions do not say that an affirmative Senate rejection automatically triggers either bypass.',
+    answer: 'A Senate failure to vote is not the same as rejection. Under §4.4(3), the Senate must vote within the applicable period, not to exceed 120 days, and no deemed confirmation applies. If the Senate fails to vote within that period, §4.4.a submits the serving Temporary Associate Justice for public confirmation at the next federal electoral period, requiring 60% of votes cast; an ordinary nomination and Senate confirmation completed before the ballot is certified ends that public route. The same route opens when the Civic Consul fails to nominate by the applicable deadline. The provisions do not say that an affirmative Senate rejection triggers public confirmation.',
     sections: [
-      ['§4.4', 'Ordinary Supreme Court nomination and Senate-vote deadlines; temporary-service continuity; separate no-nomination fallback'],
-      ['§4.4.a', 'Specific public-confirmation bypass when the Senate fails to vote within its required period'],
+      ['§4.4', 'Ordinary Supreme Court nomination and Senate-vote deadlines; temporary-service continuity'],
+      ['§4.4.a', 'Public confirmation when the Civic Consul fails to nominate or the Senate fails to vote within the required period'],
     ],
   },
   {

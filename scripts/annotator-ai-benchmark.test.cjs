@@ -56,7 +56,7 @@ test('Every benchmark case can build a current deterministic source packet', () 
 test('Annotator packet keeps target mechanics salient and related context bounded', () => {
   const pools = buildContextPacket('§9.8');
   assert.match(pools.packet, /TARGET COVERAGE CUES/);
-  assert.match(pools.packet, /restore the minimum within the period defined by statute/i);
+  assert.match(pools.packet, /expedited eligibility review of applicants to restore the pool/i);
   assert.ok(pools.related.length <= 4);
 
   const ethics = buildContextPacket('§7.10');
