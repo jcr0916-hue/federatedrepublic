@@ -34,44 +34,6 @@
     "jurisdictions": []
   },
   {
-    "id": "korda-committee-target",
-    "title": "Korda committee preliminary compilation",
-    "status": "open",
-    "trigger": {
-      "description": "Committee set an internal target after organizing; exact day not established",
-      "date": {
-        "year": 13,
-        "month": 12
-      }
-    },
-    "timing": {
-      "kind": "relative",
-      "amount": 30,
-      "unit": "days",
-      "binding": false,
-      "reviewAfter": {
-        "year": 13,
-        "month": 12
-      },
-      "note": "Internal non-binding 30-day target; exact organizing day not established. This does not toll the Convention clock."
-    },
-    "summary": "The non-binding preliminary compilation has been published; unresolved archival-title, contract-amendment and shared-cost entries remain identified.",
-    "nextAction": "Use the published preliminary compilation as an advisory record during Convention deliberations; no constitutional status outcome follows automatically.",
-    "sources": [
-      "torenthia-nrs-041",
-      "torenthia-nrs-073",
-      "torenthia-news-099",
-      "torenthia-nrs-079",
-      "torenthia-nrs-082"
-    ],
-    "arcs": [
-      "korda"
-    ],
-    "jurisdictions": [
-      "Korda"
-    ]
-  },
-  {
     "id": "argent-repeal",
     "title": "Argent Ridge repeal",
     "status": "open",

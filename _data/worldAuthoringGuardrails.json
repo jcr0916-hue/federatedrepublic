@@ -5,12 +5,11 @@
     "active": true,
     "afterWorldSeq": 143,
     "afterNrsSeq": 68,
-    "note": "Korda's Convention remains unresolved. Current canon supports evidence gathering and partial political narrowing, not a final status, boundary, viability determination, or Convention resolution.",
+    "note": "Korda's advisory preliminary compilation is published, and political drafting has begun, but the Convention has not adopted a final resolution, boundary, viability finding, or territorial-status outcome.",
     "patterns": [
       "\\bConvention (?:approved|adopted|passed|ratified) (?:a |the )?(?:final )?resolution\\b",
       "\\b(?:final )?boundary (?:was|is|has been) (?:adopted|agreed|fixed|settled|approved)\\b",
       "\\bviability (?:finding|determination) (?:was|is|has been) (?:made|issued|adopted|approved)\\b",
-      "\\bpreliminary (?:compilation|report) (?:was|is|has been) (?:published|completed|issued|adopted)\\b",
       "\\bThoss (?:brokered|secured|announced) (?:a |the )?(?:deal|agreement|compromise)\\b"
     ],
     "resolutionInstruction": "If a new record intentionally establishes one of these facts, update this guardrail in the same reviewed publication change."
