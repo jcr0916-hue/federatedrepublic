@@ -26,21 +26,10 @@ data = json.loads(subprocess.check_output(['node', '--input-type=module', '-e',
     "import {loadScenarios} from './lib/scenarios.mjs'; console.log(JSON.stringify(loadScenarios()));"], text=True))
 entries = data['entries']
 visible = html.unescape(re.sub(r'<[^>]+>', '', re.sub(r'<span class="def-pop">.*?</span>', '', library, flags=re.S)))
-catalog_pages = {p.name for p in pages if not re.search(r'^scenarioLibrary:\s*false\s*
-assert 'crossroads.html' not in library and 'Living Crossroads' not in library
-assert 'SCENARIO_CATS' not in library
-for entry in entries:
-    assert f'href="{entry["href"]}"' in library, entry['href']
-    assert entry['title'] in html.unescape(library), entry['href']
-    assert entry['desc'] in visible, entry['href']
-    assert entry['minutes'] >= 1
-    assert set(entry['refs']) <= provisions, entry['href']
-assert 'Calder did not seek re-election' not in Path('_site/scenario-the-direction.html').read_text()
-print(f'All {len(pages)} scenario references, built links, and generated library entries are consistent.')
-, p.read_text(), re.M)}
+catalog_pages = {p.name for p in pages if not re.search(r'^scenarioLibrary:\s*false\s*$', p.read_text(), re.M)}
 assert len(entries) == len(catalog_pages) == len({e['href'] for e in entries})
 assert {e['href'] for e in entries} == catalog_pages
-assert 'scenario-winning-bid.html' not in catalog_pages  # state-centered history remains directly linked from both State profiles
+assert 'scenario-winning-bid.html' not in catalog_pages  # State history still has its own URL
 assert 'crossroads.html' not in library and 'Living Crossroads' not in library
 assert 'SCENARIO_CATS' not in library
 for entry in entries:
