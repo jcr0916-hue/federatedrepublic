@@ -69,19 +69,14 @@ The Convention's required §15.5.a(4) decision is complete. The adopted **Northe
 
 ---
 
-### Living Crossroads: The Korda Convention — SEALED, NON-CANON
+### Living Crossroads — BETWEEN INSTALLMENTS
 
-Interactive feature, content-complete and live on the site (`crossroads.html?game=korda-crossroads.json`, `_data/crossroads.json` active). Built on the classifier-routing engine (`crossroads-engine.js`, `/api/crossroads`) — routing only, never generates prose or selects an ending; documented publicly on `ai-features.html`.
+The Korda Convention episode is **sealed and no longer featured**. The live feature configuration is inactive (`_data/crossroads.json`), and the homepage and Torenthia hub now show the evergreen “next crossroads” message without a link to an active game. Navigation and the Korda dossier no longer promote the Korda episode. The published Korda decision (NRS 086) remains separate from all game outcomes.
 
-Two playable delegates, **entirely fictional, never to appear in published World canon**: **Sena Threll** (interior) and **Davin Kesh** (corridor). Do not confuse with the real, canonical delegates Mire, Rell, or Orin. Five possible endings (Clean Whole Statehood, Grand Bargain, Negotiated Split, Ugly Split, Hung Convention), each with role-flavored text and a ratification-coda beat under §15.5.a(4) that deliberately never asserts whether a hypothetical referendum would pass.
+The historic non-canon `korda-crossroads.json` and its `crossroads.html` deep link remain in the repository and are accessible for direct archival reference, rather than being deleted or rewritten. Its fictional delegates Sena Threll and Davin Kesh are **not** characters in published World canon; no in-game result determines the real Convention outcome or ratification.
 
-The real Convention's decision has now published (NRS 086). Keep this hypothetical game playable for comparison, but label it SEALED and independent of published canon. None of its outcomes is the published Convention decision or a prediction of affected-voter ratification.
+**Next use:** leave Crossroads inactive until a new consequential, unsettled story with genuine competing choices is ready. Author and validate a new game, update the active config and navigation, and feature only that new installment. Do not automatically recycle the Korda game as a current story.
 
-Open:
-- the real Convention decision is now canon (NRS 086), but no affected-voter ratification, merger, or Statehood outcome has been published; game endings remain strictly hypothetical
-- whether a future installment uses the engine for a different live arc
-
-Constraint: this thread never advances or references real canon, and real canon must never reference a specific in-game outcome. The only permitted connective tissue is the shared premise and shared background facts (SC-Y13-0119, the relocation vote, the named real delegates as scenery/NPCs).
 
 ### Legat Consul race — LIVE
 
