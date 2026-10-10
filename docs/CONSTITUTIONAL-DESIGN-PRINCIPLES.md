@@ -1,10 +1,18 @@
 # Constitutional Design Principles — Review Reference
 
 **Status:** working reference, assembled 13.09, expanded 19.09, worked examples re-verified
-against the live text 19.09. The twelve principles have been in active use across
+against the live text 10.10. The twelve principles have been in active use across
 scenarios, amendment rationales, and design sessions, but had never been written down in one place. This
 document reconstructs them from actual usage in `scenario-the-ledger.html`,
 `scenario-the-classification.html`, `constitutional-history-archive.html`, and prior design sessions.
+
+**Re-verified 10.10.** The text-economy review (28,615 → 25,828 words) moved, merged, or deleted much of
+the text the earlier examples cite. Provision numbers below are those of the live text on 10.10; where a
+finding refers to text that has since moved, the old and new locations are both given. Rules set by John
+during that review are marked **(added 10.10, John)** and are logged with their applications in
+`docs/TEXT-ECONOMY-REVIEW.md`. For those rules, John's decision and the applications taken from the
+review log are the content of record; the surrounding rationale, the "test question" lines, and the
+cross-references between rules were drafted here on 10.10 and need his confirmation.
 
 **Confidence marking is deliberate:**
 - **[ATTESTED]** — named and applied in existing published content; definition drawn from that usage.
@@ -30,8 +38,27 @@ provisions; duplicate treatment that can drift apart under later amendment.
 **Review use:** if a provision needs "and also" to describe what it covers, it may be two provisions.
 *Retired 19.09: the standing example here was §1.9 bundling voting rights with marriage and family
 formation. Re-checked against the live text — §1.9 is now purely democratic participation, so the
-bundle was resolved at some point and the example no longer illustrates anything. No replacement
-example found; the current text did not surface another instance.*
+bundle was resolved at some point and the example no longer illustrates anything. A resolved instance
+of the same defect is on record: §1.7 had bundled medical autonomy with the privacy-and-search rules,
+and the bundle protected the home twice under two different standards (`constitutional-history.html`,
+session 260720).*
+
+*Live instances, 10.10.* The text-economy review ran this test across every article and found the
+defect at scale — one rule stated in two or three places that could drift apart under later amendment:
+- **Acting order during incapacity** — stated in then-§2.5(6), then-§2.9(6), and (with a third tie rule)
+  §2.6.a(2). Now one statement in §2.16(1), covering both Consuls. (This is also the Process Symmetry catch below.)
+- **Publication to the NRS** — restated provision by provision. Now a general rule: §10.1(2) publishes
+  every constitutional act, order, finding, certification, designation, declaration, and determination as
+  a permanent record, and "no provision need state this obligation individually." The 10.10 pass removed
+  or shortened 61 clauses (about 330 words) **(added 10.10, John)**. It kept the phrase only where
+  publication carries its own timing or is a condition of effect, or covers items outside §10.1(2)'s list
+  (financial disclosures, minority reports, staff publications, private filings).
+- **Institutional capacity** — "shall maintain a body capable of performing the function" was stated
+  separately for legislative bodies (§3.8) and independent agencies (§3.9). One general sentence in §3.10
+  now covers any institution the Constitution assigns a function to.
+- **Expulsion** — stated three times (§3.2, §3.5, §3.4). Now once, in §3.4.
+- **Non-derogable tags** — §1.3 and §1.4 each carried "This right is non-derogable under §1.19.a."
+  §1.19.a lists the six rights and is the home; both sentences are deleted.
 
 ### 2. Institution Test  [RECONSTRUCTED]
 **Asks:** does this body need to exist as a distinct institution, or is it a function some existing
@@ -67,23 +94,30 @@ neighbouring carve-outs are bounded by enumeration; this one is bounded by nothi
 touch this right, but an ordinary statute can hollow it out — which makes it a conflict between two
 constitutional provisions rather than a missing implementation detail.
 
+*Second catch in the same provision, 10.10.* The carve-out for "civic obligations lawfully required of
+citizens by the Legislature — including …" was an open category: the examples did not bound it, so a
+Legislature could add new compulsory civic duties and call them civic. The live text closes the list —
+labor required of a person convicted of an offense by a court, jury service, military conscription, and
+civil emergency duties lawfully required of citizens — and the Legislature cannot add to it.
+
 **Pattern worth naming — self-defeating delegation.** Where this test meets Graceful Degradation: a
 limit on the Legislature whose only activation is a statute the Legislature must pass. Absent the
 statute the limit does not bite, and the body that would be constrained is the body that must act.
 Two live instances found 19.09, resolved differently on 260926:
 
 - **§7.10(4) — resolved.** The gift prohibition was keyed to a "de minimis threshold defined by
-  statute" that might never exist. Fixed with the same statute-primary-plus-floor pattern used at the
-  §2.5/§2.9 tiebreaker gaps: the threshold defaults to zero until a statute sets one. The following
-  sentence already made official-capacity gifts Republic property regardless of statute, so the fix
-  closes the remaining personal-gift gap.
+  statute" that might never exist. Fixed with the statute-primary-plus-floor pattern first used at the
+  then-§2.5/§2.9 tiebreaker gaps (since replaced there by a direct rule in §2.16(1)): the threshold
+  defaults to zero until a statute sets one — in the live text, "absent such statute, the threshold is
+  zero." The following sentence already made official-capacity gifts Republic property regardless of
+  statute, so the fix closes the remaining personal-gift gap.
 - **§8.4 — left open, by choice.** Public campaign financing "shall" be established by statute, with
   no deadline and no consequence for never acting — the same shape as §7.10(4). But §8.4's own text
   ("the Elections Panel administers the system and publishes annual compliance findings") presumes the
   statute is already enacted and running, so the gap is theoretical rather than live: nothing is
   currently un-bitten. No constitutional floor was added; a floor here would mean inventing a fallback
   financing mechanism or deadline the Constitution doesn't otherwise need. Recorded so it isn't
-  rediscovered as a fresh finding.
+  rediscovered as a fresh finding. Unchanged by the 10.10 review.
 
 ### 5. Actor Test  [CORE + ATTESTED]
 **Canonical form: holder, check, consequence.**
@@ -107,36 +141,74 @@ coordination failure (executives can't agree → SC petition). Each names its ow
 around it.*
 *Example flagged in Article I review: §1.1 does this well — Legislature doesn't fund legal aid →
 courts appoint anyway.*
-*Attested catch, 19.09 — this test found and fixed a real gap. §2.5(6)(iii) resolved a tie on equal
-continuous service by deferring entirely to statute, with no constitutional fallback, while the exactly
-parallel §2.9(6)(iii) resolved it self-executingly ("the oldest by age holds the office"). With no
-tiebreaker statute enacted, acting Civic Consul authority was indeterminate at the moment the office
-needed filling. §2.6.a(2) carried the identical gap. Both now state a floor. A related tie in §2.6.a(4)
-was reviewed and deliberately left to statute: it is second-order, reachable only where vote counts and
-continuous service are both tied, and its consequence is bounded.*
+*Attested catch, 19.09 — this test found and fixed a real gap. The then-§2.5(6)(iii) resolved a tie on
+equal continuous service by deferring entirely to statute, with no constitutional fallback, while the
+exactly parallel then-§2.9(6)(iii) resolved it self-executingly ("the oldest by age holds the office").
+With no tiebreaker statute enacted, acting Civic Consul authority was indeterminate at the moment the
+office needed filling. §2.6.a(2) carried the identical gap. Both were given a floor on 19.09.*
+*Resolved at the root, 10.10. The three acting-order provisions were collapsed into one rule in
+§2.16(1) — acting authority vests in the Speaker of the Consul's chamber, then in statutory successors,
+then in "the most senior member of that chamber by continuous service, ties resolved by age" — so the
+floor is now the rule rather than a patch behind a statute. §2.6.a(2) reads the same way. A related tie
+in §2.6.a(4) (a tie that would put more than four candidates on the national ballot) is now settled
+directly: "greater continuous service controls." The case where votes and continuous service are both
+tied remains second-order and bounded, and was not raised in the 10.10 review.*
 *Scan note, 19.09: all 129 statutory delegations were checked for this. Most are correctly pitched and
 need nothing. §10.1(4) supplies a global fallback for publication timing — "Otherwise a constitutionally
 required record is published as soon as possible" — which alone rescues roughly twenty delegations that
-look exposed in isolation. The genuinely exposed remainder was small: §15.3(2) (Remediation Plan clock on
-the devolution ladder), §9.8 (pool restoration clock), §11.1 (no deadline to establish the emergency
-procedure). Resolved differently on 260926:*
+look exposed in isolation. Since 10.10 it has a companion in §10.1(2), which publishes every
+constitutional act without any provision needing to say so; the 10.10 NRS pass relied on that pairing
+and kept any clause that carried its own timing or condition of effect. The genuinely exposed remainder
+on 19.09 was small: §15.3(2) (Remediation Plan clock on the devolution ladder), §9.8 (pool restoration
+clock), §11.1 (no deadline to establish the emergency procedure). Resolved differently on 260926:*
 
 - **§15.3(2) — fixed.** The Remediation Plan clock sits inside the mandatory-devolution ladder, which is
   already live once a State fails an audit — not a hypothetical delegation. Given a floor: 90 days until
   statute defines the period, reusing §15.2(6)'s existing 90-day figure for the same kind of interim
   window rather than inventing a new number (Process Symmetry).
-- **§9.8 — left as-is.** Unlike the other two, this one already has graceful degradation built in: the JM
-  publishes a compliance breach immediately regardless of statute, and §9.8(5) gives the actual worst case
-  (a pool at zero) a separate, statute-independent automatic fallback. A missing restoration "period"
-  degrades to sustained public findings on a below-minimum-but-not-zero pool, not silence or collapse.
-- **§11.1(8) — fixed, but not with a deadline.** The gap here wasn't a missing clock, it was a missing
-  actor: the substantive safety rails (no changes to electoral rules, timelines, or NRS permanence;
-  72-hour expiration unless ratified) were already written into the sentence, but nothing let a panel act
+- **§9.8 — left as-is on 260926; the clause itself deleted 10.10.** Unlike the other two, this one
+  already had graceful degradation built in: the responsible Monitor publishes a compliance breach as
+  soon as a pool falls below five (§9.8(4)), regardless of statute, and §9.8(5) gives the actual worst
+  case a separate, statute-independent fallback — the Elections Panel conducts an expedited eligibility
+  review to restore the pool. A missing restoration "period" degraded to sustained public findings, not
+  silence or collapse. On 10.10 the exposed clause was removed outright: it told the nominating bodies to
+  restore the minimum "within the period defined by statute," but nominating bodies do not add pool
+  members — the Elections Panel does, under (5). The statute-dependent clock is gone and nothing
+  depended on it.
+- **§11.1(6) (then §11.1(8)) — fixed, but not with a deadline.** The gap here wasn't a missing clock, it
+  was a missing actor: the substantive safety rails (no changes to electoral rules, timelines, or NRS
+  permanence; 72-hour expiration) were already written into the sentence, but nothing let a panel act
   on them before the Legislature built the procedure. An imminent security threat doesn't wait for
   legislative convenience, so this was the Bad-Faith Test's "assume the thing you're worried about
   actually happens," not a Graceful Degradation clock question. Fix: until the statute exists, the panel
   may adopt such a measure by majority vote of its own seated members — reusing the same majority-vote
-  mechanism §11.1(9) already uses for Acting-member designation, not a new decision procedure.
+  mechanism §11.1(7) (then (9)) already uses for Acting-member designation, not a new decision
+  procedure. 10.10 tightened it further: the ratification clause was replaced with "a panel may adopt a
+  further measure only on a fresh published determination of an imminent threat," the same
+  fresh-determination pattern §2.11 uses for renewal.
+
+**Limit — a fallback needs no fallback of its own  (added 10.10, John).** The test asks that every
+provision define its failure state. It does not ask that the failure state define *its* failure state.
+Where a mechanism already exists to catch the failure of a primary process, keep the mechanism and its
+outer limit, and trust the officials who run it. Without this stop the test recurses — every backup
+acquires a backup, then a backup to the backup — and the added machinery becomes the largest body of
+text that is never exercised. Applications from the 10.10 review:
+- **§2.6.a(5) — sole-candidate failure state, declined.** §2.6.a (Acting Civic Consul, nominating ballot,
+  national ranked-choice election) is already the backup for the Assembly's failure to elect. A further
+  failure state for the backup was proposed and declined. Instead (5) was cut to its core: the Elections
+  Panel administers the national election within the period defined by statute, with a constitutional
+  default of 45 days and an absolute maximum of 90.
+- **§15.5.a(2) — the JMC's missed deadline.** The 90-day assessment with one 30-day extension was
+  followed by a same-week individual-vote procedure for the case where even that lapsed. Replaced by a
+  default: where the JMC does not publish within the period, "the remaining portion is treated as not
+  satisfying those conditions." Same outcome as the old all-abstain case, without the procedure.
+- **Former §10.1(8) — NRS restoration.** A requirement that the Legislature establish permanent
+  restoration obligations by statute within 90 days of the parallel-system threshold was deleted. The JM's
+  parallel authentication system (now §10.1(7)) is the fallback for NRS failure; it does not get one too.
+
+What the limit does not touch: a primary mechanism still needs its failure state. §4.4.a's public
+confirmation route (Senate fails to vote → public confirmation) and §2.6.a's formation cascade remain
+exactly what the test asks for.
 
 ---
 
@@ -161,6 +233,13 @@ policy over-routed into referenda.
 **Asks:** does exercising this power create a record in the National Record System?
 **Catches:** powers exercisable with no contemporaneous published trace. Distinct from the Sunlight
 Test: transparency asks whether a record *exists now*, sunlight asks whether concealment *ever ends*.
+**Standing default (added 10.10, John): publication is a general rule, not a per-provision duty.**
+§10.1(2) publishes every constitutional act, order, finding, certification, designation, declaration, and
+determination as a permanent record, and "no provision need state this obligation individually." In
+review, ask the Transparency question only about what falls outside that list — financial disclosures,
+minority reports, staff publications, private filings — or where publication carries its own timing or
+is a condition of effect. For everything on the list the answer is already yes, and restating it
+provision by provision is a One Home defect, not an added safeguard.
 
 ### 9. Informational Power Test  [CORE + ATTESTED]
 **Canonical form: informational authority IS constitutional power — bound it.**
@@ -179,6 +258,11 @@ benefits from concealment.
 *Attested use, §10.2: "no permanent secrecy, temporary secrecy only on stated statutory grounds, hard
 ceilings of 25 and 30 years, and automatic publication on expiry requiring no further government act."
 The void rule means "abuse fails retroactively, not just prospectively."*
+*Live-text note, 10.10: the ceiling is now stated once — 25 years from original classification, with a
+single 5-year extension on a published justification — and the separate "30 years under any
+circumstances" sentence is deleted as the arithmetic of the two (the same cut made to §1.13's 15-year
+sealing limit). The effective ceilings, and automatic publication on expiry within 30 days with no
+further government act, are unchanged.*
 
 ---
 
@@ -198,16 +282,25 @@ policy choices created simply because one process was drafted at a different tim
 *Standing example: Civic Consul and Legat Consul incapacity procedures should mirror one another where
 the constitutional problem is the same, with differences only where the offices' roles or succession
 structures actually require them.*
-*Live instance found 19.09, in exactly that place.* §2.5(6)(iii) and §2.9(6)(iii) now reach the same
-outcome on the same problem — a tie on equal continuous service resolves to the oldest by age — but by
-two different architectures. §2.9 states the rule directly and self-executingly; §2.5 routes through
-statute, with the age rule as a floor behind it. Same function, same result, two procedural shapes. The
-divergence is an artifact of the order they were drafted and amended in, not a difference in role or
-risk, which is precisely what this test is for. Worth deciding whether they should be made to match.
+*Live instance found 19.09, in exactly that place; resolved 10.10.* The then-§2.5(6)(iii) and
+then-§2.9(6)(iii) reached the same outcome on the same problem — a tie on equal continuous service
+resolves to the oldest by age — but by two different architectures. §2.9 stated the rule directly and
+self-executingly; §2.5 routed through statute, with the age rule as a floor behind it. Same function,
+same result, two procedural shapes. The divergence was an artifact of the order they were drafted and
+amended in, not a difference in role or risk, which is precisely what this test is for. The 10.10 review
+made them match by giving the rule one home: the Civic and Legat acting orders are now a single
+statement in §2.16(1), "ties resolved by age."
+*The same sweep made age the Constitution's one seniority tiebreak.* "Ties are resolved by age" now
+appears in §2.6.a(2), §2.9(2), §2.16(1), §4.4(4) (Temporary Associate Justice), and §11.1(5) (panel
+Chair). Two further provisions were brought into line on 10.10: §9.1.d's pool-tenure tie, previously
+"defined by statute," now "resolved by age"; and the panel Chair tie, previously "by lot conducted by the
+JMC," now by age. Each change is a Process Symmetry fix — the same kind of tie, the same answer — not a
+policy change.
 *Pass example, same review.* The three Monitor Generals are selected three different ways — the LM
-nominated by the SC, the EM jointly by the two Speakers, the JM by public lottery. That divergence is
-principled rather than arbitrary: §9.1 requires each Monitor be "selected by bodies other than those it
-oversees," and each method is what that constraint produces for its branch. A textbook case of
+nominated by the SC, the EM jointly by the two Speakers, the JM by public lottery (§9.3). That
+divergence is principled rather than arbitrary: §9.2 requires each Monitor General be selected through a
+process that "excludes the institution subject to that Monitor's oversight from controlling the
+selection," and each method is what that constraint produces for its branch. A textbook case of
 difference reflecting constitutional purpose.
 
 ### 12. Procedural Familiarity  [CORE]
@@ -245,11 +338,17 @@ exception handling, procedural specifics — and mistaking its absence for a con
 **Worked examples from the Article I review, where this principle retired flags I had raised:**
 - §1.1 — "where does the money come from?" **Not a constitutional question.** The document says
   courts appoint counsel at public expense; funding mechanics are legislative.
-- §1.8 — "no exigent-circumstances exception." **Not a gap.** The provision requires prior judicial
-  authorization and says the Legislature establishes the warrant framework by statute. That sentence
-  already delegates the detail.
+- §1.8 — "no exigent-circumstances exception." **Retired 13.09; reason no longer in the text, 10.10.**
+  The flag was retired because the provision then said the Legislature establishes the warrant
+  framework by statute — a sentence that delegated the detail. The live §1.8 has no such sentence. It
+  states the rule directly: no entry, search, surveillance, or collection "without consent or prior
+  independent judicial authorization based on specific, articulable grounds." So the stated reason for
+  retiring the flag no longer matches the text. **Open for John:** keep it retired on other grounds
+  (for instance, that "judicial authorization" already accommodates emergency procedures), or restore a
+  delegation sentence.
 - §1.11 — "72 hours may be operationally hard." **Not a constitutional flaw.** Setting the outer
-  limit is exactly what constitutional language should do; meeting it is administration.
+  limit is exactly what constitutional language should do; meeting it is administration. (Live text:
+  "within the period established by statute, not to exceed 72 hours.")
 
 **The distinction that survives:** a conflict *between two constitutional provisions* can never be
 fixed by statute, so it is always a genuine constitutional finding. A missing implementation detail
@@ -257,6 +356,38 @@ usually is not.
 
 **Test question:** if the Legislature could fix this with a well-drafted statute tomorrow, without
 amending anything, it is probably not a constitutional defect.
+
+### Two corollaries  (added 10.10, John)
+
+Both were set during the text-economy review and are applications of the same altitude principle: what
+the Constitution fixes, and what it leaves with the people who run the system.
+
+**1. The Constitution states outcomes, not technology.**
+Constitutional language fixes the property a system must have. How the system achieves it belongs to
+the body that runs it and can change as technology does. §11.2 is the worked case. It now names three
+required properties — ballot secrecy, public auditability, resilience — together with the data-sharing
+bar and "Eligibility verification may not store or expose voter identity within the NVS," and says
+nothing about the mechanism. The Citizen Voting Credential and cryptographic-matching sentences were
+deleted, and the two-channel delivery sentence became an outcome: "The Elections Panel shall inform
+every eligible citizen of their federal races and how to vote before each federal election." The
+knock-on edits to §13.1, §13.2, §15.2, and §15.4, which had named the credential, now read
+"authenticated through the NVS."
+*Test question:* if the technology named here were replaced next decade, would the Constitution need
+amending? If so, the provision is naming a mechanism rather than stating an outcome.
+
+**2. Trust elected officials with operating details.**
+Where an operating line cannot be drawn in advance without freezing it, keep the concept and its outer
+limit and leave the line to the elected officials who must draw it as conditions change. External
+intelligence is the worked case (§2.1, §2.3, §2.3.a). The Legat Consul directs *external* intelligence;
+no operation may be conducted against citizens inside Republic territory on that authority without
+independent judicial authorization (the outer limit). "External" is deliberately left undefined,
+because the Civic Consul holds internal intelligence with law enforcement under residual authority and
+the government draws the operating line as threats evolve. A definition here would be machinery that
+goes stale. §2.11 (Emergency Governance) is logged on the same footing — "deliberately open" (10.09),
+passed unchanged in the 10.10 review.
+What stays fixed is the power's boundary and who checks it (the Actor Test), not the day-to-day line.
+This is the companion to the fallback limit under the Graceful Degradation Test: both stop the reviewer
+from asking the text to do the officials' job.
 
 ---
 
@@ -271,6 +402,11 @@ its drafting scrutinized:
 4. **Family C** — where does its legitimacy come from, and who can see it operate?
 5. **Family D** — does its procedure match comparable functions and reuse familiar constitutional machinery?
 6. **Internal consistency** — does it contradict itself, or any other provision?
+
+*Standing rules applied at each step, added 10.10 (John):* at step 1, does the provision state an outcome
+rather than a technology, and does it leave the operating line to the officials who must draw it? At step
+2, is this a publication duty that §10.1(2) already covers? At step 3, stop at one fallback — a fallback
+does not need its own.
 
 **Open boundary questions — already flagged in standing notes, still unresolved:**
 1. **Actor Test vs Institution Test** may be *sequential* rather than parallel — Institution Test
