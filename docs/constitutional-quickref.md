@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 179 provisions**
+> **20 articles · 180 provisions**
 
 ---
 
@@ -22,7 +22,7 @@
 - **Article VI — Immigration and Residency**  ·  §6.1–§6.3.a  (4 provisions)
 - **Article VII — Elections and Federal Office**  ·  §7.1–§7.15  (16 provisions)
 - **Article VIII — Electoral Finance and Campaign Conduct**  ·  §8.1–§8.4  (4 provisions)
-- **Article IX — The Monitors**  ·  §9.1–§9.9.a  (18 provisions)
+- **Article IX — The Monitors**  ·  §9.1–§9.9.a  (19 provisions)
 - **Article X — The National Record System**  ·  §10.1–§10.2  (2 provisions)
 - **Article XI — NRS Panel and Elections Panel**  ·  §11.1–§11.3  (3 provisions)
 - **Article XII — Social State and Economic Rights**  ·  §12.1–§12.6  (8 provisions)
@@ -718,13 +718,26 @@ The JM audits the courts for judicial scope and independence, the Elections Pane
 
 - **Cross-refs:** §9.4
 
-### §9.1.d — Monitor General Term Expiry and Incapacity
+### §9.1.d — Monitor General Term Expiry and Vacancy
 
 A Monitor General's constitutional authority terminates automatically at the moment their term expires — no further act or proceeding is required. Any official act taken after term expiry is constitutionally void.
 
+- **Cross-refs:** §7.6, §9.1.e, §9.3, §9.7.a
+
+### §9.1.e — Monitor General Incapacity
+
+(1) A Monitor General is temporarily unable to exercise the office upon the Monitor General's own declaration or a joint determination by the other two Monitor Generals that the Monitor General cannot exercise the functions of office. The declaration or determination, with stated functional grounds, is published to the NRS and the acting mechanism under §9.1.d activates immediately.
+
+- **Thresholds:**
+  - An extension requires a simple majority of votes cast with participation by at least 60% of eligible citizens
+  - (6) During a publicly approved extension, the suspended Monitor General may publish a declaration of recovery to the NRS and seek early restoration by a simple majority of the Assembly's full seated membership
 - **Time limits:**
-  - The SC shall determine incapacity within 48 hours
-- **Cross-refs:** §7.6, §9.3, §9.9
+  - (2) A Monitor General who declares their own incapacity may declare it ended, restoring authority 24 hours after publication to the NRS
+  - After a first joint incapacity determination, the affected Monitor General may likewise declare recovery, restoring authority 24 hours after publication, subject to subsections (3) and (5)
+  - Restoration during the following 30 days requires agreement of the other two Monitor Generals or relief from the SC
+  - (5) A jointly determined suspension ends 30 days after its initial publication unless the other two Monitor Generals request a national extension vote from the Elections Panel before that deadline
+  - Timely filing continues the suspension pending certification, which must occur within 90 days of that initial determination
+- **Cross-refs:** §9.1.d
 
 ### §9.2 — Selection and Independence
 
@@ -773,13 +786,12 @@ The JMC defines and publishes to the NRS the compliance standard for each catego
 
 ### §9.5.b — Agency Accountability
 
-Every agency the Legislature establishes is bound both by whatever this constitution specifies for it and by whatever mandate the Legislature has assigned to it by statute. A Fail reported under §9.5.a does not substitute for the responsible body's own independent obligation to act on matters within its operational control.
+Every agency the Legislature establishes is bound both by whatever this constitution specifies for it and by whatever mandate the Legislature has assigned to it by statute. Monitor findings and reports do not substitute for a responsible body's independent obligation to perform its constitutional and statutory duties or to act on matters within its operational authority.
 
-- **Cross-refs:** §9.5.a
 
 ### §9.6 — Monitor Minimum Funding Guarantee
 
-The annual appropriation for each Monitor, the Elections Panel, and the NRS Panel may not fall below the inflation-adjusted equivalent of the prior fiscal year's funding level without a 2/3 vote of both chambers in a concurrent vote. The Monetary Authority certifies each body's prior-year funding level adjusted for inflation and publishes the certified floor to the NRS before the Legislature begins its annual…
+The annual appropriation for each Monitor, the Elections Panel, and the NRS Panel may not fall below the prior fiscal year's funding level adjusted to preserve equivalent purchasing power, whether prices rise or fall, without a 2/3 concurrent vote of both chambers. The Monetary Authority certifies each body's prior-year funding level adjusted for the change in the price level and publishes the certified floor to…
 
 
 ### §9.7 — Joint Monitor Council
@@ -790,11 +802,11 @@ The annual appropriation for each Monitor, the Elections Panel, and the NRS Pane
 
 ### §9.7.a — Institutional Compromise Protocol
 
-Where two of the three Monitors jointly assess and report that the third is operating in demonstrable bad faith, they may petition the SC directly for confirmation under its original jurisdiction in §4.5. The SC shall rule within 14 days.
+Where two Monitor Generals jointly determine that the third is operating in demonstrable bad faith, they shall publish the determination and stated evidence to the NRS. The affected Monitor General's authority is suspended immediately, and the acting mechanism under §9.1.d activates.
 
-- **Time limits:**
-  - The SC shall rule within 14 days
-- **Cross-refs:** §4.5, §9.1.d, §9.3
+- **Thresholds:**
+  - The affected Monitor General may request early restoration during a publicly approved extension by a simple majority of the Assembly's full seated membership
+- **Cross-refs:** §9.1.d, §9.1.e, §9.9
 
 ### §9.8 — Constitutional Pool Framework
 
@@ -803,21 +815,17 @@ Where two of the three Monitors jointly assess and report that the third is oper
 - **Time limits:**
   - (7) Where an applicant is excluded or removed, the administering body must publish the specific grounds to the NRS within 14 days
   - the applicant may appeal to the SC within 14 days of that publication on the sole ground that the eligibility criteria were misapplied
-- **Cross-refs:** §7.10
+- **Cross-refs:** §7.10, §9.1.d
 
 ### §9.9 — Constitutional Officer Removal — Standard Track
 
-(1) This section governs for-cause removal of all constitutionally confirmed independent officers except federal judges, whose removal is governed by §4.2 or §4.3.a, and elected executives. Removal of Monitor Generals proceeds under subsections (2) through (6); removal of all other officers within this section's scope proceeds under subsections (7) through (11).
+(1) This section governs for-cause removal of constitutionally confirmed independent officers other than federal judges, whose removal is governed by §4.2 or §4.3.a, and elected executives. Removal of Monitor Generals follows subsections (2) through (5); removal of other officers within this section's scope follows subsections (6) and (7).
 
 - **Thresholds:**
-  - (7) For all other officers within this section's scope: a concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC
-  - (9) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers
+  - Removal requires a concurrent vote of 2/3 of the full seated membership of each legislative chamber, on grounds within the statutory removal categories for that office
 - **Time limits:**
-  - (4) A national referendum on removal is administered no later than 90 days from filing, or at the next regularly scheduled federal election, whichever comes first
-  - (8) The SC determines within 14 days whether the stated grounds constitute at least one statutory removal category for the subject office
-  - no removal vote may be held within 180 days of a major national election without prior SC review within 48 hours
-  - (11) The SC must rule within 14 days
-- **Cross-refs:** §4.2, §4.3.a, §7.3, §9.1.d
+  - (3) The Elections Panel administers a national removal referendum no later than 90 days after filing, or at the next regularly scheduled federal election, whichever comes first
+- **Cross-refs:** §4.2, §4.3.a, §7.3
 
 ### §9.9.a — Monitor General Disclosure
 
@@ -1368,10 +1376,12 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §4.3.a | Supreme Court Justice Removal | Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS |
 | §4.4 | Supreme Court Selection | The Assembly has 30 days to authorize public confirmation by 2/3 of full seated membership |
 | §4.4.a | Senate Bypass — Public Confirmation | 4, the Civic Consul may, with 2/3 Assembly consent, submit the serving Temporary Associate Justice at the next federal electoral period for public confirmation |
+| §9.1.e | Monitor General Incapacity | An extension requires a simple majority of votes cast with participation by at least 60% of eligible citizens |
+| §9.1.e | Monitor General Incapacity | (6) During a publicly approved extension, the suspended Monitor General may publish a declaration of recovery to the NRS and seek early restoration by a simple majority of the Assembly's full seated membership |
 | §9.3 | Monitor General Selection | All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority |
 | §9.3 | Monitor General Selection | where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote |
-| §9.9 | Constitutional Officer Removal — Standard Track | (7) For all other officers within this section's scope: a concurrent resolution of 1/3 of either chamber, or two of the three Monitors jointly, may initiate removal by filing stated grounds with the SC |
-| §9.9 | Constitutional Officer Removal — Standard Track | (9) If grounds are confirmed, duty suspension activates immediately and removal requires a 2/3 concurrent vote of both chambers |
+| §9.7.a | Institutional Compromise Protocol | The affected Monitor General may request early restoration during a publicly approved extension by a simple majority of the Assembly's full seated membership |
+| §9.9 | Constitutional Officer Removal — Standard Track | Removal requires a concurrent vote of 2/3 of the full seated membership of each legislative chamber, on grounds within the statutory removal categories for that office |
 | §12.1.a | The Monetary Authority | Principal decision-makers exercising the MA's constitutional authority must be selected through an independent candidate process and confirmed by 2/3 of the Senate |
 | §13.1 | Optional Referendum | A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification |
 | §15.3 | State Remediation and Mandatory Devolution Review | Entry into Provisional status requires an absolute majority of the full seated Senate |
@@ -1386,3 +1396,4 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
 | §19.8 | Transitional Accountability Mechanism | no amendment may expand the scope without the same 2/3 majority |
 | §20.6 | Compact Ratification | A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3 |
+
