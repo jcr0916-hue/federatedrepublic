@@ -4,7 +4,9 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **148** · nrsSeq through **82**.
+**Current published frontier:** Year 13, Month 12 · worldSeq through **151** · nrsSeq through **84**.
+
+The October 10 Korda runway adds news 103–105 and NRS 083–084. Mire and Rell, speaking as Convention delegates rather than as committee co-chairs, file a joint non-binding drafting memorandum exploring a northern-corridor adjustment that would preserve southern Korda lake access. Orin files her own conditional requirements concerning retained services, an executable boundary, and the Statehood Audit path. Public debate has shifted from whether facts exist to what a lawful settlement must address. No final boundary, Convention resolution, referendum, merger or Statehood determination has been adopted; the Convention clock is unchanged. The internal October 12 editorial target remains flexible.
 
 The October 8 batch adds NRS 080–082 and news 102. Two routine administrative filings record counter-queue equipment maintenance and bridge-inspection schedule reconciliation. The Korda Joint Committee on Transition Facts publishes its advisory preliminary compilation: reconciled northern-corridor, southern lake and interior source classes are presented together, with outstanding title, contract-amendment and shared-cost entries explicitly unresolved and no boundary, status or option-cost recommendation. Mara Iset's Korda Press coverage moves the question from assembling evidence toward Convention deliberation. No Convention resolution has been proposed, no referendum triggered, and no constitutional clock changed. The latest fictional month remains Year 13, Month 12.
 
@@ -26,7 +28,6 @@ The October 2 evening batch adds NRS 065–068 and news 097. The Committee's wor
 ### Structured clock dashboard
 
 - **Korda Convention** [korda-convention; open; relative]: Approximately 87 active-days from 13.12 day 26; calendar endpoint unresolved. Running; approximately 87 active days remain under §15.5.a(4). Next: Review elapsed active days and required Convention resolution; do not presume its outcome.
-- **Korda committee preliminary compilation** [korda-committee-target; open; relative]: 30 days from 13.12 (non-binding); calendar endpoint unresolved. Preliminary factual compilation published without a disposition recommendation; residual title, contract and shared-cost entries remain open. Next: Track Convention deliberation using the published preliminary compilation; no boundary, viability finding or constitutional outcome is implied.
 - **Argent Ridge repeal** [argent-repeal; open; relative]: Up to 8 months from 13.09 day 12; calendar endpoint unresolved. Phase One signatures remain open; calendar convention unresolved. Next: Review signature-period progress and establish calendar conversion before dating the endpoint.
 - **LC election** [lc-election; scheduled; window]: Window spring Y14 (month bounds unset). Spring Y14 window; no exact date. Next: Review election scheduling and electoral obligations within the spring window.
 - **Lake Varda conference** [lake-varda-conference; scheduled; window]: Window 14.01–14.01. Scheduled to open in Valedon during Y14 M1; Carrow will lead Torenthia's delegation, while the exact day and complete delegation lists remain unsettled. Next: Track final scheduling, remaining delegation designations and the opening conference agenda without implying agreement on responsibility for prior incidents.
@@ -71,14 +72,16 @@ Last published:
 - **First partial reconciliation response received** (`torenthia-nrs-053.html` / NRS-Y13-0717): Korda's territorial administration supplies a first reconciled schedule of facility ownership, operation, service area and routine maintenance responsibility. Several title, contract and archive entries remain pending; no valuation, cost allocation, boundary proposal or status recommendation is established.
 - **Evidence register cross-referenced** (`torenthia-nrs-057.html` / NRS-Y13-0721): the Committee links the partial return to the earlier submissions and reconciliation request, distinguishes reported responsibilities from supplied source documents and identifies the offices holding outstanding records. Service area is not treated as a cost allocation. This is not the preliminary report, an ownership determination, a viability finding or a status recommendation. `torenthia-news-095.html` explains the advance without establishing a change in Mire, Rell or Orin's positions. No committee or Convention clock is restarted or extended.
 
+**Latest political filings:** News 103–105 follow the committee's published compilation (NRS 082). Delegates Mire and Rell jointly submit the discussion-only memorandum NRS 083 in their personal Convention capacities, proposing examination of a northern-corridor adjustment and a retained southern lakefront. Orin files NRS 084, requiring a real boundary schedule, service continuity, transparent handling of unresolved costs, and preservation of Korda's Statehood pathway. No final map, resolution, vote or outcome exists. Thoss's influence remains observable only as discreet discussions, without a claimed deal.
+
 Open:
-- **Next evidence:** preparation and eventual publication of the preliminary compilation, with residual archival and cost-allocation gaps carried explicitly; continued ordinary-life coverage without implying an outcome. No new boundary proposal, delegate compromise or final cost comparison is established.
-- **Following runway:** continue the now-visible but incomplete movement by Mire and Rell, preserve Orin's statehood objective, and keep Thoss coalition work in the background before any final resolution
+- **Next constitutional step:** develop a precise, publicly filed proposed Convention resolution from Mire–Rell's non-binding joint memorandum and Orin's conditional response. Required details include northern boundary, retained southern lake access, continuing services and lawful handling of unsettled cost/title matters. No resolution has been adopted and no affected-voter referendum has started.
+- **Decision runway:** Mire and Rell have co-signed a discussion memorandum (NRS 083); Orin has separately filed conditions (NRS 084). News 103–105 show qualified convergence but no claimed majority. Next: a complete proposed resolution, Convention deliberation and an actual recorded vote; keep Thoss's assistance indirect rather than treating it as a public brokered deal.
 - additional committee evidence, polling, and internal procedure beyond the first transportation records
-- first substantive resolution/proposal
-- Elin Thoss's preferred outcome
+- first complete proposed Convention resolution with boundary and implementation schedules
+- Convention outcome and the breadth of any supporting margin
 - Lakeland Journal / Kelvant business-interest voice
-- final Convention resolution and ratification route
+- final Convention vote and subsequent affected-voter ratification route
 
 Constraint: do not force a premature three-faction structure or treat the canceled corridor referendum as if it produced a vote result. It never occurred. Do not let the Joint Committee's work imply movement toward any particular resolution — its findings are advisory and its formation is a process story, not a direction signal.
 
