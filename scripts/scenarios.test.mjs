@@ -27,6 +27,16 @@ test('new files supply catalog content, references, reading time and counts', t 
   assert.equal(loadScenarios(root).count, 2);
   assert.equal(loadScenarios(root).provisionCount, 2);
 });
+test('State-centered constitutional history stays at its own URL but outside the library', t => {
+  const root = fixture(t);
+  write(root, 'scenario-ordinary.html');
+  write(root, 'scenario-state-history.html', 'scenarioLibrary: false\n');
+  const result = loadScenarios(root);
+  assert.equal(result.count, 1);
+  assert.deepEqual(result.entries.map(e => e.href), ['scenario-ordinary.html']);
+  assert.equal(fs.existsSync(path.join(root, 'scenario-state-history.html')), true);
+});
+
 test('explicit order precedes new unordered pages; ties sort by filename', t => {
   const root = fixture(t);
   write(root, 'scenario-a.html');

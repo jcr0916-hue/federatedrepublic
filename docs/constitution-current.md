@@ -113,7 +113,7 @@ Government may not itself cause, or systematically permit through licensing, mat
 
 No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, geographic scope, and duration, published immediately to the NRS. Either executive may issue such a declaration within their constitutional domain for no more than 14 days. Continuation beyond 14 days requires a statute enacted through the ordinary legislative process with a fixed expiration date, which may not be extended or renewed.
 
-All emergency measures lapse automatically with the declaration under which they were imposed. Judicial review remains available throughout the emergency. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
+All emergency measures lapse automatically with the declaration under which they were imposed. Judicial review remains available throughout the emergency. Each emergency declaration shall receive independent judicial review within 48 hours of publication. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
 
 The three Monitors retain their full constitutional authority throughout any emergency.
 

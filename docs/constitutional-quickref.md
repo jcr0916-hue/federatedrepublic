@@ -153,6 +153,7 @@ No emergency suspends the Individual Sovereignty Floor in full. Rights other tha
 - **Time limits:**
   - Either executive may issue such a declaration within their constitutional domain for no more than 14 days
   - Continuation beyond 14 days requires a statute enacted through the ordinary legislative process with a fixed expiration date, which may not be extended or renewed
+  - Each emergency declaration shall receive independent judicial review within 48 hours of publication
   - A substantially similar derogation may not be declared within 60 days after expiry
 - **Cross-refs:** §1.19.a
 
