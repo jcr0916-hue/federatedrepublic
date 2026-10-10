@@ -26,9 +26,9 @@ const TOPICS = [
       'how are judges appointed',
       'who appoints judges',
     ],
-    answer: 'Judicial selection begins with the Judicial Pool. For inferior courts, the Civic Consul nominates a judge from the Judicial Pool and the Senate confirms by a two-thirds vote under §4.2. For the Supreme Court, the Civic Consul likewise nominates from the Judicial Pool under §4.4; the Senate then votes on the nomination within the applicable deadline. If the ordinary Supreme Court process stalls, §4.4 and §4.4.a provide temporary-service and public-confirmation fallback mechanisms.',
+    answer: 'Judicial selection begins with the Judicial Pool. For inferior courts, the Civic Consul nominates a judge from the Judicial Pool and the Senate confirms by a majority of its full seated membership under §4.2. For the Supreme Court, the Civic Consul likewise nominates from the Judicial Pool under §4.4; the Senate must vote within 120 days, and confirmation requires a majority of the full seated Senate. If the ordinary Supreme Court process stalls, §4.4 and §4.4.a provide temporary-service and public-confirmation fallback mechanisms.',
     sections: [
-      ['§4.2', 'Inferior courts: Civic Consul nomination from the Judicial Pool; Senate confirmation by 2/3'],
+      ['§4.2', 'Inferior courts: Civic Consul nomination from the Judicial Pool; Senate confirmation by majority of full seated membership'],
       ['§4.4', 'Supreme Court: Civic Consul nomination from the Judicial Pool; Senate vote plus vacancy-continuity rules'],
       ['§4.4.a', 'Supreme Court fallback: public confirmation when a nomination or Senate vote stalls'],
     ],
