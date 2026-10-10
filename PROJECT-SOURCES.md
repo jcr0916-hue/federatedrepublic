@@ -1,7 +1,7 @@
 # Current project sources
 
 Start here for AI sessions and contributor work on the Federated Republic.
-Only files on `main` are current project authority. Other branches are proposals
+Only files on `main` are current project authority. Completed project handoffs and constitutional text-economy working notes were retired from the live docs on 2026-10-10 and remain retrievable in Git history. Other branches are proposals
 or historical snapshots; a filename containing “current” does not confer authority.
 Use the roles below: automated test fixtures and hypotheticals do not establish canon.
 
@@ -34,7 +34,6 @@ Use the roles below: automated test fixtures and hypotheticals do not establish 
 ## Current workflows
 
 - World publishing: [`docs/WORLD-PUBLISHING.md`](docs/WORLD-PUBLISHING.md).
-- Stream compatibility: [`docs/WORLD-STREAM-MIGRATION.md`](docs/WORLD-STREAM-MIGRATION.md).
 - Conservative import: [`docs/operations/REPUBLIC-INGEST.md`](docs/operations/REPUBLIC-INGEST.md).
 - State historical tests: [`docs/STATE-TEST-PUBLISHING.md`](docs/STATE-TEST-PUBLISHING.md).
 - Scenarios: [`docs/SCENARIO-PUBLISHING.md`](docs/SCENARIO-PUBLISHING.md).
@@ -42,7 +41,6 @@ Use the roles below: automated test fixtures and hypotheticals do not establish 
 - Assets/deployment: [`docs/ASSET-DEPLOYMENT.md`](docs/ASSET-DEPLOYMENT.md).
 - Run `npm run world:publish-check` and relevant additional tests before publishing.
 - The documentation index is [`docs/README.md`](docs/README.md).
-- Current project-wide progress and working ideas: [`docs/PROJECT-PROGRESS.md`](docs/PROJECT-PROGRESS.md). This is a non-authoritative implementation handoff, not constitutional or Torenthia canon.
 
 ## Cold storage
 
