@@ -6,22 +6,20 @@ scenarios, amendment rationales, and design sessions, but had never been written
 document reconstructs them from actual usage in `scenario-the-ledger.html`,
 `scenario-the-classification.html`, `constitutional-history-archive.html`, and prior design sessions.
 
-**Re-verified 10.10.** The text-economy review (28,615 → 25,828 words) moved, merged, or deleted much of
-the text the earlier examples cite. Provision numbers below are those of the live text on 10.10; where a
-finding refers to text that has since moved, the old and new locations are both given. Rules set by John
-during that review are marked **(added 10.10, John)** and are logged with their applications in
-`docs/TEXT-ECONOMY-REVIEW.md`. For those rules, John's decision and the applications taken from the
-review log are the content of record; the surrounding rationale, the "test question" lines, and the
-cross-references between rules were drafted here on 10.10 and need his confirmation.
+**Re-verified 10.10.** The Constitution's completed text-economy review moved, combined, or
+removed language cited by earlier examples. References below identify the current constitutional
+provisions, with former locations noted where useful. The retired dated review log remains in Git
+history, not among active project sources. These principles are a working design reference; explanations
+and reconstructed tests are not constitutional text or independently ratified doctrine.
 
 **Confidence marking is deliberate:**
 - **[ATTESTED]** — named and applied in existing published content; definition drawn from that usage.
 - **[CORE]** — a compressed canonical definition already existed in standing project notes; that
   definition governs and is quoted verbatim. Anything beyond it here is elaboration, not authority.
 - **[RECONSTRUCTED]** — no canonical definition exists; the definition here is inferred and needs
-  John's confirmation.
+  review and confirmation.
 
-The three-family clustering below is a **hypothesis**, not settled doctrine. It has never been run
+The four-family clustering below is a **hypothesis**, not settled doctrine. It has never been run
 through a structured analytic technique to confirm the groupings hold.
 
 ---
@@ -50,7 +48,7 @@ defect at scale — one rule stated in two or three places that could drift apar
 - **Publication to the NRS** — restated provision by provision. Now a general rule: §10.1(2) publishes
   every constitutional act, order, finding, certification, designation, declaration, and determination as
   a permanent record, and "no provision need state this obligation individually." The 10.10 pass removed
-  or shortened 61 clauses (about 330 words) **(added 10.10, John)**. It kept the phrase only where
+  repeated publication language throughout the Constitution. It kept separate publication rules where
   publication carries its own timing or is a condition of effect, or covers items outside §10.1(2)'s list
   (financial disclosures, minority reports, staff publications, private filings).
 - **Institutional capacity** — "shall maintain a body capable of performing the function" was stated
@@ -187,7 +185,7 @@ clock), §11.1 (no deadline to establish the emergency procedure). Resolved diff
   further measure only on a fresh published determination of an imminent threat," the same
   fresh-determination pattern §2.11 uses for renewal.
 
-**Limit — a fallback needs no fallback of its own  (added 10.10, John).** The test asks that every
+**Limit — a fallback needs no fallback of its own  (documented during the 10.10 review).** The test asks that every
 provision define its failure state. It does not ask that the failure state define *its* failure state.
 Where a mechanism already exists to catch the failure of a primary process, keep the mechanism and its
 outer limit, and trust the officials who run it. Without this stop the test recurses — every backup
@@ -233,7 +231,7 @@ policy over-routed into referenda.
 **Asks:** does exercising this power create a record in the National Record System?
 **Catches:** powers exercisable with no contemporaneous published trace. Distinct from the Sunlight
 Test: transparency asks whether a record *exists now*, sunlight asks whether concealment *ever ends*.
-**Standing default (added 10.10, John): publication is a general rule, not a per-provision duty.**
+**Standing default (documented during the 10.10 review): publication is a general rule, not a per-provision duty.**
 §10.1(2) publishes every constitutional act, order, finding, certification, designation, declaration, and
 determination as a permanent record, and "no provision need state this obligation individually." In
 review, ask the Transparency question only about what falls outside that list — financial disclosures,
@@ -323,7 +321,7 @@ different process only for a meaningful reason.**
 
 ---
 
-## DRAFTING-LEVEL PRINCIPLE  (added 13.09, John)
+## DRAFTING-LEVEL PRINCIPLE  (documented 13.09)
 
 **Not one of the twelve** — this operates on a different axis. The twelve ask whether a provision is
 *designed* correctly. This asks whether it is *pitched* at the right level.
@@ -338,14 +336,11 @@ exception handling, procedural specifics — and mistaking its absence for a con
 **Worked examples from the Article I review, where this principle retired flags I had raised:**
 - §1.1 — "where does the money come from?" **Not a constitutional question.** The document says
   courts appoint counsel at public expense; funding mechanics are legislative.
-- §1.8 — "no exigent-circumstances exception." **Retired 13.09; reason no longer in the text, 10.10.**
-  The flag was retired because the provision then said the Legislature establishes the warrant
-  framework by statute — a sentence that delegated the detail. The live §1.8 has no such sentence. It
-  states the rule directly: no entry, search, surveillance, or collection "without consent or prior
-  independent judicial authorization based on specific, articulable grounds." So the stated reason for
-  retiring the flag no longer matches the text. **Open for John:** keep it retired on other grounds
-  (for instance, that "judicial authorization" already accommodates emergency procedures), or restore a
-  delegation sentence.
+- §1.8 — the present text requires consent or **prior independent judicial authorization**
+  for governmental entry, search, surveillance, or collection. The earlier explanation that statute
+  could create a warrant exception is obsolete: that delegation sentence is no longer in §1.8.
+  Whether exigent circumstances ought to justify an exception is a substantive constitutional choice,
+  not merely a missing statutory detail. This reference does not assume an unwritten exception.
 - §1.11 — "72 hours may be operationally hard." **Not a constitutional flaw.** Setting the outer
   limit is exactly what constitutional language should do; meeting it is administration. (Live text:
   "within the period established by statute, not to exceed 72 hours.")
@@ -357,7 +352,7 @@ usually is not.
 **Test question:** if the Legislature could fix this with a well-drafted statute tomorrow, without
 amending anything, it is probably not a constitutional defect.
 
-### Two corollaries  (added 10.10, John)
+### Two corollaries  (documented during the 10.10 review)
 
 Both were set during the text-economy review and are applications of the same altitude principle: what
 the Constitution fixes, and what it leaves with the people who run the system.
