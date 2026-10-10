@@ -864,7 +864,7 @@
     ]
   },
   "scenario-the-objection": {
-    "summary": "A fiscal notice records a concern and gives the Assembly Speaker an option to recall the bill. It is not a veto: declining recall leaves the warning on the record without giving it independent blocking force.",
+    "summary": "A reconsideration notice recommends specific revisions with reasons and lets the Assembly Speaker pause the review period. It is not a veto: declining to pause leaves the recommendation on the record without giving it blocking force.",
     "provisions": [
       {
         "ref": "§2.7",
@@ -1304,7 +1304,7 @@
     ]
   },
   "scenario-the-vote": {
-    "summary": "A suspensive veto creates a bounded delay with specified routes back to enactment. A fiscal notice is a separate instrument, and replacing the Civic Consul does not bypass tabling attached to the bill.",
+    "summary": "A suspensive veto creates a bounded delay with specified routes back to enactment. A reconsideration notice is a separate, advisory instrument, and replacing the Civic Consul does not bypass tabling attached to the bill.",
     "provisions": [
       {
         "ref": "§2.7",
