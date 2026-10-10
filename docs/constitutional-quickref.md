@@ -248,7 +248,7 @@ The Legat Consul may appoint domain officers to exercise defined portions of the
 
 - **Thresholds:**
   - (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy
-  - The notice suspends the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority
+  - The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority
   - (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback
 - **Time limits:**
   - absent such statute, the constitutional default is 21 days
@@ -260,7 +260,7 @@ The Civic Consul may, within 10 business days of final passage, return a bill wi
 
 - **Thresholds:**
   - The bill is suspended for one month, during which the Senate may override by 2/3
-  - Before the review period expires, the Assembly Speaker may suspend it for up to 10 business days, during which the Assembly may withdraw the bill by simple majority
+  - Before the review period expires, the Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority
 
 ### §2.8 — Duty of Refusal
 
@@ -925,13 +925,12 @@ The Legislature shall by statute establish a mechanism ensuring that every State
 
 ### §13.2 — Citizen Legislative Initiative
 
-(1) Citizens may propose legislation directly to the Legislature. The petition process proceeds in two phases, each authenticated through the NVS.
+(1) Citizens may propose legislation directly to the Legislature through the two-phase petition process of §13.1, except that each phase lasts up to 10 months and Phase Two requires signatures from 10% of eligible voters nationally. (2) Once the threshold is met, if the Legislature does not enact the proposal within 90 days, it proceeds to a direct citizen referendum; passage requires 60% of votes cast with at…
 
 - **Time limits:**
-  - (2) Phase One, lasting up to 10 months, requires signatures from citizens equal to a percentage of eligible voters — defined by statute at not less than 0
-  - (3) Phase Two, lasting up to 10 months following Phase One's completion, requires signatures from 10% of eligible voters nationally
-  - (4) Once the threshold is met, the Legislature must vote on the proposal within 90 days
-- **Cross-refs:** §1.19.a, §4.5
+  - 1, except that each phase lasts up to 10 months and Phase Two requires signatures from 10% of eligible voters nationally
+  - (2) Once the threshold is met, if the Legislature does not enact the proposal within 90 days, it proceeds to a direct citizen referendum
+- **Cross-refs:** §13.1, §4.5
 
 ---
 
@@ -953,7 +952,7 @@ Military expenditure requires legislative authorization under §14.1 and budget 
 
 ### §14.3 — Military Accountability
 
-Within the period defined by statute following legislative military authorization being renewed for a second time, the Legat Consul submits a Transition and Reconstruction Plan to the Senate specifying the Republic’s post-conflict obligations: status of alliance obligations, civilian reconstruction support, transitional justice support, and withdrawal timeline. The Senate reviews and approves the Plan, and may…
+Within the period defined by statute following the second renewal of a legislative military authorization, the Legat Consul submits a Transition and Reconstruction Plan to the Senate specifying the Republic’s post-conflict obligations: status of alliance obligations, civilian reconstruction support, transitional justice support, and withdrawal timeline. The Senate reviews and approves the Plan, and may amend it…
 
 - **Cross-refs:** §14.2
 
@@ -963,7 +962,8 @@ Where an existing treaty requires military action, the Legat Consul may act imme
 
 - **Time limits:**
   - Where an existing treaty requires military action, the Legat Consul may act immediately and must notify both chambers and the Civic Consul within 12 hours, citing the specific treaty obligation triggered
-- **Cross-refs:** §14.1, §14.2, §14.3, §3.6
+  - Treaty-based authorization for an operation continues for up to 12 months from the moment of action
+- **Cross-refs:** §14.1, §14.2, §14.3, §2.2, §3.6
 
 ### §14.5 — State Forces
 
@@ -979,7 +979,7 @@ A State may maintain organized forces for disaster response, civil emergency, an
 
 A Territory operates under a Territorial Compact: the restructuring agreement under §15.4 or the incorporation agreement under §15.6 where the Territory results from one of those processes, or otherwise a standard statutory framework the Legislature defines. Every Compact must provide for an elected local governing authority over matters of local concern.
 
-- **Cross-refs:** §12.1, §15.2, §15.4, §15.6
+- **Cross-refs:** §15.4, §15.6
 
 ### §15.1.a — Provisional Status
 
@@ -1002,7 +1002,7 @@ Provisional status is a remedial constitutional status applicable only to an exi
   - Entry into Provisional status requires an absolute majority of the full seated Senate
 - **Time limits:**
   - until such statute is enacted, the period is 90 days
-  - (5) The Senate must vote within the period defined by statute, not to exceed 90 days from certification, on whether to place the State in Provisional status under §15
+  - (4) The Senate must vote within the period defined by statute, not to exceed 90 days from certification, on whether to place the State in Provisional status under §15
 - **Cross-refs:** §15.1.a, §15.2, §15.4
 
 ### §15.4 — Voluntary Devolution and Merger
@@ -1041,7 +1041,7 @@ A sovereign entity may petition to join the Republic's constitutional framework 
   - the Legislature ratifies the agreement by 2/3 of both chambers
 - **Time limits:**
   - Upon confirmation, the entity and the Legislature negotiate an incorporation agreement specifying a transition period not exceeding 48 months
-- **Cross-refs:** §1.19.a, §16.2, §9.1
+- **Cross-refs:** §1.19.a, §16.2
 
 ### §15.7 — State Immutability and Territorial Integrity
 
@@ -1066,10 +1066,11 @@ Local governments — cities, counties, municipalities, and other subdivisions �
 
 - **Thresholds:**
   - (2) Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters
+  - if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
+  - independence is approved by 2/3 of votes cast with at least 55% citizen participation
 - **Time limits:**
   - (5) Stage Two requires both chambers to hold a concurrent ratification vote within 90 days of NRS publication
-  - if either chamber fails to achieve 60% or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
-- **Cross-refs:** §7.3
+  - if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
 
 ### §15.10 — State Government Incapacity
 
@@ -1085,7 +1086,7 @@ Where a State's constitutional government has become incapable of exercising gov
 
 Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted — the Republic's constitutional framework does not create it and may not extinguish it.
 
-- **Cross-refs:** §16.4, §19.7
+- **Cross-refs:** §16.4
 
 ### §16.2 — Founding Status Election
 
@@ -1094,8 +1095,8 @@ Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty
 - **Thresholds:**
   - 6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers
 - **Time limits:**
-  - the SC must rule within 7 days and the extension and interim protective-order provisions of §4
-- **Cross-refs:** §15.1, §15.2, §15.6, §16.3, §19.2, §20.3, §4.5, §5.1
+  - the SC must rule within 7 days
+- **Cross-refs:** §15.1, §15.2, §15.6, §16.3, §19.2, §20.3, §4.5
 
 ### §16.3 — Treaty Supremacy and Continuity
 
@@ -1110,7 +1111,7 @@ A people asserting sovereignty preceding the Republic may submit a claim of prio
 - **Time limits:**
   - Where a petition for recognition is submitted, the Legat Consul determines it within the period defined by statute, not to exceed 180 days, with written grounds whether recognition is granted or declined
   - A declined petition may be resubmitted after 5 years or upon a material change in the available record
-- **Cross-refs:** §15.7, §16.1, §16.3, §18.4
+- **Cross-refs:** §16.1, §16.3, §18.4
 
 ### §16.5 — Transition of Existing Arrangements
 
@@ -1118,7 +1119,7 @@ Existing arrangements between a recognized nation and the predecessor government
 
 - **Time limits:**
   - For a nation holding Associated Community status, the Republic must open compact negotiations under Article XX within 90 days of the status taking effect and negotiate in good faith
-- **Cross-refs:** §16.2, §16.3, §5.1
+- **Cross-refs:** §16.2, §16.3
 
 ---
 
@@ -1126,22 +1127,22 @@ Existing arrangements between a recognized nation and the predecessor government
 
 ### §17.1 — Amendment Paths
 
-(1) This Constitution may be amended through the parliamentary path or through citizen initiative. No executive signature is required; no executive veto applies.
+(1) This Constitution may be amended through the parliamentary path or through citizen initiative. Every member's vote on any amendment is published to the NRS.
 
 - **Thresholds:**
   - (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers
 - **Time limits:**
   - the Elections Panel administers the referendum within 180 days of Phase Two threshold verification
-- **Cross-refs:** §10.1, §11.1, §13.2, §17.3, §9.1, §9.2, §9.4, §9.6
+- **Cross-refs:** §10.1, §11.1, §13.2, §9.1, §9.2, §9.4, §9.6
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
-Neither the Legat Consul nor the Civic Consul has any role in the constitutional amendment process. No signature required.
+Neither Consul has any role in the constitutional amendment process, and no signature or veto applies. An amendment takes effect upon certification of its ratification — by the LM for State Ratification, otherwise by the Elections Panel — and NRS publication, with no implementation delay or executive discretion over timing.
 
 
 ### §17.3 — Amendment Consistency and Supremacy
 
-(1) An amendment that is logically inconsistent with an existing provision must either explicitly repeal the inconsistent provision or the inconsistency is treated as void. (2) The JM publishes a consistency analysis of any proposed amendment within 30 days of passage by both chambers for a parliamentary amendment, or within 30 days of Elections Panel Phase Two threshold verification for a citizen initiative…
+(1) An amendment inconsistent with an existing provision is void to the extent of the inconsistency unless it expressly repeals or amends that provision. (2) The JM publishes a consistency analysis of any proposed amendment within 30 days of passage by both chambers for a parliamentary amendment, or within 30 days of Elections Panel Phase Two threshold verification for a citizen initiative amendment — advisory only.
 
 - **Cross-refs:** §1.19.a, §4.5
 
@@ -1253,7 +1254,7 @@ Where a ratifying polity’s predecessor government has documented constitutiona
 
 - **Thresholds:**
   - Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism
-  - no amendment may expand the scope without the same 2/3 majority
+  - no amending statute may expand the scope without the same 2/3 majority
 
 ### §19.9 — Required Institutions and Temporary Continuity
 
@@ -1283,7 +1284,7 @@ An Associated Community is a sovereign political community that remains outside 
 
 ### §20.2 — Compact Terms and Equal Sovereignty
 
-Equal parties; neither constitutionally superior. Observing delegates attend Assembly and Senate proceedings relevant to the compact — speaking rights, no vote, no quorum or threshold effect.
+The Republic and an Associated Community are equal parties to the compact; neither is constitutionally superior. Observing delegates attend Assembly and Senate proceedings relevant to the compact — speaking rights, no vote, no quorum or threshold effect.
 
 
 ### §20.3 — Compact Conditions and Compliance
@@ -1306,11 +1307,9 @@ The compact must specify with particularity the reciprocal obligations of both p
 
 ### §20.6 — Compact Ratification
 
-A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3.6. Both executives must transmit the proposed compact to the Senate simultaneously with a joint assessment of its consistency with this Article.
+A compact with an Associated Community requires Senate ratification under §3.6. Both executives must transmit the proposed compact to the Senate simultaneously with a joint assessment of its consistency with this Article.
 
-- **Thresholds:**
-  - A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3
-- **Cross-refs:** §3.6, §9.1
+- **Cross-refs:** §3.6
 
 ### §20.7 — Compact Continuity
 
@@ -1329,10 +1328,10 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §2.3.a | Legat Consul Legislative Veto | The Senate may override by 2/3 at any time during that session |
 | §2.6 | Constructive Vote of No Confidence | (1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly |
 | §2.6.a | Government Formation | (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy |
-| §2.6.a | Government Formation | The notice suspends the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority |
+| §2.6.a | Government Formation | The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority |
 | §2.6.a | Government Formation | (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback |
 | §2.7 | Civic Consul Legislative Instruments | The bill is suspended for one month, during which the Senate may override by 2/3 |
-| §2.7 | Civic Consul Legislative Instruments | Before the review period expires, the Assembly Speaker may suspend it for up to 10 business days, during which the Assembly may withdraw the bill by simple majority |
+| §2.7 | Civic Consul Legislative Instruments | Before the review period expires, the Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority |
 | §2.13 | Consular Removal | Legislative removal requires 2/3 of both chambers in concurrent vote for constitutional breach, demonstrated permanent incapacity, or serious misconduct |
 | §2.15 | Federal Prosecution | The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers |
 | §2.16 | Executive Incapacity | (3) By simple majority of each chamber, the Legislature may extend that heightened-restoration period, but not beyond six months from the renewed determination |
@@ -1355,11 +1354,12 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §15.6 | Voluntary Incorporation | The process requires a petition resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving simple majority on at least 50% participation |
 | §15.6 | Voluntary Incorporation | the Legislature ratifies the agreement by 2/3 of both chambers |
 | §15.9 | Voluntary State Independence | (2) Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters |
+| §15.9 | Voluntary State Independence | if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction |
+| §15.9 | Voluntary State Independence | independence is approved by 2/3 of votes cast with at least 55% citizen participation |
 | §16.2 | Founding Status Election | 6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers |
 | §17.1 | Amendment Paths | (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers |
 | §18.4 | The National Trust | National Trust designation requires a 2/3 vote of both chambers with host State consent |
 | §18.4 | The National Trust | International conservation agreements require a 2/3 Senate vote to withdraw before the national removal process begins |
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
-| §19.8 | Transitional Accountability Mechanism | no amendment may expand the scope without the same 2/3 majority |
-| §20.6 | Compact Ratification | A compact with an Associated Community requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3 |
+| §19.8 | Transitional Accountability Mechanism | no amending statute may expand the scope without the same 2/3 majority |
 

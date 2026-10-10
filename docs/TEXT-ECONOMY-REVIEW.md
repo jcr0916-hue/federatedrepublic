@@ -335,3 +335,111 @@ Note: Article IX completed its own checkpoint 10.09 (PR #103). This pass doesn't
 **Site and test updates in the same batch:** glossary (Reconsideration Notice, Public Confirmation, runoff, SC removal, acting succession, §10.1 anchor), quicksheets (judiciary, fiscal, NVS, recall-removal, elections), diagrams, navigator topic answer, scenario-the-three-recusals, scenario-the-twenty-four-hours (citations), torenthia-nrs-012 and -045 (citations), three test assertions tied to replaced text, changelog entry 261010.
 
 **Left for John (editorial policy — update or remove at discretion):** scenarios and world records describing superseded rules: fiscal notice (scenario-the-objection, scenario-the-vote, _data/scenarioBridges.json); Assembly-consent Senate bypass (scenario-first-nomination, scenario-the-holdout, torenthia-news-069, torenthia-state-varek); Citizen Voting Credential (torenthia-nrs-016/020/024/027, scenario-the-severed-clause); "warrant requirement" (scenario-the-order); "foreign intelligence" (torenthia-nrs-004); Monitor early restoration (scenario-the-twenty-four-hours).
+
+---
+
+## Article XIII — Direct Democracy (547 words) — IN REVIEW
+
+### Simple fixes (approved under the 10.10 process)
+
+- **§13.2 petition phases** duplicate §13.1's structure word for word except durations and the Phase Two threshold. Becomes "(1) Citizens may propose legislation directly to the Legislature through the two-phase petition process of §13.1, except that each phase lasts up to 10 months and Phase Two requires signatures from 10% of eligible voters nationally." (Same pattern §17.1(3) already uses.)
+- **The three-year re-initiation bar and the "functionally prohibitive" clause** are stated in both §13.1(7) and §13.2(6). State once in §13.1(7) for "a petition, referendum, or initiative under this Article"; delete §13.2(6).
+- §13.1(5): delete "the LM's ongoing audit of legislative compliance encompasses published findings on the character of enacted laws, which the Elections Panel and any party may reference" (Monitor findings are admissible under §4.5(3)).
+
+## Article XIV — Military Authorization and Accountability (847 words) — IN REVIEW
+
+### Simple fixes (approved under the 10.10 process)
+
+- §14.2: delete "The published Monitor findings and reports remain unclassified under Article X; underlying operational records remain subject to Article X classification standards" (§9.5 and Article X already govern both).
+- §14.3: "following legislative military authorization being renewed for a second time" becomes "following the second renewal of a legislative military authorization."
+
+### Decisions (XIII–XIV)
+1. **§13.2(4) veto gap — APPROVED (John, 10.10):** "(4) Once the threshold is met, if the Legislature does not enact the proposal within 90 days, it proceeds to a direct citizen referendum; passage requires 60% of votes cast with at least 50% citizen participation."
+2. **§13.2(5) initiative review — APPROVED (John, 10.10):** "(5) An initiative enacted under this section is subject to this Constitution as any statute is, and may not narrow a right under Article I or appropriate funds or alter revenue; an initiative that does so is void to the extent of the conflict. Disputes are resolved by the SC under §4.5 on petition of any person with standing." Closes the back door around Article XVII's amendment thresholds.
+3. **§14.4 treaty operations — APPROVED (John, 10.10):** add "Treaty-based authorization for an operation continues for up to 12 months from the moment of action; continuation thereafter requires renewal under §2.2, and §14.3 applies on the same terms as any other authorized operation."
+
+**Articles XIII–XIV — APPROVED 2026-10-10.**
+
+---
+
+## Article XV — Territorial Structure and Statehood (3,142 words) — IN REVIEW
+
+### Simple fixes (approved under the 10.10 process)
+
+- §15.1: delete "A Territory has federal protections under Article I, accesses social state systems under §12.1, and may begin the Statehood pathway under §15.2" (Article I and §12.1 apply by their own terms; §15.2 states the pathway) and "Territories hold Assembly seats proportional to their population and participate as full voting members. Territories do not hold Senate seats; Senate representation is reserved for States" (§3.2(1) and §3.5(1)).
+- §15.1.a: delete "Further transition support, fiscal coordination, and administrative assistance during Provisional status are defined by statute."
+- **Judicial review of Statehood Audit findings** stated in both §15.2(7) and §15.3(10): keep the general rule in §15.2(7) ("Judicial review of any Statehood Audit finding is available for legality, process, jurisdiction, and application of the stated criteria; a court may not substitute its policy judgment for a Monitor's domain assessment"). §15.3(10) keeps only its own additions: the certification and entry into Provisional status are reviewable on the same grounds, and the Senate's political judgment under (5) is not.
+- §15.3(3): delete the advisory-cooperation subsection (a "shall" with no content and, by its own terms, no authority).
+- §15.3(4): delete "The certification does not itself alter the State's constitutional status" ((7) states when status changes).
+- §15.3(6): delete "A passing audit ends the consecutive-failure sequence" (restates (2)).
+- §15.3(7): delete "The State remains a State as provided in §15.1.a."
+- §15.4: delete "Social-state protections and Article I rights continue through the transition."
+- §15.5.a(2): the JMC's missed-deadline individual-vote procedure is a fallback for a fallback (10.10 rule). Becomes "Where the JMC does not publish its assessment within that period, including any extension, the remaining portion is treated as not satisfying those conditions." (Same default outcome as the current all-abstain case.)
+- §15.5.a(4): delete "This Constitution does not prescribe the Convention's terms."
+- §15.6: delete the "Under §9.1," pointer.
+- §15.7: the three "constitutes the consent mechanism" sentences become one: "A founding status election under §16.2 during the Transition Window, or a completed process under §15.9 including its national referendum, satisfies the consent required by this section without further amendment or Popular Ratification. Recognition under §16.4 effects no territorial change; post-founding indigenous territorial transitions proceed under Article XVII."
+- §15.10: delete "Procedures are established by statute."
+
+**Pass:** §15.10's outcome-limiting design (the 19.09 worked example); §15.8, §15.8.a.
+
+### Decisions
+1. **§15.9 independence thresholds — APPROVED raise (John, 10.10):** Stage Two: "2/3 of the remaining seated members of each chamber" (recusal of the State's members unchanged). Stage Three: "2/3 of votes cast with at least 55% citizen participation" (the Popular Ratification standard). Stage One unchanged. Independence now clears every national bar an amendment would, plus the State's own vote.
+
+**Article XV — APPROVED 2026-10-10.**
+
+---
+
+## Article XVI — Indigenous Sovereignty (1,065 words) — APPROVED 2026-10-10 (simple fixes only)
+
+- §16.1: delete "The founding register is compiled and published under §19.7" (pointer).
+- §16.2(6): delete "and the extension and interim protective-order provisions of §4.5 apply" (§4.5(8) applies to every SC deadline by its own terms).
+- §16.2(7): delete "consistent with §5.1."
+- §16.4: delete "The investigation is information-only: the JMC's findings bind no constitutional actor and compel no governmental act" (§9.1 already makes all Monitor findings non-binding); "or pursue any legal remedy available under Article I" (always true); and "Recognition under this section confers no territorial rights and effects no change to the Republic's territorial extent; any such change proceeds only under Article XVII, consistent with §15.7" (stated in §16.1 and §15.7).
+- §16.5: delete "Citizenship arrangements follow §5.1 throughout."
+
+## Article XVII — Constitutional Amendments (661 words) — IN REVIEW
+
+### Simple fixes (approved under the 10.10 process)
+
+- **No executive role** is stated in §17.1(1) and twice more in §17.2. One statement in §17.2: "Neither Consul has any role in the constitutional amendment process, and no signature or veto applies." Delete the duplicate from §17.1(1).
+- §17.1(3): delete "Citizen initiative amendments are subject to §17.3 consistency analysis by the JM, advisory only" (§17.3(2)).
+- §17.2 effect sentence becomes "An amendment takes effect upon certification of its ratification — by the LM for State Ratification, otherwise by the Elections Panel — and NRS publication, with no implementation delay or executive discretion over timing."
+- §17.3(2): delete ", but a permanent public record of what the amendment changes."
+- §17.3(4): "from the date of ratification" becomes "from the date they take effect" (aligns with §17.2's effect rule).
+
+### Decisions
+1. **§17.3(1)/(5) conflict rules — APPROVED (John, 10.10):** "(1) An amendment inconsistent with an existing provision is void to the extent of the inconsistency unless it expressly repeals or amends that provision." and "(5) Two amendments may be in the ratification process at the same time. Where both are ratified and conflict, subsection (1) applies to the later one, and where they are ratified simultaneously, the LM determines precedence from NRS records."
+- Simple fix added: §17.3(3) compressed (states the jurisdiction phrase once): "(3) The SC resolves disputes over a ratified amendment's consistency under §4.5 on petition of any person with standing. It may not refuse to apply an amendment that has met its procedural thresholds, except that an amendment extinguishing a right designated non-derogable under §1.19.a is void to the extent of the extinguishment."
+
+**Article XVII — APPROVED 2026-10-10.**
+
+---
+
+## Article XVIII — Federal Property and National Trust (620 words) — APPROVED 2026-10-10 (simple fixes only)
+
+- §18.2: delete "Residents of the federal footprint retain full Article I rights" (Article I applies to every person).
+- §18.4: delete "The Legislature shall provide by statute for the National Trust's internal organization, staffing, administration, and operational procedures"; keep the "No statute may reduce…" safeguard.
+
+## Article XIX — Transition and Ratification (2,438 words) — APPROVED 2026-10-10 (simple fixes only)
+
+Transition provisions are necessarily detailed and were recently reworked (§19.3.a, §19.9); this pass is light.
+- §19.2: delete "The Republic exists the moment the Elections Panel certifies the threshold" (restates the Day Zero definition).
+- §19.5(4): "the Legislature must pass a Veterans and National Service Benefits Act within the first budget cycle following Phase 4" becomes "the Legislature must provide for their administration by statute within the first budget cycle following Phase 4" (unnamed-statute rule).
+- §19.8: "no amendment may expand the scope" becomes "no amending statute may expand the scope" (avoids confusion with constitutional amendment).
+
+## Article XX — Associated Communities (750 words) — APPROVED 2026-10-10 (simple fixes only)
+
+- §20.2: "Equal parties; neither constitutionally superior." is a fragment. Becomes "The Republic and an Associated Community are equal parties to the compact; neither is constitutionally superior."
+- §20.6: "requires Senate ratification by 2/3 of full seated membership, consistent with the treaty ratification threshold under §3.6" becomes "requires Senate ratification under §3.6" (§3.6 already sets 2/3 for compacts); delete "Under §9.1, either chamber may request a JM assessment of compact compliance before proceeding to ratification" (§9.1 lets any chamber request any assessment).
+
+---
+
+## Implementation record — Articles XIII–XX applied 2026-10-10
+
+**Result:** 25,828 → 25,189 words. Whole review: 28,615 → 25,189 (−3,426, −12.0%). 180 provisions. `npm run world:publish-check` passes.
+
+**Renumbering:** §13.2 (now (1)–(3)); §15.3 (now (1)–(9)). §15.5.a numbering is unchanged, so the live Korda Convention references to §15.5.a(1) and (4) remain valid.
+
+**Site updates in this batch:** scenario-the-severed-clause (its analysis rested on the old initiative near-immunity; now explains initiatives as ordinary statutes and contrasts them with amendments; citations updated) and scenario-the-second-path (citations). §2.7 "pause the review period" wording fix plus the glossary entry. Changelog entry 261010 (XIII–XX).
+
+**Added to John's list:** scenario-the-third-strike and _data/scenarioBridges.json describe the deleted §15.3 advisory-cooperation subsection.
