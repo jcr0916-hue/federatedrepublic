@@ -23,7 +23,7 @@ test('active guardrails catch a new positive canon-resolution assertion but igno
   assert.equal(guardrailFindings({data:{worldKind:'news',worldSeq:144,worldArcs:['lake-varda']},content},[kordaGuardrail]).length,0);
 });
 
-test('draft validator checks next sequence, constitutional references, clocks, and unresolved canon',()=>{
+test('draft validator checks next sequence, constitutional references, clocks, and pending post-Convention approvals',()=>{
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'world-draft-validation-'));
   try{
     fs.mkdirSync(path.join(dir,'_data'),{recursive:true});
@@ -34,7 +34,7 @@ test('draft validator checks next sequence, constitutional references, clocks, a
 
     fs.writeFileSync(path.join(dir,'torenthia-news-001.html'),`---
 worldKind: news
-worldSeq: 143
+worldSeq: 154
 worldDate: "13.12"
 worldTitle: "Existing"
 worldOutlet: "The Torenthian"
@@ -51,7 +51,7 @@ worldRelated: []
     const draftPath=path.join(dir,'torenthia-news-002.html');
     fs.writeFileSync(draftPath,`---
 worldKind: news
-worldSeq: 144
+worldSeq: 155
 worldDate: "13.12"
 worldTitle: "Draft"
 worldOutlet: "The Torenthian"
@@ -62,7 +62,7 @@ worldJurisdictions: ["Korda"]
 worldProvisions: ["§15.5.a"]
 worldRelated: []
 ---
-<p>Delegates discussed the Convention under §15.5.a, but no final resolution was introduced.</p>
+<p>Delegates discussed affected-voter ratification under §15.5.a, but no referendum had yet been certified.</p>
 `);
 
     let result=validateWorldDraftFile('torenthia-news-002.html',{root:dir});
@@ -70,15 +70,15 @@ worldRelated: []
     assert.equal(result.bodyRefs.includes('§15.5.a'),true);
 
     fs.writeFileSync(draftPath,fs.readFileSync(draftPath,'utf8').replace(
-      'Delegates discussed the Convention under §15.5.a, but no final resolution was introduced.',
-      'The Convention adopted a final resolution under §15.5.a.'
+      'Delegates discussed affected-voter ratification under §15.5.a, but no referendum had yet been certified.',
+      'Korda was admitted as a State under §15.5.a.'
     ));
     result=validateWorldDraftFile('torenthia-news-002.html',{root:dir});
-    assert.ok(result.errors.some(x=>/korda-unresolved-outcome/i.test(x)));
+    assert.ok(result.errors.some(x=>/korda-post-convention-approvals-pending/i.test(x)));
 
-    fs.writeFileSync(draftPath,fs.readFileSync(draftPath,'utf8').replace('worldSeq: 144','worldSeq: 145'));
+    fs.writeFileSync(draftPath,fs.readFileSync(draftPath,'utf8').replace('worldSeq: 155','worldSeq: 156'));
     result=validateWorldDraftFile('torenthia-news-002.html',{root:dir});
-    assert.ok(result.errors.some(x=>/expected 144, found 145/i));
+    assert.ok(result.errors.some(x=>/expected 155, found 156/i));
   }finally{
     fs.rmSync(dir,{recursive:true,force:true});
   }
