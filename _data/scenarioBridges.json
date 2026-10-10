@@ -181,7 +181,7 @@
     ]
   },
   "scenario-the-third-strike": {
-    "summary": "Three consecutive overall audit failures require Senate review. Provisional status begins only on affirmative Senate authorization; the State keeps its government and rights, advisory cooperation supports remediation, and devolution still requires a separate popular process.",
+    "summary": "Three consecutive overall audit failures require Senate review. Provisional status begins only on affirmative Senate authorization; the State keeps its government and rights, and devolution still requires a separate popular process.",
     "provisions": [
       {
         "ref": "§15.1.a",
@@ -370,7 +370,7 @@
     ]
   },
   "scenario-first-nomination": {
-    "summary": "A timely Senate rejection leaves the judicial nomination process running with temporary service preserving the Court’s work. Rejection does not trigger the bypass reserved for a missed voting deadline.",
+    "summary": "A timely Senate rejection leaves the judicial nomination process running with temporary service preserving the Court’s work. Rejection does not trigger the public-confirmation route reserved for a missed deadline.",
     "provisions": [
       {
         "ref": "§4.4",
@@ -378,7 +378,7 @@
       },
       {
         "ref": "§4.4.a",
-        "label": "Senate Bypass — Public Confirmation"
+        "label": "Public Confirmation"
       }
     ],
     "links": [
@@ -783,7 +783,7 @@
     ]
   },
   "scenario-the-holdout": {
-    "summary": "Senate inaction can open a public-confirmation route that a timely rejection would not. Senate confirmation of a Judicial Pool nominee before the public vote is certified ends that bypass.",
+    "summary": "Senate inaction can open a public-confirmation route that a timely rejection would not. An ordinary nomination and Senate confirmation completed before the ballot is certified ends that route.",
     "provisions": [
       {
         "ref": "§4.4",
@@ -791,7 +791,7 @@
       },
       {
         "ref": "§4.4.a",
-        "label": "Senate Bypass — Public Confirmation"
+        "label": "Public Confirmation"
       }
     ],
     "links": [

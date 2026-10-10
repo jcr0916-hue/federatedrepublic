@@ -11,21 +11,21 @@
     "citation": ["§2.1", "§2.5", "§2.14"],
     "autoMatch": true,
     "popup": "Two separately selected executives with enumerated, non-overlapping domains — neither one is head of government alone.",
-    "detail": "The Legat Consul (§2.1) holds military command, foreign affairs, and intelligence. The Civic Consul (§2.5) holds residual authority over everything else. They are selected differently, removed differently, and neither can act in the other's domain. The Council of Ministers (§2.14) is where their domains coordinate — it recommends and aligns positions, but exercises no executive authority of its own."
+    "detail": "The Legat Consul (§2.1) holds military command, foreign affairs, and external intelligence. The Civic Consul (§2.5) holds residual authority over everything else. They are selected differently, removed differently, and neither can act in the other's domain. The Council of Ministers (§2.14) is where their domains coordinate — it recommends and aligns positions, but exercises no executive authority of its own."
   },
   "classification-ceiling": {
     "label": "Classification Ceiling",
     "citation": ["§10.2"],
     "autoMatch": true,
     "popup": "25 years maximum, extendable once by five — and never past 30 under any circumstances.",
-    "detail": "On expiry the NRS Panel publishes the record automatically, with no government act required. The single 5-year extension requires the responsible executive to publish a justification, which the EM assesses and reports on — though that finding binds no one. Two petition routes run alongside: any person with standing may seek release in redacted form at any time, and may seek full declassification during an extension period, where the EM's finding is admissible."
+    "detail": "On expiry the NRS Panel publishes the record automatically, with no government act required. The single 5-year extension requires the responsible executive to publish a justification, which the EM assesses and reports on — though that finding binds no one. Any person with standing may petition at any time for release: the court orders release of every portion whose disclosure would not itself satisfy the statutory ground for classification, and publishes the redactions and the ground for each."
   },
   "officer-removal": {
     "label": "Constitutional Officer Removal",
     "citation": ["§9.9"],
     "autoMatch": true,
-    "popup": "Two separate tracks: Monitor Generals are removed by national referendum, other independent officers within §9.9’s scope by legislative supermajority after SC review.",
-    "detail": "For Monitor Generals, removal is initiated by the branch that Monitor does not audit, suspends authority immediately without touching pay or term, and can only be completed by a national referendum at 60% with 55% participation. For other independent officers within §9.9’s scope, the SC first confirms the stated grounds fit a statutory category — reviewing category only, never the facts — and removal then requires a 2/3 concurrent legislative vote."
+    "popup": "Two separate tracks: Monitor Generals are removed by national referendum, other independent officers within §9.9’s scope by a two-thirds vote of both chambers.",
+    "detail": "For Monitor Generals, removal is initiated by the branch that Monitor does not audit — for the Executive Monitor, the Legislature by concurrent resolution — and completed only by a national referendum at 60% of votes cast with 55% participation. Filing does not suspend the Monitor General, and a failed referendum bars the same grounds for the rest of the term. For other independent officers within §9.9’s scope, one-third of either chamber or two Monitor Generals may initiate, and removal requires a concurrent two-thirds vote of each chamber on statutory grounds."
   },
   "electoral-mandate-inviolability": {
     "label": "Inviolability of Electoral Mandates",

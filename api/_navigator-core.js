@@ -21,7 +21,7 @@ const SYNONYMS = {
   'remove consul':['§2.13','no-confidence','consular removal','recall'],
   'assembly-initiated':['removal','charges','articles of removal','senate trial','§7.5'],
   'articles of removal':['assembly','senate','removal','charges'],
-  'veto':['fiscal objection','written direction'],
+  'veto':['reconsideration notice','written direction'],
   'law':['statute','legislation','assembly','legislative'],
   'parliament':['assembly','senate','legislature','chamber'],
   'congress':['assembly','senate','legislature','chamber'],
