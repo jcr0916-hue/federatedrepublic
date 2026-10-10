@@ -245,10 +245,10 @@ The Legat Consul may appoint domain officers to exercise defined portions of the
 
 ### §2.6.a — Government Formation
 
-(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy; absent such statute, the constitutional default is 21 days. (2) If the Assembly does not elect a Civic Consul within that period, the sitting Assembly Speaker becomes Acting Civic Consul by constitutional operation with authority limited to maintaining existing policy.
+(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following a vacancy; absent such statute, the constitutional default is 21 days. (2) If the Assembly does not elect a Civic Consul within that period, the sitting Assembly Speaker becomes Acting Civic Consul by constitutional operation with authority limited to maintaining existing policy.
 
 - **Thresholds:**
-  - (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy
+  - (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following a vacancy
   - The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority
   - (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback
 - **Time limits:**
@@ -439,15 +439,13 @@ The Legislature may by statute delegate defined authority within federal legisla
 
 The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute, but abolition may not terminate or shorten a sitting judge's term.
 
-- **Thresholds:**
-  - A judge whose court is abolished may be reassigned to another inferior court by the Civic Consul with 2/3 Senate confirmation
+- **Cross-refs:** §4.2
 
 ### §4.2 — Judicial Appointments and Independence
 
 (1) The Civic Consul nominates inferior court judges from the Judicial Pool maintained by the Elections Panel under §9.8. The Civic Consul must nominate within 90 days of a vacancy or any shorter period defined by statute.
 
 - **Thresholds:**
-  - The Senate confirms by 2/3
   - (3) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight
 - **Time limits:**
   - The Civic Consul must nominate within 90 days of a vacancy or any shorter period defined by statute
@@ -1068,10 +1066,10 @@ Local governments — cities, counties, municipalities, and other subdivisions �
 - **Thresholds:**
   - (2) Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters
   - if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
-  - independence is approved by 2/3 of votes cast with at least 55% citizen participation
 - **Time limits:**
   - (5) Stage Two requires both chambers to hold a concurrent ratification vote within 90 days of NRS publication
   - if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
+- **Cross-refs:** §7.3
 
 ### §15.10 — State Government Incapacity
 
@@ -1328,7 +1326,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §1.19 | Emergency Derogation | thereafter, re-declaration requires 2/3 of both chambers |
 | §2.3.a | Legat Consul Legislative Veto | The Senate may override by 2/3 at any time during that session |
 | §2.6 | Constructive Vote of No Confidence | (1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly |
-| §2.6.a | Government Formation | (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following any general election or vacancy |
+| §2.6.a | Government Formation | (1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following a vacancy |
 | §2.6.a | Government Formation | The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority |
 | §2.6.a | Government Formation | (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback |
 | §2.7 | Civic Consul Legislative Instruments | The bill is suspended for one month, during which the Senate may override by 2/3 |
@@ -1340,8 +1338,6 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §3.6 | Treaty and Trade Agreement Ratification | Treaties and compact agreements require ratification by 2/3 of the full seated Senate |
 | §3.6 | Treaty and Trade Agreement Ratification | Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days |
 | §3.7 | Legislative Process and Passage | Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise |
-| §4.1 | Court Structure | A judge whose court is abolished may be reassigned to another inferior court by the Civic Consul with 2/3 Senate confirmation |
-| §4.2 | Judicial Appointments and Independence | The Senate confirms by 2/3 |
 | §4.2 | Judicial Appointments and Independence | (3) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight |
 | §4.3 | The Supreme Court | Altering the number of seats requires 2/3 of both chambers |
 | §4.3.a | Supreme Court Justice Removal | Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS |
@@ -1356,7 +1352,6 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §15.6 | Voluntary Incorporation | the Legislature ratifies the agreement by 2/3 of both chambers |
 | §15.9 | Voluntary State Independence | (2) Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters |
 | §15.9 | Voluntary State Independence | if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction |
-| §15.9 | Voluntary State Independence | independence is approved by 2/3 of votes cast with at least 55% citizen participation |
 | §16.2 | Founding Status Election | 6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers |
 | §17.1 | Amendment Paths | (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers |
 | §18.4 | The National Trust | National Trust designation requires a 2/3 vote of both chambers with host State consent |
