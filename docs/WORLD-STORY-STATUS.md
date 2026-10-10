@@ -4,9 +4,11 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 13, Month 12 · worldSeq through **154** · nrsSeq through **86**.
+**Current published frontier:** Year 13, Month 12 · worldSeq through **154** · nrsSeq through **88**.
 
 The Korda decision batch adds news 106–108 and NRS 085–086. A complete Northern Lake Settlement is introduced, amended after Orin's demands for service continuity and credible Statehood treatment, and adopted by the thirty-three-delegate Convention 28–5. Only three northern certified-corridor districts are proposed for merger with Kelvant; the southern shore remains with Korda. This completes the Convention's required proposal, but no affected-voter referendum, Kelvant approval, LM–JM assessment, Senate ratification or Statehood Audit result has occurred. The publication stays in fictional Year 13, Month 12, without assigning a new day.
+
+The October 10 succession-and-housing batch adds NRS 087–088. The Elections Panel publishes the Executive Monitor candidate pool (seven eligible members; minimum of five met) and records that the §9.3 joint nomination is open; the Assembly Speaker is Marit Hosk and the Senate Speaker is Lucan Brandt. The Assembly records introduction of the Northern Arrival Housing Capacity Act as ordinary (not emergency) legislation and refers it to the Territories and Fiscal Affairs Committee. Neither record names Argent Ridge or the Norvane refusal; connecting them is news work. The latest fictional month remains Year 13, Month 12.
 
 The October 10 Korda runway adds news 103–105 and NRS 083–084. Mire and Rell, speaking as Convention delegates rather than as committee co-chairs, file a joint non-binding drafting memorandum exploring a northern-corridor adjustment that would preserve southern Korda lake access. Orin files her own conditional requirements concerning retained services, an executable boundary, and the Statehood Audit path. Public debate has shifted from whether facts exist to what a lawful settlement must address. No final boundary, Convention resolution, referendum, merger or Statehood determination has been adopted; the Convention clock is unchanged. The internal October 12 editorial target remains flexible.
 
@@ -114,6 +116,8 @@ Good next beats:
 - a later change in Norvane's capacity problem or political position
 - eventually the distinction between "repealed" and "protected"
 
+Housing bill (published, NRS 088 / NRS-Y13-0757): the Northern Arrival Housing Capacity Act is introduced in the Assembly as ordinary legislation and referred to the Territories and Fiscal Affairs Committee. Its three parts are capital grants for permanent housing, operating support for reception capacity, and siting standards for temporary housing financed under the Act. The bill text is not a separate World record, so do not quote its clauses until one is drafted; the siting standards are the hook for the planned §2.7 reconsideration notice. The record does not mention Argent Ridge. Norvane's refusal cited replacement housing capacity (NRS-Y13-0664), and the bill addresses that stated reason; keep it from reading as a bargain struck to win consent.
+
 Do not collapse repeal and Trust protection into one mechanism.
 
 ### Elin Thoss / Civic Consul — LIVE
@@ -141,6 +145,17 @@ Open:
   - Optional, more publicly visible: **National Trust stewardship (§18.4)** — maintenance, access and lawful co-management within the civic domain, with appropriations and designation safeguards preserved. **National Endowment funding (§12.2(9))** is a separate plank: she may advocate and propose funding, but the Legislature makes the required surplus-year appropriation. The independent Monetary Authority manages the Endowment and certifies contraction/disbursement under §§12.1.a and 12.4; she cannot promise control of its investments or allocations.
   - Common thread across all four: competence and de-personalization of power — reinforces "the people choose my bosses, not me" rather than sitting next to it as an unrelated policy list.
 - **Political tension to retain:** process integrity is a defensible record, not an answer to every delivery complaint. Published support is a reported working count of 266, down from the official 274 installation vote; no successor motion is established. Allies waiting for services can press her without becoming villains or proving the constitutional process failed. Civil-service and regulatory planks should distinguish steps within existing authority from statutory reforms and appropriations she must win in the Legislature; independent agencies remain independent. Keep official administration separate from campaign activity.
+
+### Executive Monitor succession — LIVE, dry-record thread
+
+Reya Solt's ten-year non-renewable term is the incumbent term; she holds the office until it concludes (§9.1.d). The Elections Panel's roster (`torenthia-nrs-087.html` / NRS-Y13-0754) lists seven eligible pool members: Pell Ardane, Teodor Lind, Edda Marsh, Maud Ostrander, Odile Perrin, Joren Tavish and Ilse Warrend. The pool minimum of five (§9.8(4)) is met. The Assembly Speaker is Marit Hosk and the Senate Speaker is Lucan Brandt. No nominee exists and no preference has been published.
+
+Working assumptions for later beats (planning, not canon): Hosk leans to Warrend, Brandt to Tavish, Marsh is the compromise name, and the JM disclosure audit later surfaces a lawful, corrected late disclosure for one candidate. See `docs/WORLD-STORYLINES-Y14.md`, section C.
+
+Open before the next EM record:
+- **Fallback clock.** §9.3 starts the 60-day period at a "vacancy." For a scheduled succession the published record opens the window without a close date. Decide when the 60 days run (term expiry, or a statutory nomination date) before dating the Senate fallback.
+- **Term-end date.** No published piece gives the date Solt's term concludes. Establish it together with the confirmation trigger named in the bundled-ballot guardrail above.
+- **Speaker titles.** News 103, 104, 107 and 108 call Elin Thoss "Assembly Speaker" / "Speaker" in the present tense. She is Civic Consul (NRS-Y13-0341). Resolve before publishing the Speakers' names further.
 
 ### Fiscal Equalization (§12.6) — LIVE, ACTIVE REVIEW
 
