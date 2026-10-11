@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 180 provisions**
+> **20 articles · 182 provisions**
 
 ---
 
@@ -15,7 +15,7 @@
 
 - **Preamble**
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.22  (24 provisions)
-- **Article II — The Dual Executive**  ·  §2.1–§2.18  (23 provisions)
+- **Article II — The Dual Executive**  ·  §2.1–§2.18  (24 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.11  (12 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (9 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (4 provisions)
@@ -28,7 +28,7 @@
 - **Article XII — Social State and Economic Rights**  ·  §12.1–§12.6  (8 provisions)
 - **Article XIII — Direct Democracy**  ·  §13.1–§13.2  (2 provisions)
 - **Article XIV — Military Authorization and Accountability**  ·  §14.1–§14.5  (5 provisions)
-- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.10  (13 provisions)
+- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.10  (14 provisions)
 - **Article XVI — Indigenous Sovereignty**  ·  §16.1–§16.5  (5 provisions)
 - **Article XVII — Constitutional Amendments**  ·  §17.1–§17.4  (4 provisions)
 - **Article XVIII — Federal Property and National Trust**  ·  §18.1–§18.5  (5 provisions)
@@ -153,7 +153,7 @@ No emergency suspends the Individual Sovereignty Floor in full. Rights other tha
 - **Time limits:**
   - Either executive may issue such a declaration within their constitutional domain for no more than 14 days
   - Continuation beyond 14 days requires a statute enacted through the ordinary legislative process with a fixed expiration date, which may not be extended or renewed
-  - Each emergency declaration shall receive independent judicial review within 48 hours of publication
+  - Each declaration under this section shall receive independent judicial review within 48 hours of publication by the court designated by statute
   - A substantially similar derogation may not be declared within 60 days after expiry
 - **Cross-refs:** §1.19.a
 
@@ -262,6 +262,7 @@ The Civic Consul may, within 10 business days of final passage, return a bill wi
 - **Thresholds:**
   - The bill is suspended for one month, during which the Senate may override by 2/3
   - Before the review period expires, the Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority
+  - A bill is emergency legislation only when so designated at final passage by 2/3 of the full seated membership of both chambers
 
 ### §2.8 — Duty of Refusal
 
@@ -274,6 +275,12 @@ No civil servant, military member, or person exercising specific federal authori
 
 - **Cross-refs:** §2.1
 
+### §2.9.a — State Emergency Council
+
+(1) At each federal electoral period the Elections Panel draws an ordered list of the States by public lot and publishes it to the NRS. A State's head of state is the officer its constitution designates or, absent a designation, the presiding officer of its legislature.
+
+- **Cross-refs:** §15.7.a, §2.11, §2.6.a, §2.9
+
 ### §2.10 — Executive Transparency
 
 Both executives shall publish their official acts to the NRS within the period defined by statute. This obligation includes orders, certifications, vetoes, determinations, objections, refusals, and other acts of non-consent.
@@ -281,10 +288,11 @@ Both executives shall publish their official acts to the NRS within the period d
 
 ### §2.11 — Emergency Governance
 
-Where the Assembly cannot achieve quorum for the period defined by statute, or for 30 consecutive days absent such statute, the Senate may exercise emergency legislative authority only for election administration, continuity of social-state funding, and active national-security obligations. Senate action under this section requires the co-signature of the Acting Civic Consul and publication to the NRS, and ends…
+When extraordinary circumstances prevent the ordinary functioning of constitutional government, either Consul, or a majority of the available members of either legislative chamber, may declare a continuity emergency, notwithstanding ordinary quorum requirements. The declaration states the circumstances, is published to the NRS, and is sent to every State and Territory.
 
 - **Time limits:**
-  - This expedited authority expires after 14 days unless renewed on a fresh certification and may not continue beyond 30 consecutive days except under the ordinary trigger above
+  - A declaration lapses after 30 days unless renewed by the same process
+- **Cross-refs:** §1.19, §2.16, §2.9, §2.9.a, §4.5, §7.2.a
 
 ### §2.12 — Clemency
 
@@ -385,7 +393,7 @@ Every bill must address a single clearly defined subject. Any member or either c
 
 (1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. (2) No senator may serve more than two consecutive terms without sitting out one full term; upon return, a senator may serve up to one additional term, after which no further Senate service is permitted.
 
-- **Cross-refs:** §15.3, §2.11, §3.6
+- **Cross-refs:** §15.3, §3.6
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
@@ -408,6 +416,7 @@ Legislation requires an absolute majority of the full seated membership of both 
 
 - **Thresholds:**
   - Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise
+  - Where this Constitution requires a simple majority of a chamber, it means a majority of members voting, a quorum being present
 
 ### §3.8 — Legislative Oversight
 
@@ -1044,9 +1053,15 @@ A sovereign entity may petition to join the Republic's constitutional framework 
 
 ### §15.7 — State Immutability and Territorial Integrity
 
-A State's constitutional boundaries are fixed. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood.
+A State's constitutional boundaries are fixed except as expressly provided under §15.4. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood.
 
-- **Cross-refs:** §15.9, §16.2, §16.4
+- **Cross-refs:** §15.4, §15.9, §16.2, §16.4
+
+### §15.7.a — Reversion to the States and Territories
+
+If §2.9.a(6) applies, the States and Territories are sovereign governments and may act as such, including by reconstituting the Republic. This is not secession under §15.7.
+
+- **Cross-refs:** §1.19.a, §15.7, §2.9.a
 
 ### §15.8 — Local Government
 
@@ -1132,7 +1147,7 @@ Existing arrangements between a recognized nation and the predecessor government
   - (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers
 - **Time limits:**
   - the Elections Panel administers the referendum within 180 days of Phase Two threshold verification
-- **Cross-refs:** §10.1, §11.1, §13.2, §9.1, §9.2, §9.4, §9.6
+- **Cross-refs:** §1.19.a, §10.1, §11.1, §13.2, §15.7.a, §17.3, §9.1, §9.2, §9.4, §9.6
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
@@ -1331,6 +1346,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §2.6.a | Government Formation | (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback |
 | §2.7 | Civic Consul Legislative Instruments | The bill is suspended for one month, during which the Senate may override by 2/3 |
 | §2.7 | Civic Consul Legislative Instruments | Before the review period expires, the Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority |
+| §2.7 | Civic Consul Legislative Instruments | A bill is emergency legislation only when so designated at final passage by 2/3 of the full seated membership of both chambers |
 | §2.13 | Consular Removal | Legislative removal requires 2/3 of both chambers in concurrent vote for constitutional breach, demonstrated permanent incapacity, or serious misconduct |
 | §2.15 | Federal Prosecution | The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers |
 | §2.16 | Executive Incapacity | (3) By simple majority of each chamber, the Legislature may extend that heightened-restoration period, but not beyond six months from the renewed determination |
@@ -1338,6 +1354,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §3.6 | Treaty and Trade Agreement Ratification | Treaties and compact agreements require ratification by 2/3 of the full seated Senate |
 | §3.6 | Treaty and Trade Agreement Ratification | Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days |
 | §3.7 | Legislative Process and Passage | Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise |
+| §3.7 | Legislative Process and Passage | Where this Constitution requires a simple majority of a chamber, it means a majority of members voting, a quorum being present |
 | §4.2 | Judicial Appointments and Independence | (3) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight |
 | §4.3 | The Supreme Court | Altering the number of seats requires 2/3 of both chambers |
 | §4.3.a | Supreme Court Justice Removal | Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS |

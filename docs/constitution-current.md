@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 180 provisions**
+> **20 articles · 182 provisions**
 
 thefederatedrepublic.org
 
@@ -113,7 +113,7 @@ Government may not itself cause, or systematically permit through licensing, mat
 
 No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, geographic scope, and duration, published immediately to the NRS. Either executive may issue such a declaration within their constitutional domain for no more than 14 days. Continuation beyond 14 days requires a statute enacted through the ordinary legislative process with a fixed expiration date, which may not be extended or renewed.
 
-All emergency measures lapse automatically with the declaration under which they were imposed. Judicial review remains available throughout the emergency. Each emergency declaration shall receive independent judicial review within 48 hours of publication. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
+All emergency measures lapse automatically with the declaration under which they were imposed. Judicial review remains available throughout the emergency. Each declaration under this section shall receive independent judicial review within 48 hours of publication by the court designated by statute. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
 
 The three Monitors retain their full constitutional authority throughout any emergency.
 
@@ -193,7 +193,7 @@ The Legat Consul may appoint domain officers to exercise defined portions of the
 
 (3) Bills passed during acting service are presented to the Acting Civic Consul, who may not exercise the §2.7 veto but may issue a reconsideration notice under §2.7. The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority.
 
-(4) The Acting Civic Consul administers a nominating ballot of the Assembly to identify candidates for a national election. The ballot requires no quorum and produces its result regardless of participation. The candidates receiving the most votes advance, being no fewer than two and no more than four; where a tie would cause more than four candidates to advance, greater continuous service controls.
+(4) The Acting Civic Consul administers a nominating ballot of the Assembly to identify candidates for a national election. The ballot requires no quorum and produces its result regardless of participation. The candidates receiving the most votes advance, being no fewer than two and no more than four; where a tie would cause more than four candidates to advance, greater continuous service controls, then age.
 
 (5) The Elections Panel administers a national ranked-choice election among the advancing candidates within the period defined by statute, with a constitutional default of 45 days and an absolute maximum of 90 days from the close of the nominating ballot.
 
@@ -207,7 +207,7 @@ The Civic Consul may, within 10 business days of final passage, return a bill wi
 
 Within the review period, the Civic Consul may issue a reconsideration notice identifying provisions recommended for revision or deletion, with reasons. Before the review period expires, the Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority. If the bill is not withdrawn, the review period resumes where it paused. A reconsideration notice may be issued once on any bill and is unavailable for emergency legislation.
 
-Both Consuls review concurrently from final passage. A bill that neither Consul vetoes within its review period becomes law by constitutional operation. The veto is unavailable for the annual budget, legislation implementing a constitutional obligation, or emergency legislation.
+Both Consuls review concurrently from final passage. A bill that neither Consul vetoes within its review period becomes law by constitutional operation. The veto is unavailable for the annual budget, legislation implementing a constitutional obligation, or emergency legislation. A bill is emergency legislation only when so designated at final passage by 2/3 of the full seated membership of both chambers.
 
 ### §2.8 — Duty of Refusal
 
@@ -225,17 +225,33 @@ No civil servant, military member, or person exercising specific federal authori
 
 (5) A successor serves the remainder of the current term. Service through full succession counts toward the 12-year service limit under §2.1.
 
+### §2.9.a — State Emergency Council
+
+(1) At each federal electoral period the Elections Panel draws an ordered list of the States by public lot and publishes it to the NRS. A State's head of state is the officer its constitution designates or, absent a designation, the presiding officer of its legislature.
+
+(2) If no one in the Legat Consul's order of succession can be reached, the head of state of the first reachable State on the list is the Emergency Designee. The Designee commands the military and acts to restore constitutional government.
+
+(3) The heads of state of the other reachable States form the State Emergency Council, which directs the Designee and may replace them. The Designee and the Council are bound by Article I.
+
+(4) Ten days after a declaration under §2.11 or the Designee taking office, whichever comes first, any federal seat or Consular office whose holder cannot be reached is vacant. The States and Territories may fill their vacant seats by emergency election, and the Consular offices are filled under §2.9 and §2.6.a.
+
+(5) A person above the Designee in the order of succession who can act resumes their office at once. The Council and the Designee end when each chamber has a majority of its seats filled and the Consular offices are filled under §2.9 and §2.6.a. Members seated after the failure join the order of succession only then.
+
+(6) If that has not happened within six months after the Designee took office, the Council and the Designee end and §15.7.a applies.
+
 ### §2.10 — Executive Transparency
 
 Both executives shall publish their official acts to the NRS within the period defined by statute. This obligation includes orders, certifications, vetoes, determinations, objections, refusals, and other acts of non-consent. No executive may classify, delay, or suppress publication of an act this Constitution requires to be public. Every such record is permanently attributed to the responsible officer.
 
 ### §2.11 — Emergency Governance
 
-Where the Assembly cannot achieve quorum for the period defined by statute, or for 30 consecutive days absent such statute, the Senate may exercise emergency legislative authority only for election administration, continuity of social-state funding, and active national-security obligations. Senate action under this section requires the co-signature of the Acting Civic Consul and publication to the NRS, and ends automatically when a new Assembly is seated.
+When extraordinary circumstances prevent the ordinary functioning of constitutional government, either Consul, or a majority of the available members of either legislative chamber, may declare a continuity emergency, notwithstanding ordinary quorum requirements. The declaration states the circumstances, is published to the NRS, and is sent to every State and Territory.
 
-If the Elections Panel is unable to function, the EM and LM may jointly certify that incapacity, upon which the Senate administers federal elections until the Panel is restored.
+During a continuity emergency, each chamber able to meet may act notwithstanding ordinary quorum requirements, and where one chamber cannot meet the other may act alone, but only as necessary to preserve essential governmental functions, including the administration of elections, and to restore normal constitutional governance. During a continuity emergency, a threshold this Constitution calculates from the full seated membership of a chamber is calculated from the members able to act. Emergency action may not amend this Constitution, extend any term or mandate except under §7.2.a, or derogate rights except under §1.19. Measures adopted under this section lapse when the emergency ends unless enacted through the ordinary legislative process. Where a Consul is unavailable, authority passes under §2.9, §2.16 and §2.9.a.
 
-Where the Legislature cannot convene and immediate action is necessary to prevent material interruption of one of the authorized functions, the authority may activate earlier upon joint certification by the Acting Civic Consul and the Chief Justice, or the most senior available Associate Justice. The certification must state the circumstances, necessity, and functions activated. This expedited authority expires after 14 days unless renewed on a fresh certification and may not continue beyond 30 consecutive days except under the ordinary trigger above.
+A declaration lapses after 30 days unless renewed by the same process. Any member of either chamber or any Monitor may seek expedited SC review under §4.5(7).
+
+Emergency procedures yield to ordinary constitutional procedures as soon as those procedures can function. No emergency authority may be used to delay or obstruct that restoration.
 
 ### §2.12 — Clemency
 
@@ -347,9 +363,7 @@ The Legislature shall maintain an ethics process capable of sanctioning and refe
 
 — treaty ratification under §3.6;
 
-— State-remediation determinations under §15.3;
-
-— and, in the absence of a functioning Elections Panel, administration of federal elections under §2.11.
+— and State-remediation determinations under §15.3.
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
@@ -363,7 +377,7 @@ If the Senate disputes the Legat Consul's classification of an international ins
 
 ### §3.7 — Legislative Process and Passage
 
-Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher constitutional thresholds apply to the full seated membership of the chamber or chambers specified.
+Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher constitutional thresholds apply to the full seated membership of the chamber or chambers specified. Where this Constitution requires a simple majority of a chamber, it means a majority of members voting, a quorum being present.
 
 If the Legislature fails for one year to enact legislation expressly required by this Constitution, the LM shall publish a finding of non-compliance and the obligation becomes justiciable in the SC. Where the failure directly impairs an Article I right, an affected person may seek direct constitutional relief.
 
@@ -391,7 +405,7 @@ The Legislature may by statute delegate defined authority within federal legisla
 
 ### §4.1 — Court Structure
 
-The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute, but abolition may not terminate or shorten a sitting judge's term. A judge whose court is abolished completes their term. The judge fills the next vacancy at the same or a lower court level without further confirmation; where more than one such vacancy is open, the Civic Consul chooses which. Until then the judge retains office and compensation and may serve temporarily under §4.2(5). States may maintain specialized courts. Constitutional questions arising in any proceeding may be referred to the SC.
+The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute, but abolition may not terminate or shorten a sitting judge's term. A judge whose court is abolished completes their term. The judge fills the next vacancy at the same or a lower court level without further confirmation; where more than one such vacancy is open, the Civic Consul chooses which. Where more than one judge whose court was abolished qualifies for a vacancy, the judge with the longest continuous judicial service fills it; ties are resolved by age. Until then the judge retains office and compensation and may serve temporarily under §4.2(5). States may maintain specialized courts. Constitutional questions arising in any proceeding may be referred to the SC.
 
 ### §4.2 — Judicial Appointments and Independence
 
@@ -615,7 +629,7 @@ Constitutional officers and persons acting within the authority of a constitutio
 
 ### §7.8 — Separation of Branch Authority
 
-No person may simultaneously hold office in more than one branch of government, except when temporarily exercising acting authority under this Constitution. During such acting service, the person retains their original office or mandate but may not exercise any authority of that office. That authority resumes upon the conclusion of acting service.
+No person may simultaneously hold office in more than one branch of government, except when temporarily exercising acting authority under this Constitution. During such acting service, the person retains their original office or mandate but may not exercise any authority of that office. That authority resumes upon the conclusion of acting service. The body that selects the officer may designate an interim holder of the office's functions for the duration of acting service.
 
 ### §7.9 — Inviolability of Electoral Mandates
 
@@ -1067,7 +1081,11 @@ A sovereign entity may petition to join the Republic's constitutional framework 
 
 ### §15.7 — State Immutability and Territorial Integrity
 
-A State's constitutional boundaries are fixed. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood. The Republic's territorial extent may only be reduced by the consent of the affected population through a parliamentary amendment with Popular Ratification, or through a citizen initiative amendment — parliamentary amendment with State Ratification alone is insufficient. A State may not secede by ordinary statute or State referendum alone. No executive action may alter the Republic's territorial extent. A founding status election under §16.2 during the Transition Window, or a completed process under §15.9 including its national referendum, satisfies the consent required by this section without further amendment or Popular Ratification. Recognition under §16.4 effects no territorial change; post-founding indigenous territorial transitions proceed under Article XVII.
+A State's constitutional boundaries are fixed except as expressly provided under §15.4. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood. The Republic's territorial extent may only be reduced by the consent of the affected population through a parliamentary amendment with Popular Ratification, or through a citizen initiative amendment — parliamentary amendment with State Ratification alone is insufficient. A State may not secede by ordinary statute or State referendum alone. No executive action may alter the Republic's territorial extent. A founding status election under §16.2 during the Transition Window, or a completed process under §15.9 including its national referendum, satisfies the consent required by this section without further amendment or Popular Ratification. Recognition under §16.4 effects no territorial change; post-founding indigenous territorial transitions proceed under Article XVII.
+
+### §15.7.a — Reversion to the States and Territories
+
+If §2.9.a(6) applies, the States and Territories are sovereign governments and may act as such, including by reconstituting the Republic. This is not secession under §15.7. The rights in §1.19.a continue to bind every government.
 
 ### §15.8 — Local Government
 
@@ -1153,11 +1171,11 @@ Existing arrangements between a recognized nation and the predecessor government
 
 (1) This Constitution may be amended through the parliamentary path or through citizen initiative. Every member's vote on any amendment is published to the NRS.
 
-(2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers. The proposing body simultaneously specifies the ratification mechanism — either State Ratification (ratification by 2/3 of States within the period defined by statute) or Popular Ratification (a national popular referendum achieving 2/3 affirmative support with at least 55% citizen participation within 180 days).
+(2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers. The proposing body simultaneously specifies the ratification mechanism — either State Ratification (ratification by 2/3 of States within the period defined by statute) or Popular Ratification (a national popular referendum achieving 2/3 of votes cast with at least 55% citizen participation within 180 days).
 
 (3) Citizen Initiative Amendment: A proposed constitutional amendment proceeds through the same two-phase petition process as §13.2, with Phase Two requiring signatures from 15% of eligible voters nationally rather than §13.2's 10%. Once the Phase Two threshold is met, the proposal proceeds directly to a national referendum, with no legislative or executive action required to place it on the ballot; the Elections Panel administers the referendum within 180 days of Phase Two threshold verification. Passage requires 70% of votes cast with a minimum 65% citizen participation; where the participation floor is not met the initiative fails and may not be resubmitted on the same or substantially similar grounds for five years.
 
-(4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), and the Elections Panel and NRS Panel independence (§11.1). These provisions may not be amended by State Ratification alone; a Citizen Initiative Amendment satisfies this requirement through its own referendum under this section without separately clearing the Popular Ratification threshold.
+(4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), the Elections Panel and NRS Panel independence (§11.1), the designation of non-derogable rights (§1.19.a) and the limit on amendments extinguishing them (§17.3(3)), the reversion of authority to the States and Territories (§15.7.a), and this subsection. These provisions may not be amended by State Ratification alone; a Citizen Initiative Amendment satisfies this requirement through its own referendum under this section without separately clearing the Popular Ratification threshold.
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
