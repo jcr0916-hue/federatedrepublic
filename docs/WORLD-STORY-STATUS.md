@@ -155,7 +155,7 @@ Working assumptions for later beats (planning, not canon): Hosk leans to Warrend
 Open before the next EM record:
 - **Fallback clock.** §9.3 starts the 60-day period at a "vacancy." For a scheduled succession the published record opens the window without a close date. Decide when the 60 days run (term expiry, or a statutory nomination date) before dating the Senate fallback.
 - **Term-end date.** No published piece gives the date Solt's term concludes. Establish it together with the confirmation trigger named in the bundled-ballot guardrail above.
-- **Speaker titles.** News 103, 104, 107 and 108 call Elin Thoss "Assembly Speaker" / "Speaker" in the present tense. She is Civic Consul (NRS-Y13-0341). Resolve before publishing the Speakers' names further.
+- **Thoss's office.** Elin Thoss took office as Civic Consul in Year 13, Month 9 (first Council of Ministers session with her ministers: NRS-Y13-0341). News 103, 104, 107 and 108 now call her Civic Consul, not "Assembly Speaker." Marit Hosk is the Assembly Speaker.
 
 ### Fiscal Equalization (§12.6) — LIVE, ACTIVE REVIEW
 
