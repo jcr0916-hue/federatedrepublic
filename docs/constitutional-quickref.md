@@ -281,10 +281,8 @@ Both executives shall publish their official acts to the NRS within the period d
 
 ### §2.11 — Emergency Governance
 
-Where the Assembly cannot achieve quorum for the period defined by statute, or for 30 consecutive days absent such statute, the Senate may exercise emergency legislative authority only for election administration, continuity of social-state funding, and active national-security obligations. Senate action under this section requires the co-signature of the Acting Civic Consul and publication to the NRS, and ends…
+When extraordinary circumstances prevent the ordinary functioning of constitutional government, a majority of the available members of either legislative chamber may declare a continuity emergency, notwithstanding ordinary quorum requirements. Emergency authority shall be exercised only as necessary to address the emergency, preserve essential governmental functions, and restore normal constitutional governance.
 
-- **Time limits:**
-  - This expedited authority expires after 14 days unless renewed on a fresh certification and may not continue beyond 30 consecutive days except under the ordinary trigger above
 
 ### §2.12 — Clemency
 
@@ -1044,9 +1042,9 @@ A sovereign entity may petition to join the Republic's constitutional framework 
 
 ### §15.7 — State Immutability and Territorial Integrity
 
-A State's constitutional boundaries are fixed. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood.
+A State's constitutional boundaries are fixed except as expressly provided under §15.4. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood.
 
-- **Cross-refs:** §15.9, §16.2, §16.4
+- **Cross-refs:** §15.4, §15.9, §16.2, §16.4
 
 ### §15.8 — Local Government
 

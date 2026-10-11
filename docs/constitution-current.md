@@ -231,11 +231,11 @@ Both executives shall publish their official acts to the NRS within the period d
 
 ### §2.11 — Emergency Governance
 
-Where the Assembly cannot achieve quorum for the period defined by statute, or for 30 consecutive days absent such statute, the Senate may exercise emergency legislative authority only for election administration, continuity of social-state funding, and active national-security obligations. Senate action under this section requires the co-signature of the Acting Civic Consul and publication to the NRS, and ends automatically when a new Assembly is seated.
+When extraordinary circumstances prevent the ordinary functioning of constitutional government, a majority of the available members of either legislative chamber may declare a continuity emergency, notwithstanding ordinary quorum requirements.
 
-If the Elections Panel is unable to function, the EM and LM may jointly certify that incapacity, upon which the Senate administers federal elections until the Panel is restored.
+Emergency authority shall be exercised only as necessary to address the emergency, preserve essential governmental functions, and restore normal constitutional governance. Where a Consul is unavailable, acting authority passes according to the constitutional order of succession.
 
-Where the Legislature cannot convene and immediate action is necessary to prevent material interruption of one of the authorized functions, the authority may activate earlier upon joint certification by the Acting Civic Consul and the Chief Justice, or the most senior available Associate Justice. The certification must state the circumstances, necessity, and functions activated. This expedited authority expires after 14 days unless renewed on a fresh certification and may not continue beyond 30 consecutive days except under the ordinary trigger above.
+Emergency procedures yield to ordinary constitutional procedures as soon as those procedures can function. No emergency authority may be used to delay or obstruct that restoration.
 
 ### §2.12 — Clemency
 
@@ -1067,7 +1067,7 @@ A sovereign entity may petition to join the Republic's constitutional framework 
 
 ### §15.7 — State Immutability and Territorial Integrity
 
-A State's constitutional boundaries are fixed. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood. The Republic's territorial extent may only be reduced by the consent of the affected population through a parliamentary amendment with Popular Ratification, or through a citizen initiative amendment — parliamentary amendment with State Ratification alone is insufficient. A State may not secede by ordinary statute or State referendum alone. No executive action may alter the Republic's territorial extent. A founding status election under §16.2 during the Transition Window, or a completed process under §15.9 including its national referendum, satisfies the consent required by this section without further amendment or Popular Ratification. Recognition under §16.4 effects no territorial change; post-founding indigenous territorial transitions proceed under Article XVII.
+A State's constitutional boundaries are fixed except as expressly provided under §15.4. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood. The Republic's territorial extent may only be reduced by the consent of the affected population through a parliamentary amendment with Popular Ratification, or through a citizen initiative amendment — parliamentary amendment with State Ratification alone is insufficient. A State may not secede by ordinary statute or State referendum alone. No executive action may alter the Republic's territorial extent. A founding status election under §16.2 during the Transition Window, or a completed process under §15.9 including its national referendum, satisfies the consent required by this section without further amendment or Popular Ratification. Recognition under §16.4 effects no territorial change; post-founding indigenous territorial transitions proceed under Article XVII.
 
 ### §15.8 — Local Government
 
