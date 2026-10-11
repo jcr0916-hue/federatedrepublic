@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 180 provisions**
+> **20 articles · 182 provisions**
 
 ---
 
@@ -15,7 +15,7 @@
 
 - **Preamble**
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.22  (24 provisions)
-- **Article II — The Dual Executive**  ·  §2.1–§2.18  (23 provisions)
+- **Article II — The Dual Executive**  ·  §2.1–§2.18  (24 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.11  (12 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (9 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (4 provisions)
@@ -28,7 +28,7 @@
 - **Article XII — Social State and Economic Rights**  ·  §12.1–§12.6  (8 provisions)
 - **Article XIII — Direct Democracy**  ·  §13.1–§13.2  (2 provisions)
 - **Article XIV — Military Authorization and Accountability**  ·  §14.1–§14.5  (5 provisions)
-- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.10  (13 provisions)
+- **Article XV — Territorial Structure and Statehood**  ·  §15.1–§15.10  (14 provisions)
 - **Article XVI — Indigenous Sovereignty**  ·  §16.1–§16.5  (5 provisions)
 - **Article XVII — Constitutional Amendments**  ·  §17.1–§17.4  (4 provisions)
 - **Article XVIII — Federal Property and National Trust**  ·  §18.1–§18.5  (5 provisions)
@@ -275,6 +275,12 @@ No civil servant, military member, or person exercising specific federal authori
 
 - **Cross-refs:** §2.1
 
+### §2.9.a — State Emergency Council
+
+(1) At each federal electoral period the Elections Panel draws an ordered list of the States by public lot and publishes it to the NRS. A State's head of state is the officer its constitution designates or, absent a designation, the presiding officer of its legislature.
+
+- **Cross-refs:** §15.7.a, §2.11, §2.6.a, §2.9
+
 ### §2.10 — Executive Transparency
 
 Both executives shall publish their official acts to the NRS within the period defined by statute. This obligation includes orders, certifications, vetoes, determinations, objections, refusals, and other acts of non-consent.
@@ -282,11 +288,11 @@ Both executives shall publish their official acts to the NRS within the period d
 
 ### §2.11 — Emergency Governance
 
-When extraordinary circumstances prevent the ordinary functioning of constitutional government, a majority of the available members of either legislative chamber may declare a continuity emergency, notwithstanding ordinary quorum requirements. The declaration states the circumstances and is published to the NRS.
+When extraordinary circumstances prevent the ordinary functioning of constitutional government, either Consul, or a majority of the available members of either legislative chamber, may declare a continuity emergency, notwithstanding ordinary quorum requirements. The declaration states the circumstances, is published to the NRS, and is sent to every State and Territory.
 
 - **Time limits:**
   - A declaration lapses after 30 days unless renewed by the same process
-- **Cross-refs:** §1.19, §2.16, §2.9, §4.5, §7.2.a
+- **Cross-refs:** §1.19, §2.16, §2.9, §2.9.a, §4.5, §7.2.a
 
 ### §2.12 — Clemency
 
@@ -1051,6 +1057,12 @@ A State's constitutional boundaries are fixed except as expressly provided under
 
 - **Cross-refs:** §15.4, §15.9, §16.2, §16.4
 
+### §15.7.a — Reversion to the States and Territories
+
+If §2.9.a(6) applies, the States and Territories are sovereign governments and may act as such, including by reconstituting the Republic. This is not secession under §15.7.
+
+- **Cross-refs:** §1.19.a, §15.7, §2.9.a
+
 ### §15.8 — Local Government
 
 Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as primary points of contact between citizens and government. They are entitled to reasonable fiscal, legal, and administrative capacity to carry out the lawful functions assigned to them.
@@ -1135,7 +1147,7 @@ Existing arrangements between a recognized nation and the predecessor government
   - (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers
 - **Time limits:**
   - the Elections Panel administers the referendum within 180 days of Phase Two threshold verification
-- **Cross-refs:** §1.19.a, §10.1, §11.1, §13.2, §17.3, §9.1, §9.2, §9.4, §9.6
+- **Cross-refs:** §1.19.a, §10.1, §11.1, §13.2, §15.7.a, §17.3, §9.1, §9.2, §9.4, §9.6
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 

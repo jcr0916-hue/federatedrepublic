@@ -210,6 +210,14 @@ text that is never exercised. Applications from the 10.10 review:
 - **Former §10.1(8) — NRS restoration.** A requirement that the Legislature establish permanent
   restoration obligations by statute within 90 days of the parallel-system threshold was deleted. The JM's
   parallel authentication system (now §10.1(7)) is the fallback for NRS failure; it does not get one too.
+- **§2.9.a and §15.7.a — the last fallback names an end (11.10).** When Legat succession is exhausted, the
+  State Emergency Council and an Emergency Designee drawn by lot from the States are the backup. They
+  are kept short on purpose: a command role, a directing body, a ten-day vacancy clock, an automatic
+  return of authority, and a defined end. Officials in the room expand what is needed. Their own failure
+  state is the end state: after six months the States and Territories are sovereign and may reconstitute
+  the Republic. That stops the recursion at a state rather than another mechanism, and it needs nothing
+  behind it, since it is what remains when everything else is gone. The Council is also the only emergency
+  body with a check on its commander: it directs the Designee and may replace them.
 
 What the limit does not touch: a primary mechanism still needs its failure state. §4.4.a's public
 confirmation route (Senate fails to vote → public confirmation) and §2.6.a's formation cascade remain
