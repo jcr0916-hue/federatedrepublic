@@ -12,6 +12,13 @@ const CATEGORY_IMAGE = {
 
 const updates = [
   {
+    category: "world",
+    badge: "The World",
+    title: "A Roof Is Not a Border Policy",
+    blurb: "The Assembly has received a housing and reception bill for Lake Varda arrivals. It is in committee; a bill is not yet a building, and no grant has been made.",
+    href: "torenthia-news-109.html",
+  },
+  {
     category: "constitution",
     badge: "Amendment",
     title: "§2.16(9) — When the Acting Executive Cannot Act",
