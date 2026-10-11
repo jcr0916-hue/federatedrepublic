@@ -113,7 +113,7 @@ Government may not itself cause, or systematically permit through licensing, mat
 
 No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, geographic scope, and duration, published immediately to the NRS. Either executive may issue such a declaration within their constitutional domain for no more than 14 days. Continuation beyond 14 days requires a statute enacted through the ordinary legislative process with a fixed expiration date, which may not be extended or renewed.
 
-All emergency measures lapse automatically with the declaration under which they were imposed. Judicial review remains available throughout the emergency. Each emergency declaration shall receive independent judicial review within 48 hours of publication. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
+All emergency measures lapse automatically with the declaration under which they were imposed. Judicial review remains available throughout the emergency. Each declaration under this section shall receive independent judicial review within 48 hours of publication by the court designated by statute. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
 
 The three Monitors retain their full constitutional authority throughout any emergency.
 
@@ -193,7 +193,7 @@ The Legat Consul may appoint domain officers to exercise defined portions of the
 
 (3) Bills passed during acting service are presented to the Acting Civic Consul, who may not exercise the §2.7 veto but may issue a reconsideration notice under §2.7. The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority.
 
-(4) The Acting Civic Consul administers a nominating ballot of the Assembly to identify candidates for a national election. The ballot requires no quorum and produces its result regardless of participation. The candidates receiving the most votes advance, being no fewer than two and no more than four; where a tie would cause more than four candidates to advance, greater continuous service controls.
+(4) The Acting Civic Consul administers a nominating ballot of the Assembly to identify candidates for a national election. The ballot requires no quorum and produces its result regardless of participation. The candidates receiving the most votes advance, being no fewer than two and no more than four; where a tie would cause more than four candidates to advance, greater continuous service controls, then age.
 
 (5) The Elections Panel administers a national ranked-choice election among the advancing candidates within the period defined by statute, with a constitutional default of 45 days and an absolute maximum of 90 days from the close of the nominating ballot.
 
@@ -207,7 +207,7 @@ The Civic Consul may, within 10 business days of final passage, return a bill wi
 
 Within the review period, the Civic Consul may issue a reconsideration notice identifying provisions recommended for revision or deletion, with reasons. Before the review period expires, the Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority. If the bill is not withdrawn, the review period resumes where it paused. A reconsideration notice may be issued once on any bill and is unavailable for emergency legislation.
 
-Both Consuls review concurrently from final passage. A bill that neither Consul vetoes within its review period becomes law by constitutional operation. The veto is unavailable for the annual budget, legislation implementing a constitutional obligation, or emergency legislation.
+Both Consuls review concurrently from final passage. A bill that neither Consul vetoes within its review period becomes law by constitutional operation. The veto is unavailable for the annual budget, legislation implementing a constitutional obligation, or emergency legislation. A bill is emergency legislation only when so designated at final passage by 2/3 of the full seated membership of both chambers.
 
 ### §2.8 — Duty of Refusal
 
@@ -231,9 +231,11 @@ Both executives shall publish their official acts to the NRS within the period d
 
 ### §2.11 — Emergency Governance
 
-When extraordinary circumstances prevent the ordinary functioning of constitutional government, a majority of the available members of either legislative chamber may declare a continuity emergency, notwithstanding ordinary quorum requirements.
+When extraordinary circumstances prevent the ordinary functioning of constitutional government, a majority of the available members of either legislative chamber may declare a continuity emergency, notwithstanding ordinary quorum requirements. The declaration states the circumstances and is published to the NRS.
 
-Emergency authority shall be exercised only as necessary to address the emergency, preserve essential governmental functions, and restore normal constitutional governance. Where a Consul is unavailable, acting authority passes according to the constitutional order of succession.
+During a continuity emergency, each chamber able to meet may act notwithstanding ordinary quorum requirements, and where one chamber cannot meet the other may act alone, but only as necessary to preserve essential governmental functions, including the administration of elections, and to restore normal constitutional governance. Emergency action may not amend this Constitution, extend any term or mandate except under §7.2.a, or derogate rights except under §1.19. Measures adopted under this section lapse when the emergency ends unless enacted through the ordinary legislative process. Where a Consul is unavailable, acting authority passes under §2.9 and §2.16.
+
+A declaration lapses after 30 days unless renewed by the same process. Any member of either chamber or any Monitor may seek expedited SC review under §4.5(7).
 
 Emergency procedures yield to ordinary constitutional procedures as soon as those procedures can function. No emergency authority may be used to delay or obstruct that restoration.
 
@@ -347,9 +349,7 @@ The Legislature shall maintain an ethics process capable of sanctioning and refe
 
 — treaty ratification under §3.6;
 
-— State-remediation determinations under §15.3;
-
-— and, in the absence of a functioning Elections Panel, administration of federal elections under §2.11.
+— and State-remediation determinations under §15.3.
 
 ### §3.6 — Treaty and Trade Agreement Ratification
 
@@ -363,7 +363,7 @@ If the Senate disputes the Legat Consul's classification of an international ins
 
 ### §3.7 — Legislative Process and Passage
 
-Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher constitutional thresholds apply to the full seated membership of the chamber or chambers specified.
+Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher constitutional thresholds apply to the full seated membership of the chamber or chambers specified. Where this Constitution requires a simple majority of a chamber, it means a majority of members voting, a quorum being present.
 
 If the Legislature fails for one year to enact legislation expressly required by this Constitution, the LM shall publish a finding of non-compliance and the obligation becomes justiciable in the SC. Where the failure directly impairs an Article I right, an affected person may seek direct constitutional relief.
 
@@ -615,7 +615,7 @@ Constitutional officers and persons acting within the authority of a constitutio
 
 ### §7.8 — Separation of Branch Authority
 
-No person may simultaneously hold office in more than one branch of government, except when temporarily exercising acting authority under this Constitution. During such acting service, the person retains their original office or mandate but may not exercise any authority of that office. That authority resumes upon the conclusion of acting service.
+No person may simultaneously hold office in more than one branch of government, except when temporarily exercising acting authority under this Constitution. During such acting service, the person retains their original office or mandate but may not exercise any authority of that office. That authority resumes upon the conclusion of acting service. The body that selects the officer may designate an interim holder of the office's functions for the duration of acting service.
 
 ### §7.9 — Inviolability of Electoral Mandates
 
@@ -1153,11 +1153,11 @@ Existing arrangements between a recognized nation and the predecessor government
 
 (1) This Constitution may be amended through the parliamentary path or through citizen initiative. Every member's vote on any amendment is published to the NRS.
 
-(2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers. The proposing body simultaneously specifies the ratification mechanism — either State Ratification (ratification by 2/3 of States within the period defined by statute) or Popular Ratification (a national popular referendum achieving 2/3 affirmative support with at least 55% citizen participation within 180 days).
+(2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers. The proposing body simultaneously specifies the ratification mechanism — either State Ratification (ratification by 2/3 of States within the period defined by statute) or Popular Ratification (a national popular referendum achieving 2/3 of votes cast with at least 55% citizen participation within 180 days).
 
 (3) Citizen Initiative Amendment: A proposed constitutional amendment proceeds through the same two-phase petition process as §13.2, with Phase Two requiring signatures from 15% of eligible voters nationally rather than §13.2's 10%. Once the Phase Two threshold is met, the proposal proceeds directly to a national referendum, with no legislative or executive action required to place it on the ballot; the Elections Panel administers the referendum within 180 days of Phase Two threshold verification. Passage requires 70% of votes cast with a minimum 65% citizen participation; where the participation floor is not met the initiative fails and may not be resubmitted on the same or substantially similar grounds for five years.
 
-(4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), and the Elections Panel and NRS Panel independence (§11.1). These provisions may not be amended by State Ratification alone; a Citizen Initiative Amendment satisfies this requirement through its own referendum under this section without separately clearing the Popular Ratification threshold.
+(4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), the Elections Panel and NRS Panel independence (§11.1), the designation of non-derogable rights (§1.19.a) and the limit on amendments extinguishing them (§17.3(3)), and this subsection. These provisions may not be amended by State Ratification alone; a Citizen Initiative Amendment satisfies this requirement through its own referendum under this section without separately clearing the Popular Ratification threshold.
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
