@@ -378,8 +378,10 @@ no operation may be conducted against citizens inside Republic territory on that
 independent judicial authorization (the outer limit). "External" is deliberately left undefined,
 because the Civic Consul holds internal intelligence with law enforcement under residual authority and
 the government draws the operating line as threats evolve. A definition here would be machinery that
-goes stale. §2.11 (Emergency Governance) is logged on the same footing — "deliberately open" (10.09),
-passed unchanged in the 10.10 review.
+goes stale. §2.11 (Emergency Governance) is logged on the same footing — "deliberately open" (10.09).
+The 10.10 rewrite leaves the triggering circumstances and the measures open; it fixes the boundary
+(no amendment, no term extension outside §7.2.a, no derogation outside §1.19, measures lapse with the
+emergency) and the checks (30-day lapse unless renewed, expedited SC review).
 What stays fixed is the power's boundary and who checks it (the Actor Test), not the day-to-day line.
 This is the companion to the fallback limit under the Graceful Degradation Test: both stop the reviewer
 from asking the text to do the officials' job.
