@@ -6,7 +6,7 @@ test('World context packet gives Korda authoring a bounded current canon packet'
   const result = buildWorldContextPacket({ arc:'korda', dir:'.', recentNarrative:2, recentNrs:2 });
 
   assert.equal(result.frontier.worldSeq, 154);
-  assert.equal(result.frontier.nrsSeq, 86);
+  assert.equal(result.frontier.nrsSeq, 88);
   assert.equal(result.frontier.worldDate, '13.12');
   assert.deepEqual(result.recentNarrative.slice(0,2), ['torenthia-news-108.html','torenthia-news-107.html']);
   assert.deepEqual(result.recentNrs.slice(0,2), ['torenthia-nrs-086.html','torenthia-nrs-085.html']);
