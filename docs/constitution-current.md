@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 180 provisions**
+> **20 articles · 182 provisions**
 
 thefederatedrepublic.org
 
@@ -225,15 +225,29 @@ No civil servant, military member, or person exercising specific federal authori
 
 (5) A successor serves the remainder of the current term. Service through full succession counts toward the 12-year service limit under §2.1.
 
+### §2.9.a — State Emergency Council
+
+(1) At each federal electoral period the Elections Panel draws an ordered list of the States by public lot and publishes it to the NRS. A State's head of state is the officer its constitution designates or, absent a designation, the presiding officer of its legislature.
+
+(2) If no one in the Legat Consul's order of succession can be reached, the head of state of the first reachable State on the list is the Emergency Designee. The Designee commands the military and acts to restore constitutional government.
+
+(3) The heads of state of the other reachable States form the State Emergency Council, which directs the Designee and may replace them. The Designee and the Council are bound by Article I.
+
+(4) Ten days after a declaration under §2.11 or the Designee taking office, whichever comes first, any federal seat or Consular office whose holder cannot be reached is vacant. The States and Territories may fill their vacant seats by emergency election, and the Consular offices are filled under §2.9 and §2.6.a.
+
+(5) A person above the Designee in the order of succession who can act resumes their office at once. The Council and the Designee end when each chamber has a majority of its seats filled and the Consular offices are filled under §2.9 and §2.6.a. Members seated after the failure join the order of succession only then.
+
+(6) If that has not happened within six months after the Designee took office, the Council and the Designee end and §15.7.a applies.
+
 ### §2.10 — Executive Transparency
 
 Both executives shall publish their official acts to the NRS within the period defined by statute. This obligation includes orders, certifications, vetoes, determinations, objections, refusals, and other acts of non-consent. No executive may classify, delay, or suppress publication of an act this Constitution requires to be public. Every such record is permanently attributed to the responsible officer.
 
 ### §2.11 — Emergency Governance
 
-When extraordinary circumstances prevent the ordinary functioning of constitutional government, a majority of the available members of either legislative chamber may declare a continuity emergency, notwithstanding ordinary quorum requirements. The declaration states the circumstances and is published to the NRS.
+When extraordinary circumstances prevent the ordinary functioning of constitutional government, either Consul, or a majority of the available members of either legislative chamber, may declare a continuity emergency, notwithstanding ordinary quorum requirements. The declaration states the circumstances, is published to the NRS, and is sent to every State and Territory.
 
-During a continuity emergency, each chamber able to meet may act notwithstanding ordinary quorum requirements, and where one chamber cannot meet the other may act alone, but only as necessary to preserve essential governmental functions, including the administration of elections, and to restore normal constitutional governance. Emergency action may not amend this Constitution, extend any term or mandate except under §7.2.a, or derogate rights except under §1.19. Measures adopted under this section lapse when the emergency ends unless enacted through the ordinary legislative process. Where a Consul is unavailable, acting authority passes under §2.9 and §2.16.
+During a continuity emergency, each chamber able to meet may act notwithstanding ordinary quorum requirements, and where one chamber cannot meet the other may act alone, but only as necessary to preserve essential governmental functions, including the administration of elections, and to restore normal constitutional governance. During a continuity emergency, a threshold this Constitution calculates from the full seated membership of a chamber is calculated from the members able to act. Emergency action may not amend this Constitution, extend any term or mandate except under §7.2.a, or derogate rights except under §1.19. Measures adopted under this section lapse when the emergency ends unless enacted through the ordinary legislative process. Where a Consul is unavailable, authority passes under §2.9, §2.16 and §2.9.a.
 
 A declaration lapses after 30 days unless renewed by the same process. Any member of either chamber or any Monitor may seek expedited SC review under §4.5(7).
 
@@ -1069,6 +1083,10 @@ A sovereign entity may petition to join the Republic's constitutional framework 
 
 A State's constitutional boundaries are fixed except as expressly provided under §15.4. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood. The Republic's territorial extent may only be reduced by the consent of the affected population through a parliamentary amendment with Popular Ratification, or through a citizen initiative amendment — parliamentary amendment with State Ratification alone is insufficient. A State may not secede by ordinary statute or State referendum alone. No executive action may alter the Republic's territorial extent. A founding status election under §16.2 during the Transition Window, or a completed process under §15.9 including its national referendum, satisfies the consent required by this section without further amendment or Popular Ratification. Recognition under §16.4 effects no territorial change; post-founding indigenous territorial transitions proceed under Article XVII.
 
+### §15.7.a — Reversion to the States and Territories
+
+If §2.9.a(6) applies, the States and Territories are sovereign governments and may act as such, including by reconstituting the Republic. This is not secession under §15.7. The rights in §1.19.a continue to bind every government.
+
 ### §15.8 — Local Government
 
 Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as primary points of contact between citizens and government. They are entitled to reasonable fiscal, legal, and administrative capacity to carry out the lawful functions assigned to them. States may not systematically defund, disable, or preempt local governments for the purpose of achieving de facto centralization of functions that local government remains reasonably capable of performing.
@@ -1157,7 +1175,7 @@ Existing arrangements between a recognized nation and the predecessor government
 
 (3) Citizen Initiative Amendment: A proposed constitutional amendment proceeds through the same two-phase petition process as §13.2, with Phase Two requiring signatures from 15% of eligible voters nationally rather than §13.2's 10%. Once the Phase Two threshold is met, the proposal proceeds directly to a national referendum, with no legislative or executive action required to place it on the ballot; the Elections Panel administers the referendum within 180 days of Phase Two threshold verification. Passage requires 70% of votes cast with a minimum 65% citizen participation; where the participation floor is not met the initiative fails and may not be resubmitted on the same or substantially similar grounds for five years.
 
-(4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), the Elections Panel and NRS Panel independence (§11.1), the designation of non-derogable rights (§1.19.a) and the limit on amendments extinguishing them (§17.3(3)), and this subsection. These provisions may not be amended by State Ratification alone; a Citizen Initiative Amendment satisfies this requirement through its own referendum under this section without separately clearing the Popular Ratification threshold.
+(4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), the Elections Panel and NRS Panel independence (§11.1), the designation of non-derogable rights (§1.19.a) and the limit on amendments extinguishing them (§17.3(3)), the reversion of authority to the States and Territories (§15.7.a), and this subsection. These provisions may not be amended by State Ratification alone; a Citizen Initiative Amendment satisfies this requirement through its own referendum under this section without separately clearing the Popular Ratification threshold.
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
