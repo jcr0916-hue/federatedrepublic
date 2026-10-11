@@ -126,6 +126,13 @@ consequence, fails this test.
 *Attested use: the Monetary Authority was found to be "a critical constitutional actor with no
 constitutional actor profile," which drove anchoring the MA Director to the §3.9 independent-agency
 framework — pool nomination, Senate 2/3 confirmation, for-cause removal.*
+*Pass example, 11.10 review (John's decision).* The Civic Consul's veto (§2.7). Holder: the Civic Consul.
+Check: a 2/3 Senate override that skips the month's suspension, or repassage by both chambers.
+Consequence: the bill takes effect. The Assembly has no override of its own by design. It elects the
+Civic Consul and can remove them by constructive vote (§2.6), so an Assembly override would be a
+removal in all but name, and the veto would mean nothing. The Senate is the Constitution's reviewing
+body, which is why it holds the override on both vetoes (§2.3.a, §2.7). The Civic veto is deliberately
+modest: a delay with a short route around it, not a power to defeat the Legislature.
 
 ### 6. Graceful Degradation Test  [CORE + ATTESTED]
 **Canonical form: every provision must define its failure state.**
@@ -302,12 +309,24 @@ Chair). Two further provisions were brought into line on 10.10: §9.1.d's pool-t
 "defined by statute," now "resolved by age"; and the panel Chair tie, previously "by lot conducted by the
 JMC," now by age. Each change is a Process Symmetry fix — the same kind of tie, the same answer — not a
 policy change.
+*Extended 11.10.* §4.1 applies the same order to displaced judges competing for one vacancy — longest
+continuous judicial service, then age — instead of leaving the choice to the Civic Consul. The Consul's
+discretion stays where it was already assigned, choosing which of several open vacancies a judge takes,
+so the executive never decides which judge keeps working.
 *Pass example, same review.* The three Monitor Generals are selected three different ways — the LM
 nominated by the SC, the EM jointly by the two Speakers, the JM by public lottery (§9.3). That
 divergence is principled rather than arbitrary: §9.2 requires each Monitor General be selected through a
 process that "excludes the institution subject to that Monitor's oversight from controlling the
 selection," and each method is what that constraint produces for its branch. A textbook case of
 difference reflecting constitutional purpose.
+*Pass example, 11.10 review (John's decision).* Public confirmation under §4.4.a requires 60% of votes
+cast under §7.3 but sets no participation floor, while every other direct vote at 60% carries one (55%
+for the independence vote, Legat recall, and Monitor removal and suspension votes; 50% for the statutory
+initiative, devolution and merger referendums, and the conservation-agreement and Voting System ratifications). The
+difference is deliberate. Those floors keep a low-turnout electorate from changing the status quo. Here
+the status quo is a Temporary Associate Justice already sitting, and a floor would remove that justice,
+and restart the vacancy process, for a reason that has nothing to do with them. A floor would protect
+nothing and add a failure mode.
 
 ### 12. Procedural Familiarity  [CORE]
 **Canonical form:** constitutional procedures should reuse familiar actors, thresholds, stages, and
