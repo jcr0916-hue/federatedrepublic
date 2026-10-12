@@ -48,7 +48,7 @@ export function runIngest(args, {
     }
     return checks;
   }});
-  section('Applied actions',[...result.preserved.map(p=>`Preserved previous Constitution Markdown ${p}`),...result.applied.map(p=>`Imported ${p}`),...result.archived.map(p=>`Archived ${p}`)]);
+  section('Applied actions',[...result.preserved.map(p=>`Preserved previous Constitution ${p}`),...result.applied.map(p=>`Imported ${p}`),...result.archived.map(p=>`Archived ${p}`)]);
   section('Validation results',[...result.checks.map(c=>`${c.ok?'PASS':'FAIL'} ${c.command}${c.error?': '+c.error:''}`),...result.errors]);
   section('Files requiring human review',plan.items.filter(i=>i.errors.length).map(i=>`${i.source}: ${i.errors.join(' ')}`));
   const failed=plan.errors.length||plan.items.some(i=>i.errors.length)||result.errors.length;

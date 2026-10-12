@@ -8,3 +8,5 @@ _site/
 .cache/
 
 .world-authoring/
+.constitution-archive.lock/
+.constitution-*

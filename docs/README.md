@@ -10,6 +10,7 @@ to current sources and their roles. Only `main` supplies current project authori
 - [State Constitutions](../State%20Constitutions/) — current State source area.
 - `../annotated.html`, `../search-index.js`, and `../pdf/constitution-current.pdf` — public derived surfaces.
 - [Constitutional design principles](CONSTITUTIONAL-DESIGN-PRINCIPLES.md).
+- [Previous Constitution pairs](archive/constitution/) and [automated archival](operations/CONSTITUTION-ARCHIVAL.md) — append-only historical JSON/Markdown snapshots on `main`.
 
 Edit canonical sources and regenerate derivatives rather than editing generated copies independently.
 

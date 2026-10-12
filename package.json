@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "npm run check:state-tests && node scripts/check-world-publishing.mjs && node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy",
-    "sync": "python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py",
+    "sync": "npm run constitution:archive && python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py",
     "check:assets": "node scripts/public-assets.mjs",
     "test:assets": "node --test scripts/public-assets.test.mjs",
     "stats:assets": "node scripts/asset-stats.mjs",
@@ -23,7 +23,7 @@
     "test:world-authoring": "node --test scripts/world-authoring.test.mjs",
     "check:world-publish": "node scripts/check-world-publishing.mjs",
     "test:world-publish": "node --test scripts/world-publishing.test.mjs",
-    "world:publish-check": "npm run test:state-tests && npm run test:state-constitutions && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:world-packet && npm run test:world-draft-validation && npm run test:assets && npm run test:crossroads && npm run test:crossroads-ai-benchmark && npm run test:ai-transport && npm run test:ai-efficiency && npm run test:annotator-ai-benchmark && npm run test:annotator && npm run test:navigator-gate && npm run test:navigator-haiku-direct && npm run test:navigator-shadow && npm run test:navigator-routing-report && npm run test:navigator-deterministic && npm run test:navigator-natural-language && npm run test:navigator-fallback && npm run test:navigator-fallback-api && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py",
+    "world:publish-check": "npm run test:constitution-archive && npm run check:constitution-archive && npm run test:state-tests && npm run test:state-constitutions && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:world-packet && npm run test:world-draft-validation && npm run test:assets && npm run test:crossroads && npm run test:crossroads-ai-benchmark && npm run test:ai-transport && npm run test:ai-efficiency && npm run test:annotator-ai-benchmark && npm run test:annotator && npm run test:navigator-gate && npm run test:navigator-haiku-direct && npm run test:navigator-shadow && npm run test:navigator-routing-report && npm run test:navigator-deterministic && npm run test:navigator-natural-language && npm run test:navigator-fallback && npm run test:navigator-fallback-api && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py",
     "republic:ingest": "node scripts/republic-ingest.mjs",
     "test:ingest": "node --test scripts/republic-ingest.test.mjs",
     "test:chronology": "node --test scripts/world-chronology.test.mjs",
@@ -47,7 +47,10 @@
     "test:navigator-fallback-api": "node --test scripts/navigator-fallback-api.test.cjs",
     "test:crossroads-ai-benchmark": "node --test scripts/crossroads-ai-benchmark.test.cjs",
     "test:annotator-ai-benchmark": "node --test scripts/annotator-ai-benchmark.test.cjs",
-    "test:annotator": "node --test scripts/annotator.test.cjs"
+    "test:annotator": "node --test scripts/annotator.test.cjs",
+    "constitution:archive": "python3 -B scripts/constitution-archive.py prepare",
+    "test:constitution-archive": "python3 -B scripts/test-constitution-archive.py",
+    "check:constitution-archive": "python3 -B scripts/constitution-archive.py check-current"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",

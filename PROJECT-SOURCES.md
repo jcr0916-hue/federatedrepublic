@@ -12,6 +12,8 @@ Use the roles below: automated test fixtures and hypotheticals do not establish 
 - Generated index: [`docs/constitutional-quickref.md`](docs/constitutional-quickref.md).
 - State authority: existing sources under [`State Constitutions/`](State%20Constitutions/).
 - Edit the appropriate source, then regenerate federal derivatives with `npm run sync`.
+- Previous Federal JSON/Markdown pairs: [`docs/archive/constitution/`](docs/archive/constitution/), preserved automatically before replacement; commit the archives with the new current files.
+- Archival policy and checks: [`docs/operations/CONSTITUTION-ARCHIVAL.md`](docs/operations/CONSTITUTION-ARCHIVAL.md).
 - Generated pages, search data, quick references, and downloads are derived surfaces.
 - Design guidance: [`docs/CONSTITUTIONAL-DESIGN-PRINCIPLES.md`](docs/CONSTITUTIONAL-DESIGN-PRINCIPLES.md).
 
@@ -51,5 +53,5 @@ Do not periodically merge main into it or merge it back into main.
 Add material only when it retires; preserve original bytes and provenance first.
 Public historical canon, required fixtures, and compatibility URLs stay on main.
 Git history remains the ultimate backup.
-Federal ingest snapshots live outside the repository in `~/Downloads/Federated-Republic-Archive/constitution/`.
-They preserve prior Markdown, confer no current authority, and require separate cold-storage housekeeping.
+New Federal Constitution snapshots live on `main` in `docs/archive/constitution/` as matched JSON/Markdown pairs, with hashes and provenance. They confer no current authority and must remain append-only.
+Older external Markdown-only ingest snapshots in `~/Downloads/Federated-Republic-Archive/constitution/` and the legacy branch remain historical backups; this automation does not alter them.
