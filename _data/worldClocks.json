@@ -14,11 +14,12 @@
       "kind": "none",
       "note": "The Convention proposal is adopted, but no affected-voter ratification day or subsequent constitutional approval dates have been established."
     },
-    "summary": "The Convention has adopted a proposed northern-lake settlement. Korda's boundaries and status are unchanged pending affected-voter ratification, Kelvant approval, LM–JM assessment and Senate ratification; Statehood Audits remain separate.",
-    "nextAction": "Establish Elections Panel authentication of the fixed district map, eligible referendum electorate and voting schedule; then track affected-voter decision and subsequent §15.4 approvals without asserting passage.",
+    "summary": "The Elections Panel has authenticated LC-N1, LC-N2 and LC-N3 against the original certified boundaries, but has not yet certified the affected electorate or a ballot date. Korda's boundaries and status are unchanged; further §15.4 approvals and separate Statehood Audits remain outstanding.",
+    "nextAction": "Publish affected-electorate determination, ballot materials and a ratification date; do not imply a vote, merger or completed Statehood Audits.",
     "sources": [
       "torenthia-nrs-086",
-      "torenthia-nrs-085"
+      "torenthia-nrs-085",
+      "torenthia-nrs-091"
     ],
     "arcs": [
       "korda"
@@ -86,34 +87,27 @@
   {
     "id": "lake-varda-conference",
     "title": "Lake Varda conference",
-    "status": "scheduled",
+    "status": "open",
     "trigger": {
-      "description": "Participating governments agreed to open the conference in Valedon during Year 14, Month 1",
+      "description": "Torenthia, Caldris and Valedon convened the Lake Varda civilian-navigation conference in Valedon",
       "date": {
-        "year": 13,
-        "month": 12
+        "year": 14,
+        "month": 1
       }
     },
     "timing": {
-      "kind": "window",
-      "start": {
-        "year": 14,
-        "month": 1
-      },
-      "end": {
-        "year": 14,
-        "month": 1
-      },
-      "note": "Opening month and host are established; Ines Carrow is designated to lead Torenthia's delegation. Exact day and complete delegation lists remain unsettled."
+      "kind": "none",
+      "note": "Conference opened during Y14 M1; no closing date or date for adopting an instrument has been established."
     },
-    "summary": "Scheduled to open in Valedon during Y14 M1; Carrow will lead Torenthia's delegation, while the exact day and complete delegation lists remain unsettled.",
-    "nextAction": "Track final scheduling, remaining delegation designations and the opening conference agenda without implying agreement on responsibility for prior incidents.",
+    "summary": "The Valedon conference opened in Y14 M1 on civilian navigation, rescue coordination and risk reduction. No common verdict on earlier incidents, binding agreement or Sunderland participation is recorded.",
+    "nextAction": "Track working discussions or agreed technical text, keeping any future treaty and its required ratification separate from the opening session.",
     "sources": [
       "torenthia-news-077",
       "torenthia-nrs-052",
       "torenthia-news-094",
       "torenthia-nrs-072",
-      "torenthia-news-098"
+      "torenthia-news-098",
+      "torenthia-nrs-092"
     ],
     "arcs": [
       "lake-varda"
