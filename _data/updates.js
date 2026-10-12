@@ -14,6 +14,13 @@ const updates = [
   {
     category: "world",
     badge: "The World",
+    title: "Three Delegations, No Shared Verdict",
+    blurb: "The Year 14 Lake Varda conference has opened in Valedon. Navigation and rescue are on the table, but no delegation has adopted a common account of the earlier incidents.",
+    href: "torenthia-news-110.html",
+  },
+  {
+    category: "world",
+    badge: "The World",
     title: "A Roof Is Not a Border Policy",
     blurb: "The Assembly has received a housing and reception bill for Lake Varda arrivals. It is in committee; a bill is not yet a building, and no grant has been made.",
     href: "torenthia-news-109.html",
