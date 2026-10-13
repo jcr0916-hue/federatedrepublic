@@ -3,7 +3,6 @@
     <summary>Inside the Constitution</summary>
     <p class="contents-intro">A table of contents for the full text. Each article covers a part of the constitutional framework. Select a heading to jump to it.</p>
     <div role="navigation" aria-label="Constitution sections">
-      <a href="#preamble">Preamble</a>
       {% for a in reading %}
       <a href="#art{{ a.number }}">{{ a.title }}</a>
       {% endfor %}
