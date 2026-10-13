@@ -21,7 +21,7 @@ No mode commits, pushes or deploys. Unknown flags and `--archive` alone fail.
 | --- | --- |
 | `torenthia-news-NNN.html`, `torenthia-nrs-NNN.html`, `torenthia-sc-NNN.html`, `torenthia-dispatch-slug.html` | Same filename at the site root; matching `worldKind` and `worldId` required |
 | `WORLD-STORY-STATUS.md`, `WORLD-STORY-BIBLE.md` (flat or under `docs/`) | `docs/`; human-reviewed manual merge only |
-| `constitution_data.json` | Manual by default; explicit `--update-constitution` preserves prior Markdown externally before replacement |
+| `constitution_data.json` | Manual by default; explicit `--update-constitution` preserves the prior JSON/Markdown pair in the repository before replacement |
 | `<state>-test-NN-<slug>.html` (flat or under `state-tests/<state>/`) | `state-tests/<state>/`; validated new canonical historical test only |
 | Established `name-state-constitution.md` (flat or under `State Constitutions/`) | Existing `State Constitutions/`; human-reviewed manual merge only |
 | Image under inbox `images/` or `logos/` | Same existing canonical folder; no nested directories or inferred logo/map placement |
@@ -115,32 +115,35 @@ snapshot path. Equivalent JSON is a no-op, including whitespace-only changes;
 it creates no snapshot and leaves the incoming source alone. Mixed inbox batches
 are refused. Stale generated Markdown must be reconciled before an update.
 
-Before touching the canonical JSON, apply copies the exact current
-`docs/constitution-current.md` bytes to:
+Before touching either current file, apply copies the exact current JSON and
+Markdown bytes to the permanent repository archive:
 
 ```text
-~/Downloads/Federated-Republic-Archive/constitution/Constitution-YYMMDD.md
+docs/archive/constitution/Constitution-YYMMDD.json
+docs/archive/constitution/Constitution-YYMMDD.md
+docs/archive/constitution/Constitution-YYMMDD.archive.json
 ```
 
-Dates use UTC. Same-day collisions use `-01`, `-02`, and so on; existing snapshots
-are never overwritten. The snapshot must be written and verified successfully
-before replacement. Only Markdown is preserved, not the old JSON. Snapshot paths
-must be outside the repository and inbox, with no symlink traversal. Tests that
-override the inbox use its sibling `Federated-Republic-Archive/constitution/`.
+Dates use UTC. Same-day collisions use the same `-01`, `-02`, etc. suffix for all
+three files; existing snapshots are never overwritten. The pair must be written
+and verified successfully before replacement. Metadata records hashes and source/
+renderer provenance. Snapshot paths permit no symlink traversal. Exact already-
+preserved pairs are verified and reused on retries. See [Constitution archival](CONSTITUTION-ARCHIVAL.md).
 
 Apply rechecks the incoming source, canonical JSON and generated Markdown, then
-preserves the snapshot and replaces the JSON. It runs `npm run sync`, both
+preserves the snapshot pair and replaces both current JSON and generated Markdown. It runs `npm run sync`, both
 `scripts/check-consistency.py` and `scripts/check-constitutional-site.py`, the
 normal World checks/build, and configured discovery/scenario checks, in that order.
 If a check fails, it reports the failure and leaves the incoming source in the
-inbox even with `--archive`. The prior Markdown snapshot remains safe. The new
+inbox even with `--archive`. The prior JSON/Markdown snapshot pair remains safe. The new
 JSON and any regenerated files remain for inspection; there is no automatic rollback.
 Resolve the failure and rerun validation manually before committing. Rerunning
 ingest with now-identical JSON is a no-op, not proof that validation succeeded.
 
-Ingest never creates `docs/archive/`, commits, creates branches, or writes to
-`archive/legacy-project-material`. A later housekeeping operation may preserve
-local snapshots in cold storage without reintroducing them on `main`.
+Ingest creates the paired archive on `main`'s working tree but never commits,
+creates branches, or writes to `archive/legacy-project-material`. Commit newly
+created archive files together with the updated current files. Previously saved
+external Markdown snapshots remain intact.
 
 ## State historical tests
 

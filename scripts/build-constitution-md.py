@@ -16,7 +16,8 @@ structurally impossible here.
 
 Usage: python3 scripts/build-constitution-md.py constitution_data.json constitution-current.md
 """
-import json, re, sys
+import json, re, sys, runpy
+from pathlib import Path
 
 def clean(t):
     """Normalize whitespace without altering content."""
@@ -86,11 +87,18 @@ def render(d):
     return '\n'.join(L)
 
 def main(src, dst):
-    d = json.load(open(src, encoding='utf-8'))
+    source = Path(src).read_bytes()
+    d = json.loads(source)
     out = render(d)
     articles = [a for a in d if not a.get('preamble')]
     total_provisions = sum(len(a.get('provisions', [])) for a in articles)
-    open(dst, 'w', encoding='utf-8').write(out)
+    root = Path(__file__).resolve().parent.parent
+    if (Path(src).resolve() == root / 'constitution_data.json' and
+            Path(dst).resolve() == root / 'docs/constitution-current.md'):
+        archive = runpy.run_path(str(root / 'scripts/constitution-archive.py'))
+        archive['publish_markdown'](root, source, out.encode('utf-8'))
+    else:
+        Path(dst).write_text(out, encoding='utf-8')
     print(f"wrote {dst}: {len(articles)} articles, {total_provisions} provisions, "
           f"{len(out):,} chars")
 
