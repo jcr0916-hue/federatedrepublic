@@ -4,7 +4,9 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 14, Month 1 · worldSeq through **156** · nrsSeq through **92**.
+**Current published frontier:** Year 14, Month 1 · worldSeq through **157** · nrsSeq through **92**.
+
+The Year 14 Month 1 fiscal analysis in news 111 compares the three existing §12.6 options without recording a committee vote, new fiscal estimates, or an Executive Monitor finding. The story advances the public argument, not the legal timetable.
 
 The Korda decision batch adds news 106–108 and NRS 085–086. A complete Northern Lake Settlement is introduced, amended after Orin's demands for service continuity and credible Statehood treatment, and adopted by the thirty-three-delegate Convention 28–5. Only three northern certified-corridor districts are proposed for merger with Kelvant; the southern shore remains with Korda. This completes the Convention's required proposal, but no affected-voter referendum, Kelvant approval, LM–JM assessment, Senate ratification or Statehood Audit result has occurred. The publication stays in fictional Year 13, Month 12, without assigning a new day.
 
