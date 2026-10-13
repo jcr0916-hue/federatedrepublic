@@ -1,0 +1,39 @@
+name: Sync proposed Constitution and Torenthia content
+on:
+  push:
+    branches:
+      - project/remove-preamble-torenthia-y14m1
+permissions:
+  contents: write
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - name: Preserve previous Constitution, regenerate derived pages and indexes
+        run: npm run sync
+      - name: Check changes and publication
+        run: |
+          python3 -B scripts/constitution-archive.py check-current
+          npm run check:world-publish
+      - name: Commit generated material
+        run: |
+          set -eu
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/archive/constitution docs/constitution-current.md docs/constitutional-quickref.md annotated.html search-index.js
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive superseded Constitution and synchronize derived publications"
+            git push
+          fi
