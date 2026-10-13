@@ -50,6 +50,18 @@ for a in source:
         if ident in aliases and f'id="{aliases[ident]}"' not in page:
             target = f'  <div class="provision" id="{ident}">'
             page = page.replace(target, f'  <span id="{aliases[ident]}" aria-hidden="true"></span>\n' + target, 1)
+# The preamble is optional constitutional source, not a permanent HTML fixture.
+# Remove stale legacy markup when the canonical JSON no longer contains it.
+if not any(a.get('preamble') for a in source):
+    preamble_section = re.compile(
+        r'\\s*<!-- PREAMBLE -->\\s*<div id="preamble" class="article-section">.*?</div>\\s*</div>\\s*',
+        re.S,
+    )
+    page, removed = preamble_section.subn('\\n', page)
+    # No removal is also valid once a prior sync has eliminated the block.
+    if 'id="preamble"' in page:
+        raise ValueError('Stale Preamble remains in annotated Constitution')
+
 count = sum(len(a['provisions']) for a in source)
 articles = sum(not a.get('preamble', False) for a in source)
 page = re.sub(r'Annotated Edition — \d+ provisions &nbsp;·&nbsp; \d+ articles',

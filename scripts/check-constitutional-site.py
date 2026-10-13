@@ -7,6 +7,10 @@ from pathlib import Path
 
 provisions = [p for a in json.loads(Path('constitution_data.json').read_text()) for p in a['provisions']]
 page = Path('annotated.html').read_text()
+source = json.loads(Path('constitution_data.json').read_text())
+if not any(a.get('preamble') for a in source):
+    assert 'id="preamble"' not in page, 'Stale annotated Preamble present'
+    assert 'We built a Republic worth living in' not in page, 'Historical Preamble text remains'
 index = json.loads(Path('search-index.js').read_text().split('const SEARCH_INDEX = ', 1)[1].rstrip(';'))
 assert len(index) == len(provisions)
 normalize = lambda text: re.sub(r'\s+', '', html.unescape(re.sub('<[^>]+>', '', text)))
