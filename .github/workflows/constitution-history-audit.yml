@@ -1,0 +1,27 @@
+name: Audit historical Constitution editions
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - scripts/recover-constitution-history.py
+      - .github/workflows/constitution-history-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical-pairs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit authentic historical pairs (no modifications)
+        run: python3 -B scripts/recover-constitution-history.py > historical-constitution-audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: historical-constitution-audit
+          path: historical-constitution-audit.json
