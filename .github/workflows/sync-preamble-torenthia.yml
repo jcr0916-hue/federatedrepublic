@@ -22,7 +22,18 @@ jobs:
           python-version: '3.12'
       - run: npm ci
       - name: Preserve previous Constitution, regenerate derived pages and indexes
-        run: npm run sync
+        run: |
+          python3 -B scripts/constitution-archive.py prepare --base origin/main
+          python3 - <<'PY'
+          import json, runpy
+          from pathlib import Path
+          renderer = runpy.run_path("scripts/build-constitution-md.py")
+          articles = json.loads(Path("constitution_data.json").read_text())
+          Path("docs/constitution-current.md").write_text(renderer["render"](articles), encoding="utf-8")
+          PY
+          python3 scripts/sync-annotated.py
+          python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md
+          python3 scripts/build-search-index.py
       - name: Check changes and publication
         run: |
           python3 -B scripts/constitution-archive.py check-current
