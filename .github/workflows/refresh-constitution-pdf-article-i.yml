@@ -20,6 +20,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: npm ci
+      - run: npm install --no-save --package-lock=false playwright
       - run: npx playwright install --with-deps chromium
       - run: npm run build
       - name: Serve built site and regenerate accessible PDF
