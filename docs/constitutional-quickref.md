@@ -13,7 +13,6 @@
 
 ## INDEX
 
-- **Preamble**
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.22  (24 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.18  (24 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.11  (12 provisions)
@@ -34,10 +33,6 @@
 - **Article XVIII — Federal Property and National Trust**  ·  §18.1–§18.5  (5 provisions)
 - **Article XIX — Transition and Ratification**  ·  §19.1–§19.10  (11 provisions)
 - **Article XX — Associated Communities**  ·  §20.1–§20.7  (7 provisions)
-
----
-
-## PREAMBLE
 
 ---
 
