@@ -1,15 +1,15 @@
-name: Reviewed branch cleanup — batch 05
+name: Reviewed branch cleanup — batch 06
 on:
   workflow_dispatch:
     inputs:
       confirmation:
-        description: "preview (default) or DELETE-BATCH-05 after dependency review"
+        description: "preview (default) or DELETE-BATCH-06 after dependency review"
         required: true
         default: preview
         type: choice
         options:
           - preview
-          - DELETE-BATCH-05
+          - DELETE-BATCH-06
 permissions:
   contents: write
   pull-requests: read
