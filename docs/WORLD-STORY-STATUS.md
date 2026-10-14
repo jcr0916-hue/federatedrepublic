@@ -4,7 +4,9 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 14, Month 1 · worldSeq through **157** · nrsSeq through **92**.
+**Current published frontier:** Year 14, Month 1 · worldSeq through **158** · nrsSeq through **95**.
+
+The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 
 The Year 14 Month 1 fiscal analysis in news 111 compares the three existing §12.6 options without recording a committee vote, new fiscal estimates, or an Executive Monitor finding. The story advances the public argument, not the legal timetable.
 
