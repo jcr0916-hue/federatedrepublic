@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
-"""Preview or delete exactly six reviewed refs, enforcing commit ancestry and SHA leases."""
+"""Preview or delete exactly two reviewed refs, enforcing commit ancestry and SHA leases."""
 import json, os, sys, urllib.parse, urllib.request, urllib.error
 REPO=os.environ["GITHUB_REPOSITORY"]
 TOKEN=os.environ["GITHUB_TOKEN"]
 CANDIDATES={
-  "ai-navigator-haiku-direct-benchmark": "0bcee4254914b1aeffa11a1a2f73b76597efe15c",
-  "ai-navigator-haiku-single-source-benchmark": "f06359ca0401679b07f8bdf5b4ebaae6525eb89c",
-  "ai-navigator-haiku-temperature-zero": "1ba168416d55856dec79f5a57fc8369c550ed93b",
-  "ai-navigator-model-benchmark": "f01d684a3dcc418276e4ccb49904cc7e9b1cc83f",
-  "ai-navigator-model-benchmark-verify": "b4738f832aa880e13c326b540720ab9b1a745e4a",
-  "ai-record-navigator-benchmark": "cc88d174b691b3c58a4b27dc1739bb1ae5fe4d33"
+  "article-ix-final-checkpoint-2026-10-09": "4f71b5f955af027ee82684ed8b3d09b986873efa",
+  "article-ix-review-checkpoint-2026-10-09": "b953ecc8ba3f846f57cb2c9e08442a0799e56806"
 }
 PERMANENT={"main","archive/legacy-project-material"}
 def api(path, method="GET"):
@@ -22,7 +18,7 @@ def ahead(base, branch):
     return api("compare/"+urllib.parse.quote(base,safe="")+"..."+urllib.parse.quote(branch,safe=""))["ahead_by"]
 def main():
     mode=os.environ.get("CLEANUP_MODE","preview")
-    if mode not in ("preview","DELETE-BATCH-03"): raise SystemExit("Unrecognized mode")
+    if mode not in ("preview","DELETE-BATCH-04"): raise SystemExit("Unrecognized mode")
     assert not set(CANDIDATES)&PERMANENT
     if get_ref("archive/legacy-project-material")!= "0053ac4da09d32807d7f5b71ef0fff2075b421c1":
         raise SystemExit("Archive ref moved since audit; re-review before any deletions")
