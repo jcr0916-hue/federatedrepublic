@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-"""Preview or delete exactly seven reviewed refs, enforcing commit ancestry and SHA leases."""
+"""Preview or delete exactly six reviewed refs, enforcing commit ancestry and SHA leases."""
 import json, os, sys, urllib.parse, urllib.request, urllib.error
 REPO=os.environ["GITHUB_REPOSITORY"]
 TOKEN=os.environ["GITHUB_TOKEN"]
 CANDIDATES={
-  "ai-cleanup-haiku-benchmark": "44311017e4cf6b603476692ab64f7c4947924044",
-  "ai-crossroads-shadow-benchmark": "56e278da875b85e26e9d3ae2ffd475882c41e35c",
-  "ai-gateway-all-live-features": "992b089756e5775541bb09d6e0203da88062285c",
-  "ai-gateway-crossroads-poc": "a8674d4bc80e7044c8624353903ca546d188f1de",
-  "ai-navigator-escalation-benchmark": "0ac72122071c34de9ce5e80743df599e0a45cd2d",
-  "ai-navigator-haiku-answer-only-benchmark": "8c0f2c142d836b8192eee079ec4850b39d12a7cd",
-  "ai-navigator-haiku-close-paraphrase": "90551e1e928f23884159e07b247678bb419d9ebf"
+  "ai-navigator-haiku-direct-benchmark": "0bcee4254914b1aeffa11a1a2f73b76597efe15c",
+  "ai-navigator-haiku-single-source-benchmark": "f06359ca0401679b07f8bdf5b4ebaae6525eb89c",
+  "ai-navigator-haiku-temperature-zero": "1ba168416d55856dec79f5a57fc8369c550ed93b",
+  "ai-navigator-model-benchmark": "f01d684a3dcc418276e4ccb49904cc7e9b1cc83f",
+  "ai-navigator-model-benchmark-verify": "b4738f832aa880e13c326b540720ab9b1a745e4a",
+  "ai-record-navigator-benchmark": "cc88d174b691b3c58a4b27dc1739bb1ae5fe4d33"
 }
 PERMANENT={"main","archive/legacy-project-material"}
 def api(path, method="GET"):
@@ -23,7 +22,7 @@ def ahead(base, branch):
     return api("compare/"+urllib.parse.quote(base,safe="")+"..."+urllib.parse.quote(branch,safe=""))["ahead_by"]
 def main():
     mode=os.environ.get("CLEANUP_MODE","preview")
-    if mode not in ("preview","DELETE-BATCH-02"): raise SystemExit("Unrecognized mode")
+    if mode not in ("preview","DELETE-BATCH-03"): raise SystemExit("Unrecognized mode")
     assert not set(CANDIDATES)&PERMANENT
     if get_ref("archive/legacy-project-material")!= "0053ac4da09d32807d7f5b71ef0fff2075b421c1":
         raise SystemExit("Archive ref moved since audit; re-review before any deletions")
