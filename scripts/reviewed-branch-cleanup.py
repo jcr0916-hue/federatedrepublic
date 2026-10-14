@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
-"""Preview or delete exactly ten reviewed refs, enforcing commit ancestry and SHA leases."""
+"""Preview or delete exactly seven reviewed refs, enforcing commit ancestry and SHA leases."""
 import json, os, sys, urllib.parse, urllib.request, urllib.error
 REPO=os.environ["GITHUB_REPOSITORY"]
 TOKEN=os.environ["GITHUB_TOKEN"]
 CANDIDATES={
-  "torenthia-publish-2026-10-09": "5a4046721e56fd96e88eb42a215ba264384e764f",
-  "weekend-infrastructure": "ada859069f514bb9de7a12d8c7edf31a3b5e3cf5",
-  "world-record-generator": "e542cdf84ee75159c3de7594e547820449eb4ea7",
-  "auto-world-dossiers": "ab4d57e2fe269b5013b99a0e17ca182250c34b85",
-  "maintenance/branch-preservation-inventory-20261012": "a63fd59306c019d25f7c6a8b29f171f75745b395",
-  "maintenance/merged-branch-history-batch-01-20261013": "0cfcbf6a9f29c6ecaadbf5488ddb5aa95eb94820",
-  "maintenance/merged-branch-history-batch-02-20261013": "33305edc58a5b0d2cd67defe3e7b728a4de9d268",
-  "maintenance/merged-branch-history-batch-03-20261013": "5e72f19dbf63d0f7b2344564e6b7433950c369d9",
-  "maintenance/merged-branch-history-batch-04-20261013": "5a955cc174ad88be771b288e2db4ed3014aebb0b",
-  "maintenance/merged-branch-history-batch-05-20261013": "3a01dec45e913d93e3b7808751cd4b81a78cefff"
+  "ai-cleanup-haiku-benchmark": "44311017e4cf6b603476692ab64f7c4947924044",
+  "ai-crossroads-shadow-benchmark": "56e278da875b85e26e9d3ae2ffd475882c41e35c",
+  "ai-gateway-all-live-features": "992b089756e5775541bb09d6e0203da88062285c",
+  "ai-gateway-crossroads-poc": "a8674d4bc80e7044c8624353903ca546d188f1de",
+  "ai-navigator-escalation-benchmark": "0ac72122071c34de9ce5e80743df599e0a45cd2d",
+  "ai-navigator-haiku-answer-only-benchmark": "8c0f2c142d836b8192eee079ec4850b39d12a7cd",
+  "ai-navigator-haiku-close-paraphrase": "90551e1e928f23884159e07b247678bb419d9ebf"
 }
 PERMANENT={"main","archive/legacy-project-material"}
 def api(path, method="GET"):
@@ -26,7 +23,7 @@ def ahead(base, branch):
     return api("compare/"+urllib.parse.quote(base,safe="")+"..."+urllib.parse.quote(branch,safe=""))["ahead_by"]
 def main():
     mode=os.environ.get("CLEANUP_MODE","preview")
-    if mode not in ("preview","DELETE-BATCH-01"): raise SystemExit("Unrecognized mode")
+    if mode not in ("preview","DELETE-BATCH-02"): raise SystemExit("Unrecognized mode")
     assert not set(CANDIDATES)&PERMANENT
     if get_ref("archive/legacy-project-material")!= "0053ac4da09d32807d7f5b71ef0fff2075b421c1":
         raise SystemExit("Archive ref moved since audit; re-review before any deletions")
