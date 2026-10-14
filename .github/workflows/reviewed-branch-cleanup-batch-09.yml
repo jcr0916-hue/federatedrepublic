@@ -1,0 +1,25 @@
+name: Reviewed branch cleanup — batch 09
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "preview (default) or DELETE-BATCH-09 after external dependency review"
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - DELETE-BATCH-09
+permissions:
+  contents: write
+  pull-requests: read
+jobs:
+  reviewed-cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check frozen branch tips and optionally delete approved batch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLEANUP_MODE: ${{ inputs.confirmation }}
+        run: python3 scripts/reviewed-branch-cleanup-batch-09.py
