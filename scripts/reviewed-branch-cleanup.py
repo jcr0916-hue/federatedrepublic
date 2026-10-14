@@ -34,8 +34,8 @@ def main():
         if current!=expected: raise SystemExit(f"STOP: {name} changed {current} != {expected}")
         if any(p.get("head",{}).get("ref")==name for p in prs):
             raise SystemExit(f"STOP: {name} is attached to an open PR")
-        if ahead("main",name) or ahead("archive/legacy-project-material",name):
-            raise SystemExit(f"STOP: {name} contains commits not reachable from permanent branches")
+        if ahead("main",name) and ahead("archive/legacy-project-material",name):
+            raise SystemExit(f"STOP: {name} contains commits not reachable from either permanent branch")
         print("VERIFIED",name,current,flush=True)
     if mode=="preview":
         print("PREVIEW ONLY: no refs changed. Confirm external deployment dependencies before deletion.")
