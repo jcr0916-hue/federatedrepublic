@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
-"""Preview or delete exactly eight reviewed refs, enforcing commit ancestry and SHA leases."""
+"""Preview or delete exactly ten reviewed refs, enforcing commit ancestry and SHA leases."""
 import json, os, sys, urllib.parse, urllib.request, urllib.error
 REPO=os.environ["GITHUB_REPOSITORY"]
 TOKEN=os.environ["GITHUB_TOKEN"]
 CANDIDATES={
-  "maintenance/archive-reachability-proof-20261013": "3e1f87ab2c24c507ce3be506701075c239c5d55f",
-  "maintenance/branch-cleanup-batch-01-20261013": "6a92a3c7cd57fb5cd282d21698f1c3f0caf47217",
-  "maintenance/branch-cleanup-batch-02-20261014": "07b1cd75995685e83c8b16b33e9c96dd34eb0fc6",
-  "maintenance/branch-cleanup-batch-03-20261014": "a739e0ef397f7b3556fec92a6cf237519c9281cc",
-  "maintenance/branch-cleanup-batch-04-20261014": "cad64486c1233a2d285f5cf3ce78aa05cdf0d023",
-  "maintenance/branch-preservation-gates-20261013": "7357a416741b793495b1d4bd7f02f07997e6a2f1",
-  "maintenance/complete-branch-history-manifest-20261013": "51451020fc93c41aef4384856f4f91856d480112",
-  "maintenance/constitutional-publishing-decisions-20261013": "c1e2a57086df72145452b863f3eb13d059455599"
+  "fix/annotated-table-of-contents-20261013": "d2f4f07d95d874e7237f613966acc775b9e83309",
+  "fix/cleanup-reachability-either-permanent-20261014": "3fccb1d7351c73424f6d7712fdc60dea57149af4",
+  "fix/remove-stale-annotated-preamble-20261013": "1fb728850cb283158cfde97aeb0b216475cd6241",
+  "history/constitution-recovery-index-20261012": "30f5bc882dfb11cc07dd0d8d75937473a0450290",
+  "history/recover-constitution-editions-20261012": "a12a14c5d0ffefeedbb158bfc9fcd64d3b65b7a0",
+  "history/recovered-constitution-source-editions": "e23bf126f64d75515c366ef6923a0b8baf7020e6",
+  "history/two-track-constitution-recovery-20261012": "61f5cc1f88d29f60d372f230aac3c7c90a3a2302",
+  "maintenance/branch-cleanup-batch-05-20261014": "dcac879b698b814355e694737a7099846589b814",
+  "maintenance/decision-register-ai-20261013": "5247ba8ddebd931e33491a55d42da3d652c9f085",
+  "maintenance/development-branch-history-20261013": "c8ab278b017fd8948b0c25555716b8319061a399"
 }
 PERMANENT={"main","archive/legacy-project-material"}
 def api(path, method="GET"):
@@ -24,7 +26,7 @@ def ahead(base, branch):
     return api("compare/"+urllib.parse.quote(base,safe="")+"..."+urllib.parse.quote(branch,safe=""))["ahead_by"]
 def main():
     mode=os.environ.get("CLEANUP_MODE","preview")
-    if mode not in ("preview","DELETE-BATCH-05"): raise SystemExit("Unrecognized mode")
+    if mode not in ("preview","DELETE-BATCH-06"): raise SystemExit("Unrecognized mode")
     assert not set(CANDIDATES)&PERMANENT
     if get_ref("archive/legacy-project-material")!= "0053ac4da09d32807d7f5b71ef0fff2075b421c1":
         raise SystemExit("Archive ref moved since audit; re-review before any deletions")
