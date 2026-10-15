@@ -128,8 +128,7 @@
     "question": "What happens if the two Consuls cannot agree on who should lead a cross-domain emergency?",
     "expectedSufficient": true,
     "required": [
-      "§2.14.a",
-      "§4.5"
+      "§2.14.a"
     ]
   },
   {

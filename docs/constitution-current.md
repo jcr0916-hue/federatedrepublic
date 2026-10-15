@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 182 provisions**
+> **20 articles · 178 provisions**
 
 thefederatedrepublic.org
 
@@ -15,39 +15,35 @@ thefederatedrepublic.org
 
 ### §1.1 — Right to Courts and Legal Remedy
 
-Every person may seek legal remedy for any rights violation before an independent and impartial court. This right is self-executing: where the Legislature has not funded adequate legal aid, courts appoint counsel at public expense. Procedural costs may not be used to make the right to a remedy illusory.
+Every person may seek legal remedy for any rights violation before an independent and impartial court. This right is self-executing: where the Legislature has not funded adequate legal aid, courts appoint counsel at public expense. Procedural costs may not make the right to a remedy illusory.
 
 ### §1.2 — Individual Sovereignty Floor
 
-Every person possesses an inviolable sphere of personal sovereignty over their own life, body, and choices. Government authority operates outside this sphere. Where the boundary is disputed, the presumption runs in favor of individual liberty; government bears the burden of demonstrating constitutional authority for any limitation.
+Every person possesses an inviolable sphere of personal sovereignty over their own life, body, and choices. Government authority operates outside this sphere. Where the boundary is disputed, the presumption runs in favor of individual liberty; government bears the burden of demonstrating constitutional authority.
 
 ### §1.3 — Prohibition of Torture and Cruel Treatment
 
-Torture and cruel, inhuman, or degrading treatment are absolutely prohibited. No person, wherever located, may be subjected to any such treatment by an agent or officer of the Republic acting in that capacity, nor by any person acting at the direction or with the acquiescence of the Republic.
+Torture and cruel, inhuman, or degrading treatment are absolutely prohibited. No person, wherever located, may be subjected to such treatment by an agent or officer of the Republic, nor by any person acting at the direction or with the acquiescence of the Republic.
 
 ### §1.4 — Prohibition of Slavery and Forced Labor
 
-Slavery, involuntary servitude, and forced labor are absolutely prohibited. Labor required of a person convicted of an offense by a court, and jury service, military conscription, and civil emergency duties lawfully required of citizens, do not constitute forced labor under this provision. Labor for the benefit of a private party requires the person's consent.
+Slavery, involuntary servitude, and forced labor are absolutely prohibited. Lawful criminal sentences, jury service, military conscription, and civil emergency duties required by law do not constitute forced labor. Labor for the benefit of a private party requires the person's consent.
 
 ### §1.5 — Civil and Political Liberties
 
-Every person holds the rights of expression, thought, conscience, religion, association, assembly, petition, and movement. Government may regulate the time, place, and manner of expression and assembly only as necessary for public order and without discriminating on the basis of viewpoint. No government may compel expression, or suppress it directly or through intermediaries it controls or directs. Freedom of religion protects belief absolutely; it protects practice against limitation except where practice causes direct harm to others.
+Every person holds the rights of expression, thought, conscience, religion, association, assembly, petition, and movement. Government may regulate the time, place, and manner of expression and assembly only as necessary for public order and without viewpoint discrimination. No government may compel expression, or suppress it directly or through intermediaries. Freedom of religion protects belief absolutely; it protects practice against limitation except where practice causes direct harm to others.
 
 ### §1.6 — Equality and Non-Discrimination
 
-Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status. A distinction based on a listed characteristic requires compelling justification, except reasonable age distinctions based on developmental capacity, lifecycle considerations, or demonstrated actuarial risk, and economic distinctions extending greater benefits or assistance to persons of lesser means. Other distinctions must be rationally related to a legitimate governmental purpose.
-
-### §1.7 — Bodily Sovereignty
-
-Medical decisions belong to the individual and their chosen provider. Government may promote public health through information, licensing, and access, but may not compel medical decisions or penalize their exercise. No government may impose civil or criminal liability solely for receiving, assisting access to, or providing information about medical care lawful where received.
+Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status. A distinction based on a listed characteristic requires compelling justification, except reasonable age standards and economic distinctions extending assistance to persons of lesser means. Other distinctions must be rationally related to a legitimate governmental purpose.
 
 ### §1.8 — Privacy, Property, and Security of the Home
 
-Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home or search, surveil, or collect a person, communication, or data without consent or prior independent judicial authorization based on specific, articulable grounds. Encryption is lawful and may not be prohibited. Private property may be taken for public use only upon just compensation determined by an independent process.
+Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home, or search, surveil, or collect a person, communication, or data, without consent or prior independent judicial authorization on specific, articulable grounds. Encryption is lawful and may not be prohibited. Property may be taken for public use only upon just compensation determined independently.
 
 ### §1.9 — Democratic Participation
 
-Every citizen has the right to vote, stand for office, participate in the democratic processes of the Republic subject to constitutional eligibility requirements, and have their vote counted. No governmental action whose purpose or substantial effect is to suppress or reduce access to the franchise is constitutionally valid. The Republic shall make voting broadly accessible consistent with electoral security but may not compel voting.
+Every citizen, subject to constitutional eligibility requirements, has the right to vote, stand for office, participate in democratic processes, and have their vote counted. No governmental action whose purpose or substantial effect suppresses or reduces access to the franchise is valid. The Republic shall make voting broadly accessible but may not compel voting.
 
 ### §1.10 — Right to Bear Arms
 
@@ -55,15 +51,15 @@ Every person holds the right to keep and bear arms for lawful purposes, includin
 
 ### §1.11 — Habeas Corpus
 
-Every person detained by public authority has the right to challenge that detention before an independent and impartial court. The detaining authority must produce the person and justify the detention within the period established by statute, not to exceed 72 hours. No court may decline to hear an application for habeas corpus.
+Every person detained by public authority has the right to challenge that detention before an independent and impartial court. The detaining authority must produce the person and justify detention within the period established by statute, not to exceed 72 hours. No court may decline to hear an application for habeas corpus.
 
 ### §1.12 — Rights of the Accused and Fair Trial
 
-Every person accused of a criminal offense has the right to prompt notice of the charges; counsel of their choosing, or competent counsel at public expense if unable to afford representation; adequate time and means to prepare a defense; examination of witnesses; silence without adverse inference; and a speedy trial. No person may receive a greater penalty solely for exercising the right to trial. Bail may be imposed only as reasonably necessary to ensure appearance or protect public safety and may not be punitive. Where systematic or automated methodology generates evidence, the accused has the right to examine that methodology in full.
+Every person accused of a criminal offense has the right to prompt notice of the charges; counsel, at public expense if unable to afford representation; adequate time and means to prepare a defense; examination of witnesses; silence without adverse inference; and a speedy trial. No person may receive a greater penalty solely for exercising the right to trial. Bail may be imposed only as reasonably necessary to ensure appearance or protect public safety and may not be punitive. Where systematic or automated methodology generates evidence, the accused has the right to examine that methodology in full.
 
 ### §1.13 — Right to a Public Trial
 
-Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings may be closed only to the minimum extent necessary to protect a compelling interest identified by the court; the grounds and expected duration of closure must be published to the NRS. No record may remain sealed beyond 10 years from final judgment unless a court grants one extension, not exceeding five years, upon published findings of continuing necessity. Upon expiry of lawful sealing, the NRS Panel shall publish the record automatically. The accused or convicted person may consent to earlier publication, except to the extent necessary to protect the interests of another person.
+Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings may be closed only to the minimum extent necessary to protect a compelling interest identified by the court, with the grounds and expected duration published to the NRS. Sealing may not be indefinite. No record may remain sealed beyond 10 years from final judgment unless a court extends it once, by up to five years, on published findings of continuing necessity; the NRS Panel then publishes the record automatically.
 
 ### §1.14 — Freedom from Retroactive Criminal Law
 
@@ -71,35 +67,27 @@ No person may be convicted for conduct that was not criminal when committed, and
 
 ### §1.15 — Double Jeopardy
 
-No person may be tried or punished twice for the same offense following final acquittal or conviction. Offenses are the same where they arise from the same conduct and the later charge requires no element distinct from the earlier charge. A State and the Republic may each prosecute the same conduct under their respective laws, but sentences arising from substantially the same conduct run concurrently and only the greater term is served, with time served credited to both.
+No person may be tried or punished twice for the same offense following final acquittal or conviction. Offenses are the same where they arise from the same conduct and the later charge requires no element distinct from the earlier charge. A State and the Republic may each prosecute the same conduct, but sentences run concurrently and only the greater term is served, with time served credited to both.
 
-### §1.16 — Social Assistance Floor
+### §1.15.a — Conduct Lawful in Another Jurisdiction
 
-Every Inhabitant is entitled to access the Republic's social-state systems under Article XII. No government may exclude any person from social assistance on a ground prohibited by §1.6.
-
-### §1.17 — Education
-
-Every child has the right to education adequate for full civic participation. Parents have the right to direct the education of their children within public educational standards.
-
-### §1.17.a — Social Rights Implementation
-
-The Legislature shall establish adequate standards by statute for the rights protected by §§1.16 and 1.17. The EM shall assess those standards annually. The Republic shall take reasonable measures within available resources toward progressive fulfillment of these rights. An established adequacy standard may be reduced only during a certified Severe Revenue Contraction under §12.4 and only as that section permits.
+No State or Territory may impose criminal or civil liability on a person for conduct that was lawful where it occurred in another State or Territory, or for assisting such conduct or providing information about it.
 
 ### §1.18 — Environmental Obligations
 
-Government may not itself cause, or systematically permit through licensing, material environmental harm to persons or communities within its jurisdiction. The Legislature shall establish environmental protections. Government shall take reasonable measures proportionate to harms known or reasonably capable of identification; this provision does not guarantee a particular environmental outcome.
+Government may not cause or systematically permit material environmental harm to persons or communities. The Legislature shall establish environmental protections. Government shall take reasonable measures proportionate to known or identifiable harms; this provision does not guarantee a particular environmental outcome.
 
 ### §1.19 — Emergency Derogation
 
-No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, geographic scope, and duration, published immediately to the NRS. Either executive may issue such a declaration within their constitutional domain for no more than 14 days. Continuation beyond 14 days requires a statute enacted through the ordinary legislative process with a fixed expiration date, which may not be extended or renewed.
+No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, scope, and duration, published immediately to the NRS. Either executive may issue a declaration within their domain for no more than 14 days. Continuation beyond 14 days requires a statute with a fixed expiration date, which may not be extended or renewed.
 
-All emergency measures lapse automatically with the declaration under which they were imposed. Judicial review remains available throughout the emergency. Each declaration under this section shall receive independent judicial review within 48 hours of publication by the court designated by statute. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
+All emergency measures lapse automatically with the declaration. Judicial review remains available. Each declaration shall receive independent judicial review within 48 hours of publication. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
 
-The three Monitors retain their full constitutional authority throughout any emergency.
+The three Monitors retain full constitutional authority throughout any emergency.
 
 ### §1.19.a — Non-Derogable Rights
 
-These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.11); the right to a public trial (§1.13); no retroactive punishment (§1.14); and non-refoulement (§1.21). No emergency measure, regardless of its stated purpose, may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such application is constitutionally void.
+These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.11); the right to a public trial (§1.13); no retroactive punishment (§1.14); and non-refoulement (§1.21). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such application is void.
 
 ### §1.20 — Right to Seek Asylum
 
@@ -107,11 +95,7 @@ Every person who reaches the Republic's jurisdiction has the right to claim asyl
 
 ### §1.21 — Non-Refoulement
 
-No person, wherever located, may be returned, expelled, or extradited by the Republic, or by anyone acting at its direction or with its acquiescence, to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the nature of the receiving territory's government.
-
-### §1.22 — Family
-
-Every person holds the right to found a family.
+No person, wherever located, may be returned, expelled, or extradited by the Republic, or by anyone acting at its direction or with its acquiescence, to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the receiving government.
 
 ---
 
@@ -119,179 +103,173 @@ Every person holds the right to found a family.
 
 ### §2.1 — The Legat Consul — Domain and Term
 
-To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office. The Legat Consul holds authority over military command and force employment; foreign affairs, including treaty negotiation, recognition of foreign governments, and receipt of foreign delegations; external intelligence under §2.3; trade agreements under §2.4; relations with recognized indigenous nations under Article XVI, including recognition determinations under §16.4; and appointments within the Legat Consul's domain. During active military operations, operational decisions within that domain belong to the Legat Consul. The Legat Consul serves a term of four years. No person may serve more than 12 years as Legat Consul across all periods of service. A person who serves any portion of a term, by election or succession, may not seek election at the next election for that office. Upon expiration of the term, all authority transfers immediately to the incoming Legat Consul.
+To hold the office of Legat Consul, a person must have been a citizen for at least 7 years at the time of taking office. The Legat Consul holds authority over military command, force employment, foreign affairs, external intelligence (§2.3), trade agreements (§2.4), and indigenous nation relations (Article XVI). Operational decisions within this domain belong to the Legat Consul. The Legat Consul serves a four-year term. No person may serve more than 12 years as Legat Consul. A person who serves any portion of a term, by election or succession, may not seek election at the next election for that office. Upon term expiration, all authority transfers immediately to the incoming Legat Consul.
 
 ### §2.2 — Military Authorization Framework
 
-The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, military force requires legislative authorization. The Legat Consul shall notify both chambers and the Civic Consul promptly, and no later than 24 hours after any use of force. Legislative authorization expires unless affirmatively renewed at intervals defined by statute, not exceeding 12 months; expiration requires cessation of operations. Every operation must state and remain consistent with a purpose authorized by §14.1.
+The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, military force requires legislative authorization. The Legat Consul shall notify both chambers and the Civic Consul within 24 hours of any use of force. Legislative authorization expires unless affirmatively renewed at intervals defined by statute, not exceeding 12 months; expiration requires cessation of operations. Operations must state and serve a purpose authorized by §14.1.
 
 ### §2.3 — Consular Intelligence
 
-The Legat Consul directs external intelligence. No intelligence operation may be conducted against Republic citizens within Republic territory on the Legat Consul's authority; such operations require independent judicial authorization.
+The Legat Consul directs external intelligence. No intelligence operation against Republic citizens within Republic territory may be conducted on the Legat Consul's authority; such operations require independent judicial authorization.
 
 ### §2.3.a — Legat Consul Legislative Veto
 
-The Legat Consul may veto legislation that raises a genuine constitutional concern within the Legat Consul's security domain — military operations, external intelligence, treaty obligations, or border security — by returning the bill within 10 business days of final passage with written grounds. The veto may be used only once on any bill; a bill reintroduced and passed by both chambers in a subsequent session proceeds without further Legat Consul veto. Either Speaker may request an EM assessment of the domain question under §9.1. The Senate may override by 2/3 at any time during that session; absent override, the bill lapses for that session.
+The Legat Consul may veto legislation raising a genuine constitutional concern within the security domain — military operations, external intelligence, treaty obligations, or border security — by returning the bill within 10 business days of final passage with written grounds. The veto may be used once per bill; a bill repassed in a subsequent session proceeds without Legat Consul veto. Either Speaker may request an EM domain assessment. The Senate may override by 2/3 during that session; absent override, the bill lapses.
 
 ### §2.4 — Legat Consul International Agreements
 
-The Legat Consul negotiates and concludes treaties and trade agreements, subject to §3.6. The Legat Consul shall consult the Civic Consul on trade agreements, and on treaties and compacts with recognized indigenous nations, where their terms bear on domestic interests; the Civic Consul's response is advisory.
+The Legat Consul negotiates and concludes treaties and trade agreements, subject to §3.6. The Legat Consul shall consult the Civic Consul on trade and indigenous agreements bearing on domestic interests; the Civic Consul's response is advisory.
 
 ### §2.4.a — Domain Officers
 
-The Legat Consul may appoint domain officers to exercise defined portions of the Legat Consul's authority. Domain officers are nominated from the qualified pool maintained under §9.8 and confirmed by the Senate. Statute defines particular offices, qualifications, acting service, and administration, but may not transfer, enlarge, or diminish the Legat Consul's constitutional authority. The Legat Consul may dismiss a domain officer; the Senate may remove one by majority of full seated membership.
+The Legat Consul may appoint domain officers to exercise defined authority. Officers are nominated from the qualified pool (§9.8) and confirmed by the Senate. Statute defines offices, qualifications, acting service, and administration, but may not transfer, enlarge, or diminish the Legat Consul's constitutional authority. The Legat Consul may dismiss a domain officer; the Senate may remove one by majority of full seated membership.
 
 ### §2.5 — The Civic Consul — Domain and Term
 
-(1) The Civic Consul holds residual executive authority over all functions not enumerated to the Legat Consul.
+(1) The Civic Consul holds residual executive authority over functions not enumerated to the Legat Consul.
 
-(2) No person may serve more than 12 years as Civic Consul across all periods of service. A person who leaves the office of Civic Consul may not serve again as Civic Consul until one full Assembly electoral cycle has passed.
+(2) No person may serve more than 12 years as Civic Consul. A person leaving the office may not serve again until one full Assembly electoral cycle passes.
 
-(3) The Civic Consul's domestic authority includes domestic policy and regulatory frameworks, preparation of the civic-domain budget under §12.2, the civil service, and administration of the social state under Article XII.
+(3) The Civic Consul's domestic authority includes domestic policy, regulatory frameworks, civic-domain budget preparation (§12.2), civil service, and social state administration (Article XII).
 
-(4) The Civic Consul may declare a domestic emergency in response to natural disaster, public health crisis, or infrastructure failure, subject to Article I and renewable by Assembly approval at intervals defined by statute; absent a statutory interval, the constitutional default is 30 days. The Legat Consul has no authority in domestic emergencies except assistance under §2.14.b.
+(4) The Civic Consul may declare a domestic emergency in response to natural disaster, public health crisis, or infrastructure failure, subject to Article I and renewable by Assembly approval at intervals defined by statute (default 30 days). The Legat Consul has no authority in domestic emergencies except assistance under §2.14.b.
 
-(5) The Civic Consul has the right to be informed on matters within the Legat Consul's domain that bear on domestic interests or create domestic fiscal obligations. No classification or domain assertion may withhold such information.
+(5) The Civic Consul has the right to be informed on Legat domain matters creating domestic fiscal obligations or bearing on domestic interests. No classification or domain assertion may withhold such information.
 
-(6) The Civic Consul appoints ministers to lead the civic domain. Ministers serve at the Civic Consul's pleasure without confirmation. Their portfolios and administration are defined by statute. Upon a change of Civic Consul, outgoing ministers remain in caretaker service limited to maintaining existing policy until successors are appointed.
+(6) The Civic Consul appoints ministers to lead the civic domain, who serve at the Civic Consul's pleasure without confirmation. Portfolios are defined by statute. Upon a change of Consul, outgoing ministers remain in caretaker service to maintain existing policy until successors are appointed.
 
 ### §2.6 — Constructive Vote of No Confidence
 
-(1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly. A vote that does not elect a successor has no constitutional effect. The grounds are stated with the vote; the vote is a political act not subject to judicial review.
+(1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly. A vote not electing a successor has no effect. The vote is a political act not subject to judicial review.
 
-(2) Only a serving Assembly member may be elected Civic Consul. Upon election, that member's Assembly seat becomes vacant under §3.2. While serving as Civic Consul, the officeholder may sit, speak, and be held to account in the Assembly but has no legislative vote and is not counted toward membership, quorum, or voting thresholds.
+(2) Only a serving Assembly member may be elected Civic Consul. Upon election, the Assembly seat becomes vacant. While serving, the Civic Consul may sit, speak, and be held to account in the Assembly but has no legislative vote and does not count toward quorum or voting thresholds.
 
-(3) The Civic Consul serves until removal under this section, resignation, or exhaustion of the service limit under §2.5. Leaving office does not restore the Assembly seat previously vacated.
+(3) The Civic Consul serves until removal, resignation, or exhaustion of the service limit. Leaving office does not restore the vacated Assembly seat.
 
 (4) An Acting Civic Consul is not removable under this section.
 
 ### §2.6.a — Government Formation
 
-(1) The Assembly elects the Civic Consul by absolute majority within the period defined by statute following a vacancy; absent such statute, the constitutional default is 21 days.
+(1) The Assembly elects the Civic Consul by absolute majority within the statutory period following a vacancy (constitutional default: 21 days).
 
-(2) If the Assembly does not elect a Civic Consul within that period, the sitting Assembly Speaker becomes Acting Civic Consul by constitutional operation with authority limited to maintaining existing policy. If there is no sitting Speaker, the most senior Assembly member by continuous service acts instead; ties are resolved by age.
+(2) If the Assembly does not elect within that period, the Assembly Speaker becomes Acting Civic Consul by constitutional operation, with authority limited to maintaining existing policy. If there is no sitting Speaker, the most senior Assembly member by continuous service acts; ties are resolved by age.
 
-(3) Bills passed during acting service are presented to the Acting Civic Consul, who may not exercise the §2.7 veto but may issue a reconsideration notice under §2.7. The notice pauses the review period for 10 business days without further action, during which the Assembly may withdraw the bill by simple majority.
+(3) Bills passed during acting service are presented to the Acting Civic Consul, who may not exercise the §2.7 veto but may issue a reconsideration notice. The notice pauses the review period for 10 business days, during which the Assembly may withdraw the bill by simple majority.
 
-(4) The Acting Civic Consul administers a nominating ballot of the Assembly to identify candidates for a national election. The ballot requires no quorum and produces its result regardless of participation. The candidates receiving the most votes advance, being no fewer than two and no more than four; where a tie would cause more than four candidates to advance, greater continuous service controls, then age.
+(4) The Acting Civic Consul administers a nominating ballot of the Assembly. The ballot requires no quorum. The candidates receiving the most votes advance, being no fewer than two and no more than four; ties causing more than four to advance are resolved by continuous service, then age.
 
-(5) The Elections Panel administers a national ranked-choice election among the advancing candidates within the period defined by statute, with a constitutional default of 45 days and an absolute maximum of 90 days from the close of the nominating ballot.
+(5) The Elections Panel administers a national ranked-choice election among the advancing candidates within the statutory period (constitutional default: 45 days; absolute maximum: 90 days from the nominating ballot).
 
-(6) The winner becomes Civic Consul under §2.6; acting service ends upon installation.
+(6) The winner becomes Civic Consul; acting service ends upon installation.
 
 (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback. Once the national election begins, it proceeds to conclusion.
 
 ### §2.7 — Civic Consul Legislative Instruments
 
-The Civic Consul may, within 10 business days of final passage, return a bill with written grounds. The bill is suspended for one month, during which the Senate may override by 2/3. If not overridden, the bill returns to the Legislature and must again pass both chambers; upon repassage it is not subject to another Civic Consul veto, including after reintroduction in a later session.
+The Civic Consul may, within 10 business days of final passage, return a bill with written grounds. The bill is suspended for one month, during which the Senate may override by 2/3. If not overridden, the bill returns to the Legislature and must pass both chambers again; upon repassage it is not subject to another Civic Consul veto.
 
-Within the review period, the Civic Consul may issue a reconsideration notice identifying provisions recommended for revision or deletion, with reasons. Before the review period expires, the Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority. If the bill is not withdrawn, the review period resumes where it paused. A reconsideration notice may be issued once on any bill and is unavailable for emergency legislation.
+Within the review period, the Civic Consul may issue a reconsideration notice identifying provisions for revision or deletion. The Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority. If not withdrawn, the review period resumes. A reconsideration notice may be issued once per bill and is unavailable for emergency legislation.
 
-Both Consuls review concurrently from final passage. A bill that neither Consul vetoes within its review period becomes law by constitutional operation. The veto is unavailable for the annual budget, legislation implementing a constitutional obligation, or emergency legislation. A bill is emergency legislation only when so designated at final passage by 2/3 of the full seated membership of both chambers.
+Both Consuls review concurrently. A bill neither Consul vetoes within its review period becomes law. The veto is unavailable for the annual budget, legislation implementing a constitutional obligation, or emergency legislation. A bill is emergency legislation only when so designated at final passage by a 2/3 vote of the full seated membership of both chambers.
 
 ### §2.8 — Duty of Refusal
 
-No civil servant, military member, or person exercising specific federal authority may comply with an order from either executive that would require violation of this Constitution or statute. Lawful refusal creates no civil or criminal liability and may not support dismissal or penalty; any such penalty is void. The person may report the order to the EM, which may investigate.
+No civil servant, military member, or person exercising federal authority may comply with an executive order requiring violation of this Constitution or statute. Lawful refusal creates no liability and may not support penalty; any such penalty is void. The person may report the order to the EM.
 
 ### §2.9 — Legat Consul Succession and Incapacity
 
-(1) Full succession activates upon the Legat Consul's death, resignation, or removal. The Senate Speaker holds the office from that moment by constitutional operation.
+(1) Full succession activates upon the Legat Consul's death, resignation, or removal. The Senate Speaker holds the office from that moment.
 
-(2) Full succession vacates the successor's Senate seat, which is filled through the ordinary vacancy process. If the Senate Speaker is unable to serve, the most senior Senator by continuous service succeeds; ties are resolved by age.
+(2) Full succession vacates the successor's Senate seat. If the Senate Speaker is unable to serve, the most senior Senator by continuous service succeeds; ties are resolved by age.
 
-(3) Statute may extend the order of succession beyond subsection (2) and designate successors between the Senate Speaker and the senior-Senator fallback.
+(3) Statute may designate successors between the Senate Speaker and the senior-Senator fallback.
 
-(4) The military chain of command recognizes succession from the constitutional moment of transfer. Any order issued in the name of the prior Legat Consul after transfer is void.
+(4) The military chain of command recognizes succession from the moment of transfer. Orders issued in the prior Legat Consul's name after transfer are void.
 
-(5) A successor serves the remainder of the current term. Service through full succession counts toward the 12-year service limit under §2.1.
+(5) A successor serves the remainder of the term. Service through full succession counts toward the 12-year limit.
 
 ### §2.9.a — State Emergency Council
 
-(1) At each federal electoral period the Elections Panel draws an ordered list of the States by public lot and publishes it to the NRS. A State's head of state is the officer its constitution designates or, absent a designation, the presiding officer of its legislature.
+(1) At each federal electoral period, the Elections Panel publishes a public-lot ordered list of States to the NRS. A State's head of state is its constitutionally designated officer or, absent a designation, the presiding legislative officer.
 
-(2) If no one in the Legat Consul's order of succession can be reached, the head of state of the first reachable State on the list is the Emergency Designee. The Designee commands the military and acts to restore constitutional government.
+(2) If no one in the Legat Consul's succession order can be reached, the head of state of the first reachable State is the Emergency Designee. The Designee commands the military and acts to restore constitutional government.
 
-(3) The heads of state of the other reachable States form the State Emergency Council, which directs the Designee and may replace them. The Designee and the Council are bound by Article I.
+(3) The heads of state of the other reachable States form the State Emergency Council, which directs and may replace the Designee. The Designee and Council are bound by Article I.
 
-(4) Ten days after a declaration under §2.11 or the Designee taking office, whichever comes first, any federal seat or Consular office whose holder cannot be reached is vacant. The States and Territories may fill their vacant seats by emergency election, and the Consular offices are filled under §2.9 and §2.6.a.
+(4) Ten days after a §2.11 declaration or the Designee taking office, whichever is first, any federal seat or Consular office whose holder cannot be reached is vacant. States and Territories may fill vacant seats by emergency election; Consular offices are filled under §2.9 and §2.6.a.
 
-(5) A person above the Designee in the order of succession who can act resumes their office at once. The Council and the Designee end when each chamber has a majority of its seats filled and the Consular offices are filled under §2.9 and §2.6.a. Members seated after the failure join the order of succession only then.
+(5) A person higher in the succession order who can act resumes office immediately. The Council and Designee end when each chamber has a majority of seats filled and Consular offices are filled. Members seated after the failure join the succession order only then.
 
-(6) If that has not happened within six months after the Designee took office, the Council and the Designee end and §15.7.a applies.
+(6) If the Council and Designee have not ended within six months of the Designee taking office, they end at that time and §15.7.a applies.
 
 ### §2.10 — Executive Transparency
 
-Both executives shall publish their official acts to the NRS within the period defined by statute. This obligation includes orders, certifications, vetoes, determinations, objections, refusals, and other acts of non-consent. No executive may classify, delay, or suppress publication of an act this Constitution requires to be public. Every such record is permanently attributed to the responsible officer.
+Both executives shall publish their official acts to the NRS within the statutory period. This includes orders, certifications, vetoes, determinations, objections, and refusals. No executive may classify, delay, or suppress publication of an act required to be public. Every record is permanently attributed to the responsible officer.
 
 ### §2.11 — Emergency Governance
 
-When extraordinary circumstances prevent the ordinary functioning of constitutional government, either Consul, or a majority of the available members of either legislative chamber, may declare a continuity emergency, notwithstanding ordinary quorum requirements. The declaration states the circumstances, is published to the NRS, and is sent to every State and Territory.
+When extraordinary circumstances prevent ordinary constitutional government, either Consul, or a majority of available members of either chamber, may declare a continuity emergency. The declaration states the circumstances, is published to the NRS, and is sent to every State and Territory.
 
-During a continuity emergency, each chamber able to meet may act notwithstanding ordinary quorum requirements, and where one chamber cannot meet the other may act alone, but only as necessary to preserve essential governmental functions, including the administration of elections, and to restore normal constitutional governance. During a continuity emergency, a threshold this Constitution calculates from the full seated membership of a chamber is calculated from the members able to act. Emergency action may not amend this Constitution, extend any term or mandate except under §7.2.a, or derogate rights except under §1.19. Measures adopted under this section lapse when the emergency ends unless enacted through the ordinary legislative process. Where a Consul is unavailable, authority passes under §2.9, §2.16 and §2.9.a.
+During a continuity emergency, each chamber able to meet may act notwithstanding ordinary quorum requirements; where one chamber cannot meet, the other may act alone, solely to preserve essential governmental functions and restore constitutional governance. Chamber thresholds are calculated from the members able to act. Emergency action may not amend this Constitution, extend any term except under §7.2.a, or derogate rights except under §1.19. Measures lapse when the emergency ends unless enacted by statute. Where a Consul is unavailable, authority passes under §2.9, §2.16 and §2.9.a.
 
-A declaration lapses after 30 days unless renewed by the same process. Any member of either chamber or any Monitor may seek expedited SC review under §4.5(7).
-
-Emergency procedures yield to ordinary constitutional procedures as soon as those procedures can function. No emergency authority may be used to delay or obstruct that restoration.
+Declarations lapse after 30 days unless renewed by the same process. Any member of either chamber or any Monitor may seek expedited SC review. Emergency procedures yield to ordinary procedures as soon as functioning permits. No emergency authority may delay that restoration.
 
 ### §2.12 — Clemency
 
-Each Consul may grant clemency only for offenses within that Consul's constitutional domain: the Legat Consul for military-law and national-security offenses, and the Civic Consul for domestic federal offenses. No person may grant clemency to themselves; an attempted self-clemency is void.
+Each Consul may grant clemency only within their domain: the Legat Consul for military and national-security offenses, the Civic Consul for domestic federal offenses. Self-clemency is void.
 
-Every grant shall state its reasons. The granting Consul or either chamber may request an EM factual review; review does not suspend, condition, or invalidate the grant. Clemency does not bar any otherwise available constitutional, political, civil, or criminal remedy for misconduct connected with its exercise. Group amnesty requires legislation.
+Every grant shall state its reasons. The granting Consul or either chamber may request an EM factual review; review does not suspend or invalidate the grant. Clemency does not bar any constitutional, political, civil, or criminal remedy for misconduct connected with its exercise. Group amnesty requires legislation.
 
 ### §2.13 — Consular Removal
 
-The Legat Consul may be removed through either of two independent processes. Legislative removal requires 2/3 of both chambers in concurrent vote for constitutional breach, demonstrated permanent incapacity, or serious misconduct. Either chamber may request a JMC assessment, which is not a prerequisite to removal.
+The Legat Consul may be removed through two independent processes. Legislative removal requires a concurrent 2/3 vote of both chambers for constitutional breach, permanent incapacity, or serious misconduct. Either chamber may request a JMC assessment.
 
-Alternatively, a majority of the Senate may refer removal to a national recall referendum. The Legat Consul remains in authority while the referendum is pending and is removed upon certification of 60% approval with at least 55% citizen participation under §7.3. Succession then occurs immediately under §2.9. A failed recall referendum may not be initiated again during the same term.
+Alternatively, a Senate majority may refer removal to a national recall referendum. The Legat Consul remains in authority while the referendum is pending and is removed upon certification of 60% approval with at least 55% participation. Succession occurs immediately. A failed recall may not be re-initiated during the same term.
 
 ### §2.14 — Council of Ministers
 
-The Council of Ministers consists of the Legat Consul's domain officers and the Civic Consul's ministers and serves as the standing forum for cross-domain coordination and disputes. It may coordinate positions and make recommendations but exercises no executive authority. Pending resolution of a domain dispute, each Consul may continue only functions clearly within that Consul's established domain and the disputed action is suspended. Unresolved disputes over executive domain may be submitted by either Consul to the SC under §4.5. A summary record of each session is published to the NRS; the existence and general subject of a session may not be classified.
+The Council of Ministers consists of the Legat Consul's domain officers and the Civic Consul's ministers, serving as the standing forum for cross-domain coordination and disputes. It exercises no executive authority. Pending domain dispute resolution, each Consul may continue only functions clearly within their established domain; disputed actions are suspended. Unresolved disputes may be submitted to the SC. A summary record of each session is published to the NRS; the existence and general subject of a session may not be classified.
 
 ### §2.14.a — Cross-Domain Emergency Lead
 
-In a cross-domain emergency requiring unified operational authority, either Consul may propose a temporary operational lead. The designation requires concurrence of both Consuls and publication to the NRS. If they cannot agree, either may seek expedited SC resolution under §4.5. The designation coordinates operations only and does not transfer constitutional domain authority.
+In a cross-domain emergency requiring unified operational authority, either Consul may propose a temporary operational lead. Designation requires concurrence of both Consuls and NRS publication. If they cannot agree, either may seek expedited SC resolution. Designation coordinates operations only and does not transfer constitutional domain.
 
 ### §2.14.b — Cross-Domain Assistance
 
-Either Consul may request assistance from the other within the responding Consul's constitutional domain. The request shall state its purpose, scope, and duration and be published to the NRS. The requesting Consul controls the purpose and limits of assistance; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other.
-
-Assistance may provide non-coercive support but may not under this section be used to compel, detain, direct, surveil, monitor, or collect intelligence on persons within the Republic, or to commandeer civilian resources. Such authority requires §1.19 or another express constitutional source.
-
-Assistance remains subject to Article I, may not exceed 90 days without a fresh request and response, and disputes are resolved under §2.14. A foreign invasion or comparable cross-domain threat is governed by §2.14.a.
+Either Consul may request assistance from the other within the responding Consul's domain. The request shall state its purpose, scope, and duration and be published to the NRS. The requesting Consul controls the purpose; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other. Assistance may provide non-coercive support only. It may not be used to compel, detain, surveil, or collect intelligence on persons within the Republic, or to commandeer civilian resources, except as §1.19 or another express constitutional source allows. Assistance may not exceed 90 days without a fresh request and response.
 
 ### §2.15 — Federal Prosecution
 
-The Civic Consul is responsible for enforcement of federal law and may set general prosecution policy. The Legislature shall establish by statute a Federal Prosecution Service independent in individual prosecutorial decisions. Any executive direction concerning a specific prosecution must be in writing and published to the NRS when issued. The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers.
+The Civic Consul is responsible for enforcement of federal law and may set general prosecution policy. Statute shall establish a Federal Prosecution Service independent in individual prosecutorial decisions. Executive direction concerning a specific prosecution must be in writing and published to the NRS. The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers.
 
 ### §2.16 — Executive Incapacity
 
-(1) A Consul is temporarily unable to exercise authority upon the Consul's declaration or a determination by a majority of the Council of Ministers, with at least five participating. Acting authority then vests immediately in the Speaker of the Consul's chamber — the Assembly for the Civic Consul, the Senate for the Legat Consul — then in any successors designated by statute, then in the most senior member of that chamber by continuous service, ties resolved by age.
+(1) A Consul is temporarily unable to exercise authority upon their declaration or a determination by a majority of the Council of Ministers (at least five participating). Acting authority vests immediately in the Speaker of the Consul's chamber, then in statutory successors, then in the most senior chamber member by continuous service; ties resolved by age.
 
-(2) The Consul may declare the incapacity ended, restoring authority 24 hours after publication. If incapacity is again determined on substantially the same grounds within 90 days, the determination requires two-thirds of the deciding body, and restoration for the following 30 days requires approval by a majority of that body or relief from the SC.
+(2) The Consul may declare the incapacity ended, restoring authority 24 hours after publication. If incapacity is determined again on substantially the same grounds within 90 days, the determination requires 2/3 of the deciding body, and restoration for the following 30 days requires majority approval of that body or SC relief.
 
-(3) By simple majority of each chamber, the Legislature may extend that heightened-restoration period, but not beyond six months from the renewed determination. Continuation thereafter requires a fresh two-thirds incapacity determination.
+(3) The Legislature may extend that heightened-restoration period by simple majority of each chamber, not beyond six months from the renewed determination. Continuation thereafter requires a fresh 2/3 incapacity determination.
 
-(4) A Consul may seek expedited SC review of a heightened incapacity determination. Review is limited to lawful invocation and whether the stated grounds concern inability to exercise the office; political or policy disagreement alone is not incapacity.
+(4) A Consul may seek expedited SC review of a heightened incapacity determination, limited to lawful invocation and inability to exercise the office; policy disagreement is not incapacity.
 
-(5) If fewer than five Council members are available, legislators are selected by lot to bring the deciding body to five: from the Senate for a Civic Consul proceeding and from the Assembly for a Legat Consul proceeding. The same thresholds apply.
+(5) If fewer than five Council members are available, legislators are selected by lot to bring the deciding body to five: from the Senate for a Civic Consul proceeding, the Assembly for a Legat Consul proceeding.
 
-(6) A person next in an acting succession order may decline within 48 hours by NRS publication, whereupon authority passes immediately to the next qualified person. Failure to decline constitutes acceptance; the final available successor may not decline.
+(6) A person next in succession may decline within 48 hours by NRS publication; authority passes immediately. Failure to decline constitutes acceptance; the final available successor may not decline.
 
-(7) Incapacity suspends only the exercise of authority and does not remove the Consul from office. Death, resignation, removal, and other succession events remain effective.
+(7) Incapacity suspends only the exercise of authority. Death, resignation, and removal remain effective.
 
-(8) If an acting Consul becomes temporarily unable to serve, acting authority passes immediately to the next qualified successor.
+(8) If an acting Consul becomes unable to serve, acting authority passes immediately to the next qualified successor.
 
-(9) Acting service does not count toward any Consular service limit and neither extends nor suspends the acting officer's underlying electoral mandate; if that mandate ends, acting authority passes to the next qualified successor.
+(9) Acting service does not count toward service limits and neither extends nor suspends the underlying electoral mandate.
 
 ### §2.17 — Cooling-Off from Executive Service
 
-During any constitutional cooling-off period barring a person from holding or seeking either Consular office, that person may not serve in any executive capacity, including as a minister, domain officer, or Acting Consul. This is the express exception to §7.4(5) and does not bar otherwise lawful service outside the executive branch.
+During any constitutional cooling-off period barring a person from holding or seeking Consular office, that person may not serve in any executive capacity. This is the express exception to §7.4(5) and does not bar service outside the executive branch.
 
 ### §2.18 — Domestic Insurrection
 
-During armed insurrection against the constitutional order, the Council of Ministers shall remain convened. The Civic Consul shall report to the Assembly at intervals defined by statute for the duration of the response, as the Legat Consul reports to the Senate under §14.2. No required report may be withheld because operations remain ongoing.
+During armed insurrection against the constitutional order, the Council of Ministers remains convened. The Civic Consul shall report to the Assembly at statutory intervals for the duration of the response, as the Legat Consul reports to the Senate. No required report may be withheld because operations are ongoing.
 
 ---
 
@@ -877,7 +855,7 @@ Where the Elections Panel finds through audit that a State's election administra
 
 ### §12.1 — The Social State
 
-The Republic is a social state. Every Inhabitant is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child. The Legislature establishes the framework for each by statute.
+The Republic is a social state. Every Inhabitant is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child. The Legislature establishes the framework and adequacy standards for each by statute, and the EM assesses those standards annually. A standard may be reduced only during a certified Severe Revenue Contraction under §12.4. Parents may direct their children's education within public standards.
 
 ### §12.1.a — The Monetary Authority
 
@@ -919,7 +897,7 @@ The Legislature has exclusive authority to levy taxes, duties, and tariffs by st
 
 ### §12.4 — National Endowment
 
-The National Endowment is a constitutionally established reserve fund that backstops the Republic’s social state obligations under §12.1 during periods of Severe Revenue Contraction, as certified by the Monetary Authority. The Endowment operates independently of the annual budget process and is managed by the Monetary Authority as part of its constitutional mandate; the Monetary Authority’s sole obligation with respect to the Endowment is to preserve and grow it for social state backstop purposes. Disbursements are activated on Monetary Authority certification of Severe Revenue Contraction and continue until the Monetary Authority certifies the contraction has ended. Where a certified Severe Revenue Contraction continues beyond 12 months, continued Endowment disbursement requires authorization by statute, enacted through the ordinary legislative process and renewed at intervals not to exceed 12 months for the duration of the contraction. Where authorization is not renewed, disbursements cease and any adequacy-standard reduction under §1.17.a lapses with them. The Monetary Authority's certification of the contraction's end terminates disbursements and any such reduction regardless of authorization status.
+The National Endowment is a constitutionally established reserve fund that backstops the Republic’s social state obligations under §12.1 during periods of Severe Revenue Contraction, as certified by the Monetary Authority. The Endowment operates independently of the annual budget process and is managed by the Monetary Authority as part of its constitutional mandate; the Monetary Authority’s sole obligation with respect to the Endowment is to preserve and grow it for social state backstop purposes. Disbursements are activated on Monetary Authority certification of Severe Revenue Contraction and continue until the Monetary Authority certifies the contraction has ended. Where a certified Severe Revenue Contraction continues beyond 12 months, continued Endowment disbursement requires authorization by statute, enacted through the ordinary legislative process and renewed at intervals not to exceed 12 months for the duration of the contraction. Where authorization is not renewed, disbursements cease and any adequacy-standard reduction under §12.1 lapses with them. The Monetary Authority's certification of the contraction's end terminates disbursements and any such reduction regardless of authorization status.
 
 ### §12.5 — Internal Commerce
 

@@ -40,16 +40,30 @@ for a in source:
             if normalize(text_part) != normalize(p['text']) or old_ident != ident:
                 page = page[:match.start()] + block(p) + page[match.end():]
         else:
-            # A newly appended provision belongs after the last provision of its article.
-            prefix = ident.split('-')[0] + '-'
-            matches = list(re.finditer(r'  <div class="provision" id="' + re.escape(prefix) + r'[^\"]+">.*?\n  </div>', page, re.S))
-            if not matches:
-                raise ValueError('No article insertion point for ' + p['num'])
-            pos = matches[-1].end()
+            # A new provision belongs after the provision that precedes it in the source order of its
+            # article; the first provision of an article falls back to the last provision of that article.
+            index = a['provisions'].index(p)
+            previous = anchor(a['provisions'][index - 1]['num']) if index else None
+            pos = None
+            if previous:
+                previous_match = re.search(r'  <div class="provision" id="' + re.escape(previous) + r'">.*?\n  </div>', page, re.S)
+                if previous_match:
+                    pos = previous_match.end()
+            if pos is None:
+                prefix = ident.split('-')[0] + '-'
+                matches = list(re.finditer(r'  <div class="provision" id="' + re.escape(prefix) + r'[^\"]+">.*?\n  </div>', page, re.S))
+                if not matches:
+                    raise ValueError('No article insertion point for ' + p['num'])
+                pos = matches[-1].end()
             page = page[:pos] + '\n\n' + block(p) + page[pos:]
         if ident in aliases and f'id="{aliases[ident]}"' not in page:
             target = f'  <div class="provision" id="{ident}">'
             page = page.replace(target, f'  <span id="{aliases[ident]}" aria-hidden="true"></span>\n' + target, 1)
+# Remove annotated blocks for provisions the canonical JSON no longer contains.
+current_ids = {anchor(p['num']) for a in source for p in a['provisions']} | set(aliases.values())
+for match in list(re.finditer(r'\n*  <div class="provision" id="([^"]+)">.*?\n  </div>', page, re.S))[::-1]:
+    if match.group(1) not in current_ids:
+        page = page[:match.start()] + page[match.end():]
 # The preamble is optional constitutional source, not a permanent HTML fixture.
 # Remove stale legacy markup when the canonical JSON no longer contains it.
 if not any(a.get('preamble') for a in source):
