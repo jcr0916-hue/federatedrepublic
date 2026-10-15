@@ -4,7 +4,9 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 14, Month 1 · worldSeq through **158** · nrsSeq through **95**.
+The October 15 Y14 M1 regional batch adds NRS 096–098 and news 113–114. Arvane's Westport port equipment schedule and Orath's Dorven agricultural freight estimates provide routine administrative texture. Rhondel opens a local services consultation without constituting Kelvant approval of the proposed Korda merger. The Lakeland Gazette covers practical lake-shore questions; the Dorven Ledger asks how national candidates understand regional transport responsibilities. No candidate position, polling result, election day, shortage, merger or referendum result is invented.
+
+**Current published frontier:** Year 14, Month 1 · worldSeq through **160** · nrsSeq through **98**.
 
 The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 
