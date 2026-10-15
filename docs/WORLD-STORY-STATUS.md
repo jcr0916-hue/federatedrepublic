@@ -4,7 +4,9 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
-**Current published frontier:** Year 14, Month 1 · worldSeq through **157** · nrsSeq through **92**.
+**Current published frontier:** Year 14, Month 1 · worldSeq through **158** · nrsSeq through **95**.
+
+The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 
 The Year 14 Month 1 fiscal analysis in news 111 compares the three existing §12.6 options without recording a committee vote, new fiscal estimates, or an Executive Monitor finding. The story advances the public argument, not the legal timetable.
 
@@ -33,7 +35,7 @@ The October 2 evening batch adds NRS 065–068 and news 097. The Committee's wor
 <!-- WORLD-CLOCKS:START -->
 ### Structured clock dashboard
 
-- **Korda settlement ratification** [korda-ratification; open; none]: No timed obligation. The Elections Panel has authenticated LC-N1, LC-N2 and LC-N3 against the original certified boundaries, but has not yet certified the affected electorate or a ballot date. Korda's boundaries and status are unchanged; further §15.4 approvals and separate Statehood Audits remain outstanding. Next: Publish affected-electorate determination, ballot materials and a ratification date; do not imply a vote, merger or completed Statehood Audits.
+- **Korda settlement ratification** [korda-ratification; open; none]: The Elections Panel authenticated LC-N1, LC-N2 and LC-N3, then opened the affected-electorate verification docket. No final electorate, ballot language, or date has been certified; Korda and Kelvant remain unchanged, and further §15.4 approvals and separate Statehood Audits are outstanding. Next: Reconcile electorate records and publish final eligibility determination, ballot materials and date before any ratification; do not imply a vote or merger.
 - **Argent Ridge repeal** [argent-repeal; open; relative]: Up to 8 months from 13.09 day 12; calendar endpoint unresolved. Phase One signatures remain open; calendar convention unresolved. Next: Review signature-period progress and establish calendar conversion before dating the endpoint.
 - **LC election** [lc-election; scheduled; window]: Window spring Y14 (month bounds unset). Spring Y14 window; no exact date. Next: Review election scheduling and electoral obligations within the spring window.
 - **Lake Varda conference** [lake-varda-conference; open; none]: No timed obligation. The Valedon conference opened in Y14 M1 on civilian navigation, rescue coordination and risk reduction. No common verdict on earlier incidents, binding agreement or Sunderland participation is recorded. Next: Track working discussions or agreed technical text, keeping any future treaty and its required ratification separate from the opening session.
