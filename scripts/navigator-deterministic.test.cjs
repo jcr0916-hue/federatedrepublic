@@ -238,7 +238,14 @@ test('Navigator context packet expands explicit constitutional relationships wit
 
   assert.match(packet.packet, /SOURCE PACKET — generated deterministically from constitution_data\.json/);
   assert.match(packet.packet, /PRIMARY 1 \[§2\.3\.a\] Legat Consul Legislative Veto/);
-  assert.match(packet.packet, /\[§9\.1\]/,
+  assert.match(packet.packet, /Either Speaker may request an EM domain assessment/);
+  const crossTarget = provisions.find(p => p.num === '§2.4');
+  const crossPacket = buildNavigatorContextPacket(
+    'How are treaties and trade agreements concluded?',
+    [{ provision: crossTarget, score: 20 }],
+    provisions
+  );
+  assert.match(crossPacket.packet, /\[§3\.6\]/,
     'the target provision\'s explicit external cross-reference should be supplied');
   assert.doesNotMatch(packet.packet, /\[§15\.9\]/,
     'an unrelated constitutional provision should not be supplied');

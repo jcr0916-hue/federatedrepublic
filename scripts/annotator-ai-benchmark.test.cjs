@@ -35,7 +35,10 @@ test('Expanded Annotator benchmark covers observed packet-era failure modes', ()
   const legat = buildContextPacket('§2.3.a');
   assert.match(legat.packet, /\[§2\.7\] Civic Consul Legislative Instruments/);
   assert.match(legat.packet, /bill is suspended for one month/i);
-  assert.match(legat.packet, /\[§9\.1\]/);
+  assert.match(legat.packet, /Either Speaker may request an EM domain assessment/);
+
+  const treaties = buildContextPacket('§2.4');
+  assert.match(treaties.packet, /\[§3\.6\]/, 'explicit cross-reference should be included even outside Article II');
 
   const statehood = buildContextPacket('§15.5.a');
   assert.match(statehood.packet, /\[§15\.2\] The Statehood Audit/);
