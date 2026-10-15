@@ -206,7 +206,7 @@ const updates = [
     category: "world",
     badge: "The World",
     title: "Thirty more days, and a reason on the record",
-    blurb: "The Senate extended its review of a licensing bill this week — the only extension it gets, and it had to say why in public. Nobody covered it. That's roughly the point.",
+    blurb: "The Senate extended its review of a licensing bill this week — the only extension it gets, and it said why in public anyway. Nobody covered it. That's roughly the point.",
     href: "torenthia-news-056.html",
   },
   {

@@ -7,7 +7,7 @@
 > because the hand-written version drifted 25% out of sync and invented a threshold that
 > does not exist in the constitution.
 >
-> **20 articles · 178 provisions**
+> **20 articles · 177 provisions**
 
 ---
 
@@ -15,7 +15,7 @@
 
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.21  (20 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.18  (24 provisions)
-- **Article III — The Legislature**  ·  §3.1–§3.11  (12 provisions)
+- **Article III — The Legislature**  ·  §3.1–§3.11  (11 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (9 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (4 provisions)
 - **Article VI — Immigration and Residency**  ·  §6.1–§6.3.a  (4 provisions)
@@ -40,7 +40,7 @@
 
 ### §1.1 — Right to Courts and Legal Remedy
 
-Every person may seek legal remedy for any rights violation before an independent and impartial court. This right is self-executing: where the Legislature has not funded adequate legal aid, courts appoint counsel at public expense.
+Every person may seek legal remedy for any violation of their rights under this Constitution, whether by act or omission, before an independent and impartial court. This right is self-executing: where the Legislature has not funded adequate legal aid, courts appoint counsel at public expense.
 
 
 ### §1.2 — Individual Sovereignty Floor
@@ -333,15 +333,15 @@ During armed insurrection against the constitutional order, the Council of Minis
 The Legislature comprises the Assembly and the Senate. All legislation originates in the Assembly.
 
 - **Time limits:**
-  - The Senate may review and amend an Assembly-passed bill within its subject matter and must act within 90 days or any shorter period defined by statute
-  - By majority of full seated membership, the Senate may once extend review for up to 30 days upon stated cause
+  - The Senate may review and amend an Assembly-passed bill and must act within 90 days, or any shorter period defined by statute
+  - By majority of its full seated membership, the Senate may once extend review by up to 30 days
 
 ### §3.2 — The Assembly
 
-(1) Members of the federal Assembly are elected by Ranked Choice Voting. States determine their own Assembly district arrangements, subject to §3.3.
+(1) States determine their own Assembly district arrangements, subject to §3.3. Single-member districts use majority-based Ranked Choice Voting; multi-member districts use proportional Ranked Choice Voting.
 
 - **Time limits:**
-  - (5) Mid-term vacancies are filled by special election administered by the Elections Panel within the period defined by statute, not exceeding 90 days
+  - (5) Mid-term Assembly vacancies are filled by special election within the period defined by statute, not exceeding 90 days
 - **Cross-refs:** §3.3
 
 ### §3.3 — Electoral Districts
@@ -352,35 +352,32 @@ States draw their own Assembly district maps subject to five criteria: substanti
 
 ### §3.4 — Legislative Standards
 
-Every bill must address a single clearly defined subject. Any member or either chamber may request an LM assessment of compliance.
+Every bill must address a single clearly defined subject. The full text of a bill must be published to the NRS for the minimum period defined by statute before final passage; substantial amendment restarts that period.
 
 - **Thresholds:**
-  - Each chamber may expel a member by 2/3 of full seated membership, effective immediately, and may request an LM assessment
+  - Each chamber may expel a member by 2/3 of full seated membership, effective immediately
 
 ### §3.5 — The Senate
 
-(1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. (2) No senator may serve more than two consecutive terms without sitting out one full term; upon return, a senator may serve up to one additional term, after which no further Senate service is permitted.
+(1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. A mid-term vacancy is filled as the State provides, within the period defined by statute, not exceeding 90 days.
 
-- **Cross-refs:** §15.3, §3.6
+- **Time limits:**
+  - A mid-term vacancy is filled as the State provides, within the period defined by statute, not exceeding 90 days
 
-### §3.6 — Treaty and Trade Agreement Ratification
+### §3.6 — Treaties and Trade Agreements
 
-Treaties and compact agreements require ratification by 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by a majority of both chambers.
+Treaties and compact agreements require ratification by 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by an absolute majority of the full seated membership of both chambers.
 
 - **Thresholds:**
   - Treaties and compact agreements require ratification by 2/3 of the full seated Senate
-  - Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days
+  - Trade agreements concluded by the Legat Consul take effect upon approval by an absolute majority of the full seated membership of both chambers
+  - Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days of the notice
 - **Time limits:**
-  - Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days
-
-### §3.6.a — Classification and Dispute Resolution
-
-If the Senate disputes the Legat Consul's classification of an international instrument as a trade agreement, the instrument is treated as a treaty pending resolution. The Senate or Legat Consul may seek expedited judicial determination.
-
+  - Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days of the notice
 
 ### §3.7 — Legislative Process and Passage
 
-Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher constitutional thresholds apply to the full seated membership of the chamber or chambers specified.
+Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher thresholds are counted from the full seated membership of the chamber or chambers specified.
 
 - **Thresholds:**
   - Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise
@@ -388,7 +385,7 @@ Legislation requires an absolute majority of the full seated membership of both 
 
 ### §3.8 — Legislative Oversight
 
-The Legislature may not withhold legislative records, deliberations, votes, or draft legislation from the Monitors. The LM shall review enacted laws for constitutional compliance and may review pending legislation upon request by a member; it may not initiate pre-enactment review on its own motion.
+The Legislature may not withhold records, deliberations, votes, or draft legislation from the Monitors. The LM may review pending legislation only upon request by a member.
 
 
 ### §3.9 — Independent Statutory Agencies
@@ -398,9 +395,8 @@ The Legislature may establish independent agencies outside the authority of eith
 
 ### §3.10 — Federal Legislative Competence
 
-The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments and are allocated in accordance with §15.8 and §15.8.a.
+The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments.
 
-- **Cross-refs:** §15.8, §15.8.a
 
 ### §3.11 — Delegation of Authority
 
@@ -588,7 +584,7 @@ No person may simultaneously hold office in more than one branch of government, 
 
 ### §7.9 — Inviolability of Electoral Mandates
 
-An elected constitutional mandate may not be shortened, suspended, or terminated except through a mechanism expressly provided or authorized by this Constitution. No additional mechanism for terminating an elected mandate, including popular recall, may be established by statute.
+An elected constitutional mandate may not be shortened, suspended, or terminated except through a mechanism expressly provided or authorized by this Constitution.
 
 
 ### §7.10 — Ethics and Financial Disclosure
@@ -1320,9 +1316,10 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §2.15 | Federal Prosecution | The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers |
 | §2.16 | Executive Incapacity | (3) The Legislature may extend that heightened-restoration period by simple majority of each chamber, not beyond six months from the renewed determination |
 | §2.16 | Executive Incapacity | Continuation thereafter requires a fresh 2/3 incapacity determination |
-| §3.4 | Legislative Standards | Each chamber may expel a member by 2/3 of full seated membership, effective immediately, and may request an LM assessment |
-| §3.6 | Treaty and Trade Agreement Ratification | Treaties and compact agreements require ratification by 2/3 of the full seated Senate |
-| §3.6 | Treaty and Trade Agreement Ratification | Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days |
+| §3.4 | Legislative Standards | Each chamber may expel a member by 2/3 of full seated membership, effective immediately |
+| §3.6 | Treaties and Trade Agreements | Treaties and compact agreements require ratification by 2/3 of the full seated Senate |
+| §3.6 | Treaties and Trade Agreements | Trade agreements concluded by the Legat Consul take effect upon approval by an absolute majority of the full seated membership of both chambers |
+| §3.6 | Treaties and Trade Agreements | Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days of the notice |
 | §3.7 | Legislative Process and Passage | Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise |
 | §3.7 | Legislative Process and Passage | Where this Constitution requires a simple majority of a chamber, it means a majority of members voting, a quorum being present |
 | §4.2 | Judicial Appointments and Independence | (3) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight |

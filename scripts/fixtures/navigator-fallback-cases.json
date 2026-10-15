@@ -224,7 +224,7 @@
     "question": "Who resolves whether an international agreement is really a treaty rather than a trade agreement?",
     "expectedSufficient": true,
     "required": [
-      "§3.6.a"
+      "§3.6"
     ]
   },
   {

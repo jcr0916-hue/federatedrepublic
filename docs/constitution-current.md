@@ -5,7 +5,7 @@
 > To change anything here, change `constitution_data.json` and re-run the script.
 > This is the complete text; nothing is truncated or summarized.
 >
-> **20 articles · 178 provisions**
+> **20 articles · 177 provisions**
 
 thefederatedrepublic.org
 
@@ -15,7 +15,7 @@ thefederatedrepublic.org
 
 ### §1.1 — Right to Courts and Legal Remedy
 
-Every person may seek legal remedy for any rights violation before an independent and impartial court. This right is self-executing: where the Legislature has not funded adequate legal aid, courts appoint counsel at public expense. Procedural costs may not make the right to a remedy illusory.
+Every person may seek legal remedy for any violation of their rights under this Constitution, whether by act or omission, before an independent and impartial court. This right is self-executing: where the Legislature has not funded adequate legal aid, courts appoint counsel at public expense. Procedural costs may not make the right to a remedy illusory.
 
 ### §1.2 — Individual Sovereignty Floor
 
@@ -277,85 +277,71 @@ During armed insurrection against the constitutional order, the Council of Minis
 
 ### §3.1 — The Legislature
 
-The Legislature comprises the Assembly and the Senate. All legislation originates in the Assembly. The Senate may review and amend an Assembly-passed bill within its subject matter and must act within 90 days or any shorter period defined by statute. By majority of full seated membership, the Senate may once extend review for up to 30 days upon stated cause. Failure to act by the applicable deadline constitutes approval. Neither chamber may indefinitely delay business constitutionally assigned to it.
+The Legislature comprises the Assembly and the Senate. All legislation originates in the Assembly. The Senate may review and amend an Assembly-passed bill and must act within 90 days, or any shorter period defined by statute. By majority of its full seated membership, the Senate may once extend review by up to 30 days. Failure to act by the applicable deadline constitutes approval.
 
 ### §3.2 — The Assembly
 
-(1) Members of the federal Assembly are elected by Ranked Choice Voting. States determine their own Assembly district arrangements, subject to §3.3. Single-member districts use majority-based Ranked Choice Voting; multi-member districts use proportional Ranked Choice Voting. A State or Territory allocated only one seat constitutes a single electoral district. Seats are allocated by the Webster method based on population, with a minimum of one seat per State and Territory. The constituency divisor is established and may be adjusted by statute, subject to the minimum-seat guarantee.
+(1) States determine their own Assembly district arrangements, subject to §3.3. Single-member districts use majority-based Ranked Choice Voting; multi-member districts use proportional Ranked Choice Voting. Seats are allocated by the Webster method based on population, with a minimum of one seat per State and Territory, using a constituency divisor set and adjustable by statute.
 
-(2) The census, conducted every ten years by a statutory independent agency, is the basis for reapportionment. The LM audits the census and allocation process.
+(2) The census, conducted every ten years by a statutory independent agency, is the basis for reapportionment.
 
-(3) The Assembly selects a Speaker from its own members by a method it establishes, provided the Speaker holds the support of a majority of full seated membership. The Speakership is a standing office. Quorum is a majority of full seated membership. The Assembly establishes its own internal procedures.
+(3) The Assembly selects a Speaker from its own members by a method it establishes, provided the Speaker holds the support of a majority of full seated membership. Quorum is a majority of full seated membership. The Assembly establishes its own internal procedures.
 
-(4) Members serve two-year terms. No member may serve more than six consecutive terms without sitting out one full electoral cycle; upon return, a member may serve up to three additional terms, after which no further Assembly service is permitted.
+(4) Members serve two-year terms. No person may serve more than six terms in the Assembly.
 
-(5) Mid-term vacancies are filled by special election administered by the Elections Panel within the period defined by statute, not exceeding 90 days.
+(5) Mid-term Assembly vacancies are filled by special election within the period defined by statute, not exceeding 90 days.
 
-(6) A State may establish a political recall process for its Assembly members and senators, with the final decision vested in the State legislature or eligible voters. No executive officer, administrative body, or court may alone recall a member. A recalled member's seat becomes vacant under this Constitution.
+(6) A State or Territory may establish a recall process for its Assembly members, and a State for its senators, with the final decision vested in its legislature or governing authority or its eligible voters. No executive officer, administrative body, or court may alone recall a member.
 
 ### §3.3 — Electoral Districts
 
-States draw their own Assembly district maps subject to five criteria: substantially equal population per representative, accounting for the number of members elected by each district; geographic contiguity; compliance with §1.6 non-discrimination; no material dilution of minority voting power; and reasonable compactness. Voter political affiliation data, voting history data, and incumbent residence may not be used as criteria in drawing district boundaries. Racial composition and other protected-class data may be considered only to the extent reasonably necessary to comply with §1.6 and the prohibition on material dilution of minority voting power. The LM reviews all maps for compliance. The Elections Panel shall address each finding of non-compliance by a published determination. Where the Panel determines a map non-compliant and an election will occur before the State adopts a compliant map, the Panel draws an interim compliant map for that election, which is retired when the State adopts a compliant map. Territorial districts are drawn by the Elections Panel under the same criteria. Any citizen, State government, or parliamentary minority may challenge a map before the SC.
+States draw their own Assembly district maps subject to five criteria: substantially equal population per representative, accounting for the number of members elected by each district; geographic contiguity; compliance with §1.6 non-discrimination; no material dilution of minority voting power; and reasonable compactness. Voter political affiliation data, voting history data, and incumbent residence may not be used as criteria in drawing district boundaries. Protected-class data may be used only as reasonably necessary to comply with §1.6 and the dilution prohibition. The Elections Panel shall address each finding of non-compliance by a published determination. Where the Panel determines a map non-compliant and an election will occur before the State adopts a compliant map, the Panel draws an interim compliant map for that election, which is retired when the State adopts a compliant map. Territorial districts are drawn by the Elections Panel under the same criteria. Any citizen or State government may challenge a map before the SC.
 
 ### §3.4 — Legislative Standards
 
-Every bill must address a single clearly defined subject. Any member or either chamber may request an LM assessment of compliance. The full text of a bill must be published to the NRS for the minimum period defined by statute before final passage; substantial amendment restarts that period.
+Every bill must address a single clearly defined subject. The full text of a bill must be published to the NRS for the minimum period defined by statute before final passage; substantial amendment restarts that period.
 
-Each chamber operates as a full-time legislative body. Its sitting schedule for each electoral cycle, and every revision, is published to the NRS. No recess may be used to defeat or delay a constitutional duty or deadline. Emergency sessions may be called by either Consul or by petition of one-third of either chamber.
+Each chamber operates as a full-time legislative body and publishes its sitting schedule, and any revision, to the NRS. No recess may be used to defeat or delay a constitutional duty or deadline. Emergency sessions may be called by either Consul or by petition of one-third of either chamber.
 
-The Legislature shall maintain an ethics process capable of sanctioning and referring members. Each chamber may expel a member by 2/3 of full seated membership, effective immediately, and may request an LM assessment.
+The Legislature shall maintain an ethics process capable of sanctioning and referring members. Each chamber may expel a member by 2/3 of full seated membership, effective immediately.
 
 ### §3.5 — The Senate
 
-(1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms.
+(1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. A mid-term vacancy is filled as the State provides, within the period defined by statute, not exceeding 90 days.
 
-(2) No senator may serve more than two consecutive terms without sitting out one full term; upon return, a senator may serve up to one additional term, after which no further Senate service is permitted.
+(2) No person may serve more than two terms in the Senate.
 
-(3) The Senate Speaker is elected by senators and may not serve more than two consecutive full Senate terms as Speaker without sitting out one full Senate term.
+(3) Senators elect the Senate Speaker. The Senate defines its own internal procedures.
 
-(4) The Senate defines its own internal procedures.
+### §3.6 — Treaties and Trade Agreements
 
-(5) The Senate holds exclusive authority over:
+Treaties and compact agreements require ratification by 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by an absolute majority of the full seated membership of both chambers. Neither chamber may amend the terms of a concluded international agreement. If the Senate disputes the Legat Consul's classification of an instrument as a trade agreement, it is treated as a treaty pending resolution, and the Senate or Legat Consul may seek expedited SC determination.
 
-— judicial confirmation;
-
-— treaty ratification under §3.6;
-
-— and State-remediation determinations under §15.3.
-
-### §3.6 — Treaty and Trade Agreement Ratification
-
-Treaties and compact agreements require ratification by 2/3 of the full seated Senate. Trade agreements concluded by the Legat Consul take effect upon approval by a majority of both chambers. Neither chamber may amend the terms of a concluded international agreement.
-
-The Legat Consul may initiate treaty withdrawal by notice published to the NRS. Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days; absent affirmation, the notice lapses. Treaties with recognized indigenous nations under Article XVI may not be unilaterally withdrawn.
-
-### §3.6.a — Classification and Dispute Resolution
-
-If the Senate disputes the Legat Consul's classification of an international instrument as a trade agreement, the instrument is treated as a treaty pending resolution. The Senate or Legat Consul may seek expedited judicial determination.
+The Legat Consul may initiate treaty withdrawal by notice. Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days of the notice; absent affirmation, the notice lapses. Treaties with recognized indigenous nations under Article XVI may not be unilaterally withdrawn.
 
 ### §3.7 — Legislative Process and Passage
 
-Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher constitutional thresholds apply to the full seated membership of the chamber or chambers specified. Where this Constitution requires a simple majority of a chamber, it means a majority of members voting, a quorum being present.
-
-If the Legislature fails for one year to enact legislation expressly required by this Constitution, the LM shall publish a finding of non-compliance and the obligation becomes justiciable in the SC. Where the failure directly impairs an Article I right, an affected person may seek direct constitutional relief.
+Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise. Higher thresholds are counted from the full seated membership of the chamber or chambers specified. Where this Constitution requires a simple majority of a chamber, it means a majority of members voting, a quorum being present.
 
 ### §3.8 — Legislative Oversight
 
-The Legislature may not withhold legislative records, deliberations, votes, or draft legislation from the Monitors. The LM shall review enacted laws for constitutional compliance and may review pending legislation upon request by a member; it may not initiate pre-enactment review on its own motion.
+The Legislature may not withhold records, deliberations, votes, or draft legislation from the Monitors. The LM may review pending legislation only upon request by a member.
 
 ### §3.9 — Independent Statutory Agencies
 
 The Legislature may establish independent agencies outside the authority of either executive. The Legislature may not impair the independence of a function this Constitution assigns to an independent agency.
 
-Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. Principal decision-makers exercising a constitutionally assigned independent function shall serve fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements must be neutral and may not be designed to exclude candidates because of political or policy views or prior criticism of government.
+Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. Principal decision-makers exercising a constitutionally assigned independent function shall serve fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements may not be designed to exclude candidates because of political or policy views or prior criticism of government.
 
 ### §3.10 — Federal Legislative Competence
 
-The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments and are allocated in accordance with §15.8 and §15.8.a. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where a valid federal law enacted within federal competence conflicts with State or local law, federal law prevails to the extent of the conflict. The Legislature may establish minimum standards only where this Constitution assigns the Republic responsibility for the subject or where necessary to secure Article I rights or another express constitutional obligation. The Legislature may not direct State or local institutions as instruments of federal administration except where this Constitution expressly provides otherwise. Where this Constitution directs that a federal function, standard, procedure, or framework be established, defined, or regulated, that obligation is fulfilled by statute unless this Constitution specifies otherwise. Where this Constitution assigns a function to a legislative body, independent agency, or other institution, the Legislature shall maintain an institution capable of performing it. No executive or administrative act may substitute for legislation where this Constitution requires statutory action.
+The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where a valid federal law enacted within federal competence conflicts with State or local law, federal law prevails to the extent of the conflict. The Legislature may establish minimum standards only where this Constitution assigns the Republic responsibility for the subject or where necessary to secure Article I rights or another express constitutional obligation. The Legislature may not direct State or local institutions as instruments of federal administration except where this Constitution expressly provides otherwise.
+
+Where this Constitution directs that a federal function, standard, procedure, or framework be established, defined, or regulated, the obligation is fulfilled by statute unless otherwise specified. Where this Constitution assigns a function to a legislative body, independent agency, or other institution, the Legislature shall maintain an institution capable of performing it. No executive or administrative act may substitute for required legislation.
 
 ### §3.11 — Delegation of Authority
 
-The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation shall state its scope, conditions, and duration. Delegation does not divest the Legislature of that authority; statute prevails over any conflicting exercise of delegated authority. The Legislature may unilaterally rescind a delegation at any time. Exercises of delegated authority shall be attributable in the NRS to both the legislative grant and the exercising authority. The EM shall audit delegated executive authority and publish its findings.
+The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation shall state its scope, conditions, and duration. Delegation does not divest the Legislature of that authority: statute prevails over any conflicting exercise of delegated authority, and the Legislature may rescind a delegation at any time. Each exercise of delegated authority is published to the NRS identifying the delegating statute.
 
 ---
 
@@ -591,7 +577,7 @@ No person may simultaneously hold office in more than one branch of government, 
 
 ### §7.9 — Inviolability of Electoral Mandates
 
-An elected constitutional mandate may not be shortened, suspended, or terminated except through a mechanism expressly provided or authorized by this Constitution. No additional mechanism for terminating an elected mandate, including popular recall, may be established by statute.
+An elected constitutional mandate may not be shortened, suspended, or terminated except through a mechanism expressly provided or authorized by this Constitution.
 
 ### §7.10 — Ethics and Financial Disclosure
 
