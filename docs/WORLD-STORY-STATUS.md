@@ -4,6 +4,14 @@ The structured chronology and clock registries in `_data/worldChronology.json` a
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
 
+## Election and local-news coverage — standing editorial reminder
+
+The **spring Year 14 Legat Consul election** is a live story, not background decoration. Certified candidates are **Ines Carrow, Seren Mak, Tobias Vael, and Pell Sandris**. The published window is spring Y14, without a fixed polling day. Carry campaign reactions, local issue reporting and ordinary constituency concerns forward alongside the Korda settlement, Lake Varda negotiations and fiscal equalization. Attribute positions to the established reporting; do not invent polls, results or dates.
+
+Use distinctive local perspectives instead of making every story national: **The Korda Press** (Mara Iset) covers Territory residents and the settlement from within Korda; **Kelvant/Rhondel** voices should receive their own coverage of corridor services, the proposed merger and election consequences. Confirm the canonical name/byline of any Kelvant outlet before publishing under its masthead, rather than inventing one. Local stories can also examine campaign transport, jobs, housing and district services, without making each item a constitutional crisis.
+
+Rotate stories across the four candidates, jurisdictions and ordinary policy questions; distinguish reporting from editorial commentary, official acts from campaigning, and the proposed Korda settlement from an approved boundary change.
+
 **Current published frontier:** Year 14, Month 1 · worldSeq through **158** · nrsSeq through **95**.
 
 The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
