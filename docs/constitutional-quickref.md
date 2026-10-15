@@ -272,10 +272,10 @@ Each Consul may grant clemency only within their domain: the Legat Consul for mi
 
 ### §2.13 — Consular Removal
 
-The Legat Consul may be removed through two independent processes. Legislative removal requires a concurrent 2/3 vote of both chambers for constitutional breach, permanent incapacity, or serious misconduct.
+The Legat Consul may be removed through two independent processes. Legislative removal requires a concurrent 2/3 vote of both chambers for serious misconduct, abuse of office, or permanent incapacity; the Legislature's determination that grounds exist is final.
 
 - **Thresholds:**
-  - Legislative removal requires a concurrent 2/3 vote of both chambers for constitutional breach, permanent incapacity, or serious misconduct
+  - Legislative removal requires a concurrent 2/3 vote of both chambers for serious misconduct, abuse of office, or permanent incapacity
 
 ### §2.14 — Council of Ministers
 
@@ -416,12 +416,12 @@ The Republic's judiciary consists of district courts, appellate courts, and the 
 
 ### §4.2 — Judicial Appointments and Independence
 
-(1) The Civic Consul nominates inferior court judges from the Judicial Pool maintained by the Elections Panel under §9.8. The Civic Consul must nominate within 90 days of a vacancy or any shorter period defined by statute.
+(1) The Civic Consul nominates inferior court judges from the Judicial Pool under §9.8 within 90 days of a vacancy, or any shorter period defined by statute. The Senate confirms by a majority of its full seated membership.
 
 - **Thresholds:**
-  - (3) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight
+  - (3) The Legislature may remove an inferior court judge by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity
 - **Time limits:**
-  - The Civic Consul must nominate within 90 days of a vacancy or any shorter period defined by statute
+  - 8 within 90 days of a vacancy, or any shorter period defined by statute
 - **Cross-refs:** §9.8
 
 ### §4.3 — The Supreme Court
@@ -430,24 +430,22 @@ The Supreme Court consists of the number of justices established by statute, nev
 
 - **Thresholds:**
   - Altering the number of seats requires 2/3 of both chambers
-- **Time limits:**
-  - A newly created seat expires if not filled within 18 months
 
 ### §4.3.a — Supreme Court Justice Removal
 
-A Supreme Court justice may be removed only for constitutional breach in judicial office, demonstrated permanent incapacity, or serious misconduct. Judicial disagreement does not constitute cause.
+A Supreme Court justice may be removed by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity; the Legislature's determination that grounds exist is final. Disagreement with a decision is not grounds for removal.
 
 - **Thresholds:**
-  - Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS
+  - A Supreme Court justice may be removed by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity
 
 ### §4.4 — Supreme Court Selection
 
-(1) SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.8. Any pool member meeting the statutory qualifications for Supreme Court appointment is eligible.
+(1) The Civic Consul nominates SC justices from the Judicial Pool under §9.8. Any pool member meeting the statutory qualifications for the Supreme Court is eligible.
 
 - **Time limits:**
-  - (2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days for an anticipated vacancy or 60 days for an unanticipated vacancy
+  - (2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days
   - (3) The Senate must vote within the period defined by statute following nomination, not to exceed 120 days
-- **Cross-refs:** §4.4.a, §9.8
+- **Cross-refs:** §9.8
 
 ### §4.4.a — Public Confirmation
 
@@ -457,7 +455,7 @@ If the Civic Consul fails to nominate, or the Senate fails to vote, within the a
 
 ### §4.5 — Judicial Review and Scope
 
-(1) Courts may declare legislative acts, executive orders, and administrative decisions unconstitutional and void. No political actor may override a constitutional ruling.
+(1) Courts may declare legislative acts, executive orders, and administrative decisions unconstitutional and void. (2) Courts decide constitutional and legal questions, not policy questions.
 
 - **Time limits:**
   - 2 during active operations and must rule within the period defined by statute, not to exceed 48 hours
@@ -466,13 +464,12 @@ If the Civic Consul fails to nominate, or the Senate fails to vote, within the a
 
 ### §4.5.a — Judicial Decisions and Privacy
 
-Judicial decisions shall be public. Courts shall protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability, consistent with §1.8 and Article X.
+Judicial decisions shall be public. Courts shall protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability.
 
-- **Cross-refs:** §1.8
 
 ### §4.6 — Judgment Recognition
 
-Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction, the judgment was obtained by fraud, or enforcement would require an act the Legislature has made categorically unenforceable.
+Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction or the judgment was obtained by fraud.
 
 - **Cross-refs:** §17.4
 
@@ -1312,7 +1309,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §2.7 | Civic Consul Legislative Instruments | The bill is suspended for one month, during which the Senate may override by 2/3 |
 | §2.7 | Civic Consul Legislative Instruments | The Assembly Speaker may pause the review period for up to 10 business days, during which the Assembly may withdraw the bill by simple majority |
 | §2.7 | Civic Consul Legislative Instruments | A bill is emergency legislation only when so designated at final passage by a 2/3 vote of the full seated membership of both chambers |
-| §2.13 | Consular Removal | Legislative removal requires a concurrent 2/3 vote of both chambers for constitutional breach, permanent incapacity, or serious misconduct |
+| §2.13 | Consular Removal | Legislative removal requires a concurrent 2/3 vote of both chambers for serious misconduct, abuse of office, or permanent incapacity |
 | §2.15 | Federal Prosecution | The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers |
 | §2.16 | Executive Incapacity | (3) The Legislature may extend that heightened-restoration period by simple majority of each chamber, not beyond six months from the renewed determination |
 | §2.16 | Executive Incapacity | Continuation thereafter requires a fresh 2/3 incapacity determination |
@@ -1322,9 +1319,9 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §3.6 | Treaties and Trade Agreements | Withdrawal requires affirmation by 2/3 of the full seated Senate within the period defined by statute, not exceeding 90 days of the notice |
 | §3.7 | Legislative Process and Passage | Legislation requires an absolute majority of the full seated membership of both chambers unless this Constitution provides otherwise |
 | §3.7 | Legislative Process and Passage | Where this Constitution requires a simple majority of a chamber, it means a majority of members voting, a quorum being present |
-| §4.2 | Judicial Appointments and Independence | (3) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight |
+| §4.2 | Judicial Appointments and Independence | (3) The Legislature may remove an inferior court judge by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity |
 | §4.3 | The Supreme Court | Altering the number of seats requires 2/3 of both chambers |
-| §4.3.a | Supreme Court Justice Removal | Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS |
+| §4.3.a | Supreme Court Justice Removal | A Supreme Court justice may be removed by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity |
 | §9.3 | Monitor General Selection | All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority |
 | §9.3 | Monitor General Selection | where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote |
 | §9.9 | Constitutional Officer Removal — Standard Track | Removal requires a concurrent vote of 2/3 of the full seated membership of each legislative chamber, on grounds within the statutory removal categories for that office |

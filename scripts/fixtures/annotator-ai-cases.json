@@ -178,7 +178,7 @@
       "Recognize that a Temporary Associate Justice takes office immediately upon a vacancy with full voting rights until the vacancy is filled.",
       "Recognize the Civic Consul nomination deadline and the separate Senate vote deadline without treating them as the same trigger.",
       "Recognize that confirmation requires a majority of the full seated Senate and that no deemed confirmation applies.",
-      "Recognize that the serving Temporary Associate Justice may not be nominated through the ordinary appointment process for the same seat, while public confirmation under §4.4.a remains available."
+      "Recognize that the serving Temporary Associate Justice holds the seat by constitutional operation and that public confirmation under §4.4.a applies only when a nomination or Senate vote deadline is missed."
     ],
     "mustNot": [
       "Do not claim Senate rejection triggers public confirmation; only a missed deadline does.",
