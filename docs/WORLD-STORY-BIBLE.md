@@ -125,6 +125,11 @@ Torenthia is not a peninsula.
 
 ## Recurring voices and people
 
+### Local news outlets
+
+- **The Lakeland Gazette** — Rhondel-based Kelvant newspaper, covering the lake-shore communities, State affairs, local election campaigns and Kelvant's perspective on the proposed Korda corridor settlement. Its reporter/byline is not yet established; do not invent a recurring journalist without recording one here.
+- **The Korda Press** — Korda-based outlet with Mara Iset's reporting on territorial affairs and the settlement.
+
 ### Journalists / public voices
 
 | Name | Outlet / role | Durable register |
