@@ -1133,40 +1133,42 @@ This Constitution is the supreme law of the Federated Republic. Any legislative 
 
 ### §18.1 — The Use Doctrine
 
-Federal government holds no territorial sovereignty within any State or Territory. All federal property rights are functional use rights — operational control over a designated footprint for the duration of the stated function.
+The federal government holds no territorial sovereignty within any State or Territory. All federal property rights are functional use rights: operational control over a designated footprint for the duration of the stated function, ending when the function ends.
 
 - **Cross-refs:** §18.3
 
 ### §18.2 — Seat of Government
 
-The Republic holds no territorial sovereignty at its Seat of Government. The Seat is hosted by a State or Territory.
+The Seat of Government is hosted by a State or Territory selected through a competitive process defined by statute, in which any State or Territory may bid. A selected host must satisfy minimum requirements published to the NRS in advance of the selection.
 
+- **Time limits:**
+  - A State or Territory whose bid is rejected may challenge the selection before the SC, within 30 days of selection, on the ground that the selected bid did not satisfy the published requirements
 - **Cross-refs:** §18.1
 
 ### §18.3 — Operational Use Rights
 
-When a federal function ends, the Operational Use Right terminates automatically; the federal government must publish notice of termination to the NRS within the period defined by statute, not to exceed 90 days. The land and all improvements revert to the host State automatically unless the federal government and host State negotiate a retention agreement within the statutory reversion window.
+When a federal function ends, the federal government must publish notice of termination of the Operational Use Right to the NRS within the period defined by statute, not to exceed 90 days. The land and all improvements revert to the host State automatically unless the federal government and host State negotiate a retention agreement within the statutory reversion window.
 
 - **Time limits:**
-  - the federal government must publish notice of termination to the NRS within the period defined by statute, not to exceed 90 days
+  - When a federal function ends, the federal government must publish notice of termination of the Operational Use Right to the NRS within the period defined by statute, not to exceed 90 days
 
 ### §18.4 — The National Trust
 
-The National Trust holds all federal land not conveyed by statute to States, recognized indigenous nations, or private parties. Land disposal requires statute — the executive cannot convey or encumber public land unilaterally.
+(1) The National Trust holds all federal land not conveyed by statute to States, recognized indigenous nations, or private parties. Land disposal and encumbrance require statute.
 
 - **Thresholds:**
-  - National Trust designation requires a 2/3 vote of both chambers with host State consent
+  - (2) National Trust designation requires a 2/3 vote of both chambers with host State consent
   - International conservation agreements require a 2/3 Senate vote to withdraw before the national removal process begins
 - **Cross-refs:** §1.18
 
 ### §18.5 — Federal Property in Territories
 
-Federal operational use rights in Territories follow the same framework as in States under §18.1 and §18.3. Where §18.4 requires host State consent for National Trust designation, that consent is not required for a Territory, which has no State legislature; instead, the Territory's representative body must publish a written position to the NRS within 60 days of the proposed designation.
+(1) Sections 18.1 and 18.3 apply to federal operational use rights in Territories as they do in States. (2) For a Territory, host State consent under §18.4 is replaced by a written position of the Territory's representative body, published to the NRS within 60 days of the proposed designation.
 
 - **Time limits:**
-  - instead, the Territory's representative body must publish a written position to the NRS within 60 days of the proposed designation
-  - Where no position is published within 60 days, designation may proceed
-- **Cross-refs:** §18.1, §18.3, §18.4
+  - 4 is replaced by a written position of the Territory's representative body, published to the NRS within 60 days of the proposed designation
+  - If no position is published within 60 days, designation may proceed
+- **Cross-refs:** §18.4
 
 ---
 
@@ -1337,7 +1339,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §17.1 | Amendment Paths | (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers |
 | §17.1 | Amendment Paths | The proposing body simultaneously specifies the ratification mechanism — either State Ratification (ratification by 2/3 of States within the period defined by statute |
 | §17.1 | Amendment Paths | until such statute is enacted, 180 days) or Popular Ratification (a national popular referendum achieving 2/3 of votes cast with at least 55% citizen participation within 180 days) |
-| §18.4 | The National Trust | National Trust designation requires a 2/3 vote of both chambers with host State consent |
+| §18.4 | The National Trust | (2) National Trust designation requires a 2/3 vote of both chambers with host State consent |
 | §18.4 | The National Trust | International conservation agreements require a 2/3 Senate vote to withdraw before the national removal process begins |
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
 | §19.8 | Transitional Accountability Mechanism | no amending statute may expand the scope without the same 2/3 majority |
