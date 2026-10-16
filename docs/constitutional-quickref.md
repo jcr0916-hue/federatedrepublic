@@ -1057,7 +1057,7 @@ Where a State's constitutional government has become incapable of exercising gov
 
 ### §16.1 — Acknowledgment of Prior Sovereignty and Recognition
 
-Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted — the Republic's constitutional framework does not create it and may not extinguish it.
+Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted, and the Republic may not extinguish it.
 
 - **Cross-refs:** §16.4
 
@@ -1069,17 +1069,17 @@ Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty
   - 6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers
 - **Time limits:**
   - the SC must rule within 7 days
-- **Cross-refs:** §15.1, §15.2, §15.6, §16.3, §19.2, §20.3, §4.5
+- **Cross-refs:** §15.1, §15.2, §15.6, §19.2, §20.3, §4.5
 
 ### §16.3 — Treaty Supremacy and Continuity
 
-All treaties entered into by predecessor governments with indigenous nations are binding obligations of the Republic, regardless of the nation's status under this Constitution. Treaty rights cannot be diminished by legislation — they must be honored, renegotiated with consent, or formally superseded by mutual agreement through negotiation between the Legat Consul and the nation, ratified by the Senate under §3.6.
+(1) All treaties entered into by predecessor governments with indigenous nations are binding obligations of the Republic, regardless of the nation's status under this Constitution. Legislation cannot diminish treaty rights.
 
 - **Cross-refs:** §3.6
 
 ### §16.4 — Post-Founding Recognition
 
-A people asserting sovereignty preceding the Republic may submit a claim of prior sovereignty to the JMC at any time after the close of the Transition Window; the claim is published to the NRS. The JMC investigates the claim against the predecessor record and the criteria of §16.1.
+(1) A people asserting sovereignty preceding the Republic may submit a claim of prior sovereignty to the JMC at any time after the close of the Transition Window; the claim is published to the NRS. The JMC investigates the claim against the predecessor record and the criteria of §16.1.
 
 - **Time limits:**
   - Where a petition for recognition is submitted, the Legat Consul determines it within the period defined by statute, not to exceed 180 days, with written grounds whether recognition is granted or declined
@@ -1088,10 +1088,10 @@ A people asserting sovereignty preceding the Republic may submit a claim of prio
 
 ### §16.5 — Transition of Existing Arrangements
 
-Existing arrangements between a recognized nation and the predecessor government — governance, services, land use, borders, trade, and infrastructure — continue provisionally from Day Zero until replaced by an Article XX compact, an incorporation agreement under §16.2, or a treaty instrument under §16.3. For a nation holding Associated Community status, the Republic must open compact negotiations under Article XX…
+(1) Existing arrangements between a recognized nation and the predecessor government continue provisionally from Day Zero until replaced by an Article XX compact, an incorporation agreement under §16.2, or a treaty instrument under §16.3. Either party may petition the SC to resolve specific disputes arising within the provisional framework.
 
 - **Time limits:**
-  - For a nation holding Associated Community status, the Republic must open compact negotiations under Article XX within 90 days of the status taking effect and negotiate in good faith
+  - (2) For a nation holding Associated Community status, the Republic must open compact negotiations under Article XX within 90 days of the status taking effect and negotiate in good faith
 - **Cross-refs:** §16.2, §16.3
 
 ---
