@@ -906,36 +906,34 @@ The Legislature shall by statute establish a mechanism ensuring that every State
 
 ### §14.1 — Authorized Purposes for Military Force
 
-Military force serves two authorized purposes: protection of the Republic's territory, citizens, and treaty allies; and, with legislative authorization stating the specific grounds, response to crimes against humanity as defined under international law. The Legislature applies that definition directly in each authorization; no prior international recognition or finding is required.
+Military force may be used only for two purposes: protection of the Republic’s territory, citizens, and treaty allies; and, with legislative authorization stating the specific grounds, response to crimes against humanity as defined under international law. The Legislature applies that definition directly in each authorization; no prior international recognition or finding is required.
 
 
 ### §14.2 — Defense Authorization and Allocation
 
-Military expenditure requires legislative authorization under §14.1 and budget passage under §12.2; the Legat Consul executes that funding. Where authorization specifies categories or amounts, the Legat Consul is bound by them; otherwise, the Legat Consul determines allocation within the authorized total.
+Expenditure on military operations requires legislative authorization under §14.1, except for immediate response under §2.2, and appropriation under §12.2, including the interim appropriation; the Legat Consul executes that funding and, within the authorized total, determines allocation except as the authorization specifies. The Legat Consul answers public questions before the Senate at least annually and…
 
 - **Time limits:**
-  - contracts may wind down for up to 90 days, with no new commitments permitted after expiration
-  - The EM publishes a comprehensive accountability report within 180 days of an operation’s conclusion
-- **Cross-refs:** §12.2, §14.1, §2.14
+  - When legislative authorization expires or lapses, all expenditure ceases except the wind-down of existing contracts for up to 90 days
+- **Cross-refs:** §12.2, §14.1, §2.14, §2.2
 
-### §14.3 — Military Accountability
+### §14.3 — Transition and Reconstruction Plan
 
-Within the period defined by statute following the second renewal of a legislative military authorization, the Legat Consul submits a Transition and Reconstruction Plan to the Senate specifying the Republic’s post-conflict obligations: status of alliance obligations, civilian reconstruction support, transitional justice support, and withdrawal timeline. The Senate reviews and approves the Plan, and may amend it…
+Within the period defined by statute following the second renewal of a legislative military authorization, the Legat Consul submits a Transition and Reconstruction Plan to the Senate specifying the Republic’s post-conflict obligations (status of alliance obligations, civilian reconstruction support, and transitional justice support) and a withdrawal timeline. The Senate reviews and approves the Plan, and may…
 
-- **Cross-refs:** §14.2
 
 ### §14.4 — Treaty-Based Military Authorization
 
-Where an existing treaty requires military action, the Legat Consul may act immediately and must notify both chambers and the Civic Consul within 12 hours, citing the specific treaty obligation triggered. Senate ratification of a treaty by the required supermajority constitutes legislative authorization for all military actions required by that treaty when its obligations are triggered; no separate legislative…
+Where an existing treaty requires military action, the Legat Consul may act immediately and must notify both chambers and the Civic Consul within 12 hours, citing the specific treaty obligation triggered. Senate ratification of a treaty constitutes legislative authorization for the military action the treaty requires when its obligations are triggered, provided the action serves a purpose authorized by §14.1; no…
 
 - **Time limits:**
   - Where an existing treaty requires military action, the Legat Consul may act immediately and must notify both chambers and the Civic Consul within 12 hours, citing the specific treaty obligation triggered
-  - Treaty-based authorization for an operation continues for up to 12 months from the moment of action
-- **Cross-refs:** §14.1, §14.2, §14.3, §2.2, §3.6
+  - Treaty-based authorization for an operation lasts up to 12 months from the moment of action
+- **Cross-refs:** §14.1, §14.2, §14.3, §2.2
 
 ### §14.5 — State Forces
 
-A State may maintain organized forces for disaster response, civil emergency, and the preservation of public order within the State. Such forces are subject to Article I and to the prohibitions of §14.1 in all circumstances.
+A State may maintain organized forces for disaster response, civil emergency, and the preservation of public order within the State. Such forces are subject to Article I.
 
 - **Cross-refs:** §14.1
 
