@@ -205,7 +205,7 @@
   },
   {
     "id": "haiku-direct-35",
-    "question": "According to §8.3, summarize the constitutional rule on public spectrum access for campaigns.",
+    "question": "According to §8.3, summarize the constitutional rule on campaign access to public communication resources.",
     "expectedStatus": "ANSWER",
     "requiredSource": "§8.3"
   },

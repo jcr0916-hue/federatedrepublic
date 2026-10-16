@@ -607,11 +607,11 @@ Authority conferred, transferred, or assumed by operation of this Constitution v
 
 ### §8.1 — Electoral Finance
 
-All contributions to electoral campaigns must be disclosed in full to the Elections Panel, including the identity of every contributor and the amount given, without threshold or exception. The Elections Panel publishes contribution records to the NRS; publication may present contributions below a threshold defined by statute in aggregate or generalized form to protect the privacy of individual contributors, but no contribution may be withheld from disclosure to the Panel. Anonymous contributions are prohibited.
+All contributions to electoral campaigns must be disclosed in full to the Elections Panel, including the identity of every contributor and the amount given, without threshold or exception. The Elections Panel publishes contribution records to the NRS; publication may present contributions below a threshold defined by statute in aggregate or generalized form to protect the privacy of individual contributors. Anonymous contributions are prohibited.
 
-Citizens and lawful residents may contribute to electoral campaigns, subject to the same individual contribution limits established by statute. Corporate and organizational contributions are barred. Contributions from foreign governments, foreign nationals other than lawful residents, and foreign-controlled entities are prohibited. No person may make, receive, or fund an electoral contribution or independent expenditure on behalf of, at the direction of, or with funds from such a source, directly or through an intermediary.
+Citizens and lawful residents may contribute to electoral campaigns, subject to individual contribution limits established by statute. Contributions from corporations and other business entities are barred. Contributions from foreign governments, foreign nationals other than lawful residents, and foreign-controlled entities are prohibited. No person may make, receive, or fund an electoral contribution or independent expenditure on behalf of, at the direction of, or with funds from such a source, directly or through an intermediary.
 
-Independent expenditures made in support of an electoral campaign are subject to the same disclosure requirements as direct contributions but are not subject to contribution limits. Expenditures coordinated with a campaign are treated as direct contributions.
+Independent expenditures made to support or oppose a candidate or a question submitted to a direct vote of the citizens are subject to the same disclosure requirements as direct contributions but are not subject to contribution limits. Expenditures coordinated with a campaign are treated as direct contributions.
 
 Financial contributions to electoral campaigns and expenditures coordinated with a campaign are subject to regulation under this section and are not protected as speech or associational activity under §1.5. Independent political expression remains protected under §1.5, subject to the disclosure requirements and foreign-source prohibitions of this section.
 
@@ -619,17 +619,17 @@ Financial contributions to electoral campaigns and expenditures coordinated with
 
 Candidate impersonation, vote suppression, and interference with election administration are prohibited. Campaign communications must clearly identify their sponsor. The Elections Panel administers electoral conduct requirements; the Legislature establishes sanctions by statute. The Elections Panel may investigate objectively identifiable violations of this section and establish technical and administrative standards, but may not create substantive restrictions on political expression or judge the truthfulness, political merits, or opinions expressed in campaign communications.
 
-Foreign governments, foreign nationals, and foreign-controlled entities may not engage in covert electoral operations, prohibited campaign financing, candidate impersonation, manipulation of electoral administration, or other unlawful interference with Republic elections. A candidate who knowingly accepts prohibited foreign electoral assistance is disqualified from that election cycle by determination of the Elections Panel after notice and an opportunity to respond, subject to appeal under §7.4(6).
+Foreign governments, foreign nationals, and foreign-controlled entities may not conduct covert operations to influence Republic elections. A candidate who knowingly accepts prohibited foreign electoral assistance is disqualified from that election cycle by determination of the Elections Panel, made before certification of the election after notice and an opportunity to respond, subject to appeal under §7.4(6).
 
 Constitutional officeholders may not use public resources, personnel, or official authority for electoral campaign purposes, whether campaigning for reelection or for another office. Ordinary official duties and communications undertaken in good faith do not constitute campaign activity merely because an election is approaching.
 
-### §8.3 — Public Spectrum Access for Campaigns
+### §8.3 — Campaign Access to Public Communication Resources
 
-Licensees operating on public broadcast spectrum, including television, radio, and licensed carriers of automated political communications, shall provide qualified candidates equal free campaign access during the federal electoral period. The terms and quantity of access shall be established by statute. This obligation does not require equal editorial or journalistic coverage. The Elections Panel shall certify compliance.
+Operators of communication channels on public resources, including broadcast spectrum, shall offer qualified candidates access impartially and at reasonable rates, so that no candidate is excluded by the limits of their own resources. The terms of access shall be established by statute. The Elections Panel shall certify compliance.
 
 ### §8.4 — Public Campaign Financing
 
-The Legislature shall by statute establish a public campaign financing system available to all qualified candidates for federal office on equal terms. Public financing shall provide qualified candidates an initial allocation sufficient to establish a campaign and communicate with voters. The amount and administration of that allocation shall be established by statute and reviewed each electoral cycle. Acceptance of public support does not bar a candidate from private fundraising under §8.1, and no candidate may be disadvantaged in eligibility, ballot access, or access under §8.3 by reason of participating. The Elections Panel administers the system and publishes annual compliance findings.
+The Legislature shall by statute establish a public campaign financing system available to all qualified candidates for federal office on equal terms. Public financing shall provide qualified candidates an initial allocation sufficient to establish a campaign and communicate with voters. Acceptance of public support does not bar a candidate from private fundraising under §8.1, and no candidate may be disadvantaged in eligibility, ballot access, or access under §8.3 by reason of participating. The Elections Panel administers the system and publishes annual compliance findings.
 
 ---
 

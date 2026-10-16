@@ -620,7 +620,7 @@ Authority conferred, transferred, or assumed by operation of this Constitution v
 
 ### §8.1 — Electoral Finance
 
-All contributions to electoral campaigns must be disclosed in full to the Elections Panel, including the identity of every contributor and the amount given, without threshold or exception. The Elections Panel publishes contribution records to the NRS; publication may present contributions below a threshold defined by statute in aggregate or generalized form to protect the privacy of individual contributors, but…
+All contributions to electoral campaigns must be disclosed in full to the Elections Panel, including the identity of every contributor and the amount given, without threshold or exception. The Elections Panel publishes contribution records to the NRS; publication may present contributions below a threshold defined by statute in aggregate or generalized form to protect the privacy of individual contributors.
 
 - **Cross-refs:** §1.5
 
@@ -630,9 +630,9 @@ Candidate impersonation, vote suppression, and interference with election admini
 
 - **Cross-refs:** §7.4
 
-### §8.3 — Public Spectrum Access for Campaigns
+### §8.3 — Campaign Access to Public Communication Resources
 
-Licensees operating on public broadcast spectrum, including television, radio, and licensed carriers of automated political communications, shall provide qualified candidates equal free campaign access during the federal electoral period. The terms and quantity of access shall be established by statute.
+Operators of communication channels on public resources, including broadcast spectrum, shall offer qualified candidates access impartially and at reasonable rates, so that no candidate is excluded by the limits of their own resources. The terms of access shall be established by statute.
 
 
 ### §8.4 — Public Campaign Financing
