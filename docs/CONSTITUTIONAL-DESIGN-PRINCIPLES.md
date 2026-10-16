@@ -309,6 +309,7 @@ Chair). Two further provisions were brought into line on 10.10: §9.1.d's pool-t
 "defined by statute," now "resolved by age"; and the panel Chair tie, previously "by lot conducted by the
 JMC," now by age. Each change is a Process Symmetry fix — the same kind of tie, the same answer — not a
 policy change.
+*Live-text note, 10.16: the panel Chair paragraph (§11.1(5)) is deleted, since no provision gave a Chair any function; statute and the panels' own procedures set who presides. §11.1's remaining paragraphs are renumbered.*
 *Extended 11.10.* §4.1 applies the same order to displaced judges competing for one vacancy — longest
 continuous judicial service, then age — instead of leaving the choice to the Civic Consul. The Consul's
 discretion stays where it was already assigned, choosing which of several open vacancies a judge takes,
