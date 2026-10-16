@@ -111,7 +111,7 @@ The Legat Consul may use military force in immediate response to an active or im
 
 ### §2.3 — Consular Intelligence
 
-The Legat Consul directs external intelligence. No intelligence operation against Republic citizens, wherever located, may be conducted on the Legat Consul's authority; such operations require independent judicial authorization. The Legat Consul submits intelligence operations against foreign nationals outside Republic territory to Senate review in the manner the Legat Consul and the Senate determine.
+The Legat Consul directs external intelligence. No intelligence operation against Republic citizens, wherever located, may be conducted on the Legat Consul's authority; such operations require independent judicial authorization. The Legat Consul briefs the Senate on intelligence operations against foreign nationals outside Republic territory in the manner the Legat Consul and the Senate determine.
 
 ### §2.3.a — Legat Consul Legislative Veto
 
