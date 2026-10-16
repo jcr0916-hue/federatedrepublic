@@ -527,7 +527,7 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 ### §7.2.a — Special Elections and Postponements
 
-Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a two-thirds vote of each chamber. The mandates of affected officeholders extend until certification of the postponed election. Any further postponement requires renewed Elections Panel certification that holding the affected election remains impossible and renewed legislative approval by the same threshold. Elections shall proceed as soon as practicable once the impediment has ended. Elections Panel determinations are subject to expedited judicial review.
+Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a 2/3 vote of each chamber. The mandates of affected officeholders extend until certification of the postponed election. Any further postponement requires renewed Elections Panel certification that holding the affected election remains impossible and renewed legislative approval by the same threshold. Elections shall proceed as soon as practicable once the impediment has ended. Elections Panel determinations are subject to expedited judicial review.
 
 ### §7.3 — Electoral Supermajority Threshold
 
@@ -1041,15 +1041,15 @@ Where a State's constitutional government has become incapable of exercising gov
 
 ### §16.1 — Acknowledgment of Prior Sovereignty and Recognition
 
-Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted, and the Republic may not extinguish it. The Republic deals with recognized indigenous nations as sovereign nations. A recognized indigenous nation, wherever that term appears in this Constitution, means a nation that, as of Day Zero, held a treaty with, a compact with, or formal recognition from a predecessor government, or a nation recognized under §16.4. A nation omitted from the founding register may appeal to the SC within the period defined by statute on the sole ground that the predecessor record was misapplied. Recognition confers no territorial rights of itself.
+Indigenous nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted, and the Republic may not extinguish it. The Republic deals with recognized indigenous nations as sovereign nations. A recognized indigenous nation, wherever that term appears in this Constitution, means a nation that, as of Day Zero, held a treaty with, a compact with, or formal recognition from a predecessor government, or a nation recognized under §16.4. A nation omitted from the founding register may appeal to the SC within the period defined by statute on the sole ground that the predecessor record was misapplied. Recognition confers no territorial rights of itself.
 
 ### §16.2 — Founding Status Election
 
 (1) At ratification, the Republic formally notifies every nation on the founding register of its rights under this section.
 
-(2) From Day Zero until the close of the Transition Window under §19.2, each recognized nation may elect, through its own lawful democratic or traditional governance process for major governance decisions, either: (a) Associated Community — continuing as a fully sovereign political community in a consensual Compact relationship with the Republic under Article XX; or (b) Territorial Integration — entering the Republic as a Territory under §15.1, with the ordinary §15.2 Statehood pathway available. A Territorial Integration election constitutes the petition and confirmation otherwise required by §15.6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers. A recognized nation that independently qualifies for a founding direct-State entry under Article XIX may use that transition mechanism while it remains available.
+(2) From Day Zero until the close of the Transition Window under §19.2, each recognized nation may elect, through its own lawful democratic or traditional governance process for major governance decisions, either: (a) Associated Community — continuing as a fully sovereign political community in a consensual compact relationship with the Republic under Article XX; or (b) Territorial Integration — entering the Republic as a Territory under §15.1, with the ordinary §15.2 Statehood pathway available. A Territorial Integration election constitutes the petition and confirmation otherwise required by §15.6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers. A recognized nation that independently qualifies for a founding direct-State entry under Article XIX may use that transition mechanism while it remains available.
 
-(3) If a recognized nation makes no status election during the Transition Window, the Republic treats it as an Associated Community pending conclusion, confirmation, or replacement of a Compact under Article XX. That interim treatment is not consent to Compact terms the nation has not accepted.
+(3) If a recognized nation makes no status election during the Transition Window, the Republic treats it as an Associated Community pending conclusion, confirmation, or replacement of a compact under Article XX. That interim treatment is not consent to compact terms the nation has not accepted.
 
 (4) No constitutional officer may induce or coerce a nation to elect either status. The Republic must provide factual information upon request.
 
@@ -1059,7 +1059,7 @@ Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty
 
 (7) Indigenous nation membership and Republic citizenship are compatible and independent statuses.
 
-(8) Election of Territorial Integration permanently ends the founding Associated Community or Compact status under this section. If the community later becomes a sovereign independent nation, any future Associated Community relationship requires a new Compact under Article XX.
+(8) Election of Territorial Integration permanently ends the founding Associated Community or compact status under this section. If the community later becomes a sovereign independent nation, any future Associated Community relationship requires a new compact under Article XX.
 
 ### §16.3 — Treaty Supremacy and Continuity
 
@@ -1165,7 +1165,7 @@ This constitution takes effect upon: (1) interim Elections Panel certification t
 
 ### §19.3 — Caretaker Status
 
-(1) Officials and institutions of the predecessor national government whose authority is displaced or superseded by this Constitution continue during the Transition Window only in caretaker capacity as necessary to preserve lawful government, existing services, rights, obligations, and public safety. Existing State, territorial, Indigenous, and local governments continue under their own lawful authority except to the extent this Constitution expressly provides otherwise.
+(1) Officials and institutions of the predecessor national government whose authority is displaced or superseded by this Constitution continue during the Transition Window only in caretaker capacity as necessary to preserve lawful government, existing services, rights, obligations, and public safety. Existing State, territorial, indigenous, and local governments continue under their own lawful authority except to the extent this Constitution expressly provides otherwise.
 
 (2) A caretaker legislature may enact only measures reasonably necessary for continuity, rights, existing obligations, public safety, or implementation of this Article. A measure intended to continue after Phase 4 remains subject to continuation, amendment, or repeal by the first Legislature. Legislation enacted outside these limits is void, and any Inhabitant may challenge such legislation before a court of competent jurisdiction.
 
@@ -1217,7 +1217,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.7 — Transition Candidate Registers
 
-The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. It also compiles the founding register of recognized Indigenous nations under §16.1 from the predecessor record and publishes it to the NRS before the close of Phase 1; compilation is ministerial and applies the predecessor record as it stands. Registers assembled by the panel are valid, and the Legislature continues them through the first budget cycle after Phase 4. The panel performs interim Monetary Authority certification functions from Phase 4 activation only until the Monetary Authority is constitutionally constituted and capable of performing those functions under §12.1.a. Initial MA staffing and selection must comply with §12.1.a.
+The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. It also compiles the founding register of recognized indigenous nations under §16.1 from the predecessor record and publishes it to the NRS before the close of Phase 1; compilation is ministerial and applies the predecessor record as it stands. Registers assembled by the panel are valid, and the Legislature continues them through the first budget cycle after Phase 4. The panel performs interim Monetary Authority certification functions from Phase 4 activation only until the Monetary Authority is constitutionally constituted and capable of performing those functions under §12.1.a. Initial MA staffing and selection must comply with §12.1.a.
 
 ### §19.8 — Transitional Accountability Mechanism
 
