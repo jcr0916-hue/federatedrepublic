@@ -501,17 +501,13 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 ### §7.1 — Consular Election System
 
-(1) The Legat Consul is elected through two concurrent requirements: a national RCV majority and a State plurality qualification. A candidate wins outright by satisfying both.
+(1) The Legat Consul is elected through two concurrent requirements: a national RCV majority and a State plurality. A candidate satisfies the State plurality requirement by receiving more first-preference votes than any other candidate in a majority of the Republic's States. A candidate wins outright by satisfying both. Territory citizens vote in consular elections and their votes count in the national RCV total, but Territories are excluded from the State plurality calculation.
 
 (2) Where a candidate's national RCV majority reaches or exceeds 60% of votes cast, the State plurality requirement is waived.
 
 (3) Where no candidate wins outright, a runoff is conducted between the national RCV winner and the candidate, other than that winner, who received first-preference pluralities in the most States. The runoff is decided by national majority without a State plurality requirement.
 
 (4) Electoral ties shall be resolved by lot under the supervision of the Elections Panel. The Elections Panel administers and certifies all consular elections.
-
-(5) Territory citizens vote in consular elections and their votes count in the national RCV total, but Territories are excluded from the State plurality calculation. A candidate satisfies the State plurality requirement by receiving more first-preference votes than any other candidate in a majority of the Republic's States.
-
-(6) Consular election certification is final, subject only to timely review by the Supreme Court for material errors in the certification of votes. Candidates, affected State or Territory governments, and the Elections Panel may seek such review under procedures established by statute.
 
 ### §7.2 — Federal Elections
 
@@ -527,13 +523,15 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (6) The Republic shall provide the financial and technical assistance necessary for every State to meet federal election standards. Assistance is subject to Elections Panel oversight.
 
+(7) The results of a federal election or a direct vote of the citizens are final upon certification, subject only to timely Supreme Court review for material error in the certification of votes, sought under procedures established by statute.
+
 ### §7.2.a — Special Elections and Postponements
 
 Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a two-thirds vote of each chamber. The mandates of affected officeholders extend until certification of the postponed election. Any further postponement requires renewed Elections Panel certification that holding the affected election remains impossible and renewed legislative approval by the same threshold. Elections shall proceed as soon as practicable once the impediment has ended. Elections Panel determinations are subject to expedited judicial review.
 
 ### §7.3 — Electoral Supermajority Threshold
 
-Except for constitutional-amendment referendums governed by §17.1, any supermajority required by this Constitution in a direct vote of the citizens is 60% of votes cast. This threshold may be changed only by constitutional amendment and does not alter separately established participation or turnout requirements.
+Except for constitutional-amendment referendums governed by §17.1, any supermajority required by this Constitution in a direct vote of the citizens is 60% of votes cast, in addition to any separately established participation or turnout requirement.
 
 ### §7.4 — Eligibility and Disclosure for Federal Office
 
@@ -563,7 +561,7 @@ Constitutional officers and persons acting within the authority of a constitutio
 
 ### §7.8 — Separation of Branch Authority
 
-No person may simultaneously hold office in more than one branch of government, except when temporarily exercising acting authority under this Constitution. During such acting service, the person retains their original office or mandate but may not exercise any authority of that office. That authority resumes upon the conclusion of acting service. The body that selects the officer may designate an interim holder of the office's functions for the duration of acting service.
+No person may simultaneously hold office in more than one branch of government, except when temporarily exercising acting authority under this Constitution. During such acting service, the person retains their original office or mandate but may not exercise any authority of that office. The body that selects the officer may designate an interim holder of the office's functions for the duration of acting service.
 
 ### §7.9 — Inviolability of Electoral Mandates
 
@@ -597,7 +595,7 @@ The Legislature shall establish disclosure and recusal requirements for federal 
 
 ### §7.14 — Compensation of Federal Officials
 
-Federal officials may not determine their own compensation or that of their direct supervisors, except as expressly authorized by this Constitution. Compensation shall be established by statute. Changes to the compensation of elected constitutional officers take effect only after the next election for the affected office following enactment. Official benefits and accommodations must reflect the functional requirements of the office.
+Compensation of federal officials shall be established by statute. No federal official may determine their own compensation or that of their direct supervisors other than through such a statute. Changes to the compensation of elected constitutional officers take effect only after the next election for the affected office following enactment. Official benefits and accommodations must reflect the functional requirements of the office.
 
 ### §7.15 — Authority by Constitutional Operation
 
