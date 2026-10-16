@@ -2,10 +2,11 @@
 
 **Original branch:** `audit/torenthia-article-i-20261016`
 
-**PR:** not yet opened; this note will be updated with its link before delivery.
+**PR:** [#182](https://github.com/jcr0916-hue/federatedrepublic/pull/182), open for user review.
 
-**Head commit at handoff:** final reviewed commit is identified by the PR; checks
-below were run on the proposed tree based on `c69f9b2bf80c069881ff28e77f3dc1c1e437b0b6`.
+**Content commit at validation:** [`aa57a096ead237406fb7ddc3c6b543f4bb39dd11`](https://github.com/jcr0916-hue/federatedrepublic/commit/aa57a096ead237406fb7ddc3c6b543f4bb39dd11),
+based on `c69f9b2bf80c069881ff28e77f3dc1c1e437b0b6`. A following documentation-only
+commit records the PR link in this handoff; the PR identifies its final head.
 
 **Status:** proposed; shipped only after the PR merges.
 
