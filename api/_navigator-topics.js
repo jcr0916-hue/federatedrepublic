@@ -153,7 +153,7 @@ const TOPICS = [
     sections: [
       ['§2.1', 'Legat Consul domain includes military command and force employment'],
       ['§2.2', 'Immediate defensive force and the requirement for legislative authorization beyond immediate response'],
-      ['§14.1', 'Permitted and prohibited purposes for military force'],
+      ['§14.1', 'The two permitted purposes for military force'],
     ],
   },
   {
