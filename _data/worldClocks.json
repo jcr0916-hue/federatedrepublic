@@ -186,11 +186,8 @@
         },
         {
           "id": "nomination",
-          "trigger": "anticipated or unanticipated vacancy",
-          "maximumDays": {
-            "anticipated": 90,
-            "unanticipated": 60
-          },
+          "trigger": "vacancy",
+          "maximumDays": 90,
           "note": "Actual period defined by statute."
         },
         {

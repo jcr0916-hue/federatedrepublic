@@ -223,7 +223,7 @@ Every grant shall state its reasons. The granting Consul or either chamber may r
 
 ### §2.13 — Consular Removal
 
-The Legat Consul may be removed through two independent processes. Legislative removal requires a concurrent 2/3 vote of both chambers for constitutional breach, permanent incapacity, or serious misconduct. Either chamber may request a JMC assessment.
+The Legat Consul may be removed through two independent processes. Legislative removal requires a concurrent 2/3 vote of both chambers for serious misconduct, abuse of office, or permanent incapacity; the Legislature's determination that grounds exist is final.
 
 Alternatively, a Senate majority may refer removal to a national recall referendum. The Legat Consul remains in authority while the referendum is pending and is removed upon certification of 60% approval with at least 55% participation. Succession occurs immediately. A failed recall may not be re-initiated during the same term.
 
@@ -349,57 +349,57 @@ The Legislature may by statute delegate defined authority within federal legisla
 
 ### §4.1 — Court Structure
 
-The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute, but abolition may not terminate or shorten a sitting judge's term. A judge whose court is abolished completes their term. The judge fills the next vacancy at the same or a lower court level without further confirmation; where more than one such vacancy is open, the Civic Consul chooses which. Where more than one judge whose court was abolished qualifies for a vacancy, the judge with the longest continuous judicial service fills it; ties are resolved by age. Until then the judge retains office and compensation and may serve temporarily under §4.2(5). States may maintain specialized courts. Constitutional questions arising in any proceeding may be referred to the SC.
+The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute, but abolition may not terminate or shorten a sitting judge's term. A judge whose court is abolished retains office and compensation for the remainder of their term and may serve temporarily under §4.2(5). Constitutional questions arising in any proceeding may be referred to the SC.
 
 ### §4.2 — Judicial Appointments and Independence
 
-(1) The Civic Consul nominates inferior court judges from the Judicial Pool maintained by the Elections Panel under §9.8. The Civic Consul must nominate within 90 days of a vacancy or any shorter period defined by statute. The Senate confirms by a majority of its full seated membership.
+(1) The Civic Consul nominates inferior court judges from the Judicial Pool under §9.8 within 90 days of a vacancy, or any shorter period defined by statute. The Senate confirms by a majority of its full seated membership.
 
-(2) Inferior court judges serve a single non-renewable 12-year term and may be removed only for cause, including constitutional breach in judicial office, demonstrated permanent incapacity, serious misconduct, or other conduct- or competence-based grounds established by statute. Judicial disagreement or policy disagreement with a decision is not cause. Statute may establish a mandatory retirement age not below 70.
+(2) Inferior court judges serve a single non-renewable 12-year term and may be removed only under paragraph (3). Disagreement with a decision is not grounds for removal.
 
-(3) Removal may occur by 2/3 of both chambers or through a statutory judicial-discipline process under SC oversight. Either chamber may request a JM assessment to inform legislative removal; no Monitor finding is prerequisite to either process.
+(3) The Legislature may remove an inferior court judge by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity; the Legislature's determination that grounds exist is final. A judge may also be removed through a statutory judicial-discipline process under SC oversight on conduct- or competence-based grounds. No Monitor finding is prerequisite to either process.
 
-(4) No public official may direct, threaten, or seek to influence a judge's decision in a pending matter. Judicial compensation may not be reduced during the judge's term.
+(4) No public official may direct or threaten a judge, or attempt to influence a judge's decision in a pending matter other than through the proceeding itself. Judicial compensation may not be reduced during the judge's term.
 
-(5) Upon a vacancy in an inferior federal judicial office, temporary judicial authority shall pass immediately to an eligible serving federal judge under a succession order established by statute. Temporary service does not constitute permanent appointment, does not extend or interrupt the temporary judge's existing term, and ends when a successor assumes the vacant office.
+(5) Upon a vacancy in an inferior federal judicial office, temporary judicial authority passes immediately to an eligible serving federal judge under a succession order established by statute. Temporary service is not permanent appointment, does not alter the temporary judge's term, and ends when a successor assumes the vacant office.
 
 ### §4.3 — The Supreme Court
 
-The Supreme Court consists of the number of justices established by statute, never fewer than five. Justices serve single non-renewable 12-year terms in staggered classes as nearly equal as practicable. Altering the number of seats requires 2/3 of both chambers. A newly created seat expires if not filled within 18 months; a reduction takes effect only through attrition and may not shorten a sitting justice's term.
+The Supreme Court consists of the number of justices established by statute, never fewer than five. Justices serve single non-renewable 12-year terms in staggered classes as nearly equal as practicable. Altering the number of seats requires 2/3 of both chambers; a reduction takes effect only through attrition.
 
 An equally divided Court leaves the challenged ruling in effect. A majority of seated justices, including Temporary Associate Justices, constitutes ordinary quorum; constitutional questions require at least five participating justices.
 
 ### §4.3.a — Supreme Court Justice Removal
 
-A Supreme Court justice may be removed only for constitutional breach in judicial office, demonstrated permanent incapacity, or serious misconduct. Judicial disagreement does not constitute cause. Either chamber may request a JM assessment, but no Monitor finding is prerequisite to removal. Removal requires 2/3 of both chambers in concurrent vote after the grounds are published to the NRS.
+A Supreme Court justice may be removed by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity; the Legislature's determination that grounds exist is final. Disagreement with a decision is not grounds for removal. No Monitor finding is prerequisite to removal.
 
 ### §4.4 — Supreme Court Selection
 
-(1) SC justices are nominated by the Civic Consul from the Judicial Pool maintained by the Elections Panel under §9.8. Any pool member meeting the statutory qualifications for Supreme Court appointment is eligible.
+(1) The Civic Consul nominates SC justices from the Judicial Pool under §9.8. Any pool member meeting the statutory qualifications for the Supreme Court is eligible.
 
-(2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days for an anticipated vacancy or 60 days for an unanticipated vacancy.
+(2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days.
 
 (3) The Senate must vote within the period defined by statute following nomination, not to exceed 120 days; confirmation requires a majority of the full seated Senate. No deemed confirmation applies.
 
-(4) Upon an SC vacancy, the most senior eligible Appellate Court judge by continuous service becomes Temporary Associate Justice immediately by constitutional operation, with full voting rights until the vacancy is filled; ties are resolved by age. The Civic Consul may not nominate that Temporary Associate Justice to the seat they temporarily hold through the ordinary appointment process, but the justice remains eligible for public confirmation under §4.4.a.
+(4) Upon an SC vacancy, the most senior eligible Appellate Court judge by continuous service becomes Temporary Associate Justice immediately by constitutional operation, with full voting rights until the vacancy is filled; ties are resolved by age.
 
-(5) A justice's term runs from confirmation; a justice filling a mid-term vacancy serves only the remainder of the original term. Public confirmation is governed by §4.4.a.
+(5) A justice's term runs from confirmation; a justice filling a mid-term vacancy serves only the remainder of the original term.
 
 ### §4.4.a — Public Confirmation
 
 If the Civic Consul fails to nominate, or the Senate fails to vote, within the applicable period under §4.4, the Temporary Associate Justice is submitted for public confirmation at the next federal electoral period. Confirmation requires 60% of votes cast under §7.3. An ordinary nomination and Senate confirmation completed before Elections Panel certification of the ballot ends the public route. If confirmed, the justice serves the remainder of the original term; if rejected, the next eligible Appellate Court judge becomes Temporary Associate Justice and the vacancy process restarts.
 
-The Temporary Associate Justice may advocate publicly for confirmation. A public confirmation vote is not an election for purposes of §8.1, but statute shall preserve its foreign-contribution prohibition and disclosure protections.
+The Temporary Associate Justice may advocate publicly for confirmation. Statute shall apply the foreign-contribution prohibition and disclosure requirements of §8.1 to public confirmation votes.
 
 ### §4.5 — Judicial Review and Scope
 
-(1) Courts may declare legislative acts, executive orders, and administrative decisions unconstitutional and void. No political actor may override a constitutional ruling.
+(1) Courts may declare legislative acts, executive orders, and administrative decisions unconstitutional and void.
 
 (2) Courts decide constitutional and legal questions, not policy questions. Where a statute is ambiguous, courts apply the interpretation most consistent with this Constitution and may not rewrite clear statutory language.
 
-(3) Monitor findings published to the NRS are admissible and must receive due consideration; where a court reaches a different conclusion, it must address the inconsistency in its written decision.
+(3) Monitor findings published to the NRS are admissible; where a court reaches a different conclusion, it must address the inconsistency in its written decision.
 
-(4) Courts adjudicate only cases involving a concrete, articulable legal injury and may not issue advisory opinions. An organization has standing where at least one member would have standing and the claim is germane to its established constitutional purpose. The Legislature may not leave any category of legal injury without a judicial forum.
+(4) Except where this Constitution expressly confers standing, courts adjudicate only cases involving a concrete, articulable legal injury and may not issue advisory opinions. An organization has standing where at least one member would have standing and the claim is germane to its established constitutional purpose. The Legislature may not leave any category of legal injury without a judicial forum.
 
 (5) The SC has original jurisdiction over:
 
@@ -417,17 +417,17 @@ The Temporary Associate Justice may advocate publicly for confirmation. A public
 
 (7) Where conflict between constitutional actors threatens lawful governance or constitutionally required essential services, existing lawful operations continue pending resolution. No actor may use refusal to certify, approve, or coordinate to suspend a constitutional obligation. The SC has expedited jurisdiction over such disputes.
 
-(8) Where this Constitution establishes a deadline for an SC ruling, a majority of seated justices may, before expiry and upon stated reasons, grant one extension for demonstrated necessity. The extension may not exceed the lesser of 30 days or the original period for decision. The SC may issue limited interim protective orders where delay would otherwise cause irreparable harm.
+(8) Where this Constitution establishes a deadline for an SC ruling, a majority of seated justices may, before expiry and upon stated reasons, grant one extension. The extension may not exceed the lesser of 30 days or the original period for decision. The SC may issue limited interim protective orders where delay would otherwise cause irreparable harm.
 
 (9) Failure of the SC to rule within a required period does not determine the merits or produce a substantive constitutional outcome. The parties retain any remedy otherwise available under this Constitution.
 
 ### §4.5.a — Judicial Decisions and Privacy
 
-Judicial decisions shall be public. Courts shall protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability, consistent with §1.8 and Article X.
+Judicial decisions shall be public. Courts shall protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability.
 
 ### §4.6 — Judgment Recognition
 
-Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction, the judgment was obtained by fraud, or enforcement would require an act the Legislature has made categorically unenforceable. A judgment contrary to Article I is void under §17.4.
+Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction or the judgment was obtained by fraud. A judgment contrary to Article I is void under §17.4.
 
 A judgment or status order published to the NRS is self-authenticating and effective throughout the Republic without re-registration. No State or Territory may discriminate in recognition based on the parties or subject matter involved.
 

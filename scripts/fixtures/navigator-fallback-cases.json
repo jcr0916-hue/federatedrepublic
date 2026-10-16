@@ -71,8 +71,7 @@
     "question": "What happens if the Senate refuses to act on a Supreme Court nomination?",
     "expectedSufficient": true,
     "required": [
-      "§4.4",
-      "§4.4.a"
+      "§4.4"
     ]
   },
   {
