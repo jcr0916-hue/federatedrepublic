@@ -102,10 +102,10 @@
     "num": "§10.2",
     "title": "Classification ceiling and automatic sunlight",
     "must": [
-      "Recognize that classification grounds are statutory but concealment of violations, policy disagreement, or political embarrassment is prohibited and void.",
+      "Recognize that classification is permitted only where required to protect national security, under statutory grounds or standards the executive has published, with statute prevailing.",
       "Recognize the 25-year ceiling plus at most one 5-year extension and no further extension.",
       "Recognize automatic NRS publication on expiry without further government action.",
-      "Recognize that any person with standing may petition at any time for release of every portion whose disclosure would not satisfy the statutory ground, with redactions and their grounds published."
+      "Recognize that any person with standing may petition at any time for release of every portion whose classification is not required to protect national security, with redactions and their grounds published."
     ],
     "mustNot": [
       "Do not claim all government information must be immediately public.",

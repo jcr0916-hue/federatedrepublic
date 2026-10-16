@@ -783,17 +783,17 @@ Monitor Generals disclose financial interests under the same substantive require
 (1) The National Record System is the permanent, tamper-evident public record of the Republic — freely accessible to every Inhabitant at no cost. (2) Every constitutional act, order, finding, certification, designation, declaration, and determination made under this Constitution is published to the NRS as a permanent record; no provision need state this obligation individually.
 
 - **Time limits:**
-  - the reviewing court must rule within 14 days
+  - The record is restored when the 30 days end unless that court has confirmed the restriction on the narrowest possible grounds, in which case the court sets its duration
   - Where the NRS has not been restored within 180 days, the parallel system becomes the constitutional record
-- **Cross-refs:** §11.2
+- **Cross-refs:** §1.8, §11.2
 
 ### §10.2 — Classification Criteria
 
-Government records may be classified only on grounds the Legislature defines by statute. Classification to conceal a constitutional violation, an illegal order, policy disagreement, or political embarrassment is prohibited and void; classification used to conceal a constitutional violation or illegal order is a constitutional offense.
+Government records may be classified only where required to protect national security, under grounds defined by statute or standards the classifying executive has published to the NRS before the classification; a statute prevails over any conflicting executive standard. The classifying authority must state the ground relied on at the time of classification.
 
 - **Time limits:**
   - No record may remain classified beyond 25 years from the date of original classification
-  - On expiry, the NRS Panel publishes the declassified record within 30 days of the classification ceiling date
+  - Within 30 days after classification expires, the NRS Panel publishes the declassified record
 
 ---
 
