@@ -39,7 +39,7 @@ Every person is equal before the law. Government may not discriminate on the bas
 
 ### §1.7 — Privacy, Property, and Security of the Home
 
-Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home, or search, surveil, or collect a person, communication, or data, without consent or prior independent judicial authorization on specific, articulable grounds. Encryption is lawful and may not be prohibited. Property may be taken for public use only upon just compensation determined independently.
+Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Within the Republic's territory, government may not enter a home, or search, surveil, or collect a person, communication, or data, without consent or prior independent judicial authorization on specific, articulable grounds. Encryption is lawful and may not be prohibited. Property may be taken for public use only upon just compensation determined independently.
 
 ### §1.8 — Democratic Participation
 
@@ -87,11 +87,11 @@ The three Monitors retain full constitutional authority throughout any emergency
 
 ### §1.16.a — Non-Derogable Rights
 
-These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.10); the right to a public trial (§1.12); no retroactive punishment (§1.13); and non-refoulement (§1.18). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such application is void.
+These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.10); the right to a public trial (§1.12); no retroactive punishment (§1.13); and non-refoulement (§1.18). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, sex, religion, national origin, sexual orientation, or gender identity; any such application is void.
 
 ### §1.17 — Right to Seek Asylum
 
-Every person who reaches the Republic's jurisdiction has the right to claim asylum and to an independent determination of that claim under §6.3. Manner of entry does not affect this right. An asylum seeker is an Inhabitant from the date of claim and holds all rights under this Article.
+Every person who reaches the Republic's jurisdiction has the right to claim asylum and to an independent determination of that claim under §6.3. Manner of entry does not affect this right. An asylum seeker holds all rights under this Article from the date of claim.
 
 ### §1.18 — Non-Refoulement
 
@@ -111,7 +111,7 @@ The Legat Consul may use military force in immediate response to an active or im
 
 ### §2.3 — Consular Intelligence
 
-The Legat Consul directs external intelligence. No intelligence operation against Republic citizens within Republic territory may be conducted on the Legat Consul's authority; such operations require independent judicial authorization.
+The Legat Consul directs external intelligence and consults the Senate on it in the manner the Legat Consul and the Senate determine. No intelligence operation against Republic citizens within Republic territory may be conducted on the Legat Consul's authority; such operations require independent judicial authorization.
 
 ### §2.3.a — Legat Consul Legislative Veto
 
@@ -123,7 +123,7 @@ The Legat Consul negotiates and concludes treaties and trade agreements, subject
 
 ### §2.4.a — Domain Officers
 
-The Legat Consul may appoint domain officers to exercise defined authority. Officers are nominated from the qualified pool (§9.8) and confirmed by the Senate. Statute defines offices, qualifications, acting service, and administration, but may not transfer, enlarge, or diminish the Legat Consul's constitutional authority. The Legat Consul may dismiss a domain officer; the Senate may remove one by majority of full seated membership.
+The Legat Consul may appoint domain officers to exercise defined authority. Officers are nominated by the Legat Consul and confirmed by the Senate. Statute defines offices, qualifications, acting service, and administration, but may not transfer, enlarge, or diminish the Legat Consul's constitutional authority. The Legat Consul may dismiss a domain officer; the Senate may remove one by majority of full seated membership.
 
 ### §2.5 — The Civic Consul — Domain and Term
 
@@ -277,7 +277,7 @@ During armed insurrection against the constitutional order, the Council of Minis
 
 ### §3.1 — The Legislature
 
-The Legislature comprises the Assembly and the Senate. All legislation originates in the Assembly. The Senate may review and amend an Assembly-passed bill and must act within 90 days, or any shorter period defined by statute. By majority of its full seated membership, the Senate may once extend review by up to 30 days. Failure to act by the applicable deadline constitutes approval.
+The Legislature comprises the Assembly and the Senate. All legislation originates in the Assembly. The Senate may review and amend an Assembly-passed bill and must act within 90 days, or any shorter period defined by statute. By majority of its full seated membership, the Senate may once extend review by up to 30 days. Failure to act by the applicable deadline constitutes approval of a measure that requires no more than a majority, and never satisfies a requirement of an affirmative vote.
 
 ### §3.2 — The Assembly
 
@@ -487,7 +487,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (5) The Legislature must establish an independent federal asylum adjudicative process by statute, institutionally separate from immigration enforcement, removal, foreign affairs, intelligence, and national-security operations. Adjudicators must exercise independent judgment, with protections established by statute sufficient to preserve impartial decision-making.
 
-(6) An unaccompanied minor arriving in the Republic is an Inhabitant from the moment of contact and holds full §1.18 protection. A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours.
+(6) An unaccompanied minor arriving in the Republic holds full §1.18 protection from the moment of contact. A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours.
 
 (7) Detention of an unaccompanied minor must be lawful and necessary and may occur only in a facility specifically designated and resourced for children.
 
@@ -545,7 +545,7 @@ Except for constitutional-amendment referendums governed by §17.1, any supermaj
 
 (5) An office-specific restriction does not disqualify a person from another constitutional office unless this Constitution expressly provides otherwise.
 
-(6) A candidate disqualified by the Elections Panel may appeal to the Appellate Court within 14 days, unless another period is established by statute. The Court must determine whether the applicable eligibility requirements were correctly applied and resolve the appeal in sufficient time to permit the candidate's participation in the scheduled election.
+(6) A candidate disqualified by the Elections Panel may appeal to the Appellate Court within 14 days, unless another period is established by statute. The Court must determine whether the applicable eligibility requirements were correctly applied and resolve the appeal in sufficient time to permit the candidate's participation in the scheduled election or, where the election has been held, before certification.
 
 ### §7.5 — Removal from Federal Office
 
@@ -609,7 +609,7 @@ Authority conferred, transferred, or assumed by operation of this Constitution v
 
 All contributions to electoral campaigns must be disclosed in full to the Elections Panel, including the identity of every contributor and the amount given, without threshold or exception. The Elections Panel publishes contribution records to the NRS; publication may present contributions below a threshold defined by statute in aggregate or generalized form to protect the privacy of individual contributors. Anonymous contributions are prohibited.
 
-Citizens and lawful residents may contribute to electoral campaigns, subject to individual contribution limits established by statute. Contributions from corporations and other business entities are barred. Contributions from foreign governments, foreign nationals other than lawful residents, and foreign-controlled entities are prohibited. No person may make, receive, or fund an electoral contribution or independent expenditure on behalf of, at the direction of, or with funds from such a source, directly or through an intermediary.
+Citizens and legal residents may contribute to electoral campaigns, subject to individual contribution limits established by statute. Contributions from corporations and other business entities are barred. The Legislature may by statute regulate contributions and expenditures by organizations, provided the regulation does not infringe Article I. Contributions from foreign governments, foreign nationals other than legal residents, and foreign-controlled entities are prohibited. No person may make, receive, or fund an electoral contribution or independent expenditure on behalf of, at the direction of, or with funds from such a source, directly or through an intermediary.
 
 Independent expenditures made to support or oppose a candidate or a question submitted to a direct vote of the citizens are subject to the same disclosure requirements as direct contributions but are not subject to contribution limits. Expenditures coordinated with a campaign are treated as direct contributions.
 
@@ -637,7 +637,7 @@ The Legislature must by statute establish a public campaign financing system ava
 
 ### §9.1 — Three Monitors
 
-The Republic maintains three constitutionally independent Monitors — Legislative (LM), Executive (EM), and Judicial (JM) — each selected under §9.2. Monitors hold an information-only mandate: they observe constitutional processes, assess compliance, and publish findings. Findings and assessments are not binding on any constitutional actor and are not a prerequisite for any legal proceeding or governmental function. Each Monitor General serves a 10-year non-renewable term. Any constitutional officer, chamber, or body may request a focused assessment from any Monitor within that Monitor’s mandate; the Monitor publishes the assessment by the requested date where practicable. Persistent non-responsiveness to reasonable requests may be published by the other two Monitors as a non-responsiveness finding. Once a Monitor undertakes work under constitutional authority, the work must be completed and published even if it becomes moot. A missed deadline may affect any consequence expressly attached to the deadline but does not erase the publication duty. Work may be discontinued only where completion has become factually impossible; the reason for discontinuation and all completed work product must still be published to the NRS.
+The Republic maintains three constitutionally independent Monitors — Legislative (LM), Executive (EM), and Judicial (JM) — each selected under §9.2. Monitors hold an information-only mandate: they observe constitutional processes, assess compliance, and publish findings. Findings and assessments are not binding on any constitutional actor and are not a prerequisite for any legal proceeding or governmental function, except for consequences this Constitution expressly attaches to a finding. Each Monitor General serves a 10-year non-renewable term. Any constitutional officer, chamber, or body may request a focused assessment from any Monitor within that Monitor’s mandate; the Monitor publishes the assessment by the requested date where practicable. Persistent non-responsiveness to reasonable requests may be published by the other two Monitors as a non-responsiveness finding. Once a Monitor undertakes work under constitutional authority, the work must be completed and published even if it becomes moot. A missed deadline may affect any consequence expressly attached to the deadline but does not erase the publication duty. Work may be discontinued only where completion has become factually impossible; the reason for discontinuation and all completed work product must still be published to the NRS.
 
 ### §9.1.a — The Legislative Monitor
 
@@ -653,7 +653,7 @@ The JM audits the courts, the Elections Panel, and compliance with constitutiona
 
 ### §9.1.d — Monitor General Term Expiry and Vacancy
 
-A Monitor General's constitutional authority terminates automatically at the moment their term expires. Any official act taken after term expiry is constitutionally void. Where a Monitor General's term expires without a confirmed successor ready to assume office, or where an unexpected vacancy arises mid-term through death, resignation, or removal, the most senior eligible member of the affected Monitor's candidate pool by continuous pool tenure who accepts designation serves as Acting Monitor General until a successor assumes authority under §9.3; ties in pool tenure are resolved in favor of the older member. The same acting mechanism activates during a suspension under §9.1.e or §9.7.a and ends upon restoration of the original Monitor General's authority or commencement of a successor's authority. The Acting Monitor General holds full constitutional authority of the office but may not be appointed as successor to the Monitor General for whom they act; upon conclusion of acting service they return to the candidate pool. The JMC records the designation and both executives are notified immediately. Suspension does not vacate the office, interrupt its term, or affect compensation or benefits.
+A Monitor General's constitutional authority terminates automatically at the moment their term expires. Any official act taken after term expiry is constitutionally void. Where a Monitor General's term expires without a confirmed successor ready to assume office, or where an unexpected vacancy arises mid-term through death, resignation, or removal, the most senior eligible member of the affected Monitor's candidate pool by continuous pool tenure who accepts designation serves as Acting Monitor General until a successor assumes authority under §9.3; ties in pool tenure are resolved in favor of the older member. The same acting mechanism activates during an incapacity or suspension under §9.1.e or a suspension under §9.7.a and ends upon restoration of the original Monitor General's authority or commencement of a successor's authority. The Acting Monitor General holds full constitutional authority of the office but may not be appointed as successor to the Monitor General for whom they act; upon conclusion of acting service they return to the candidate pool. The JMC records the designation and both executives are notified immediately. Incapacity and suspension do not vacate the office, interrupt its term, or affect compensation or benefits.
 
 ### §9.1.e — Monitor General Incapacity
 
@@ -811,7 +811,7 @@ Where the Elections Panel finds through audit that a State's election administra
 
 ### §12.1 — The Social State
 
-The Republic is a social state. Every Inhabitant is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child. The Legislature establishes the framework and adequacy standards for each by statute, and the EM assesses those standards annually. A standard may be reduced only by a 2/3 concurrent vote of both chambers or during a certified Severe Revenue Contraction under §12.4. Parents may direct their children's education within public standards.
+The Republic is a social state. Every Inhabitant, meaning every person present within the Republic's jurisdiction, is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child. The Legislature establishes the framework and adequacy standards for each by statute, and the EM assesses those standards annually. A standard may be reduced only by a 2/3 concurrent vote of both chambers or during a certified Severe Revenue Contraction under §12.4. Parents may direct their children's education within public standards.
 
 ### §12.1.a — The Monetary Authority
 
@@ -965,7 +965,7 @@ A State in Provisional status remains a State, and its government and Assembly r
 
 (1) A State may pursue devolution by a State referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters. The referendum required by §15.3(4) is this referendum. Upon approval, the State and the Legislature negotiate a restructuring agreement, which takes effect upon ratification by 2/3 of the full seated Senate. The agreement is legally binding and specifies asset and liability allocation, transition timeline, constitutional status of successor jurisdictions, fiscal obligations to the Republic, and continuing obligations.
 
-(2) The State retains its existing status, ordinary or Provisional, until the restructuring agreement takes effect, when it becomes a Territory.
+(2) The State retains its existing status, ordinary or Provisional, until the restructuring agreement takes effect, when each successor jurisdiction becomes a Territory.
 
 (3) A Territory or a defined portion of a Territory may merge with a geographically contiguous existing State. Merger requires a referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters, approval by the existing State through its own constitutional process, a joint LM-JM assessment confirming that the existing State's constitutional integrity is maintained, and ratification by a simple majority of the Senate. The referendum is triggered by a petition signed by citizens equal to a percentage of eligible voters within the Territory or defined portion, set by statute at not less than 5% nor more than 15%, authenticated through the NVS and certified by the Elections Panel. The petition period may not exceed 12 months.
 
@@ -1131,7 +1131,7 @@ The Seat of Government is hosted by a State or Territory selected through a comp
 
 ### §18.3 — Operational Use Rights
 
-When a federal function ends, the federal government must publish notice of termination of the Operational Use Right to the NRS within the period defined by statute, not to exceed 90 days. The land and all improvements revert to the host State automatically unless the federal government and host State negotiate a retention agreement within the statutory reversion window. Disputes over use right boundaries, termination, registration validity, or improvement valuation go to the SC on an expedited track; neither party may occupy or alter disputed land during pending resolution.
+When a federal function ends, the federal government must publish notice of termination of the Operational Use Right to the NRS within the period defined by statute, not to exceed 90 days. The land and all improvements revert to the host State or Territory automatically unless the federal government and the host negotiate a retention agreement within the statutory reversion window. Disputes over use right boundaries, termination, registration validity, or improvement valuation go to the SC on an expedited track; neither party may occupy or alter disputed land during pending resolution.
 
 ### §18.4 — The National Trust
 
@@ -1203,7 +1203,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.6 — Transition Territories
 
-(1) Political entities that held recognized State or equivalent status immediately prior to ratification and choose to enter the Republic as States become full States for all constitutional purposes from Day Zero, including constituting the Senate and seating their legislators.
+(1) Political entities that held recognized State or equivalent status immediately prior to ratification and choose to enter the Republic as States become full States for all constitutional purposes from Day Zero, including constituting the Senate at its first seating.
 
 (2) All prior government territories that had not achieved statehood by Day Zero enter as Territories from Phase 4 activation; any capital district or special administrative region is assigned Territory status and follows the §15.2 path.
 
