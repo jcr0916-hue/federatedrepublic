@@ -543,7 +543,7 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 ### §7.2.a — Special Elections and Postponements
 
-Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a two-thirds vote of each chamber.
+Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a 2/3 vote of each chamber.
 
 
 ### §7.3 — Electoral Supermajority Threshold
@@ -1057,7 +1057,7 @@ Where a State's constitutional government has become incapable of exercising gov
 
 ### §16.1 — Acknowledgment of Prior Sovereignty and Recognition
 
-Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted, and the Republic may not extinguish it.
+Indigenous nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted, and the Republic may not extinguish it.
 
 - **Cross-refs:** §16.4
 
@@ -1187,7 +1187,7 @@ This constitution takes effect upon: (1) interim Elections Panel certification t
 
 ### §19.3 — Caretaker Status
 
-(1) Officials and institutions of the predecessor national government whose authority is displaced or superseded by this Constitution continue during the Transition Window only in caretaker capacity as necessary to preserve lawful government, existing services, rights, obligations, and public safety. Existing State, territorial, Indigenous, and local governments continue under their own lawful authority except to…
+(1) Officials and institutions of the predecessor national government whose authority is displaced or superseded by this Constitution continue during the Transition Window only in caretaker capacity as necessary to preserve lawful government, existing services, rights, obligations, and public safety. Existing State, territorial, indigenous, and local governments continue under their own lawful authority except to…
 
 
 ### §19.3.a — Transition National-Defense Continuity
@@ -1222,7 +1222,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.7 — Transition Candidate Registers
 
-The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. It also compiles the founding register of recognized Indigenous nations under §16.1 from the predecessor record and publishes it to the NRS before the close of Phase 1; compilation is ministerial and applies the predecessor record as it stands.
+The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. It also compiles the founding register of recognized indigenous nations under §16.1 from the predecessor record and publishes it to the NRS before the close of Phase 1; compilation is ministerial and applies the predecessor record as it stands.
 
 - **Cross-refs:** §12.1.a, §16.1
 
