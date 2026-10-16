@@ -804,19 +804,19 @@ Government records may be classified only where required to protect national sec
 (1) Two constitutionally independent panels — the NRS Panel and the Elections Panel — operate the Republic's permanent record infrastructure and electoral systems respectively. (2) The Elections Panel establishes and maintains the National Voting System, sets administrative and technical standards for federal elections, certifies election equipment for state procurement, audits state compliance with federal…
 
 - **Time limits:**
-  - such measures may not change electoral rules, timelines, or NRS record permanence, and expire after 72 hours
+  - Such measures may not change electoral rules, timelines, or NRS record permanence, and expire after 72 hours
 - **Cross-refs:** §3.9
 
 ### §11.2 — NVS Properties and Voting Rights
 
-The National Voting System must maintain three constitutionally required properties simultaneously: ballot secrecy (technically impossible to link any vote to any voter, including in post-election audits), public auditability (aggregate results mathematically verifiable by anyone with NRS access; every vote individually verifiable by the voter without revealing identity to any other party), and resilience…
+The National Voting System must maintain three constitutionally required properties simultaneously: ballot secrecy (technically impossible to link any vote to any voter, including in post-election audits), public auditability (aggregate results mathematically verifiable by anyone with NRS access; every vote individually verifiable by the voter in a manner that cannot be used to prove to anyone else how they…
 
 
 ### §11.3 — State Election Non-Compliance
 
-Where the Elections Panel finds through audit that a State's election administration materially fails to meet the constitutional standards required under §11.1, it publishes the finding to the NRS and notifies the State formally. The State has the period defined by statute to cure the identified failures.
+Where the Elections Panel finds through audit that a State's election administration materially fails to meet the federal election standards under §11.1 or the requirements of §11.2, it publishes the finding to the NRS and notifies the State formally. The State has the period defined by statute to cure the identified failures.
 
-- **Cross-refs:** §11.1, §4.5, §7.2.a
+- **Cross-refs:** §11.1, §11.2, §7.2.a
 
 ---
 
