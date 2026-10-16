@@ -208,7 +208,7 @@ const TOPICS = [
       'citizen legislative initiative',
       'citizen initiative process',
     ],
-    answer: 'Citizens may propose legislation directly through the two-phase petition process in §13.2. After the required geographic and national signature thresholds are met, the Legislature must vote within 90 days. If the proposal fails or is not voted on, it proceeds to a direct citizen referendum under the constitutional passage and participation thresholds.',
+    answer: 'Citizens may propose legislation directly through the two-phase petition process in §13.2. Both phases must be completed within 20 months of filing. Once the required geographic and national signature thresholds are verified, the Legislature has 90 days to enact the proposal. If it does not, the Elections Panel administers a direct citizen referendum under the constitutional passage and participation thresholds.',
     sections: [
       ['§13.2', 'Two-phase citizen petition, legislative vote, and referendum fallback'],
     ],

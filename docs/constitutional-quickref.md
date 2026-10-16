@@ -882,24 +882,22 @@ The Legislature shall by statute establish a mechanism ensuring that every State
 
 ### §13.1 — Optional Referendum
 
-(1) Citizens may initiate a national referendum to repeal enacted legislation. The petition process begins within 90 days of enactment and proceeds in two phases, each authenticated through the NVS.
+(1) Citizens may initiate a national referendum to repeal enacted legislation. A petition must be filed with the Elections Panel within 90 days of enactment and proceeds in two phases, each authenticated through the NVS.
 
 - **Thresholds:**
   - A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification
 - **Time limits:**
-  - The petition process begins within 90 days of enactment and proceeds in two phases, each authenticated through the NVS
-  - (2) Phase One, lasting up to 8 months, requires signatures from citizens equal to a percentage of eligible voters — defined by statute at not less than 0
-  - (3) Phase Two, lasting up to 8 months following Phase One's completion, requires signatures from 5% of eligible voters nationally
-  - Any eligibility determination is challengeable in the Appellate Court within 14 days
+  - A petition must be filed with the Elections Panel within 90 days of enactment and proceeds in two phases, each authenticated through the NVS
+  - Both phases must be completed within 20 months of filing
+  - Any eligibility determination may be challenged in the Appellate Court within 14 days
   - (6) If the threshold is met, the Elections Panel administers the referendum within 90 days of verification
 
 ### §13.2 — Citizen Legislative Initiative
 
-(1) Citizens may propose legislation directly to the Legislature through the two-phase petition process of §13.1, except that each phase lasts up to 10 months and Phase Two requires signatures from 10% of eligible voters nationally. (2) Once the threshold is met, if the Legislature does not enact the proposal within 90 days, it proceeds to a direct citizen referendum; passage requires 60% of votes cast with at…
+(1) Citizens may propose legislation directly to the Legislature through the two-phase petition process of §13.1, except that no enactment deadline applies and Phase Two requires signatures from 10% of eligible voters nationally. The Elections Panel determines at filing whether the proposal complies with paragraph (3); that determination may be challenged under §13.1(5).
 
 - **Time limits:**
-  - 1, except that each phase lasts up to 10 months and Phase Two requires signatures from 10% of eligible voters nationally
-  - (2) Once the threshold is met, if the Legislature does not enact the proposal within 90 days, it proceeds to a direct citizen referendum
+  - (2) Once the threshold is verified, if the Legislature does not enact the proposal within 90 days, the Elections Panel administers a direct citizen referendum on it within 90 days after that period ends
 - **Cross-refs:** §13.1, §4.5
 
 ---
