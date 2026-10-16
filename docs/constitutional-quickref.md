@@ -479,13 +479,13 @@ Judgments, official records, and authenticated documents valid in one jurisdicti
 
 ### §5.1 — Citizenship
 
-Citizenship is acquired by parentage, protection against statelessness, or naturalization. A child is a citizen from birth if at least one parent is a citizen or legal resident, or if the child would otherwise be stateless.
+A child is a citizen from birth if at least one parent is a citizen or legal resident, or if the child would otherwise be stateless. Citizens acquire full citizenship rights, including voting and eligibility for office, at 18.
 
 - **Cross-refs:** §3.9
 
 ### §5.1.a — State and Territory Voting Citizenship
 
-Every citizen of the Republic is a voting citizen of exactly one State or Territory, determined by residence or domicile under applicable law consistent with this Constitution. No law may leave a citizen without a State or Territory of voting citizenship.
+Every citizen is a voting citizen of exactly one State or Territory, determined by residence or domicile under applicable law. No law may leave a citizen without a State or Territory of voting citizenship.
 
 
 ### §5.2 — Legal Resident Rights
@@ -495,7 +495,7 @@ Legal residents may work, enter contracts, own property, and access the social-s
 
 ### §5.3 — Custodial Care of Children
 
-Where removal of a parent or guardian would deprive a citizen or Inhabitant child of their primary caregiver, the Republic shall ensure the child's care, housing, and connection to remaining family, and the removal order is stayed until custodial arrangements are resolved. No child of a citizen or legal resident may be deported because of the child's own documentation status.
+Where removal of a parent or guardian would deprive a child of their primary caregiver, the Republic shall ensure the child's care, housing, and connection to remaining family, and the removal order is stayed until custodial arrangements are resolved. No child of a citizen or legal resident may be deported because of the child's own documentation status.
 
 
 ---
