@@ -146,6 +146,8 @@ const SYNONYMS = {
   'split into two states':['state immutability','territorial integrity','§15.7'],
   'terminate its compact':['sovereign mobility','compact termination','§20.4'],
   'terminate compact':['sovereign mobility','compact termination','§20.4'],
+  'monitor funding':['minimum funding guarantee','protected body','funding floor','§9.6'],
+  'funding below':['minimum funding guarantee','protected body','funding floor','§9.6'],
   'two executives':['dual executive','legat consul','civic consul','council of ministers','cross-domain'],
   'dual executive':['legat consul','civic consul','council of ministers','cross-domain emergency lead'],
   'both consuls':['legat consul','civic consul','council of ministers','cross-domain'],

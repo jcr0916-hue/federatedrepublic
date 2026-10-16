@@ -43,7 +43,7 @@ Every person holds the right to privacy and security in their person, home, comm
 
 ### §1.9 — Democratic Participation
 
-Every citizen, subject to constitutional eligibility requirements, has the right to vote, stand for office, participate in democratic processes, and have their vote counted. No governmental action whose purpose or substantial effect suppresses or reduces access to the franchise is valid. The Republic shall make voting broadly accessible but may not compel voting.
+Every citizen, subject to constitutional eligibility requirements, has the right to vote, stand for office, participate in democratic processes, and have their vote counted. No governmental action whose purpose or substantial effect suppresses or reduces access to the franchise is valid. The Republic must make voting broadly accessible but may not compel voting.
 
 ### §1.10 — Right to Bear Arms
 
@@ -75,13 +75,13 @@ No State or Territory may impose criminal or civil liability on a person for con
 
 ### §1.18 — Environmental Obligations
 
-Government may not cause or systematically permit material environmental harm to persons or communities. The Legislature shall establish environmental protections. Government shall take reasonable measures proportionate to known or identifiable harms; this provision does not guarantee a particular environmental outcome.
+Government may not cause or systematically permit material environmental harm to persons or communities. The Legislature must establish environmental protections. Government must take reasonable measures proportionate to known or identifiable harms; this provision does not guarantee a particular environmental outcome.
 
 ### §1.19 — Emergency Derogation
 
 No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, scope, and duration, published immediately to the NRS. Either executive may issue a declaration within their domain for no more than 14 days. Continuation beyond 14 days requires a statute with a fixed expiration date, which may not be extended or renewed.
 
-All emergency measures lapse automatically with the declaration. Judicial review remains available. Each declaration shall receive independent judicial review within 48 hours of publication. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
+All emergency measures lapse automatically with the declaration. Judicial review remains available. Each declaration must receive independent judicial review within 48 hours of publication. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
 
 The three Monitors retain full constitutional authority throughout any emergency.
 
@@ -107,7 +107,7 @@ To hold the office of Legat Consul, a person must have been a citizen for at lea
 
 ### §2.2 — Military Authorization Framework
 
-The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, military force requires legislative authorization. The Legat Consul shall notify both chambers and the Civic Consul within 24 hours of any use of force. Legislative authorization expires unless affirmatively renewed at intervals defined by statute, not exceeding 12 months; expiration requires cessation of operations. Operations must state and serve a purpose authorized by §14.1.
+The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, military force requires legislative authorization. The Legat Consul must notify both chambers and the Civic Consul within 24 hours of any use of force. Legislative authorization expires unless affirmatively renewed at intervals defined by statute, not exceeding 12 months; expiration requires cessation of operations. Operations must state and serve a purpose authorized by §14.1.
 
 ### §2.3 — Consular Intelligence
 
@@ -119,7 +119,7 @@ The Legat Consul may veto legislation raising a genuine constitutional concern w
 
 ### §2.4 — Legat Consul International Agreements
 
-The Legat Consul negotiates and concludes treaties and trade agreements, subject to §3.6. The Legat Consul shall consult the Civic Consul on trade and indigenous agreements bearing on domestic interests; the Civic Consul's response is advisory.
+The Legat Consul negotiates and concludes treaties and trade agreements, subject to §3.6. The Legat Consul must consult the Civic Consul on trade and indigenous agreements bearing on domestic interests; the Civic Consul's response is advisory.
 
 ### §2.4.a — Domain Officers
 
@@ -205,7 +205,7 @@ No civil servant, military member, or person exercising federal authority may co
 
 ### §2.10 — Executive Transparency
 
-Both executives shall publish their official acts to the NRS within the statutory period. This includes orders, certifications, vetoes, determinations, objections, and refusals. No executive may classify, delay, or suppress publication of an act required to be public. Every record is permanently attributed to the responsible officer.
+Both executives must publish their official acts to the NRS within the statutory period. This includes orders, certifications, vetoes, determinations, objections, and refusals. No executive may classify, delay, or suppress publication of an act required to be public. Every record is permanently attributed to the responsible officer.
 
 ### §2.11 — Emergency Governance
 
@@ -219,7 +219,7 @@ Declarations lapse after 30 days unless renewed by the same process. Any member 
 
 Each Consul may grant clemency only within their domain: the Legat Consul for military and national-security offenses, the Civic Consul for domestic federal offenses. Self-clemency is void.
 
-Every grant shall state its reasons. The granting Consul or either chamber may request an EM factual review; review does not suspend or invalidate the grant. Clemency does not bar any constitutional, political, civil, or criminal remedy for misconduct connected with its exercise. Group amnesty requires legislation.
+Every grant must state its reasons. The granting Consul or either chamber may request an EM factual review; review does not suspend or invalidate the grant. Clemency does not bar any constitutional, political, civil, or criminal remedy for misconduct connected with its exercise. Group amnesty requires legislation.
 
 ### §2.13 — Consular Removal
 
@@ -237,11 +237,11 @@ In a cross-domain emergency requiring unified operational authority, either Cons
 
 ### §2.14.b — Cross-Domain Assistance
 
-Either Consul may request assistance from the other within the responding Consul's domain. The request shall state its purpose, scope, and duration and be published to the NRS. The requesting Consul controls the purpose; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other. Assistance may provide non-coercive support only. It may not be used to compel, detain, surveil, or collect intelligence on persons within the Republic, or to commandeer civilian resources, except as §1.19 or another express constitutional source allows. Assistance may not exceed 90 days without a fresh request and response.
+Either Consul may request assistance from the other within the responding Consul's domain. The request must state its purpose, scope, and duration and be published to the NRS. The requesting Consul controls the purpose; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other. Assistance may provide non-coercive support only. It may not be used to compel, detain, surveil, or collect intelligence on persons within the Republic, or to commandeer civilian resources, except as §1.19 or another express constitutional source allows. Assistance may not exceed 90 days without a fresh request and response.
 
 ### §2.15 — Federal Prosecution
 
-The Civic Consul is responsible for enforcement of federal law and may set general prosecution policy. Statute shall establish a Federal Prosecution Service independent in individual prosecutorial decisions. Executive direction concerning a specific prosecution must be in writing and published to the NRS. The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers.
+The Civic Consul is responsible for enforcement of federal law and may set general prosecution policy. Statute must establish a Federal Prosecution Service independent in individual prosecutorial decisions. Executive direction concerning a specific prosecution must be in writing and published to the NRS. The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers.
 
 ### §2.16 — Executive Incapacity
 
@@ -269,7 +269,7 @@ During any constitutional cooling-off period barring a person from holding or se
 
 ### §2.18 — Domestic Insurrection
 
-During armed insurrection against the constitutional order, the Council of Ministers remains convened. The Civic Consul shall report to the Assembly at statutory intervals for the duration of the response, as the Legat Consul reports to the Senate. No required report may be withheld because operations are ongoing.
+During armed insurrection against the constitutional order, the Council of Ministers remains convened. The Civic Consul must report to the Assembly at statutory intervals for the duration of the response, as the Legat Consul reports to the Senate. No required report may be withheld because operations are ongoing.
 
 ---
 
@@ -295,7 +295,7 @@ The Legislature comprises the Assembly and the Senate. All legislation originate
 
 ### §3.3 — Electoral Districts
 
-States draw their own Assembly district maps subject to five criteria: substantially equal population per representative, accounting for the number of members elected by each district; geographic contiguity; compliance with §1.6 non-discrimination; no material dilution of minority voting power; and reasonable compactness. Voter political affiliation data, voting history data, and incumbent residence may not be used as criteria in drawing district boundaries. Protected-class data may be used only as reasonably necessary to comply with §1.6 and the dilution prohibition. The Elections Panel shall address each finding of non-compliance by a published determination. Where the Panel determines a map non-compliant and an election will occur before the State adopts a compliant map, the Panel draws an interim compliant map for that election, which is retired when the State adopts a compliant map. Territorial districts are drawn by the Elections Panel under the same criteria. Any citizen or State government may challenge a map before the SC.
+States draw their own Assembly district maps subject to five criteria: substantially equal population per representative, accounting for the number of members elected by each district; geographic contiguity; compliance with §1.6 non-discrimination; no material dilution of minority voting power; and reasonable compactness. Voter political affiliation data, voting history data, and incumbent residence may not be used as criteria in drawing district boundaries. Protected-class data may be used only as reasonably necessary to comply with §1.6 and the dilution prohibition. The Elections Panel must address each finding of non-compliance by a published determination. Where the Panel determines a map non-compliant and an election will occur before the State adopts a compliant map, the Panel draws an interim compliant map for that election, which is retired when the State adopts a compliant map. Territorial districts are drawn by the Elections Panel under the same criteria. Any citizen or State government may challenge a map before the SC.
 
 ### §3.4 — Legislative Standards
 
@@ -303,7 +303,7 @@ Every bill must address a single clearly defined subject. The full text of a bil
 
 Each chamber operates as a full-time legislative body and publishes its sitting schedule, and any revision, to the NRS. No recess may be used to defeat or delay a constitutional duty or deadline. Emergency sessions may be called by either Consul or by petition of one-third of either chamber.
 
-The Legislature shall maintain an ethics process capable of sanctioning and referring members. Each chamber may expel a member by 2/3 of full seated membership, effective immediately.
+The Legislature must maintain an ethics process capable of sanctioning and referring members. Each chamber may expel a member by 2/3 of full seated membership, effective immediately.
 
 ### §3.5 — The Senate
 
@@ -331,17 +331,17 @@ The Legislature may not withhold records, deliberations, votes, or draft legisla
 
 The Legislature may establish independent agencies outside the authority of either executive. The Legislature may not impair the independence of a function this Constitution assigns to an independent agency.
 
-Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. Principal decision-makers exercising a constitutionally assigned independent function shall serve fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements may not be designed to exclude candidates because of political or policy views or prior criticism of government.
+Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. Principal decision-makers exercising a constitutionally assigned independent function serve fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements may not be designed to exclude candidates because of political or policy views or prior criticism of government.
 
 ### §3.10 — Federal Legislative Competence
 
 The Legislature may legislate only within powers assigned to the Republic by this Constitution and powers reasonably necessary to carry those powers into effect. Powers not assigned to the Republic remain with the States and their local governments. It may not enact legislation that destroys the capacity of States to govern themselves as self-governing communities. Where a valid federal law enacted within federal competence conflicts with State or local law, federal law prevails to the extent of the conflict. The Legislature may establish minimum standards only where this Constitution assigns the Republic responsibility for the subject or where necessary to secure Article I rights or another express constitutional obligation. The Legislature may not direct State or local institutions as instruments of federal administration except where this Constitution expressly provides otherwise.
 
-Where this Constitution directs that a federal function, standard, procedure, or framework be established, defined, or regulated, the obligation is fulfilled by statute unless otherwise specified. Where this Constitution assigns a function to a legislative body, independent agency, or other institution, the Legislature shall maintain an institution capable of performing it. No executive or administrative act may substitute for required legislation.
+Where this Constitution directs that a federal function, standard, procedure, or framework be established, defined, or regulated, the obligation is fulfilled by statute unless otherwise specified. Where this Constitution assigns a function to a legislative body, independent agency, or other institution, the Legislature must maintain an institution capable of performing it. No executive or administrative act may substitute for required legislation.
 
 ### §3.11 — Delegation of Authority
 
-The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation shall state its scope, conditions, and duration. Delegation does not divest the Legislature of that authority: statute prevails over any conflicting exercise of delegated authority, and the Legislature may rescind a delegation at any time. Each exercise of delegated authority is published to the NRS identifying the delegating statute.
+The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation must state its scope, conditions, and duration. Delegation does not divest the Legislature of that authority: statute prevails over any conflicting exercise of delegated authority, and the Legislature may rescind a delegation at any time. Each exercise of delegated authority is published to the NRS identifying the delegating statute.
 
 ---
 
@@ -389,7 +389,7 @@ A Supreme Court justice may be removed by 2/3 of both chambers for serious misco
 
 If the Civic Consul fails to nominate, or the Senate fails to vote, within the applicable period under §4.4, the Temporary Associate Justice is submitted for public confirmation at the next federal electoral period. Confirmation requires 60% of votes cast under §7.3. An ordinary nomination and Senate confirmation completed before Elections Panel certification of the ballot ends the public route. If confirmed, the justice serves the remainder of the original term; if rejected, the next eligible Appellate Court judge becomes Temporary Associate Justice and the vacancy process restarts.
 
-The Temporary Associate Justice may advocate publicly for confirmation. Statute shall apply the foreign-contribution prohibition and disclosure requirements of §8.1 to public confirmation votes.
+The Temporary Associate Justice may advocate publicly for confirmation. Statute must apply the foreign-contribution prohibition and disclosure requirements of §8.1 to public confirmation votes.
 
 ### §4.5 — Judicial Review and Scope
 
@@ -423,11 +423,11 @@ The Temporary Associate Justice may advocate publicly for confirmation. Statute 
 
 ### §4.5.a — Judicial Decisions and Privacy
 
-Judicial decisions shall be public. Courts shall protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability.
+Judicial decisions are public. Courts must protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability.
 
 ### §4.6 — Judgment Recognition
 
-Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic shall be recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction or the judgment was obtained by fraud. A judgment contrary to Article I is void under §17.4.
+Judgments, official records, and authenticated documents valid in one jurisdiction of the Republic are recognized in all others. A judgment may be denied recognition only where the issuing court lacked jurisdiction or the judgment was obtained by fraud. A judgment contrary to Article I is void under §17.4.
 
 A judgment or status order published to the NRS is self-authenticating and effective throughout the Republic without re-registration. No State or Territory may discriminate in recognition based on the parties or subject matter involved.
 
@@ -439,7 +439,7 @@ A judgment or status order published to the NRS is self-authenticating and effec
 
 A child is a citizen from birth if at least one parent is a citizen or legal resident, or if the child would otherwise be stateless. Citizens acquire full citizenship rights, including voting and eligibility for office, at 18.
 
-A legal resident may earn citizenship after the continuous residency period and legal qualifications established by statute upon demonstrating civic and constitutional proficiency, or through honorable completion of military or national service. Any required assessment shall test constitutional and civic knowledge, not political opinion or cultural loyalty, and shall be administered by an independent agency under §3.9.
+A legal resident may earn citizenship after the continuous residency period and legal qualifications established by statute upon demonstrating civic and constitutional proficiency, or through honorable completion of military or national service. Any required assessment must test constitutional and civic knowledge, not political opinion or cultural loyalty, and be administered by an independent agency under §3.9.
 
 Citizenship may not be revoked as punishment. Naturalized citizenship may be revoked only by judicial finding, on clear and convincing evidence, that it was obtained through material fraud in the application, and never where revocation would cause statelessness. Revocation does not affect derivative citizenship previously acquired by another person.
 
@@ -447,7 +447,7 @@ A child born before a parent acquired legal residency or citizenship who joins t
 
 ### §5.1.a — State and Territory Voting Citizenship
 
-Every citizen is a voting citizen of exactly one State or Territory, determined by residence or domicile under applicable law. No law may leave a citizen without a State or Territory of voting citizenship. Statute shall resolve conflicting claims; recognition in one jurisdiction terminates prior recognition in another.
+Every citizen is a voting citizen of exactly one State or Territory, determined by residence or domicile under applicable law. No law may leave a citizen without a State or Territory of voting citizenship. Statute must resolve conflicting claims; recognition in one jurisdiction terminates prior recognition in another.
 
 ### §5.2 — Legal Resident Rights
 
@@ -455,7 +455,7 @@ Legal residents may work, enter contracts, own property, and access the social-s
 
 ### §5.3 — Custodial Care of Children
 
-Where removal of a parent or guardian would deprive a child of their primary caregiver, the Republic shall ensure the child's care, housing, and connection to remaining family, and the removal order is stayed until custodial arrangements are resolved. No child of a citizen or legal resident may be deported because of the child's own documentation status.
+Where removal of a parent or guardian would deprive a child of their primary caregiver, the Republic must ensure the child's care, housing, and connection to remaining family, and the removal order is stayed until custodial arrangements are resolved. No child of a citizen or legal resident may be deported because of the child's own documentation status.
 
 ---
 
@@ -463,7 +463,7 @@ Where removal of a parent or guardian would deprive a child of their primary car
 
 ### §6.1 — The Two-Stage Immigration System
 
-Legal residency requires sponsorship under the applicable State or federal framework, followed by federal certification, except as otherwise provided by this Constitution. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6. Federal certification categories are established by statute; no ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing. Upon completion of both stages, legal residency vests by operation of law; neither executive may delay, condition, or deny that status. The Legislature may set aggregate limits on total applications received and processed in any period. Asylum claims under §1.20 are exempt from ordinary sponsorship, certification, and aggregate application limits; no refusal of sponsorship may extinguish such a claim. Immigration into Territories shall be administered under federal standards, with each Territory entitled to negotiate immigration volumes and applicant qualifications with the Republic under its Territorial Compact.
+Legal residency requires sponsorship under the applicable State or federal framework, followed by federal certification, except as otherwise provided by this Constitution. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6. Federal certification categories are established by statute; no ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing. Upon completion of both stages, legal residency vests by operation of law; neither executive may delay, condition, or deny that status. The Legislature may set aggregate limits on total applications received and processed in any period. Asylum claims under §1.20 are exempt from ordinary sponsorship, certification, and aggregate application limits; no refusal of sponsorship may extinguish such a claim. Immigration into Territories is administered under federal standards, with each Territory entitled to negotiate immigration volumes and applicant qualifications with the Republic under its Territorial Compact.
 
 ### §6.2 — Enforcement, Removal, and Appeals
 
@@ -485,7 +485,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (4) Asylum proceedings must provide a qualified adjudicator; interpreter access; the right to present evidence and witnesses; the right to legal representation with appointed counsel at public expense where the applicant cannot afford representation; a written decision with grounds; and a right of appeal. The asylum proceedings statute must ensure accessibility to persons in Territories and geographically remote areas.
 
-(5) The Legislature shall establish an independent federal asylum adjudicative process by statute, institutionally separate from immigration enforcement, removal, foreign affairs, intelligence, and national-security operations. Adjudicators shall exercise independent judgment, with protections established by statute sufficient to preserve impartial decision-making.
+(5) The Legislature must establish an independent federal asylum adjudicative process by statute, institutionally separate from immigration enforcement, removal, foreign affairs, intelligence, and national-security operations. Adjudicators must exercise independent judgment, with protections established by statute sufficient to preserve impartial decision-making.
 
 (6) An unaccompanied minor arriving in the Republic is an Inhabitant from the moment of contact and holds full §1.21 protection. A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours.
 
@@ -493,7 +493,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 ### §6.3.a — Unexecuted Removal Orders
 
-A person whose removal cannot be executed shall remain at liberty, subject to all applicable laws of the jurisdiction in which they reside. The Legislature may establish reasonable registration and reporting requirements.
+A person whose removal cannot be executed remains at liberty, subject to all applicable laws of the jurisdiction in which they reside. The Legislature may establish reasonable registration and reporting requirements.
 
 ---
 
@@ -507,13 +507,13 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (3) Where no candidate wins outright, a runoff is conducted between the national RCV winner and the candidate, other than that winner, who received first-preference pluralities in the most States. The runoff is decided by national majority without a State plurality requirement.
 
-(4) Electoral ties shall be resolved by lot under the supervision of the Elections Panel. The Elections Panel administers and certifies all consular elections.
+(4) Electoral ties are resolved by lot under the supervision of the Elections Panel. The Elections Panel administers and certifies all consular elections.
 
 ### §7.2 — Federal Elections
 
 (1) Federal elections are held at regular intervals: Assembly elections every two years; Senate elections on the staggered six-year cycle; Legat Consul elections every four years.
 
-(2) All federal elections shall use Ranked Choice Voting.
+(2) All federal elections use Ranked Choice Voting.
 
 (3) The Legislature defines by statute the specific timing, duration, and structure of the federal electoral period within these constitutional floors.
 
@@ -521,13 +521,13 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 (5) Neither executive nor any State may interfere with federal elections or restrict lawful access to the National Voting System, except as expressly authorized by this Constitution.
 
-(6) The Republic shall provide the financial and technical assistance necessary for every State to meet federal election standards. Assistance is subject to Elections Panel oversight.
+(6) The Republic must provide the financial and technical assistance necessary for every State to meet federal election standards. Assistance is subject to Elections Panel oversight.
 
 (7) The results of a federal election or a direct vote of the citizens are final upon certification, subject only to timely Supreme Court review for material error in the certification of votes, sought under procedures established by statute.
 
 ### §7.2.a — Special Elections and Postponements
 
-Special elections shall be administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a 2/3 vote of each chamber. The mandates of affected officeholders extend until certification of the postponed election. Any further postponement requires renewed Elections Panel certification that holding the affected election remains impossible and renewed legislative approval by the same threshold. Elections shall proceed as soon as practicable once the impediment has ended. Elections Panel determinations are subject to expedited judicial review.
+Special elections are administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a 2/3 vote of each chamber. The mandates of affected officeholders extend until certification of the postponed election. Any further postponement requires renewed Elections Panel certification that holding the affected election remains impossible and renewed legislative approval by the same threshold. Elections proceed as soon as practicable once the impediment has ended. Elections Panel determinations are subject to expedited judicial review.
 
 ### §7.3 — Electoral Supermajority Threshold
 
@@ -535,7 +535,7 @@ Except for constitutional-amendment referendums governed by §17.1, any supermaj
 
 ### §7.4 — Eligibility and Disclosure for Federal Office
 
-(1) Every candidate for federal office and every person assuming federal office without election shall publicly disclose their criminal history under penalty of perjury. A current and accurate disclosure satisfies this requirement for subsequent appointments or elevations. Knowingly false or materially incomplete disclosure constitutes a federal offense.
+(1) Every candidate for federal office and every person assuming federal office without election must publicly disclose their criminal history under penalty of perjury. A current and accurate disclosure satisfies this requirement for subsequent appointments or elevations. Knowingly false or materially incomplete disclosure constitutes a federal offense.
 
 (2) No criminal conviction disqualifies a person from federal office except a conviction for insurrection, rebellion, or treason against the Republic, or subversion of a federal election. These grounds are exhaustive and require conviction rather than accusation or pending charges.
 
@@ -545,7 +545,7 @@ Except for constitutional-amendment referendums governed by §17.1, any supermaj
 
 (5) An office-specific restriction does not disqualify a person from another constitutional office unless this Constitution expressly provides otherwise.
 
-(6) A candidate disqualified by the Elections Panel may appeal to the Appellate Court within 14 days, unless another period is established by statute. The Court shall determine whether the applicable eligibility requirements were correctly applied and resolve the appeal in sufficient time to permit the candidate's participation in the scheduled election.
+(6) A candidate disqualified by the Elections Panel may appeal to the Appellate Court within 14 days, unless another period is established by statute. The Court must determine whether the applicable eligibility requirements were correctly applied and resolve the appeal in sufficient time to permit the candidate's participation in the scheduled election.
 
 ### §7.5 — Removal from Federal Office
 
@@ -553,7 +553,7 @@ A federal officeholder whose tenure or removal is governed by this Constitution 
 
 ### §7.6 — Continuity and Acting Service
 
-Selection and confirmation procedures for fixed-term constitutional offices shall provide for uninterrupted succession.
+Selection and confirmation procedures for fixed-term constitutional offices must provide for uninterrupted succession.
 
 ### §7.7 — Official Capacity Protection
 
@@ -571,7 +571,7 @@ An elected constitutional mandate may not be shortened, suspended, or terminated
 
 (1) A financial interest is disqualifying where it creates a direct and material conflict with the impartial exercise of official duties.
 
-(2) Except for Monitor Generals as provided in Article IX, constitutional officers shall disclose their financial interests, holdings, income sources, and liabilities to the Monitor responsible for their office, within a period defined by statute after taking office and annually thereafter. Disclosures shall be published to the NRS.
+(2) Except for Monitor Generals as provided in Article IX, constitutional officers must disclose their financial interests, holdings, income sources, and liabilities to the Monitor responsible for their office, within a period defined by statute after taking office and annually thereafter. Disclosures are published to the NRS.
 
 (3) An officer with a direct financial interest in a decision within their authority must recuse themselves. This requirement is self-executing.
 
@@ -583,23 +583,23 @@ An elected constitutional mandate may not be shortened, suspended, or terminated
 
 The Legislature may establish codes of conduct, disclosure requirements, conflict-of-interest standards, and disciplinary procedures for constitutional offices outside the Legislature. Such rules may not diminish constitutional authority, tenure, or institutional independence.
 
-A constitutional officer with a personal, financial, or other material connection to a matter within their authority shall publicly disclose that connection and state whether they will participate or recuse themselves, with reasons for that decision. The disclosure and explanation shall be published to the NRS.
+A constitutional officer with a personal, financial, or other material connection to a matter within their authority must publicly disclose that connection and state whether they will participate or recuse themselves, with reasons for that decision. The disclosure and explanation are published to the NRS.
 
 ### §7.12 — Post-Service Restrictions
 
-Constitutional officers may not exploit non-public information, privileged access, or official influence obtained through their service for private benefit after leaving office. The Legislature shall establish post-service restrictions and cooling-off periods by statute. The responsible Monitor shall audit compliance; enforcement rests with the appropriate legal authority.
+Constitutional officers may not exploit non-public information, privileged access, or official influence obtained through their service for private benefit after leaving office. The Legislature must establish post-service restrictions and cooling-off periods by statute. The responsible Monitor must audit compliance; enforcement rests with the appropriate legal authority.
 
 ### §7.13 — Federal Public Service Ethics
 
-The Legislature shall establish disclosure and recusal requirements for federal employees and military personnel whose duties present material conflicts of interest. The responsible Monitor shall audit institutional compliance.
+The Legislature must establish disclosure and recusal requirements for federal employees and military personnel whose duties present material conflicts of interest. The responsible Monitor must audit institutional compliance.
 
 ### §7.14 — Compensation of Federal Officials
 
-Compensation of federal officials shall be established by statute. No federal official may determine their own compensation or that of their direct supervisors other than through such a statute. Changes to the compensation of elected constitutional officers take effect only after the next election for the affected office following enactment. Official benefits and accommodations must reflect the functional requirements of the office.
+Compensation of federal officials is established by statute. No federal official may determine their own compensation or that of their direct supervisors other than through such a statute. Changes to the compensation of elected constitutional officers take effect only after the next election for the affected office following enactment. Official benefits and accommodations must reflect the functional requirements of the office.
 
 ### §7.15 — Authority by Constitutional Operation
 
-Authority conferred, transferred, or assumed by operation of this Constitution vests immediately upon satisfaction of the constitutional conditions, without oath, acceptance, publication, or other implementing act unless expressly required by this Constitution. The change shall be recorded to the NRS as soon as practicable. The NRS is the authoritative public record but does not confer authority.
+Authority conferred, transferred, or assumed by operation of this Constitution vests immediately upon satisfaction of the constitutional conditions, without oath, acceptance, publication, or other implementing act unless expressly required by this Constitution. The change must be recorded to the NRS as soon as practicable. The NRS is the authoritative public record.
 
 ---
 
@@ -625,11 +625,11 @@ Constitutional officeholders may not use public resources, personnel, or officia
 
 ### §8.3 — Campaign Access to Public Communication Resources
 
-Operators of communication channels on public resources, including broadcast spectrum, shall offer qualified candidates access impartially and at reasonable rates, so that no candidate is excluded by the limits of their own resources. The terms of access shall be established by statute. The Elections Panel shall certify compliance.
+Operators of communication channels on public resources, including broadcast spectrum, must offer qualified candidates access impartially and at reasonable rates, so that no candidate is excluded by the limits of their own resources. The terms of access are established by statute. The Elections Panel must certify compliance.
 
 ### §8.4 — Public Campaign Financing
 
-The Legislature shall by statute establish a public campaign financing system available to all qualified candidates for federal office on equal terms. Public financing shall provide qualified candidates an initial allocation sufficient to establish a campaign and communicate with voters. Acceptance of public support does not bar a candidate from private fundraising under §8.1, and no candidate may be disadvantaged in eligibility, ballot access, or access under §8.3 by reason of participating. The Elections Panel administers the system and publishes annual compliance findings.
+The Legislature must by statute establish a public campaign financing system available to all qualified candidates for federal office on equal terms. Public financing must provide qualified candidates an initial allocation sufficient to establish a campaign and communicate with voters. Acceptance of public support does not bar a candidate from private fundraising under §8.1, and no candidate may be disadvantaged in eligibility, ballot access, or access under §8.3 by reason of participating. The Elections Panel administers the system and publishes annual compliance findings.
 
 ---
 
@@ -669,11 +669,11 @@ A Monitor General's constitutional authority terminates automatically at the mom
 
 ### §9.2 — Selection and Independence
 
-Each Monitor General shall be selected through a process that excludes the institution subject to that Monitor's oversight from controlling the selection.
+Each Monitor General must be selected through a process that excludes the institution subject to that Monitor's oversight from controlling the selection.
 
 ### §9.3 — Monitor General Selection
 
-All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority; timing is defined by statute to ensure seamless succession; if the confirmation vote fails, the §9.1.d acting mechanism activates and a new selection must begin within 60 days. The Elections Panel administers all confirmation votes. The LM Monitor General is nominated by the SC from the LM candidate pool, which is audited jointly by the EM and JM. Where the SC fails to nominate an LM Monitor General within 60 days of a vacancy, the JMC shall select a nominee by public lottery from the eligible LM candidate pool. The EM Monitor General is nominated jointly by the Assembly Speaker and Senate Speaker from the EM candidate pool, which is audited jointly by the LM and JM, with JM audit findings on the nominee’s disclosure record published to the NRS before the vote; where the Speakers fail to jointly nominate within 60 days of a vacancy, the JMC shall select a nominee by public lottery from the eligible EM candidate pool. The JM Monitor General is selected by public lottery under §9.8 from the JM Candidate Pool under §9.4. No two Monitor General full terms may be scheduled to begin within 18 months of each other; service for the remainder of a predecessor's term does not commence a new term for the purposes of this spacing requirement. For a scheduled succession, the confirmed successor assumes full authority at the precise moment the incumbent's term concludes. A successor confirmed following an unscheduled vacancy assumes full authority immediately upon certification of the confirmation result and serves the remainder of the original term. Any person confirmed by the public to serve a full term as a Monitor General is not subsequently eligible to enter any Monitor General pool. A person confirmed by national popular vote to serve the remainder of a predecessor's term following an unscheduled vacancy under this section may not subsequently enter the Monitor General pool for that same capacity, but remains eligible for the pools of the other two capacities if otherwise qualified. Acting service under §9.1.d does not constitute confirmation for purposes of this provision.
+All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority; timing is defined by statute to ensure seamless succession; if the confirmation vote fails, the §9.1.d acting mechanism activates and a new selection must begin within 60 days. The Elections Panel administers all confirmation votes. The LM Monitor General is nominated by the SC from the LM candidate pool, which is audited jointly by the EM and JM. Where the SC fails to nominate an LM Monitor General within 60 days of a vacancy, the JMC must select a nominee by public lottery from the eligible LM candidate pool. The EM Monitor General is nominated jointly by the Assembly Speaker and Senate Speaker from the EM candidate pool, which is audited jointly by the LM and JM, with JM audit findings on the nominee’s disclosure record published to the NRS before the vote; where the Speakers fail to jointly nominate within 60 days of a vacancy, the JMC must select a nominee by public lottery from the eligible EM candidate pool. The JM Monitor General is selected by public lottery under §9.8 from the JM Candidate Pool under §9.4. No two Monitor General full terms may be scheduled to begin within 18 months of each other; service for the remainder of a predecessor's term does not commence a new term for the purposes of this spacing requirement. For a scheduled succession, the confirmed successor assumes full authority at the precise moment the incumbent's term concludes. A successor confirmed following an unscheduled vacancy assumes full authority immediately upon certification of the confirmation result and serves the remainder of the original term. Any person confirmed by the public to serve a full term as a Monitor General is not subsequently eligible to enter any Monitor General pool. A person confirmed by national popular vote to serve the remainder of a predecessor's term following an unscheduled vacancy under this section may not subsequently enter the Monitor General pool for that same capacity, but remains eligible for the pools of the other two capacities if otherwise qualified. Acting service under §9.1.d does not constitute confirmation for purposes of this provision.
 
 ### §9.4 — Judicial Monitor Audit Mandate
 
@@ -689,7 +689,7 @@ Any citizen meeting the following eligibility criteria may apply directly to the
 
 ### §9.5 — Monitor Operations
 
-Every Monitor finding, report, and assessment is published to the NRS permanently and free of charge and is exempt from classification, but must protect information whose disclosure would violate constitutional rights or compromise lawful security interests. No official outside the issuing Monitor may suppress, delay, classify, or alter a Monitor report before publication. Internal review for factual accuracy and compliance with constitutional disclosure protections is permitted but may not be used to suppress findings or obstruct required publication. Any Monitor staff member may publish a minority report directly to the NRS, subject to the same protections for constitutionally confidential information and lawful security interests as official Monitor reports, if they believe a finding has been improperly omitted or suppressed. No staff member may be disciplined or retaliated against for making a publication authorized by this section. All three Monitors jointly publish an annual State of the Republic report on a fixed date regardless of whether any political actor requests it. Where a compliance question spans multiple Monitor mandates, the Monitors may conduct a joint investigation; no Monitor General may veto another's contribution. Monitors have unrestricted access to records, personnel, facilities, and systems within their constitutional audit mandates. Access to confidential or classified information does not authorize its public disclosure. Obstruction of a Monitor acting within its constitutional audit mandate must be documented and reported to the NRS and the responsible body. Where an applicable compliance standard has been published under §9.5.a, the obstruction shall also be recorded as a Fail. Every finding, report, and assessment published under this Article is delivered on publication to the body or officer responsible for the subject matter, and to the Speaker of each legislative chamber. Delivery is a matter of record and imposes no obligation to act.
+Every Monitor finding, report, and assessment is published to the NRS permanently and free of charge and is exempt from classification, but must protect information whose disclosure would violate constitutional rights or compromise lawful security interests. No official outside the issuing Monitor may suppress, delay, classify, or alter a Monitor report before publication. Internal review for factual accuracy and compliance with constitutional disclosure protections is permitted but may not be used to suppress findings or obstruct required publication. Any Monitor staff member may publish a minority report directly to the NRS, subject to the same protections for constitutionally confidential information and lawful security interests as official Monitor reports, if they believe a finding has been improperly omitted or suppressed. No staff member may be disciplined or retaliated against for making a publication authorized by this section. All three Monitors jointly publish an annual State of the Republic report on a fixed date regardless of whether any political actor requests it. Where a compliance question spans multiple Monitor mandates, the Monitors may conduct a joint investigation; no Monitor General may veto another's contribution. Monitors have unrestricted access to records, personnel, facilities, and systems within their constitutional audit mandates. Access to confidential or classified information does not authorize its public disclosure. Obstruction of a Monitor acting within its constitutional audit mandate must be documented and reported to the NRS and the responsible body. Where an applicable compliance standard has been published under §9.5.a, the obstruction must also be recorded as a Fail. Every finding, report, and assessment published under this Article is delivered on publication to the body or officer responsible for the subject matter, and to the Speaker of each legislative chamber. Delivery is a matter of record and imposes no obligation to act.
 
 ### §9.5.a — Compliance Standards and Findings
 
@@ -699,7 +699,7 @@ The JMC defines and publishes the compliance standard for each category of audit
 
 Monitor findings, reports, and assessments do not substitute for a responsible body's independent obligation to perform its constitutional and statutory duties or to act on matters within its operational authority.
 
-### §9.6 — Monitor Minimum Funding Guarantee
+### §9.6 — Minimum Funding Guarantee
 
 The annual appropriation for each Monitor, the Elections Panel, the NRS Panel, and the Monetary Authority may not fall below the prior fiscal year's funding level adjusted to preserve equivalent purchasing power, whether prices rise or fall, without a 2/3 concurrent vote of both chambers. The Monetary Authority certifies the prior-year funding level of each other protected body, and the EM certifies the Monetary Authority's, each adjusted for the change in the price level; each certified floor is published to the NRS before the Legislature begins its annual budget process. Where a budget reduces a protected body below its certified floor without the required supermajority, that certified floor takes effect automatically for that body by constitutional operation.
 
@@ -715,7 +715,7 @@ The annual appropriation for each Monitor, the Elections Panel, the NRS Panel, a
 
 ### §9.7.a — Institutional Compromise Protocol
 
-Where two Monitor Generals jointly determine that the third has engaged in serious misconduct or abuse of office, they shall publish the determination with its stated evidence, and the affected Monitor General's authority is suspended immediately. Disagreement with a Monitor General's findings or conclusions is not grounds for suspension. The suspension is limited and may be extended as provided for jointly determined incapacity in §9.1.e(5). The affected Monitor General may seek expedited SC review under §9.1.e(4), limited to lawful invocation and whether the stated evidence concerns serious misconduct or abuse of office. Suspension under this section is not removal; permanent removal is governed exclusively by §9.9.
+Where two Monitor Generals jointly determine that the third has engaged in serious misconduct or abuse of office, they must publish the determination with its stated evidence, and the affected Monitor General's authority is suspended immediately. Disagreement with a Monitor General's findings or conclusions is not grounds for suspension. The suspension is limited and may be extended as provided for jointly determined incapacity in §9.1.e(5). The affected Monitor General may seek expedited SC review under §9.1.e(4), limited to lawful invocation and whether the stated evidence concerns serious misconduct or abuse of office. Suspension under this section is not removal; permanent removal is governed exclusively by §9.9.
 
 ### §9.8 — Constitutional Pool Framework
 
@@ -725,9 +725,9 @@ Where two Monitor Generals jointly determine that the third has engaged in serio
 
 (3) Lottery draws for constitutional candidate pools assigned by this Article are conducted by the JMC in a public session. A Monitor General takes no part in a draw that selects or nominates their successor.
 
-(4) The constitutional minimum for all pools is five eligible members. Where a pool falls below five, the Monitor responsible for auditing that pool shall publish a compliance breach.
+(4) The constitutional minimum for all pools is five eligible members. Where a pool falls below five, the Monitor responsible for auditing that pool must publish a compliance breach.
 
-(5) Where a constitutional candidate pool falls below its required minimum, the Elections Panel shall conduct an expedited eligibility review of applicants to restore the pool.
+(5) Where a constitutional candidate pool falls below its required minimum, the Elections Panel must conduct an expedited eligibility review of applicants to restore the pool.
 
 (6) Eligibility criteria for all pools are strictly objective — years of practice or service, office status, and financial interests as defined under §7.10. No registry administrator may apply criteria relating to legal philosophy, judicial temperament, ideological orientation, or political association; any exclusion on such grounds is constitutionally void.
 
@@ -799,7 +799,7 @@ Government records may be classified only where required to protect national sec
 
 ### §11.2 — NVS Properties and Voting Rights
 
-The National Voting System must maintain three constitutionally required properties simultaneously: ballot secrecy (technically impossible to link any vote to any voter, including in post-election audits), public auditability (aggregate results mathematically verifiable by anyone with NRS access; every vote individually verifiable by the voter in a manner that cannot be used to prove to anyone else how they voted), and resilience (capable of operating in degraded conditions without compromising either secrecy or auditability). Information generated by the NVS, including voter participation records, may be used or shared only to administer, audit, or certify the relevant election or petition, or for judicial review of its results. Eligibility verification may not store or expose voter identity within the NVS. No State may impose requirements or intermediaries that effectively reduce NVS access or impose burdens not present in direct NVS participation. The Elections Panel shall inform every eligible citizen of their federal races and how to vote before each federal election.
+The National Voting System must maintain three constitutionally required properties simultaneously: ballot secrecy (technically impossible to link any vote to any voter, including in post-election audits), public auditability (aggregate results mathematically verifiable by anyone with NRS access; every vote individually verifiable by the voter in a manner that cannot be used to prove to anyone else how they voted), and resilience (capable of operating in degraded conditions without compromising either secrecy or auditability). Information generated by the NVS, including voter participation records, may be used or shared only to administer, audit, or certify the relevant election or petition, or for judicial review of its results. Eligibility verification may not store or expose voter identity within the NVS. No State may impose requirements or intermediaries that effectively reduce NVS access or impose burdens not present in direct NVS participation. The Elections Panel must inform every eligible citizen of their federal races and how to vote before each federal election.
 
 ### §11.3 — State Election Non-Compliance
 
@@ -857,7 +857,7 @@ No State or Territory may impose requirements on goods, services, or economic ac
 
 ### §12.6 — Fiscal Equalization
 
-The Legislature shall by statute establish a mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I. The EM certifies annually whether the mechanism is operating as required. Where the EM finds the mechanism is not operating as required, the Legislature publishes its response to the NRS within 90 days.
+The Legislature must by statute establish a mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I. The EM certifies annually whether the mechanism is operating as required. Where the EM finds the mechanism is not operating as required, the Legislature publishes its response to the NRS within 90 days.
 
 ---
 
@@ -1005,13 +1005,13 @@ Cities, counties, municipalities, and other local subdivisions receive constitut
 
 ### §15.8.a — Subsidiarity and Local Capacity
 
-(1) Public functions not expressly assigned by this Constitution to the Republic or another constitutional institution shall be exercised at the most local level of government reasonably capable of performing them effectively and consistently with this Constitution.
+(1) Public functions not expressly assigned by this Constitution to the Republic or another constitutional institution are exercised at the most local level of government reasonably capable of performing them effectively and consistently with this Constitution.
 
 (2) States retain authority to allocate ordinary governmental functions between State and local governments consistent with subsection (1), Article I, and §15.8.
 
 (3) Responsibility may move to a higher level of government where the lower level lacks reasonable capacity to perform the function, materially fails a constitutional or lawful minimum standard applicable to it, the matter produces material effects across jurisdictions that cannot reasonably be resolved at the lower level, or coordination at the higher level is reasonably necessary to discharge an express constitutional obligation. Federal action additionally requires an independent source of federal competence under §3.10.
 
-(4) Action by a higher level under subsection (3) shall be limited to the scope and duration reasonably necessary to address the incapacity, failure, cross-jurisdictional effect, or coordination need. Responsibility returns to the lower level when that justification no longer exists, except where lawfully reassigned under an independent constitutional authority.
+(4) Action by a higher level under subsection (3) is limited to the scope and duration reasonably necessary to address the incapacity, failure, cross-jurisdictional effect, or coordination need. Responsibility returns to the lower level when that justification no longer exists, except where lawfully reassigned under an independent constitutional authority.
 
 (5) No higher level of government may create or maintain lower-level incapacity through systematic denial of the fiscal, legal, or administrative means reasonably necessary to perform an assigned function and then rely on that incapacity as grounds for centralizing the function.
 
@@ -1179,7 +1179,7 @@ This constitution takes effect upon: (1) interim Elections Panel certification t
 
 (3) Until the Legislature is constitutionally capable of exercising its authority, a predecessor national authority exercising caretaker command under subsection (1) may call State forces into federal service without the legislative authorization §14.5 otherwise requires, but only to the extent reasonably necessary for defense against invasion or armed attack.
 
-(4) Defensive action under subsection (1) may occur outside the Republic's territory where reasonably necessary to repel, disrupt, or terminate the invasion or armed attack. This section does not authorize acquisition of territory or hostilities unrelated to the defense or inherited treaty obligation that justified the action.
+(4) Defensive action under subsection (1) may occur outside the Republic's territory where reasonably necessary to repel, disrupt, or terminate the invasion or armed attack.
 
 (5) Invocation of authority under this section, and the constitutional basis for it, must be published to the NRS as soon as operationally practicable. Operational details may be classified only under Article X. The joint Monitor panel monitors action under this section and has access to the records necessary to assess constitutional compliance.
 
@@ -1197,7 +1197,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 (3) Benefit obligations to persons who served in military or national service under the prior government are honored; the Legislature must provide for their administration by statute within the first budget cycle following Phase 4.
 
-(4) The Republic succeeds to and shall act as the legal continuation of the prior government in its international relations; all international obligations, financial commitments, treaty relationships, and contractual obligations of the prior government are assumed as successor sovereign. Where an assumed international obligation conflicts with this constitution, the Republic is bound to renegotiate or formally supersede the obligation through the treaty process under §3.6; until that process is complete, the obligation is honored to the minimum extent required by international law without requiring any constitutional officer to violate Article I or any non-derogable right under §1.19.a.
+(4) The Republic succeeds to and acts as the legal continuation of the prior government in its international relations; all international obligations, financial commitments, treaty relationships, and contractual obligations of the prior government are assumed as successor sovereign. Where an assumed international obligation conflicts with this constitution, the Republic is bound to renegotiate or formally supersede the obligation through the treaty process under §3.6; until that process is complete, the obligation is honored to the minimum extent required by international law without requiring any constitutional officer to violate Article I or any non-derogable right under §1.19.a.
 
 (5) From Day Zero, an independent judicial forum must remain continuously available for Article I claims arising from the nullification or displacement of predecessor law. A temporary judicial mechanism may exercise only the authority necessary to preserve constitutional rights and ends automatically when the permanent judiciary is constitutionally capable of exercising the relevant jurisdiction.
 
