@@ -137,7 +137,7 @@ No emergency suspends the Individual Sovereignty Floor in full. Rights other tha
 
 ### §1.16.a — Non-Derogable Rights
 
-These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.10); the right to a public trial (§1.12); no retroactive punishment (§1.13); and non-refoulement (§1.18). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such application is void.
+These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.10); the right to a public trial (§1.12); no retroactive punishment (§1.13); and non-refoulement (§1.18). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, sex, religion, national origin, sexual orientation, or gender identity; any such application is void.
 
 - **Cross-refs:** §1.10, §1.12, §1.13, §1.18, §1.3, §1.4
 
@@ -176,7 +176,7 @@ The Legat Consul may use military force in immediate response to an active or im
 
 ### §2.3 — Consular Intelligence
 
-The Legat Consul directs external intelligence. No intelligence operation against Republic citizens within Republic territory may be conducted on the Legat Consul's authority; such operations require independent judicial authorization.
+The Legat Consul directs external intelligence. No intelligence operation against Republic citizens, wherever located, may be conducted on the Legat Consul's authority; such operations require independent judicial authorization.
 
 
 ### §2.3.a — Legat Consul Legislative Veto
@@ -194,9 +194,8 @@ The Legat Consul negotiates and concludes treaties and trade agreements, subject
 
 ### §2.4.a — Domain Officers
 
-The Legat Consul may appoint domain officers to exercise defined authority. Officers are nominated from the qualified pool (§9.8) and confirmed by the Senate.
+The Legat Consul may appoint domain officers to exercise defined authority. Officers are nominated by the Legat Consul and confirmed by the Senate.
 
-- **Cross-refs:** §9.8
 
 ### §2.5 — The Civic Consul — Domain and Term
 
@@ -824,7 +823,7 @@ Where the Elections Panel finds through audit that a State's election administra
 
 ### §12.1 — The Social State
 
-The Republic is a social state. Every Inhabitant is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child.
+The Republic is a social state. Every Inhabitant, meaning every person present within the Republic's jurisdiction, is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child.
 
 - **Thresholds:**
   - A standard may be reduced only by a 2/3 concurrent vote of both chambers or during a certified Severe Revenue Contraction under §12
@@ -1147,7 +1146,7 @@ The Seat of Government is hosted by a State or Territory selected through a comp
 
 ### §18.3 — Operational Use Rights
 
-When a federal function ends, the federal government must publish notice of termination of the Operational Use Right to the NRS within the period defined by statute, not to exceed 90 days. The land and all improvements revert to the host State automatically unless the federal government and host State negotiate a retention agreement within the statutory reversion window.
+When a federal function ends, the federal government must publish notice of termination of the Operational Use Right to the NRS within the period defined by statute, not to exceed 90 days. The land and all improvements revert to the host State or Territory automatically unless the federal government and the host negotiate a retention agreement within the statutory reversion window.
 
 - **Time limits:**
   - When a federal function ends, the federal government must publish notice of termination of the Operational Use Right to the NRS within the period defined by statute, not to exceed 90 days
@@ -1216,7 +1215,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.6 — Transition Territories
 
-(1) Political entities that held recognized State or equivalent status immediately prior to ratification and choose to enter the Republic as States become full States for all constitutional purposes from Day Zero, including constituting the Senate and seating their legislators. (2) All prior government territories that had not achieved statehood by Day Zero enter as Territories from Phase 4 activation; any…
+(1) Political entities that held recognized State or equivalent status immediately prior to ratification and choose to enter the Republic as States become full States for all constitutional purposes from Day Zero, including constituting the Senate at its first seating. (2) All prior government territories that had not achieved statehood by Day Zero enter as Territories from Phase 4 activation; any capital…
 
 - **Cross-refs:** §15.2
 
