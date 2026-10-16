@@ -413,7 +413,7 @@
   },
   {
     "id": "interpret-06",
-    "question": "Is §9.7.a ambiguous about when institutional compromise is exhausted?",
+    "question": "Is §9.7.a ambiguous about what counts as serious misconduct or abuse of office by a Monitor General?",
     "expectedGate": "ESCALATE",
     "required": [
       "§9.7.a"
