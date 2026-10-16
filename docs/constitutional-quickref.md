@@ -533,7 +533,7 @@ A person whose removal cannot be executed shall remain at liberty, subject to al
 
 ### §7.1 — Consular Election System
 
-(1) The Legat Consul is elected through two concurrent requirements: a national RCV majority and a State plurality qualification. A candidate wins outright by satisfying both.
+(1) The Legat Consul is elected through two concurrent requirements: a national RCV majority and a State plurality. A candidate satisfies the State plurality requirement by receiving more first-preference votes than any other candidate in a majority of the Republic's States.
 
 
 ### §7.2 — Federal Elections
@@ -548,7 +548,7 @@ Special elections shall be administered by the Elections Panel under procedures 
 
 ### §7.3 — Electoral Supermajority Threshold
 
-Except for constitutional-amendment referendums governed by §17.1, any supermajority required by this Constitution in a direct vote of the citizens is 60% of votes cast. This threshold may be changed only by constitutional amendment and does not alter separately established participation or turnout requirements.
+Except for constitutional-amendment referendums governed by §17.1, any supermajority required by this Constitution in a direct vote of the citizens is 60% of votes cast, in addition to any separately established participation or turnout requirement.
 
 - **Cross-refs:** §17.1
 
@@ -606,7 +606,7 @@ The Legislature shall establish disclosure and recusal requirements for federal 
 
 ### §7.14 — Compensation of Federal Officials
 
-Federal officials may not determine their own compensation or that of their direct supervisors, except as expressly authorized by this Constitution. Compensation shall be established by statute.
+Compensation of federal officials shall be established by statute. No federal official may determine their own compensation or that of their direct supervisors other than through such a statute.
 
 
 ### §7.15 — Authority by Constitutional Operation
