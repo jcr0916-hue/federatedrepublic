@@ -1,0 +1,29 @@
+# Branch history — fix-unremovable-scenario-2026-10-15
+
+**Original branch:** `fix-unremovable-scenario-2026-10-15`  
+**PR:** to be filled in once opened (draft)  
+**Head commit at handoff:** see the PR  
+**Status:** proposed (shipped only once the PR merges)
+
+## Purpose
+Make `scenario-the-unremovable` match §6.3.a as written. Follows PR #167 (Article VI, merged), where the mismatch was flagged. Content-only; the Constitution is unchanged.
+
+## Changes and artifacts
+- `scenario-the-unremovable.html`: the scenario described a supervised detention regime (90-day initial review, 180-day reviews, a five-year limit, release to a supervision regime) that §6.3.a does not contain. §6.3.a says a person whose removal cannot be executed "shall remain at liberty" and allows reasonable registration and reporting. The story now turns on a habeas petition under §1.11 and §6.3.a: the court orders release because no provision authorizes detention for a failed removal, and the security assessment may inform lawful investigation but not detention.
+- Provision tag and scenario label corrected to the provision's name, "Unexecuted Removal Orders".
+- `_data/scenarioBridges.json`: summary and provision label updated for the same scenario.
+
+## Results and verification
+- Passed: the full `npm run world:publish-check` chain, run before opening the PR.
+
+## Decisions and lessons
+- The scenario was fixed to match the Constitution, not the other way round; John's rule is that the text governs and pages follow it.
+- The security argument stays in the story: the government's remedy is investigation and prosecution on evidence under ordinary law, not detention.
+
+## Open follow-ups
+- None specific to this branch. Article VII continues the article-by-article process.
+
+## Preservation and branch disposition
+- Results live on `main` once merged: the scenario edit and this note.
+- Branch name dependencies (deployments, automation, external links): not checked.
+- **Deletion approval:** Not granted by this note. Requires separate approved manifest and guarded cleanup.
