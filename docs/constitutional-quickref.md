@@ -647,37 +647,37 @@ The Legislature shall by statute establish a public campaign financing system av
 
 ### §9.1 — Three Monitors
 
-The Republic maintains three constitutionally independent Monitors — Legislative (LM), Executive (EM), and Judicial (JM) — each selected under §9.2. Monitors hold an information-only mandate: they observe constitutional processes, verify compliance, and publish findings.
+The Republic maintains three constitutionally independent Monitors — Legislative (LM), Executive (EM), and Judicial (JM) — each selected under §9.2. Monitors hold an information-only mandate: they observe constitutional processes, assess compliance, and publish findings.
 
 - **Cross-refs:** §9.2
 
 ### §9.1.a — The Legislative Monitor
 
-The LM audits the Legislature for fiscal accuracy and constitutional compliance. Responsibilities include auditing the population census for constitutional compliance; reviewing Assembly district maps for compliance with the criteria established in §3.3 and publishing its findings; auditing the Elections Panel’s administration of the referendum eligibility process; auditing legislative mandate compliance; and…
+The LM audits the Legislature for fiscal accuracy and constitutional compliance. Responsibilities include auditing the population census for constitutional compliance; reviewing Assembly district maps for compliance with the criteria established in §3.3; auditing the Elections Panel’s administration of the referendum eligibility process; and publishing an annual compliance report.
 
 - **Cross-refs:** §3.3
 
 ### §9.1.b — The Executive Monitor
 
-The EM audits both executives and the Monetary Authority. Annual responsibilities include assessing military compliance under §§14.1 and 14.2, including whether military force was used for an authorized purpose, whether legislative authorization and allocation requirements were observed, and whether military orders were published to the NRS within the required period; independently auditing compliance with the…
+The EM audits both executives and the Monetary Authority. Annual responsibilities include assessing military compliance under §§14.1 and 14.2; auditing compliance with the judicial authorization requirement under §2.3; conducting factual clemency reviews when requested under §2.12; reviewing disclosure records for constitutional appointments; and auditing electoral finance within the period defined by statute…
 
 - **Cross-refs:** §14.1, §2.12, §2.3
 
 ### §9.1.c — The Judicial Monitor
 
-The JM audits the courts for judicial scope and independence, the Elections Panel for electoral integrity compliance, and compliance with constitutional treaty and compact obligations. Its specific audit responsibilities are established under §9.4.
+The JM audits the courts, the Elections Panel, and compliance with constitutional treaty and compact obligations. Its specific audit responsibilities are established under §9.4.
 
 - **Cross-refs:** §9.4
 
 ### §9.1.d — Monitor General Term Expiry and Vacancy
 
-A Monitor General's constitutional authority terminates automatically at the moment their term expires — no further act or proceeding is required. Any official act taken after term expiry is constitutionally void.
+A Monitor General's constitutional authority terminates automatically at the moment their term expires. Any official act taken after term expiry is constitutionally void.
 
 - **Cross-refs:** §9.1.e, §9.3, §9.7.a
 
 ### §9.1.e — Monitor General Incapacity
 
-(1) A Monitor General is temporarily unable to exercise the office upon the Monitor General's own declaration or a joint determination by the other two Monitor Generals that the Monitor General cannot exercise the functions of office. The declaration or determination must state its functional grounds, and the acting mechanism under §9.1.d activates immediately.
+(1) A Monitor General is temporarily unable to exercise the office upon the Monitor General's own declaration or a joint determination by the other two Monitor Generals that the Monitor General cannot exercise the functions of office. The declaration or determination must state its functional grounds.
 
 - **Time limits:**
   - (2) A Monitor General who declares their own incapacity may declare it ended, restoring authority 24 hours after publication to the NRS
@@ -685,7 +685,7 @@ A Monitor General's constitutional authority terminates automatically at the mom
   - Restoration during the following 30 days requires agreement of the other two Monitor Generals or relief from the SC
   - (5) A jointly determined suspension ends 30 days after its initial publication unless the other two Monitor Generals request a national extension vote from the Elections Panel before that deadline
   - Timely filing continues the suspension pending certification, which must occur within 90 days of that initial determination
-- **Cross-refs:** §7.3, §9.1.d
+- **Cross-refs:** §7.3
 
 ### §9.2 — Selection and Independence
 
@@ -698,28 +698,27 @@ All Monitor General confirmations follow the same process: the nominated or lott
 
 - **Thresholds:**
   - All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority
-  - where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote
 - **Time limits:**
   - d acting mechanism activates and a new selection must begin within 60 days
   - Where the SC fails to nominate an LM Monitor General within 60 days of a vacancy, the JMC shall select a nominee by public lottery from the eligible LM candidate pool
-  - where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote
+  - where the Speakers fail to jointly nominate within 60 days of a vacancy, the JMC shall select a nominee by public lottery from the eligible EM candidate pool
   - No two Monitor General full terms may be scheduled to begin within 18 months of each other
 - **Cross-refs:** §9.1.d, §9.4, §9.8
 
 ### §9.4 — Judicial Monitor Audit Mandate
 
-(1) The JM monitors the court system, audits the Elections Panel's administration of the Judicial Pool, and conducts compliance audits across compact obligations. (2) Annual audit responsibilities include court operations for scope compliance and independence; the Elections Panel for electoral integrity;
+(1) Annual audit responsibilities include court operations for scope compliance and independence; the Elections Panel for electoral integrity and for its administration of the Judicial Pool; SC independence; inferior court compliance with jurisdictional limits; judicial compliance concerning Article XIV and Article XIX; and compliance with Article XVI treaty obligations and Article XX compacts.
 
 
 ### §9.4.a — Judicial Pool — Eligibility Criteria
 
-Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no current government position; no disqualifying financial interest as defined in §7.10. The Elections Panel applies the stated eligibility criteria and enters…
+Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no current government position; no disqualifying financial interest as defined in §7.10. A person who has served as a Supreme Court justice may not subsequently…
 
 - **Cross-refs:** §7.10
 
 ### §9.5 — Monitor Operations
 
-Every Monitor finding, report, and discrepancy notice is published to the NRS permanently and free of charge and is exempt from classification, but must protect information whose disclosure would violate constitutional rights or compromise lawful security interests. No official outside the issuing Monitor may suppress, delay, classify, or alter a Monitor report before publication.
+Every Monitor finding, report, and assessment is published to the NRS permanently and free of charge and is exempt from classification, but must protect information whose disclosure would violate constitutional rights or compromise lawful security interests. No official outside the issuing Monitor may suppress, delay, classify, or alter a Monitor report before publication.
 
 - **Cross-refs:** §9.5.a
 
@@ -730,7 +729,7 @@ The JMC defines and publishes the compliance standard for each category of audit
 
 ### §9.5.b — Agency Accountability
 
-Monitor findings and reports do not substitute for a responsible body's independent obligation to perform its constitutional and statutory duties or to act on matters within its operational authority.
+Monitor findings, reports, and assessments do not substitute for a responsible body's independent obligation to perform its constitutional and statutory duties or to act on matters within its operational authority.
 
 
 ### §9.6 — Monitor Minimum Funding Guarantee
@@ -740,15 +739,15 @@ The annual appropriation for each Monitor, the Elections Panel, and the NRS Pane
 
 ### §9.7 — Joint Monitor Council
 
-(1) The three Monitor Generals jointly constitute the JMC as the standing coordination body for matters crossing Monitor jurisdictions. (2) The JMC houses joint constitutional functions expressly assigned to it by this Constitution, including the constitutional-pool lotteries assigned under §9.8.
+(1) The three Monitor Generals jointly constitute the JMC as the standing coordination body for matters crossing Monitor jurisdictions. Two of the three Monitor Generals constitute a quorum for all JMC functions.
 
 - **Cross-refs:** §9.8
 
 ### §9.7.a — Institutional Compromise Protocol
 
-Where two Monitor Generals jointly determine that the third is operating in demonstrable bad faith, they shall publish the determination with its stated evidence. The affected Monitor General's authority is suspended immediately, and the acting mechanism under §9.1.d activates.
+Where two Monitor Generals jointly determine that the third has engaged in serious misconduct or abuse of office, they shall publish the determination with its stated evidence, and the affected Monitor General's authority is suspended immediately. Disagreement with a Monitor General's findings or conclusions is not grounds for suspension.
 
-- **Cross-refs:** §9.1.d, §9.1.e, §9.9
+- **Cross-refs:** §9.1.e, §9.9
 
 ### §9.8 — Constitutional Pool Framework
 
@@ -761,17 +760,17 @@ Where two Monitor Generals jointly determine that the third is operating in demo
 
 ### §9.9 — Constitutional Officer Removal — Standard Track
 
-(1) This section governs for-cause removal of constitutionally confirmed independent officers other than federal judges, whose removal is governed by §4.2 or §4.3.a, and elected executives. Removal of Monitor Generals follows subsections (2) through (5); removal of other officers within this section's scope follows subsections (6) and (7).
+(1) A Monitor General may be removed for serious misconduct, abuse of office, or permanent incapacity. Removal is initiated by the branch or branches that Monitor does not audit: for the Legislative Monitor General, jointly by both executives; for the Executive Monitor General, by the Legislature by concurrent resolution of both chambers; for the Judicial Monitor General, jointly by the Legislature by concurrent…
 
 - **Thresholds:**
   - Removal requires a concurrent vote of 2/3 of the full seated membership of each legislative chamber, on grounds within the statutory removal categories for that office
 - **Time limits:**
-  - (3) The Elections Panel administers a national removal referendum no later than 90 days after filing, or at the next regularly scheduled federal election, whichever comes first
+  - (2) The Elections Panel administers a national removal referendum no later than 90 days after filing, or at the next regularly scheduled federal election, whichever comes first
 - **Cross-refs:** §4.2, §4.3.a, §7.3
 
 ### §9.9.a — Monitor General Disclosure
 
-Monitor Generals disclose financial interests under the same substantive requirements and schedule established in §7.10, with disclosure published directly to the NRS; no Monitor reviews another Monitor General's disclosure. The Legislature must include concealment of a disqualifying financial interest, or failure to recuse where required, among the statutory removal categories established for Monitor Generals…
+Monitor Generals disclose financial interests under the same substantive requirements and schedule established in §7.10, with disclosure published directly to the NRS; no Monitor reviews another Monitor General's disclosure. Concealment of a disqualifying financial interest, or failure to recuse where required, is serious misconduct for purposes of §9.9.
 
 - **Cross-refs:** §7.10, §9.9
 
@@ -1323,7 +1322,6 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §4.3 | The Supreme Court | Altering the number of seats requires 2/3 of both chambers |
 | §4.3.a | Supreme Court Justice Removal | A Supreme Court justice may be removed by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity |
 | §9.3 | Monitor General Selection | All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority |
-| §9.3 | Monitor General Selection | where the Speakers fail to jointly nominate within 60 days of a vacancy, the Senate selects from the pool by 2/3 vote |
 | §9.9 | Constitutional Officer Removal — Standard Track | Removal requires a concurrent vote of 2/3 of the full seated membership of each legislative chamber, on grounds within the statutory removal categories for that office |
 | §12.1.a | The Monetary Authority | Principal decision-makers exercising the MA's constitutional authority must be selected through an independent candidate process and confirmed by 2/3 of the Senate |
 | §13.1 | Optional Referendum | A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification |

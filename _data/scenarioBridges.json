@@ -316,7 +316,7 @@
     ]
   },
   "scenario-deadlock": {
-    "summary": "When the two Speakers cannot jointly nominate an Executive Monitor General within the prescribed window, selection passes to the Senate. Public confirmation remains a separate requirement.",
+    "summary": "When the two Speakers cannot jointly nominate an Executive Monitor General within the prescribed window, the Joint Monitor Council draws a nominee by public lottery from the eligible pool. Public confirmation remains a separate requirement.",
     "provisions": [
       {
         "ref": "§9.3",
@@ -1161,15 +1161,15 @@
     ]
   },
   "scenario-the-suspension": {
-    "summary": "Initiating a Monitor General’s removal suspends authority, not pay or the term. The public decides removal; failure or a missed referendum deadline restores authority under the constitutional process.",
+    "summary": "Filing grounds to remove a Monitor General does not suspend authority, pay, or the term. The public decides removal by referendum; a failed vote or a missed deadline closes the proceeding.",
     "provisions": [
       {
         "ref": "§9.9",
         "label": "Constitutional Officer Removal — Standard Track"
       },
       {
-        "ref": "§9.1.d",
-        "label": "Monitor General Term Expiry and Incapacity"
+        "ref": "§9.7.a",
+        "label": "Suspension of a Monitor General for Misconduct"
       }
     ],
     "links": [
