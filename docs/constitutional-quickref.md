@@ -510,21 +510,21 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 ### §6.2 — Enforcement, Removal, and Appeals
 
-(1) Only the federal government may remove a person from the Republic. (2) Federal certification denials are judicially challengeable on three grounds: — criterion not established under the federal certification mandate; — discriminatory grounds contrary to §1.6; — or procedural violation affecting the outcome.
+(1) Only the federal government may remove a person from the Republic. (2) State sponsorship denials may be challenged only for discrimination contrary to §1.6; the court determines the remedy.
 
 - **Cross-refs:** §1.6
 
 ### §6.3 — Asylum and Protection
 
-(1) The Legislature shall provide for necessary shelter, subsistence, and medical care while an asylum claim under §1.20 and any appeal are pending. (2) An asylum claim must be determined before removal may be executed.
+(1) An asylum claim must be determined before removal may be executed. A claim found to have been filed solely to delay removal may be expedited by statute, without diminishing the right to a fair hearing or the protections of §1.21.
 
 - **Time limits:**
   - A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours
-- **Cross-refs:** §1.20, §1.21
+- **Cross-refs:** §1.21
 
 ### §6.3.a — Unexecuted Removal Orders
 
-A person whose removal cannot be executed shall remain at liberty, subject to all applicable laws of the jurisdiction in which they reside. The Legislature may establish reasonable registration and reporting requirements consistent with Article I.
+A person whose removal cannot be executed shall remain at liberty, subject to all applicable laws of the jurisdiction in which they reside. The Legislature may establish reasonable registration and reporting requirements.
 
 
 ---
