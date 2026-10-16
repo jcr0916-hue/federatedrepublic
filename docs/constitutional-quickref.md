@@ -1256,42 +1256,44 @@ Where a ratifying polity’s predecessor government has documented constitutiona
 
 ### §20.1 — Nature of Associated Community Status
 
-An Associated Community is a sovereign political community that remains outside the Republic while maintaining a consensual compact relationship with it under this Article. The compact may establish reciprocal rights, services, responsibilities, institutional cooperation, and other agreed relations without incorporating the Associated Community into the Republic or subjecting it to the Republic's constitutional…
+An Associated Community is a sovereign political community that remains outside the Republic in a consensual compact relationship with it under this Article. Associated Community status is available to recognized indigenous nations under §16.2 and to any independent nation outside the Republic.
 
-- **Cross-refs:** §15.9, §16.2
+- **Cross-refs:** §16.2
 
 ### §20.2 — Compact Terms and Equal Sovereignty
 
-The Republic and an Associated Community are equal parties to the compact; neither is constitutionally superior. Observing delegates attend Assembly and Senate proceedings relevant to the compact — speaking rights, no vote, no quorum or threshold effect.
+The Republic and an Associated Community are equal parties to the compact. Observer delegates of the Associated Community may attend and speak at Assembly and Senate proceedings relevant to the compact, without a vote.
 
 
 ### §20.3 — Compact Conditions and Compliance
 
-(1) No compact may be entered or ratified with any entity whose governance practices include, authorize, or systematically permit violations of any of the non-derogable rights established in §1.19.a, committed against any person within its jurisdiction. (2) The JM conducts annual compliance reviews.
+(1) No compact may be entered or ratified with an entity whose governance practices include, authorize, or systematically permit violations of the non-derogable rights in §1.19.a against any person within its jurisdiction. (2) Where the JM finds systematic violations of §1.19.a rights, or any party challenges a compact on those grounds, the compact is suspended pending review through its independent arbitration…
 
 - **Time limits:**
-  - the arbitration panel must issue a preliminary determination within 90 days of suspension
+  - The arbitration panel must issue a preliminary determination within 90 days of suspension
 - **Cross-refs:** §1.19.a
 
 ### §20.4 — Sovereign Mobility
 
-The Associated Community may at any time, by its own democratic or traditional governance process, elect to terminate the compact and proceed as a fully independent sovereign nation. No Republic consent is required for compact termination, and the Republic may not impose conditions on or penalties for the decision to terminate.
+The Associated Community may at any time, by its own democratic or traditional governance process, elect to terminate the compact. The Republic may not condition or penalize that decision.
 
+- **Time limits:**
+  - Termination takes effect on the date stated in the community's written notice to the NRS, which must be at least 12 months after publication
 
 ### §20.5 — Reciprocal Obligations and Review
 
-The compact must specify with particularity the reciprocal obligations of both parties and the review mechanism. The Associated Community holds obligations to the Republic as well as rights from it.
+The compact must specify the reciprocal obligations of both parties, a schedule of regular reviews, and an independent arbitration mechanism. Either party may request an additional review by written notice to the NRS.
 
 
 ### §20.6 — Compact Ratification
 
-A compact with an Associated Community requires Senate ratification under §3.6. Both executives must transmit the proposed compact to the Senate simultaneously with a joint assessment of its consistency with this Article.
+The Legat Consul negotiates and concludes compacts with Associated Communities, consults the Civic Consul, and submits each concluded compact to the Senate for ratification under §3.6 together with any Civic Consul response. The Civic Consul's response is advisory.
 
 - **Cross-refs:** §3.6
 
 ### §20.7 — Compact Continuity
 
-Compacts in force at the time of any government transition continue without interruption and bind successive governments of the Republic. No election result, change in the Republic's internal constitutional arrangements, or government transition affects the validity or standing of a compact in force.
+A compact in force continues to bind the Republic through any change of government or of the Republic's constitutional arrangements. A new government may seek renegotiation only through the process the compact specifies.
 
 
 ---
