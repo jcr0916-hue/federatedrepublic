@@ -1,18 +1,18 @@
 [
   {
     "id": "direct-01",
-    "question": "What does §1.8 protect?",
+    "question": "What does §1.7 protect?",
     "expectedGate": "TIER_A_CANDIDATE",
     "required": [
-      "§1.8"
+      "§1.7"
     ]
   },
   {
     "id": "direct-02",
-    "question": "What does §1.19.a identify as non-derogable rights?",
+    "question": "What does §1.16.a identify as non-derogable rights?",
     "expectedGate": "TIER_A_CANDIDATE",
     "required": [
-      "§1.19.a"
+      "§1.16.a"
     ]
   },
   {

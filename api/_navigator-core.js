@@ -82,7 +82,7 @@ const SYNONYMS = {
   'jm':['judicial monitor','audit','court','compliance'],
   'jmc':['joint monitor council','statehood audit','coordination','assigned function'],
   'amendment':['constitutional','entrenchment','ratification','popular ratification'],
-  'emergency':['declaration','measures','restriction','crisis','§1.19'],
+  'emergency':['declaration','measures','restriction','crisis','§1.16'],
   'referendum':['citizen','petition','initiative','popular','vote'],
   'citizen':['civic life','participation','referendum','petition','initiative'],
   'treaty':['ratification','senate','international','foreign','trade agreement'],

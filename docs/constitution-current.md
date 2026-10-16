@@ -37,63 +37,63 @@ Every person holds the rights of expression, thought, conscience, religion, asso
 
 Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status. A distinction based on a listed characteristic requires compelling justification, except reasonable age standards and economic distinctions extending assistance to persons of lesser means. Other distinctions must be rationally related to a legitimate governmental purpose.
 
-### §1.8 — Privacy, Property, and Security of the Home
+### §1.7 — Privacy, Property, and Security of the Home
 
 Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home, or search, surveil, or collect a person, communication, or data, without consent or prior independent judicial authorization on specific, articulable grounds. Encryption is lawful and may not be prohibited. Property may be taken for public use only upon just compensation determined independently.
 
-### §1.9 — Democratic Participation
+### §1.8 — Democratic Participation
 
 Every citizen, subject to constitutional eligibility requirements, has the right to vote, stand for office, participate in democratic processes, and have their vote counted. No governmental action whose purpose or substantial effect suppresses or reduces access to the franchise is valid. The Republic must make voting broadly accessible but may not compel voting.
 
-### §1.10 — Right to Bear Arms
+### §1.9 — Right to Bear Arms
 
 Every person holds the right to keep and bear arms for lawful purposes, including self-defense. The Legislature and States may regulate the licensing, safety, type, transfer, and carry of arms, provided lawful ownership for self-defense remains available.
 
-### §1.11 — Habeas Corpus
+### §1.10 — Habeas Corpus
 
 Every person detained by public authority has the right to challenge that detention before an independent and impartial court. The detaining authority must produce the person and justify detention within the period established by statute, not to exceed 72 hours. No court may decline to hear an application for habeas corpus.
 
-### §1.12 — Rights of the Accused and Fair Trial
+### §1.11 — Rights of the Accused and Fair Trial
 
 Every person accused of a criminal offense has the right to prompt notice of the charges; counsel, at public expense if unable to afford representation; adequate time and means to prepare a defense; examination of witnesses; silence without adverse inference; and a speedy trial. No person may receive a greater penalty solely for exercising the right to trial. Bail may be imposed only as reasonably necessary to ensure appearance or protect public safety and may not be punitive. Where systematic or automated methodology generates evidence, the accused has the right to examine that methodology in full.
 
-### §1.13 — Right to a Public Trial
+### §1.12 — Right to a Public Trial
 
 Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings may be closed only to the minimum extent necessary to protect a compelling interest identified by the court, with the grounds and expected duration published to the NRS. Sealing may not be indefinite. No record may remain sealed beyond 10 years from final judgment unless a court extends it once, by up to five years, on published findings of continuing necessity; the NRS Panel then publishes the record automatically.
 
-### §1.14 — Freedom from Retroactive Criminal Law
+### §1.13 — Freedom from Retroactive Criminal Law
 
 No person may be convicted for conduct that was not criminal when committed, and no criminal law may otherwise be applied retroactively to the disadvantage of the accused.
 
-### §1.15 — Double Jeopardy
+### §1.14 — Double Jeopardy
 
 No person may be tried or punished twice for the same offense following final acquittal or conviction. Offenses are the same where they arise from the same conduct and the later charge requires no element distinct from the earlier charge. A State and the Republic may each prosecute the same conduct, but sentences run concurrently and only the greater term is served, with time served credited to both.
 
-### §1.15.a — Conduct Lawful in Another Jurisdiction
+### §1.14.a — Conduct Lawful in Another Jurisdiction
 
 No State or Territory may impose criminal or civil liability on a person for conduct that was lawful where it occurred in another State or Territory, or for assisting such conduct or providing information about it.
 
-### §1.18 — Environmental Obligations
+### §1.15 — Environmental Obligations
 
 Government may not cause or systematically permit material environmental harm to persons or communities. The Legislature must establish environmental protections. Government must take reasonable measures proportionate to known or identifiable harms; this provision does not guarantee a particular environmental outcome.
 
-### §1.19 — Emergency Derogation
+### §1.16 — Emergency Derogation
 
-No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, scope, and duration, published immediately to the NRS. Either executive may issue a declaration within their domain for no more than 14 days. Continuation beyond 14 days requires a statute with a fixed expiration date, which may not be extended or renewed.
+No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.16.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, scope, and duration, published immediately to the NRS. Either executive may issue a declaration within their domain for no more than 14 days. Continuation beyond 14 days requires a statute with a fixed expiration date, which may not be extended or renewed.
 
 All emergency measures lapse automatically with the declaration. Judicial review remains available. Each declaration must receive independent judicial review within 48 hours of publication. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
 
 The three Monitors retain full constitutional authority throughout any emergency.
 
-### §1.19.a — Non-Derogable Rights
+### §1.16.a — Non-Derogable Rights
 
-These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.11); the right to a public trial (§1.13); no retroactive punishment (§1.14); and non-refoulement (§1.21). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such application is void.
+These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.10); the right to a public trial (§1.12); no retroactive punishment (§1.13); and non-refoulement (§1.18). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such application is void.
 
-### §1.20 — Right to Seek Asylum
+### §1.17 — Right to Seek Asylum
 
 Every person who reaches the Republic's jurisdiction has the right to claim asylum and to an independent determination of that claim under §6.3. Manner of entry does not affect this right. An asylum seeker is an Inhabitant from the date of claim and holds all rights under this Article.
 
-### §1.21 — Non-Refoulement
+### §1.18 — Non-Refoulement
 
 No person, wherever located, may be returned, expelled, or extradited by the Republic, or by anyone acting at its direction or with its acquiescence, to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the receiving government.
 
@@ -211,7 +211,7 @@ Both executives must publish their official acts to the NRS within the statutory
 
 When extraordinary circumstances prevent ordinary constitutional government, either Consul, or a majority of available members of either chamber, may declare a continuity emergency. The declaration states the circumstances, is published to the NRS, and is sent to every State and Territory.
 
-During a continuity emergency, each chamber able to meet may act notwithstanding ordinary quorum requirements; where one chamber cannot meet, the other may act alone, solely to preserve essential governmental functions and restore constitutional governance. Chamber thresholds are calculated from the members able to act. Emergency action may not amend this Constitution, extend any term except under §7.2.a, or derogate rights except under §1.19. Measures lapse when the emergency ends unless enacted by statute. Where a Consul is unavailable, authority passes under §2.9, §2.16 and §2.9.a.
+During a continuity emergency, each chamber able to meet may act notwithstanding ordinary quorum requirements; where one chamber cannot meet, the other may act alone, solely to preserve essential governmental functions and restore constitutional governance. Chamber thresholds are calculated from the members able to act. Emergency action may not amend this Constitution, extend any term except under §7.2.a, or derogate rights except under §1.16. Measures lapse when the emergency ends unless enacted by statute. Where a Consul is unavailable, authority passes under §2.9, §2.16 and §2.9.a.
 
 Declarations lapse after 30 days unless renewed by the same process. Any member of either chamber or any Monitor may seek expedited SC review. Emergency procedures yield to ordinary procedures as soon as functioning permits. No emergency authority may delay that restoration.
 
@@ -237,7 +237,7 @@ In a cross-domain emergency requiring unified operational authority, either Cons
 
 ### §2.14.b — Cross-Domain Assistance
 
-Either Consul may request assistance from the other within the responding Consul's domain. The request must state its purpose, scope, and duration and be published to the NRS. The requesting Consul controls the purpose; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other. Assistance may provide non-coercive support only. It may not be used to compel, detain, surveil, or collect intelligence on persons within the Republic, or to commandeer civilian resources, except as §1.19 or another express constitutional source allows. Assistance may not exceed 90 days without a fresh request and response.
+Either Consul may request assistance from the other within the responding Consul's domain. The request must state its purpose, scope, and duration and be published to the NRS. The requesting Consul controls the purpose; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other. Assistance may provide non-coercive support only. It may not be used to compel, detain, surveil, or collect intelligence on persons within the Republic, or to commandeer civilian resources, except as §1.16 or another express constitutional source allows. Assistance may not exceed 90 days without a fresh request and response.
 
 ### §2.15 — Federal Prosecution
 
@@ -463,7 +463,7 @@ Where removal of a parent or guardian would deprive a child of their primary car
 
 ### §6.1 — The Two-Stage Immigration System
 
-Legal residency requires sponsorship under the applicable State or federal framework, followed by federal certification, except as otherwise provided by this Constitution. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6. Federal certification categories are established by statute; no ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing. Upon completion of both stages, legal residency vests by operation of law; neither executive may delay, condition, or deny that status. The Legislature may set aggregate limits on total applications received and processed in any period. Asylum claims under §1.20 are exempt from ordinary sponsorship, certification, and aggregate application limits; no refusal of sponsorship may extinguish such a claim. Immigration into Territories is administered under federal standards, with each Territory entitled to negotiate immigration volumes and applicant qualifications with the Republic under its Territorial Compact.
+Legal residency requires sponsorship under the applicable State or federal framework, followed by federal certification, except as otherwise provided by this Constitution. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6. Federal certification categories are established by statute; no ideological screening or nationality-based quotas may be applied at any stage. Any denial must specify the precise ground in writing. Upon completion of both stages, legal residency vests by operation of law; neither executive may delay, condition, or deny that status. The Legislature may set aggregate limits on total applications received and processed in any period. Asylum claims under §1.17 are exempt from ordinary sponsorship, certification, and aggregate application limits; no refusal of sponsorship may extinguish such a claim. Immigration into Territories is administered under federal standards, with each Territory entitled to negotiate immigration volumes and applicant qualifications with the Republic under its Territorial Compact.
 
 ### §6.2 — Enforcement, Removal, and Appeals
 
@@ -477,7 +477,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 ### §6.3 — Asylum and Protection
 
-(1) An asylum claim must be determined before removal may be executed. A claim found to have been filed solely to delay removal may be expedited by statute, without diminishing the right to a fair hearing or the protections of §1.21.
+(1) An asylum claim must be determined before removal may be executed. A claim found to have been filed solely to delay removal may be expedited by statute, without diminishing the right to a fair hearing or the protections of §1.18.
 
 (2) Where the independent federal asylum adjudicative process grants protection, the person acquires legal residency by operation of that determination; State sponsorship and federal certification are not required conditions.
 
@@ -487,7 +487,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (5) The Legislature must establish an independent federal asylum adjudicative process by statute, institutionally separate from immigration enforcement, removal, foreign affairs, intelligence, and national-security operations. Adjudicators must exercise independent judgment, with protections established by statute sufficient to preserve impartial decision-making.
 
-(6) An unaccompanied minor arriving in the Republic is an Inhabitant from the moment of contact and holds full §1.21 protection. A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours.
+(6) An unaccompanied minor arriving in the Republic is an Inhabitant from the moment of contact and holds full §1.18 protection. A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours.
 
 (7) Detention of an unaccompanied minor must be lawful and necessary and may occur only in a facility specifically designated and resourced for children.
 
@@ -763,7 +763,7 @@ Monitor Generals disclose financial interests under the same substantive require
 
 (2) Every constitutional act, order, finding, certification, designation, declaration, and determination made under this Constitution is published to the NRS as a permanent record; no provision need state this obligation individually. Official records and materials created, received, maintained, or produced in the exercise of official duties are property of the Republic. No officer may remove them from Republic custody, retain them as personal property, or destroy them except as applicable law authorizes. Their publication, access, retention, and classification are governed by this Article and applicable law.
 
-(3) All electoral records — voter registration, ballot counts, audit trails, certification documents, constitutionally required campaign-finance records, electoral-administration records, direct-democracy records, and constitutional-amendment records — must be published to the NRS within the applicable constitutional or statutory timeframe. No classification exception applies to those records. Nothing in this subsection permits disclosure of an individual voter's ballot, information that would defeat ballot secrecy under §11.2, or personal information protected by §1.8.
+(3) All electoral records — voter registration, ballot counts, audit trails, certification documents, constitutionally required campaign-finance records, electoral-administration records, direct-democracy records, and constitutional-amendment records — must be published to the NRS within the applicable constitutional or statutory timeframe. No classification exception applies to those records. Nothing in this subsection permits disclosure of an individual voter's ballot, information that would defeat ballot secrecy under §11.2, or personal information protected by §1.7.
 
 (4) Where this Constitution provides a specific publication timeline it governs. Otherwise a constitutionally required record is published as soon as possible after the act or event to which it relates.
 
@@ -987,7 +987,7 @@ A Territory resulting from devolution is deemed to have requested a Statehood Au
 
 (1) A sovereign entity may petition to join the Republic's constitutional framework as a Territory. The petition requires a resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving a simple majority on at least 50% participation. Upon confirmation, the entity and the Legislature negotiate an incorporation agreement specifying a transition period not exceeding 48 months, which the Legislature ratifies by 2/3 of both chambers.
 
-(2) Either chamber may request a JM assessment of the entity's compliance with §1.19.a before the ratification vote; published JM findings must be given due consideration. Any person with standing may challenge the incorporation before the SC on the ground that the entity systematically violates §1.19.a, within 30 days after ratification.
+(2) Either chamber may request a JM assessment of the entity's compliance with §1.16.a before the ratification vote; published JM findings must be given due consideration. Any person with standing may challenge the incorporation before the SC on the ground that the entity systematically violates §1.16.a, within 30 days after ratification.
 
 (3) No constitutional officer may induce or coerce an entity to initiate or advance this process.
 
@@ -997,7 +997,7 @@ A State's constitutional boundaries are fixed except as provided in this Article
 
 ### §15.7.a — Reversion to the States and Territories
 
-If §2.9.a(6) applies, §15.7 does not apply, and the States and Territories are sovereign governments that may act as such, including by reconstituting the Republic. The rights in §1.19.a continue to bind every government.
+If §2.9.a(6) applies, §15.7 does not apply, and the States and Territories are sovereign governments that may act as such, including by reconstituting the Republic. The rights in §1.16.a continue to bind every government.
 
 ### §15.8 — Local Government
 
@@ -1095,7 +1095,7 @@ Indigenous nations hold sovereignty that precedes the Republic. This sovereignty
 
 (3) A Citizen Initiative Amendment proceeds through the two-phase petition process of §13.1, except that no enactment deadline applies and Phase Two requires signatures from 15% of eligible voters nationally. Once the Phase Two threshold is verified, the Elections Panel administers a national referendum within 180 days. Passage requires 70% of votes cast with at least 65% citizen participation. An initiative that fails may not be resubmitted on the same or substantially similar grounds for five years.
 
-(4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), the Elections Panel and NRS Panel independence (§11.1), the designation of non-derogable rights (§1.19.a) and the limit on amendments extinguishing them (§17.3(3)), the reversion of authority to the States and Territories (§15.7.a), and this subsection. A Citizen Initiative Amendment satisfies this requirement through its own referendum under paragraph (3).
+(4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), the Elections Panel and NRS Panel independence (§11.1), the designation of non-derogable rights (§1.16.a) and the limit on amendments extinguishing them (§17.3(3)), the reversion of authority to the States and Territories (§15.7.a), and this subsection. A Citizen Initiative Amendment satisfies this requirement through its own referendum under paragraph (3).
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
@@ -1107,7 +1107,7 @@ No Consul signature or veto applies to an amendment. An amendment takes effect u
 
 (2) The JM publishes a consistency analysis of any proposed amendment within 30 days of passage by both chambers for a parliamentary amendment, or within 30 days of Elections Panel Phase Two threshold verification for a citizen initiative amendment. No ratification vote on a parliamentary amendment may be held before the JM's analysis is published or the 30-day period expires, whichever occurs first.
 
-(3) The SC resolves disputes over a ratified amendment's consistency under §4.5 on petition of any person with standing. It may not refuse to apply an amendment that has met its procedural thresholds, except that an amendment extinguishing a right designated non-derogable under §1.19.a is void to the extent of the extinguishment.
+(3) The SC resolves disputes over a ratified amendment's consistency under §4.5 on petition of any person with standing. It may not refuse to apply an amendment that has met its procedural thresholds, except that an amendment extinguishing a right designated non-derogable under §1.16.a is void to the extent of the extinguishment.
 
 (4) Amendments operate prospectively — they do not retroactively alter the constitutionality of acts that were constitutional when performed.
 
@@ -1139,7 +1139,7 @@ When a federal function ends, the federal government must publish notice of term
 
 (2) National Trust designation requires a 2/3 vote of both chambers with host State consent. Removal from Trust designation requires the same 2/3 legislative threshold plus a national referendum administered by the Elections Panel within 180 days of the legislative vote, achieving 60% of votes cast with a minimum 50% citizen participation. International conservation agreements require a 2/3 Senate vote to withdraw before the national removal process begins.
 
-(3) Land designated National Trust carries an active stewardship obligation: the federal government must maintain ecological integrity and public accessibility. The EM monitors compliance annually, cross-referenced with §1.18.
+(3) Land designated National Trust carries an active stewardship obligation: the federal government must maintain ecological integrity and public accessibility. The EM monitors compliance annually, cross-referenced with §1.15.
 
 (4) States and indigenous nations may enter co-management agreements with the Civic Consul for National Trust lands within their borders or ancestral territories.
 
@@ -1197,7 +1197,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 (3) Benefit obligations to persons who served in military or national service under the prior government are honored; the Legislature must provide for their administration by statute within the first budget cycle following Phase 4.
 
-(4) The Republic succeeds to and acts as the legal continuation of the prior government in its international relations; all international obligations, financial commitments, treaty relationships, and contractual obligations of the prior government are assumed as successor sovereign. Where an assumed international obligation conflicts with this constitution, the Republic is bound to renegotiate or formally supersede the obligation through the treaty process under §3.6; until that process is complete, the obligation is honored to the minimum extent required by international law without requiring any constitutional officer to violate Article I or any non-derogable right under §1.19.a.
+(4) The Republic succeeds to and acts as the legal continuation of the prior government in its international relations; all international obligations, financial commitments, treaty relationships, and contractual obligations of the prior government are assumed as successor sovereign. Where an assumed international obligation conflicts with this constitution, the Republic is bound to renegotiate or formally supersede the obligation through the treaty process under §3.6; until that process is complete, the obligation is honored to the minimum extent required by international law without requiring any constitutional officer to violate Article I or any non-derogable right under §1.16.a.
 
 (5) From Day Zero, an independent judicial forum must remain continuously available for Article I claims arising from the nullification or displacement of predecessor law. A temporary judicial mechanism may exercise only the authority necessary to preserve constitutional rights and ends automatically when the permanent judiciary is constitutionally capable of exercising the relevant jurisdiction.
 
@@ -1251,9 +1251,9 @@ The Republic and an Associated Community are equal parties to the compact. Obser
 
 ### §20.3 — Compact Conditions and Compliance
 
-(1) No compact may be entered or ratified with an entity whose governance practices include, authorize, or systematically permit violations of the non-derogable rights in §1.19.a against any person within its jurisdiction.
+(1) No compact may be entered or ratified with an entity whose governance practices include, authorize, or systematically permit violations of the non-derogable rights in §1.16.a against any person within its jurisdiction.
 
-(2) Where the JM finds systematic violations of §1.19.a rights, or any party challenges a compact on those grounds, the compact is suspended pending review through its independent arbitration mechanism. The arbitration panel must issue a preliminary determination within 90 days of suspension; if it does not, the suspension lifts and the compact resumes pending the panel's final determination.
+(2) Where the JM finds systematic violations of §1.16.a rights, or any party challenges a compact on those grounds, the compact is suspended pending review through its independent arbitration mechanism. The arbitration panel must issue a preliminary determination within 90 days of suspension; if it does not, the suspension lifts and the compact resumes pending the panel's final determination.
 
 (3) The arbitration panel may terminate a compact on confirmed violations not remedied within the period the compact specifies.
 

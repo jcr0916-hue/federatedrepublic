@@ -91,7 +91,7 @@ const DIAGRAMS = {
 };
 
 const GLOSSARY_BY_SECTION = {
-  '§1.19': ['Declaration of National Emergency', 'glossary.html#term-declaration-of-national-emergency'],
+  '§1.16': ['Declaration of National Emergency', 'glossary.html#term-declaration-of-national-emergency'],
   '§2.1': ['Dual Executive', 'glossary.html#term-dual-executive'],
   '§2.4.a': ['Domain Officer', 'glossary.html#term-legat-consul-officer-appointment-removal'],
   '§2.6': ['Constructive Vote of No Confidence', 'glossary.html#term-constructive-vote-of-no-confidence'],

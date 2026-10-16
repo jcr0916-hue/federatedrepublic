@@ -13,27 +13,27 @@
   },
   {
     "id": "haiku-direct-03",
-    "question": "According to §1.8, summarize the constitutional rule on privacy, property, and security of the home.",
+    "question": "According to §1.7, summarize the constitutional rule on privacy, property, and security of the home.",
     "expectedStatus": "ANSWER",
-    "requiredSource": "§1.8"
+    "requiredSource": "§1.7"
   },
   {
     "id": "haiku-direct-04",
-    "question": "In §1.12, what is the Constitution's rule for rights of the accused and fair trial?",
+    "question": "In §1.11, what is the Constitution's rule for rights of the accused and fair trial?",
     "expectedStatus": "ANSWER",
-    "requiredSource": "§1.12"
+    "requiredSource": "§1.11"
   },
   {
     "id": "haiku-direct-05",
-    "question": "Under §1.19, what rule governs emergency derogation?",
+    "question": "Under §1.16, what rule governs emergency derogation?",
     "expectedStatus": "ANSWER",
-    "requiredSource": "§1.19"
+    "requiredSource": "§1.16"
   },
   {
     "id": "haiku-direct-06",
-    "question": "What does §1.20 establish about right to seek asylum?",
+    "question": "What does §1.17 establish about right to seek asylum?",
     "expectedStatus": "ANSWER",
-    "requiredSource": "§1.20"
+    "requiredSource": "§1.17"
   },
   {
     "id": "haiku-direct-07",
