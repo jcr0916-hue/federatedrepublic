@@ -949,7 +949,7 @@ A Territory operates under a Territorial Compact: the restructuring agreement un
 
 ### §15.1.a — Provisional Status
 
-Provisional status is a remedial constitutional status applicable only to an existing State under the remediation and devolution provisions of this Article; it is not an intermediate stage between Territory and Statehood. A State in Provisional status remains a State.
+A State in Provisional status remains a State, and its government and Assembly representation continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues.
 
 
 ### §15.2 — The Statehood Audit
@@ -962,68 +962,69 @@ Provisional status is a remedial constitutional status applicable only to an exi
 
 ### §15.3 — State Remediation and Mandatory Devolution Review
 
-(1) An existing State enters the mandatory remediation track upon an overall failed biennial Statehood Audit under §15.2. (2) A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute; until such statute is enacted, the period is 90 days.
+(1) An overall failed biennial Statehood Audit under §15.2 places an existing State on the mandatory remediation track. A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute; until such statute is enacted, the period is 90 days.
 
 - **Thresholds:**
-  - Entry into Provisional status requires an absolute majority of the full seated Senate
+  - Entry into Provisional status requires an absolute majority of the full seated Senate and takes effect immediately by constitutional operation
 - **Time limits:**
   - until such statute is enacted, the period is 90 days
-  - (4) The Senate must vote within the period defined by statute, not to exceed 90 days from certification, on whether to place the State in Provisional status under §15
+  - The Senate must vote within the period defined by statute, not to exceed 90 days from certification, on whether to place the State in Provisional status under §15
 - **Cross-refs:** §15.1.a, §15.2, §15.4
 
 ### §15.4 — Voluntary Devolution and Merger
 
-A State may voluntarily restructure its relationship with the Republic through devolution. Whether entered voluntarily under this section or following the mandatory-remediation route under §15.3, the process after entry is the same: first, a State referendum must achieve 60% of votes cast with participation by at least 50% of eligible voters on the principle of pursuing devolution; second, upon approval, the…
+(1) A State may pursue devolution by a State referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters. The referendum required by §15.3(4) is this referendum.
 
 - **Thresholds:**
-  - and third, the Senate ratifies the agreement by 2/3 of full seated membership
+  - Upon approval, the State and the Legislature negotiate a restructuring agreement, which takes effect upon ratification by 2/3 of the full seated Senate
 - **Time limits:**
   - The petition period may not exceed 12 months
-  - Following certification of any referendum under this section, any party with standing has 30 days to file a legal challenge to the process or result
+  - (4) Following certification of a referendum under this section, any party with standing has 30 days to challenge the process or result
 - **Cross-refs:** §15.3
 
 ### §15.5 — Re-Qualification Pathway
 
-A Territory resulting from mandatory or voluntary devolution enters the §15.2 pathway immediately upon the effective date of devolution — no additional political vote is required. Where a defined geographic subdivision of the Territory separately achieves Statehood under §15.2 or merges with an existing State under §15.4, the remainder continues as Territory without interruption.
+A Territory resulting from devolution is deemed to have requested a Statehood Audit under §15.2(1) on the effective date of devolution. Where a defined geographic subdivision of the Territory achieves Statehood under §15.2 or merges with an existing State under §15.4, the remainder continues as a Territory.
 
 - **Cross-refs:** §15.2, §15.4
 
 ### §15.5.a — Remainder Viability
 
-(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them; all such petitions are addressed together under subsection (4). (2) Where subsection (1) does not apply, the JMC must assess whether the Territory's remaining portion could realistically satisfy the…
+(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, they are addressed together under paragraph (3). (2) Where paragraph (1) does not apply, the JMC must assess within 90 days of certification whether the Territory's remaining portion could realistically satisfy the conditions of the §15.2 Statehood Audit on…
 
 - **Time limits:**
-  - 2 affecting different defined portions of the same Territory are certified within 90 days of one another, subsections (2) and (3) do not apply to any of them
-  - The assessment is due within 90 days of the certification of the petition under §15
-  - The Convention has 90 days from its first session to produce a proposed resolution
+  - 2 affecting different defined portions of the same Territory are certified within 90 days of one another, they are addressed together under paragraph (3)
+  - (2) Where paragraph (1) does not apply, the JMC must assess within 90 days of certification whether the Territory's remaining portion could realistically satisfy the conditions of the §15
+  - The JMC may extend the period once, by up to 30 days, upon publishing a justification
 - **Cross-refs:** §15.2, §15.4
 
 ### §15.6 — Voluntary Incorporation
 
-A sovereign entity may petition to join the Republic's constitutional framework as a Territory. The process requires a petition resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving simple majority on at least 50% participation.
+(1) A sovereign entity may petition to join the Republic's constitutional framework as a Territory. The petition requires a resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving a simple majority on at least 50% participation.
 
 - **Thresholds:**
-  - The process requires a petition resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving simple majority on at least 50% participation
-  - the Legislature ratifies the agreement by 2/3 of both chambers
+  - The petition requires a resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving a simple majority on at least 50% participation
+  - Upon confirmation, the entity and the Legislature negotiate an incorporation agreement specifying a transition period not exceeding 48 months, which the Legislature ratifies by 2/3 of both chambers
 - **Time limits:**
-  - Upon confirmation, the entity and the Legislature negotiate an incorporation agreement specifying a transition period not exceeding 48 months
-- **Cross-refs:** §1.19.a, §16.2
+  - Upon confirmation, the entity and the Legislature negotiate an incorporation agreement specifying a transition period not exceeding 48 months, which the Legislature ratifies by 2/3 of both chambers
+  - a, within 30 days after ratification
+- **Cross-refs:** §1.19.a
 
 ### §15.7 — State Immutability and Territorial Integrity
 
-A State's constitutional boundaries are fixed except as expressly provided under §15.4. No constitutional mechanism permits a State to divide directly into two or more States — the separating portion must first become a Territory before seeking independent Statehood.
+A State's constitutional boundaries are fixed except as provided in this Article. A State divides only through devolution under §15.4, and each successor jurisdiction proceeds as a Territory.
 
-- **Cross-refs:** §15.4, §15.9, §16.2, §16.4
+- **Cross-refs:** §15.4, §15.9, §16.2
 
 ### §15.7.a — Reversion to the States and Territories
 
-If §2.9.a(6) applies, the States and Territories are sovereign governments and may act as such, including by reconstituting the Republic. This is not secession under §15.7.
+If §2.9.a(6) applies, §15.7 does not apply, and the States and Territories are sovereign governments that may act as such, including by reconstituting the Republic. The rights in §1.19.a continue to bind every government.
 
 - **Cross-refs:** §1.19.a, §15.7, §2.9.a
 
 ### §15.8 — Local Government
 
-Local governments — cities, counties, municipalities, and other subdivisions — receive constitutional recognition as primary points of contact between citizens and government. They are entitled to reasonable fiscal, legal, and administrative capacity to carry out the lawful functions assigned to them.
+Cities, counties, municipalities, and other local subdivisions receive constitutional recognition and are entitled to reasonable fiscal, legal, and administrative capacity to carry out the lawful functions assigned to them.
 
 
 ### §15.8.a — Subsidiarity and Local Capacity
@@ -1034,19 +1035,19 @@ Local governments — cities, counties, municipalities, and other subdivisions �
 
 ### §15.9 — Voluntary State Independence
 
-(1) A State may seek independence from the Republic through a three-stage process. (2) Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters; the referendum must achieve 60% of votes cast with at least 60% participation among the State's eligible voters; a failed referendum may not be reinitiated on the same or substantially similar…
+(1) A State may seek independence from the Republic through three stages. Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters; the referendum must achieve 60% of votes cast with at least 60% participation among the State's eligible voters.
 
 - **Thresholds:**
-  - (2) Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters
-  - if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
+  - Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters
+  - If either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses
 - **Time limits:**
-  - (5) Stage Two requires both chambers to hold a concurrent ratification vote within 90 days of NRS publication
-  - if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction
+  - (4) Stage Two requires both chambers to hold a concurrent ratification vote within 90 days of NRS publication
+  - If either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses
 - **Cross-refs:** §7.3
 
 ### §15.10 — State Government Incapacity
 
-Where a State's constitutional government has become incapable of exercising governmental authority and cannot be restored through its own constitutional continuity mechanisms, the Republic may temporarily administer only those functions necessary to preserve rights, essential services, and restoration of democratic State government. Where the State maintains forces under §14.5 not otherwise in federal service,…
+Where a State's constitutional government has become incapable of exercising governmental authority and cannot be restored through its own constitutional continuity mechanisms, the Legislature may by statute authorize the Republic to temporarily administer only those functions necessary to preserve rights, essential services, and restoration of democratic State government. Command of State forces under §14.5 not…
 
 - **Cross-refs:** §14.5
 
@@ -1323,12 +1324,12 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §12.1 | The Social State | A standard may be reduced only by a 2/3 concurrent vote of both chambers or during a certified Severe Revenue Contraction under §12 |
 | §12.1.a | The Monetary Authority | Principal decision-makers exercising the MA's constitutional authority must be selected through an independent candidate process and confirmed by 2/3 of the Senate |
 | §13.1 | Optional Referendum | A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification |
-| §15.3 | State Remediation and Mandatory Devolution Review | Entry into Provisional status requires an absolute majority of the full seated Senate |
-| §15.4 | Voluntary Devolution and Merger | and third, the Senate ratifies the agreement by 2/3 of full seated membership |
-| §15.6 | Voluntary Incorporation | The process requires a petition resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving simple majority on at least 50% participation |
-| §15.6 | Voluntary Incorporation | the Legislature ratifies the agreement by 2/3 of both chambers |
-| §15.9 | Voluntary State Independence | (2) Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters |
-| §15.9 | Voluntary State Independence | if either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses and the State may reinitiate Stage One without restriction |
+| §15.3 | State Remediation and Mandatory Devolution Review | Entry into Provisional status requires an absolute majority of the full seated Senate and takes effect immediately by constitutional operation |
+| §15.4 | Voluntary Devolution and Merger | Upon approval, the State and the Legislature negotiate a restructuring agreement, which takes effect upon ratification by 2/3 of the full seated Senate |
+| §15.6 | Voluntary Incorporation | The petition requires a resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving a simple majority on at least 50% participation |
+| §15.6 | Voluntary Incorporation | Upon confirmation, the entity and the Legislature negotiate an incorporation agreement specifying a transition period not exceeding 48 months, which the Legislature ratifies by 2/3 of both chambers |
+| §15.9 | Voluntary State Independence | Stage One requires the State legislature to resolve by 2/3 majority to submit the independence question to the State's eligible voters |
+| §15.9 | Voluntary State Independence | If either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses |
 | §16.2 | Founding Status Election | 6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers |
 | §17.1 | Amendment Paths | (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers |
 | §18.4 | The National Trust | National Trust designation requires a 2/3 vote of both chambers with host State consent |
