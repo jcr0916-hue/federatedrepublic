@@ -1104,24 +1104,27 @@ Indigenous Nations hold sovereignty that precedes the Republic. This sovereignty
 
 - **Thresholds:**
   - (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers
+  - The proposing body simultaneously specifies the ratification mechanism — either State Ratification (ratification by 2/3 of States within the period defined by statute
+  - until such statute is enacted, 180 days) or Popular Ratification (a national popular referendum achieving 2/3 of votes cast with at least 55% citizen participation within 180 days)
 - **Time limits:**
-  - the Elections Panel administers the referendum within 180 days of Phase Two threshold verification
-- **Cross-refs:** §1.19.a, §10.1, §11.1, §13.2, §15.7.a, §17.3, §9.1, §9.2, §9.4, §9.6
+  - until such statute is enacted, 180 days) or Popular Ratification (a national popular referendum achieving 2/3 of votes cast with at least 55% citizen participation within 180 days)
+  - Once the Phase Two threshold is verified, the Elections Panel administers a national referendum within 180 days
+- **Cross-refs:** §1.19.a, §10.1, §11.1, §13.1, §15.7.a, §17.3, §9.1, §9.2, §9.4, §9.6
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
-Neither Consul has any role in the constitutional amendment process, and no signature or veto applies. An amendment takes effect upon certification of its ratification — by the LM for State Ratification, otherwise by the Elections Panel — and NRS publication, with no implementation delay or executive discretion over timing.
+No Consul signature or veto applies to an amendment. An amendment takes effect upon certification of its ratification — by the LM for State Ratification, otherwise by the Elections Panel — and NRS publication.
 
 
 ### §17.3 — Amendment Consistency and Supremacy
 
-(1) An amendment inconsistent with an existing provision is void to the extent of the inconsistency unless it expressly repeals or amends that provision. (2) The JM publishes a consistency analysis of any proposed amendment within 30 days of passage by both chambers for a parliamentary amendment, or within 30 days of Elections Panel Phase Two threshold verification for a citizen initiative amendment — advisory only.
+(1) An amendment inconsistent with an existing provision is void to the extent of the inconsistency unless it expressly repeals or amends that provision. (2) The JM publishes a consistency analysis of any proposed amendment within 30 days of passage by both chambers for a parliamentary amendment, or within 30 days of Elections Panel Phase Two threshold verification for a citizen initiative amendment.
 
 - **Cross-refs:** §1.19.a, §4.5
 
 ### §17.4 — Supremacy of This Constitution
 
-This Constitution is the supreme law of the Federated Republic. All legislative acts, executive orders, treaties, administrative decisions, and government actions must be consistent with this Constitution.
+This Constitution is the supreme law of the Federated Republic. Any legislative act, executive order, treaty, administrative decision, or other government action inconsistent with this Constitution is void to the extent of the inconsistency.
 
 
 ---
@@ -1332,6 +1335,8 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §15.9 | Voluntary State Independence | If either chamber fails to achieve 2/3 or fails to vote within 90 days, the petition lapses |
 | §16.2 | Founding Status Election | 6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers |
 | §17.1 | Amendment Paths | (2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers |
+| §17.1 | Amendment Paths | The proposing body simultaneously specifies the ratification mechanism — either State Ratification (ratification by 2/3 of States within the period defined by statute |
+| §17.1 | Amendment Paths | until such statute is enacted, 180 days) or Popular Ratification (a national popular referendum achieving 2/3 of votes cast with at least 55% citizen participation within 180 days) |
 | §18.4 | The National Trust | National Trust designation requires a 2/3 vote of both chambers with host State consent |
 | §18.4 | The National Trust | International conservation agreements require a 2/3 Senate vote to withdraw before the national removal process begins |
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
