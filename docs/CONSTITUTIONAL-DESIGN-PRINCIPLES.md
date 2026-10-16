@@ -268,9 +268,9 @@ test running in the citizen's favor.*
 action?
 **Catches:** indefinite classification; disclosure that depends on the discretion of the party that
 benefits from concealment.
-*Attested use, §10.2: "no permanent secrecy, temporary secrecy only on stated statutory grounds, hard
-ceilings of 25 and 30 years, and automatic publication on expiry requiring no further government act."
-The void rule means "abuse fails retroactively, not just prospectively."*
+*Attested use, §10.2: "classification only where national security requires it, no permanent secrecy,
+hard ceilings of 25 and 30 years, automatic publication on expiry requiring no further government act,
+and a court that tests every withheld portion against one standard."*
 *Live-text note, 10.10: the ceiling is now stated once — 25 years from original classification, with a
 single 5-year extension on a published justification — and the separate "30 years under any
 circumstances" sentence is deleted as the arithmetic of the two (the same cut made to §1.13's 15-year
