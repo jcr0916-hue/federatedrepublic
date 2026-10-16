@@ -1273,11 +1273,11 @@
     ]
   },
   "scenario-the-unremovable": {
-    "summary": "An unresolvable removal case still has a constitutional floor. Non-refoulement, judicial supervision, and the prohibition on indefinite stateless detention constrain the treatment of a person whose removal is not possible.",
+    "summary": "An unexecutable removal order still leaves a constitutional floor. Non-refoulement and the liberty rule mean that a person whose removal is not possible remains at liberty, subject to ordinary law and reasonable registration and reporting.",
     "provisions": [
       {
         "ref": "§6.3.a",
-        "label": "Unresolvable and Security Cases"
+        "label": "Unexecuted Removal Orders"
       },
       {
         "ref": "§1.21",
