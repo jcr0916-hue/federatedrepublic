@@ -70,7 +70,7 @@ Every person is equal before the law. Government may not discriminate on the bas
 
 ### §1.7 — Privacy, Property, and Security of the Home
 
-Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Within the Republic's territory, government may not enter a home, or search, surveil, or collect a person, communication, or data, without consent or prior independent judicial authorization on specific, articulable grounds.
+Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home, or search, surveil, or collect a person, communication, or data, without consent or prior independent judicial authorization on specific, articulable grounds.
 
 
 ### §1.8 — Democratic Participation
@@ -176,7 +176,7 @@ The Legat Consul may use military force in immediate response to an active or im
 
 ### §2.3 — Consular Intelligence
 
-The Legat Consul directs external intelligence and consults the Senate on it in the manner the Legat Consul and the Senate determine. No intelligence operation against Republic citizens within Republic territory may be conducted on the Legat Consul's authority; such operations require independent judicial authorization.
+The Legat Consul directs external intelligence. No intelligence operation against Republic citizens, wherever located, may be conducted on the Legat Consul's authority; such operations require independent judicial authorization.
 
 
 ### §2.3.a — Legat Consul Legislative Veto
