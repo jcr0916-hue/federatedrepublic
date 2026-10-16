@@ -734,7 +734,7 @@ Monitor findings, reports, and assessments do not substitute for a responsible b
 
 ### §9.6 — Monitor Minimum Funding Guarantee
 
-The annual appropriation for each Monitor, the Elections Panel, and the NRS Panel may not fall below the prior fiscal year's funding level adjusted to preserve equivalent purchasing power, whether prices rise or fall, without a 2/3 concurrent vote of both chambers. The Monetary Authority certifies each body's prior-year funding level adjusted for the change in the price level and publishes the certified floor to…
+The annual appropriation for each Monitor, the Elections Panel, the NRS Panel, and the Monetary Authority may not fall below the prior fiscal year's funding level adjusted to preserve equivalent purchasing power, whether prices rise or fall, without a 2/3 concurrent vote of both chambers. The Monetary Authority certifies the prior-year funding level of each other protected body, and the EM certifies the Monetary…
 
 
 ### §9.7 — Joint Monitor Council
@@ -826,6 +826,8 @@ Where the Elections Panel finds through audit that a State's election administra
 
 The Republic is a social state. Every Inhabitant is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child.
 
+- **Thresholds:**
+  - A standard may be reduced only by a 2/3 concurrent vote of both chambers or during a certified Severe Revenue Contraction under §12
 - **Cross-refs:** §12.4
 
 ### §12.1.a — The Monetary Authority
@@ -838,9 +840,8 @@ The Monetary Authority is a constitutionally mandated institution independent of
 
 ### §12.1.b — Monetary Authority Reporting
 
-The Monetary Authority publishes a State of the Economy report to the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually; the Legislature may by statute require a more frequent cycle. Each report includes the Monetary Authority's account of relevant findings from the preceding period under §9.1.b and any applicable §9.5.a compliance findings.
+The Monetary Authority publishes a State of the Economy report to the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually, or more frequently as statute requires.
 
-- **Cross-refs:** §9.1.b, §9.5.a
 
 ### §12.2 — Fiscal Accountability
 
@@ -848,17 +849,17 @@ The Monetary Authority publishes a State of the Economy report to the Assembly, 
 
 - **Time limits:**
   - absent a statutory deadline, no later than 120 days before the start of the fiscal year
-- **Cross-refs:** §12.1, §14.2
+- **Cross-refs:** §12.1, §14.2, §9.6
 
 ### §12.3 — Taxing Power and National Revenue Fund
 
-The Legislature has exclusive authority to levy taxes, duties, and tariffs by statute. States, Territories, and local governments retain authority to tax within their own jurisdictions, subject to §12.5 and the non-discrimination requirements of §1.6.
+The Legislature has exclusive authority to levy taxes, duties, and tariffs by statute. States, Territories, and local governments retain authority to tax within their own jurisdictions, subject to §12.5.
 
-- **Cross-refs:** §1.6, §12.5, §3.6
+- **Cross-refs:** §12.2, §12.5, §3.6
 
 ### §12.4 — National Endowment
 
-The National Endowment is a constitutionally established reserve fund that backstops the Republic’s social state obligations under §12.1 during periods of Severe Revenue Contraction, as certified by the Monetary Authority. The Endowment operates independently of the annual budget process and is managed by the Monetary Authority as part of its constitutional mandate; the Monetary Authority’s sole obligation with…
+The National Endowment is a constitutionally established reserve fund that backstops the Republic’s social state obligations under §12.1 during a Severe Revenue Contraction — a decline in national revenue that meets a threshold the Monetary Authority defines and publishes to the NRS before applying it, as certified by the Monetary Authority. The Endowment operates independently of the annual budget process and is…
 
 - **Cross-refs:** §12.1
 
@@ -872,7 +873,7 @@ No State or Territory may impose requirements on goods, services, or economic ac
 The Legislature shall by statute establish a mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I. The EM certifies annually whether the mechanism is operating as required.
 
 - **Time limits:**
-  - Where the EM finds the mechanism has failed, the Legislature publishes its response to the NRS within 90 days
+  - Where the EM finds the mechanism is not operating as required, the Legislature publishes its response to the NRS within 90 days
 - **Cross-refs:** §12.1
 
 ---
@@ -1323,6 +1324,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §4.3.a | Supreme Court Justice Removal | A Supreme Court justice may be removed by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity |
 | §9.3 | Monitor General Selection | All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority |
 | §9.9 | Constitutional Officer Removal — Standard Track | Removal requires a concurrent vote of 2/3 of the full seated membership of each legislative chamber, on grounds within the statutory removal categories for that office |
+| §12.1 | The Social State | A standard may be reduced only by a 2/3 concurrent vote of both chambers or during a certified Severe Revenue Contraction under §12 |
 | §12.1.a | The Monetary Authority | Principal decision-makers exercising the MA's constitutional authority must be selected through an independent candidate process and confirmed by 2/3 of the Senate |
 | §13.1 | Optional Referendum | A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification |
 | §15.3 | State Remediation and Mandatory Devolution Review | Entry into Provisional status requires an absolute majority of the full seated Senate |
