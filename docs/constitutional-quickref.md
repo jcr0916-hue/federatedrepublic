@@ -1176,13 +1176,13 @@ When a federal function ends, the federal government must publish notice of term
 
 ### §19.1 — Activation Threshold and Ratification
 
-This constitution takes effect upon: (1) interim Elections Panel certification that the NVS is operational and meets §11.2; and (2) a national ratification vote achieving 60% of votes cast with at least 50% participation. Ratification creates binding constitutional obligations on all governmental actors from Day Zero.
+This constitution takes effect upon: (1) interim Elections Panel certification that the NVS is operational and meets §11.2; and (2) a national ratification vote achieving 60% of votes cast with at least 50% participation. Where multiple sovereign nations simultaneously pool sovereignty through a treaty of union, transition provisions adapt as specified in the treaty of union, subject to the constitutional…
 
 - **Cross-refs:** §11.2
 
 ### §19.2 — Day Zero and Transition
 
-Day Zero is the date the ratification threshold is certified as achieved. Upon ratification, all laws conflicting with the Individual Sovereignty Floor are immediately null and void; all public assets, liabilities, rights, and obligations of the predecessor national government vest in the Republic by constitutional operation subject to this Constitution, and the authoritative records necessary to establish them…
+(1) Day Zero is the date the ratification threshold is certified as achieved. Upon ratification, all laws conflicting with the Individual Sovereignty Floor are immediately null and void; all public assets, liabilities, rights, and obligations of the predecessor national government vest in the Republic by constitutional operation subject to this Constitution, and the authoritative records necessary to establish…
 
 
 ### §19.3 — Caretaker Status
@@ -1196,7 +1196,7 @@ Day Zero is the date the ratification threshold is certified as achieved. Upon r
 
 - **Time limits:**
   - within 14 days after taking office, the Legat Consul must submit the operation for legislative authorization or begin orderly cessation
-- **Cross-refs:** §14.1, §14.5, §19.3, §19.5, §2.2
+- **Cross-refs:** §14.5, §19.3, §19.5, §2.2
 
 ### §19.4 — Pre-Constitutional Classified Documents
 
@@ -1207,36 +1207,36 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 
 ### §19.5 — Pre-Existing Obligations
 
-(1) The Republic assumes the public debt obligations of its predecessor government as a constitutional matter — it does not inherit a clean slate. (2) Active military operations of the prior government continue under existing authorization until the §2.2 military authorization framework can apply; the Legat Consul, once inaugurated, must assess each active operation against the authorized purposes under §14.1 and…
+(1) Active military operations of the prior government continue under existing authorization until the §2.2 military authorization framework can apply; the Legat Consul, once inaugurated, must assess each active operation against the authorized purposes under §14.1 and either link it to legislative authorization within 14 days or begin orderly cessation; operations not so linked within 60 days cease unless the…
 
 - **Time limits:**
   - 1 and either link it to legislative authorization within 14 days or begin orderly cessation
   - operations not so linked within 60 days cease unless the Legislature grants a one-time authorization
-- **Cross-refs:** §1.19.a, §14.1, §19.3.a, §2.2, §3.6
+- **Cross-refs:** §1.19.a, §14.1, §2.2, §3.6
 
 ### §19.6 — Transition Territories
 
-(1) Territories or subdivisions whose entry status depends upon qualification during the Transition Window may seek State status through a Statehood Audit completed by the end of Phase 2. An entity that does not achieve the required audit enters as a Territory and may begin the ordinary Statehood pathway under §15.2 immediately.
+(1) Political entities that held recognized State or equivalent status immediately prior to ratification and choose to enter the Republic as States become full States for all constitutional purposes from Day Zero, including constituting the Senate and seating their legislators. (2) All prior government territories that had not achieved statehood by Day Zero enter as Territories from Phase 4 activation; any…
 
 - **Cross-refs:** §15.2
 
 ### §19.7 — Transition Candidate Registers
 
-The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. The panel performs the register-assembly and qualification-review function required during transition; it compiles the founding register of recognized Indigenous nations under §16.1 from the predecessor record and publishes it to the NRS before the close of Phase 1.
+The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. It also compiles the founding register of recognized Indigenous nations under §16.1 from the predecessor record and publishes it to the NRS before the close of Phase 1; compilation is ministerial and applies the predecessor record as it stands.
 
 - **Cross-refs:** §12.1.a, §16.1
 
 ### §19.8 — Transitional Accountability Mechanism
 
-Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism. Such a mechanism must be time-limited — not to exceed ten years in duration — non-criminal, and consistent with Article I in all its operations.
+Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism. Such a mechanism must be time-limited — not to exceed ten years in duration — non-criminal, and consistent with Article I.
 
 - **Thresholds:**
   - Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism
-  - no amending statute may expand the scope without the same 2/3 majority
+  - The establishing statute defines the scope, procedures, and duration, and no amending statute may expand the scope without the same 2/3 majority
 
 ### §19.9 — Required Institutions and Temporary Continuity
 
-Where this Constitution requires a statutory independent agency or other permanent institution to perform a specific constitutional function, the Legislature must establish the permanent institution within the statutory period and the following constitutional maximums from Phase 4 activation: the civic proficiency assessment administrator under §5.1, 180 days; the census agency under §3.2, 18 months; and a…
+(1) Where this Constitution requires a statutory independent agency or other permanent institution to perform a specific constitutional function, the Legislature must establish the permanent institution within the statutory period and the following constitutional maximums from Phase 4 activation: the civic proficiency assessment administrator under §5.1, 180 days; the census agency under §3.2, 18 months; and a…
 
 - **Time limits:**
   - 1, 180 days
@@ -1342,5 +1342,5 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §18.4 | The National Trust | (2) National Trust designation requires a 2/3 vote of both chambers with host State consent |
 | §18.4 | The National Trust | International conservation agreements require a 2/3 Senate vote to withdraw before the national removal process begins |
 | §19.8 | Transitional Accountability Mechanism | Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism |
-| §19.8 | Transitional Accountability Mechanism | no amending statute may expand the scope without the same 2/3 majority |
+| §19.8 | Transitional Accountability Mechanism | The establishing statute defines the scope, procedures, and duration, and no amending statute may expand the scope without the same 2/3 majority |
 
