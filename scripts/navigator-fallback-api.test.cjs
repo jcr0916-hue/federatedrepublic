@@ -78,9 +78,9 @@ test('sufficient fallback query reaches Sonnet with a bounded evidence packet', 
     assert.equal(res.statusCode, 200);
     assert.ok(fetchCalls >= 1);
     assert.match(res.body.summary, /judicial authorization/i);
-    assert.ok(res.body.provisions.some(p => p.num === '§1.8'));
+    assert.ok(res.body.provisions.some(p => p.num === '§1.7'));
     assert.ok(res.body.provisions.length <= 5);
-    assert.match(seenBody.messages[0].content, /§1\.8/);
+    assert.match(seenBody.messages[0].content, /§1\.7/);
     assert.equal(seenBody.temperature, 0);
     assert.match(seenBody.system, /Do not add any unstated power/i);
     assert.match(seenBody.system, /mechanism for changing or avoiding a constitutional rule/i);
@@ -99,7 +99,7 @@ test('Annotated Constitution resource links target exact provision anchors', () 
   const { annotatedAnchor, annotatedHref } = require('../api/_navigator-resources.js');
   assert.equal(annotatedAnchor('§2.14'), 's2-14');
   assert.equal(annotatedAnchor('§2.14.a'), 's2-14a');
-  assert.equal(annotatedAnchor('§1.19.a'), 's1-19a');
+  assert.equal(annotatedAnchor('§1.16.a'), 's1-16a');
   assert.equal(annotatedHref('§4.4.a'), 'annotated.html#s4-4a');
 });
 

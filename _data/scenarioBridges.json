@@ -134,11 +134,11 @@
     "summary": "Renaming an emergency does not evade the bar on relabeled continuation. The Monitor publishes an assessment; judicial review and the prohibition on discriminatory emergency measures remain available.",
     "provisions": [
       {
-        "ref": "§1.19",
+        "ref": "§1.16",
         "label": "Expiry, relabeling, and judicial review"
       },
       {
-        "ref": "§1.19.a",
+        "ref": "§1.16.a",
         "label": "Absolute rights and discriminatory emergency measures"
       }
     ],
@@ -400,7 +400,7 @@
     "summary": "A voting-access restriction can face both a citizen’s rights challenge and independent election-compliance scrutiny. Those routes reinforce one another while addressing different constitutional duties.",
     "provisions": [
       {
-        "ref": "§1.9",
+        "ref": "§1.8",
         "label": "Democratic Participation"
       },
       {
@@ -539,7 +539,7 @@
         "label": "State Election Non-Compliance"
       },
       {
-        "ref": "§1.9",
+        "ref": "§1.8",
         "label": "Democratic Participation"
       }
     ],
@@ -759,7 +759,7 @@
     "summary": "A change of address tests voting access in everyday life. Administrative verification must respect the franchise and direct NVS access; the story’s processing time is not a constitutional waiting period.",
     "provisions": [
       {
-        "ref": "§1.9",
+        "ref": "§1.8",
         "label": "Democratic Participation"
       },
       {
@@ -1118,7 +1118,7 @@
         "label": "Citizen Legislative Initiative"
       },
       {
-        "ref": "§1.8",
+        "ref": "§1.7",
         "label": "Privacy, Property, and Security of the Home"
       }
     ],
@@ -1280,11 +1280,11 @@
         "label": "Unexecuted Removal Orders"
       },
       {
-        "ref": "§1.21",
+        "ref": "§1.18",
         "label": "Non-Refoulement"
       },
       {
-        "ref": "§1.11",
+        "ref": "§1.10",
         "label": "Habeas Corpus"
       }
     ],
@@ -1357,11 +1357,11 @@
         "label": "Amendment Consistency and Supremacy"
       },
       {
-        "ref": "§1.19.a",
+        "ref": "§1.16.a",
         "label": "Non-Derogable Rights"
       },
       {
-        "ref": "§1.11",
+        "ref": "§1.10",
         "label": "Habeas Corpus"
       }
     ],

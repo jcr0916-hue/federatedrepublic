@@ -224,7 +224,7 @@ const TOPICS = [
     ],
     answer: 'Six rights are non-derogable: the prohibitions on torture and slavery; habeas corpus; the right to a public trial; the prohibition on retroactive punishment; and non-refoulement. No emergency declaration, executive order, or legislative act may derogate them.',
     sections: [
-      ['§1.19.a', 'The six absolute non-derogable rights and the prohibition on derogation'],
+      ['§1.16.a', 'The six absolute non-derogable rights and the prohibition on derogation'],
     ],
   },
 ];

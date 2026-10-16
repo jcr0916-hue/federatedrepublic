@@ -55,7 +55,7 @@ const SCENARIOS = [
   {title:'The Second Renewal',file:'scenario-the-second-renewal.html',kw:['military','authorization','renewal','transition','reconstruction','withdrawal','senate']},
   {title:'The Coalition',file:'scenario-the-coalition.html',kw:['no confidence','constructive','removal','civic consul','successor','majority','accountability','§2.6','§2.6.a']},
   {title:'The Formula',file:'scenario-the-formula.html',kw:['fiscal equalization','em','fiscal capacity','social state','90 days','§12.6','§12.1','monetary authority']},
-  {title:'The Graduation',file:'scenario-the-graduation.html',kw:['voting','residency','nvs','student','ordinary','franchise','§1.9','§11.2','ballot']},
+  {title:'The Graduation',file:'scenario-the-graduation.html',kw:['voting','residency','nvs','student','ordinary','franchise','§1.8','§11.2','ballot']},
   {title:'The Holdout',file:'scenario-the-holdout.html',kw:['sc nomination','senate','refuses vote','day 120','judicial','confirmation','§4.4','holdout']},
   {title:'The Prior Claim',file:'scenario-the-prior-claim.html',kw:['indigenous','prior sovereignty','compact','federal mandate','state','§16.1','§16.2','§15.7','§4.5']},
   {title:'The Departure',file:'scenario-the-departure.html',kw:['indigenous','associated community','independence','sovereign','withdrawal','§20.4','exit','citizenship']},

@@ -13,7 +13,7 @@
 
 ## INDEX
 
-- **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.21  (20 provisions)
+- **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.18  (20 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.18  (24 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.11  (11 provisions)
 - **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (9 provisions)
@@ -68,63 +68,63 @@ Every person holds the rights of expression, thought, conscience, religion, asso
 Every person is equal before the law. Government may not discriminate on the basis of race, ethnicity, sex, sexual orientation, gender identity, religion, national origin, disability, age, or economic status.
 
 
-### §1.8 — Privacy, Property, and Security of the Home
+### §1.7 — Privacy, Property, and Security of the Home
 
 Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home, or search, surveil, or collect a person, communication, or data, without consent or prior independent judicial authorization on specific, articulable grounds.
 
 
-### §1.9 — Democratic Participation
+### §1.8 — Democratic Participation
 
 Every citizen, subject to constitutional eligibility requirements, has the right to vote, stand for office, participate in democratic processes, and have their vote counted. No governmental action whose purpose or substantial effect suppresses or reduces access to the franchise is valid.
 
 
-### §1.10 — Right to Bear Arms
+### §1.9 — Right to Bear Arms
 
 Every person holds the right to keep and bear arms for lawful purposes, including self-defense. The Legislature and States may regulate the licensing, safety, type, transfer, and carry of arms, provided lawful ownership for self-defense remains available.
 
 
-### §1.11 — Habeas Corpus
+### §1.10 — Habeas Corpus
 
 Every person detained by public authority has the right to challenge that detention before an independent and impartial court. The detaining authority must produce the person and justify detention within the period established by statute, not to exceed 72 hours.
 
 - **Time limits:**
   - The detaining authority must produce the person and justify detention within the period established by statute, not to exceed 72 hours
 
-### §1.12 — Rights of the Accused and Fair Trial
+### §1.11 — Rights of the Accused and Fair Trial
 
 Every person accused of a criminal offense has the right to prompt notice of the charges; counsel, at public expense if unable to afford representation; adequate time and means to prepare a defense; examination of witnesses; silence without adverse inference; and a speedy trial. No person may receive a greater penalty solely for exercising the right to trial.
 
 
-### §1.13 — Right to a Public Trial
+### §1.12 — Right to a Public Trial
 
 Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings may be closed only to the minimum extent necessary to protect a compelling interest identified by the court, with the grounds and expected duration published to the NRS.
 
 - **Time limits:**
   - No record may remain sealed beyond 10 years from final judgment unless a court extends it once, by up to five years, on published findings of continuing necessity
 
-### §1.14 — Freedom from Retroactive Criminal Law
+### §1.13 — Freedom from Retroactive Criminal Law
 
 No person may be convicted for conduct that was not criminal when committed, and no criminal law may otherwise be applied retroactively to the disadvantage of the accused.
 
 
-### §1.15 — Double Jeopardy
+### §1.14 — Double Jeopardy
 
 No person may be tried or punished twice for the same offense following final acquittal or conviction. Offenses are the same where they arise from the same conduct and the later charge requires no element distinct from the earlier charge.
 
 
-### §1.15.a — Conduct Lawful in Another Jurisdiction
+### §1.14.a — Conduct Lawful in Another Jurisdiction
 
 No State or Territory may impose criminal or civil liability on a person for conduct that was lawful where it occurred in another State or Territory, or for assisting such conduct or providing information about it.
 
 
-### §1.18 — Environmental Obligations
+### §1.15 — Environmental Obligations
 
 Government may not cause or systematically permit material environmental harm to persons or communities. The Legislature must establish environmental protections.
 
 
-### §1.19 — Emergency Derogation
+### §1.16 — Emergency Derogation
 
-No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.19.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, scope, and duration, published immediately to the NRS.
+No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.16.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, scope, and duration, published immediately to the NRS.
 
 - **Thresholds:**
   - thereafter, re-declaration requires 2/3 of both chambers
@@ -133,21 +133,21 @@ No emergency suspends the Individual Sovereignty Floor in full. Rights other tha
   - Continuation beyond 14 days requires a statute with a fixed expiration date, which may not be extended or renewed
   - Each declaration must receive independent judicial review within 48 hours of publication
   - A substantially similar derogation may not be declared within 60 days after expiry
-- **Cross-refs:** §1.19.a
+- **Cross-refs:** §1.16.a
 
-### §1.19.a — Non-Derogable Rights
+### §1.16.a — Non-Derogable Rights
 
-These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.11); the right to a public trial (§1.13); no retroactive punishment (§1.14); and non-refoulement (§1.21). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such application is void.
+These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.4); habeas corpus (§1.10); the right to a public trial (§1.12); no retroactive punishment (§1.13); and non-refoulement (§1.18). No emergency measure may be applied in a discriminatory manner on the basis of race, ethnicity, religion, national origin, sexual orientation, or gender identity; any such application is void.
 
-- **Cross-refs:** §1.11, §1.13, §1.14, §1.21, §1.3, §1.4
+- **Cross-refs:** §1.10, §1.12, §1.13, §1.18, §1.3, §1.4
 
-### §1.20 — Right to Seek Asylum
+### §1.17 — Right to Seek Asylum
 
 Every person who reaches the Republic's jurisdiction has the right to claim asylum and to an independent determination of that claim under §6.3. Manner of entry does not affect this right.
 
 - **Cross-refs:** §6.3
 
-### §1.21 — Non-Refoulement
+### §1.18 — Non-Refoulement
 
 No person, wherever located, may be returned, expelled, or extradited by the Republic, or by anyone acting at its direction or with its acquiescence, to any territory where they face genuine risk of persecution, torture, or deprivation of life. This protection applies regardless of the person's status, conduct, or the receiving government.
 
@@ -263,7 +263,7 @@ When extraordinary circumstances prevent ordinary constitutional government, eit
 
 - **Time limits:**
   - Declarations lapse after 30 days unless renewed by the same process
-- **Cross-refs:** §1.19, §2.16, §2.9, §2.9.a, §7.2.a
+- **Cross-refs:** §1.16, §2.16, §2.9, §2.9.a, §7.2.a
 
 ### §2.12 — Clemency
 
@@ -293,7 +293,7 @@ Either Consul may request assistance from the other within the responding Consul
 
 - **Time limits:**
   - Assistance may not exceed 90 days without a fresh request and response
-- **Cross-refs:** §1.19
+- **Cross-refs:** §1.16
 
 ### §2.15 — Federal Prosecution
 
@@ -506,7 +506,7 @@ Where removal of a parent or guardian would deprive a child of their primary car
 
 Legal residency requires sponsorship under the applicable State or federal framework, followed by federal certification, except as otherwise provided by this Constitution. States retain discretion over whom they sponsor but may not apply sponsorship criteria that violate §1.6.
 
-- **Cross-refs:** §1.20, §1.6
+- **Cross-refs:** §1.17, §1.6
 
 ### §6.2 — Enforcement, Removal, and Appeals
 
@@ -516,11 +516,11 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 ### §6.3 — Asylum and Protection
 
-(1) An asylum claim must be determined before removal may be executed. A claim found to have been filed solely to delay removal may be expedited by statute, without diminishing the right to a fair hearing or the protections of §1.21.
+(1) An asylum claim must be determined before removal may be executed. A claim found to have been filed solely to delay removal may be expedited by statute, without diminishing the right to a fair hearing or the protections of §1.18.
 
 - **Time limits:**
   - A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours
-- **Cross-refs:** §1.21
+- **Cross-refs:** §1.18
 
 ### §6.3.a — Unexecuted Removal Orders
 
@@ -785,7 +785,7 @@ Monitor Generals disclose financial interests under the same substantive require
 - **Time limits:**
   - The record is restored when the 30 days end unless that court has confirmed the restriction on the narrowest possible grounds, in which case the court sets its duration
   - Where the NRS has not been restored within 180 days, the parallel system becomes the constitutional record
-- **Cross-refs:** §1.8, §11.2
+- **Cross-refs:** §1.7, §11.2
 
 ### §10.2 — Classification Criteria
 
@@ -1008,7 +1008,7 @@ A Territory resulting from devolution is deemed to have requested a Statehood Au
 - **Time limits:**
   - Upon confirmation, the entity and the Legislature negotiate an incorporation agreement specifying a transition period not exceeding 48 months, which the Legislature ratifies by 2/3 of both chambers
   - a, within 30 days after ratification
-- **Cross-refs:** §1.19.a
+- **Cross-refs:** §1.16.a
 
 ### §15.7 — State Immutability and Territorial Integrity
 
@@ -1018,9 +1018,9 @@ A State's constitutional boundaries are fixed except as provided in this Article
 
 ### §15.7.a — Reversion to the States and Territories
 
-If §2.9.a(6) applies, §15.7 does not apply, and the States and Territories are sovereign governments that may act as such, including by reconstituting the Republic. The rights in §1.19.a continue to bind every government.
+If §2.9.a(6) applies, §15.7 does not apply, and the States and Territories are sovereign governments that may act as such, including by reconstituting the Republic. The rights in §1.16.a continue to bind every government.
 
-- **Cross-refs:** §1.19.a, §15.7, §2.9.a
+- **Cross-refs:** §1.16.a, §15.7, §2.9.a
 
 ### §15.8 — Local Government
 
@@ -1109,7 +1109,7 @@ Indigenous nations hold sovereignty that precedes the Republic. This sovereignty
 - **Time limits:**
   - until such statute is enacted, 180 days) or Popular Ratification (a national popular referendum achieving 2/3 of votes cast with at least 55% citizen participation within 180 days)
   - Once the Phase Two threshold is verified, the Elections Panel administers a national referendum within 180 days
-- **Cross-refs:** §1.19.a, §10.1, §11.1, §13.1, §15.7.a, §17.3, §9.1, §9.2, §9.4, §9.6
+- **Cross-refs:** §1.16.a, §10.1, §11.1, §13.1, §15.7.a, §17.3, §9.1, §9.2, §9.4, §9.6
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
@@ -1120,7 +1120,7 @@ No Consul signature or veto applies to an amendment. An amendment takes effect u
 
 (1) An amendment inconsistent with an existing provision is void to the extent of the inconsistency unless it expressly repeals or amends that provision. (2) The JM publishes a consistency analysis of any proposed amendment within 30 days of passage by both chambers for a parliamentary amendment, or within 30 days of Elections Panel Phase Two threshold verification for a citizen initiative amendment.
 
-- **Cross-refs:** §1.19.a, §4.5
+- **Cross-refs:** §1.16.a, §4.5
 
 ### §17.4 — Supremacy of This Constitution
 
@@ -1159,7 +1159,7 @@ When a federal function ends, the federal government must publish notice of term
 - **Thresholds:**
   - (2) National Trust designation requires a 2/3 vote of both chambers with host State consent
   - International conservation agreements require a 2/3 Senate vote to withdraw before the national removal process begins
-- **Cross-refs:** §1.18
+- **Cross-refs:** §1.15
 
 ### §18.5 — Federal Property in Territories
 
@@ -1212,7 +1212,7 @@ Predecessor classified material is subject from Day Zero to the standards of Art
 - **Time limits:**
   - 1 and either link it to legislative authorization within 14 days or begin orderly cessation
   - operations not so linked within 60 days cease unless the Legislature grants a one-time authorization
-- **Cross-refs:** §1.19.a, §14.1, §2.2, §3.6
+- **Cross-refs:** §1.16.a, §14.1, §2.2, §3.6
 
 ### §19.6 — Transition Territories
 
@@ -1267,11 +1267,11 @@ The Republic and an Associated Community are equal parties to the compact. Obser
 
 ### §20.3 — Compact Conditions and Compliance
 
-(1) No compact may be entered or ratified with an entity whose governance practices include, authorize, or systematically permit violations of the non-derogable rights in §1.19.a against any person within its jurisdiction. (2) Where the JM finds systematic violations of §1.19.a rights, or any party challenges a compact on those grounds, the compact is suspended pending review through its independent arbitration…
+(1) No compact may be entered or ratified with an entity whose governance practices include, authorize, or systematically permit violations of the non-derogable rights in §1.16.a against any person within its jurisdiction. (2) Where the JM finds systematic violations of §1.16.a rights, or any party challenges a compact on those grounds, the compact is suspended pending review through its independent arbitration…
 
 - **Time limits:**
   - The arbitration panel must issue a preliminary determination within 90 days of suspension
-- **Cross-refs:** §1.19.a
+- **Cross-refs:** §1.16.a
 
 ### §20.4 — Sovereign Mobility
 
@@ -1304,7 +1304,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 
 | § | Provision | Threshold clause (verbatim) |
 |---|---|---|
-| §1.19 | Emergency Derogation | thereafter, re-declaration requires 2/3 of both chambers |
+| §1.16 | Emergency Derogation | thereafter, re-declaration requires 2/3 of both chambers |
 | §2.3.a | Legat Consul Legislative Veto | The Senate may override by 2/3 during that session |
 | §2.6 | Constructive Vote of No Confidence | (1) The Civic Consul is accountable to the Assembly and may be removed only by a constructive vote of no confidence that simultaneously elects a named successor by absolute majority of the full seated Assembly |
 | §2.6.a | Government Formation | (1) The Assembly elects the Civic Consul by absolute majority within the statutory period following a vacancy (constitutional default: 21 days) |

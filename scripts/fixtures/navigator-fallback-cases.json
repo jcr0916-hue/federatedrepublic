@@ -4,7 +4,7 @@
     "question": "Can the government search my phone without judicial authorization?",
     "expectedSufficient": true,
     "required": [
-      "§1.8"
+      "§1.7"
     ]
   },
   {
@@ -12,7 +12,7 @@
     "question": "How quickly must a detained person be brought before a court?",
     "expectedSufficient": true,
     "required": [
-      "§1.11"
+      "§1.10"
     ]
   },
   {
@@ -20,9 +20,9 @@
     "question": "Can emergency powers suspend a person's right to challenge detention?",
     "expectedSufficient": true,
     "required": [
-      "§1.19",
-      "§1.19.a",
-      "§1.11"
+      "§1.16",
+      "§1.16.a",
+      "§1.10"
     ]
   },
   {
@@ -30,7 +30,7 @@
     "question": "Can emergency measures be extended indefinitely?",
     "expectedSufficient": true,
     "required": [
-      "§1.19"
+      "§1.16"
     ]
   },
   {
@@ -38,7 +38,7 @@
     "question": "What protection exists against being returned to a country where someone faces persecution?",
     "expectedSufficient": true,
     "required": [
-      "§1.21",
+      "§1.18",
       "§6.3"
     ]
   },
@@ -63,7 +63,7 @@
     "question": "Can a legislature criminalize conduct retroactively?",
     "expectedSufficient": true,
     "required": [
-      "§1.14"
+      "§1.13"
     ]
   },
   {
