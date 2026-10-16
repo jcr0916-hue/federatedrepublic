@@ -139,8 +139,6 @@
     <p class="state-history-more"><a href="/state-tests.html#{{ stateSlug }}-constitution">Browse {{ stateName }} provisions and historical tests →</a></p>
   </section>
   {% endif %}
-  <h2>Read the Constitution</h2>
-  {% if stateConstitutionPage %}<p><a href="{{ stateConstitutionPage }}">Read the formatted {{ stateName }} State Constitution</a>, or open the <a href="State%20Constitutions/{{ stateName | lower }}-state-constitution.md">source Markdown</a>. This profile summarizes the State text; the <a href="annotated.html">federal Constitution</a> governs wherever the two conflict.</p>{% else %}<p><a href="State%20Constitutions/{{ stateName | lower }}-state-constitution.md">{{ stateName }} State Constitution (Markdown)</a>. This profile summarizes the State text; the <a href="annotated.html">federal Constitution</a> governs wherever the two conflict.</p>{% endif %}
   <h2>In the public record</h2>
   <ul class="state-coverage">
   {% for piece in collections.world | stateCoverage(stateName) | take(6) %}
