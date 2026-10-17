@@ -113,7 +113,7 @@ console.log(`Verified ${stateIndex.entries.length} State historical tests and bi
 const {default:statepages}=await import('../_data/statepages.js');
 const {loadStateConstitutionDisplays}=await import('../lib/state-constitution-display.mjs');
 const stateTexts=loadStateConstitutionDisplays();
-const normalized=value=>String(value).replace(/^[ \t]*- /gm,'').replaceAll('**','').replace(/\s+/g,' ').trim();
+const normalized=value=>String(value).replace(/^[ \t]*(?:- |\d+\.[ \t]+)/gm,'').replaceAll('**','').replace(/\s+/g,' ').trim();
 const stateBodyText=node=>node.type==='text'?node.data:(node.children||[]).map(stateBodyText).join('')+(/^(p|li)$/.test(node.name||'')?' ':'');
 const directory=docs.get('republic-at-a-glance.html');
 for(const state of statepages){

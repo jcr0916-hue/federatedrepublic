@@ -1040,6 +1040,7 @@ h1.qs-title:focus,h2.section-label:focus{outline:none}
 /* Polished State Constitution presentation */
 .state-constitution-page{max-width:1180px;margin:0 auto;padding:96px 28px 72px}
 .state-constitution-hero{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:2rem;align-items:start;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+.state-constitution-hero--text-only{grid-template-columns:1fr}
 .state-constitution-hero h1{font:600 clamp(2.6rem,6vw,4.6rem)/1 'Cormorant Garamond',serif;color:var(--navy);margin:.35rem 0 .65rem;max-width:850px}
 .state-constitution-subtitle{font:italic 1.25rem/1.5 'Cormorant Garamond',serif;color:#3d4a63;max-width:760px;margin-bottom:1rem}
 .state-constitution-flag{width:100%;height:auto;display:block;border:1px solid var(--border);box-shadow:0 2px 10px #0002}
@@ -1058,7 +1059,7 @@ h1.qs-title:focus,h2.section-label:focus{outline:none}
 .state-constitution-anchor{font:500 .72rem 'JetBrains Mono',monospace;color:var(--gold2);text-decoration:none;white-space:nowrap}
 .state-constitution-provision-head h3{font:600 1.45rem/1.2 'Cormorant Garamond',serif;color:var(--navy);margin:0}
 .state-constitution-body p{margin:0 0 .9rem;line-height:1.8}
-.state-constitution-body ul{margin:.2rem 0 1rem 1.25rem;padding-left:1rem}.state-constitution-body li{margin:.25rem 0;line-height:1.7}
+.state-constitution-body ul,.state-constitution-body ol{margin:.2rem 0 1rem 1.25rem;padding-left:1rem}.state-constitution-body li{margin:.25rem 0;line-height:1.7}
 .state-tested{margin:1rem 0 0;padding:1rem 1.1rem;background:var(--cream2);border-left:3px solid var(--gold)}
 .state-tested-label{display:block;font:500 .62rem 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#765817;margin-bottom:.55rem}
 .state-tested>a{display:block;color:var(--navy);text-decoration:none;padding:.35rem 0}.state-tested>a+a{border-top:1px solid var(--border)}
@@ -1073,7 +1074,7 @@ h1.qs-title:focus,h2.section-label:focus{outline:none}
   .state-constitution-toc-mobile{display:block;border-block:1px solid var(--border);margin:.25rem 0 1rem}
   .state-constitution-toc-mobile summary{cursor:pointer;list-style:none;padding:.8rem 0;font:500 .72rem 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#765817}
   .state-constitution-toc-mobile summary::-webkit-details-marker{display:none}.state-constitution-toc-mobile summary::after{content:' +';}.state-constitution-toc-mobile[open] summary::after{content:' −';}
-  .state-constitution-toc-mobile nav{display:grid;grid-template-columns:1fr;max-height:55vh;overflow:auto;padding:0 0 .75rem}
+  .state-constitution-toc-mobile nav{position:static;inset:auto;z-index:auto;height:auto;background:none;backdrop-filter:none;border:0;display:grid;grid-template-columns:1fr;align-items:stretch;justify-content:normal;max-height:55vh;overflow:auto;padding:0 0 .75rem}
   .state-constitution-toc-mobile a{color:var(--muted);text-decoration:none;font-size:.85rem;padding:.45rem 0;border-top:1px solid var(--rule)}
   .state-constitution-toc-mobile a:hover,.state-constitution-toc-mobile a:focus-visible{color:var(--navy)}
 }
