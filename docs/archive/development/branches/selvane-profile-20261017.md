@@ -2,9 +2,9 @@
 
 **Original branch:** `content/selvane-profile-20261017`
 
-**PR:** pending
+**PR:** [#201](https://github.com/jcr0916-hue/federatedrepublic/pull/201)
 
-**Head commit at handoff:** pending; the PR will record the final tip
+**Head commit at handoff:** [`832a9634776a78cddfe1db8c11cd590b654e017a`](https://github.com/jcr0916-hue/federatedrepublic/commit/832a9634776a78cddfe1db8c11cd590b654e017a); later handoff-only updates and the final tip are recorded by #201
 
 **Status:** proposed; not merged or shipped
 
