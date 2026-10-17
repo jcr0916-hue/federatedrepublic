@@ -2,9 +2,9 @@
 
 **Original branch:** `content/orath-merath-profiles-20261017`
 
-**PR:** pending
+**PR:** [#200](https://github.com/jcr0916-hue/federatedrepublic/pull/200)
 
-**Head commit at handoff:** pending; the PR will record the final tip
+**Head commit at handoff:** [`133f90fa49f92668ac4ff98339edd95d036dabea`](https://github.com/jcr0916-hue/federatedrepublic/commit/133f90fa49f92668ac4ff98339edd95d036dabea); subsequent handoff-only updates and the final tip are recorded by #200
 
 **Status:** proposed; not merged or shipped
 
