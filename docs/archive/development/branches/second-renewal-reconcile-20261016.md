@@ -2,9 +2,9 @@
 
 **Original branch:** `fix/second-renewal-reconcile-20261016`
 
-**PR:** replacement for [#197](https://github.com/jcr0916-hue/federatedrepublic/pull/197); link pending creation
+**PR:** [#199](https://github.com/jcr0916-hue/federatedrepublic/pull/199), replacing [#197](https://github.com/jcr0916-hue/federatedrepublic/pull/197)
 
-**Head commit at handoff:** pending; final tip will be recorded by the replacement PR
+**Head commit at handoff:** [`2a397569b1f32ceff1d2ca12f883fc7acb4e62e1`](https://github.com/jcr0916-hue/federatedrepublic/commit/2a397569b1f32ceff1d2ca12f883fc7acb4e62e1); subsequent handoff-only updates and the final tip are recorded by #199
 
 **Status:** proposed; not merged or shipped
 
