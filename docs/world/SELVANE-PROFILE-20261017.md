@@ -20,7 +20,7 @@ The profile is an evergreen feature. No World IDs, fictional date, officeholder,
 
 ## Presentation and completeness
 
-`_data/statepages.js` now includes all twelve ledger States and supplies sibling navigation, map links and directory routes. Only Selvane’s summary changes in `_data/stats.js`; numbers and statuses remain intact. Existing map coordinates are reused. Neither an approved flag asset nor a named State capital was found in the consulted sources; neither is invented. The shared profile supports a text-only heading, and its Explore description now lists a flag only when one is available.
+`_data/statepages.js` now includes all twelve ledger States and supplies sibling navigation, map links and directory routes. Only Selvane’s summary changes in `_data/stats.js`; numbers and statuses remain intact. Existing map coordinates are reused. No approved flag asset or named State capital was found in the initial sources. The profile initially used the shared text-only heading; the user subsequently approved a burgundy, ivory and gold crossroads flag. Its original generated artwork now appears in the profile heading, Explore rail/full-size link and Constitution header. [Design approval, symbolism and generation prompt](visual-identity/SELVANE-FLAG.md) are preserved. A named capital remains unestablished. The shared template still supports flagless profiles and lists a flag in Explore only when one is available.
 
 The shared Constitution header omits an empty subtitle, accepts the explicit reader description and uses one column when there is no flag. The safe body renderer now turns source numbered lists into ordered lists with explicit original item values, preserving Selvane §20’s six structural-law categories and preventing silent renumbering. Ordered and unordered lists receive the same protected inset. The source-text discovery check accounts for semantic list markers; regression coverage includes nonconsecutive numbers, clause separation and escaped markup. The existing parser already supports Selvane’s §§1–70: no invented decimal provision numbering or source rewriting is needed.
 
@@ -28,4 +28,4 @@ Visual review also exposed the mobile reader’s contents `<nav>` inheriting the
 
 ## Verification and disposition
 
-The [permanent branch handoff](../archive/development/branches/selvane-profile-20261017.md) records actual checks, review status and remaining limitations. The existing three World chronology/status reminders are separate maintenance items. A future approved Selvane flag can use the shared flag presentation without rebuilding the profile.
+The [permanent branch handoff](../archive/development/branches/selvane-profile-20261017.md) records actual checks, review status and remaining limitations. The existing three World chronology/status reminders are separate maintenance items. The approved flag reuses the existing shared presentation without changing the feature, constitutional sources, map or statistics.
