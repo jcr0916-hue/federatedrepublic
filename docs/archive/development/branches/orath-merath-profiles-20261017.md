@@ -4,7 +4,7 @@
 
 **PR:** [#200](https://github.com/jcr0916-hue/federatedrepublic/pull/200)
 
-**Head commit at handoff:** [`133f90fa49f92668ac4ff98339edd95d036dabea`](https://github.com/jcr0916-hue/federatedrepublic/commit/133f90fa49f92668ac4ff98339edd95d036dabea); subsequent handoff-only updates and the final tip are recorded by #200
+**Head commit at handoff:** [`133f90fa49f92668ac4ff98339edd95d036dabea`](https://github.com/jcr0916-hue/federatedrepublic/commit/133f90fa49f92668ac4ff98339edd95d036dabea); subsequent corrections, handoff updates and the final tip are recorded by #200
 
 **Status:** proposed; not merged or shipped
 
@@ -22,7 +22,8 @@ Prepare the two weekend State profiles from the actual Orath and Merath Constitu
 - `_data/statepages.js` adds map/directory/sibling routes. `_data/stats.js` changes only the two States’ descriptive summaries; all numerical facts, statuses, and other jurisdictions remain intact.
 - Shared profile layout and styling are preserved; its Explore introduction now correctly describes navigation after the feature. The State reader safely renders Markdown bold and preserves Merath’s second italic tagline and distinct adoption line.
 - Federal glossary injection is excluded from State profiles/readers after verification caught federal definitions misdescribing the Steward and authorized-majority denominator. Existing source prose remains unchanged. Discovery validation now guards this boundary, all eleven profile/reader/directory routes, source-download bytes, and every rendered State provision. Parser tests cover safe formatting and the two new sources’ complete provision sequences.
-- [Editorial/source record](../../../world/ORATH-MERATH-PROFILES-20261017.md) and [flag provenance](../../../world/visual-identity/ORATH-MERATH-FLAGS.md) preserve the detailed decisions. No federal/State Constitution source, World publication, sequence, clock, map coordinate, historical test, Bible or status file changes.
+- [Editorial/source record](../../../world/ORATH-MERATH-PROFILES-20261017.md) and [flag provenance](../../../world/visual-identity/ORATH-MERATH-FLAGS.md) preserve the detailed decisions. No federal/State Constitution source, World sequence, clock, map coordinate, historical test, Bible or status file changes.
+- After accepting the profiles, the user authorized correcting `torenthia-news-039.html`’s pre-existing Orath population/status inconsistency. Three paragraphs now use State status and the shared 5.4-million population, remove an unsupported Verentum district comparison, and preserve the nine-signature scene while distinguishing jurisdictional counting from eligible-voter signature thresholds. The [editorial record](../../../world/ORATH-MERATH-PROFILES-20261017.md#resolved-orath-populationstatus-inconsistency) preserves scope and the original version.
 
 ## Results and verification
 
@@ -32,6 +33,7 @@ Prepare the two weekend State profiles from the actual Orath and Merath Constitu
 - Browser: all four new pages checked at 1440, 768, 390 and 320px. No document overflow, broken images, missing alt attributes, duplicate h1, broken map labels, or interrupted feature/Explore ordering. Directory → profile → formatted Constitution → source download → profile → filtered archive flows passed at desktop and phone widths (Orath ten matching records; Merath three). Harren/Arvane profile checks passed at desktop/phone widths. First complete run recorded no page errors or local request failures; the repeated responsive/navigation assertions passed after the glossary fix.
 - Desktop/phone screenshots were visually inspected. The repeat run’s final full-page screenshot of a standalone SVG timed out after the page/flow assertions; this was a preview-capture issue. Full flag PNG previews were rendered directly from the SVGs and inspected. Screenshots and browser output are local review artifacts under the project’s `output/orath-merath-profiles-2026-10-17/`; they are not shipped assets or remote artifacts.
 - Dependencies reused from a completed sibling checkout after verifying identical lockfiles; a fresh local install was not run. Remote CI/deployment results are not established at this pre-PR handoff.
+- Population/status follow-up: the full `npm run world:publish-check` passed again after the three-paragraph correction, including all 341 built pages and the eleven-State source/discovery checks. Targeted comparison confirmed unchanged publication front matter, date, paragraph structure and nine-signature scene; the obsolete population/territorial wording is absent from the article. A repository search found no other active Orath claim of this kind. Whitespace and base-relative Constitution archive checks passed. Original profile head `ef6ea002e693ec2807edbf1c063de6868988eb64` also passed [remote World publishing](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/39032194297) and [Constitution archival](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/39032194240), with a ready Vercel preview; consult #200 for the follow-up commit’s remote results.
 
 ## Decisions and lessons
 
@@ -42,7 +44,7 @@ Prepare the two weekend State profiles from the actual Orath and Merath Constitu
 
 ## Open follow-ups
 
-- **Unresolved:** older `torenthia-news-039.html` calls Orath a Territory of 140,000, contradicting the maintained State Constitution/Bible/ledger (State; 5.4 million). Preserved unchanged for separate historical/editorial review. The new profile uses the shared ledger. This PR does not decide whether to amend or annotate the older narration.
+- **Resolved:** `torenthia-news-039.html`’s Orath population/status inconsistency is corrected following the user’s explicit request. Original wording remains preserved at `ef6ea002e693ec2807edbf1c063de6868988eb64`; the article’s metadata, date and narrative events are unchanged. Follow-up validation results are recorded above.
 - Confirm PR review and remote CI/deployment before merge. Existing chronology/dashboard reminders remain a separate publishing-maintenance task. Selvane is the remaining unpublished State profile in the current inventory.
 
 ## Preservation and branch disposition

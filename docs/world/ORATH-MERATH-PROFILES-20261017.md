@@ -4,7 +4,7 @@
 
 Prepared from `main` at `3d3ce16` for the [weekend objectives](../operations/WEEKEND-OBJECTIVES-2026-10-17.md). Read the actual State sources, current profile and Constitution templates, existing profiles, [World Story Bible](../WORLD-STORY-BIBLE.md), [World Story Status](../WORLD-STORY-STATUS.md), shared statistics ledger, map labels/borders, and the published records listed below. New profiles use the merged editorial reading flow from [PR #176](https://github.com/jcr0916-hue/federatedrepublic/pull/176) and retain [PR #178](https://github.com/jcr0916-hue/federatedrepublic/pull/178)’s removal of the duplicate Constitution block.
 
-These are evergreen profiles, not newly sequenced World publications. No `worldSeq`, `nrsSeq`, fictional date, election result, officeholder, statute, constitutional wording, or State historical test is added. No Bible/status rewrite is needed. Population, federal representation and audit labels continue to come from `_data/stats.js`; State legislative size ranges are identified as constitutional ranges, not current chamber counts.
+These are evergreen profiles, not newly sequenced World publications. No `worldSeq`, `nrsSeq`, fictional date, election result, officeholder, statute, constitutional wording, or State historical test is added. No Bible/status rewrite is needed. Population, federal representation and audit labels continue to come from `_data/stats.js`; State legislative size ranges are identified as constitutional ranges, not current chamber counts. After accepting the profiles, the user also authorized the older Orath article correction recorded below.
 
 ## Orath source decisions
 
@@ -33,9 +33,11 @@ The profile template keeps its compact overview → uninterrupted feature → Ex
 
 Rendered-text verification exposed federal glossary popups being injected into State text: “constructive vote of no confidence” acquired a Civic Consul explanation beside Orath’s Steward, and Merath’s “absolute majority” acquired a seated-membership definition despite its explicit authorized-membership denominator. State profiles and State constitutional readers are now excluded from federal glossary injection. Other page families retain their existing glossary behavior.
 
-## Pre-existing issue for separate editorial review
+## Resolved Orath population/status inconsistency
 
-`torenthia-news-039.html` calls Orath a “Territory” of 140,000 people. This conflicts with the current State Constitution, Story Bible, and shared ledger (State; 5.4 million). The new profile uses the maintained ledger and does not reuse that claim. The older publication remains unchanged because deciding how to correct its historical narration is outside this profile PR. The automatic public-record list may still surface that article; its jurisdiction metadata correctly includes Orath.
+`torenthia-news-039.html` originally called Orath a “Territory” of 140,000 people, conflicting with the current State Constitution, Story Bible, and shared ledger (State; 5.4 million). The user accepted both profiles and explicitly requested correction of this issue on October 17, 2026. The article now identifies Orath as a State of five million four hundred thousand people. The unsupported comparison with Verentum’s third district is removed, the later “this Territory” reference becomes “this State,” and the closing threshold reflection no longer treats the erroneous 140,000 as a collective public opinion.
+
+The corrected passage distinguishes equal jurisdictional counting in Phase One from the signature requirement based on each jurisdiction’s eligible voters, consistent with federal §13.1(2). It invents neither an eligible-voter count nor a statutory percentage. The two visiting petitioners, four hours at the table, nine signatures, market-day setting, narrator, publication metadata and established story events remain unchanged. This is an editorial continuity correction, not a fictional population increase, change of status, completed petition threshold or new publication. The original wording remains preserved in Git history at [the pre-correction tip](https://github.com/jcr0916-hue/federatedrepublic/blob/ef6ea002e693ec2807edbf1c063de6868988eb64/torenthia-news-039.html).
 
 ## Verification
 
