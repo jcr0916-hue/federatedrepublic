@@ -6,7 +6,7 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   {% set constitution = stateConstitutions[stateConstitution] %}
   <title>{{ constitution.title | title }} — The Federated Republic</title>
-  <meta name="description" content="{{ constitution.subtitle }}">
+  <meta name="description" content="{{ description or constitution.subtitle }}">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
 </head>
@@ -16,11 +16,11 @@
 {% set constitution = stateConstitutions[stateConstitution] %}
 {% set constitutionHistoricalTests = stateTests.entries | stateTestsFor(stateConstitution) %}
 <main class="state-constitution-page" id="main-content">
-  <header class="state-constitution-hero">
+  <header class="state-constitution-hero{% if not stateFlag %} state-constitution-hero--text-only{% endif %}">
     <div>
       <p class="section-kicker">State Constitution · current text</p>
       <h1>{{ constitution.title | title }}</h1>
-      <p class="state-constitution-subtitle">{{ constitution.subtitle }}</p>
+      {% if constitution.subtitle %}<p class="state-constitution-subtitle">{{ constitution.subtitle }}</p>{% endif %}
       {% if constitution.tagline %}<p class="state-constitution-subtitle">{{ constitution.tagline }}</p>{% endif %}
       <div class="link-row">
         <a href="{{ stateProfileURL }}">← {{ stateConstitution | capitalize }} profile</a>

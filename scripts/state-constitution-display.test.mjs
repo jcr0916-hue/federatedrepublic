@@ -50,6 +50,13 @@ test('Orath and Merath retain their article structure and Merath front and closi
   }
 });
 
+test('numbered constitutional lists retain explicit values and do not absorb following clauses',()=>{
+  const html=renderStateConstitutionBody('(b) Structural matters:\n\n3. Courts;\n4. Elections;\n7. **<script>unsafe</script>**.\n\n(c) Existing law continues.\n\n- Public record.');
+  assert.match(html,/<ol><li value="3">Courts;<\/li><li value="4">Elections;<\/li><li value="7"><strong>&lt;script&gt;unsafe&lt;\/script&gt;<\/strong>\.<\/li><\/ol>/);
+  assert.match(html,/<\/ol>\s*<p>\(c\) Existing law continues\.<\/p>\s*<ul><li>Public record\.<\/li><\/ul>/);
+  assert.ok(!html.includes('<script>'));
+});
+
 test('published State profiles have formatted Constitution entry pages',()=>{
   for(const {key:id} of statepages){
     const page='state-constitution-'+id+'.html';
