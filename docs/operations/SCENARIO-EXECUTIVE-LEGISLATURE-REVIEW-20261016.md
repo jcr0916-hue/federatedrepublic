@@ -12,7 +12,7 @@
 
 ## Confirmed mismatch and correction
 
-**The Formation:** The old text described a one-candidate yes/no national ratification pathway that current §2.6.a(4)–(5) does not establish; the required nomination field is **two to four**. It also portrayed the acting Civic Consul's reconsideration notice as a discretionary notice within a ten-business-day window, subject to the ordinary §2.7 exclusions. Current §2.6.a(3) instead provides a ten-business-day **pause triggered by the acting reconsideration notice**, with Assembly withdrawal possible by simple majority and review resuming otherwise. Corrected the explanatory text. The story's actual four-candidate ballot and result remain unchanged.
+**The Formation:** Following the author's clarification, the **intended** nominating rule is a maximum of four, with a single candidate who cannot win an Assembly majority sent to voters for a yes-or-no confirmation. The current merged §2.6.a(4) literally states 'no fewer than two and no more than four', and §2.6.a(5) describes ranked choice among the advancing candidates; those words do not expressly implement the intended single-candidate exception. **Flag this as a constitutional drafting discrepancy, not a scenario error.** The scenario now preserves the single-candidate explanation with an express note that constitutional wording must catch up. Separately, the Acting Civic Consul's reconsideration notice is properly a ten-business-day **pause triggered by the notice** under §2.6.a(3), with Assembly withdrawal possible by simple majority and review resuming otherwise. The story's actual four-candidate ballot and result remain unchanged.
 
 ## Other selection observations
 
