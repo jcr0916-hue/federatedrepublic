@@ -4,7 +4,7 @@
     "provisions": [
       {
         "ref": "§2.6.a",
-        "label": "Government formation and the fallback election"
+        "label": "Government Formation"
       }
     ],
     "links": [
@@ -27,7 +27,7 @@
     "provisions": [
       {
         "ref": "§15.2",
-        "label": "The Statehood Audit and admission requirements"
+        "label": "The Statehood Audit"
       }
     ],
     "links": [
@@ -50,7 +50,7 @@
     "provisions": [
       {
         "ref": "§10.1",
-        "label": "The public record"
+        "label": "National Record System"
       },
       {
         "ref": "§12.1",
@@ -62,7 +62,7 @@
       },
       {
         "ref": "§9.1",
-        "label": "Independent monitoring"
+        "label": "Three Monitors"
       }
     ],
     "links": [
@@ -85,7 +85,7 @@
     "provisions": [
       {
         "ref": "§2.6",
-        "label": "Constructive vote of no confidence"
+        "label": "Constructive Vote of No Confidence"
       }
     ],
     "links": [
@@ -108,11 +108,11 @@
     "provisions": [
       {
         "ref": "§13.2",
-        "label": "Citizen initiative and its constitutional limits"
+        "label": "Citizen Legislative Initiative"
       },
       {
         "ref": "§8.1",
-        "label": "Electoral-finance disclosure"
+        "label": "Electoral Finance"
       }
     ],
     "links": [
@@ -135,11 +135,11 @@
     "provisions": [
       {
         "ref": "§1.16",
-        "label": "Expiry, relabeling, and judicial review"
+        "label": "Emergency Derogation"
       },
       {
         "ref": "§1.16.a",
-        "label": "Absolute rights and discriminatory emergency measures"
+        "label": "Non-Derogable Rights"
       }
     ],
     "links": [
@@ -162,7 +162,7 @@
     "provisions": [
       {
         "ref": "§15.9",
-        "label": "The three-stage independence process"
+        "label": "Voluntary State Independence"
       }
     ],
     "links": [
@@ -185,15 +185,15 @@
     "provisions": [
       {
         "ref": "§15.1.a",
-        "label": "Provisional status and restoration"
+        "label": "Provisional Status"
       },
       {
         "ref": "§15.3",
-        "label": "Remediation, Senate review, and the devolution referendum"
+        "label": "State Remediation and Mandatory Devolution Review"
       },
       {
         "ref": "§15.4",
-        "label": "Negotiation and ratification of devolution"
+        "label": "Voluntary Devolution and Merger"
       }
     ],
     "links": [
@@ -212,7 +212,7 @@
     ]
   },
   "scenario-alliance-clause": {
-    "summary": "A ratified defense treaty supplies authorization when its stated trigger is met. The Court checks that trigger, while appropriations and treaty withdrawal remain separate legislative powers.",
+    "summary": "A ratified defense treaty supplies bounded authorization when its trigger is met. The Court checks both the trigger and the action within the treaty obligation; appropriations and the Legat-notice/Senate-affirmation withdrawal process remain distinct constraints.",
     "provisions": [
       {
         "ref": "§14.4",
@@ -220,7 +220,7 @@
       },
       {
         "ref": "§3.6",
-        "label": "Treaty and Trade Agreement Ratification"
+        "label": "Treaties and Trade Agreements"
       }
     ],
     "links": [
@@ -289,7 +289,7 @@
     ]
   },
   "scenario-critical-finding": {
-    "summary": "An adverse legislative audit creates a public finding, not an automatic sanction or a power to compel a response. The story tests the political force—and limits—of scrutiny on a permanent record.",
+    "summary": "An adverse legislative audit requires the responsible body to publish its own account within the statutory period. The Monitor cannot prescribe the remedy; the story tests the political force and limits of scrutiny on a permanent record.",
     "provisions": [
       {
         "ref": "§9.5.a",
@@ -324,7 +324,7 @@
       },
       {
         "ref": "§9.1.d",
-        "label": "Monitor General Term Expiry and Incapacity"
+        "label": "Monitor General Term Expiry and Vacancy"
       }
     ],
     "links": [
@@ -432,7 +432,7 @@
       },
       {
         "ref": "§9.1.d",
-        "label": "Monitor General Term Expiry and Incapacity"
+        "label": "Monitor General Term Expiry and Vacancy"
       }
     ],
     "links": [
@@ -679,7 +679,7 @@
       },
       {
         "ref": "§7.11",
-        "label": "Codes of Conduct and Recusal"
+        "label": "Codes of Conduct and Conflicts of Interest"
       },
       {
         "ref": "§2.8",
@@ -710,7 +710,7 @@
       },
       {
         "ref": "§12.1",
-        "label": "The Social State and Monetary Authority"
+        "label": "The Social State"
       }
     ],
     "links": [
@@ -1169,7 +1169,7 @@
       },
       {
         "ref": "§9.7.a",
-        "label": "Suspension of a Monitor General for Misconduct"
+        "label": "Institutional Compromise Protocol"
       }
     ],
     "links": [
@@ -1219,7 +1219,7 @@
     "provisions": [
       {
         "ref": "§7.11",
-        "label": "Codes of Conduct and Recusal"
+        "label": "Codes of Conduct and Conflicts of Interest"
       },
       {
         "ref": "§9.9.a",
@@ -1432,19 +1432,19 @@
     "provisions": [
       {
         "ref": "§19.3.a",
-        "label": "Transition national-defense continuity"
+        "label": "Transition National-Defense Continuity"
       },
       {
         "ref": "§19.3",
-        "label": "Caretaker authority and its limits"
+        "label": "Caretaker Status"
       },
       {
         "ref": "§14.1",
-        "label": "Authorized purposes for military force"
+        "label": "Authorized Purposes for Military Force"
       },
       {
         "ref": "§14.5",
-        "label": "State forces"
+        "label": "State Forces"
       }
     ],
     "links": [

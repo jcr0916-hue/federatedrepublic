@@ -1,0 +1,63 @@
+# Article VIII citation audit — completed-text baseline
+
+**Recorded:** 16 October 2026. **Result:** Reference updates and clarifications.
+**Delivery:** audit complete; proposed corrections await PR review.
+
+## Authority and coverage
+
+- Merged baseline: [`c39e7086b4e65d6a93fbaead6f729aafbbfb1161`](https://github.com/jcr0916-hue/federatedrepublic/commit/c39e7086b4e65d6a93fbaead6f729aafbbfb1161), including the completed constitutional review through PR #191.
+- Source: [canonical Constitution at that commit](https://github.com/jcr0916-hue/federatedrepublic/blob/c39e7086b4e65d6a93fbaead6f729aafbbfb1161/constitution_data.json).
+- Article: Article VIII — Electoral Finance and Campaign Conduct; 4 current provisions.
+- Article SHA-256: `5b9bc546d35a5116d8c382abfc98dfc9ae66da4f202befedaa8bb6904e387404` (sorted keys, compact UTF-8 JSON, `ensure_ascii=False`).
+- All 279 pages in the four requested corpora were screened. 9 non-profile pages contain an explicit reference to this article in the recorded baseline; see the inventory below. State references were distinguished separately.
+- Method, validation, scope limits, and the branch handoff: [completion record](remaining-articles-20261016.md).
+
+## Current identifiers, names, and anchors
+
+- §8.1 — Electoral Finance — `s8-1`.
+- §8.2 — Campaign Conduct — `s8-2`.
+- §8.3 — Campaign Access to Public Communication Resources — `s8-3`.
+- §8.4 — Public Campaign Financing — `s8-4`.
+
+## Findings and decisions
+
+### [_data/scenarioBridges.json](../../../_data/scenarioBridges.json)
+
+- scenario-the-second-path: align the §8.1 reading-link title with the current canonical name.
+
+### [scenario-the-holdout.html](../../../scenario-the-holdout.html)
+
+- Public confirmation is subject to the constitutionally required finance safeguards, although ordinary campaign caps do not automatically apply.
+- Separate the caps question from the mandatory disclosure and foreign-source safeguards.
+
+### [scenario-the-ledger.html](../../../scenario-the-ledger.html)
+
+- Do not retain the former blanket ban on organizational contributions.
+- Use the current distinction between campaign contributions and independent expression.
+- Retain the corporate straw-donor ruling while correcting the current scope and sentence attribution.
+- Replace a blanket constitutional exclusion of all electoral-finance expression with the current rule.
+- Keep the public straw-donor evidence without claiming that every individual donor must always be identified publicly.
+
+### [scenario-the-second-path.html](../../../scenario-the-second-path.html)
+
+- Provision tag: §8.1 Electoral Finance Principles → §8.1 Electoral Finance.
+
+## Inspected reference inventory
+
+These are baseline page matches, not a list of pages requiring changes. Generic rights references, statements of political opinion, and lawful choices within a statutory process are not automatically rewritten.
+
+- [torenthia-nrs-002.html](../../../torenthia-nrs-002.html)
+- [torenthia-nrs-007.html](../../../torenthia-nrs-007.html)
+- [torenthia-nrs-008.html](../../../torenthia-nrs-008.html)
+- [torenthia-nrs-009.html](../../../torenthia-nrs-009.html)
+- [scenario-alliance-clause.html](../../../scenario-alliance-clause.html)
+- [scenario-the-holdout.html](../../../scenario-the-holdout.html)
+- [scenario-the-ledger.html](../../../scenario-the-ledger.html)
+- [scenario-the-second-path.html](../../../scenario-the-second-path.html)
+- [scenario-the-waiver.html](../../../scenario-the-waiver.html)
+
+All nine State profiles were also screened. Their State Constitution section numbers remain unchanged. Kelvant’s federal §§15.4 and 15.5.a(3) references and Arvane’s acknowledgment of the federal rights floor remain applicable. This federal audit does not re-audit the State Constitutions or update the profiles’ political frontiers.
+
+## Preservation and validation
+
+No federal or State Constitution, generated constitutional text/PDF, chronology, clock, shared State template, or published identity/date was changed. The canonical State-history page The Winning Bid is byte-identical to the baseline. The dated record preserves the comparison and decisions; subsequent changes require a dated supplement. Validation results and the review PR are retained in the [completion record](remaining-articles-20261016.md) and [branch handoff](../development/branches/torenthia-articles-ii-xx-audit-20261016.md).
