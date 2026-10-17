@@ -157,9 +157,9 @@ The Legat Consul may appoint domain officers to exercise defined authority. Offi
 
 (3) Bills passed during acting service are presented to the Acting Civic Consul, who may not exercise the §2.7 veto but may issue a reconsideration notice. The notice pauses the review period for 10 business days, during which the Assembly may withdraw the bill by simple majority.
 
-(4) The Acting Civic Consul administers a nominating ballot of the Assembly. The ballot requires no quorum. The candidates receiving the most votes advance, being no fewer than two and no more than four; ties causing more than four to advance are resolved by continuous service, then age.
+(4) The Acting Civic Consul administers a nominating ballot of the Assembly. The ballot requires no quorum. Up to four candidates receiving the most votes advance; ties causing more than four to advance are resolved by continuous service, then age.
 
-(5) The Elections Panel administers a national ranked-choice election among the advancing candidates within the statutory period (constitutional default: 45 days; absolute maximum: 90 days from the nominating ballot).
+(5) The Elections Panel administers a national election within the statutory period (constitutional default: 45 days; absolute maximum: 90 days from the nominating ballot). Where more than one candidate advances, the election uses ranked-choice voting; where only one candidate advances, voters confirm or reject that candidate by a yes-or-no vote.
 
 (6) The winner becomes Civic Consul; acting service ends upon installation.
 
