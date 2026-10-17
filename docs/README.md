@@ -24,7 +24,7 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 - [Republic ingest](operations/REPUBLIC-INGEST.md) — conservative import and review workflow.
 - [State historical tests](STATE-TEST-PUBLISHING.md) — canonical State history, provision validation, and discovery.
 - [Scenario publishing](SCENARIO-PUBLISHING.md).
-- [Torenthia constitutional citation audit register](archive/torenthia-citation-audit/README.md) — dated per-article reference maintenance; Article I pilot prepared for review.
+- [Torenthia constitutional citation audit register](archive/torenthia-citation-audit/README.md) — dated per-article reference maintenance; completed-text audit of all twenty articles prepared for review.
 
 ## Operations and visual references
 

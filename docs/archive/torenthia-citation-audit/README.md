@@ -1,55 +1,36 @@
 # Torenthia constitutional citation audit register
 
-This register indexes dated, per-article citation audits. It records maintenance
-of published references, not new fictional events or constitutional authority.
-Only the Constitution and published sources on `main` control current work.
+All twenty articles have been audited against the completed merged Constitution at [`fc41e26b97dedcce9b84dacb7380b0ab9575eec2`](https://github.com/jcr0916-hue/federatedrepublic/commit/fc41e26b97dedcce9b84dacb7380b0ab9575eec2). Proposed corrections await user review. The original Article I pilot was merged in [PR #182](https://github.com/jcr0916-hue/federatedrepublic/pull/182); later numbering changes are covered by its dated follow-up.
 
-Keep completed audit records as historical evidence. When the Constitution or
-publication corpus changes, add a dated supplement and update this index rather
-than rewriting the original baseline or claiming it covers later publications.
+See the [completion record](remaining-articles-20261016.md) for scope, verified hypothetical conflicts, validation, and limitations. This is reference maintenance, not new fictional canon or constitutional authority.
 
-## Article status
+## Per-article records
 
-- **Article I — reference updates and clarification prepared for review:**
-  [16 October 2026 pilot](article-i-20261016.md). No verified functional conflict
-  requiring a change to established events. Completion here means the scoped
-  audit is complete; the corrections are proposed until their PR merges.
-- Article II — pending.
-- Article III — pending.
-- Article IV — pending.
-- Article V — pending.
-- Article VI — pending.
-- Article VII — pending.
-- Article VIII — pending.
-- Article IX — pending.
-- Article X — pending; the pilot corrects two misattributed classification
-  references to §10.2 but does not audit Article X generally.
-- Article XI — pending.
-- Article XII — pending.
-- Article XIII — pending.
-- Article XIV — pending.
-- Article XV — pending.
-- Article XVI — pending.
-- Article XVII — pending.
-- Article XVIII — pending.
-- Article XIX — pending.
-- Article XX — pending.
+- [Article I](article-i-20261016-final.md) — reference updates; audit complete, corrections proposed.
+- [Article II](article-ii-20261016.md) — reference updates and documented hypothetical procedure corrections; audit complete, corrections proposed.
+- [Article III](article-iii-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article IV](article-iv-20261016.md) — reference updates and documented hypothetical procedure corrections; audit complete, corrections proposed.
+- [Article V](article-v-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article VI](article-vi-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article VII](article-vii-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article VIII](article-viii-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article IX](article-ix-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article X](article-x-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article XI](article-xi-20261016.md) — reference updates; audit complete, corrections proposed.
+- [Article XII](article-xii-20261016.md) — reference updates and documented hypothetical procedure corrections; audit complete, corrections proposed.
+- [Article XIII](article-xiii-20261016.md) — reference updates and documented hypothetical procedure corrections; audit complete, corrections proposed.
+- [Article XIV](article-xiv-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article XV](article-xv-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article XVI](article-xvi-20261016.md) — reference updates; audit complete, corrections proposed.
+- [Article XVII](article-xvii-20261016.md) — reference updates; audit complete, corrections proposed.
+- [Article XVIII](article-xviii-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article XIX](article-xix-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
+- [Article XX](article-xx-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
 
-## Classification and continuation
+## Historical record and future changes
 
-- **Compatible:** inspected references need no correction.
-- **Reference update:** fix a number, anchor, metadata reference, or provision name.
-- **Clarification:** align explanatory wording while preserving events and outcomes.
-- **Substantive conflict:** identify the exact current provision and the published
-  event that cannot coexist before proposing a narrative change.
-- **Pending:** not yet audited against a recorded merged baseline.
-
-For each next article, pin the merged commit, inventory its identifiers and
-terminology, screen the same published corpora, distinguish State citations from
-federal citations, record every correction and any unresolved issue, and run
-the applicable publishing checks. Use unmerged proposals only as context.
-Recheck overlap with the [weekend profile plan](../../operations/WEEKEND-OBJECTIVES-2026-10-17.md)
-before touching shared State-page work.
-
-The [pilot branch handoff](../development/branches/torenthia-article-i-audit-20261016.md)
-records delivery and branch preservation separately from this editorial register.
+- [Original Article I pilot](article-i-20261016.md) — preserved against its earlier baseline; its old numbering must not be used as current authority.
+- Keep completed dated audit records as evidence. Add dated supplements for later source or publication changes; update this index rather than rewriting the old baseline.
+- Distinguish compatible references, reference updates, explanatory clarifications, and verified functional conflicts. A narrative change needs the exact current provision and the incompatible event or procedure.
+- State citations stay State citations. Only merged federal text supplies the current constitutional baseline.
+- The [branch handoff](../development/branches/torenthia-articles-ii-xx-audit-20261016.md) and [weekend plan](../../operations/WEEKEND-OBJECTIVES-2026-10-17.md) preserve delivery context and the independent Orath/Merath work.
