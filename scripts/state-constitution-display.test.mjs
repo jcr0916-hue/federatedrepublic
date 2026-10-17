@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {parseStateConstitution, loadStateConstitutionDisplays, renderStateConstitutionBody} from '../lib/state-constitution-display.mjs';
+import statepages from '../_data/statepages.js';
 
 test('Varek presentation parser preserves the constitutional structure',()=>{
   const source='State Constitutions/varek-state-constitution.md';
@@ -26,16 +27,31 @@ test('all established State Constitutions can be loaded for presentation',()=>{
   }
 });
 
-test('State constitutional body renderer preserves paragraphs and lists without trusting HTML',()=>{
-  const html=renderStateConstitutionBody('(a) First paragraph.\n\n- one;\n- two.\n\n<b>not markup</b>');
+test('State constitutional body renderer preserves paragraphs, lists and bold without trusting HTML',()=>{
+  const html=renderStateConstitutionBody('(a) First paragraph.\n\n- one;\n- two.\n\n**Orath State Record**\n\n**<b>not markup</b>**');
   assert.match(html,/<p>\(a\) First paragraph\.<\/p>/);
   assert.match(html,/<ul><li>one;<\/li><li>two\.<\/li><\/ul>/);
-  assert.match(html,/&lt;b&gt;not markup&lt;\/b&gt;/);
+  assert.match(html,/<strong>Orath State Record<\/strong>/);
+  assert.match(html,/<strong>&lt;b&gt;not markup&lt;\/b&gt;<\/strong>/);
+  assert.ok(!html.includes('<b>'));
 });
 
+test('Orath and Merath retain their article structure and Merath front and closing text',()=>{
+  const displays=loadStateConstitutionDisplays();
+  assert.equal(displays.orath.articles.length,13);
+  assert.equal(displays.merath.articles.length,12);
+  assert.equal(displays.merath.tagline,"Industrial Heartland — Workers' Commonwealth");
+  assert.equal(displays.merath.adopted,'Adopted by the working people of Merath.');
+  assert.ok(!displays.merath.articles.at(-1).provisions.at(-1).body.includes('Adopted by'));
+  for(const id of ['orath','merath']){
+    const source=fs.readFileSync(displays[id].source,'utf8');
+    const numbers=[...source.matchAll(/^### §(\d+\.\d+) /gm)].map(match=>match[1]);
+    assert.deepEqual(displays[id].articles.flatMap(article=>article.provisions.map(p=>p.number)),numbers);
+  }
+});
 
 test('published State profiles have formatted Constitution entry pages',()=>{
-  for(const id of ['harren','varek','norvane','kelvant','rhovane','corindal','aldenmere','caldenmere']){
+  for(const {key:id} of statepages){
     const page='state-constitution-'+id+'.html';
     const profile='torenthia-state-'+id+'.html';
     assert.ok(fs.existsSync(page),page);

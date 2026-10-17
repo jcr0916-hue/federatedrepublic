@@ -94,6 +94,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("State Constitutions/aldenmere-state-constitution.md");
   eleventyConfig.addPassthroughCopy("State Constitutions/caldenmere-state-constitution.md");
   eleventyConfig.addPassthroughCopy("State Constitutions/arvane-state-constitution.md");
+  eleventyConfig.addPassthroughCopy("State Constitutions/orath-state-constitution.md");
+  eleventyConfig.addPassthroughCopy("State Constitutions/merath-state-constitution.md");
 
   // Assets Eleventy does not template — copy through untouched.
   // If any of these is missing from _site, every page that uses it 404s.
@@ -102,6 +104,7 @@ export default function (eleventyConfig) {
     "favicon.ico", "favicon-32.png", "apple-touch-icon.png",
     "crossroads-engine.js", "korda-crossroads.json", "tier2-borders.json", "tier2-labels.json",
     "rhovane-flag.svg", "corindal-flag.svg", "aldenmere-flag.svg", "arvane-flag.svg",
+    "orath-flag.svg", "merath-flag.svg",
     "test-crossroads.json",
     "Flag Options", "Previous Versions Constitution DOCX",
   ];
@@ -148,8 +151,10 @@ export default function (eleventyConfig) {
   //   - only the first occurrence per page, so long pages don't get littered
   eleventyConfig.addTransform("glossaryDefine", function (content) {
     if (!(this.page.outputPath || "").endsWith(".html")) return content;
-    // The glossary defines these terms; the Constitution print page must contain only canonical text.
-    if (/\/(?:glossary|constitution-print)\.html$/.test(this.page.inputPath || "")) return content;
+    // State offices and majority denominators have their own definitions. Federal
+    // popups must not reinterpret State prose or the State constitutional text.
+    // The federal print page likewise contains only canonical text.
+    if (/\/(?:glossary|constitution-print|state-constitution-[a-z]+|torenthia-state-[a-z]+)\.html$/.test(this.page.inputPath || "")) return content;
 
     let glossary;
     try {

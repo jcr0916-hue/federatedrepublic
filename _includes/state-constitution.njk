@@ -21,6 +21,7 @@
       <p class="section-kicker">State Constitution · current text</p>
       <h1>{{ constitution.title | title }}</h1>
       <p class="state-constitution-subtitle">{{ constitution.subtitle }}</p>
+      {% if constitution.tagline %}<p class="state-constitution-subtitle">{{ constitution.tagline }}</p>{% endif %}
       <div class="link-row">
         <a href="{{ stateProfileURL }}">← {{ stateConstitution | capitalize }} profile</a>
         <a href="{{ constitution.source | replace(' ', '%20') }}">Source Markdown</a>
