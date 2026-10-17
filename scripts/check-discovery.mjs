@@ -107,3 +107,32 @@ for(const entry of stateIndex.entries) {
  }
 }
 console.log(`Verified ${stateIndex.entries.length} State historical tests and bidirectional provision links.`);
+
+// State institutions have their own definitions. Keep federal glossary popups
+// out of these pages and verify each rendered provision against its source.
+const {default:statepages}=await import('../_data/statepages.js');
+const {loadStateConstitutionDisplays}=await import('../lib/state-constitution-display.mjs');
+const stateTexts=loadStateConstitutionDisplays();
+const normalized=value=>String(value).replace(/^[ \t]*- /gm,'').replaceAll('**','').replace(/\s+/g,' ').trim();
+const stateBodyText=node=>node.type==='text'?node.data:(node.children||[]).map(stateBodyText).join('')+(/^(p|li)$/.test(node.name||'')?' ':'');
+const directory=docs.get('republic-at-a-glance.html');
+for(const state of statepages){
+ const profile=docs.get(state.url),constitution=docs.get(`state-constitution-${state.key}.html`);
+ assert.ok(profile&&constitution,`${state.name}: profile and formatted Constitution`);
+ for(const doc of [profile,constitution]){
+  const main=DomUtils.findOne(n=>n.name==='main',doc.children,true);
+  assert.ok(!DomUtils.findOne(n=>n.attribs?.class==='def',main.children,true),`${state.name}: no federal glossary injection`);
+ }
+ const card=DomUtils.findOne(n=>n.attribs?.id===state.key,directory.children,true);
+ assert.ok(card&&DomUtils.findOne(n=>n.name==='a'&&n.attribs.href===state.url,card.children,true),`${state.name}: directory route`);
+ const source=stateTexts[state.key];
+ assert.ok(fs.readFileSync(source.source).equals(fs.readFileSync(path.join(root,source.source))),`${state.name}: source Markdown bytes`);
+ for(const article of source.articles)for(const provision of article.provisions){
+  const section=DomUtils.findOne(n=>n.attribs?.id===`${state.key}-${provision.number.replaceAll('.','-')}`,constitution.children,true);
+  assert.ok(section,`${state.name}: §${provision.number} anchor`);
+  const body=DomUtils.findOne(n=>n.attribs?.class==='state-constitution-body',section.children,true);
+  assert.ok(body,`${state.name}: §${provision.number} body`);
+  assert.equal(normalized(stateBodyText(body)),normalized(provision.body),`${state.name}: §${provision.number} source text`);
+ }
+}
+console.log(`Verified ${statepages.length} State profile/Constitution routes, source downloads, rendered provisions, and glossary boundaries.`);
