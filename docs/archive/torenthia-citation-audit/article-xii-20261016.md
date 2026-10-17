@@ -5,11 +5,11 @@
 
 ## Authority and coverage
 
-- Merged baseline: [`c39e7086b4e65d6a93fbaead6f729aafbbfb1161`](https://github.com/jcr0916-hue/federatedrepublic/commit/c39e7086b4e65d6a93fbaead6f729aafbbfb1161), including the completed constitutional review through PR #191.
-- Source: [canonical Constitution at that commit](https://github.com/jcr0916-hue/federatedrepublic/blob/c39e7086b4e65d6a93fbaead6f729aafbbfb1161/constitution_data.json).
+- Merged baseline: [`fc41e26b97dedcce9b84dacb7380b0ab9575eec2`](https://github.com/jcr0916-hue/federatedrepublic/commit/fc41e26b97dedcce9b84dacb7380b0ab9575eec2), including the completed constitutional review and the single-candidate restoration in PR #195; concurrent scenario corrections through PR #196 are retained.
+- Source: [canonical Constitution at that commit](https://github.com/jcr0916-hue/federatedrepublic/blob/fc41e26b97dedcce9b84dacb7380b0ab9575eec2/constitution_data.json).
 - Article: Article XII — Social State and Economic Rights; 8 current provisions.
 - Article SHA-256: `d81779eef069f0ec028a9e6e3563931dcb7c9d550dd1a7ee3c8de0cfee12165d` (sorted keys, compact UTF-8 JSON, `ensure_ascii=False`).
-- All 279 pages in the four requested corpora were screened. 42 non-profile pages contain an explicit reference to this article in the recorded baseline; see the inventory below. State references were distinguished separately.
+- All 279 pages in the four requested corpora were screened. 43 non-profile pages contain an explicit reference to this article in the recorded baseline; see the inventory below. State references were distinguished separately.
 - Method, validation, scope limits, and the branch handoff: [completion record](remaining-articles-20261016.md).
 
 ## Current identifiers, names, and anchors
@@ -134,10 +134,11 @@ These are baseline page matches, not a list of pages requiring changes. Generic 
 - [scenario-the-petition.html](../../../scenario-the-petition.html)
 - [scenario-the-prior-claim.html](../../../scenario-the-prior-claim.html)
 - [scenario-the-rate.html](../../../scenario-the-rate.html)
+- [scenario-the-return.html](../../../scenario-the-return.html)
 - [scenario-the-vote.html](../../../scenario-the-vote.html)
 
 All nine State profiles were also screened. Their State Constitution section numbers remain unchanged. Kelvant’s federal §§15.4 and 15.5.a(3) references and Arvane’s acknowledgment of the federal rights floor remain applicable. This federal audit does not re-audit the State Constitutions or update the profiles’ political frontiers.
 
 ## Preservation and validation
 
-No federal or State Constitution, generated constitutional text/PDF, chronology, clock, shared State template, or published identity/date was changed. The canonical State-history page The Winning Bid is byte-identical to the baseline. The dated record preserves the comparison and decisions; subsequent changes require a dated supplement. Validation results and the review PR are retained in the [completion record](remaining-articles-20261016.md) and [branch handoff](../development/branches/torenthia-articles-ii-xx-audit-20261016.md).
+No federal or State constitutional source, constitutional PDF, chronology, clock, shared State template, or published identity/date was changed. The annotated display, full-text search, and generated quick reference are synchronized to the merged §2.6.a restoration as a verified publishing dependency. The canonical State-history page The Winning Bid is byte-identical to the baseline. The dated record preserves the comparison and decisions; subsequent changes require a dated supplement. Validation results and the review PR are retained in the [completion record](remaining-articles-20261016.md) and [branch handoff](../development/branches/torenthia-articles-ii-xx-audit-20261016.md).

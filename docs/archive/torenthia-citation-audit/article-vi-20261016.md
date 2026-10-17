@@ -5,8 +5,8 @@
 
 ## Authority and coverage
 
-- Merged baseline: [`c39e7086b4e65d6a93fbaead6f729aafbbfb1161`](https://github.com/jcr0916-hue/federatedrepublic/commit/c39e7086b4e65d6a93fbaead6f729aafbbfb1161), including the completed constitutional review through PR #191.
-- Source: [canonical Constitution at that commit](https://github.com/jcr0916-hue/federatedrepublic/blob/c39e7086b4e65d6a93fbaead6f729aafbbfb1161/constitution_data.json).
+- Merged baseline: [`fc41e26b97dedcce9b84dacb7380b0ab9575eec2`](https://github.com/jcr0916-hue/federatedrepublic/commit/fc41e26b97dedcce9b84dacb7380b0ab9575eec2), including the completed constitutional review and the single-candidate restoration in PR #195; concurrent scenario corrections through PR #196 are retained.
+- Source: [canonical Constitution at that commit](https://github.com/jcr0916-hue/federatedrepublic/blob/fc41e26b97dedcce9b84dacb7380b0ab9575eec2/constitution_data.json).
 - Article: Article VI — Immigration and Residency; 4 current provisions.
 - Article SHA-256: `9b709ee0701e76411c5eafa53170050c5df2c1dd2525e22ec2db519ad6bceda8` (sorted keys, compact UTF-8 JSON, `ensure_ascii=False`).
 - All 279 pages in the four requested corpora were screened. 11 non-profile pages contain an explicit reference to this article in the recorded baseline; see the inventory below. State references were distinguished separately.
@@ -37,7 +37,7 @@
 
 ### [scenario-the-return.html](../../../scenario-the-return.html)
 
-- Remove a deleted remedial limit while preserving the reconsideration actually ordered.
+- Retain PR #193’s merged remedy clarification: §§1.1 and 4.5 and applicable statutes govern relief; §6.2 does not prescribe a uniform remedy for an existing resident’s credential suspension.
 - Preserve the individual holding without inventing a universal ban on inferential evidence.
 
 ### [torenthia-nrs-005.html](../../../torenthia-nrs-005.html)
@@ -64,4 +64,4 @@ All nine State profiles were also screened. Their State Constitution section num
 
 ## Preservation and validation
 
-No federal or State Constitution, generated constitutional text/PDF, chronology, clock, shared State template, or published identity/date was changed. The canonical State-history page The Winning Bid is byte-identical to the baseline. The dated record preserves the comparison and decisions; subsequent changes require a dated supplement. Validation results and the review PR are retained in the [completion record](remaining-articles-20261016.md) and [branch handoff](../development/branches/torenthia-articles-ii-xx-audit-20261016.md).
+No federal or State constitutional source, constitutional PDF, chronology, clock, shared State template, or published identity/date was changed. The annotated display, full-text search, and generated quick reference are synchronized to the merged §2.6.a restoration as a verified publishing dependency. The canonical State-history page The Winning Bid is byte-identical to the baseline. The dated record preserves the comparison and decisions; subsequent changes require a dated supplement. Validation results and the review PR are retained in the [completion record](remaining-articles-20261016.md) and [branch handoff](../development/branches/torenthia-articles-ii-xx-audit-20261016.md).

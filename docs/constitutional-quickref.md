@@ -222,7 +222,7 @@ The Legat Consul may appoint domain officers to exercise defined authority. Offi
   - (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback
 - **Time limits:**
   - (1) The Assembly elects the Civic Consul by absolute majority within the statutory period following a vacancy (constitutional default: 21 days)
-  - (5) The Elections Panel administers a national ranked-choice election among the advancing candidates within the statutory period (constitutional default: 45 days
+  - (5) The Elections Panel administers a national election within the statutory period (constitutional default: 45 days
   - absolute maximum: 90 days from the nominating ballot)
 - **Cross-refs:** §2.7
 

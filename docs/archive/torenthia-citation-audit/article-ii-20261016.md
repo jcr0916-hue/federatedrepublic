@@ -5,10 +5,10 @@
 
 ## Authority and coverage
 
-- Merged baseline: [`c39e7086b4e65d6a93fbaead6f729aafbbfb1161`](https://github.com/jcr0916-hue/federatedrepublic/commit/c39e7086b4e65d6a93fbaead6f729aafbbfb1161), including the completed constitutional review through PR #191.
-- Source: [canonical Constitution at that commit](https://github.com/jcr0916-hue/federatedrepublic/blob/c39e7086b4e65d6a93fbaead6f729aafbbfb1161/constitution_data.json).
+- Merged baseline: [`fc41e26b97dedcce9b84dacb7380b0ab9575eec2`](https://github.com/jcr0916-hue/federatedrepublic/commit/fc41e26b97dedcce9b84dacb7380b0ab9575eec2), including the completed constitutional review and the single-candidate restoration in PR #195; concurrent scenario corrections through PR #196 are retained.
+- Source: [canonical Constitution at that commit](https://github.com/jcr0916-hue/federatedrepublic/blob/fc41e26b97dedcce9b84dacb7380b0ab9575eec2/constitution_data.json).
 - Article: Article II — The Dual Executive; 24 current provisions.
-- Article SHA-256: `68b155bf2d99345dc6acd8102fde3872dd77edbfcf893022741743c034b91c06` (sorted keys, compact UTF-8 JSON, `ensure_ascii=False`).
+- Article SHA-256: `68860659af27655d1a2b5f34dbd6e60bf662d56a4f4a7aeb5ef36d755005a55b` (sorted keys, compact UTF-8 JSON, `ensure_ascii=False`).
 - All 279 pages in the four requested corpora were screened. 46 non-profile pages contain an explicit reference to this article in the recorded baseline; see the inventory below. State references were distinguished separately.
 - Method, validation, scope limits, and the branch handoff: [completion record](remaining-articles-20261016.md).
 
@@ -46,6 +46,14 @@
 - scenario-the-formation: align the §2.6.a reading-link title with the current canonical name.
 - scenario-the-coalition: align the §2.6 reading-link title with the current canonical name.
 
+### [annotated.html](../../../annotated.html)
+
+- Regenerate the §2.6.a display from the merged single-candidate restoration; the previously published derived block still contained the superseded two-candidate minimum.
+
+### [docs/constitutional-quickref.md](../../../docs/constitutional-quickref.md)
+
+- Regenerate the derived §2.6.a timing excerpt from the merged source; no canonical constitutional text changes.
+
 ### [scenario-coordination-failure.html](../../../scenario-coordination-failure.html)
 
 - Provision tag: §2.14.a Cross-Domain Emergency Coordination → §2.14.a Cross-Domain Emergency Lead.
@@ -79,8 +87,8 @@
 - Align the setup with the vacancy trigger.
 - Use §2.6.a(1)'s actual starting event.
 - Preserve routine continuity while identifying the vacancy and acting-service trigger.
-- Use the current reconsideration-notice procedure rather than a separate pause-notice power.
-- Remove the obsolete one-candidate ratification fallback; §2.6.a(4) requires two to four candidates.
+- Retain PR #194’s merged correction of the acting reconsideration notice: a ten-business-day pause of review, with Assembly withdrawal possible, rather than a separate veto.
+- Recheck against merged PR #195: §2.6.a(4) now allows up to four candidates and (5) expressly restores national yes-or-no confirmation for a sole candidate. Replace the superseded two-candidate minimum in the published explanation; retain the actual four-candidate result.
 - Use the statutory period and constitutional maximum without an unsupported Panel extension power.
 - Retain the electoral outcome while removing a denial inconsistent with the initial vacancy.
 - Provision tag: §2.7 Suspensive Veto → §2.7 Civic Consul Legislative Instruments.
@@ -115,6 +123,10 @@
 
 - Provision tag: §2.7 Suspensive Veto → §2.7 Civic Consul Legislative Instruments.
 - Provision tag: §2.5 The Civic Consul → §2.5 The Civic Consul — Domain and Term.
+
+### [search-index.js](../../../search-index.js)
+
+- Regenerate full-text search and its content revision from the unchanged merged Constitution; §2.6.a was stale after PR #195.
 
 ### [torenthia-news-010.html](../../../torenthia-news-010.html)
 
@@ -195,4 +207,4 @@ All nine State profiles were also screened. Their State Constitution section num
 
 ## Preservation and validation
 
-No federal or State Constitution, generated constitutional text/PDF, chronology, clock, shared State template, or published identity/date was changed. The canonical State-history page The Winning Bid is byte-identical to the baseline. The dated record preserves the comparison and decisions; subsequent changes require a dated supplement. Validation results and the review PR are retained in the [completion record](remaining-articles-20261016.md) and [branch handoff](../development/branches/torenthia-articles-ii-xx-audit-20261016.md).
+No federal or State constitutional source, constitutional PDF, chronology, clock, shared State template, or published identity/date was changed. The annotated display, full-text search, and generated quick reference are synchronized to the merged §2.6.a restoration as a verified publishing dependency. The canonical State-history page The Winning Bid is byte-identical to the baseline. The dated record preserves the comparison and decisions; subsequent changes require a dated supplement. Validation results and the review PR are retained in the [completion record](remaining-articles-20261016.md) and [branch handoff](../development/branches/torenthia-articles-ii-xx-audit-20261016.md).

@@ -1,6 +1,6 @@
 # Torenthia constitutional citation audit register
 
-All twenty articles have been audited against the completed merged Constitution at [`c39e7086b4e65d6a93fbaead6f729aafbbfb1161`](https://github.com/jcr0916-hue/federatedrepublic/commit/c39e7086b4e65d6a93fbaead6f729aafbbfb1161). Proposed corrections await user review. The original Article I pilot was merged in [PR #182](https://github.com/jcr0916-hue/federatedrepublic/pull/182); later numbering changes are covered by its dated follow-up.
+All twenty articles have been audited against the completed merged Constitution at [`fc41e26b97dedcce9b84dacb7380b0ab9575eec2`](https://github.com/jcr0916-hue/federatedrepublic/commit/fc41e26b97dedcce9b84dacb7380b0ab9575eec2). Proposed corrections await user review. The original Article I pilot was merged in [PR #182](https://github.com/jcr0916-hue/federatedrepublic/pull/182); later numbering changes are covered by its dated follow-up.
 
 See the [completion record](remaining-articles-20261016.md) for scope, verified hypothetical conflicts, validation, and limitations. This is reference maintenance, not new fictional canon or constitutional authority.
 
@@ -25,7 +25,7 @@ See the [completion record](remaining-articles-20261016.md) for scope, verified 
 - [Article XVII](article-xvii-20261016.md) — reference updates; audit complete, corrections proposed.
 - [Article XVIII](article-xviii-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
 - [Article XIX](article-xix-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
-- [Article XX](article-xx-20261016.md) — reference updates; audit complete, corrections proposed.
+- [Article XX](article-xx-20261016.md) — reference updates and clarifications; audit complete, corrections proposed.
 
 ## Historical record and future changes
 
