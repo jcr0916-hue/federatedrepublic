@@ -1,0 +1,1588 @@
+{
+  "repository": "jcr0916-hue/federatedrepublic",
+  "captured_at": "2026-10-18T22:29:50.931076+00:00",
+  "authorization": "User continuation on 2026-10-18 explicitly authorizes rigorously verified obsolete branch deletions. Exact names and SHAs remain subject to live gates.",
+  "main_at_review": "ff1c8f3e9f93809d44e8bdfc1744f242dfb552ce",
+  "archive_sha": "0053ac4da09d32807d7f5b71ef0fff2075b421c1",
+  "archive_tree": "08176b6d2fb144bdc7f14136d5254fb81c6591c0",
+  "retained": [
+    {
+      "name": "archive/legacy-project-material",
+      "sha": "0053ac4da09d32807d7f5b71ef0fff2075b421c1",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [
+        "archive/legacy-project-material"
+      ],
+      "classification": "permanent"
+    },
+    {
+      "name": "content/torenthia-y14m01-20261014",
+      "sha": "f0cdc26787904586d16c9eb0b1882a231f41ae8d",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [],
+      "classification": "unique-history"
+    },
+    {
+      "name": "main",
+      "sha": "ff1c8f3e9f93809d44e8bdfc1744f242dfb552ce",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [
+        "main"
+      ],
+      "classification": "permanent"
+    },
+    {
+      "name": "review/scenario-executive-legislature-20261016",
+      "sha": "7ec363fd7850f8edc8c79ac953a8532b59d4ff7e",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [],
+      "classification": "unique-history"
+    }
+  ],
+  "batches": [
+    {
+      "number": 13,
+      "branches": [
+        {
+          "name": "activate-fiscal-equalization-review",
+          "sha": "97f86de122775a10dd5391577c1f43bc21d421bf",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record fiscal equalization activation",
+          "related_merged_prs": [
+            31
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "add-terenne-map-capital",
+          "sha": "07d633f5e65b9298b0e995721d3f49d839c0b475",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Plot Terenne on the regional map",
+          "related_merged_prs": [
+            92
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "ai-efficiency-audit",
+          "sha": "52f1429798622ad6b6426ff033ee1dafc8887633",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Test privacy-safe AI efficiency metrics",
+          "related_merged_prs": [
+            87
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "aldenmere-flag",
+          "sha": "57624c11493512b977eca68afdf0caba07d8faac",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Publish Aldenmere flag asset",
+          "related_merged_prs": [
+            89
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "annotator-completion-and-torenthia-2026-10-02",
+          "sha": "b5aa5f4966643f982af1d4ccbeb3f3e10de0a096",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record October 2 Torenthia batch",
+          "related_merged_prs": [
+            76
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "annotator-context-packets",
+          "sha": "5ccb0e20b7328ceb24aa6fef337a775d743c933d",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Relax Annotator cross-reference title assertion",
+          "related_merged_prs": [
+            75
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "annotator-model-benchmark",
+          "sha": "76bd5ed3b9ed9a0fd72ccac594bc46ac9c797142",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Expose temporary Annotator benchmark endpoint",
+          "related_merged_prs": [
+            72
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "annotator-packet-benchmark-2026-10-02",
+          "sha": "ac7a7d6c6e70386bb1f98d691e89bc79e77785bb",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Match current Annotator related labels",
+          "related_merged_prs": [
+            85
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "annotator-strict-benchmark",
+          "sha": "9716159181caa6631d636b36ed5c9bfce9f50a85",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Test stricter source-bound Annotator prompt",
+          "related_merged_prs": [
+            73
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "arvane-flag-profile-2026-10-10",
+          "sha": "bae431d2413df3a3232f6402b547247309e84b90",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Use Arvane flag through existing shared State page layout",
+          "related_merged_prs": [
+            115
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "arvane-profile-and-constitution-2026-10-10",
+          "sha": "10b74fe00b3d951c47f18b4c6e88a9e0524f402b",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Include Arvane Constitution source Markdown in public asset deployment",
+          "related_merged_prs": [
+            113
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "audit/torenthia-article-i-20261016",
+          "sha": "b03f0a7ee0696d251a35fa885b92684f13bec9af",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Record PR #182 and the validated content commit in audit handoff",
+          "related_merged_prs": [
+            182
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "audit/torenthia-articles-ii-xx-20261016",
+          "sha": "b982bdebca2e0d3abe651aa6e8fae210c299899d",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Reconcile final audit with merged Constitution and scenario corrections",
+          "related_merged_prs": [
+            198
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "audit-approved-continuity-and-state-boundaries-20261010",
+          "sha": "64a74aef695e3bf1fde6561425d3ac0a306ad2f4",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Align glossary.html with approved \u00a72.11 emergency continuity rule",
+          "related_merged_prs": [
+            118
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "audit-state-profiles-20261017",
+          "sha": "a9f9a7f995b952a44d892892a234fa5ec34d54f9",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Record profile audit scope and outstanding validation",
+          "related_merged_prs": [
+            202
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "background-stats-aldenmere",
+          "sha": "8baabb87c461214ee533a7ce6ea487d85da8867b",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Publish Aldenmere State Constitution source",
+          "related_merged_prs": [
+            88
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "benchmark-navigator-sonnet5",
+          "sha": "e8f9ebabacb079216de14923a5c76016e73b5199",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Give Navigator verifier full verdict budget",
+          "related_merged_prs": [],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "biennial-statehood-audits",
+          "sha": "04c27c787997a5bf4b1e74aff5c560d296e5b578",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Remove one-time Constitution sync workflow",
+          "related_merged_prs": [
+            15
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "cold-storage-questionnaire",
+          "sha": "ca7c2bde63613b7a7c51e8cf5360021482b89b15",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Mark Questionnaire as cold storage",
+          "related_merged_prs": [
+            66
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "consistency-fixes-2026-10-16",
+          "sha": "c17041b9eb613db377d78d9bdae09f7a4c1c78e9",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Revise surveillance rule: citizens everywhere, Senate review for foreign nationals abroad",
+          "related_merged_prs": [
+            190
+          ],
+          "preservation_status": "shipped history in main"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "branches": [
+        {
+          "name": "constitution/acting-executive-incapacity",
+          "sha": "d2f7b4d44c3e5674f74661a2c250ee155c90e036",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Add continuity when an acting executive becomes incapacitated",
+          "related_merged_prs": [
+            34
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "constitution/acting-incapacity-history",
+          "sha": "996e3b99c42428294a61e33d2bd570a8197abd1a",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record acting-executive incapacity amendment in constitutional history",
+          "related_merged_prs": [
+            35
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "constitution-reader-polish",
+          "sha": "70baec7290711a4e0c3b00e471a9652115a32206",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Polish Constitution links, contents rail, and search access",
+          "related_merged_prs": [
+            6
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "constitution-rename-2-3-consular-intelligence",
+          "sha": "fa2cd535a6723265fe140c8500893383c755dc57",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Update \u00a72.3 title in constitutional search index",
+          "related_merged_prs": [
+            62
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "constitution-review-48h-crossroads-site-2026-10-10",
+          "sha": "76f38950f0333aa812b41522bd210b803d69a965",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Repair Python scenario library validation after metadata filtering",
+          "related_merged_prs": [
+            114
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "constitutional-review-2026-10-08-article-vi",
+          "sha": "ed4b2bc18b6bdabd1470330e2944d1094acc6749",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Remove one-time constitutional synchronization workflow after regenerated artifacts are committed",
+          "related_merged_prs": [
+            99
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "constitutional-review-2026-10-08-article-vii",
+          "sha": "b2f1c01311d11be868d294e8ddd216d893a0542a",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Regenerate search index after Article VII revisions",
+          "related_merged_prs": [
+            100
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "constitutional-review-2026-10-09-article-viii",
+          "sha": "382558e5c1383f53d9a8980d6bfb1a9cebef5042",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Rebuild constitutional search index for Article VIII",
+          "related_merged_prs": [
+            101
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "constitutional-subsidiarity-transition",
+          "sha": "4d95b6a1156d6c6210308fbd854ed5a159f56387",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Retest prior-claim scenario under enumerated powers",
+          "related_merged_prs": [],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "constitutional-subsidiarity-transition-v2",
+          "sha": "307045b37d2b4817c80243b895dbb3ce1cc8d731",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Retest prior-claim scenario under enumerated powers",
+          "related_merged_prs": [
+            96
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "content/caldenmere-winning-bid",
+          "sha": "3d607847a1d2a838869444ac64764b6e9a329c6c",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Add Caldenmere flag with five gold sails",
+          "related_merged_prs": [
+            90
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "content/torenthia-fiscal-equalization-2026-09-29",
+          "sha": "115dae7d62ef658ae9a6ae931998a6691443eb52",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Publish Morantine fiscal equalization follow-up",
+          "related_merged_prs": [
+            33
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "content/torenthia-friday-20261016",
+          "sha": "770fe62e754d1c0bfcd615aefe2e6d0f1e579d20",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Archive Friday Torenthia branch decisions",
+          "related_merged_prs": [
+            172
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "content/torenthia-regional-coverage-20261015",
+          "sha": "9e6e103d7ce7bb8a0a874fd698347263a6a902cd",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Archive editorial rationale and continuity for regional World batch",
+          "related_merged_prs": [
+            162
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "continuity-state-emergency-council-2026-10-11",
+          "sha": "25d39e200a4cc3ccc3fc428c0dc66d9776167c5c",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Regenerate full Constitution PDF with the State Emergency Council and \u00a74.1 seniority rule",
+          "related_merged_prs": [
+            122
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "court-opinion-navigation",
+          "sha": "775377bd23f8ce7acdb2c231abec9b985cc24a79",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Clarify navigation through Court opinions",
+          "related_merged_prs": [
+            9
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "crossroads-benchmark-corpus",
+          "sha": "a367a1c0f4d0cf91fd799691b56defb8247cdbc5",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Add Crossroads AI benchmark consistency test",
+          "related_merged_prs": [
+            69
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "crossroads-hardened-benchmark-temp",
+          "sha": "944baabf70173faa265235ee7605bb882e7ec59b",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Expose temporary hardened Crossroads benchmark",
+          "related_merged_prs": [
+            70
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "crossroads-model-benchmark",
+          "sha": "c849904fb1cf83ad8333b39fde7c32344db9ccb2",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Expose temporary Crossroads benchmark endpoint",
+          "related_merged_prs": [
+            67
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "design/state-profile-editorial-flow-20261016",
+          "sha": "fac837693da4f452e0499e41290c26bd65ea0f0d",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Preserve design rationale for State-profile reading flow",
+          "related_merged_prs": [
+            176
+          ],
+          "preservation_status": "shipped history in main"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "branches": [
+        {
+          "name": "editorial-2026-10-07-world-article-vi",
+          "sha": "e566d9852c4ba61cd24c1464118cd9045b9a82f0",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Synchronize all annotated provisions and full-text search with canonical Constitution",
+          "related_merged_prs": [
+            97
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "finish-scenario-guidance",
+          "sha": "e59e199408e007f2ed4486a9c1867a11294cef90",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Complete curated reading guidance across all 51 scenarios",
+          "related_merged_prs": [
+            7
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "fix/alliance-clause-judicial-review-20261016",
+          "sha": "532aad982fd1756e9ac9bf0c4c6573c3e2de1aca",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Document alliance scenario judicial review correction",
+          "related_merged_prs": [
+            196
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "fix/constitution-archive-duplicate-copies-20261018",
+          "sha": "516e3065a7ae9eb6a59cd503edcde7a182165067",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Document State test duplicate diagnosis and verified removal",
+          "related_merged_prs": [
+            212
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "fix/government-formation-single-candidate-20261016",
+          "sha": "6a9c0e89892ae1d7a385b47584f588feb04bc6f7",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Preserve single-candidate constitutional amendment rationale",
+          "related_merged_prs": [
+            195
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "fix/root-html-duplicate-copies-20261018",
+          "sha": "0a8214600ffd415d55ec243d9a941493c8ea9871",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Document verified root HTML duplicate cleanup",
+          "related_merged_prs": [
+            213
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "fix/second-renewal-reconcile-20261016",
+          "sha": "1799c69a2007e167e4cc1294985670d3f5a182bf",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Link replacement PR in permanent branch handoff",
+          "related_merged_prs": [
+            199
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "fix-unremovable-scenario-2026-10-15",
+          "sha": "dcf0a4c85e66478bd6c213919ef7985655864861",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Name scenario-fix handoff note for PR #168",
+          "related_merged_prs": [
+            168
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "harden-annotator-sonnet",
+          "sha": "d083aedc98e5e364aef32c35cc0742862d7ec018",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Close Annotator model benchmark and record Sonnet decision",
+          "related_merged_prs": [
+            74
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "harren-test-01-domain-dispute",
+          "sha": "b74a96793da85b17f14d89496e351923e65f6215",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Add Harren dual-executive historical test",
+          "related_merged_prs": [
+            23
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "intel-briefing-2026-10-16",
+          "sha": "1a8dee98246df397541987ab15f12919b8e1b4fe",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add intel briefing handoff note",
+          "related_merged_prs": [
+            191
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "maintenance/branch-cleanup-batch-11-20261014",
+          "sha": "02c1c5d5035464f893b5a401d9511661a5199fd3",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Prepare Batch 11: docs/archive/development/BRANCH-DELETE-BATCH-11.md",
+          "related_merged_prs": [
+            159
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "maintenance/branch-cleanup-batch-12-20261018",
+          "sha": "037cdd43bda06b681a93d4bb79efb96433402d66",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Enforce atomic SHA leases and live preservation gates for cleanup",
+          "related_merged_prs": [
+            211
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "maintenance/branch-handoff-policy-20261014",
+          "sha": "f90549f6fa78366ce01c0226cadd50d1624a8072",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Preserve rationale and results of branch handoff policy change",
+          "related_merged_prs": [
+            160
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "merath-state-test-01-chair-authority-20261017",
+          "sha": "dcdb4eb8f319332a5ca7158db315b8649cf92d4f",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Document Merath historical test rationale and validation",
+          "related_merged_prs": [
+            204
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "navigator-context-packets",
+          "sha": "122786b68af1ff9a061a6eef4d90ddd08ab705f6",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Test Navigator context packets",
+          "related_merged_prs": [
+            78
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "navigator-fallback-completeness",
+          "sha": "2bb34708f1d1bb0ec65ff68068a650edb74b697b",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Test completeness contract for Sonnet fallback",
+          "related_merged_prs": [
+            60
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "navigator-fallback-prompt-hardening",
+          "sha": "b4d33ab4c3096906468925670ecd680493cde47a",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Test deterministic sampling and anti-inference fallback prompt",
+          "related_merged_prs": [
+            59
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "navigator-fallback-sufficiency-benchmark",
+          "sha": "e6519d5481870e3fd8be538856281659f1cf2a66",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Run Navigator fallback API gate tests in publishing checks",
+          "related_merged_prs": [
+            57
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "navigator-high-risk-topics",
+          "sha": "23669010fb472774f7435eeb8d10ec542c4ee467",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record high-risk deterministic Navigator coverage",
+          "related_merged_prs": [
+            84
+          ],
+          "preservation_status": "historical source in permanent archive"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "branches": [
+        {
+          "name": "navigator-judicial-selection-disambiguation",
+          "sha": "9337ebb282b42dedfd4871dc938dc937f921ff60",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Test judicial-selection deterministic disambiguation",
+          "related_merged_prs": [
+            54
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "navigator-open-guide",
+          "sha": "4d3a9bbe648fd63de368a46cad36a6e9e50a8fa8",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Test guided Navigator resources and freeform dual-executive questions",
+          "related_merged_prs": [
+            64
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "navigator-residual-model-benchmark",
+          "sha": "bc8fd705832505089415058e9fa31b2ddd03e1b4",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Update Navigator fallback completion budget test",
+          "related_merged_prs": [
+            83
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "navigator-resource-relationships",
+          "sha": "adf8adf14814d0560b47597fbc9acbd7dc6f574a",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Prefer diverse Navigator companion formats",
+          "related_merged_prs": [
+            80
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "navigator-routing-telemetry",
+          "sha": "a1f6112408d3a657804a1ae0bf2b079fb0d3b9c7",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Document Navigator routing measurement",
+          "related_merged_prs": [
+            82
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "navigator-shadow-opt-in",
+          "sha": "b72653488e80eddf9b0031a4675172bde015f8d5",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record Navigator shadow cost cleanup",
+          "related_merged_prs": [
+            81
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "navigator-sonnet5",
+          "sha": "8d5546b11bf3f031a3e80c8b583e621efeb5017d",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record Sonnet 5 Navigator decision and clean AI routing docs",
+          "related_merged_prs": [
+            94
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "navigator-sonnet-fallback-benchmark",
+          "sha": "cea38c250743ce7ef66dc4eb4c1fb5e51314d8b5",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Wire temporary Sonnet fallback benchmark route",
+          "related_merged_prs": [
+            58
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "navigator-structured-topic-registry",
+          "sha": "d8ea58df01e77ffd0acc601003ea4010605cc583",
+          "reachable_from": [
+            "archive/legacy-project-material",
+            "main"
+          ],
+          "tip_subject": "Keep evaluative and reconciliation questions off deterministic title path",
+          "related_merged_prs": [
+            56
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "orath-state-test-01-cooperative-petition-20261017",
+          "sha": "b22190db21aa44bfbe7bf5bc40be990ca5d29e60",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Document Orath historical test constitutional and editorial decisions",
+          "related_merged_prs": [
+            203
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "promote-crossroads-haiku",
+          "sha": "d03f70920397035dedace2f177a5ac69aff4b380",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Fix Crossroads benchmark consistency assertion",
+          "related_merged_prs": [
+            71
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "publish-norvane-kelvant-tests",
+          "sha": "f4a1af69e8e74e9c92d352e851663a14d717e488",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record Norvane and Kelvant test publication",
+          "related_merged_prs": [
+            30
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "publish-september-30-torenthia",
+          "sha": "3a191e77a4a7cdcb7861c584d0d30e48c3620886",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Fix Lake Varda clock window bounds",
+          "related_merged_prs": [
+            36
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "published-state-constitution-rollout",
+          "sha": "8721c7db23f8ddf0c5e5b1c960a789985996bd35",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Hide empty State history links",
+          "related_merged_prs": [
+            22
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "publishing-safety-and-papers",
+          "sha": "d82a3879b940fa81e89fae8b2694baf30cd28f58",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Add design paper publishing framework",
+          "related_merged_prs": [],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "remove-crossroads-benchmark",
+          "sha": "d1399ba2ba4a1cd58fc625b7a07201208029ded1",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Remove temporary Crossroads benchmark endpoint",
+          "related_merged_prs": [
+            68
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "renumber-article-1-2026-10-16",
+          "sha": "4f4f316ce86aaa2112ae50610131d369f0861991",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add Article I renumbering handoff note",
+          "related_merged_prs": [
+            189
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "research-page-browsing",
+          "sha": "e31a367961a1a4a9c9f30b769df9f72ca198af0c",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Make source notes easier to browse and print",
+          "related_merged_prs": [
+            8
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "review/scenario-alignment-20261016",
+          "sha": "035636514911ed64701b228e556fa66c75b6e631",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Preserve scenario audit handoff",
+          "related_merged_prs": [
+            192
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "review/scenario-military-treaty-scope-20261016",
+          "sha": "093eaee1e120b3361743cd38a1e05ffb56b38b52",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Archive previous Constitution JSON and Markdown pairs",
+          "related_merged_prs": [],
+          "preservation_status": "shipped history in main"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "branches": [
+        {
+          "name": "review/scenario-substantive-batch-20261016",
+          "sha": "84951bf2ce1952433c9444a99aaeb74103980514",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Archive substantive scenario review handoff",
+          "related_merged_prs": [
+            193
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "rhovane-corindal-flags",
+          "sha": "3d88dcd72258dcef7ec22565d96973f7077358ce",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Deploy Rhovane and Corindal flag assets",
+          "related_merged_prs": [
+            25
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "rhovane-corindal-state-profiles",
+          "sha": "1194e9d78c299c96851f05034833de31e92cb3f6",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Deploy Rhovane and Corindal Constitution sources",
+          "related_merged_prs": [
+            24
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "rhovane-test-01",
+          "sha": "27dfda21a4e8792611e88901154fe62393c0d4d1",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Add Rhovane public-trust historical test",
+          "related_merged_prs": [
+            26
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "scenario-reading-bridges",
+          "sha": "f1d1ba8cf2e081c3dbda81f04b9defd16c74e55d",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Extend curated scenario reading bridges to eight stories",
+          "related_merged_prs": [
+            5
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "selvane-state-test-01-chief-administrator-20261017",
+          "sha": "9b753fda2cc0c502d44c6814941891d41f48fd72",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Document Selvane historical test constitutional and editorial scope",
+          "related_merged_prs": [
+            205
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "separate-state-scenarios",
+          "sha": "b022787c9b5ca686c083e984e859ed542dd80ece",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Point Winning Bid back to separate State scenario sections",
+          "related_merged_prs": [
+            91
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "session-progress-2026-09-26",
+          "sha": "0bc94a502664b56212b8e05124e733205d25dc57",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Reference non-authoritative project progress handoff",
+          "related_merged_prs": [
+            19
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "shall-to-must-2026-10-16",
+          "sha": "8f926d7ca51607a72235de022b91545888c4d2fe",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add shall-to-must branch handoff note",
+          "related_merged_prs": [
+            188
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "site-link-consistency",
+          "sha": "8658adc810c48b6066f1d17e4dc73b05e1adf39b",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Eliminate browser-default link colors across the site",
+          "related_merged_prs": [
+            10
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "state-profile-history-cards",
+          "sha": "f5f3d34fa0cfdca4d047348a0863af8d1505818c",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Style State history cards and compact text-only rails",
+          "related_merged_prs": [
+            17
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "temporary-torenthia-map",
+          "sha": "df37d4993db227aa60ea9a68df9e5804b3bcbd49",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Use uploaded Torenthia artwork for regional maps",
+          "related_merged_prs": [
+            20
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "torenthia-2026-09-29",
+          "sha": "7cd6441ff62f7b4636910f552837fcd8fdb35395",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Advance Torenthia story status through NRS 051",
+          "related_merged_prs": [
+            32
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "torenthia-2026-10-08-korda-compilation",
+          "sha": "2bb8cf1824a7286256e2e442d2de7020a78cf0b7",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Keep completed advisory milestone within supported clock status vocabulary",
+          "related_merged_prs": [
+            98
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "torenthia-authoring-validation",
+          "sha": "2fbea3bfad44f8d6ff7ef616d71dacb6800d650c",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Document Torenthia packet-first authoring workflow",
+          "related_merged_prs": [
+            86
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "torenthia-batch-2026-10-02-evening",
+          "sha": "d89ff43bdea5e2dda43c103c4f0e7d3da32a89f7",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record October 2 evening Torenthia batch",
+          "related_merged_prs": [
+            77
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "torenthia-context-packets",
+          "sha": "4229f06b07f9615dceae30bc2425a1e5819da2e1",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Record source-packet architecture rollout",
+          "related_merged_prs": [
+            79
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "trim-article-3-2026-10-15",
+          "sha": "0d4330ef054593026141be614bcb64544500cc6b",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Record the archive-pair lesson in the PR #164 handoff note",
+          "related_merged_prs": [
+            164
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-4-2026-10-15",
+          "sha": "14bb0059feb3e89ac8ec69d5893e8702b3b729ea",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add branch handoff note for PR #165",
+          "related_merged_prs": [
+            165
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-5-2026-10-15",
+          "sha": "196618bd94ed6b6ef583897506f37638302e46f6",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Name Article V handoff note for PR #166",
+          "related_merged_prs": [
+            166
+          ],
+          "preservation_status": "shipped history in main"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "branches": [
+        {
+          "name": "trim-article-6-2026-10-15",
+          "sha": "260e7a95e017e33b4a9fbedccc9cdaa08dcdea2c",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Name Article VI handoff note for PR #167",
+          "related_merged_prs": [
+            167
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-7-2026-10-15",
+          "sha": "b135c43ae00955e46a6fe4e1adc0675b31e5ec08",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Name Article VII handoff note for PR #169",
+          "related_merged_prs": [
+            169
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-8-2026-10-16",
+          "sha": "2fdbf803c6739a5e355f73e2bce05bfd65c7aa35",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add PR #170 branch handoff note",
+          "related_merged_prs": [
+            170
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-9-2026-10-16",
+          "sha": "d0ddc05afd608be638032009e3b80bcaa6caeced",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add PR #171 branch handoff note",
+          "related_merged_prs": [
+            171
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-10-2026-10-16",
+          "sha": "def8959c8dd2389793d8930dd3e44c6592467db7",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add PR #173 branch handoff note",
+          "related_merged_prs": [
+            173
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-11-2026-10-16",
+          "sha": "86da51929175624de5b19e990f719e40ac26a6d0",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add PR #174 branch handoff note",
+          "related_merged_prs": [
+            174
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-12-2026-10-16",
+          "sha": "f58ee9f23979bb054d14b2a2f772b2ecd7e726e2",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add handoff note for PR 175",
+          "related_merged_prs": [
+            175
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-13-2026-10-16",
+          "sha": "704fd1bd768f4984b0fea6cafe0fa7e208afd35e",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add handoff note for PR 177",
+          "related_merged_prs": [
+            177
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-14-2026-10-16",
+          "sha": "8c64055ddaccb4e062da14e301ab900c9b34ba90",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add handoff note for PR 179",
+          "related_merged_prs": [
+            179
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-15-2026-10-16",
+          "sha": "4c051d9e3636ce5a41fe77cd74b42f79807d852c",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add branch handoff note for PR #180",
+          "related_merged_prs": [
+            180
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-16-2026-10-16",
+          "sha": "4de0afee4730c3d6907e7347d37eeb1fdf8b1c00",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add branch handoff note for PR #181",
+          "related_merged_prs": [
+            181
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-17-2026-10-16",
+          "sha": "589f9d6f7c5cd97691fc547a70b5562cbfe409c5",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add branch handoff note for PR #183",
+          "related_merged_prs": [
+            183
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-18-2026-10-16",
+          "sha": "228b55c976a73f7d1d208c7019d95ee6feacf229",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add branch handoff note for PR #184",
+          "related_merged_prs": [
+            184
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-19-2026-10-16",
+          "sha": "7a8bee05fea65e29c4b4110664c19d5d1323823d",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add Article XIX branch handoff note",
+          "related_merged_prs": [
+            185
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-article-20-2026-10-16",
+          "sha": "4c79cba97d143a3edf1c3a0c663489bfb5f6302e",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add Article XX branch handoff note",
+          "related_merged_prs": [
+            186
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "trim-articles-1-2-2026-10-14",
+          "sha": "a5380531f75fee917d043a1dfa75a5657651a497",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Update annotator and navigator tests for the trimmed Article II text",
+          "related_merged_prs": [
+            157
+          ],
+          "preservation_status": "shipped history in main"
+        },
+        {
+          "name": "update-weekly-tracking-2026-09-27",
+          "sha": "e0d85682005510328901e500ab16f82c93cc8db2",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Refresh project progress for weekday content plan",
+          "related_merged_prs": [
+            27
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "varek-constitution-presentation",
+          "sha": "28129acf4fc6ed885a1032f0ad97c19c84896481",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Keep asset fixture aligned with Eleventy imports",
+          "related_merged_prs": [
+            18
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "varek-presentation-refinements",
+          "sha": "f650ed9b86d9bb6b2b401bfa6273e7fe378fc4bb",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Keep cross-State State-test fixture internally valid",
+          "related_merged_prs": [
+            21
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "website-refresh",
+          "sha": "07607d1d860d4023e3b07cc8e6fc069bfe145f56",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Introduce the Republic through The Formation",
+          "related_merged_prs": [
+            4
+          ],
+          "preservation_status": "historical source in permanent archive"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "branches": [
+        {
+          "name": "world-authoring-helper",
+          "sha": "26ef487e64a0049a945e69b7665d7ff9186f0ee5",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Add authoring helper to World publishing checklist",
+          "related_merged_prs": [
+            13
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "world-metadata-safety-net",
+          "sha": "132d317f971906ebba8307fbaf9588929fe4b38b",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Fix World metadata validation syntax",
+          "related_merged_prs": [
+            12
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "world-oct4-content",
+          "sha": "9efc3cd3a87733b24321b9f833e63604c8c98a43",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Keep Korda packet scoped to Korda narrative",
+          "related_merged_prs": [
+            93
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "world-oct5-content",
+          "sha": "570af14a9dc8be162a97b637086e7eea8e8a2c4c",
+          "reachable_from": [
+            "archive/legacy-project-material"
+          ],
+          "tip_subject": "Refresh fiscal equalization dossier",
+          "related_merged_prs": [
+            95
+          ],
+          "preservation_status": "historical source in permanent archive"
+        },
+        {
+          "name": "wrap-up-2026-10-16",
+          "sha": "da82c889e9a383c84d73ad27005d9a2f5179d7ec",
+          "reachable_from": [
+            "main"
+          ],
+          "tip_subject": "Add wrap-up branch handoff note",
+          "related_merged_prs": [
+            187
+          ],
+          "preservation_status": "shipped history in main"
+        }
+      ]
+    }
+  ]
+}
