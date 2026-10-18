@@ -1,0 +1,1187 @@
+{
+  "repository": "jcr0916-hue/federatedrepublic",
+  "recorded_at": "2026-10-18T22:47:51.158601+00:00",
+  "initial_remote_branches": 139,
+  "deleted_reviewed_refs": 135,
+  "remaining_at_checkpoint": 5,
+  "batch_results": [
+    {
+      "batch": 12,
+      "deleted": 10
+    },
+    {
+      "batch": 13,
+      "deleted": 20
+    },
+    {
+      "batch": 14,
+      "deleted": 20
+    },
+    {
+      "batch": 15,
+      "deleted": 20
+    },
+    {
+      "batch": 16,
+      "deleted": 20
+    },
+    {
+      "batch": 17,
+      "deleted": 20
+    },
+    {
+      "batch": 18,
+      "deleted": 20
+    },
+    {
+      "batch": 19,
+      "deleted": 5
+    }
+  ],
+  "deleted": [
+    {
+      "batch": 12,
+      "name": "kelvant-state-test-02-paid-service-20261017",
+      "sha": "51342bfedf4dc9b853429dc3a03d31d361ed61d5",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "corindal-state-test-01-commission-veto-20261017",
+      "sha": "176d627b5393cc456652a04682199a7640074620",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "caldenmere-state-test-01-minister-appointment-20261017",
+      "sha": "f83ac03345f4003fe616354b7b7c3e2a0c22a724",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "arvane-state-test-01-rule-sunset-20261017",
+      "sha": "3efd298ac3271e14ee41f8c99f21c0b376891e7a",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "aldenmere-state-test-01-budget-continuity-20261017",
+      "sha": "0f7dcf26c8ddbad9e892b2d71f049dc38336e918",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "fix/cleanup-batch05-permanent-reachability-20261014",
+      "sha": "afad3d4621093ccd0f77f92e3c0db6d80489a7a6",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "content/selvane-profile-20261017",
+      "sha": "74ff03fff9d0330988144365ae2276150f33735c",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "content/orath-merath-profiles-20261017",
+      "sha": "fb4876ed685713ced5fd0ce484465d8fe97378d0",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "design/remove-duplicate-state-constitution-link-20261016",
+      "sha": "b26f329f1175dd6f87b75d211dc8963bf50c50f9",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 12,
+      "name": "planning/weekend-objectives-20261017",
+      "sha": "7ee3f901ce4fe332a05ebb79e5d10290b10f2779",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "activate-fiscal-equalization-review",
+      "sha": "97f86de122775a10dd5391577c1f43bc21d421bf",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "add-terenne-map-capital",
+      "sha": "07d633f5e65b9298b0e995721d3f49d839c0b475",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "ai-efficiency-audit",
+      "sha": "52f1429798622ad6b6426ff033ee1dafc8887633",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "aldenmere-flag",
+      "sha": "57624c11493512b977eca68afdf0caba07d8faac",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "annotator-completion-and-torenthia-2026-10-02",
+      "sha": "b5aa5f4966643f982af1d4ccbeb3f3e10de0a096",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "annotator-context-packets",
+      "sha": "5ccb0e20b7328ceb24aa6fef337a775d743c933d",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "annotator-model-benchmark",
+      "sha": "76bd5ed3b9ed9a0fd72ccac594bc46ac9c797142",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "annotator-packet-benchmark-2026-10-02",
+      "sha": "ac7a7d6c6e70386bb1f98d691e89bc79e77785bb",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "annotator-strict-benchmark",
+      "sha": "9716159181caa6631d636b36ed5c9bfce9f50a85",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "arvane-flag-profile-2026-10-10",
+      "sha": "bae431d2413df3a3232f6402b547247309e84b90",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "arvane-profile-and-constitution-2026-10-10",
+      "sha": "10b74fe00b3d951c47f18b4c6e88a9e0524f402b",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "audit/torenthia-article-i-20261016",
+      "sha": "b03f0a7ee0696d251a35fa885b92684f13bec9af",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "audit/torenthia-articles-ii-xx-20261016",
+      "sha": "b982bdebca2e0d3abe651aa6e8fae210c299899d",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "audit-approved-continuity-and-state-boundaries-20261010",
+      "sha": "64a74aef695e3bf1fde6561425d3ac0a306ad2f4",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "audit-state-profiles-20261017",
+      "sha": "a9f9a7f995b952a44d892892a234fa5ec34d54f9",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "background-stats-aldenmere",
+      "sha": "8baabb87c461214ee533a7ce6ea487d85da8867b",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "benchmark-navigator-sonnet5",
+      "sha": "e8f9ebabacb079216de14923a5c76016e73b5199",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "biennial-statehood-audits",
+      "sha": "04c27c787997a5bf4b1e74aff5c560d296e5b578",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "cold-storage-questionnaire",
+      "sha": "ca7c2bde63613b7a7c51e8cf5360021482b89b15",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 13,
+      "name": "consistency-fixes-2026-10-16",
+      "sha": "c17041b9eb613db377d78d9bdae09f7a4c1c78e9",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitution/acting-executive-incapacity",
+      "sha": "d2f7b4d44c3e5674f74661a2c250ee155c90e036",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitution/acting-incapacity-history",
+      "sha": "996e3b99c42428294a61e33d2bd570a8197abd1a",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitution-reader-polish",
+      "sha": "70baec7290711a4e0c3b00e471a9652115a32206",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitution-rename-2-3-consular-intelligence",
+      "sha": "fa2cd535a6723265fe140c8500893383c755dc57",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitution-review-48h-crossroads-site-2026-10-10",
+      "sha": "76f38950f0333aa812b41522bd210b803d69a965",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitutional-review-2026-10-08-article-vi",
+      "sha": "ed4b2bc18b6bdabd1470330e2944d1094acc6749",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitutional-review-2026-10-08-article-vii",
+      "sha": "b2f1c01311d11be868d294e8ddd216d893a0542a",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitutional-review-2026-10-09-article-viii",
+      "sha": "382558e5c1383f53d9a8980d6bfb1a9cebef5042",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitutional-subsidiarity-transition",
+      "sha": "4d95b6a1156d6c6210308fbd854ed5a159f56387",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "constitutional-subsidiarity-transition-v2",
+      "sha": "307045b37d2b4817c80243b895dbb3ce1cc8d731",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "content/caldenmere-winning-bid",
+      "sha": "3d607847a1d2a838869444ac64764b6e9a329c6c",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "content/torenthia-fiscal-equalization-2026-09-29",
+      "sha": "115dae7d62ef658ae9a6ae931998a6691443eb52",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "content/torenthia-friday-20261016",
+      "sha": "770fe62e754d1c0bfcd615aefe2e6d0f1e579d20",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "content/torenthia-regional-coverage-20261015",
+      "sha": "9e6e103d7ce7bb8a0a874fd698347263a6a902cd",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "continuity-state-emergency-council-2026-10-11",
+      "sha": "25d39e200a4cc3ccc3fc428c0dc66d9776167c5c",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "court-opinion-navigation",
+      "sha": "775377bd23f8ce7acdb2c231abec9b985cc24a79",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "crossroads-benchmark-corpus",
+      "sha": "a367a1c0f4d0cf91fd799691b56defb8247cdbc5",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "crossroads-hardened-benchmark-temp",
+      "sha": "944baabf70173faa265235ee7605bb882e7ec59b",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "crossroads-model-benchmark",
+      "sha": "c849904fb1cf83ad8333b39fde7c32344db9ccb2",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 14,
+      "name": "design/state-profile-editorial-flow-20261016",
+      "sha": "fac837693da4f452e0499e41290c26bd65ea0f0d",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "editorial-2026-10-07-world-article-vi",
+      "sha": "e566d9852c4ba61cd24c1464118cd9045b9a82f0",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "finish-scenario-guidance",
+      "sha": "e59e199408e007f2ed4486a9c1867a11294cef90",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "fix/alliance-clause-judicial-review-20261016",
+      "sha": "532aad982fd1756e9ac9bf0c4c6573c3e2de1aca",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "fix/constitution-archive-duplicate-copies-20261018",
+      "sha": "516e3065a7ae9eb6a59cd503edcde7a182165067",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "fix/government-formation-single-candidate-20261016",
+      "sha": "6a9c0e89892ae1d7a385b47584f588feb04bc6f7",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "fix/root-html-duplicate-copies-20261018",
+      "sha": "0a8214600ffd415d55ec243d9a941493c8ea9871",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "fix/second-renewal-reconcile-20261016",
+      "sha": "1799c69a2007e167e4cc1294985670d3f5a182bf",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "fix-unremovable-scenario-2026-10-15",
+      "sha": "dcf0a4c85e66478bd6c213919ef7985655864861",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "harden-annotator-sonnet",
+      "sha": "d083aedc98e5e364aef32c35cc0742862d7ec018",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "harren-test-01-domain-dispute",
+      "sha": "b74a96793da85b17f14d89496e351923e65f6215",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "intel-briefing-2026-10-16",
+      "sha": "1a8dee98246df397541987ab15f12919b8e1b4fe",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "maintenance/branch-cleanup-batch-11-20261014",
+      "sha": "02c1c5d5035464f893b5a401d9511661a5199fd3",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "maintenance/branch-cleanup-batch-12-20261018",
+      "sha": "037cdd43bda06b681a93d4bb79efb96433402d66",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "maintenance/branch-handoff-policy-20261014",
+      "sha": "f90549f6fa78366ce01c0226cadd50d1624a8072",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "merath-state-test-01-chair-authority-20261017",
+      "sha": "dcdb4eb8f319332a5ca7158db315b8649cf92d4f",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "navigator-context-packets",
+      "sha": "122786b68af1ff9a061a6eef4d90ddd08ab705f6",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "navigator-fallback-completeness",
+      "sha": "2bb34708f1d1bb0ec65ff68068a650edb74b697b",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "navigator-fallback-prompt-hardening",
+      "sha": "b4d33ab4c3096906468925670ecd680493cde47a",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "navigator-fallback-sufficiency-benchmark",
+      "sha": "e6519d5481870e3fd8be538856281659f1cf2a66",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 15,
+      "name": "navigator-high-risk-topics",
+      "sha": "23669010fb472774f7435eeb8d10ec542c4ee467",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-judicial-selection-disambiguation",
+      "sha": "9337ebb282b42dedfd4871dc938dc937f921ff60",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-open-guide",
+      "sha": "4d3a9bbe648fd63de368a46cad36a6e9e50a8fa8",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-residual-model-benchmark",
+      "sha": "bc8fd705832505089415058e9fa31b2ddd03e1b4",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-resource-relationships",
+      "sha": "adf8adf14814d0560b47597fbc9acbd7dc6f574a",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-routing-telemetry",
+      "sha": "a1f6112408d3a657804a1ae0bf2b079fb0d3b9c7",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-shadow-opt-in",
+      "sha": "b72653488e80eddf9b0031a4675172bde015f8d5",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-sonnet5",
+      "sha": "8d5546b11bf3f031a3e80c8b583e621efeb5017d",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-sonnet-fallback-benchmark",
+      "sha": "cea38c250743ce7ef66dc4eb4c1fb5e51314d8b5",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "navigator-structured-topic-registry",
+      "sha": "d8ea58df01e77ffd0acc601003ea4010605cc583",
+      "preserved_in": [
+        "archive/legacy-project-material",
+        "main"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "orath-state-test-01-cooperative-petition-20261017",
+      "sha": "b22190db21aa44bfbe7bf5bc40be990ca5d29e60",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "promote-crossroads-haiku",
+      "sha": "d03f70920397035dedace2f177a5ac69aff4b380",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "publish-norvane-kelvant-tests",
+      "sha": "f4a1af69e8e74e9c92d352e851663a14d717e488",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "publish-september-30-torenthia",
+      "sha": "3a191e77a4a7cdcb7861c584d0d30e48c3620886",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "published-state-constitution-rollout",
+      "sha": "8721c7db23f8ddf0c5e5b1c960a789985996bd35",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "publishing-safety-and-papers",
+      "sha": "d82a3879b940fa81e89fae8b2694baf30cd28f58",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "remove-crossroads-benchmark",
+      "sha": "d1399ba2ba4a1cd58fc625b7a07201208029ded1",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "renumber-article-1-2026-10-16",
+      "sha": "4f4f316ce86aaa2112ae50610131d369f0861991",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "research-page-browsing",
+      "sha": "e31a367961a1a4a9c9f30b769df9f72ca198af0c",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "review/scenario-alignment-20261016",
+      "sha": "035636514911ed64701b228e556fa66c75b6e631",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 16,
+      "name": "review/scenario-military-treaty-scope-20261016",
+      "sha": "093eaee1e120b3361743cd38a1e05ffb56b38b52",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "review/scenario-substantive-batch-20261016",
+      "sha": "84951bf2ce1952433c9444a99aaeb74103980514",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "rhovane-corindal-flags",
+      "sha": "3d88dcd72258dcef7ec22565d96973f7077358ce",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "rhovane-corindal-state-profiles",
+      "sha": "1194e9d78c299c96851f05034833de31e92cb3f6",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "rhovane-test-01",
+      "sha": "27dfda21a4e8792611e88901154fe62393c0d4d1",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "scenario-reading-bridges",
+      "sha": "f1d1ba8cf2e081c3dbda81f04b9defd16c74e55d",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "selvane-state-test-01-chief-administrator-20261017",
+      "sha": "9b753fda2cc0c502d44c6814941891d41f48fd72",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "separate-state-scenarios",
+      "sha": "b022787c9b5ca686c083e984e859ed542dd80ece",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "session-progress-2026-09-26",
+      "sha": "0bc94a502664b56212b8e05124e733205d25dc57",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "shall-to-must-2026-10-16",
+      "sha": "8f926d7ca51607a72235de022b91545888c4d2fe",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "site-link-consistency",
+      "sha": "8658adc810c48b6066f1d17e4dc73b05e1adf39b",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "state-profile-history-cards",
+      "sha": "f5f3d34fa0cfdca4d047348a0863af8d1505818c",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "temporary-torenthia-map",
+      "sha": "df37d4993db227aa60ea9a68df9e5804b3bcbd49",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "torenthia-2026-09-29",
+      "sha": "7cd6441ff62f7b4636910f552837fcd8fdb35395",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "torenthia-2026-10-08-korda-compilation",
+      "sha": "2bb8cf1824a7286256e2e442d2de7020a78cf0b7",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "torenthia-authoring-validation",
+      "sha": "2fbea3bfad44f8d6ff7ef616d71dacb6800d650c",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "torenthia-batch-2026-10-02-evening",
+      "sha": "d89ff43bdea5e2dda43c103c4f0e7d3da32a89f7",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "torenthia-context-packets",
+      "sha": "4229f06b07f9615dceae30bc2425a1e5819da2e1",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "trim-article-3-2026-10-15",
+      "sha": "0d4330ef054593026141be614bcb64544500cc6b",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "trim-article-4-2026-10-15",
+      "sha": "14bb0059feb3e89ac8ec69d5893e8702b3b729ea",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 17,
+      "name": "trim-article-5-2026-10-15",
+      "sha": "196618bd94ed6b6ef583897506f37638302e46f6",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-6-2026-10-15",
+      "sha": "260e7a95e017e33b4a9fbedccc9cdaa08dcdea2c",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-7-2026-10-15",
+      "sha": "b135c43ae00955e46a6fe4e1adc0675b31e5ec08",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-8-2026-10-16",
+      "sha": "2fdbf803c6739a5e355f73e2bce05bfd65c7aa35",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-9-2026-10-16",
+      "sha": "d0ddc05afd608be638032009e3b80bcaa6caeced",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-10-2026-10-16",
+      "sha": "def8959c8dd2389793d8930dd3e44c6592467db7",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-11-2026-10-16",
+      "sha": "86da51929175624de5b19e990f719e40ac26a6d0",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-12-2026-10-16",
+      "sha": "f58ee9f23979bb054d14b2a2f772b2ecd7e726e2",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-13-2026-10-16",
+      "sha": "704fd1bd768f4984b0fea6cafe0fa7e208afd35e",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-14-2026-10-16",
+      "sha": "8c64055ddaccb4e062da14e301ab900c9b34ba90",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-15-2026-10-16",
+      "sha": "4c051d9e3636ce5a41fe77cd74b42f79807d852c",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-16-2026-10-16",
+      "sha": "4de0afee4730c3d6907e7347d37eeb1fdf8b1c00",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-17-2026-10-16",
+      "sha": "589f9d6f7c5cd97691fc547a70b5562cbfe409c5",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-18-2026-10-16",
+      "sha": "228b55c976a73f7d1d208c7019d95ee6feacf229",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-19-2026-10-16",
+      "sha": "7a8bee05fea65e29c4b4110664c19d5d1323823d",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-article-20-2026-10-16",
+      "sha": "4c79cba97d143a3edf1c3a0c663489bfb5f6302e",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "trim-articles-1-2-2026-10-14",
+      "sha": "a5380531f75fee917d043a1dfa75a5657651a497",
+      "preserved_in": [
+        "main"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "update-weekly-tracking-2026-09-27",
+      "sha": "e0d85682005510328901e500ab16f82c93cc8db2",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "varek-constitution-presentation",
+      "sha": "28129acf4fc6ed885a1032f0ad97c19c84896481",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "varek-presentation-refinements",
+      "sha": "f650ed9b86d9bb6b2b401bfa6273e7fe378fc4bb",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 18,
+      "name": "website-refresh",
+      "sha": "07607d1d860d4023e3b07cc8e6fc069bfe145f56",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 19,
+      "name": "world-authoring-helper",
+      "sha": "26ef487e64a0049a945e69b7665d7ff9186f0ee5",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 19,
+      "name": "world-metadata-safety-net",
+      "sha": "132d317f971906ebba8307fbaf9588929fe4b38b",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 19,
+      "name": "world-oct4-content",
+      "sha": "9efc3cd3a87733b24321b9f833e63604c8c98a43",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 19,
+      "name": "world-oct5-content",
+      "sha": "570af14a9dc8be162a97b637086e7eea8e8a2c4c",
+      "preserved_in": [
+        "archive/legacy-project-material"
+      ]
+    },
+    {
+      "batch": 19,
+      "name": "wrap-up-2026-10-16",
+      "sha": "da82c889e9a383c84d73ad27005d9a2f5179d7ec",
+      "preserved_in": [
+        "main"
+      ]
+    }
+  ],
+  "remaining_at_checkpoint_details": [
+    {
+      "name": "archive/legacy-project-material",
+      "sha": "0053ac4da09d32807d7f5b71ef0fff2075b421c1",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [
+        "archive/legacy-project-material"
+      ],
+      "classification": "permanent"
+    },
+    {
+      "name": "content/torenthia-y14m01-20261014",
+      "sha": "f0cdc26787904586d16c9eb0b1882a231f41ae8d",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [],
+      "classification": "unique-history"
+    },
+    {
+      "name": "main",
+      "sha": "90b1941f614192106c86f41bfad142bf7b27bdba",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [
+        "main"
+      ],
+      "classification": "permanent"
+    },
+    {
+      "name": "maintenance/branch-cleanup-completion-20261018",
+      "sha": "0f3b9fbfd603e990698b8efd1328ebab976bc482",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [
+        "main"
+      ],
+      "classification": "ancestry-eligible"
+    },
+    {
+      "name": "review/scenario-executive-legislature-20261016",
+      "sha": "7ec363fd7850f8edc8c79ac953a8532b59d4ff7e",
+      "protected": false,
+      "open_pr_refs": [],
+      "reachable_from": [],
+      "classification": "unique-history"
+    }
+  ],
+  "archive_sha": "0053ac4da09d32807d7f5b71ef0fff2075b421c1",
+  "archive_tree": "08176b6d2fb144bdc7f14136d5254fb81c6591c0",
+  "delivery_ref_follow_up": "After this report PR merges and its checks/deployment finish, separately preview and SHA-lease delete maintenance/branch-cleanup-completion-20261018 if still unchanged and fully reachable from main. Do not delete it while the PR is open."
+}
