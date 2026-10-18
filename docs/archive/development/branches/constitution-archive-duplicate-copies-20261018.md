@@ -14,3 +14,6 @@ Archive pairs retained byte-for-byte; CI on updated PR pending. If passed, merge
 
 ## Follow-up
 After #212 merge, refresh #211 against main and verify both workflows. Continue authenticated cleanup preview before any deletion.
+
+## Additional World publishing repair
+GitHub CI also identified 11 duplicate State historical test HTML files with space-2 or space-3 suffixes. Compared all 11 with their canonical State test HTML counterpart on main; all Git blob SHAs matched exactly. Deleted only those 11 redundant noncanonical filenames from this branch. Canonical test files and their content are unchanged; historical Constitution archive files remain untouched. Recheck full CI before merging.
