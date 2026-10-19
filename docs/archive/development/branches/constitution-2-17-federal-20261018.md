@@ -2,9 +2,9 @@
 
 **Original branch:** `fix/constitution-2-17-federal-20261018`
 
-**PR:** not yet opened
+**PR:** [#217](https://github.com/jcr0916-hue/federatedrepublic/pull/217) (draft)
 
-**Head commit at handoff:** pending; base `4220db128d67ccb1ff6a123544ceff6b198e025a`
+**Implementation commit:** [`830e6e6552d9c79a26ab29e05c89349082a82dbc`](https://github.com/jcr0916-hue/federatedrepublic/commit/830e6e6552d9c79a26ab29e05c89349082a82dbc); see the PR for the latest handoff-only commit. Base: `4220db128d67ccb1ff6a123544ceff6b198e025a`.
 
 **Status:** proposed; nothing shipped until merged
 
@@ -29,7 +29,7 @@ Implement John's approved narrow change from [Constitution 12](chatgpt-conversat
 - Initial PDF-renderer launch found its bundled browser revision unavailable. Used the installed Chromium executable with the repository's unchanged PDF settings; no renderer or dependency source changes. Current Constitution PDF has 57 pages versus the prior 55; the Article II PDF remains two pages. Cross-environment pagination is a rendering limitation, with complete canonical text verified.
 - Existing non-blocking World clock/dashboard reminders and metadata suggestions remain; their unrelated sources were not changed.
 - Passed the final production rebuild and `npm run check:assets` (438 referenced/protected assets); both deployed PDF copies exactly match the regenerated source PDFs. Passed `git diff --check`.
-- Committed archive check and GitHub CI: not established until recorded below.
+- Passed `python3 -B scripts/constitution-archive.py check --base origin/main` on the committed implementation. GitHub CI: see the PR's checks for the latest commit; final result not established at handoff-note commit time.
 
 ## Decisions and lessons
 
