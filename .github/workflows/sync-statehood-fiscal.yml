@@ -22,16 +22,24 @@ jobs:
         with:
           python-version: '3.12'
       - run: npm ci
-      - name: Render current canonical Markdown before archive guard
+      - name: Archive previous complete pair and regenerate canonical publications
         run: |
           python3 - <<'PY'
           import json, runpy
           from pathlib import Path
+          root = Path.cwd()
+          archive = runpy.run_path('scripts/constitution-archive.py')
+          before = archive['pair'](root, 'origin/main')
+          archive['validate_pair'](root, before, 'origin/main')
+          plan = archive['plan_pair'](root, before, None, 'origin/main')
+          archive['write_pair'](root, before, plan)
           data = json.loads(Path('constitution_data.json').read_text())
           render = runpy.run_path('scripts/build-constitution-md.py')['render']
           Path('docs/constitution-current.md').write_text(render(data), encoding='utf-8')
           PY
-      - run: npm run sync
+          python3 scripts/sync-annotated.py
+          python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md
+          python3 scripts/build-search-index.py
       - name: Commit synchronized constitutional publications
         run: |
           git config user.name 'github-actions[bot]'
