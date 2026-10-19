@@ -33,7 +33,7 @@ Do not treat an archived plan as canon when it conflicts with a published piece 
 - The Republic's first Assembly fails to elect a Civic Consul within the formation window. The §2.6.a fallback operates: the Assembly Speaker serves as Acting Civic Consul, the Assembly nominates candidates, and a national election supplies the first full-authority Civic Consul. This is the in-world formation event also examined in `scenario-the-formation.html`.
 - Korda appears on the founding Indigenous register and elects **Territorial Integration** during the Transition Window, becoming an Indigenous Territory with the ordinary Statehood pathway available. The decision permanently ends the founding Compact/Associated Community option under §16.2.
 - By **Year 4**, the Republic negotiates the Toren River relationship with Caldris as one sovereign counterparty.
-- By **Year 8**, Casimir Rehn is Legat Consul and Ines Carrow serves as Director of Foreign Affairs.
+- By **Year 10**, Casimir Rehn is Legat Consul and Ines Carrow serves as Director of Foreign Affairs.
 - The transition scenario closes at **Year 12, Month 9**, immediately before `torenthia-news-001.html`.
 
 ### Selection of the federal seat
@@ -144,7 +144,7 @@ Sollis’s recurring students: **Deva**, **Orren**, and **Tor**.
 
 ### Legat Consul race
 
-- **Ines Carrow** — Director of Foreign Affairs under LC Casimir Rehn since Year 8; simultaneously
+- **Ines Carrow** — Director of Foreign Affairs under LC Casimir Rehn since Year 10; simultaneously
   handling the Sunderland/Lake Varda file and campaigning to replace Rehn.
 - **Seren Mak** — Rhovane-based Assembly member; forceful and sometimes rhetorically ahead of the
   record.
