@@ -314,7 +314,7 @@ The Civic Consul is responsible for enforcement of federal law and may set gener
 
 ### §2.17 — Cooling-Off from Executive Service
 
-During any constitutional cooling-off period barring a person from holding or seeking Consular office, that person may not serve in any executive capacity. This is the express exception to §7.4(5) and does not bar service outside the executive branch.
+During any constitutional cooling-off period barring a person from holding or seeking Consular office, that person may not serve in any federal executive capacity. This is the express exception to §7.4(5) and does not bar service outside the executive branch.
 
 - **Cross-refs:** §7.4
 
