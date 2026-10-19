@@ -959,7 +959,7 @@ A State in Provisional status remains a State, and its government and Assembly r
   - The Elections Panel assigns the two seats by public lot to two distinct existing Senate classes and administers a special election within 90 days
 - **Cross-refs:** §15.1, §15.5.a
 
-### §15.3 — State Remediation and Mandatory Devolution Review
+### §15.3 — State Remediation and Provisional Status
 
 (1) An overall failed biennial Statehood Audit under §15.2 places an existing State on the mandatory remediation track. A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute; until such statute is enacted, the period is 90 days.
 
@@ -968,18 +968,17 @@ A State in Provisional status remains a State, and its government and Assembly r
 - **Time limits:**
   - until such statute is enacted, the period is 90 days
   - The Senate must vote within the period defined by statute, not to exceed 90 days from certification, on whether to place the State in Provisional status under §15
-- **Cross-refs:** §15.1.a, §15.2, §15.4
+- **Cross-refs:** §15.1.a, §15.2
 
 ### §15.4 — Voluntary Devolution and Merger
 
-(1) A State may pursue devolution by a State referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters. The referendum required by §15.3(4) is this referendum.
+(1) A State may pursue devolution by a State referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters. Upon approval, the State and the Legislature negotiate a restructuring agreement, which takes effect upon ratification by 2/3 of the full seated Senate.
 
 - **Thresholds:**
   - Upon approval, the State and the Legislature negotiate a restructuring agreement, which takes effect upon ratification by 2/3 of the full seated Senate
 - **Time limits:**
   - The petition period may not exceed 12 months
   - (4) Following certification of a referendum under this section, any party with standing has 30 days to challenge the process or result
-- **Cross-refs:** §15.3
 
 ### §15.5 — Re-Qualification Pathway
 
@@ -1330,7 +1329,7 @@ Selected short clauses extracted verbatim. This index is not exhaustive; consult
 | §12.1 | The Social State | A standard may be reduced only by a 2/3 concurrent vote of both chambers or during a certified Severe Revenue Contraction under §12 |
 | §12.1.a | The Monetary Authority | Principal decision-makers exercising the MA's constitutional authority must be selected through an independent candidate process and confirmed by 2/3 of the Senate |
 | §13.1 | Optional Referendum | A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification |
-| §15.3 | State Remediation and Mandatory Devolution Review | Entry into Provisional status requires an absolute majority of the full seated Senate and takes effect immediately by constitutional operation |
+| §15.3 | State Remediation and Provisional Status | Entry into Provisional status requires an absolute majority of the full seated Senate and takes effect immediately by constitutional operation |
 | §15.4 | Voluntary Devolution and Merger | Upon approval, the State and the Legislature negotiate a restructuring agreement, which takes effect upon ratification by 2/3 of the full seated Senate |
 | §15.6 | Voluntary Incorporation | The petition requires a resolution adopted by the entity's own legislature by 2/3 majority, confirmed by a citizen referendum achieving a simple majority on at least 50% participation |
 | §15.6 | Voluntary Incorporation | Upon confirmation, the entity and the Legislature negotiate an incorporation agreement specifying a transition period not exceeding 48 months, which the Legislature ratifies by 2/3 of both chambers |
