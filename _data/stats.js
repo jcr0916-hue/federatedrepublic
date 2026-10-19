@@ -33,13 +33,14 @@ const executive = [
       },
       {
         label: "Public approval",
-        value: 46,
+        value: 43,
+        prior: 46,
         unit: "%",
         tier: "mid",
       },
     ],
     note:
-      "Her working Assembly count is fifteen votes above the survival line, down from the 274 that installed her. The §12.6 review remains the pressure point.",
+      "Her working Assembly count is fifteen votes above the survival line, down from the 274 that installed her. The §12.6 review remains the pressure point, and the Assembly campaign now makes every district a count.",
   },
   {
     name: "Casimir Rehn",
@@ -48,7 +49,8 @@ const executive = [
     metrics: [
       {
         label: "Public approval",
-        value: 61,
+        value: 63,
+        prior: 61,
         unit: "%",
         tier: "high",
       },
