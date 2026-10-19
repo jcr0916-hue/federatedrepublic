@@ -138,6 +138,7 @@ Torenthia is not a peninsula.
 | **Yelka Sarn** | Dispatch | Morantine hardware/feed-store owner; practical border-Territory voice. |
 | **Neris Vann** | Dispatch | Calden harbor pilot; ships, weather, machinery, port life. |
 | **Maren Sollis** | Dispatch + *Show Your Work* | Corindal civics teacher. Same person in two registers; do not invent a second civics teacher. |
+| **Ottoline Pree** | Dispatch | Weller County (Selvane) deputy registrar; dry, procedural voice on counting ranked ballots. |
 
 Sollis’s recurring students: **Deva**, **Orren**, and **Tor**.
 
