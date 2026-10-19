@@ -89,7 +89,7 @@ Torenthia is not a peninsula.
 | **Caldenmere** | Southwestern coast; Calden is its port/finance city. |
 | **Aldenmere** | Southwest coastal capital region; **Terenne**, on the coast, is its State capital; **Verentum** is the federal seat within the State. |
 | **Selvane** | Central heartland; Elin Thoss’s home State. |
-| **Corindal** | Southern border with Valedon; Provisional State status in the published World record. |
+| **Corindal** | Southern border with Valedon; self-governing Provisional State since Year 9 after failed biennial audits in Years 5, 7, and 9 arising from electoral district-map noncompliance and a State Senate redistricting deadlock. One federal Senate term ended unfilled in Year 11; the second ends Year 15. |
 
 ### Territories
 
