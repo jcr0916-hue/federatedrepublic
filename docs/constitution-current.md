@@ -949,7 +949,7 @@ A State in Provisional status remains a State, and its government and Assembly r
 
 (8) Where active conflict prevents completion of a biennial audit in a significant portion of a State's territory, the Monitors may publish a provisional audit-status finding for that cycle, which counts as neither a passing nor a failed audit. A provisional audit status is unavailable where the State materially contributed to the conflict conditions.
 
-### §15.3 — State Remediation and Mandatory Devolution Review
+### §15.3 — State Remediation and Provisional Status
 
 (1) An overall failed biennial Statehood Audit under §15.2 places an existing State on the mandatory remediation track. A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute; until such statute is enacted, the period is 90 days. A second consecutive failed audit produces a renewed Early Warning and requires a revised Remediation Plan. A passing audit before a third consecutive failure breaks the sequence.
 
@@ -957,13 +957,11 @@ A State in Provisional status remains a State, and its government and Assembly r
 
 (3) If the Senate does not vote within the required period, the question becomes privileged Senate business and the Senate may not take up non-emergency business until the vote occurs.
 
-(4) When the first sitting senator's term expires after the State enters Provisional status, the Elections Panel administers a citizen referendum on whether to pursue devolution under §15.4. If the referendum does not approve devolution and the State remains in Provisional status, the Elections Panel administers another referendum at two-year intervals thereafter.
-
-(5) The Monitors' certification and the State's entry into Provisional status are reviewable on the grounds stated in §15.2(7); the Senate's vote under paragraph (2) is not.
+(4) The Monitors' certification and the State's entry into Provisional status are reviewable on the grounds stated in §15.2(7); the Senate's vote under paragraph (2) is not.
 
 ### §15.4 — Voluntary Devolution and Merger
 
-(1) A State may pursue devolution by a State referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters. The referendum required by §15.3(4) is this referendum. Upon approval, the State and the Legislature negotiate a restructuring agreement, which takes effect upon ratification by 2/3 of the full seated Senate. The agreement is legally binding and specifies asset and liability allocation, transition timeline, constitutional status of successor jurisdictions, fiscal obligations to the Republic, and continuing obligations.
+(1) A State may pursue devolution by a State referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters. Upon approval, the State and the Legislature negotiate a restructuring agreement, which takes effect upon ratification by 2/3 of the full seated Senate. The agreement is legally binding and specifies asset and liability allocation, transition timeline, constitutional status of successor jurisdictions, fiscal obligations to the Republic, and continuing obligations.
 
 (2) The State retains its existing status, ordinary or Provisional, until the restructuring agreement takes effect, when each successor jurisdiction becomes a Territory.
 

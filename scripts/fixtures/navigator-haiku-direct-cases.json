@@ -343,7 +343,7 @@
   },
   {
     "id": "haiku-direct-58",
-    "question": "What does §15.3 establish about mandatory devolution?",
+    "question": "What does §15.3 require?",
     "expectedStatus": "ANSWER",
     "requiredSource": "§15.3"
   },
