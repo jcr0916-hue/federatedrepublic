@@ -22,6 +22,15 @@ jobs:
         with:
           python-version: '3.12'
       - run: npm ci
+      - name: Render current canonical Markdown before archive guard
+        run: |
+          python3 - <<'PY'
+          import json, runpy
+          from pathlib import Path
+          data = json.loads(Path('constitution_data.json').read_text())
+          render = runpy.run_path('scripts/build-constitution-md.py')['render']
+          Path('docs/constitution-current.md').write_text(render(data), encoding='utf-8')
+          PY
       - run: npm run sync
       - name: Commit synchronized constitutional publications
         run: |
