@@ -2,11 +2,11 @@
 
 **Original branch:** `fix/constitution-2-17-federal-20261018`
 
-**PR:** [#217](https://github.com/jcr0916-hue/federatedrepublic/pull/217) (draft)
+**PR:** [#217](https://github.com/jcr0916-hue/federatedrepublic/pull/217) (prepared as a draft; John subsequently authorized merging)
 
 **Implementation commit:** [`830e6e6552d9c79a26ab29e05c89349082a82dbc`](https://github.com/jcr0916-hue/federatedrepublic/commit/830e6e6552d9c79a26ab29e05c89349082a82dbc); see the PR for the latest handoff-only commit. Base: `4220db128d67ccb1ff6a123544ceff6b198e025a`.
 
-**Status:** proposed; nothing shipped until merged
+**Status:** merge approved; the linked PR's merged state records shipment
 
 ## Purpose
 
@@ -29,7 +29,7 @@ Implement John's approved narrow change from [Constitution 12](chatgpt-conversat
 - Initial PDF-renderer launch found its bundled browser revision unavailable. Used the installed Chromium executable with the repository's unchanged PDF settings; no renderer or dependency source changes. Current Constitution PDF has 57 pages versus the prior 55; the Article II PDF remains two pages. Cross-environment pagination is a rendering limitation, with complete canonical text verified.
 - Existing non-blocking World clock/dashboard reminders and metadata suggestions remain; their unrelated sources were not changed.
 - Passed the final production rebuild and `npm run check:assets` (438 referenced/protected assets); both deployed PDF copies exactly match the regenerated source PDFs. Passed `git diff --check`.
-- Passed `python3 -B scripts/constitution-archive.py check --base origin/main` on the committed implementation. GitHub CI: see the PR's checks for the latest commit; final result not established at handoff-note commit time.
+- Passed `python3 -B scripts/constitution-archive.py check --base origin/main` on the committed implementation. GitHub Constitution archival, World publishing, and Vercel preview checks passed on `3a878eed45c0a2af168c335c4b463cda33e50274`; no review submissions or inline review threads were present. See the PR's checks for subsequent documentation-only commits.
 
 ## Decisions and lessons
 
@@ -39,10 +39,10 @@ Implement John's approved narrow change from [Constitution 12](chatgpt-conversat
 
 ## Open follow-ups
 
-- PR review and explicit user approval are required before merging; merge is not authorized by this task. CI status will be linked from the PR.
+- John explicitly authorized merging in the follow-up message, "you are free to merge". Merge after the latest PR checks pass. No implementation defects identified; branch cleanup remains a separate process.
 
 ## Preservation and branch disposition
 
-- Proposed results, historical pair, design-history entry, and this handoff are preserved together in this branch and will reach `main` only through the PR.
+- Results, historical pair, design-history entry, and this handoff are preserved together in the PR; its merge record establishes their inclusion on `main`.
 - No intermediate substantive experiment requires separate preservation. Branch deployment/automation dependencies: not checked; this note grants no cleanup authorization.
 - **Deletion approval:** Not granted by this note. Requires separate approved manifest and guarded cleanup. Keep `main` and `archive/legacy-project-material`.
