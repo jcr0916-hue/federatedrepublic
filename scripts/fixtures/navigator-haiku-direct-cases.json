@@ -343,7 +343,7 @@
   },
   {
     "id": "haiku-direct-58",
-    "question": "Under §15.3, what happens to non-emergency Senate business if the Senate misses its required vote?",
+    "question": "What does §15.3 require?",
     "expectedStatus": "ANSWER",
     "requiredSource": "§15.3"
   },
