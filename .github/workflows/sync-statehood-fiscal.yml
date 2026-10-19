@@ -1,0 +1,34 @@
+name: Temporary Statehood fiscal synchronization
+on:
+  push:
+    branches:
+      - constitution/statehood-audit-fiscal-capacity
+    paths:
+      - .github/workflows/sync-statehood-fiscal.yml
+permissions:
+  contents: write
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: constitution/statehood-audit-fiscal-capacity
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run sync
+      - name: Commit synchronized constitutional publications
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/constitution-current.md docs/constitutional-quickref.md annotated.html search-index.js docs/archive/constitution
+          if ! git diff --cached --quiet; then
+            git commit -m 'Regenerate Constitution publications for fiscal capacity'
+            git push origin HEAD:constitution/statehood-audit-fiscal-capacity
+          fi
