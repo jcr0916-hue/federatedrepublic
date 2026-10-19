@@ -307,7 +307,17 @@ def check(root, base=None, head=None, worktree=False):
         before = pair(root, source)
         unchanged_archives(inventory(root, source), files)
         if before != current:
-            validate_pair(root, before, source)
+            # A prior commit may have changed only canonical JSON, leaving invalid
+            # derived Markdown. A repair that leaves canonical JSON unchanged and
+            # restores its exact rendered Markdown does not supersede a valid pair:
+            # the broken JSON/Markdown combination must never be archived.
+            if before[0] == current[0]:
+                try:
+                    validate_pair(root, before, source)
+                except ValueError:
+                    return
+            else:
+                validate_pair(root, before, source)
             if not any(saved == before for _, _, saved in records):
                 raise ValueError("Unarchived Constitution replacement: run npm run sync and commit both previous archive files and their metadata")
 
