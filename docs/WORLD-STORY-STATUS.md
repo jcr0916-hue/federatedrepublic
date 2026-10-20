@@ -2,6 +2,8 @@
 
 The structured chronology and clock registries in `_data/worldChronology.json` and `_data/worldClocks.json`, together with published front matter, supply chronology and clock checks. The generated dashboard below is checked during publishing. Human narrative notes remain editorial.
 
+The October 19 Year 14 Month 1 Solara batch adds NRS 109–112 and news 119–120. Solara's Ostara district elects three Assembly members by proportional Ranked Choice Voting; five candidates qualify (Ilka Saremi, incumbent; Anse Dorvallo; Mira Tollan; Joss Brenner; Teo Varrin). Solara's winter Ostara–Westport ferry timetable cuts weekday sailings from three to two. The Elections Panel issues equal initial §8.4 allocations to Assembly candidates whose applications have cleared; Legat Consul applications remain under review. Harren's State Archives post winter hours. Petra Vend reports the Ostara race against Solara's pending second Statehood Audit (§15.2(4)), which no ballot decides; Lenne Akar follows Calden crane operator Halsey Maddox, a first-time Assembly candidate using the allocation. No audit result, election date, poll or vote count is invented.
+
 The October 19 Year 14 Month 1 batch adds NRS 107–108 and news 117. The Elections Panel opens a public candidate-question index without changing qualification status or the spring election's unspecified date. Orath makes Dorven freight source tables available for correction; Aleth Fenn examines the legal difference between a national campaign promise, a State transport estimate and county implementation. No qualifications, election results, new appropriations, Caldris obligations or constitutional clocks are changed.
 
 **Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
@@ -12,7 +14,7 @@ The October 18 Year 14 Month 1 election-season batch adds NRS 102–106, news 11
 
 The October 16 Year 14 Month 1 batch adds NRS 099–101 and news 115. Routine records from Merath (industrial inspection scheduling), Solara (port-register reconciliation), and Varek (county Toren River submissions) diversify the administrative register. Aleth Fenn reports the Varek river and county-government question against the approaching spring Legat Consul election, without adding candidate pledges, polling, a treaty change or an election date. No constitutional clock has changed.
 
-**Current published frontier:** Year 14, Month 1 · worldSeq through **164** · nrsSeq through **108**.
+**Current published frontier:** Year 14, Month 1 · worldSeq through **167** · nrsSeq through **112**.
 
 The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 
