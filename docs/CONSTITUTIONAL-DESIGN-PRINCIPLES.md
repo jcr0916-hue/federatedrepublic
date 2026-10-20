@@ -414,6 +414,15 @@ What stays fixed is the power's boundary and who checks it (the Actor Test), not
 This is the companion to the fallback limit under the Graceful Degradation Test: both stop the reviewer
 from asking the text to do the officials' job.
 
+
+### Principle or procedure? — minimum-necessary specification (20.10)
+
+Before adding constitutional detail, ask: **Is it necessary to make a constitutional institution function, to protect a right or safeguard, or to define an enforceable boundary?** If so, specify only what is necessary. Otherwise state the governing principle and leave policy, methods, and implementation to statute and democratic judgment.
+
+**Review check:** Would removing this detail prevent the institution from functioning, weaken a protected right, or eliminate a necessary check or failure state? If not, prefer delegation. Closing every conceivable loophole is not itself a constitutional objective; distinguish failure of constitutional machinery from poor policy choices for which elected government remains accountable.
+
+*Working example (20.10, proposed only): fiscal sustainability replaces prescribed debt-brake formulas, deadlines, and correction accounts; Article II's office-formation and succession procedures remain necessarily specific.*
+
 ---
 
 ## USING THIS IN REVIEW
