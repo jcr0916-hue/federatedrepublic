@@ -70,6 +70,98 @@ Every person who reaches the Republic's jurisdiction has the right to claim asyl
 - **Retain:** All remaining Article I provisions. In particular, §1.14 retains its same-offense and overlapping State/Republic prosecution rules; §1.14.a deliberately protects lawful interstate conduct and associated assistance or information (including travel assistance and medical care); §1.16.a retains its six non-derogable rights and emergency anti-discrimination guarantee.
 - **Design basis:** Preserve substantive rights, necessary institutional checks, and failure-state protections while avoiding technology-specific guarantees and unnecessary fixed administrative deadlines. Revisit only a demonstrable gap, not hypothetical loopholes for their own sake.
 
+## Proposed amendment 3 — Article II executive review (settled working wording)
+
+**Scope:** Proposed replacements of §§2.2, 2.5(4), 2.12, 2.14.b, 2.16(2)–(4), and 2.18; delete §2.10 and its redundant standalone publication rules; remove only the final appropriation sentence of §2.15. Related consolidation into §§3.10, 9.6, and 10.1(2) is documented in proposed amendment 4 below. **Unadopted working proposals, not effective constitutional text.** All other Article II provisions remain unchanged, including §2.3.a and its ten-business-day veto period.
+
+### Proposed §2.2 — Military Authorization Framework
+
+The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, military force requires legislative authorization. The Legat Consul must notify both chambers and the Civic Consul without undue delay of any use of force. Legislative authorization must have a defined expiration and may be renewed only by affirmative legislative action; upon expiration, operations must cease. Operations must state and serve a purpose authorized by §14.1.
+
+**History note:** Replaces the 24-hour notice period with a prompt-notification standard and the twelve-month maximum authorization period with required expiration and affirmative legislative renewal. Preserves immediate-response authority and cessation upon expiration. The Legislature determines the period but cannot give legally indefinite authorization.
+
+### §2.3.a — Legat Consul Legislative Veto: retain unchanged
+
+**Review note:** Retain the ten-business-day veto review period as constitutional machinery. Allowing the Legislature to set or alter that period could nullify an independent veto or indefinitely delay enactment. Retain the established veto, override, and single-use mechanisms.
+
+### Proposed §2.5(4) — Domestic Emergencies
+
+The Civic Consul may declare a domestic emergency in response to natural disaster, public health crisis, or infrastructure failure, subject to Article I and Assembly oversight. The Assembly may terminate the declaration at any time. The Legat Consul has no authority in domestic emergencies except assistance under §2.14.b.
+
+**History note:** Replaces renewal at statutory intervals (default 30 days) with ongoing Assembly oversight and a direct Assembly power to terminate the declaration, without Senate concurrence or Civic Consul approval. Rights derogation remains governed independently by Article I §1.16; continuity emergencies remain governed by §2.11.
+
+### §2.10 — Executive Transparency: delete
+
+**History note:** Consolidate constitutional-act publication obligations into §10.1(2), including attribution and the rule against concealing the existence or legal effect of constitutional acts. Avoid an executive-specific duplicate. See proposed amendment 4.
+
+### Proposed §2.12 — Clemency
+
+Each Consul may grant clemency only within their domain: the Legat Consul for military and national-security offenses, the Civic Consul for domestic federal offenses. Self-clemency is void.
+
+Every grant must state its reasons. Clemency does not bar any constitutional, political, civil, or criminal remedy for misconduct connected with its exercise. Group amnesty requires legislation.
+
+**History note:** Removes the two sentences on optional EM factual review, including the statement that this review does not suspend or invalidate a grant. Lawful investigation and judicial processes can be conducted under their ordinary authorities; substantive clemency limits and remedies remain.
+
+### Proposed §2.14.b — Cross-Domain Assistance
+
+Either Consul may request assistance from the other within the responding Consul's domain. The request must state its purpose and scope and be published to the NRS. The requesting Consul controls the purpose; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other. Assistance may provide non-coercive support only. It may not be used to compel, detain, surveil, or collect intelligence on persons within the Republic, or to commandeer civilian resources, except as §1.16 or another express constitutional source allows.
+
+**History note:** Removes an arbitrary 90-day renewal limit and required duration statement. Preserves voluntary cross-domain assistance, separate domain control, public accountability, and explicit limits on coercion.
+
+### Proposed §2.15 — Federal Prosecution
+
+The Civic Consul is responsible for enforcement of federal law and may set general prosecution policy. Statute must establish a Federal Prosecution Service independent in individual prosecutorial decisions. Executive direction concerning a specific prosecution must be in writing and published to the NRS.
+
+**History note:** Removes only the final sentence imposing a two-thirds vote of both chambers to reduce the Service's appropriation below the prior year's level. General institutional capacity and resource-justification obligations are consolidated into §3.10; retained text should be reviewed separately if a later pass identifies an actual independence conflict.
+
+### Proposed §2.16(2)–(3) — Executive Incapacity
+
+(2) The Consul may declare the incapacity ended, restoring authority 24 hours after publication. If incapacity is determined again on substantially the same grounds within 90 days, the renewed determination requires 2/3 of the deciding body. Following that determination, authority may be restored by majority approval of that body.
+
+(3) A renewed determination under subsection (2) remains effective for no more than six months. Continuation thereafter requires a fresh 2/3 determination. The Consul may challenge any involuntary incapacity determination through expedited independent judicial review, limited to lawful invocation and inability to exercise the office. Policy disagreement is not incapacity.
+
+**Implementation note:** Replace present subsections (2)–(4) with these two subsections; renumber the unchanged former subsections (5)–(9) sequentially, adjusting internal references only if necessary. Existing automatic succession and acting-service rules remain intact.
+
+**History note:** Preserves the ordinary self-declared recovery rule, 24-hour restoration delay, repeated-determination two-thirds vote, 90-day window, and a six-month renewed-determination maximum. Removes the separate 30-day heightened-restoration window and legislative extension process. Courts act on disputes, not as routine approval participants; expedited independent judicial review can begin in the ordinary competent court, not exclusively the Supreme Court. Judicial remedies must have operative effect, including reversal and restoration when warranted.
+
+### Proposed §2.18 — Domestic Insurrection
+
+During armed insurrection against the constitutional order, the Civic Consul must report to the Assembly at statutory intervals for the duration of the response, as the Legat Consul reports to the Senate. No required report may be withheld because operations are ongoing.
+
+**History note:** Removes the operational requirement for the Council of Ministers to remain convened throughout an insurrection. Retains mandatory executive reporting and oversight.
+
+### Article II disposition and review notes
+
+- **Revise:** §§2.2, 2.5(4), 2.12, 2.14.b, 2.16(2)–(4), and 2.18 as above.
+- **Delete:** §2.10, consolidating its unique safeguards into §10.1(2).
+- **Funding consolidation:** Delete the final sentence of §2.15; address institutional resources through §3.10 and remove §9.6.
+- **Retain:** All other Article II sections, including §2.3.a and the veto's fixed ten-business-day deadline.
+- **Design basis:** Preserve deadlines that secure independent constitutional authority and automatic succession, but leave operational methods, lawful oversight procedures, and policy durations to democratic institutions where doing so creates no failure of continuity or accountability.
+
+## Proposed amendment 4 — General institutional resources and NRS publication
+
+**Scope:** Revise §3.10 by adding a uniform resources principle while preserving its existing legislative-competence text and institutional-capacity obligation; delete §9.6 in full; revise the opening of §10.1(2) while preserving the remainder. Coordinate these changes with the approved Article II deletion of §2.10 and funding sentence removal in §2.15. Unadopted working proposals.
+
+### Proposed addition to §3.10 — Institutional Resources
+
+The Legislature shall provide institutions established by this Constitution or by statute with resources sufficient to perform their assigned duties. Material changes in those resources must be accompanied by a published justification addressing the institution's responsibilities and capacity to fulfill them.
+
+**Integration note:** Add the paragraph to §3.10 without deleting its existing provision that the Legislature must maintain an institution capable of performing each constitutionally assigned function. Statutory institutions remain subject to lawful reorganization, changed duties, and abolition; constitutional duties cannot be abolished by a budget decision.
+
+**History note:** Replaces institution-specific appropriation formulas with a uniform sufficiency-and-explanation rule, applying to both increases and reductions. Retains legislative budget discretion while prohibiting impairment of duties. Tradeoff: removes automatic funding floors and supermajority shields from independent oversight institutions.
+
+### §9.6 — Minimum Funding Guarantee: delete in full
+
+**History note:** Repeal the inflation-adjusted appropriation floor for each Monitor, the Elections Panel, the NRS Panel, and the Monetary Authority; remove the two-thirds reduction threshold, certification procedure, and automatic-floor appropriation. Institutional funding obligations will instead reside in §3.10.
+
+### Proposed opening of §10.1(2) — Constitutional Acts and Records
+
+Every constitutional act, order, finding, certification, designation, declaration, and determination made under this Constitution is published to the NRS as a permanent record, attributed to the responsible officer or institution; no provision need state this obligation individually. The existence and legal effect of a constitutional act may not be concealed by classification.
+
+**Integration note:** Following these opening sentences, preserve unchanged the existing §10.1(2) text beginning “Official records and materials created, received, maintained, or produced in the exercise of official duties are property of the Republic” and continuing through its rules on custody, destruction, publication, access, retention, and classification.
+
+**History note:** Consolidates §2.10's executive-specific publication and accountability rules into the general constitutional-acts rule, expands attribution to responsible officers or institutions, and distinguishes the public existence and legal effect of acts from potentially classified supporting materials.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
