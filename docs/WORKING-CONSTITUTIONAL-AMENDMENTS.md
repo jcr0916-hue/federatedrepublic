@@ -162,6 +162,65 @@ Every constitutional act, order, finding, certification, designation, declaratio
 
 **History note:** Consolidates §2.10's executive-specific publication and accountability rules into the general constitutional-acts rule, expands attribution to responsible officers or institutions, and distinguishes the public existence and legal effect of acts from potentially classified supporting materials.
 
+## Proposed amendment 5 — Article III Legislature review (settled working wording)
+
+**Scope:** Replace §3.2(2), §3.2(5), the last sentence of §3.3, the second paragraph of §3.4, §3.5(1), §3.9, and §3.11 with the text below. The agreed §3.10 institutional-resources addition is already recorded under proposed amendment 4 and should be implemented once, not duplicated. Other Article III provisions remain unchanged, including §§3.1, 3.6, 3.7, and 3.8. **Working proposals only; not enacted.**
+
+### Proposed §3.2(2) — Census
+
+The census, conducted by a statutory independent agency at intervals defined by statute not exceeding ten years, is the basis for reapportionment.
+
+**History note:** Changes a rigid ten-year cycle into a maximum interval, allowing more frequent censuses without enabling indefinite postponement of population-based representation.
+
+### Proposed §3.2(5) — Assembly Vacancies
+
+Mid-term Assembly vacancies are filled by special election within the period defined by statute, not exceeding 90 days, unless the remainder of the term is shorter than that period.
+
+**History note:** Preserves the 90-day cap while avoiding mandatory special elections when the unexpired term is shorter than the statutory election period. The exception permits, but does not require, leaving the seat vacant near term-end.
+
+### Proposed final sentence of §3.3 — Electoral Districts
+
+Any citizen or State government may seek judicial remedy for a district map that violates this Constitution.
+
+**History note:** Removes exclusive direct Supreme Court jurisdiction while preserving citizen and State standing, substantive district-map standards, and effective relief through the ordinary judicial system. Retain all earlier sentences of §3.3 unchanged.
+
+### Proposed second paragraph of §3.4 — Legislative Standards
+
+Each chamber establishes and publishes its sitting schedule, and any revision, to the NRS. No recess may be used to defeat or delay a constitutional duty or deadline. Emergency sessions may be called by either Consul or by petition of one-third of either chamber.
+
+**History note:** Removes mandated full-time legislative status; retains publicly accountable calendars, safeguards against recess-based avoidance of constitutional duties, and emergency convening. Leave the first and third paragraphs of §3.4 unchanged.
+
+### Proposed §3.5(1) — Senate Vacancies
+
+The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. A mid-term vacancy is filled as the State provides, within the period defined by statute, not exceeding 90 days, unless the remainder of the term is shorter than that period.
+
+**History note:** Preserves States' choice of vacancy-filling mechanism and the 90-day maximum; permits a vacancy to remain unfilled if the statutory filling period exceeds the remaining term, while allowing a State to fill it voluntarily.
+
+### Proposed §3.9 — Independent Statutory Agencies
+
+The Legislature may establish independent agencies outside the authority of either executive and may alter or abolish agencies established by statute. The Legislature may not impair the independence of a function this Constitution assigns to an independent agency.
+
+Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. The appointed leadership of an independent agency serves fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements may not be designed to exclude candidates because of political or policy views or prior criticism of government.
+
+**History note:** Clarifies that statutory agencies may be altered or abolished by the Legislature, while extending fixed-term and for-cause removal protections from principal decision-makers exercising constitutionally assigned independent functions to **appointed leadership of any independent agency**. Independence protects agency leadership during the agency's existence, not permanent institutional existence or ordinary employees.
+
+### §3.10 — Federal Legislative Competence: apply amendment 4
+
+**Integration note:** Add the already-agreed institutional resource-sufficiency and published-justification paragraph from proposed amendment 4. Preserve existing legislative competence, States' self-government, and constitutionally assigned institutional-capacity language.
+
+### Proposed §3.11 — Delegation of Authority
+
+The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation must state its scope and conditions. Delegation does not divest the Legislature of that authority: statute prevails over any conflicting exercise of delegated authority, and the Legislature may rescind a delegation at any time. Each exercise of delegated authority is published to the NRS identifying the delegating statute.
+
+**History note:** Removes universal duration requirement for statutory delegations. Legislative control, scope, conditions, statutory supremacy, and revocation remain; sunsets may still be set by statute when appropriate.
+
+### Article III retained provisions and tested alternatives
+
+- **§3.1 — Senate Review: retain unchanged.** Keep the 90-day review period, optional one-time 30-day Senate extension, and distinction between tacit approval and constitutionally required affirmative votes. Defining a legislative session as the period between Assembly elections was considered; a session-end deadline alone could leave too little Senate review for bills passed just before elections. Elections do not truncate the 90-day review.
+- **§3.6 — Treaties and Trade Agreements: retain unchanged.** Keep the maximum 90-day Senate affirmation period for proposed treaty withdrawal. Without a definite lapse, Senate inaction could leave foreign-policy decisions unresolved despite the Legat Consul's foreign-affairs responsibility.
+- **§§3.7 and 3.8: retain unchanged.** Voting-threshold clarity and Monitor access to legislative information remain important.
+- **Remainder:** Retain all Article III text outside the expressly identified replacements and the already-agreed §3.10 addition.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
