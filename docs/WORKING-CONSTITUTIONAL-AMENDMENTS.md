@@ -335,6 +335,62 @@ The Republic shall maintain a civic and constitutional proficiency assessment ad
 - **§5.2 — Legal Resident Rights:** retain unchanged.
 - **§5.3 — Custodial Care of Children:** retain unchanged. The stay of removal until custodial arrangements are secured is an operative child-protection safeguard rather than dispensable administrative detail.
 
+## Proposed amendment 8 — Article VI immigration and residency review (settled working wording)
+
+**Scope:** Retain §6.1 unchanged; consolidate former §6.2(2)–(3), with renumbering of §6.2(4); replace §6.3(1), (2), and (5), and §6.3.a. Preserve §6.2(1), §6.3(3)–(4), and §6.3(6)–(7). These are **unadopted constitutional drafting proposals**, not effective law.
+
+### §6.1 — Two-Stage Immigration System: retain unchanged
+
+**Review note:** States choose whom to sponsor under constitutional nondiscrimination rules, statute sets federal eligibility and aggregate ordinary application volumes, and the executive administers the law. The Legislature may restrict ordinary immigration, including imposing zero intake, but no ordinary limit extinguishes a protected asylum claim. Once legal requirements are completed, the executive cannot obstruct vested residency.
+
+### Proposed §6.2(2) — Review of Sponsorship and Certification Denials
+
+State sponsorship denials may be challenged on grounds of discrimination contrary to §1.6. Federal certification denials on national security grounds may be challenged through judicial review. Courts determine the appropriate remedy.
+
+**Integration note:** Replace existing §6.2(2) with the text above, delete former §6.2(3), and renumber existing §6.2(4) as §6.2(3) without changing its wording. The retained counsel rule protects people in removal proceedings or challenging decisions under this section; preserve any needed internal numbering references.
+
+**History note:** Consolidates review of State sponsorship discrimination and federal national-security certification refusals. Removes special constitutional procedures for examining classified evidence, a prescribed security-evidence threshold, and a mandatory vacatur/reconsideration remedy. Courts independently determine legality and relief rather than following a constitutional script. State discretion and judicial review remain intact.
+
+### Proposed §6.3(1) — Asylum and Removal
+
+An asylum claim must be determined before removal may be executed.
+
+**History note:** Removes express expedited treatment for claims found to be solely for delay. Statutory procedural management remains possible without diminishing the required fair hearing or the constitutional prohibition on removal before determination.
+
+### Proposed §6.3(2) — Judicial Asylum Grants
+
+Where a federal court grants asylum, the person acquires legal residency by operation of that determination; State sponsorship and federal certification are not required conditions.
+
+**History note:** Conforms the automatic residency consequence of asylum to adjudication by a court in the judicial branch; excludes independent executive administrative tribunals as the final asylum adjudicators.
+
+### Proposed §6.3(5) — Judicial Asylum Adjudication
+
+Asylum claims shall be adjudicated by independent courts within the judicial branch. The Legislature shall provide for their jurisdiction and proceedings by statute.
+
+**History note:** Places asylum adjudication in the constitutionally independent judiciary instead of a separate administrative adjudication institution. The Legislature may create a dedicated inferior asylum court or place jurisdiction in existing courts under Article IV. Immigration enforcement remains institutionally separate from those deciding claims; the judiciary handles case administration.
+
+### §6.2(4) and §6.3(4) — Publicly Funded Counsel: retain substantively unchanged
+
+**Review note:** Preserve explicit entitlement to appointed counsel where a person cannot afford representation in removal or immigration-decision challenges and in asylum hearings. Different protected proceedings justify deliberate overlap. Renumber §6.2(4) to (3) only because former §6.2(3) is deleted.
+
+### §6.3(6)–(7) — Protection of Unaccompanied Minors: retain unchanged
+
+**Review note:** Retain §1.18 protections immediately on contact, the independent court-appointed guardian within 72 hours, and restrictions on detention of unaccompanied minors. The guardian deadline directly protects a vulnerable child's rights rather than prescribing routine administration.
+
+### Proposed §6.3.a — Unexecuted Removal Orders
+
+A person whose removal cannot be executed remains at liberty, subject to all applicable laws of the jurisdiction in which they reside.
+
+**History note:** Removes the express authorization for reasonable statutory registration and reporting requirements as unnecessary. Preserves the prohibition on deprivation of liberty merely because a removal order cannot be executed.
+
+### Article VI disposition and integration checks
+
+- **Revise:** §6.2(2)–(3) (consolidate), §6.3(1), §6.3(2), §6.3(5), and §6.3.a.
+- **Renumber:** Existing §6.2(4) to §6.2(3), preserving the full existing text.
+- **Retain:** §6.1, §6.2(1), §6.2 counsel right, §6.3(3)–(4), and §6.3(6)–(7).
+- **Cross-article:** The asylum right in §1.17 and the judicial authority in Article IV continue to govern. Check internal and external citations to §6.2(3) or (4) before later implementation. These notes do not amend the enacted Constitution or public website.
+- **Design basis:** Immigration policy belongs to statute, executive administration follows the law, and asylum decisions and immigration-law remedies are judicial functions. Maintain substantive liberty, counsel, and child protections while reducing instructions about judicial methods.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
