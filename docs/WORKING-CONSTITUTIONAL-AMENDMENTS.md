@@ -221,6 +221,80 @@ The Legislature may by statute delegate defined authority within federal legisla
 - **§§3.7 and 3.8: retain unchanged.** Voting-threshold clarity and Monitor access to legislative information remain important.
 - **Remainder:** Retain all Article III text outside the expressly identified replacements and the already-agreed §3.10 addition.
 
+## Proposed amendment 6 — Article IV judicial architecture review (settled working wording)
+
+**Scope:** Replace §4.1; replace §4.2(1) and §4.2(5); amend only the equal-division and quorum paragraph of §4.3; amend §4.5(3), §4.5(4), the first category of §4.5(5), and §4.5(6); and consolidate §4.5(8)–(9) into one §4.5(8). Preserve all other Article IV text, especially §§4.2(2)–(4), 4.3.a, 4.4, 4.4.a, 4.5(1)–(2), 4.5(7), 4.5.a, and 4.6. **Settled discussion drafts, not enacted.**
+
+### Proposed §4.1 — Court Structure
+
+The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute. Abolition of a court takes effect for each occupied judicial seat upon expiration of the sitting judge's term. Constitutional questions arising in any proceeding may be referred to the SC.
+
+**History note:** Replaces redundant retention-of-office, compensation, and temporary-service language with occupied-seat abolition through attrition. Reorganization remains legislative; existing judges' seats survive through their terms. Reassignment and pending-case administration do not require a distinct constitutional succession office. Reflects the attrition safeguard already applied to Supreme Court seat reductions.
+
+### Proposed §4.2(1) — Inferior Judicial Appointments
+
+The Civic Consul shall nominate inferior court judges from the Judicial Pool under §9.8 without undue delay following a vacancy. The Senate confirms by a majority of its full seated membership.
+
+**History note:** Replaces a fixed 90-day nomination deadline with an enforceable prompt-action standard; leaves judicial selection and confirmation with the Civic Consul and Senate. The public-confirmation fallback in §4.4.a applies to Supreme Court appointments only.
+
+### Proposed §4.2(5) — Pending Cases During Vacancies
+
+The Supreme Court may reassign cases among inferior federal courts or qualified judges as necessary to prevent judicial vacancies from delaying proceedings.
+
+**History note:** Replaces automatic temporary judicial-office succession with authority to redistribute cases during vacancies. The safeguard serves both continuity and accountability: proceedings move independently of delayed political appointments, diminishing appointing authorities' leverage over cases until permanent appointments occur. General resources and adequate staffing remain governed by §3.10 under the One Home Rule; do not duplicate that obligation here.
+
+### Proposed second paragraph of §4.3 — Supreme Court Equal Division and Quorum
+
+An equally divided Court leaves the challenged ruling in effect, or, in an original proceeding, grants no relief. An equal division establishes no binding precedent. A majority of seated justices, including Temporary Associate Justices, constitutes ordinary quorum; constitutional questions require at least five participating justices.
+
+**History note:** Clarifies that tied original-jurisdiction proceedings grant no relief and that an equal division creates no binding precedent. Ordinary procedures determine whether a matter can be reheard; no constitutional guarantee of unlimited relitigation. Retain the first paragraph's minimum five justices, twelve-year nonrenewable staggered terms, two-thirds chamber approval for resizing, and attrition protection.
+
+### §§4.4 and 4.4.a — Supreme Court Selection and Public Confirmation: retain unchanged
+
+**Review note:** Retain the 90-day nomination and 120-day Senate-vote maximums, which activate the public-confirmation fallback when officials fail to act; timely Senate rejection is a legitimate exercise of constitutional checking, not inaction. Retain automatic eligible appellate-judge temporary succession and the public confirmation or rejection pathway. Do not create a third fallback merely because no eligible appellate judge is available: an unfilled seat may remain vacant until an eligible successor becomes available, subject to the separate Court quorum requirement. The Judicial Pool under §9.8 provides permanent-nomination candidates, not automatic temporary appellate successors.
+
+### Proposed §4.5(3) — Monitor Findings
+
+Monitor findings published to the NRS are admissible in judicial proceedings.
+
+**History note:** Removes a court's mandatory written explanation for disagreeing with Monitor findings. Admissibility does not give oversight reports conclusive factual or legal weight; courts remain independent in deciding law and evidence.
+
+### Proposed §4.5(4) — Standing and Judicial Forum
+
+Except where this Constitution expressly confers standing, courts adjudicate only cases involving a concrete, articulable legal injury and may not issue advisory opinions. An organization has standing where at least one member would have standing and the claim is germane to the organization's established purposes. The Legislature may not leave any category of legal injury without a judicial forum.
+
+**History note:** Changes “its established constitutional purpose” to “the organization's established purposes,” preserving member injury and germaneness while not excluding otherwise qualifying associations without a specifically constitutional mission.
+
+### Proposed first category of §4.5(5) — Supreme Court Original Jurisdiction
+
+— constitutional disputes between States, and disputes between a State and the Republic concerning their respective constitutional powers or obligations;
+
+**Integration note:** Replace only the first enumerated category. Preserve all other original-jurisdiction categories, including disputes between Consuls, structurally compromised independent-institution disputes, direct emergency rights claims, and amendment-consistency disputes. Ordinary constitutional challenges to federal statutes proceed through the judicial hierarchy unless another original-jurisdiction category applies.
+
+**History note:** Preserves direct SC jurisdiction for constitutional State–State disputes and structural State–Republic allocation-of-authority disputes, but not every constitutional challenge to a federal statute.
+
+### Proposed §4.5(6) — Immediate Defensive Military Authority
+
+Constitutional challenges to the exercise of immediate defensive military authority under §2.2 during active operations receive expedited independent judicial review.
+
+**History note:** Replaces automatic SC jurisdiction and a 48-hour decision maximum with expedited review by a competent independent court. Existing structural-dispute SC jurisdiction remains available where appropriate.
+
+### Proposed §4.5(8) — Interim Protection and Missed Judicial Deadlines
+
+Courts may issue interim protective orders where necessary to prevent irreparable harm pending judgment. Failure to rule within a constitutionally prescribed period does not determine the merits or produce a substantive constitutional outcome. The parties retain all otherwise available judicial remedies.
+
+**Integration note:** Replace existing §4.5(8) with this text and delete §4.5(9). No change to §4.5(7).
+
+**History note:** Removes detailed one-time Supreme Court extension votes and fixed extension caps, while preserving interim protection, binding judicial deadlines, and the principle that missing a deadline does not decide the merits.
+
+### Article IV disposition and implementation checks
+
+- **Replace:** §4.1; §4.2(1), §4.2(5); second paragraph of §4.3; §4.5(3), §4.5(4), first category of §4.5(5), §4.5(6), and §4.5(8).
+- **Delete:** Old §4.5(9) after consolidation into §4.5(8).
+- **Retain:** §§4.2(2)–(4), 4.3 first paragraph, 4.3.a, 4.4, 4.4.a, 4.5(1)–(2), remaining §4.5(5) categories, §4.5(7), 4.5.a, and 4.6, plus other unchanged text.
+- **Cross-references:** Confirm removal of the old §4.1 reference to §4.2(5), and later search the full Constitution for any references to deleted §4.5(9). Do not silently alter other provisions without review.
+- **Design basis:** Courts must keep cases moving; control of pending cases should not depend on political appointment delays. Use ordinary courts for ordinary legal disputes and reserve original Supreme Court jurisdiction for structural questions; preserve enforceable rights and judicial independence while minimizing detailed scheduling machinery.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
