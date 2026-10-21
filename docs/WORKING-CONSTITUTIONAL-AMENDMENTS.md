@@ -295,6 +295,46 @@ Courts may issue interim protective orders where necessary to prevent irreparabl
 - **Cross-references:** Confirm removal of the old §4.1 reference to §4.2(5), and later search the full Constitution for any references to deleted §4.5(9). Do not silently alter other provisions without review.
 - **Design basis:** Courts must keep cases moving; control of pending cases should not depend on political appointment delays. Use ordinary courts for ordinary legal disputes and reserve original Supreme Court jurisdiction for structural questions; preserve enforceable rights and judicial independence while minimizing detailed scheduling machinery.
 
+## Proposed amendment 7 — Article V citizenship review (settled working wording)
+
+**Scope:** Amend the first, second, and fourth paragraphs of §5.1; establish a new §5.1.b governing civic and constitutional proficiency. Preserve the third paragraph of §5.1 on revocation; retain §§5.1.a, 5.2, and 5.3 unchanged. All changes remain **working proposals, not enacted constitutional text**.
+
+### Proposed §5.1, first paragraph — Citizenship at Birth
+
+A child is a citizen from birth if at least one parent is a citizen, if born within the Republic to a legal-resident parent, or if born within the Republic and otherwise stateless. Citizens acquire full citizenship rights, including voting and eligibility for office, at 18.
+
+**History note:** Preserves descent through a citizen parent regardless of birthplace, while limiting birthright citizenship through a legal-resident parent to births within the Republic. Territorial statelessness protection is retained; note the substantive tradeoff that the revised birthright clause does not automatically protect an otherwise stateless child born abroad to noncitizen parents.
+
+### Proposed §5.1, second paragraph — Naturalization and Service
+
+A legal resident may earn citizenship upon meeting the legal qualifications and continuous residency period established by statute. Qualifying honorable military or national service reduces the required residency period as provided by statute. All naturalization pathways require the civic and constitutional proficiency assessment established under §5.1.b.
+
+**History note:** Recognizes qualifying honorable military or civilian national service by shortening statutory residency rather than exempting an applicant from civic understanding. Retains legal-resident eligibility, legislative authority over service qualifications and the amount of reduction, and a universal assessment for naturalization. The substantive test rules have one home in new §5.1.b.
+
+### §5.1, third paragraph — Revocation: retain unchanged
+
+**Review note:** Preserve prohibition on punitive citizenship revocation, clear-and-convincing judicial fraud findings for revocation of naturalization, protection against statelessness, and protection of previously acquired derivative citizenship.
+
+### Proposed §5.1, fourth paragraph — Derivative Status of Children
+
+A child born before a parent acquired legal residency or citizenship who joins that parent in the Republic within the period defined by statute, which may not be less than five years, receives the parent's status at the time of joining.
+
+**History note:** Clarifies that the child's derivative status follows the parent's status when the child joins, including if the parent has advanced from residency to citizenship. Retains the five-year statutory minimum joining window as a family-reunification safeguard.
+
+### New §5.1.b — Civic and Constitutional Proficiency
+
+The Republic shall maintain a civic and constitutional proficiency assessment administered by an independent agency under §3.9. The assessment must comply with §1.6 and may not evaluate political opinion or cultural loyalty. Its content and administration are governed by statute.
+
+**History note:** Establishes one constitutional home for the citizenship assessment, referenced by every naturalization pathway. Applies §1.6 nondiscrimination and retains the separate bar against evaluating political opinion or cultural loyalty, neither of which is comprehensively covered by §1.6 alone. Details remain statutory. §5.1.a is already occupied by State and Territory Voting Citizenship; new §5.1.b avoids renumbering it.
+
+**Integration note:** Article XIX references the civic proficiency assessment administrator during founding transition; confirm the statutory agency obligation remains coherent after the new §5.1.b is inserted. A child acquiring citizenship at birth is not required to pass the naturalization assessment.
+
+### Retained Article V provisions
+
+- **§5.1.a — State and Territory Voting Citizenship:** retain unchanged. Each citizen has exactly one State or Territory voting citizenship, no gap in affiliation, and statutory resolution of overlaps.
+- **§5.2 — Legal Resident Rights:** retain unchanged.
+- **§5.3 — Custodial Care of Children:** retain unchanged. The stay of removal until custodial arrangements are secured is an operative child-protection safeguard rather than dispensable administrative detail.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
