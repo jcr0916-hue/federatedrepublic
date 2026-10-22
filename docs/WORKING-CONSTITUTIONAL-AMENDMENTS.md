@@ -921,6 +921,79 @@ Retain unchanged. Panel operational separation and independence are reinforced s
 
 Proceed to **Article XII §12.1 — The Social State**. Check older approved fiscal/Monetary Authority register entries before proposing revisions; do not repeat already approved budget, §9.6, or §12.4 decisions. Only the working amendments document was changed at this checkpoint; the adopted Constitution and public website were not changed.
 
+## Proposed amendment 15 — Article XII Social State and fiscal functions (approved; 2026-10-22)
+
+**Status:** Approved working text/retentions, NOT enacted. **Proposed amendment 1 already governs §§12.1.b and 12.2(2)**; do not duplicate or supersede those separately approved fiscal sustainability clauses.
+
+### §12.1 — Social State (approved replacement)
+
+The Republic is a social state. Every Inhabitant, meaning every person present within the Republic's jurisdiction, is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory guarantees: universally accessible basic healthcare; social assistance sufficient to assist in maintaining basic material conditions; and free compulsory education for every child.
+
+The Legislature establishes the framework and adequacy standards for these guarantees by statute. No statutory adjustment may eliminate or substantially impair the constitutional guarantees established by this section. The Executive Monitor assesses compliance annually.
+
+Parents may direct their children's education within public standards.
+
+**History:** Replace prescription of *healthcare insurance* with baseline *access to basic healthcare*; publicly operated hospitals may satisfy the guarantee without insurance. Social assistance must assist in maintaining basic material conditions, not independently guarantee every outcome. Preserve free compulsory child education, human dignity, parental direction, and annual EM assessment. Remove §12.1 two-thirds concurrent-vote requirement for statutory adequacy reductions and the special Severe Revenue Contraction exception to that requirement; substantive constitutional guarantees against elimination/substantial impairment remain. Law determines service delivery and adequacy.
+
+### §12.1.a — Monetary Authority independence (approved replacement)
+
+The Monetary Authority is a constitutionally mandated independent agency under §3.[X], governed by §3.9 except as this section provides.
+
+It is responsible for monetary policy, currency issuance, fiscal integrity certification, and the National Endowment functions assigned by this Article. The Monetary Authority has exclusive authority to issue the Republic's currency; no other body may issue instruments intended to function as legal tender within the Republic.
+
+Principal decision-makers exercising the Monetary Authority's constitutional authority must be selected through an independent candidate process and confirmed by two-thirds of the Senate. No single officer or institution may appoint a majority of its principal decision-makers. Their terms must be staggered so that ordinary electoral turnover cannot replace the entire leadership at once.
+
+Disagreement over monetary policy, economic judgment, or a lawful certification is not cause for removal. A vacancy does not suspend or transfer the Monetary Authority's constitutional functions.
+
+**Integration:** Replace §3.[X] with exact new Article III independence section number; this references amendment 14, while preserving MA-specific powers, appointments, anti-capture and continuity rules.
+
+### §12.1.b and §12.2(2) — Already settled in amendment 1
+
+Retain the existing approved detailed State of the Economy report and the general long-term fiscal sustainability principle exactly as recorded in **proposed amendment 1**. Do not revert them to adopted text or revisit the earlier review.
+
+### §12.2 — Budget continuity and appropriations
+
+- **§12.2(1): Retain unchanged.** Annual budget originates in Assembly; respective Consul budget submissions and NRS disclosure; statutory deadline or 120-day fallback; one Consul's inaction does not block budget.
+- **§12.2(3)–(4): Retain unchanged**, subject only to terminology/cross-references made necessary by the approved Social State wording and independent institutional funding amendment. Constitutional interim appropriation covers courts, authorized defense, Social State continuity, civil servants, protected institutions, debt service; inflation adjustment; no expanding/initiating programs.
+- **DELETE §12.2(5)** withholding the pay of members of both chambers during a budget impasse. **Reason:** punitive and falls on legislators irrespective of responsibility; may favor independently wealthy members, while the automatic interim appropriation already preserves continuity.
+- **§12.2(6): Retain unchanged.** Legislature funds National Endowment by appropriation in years of surplus; EM annually assesses compliance.
+
+### §12.3 — Taxing power and National Revenue Fund (partial targeted change)
+
+**Retain** exclusive federal statutory taxation/appropriation, continued State/Territory/local taxing competence, National Revenue Fund custody and appropriation rules, and the approved-trade-agreement tariff provisions under §3.6 without alteration.
+
+**Replace the existing sentence** “The EM audits the Fund's receipts and disbursements annually.” with:
+
+“The Executive Monitor audits the National Revenue Fund's receipts and disbursements, reviews their compliance with constitutional and statutory requirements, and publishes its findings to the NRS.”
+
+**History:** Prefer explicit “audit, review, and report” to “oversight,” which may falsely imply operational direction or discretionary agency. EM has information-only duties and no control over appropriations or Fund management. Remove constitutionally fixed audit frequency; legislation may set cadence.
+
+### §12.4 — National Endowment (limited conforming change)
+
+**Retain** the Endowment's constitutional reserve purpose, MA stewardship, Severe Revenue Contraction certification, automatic transfer of funds during qualifying contractions, required statutory renewal after 12 months and thereafter at intervals no more than 12 months, and termination when the MA certifies the contraction has ended or the necessary renewal is not enacted.
+
+**Remove only obsolete references** in §12.4 to “any reduction made under the Severe Revenue Contraction exception in §12.1” and “any such reduction” because revised §12.1 no longer contains that procedural exception. Do not change the Endowment's disbursement rules. Check concordance before integrated enactment.
+
+### §12.5 — Internal commerce (retain unchanged)
+
+Retain prohibition on more burdensome requirements imposed on commerce originating in another State or Territory, while allowing uniform internal commerce standards by statute.
+
+### §12.6 — Fiscal equalization (approved replacement)
+
+The Legislature shall establish by statute a fiscal equalization mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I.
+
+The Executive Monitor shall audit and review the mechanism's compliance with constitutional requirements and publish its findings to the NRS. The Legislature shall publish a response to findings of noncompliance within a period established by statute.
+
+**History:** Remove EM *certification* implying approval, replace with auditing, reviewing and public findings without operational control. Drop constitutionally fixed annual frequency and 90-day response deadline; retain required legislative response and statutory implementation, plus substantive equalization guarantee.
+
+### Consolidation dependencies
+
+- Replace §3.[X] consistently in **§11.1(3)** and **§12.1.a** after the exact general-independence subsection number is chosen.
+- §12.4's contraction-linked financing **still operates**, even though its references to permission to reduce §12.1 adequacy standards become obsolete.
+- Reconcile §12.2(3) reference to institutions “protected under §9.6” with prior approved sufficiency-funding amendment; avoid reviving a removed statutory funding formula.
+- Maintain approved §12.1 EM annual compliance assessment and §12.2(6) EM annual assessment: these were explicitly preserved; remove annual audit cadence only in §12.3 and §12.6.
+- No changes to enacted Constitution, website, or prior amendments at this checkpoint.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
