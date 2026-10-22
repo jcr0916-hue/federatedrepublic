@@ -467,6 +467,44 @@ Compensation of federal officials is established by statute. No federal official
 - **Cross-reference check:** §8.2's reference to §7.4(6) remains a valid subsection reference but now points to expedited judicial review rather than a named court/period. Search for references to former §7.11 before enacting.
 - **Design basis:** Elected representatives exercise political postponement authority under two-thirds checks; independent courts police constitutional overreach. The Elections Panel advises/administers but does not gatekeep parliamentary power. Preserve constitutional rights and ethical accountability without assigning routine procedural details to the Constitution.
 
+## Proposed amendment 10 — Article VIII electoral finance and campaign conduct review (settled working wording)
+
+**Status:** Working proposal only. Enacted Constitution and website remain unchanged.
+
+### §8.1 — Electoral Finance: retain unchanged
+
+**Review note:** Maintain comprehensive reporting of every contribution to the Elections Panel, privacy-sensitive public aggregation of smaller contributions, prohibition of anonymous and foreign-source funds, prohibition of business-entity direct contributions, statutory individual contribution limits, distinct treatment of independent versus coordinated expenditures, and the Article I speech/association boundary. Do not duplicate §8.1's foreign-financing prohibitions elsewhere.
+
+### Proposed §8.2 — Campaign Conduct
+
+Candidate impersonation, vote suppression, and interference with election administration are prohibited. Campaign communications must clearly identify their sponsor. The Legislature shall establish sanctions by statute. The Elections Panel shall administer electoral conduct requirements but may not create substantive restrictions on political expression or judge the truthfulness, political merits, or opinions expressed in campaign communications.
+
+Constitutional officeholders may not use public resources, personnel, or official authority for electoral campaign purposes.
+
+**Integration note:** Replace §8.2 in full with the two paragraphs above. **Delete the old second paragraph in its entirety**, including the covert-foreign-operations clause and mandatory candidate disqualification and Elections Panel procedure. Do not relocate that old paragraph to another constitutional section.
+
+**History note:** Remove express Panel investigatory/technical-standard mandates; legislation handles those functions, penalties and law enforcement. Preserve its administrative, politically neutral role and constitutional bar on substantive political speech regulation. Section 8.1 already bars foreign electoral financing including intermediaries. Nonfinancial foreign assistance is no longer expressly forbidden solely by Article VIII: statutory law may address it. Candidate disqualification for foreign aid is not a mandatory constitutional penalty; offense, investigation, sanction and judicial review are left to normal law. Retain the prohibition on use of public resources for campaigning, removing the explanatory exception for good-faith ordinary official activity because application belongs to statute and courts.
+
+### Proposed §8.3 — Political Neutrality of Public Communication Resources
+
+Public communication resources, including those operated by private entities using public resources, shall be made available for electoral purposes on politically neutral and nondiscriminatory terms established by statute.
+
+**History note:** Replace access for “qualified candidates,” mandatory reasonable-rate terms, and Panel certification with technology-neutral neutrality for public communication resources, including privately operated use of public resources. No free access obligation; no political advantage in pricing, access or terms. Statute sets neutral workable conditions as future communications media evolve.
+
+### Proposed §8.4 — Electoral Assistance
+
+The Legislature may provide impartial electoral assistance by statute to support the exercise of the rights guaranteed under §1.8.
+
+**History note:** Rename §8.4 from Public Campaign Financing to Electoral Assistance. Replace compulsory public campaign funding, qualifying-candidate categories, prescribed initial allocations, conditions on acceptance and Panel annual compliance findings with *optional* impartial statutory electoral assistance. Citizen right to stand for office already has one constitutional home in §1.8; assistance need not be provided at all, but if provided must be impartial. Financial and nonfinancial assistance can be chosen by democratically accountable legislators.
+
+### Article VIII disposition and integration checks
+
+- **Retain:** §8.1 in full.
+- **Revise:** §8.2 (replace three paragraphs with two), §8.3, §8.4 and its heading.
+- **Do not inadvertently add:** statutory disqualification for accepting foreign assistance into constitutional text or a mandatory public financing duty.
+- **Cross-reference:** §8.4 refers directly to §1.8. §8.2 no longer references §7.4(6). Preserve the distinction between mandatory ordinary campaign disclosure and permissible aggregated publication of minor donations.
+- **Design basis:** Constitution establishes rights, political neutrality, funding-source prohibitions, and limits on abuse of public office. Legislature chooses programs and statutory enforcement mechanisms; Elections Panel administers rather than serves as political gatekeeper; courts review constitutional compliance.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
