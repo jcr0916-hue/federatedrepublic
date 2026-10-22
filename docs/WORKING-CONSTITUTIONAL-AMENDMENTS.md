@@ -505,6 +505,175 @@ The Legislature may provide impartial electoral assistance by statute to support
 - **Cross-reference:** §8.4 refers directly to §1.8. §8.2 no longer references §7.4(6). Preserve the distinction between mandatory ordinary campaign disclosure and permissible aggregated publication of minor donations.
 - **Design basis:** Constitution establishes rights, political neutrality, funding-source prohibitions, and limits on abuse of public office. Legislature chooses programs and statutory enforcement mechanisms; Elections Panel administers rather than serves as political gatekeeper; courts review constitutional compliance.
 
+## Proposed amendment 11 — Article IX Monitors review (approved decisions and integration dependencies)
+
+**Status:** Approved working directions and exact wording from the Article IX review; NOT enacted. This is a drafting register, not an assertion that all Article IX replacement sections are fully integrated. Do not merge a synthetic complete Article IX until unresolved interdependencies below are tested. Existing §9.6 revisions were already captured in earlier working entries; do not duplicate them.
+
+### Proposed §9.1 — Three Monitors
+
+The Republic maintains three constitutionally independent Monitors — Legislative (LM), Executive (EM), and Judicial (JM) — each selected under §9.2. Monitors hold an information-only mandate: they observe constitutional processes, assess compliance, and publish findings. Findings and assessments are not binding on any constitutional actor and are not a prerequisite for any legal proceeding or governmental function, except for consequences this Constitution expressly attaches to a finding. Each Monitor General serves a 10-year non-renewable term.
+
+Any constitutional officer, chamber, or body may request an assessment from a Monitor within its mandate. Monitors shall publish their findings and assessments to the NRS. Where an investigation or assessment is discontinued, the Monitor shall publish the reasons for discontinuation and the findings obtained before discontinuation.
+
+**History:** Remove prescribed response deadlines, non-responsiveness findings, compulsory completion after work becomes moot, and factually-impossible-only termination. Preserve transparent publication including reasons for discontinued investigations, while allowing investigative judgment.
+
+### Proposed §9.1.a — Legislative Monitor
+
+The Legislative Monitor audits the Legislature for fiscal accuracy and constitutional compliance, including the population census, Assembly districting under §3.3, and all information relating to the Legislature's public business. The Legislative Monitor also audits the Elections Panel's administration of referendum eligibility.
+
+**History:** Expand public-business oversight, preserve specific jurisdiction for census/districting and referendum eligibility, remove annual audit scheduling requirement.
+
+### Proposed §9.1.b — Executive Monitor
+
+The Executive Monitor audits both executives, their ministers and subordinate officers, the Monetary Authority, and federal administrative agencies, including independent agencies, for constitutional compliance and the exercise of their public authority.
+
+The Executive Monitor audits executive officers for dereliction of constitutional duties. Dereliction means failure to perform a constitutionally mandated function within the required period, except where circumstances genuinely beyond the officer's control prevented performance. Political disagreement with a constitutional requirement is not a defense.
+
+**History:** Clarify that independent agencies, ministers, and subordinate executive officers fall within EM oversight. Use Republic terminology rather than “cabinet.” Restrict EM dereliction oversight to executive officers, not all constitutional officers. Preserve distinction between dereliction and policy disagreement; do not confer authority to assess courts' legal reasoning.
+
+### Proposed §9.1.c — Judicial Monitor
+
+The Judicial Monitor audits the courts, judicial officers, the Elections Panel, and compliance with constitutional treaty and compact obligations, including all information relating to the public business of institutions within its mandate.
+
+**History:** Broad JM jurisdiction; no judicial decision-making authority or binding reassessment of court judgments.
+
+### Proposed §9.1.d — Acting Monitor General (approved partial replacement)
+
+Where a Monitor General's office becomes vacant or the Monitor General is temporarily unable to exercise its authority, the most senior eligible member of the affected Monitor's candidate pool by continuous pool tenure who accepts designation serves as Acting Monitor General until the vacancy is filled or the Monitor General's authority is restored.
+
+The Acting Monitor General holds full constitutional authority but may not be appointed as the permanent successor to the Monitor General for whom they act.
+
+**Integration requirement:** Retain original §9.1.d immediate term-expiry, succession, acting disqualification, vacancy, continuity, and NRS recording safeguards as applicable. This partial text alone is **not** a complete integrated §9.1.d. Check special succession conditions, ties, term scope and eligibility.
+
+### Proposed §9.1.e — Temporary Incapacity (approved structure)
+
+A Monitor General may declare themselves temporarily unable to exercise the duties of office.
+
+Where a Monitor General is unable to make such a declaration, the constitutional authority responsible for suspension under §9.7.a may determine temporary incapacity.
+
+During temporary incapacity, the Acting Monitor General assumes authority under §9.1.d. Temporary incapacity does not vacate the office or interrupt its term.
+
+A determination of involuntary temporary incapacity is subject to expedited judicial review.
+
+**Additional agreed restoration safeguard (requires integrated wording):** The affected Monitor General may declare recovery and resume office immediately unless the deciding authority obtains judicial relief to prevent restoration; the burden of continuing involuntary restriction lies with that authority. Remove former 24h/90d/30d incapacity cycles, mandatory public extension referendum and related procedures. Do not allow prolonged temporary incapacity to function as permanent removal.
+
+### §9.4 — Judicial Monitor and judicial candidate pools
+
+- **Delete existing §9.4(1)** detailed annual JM audit list: §9.1.c now establishes jurisdiction. Renumber appropriately at enactment.
+- **Replace existing §9.4(2)** with: “Eligibility for the Judicial Monitor Candidate Pool is limited to former State or Republic judges who have served on a court of record at the trial court level or above and have been out of judicial office for at least one year. Former Supreme Court justices must have been out of Supreme Court service for at least five years.”
+- **Replace existing §9.4(3)** with: “The Judicial Monitor Candidate Pool shall be audited jointly by the Legislative and Executive Monitors.”
+- **Change only first sentence of §9.4.a** to: “Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no disqualifying financial interest as defined in §7.10.”
+- **Retain the remainder of §9.4.a unchanged:** Former Supreme Court justice may never re-enter Judicial Pool; prior permanent service on another federal court bars reappointment to the *same* court but permits movement to other courts; temporary/acting service does not exhaust eligibility.
+
+**History:** Government lawyers, active State judges and other public officials may enter Judicial Pool without resigning first; incompatible service still governed on assumption of office. Fixed, nonrenewable judicial terms require a career path: no repeat term on same court to reduce conflicts, mobility to other courts to enable recruitment and advancement, Supreme Court as final pinnacle with no return. Preserve the trial-court floor and judicial-monitor cooling-off rules.
+
+### Proposed §9.5 — Publication, independent staff disclosures, access, obstruction, public reporting
+
+Monitor findings and assessments shall be published permanently to the NRS, subject to constitutional protections for confidential information and lawful security interests. No authority outside the issuing Monitor may suppress, delay, alter, or classify its findings.
+
+Monitor personnel may independently disclose evidence of improper suppression or alteration of findings to the NRS, subject to the same confidentiality protections, and shall be protected from retaliation for lawful disclosure.
+
+Monitors shall have unrestricted access to records, personnel, facilities, and systems within their constitutional audit mandates. Access to confidential or classified information does not authorize its public disclosure. Obstruction of a Monitor acting within its constitutional mandate shall be documented and published to the NRS.
+
+The three Monitors shall periodically provide the Legislature and the citizens with a joint report on the State of the Republic.
+
+**History:** Staff may reveal suppressed/altered findings but do not themselves issue official institutional findings. Remove detailed processing, required report delivery to Speakers, mandatory binary obstruction Fail designation, joint-work procedural rules, and fixed annual State of the Republic date. Adopt “periodically,” not “from time to time.” This combined §9.5 is assembled from individually approved component drafts and should be checked in final integration.
+
+### Proposed §9.5.a — Audit Findings and Review
+
+Monitors shall publish their audit findings to the NRS and submit them to the Senate for review. Where this Constitution requires a determination of compliance based on an audit, the Senate shall make that determination under procedures established by statute.
+
+A body or officer subject to a Monitor report shall publish a response to the NRS within a period established by statute. The response need not agree with the Monitor's findings.
+
+**History:** Eliminate JMC-mandated universal Pass/Fail classification and related prerequisites. Monitors make independent factual findings; Senate makes consequential compliance determinations where constitutionally required, with judicial review and public attribution. **Article XV companion reform mandatory** before constitutional enactment; no default remedy or inaction rule yet approved.
+
+### §9.5.b — Agency Accountability: retain unchanged
+
+Monitor findings, reports, and assessments do not substitute for a responsible body's independent obligation to perform its constitutional and statutory duties or to act on matters within its operational authority.
+
+### §9.6 — Funding
+
+Prior cross-article working amendment already replaces the inflation-adjusted automatic protected floor with §3.10 sufficient funding obligation and published rationale. No new change here.
+
+### Proposed §9.7 — Joint Monitor Council
+
+The three Monitor Generals constitute the Joint Monitor Council, which coordinates matters crossing Monitor jurisdictions and oversees compliance with constitutional processes assigned to it.
+
+Two Monitor Generals constitute a quorum. Council decisions require a majority of participating members. Dissenting positions shall be published to the NRS.
+
+The Council may establish compliance standards within its constitutional mandate but may not exercise functions assigned to another constitutional institution or override the independent authority of an individual Monitor.
+
+**Integration:** Retain JMC's NRS audit responsibility in §9.7(3), with frequency set by statute rather than mandatory annual. Distinguish Council *procedural* standards from the Senate's consequential Statehood Audit determinations; the JMC may not reinstate a Pass/Fail veto through standards.
+
+### Proposed §9.7.a — Institutional Compromise (approved principal allocation)
+
+Where two Monitor Generals find evidence that the third has engaged in serious misconduct or abuse of office, they may recommend suspension by publishing their findings to the NRS.
+
+Suspension requires approval by a majority of the Supreme Court for the Legislative Monitor General, jointly by the Speakers of both legislative chambers for the Executive Monitor General, or jointly by both executives for the Judicial Monitor General.
+
+Disagreement with a Monitor General's findings or conclusions is not grounds for suspension. Suspension does not constitute removal, which remains governed by §9.9.
+
+**Outstanding integration:** A fixed or statutory suspension duration limit and judicial review were discussed but no complete terminal wording approved. Do not silently import the old incapacity-referendum extensions. Ensure suspension cannot substitute for permanent removal; §9.1.d acting service remains effective during valid suspension.
+
+### §9.8 — Constitutional Pool Framework
+
+**Approved functional division:** Elections Panel maintains candidate registries and pools and *administers* constitutional lotteries; JMC audits compliance; it does not conduct draws or choose eligible individuals by political merit. The following two-sentence wording was approved in principle and must be integrated with statutory/constitutional implementation:
+
+“The Elections Panel maintains constitutional candidate pools and registries and administers constitutional selection lotteries under applicable constitutional and statutory requirements. The Joint Monitor Council audits compliance with those requirements.”
+
+**Replace §9.8(4)–(5)** with: “Each constitutional candidate pool shall contain at least five eligible members. A deficiency shall be published to the NRS, and the Elections Panel shall take action to restore the pool under procedures established by statute.”
+
+**Replace §9.8(6)** with: “Eligibility for constitutional candidate pools shall be determined solely by objective criteria established by this Constitution. No applicant may be excluded on grounds of legal philosophy, judicial temperament, ideological orientation, or political association.”
+
+**Replace §9.8(7)** with: “An applicant excluded or removed from a constitutional candidate pool is entitled to a published statement of reasons and timely judicial review under procedures established by statute.”
+
+**Retain §9.8(8) unchanged.** Existing members protected from retroactive criteria changes, but continuing financial and other constitutional eligibility rules apply.
+
+**History:** Entrench objective eligibility and impartial lotteries, five-person pools, transparent deficiencies and judicial remedies; remove detailed review deadlines, exclusive Supreme Court appeals and administrative roles assigned to the JMC.
+
+### §9.9 — Removal (settled directions, integration required)
+
+**For serious misconduct or abuse of office of a Monitor General:** Public confirmation is matched by public removal. A national removal referendum requires **60% of votes cast** under §7.3 without a 55% eligible-citizen turnout floor. Preserve stated public grounds, no automatic suspension upon filing, finality against repeated allegations from same conduct, and ability to present genuinely new evidence or conduct.
+
+**Initiation by non-audited institution, acting alone:**
+- Legislative Monitor: either Consul.
+- Executive Monitor: either legislative chamber.
+- Judicial Monitor: either legislative chamber or either Consul.
+
+**Approved revised referendum timing/finality component:**
+
+“The Elections Panel shall administer a national removal referendum within 90 days of initiation, or at the next regularly scheduled federal election, whichever occurs first. Failure to conduct the referendum within that period does not terminate the proceeding. The affected Monitor General retains their authority unless separately suspended under this Constitution.
+
+Where a removal referendum fails, another proceeding may not be initiated against the same Monitor General on substantially the same grounds arising from the same conduct during that term. This restriction does not apply to materially new conduct or evidence.”
+
+**Permanent incapacity is a DISTINCT no-fault removal ground:**
+
+“Where two Monitor Generals determine that the third is permanently incapable of performing the duties of office, they may submit a recommendation for removal to the Speaker of the Assembly.
+
+Removal for permanent incapacity requires approval by two-thirds of each chamber of the Legislature and by both Consuls. Political disagreement with a Monitor General's findings or conclusions does not constitute incapacity.”
+
+Remove permanent incapacity from the general misconduct-referendum track when integrating; ensure the incapacity decision and acting service cannot be confused with misconduct suspension.
+
+**Other constitutionally confirmed independent officers (revised §9.9(5)):**
+
+“For constitutionally confirmed independent officers other than Monitor Generals and federal judges, removal may be initiated by a resolution supported by one-third of either legislative chamber. Removal requires a concurrent vote of two-thirds of the full seated membership of each chamber, on grounds established by statute. Initiation does not suspend the officer's authority.”
+
+**Retain §9.9(6)** prospective-only statutory removal categories. Avoid redundant duplication of statutory ground-authority sentence when consolidating.
+
+### §9.9.a — Monitor General Disclosure: retain unchanged
+
+Monitor Generals independently publish §7.10 financial disclosures directly to NRS without another Monitor reviewing them. Concealment of disqualifying interests or failure to recuse remains serious misconduct.
+
+### Mandatory cross-article integration checks before enacting Article IX
+
+1. **Article XV §15.2(2)–(5), (7)–(8), §15.1.a, §15.3:** Currently relies on *individual Monitor material-failure findings*, two-of-three failures and no-one-failed success, automatic Statehood on second success, recurring Statehood audits, and Senate Provisional status vote after third failure. Rework so Senate makes the legally consequential audit compliance determination, not Monitors; preserve two successful assessments, existing-State remediation, automatic legal consequences where intended, public judicial review, and an anti-inaction mechanism. Senate voting thresholds, clocks, and a default outcome for Senate inaction **not yet decided**. Do not convert unfavorably into Senate's indefinite veto over Territorial Statehood.
+2. **§9.5 and §9.8(4), §9.7:** Erase obsolete Pass/Fail references, including §9.5 obstruction-as-Fail and JMC standards-as-gatekeeper. Keep factual compliance findings and disclosure of pool deficiencies. The old §9.7(3) NRS audit must remain, with statutory frequency.
+3. **§9.1.d–e / §9.7.a / §9.9:** Preserve immediate authority transfer at term expiry, continuity of acting service, voluntary recovery with judicial check, appropriate no-fault incapacity removal, temporary suspension separate from permanent misconduct removal. Review whether 2/3 of full seated membership and two-Consul concurrence are sufficient/possible in emergencies; resolve lack of fixed suspension sunset without invented terms.
+4. **§9.3 / §9.8 / Article XI Elections Panel:** Transfer every JMC-conducted constitutional candidate lottery to Elections Panel administration while retaining independent audit. §9.3 still calls for *JMC public lottery* in several fallbacks and JM selection; must change those execution references, but no other §9.3 appointment mechanism was approved for revision. Ensure no institution audits its own lottery.
+5. **§9.4 numbering and §9.4.a:** Deleting §9.4(1) requires renumbering existing (2)–(3), updating references if any. Remove “no current government position” only as a pool admission bar; preserve incompatibility at actual assumption of judicial authority.
+6. **Article XVII §17.1(4):** The Constitution presently treats §9.2–§9.4 Monitor selection and independence, §9.1 mandate, and §9.6 funding as entrenched amendment subjects requiring Popular Ratification. Track changed wording and any resulting references; do not silently dilute entrenchment.
+7. **Maintain source scope:** Article IX revised text in this register is working proposal only; Article XV cross-article work remains open and should be discussed before integrated adoption.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
