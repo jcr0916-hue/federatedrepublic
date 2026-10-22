@@ -847,6 +847,43 @@ A determination that the remainder would not be viable triggers the Territory Co
 5. No changes approved here to §15.4(1) State devolution, §15.4(2), §15.4(4), or §15.5 base requalification. No new constitutional restriction/extension invented for those sections.
 6. Avoid duplicate rules across §§9.5.a/15.2/15.3: general principle in §9.5.a, representative assignments and fallback in Article XV only.
 
+## Review checkpoint 13 — Article X retained; Article XI commenced (2026-10-21)
+
+**Status:** Review history / navigation checkpoint, NOT a proposed constitutional amendment. The adopted Constitution and website remain unchanged. All agreed Article X provisions were expressly retained verbatim; no new constitutional text proposed for Article X.
+
+### Article X — National Record System: entire article reviewed and retained unchanged
+
+- **§10.1(1):** Permanent, tamper-evident and freely accessible constitutional public record for every Inhabitant, without charge. Approved unchanged.
+- **§10.1(2):** Universal publication rule for constitutional acts, orders, findings, certifications and determinations; government ownership and official custody of records; ordinary retention and classification governed by Article and law. Approved unchanged. Preserves immediate constitutional continuity where an act takes effect independent of publication.
+- **§10.1(3):** Electoral transparency and mandatory NRS disclosure with no classification exception, subject to ballot secrecy and protected personal information. Approved unchanged.
+- **§10.1(4):** Specific constitutional publication deadlines prevail; otherwise publication as soon as possible. Approved unchanged; publication is not a universal legal-effect prerequisite unless expressly specified.
+- **§10.1(5):** No deletion, alteration or reclassification of published records; transparent addendum correction alongside original. Approved unchanged.
+- **§10.1(6):** Emergency record-access restriction only on unanimous NRS Panel finding of imminent, specific, documented individual-safety threat; at most 30 days absent court confirmation, recorded access restriction, no repeated restriction on substantially identical grounds after expiry without judicial confirmation. Approved unchanged.
+- **§10.1(7):** Physically independent, continuously operating Judicial Monitor parallel authentication system, full constitutional effect from issuance, original-timestamp migration upon restoration, automatic authoritative record after 180 days without NRS restoration. Approved unchanged; technical/operational architecture left to statute.
+- **§10.1(8):** Legislature establishes technical standards for both systems by statute. Approved unchanged.
+- **§10.2 classification authority:** National security only; standards published in advance by executive or established by statute; statutes prevail; stated classification grounds; judicial review. Approved unchanged.
+- **§10.2 duration:** 25-year ordinary limit; single five-year extension on executive justification; EM assesses and publishes but cannot approve or veto the extension. Approved unchanged.
+- **§10.2 declassification:** Automatic expiration; NRS Panel publishes within 30 days without additional government authorization. Approved unchanged.
+- **§10.2 judicial release:** Standing to challenge any time; courts release any portion not lawfully classifiable, publishing grounds for remaining redactions. Approved unchanged.
+
+**History and rationale:** NRS constitutional permanence, public custody, auditability, safety exception, redundancy, and lawful classification remain substantive guarantees. Statute sets changing technical details; no rewriting required. Do not revisit these settled retention decisions absent new cross-article conflict.
+
+### Article XI — §11.1(1) approved unchanged
+
+“Two constitutionally independent panels — the NRS Panel and the Elections Panel — operate the Republic's permanent record infrastructure and electoral systems respectively.”
+
+Retain unchanged. Panel operational separation and independence are reinforced separately in §11.1(3).
+
+### Article XI — §11.1(2) offered but NOT YET APPROVED (resume here)
+
+**Proposed targeted change (pending user decision):**
+
+“The Elections Panel establishes and maintains the National Voting System, sets administrative and technical standards for federal elections, certifies election equipment for State procurement, audits State compliance with federal election standards, administers referendums and confirmation votes, maintains constitutional candidate pools and registries, administers constitutional selection lotteries, and certifies all federal election results.”
+
+**Proposed reason:** Institutionalize the already approved Article IX division: Elections Panel administers constitutional pools and public lotteries, while JMC audits compliance. Existing §11.1(2) does not mention pools/lotteries. Exact wording has only been recommended, NOT adopted. First question next session is whether to adopt, revise or reject this targeted addition; do not prematurely treat it as approved or include it as enacted in a PR.
+
+**Next sequence:** §11.1(2) pending; then §11.1(3) through (6), §11.2 NVS privacy/auditability, §11.3 State election noncompliance. Keep the earlier Article IX/Article XV dependency register intact and avoid duplicating agreed rules.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
