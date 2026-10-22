@@ -674,6 +674,179 @@ Monitor Generals independently publish §7.10 financial disclosures directly to 
 6. **Article XVII §17.1(4):** The Constitution presently treats §9.2–§9.4 Monitor selection and independence, §9.1 mandate, and §9.6 funding as entrenched amendment subjects requiring Popular Ratification. Track changed wording and any resulting references; do not silently dilute entrenchment.
 7. **Maintain source scope:** Article IX revised text in this register is working proposal only; Article XV cross-article work remains open and should be discussed before integrated adoption.
 
+## Proposed amendment 12 — Article XV Statehood Audits, chamber responsibility and Article IX harmonization
+
+**Status:** Approved decisions documented as working proposals only. This entry supersedes the *Senate-only* consequential audit determination in amendment 11's §9.5.a. Preserve unamended constitutional safeguards when integrating; do **not** replace Article XV wholesale from excerpts alone.
+
+### §9.5.a — General rule for consequential audit determinations (revised; approved)
+
+Monitors shall publish their audit findings to the NRS and submit them to the constitutional institution responsible for the matter under review.
+
+Where this Constitution requires a determination of compliance based on an audit, that institution shall make the determination under the applicable constitutional and statutory procedures.
+
+A body or officer subject to a Monitor report shall publish a response to the NRS within a period established by statute. The response need not agree with the Monitor's findings.
+
+**History:** The Legislature is not universally responsible and the Senate is not universally the proper chamber. A responsible institution—not the Monitor—makes the consequential determination. This wording supersedes the conflicting first two paragraphs of amendment 11 §9.5.a. Other Article IX decisions remain unchanged.
+
+### Article XV — Institutional responsibilities and voting standards (approved)
+
+- **Territorial admission audit:** Assembly first, as Territories have Assembly representation but not Senate representation. An affirmative determination of Statehood compliance requires a **majority of the full seated membership** of the deciding chamber. The same threshold applies following transfer to Senate.
+- **Existing-State biennial audit:** Senate first, as Senate represents States. An affirmative determination of either compliance **or noncompliance** requires a **simple majority of votes cast with a quorum present**. The same standard applies upon transfer to Assembly.
+- **Provisional status:** Separate from failed audits and initially decided by Senate. Requires three consecutive failed biennial audits, substantive judgment that deficiencies are serious and persistent, and affirmative **majority of full seated membership**. Not automatic from audit failures. Upon inaction transfer to Assembly, same substantive and voting requirements apply.
+- **Inconclusive votes:** Each chamber devises its own tie/reconsideration rules, but completion requires an affirmative decision one way or the other. An inconclusive vote or failed motion is not an adverse determination; inability to determine by the deadline constitutes inaction.
+- **Primary chamber:** acts within statutory deadline **not exceeding 90 days** after receipt of complete audit record. **Other chamber:** authority transfers **automatically and exclusively** upon failure to determine; acts within statutory deadline **not exceeding 90 days** after transfer. Original chamber cannot reclaim authority for that determination. Rejection/completed negative determination is not inaction; judicial review remains.
+- **Both chambers inactive:** expedited judicial review; courts may enforce the *receiving* chamber's constitutional duty through appropriate remedies but cannot make the substantive determination themselves. Neither inactivity nor missed deadlines automatically approves/rejects audits, changes an existing State's status, or causes a Territorial proceeding to lapse. Inaction-based judicial compulsion as the *first* fallback was discussed then explicitly rejected in favor of automatic transfer.
+- Each individual determination shall be recorded to NRS with reasons. **Every existing State** receives an affirmative legislative determination of its biennial audit, but the chamber may consider multiple audit reports together if each State receives a separately identifiable valid determination; no deemed administrative approval.
+
+**Approved candidate language for deadlines:**
+
+“The chamber responsible for a Statehood Audit determination shall reach a determination within the period established by statute, not exceeding 90 days after receipt of the completed audit record.
+
+If authority transfers because of inaction, the receiving chamber shall reach a determination within the period established by statute, not exceeding 90 days after the transfer.
+
+A failure by either chamber to act shall not cause a pending Statehood proceeding to lapse or alter an existing State's constitutional status. The provisions governing transfer of authority and judicial enforcement remain applicable.”
+
+**Approved general transfer language:**
+
+“Where this Constitution assigns an audit determination to a legislative chamber, that chamber shall make the determination within the period established by statute.
+
+If the responsible chamber fails to act within that period, authority to make the determination transfers automatically to the other chamber, which may exercise that authority under the same substantive constitutional requirements.
+
+A determination made by the receiving chamber has the same constitutional effect as one made by the originally responsible chamber. Once authority transfers, the original chamber may not reclaim it for that determination.
+
+All determinations shall be published to the NRS with stated reasons and remain subject to judicial review.”
+
+**Approved last fallback:**
+
+“The receiving chamber shall exercise transferred authority within a period established by statute. If it fails to act, the matter is subject to expedited judicial review.
+
+The courts may enforce the receiving chamber's duty through appropriate judicial remedies but shall not substitute their judgment for the chamber's substantive determination.
+
+Failure by either chamber to act shall not, by itself, constitute approval or rejection of an audit or alter a State's constitutional status.”
+
+**Approved tie wording:**
+
+“Each chamber shall establish its own procedures for resolving inconclusive votes on audit determinations. A determination is complete only when the chamber has affirmatively determined compliance or noncompliance by the required majority.
+
+Failure to reach a determination within the prescribed period constitutes inaction, and authority transfers in accordance with this Constitution.”
+
+**Approved differentiated thresholds:**
+
+“A determination that a Territory satisfies the constitutional requirements for Statehood requires approval by a majority of the full seated membership of the responsible chamber.
+
+A determination that an existing State has passed or failed a Statehood Audit requires a majority of votes cast, with a quorum present.
+
+Placement of an existing State into Provisional status requires a separate determination under §15.3 and approval by a majority of the full seated membership of the responsible chamber.
+
+Where authority transfers between chambers, the applicable voting threshold remains unchanged and is calculated against the membership or votes of the chamber exercising that authority.”
+
+**Integration warning:** Ensure the proposed language provides a definite procedure for *noncompliant Territorial audit findings* at the same voting threshold or otherwise clarifies how refusal of an affirmative compliance motion counts, without accidentally treating it as an incomplete vote. The user's agreed rule requires a definite determination and does not permit a failed motion to operate as a compliance finding. Keep statute free to regulate tie procedures.
+
+### §15.2 — Territorial Statehood, completed audit and audit findings (approved)
+
+- Preserve **two successful audits**, first within **two years of initiation**, second within **two years of the first**, and **immediate constitutional Statehood upon affirmative determination on the second** (subject to §15.5.a).
+- For eligibility against two-year windows, audit is completed when **all three Monitor findings** have been published to NRS. A timely completed audit may be determined after the deadline without lapsing solely because legislative review continues.
+- Do not allow the clock to expire due to legislative failure; nor extend deadlines just because an *incomplete* audit was initiated.
+- Delete two-of-three Monitor failure formula and one-Monitor-warning-as-not-failure rule; individual Monitor reports are facts/evidence, not votes. Responsible chamber makes overall compliance determination based on complete record and constitutional standards, including a serious deficiency identified by only one Monitor.
+- Retain substance of existing audit criteria: lawful competitive elections, functional institutions, fiscal capacity, rule of law, Article I compliance and objective statutory capacity criteria.
+
+**Approved timely-completion text:**
+
+“For purposes of the qualification periods under this section, a Statehood Audit is completed when all required Monitor findings have been published to the NRS.
+
+An audit completed within the applicable qualification period remains eligible for legislative determination after that period expires. Where the responsible chamber subsequently determines that such an audit satisfies the constitutional requirements, the determination counts toward the Territory's Statehood qualification.
+
+Upon an affirmative determination on the second qualifying audit, Statehood takes effect immediately by constitutional operation, subject to §15.5.a where applicable.”
+
+**Approved audit record/authority text:**
+
+“Each Monitor shall conduct the portion of the Statehood Audit within its constitutional mandate and publish its findings to the NRS.
+
+A completed Statehood Audit requires findings from all three Monitors. The responsible legislative chamber shall determine overall compliance with the applicable constitutional requirements based on the complete audit record.
+
+No individual Monitor finding, nor any combination of Monitor findings, shall automatically determine the outcome of the audit.”
+
+**Retain existing §15.2(1)** governing Territorial authority resolution or citizen petition with statutorily set **5%–15% signatures** authenticated through NVS and certified by Elections Panel, and geographic subdivision petition; do not unintentionally remove.
+
+**Retain existing §15.2(6)**: Statehood immediately creates **two Senate seats**, assigned by public Elections Panel lot to distinct Senate classes, special election within **90 days**; initial senators serve remainder of class terms.
+
+### §15.2(7) — Biennial review (approved)
+
+“Every State shall undergo a biennial Statehood Audit. The Senate shall determine compliance for each State under the procedures established by this Constitution.
+
+The Senate may consider multiple audit reports together, provided that each State receives a separately identifiable determination supported by the required majority and published to the NRS.
+
+Failure to reach a determination within the prescribed period transfers authority to the Assembly under the applicable constitutional procedures.”
+
+Preserve judicial review for legality, jurisdiction, procedural compliance and valid criteria; adapt original language that prevented courts from substituting policy judgment for Monitor findings to protect independent factual findings AND lawful legislative determinations under new framework.
+
+### §15.2(8) — Active conflict (approved)
+
+“Where active conflict prevents completion of a biennial Statehood Audit in a significant portion of a State's territory, the Monitors may publish a provisional audit-status finding. Such a finding constitutes neither compliance nor noncompliance and does not count toward consecutive audit failures.
+
+Provisional audit status is unavailable where the State materially contributed to the conditions preventing completion of the audit.”
+
+### §15.3(1) — Graduated remediation (approved)
+
+“A State receiving a failed biennial Statehood Audit shall enter remediation. Following the first consecutive failure, the State shall publish a Remediation Plan to the NRS. Following a second consecutive failure, the State shall publish a revised Remediation Plan.
+
+A successful audit interrupts the sequence of consecutive failures. A third consecutive failure permits consideration of Provisional status under this section.
+
+The periods for submitting Remediation Plans shall be established by statute.”
+
+Remove default 90-day remediation-plan filing deadline; retain statutory deadlines. Do not conflate the distinct 90-day *legislative decision* maximum.
+
+### §15.3(2) — Provisional status separately decided (approved)
+
+“Upon a third consecutive failed Statehood Audit, the Monitors shall submit the audit history and findings to the Senate.
+
+The Senate shall determine whether the seriousness and persistence of the State's constitutional deficiencies justify Provisional status. Entry into Provisional status requires an absolute majority of the full seated Senate and takes effect upon publication of the determination to the NRS.
+
+If the Senate declines to place the State into Provisional status, the State remains subject to remediation. A subsequent failed biennial Statehood Audit permits renewed consideration under this section.”
+
+**Integrate approved transfer safeguard:** Senate decides within statutory deadline of at most 90 days from *completed record*, rather than a restartable submission date; Assembly takes over on Senate inaction; if Assembly remains inactive, courts compel decision rather than decide status. Eliminate old §15.3(3) sole consequence of privileged Senate business as inconsistent with agreed automatic transfer.
+
+### §15.3(4) — Judicial review (approved)
+
+“Determinations under this section are subject to judicial review for constitutional compliance, jurisdiction, and procedural legality. A court may invalidate a determination made contrary to this Constitution but may not substitute its judgment for the legislative chamber's assessment of whether Provisional status is warranted.”
+
+Remove categorical exclusion of Senate vote from judicial review, while preserving bar against judicial political substitution.
+
+### §15.1.a — Automatic restoration (approved)
+
+“A State in Provisional status remains a State, and its government and Assembly representation continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues.
+
+Upon two consecutive biennial Statehood Audits determined to demonstrate compliance under §15.2, the State automatically returns to ordinary State status. The Elections Panel shall administer a special election within 90 days to fill any vacant Senate seats.”
+
+No new discretionary Senate restoration vote after two lawful compliance determinations; chamber transfer applies to each.
+
+### §15.4(3) — Merger with State: LM/JM informational (approved)
+
+“A Territory or a defined portion of a Territory may merge with a geographically contiguous existing State. Merger requires approval by referendum under this section, approval by the receiving State through its constitutional process, and ratification by a simple majority of the Senate.
+
+The Legislative and Judicial Monitors shall jointly assess the merger's effect on the receiving State's constitutional integrity and publish their findings to the NRS. The Senate shall consider those findings when determining whether to ratify the merger.”
+
+**Critical preservation during integration:** Current §15.4(3) still requires **60% of votes cast and 50% eligible-voter participation**, State consent and petition certified via NVS/Elections Panel with statutory **5%–15%** signature threshold, petition period at most **12 months**. New text is a *partial rewrite*, not repeal of these specifics. Retain §15.4(4) **30-day referendum challenge period** unless separately reviewed. Do not accidentally convert Senate's current *simple majority* ratification into an absolute majority by using “majority of full seated membership”; a prior draft error was explicitly corrected.
+
+### §15.5.a — Remainder viability: JMC information, Assembly determination (approved)
+
+“The Joint Monitor Council shall assess whether the remaining portion of a Territory could independently satisfy the constitutional requirements for Statehood and publish its findings to the NRS.
+
+The Assembly shall determine whether the proposed subdivision would compromise the remaining Territory's constitutional viability, considering the Council's findings. If the Assembly fails to act within the applicable period, authority transfers to the Senate under the constitutional procedures governing legislative inaction.
+
+A determination that the remainder would not be viable triggers the Territory Convention process under this section.”
+
+**Preserve existing §15.5.a(1)**: two or more petitions certified within **90 days** are grouped and sent to Territory Convention, independently of a viability determination. **Preserve core §15.5.a(3)**: Civic Consul convenes Convention made of Territory's Assembly members; convention has **90 days** to propose comprehensive resolution; failure leads to lapse, Territory unchanged and **three-year** restriction on substantially similar geographic petitions; any convention proposal requires referendum ratification and otherwise applicable Article XV process. Existing §15.5.a(2) JMC 90+30 assessment clock, adverse default on JMC silence, and pre-referendum ordering must be harmonized: adverse default must be removed; actual deadlines/sequencing for JMC and Assembly not yet separately settled. Do not accidentally imply that incomplete JMC reporting always lets merger proceed.
+
+### Review results and remaining integration cautions
+
+1. Reconcile affirmative Territorial admissions and negative Territorial determinations with definite-vote rule. Distinguish outcome of a failed motion from genuine audit rejection and from missed deadline.
+2. Coordinate general 90-day primary/secondary decision deadlines with §15.5.a's existing sequencing of JMC assessment, referendum, and Convention; §15.4 merger Senate ratification is a *different kind of decision* and should not accidentally acquire automatic chamber transfer unless specifically authorized.
+3. Article IX §9.5.a **new text in this entry supersedes** amendment 11's Senate-specific wording; retain non-binding Monitors and the constitutional actor responsible for consequential decisions.
+4. Retain §15.2(6) automatic Senate representation and preserve petition/referendum thresholds and original special election clocks.
+5. No changes approved here to §15.4(1) State devolution, §15.4(2), §15.4(4), or §15.5 base requalification. No new constitutional restriction/extension invented for those sections.
+6. Avoid duplicate rules across §§9.5.a/15.2/15.3: general principle in §9.5.a, representative assignments and fallback in Article XV only.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
