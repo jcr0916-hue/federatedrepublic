@@ -391,6 +391,82 @@ A person whose removal cannot be executed remains at liberty, subject to all app
 - **Cross-article:** The asylum right in §1.17 and the judicial authority in Article IV continue to govern. Check internal and external citations to §6.2(3) or (4) before later implementation. These notes do not amend the enacted Constitution or public website.
 - **Design basis:** Immigration policy belongs to statute, executive administration follows the law, and asylum decisions and immigration-law remedies are judicial functions. Maintain substantive liberty, counsel, and child protections while reducing instructions about judicial methods.
 
+## Proposed amendment 9 — Article VII elections and federal office review (settled working wording)
+
+**Scope:** These are proposed drafting changes only, not amendments to the adopted Constitution or public website. Preserve all Article VII provisions not specified below. Decisions made section by section in review.
+
+### Proposed §7.2(7) — Election-result review
+
+The results of a federal election or a direct vote of the citizens are final upon certification, subject to timely judicial review for material error or violation of constitutional electoral requirements, under procedures established by statute.
+
+**History note:** Replaces exclusive Supreme Court review for material certification errors with judicial review for material error or violations of constitutional electoral requirements. Statute establishes procedures; finality and timeliness remain.
+
+### Proposed §7.2.a — Special Elections and Postponements
+
+Special elections shall be conducted under procedures established by statute.
+
+A federal election may be postponed due to a natural disaster by a two-thirds vote of each chamber of the Legislature. A postponed election must be held as soon as practicable. The mandates of affected officeholders continue until certification of the postponed election.
+
+**History note:** Eliminates Elections Panel certification as a legal prerequisite or veto, repeated 90-day authorizations, and constitutionally prescribed disaster/infrastructure procedural thresholds. The Elections Panel informs elected representatives and conducts elections; postponement authority belongs to the Assembly and Senate voting by two-thirds in each chamber. Courts can review overreach under ordinary constitutional judicial authority without a special review clause. The accepted trigger remains *natural disaster* rather than an expanded reference to any security emergency or catastrophe. Office continuity persists until election certification.
+
+### Proposed §7.4(6) — Candidate-disqualification review
+
+A candidate disqualified by the Elections Panel is entitled to expedited judicial review under procedures established by statute. Review must be available in sufficient time to protect the candidate's right to participate in the election or to obtain an effective remedy where the election has already occurred.
+
+**History note:** Removes mandatory Appellate Court forum and default 14-day filing period, preserving meaningful expedited access to the judiciary, with effective pre- or post-election relief.
+
+### §7.6 — Continuity and Acting Service: retain unchanged
+
+**Review note:** General uninterrupted-succession obligation complements office-specific rules and immediate operation of authority in §7.15; no redundant repeal.
+
+### §7.7 — Official Capacity Protection: retain unchanged
+
+**Review note:** Maintain civil protection for lawful official action but no immunity for criminal conduct, unauthorized acts, or constitutional violations. No added constitutional good-faith immunity or judicial liability script.
+
+### Proposed §7.10 — Ethics and Financial Disclosure (consolidates former §§7.10–7.11)
+
+(1) A financial interest is disqualifying where it creates a direct and material conflict with the impartial exercise of official duties.
+
+(2) Except for Monitor Generals as provided in Article IX, constitutional officers must disclose their financial interests, holdings, income sources, and liabilities to the Monitor responsible for their office, within a period defined by statute after taking office and annually thereafter. Disclosures are published to the NRS.
+
+(3) An officer with a direct financial interest in a decision within their authority must recuse themselves. This requirement is self-executing.
+
+(4) A constitutional officer with a personal, financial, or other material connection to a matter within their authority must publicly disclose that connection and state whether they will participate or recuse themselves, with reasons for that decision. The disclosure and explanation are published to the NRS. This provision does not diminish mandatory recusal under subsection (3).
+
+(5) Constitutional officers may not accept gifts exceeding a de minimis threshold established by statute; absent such statute, the threshold is zero. Gifts received in an official capacity belong to the Republic and must be disclosed and transferred to the appropriate public authority regardless of value.
+
+(6) Each Monitor may investigate violations within its mandate and refer matters warranting further action to the appropriate authority.
+
+(7) The Legislature may establish codes of conduct, disclosure requirements, conflict-of-interest standards, and disciplinary procedures for constitutional offices outside the Legislature. Such rules may not diminish constitutional authority, tenure, or institutional independence.
+
+**Integration note:** Replace §7.10 entirely with the preceding consolidated text and delete §7.11. Retain §7.13 separately as applying to federal employees and military personnel rather than constitutional officers.
+
+**History note:** One constitutional home for financial interests, recusal, material-connection explanations, gift limits, Monitor oversight, and supplementary statutory ethics authority. Mandatory recusal applies to direct financial interests; other material connections require public disclosure and a justified participation/recusal decision. Do not automatically extend mandatory recusal to every personal connection.
+
+### Proposed §7.12 — Post-Service Restrictions
+
+Constitutional officers may not exploit non-public information, privileged access, or official influence obtained through their service for private benefit after leaving office. The Legislature may establish post-service restrictions and cooling-off periods by statute. The responsible Monitor must audit compliance; enforcement rests with the appropriate legal authority.
+
+**History note:** Only `must establish` becomes `may establish` for statutory post-service restrictions and cooling-off periods. The directly operative anti-exploitation rule and Monitor oversight remain. Statute can tailor safeguards by risk without compulsory cooling-off for every office.
+
+### §7.13 — Federal Public Service Ethics: retain unchanged
+
+**Review note:** Distinct statutory disclosure and recusal obligations for federal employees and military personnel, subject to Monitor audits; do not fold into constitutional-office rules.
+
+### Proposed §7.14 — Compensation of Federal Officials
+
+Compensation of federal officials is established by statute. No federal official may determine their own compensation or that of their direct supervisors other than through such a statute. Changes to the compensation of elected constitutional officers take effect only after the next election for the affected office following enactment.
+
+**History note:** Delete only the final existing sentence governing functional official benefits and accommodations. Preserve statutory control, protection from personal self-setting outside statute, and delayed changes for elected constitutional officers. Implementation should not let noncash personal benefits circumvent compensation safeguards.
+
+### Article VII disposition and integration checks
+
+- **Revise:** §7.2(7), §7.2.a, §7.4(6), §7.10 (incorporating former §7.11), §7.12, and §7.14.
+- **Delete:** Former §7.11 as separate section after its content is integrated into §7.10.
+- **Retain:** §7.1, §7.2(1)–(6), §7.3, §7.4(1)–(5), §§7.5–7.9, §7.13, and §7.15, subject only to future explicit review.
+- **Cross-reference check:** §8.2's reference to §7.4(6) remains a valid subsection reference but now points to expedited judicial review rather than a named court/period. Search for references to former §7.11 before enacting.
+- **Design basis:** Elected representatives exercise political postponement authority under two-thirds checks; independent courts police constitutional overreach. The Elections Panel advises/administers but does not gatekeep parliamentary power. Preserve constitutional rights and ethical accountability without assigning routine procedural details to the Constitution.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
