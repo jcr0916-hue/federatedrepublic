@@ -994,6 +994,101 @@ The Executive Monitor shall audit and review the mechanism's compliance with con
 - Maintain approved §12.1 EM annual compliance assessment and §12.2(6) EM annual assessment: these were explicitly preserved; remove annual audit cadence only in §12.3 and §12.6.
 - No changes to enacted Constitution, website, or prior amendments at this checkpoint.
 
+## Proposed amendment 16 — Article XIII Direct Democracy (approved; 2026-10-22)
+
+**Status:** Approved working text and preservation decisions, not enacted. This entry documents outcomes of §§13.1–13.2 review. One conforming **§12.2 interim-appropriation expansion** is required, not a new fiscal formula.
+
+### §13.1(1) — Optional-referendum initiation (approved)
+
+“Citizens may initiate a national referendum to repeal enacted legislation. A petition must be filed with the Elections Panel within 90 days of enactment and proceeds in two phases, each authenticated through the NVS. The period for completing both phases shall be established by statute, subject to §13.1(8).”
+
+**History:** Keep optional referendum a time-limited challenge to *recent legislation*, not general repeal initiative. Keep 90-day filing deadline, two-phase NVS authentication. Remove fixed 20-month phase completion deadline and delegate to statute, subject to no functional prohibition.
+
+### §13.1(2)–(3) — Retain unchanged
+
+Preserve geographic Stage One threshold set by statute within **0.5%–3% of eligible voters** in each of at least one-third of all States and Territories; Stage Two requires **5% nationally**, counting Phase One signatures toward the threshold.
+
+### §13.1(4) — Rights and constitutional obligations (approved)
+
+“Legislation is not exempt from optional referendum solely because it expands a constitutional right or implements a constitutional obligation.
+
+The repeal of legislation does not extinguish, suspend, or diminish any right or obligation established by this Constitution.”
+
+**History:** Drop blanket exceptions for statutes chiefly expanding Article I rights or implementing a constitutional obligation. Citizens may reject a specific implementation, but Constitution still compels performance. Budget-law blanket exemption also removed subject to separate financial continuity protection.
+
+### §13.1 — Appropriation and budget repeal clarification (approved)
+
+“Citizens may repeal legislation through an optional referendum, including legislation containing appropriations. A referendum may not amend an appropriation or substitute a different amount.
+
+Repeal of legislation terminates the authority it establishes, subject to existing lawful obligations and the constitutional requirements for continuity of government.”
+
+**History:** Repealing a program statute may terminate related spending authority (subject to separately continuing appropriations and other laws), but a repeal referendum cannot rewrite, reduce or substitute a new budgetary amount. Preserve lawful payments/commitments already incurred. Confirm exact placement and avoid repeating the same repeal power in two subsections during final drafting.
+
+### §12.2 — Companion automatic interim appropriation after budget repeal (approved principle)
+
+Where an **annual budget is repealed by optional referendum**, the existing **§12.2(3)–(4) interim automatic appropriation** applies until a replacement budget is enacted. This closes the enacted-then-repealed gap without allowing the voters to appropriate substitute amounts. Preserve original covered protected functions, prior-year inflation-adjusted baseline, no new/expanded programs, and prior deletion of §12.2(5) legislative pay withholding under amendment 15. **No precise integrated text for §12.2 was independently approved**; draft conforming wording only during consolidation.
+
+### §13.1(5) — Administrative eligibility and judicial review (approved)
+
+“The Elections Panel shall determine eligibility for optional referendum upon filing and publish its reasons to the NRS. Its determination is subject to timely judicial review under procedures established by statute.”
+
+**History:** Keep Panel initial eligibility administration; remove Appellate Court exclusive forum and fixed 14-day appeal; courts resolve legal disputes.
+
+### §13.1(6) — Referendum conduct and approval (approved)
+
+“Upon verification of the required petition signatures, the Elections Panel shall administer the referendum within 90 days.
+
+A majority of votes cast in favor of repeal shall repeal the legislation upon certification of the result.”
+
+**History:** Preserve Panel 90-day administration deadline and majority of votes cast. Delete Legislature-prescribed **30%–50% turnout** requirement, to prevent strategic abstention working as veto. Separate guarantee protects existing obligations after repeal.
+
+### §13.1(7) — Repeat attempts and reenactment (approved)
+
+“A referendum or initiative rejected by the voters may not be reinitiated in substantially the same form within three years, unless the proposal has been materially changed.
+
+The Legislature may reenact legislation repealed by referendum. Such legislation remains subject to a new optional referendum.”
+
+**History:** Three-year bar applies to *actual voter rejection* of substantially same proposal, not failures merely to collect required signatures. Materially changed proposals can return earlier. New legislative reenactments subject to fresh referendum.
+
+### §13.1(8) — Retain unchanged
+
+“No statute, rule, fee, deadline, or administrative practice may make a process established by this Article nominally available but functionally prohibitive.”
+
+### §13.2(1) — Citizen-initiative petitions and Panel review (approved)
+
+“Citizens may propose legislation directly to the Legislature through the two-phase petition process established under §13.1, without the filing deadline applicable to optional referendums. Phase Two requires signatures from 10% of eligible voters nationally.
+
+The Elections Panel shall determine whether a proposal complies with the constitutional requirements for citizen legislative initiatives and publish its reasons to the NRS. Its determination is subject to timely judicial review under procedures established by statute.”
+
+**History:** 10% national signatures vs 5% optional referendum; preserve geographic Phase One requirement through reference to §13.1, no new-law filing window; broaden timely judicial review consistent with §13.1(5).
+
+### §13.2(2) — Citizen-initiative completion and approval (approved)
+
+“Upon verification of the required petition signatures, the Legislature shall have 90 days to enact the proposed legislation.
+
+If the Legislature does not enact the proposal within that period, the Elections Panel shall administer a national referendum on the proposal within the following 90 days.
+
+The proposal becomes law upon certification of approval by 60% of votes cast.”
+
+**History:** Preserve first legislative opportunity (90d), default public ballot (another 90d) and 60% vote-cast approval for *enacting* citizen legislation; remove **50% participation floor** to eliminate abstention veto.
+
+### §13.2(3) — Limits on citizen initiatives (approved)
+
+“An initiative enacted under this section is subject to this Constitution as any statute is, and may not narrow a right under Article I, directly appropriate public funds, or impose or alter taxes, duties, or tariffs. The need for legislative appropriations to implement an initiative does not make it ineligible.
+
+Disputes concerning an initiative's constitutional validity are subject to judicial review on petition of any person with standing.”
+
+**History:** Citizen proposal can establish statutory programs, rights, duties, and responsibilities that will cost money; Legislature holds competence to appropriate exact amounts and impose/change revenue measures. The fact a program requires future appropriations cannot defeat petition eligibility. Preserve judicial review, without exclusive Supreme Court assignment. Need ensure no inadvertent statutory appropriation is created merely by a mandate to operate a program.
+
+### Integration and stress-test issues (not new approvals)
+
+1. Treat existing appropriations and obligations with care: repealing a program act does not inherently repeal appropriations enacted independently for other lawful uses; explain/settle treatment of independent appropriations during formal drafting rather than asserting legal cancellation without textual support.
+2. Ensure referendum eligibility and ballot certification deal consistently with *partially constitutional* statutes; constitutional obligations survive, but the Legislature may need to promptly enact a replacement implementation, subject to judicial enforcement.
+3. Existing §13.1(4) budget exemption and §13.2(3) no-revenue/no-appropriation rules are **different**: optional referendum can reject appropriations, citizen legislative initiative cannot create or adjust them.
+4. §12.2 continuity if enacted annual budget is subsequently repealed is **approved** as a targeted fallback. Do not change §12.2 ordinary budget initiation or expand citizen power to modify budget line items.
+5. Preserve §13.1(2)–(3) and (8) original text and avoid duplicate judicial appeal provisions in §13.2(1).
+6. Prior Article IX public referendum turnout reforms support the same abstention principle, but constitutional thresholds are deliberately distinct: simple majority for repeal, **60%** for initiative enactment.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
