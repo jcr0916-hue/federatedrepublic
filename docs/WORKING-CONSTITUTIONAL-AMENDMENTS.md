@@ -884,6 +884,43 @@ Retain unchanged. Panel operational separation and independence are reinforced s
 
 **Next sequence:** §11.1(2) pending; then §11.1(3) through (6), §11.2 NVS privacy/auditability, §11.3 State election noncompliance. Keep the earlier Article IX/Article XV dependency register intact and avoid duplicating agreed rules.
 
+## Proposed amendment 14 — General independent-agency protection and Article XI Elections Panel (approved; 2026-10-22)
+
+**Status:** Approved working wording and Article XI retention checkpoint, not enacted. Replaces the **pending** status of §11.1(2) in Review checkpoint 13.
+
+### Article III — General operational independence (approved)
+
+“An independent agency established by this Constitution or by the Legislature is operationally independent of both executives and of the Legislature in the exercise of its functions, subject to this Constitution and applicable law.”
+
+**Integration:** Select a suitable **specific §3.x number** during consolidation. Independence limits interference with decisions/functions; it does not itself make legislatively created agencies constitutionally permanent or exempt them from statutory law, fiscal obligations, Executive Monitor audit, or judicial review. This common provision governs constitutional and statutory independent agencies.
+
+### §11.1(2) — Elections Panel responsibility (approved)
+
+“The Elections Panel establishes and maintains the National Voting System, sets administrative and technical standards for federal elections, certifies election equipment for State procurement, audits State compliance with federal election standards, administers referendums and confirmation votes, maintains constitutional candidate pools and registries, administers constitutional selection lotteries, and certifies all federal election results.”
+
+**History:** Add constitutional candidate pools, registries and selection lotteries to Panel administration. JMC audits their compliance under Article IX; it does not administer lotteries. All existing Elections Panel duties preserved.
+
+### §11.1(3) — Specific cross-reference and mutual independence (approved)
+
+“The NRS Panel and Elections Panel are independent agencies under §3.[X] and are operationally independent of each other in the exercise of their respective functions.”
+
+**Integration:** Replace **§3.[X]** with the specific Article III section adopted above. Panels are themselves established constitutionally. This provision contains only additional mutual independence, leaving executive/legislative independence at its single Article III home. Never merge placeholder as though final.
+
+### Article XI — Remaining sections explicitly approved for retention without amendment
+
+- **§11.1(1):** Both panels constitutionally independent and responsible respectively for permanent record and electoral systems.
+- **§11.1(4):** §3.9 appointments; at least five members per panel; no appointing authority holds majority of appointments in one electoral term.
+- **§11.1(5):** Temporary technical emergency measures, no changes to election rules/timelines or NRS permanence; 72-hour expiry and fresh published threat determination for further measures.
+- **§11.1(6):** Panel qualified civil servant Acting designations when below five; Civic Consul limited fallback appointments; 180-day cap and no Civic Consul-appointed acting majority.
+- **§11.2:** NVS ballot secrecy, independent public/individual verifiability, resilience, strictly limited voter-data use, nonburdensome access, mandatory election notices.
+- **§11.3:** Elections Panel State noncompliance audits and notices; statutory opportunity to cure; affected federal-election certification and time-limited direct administration; State administration automatically resumes; votes already cast stay valid.
+
+**History:** Preserve institutional independence plus accountability. Specific §11.1(6) theoretical inability to restore a panel of five where executive acting majority cap blocks designations was noted, but user approved retaining current balance. All Article XI substantive review complete.
+
+### Next review
+
+Proceed to **Article XII §12.1 — The Social State**. Check older approved fiscal/Monetary Authority register entries before proposing revisions; do not repeat already approved budget, §9.6, or §12.4 decisions. Only the working amendments document was changed at this checkpoint; the adopted Constitution and public website were not changed.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
