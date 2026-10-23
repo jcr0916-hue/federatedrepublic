@@ -964,11 +964,10 @@ A Territory operates under a Territorial Compact: the restructuring agreement un
 
 ### §15.1.a — Provisional Status
 
-“A State in Provisional status remains a State, and its government and Assembly representation continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues.
+A State in Provisional status remains a State, and its government and Assembly representation continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues.
 
-Upon two consecutive biennial Statehood Audits determined to demonstrate compliance under §15.2, the State automatically returns to ordinary State status. The Elections Panel shall administer a special election within 90 days to fill any vacant Senate seats.”
+Upon two consecutive biennial Statehood Audits determined to demonstrate compliance under §15.2, the State automatically returns to ordinary State status. The Elections Panel shall administer a special election within 90 days to fill any vacant Senate seats.
 
-No new discretionary Senate restoration vote after two lawful compliance determinations; chamber transfer applies to each.
 
 ### §15.2 — The Statehood Audit
 
