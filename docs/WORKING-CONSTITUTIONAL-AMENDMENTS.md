@@ -1823,6 +1823,18 @@ The Assembly is responsible for the consequential viability determination, revie
 
 **Reason:** The Provisional-status question cannot mature before the third failed biennial audit has actually been determined. The 90-day statutory maximum for the initial Senate decision and the automatic exclusive transfer to the Assembly on inaction remain unchanged, as do the receiving chamber's deadline and judicial-enforcement fallback. This does not restart or extend the legislative clock on the underlying biennial audit itself.
 
+## Operational validation checkpoint — Statehood, succession, and founding handoff (2026-10-23)
+
+**Status:** Scenario-test findings only; no new amendment approved or integrated by this checkpoint.
+
+**Statehood:** §15.2 protects an audit completed within the qualifying period pending a later compliance determination. §15.2(5) expressly subjects subdivision Statehood to remainder viability under §15.5.a. However, §15.5.a does not explicitly specify the point at which failure by the Civic Consul to report permits the Legislature to proceed entirely independently, or how the §15.2.a decision clock attaches to a viability determination without a completed audit record. Preserve the approved JMC → Civic Consul → legislative assessment route; do not presume approval or rejection from silence.
+
+**Executive continuity:** §2.9 and §2.16 provide immediate full succession or acting authority, respectively; §2.6.a covers failure to form a domestic government. §2.9.a permits the first reachable State head to serve as Emergency Designee when federal succession is unreachable. Total loss of contact with all State authorities leaves no identifiable reachable emergency actor under this mechanism; the extent to which this merits text rather than operational preparedness is unsettled.
+
+**Founding transition:** §19.2(2) transfers functions immediately as the corresponding Republic institution becomes constitutionally capable; §19.3 preserves limited caretaker continuity until transfer. §19.3.a(6) separately gives limited military authorization/cessation periods after legislative and Legat Consul readiness. Whether capability has been established may be contestable where predecessor and Republic institutions disagree; any additional certification mechanism is unapproved.
+
+**No changes made to substantive constitutional text in this review.** Verify timing and institutional readiness against founding arrangements and legislation in future implementation testing. Existing approved automatic transfers and judicial remedies remain unaffected.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
