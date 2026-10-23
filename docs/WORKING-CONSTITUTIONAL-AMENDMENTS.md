@@ -1967,6 +1967,20 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Next:** Articles XI–XIV. No text change authorized by this checkpoint.
 
+## Simplification pass 4 — Articles XI–XIV (2026-10-23)
+
+**Status:** Editorial screening; no approved constitutional text changed.
+
+**XI — Election and record panels:** §§11.1(1) and (3) partly restate independence also supplied by §3.9.a. Potential shortening must retain independence *between* the two panels, appointment balance, minimum staffing, and emergency acting-member fallback. §11.2's secrecy, public verification, privacy, and degraded-operation standards are distinct; §11.3's cure and temporary federal administration safeguard prevents non-compliance from indefinitely blocking elections. Preserve.
+
+**XII — Social state and fiscal architecture:** §12.1.a references general independent-agency protection, but the Monetary Authority's exclusive monetary functions, confirmation safeguards, leadership continuity, and removal protections are additional specific rules. Its §12.1.b reporting obligation is distinct. §§12.2.a and 12.4 supply emergency funding and endowment backstops with separate triggering circumstances and limits; no safe procedural deletion identified.
+
+**XIII — Direct democracy:** §13.2 deliberately reuses the two-phase petition framework of §13.1 while specifying different national signature requirements and a legislative-response fallback. The cross-reference is already a useful compression; keep the distinct initiative restrictions and referendum timeline.
+
+**XIV — Military:** §14.2 restates the Legat Consul's command responsibility also expressed in §2.2, but §14.2 separately binds the use of authorized operations to legislative scope and appropriations. This is a candidate for language-by-language comparison, not immediate deletion. §14.4's treaty authority and judicial review and §14.5's State-force rules are independent safeguards; retain.
+
+**Disposition:** Two modest editorial candidates: agency-independence cross-references in XI/XII and military-command wording across II/XIV. Neither is approved for amendment. Continue screening Articles XV–XX.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
