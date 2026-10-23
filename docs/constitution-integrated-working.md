@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III, IV, and XVI–XX have approved working amendments integrated. Article II is partially integrated pending its later military framework in Article XIV; Articles V–XV still require integration. Cross-references have not been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
+> **Integration is incomplete:** Articles I, III–VIII, and XVI–XX have approved working amendments integrated. Article II is partially integrated pending its later military framework in Article XIV; Articles IX–XV still require integration. Cross-references have not been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
 
 ---
 
@@ -430,17 +430,21 @@ A judgment or status order published to the NRS is self-authenticating and effec
 
 ### §5.1 — Citizenship
 
-A child is a citizen from birth if at least one parent is a citizen or legal resident, or if the child would otherwise be stateless. Citizens acquire full citizenship rights, including voting and eligibility for office, at 18.
+A child is a citizen from birth if at least one parent is a citizen, if born within the Republic to a legal-resident parent, or if born within the Republic and otherwise stateless. Citizens acquire full citizenship rights, including voting and eligibility for office, at 18.
 
-A legal resident may earn citizenship after the continuous residency period and legal qualifications established by statute upon demonstrating civic and constitutional proficiency, or through honorable completion of military or national service. Any required assessment must test constitutional and civic knowledge, not political opinion or cultural loyalty, and be administered by an independent agency under §3.9.
+A legal resident may earn citizenship upon meeting the legal qualifications and continuous residency period established by statute. Qualifying honorable military or national service reduces the required residency period as provided by statute. All naturalization pathways require the civic and constitutional proficiency assessment established under §5.1.b.
 
 Citizenship may not be revoked as punishment. Naturalized citizenship may be revoked only by judicial finding, on clear and convincing evidence, that it was obtained through material fraud in the application, and never where revocation would cause statelessness. Revocation does not affect derivative citizenship previously acquired by another person.
 
-A child born before a parent acquired legal residency or citizenship who joins that parent in the Republic within the period defined by statute, which may not be less than five years, receives the parent's status.
+A child born before a parent acquired legal residency or citizenship who joins that parent in the Republic within the period defined by statute, which may not be less than five years, receives the parent's status at the time of joining.
 
 ### §5.1.a — State and Territory Voting Citizenship
 
 Every citizen is a voting citizen of exactly one State or Territory, determined by residence or domicile under applicable law. No law may leave a citizen without a State or Territory of voting citizenship. Statute must resolve conflicting claims; recognition in one jurisdiction terminates prior recognition in another.
+
+### §5.1.b — Civic and Constitutional Proficiency
+
+The Republic shall maintain a civic and constitutional proficiency assessment administered by an independent agency under §3.9. The assessment must comply with §1.6 and may not evaluate political opinion or cultural loyalty. Its content and administration are governed by statute.
 
 ### §5.2 — Legal Resident Rights
 
@@ -462,23 +466,21 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 (1) Only the federal government may remove a person from the Republic.
 
-(2) State sponsorship denials may be challenged only for discrimination contrary to §1.6; the court determines the remedy.
+(2) State sponsorship denials may be challenged on grounds of discrimination contrary to §1.6. Federal certification denials on national security grounds may be challenged through judicial review. Courts determine the appropriate remedy.
 
-(3) Where federal certification is denied on national security grounds, a reviewing court may examine classified evidence in camera. If the evidence does not establish a credible, specific, and documented security concern, the denial is vacated and certification must be reconsidered on the remaining criteria.
-
-(4) A person subject to removal proceedings, or challenging a decision under this section, is entitled to counsel appointed at public expense where they cannot afford representation.
+(3) A person subject to removal proceedings, or challenging a decision under this section, is entitled to counsel appointed at public expense where they cannot afford representation.
 
 ### §6.3 — Asylum and Protection
 
-(1) An asylum claim must be determined before removal may be executed. A claim found to have been filed solely to delay removal may be expedited by statute, without diminishing the right to a fair hearing or the protections of §1.18.
+(1) An asylum claim must be determined before removal may be executed.
 
-(2) Where the independent federal asylum adjudicative process grants protection, the person acquires legal residency by operation of that determination; State sponsorship and federal certification are not required conditions.
+(2) Where a federal court grants asylum, the person acquires legal residency by operation of that determination; State sponsorship and federal certification are not required conditions.
 
 (3) No penalty arising solely from irregular entry may be imposed on a person whose claim is pending or has been granted.
 
 (4) Asylum proceedings must provide a qualified adjudicator; interpreter access; the right to present evidence and witnesses; the right to legal representation with appointed counsel at public expense where the applicant cannot afford representation; a written decision with grounds; and a right of appeal. The asylum proceedings statute must ensure accessibility to persons in Territories and geographically remote areas.
 
-(5) The Legislature must establish an independent federal asylum adjudicative process by statute, institutionally separate from immigration enforcement, removal, foreign affairs, intelligence, and national-security operations. Adjudicators must exercise independent judgment, with protections established by statute sufficient to preserve impartial decision-making.
+(5) Asylum claims shall be adjudicated by independent courts within the judicial branch. The Legislature shall provide for their jurisdiction and proceedings by statute.
 
 (6) An unaccompanied minor arriving in the Republic holds full §1.18 protection from the moment of contact. A federal legal guardian must be appointed by an independent federal court with jurisdiction over the point of contact within 72 hours.
 
@@ -486,7 +488,7 @@ Legal residency requires sponsorship under the applicable State or federal frame
 
 ### §6.3.a — Unexecuted Removal Orders
 
-A person whose removal cannot be executed remains at liberty, subject to all applicable laws of the jurisdiction in which they reside. The Legislature may establish reasonable registration and reporting requirements.
+A person whose removal cannot be executed remains at liberty, subject to all applicable laws of the jurisdiction in which they reside.
 
 ---
 
@@ -516,11 +518,13 @@ A person whose removal cannot be executed remains at liberty, subject to all app
 
 (6) The Republic must provide the financial and technical assistance necessary for every State to meet federal election standards. Assistance is subject to Elections Panel oversight.
 
-(7) The results of a federal election or a direct vote of the citizens are final upon certification, subject only to timely Supreme Court review for material error in the certification of votes, sought under procedures established by statute.
+(7) The results of a federal election or a direct vote of the citizens are final upon certification, subject to timely judicial review for material error or violation of constitutional electoral requirements, under procedures established by statute.
 
 ### §7.2.a — Special Elections and Postponements
 
-Special elections are administered by the Elections Panel under procedures established by statute. Where the Elections Panel certifies that a natural disaster or catastrophic infrastructure failure makes a federal election impossible across a substantial portion of the Republic, the Legislature may postpone the affected election for up to 90 days by a 2/3 vote of each chamber. The mandates of affected officeholders extend until certification of the postponed election. Any further postponement requires renewed Elections Panel certification that holding the affected election remains impossible and renewed legislative approval by the same threshold. Elections proceed as soon as practicable once the impediment has ended. Elections Panel determinations are subject to expedited judicial review.
+Special elections shall be conducted under procedures established by statute.
+
+A federal election may be postponed due to a natural disaster by a two-thirds vote of each chamber of the Legislature. A postponed election must be held as soon as practicable. The mandates of affected officeholders continue until certification of the postponed election.
 
 ### §7.3 — Electoral Supermajority Threshold
 
@@ -538,7 +542,7 @@ Except for constitutional-amendment referendums governed by §17.1, any supermaj
 
 (5) An office-specific restriction does not disqualify a person from another constitutional office unless this Constitution expressly provides otherwise.
 
-(6) A candidate disqualified by the Elections Panel may appeal to the Appellate Court within 14 days, unless another period is established by statute. The Court must determine whether the applicable eligibility requirements were correctly applied and resolve the appeal in sufficient time to permit the candidate's participation in the scheduled election or, where the election has been held, before certification.
+(6) A candidate disqualified by the Elections Panel is entitled to expedited judicial review under procedures established by statute. Review must be available in sufficient time to protect the candidate's right to participate in the election or to obtain an effective remedy where the election has already occurred.
 
 ### §7.5 — Removal from Federal Office
 
@@ -568,19 +572,17 @@ An elected constitutional mandate may not be shortened, suspended, or terminated
 
 (3) An officer with a direct financial interest in a decision within their authority must recuse themselves. This requirement is self-executing.
 
-(4) Constitutional officers may not accept gifts exceeding a de minimis threshold established by statute; absent such statute, the threshold is zero. Gifts received in an official capacity belong to the Republic and must be disclosed and transferred to the appropriate public authority regardless of value.
+(4) A constitutional officer with a personal, financial, or other material connection to a matter within their authority must publicly disclose that connection and state whether they will participate or recuse themselves, with reasons for that decision. The disclosure and explanation are published to the NRS. This provision does not diminish mandatory recusal under subsection (3).
 
-(5) Each Monitor may investigate violations within its mandate and refer matters warranting further action to the appropriate authority.
+(5) Constitutional officers may not accept gifts exceeding a de minimis threshold established by statute; absent such statute, the threshold is zero. Gifts received in an official capacity belong to the Republic and must be disclosed and transferred to the appropriate public authority regardless of value.
 
-### §7.11 — Codes of Conduct and Conflicts of Interest
+(6) Each Monitor may investigate violations within its mandate and refer matters warranting further action to the appropriate authority.
 
-The Legislature may establish codes of conduct, disclosure requirements, conflict-of-interest standards, and disciplinary procedures for constitutional offices outside the Legislature. Such rules may not diminish constitutional authority, tenure, or institutional independence.
-
-A constitutional officer with a personal, financial, or other material connection to a matter within their authority must publicly disclose that connection and state whether they will participate or recuse themselves, with reasons for that decision. The disclosure and explanation are published to the NRS.
+(7) The Legislature may establish codes of conduct, disclosure requirements, conflict-of-interest standards, and disciplinary procedures for constitutional offices outside the Legislature. Such rules may not diminish constitutional authority, tenure, or institutional independence.
 
 ### §7.12 — Post-Service Restrictions
 
-Constitutional officers may not exploit non-public information, privileged access, or official influence obtained through their service for private benefit after leaving office. The Legislature must establish post-service restrictions and cooling-off periods by statute. The responsible Monitor must audit compliance; enforcement rests with the appropriate legal authority.
+Constitutional officers may not exploit non-public information, privileged access, or official influence obtained through their service for private benefit after leaving office. The Legislature may establish post-service restrictions and cooling-off periods by statute. The responsible Monitor must audit compliance; enforcement rests with the appropriate legal authority.
 
 ### §7.13 — Federal Public Service Ethics
 
@@ -588,7 +590,7 @@ The Legislature must establish disclosure and recusal requirements for federal e
 
 ### §7.14 — Compensation of Federal Officials
 
-Compensation of federal officials is established by statute. No federal official may determine their own compensation or that of their direct supervisors other than through such a statute. Changes to the compensation of elected constitutional officers take effect only after the next election for the affected office following enactment. Official benefits and accommodations must reflect the functional requirements of the office.
+Compensation of federal officials is established by statute. No federal official may determine their own compensation or that of their direct supervisors other than through such a statute. Changes to the compensation of elected constitutional officers take effect only after the next election for the affected office following enactment.
 
 ### §7.15 — Authority by Constitutional Operation
 
@@ -610,19 +612,17 @@ Financial contributions to electoral campaigns and expenditures coordinated with
 
 ### §8.2 — Campaign Conduct
 
-Candidate impersonation, vote suppression, and interference with election administration are prohibited. Campaign communications must clearly identify their sponsor. The Elections Panel administers electoral conduct requirements; the Legislature establishes sanctions by statute. The Elections Panel may investigate objectively identifiable violations of this section and establish technical and administrative standards, but may not create substantive restrictions on political expression or judge the truthfulness, political merits, or opinions expressed in campaign communications.
+Candidate impersonation, vote suppression, and interference with election administration are prohibited. Campaign communications must clearly identify their sponsor. The Legislature shall establish sanctions by statute. The Elections Panel shall administer electoral conduct requirements but may not create substantive restrictions on political expression or judge the truthfulness, political merits, or opinions expressed in campaign communications.
 
-Foreign governments, foreign nationals, and foreign-controlled entities may not conduct covert operations to influence Republic elections. A candidate who knowingly accepts prohibited foreign electoral assistance is disqualified from that election cycle by determination of the Elections Panel, made before certification of the election after notice and an opportunity to respond, subject to appeal under §7.4(6).
+Constitutional officeholders may not use public resources, personnel, or official authority for electoral campaign purposes.
 
-Constitutional officeholders may not use public resources, personnel, or official authority for electoral campaign purposes, whether campaigning for reelection or for another office. Ordinary official duties and communications undertaken in good faith do not constitute campaign activity merely because an election is approaching.
+### §8.3 — Political Neutrality of Public Communication Resources
 
-### §8.3 — Campaign Access to Public Communication Resources
+Public communication resources, including those operated by private entities using public resources, shall be made available for electoral purposes on politically neutral and nondiscriminatory terms established by statute.
 
-Operators of communication channels on public resources, including broadcast spectrum, must offer qualified candidates access impartially and at reasonable rates, so that no candidate is excluded by the limits of their own resources. The terms of access are established by statute. The Elections Panel must certify compliance.
+### §8.4 — Electoral Assistance
 
-### §8.4 — Public Campaign Financing
-
-The Legislature must by statute establish a public campaign financing system available to all qualified candidates for federal office on equal terms. Public financing must provide qualified candidates an initial allocation sufficient to establish a campaign and communicate with voters. Acceptance of public support does not bar a candidate from private fundraising under §8.1, and no candidate may be disadvantaged in eligibility, ballot access, or access under §8.3 by reason of participating. The Elections Panel administers the system and publishes annual compliance findings.
+The Legislature may provide impartial electoral assistance by statute to support the exercise of the rights guaranteed under §1.8.
 
 ---
 
