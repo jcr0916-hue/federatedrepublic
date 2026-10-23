@@ -1888,6 +1888,14 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 - **§2.6.a single-candidate rejection:** A national yes/no ballot is prescribed when only one Civic Consul candidate advances, but §2.6.a does not expressly describe the next nomination/election cycle if voters reject that candidate. The Acting Civic Consul remains the continuity officeholder under subsection (2). A narrow repeat-ballot fallback may merit consideration, but its wording and scheduling have not been approved. Do not add unapproved deadlines.
 - **§2.9.a:** Simplified and integrated, with the State Emergency Council facilitating State and Territory restoration; see the preceding integrated-revision note. No further reopening in this checkpoint.
 
+## Approved clarification — §2.6.a unsuccessful Civic Consul election (2026-10-23)
+
+**Status:** Approved and integrated in the unpublished working Constitution; not enacted.
+
+**Text added following §2.6.a(6):** “If no candidate is elected, the nomination and election process shall repeat.”
+
+**Reason:** Provides a straightforward repeat mechanism when a sole candidate is rejected or an election otherwise produces no winner. The existing Acting Civic Consul continues under §2.6.a(2) while the process repeats. No additional constitutional scheduling rule was introduced.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
