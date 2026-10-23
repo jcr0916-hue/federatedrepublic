@@ -195,17 +195,17 @@ No civil servant, military member, or person exercising federal authority may co
 
 ### §2.9.a — State Emergency Council
 
-(1) At each federal electoral period, the Elections Panel publishes a public-lot ordered list of States to the NRS. A State's head of state is its constitutionally designated officer or, absent a designation, the presiding legislative officer.
+(1) At each federal electoral period, the Elections Panel shall publish to the NRS a public-lot ordered list of States. Each State is represented for this purpose by its constitutionally designated head of state or, absent one, its presiding legislative officer.
 
-(2) If no one in the Legat Consul's succession order can be reached, the head of state of the first reachable State is the Emergency Designee. The Designee commands the military and acts to restore constitutional government.
+(2) When essential federal constitutional authority cannot be exercised through ordinary succession or emergency procedures, the head of the first reachable State on that list becomes Emergency Designee. The other reachable State heads constitute the State Emergency Council, which may direct or replace the Designee.
 
-(3) The heads of state of the other reachable States form the State Emergency Council, which directs and may replace the Designee. The Designee and Council are bound by Article I.
+(3) The Designee may exercise the military command and essential continuity authority necessary to preserve the Republic and restore its constitutional government. The Designee and Council remain bound by Article I.
 
-(4) Ten days after a §2.11 declaration or the Designee taking office, whichever is first, any federal seat or Consular office whose holder cannot be reached is vacant. States and Territories may fill vacant seats by emergency election; Consular offices are filled under §2.9 and §2.6.a.
+(4) The Council shall facilitate the restoration of federal institutions, without directing or superseding the lawful processes by which States and Territories provide acting or permanent federal representatives.
 
-(5) A person higher in the succession order who can act resumes office immediately. The Council and Designee end when each chamber has a majority of seats filled and Consular offices are filled. Members seated after the failure join the succession order only then.
+(5) Constitutional authority returns to each federal institution as it becomes capable of exercising it. The Designee and Council cease when both chambers have a majority of seats filled and both Consular offices are filled.
 
-(6) If the Council and Designee have not ended within six months of the Designee taking office, they end at that time and §15.7.a applies.
+(6) If the Designee and Council have not ceased within six months of the Designee taking office, they cease at that time and §15.7.a applies.
 
 ### §2.11 — Emergency Governance
 
