@@ -1925,6 +1925,20 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Reason:** Successful completion of the second qualifying audit remains established even if the remainder-viability process is unfinished. For subdivisions, the change of constitutional status waits until that process is completed. This does not create an additional audit, threshold, institution, or deadline; the approved §15.5.a process remains controlling.
 
+## Simplification pass 1 — Articles I and II (2026-10-23)
+
+**Status:** Editorial review only; proposals not approved or applied to operative text.
+
+**Article I:** Keep §§1.11 and 1.12 separate. Fair-trial protections and openness overlap in subject matter but §1.12 is expressly non-derogable under §1.16.a, so merging them risks modifying protected scope. Keep the statutory maximum in §1.10 (72 hours) and the public judicial closure/sealing safeguards in §1.12. Section 1.1's effective access to counsel is broader than defense counsel under §1.11. No safe deletion identified in the examined sections.
+
+**Article II — possible compression:**
+- **§2.2 final paragraph vs §14.2:** Both locate operational command with the Legat Consul. §2.2 expressly refers to tactics and defensive purposes; §14.2 covers scope and appropriations for authorized operations. Consider a cross-reference or carefully narrowed consolidation only after checking that independent defense authority is preserved.
+- **§2.14.a:** Retain concurrence of both Consuls, NRS notice, expedited judicial resolution, and prohibition on transferring constitutional domains. Those are operative limits, not explanatory material.
+- **§2.14.b:** The distinction between who determines purpose and who controls methods, voluntary assistance, and prohibitions on coercion is legally operative. Do not shorten merely for word count.
+- **§2.6.a:** Keep fallback election process and repeated ballots. Compression that omits acting authority or election maximums could impair continuity.
+
+**Editorial principle:** Remove duplication only where the same rule has the same scope and legal effect. Preserve constitutional protections, transition triggers, independent decision-makers, and anti-deadlock provisions. No revisions to the Constitution authorized by this checkpoint.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
