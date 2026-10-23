@@ -708,13 +708,13 @@ Monitor findings, reports, and assessments do not substitute for a responsible b
 
 ### §9.7 — Joint Monitor Council
 
-(1) The three Monitor Generals jointly constitute the JMC as the standing coordination body for matters crossing Monitor jurisdictions. Two of the three Monitor Generals constitute a quorum for all JMC functions.
+The three Monitor Generals constitute the Joint Monitor Council, which coordinates matters crossing Monitor jurisdictions and oversees compliance with constitutional processes assigned to it.
 
-(2) The JMC houses joint constitutional functions expressly assigned to it by this Constitution, including the constitutional-pool lotteries assigned under §9.8. It exercises each assigned function collectively by majority vote of participating Monitor Generals, and the stated position of any dissenting or non-participating Monitor General is published to the NRS alongside the joint determination. Where Monitor Generals cannot reach consensus on any other joint matter, each publishes an individual assessment and the disagreement is noted in the permanent NRS record.
+Two Monitor Generals constitute a quorum. Council decisions require a majority of participating members. Dissenting positions shall be published to the NRS.
 
-(3) The JMC conducts an annual NRS audit covering both operational compliance — whether the NRS is functioning as constitutionally required, accessible, and free of single points of failure — and content integrity — whether all constitutionally required publications across all domains have been made and no records have been altered or deleted.
+The Council may establish compliance standards within its constitutional mandate but may not exercise functions assigned to another constitutional institution or override the independent authority of an individual Monitor.
 
-(4) The JMC has no authority to override the individual mandate of any Monitor. The JMC may delegate operational responsibility for any assigned function to one or more individual Monitor Generals without transferring constitutional accountability for the function; it may also coordinate resource allocation across Monitor offices as needed to fulfill assigned functions, provided no Monitor's capacity to fulfill their individual mandate is diminished.
+(3) The Council shall audit the National Record System at intervals defined by statute, including its operational compliance, accessibility, continuity, content integrity, and completeness of constitutionally required publications.
 
 ### §9.7.a — Institutional Compromise Protocol
 
