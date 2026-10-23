@@ -1835,6 +1835,20 @@ The Assembly is responsible for the consequential viability determination, revie
 
 **No changes made to substantive constitutional text in this review.** Verify timing and institutional readiness against founding arrangements and legislation in future implementation testing. Existing approved automatic transfers and judicial remedies remain unaffected.
 
+## Pending technical clarification — Remainder viability decision clock (2026-10-23)
+
+**Status:** Proposed for review; **not yet approved or integrated**. Retains approved Amendment 23 institutional sequence and §15.2.a automatic chamber transfer.
+
+### §15.5.a — Suggested clock trigger
+
+“The period for the Assembly's viability determination begins upon receipt of the Joint Monitor Council's assessment, or, where the Council fails to report, upon receipt of the Civic Consul's assessment or expiration of the period established by statute for that assessment, whichever occurs first.
+
+The Assembly shall make its determination within the period established by statute, not exceeding 90 days. Failure to determine the matter transfers authority automatically and exclusively to the Senate, subject to the receiving chamber's decision period and judicial enforcement under §15.2.a.”
+
+**Reason:** The existing §15.2.a audit deadline uses the completed Monitor audit record as its trigger, whereas viability can be determined from a Council assessment, Civic Consul assessment, or independently assembled legislative evidence when both fail. Statute supplies the reporting periods. No missed report constitutes viability or nonviability, and proceedings remain subject to §15.2 qualifying-audit deadlines and §15.5.a Convention rules.
+
+**Open for approval:** The exact clock trigger and whether to incorporate it as a new paragraph in §15.5.a or as a special case within §15.2.a. Do not change operative constitutional text without approval.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
