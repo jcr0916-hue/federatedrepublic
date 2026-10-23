@@ -981,7 +981,7 @@ Upon two consecutive biennial Statehood Audits determined to demonstrate complia
 
 (4) Following the first affirmative determination, the Territory remains a Territory. A second Statehood Audit must be completed within two years after completion of the first audit determined compliant, and must independently receive an affirmative legislative determination of compliance. An audit completed within that period remains eligible for legislative determination afterward; legislative delay does not invalidate it. A noncompliant determination does not terminate the proceeding while the qualification period remains open or other timely completed audits await determination. If no audit completed within the period is determined compliant, the proceeding lapses when the period expires and no timely completed audit remains awaiting determination, and may be initiated again under subsection (1).
 
-(5) Upon an affirmative legislative determination that the second qualifying Statehood Audit satisfies the constitutional requirements, the Territory becomes a State immediately by constitutional operation, subject to §15.5.a where applicable.
+(5) Upon an affirmative legislative determination that the second qualifying Statehood Audit satisfies the constitutional requirements, the Territory becomes a State immediately by constitutional operation, except that Statehood for a subdivision takes effect only upon completion of the applicable remainder-viability process under §15.5.a.
 
 (6) Statehood immediately creates two Senate seats. The Elections Panel assigns the two seats by public lot to two distinct existing Senate classes and administers a special election within 90 days. The first senators serve only the remainder of the assigned class terms.
 
