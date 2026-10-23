@@ -1835,9 +1835,9 @@ The Assembly is responsible for the consequential viability determination, revie
 
 **No changes made to substantive constitutional text in this review.** Verify timing and institutional readiness against founding arrangements and legislation in future implementation testing. Existing approved automatic transfers and judicial remedies remain unaffected.
 
-## Pending technical clarification — Remainder viability decision clock (2026-10-23)
+## Approved technical clarification — Remainder viability decision clock (2026-10-23)
 
-**Status:** Proposed for review; **not yet approved or integrated**. Retains approved Amendment 23 institutional sequence and §15.2.a automatic chamber transfer.
+**Status:** Approved and integrated in the separate working Constitution; not enacted. Retains approved Amendment 23 institutional sequence and §15.2.a automatic chamber transfer.
 
 ### §15.5.a — Suggested clock trigger
 
@@ -1847,7 +1847,7 @@ The Assembly shall make its determination within the period established by statu
 
 **Reason:** The existing §15.2.a audit deadline uses the completed Monitor audit record as its trigger, whereas viability can be determined from a Council assessment, Civic Consul assessment, or independently assembled legislative evidence when both fail. Statute supplies the reporting periods. No missed report constitutes viability or nonviability, and proceedings remain subject to §15.2 qualifying-audit deadlines and §15.5.a Convention rules.
 
-**Open for approval:** The exact clock trigger and whether to incorporate it as a new paragraph in §15.5.a or as a special case within §15.2.a. Do not change operative constitutional text without approval.
+**Integration:** Approved wording incorporated in §15.5.a(3), retaining the ordinary §15.2.a receiving-chamber period and judicial-enforcement mechanism.
 
 ## Future entries
 
