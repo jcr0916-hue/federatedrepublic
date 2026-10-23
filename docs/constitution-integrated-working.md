@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III–VIII, and XVI–XX have approved working amendments integrated. Article II is partially integrated pending its later military framework in Article XIV; Articles IX–XV still require integration. Cross-references have not been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
+> **Integration is incomplete:** Articles I, III–VIII, and XVI–XX are integrated; Article II and Articles IX–XV remain partly or wholly pending. Approved §§9.5.a, 15.1.a, 15.2(7)–(8), 15.3(1)–(2), 15.3(4), and the §15.4(3) Monitor assessment change have been applied. Article IX/ XV transfer mechanics and remaining dependencies require harmonization before completion. Do not publish or adopt this draft.
 
 ---
 
@@ -686,7 +686,11 @@ Every Monitor finding, report, and assessment is published to the NRS permanentl
 
 ### §9.5.a — Compliance Standards and Findings
 
-The JMC defines and publishes the compliance standard for each category of audit — the criteria by which each aspect of a finding is determined Pass or Fail, evaluated separately rather than as a single whole-entity judgment. No Monitor may issue a Pass or Fail finding for a category of audit for which the JMC has not yet published a standard; the underlying audit function continues, but produces no Pass or Fail determination until a standard exists. For each standard, the JMC publishes both the criteria and the methodology by which the criteria were developed, and every published finding identifies the standard applied. A new or changed standard applies only to conduct occurring after it is published. Every Monitor report requires the body or officer responsible for its subject matter to publish its own account to the NRS within the period defined by statute. The response need not agree with the Monitor's findings.
+Monitors shall publish their audit findings to the NRS and submit them to the constitutional institution responsible for the matter under review.
+
+Where this Constitution requires a determination of compliance based on an audit, that institution shall make the determination under the applicable constitutional and statutory procedures.
+
+A body or officer subject to a Monitor report shall publish a response to the NRS within a period established by statute. The response need not agree with the Monitor's findings.
 
 ### §9.5.b — Agency Accountability
 
@@ -922,7 +926,11 @@ A Territory operates under a Territorial Compact: the restructuring agreement un
 
 ### §15.1.a — Provisional Status
 
-A State in Provisional status remains a State, and its government and Assembly representation continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues. The State returns to ordinary State status upon publication of two consecutive biennial Statehood Audits with no material failure finding by any Monitor, and the Elections Panel administers a special election within 90 days to fill any vacant Senate seats.
+“A State in Provisional status remains a State, and its government and Assembly representation continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues.
+
+Upon two consecutive biennial Statehood Audits determined to demonstrate compliance under §15.2, the State automatically returns to ordinary State status. The Elections Panel shall administer a special election within 90 days to fill any vacant Senate seats.”
+
+No new discretionary Senate restoration vote after two lawful compliance determinations; chamber transfer applies to each.
 
 ### §15.2 — The Statehood Audit
 
@@ -938,19 +946,39 @@ A State in Provisional status remains a State, and its government and Assembly r
 
 (6) Statehood immediately creates two Senate seats. The Elections Panel assigns the two seats by public lot to two distinct existing Senate classes and administers a special election within 90 days. The first senators serve only the remainder of the assigned class terms.
 
-(7) Every State is subject to a biennial Statehood Audit under the same Monitor structure and criteria. Judicial review of any Statehood Audit finding is available for legality, process, jurisdiction, and application of the stated criteria; a court may not substitute its policy judgment for a Monitor's domain assessment.
+(7) “Every State shall undergo a biennial Statehood Audit. The Senate shall determine compliance for each State under the procedures established by this Constitution.
 
-(8) Where active conflict prevents completion of a biennial audit in a significant portion of a State's territory, the Monitors may publish a provisional audit-status finding for that cycle, which counts as neither a passing nor a failed audit. A provisional audit status is unavailable where the State materially contributed to the conflict conditions.
+The Senate may consider multiple audit reports together, provided that each State receives a separately identifiable determination supported by the required majority and published to the NRS.
+
+Failure to reach a determination within the prescribed period transfers authority to the Assembly under the applicable constitutional procedures.”
+
+Preserve judicial review for legality, jurisdiction, procedural compliance and valid criteria; adapt original language that prevented courts from substituting policy judgment for Monitor findings to protect independent factual findings AND lawful legislative determinations under new framework.
+
+(8) “Where active conflict prevents completion of a biennial Statehood Audit in a significant portion of a State's territory, the Monitors may publish a provisional audit-status finding. Such a finding constitutes neither compliance nor noncompliance and does not count toward consecutive audit failures.
+
+Provisional audit status is unavailable where the State materially contributed to the conditions preventing completion of the audit.”
 
 ### §15.3 — State Remediation and Provisional Status
 
-(1) An overall failed biennial Statehood Audit under §15.2 places an existing State on the mandatory remediation track. A first consecutive failed audit produces an Early Warning and requires the State to publish a Remediation Plan within the period defined by statute; until such statute is enacted, the period is 90 days. A second consecutive failed audit produces a renewed Early Warning and requires a revised Remediation Plan. A passing audit before a third consecutive failure breaks the sequence.
+(1) “A State receiving a failed biennial Statehood Audit shall enter remediation. Following the first consecutive failure, the State shall publish a Remediation Plan to the NRS. Following a second consecutive failure, the State shall publish a revised Remediation Plan.
 
-(2) Upon a third consecutive failed audit, the Monitors certify the audit sequence to the Senate. The Senate must vote within the period defined by statute, not to exceed 90 days from certification, on whether to place the State in Provisional status under §15.1.a. Entry into Provisional status requires an absolute majority of the full seated Senate and takes effect immediately by constitutional operation. If the Senate rejects the motion, the State remains on the remediation track, and a subsequent failed biennial Statehood Audit requires a new certification and Senate vote.
+A successful audit interrupts the sequence of consecutive failures. A third consecutive failure permits consideration of Provisional status under this section.
 
-(3) If the Senate does not vote within the required period, the question becomes privileged Senate business and the Senate may not take up non-emergency business until the vote occurs.
+The periods for submitting Remediation Plans shall be established by statute.”
 
-(4) The Monitors' certification and the State's entry into Provisional status are reviewable on the grounds stated in §15.2(7); the Senate's vote under paragraph (2) is not.
+Remove default 90-day remediation-plan filing deadline; retain statutory deadlines. Do not conflate the distinct 90-day *legislative decision* maximum.
+
+(2) “Upon a third consecutive failed Statehood Audit, the Monitors shall submit the audit history and findings to the Senate.
+
+The Senate shall determine whether the seriousness and persistence of the State's constitutional deficiencies justify Provisional status. Entry into Provisional status requires an absolute majority of the full seated Senate and takes effect upon publication of the determination to the NRS.
+
+If the Senate declines to place the State into Provisional status, the State remains subject to remediation. A subsequent failed biennial Statehood Audit permits renewed consideration under this section.”
+
+**Integrate approved transfer safeguard:** Senate decides within statutory deadline of at most 90 days from *completed record*, rather than a restartable submission date; Assembly takes over on Senate inaction; if Assembly remains inactive, courts compel decision rather than decide status. Eliminate old §15.3(3) sole consequence of privileged Senate business as inconsistent with agreed automatic transfer.
+
+(4) “Determinations under this section are subject to judicial review for constitutional compliance, jurisdiction, and procedural legality. A court may invalidate a determination made contrary to this Constitution but may not substitute its judgment for the legislative chamber's assessment of whether Provisional status is warranted.”
+
+Remove categorical exclusion of Senate vote from judicial review, while preserving bar against judicial political substitution.
 
 ### §15.4 — Voluntary Devolution and Merger
 
@@ -958,7 +986,7 @@ A State in Provisional status remains a State, and its government and Assembly r
 
 (2) The State retains its existing status, ordinary or Provisional, until the restructuring agreement takes effect, when each successor jurisdiction becomes a Territory.
 
-(3) A Territory or a defined portion of a Territory may merge with a geographically contiguous existing State. Merger requires a referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters, approval by the existing State through its own constitutional process, a joint LM-JM assessment confirming that the existing State's constitutional integrity is maintained, and ratification by a simple majority of the Senate. The referendum is triggered by a petition signed by citizens equal to a percentage of eligible voters within the Territory or defined portion, set by statute at not less than 5% nor more than 15%, authenticated through the NVS and certified by the Elections Panel. The petition period may not exceed 12 months.
+(3) A Territory or a defined portion of a Territory may merge with a geographically contiguous existing State. Merger requires a referendum approving it by 60% of votes cast with participation by at least 50% of eligible voters, approval by the existing State through its own constitutional process, a joint assessment by the Legislative and Judicial Monitors of the merger's effect on the receiving State's constitutional integrity, published to the NRS and considered by the Senate, and ratification by a simple majority of the Senate. The referendum is triggered by a petition signed by citizens equal to a percentage of eligible voters within the Territory or defined portion, set by statute at not less than 5% nor more than 15%, authenticated through the NVS and certified by the Elections Panel. The petition period may not exceed 12 months.
 
 (4) Following certification of a referendum under this section, any party with standing has 30 days to challenge the process or result. After that period, no challenge may be filed, and the next step proceeds upon the expiration of the period or the resolution of any challenge.
 
