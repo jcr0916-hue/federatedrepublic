@@ -1981,6 +1981,19 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Disposition:** Two modest editorial candidates: agency-independence cross-references in XI/XII and military-command wording across II/XIV. Neither is approved for amendment. Continue screening Articles XV–XX.
 
+## Simplification pass 5 — Articles XV–XX (2026-10-23)
+
+**Review only; no constitutional edits.** The first screening of all twenty Articles is complete.
+
+- **XV:** Statehood audit decisions, remainder-viability safeguards, devolution, and incapacity govern distinct paths. Preserve current mechanisms and approved §15.2(5) clarification.
+- **XVI:** Prior sovereignty, inherited recognition, new recognition, and treaty continuity differ in legal effect. Retain.
+- **XVII:** Ratification thresholds, advisory JM review with a 30-day endpoint, non-derogable rights, and commencement differ. Retain.
+- **XVIII:** §§18.1 and 18.3 repeat that Operational Use Rights end when their authorized function ends. Candidate: remove only the repeated opening sentence of §18.3, retaining notice, reversion, and court review.
+- **XIX:** §19.2 defines functional handoff; §§19.3 and 19.9 define caretaker limits and remedies. Similar vocabulary but different operative rules. Retain.
+- **XX:** Sovereign compact status, agreement, review, ratification, and continuity are separate obligations. Retain.
+
+**Next:** Compare limited editorial candidates across all Articles for exact legal equivalence before requesting approval.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
