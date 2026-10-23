@@ -706,10 +706,6 @@ A body or officer subject to a Monitor report shall publish a response to the NR
 
 Monitor findings, reports, and assessments do not substitute for a responsible body's independent obligation to perform its constitutional and statutory duties or to act on matters within its operational authority.
 
-### §9.6 — Minimum Funding Guarantee
-
-The annual appropriation for each Monitor, the Elections Panel, the NRS Panel, and the Monetary Authority may not fall below the prior fiscal year's funding level adjusted to preserve equivalent purchasing power, whether prices rise or fall, without a 2/3 concurrent vote of both chambers. The Monetary Authority certifies the prior-year funding level of each other protected body, and the EM certifies the Monetary Authority's, each adjusted for the change in the price level; each certified floor is published to the NRS before the Legislature begins its annual budget process. Where a budget reduces a protected body below its certified floor without the required supermajority, that certified floor takes effect automatically for that body by constitutional operation.
-
 ### §9.7 — Joint Monitor Council
 
 (1) The three Monitor Generals jointly constitute the JMC as the standing coordination body for matters crossing Monitor jurisdictions. Two of the three Monitor Generals constitute a quorum for all JMC functions.
