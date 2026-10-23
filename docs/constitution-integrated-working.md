@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles XVI and XVIII–XX have been integrated; Articles I–XV and XVII still contain adopted text and need approved amendments applied. The references in those articles are not yet fully reconciled. Do not merge or publish this file as a complete revised Constitution.
+> **Integration is incomplete:** Articles I, XVI, and XVIII–XX have been integrated from the working amendment register; Articles II–XV and XVII still require approved amendments. Cross-references have not yet been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
 
 ---
 
@@ -35,7 +35,7 @@ Every person is equal before the law. Government may not discriminate on the bas
 
 ### §1.7 — Privacy, Property, and Security of the Home
 
-Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home, or search, surveil, or collect a person, communication, or data, without consent or prior independent judicial authorization on specific, articulable grounds. This applies within the Republic's territory and to Republic citizens wherever located. Encryption is lawful and may not be prohibited. Property may be taken for public use only upon just compensation determined independently.
+Every person holds the right to privacy and security in their person, home, communications, and data, and the right to own property. Government may not enter a home, search a person or property, surveil a person or communication, or collect data without consent or prior independent judicial authorization on specific, articulable grounds. This applies within the Republic's territory and to Republic citizens wherever located. Encryption is lawful and may not be prohibited. Property may be taken for public use only upon just compensation determined independently.
 
 ### §1.8 — Democratic Participation
 
@@ -51,11 +51,11 @@ Every person detained by public authority has the right to challenge that detent
 
 ### §1.11 — Rights of the Accused and Fair Trial
 
-Every person accused of a criminal offense has the right to prompt notice of the charges; counsel, at public expense if unable to afford representation; adequate time and means to prepare a defense; examination of witnesses; silence without adverse inference; and a speedy trial. No person may receive a greater penalty solely for exercising the right to trial. Bail may be imposed only as reasonably necessary to ensure appearance or protect public safety and may not be punitive. Where systematic or automated methodology generates evidence, the accused has the right to examine that methodology in full.
+Every person accused of a criminal offense has the right to prompt notice of the charges; counsel, at public expense if unable to afford representation; adequate time and means to prepare a defense; examination of witnesses; silence without adverse inference; and a speedy trial. No person may receive a greater penalty solely for exercising the right to trial. Bail may be imposed only as reasonably necessary to ensure appearance or protect public safety and may not be punitive. The accused has the right to examine and challenge the evidence presented against them, including the methods used to produce it.
 
 ### §1.12 — Right to a Public Trial
 
-Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings may be closed only to the minimum extent necessary to protect a compelling interest identified by the court, with the grounds and expected duration published to the NRS. Sealing may not be indefinite. No record may remain sealed beyond 10 years from final judgment unless a court extends it once, by up to five years, on published findings of continuing necessity; the NRS Panel then publishes the record automatically.
+Every person accused of a criminal offense has the right to a public trial before an independent and impartial court. Proceedings and records may be closed or sealed only to the minimum extent and duration necessary to protect a compelling interest identified by the court. The grounds for closure or sealing must be published to the NRS, and continued secrecy remains subject to independent judicial review.
 
 ### §1.13 — Freedom from Retroactive Criminal Law
 
@@ -75,9 +75,11 @@ Government may not cause or systematically permit material environmental harm to
 
 ### §1.16 — Emergency Derogation
 
-No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.16.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, scope, and duration, published immediately to the NRS. Either executive may issue a declaration within their domain for no more than 14 days. Continuation beyond 14 days requires a statute with a fixed expiration date, which may not be extended or renewed.
+No emergency suspends the Individual Sovereignty Floor in full. Rights other than those protected by §1.16.a may be temporarily derogated only upon a declaration stating the emergency, rights affected, scope, and duration, published immediately to the NRS.
 
-All emergency measures lapse automatically with the declaration. Judicial review remains available. Each declaration must receive independent judicial review within 48 hours of publication. A substantially similar derogation may not be declared within 60 days after expiry; thereafter, re-declaration requires 2/3 of both chambers.
+Either executive may issue a declaration within their domain for no more than 14 days. Continuation requires a statute with a fixed expiration. No declaration or authorization may be renewed or substantially repeated.
+
+All emergency measures lapse automatically with their authorization. Every declaration receives mandatory expedited independent judicial review, and judicial remedies remain available.
 
 The three Monitors retain full constitutional authority throughout any emergency.
 
@@ -87,7 +89,7 @@ These six rights are absolute: the prohibition on torture (§1.3); slavery (§1.
 
 ### §1.17 — Right to Seek Asylum
 
-Every person who reaches the Republic's jurisdiction has the right to claim asylum and to an independent determination of that claim under §6.3. Manner of entry does not affect this right. An asylum seeker holds all rights under this Article from the date of claim.
+Every person who reaches the Republic's jurisdiction has the right to claim asylum and to an independent determination of that claim under §6.3. Manner of entry does not affect this right.
 
 ### §1.18 — Non-Refoulement
 
