@@ -1311,7 +1311,7 @@ The joint Monitor panel shall dissolve when all predecessor and temporary author
 
 ### §19.3.a — Transition National-Defense Continuity
 
-(1) Until the institutions of the Republic responsible for national defense become constitutionally capable of exercising their respective functions, predecessor national institutions may exercise only the military and defense authority reasonably necessary to defend the Republic, its territory, population, and forces against actual or imminent invasion or armed attack, or to fulfill military obligations arising from inherited treaties that remain binding under §19.5(4).
+(1) Until the institutions of the Republic responsible for national defense become constitutionally capable of exercising their respective functions, predecessor national institutions may exercise only the military and defense authority reasonably necessary to defend the Republic, its territory, population, and forces against actual or imminent invasion or armed attack, or to fulfill military obligations arising from inherited treaties that remain binding under §19.5(2).
 
 (2) Predecessor military command arrangements, defense appropriations, and military authorities remain provisionally effective only to the extent necessary to exercise the defensive authority permitted under subsection (1).
 
