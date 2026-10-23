@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III–VIII, X–XIV, and XVI–XX have approved revisions integrated; Article II and Articles IX and XV require further reconciliation. The coordinated military framework is incorporated in §§2.2, 12.2.a, and 14.2–14.5. Article XIV §14.1's existing judicial-review limitation is retained pending an expressly approved replacement. Cross-references and inter-article dependencies require final validation. Do not publish or adopt this draft.
+> **Integration is incomplete:** Articles I, III–VIII, X–XIV, and XVI–XX have approved revisions integrated; Article II and Articles IX and XV require further reconciliation. The coordinated military framework is incorporated in §§2.2, 12.2.a, and 14.2–14.5. Article XIV §14.1 retains its authorized-purpose limits without duplicating or restricting the Supreme Court's existing constitutional dispute jurisdiction. Cross-references and inter-article dependencies require final validation. Do not publish or adopt this draft.
 
 ---
 
@@ -923,7 +923,7 @@ Citizens may repeal legislation through an optional referendum, including legisl
 
 ### §14.1 — Authorized Purposes for Military Force
 
-Military force may be used only for two purposes: protection of the Republic’s territory, citizens, and treaty allies; and, with legislative authorization stating the specific grounds, response to crimes against humanity as defined under international law. The Legislature applies that definition directly in each authorization; no prior international recognition or finding is required. Legislative authorization must state which purpose it serves; an authorization that states neither is void. In deciding whether an authorization meets this section, the SC examines only its stated purpose and does not review whether the underlying facts satisfy a purpose’s legal threshold.
+Military force may be used only for two purposes: protection of the Republic’s territory, citizens, and treaty allies; and, with legislative authorization stating the specific grounds, response to crimes against humanity as defined under international law. The Legislature applies that definition directly in each authorization; no prior international recognition or finding is required. Legislative authorization must state which purpose it serves; an authorization that states neither is void.
 
 ### §14.2 — Defense Authorization and Allocation
 
