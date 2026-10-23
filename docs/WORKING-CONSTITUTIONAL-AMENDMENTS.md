@@ -1917,6 +1917,14 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Priority:** Resolve the narrow Statehood effective-date clarification if approved. Keep the §2.9.a minimum-scaffold approach and avoid reopening settled succession choices without a reproducible conflict.
 
+## Approved clarification — §15.2(5) subdivision Statehood effective date (2026-10-23)
+
+**Status:** Approved and integrated in the unpublished working Constitution; not enacted.
+
+**Approved replacement:** “Upon an affirmative legislative determination that the second qualifying Statehood Audit satisfies the constitutional requirements, the Territory becomes a State immediately by constitutional operation, except that Statehood for a subdivision takes effect only upon completion of the applicable remainder-viability process under §15.5.a.”
+
+**Reason:** Successful completion of the second qualifying audit remains established even if the remainder-viability process is unfinished. For subdivisions, the change of constitutional status waits until that process is completed. This does not create an additional audit, threshold, institution, or deadline; the approved §15.5.a process remains controlling.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
