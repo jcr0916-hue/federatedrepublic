@@ -1514,6 +1514,191 @@ Delete redundant former §18.5(1), repeating §18.1/§18.3 application to Territ
 
 **Integration cautions:** Reconcile §18.4(2) host State consent with §18.5 Territorial procedure; do not conflate dedication with federal title or territorial sovereignty. Uphold §18.1 registration accountability and §18.3 enforceability without creating a documentary veto over otherwise lawful federal constitutional operations. Apply **One Home Rule**, **Positive Enumeration of Authority**, and **Constitutional Necessity**: define what must be guaranteed, leave ordinary management, EM monitoring detail, and administrative calendars to competent institutions and statute. Next review: Article XIX.
 
+## Proposed amendment 21 — Article XIX Transition and Ratification (approved; 2026-10-23)
+
+**Status:** Working revisions approved section by section and integrated stress test accepted; **not enacted**. Preserve adopted Constitution and public site. Consolidate provisions using One Home Rule, Constitutional Necessity and Positive Enumeration. Routine drafting, obsolete cross-references and duplication can be corrected during consolidation without individually revisiting policy; substantive changes require a new decision.
+
+**Governing design decision — the light-switch principle:** Every Federated Republic institution assumes its constitutional responsibilities **individually when constitutionally capable**. The corresponding predecessor or temporary authority transfers immediately by constitutional operation; no general simultaneous activation, rigid phase order or universal 24-month Transition Window. Institutions **need not** depend on each other's readiness, except where exercising a particular constitutional function necessarily requires another. "Need not" is deliberately permissive: coordination is allowed; "shall not" or "shall generally not" was expressly rejected. Founding arrangements provide implementation planning and continuity, not permission to delay an already capable constitutional successor.
+
+### §19.1 — Ratification and founding accommodation
+
+* Retain interim Elections Panel certification that the NVS is operational under §11.2 and founding ratification by **60% of votes cast**. **Delete 50% participation requirement**; abstention is not a veto.
+* Retain **unchanged** treaty-of-union sentence: "Where multiple sovereign nations simultaneously pool sovereignty through a treaty of union, transition provisions adapt as specified in the treaty of union, subject to the constitutional principles of this Article."
+* Replace predecessor-institution accommodation text and remove two-year deadline: "Where existing institutions overlap with institutions established by this Constitution, the Legislature shall determine their relationship by statute.
+
+Existing institutions shall retain their lawful standing until their relationship with the Republic's institutions is established in accordance with this Constitution."
+* Reconcile this standing protection with §19.2: no predecessor may keep constitutional authority after the corresponding successor becomes capable.
+
+### §19.2 — Day Zero and independent transfers
+
+§19.2(1) — Day Zero remains when ratification is certified. Laws inconsistent with Individual Sovereignty Floor void immediately; predecessor national government's public assets, liabilities, rights and obligations vest in Republic, subject to Constitution; authoritative records transfer or register to NRS according to law. **Remove 24-month Transition Window.** Founding arrangements establish a definite implementation schedule but **not** an all-institution activation deadline. Initial proposed wording (adapt last sentence to adopted no-window principle during consolidation):
+
+"Day Zero is the date on which constitutional ratification is certified.
+
+Upon Day Zero, laws inconsistent with the Individual Sovereignty Floor are void, and the predecessor national government's public assets, liabilities, rights, and obligations vest in the Republic, subject to this Constitution. Authoritative predecessor records shall be transferred or registered to the NRS in accordance with law.
+
+The founding arrangements submitted for ratification shall establish a definite Transition Window and an implementation schedule consistent with this Article."
+
+**IMPORTANT:** The quoted final paragraph was superseded by the user's later explicit agreement to **eliminate the universal Transition Window**. Retain an implementation schedule in founding arrangements, **not** a definite Transition Window.
+
+§19.2(2) — Replace numbered phases (0–4, Days 1–90, 91–270, 271–450) with user-approved wording:
+
+"The institutions of the Republic shall assume their constitutional authority individually as each becomes capable of exercising its assigned functions.
+
+Upon such capability, the corresponding authority of predecessor or temporary institutions transfers immediately by constitutional operation.
+
+The establishment or readiness of one institution **need not** depend upon the establishment or readiness of another, except where the exercise of its constitutional functions necessarily requires it.
+
+Founding arrangements shall provide for the establishment of constitutional institutions and the continuity of government during the transition."
+
+### §19.3 — Caretakers and independent monitoring
+
+(1) "Officials and institutions of the predecessor national government may continue in caretaker capacity only as necessary to preserve lawful government, existing services, rights, obligations, and public safety until the corresponding institutions of the Republic become constitutionally capable of exercising those functions.
+
+Existing State, territorial, Indigenous, and local governments continue under their own lawful authority except where this Constitution expressly provides otherwise."
+
+(2) "A caretaker legislature may enact only measures reasonably necessary to preserve government continuity, constitutional rights, existing obligations, public safety, or the implementation of this Constitution.
+
+Legislation enacted beyond this authority is void and subject to judicial review.
+
+Legislation validly enacted during the transition remains subject to amendment or repeal by the Legislature of the Republic."
+
+(3) "A joint Monitor panel shall independently monitor the constitutional transition and publish its findings to the NRS.
+
+The interim Elections Panel shall establish the joint Monitor panel before ratification. Its composition and procedures shall be determined by the founding arrangements, with provision for participation by the Republic's Monitors as they become constitutionally operational.
+
+The joint Monitor panel shall dissolve when all predecessor and temporary authorities exercising transitional constitutional functions have been replaced by their corresponding institutions of the Republic."
+
+Monitors **only independently monitor and report**, not direct or certify government operations.
+
+### §19.3.a — Caretaker defense
+
+(1) "Until the institutions of the Republic responsible for national defense become constitutionally capable of exercising their respective functions, predecessor national institutions may exercise only the military and defense authority reasonably necessary to defend the Republic, its territory, population, and forces against actual or imminent invasion or armed attack, or to fulfill military obligations arising from inherited treaties that remain binding under §19.5(4)." Initial proposal separately repeated successor-transfer rule; **omit repetitive transfer sentence** because §19.2 controls.
+
+(2) "Predecessor military command arrangements, defense appropriations, and military authorities remain provisionally effective only to the extent necessary to exercise the defensive authority permitted under subsection (1).
+
+New commitments may be undertaken only where reasonably necessary to conduct or sustain such authorized defensive action.
+
+All continuing arrangements and commitments remain subject to alteration or termination by the competent constitutional authorities of the Republic as they assume their respective functions."
+
+(3) "Until the Legislature of the Republic becomes constitutionally capable of exercising its authority, a predecessor national authority exercising caretaker defense command under subsection (1) may call State forces into federal service without the legislative authorization otherwise required by §14.5, but only to the extent reasonably necessary to defend against invasion or armed attack."
+
+(4) **Retain unchanged:** "Defensive action under subsection (1) may occur outside the Republic's territory where reasonably necessary to repel, disrupt, or terminate the invasion or armed attack."
+
+(5) "The exercise of caretaker defense authority under this section, and its constitutional basis, shall be published to the NRS as soon as operationally practicable.
+
+Operational information may be classified only in accordance with Article X.
+
+The joint Monitor panel shall have access to records necessary to assess compliance with this section and shall report its findings in accordance with §19.3(3)."
+
+(6) "A military operation commenced under caretaker authority may continue under its transitional authorization for no more than **60 days** after the Legislature becomes constitutionally capable of exercising its authority, unless the Legislature authorizes its continuation under §2.2 or directs its cessation.
+
+Within **14 days** of assuming office, the Legat Consul shall submit such an operation for legislative authorization or begin its orderly cessation.
+
+Defense appropriations preserved under subsection (2) remain available for authorized continuing operations until superseded by lawful appropriation."
+
+Two different triggers are deliberate. The Legat Consul and Legislature can activate on different days. The 14-/60-day substantive emergency-power limits survive removal of administrative phase deadlines.
+
+### §19.4 — Predecessor classified material
+
+"Predecessor classified material is subject to Article X from Day Zero.
+
+The Legislature shall establish an independent mechanism to review predecessor classified material under Article X. Until that mechanism becomes operational, a lawful temporary mechanism shall exercise the review authority necessary to preserve constitutional compliance and access to review.
+
+Material that does not satisfy Article X shall be declassified and published to the NRS.
+
+Any Inhabitant may obtain judicial review of a determination concerning predecessor classified material."
+
+Remove 90-day Phase 4 deadline; general judicial review rather than exclusive Supreme Court original review.
+
+### §19.5 — Pre-existing obligations
+
+(1) **Delete** redundant military-operations provision; governed exclusively by §19.3.a. No grandfathering of unauthorized offensive campaigns.
+
+(2) "Pre-existing social insurance programs shall continue without interruption during the constitutional transition, subject to subsequent legislation enacted under this Constitution."
+
+(3) **Delete** separate military/national-service benefit clause and budget-cycle deadline; §19.2 assumes **all** lawful predecessor liabilities and obligations and §19.3 preserves their administration.
+
+(4) "The Republic succeeds to the predecessor government's international legal relationships, including its treaties, financial commitments, and contractual obligations.
+
+Where an inherited international obligation conflicts with this Constitution, the Republic shall seek its renegotiation or lawful termination in accordance with §3.6.
+
+Pending resolution, the Republic shall honor the obligation to the extent required by international law, without requiring any constitutional officer to violate Article I or any non-derogable constitutional right."
+
+(5) "From Day Zero, an independent judicial forum shall remain continuously available to enforce Article I.
+
+A temporary judicial institution may exercise only the authority necessary to preserve constitutional rights until the corresponding judiciary of the Republic becomes constitutionally capable of exercising that jurisdiction."
+
+### §19.6 — Founding States and Territories
+
+(1) "A political entity holding recognized State or equivalent constitutional status before ratification that elects to enter the Republic as a State shall be recognized as a State from Day Zero, with all rights and responsibilities established by this Constitution."
+
+(2) "Predecessor territories that do not enter the Republic as States shall be recognized as Territories from Day Zero.
+
+Predecessor capital districts and special administrative regions shall likewise be recognized as Territories, subject to the provisions of Article XV."
+
+(3) **Delete** special founding Statehood Audit and Phase 2 deadline; ordinary Article XV process applies once competent constitutional institution ready.
+
+(4) "A predecessor political entity may elect to enter the Republic as a Territory by a majority vote of its existing legislative body, regardless of its eligibility for Statehood."
+
+(5) "Before entry into the Republic, a predecessor State or Territory may voluntarily subdivide in accordance with its lawful procedures.
+
+The resulting entities shall be considered separately for admission under this Constitution."
+
+(6) **Delete** special first post-Phase-4 biennial Statehood Audit rule; Article XV already applies to founding States.
+
+### §19.7 — Initial registers and temporary certification
+
+* Initial **Candidate Registers prepared by interim Elections Panel**, not joint Monitor panel. First elections subject to relevant eligibility provisions; independent panel oversight.
+* "The founding register of recognized Indigenous nations shall be established from the authoritative predecessor records and published to the NRS.
+
+The compilation is ministerial and shall not alter the recognition or standing of any Indigenous nation."
+  Administrative responsibility via founding arrangements; eliminate Phase 1 deadline; no new discretion to revisit prior recognition.
+* "Until the Monetary Authority becomes constitutionally capable of exercising its functions, a lawful temporary institution may perform the certification functions necessary to preserve monetary continuity.
+
+The Monetary Authority shall be constituted in accordance with §12.1.a."
+  No operational certification authority for joint Monitor panel; transfer rule in §19.2.
+
+### §19.8 — Transitional Accountability Mechanism
+
+"Where documented violations by a predecessor government warrant transitional accountability, the Legislature may establish a temporary, non-criminal Transitional Accountability Mechanism by a two-thirds vote of both chambers.
+
+The establishing statute shall define the mechanism's jurisdiction, powers, procedures, and duration. Any expansion of its jurisdiction or powers requires the same legislative approval.
+
+The mechanism shall operate consistently with Article I and shall terminate upon expiration of its statutory mandate."
+
+Remove arbitrary ten-year maximum and ten-year prohibition on new mechanism; retain statutory sunset, two-thirds approval and Article I.
+
+### §19.9 — Permanent institutions and lawful temporary continuity
+
+(1) "Where this Constitution requires the establishment of a permanent institution to exercise a constitutional function, the responsible authorities shall provide for its establishment in accordance with law." The initially drafted second sentence referring to continuity via temporary arrangements is **substantively approved** but may be omitted under One Home Rule because (2) covers it. Remove former 180-day/18-month/180-day institutional maximums and Phase 4 reference.
+
+(2) "A lawful temporary institution may exercise only the functions necessary to preserve constitutional continuity or rights until the corresponding permanent institution becomes constitutionally capable of exercising those functions.
+
+A failure to establish a constitutionally required institution is subject to judicial review. A court of competent jurisdiction may compel the responsible authorities to fulfill their constitutional obligations and authorize temporary measures necessary to preserve continuity or rights."
+
+Retain judicial enforcement as adequate safeguard against intentional indefinite delay; **reject adding a separate 'without unreasonable delay' requirement** as unnecessary duplication. Automatic transfer remains housed in §19.2.
+
+(3) Retain substantive requirement of uninterrupted democratic participation during migration to constitutional NVS. Remove obsolete transition phrasing / cross-references through routine drafting; no separate policy change approved.
+
+### §19.10 — Founding Senate and Supreme Court classes
+
+Retain public lot, staggered classes and existing exact founding terms: Senate approximately equal cohorts **2, 4, 6 years**, then ordinary **6-year** terms; founding Supreme Court approximately equal classes **4, 8, 12 years**, then Articles IV ordinary terms. Preserve Elections Panel public lot and NRS registration. Routine technical corrections only.
+
+### Integrated stress test — accepted
+
+* Supreme Court ready before Legislature — **pass** (independent judicial transfer).
+* Legislature ready before either executive — **pass** (function-specific caretaker executive continuity).
+* Civic Consul ready before Legat Consul — **pass** (separate domestic/external executive authority).
+* Elections Panel active while other institutions temporary — **pass** (no universal activation gate).
+* Permanent Monetary Authority delayed — **pass with safeguard** (lawful temporary functions, judicial enforcement).
+* Institutions activate in unforeseen order — **pass** (founding arrangements coordinate without adding gates).
+* Predecessor refuses surrender — **pass subject to enforcement** (transfer automatic, not conditioned on consent).
+* Defense example: Legat Consul operational Day 40, Legislature Day 100, 60-day transitional authorization bound expires Day 160 without legislative continuation — **pass** (14-/60-day clocks have distinct anchors).
+* States, Territories, Indigenous register, ordinary Statehood pathway — **pass**.
+
+**Integration cautions:** Verify NRS/judicial capability determinations can resolve contested claims of readiness; avoid creating new tribunal merely for transition. Preserve §19.9 judicial enforcement to counter deliberate stagnation. Confirm minimum ratification NVS capability vs subsequent election infrastructure deployment without retroactive qualification. Scrub all Phase 0–4, Transition Window, and first-budget-after-Phase-4 references in Article XIX and cross-articles when later implementing, but **do not change adopted document now**. Preserve 14-/60-day military limits, §19.10 staggered classes and all express constitutional protections. Distinguish temporary authority limited to necessary continuity from unlawfully continuing a superseded office.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
