@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III–VIII, X–XIII, and XVI–XX have approved working revisions integrated. Article II and Articles IX, XIV–XV require further harmonization. Article XII's emergency-defense expenditure exception remains dependent on Article XIV integration. Cross-references and inter-article dependencies require final validation. Do not publish or adopt this draft.
+> **Integration is incomplete:** Articles I, III–VIII, X–XIV, and XVI–XX have approved revisions integrated; Article II and Articles IX and XV require further reconciliation. The coordinated military framework is incorporated in §§2.2, 12.2.a, and 14.2–14.5. Article XIV §14.1's existing judicial-review limitation is retained pending an expressly approved replacement. Cross-references and inter-article dependencies require final validation. Do not publish or adopt this draft.
 
 ---
 
@@ -105,7 +105,13 @@ To hold the office of Legat Consul, a person must have been a citizen for at lea
 
 ### §2.2 — Military Authorization Framework
 
-The Legat Consul may use military force in immediate response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies. Beyond immediate response, military force requires legislative authorization. The Legat Consul must notify both chambers and the Civic Consul within 24 hours of any use of force. Legislative authorization expires unless affirmatively renewed at intervals defined by statute, not exceeding 12 months; expiration requires cessation of operations. Operations must state and serve a purpose authorized by §14.1.
+The Legat Consul may conduct military operations necessary to repel or prevent an active or imminent attack on the Republic's territory, citizens abroad, or treaty allies, including defensive operations beyond the Republic's borders where necessary to that purpose. Military operations pursuing other objectives require authorization by law within the purposes permitted by §14.1.
+
+Upon initiating military action, the Legat Consul shall notify the Civic Consul and the Speakers of both chambers without undue delay, stating its purposes and grounds. The Civic Consul receives notice for the exercise of domestic responsibilities and does not thereby acquire authority to direct military operations. With deliberate speed, the Legat Consul shall submit to the Speaker of the Assembly the proposed operational timeline and budget for planned action. Operations beyond immediate defensive authority require an authorizing law supported by a proposed plan of action and budget.
+
+The Senate may, by majority vote, direct that defensive military operations return to an alert posture where continued active operations are no longer justified by an active or imminent threat. Such a determination terminates authority for continued active defensive operations but does not restrict the Legat Consul's authority to respond immediately to a new or renewed active or imminent attack.
+
+The Legat Consul exercises military command and determines strategy, tactics, and methods within constitutionally permitted defensive purposes or the purposes and scope authorized by law, subject to Article XIV.
 
 ### §2.3 — Consular Intelligence
 
@@ -854,6 +860,14 @@ The Monetary Authority publishes a detailed State of the Economy report to the N
 
 (6) The Legislature must fund the National Endowment by appropriation in years of fiscal surplus. The EM assesses compliance annually.
 
+### §12.2.a — Extraordinary Defensive Expenditure
+
+Where an active or imminent attack requires immediate defensive expenditure beyond available appropriations, and the Assembly is unable to act, the Legat Consul may authorize expenditure necessary for the immediate defense of the Republic.
+
+The Legat Consul shall report such expenditure to the Speaker of the Assembly without undue delay. The Assembly shall exercise its appropriation authority as soon as it is able to act.
+
+This authority continues only while the conditions requiring its exercise persist.
+
 ### §12.3 — Taxing Power and National Revenue Fund
 
 The Legislature has exclusive authority to levy taxes, duties, and tariffs by statute. States, Territories, and local governments retain authority to tax within their own jurisdictions, subject to §12.5. All public money received by the Republic, other than the National Endowment's assets, is deposited into the National Revenue Fund. No money may be withdrawn from the Fund except by appropriation, including the interim appropriation under §12.2. The Executive Monitor audits the National Revenue Fund's receipts and disbursements, reviews their compliance with constitutional and statutory requirements, and publishes its findings to the NRS. Tariff rates established by a ratified treaty or approved trade agreement under §3.6 constitute legislatively authorized rates for the duration of that instrument; the Legislature may set tariff schedules within which the Legat Consul may negotiate specific rates.
@@ -913,25 +927,32 @@ Military force may be used only for two purposes: protection of the Republic’s
 
 ### §14.2 — Defense Authorization and Allocation
 
-Expenditure on military operations requires legislative authorization under §14.1, except for immediate response under §2.2, and appropriation under §12.2, including the interim appropriation; the Legat Consul executes that funding and, within the authorized total, determines allocation except as the authorization specifies. The Legat Consul answers public questions before the Senate at least annually and provides classified briefings to the Senate during active operations. The Legat Consul keeps the Civic Consul informed of expenditure and its budgetary implications through the Council of Ministers under §2.14. When legislative authorization expires or lapses, all expenditure ceases except the wind-down of existing contracts for up to 90 days; no new commitments may be made after expiration. The EM audits expenditure during active operations, including intelligence activities conducted in support of those operations, and publishes a comprehensive accountability report within 180 days of an operation’s conclusion.
+A law authorizing military operations shall establish their purposes and scope and provide for the orderly withdrawal of deployed personnel and fulfillment of obligations arising from the operation. The Legat Consul shall provide a proposed plan of action and budget, including provision for those responsibilities. The Assembly shall appropriate funds for military operations under Article XII. Within the authorized purposes and appropriations, the Legat Consul exercises military command.
 
-### §14.3 — Transition and Reconstruction Plan
+The Legat Consul shall conduct authorized operations within the law and report material changes in their conduct or circumstances to the Senate. The Senate may require an updated operational plan for review. Operations requiring expansion of the purposes or scope established by law shall be submitted for further legislative authorization.
 
-Within the period defined by statute following the second renewal of a legislative military authorization, the Legat Consul submits a Transition and Reconstruction Plan to the Senate specifying the Republic’s post-conflict obligations (status of alliance obligations, civilian reconstruction support, and transitional justice support) and a withdrawal timeline. The Senate reviews and approves the Plan, and may amend it. The approved Plan is binding on both executives within their respective domains. The authorization may not be renewed again unless the Senate has approved a Plan.
+The Legat Consul shall report to the Senate on the conduct, progress, and continuing objectives of operations authorized by law. The Senate shall review those operations against their legislative authorization and may require additional reporting and explanations. The Assembly shall review military expenditures against the appropriations authorized for those operations.
+
+The Legat Consul shall keep the Civic Consul informed of military expenditure and its domestic budgetary implications through the Council of Ministers under §2.14. The Executive Monitor independently audits military expenditure, including intelligence activities supporting those operations, and publishes its findings to the NRS.
+
+Expiration or withdrawal of authorization or appropriations for a military operation terminates authority to pursue its objectives. The Legat Consul retains authority to conduct an orderly withdrawal, protect personnel during withdrawal, and fulfill existing lawful obligations, subject to the Legislature's appropriation authority.
+
 
 ### §14.4 — Treaty-Based Military Authorization
 
-Where an existing treaty requires military action, the Legat Consul may act immediately and must notify both chambers and the Civic Consul within 12 hours, citing the specific treaty obligation triggered. Senate ratification of a treaty constitutes legislative authorization for the military action the treaty requires when its obligations are triggered, provided the action serves a purpose authorized by §14.1; no separate legislative authorization is required. The oversight provisions of §14.2 apply from the moment of action. Treaty-based authorization for an operation lasts up to 12 months from the moment of action; continuation thereafter requires renewal under §2.2, and §14.3 applies on the same terms as for any other authorized operation. On petition of any party with standing, the SC determines whether a treaty’s trigger conditions were met and whether particular action falls within the treaty’s obligation. Where the SC determines that the trigger conditions were not met or that the action exceeds the treaty’s obligation, the action is limited to a defensive posture and ends 30 days after the SC’s decision is published unless the Legislature authorizes it under §14.1.
+A treaty duly ratified under this Constitution constitutes lawful authorization for military action required by its terms, within the purposes permitted by §14.1.
+
+Military operations conducted under treaty authority are subject to the command, notification, operational review, and appropriation provisions of §2.2 and Article XIV.
+
+The courts may determine whether a treaty's conditions for military action have been satisfied and whether an operation falls within the authority granted by the treaty.
 
 ### §14.5 — State Forces
 
-A State may maintain organized forces for disaster response, civil emergency, and the preservation of public order within the State. Such forces are subject to Article I.
+States may maintain organized forces for disaster response, civil emergencies, and the preservation of public order within their territories. Such forces are subject to Article I.
 
-State forces may be called into federal service only under legislative authorization satisfying §14.1, and only for defense of the Republic against invasion or armed attack or to suppress insurrection against the constitutional order. They may not be employed outside the Republic's territory. While in federal service they are subordinate to federal command.
+The Legat Consul may call State forces into federal service when necessary to defend the Republic against an active or imminent external attack. State forces so called shall serve under federal command for the duration of the defensive necessity. Other federal employment of State forces requires authorization by law. Upon completion of federal service, command of State forces returns to the respective State.
 
-The Civic Consul may request the assistance of a State's forces within that State, with the consent of the State authority designated by its own constitution, which may withdraw consent at any time.
-
-No State force may be employed against the constitutional order of the Republic, against another State, or to obstruct a federal constitutional function. Composition, training, equipment standards, and the terms of federal call-up are established by statute.
+The Civic Consul may request the assistance of a State's forces within that State, with the consent of the State authority designated by its own constitution, which may withdraw consent at any time. No State force may be employed against the constitutional order of the Republic, against another State, or to obstruct a federal constitutional function. Composition, training, equipment standards, and terms of federal call-up are established by statute.
 
 ---
 
