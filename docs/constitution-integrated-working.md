@@ -630,19 +630,23 @@ The Legislature may provide impartial electoral assistance by statute to support
 
 ### §9.1 — Three Monitors
 
-The Republic maintains three constitutionally independent Monitors — Legislative (LM), Executive (EM), and Judicial (JM) — each selected under §9.2. Monitors hold an information-only mandate: they observe constitutional processes, assess compliance, and publish findings. Findings and assessments are not binding on any constitutional actor and are not a prerequisite for any legal proceeding or governmental function, except for consequences this Constitution expressly attaches to a finding. Each Monitor General serves a 10-year non-renewable term. Any constitutional officer, chamber, or body may request a focused assessment from any Monitor within that Monitor’s mandate; the Monitor publishes the assessment by the requested date where practicable. Persistent non-responsiveness to reasonable requests may be published by the other two Monitors as a non-responsiveness finding. Once a Monitor undertakes work under constitutional authority, the work must be completed and published even if it becomes moot. A missed deadline may affect any consequence expressly attached to the deadline but does not erase the publication duty. Work may be discontinued only where completion has become factually impossible; the reason for discontinuation and all completed work product must still be published to the NRS.
+The Republic maintains three constitutionally independent Monitors — Legislative (LM), Executive (EM), and Judicial (JM) — each selected under §9.2. Monitors hold an information-only mandate: they observe constitutional processes, assess compliance, and publish findings. Findings and assessments are not binding on any constitutional actor and are not a prerequisite for any legal proceeding or governmental function, except for consequences this Constitution expressly attaches to a finding. Each Monitor General serves a 10-year non-renewable term.
+
+Any constitutional officer, chamber, or body may request an assessment from a Monitor within its mandate. Monitors shall publish their findings and assessments to the NRS. Where an investigation or assessment is discontinued, the Monitor shall publish the reasons for discontinuation and the findings obtained before discontinuation.
 
 ### §9.1.a — The Legislative Monitor
 
-The LM audits the Legislature for fiscal accuracy and constitutional compliance. Responsibilities include auditing the population census for constitutional compliance; reviewing Assembly district maps for compliance with the criteria established in §3.3; auditing the Elections Panel’s administration of the referendum eligibility process; and publishing an annual compliance report.
+The Legislative Monitor audits the Legislature for fiscal accuracy and constitutional compliance, including the population census, Assembly districting under §3.3, and all information relating to the Legislature's public business. The Legislative Monitor also audits the Elections Panel's administration of referendum eligibility.
 
 ### §9.1.b — The Executive Monitor
 
-The EM audits both executives and the Monetary Authority. Annual responsibilities include assessing military compliance under §§14.1 and 14.2; auditing compliance with the judicial authorization requirement under §2.3; conducting factual clemency reviews when requested under §2.12; reviewing disclosure records for constitutional appointments; and auditing electoral finance within the period defined by statute following any election. The EM audits constitutional officers for dereliction — failure to perform a constitutionally mandated function within the required period where that failure was not caused by circumstances genuinely beyond the officer’s control. Political disagreement with a constitutional requirement is not a defense. This audit concerns the performance of constitutionally required duties and does not authorize review of the political merits of legislative decisions or the legal reasoning of judicial decisions.
+The Executive Monitor audits both executives, their ministers and subordinate officers, the Monetary Authority, and federal administrative agencies, including independent agencies, for constitutional compliance and the exercise of their public authority.
+
+The Executive Monitor audits executive officers for dereliction of constitutional duties. Dereliction means failure to perform a constitutionally mandated function within the required period, except where circumstances genuinely beyond the officer's control prevented performance. Political disagreement with a constitutional requirement is not a defense.
 
 ### §9.1.c — The Judicial Monitor
 
-The JM audits the courts, the Elections Panel, and compliance with constitutional treaty and compact obligations. Its specific audit responsibilities are established under §9.4.
+The Judicial Monitor audits the courts, judicial officers, the Elections Panel, and compliance with constitutional treaty and compact obligations, including all information relating to the public business of institutions within its mandate.
 
 ### §9.1.d — Monitor General Term Expiry and Vacancy
 
@@ -682,7 +686,13 @@ Any citizen meeting the following eligibility criteria may apply directly to the
 
 ### §9.5 — Monitor Operations
 
-Every Monitor finding, report, and assessment is published to the NRS permanently and free of charge and is exempt from classification, but must protect information whose disclosure would violate constitutional rights or compromise lawful security interests. No official outside the issuing Monitor may suppress, delay, classify, or alter a Monitor report before publication. Internal review for factual accuracy and compliance with constitutional disclosure protections is permitted but may not be used to suppress findings or obstruct required publication. Any Monitor staff member may publish a minority report directly to the NRS, subject to the same protections for constitutionally confidential information and lawful security interests as official Monitor reports, if they believe a finding has been improperly omitted or suppressed. No staff member may be disciplined or retaliated against for making a publication authorized by this section. All three Monitors jointly publish an annual State of the Republic report on a fixed date regardless of whether any political actor requests it. Where a compliance question spans multiple Monitor mandates, the Monitors may conduct a joint investigation; no Monitor General may veto another's contribution. Monitors have unrestricted access to records, personnel, facilities, and systems within their constitutional audit mandates. Access to confidential or classified information does not authorize its public disclosure. Obstruction of a Monitor acting within its constitutional audit mandate must be documented and reported to the NRS and the responsible body. Where an applicable compliance standard has been published under §9.5.a, the obstruction must also be recorded as a Fail. Every finding, report, and assessment published under this Article is delivered on publication to the body or officer responsible for the subject matter, and to the Speaker of each legislative chamber. Delivery is a matter of record and imposes no obligation to act.
+Monitor findings and assessments shall be published permanently to the NRS, subject to constitutional protections for confidential information and lawful security interests. No authority outside the issuing Monitor may suppress, delay, alter, or classify its findings.
+
+Monitor personnel may independently disclose evidence of improper suppression or alteration of findings to the NRS, subject to the same confidentiality protections, and shall be protected from retaliation for lawful disclosure.
+
+Monitors shall have unrestricted access to records, personnel, facilities, and systems within their constitutional audit mandates. Access to confidential or classified information does not authorize its public disclosure. Obstruction of a Monitor acting within its constitutional mandate shall be documented and published to the NRS.
+
+The three Monitors shall periodically provide the Legislature and the citizens with a joint report on the State of the Republic.
 
 ### §9.5.a — Compliance Standards and Findings
 
