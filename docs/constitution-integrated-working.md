@@ -414,8 +414,6 @@ The Temporary Associate Justice may advocate publicly for confirmation. Statute 
 
 (8) Courts may issue interim protective orders where necessary to prevent irreparable harm pending judgment. Failure to rule within a constitutionally prescribed period does not determine the merits or produce a substantive constitutional outcome. The parties retain all otherwise available judicial remedies.
 
-(9) Failure of the SC to rule within a required period does not determine the merits or produce a substantive constitutional outcome. The parties retain any remedy otherwise available under this Constitution.
-
 ### §4.5.a — Judicial Decisions and Privacy
 
 Judicial decisions are public. Courts must protect personally identifying information where its disclosure is unnecessary to understand the decision, enforce the law, or preserve public accountability.
