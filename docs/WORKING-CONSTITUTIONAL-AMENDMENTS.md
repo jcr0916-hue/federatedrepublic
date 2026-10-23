@@ -1791,6 +1791,28 @@ Preserve the separate default outside Republic, optional Territorial Integration
 
 **Consolidation guidance:** Apply One Home Rule; avoid repeating §3.6 ratification machinery, Article XVI self-determination or JM monitor-only scope in Article XX. Remove only administrative deadlines, duplicate consultation machinery and unilateral power not supported by compact; preserve all distinct rights-based constraints.
 
+## Proposed amendment 23 — Monitor suspension and territorial remainder-viability fallbacks (approved; 2026-10-23)
+
+**Status:** Approved working decisions, not enacted. These later decisions supersede inconsistent older provisions in §§9.7.a and 15.5.a.
+
+### §9.7.a — Temporary suspension and judicial protection
+
+Retain the approved requirement that two Monitor Generals publish evidence and recommend suspension of the third. Approval belongs to a majority of the Supreme Court for the Legislative Monitor General, jointly to both legislative Speakers for the Executive Monitor General, and jointly to both Consuls for the Judicial Monitor General. Disagreement with findings or conclusions is not grounds.
+
+A suspension lasts no longer than 90 days unless a §9.9 removal proceeding has begun. Suspension may continue during that proceeding, but its continuing necessity is subject to expedited independent judicial review; the court may terminate an unjustified suspension. Suspension ends if removal is rejected or the proceeding concludes without removal. Filing a removal proceeding alone does not suspend the officer; valid suspension requires a separate decision under §9.7.a. Acting service applies under §9.1.d. Suspension cannot replace permanent removal.
+
+**Reason:** A non-audited approving institution checks the recommendation, while a fixed initial duration and judicial review prevent suspension being used to defeat constitutional tenure.
+
+### §15.5.a — Sequential assessments; Legislature retains decision
+
+The JMC ordinarily assesses whether the territorial remainder could independently satisfy constitutional Statehood requirements and publishes its findings. If it fails to report within the prescribed period, the Civic Consul must develop viability standards consistent with those requirements, **apply** them to evidence about the remaining Territory, and publish the standards, evidence, findings and resulting assessment to the NRS. The Civic Consul also transmits the report to both legislative Speakers for distribution to chamber members.
+
+The Assembly is responsible for the consequential viability determination, reviewing any available report, standards, evidence and application as it sees fit. If **both** the JMC and Civic Consul fail to deliver the required assessment, the Legislature proceeds to determine viability under procedures it establishes by statute. Missing informational reports neither constitute a finding of viability or nonviability nor halt legislative authority. Assembly inaction transfers authority to the Senate; continuing inaction is subject to judicial enforcement under §15.2.a. Preserve §15.5.a(1) multiple-petition convention trigger, and §15.5.a(3) convention procedure and consequences.
+
+**Reason:** Neither an informational Monitor nor a domestic executive may acquire a veto through silence. The Legislature evaluates the sufficiency of standards, supporting evidence and their application rather than separately approving the standards as a prerequisite.
+
+**Integration detail remaining to reconcile:** The precise start of the legislative decision clock relative to the JMC and CC reporting periods, and any CC-specific deadline, were not separately fixed by the approval. Those administrative timings may be set by statute consistent with the constitutional audit-decision and transfer safeguards. Do not invent an additional fixed constitutional clock.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
