@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, XVI, and XVIII–XX have been integrated from the working amendment register; Articles II–XV and XVII still require approved amendments. Cross-references have not yet been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
+> **Integration is incomplete:** Articles I, XVI–XX have been integrated from the working amendment register; Articles II–XV still require approved amendments. Cross-references have not yet been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
 
 ---
 
@@ -1103,11 +1103,23 @@ Procedures for initiating negotiations shall be established by statute.
 
 (1) This Constitution may be amended through the parliamentary path or through citizen initiative. Every member's vote on any amendment is published to the NRS.
 
-(2) A parliamentary amendment requires 2/3 of the full seated membership of both chambers. The proposing body simultaneously specifies the ratification mechanism — either State Ratification (ratification by 2/3 of States within the period defined by statute; until such statute is enacted, 180 days) or Popular Ratification (a national popular referendum achieving 2/3 of votes cast with at least 55% citizen participation within 180 days).
+(2) A parliamentary amendment requires approval by two-thirds of the full seated membership of both legislative chambers.
 
-(3) A Citizen Initiative Amendment proceeds through the two-phase petition process of §13.1, except that no enactment deadline applies and Phase Two requires signatures from 15% of eligible voters nationally. Once the Phase Two threshold is verified, the Elections Panel administers a national referendum within 180 days. Passage requires 70% of votes cast with at least 65% citizen participation. An initiative that fails may not be resubmitted on the same or substantially similar grounds for five years.
+The proposing body shall specify whether the amendment proceeds through State Ratification or Popular Ratification and establish a definite period for ratification in accordance with statute.
+
+State Ratification requires approval by two-thirds of the States. Popular Ratification requires approval by two-thirds of votes cast in a national referendum.
+
+The ratification period established for an amendment shall remain fixed throughout its consideration.
+
+(3) A Citizen Initiative Amendment proceeds through the two-phase petition process established under §13.1, without the filing deadline applicable to optional referendums. Phase Two requires signatures from 15% of eligible voters nationally.
+
+Upon verification of the required signatures, the Elections Panel shall administer a national referendum within 180 days. The amendment is ratified upon certification of approval by 70% of votes cast.
+
+An amendment rejected by the voters may not be reinitiated in substantially the same form within five years, unless materially changed.
 
 (4) Amendment of the following provisions requires Popular Ratification regardless of the amendment's origin: the Monitor selection mechanisms and independence protections (§9.2–§9.4), the Monitor information-only mandate and non-dependency principle (§9.1), the Monitor funding guarantee (§9.6), the NRS architecture and permanence requirements (§10.1), the Elections Panel and NRS Panel independence (§11.1), the designation of non-derogable rights (§1.16.a) and the limit on amendments extinguishing them (§17.3(3)), the reversion of authority to the States and Territories (§15.7.a), and this subsection. A Citizen Initiative Amendment satisfies this requirement through its own referendum under paragraph (3).
+
+An amendment that modifies the substance or legal effect of a provision protected under this subsection requires Popular Ratification, regardless of where the amendment is placed in this Constitution.
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
 
@@ -1115,15 +1127,27 @@ No Consul signature or veto applies to an amendment. An amendment takes effect u
 
 ### §17.3 — Amendment Consistency and Supremacy
 
-(1) An amendment inconsistent with an existing provision is void to the extent of the inconsistency unless it expressly repeals or amends that provision.
+(1) A proposed constitutional amendment shall identify the provisions it repeals or modifies.
 
-(2) The JM publishes a consistency analysis of any proposed amendment within 30 days of passage by both chambers for a parliamentary amendment, or within 30 days of Elections Panel Phase Two threshold verification for a citizen initiative amendment. No ratification vote on a parliamentary amendment may be held before the JM's analysis is published or the 30-day period expires, whichever occurs first.
+An amendment ratified in accordance with this Constitution shall be interpreted consistently with existing provisions wherever reasonably possible. Where an irreconcilable conflict exists, the later amendment governs to the extent of the conflict, subject to the protections established by §17.3(3).
 
-(3) The SC resolves disputes over a ratified amendment's consistency under §4.5 on petition of any person with standing. It may not refuse to apply an amendment that has met its procedural thresholds, except that an amendment extinguishing a right designated non-derogable under §1.16.a is void to the extent of the extinguishment.
+(2) The JM shall examine each proposed constitutional amendment for consistency with this Constitution and publish its findings to the NRS.
+
+The JM shall have 30 days following parliamentary approval or verification of a citizen initiative's required petition signatures to publish its findings.
+
+Ratification may proceed upon publication of the findings or expiration of that period, whichever occurs first.
+
+(3) The Supreme Court shall adjudicate challenges to the constitutional validity of ratified amendments on petition of any person with standing.
+
+The Court may determine whether an amendment satisfied the requirements for ratification and whether it extinguishes a right designated non-derogable under §1.16.a.
+
+An amendment that extinguishes such a right is void to the extent of the extinguishment.
 
 (4) Amendments operate prospectively — they do not retroactively alter the constitutionality of acts that were constitutional when performed.
 
-(5) A proposed amendment may be withdrawn at any point before ratification is certified.
+(5) A proposed constitutional amendment may be withdrawn by its proposing authority before submission for ratification.
+
+Upon submission for ratification, the amendment shall proceed under the applicable constitutional process until ratified or rejected.
 
 ### §17.4 — Supremacy of This Constitution
 
