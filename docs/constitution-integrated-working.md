@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I and XVII–XX are integrated; Article II and III have approved revisions applied in part, while §2.2 awaits harmonization with Article XIV. Article XVI is integrated. Articles IV–XV still require approved amendments. Cross-references have not been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
+> **Integration is incomplete:** Articles I, III, IV, and XVI–XX have approved working amendments integrated. Article II is partially integrated pending its later military framework in Article XIV; Articles V–XV still require integration. Cross-references have not been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
 
 ---
 
@@ -344,11 +344,11 @@ The Legislature may by statute delegate defined authority within federal legisla
 
 ### §4.1 — Court Structure
 
-The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute, but abolition may not terminate or shorten a sitting judge's term. A judge whose court is abolished retains office and compensation for the remainder of their term and may serve temporarily under §4.2(5). Constitutional questions arising in any proceeding may be referred to the SC.
+The Republic's judiciary consists of district courts, appellate courts, and the Supreme Court. The Legislature may establish, abolish, and define the jurisdiction of inferior courts by statute. Abolition of a court takes effect for each occupied judicial seat upon expiration of the sitting judge's term. Constitutional questions arising in any proceeding may be referred to the SC.
 
 ### §4.2 — Judicial Appointments and Independence
 
-(1) The Civic Consul nominates inferior court judges from the Judicial Pool under §9.8 within 90 days of a vacancy, or any shorter period defined by statute. The Senate confirms by a majority of its full seated membership.
+(1) The Civic Consul shall nominate inferior court judges from the Judicial Pool under §9.8 without undue delay following a vacancy. The Senate confirms by a majority of its full seated membership.
 
 (2) Inferior court judges serve a single non-renewable 12-year term and may be removed only under paragraph (3). Disagreement with a decision is not grounds for removal.
 
@@ -356,13 +356,13 @@ The Republic's judiciary consists of district courts, appellate courts, and the 
 
 (4) No public official may direct or threaten a judge, or attempt to influence a judge's decision in a pending matter other than through the proceeding itself. Judicial compensation may not be reduced during the judge's term.
 
-(5) Upon a vacancy in an inferior federal judicial office, temporary judicial authority passes immediately to an eligible serving federal judge under a succession order established by statute. Temporary service is not permanent appointment, does not alter the temporary judge's term, and ends when a successor assumes the vacant office.
+(5) The Supreme Court may reassign cases among inferior federal courts or qualified judges as necessary to prevent judicial vacancies from delaying proceedings.
 
 ### §4.3 — The Supreme Court
 
 The Supreme Court consists of the number of justices established by statute, never fewer than five. Justices serve single non-renewable 12-year terms in staggered classes as nearly equal as practicable. Altering the number of seats requires 2/3 of both chambers; a reduction takes effect only through attrition.
 
-An equally divided Court leaves the challenged ruling in effect. A majority of seated justices, including Temporary Associate Justices, constitutes ordinary quorum; constitutional questions require at least five participating justices.
+An equally divided Court leaves the challenged ruling in effect, or, in an original proceeding, grants no relief. An equal division establishes no binding precedent. A majority of seated justices, including Temporary Associate Justices, constitutes ordinary quorum; constitutional questions require at least five participating justices.
 
 ### §4.3.a — Supreme Court Justice Removal
 
@@ -392,13 +392,13 @@ The Temporary Associate Justice may advocate publicly for confirmation. Statute 
 
 (2) Courts decide constitutional and legal questions, not policy questions. Where a statute is ambiguous, courts apply the interpretation most consistent with this Constitution and may not rewrite clear statutory language.
 
-(3) Monitor findings published to the NRS are admissible; where a court reaches a different conclusion, it must address the inconsistency in its written decision.
+(3) Monitor findings published to the NRS are admissible in judicial proceedings.
 
-(4) Except where this Constitution expressly confers standing, courts adjudicate only cases involving a concrete, articulable legal injury and may not issue advisory opinions. An organization has standing where at least one member would have standing and the claim is germane to its established constitutional purpose. The Legislature may not leave any category of legal injury without a judicial forum.
+(4) Except where this Constitution expressly confers standing, courts adjudicate only cases involving a concrete, articulable legal injury and may not issue advisory opinions. An organization has standing where at least one member would have standing and the claim is germane to the organization's established purposes. The Legislature may not leave any category of legal injury without a judicial forum.
 
 (5) The SC has original jurisdiction over:
 
-— constitutional disputes between States, between a State and the federal government, and constitutional challenges to federal statutes;
+— constitutional disputes between States, and disputes between a State and the Republic concerning their respective constitutional powers or obligations;
 
 — disputes between the Legat Consul and Civic Consul concerning their respective constitutional domains under §2.14;
 
@@ -408,11 +408,11 @@ The Temporary Associate Justice may advocate publicly for confirmation. Statute 
 
 — and disputes over the consistency of ratified amendments with entrenched provisions under §17.3.
 
-(6) The SC has jurisdiction over constitutional challenges to immediate defensive military authority under §2.2 during active operations and must rule within the period defined by statute, not to exceed 48 hours.
+(6) Constitutional challenges to the exercise of immediate defensive military authority under §2.2 during active operations receive expedited independent judicial review.
 
 (7) Where conflict between constitutional actors threatens lawful governance or constitutionally required essential services, existing lawful operations continue pending resolution. No actor may use refusal to certify, approve, or coordinate to suspend a constitutional obligation. The SC has expedited jurisdiction over such disputes.
 
-(8) Where this Constitution establishes a deadline for an SC ruling, a majority of seated justices may, before expiry and upon stated reasons, grant one extension. The extension may not exceed the lesser of 30 days or the original period for decision. The SC may issue limited interim protective orders where delay would otherwise cause irreparable harm.
+(8) Courts may issue interim protective orders where necessary to prevent irreparable harm pending judgment. Failure to rule within a constitutionally prescribed period does not determine the merits or produce a substantive constitutional outcome. The parties retain all otherwise available judicial remedies.
 
 (9) Failure of the SC to rule within a required period does not determine the merits or produce a substantive constitutional outcome. The parties retain any remedy otherwise available under this Constitution.
 
