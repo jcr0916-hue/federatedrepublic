@@ -1870,6 +1870,16 @@ The Assembly shall make its determination within the period established by statu
 
 No proposed constitutional fix was integrated here: executive office resurrection, rejected sole-candidate fallback, and the caretaker authorization citation have legal consequences beyond mere punctuation. Test implementation under founding law and statutory procedures; seek explicit approval of any substantive replacement.
 
+## §2.9.a — Simplified State Emergency Council (integrated 2026-10-23)
+
+**Status:** Integrated into the unpublished working draft; not enacted.
+
+**Decision:** Preserve the public-lot State order, Emergency Designee, State Emergency Council, essential continuity and defense authority, automatic return to recovered federal institutions, and six-month termination under §15.7.a. The Council **facilitates** restoration of federal representation; States and Territories use their own lawful processes for acting or permanent representatives.
+
+**Simplification:** Activation now requires failure of ordinary federal continuity mechanisms to exercise essential authority. The uniform ten-day vacancy provision and automatic reinstatement of formerly unreachable officials were removed. Reconstruction logistics and State replacement procedures are not federally prescribed. Section §2.9.a(6) remains the six-month endpoint to preserve cross-references.
+
+**Working draft commit:** `a4b345b187095887b18c1d62167a8a93a5cf8a0d`.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
