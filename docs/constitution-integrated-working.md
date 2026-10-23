@@ -1,7 +1,7 @@
 # The Federated Republic — Constitution (Working Integration Draft)
 
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
-> This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
+> This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments recorded in `docs/WORKING-CONSTITUTIONAL-AMENDMENTS.md`, including subsequent approved continuity revisions.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
 > **Integration is incomplete:** Articles I, III–VIII, X–XIV, and XVI–XX have approved revisions integrated; Article II and Articles IX and XV require further reconciliation. The coordinated military framework is incorporated in §§2.2, 12.2.a, and 14.2–14.5. Article XIV §14.1 retains its authorized-purpose limits without duplicating or restricting the Supreme Court's existing constitutional dispute jurisdiction. Cross-references and inter-article dependencies require final validation. Do not publish or adopt this draft.
 
