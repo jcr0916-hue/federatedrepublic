@@ -1,13 +1,9 @@
-# The Federated Republic — Constitution
+# The Federated Republic — Constitution (Working Integration Draft)
 
-> **GENERATED FILE — DO NOT EDIT BY HAND.**
-> Built from `constitution_data.json` by `scripts/build-constitution-md.py`.
-> To change anything here, change `constitution_data.json` and re-run the script.
-> This is the complete text; nothing is truncated or summarized.
->
-> **20 articles · 177 provisions**
-
-thefederatedrepublic.org
+> **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
+> This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
+> The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
+> **Integration is incomplete:** Articles XVIII–XX have been integrated; Articles I–XVII still contain adopted text and need approved amendments applied. The references in those articles are not yet fully reconciled. Do not merge or publish this file as a complete revised Constitution.
 
 ---
 
@@ -1175,87 +1171,148 @@ Designation of land within a Territory to the National Trust shall be governed b
 
 ### §19.1 — Activation Threshold and Ratification
 
-This constitution takes effect upon: (1) interim Elections Panel certification that the NVS is operational and meets §11.2; and (2) a national ratification vote achieving 60% of votes cast with at least 50% participation. Where multiple sovereign nations simultaneously pool sovereignty through a treaty of union, transition provisions adapt as specified in the treaty of union, subject to the constitutional principles of this Article. Where the ratifying polity maintains existing institutions overlapping with constitutional mechanisms, the Legislature must by statute within two years of Phase 4 define their relationship; accommodation statutes may not reduce the legal standing of pre-existing governance structures below their pre-Phase 4 status.
+This Constitution takes effect upon interim Elections Panel certification that the NVS is operational and meets §11.2 and a national ratification vote achieving 60% of votes cast.
+
+Where multiple sovereign nations simultaneously pool sovereignty through a treaty of union, transition provisions adapt as specified in the treaty of union, subject to the constitutional principles of this Article.
+
+Where existing institutions overlap with institutions established by this Constitution, the Legislature shall determine their relationship by statute.
+
+Existing institutions shall retain their lawful standing until their relationship with the Republic's institutions is established in accordance with this Constitution.
 
 ### §19.2 — Day Zero and Transition
 
-(1) Day Zero is the date the ratification threshold is certified as achieved. Upon ratification, all laws conflicting with the Individual Sovereignty Floor are immediately null and void; all public assets, liabilities, rights, and obligations of the predecessor national government vest in the Republic by constitutional operation subject to this Constitution, and the authoritative records necessary to establish them are transferred or registered to the NRS as provided by law; and the 24-month Transition Window begins.
+(1) Day Zero is the date on which constitutional ratification is certified.
 
-(2) The constitution is implemented through a four-phase transition: Phase 0 — pre-ratification preparation, during which the interim Elections Panel is constituted, the NVS certified operational, and the joint Monitor panel formed; Phase 1 — Emergency Stabilization (Days 1–90), during which predecessor national officials whose authority is displaced or superseded serve as caretakers; Phase 2 — Institutional Construction (Days 91–270), during which transition status determinations and any required Statehood Audits are conducted, Monitors formally constituted, and the NVS fully deployed; Phase 3 — First Elections (Days 271–450), encompassing the first federal electoral period and inaugural executive and judicial appointments; Phase 4 — Full Constitutional Operation, beginning the day the first Legislature convenes and the first executives take the constitutional oath.
+Upon Day Zero, laws inconsistent with the Individual Sovereignty Floor are void, and the predecessor national government's public assets, liabilities, rights, and obligations vest in the Republic, subject to this Constitution. Authoritative predecessor records shall be transferred or registered to the NRS in accordance with law.
+
+The founding arrangements submitted for ratification shall establish an implementation schedule consistent with this Article.
+
+(2) The institutions of the Republic shall assume their constitutional authority individually as each becomes capable of exercising its assigned functions.
+
+Upon such capability, the corresponding authority of predecessor or temporary institutions transfers immediately by constitutional operation.
+
+The establishment or readiness of one institution need not depend upon the establishment or readiness of another, except where the exercise of its constitutional functions necessarily requires it.
+
+Founding arrangements shall provide for the establishment of constitutional institutions and the continuity of government during the transition.
 
 ### §19.3 — Caretaker Status
 
-(1) Officials and institutions of the predecessor national government whose authority is displaced or superseded by this Constitution continue during the Transition Window only in caretaker capacity as necessary to preserve lawful government, existing services, rights, obligations, and public safety. Existing State, territorial, indigenous, and local governments continue under their own lawful authority except to the extent this Constitution expressly provides otherwise.
+(1) Officials and institutions of the predecessor national government may continue in caretaker capacity only as necessary to preserve lawful government, existing services, rights, obligations, and public safety until the corresponding institutions of the Republic become constitutionally capable of exercising those functions.
 
-(2) A caretaker legislature may enact only measures reasonably necessary for continuity, rights, existing obligations, public safety, or implementation of this Article. A measure intended to continue after Phase 4 remains subject to continuation, amendment, or repeal by the first Legislature. Legislation enacted outside these limits is void, and any Inhabitant may challenge such legislation before a court of competent jurisdiction.
+Existing State, territorial, Indigenous, and local governments continue under their own lawful authority except where this Constitution expressly provides otherwise.
 
-(3) A joint Monitor panel of one representative per Monitor monitors the transition and publishes its findings; the panel dissolves automatically at the Transition Window's conclusion. During Phase 0, before Monitor Generals are constituted, the interim Elections Panel constitutes the panel from a pre-qualified pool established by the ratification convention; from Phase 2, each Monitor General appoints their representative to the panel for the remainder of the Transition Window.
+(2) A caretaker legislature may enact only measures reasonably necessary to preserve government continuity, constitutional rights, existing obligations, public safety, or the implementation of this Constitution.
+
+Legislation enacted beyond this authority is void and subject to judicial review.
+
+Legislation validly enacted during the transition remains subject to amendment or repeal by the Legislature of the Republic.
+
+(3) A joint Monitor panel shall independently monitor the constitutional transition and publish its findings to the NRS.
+
+The interim Elections Panel shall establish the joint Monitor panel before ratification. Its composition and procedures shall be determined by the founding arrangements, with provision for participation by the Republic's Monitors as they become constitutionally operational.
+
+The joint Monitor panel shall dissolve when all predecessor and temporary authorities exercising transitional constitutional functions have been replaced by their corresponding institutions of the Republic.
 
 ### §19.3.a — Transition National-Defense Continuity
 
-(1) Until the Legat Consul and Legislature are constitutionally capable of exercising their respective national-defense authorities, predecessor national institutions continuing under §19.3 may exercise only the military and defense authority reasonably necessary to defend the Republic, its territory, population, and forces against actual or imminent invasion or armed attack, or to carry out military action specifically required by an inherited treaty obligation that remains binding under §19.5(4).
+(1) Until the institutions of the Republic responsible for national defense become constitutionally capable of exercising their respective functions, predecessor national institutions may exercise only the military and defense authority reasonably necessary to defend the Republic, its territory, population, and forces against actual or imminent invasion or armed attack, or to fulfill military obligations arising from inherited treaties that remain binding under §19.5(4).
 
-(2) Existing predecessor military command arrangements, defense appropriations, and military authorities remain provisionally effective only to the extent reasonably necessary for action authorized by subsection (1). New commitments extending beyond the Transition Window may be made only where reasonably necessary to conduct or sustain that action and remain subject to alteration or termination by the competent constitutional authorities once constituted.
+(2) Predecessor military command arrangements, defense appropriations, and military authorities remain provisionally effective only to the extent necessary to exercise the defensive authority permitted under subsection (1).
 
-(3) Until the Legislature is constitutionally capable of exercising its authority, a predecessor national authority exercising caretaker command under subsection (1) may call State forces into federal service without the legislative authorization §14.5 otherwise requires, but only to the extent reasonably necessary for defense against invasion or armed attack.
+New commitments may be undertaken only where reasonably necessary to conduct or sustain such authorized defensive action.
+
+All continuing arrangements and commitments remain subject to alteration or termination by the competent constitutional authorities of the Republic as they assume their respective functions.
+
+(3) Until the Legislature of the Republic becomes constitutionally capable of exercising its authority, a predecessor national authority exercising caretaker defense command under subsection (1) may call State forces into federal service without the legislative authorization otherwise required by §14.5, but only to the extent reasonably necessary to defend against invasion or armed attack.
 
 (4) Defensive action under subsection (1) may occur outside the Republic's territory where reasonably necessary to repel, disrupt, or terminate the invasion or armed attack.
 
-(5) Invocation of authority under this section, and the constitutional basis for it, must be published to the NRS as soon as operationally practicable. Operational details may be classified only under Article X. The joint Monitor panel monitors action under this section and has access to the records necessary to assess constitutional compliance.
+(5) The exercise of caretaker defense authority under this section, and its constitutional basis, shall be published to the NRS as soon as operationally practicable.
 
-(6) As each constitutional officer or institution ordinarily responsible for a function governed by this section becomes constitutionally capable of exercising that function, the corresponding authority transfers immediately by constitutional operation and caretaker command or decisional authority ends to that extent. A military operation begun under this section may continue under its transition authorization for no more than 60 days after the Legislature first becomes constitutionally capable, unless the Legislature earlier authorizes continuation under §2.2 or directs cessation; within 14 days after taking office, the Legat Consul must submit the operation for legislative authorization or begin orderly cessation. Defense appropriations preserved under subsection (2) remain available for such continuing operations until superseded by a constitutional budget or other lawful appropriation.
+Operational information may be classified only in accordance with Article X.
+
+The joint Monitor panel shall have access to records necessary to assess compliance with this section and shall report its findings in accordance with §19.3(3).
+
+(6) A military operation commenced under caretaker authority may continue under its transitional authorization for no more than 60 days after the Legislature becomes constitutionally capable of exercising its authority, unless the Legislature authorizes its continuation under §2.2 or directs its cessation.
+
+Within 14 days of assuming office, the Legat Consul shall submit such an operation for legislative authorization or begin its orderly cessation.
+
+Defense appropriations preserved under subsection (2) remain available for authorized continuing operations until superseded by lawful appropriation.
 
 ### §19.4 — Pre-Constitutional Classified Documents
 
-Predecessor classified material is subject from Day Zero to the standards of Article X. The Legislature must establish an independent review mechanism within 90 days of Phase 4 activation to apply those standards systematically. Material that does not satisfy Article X must be declassified and published to the NRS. Until the permanent mechanism is operational, a lawful temporary mechanism exercises only the review authority necessary to apply Article X and preserve access to review. Any Inhabitant may obtain Supreme Court review of a determination concerning predecessor classified material.
+Predecessor classified material is subject to Article X from Day Zero.
+
+The Legislature shall establish an independent mechanism to review predecessor classified material under Article X. Until that mechanism becomes operational, a lawful temporary mechanism shall exercise the review authority necessary to preserve constitutional compliance and access to review.
+
+Material that does not satisfy Article X shall be declassified and published to the NRS.
+
+Any Inhabitant may obtain judicial review of a determination concerning predecessor classified material.
 
 ### §19.5 — Pre-Existing Obligations
 
-(1) Active military operations of the prior government continue under existing authorization until the §2.2 military authorization framework can apply; the Legat Consul, once inaugurated, must assess each active operation against the authorized purposes under §14.1 and either link it to legislative authorization within 14 days or begin orderly cessation; operations not so linked within 60 days cease unless the Legislature grants a one-time authorization.
+(1) Pre-existing social insurance programs shall continue without interruption during the constitutional transition, subject to subsequent legislation enacted under this Constitution.
 
-(2) Social insurance programs continue uninterrupted during the Transition Window.
+(2) The Republic succeeds to the predecessor government's international legal relationships, including its treaties, financial commitments, and contractual obligations.
 
-(3) Benefit obligations to persons who served in military or national service under the prior government are honored; the Legislature must provide for their administration by statute within the first budget cycle following Phase 4.
+Where an inherited international obligation conflicts with this Constitution, the Republic shall seek its renegotiation or lawful termination in accordance with §3.6.
 
-(4) The Republic succeeds to and acts as the legal continuation of the prior government in its international relations; all international obligations, financial commitments, treaty relationships, and contractual obligations of the prior government are assumed as successor sovereign. Where an assumed international obligation conflicts with this constitution, the Republic is bound to renegotiate or formally supersede the obligation through the treaty process under §3.6; until that process is complete, the obligation is honored to the minimum extent required by international law without requiring any constitutional officer to violate Article I or any non-derogable right under §1.16.a.
+Pending resolution, the Republic shall honor the obligation to the extent required by international law, without requiring any constitutional officer to violate Article I or any non-derogable constitutional right.
 
-(5) From Day Zero, an independent judicial forum must remain continuously available for Article I claims arising from the nullification or displacement of predecessor law. A temporary judicial mechanism may exercise only the authority necessary to preserve constitutional rights and ends automatically when the permanent judiciary is constitutionally capable of exercising the relevant jurisdiction.
+(3) From Day Zero, an independent judicial forum shall remain continuously available to enforce Article I.
+
+A temporary judicial institution may exercise only the authority necessary to preserve constitutional rights until the corresponding judiciary of the Republic becomes constitutionally capable of exercising that jurisdiction.
 
 ### §19.6 — Transition Territories
 
-(1) Political entities that held recognized State or equivalent status immediately prior to ratification and choose to enter the Republic as States become full States for all constitutional purposes from Day Zero, including constituting the Senate at its first seating.
+(1) A political entity holding recognized State or equivalent constitutional status before ratification that elects to enter the Republic as a State shall be recognized as a State from Day Zero, with all rights and responsibilities established by this Constitution.
 
-(2) All prior government territories that had not achieved statehood by Day Zero enter as Territories from Phase 4 activation; any capital district or special administrative region is assigned Territory status and follows the §15.2 path.
+(2) Predecessor territories that do not enter the Republic as States shall be recognized as Territories from Day Zero.
 
-(3) A territory or subdivision whose entry status depends upon qualification during the Transition Window may instead seek State status through a Statehood Audit completed by the end of Phase 2. An entity that does not achieve the required audit enters as a Territory and may begin the ordinary Statehood pathway under §15.2 immediately.
+Predecessor capital districts and special administrative regions shall likewise be recognized as Territories, subject to the provisions of Article XV.
 
-(4) Any territory may choose Territory status by simple legislative vote regardless of whether it meets the Statehood Audit.
+(3) A predecessor political entity may elect to enter the Republic as a Territory by a majority vote of its existing legislative body, regardless of its eligibility for Statehood.
 
-(5) Prior government states or territories may voluntarily subdivide during the Transition Window by vote of their existing legislative body; new subdivisions are treated as separate petitioning entities.
+(4) Before entry into the Republic, a predecessor State or Territory may voluntarily subdivide in accordance with its lawful procedures.
 
-(6) The biennial Statehood Audit under §15.2 applies to every State from the first full audit cycle following Phase 4 activation.
+The resulting entities shall be considered separately for admission under this Constitution.
 
-### §19.7 — Transition Candidate Registers
+### §19.7 — Founding Registers and Monetary Continuity
 
-The joint Monitor panel assembles the initial Candidate Registers for constitutionally established positions before Phase 3 elections can occur. It also compiles the founding register of recognized indigenous nations under §16.1 from the predecessor record and publishes it to the NRS before the close of Phase 1; compilation is ministerial and applies the predecessor record as it stands. Registers assembled by the panel are valid, and the Legislature continues them through the first budget cycle after Phase 4. The panel performs interim Monetary Authority certification functions from Phase 4 activation only until the Monetary Authority is constitutionally constituted and capable of performing those functions under §12.1.a. Initial MA staffing and selection must comply with §12.1.a.
+(1) The interim Elections Panel shall prepare the initial Candidate Registers in accordance with the applicable constitutional eligibility requirements.
+
+(2) The founding register of recognized Indigenous nations shall be established from the authoritative predecessor records and published to the NRS.
+
+The compilation is ministerial and shall not alter the recognition or standing of any Indigenous nation.
+
+(3) Until the Monetary Authority becomes constitutionally capable of exercising its functions, a lawful temporary institution may perform the certification functions necessary to preserve monetary continuity.
+
+The Monetary Authority shall be constituted in accordance with §12.1.a.
 
 ### §19.8 — Transitional Accountability Mechanism
 
-Where a ratifying polity’s predecessor government has documented constitutional violations, the Legislature may by statute passed by 2/3 of both chambers establish a Transitional Accountability Mechanism. Such a mechanism must be time-limited — not to exceed ten years in duration — non-criminal, and consistent with Article I. The establishing statute defines the scope, procedures, and duration, and no amending statute may expand the scope without the same 2/3 majority. No new Mechanism may be established within ten years of the sunset of a prior one.
+Where documented violations by a predecessor government warrant transitional accountability, the Legislature may establish a temporary, non-criminal Transitional Accountability Mechanism by a two-thirds vote of both chambers.
+
+The establishing statute shall define the mechanism's jurisdiction, powers, procedures, and duration. Any expansion of its jurisdiction or powers requires the same legislative approval.
+
+The mechanism shall operate consistently with Article I and shall terminate upon expiration of its statutory mandate.
 
 ### §19.9 — Required Institutions and Temporary Continuity
 
-(1) Where this Constitution requires a statutory independent agency or other permanent institution to perform a specific constitutional function, the Legislature must establish the permanent institution within the statutory period and the following constitutional maximums from Phase 4 activation: the civic proficiency assessment administrator under §5.1, 180 days; the census agency under §3.2, 18 months; and a constitutionally capable Monetary Authority under §12.1.a, 180 days.
+(1) Where this Constitution requires the establishment of a permanent institution to exercise a constitutional function, the responsible authorities shall provide for its establishment in accordance with law.
 
-(2) A lawful temporary substitute may perform only the functions necessary to preserve constitutional continuity or rights until the permanent institution is capable of performing the function, when the substitute's authority ends automatically. A missed constitutional maximum is immediately justiciable; a court of competent jurisdiction may compel the responsible actors and may authorize only those temporary measures necessary to preserve continuity or rights.
+(2) A lawful temporary institution may exercise only the functions necessary to preserve constitutional continuity or rights until the corresponding permanent institution becomes constitutionally capable of exercising those functions.
 
-(3) The Legislature must by statute establish the transition from predecessor voting infrastructure to the constitutionally required NVS, ensuring no gap in democratic participation.
+A failure to establish a constitutionally required institution is subject to judicial review. A court of competent jurisdiction may compel the responsible authorities to fulfill their constitutional obligations and authorize temporary measures necessary to preserve continuity or rights.
+
+(3) The Legislature shall establish by statute the transition from predecessor voting infrastructure to the National Voting System without interrupting democratic participation.
 
 ### §19.10 — Founding Senate and Judicial Classes
 
 (1) At the first Senate seating, senators are assigned to three approximately equal cohorts by public lot: the first cohort serves an initial term of two years, the second four years, the third six years; thereafter all Senate terms are six years. The lot is conducted by the Elections Panel and published to the NRS before the first senators take the constitutional oath.
 
 (2) At founding, the initial Supreme Court justices are assigned as evenly as practicable by public lot administered by the Elections Panel to three classes. The first class serves an initial term of four years, the second an initial term of eight years, and the third an initial term of twelve years. Thereafter terms follow §4.3 and §4.4. Founding service under this subsection constitutes the justice's single term for purposes of those provisions.
+
 
 ---
 
