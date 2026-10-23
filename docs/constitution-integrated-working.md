@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III–VIII, X–XII, and XVI–XX have approved working revisions integrated. Article II and Articles IX, XIII–XV remain partly or wholly pending. Article XII's separate emergency-defense and direct-democracy budget safeguards still require coordination with Articles XIII–XIV. Cross-references remain subject to validation. Do not publish or adopt this draft.
+> **Integration is incomplete:** Articles I, III–VIII, X–XIII, and XVI–XX have approved working revisions integrated. Article II and Articles IX, XIV–XV require further harmonization. Article XII's emergency-defense expenditure exception remains dependent on Article XIV integration. Cross-references and inter-article dependencies require final validation. Do not publish or adopt this draft.
 
 ---
 
@@ -840,7 +840,7 @@ The Monetary Authority publishes a detailed State of the Economy report to the N
 
 (2) The Republic shall conduct its fiscal affairs to preserve the long-term sustainability of public finances, including public debt, while fulfilling its constitutional obligations.
 
-(3) Where no budget is enacted by the start of the fiscal year, or any earlier deadline defined by statute, an interim automatic appropriation takes effect by constitutional operation covering:
+(3) Where no budget is enacted by the start of the fiscal year, or any earlier deadline defined by statute, or where an enacted annual budget is repealed by optional referendum under §13.1, an interim automatic appropriation takes effect by constitutional operation covering:
 
 — judicial operations, active defense authorizations under §14.2, and social state continuity under §12.1;
 
@@ -878,30 +878,31 @@ The Executive Monitor shall audit and review the mechanism's compliance with con
 
 ### §13.1 — Optional Referendum
 
-(1) Citizens may initiate a national referendum to repeal enacted legislation. A petition must be filed with the Elections Panel within 90 days of enactment and proceeds in two phases, each authenticated through the NVS. Both phases must be completed within 20 months of filing.
+(1) Citizens may initiate a national referendum to repeal enacted legislation. A petition must be filed with the Elections Panel within 90 days of enactment and proceeds in two phases, each authenticated through the NVS. The period for completing both phases shall be established by statute, subject to §13.1(8).
 
 (2) Phase One requires signatures from citizens equal to a percentage of eligible voters, defined by statute at not less than 0.5% nor more than 3%, in each of at least one-third of all States and Territories.
 
 (3) Phase Two begins on completion of Phase One and requires signatures from 5% of eligible voters nationally; signatures gathered in Phase One carry over and count toward this threshold.
 
-(4) Laws that solely or primarily expand an Article I right, budget laws, and laws implementing a constitutionally mandated obligation are ineligible.
+(4) Legislation is not exempt from optional referendum solely because it expands a constitutional right or implements a constitutional obligation. The repeal of legislation does not extinguish, suspend, or diminish any right or obligation established by this Constitution.
 
-(5) The Elections Panel determines at filing whether a law is eligible. Any eligibility determination may be challenged in the Appellate Court within 14 days.
+Citizens may repeal legislation through an optional referendum, including legislation containing appropriations. A referendum may not amend an appropriation or substitute a different amount. Repeal of legislation terminates the authority it establishes, subject to existing lawful obligations and the constitutional requirements for continuity of government.
 
-(6) If the threshold is met, the Elections Panel administers the referendum within 90 days of verification. A simple majority of votes cast, subject to a turnout threshold defined by the Legislature of not less than 30% and not to exceed 50%, repeals the law immediately upon certification.
+(5) The Elections Panel shall determine eligibility for optional referendum upon filing and publish its reasons to the NRS. Its determination is subject to timely judicial review under procedures established by statute.
 
-(7) A failed referendum or initiative under this Article may not be re-initiated on the same or substantially similar grounds within three years; the Legislature may re-enact a repealed law, which is again subject to referendum.
+(6) Upon verification of the required petition signatures, the Elections Panel shall administer the referendum within 90 days. A majority of votes cast in favor of repeal shall repeal the legislation upon certification of the result.
+
+(7) A referendum or initiative rejected by the voters may not be reinitiated in substantially the same form within three years, unless the proposal has been materially changed. The Legislature may reenact legislation repealed by referendum. Such legislation remains subject to a new optional referendum.
 
 (8) No statute, rule, fee, deadline, or administrative practice may make a process established by this Article nominally available but functionally prohibitive.
 
 ### §13.2 — Citizen Legislative Initiative
 
-(1) Citizens may propose legislation directly to the Legislature through the two-phase petition process of §13.1, except that no enactment deadline applies and Phase Two requires signatures from 10% of eligible voters nationally. The Elections Panel determines at filing whether the proposal complies with paragraph (3); that determination may be challenged under §13.1(5).
+(1) Citizens may propose legislation directly to the Legislature through the two-phase petition process established under §13.1, without the filing deadline applicable to optional referendums. Phase Two requires signatures from 10% of eligible voters nationally. The Elections Panel shall determine whether a proposal complies with the constitutional requirements for citizen legislative initiatives and publish its reasons to the NRS. Its determination is subject to timely judicial review under procedures established by statute.
 
-(2) Once the threshold is verified, if the Legislature does not enact the proposal within 90 days, the Elections Panel administers a direct citizen referendum on it within 90 days after that period ends; passage requires 60% of votes cast with at least 50% citizen participation.
+(2) Upon verification of the required petition signatures, the Legislature shall have 90 days to enact the proposed legislation. If the Legislature does not enact the proposal within that period, the Elections Panel shall administer a national referendum on the proposal within the following 90 days. The proposal becomes law upon certification of approval by 60% of votes cast.
 
-(3) An initiative enacted under this section is subject to this Constitution as any statute is, and may not narrow a right under Article I, appropriate funds, or alter revenue. Disputes are resolved by the SC under §4.5 on petition of any person with standing.
-
+(3) An initiative enacted under this section is subject to this Constitution as any statute is, and may not narrow a right under Article I, directly appropriate public funds, or impose or alter taxes, duties, or tariffs. The need for legislative appropriations to implement an initiative does not make it ineligible. Disputes concerning an initiative's constitutional validity are subject to judicial review on petition of any person with standing.
 ---
 
 ## Article XIV — Military Authorization and Accountability
