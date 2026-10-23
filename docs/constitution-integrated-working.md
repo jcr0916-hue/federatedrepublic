@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Approved changes for Articles I, III–VIII, and XVI–XX are integrated. Article II and Articles IX–XV still require work. The candidate-pool, succession, temporary incapacity, and removal updates in Article IX are incorporated, but §9.7.a retains obsolete references and its suspension-duration rule remains unsettled. Article XV §15.2.a is incorporated, but §15.5.a remainder viability remains unresolved. Cross-references must be reconciled before publication or adoption.
+> **Integration is incomplete:** Articles I, III–VIII, and XVI–XX have approved revisions integrated. Article II and Articles IX–XV require further integration and cross-reference validation. Approved Monitor suspension and territorial viability fallbacks are now incorporated; sequencing under statute, Article II/XIV military reconciliation, and remaining cross-article provisions must be checked before publication or adoption.
 
 ---
 
@@ -714,7 +714,13 @@ The Council may establish compliance standards within its constitutional mandate
 
 ### §9.7.a — Institutional Compromise Protocol
 
-Where two Monitor Generals jointly determine that the third has engaged in serious misconduct or abuse of office, they must publish the determination with its stated evidence, and the affected Monitor General's authority is suspended immediately. Disagreement with a Monitor General's findings or conclusions is not grounds for suspension. The suspension is limited and may be extended as provided for jointly determined incapacity in §9.1.e(5). The affected Monitor General may seek expedited SC review under §9.1.e(4), limited to lawful invocation and whether the stated evidence concerns serious misconduct or abuse of office. Suspension under this section is not removal; permanent removal is governed exclusively by §9.9.
+Where two Monitor Generals find evidence that the third has engaged in serious misconduct or abuse of office, they may recommend suspension by publishing their findings to the NRS.
+
+Suspension requires approval by a majority of the Supreme Court for the Legislative Monitor General, jointly by the Speakers of both legislative chambers for the Executive Monitor General, or jointly by both executives for the Judicial Monitor General. Disagreement with a Monitor General's findings or conclusions is not grounds for suspension.
+
+A suspension may continue for no more than 90 days unless removal proceedings have been initiated under §9.9. Upon initiation of removal proceedings, a valid suspension may continue until their conclusion, subject to expedited independent judicial review of its continuing necessity. A court may terminate a suspension whose continuing necessity is not established. Suspension ends immediately if removal is rejected or the proceeding concludes without removal. Initiation of removal alone does not suspend the Monitor General.
+
+Suspension does not constitute removal and may not be used as a substitute for permanent removal. During suspension, acting authority operates under §9.1.d.
 
 ### §9.8 — Constitutional Pool Framework
 
@@ -982,11 +988,15 @@ A Territory resulting from devolution is deemed to have requested a Statehood Au
 
 ### §15.5.a — Remainder Viability
 
-(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, they are addressed together under paragraph (3).
+(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, they are addressed together under paragraph (4).
 
-(2) Where paragraph (1) does not apply, the JMC must assess within 90 days of certification whether the Territory's remaining portion could realistically satisfy the conditions of the §15.2 Statehood Audit on its own administrative and economic resources, and publish the assessment to the NRS before the referendum is held or the subdivision acquires Statehood. Statehood proceedings remain subject to the deadlines in §15.2. The JMC may extend the period once, by up to 30 days, upon publishing a justification. If the JMC does not publish its assessment within the period, including any extension, the remaining portion is treated as not satisfying those conditions.
+(2) Where paragraph (1) does not apply, the Joint Monitor Council shall assess whether the remaining portion of a Territory could independently satisfy the constitutional requirements for Statehood and publish its findings to the NRS within the period established by statute. A missing or late assessment does not determine viability or nonviability.
 
-(3) Where paragraph (1) applies, or where the JMC finds the remaining portion could not realistically satisfy those conditions, the underlying referendums or Statehood certifications do not proceed. The Civic Consul convenes a Territory Convention, composed of the Assembly members representing districts within the Territory, which has 90 days from its first session to produce a proposed resolution addressing all affected portions together. If no resolution is produced within that period, all petitions addressed under this paragraph lapse together, the Territory continues undivided, and none of them may be reinitiated under substantially the same geographic scope for three years. A resolution the Convention produces must be ratified by referendum of the eligible voters it affects and then proceeds under the applicable process of §15.2 or §15.4.
+(3) If the Council fails to publish its assessment within that period, the Civic Consul shall establish viability standards consistent with the constitutional requirements for Statehood, apply those standards to the remaining Territory, and publish the standards, evidence, findings and resulting assessment to the NRS. The Civic Consul shall transmit the report to the Speakers of both legislative chambers for distribution to their members.
+
+The Assembly shall determine whether the proposed subdivision would compromise the remaining Territory's constitutional viability, considering available assessments and evidence under procedures established by statute. If neither the Council nor the Civic Consul reports, the Legislature shall establish the necessary assessment procedures by statute and proceed to a determination. The absence of either report does not constitute a determination or prevent legislative action. The Assembly's failure to determine viability transfers authority to the Senate, and continued legislative inaction is subject to judicial enforcement, in accordance with §15.2.a. An adverse determination triggers paragraph (4). The determination must precede any referendum on the proposed subdivision or the subdivision's acquisition of Statehood. Qualification periods under §15.2 remain governed by that section.
+
+(4) Where paragraph (1) applies, or the responsible legislative chamber determines that the remaining portion would not be viable, the underlying referendums or Statehood certifications do not proceed. The Civic Consul convenes a Territory Convention, composed of the Assembly members representing districts within the Territory, which has 90 days from its first session to produce a proposed resolution addressing all affected portions together. If no resolution is produced within that period, all petitions addressed under this paragraph lapse together, the Territory continues undivided, and none of them may be reinitiated under substantially the same geographic scope for three years. A resolution the Convention produces must be ratified by referendum of the eligible voters it affects and then proceeds under the applicable process of §15.2 or §15.4.
 
 ### §15.6 — Voluntary Incorporation
 
