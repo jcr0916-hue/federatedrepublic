@@ -1813,6 +1813,16 @@ The Assembly is responsible for the consequential viability determination, revie
 
 **Integration detail remaining to reconcile:** The precise start of the legislative decision clock relative to the JMC and CC reporting periods, and any CC-specific deadline, were not separately fixed by the approval. Those administrative timings may be set by statute consistent with the constitutional audit-decision and transfer safeguards. Do not invent an additional fixed constitutional clock.
 
+## Proposed amendment 24 — Provisional-status decision clock (approved; 2026-10-23)
+
+**Status:** Approved and integrated into the separate working Constitution; not enacted.
+
+### §15.2.a(4) — Start of separate Provisional-status determination period
+
+“For a separate determination of Provisional status under §15.3, that period begins when the third consecutive determination of noncompliance has taken effect and the required audit history and findings are available to the Senate.”
+
+**Reason:** The Provisional-status question cannot mature before the third failed biennial audit has actually been determined. The 90-day statutory maximum for the initial Senate decision and the automatic exclusive transfer to the Assembly on inaction remain unchanged, as do the receiving chamber's deadline and judicial-enforcement fallback. This does not restart or extend the legislative clock on the underlying biennial audit itself.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
