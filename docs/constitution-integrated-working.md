@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III–VIII, and XVI–XX have approved changes integrated. Article II and Articles IX–XV remain partially or wholly pending. Article XV now includes the coordinated §15.2.a chamber-transfer mechanism and revised §§15.2–15.3; Article IX Monitor succession and suspension, §15.5.a remainder viability, the later military framework, and document-wide cross-references still require reconciliation. Do not publish or adopt this draft.
+> **Integration is incomplete:** Approved changes for Articles I, III–VIII, and XVI–XX are integrated. Article II and Articles IX–XV still require work. The candidate-pool, succession, temporary incapacity, and removal updates in Article IX are incorporated, but §9.7.a retains obsolete references and its suspension-duration rule remains unsettled. Article XV §15.2.a is incorporated, but §15.5.a remainder viability remains unresolved. Cross-references must be reconciled before publication or adoption.
 
 ---
 
