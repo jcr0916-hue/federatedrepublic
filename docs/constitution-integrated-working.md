@@ -245,8 +245,6 @@ The Civic Consul is responsible for enforcement of federal law and may set gener
 
 (3) A renewed determination under subsection (2) remains effective for no more than six months. Continuation thereafter requires a fresh 2/3 determination. The Consul may challenge any involuntary incapacity determination through expedited independent judicial review, limited to lawful invocation and inability to exercise the office. Policy disagreement is not incapacity.
 
-**Implementation note:** Replace present subsections (2)–(4) with these two subsections; renumber the unchanged former subsections (5)–(9) sequentially, adjusting internal references only if necessary. Existing automatic succession and acting-service rules remain intact.
-
 (4) If fewer than five Council members are available, legislators are selected by lot to bring the deciding body to five: from the Senate for a Civic Consul proceeding, the Assembly for a Legat Consul proceeding.
 
 (5) A person next in succession may decline within 48 hours by NRS publication; authority passes immediately. Failure to decline constitutes acceptance; the final available successor may not decline.
