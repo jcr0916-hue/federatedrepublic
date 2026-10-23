@@ -674,15 +674,13 @@ All Monitor General confirmations follow the same process: the nominated or lott
 
 ### §9.4 — Judicial Monitor Audit Mandate
 
-(1) Annual audit responsibilities include court operations for scope compliance and independence; the Elections Panel for electoral integrity and for its administration of the Judicial Pool; SC independence; inferior court compliance with jurisdictional limits; judicial compliance concerning Article XIV and Article XIX; and compliance with Article XVI treaty obligations and Article XX compacts.
+(1) Eligibility for the Judicial Monitor Candidate Pool is limited to former State or Republic judges who have served on a court of record at the trial court level or above and have been out of judicial office for at least one year. Former Supreme Court justices must have been out of Supreme Court service for at least five years.
 
-(2) Eligibility for the JM Candidate Pool is limited to former Republic judges — persons who have completed judicial service on a court of record at the trial court level or above, whether in a State court or the Republic's federal court structure — who have been out of active judicial office for at least one year. Former SC justices must have been out of SC service for at least five years.
-
-(3) The JM Candidate Pool is audited jointly by the LM, which reviews judicial service records, and the EM, which reviews financial disclosures.
+(2) The Judicial Monitor Candidate Pool shall be audited jointly by the Legislative and Executive Monitors.
 
 ### §9.4.a — Judicial Pool — Eligibility Criteria
 
-Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no current government position; no disqualifying financial interest as defined in §7.10. A person who has served as a Supreme Court justice may not subsequently re-enter the Judicial Pool. A person who has served in any other federal judicial appointment may not be nominated again to the same court, but remains eligible for nomination to a different federal court. Temporary or acting judicial service does not constitute service for purposes of this provision.
+Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no disqualifying financial interest as defined in §7.10. A person who has served as a Supreme Court justice may not subsequently re-enter the Judicial Pool. A person who has served in any other federal judicial appointment may not be nominated again to the same court, but remains eligible for nomination to a different federal court. Temporary or acting judicial service does not constitute service for purposes of this provision.
 
 ### §9.5 — Monitor Operations
 
@@ -722,21 +720,15 @@ Where two Monitor Generals jointly determine that the third has engaged in serio
 
 ### §9.8 — Constitutional Pool Framework
 
-(1) The Elections Panel maintains all constitutional candidate registries and pools, including the Judicial Pool, and administers public access to their records via the NRS.
+(1) The Elections Panel maintains constitutional candidate pools and registries and administers constitutional selection lotteries under applicable constitutional and statutory requirements. The Joint Monitor Council audits compliance with those requirements. Pool records shall be publicly accessible through the NRS.
 
-(2) Each pool is subject to ongoing Monitor audit.
+(2) Each constitutional candidate pool shall contain at least five eligible members. A deficiency shall be published to the NRS, and the Elections Panel shall take action to restore the pool under procedures established by statute.
 
-(3) Lottery draws for constitutional candidate pools assigned by this Article are conducted by the JMC in a public session. A Monitor General takes no part in a draw that selects or nominates their successor.
+(3) Eligibility for constitutional candidate pools shall be determined solely by objective criteria established by this Constitution. No applicant may be excluded on grounds of legal philosophy, judicial temperament, ideological orientation, or political association.
 
-(4) The constitutional minimum for all pools is five eligible members. Where a pool falls below five, the Monitor responsible for auditing that pool must publish a compliance breach.
+(4) An applicant excluded or removed from a constitutional candidate pool is entitled to a published statement of reasons and timely judicial review under procedures established by statute.
 
-(5) Where a constitutional candidate pool falls below its required minimum, the Elections Panel must conduct an expedited eligibility review of applicants to restore the pool.
-
-(6) Eligibility criteria for all pools are strictly objective — years of practice or service, office status, and financial interests as defined under §7.10. No registry administrator may apply criteria relating to legal philosophy, judicial temperament, ideological orientation, or political association; any exclusion on such grounds is constitutionally void.
-
-(7) Where an applicant is excluded or removed, the administering body must publish the specific grounds to the NRS within 14 days; the applicant may appeal to the SC within 14 days of that publication on the sole ground that the eligibility criteria were misapplied. Appeals arising from expedited restoration receive expedited consideration.
-
-(8) Changes to eligibility criteria apply prospectively only and do not affect persons already entered in a constitutional pool or registry under the criteria applicable at the time of their entry. This protection does not exempt a member from continuing constitutional eligibility requirements, including the prohibition on disqualifying financial interests under §7.10.
+(5) Changes to eligibility criteria apply prospectively only and do not affect persons already entered in a constitutional pool or registry under the criteria applicable at the time of their entry. This protection does not exempt a member from continuing constitutional eligibility requirements, including the prohibition on disqualifying financial interests under §7.10.
 
 ### §9.9 — Constitutional Officer Removal — Standard Track
 
