@@ -1880,6 +1880,14 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Working draft commit:** `a4b345b187095887b18c1d62167a8a93a5cf8a0d`.
 
+## Continuity follow-up — Military citation and Civic Consul ballot (2026-10-23)
+
+**Review only; no further constitutional edits.**
+
+- **§19.3.a(6) military continuation citation:** References §2.2, which governs defensive action and the statutory authorization of other military operations and expressly incorporates Article XIV. Retain the citation; it is not a dangling or incorrect reference. Article XIV continues to control permitted purposes, scope, and appropriations.
+- **§2.6.a single-candidate rejection:** A national yes/no ballot is prescribed when only one Civic Consul candidate advances, but §2.6.a does not expressly describe the next nomination/election cycle if voters reject that candidate. The Acting Civic Consul remains the continuity officeholder under subsection (2). A narrow repeat-ballot fallback may merit consideration, but its wording and scheduling have not been approved. Do not add unapproved deadlines.
+- **§2.9.a:** Simplified and integrated, with the State Emergency Council facilitating State and Territory restoration; see the preceding integrated-revision note. No further reopening in this checkpoint.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
