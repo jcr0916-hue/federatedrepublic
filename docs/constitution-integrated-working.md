@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles XVIII–XX have been integrated; Articles I–XVII still contain adopted text and need approved amendments applied. The references in those articles are not yet fully reconciled. Do not merge or publish this file as a complete revised Constitution.
+> **Integration is incomplete:** Articles XVI and XVIII–XX have been integrated; Articles I–XV and XVII still contain adopted text and need approved amendments applied. The references in those articles are not yet fully reconciled. Do not merge or publish this file as a complete revised Constitution.
 
 ---
 
@@ -1037,45 +1037,61 @@ Where a State's constitutional government has become incapable of exercising gov
 
 Indigenous nations hold sovereignty that precedes the Republic. This sovereignty is acknowledged, not granted, and the Republic may not extinguish it. The Republic deals with recognized indigenous nations as sovereign nations. A recognized indigenous nation, wherever that term appears in this Constitution, means a nation that, as of Day Zero, held a treaty with, a compact with, or formal recognition from a predecessor government, or a nation recognized under §16.4. A nation omitted from the founding register may appeal to the SC within the period defined by statute on the sole ground that the predecessor record was misapplied. Recognition confers no territorial rights of itself.
 
+Indigenous nation membership and Republic citizenship are compatible and independent statuses.
+
 ### §16.2 — Founding Status Election
 
 (1) At ratification, the Republic formally notifies every nation on the founding register of its rights under this section.
 
-(2) From Day Zero until the close of the Transition Window under §19.2, each recognized nation may elect, through its own lawful democratic or traditional governance process for major governance decisions, either: (a) Associated Community — continuing as a fully sovereign political community in a consensual compact relationship with the Republic under Article XX; or (b) Territorial Integration — entering the Republic as a Territory under §15.1, with the ordinary §15.2 Statehood pathway available. A Territorial Integration election constitutes the petition and confirmation otherwise required by §15.6, and the nation and Legislature proceed directly to negotiation of an incorporation agreement ratified by 2/3 of both chambers. A recognized nation that independently qualifies for a founding direct-State entry under Article XIX may use that transition mechanism while it remains available.
+(2) During the founding admission period established by the ratified founding arrangements, each recognized Indigenous nation may elect the founding status options provided by this section through its own lawful democratic or traditional governance process.
 
-(3) If a recognized nation makes no status election during the Transition Window, the Republic treats it as an Associated Community pending conclusion, confirmation, or replacement of a compact under Article XX. That interim treatment is not consent to compact terms the nation has not accepted.
+The nation may elect Associated Community status, remaining a fully sovereign political community in a consensual compact relationship under Article XX, or Territorial Integration under Article XV with the ordinary Statehood pathway available. An election for Territorial Integration constitutes the petition and confirmation otherwise required by §15.6; the nation and Legislature shall negotiate an incorporation agreement ratified by two-thirds of both chambers. A nation independently qualifying for direct founding-State entry under Article XIX may pursue that route during the founding admission period.
+
+(3) A recognized Indigenous nation that does not elect integration during the founding admission period remains a sovereign independent nation, treated as an Associated Community pending conclusion or confirmation of a compact under Article XX. That default relationship does not constitute consent to terms the nation has not agreed to. After the founding admission period, the nation may seek admission under procedures available to independent nations.
 
 (4) No constitutional officer may induce or coerce a nation to elect either status. The Republic must provide factual information upon request.
 
-(5) Article I applies within the territory of each recognized nation throughout the Transition Window unless the nation, through its own lawful governance process, positively rejects that application and publishes the decision to the NRS. After the Transition Window, §20.3 governs an Associated Community and the ordinary Constitution governs a nation that elected Territorial Integration.
+(5) Article I applies within the territory of each recognized nation during the founding admission period unless the nation, through its own lawful governance process, positively rejects that application and publishes the decision to the NRS. After that period, §20.3 governs an Associated Community and the ordinary Constitution governs a nation that elected Territorial Integration.
 
-(6) While Article I applies under subsection (5), any resident who believes an Article I right has been violated may bring an Emergency Rights Writ directly to the SC under its original jurisdiction in §4.5; the SC must rule within 7 days.
+(6) While Article I applies under subsection (5), residents shall have access to expedited judicial protection for violations of its guarantees, as provided under Article IV.
 
-(7) Indigenous nation membership and Republic citizenship are compatible and independent statuses.
+(7) Election of Territorial Integration permanently ends the nation's founding Associated Community status.
 
-(8) Election of Territorial Integration permanently ends the founding Associated Community or compact status under this section. If the community later becomes a sovereign independent nation, any future Associated Community relationship requires a new compact under Article XX.
+A community that subsequently becomes an independent sovereign nation may establish a new Associated Community relationship through a compact under Article XX.
 
 ### §16.3 — Treaty Supremacy and Continuity
 
-(1) All treaties entered into by predecessor governments with indigenous nations are binding obligations of the Republic, regardless of the nation's status under this Constitution. Legislation cannot diminish treaty rights. A treaty may be renegotiated or superseded only by mutual agreement, negotiated between the Legat Consul and the nation and ratified by the Senate under §3.6.
+(1) All treaties entered into by predecessor governments with Indigenous nations are binding obligations of the Republic, regardless of the nation's status under this Constitution. Legislation cannot diminish treaty rights. A treaty may be renegotiated or superseded only by mutual agreement, negotiated between the Legat Consul and the nation and ratified by the Senate under §3.6.
 
-(2) Where a treaty's administration depends on a predecessor-government institution or mechanism with no Republic equivalent, the Legat Consul and the nation must begin discussions within the Republic's first year to identify an analogous Republic institution or a negotiated substitute mechanism. Pending resolution, a ministerial counterpart designated by the Legat Consul administers the treaty's institutional functions on an interim basis.
+(2) Where performance of an inherited treaty requires an institution or administrative mechanism that no longer exists, the Legat Consul shall designate an appropriate interim administrator to maintain the Republic's obligations.
 
-(3) The EM audits the Republic's compliance with its treaty obligations under this section annually.
+The Legat Consul and the Indigenous nation shall determine an appropriate successor arrangement through mutual agreement.
+
+(3) The EM shall audit and report on the Republic's compliance with its treaty obligations under this section. The frequency and procedures of such audits shall be established by statute.
 
 ### §16.4 — Post-Founding Recognition
 
-(1) A people asserting sovereignty preceding the Republic may submit a claim of prior sovereignty to the JMC at any time after the close of the Transition Window; the claim is published to the NRS. The JMC investigates the claim against the predecessor record and the criteria of §16.1.
+(1) A people asserting sovereignty preceding the Republic may petition for recognition under this section.
 
-(2) Claimants may present the published findings in a petition for recognition to the Legat Consul. Where a petition for recognition is submitted, the Legat Consul determines it within the period defined by statute, not to exceed 180 days, with written grounds whether recognition is granted or declined. A declined petition may be resubmitted after 5 years or upon a material change in the available record.
+The JMC shall investigate the claim against the recognition criteria established in §16.1 and publish its findings to the NRS.
 
-(3) Recognition under this section activates the Republic's obligations under §16.3, establishes the nation as a collective legal person capable of negotiating with the Republic and entering arrangements under statute and §18.4, and constitutes the factual predicate for any subsequent constitutional amendment under Article XVII concerning the nation's territorial or sovereign status.
+(2) Upon receipt of a petition supported by the JMC's findings, the Legat Consul shall determine whether recognition is granted and publish the decision and its reasons to the NRS.
+
+A declined claim may be reconsidered upon presentation of material new evidence. Procedures and deadlines for recognition decisions shall be established by statute.
+
+(3) Recognition under this section establishes the nation as a recognized sovereign legal person and activates the Republic's applicable obligations under §16.3.
+
+The recognized nation may negotiate and enter arrangements with the Republic in accordance with this Constitution. Its territorial or political relationship with the Republic shall be determined through the applicable constitutional procedures.
 
 ### §16.5 — Transition of Existing Arrangements
 
-(1) Existing arrangements between a recognized nation and the predecessor government continue provisionally from Day Zero until replaced by an Article XX compact, an incorporation agreement under §16.2, or a treaty instrument under §16.3. Either party may petition the SC to resolve specific disputes arising within the provisional framework.
+(1) Existing arrangements between recognized Indigenous nations and predecessor governments remain in effect until replaced or modified through mutual agreement under the applicable provisions of this Constitution.
 
-(2) For a nation holding Associated Community status, the Republic must open compact negotiations under Article XX within 90 days of the status taking effect and negotiate in good faith.
+Disputes arising under those arrangements are subject to judicial review under Article IV.
+
+(2) The Republic shall undertake compact negotiations with a recognized Indigenous nation holding Associated Community status and shall conduct those negotiations in good faith.
+
+Procedures for initiating negotiations shall be established by statute.
 
 ---
 
