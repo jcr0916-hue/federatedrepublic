@@ -830,8 +830,6 @@ Principal decision-makers exercising the Monetary Authority's constitutional aut
 
 Disagreement over monetary policy, economic judgment, or a lawful certification is not cause for removal. A vacancy does not suspend or transfer the Monetary Authority's constitutional functions.
 
-**Integration:** Replace §3.[X] with exact new Article III independence section number; this references amendment 14, while preserving MA-specific powers, appointments, anti-capture and continuity rules.
-
 ### §12.1.b — Monetary Authority Reporting
 
 The Monetary Authority publishes a detailed State of the Economy report to the NRS, the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually, or more frequently as statute requires. The report independently assesses economic conditions, fiscal sustainability, performance against the Republic's fiscal obligations, and areas requiring improvement, including the MA's actions within its authority.
