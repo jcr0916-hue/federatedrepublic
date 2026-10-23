@@ -1211,6 +1211,109 @@ This authority continues only while the conditions requiring its exercise persis
 - No extra constitutional clocks simply to solve administrative issues. Constitutive duties and substantive authorization limits remain.
 - **Do not change adopted Constitution or website from this register alone**. Article XV already has separate approved work; continue review at Article XVI.
 
+## Proposed amendment 18 — Article XVI Indigenous sovereignty review (approved; 2026-10-22)
+
+**Status:** Approved working decisions, **not enacted**. Article XVI substantive review and integrated tests complete; preserve Article XV prior work. The live Constitution and website remain unchanged.
+
+### §16.1 — Sovereignty, recognition, territorial distinction (retain; membership moved here)
+
+Retain pre-Republic Indigenous sovereignty as **acknowledged, not granted**; recognized Indigenous nations are sovereign; existing §16.1 predecessor-record recognition criteria, appeal for a nation omitted from founding register, and “Recognition confers no territorial rights of itself” are substantively retained. Do not confuse the recognized **sovereignty/personhood** of a people with adjudication of particular land claims or alteration of existing State boundaries.
+
+Move the exact §16.2(7) sentence unchanged into §16.1, as a **permanent** principle rather than a founding-election rule:
+
+“Indigenous nation membership and Republic citizenship are compatible and independent statuses.”
+
+### §16.2 — Founding status, transition, and rights (approved)
+
+- Retain the choices of **Associated Community** (sovereign compact governed by Article XX) and **Territorial Integration** (incorporation under Article XV with Statehood pathway). Preserve qualified founding direct-State route as governed by Article XIX.
+- Retain §16.2(3)'s **default interim Associated Community treatment** for no founding status election, without presuming agreement to unaccepted compact terms; preserve nation's own lawful democratic or traditional choice, no coercion, and **2/3 of both chambers** for incorporation agreement. Permanent rights and choices in Article XVI; common founding timetable/procedures in Article XIX; entry in Article XV; compact terms in Article XX (**One Home Rule**). Avoid transferring the entire substantive choice to transition statute.
+- Preserve §16.2(5) Article I transition rule: applicable by default unless nation affirmatively rejects through lawful governance process and publishes to NRS; afterwards §20.3 governs Associated Community or normal constitutional law governs integration.
+- **Approved §16.2(6) replacement** (remove fixed seven-day decision deadline, retain expedited emergency protection and the Supreme Court's original jurisdiction already granted under §4.5(5)):
+
+“While Article I applies under subsection (5), residents shall have access to expedited judicial protection for violations of its guarantees, as provided under Article IV.”
+
+- Move membership sentence from §16.2(7) to §16.1, unchanged.
+- **Approved §16.2(8) replacement:**
+
+“Election of Territorial Integration permanently ends the nation's founding Associated Community status.
+
+A community that subsequently becomes an independent sovereign nation may establish a new Associated Community relationship through a compact under Article XX.”
+
+**History:** Integration cannot be undone by claiming former founding compact status, especially after Territory-to-State demographic and legal changes. A newly independent nation may negotiate a **new** compact, not automatically revive the old one.
+
+### §16.3 — Inherited treaties (approved)
+
+- **Retain §16.3(1) substantively unchanged.** Predecessor treaties bind Republic regardless of nation status; ordinary legislation cannot diminish treaty rights; changes by mutual agreement negotiated by LC and ratified by Senate under §3.6. This is an independent bilateral sovereign rights protection, warranting explicit limitation even under Positive Enumeration of Authority.
+- **Approved §16.3(2) replacement:**
+
+“Where performance of an inherited treaty requires an institution or administrative mechanism that no longer exists, the Legat Consul shall designate an appropriate interim administrator to maintain the Republic's obligations.
+
+The Legat Consul and the Indigenous nation shall determine an appropriate successor arrangement through mutual agreement.”
+
+**History:** Remove “within first year” negotiation deadline; maintain continuity immediately.
+- **Approved §16.3(3) replacement:**
+
+“The EM shall audit and report on the Republic's compliance with its treaty obligations under this section. The frequency and procedures of such audits shall be established by statute.”
+
+**History:** Preserve independent information-only Monitor review, delegate routine frequency, remove mandatory annual calendar.
+
+### §16.4 — Post-founding recognition (approved)
+
+- **Approved §16.4(1) replacement:**
+
+“A people asserting sovereignty preceding the Republic may petition for recognition under this section.
+
+The JMC shall investigate the claim against the recognition criteria established in §16.1 and publish its findings to the NRS.”
+
+**History:** Remove bar on seeking recognition before founding Transition Window ends; JMC investigates/reports only, LC alone decides.
+- **Approved §16.4(2) replacement:**
+
+“Upon receipt of a petition supported by the JMC's findings, the Legat Consul shall determine whether recognition is granted and publish the decision and its reasons to the NRS.
+
+A declined claim may be reconsidered upon presentation of material new evidence. Procedures and deadlines for recognition decisions shall be established by statute.”
+
+**History:** Remove constitutional 180-day decision cap, five-year reapplication wait; preserve duty to decide, publication of reasons, meaningful judicial remedies to compel decision for administrative inaction. Courts enforce the duty; they do not take LC's initial recognition role.
+- **Approved §16.4(3) replacement:**
+
+“Recognition under this section establishes the nation as a recognized sovereign legal person and activates the Republic's applicable obligations under §16.3.
+
+The recognized nation may negotiate and enter arrangements with the Republic in accordance with this Constitution. Its territorial or political relationship with the Republic shall be determined through the applicable constitutional procedures.”
+
+**History and cross-reference test:** Formal recognition does **not** automatically confer lands or status and should **not** require Article XVII amendment as universal exclusive gateway. §15.6 already permits sovereign entities to petition for incorporation as Territories and §15.2 then provides Statehood; Article XX provides Associated Community relationship for independent nations. Article XVII amendments remain possible for exceptional arrangements. §20.1 currently refers to Indigenous nations “under §16.2,” which misleadingly suggests only founding status elections. **Approved companion §20.1 conforming reference**: broaden to recognized Indigenous nations **under Article XVI**, while preserving eligibility for other independent nations outside Republic. Avoid unintended alteration of Article XX compact conditions.
+
+### §16.5 — Continuity of predecessor arrangements, compact negotiation (approved)
+
+- **Approved §16.5(1) replacement:**
+
+“Existing arrangements between recognized Indigenous nations and predecessor governments remain in effect until replaced or modified through mutual agreement under the applicable provisions of this Constitution.
+
+Disputes arising under those arrangements are subject to judicial review under Article IV.”
+
+**History:** Keep obligations and arrangements continuous; remove list of exclusive replacing instruments and unnecessary Supreme Court-only procedure.
+- **Approved §16.5(2) replacement:**
+
+“The Republic shall undertake compact negotiations with a recognized Indigenous nation holding Associated Community status and shall conduct those negotiations in good faith.
+
+Procedures for initiating negotiations shall be established by statute.”
+
+**History:** Remove fixed 90-day negotiation start, preserve obligation to negotiate and good faith; no imposed agreement or deemed compact terms; existing treaties remain independently binding.
+
+### Integrated stress-test results (review completed)
+
+1. **No founding election:** Interim Associated Community treatment does not imply consent to specific compact terms — **passes**.
+2. **Territory/State seeks to revert:** Founding integration remains irreversible; newly independent sovereign nation can seek **new** Article XX compact — **passes**.
+3. **First recognition decades later:** LC/JMC recognition, then §15.6 Territory route and §15.2 Statehood or Article XX sovereign compact; clarify §20.1 — **passes with conforming cross-reference**.
+4. **Predecessor treaty agency abolished:** Interim LC-designated administrator and mutual successor arrangement; treaty obligations continue — **passes**.
+5. **Compact negotiations stalemate:** Both sovereign parties retain choice; good faith and predecessor treaties/arrangements still apply; no presumed consent — **passes**.
+6. **Rights during transition:** Preserve direct expedited judicial access while Article I applies; §4.5(5) original SC jurisdiction, remove §16.2's duplicate seven-day deadline; Article IV houses jurisdiction/procedures — **passes with coordination**.
+7. **Recognized nation's claimed territory overlaps existing State:** Recognition alone does not shift boundaries; Article XV State integrity remains, territorial rights resolved independently — **boundary preserved**, not new right to automatic transfer.
+
+### Integration cautions and drafting principles
+
+- **One Home Rule:** §16 rights/sovereign-status principles, §19 founding timetable, §15 territorial incorporation/Statehood, §20 compacts, §4 judicial jurisdiction, §9 Monitor limitations; avoid duplicate procedures.
+- **Positive Enumeration of Authority (document-wide):** Public institutions hold affirmative grant; rights of sovereign Indigenous nations are **recognized, not created** by Republic. Keep narrowly necessary prohibitions, including bar on unilateral diminishment of treaty rights.
+- Do **not** change adopted Constitution, website, or already approved work in other articles without explicit later instruction; this is a historical proposal checkpoint. Next sequential review: **Article XVII**.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
