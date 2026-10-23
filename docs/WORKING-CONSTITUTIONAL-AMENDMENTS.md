@@ -1994,6 +1994,18 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Next:** Compare limited editorial candidates across all Articles for exact legal equivalence before requesting approval.
 
+## Exact simplification candidates — final comparison (2026-10-23)
+
+**Status:** Proposed editorial reductions for approval; not integrated into constitutional text.
+
+**Retain unchanged:** §§2.2 and 14.2 set complementary military command and legislative authorization limits. §§3.9.a, 11.1, and 12.1.a distinguish general independence, mutual Panel independence, and special Monetary Authority protections.
+
+**Proposed §9.1:** Delete only “Monitors shall publish their findings and assessments to the NRS.” from the second paragraph. Keep the next sentence requiring publication of reasons and findings on discontinued investigations. §§9.5, 9.5.a and 10.1(2) maintain the ordinary publication duty and special safeguards.
+
+**Proposed §18.3:** Delete only “An Operational Use Right terminates when its authorized function ends.” from the opening paragraph. Keep the following NRS termination-notice sentence and all reversion and judicial-review language. §18.1 already establishes automatic termination.
+
+**No other wording changes approved.** Evaluate both exact deletions before updating the working Constitution.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
