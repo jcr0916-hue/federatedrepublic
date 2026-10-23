@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, XVI–XX have been integrated from the working amendment register; Articles II–XV still require approved amendments. Cross-references have not yet been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
+> **Integration is incomplete:** Articles I and XVII–XX are integrated; Article II and III have approved revisions applied in part, while §2.2 awaits harmonization with Article XIV. Article XVI is integrated. Articles IV–XV still require approved amendments. Cross-references have not been fully reconciled. Do not merge or publish this file as a complete revised Constitution.
 
 ---
 
@@ -131,7 +131,7 @@ The Legat Consul may appoint domain officers to exercise defined authority. Offi
 
 (3) The Civic Consul's domestic authority includes domestic policy, regulatory frameworks, civic-domain budget preparation (§12.2), civil service, and social state administration (Article XII).
 
-(4) The Civic Consul may declare a domestic emergency in response to natural disaster, public health crisis, or infrastructure failure, subject to Article I and renewable by Assembly approval at intervals defined by statute (default 30 days). The Legat Consul has no authority in domestic emergencies except assistance under §2.14.b.
+(4) The Civic Consul may declare a domestic emergency in response to natural disaster, public health crisis, or infrastructure failure, subject to Article I and Assembly oversight. The Assembly may terminate the declaration at any time. The Legat Consul has no authority in domestic emergencies except assistance under §2.14.b.
 
 (5) The Civic Consul has the right to be informed on Legat domain matters creating domestic fiscal obligations or bearing on domestic interests. No classification or domain assertion may withhold such information.
 
@@ -201,10 +201,6 @@ No civil servant, military member, or person exercising federal authority may co
 
 (6) If the Council and Designee have not ended within six months of the Designee taking office, they end at that time and §15.7.a applies.
 
-### §2.10 — Executive Transparency
-
-Both executives must publish their official acts to the NRS within the statutory period. This includes orders, certifications, vetoes, determinations, objections, and refusals. No executive may classify, delay, or suppress publication of an act required to be public. Every record is permanently attributed to the responsible officer.
-
 ### §2.11 — Emergency Governance
 
 When extraordinary circumstances prevent ordinary constitutional government, either Consul, or a majority of available members of either chamber, may declare a continuity emergency. The declaration states the circumstances, is published to the NRS, and is sent to every State and Territory.
@@ -217,7 +213,7 @@ Declarations lapse after 30 days unless renewed by the same process. Any member 
 
 Each Consul may grant clemency only within their domain: the Legat Consul for military and national-security offenses, the Civic Consul for domestic federal offenses. Self-clemency is void.
 
-Every grant must state its reasons. The granting Consul or either chamber may request an EM factual review; review does not suspend or invalidate the grant. Clemency does not bar any constitutional, political, civil, or criminal remedy for misconduct connected with its exercise. Group amnesty requires legislation.
+Every grant must state its reasons. Clemency does not bar any constitutional, political, civil, or criminal remedy for misconduct connected with its exercise. Group amnesty requires legislation.
 
 ### §2.13 — Consular Removal
 
@@ -235,31 +231,32 @@ In a cross-domain emergency requiring unified operational authority, either Cons
 
 ### §2.14.b — Cross-Domain Assistance
 
-Either Consul may request assistance from the other within the responding Consul's domain. The request must state its purpose, scope, and duration and be published to the NRS. The requesting Consul controls the purpose; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other. Assistance may provide non-coercive support only. It may not be used to compel, detain, surveil, or collect intelligence on persons within the Republic, or to commandeer civilian resources, except as §1.16 or another express constitutional source allows. Assistance may not exceed 90 days without a fresh request and response.
+Either Consul may request assistance from the other within the responding Consul's domain. The request must state its purpose and scope and be published to the NRS. The requesting Consul controls the purpose; the responding Consul determines whether and how to act, controls the means, and publishes the response. Neither Consul may compel the other. Assistance may provide non-coercive support only. It may not be used to compel, detain, surveil, or collect intelligence on persons within the Republic, or to commandeer civilian resources, except as §1.16 or another express constitutional source allows.
 
 ### §2.15 — Federal Prosecution
 
-The Civic Consul is responsible for enforcement of federal law and may set general prosecution policy. Statute must establish a Federal Prosecution Service independent in individual prosecutorial decisions. Executive direction concerning a specific prosecution must be in writing and published to the NRS. The Legislature may not reduce the Service's appropriation below the prior year's level without a 2/3 vote of both chambers.
+The Civic Consul is responsible for enforcement of federal law and may set general prosecution policy. Statute must establish a Federal Prosecution Service independent in individual prosecutorial decisions. Executive direction concerning a specific prosecution must be in writing and published to the NRS.
 
 ### §2.16 — Executive Incapacity
 
 (1) A Consul is temporarily unable to exercise authority upon their declaration or a determination by a majority of the Council of Ministers (at least five participating). Acting authority vests immediately in the Speaker of the Consul's chamber, then in statutory successors, then in the most senior chamber member by continuous service; ties resolved by age.
 
-(2) The Consul may declare the incapacity ended, restoring authority 24 hours after publication. If incapacity is determined again on substantially the same grounds within 90 days, the determination requires 2/3 of the deciding body, and restoration for the following 30 days requires majority approval of that body or SC relief.
+(2) The Consul may declare the incapacity ended, restoring authority 24 hours after publication. If incapacity is determined again on substantially the same grounds within 90 days, the renewed determination requires 2/3 of the deciding body. Following that determination, authority may be restored by majority approval of that body.
 
-(3) The Legislature may extend that heightened-restoration period by simple majority of each chamber, not beyond six months from the renewed determination. Continuation thereafter requires a fresh 2/3 incapacity determination.
+(3) A renewed determination under subsection (2) remains effective for no more than six months. Continuation thereafter requires a fresh 2/3 determination. The Consul may challenge any involuntary incapacity determination through expedited independent judicial review, limited to lawful invocation and inability to exercise the office. Policy disagreement is not incapacity.
 
-(4) A Consul may seek expedited SC review of a heightened incapacity determination, limited to lawful invocation and inability to exercise the office; policy disagreement is not incapacity.
+**Implementation note:** Replace present subsections (2)–(4) with these two subsections; renumber the unchanged former subsections (5)–(9) sequentially, adjusting internal references only if necessary. Existing automatic succession and acting-service rules remain intact.
 
-(5) If fewer than five Council members are available, legislators are selected by lot to bring the deciding body to five: from the Senate for a Civic Consul proceeding, the Assembly for a Legat Consul proceeding.
+(4) If fewer than five Council members are available, legislators are selected by lot to bring the deciding body to five: from the Senate for a Civic Consul proceeding, the Assembly for a Legat Consul proceeding.
 
-(6) A person next in succession may decline within 48 hours by NRS publication; authority passes immediately. Failure to decline constitutes acceptance; the final available successor may not decline.
+(5) A person next in succession may decline within 48 hours by NRS publication; authority passes immediately. Failure to decline constitutes acceptance; the final available successor may not decline.
 
-(7) Incapacity suspends only the exercise of authority. Death, resignation, and removal remain effective.
+(6) Incapacity suspends only the exercise of authority. Death, resignation, and removal remain effective.
 
-(8) If an acting Consul becomes unable to serve, acting authority passes immediately to the next qualified successor.
+(7) If an acting Consul becomes unable to serve, acting authority passes immediately to the next qualified successor.
 
-(9) Acting service does not count toward service limits and neither extends nor suspends the underlying electoral mandate.
+(8) Acting service does not count toward service limits and neither extends nor suspends the underlying electoral mandate.
+
 
 ### §2.17 — Cooling-Off from Executive Service
 
@@ -267,7 +264,7 @@ During any constitutional cooling-off period barring a person from holding or se
 
 ### §2.18 — Domestic Insurrection
 
-During armed insurrection against the constitutional order, the Council of Ministers remains convened. The Civic Consul must report to the Assembly at statutory intervals for the duration of the response, as the Legat Consul reports to the Senate. No required report may be withheld because operations are ongoing.
+During armed insurrection against the constitutional order, the Civic Consul must report to the Assembly at statutory intervals for the duration of the response, as the Legat Consul reports to the Senate. No required report may be withheld because operations are ongoing.
 
 ---
 
@@ -281,31 +278,31 @@ The Legislature comprises the Assembly and the Senate. All legislation originate
 
 (1) States determine their own Assembly district arrangements, subject to §3.3. Single-member districts use majority-based Ranked Choice Voting; multi-member districts use proportional Ranked Choice Voting. Seats are allocated by the Webster method based on population, with a minimum of one seat per State and Territory, using a constituency divisor set and adjustable by statute.
 
-(2) The census, conducted every ten years by a statutory independent agency, is the basis for reapportionment.
+(2) The census, conducted by a statutory independent agency at intervals defined by statute not exceeding ten years, is the basis for reapportionment.
 
 (3) The Assembly selects a Speaker from its own members by a method it establishes, provided the Speaker holds the support of a majority of full seated membership. Quorum is a majority of full seated membership. The Assembly establishes its own internal procedures.
 
 (4) Members serve two-year terms. No person may serve more than six terms in the Assembly.
 
-(5) Mid-term Assembly vacancies are filled by special election within the period defined by statute, not exceeding 90 days.
+(5) Mid-term Assembly vacancies are filled by special election within the period defined by statute, not exceeding 90 days, unless the remainder of the term is shorter than that period.
 
 (6) A State or Territory may establish a recall process for its Assembly members, and a State for its senators, with the final decision vested in its legislature or governing authority or its eligible voters. No executive officer, administrative body, or court may alone recall a member.
 
 ### §3.3 — Electoral Districts
 
-States draw their own Assembly district maps subject to five criteria: substantially equal population per representative, accounting for the number of members elected by each district; geographic contiguity; compliance with §1.6 non-discrimination; no material dilution of minority voting power; and reasonable compactness. Voter political affiliation data, voting history data, and incumbent residence may not be used as criteria in drawing district boundaries. Protected-class data may be used only as reasonably necessary to comply with §1.6 and the dilution prohibition. The Elections Panel must address each finding of non-compliance by a published determination. Where the Panel determines a map non-compliant and an election will occur before the State adopts a compliant map, the Panel draws an interim compliant map for that election, which is retired when the State adopts a compliant map. Territorial districts are drawn by the Elections Panel under the same criteria. Any citizen or State government may challenge a map before the SC.
+States draw their own Assembly district maps subject to five criteria: substantially equal population per representative, accounting for the number of members elected by each district; geographic contiguity; compliance with §1.6 non-discrimination; no material dilution of minority voting power; and reasonable compactness. Voter political affiliation data, voting history data, and incumbent residence may not be used as criteria in drawing district boundaries. Protected-class data may be used only as reasonably necessary to comply with §1.6 and the dilution prohibition. The Elections Panel must address each finding of non-compliance by a published determination. Where the Panel determines a map non-compliant and an election will occur before the State adopts a compliant map, the Panel draws an interim compliant map for that election, which is retired when the State adopts a compliant map. Territorial districts are drawn by the Elections Panel under the same criteria. Any citizen or State government may seek judicial remedy for a district map that violates this Constitution.
 
 ### §3.4 — Legislative Standards
 
 Every bill must address a single clearly defined subject. The full text of a bill must be published to the NRS for the minimum period defined by statute before final passage; substantial amendment restarts that period.
 
-Each chamber operates as a full-time legislative body and publishes its sitting schedule, and any revision, to the NRS. No recess may be used to defeat or delay a constitutional duty or deadline. Emergency sessions may be called by either Consul or by petition of one-third of either chamber.
+Each chamber establishes and publishes its sitting schedule, and any revision, to the NRS. No recess may be used to defeat or delay a constitutional duty or deadline. Emergency sessions may be called by either Consul or by petition of one-third of either chamber.
 
 The Legislature must maintain an ethics process capable of sanctioning and referring members. Each chamber may expel a member by 2/3 of full seated membership, effective immediately.
 
 ### §3.5 — The Senate
 
-(1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. A mid-term vacancy is filled as the State provides, within the period defined by statute, not exceeding 90 days.
+(1) The Senate comprises two senators per State regardless of population, elected for six-year staggered terms. A mid-term vacancy is filled as the State provides, within the period defined by statute, not exceeding 90 days, unless the remainder of the term is shorter than that period.
 
 (2) No person may serve more than two terms in the Senate.
 
@@ -327,9 +324,9 @@ The Legislature may not withhold records, deliberations, votes, or draft legisla
 
 ### §3.9 — Independent Statutory Agencies
 
-The Legislature may establish independent agencies outside the authority of either executive. The Legislature may not impair the independence of a function this Constitution assigns to an independent agency.
+The Legislature may establish independent agencies outside the authority of either executive and may alter or abolish agencies established by statute. The Legislature may not impair the independence of a function this Constitution assigns to an independent agency.
 
-Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. Principal decision-makers exercising a constitutionally assigned independent function serve fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements may not be designed to exclude candidates because of political or policy views or prior criticism of government.
+Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. The appointed leadership of an independent agency serves fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements may not be designed to exclude candidates because of political or policy views or prior criticism of government.
 
 ### §3.10 — Federal Legislative Competence
 
@@ -337,9 +334,11 @@ The Legislature may legislate only within powers assigned to the Republic by thi
 
 Where this Constitution directs that a federal function, standard, procedure, or framework be established, defined, or regulated, the obligation is fulfilled by statute unless otherwise specified. Where this Constitution assigns a function to a legislative body, independent agency, or other institution, the Legislature must maintain an institution capable of performing it. No executive or administrative act may substitute for required legislation.
 
+The Legislature shall provide institutions established by this Constitution or by statute with resources sufficient to perform their assigned duties. Material changes in those resources must be accompanied by a published justification addressing the institution's responsibilities and capacity to fulfill them.
+
 ### §3.11 — Delegation of Authority
 
-The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation must state its scope, conditions, and duration. Delegation does not divest the Legislature of that authority: statute prevails over any conflicting exercise of delegated authority, and the Legislature may rescind a delegation at any time. Each exercise of delegated authority is published to the NRS identifying the delegating statute.
+The Legislature may by statute delegate defined authority within federal legislative competence to either Consul or to an independent agency under §3.9. A delegation must state its scope and conditions. Delegation does not divest the Legislature of that authority: statute prevails over any conflicting exercise of delegated authority, and the Legislature may rescind a delegation at any time. Each exercise of delegated authority is published to the NRS identifying the delegating statute.
 
 ---
 
