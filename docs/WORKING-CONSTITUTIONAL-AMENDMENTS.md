@@ -1953,6 +1953,20 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Disposition:** No automatic deletions or renumbering. Preserve rights, constitutional thresholds, independent authority, and anti-deadlock triggers. Proceed next with Articles VII–X.
 
+## Simplification pass 3 — Articles VII–X (2026-10-23)
+
+**Status:** Review only; no operative edits.
+
+**VII:** §§7.6, 7.9, 7.15 distinguish acting continuity, elected mandate protection, and automatic vesting. No safe deletion identified.
+
+**VIII:** §8.1 differentiates contribution restrictions from independently protected expression. §§8.3–8.4 govern neutral access and impartial assistance separately. Retain.
+
+**IX:** §§9.1, 9.5, 9.5.a repeat NRS publication obligations that may already be covered by §10.1(2). Any future compression must retain anti-suppression protections, reporting to the responsible institution, confidentiality limits, and its duty to respond. §9.5.b independently prevents Monitor findings from replacing operational responsibility.
+
+**X:** §10.1's electoral privacy exceptions, permanent correction records, temporary safety restriction, and parallel-record fallback differ in legal effect. §10.2's classification expiry and review mechanism also remain distinct.
+
+**Next:** Articles XI–XIV. No text change authorized by this checkpoint.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
