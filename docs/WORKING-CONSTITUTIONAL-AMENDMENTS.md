@@ -1089,6 +1089,128 @@ Disputes concerning an initiative's constitutional validity are subject to judic
 5. Preserve §13.1(2)–(3) and (8) original text and avoid duplicate judicial appeal provisions in §13.2(1).
 6. Prior Article IX public referendum turnout reforms support the same abstention principle, but constitutional thresholds are deliberately distinct: simple majority for repeal, **60%** for initiative enactment.
 
+## Proposed amendment 17 — Article XIV military authority; §§2.2 and 12.2 conforming changes (approved framework; 2026-10-22)
+
+**Status:** Approved working principles and individually settled language, **not enacted**. Consolidation remains subject to checking exact section placement, judicial and fiscal harmonization. The adopted Constitution and website are untouched.
+
+### Document-wide editorial principle — Positive Enumeration of Authority (approved)
+
+Constitutional institutions exercise **affirmatively granted powers** within their authorized purposes and conditions. Do not attempt to enumerate every prohibited misuse; keep specific prohibitions where independently necessary to protect rights or close real circumvention. This applies to the **whole Constitution**, complementary to **One Home Rule**, not as a new interpretive article. Distinguish public institutions (enumerated power) from citizens (liberties do not require affirmative enumerated permission). During final integration simplify redundant negative language, **without changing approved substantive safeguards**.
+
+### §2.2 — Immediate defense, notification, planned operations, stand-down (approved framework)
+
+- The Legat Consul (LC) may act immediately against active or imminent attacks upon Republic territory, citizens abroad, and treaty allies, **and continue operations necessary to repel or prevent such attacks**. This defensive authority can operate beyond Republic borders; whether an operation is defense turns on the **actual active or imminent threat and the operation's purposes**, not geography alone.
+- Upon initiating military action, LC notifies **Civic Consul (CC) and the Speakers of both chambers without undue delay**, giving purposes and grounds. CC receives notice to perform its **domestic role**, not to authorize or command operations. This replaces 24-hour notice and other awkward fixed response periods.
+- With **deliberate speed**, LC gives the **Assembly Speaker** a proposed operational timeline and budget for planned action, allowing appropriation proceedings to begin. For action **beyond defensive measures**, an **authorizing law** is required, supported by a proposed plan of action and budget; the **Legislature** authorizes, while each chamber has its distinct review task. Treaty authorization is a separately recognized form of binding law, see §14.4.
+- Senate may **by majority vote** determine active defense no longer justified by active or imminent threat and order **return to alert posture**. LC retains military command and can respond to a **new or renewed** active or imminent attack. Alert posture preserves preparedness rather than amounting to unconditional withdrawal.
+- LC commands forces and determines strategy, tactics, methods within constitutional defense or lawfully authorized purposes and scope. Do not duplicate broad lists of forbidden missions.
+- Supersede the previously registered Article II amendment 3's remaining general authorization-expiry formula **as applicable**; the new agreed scheme does not mandate fixed periodic legislative renewals. Preserve constitutional scope, affirmative authorization for nondefensive operations, and Senate powers. **Draft a unified final §2.2 only on integration**; proposals here supersede inconsistent previously approved §2.2 wording.
+
+**Approved stand-down wording (working draft):**
+
+“The Senate may, by majority vote, direct that defensive military operations return to an alert posture where continued active operations are no longer justified by an active or imminent threat.
+
+Such a determination terminates authority for continued active defensive operations but does not restrict the Legat Consul's authority to respond immediately to a new or renewed active or imminent attack.”
+
+**Approved defense boundary (working draft):**
+
+“The Legat Consul may conduct military operations necessary to repel or prevent an active or imminent attack on the Republic's territory, citizens, or treaty allies.
+
+Defensive authority does not extend to military operations pursuing objectives beyond repelling or preventing such attacks. Those operations require authorization by law under §14.1.”
+
+As a result of later adoption of positive enumeration, **retain the substantive boundary but simplify redundant negative formulations**.
+
+### §14.1 — Authorized purposes (retain and reconcile)
+
+Preserve the current two purposes: defense of Republic territory, citizens and treaty allies; and legislative authorization on specific grounds in response to crimes against humanity defined under international law. Use positive-grant drafting. Existing final sentence limiting Supreme Court review to the **stated** purpose is identified as a potential conflict with enforcing actual constitutional limits and treaty-trigger review; **no final replacement judicial-review standard was adopted**. Do not automatically install the previously proposed “reasonable factual basis” formula (explicitly withdrawn).
+
+### §14.2 — Planned operations, Senate review, Assembly budgets, withdrawal (approved)
+
+- An authorizing law for operations beyond defense states the operation's **purpose and scope** and is supported by LC's **plan of action and budget**. Senate follows **execution and progress against the authorized operational plan**; Assembly follows **appropriations and expenditures against the budget**. LC executes military command. Material changes in operations/circumstances reported to Senate, which may require **updated plans**; genuine expansion of statutory purpose/scope requires further law, not merely new tactics.
+- **Approved latest operational review wording:**
+
+“A law authorizing military operations shall establish their purposes and scope.
+
+The Legat Consul shall conduct those operations within the authorization and report material changes in their conduct or circumstances to the Senate.
+
+The Senate may require the Legat Consul to submit an updated operational plan for its review. Operations requiring an expansion of the purposes or scope established by law shall be submitted for further legislative authorization.”
+
+- **Approved continuing accountability wording:**
+
+“The Legat Consul shall report to the Senate on the conduct, progress, and continuing objectives of military operations authorized by law.
+
+The Senate shall review those operations against their legislative authorization and may require additional reporting and explanations from the Legat Consul.
+
+The Assembly shall review military expenditures against the appropriations authorized for those operations.”
+
+- **Approved orderly withdrawal wording:**
+
+“Expiration or withdrawal of authorization or appropriations for a military operation terminates authority to pursue its objectives.
+
+The Legat Consul retains authority to conduct an orderly withdrawal, protect personnel during withdrawal, and fulfill existing lawful obligations, subject to the Legislature's appropriation authority. No new offensive objectives may be undertaken under this authority.”
+
+Upon integration, simplify the final prohibition by positive enumeration **while preserving the substantive constraint**.
+- **Approved withdrawal budget planning:**
+
+“A law authorizing military operations shall provide for the orderly withdrawal of deployed personnel and the fulfillment of obligations arising from the operation.
+
+The proposed budget submitted by the Legat Consul shall include provision for these responsibilities.
+
+The Assembly shall appropriate funds for military operations in accordance with Article XII.”
+
+- Replace fixed annual Senate appearance, specified post-operation audit-report deadline, and fixed 90-day contract wind-down with constitutional responsibilities and statutory operational timing. **Preserve independent EM auditing**, including supporting intelligence expenditure. LC's domestic financial information-sharing with CC should continue consistent with CC's role and Article II; do not mistake notice for CC military consent.
+- Where Assembly deliberately withholds funding, LC has no general substitute appropriations authority. Safe withdrawal requires lawful financing; approved planning provisions protect foreseeable withdrawal costs, while Article XII emergency rule below addresses **institutional inability during defense**, not discretionary campaign overspending.
+
+### §14.3 — Delete separate Transition and Reconstruction procedure (approved)
+
+Remove existing second-renewal trigger, Senate plan-amendment procedure, and renewal gate. Operational plans and funding should provide for withdrawal, applicable post-conflict, reconstruction and transitional obligations; statute and the authorizing law supply detail without duplicating §14.2.
+
+### §14.4 — Treaty-based authorization (approved)
+
+**Approved working text:**
+
+“A treaty duly ratified under this Constitution constitutes lawful authorization for military action required by its terms, within the purposes permitted by §14.1.
+
+Military operations conducted under treaty authority are subject to the command, notification, operational review, and appropriation provisions of §2.2 and Article XIV.
+
+The courts may determine whether a treaty's conditions for military action have been satisfied and whether an operation falls within the authority granted by the treaty.”
+
+**History:** Treaties are law of the land; an action actually **required** by a duly ratified treaty needs no duplicative authorization statute, but treaty cannot authorize what Constitution disallows or authorize action exceeding its terms. Immediate defense of allies also directly authorized. Remove separate treaty 12-hour notice, 12-month expiry, special fixed judicial wind-down; preserve judicial treaty-trigger and scope review under ordinary legal processes. Senate review and Assembly appropriations apply. Future treaty obligation versus Senate stand-down can create international obligations despite domestic military authority limits.
+
+### §14.5 — State forces (approved)
+
+**Approved working text:**
+
+“States may maintain organized forces for disaster response, civil emergencies, and the preservation of public order within their territories.
+
+The Legat Consul may call State forces into federal service when necessary to defend the Republic against an active or imminent external attack. State forces so called shall serve under federal command for the duration of the defensive necessity.
+
+Other federal employment of State forces requires authorization by law.
+
+Upon completion of federal service, command of State forces returns to the respective State.”
+
+**History:** State consent not required for immediate external defense; normal State command and civilian roles are retained, other federal service requires law, defensive necessity bounds federal control, and Senate alert-posture decision applies equally to defensive operations using called-up State forces. During integration confirm how the existing distinct CC-requested consensual assistance and Article I safeguards are retained without needless duplication.
+
+### §12.2 — Companion emergency defense spending (approved, only when Assembly unable to act)
+
+**Approved working text:**
+
+“Where an active or imminent attack requires immediate defensive expenditure beyond available appropriations, and the Assembly is unable to act, the Legat Consul may authorize expenditure necessary for the immediate defense of the Republic.
+
+The Legat Consul shall report such expenditure to the Speaker of the Assembly without undue delay. The Assembly shall exercise its appropriation authority as soon as it is able to act.
+
+This authority continues only while the conditions requiring its exercise persist.”
+
+**History:** A genuinely incapacitated or unreachable Assembly triggers narrow defense continuity; **disagreement/refusal by a functioning Assembly does not**. This is not a general LC appropriation power. Reconcile with ordinary and interim appropriation under §12.2, preserving prior approved budget-deadlock and referendum-repeal rules.
+
+### Integrated stress-test record
+
+- **Passed:** surprise attack; prolonged necessary defensive action without countdown; defensive action across borders tied to active or imminent threat; Senate stand-down while preserving new-threat response; broader operation requires law/plan/budget; military tactical flexibility within authorized purpose; reports and Senate demands for updated operational plans; treaty defense/action within ratified treaty; external-defense federalization of State forces and their return; chambers disagreeing on escalation (no new authority without law).
+- **Conditional but accounted for:** orderly withdrawal if additional funds withheld, originally planned withdrawal reserve, extraordinary defense funding only when Assembly unable to act; enforceable authorized scope and ordinary judicial review; Senate refusal to conduct review does not enlarge LC powers.
+- **Integration cautions not additional approvals:** §14.1 final sentence's severe review limitation; §14.4 treaty trigger review interaction with stand-down; regular and emergency financial authorizations in §12.2; EM independent audit, CC consent-based State assistance and Article I, and any unclear intersection of active defense expenditure with §12.2 prior-year interim baseline.
+- No extra constitutional clocks simply to solve administrative issues. Constitutive duties and substantive authorization limits remain.
+- **Do not change adopted Constitution or website from this register alone**. Article XV already has separate approved work; continue review at Article XVI.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
