@@ -1906,6 +1906,17 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 - **Structural validation:** The previous scan of 177 numbered sections found no duplicated section labels and no broken section/subsection references. Intentional §12.2(5) deletion was retained.
 - **Readiness limitation:** This checkpoint confirms these identified decisions in the integrated text; it is not a complete proof of substantive consistency or adoption readiness. Any proposed change to a constitutional rule must be reviewed independently, and the working draft must remain separate from adopted text and the public site.
 
+## Final interaction stress test — Competing constitutional authority (2026-10-23)
+
+**Status:** Scenario findings only; no amendment approved or integrated by this checkpoint.
+
+1. **Catastrophic continuity, §2.9.a:** Returning institutions reacquire their individual functions as soon as capable, while the Emergency Designee and State Emergency Council remain only to facilitate unresolved reconstruction until the restoration threshold is met. No express conflicting assignment was found in this partial handback, but emergency authority must not override already-restored functions.
+2. **Executive incapacity, §2.16:** Acting authority vests immediately and restoration of the original Consul follows the express publication and timing rules; permanent vacancy under §2.9 is a different event. No new conflict identified.
+3. **Subdivision Statehood, §§15.2(5) and 15.5.a:** A second affirmative qualifying audit creates automatic Statehood **subject to** the prior remainder-viability determination. Because §15.5.a says that determination must precede acquisition of Statehood, the pending assessment can hold the effective change in constitutional status after the audit qualifications are met. A minimal textual clarification could distinguish audit qualification from operative Statehood; do not treat an informational report as a veto and do not add a new deadline without approval.
+4. **Founding military command, §§19.2, 19.3.a:** The incoming Republic institutions take authority as constitutionally capable; caretaker defense action is restricted by the transitional provisions. The Legat Consul's 14-day action requirement and the Legislature's 60-day outer continuation limit run from different institutional milestones. The rules can coexist; no incorrect cross-reference found.
+
+**Priority:** Resolve the narrow Statehood effective-date clarification if approved. Keep the §2.9.a minimum-scaffold approach and avoid reopening settled succession choices without a reproducible conflict.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
