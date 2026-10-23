@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III–VIII, and XVI–XX have approved revisions integrated. Article II and Articles IX–XV require further integration and cross-reference validation. Approved Monitor suspension and territorial viability fallbacks are now incorporated; sequencing under statute, Article II/XIV military reconciliation, and remaining cross-article provisions must be checked before publication or adoption.
+> **Integration is incomplete:** Articles I, III–VIII, X–XI, and XVI–XX have approved working revisions integrated. Article II and Articles IX, XII–XV remain partly or wholly pending. Article X was explicitly retained without amendment; Article XI now reflects the independent-agency framework in §3.9.a. Audit procedures, military authority, fiscal provisions and cross-references still require reconciliation. Do not publish or adopt this draft.
 
 ---
 
@@ -325,6 +325,10 @@ The Legislature may not withhold records, deliberations, votes, or draft legisla
 The Legislature may establish independent agencies outside the authority of either executive and may alter or abolish agencies established by statute. The Legislature may not impair the independence of a function this Constitution assigns to an independent agency.
 
 Unless this Constitution provides otherwise, statute governs organization, appointments, qualifications, terms, and oversight. The appointed leadership of an independent agency serves fixed terms and may be removed only for conduct, incapacity, or incompetence, not policy disagreement. Qualification requirements may not be designed to exclude candidates because of political or policy views or prior criticism of government.
+
+### §3.9.a — Operational Independence of Agencies
+
+An independent agency established by this Constitution or by the Legislature is operationally independent of both executives and of the Legislature in the exercise of its functions, subject to this Constitution and applicable law.
 
 ### §3.10 — Federal Legislative Competence
 
@@ -786,9 +790,9 @@ Government records may be classified only where required to protect national sec
 
 (1) Two constitutionally independent panels — the NRS Panel and the Elections Panel — operate the Republic's permanent record infrastructure and electoral systems respectively.
 
-(2) The Elections Panel establishes and maintains the National Voting System, sets administrative and technical standards for federal elections, certifies election equipment for state procurement, audits state compliance with federal election standards, administers referenda and confirmation votes, and certifies all federal election results.
+(2) The Elections Panel establishes and maintains the National Voting System, sets administrative and technical standards for federal elections, certifies election equipment for State procurement, audits State compliance with federal election standards, administers referendums and confirmation votes, maintains constitutional candidate pools and registries, administers constitutional selection lotteries, and certifies all federal election results.
 
-(3) Each panel is operationally independent of the other, of both executives, and of the Legislature in the exercise of its functions.
+(3) The NRS Panel and Elections Panel are independent agencies under §3.9.a and are operationally independent of each other in the exercise of their respective functions.
 
 (4) Panel members are appointed under §3.9. Each panel must have no fewer than five members at all times. No single appointing authority may hold a majority of appointments to either panel within any single electoral term.
 
