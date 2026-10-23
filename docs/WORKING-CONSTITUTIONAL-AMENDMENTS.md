@@ -1422,6 +1422,98 @@ The Constitution is superior to inconsistent legislative, executive, treaty and 
 - §17.3(2)'s 30-day JM maximum is deliberately retained against informational Monitor veto.
 - The source Constitution remains unchanged until expressly authorized; next section-by-section review is Article XVIII.
 
+## Proposed amendment 20 — Article XVIII Federal Property and National Trust (approved; 2026-10-22)
+
+**Status:** Section-by-section decisions approved and integrated stress-tested; **working proposals only, not enacted**. Keep adopted Constitution and website unchanged.
+
+### §18.1 — Use Doctrine and NRS registration (approved)
+
+Retain the **Use Doctrine**: the Republic holds no territorial sovereignty within a State or Territory solely by virtue of federal functions. Operational Use Rights are function-bound, geographically delimited and terminate when their authorized purpose ends. Preserve mandatory NRS disclosure, but a clerical failure to register **does not automatically void an otherwise lawful use right**.
+
+**Approved final working registration wording:**
+
+“Federal Operational Use Rights shall be registered to the NRS, identifying their geographic boundaries, authorized purpose, and conditions for termination.
+
+Registration establishes the authoritative public record of the right. A federal claim to land or authority beyond the registered boundaries or authorized purpose has no legal effect.
+
+Failure to register a lawfully established use right is subject to judicial enforcement under §18.3.”
+
+**History:** Authorization establishes the lawful right; registration provides authoritative transparency; courts enforce registration. This revises the existing automatic nullity for missing registration and preserves limited scope. Registration disputes housed in §18.3 rather than duplicated judicial procedures.
+
+### §18.2 — Seat of Government (approved)
+
+“The Seat of Government shall be hosted by a State or Territory selected through a process established by statute.
+
+The hosting arrangement shall establish the Republic's Operational Use Rights over the designated federal footprint in accordance with §18.1.
+
+Within that footprint, the Republic exercises exclusive authority over its constitutional operations. The host retains territorial sovereignty and may exercise its ordinary authority consistently with those federal functions.
+
+The legality of the selection and hosting arrangement is subject to judicial review under Article IV.”
+
+**History:** Constitutionalize host relationship and functional federal independence rather than requiring competitive bidding, published minimum criteria, fixed 30-day Supreme Court challenge window, or a special case procedure. Statute administers selection; law protects federal functions without transforming footprint into federal sovereign territory.
+
+### §18.3 — Termination, reversion, review (approved)
+
+“An Operational Use Right terminates when its authorized function ends. The federal government shall publish notice of termination to the NRS in accordance with statute.
+
+Upon termination, the designated land and improvements revert to the host State or Territory, unless the Republic and the host establish a new arrangement by mutual agreement.
+
+Disputes concerning the existence, boundaries, registration, termination, or disposition of Operational Use Rights are subject to expedited judicial review.”
+
+**History:** Termination arises from end of *function*, not belated publication, and cannot be prolonged by speculative future demand. Remove fixed 90-day publication and statutory reversion window. Judicial enforcement includes failure to register, supporting §18.1. Note property arrangements and return of improvements remain subject to authorized use/right terms and mutually negotiated replacement.
+
+### §18.4(1) — National Trust as public dedication (approved)
+
+“Land designated to the National Trust is held for the permanent benefit and use of the people of the Republic.
+
+Designation requires the consent of the State in which the land is situated and does not alter that State's territorial sovereignty.
+
+Management may be exercised by the State, the Republic, or jointly, under arrangements established in accordance with law.
+
+Land remains protected by the National Trust until its designation is removed under §18.4(2).”
+
+**History:** Substantially revises old provision suggesting National Trust “holds all federal land.” National Trust is an enduring *public guarantee/dedication to the citizenry*, not an automatic federal acquisition or territorial sovereignty. State, Republic or joint managers may administer; designation survives any management change or State's subsequent changed opinion. Operational Use Right and National Trust designation are distinct constitutional relationships.
+
+### §18.4(2) — Designation and removal (approved)
+
+“Designation of land to the National Trust requires approval by two-thirds of both legislative chambers and the consent of the host State.
+
+Removal of land from the National Trust requires approval by two-thirds of both legislative chambers and ratification by 60% of votes cast in a national referendum administered by the Elections Panel.
+
+Where land is subject to an international conservation agreement, withdrawal from that agreement requires approval by two-thirds of the Senate before the removal process proceeds.”
+
+**History:** Preserve high entry/exit thresholds, popular final decision and conservation agreement treatment. Remove 50% referendum participation floor (abstention veto) and constitutional 180-day referendum administration period (statute governs timetable). For Territories, “host State consent” is replaced by special §18.5 compact/statute rule; reconcile cross-reference at integration.
+
+### §18.4(3) — Stewardship (approved concise wording)
+
+“Land designated to the National Trust shall be maintained for its designated public purposes, preserving ecological integrity and public accessibility.”
+
+**History:** Do **not** duplicate the roles of State/Republic/joint manager or EM's existing monitoring mandate. The responsible governments can handle implementation. Preserve stewardship guarantee without overengineering.
+
+### §18.4(4) — Delete (approved)
+
+Delete separate express authorization for State/Indigenous co-management with Civic Consul. Management is covered in §18.4(1), with Indigenous nations' capacity to agree under applicable constitutional/ordinary law. **Do not interpret deletion as barring Indigenous co-management**.
+
+### §18.5 — Territory procedures (approved)
+
+Delete redundant former §18.5(1), repeating §18.1/§18.3 application to Territories. Replace old §18.5(2) with:
+
+“Designation of land within a Territory to the National Trust shall be governed by its Territorial Compact or, where the Compact is silent, by statute, subject to the requirements of §18.4.”
+
+**History:** Compact first; statutory participation where silent; national two-thirds legislative approval remains. State consent under §18.4(2) belongs to States; Territories governed by compact or statute rather than former written-position/60-day default mechanism. Be careful not to read §18.4 “State consent” as an accidental Territorial veto.
+
+### Integrated stress tests (approved)
+
+1. Federal research facility closes; speculative possible future use cannot preserve use right; automatic reversion or new mutually agreed arrangement — **pass**.
+2. Lawful courthouse use right omitted from NRS; judicially compel registration, no automatic disruption; no enlargement beyond registered bounds — **pass**.
+3. Host attempts to tax or obstruct national constitutional operations; exclusive functional authority inside designated capital footprint protects operations while host retains territorial sovereignty — **pass**.
+4. State later wants Trust land for development; original consent's revocation insufficient, must complete two-thirds legislative approval and 60%-of-votes-cast national removal referendum — **pass**.
+5. Federal-to-State or joint management change; National Trust public dedication, ecological/access guarantees persist — **pass**.
+6. Territory disputes Trust designation; Territorial Compact governs, or statute if silent, always with constitutional national designation approval — **pass**.
+7. Cross-article sovereignty test: National Trust dedication benefits all Republic people without transferring State territory; distinguish land dedication from federal Operational Use Rights — **pass**.
+
+**Integration cautions:** Reconcile §18.4(2) host State consent with §18.5 Territorial procedure; do not conflate dedication with federal title or territorial sovereignty. Uphold §18.1 registration accountability and §18.3 enforceability without creating a documentary veto over otherwise lawful federal constitutional operations. Apply **One Home Rule**, **Positive Enumeration of Authority**, and **Constitutional Necessity**: define what must be guaranteed, leave ordinary management, EM monitoring detail, and administrative calendars to competent institutions and statute. Next review: Article XIX.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
