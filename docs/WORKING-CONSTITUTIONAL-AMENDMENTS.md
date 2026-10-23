@@ -1699,6 +1699,98 @@ Retain public lot, staggered classes and existing exact founding terms: Senate a
 
 **Integration cautions:** Verify NRS/judicial capability determinations can resolve contested claims of readiness; avoid creating new tribunal merely for transition. Preserve §19.9 judicial enforcement to counter deliberate stagnation. Confirm minimum ratification NVS capability vs subsequent election infrastructure deployment without retroactive qualification. Scrub all Phase 0–4, Transition Window, and first-budget-after-Phase-4 references in Article XIX and cross-articles when later implementing, but **do not change adopted document now**. Preserve 14-/60-day military limits, §19.10 staggered classes and all express constitutional protections. Distinguish temporary authority limited to necessary continuity from unlawfully continuing a superseded office.
 
+## Proposed amendment 22 — Article XX Associated Communities (approved; 2026-10-23)
+
+**Status:** Section-by-section working decisions approved; integrated stress test passed following clarification of the Article XVI founding-period cross-reference. **Not enacted; do not change adopted Constitution or website.**
+
+**Underlying distinction:** Associated Communities are fully sovereign and **outside** the Republic, related by consensual compact; Territories are within it. Sovereign equality, choice of domestic governance, non-derogable rights, reciprocal commitments, independent arbitration, and voluntary exit are constitutional principles. Operational representation, review timetables and exit notice periods belong to the compact.
+
+### §20.1 — Nature of status
+
+**Retain unchanged.** Available to recognized Indigenous nations under Article XVI and independent nations outside the Republic.
+
+### §20.2 — Equal sovereign parties and compact-defined representation
+
+"The Republic and an Associated Community are equal sovereign parties to their compact.
+
+The compact may establish representation, consultation, and participation arrangements between the parties.
+
+The Republic may not require an Associated Community to adopt a particular form of government as a condition of association."
+
+**History:** Remove automatic constitutional observer speech/attendance at Assembly and Senate proceedings; these opportunities can be agreed in individual compacts. Do not prescribe an Associated Community's government.
+
+### §20.3 — Compact conditions and enforcement
+
+(1) **Retain unchanged:** Prohibit entry/ratification with entities whose governance practices include, authorize or systematically permit violations of §1.16.a non-derogable rights.
+
+(2) "Allegations of violations of §1.16.a arising under an association compact shall be subject to review through the compact's independent arbitration mechanism.
+
+The compact may be suspended upon a preliminary determination by that mechanism that the violations meet the standard established in subsection (1).
+
+The compact shall provide procedures for urgent review and resolution of such disputes."
+
+**History:** Remove suspension immediately upon a party's allegation or JM finding, which permitted politically motivated interruption. JM may independently monitor/report/refer but **cannot suspend** a compact. Arbitration must make the preliminary suspension determination. Remove constitutional 90-day preliminary decision clock and automatic lifting deadline; urgent review procedures belong to compact.
+
+(3) **Retain unchanged:** Independent arbitration panel may terminate a compact for confirmed violations that remain unremedied for the period stated by compact; termination discretionary, not automatic.
+
+(4) **Retain unchanged:** Existing governance relationships of Indigenous nations inside an Associated Community must be addressed and must not be eliminated or diminished by association compact.
+
+(5) "The effects of a compact's suspension shall be governed by its terms, without prejudice to obligations independently binding upon either party under international law."
+
+**History:** No universal suspension of observer privileges (observer provisions now negotiated); compact specifies suspended/continuing privileges and obligations, but cannot extinguish independent international commitments.
+
+### §20.4 — Sovereign mobility
+
+"An Associated Community may terminate its compact through its own democratic or traditional governance process. The Republic shall neither prevent nor penalize that decision.
+
+Termination shall take effect in accordance with the compact's agreed procedures, upon written notice registered to the NRS.
+
+The termination procedures shall not permit either party to compel the continued association of an unwilling sovereign community."
+
+**History:** Remove one-size-fits-all minimum 12-month notice and obsolete withdrawal-of-notice mechanics; procedures negotiated but may not obstruct continuing sovereign right to leave.
+
+### §20.5 — Reciprocity, arbitration, review
+
+"Each compact shall define the reciprocal obligations of the parties and establish an independent arbitration mechanism.
+
+Either party may request a review of the compact by written notice registered to the NRS. Review procedures shall be established by the compact."
+
+**History:** Delete mandatory regular review schedule; request for review does not itself authorize unilateral amendment.
+
+### §20.6 — Negotiation and ratification
+
+"The Legat Consul negotiates and concludes compacts with Associated Communities, subject to Senate ratification under §3.6."
+
+**History:** Remove mandatory Civic Consul consultation and advisory response transmission, without forbidding ordinary coordination. Maintain Article III treaty powers and two-thirds full-seated Senate threshold.
+
+### §20.7 — Continuity
+
+"An association compact remains binding upon the Republic notwithstanding a change of government.
+
+Amendment or renegotiation of the compact shall proceed in accordance with its terms and the applicable constitutional treaty procedures."
+
+**History:** Prevent a government from unilaterally disregarding commitments without suggesting compacts supersede later constitutional changes. International law and treaty procedures govern conflicts.
+
+### Integrated test (approved)
+
+1. New Legat Consul wants to disregard predecessor's compact — **pass**, remains binding and procedures apply.
+2. Unsupported rights accusation — **pass**, JM/party allegations lead to independent review, not automatic suspension.
+3. Confirmed and unremedied systematic §1.16.a violations — **pass**, arbitration may terminate.
+4. Community voluntarily withdraws — **pass**, no coercion or penalty, compacts establish administration.
+5. Parties disagree on performance — **pass**, independent arbitration and mutually accessible review.
+6. Indigenous governance arrangements inside Associated Community — **pass**, §20.3(4) preserves.
+7. Article III ratification cross-check — **pass**, §3.6 applies.
+
+**Cross-article Article XVI timing clarification (user-settled; flag for later consolidation of Article XVI and XIX):** The Article XIX universal Transition Window has been eliminated, so existing §16.2 references to that window must be updated. The recognized Indigenous nation **always possesses sovereign self-determination and complete independence**, with an Associated Community relationship as the *founding default*, never presumed assent to specific unagreed compact terms. **Founding is distinguished by immediate/expedited admission** under ratified founding arrangements; when that opportunity closes, any independent nation (including an Indigenous nation) may pursue ordinary admission processes. Do **not** convert the founding admission procedure into a permanent special fast-track, nor make its expiry extinguish sovereignty or subsequent ordinary admission.
+
+Working timing correction proposed and accepted in principle:
+
+"During the founding admission period established by the ratified founding arrangements, each recognized Indigenous nation may elect the founding status options provided by this section through its own lawful democratic or traditional governance process."
+
+Preserve the separate default outside Republic, optional Territorial Integration, possible qualifying direct founding-State option, and prohibition on coercion. This is a cross-article technical amendment to be reconciled with §16.2 rather than new Article XX text.
+
+**Consolidation guidance:** Apply One Home Rule; avoid repeating §3.6 ratification machinery, Article XVI self-determination or JM monitor-only scope in Article XX. Remove only administrative deadlines, duplicate consultation machinery and unilateral power not supported by compact; preserve all distinct rights-based constraints.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
