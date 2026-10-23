@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments through Proposed Amendment 22.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III–VIII, X–XI, and XVI–XX have approved working revisions integrated. Article II and Articles IX, XII–XV remain partly or wholly pending. Article X was explicitly retained without amendment; Article XI now reflects the independent-agency framework in §3.9.a. Audit procedures, military authority, fiscal provisions and cross-references still require reconciliation. Do not publish or adopt this draft.
+> **Integration is incomplete:** Articles I, III–VIII, X–XII, and XVI–XX have approved working revisions integrated. Article II and Articles IX, XIII–XV remain partly or wholly pending. Article XII's separate emergency-defense and direct-democracy budget safeguards still require coordination with Articles XIII–XIV. Cross-references remain subject to validation. Do not publish or adopt this draft.
 
 ---
 
@@ -814,21 +814,33 @@ Where the Elections Panel finds through audit that a State's election administra
 
 ### §12.1 — The Social State
 
-The Republic is a social state. Every Inhabitant, meaning every person present within the Republic's jurisdiction, is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory systems: universally accessible healthcare insurance; social assistance sufficient to maintain basic material conditions; and free compulsory education for every child. The Legislature establishes the framework and adequacy standards for each by statute, and the EM assesses those standards annually. A standard may be reduced only by a 2/3 concurrent vote of both chambers or during a certified Severe Revenue Contraction under §12.4. Parents may direct their children's education within public standards.
+The Republic is a social state. Every Inhabitant, meaning every person present within the Republic's jurisdiction, is entitled to conditions of life consistent with human dignity, which the Republic fulfills through three mandatory guarantees: universally accessible basic healthcare; social assistance sufficient to assist in maintaining basic material conditions; and free compulsory education for every child.
+
+The Legislature establishes the framework and adequacy standards for these guarantees by statute. No statutory adjustment may eliminate or substantially impair the constitutional guarantees established by this section. The Executive Monitor assesses compliance annually.
+
+Parents may direct their children's education within public standards.
 
 ### §12.1.a — The Monetary Authority
 
-The Monetary Authority is a constitutionally mandated institution independent of both executives and the Legislature in the exercise of its constitutional functions, governed by §3.9 except as this section provides. It is responsible for monetary policy, currency issuance, fiscal integrity certification, and the National Endowment functions assigned by this Article. The MA has exclusive authority to issue the Republic's currency; no other body may issue instruments intended to function as legal tender within the Republic. Principal decision-makers exercising the MA's constitutional authority must be selected through an independent candidate process and confirmed by 2/3 of the Senate. No single officer or institution may appoint a majority of the MA's principal decision-makers. Their terms must be staggered so that ordinary electoral turnover cannot replace the entire leadership at once. Disagreement over monetary policy, economic judgment, or a lawful certification is not cause for removal. A vacancy does not suspend or transfer the MA's constitutional functions.
+The Monetary Authority is a constitutionally mandated independent agency under §3.9.a, governed by §3.9 except as this section provides.
+
+It is responsible for monetary policy, currency issuance, fiscal integrity certification, and the National Endowment functions assigned by this Article. The Monetary Authority has exclusive authority to issue the Republic's currency; no other body may issue instruments intended to function as legal tender within the Republic.
+
+Principal decision-makers exercising the Monetary Authority's constitutional authority must be selected through an independent candidate process and confirmed by two-thirds of the Senate. No single officer or institution may appoint a majority of its principal decision-makers. Their terms must be staggered so that ordinary electoral turnover cannot replace the entire leadership at once.
+
+Disagreement over monetary policy, economic judgment, or a lawful certification is not cause for removal. A vacancy does not suspend or transfer the Monetary Authority's constitutional functions.
+
+**Integration:** Replace §3.[X] with exact new Article III independence section number; this references amendment 14, while preserving MA-specific powers, appointments, anti-capture and continuity rules.
 
 ### §12.1.b — Monetary Authority Reporting
 
-The Monetary Authority publishes a State of the Economy report to the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually, or more frequently as statute requires.
+The Monetary Authority publishes a detailed State of the Economy report to the NRS, the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually, or more frequently as statute requires. The report independently assesses economic conditions, fiscal sustainability, performance against the Republic's fiscal obligations, and areas requiring improvement, including the MA's actions within its authority.
 
 ### §12.2 — Fiscal Accountability
 
 (1) The annual budget originates in the Assembly. Each Consul prepares and submits to the Assembly a proposed budget for their respective domain, published to the NRS upon submission, by the deadline defined by statute; absent a statutory deadline, no later than 120 days before the start of the fiscal year. A Consul's failure to submit does not delay or bar the budget process.
 
-(2) The Legislature must pass a balanced budget or publish a justification for a structural deficit, which the MA reviews for fiscal accuracy. A structural deficit above the threshold the MA defines also requires a published plan for return to balance.
+(2) The Republic shall conduct its fiscal affairs to preserve the long-term sustainability of public finances, including public debt, while fulfilling its constitutional obligations.
 
 (3) Where no budget is enacted by the start of the fiscal year, or any earlier deadline defined by statute, an interim automatic appropriation takes effect by constitutional operation covering:
 
@@ -836,23 +848,21 @@ The Monetary Authority publishes a State of the Economy report to the Assembly, 
 
 — civil service compensation;
 
-— funding for the bodies protected under §9.6;
+— resources sufficient to maintain the assigned duties of institutions under §3.10;
 
 — and debt service obligations.
 
 (4) The interim appropriation continues at the prior fiscal year's inflation-adjusted level until a budget is enacted; no new programs may be initiated or expanded under it.
 
-(5) Where no budget is enacted when the interim appropriation takes effect, the pay of all members of both chambers is withheld from that date and released only upon budget enactment.
-
 (6) The Legislature must fund the National Endowment by appropriation in years of fiscal surplus. The EM assesses compliance annually.
 
 ### §12.3 — Taxing Power and National Revenue Fund
 
-The Legislature has exclusive authority to levy taxes, duties, and tariffs by statute. States, Territories, and local governments retain authority to tax within their own jurisdictions, subject to §12.5. All public money received by the Republic, other than the National Endowment's assets, is deposited into the National Revenue Fund. No money may be withdrawn from the Fund except by appropriation, including the interim appropriation under §12.2. The EM audits the Fund's receipts and disbursements annually. Tariff rates established by a ratified treaty or approved trade agreement under §3.6 constitute legislatively authorized rates for the duration of that instrument; the Legislature may set tariff schedules within which the Legat Consul may negotiate specific rates.
+The Legislature has exclusive authority to levy taxes, duties, and tariffs by statute. States, Territories, and local governments retain authority to tax within their own jurisdictions, subject to §12.5. All public money received by the Republic, other than the National Endowment's assets, is deposited into the National Revenue Fund. No money may be withdrawn from the Fund except by appropriation, including the interim appropriation under §12.2. The Executive Monitor audits the National Revenue Fund's receipts and disbursements, reviews their compliance with constitutional and statutory requirements, and publishes its findings to the NRS. Tariff rates established by a ratified treaty or approved trade agreement under §3.6 constitute legislatively authorized rates for the duration of that instrument; the Legislature may set tariff schedules within which the Legat Consul may negotiate specific rates.
 
 ### §12.4 — National Endowment
 
-The National Endowment is a constitutionally established reserve fund that backstops the Republic’s social state obligations under §12.1 during a Severe Revenue Contraction — a decline in national revenue that meets a threshold the Monetary Authority defines and publishes to the NRS before applying it, as certified by the Monetary Authority. The Endowment operates independently of the annual budget process and is managed by the Monetary Authority, whose sole obligation with respect to it is to preserve and grow it for that backstop purpose. On Monetary Authority certification of a Severe Revenue Contraction, disbursements to the National Revenue Fund for social state obligations under §12.1 begin and continue until the Monetary Authority certifies the contraction has ended. Where a certified Severe Revenue Contraction continues beyond 12 months, continued disbursement requires authorization by statute, enacted through the ordinary legislative process and renewed at intervals not to exceed 12 months for the duration of the contraction. Where authorization is not renewed, disbursements cease and any reduction made under the Severe Revenue Contraction exception in §12.1 lapses with them. The Monetary Authority's certification of the contraction's end terminates disbursements and any such reduction regardless of authorization status.
+The National Endowment is a constitutionally established reserve fund that backstops the Republic’s social state obligations under §12.1 during a Severe Revenue Contraction — a decline in national revenue that meets a threshold the Monetary Authority defines and publishes to the NRS before applying it, as certified by the Monetary Authority. The Endowment operates independently of the annual budget process and is managed by the Monetary Authority, whose sole obligation with respect to it is to preserve and grow it for that backstop purpose. On Monetary Authority certification of a Severe Revenue Contraction, disbursements to the National Revenue Fund for social state obligations under §12.1 begin and continue until the Monetary Authority certifies the contraction has ended. Where a certified Severe Revenue Contraction continues beyond 12 months, continued disbursement requires authorization by statute, enacted through the ordinary legislative process and renewed at intervals not to exceed 12 months for the duration of the contraction. Where authorization is not renewed, disbursements cease. The Monetary Authority's certification of the contraction's end terminates disbursements regardless of authorization status.
 
 ### §12.5 — Internal Commerce
 
@@ -860,7 +870,9 @@ No State or Territory may impose requirements on goods, services, or economic ac
 
 ### §12.6 — Fiscal Equalization
 
-The Legislature must by statute establish a mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I. The EM certifies annually whether the mechanism is operating as required. Where the EM finds the mechanism is not operating as required, the Legislature publishes its response to the NRS within 90 days.
+The Legislature shall establish by statute a fiscal equalization mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I.
+
+The Executive Monitor shall audit and review the mechanism's compliance with constitutional requirements and publish its findings to the NRS. The Legislature shall publish a response to findings of noncompliance within a period established by statute.
 
 ---
 
