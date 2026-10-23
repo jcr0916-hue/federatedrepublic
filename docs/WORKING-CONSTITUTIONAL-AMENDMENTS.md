@@ -1314,6 +1314,114 @@ Procedures for initiating negotiations shall be established by statute.”
 - **Positive Enumeration of Authority (document-wide):** Public institutions hold affirmative grant; rights of sovereign Indigenous nations are **recognized, not created** by Republic. Keep narrowly necessary prohibitions, including bar on unilateral diminishment of treaty rights.
 - Do **not** change adopted Constitution, website, or already approved work in other articles without explicit later instruction; this is a historical proposal checkpoint. Next sequential review: **Article XVII**.
 
+## Proposed amendment 19 — Article XVII constitutional amendment process (approved; 2026-10-22)
+
+**Status:** Working proposals approved section by section and integrated stress-tested. **Not enacted.** This register entry does not amend the adopted Constitution or website.
+
+### §17.1(1) — Amendment paths (retain unchanged)
+
+Retain parliamentary and citizen initiative routes, and publication of each legislative member's amendment vote to the NRS.
+
+### §17.1(2) — Parliamentary amendment and ratification (approved)
+
+**Approved working replacement (§17.1(2), in combination with later approved deletion of turnout floor):**
+
+“A parliamentary amendment requires approval by two-thirds of the full seated membership of both legislative chambers.
+
+The proposing body shall specify whether the amendment proceeds through State Ratification or Popular Ratification and establish a definite period for ratification in accordance with statute.
+
+State Ratification requires approval by two-thirds of the States. Popular Ratification requires approval by two-thirds of votes cast in a national referendum.
+
+The ratification period established for an amendment shall remain fixed throughout its consideration.”
+
+**History:** Preserve 2/3 of full seated membership in **both** chambers, two equally legitimate ratification mechanisms and 2/3 of States or 2/3 of votes cast. Remove fixed constitutional 180-day ratification windows and the **55% Popular Ratification turnout requirement** (strategic abstention veto). The proposing body must set a **definite period** in accordance with statute at proposal time, which cannot be changed mid-ratification. The originally proposed draft containing 55% turnout was **superseded** by the later, separately adopted popular-ratification wording: “Popular Ratification requires approval by two-thirds of votes cast in a national referendum.” The finite ratification period must remain compatible with the Judicial Monitor review opportunity; implementing statute can arrange the timetable.
+
+### §17.1(3) — Citizen Initiative Amendments (approved)
+
+“A Citizen Initiative Amendment proceeds through the two-phase petition process established under §13.1, without the filing deadline applicable to optional referendums. Phase Two requires signatures from 15% of eligible voters nationally.
+
+Upon verification of the required signatures, the Elections Panel shall administer a national referendum within 180 days. The amendment is ratified upon certification of approval by 70% of votes cast.
+
+An amendment rejected by the voters may not be reinitiated in substantially the same form within five years, unless materially changed.”
+
+**History:** Keep 15% signature threshold, 70% ratification vote and **180-day referendum guarantee** as an anti-obstruction constraint protecting citizens who completed demanding petitions; remove 65% turnout. Five-year repeat bar applies only to proposals **rejected by voters**, not petitions that fail to qualify, and exempts materially changed proposals. Citizen route bypasses ordinary legislative approval.
+
+### §17.1(4) — Mandatory Popular Ratification protections (retain, plus narrow guard)
+
+Retain existing enumerated protected constitutional categories: Monitor selection/independence, information-only mandate/non-dependency, and funding; NRS architecture/permanence; independent Elections Panel and NRS Panel; designation and protection of non-derogable rights; reversion to States/Territories; and this subsection itself. Preserve mandatory **Popular Ratification** regardless of amendment origin, with citizen-initiative referendum satisfying that requirement. Update cross-section numbers only during final consolidation; do not add categories incidentally.
+
+**Adopted addition:**
+
+“An amendment that modifies the substance or legal effect of a provision protected under this subsection requires Popular Ratification, regardless of where the amendment is placed in this Constitution.”
+
+**History:** Section location cannot be used to evade required direct voter ratification. E.g., insertion into an unprotected article granting dismissal authority over an independent Elections Panel still substantively affects protected §11.1, so State Ratification alone is insufficient. This safeguard particularly matters with later-amendment precedence in §17.3(1).
+
+### §17.2 — No executive veto; immediate effectiveness (retain unchanged)
+
+Neither Consul has an amendment veto/signature; certification by LM for State Ratification or Elections Panel otherwise, plus NRS publication, determines effectiveness. Officials do not obtain a policy veto by withholding certification.
+
+### §17.3(1) — Amendment consistency (approved)
+
+“A proposed constitutional amendment shall identify the provisions it repeals or modifies.
+
+An amendment ratified in accordance with this Constitution shall be interpreted consistently with existing provisions wherever reasonably possible. Where an irreconcilable conflict exists, the later amendment governs to the extent of the conflict, subject to the protections established by §17.3(3).”
+
+**History and rejected alternative:** The preexisting strict invalidation of an amendment for omission of express repeal/modification could defeat a duly ratified constitutional change through a drafting omission. Require identification and consistent interpretation first; let later lawful amendment prevail on genuine irreconcilable conflict, while preserving the non-derogable rights floor and mandatory Popular Ratification procedural requirements. Users explicitly noted this trade-off as difficult and chose the recommendation. Avoid using this to implicitly bypass §17.1(4).
+
+### §17.3(2) — Judicial Monitor consistency analysis (approved)
+
+“The JM shall examine each proposed constitutional amendment for consistency with this Constitution and publish its findings to the NRS.
+
+The JM shall have 30 days following parliamentary approval or verification of a citizen initiative's required petition signatures to publish its findings.
+
+Ratification may proceed upon publication of the findings or expiration of that period, whichever occurs first.”
+
+**History:** Mandated independent **information-only** JM analysis, without JM control/veto; a concrete 30-day non-obstruction deadline is necessary constitutional machinery. Align available ratification window with report window through statute/administrative procedures; no need for extra clocks.
+
+### §17.3(3) — Judicial review and entrenched rights (approved)
+
+“The Supreme Court shall adjudicate challenges to the constitutional validity of ratified amendments on petition of any person with standing.
+
+The Court may determine whether an amendment satisfied the requirements for ratification and whether it extinguishes a right designated non-derogable under §1.16.a.
+
+An amendment that extinguishes such a right is void to the extent of the extinguishment.”
+
+**History:** Courts verify all legally required ratification criteria including §17.1(4) mandatory Popular Ratification; they do **not** gain substantive policy veto over properly ratified amendments. Preserve enforceable entrenched non-derogable floor.
+
+### §17.3(4) — Prospective operation (retain unchanged)
+
+Past lawful actions stay lawful; specialized transition of offices, terms, rights, contracts or obligations must be specified where needed in the relevant amendment itself rather than in elaborate generic transitional code.
+
+### §17.3(5) — Withdrawal of proposed amendment (approved)
+
+“A proposed constitutional amendment may be withdrawn by its proposing authority before submission for ratification.
+
+Upon submission for ratification, the amendment shall proceed under the applicable constitutional process until ratified or rejected.”
+
+**History:** Withdrawal is part of the proposer’s authority until the proposal transfers to State or popular ratifiers; Parliament or petition sponsors cannot cancel a proposal after submission. Read “rejected” with the finite expiration of parliamentary ratification period, which terminates unsuccessfully without separate ratifier action.
+
+### §17.4 — Supremacy of Constitution (retain unchanged)
+
+The Constitution is superior to inconsistent legislative, executive, treaty and administrative action; explicit void-to-inconsistency rule is substantive hierarchy, not a redundant list of specific prohibitions.
+
+### Eight-scenario integrated stress test (approved)
+
+1. Two-thirds of both chambers propose; States refuse two-thirds approval in fixed period → no amendment; no government suspension (**pass**).
+2. Popular Ratification 75% yes of votes cast with 40% turnout → passes revised 2/3 approval, no turnout veto (**pass**).
+3. Citizen petition qualifies at 15% nationally; Parliament opposes → Elections Panel vote within 180 days, 70% cast approval necessary (**pass**).
+4. Ratified longer LC term conflicts with old term-length clause; omitted explicit cross-reference → first reconcile, later amendment prevails if truly irreconcilable; residual drafting risk addressed with JM analysis (**conditional pass**).
+5. Amendment receives broad support but extinguishes §1.16.a right → void to extent of extinguishment, courts enforce no policy veto (**pass**).
+6. JM fails to issue consistency analysis → ratification proceeds at 30 days, analysis remains JM duty (**pass**).
+7. Parliament attempts to retract after State Ratification commences → original proposer lacks withdrawal authority then (**pass**).
+8. Amendment indirectly strips Elections Panel independence by modifying another article → mandatory Popular Ratification applies based on **substance or legal effect**; approved §17.1(4) addition closes gap (**pass after safeguard**).
+
+### Integration notes
+
+- Merge independently approved §17.1(2) revisions into one coherent final section; do **not** retain earlier 55% popular participation floor.
+- §17.1(3)'s 180-day vote deadline is deliberate **citizen right** anti-obstruction machinery, not a universally fixed administrative timetable.
+- §17.3(2)'s 30-day JM maximum is deliberately retained against informational Monitor veto.
+- The source Constitution remains unchanged until expressly authorized; next section-by-section review is Article XVIII.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
