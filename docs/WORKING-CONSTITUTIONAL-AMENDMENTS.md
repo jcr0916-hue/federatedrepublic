@@ -1849,6 +1849,27 @@ The Assembly shall make its determination within the period established by statu
 
 **Integration:** Approved wording incorporated in §15.5.a(3), retaining the ordinary §15.2.a receiving-chamber period and judicial-enforcement mechanism.
 
+## Operational validation checkpoint — Executive return and founding military handoff (2026-10-23)
+
+**Status:** Test findings only, not approved amendments; no change to operative draft.
+
+### Executive authority scenarios
+
+- **Ordinary Legat Consul death or resignation:** §2.9(1)–(4) immediately transfers full authority to the Senate Speaker or a lawful successor; prior officeholder's orders cease to be valid.
+- **Temporary inability:** §2.16 immediately assigns acting authority and permits restoration under defined conditions. Distinct from permanent vacancy.
+- **Communications collapse:** §2.9.a(2) identifies a reachable State head as Emergency Designee when federal successors cannot be contacted. §2.9.a(4) declares unreachable federal offices vacant ten days after the specified trigger. **Potential contradiction:** §2.9.a(5) says a higher-ranked person who can act resumes office immediately, with no express exclusion for someone whose office has already become vacant under (4). A once-unreachable official might claim reinstatement after lawful replacement. Clarify when return restores authority versus when replacement is final; do not automatically reverse constitutional succession.
+- **Domestic government formation:** §2.6.a(5) allows a sole candidate to be rejected in a confirmation ballot. The section does not expressly specify a new ballot/election cycle after that rejection; assess the general Elections Panel statutory fallback before adding text. Acting authority remains under (2) pending a successful appointment or election.
+
+### Founding handoff scenarios
+
+- **Per-function transition:** §19.2(2) transfers counterpart powers automatically on each new institution becoming capable; §19.3(1) limits predecessor caretaker authority to the period before that transfer. Neither grants a concurrent permanent authority.
+- **Disputed capability:** Readiness is a legal and factual condition; §19.2 does not specify a new readiness certifier or publication as a prerequisite. Founding arrangements establish implementation schedules; an additional constitutional gate would require user approval.
+- **Caretaker defense:** §19.3.a(6) allows continuing transitional military authority for no more than 60 days after Legislature capability, and directs the incoming Legat Consul to seek authorization or orderly cessation within 14 days of assuming office. These are distinct events and can coexist. **Cross-reference issue for review:** that subsection identifies legislative continuation authorization as “under §2.2,” while §14.1–§14.2 establish the legal authorizing purposes and process for nondefensive military operations. Check whether the text should refer to §14.1 or Article XIV, preserving immediate defensive power under §2.2, before altering it.
+
+### Resolution status
+
+No proposed constitutional fix was integrated here: executive office resurrection, rejected sole-candidate fallback, and the caretaker authorization citation have legal consequences beyond mere punctuation. Test implementation under founding law and statutory procedures; seek explicit approval of any substantive replacement.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
