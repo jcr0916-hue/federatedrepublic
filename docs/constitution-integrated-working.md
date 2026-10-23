@@ -167,6 +167,8 @@ The Legat Consul may appoint domain officers to exercise defined authority. Offi
 
 (6) The winner becomes Civic Consul; acting service ends upon installation.
 
+If no candidate is elected, the nomination and election process shall repeat.
+
 (7) Before the national election begins, the Assembly may elect a Civic Consul by absolute majority, terminating the fallback. Once the national election begins, it proceeds to conclusion.
 
 ### §2.7 — Civic Consul Legislative Instruments
