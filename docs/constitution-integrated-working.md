@@ -728,17 +728,17 @@ Where two Monitor Generals jointly determine that the third has engaged in serio
 
 (5) Changes to eligibility criteria apply prospectively only and do not affect persons already entered in a constitutional pool or registry under the criteria applicable at the time of their entry. This protection does not exempt a member from continuing constitutional eligibility requirements, including the prohibition on disqualifying financial interests under §7.10.
 
-### §9.9 — Constitutional Officer Removal — Standard Track
+### §9.9 — Constitutional Officer Removal
 
-(1) A Monitor General may be removed for serious misconduct, abuse of office, or permanent incapacity. Removal is initiated by the branch or branches that Monitor does not audit: for the Legislative Monitor General, jointly by both executives; for the Executive Monitor General, by the Legislature by concurrent resolution of both chambers; for the Judicial Monitor General, jointly by the Legislature by concurrent resolution of both chambers and by both executives. The initiating authority files stated grounds to the NRS. Filing does not suspend the Monitor General's authority.
+(1) A proceeding to remove a Monitor General for serious misconduct or abuse of office may be initiated by an institution outside the Monitor's audit mandate: for the Legislative Monitor General, by either Consul; for the Executive Monitor General, by either legislative chamber; for the Judicial Monitor General, by either legislative chamber or either Consul. The initiating authority shall publish stated grounds to the NRS. Initiation does not suspend the Monitor General's authority.
 
-(2) The Elections Panel administers a national removal referendum no later than 90 days after filing, or at the next regularly scheduled federal election, whichever comes first. Removal requires 60% of votes cast under §7.3 and participation by at least 55% of eligible citizens.
+(2) The Elections Panel shall administer a national removal referendum within 90 days of initiation, or at the next regularly scheduled federal election, whichever occurs first. Removal requires approval by 60% of votes cast under §7.3, without a turnout requirement. Failure to conduct the referendum within that period does not terminate the proceeding. The affected Monitor General retains their authority unless separately suspended under this Constitution.
 
-(3) If the referendum fails or is not administered within the required period, the removal proceeding closes without removing the Monitor General.
+(3) Where a removal referendum fails, another proceeding may not be initiated against the same Monitor General on substantially the same grounds arising from the same conduct during that term. This restriction does not apply to materially new conduct or evidence.
 
-(4) Following a failed removal referendum, removal may not be reinitiated against the same Monitor General on the same or substantially similar grounds arising from the same conduct for the remainder of that Monitor General's term. This restriction does not bar proceedings based on materially new conduct or evidence.
+(4) Where two Monitor Generals determine that the third is permanently incapable of performing the duties of office, they may submit a recommendation for removal to the Speaker of the Assembly. Removal for permanent incapacity requires approval by two-thirds of each chamber of the Legislature and by both Consuls. Political disagreement with a Monitor General's findings or conclusions does not constitute incapacity.
 
-(5) For other constitutionally confirmed independent officers, other than federal judges whose removal is governed by §4.2 and §4.3.a, a resolution supported by one-third of either legislative chamber, or two of the three Monitor Generals acting jointly, may initiate removal by publishing stated grounds to the NRS. Initiation does not itself suspend authority. Removal requires a concurrent vote of 2/3 of the full seated membership of each legislative chamber, on grounds within the statutory removal categories for that office.
+(5) For constitutionally confirmed independent officers other than Monitor Generals and federal judges, removal may be initiated by a resolution supported by one-third of either legislative chamber. Removal requires a concurrent vote of two-thirds of the full seated membership of each chamber, on grounds established by statute. Initiation does not suspend the officer's authority.
 
 (6) The Legislature defines enumerated removal categories by statute for the offices covered by paragraph (5). Changes to removal categories apply only to conduct occurring after they take effect.
 
