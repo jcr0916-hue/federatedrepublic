@@ -1939,6 +1939,20 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Editorial principle:** Remove duplication only where the same rule has the same scope and legal effect. Preserve constitutional protections, transition triggers, independent decision-makers, and anti-deadlock provisions. No revisions to the Constitution authorized by this checkpoint.
 
+## Simplification pass 2 — Articles III–VI (2026-10-23)
+
+**Status:** Screening findings; no constitutional text changed or new proposal approved.
+
+**Article III — Legislature:** §§3.9 and 3.9.a contain related institutional-independence provisions, but §3.9 gives statutory agencies their legal basis, appointments, and protections, while §3.9.a applies operational independence to constitutional and statutory agencies alike. Retain both. §3.10 contains distinct federal-competence, institutional-capacity and funding obligations. §3.1's 90-day Senate action limit and one-time extension prevent deadlock; do not reduce these to statute alone.
+
+**Article IV — Judiciary:** §§4.4 and 4.4.a contain complementary immediate acting-justice and delayed public-confirmation paths. Do not collapse their deadlines or remove the fallback. §4.5 already specifies judicial jurisdiction, including expedited review of active defensive operations; avoid creating redundant jurisdiction provisions elsewhere. Potential *editorial* simplification: review repeated descriptions of judicial non-interference across §4.5 and domain-specific Articles before attempting a shorter formulation.
+
+**Article V — Citizenship:** Article is concise. §§5.1, 5.1.a, 5.1.b serve different functions (national status, single voting jurisdiction, civic assessment). §5.3 protects child care and non-deportation in distinctive circumstances. No deletion suggested.
+
+**Article VI — Immigration:** §§6.1, 6.2, and 6.3 assign different legal consequences (admission, removal/appeals, asylum), while §6.3.a supplies an explicit liberty default for unexecuted removals. §§6.2(3) and 6.3(4) both guarantee publicly appointed counsel but in different types of proceedings; overlap is limited and a general cross-reference could alter their scope. **Possible future editorial compression**: consolidate repeated references to federally appointed counsel only after verifying no applicant or respondent loses protection.
+
+**Disposition:** No automatic deletions or renumbering. Preserve rights, constitutional thresholds, independent authority, and anti-deadlock triggers. Proceed next with Articles VII–X.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
