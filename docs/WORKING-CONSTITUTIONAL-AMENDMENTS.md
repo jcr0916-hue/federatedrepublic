@@ -1896,6 +1896,16 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Reason:** Provides a straightforward repeat mechanism when a sole candidate is rejected or an election otherwise produces no winner. The existing Acting Civic Consul continues under §2.6.a(2) while the process repeats. No additional constitutional scheduling rule was introduced.
 
+## Reconciliation checkpoint — Articles II, IX, XV (2026-10-23)
+
+**Status:** Approval-to-draft review checkpoint; no new constitutional amendment introduced and no adoption authorized.
+
+- **Article II:** §§2.2, 2.12, 2.14.b, 2.15, 2.16, and 2.18 reflect the previously approved executive changes. §2.9.a now contains the approved minimal State-facilitation and emergency handback scaffold. §2.6.a includes the approved repeat nomination/election instruction after an unsuccessful election. The intentionally deleted §2.10 remains absent.
+- **Article IX:** §9.1 limits Monitors to informational findings; §9.1.d supplies acting authority; §§9.5.a–9.5.b preserve institution-specific decisions and duties; §9.7.a includes suspension safeguards; §9.9 distinguishes misconduct from permanent incapacity. The obsolete §9.6 is absent. The approved Elections Panel responsibility for selection pools/lotteries is reflected in §11.1(2), as confirmed by Amendment 14, which superseded the earlier pending note.
+- **Article XV:** §15.2 keeps the two timely completed and affirmatively compliant Territorial audit requirements, §15.2.a assigns determinations and transfers authority on inactivity, §15.3 separately governs Provisional status, and §15.5.a provides the approved Council → Civic Consul → legislative viability assessment route and timing clarification.
+- **Structural validation:** The previous scan of 177 numbered sections found no duplicated section labels and no broken section/subsection references. Intentional §12.2(5) deletion was retained.
+- **Readiness limitation:** This checkpoint confirms these identified decisions in the integrated text; it is not a complete proof of substantive consistency or adoption readiness. Any proposed change to a constitutional rule must be reviewed independently, and the working draft must remain separate from adopted text and the public site.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
