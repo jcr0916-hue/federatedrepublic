@@ -49,7 +49,7 @@
 - [x] Compare candidate sections against the currently generated adopted Markdown.
 - [ ] Independent legal/policy review and explicit approval of the adoption package.
 - [x] Stage a separate `docs/adoption-candidate-data.json` using the current `constitution_data.json` schema (20 articles, 177 provisions), without changing the canonical file. Verify candidate structure and normalized generated section text against clean Markdown.
-- [ ] Run the repository's Python conversion script and Markdown generator in CI or a checkout and verify exact generator output against the candidate, including paragraph/formatting fidelity.
+- [x] Run the Python candidate conversion script and existing Markdown renderer on GitHub Actions. Both candidate-text equivalence and exact JSON regeneration diff passed in run `40047730284`.
 - [ ] On a separately approved release branch, generate the adopted Markdown, website, PDF and annotated edition from canonical data.
 - [ ] Diff all generated outputs against the approved candidate; verify publication and site links.
 - [ ] Run repository tests and any release workflows; record results.
@@ -63,3 +63,10 @@
 - `scripts/prepare-adoption-candidate.py` converts the clean candidate and checks the generated provision text using the existing renderer.
 - `docs/adoption-candidate-data.json` is the staged canonical-schema candidate, **not** the repository's operative `constitution_data.json`.
 - Structural comparison of the staged JSON with the clean Markdown passed: 20 Articles, 177 sections and unique identifiers. A live repository test run and publication generation remain outstanding.
+
+## GitHub Actions validation (2026-10-23)
+
+- Workflow: `.github/workflows/adoption-candidate-validation.yml` on the working branch.
+- Run: https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40047730284
+- Verified by job summary: checkouts completed; generator-equivalent text comparison passed; candidate Python conversion regenerated the staged JSON with a clean diff.
+- Scope: isolated candidate only; no published outputs or canonical source writes. PDF, annotated edition, and website generation and comparison still need dedicated validation.
