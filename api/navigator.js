@@ -52,7 +52,7 @@ const SCENARIOS = [
   {title:'The Contraction',file:'scenario-the-contraction.html',kw:['endowment','monetary authority','ma','revenue','social state','recession','backstop']},
   {title:'The Waiver',file:'scenario-the-waiver.html',kw:['consular','election','rcv','waiver','state plurality','60','runoff']},
   {title:'The Unremovable',file:'scenario-the-unremovable.html',kw:['removal order','detention','asylum','refoulement','stateless','security','judicial review']},
-  {title:'The Second Renewal',file:'scenario-the-second-renewal.html',kw:['military','authorization','renewal','transition','reconstruction','withdrawal','senate']},
+  {title:'The Changed Mission',file:'scenario-the-second-renewal.html',kw:['military','authorization','renewal','transition','reconstruction','withdrawal','senate']},
   {title:'The Coalition',file:'scenario-the-coalition.html',kw:['no confidence','constructive','removal','civic consul','successor','majority','accountability','§2.6','§2.6.a']},
   {title:'The Formula',file:'scenario-the-formula.html',kw:['fiscal equalization','em','fiscal capacity','social state','90 days','§12.6','§12.1','monetary authority']},
   {title:'The Graduation',file:'scenario-the-graduation.html',kw:['voting','residency','nvs','student','ordinary','franchise','§1.8','§11.2','ballot']},
@@ -63,7 +63,7 @@ const SCENARIOS = [
   {title:'The Referendum',file:'scenario-the-referendum.html',kw:['independence','referendum','three stages','national vote','state','elections panel','nrs','§15.9']},
   {title:'The Restoration',file:'scenario-the-restoration.html',kw:['statehood','restoration','provisional','clean audit','automatic','devolution','§15.1','§15.2','§15.3']},
   {title:'The Vote',file:'scenario-the-vote.html',kw:['suspensive veto','cc','tabled','senate','2/3','override','bill lapses','§2.7','§2.6']},
-  {title:'The Three Recusals',file:'scenario-the-three-recusals.html',kw:['conflict of interest','recusal','financial disclosure','ethics','monitor general','procurement','§7.10','§7.11','§9.9.a','§7.13','§9.9','voidable','gift']},
+  {title:'The Three Recusals',file:'scenario-the-three-recusals.html',kw:['conflict of interest','recusal','financial disclosure','ethics','monitor general','procurement','§7.10','§9.9.a','§7.13','§9.9','voidable','gift']},
 ];
 
 const CORS = {

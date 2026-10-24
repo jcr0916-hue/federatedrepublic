@@ -152,7 +152,7 @@ test('high-risk deterministic topics preserve distinct constitutional triggers a
 
   const statehood = topicMatch('What happens if the statehood process becomes impossible to complete?');
   assert.equal(statehood.id, 'statehood-process-failure');
-  assert.match(statehood.answer, /missing either two-year Statehood Audit deadline/i);
-  assert.match(statehood.answer, /may not be reinitiated for three years/i);
-  assert.match(statehood.answer, /distinct failure states/i);
+  assert.match(statehood.answer, /timely completed audit remains eligible for legislative determination afterward/i);
+  assert.match(statehood.answer, /three-year bar/i);
+  assert.match(statehood.answer, /transfers an overdue decision exclusively/i);
 });

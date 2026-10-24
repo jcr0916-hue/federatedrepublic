@@ -626,7 +626,7 @@ img { max-width:100%; height:auto; }
 }
 /* near the right edge, flip the bubble so it doesn't overflow the viewport */
 .def:nth-last-child(-n+3) .def-pop{left:auto;right:0}
-@media print{ .def-pop{display:none} .def{border-bottom:none} }
+@media print{ .def-pop{display:none} .def{border-bottom:none;position:static} }
 
 /* Transparent hit areas over the atlas's ordinary SVG state labels.
    Match the label typography so the whole name remains clickable. */

@@ -274,11 +274,11 @@
   },
   {
     "id": "cross-10",
-    "question": "How do §7.10 and §7.11 work together on conflicts of interest and recusal?",
+    "question": "How do §7.10 and §9.9.a work together on Monitor General conflicts of interest and recusal?",
     "expectedGate": "ESCALATE",
     "required": [
       "§7.10",
-      "§7.11"
+      "§9.9.a"
     ]
   },
   {

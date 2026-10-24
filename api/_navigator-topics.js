@@ -72,10 +72,8 @@ const TOPICS = [
       'statehood process',
       'territory to state',
     ],
-    answer: 'A Territory enters the statehood process by a resolution of its elected governing authority or by a qualifying citizen petition. It must then achieve two successful Statehood Audits within the constitutional time windows. Upon publication of the second successful audit, the Territory becomes a State immediately by constitutional operation; no additional political vote, legislative act, executive confirmation, or provisional stage is required.',
-    sections: [
-      ['§15.2', 'Initiation, two successful Statehood Audits, and automatic admission as a State'],
-    ],
+    answer: "A Territory starts by resolution or a qualifying citizen petition. All three Monitor findings complete an audit; the responsible legislative chamber determines compliance. Two qualifying audits must be completed within the two-year windows and receive affirmative determinations under §§15.2 and 15.2.a. A timely completed audit remains eligible for decision afterward. The second affirmative determination creates Statehood immediately, subject to subdivision viability where applicable; no separate admission act follows.",
+    sections: [["§15.2", "Initiation, completed audit records, qualification periods and Statehood"], ["§15.2.a", "Affirmative legislative decisions, exclusive transfer on delay and judicial enforcement"]],
   },
   {
     id: 'state-independence',
@@ -117,12 +115,8 @@ const TOPICS = [
       'what happens if the consuls disagree about military jurisdiction',
       'what happens if the civic consul and legat consul disagree over a military operation',
     ],
-    answer: 'If the executives dispute the domain of a proposed action, §2.1 makes the Council of Ministers the first forum for resolution; while the dispute is pending, each executive continues only functions clearly within that executive’s established domain and the specific disputed action is suspended. Either executive may ask the Supreme Court for a domain determination under §4.5. During active military operations, however, §2.1 expressly provides that the Legat Consul’s domain governs operational decisions.',
-    sections: [
-      ['§2.1', 'Executive domain-dispute procedure and the active-military-operations rule'],
-      ['§2.14', 'Council of Ministers as the joint executive coordination forum'],
-      ['§4.5', 'Supreme Court original jurisdiction for constitutional disputes'],
-    ],
+    answer: "The Council of Ministers is the first forum for a domain dispute under §2.14. It exercises no executive authority. Each Consul continues established functions while the specific disputed action is suspended, and unresolved disputes may go to the Supreme Court. During active military operations, command within the defensive authority or lawful authorization actually present belongs to the Legat Consul under §2.2; that does not decide an unresolved constitutional boundary. A temporary emergency operational lead under §2.14.a requires both Consuls to concur and does not transfer either constitutional domain.",
+    sections: [["§2.14", "Council coordination and domain disputes"], ["§2.2", "Military command and its lawful scope"], ["§2.14.a", "Temporary emergency coordination without domain transfer"]],
   },
   {
     id: 'statehood-process-failure',
@@ -132,12 +126,8 @@ const TOPICS = [
       'what happens if a territory misses the statehood deadlines',
       'what happens if the statehood audit process cannot be completed',
     ],
-    answer: 'For the ordinary §15.2 pathway, missing either two-year Statehood Audit deadline causes that proceeding to lapse, after which it may be initiated again under §15.2(1). A different rule applies when §15.5.a sends affected petitions to a Territory Convention because of competing petitions or a remainder-viability problem: if that Convention produces no resolution within 90 days, the affected petitions lapse together, the Territory continues undivided, and substantially the same geographic petitions may not be reinitiated for three years. Those are distinct failure states and should not be collapsed into one general restart rule.',
-    sections: [
-      ['§15.2', 'Ordinary Statehood Audit deadlines, lapse, and reinitiation'],
-      ['§15.5.a', 'Territory Convention fallback and the three-year bar after Convention failure'],
-      ['§15.1', 'Territorial status that continues unless and until Statehood is completed'],
-    ],
+    answer: "The two-year qualification periods in §15.2 govern completion of audit records. A timely completed audit remains eligible for legislative determination afterward; delay alone does not terminate the proceeding. Section 15.2.a transfers an overdue decision exclusively to the other chamber and permits judicial enforcement of its duty. Separately, a §15.5.a Convention that produces no resolution within ninety days causes its affected petitions to lapse together, with a three-year bar on substantially the same geographic petitions.",
+    sections: [["§15.2", "Qualification periods and timely completed records"], ["§15.2.a", "Legislative transfer and enforcement"], ["§15.5.a", "Competing petitions, remainder viability and Convention consequences"]],
   },
   {
     id: 'military-authority',
@@ -149,12 +139,8 @@ const TOPICS = [
       'military authority',
       'military command',
     ],
-    answer: 'The Legat Consul holds military command and force-employment authority. The Legat Consul may use force immediately in response to an active or imminent attack on Republic territory, citizens abroad, or treaty allies; beyond immediate response, military force requires legislative authorization. Authorized military action must also serve a purpose permitted by Article XIV.',
-    sections: [
-      ['§2.1', 'Legat Consul domain includes military command and force employment'],
-      ['§2.2', 'Immediate defensive force and the requirement for legislative authorization beyond immediate response'],
-      ['§14.1', 'The two permitted purposes for military force'],
-    ],
+    answer: "The Legat Consul commands operations necessary against an active or imminent attack, including necessary defense beyond the border. Other objectives require authorization by law within §14.1 purposes; a ratified treaty may supply authority for action its terms require. The Senate may require an alert posture when active defensive operations are no longer justified. Operational review, scope, appropriations and withdrawal duties remain governed by §§2.2 and 14.2.",
+    sections: [["§2.2", "Immediate defense, notice, Senate alert-posture direction and command"], ["§14.1", "Permitted military purposes"], ["§14.2", "Authorization, operational review, appropriations and withdrawal"], ["§14.4", "Treaty authority within its terms"]],
   },
   {
     id: 'amendments',
@@ -208,10 +194,8 @@ const TOPICS = [
       'citizen legislative initiative',
       'citizen initiative process',
     ],
-    answer: 'Citizens may propose legislation directly through the two-phase petition process in §13.2. Both phases must be completed within 20 months of filing. Once the required geographic and national signature thresholds are verified, the Legislature has 90 days to enact the proposal. If it does not, the Elections Panel administers a direct citizen referendum under the constitutional passage and participation thresholds.',
-    sections: [
-      ['§13.2', 'Two-phase citizen petition, legislative vote, and referendum fallback'],
-    ],
+    answer: "Citizens may propose legislation through §13.2 using the §13.1 two-phase petition process. The geographic requirements carry over; Phase Two requires ten percent nationally. The completion period is statutory. After verification the Legislature has ninety days to enact the proposal; otherwise the Elections Panel holds a referendum within the following ninety days. Sixty percent of votes cast enacts the initiative, without a constitutional turnout floor. It cannot narrow Article I rights, directly appropriate funds or alter taxes, duties or tariffs.",
+    sections: [["§13.2", "Initiative thresholds, legislative period, referendum and limits"], ["§13.1", "Shared petition procedure and accessibility floor"]],
   },
   {
     id: 'non-derogable-rights',
