@@ -70,3 +70,13 @@
 - Run: https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40047730284
 - Verified by job summary: checkouts completed; generator-equivalent text comparison passed; candidate Python conversion regenerated the staged JSON with a clean diff.
 - Scope: isolated candidate only; no published outputs or canonical source writes. PDF, annotated edition, and website generation and comparison still need dedicated validation.
+
+## Isolated output-validation findings (2026-10-23)
+
+- Workflow: `.github/workflows/adoption-candidate-validation.yml` (candidate-only temporary directory).
+- Candidate JSON conversion and renderer-equivalence checks **PASS**.
+- `scripts/sync-annotated.py`, `scripts/build-search-index.py`, and `scripts/check-constitutional-site.py` **PASS** with candidate data: all 177 provisions and search anchors.
+- Full website production validation **BLOCKED**: the world metadata validator and Eleventy collection both reject an obsolete constitutional provision reference `§2.10` associated with `torenthia-nrs-103.html`. This section is intentionally absent from the candidate. The blocker must be fixed in historical-world citation metadata after verifying the appropriate replacement reference or citation treatment; do not restore the deleted constitutional provision.
+- Candidate PDF generation and accessibility checks **NOT EXECUTED** because the site-render step failed. Do not count them as passing.
+- Runs: https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40047884324 and https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40047927659 .
+- All testing was confined to the working branch and temporary CI files. The adopted Constitution and live website were not modified.
