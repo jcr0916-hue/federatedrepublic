@@ -1,9 +1,9 @@
 # Branch history — release-review-constitution-261023
 
-**Original branch:** `release-review-constitution-261023`  
-**PR:** not yet opened; add before merge  
-**Candidate baseline:** `118fca1794d173e7b2b7cbf4e54b8211599fcbb2`  
-**Head commit at handoff:** not established until release commits are created  
+**Original branch:** `release-review-constitution-261023`
+**PR:** not yet opened; add before merge
+**Candidate baseline:** `118fca1794d173e7b2b7cbf4e54b8211599fcbb2`
+**Substantive release commit:** `44dab96a`
 **Status:** proposed for release; local editorial audit complete
 
 ## Purpose
