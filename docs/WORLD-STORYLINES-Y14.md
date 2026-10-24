@@ -49,7 +49,7 @@
 
 **Beats.**
 1. Y13 M12 — NRS: Elections Panel publishes the EM pool roster and the nomination window.
-2. Y14 M1 — Speakers' talks reported; Sollis *Show Your Work* explains the joint nomination and the Senate fallback.
+2. Y14 M1 — Speakers' talks reported; Sollis *Show Your Work* explains the joint nomination and the JMC lottery fallback.
 3. Y14 M2 — Either a joint nomination or the 60-day deadline passes → Senate 2/3 selection from the pool. **Recommend the fallback**: the World has never shown it.
 4. Y14 M3 — JM disclosure findings published. Solt's final certification work (Fiscal Equalization's revised mechanism) is her last major act.
 5. Y14 M4 — Confirmation on the bundled ballot.

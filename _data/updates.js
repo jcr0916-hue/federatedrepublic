@@ -12,6 +12,13 @@ const CATEGORY_IMAGE = {
 
 const updates = [
   {
+    category: "constitution",
+    badge: "Constitutional Release",
+    title: "Twenty Articles, One Coherent Republic",
+    blurb: "The current Constitution has 177 provisions. Scenarios, Torenthia records, diagrams and twelve printable quicksheets now follow its institutions and procedures. The Changed Mission explores military authority when a successful operation grows beyond its original scope.",
+    href: "scenario-the-second-renewal.html",
+  },
+  {
     category: "world",
     badge: "The World",
     title: "Three Delegations, No Shared Verdict",
@@ -36,28 +43,28 @@ const updates = [
     category: "world",
     badge: "The World",
     title: "The Court affirms it. The Convention continues.",
-    blurb: "6–3, the Supreme Court holds that a whole-Territory petition is a \"different defined portion\" under §15.5.a(1) — the JMC's determination stands, and Korda's Convention keeps its clock. Doran dissents on jurisdiction, not the merits.",
+    blurb: "6–3, the Supreme Court holds that a whole-Territory petition is a \"different defined portion\" under §15.5.a(1) — the competing-petition trigger stands, and Korda's Convention keeps its clock. Doran dissents on jurisdiction, not the merits.",
     href: "torenthia-sc-002.html",
   },
   {
     category: "world",
     badge: "The World",
     title: "The Court pauses the clock while it decides",
-    blurb: "An interim order stops the Convention's ninety-day period from running — the Convention itself keeps meeting — while the Court weighs the corridor petitioners' challenge to the JMC's determination.",
+    blurb: "An interim order stops the Convention's ninety-day period from running — the Convention itself keeps meeting — while the Court weighs the corridor petitioners' challenge to the competing-petition process.",
     href: "torenthia-nrs-039.html",
   },
   {
     category: "world",
     badge: "The World",
     title: "The Constitution required her to convene it. It did not require her to say more.",
-    blurb: "Elin Thoss convened Korda's Territory Convention today, exactly as §15.5.a(3) obligated her to. Her statement ran thirty-one words. None of them said which outcome she wants.",
+    blurb: "Elin Thoss convened Korda's Territory Convention today, exactly as §15.5.a(4) obligated her to. Her statement ran thirty-one words. None of them said which outcome she wants.",
     href: "torenthia-news-075.html",
   },
   {
     category: "constitution",
     badge: "Amendment",
     title: "§2.16 — Recurring Executive Incapacity",
-    blurb: "Executive incapacity now separates a first temporary interruption from a repeated dispute: recurrence inside 90 days requires 2/3, adds SC review, and permits time-limited legislative extensions without turning incapacity into removal.",
+    blurb: "Executive incapacity now separates a first temporary interruption from a repeated dispute: recurrence inside 90 days requires 2/3. Each determination lasts at most six months; continuation needs a fresh 2/3 determination. Judicial review protects against involuntary incapacity being used as removal.",
     href: "constitutional-history.html#s2-16-recurring-incapacity",
   },
   {
@@ -94,7 +101,7 @@ const updates = [
     category: "world",
     badge: "The World",
     title: "The Korda referendum will not proceed",
-    blurb: "The Joint Monitor Council says the two certified Korda petitions trigger §15.5.a(1). The corridor referendum stops and the Territory Convention process begins.",
+    blurb: "Two certified Korda petitions trigger §15.5.a(1). The Elections Panel applies the referendum consequence and the Civic Consul convenes the Territory Convention; the Joint Monitor Council supplies its assessment.",
     href: "torenthia-nrs-034.html",
   },
   {
@@ -248,7 +255,7 @@ const updates = [
     category: "world",
     badge: "The World",
     title: "The Council said yes. One member said wait.",
-    blurb: "The Joint Monitor Council cleared the Kelvant-Korda referendum to proceed. The vote was two to one — and the dissent was published alongside the finding, because the Constitution gives no way to leave it out.",
+    blurb: "The Joint Monitor Council published its two-to-one viability assessment and dissent. The Assembly made the affirmative viability determination that allowed the Kelvant-Korda referendum to proceed.",
     href: "torenthia-news-052.html",
   },
   {
@@ -318,7 +325,7 @@ const updates = [
     category: "site",
     badge: "Feature",
     title: "The Diagrams, rebuilt",
-    blurb: "Seven core mechanics, each a quick read — pick from the carousel, hover any § for context, click through to the exact provision.",
+    blurb: "Seven core mechanics, each a quick read — select a diagram with the carousel or keyboard, then open the exact constitutional provision.",
     href: "diagrams.html",
   },
   {

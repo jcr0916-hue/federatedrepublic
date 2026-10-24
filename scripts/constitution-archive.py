@@ -328,7 +328,72 @@ def verify_records(records):
             raise ValueError(f"Archived Constitution pair is out of sync: {stem}")
 
 
-def reconcile(root, base, head="HEAD"):
+LEGACY_ALIAS_RESTORATION = (
+    "47e9f9fdba9f79663c500cd5898d10f8ca85890c",
+    "2d786132cff15205d36e370e03ed05f92221b91e",
+)
+LEGACY_UNSYNCHRONIZED_REVISIONS = {
+    "e309c3bb667f153d71dd4c184fc73652f1d08f33":
+        "f9b93b4f4b308c6810b9cc6045c8d9d820818a07",
+}
+# Exact already-published mismatches preserved before their synchronized
+# successor is published. No particular future repair commit is invented.
+LEGACY_RAW_SOURCE_REVISIONS = frozenset({
+    "59beca5349754b131373d562ac77f447d60d654f",
+})
+EXCEPTION_SOURCES = "docs/archive/constitution-exceptions"
+
+
+def restored_legacy_alias(root, previous_ref, ref, head, chain, name):
+    """Recognize only the documented, byte-exact 2026-10-18 restoration.
+
+    This does not permit a future deletion, even of the same alias. Both fixed
+    commits must be on the audited first-parent chain, and the canonical blob
+    must agree with the alias before deletion, on restoration and at the head.
+    The ordinary before/after immutability check remains unconditional.
+    """
+    removed, restored = LEGACY_ALIAS_RESTORATION
+    basename = Path(name).name
+    if (ref != removed or basename not in LEGACY_DUPLICATE_NAMES or
+            name != f"{ARCHIVE}/{basename}" or restored not in chain or
+            chain.index(restored) >= chain.index(removed)):
+        return False
+    canonical = f"{ARCHIVE}/{basename.replace(' 2.', '.').replace(' 3.', '.')}"
+    objects = git(root, "rev-parse", f"{previous_ref}:{name}",
+                  f"{previous_ref}:{canonical}", f"{ref}:{canonical}",
+                  f"{restored}:{name}", f"{restored}:{canonical}",
+                  f"{head}:{name}", f"{head}:{canonical}").decode().splitlines()
+    return len(objects) == 7 and len(set(objects)) == 1
+
+
+def recovery_pair_is_verified(root, contents, ref, chain, evidence_ref=None):
+    """Preserve explicitly reviewed broken historical editions as raw source."""
+    try:
+        validate_pair(root, contents, ref)
+        return True
+    except ValueError:
+        repaired = LEGACY_UNSYNCHRONIZED_REVISIONS.get(ref)
+        if (ref not in LEGACY_RAW_SOURCE_REVISIONS and
+                (not repaired or repaired not in chain or
+                 chain.index(repaired) >= chain.index(ref))):
+            raise
+    prefix = f"{EXCEPTION_SOURCES}/source-{ref}"
+    def evidence(path):
+        return git(root, "show", f"{evidence_ref}:{path}") if evidence_ref else safe_path(root, path).read_bytes()
+    raw = tuple(evidence(prefix + suffix) for suffix in (".json", ".md"))
+    note = json.loads(evidence(prefix + ".provenance.json"))
+    if (raw != contents or note.get("previous_commit") != ref or
+            note.get("superseding_commit") != repaired or
+            note.get("status") != "unverified_historical_source" or
+            note.get("verified_pair") is not False or
+            note.get("source_paths") != [JSON_PATH, MD_PATH] or
+            note.get("previous_json_sha256") != digest(raw[0]) or
+            note.get("previous_markdown_sha256") != digest(raw[1])):
+        raise ValueError(f"Historical exception source verification failed: {ref}")
+    return False
+
+
+def recovery_requirements(root, base, head="HEAD", evidence_ref=None):
     base, head = commit(root, base), commit(root, head)
     chain = git(root, "rev-list", "--first-parent", head).decode().splitlines()
     if base not in chain:
@@ -343,15 +408,34 @@ def reconcile(root, base, head="HEAD"):
                       previous_ref, ref, "--", ARCHIVE).decode().split("\0")
         for name in altered:
             if name and name != f"{ARCHIVE}/README.md":
+                if restored_legacy_alias(root, previous_ref, ref, head, chain, name):
+                    continue
                 raise ValueError(f"Existing archive modified or deleted: {name}")
         changed = git(root, "diff", "--name-only", previous_ref, ref, "--", JSON_PATH, MD_PATH)
         if changed:
             previous, current = pair(root, previous_ref), pair(root, ref)
-            validate_pair(root, previous, previous_ref)
-            validate_pair(root, current, ref)
+            previous_verified = recovery_pair_is_verified(root, previous, previous_ref, chain, evidence_ref)
+            recovery_pair_is_verified(root, current, ref, chain, evidence_ref)
             when = git(root, "show", "-s", "--format=%cI", ref).decode().strip()
-            required.append((previous, when, previous_ref))
+            if previous_verified:
+                required.append((previous, when, previous_ref))
         previous_ref = ref
+    return required
+
+
+def check_recovery(root, base, head="HEAD"):
+    """Check the entire recovery plan against committed evidence without writes."""
+    head = commit(root, head)
+    required = recovery_requirements(root, base, head, evidence_ref=head)
+    records = validate_inventory(inventory(root, head))
+    verify_records(records)
+    for contents, _, ref in required:
+        if not any(saved == contents for _, _, saved in records):
+            raise ValueError(f"Unarchived historical Constitution pair: {ref}; run reviewed recovery and commit its outputs")
+
+
+def reconcile(root, base, head="HEAD"):
+    required = recovery_requirements(root, base, head)
     saved = []
     with locked(root):
         verify_records(validate_inventory(inventory(root)))
@@ -384,6 +468,11 @@ def main():
         print(f"Constitution archive: recovered {len(paths) // 3} previous pair(s)")
     else:
         check(ROOT, args.base, args.head, args.command == "check-current")
+        if args.command == "check":
+            destination = commit(ROOT, args.head)
+            baseline = json.loads(git(ROOT, "show", f"{destination}:{POLICY}"))["baseline_commit"]
+            check_recovery(ROOT, baseline, args.head)
+            print("Full first-parent recovery verified against committed evidence without writes")
         print("Constitution archive check passed")
 
 

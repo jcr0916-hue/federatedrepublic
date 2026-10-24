@@ -1,10 +1,22 @@
 {
   "scenario-the-formation": {
-    "summary": "A divided Assembly reaches its formation deadline. A limited caretaker keeps existing policy running while the choice passes to a national election.",
+    "summary": "A general election leaves the Assembly split four ways. Twenty-one days pass with no Civic Consul. The office does not fall vacant, and no one seizes it — the constitution turns the deadlock into a national election and hands the choice to the people.",
     "provisions": [
       {
         "ref": "§2.6.a",
         "label": "Government Formation"
+      },
+      {
+        "ref": "§2.6",
+        "label": "Constructive Vote of No Confidence"
+      },
+      {
+        "ref": "§2.7",
+        "label": "Civic Consul Legislative Instruments"
+      },
+      {
+        "ref": "§7.4",
+        "label": "Eligibility and Disclosure for Federal Office"
       }
     ],
     "links": [
@@ -23,11 +35,27 @@
     ]
   },
   "scenario-the-audit": {
-    "summary": "A Territory completes the successful audits required for Statehood. Publication of the second qualifying audit brings the constitutional change into effect.",
+    "summary": "Year 3. Velmora completes its second Statehood Audit on time. The Monitor findings supply the record; an affirmative legislative determination supplies the decision. An inconclusive vote and a missed deadline have different consequences.",
     "provisions": [
       {
         "ref": "§15.2",
         "label": "The Statehood Audit"
+      },
+      {
+        "ref": "§15.2.a",
+        "label": "Legislative Statehood Audit Determinations"
+      },
+      {
+        "ref": "§9.1.a",
+        "label": "The Legislative Monitor"
+      },
+      {
+        "ref": "§9.1.c",
+        "label": "The Judicial Monitor"
+      },
+      {
+        "ref": "§3.5",
+        "label": "The Senate"
       }
     ],
     "links": [
@@ -46,7 +74,7 @@
     ]
   },
   "scenario-ordinary": {
-    "summary": "Public records, social provision, asylum procedures, and independent monitoring shape an ordinary week. The story follows the people who rely on those institutions.",
+    "summary": "Four people. One week. The Federated Republic doing what it was designed to do.",
     "provisions": [
       {
         "ref": "§10.1",
@@ -81,11 +109,23 @@
     ]
   },
   "scenario-the-coalition": {
-    "summary": "Opposition to a Civic Consul does not itself install a government. A constructive vote must unite an absolute majority behind a named successor in the same vote.",
+    "summary": "The Assembly has the votes to remove the Civic Consul. It does not have the votes to agree on who comes next. Under a constructive vote of no confidence, that is the same as having no votes at all.",
     "provisions": [
       {
         "ref": "§2.6",
         "label": "Constructive Vote of No Confidence"
+      },
+      {
+        "ref": "§2.6.a",
+        "label": "Government Formation"
+      },
+      {
+        "ref": "§2.5",
+        "label": "The Civic Consul — Domain and Term"
+      },
+      {
+        "ref": "§3.2",
+        "label": "The Assembly"
       }
     ],
     "links": [
@@ -104,7 +144,7 @@
     ]
   },
   "scenario-the-second-path": {
-    "summary": "A successful citizen initiative can enact lawful reforms, but popular approval cannot authorize an appropriation that the initiative power excludes. Later legislation remains subject to constitutional disclosure duties.",
+    "summary": "Year 8. Citizens fed up with six years of Assembly inaction on electoral finance reform launch a §13.2 Citizen Legislative Initiative. The two-phase petition takes 15 months. The Legislature receives the proposal with a 90-day deadline. The Assembly fails to pass it. The initiative goes to a national referendum. 63% vote yes on 57% participation. The lawful provisions take effect; the SC strikes down the matching-fund appropriation. The Assembly then passes a competing bill.",
     "provisions": [
       {
         "ref": "§13.2",
@@ -113,6 +153,14 @@
       {
         "ref": "§8.1",
         "label": "Electoral Finance"
+      },
+      {
+        "ref": "§11.1",
+        "label": "NRS Panel and Elections Panel"
+      },
+      {
+        "ref": "§9.1.a",
+        "label": "The Legislative Monitor"
       }
     ],
     "links": [
@@ -131,7 +179,7 @@
     ]
   },
   "scenario-second-declaration": {
-    "summary": "Renaming an emergency does not evade the bar on relabeled continuation. The Monitor publishes an assessment; judicial review and the prohibition on discriminatory emergency measures remain available.",
+    "summary": "Year 3. A fourteen-day regional derogation expires. Three days later the Civic Consul repeats the same restrictions under a different label. Mandatory expedited review tests the prohibition on substantial repetition and a separate discrimination violation.",
     "provisions": [
       {
         "ref": "§1.16",
@@ -140,6 +188,10 @@
       {
         "ref": "§1.16.a",
         "label": "Non-Derogable Rights"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
       }
     ],
     "links": [
@@ -158,11 +210,31 @@
     ]
   },
   "scenario-the-referendum": {
-    "summary": "A State’s independence referendum starts a process rather than completing it. Chamber approval, a national vote, and a ratified separation agreement are still required; failure at a later voting stage can end the petition.",
+    "summary": "Year 9. Carenthal holds an independence referendum. 61.3% in favor, 62.1% participation. Both thresholds met. The Elections Panel certifies and publishes to the NRS. The State may not withdraw the petition while the process continues. What the constitution requires next — and what it prohibits.",
     "provisions": [
       {
         "ref": "§15.9",
         "label": "Voluntary State Independence"
+      },
+      {
+        "ref": "§11.1",
+        "label": "NRS Panel and Elections Panel"
+      },
+      {
+        "ref": "§10.1",
+        "label": "National Record System"
+      },
+      {
+        "ref": "§2.14",
+        "label": "Council of Ministers"
+      },
+      {
+        "ref": "§2.1",
+        "label": "The Legat Consul — Domain and Term"
+      },
+      {
+        "ref": "§2.5",
+        "label": "The Civic Consul — Domain and Term"
       }
     ],
     "links": [
@@ -181,19 +253,27 @@
     ]
   },
   "scenario-the-third-strike": {
-    "summary": "Three consecutive overall audit failures require Senate review. Provisional status begins only on affirmative Senate authorization; the State keeps its government and rights, and devolution still requires a separate popular process.",
+    "summary": "Year 15. Valdrath receives its third consecutive failed biennial audit determination. The Senate separately places it into Provisional status. State and federal advisers assist remediation, and Valdrath later chooses a voluntary devolution referendum that its voters reject.",
     "provisions": [
       {
         "ref": "§15.1.a",
         "label": "Provisional Status"
       },
       {
+        "ref": "§15.2",
+        "label": "The Statehood Audit"
+      },
+      {
         "ref": "§15.3",
-        "label": "State Remediation and Mandatory Devolution Review"
+        "label": "State Remediation and Provisional Status"
       },
       {
         "ref": "§15.4",
         "label": "Voluntary Devolution and Merger"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
       }
     ],
     "links": [
@@ -212,21 +292,33 @@
     ]
   },
   "scenario-alliance-clause": {
-    "summary": "A ratified defense treaty supplies bounded authorization when its trigger is met. The Court checks both the trigger and the action within the treaty obligation; appropriations and the Legat-notice/Senate-affirmation withdrawal process remain distinct constraints.",
+    "summary": "Year 6. Halvern — a treaty ally — is struck in a sustained attack by Rendath forces. The Legat Consul deploys immediately under §14.4: Senate ratification of the mutual defense treaty already constitutes legislative authorization. Eight senators petition the SC to determine whether the treaty's trigger conditions were actually met. The SC's review is narrow by design.",
     "provisions": [
       {
         "ref": "§14.4",
         "label": "Treaty-Based Military Authorization"
       },
       {
+        "ref": "§14.2",
+        "label": "Defense Authorization and Allocation"
+      },
+      {
+        "ref": "§14.1",
+        "label": "Authorized Purposes for Military Force"
+      },
+      {
         "ref": "§3.6",
         "label": "Treaties and Trade Agreements"
+      },
+      {
+        "ref": "§9.1.b",
+        "label": "The Executive Monitor"
       }
     ],
     "links": [
       {
         "url": "scenario-the-second-renewal.html",
-        "label": "Compare: The Second Renewal"
+        "label": "Compare: The Changed Mission"
       },
       {
         "url": "scenario-coordination-failure.html",
@@ -239,8 +331,20 @@
     ]
   },
   "scenario-automatic-floor": {
-    "summary": "A missed budget deadline activates the constitutional interim appropriation. It preserves the specified services while the Legislature remains responsible for resolving the budget impasse.",
+    "summary": "Year 7. The budget deadline passes without an enacted budget — the first time. No announcement. No emergency. The interim automatic appropriation takes effect by constitutional operation at midnight. What continues. What stops.",
     "provisions": [
+      {
+        "ref": "§12.2",
+        "label": "Fiscal Accountability"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
+      },
+      {
+        "ref": "§9.1.a",
+        "label": "The Legislative Monitor"
+      },
       {
         "ref": "§12.2",
         "label": "Fiscal Accountability"
@@ -262,21 +366,33 @@
     ]
   },
   "scenario-coordination-failure": {
-    "summary": "Two executives can disagree while acting within their own domains. Council coordination and public recording expose the dispute; implementation still requires the institutions with lawful authority to act.",
+    "summary": "Year 7. A ratified defense treaty needs domestic infrastructure funding. The Civic Consul objects to the proposed budget, the Legat Consul insists on the treaty timetable, and the Legislature must decide how to appropriate. Coordination supplies a forum, not a new executive power.",
     "provisions": [
+      {
+        "ref": "§2.14.a",
+        "label": "Cross-Domain Emergency Lead"
+      },
       {
         "ref": "§2.14",
         "label": "Council of Ministers"
       },
       {
-        "ref": "§2.14.a",
-        "label": "Cross-Domain Emergency Lead"
+        "ref": "§2.4",
+        "label": "Legat Consul International Agreements"
+      },
+      {
+        "ref": "§3.7",
+        "label": "Legislative Process and Passage"
+      },
+      {
+        "ref": "§10.1",
+        "label": "National Record System"
       }
     ],
     "links": [
       {
         "url": "scenario-the-second-renewal.html",
-        "label": "Compare: The Second Renewal"
+        "label": "Compare: The Changed Mission"
       },
       {
         "url": "scenario-the-vote.html",
@@ -289,7 +405,7 @@
     ]
   },
   "scenario-critical-finding": {
-    "summary": "An adverse legislative audit requires the responsible body to publish its own account within the statutory period. The Monitor cannot prescribe the remedy; the story tests the political force and limits of scrutiny on a permanent record.",
+    "summary": "Year 11. The LM identifies systematic overstatement of revenue projections. The Legislature must publish a response within the statutory period, but may disagree with the finding and choose its own policy. A separate suspension procedure protects oversight from retaliation.",
     "provisions": [
       {
         "ref": "§9.5.a",
@@ -298,6 +414,14 @@
       {
         "ref": "§9.1.a",
         "label": "The Legislative Monitor"
+      },
+      {
+        "ref": "§9.7.a",
+        "label": "Institutional Compromise Protocol"
+      },
+      {
+        "ref": "§10.1",
+        "label": "National Record System"
       }
     ],
     "links": [
@@ -316,7 +440,7 @@
     ]
   },
   "scenario-deadlock": {
-    "summary": "When the two Speakers cannot jointly nominate an Executive Monitor General within the prescribed window, the Joint Monitor Council draws a nominee by public lottery from the eligible pool. Public confirmation remains a separate requirement.",
+    "summary": "Year 5. The EM Monitor General's term ends. The Assembly Speaker and Senate Speaker cannot agree on a nominee. Sixty days pass. The constitution removes the decision from them.",
     "provisions": [
       {
         "ref": "§9.3",
@@ -325,6 +449,14 @@
       {
         "ref": "§9.1.d",
         "label": "Monitor General Term Expiry and Vacancy"
+      },
+      {
+        "ref": "§9.8",
+        "label": "Constitutional Pool Framework"
+      },
+      {
+        "ref": "§7.6",
+        "label": "Continuity and Acting Service"
       }
     ],
     "links": [
@@ -343,15 +475,23 @@
     ]
   },
   "scenario-finality-act": {
-    "summary": "The Legislature can allocate jurisdiction, but it cannot leave a concrete constitutional injury without a court to hear it. Sensitive evidence changes how review proceeds, not whether a remedy is available.",
+    "summary": "Year 8. The Legislature declares intelligence-based residency denials unreviewable. A permanent resident denied renewal with no reason, no hearing, and no forum petitions the SC directly. The Act is void to the extent it eliminates the forum.",
     "provisions": [
       {
         "ref": "§4.5",
         "label": "Judicial Review and Scope"
       },
       {
+        "ref": "§6.1",
+        "label": "The Two-Stage Immigration System"
+      },
+      {
         "ref": "§1.1",
         "label": "Right to Courts and Legal Remedy"
+      },
+      {
+        "ref": "§2.1",
+        "label": "The Legat Consul — Domain and Term"
       }
     ],
     "links": [
@@ -370,15 +510,23 @@
     ]
   },
   "scenario-first-nomination": {
-    "summary": "A timely Senate rejection leaves the judicial nomination process running with temporary service preserving the Court’s work. Rejection does not trigger the public-confirmation route reserved for a missed deadline.",
+    "summary": "Year 2. The first SC vacancy. The Civic Consul nominates from the Elections Panel-maintained Judicial Pool. The Senate votes 41-59 — short of the majority required. What happens next.",
     "provisions": [
       {
         "ref": "§4.4",
         "label": "Supreme Court Selection"
       },
       {
-        "ref": "§4.4.a",
-        "label": "Public Confirmation"
+        "ref": "§9.4.a",
+        "label": "Judicial Pool — Eligibility Criteria"
+      },
+      {
+        "ref": "§9.8",
+        "label": "Constitutional Pool Framework"
+      },
+      {
+        "ref": "§3.5",
+        "label": "The Senate"
       }
     ],
     "links": [
@@ -397,7 +545,7 @@
     ]
   },
   "scenario-harder-ballot": {
-    "summary": "A voting-access restriction can face both a citizen’s rights challenge and independent election-compliance scrutiny. Those routes reinforce one another while addressing different constitutional duties.",
+    "summary": "Year 7. Neldrath State introduces in-person biometric verification that reduces rural NVS access by 41%. Citizens challenge under §1.8. The Elections Panel opens a separate §11.3 compliance audit. Two constitutional mechanisms converge on the same violation.",
     "provisions": [
       {
         "ref": "§1.8",
@@ -406,6 +554,18 @@
       {
         "ref": "§11.3",
         "label": "State Election Non-Compliance"
+      },
+      {
+        "ref": "§7.2",
+        "label": "Federal Elections"
+      },
+      {
+        "ref": "§11.2",
+        "label": "NVS Properties and Voting Rights"
+      },
+      {
+        "ref": "§9.1.a",
+        "label": "The Legislative Monitor"
       }
     ],
     "links": [
@@ -424,7 +584,7 @@
     ]
   },
   "scenario-long-count": {
-    "summary": "Lottery selection does not replace public consent. Rejected Judicial Monitor candidates lead to renewed selection, while acting arrangements preserve the institution’s work.",
+    "summary": "Year 9. The JM Monitor General lottery selects a candidate. The public rejects her. Then rejects the next. The system absorbs both failures without pause. The third draw produces a JM Monitor General the Republic can confirm.",
     "provisions": [
       {
         "ref": "§9.3",
@@ -433,6 +593,18 @@
       {
         "ref": "§9.1.d",
         "label": "Monitor General Term Expiry and Vacancy"
+      },
+      {
+        "ref": "§9.4",
+        "label": "Judicial Monitor Candidate Pool"
+      },
+      {
+        "ref": "§9.8",
+        "label": "Constitutional Pool Framework"
+      },
+      {
+        "ref": "§7.6",
+        "label": "Continuity and Acting Service"
       }
     ],
     "links": [
@@ -451,11 +623,23 @@
     ]
   },
   "scenario-organized-third": {
-    "summary": "Citizens can organize to repeal an eligible law through the optional referendum. A successful repeal does not permanently prevent the Legislature from legislating again—or citizens from challenging the new law by referendum.",
+    "summary": "Year 4. Citizens — not States, not governments — organize a §13.1 petition against the Residency Verification Enhancement Act. Phase One requires geographic spread. Phase Two requires 5% nationally. The Elections Panel screens eligibility and administers the referendum. The Act is repealed. The Legislature re-enacts a revised version. Citizens may petition again.",
     "provisions": [
       {
         "ref": "§13.1",
         "label": "Optional Referendum"
+      },
+      {
+        "ref": "§6.1",
+        "label": "The Two-Stage Immigration System"
+      },
+      {
+        "ref": "§6.2",
+        "label": "Enforcement, Removal, and Appeals"
+      },
+      {
+        "ref": "§1.6",
+        "label": "Equality and Non-Discrimination"
       }
     ],
     "links": [
@@ -474,8 +658,12 @@
     ]
   },
   "scenario-recalled-senator": {
-    "summary": "State recall, Senate vacancies, and judicial remedies are distinct questions. The legal resolution must respect elected service and the constitutional limit of two senators per State.",
+    "summary": "Year 6. Delvane invokes its recall mechanism against Senator Cyrus Veld. He disputes the procedure. The federal constitution does not adjudicate state recall law — but it does recognize its result.",
     "provisions": [
+      {
+        "ref": "§3.2",
+        "label": "The Assembly"
+      },
       {
         "ref": "§3.5",
         "label": "The Senate"
@@ -483,6 +671,10 @@
       {
         "ref": "§7.6",
         "label": "Continuity and Acting Service"
+      },
+      {
+        "ref": "§10.1",
+        "label": "National Record System"
       }
     ],
     "links": [
@@ -501,7 +693,7 @@
     ]
   },
   "scenario-sponsoring-state": {
-    "summary": "State participation in the immigration pathway does not make issued federal credentials dependent on continuing State approval. State discretion remains constrained by equality and access to legal remedy.",
+    "summary": "Year 4. A State legislature passes an act purporting to revoke State sponsorship for 340 existing residents. Legal residency is federal once the two-stage process is complete — a State's sponsorship role then ends.",
     "provisions": [
       {
         "ref": "§6.1",
@@ -514,6 +706,10 @@
       {
         "ref": "§1.6",
         "label": "Equality and Non-Discrimination"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
       }
     ],
     "links": [
@@ -532,15 +728,27 @@
     ]
   },
   "scenario-the-administrator": {
-    "summary": "After material election non-compliance and an expired cure period, the Elections Panel can administer the federal election directly. A dispute about administration does not erase the votes cast.",
+    "summary": "Year 7. Haverford State has refused NVS compliance for three consecutive years. The cure period expires. The Elections Panel announces it will administer the federal election in Haverford directly. Haverford petitions the SC. The election proceeds anyway. The votes are valid regardless of the outcome.",
     "provisions": [
       {
         "ref": "§11.3",
         "label": "State Election Non-Compliance"
       },
       {
+        "ref": "§7.2",
+        "label": "Federal Elections"
+      },
+      {
+        "ref": "§11.1",
+        "label": "NRS Panel and Elections Panel"
+      },
+      {
         "ref": "§1.8",
         "label": "Democratic Participation"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
       }
     ],
     "links": [
@@ -559,15 +767,19 @@
     ]
   },
   "scenario-the-cause": {
-    "summary": "Misconduct can support removal of a Supreme Court justice; disagreement with a ruling cannot. Review of constitutional grounds does not substitute for the required removal votes in both chambers.",
+    "summary": "Year 10. A Supreme Court justice is accused of serious undisclosed financial misconduct days after authoring a bitterly unpopular constitutional ruling. The evidence may justify removal. The politics may not.",
     "provisions": [
       {
         "ref": "§4.3.a",
         "label": "Supreme Court Justice Removal"
       },
       {
-        "ref": "§4.5",
-        "label": "Judicial Review and Scope"
+        "ref": "§7.10",
+        "label": "Ethics and Financial Disclosure"
+      },
+      {
+        "ref": "§9.1",
+        "label": "Three Monitors"
       }
     ],
     "links": [
@@ -586,15 +798,27 @@
     ]
   },
   "scenario-the-classification": {
-    "summary": "Classification must satisfy its lawful grounds. Monitor access and staff publication help expose misuse, but an oversight finding is distinct from an enforceable legal remedy.",
+    "summary": "Year 9. An internal audit of the coastal radar procurement finds a 40 percent cost overrun and an undisclosed contractor relationship. The Legat Consul's office classifies the audit, citing the operational-security ground. A staff member publishes a minority report. The EM assesses the classification. A court asks the only question §10.2 allows: was classification required to protect national security?",
     "provisions": [
       {
         "ref": "§10.2",
         "label": "Classification Criteria"
       },
       {
+        "ref": "§10.1",
+        "label": "National Record System"
+      },
+      {
         "ref": "§9.5",
         "label": "Monitor Operations"
+      },
+      {
+        "ref": "§9.1.b",
+        "label": "The Executive Monitor"
+      },
+      {
+        "ref": "§10.1",
+        "label": "National Record System"
       }
     ],
     "links": [
@@ -613,15 +837,27 @@
     ]
   },
   "scenario-the-contraction": {
-    "summary": "Certified Severe Revenue Contraction activates the National Endowment’s social-state backstop. Its restricted purpose and rules for continuation constrain how the reserve can be used during a fiscal shock.",
+    "summary": "Year 11. The Veltane corridor closes to Republic freight and the commodity index drops 31 percent in a quarter. Federal revenue falls 14 percent across three quarters. The Monetary Authority certifies Severe Revenue Contraction, and §12.4 does what it was written to do: the National Endowment begins disbursing to the National Revenue Fund for social-state obligations, automatically, while the Legislature argues about everything else.",
     "provisions": [
       {
         "ref": "§12.4",
         "label": "National Endowment"
       },
       {
+        "ref": "§12.1",
+        "label": "The Social State"
+      },
+      {
         "ref": "§12.1.a",
         "label": "The Monetary Authority"
+      },
+      {
+        "ref": "§12.2",
+        "label": "Fiscal Accountability"
+      },
+      {
+        "ref": "§9.1.b",
+        "label": "The Executive Monitor"
       }
     ],
     "links": [
@@ -640,7 +876,7 @@
     ]
   },
   "scenario-the-departure": {
-    "summary": "An Associated Community can terminate its Compact without Republic consent, on the required notice. Ending the Compact leaves transition obligations to resolve and does not itself extinguish members’ Republic citizenship.",
+    "summary": "Year 14. The Vaskeld Nation gives notice that it is terminating its Compact with the Republic. As an Associated Community, its right to end association cannot be vetoed by the Republic — no vote of the Legislature, no permission, no cause required. What follows is not a fight over whether Vaskeld may leave, but over everything that must be untangled before it can: shared infrastructure, cross-border obligations, and the twelve thousand Vaskeld members who are also, citizens of the Republic.",
     "provisions": [
       {
         "ref": "§20.4",
@@ -651,8 +887,16 @@
         "label": "Reciprocal Obligations and Review"
       },
       {
+        "ref": "§16.2",
+        "label": "Founding Status Election"
+      },
+      {
         "ref": "§5.1",
         "label": "Citizenship"
+      },
+      {
+        "ref": "§20.3",
+        "label": "Compact Conditions and Compliance"
       }
     ],
     "links": [
@@ -671,19 +915,35 @@
     ]
   },
   "scenario-the-direction": {
-    "summary": "Publication makes an executive direction visible, but accountability depends on several institutions acting within their powers. Conflict rules, judicial review, refusal of unlawful orders, and political removal serve different purposes.",
+    "summary": "Year 3. The Civic Consul issues a written direction suspending a prosecution against a political ally. The direction is published to the NRS within the hour. What happens next tests whether transparency alone is sufficient protection — and what the constitution does when it is not.",
     "provisions": [
       {
         "ref": "§2.15",
         "label": "Federal Prosecution"
       },
       {
-        "ref": "§7.11",
-        "label": "Codes of Conduct and Conflicts of Interest"
-      },
-      {
         "ref": "§2.8",
         "label": "Duty of Refusal"
+      },
+      {
+        "ref": "§2.12",
+        "label": "Clemency"
+      },
+      {
+        "ref": "§2.6",
+        "label": "Constructive Vote of No Confidence"
+      },
+      {
+        "ref": "§9.1.b",
+        "label": "The Executive Monitor"
+      },
+      {
+        "ref": "§7.10",
+        "label": "Ethics and Financial Disclosure"
+      },
+      {
+        "ref": "§17.4",
+        "label": "Supremacy of This Constitution"
       }
     ],
     "links": [
@@ -702,15 +962,31 @@
     ]
   },
   "scenario-the-formula": {
-    "summary": "A fiscal-equalization failure requires a published legislative response. The story follows the gap between a funding model and actual delivery, showing why repeated scrutiny matters even after a formula changes.",
+    "summary": "Year 8. The EM's annual fiscal equalization review certifies that Evantine Territory and Norrath Territory lack the fiscal capacity to fulfill their §12.1 social state obligations — 23% and 14% below threshold, respectively. The applicable statute gives the Legislature ninety days to publish a response. The Legislature responds. The formula works on paper. One year later, Evantine still cannot deliver universal healthcare coverage to all residents. What the constitution requires — and where it runs out.",
     "provisions": [
       {
         "ref": "§12.6",
         "label": "Fiscal Equalization"
       },
       {
+        "ref": "§12.3",
+        "label": "Taxing Power and National Revenue Fund"
+      },
+      {
+        "ref": "§12.1.a",
+        "label": "The Monetary Authority"
+      },
+      {
         "ref": "§12.1",
         "label": "The Social State"
+      },
+      {
+        "ref": "§9.1.a",
+        "label": "The Legislative Monitor"
+      },
+      {
+        "ref": "§12.4",
+        "label": "National Endowment"
       }
     ],
     "links": [
@@ -729,11 +1005,23 @@
     ]
   },
   "scenario-the-founding-choice": {
-    "summary": "An indigenous nation’s founding choice distinguishes a sovereign Compact relationship from Territorial Integration. The no-inducements rule protects that choice; the two relationships do not carry interchangeable exit rights.",
+    "summary": "The founding admission period, on the ratified implementation schedule. Every recognized indigenous nation must decide the status it will hold: default into Associated Community sovereignty, or integrate as a Territory with the road to Statehood open. The Corrin Nation is divided, the clock is running, and a federal transition officer has just made an offer that the constitution forbids him to make.",
     "provisions": [
       {
         "ref": "§16.2",
         "label": "Founding Status Election"
+      },
+      {
+        "ref": "§16.1",
+        "label": "Acknowledgment of Prior Sovereignty and Recognition"
+      },
+      {
+        "ref": "§15.6",
+        "label": "Voluntary Incorporation"
+      },
+      {
+        "ref": "§16.5",
+        "label": "Transition of Existing Arrangements"
       },
       {
         "ref": "§20.4",
@@ -756,7 +1044,7 @@
     ]
   },
   "scenario-the-graduation": {
-    "summary": "A change of address tests voting access in everyday life. Administrative verification must respect the franchise and direct NVS access; the story’s processing time is not a constitutional waiting period.",
+    "summary": "Maret Ven graduates from Halvern University, takes a job in Delvane, and moves across state lines. Ten months later there is a federal election. She wants to vote. The National Voting System, residency rules, and §1.8 under ordinary pressure — no crisis, just the system doing what it is supposed to do.",
     "provisions": [
       {
         "ref": "§1.8",
@@ -765,6 +1053,14 @@
       {
         "ref": "§11.2",
         "label": "NVS Properties and Voting Rights"
+      },
+      {
+        "ref": "§11.1",
+        "label": "NRS Panel and Elections Panel"
+      },
+      {
+        "ref": "§7.2",
+        "label": "Federal Elections"
       }
     ],
     "links": [
@@ -783,7 +1079,7 @@
     ]
   },
   "scenario-the-holdout": {
-    "summary": "Senate inaction can open a public-confirmation route that a timely rejection would not. An ordinary nomination and Senate confirmation completed before the ballot is certified ends that route.",
+    "summary": "Year 7. Associate Justice Halden dies in office. The Senate Judiciary Committee Chair announces no hearings until after the Year 8 general election — nine months away. Day 120 arrives with no vote. What §4.4 and §4.4.a require at every step, and why a Senate that says nothing is constitutionally different from a Senate that says no.",
     "provisions": [
       {
         "ref": "§4.4",
@@ -792,6 +1088,14 @@
       {
         "ref": "§4.4.a",
         "label": "Public Confirmation"
+      },
+      {
+        "ref": "§7.3",
+        "label": "Electoral Supermajority Threshold"
+      },
+      {
+        "ref": "§9.4.a",
+        "label": "Judicial Pool — Eligibility Criteria"
       }
     ],
     "links": [
@@ -810,15 +1114,27 @@
     ]
   },
   "scenario-the-ledger": {
-    "summary": "Campaign source restrictions, contribution limits, and disclosure work together. Published records make a disguised funding pattern examinable; enforcement still runs through the responsible institutions and statutory procedures.",
+    "summary": "Year 12. Eight months before the Assembly elections, the Elections Panel's routine disclosure audit flags a pattern in a Senate campaign's ledger: 214 individual contributions, each just under the statutory cap, all from employees of the Marveth Logistics Group, clustered across nine days. §8.1 prohibits corporate contributions. It also prohibits anonymity — which means the scheme's own camouflage was published to the NRS, one record at a time.",
     "provisions": [
       {
         "ref": "§8.1",
         "label": "Electoral Finance"
       },
       {
+        "ref": "§8.2",
+        "label": "Campaign Conduct"
+      },
+      {
         "ref": "§11.1",
         "label": "NRS Panel and Elections Panel"
+      },
+      {
+        "ref": "§9.1.c",
+        "label": "The Judicial Monitor"
+      },
+      {
+        "ref": "§1.5",
+        "label": "Civil and Political Liberties"
       }
     ],
     "links": [
@@ -837,7 +1153,7 @@
     ]
   },
   "scenario-the-map": {
-    "summary": "A Monitor’s criticism of a district map is informational. Citizens retain a route to challenge, and the Elections Panel’s interim-map duty supplies a separate backstop when a map fails the constitutional criteria.",
+    "summary": "Year 2. A State submits its Assembly district map. The LM finds two districts fail the compactness criterion. The finding is informational. Any citizen may challenge a map, and the Elections Panel supplies an interim compliant map where one fails.",
     "provisions": [
       {
         "ref": "§3.3",
@@ -846,6 +1162,14 @@
       {
         "ref": "§9.1.a",
         "label": "The Legislative Monitor"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
+      },
+      {
+        "ref": "§11.1",
+        "label": "NRS Panel and Elections Panel"
       }
     ],
     "links": [
@@ -864,11 +1188,23 @@
     ]
   },
   "scenario-the-objection": {
-    "summary": "A reconsideration notice recommends specific revisions with reasons and lets the Assembly Speaker pause the review period. It is not a veto: declining to pause leaves the recommendation on the record without giving it blocking force.",
+    "summary": "Year 5. The Universal Care Expansion Act passes both chambers with strong majorities — a fifteen-year social state expansion covering three new medical categories. The Civic Consul doesn't suspensive-veto it. She issues a reconsideration notice under §2.7, recommending two specific revisions to keep the expansion inside structural balance. The Assembly Speaker declines to pause the review period. The law takes effect as passed. The recommendation is permanent.",
     "provisions": [
       {
         "ref": "§2.7",
         "label": "Civic Consul Legislative Instruments"
+      },
+      {
+        "ref": "§12.1",
+        "label": "The Social State"
+      },
+      {
+        "ref": "§12.2",
+        "label": "Fiscal Accountability"
+      },
+      {
+        "ref": "§9.1.b",
+        "label": "The Executive Monitor"
       }
     ],
     "links": [
@@ -887,7 +1223,7 @@
     ]
   },
   "scenario-the-order": {
-    "summary": "The duty to refuse concerns unlawful orders, not personal disagreement. A lawful refusal is protected against penalty; investigation and the institutions responsible for remedy make that protection effective.",
+    "summary": "Year 9. The Director of Intelligence transmits the Legat Consul’s order for the rendition of a suspected foreign agent to a third country without judicial process. Lieutenant Commander Vesh Pola, assigned to execute the order, refuses — the rendition would violate §1.1 and §6.2. §2.8 protects her refusal. Her superior initiates disciplinary proceedings. §2.8's fourth sentence has something to say about that.",
     "provisions": [
       {
         "ref": "§2.8",
@@ -900,6 +1236,14 @@
       {
         "ref": "§6.2",
         "label": "Enforcement, Removal, and Appeals"
+      },
+      {
+        "ref": "§9.1.b",
+        "label": "The Executive Monitor"
+      },
+      {
+        "ref": "§2.3",
+        "label": "Consular Intelligence"
       }
     ],
     "links": [
@@ -918,7 +1262,7 @@
     ]
   },
   "scenario-the-petition": {
-    "summary": "Devolution changes a State’s relationship within the Republic. A referendum, negotiated agreement, and Senate ratification are distinct steps; becoming a Territory opens the re-qualification pathway rather than guaranteeing immediate Statehood.",
+    "summary": "Year 7. A State that has been a net federal redistribution contributor initiates voluntary devolution — conversion from State to Territory status. The constitutional requirements, the negotiation, and what devolution actually means.",
     "provisions": [
       {
         "ref": "§15.4",
@@ -927,6 +1271,14 @@
       {
         "ref": "§15.5",
         "label": "Re-Qualification Pathway"
+      },
+      {
+        "ref": "§3.5",
+        "label": "The Senate"
+      },
+      {
+        "ref": "§12.1",
+        "label": "The Social State"
       }
     ],
     "links": [
@@ -945,19 +1297,39 @@
     ]
   },
   "scenario-the-prior-claim": {
-    "summary": "Constitutional membership and an indigenous Compact relationship confer different powers. Federal technical standards must also be distinguished from commandeering State agencies to administer federal programs.",
+    "summary": "Year 9. Halvern refuses to integrate its highway system with the federal network. Its legal argument is the most ambitious a State has ever made to the SC: it entered the Republic as a sovereign, it never gave up that sovereignty, and it should hold the same compact-level relationship as indigenous nations. Chief Justice Diallo writes for a unanimous Court.",
     "provisions": [
+      {
+        "ref": "§19.6",
+        "label": "Transition Territories"
+      },
       {
         "ref": "§3.10",
         "label": "Federal Legislative Competence"
+      },
+      {
+        "ref": "§12.5",
+        "label": "Internal Commerce"
+      },
+      {
+        "ref": "§15.8.a",
+        "label": "Subsidiarity and Local Capacity"
+      },
+      {
+        "ref": "§15.7",
+        "label": "State Immutability and Territorial Integrity"
       },
       {
         "ref": "§16.1",
         "label": "Acknowledgment of Prior Sovereignty and Recognition"
       },
       {
-        "ref": "§19.6",
-        "label": "Transition Territories"
+        "ref": "§16.2",
+        "label": "Founding Status Election"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
       }
     ],
     "links": [
@@ -976,11 +1348,23 @@
     ]
   },
   "scenario-the-rate": {
-    "summary": "Monetary independence protects constitutional functions, not every detail of statutory organization. Reorganization cannot become a way to punish lawful policy judgment or undermine protected decision-making.",
+    "summary": "Year 12. The Monetary Authority raises rates into a weak economy. The elected branches hate the decision and discover that controlling an institution's structure is not the same thing as controlling its judgment.",
     "provisions": [
       {
-        "ref": "§12.1.a",
-        "label": "The Monetary Authority"
+        "ref": "§12.1",
+        "label": "The Social State"
+      },
+      {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
+      },
+      {
+        "ref": "§7.5",
+        "label": "Removal from Federal Office"
+      },
+      {
+        "ref": "§7.14",
+        "label": "Compensation of Federal Officials"
       }
     ],
     "links": [
@@ -999,15 +1383,23 @@
     ]
   },
   "scenario-the-redaction": {
-    "summary": "A lawful period of classification does not make every page secret. A person can seek segregable public material and reasons for withholding; Monitor findings can inform a case without becoming disclosure orders.",
+    "summary": "Year 26. A procurement file hits its twenty-five year ceiling and the executive that classified it extends it five more. A researcher does not challenge the extension. She asks for the parts that were never the secret — and the reasons for every line withheld.",
     "provisions": [
       {
         "ref": "§10.2",
         "label": "Classification Criteria"
       },
       {
+        "ref": "§9.1",
+        "label": "Three Monitors"
+      },
+      {
         "ref": "§1.1",
         "label": "Right to Courts and Legal Remedy"
+      },
+      {
+        "ref": "§10.1",
+        "label": "National Record System"
       }
     ],
     "links": [
@@ -1026,8 +1418,12 @@
     ]
   },
   "scenario-the-restoration": {
-    "summary": "Two consecutive fully clean biennial audits restore ordinary State status by constitutional operation. This is the restoration of an existing State, not a Territory’s admission to Statehood.",
+    "summary": "Year 21. In an alternative Valdrath timeline, two consecutive biennial audits receive affirmative legislative determinations of compliance. The second determination automatically restores ordinary State status; there is no separate readmission vote.",
     "provisions": [
+      {
+        "ref": "§15.3",
+        "label": "State Remediation and Provisional Status"
+      },
       {
         "ref": "§15.1.a",
         "label": "Provisional Status"
@@ -1035,6 +1431,18 @@
       {
         "ref": "§15.2",
         "label": "The Statehood Audit"
+      },
+      {
+        "ref": "§9.1.a",
+        "label": "The Legislative Monitor"
+      },
+      {
+        "ref": "§9.1.c",
+        "label": "The Judicial Monitor"
+      },
+      {
+        "ref": "§3.5",
+        "label": "The Senate"
       }
     ],
     "links": [
@@ -1053,7 +1461,7 @@
     ]
   },
   "scenario-the-return": {
-    "summary": "Border-security authority remains subject to equality and legal remedy. The story also exposes a procedural question about returning credential holders that requires statutory clarity rather than an invented constitutional rule.",
+    "summary": "A legal resident with valid work authorization leaves the Republic for a weekend visit. She is not permitted back in. The government invokes national security — her family holds a senior position in a foreign government the Republic is in active diplomatic dispute with, and the Legat Consul has determined she may pose a risk to the community. She says the real reasons are her religion, her family name, and her face on the national news the week before. The constitution has something to say about all of it.",
     "provisions": [
       {
         "ref": "§5.2",
@@ -1064,8 +1472,24 @@
         "label": "Equality and Non-Discrimination"
       },
       {
+        "ref": "§1.5",
+        "label": "Civil and Political Liberties"
+      },
+      {
+        "ref": "§6.1",
+        "label": "The Two-Stage Immigration System"
+      },
+      {
         "ref": "§6.2",
         "label": "Enforcement, Removal, and Appeals"
+      },
+      {
+        "ref": "§2.1",
+        "label": "The Legat Consul — Domain and Term"
+      },
+      {
+        "ref": "§1.16.a",
+        "label": "Non-Derogable Rights"
       }
     ],
     "links": [
@@ -1084,15 +1508,23 @@
     ]
   },
   "scenario-the-second-renewal": {
-    "summary": "An extended military commitment must confront how it ends. The required Transition and Reconstruction Plan makes continuing authorization depend on an approved account of the Republic’s obligations across executive domains.",
+    "summary": "Year 8. The Halvern Strait escorts are succeeding, but the Legat Consul now proposes a shore-based training mission. The Senate demands an updated plan. An expanded mission requires a new law and appropriations, while military command remains with the Legat Consul.",
     "provisions": [
       {
-        "ref": "§14.3",
-        "label": "Transition and Reconstruction Plan"
+        "ref": "§12.2",
+        "label": "Fiscal Accountability"
+      },
+      {
+        "ref": "§14.1",
+        "label": "Authorized Purposes for Military Force"
       },
       {
         "ref": "§14.2",
         "label": "Defense Authorization and Allocation"
+      },
+      {
+        "ref": "§2.2",
+        "label": "Military Authorization Framework"
       }
     ],
     "links": [
@@ -1111,15 +1543,23 @@
     ]
   },
   "scenario-the-severed-clause": {
-    "summary": "An initiative’s success does not authorize it to narrow protected rights. The Court identifies the specific constitutional conflict while leaving the lawful remainder of the voters’ decision in effect.",
+    "summary": "Year 14. A citizen initiative wins sixty-four percent. A property owner challenges its warrantless-entry clause. The courts preserve the lawful regulatory provisions while removing the conflict with Article I.",
     "provisions": [
       {
         "ref": "§13.2",
         "label": "Citizen Legislative Initiative"
       },
       {
+        "ref": "§4.5",
+        "label": "Judicial Review and Scope"
+      },
+      {
         "ref": "§1.7",
         "label": "Privacy, Property, and Security of the Home"
+      },
+      {
+        "ref": "§7.3",
+        "label": "Electoral Supermajority Threshold"
       }
     ],
     "links": [
@@ -1138,11 +1578,19 @@
     ]
   },
   "scenario-the-sixty-percent": {
-    "summary": "Removing a National Trust designation requires both legislative and public approval at the constitutional thresholds. A referendum majority below the required threshold leaves the designation and stewardship duty in place.",
+    "summary": "Year 12. A geothermal reserve lies beneath National Trust land. The Senate affirms the Legat Consul’s treaty-withdrawal notice, and both chambers approve removing designation. The national vote still falls short of the sixty-percent requirement.",
     "provisions": [
       {
         "ref": "§18.4",
         "label": "The National Trust"
+      },
+      {
+        "ref": "§18.1",
+        "label": "The Use Doctrine"
+      },
+      {
+        "ref": "§1.15",
+        "label": "Environmental Obligations"
       }
     ],
     "links": [
@@ -1161,15 +1609,23 @@
     ]
   },
   "scenario-the-suspension": {
-    "summary": "Filing grounds to remove a Monitor General does not suspend authority, pay, or the term. The public decides removal by referendum; a failed vote or a missed deadline closes the proceeding.",
+    "summary": "Year 8. Both executives file removal grounds against the Legislative Monitor General. She keeps her authority while the filing is pending. The question goes to the public — and the clock starts running against the people who filed it.",
     "provisions": [
       {
         "ref": "§9.9",
-        "label": "Constitutional Officer Removal — Standard Track"
+        "label": "Constitutional Officer Removal"
       },
       {
         "ref": "§9.7.a",
         "label": "Institutional Compromise Protocol"
+      },
+      {
+        "ref": "§7.3",
+        "label": "Electoral Supermajority Threshold"
+      },
+      {
+        "ref": "§9.2",
+        "label": "Selection and Independence"
       }
     ],
     "links": [
@@ -1188,7 +1644,7 @@
     ]
   },
   "scenario-the-three-hours": {
-    "summary": "Succession takes effect at the constitutional triggering event even during a records outage. The NRS must record that actual moment as soon as possible; delayed publication does not create a vacancy.",
+    "summary": "Year 6. The Legat Consul dies during an NRS outage. The succession happens immediately. The public record catches up three hours later.",
     "provisions": [
       {
         "ref": "§2.9",
@@ -1197,6 +1653,10 @@
       {
         "ref": "§7.15",
         "label": "Authority by Constitutional Operation"
+      },
+      {
+        "ref": "§10.1",
+        "label": "National Record System"
       }
     ],
     "links": [
@@ -1215,11 +1675,11 @@
     ]
   },
   "scenario-the-three-recusals": {
-    "summary": "Disclosure and recusal duties apply across offices, but their enforcement differs. Direct publication, challenges to affected decisions, workforce oversight, and prescribed removal procedures address different kinds of responsibility.",
+    "summary": "The same fact pattern lands on three desks in the same month. A legislator, a Monitor General, and a senior procurement director each discover that a decision in front of them touches a financial interest they hold. The duty to disclose and recuse is identical for all three. The machinery that enforces it is not — and the Monitor General's case is the one with no colleague above her to check the work.",
     "provisions": [
       {
-        "ref": "§7.11",
-        "label": "Codes of Conduct and Conflicts of Interest"
+        "ref": "§7.10",
+        "label": "Ethics and Financial Disclosure"
       },
       {
         "ref": "§9.9.a",
@@ -1228,6 +1688,10 @@
       {
         "ref": "§7.13",
         "label": "Federal Public Service Ethics"
+      },
+      {
+        "ref": "§9.9",
+        "label": "Constitutional Officer Removal"
       }
     ],
     "links": [
@@ -1246,8 +1710,20 @@
     ]
   },
   "scenario-the-twenty-four-hours": {
-    "summary": "Temporary incapacity suspends the exercise of authority while the Consul remains in office. A recurring determination raises the thresholds and opens judicial review; political removal remains a separate process.",
+    "summary": "The Council of Ministers determines that the Civic Consul is temporarily unable to exercise authority. He restores himself once after twenty-four hours. When the same incapacity recurs inside ninety days, the Council must reach two-thirds, restoration requires broader agreement, and the SC becomes available to police misuse.",
     "provisions": [
+      {
+        "ref": "§2.16",
+        "label": "Executive Incapacity"
+      },
+      {
+        "ref": "§2.16",
+        "label": "Executive Incapacity"
+      },
+      {
+        "ref": "§2.16",
+        "label": "Executive Incapacity"
+      },
       {
         "ref": "§2.16",
         "label": "Executive Incapacity"
@@ -1255,6 +1731,10 @@
       {
         "ref": "§2.6",
         "label": "Constructive Vote of No Confidence"
+      },
+      {
+        "ref": "§10.1",
+        "label": "National Record System"
       }
     ],
     "links": [
@@ -1273,7 +1753,7 @@
     ]
   },
   "scenario-the-unremovable": {
-    "summary": "An unexecutable removal order still leaves a constitutional floor. Non-refoulement and the liberty rule mean that a person whose removal is not possible remains at liberty, subject to ordinary law and reasonable registration and reporting.",
+    "summary": "Year 5. Davan Iskal's residency certification is revoked for documented fraud, and a final removal order issues. His state of origin has ceased to function; no third country will accept him; the one government that offers to take him is the reason he cannot be sent. He is also the subject of a security assessment. §6.3.a was written for exactly this man — the case with no good outcome, where the constitution's floor is actually tested.",
     "provisions": [
       {
         "ref": "§6.3.a",
@@ -1284,8 +1764,16 @@
         "label": "Non-Refoulement"
       },
       {
+        "ref": "§6.2",
+        "label": "Enforcement, Removal, and Appeals"
+      },
+      {
         "ref": "§1.10",
         "label": "Habeas Corpus"
+      },
+      {
+        "ref": "§6.3",
+        "label": "Asylum and Protection"
       }
     ],
     "links": [
@@ -1304,11 +1792,23 @@
     ]
   },
   "scenario-the-vote": {
-    "summary": "A suspensive veto creates a bounded delay with specified routes back to enactment. A reconsideration notice is a separate, advisory instrument, and replacing the Civic Consul does not bypass tabling attached to the bill.",
+    "summary": "The Legislature passes a bill. The Civic Consul returns it within 10 business days. Tabled for one month — bypass-proof. The Senate tries for 2/3. Falls short. The bill must pass both chambers again. A reconsideration notice is issued earlier in the same review window. The Assembly Speaker declines to pause the review. What each instrument does, what each silence means, and how the mechanisms interact.",
     "provisions": [
       {
         "ref": "§2.7",
         "label": "Civic Consul Legislative Instruments"
+      },
+      {
+        "ref": "§3.1",
+        "label": "The Legislature"
+      },
+      {
+        "ref": "§2.5",
+        "label": "The Civic Consul — Domain and Term"
+      },
+      {
+        "ref": "§9.1.b",
+        "label": "The Executive Monitor"
       }
     ],
     "links": [
@@ -1327,11 +1827,23 @@
     ]
   },
   "scenario-the-waiver": {
-    "summary": "The consular election’s 60% waiver uses the national ranked-choice result. It is distinct from the first-preference State plurality test, so transferred preferences can determine whether the waiver applies.",
+    "summary": "Year 13. The consular election produces a candidate with 47 percent of first preferences — and 61.8 percent after final-round transfers. Under §7.1, a national RCV majority at or above 60 percent waives the State plurality qualification. She carried pluralities in only 19 of 50 States. The runner-up's campaign petitions: the waiver, they argue, means first preferences. The text says otherwise.",
     "provisions": [
       {
         "ref": "§7.1",
         "label": "Consular Election System"
+      },
+      {
+        "ref": "§7.2",
+        "label": "Federal Elections"
+      },
+      {
+        "ref": "§7.3",
+        "label": "Electoral Supermajority Threshold"
+      },
+      {
+        "ref": "§11.2",
+        "label": "NVS Properties and Voting Rights"
       }
     ],
     "links": [
@@ -1350,19 +1862,23 @@
     ]
   },
   "scenario-void-exception": {
-    "summary": "A procedurally valid amendment can still contain a clause that extinguishes a non-derogable right. The Court applies the amendment while treating only the conflicting part as void.",
+    "summary": "Year 18. The Republic's fourth constitutional amendment is procedurally valid — two-thirds legislative approval, Popular Ratification, every procedural threshold met. It also contains a 90-day habeas carve-out for security detentions. The SC reviews the amendment and voids the habeas carve-out.",
     "provisions": [
       {
         "ref": "§17.3",
         "label": "Amendment Consistency and Supremacy"
       },
       {
+        "ref": "§1.10",
+        "label": "Habeas Corpus"
+      },
+      {
         "ref": "§1.16.a",
         "label": "Non-Derogable Rights"
       },
       {
-        "ref": "§1.10",
-        "label": "Habeas Corpus"
+        "ref": "§17.1",
+        "label": "Amendment Paths"
       }
     ],
     "links": [
@@ -1381,7 +1897,7 @@
     ]
   },
   "scenario-the-first-twelve-years": {
-    "summary": "Three sovereign predecessor countries adopt the constitutional framework, merge through Article XIX, and spend the next twelve years turning immediate legal union into ordinary constitutional government.",
+    "summary": "Three sovereign countries choose one constitutional order. Day Zero creates the Republic; the next twelve years show what it takes to make the government real.",
     "provisions": [
       {
         "ref": "§19.1",
@@ -1396,12 +1912,16 @@
         "label": "Caretaker Status"
       },
       {
+        "ref": "§19.5",
+        "label": "Pre-Existing Obligations"
+      },
+      {
         "ref": "§19.6",
         "label": "Transition Territories"
       },
       {
         "ref": "§19.7",
-        "label": "Transition Candidate Registers"
+        "label": "Founding Registers and Monetary Continuity"
       },
       {
         "ref": "§19.9",
@@ -1428,15 +1948,27 @@
     ]
   },
   "scenario-the-first-war": {
-    "summary": "An invasion begins during Phase 1 before the permanent defense chain is complete. The transition bridge permits immediate defense while forcing command, authorization and funding into the ordinary constitutional system as permanent institutions come online.",
+    "summary": "Day 41 of the Transition Window. A neighboring state invades before the permanent Legislature or Legat Consul can exercise the Republic's ordinary defense powers. The constitutional test is not only whether the Republic can fight, but whether it can keep becoming a constitutional government while it does.",
     "provisions": [
+      {
+        "ref": "§19.2",
+        "label": "Day Zero and Transition"
+      },
+      {
+        "ref": "§19.3",
+        "label": "Caretaker Status"
+      },
       {
         "ref": "§19.3.a",
         "label": "Transition National-Defense Continuity"
       },
       {
-        "ref": "§19.3",
-        "label": "Caretaker Status"
+        "ref": "§19.5",
+        "label": "Pre-Existing Obligations"
+      },
+      {
+        "ref": "§2.2",
+        "label": "Military Authorization Framework"
       },
       {
         "ref": "§14.1",
@@ -1445,6 +1977,10 @@
       {
         "ref": "§14.5",
         "label": "State Forces"
+      },
+      {
+        "ref": "§7.2",
+        "label": "Federal Elections"
       }
     ],
     "links": [

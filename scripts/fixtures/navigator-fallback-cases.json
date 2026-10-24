@@ -255,7 +255,7 @@
     "question": "When must a federal official recuse from a matter?",
     "expectedSufficient": true,
     "required": [
-      "§7.11"
+      "§7.10"
     ]
   },
   {
@@ -304,12 +304,12 @@
     "question": "Can the Legislature cut Monitor funding below the constitutional floor?",
     "expectedSufficient": true,
     "required": [
-      "§9.6"
+      "§3.10"
     ]
   },
   {
     "id": "f39",
-    "question": "What happens if constitutional institutions reach an irreconcilable compromise failure?",
+    "question": "What happens if two Monitors find serious misconduct by the third Monitor General?",
     "expectedSufficient": true,
     "required": [
       "§9.7.a"

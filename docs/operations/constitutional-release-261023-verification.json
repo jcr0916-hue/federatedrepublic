@@ -1,0 +1,422 @@
+{
+  "release": "constitution-261023",
+  "record_type": "pre-merge validation snapshot; final production evidence is appended to the release PR",
+  "recorded_at_utc": "2026-10-24T03:37:49.672490+00:00",
+  "release_branch": "release-review-constitution-261023",
+  "canonical_sha256": "4ee3130d645b5879bc69683cf15fa74949c607ac552ad594cf0970b8005c2889",
+  "baseline_main_sha": "631a8ca2996d8a8423cdd225c0e13b3e8ad0dd8f",
+  "corpus": {
+    "scenarios": 54,
+    "torenthia_pages": 253,
+    "documented_decisions": 338,
+    "classifications": {
+      "substantive repair": 128,
+      "compatible": 190,
+      "replacement": 1,
+      "citation correction": 19
+    }
+  },
+  "validation": {
+    "full_publish_suite": "passed after final browser and print fixes",
+    "built_pages": 368,
+    "public_records": 238,
+    "provisions": 177,
+    "state_historical_tests": 13,
+    "state_profile_routes": 12,
+    "pdf_text_and_structure": "passed: all 177 canonical provision texts, all 96 quicksheet headings/body paragraphs, 13 tagged PDFs with bookmarks",
+    "visual_inspection": "All 57 Constitution pages and all twelve quicksheets inspected in contact sheets; detailed page inspection including final States quicksheet. No clipping or overlap observed.",
+    "browser": {
+      "base": "http://127.0.0.1:8765",
+      "pages": 28,
+      "mobilePages": 7,
+      "provisions": 177,
+      "diagrams": 7,
+      "checks": [
+        "scenario discovery and reading",
+        "current and removed provision search",
+        "all diagram tabs and keyboard wrap/Home/End",
+        "deep-link restoration",
+        "diagram to source link",
+        "desktop and mobile overflow",
+        "no uncaught page errors or failing same-origin responses"
+      ],
+      "records": [
+        {
+          "path": "index.html",
+          "title": "The Federated Republic — A Constitutional Framework",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "annotated.html",
+          "title": "Annotated Constitution — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "scenarios.html",
+          "title": "Scenario Library — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "scenario-the-second-renewal.html",
+          "title": "The Changed Mission — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "scenario-the-audit.html",
+          "title": "The Audit — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "scenario-the-third-strike.html",
+          "title": "The Third Strike — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "scenario-the-restoration.html",
+          "title": "The Restoration — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "scenario-critical-finding.html",
+          "title": "The Critical Finding — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "torenthia-sc-002.html",
+          "title": "SC-Y13-0119 — Korda Corridor Petitioners v. Joint Monitor Council — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "torenthia-nrs-021.html",
+          "title": "JMC Remainder Viability Assessment — Kelvant-Korda Lake Corridor — National Record System",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "torenthia-nrs-086.html",
+          "title": "Certified Convention Vote — Korda Northern Lake Settlement — National Record System",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "torenthia-news-119.html",
+          "title": "Nine Seats and No Senators — The Torenthian",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "torenthia-state-kelvant.html",
+          "title": "Kelvant — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "glossary.html",
+          "title": "Glossary — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "diagrams.html",
+          "title": "Government Structure — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheets.html",
+          "title": "Quick Sheets — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-amendments.html",
+          "title": "Quick Sheet — Amendments & Direct Democracy — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-article-2.html",
+          "title": "Quick Sheet — Article II — The Dual Executive — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-article-3.html",
+          "title": "Quick Sheet — Article III — The Legislature — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-elections.html",
+          "title": "Quick Sheet — Elections & Electoral Finance — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-fiscal.html",
+          "title": "Quick Sheet — Fiscal Architecture — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-immigration.html",
+          "title": "Quick Sheet — Immigration & Asylum — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-judiciary.html",
+          "title": "Quick Sheet — The Judiciary — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-monitors.html",
+          "title": "Quick Sheet — The Monitors — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-nvs.html",
+          "title": "Quick Sheet — Elections Infrastructure & the NVS — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-recall-removal.html",
+          "title": "Quick Sheet — Recall & Removal — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-rights.html",
+          "title": "Quick Sheet — Rights & the Non-Derogable Floor — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "quicksheet-states.html",
+          "title": "Quick Sheet — States, Territories & Indigenous Nations — The Federated Republic",
+          "desktopWidth": {
+            "client": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "path": "index.html",
+          "mobileWidth": {
+            "client": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "path": "scenarios.html",
+          "mobileWidth": {
+            "client": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "path": "scenario-the-second-renewal.html",
+          "mobileWidth": {
+            "client": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "path": "annotated.html",
+          "mobileWidth": {
+            "client": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "path": "diagrams.html#tab-states-fed",
+          "mobileWidth": {
+            "client": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "path": "quicksheet-states.html",
+          "mobileWidth": {
+            "client": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "path": "torenthia-news-119.html",
+          "mobileWidth": {
+            "client": 390,
+            "scroll": 390
+          }
+        }
+      ],
+      "errors": [],
+      "failures": []
+    },
+    "snapshot_check": "passed: complete 307-file corpus, 338 decisions and exact reviewed hashes",
+    "git_diff_check": "passed",
+    "node_tests": 164,
+    "node_test_groups": 27,
+    "archive_tests": 25
+  },
+  "pdf_outputs": [
+    {
+      "path": "pdf/constitution-current.pdf",
+      "bytes": 482004,
+      "sha256": "b6d262cb6aec7f6e928c711733eef7bd60a4de4f7e9bf14abc2bf6936d1f765a",
+      "pages": 57
+    },
+    {
+      "path": "pdf/quicksheet-amendments.pdf",
+      "bytes": 188353,
+      "sha256": "2cf42ab91fbf6d8c000d3775083a96fde55abde913d6f6572321cc815b8cec0b",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-article-2.pdf",
+      "bytes": 188514,
+      "sha256": "8cdd9f8dff743ffcb2f53d656953cade0d70b5749c87cc03896f5a4f9d6c670a",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-article-3.pdf",
+      "bytes": 193421,
+      "sha256": "a2267f467e9105c302683a817d72edb7b4f2a9440234620cae380e14fbcac3d3",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-elections.pdf",
+      "bytes": 190812,
+      "sha256": "52cfd84760e9345a4dc0bf7a914d639996368641df05a694da3b45bcb8079702",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-fiscal.pdf",
+      "bytes": 185644,
+      "sha256": "9946ca75e615003e0a1902ca91b20cc8fb484013bc49965573b2e3fad25e6eb6",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-immigration.pdf",
+      "bytes": 189674,
+      "sha256": "7c16dfcd67fe970c415897ae04aadaff82fb60809072bedee28b3e4147e8b942",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-judiciary.pdf",
+      "bytes": 188086,
+      "sha256": "7b9ec5369da0b39a2508246fcffc2dddf0be78c794ef23e97e805e9a02e13bbb",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-monitors.pdf",
+      "bytes": 183307,
+      "sha256": "4d22fee8f094beecaa8989776d529a732605efb9ff31e6fe67403537634dd2eb",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-nvs.pdf",
+      "bytes": 194812,
+      "sha256": "8c4ddeaf52ff3ee0de0b2dffde509d16fca0ef49e1f1c0c80000fc72b4d4b93e",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-recall-removal.pdf",
+      "bytes": 184389,
+      "sha256": "4458d776f4b97c63bba6800e3cb7d931289c91cabda7257c0c0552bc944102af",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-rights.pdf",
+      "bytes": 189265,
+      "sha256": "86ed01c53ba155c2284396e1df915febd902d73cd62453326a2ebae5a4bddef3",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quicksheet-states.pdf",
+      "bytes": 191465,
+      "sha256": "5aec76323bb2742d1e7c1565242fb13d06adec5e8bb8c370e05263a073ff7e00",
+      "pages": 1
+    }
+  ],
+  "rollback": {
+    "deployment_id": "dpl_B15JWPDopNrDV8x7m9uZeANZqbJV",
+    "deployment_url": "https://federatedrepublic-ona3tw0p7-the-federated-republic.vercel.app",
+    "commit_sha": "631a8ca2996d8a8423cdd225c0e13b3e8ad0dd8f",
+    "ready": true,
+    "rollback_candidate": true,
+    "public_domain": "https://thefederatedrepublic.org"
+  },
+  "limitations": [
+    "AI-provider responses were mocked in automated benchmark tests; live generated-answer quality is not certified.",
+    "Tagged PDF structure and bookmarks passed; full PDF/UA conformance is not claimed."
+  ],
+  "release_pr": "https://github.com/jcr0916-hue/federatedrepublic/pull/233",
+  "production_verification": "not yet deployed; final evidence must identify the merged SHA and successful public-domain checks",
+  "subsequent_production_record": "constitutional-release-261023-production.json"
+}

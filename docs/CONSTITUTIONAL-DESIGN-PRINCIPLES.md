@@ -1,5 +1,7 @@
 # Constitutional Design Principles — Review Reference
 
+> Compatibility supplement — 23 October 2026: the dated examples below preserve design reasoning from earlier editions. Current §8.4 permits impartial statutory electoral assistance rather than requiring an initial-grant system; §15.3 uses legislative audit determinations and statutory remediation periods without compulsory devolution review. Current §§3.10 and 9.5–9.9 replace earlier funding-floor and Monitor suspension/removal machinery. Use the [release compatibility register](operations/CONSTITUTIONAL-COMPATIBILITY-261023.md) and current source for operative mechanisms.
+
 **Status:** working reference, assembled 13.09, expanded 19.09, worked examples re-verified
 against the live text 10.10. The twelve principles have been in active use across
 scenarios, amendment rationales, and design sessions, but had never been written down in one place. This
@@ -413,6 +415,15 @@ emergency) and the checks (30-day lapse unless renewed, expedited SC review).
 What stays fixed is the power's boundary and who checks it (the Actor Test), not the day-to-day line.
 This is the companion to the fallback limit under the Graceful Degradation Test: both stop the reviewer
 from asking the text to do the officials' job.
+
+
+### Principle or procedure? — minimum-necessary specification (20.10)
+
+Before adding constitutional detail, ask: **Is it necessary to make a constitutional institution function, to protect a right or safeguard, or to define an enforceable boundary?** If so, specify only what is necessary. Otherwise state the governing principle and leave policy, methods, and implementation to statute and democratic judgment.
+
+**Review check:** Would removing this detail prevent the institution from functioning, weaken a protected right, or eliminate a necessary check or failure state? If not, prefer delegation. Closing every conceivable loophole is not itself a constitutional objective; distinguish failure of constitutional machinery from poor policy choices for which elected government remains accountable.
+
+*Working example (20.10, proposed only): fiscal sustainability replaces prescribed debt-brake formulas, deadlines, and correction accounts; Article II's office-formation and succession procedures remain necessarily specific.*
 
 ---
 

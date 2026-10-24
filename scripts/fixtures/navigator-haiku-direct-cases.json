@@ -55,9 +55,9 @@
   },
   {
     "id": "haiku-direct-10",
-    "question": "What does §2.10 establish about executive transparency?",
+    "question": "What does §10.1 establish about publication of constitutional acts?",
     "expectedStatus": "ANSWER",
-    "requiredSource": "§2.10"
+    "requiredSource": "§10.1"
   },
   {
     "id": "haiku-direct-11",

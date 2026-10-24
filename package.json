@@ -23,7 +23,7 @@
     "test:world-authoring": "node --test scripts/world-authoring.test.mjs",
     "check:world-publish": "node scripts/check-world-publishing.mjs",
     "test:world-publish": "node --test scripts/world-publishing.test.mjs",
-    "world:publish-check": "npm run test:constitution-archive && npm run check:constitution-archive && npm run test:state-tests && npm run test:state-constitutions && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:world-packet && npm run test:world-draft-validation && npm run test:assets && npm run test:crossroads && npm run test:crossroads-ai-benchmark && npm run test:ai-transport && npm run test:ai-efficiency && npm run test:annotator-ai-benchmark && npm run test:annotator && npm run test:navigator-gate && npm run test:navigator-haiku-direct && npm run test:navigator-shadow && npm run test:navigator-routing-report && npm run test:navigator-deterministic && npm run test:navigator-natural-language && npm run test:navigator-fallback && npm run test:navigator-fallback-api && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py",
+    "world:publish-check": "npm run test:constitution-archive && npm run check:constitution-archive && npm run test:state-tests && npm run test:state-constitutions && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world && npm run test:world-meta && npm run test:world-authoring && npm run test:world-packet && npm run test:world-draft-validation && npm run test:assets && npm run test:crossroads && npm run test:crossroads-ai-benchmark && npm run test:ai-transport && npm run test:ai-efficiency && npm run test:annotator-ai-benchmark && npm run test:annotator && npm run test:navigator-gate && npm run test:navigator-haiku-direct && npm run test:navigator-shadow && npm run test:navigator-routing-report && npm run test:navigator-deterministic && npm run test:navigator-natural-language && npm run test:navigator-fallback && npm run test:navigator-fallback-api && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py && npm run check:compatibility",
     "republic:ingest": "node scripts/republic-ingest.mjs",
     "test:ingest": "node --test scripts/republic-ingest.test.mjs",
     "test:chronology": "node --test scripts/world-chronology.test.mjs",
@@ -50,7 +50,8 @@
     "test:annotator": "node --test scripts/annotator.test.cjs",
     "constitution:archive": "python3 -B scripts/constitution-archive.py prepare",
     "test:constitution-archive": "python3 -B scripts/test-constitution-archive.py",
-    "check:constitution-archive": "python3 -B scripts/constitution-archive.py check-current"
+    "check:constitution-archive": "python3 -B scripts/constitution-archive.py check-current",
+    "check:compatibility": "python3 scripts/check-release-compatibility.py"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
