@@ -336,6 +336,11 @@ LEGACY_UNSYNCHRONIZED_REVISIONS = {
     "e309c3bb667f153d71dd4c184fc73652f1d08f33":
         "f9b93b4f4b308c6810b9cc6045c8d9d820818a07",
 }
+# Exact already-published mismatches preserved before their synchronized
+# successor is published. No particular future repair commit is invented.
+LEGACY_RAW_SOURCE_REVISIONS = frozenset({
+    "59beca5349754b131373d562ac77f447d60d654f",
+})
 EXCEPTION_SOURCES = "docs/archive/constitution-exceptions"
 
 
@@ -362,14 +367,15 @@ def restored_legacy_alias(root, previous_ref, ref, head, chain, name):
 
 
 def recovery_pair_is_verified(root, contents, ref, chain, evidence_ref=None):
-    """Preserve the one known broken historical edition as raw source only."""
+    """Preserve explicitly reviewed broken historical editions as raw source."""
     try:
         validate_pair(root, contents, ref)
         return True
     except ValueError:
         repaired = LEGACY_UNSYNCHRONIZED_REVISIONS.get(ref)
-        if (not repaired or repaired not in chain or
-                chain.index(repaired) >= chain.index(ref)):
+        if (ref not in LEGACY_RAW_SOURCE_REVISIONS and
+                (not repaired or repaired not in chain or
+                 chain.index(repaired) >= chain.index(ref))):
             raise
     prefix = f"{EXCEPTION_SOURCES}/source-{ref}"
     def evidence(path):

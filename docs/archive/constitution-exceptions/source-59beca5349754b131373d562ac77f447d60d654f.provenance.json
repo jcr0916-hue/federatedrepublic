@@ -1,0 +1,15 @@
+{
+  "previous_commit": "59beca5349754b131373d562ac77f447d60d654f",
+  "superseding_commit": null,
+  "verified_pair": false,
+  "previous_json_sha256": "83ddc6cad748ad512a93394992b0919a72b840c9517e66243bd5d3f23c42b89e",
+  "previous_markdown_sha256": "9a80ad8eb95640ebbcb21c4b91f105b099d0cc52da185f0abf3180aaa70158c3",
+  "error": "ValueError: Constitution JSON/Markdown pair is out of sync (59beca5349754b131373d562ac77f447d60d654f)",
+  "status": "unverified_historical_source",
+  "source_paths": [
+    "constitution_data.json",
+    "docs/constitution-current.md"
+  ],
+  "resolution": "Original PR #235 merge preserved as raw source. The synchronized successor is validated independently; its published commit is not established when this preservation record is prepared.",
+  "generated_artifact_commit": "747255819700ff957e89847247e6db23b2fd9252"
+}

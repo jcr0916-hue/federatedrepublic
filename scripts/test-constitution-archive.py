@@ -336,6 +336,35 @@ class ConstitutionArchiveTest(unittest.TestCase):
             self.commit()
             archive.check_recovery(self.root, self.base)
 
+    def test_reviewed_raw_revision_never_becomes_a_verified_edition(self):
+        broken, _, raw, prefix = self.broken_revision_history()
+        note_path = Path(str(prefix) + ".provenance.json")
+        note = json.loads(note_path.read_text())
+        note["superseding_commit"] = None
+        note_path.write_text(json.dumps(note))
+        with patch.object(archive, "LEGACY_RAW_SOURCE_REVISIONS", frozenset({broken})):
+            with self.assertRaisesRegex(ValueError, "out of sync"):
+                archive.reconcile(self.root, self.base, head=broken)
+            self.assertEqual(self.records(), [])
+            archive.reconcile(self.root, self.base)
+        self.assertEqual([r[2] for r in self.records()], [self.old])
+        self.assertNotIn(raw, [r[2] for r in self.records()])
+
+    def test_reviewed_raw_revision_does_not_allow_a_future_unreviewed_mismatch(self):
+        broken, _, _, prefix = self.broken_revision_history()
+        note_path = Path(str(prefix) + ".provenance.json")
+        note = json.loads(note_path.read_text())
+        note["superseding_commit"] = None
+        note_path.write_text(json.dumps(note))
+        (self.root / archive.JSON_PATH).write_bytes(self.source("Future broken edition."))
+        self.commit()
+        self.set_pair("Later valid edition.")
+        self.commit()
+        with patch.object(archive, "LEGACY_RAW_SOURCE_REVISIONS", frozenset({broken})):
+            with self.assertRaisesRegex(ValueError, "out of sync"):
+                archive.reconcile(self.root, self.base)
+        self.assertEqual(self.records(), [])
+
     def test_recovery_refuses_rewritten_baseline(self):
         unrelated = "0" * 40
         with self.assertRaises(ValueError):
