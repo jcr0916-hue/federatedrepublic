@@ -3,7 +3,7 @@
 > **WORKING DRAFT — NOT ADOPTED OR PUBLISHED.**
 > This is a separate integration workspace based on `docs/constitution-current.md` and approved working amendments recorded in `docs/WORKING-CONSTITUTIONAL-AMENDMENTS.md`, including subsequent approved continuity revisions.
 > The adopted Constitution is generated from `constitution_data.json`, which this draft does not modify.
-> **Integration is incomplete:** Articles I, III–VIII, X–XIV, and XVI–XX have approved revisions integrated; Article II and Articles IX and XV require further reconciliation. The coordinated military framework is incorporated in §§2.2, 12.2.a, and 14.2–14.5. Article XIV §14.1 retains its authorized-purpose limits without duplicating or restricting the Supreme Court's existing constitutional dispute jurisdiction. Cross-references and inter-article dependencies require final validation. Do not publish or adopt this draft.
+> **Integration review status:** Approved revisions across Articles I–XX, including the reconciliations of Articles II, IX, and XV, have been screened against the working amendment register. The coordinated military framework is incorporated in §§2.2, 12.2.a, and 14.2–14.5. Section-number and subsection cross-references have passed structural validation. This does not certify complete substantive or legal consistency. Do not publish or adopt this draft before the adoption package and final approval.
 
 ---
 
