@@ -55,7 +55,7 @@ jobs:
           cp docs/candidate-generated.md docs/constitution-current.md
           python3 scripts/check-constitutional-site.py
           npm ci
-          npm run build
+          npx eleventy
           test -s _site/annotated.html
           test -s _site/constitution-print.html
           grep -q '§15.2.a' _site/annotated.html
