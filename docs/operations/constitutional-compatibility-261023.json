@@ -3263,8 +3263,8 @@
         "§9.7"
       ],
       "classification": "substantive repair",
-      "decision": "Convention procedure references moved to §15.5.a(4); findings remain advisory and statutory/legislative viability rules are treated separately. Preserved docket/date, 6–3 judgment, majority/dissent lineup, stay and Convention outcome; corrected advisory role, nonbinding findings and mistaken receiving State Varek.",
-      "reviewed_sha256": "e66dcd17c1669c543dbe570072720afa43afe41c883a65ed84d2d4b34e406a3e"
+      "decision": "Convention procedure references moved to §15.5.a(4); findings remain advisory and statutory/legislative viability rules are treated separately. Preserved docket/date, 6–3 judgment, majority/dissent lineup, stay and Convention outcome; corrected advisory role, nonbinding findings and mistaken receiving State Varek. Polished the preserved jurisdictional dissent after the final diff review, without changing the lineup or outcome.",
+      "reviewed_sha256": "a0ff03b039c995f26e72769143671753ee656d178b875f29121674712f27df0e"
     },
     {
       "path": "torenthia-state-aldenmere.html",
@@ -3362,8 +3362,8 @@
         "§4.1"
       ],
       "classification": "substantive repair",
-      "decision": "Convention procedure references moved to §15.5.a(4); findings remain advisory and statutory/legislative viability rules are treated separately. Advanced profile summary to already-published Convention proposal while preserving uncertain ratification and unchanged borders.",
-      "reviewed_sha256": "27a995131ae1e4e388b4c9278d469cf93d3fe3265ca3ff0bed256b55e42eb1df"
+      "decision": "Convention procedure references moved to §15.5.a(4); findings remain advisory and statutory/legislative viability rules are treated separately. Advanced profile summary to already-published Convention proposal while preserving uncertain ratification and unchanged borders. Aligned the profile’s court summary with the sustained constitutional trigger, avoiding an implication that Monitor assessment is binding permission.",
+      "reviewed_sha256": "16da04aa4a1075feaebc8096f39d8b4b2130b01fcef481011e5b5bfa78116999"
     },
     {
       "path": "torenthia-state-merath.html",

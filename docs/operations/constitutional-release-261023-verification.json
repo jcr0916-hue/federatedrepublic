@@ -10,10 +10,10 @@
     "torenthia_pages": 253,
     "documented_decisions": 338,
     "classifications": {
-      "compatible": 190,
-      "citation correction": 19,
       "substantive repair": 128,
-      "replacement": 1
+      "compatible": 190,
+      "replacement": 1,
+      "citation correction": 19
     }
   },
   "validation": {
