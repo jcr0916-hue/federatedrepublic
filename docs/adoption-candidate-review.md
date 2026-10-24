@@ -86,3 +86,11 @@
 The candidate removes §2.10, while `torenthia-nrs-103.html` retained both a prose citation and `worldProvisions` metadata pointing to that identifier. Both references were corrected to §10.1, the NRS record framework, without changing the fictional reporting calendar or statutory reporting premise. This correction is committed on the working branch as `142eaf950f0d`.
 
 Isolated GitHub Actions run https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40048051458 passed candidate data, conversion, annotated content, search-index, and Eleventy website build. Candidate PDF generation and accessibility remained in progress at this checkpoint; record final results separately. No release or canonical-source changes were made.
+
+## Final isolated output validation (2026-10-23)
+
+**PASS:** GitHub Actions run https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40048117635 completed successfully. Verified 20 Articles / 177 provisions, reproducible candidate JSON conversion, matching generator output, full annotated content and search anchors, isolated Eleventy site rendering, candidate PDF generation, complete PDF text, and the PDF accessibility checker. Test steps ran only in a temporary CI directory with candidate JSON; canonical `constitution_data.json`, adopted outputs and public website were not modified.
+
+**Citation migration:** `torenthia-nrs-103.html` now cites §10.1 instead of deleted §2.10 in metadata and text. The historic report calendar and statute-based requirements were preserved.
+
+**Release gate:** These checks validate candidate outputs, not editorial adoption approval, a public deployment, or a final independent legal review. Any release still requires explicit authorization.
