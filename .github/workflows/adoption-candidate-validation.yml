@@ -51,7 +51,8 @@ jobs:
           cp docs/adoption-candidate-data.json constitution_data.json
           python3 scripts/sync-annotated.py
           python3 scripts/build-search-index.py
-          python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md
+          python3 scripts/build-constitution-md.py constitution_data.json docs/candidate-generated.md
+          cp docs/candidate-generated.md docs/constitution-current.md
           python3 scripts/check-constitutional-site.py
           npm ci
           npm run build
