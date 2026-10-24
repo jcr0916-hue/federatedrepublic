@@ -80,3 +80,9 @@
 - Candidate PDF generation and accessibility checks **NOT EXECUTED** because the site-render step failed. Do not count them as passing.
 - Runs: https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40047884324 and https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40047927659 .
 - All testing was confined to the working branch and temporary CI files. The adopted Constitution and live website were not modified.
+
+## Historical citation migration and website build (2026-10-23)
+
+The candidate removes §2.10, while `torenthia-nrs-103.html` retained both a prose citation and `worldProvisions` metadata pointing to that identifier. Both references were corrected to §10.1, the NRS record framework, without changing the fictional reporting calendar or statutory reporting premise. This correction is committed on the working branch as `142eaf950f0d`.
+
+Isolated GitHub Actions run https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40048051458 passed candidate data, conversion, annotated content, search-index, and Eleventy website build. Candidate PDF generation and accessibility remained in progress at this checkpoint; record final results separately. No release or canonical-source changes were made.
