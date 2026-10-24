@@ -33,9 +33,9 @@ jobs:
           python3 scripts/build-constitution-md.py constitution_data.json docs/release-generated.md
           cp docs/release-generated.md docs/constitution-current.md
           python3 scripts/check-constitutional-site.py
+          npm ci
           node scripts/check-world-publishing.mjs
           node scripts/check-world-metadata.mjs
-          npm ci
           npm run build
           test -s _site/annotated.html
           test -s _site/constitution-print.html
