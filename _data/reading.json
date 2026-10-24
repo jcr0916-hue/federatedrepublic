@@ -79,7 +79,12 @@
     "number": 5,
     "title": "Article V — Citizenship and National Identity",
     "summary": "Who belongs to the Republic and how citizenship is protected.",
-    "links": []
+    "links": [
+      [
+        "Read a scenario",
+        "scenario-the-citizen.html"
+      ]
+    ]
   },
   {
     "number": 6,
@@ -176,6 +181,10 @@
       [
         "See the mechanism",
         "diagrams.html#tab-pool"
+      ],
+      [
+        "Read a scenario",
+        "scenario-the-administrator.html"
       ]
     ]
   },
