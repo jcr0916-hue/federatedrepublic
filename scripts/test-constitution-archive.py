@@ -230,6 +230,112 @@ class ConstitutionArchiveTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "modified or deleted"):
             archive.reconcile(self.root, self.base)
 
+    def legacy_alias_history(self):
+        plan = archive.plan_pair(self.root, self.old, "2026-10-14T12:00:00Z", self.base)
+        archive.write_pair(self.root, self.old, plan)
+        canonical = self.root / archive.ARCHIVE / "Constitution-261014.json"
+        alias = canonical.with_name("Constitution-261014 2.json")
+        alias.write_bytes(canonical.read_bytes())
+        before = self.commit()
+        alias.unlink()
+        removed = self.commit()
+        alias.write_bytes(canonical.read_bytes())
+        restored = self.commit()
+        return alias, before, removed, restored
+
+    def test_known_legacy_restoration_does_not_permit_a_later_deletion(self):
+        alias, before, removed, restored = self.legacy_alias_history()
+        with self.assertRaisesRegex(ValueError, "modified or deleted"):
+            archive.reconcile(self.root, self.base)
+        with patch.object(archive, "LEGACY_ALIAS_RESTORATION", (removed, restored)):
+            self.assertEqual(archive.reconcile(self.root, self.base), [])
+            alias.unlink()
+            # The ordinary immutability gate still rejects this same alias.
+            with self.assertRaisesRegex(ValueError, "modified or deleted"):
+                archive.check(self.root, before, worktree=True)
+            self.commit()
+            alias.write_bytes(self.old[0])
+            self.commit()
+            with self.assertRaisesRegex(ValueError, "modified or deleted"):
+                archive.reconcile(self.root, self.base)
+
+    def test_known_legacy_restoration_requires_exact_current_and_restored_blobs(self):
+        alias, _, removed, restored = self.legacy_alias_history()
+        alias.write_bytes(alias.read_bytes() + b"Changed duplicate")
+        self.commit()
+        with patch.object(archive, "LEGACY_ALIAS_RESTORATION", (removed, restored)):
+            with self.assertRaisesRegex(ValueError, "modified or deleted"):
+                archive.reconcile(self.root, self.base)
+
+    def test_known_legacy_restoration_requires_the_restoration_in_first_parent_history(self):
+        _, _, removed, _ = self.legacy_alias_history()
+        with patch.object(archive, "LEGACY_ALIAS_RESTORATION", (removed, "0" * 40)):
+            with self.assertRaisesRegex(ValueError, "modified or deleted"):
+                archive.reconcile(self.root, self.base)
+
+    def broken_revision_history(self):
+        (self.root / archive.JSON_PATH).write_bytes(self.source("Broken historical edition."))
+        broken = self.commit()
+        raw = archive.pair(self.root, broken)
+        self.set_pair("Repaired edition.")
+        repaired = self.commit()
+        prefix = self.root / archive.EXCEPTION_SOURCES / f"source-{broken}"
+        prefix.parent.mkdir(parents=True)
+        for suffix, data in zip((".json", ".md"), raw):
+            Path(str(prefix) + suffix).write_bytes(data)
+        note = {"previous_commit": broken, "superseding_commit": repaired,
+                "status": "unverified_historical_source", "verified_pair": False,
+                "source_paths": [archive.JSON_PATH, archive.MD_PATH],
+                "previous_json_sha256": archive.digest(raw[0]),
+                "previous_markdown_sha256": archive.digest(raw[1])}
+        Path(str(prefix) + ".provenance.json").write_text(json.dumps(note))
+        return broken, repaired, raw, prefix
+
+    def test_known_broken_edition_is_preserved_as_raw_source_never_a_verified_pair(self):
+        broken, repaired, raw, _ = self.broken_revision_history()
+        with patch.dict(archive.LEGACY_UNSYNCHRONIZED_REVISIONS, {broken: repaired}, clear=True):
+            self.assertEqual(len(archive.reconcile(self.root, self.base)), 3)
+        self.assertEqual([r[2] for r in self.records()], [self.old])
+        self.assertNotIn(raw, [r[2] for r in self.records()])
+
+    def test_known_broken_edition_refuses_tampered_source_before_archive_writes(self):
+        broken, repaired, _, prefix = self.broken_revision_history()
+        Path(str(prefix) + ".md").write_bytes(b"Invented historical source")
+        with patch.dict(archive.LEGACY_UNSYNCHRONIZED_REVISIONS, {broken: repaired}, clear=True):
+            with self.assertRaisesRegex(ValueError, "source verification failed"):
+                archive.reconcile(self.root, self.base)
+        self.assertEqual(self.records(), [])
+
+    def test_known_broken_edition_requires_its_repair_on_the_first_parent_chain(self):
+        broken, _, _, _ = self.broken_revision_history()
+        with patch.dict(archive.LEGACY_UNSYNCHRONIZED_REVISIONS, {broken: "0" * 40}, clear=True):
+            with self.assertRaisesRegex(ValueError, "out of sync"):
+                archive.reconcile(self.root, self.base)
+        self.assertEqual(self.records(), [])
+
+    def test_recovery_preflight_requires_committed_pairs_and_never_writes(self):
+        self.set_pair("Second edition.")
+        self.commit()
+        before = archive.inventory(self.root)
+        with self.assertRaisesRegex(ValueError, "Unarchived historical"):
+            archive.check_recovery(self.root, self.base)
+        self.assertEqual(archive.inventory(self.root), before)
+        archive.reconcile(self.root, self.base)
+        # Correct untracked pairs do not satisfy the committed preflight.
+        with self.assertRaisesRegex(ValueError, "Unarchived historical"):
+            archive.check_recovery(self.root, self.base)
+        self.commit()
+        archive.check_recovery(self.root, self.base)
+
+    def test_recovery_preflight_requires_committed_raw_exception_evidence(self):
+        broken, repaired, _, _ = self.broken_revision_history()
+        with patch.dict(archive.LEGACY_UNSYNCHRONIZED_REVISIONS, {broken: repaired}, clear=True):
+            with self.assertRaises(ValueError):
+                archive.check_recovery(self.root, self.base)
+            archive.reconcile(self.root, self.base)
+            self.commit()
+            archive.check_recovery(self.root, self.base)
+
     def test_recovery_refuses_rewritten_baseline(self):
         unrelated = "0" * 40
         with self.assertRaises(ValueError):

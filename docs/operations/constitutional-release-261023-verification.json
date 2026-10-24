@@ -417,5 +417,6 @@
     "Tagged PDF structure and bookmarks passed; full PDF/UA conformance is not claimed."
   ],
   "release_pr": "https://github.com/jcr0916-hue/federatedrepublic/pull/233",
-  "production_verification": "not yet deployed; final evidence must identify the merged SHA and successful public-domain checks"
+  "production_verification": "not yet deployed; final evidence must identify the merged SHA and successful public-domain checks",
+  "subsequent_production_record": "constitutional-release-261023-production.json"
 }

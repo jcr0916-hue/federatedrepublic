@@ -1,4 +1,10 @@
-# Constitution Release Review
+# Constitution Release Review — published
+
+The user subsequently authorized substantive compatibility changes, merge and deployment. [Release PR #233](https://github.com/jcr0916-hue/federatedrepublic/pull/233) merged as `8759e9f73de4609b856b06ff13bd97f4358bfc41`; all scenarios and Torenthia pages were audited, The Second Renewal was replaced by The Changed Mission, and public site/PDF/API verification passed. See the [complete release record](operations/CONSTITUTIONAL-COMPATIBILITY-261023.md) and [historical recovery follow-up](operations/CONSTITUTIONAL-ARCHIVE-RECOVERY-261023.md).
+
+The checkpoints below preserve the earlier review-only state. Their pending items and authorization restrictions were superseded by that later instruction and completed release work.
+
+## Historical review-only staging
 
 This is a **review-only release branch** created from `main` commit `631a8ca2996d8a8423cdd225c0e13b3e8ad0dd8f`.
 

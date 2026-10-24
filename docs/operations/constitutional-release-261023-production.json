@@ -1,0 +1,3117 @@
+{
+  "verified_at_utc": "2026-10-24T03:47:55.960995+00:00",
+  "base": "https://thefederatedrepublic.org",
+  "expected_merged_sha": "8759e9f73de4609b856b06ff13bd97f4358bfc41",
+  "matching_files": 384,
+  "html_pages": 368,
+  "pdfs": 13,
+  "records": [
+    {
+      "path": "404.html",
+      "status": 200,
+      "bytes": 10745,
+      "sha256": "8df7b3b5b58b2f71f79969e027111bcea445c6cca9dd53992bffe91b89ec7f0d",
+      "url": "https://thefederatedrepublic.org/404.html"
+    },
+    {
+      "path": "ai-features.html",
+      "status": 200,
+      "bytes": 8732,
+      "sha256": "00e2f74075d64e74e4ba70d97663e348103e9ab3c8d26f9054de9bee7eb44eab",
+      "url": "https://thefederatedrepublic.org/ai-features.html"
+    },
+    {
+      "path": "annotated.html",
+      "status": 200,
+      "bytes": 298966,
+      "sha256": "7ed2c9e218e09a45c127cb3fa5d28ab98d7d2f216e0e7a8a22f72e6338e83e9c",
+      "url": "https://thefederatedrepublic.org/annotated.html"
+    },
+    {
+      "path": "atlas.html",
+      "status": 200,
+      "bytes": 19742,
+      "sha256": "5396558cfbb6ea3d949aed0e6c4335f8a9f8b320fadadbfd84fcbd21be34593f",
+      "url": "https://thefederatedrepublic.org/atlas.html"
+    },
+    {
+      "path": "before-the-republic.html",
+      "status": 200,
+      "bytes": 436,
+      "sha256": "8bba9e76d1a9a5a3930f4d6d51ed444222c7700dfbf8e3f413a7351fda358861",
+      "url": "https://thefederatedrepublic.org/before-the-republic.html"
+    },
+    {
+      "path": "constitution-current.pdf",
+      "status": 200,
+      "bytes": 482004,
+      "sha256": "b6d262cb6aec7f6e928c711733eef7bd60a4de4f7e9bf14abc2bf6936d1f765a",
+      "url": "https://thefederatedrepublic.org/constitution-current.pdf"
+    },
+    {
+      "path": "constitution-print.html",
+      "status": 200,
+      "bytes": 197633,
+      "sha256": "e548e2cfbabfe84aae2037df5feef93d95b095debdfb0820f16f187cfa1cd855",
+      "url": "https://thefederatedrepublic.org/constitution-print.html"
+    },
+    {
+      "path": "constitutional-history-archive.html",
+      "status": 200,
+      "bytes": 233726,
+      "sha256": "dbff6a8fa13dfac33183c85d24f8a28c58fd361005f7c3cb7057e012f5ea9828",
+      "url": "https://thefederatedrepublic.org/constitutional-history-archive.html"
+    },
+    {
+      "path": "constitutional-history.html",
+      "status": 200,
+      "bytes": 282178,
+      "sha256": "3ab013d8439470c846251e23bd03fded0b1bbc29e3d28ca684594b93aec1ab64",
+      "url": "https://thefederatedrepublic.org/constitutional-history.html"
+    },
+    {
+      "path": "contact.html",
+      "status": 200,
+      "bytes": 10179,
+      "sha256": "52459267a5953174d4a6ac1806dfd3f7e7848337683496d940bd0f8995a625ff",
+      "url": "https://thefederatedrepublic.org/contact.html"
+    },
+    {
+      "path": "crossroads.html",
+      "status": 200,
+      "bytes": 22637,
+      "sha256": "649bfb3a02bae86eb68d16b83e663d0901ceefb5cd4b84c02d484b2ac3126d3b",
+      "url": "https://thefederatedrepublic.org/crossroads.html"
+    },
+    {
+      "path": "diagrams.html",
+      "status": 200,
+      "bytes": 87338,
+      "sha256": "112568157d43b7d282de76dc8d70201431e5d265e9b3246a9de256556994b83c",
+      "url": "https://thefederatedrepublic.org/diagrams.html"
+    },
+    {
+      "path": "dossier-argent-ridge.html",
+      "status": 200,
+      "bytes": 8897,
+      "sha256": "37c0a32543e797c02ea126f75e6263e2dca4442b9f3c8e5de4221c252f4894fe",
+      "url": "https://thefederatedrepublic.org/dossier-argent-ridge.html"
+    },
+    {
+      "path": "dossier-fiscal-equalization.html",
+      "status": 200,
+      "bytes": 10913,
+      "sha256": "e0cd068327a10b834c3692035df1d1490d153f7e202e3a5b7e7d0317e2b0a99c",
+      "url": "https://thefederatedrepublic.org/dossier-fiscal-equalization.html"
+    },
+    {
+      "path": "dossier-korda.html",
+      "status": 200,
+      "bytes": 37391,
+      "sha256": "8a8acbeba6228bc4fd807a14be0b22bdf82826f74e1623482b7f36ea3d827b06",
+      "url": "https://thefederatedrepublic.org/dossier-korda.html"
+    },
+    {
+      "path": "dossier-lake-varda.html",
+      "status": 200,
+      "bytes": 10937,
+      "sha256": "e2dd84de4b55c3bc2c2a483d958a986dc8984b42120292479cffab4da575d6fd",
+      "url": "https://thefederatedrepublic.org/dossier-lake-varda.html"
+    },
+    {
+      "path": "glossary.html",
+      "status": 200,
+      "bytes": 64714,
+      "sha256": "5b3b4b579e8063e309be66a97d58eddcfa78c59cbc883595c7b04f37f8685eed",
+      "url": "https://thefederatedrepublic.org/glossary.html"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 28075,
+      "sha256": "092183f5045018d85b1935c9f11aebd02b35febc2bc846aee942f82c0b6de6d9",
+      "url": "https://thefederatedrepublic.org/index.html"
+    },
+    {
+      "path": "nav.js",
+      "status": 200,
+      "bytes": 3454,
+      "sha256": "537cfa3af490fa92bf80f858092cff7a185d2b1d0c095e8bfa44f7fc7940c857",
+      "url": "https://thefederatedrepublic.org/nav.js"
+    },
+    {
+      "path": "quicksheet-amendments.html",
+      "status": 200,
+      "bytes": 13841,
+      "sha256": "70efddaa88caaa14be7f5ded56e641fab58f8c7cbcaacef7e5e69626a22ea596",
+      "url": "https://thefederatedrepublic.org/quicksheet-amendments.html"
+    },
+    {
+      "path": "quicksheet-amendments.pdf",
+      "status": 200,
+      "bytes": 188353,
+      "sha256": "2cf42ab91fbf6d8c000d3775083a96fde55abde913d6f6572321cc815b8cec0b",
+      "url": "https://thefederatedrepublic.org/quicksheet-amendments.pdf"
+    },
+    {
+      "path": "quicksheet-article-2.html",
+      "status": 200,
+      "bytes": 15848,
+      "sha256": "bd6b84b5a6cdc0f2126348e393e4835af32746c6e6e70e343ac787053343e8a4",
+      "url": "https://thefederatedrepublic.org/quicksheet-article-2.html"
+    },
+    {
+      "path": "quicksheet-article-2.pdf",
+      "status": 200,
+      "bytes": 188514,
+      "sha256": "8cdd9f8dff743ffcb2f53d656953cade0d70b5749c87cc03896f5a4f9d6c670a",
+      "url": "https://thefederatedrepublic.org/quicksheet-article-2.pdf"
+    },
+    {
+      "path": "quicksheet-article-3.html",
+      "status": 200,
+      "bytes": 18220,
+      "sha256": "ffd5717517a22e29ff7b685f4d7b9b800b8b0a7559658bd87064fba94126f869",
+      "url": "https://thefederatedrepublic.org/quicksheet-article-3.html"
+    },
+    {
+      "path": "quicksheet-article-3.pdf",
+      "status": 200,
+      "bytes": 193421,
+      "sha256": "a2267f467e9105c302683a817d72edb7b4f2a9440234620cae380e14fbcac3d3",
+      "url": "https://thefederatedrepublic.org/quicksheet-article-3.pdf"
+    },
+    {
+      "path": "quicksheet-elections.html",
+      "status": 200,
+      "bytes": 14142,
+      "sha256": "2c81d7b4218ce0f98d95901746605952a0222553e78f0d69445e230741208a5b",
+      "url": "https://thefederatedrepublic.org/quicksheet-elections.html"
+    },
+    {
+      "path": "quicksheet-elections.pdf",
+      "status": 200,
+      "bytes": 190812,
+      "sha256": "52cfd84760e9345a4dc0bf7a914d639996368641df05a694da3b45bcb8079702",
+      "url": "https://thefederatedrepublic.org/quicksheet-elections.pdf"
+    },
+    {
+      "path": "quicksheet-fiscal.html",
+      "status": 200,
+      "bytes": 13526,
+      "sha256": "c16a1c684bdc321e1f1abc8b7d290cb2a5375b8b027b8b6fcfc0a4ef5097126a",
+      "url": "https://thefederatedrepublic.org/quicksheet-fiscal.html"
+    },
+    {
+      "path": "quicksheet-fiscal.pdf",
+      "status": 200,
+      "bytes": 185644,
+      "sha256": "9946ca75e615003e0a1902ca91b20cc8fb484013bc49965573b2e3fad25e6eb6",
+      "url": "https://thefederatedrepublic.org/quicksheet-fiscal.pdf"
+    },
+    {
+      "path": "quicksheet-immigration.html",
+      "status": 200,
+      "bytes": 12801,
+      "sha256": "c17d4b15fbcc0ca53dc5b1b5c39025e58104d9eff4ba43dad59ca479461e88f3",
+      "url": "https://thefederatedrepublic.org/quicksheet-immigration.html"
+    },
+    {
+      "path": "quicksheet-immigration.pdf",
+      "status": 200,
+      "bytes": 189674,
+      "sha256": "7c16dfcd67fe970c415897ae04aadaff82fb60809072bedee28b3e4147e8b942",
+      "url": "https://thefederatedrepublic.org/quicksheet-immigration.pdf"
+    },
+    {
+      "path": "quicksheet-judiciary.html",
+      "status": 200,
+      "bytes": 14020,
+      "sha256": "eed692b7df665850ff603998cbb4009f5aa73abb9343a41771cde76531842435",
+      "url": "https://thefederatedrepublic.org/quicksheet-judiciary.html"
+    },
+    {
+      "path": "quicksheet-judiciary.pdf",
+      "status": 200,
+      "bytes": 188086,
+      "sha256": "7b9ec5369da0b39a2508246fcffc2dddf0be78c794ef23e97e805e9a02e13bbb",
+      "url": "https://thefederatedrepublic.org/quicksheet-judiciary.pdf"
+    },
+    {
+      "path": "quicksheet-monitors.html",
+      "status": 200,
+      "bytes": 14134,
+      "sha256": "324d6206e125825bc7b335d519dd12151d47abe2b9a42642ca450dad67e06a19",
+      "url": "https://thefederatedrepublic.org/quicksheet-monitors.html"
+    },
+    {
+      "path": "quicksheet-monitors.pdf",
+      "status": 200,
+      "bytes": 183307,
+      "sha256": "4d22fee8f094beecaa8989776d529a732605efb9ff31e6fe67403537634dd2eb",
+      "url": "https://thefederatedrepublic.org/quicksheet-monitors.pdf"
+    },
+    {
+      "path": "quicksheet-nvs.html",
+      "status": 200,
+      "bytes": 13023,
+      "sha256": "170beafdb0f5fcc13e6b284a35fb3da895d4aa25b124be49b0ac04a0f6db2d13",
+      "url": "https://thefederatedrepublic.org/quicksheet-nvs.html"
+    },
+    {
+      "path": "quicksheet-nvs.pdf",
+      "status": 200,
+      "bytes": 194812,
+      "sha256": "8c4ddeaf52ff3ee0de0b2dffde509d16fca0ef49e1f1c0c80000fc72b4d4b93e",
+      "url": "https://thefederatedrepublic.org/quicksheet-nvs.pdf"
+    },
+    {
+      "path": "quicksheet-recall-removal.html",
+      "status": 200,
+      "bytes": 13680,
+      "sha256": "5c786ea0385abd9f5d9adb92e607f59b2109a5bba24e94cb1c6d9ec31590ba8c",
+      "url": "https://thefederatedrepublic.org/quicksheet-recall-removal.html"
+    },
+    {
+      "path": "quicksheet-recall-removal.pdf",
+      "status": 200,
+      "bytes": 184389,
+      "sha256": "4458d776f4b97c63bba6800e3cb7d931289c91cabda7257c0c0552bc944102af",
+      "url": "https://thefederatedrepublic.org/quicksheet-recall-removal.pdf"
+    },
+    {
+      "path": "quicksheet-rights.html",
+      "status": 200,
+      "bytes": 12771,
+      "sha256": "90a25586941a0ae407f443965aadcdc668cf7f45fb631b2c19692dafafcc386c",
+      "url": "https://thefederatedrepublic.org/quicksheet-rights.html"
+    },
+    {
+      "path": "quicksheet-rights.pdf",
+      "status": 200,
+      "bytes": 189265,
+      "sha256": "86ed01c53ba155c2284396e1df915febd902d73cd62453326a2ebae5a4bddef3",
+      "url": "https://thefederatedrepublic.org/quicksheet-rights.pdf"
+    },
+    {
+      "path": "quicksheet-states.html",
+      "status": 200,
+      "bytes": 13611,
+      "sha256": "582381f699d5343ddb0797fa3e96b90cfc5e32aaff6b58e3b481220936c37d25",
+      "url": "https://thefederatedrepublic.org/quicksheet-states.html"
+    },
+    {
+      "path": "quicksheet-states.pdf",
+      "status": 200,
+      "bytes": 191465,
+      "sha256": "5aec76323bb2742d1e7c1565242fb13d06adec5e8bb8c370e05263a073ff7e00",
+      "url": "https://thefederatedrepublic.org/quicksheet-states.pdf"
+    },
+    {
+      "path": "quicksheets.html",
+      "status": 200,
+      "bytes": 16475,
+      "sha256": "ff26c21ddeade9ffd8f484ddc9a15b057f0614d06d117f59a428575e04146ac3",
+      "url": "https://thefederatedrepublic.org/quicksheets.html"
+    },
+    {
+      "path": "republic-at-a-glance.html",
+      "status": 200,
+      "bytes": 36214,
+      "sha256": "0aaa4b2fdc085648b42bac4c97f5f719e999dd0dec6780902e85c70ac5179a61",
+      "url": "https://thefederatedrepublic.org/republic-at-a-glance.html"
+    },
+    {
+      "path": "scenario-alliance-clause.html",
+      "status": 200,
+      "bytes": 24519,
+      "sha256": "ecfc6df5c91170d162d60ddd11ced39e70f18ef254490f4fad6da948ee1bb4ab",
+      "url": "https://thefederatedrepublic.org/scenario-alliance-clause.html"
+    },
+    {
+      "path": "scenario-automatic-floor.html",
+      "status": 200,
+      "bytes": 14693,
+      "sha256": "fd74e9f8812edfdb1f43a50e98c88b54a68bd2b7dd7499d0dde2d724b414a27b",
+      "url": "https://thefederatedrepublic.org/scenario-automatic-floor.html"
+    },
+    {
+      "path": "scenario-coordination-failure.html",
+      "status": 200,
+      "bytes": 20012,
+      "sha256": "7e2cd200bbfd519356e9a6092e233ab2780498311a569839d3610ef2c766de1b",
+      "url": "https://thefederatedrepublic.org/scenario-coordination-failure.html"
+    },
+    {
+      "path": "scenario-critical-finding.html",
+      "status": 200,
+      "bytes": 15544,
+      "sha256": "39114fa8c9d728c2eb93bf147d05d656a855f8c01c6088b072398e6a2ea76c0f",
+      "url": "https://thefederatedrepublic.org/scenario-critical-finding.html"
+    },
+    {
+      "path": "scenario-deadlock.html",
+      "status": 200,
+      "bytes": 17686,
+      "sha256": "961df3e5699bdf4bd035b288fc94a5912fd7cb7b5d97bb83f20a6ac739be6ad4",
+      "url": "https://thefederatedrepublic.org/scenario-deadlock.html"
+    },
+    {
+      "path": "scenario-finality-act.html",
+      "status": 200,
+      "bytes": 14851,
+      "sha256": "74b5824710d7d39c259ed808b4a389904ba328e09ac7e956abb702b773e4cbb8",
+      "url": "https://thefederatedrepublic.org/scenario-finality-act.html"
+    },
+    {
+      "path": "scenario-first-nomination.html",
+      "status": 200,
+      "bytes": 15976,
+      "sha256": "516251488d93a0d1e6110a71c818b8e63b285380c07086a2fd51e923cd8a7eb5",
+      "url": "https://thefederatedrepublic.org/scenario-first-nomination.html"
+    },
+    {
+      "path": "scenario-harder-ballot.html",
+      "status": 200,
+      "bytes": 19334,
+      "sha256": "3accc9ef54b694abf5a78be496f4c3274d803c08b3989f1422cdb071c7958fee",
+      "url": "https://thefederatedrepublic.org/scenario-harder-ballot.html"
+    },
+    {
+      "path": "scenario-long-count.html",
+      "status": 200,
+      "bytes": 19698,
+      "sha256": "37ea2c91162f69771170fef93ca2dd692722dd2301757e0f7e34ddf4f2a047cd",
+      "url": "https://thefederatedrepublic.org/scenario-long-count.html"
+    },
+    {
+      "path": "scenario-ordinary.html",
+      "status": 200,
+      "bytes": 33740,
+      "sha256": "f68b7c785528d607e7fffb1a79275870b3143d2c99e261bd8fea8600debb1996",
+      "url": "https://thefederatedrepublic.org/scenario-ordinary.html"
+    },
+    {
+      "path": "scenario-organized-third.html",
+      "status": 200,
+      "bytes": 22490,
+      "sha256": "76b3243b3e947614769da8a732d5365304f889923b716343dd291551d4134278",
+      "url": "https://thefederatedrepublic.org/scenario-organized-third.html"
+    },
+    {
+      "path": "scenario-recalled-senator.html",
+      "status": 200,
+      "bytes": 16278,
+      "sha256": "b2a49fb47807e1381f9f45adc063d3f4e3d5d2b2089d7ab326376e6bc1fa0eec",
+      "url": "https://thefederatedrepublic.org/scenario-recalled-senator.html"
+    },
+    {
+      "path": "scenario-second-declaration.html",
+      "status": 200,
+      "bytes": 16834,
+      "sha256": "02c2d9d1c859255b3f61a04cf13b3f471ea3199b1e8ee0bc90c09496e7c8652b",
+      "url": "https://thefederatedrepublic.org/scenario-second-declaration.html"
+    },
+    {
+      "path": "scenario-sponsoring-state.html",
+      "status": 200,
+      "bytes": 15281,
+      "sha256": "bb7b3e197c5d5f9075d86a36b08c8d02051c1b348ed1130397c64bbb4965c0e1",
+      "url": "https://thefederatedrepublic.org/scenario-sponsoring-state.html"
+    },
+    {
+      "path": "scenario-the-administrator.html",
+      "status": 200,
+      "bytes": 21509,
+      "sha256": "10ae4b606a004c5c1804d2206eba5d45ccfe4899237d2a2b81a19c32a62792e9",
+      "url": "https://thefederatedrepublic.org/scenario-the-administrator.html"
+    },
+    {
+      "path": "scenario-the-audit.html",
+      "status": 200,
+      "bytes": 16271,
+      "sha256": "f7cc4b05dbe1b408074b248e461d8b4cf64c75da637e2c98ccce4cf52e75a481",
+      "url": "https://thefederatedrepublic.org/scenario-the-audit.html"
+    },
+    {
+      "path": "scenario-the-cause.html",
+      "status": 200,
+      "bytes": 15278,
+      "sha256": "80989999eb16ff8019c90053e551ba98ebe0878d965d1fe3c3199089d49977c0",
+      "url": "https://thefederatedrepublic.org/scenario-the-cause.html"
+    },
+    {
+      "path": "scenario-the-classification.html",
+      "status": 200,
+      "bytes": 22355,
+      "sha256": "71d2f6ab39d97be162bcd229a98e9564ae110b0523c0d11fe5d0704a886e1178",
+      "url": "https://thefederatedrepublic.org/scenario-the-classification.html"
+    },
+    {
+      "path": "scenario-the-coalition.html",
+      "status": 200,
+      "bytes": 18442,
+      "sha256": "9b85d7b575c7ebeb4bb1c78d49ab6718e12a8986ed09dc0db96b1b54074d5986",
+      "url": "https://thefederatedrepublic.org/scenario-the-coalition.html"
+    },
+    {
+      "path": "scenario-the-contraction.html",
+      "status": 200,
+      "bytes": 22117,
+      "sha256": "65c1ae6bf8bfdc9385fd9a36a6263b1e121d04ee479653c878f0c099b5ef78b6",
+      "url": "https://thefederatedrepublic.org/scenario-the-contraction.html"
+    },
+    {
+      "path": "scenario-the-departure.html",
+      "status": 200,
+      "bytes": 21606,
+      "sha256": "587ca12a6e452017e3e8effdf2ddac0b543a561184f07fac6d78abc124965d75",
+      "url": "https://thefederatedrepublic.org/scenario-the-departure.html"
+    },
+    {
+      "path": "scenario-the-direction.html",
+      "status": 200,
+      "bytes": 26196,
+      "sha256": "c041b4026604d0e14585569766e97b40e456506eb31ac4c6f5840e9731333c13",
+      "url": "https://thefederatedrepublic.org/scenario-the-direction.html"
+    },
+    {
+      "path": "scenario-the-first-twelve-years.html",
+      "status": 200,
+      "bytes": 49048,
+      "sha256": "d1c522d104a9e3435306fd2eb5cfb731ca0519611eddd09128b71d4f4136c12b",
+      "url": "https://thefederatedrepublic.org/scenario-the-first-twelve-years.html"
+    },
+    {
+      "path": "scenario-the-first-war.html",
+      "status": 200,
+      "bytes": 32383,
+      "sha256": "0339ebbc2d8afabab186273e09c9208c97417d7f0054e74cfb3275d59b6a7103",
+      "url": "https://thefederatedrepublic.org/scenario-the-first-war.html"
+    },
+    {
+      "path": "scenario-the-formation.html",
+      "status": 200,
+      "bytes": 23068,
+      "sha256": "7580afa33f1c3ed7a713b9833eff430bdb7e844f33979261f3e735db9d9e0c7b",
+      "url": "https://thefederatedrepublic.org/scenario-the-formation.html"
+    },
+    {
+      "path": "scenario-the-formula.html",
+      "status": 200,
+      "bytes": 22116,
+      "sha256": "c0748a73c5830a105c0d7894342ad13fe301979164b284e7e15de4763bb1d706",
+      "url": "https://thefederatedrepublic.org/scenario-the-formula.html"
+    },
+    {
+      "path": "scenario-the-founding-choice.html",
+      "status": 200,
+      "bytes": 21234,
+      "sha256": "46054f2e683c61c30c708c871cd4d15a896b81efdb721c213d4dcee8c09ebb27",
+      "url": "https://thefederatedrepublic.org/scenario-the-founding-choice.html"
+    },
+    {
+      "path": "scenario-the-graduation.html",
+      "status": 200,
+      "bytes": 18033,
+      "sha256": "55901cbcb1c7477f26f34ef4f9c63a2275e0b8f44a3a3997d30bba50c9299996",
+      "url": "https://thefederatedrepublic.org/scenario-the-graduation.html"
+    },
+    {
+      "path": "scenario-the-holdout.html",
+      "status": 200,
+      "bytes": 22719,
+      "sha256": "a6779626daddbe369ed3f89c5eb36a17fdea2c7eeffba905e0881ae3fb631e4a",
+      "url": "https://thefederatedrepublic.org/scenario-the-holdout.html"
+    },
+    {
+      "path": "scenario-the-ledger.html",
+      "status": 200,
+      "bytes": 22509,
+      "sha256": "5f79f92a31ec4a0c771bed6317effdf8556af3b159e440160dd89e30dc355320",
+      "url": "https://thefederatedrepublic.org/scenario-the-ledger.html"
+    },
+    {
+      "path": "scenario-the-map.html",
+      "status": 200,
+      "bytes": 15506,
+      "sha256": "acf076adfb9feef62318b1e12705d2adcefe08d8b0919daf8f2f9e6a77e503c6",
+      "url": "https://thefederatedrepublic.org/scenario-the-map.html"
+    },
+    {
+      "path": "scenario-the-objection.html",
+      "status": 200,
+      "bytes": 22673,
+      "sha256": "1a949fd4b1d2443d1411a1becdd18f15a9a44b9ac645eb08d89ca019b5ee132f",
+      "url": "https://thefederatedrepublic.org/scenario-the-objection.html"
+    },
+    {
+      "path": "scenario-the-order.html",
+      "status": 200,
+      "bytes": 22413,
+      "sha256": "72a23bb5da5acfbcf15d45eef93ea9fe47a607cee784c2e863d09443d2ee52e4",
+      "url": "https://thefederatedrepublic.org/scenario-the-order.html"
+    },
+    {
+      "path": "scenario-the-petition.html",
+      "status": 200,
+      "bytes": 15913,
+      "sha256": "bd646f686814a64e4e252240fd344af958f856d459f4f6c1ead62bd4c3da2789",
+      "url": "https://thefederatedrepublic.org/scenario-the-petition.html"
+    },
+    {
+      "path": "scenario-the-prior-claim.html",
+      "status": 200,
+      "bytes": 28680,
+      "sha256": "1d8992a3caa65a6ef94673d45c0f70dd030bb9d1963799e71b3209f9b3c09420",
+      "url": "https://thefederatedrepublic.org/scenario-the-prior-claim.html"
+    },
+    {
+      "path": "scenario-the-rate.html",
+      "status": 200,
+      "bytes": 15845,
+      "sha256": "c4b4a273cadf1551f845518a3b82d42a828e378a02b39dad438cd96965821da5",
+      "url": "https://thefederatedrepublic.org/scenario-the-rate.html"
+    },
+    {
+      "path": "scenario-the-redaction.html",
+      "status": 200,
+      "bytes": 19167,
+      "sha256": "26cfaad00dd24f44b84f28ea866b9f8b21fd992333f2cdcd06d07877c8514eb2",
+      "url": "https://thefederatedrepublic.org/scenario-the-redaction.html"
+    },
+    {
+      "path": "scenario-the-referendum.html",
+      "status": 200,
+      "bytes": 20494,
+      "sha256": "6f0f5fa5331e041cbc44f54be0a9871716a532bea57e1847179f41814a87b889",
+      "url": "https://thefederatedrepublic.org/scenario-the-referendum.html"
+    },
+    {
+      "path": "scenario-the-restoration.html",
+      "status": 200,
+      "bytes": 17966,
+      "sha256": "e87abb272808e8badc4aec888761635338362b8f10b76f61832bd67264977dc1",
+      "url": "https://thefederatedrepublic.org/scenario-the-restoration.html"
+    },
+    {
+      "path": "scenario-the-return.html",
+      "status": 200,
+      "bytes": 33279,
+      "sha256": "5566e4af64b9f4e9435160bc0a9844c2250d047e33258781f2e9c01dd67e731b",
+      "url": "https://thefederatedrepublic.org/scenario-the-return.html"
+    },
+    {
+      "path": "scenario-the-second-path.html",
+      "status": 200,
+      "bytes": 22358,
+      "sha256": "bea40235b1e8a04c2750e039ac166a9e5163c8ab029788b453b8b524fda2860b",
+      "url": "https://thefederatedrepublic.org/scenario-the-second-path.html"
+    },
+    {
+      "path": "scenario-the-second-renewal.html",
+      "status": 200,
+      "bytes": 19769,
+      "sha256": "d1e81e369fa15ee692fc501373ef1af1ae2f9505a010a16f2377de5b8a174036",
+      "url": "https://thefederatedrepublic.org/scenario-the-second-renewal.html"
+    },
+    {
+      "path": "scenario-the-severed-clause.html",
+      "status": 200,
+      "bytes": 19195,
+      "sha256": "82a7ed320e01aa335b36c6b7f0dd468963683c69761dbf448953da480372ec21",
+      "url": "https://thefederatedrepublic.org/scenario-the-severed-clause.html"
+    },
+    {
+      "path": "scenario-the-sixty-percent.html",
+      "status": 200,
+      "bytes": 19945,
+      "sha256": "6a13618eb161c68428845e01661e0777f58088a4027d84dd1a7e60244b42fed0",
+      "url": "https://thefederatedrepublic.org/scenario-the-sixty-percent.html"
+    },
+    {
+      "path": "scenario-the-suspension.html",
+      "status": 200,
+      "bytes": 20521,
+      "sha256": "69f076aa441392dadcd8c888b8d919747e7288b8c7a3a4e227fc2ac47f968e34",
+      "url": "https://thefederatedrepublic.org/scenario-the-suspension.html"
+    },
+    {
+      "path": "scenario-the-third-strike.html",
+      "status": 200,
+      "bytes": 19765,
+      "sha256": "e95ee53a9796f7c6272043771bf430437f39bb75a5a9d7e0eda46f9fa7fca1e6",
+      "url": "https://thefederatedrepublic.org/scenario-the-third-strike.html"
+    },
+    {
+      "path": "scenario-the-three-hours.html",
+      "status": 200,
+      "bytes": 14267,
+      "sha256": "8c4647425fdf5a251d84c7e2f0ded318f91dfc6d487f853769f8914d5f61e48b",
+      "url": "https://thefederatedrepublic.org/scenario-the-three-hours.html"
+    },
+    {
+      "path": "scenario-the-three-recusals.html",
+      "status": 200,
+      "bytes": 25637,
+      "sha256": "da91ba97a247641772217c6b88e7e47f8539e854161224ad8594c16402641fc4",
+      "url": "https://thefederatedrepublic.org/scenario-the-three-recusals.html"
+    },
+    {
+      "path": "scenario-the-twenty-four-hours.html",
+      "status": 200,
+      "bytes": 29139,
+      "sha256": "623fe2a0ec5781d70cf1bf19879ea7d8a24195b59f7c11f2436b38ae2544252d",
+      "url": "https://thefederatedrepublic.org/scenario-the-twenty-four-hours.html"
+    },
+    {
+      "path": "scenario-the-unremovable.html",
+      "status": 200,
+      "bytes": 21204,
+      "sha256": "f39096dd0820851fe639160e8b9aeceab8feaaa41d0eb6bce1f1e96e7af8391f",
+      "url": "https://thefederatedrepublic.org/scenario-the-unremovable.html"
+    },
+    {
+      "path": "scenario-the-vote.html",
+      "status": 200,
+      "bytes": 21897,
+      "sha256": "b81f8135114c7874f17e07820140dd81cb44f94f4ed93b0bd6e15f978a29f6ee",
+      "url": "https://thefederatedrepublic.org/scenario-the-vote.html"
+    },
+    {
+      "path": "scenario-the-waiver.html",
+      "status": 200,
+      "bytes": 21597,
+      "sha256": "72238a3365f6688daaf47c5aeb978632bebd29cf09533803e27a21a5f1f554e3",
+      "url": "https://thefederatedrepublic.org/scenario-the-waiver.html"
+    },
+    {
+      "path": "scenario-void-exception.html",
+      "status": 200,
+      "bytes": 15823,
+      "sha256": "34eaae04f5ddfc4461e751f5c1ad19f87c812dff43c12520d0a45f2b73625664",
+      "url": "https://thefederatedrepublic.org/scenario-void-exception.html"
+    },
+    {
+      "path": "scenario-winning-bid.html",
+      "status": 200,
+      "bytes": 9912,
+      "sha256": "3983883cd63b26a19ac1326be32320104917500e39c9eb09dd410313f7d3e427",
+      "url": "https://thefederatedrepublic.org/scenario-winning-bid.html"
+    },
+    {
+      "path": "scenarios.html",
+      "status": 200,
+      "bytes": 49073,
+      "sha256": "40842eb7373c41f5f6602dea0a124f018c2931ac8c3458ce4be634213cf3aaae",
+      "url": "https://thefederatedrepublic.org/scenarios.html"
+    },
+    {
+      "path": "search-index.js",
+      "status": 200,
+      "bytes": 158958,
+      "sha256": "68944c81a1eb63760abe3bc19fd0bdbc8d0340ef3635d52c03da416ab9ec0d8e",
+      "url": "https://thefederatedrepublic.org/search-index.js"
+    },
+    {
+      "path": "site.css",
+      "status": 200,
+      "bytes": 83432,
+      "sha256": "77a23b9baec44df8f7543153801670171dc23479416c33d445846cbf61ecaf5d",
+      "url": "https://thefederatedrepublic.org/site.css"
+    },
+    {
+      "path": "sources.html",
+      "status": 200,
+      "bytes": 46340,
+      "sha256": "eab9d018aef30f882d0d30b794ad9311010ca0f60efdc91082a9dedfae2675a5",
+      "url": "https://thefederatedrepublic.org/sources.html"
+    },
+    {
+      "path": "state-constitution-aldenmere.html",
+      "status": 200,
+      "bytes": 61580,
+      "sha256": "f20fe03ecf2ff65638d7fb7986b426fbef7054ef52258db118686742a3b6ccbb",
+      "url": "https://thefederatedrepublic.org/state-constitution-aldenmere.html"
+    },
+    {
+      "path": "state-constitution-arvane.html",
+      "status": 200,
+      "bytes": 90460,
+      "sha256": "f3fc44122da84593a9eb35d76af1c610229e266ee0ce2f2bd44549aa19d7330a",
+      "url": "https://thefederatedrepublic.org/state-constitution-arvane.html"
+    },
+    {
+      "path": "state-constitution-caldenmere.html",
+      "status": 200,
+      "bytes": 68784,
+      "sha256": "3f3e03ab045af0837cc78fb817ea9a80c5e05f8a6bd989136aac526616b5ff21",
+      "url": "https://thefederatedrepublic.org/state-constitution-caldenmere.html"
+    },
+    {
+      "path": "state-constitution-corindal.html",
+      "status": 200,
+      "bytes": 72539,
+      "sha256": "119808b34941811381c04f3f0e252f49872d98965d2c52335cf6a858dc1b73a7",
+      "url": "https://thefederatedrepublic.org/state-constitution-corindal.html"
+    },
+    {
+      "path": "state-constitution-harren.html",
+      "status": 200,
+      "bytes": 86466,
+      "sha256": "6c0c4d672e2e687778a1924ef56bc557ef597d235b72596e192ee23be12bf17c",
+      "url": "https://thefederatedrepublic.org/state-constitution-harren.html"
+    },
+    {
+      "path": "state-constitution-kelvant.html",
+      "status": 200,
+      "bytes": 80832,
+      "sha256": "70b7fb6d3fbea3596c1e26dcf8cec9b1f456a46f6b773af8c37907a1497fdcf2",
+      "url": "https://thefederatedrepublic.org/state-constitution-kelvant.html"
+    },
+    {
+      "path": "state-constitution-merath.html",
+      "status": 200,
+      "bytes": 106337,
+      "sha256": "0e3548e0d31ed95e97f69dd163adb89f6bcb2912d79e7d851e0a1c69d9dafdaa",
+      "url": "https://thefederatedrepublic.org/state-constitution-merath.html"
+    },
+    {
+      "path": "state-constitution-norvane.html",
+      "status": 200,
+      "bytes": 97926,
+      "sha256": "d837332ff807ec6890191a093e1e9c9ac126a89df4f747f03b95710c5002f85a",
+      "url": "https://thefederatedrepublic.org/state-constitution-norvane.html"
+    },
+    {
+      "path": "state-constitution-orath.html",
+      "status": 200,
+      "bytes": 115319,
+      "sha256": "a0ba1232f01ab49e85962388238e1fe8258ca87b27613f18b8b4864c756804c1",
+      "url": "https://thefederatedrepublic.org/state-constitution-orath.html"
+    },
+    {
+      "path": "state-constitution-rhovane.html",
+      "status": 200,
+      "bytes": 94943,
+      "sha256": "8757b3eb8dab0c29c4ff5f06fd81233f73ebe97a18f7a98056df99e6f2060a46",
+      "url": "https://thefederatedrepublic.org/state-constitution-rhovane.html"
+    },
+    {
+      "path": "state-constitution-selvane.html",
+      "status": 200,
+      "bytes": 81000,
+      "sha256": "172ee80150f13dfbf8453af92dd855909a34716d666ec29babf81b7edb408862",
+      "url": "https://thefederatedrepublic.org/state-constitution-selvane.html"
+    },
+    {
+      "path": "state-constitution-varek.html",
+      "status": 200,
+      "bytes": 99427,
+      "sha256": "3677c4e4ef9b25a082bde8bb0427544e0155c5ca8192d3f8bc6ab78cb952995d",
+      "url": "https://thefederatedrepublic.org/state-constitution-varek.html"
+    },
+    {
+      "path": "state-tests.html",
+      "status": 200,
+      "bytes": 84045,
+      "sha256": "2009eaaecb0d9e2f2eec506d028215b6c506d90ab97ee9cff5a35433b8285d0e",
+      "url": "https://thefederatedrepublic.org/state-tests.html"
+    },
+    {
+      "path": "state-tests/aldenmere/aldenmere-test-01-the-budget-that-continued.html",
+      "status": 200,
+      "bytes": 9122,
+      "sha256": "b436b9829dcfc2d799d0b6ef8cd2a64cc957442320d9e1d8e0d36d7edaaedc9e",
+      "url": "https://thefederatedrepublic.org/state-tests/aldenmere/aldenmere-test-01-the-budget-that-continued.html"
+    },
+    {
+      "path": "state-tests/arvane/arvane-test-01-the-rule-that-ran-out.html",
+      "status": 200,
+      "bytes": 9572,
+      "sha256": "58f4ed5915ae4487e482eded5d2fd60897f42828a9d675780c932550c8a8afdf",
+      "url": "https://thefederatedrepublic.org/state-tests/arvane/arvane-test-01-the-rule-that-ran-out.html"
+    },
+    {
+      "path": "state-tests/caldenmere/caldenmere-test-01-the-minister-neither-could-appoint-alone.html",
+      "status": 200,
+      "bytes": 9262,
+      "sha256": "eea8d78f08c605fbdd4ffcb3b86ccd0cccb47a083134327444d968eb013fd2ec",
+      "url": "https://thefederatedrepublic.org/state-tests/caldenmere/caldenmere-test-01-the-minister-neither-could-appoint-alone.html"
+    },
+    {
+      "path": "state-tests/corindal/corindal-test-01-the-grant-the-governor-could-not-cancel.html",
+      "status": 200,
+      "bytes": 9661,
+      "sha256": "8c3093dfd17e8672ca97891ea1a615a0ff32e0c1967241663ce25425e1c8b16c",
+      "url": "https://thefederatedrepublic.org/state-tests/corindal/corindal-test-01-the-grant-the-governor-could-not-cancel.html"
+    },
+    {
+      "path": "state-tests/harren/harren-test-01-the-order-neither-executive-could-give.html",
+      "status": 200,
+      "bytes": 8856,
+      "sha256": "de755b413f7c2df5b37c93a01d19c9b111c4651cfd37c87d79a0eedce1b8f2f5",
+      "url": "https://thefederatedrepublic.org/state-tests/harren/harren-test-01-the-order-neither-executive-could-give.html"
+    },
+    {
+      "path": "state-tests/kelvant/kelvant-test-01-the-item-the-governor-crossed-out.html",
+      "status": 200,
+      "bytes": 9145,
+      "sha256": "1522a282577ab66d7c5c399719e9abf21eefdb36903871e6eb358210a67ee07c",
+      "url": "https://thefederatedrepublic.org/state-tests/kelvant/kelvant-test-01-the-item-the-governor-crossed-out.html"
+    },
+    {
+      "path": "state-tests/kelvant/kelvant-test-02-a-year-for-the-shore.html",
+      "status": 200,
+      "bytes": 12261,
+      "sha256": "832f8ecb2ced5ffeace6747882621bd192a4bad12ca445b427776b2eaa99fee8",
+      "url": "https://thefederatedrepublic.org/state-tests/kelvant/kelvant-test-02-a-year-for-the-shore.html"
+    },
+    {
+      "path": "state-tests/merath/merath-test-01-the-promise-at-the-foundry-gate.html",
+      "status": 200,
+      "bytes": 9585,
+      "sha256": "33e28f2df8dd2dfc4831ccb55d4a0a02acc8b4827fae69fc4bd2cc24320a9a63",
+      "url": "https://thefederatedrepublic.org/state-tests/merath/merath-test-01-the-promise-at-the-foundry-gate.html"
+    },
+    {
+      "path": "state-tests/norvane/norvane-test-01-the-fourteenth-day.html",
+      "status": 200,
+      "bytes": 9116,
+      "sha256": "18ba66910323cae244088b8a475bd7b7aa4c20a0d71f277073d88bd52860d481",
+      "url": "https://thefederatedrepublic.org/state-tests/norvane/norvane-test-01-the-fourteenth-day.html"
+    },
+    {
+      "path": "state-tests/orath/orath-test-01-the-petition-at-harvest.html",
+      "status": 200,
+      "bytes": 8760,
+      "sha256": "c48f9a1a92f1946c0ced6ff2fee2ca37f21e6f7e67d6b588c1b2dac7f13dbd60",
+      "url": "https://thefederatedrepublic.org/state-tests/orath/orath-test-01-the-petition-at-harvest.html"
+    },
+    {
+      "path": "state-tests/rhovane/rhovane-test-01-the-harbor-that-could-not-close.html",
+      "status": 200,
+      "bytes": 10318,
+      "sha256": "827bbc9f7666c49ea87c0314e0da0fec3a93b3f764888bb4340fcda3bf0599c6",
+      "url": "https://thefederatedrepublic.org/state-tests/rhovane/rhovane-test-01-the-harbor-that-could-not-close.html"
+    },
+    {
+      "path": "state-tests/selvane/selvane-test-01-the-appointment-no-one-could-block.html",
+      "status": 200,
+      "bytes": 9611,
+      "sha256": "eeb2011702d2adb5fb9df6ac8675c3259568fa2c360e93590a176817eccf8552",
+      "url": "https://thefederatedrepublic.org/state-tests/selvane/selvane-test-01-the-appointment-no-one-could-block.html"
+    },
+    {
+      "path": "state-tests/varek/varek-test-01-the-72-hour-flood.html",
+      "status": 200,
+      "bytes": 8620,
+      "sha256": "8db97ddce60b108850d5d520c6eda88c716ffb9d3ad7d1470046b93a3c2c5c96",
+      "url": "https://thefederatedrepublic.org/state-tests/varek/varek-test-01-the-72-hour-flood.html"
+    },
+    {
+      "path": "territory-morantine.html",
+      "status": 200,
+      "bytes": 11689,
+      "sha256": "8e8ffe91194f7ce86b9e920cc8c006451717e432b27daac706916819c1a368aa",
+      "url": "https://thefederatedrepublic.org/territory-morantine.html"
+    },
+    {
+      "path": "territory-solara.html",
+      "status": 200,
+      "bytes": 11255,
+      "sha256": "ffc168cff551468afe29799f2ba98d6e6d8ba00378a3752a0adb85fecd6fc665",
+      "url": "https://thefederatedrepublic.org/territory-solara.html"
+    },
+    {
+      "path": "torenthia-atlas.html",
+      "status": 200,
+      "bytes": 403,
+      "sha256": "525e7c7486183cc628cc696de7d5378d4645e3c3f9f8f0c40730c5869308622d",
+      "url": "https://thefederatedrepublic.org/torenthia-atlas.html"
+    },
+    {
+      "path": "torenthia-dispatch-ottoline-pree.html",
+      "status": 200,
+      "bytes": 14876,
+      "sha256": "1086c201f78949a06d11f9574de329c76d5c4b7d6e054fd802440adb61092f85",
+      "url": "https://thefederatedrepublic.org/torenthia-dispatch-ottoline-pree.html"
+    },
+    {
+      "path": "torenthia-dispatch-sarn.html",
+      "status": 200,
+      "bytes": 18366,
+      "sha256": "661c4a9dd998b8ca8068769d82ddf2fecd566247113d534954b335f41550ff9b",
+      "url": "https://thefederatedrepublic.org/torenthia-dispatch-sarn.html"
+    },
+    {
+      "path": "torenthia-dispatch-sollis.html",
+      "status": 200,
+      "bytes": 41663,
+      "sha256": "baddb9c4b28d4fa66fef5ecf45044278f3205ae67b9dd4849d1d3c07bf7e9663",
+      "url": "https://thefederatedrepublic.org/torenthia-dispatch-sollis.html"
+    },
+    {
+      "path": "torenthia-dispatch-vann.html",
+      "status": 200,
+      "bytes": 13864,
+      "sha256": "79e6aad73d9ace7fd1e97b5ab5b66ffc77bf38c00d2c92bb97354f76d979f9da",
+      "url": "https://thefederatedrepublic.org/torenthia-dispatch-vann.html"
+    },
+    {
+      "path": "torenthia-news-001.html",
+      "status": 200,
+      "bytes": 22670,
+      "sha256": "c40b52d9b6acaf29fc86c731148b451c951e6914eff89e2311116ffedd140182",
+      "url": "https://thefederatedrepublic.org/torenthia-news-001.html"
+    },
+    {
+      "path": "torenthia-news-002.html",
+      "status": 200,
+      "bytes": 15501,
+      "sha256": "635f1eccbd897e2a0f28a70f32da65a3a62523e6c17e7ae55dcc7f2de96cc530",
+      "url": "https://thefederatedrepublic.org/torenthia-news-002.html"
+    },
+    {
+      "path": "torenthia-news-003.html",
+      "status": 200,
+      "bytes": 17790,
+      "sha256": "e9d7f74920e8cd7a7bf62dd1a33fabd1afb4fec3f13a6f22ef3b8ce13ee96726",
+      "url": "https://thefederatedrepublic.org/torenthia-news-003.html"
+    },
+    {
+      "path": "torenthia-news-004.html",
+      "status": 200,
+      "bytes": 15334,
+      "sha256": "8b1b8e7ca034cec63611c1e147e5bfd3bdff395a6796ffe55069a2acc4be9054",
+      "url": "https://thefederatedrepublic.org/torenthia-news-004.html"
+    },
+    {
+      "path": "torenthia-news-005.html",
+      "status": 200,
+      "bytes": 21072,
+      "sha256": "cdb5b547636aee86d393c705bd4f4489aa63d0201c0344e73e4decb6d83bb472",
+      "url": "https://thefederatedrepublic.org/torenthia-news-005.html"
+    },
+    {
+      "path": "torenthia-news-006.html",
+      "status": 200,
+      "bytes": 18319,
+      "sha256": "fddc7e177e68b59d413417869e5df8d8e5cc19b9ef3f642f03acc9abc8ef72a6",
+      "url": "https://thefederatedrepublic.org/torenthia-news-006.html"
+    },
+    {
+      "path": "torenthia-news-007.html",
+      "status": 200,
+      "bytes": 21971,
+      "sha256": "f3918953ff1b4767ca2771a36544c2117a10fd34196705e33dfc3abe34c750da",
+      "url": "https://thefederatedrepublic.org/torenthia-news-007.html"
+    },
+    {
+      "path": "torenthia-news-008.html",
+      "status": 200,
+      "bytes": 19323,
+      "sha256": "233627222684c9f4e310c9308e1ab3f32d6ca6b53f4ae6886a2aedf919d53bb9",
+      "url": "https://thefederatedrepublic.org/torenthia-news-008.html"
+    },
+    {
+      "path": "torenthia-news-009.html",
+      "status": 200,
+      "bytes": 20490,
+      "sha256": "213e5506b7966674eef5b7d8f979b0402419aa901d6f352ece3f871e05606a63",
+      "url": "https://thefederatedrepublic.org/torenthia-news-009.html"
+    },
+    {
+      "path": "torenthia-news-010.html",
+      "status": 200,
+      "bytes": 19749,
+      "sha256": "8017c4537aa69b4d25807f8bfb9fd6c39b83e7380e198d7c94617127f4552d0a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-010.html"
+    },
+    {
+      "path": "torenthia-news-011.html",
+      "status": 200,
+      "bytes": 21307,
+      "sha256": "d4e443415298ce3ace60904a1663700570c031ade9811e96f612afb2343d029e",
+      "url": "https://thefederatedrepublic.org/torenthia-news-011.html"
+    },
+    {
+      "path": "torenthia-news-012.html",
+      "status": 200,
+      "bytes": 15902,
+      "sha256": "2e3ac8eceff38d9b020d1c2cf571cc53859f65e3f8a8439b138ab2cded37c05f",
+      "url": "https://thefederatedrepublic.org/torenthia-news-012.html"
+    },
+    {
+      "path": "torenthia-news-013.html",
+      "status": 200,
+      "bytes": 16305,
+      "sha256": "ccaa5aef8f6a45f5866498fa2a02f2c6b2154c2a2fe6fd3666d7996bb1ce41de",
+      "url": "https://thefederatedrepublic.org/torenthia-news-013.html"
+    },
+    {
+      "path": "torenthia-news-014.html",
+      "status": 200,
+      "bytes": 18468,
+      "sha256": "2dfcab311fe22e4a70f1137badc7205e30a7c0519d3b38c5f946d8c568eb3d6b",
+      "url": "https://thefederatedrepublic.org/torenthia-news-014.html"
+    },
+    {
+      "path": "torenthia-news-015.html",
+      "status": 200,
+      "bytes": 16611,
+      "sha256": "9dc4f59839caded8dfe50559a196d7239aba23c45749c946b8cbacc744f05b80",
+      "url": "https://thefederatedrepublic.org/torenthia-news-015.html"
+    },
+    {
+      "path": "torenthia-news-016.html",
+      "status": 200,
+      "bytes": 18700,
+      "sha256": "6b48937e62fcb0a6daa1bb3c1d38cfaba6b7f8ccf4111441c5088f097181f4a0",
+      "url": "https://thefederatedrepublic.org/torenthia-news-016.html"
+    },
+    {
+      "path": "torenthia-news-017.html",
+      "status": 200,
+      "bytes": 17703,
+      "sha256": "895a564c531df48a6bf15675c50c1830b567302a99273927233c11f57cd86538",
+      "url": "https://thefederatedrepublic.org/torenthia-news-017.html"
+    },
+    {
+      "path": "torenthia-news-018.html",
+      "status": 200,
+      "bytes": 16830,
+      "sha256": "a4d94873256dd421664fb09d20c95540cfa30ea4da997c9a44078227e02c214f",
+      "url": "https://thefederatedrepublic.org/torenthia-news-018.html"
+    },
+    {
+      "path": "torenthia-news-019.html",
+      "status": 200,
+      "bytes": 16813,
+      "sha256": "28eaeb6633640150b1f1440d31fbc1e0efdaf58a102bb49333266ea80bf69008",
+      "url": "https://thefederatedrepublic.org/torenthia-news-019.html"
+    },
+    {
+      "path": "torenthia-news-020.html",
+      "status": 200,
+      "bytes": 18401,
+      "sha256": "b62906422b22bf22809e0e7326d1f657cddd199bb7c33efc25b018120b4dd6d0",
+      "url": "https://thefederatedrepublic.org/torenthia-news-020.html"
+    },
+    {
+      "path": "torenthia-news-021.html",
+      "status": 200,
+      "bytes": 15184,
+      "sha256": "47bd075d2f24adaaee9c2b5872259a142b58354fdcaf7636eda7d1b79b126087",
+      "url": "https://thefederatedrepublic.org/torenthia-news-021.html"
+    },
+    {
+      "path": "torenthia-news-022.html",
+      "status": 200,
+      "bytes": 19579,
+      "sha256": "428c371097681c48ecffeec1db7657f31a2ff439f59ec1e75f84e5eaa5351309",
+      "url": "https://thefederatedrepublic.org/torenthia-news-022.html"
+    },
+    {
+      "path": "torenthia-news-023.html",
+      "status": 200,
+      "bytes": 15303,
+      "sha256": "c3183701bd10235312ad459ca54c0a9a3ea11ea3e3ae4e7d69411a5f037aa965",
+      "url": "https://thefederatedrepublic.org/torenthia-news-023.html"
+    },
+    {
+      "path": "torenthia-news-024.html",
+      "status": 200,
+      "bytes": 16584,
+      "sha256": "b12788c92124015cfec1de36ed7fa310acd5d6febe994d102e37858ed326b5f8",
+      "url": "https://thefederatedrepublic.org/torenthia-news-024.html"
+    },
+    {
+      "path": "torenthia-news-025.html",
+      "status": 200,
+      "bytes": 15870,
+      "sha256": "55e897f0b7d56edefa949804108a85fc97f3750451a082ace17ee73d8015148a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-025.html"
+    },
+    {
+      "path": "torenthia-news-026.html",
+      "status": 200,
+      "bytes": 14639,
+      "sha256": "8cf70911a6065b2ce23ce02f2c6d94e9dadd41bb11789b3a1e1ef5224ff0dc08",
+      "url": "https://thefederatedrepublic.org/torenthia-news-026.html"
+    },
+    {
+      "path": "torenthia-news-027.html",
+      "status": 200,
+      "bytes": 16809,
+      "sha256": "662cea60b7dd19ea25a1222846f8b0d2e30cf7b8484c56daaa5215cd6c556917",
+      "url": "https://thefederatedrepublic.org/torenthia-news-027.html"
+    },
+    {
+      "path": "torenthia-news-028.html",
+      "status": 200,
+      "bytes": 14920,
+      "sha256": "e213467243c3a8d69a6a6e9f29290336e90efd6df2586cbc9f50e1dd07d375fb",
+      "url": "https://thefederatedrepublic.org/torenthia-news-028.html"
+    },
+    {
+      "path": "torenthia-news-029.html",
+      "status": 200,
+      "bytes": 16734,
+      "sha256": "0490f6c75af63a82fb241dc880bcb5cc5374d3aa3a286bc2139556b7f4e57829",
+      "url": "https://thefederatedrepublic.org/torenthia-news-029.html"
+    },
+    {
+      "path": "torenthia-news-030.html",
+      "status": 200,
+      "bytes": 17202,
+      "sha256": "36a14b83f239a081e4977574304a91ff2a9be44a0fbd966bd3862967f2a8e8df",
+      "url": "https://thefederatedrepublic.org/torenthia-news-030.html"
+    },
+    {
+      "path": "torenthia-news-031.html",
+      "status": 200,
+      "bytes": 16898,
+      "sha256": "0b3e31692de26ff3e064f1091c2f153d7344ad8b2ef420d3012aaea33839c174",
+      "url": "https://thefederatedrepublic.org/torenthia-news-031.html"
+    },
+    {
+      "path": "torenthia-news-032.html",
+      "status": 200,
+      "bytes": 20936,
+      "sha256": "26a23a234cf19edace064a2ba3041c4e82db4bebba974a3e46bd5c1ef9b5281a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-032.html"
+    },
+    {
+      "path": "torenthia-news-033.html",
+      "status": 200,
+      "bytes": 18857,
+      "sha256": "c46149cfe319e102201e5a14fdce335daea7221463ebd8b201a9efa95ddffd69",
+      "url": "https://thefederatedrepublic.org/torenthia-news-033.html"
+    },
+    {
+      "path": "torenthia-news-034.html",
+      "status": 200,
+      "bytes": 15772,
+      "sha256": "f5aa7aec437b86856ab01aad3faa47f72356df9bb78ba7253be5b766880555fe",
+      "url": "https://thefederatedrepublic.org/torenthia-news-034.html"
+    },
+    {
+      "path": "torenthia-news-035.html",
+      "status": 200,
+      "bytes": 17246,
+      "sha256": "58268ec6c9ddb20050719abc42e7827e55fc8ff3cf31b2ae8734faadf3822aa2",
+      "url": "https://thefederatedrepublic.org/torenthia-news-035.html"
+    },
+    {
+      "path": "torenthia-news-036.html",
+      "status": 200,
+      "bytes": 16684,
+      "sha256": "5cbf8f4d025994fbe467c20bdcbcd131401ae0dea242fe477757ddd885fc2b55",
+      "url": "https://thefederatedrepublic.org/torenthia-news-036.html"
+    },
+    {
+      "path": "torenthia-news-037.html",
+      "status": 200,
+      "bytes": 13113,
+      "sha256": "49db0db35e7f4f418ca9a2db3a8030e8309d1fde69794b0408b0c7429207458f",
+      "url": "https://thefederatedrepublic.org/torenthia-news-037.html"
+    },
+    {
+      "path": "torenthia-news-038.html",
+      "status": 200,
+      "bytes": 23195,
+      "sha256": "038b7f2f1496a87b5ba3f2e15b7151d59e8158693e3a905e2d4371f013ffb286",
+      "url": "https://thefederatedrepublic.org/torenthia-news-038.html"
+    },
+    {
+      "path": "torenthia-news-039.html",
+      "status": 200,
+      "bytes": 18658,
+      "sha256": "25158e54d3668c353565fef393f0ab80404e6d2fe555ddaa81a4ef4e82f4f032",
+      "url": "https://thefederatedrepublic.org/torenthia-news-039.html"
+    },
+    {
+      "path": "torenthia-news-040.html",
+      "status": 200,
+      "bytes": 21662,
+      "sha256": "d2c71517493ba94df5e6894dc1ba731f3a3e82bd3639a90788ce009b4882e867",
+      "url": "https://thefederatedrepublic.org/torenthia-news-040.html"
+    },
+    {
+      "path": "torenthia-news-041.html",
+      "status": 200,
+      "bytes": 27402,
+      "sha256": "ab4b5b396c4ccb107c4c847625e6957fb943f50d3c2f18f4153bd189c1e81b88",
+      "url": "https://thefederatedrepublic.org/torenthia-news-041.html"
+    },
+    {
+      "path": "torenthia-news-042.html",
+      "status": 200,
+      "bytes": 24432,
+      "sha256": "bae14855b375c162a31bcd304d4f0b7a62730fe83c541934c281cd2c5c3cd178",
+      "url": "https://thefederatedrepublic.org/torenthia-news-042.html"
+    },
+    {
+      "path": "torenthia-news-043.html",
+      "status": 200,
+      "bytes": 19618,
+      "sha256": "35194ca5ec88755d12047e1ade030153b464470200acd046951cbe0fd565b18c",
+      "url": "https://thefederatedrepublic.org/torenthia-news-043.html"
+    },
+    {
+      "path": "torenthia-news-044.html",
+      "status": 200,
+      "bytes": 22748,
+      "sha256": "5069fb0813c1e4c3c4e63aa6a9ed919cf406a76e2f8d979c181e45df692b1695",
+      "url": "https://thefederatedrepublic.org/torenthia-news-044.html"
+    },
+    {
+      "path": "torenthia-news-045.html",
+      "status": 200,
+      "bytes": 19809,
+      "sha256": "64c7947c4d921daabebdc95b6ae9fb1e7fd55f080bdcfafe2e4c5599fa662d22",
+      "url": "https://thefederatedrepublic.org/torenthia-news-045.html"
+    },
+    {
+      "path": "torenthia-news-046.html",
+      "status": 200,
+      "bytes": 17414,
+      "sha256": "6039d843dfa4e93bad16e05dbd89bc2d6a4f66bcfc18386634b7cf431ed8bcbb",
+      "url": "https://thefederatedrepublic.org/torenthia-news-046.html"
+    },
+    {
+      "path": "torenthia-news-047.html",
+      "status": 200,
+      "bytes": 12601,
+      "sha256": "34836c1d249412f25cc44accbd9185d91cd41ea7381e82fa09224f1aadf033e9",
+      "url": "https://thefederatedrepublic.org/torenthia-news-047.html"
+    },
+    {
+      "path": "torenthia-news-048.html",
+      "status": 200,
+      "bytes": 17273,
+      "sha256": "c1f70487b0395a62f4ab965cfee62a73d88dcaa75ec54bcd6f8aa35aed32a0c6",
+      "url": "https://thefederatedrepublic.org/torenthia-news-048.html"
+    },
+    {
+      "path": "torenthia-news-049.html",
+      "status": 200,
+      "bytes": 16600,
+      "sha256": "e85e2c7a7441b01f9a726249ae7a7f6c7893ab969d8f91ae80751749d7617da1",
+      "url": "https://thefederatedrepublic.org/torenthia-news-049.html"
+    },
+    {
+      "path": "torenthia-news-050.html",
+      "status": 200,
+      "bytes": 16393,
+      "sha256": "d9edbd171372622ff9b72290ab407d86d123dea78fbf3d009c50b09e83c1196f",
+      "url": "https://thefederatedrepublic.org/torenthia-news-050.html"
+    },
+    {
+      "path": "torenthia-news-051.html",
+      "status": 200,
+      "bytes": 16450,
+      "sha256": "c54402e5568a302e62a26c3040901ac4d949eb31b07c3c88b615f27ab3332ee0",
+      "url": "https://thefederatedrepublic.org/torenthia-news-051.html"
+    },
+    {
+      "path": "torenthia-news-052.html",
+      "status": 200,
+      "bytes": 18888,
+      "sha256": "de5c307a6e9045f35900d9f65b1ea9a08246e23e87fa224d9b77f45b96a10af5",
+      "url": "https://thefederatedrepublic.org/torenthia-news-052.html"
+    },
+    {
+      "path": "torenthia-news-053.html",
+      "status": 200,
+      "bytes": 15842,
+      "sha256": "af7a2790af84a91ab15586807c029ddc3811eeed2659bc9205d3928d0bf7912d",
+      "url": "https://thefederatedrepublic.org/torenthia-news-053.html"
+    },
+    {
+      "path": "torenthia-news-054.html",
+      "status": 200,
+      "bytes": 16099,
+      "sha256": "a2769bc446d8286a54c2fcc4c418b9ec6afcea07d91639123f2b4e444bcc097a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-054.html"
+    },
+    {
+      "path": "torenthia-news-055.html",
+      "status": 200,
+      "bytes": 16750,
+      "sha256": "962772e54353e37d9c80b30474933ae7d09efc2d1d7a592c71ee8728d77ac3bc",
+      "url": "https://thefederatedrepublic.org/torenthia-news-055.html"
+    },
+    {
+      "path": "torenthia-news-056.html",
+      "status": 200,
+      "bytes": 12069,
+      "sha256": "43c3abc422b685cf261a0f49581145325e16e1a26501576e0fc35928413f89b7",
+      "url": "https://thefederatedrepublic.org/torenthia-news-056.html"
+    },
+    {
+      "path": "torenthia-news-057.html",
+      "status": 200,
+      "bytes": 18923,
+      "sha256": "ec94c85237690b5c6f3e942153954748d6d484b902b7e58db9627c0d61697c93",
+      "url": "https://thefederatedrepublic.org/torenthia-news-057.html"
+    },
+    {
+      "path": "torenthia-news-058.html",
+      "status": 200,
+      "bytes": 14799,
+      "sha256": "6492024f175de012601c96b37a21cb87f1f95307c84d790dae539f6c7696eb73",
+      "url": "https://thefederatedrepublic.org/torenthia-news-058.html"
+    },
+    {
+      "path": "torenthia-news-059.html",
+      "status": 200,
+      "bytes": 17908,
+      "sha256": "b2c1a6fde07d22c61f26bcd7a3a33e86fe88291e7c9fae84867efb6387875d56",
+      "url": "https://thefederatedrepublic.org/torenthia-news-059.html"
+    },
+    {
+      "path": "torenthia-news-060.html",
+      "status": 200,
+      "bytes": 15937,
+      "sha256": "1fbb82aa56b53a30d015c2af6875176d3dbee294117f5724bbd3df9adb71b913",
+      "url": "https://thefederatedrepublic.org/torenthia-news-060.html"
+    },
+    {
+      "path": "torenthia-news-061.html",
+      "status": 200,
+      "bytes": 15818,
+      "sha256": "8ac734ac68ee7f43bb4875b4a0d429fa6daf81dee431d91eb0c2c4972c63853e",
+      "url": "https://thefederatedrepublic.org/torenthia-news-061.html"
+    },
+    {
+      "path": "torenthia-news-062.html",
+      "status": 200,
+      "bytes": 15398,
+      "sha256": "741688e9fb6babb1de5bb8910dd7141451a1ac589a6c9969131de7327ba60e59",
+      "url": "https://thefederatedrepublic.org/torenthia-news-062.html"
+    },
+    {
+      "path": "torenthia-news-063.html",
+      "status": 200,
+      "bytes": 16308,
+      "sha256": "583f57933b0ff6e6e106d98ea380ebde2b1a529f2b7796b2fd21768905442fb5",
+      "url": "https://thefederatedrepublic.org/torenthia-news-063.html"
+    },
+    {
+      "path": "torenthia-news-064.html",
+      "status": 200,
+      "bytes": 15518,
+      "sha256": "aaa737b5c456dc952f17b3730e177469495a28a166e25a8d636a15c3c94b3ac0",
+      "url": "https://thefederatedrepublic.org/torenthia-news-064.html"
+    },
+    {
+      "path": "torenthia-news-065.html",
+      "status": 200,
+      "bytes": 19117,
+      "sha256": "dc730db4fd9c0bf4ba3009d4b897856d6a7af447fe526aaf205ce46219c4577b",
+      "url": "https://thefederatedrepublic.org/torenthia-news-065.html"
+    },
+    {
+      "path": "torenthia-news-066.html",
+      "status": 200,
+      "bytes": 11799,
+      "sha256": "dc2fa0d52608638182265c4c3db98bc604917ae659da1bc1959bf89cdae2cf6b",
+      "url": "https://thefederatedrepublic.org/torenthia-news-066.html"
+    },
+    {
+      "path": "torenthia-news-067.html",
+      "status": 200,
+      "bytes": 11802,
+      "sha256": "6a76873a7d3ddd655204b92ec500e60fe41f29db90e7b5b7d04d39b1e89db0aa",
+      "url": "https://thefederatedrepublic.org/torenthia-news-067.html"
+    },
+    {
+      "path": "torenthia-news-068.html",
+      "status": 200,
+      "bytes": 18526,
+      "sha256": "75b140dc8ee9332bb6986d59c5fef25f2e8aef0135ac73f153e90b7c8281848a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-068.html"
+    },
+    {
+      "path": "torenthia-news-069.html",
+      "status": 200,
+      "bytes": 15957,
+      "sha256": "75088f9680c1e2979125a3810c766607efde1c6901d8b1f13920ed761f799ee5",
+      "url": "https://thefederatedrepublic.org/torenthia-news-069.html"
+    },
+    {
+      "path": "torenthia-news-070.html",
+      "status": 200,
+      "bytes": 14676,
+      "sha256": "a09b4b44c6a48d5105f9d9356f7c08113c57546ca5fb8eb49318f2793b0975e8",
+      "url": "https://thefederatedrepublic.org/torenthia-news-070.html"
+    },
+    {
+      "path": "torenthia-news-071.html",
+      "status": 200,
+      "bytes": 10184,
+      "sha256": "409bc428a8878477147f22a92f13eaf27395678876b1ca61b9dca29dec81a772",
+      "url": "https://thefederatedrepublic.org/torenthia-news-071.html"
+    },
+    {
+      "path": "torenthia-news-072.html",
+      "status": 200,
+      "bytes": 13805,
+      "sha256": "050644891d6213cc7fef5b1326ca1701ebe511d89b85d9951e72465aa541aeb2",
+      "url": "https://thefederatedrepublic.org/torenthia-news-072.html"
+    },
+    {
+      "path": "torenthia-news-073.html",
+      "status": 200,
+      "bytes": 14918,
+      "sha256": "5e0e4c55ee7e19f8dfd26be6964df26d1dbff17b8ed0b77b7518842d2ae76bc6",
+      "url": "https://thefederatedrepublic.org/torenthia-news-073.html"
+    },
+    {
+      "path": "torenthia-news-074.html",
+      "status": 200,
+      "bytes": 9848,
+      "sha256": "f5b244923135ec0c8705d727e0b54487f7027e82d47ae03af905a5d781c9a15a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-074.html"
+    },
+    {
+      "path": "torenthia-news-075.html",
+      "status": 200,
+      "bytes": 15590,
+      "sha256": "97e7da6b2cca0b5c518900928873f7e7248ed763cacf496fd2fcfd11303a12b5",
+      "url": "https://thefederatedrepublic.org/torenthia-news-075.html"
+    },
+    {
+      "path": "torenthia-news-076.html",
+      "status": 200,
+      "bytes": 15438,
+      "sha256": "caa526f7894ffc452c4791b1f75c405818ddf0c5c0381522d2c4deb004207d79",
+      "url": "https://thefederatedrepublic.org/torenthia-news-076.html"
+    },
+    {
+      "path": "torenthia-news-077.html",
+      "status": 200,
+      "bytes": 12739,
+      "sha256": "98a0f310767a4c39eb65670510da4f827d4acfe85b7fd01e32efb5faf3430fc2",
+      "url": "https://thefederatedrepublic.org/torenthia-news-077.html"
+    },
+    {
+      "path": "torenthia-news-078.html",
+      "status": 200,
+      "bytes": 9416,
+      "sha256": "67f8ded6ca0e06cf58f40ecf21f69e5a31eb5c1acef882415e359b8798f2db2e",
+      "url": "https://thefederatedrepublic.org/torenthia-news-078.html"
+    },
+    {
+      "path": "torenthia-news-079.html",
+      "status": 200,
+      "bytes": 13801,
+      "sha256": "98e87290bfb15c041d971a33aebe972d0ef939981f2da6b11e7f28580170ab37",
+      "url": "https://thefederatedrepublic.org/torenthia-news-079.html"
+    },
+    {
+      "path": "torenthia-news-080.html",
+      "status": 200,
+      "bytes": 13627,
+      "sha256": "8cbbf9a036a62d4679e2420c99260aa440d0b02ad84502436f349b9dc1ad725e",
+      "url": "https://thefederatedrepublic.org/torenthia-news-080.html"
+    },
+    {
+      "path": "torenthia-news-081.html",
+      "status": 200,
+      "bytes": 15232,
+      "sha256": "3e91249f1d96fed55eea3bb99f981fb66a3d2957cb1574cb08d22811b539dca9",
+      "url": "https://thefederatedrepublic.org/torenthia-news-081.html"
+    },
+    {
+      "path": "torenthia-news-082.html",
+      "status": 200,
+      "bytes": 9150,
+      "sha256": "426310f97e8f7480f64211ec7888a3d48ad59f68e4ddd24196d5094b9f04c0b2",
+      "url": "https://thefederatedrepublic.org/torenthia-news-082.html"
+    },
+    {
+      "path": "torenthia-news-083.html",
+      "status": 200,
+      "bytes": 15654,
+      "sha256": "3286da2f4ed538dc2211b975ba0668e51e37399f1e52c1f03b47332972b23ae9",
+      "url": "https://thefederatedrepublic.org/torenthia-news-083.html"
+    },
+    {
+      "path": "torenthia-news-084.html",
+      "status": 200,
+      "bytes": 9827,
+      "sha256": "851c66258ebd0932ed88ef62e82d52510fa5dd28682cdbfe38ff874289799a6b",
+      "url": "https://thefederatedrepublic.org/torenthia-news-084.html"
+    },
+    {
+      "path": "torenthia-news-085.html",
+      "status": 200,
+      "bytes": 14719,
+      "sha256": "02817a4cf2dd97d6ee488c953709b102dfcb658282a670da0858c88b791c2a4a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-085.html"
+    },
+    {
+      "path": "torenthia-news-086.html",
+      "status": 200,
+      "bytes": 10918,
+      "sha256": "f06a08ea6868c023897d1500d69ea8d10df0ef8aea0e34c2c0eccb5a87a99b2e",
+      "url": "https://thefederatedrepublic.org/torenthia-news-086.html"
+    },
+    {
+      "path": "torenthia-news-087.html",
+      "status": 200,
+      "bytes": 11598,
+      "sha256": "e3c22d0dd1c2896ea312c6f5f8a9eff3818fc826fe8d4bab2de08bcc79c00e09",
+      "url": "https://thefederatedrepublic.org/torenthia-news-087.html"
+    },
+    {
+      "path": "torenthia-news-088.html",
+      "status": 200,
+      "bytes": 15729,
+      "sha256": "3ef37b2b95b1055522818838826da67da6b1d84308c406c0d9f789ff746deef5",
+      "url": "https://thefederatedrepublic.org/torenthia-news-088.html"
+    },
+    {
+      "path": "torenthia-news-089.html",
+      "status": 200,
+      "bytes": 15799,
+      "sha256": "5da37a787cf6de8290e5a86d6becc81c4a067a90ad500b9c82e0a0d11bfe862e",
+      "url": "https://thefederatedrepublic.org/torenthia-news-089.html"
+    },
+    {
+      "path": "torenthia-news-090.html",
+      "status": 200,
+      "bytes": 14952,
+      "sha256": "d266d787f3a17fb5758fa0a096ab310533efe634ae5a0e1818d3561e1b836724",
+      "url": "https://thefederatedrepublic.org/torenthia-news-090.html"
+    },
+    {
+      "path": "torenthia-news-091.html",
+      "status": 200,
+      "bytes": 12888,
+      "sha256": "88fcaafda9873b7c14580524a89a2813c72cb3ff9374184da2336f94f50bb419",
+      "url": "https://thefederatedrepublic.org/torenthia-news-091.html"
+    },
+    {
+      "path": "torenthia-news-092.html",
+      "status": 200,
+      "bytes": 18472,
+      "sha256": "63bda4a224252ce1fdc06346c11c8494b482b4a5ccc95a1a56934557399ec8c2",
+      "url": "https://thefederatedrepublic.org/torenthia-news-092.html"
+    },
+    {
+      "path": "torenthia-news-093.html",
+      "status": 200,
+      "bytes": 18132,
+      "sha256": "a21fdd0c5cf684b86128d5987effa211cf1b00a9f67f61ea336079978ca57f12",
+      "url": "https://thefederatedrepublic.org/torenthia-news-093.html"
+    },
+    {
+      "path": "torenthia-news-094.html",
+      "status": 200,
+      "bytes": 14070,
+      "sha256": "15680ada1e5da7101834667238eff2f89e75e78b25c3c685fd50db22b392cfd2",
+      "url": "https://thefederatedrepublic.org/torenthia-news-094.html"
+    },
+    {
+      "path": "torenthia-news-095.html",
+      "status": 200,
+      "bytes": 16120,
+      "sha256": "ce3dc670a5484de97da95f83776d813363527ec1bc2290dd95542a7dd5b49ca4",
+      "url": "https://thefederatedrepublic.org/torenthia-news-095.html"
+    },
+    {
+      "path": "torenthia-news-096.html",
+      "status": 200,
+      "bytes": 16180,
+      "sha256": "e5672763589e5ea9d4682fddb13148d66d108aa9164fe512a8fd328688fda520",
+      "url": "https://thefederatedrepublic.org/torenthia-news-096.html"
+    },
+    {
+      "path": "torenthia-news-097.html",
+      "status": 200,
+      "bytes": 16553,
+      "sha256": "a84ebc6c9b477fe8dca9466e3aa986fc2881c81a3515468c38785df21693107e",
+      "url": "https://thefederatedrepublic.org/torenthia-news-097.html"
+    },
+    {
+      "path": "torenthia-news-098.html",
+      "status": 200,
+      "bytes": 14103,
+      "sha256": "9266497c63a72496030e3f8c90ef91b8b685ee7677716a08dea5c120e362c69e",
+      "url": "https://thefederatedrepublic.org/torenthia-news-098.html"
+    },
+    {
+      "path": "torenthia-news-099.html",
+      "status": 200,
+      "bytes": 16949,
+      "sha256": "88b70e4268bff342716f9d68810a03dfb39bdff803326a225d1ce01a4328c37f",
+      "url": "https://thefederatedrepublic.org/torenthia-news-099.html"
+    },
+    {
+      "path": "torenthia-news-100.html",
+      "status": 200,
+      "bytes": 18669,
+      "sha256": "78533f45b2fc38ada6cc226627e96513c851e66660edcb611da4737375d3a16c",
+      "url": "https://thefederatedrepublic.org/torenthia-news-100.html"
+    },
+    {
+      "path": "torenthia-news-101.html",
+      "status": 200,
+      "bytes": 14124,
+      "sha256": "117936c0cf0531326024483f58af19cfc4e798dc340bc6da1f4ab8541eb1cd1b",
+      "url": "https://thefederatedrepublic.org/torenthia-news-101.html"
+    },
+    {
+      "path": "torenthia-news-102.html",
+      "status": 200,
+      "bytes": 15835,
+      "sha256": "e8825415fcdc78d3cd7b2051e551f22917d20ee4b0a60e6ad070065f744586ea",
+      "url": "https://thefederatedrepublic.org/torenthia-news-102.html"
+    },
+    {
+      "path": "torenthia-news-103.html",
+      "status": 200,
+      "bytes": 17057,
+      "sha256": "390fc6eae7ee2c47cdfd990d19de3891a23524285a1009a346a1bda5f8ea1f86",
+      "url": "https://thefederatedrepublic.org/torenthia-news-103.html"
+    },
+    {
+      "path": "torenthia-news-104.html",
+      "status": 200,
+      "bytes": 17495,
+      "sha256": "0b2b94ebe3f0c74a0ca04964738b04c5271eeeca2ef5b76546bdd64ec8056f8d",
+      "url": "https://thefederatedrepublic.org/torenthia-news-104.html"
+    },
+    {
+      "path": "torenthia-news-105.html",
+      "status": 200,
+      "bytes": 17507,
+      "sha256": "ac94ebaf91503a5bdf1a28ff7d2fea3c3ab046112407fb357afb650cef004e92",
+      "url": "https://thefederatedrepublic.org/torenthia-news-105.html"
+    },
+    {
+      "path": "torenthia-news-106.html",
+      "status": 200,
+      "bytes": 17100,
+      "sha256": "8ff4d8858b5a035b146e63cd7bdb0910b56a0dc146712588ae67202109d796d8",
+      "url": "https://thefederatedrepublic.org/torenthia-news-106.html"
+    },
+    {
+      "path": "torenthia-news-107.html",
+      "status": 200,
+      "bytes": 17814,
+      "sha256": "1a047e578c8e015a75d07a00cecc0932a7c30341db6947ec37a1707bc931500a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-107.html"
+    },
+    {
+      "path": "torenthia-news-108.html",
+      "status": 200,
+      "bytes": 18190,
+      "sha256": "6f7222d271917e355e1fddee7aac450b8d0e50412eb5bbf22512a1589116a9f3",
+      "url": "https://thefederatedrepublic.org/torenthia-news-108.html"
+    },
+    {
+      "path": "torenthia-news-109.html",
+      "status": 200,
+      "bytes": 16392,
+      "sha256": "4dcac82b26609bc141219fcdf519b2b8a6272b3751f46317562be5da017aac0f",
+      "url": "https://thefederatedrepublic.org/torenthia-news-109.html"
+    },
+    {
+      "path": "torenthia-news-110.html",
+      "status": 200,
+      "bytes": 15530,
+      "sha256": "aa0a843306003116fdf1fc852b5cbf60df4ae85cdd024ade4fbe2624a961ae8a",
+      "url": "https://thefederatedrepublic.org/torenthia-news-110.html"
+    },
+    {
+      "path": "torenthia-news-111.html",
+      "status": 200,
+      "bytes": 13845,
+      "sha256": "bafbb0d761f0985b5bddee482902f09ce39af49dbe85acbe07e6689eccef674b",
+      "url": "https://thefederatedrepublic.org/torenthia-news-111.html"
+    },
+    {
+      "path": "torenthia-news-112.html",
+      "status": 200,
+      "bytes": 14638,
+      "sha256": "3b0c42b7999d13ff136816667ea38900093a8c351521a6fb09ef0f14918365e5",
+      "url": "https://thefederatedrepublic.org/torenthia-news-112.html"
+    },
+    {
+      "path": "torenthia-news-113.html",
+      "status": 200,
+      "bytes": 12371,
+      "sha256": "b5f0aba34d9338f24d988a509e71f4adb3c729e1dbcefca15b2723cde7c5181c",
+      "url": "https://thefederatedrepublic.org/torenthia-news-113.html"
+    },
+    {
+      "path": "torenthia-news-114.html",
+      "status": 200,
+      "bytes": 10725,
+      "sha256": "76210b67ab7763e813e94cbfa251eea4ed56a8aeece3c71ecc8208f458f7de69",
+      "url": "https://thefederatedrepublic.org/torenthia-news-114.html"
+    },
+    {
+      "path": "torenthia-news-115.html",
+      "status": 200,
+      "bytes": 11390,
+      "sha256": "20c03df4d2b2a0fad3d12716e758718deb0c3fc2263b69276a7ace3aaab20b8d",
+      "url": "https://thefederatedrepublic.org/torenthia-news-115.html"
+    },
+    {
+      "path": "torenthia-news-116.html",
+      "status": 200,
+      "bytes": 14018,
+      "sha256": "59d0a6b7cb52215ca48bad49e208d1ce336b105d0269e437d1de05ffc8196ef0",
+      "url": "https://thefederatedrepublic.org/torenthia-news-116.html"
+    },
+    {
+      "path": "torenthia-news-117.html",
+      "status": 200,
+      "bytes": 13103,
+      "sha256": "27bde3a85d2a3c0334ab3beda816ecb8c62dd017c4f6a0d5c91c5db86396c9f6",
+      "url": "https://thefederatedrepublic.org/torenthia-news-117.html"
+    },
+    {
+      "path": "torenthia-news-118.html",
+      "status": 200,
+      "bytes": 20517,
+      "sha256": "a4587faed325c669dcdaeafc6de3701adec23523b0b773c8dfb2b99b53af4be1",
+      "url": "https://thefederatedrepublic.org/torenthia-news-118.html"
+    },
+    {
+      "path": "torenthia-news-119.html",
+      "status": 200,
+      "bytes": 13361,
+      "sha256": "4daf78582829c453dbb015a86d31be223e3c826f8ba75598a26ae7dcae893431",
+      "url": "https://thefederatedrepublic.org/torenthia-news-119.html"
+    },
+    {
+      "path": "torenthia-news-120.html",
+      "status": 200,
+      "bytes": 11965,
+      "sha256": "b6fbca6a782b73bdfb794dbe0ff0ba71bbac4de387e34c9b4de1d3be8bcd67f9",
+      "url": "https://thefederatedrepublic.org/torenthia-news-120.html"
+    },
+    {
+      "path": "torenthia-nrs-001.html",
+      "status": 200,
+      "bytes": 21855,
+      "sha256": "e1fd68771749ce30add32f7876373fc08c6b12ce5bffb90c1d9b220f7b38588c",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-001.html"
+    },
+    {
+      "path": "torenthia-nrs-002.html",
+      "status": 200,
+      "bytes": 19605,
+      "sha256": "75454c9a27e0d644a468fe9c800cb6d6b08e3009e8735bb36e8c1fb04741c74f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-002.html"
+    },
+    {
+      "path": "torenthia-nrs-003.html",
+      "status": 200,
+      "bytes": 21330,
+      "sha256": "07e677675613156f287504e395c0768c9ce68ed07c95795be8cc9c9ce536cc10",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-003.html"
+    },
+    {
+      "path": "torenthia-nrs-004.html",
+      "status": 200,
+      "bytes": 20900,
+      "sha256": "dbaef31dfa6f74e20cff410b5a10ce7cc14ee549d1e3002cb71874c890c0befe",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-004.html"
+    },
+    {
+      "path": "torenthia-nrs-005.html",
+      "status": 200,
+      "bytes": 24232,
+      "sha256": "41d20c5536bea6000af8c4ecbc5ea3c88494af72249f456bf00b06cb14e4b679",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-005.html"
+    },
+    {
+      "path": "torenthia-nrs-006.html",
+      "status": 200,
+      "bytes": 19563,
+      "sha256": "a311e4757ac7b7599f2158acb96a61849e95f4607ec8675312074fecb7aee0d3",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-006.html"
+    },
+    {
+      "path": "torenthia-nrs-007.html",
+      "status": 200,
+      "bytes": 15310,
+      "sha256": "ab8ef42c7d6a499f5ecee403c8d8151a1b666758b82cf0390529b6c6828d9cf7",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-007.html"
+    },
+    {
+      "path": "torenthia-nrs-008.html",
+      "status": 200,
+      "bytes": 15653,
+      "sha256": "55cfa5883bed6b3f4b5e0d9e9cadfaf725a35d750a247d7781a6ec66fc02f1d4",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-008.html"
+    },
+    {
+      "path": "torenthia-nrs-009.html",
+      "status": 200,
+      "bytes": 20526,
+      "sha256": "6d33551be43d6abe1904f8e2b1d5c644db719b7c0d77c23af93172ab95de4abd",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-009.html"
+    },
+    {
+      "path": "torenthia-nrs-010.html",
+      "status": 200,
+      "bytes": 18175,
+      "sha256": "1b2f70aab232006d941db8c84a08694e68f3c1970de021fdd11997c650ab3b10",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-010.html"
+    },
+    {
+      "path": "torenthia-nrs-011.html",
+      "status": 200,
+      "bytes": 19237,
+      "sha256": "661e9e29f47319a4a1b8aac00122baad7461d4a6f6992f69be2c1454740bc885",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-011.html"
+    },
+    {
+      "path": "torenthia-nrs-012.html",
+      "status": 200,
+      "bytes": 17278,
+      "sha256": "d2f226ac16f2ca83bc6e00d67e221a7613d2053fa2c3b5545bf87bae310d3495",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-012.html"
+    },
+    {
+      "path": "torenthia-nrs-013.html",
+      "status": 200,
+      "bytes": 21607,
+      "sha256": "c2e35b434c1aa7c643c58a2e4f70d830a9cc3e59384a674447a63f44ef3795bb",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-013.html"
+    },
+    {
+      "path": "torenthia-nrs-014.html",
+      "status": 200,
+      "bytes": 19953,
+      "sha256": "105f0ed4243ea6ae7eb3e3a86e55fab35483aea66f5eacf0eda867964a5abc72",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-014.html"
+    },
+    {
+      "path": "torenthia-nrs-015.html",
+      "status": 200,
+      "bytes": 18158,
+      "sha256": "a75ca725a518ef67e940f826703831607082397418e2a537b3fa17627e23063c",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-015.html"
+    },
+    {
+      "path": "torenthia-nrs-016.html",
+      "status": 200,
+      "bytes": 17708,
+      "sha256": "d34563a4b7c08f29b611dee5eabc252bd5cd37341dd7bc552db7f52484de6371",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-016.html"
+    },
+    {
+      "path": "torenthia-nrs-017.html",
+      "status": 200,
+      "bytes": 15982,
+      "sha256": "22f3fcc062590036b0b1e71958234cbee685aa6b3a0a2ffc84d1d4f3ee4c4ecc",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-017.html"
+    },
+    {
+      "path": "torenthia-nrs-018.html",
+      "status": 200,
+      "bytes": 15955,
+      "sha256": "c7a1f917cda6857579650fc838a58327fd95415a438c529808299b52c14bc74e",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-018.html"
+    },
+    {
+      "path": "torenthia-nrs-019.html",
+      "status": 200,
+      "bytes": 15168,
+      "sha256": "af1f8138906a7de6b25ac8ffa63c53fb9e726de486615afc7aa2e96dbd3aa953",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-019.html"
+    },
+    {
+      "path": "torenthia-nrs-020.html",
+      "status": 200,
+      "bytes": 12815,
+      "sha256": "b1d785fe0a6b064163cdeb9224019ec896e97a4801c875cefae571705689dc13",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-020.html"
+    },
+    {
+      "path": "torenthia-nrs-021.html",
+      "status": 200,
+      "bytes": 20141,
+      "sha256": "483c6bb2c8f87d91cb4ca9accb0804ba73f4d2b706085aa78a07eba845018442",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-021.html"
+    },
+    {
+      "path": "torenthia-nrs-022.html",
+      "status": 200,
+      "bytes": 16485,
+      "sha256": "928b03fc82251245bb8ed0037dd00a546c2a9bb84f312206fe515aa9d77c9204",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-022.html"
+    },
+    {
+      "path": "torenthia-nrs-023.html",
+      "status": 200,
+      "bytes": 15115,
+      "sha256": "eeaf409d0d580db9f1ae809f72ea732a5d1746ba78f52c8a0edcc1a195083a32",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-023.html"
+    },
+    {
+      "path": "torenthia-nrs-024.html",
+      "status": 200,
+      "bytes": 15815,
+      "sha256": "6818fec44410837e9bb3d574f9dadf9761e466232712ea97f797c4619618a87e",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-024.html"
+    },
+    {
+      "path": "torenthia-nrs-025.html",
+      "status": 200,
+      "bytes": 12798,
+      "sha256": "30f95eb4b9a03ee4d5780b9adb3554bcd7e70da1576d154e7bf942c8c65e3f9f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-025.html"
+    },
+    {
+      "path": "torenthia-nrs-026.html",
+      "status": 200,
+      "bytes": 12326,
+      "sha256": "0d5e954bd188e5fe33d61aaf7358cb706df5942f32a0b3a106ba069e1353bfd0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-026.html"
+    },
+    {
+      "path": "torenthia-nrs-027.html",
+      "status": 200,
+      "bytes": 15317,
+      "sha256": "77df61cdbf7af69a2c88868369bfb7b326503bc4c75ee8328697d5b653f879d1",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-027.html"
+    },
+    {
+      "path": "torenthia-nrs-028.html",
+      "status": 200,
+      "bytes": 15567,
+      "sha256": "b8e79cd229cdb3ff15a72ce4ee8431953736488855482faf59d38af3a30dd7b0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-028.html"
+    },
+    {
+      "path": "torenthia-nrs-029.html",
+      "status": 200,
+      "bytes": 15384,
+      "sha256": "edbb82e540b55d154d6ebfe9373d875b26553e39457b60dab25f53f359778226",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-029.html"
+    },
+    {
+      "path": "torenthia-nrs-030.html",
+      "status": 200,
+      "bytes": 15857,
+      "sha256": "4c689aa766169217b3bef09c47de67cf420f470f841e4c0962f48d6be71f876f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-030.html"
+    },
+    {
+      "path": "torenthia-nrs-031.html",
+      "status": 200,
+      "bytes": 12623,
+      "sha256": "e38d45ce944e7ad8a3aeb02b6a30abd2a25a31780a30dbd51c7e089c37a0e406",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-031.html"
+    },
+    {
+      "path": "torenthia-nrs-032.html",
+      "status": 200,
+      "bytes": 16409,
+      "sha256": "eafc63f6bd09fc70b74ad99c84bf5bd4f49e4d9361043c680575471e477e77aa",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-032.html"
+    },
+    {
+      "path": "torenthia-nrs-033.html",
+      "status": 200,
+      "bytes": 12106,
+      "sha256": "0f060bd456849250c8991e0fac9b6c4be18935772ed64bdd36b6af1b13a3b2f7",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-033.html"
+    },
+    {
+      "path": "torenthia-nrs-034.html",
+      "status": 200,
+      "bytes": 17404,
+      "sha256": "30077f44432a8c22d541c227031f779d34064e9e50de61068777fd18cd4ddff0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-034.html"
+    },
+    {
+      "path": "torenthia-nrs-035.html",
+      "status": 200,
+      "bytes": 14927,
+      "sha256": "7531adae90be84e29c6eafb974ef21be0c4885187d1d195a6d697fda20574eb8",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-035.html"
+    },
+    {
+      "path": "torenthia-nrs-036.html",
+      "status": 200,
+      "bytes": 16481,
+      "sha256": "31e43c38d4d462bcb7fb3a3860a9fa7275c207ff45d3477aa6a2f09f3739f4ce",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-036.html"
+    },
+    {
+      "path": "torenthia-nrs-037.html",
+      "status": 200,
+      "bytes": 16482,
+      "sha256": "df9f56f233d2d7adcd15d9319c9b1645ab5cb3f2897124c6ef05d17ba60b4110",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-037.html"
+    },
+    {
+      "path": "torenthia-nrs-038.html",
+      "status": 200,
+      "bytes": 15726,
+      "sha256": "c8271aa05ad52d3c3974beeb7aa533d1dd7279b9255b894300f7fda61edd892f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-038.html"
+    },
+    {
+      "path": "torenthia-nrs-039.html",
+      "status": 200,
+      "bytes": 16873,
+      "sha256": "6cfaa8d842f104bf3042b642bb43f387032b227b517df972e5a98942e97d1d39",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-039.html"
+    },
+    {
+      "path": "torenthia-nrs-040.html",
+      "status": 200,
+      "bytes": 16048,
+      "sha256": "675e8eddd86d84bd8341c9faad54463b9278ebea410d9a32d1246e4814cf56a1",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-040.html"
+    },
+    {
+      "path": "torenthia-nrs-041.html",
+      "status": 200,
+      "bytes": 15833,
+      "sha256": "51688d91fa5dcf742871a4acf32bc133f88ad767ae763fcfbeeb0ab96974f6c5",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-041.html"
+    },
+    {
+      "path": "torenthia-nrs-042.html",
+      "status": 200,
+      "bytes": 16893,
+      "sha256": "cbcfd77a11fed9d668f2bc2fc8363519f95c8451083561dd11e1da701afbc6ae",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-042.html"
+    },
+    {
+      "path": "torenthia-nrs-043.html",
+      "status": 200,
+      "bytes": 14116,
+      "sha256": "ad50586e27323cef669438250de60d9005a44d5d38466749e948bf0aa53f87f7",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-043.html"
+    },
+    {
+      "path": "torenthia-nrs-044.html",
+      "status": 200,
+      "bytes": 12432,
+      "sha256": "166d7e6966aa598d192424a08457146a1de15ce892fb0e418547cf10171522e0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-044.html"
+    },
+    {
+      "path": "torenthia-nrs-045.html",
+      "status": 200,
+      "bytes": 13846,
+      "sha256": "2e04e22a6ebc104a02a240e1fd76ab0621019b17e2159cf130f2a8e6a62a26fb",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-045.html"
+    },
+    {
+      "path": "torenthia-nrs-046.html",
+      "status": 200,
+      "bytes": 17115,
+      "sha256": "7741e7a4051c23bffa7e192c39e9e39c54a5bb13f51456470f962b2ef6a24541",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-046.html"
+    },
+    {
+      "path": "torenthia-nrs-047.html",
+      "status": 200,
+      "bytes": 16721,
+      "sha256": "a0a6bea437d9550db5c2f2319fc643726d47e151121059900fadfaac69061730",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-047.html"
+    },
+    {
+      "path": "torenthia-nrs-048.html",
+      "status": 200,
+      "bytes": 16123,
+      "sha256": "ab685b8d09b787470db86ca6871e10797939db0146bb31971bd7c1f87166a448",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-048.html"
+    },
+    {
+      "path": "torenthia-nrs-049.html",
+      "status": 200,
+      "bytes": 13208,
+      "sha256": "3b611a866ca8bb5f207ab1cd10838827e9ac16e01ac78e451ffffc932c6d477f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-049.html"
+    },
+    {
+      "path": "torenthia-nrs-050.html",
+      "status": 200,
+      "bytes": 15142,
+      "sha256": "a314e3cc734c4cfa8758df65387eab67ad00d04525ab41155a22b911629d0d47",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-050.html"
+    },
+    {
+      "path": "torenthia-nrs-051.html",
+      "status": 200,
+      "bytes": 14110,
+      "sha256": "107556dabb2f9978dfa2cc14b1ed12743b1968b6167ab982831b64e325032f9f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-051.html"
+    },
+    {
+      "path": "torenthia-nrs-052.html",
+      "status": 200,
+      "bytes": 14386,
+      "sha256": "f7efda05f028d814d5a12a7c8afbb52758b13463007c36c57aa6ee14fe96deea",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-052.html"
+    },
+    {
+      "path": "torenthia-nrs-053.html",
+      "status": 200,
+      "bytes": 15056,
+      "sha256": "4c7070749574b4e53abb20defdcbba8ede498ee2d46c9c6d193f4bc9370707d5",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-053.html"
+    },
+    {
+      "path": "torenthia-nrs-054.html",
+      "status": 200,
+      "bytes": 12479,
+      "sha256": "8d1cf380962d52b13d57881c4f70f069d10e05939d216f4802500d449e355af0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-054.html"
+    },
+    {
+      "path": "torenthia-nrs-055.html",
+      "status": 200,
+      "bytes": 11282,
+      "sha256": "504ff16a4f055e616c11ee7861e546ae3b5bcc313c60cb4832f70dcd0b529e54",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-055.html"
+    },
+    {
+      "path": "torenthia-nrs-056.html",
+      "status": 200,
+      "bytes": 10334,
+      "sha256": "eda5939fbc1b3721a0e512f691dcdddb3bd11bafc48a2e19a8a5f49eaf149b78",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-056.html"
+    },
+    {
+      "path": "torenthia-nrs-057.html",
+      "status": 200,
+      "bytes": 16515,
+      "sha256": "2aaee744fbd5f17c985f57d6ab7093fee3d4d09264321a173d83a88035d1a992",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-057.html"
+    },
+    {
+      "path": "torenthia-nrs-058.html",
+      "status": 200,
+      "bytes": 13671,
+      "sha256": "9dae991318a0e89e8dbcdcc94c6a303743528f3f9a0e67fe5c3b6e49ca02a4cd",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-058.html"
+    },
+    {
+      "path": "torenthia-nrs-059.html",
+      "status": 200,
+      "bytes": 13335,
+      "sha256": "a1065cac7648ae49930aa4833c820448198231c2b9b58eb5c1597bf7f37f51c7",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-059.html"
+    },
+    {
+      "path": "torenthia-nrs-060.html",
+      "status": 200,
+      "bytes": 14562,
+      "sha256": "1df3a0477b869435c5c08eec913b0581b8ddf417051a5ddc891c4b85fe0b2e2e",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-060.html"
+    },
+    {
+      "path": "torenthia-nrs-061.html",
+      "status": 200,
+      "bytes": 15986,
+      "sha256": "eef9baaa9f679ef2c8bce3ecfd861ff51ad41d2b0c623c140462390ad223b27f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-061.html"
+    },
+    {
+      "path": "torenthia-nrs-062.html",
+      "status": 200,
+      "bytes": 12988,
+      "sha256": "3cc3774d3931608e8c923ce5579a08ccfc70fe5f6ab45107ec5a004badd5aff0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-062.html"
+    },
+    {
+      "path": "torenthia-nrs-063.html",
+      "status": 200,
+      "bytes": 13616,
+      "sha256": "67b801827fa8f3256160d1b6a5df332cef5c640da0f6deb42e2a6628bca2b6d8",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-063.html"
+    },
+    {
+      "path": "torenthia-nrs-064.html",
+      "status": 200,
+      "bytes": 13342,
+      "sha256": "31b5e18c51f5560caf6a5536e57d04dee7b312a930db36758ed0f5c55c378b28",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-064.html"
+    },
+    {
+      "path": "torenthia-nrs-065.html",
+      "status": 200,
+      "bytes": 15747,
+      "sha256": "63cf9231f9c0bb097a2dc2817fb26abc51699b5fd6c823be4101188a7f3072db",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-065.html"
+    },
+    {
+      "path": "torenthia-nrs-066.html",
+      "status": 200,
+      "bytes": 12246,
+      "sha256": "4707e3a90bde0b4b7f6604671460fc51532ae3c16862af96ff9d1f29dbb89e21",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-066.html"
+    },
+    {
+      "path": "torenthia-nrs-067.html",
+      "status": 200,
+      "bytes": 10536,
+      "sha256": "ec0880103daef665e0c4851c5feb50061838b36c31e39999be36e9d8ffbaf052",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-067.html"
+    },
+    {
+      "path": "torenthia-nrs-068.html",
+      "status": 200,
+      "bytes": 13566,
+      "sha256": "a4410d6e3b51b292063bf17039a59eac9233d62860988e38197d50852074f6eb",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-068.html"
+    },
+    {
+      "path": "torenthia-nrs-069.html",
+      "status": 200,
+      "bytes": 15553,
+      "sha256": "0dab98294d0c221d955ad04d1f10e7a6174f7fba405641c82d4552287a4527e0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-069.html"
+    },
+    {
+      "path": "torenthia-nrs-070.html",
+      "status": 200,
+      "bytes": 12297,
+      "sha256": "697386dc8e6e9d1cf44a1ef9d59a38c289d60326388e9249795177c6f1f0cbed",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-070.html"
+    },
+    {
+      "path": "torenthia-nrs-071.html",
+      "status": 200,
+      "bytes": 13308,
+      "sha256": "0d108120418ee8f0ba0390254fb2a93abb10ebffffb4efe81710c1ed284310e8",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-071.html"
+    },
+    {
+      "path": "torenthia-nrs-072.html",
+      "status": 200,
+      "bytes": 14441,
+      "sha256": "99787d9012886e97412e49dba5d68d4dffa110e272da40bdc819a0ba31b32a1a",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-072.html"
+    },
+    {
+      "path": "torenthia-nrs-073.html",
+      "status": 200,
+      "bytes": 15944,
+      "sha256": "9cdefa75cffcaa6bc778eea2f53604001e2ccb0186b245f8d2badc1b1a4ce3e7",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-073.html"
+    },
+    {
+      "path": "torenthia-nrs-074.html",
+      "status": 200,
+      "bytes": 16487,
+      "sha256": "3a9cf31f9928d69b69420e6a2082c0e4474cf067ae9ea8c9afe2c6030eb9549e",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-074.html"
+    },
+    {
+      "path": "torenthia-nrs-075.html",
+      "status": 200,
+      "bytes": 13045,
+      "sha256": "29f508d6163a53c493206b7a6393fdc6045de0dc6db72a78851af94143a381cd",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-075.html"
+    },
+    {
+      "path": "torenthia-nrs-076.html",
+      "status": 200,
+      "bytes": 18158,
+      "sha256": "f2e0547e38d0fbfb0527700de6d3233d7f77835eff73acffb89169ec702d96f2",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-076.html"
+    },
+    {
+      "path": "torenthia-nrs-077.html",
+      "status": 200,
+      "bytes": 9832,
+      "sha256": "f0529fbb96ceb6fb24bd30ffc7415e2282d6fce3a35a43e5250196b9742b5f17",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-077.html"
+    },
+    {
+      "path": "torenthia-nrs-078.html",
+      "status": 200,
+      "bytes": 9786,
+      "sha256": "124301117be17092a084265809d6146a53040ba4431d18b066231c3c3a743ca5",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-078.html"
+    },
+    {
+      "path": "torenthia-nrs-079.html",
+      "status": 200,
+      "bytes": 13384,
+      "sha256": "6e250b470bac629b3d917d6b60dfd6180578067c06e2156bbe528b64a1ee6b6a",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-079.html"
+    },
+    {
+      "path": "torenthia-nrs-080.html",
+      "status": 200,
+      "bytes": 9267,
+      "sha256": "6b76dea1df51db6abe69eedf8f6b46e005c1b9491caf041adc901cca7ec3a1e4",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-080.html"
+    },
+    {
+      "path": "torenthia-nrs-081.html",
+      "status": 200,
+      "bytes": 9280,
+      "sha256": "733c4102367ce6913567e5e6c9db0b2b1e009a5d1965ce6ccdfae31a1928f5ce",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-081.html"
+    },
+    {
+      "path": "torenthia-nrs-082.html",
+      "status": 200,
+      "bytes": 15449,
+      "sha256": "7af619a55b422159a0e0b873a0ffc5198fc91c2b664bd05d6e1bed13834230be",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-082.html"
+    },
+    {
+      "path": "torenthia-nrs-083.html",
+      "status": 200,
+      "bytes": 15168,
+      "sha256": "e92bb84310ccfc600a53ecc86920b080baf9170f0c5e088a59c06d47d2d3ff4c",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-083.html"
+    },
+    {
+      "path": "torenthia-nrs-084.html",
+      "status": 200,
+      "bytes": 15026,
+      "sha256": "3c13940db16526c2cf99bbf91f4cf8f3eb2df5340435ddb00d270306bc897f99",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-084.html"
+    },
+    {
+      "path": "torenthia-nrs-085.html",
+      "status": 200,
+      "bytes": 17709,
+      "sha256": "f2f290577899f79907e1154ae615a70645611349881ebbb70c2f9f810cd8512f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-085.html"
+    },
+    {
+      "path": "torenthia-nrs-086.html",
+      "status": 200,
+      "bytes": 18286,
+      "sha256": "9e6e32fce99fef6fc22584c1e8ff701f262cb204aebfb6865df571da931b0ed8",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-086.html"
+    },
+    {
+      "path": "torenthia-nrs-087.html",
+      "status": 200,
+      "bytes": 14761,
+      "sha256": "2e8e1786745beb38a785c589d564230fd0f346145e33dd9635947c7c79f88b72",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-087.html"
+    },
+    {
+      "path": "torenthia-nrs-088.html",
+      "status": 200,
+      "bytes": 15689,
+      "sha256": "318b7430f3328b36109c5a8fdcb78c834669fa65f4e5e70023afe6af1ab4a485",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-088.html"
+    },
+    {
+      "path": "torenthia-nrs-089.html",
+      "status": 200,
+      "bytes": 9263,
+      "sha256": "ccd89e953e7c8de7b10477262da400f3c11061f04fff56b4c30350c5d15618d0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-089.html"
+    },
+    {
+      "path": "torenthia-nrs-090.html",
+      "status": 200,
+      "bytes": 9624,
+      "sha256": "e5fd5e6cd85b101036672e3e449a1d4069f1dbad7a74d783aad29479975c015b",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-090.html"
+    },
+    {
+      "path": "torenthia-nrs-091.html",
+      "status": 200,
+      "bytes": 14527,
+      "sha256": "337d291b8d50e9d0ccbc70a9b9e13756b2aa47f9a0c9d1c2c997e9457a5934ca",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-091.html"
+    },
+    {
+      "path": "torenthia-nrs-092.html",
+      "status": 200,
+      "bytes": 13516,
+      "sha256": "1d5c4f54bd8a4e92aa361ba334de760e7f8be1fe47ecd9cfe1ab60596c2ec21a",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-092.html"
+    },
+    {
+      "path": "torenthia-nrs-093.html",
+      "status": 200,
+      "bytes": 7625,
+      "sha256": "d87c66930b9e7c8b550eac59c66e4d638dd1211223499284036567e5e8d395a0",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-093.html"
+    },
+    {
+      "path": "torenthia-nrs-094.html",
+      "status": 200,
+      "bytes": 7512,
+      "sha256": "5384cf9035dd538ebc55d15bf15bec42e3461187dde4ed668934ec89910fd23c",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-094.html"
+    },
+    {
+      "path": "torenthia-nrs-095.html",
+      "status": 200,
+      "bytes": 12574,
+      "sha256": "8e37816e7b90405662511d3cdff13e7bc343d2c79d7cee49b2c8a67c5519c23e",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-095.html"
+    },
+    {
+      "path": "torenthia-nrs-100.html",
+      "status": 200,
+      "bytes": 8264,
+      "sha256": "da1cd18d6d9218cd24208325bcf5d4c38370b5cfe59a8aac415f67b7844ab461",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-100.html"
+    },
+    {
+      "path": "torenthia-nrs-101.html",
+      "status": 200,
+      "bytes": 8321,
+      "sha256": "0ebf849acd4c75984f7fe721427ed57bac7ba613ac38db7ea0f5a127ee149bcf",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-101.html"
+    },
+    {
+      "path": "torenthia-nrs-102.html",
+      "status": 200,
+      "bytes": 9425,
+      "sha256": "9acd92fa89973f76cfd7ea8b1ddcc9464d6c41ddc20bcdde687285d3cd9c8954",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-102.html"
+    },
+    {
+      "path": "torenthia-nrs-103.html",
+      "status": 200,
+      "bytes": 7730,
+      "sha256": "1fe94e3a56165b09d91d9c3b63a6627b6798bcf3fa73df93ef5f0366d693e70f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-103.html"
+    },
+    {
+      "path": "torenthia-nrs-104.html",
+      "status": 200,
+      "bytes": 9123,
+      "sha256": "bf40b06bda7d5cf881d0e9db80955fbfc8a3f62d9b4544843ebf1876f864d844",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-104.html"
+    },
+    {
+      "path": "torenthia-nrs-105.html",
+      "status": 200,
+      "bytes": 7589,
+      "sha256": "d6edcc2d4eb1b8a9e4378022f95d951a1935ef48f69e433624385f67badd2eaa",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-105.html"
+    },
+    {
+      "path": "torenthia-nrs-106.html",
+      "status": 200,
+      "bytes": 8663,
+      "sha256": "ecebbc7c1f51d0eaa239bbf04c06b838271e5b94e147d39227fd4932d42e54d9",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-106.html"
+    },
+    {
+      "path": "torenthia-nrs-107.html",
+      "status": 200,
+      "bytes": 9113,
+      "sha256": "d565a435f41e2a6940d98481b321a2e5c258aeca184ef01984300a8e83b3cd3a",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-107.html"
+    },
+    {
+      "path": "torenthia-nrs-108.html",
+      "status": 200,
+      "bytes": 9436,
+      "sha256": "a199834547a594a8f1926ffc64afbce031dc8189e1f9b30f13dc9c79e303a6fd",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-108.html"
+    },
+    {
+      "path": "torenthia-nrs-109.html",
+      "status": 200,
+      "bytes": 9176,
+      "sha256": "3572cff98225741247ceefcc9e7c8faab741d255fb38e65d8f3cf91d22caff80",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-109.html"
+    },
+    {
+      "path": "torenthia-nrs-110.html",
+      "status": 200,
+      "bytes": 8621,
+      "sha256": "efe57c794796b97d03ba2d1c5f53d94f4b5f11dd58758489e8be821d278f03f9",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-110.html"
+    },
+    {
+      "path": "torenthia-nrs-111.html",
+      "status": 200,
+      "bytes": 8905,
+      "sha256": "c832e05fad099bc768f5161c961d2d00de07177718b7b02c7332d035928e0dae",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-111.html"
+    },
+    {
+      "path": "torenthia-nrs-112.html",
+      "status": 200,
+      "bytes": 7462,
+      "sha256": "0d7e987839ccc09e9b1c951624831f0ef34062d545fc8311291caaf2adfd67a3",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-112.html"
+    },
+    {
+      "path": "torenthia-nrs-96.html",
+      "status": 200,
+      "bytes": 7853,
+      "sha256": "7b5bf4926d5c711dfa6ea5cb54ae2fa4ee80747cc5bdf2c2360e63cbb68c4e48",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-96.html"
+    },
+    {
+      "path": "torenthia-nrs-97.html",
+      "status": 200,
+      "bytes": 9478,
+      "sha256": "eaf1efb44bd051d9887aec57e72b5cdf00efffbe0d1c7759fbbeecfd03f8ea8d",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-97.html"
+    },
+    {
+      "path": "torenthia-nrs-98.html",
+      "status": 200,
+      "bytes": 8430,
+      "sha256": "3a459e276174ac2d745b4359201fc659d86668482b9d7dfaf65949f4f0dad97f",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-98.html"
+    },
+    {
+      "path": "torenthia-nrs-99.html",
+      "status": 200,
+      "bytes": 7749,
+      "sha256": "ab158281167239d7948a48bfda90ace78f5be36c3128138b776e8bc979bcbbf7",
+      "url": "https://thefederatedrepublic.org/torenthia-nrs-99.html"
+    },
+    {
+      "path": "torenthia-record.html",
+      "status": 200,
+      "bytes": 160547,
+      "sha256": "49218cbb872e9a174fd8307aa0c0bd65a100e3f4a6725522eb21c2cf9f2983ab",
+      "url": "https://thefederatedrepublic.org/torenthia-record.html"
+    },
+    {
+      "path": "torenthia-sc-001.html",
+      "status": 200,
+      "bytes": 26726,
+      "sha256": "55977b4cb6f5b8142662966ae5c0598a781c7ed5b6eca970edc83cf7464353bf",
+      "url": "https://thefederatedrepublic.org/torenthia-sc-001.html"
+    },
+    {
+      "path": "torenthia-sc-002.html",
+      "status": 200,
+      "bytes": 29885,
+      "sha256": "897ac18477ddb3b64f8db45730875c2889006f746fea4915b60fc07ae1ec9843",
+      "url": "https://thefederatedrepublic.org/torenthia-sc-002.html"
+    },
+    {
+      "path": "torenthia-state-aldenmere.html",
+      "status": 200,
+      "bytes": 30238,
+      "sha256": "592dbde10d9e52fbda040ab89a1a236dd57fcfa3d34e87c501daf93abbeda7d0",
+      "url": "https://thefederatedrepublic.org/torenthia-state-aldenmere.html"
+    },
+    {
+      "path": "torenthia-state-arvane.html",
+      "status": 200,
+      "bytes": 28888,
+      "sha256": "132a97c20e4a703b3ac83dbf6c70d5b7ed658b5998e836984fed4344d7db3d02",
+      "url": "https://thefederatedrepublic.org/torenthia-state-arvane.html"
+    },
+    {
+      "path": "torenthia-state-caldenmere.html",
+      "status": 200,
+      "bytes": 29584,
+      "sha256": "e8f84aadfbd1563139d4f85498856047f1989c1366f5d6196bef63dbdb9d7338",
+      "url": "https://thefederatedrepublic.org/torenthia-state-caldenmere.html"
+    },
+    {
+      "path": "torenthia-state-corindal.html",
+      "status": 200,
+      "bytes": 28198,
+      "sha256": "86001c7cdc8772e44ece14453183970d48e179859ab1bf82f0bc02ae88218b49",
+      "url": "https://thefederatedrepublic.org/torenthia-state-corindal.html"
+    },
+    {
+      "path": "torenthia-state-harren.html",
+      "status": 200,
+      "bytes": 24552,
+      "sha256": "f2ce90992be070776ef2917154690e6b4b823255d78ce466b2ffdb897cd003d0",
+      "url": "https://thefederatedrepublic.org/torenthia-state-harren.html"
+    },
+    {
+      "path": "torenthia-state-kelvant.html",
+      "status": 200,
+      "bytes": 30306,
+      "sha256": "b39bb32410237e2c820c3355745c649e5156f51bf4b133ac75040b32b0398eee",
+      "url": "https://thefederatedrepublic.org/torenthia-state-kelvant.html"
+    },
+    {
+      "path": "torenthia-state-merath.html",
+      "status": 200,
+      "bytes": 32016,
+      "sha256": "bad89679f714a0a3b3327ebd7d048838bcb9b0883fafdcfd6991afef1edc0e80",
+      "url": "https://thefederatedrepublic.org/torenthia-state-merath.html"
+    },
+    {
+      "path": "torenthia-state-norvane.html",
+      "status": 200,
+      "bytes": 26276,
+      "sha256": "8b8640a7c3aec184f2be5bbb28762743fa8a7268fc84b8c54b792a105e7f6484",
+      "url": "https://thefederatedrepublic.org/torenthia-state-norvane.html"
+    },
+    {
+      "path": "torenthia-state-orath.html",
+      "status": 200,
+      "bytes": 31287,
+      "sha256": "a4efde6765ff6ca1c4fd00ca4b246fc9bd9c845f57267ddeea68bec962342cca",
+      "url": "https://thefederatedrepublic.org/torenthia-state-orath.html"
+    },
+    {
+      "path": "torenthia-state-rhovane.html",
+      "status": 200,
+      "bytes": 25904,
+      "sha256": "710234a3c81deb7fdff1d81dd8127fa33bca5ec3f66480376a385af020e8b48d",
+      "url": "https://thefederatedrepublic.org/torenthia-state-rhovane.html"
+    },
+    {
+      "path": "torenthia-state-selvane.html",
+      "status": 200,
+      "bytes": 33061,
+      "sha256": "6b195976b23aa7fd4efd18a24ae4fbed557d016f6e4e2a172860f4fc7b9b4a10",
+      "url": "https://thefederatedrepublic.org/torenthia-state-selvane.html"
+    },
+    {
+      "path": "torenthia-state-varek.html",
+      "status": 200,
+      "bytes": 25462,
+      "sha256": "d48cdf35443fa931db8fa85674cb4022d5e1f3ac4ff1b9d7aefa11d1943852e3",
+      "url": "https://thefederatedrepublic.org/torenthia-state-varek.html"
+    },
+    {
+      "path": "torenthia.html",
+      "status": 200,
+      "bytes": 23779,
+      "sha256": "50bd36d7dfa4625be04939b8372498172843a9620d334e131bf2eb126c103b6c",
+      "url": "https://thefederatedrepublic.org/torenthia.html"
+    }
+  ],
+  "deterministic_api_checks": [
+    {
+      "question": "How does a Territory become a State?",
+      "status": 200,
+      "summary": "A Territory starts by resolution or a qualifying citizen petition. All three Monitor findings complete an audit; the responsible legislative chamber determines compliance. Two qualifying audits must be completed within the two-year windows and receive affirmative determinations under §§15.2 and 15.2.a. A timely completed audit remains eligible for decision afterward. The second affirmative determination creates Statehood immediately, subject to subdivision viability where applicable; no separate admission act follows.",
+      "provisions": [
+        "§15.2",
+        "§15.2.a"
+      ],
+      "resources": [
+        "annotated.html#s15-2",
+        "annotated.html#s15-2a",
+        "scenario-the-third-strike.html",
+        "scenario-the-audit.html",
+        "quicksheet-states.html",
+        "diagrams.html#tab-states-fed",
+        "glossary.html#term-provisional-membership-period"
+      ]
+    },
+    {
+      "question": "Who controls the military?",
+      "status": 200,
+      "summary": "The Legat Consul commands operations necessary against an active or imminent attack, including necessary defense beyond the border. Other objectives require authorization by law within §14.1 purposes; a ratified treaty may supply authority for action its terms require. The Senate may require an alert posture when active defensive operations are no longer justified. Operational review, scope, appropriations and withdrawal duties remain governed by §§2.2 and 14.2.",
+      "provisions": [
+        "§2.2",
+        "§14.1",
+        "§14.2",
+        "§14.4"
+      ],
+      "resources": [
+        "annotated.html#s2-2",
+        "annotated.html#s14-1",
+        "annotated.html#s14-2",
+        "annotated.html#s14-4",
+        "scenario-alliance-clause.html",
+        "scenario-the-first-war.html",
+        "quicksheet-article-2.html",
+        "diagrams.html#tab-dual",
+        "glossary.html#term-legislative-declaration-of-defense"
+      ]
+    },
+    {
+      "question": "What happens if a Territory misses the Statehood deadlines?",
+      "status": 200,
+      "summary": "The two-year qualification periods in §15.2 govern completion of audit records. A timely completed audit remains eligible for legislative determination afterward; delay alone does not terminate the proceeding. Section 15.2.a transfers an overdue decision exclusively to the other chamber and permits judicial enforcement of its duty. Separately, a §15.5.a Convention that produces no resolution within ninety days causes its affected petitions to lapse together, with a three-year bar on substantially the same geographic petitions.",
+      "provisions": [
+        "§15.2",
+        "§15.2.a",
+        "§15.5.a"
+      ],
+      "resources": [
+        "annotated.html#s15-2",
+        "annotated.html#s15-2a",
+        "annotated.html#s15-5a",
+        "scenario-the-third-strike.html",
+        "scenario-the-audit.html",
+        "quicksheet-states.html",
+        "diagrams.html#tab-states-fed",
+        "glossary.html#term-provisional-membership-period"
+      ]
+    },
+    {
+      "question": "Citizen legislative initiative",
+      "status": 200,
+      "summary": "Citizens may propose legislation through §13.2 using the §13.1 two-phase petition process. The geographic requirements carry over; Phase Two requires ten percent nationally. The completion period is statutory. After verification the Legislature has ninety days to enact the proposal; otherwise the Elections Panel holds a referendum within the following ninety days. Sixty percent of votes cast enacts the initiative, without a constitutional turnout floor. It cannot narrow Article I rights, directly appropriate funds or alter taxes, duties or tariffs.",
+      "provisions": [
+        "§13.2",
+        "§13.1"
+      ],
+      "resources": [
+        "annotated.html#s13-2",
+        "annotated.html#s13-1",
+        "scenario-organized-third.html",
+        "scenario-the-second-path.html",
+        "quicksheet-amendments.html"
+      ]
+    }
+  ],
+  "errors": [],
+  "record_type": "Verified production snapshot for release PR #233; later archival repair and deployment evidence are recorded in linked PRs",
+  "release_pr": "https://github.com/jcr0916-hue/federatedrepublic/pull/233",
+  "deployment": {
+    "id": "dpl_4D3oQK8isR8A5N78qkN4vFeuUqZb",
+    "url": "https://federatedrepublic-7gjhjehfz-the-federated-republic.vercel.app",
+    "target": "production",
+    "state": "READY",
+    "git_sha": "8759e9f73de4609b856b06ff13bd97f4358bfc41",
+    "public_alias": "thefederatedrepublic.org",
+    "alias_error": null
+  },
+  "browser": {
+    "base": "https://thefederatedrepublic.org",
+    "pages": 28,
+    "mobilePages": 7,
+    "provisions": 177,
+    "diagrams": 7,
+    "checks": [
+      "scenario discovery and reading",
+      "current and removed provision search",
+      "all diagram tabs and keyboard wrap/Home/End",
+      "deep-link restoration",
+      "diagram to source link",
+      "desktop and mobile overflow",
+      "no uncaught page errors or failing same-origin responses"
+    ],
+    "records": [
+      {
+        "path": "index.html",
+        "title": "The Federated Republic — A Constitutional Framework",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "annotated.html",
+        "title": "Annotated Constitution — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "scenarios.html",
+        "title": "Scenario Library — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "scenario-the-second-renewal.html",
+        "title": "The Changed Mission — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "scenario-the-audit.html",
+        "title": "The Audit — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "scenario-the-third-strike.html",
+        "title": "The Third Strike — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "scenario-the-restoration.html",
+        "title": "The Restoration — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "scenario-critical-finding.html",
+        "title": "The Critical Finding — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "torenthia-sc-002.html",
+        "title": "SC-Y13-0119 — Korda Corridor Petitioners v. Joint Monitor Council — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "torenthia-nrs-021.html",
+        "title": "JMC Remainder Viability Assessment — Kelvant-Korda Lake Corridor — National Record System",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "torenthia-nrs-086.html",
+        "title": "Certified Convention Vote — Korda Northern Lake Settlement — National Record System",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "torenthia-news-119.html",
+        "title": "Nine Seats and No Senators — The Torenthian",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "torenthia-state-kelvant.html",
+        "title": "Kelvant — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "glossary.html",
+        "title": "Glossary — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "diagrams.html",
+        "title": "Government Structure — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheets.html",
+        "title": "Quick Sheets — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-amendments.html",
+        "title": "Quick Sheet — Amendments & Direct Democracy — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-article-2.html",
+        "title": "Quick Sheet — Article II — The Dual Executive — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-article-3.html",
+        "title": "Quick Sheet — Article III — The Legislature — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-elections.html",
+        "title": "Quick Sheet — Elections & Electoral Finance — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-fiscal.html",
+        "title": "Quick Sheet — Fiscal Architecture — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-immigration.html",
+        "title": "Quick Sheet — Immigration & Asylum — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-judiciary.html",
+        "title": "Quick Sheet — The Judiciary — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-monitors.html",
+        "title": "Quick Sheet — The Monitors — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-nvs.html",
+        "title": "Quick Sheet — Elections Infrastructure & the NVS — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-recall-removal.html",
+        "title": "Quick Sheet — Recall & Removal — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-rights.html",
+        "title": "Quick Sheet — Rights & the Non-Derogable Floor — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "quicksheet-states.html",
+        "title": "Quick Sheet — States, Territories & Indigenous Nations — The Federated Republic",
+        "desktopWidth": {
+          "client": 1440,
+          "scroll": 1440
+        }
+      },
+      {
+        "path": "index.html",
+        "mobileWidth": {
+          "client": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "scenarios.html",
+        "mobileWidth": {
+          "client": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "scenario-the-second-renewal.html",
+        "mobileWidth": {
+          "client": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "annotated.html",
+        "mobileWidth": {
+          "client": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "diagrams.html#tab-states-fed",
+        "mobileWidth": {
+          "client": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "quicksheet-states.html",
+        "mobileWidth": {
+          "client": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "path": "torenthia-news-119.html",
+        "mobileWidth": {
+          "client": 390,
+          "scroll": 390
+        }
+      }
+    ],
+    "errors": [],
+    "failures": []
+  },
+  "release_ci": [
+    {
+      "id": 40059565775,
+      "name": "Constitution archival",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "b405eed74a41531f62e06f69991ce3512d278fb7",
+      "url": "https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40059565775"
+    },
+    {
+      "id": 40059565646,
+      "name": "World publishing",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "b405eed74a41531f62e06f69991ce3512d278fb7",
+      "url": "https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40059565646"
+    },
+    {
+      "id": 40059562539,
+      "name": "Constitution Release Review",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "b405eed74a41531f62e06f69991ce3512d278fb7",
+      "url": "https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40059562539"
+    }
+  ],
+  "post_merge_archive_incident": {
+    "run_id": 40059688070,
+    "status": "failure triaged; corrective implementation and 33 tests passed locally; follow-up PR required",
+    "first_failure": "historical duplicate-alias deletion in commit 47e9f9fdba9f79663c500cd5898d10f8ca85890c",
+    "second_preflight_finding": "historical JSON/Markdown mismatch at e309c3bb667f153d71dd4c184fc73652f1d08f33",
+    "public_outputs_affected": false
+  }
+}

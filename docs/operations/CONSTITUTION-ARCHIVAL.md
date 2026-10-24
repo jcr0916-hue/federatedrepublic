@@ -61,7 +61,10 @@ merge result against the actual base SHA. It fails for missing prior archives,
 incomplete or mismatched pairs, invalid renderer provenance/hashes, current JSON/Markdown
 drift, and modification/deletion of existing snapshots or policy. Untracked local
 archives cannot make a committed replacement pass. Proposal-only intermediate
-commits are not treated as additional published main versions.
+commits are not treated as additional published main versions. The pull request
+job’s existing `check` command also verifies the full first-parent recovery
+plan against committed evidence, without writes, and rejects missing historical
+pairs or raw exception sources before merge.
 
 After merging this workflow, configure the `main` branch rule to require
 **Constitution archival check**, require the branch to be up to date, and apply
@@ -98,8 +101,16 @@ baseline. Direct pushes become current before a post-push job can run, so only
 required pull request checks provide prevention before publication.
 
 Recovery refuses a rewritten/non-ancestor baseline, historical archive edits,
-or a mismatched intermediate/current pair. It does not invent missing historical
-Markdown. Resolve those cases with reviewed source/history recovery.
+or an unknown mismatched intermediate/current pair. It does not invent missing
+historical Markdown. Two fixed, reviewed historical events are recognized:
+the exact 18 October duplicate-alias deletion/restoration, with original,
+restored and current blobs identical to the canonical files; and the broken
+PR #219 edition, whose exact JSON/Markdown bytes and provenance are preserved
+as unverified source material. Its valid predecessor remains a certified archive
+pair. Both recognitions require their restoration/repair on the first-parent
+chain. All other changes remain rejected, including a later edit or deletion of
+the same alias. The immutable baseline and ordinary before/after archive gate
+are unchanged. See [the repair record](CONSTITUTIONAL-ARCHIVE-RECOVERY-261023.md).
 
 ## Failure behavior and verification
 
