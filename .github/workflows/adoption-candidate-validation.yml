@@ -7,6 +7,7 @@ on:
     paths:
       - 'docs/adoption-candidate-constitution.md'
       - 'docs/adoption-candidate-data.json'
+      - 'torenthia-nrs-103.html'
       - 'scripts/prepare-adoption-candidate.py'
       - '.github/workflows/adoption-candidate-validation.yml'
   workflow_dispatch:
