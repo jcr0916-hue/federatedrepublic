@@ -2006,6 +2006,16 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **No other wording changes approved.** Evaluate both exact deletions before updating the working Constitution.
 
+## Approved editorial simplifications — §§9.1 and 18.3 (2026-10-23)
+
+**Status:** Approved and integrated into the separate working Constitution; not enacted.
+
+- **§9.1:** Deleted the sentence “Monitors shall publish their findings and assessments to the NRS.” General publication remains required by §§9.5, 9.5.a and 10.1(2); the distinct duty to publish reasons and results upon discontinuing an inquiry is retained.
+- **§18.3:** Deleted the sentence “An Operational Use Right terminates when its authorized function ends.” The same automatic termination rule remains in §18.1; the separate notice, property reversion, and expedited judicial-review protections in §18.3 are retained.
+- **Retained unchanged:** Military-command language in §§2.2 and 14.2 and agency-independence language in §§3.9.a, 11.1, and 12.1.a.
+
+**Working draft commit:** `48d610d4ae3250d4241658c30b09797f624adada`.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
