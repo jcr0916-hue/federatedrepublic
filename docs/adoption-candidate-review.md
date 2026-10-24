@@ -42,13 +42,14 @@
 - Article 19: 11 changed — §19.1, §19.2, §19.3, §19.3.a, §19.4, §19.5, §19.6, §19.7, §19.8, §19.9, §19.10
 - Article 20: 7 changed — §20.1, §20.2, §20.3, §20.4, §20.5, §20.6, §20.7
 
-## Release checklist (not yet executed)
+## Release checklist (partially completed)
 
 - [x] Extract a separate clean candidate without the working-draft notice.
 - [x] Compare candidate section identifiers and text with the integrated draft.
 - [x] Compare candidate sections against the currently generated adopted Markdown.
 - [ ] Independent legal/policy review and explicit approval of the adoption package.
-- [ ] Map the approved candidate to the canonical `constitution_data.json` schema, without losing formatting or metadata.
+- [x] Stage a separate `docs/adoption-candidate-data.json` using the current `constitution_data.json` schema (20 articles, 177 provisions), without changing the canonical file. Verify candidate structure and normalized generated section text against clean Markdown.
+- [ ] Run the repository's Python conversion script and Markdown generator in CI or a checkout and verify exact generator output against the candidate, including paragraph/formatting fidelity.
 - [ ] On a separately approved release branch, generate the adopted Markdown, website, PDF and annotated edition from canonical data.
 - [ ] Diff all generated outputs against the approved candidate; verify publication and site links.
 - [ ] Run repository tests and any release workflows; record results.
@@ -56,3 +57,9 @@
 - [ ] Prepare and verify rollback and restoration procedures for canonical data and deployment.
 
 **Caution:** A changed section count is not a count of individual amendments. The historical register includes superseded proposals; use the latest approved integration as the candidate, not each historical proposal independently.
+
+## Isolated conversion artifacts
+
+- `scripts/prepare-adoption-candidate.py` converts the clean candidate and checks the generated provision text using the existing renderer.
+- `docs/adoption-candidate-data.json` is the staged canonical-schema candidate, **not** the repository's operative `constitution_data.json`.
+- Structural comparison of the staged JSON with the clean Markdown passed: 20 Articles, 177 sections and unique identifiers. A live repository test run and publication generation remain outstanding.
