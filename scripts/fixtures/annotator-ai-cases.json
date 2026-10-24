@@ -52,7 +52,7 @@
       "Recognize that an ordinary nomination and Senate confirmation completed before certification ends the public route."
     ],
     "mustNot": [
-      "Do not describe the public confirmation as an ordinary election; the text expressly says it is not.",
+      "Do not treat public confirmation as a competitive election or invent campaign exemptions; apply the actual advocacy, disclosure and foreign-source provisions.",
       "Do not claim the Senate permanently loses all judicial confirmation authority beyond that seat after a successful confirmation."
     ]
   },
@@ -72,30 +72,29 @@
   },
   {
     "num": "§8.4",
-    "title": "Public campaign financing without invented fallback",
+    "title": "Impartial electoral assistance by statute",
     "must": [
-      "Recognize that the Legislature is required to establish the system by statute.",
-      "Recognize that public support is an initial allocation for viable candidacy, not full campaign funding.",
-      "Recognize that candidates may still privately fundraise under §8.1 and may not be disadvantaged for participation.",
-      "Recognize Elections Panel administration and annual NRS compliance findings."
+      "Recognize that the Legislature may provide impartial electoral assistance by statute to support §1.8 rights.",
+      "Distinguish that enabling authority from a mandatory constitutional initial-allocation system.",
+      "Leave amount, eligibility details, administration and financing to applicable law, consistently with constitutional rights."
     ],
     "mustNot": [
-      "Do not claim the Constitution itself supplies an interim financing amount or self-executing fallback if the Legislature never enacts the statute.",
-      "Do not claim acceptance of public financing bars private fundraising."
+      "Do not invent a constitutionally fixed grant, a mandatory public-financing program or an annual Elections Panel certification.",
+      "Do not treat statutory campaign assistance as exempt from §8.1 disclosure and foreign-source rules."
     ]
   },
   {
     "num": "§9.8",
-    "title": "Constitutional pools and expedited restoration",
+    "title": "Constitutional pools and statutory restoration",
     "must": [
-      "Recognize the constitutional minimum of five members and the auditing Monitor's compliance-breach publication when a pool falls below five.",
-      "Recognize that the Elections Panel restores a below-minimum pool through expedited eligibility review under the ordinary criteria.",
-      "Recognize the objective-criteria rule and the appeal to the SC for misapplication.",
-      "Recognize that changes to eligibility criteria apply prospectively only, without exempting members from continuing disqualifications."
+      "Recognize Elections Panel administration, JMC compliance audit and public NRS records.",
+      "Recognize the minimum of five and action to restore deficiencies under statutory procedures.",
+      "Recognize objective criteria, published exclusion reasons and timely judicial review under statutory procedures.",
+      "Recognize prospective eligibility changes subject to continuing constitutional disqualifications."
     ],
     "mustNot": [
-      "Do not invent a constitutional deadline for restoring a below-five pool.",
-      "Do not allow ideological or political criteria."
+      "Do not invent expedited eligibility review, a fixed restoration deadline or an exclusive Supreme Court appeal.",
+      "Do not allow ideological or political exclusion."
     ]
   },
   {
@@ -129,16 +128,16 @@
   },
   {
     "num": "§15.3",
-    "title": "State remediation and mandatory devolution review",
+    "title": "State remediation and legislative Provisional determinations",
     "must": [
-      "Recognize the sequence: first failure warning/remediation, second failure renewed warning/revised plan, third consecutive failure certification to the Senate.",
-      "Recognize the 90-day constitutional default for the first remediation plan until statute supplies a period.",
-      "Recognize that only Senate authorization by an absolute majority of the full seated Senate places the State in Provisional status.",
-      "Recognize that devolution still requires an affirmative citizen referendum and then the §15.4 negotiation/ratification process."
+      "Recognize that failed audits are legislative determinations under §§15.2 and 15.2.a, on complete Monitor evidence.",
+      "Recognize a Remediation Plan after the first failure and revised Plan after the second; submission periods are statutory.",
+      "Recognize separate affirmative Provisional placement by a full-seated majority after a third consecutive failure, with Senate-to-Assembly transfer on inaction.",
+      "Recognize review of legality without judicial substitution of the chamber’s substantive Provisional judgment."
     ],
     "mustNot": [
-      "Do not claim a third failed audit automatically places the State in Provisional status or devolves the State.",
-      "Do not claim judicial review permits policy substitution for Monitor findings or review of the Senate's political judgment."
+      "Do not infer State status from a count of Monitor findings or legislative silence.",
+      "Do not invent a ninety-day default remediation deadline or compulsory recurring devolution referendum."
     ]
   },
   {
@@ -197,38 +196,37 @@
     ],
     "mustNot": [
       "Do not claim the Legislature has no role at all in Monetary Authority administration; §3.9 leaves organization to statute.",
-      "Do not attribute a funding guarantee to §12.1.a itself; the Monetary Authority's funding floor is in §9.6.",
+      "Do not attribute a funding guarantee to §12.1.a itself; institutional resource sufficiency and justification of material resource changes are governed by §3.10.",
       "Do not claim disagreement over lawful monetary policy is valid cause for removal."
     ]
   },
   {
     "num": "§13.2",
-    "title": "Citizen initiative constraints without false legislative symmetry",
+    "title": "Citizen initiatives, statutory petition periods and constitutional limits",
     "must": [
-      "Recognize that the initiative uses §13.1's two-phase petition under an overall 20-month limit with no enactment deadline and a 10% Phase Two threshold, and that the Legislature has 90 days after the threshold is verified.",
-      "Recognize that if the Legislature does not enact the proposal within 90 days — including where it fails, is not voted on, or is vetoed — it goes to referendum at 60% of votes cast with 50% participation.",
-      "Recognize that an enacted initiative is subject to the Constitution like any statute and may not narrow Article I rights, appropriate funds, or alter revenue.",
-      "Recognize that the Supreme Court may resolve constitutional conflicts involving an enacted initiative under its original jurisdiction."
+      "Recognize the shared §13.1 two-phase process without the repeal filing deadline; Phase Two requires ten percent nationally and completion periods are statutory.",
+      "Recognize ninety days for legislative enactment, then a referendum within ninety more; sixty percent of votes cast enacts with no constitutional turnout floor.",
+      "Recognize prohibitions on narrowing Article I, directly appropriating funds or altering taxes, duties and tariffs; implementing appropriation needs alone do not make a proposal ineligible.",
+      "Recognize judicial review on concrete standing without assuming Supreme Court original jurisdiction for every federal statute."
     ],
     "mustNot": [
-      "Do not claim the initiative-specific prohibition on appropriating funds or altering revenue is also a general prohibition on ordinary legislative appropriations.",
-      "Do not claim every restriction on citizen initiatives applies identically to the Legislature unless another supplied provision expressly says so.",
-      "Do not omit the §13.1(7) three-year bar on reinitiating a failed initiative on the same or substantially similar grounds if discussing graceful degradation or repeat use."
+      "Do not transfer initiative limits to ordinary legislative appropriation authority.",
+      "Do not invent a twenty-month constitutional completion period or fifty-percent turnout floor.",
+      "Keep the three-year repeat bar and material-change exception attached to the shared process."
     ]
   },
   {
     "num": "§15.5.a",
-    "title": "Remainder viability convention fallback and cooldown",
+    "title": "Remainder viability, independent assessments and Convention process",
     "must": [
-      "Recognize that competing petitions within 90 days or a finding that the remainder could not realistically satisfy Statehood Audit conditions sends the affected matters to a Territory Convention.",
-      "Recognize that the Convention has 90 days from its first session to produce a proposed resolution.",
-      "Recognize that if no resolution is produced, all petitions addressed there lapse together, the Territory continues undivided, and substantially the same geographic petitions face a three-year reinitiation bar.",
-      "Recognize that any Convention resolution must be ratified by the affected eligible voters and then proceeds through the otherwise applicable §15.2 or §15.4 process."
+      "Recognize that competing certifications within ninety days trigger Convention handling under paragraph (4).",
+      "Recognize JMC assessment, Civic fallback and the Assembly’s viability determination; Monitor silence decides neither viability nor nonviability.",
+      "Recognize automatic exclusive transfer to the Senate on Assembly inaction and subsequent judicial enforcement without a judicial substantive decision.",
+      "Recognize a ninety-day Convention period, joint lapse and three-year geographic repeat bar if no proposal, and affected-voter ratification plus the applicable §15.2 or §15.4 process."
     ],
     "mustNot": [
-      "Do not claim ordinary §15.2 lapse and reinitiation automatically overrides the three-year cooldown created by this provision.",
-      "Do not claim the JMC itself chooses the final boundary or constitutional status.",
-      "Do not invent substantive terms the Territory Convention must adopt; the provision sets none."
+      "Do not make JMC findings binding permission or a missing report a default adverse outcome.",
+      "Do not let the Convention choose final status without the required later approvals."
     ]
   }
 ]
