@@ -160,20 +160,6 @@
     </div>
   </section>
 
-  <!-- NAVIGATOR PANEL -->
-  <div class="nav-panel-overlay" id="navOverlay" onclick="closeNav()"></div>
-  <div class="nav-panel" id="navResults" aria-live="polite" role="dialog" aria-label="Constitution Navigator results">
-    <div class="nav-panel-header">
-      <span class="nav-panel-label">Ask the Constitution</span>
-      <button class="nav-panel-close" onclick="closeNav()" aria-label="Close">&#x2715;</button>
-    </div>
-    <div class="nav-loading" id="navLoading">
-      <div class="nav-spinner"></div>
-      <span>Searching the constitution&hellip;</span>
-    </div>
-    <div class="nav-result-body" id="navBody"></div>
-  </div>
-
   <!-- START HERE -->
   <section class="featured" id="start-here">
     <div class="featured-inner">
@@ -214,65 +200,7 @@
     });
   </script>
 
-  <script>
-    function navEsc(v){ return String(v ?? '').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch])); }
-    document.getElementById('navQ').addEventListener('keydown',function(e){if(e.key==='Enter')runNav();});
 
-    async function runNav(){
-      const q=document.getElementById('navQ').value.trim();
-      if(!q)return;
-      const wrap=document.getElementById('navResults');
-      const loading=document.getElementById('navLoading');
-      const body=document.getElementById('navBody');
-      const btn=document.getElementById('navBtn');
-      wrap.classList.add('open');
-      document.getElementById('navOverlay').classList.add('open');
-      document.body.style.overflow = 'hidden';
-      loading.classList.add('visible');
-      body.innerHTML='';
-      btn.disabled=true;
-      try{
-        const res=await fetch('/api/navigator',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})});
-        if(!res.ok) throw new Error(`HTTP ${res.status}`);
-        const p=await res.json();
-        if(p.error) throw new Error(p.error);
-        let html=`<p class="nav-section-label">Answer</p><p class="nav-summary">${navEsc(p.summary||'')}</p>`;
-        if(p.provisions?.length){
-          html+=`<p class="nav-section-label">What the Constitution establishes</p><div class="nav-prov-list">`;
-          p.provisions.forEach(v=>{
-            const note=v.verbatim&&v.text
-              ? `<div class="nav-prov-note" style="white-space:pre-wrap">${navEsc(v.text)}</div>`
-              : (v.relevance ? `<div class="nav-prov-note">${navEsc(v.relevance)}</div>` : '');
-            html+=`<div class="nav-prov"><div class="nav-prov-num">${navEsc(v.num||'')}</div><div class="nav-prov-name">${navEsc(v.name||'')}</div>${note}</div>`;
-          });
-          html+=`</div>`;
-        }
-        if(p.resources?.length){
-          html+=`<p class="nav-section-label">Where to read more</p><div class="nav-scen-list">`;
-          p.resources.forEach(r=>{
-            const icon=r.kind==='provision'?'§':'&blacktriangleright;';
-            html+=`<a class="nav-scen" href="${navEsc(r.href||'#')}"><div class="nav-scen-icon">${icon}</div><div><div class="nav-scen-title">${navEsc(r.title||'')}</div><div class="nav-scen-note">${navEsc(r.note||'')}</div></div></a>`;
-          });
-          html+=`</div>`;
-        }
-        html+=`<div class="nav-close"><button class="nav-close-btn" onclick="closeNav()">Close &times;</button></div>`;
-        body.innerHTML=html;
-      }catch(err){
-        body.innerHTML=`<p style="color:var(--muted);font-size:0.85rem;padding:0.5rem 0">Something went wrong — try again.</p><div class="nav-close"><button class="nav-close-btn" onclick="closeNav()">Close &times;</button></div>`;
-      }finally{
-        loading.classList.remove('visible');
-        btn.disabled=false;
-      }
-    }
-
-    function closeNav(){
-      document.getElementById('navResults').classList.remove('open');
-      document.getElementById('navOverlay').classList.remove('open');
-      document.getElementById('navBody').innerHTML='';
-      document.getElementById('navQ').value='';
-      document.body.style.overflow='';
-    }
-  </script>
 
   <script>
     if ('serviceWorker' in navigator) {
