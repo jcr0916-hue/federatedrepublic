@@ -2016,6 +2016,18 @@ No proposed constitutional fix was integrated here: executive office resurrectio
 
 **Working draft commit:** `48d610d4ae3250d4241658c30b09797f624adada`.
 
+## Adoption-readiness checkpoint — 2026-10-23
+
+**Disposition: READY TO PREPARE AN ADOPTION PACKAGE; NOT YET AUTHORIZED FOR ADOPTION OR PUBLICATION.**
+
+**Verified:** Twenty Articles and 177 numbered sections in the integrated working draft; 333 section/subsection references checked with zero broken targets. Approved revisions to Articles II, IX and XV have been reconciled at prior checkpoints. The document-wide editorial screening and two expressly approved sentence deletions in §§9.1 and 18.3 are integrated. The draft provenance header has been corrected to reflect this work.
+
+**Limitations:** Automated structure validation does not prove legal consistency, completeness of every change against historical source versions, or real-world robustness. The amendment register contains historical proposals later superseded by approvals; the final publication package should present only the currently approved integrated wording rather than republishing superseded drafts as operative. Detailed legal and institutional implementation review, independent review where available, and explicit adoption authorization remain separate steps.
+
+**Adoption package steps:** (1) Produce a clean Constitution from the approved integrated wording without editorial status notes; (2) make an approved-only change summary; (3) verify source data generation, rendered website, and any PDF/annotated variants against the clean text before release; (4) prepare explicit approval and rollback/verification plan for any change to `constitution_data.json`, the adopted Constitution, or the public website. None of these publication changes is authorized by this checkpoint.
+
+**Working draft status-header update:** `33c01a84b0ce8077dba93c1850b079ec2c9583c7`.
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
