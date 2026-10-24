@@ -66,6 +66,7 @@ jobs:
         run: |
           cd "$RUNNER_TEMP/candidate-site"
           python3 -m pip install --quiet pypdf
+          npm install --no-save playwright
           npx playwright install --with-deps chromium
           python3 -m http.server 8765 --directory _site >/tmp/candidate-http.log 2>&1 &
           PID=$!
