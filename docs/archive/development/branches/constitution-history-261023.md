@@ -2,7 +2,7 @@
 
 **Original branch:** `docs/constitution-history-261023`
 
-**PR:** not yet opened
+**PR:** [#236](https://github.com/jcr0916-hue/federatedrepublic/pull/236)
 
 **Base:** `59beca5349754b131373d562ac77f447d60d654f` (PR #235)
 
