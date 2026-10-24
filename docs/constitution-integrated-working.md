@@ -644,7 +644,7 @@ The Legislature may provide impartial electoral assistance by statute to support
 
 The Republic maintains three constitutionally independent Monitors — Legislative (LM), Executive (EM), and Judicial (JM) — each selected under §9.2. Monitors hold an information-only mandate: they observe constitutional processes, assess compliance, and publish findings. Findings and assessments are not binding on any constitutional actor and are not a prerequisite for any legal proceeding or governmental function, except for consequences this Constitution expressly attaches to a finding. Each Monitor General serves a 10-year non-renewable term.
 
-Any constitutional officer, chamber, or body may request an assessment from a Monitor within its mandate. Monitors shall publish their findings and assessments to the NRS. Where an investigation or assessment is discontinued, the Monitor shall publish the reasons for discontinuation and the findings obtained before discontinuation.
+Any constitutional officer, chamber, or body may request an assessment from a Monitor within its mandate. Where an investigation or assessment is discontinued, the Monitor shall publish the reasons for discontinuation and the findings obtained before discontinuation.
 
 ### §9.1.a — The Legislative Monitor
 
@@ -1235,7 +1235,7 @@ The legality of the selection and hosting arrangement is subject to judicial rev
 
 ### §18.3 — Operational Use Rights
 
-An Operational Use Right terminates when its authorized function ends. The federal government shall publish notice of termination to the NRS in accordance with statute.
+The federal government shall publish notice of termination to the NRS in accordance with statute.
 
 Upon termination, the designated land and improvements revert to the host State or Territory, unless the Republic and the host establish a new arrangement by mutual agreement.
 
