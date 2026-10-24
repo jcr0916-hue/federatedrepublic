@@ -43,3 +43,33 @@ jobs:
           cp docs/adoption-candidate-data.json /tmp/adoption-candidate-data.json
           python3 scripts/prepare-adoption-candidate.py
           diff -u /tmp/adoption-candidate-data.json docs/adoption-candidate-data.json
+      - name: Build isolated candidate site and annotated edition
+        run: |
+          mkdir -p "$RUNNER_TEMP/candidate-site"
+          rsync -a --exclude='.git' --exclude='node_modules' ./ "$RUNNER_TEMP/candidate-site/"
+          cd "$RUNNER_TEMP/candidate-site"
+          cp docs/adoption-candidate-data.json constitution_data.json
+          python3 scripts/sync-annotated.py
+          python3 scripts/build-search-index.py
+          python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md
+          python3 scripts/check-constitutional-site.py
+          npm ci
+          npm run build
+          test -s _site/annotated.html
+          test -s _site/constitution-print.html
+          grep -q '§15.2.a' _site/annotated.html
+          grep -q '§18.3' _site/constitution-print.html
+          echo 'PASS: isolated annotated edition and print website were built with candidate data.'
+      - name: Generate and validate isolated candidate PDF
+        run: |
+          cd "$RUNNER_TEMP/candidate-site"
+          python3 -m pip install --quiet pypdf
+          npx playwright install --with-deps chromium
+          python3 -m http.server 8765 --directory _site >/tmp/candidate-http.log 2>&1 &
+          PID=$!
+          trap 'kill $PID || true' EXIT
+          mkdir -p pdf
+          node scripts/build-constitution-pdf.cjs http://localhost:8765
+          python3 scripts/check-constitution-pdf.py
+          python3 scripts/check-pdf-accessibility.py
+          echo 'PASS: candidate PDF content and accessibility checked.'
