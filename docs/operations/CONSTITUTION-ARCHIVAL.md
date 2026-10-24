@@ -102,14 +102,19 @@ required pull request checks provide prevention before publication.
 
 Recovery refuses a rewritten/non-ancestor baseline, historical archive edits,
 or an unknown mismatched intermediate/current pair. It does not invent missing
-historical Markdown. Two fixed, reviewed historical events are recognized:
+historical Markdown. Three fixed, reviewed historical events are recognized:
 the exact 18 October duplicate-alias deletion/restoration, with original,
 restored and current blobs identical to the canonical files; and the broken
 PR #219 edition, whose exact JSON/Markdown bytes and provenance are preserved
 as unverified source material. Its valid predecessor remains a certified archive
-pair. Both recognitions require their restoration/repair on the first-parent
-chain. All other changes remain rejected, including a later edit or deletion of
-the same alias. The immutable baseline and ordinary before/after archive gate
+pair. Those two recognitions require their restoration/repair on the first-parent
+chain. PR #235 merge `59beca5349754b131373d562ac77f447d60d654f` is also
+recognized only as preserved raw source: its generated artifacts arrived on the
+review branch after the source merge. Its exact original files and hashes must
+be committed with explicit unverified status; no future repair SHA is invented.
+The current head must always be synchronized and validated independently. All
+other changes remain rejected, including a later edit or deletion of the same
+alias or any unknown future JSON/Markdown mismatch. The immutable baseline and ordinary before/after archive gate
 are unchanged. See [the repair record](CONSTITUTIONAL-ARCHIVE-RECOVERY-261023.md).
 
 ## Failure behavior and verification
