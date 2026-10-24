@@ -39,3 +39,6 @@ jobs:
           npm run build
           test -s _site/annotated.html
           test -s _site/constitution-print.html
+          python3 scripts/check-consistency.py
+          python3 scripts/check-scenarios.py
+          node --test scripts/world.test.mjs scripts/world-publishing.test.mjs scripts/state-tests.test.mjs scripts/scenarios.test.mjs scripts/constitution-archive.test.mjs 2>/dev/null || (node --test scripts/world.test.mjs scripts/world-publishing.test.mjs scripts/state-tests.test.mjs scripts/scenarios.test.mjs && python3 scripts/test-constitution-archive.py)
