@@ -3,7 +3,7 @@ name: Validate New Constitutional Wording and Torenthia
 on:
   push:
     branches: [constitution-wording-torenthia-y14m1-261023]
-    paths: ['.github/workflows/stage-constitution-release.yml']
+    paths: ['.github/workflows/validate-wording-torenthia.yml']
   workflow_dispatch:
 
 permissions:
