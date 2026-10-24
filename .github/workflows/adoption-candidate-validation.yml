@@ -1,0 +1,45 @@
+name: Adoption Candidate Validation
+
+on:
+  push:
+    branches:
+      - working-fiscal-draft-and-principle-test-261020
+    paths:
+      - 'docs/adoption-candidate-constitution.md'
+      - 'docs/adoption-candidate-data.json'
+      - 'scripts/prepare-adoption-candidate.py'
+      - '.github/workflows/adoption-candidate-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare staged canonical JSON with clean text
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re, runpy
+          root = Path('.')
+          candidate = json.loads((root/'docs/adoption-candidate-data.json').read_text())
+          assert len(candidate) == 20
+          assert sum(len(a['provisions']) for a in candidate) == 177
+          ids = [p['num'] for a in candidate for p in a['provisions']]
+          assert len(set(ids)) == 177
+          render = runpy.run_path('scripts/build-constitution-md.py')['render']
+          generated = render(candidate)
+          expected = (root/'docs/adoption-candidate-constitution.md').read_text()
+          def normal(t):
+              return '\n'.join(line.strip() for line in t.strip().splitlines() if line.strip() and line.strip() != '---')
+          assert normal(generated).split('## Article I', 1)[1] == normal(expected).split('## Article I', 1)[1]
+          print('PASS: 20 articles, 177 unique provisions, generator text equivalence.')
+          PY
+      - name: Recreate candidate JSON and compare
+        run: |
+          cp docs/adoption-candidate-data.json /tmp/adoption-candidate-data.json
+          python3 scripts/prepare-adoption-candidate.py
+          diff -u /tmp/adoption-candidate-data.json docs/adoption-candidate-data.json
