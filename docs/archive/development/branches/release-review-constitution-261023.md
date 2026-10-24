@@ -4,7 +4,7 @@
 **PR:** [#233](https://github.com/jcr0916-hue/federatedrepublic/pull/233)
 **Candidate baseline:** `118fca1794d173e7b2b7cbf4e54b8211599fcbb2`
 **Substantive release commit:** `44dab96a`
-**Status:** proposed for release; local editorial audit complete
+**Status:** shipped in PR #233; public verification passed; archival recovery correction tracked separately
 
 ## Purpose
 
@@ -22,7 +22,7 @@ Full publishing suite passed: 368 built pages, 238 public records, 13 State hist
 
 ## Decisions and lessons
 
-- **Proposed shipment:** preserve political outcomes and chronology where possible while making removed constitutional mechanisms explicit statutory choices only where compatible. Audit findings are evidence; the institution assigned the decision must decide.
+- **Shipped:** preserve political outcomes and chronology where possible while making removed constitutional mechanisms explicit statutory choices only where compatible. Audit findings are evidence; the institution assigned the decision must decide.
 - **Rejected:** superficial citation substitution, restoring obsolete constitutional text, inventing an Assembly tally, automatic adverse decisions by silence, JMC permission gates, compulsory devolution and force-pushing shared history.
 - **Historically preserved:** exact superseded scenario with provenance, previous main Constitution JSON/Markdown pair dated 261024 UTC, existing archives and all candidate commits. State Constitutions retain their independent source text.
 - **Reuse:** the per-file decisions, reviewed hashes, ordinary live-reference check and explicit snapshot mode. Browser interaction found old handlers that static syntax checks could not detect.
@@ -30,7 +30,7 @@ Full publishing suite passed: 368 built pages, 238 public records, 13 State hist
 
 ## Open follow-ups
 
-Local snapshot/hash checks passed. Before merge: remote CI and expected-head merge. After merge: verify the deployed main SHA, public reader flow, deterministic Navigator response and exact published PDF bytes; append deployment evidence to the release PR. No other editorial blocker identified by this audit.
+Local snapshot/hash checks passed. Remote CI passed and the expected-head merge created `8759e9f7`. Public verification matched all 368 pages, thirteen PDFs and three code/search assets; four deterministic API checks and the public desktop/mobile reader flows passed. See the [production snapshot](../../../operations/constitutional-release-261023-production.json). The post-merge recovery job exposed earlier historical duplicate and JSON/Markdown incidents; the [archival recovery repair](../../../operations/CONSTITUTIONAL-ARCHIVE-RECOVERY-261023.md) tracks that correction. No public editorial blocker was identified.
 
 ## Preservation and branch disposition
 

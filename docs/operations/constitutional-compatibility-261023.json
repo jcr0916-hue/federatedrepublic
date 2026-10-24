@@ -4488,7 +4488,7 @@
     }
   ],
   "method": "Complete corpus inventory and full-text clause/obligation/terminology screening, followed by mechanism-focused reading and linked-record reconciliation. Not a claim that identifier checks alone establish substantive validity. Fictional statutory details are retained only with an express compatible statutory basis; immutable historical editions and dated audits remain preserved.",
-  "status": "editorial audit and local release validation complete; remote CI and production verification required",
+  "status": "editorial audit complete; PR #233 merged and publicly verified; historical archival recovery correction tracked in CONSTITUTIONAL-ARCHIVE-RECOVERY-261023.md",
   "counts": {
     "substantive repair": 128,
     "compatible": 190,

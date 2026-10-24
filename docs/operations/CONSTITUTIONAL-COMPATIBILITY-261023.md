@@ -38,3 +38,9 @@ Use an ordinary history-preserving merge with the expected release head SHA, aft
 The confirmed pre-release production target is `dpl_B15JWPDopNrDV8x7m9uZeANZqbJV`, READY on main commit `631a8ca2996d8a8423cdd225c0e13b3e8ad0dd8f`, at `federatedrepublic-ona3tw0p7-the-federated-republic.vercel.app`. Vercel marks it a rollback candidate. Public domain: <https://thefederatedrepublic.org>. Refresh this target immediately before merge. If production fails, restore that deployment while preparing a reviewed forward fix; use a revert commit if source rollback is needed. Never reset or force-push shared main.
 
 Future work should reuse the register's decisions and reviewed hashes before repeating an audit. Historical snapshots, old audit conclusions and archived scenarios must not be copied back into live guidance without comparing them to the canonical candidate. New fictional statutes or political events remain separate authoring work.
+
+## Publication verification and recovery follow-up
+
+PR #233 merged normally as `8759e9f73de4609b856b06ff13bd97f4358bfc41` after all three GitHub workflows and the Vercel preview passed. The release branch and permanent archive branch were verified present. Production deployment `dpl_4D3oQK8isR8A5N78qkN4vFeuUqZb` became READY with the public alias and no alias error. [Public verification](constitutional-release-261023-production.json) matched every one of 368 HTML pages, thirteen PDFs and three search/code assets, and passed four deterministic API checks plus all public browser flows.
+
+The post-merge recovery job then exposed two older historical incidents. The public output checks passed independently. Their narrowly scoped recovery repair and preserved source evidence are described in the [archival repair record](CONSTITUTIONAL-ARCHIVE-RECOVERY-261023.md); follow-up deployment evidence belongs in its linked PR. The approved canonical source and the dated per-file corpus review remain unchanged.
