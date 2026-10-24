@@ -94,3 +94,11 @@ Isolated GitHub Actions run https://github.com/jcr0916-hue/federatedrepublic/act
 **Citation migration:** `torenthia-nrs-103.html` now cites §10.1 instead of deleted §2.10 in metadata and text. The historic report calendar and statute-based requirements were preserved.
 
 **Release gate:** These checks validate candidate outputs, not editorial adoption approval, a public deployment, or a final independent legal review. Any release still requires explicit authorization.
+
+## Formal release-review gate (2026-10-23)
+
+Validated candidate: `docs/adoption-candidate-data.json`. Successful isolated output validation: https://github.com/jcr0916-hue/federatedrepublic/actions/runs/40048117635 . Baseline main commit checked: `631a8ca2996d8a8423cdd225c0e13b3e8ad0dd8f`.
+
+Proposed release: create a dedicated branch from the current main commit; reconcile approved candidate changes there; regenerate canonical Markdown, annotated edition, search index, PDF and website from the approved JSON; check historical citations and archive changes; run full repository tests; inspect the complete diff. Do not merge or publish until final text and release-commit approval.
+
+Recovery: preserve the pre-release commit and constitutional source; on failure stop the merge, or revert approved release commits and rebuild from restored canonical data. Working review records are not operative constitutional text.
