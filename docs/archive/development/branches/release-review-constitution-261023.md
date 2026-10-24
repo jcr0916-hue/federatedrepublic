@@ -1,7 +1,7 @@
 # Branch history — release-review-constitution-261023
 
 **Original branch:** `release-review-constitution-261023`
-**PR:** not yet opened; add before merge
+**PR:** [#233](https://github.com/jcr0916-hue/federatedrepublic/pull/233)
 **Candidate baseline:** `118fca1794d173e7b2b7cbf4e54b8211599fcbb2`
 **Substantive release commit:** `44dab96a`
 **Status:** proposed for release; local editorial audit complete
@@ -30,7 +30,7 @@ Full publishing suite passed: 368 built pages, 238 public records, 13 State hist
 
 ## Open follow-ups
 
-Before merge: final snapshot/hash checks, remote CI and expected-head merge. After merge: verify the deployed main SHA, public reader flow, deterministic Navigator response and exact published PDF bytes; append deployment evidence to the release PR. No other editorial blocker identified by this audit.
+Local snapshot/hash checks passed. Before merge: remote CI and expected-head merge. After merge: verify the deployed main SHA, public reader flow, deterministic Navigator response and exact published PDF bytes; append deployment evidence to the release PR. No other editorial blocker identified by this audit.
 
 ## Preservation and branch disposition
 

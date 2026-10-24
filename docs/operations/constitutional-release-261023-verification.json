@@ -416,6 +416,6 @@
     "AI-provider responses were mocked in automated benchmark tests; live generated-answer quality is not certified.",
     "Tagged PDF structure and bookmarks passed; full PDF/UA conformance is not claimed."
   ],
-  "release_pr": null,
+  "release_pr": "https://github.com/jcr0916-hue/federatedrepublic/pull/233",
   "production_verification": "not yet deployed; final evidence must identify the merged SHA and successful public-domain checks"
 }

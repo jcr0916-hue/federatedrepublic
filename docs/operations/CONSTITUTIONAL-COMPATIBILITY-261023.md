@@ -33,7 +33,7 @@ The [machine-readable verification record](constitutional-release-261023-verific
 
 ## Release and rollback
 
-Use an ordinary history-preserving merge with the expected release head SHA, after remote CI succeeds. Retain the release branch and all 15 pre-existing candidate commits. Do not merge unrelated open work. Deployment evidence is to be appended to the release PR after production verification; this document records the editorial and pre-merge basis.
+Use an ordinary history-preserving merge with the expected release head SHA, after remote CI succeeds. Retain the release branch and all 15 pre-existing candidate commits. Do not merge unrelated open work. Deployment evidence is to be appended to [release PR #233](https://github.com/jcr0916-hue/federatedrepublic/pull/233) after production verification; this document records the editorial and pre-merge basis.
 
 The confirmed pre-release production target is `dpl_B15JWPDopNrDV8x7m9uZeANZqbJV`, READY on main commit `631a8ca2996d8a8423cdd225c0e13b3e8ad0dd8f`, at `federatedrepublic-ona3tw0p7-the-federated-republic.vercel.app`. Vercel marks it a rollback candidate. Public domain: <https://thefederatedrepublic.org>. Refresh this target immediately before merge. If production fails, restore that deployment while preparing a reviewed forward fix; use a revert commit if source rollback is needed. Never reset or force-push shared main.
 
