@@ -1,0 +1,41 @@
+name: Constitution Release Review
+
+on:
+  push:
+    branches: [release-review-constitution-261023]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate source and generated candidate in temporary workspace
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("constitution_data.json").read_text())
+          assert len(d)==20
+          ids=[p["num"] for a in d for p in a["provisions"]]
+          assert len(ids)==len(set(ids))==177
+          assert "§2.10" not in ids and "§15.2.a" in ids
+          print("Release source 20 articles, 177 distinct provisions")
+          PY
+          mkdir -p "$RUNNER_TEMP/release-test"
+          rsync -a --exclude='.git' --exclude='node_modules' ./ "$RUNNER_TEMP/release-test/"
+          cd "$RUNNER_TEMP/release-test"
+          python3 scripts/sync-annotated.py
+          python3 scripts/build-search-index.py
+          python3 scripts/build-constitution-md.py constitution_data.json docs/release-generated.md
+          cp docs/release-generated.md docs/constitution-current.md
+          python3 scripts/check-constitutional-site.py
+          node scripts/check-world-publishing.mjs
+          node scripts/check-world-metadata.mjs
+          npm ci
+          npm run build
+          test -s _site/annotated.html
+          test -s _site/constitution-print.html
