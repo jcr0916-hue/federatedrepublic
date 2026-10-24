@@ -6,7 +6,7 @@
 
 ## Proposed amendment 1 — Fiscal sustainability and independent reporting
 
-**Status (24 October 2026):** Adopted. The principle entered the Constitution with the 23 October release (PR #233); the final wording below, including the budget sustainability assessment, was applied by PR #241. Retained here for its rationale notes.
+**Status (24 October 2026):** Adopted. The principle entered the Constitution with the 23 October release (PR #233); the final wording below, including the budget sustainability assessment, was applied by PR #241 (MA assessment after enactment; either chamber may request one on pending legislation). Retained here for its rationale notes.
 
 **Scope:** Replace §12.1.b and §12.2(2) only. Preserve all other provisions of Article XII, especially the Social State (§12.1), MA independence (§12.1.a), interim appropriation (§12.2(3)–(5)), surplus-year Endowment funding (§12.2(6)), and National Endowment (§12.4).
 
@@ -16,7 +16,7 @@ The Monetary Authority publishes a State of the Economy report to the NRS, the A
 
 ### Proposed §12.2(2) — Fiscal Accountability
 
-The Republic conducts its fiscal affairs to sustain public finances, including public debt, over the long term while fulfilling its constitutional obligations. Each budget is published with an assessment of its effect on fiscal sustainability, which the MA reviews for accuracy.
+The Republic conducts its fiscal affairs to sustain public finances, including public debt, over the long term while fulfilling its constitutional obligations. After each budget is enacted, the MA publishes an assessment of its likely effects on the economy and on fiscal sustainability. Either chamber may request an MA assessment of pending legislation.
 
 ### Rationale and testing notes for future Constitutional History entry
 

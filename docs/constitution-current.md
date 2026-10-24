@@ -849,7 +849,7 @@ The Monetary Authority publishes a State of the Economy report to the NRS, the A
 
 (1) The annual budget originates in the Assembly. Each Consul prepares and submits to the Assembly a proposed budget for their respective domain, published to the NRS upon submission, by the deadline defined by statute; absent a statutory deadline, no later than 120 days before the start of the fiscal year. A Consul's failure to submit does not delay or bar the budget process.
 
-(2) The Republic conducts its fiscal affairs to sustain public finances, including public debt, over the long term while fulfilling its constitutional obligations. Each budget is published with an assessment of its effect on fiscal sustainability, which the MA reviews for accuracy.
+(2) The Republic conducts its fiscal affairs to sustain public finances, including public debt, over the long term while fulfilling its constitutional obligations. After each budget is enacted, the MA publishes an assessment of its likely effects on the economy and on fiscal sustainability. Either chamber may request an MA assessment of pending legislation.
 
 (3) Where no budget is enacted by the start of the fiscal year, or any earlier deadline defined by statute, or where an enacted annual budget is repealed by optional referendum under §13.1, an interim automatic appropriation takes effect by constitutional operation covering:
 
