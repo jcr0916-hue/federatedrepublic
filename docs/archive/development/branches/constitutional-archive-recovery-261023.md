@@ -2,11 +2,11 @@
 
 **Original branch:** `fix/constitutional-archive-recovery-check-261023`
 
-**PR:** not yet opened
+**PR:** [#234](https://github.com/jcr0916-hue/federatedrepublic/pull/234)
 
 **Base:** published release merge `8759e9f73de4609b856b06ff13bd97f4358bfc41`
 
-**Status:** proposed corrective follow-up; public release already verified
+**Status at preparation:** proposed corrective follow-up; public release already verified. Final publication evidence is recorded in PR #234.
 
 ## Purpose and changes
 

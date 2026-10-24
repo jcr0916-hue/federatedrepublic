@@ -3109,9 +3109,10 @@
   ],
   "post_merge_archive_incident": {
     "run_id": 40059688070,
-    "status": "failure triaged; corrective implementation and 33 tests passed locally; follow-up PR required",
+    "status": "failure triaged; corrective implementation and 33 tests passed locally; final remote recovery/deployment evidence is appended to PR #234",
     "first_failure": "historical duplicate-alias deletion in commit 47e9f9fdba9f79663c500cd5898d10f8ca85890c",
     "second_preflight_finding": "historical JSON/Markdown mismatch at e309c3bb667f153d71dd4c184fc73652f1d08f33",
-    "public_outputs_affected": false
+    "public_outputs_affected": false,
+    "repair_pr": "https://github.com/jcr0916-hue/federatedrepublic/pull/234"
   }
 }
