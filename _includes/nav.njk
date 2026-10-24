@@ -1,6 +1,42 @@
 <div id="site-nav"><nav aria-label="Primary navigation">
 <a href="/index.html" class="nav-logo"><img src="/seal.png" alt="" class="nav-seal" width="32" height="32">The Federated Republic</a>
 <div class="nav-links">{% include "nav-links.njk" %}</div>
+<button type="button" id="navigatorLaunch" class="navigator-launch" aria-haspopup="dialog" aria-controls="navigatorDrawer">Ask the Constitution</button>
 <button class="hamburger" onclick="toggleMobileNav()" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav><div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">{% include "nav-links.njk" %}</div>
 <noscript><style>.hamburger{display:none!important}.nav-links{display:flex!important;flex-wrap:wrap}#site-nav nav{height:auto;min-height:56px;position:relative;flex-wrap:wrap}.nav-group-links{max-width:90vw}</style></noscript></div>
+<style>
+.navigator-launch{margin-left:auto;margin-right:.65rem;padding:.35rem .65rem;background:transparent;border:1px solid var(--gold);border-radius:3px;color:var(--gold);font:600 .67rem 'Jost',sans-serif;cursor:pointer;white-space:nowrap}
+.navigator-launch:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.global-nav-overlay{position:fixed;inset:0;background:rgba(5,12,25,.5);z-index:599}
+.global-nav-drawer{position:fixed;right:0;top:0;height:100dvh;width:min(470px,100vw);background:var(--cream);z-index:600;box-shadow:-8px 0 28px rgba(0,0,0,.22);padding:1.3rem;overflow:auto;color:var(--text)}
+.global-nav-overlay[hidden],.global-nav-drawer[hidden],.global-nav-loading[hidden]{display:none!important}
+.global-nav-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.3rem}
+.global-nav-header h2{margin:0;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--navy)}
+.global-nav-close{background:none;border:1px solid var(--border);padding:.35rem .55rem;color:var(--navy);cursor:pointer}
+.global-nav-form{display:flex;gap:.4rem;margin-bottom:.7rem}
+.global-nav-form input{min-width:0;flex:1;padding:.75rem;border:1px solid var(--border);background:white;color:var(--navy);font:inherit}
+.global-nav-form button{border:0;background:var(--navy);color:white;padding:0 .9rem;cursor:pointer}
+.global-nav-form button:disabled{opacity:.55}
+.global-nav-hint{font-size:.76rem;color:var(--muted);margin:0 0 1rem}
+.global-nav-loading{color:var(--muted);padding:.8rem 0;font-size:.85rem}
+.global-nav-section-label{font:.7rem 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:1.3rem 0 .6rem}
+.global-nav-summary{font-size:.97rem;line-height:1.7;white-space:pre-wrap}
+.global-nav-stack{display:flex;flex-direction:column;gap:.55rem}
+.global-nav-provision,.global-nav-resource{display:block;background:var(--cream2);padding:.85rem 1rem;border:1px solid var(--border);border-left:3px solid var(--gold);font-size:.88rem}
+.global-nav-number{color:var(--gold);font: .72rem 'JetBrains Mono',monospace;margin-bottom:.3rem}
+.global-nav-note{color:var(--muted);line-height:1.55;margin:.3rem 0 0}
+.global-nav-verbatim{white-space:pre-wrap}
+.global-nav-resource{text-decoration:none;color:var(--navy)}
+.global-nav-resource span{display:block;color:var(--muted);font-size:.79rem;margin-top:.25rem}
+@media(max-width:680px){.navigator-launch{font-size:.62rem;padding:.35rem .42rem}.global-nav-drawer{padding:1rem}}
+</style>
+<div id="navigatorOverlay" class="global-nav-overlay" hidden></div>
+<section id="navigatorDrawer" class="global-nav-drawer" role="dialog" aria-modal="true" aria-labelledby="navigatorTitle" hidden>
+  <header class="global-nav-header"><h2 id="navigatorTitle">Ask the Constitution</h2><button type="button" class="global-nav-close" id="navigatorClose" aria-label="Close Navigator">Close ×</button></header>
+  <form id="navigatorForm" class="global-nav-form"><input id="navigatorQuestion" type="text" placeholder="Who controls foreign policy?" aria-label="Ask a constitutional question" autocomplete="off"><button id="navigatorAsk" type="submit">Ask</button></form>
+  <p class="global-nav-hint">Optional AI feature. Answers link back to the Constitution and related reading. <a href="/ai-features.html">How this works and privacy</a>.</p>
+  <div class="global-nav-loading" id="navigatorLoading" role="status" hidden>Searching the Constitution…</div>
+  <div id="navigatorBody" aria-live="polite"></div>
+</section>
+<script src="/navigator-drawer.js" defer></script>
