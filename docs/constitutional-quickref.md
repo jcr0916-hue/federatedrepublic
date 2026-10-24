@@ -237,7 +237,7 @@ No civil servant, military member, or person exercising federal authority may co
 
 ### §2.9.a — State Emergency Council
 
-(1) At each federal electoral period, the Elections Panel shall publish to the NRS a public-lot ordered list of States. Each State is represented for this purpose by its constitutionally designated head of state or, absent one, its presiding legislative officer.
+(1) At each federal electoral period, the Elections Panel must publish to the NRS a public-lot ordered list of States. Each State is represented for this purpose by its constitutionally designated head of state or, absent one, its presiding legislative officer.
 
 - **Cross-refs:** §15.7.a
 
@@ -401,7 +401,7 @@ The Republic's judiciary consists of district courts, appellate courts, and the 
 
 ### §4.2 — Judicial Appointments and Independence
 
-(1) The Civic Consul shall nominate inferior court judges from the Judicial Pool under §9.8 without undue delay following a vacancy. The Senate confirms by a majority of its full seated membership.
+(1) The Civic Consul must nominate inferior court judges from the Judicial Pool under §9.8 without undue delay following a vacancy. The Senate confirms by a majority of its full seated membership.
 
 - **Thresholds:**
   - (3) The Legislature may remove an inferior court judge by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity
@@ -470,7 +470,7 @@ Every citizen is a voting citizen of exactly one State or Territory, determined 
 
 ### §5.1.b — Civic and Constitutional Proficiency
 
-The Republic shall maintain a civic and constitutional proficiency assessment administered by an independent agency under §3.9. The assessment must comply with §1.6 and may not evaluate political opinion or cultural loyalty.
+The Republic must maintain a civic and constitutional proficiency assessment administered by an independent agency under §3.9. The assessment must comply with §1.6 and may not evaluate political opinion or cultural loyalty.
 
 - **Cross-refs:** §1.6, §3.9
 
@@ -529,7 +529,7 @@ A person whose removal cannot be executed remains at liberty, subject to all app
 
 ### §7.2.a — Special Elections and Postponements
 
-Special elections shall be conducted under procedures established by statute. A federal election may be postponed due to a natural disaster by a two-thirds vote of each chamber of the Legislature.
+Special elections are conducted under procedures established by statute. A federal election may be postponed due to a natural disaster by a two-thirds vote of each chamber of the Legislature.
 
 
 ### §7.3 — Electoral Supermajority Threshold
@@ -610,7 +610,7 @@ Candidate impersonation, vote suppression, and interference with election admini
 
 ### §8.3 — Political Neutrality of Public Communication Resources
 
-Public communication resources, including those operated by private entities using public resources, shall be made available for electoral purposes on politically neutral and nondiscriminatory terms established by statute.
+Public communication resources, including those operated by private entities using public resources, must be made available for electoral purposes on politically neutral and nondiscriminatory terms established by statute.
 
 
 ### §8.4 — Electoral Assistance
@@ -687,12 +687,12 @@ Any citizen meeting the following eligibility criteria may apply directly to the
 
 ### §9.5 — Monitor Operations
 
-Monitor findings and assessments shall be published permanently to the NRS, subject to constitutional protections for confidential information and lawful security interests. No authority outside the issuing Monitor may suppress, delay, alter, or classify its findings.
+Monitor findings and assessments must be published permanently to the NRS, subject to constitutional protections for confidential information and lawful security interests. No authority outside the issuing Monitor may suppress, delay, alter, or classify its findings.
 
 
 ### §9.5.a — Compliance Standards and Findings
 
-Monitors shall publish their audit findings to the NRS and submit them to the constitutional institution responsible for the matter under review. Where this Constitution requires a determination of compliance based on an audit, that institution shall make the determination under the applicable constitutional and statutory procedures.
+Monitors must publish their audit findings to the NRS and submit them to the constitutional institution responsible for the matter under review. Where this Constitution requires a determination of compliance based on an audit, that institution must make the determination under the applicable constitutional and statutory procedures.
 
 
 ### §9.5.b — Agency Accountability
@@ -721,10 +721,10 @@ Where two Monitor Generals find evidence that the third has engaged in serious m
 
 ### §9.9 — Constitutional Officer Removal
 
-(1) A proceeding to remove a Monitor General for serious misconduct or abuse of office may be initiated by an institution outside the Monitor's audit mandate: for the Legislative Monitor General, by either Consul; for the Executive Monitor General, by either legislative chamber; for the Judicial Monitor General, by either legislative chamber or either Consul. The initiating authority shall publish stated grounds…
+(1) A proceeding to remove a Monitor General for serious misconduct or abuse of office may be initiated by an institution outside the Monitor's audit mandate: for the Legislative Monitor General, by either Consul; for the Executive Monitor General, by either legislative chamber; for the Judicial Monitor General, by either legislative chamber or either Consul. The initiating authority must publish stated grounds…
 
 - **Time limits:**
-  - (2) The Elections Panel shall administer a national removal referendum within 90 days of initiation, or at the next regularly scheduled federal election, whichever occurs first
+  - (2) The Elections Panel must administer a national removal referendum within 90 days of initiation, or at the next regularly scheduled federal election, whichever occurs first
 - **Cross-refs:** §7.3
 
 ### §9.9.a — Monitor General Disclosure
@@ -794,7 +794,7 @@ The Monetary Authority is a constitutionally mandated independent agency under �
 
 ### §12.1.b — Monetary Authority Reporting
 
-The Monetary Authority publishes a detailed State of the Economy report to the NRS, the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually, or more frequently as statute requires. The report independently assesses economic conditions, fiscal sustainability, performance against the Republic's fiscal obligations, and areas requiring improvement, including the MA's actions within its authority.
+The Monetary Authority publishes a State of the Economy report to the NRS, the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually, or more frequently as statute requires. The report independently assesses economic conditions, fiscal sustainability, and performance against the Republic's fiscal obligations; identifies areas requiring improvement; and describes the MA's actions within its…
 
 
 ### §12.2 — Fiscal Accountability
@@ -807,7 +807,7 @@ The Monetary Authority publishes a detailed State of the Economy report to the N
 
 ### §12.2.a — Extraordinary Defensive Expenditure
 
-Where an active or imminent attack requires immediate defensive expenditure beyond available appropriations, and the Assembly is unable to act, the Legat Consul may authorize expenditure necessary for the immediate defense of the Republic. The Legat Consul shall report such expenditure to the Speaker of the Assembly without undue delay.
+Where an active or imminent attack requires immediate defensive expenditure beyond available appropriations, and the Assembly is unable to act, the Legat Consul may authorize expenditure necessary for the immediate defense of the Republic. The Legat Consul must report such expenditure to the Speaker of the Assembly without undue delay.
 
 
 ### §12.3 — Taxing Power and National Revenue Fund
@@ -829,7 +829,7 @@ No State or Territory may impose requirements on goods, services, or economic ac
 
 ### §12.6 — Fiscal Equalization
 
-The Legislature shall establish by statute a fiscal equalization mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I. The Executive Monitor shall audit and review the mechanism's compliance with constitutional requirements and publish its findings to the NRS.
+The Legislature must establish by statute a fiscal equalization mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I. The Executive Monitor must audit and review the mechanism's compliance with constitutional requirements and publish its findings to the NRS.
 
 - **Cross-refs:** §12.1
 
@@ -843,7 +843,7 @@ The Legislature shall establish by statute a fiscal equalization mechanism ensur
 
 - **Time limits:**
   - A petition must be filed with the Elections Panel within 90 days of enactment and proceeds in two phases, each authenticated through the NVS
-  - (6) Upon verification of the required petition signatures, the Elections Panel shall administer the referendum within 90 days
+  - (6) Upon verification of the required petition signatures, the Elections Panel must administer the referendum within 90 days
 - **Cross-refs:** §13.1
 
 ### §13.2 — Citizen Legislative Initiative
@@ -851,8 +851,8 @@ The Legislature shall establish by statute a fiscal equalization mechanism ensur
 (1) Citizens may propose legislation directly to the Legislature through the two-phase petition process established under §13.1, without the filing deadline applicable to optional referendums. Phase Two requires signatures from 10% of eligible voters nationally.
 
 - **Time limits:**
-  - (2) Upon verification of the required petition signatures, the Legislature shall have 90 days to enact the proposed legislation
-  - If the Legislature does not enact the proposal within that period, the Elections Panel shall administer a national referendum on the proposal within the following 90 days
+  - (2) Upon verification of the required petition signatures, the Legislature has 90 days to enact the proposed legislation
+  - If the Legislature does not enact the proposal within that period, the Elections Panel must administer a national referendum on the proposal within the following 90 days
 - **Cross-refs:** §13.1
 
 ---
@@ -866,7 +866,7 @@ Military force may be used only for two purposes: protection of the Republic’s
 
 ### §14.2 — Defense Authorization and Allocation
 
-A law authorizing military operations shall establish their purposes and scope and provide for the orderly withdrawal of deployed personnel and fulfillment of obligations arising from the operation. The Legat Consul shall provide a proposed plan of action and budget, including provision for those responsibilities.
+A law authorizing military operations must establish their purposes and scope and provide for the orderly withdrawal of deployed personnel and fulfillment of obligations arising from the operation. The Legat Consul must provide a proposed plan of action and budget, including provision for those responsibilities.
 
 - **Cross-refs:** §2.14
 
@@ -896,7 +896,7 @@ A Territory operates under a Territorial Compact: the restructuring agreement un
 A State in Provisional status remains a State, and its government and Assembly representation continue without interruption. Sitting senators complete their current terms, but no new Senate term begins for the State while Provisional status continues.
 
 - **Time limits:**
-  - The Elections Panel shall administer a special election within 90 days to fill any vacant Senate seats
+  - The Elections Panel must administer a special election within 90 days to fill any vacant Senate seats
 - **Cross-refs:** §15.2
 
 ### §15.2 — The Statehood Audit
@@ -912,13 +912,13 @@ A State in Provisional status remains a State, and its government and Assembly r
 (1) The Assembly initially determines whether a Territory satisfies the constitutional requirements for Statehood. The Senate initially determines whether an existing State has passed or failed a biennial Statehood Audit and whether a State should enter Provisional status under §15.3.
 
 - **Time limits:**
-  - (4) The initially responsible chamber shall make its determination within the period established by statute, not exceeding 90 days after receipt of the completed audit record
-  - The receiving chamber shall make its determination within the period established by statute, not exceeding 90 days after transfer
+  - (4) The initially responsible chamber must make its determination within the period established by statute, not exceeding 90 days after receipt of the completed audit record
+  - The receiving chamber must make its determination within the period established by statute, not exceeding 90 days after transfer
 - **Cross-refs:** §15.3
 
 ### §15.3 — State Remediation and Provisional Status
 
-(1) A State receiving a failed biennial Statehood Audit shall enter remediation. Following the first consecutive failure, the State shall publish a Remediation Plan to the NRS.
+(1) A State receiving a failed biennial Statehood Audit enters remediation. Following the first consecutive failure, the State must publish a Remediation Plan to the NRS.
 
 - **Cross-refs:** §15.2.a
 
@@ -940,11 +940,11 @@ A Territory resulting from devolution is deemed to have requested a Statehood Au
 
 ### §15.5.a — Remainder Viability
 
-(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, they are addressed together under paragraph (4). (2) Where paragraph (1) does not apply, the Joint Monitor Council shall assess whether the remaining portion of a Territory could independently satisfy the constitutional requirements for Statehood and publish…
+(1) Where two or more petitions under §15.4 or §15.2 affecting different defined portions of the same Territory are certified within 90 days of one another, they are addressed together under paragraph (4). (2) Where paragraph (1) does not apply, the Joint Monitor Council must assess whether the remaining portion of a Territory could independently satisfy the constitutional requirements for Statehood and publish…
 
 - **Time limits:**
   - 2 affecting different defined portions of the same Territory are certified within 90 days of one another, they are addressed together under paragraph (4)
-  - The Assembly shall make its determination within the period established by statute, not exceeding 90 days
+  - The Assembly must make its determination within the period established by statute, not exceeding 90 days
 - **Cross-refs:** §15.2, §15.2.a, §15.4
 
 ### §15.6 — Voluntary Incorporation
@@ -1024,7 +1024,7 @@ Indigenous nations hold sovereignty that precedes the Republic. This sovereignty
 
 ### §16.4 — Post-Founding Recognition
 
-(1) A people asserting sovereignty preceding the Republic may petition for recognition under this section. The JMC shall investigate the claim against the recognition criteria established in §16.1 and publish its findings to the NRS.
+(1) A people asserting sovereignty preceding the Republic may petition for recognition under this section. The JMC must investigate the claim against the recognition criteria established in §16.1 and publish its findings to the NRS.
 
 - **Cross-refs:** §16.1, §16.3
 
@@ -1042,7 +1042,7 @@ Indigenous nations hold sovereignty that precedes the Republic. This sovereignty
 (1) This Constitution may be amended through the parliamentary path or through citizen initiative. Every member's vote on any amendment is published to the NRS.
 
 - **Time limits:**
-  - Upon verification of the required signatures, the Elections Panel shall administer a national referendum within 180 days
+  - Upon verification of the required signatures, the Elections Panel must administer a national referendum within 180 days
 - **Cross-refs:** §1.16.a, §10.1, §11.1, §13.1, §15.7.a, §17.3, §3.10, §9.1, §9.2, §9.4
 
 ### §17.2 — No Executive Veto; Amendment Takes Effect
@@ -1052,10 +1052,10 @@ No Consul signature or veto applies to an amendment. An amendment takes effect u
 
 ### §17.3 — Amendment Consistency and Supremacy
 
-(1) A proposed constitutional amendment shall identify the provisions it repeals or modifies. An amendment ratified in accordance with this Constitution shall be interpreted consistently with existing provisions wherever reasonably possible.
+(1) A proposed constitutional amendment must identify the provisions it repeals or modifies. An amendment ratified in accordance with this Constitution is interpreted consistently with existing provisions wherever reasonably possible.
 
 - **Time limits:**
-  - The JM shall have 30 days following parliamentary approval or verification of a citizen initiative's required petition signatures to publish its findings
+  - The JM has 30 days following parliamentary approval or verification of a citizen initiative's required petition signatures to publish its findings
 - **Cross-refs:** §1.16.a, §17.3
 
 ### §17.4 — Supremacy of This Constitution
@@ -1075,13 +1075,13 @@ The federal government holds no territorial sovereignty within any State or Terr
 
 ### §18.2 — Seat of Government
 
-The Seat of Government shall be hosted by a State or Territory selected through a process established by statute. The hosting arrangement shall establish the Republic's Operational Use Rights over the designated federal footprint in accordance with §18.1.
+The Seat of Government is hosted by a State or Territory selected through a process established by statute. The hosting arrangement establishes the Republic's Operational Use Rights over the designated federal footprint in accordance with §18.1.
 
 - **Cross-refs:** §18.1
 
 ### §18.3 — Operational Use Rights
 
-The federal government shall publish notice of termination to the NRS in accordance with statute. Upon termination, the designated land and improvements revert to the host State or Territory, unless the Republic and the host establish a new arrangement by mutual agreement.
+The federal government must publish notice of termination to the NRS in accordance with statute. Upon termination, the designated land and improvements revert to the host State or Territory, unless the Republic and the host establish a new arrangement by mutual agreement.
 
 
 ### §18.4 — The National Trust
@@ -1092,7 +1092,7 @@ The federal government shall publish notice of termination to the NRS in accorda
 
 ### §18.5 — National Trust Land in Territories
 
-Designation of land within a Territory to the National Trust shall be governed by its Territorial Compact or, where the Compact is silent, by statute, subject to the requirements of §18.4.
+Designation of land within a Territory to the National Trust is governed by its Territorial Compact or, where the Compact is silent, by statute, subject to the requirements of §18.4.
 
 - **Cross-refs:** §18.4
 
@@ -1121,39 +1121,39 @@ This Constitution takes effect upon interim Elections Panel certification that t
 (1) Until the institutions of the Republic responsible for national defense become constitutionally capable of exercising their respective functions, predecessor national institutions may exercise only the military and defense authority reasonably necessary to defend the Republic, its territory, population, and forces against actual or imminent invasion or armed attack, or to fulfill military obligations arising…
 
 - **Time limits:**
-  - Within 14 days of assuming office, the Legat Consul shall submit such an operation for legislative authorization or begin its orderly cessation
+  - Within 14 days of assuming office, the Legat Consul must submit such an operation for legislative authorization or begin its orderly cessation
 - **Cross-refs:** §14.5, §19.3, §19.5, §2.2
 
 ### §19.4 — Pre-Constitutional Classified Documents
 
-Predecessor classified material is subject to Article X from Day Zero. The Legislature shall establish an independent mechanism to review predecessor classified material under Article X.
+Predecessor classified material is subject to Article X from Day Zero. The Legislature must establish an independent mechanism to review predecessor classified material under Article X.
 
 
 ### §19.5 — Pre-Existing Obligations
 
-(1) Pre-existing social insurance programs shall continue without interruption during the constitutional transition, subject to subsequent legislation enacted under this Constitution. (2) The Republic succeeds to the predecessor government's international legal relationships, including its treaties, financial commitments, and contractual obligations.
+(1) Pre-existing social insurance programs continue without interruption during the constitutional transition, subject to subsequent legislation enacted under this Constitution. (2) The Republic succeeds to the predecessor government's international legal relationships, including its treaties, financial commitments, and contractual obligations.
 
 - **Cross-refs:** §3.6
 
 ### §19.6 — Transition Territories
 
-(1) A political entity holding recognized State or equivalent constitutional status before ratification that elects to enter the Republic as a State shall be recognized as a State from Day Zero, with all rights and responsibilities established by this Constitution. (2) Predecessor territories that do not enter the Republic as States shall be recognized as Territories from Day Zero.
+(1) A political entity holding recognized State or equivalent constitutional status before ratification that elects to enter the Republic as a State is recognized as a State from Day Zero, with all rights and responsibilities established by this Constitution. (2) Predecessor territories that do not enter the Republic as States are recognized as Territories from Day Zero.
 
 
 ### §19.7 — Founding Registers and Monetary Continuity
 
-(1) The interim Elections Panel shall prepare the initial Candidate Registers in accordance with the applicable constitutional eligibility requirements. (2) The founding register of recognized Indigenous nations shall be established from the authoritative predecessor records and published to the NRS.
+(1) The interim Elections Panel must prepare the initial Candidate Registers in accordance with the applicable constitutional eligibility requirements. (2) The founding register of recognized Indigenous nations is established from the authoritative predecessor records and published to the NRS.
 
 - **Cross-refs:** §12.1.a
 
 ### §19.8 — Transitional Accountability Mechanism
 
-Where documented violations by a predecessor government warrant transitional accountability, the Legislature may establish a temporary, non-criminal Transitional Accountability Mechanism by a two-thirds vote of both chambers. The establishing statute shall define the mechanism's jurisdiction, powers, procedures, and duration.
+Where documented violations by a predecessor government warrant transitional accountability, the Legislature may establish a temporary, non-criminal Transitional Accountability Mechanism by a two-thirds vote of both chambers. The establishing statute must define the mechanism's jurisdiction, powers, procedures, and duration.
 
 
 ### §19.9 — Required Institutions and Temporary Continuity
 
-(1) Where this Constitution requires the establishment of a permanent institution to exercise a constitutional function, the responsible authorities shall provide for its establishment in accordance with law. (2) A lawful temporary institution may exercise only the functions necessary to preserve constitutional continuity or rights until the corresponding permanent institution becomes constitutionally capable of…
+(1) Where this Constitution requires the establishment of a permanent institution to exercise a constitutional function, the responsible authorities must provide for its establishment in accordance with law. (2) A lawful temporary institution may exercise only the functions necessary to preserve constitutional continuity or rights until the corresponding permanent institution becomes constitutionally capable of…
 
 
 ### §19.10 — Founding Senate and Judicial Classes
@@ -1178,18 +1178,18 @@ The Republic and an Associated Community are equal sovereign parties to their co
 
 ### §20.3 — Compact Conditions and Compliance
 
-(1) No compact may be entered or ratified with an entity whose governance practices include, authorize, or systematically permit violations of the non-derogable rights in §1.16.a against any person within its jurisdiction. (2) Allegations of violations of §1.16.a arising under an association compact shall be subject to review through the compact's independent arbitration mechanism.
+(1) No compact may be entered or ratified with an entity whose governance practices include, authorize, or systematically permit violations of the non-derogable rights in §1.16.a against any person within its jurisdiction. (2) Allegations of violations of §1.16.a arising under an association compact is subject to review through the compact's independent arbitration mechanism.
 
 - **Cross-refs:** §1.16.a
 
 ### §20.4 — Sovereign Mobility
 
-An Associated Community may terminate its compact through its own democratic or traditional governance process. The Republic shall neither prevent nor penalize that decision.
+An Associated Community may terminate its compact through its own democratic or traditional governance process. The Republic may neither prevent nor penalize that decision.
 
 
 ### §20.5 — Reciprocal Obligations and Review
 
-Each compact shall define the reciprocal obligations of the parties and establish an independent arbitration mechanism. Either party may request a review of the compact by written notice registered to the NRS.
+Each compact must define the reciprocal obligations of the parties and establish an independent arbitration mechanism. Either party may request a review of the compact by written notice registered to the NRS.
 
 
 ### §20.6 — Compact Ratification
@@ -1200,7 +1200,7 @@ The Legat Consul negotiates and concludes compacts with Associated Communities, 
 
 ### §20.7 — Compact Continuity
 
-An association compact remains binding upon the Republic notwithstanding a change of government. Amendment or renegotiation of the compact shall proceed in accordance with its terms and the applicable constitutional treaty procedures.
+An association compact remains binding upon the Republic notwithstanding a change of government. Amendment or renegotiation of the compact proceeds in accordance with its terms and the applicable constitutional treaty procedures.
 
 
 ---

@@ -6,15 +6,17 @@
 
 ## Proposed amendment 1 — Fiscal sustainability and independent reporting
 
+**Status (24 October 2026):** Adopted. The principle entered the Constitution with the 23 October release (PR #233); the final wording below, including the budget sustainability assessment, was applied by PR #241 (MA assessment after enactment; either chamber may request one on pending legislation). Retained here for its rationale notes.
+
 **Scope:** Replace §12.1.b and §12.2(2) only. Preserve all other provisions of Article XII, especially the Social State (§12.1), MA independence (§12.1.a), interim appropriation (§12.2(3)–(5)), surplus-year Endowment funding (§12.2(6)), and National Endowment (§12.4).
 
 ### Proposed §12.1.b — Monetary Authority Reporting
 
-The Monetary Authority publishes a detailed State of the Economy report to the NRS, the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually, or more frequently as statute requires. The report independently assesses economic conditions, fiscal sustainability, performance against the Republic's fiscal obligations, and areas requiring improvement, including the MA's actions within its authority.
+The Monetary Authority publishes a State of the Economy report to the NRS, the Assembly, the Legat Consul, and the Civic Consul no less than semi-annually, or more frequently as statute requires. The report independently assesses economic conditions, fiscal sustainability, and performance against the Republic's fiscal obligations; identifies areas requiring improvement; and describes the MA's actions within its authority.
 
 ### Proposed §12.2(2) — Fiscal Accountability
 
-The Republic shall conduct its fiscal affairs to preserve the long-term sustainability of public finances, including public debt, while fulfilling its constitutional obligations.
+The Republic conducts its fiscal affairs to sustain public finances, including public debt, over the long term while fulfilling its constitutional obligations. After each budget is enacted, the MA publishes an assessment of its likely effects on the economy and on fiscal sustainability. Either chamber may request an MA assessment of pending legislation.
 
 ### Rationale and testing notes for future Constitutional History entry
 
