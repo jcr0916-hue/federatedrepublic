@@ -4,8 +4,8 @@ This is the navigation home for Torenthia material on `main`. **Published record
 
 ## Active editorial sources
 
-- [Story Bible](../WORLD-STORY-BIBLE.md) — durable canon and continuity constraints.
-- [Story Status](../WORLD-STORY-STATUS.md) — live storylines, clocks, and publication frontier.
+- [Story Bible](STORY-BIBLE.md) — durable canon and continuity constraints.
+- [Story Status](STORY-STATUS.md) — live storylines, clocks, and publication frontier.
 - [Year 14 storylines](STORYLINES-Y14.md) — planning proposals, **not canon**.
 - [Publishing workflow](PUBLISHING.md) — authoring, metadata, validation, and release process.
 
