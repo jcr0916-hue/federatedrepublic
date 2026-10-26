@@ -31,7 +31,7 @@ test('preview is byte-for-byte immutable, detects metadata and plans LF normaliz
   assert.deepEqual([tree(f.root),tree(f.inbox)],before);assert.equal(p.items[0].errors.length,0);
   assert.equal(p.items[0].metadata.worldSeq,1);assert.match(p.items[0].warnings.join(),/LF/);
   const r=applyIngest(p,{runChecks:pass});assert.equal(r.applied.length,1);
-  assert.equal(fs.readFileSync(path.join(f.root,'torenthia-news-001.html'),'utf8'),article());
+  assert.equal(fs.readFileSync(path.join(f.root,'torenthia/news/torenthia-news-001.html'),'utf8'),article());
   assert.equal(fs.readFileSync(path.join(f.inbox,'torenthia-news-001.html'),'utf8'),article().replace(/\n/g,'\r\n'));
 });
 test('unknown files and ambiguous flat images are report-only',t=>{
@@ -40,7 +40,7 @@ test('unknown files and ambiguous flat images are report-only',t=>{
 });
 test('canonical routing recognizes docs, states, constitution and explicit asset folders',t=>{
   const f=fixture(t);
-  for(const [name,dest] of [['WORLD-STORY-BIBLE.md','docs/torenthia/STORY-BIBLE.md'],['WORLD-STORY-STATUS.md','docs/torenthia/STORY-STATUS.md'],['constitution_data.json','constitution_data.json'],['arvane-state-constitution.md','State Constitutions/arvane-state-constitution.md'],['images/new-map.webp','images/new-map.webp'],['logos/new.svg','logos/new.svg']]) assert.equal(classify(name,f.root).destination,dest);
+  for(const [name,dest] of [['torenthia-news-001.html','torenthia/news/torenthia-news-001.html'],['torenthia-nrs-001.html','torenthia/nrs/torenthia-nrs-001.html'],['torenthia-sc-001.html','torenthia/court/torenthia-sc-001.html'],['torenthia-dispatch-example.html','torenthia/dispatches/torenthia-dispatch-example.html'],['WORLD-STORY-BIBLE.md','docs/torenthia/STORY-BIBLE.md'],['WORLD-STORY-STATUS.md','docs/torenthia/STORY-STATUS.md'],['constitution_data.json','constitution_data.json'],['arvane-state-constitution.md','State Constitutions/arvane-state-constitution.md'],['images/new-map.webp','images/new-map.webp'],['logos/new.svg','logos/new.svg']]) assert.equal(classify(name,f.root).destination,dest);
   assert.equal(classify('korda-state-constitution.md',f.root).kind,'unknown');
 });
 test('never overwrites, even identical content',t=>{
