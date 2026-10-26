@@ -36,3 +36,7 @@ Compare candidate obsolete files with the existing archive branch and its preser
 ## Release gates
 
 For each migration PR: review diff and file counts; run `npm run world:publish-check`, build and relevant tests; check public URL preservation; await GitHub and Vercel checks; merge only when green. Verify production after merge. Roll back via the migration commit if unexpected URL or content regressions appear.
+
+## Stage 3 routing prerequisite (implemented independently)
+
+Eleventy now recognizes source stems under `torenthia/nrs/`, `torenthia/news/`, `torenthia/court/`, and `torenthia/dispatches/` and publishes those documents at their historical root `torenthia-*.html` URLs. Existing root-level files retain the original permalink behavior. **This routing rule alone does not authorize moving records.** Runtime inventory, ingestion, authoring, cross-record links, and validators still assume root-level source files and must be migrated and tested before any record relocation.
