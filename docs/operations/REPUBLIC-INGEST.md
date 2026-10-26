@@ -20,7 +20,7 @@ No mode commits, pushes or deploys. Unknown flags and `--archive` alone fail.
 | Inbox file | Repository destination / behavior |
 | --- | --- |
 | `torenthia-news-NNN.html`, `torenthia-nrs-NNN.html`, `torenthia-sc-NNN.html`, `torenthia-dispatch-slug.html` | Same filename at the site root; matching `worldKind` and `worldId` required |
-| `WORLD-STORY-STATUS.md`, `WORLD-STORY-BIBLE.md` (flat or under `docs/`) | `docs/`; human-reviewed manual merge only |
+| `WORLD-STORY-STATUS.md`, `WORLD-STORY-BIBLE.md` (flat or under `docs/`) | `docs/torenthia/`; human-reviewed manual merge only |
 | `constitution_data.json` | Manual by default; explicit `--update-constitution` preserves the prior JSON/Markdown pair in the repository before replacement |
 | `<state>-test-NN-<slug>.html` (flat or under `state-tests/<state>/`) | `state-tests/<state>/`; validated new canonical historical test only |
 | Established `name-state-constitution.md` (flat or under `State Constitutions/`) | Existing `State Constitutions/`; human-reviewed manual merge only |
