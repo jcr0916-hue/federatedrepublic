@@ -100,7 +100,7 @@ test('failed post-import checks preserve source and imported file for inspection
 test('rechecks changed sources and destinations before writes',t=>{
   const f=fixture(t);f.put('torenthia-news-001.html',article());const p=f.plan();f.put('torenthia-news-001.html',article(2));
   assert.throws(()=>applyIngest(p,{runChecks:pass}),/Inbox changed/);
-  const p2=f.plan();fs.writeFileSync(path.join(f.root,'torenthia/news/torenthia-news-001.html'),'do not replace');assert.throws(()=>applyIngest(p2,{runChecks:pass}),/Destination appeared/);
+  const p2=f.plan();fs.mkdirSync(path.join(f.root,'torenthia/news'),{recursive:true});fs.writeFileSync(path.join(f.root,'torenthia/news/torenthia-news-001.html'),'do not replace');assert.throws(()=>applyIngest(p2,{runChecks:pass}),/Destination appeared/);
 });
 test('symlink sources and destinations are refused',t=>{
   const f=fixture(t);fs.symlinkSync(path.join(f.root,'constitution_data.json'),path.join(f.inbox,'torenthia-news-001.html'));
