@@ -67,3 +67,13 @@ test('crossing structured clocks warns without blocking finished publication',()
  const registry={events:[],clocks:[{id:'required-notice',title:'Notice',summary:'Pending',status:'scheduled',sources:[r.data.worldId],trigger:{description:'Published obligation'},timing:{kind:'deadline',due:{year:14,month:2}},nextAction:'Publish notice.'}]};
  const result=checkWorldPublishing([r],{...options,registry});assert.deepEqual(result.errors,[]);assert.ok(result.warnings.some(w=>/crosses.*required-notice/.test(w)));
 });
+
+test('publishing inventory reads categorized records and preserves source paths',t=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'world-mixed-publish-'));
+ t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
+ fs.mkdirSync(path.join(dir,'torenthia/nrs'),{recursive:true});
+ fs.writeFileSync(path.join(dir,'torenthia/nrs/torenthia-nrs-001.html'),'---\\nworldKind: nrs\\nworldId: torenthia-nrs-001\\n---\\n');
+ const records=readPublishingRecords(dir);
+ assert.equal(records.length,1);
+ assert.equal(records[0].inputPath,'torenthia/nrs/torenthia-nrs-001.html');
+});
