@@ -19,8 +19,8 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 
 - [Torenthia documentation hub](torenthia/README.md) — grouped navigation and staged organization plan.
 
-- [Story Bible](WORLD-STORY-BIBLE.md) — durable canon and continuity constraints.
-- [Story Status](WORLD-STORY-STATUS.md) — live threads, clocks, open decisions, and current frontier.
+- [Story Bible](torenthia/STORY-BIBLE.md) — durable canon and continuity constraints.
+- [Story Status](torenthia/STORY-STATUS.md) — live threads, clocks, open decisions, and current frontier.
 - Published World records and front matter — authoritative published history, including older records.
 - [Chronology registry](../_data/worldChronology.json) and [clock registry](../_data/worldClocks.json) — current infrastructure.
 - [World publishing](torenthia/PUBLISHING.md).
