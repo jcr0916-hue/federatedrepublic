@@ -68,8 +68,8 @@ test("inventory reads legacy and categorized records without losing filenames",t
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),"world-mixed-"));
   t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
   fs.mkdirSync(path.join(dir,"torenthia/news"),{recursive:true});
-  fs.writeFileSync(path.join(dir,"torenthia-news-001.html"),"---\\nworldKind: news\\nworldSeq: 1\\n---\\n");
-  fs.writeFileSync(path.join(dir,"torenthia/news/torenthia-news-002.html"),"---\\nworldKind: news\\nworldSeq: 2\\n---\\n");
+  fs.writeFileSync(path.join(dir,"torenthia-news-001.html"),"---\nworldKind: news\nworldSeq: 1\n---\n");
+  fs.writeFileSync(path.join(dir,"torenthia/news/torenthia-news-002.html"),"---\nworldKind: news\nworldSeq: 2\n---\n");
   const records=readWorldInventory(dir);
   assert.deepEqual(records.map(x=>x.name).sort(),["torenthia-news-001.html","torenthia-news-002.html"]);
   assert.equal(nextWorldFilename("news",records),"torenthia-news-003.html");
