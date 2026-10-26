@@ -13,8 +13,8 @@ This is the navigation home for Torenthia material on `main`. **Published record
 
 The existing public URLs are retained while the repository's source-path dependencies are audited:
 
-- [NRS records](../../record.html) — official records (source files currently named `torenthia-nrs-*.html` at repository root).
-- [The World](../../world.html) — published reporting and dispatches (source files currently named `torenthia-news-*.html`, `torenthia-sc-*.html`, and `torenthia-dispatch-*.html`).
+- [NRS records](../../record.html) — official records (historical sources remain at repository root; newly authored records are placed in `torenthia/nrs/`).
+- [The World](../../world.html) — published reporting and dispatches (historical sources remain at repository root; new source files are routed to `torenthia/news/`, `torenthia/court/`, and `torenthia/dispatches/`).
 - [Current project sources](../../PROJECT-SOURCES.md) — source hierarchy and authority.
 
 Do not move published HTML sources merely for appearance: Eleventy page URLs, the World inventory and source-packet tools, related-record links, and historical references must continue to work. A later migration must preserve old public URLs and pass publishing/build checks before merge.

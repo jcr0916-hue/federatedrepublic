@@ -31,7 +31,7 @@ test('preview is byte-for-byte immutable, detects metadata and plans LF normaliz
   assert.deepEqual([tree(f.root),tree(f.inbox)],before);assert.equal(p.items[0].errors.length,0);
   assert.equal(p.items[0].metadata.worldSeq,1);assert.match(p.items[0].warnings.join(),/LF/);
   const r=applyIngest(p,{runChecks:pass});assert.equal(r.applied.length,1);
-  assert.equal(fs.readFileSync(path.join(f.root,'torenthia-news-001.html'),'utf8'),article());
+  assert.equal(fs.readFileSync(path.join(f.root,'torenthia/news/torenthia-news-001.html'),'utf8'),article());
   assert.equal(fs.readFileSync(path.join(f.inbox,'torenthia-news-001.html'),'utf8'),article().replace(/\n/g,'\r\n'));
 });
 test('unknown files and ambiguous flat images are report-only',t=>{
@@ -40,7 +40,7 @@ test('unknown files and ambiguous flat images are report-only',t=>{
 });
 test('canonical routing recognizes docs, states, constitution and explicit asset folders',t=>{
   const f=fixture(t);
-  for(const [name,dest] of [['WORLD-STORY-BIBLE.md','docs/torenthia/STORY-BIBLE.md'],['WORLD-STORY-STATUS.md','docs/torenthia/STORY-STATUS.md'],['constitution_data.json','constitution_data.json'],['arvane-state-constitution.md','State Constitutions/arvane-state-constitution.md'],['images/new-map.webp','images/new-map.webp'],['logos/new.svg','logos/new.svg']]) assert.equal(classify(name,f.root).destination,dest);
+  for(const [name,dest] of [['torenthia-news-001.html','torenthia/news/torenthia-news-001.html'],['torenthia-nrs-001.html','torenthia/nrs/torenthia-nrs-001.html'],['torenthia-sc-001.html','torenthia/court/torenthia-sc-001.html'],['torenthia-dispatch-example.html','torenthia/dispatches/torenthia-dispatch-example.html'],['WORLD-STORY-BIBLE.md','docs/torenthia/STORY-BIBLE.md'],['WORLD-STORY-STATUS.md','docs/torenthia/STORY-STATUS.md'],['constitution_data.json','constitution_data.json'],['arvane-state-constitution.md','State Constitutions/arvane-state-constitution.md'],['images/new-map.webp','images/new-map.webp'],['logos/new.svg','logos/new.svg']]) assert.equal(classify(name,f.root).destination,dest);
   assert.equal(classify('korda-state-constitution.md',f.root).kind,'unknown');
 });
 test('never overwrites, even identical content',t=>{
@@ -95,12 +95,12 @@ test('assets depending on a World record rejected by shared validation are held'
 test('failed post-import checks preserve source and imported file for inspection',t=>{
   const f=fixture(t);f.put('torenthia-news-001.html',article());
   const r=applyIngest(f.plan(),{archive:true,runChecks:()=>[{command:'build',ok:false}]});
-  assert.equal(r.archived.length,0);assert.ok(r.errors.length);assert.ok(fs.existsSync(path.join(f.inbox,'torenthia-news-001.html')));assert.ok(fs.existsSync(path.join(f.root,'torenthia-news-001.html')));
+  assert.equal(r.archived.length,0);assert.ok(r.errors.length);assert.ok(fs.existsSync(path.join(f.inbox,'torenthia-news-001.html')));assert.ok(fs.existsSync(path.join(f.root,'torenthia/news/torenthia-news-001.html')));
 });
 test('rechecks changed sources and destinations before writes',t=>{
   const f=fixture(t);f.put('torenthia-news-001.html',article());const p=f.plan();f.put('torenthia-news-001.html',article(2));
   assert.throws(()=>applyIngest(p,{runChecks:pass}),/Inbox changed/);
-  const p2=f.plan();fs.writeFileSync(path.join(f.root,'torenthia-news-001.html'),'do not replace');assert.throws(()=>applyIngest(p2,{runChecks:pass}),/Destination appeared/);
+  const p2=f.plan();fs.mkdirSync(path.join(f.root,'torenthia/news'),{recursive:true});fs.writeFileSync(path.join(f.root,'torenthia/news/torenthia-news-001.html'),'do not replace');assert.throws(()=>applyIngest(p2,{runChecks:pass}),/Destination appeared/);
 });
 test('symlink sources and destinations are refused',t=>{
   const f=fixture(t);fs.symlinkSync(path.join(f.root,'constitution_data.json'),path.join(f.inbox,'torenthia-news-001.html'));
@@ -146,7 +146,7 @@ test('command workflow previews without writes, applies, checks, then archives o
   f.put('unknown.txt','Keep this');
   assert.equal(runIngest(['--apply','--archive'],options),1); // unknown still requires review
   assert.equal(fs.readFileSync(path.join(f.root,'validation.log'),'utf8'),'check:world-meta\ncheck:world-publish\nbuild\ncheck:discovery\n');
-  assert.ok(fs.existsSync(path.join(f.root,'torenthia-news-001.html')));
+  assert.ok(fs.existsSync(path.join(f.root,'torenthia/news/torenthia-news-001.html')));
   assert.ok(!fs.existsSync(path.join(f.inbox,'torenthia-news-001.html')));
   assert.ok(fs.existsSync(path.join(f.inbox,'unknown.txt')));
   assert.ok(lines.some(s=>s.includes('PASS npm run build')));
