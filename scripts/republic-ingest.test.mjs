@@ -11,7 +11,7 @@ function fixture(t) {
   const base=fs.mkdtempSync(path.join(fs.realpathSync(os.tmpdir()),'republic-ingest-'));
   t.after(()=>fs.rmSync(base,{recursive:true,force:true}));
   const root=path.join(base,'repo'),inbox=path.join(base,'Federated-Republic-Inbox');
-  for(const dir of [root,inbox,...['_data','docs','images','logos','State Constitutions'].map(d=>path.join(root,d))]) fs.mkdirSync(dir,{recursive:true});
+  for(const dir of [root,inbox,...['_data','docs','docs/torenthia','images','logos','State Constitutions'].map(d=>path.join(root,d))]) fs.mkdirSync(dir,{recursive:true});
   fs.writeFileSync(path.join(root,'constitution_data.json'),'[]');
   fs.writeFileSync(path.join(root,'_data/currentFiles.json'),'[]');
   fs.writeFileSync(path.join(root,'docs/torenthia/STORY-STATUS.md'),'worldSeq through **1**');
