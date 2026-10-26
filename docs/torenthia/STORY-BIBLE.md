@@ -1,0 +1,290 @@
+# World Story Bible
+
+**Purpose:** durable canon and writing constraints for Torenthia World content.
+
+This is the working source for facts that must remain true across stories. It replaces the old
+active `world-canon.md`, `CHARACTER-REFERENCE.md`, and individual arc-framework files. Historical
+planning notes are preserved on the `archive/legacy-project-material` cold-storage branch,
+not in the active source tree. See [PROJECT-SOURCES.md](../../PROJECT-SOURCES.md).
+
+**Authority order**
+1. Published World pieces and their front matter establish what actually happened.
+2. The current Constitution controls constitutional mechanism.
+3. This file records durable geography, identities, relationships, and story constraints.
+4. `WORLD-STORY-STATUS.md` records where live threads currently stand and what remains open.
+
+Do not treat an archived plan as canon when it conflicts with a published piece or this file.
+
+---
+
+## Founding era
+
+`scenario-the-first-twelve-years.html` is the canonical Torenthian account of ratification, transition, and the Republic's first government generation. It is a scenario using the same constitutional framework as the rest of the project; Torenthia did **not** develop or originate the Constitution.
+
+### Predecessor order
+
+- The Federated Republic was created by the voluntary union of **three sovereign predecessor countries**: the **Harren Union**, the **Torenthian Commonwealth**, and the **Vardan Confederacy**.
+- **Valedon** participated in the regional union discussions but ultimately declined to enter. This is the origin of its durable identity as **“the nation that almost joined.”**
+- The predecessor governments choose the existing constitutional framework as the common order under which they will merge. Their Treaty of Union adapts Article XIX for simultaneous pooling of sovereignty as permitted by §19.1; it does not author the constitutional framework.
+- The practical reasons for union are security, common-market integration, infrastructure coordination, one external diplomatic position, and greater bargaining weight with larger neighbors. No single crisis or neighbor causes the merger.
+- Predecessor-country borders do **not** map cleanly onto present State boundaries. Article XIX transition mechanisms, predecessor political statuses, territorial choices, and later constitutional processes produce the current internal map.
+- Phase 0 begins before ratification: the interim Elections Panel, NVS readiness, transitional Monitor machinery, record migration, and continuity planning are prepared while the predecessor countries remain sovereign.
+- **Day Zero / Year 0** occurs when the adapted ratification requirements are certified. Sovereign authority changes immediately; predecessor national institutions continue as limited caretakers until their corresponding Republic functions are capable; the Treaty of Union provides Torenthia’s twenty-four-month founding implementation schedule.
+- The Republic's first Assembly fails to elect a Civic Consul within the formation window. The §2.6.a fallback operates: the Assembly Speaker serves as Acting Civic Consul, the Assembly nominates candidates, and a national election supplies the first full-authority Civic Consul. This is the in-world formation event also examined in `scenario-the-formation.html`.
+- Korda appears on the founding Indigenous register and elects **Territorial Integration** during the Transition Window, becoming an Indigenous Territory with the ordinary Statehood pathway available. The decision permanently ends the founding Compact/Associated Community option under §16.2.
+- By **Year 4**, the Republic negotiates the Toren River relationship with Caldris as one sovereign counterparty.
+- By **Year 10**, Casimir Rehn is Legat Consul and Ines Carrow serves as Director of Foreign Affairs.
+- The transition scenario closes at **Year 12, Month 9**, immediately before `torenthia-news-001.html`.
+
+### Selection of the federal seat
+
+[`The Winning Bid`](../../scenario-winning-bid.html) is canonical historical seat-selection history, shared by the Aldenmere and Caldenmere profiles. No year or month is assigned to the episode.
+
+- **Harren** considered bidding, but its voters were not interested.
+- **Caldenmere** submitted a qualified premium shoreline proposal near Calden. Expensive land and development made it substantially dearer than Aldenmere’s qualified **Verentum** bid; cost largely decided the selection.
+- Caldenmere challenged and lost. The Supreme Court found that Verentum met the published minimum requirements and upheld lawful cost evaluation among qualified bids. Federal §18.2 permits a rejected-bid challenge on the ground that the selected bid failed those requirements, not judicial substitution of a preferred site.
+- Caldenmere then offered to absorb the full additional land and development premium and sought to reopen the matter. The bidding period had closed; the Court held that it could not resubmit a materially revised bid after closure under the statutory process. Aldenmere’s award stood.
+- **Terenne** is Aldenmere’s State capital on the coast. **Verentum** is the federal seat in Aldenmere, held under Operational Use Rights rather than federal territorial sovereignty. The two capitals remain distinct.
+
+### Transition-generation people
+
+- **Mira Venn** — Commonwealth transition administrator who chairs much of the merger implementation work. She is an administrator of adoption and transition, not a constitutional author, and does not become a founding federal officeholder.
+- **Edran Vale** — Harren political figure involved in the union decision and later a founding senator. He draws one of the shorter initial Senate terms under the public lot.
+- **Tomas Arven** — Vardan transition negotiator and persistent skeptic of excessive federal concentration; remains a critic within the Republic after ratification.
+- **Sela Oran** — Calden records specialist involved in predecessor-record migration and NRS implementation. She helps make the adopted record architecture operational; she does not originate it.
+- **Anja Serin** — former Vardan foreign minister elected as the Republic's first Legat Consul.
+- **Leva Coren** — Selvane Assembly member who becomes the first full-authority Civic Consul after the initial Assembly formation deadlock proceeds to the §2.6.a national fallback election.
+- **Ressa Korr** — first Legislative Monitor General; associated with the early institutional culture that Monitors disclose and assess rather than govern.
+- **Ilyan Seret** — Valedon Foreign Minister during union discussions; his government declines to join without becoming hostile to the Republic.
+
+### Founding-story constraints
+
+- Do not portray Torenthia as creating, inspiring, drafting, or supplying the rationale for the Constitution. The Constitution is the framework the predecessor polities decide to adopt.
+- Pre-ratification narrative should remain comparatively short. The central story is implementation: merger planning, Day Zero, Article XIX phases, first elections, formation of government, and the first twelve years of institutional normalization.
+- The predecessor countries are viable governments. Union is a strategic choice to combine capacity, security, markets, infrastructure, and external representation.
+- The strongest transition material is procedural and human: continuity of pensions and courts, caretaker limits, inherited debts and treaties, conflicting predecessor laws, classified-record review, State/Territory sorting, Indigenous status elections, candidate registers, the NVS, Monitor formation, founding Senate/judicial staggering, and first permanent budgets.
+- By Year 12, contemporary politicians should treat the Republic as an inherited operating order, not as an unfinished founding project. The narrative point of the first government generation is that transition eventually becomes ordinary government.
+
+---
+
+## Constitutional compatibility baseline — 23 October 2026
+
+Use the current 20-article/177-provision source. Monitor findings are evidence, not binding Statehood or viability decisions. Under §§15.2 and 15.2.a, completed audit records require affirmative legislative determinations; timely records survive legislative delay. Korda’s original viability permission was the Assembly’s determination on the JMC record, and the later competing-petition Convention follows the constitutional trigger independently of Monitor permission. Preserve all published dates, the 6–3 judgment, thirty-three delegates and 28–5 proposal; ratification remains pending.
+
+Torenthia’s historic fiscal response timetable is statutory. Section 12.6 tests constitutional fiscal capacity, not merely correct formula execution; neither an audit nor a response prescribes a policy. The published no-noncompliance finding and ordinary reform review remain current. Campaign grants are the chosen §8.4 statutory assistance program. Rehn’s term is four years, Year 10 to Year 14; an early candidacy announcement does not establish a different election date.
+
+The first twelve years retain the Treaty of Union’s phased, twenty-four-month implementation schedule. Article XIX now transfers functions institution by institution on capability; phases are not universal constitutional activation gates. State and local governments retain their own lawful standing.
+
+See [release compatibility record](../operations/CONSTITUTIONAL-COMPATIBILITY-261023.md) and its per-file register before repeating this audit.
+
+## Geography
+
+Torenthia is a coastal country on the **western seaboard of the crescent continent**. The
+**Western Sea** lies west and southwest. The **Torenthian Alps** run along the northern border.
+**Lake Varda** defines much of the eastern frontier. Continental land continues north and south;
+Torenthia is not a peninsula.
+
+### States
+
+| State | Durable position / identity |
+|---|---|
+| **Varek** | North along the Alps; Caldris border; Toren watershed and “river country.” No single general executive: governing authority sits with its Assembly and protected local counties. Capital/seat: **Kellor**. |
+| **Norvane** | North-lake cell between the Alps and Lake Varda’s northern tip; northern refugee-arrival zone; newest-named State. Capital/seat: **Ilyr**. |
+| **Harren** | Northern heartland below Varek; founding State; does not touch the national border. Capital/seat: **Hadrin**. |
+| **Arvane** | Northwestern/western coast; maritime. **Westport** is an established western freight port and State infrastructure/commercial center. |
+| **Rhovane** | Middle-northeast; touches Lake Varda’s upper-western shore; Seren Mak’s home State; under spillover pressure from Norvane. |
+| **Merath** | Center-west interior; industrial. |
+| **Orath** | Eastern-central interior; agricultural heartland; Dorven is here. |
+| **Kelvant** | Eastern State on Lake Varda; **Rhondel** is its lake-shore city and State seat; adjacent to Korda. |
+| **Caldenmere** | Southwestern coast; Calden is its port/finance city. |
+| **Aldenmere** | Southwest coastal capital region; **Terenne**, on the coast, is its State capital; **Verentum** is the federal seat within the State. |
+| **Selvane** | Central heartland; Elin Thoss’s home State. |
+| **Corindal** | Southern border with Valedon; self-governing Provisional State since Year 9 after failed biennial audits in Years 5, 7, and 9 arising from electoral district-map noncompliance and a State Senate redistricting deadlock. One federal Senate term ended unfilled in Year 11; the second ends Year 15. |
+
+### Territories
+
+| Territory | Durable position / identity |
+|---|---|
+| **Verdmont** | Northwest along the Alps to the coast; resource-extraction Territory. |
+| **Korda** | Southeast only, on southern Lake Varda; Indigenous Territory; land border with Sunderland. Lake corridor includes Varenne Station; ancestral/inland zone lies toward Kelvant. |
+| **Morantine** | South along the Valedon border; pursuing statehood. |
+| **Solara** | Island in the Western Sea; pursuing statehood; Ostara is its ancient capital. |
+
+### Water and neighbors
+
+- **Toren River:** Caldris holds the main-stem headwaters; Torenthia is downstream on that stem.
+  An eastern tributary rises in the Torenthian Alps, runs north into Caldris, and carries most
+  dry-season flow. The Year 4 framework creates mutual dependence rather than a simple upstream /
+  downstream relationship.
+- **Lake Varda:** shared with Sunderland. Torenthian shores run through Norvane, Rhovane, Kelvant,
+  and Korda. Coast-guard command is in Rhondel; Varenne Station is in Korda.
+- **Caldris:** north/northeast beyond the Alps; upstream river power and a major regional actor.
+- **Sunderland:** east; fracturing/at war; source of the refugee crossings and border incidents.
+- **Valedon:** south; “the nation that almost joined.”
+- **Seronne:** southeast buffer state; northwest corner touches Lake Varda.
+- **Marisvia:** west across the Western Sea; maritime democracy and closest constitutional peer.
+
+### Geography rules
+
+- The map and this written canon move together; never silently “fix” one against the other.
+- Scenario-only place names are not World canon.
+- Map detail follows coverage: do not add a named facility, town, border, or landmark before a
+  published story earns it.
+
+---
+
+## Recurring voices and people
+
+### Journalists / public voices
+
+| Name | Outlet / role | Durable register |
+|---|---|---|
+| **Petra Vend** | The Torenthian | Main political correspondent; straight reporting. |
+| **Dara Voss** | RNN (after earlier Torenthian work) | Institutional / analytical reporting. Outlet change is intentional. |
+| **Lenne Akar** | TNB Caldenmere | Procedural, factual local reporting. |
+| **Corwin Hale** | The Dorven Ledger | Orath/Dorven local angle. |
+| **Aleth Fenn** | The Torenthian | Northern correspondent; Argent Ridge/Norvane. |
+| **Mara Iset** | The Korda Press | Korda-based voice, sympathetic to whole-Territory statehood but not a neutral national observer. |
+| **Yelka Sarn** | Dispatch | Morantine hardware/feed-store owner; practical border-Territory voice. |
+| **Neris Vann** | Dispatch | Calden harbor pilot; ships, weather, machinery, port life. |
+| **Maren Sollis** | Dispatch + *Show Your Work* | Corindal civics teacher. Same person in two registers; do not invent a second civics teacher. |
+| **Ottoline Pree** | Dispatch | Weller County (Selvane) deputy registrar; dry, procedural voice on counting ranked ballots. |
+
+Sollis’s recurring students: **Deva**, **Orren**, and **Tor**.
+
+### Legat Consul race
+
+- **Ines Carrow** — Director of Foreign Affairs under LC Casimir Rehn since Year 10; simultaneously
+  handling the Sunderland/Lake Varda file and campaigning to replace Rehn.
+- **Seren Mak** — Rhovane-based Assembly member; forceful and sometimes rhetorically ahead of the
+  record.
+- **Tobias Vael** — Varek/Harren-northern sovereignty voice; terse, deliberately difficult to quote.
+- **Pell Sandris** — narrower ballot-access base but unusually substantive policy focus, especially Korda.
+- **Casimir Rehn** — outgoing/prior LC associated with the early Toren negotiations; not a current candidate.
+
+### Monitors
+
+- **Reya Solt** — Executive Monitor.
+- **Aldric Feyn** — Legislative Monitor.
+- **Kessa Vray** — Judicial Monitor; dissented on the Korda remainder-viability finding.
+
+### Korda
+
+- **Dessa Orin** — Korda Assembly delegate; Territories and Fiscal Affairs Committee; equalization
+  grievance is the established motive for the whole-Territory statehood effort.
+- **Jalen Mire** — lake-corridor district delegate; treats the canceled corridor referendum as a
+  constitutional accomplishment that should matter in Convention deliberations.
+- **Tomas Rell** — inland agricultural district delegate; emphasizes residents excluded from the
+  corridor vote and consequences for the remainder.
+- **Bern Calloway** — inland grain operator; whole-Territory petition signer motivated by roads and
+  infrastructure.
+- **Herbert Sole** — retired Selvane appellate judge; represented corridor petitioners/Kelvant
+  interests in the Supreme Court challenge. Separately seeded as a possible future Judicial Pool/SC
+  figure; do not collapse those threads.
+
+### Supreme Court
+
+Nine justices. Two major published lineups currently matter:
+
+- **Ola Vrentis** wrote both the 7–2 *Corindal Industrial Partners v. NRS Panel* majority and the
+  6–3 *Korda Corridor Petitioners v. Joint Monitor Council* majority.
+- **Pael Doran** dissented in both, consistently threshold-first: he does not decide a merits issue
+  while a jurisdiction/authorization question remains unresolved beneath it.
+- **Careth** joined Doran both times. First name is not established.
+- **Norven** joined Vrentis in *Corindal* and Doran in *Korda*. No published explanation exists;
+  do not invent one.
+- **Aldren, Corse, Halvath, Imen, Mevra** joined Vrentis in both. Do not invent first names or
+  motivations.
+- The Court gives no interviews. Public contact runs through the clerk.
+
+### Name-collision / continuity warnings
+
+- **Aldous Fenn** (Caldenmere senator) and **Aleth Fenn** (journalist) are unrelated. Use full names
+  if one piece touches both.
+- **Pell Sandris** is canonical; “Jorin Sandris” in early material was a corrected continuity slip.
+- **Ines Carrow** and “Director Carrow” are the same person; her established office is Foreign Affairs,
+  not a separate intelligence-director post.
+- Varek has **no governor/general executive**. Do not create one.
+
+---
+
+## Durable story architecture
+
+### Korda Convention — decision recorded, ratification pending
+
+**Premise:** a certified whole-Territory statehood petition collided with the already-scheduled Kelvant–Korda lake-corridor merger referendum within §15.5.a's window. The JMC referred both petitions to a single thirty-three-delegate Territory Convention; the canceled corridor vote never occurred. The Supreme Court upheld the JMC decision 6–3, and a stay temporarily paused the Convention's constitutional clock.
+
+**Published decision:** the Korda Convention has now adopted the amended **Northern Lake Settlement**, 28–5 (NRS-Y13-0750). The proposal identifies the certification-date districts LC-N1 (Varenne Station), LC-N2 (Upper Lake Road), and LC-N3 (North Freight Landing) as the limited proposed northern transfer area. Southern lake districts and interior Korda remain together with their Lake Varda access. The resolution protects continuity of public services and unresolved contractual/title accounting and preserves the remaining Territory's ability to pursue its existing Statehood procedure under §15.2. Its final political sponsors include Jalen Mire, Tomas Rell and Dessa Orin. Elin Thoss's private coalition role was observed but not presented as formal authorship or control.
+
+**Constitutional boundary:** this is only an adopted **Convention proposal**, not a territorial transfer, Statehood, completed ratification, or final referendum result. Korda's existing borders and status remain unchanged. The next constitutional stage requires affected-voter ratification under §15.5.a(4), with §15.4's 60% approval / 50% participation standard applicable to the merger. Kelvant approval, LM–JM integrity assessment and Senate ratification by simple majority remain outstanding. Statehood remains subject to the independent audit findings, legislative determinations and qualification periods under §§15.2 and 15.2.a. The Convention's decision clock has closed; no ratification date is established.
+
+**Continuity:** the Joint Committee on Transition Facts compiled neutral evidence and did not recommend a boundary. Mire's concession preserves meaningful democratic effect for a northern part of the canceled corridor claim while recognizing differences inside the original corridor. Rell accepted a narrower departure only with enforceable obligations safeguarding what remains. Orin continues to prefer whole-Territory Statehood and supported the proposal because southern access and the future Statehood process are protected. Dissent remains rooted in both full-corridor and intact-Korda principles. No fictional referendum outcome or date may be asserted until published.
+
+### Argent Ridge / Riverglow
+
+**Premise:** beloved federal land between Varek and Norvane was assumed protected but was merely
+Trust-eligible. A development statute exposed the gap.
+
+**Mechanisms:** §13.1 citizen repeal and §18.4 National Trust designation are separate. Repeal can
+stop the disposal statute but cannot itself protect the land. Trust designation needs the federal
+supermajority plus host-State consent.
+
+**Locked published position:** Varek consented; Norvane refused. Norvane’s reason is Lake Varda
+arrival-zone housing capacity, not simple tax-base politics. The Trust designation is blocked unless
+Norvane changes position. The separate repeal campaign continues.
+
+**Emotional rule:** “Argent Ridge” is the official/survey name; **Riverglow** is the local name.
+The story works because all safeguards are individually reasonable and collectively produce a
+tragic deadlock.
+
+### Corindal Industrial Partners — long game
+
+**Status:** intentionally dormant.
+
+**Origin:** after *Corindal Industrial Partners v. NRS Panel*, the company cannot erase the
+lawfully-published procurement records. The permanent record is the wound.
+
+**Long-game motive:** seek a future Court that reads the EM’s §9.1.b publication mandate more
+narrowly. The company itself cannot contribute electorally; executives can make capped disclosed
+individual contributions and lawful independent expenditures remain possible if uncoordinated.
+
+**Chain:** district races → Assembly composition → Civic Consul selection → SC nominations;
+§4.3 court expansion by 2/3 statute is the extreme endgame lever.
+
+**Moral rule:** no cartoon conspiracy and no secret lawbreaking. Everything important should be
+legal and disclosed. The constitutional question is whether sunlight constrains patient money or
+merely records it. This is the slowest burn in the World and should remain mostly quiet.
+
+### Other durable live threads
+
+- **Lake Varda / Sunderland:** refugee crossings, coast-guard pressure, intelligence/redaction,
+  diplomatic non-response, and the emerging regional conference are distinct but interacting layers.
+- **Toren River:** the Year 4 framework and unresolved dispute-resolution gap remain a separate
+  Caldris relationship from Lake Varda diplomacy.
+- **Fiscal Equalization (§12.6):** the constitutional mechanism can compel the Legislature to
+  answer an EM failure finding; it cannot compel a meaningful policy response. Do not describe
+  the system as requiring silence or automatic reform.
+- **Civic Consul Elin Thoss:** Assembly accountability and working-majority erosion are live;
+  her substantive preferred Korda outcome is not established.
+- **Maren Sollis:** may continue irregularly in Dispatch and separately in *Show Your Work*.
+
+---
+
+## Storytelling rules
+
+1. **Published beats beat plans.** If an old outline and a publication differ, the publication wins.
+2. **Local stakes carry the piece.** No single article needs to explain the entire constitutional web.
+3. **Do not artificially de-converge events.** Several threads may land in the same period; density
+   is normal. Use clear local framing instead of moving events merely for tidiness.
+4. **No villain requirement.** The strongest arcs come from sensible provisions colliding with
+   sympathetic interests.
+5. **Dry records matter.** NRS notices, filings, and routine procedural items can quietly advance an
+   arc before journalists or characters understand the pattern.
+6. **Mundane life remains mundane.** Not every transit, library, weather, or ordinary-government item
+   needs a hidden story hook.
+7. **Check names before inventing.** Reuse established characters where appropriate and preserve
+   outlet/office continuity.
+8. **worldSeq is publication/reading order, not necessarily world-time order.** Use `worldDate` when
+   chronology matters.
+9. **The published World front matter is the historical index.** Do not maintain a second giant
+   hand-written chronology in this file.
