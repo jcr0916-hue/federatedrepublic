@@ -35,7 +35,7 @@ Use the roles below: automated test fixtures and hypotheticals do not establish 
 
 ## Current workflows
 
-- World publishing: [`docs/WORLD-PUBLISHING.md`](docs/WORLD-PUBLISHING.md).
+- World publishing: [`docs/torenthia/PUBLISHING.md`](docs/torenthia/PUBLISHING.md).
 - Conservative import: [`docs/operations/REPUBLIC-INGEST.md`](docs/operations/REPUBLIC-INGEST.md).
 - State historical tests: [`docs/STATE-TEST-PUBLISHING.md`](docs/STATE-TEST-PUBLISHING.md).
 - Scenarios: [`docs/SCENARIO-PUBLISHING.md`](docs/SCENARIO-PUBLISHING.md).
