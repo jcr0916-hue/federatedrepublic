@@ -8,7 +8,7 @@ The goal of the publishing system is simple:
 
 The system deliberately separates **editorial judgment** from **automation**. Metadata is authoritative. Keyword analysis can suggest likely tags and warn about omissions, but it never silently changes canon.
 
-For downloaded files, use the preview-first [local Republic ingest workflow](operations/REPUBLIC-INGEST.md). It validates deterministic imports and stops before commit; it never overwrites existing files.
+For downloaded files, use the preview-first [local Republic ingest workflow](../operations/REPUBLIC-INGEST.md). It validates deterministic imports and stops before commit; it never overwrites existing files.
 
 ---
 
@@ -693,6 +693,6 @@ Normal build/publishing and ingest candidate validation check these registries. 
 
 ## 17. Migration and future work
 
-See [stream migration notes](WORLD-STREAM-MIGRATION.md). Optional `worldPeople` and `worldOffices` accept separate arrays of stable IDs; registry events accept `people` and `offices` too. These are forward-compatible references only, not generated names or verified facts. No current records require them. A future registry must distinguish persistent offices from people and their dated tenures; it can support clickable profile cards and a Government Structure page. No portraits, popups or org charts are implemented.
+See [stream migration notes](../WORLD-STREAM-MIGRATION.md). Optional `worldPeople` and `worldOffices` accept separate arrays of stable IDs; registry events accept `people` and `offices` too. These are forward-compatible references only, not generated names or verified facts. No current records require them. A future registry must distinguish persistent offices from people and their dated tenures; it can support clickable profile cards and a Government Structure page. No portraits, popups or org charts are implemented.
 
 State constitutional history remains roadmap only: State pages will distinguish actual constitutional text, canonical “How the Framers Tested It” history (roughly 300–500 words, at most 10–12 entries per State, Years 1–12), and explicitly non-canonical hypothetical tests. No history entries are authored in this infrastructure change.
