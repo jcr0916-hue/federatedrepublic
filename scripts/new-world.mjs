@@ -38,11 +38,14 @@ if(!a.write){
   console.log("\nPreview only. Re-run with --write to create the file.");
   process.exit(0);
 }
-if(fs.existsSync(draft.filename)){
-  console.error(`Refusing to overwrite existing file: ${draft.filename}`);
+const sourceDir={nrs:"torenthia/nrs",news:"torenthia/news",sc:"torenthia/court",dispatch:"torenthia/dispatches"}[a.kind];
+const target=sourceDir+"/"+draft.filename;
+if(fs.existsSync(target) || inventory.some(x=>x.name===draft.filename)){
+  console.error(`Refusing to overwrite existing record: ${draft.filename}`);
   process.exit(1);
 }
-fs.writeFileSync(draft.filename,draft.content,{flag:'wx'});
+fs.mkdirSync(sourceDir,{recursive:true});
+fs.writeFileSync(target,draft.content,{flag:'wx'});
 const packetDir='.world-authoring';
 if((a.arcs||'').trim()){
   fs.mkdirSync(packetDir,{recursive:true});
@@ -53,4 +56,4 @@ if((a.arcs||'').trim()){
     console.log(`Authoring packet: ${packetFile}`);
   }
 }
-console.log(`Created ${draft.filename}. Draft from the generated packet(s), replace the draft marker, then run: npm run world:validate-draft -- --file ${draft.filename}`);
+console.log(`Created ${target}. Draft from the generated packet(s), replace the draft marker, then run: npm run world:validate-draft -- --file ${target}`);
