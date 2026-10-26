@@ -95,12 +95,12 @@ test('assets depending on a World record rejected by shared validation are held'
 test('failed post-import checks preserve source and imported file for inspection',t=>{
   const f=fixture(t);f.put('torenthia-news-001.html',article());
   const r=applyIngest(f.plan(),{archive:true,runChecks:()=>[{command:'build',ok:false}]});
-  assert.equal(r.archived.length,0);assert.ok(r.errors.length);assert.ok(fs.existsSync(path.join(f.inbox,'torenthia-news-001.html')));assert.ok(fs.existsSync(path.join(f.root,'torenthia-news-001.html')));
+  assert.equal(r.archived.length,0);assert.ok(r.errors.length);assert.ok(fs.existsSync(path.join(f.inbox,'torenthia-news-001.html')));assert.ok(fs.existsSync(path.join(f.root,'torenthia/news/torenthia-news-001.html')));
 });
 test('rechecks changed sources and destinations before writes',t=>{
   const f=fixture(t);f.put('torenthia-news-001.html',article());const p=f.plan();f.put('torenthia-news-001.html',article(2));
   assert.throws(()=>applyIngest(p,{runChecks:pass}),/Inbox changed/);
-  const p2=f.plan();fs.writeFileSync(path.join(f.root,'torenthia-news-001.html'),'do not replace');assert.throws(()=>applyIngest(p2,{runChecks:pass}),/Destination appeared/);
+  const p2=f.plan();fs.writeFileSync(path.join(f.root,'torenthia/news/torenthia-news-001.html'),'do not replace');assert.throws(()=>applyIngest(p2,{runChecks:pass}),/Destination appeared/);
 });
 test('symlink sources and destinations are refused',t=>{
   const f=fixture(t);fs.symlinkSync(path.join(f.root,'constitution_data.json'),path.join(f.inbox,'torenthia-news-001.html'));
@@ -146,7 +146,7 @@ test('command workflow previews without writes, applies, checks, then archives o
   f.put('unknown.txt','Keep this');
   assert.equal(runIngest(['--apply','--archive'],options),1); // unknown still requires review
   assert.equal(fs.readFileSync(path.join(f.root,'validation.log'),'utf8'),'check:world-meta\ncheck:world-publish\nbuild\ncheck:discovery\n');
-  assert.ok(fs.existsSync(path.join(f.root,'torenthia-news-001.html')));
+  assert.ok(fs.existsSync(path.join(f.root,'torenthia/news/torenthia-news-001.html')));
   assert.ok(!fs.existsSync(path.join(f.inbox,'torenthia-news-001.html')));
   assert.ok(fs.existsSync(path.join(f.inbox,'unknown.txt')));
   assert.ok(lines.some(s=>s.includes('PASS npm run build')));
