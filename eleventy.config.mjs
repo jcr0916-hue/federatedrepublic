@@ -46,7 +46,7 @@ export default function (eleventyConfig) {
   // had happened. A feed that restates what the pages already know will always
   // eventually lie. Derive it or delete it.
   //
-  // Publishing: add a reviewed World file; see docs/WORLD-PUBLISHING.md.
+  // Publishing: add a reviewed World file; see docs/torenthia/PUBLISHING.md.
   const constitutionData=JSON.parse(fs.readFileSync('constitution_data.json','utf8'));
   const provisionNumbers=new Set(constitutionData.flatMap(a=>a.provisions.map(p=>p.num)));
   const currentFiles=JSON.parse(fs.readFileSync('_data/currentFiles.json','utf8'));
