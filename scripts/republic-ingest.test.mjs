@@ -14,7 +14,7 @@ function fixture(t) {
   for(const dir of [root,inbox,...['_data','docs','images','logos','State Constitutions'].map(d=>path.join(root,d))]) fs.mkdirSync(dir,{recursive:true});
   fs.writeFileSync(path.join(root,'constitution_data.json'),'[]');
   fs.writeFileSync(path.join(root,'_data/currentFiles.json'),'[]');
-  fs.writeFileSync(path.join(root,'docs/WORLD-STORY-STATUS.md'),'worldSeq through **1**');
+  fs.writeFileSync(path.join(root,'docs/torenthia/STORY-STATUS.md'),'worldSeq through **1**');
   fs.writeFileSync(path.join(root,'State Constitutions/arvane-state-constitution.md'),'# Constitution');
   const put=(name,body)=>{fs.mkdirSync(path.dirname(path.join(inbox,name)),{recursive:true});fs.writeFileSync(path.join(inbox,name),body);};
   return {root,inbox,put,plan:()=>planIngest({root,inbox})};
@@ -40,7 +40,7 @@ test('unknown files and ambiguous flat images are report-only',t=>{
 });
 test('canonical routing recognizes docs, states, constitution and explicit asset folders',t=>{
   const f=fixture(t);
-  for(const [name,dest] of [['WORLD-STORY-BIBLE.md','docs/WORLD-STORY-BIBLE.md'],['WORLD-STORY-STATUS.md','docs/WORLD-STORY-STATUS.md'],['constitution_data.json','constitution_data.json'],['arvane-state-constitution.md','State Constitutions/arvane-state-constitution.md'],['images/new-map.webp','images/new-map.webp'],['logos/new.svg','logos/new.svg']]) assert.equal(classify(name,f.root).destination,dest);
+  for(const [name,dest] of [['WORLD-STORY-BIBLE.md','docs/torenthia/STORY-BIBLE.md'],['WORLD-STORY-STATUS.md','docs/torenthia/STORY-STATUS.md'],['constitution_data.json','constitution_data.json'],['arvane-state-constitution.md','State Constitutions/arvane-state-constitution.md'],['images/new-map.webp','images/new-map.webp'],['logos/new.svg','logos/new.svg']]) assert.equal(classify(name,f.root).destination,dest);
   assert.equal(classify('korda-state-constitution.md',f.root).kind,'unknown');
 });
 test('never overwrites, even identical content',t=>{
