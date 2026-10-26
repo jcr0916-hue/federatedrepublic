@@ -72,7 +72,7 @@ test('publishing inventory reads categorized records and preserves source paths'
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'world-mixed-publish-'));
  t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
  fs.mkdirSync(path.join(dir,'torenthia/nrs'),{recursive:true});
- fs.writeFileSync(path.join(dir,'torenthia/nrs/torenthia-nrs-001.html'),'---\\nworldKind: nrs\\nworldId: torenthia-nrs-001\\n---\\n');
+ fs.writeFileSync(path.join(dir,'torenthia/nrs/torenthia-nrs-001.html'),'---\nworldKind: nrs\nworldId: torenthia-nrs-001\n---\n');
  const records=readPublishingRecords(dir);
  assert.equal(records.length,1);
  assert.equal(records[0].inputPath,'torenthia/nrs/torenthia-nrs-001.html');
