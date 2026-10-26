@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import {readPublishingRecords} from '../lib/world-publishing.mjs';
 import {loadWorldRegistries,validateRegistries,clockDashboard,registryWarnings} from '../lib/world-chronology.mjs';
-const file='docs/WORLD-STORY-STATUS.md',records=readPublishingRecords(),registry=loadWorldRegistries();
+const file='docs/torenthia/STORY-STATUS.md',records=readPublishingRecords(),registry=loadWorldRegistries();
 validateRegistries(records,registry.events,registry.clocks);
 let status=fs.readFileSync(file,'utf8');
 if(process.argv.includes('--write')){
