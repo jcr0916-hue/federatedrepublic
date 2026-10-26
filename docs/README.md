@@ -23,7 +23,7 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 - [Story Status](WORLD-STORY-STATUS.md) — live threads, clocks, open decisions, and current frontier.
 - Published World records and front matter — authoritative published history, including older records.
 - [Chronology registry](../_data/worldChronology.json) and [clock registry](../_data/worldClocks.json) — current infrastructure.
-- [World publishing](WORLD-PUBLISHING.md).
+- [World publishing](torenthia/PUBLISHING.md).
 - [Republic ingest](operations/REPUBLIC-INGEST.md) — conservative import and review workflow.
 - [State historical tests](STATE-TEST-PUBLISHING.md) — canonical State history, provision validation, and discovery.
 - [Scenario publishing](SCENARIO-PUBLISHING.md).
