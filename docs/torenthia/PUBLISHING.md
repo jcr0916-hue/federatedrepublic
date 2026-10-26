@@ -459,8 +459,8 @@ Do not maintain a second chronological list. Dossier titles, summaries, question
 Before writing or publishing a new World record:
 
 1. Start with the preview-first helper when practical.
-2. Read the relevant section of `docs/WORLD-STORY-BIBLE.md`.
-3. Check `docs/WORLD-STORY-STATUS.md` for live threads, open questions, and constitutional clocks.
+2. Read the relevant section of `docs/torenthia/STORY-BIBLE.md`.
+3. Check `docs/torenthia/STORY-STATUS.md` for live threads, open questions, and constitutional clocks.
 4. Check the latest relevant published World records and their front matter.
 5. Check `constitution_data.json` for any constitutional mechanism the story relies on.
 6. Search existing names before inventing a new character.
@@ -474,7 +474,7 @@ Before writing or publishing a new World record:
 9. Confirm that Crossroads-only characters or outcomes have not leaked into real World canon.
 10. Replace the generated draft shell with finished content.
 
-In the same publishing change, update the affected operational status entry in `docs/WORLD-STORY-STATUS.md`. Do not recreate the chronological index there; the published front matter is the historical record. Update `docs/WORLD-STORY-BIBLE.md` only when a piece establishes or changes durable canon (institutions, settled geography, enduring character facts, or constitutional-world rules). Routine developments belong in Status. Metadata warnings do not automatically update or certify either document.
+In the same publishing change, update the affected operational status entry in `docs/torenthia/STORY-STATUS.md`. Do not recreate the chronological index there; the published front matter is the historical record. Update `docs/torenthia/STORY-BIBLE.md` only when a piece establishes or changes durable canon (institutions, settled geography, enduring character facts, or constitutional-world rules). Routine developments belong in Status. Metadata warnings do not automatically update or certify either document.
 
 ---
 
