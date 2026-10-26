@@ -169,7 +169,7 @@ Open:
 
 Reya Solt's ten-year non-renewable term is the incumbent term; she holds the office until it concludes (§9.1.d). The Elections Panel's roster (`torenthia-nrs-087.html` / NRS-Y13-0754) lists seven eligible pool members: Pell Ardane, Teodor Lind, Edda Marsh, Maud Ostrander, Odile Perrin, Joren Tavish and Ilse Warrend. The pool minimum of five (§9.8(2)) is met. The Assembly Speaker is Marit Hosk and the Senate Speaker is Lucan Brandt. No nominee exists and no preference has been published. The joint LM/JM roster audit (NRS 122) found all seven eligible; the Speakers' consultation notice (NRS 123) records preparatory consultations without a joint nomination, and news 126 examines the competing institutional pressures. Neither the vacancy clock nor the JMC lottery has begun.
 
-Working assumptions for later beats (planning, not canon): Hosk leans to Warrend, Brandt to Tavish, Marsh is the compromise name, and the JM disclosure audit later surfaces a lawful, corrected late disclosure for one candidate. See `docs/WORLD-STORYLINES-Y14.md`, section C.
+Working assumptions for later beats (planning, not canon): Hosk leans to Warrend, Brandt to Tavish, Marsh is the compromise name, and the JM disclosure audit later surfaces a lawful, corrected late disclosure for one candidate. See `docs/torenthia/STORYLINES-Y14.md`, section C.
 
 Open before the next EM record:
 - **Fallback clock.** §9.3 starts the 60-day period at a "vacancy." For a scheduled succession the published record opens the window without a close date. Decide when the 60 days run (term expiry for the constitutional vacancy clock) before dating the JMC lottery fallback.

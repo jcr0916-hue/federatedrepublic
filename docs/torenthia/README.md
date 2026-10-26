@@ -6,7 +6,7 @@ This is the navigation home for Torenthia material on `main`. **Published record
 
 - [Story Bible](../WORLD-STORY-BIBLE.md) — durable canon and continuity constraints.
 - [Story Status](../WORLD-STORY-STATUS.md) — live storylines, clocks, and publication frontier.
-- [Year 14 storylines](../WORLD-STORYLINES-Y14.md) — planning proposals, **not canon**.
+- [Year 14 storylines](STORYLINES-Y14.md) — planning proposals, **not canon**.
 - [Publishing workflow](../WORLD-PUBLISHING.md) — authoring, metadata, validation, and release process.
 
 ## Published record families
