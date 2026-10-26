@@ -263,7 +263,14 @@ export default function (eleventyConfig) {
   // Eleventy defaults to "pretty" permalinks (page.html -> page/index.html), which would
   // break vercel.json's /(.*) -> /$1.html route on EVERY page. Force output filenames to
   // mirror the source exactly.
-  eleventyConfig.addGlobalData("permalink", () => (data) => `${data.page.filePathStem}.html`);
+  eleventyConfig.addGlobalData("permalink", () => (data) => {
+    const stem = data.page.filePathStem;
+    // Published Torenthia records may live in source subdirectories, but their
+    // historical public URLs remain rooted at /torenthia-*.html.
+    if (/^\/torenthia\/(?:nrs|news|court|dispatches)\/torenthia-(?:(?:news|nrs|sc)-\d+|dispatch[^/]*)$/.test(stem))
+      return `/${stem.split('/').at(-1)}.html`;
+    return `${stem}.html`;
+  });
 
   return {
     dir: { input: ".", output: "_site", includes: "_includes", data: "_data" },
