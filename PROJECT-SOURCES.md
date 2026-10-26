@@ -19,8 +19,8 @@ Use the roles below: automated test fixtures and hypotheticals do not establish 
 
 ## Torenthia and published history
 
-- Durable canon: [`docs/WORLD-STORY-BIBLE.md`](docs/WORLD-STORY-BIBLE.md).
-- Current operational state: [`docs/WORLD-STORY-STATUS.md`](docs/WORLD-STORY-STATUS.md).
+- Durable canon: [`docs/torenthia/STORY-BIBLE.md`](docs/torenthia/STORY-BIBLE.md).
+- Current operational state: [`docs/torenthia/STORY-STATUS.md`](docs/torenthia/STORY-STATUS.md).
 - Published World records and their front matter establish published events.
   Historical News, NRS, Court opinions, and Dispatches remain authoritative history.
 - Published `state-tests/` records marked `canonical-history` establish State history;

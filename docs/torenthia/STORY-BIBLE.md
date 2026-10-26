@@ -5,7 +5,7 @@
 This is the working source for facts that must remain true across stories. It replaces the old
 active `world-canon.md`, `CHARACTER-REFERENCE.md`, and individual arc-framework files. Historical
 planning notes are preserved on the `archive/legacy-project-material` cold-storage branch,
-not in the active source tree. See [PROJECT-SOURCES.md](../PROJECT-SOURCES.md).
+not in the active source tree. See [PROJECT-SOURCES.md](../../PROJECT-SOURCES.md).
 
 **Authority order**
 1. Published World pieces and their front matter establish what actually happened.
@@ -38,7 +38,7 @@ Do not treat an archived plan as canon when it conflicts with a published piece 
 
 ### Selection of the federal seat
 
-[`The Winning Bid`](../scenario-winning-bid.html) is canonical historical seat-selection history, shared by the Aldenmere and Caldenmere profiles. No year or month is assigned to the episode.
+[`The Winning Bid`](../../scenario-winning-bid.html) is canonical historical seat-selection history, shared by the Aldenmere and Caldenmere profiles. No year or month is assigned to the episode.
 
 - **Harren** considered bidding, but its voters were not interested.
 - **Caldenmere** submitted a qualified premium shoreline proposal near Calden. Expensive land and development made it substantially dearer than Aldenmere’s qualified **Verentum** bid; cost largely decided the selection.
@@ -75,7 +75,7 @@ Torenthia’s historic fiscal response timetable is statutory. Section 12.6 test
 
 The first twelve years retain the Treaty of Union’s phased, twenty-four-month implementation schedule. Article XIX now transfers functions institution by institution on capability; phases are not universal constitutional activation gates. State and local governments retain their own lawful standing.
 
-See [release compatibility record](operations/CONSTITUTIONAL-COMPATIBILITY-261023.md) and its per-file register before repeating this audit.
+See [release compatibility record](../operations/CONSTITUTIONAL-COMPATIBILITY-261023.md) and its per-file register before repeating this audit.
 
 ## Geography
 
