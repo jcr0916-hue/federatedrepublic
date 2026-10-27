@@ -141,6 +141,7 @@ Torenthia is not a peninsula.
 |---|---|---|
 | **Petra Vend** | The Torenthian | Main political correspondent; straight reporting. |
 | **Dara Voss** | RNN (after earlier Torenthian work) | Institutional / analytical reporting. Outlet change is intentional. |
+| **Nella Rusk** | The Torenthian, opinion | Open supporter of Thoss's unnamed party; speaks to fellow supporters and presses for delivery. First appears in revised news 128. Her judgments and suggested bargains are opinion, not official party commitments. |
 | **Lenne Akar** | TNB Caldenmere | Procedural, factual local reporting. |
 | **Corwin Hale** | The Dorven Ledger | Orath/Dorven local angle. |
 | **Aleth Fenn** | The Torenthian | Northern correspondent; Argent Ridge/Norvane. |
