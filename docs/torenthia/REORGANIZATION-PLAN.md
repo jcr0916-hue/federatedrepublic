@@ -51,3 +51,8 @@ The first pilot relocation moves three published HTML sources, without changing 
 - `torenthia-sc-001.html` → `torenthia/court/torenthia-sc-001.html`
 
 The existing `worldId`, sequences, related-record links and root-level public permalinks remain unchanged. Remaining root-level records are intentionally untouched. Verify World publishing checks, Eleventy/Vercel output, and Constitution archival before merging. Subsequent batches should proceed only after this pilot is validated.
+
+
+### Stage 3 second controlled record batch
+
+Following the validated three-record pilot, batch 2 relocates seven more unchanged HTML source records: NRS 121–123 to `torenthia/nrs/`, news 002–004 to `torenthia/news/`, and Supreme Court 002 to `torenthia/court/`. The existing root-level public URLs, metadata, and cross-record links are preserved. This is a source-only relocation; no narrative content is revised. Require passing World publishing, Constitution archival, and Vercel checks before merging.
