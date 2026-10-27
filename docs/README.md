@@ -31,6 +31,7 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 
 ## Operations and visual references
 
+- [Development checks and release workflow](operations/LOW-DEPLOYMENT-WORKFLOW.md) — work on branches, validate in GitHub Actions, merge once to deploy; occasional previews are manual.
 - [Public asset deployment](ASSET-DEPLOYMENT.md).
 - [Living Crossroads operations](operations/CROSSROADS.md).
 - [Kelvant flag](world/visual-identity/KELVANT-FLAG.md) and [Varek flag](world/visual-identity/VAREK-FLAG.md).
