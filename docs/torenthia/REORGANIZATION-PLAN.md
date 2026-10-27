@@ -101,3 +101,10 @@ The full `npm run world:publish-check` passed locally, including build, archival
 After [PR #256](https://github.com/jcr0916-hue/federatedrepublic/pull/256) passed all required checks, merged as `cda006583b7f606a40e3ed8f26ab91e463f72ba7`, and was verified in production, batch 7 relocates **40 unchanged sources**: NRS 041–060 and news 069–088. Reuse the categorized inventory, stable root permalink rule, and path-aware checks from batch 4. Total after this batch: **178/256 categorized; 78 at root**.
 
 The full `npm run world:publish-check` passed locally, including build, archival, chronology, authoring, ingestion, discovery, and constitutional references. All 256 source records, 470 public output files, and 336 protected Constitution/archive/State files remain byte-identical to the pre-batch baseline; all source blobs also match the pre-pilot PR #251 base. Require World publishing, Constitution archival, and Vercel success on this PR head and post-merge production verification. Keep all records and branches.
+
+
+### Stage 3 controlled record batch 8
+
+After [PR #257](https://github.com/jcr0916-hue/federatedrepublic/pull/257) passed all required checks, merged as `fc88f344a13b765acf0b95790081dde076812dfe`, and was verified in production, batch 8 relocates **40 unchanged sources**: NRS 021–040 and news 089–108. Reuse the categorized inventory, stable root permalink rule, and path-aware checks from batch 4. Total after this batch: **218/256 categorized; 38 at root**.
+
+The full `npm run world:publish-check` passed locally, including build, archival, chronology, authoring, ingestion, discovery, and constitutional references. All 256 source records, 470 public output files, and 336 protected Constitution/archive/State files remain byte-identical to the pre-batch baseline; all source blobs also match the pre-pilot PR #251 base. Require World publishing, Constitution archival, and Vercel success on this PR head and post-merge production verification. Keep all records and branches.
