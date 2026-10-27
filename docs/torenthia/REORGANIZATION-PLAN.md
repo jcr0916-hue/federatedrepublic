@@ -56,3 +56,8 @@ The existing `worldId`, sequences, related-record links and root-level public pe
 ### Stage 3 second controlled record batch
 
 Following the validated three-record pilot, batch 2 relocates seven more unchanged HTML source records: NRS 121–123 to `torenthia/nrs/`, news 002–004 to `torenthia/news/`, and Supreme Court 002 to `torenthia/court/`. The existing root-level public URLs, metadata, and cross-record links are preserved. This is a source-only relocation; no narrative content is revised. Require passing World publishing, Constitution archival, and Vercel checks before merging.
+
+
+### Stage 3 third controlled record batch
+
+Batch 3 relocates eight unchanged published sources: NRS 117–120 to `torenthia/nrs/` and news 005–008 to `torenthia/news/`. Historical root-level public URLs and record metadata are preserved. The shared World inventory, discovery checks, and consistency checks were prepared in prior batches. Merge only after World publishing, Constitution archival, and Vercel validation.
