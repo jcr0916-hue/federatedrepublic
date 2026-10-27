@@ -125,7 +125,13 @@ if os.path.exists('_data/updates.js'):
     upd = open('_data/updates.js', encoding='utf-8').read()
     linked = set(re.findall(r'href:\s*"(torenthia-[^"]+\.html)"', upd))
     for href in sorted(linked):
-        if not os.path.exists(href):
+        # Preserve root public URLs while accepting categorized World sources.
+        candidates = [href]
+        m = re.fullmatch(r'torenthia-(news|nrs|sc)-\d+\.html', href)
+        if m:
+            folder = {'news': 'news', 'nrs': 'nrs', 'sc': 'court'}[m.group(1)]
+            candidates.append(os.path.join('torenthia', folder, href))
+        if not any(os.path.isfile(candidate) for candidate in candidates):
             fail(f"_data/updates.js links to {href}, which does not exist in the repo")
 
     # Homepage world chronology is generated from collections.world. The separate
