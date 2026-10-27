@@ -149,15 +149,16 @@
     "timing": {
       "kind": "none"
     },
-    "summary": "Committee review active; a staff options memorandum now compares transparency-only, recurring-service-burden, and blended backlog/request-persistence approaches. No constitutional action deadline.",
-    "nextAction": "Track committee discussion, any request for distributional estimates, and any draft statutory language without implying an EM failure or forced remedy.",
+    "summary": "Committee review active; staff are directed to prepare comparable distributional illustrations of the three published approaches. No estimates, selected weights, recommendation or constitutional action deadline.",
+    "nextAction": "Track publication of comparable estimates and any later committee recommendation or draft text; do not infer enactment, a markup date or an EM noncompliance finding.",
     "sources": [
       "torenthia-nrs-018",
       "torenthia-news-068",
       "torenthia-nrs-046",
       "torenthia-nrs-074",
       "torenthia-nrs-076",
-      "torenthia-news-100"
+      "torenthia-news-100",
+      "torenthia-nrs-127"
     ],
     "arcs": [
       "fiscal-equalization"
@@ -243,23 +244,24 @@
     "title": "Judicial Pool admission notice",
     "status": "scheduled",
     "trigger": {
-      "description": "Quarterly notice specifies next deadline",
+      "description": "Quarterly Judicial Pool return records no admissions or removals and gives the next reporting deadline",
       "date": {
-        "year": 13,
-        "month": 11
+        "year": 14,
+        "month": 2
       }
     },
     "timing": {
       "kind": "deadline",
       "due": {
         "year": 14,
-        "month": 2
+        "month": 5
       }
     },
-    "summary": "Next notice due no later than Y14 M2.",
-    "nextAction": "Review publication of the next quarterly notice.",
+    "summary": "The Y14 M2 quarterly return leaves the standing Judicial Pool at 214; next return due no later than Y14 M5.",
+    "nextAction": "Publish the next quarterly return by Y14 M5; pool membership is eligibility, not a nomination or a vacancy.",
     "sources": [
-      "torenthia-nrs-033"
+      "torenthia-nrs-033",
+      "torenthia-nrs-125"
     ],
     "arcs": [],
     "jurisdictions": []

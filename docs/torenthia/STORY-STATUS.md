@@ -20,7 +20,7 @@ The October 18 Year 14 Month 1 election-season batch adds NRS 102–106, news 11
 
 The October 16 Year 14 Month 1 batch adds NRS 099–101 and news 115. Routine records from Merath (industrial inspection scheduling), Solara (port-register reconciliation), and Varek (county Toren River submissions) diversify the administrative register. Aleth Fenn reports the Varek river and county-government question against the approaching spring Legat Consul election, without adding candidate pledges, polling, a treaty change or an election date. No constitutional clock has changed.
 
-**Current published frontier:** Year 14, Month 1 · worldSeq through **173** · nrsSeq through **124**.
+**Current published frontier:** Year 14, Month 2 · worldSeq through **175** · nrsSeq through **127**.
 
 The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 
@@ -51,15 +51,15 @@ The October 2 evening batch adds NRS 065–068 and news 097. The Committee's wor
 <!-- WORLD-CLOCKS:START -->
 ### Structured clock dashboard
 
-- **Korda settlement ratification** [korda-ratification; open; none]: The Elections Panel authenticated LC-N1, LC-N2 and LC-N3, then opened the affected-electorate verification docket. No final electorate, ballot language, or date has been certified; Korda and Kelvant remain unchanged, and further §15.4 approvals and separate Statehood Audits are outstanding. Next: Reconcile electorate records and publish final eligibility determination, ballot materials and date before any ratification; do not imply a vote or merger.
+- **Korda settlement ratification** [korda-ratification; open; none]: No timed obligation. The Elections Panel authenticated LC-N1, LC-N2 and LC-N3, then opened the affected-electorate verification docket. No final electorate, ballot language, or date has been certified; Korda and Kelvant remain unchanged, and further §15.4 approvals and separate Statehood Audits are outstanding. Next: Reconcile electorate records and publish final eligibility determination, ballot materials and date before any ratification; do not imply a vote or merger.
 - **Argent Ridge repeal** [argent-repeal; open; relative]: Up to 8 months from 13.09 day 12; calendar endpoint unresolved. Phase One signatures remain open; calendar convention unresolved. Next: Review signature-period progress and establish calendar conversion before dating the endpoint.
 - **LC election** [lc-election; scheduled; window]: Window spring Y14 (month bounds unset). Spring Y14 window; no exact date. Next: Review election scheduling and electoral obligations within the spring window.
 - **Lake Varda conference** [lake-varda-conference; open; none]: No timed obligation. The Valedon conference opened in Y14 M1 on civilian navigation, rescue coordination and risk reduction. No common verdict on earlier incidents, binding agreement or Sunderland participation is recorded. Next: Track working discussions or agreed technical text, keeping any future treaty and its required ratification separate from the opening session.
 - **Varda Crossing §10.2 redaction petition** [varda-redaction; open; none]: No timed obligation. No constitutional hearing or response deadline. Next: Track a response if one is published; no timed action is required.
-- **Fiscal Equalization** [fiscal-equalization; open; none]: No timed obligation. Committee review active; a staff options memorandum now compares transparency-only, recurring-service-burden, and blended backlog/request-persistence approaches. No constitutional action deadline. Next: Track committee discussion, any request for distributional estimates, and any draft statutory language without implying an EM failure or forced remedy.
+- **Fiscal Equalization** [fiscal-equalization; open; none]: No timed obligation. Committee review active; staff are directed to prepare comparable distributional illustrations of the three published approaches. No estimates, selected weights, recommendation or constitutional action deadline. Next: Track publication of comparable estimates and any later committee recommendation or draft text; do not infer enactment, a markup date or an EM noncompliance finding.
 - **Supreme Court seat cycle** [sc-seat-cycle; planned; template]: Uninstantiated; no current seat or dated obligation. Framework only; no current justice or class selected. Next: When canon establishes a seat, create its term-expiration and nomination/Senate clocks from the constitutional rules.
 - **MA State of the Economy report** [ma-economy-report; scheduled; deadline]: Due 14.05. Next report due no later than Y14 M5, absent statutory change. Next: Review publication of the next report or a canonically established statutory change.
-- **Judicial Pool admission notice** [judicial-pool-notice; scheduled; deadline]: Due 14.02. Next notice due no later than Y14 M2. Next: Review publication of the next quarterly notice.
+- **Judicial Pool admission notice** [judicial-pool-notice; scheduled; deadline]: Due 14.05. The Y14 M2 quarterly return leaves the standing Judicial Pool at 214; next return due no later than Y14 M5. Next: Publish the next quarterly return by Y14 M5; pool membership is eligibility, not a nomination or a vacancy.
 <!-- WORLD-CLOCKS:END -->
 
 
@@ -141,6 +141,8 @@ Do not collapse repeal and Trust protection into one mechanism.
 
 ### Elin Thoss / Civic Consul — LIVE
 
+Year 14 Month 2 coverage (`torenthia-news-127.html`) connects the spring Assembly contests to Thoss’s published domestic proposals without setting an election date or assigning candidate loyalties. Dara Voss’s conditional analysis (`torenthia-news-128.html`) illustrates 280/180/40, 245/225/30 and 230/255/15 tenure-position groups in a fully seated 500-member Assembly. These are **hypothetical analytical counts**, not parties, polls, electoral forecasts, reported commitments or results. The last reported working count remains 266. No successor, motion or outcome is established. Civil-service and regulatory legislation remain proposals; equalization remains in review. The housing file’s latest recorded action remains NRS 118: do not infer a disposition or extend its ten-business-day pause from the advance to Month 2.
+
 Working Assembly support was published at **266**, down from 274 at formation. Her duty to convene the Korda Convention does **not** establish her preferred substantive outcome.
 
 Open:
@@ -187,6 +189,8 @@ Morantine has now filed the first named territorial submission in this reconvene
 `torenthia-news-093.html` brings this submission into the news coverage through Dara Voss's RNN report. It explains request age, recurring service burdens and the choices any proposed weighting would raise, using the existing EM interval data without presenting it as a Morantine-specific average. This is supporting coverage, not a new committee action or core dossier step; the current dossier summary remains accurate. No finding, deadline, funding award or amendment decision is added. Next: further submissions or a published committee comparison of options, if the review advances.
 
 The committee has now published that comparison in `torenthia-nrs-076.html` / NRS-Y13-0740. Staff place three approaches side by side: retain the present formula and standardize queue-age reporting; add a measurable recurring service-burden factor; or add a blended infrastructure-backlog/request-persistence factor. The memorandum recommends none, assigns no weights, and establishes no markup date. `torenthia-news-100.html` is Dara Voss's supporting analysis of the design choices. The next live beat is committee discussion, distributional estimates or draft statutory language — not enactment, not an EM failure finding, and not a forced constitutional response.
+
+Year 14 Month 2 direction (`torenthia-nrs-127.html` / NRS-Y14-0039): the Committee requests comparable distributional illustrations for all three approaches, using a common reference period and stated funding envelope, explicit illustrative weights and sensitivity analysis, and published evidence gaps/correction procedures. The request is a core dossier step. No estimates are published yet; no formula, weights, bill, recommendation, payment or markup date is adopted. News 127 and the conditional news 128 provide supporting election coverage, not core dossier steps. The next beat is publication of estimates or a later committee decision.
 
 **Working resolution path — planning only, not published canon:**
 - Month 12: committee reconvenes and opens a structured evidence/submission phase.
