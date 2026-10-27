@@ -1,9 +1,9 @@
 # Branch history — Torenthia election outlook
 
 **Original branch:** `content/torenthia-election-outlook-20261027`  
-**PR:** not yet opened  
-**Head commit at handoff:** not established; use the PR's final head when opened  
-**Status:** validated publication candidate; remote PR checks pending
+**PR:** [#261](https://github.com/jcr0916-hue/federatedrepublic/pull/261)  
+**Content commit at handoff:** `39fe58e486d1da3f6df98cfec2bf6f02181bb9dd`; the final documentation head is recorded on the PR  
+**Status:** validated publication candidate; merge gated on the final PR checks
 
 ## Purpose
 
@@ -18,7 +18,7 @@ Publish three NRS records and two main pieces for the approaching spring electio
 
 ## Results and verification
 
-Preview-first helper allocation, all five individual draft checks, the full `npm run world:publish-check`, the archive check against the starting commit and `git diff --check` passed. Built discovery verified 392 pages and 261 record routes. All 256 existing World sources and 766 archive/reference files match the base bytes. Remote PR results remain pending.
+Preview-first helper allocation, all five individual draft checks, the full `npm run world:publish-check`, the archive check against the starting commit and `git diff --check` passed. Built discovery verified 392 pages and 261 record routes. All 256 existing World sources and 766 archive/reference files match the base bytes. Final remote World publishing, Constitution archival and deployment results are recorded in [PR #261 checks](https://github.com/jcr0916-hue/federatedrepublic/pull/261/checks); merge requires all three to pass on the final head.
 
 ## Decisions and lessons
 

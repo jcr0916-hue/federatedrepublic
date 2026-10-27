@@ -1,5 +1,7 @@
 # Spring election publication — 27 October 2026
 
+PR: [#261](https://github.com/jcr0916-hue/federatedrepublic/pull/261). Content commit: `39fe58e486d1da3f6df98cfec2bf6f02181bb9dd`.
+
 Base: `c572f5f46beb2e11f3500c0082dfc71fcaeaab0b` (merged relocation completion, PR #260). Publication advances the fictional frontier from Year 14 Month 1 to **Year 14 Month 2**, without assigning a day or an election date.
 
 ## New publication
@@ -54,4 +56,4 @@ Completed local checks:
 - A byte comparison with the base commit verified all **256 existing World sources** and **766 existing files under `docs/archive/`, State constitutional sources and selected canonical reference sources** unchanged. The only existing tracked files edited are Status, clocks and the equalization dossier summary/question.
 - `git diff --check`: passed. No workflow, test, canonical Constitution or existing archive file is altered.
 
-PR checks and production verification remain pending; this report will be updated before merge with actual PR check results. Production results can be confirmed from the deployment and public routes after merge. No branch deletion is authorized.
+Final remote results are attached to [PR #261 checks](https://github.com/jcr0916-hue/federatedrepublic/pull/261/checks). Merge is conditional on successful World publishing, Constitution archival and Vercel checks on the final head, with review state clear. The recovery-only Constitution job is intentionally skipped on PRs. Production results are verified against the deployed public routes after merge. No branch deletion is authorized.
