@@ -2,7 +2,8 @@ name: World publishing
 on:
   pull_request:
   push:
-    branches: [main]
+    # Test ordinary branch commits as well as PRs, independently of Vercel.
+    branches: ['**']
 permissions:
   contents: read
 jobs:
