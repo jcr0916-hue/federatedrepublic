@@ -108,3 +108,14 @@ The full `npm run world:publish-check` passed locally, including build, archival
 After [PR #257](https://github.com/jcr0916-hue/federatedrepublic/pull/257) passed all required checks, merged as `fc88f344a13b765acf0b95790081dde076812dfe`, and was verified in production, batch 8 relocates **40 unchanged sources**: NRS 021–040 and news 089–108. Reuse the categorized inventory, stable root permalink rule, and path-aware checks from batch 4. Total after this batch: **218/256 categorized; 38 at root**.
 
 The full `npm run world:publish-check` passed locally, including build, archival, chronology, authoring, ingestion, discovery, and constitutional references. All 256 source records, 470 public output files, and 336 protected Constitution/archive/State files remain byte-identical to the pre-batch baseline; all source blobs also match the pre-pilot PR #251 base. Require World publishing, Constitution archival, and Vercel success on this PR head and post-merge production verification. Keep all records and branches.
+
+
+### Stage 3 controlled record batch 9
+
+After [PR #258](https://github.com/jcr0916-hue/federatedrepublic/pull/258) passed all required checks, merged as `342ba20a76d9db29778185c932d42cf453dd542f`, and was verified in production, batch 9 relocates **38 unchanged sources**: NRS 001–020 and news 109–126. Reuse the categorized inventory, stable root permalink rule, and path-aware checks from batch 4. Total after this batch: **256/256 categorized; 0 at root**.
+
+The full `npm run world:publish-check` passed locally, including build, archival, chronology, authoring, ingestion, discovery, and constitutional references. All 256 source records, 470 public output files, and 336 protected Constitution/archive/State files remain byte-identical to the pre-batch baseline; all source blobs also match the pre-pilot PR #251 base. Require World publishing, Constitution archival, and Vercel success on this PR head and post-merge production verification. Keep all records and branches.
+
+## Permanent preservation manifest
+
+[The record manifest](RECORD-RELOCATION-MANIFEST-20261027.json) records all 256 original public filenames, categorized source destinations, Git blob IDs, and SHA-256 hashes. Source baseline: pre-pilot PR #251 base `79c3429942cb69c3616efbd647da5e2906b30556`. Public output baseline: merged PR #253 `7afff123c63dee3aafd337fd8d451387aba172c5`. All manifest destinations and hashes were verified; no World record source remains at root after this batch. The final remote checks and production audit must still pass before Stage 3 is marked complete.
