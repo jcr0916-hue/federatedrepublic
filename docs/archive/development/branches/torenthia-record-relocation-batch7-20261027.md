@@ -3,7 +3,7 @@
 **Original branch:** `chore/torenthia-record-relocation-batch7-20261027`
 **PR:** not yet opened; use this branch's migration pull request
 **Base:** `cda006583b7f606a40e3ed8f26ab91e463f72ba7` (PR #256 merged)
-**Status:** proposed; local validation passed; remote checks required before merge
+**Status:** shipped in PR #257; required checks and production verification passed
 
 ## Purpose and changes
 
@@ -23,3 +23,7 @@ Relocate 40 unchanged published sources: NRS 041–060 and news 069–088, into 
 ## Preservation and branch disposition
 
 All records, canonical Constitution, constitutional archives, historical records and documentation remain preserved on `main`. Retain the branch; deployment/automation branch-name dependencies outside this PR are not established. **Deletion approval:** not granted; separate preservation review is required.
+
+## Verified merge outcome (recorded by batch 8)
+
+Shipped in [PR #257](https://github.com/jcr0916-hue/federatedrepublic/pull/257), merge `fc88f344a13b765acf0b95790081dde076812dfe`. World publishing, Constitution archival, and Vercel passed on head `4413658bb5899cd2a16aa12f9157d34473bca9c6`. Production deployment `dpl_AjdtVH5EixBMfjYsWW3fDuDpVVzk` is READY for the merge, and all moved record URLs plus the homepage, World index/archive, and Constitution print page returned HTTP 200 with bytes matching the validated baseline. Branch retained; no deletion authorized.
