@@ -87,3 +87,10 @@ The full `npm run world:publish-check` passed locally, including build, archival
 ### Filename preservation lesson
 
 NRS 96–99 are historically named `torenthia-nrs-96.html` through `torenthia-nrs-99.html`, without zero padding. Select actual inventory filenames when batching; retain their exact names and URLs. A preliminary local preparation stopped on the absent padded spelling before publishing any branch changes, then resumed with the real filenames and reran the full gate. Do not normalize these names.
+
+
+### Stage 3 controlled record batch 6
+
+After [PR #255](https://github.com/jcr0916-hue/federatedrepublic/pull/255) passed all required checks, merged as `6cecc2915905b9c82d300d73b7edfc97c14829fb`, and was verified in production, batch 6 relocates **40 unchanged sources**: NRS 061–080 and news 049–068. Reuse the categorized inventory, stable root permalink rule, and path-aware checks from batch 4. Total after this batch: **138/256 categorized; 118 at root**.
+
+The full `npm run world:publish-check` passed locally, including build, archival, chronology, authoring, ingestion, discovery, and constitutional references. All 256 source records, 470 public output files, and 336 protected Constitution/archive/State files remain byte-identical to the pre-batch baseline; all source blobs also match the pre-pilot PR #251 base. Require World publishing, Constitution archival, and Vercel success on this PR head and post-merge production verification. Keep all records and branches.
