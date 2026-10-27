@@ -3,7 +3,7 @@
 **Original branch:** `chore/torenthia-record-relocation-batch5-20261027`
 **PR:** not yet opened; use this branch's migration pull request
 **Base:** `083a0c02eedd0a0e2ad7ae8c87db4bd774772a33` (PR #254 merged)
-**Status:** proposed; local validation passed; remote checks required before merge
+**Status:** shipped in PR #255; required checks and production verification passed
 
 ## Purpose and changes
 
@@ -27,3 +27,7 @@ All records, canonical Constitution, constitutional archives, historical records
 ### Filename preservation lesson
 
 NRS 96–99 are historically named `torenthia-nrs-96.html` through `torenthia-nrs-99.html`, without zero padding. Select actual inventory filenames when batching; retain their exact names and URLs. A preliminary local preparation stopped on the absent padded spelling before publishing any branch changes, then resumed with the real filenames and reran the full gate. Do not normalize these names.
+
+## Verified merge outcome (recorded by batch 6)
+
+Shipped in [PR #255](https://github.com/jcr0916-hue/federatedrepublic/pull/255), merge `6cecc2915905b9c82d300d73b7edfc97c14829fb`. World publishing, Constitution archival, and Vercel passed on head `eb07e0e54f6a79a2bab7a05f56e6455cf25f1cc1`. Production deployment `dpl_BZWwRHRK3wN22nyf5nwXeyo9YA7f` is READY for the merge, and all moved record URLs plus the homepage, World index/archive, and Constitution print page returned HTTP 200 with bytes matching the validated baseline. Branch retained; no deletion authorized.
