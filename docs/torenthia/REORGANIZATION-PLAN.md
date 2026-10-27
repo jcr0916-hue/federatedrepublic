@@ -40,3 +40,14 @@ For each migration PR: review diff and file counts; run `npm run world:publish-c
 ## Stage 3 routing prerequisite (implemented independently)
 
 Eleventy now recognizes source stems under `torenthia/nrs/`, `torenthia/news/`, `torenthia/court/`, and `torenthia/dispatches/` and publishes those documents at their historical root `torenthia-*.html` URLs. Existing root-level files retain the original permalink behavior. **This routing rule alone does not authorize moving records.** Runtime inventory, ingestion, authoring, cross-record links, and validators still assume root-level source files and must be migrated and tested before any record relocation.
+
+
+### Stage 3 first controlled record batch
+
+The first pilot relocation moves three published HTML sources, without changing their contents or public URLs:
+
+- `torenthia-nrs-124.html` → `torenthia/nrs/torenthia-nrs-124.html`
+- `torenthia-news-001.html` → `torenthia/news/torenthia-news-001.html`
+- `torenthia-sc-001.html` → `torenthia/court/torenthia-sc-001.html`
+
+The existing `worldId`, sequences, related-record links and root-level public permalinks remain unchanged. Remaining root-level records are intentionally untouched. Verify World publishing checks, Eleventy/Vercel output, and Constitution archival before merging. Subsequent batches should proceed only after this pilot is validated.
