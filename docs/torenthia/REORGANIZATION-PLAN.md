@@ -76,3 +76,14 @@ The dependency audit found and repaired three remaining source-path assumptions,
 - Homepage editorial links accept categorized dispatch sources while continuing to reject missing records.
 
 Regression tests cover all four streams, invalid federal provisions/anchors, snapshot-byte drift, metadata warnings, and missing dispatches. The full `npm run world:publish-check` passed. All **256 source records, 470 generated public files, and 336 protected Constitution/archival/State-source files** match the pre-batch baseline byte-for-byte. Require World publishing, Constitution archival, and Vercel success on the final PR head before merge; verify production afterward. Keep all branches and archival records.
+
+
+### Stage 3 controlled record batch 5
+
+After [PR #254](https://github.com/jcr0916-hue/federatedrepublic/pull/254) passed all required checks, merged as `083a0c02eedd0a0e2ad7ae8c87db4bd774772a33`, and was verified in production, batch 5 relocates **40 unchanged sources**: NRS 081–100 and news 029–048. Reuse the categorized inventory, stable root permalink rule, and path-aware checks from batch 4. Total after this batch: **98/256 categorized; 158 at root**.
+
+The full `npm run world:publish-check` passed locally, including build, archival, chronology, authoring, ingestion, discovery, and constitutional references. All 256 source records, 470 public output files, and 336 protected Constitution/archive/State files remain byte-identical to the pre-batch baseline; all source blobs also match the pre-pilot PR #251 base. Require World publishing, Constitution archival, and Vercel success on this PR head and post-merge production verification. Keep all records and branches.
+
+### Filename preservation lesson
+
+NRS 96–99 are historically named `torenthia-nrs-96.html` through `torenthia-nrs-99.html`, without zero padding. Select actual inventory filenames when batching; retain their exact names and URLs. A preliminary local preparation stopped on the absent padded spelling before publishing any branch changes, then resumed with the real filenames and reran the full gate. Do not normalize these names.

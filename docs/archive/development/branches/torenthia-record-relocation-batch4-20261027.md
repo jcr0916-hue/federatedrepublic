@@ -3,7 +3,7 @@
 **Original branch:** `chore/torenthia-record-relocation-batch4-20261027`  
 **PR:** to be linked by the pull request created from this branch  
 **Base:** `7afff123c63dee3aafd337fd8d451387aba172c5` (PR #253 merged)  
-**Status:** proposed; local validation passed; remote checks required before merge
+**Status:** shipped in PR #254; required checks and production verification passed
 
 ## Purpose and changes
 
@@ -27,3 +27,7 @@ Repair root-only paths in `scripts/check-world-metadata.mjs`, `scripts/check-rel
 ## Preservation and branch disposition
 
 All records and archives remain on `main` when merged; source blobs are unchanged. Historical branches remain untouched. Deployment/automation branch-name dependencies beyond this PR are not established. **Deletion approval:** not granted; retain this branch and all historical branches pending a separate preservation review.
+
+## Verified merge outcome (recorded by batch 5)
+
+Shipped in [PR #254](https://github.com/jcr0916-hue/federatedrepublic/pull/254), merge `083a0c02eedd0a0e2ad7ae8c87db4bd774772a33`. World publishing, Constitution archival, and Vercel passed on head `43f06821ba3582969352b54be03644228189eeab`. Production deployment `dpl_ESHcRnkQPW3dMJ24ocCHM993oPFe` is READY for the merge, and all moved record URLs plus the homepage, World index/archive, and Constitution print page returned HTTP 200 with bytes matching the validated baseline. Branch retained; no deletion authorized.
