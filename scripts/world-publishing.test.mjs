@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {readPublishingRecords,checkWorldPublishing} from '../lib/world-publishing.mjs';
 import {buildWorldDraft} from '../lib/world-authoring.mjs';
 const record=()=>({inputPath:'torenthia-news-001.html',content:'<p>Finished reporting.</p>',data:{worldKind:'news',worldId:'torenthia-news-001',worldDate:'13.12',worldSeq:1,worldTitle:'A report',worldOutlet:'The Torenthian',worldBlurb:'A summary',worldArcs:['korda'],worldDossiers:['korda'],worldJurisdictions:['Korda'],worldProvisions:[],worldRelated:[]}});
@@ -76,4 +78,52 @@ test('publishing inventory reads categorized records and preserves source paths'
  const records=readPublishingRecords(dir);
  assert.equal(records.length,1);
  assert.equal(records[0].inputPath,'torenthia/nrs/torenthia-nrs-001.html');
+});
+
+test('constitutional reference checks reject invalid references in categorized records',t=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'world-reference-paths-'));
+ t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
+ fs.mkdirSync(path.join(dir,'_data'));
+ fs.mkdirSync(path.join(dir,'docs/operations'),{recursive:true});
+ fs.writeFileSync(path.join(dir,'constitution_data.json'),JSON.stringify([{provisions:[{num:'§1.1'}]}]));
+ fs.writeFileSync(path.join(dir,'_data/scenarioBridges.json'),'{}');
+ fs.writeFileSync(path.join(dir,'docs/operations/constitutional-compatibility-261023.json'),' {"entries":[]}');
+ const script=new URL('./check-release-compatibility.py',import.meta.url).pathname;
+ for(const [kind,folder] of [['nrs','nrs'],['news','news'],['sc','court'],['dispatch','dispatches']]){
+  const target=path.join(dir,'torenthia',folder,`torenthia-${kind}-001.html`);
+  fs.mkdirSync(path.dirname(target),{recursive:true});
+  fs.writeFileSync(target,'<p>§99.1 <a href="annotated.html#s99-1">reference</a></p>');
+  const result=spawnSync('python3',[script],{cwd:dir,encoding:'utf8'});
+  assert.notEqual(result.status,0);
+  assert.match(result.stderr,/unknown federal provision §99.1/);
+  assert.match(result.stderr,/missing federal anchor s99-1/);
+  fs.writeFileSync(target,'<p>§1.1 <a href="annotated.html#s1-1">reference</a></p>');
+ }
+ assert.equal(spawnSync('python3',[script],{cwd:dir,encoding:'utf8'}).status,0);
+ // The dated register keeps historical root names and still checks exact bytes.
+ const digest=content=>createHash('sha256').update(content).digest('hex');
+ const entry={path:'torenthia-nrs-001.html',classification:'reviewed',decision:'Retain',reviewed_sha256:digest(fs.readFileSync(path.join(dir,'torenthia/nrs/torenthia-nrs-001.html')))};
+ fs.writeFileSync(path.join(dir,'docs/operations/constitutional-compatibility-261023.json'),JSON.stringify({entries:[entry,...['news','sc','dispatch'].map(kind=>({...entry,path:`torenthia-${kind}-001.html`}))],constitution_sha256:digest(fs.readFileSync(path.join(dir,'constitution_data.json')))}));
+ const snapshot=spawnSync('python3',[script,'--snapshot'],{cwd:dir,encoding:'utf8'});
+ assert.equal(snapshot.status,0,snapshot.stderr);
+ fs.appendFileSync(path.join(dir,'torenthia/nrs/torenthia-nrs-001.html'),'Changed');
+ assert.match(spawnSync('python3',[script,'--snapshot'],{cwd:dir,encoding:'utf8'}).stderr,/differs from reviewed release snapshot/);
+});
+
+test('homepage consistency accepts categorized dispatches and still rejects missing sources',t=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'world-dispatch-links-'));
+ t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
+ fs.mkdirSync(path.join(dir,'_data'));
+ fs.mkdirSync(path.join(dir,'torenthia/dispatches'),{recursive:true});
+ fs.writeFileSync(path.join(dir,'constitution_data.json'),'[]');
+ fs.writeFileSync(path.join(dir,'_data/updates.js'),'href: "torenthia-dispatch-example.html"');
+ const target=path.join(dir,'torenthia/dispatches/torenthia-dispatch-example.html');
+ fs.writeFileSync(target,'Dispatch');
+ const script=new URL('./check-consistency.py',import.meta.url).pathname;
+ const valid=spawnSync('python3',[script],{cwd:dir,encoding:'utf8'});
+ assert.equal(valid.status,0,valid.stdout+valid.stderr);
+ fs.unlinkSync(target);
+ const missing=spawnSync('python3',[script],{cwd:dir,encoding:'utf8'});
+ assert.notEqual(missing.status,0);
+ assert.match(missing.stdout,/links to torenthia-dispatch-example.html, which does not exist/);
 });

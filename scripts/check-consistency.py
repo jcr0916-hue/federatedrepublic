@@ -131,6 +131,8 @@ if os.path.exists('_data/updates.js'):
         if m:
             folder = {'news': 'news', 'nrs': 'nrs', 'sc': 'court'}[m.group(1)]
             candidates.append(os.path.join('torenthia', folder, href))
+        elif re.fullmatch(r'torenthia-dispatch-[a-z0-9-]+\.html', href):
+            candidates.append(os.path.join('torenthia', 'dispatches', href))
         if not any(os.path.isfile(candidate) for candidate in candidates):
             fail(f"_data/updates.js links to {href}, which does not exist in the repo")
 
