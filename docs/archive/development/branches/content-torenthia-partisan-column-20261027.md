@@ -4,7 +4,7 @@
 **PR:** [#262](https://github.com/jcr0916-hue/federatedrepublic/pull/262)  
 **Base:** `cb8fa9f1098198d20d0ad9304403311270350688` (merged [PR #261](https://github.com/jcr0916-hue/federatedrepublic/pull/261))  
 **Content commit:** `29b679eb4e8104e227cbd27d636eb37615433fc6`; final documentation head is recorded on the PR  
-**Status:** proposed editorial revision; not merged
+**Status:** validated publication; user approved merge on 27 October 2026; completion recorded on the PR
 
 ## Purpose and changes
 
@@ -28,7 +28,7 @@ Read the Story Bible, current Status, Year 14 proposals, publishing guide, origi
 
 ## Verification
 
-Before editing, all 1,530 tracked local files matched the blobs in remote main's complete Git tree. The local mirror has different commit ancestry, so remote publication will use the verified main commit/tree as its parent/base and include only the four changed paths.
+Before editing, all 1,530 tracked local files matched the blobs in remote main's complete Git tree. The local mirror has different commit ancestry, so remote publication used the verified main commit/tree as its parent/base and included only the four changed paths.
 
 Completed local verification:
 
@@ -39,11 +39,11 @@ Completed local verification:
 - Byte comparison: 1,527 of 1,530 existing tracked files remain identical to the verified main tree, including the other 260 World sources, all 763 existing archive files and `constitution_data.json`. Only article 128, Bible and Status changed; the fourth path is this new handoff.
 - `git diff --check`: passed.
 
-Remote results are available in [PR #262 checks](https://github.com/jcr0916-hue/federatedrepublic/pull/262/checks); do not infer a deployment from a local build. No merge or production deployment is performed by this revision task.
+Remote World publishing, Constitution archival and Vercel preview checks passed on `6610fb8d50cbeb168fe2415790c9d9023fe917cb`; browser inspection confirmed the revised column. The user subsequently approved merging the revision. Final checks, merge and production verification are recorded on [PR #262](https://github.com/jcr0916-hue/federatedrepublic/pull/262); do not infer a deployment from a local build.
 
 ## Open follow-ups and preservation
 
-The revision is proposed, not shipped. Election scheduling/results, party names/totals, housing disposition, equalization enactment and Trust consent remain unresolved. No experiment, poll or model was run. Reuse the published program and disclosed opinion voice; never reuse the superseded hypothetical seat groups as reported political facts.
+At this handoff the revision is validated and approved for merge; the PR records its final shipping status. Election scheduling/results, party names/totals, housing disposition, equalization enactment and Trust consent remain unresolved. No experiment, poll or model was run. Reuse the published program and disclosed opinion voice; never reuse the superseded hypothetical seat groups as reported political facts.
 
 Canonical Constitution, other World sources, historical editorial records and `archive/legacy-project-material` are outside the edit set. The original article remains in Git history and PR #261. Deployment/automation branch-name dependencies have not been assessed for deletion.
 
