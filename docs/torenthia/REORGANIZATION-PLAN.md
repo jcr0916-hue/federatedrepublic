@@ -1,6 +1,6 @@
 # Torenthia repository organization — staged migration plan
 
-**Status:** Stage 3 in progress under explicit migration authorization. Record sources are relocated in validated batches; no archival deletion is authorized by this plan.
+**Status:** Stage 3 complete on `main` as of 2026-10-27. All 256 published record sources are categorized; historical root public URLs and record bytes are preserved. Cold-storage removal and branch cleanup remain outside this completed migration.
 
 ## Preservation invariants
 
@@ -119,3 +119,16 @@ The full `npm run world:publish-check` passed locally, including build, archival
 ## Permanent preservation manifest
 
 [The record manifest](RECORD-RELOCATION-MANIFEST-20261027.json) records all 256 original public filenames, categorized source destinations, Git blob IDs, and SHA-256 hashes. Source baseline: pre-pilot PR #251 base `79c3429942cb69c3616efbd647da5e2906b30556`. Public output baseline: merged PR #253 `7afff123c63dee3aafd337fd8d451387aba172c5`. All manifest destinations and hashes were verified; no World record source remains at root after this batch. The final remote checks and production audit must still pass before Stage 3 is marked complete.
+
+
+## Stage 3 completion and production audit — 2026-10-27
+
+All 256 record sources are now categorized: **124 NRS**, **126 news**, **2 court**, and **4 dispatches**. **Zero World record sources remain at root.** The continuation merged PRs #253–#259 for **246 records** (8 + five batches of 40 + 38), following the 10 records already merged in PRs #251 and #252.
+
+[The completion report](RELOCATION-VALIDATION-20261027.md) records batch/check evidence and lessons. [The preservation manifest](RECORD-RELOCATION-MANIFEST-20261027.json) records all original public filenames, final source paths, source hashes, PR heads/merges, and production verification. Every PR #251–#259 has successful World publishing, Constitution archival, and Vercel checks at its final head; original #251/#252 results were rechecked during this completion audit.
+
+The final record merge is `dc60c74d9e8d0dfae3746c998a3196bb0eaa50ba` ([PR #259](https://github.com/jcr0916-hue/federatedrepublic/pull/259)). Its production deployment `dpl_4adPmz5n4ZaoYW9EM28BmoCwMAYX` is READY. All **256 historical record URLs plus four key pages** returned HTTP 200 and byte-identical content on `https://thefederatedrepublic.org`. All 470 generated public files and 336 protected Constitution/archive/State-source files remain byte-identical locally. Authoring discovery still selects NRS 125, news 127, and court 003; the independent narrative sequence remains 174.
+
+### Remaining work
+
+No record relocations remain. Stage 4 cold storage requires a separate file-by-file provenance/manifest review and authorization before any removal. Historical branches and archival records remain retained; no branch or record deletion is part of this migration. Keep the canonical Constitution and its historical pairs on `main`. Do not merge the cold-storage branch back into `main`.
