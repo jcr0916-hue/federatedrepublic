@@ -2,13 +2,14 @@
 import fs from "node:fs";
 import matter from "gray-matter";
 import { analyzeWorldMetadata } from "../lib/world-metadata.mjs";
+import { worldSourceFiles } from "../lib/world-authoring.mjs";
 
 const baseline=132;
 const auditAll=process.argv.includes("--all");
-const files=fs.readdirSync(".").filter(f=>/^torenthia-(?:news|nrs|sc|dispatch).*\.html$/i.test(f));
+const files=worldSourceFiles(".");
 let checked=0,warnings=0;
 
-for(const file of files){
+for(const {sourcePath:file} of files){
   const raw=fs.readFileSync(file,"utf8");
   const parsed=matter(raw);
   if(!parsed.data.worldKind) continue;

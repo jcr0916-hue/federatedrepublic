@@ -1,6 +1,6 @@
 # Torenthia repository organization — staged migration plan
 
-**Status:** staged; no source moves or archival deletions authorized by this document alone.
+**Status:** Stage 3 in progress under explicit migration authorization. Record sources are relocated in validated batches; no archival deletion is authorized by this plan.
 
 ## Preservation invariants
 
@@ -61,3 +61,18 @@ Following the validated three-record pilot, batch 2 relocates seven more unchang
 ### Stage 3 third controlled record batch
 
 Batch 3 relocates eight unchanged published sources: NRS 117–120 to `torenthia/nrs/` and news 005–008 to `torenthia/news/`. Historical root-level public URLs and record metadata are preserved. The shared World inventory, discovery checks, and consistency checks were prepared in prior batches. Merge only after World publishing, Constitution archival, and Vercel validation.
+
+
+### Stage 3 fourth controlled record batch
+
+After merging [PR #253](https://github.com/jcr0916-hue/federatedrepublic/pull/253) on head `4dea14564290a6f274e2f18819ee314087f44230`, 18 of 256 records were categorized. World publishing, Constitution archival, and Vercel passed on that head; the full local publishing gate also passed. The production merge `7afff123c63dee3aafd337fd8d451387aba172c5` deployed READY.
+
+Batch 4 relocates **40 unchanged sources**: NRS 101–116, news 009–028, and all four dispatches (Ottoline Pree, Sarn, Sollis, Vann). Totals after this batch: **58 categorized; 198 remaining at root** (100 NRS, 98 news). Both court records were already migrated.
+
+The dependency audit found and repaired three remaining source-path assumptions, without weakening their checks:
+
+- Metadata advice now uses `worldSourceFiles` so categorized records remain in its audit.
+- Live constitutional reference checks scan all four categorized directories. Dated snapshot checks resolve historical record paths while preserving the original audit register and hash requirements.
+- Homepage editorial links accept categorized dispatch sources while continuing to reject missing records.
+
+Regression tests cover all four streams, invalid federal provisions/anchors, snapshot-byte drift, metadata warnings, and missing dispatches. The full `npm run world:publish-check` passed. All **256 source records, 470 generated public files, and 336 protected Constitution/archival/State-source files** match the pre-batch baseline byte-for-byte. Require World publishing, Constitution archival, and Vercel success on the final PR head before merge; verify production afterward. Keep all branches and archival records.

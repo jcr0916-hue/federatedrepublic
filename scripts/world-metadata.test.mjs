@@ -34,3 +34,17 @@ test('new independent NRS records receive metadata warnings without worldSeq',as
  const result=spawnSync(process.execPath,[new URL('./check-world-metadata.mjs',import.meta.url).pathname],{cwd:dir,encoding:'utf8'});
  assert.equal(result.status,0);assert.match(result.stderr,/missing from worldArcs/);
 });
+
+test('metadata audit retains warnings for categorized records in every stream',async t=>{
+ const fs=await import('node:fs'),os=await import('node:os'),path=await import('node:path');
+ const {spawnSync}=await import('node:child_process');
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'categorized-metadata-'));t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
+ for(const [kind,folder] of [['nrs','nrs'],['news','news'],['sc','court'],['dispatch','dispatches']]){
+  fs.mkdirSync(path.join(dir,'torenthia',folder),{recursive:true});
+  fs.writeFileSync(path.join(dir,'torenthia',folder,`torenthia-${kind}-042.html`),`---\nworldKind: ${kind}\nworldSeq: 133\nnrsSeq: 42\nworldTitle: Korda Territory Convention\nworldBlurb: Korda delegates meet.\nworldArcs: []\nworldJurisdictions: []\nworldProvisions: []\n---\nKorda Territory Convention.`);
+ }
+ const result=spawnSync(process.execPath,[new URL('./check-world-metadata.mjs',import.meta.url).pathname],{cwd:dir,encoding:'utf8'});
+ assert.equal(result.status,0,result.stderr);
+ assert.match(result.stderr,/across 4 new World record/);
+ for(const folder of ['nrs','news','court','dispatches']) assert.ok(result.stderr.includes(`torenthia/${folder}/`));
+});
