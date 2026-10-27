@@ -5,6 +5,7 @@ import {parseDocument, DomUtils} from 'htmlparser2';
 import {parse} from 'acorn';
 import {loadScenarios} from '../lib/scenarios.mjs';
 import {loadStateTestIndex} from '../lib/state-tests.mjs';
+import {readPublishingRecords} from '../lib/world-publishing.mjs';
 const root='_site';
 function pages(dir) {
  return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?pages(path.join(dir,e.name)):e.isFile()&&e.name.endsWith('.html')?[path.relative(root,path.join(dir,e.name))]:[]);
@@ -30,7 +31,7 @@ for(const [file,doc] of docs){
 }
 const archive=docs.get('torenthia-record.html');
 const records=DomUtils.findAll(n=>n.attribs?.class==='archive-item',archive.children);
-const published=fs.readdirSync('.').filter(f=>f.endsWith('.html')&&/^---[\s\S]*?worldKind:/m.test(fs.readFileSync(f,'utf8')));
+const published=readPublishingRecords('.').filter(p=>p.data.worldKind);
 assert.equal(records.length,published.length,'Every published world item must appear in the archive');
 for(const file of ['index.html','annotated.html','torenthia.html','torenthia-record.html','dossier-korda.html','republic-at-a-glance.html']){
  const doc=docs.get(file);assert.ok(DomUtils.findOne(n=>n.attribs?.id==='site-nav',doc.children,true),file);
@@ -53,9 +54,8 @@ if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 console.log(`Verified ${files.length} built pages: local links, anchors, inline script syntax, and all ${records.length} public records.`);
 
 // Verify rendered dossier membership and dates against the same published metadata.
-const {default:matter}=await import('gray-matter');
 const {dossierRecords,worldNewest}=await import('../lib/world.mjs');
-const world=published.map(file=>({data:matter(fs.readFileSync(file,'utf8')).data}));
+const world=published.map(({data})=>({data}));
 const dossiers=JSON.parse(fs.readFileSync('_data/currentFiles.json','utf8'));
 for(const file of dossiers){
  const doc=docs.get(`dossier-${file.id}.html`);
