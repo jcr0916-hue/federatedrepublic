@@ -1,4 +1,6 @@
 # World Story Status
+The October 28 Year 14 Month 2 batch adds NRS 128–130 and news 129. The fiscal equalization committee opens a source-table correction window without distributing estimates or choosing a formula. The Elections Panel publishes explanatory Assembly RCV counting guidance without setting an election date or changing candidates. Solara posts replacement ferry passenger notices while retaining two weekday winter sailings. Petra Vend reports on why comparable source tables precede political promises about equalization. No new allocations, committee vote, legislation, election result or constitutional clock is established.
+
 
 The structured chronology and clock registries in `_data/worldChronology.json` and `_data/worldClocks.json`, together with published front matter, supply chronology and clock checks. The generated dashboard below is checked during publishing. Human narrative notes remain editorial.
 
@@ -20,7 +22,7 @@ The October 18 Year 14 Month 1 election-season batch adds NRS 102–106, news 11
 
 The October 16 Year 14 Month 1 batch adds NRS 099–101 and news 115. Routine records from Merath (industrial inspection scheduling), Solara (port-register reconciliation), and Varek (county Toren River submissions) diversify the administrative register. Aleth Fenn reports the Varek river and county-government question against the approaching spring Legat Consul election, without adding candidate pledges, polling, a treaty change or an election date. No constitutional clock has changed.
 
-**Current published frontier:** Year 14, Month 2 · worldSeq through **175** · nrsSeq through **127**.
+**Current published frontier:** Year 14, Month 2 · worldSeq through **176** · nrsSeq through **130**.
 
 The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 
