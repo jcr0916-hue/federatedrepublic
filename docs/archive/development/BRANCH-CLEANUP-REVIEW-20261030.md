@@ -319,7 +319,7 @@ Before this delivery PR merges, the newest eligible completed branches are PR #2
 
 ## Site and local verification
 
-Both builds passed, and all **485 public output files** are byte-identical before and after this change. The new safety suite (23 tests), existing Batch 12 suite (12), and existing manifest suite (7) passed. Both new workflow files parse as YAML.
+Both builds passed, and all **485 public output files** are byte-identical before and after this change. The new safety suite (24 tests), existing Batch 12 suite (12), and existing manifest suite (7) passed. Both new workflow files parse as YAML.
 
 ## Concurrent completed work
 

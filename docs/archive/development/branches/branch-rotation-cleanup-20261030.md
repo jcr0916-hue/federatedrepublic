@@ -1,7 +1,7 @@
 # Branch history — three-branch rolling cleanup
 
-**Original branch:** `maintenance/branch-rotation-cleanup-20261030`  
-**PR:** [#269 — preserve branch history and enforce guarded three-branch rotation](https://github.com/jcr0916-hue/federatedrepublic/pull/269).  
+**Original branch:** `maintenance/branch-rotation-cleanup-20261030`
+**PR:** [#269 — preserve branch history and enforce guarded three-branch rotation](https://github.com/jcr0916-hue/federatedrepublic/pull/269).
 **Status:** implementation and preservation prepared in PR #269; live disposition pending post-merge gates.
 
 ## Purpose and significant changes
@@ -15,7 +15,7 @@ The history-only commit `0bb710a2966b119c42552fd7b7061063a9ebf33d` has the exact
 ## Verification and results
 
 - Initial baseline site build passed: 485 output files, SHA-256 hashes recorded for exact comparison after changes.
-- 23 new destructive-operation regressions, 12 existing Batch 12 safety regressions, and seven manifest regressions passed locally.
+- 24 new destructive-operation regressions, 12 existing Batch 12 safety regressions, and seven manifest regressions passed locally.
 - Final site comparison passed: all 485 output files are byte-identical to the baseline; zero public file changes. Both workflow files parse successfully.
 - CI, merge, and actual cleanup results: pending. No branch deletion is claimed by this pre-merge handoff.
 
