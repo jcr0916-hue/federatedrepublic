@@ -2,6 +2,8 @@
 
 ## Current cleanup and rotation
 
+- [October 30 actual results](BRANCH-CLEANUP-RESULTS-20261030.md) and [exact deletion ledger](BRANCH-CLEANUP-RESULTS-20261030.json): 46 deleted at the first-run checkpoint, 12 retained; final reporting-PR buffer rotation is separately recorded by Actions.
+
 - [October 30 frozen inventory](BRANCH-CLEANUP-20261030.json) and [preservation/dependency review](BRANCH-CLEANUP-REVIEW-20261030.md): 57 audited refs, 47 completed branches, original-history preservation, handoffs, deletion preview, and explicit exceptions.
 - [Three-branch lifecycle](BRANCH-LIFECYCLE.md), [reviewed policy](branch-cleanup-policy.json), and [implementation handoff](branches/branch-rotation-cleanup-20261030.md).
 - [October 18 actual cleanup results](BRANCH-CLEANUP-RESULTS-20261018.md) and [exact deletion ledger](BRANCH-CLEANUP-RESULTS-20261018.json): 135 refs deleted, cold storage preserved, substantive holds retained.
