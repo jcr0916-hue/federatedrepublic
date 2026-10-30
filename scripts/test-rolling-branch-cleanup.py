@@ -137,6 +137,11 @@ class SafetyTests(unittest.TestCase):
             self.assertIn(f"--force-with-lease=refs/heads/{row['name']}:{row['sha']}", args)
             self.assertIn(":refs/heads/" + row["name"], args)
 
+    def test_duplicate_review_cannot_silently_replace_clearance(self):
+        self.policy["reviewed"].append(self.policy["reviewed"][0])
+        with self.assertRaises(RuntimeError):
+            self.plan()
+
     def test_delete_function_rejects_permanent_and_duplicate_refs(self):
         with self.assertRaises(RuntimeError):
             c.delete_refs([{"name": "main", "sha": "f" * 40}], REPO)

@@ -243,13 +243,18 @@ def delete_refs(rows, repository):
     git(*command)
 
 
-def apply_plan(preview, policy):
+def apply_plan(preview, policy, progress=None):
     if preview["repository"] != os.environ["GITHUB_REPOSITORY"] or preview["archive_sha"] != ARCHIVE_SHA:
         raise RuntimeError("Preview identity mismatch")
     age = dt.datetime.now(dt.timezone.utc) - dt.datetime.fromisoformat(preview["generated_at"])
     if not dt.timedelta(0) <= age <= dt.timedelta(hours=1):
         raise RuntimeError("Preview expired; generate a fresh preview")
     deleted, absent, held = [], [], []
+    def save_progress():
+        if progress:
+            progress({**preview, "state": "applying", "deleted": deleted,
+                      "already_absent": absent, "held_during_apply": held})
+    save_progress()
     proposed = preview["delete"]
     if len({r["name"] for r in proposed}) != len(proposed):
         raise RuntimeError("Duplicate preview ref")
@@ -285,8 +290,9 @@ def apply_plan(preview, policy):
             if ref(row["name"], missing=True) is not None:
                 raise RuntimeError("Deletion verification failed; branch was retained/recreated")
             deleted.append(row)
+        save_progress()
     result = classify(capture(policy), policy)
-    result.update(deleted=deleted, already_absent=absent, held_during_apply=held)
+    result.update(state="complete", deleted=deleted, already_absent=absent, held_during_apply=held)
     return result
 
 
@@ -297,7 +303,8 @@ def main():
     args = parser.parse_args()
     policy = json.loads(POLICY.read_text())
     if args.apply:
-        result = apply_plan(json.loads(args.apply.read_text()), policy)
+        result = apply_plan(json.loads(args.apply.read_text()), policy,
+                            progress=lambda result: args.output.write_text(json.dumps(result, indent=2) + "\n"))
     else:
         result = classify(capture(policy), policy)
     args.output.write_text(json.dumps(result, indent=2) + "\n")

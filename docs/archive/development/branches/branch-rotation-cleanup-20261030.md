@@ -1,8 +1,8 @@
 # Branch history — three-branch rolling cleanup
 
 **Original branch:** `maintenance/branch-rotation-cleanup-20261030`  
-**PR:** pending; use the matching repository PR title and branch.  
-**Status:** proposed; preservation, policy, and tested cleanup implementation prepared.
+**PR:** [#269 — preserve branch history and enforce guarded three-branch rotation](https://github.com/jcr0916-hue/federatedrepublic/pull/269).  
+**Status:** implementation and preservation prepared in PR #269; live disposition pending post-merge gates.
 
 ## Purpose and significant changes
 
