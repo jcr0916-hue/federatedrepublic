@@ -1,0 +1,75 @@
+name: Three-branch rolling cleanup
+
+on:
+  workflow_run:
+    workflows: [World publishing]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preview or apply only freshly reviewed eligible branches
+        type: choice
+        default: preview
+        options: [preview, apply]
+
+permissions:
+  contents: write
+  pull-requests: read
+  actions: read
+  deployments: read
+
+concurrency:
+  group: three-branch-rolling-cleanup
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    if: >-
+      github.repository == 'jcr0916-hue/federatedrepublic' &&
+      ((github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') ||
+       (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Use only the current tested main
+        id: current
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          TESTED_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          if [ "$EVENT_NAME" = workflow_dispatch ] || [ "$(git rev-parse HEAD)" = "$TESTED_SHA" ]; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'Newer main has not finished this publishing run; wait for its own successful run.'
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Verify destructive-operation safeguards
+        if: steps.current.outputs.ready == 'true'
+        run: python3 -B scripts/test-rolling-branch-cleanup.py
+      - name: Preview exact SHA-leased deletion plan
+        if: steps.current.outputs.ready == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 -B scripts/rolling-branch-cleanup.py --output "$RUNNER_TEMP/branch-cleanup-preview.json"
+      - name: Apply reviewed three-branch rotation after fresh checks
+        if: steps.current.outputs.ready == 'true' && (github.event_name == 'workflow_run' || inputs.mode == 'apply')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 -B scripts/rolling-branch-cleanup.py --apply "$RUNNER_TEMP/branch-cleanup-preview.json" --output "$RUNNER_TEMP/branch-cleanup-results.json"
+      - name: Retain preview and actual disposition ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: branch-cleanup-${{ github.run_id }}
+          path: ${{ runner.temp }}/branch-cleanup-*.json
+          if-no-files-found: ignore
+          retention-days: 90

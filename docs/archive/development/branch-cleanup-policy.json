@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "repository": "jcr0916-hue/federatedrepublic",
+  "retain_completed": 3,
+  "permanent": [
+    "main",
+    "archive/legacy-project-material"
+  ],
+  "archive_sha": "0053ac4da09d32807d7f5b71ef0fff2075b421c1",
+  "retain": {
+    "content/torenthia-y14m01-20261014": "four unreviewed reporting/planning commits; retained since October 18",
+    "review/scenario-executive-legislature-20261016": "three unique scenario/drafting commits; retained since October 18",
+    "feature/global-navigator-drawer-20261024": "closed unmerged PR #239; three unique implementation commits",
+    "fix/repair-constitution-after-pr219": "closed unmerged PR #220; four unique recovery commits",
+    "working-fiscal-amendment-refine-261020": "closed unmerged PR #232; one unique fiscal drafting commit",
+    "working-fiscal-draft-and-principle-test-261020": "97 unique commits after PR #231; substantive constitutional release history requires review",
+    "constitution-wording-torenthia-y14m1-261023": "tip differs from merged PR #235; one unique generated-artifact commit and a staging workflow dependency"
+  },
+  "reviewed": [
+    {
+      "name": "change/remove-mandatory-devolution-provisional-20261019",
+      "sha": "7cd289977a03fd4aa6b9b8e6209fc4db0d084ec2",
+      "pr": 219,
+      "handoff": "docs/archive/development/branches/pr-219-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-canon-status-relocation-20261026",
+      "sha": "e113a2b9382f383101660a95bfb956a1d624c5b2",
+      "pr": 247,
+      "handoff": "docs/archive/development/branches/pr-247-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-first-record-relocation-20261026",
+      "sha": "e0168036f9c4481465072c140fbc36a99ddbf4f3",
+      "pr": 251,
+      "handoff": "docs/archive/development/branches/pr-251.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-publishing-guide-relocation-20261026",
+      "sha": "c8a23af192563274334d3f476f85ccdf26af4b06",
+      "pr": 246,
+      "handoff": "docs/archive/development/branches/pr-246-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-inventory-mixed-layout-20261026",
+      "sha": "11f5a75555781b214010a2347c2934d65ecb0b28",
+      "pr": 249,
+      "handoff": "docs/archive/development/branches/pr-249-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-relocation-batch2-20261026",
+      "sha": "65c24148a69c417450411ec3012ba663f768980b",
+      "pr": 252,
+      "handoff": "docs/archive/development/branches/pr-252.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-relocation-batch3-20261027",
+      "sha": "4dea14564290a6f274e2f18819ee314087f44230",
+      "pr": 253,
+      "handoff": "docs/archive/development/branches/torenthia-record-relocation-batch3-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-relocation-batch4-20261027",
+      "sha": "43f06821ba3582969352b54be03644228189eeab",
+      "pr": 254,
+      "handoff": "docs/archive/development/branches/torenthia-record-relocation-batch4-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-relocation-batch5-20261027",
+      "sha": "eb07e0e54f6a79a2bab7a05f56e6455cf25f1cc1",
+      "pr": 255,
+      "handoff": "docs/archive/development/branches/torenthia-record-relocation-batch5-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-relocation-batch6-20261027",
+      "sha": "4ec579f335e786bf28e0ecba60542683c2e67ea0",
+      "pr": 256,
+      "handoff": "docs/archive/development/branches/torenthia-record-relocation-batch6-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-relocation-batch7-20261027",
+      "sha": "4413658bb5899cd2a16aa12f9157d34473bca9c6",
+      "pr": 257,
+      "handoff": "docs/archive/development/branches/torenthia-record-relocation-batch7-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-relocation-batch8-20261027",
+      "sha": "1b0c584cf0fed49f9cc65c2f5a687edd83b66006",
+      "pr": 258,
+      "handoff": "docs/archive/development/branches/torenthia-record-relocation-batch8-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-record-relocation-batch9-20261027",
+      "sha": "250870b920d9adad8764c558a5afe3a2f3f6ada9",
+      "pr": 259,
+      "handoff": "docs/archive/development/branches/torenthia-record-relocation-batch9-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-records-routing-foundation-20261026",
+      "sha": "d5ee2d59f99fa2ba0da6b96c5cf36f5a49499f6b",
+      "pr": 248,
+      "handoff": "docs/archive/development/branches/pr-248-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-relocation-completion-20261027",
+      "sha": "06f3b6a2ec7dc5746ec3822bb048602e1eb7637c",
+      "pr": 260,
+      "handoff": "docs/archive/development/branches/torenthia-relocation-completion-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-repository-organization-20261026",
+      "sha": "c35d74b79534f833f05f542f5da5ebabc3c909c9",
+      "pr": 244,
+      "handoff": "docs/archive/development/branches/pr-244-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-storylines-relocation-20261026",
+      "sha": "34c76ecb7dab4f7982f7b539d168d1981067de7f",
+      "pr": 245,
+      "handoff": "docs/archive/development/branches/pr-245-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "chore/torenthia-world-authoring-paths-20261026",
+      "sha": "201c53452013d2be12bfb1fc30158be490ee032b",
+      "pr": 250,
+      "handoff": "docs/archive/development/branches/pr-250-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "constitution/statehood-audit-fiscal-capacity",
+      "sha": "bdf955ab0f657d991142ca510744bcc933d892d8",
+      "pr": 226,
+      "handoff": "docs/archive/development/branches/pr-226-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "content/state-constitutional-tests-20261029-b",
+      "sha": "de18e9cdd6e189ca5c08304c03bcb7541f627fd4",
+      "pr": 266,
+      "handoff": "docs/archive/development/branches/state-constitutional-tests-20261029-b.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "content/torenthia-election-outlook-20261027",
+      "sha": "74c5af5d204032f2bd34d08ed929029d03010aba",
+      "pr": 261,
+      "handoff": "docs/archive/development/branches/content-torenthia-election-outlook-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "content/torenthia-partisan-column-20261027",
+      "sha": "210d13f1ac95861ea23262b4c75d99f3f5e94b80",
+      "pr": 262,
+      "handoff": "docs/archive/development/branches/content-torenthia-partisan-column-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "content/torenthia-state-tests-20261029",
+      "sha": "227545260cc0be3e5e3b774138dc7df4c485874a",
+      "pr": 265,
+      "handoff": "docs/archive/development/branches/torenthia-state-tests-20261029.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "content/torenthia-y14m1-election-public-questions-20261019",
+      "sha": "acc9cb7adccb06ee0312aa6bb08a9b44d1abd7a3",
+      "pr": 218,
+      "handoff": "docs/archive/development/branches/torenthia-y14m1-election-public-questions-20261019.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "content/torenthia-y14m01-speakers-20261026",
+      "sha": "8e142bd218dd08977197d56445509ad1fdbef050",
+      "pr": 243,
+      "handoff": "docs/archive/development/branches/pr-243-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "content/torenthia-y14m2-updates-20261028",
+      "sha": "446a6f0f6433f4427ee3b593bbcc04981914d5a5",
+      "pr": 264,
+      "handoff": "docs/archive/development/branches/torenthia-y14m2-updates-20261028.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "copy/clarify-constitution-scenarios-torenthia-261019",
+      "sha": "ff57897d629ec9642b54dbce37a1c4156c526543",
+      "pr": 228,
+      "handoff": "docs/archive/development/branches/pr-228-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "docs/constitution-history-261023",
+      "sha": "9756fc4f44c01e1a85b5555ded1795d9ea74785c",
+      "pr": 236,
+      "handoff": "docs/archive/development/branches/constitution-history-261023.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "docs/history-statehood-fiscal-261019",
+      "sha": "ceed42c108fe899436abb4b2a440615a8c15c521",
+      "pr": 227,
+      "handoff": "docs/archive/development/branches/pr-227-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "editorial/scenario-citizenship-and-discovery-20261024",
+      "sha": "8109b3e216bcd5eacef7ed70b7f896082e1aa4f9",
+      "pr": 238,
+      "handoff": "docs/archive/development/branches/pr-238.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "fix/constitution-2-17-federal-20261018",
+      "sha": "bea36637d28be3194b429e773ad8ef6cf9ef3ee2",
+      "pr": 217,
+      "handoff": "docs/archive/development/branches/constitution-2-17-federal-20261018.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "fix/constitution-post219-clean-sync",
+      "sha": "5817a3de70c1323342e7ef59571a214094467aa2",
+      "pr": 221,
+      "handoff": "docs/archive/development/branches/pr-221-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "fix/constitutional-archive-recovery-check-261023",
+      "sha": "c0ba58e340da9decdf5bf79f25edca228b0749ce",
+      "pr": 234,
+      "handoff": "docs/archive/development/branches/constitutional-archive-recovery-261023.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "fix/ottoline-nvs-verification-20261019",
+      "sha": "fbfbf0cee809761ba74e1cfa799507c5a58a03e3",
+      "pr": 225,
+      "handoff": "docs/archive/development/branches/pr-225-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "fix/rehn-term-election-cycle-y14",
+      "sha": "429df4864d46a089d99f80ab6bcb6d99e3acaa6b",
+      "pr": 223,
+      "handoff": "docs/archive/development/branches/pr-223-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "holdout-remove-monitor-role-261024",
+      "sha": "42dacfc553e5a3e0b08e4ed0c509eeffdb0258ae",
+      "pr": 242,
+      "handoff": "docs/archive/development/branches/pr-242-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "maintenance/branch-lifecycle-delete-by-default-20261029",
+      "sha": "47ed11bc16054e83935d07bbfcdd6e24dbca86c9",
+      "pr": 267,
+      "handoff": "docs/archive/development/branches/branch-lifecycle-delete-default-20261029.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "maintenance/low-deployment-workflow-20261027",
+      "sha": "67064a8fb6d3d2f3c8aaceb05f9b65c2f28fc207",
+      "pr": 263,
+      "handoff": "docs/archive/development/branches/low-deployment-workflow-20261027.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "release-review-constitution-261023",
+      "sha": "b405eed74a41531f62e06f69991ce3512d278fb7",
+      "pr": 233,
+      "handoff": "docs/archive/development/branches/release-review-constitution-261023.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "shall-to-must-and-fiscal-261024",
+      "sha": "f502e6844fce357d4f5b61223d832e80c46ac127",
+      "pr": 241,
+      "handoff": "docs/archive/development/branches/pr-241.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "torenthia-election-season-batch-y14m1",
+      "sha": "2b0f546eb4fdf22883756d0789658d402f007647",
+      "pr": 216,
+      "handoff": "docs/archive/development/branches/pr-216.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "torenthia-housing-and-field-y14m1",
+      "sha": "f52ccd415587cf7946b48689910dc84e77805641",
+      "pr": 237,
+      "handoff": "docs/archive/development/branches/pr-237.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "torenthia-petition-and-pause-y14m1",
+      "sha": "3a7bf77efa4613af56f1e197896149683b6ca6f3",
+      "pr": 240,
+      "handoff": "docs/archive/development/branches/pr-240.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "torenthia-solara-batch-y14m1",
+      "sha": "2ccd140d9d651e5d13b8ecb4123b3c4dc87f46b1",
+      "pr": 229,
+      "handoff": "docs/archive/development/branches/pr-229.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "torenthia-thoss-priorities-y14m1",
+      "sha": "cb423ccb7ec14f217209ec8de4c651c623291f2e",
+      "pr": 230,
+      "handoff": "docs/archive/development/branches/pr-230.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "world/corindal-audit-history-y14m1",
+      "sha": "eda86357a249053437724a6514d8940cfce342a5",
+      "pr": 222,
+      "handoff": "docs/archive/development/branches/pr-222-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "world/corindal-interview-14-01",
+      "sha": "61140bf8b08fded2c6c191ebbaebad4a998b11be",
+      "pr": 224,
+      "handoff": "docs/archive/development/branches/pr-224-historical-handoff.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:27:02.826511+00:00"
+    },
+    {
+      "name": "content/torenthia-oct30-election-preparations",
+      "sha": "ceb1b5c006ece0e7fdcec57028c7c56ef8237603",
+      "pr": 268,
+      "handoff": "docs/archive/development/branches/torenthia-oct30-election-preparations.md",
+      "dependencies": "none",
+      "reviewed_at": "2026-10-30T12:34:07.306720+00:00"
+    }
+  ]
+}

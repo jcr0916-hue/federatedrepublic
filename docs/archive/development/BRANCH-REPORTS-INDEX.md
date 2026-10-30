@@ -1,5 +1,13 @@
 # Development branch history — cleanup stage 1
 
+## Current cleanup and rotation
+
+- [October 30 frozen inventory](BRANCH-CLEANUP-20261030.json) and [preservation/dependency review](BRANCH-CLEANUP-REVIEW-20261030.md): 57 audited refs, 47 completed branches, original-history preservation, handoffs, deletion preview, and explicit exceptions.
+- [Three-branch lifecycle](BRANCH-LIFECYCLE.md), [reviewed policy](branch-cleanup-policy.json), and [implementation handoff](branches/branch-rotation-cleanup-20261030.md).
+- [October 18 actual cleanup results](BRANCH-CLEANUP-RESULTS-20261018.md) and [exact deletion ledger](BRANCH-CLEANUP-RESULTS-20261018.json): 135 refs deleted, cold storage preserved, substantive holds retained.
+
+The older reports below are historical checkpoints. Their counts and proposed dispositions are not current deletion clearance.
+
 These reports preserve initial branch purposes and compare each historical branch to `main`. They are **evidence references**, not full forensic preservation or clearance for deletion.
 
 | Branch | Ahead of main | Action |

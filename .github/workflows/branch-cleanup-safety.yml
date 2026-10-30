@@ -1,0 +1,26 @@
+name: Branch cleanup safety
+on:
+  pull_request:
+    paths:
+      - scripts/*branch-cleanup*.py
+      - .github/workflows/*branch-cleanup*.yml
+      - docs/archive/development/branch-cleanup-policy.json
+  push:
+    branches: [main]
+    paths:
+      - scripts/*branch-cleanup*.py
+      - .github/workflows/*branch-cleanup*.yml
+      - docs/archive/development/branch-cleanup-policy.json
+permissions:
+  contents: read
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -B scripts/test-rolling-branch-cleanup.py
+      - run: python3 -B scripts/test-reviewed-branch-cleanup-batch-12.py
+      - run: python3 -B scripts/test-reviewed-branch-cleanup-manifest.py
