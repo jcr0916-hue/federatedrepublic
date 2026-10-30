@@ -26,4 +26,4 @@ Brief goal and context.
 - Where results and important files are retained on `main` or permanent archive.
 - Any branch-only or intermediate history needing preservation review.
 - Branch name dependencies (deployments, automation, external links): checked / not checked; describe evidence.
-- **Deletion approval:** Not granted by this note. Requires separate approved manifest and guarded cleanup.
+- **Branch disposition:** Delete after successful merge by default through guarded, SHA-leased cleanup; retain only for a documented protection, unique-history, open-work, or active dependency exception. Include the eventual deletion/retention evidence in the cleanup ledger. Routine verified deletions are authorized by the repository lifecycle policy; unresolved safeguards block deletion.
