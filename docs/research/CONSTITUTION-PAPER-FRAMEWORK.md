@@ -10,7 +10,7 @@ The Federated Republic Constitution is a general constitutional design, distinct
 
 1. **Textual evolution and design rationale.** Trace selected provisions across dated, preserved Constitution MD/JSON versions; document differences, the contemporaneous rationale when actually recorded, and open interpretive questions. Avoid describing a rationale as contemporaneous when inferred retrospectively.
 2. **Institutional mechanism analysis.** Separate rule text, formal incentives, boundary conditions, anticipated failure modes, and real-world comparative literature. Illustrative Torenthian scenarios may be labeled and discussed separately from empirical evidence.
-3. **Federalism and State diversity.** Contrast how actual State constitutional provisions differ within the common federal framework; examine State historical tests as authored fictional case studies, clearly distinguished from real-world constitutional performance.
+3. **Federalism and State diversity.** Contrast Torenthia's authored State constitutional provisions within the common federal framework; examine State historical tests as authored fictional case studies, clearly distinguished from real-world constitutional performance.
 4. **Publication and version integrity.** Explain the dated document archive, provenance of changes, correspondence between markdown and JSON, and limits of automated validation. Distinguish a validator's consistency checks from proof of constitutional adequacy.
 
 ## Repeatable structure for each paper
@@ -32,6 +32,8 @@ The Federated Republic Constitution is a general constitutional design, distinct
 4. External scholarly literature, identified as outside scholarship and independently cited
 
 Do not use a current explanation as proof of why an earlier revision occurred. Treat archives as evidence of text, not automatically of motive. A failed fictional test may demonstrate a modeled tension but cannot measure actual-world institutional performance.
+
+Use the [archival policy](../operations/CONSTITUTION-ARCHIVAL.md) and the [October 31 integrity repair](../operations/CONSTITUTION-ARCHIVE-INTEGRITY-20261031.md) when selecting the corpus. The repair's hash-pinned duplicate aliases preserve historical bytes; they are not additional constitutional revisions or independent evidence. Identify the canonical version, source commit and content hash rather than counting filenames as separate observations.
 
 ## Next decisions
 

@@ -11,9 +11,11 @@ not in the active source tree. See [PROJECT-SOURCES.md](../../PROJECT-SOURCES.md
 1. Published World pieces and their front matter establish what actually happened.
 2. The current Constitution controls constitutional mechanism.
 3. This file records durable geography, identities, relationships, and story constraints.
-4. `WORLD-STORY-STATUS.md` records where live threads currently stand and what remains open.
+4. `STORY-STATUS.md` records where live threads currently stand and what remains open.
 
 Do not treat an archived plan as canon when it conflicts with a published piece or this file.
+
+[Political and character planning](POLITICAL-CHARACTER-PLANNING.md) preserves the October 31 author-approved editorial reference, including future intentions and unresolved possibilities. It is **not published canon**. This Bible's explicitly labeled editorial constraints guide writing without retroactively naming parties or establishing future events in published records. These internal documents are excluded from the website build.
 
 ---
 
@@ -141,7 +143,7 @@ Torenthia is not a peninsula.
 |---|---|---|
 | **Petra Vend** | The Torenthian | Main political correspondent; straight reporting. |
 | **Dara Voss** | RNN (after earlier Torenthian work) | Institutional / analytical reporting. Outlet change is intentional. |
-| **Nella Rusk** | The Torenthian, opinion | Open supporter of Thoss's unnamed party; speaks to fellow supporters and presses for delivery. First appears in revised news 128. Her judgments and suggested bargains are opinion, not official party commitments. |
+| **Nella Rusk** | The Torenthian, opinion | Open supporter of Thoss's party, unnamed in published news 128; LRP identity is internal editorial planning. Speaks to fellow supporters and presses for delivery. Her judgments and suggested bargains are opinion, not official party commitments. |
 | **Lenne Akar** | TNB Caldenmere | Procedural, factual local reporting. |
 | **Corwin Hale** | The Dorven Ledger | Orath/Dorven local angle. |
 | **Aleth Fenn** | The Torenthian | Northern correspondent; Argent Ridge/Norvane. |
@@ -179,9 +181,11 @@ Sollis’s recurring students: **Deva**, **Orren**, and **Tor**.
   corridor vote and consequences for the remainder.
 - **Bern Calloway** — inland grain operator; whole-Territory petition signer motivated by roads and
   infrastructure.
-- **Herbert Sole** — retired Selvane appellate judge; represented corridor petitioners/Kelvant
-  interests in the Supreme Court challenge. Separately seeded as a possible future Judicial Pool/SC
-  figure; do not collapse those threads.
+- **Herbert Sole** — retired Selvane federal appellate judge; represented corridor petitioners/Kelvant
+  interests in the Supreme Court challenge. Thoss interned for him for two years during law school;
+  he suggested politics, and she later encouraged his Judicial Pool application (news 047). Whether
+  he applied was left unanswered. A future SC nomination is an internal author intention, not a
+  published appointment or proof of Pool membership; do not collapse these threads.
 
 ### Supreme Court
 
@@ -206,6 +210,31 @@ Nine justices. Two major published lineups currently matter:
 - **Ines Carrow** and “Director Carrow” are the same person; her established office is Foreign Affairs,
   not a separate intelligence-director post.
 - Varek has **no governor/general executive**. Do not create one.
+
+---
+
+## Political and character writing constraints — internal editorial planning
+
+The six-party landscape below is an **approved authoring framework**, not a published manifesto, party roster, election result or seat distribution. LRP and CRM are generally the two largest national vote-getters in this framework; regional parties and independents also exist. Introduce names through appropriate future publications rather than rewriting earlier unnamed-party coverage.
+
+- **Liberal Reform Party (LRP):** broad center; market liberal, fiscally cautious and institutionally reformist, with conservative and progressive wings. Thoss belongs to its conservative wing; this does not establish that she leads the party.
+- **Civic Renewal Movement (CRM):** broad center; technocratic institutional reform, transparency and professional administration. May compete or cooperate with LRP and contains internal differences.
+- **Social Democratic Alliance (SDA):** center-left; public services, labor and social protection.
+- **National Republican Party (NRP):** center-right; fiscal discipline, traditional civic conservatism and security. Distinct from LRP's conservative wing.
+- **Workers' Solidarity Party (WSP):** democratic socialism, worker participation and cooperatives.
+- **Green and Regional Alliance (GRA):** ecology, conservation and regional autonomy. Varek's likely GRA tendency is a planning hypothesis, not a uniform State identity or determined result.
+
+Thoss's original LRP–CRM arrangement with some center-right/NRP-aligned support is editorial context, not a newly published party breakdown of the installation vote. No numerical six-party polling baseline, party vote shares, party seat totals or complete leader roster is established.
+
+**Thoss — verified position and authoring constraint:** she took office in Year 13, Month 9 (news 042; first Council with her ministers in NRS 014 / NRS-Y13-0341), only a few fictional months before the current frontier. News 122 records her Assembly accountability and restraint: “The people choose my bosses, not me.” Preserve her quiet negotiation and pragmatic institutional realism, fiscal commitments and willingness to let others receive credit. Show ability through choices and relationships; allow losses, misjudgments and costly compromises. Official communications are not her party's campaign channel. Long-range tenure, coalition and public-voice possibilities belong in the internal planning reference, not the record of what she has achieved.
+
+**Published numbers have different meanings:** news 122 and revised news 128 distinguish the historical **274** installation votes from the later **266** reported working-support estimate. The Stats ledger (`_data/stats.js`) carries **43%** Thoss public approval. These are neither party shares nor a live confidence division; 43% is not a new methodologically documented poll. Under §2.6 a constructive motion must elect a named eligible successor by an absolute majority of the full seated Assembly (**251 when all 500 seats are filled**). A general election alone does not remove her.
+
+**Policy and personnel continuity:** Thoss's Korda role concerns lawful process and background coalition work, not ownership of the delegates' settlement or a predetermined ratification. Fiscal reform remains potential accomplishment until legislation is actually enacted; Legislature and EM retain independent responsibilities. Herbert Sole's retired Selvane appellate career and Korda representation are published (news 047; NRS 037). The author's future nomination intention is recorded separately in the internal plan; no Judicial Pool admission, vacancy, nomination, confirmation or date is established by that intention. Follow §§4.4 and 9.8 before any appointment story.
+
+**Independent lives and voices:** preserve Rehn/Corindal's independent development and the user's discovery of events through published coverage; no advance plot outline or private resolution in ordinary updates. State institutions, communities and minor characters have their own agency. Introduce people organically and preserve Vend's reporting, Rusk's opinion, Voss's RNN analysis and Iset's Korda perspective. The [State-story pilot](STATE-STORY-PILOT.md) is a one-State proposal under central review, not deployed autonomous publishing.
+
+**Polling discipline:** distinguish Thoss approval, six-party preferences, Legat candidate preferences, local Assembly races and policy questions. Any newly authored poll needs question, population, fictional fieldwork dates, sample size, method, undecided treatment, relevant weighting and uncertainty/limitations. Coherent numbers may receive differing editorial interpretations; they must not be manufactured to force a favored outcome or presented as certified results. The late-November/early-December publishing horizon is not an in-world election date.
 
 ---
 

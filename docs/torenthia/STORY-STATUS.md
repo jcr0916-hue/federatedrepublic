@@ -1,5 +1,7 @@
 # World Story Status
 
+**Weekend editorial work — 31 October 2026:** Orath test 02 (Year 8, Month 4; State §§5.6–5.7) and Corindal test 02 (Year 7, Month 11; State §8.1) are historical State cases, independent of current character arcs. The [political/character reference](POLITICAL-CHARACTER-PLANNING.md) preserves author intentions separately from published canon, and the [State pilot](STATE-STORY-PILOT.md) remains a proposal with no agents deployed. No daily World/NRS item, new poll, official election result or fictional time advance is part of this weekend work. Routine World/NRS publication remains paused for October 31–November 1, 2026 (real-world dates).
+
 The October 30 Year 14 Month 2 batch adds NRS 132–133 and news 131 (worldSeq 178). The Elections Panel releases nonbinding, accessible practice-ballot materials for single-member and multi-member Assembly contests and the separate Legat Consul ballot, without setting a date, conducting the Legat ballot-order lot, or changing candidacy. The Morantine works office files initial field measurements in its already-commissioned Kessel culvert survey without authorizing construction. Petra Vend explains why teaching the counting process is not predicting or initiating any election. No election date, election result, allocation, referendum outcome or new constitutional clock is established.
 
 Editorial pacing decision (October 29, 2026, real-world): target the Republic's Assembly/Legat Consul election payoff for the **last week of November or early December 2026** in the publication schedule, allowing several weeks of staged candidate coverage, election-administration notices, issue comparisons, voting preparations, and final certification. This is **not** an in-world calendar date, an Elections Panel order, or a published date of voting; no election date or outcome is canon until published through an appropriate World record. Preserve the established constitutional scheduling machinery and do not delay a binding in-world deadline to suit the editorial calendar. Avoid declaring a winner early.
@@ -23,7 +25,7 @@ The October 19 Year 14 Month 1 Solara batch adds NRS 109–112 and news 119–12
 
 The October 19 Year 14 Month 1 batch adds NRS 107–108 and news 117. The Elections Panel opens a public candidate-question index without changing qualification status or the spring election's unspecified date. Orath makes Dorven freight source tables available for correction; Aleth Fenn examines the legal difference between a national campaign promise, a State transport estimate and county implementation. No qualifications, election results, new appropriations, Caldris obligations or constitutional clocks are changed.
 
-**Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `WORLD-STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../../PROJECT-SOURCES.md).
+**Purpose:** current operational handoff for Torenthia World publishing. This file answers **what is live, what is on a clock, and what can happen next**. Durable canon, geography, character identities, and arc premises belong in `STORY-BIBLE.md`. Historical planning notes are preserved on the `archive/legacy-project-material` cold-storage branch; see [PROJECT-SOURCES.md](../../PROJECT-SOURCES.md).
 
 The October 15 Y14 M1 regional batch adds NRS 096–098 and news 113–114. Arvane's Westport port equipment schedule and Orath's Dorven agricultural freight estimates provide routine administrative texture. Rhondel opens a local services consultation without constituting Kelvant approval of the proposed Korda merger. The Lakeland Gazette covers practical lake-shore questions; the Dorven Ledger asks how national candidates understand regional transport responsibilities. No candidate position, polling result, election day, shortage, merger or referendum result is invented.
 
@@ -31,7 +33,7 @@ The October 18 Year 14 Month 1 election-season batch adds NRS 102–106, news 11
 
 The October 16 Year 14 Month 1 batch adds NRS 099–101 and news 115. Routine records from Merath (industrial inspection scheduling), Solara (port-register reconciliation), and Varek (county Toren River submissions) diversify the administrative register. Aleth Fenn reports the Varek river and county-government question against the approaching spring Legat Consul election, without adding candidate pledges, polling, a treaty change or an election date. No constitutional clock has changed.
 
-**Current published frontier:** Year 14, Month 2 · worldSeq through **177** · nrsSeq through **131**.
+**Current published frontier:** Year 14, Month 2 · worldSeq through **178** · nrsSeq through **133**.
 
 The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 
@@ -163,20 +165,9 @@ Open:
 
 **Bundled ballot — planning and chronology guardrail:** the intended election package includes Assembly elections, the Legat Consul race, an EM confirmation vote and the Senate class then due. Published coverage and the structured clock establish **spring Year 14**, not Year 13, for the LC election; no exact date is established. §7.2 supplies different office cycles and leaves specific timing to statute. Establish the other races' applicable schedules and the confirmation trigger before publishing the complete bundle or broadening the clock's canonical scope. Do not imply that every Senate seat is being elected.
 
-**Election strategy for Thoss — planning only, not published canon:**
-- **Party posture:** Thoss is affiliated with, but does not personally lead, one of the **two major parties in the coalition** that elected her (installed via §2.6(1) constructive no-confidence, not a national vote). This remains proposed party structure, compatible with the published broad coalition but not a published party or seat breakdown. The phrase leaves room for smaller unnamed partners without requiring a full party directory. The "both governing parties" wording in `scenario-the-cause.html` belongs to a hypothetical scenario and cannot establish Torenthian party canon.
-- **Public posture:** deliberate restraint. She uses the bully pulpit sparingly and reserves substantive comment on ideas and policy for the lead-up to the election rather than campaigning loudly as a national figure now that she's addressing the whole country instead of a single district. Proposed in-character line retained: *"I serve at the Assembly's pleasure, and I serve the whole country. I'll focus on ideas and policies specifically during the lead-up to the election. The people choose my bosses, not me."* The two clauses separate institutional accountability from public service. §2.6(1)'s actual wording is **"accountable to the Assembly"**; "pleasure" is colloquial in the proposed quote, not a constitutional term of art. Loss of a working count alone does not remove her: §2.6(1) requires an absolute majority to install a named successor.
-- **Election posture and tenure:** Thoss is not personally running for Civic Consul in the general election. Under §2.6(3), she continues in office until removed through a constructive vote of no confidence naming a successor, resignation, or exhaustion of the 12-year lifetime service limit in §2.5(2). Her relationship to the election is therefore political rather than electoral: she can state policy priorities and seek an Assembly willing to sustain them without appearing on a national Civic Consul ballot. A weaker party result does not itself remove her; replacement requires an absolute majority for a named successor.
-- **Record framing — Korda and Fiscal Equalization:** distinguish the two.
-  - Korda remains primarily a *process-integrity* record for Thoss. Crediting her personally for the eventual outcome would contradict the Convention's planning discipline that the compromise must read as Korda delegates' work, not "Thoss's deal."
-  - Fiscal Equalization should become a qualified governing success before the election. Her defensible claim is that she refused discretionary queue-jumping, forced the mechanism into public statutory review, and helped produce a workable legislative correction. The Legislature must still own the enacted formula and the EM must independently audit constitutional compliance; do not turn the reform into unilateral Civic Consul action.
-- **Policy priorities** for the "ideas and policies" content her restraint line commits her to discussing, grounded in actual Civic Consul authority (§2.5(3): domestic policy and regulatory frameworks, the civic budget, the civil service, Article XII social-state administration) rather than invented authority:
-  - Civil service professionalization — insulating appointment and promotion from whoever holds the office; on-brand for someone installed by a no-confidence vote, who has every incentive to argue the civil service shouldn't be this sensitive to who's Civic Consul.
-  - Regulatory clarity — converting standing discretionary gaps into settled statutory rules; a "good government" plank rather than an applause line, but consistent with an institutionalist office-holder.
-  - Article XII administration — delivery and audit-backlog competence rather than benefit expansion; avoids committing the Legislature to new spending she can't credibly promise.
-  - Optional, more publicly visible: **National Trust stewardship (§18.4)** — maintenance, access and lawful co-management within the civic domain, with appropriations and designation safeguards preserved. **National Endowment funding (§12.2(6))** is a separate plank: she may advocate and propose funding, but the Legislature makes the required surplus-year appropriation. The independent Monetary Authority manages the Endowment and certifies contraction/disbursement under §§12.1.a and 12.4; she cannot promise control of its investments or allocations.
-  - Common thread across all four: competence and de-personalization of power — reinforces "the people choose my bosses, not me" rather than sitting next to it as an unrelated policy list.
-- **Political tension to retain:** process integrity is a defensible record, not an answer to every delivery complaint. Published support is a reported working count of 266, down from the official 274 installation vote; no successor motion is established. Allies waiting for services can press her without becoming villains or proving the constitutional process failed. Civil-service and regulatory planks should distinguish steps within existing authority from statutory reforms and appropriations she must win in the Legislature; independent agencies remain independent. Keep official administration separate from campaign activity.
+**Published tenure and numbers:** Thoss took office in Year 13, Month 9 and is still early in her tenure. The 274 installation votes and later reported 266 working-support estimate are historical political counts, not her party's seats or a current roll call. The Stats ledger's 43% approval is a different indicator; it supplies no six-party polling baseline or new survey methodology. Under §§2.5–2.6 she serves until removal, resignation or exhaustion of the 12-year lifetime service limit; there is no general-election reset. Constructive replacement requires a named eligible successor and an absolute majority of the full seated Assembly (251 with all 500 seats filled).
+
+**Editorial boundary:** the six-party framework, Thoss's LRP affiliation, long-term character/coalition possibilities and future personnel intentions are in [internal political and character planning](POLITICAL-CHARACTER-PLANNING.md), not new public facts. Her quoted restraint and domestic proposals are already published in news 122/NRS 113. Korda's delegates own their settlement; ratification remains open. Fiscal reform remains in review and is not an enacted governing success. Future policy options and the earlier conditional fiscal timetable are retained in the internal plan rather than recorded here as outcomes.
 
 ### Executive Monitor succession — LIVE, dry-record thread
 
@@ -203,13 +194,7 @@ The committee has now published that comparison in `torenthia-nrs-076.html` / NR
 
 Year 14 Month 2 direction (`torenthia-nrs-127.html` / NRS-Y14-0039): the Committee requests comparable distributional illustrations for all three approaches, using a common reference period and stated funding envelope, explicit illustrative weights and sensitivity analysis, and published evidence gaps/correction procedures. The request is a core dossier step. No estimates are published yet; no formula, weights, bill, recommendation, payment or markup date is adopted. News 127 and the conditional news 128 provide supporting election coverage, not core dossier steps. The next beat is publication of estimates or a later committee decision.
 
-**Working resolution path — planning only, not published canon:**
-- Month 12: committee reconvenes and opens a structured evidence/submission phase.
-- Year 14 Month 1: compare reform options and move toward one or more draft formula approaches.
-- Year 14 Month 2: committee report and statutory markup; this should be the main legislative fight.
-- Late Month 2 / early Month 3: enact a revised mechanism through ordinary legislation if the votes hold.
-- Around Month 3: seek an independent EM certification of the revised mechanism before the election campaign reaches its peak. A favorable certification may still identify implementation risks or monitoring needs.
-- Political objective: Thoss comes out mostly a winner because the government converts a visible institutional problem into a lawful statutory correction, while the Legislature and EM retain their independent roles.
+The earlier conditional fiscal schedule and desired political effect are preserved in [internal planning, section 10](POLITICAL-CHARACTER-PLANNING.md#10-earlier-policy-options-and-timing--retained-as-conditional-planning). They are not binding dates or evidence that a report, markup, law or certification has occurred. NRS 128's source-table correction window remains part of the evidence phase; no distributional estimates or preferred formula have been published.
 
 Note: the Korda Convention's Joint Committee on Transition Facts is a **separate body** — do not conflate it with the §12.6 Joint Committee. Different mandate, origin and chairs.
 
@@ -225,7 +210,7 @@ Good future triggers:
 
 ### Supreme Court / Judicial Pool — OPEN BACKGROUND
 
-Two major cases are now on the record; the one meaningful lineup shift is Norven moving from the Corindal majority to the Korda dissent. Do not invent a reason. Judicial Pool admissions and future seat openings can seed later composition stories. Herbert Sole remains available as a future candidate without making that outcome inevitable.
+Two major cases are now on the record; the one meaningful lineup shift is Norven moving from the Corindal majority to the Korda dissent. Do not invent a reason. Judicial Pool admissions and future seat openings can seed later composition stories. Sole's published background remains unchanged. The author's future nomination intention is kept in internal planning; no vacancy, Pool admission, nomination, confirmation or date has been published.
 
 ### Corindal Industrial Partners — HELD
 
@@ -243,7 +228,7 @@ Her Dispatch is one accumulating personal file; *Show Your Work* is a separate s
 - **Seat-of-government reselection:** older optional idea; no active initiative established.
 - **Lakeland Journal business voice:** still available for Kelvant/Korda commercial interests. Plausible landing spot for Davin Kesh's Crossroads-only "Kelvant business contacts" pressure detail, if ever adapted into real canon — not done, not required.
 - **Corindal long game:** parked by design, not forgotten.
-- **Future Judicial Pool / Herbert Sole:** seeded, not promised.
+- **Future Judicial Pool / Herbert Sole:** internal author intention only; no appointment event or outcome is established.
 - **Public opinion polling (stats section):** planned feature, not built. Numbers must not be finalized until the real Convention outcome is decided, to avoid accidentally telegraphing or contradicting it. See archived polling plan for design detail.
 
 ---
@@ -252,7 +237,7 @@ Her Dispatch is one accumulating personal file; *Show Your Work* is a separate s
 
 Before writing a new World piece:
 1. Start with the preview-first helper when practical: `npm run world:new -- --kind <news|nrs|sc|dispatch> --date YY.MM --title "..." --blurb "..."`. It calculates the next stream sequence and filename (NRS also requires an explicitly reviewed `--nrs-id`) and suggests metadata; add `--write` only after reviewing the preview.
-2. Read the relevant section of `WORLD-STORY-BIBLE.md`.
+2. Read the relevant section of `STORY-BIBLE.md`.
 3. Check this file for live status and clocks.
 4. Check the latest relevant published World records/front matter.
 5. Check `constitution_data.json` for any mechanism the story relies on.
