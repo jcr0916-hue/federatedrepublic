@@ -249,6 +249,7 @@ test('nested State-test destinations refuse symlink traversal and failed checks 
 function constitutionFixture(t) {
   const f=fixture(t);
   const files=['constitution_data.json','docs/constitution-current.md','docs/constitutional-quickref.md','annotated.html','search-index.js','scripts/build-constitution-md.py','scripts/constitution-archive.py','scripts/build-quickref.py','scripts/build-search-index.py','scripts/sync-annotated.py','scripts/check-consistency.py','scripts/check-constitutional-site.py'];
+  files.push('scripts/constitution-archive-aliases.json');
   for(const file of files) {const dest=path.join(f.root,file);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(file,dest);}
   const native=JSON.parse(fs.readFileSync('package.json','utf8')).scripts;
   fs.writeFileSync(path.join(f.root,'package.json'),JSON.stringify({scripts:{sync:native.sync,'constitution:archive':native['constitution:archive'],build:'node -e "process.exit(0)"'}}));

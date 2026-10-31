@@ -73,12 +73,27 @@ them too. A repository workflow cannot itself enforce branch protection.
 See [GitHub's protected branch documentation](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
 
 The normal World publishing check also runs the archival tests and checks the
-current working pair and every archived pair's integrity.
+current working pair and every archived pair's integrity. Run these checks before
+staging a bulk local import; never commit filesystem conflict copies as new
+editions. `check-current` rejects unknown filenames even when their bytes equal
+an existing snapshot.
+
+The [October 31 incident review](CONSTITUTION-ARCHIVE-INTEGRITY-20261031.md)
+identifies 298 byte-identical aliases introduced by the fixed October 30 import
+`c5130bd4a9c7aa61ed07d8cae5eb388e9c74e397`, in addition to the 128 previously
+reviewed aliases. All archive files are retained. The additional aliases are
+enumerated in [a frozen manifest](../../scripts/constitution-archive-aliases.json)
+with exact paths, canonical counterparts, SHA-256 hashes and original Git blob
+IDs; the validator pins the manifest's SHA-256. It requires both the reviewed
+bytes and the canonical file. This recognizes no future filename and grants no
+edit/deletion exception. Canonical pair, provenance and renderer verification,
+the immutable baseline, and the first-parent recovery audit remain mandatory.
 
 ## Direct-push recovery
 
-The `recover-archives` job runs after current Constitution or archival-code
-changes on `main`, and can be run manually with `workflow_dispatch`. It always
+The `recover-archives` job runs after current Constitution, archive-directory,
+reviewed-alias manifest or archival-code changes on `main`, and can be run
+manually with `workflow_dispatch`. It always
 fetches the latest `main` and walks all first-parent revisions since the fixed
 `policy.json` baseline. For every published pair change it preserves the parent
 pair using the transition's UTC commit date. This includes multiple revisions in
@@ -89,8 +104,9 @@ mistaken for authoritative versions.
 Recovery never changes current Constitution files. Jobs serialize, existing
 archives are verified/reused, pushes use ordinary fast-forward checks, and three
 fetch/rebuild retries handle a concurrent main update. The job commits only this
-archive directory. Snapshot-only commits do not match its push path filter;
-additionally, pushes with `GITHUB_TOKEN` do not trigger ordinary push workflows.
+archive directory. Archive-only imports are checked too, so a bulk copy cannot
+evade the archival workflow's path filter. A no-op recovery creates no commit;
+pushes with `GITHUB_TOKEN` do not trigger ordinary push workflows.
 See [GitHub's workflow trigger documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow).
 
 Recovery needs Actions `contents: write` permission and a branch rule that permits

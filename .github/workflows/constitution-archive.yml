@@ -9,8 +9,9 @@ on:
       - docs/constitution-current.md
       - scripts/build-constitution-md.py
       - scripts/constitution-archive.py
+      - scripts/constitution-archive-aliases.json
       - scripts/test-constitution-archive.py
-      - docs/archive/constitution/policy.json
+      - 'docs/archive/constitution/**'
       - .github/workflows/constitution-archive.yml
   workflow_dispatch:
 permissions:

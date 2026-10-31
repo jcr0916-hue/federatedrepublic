@@ -26,7 +26,7 @@ class ConstitutionArchiveTest(unittest.TestCase):
         self.root = Path(self.temporary.name).resolve()
         (self.root / "scripts").mkdir()
         (self.root / "docs").mkdir()
-        for name in ("build-constitution-md.py", "constitution-archive.py"):
+        for name in ("build-constitution-md.py", "constitution-archive.py", "constitution-archive-aliases.json"):
             shutil.copyfile(SCRIPTS / name, self.root / "scripts" / name)
         archive.git(self.root, "init", "-q")
         archive.git(self.root, "config", "user.name", "Archival test")
@@ -242,6 +242,109 @@ class ConstitutionArchiveTest(unittest.TestCase):
         alias.write_bytes(canonical.read_bytes())
         restored = self.commit()
         return alias, before, removed, restored
+
+    def reviewed_alias(self):
+        plan = archive.plan_pair(self.root, self.old, DATE, self.base)
+        archive.write_pair(self.root, self.old, plan)
+        canonical = f"{archive.ARCHIVE}/{plan['stem']}.json"
+        alias = canonical.replace(".json", " 6.json")
+        (self.root / alias).write_bytes((self.root / canonical).read_bytes())
+        manifest = {"files": [{"path": alias, "canonical_path": canonical,
+                                "sha256": archive.digest(self.old[0])}]}
+        data = json.dumps(manifest).encode()
+        (self.root / archive.REVIEWED_ALIAS_MANIFEST).write_bytes(data)
+        for attribute, value in (("ROOT", self.root),
+                                 ("REVIEWED_ALIAS_MANIFEST_SHA256", archive.digest(data))):
+            patcher = patch.object(archive, attribute, value)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        return alias, canonical
+
+    def test_reviewed_alias_is_verified_without_creating_an_edition(self):
+        alias, _ = self.reviewed_alias()
+        self.assertEqual(len(self.records()), 1)
+        before = archive.inventory(self.root)
+        self.assertEqual(archive.prepare(self.root, DATE), [])
+        self.assertEqual(archive.inventory(self.root), before)
+        self.assertIn(alias, before)
+
+    def test_unknown_byte_identical_alias_still_fails(self):
+        alias, canonical = self.reviewed_alias()
+        unknown = alias.replace(" 6.json", " 7.json")
+        (self.root / unknown).write_bytes((self.root / canonical).read_bytes())
+        with self.assertRaisesRegex(ValueError, "Unexpected archive file"):
+            self.records()
+
+    def test_reviewed_alias_requires_exact_pinned_bytes_and_canonical_file(self):
+        alias, canonical = self.reviewed_alias()
+        for change in ("alias", "both", "missing canonical"):
+            with self.subTest(change=change):
+                files = archive.inventory(self.root)
+                if change == "alias":
+                    files[alias] += b"changed"
+                elif change == "both":
+                    files[alias] = files[canonical] = self.source("Changed together.")
+                else:
+                    del files[canonical]
+                with self.assertRaisesRegex(ValueError, "Reviewed duplicate archive verification failed"):
+                    archive.validate_inventory(files)
+
+    def test_aliases_cannot_be_recognized_inside_a_subdirectory(self):
+        alias, canonical = self.reviewed_alias()
+        files = archive.inventory(self.root)
+        for name in (alias, f"{archive.ARCHIVE}/Constitution-261014 2.json"):
+            with self.subTest(name=name):
+                nested = f"{archive.ARCHIVE}/nested/{Path(name).name}"
+                with self.assertRaisesRegex(ValueError, "Unexpected archive file"):
+                    archive.validate_inventory({**files, nested: files[canonical]})
+
+    def test_reviewed_manifest_changes_fail_even_with_no_archives(self):
+        manifest = self.root / archive.REVIEWED_ALIAS_MANIFEST
+        manifest.write_bytes(manifest.read_bytes() + b" ")
+        with patch.object(archive, "ROOT", self.root):
+            with self.assertRaisesRegex(ValueError, "manifest hash mismatch"):
+                archive.validate_inventory({})
+
+    def test_uncommitted_manifest_cannot_authorize_a_committed_check(self):
+        self.reviewed_alias()
+        self.commit()
+        manifest = self.root / archive.REVIEWED_ALIAS_MANIFEST
+        saved = manifest.read_bytes()
+        manifest.unlink()
+        self.commit()
+        manifest.write_bytes(saved)
+        with self.assertRaisesRegex(ValueError, archive.REVIEWED_ALIAS_MANIFEST):
+            archive.check(self.root)
+        with self.assertRaisesRegex(ValueError, archive.REVIEWED_ALIAS_MANIFEST):
+            archive.check_recovery(self.root, self.base)
+
+    def test_reviewed_alias_cannot_replace_the_canonical_pair(self):
+        alias, canonical = self.reviewed_alias()
+        files = archive.inventory(self.root)
+        del files[canonical.replace(".json", ".md")]
+        with self.assertRaisesRegex(ValueError, "Incomplete Constitution archive pair"):
+            archive.validate_inventory(files)
+
+    def test_reviewed_alias_edit_and_deletion_remain_immutable(self):
+        alias, _ = self.reviewed_alias()
+        before = archive.inventory(self.root)
+        for changed in ({p: b for p, b in before.items() if p != alias},
+                        {**before, alias: b"changed"}):
+            with self.assertRaisesRegex(ValueError, "modified or deleted"):
+                archive.unchanged_archives(before, changed)
+
+    def test_reviewed_alias_later_deletion_and_restoration_fails_recovery(self):
+        alias, _ = self.reviewed_alias()
+        before = self.commit()
+        saved = (self.root / alias).read_bytes()
+        (self.root / alias).unlink()
+        with self.assertRaisesRegex(ValueError, "modified or deleted"):
+            archive.check(self.root, before, worktree=True)
+        self.commit()
+        (self.root / alias).write_bytes(saved)
+        self.commit()
+        with self.assertRaisesRegex(ValueError, "modified or deleted"):
+            archive.reconcile(self.root, self.base)
 
     def test_known_legacy_restoration_does_not_permit_a_later_deletion(self):
         alias, before, removed, restored = self.legacy_alias_history()
