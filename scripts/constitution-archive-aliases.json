@@ -1,0 +1,1796 @@
+{
+  "schema_version": 1,
+  "introduced_commit": "c5130bd4a9c7aa61ed07d8cae5eb388e9c74e397",
+  "parent_commit": "26caf21101a76d9d9ec0872ec57399b46b6170c9",
+  "status": "reviewed_byte_identical_aliases_not_new_editions",
+  "files": [
+    {
+      "path": "docs/archive/constitution/Constitution-260927 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-260927.json",
+      "sha256": "53db2bc7aabfbc8d1099c0f81b7df971fe235c7c08ab7472e39dab979d132eda",
+      "git_blob_sha": "364cadd5f601eba8cfac8a3249211d2e14dd1341"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260927 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-260927.md",
+      "sha256": "937f487534c8f33586771731d17694ae1dd8422622c78db25666b664f9156f0f",
+      "git_blob_sha": "236cbf5a56af4fa32eca9cea2d38d4304b88aa9d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260927.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-260927.archive.json",
+      "sha256": "d1dd0f7e84a56a584d12f1bda32cddc400ed77b953db96b5c6937738af69cc8a",
+      "git_blob_sha": "a10628732948b4314e0acb7c75f780fcbc2164f0"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260930 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-260930.json",
+      "sha256": "2547d542bcd95fb39aeac8a9cef6824da998324996d0f0178b2a830de50295e5",
+      "git_blob_sha": "6eb700046154f0504a9b24e84d48c03175440946"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260930 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-260930.md",
+      "sha256": "c14fec9f223a9923d321cf3c43693829f5424c1c0d9e63c49b456579bfbf7c40",
+      "git_blob_sha": "67cd447d16edef3027ffefe1bb17692a8124aec8"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-260930.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-260930.archive.json",
+      "sha256": "c97c78227dcfee8c5c66d7446876ad5238f05a300a0492219aac46a240c54551",
+      "git_blob_sha": "d3f36df80a0f225a884e806f42c76810dda6f32c"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261001 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261001.json",
+      "sha256": "04095e5f3eeec36eddcdcfe684e03d15ec7f2c2f0d2ee9ee97ac1518e4cc03a2",
+      "git_blob_sha": "cb468d7a16ebf914003e599a32ea93da89895240"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261001 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261001.md",
+      "sha256": "5264efc6924e240124c4d5c307fee6d3e62652ffcca7ce45e22dd6adc5dfc001",
+      "git_blob_sha": "a23fd49ff979333cfa5e74bd84dff5258605ad9d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261001.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261001.archive.json",
+      "sha256": "b0e7350dc8bf9086713a2759e5cb38f3d9521612235341f5f0598996eb93de6b",
+      "git_blob_sha": "9061dac8ab6621fa445e3c887b2e86ad1b961fb1"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261006 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261006.json",
+      "sha256": "942ea3cd5e1cd4de966ad3e2cf1114f3268e923457098fa1050a0b1ae56d09fe",
+      "git_blob_sha": "a6805ee4ab7cf6964fea2fdec5a2a271db3ce59b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261006 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261006.md",
+      "sha256": "5c42ab67f84e9e1745b8e4a2f120526129d30d5f8d7f682dbef097dd1208bf1f",
+      "git_blob_sha": "c87302870e61c0252dedcaa050b6f196e0c33afa"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261006-01 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261006-01.json",
+      "sha256": "5d7336ea33d5d3e52600c47e6a07abbe9cb7db2da867d5e21659b341dbbc0548",
+      "git_blob_sha": "a87d7ecf71c2946f077f06796593bf5cbaac7683"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261006-01 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261006-01.md",
+      "sha256": "7d4505055a0f01bc2062d442323ffed297908f60c280ac7090ba99631bf41f9d",
+      "git_blob_sha": "f99a19e0498c86187a2b9aafbdba364a61765a2b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261006-01.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261006-01.archive.json",
+      "sha256": "8abe158aeff99e5c5c0fefab5d84903141e05cd999723eac251719c364826bff",
+      "git_blob_sha": "8ad5634cf305f71f29757a479cc9f165135d6f3a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261006.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261006.archive.json",
+      "sha256": "da5ab7e9d54d095c59f26a747c9287bc0ac41387365730d838de84fb3d837e33",
+      "git_blob_sha": "1cc4a927d381e1e2aba1dc6ff5a566efb5d84b41"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007.json",
+      "sha256": "dcd1e38dc9361aebecf8c5a85c97d28f93672e0e1233133e90d3ab35288e93e9",
+      "git_blob_sha": "f94e2952341a3b3bc35698e122abbf1be015c568"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007.md",
+      "sha256": "95db9db52fbb9a1a6842f636fe716a99b32ecc3ada987da640dba311503e0df7",
+      "git_blob_sha": "f44d5f70461b51a91a3309fa333b1e86e8842b1d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-01 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-01.json",
+      "sha256": "9ad92c9650c0a7263a8775e66b29b6bed979bcad7a84dd8a078792a361a9057a",
+      "git_blob_sha": "615b07aabfe3b941cea9458f64cb752b32e299fb"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-01 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-01.md",
+      "sha256": "2679b39651e6ec8889a7de745e18eb919b13b3b23f3042a3c6c0775dd4d02231",
+      "git_blob_sha": "6aca02d174645c237a0bc8eb534950f66cfd4219"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-01.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-01.archive.json",
+      "sha256": "3444514c6ca25c73fa596e5898d0e96b9dc7078f9f73dd366e28d7bf13d80732",
+      "git_blob_sha": "c2d5f3436a7633044311ce1ba583f2919a3b95d4"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-02 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-02.json",
+      "sha256": "7b2b5bd6810a7ed48143c3e9cb3a5bf2f6b7988ecef4a580c2a13b685a072ccf",
+      "git_blob_sha": "4b88ddc16ec3cdf21cf5cde2094d3a907e2a5662"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-02 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-02.md",
+      "sha256": "8588b2c621f68b20a1540b676cb50a4d3dca15b9ffcf28d40d3bce6d683ecb69",
+      "git_blob_sha": "c34759ec33863fe4e255abb0469ad69d756880a5"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-02.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-02.archive.json",
+      "sha256": "f7784424227985ffbc647902cd3c3164d391a14ae539531909c29ede024d88c0",
+      "git_blob_sha": "59d6ac8c439105ca95f3fcbab4bbe65a83cff388"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-03 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-03.json",
+      "sha256": "cb52373c47f0b3cc4c779856504399348c057a44da8348e1a2e43ca8b3fe488b",
+      "git_blob_sha": "8bcc4dea06420e6698a13caf447937e891c173d9"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-03 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-03.md",
+      "sha256": "fb1e94c77d3154a0ecda38ff787a9ab600011c9bbfe689edb1a7ae0c7c40c37d",
+      "git_blob_sha": "90fb1459a9662eab238358acc5e834cf4fba29c6"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-03.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-03.archive.json",
+      "sha256": "6f97b66591a91b12e639b5df9b4d3aa557a382e408e19c1729709bac0473f036",
+      "git_blob_sha": "84280d6b72bbacd61a1ee7cd31ee7ae84d138645"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-04 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-04.json",
+      "sha256": "b3b35cbc31f771aa20ff9c4cb25036f4adcae9456c60e37efbcf1e51f87317f4",
+      "git_blob_sha": "45f4ace637f46119bd97b733b109e31edce51828"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-04 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-04.md",
+      "sha256": "00490f33cd5e0b1783a805e3a43f75d8345a5d0601c251253be732d15a27ffbc",
+      "git_blob_sha": "9bcee402b6d3a098b36903bb51883900e952ba17"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-04.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-04.archive.json",
+      "sha256": "455fe993b281bc2bb22390a194469528eefc339f68bbd44197cb49147ecef530",
+      "git_blob_sha": "5c1b739328a4e66415c90d0175c0e0212cbd2691"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-05 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-05.json",
+      "sha256": "3334dac8ddc907a05dc0d26b55009b1b88774607ddb27c7395fa74b4a2887e5a",
+      "git_blob_sha": "868e750bc5c44995694b3c6e9b8aebd728c04b0a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-05 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-05.md",
+      "sha256": "14f0a76a2d1931c23c1fd4c4e1dfe6894d18e4fd151e9b8dac86ca57936c63fa",
+      "git_blob_sha": "4ea014be7f0cce3c2686eaecb840dbc326ae75ab"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-05.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-05.archive.json",
+      "sha256": "c3815934b0a863a393197aa530eb7447453bdc1d2ea507fde2311eb2c4ef4847",
+      "git_blob_sha": "15250b1af746dc349dee6c50ee40d3fe8468f918"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-06 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-06.json",
+      "sha256": "dcef4c199c4120dd614ce78b60701b194f1754b2be78a5b33759957f1afd76e1",
+      "git_blob_sha": "d1ec4a9e68318a17d0e8b83e3ba55ad670481521"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-06 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-06.md",
+      "sha256": "9b717221dc91b12cf45ba5b8773dc71734e0e758de6da50d143ba69768b2e98f",
+      "git_blob_sha": "19387350494827e16e6ef4d03e363ba7cbb45d82"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-06.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-06.archive.json",
+      "sha256": "4bca28c2ca3c6d23b06db637a0dbd0fc88467909123388bea28ec4418836b429",
+      "git_blob_sha": "7edb4f367fef3f359b1fc570e0beccf2a5d38834"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-07 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-07.json",
+      "sha256": "6f6a4ba0d2a4f3ca2bb631cbe328a9fd5f6a62b2c8e02f306b655300bdf05809",
+      "git_blob_sha": "57c393a6a23282964ab0138b29507a965107c279"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-07 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-07.md",
+      "sha256": "2e73122ec68a319febf74c15ae6a8afa807049f2845b1d271a0e9061c3ab786d",
+      "git_blob_sha": "813455021dcdc9e07bb9e3eb5eb1e05f53b680d0"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-07.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-07.archive.json",
+      "sha256": "5e1900009d572c02d875c1ab3b36a12fe198fd1b7c8c04cb33a9ae57cb544ef8",
+      "git_blob_sha": "91d118750cffbb8c67ed8cc73d5a9ea74a5a9ccb"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-08 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-08.json",
+      "sha256": "3fe8fc040b3e02554ef0c5c593b4e1d4901b2ff9d88b8b2b36da6d193444ccad",
+      "git_blob_sha": "3c925ca0d29fd1b6c639c362e086e42a0f5ab17f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-08 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-08.md",
+      "sha256": "f30965fcbf8cec3654770518a7123c8bb1599847db43b0962fd74023eda42938",
+      "git_blob_sha": "5334d14587cca0bf53529487b0ddf470570cf335"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-08.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-08.archive.json",
+      "sha256": "a11592d612b4f3396af12c83d6d344ae442828c5e97a91d3cffefe9a377f007b",
+      "git_blob_sha": "4948a64d3623d42931a8d7fee70cd6467d90c575"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-09 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-09.json",
+      "sha256": "cd5a41a06f2d9c1ef6125033d596d2f750495b2ba3893d22c20a1ef11e820dc7",
+      "git_blob_sha": "f9884928317da5d15741f072887dbea30f69e6ca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-09 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-09.md",
+      "sha256": "e842a9a4614f3bac0c178af3794797961ef7586a565b5354b989c209b6fa5b7c",
+      "git_blob_sha": "8d864bf29d4fd8521f3a358c974688aaaded4c0e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007-09.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007-09.archive.json",
+      "sha256": "6f64865dfe3c34bdb13f56ccd1767ac999025c0dbe18b998609d59b409c494af",
+      "git_blob_sha": "771120a5c4eac75f9962f1671e1184d6fc578203"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261007.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261007.archive.json",
+      "sha256": "ec3a931f60fe2bee1d149a7d882586f625fe399289aef8ad41097a7d44ac9c24",
+      "git_blob_sha": "f9bffe5f6f8afca1be9640d687f39d3573acbeec"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261008 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261008.json",
+      "sha256": "63e2fe632b562a7bb64f6eff0922394c087c840c796dfbb73de5470229de6d54",
+      "git_blob_sha": "e1e2fad89e0104f9f35628641b61a9ce9a61e445"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261008 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261008.md",
+      "sha256": "642ca1bc86cf5dc40ea718f0101bd2a7126413a289263dbc22492799c9feeeb1",
+      "git_blob_sha": "96ff5e88bae479e58057ab5973f8e9116f0ee4ac"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261008-01 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261008-01.json",
+      "sha256": "f82890beab6f627c2fd6ccfe4607a895c4cecf206b07f66ebb9334f5b1a1de4b",
+      "git_blob_sha": "4b6f9ef38e374f563696eea58c47fc51fcd71640"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261008-01 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261008-01.md",
+      "sha256": "5587de879fa533677ba49b03563eef67f17af7d75b2a44da0b7b9ce50e2c8fd7",
+      "git_blob_sha": "8083df087bf2635371f1ef6ff366553aab482d27"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261008-01.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261008-01.archive.json",
+      "sha256": "43b14f24f1b299df4d84ea45ec5cecaa76a7bf5b4a6ee043281473de9ca12046",
+      "git_blob_sha": "c86515d5479add2b3fad863ee971014c2b70d067"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261008.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261008.archive.json",
+      "sha256": "3072d64c1c7a0fce902e548f04bc98067269dc82669dcda83d8d2dd5f06406b9",
+      "git_blob_sha": "3abfcf26ada89cbdcf2044e706c113678ad5977e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261009.json",
+      "sha256": "6cfaa415f0fc8f785bd89f927a5bcd3bc37e2d8c03f9fb76abbf469dd46e626a",
+      "git_blob_sha": "3ba6c160ba700bf45afb724b6a48db72e11e3f60"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261009.md",
+      "sha256": "8a3371593a4cf3a3050396fab7fbcabd2fdfa423d2ea956e7aa58b84203bff6c",
+      "git_blob_sha": "3297b087515de5294650f2b49ca2a771fe747bf3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009-01 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261009-01.json",
+      "sha256": "ce63aabd9180c86674076f4178cfba22ac7e6d4b991b233c0c9aec8984b9dfca",
+      "git_blob_sha": "16566811b0df6c56adae77f9382c520aba243178"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009-01 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261009-01.md",
+      "sha256": "2a77d906ef0934df485267c77a331384ad097db9dce499d81bf8796793b529a6",
+      "git_blob_sha": "d4315b51a8c8e99cfcd759b9c7f172e4e704db60"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009-01.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261009-01.archive.json",
+      "sha256": "eaad11ae7c35f54014490b39a4d980959e49ade3ee14d140ceb0d1ea0c943802",
+      "git_blob_sha": "6aa590da5e08d48df1943451a26284d86bd5bdf2"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009-02 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261009-02.json",
+      "sha256": "7be3bbc37337edf7110e2fd71d5ee01f9624bb10494ef630b274131bc926cb4d",
+      "git_blob_sha": "3d46b7ab38db1a8b77c8bad6321b8483e10af058"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009-02 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261009-02.md",
+      "sha256": "4a185ee6142c6e6d7a42f5d64c876841181112f96601ea375d7030055e66fb93",
+      "git_blob_sha": "2038d232d522980fa0b81e0a73edfa201cace8bc"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009-02.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261009-02.archive.json",
+      "sha256": "dbc75dc76d38809edcbcba97778667d8e0ee67dc8b78ef31d7b825555b7036ba",
+      "git_blob_sha": "e1a3c2e84c60f04461a8ce8d8755bb874f6f809f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261009.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261009.archive.json",
+      "sha256": "9584cf9a132ff7e47f34f27c8fe7a66a811e04fd4909d479a099540e5ca60e9b",
+      "git_blob_sha": "7d971cc833463ee0cacd05b068d1cc84661c5a58"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010.json",
+      "sha256": "a2b3c21cd2f2a3df07cbc561a863d18ca2c84c8019bd31f0baf8b44ee6342b20",
+      "git_blob_sha": "370590b469741c44f2b2585a8d2c25343de59f1b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261010.md",
+      "sha256": "79eea9ba9c087fe50f2a49f11ea5861681e5020295776a6a5306e9a0f541875e",
+      "git_blob_sha": "46652af1638b2b0c6d8e980182c4042e8415b4b3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-01 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-01.json",
+      "sha256": "2a5ca2a614d2b672cb3a063253a3b172878bb639615e88f4d4896ff7b1519b63",
+      "git_blob_sha": "fe33fef065482ab0a35e292527eb59612633731c"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-01 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-01.md",
+      "sha256": "1b2071f79e9fafbe38e598448034ffeaf001486e8866a2975c352df7adf9c735",
+      "git_blob_sha": "a246b89ba1affd4b84072e48ff2b717da8b2808b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-01.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-01.archive.json",
+      "sha256": "5c73ce8a15e1aac27cfaea45c0e336aa9c8321d8f28e0ddd11d14c0115af02f2",
+      "git_blob_sha": "ca443f8585bea755a1b7ae2417a38ee3534b24f6"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-02 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-02.json",
+      "sha256": "f89c542fbc8f9d702e7b31c7764429d41aa501052f2f735ea7069cabd9915614",
+      "git_blob_sha": "218d10d8fc2ea071380a68b4ac2bdb8f734c3006"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-02 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-02.md",
+      "sha256": "cdc25bf828cfbff60707b4501ac17ea907897ff78c698531e8939b637411b678",
+      "git_blob_sha": "e27a63d346b1fbb079311a9bbacc9024e0d70089"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-03 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-03.json",
+      "sha256": "6af6ae4c3ac4b791b4d8d844d3a8b5103024caa1ebc209a733a916f7fcd4203c",
+      "git_blob_sha": "7f59fd9c9718c262c63bf105d5e24b5487f05601"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-03 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-03.md",
+      "sha256": "e06a3375339749ca578dac0ab0164ca69eb6039aa4c8233722d7538dbe951123",
+      "git_blob_sha": "7e46820d4b8616760642e4ec1afb7af5fd2da8af"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-03.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-03.archive.json",
+      "sha256": "55189d14a8d263a458aee6b0e460d91943895075ef7dcdc1a8deeae0cdb675df",
+      "git_blob_sha": "aeac73d6e946c43624605c82034a6d6cd2f99e7d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-04 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-04.json",
+      "sha256": "eac686f6f1813a01b9a2b6690761b6f76bd176f24a4cd8033a6d0b712778412c",
+      "git_blob_sha": "9bc60572f4e0cf539855546ddf5229c44b385174"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-04 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-04.md",
+      "sha256": "183cc7ec405a791e98765ea305f94dae5d03ee81f40685154787d76da1e4873a",
+      "git_blob_sha": "4c5939913860ee304e4e7722821956ea0637f2a7"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-04.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-04.archive.json",
+      "sha256": "fabcb20d1500d3471fd383ee91c514a2a5c60388e06ac80fc8e7ff1a9f60e15e",
+      "git_blob_sha": "6b87f1d46eae488137190114aedecb00128b23a9"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-05 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-05.json",
+      "sha256": "80285cab80766338f7c1a04bc780d2811e88fd0259ab53da35552064ce004de5",
+      "git_blob_sha": "228148465ec75ccedaf66201fb1f3b0596161f82"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-05 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-05.md",
+      "sha256": "2b5433a2d5ef69f715ca3ae6a9f5c79c77d6784dbbffdd3b09e8500c931adaa9",
+      "git_blob_sha": "bac519d23121a6c327e2d582a89b862021482f40"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010-05.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010-05.archive.json",
+      "sha256": "5c71ae757d1976714da2283861cfa990675e8cb4f949e98808a6764ec37264e1",
+      "git_blob_sha": "14c611ee207d4498e37bcd374acfdfeae746f199"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261010.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261010.archive.json",
+      "sha256": "b0d5a76538ab20df243eb9dc89d4e5eff93a90e019dd8c52ce48168235a4bbd0",
+      "git_blob_sha": "3a0c83dccc17daa585c4362d94e7f87b7b24b0da"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261011.json",
+      "sha256": "d4b30c5152ecc6aea624b3837779e73544658fdfce57d5008c45c6dec38c7c1f",
+      "git_blob_sha": "a54a173d8a07b3c7f6083e87607f1aa00cda3c9e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261011.md",
+      "sha256": "ac1653551ea81553f93209c3ccb12525a1ba763b8dbe65effac4b8df1ad8a809",
+      "git_blob_sha": "4b6edfcfc890144692d72cc908e271a83116203e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-01 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-01.json",
+      "sha256": "b765d8853b40d28403cc13f3ef20b05849938ee625aaa5e10207b02e1198e0cb",
+      "git_blob_sha": "898b2827161d916c65ae63a1f6644581307353df"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-01 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-01.md",
+      "sha256": "884e5cbd46f7ba30f0358cd41282f6800ff95e01755cda5a0bd5d2b3b21b7ffc",
+      "git_blob_sha": "7c331648f206745825e688375a7e4d387b671255"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-01.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-01.archive.json",
+      "sha256": "14d802b28ae4322ab50506458cb68a2304db5c917c8f308144dc638e5d9c91c9",
+      "git_blob_sha": "69bf279d92b08d9f79eff26d9580b7a09bd73d44"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-02 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-02.json",
+      "sha256": "558ff686b48648275ae08afd9501ae0bca9930f9cccbb2811b6307d865c81a00",
+      "git_blob_sha": "e5cee207c01a475b32a662599932ad4941a54ef3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-02 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-02.md",
+      "sha256": "07d53b8ec671bfa03ae5305aac1c9a92a5abbd04c6bb32db1f18f6e90dde3180",
+      "git_blob_sha": "7e155aa8521457ec9a58b163c83637ae9ab26f28"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-02.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-02.archive.json",
+      "sha256": "7c661b520c77960ffa34491829559eb46795acdd67cb95118da0f27da4595185",
+      "git_blob_sha": "edf545b0f4f9d10c7f965c698caf2accd63b3782"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-03 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-03.json",
+      "sha256": "f250b2a5f72334189285be9bd5d5cbacdb190c3bdec8e0be87fd79864665e30a",
+      "git_blob_sha": "e14024ade417e755bea9bfabd4554ecd0a38b659"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-03 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-03.md",
+      "sha256": "24aaf4ace6dbcb933fe4b6720d701f4befec1ac611b1401ad3ef1370e13bfb36",
+      "git_blob_sha": "4801f53acd6d8fb7871cb104f8a3c34afa28b167"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011-03.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261011-03.archive.json",
+      "sha256": "5b98a0ab8dc1e70a5e4d01a4d3bd7425f7b7d39ff70e7a030e83657bd06e8a2b",
+      "git_blob_sha": "e5064565c7c45604510a0a52337f828f583d0761"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261011.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261011.archive.json",
+      "sha256": "aa710387c01b5754ddcb0a3774bada3c0726b911cd76ac4b2a047e583fad5034",
+      "git_blob_sha": "f33adb087d5329f797cc6ec8bccabc95360dc80f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261013 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261013.json",
+      "sha256": "8fe831a93e4e15deb7d329097acd92c0d57c9ca751d9d943ccd2fcd49734fda4",
+      "git_blob_sha": "152b7f59712d3bd615f73c91c82f1ec8e86d945a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261013 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261013.md",
+      "sha256": "139caf3ee3b4400e188f497e507d6c41ffcaf5907694ef2f6070f156178d4ce2",
+      "git_blob_sha": "4d94ed6289742d5cd4ab6e4c25e5d803c114a717"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261013.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261013.archive.json",
+      "sha256": "b67be253dca973c5d5612c1f3ad5712b9230c7f3134cd8fa3575f07df6fd9f6c",
+      "git_blob_sha": "16a90f46f4c3aee427c8d7d020a43dfffed4fcb9"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261014 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261014.json",
+      "sha256": "47bdcd95141736baa84ccff87129dae26c9af1945c0f77274a17b05e46e7fa95",
+      "git_blob_sha": "4e485e513489440bb08ffbe132dceb4d52391c5a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261014 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261014.md",
+      "sha256": "c3ac38a370b46cf58c333a5a025bd2846d5b7993a7fc5b00ac09a2925a87fa9f",
+      "git_blob_sha": "aa755133c3474011920bbfe8de9d54b2178af636"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261014 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261014.json",
+      "sha256": "47bdcd95141736baa84ccff87129dae26c9af1945c0f77274a17b05e46e7fa95",
+      "git_blob_sha": "4e485e513489440bb08ffbe132dceb4d52391c5a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261014 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261014.md",
+      "sha256": "c3ac38a370b46cf58c333a5a025bd2846d5b7993a7fc5b00ac09a2925a87fa9f",
+      "git_blob_sha": "aa755133c3474011920bbfe8de9d54b2178af636"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261014.archive 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261014.archive.json",
+      "sha256": "dc48da83ab02b2fea30ec473a5509eb43bc87a9a944210bb481e19bf3d5bfac7",
+      "git_blob_sha": "c40e2845c878ba615d190c05a4113e11e308ef23"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261014.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261014.archive.json",
+      "sha256": "dc48da83ab02b2fea30ec473a5509eb43bc87a9a944210bb481e19bf3d5bfac7",
+      "git_blob_sha": "c40e2845c878ba615d190c05a4113e11e308ef23"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261015.json",
+      "sha256": "aba366258e7f4960d7f458b4467ee75fa0904d769ffba6b2917d6c91cba87ad8",
+      "git_blob_sha": "1c473aab7a8de8591c1b603262ef4502cfa45602"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261015.md",
+      "sha256": "1a546d124408c11ec4693f4a26ded096df2d34d5aefac1162b0248df87e8eebd",
+      "git_blob_sha": "868558d0c18208830249e6e3c3128f9969a6f913"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261015.json",
+      "sha256": "aba366258e7f4960d7f458b4467ee75fa0904d769ffba6b2917d6c91cba87ad8",
+      "git_blob_sha": "1c473aab7a8de8591c1b603262ef4502cfa45602"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261015.md",
+      "sha256": "1a546d124408c11ec4693f4a26ded096df2d34d5aefac1162b0248df87e8eebd",
+      "git_blob_sha": "868558d0c18208830249e6e3c3128f9969a6f913"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015-01 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261015-01.json",
+      "sha256": "27c48d3e532ce0c0bac0dc7e3806caebaa65e72b1a190b0a40a911a470c89a77",
+      "git_blob_sha": "1a308453e729687f5f8ede549afba3b861d73981"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015-01 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261015-01.md",
+      "sha256": "fa70069cfb2df1ba451c179f16bb7ec12a70270d8718d423006065a83e0d1012",
+      "git_blob_sha": "a29ac56957a11da63685fcab82e99bc1ed746b7b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015-01 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261015-01.json",
+      "sha256": "27c48d3e532ce0c0bac0dc7e3806caebaa65e72b1a190b0a40a911a470c89a77",
+      "git_blob_sha": "1a308453e729687f5f8ede549afba3b861d73981"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015-01 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261015-01.md",
+      "sha256": "fa70069cfb2df1ba451c179f16bb7ec12a70270d8718d423006065a83e0d1012",
+      "git_blob_sha": "a29ac56957a11da63685fcab82e99bc1ed746b7b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015.archive 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261015.archive.json",
+      "sha256": "fb10b808bc7826684c25a5b49880e5aba9e7a4f8a162f2ae25014f48e7f02738",
+      "git_blob_sha": "78180ba7c112bffbdda2222394c8f172f673a7db"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261015.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261015.archive.json",
+      "sha256": "fb10b808bc7826684c25a5b49880e5aba9e7a4f8a162f2ae25014f48e7f02738",
+      "git_blob_sha": "78180ba7c112bffbdda2222394c8f172f673a7db"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.json",
+      "sha256": "bfb4b3ed549fb12530f783c12dd14472bcfa07eafd6cb9d33a6b757f3a7565bb",
+      "git_blob_sha": "d1e8ba491f2fb17930718f2a1bd63345c9797b40"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.md",
+      "sha256": "54d1a1a08cfe854bc039bd0eaf178670012315d759ed35938ade71b378408c43",
+      "git_blob_sha": "14f3c9c212b33910abd768de241774e412745194"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.json",
+      "sha256": "bfb4b3ed549fb12530f783c12dd14472bcfa07eafd6cb9d33a6b757f3a7565bb",
+      "git_blob_sha": "d1e8ba491f2fb17930718f2a1bd63345c9797b40"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.md",
+      "sha256": "54d1a1a08cfe854bc039bd0eaf178670012315d759ed35938ade71b378408c43",
+      "git_blob_sha": "14f3c9c212b33910abd768de241774e412745194"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.json",
+      "sha256": "bfb4b3ed549fb12530f783c12dd14472bcfa07eafd6cb9d33a6b757f3a7565bb",
+      "git_blob_sha": "d1e8ba491f2fb17930718f2a1bd63345c9797b40"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.md",
+      "sha256": "54d1a1a08cfe854bc039bd0eaf178670012315d759ed35938ade71b378408c43",
+      "git_blob_sha": "14f3c9c212b33910abd768de241774e412745194"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-01 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-01.md",
+      "sha256": "e1ea3c7698128e14a77a11d773cc54d6e3745489e939bd1f2ea870cba0735a03",
+      "git_blob_sha": "643d5c78e009eccab6698a8fd44db3d3e46943a1"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-01 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-01.md",
+      "sha256": "e1ea3c7698128e14a77a11d773cc54d6e3745489e939bd1f2ea870cba0735a03",
+      "git_blob_sha": "643d5c78e009eccab6698a8fd44db3d3e46943a1"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-01.archive 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-01.archive.json",
+      "sha256": "eeeaf6d4a145284983ad61de0338c5142f6bda3f9bc33c87472137990f583064",
+      "git_blob_sha": "7b4055dacf5bd9763710a5ec43b76c34894f6f38"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-01.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-01.archive.json",
+      "sha256": "eeeaf6d4a145284983ad61de0338c5142f6bda3f9bc33c87472137990f583064",
+      "git_blob_sha": "7b4055dacf5bd9763710a5ec43b76c34894f6f38"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-02 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-02.json",
+      "sha256": "23b2b36be7c78d788427cd33a2aec633d5a7818fa4a2e02ab1fa28f2ca16b954",
+      "git_blob_sha": "d8d242cfda9f03d48e9b88d6c1e66339ef745998"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-02 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-02.md",
+      "sha256": "c5d12d466704d2fc90d3e5e417b9962265302f53e53b855cf86b5464c05d5a92",
+      "git_blob_sha": "c4b68228d509374aa48bc35a1a871f2d662a6cca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-02 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-02.json",
+      "sha256": "23b2b36be7c78d788427cd33a2aec633d5a7818fa4a2e02ab1fa28f2ca16b954",
+      "git_blob_sha": "d8d242cfda9f03d48e9b88d6c1e66339ef745998"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-02 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-02.md",
+      "sha256": "c5d12d466704d2fc90d3e5e417b9962265302f53e53b855cf86b5464c05d5a92",
+      "git_blob_sha": "c4b68228d509374aa48bc35a1a871f2d662a6cca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-02.archive 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-02.archive.json",
+      "sha256": "e42fc8ab5db67aa496ae4224559a1cd617b5ff51987997269a1aa8504631081c",
+      "git_blob_sha": "aedc55eb21ec86e1fe76d2d06eae8a436b857594"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-02.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-02.archive.json",
+      "sha256": "e42fc8ab5db67aa496ae4224559a1cd617b5ff51987997269a1aa8504631081c",
+      "git_blob_sha": "aedc55eb21ec86e1fe76d2d06eae8a436b857594"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-03 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-03.json",
+      "sha256": "e5a994e21df3e91d83cdbba637ef9f97d8fcb51a52e8cc60c080c8b81684539e",
+      "git_blob_sha": "69a492d003d687e8ac1673b1f4ad6d5cc4fffcb3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-03 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-03.md",
+      "sha256": "4c764b988d17112075c15cccbc49ce0397c3400b44fad6fd628578c66339ba2d",
+      "git_blob_sha": "437935a2c55db1c2a5c5613d1002d8fe02e3b035"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-03 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-03.json",
+      "sha256": "e5a994e21df3e91d83cdbba637ef9f97d8fcb51a52e8cc60c080c8b81684539e",
+      "git_blob_sha": "69a492d003d687e8ac1673b1f4ad6d5cc4fffcb3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-03 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-03.md",
+      "sha256": "4c764b988d17112075c15cccbc49ce0397c3400b44fad6fd628578c66339ba2d",
+      "git_blob_sha": "437935a2c55db1c2a5c5613d1002d8fe02e3b035"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-03.archive 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-03.archive.json",
+      "sha256": "e29a1307188d6656ee23cda53c0999cf91f722a9d4d3407ab2669181d4530ad0",
+      "git_blob_sha": "3a13eb2427e55d44edb35ca0eb3f2ecc3d146151"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-03.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-03.archive.json",
+      "sha256": "e29a1307188d6656ee23cda53c0999cf91f722a9d4d3407ab2669181d4530ad0",
+      "git_blob_sha": "3a13eb2427e55d44edb35ca0eb3f2ecc3d146151"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-04 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-04.json",
+      "sha256": "da7816dba2a91748299a20c39e3b2ca6c571cc2606b7af35248daafdc7839039",
+      "git_blob_sha": "09481eacb5a3d48bb7ddbc04c9802bab712d75aa"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-04 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-04.md",
+      "sha256": "730f5d5fad592823e4049b2a925612889e2f968f29ca914d84fd5e3fdf6bfde4",
+      "git_blob_sha": "91ad1b6d629feae9ffbda1f4bdbab4b3c7a9bff6"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-04 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-04.json",
+      "sha256": "da7816dba2a91748299a20c39e3b2ca6c571cc2606b7af35248daafdc7839039",
+      "git_blob_sha": "09481eacb5a3d48bb7ddbc04c9802bab712d75aa"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-04 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-04.md",
+      "sha256": "730f5d5fad592823e4049b2a925612889e2f968f29ca914d84fd5e3fdf6bfde4",
+      "git_blob_sha": "91ad1b6d629feae9ffbda1f4bdbab4b3c7a9bff6"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-04.archive 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-04.archive.json",
+      "sha256": "3d20e7e57620b15687aba15c358eb6d2fbe2c6ff322ff0dcb0afedaa2d2a14d6",
+      "git_blob_sha": "adbbf6c93cb01384d1c7a5c1b414b708ca71ebc6"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-04.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-04.archive.json",
+      "sha256": "3d20e7e57620b15687aba15c358eb6d2fbe2c6ff322ff0dcb0afedaa2d2a14d6",
+      "git_blob_sha": "adbbf6c93cb01384d1c7a5c1b414b708ca71ebc6"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-05 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-05.json",
+      "sha256": "1a3f178857839200bc65b88054574ad777cbedcb5e98d5e2143f6c1eeec500f4",
+      "git_blob_sha": "16954dd902c54de686c61676ca95d8f2462a401d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-05 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-05.md",
+      "sha256": "120b32514e3be4102f1c22fb3f175149c9c7cd15c14f3e09c49afdef7071b5b5",
+      "git_blob_sha": "09df05e76c7d85933aa860a4c20b0a657972c1b4"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-05 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-05.json",
+      "sha256": "1a3f178857839200bc65b88054574ad777cbedcb5e98d5e2143f6c1eeec500f4",
+      "git_blob_sha": "16954dd902c54de686c61676ca95d8f2462a401d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-05 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-05.md",
+      "sha256": "120b32514e3be4102f1c22fb3f175149c9c7cd15c14f3e09c49afdef7071b5b5",
+      "git_blob_sha": "09df05e76c7d85933aa860a4c20b0a657972c1b4"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-05.archive 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-05.archive.json",
+      "sha256": "e3380b4fb3f82d92af4130d52dd9eb02ecae19a5748076edb59b77f34d50734b",
+      "git_blob_sha": "e083549fcedf63c28ef0a227e615ceb0c14b9419"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-05.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-05.archive.json",
+      "sha256": "e3380b4fb3f82d92af4130d52dd9eb02ecae19a5748076edb59b77f34d50734b",
+      "git_blob_sha": "e083549fcedf63c28ef0a227e615ceb0c14b9419"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-06 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-06.json",
+      "sha256": "771e1b181d2fb26b7a4563f0b98a6f1ad512fdc16899c6638b5f4e535d9fc1d2",
+      "git_blob_sha": "46ca128725bc5579ec170865d71e17a85ce7d804"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-06 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-06.md",
+      "sha256": "01123fee5c7dc63a23b4917e4307088b3f7958e73c6d5d65c185de32a9d66b5c",
+      "git_blob_sha": "a745a60618de6386b7246449caba650444b95493"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-06 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-06.json",
+      "sha256": "771e1b181d2fb26b7a4563f0b98a6f1ad512fdc16899c6638b5f4e535d9fc1d2",
+      "git_blob_sha": "46ca128725bc5579ec170865d71e17a85ce7d804"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-06 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-06.md",
+      "sha256": "01123fee5c7dc63a23b4917e4307088b3f7958e73c6d5d65c185de32a9d66b5c",
+      "git_blob_sha": "a745a60618de6386b7246449caba650444b95493"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-06.archive 3.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-06.archive.json",
+      "sha256": "08766ce566e3a1a3ea1b34ae6fc7b30ec02a1791eb9493f55855b5035d824eca",
+      "git_blob_sha": "d4c82dae7aa82f7c3ddb349d4eec0877417dfe1a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-06.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-06.archive.json",
+      "sha256": "08766ce566e3a1a3ea1b34ae6fc7b30ec02a1791eb9493f55855b5035d824eca",
+      "git_blob_sha": "d4c82dae7aa82f7c3ddb349d4eec0877417dfe1a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.json",
+      "sha256": "586e61920d88408a41095e4461b6f2d7cd9349ebd65518298d221efb50bcbd14",
+      "git_blob_sha": "2848027baedaf1e140ae596171c7c77e011c6efc"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.md",
+      "sha256": "750163d1b8c77066e4d59ba6a0b7dd6b5fb7f78efe3f39b1d63dd60fad6ba6f6",
+      "git_blob_sha": "c858a6fabc9e21fd4da52f8d68fd7343c7f56494"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.json",
+      "sha256": "586e61920d88408a41095e4461b6f2d7cd9349ebd65518298d221efb50bcbd14",
+      "git_blob_sha": "2848027baedaf1e140ae596171c7c77e011c6efc"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.md",
+      "sha256": "750163d1b8c77066e4d59ba6a0b7dd6b5fb7f78efe3f39b1d63dd60fad6ba6f6",
+      "git_blob_sha": "c858a6fabc9e21fd4da52f8d68fd7343c7f56494"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.json",
+      "sha256": "586e61920d88408a41095e4461b6f2d7cd9349ebd65518298d221efb50bcbd14",
+      "git_blob_sha": "2848027baedaf1e140ae596171c7c77e011c6efc"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.md",
+      "sha256": "750163d1b8c77066e4d59ba6a0b7dd6b5fb7f78efe3f39b1d63dd60fad6ba6f6",
+      "git_blob_sha": "c858a6fabc9e21fd4da52f8d68fd7343c7f56494"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.archive.json",
+      "sha256": "692748ae8a239982c669b087f6f3072768b40f7cb2aab958a32bf4748e08523c",
+      "git_blob_sha": "f5e0a1696b4acc2d5a361445ad7ec958dd1df7ff"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.archive.json",
+      "sha256": "692748ae8a239982c669b087f6f3072768b40f7cb2aab958a32bf4748e08523c",
+      "git_blob_sha": "f5e0a1696b4acc2d5a361445ad7ec958dd1df7ff"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-07.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-07.archive.json",
+      "sha256": "692748ae8a239982c669b087f6f3072768b40f7cb2aab958a32bf4748e08523c",
+      "git_blob_sha": "f5e0a1696b4acc2d5a361445ad7ec958dd1df7ff"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.json",
+      "sha256": "906844bc48e684c39624d922b583a7a15e75f6a37191e300adbf0d759b1d27d0",
+      "git_blob_sha": "316eb93a1aef1d628bc923545afd38c160c1aa76"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.md",
+      "sha256": "9016d6fd0623d8a84acf87046fa1b60d26ba6623172c4a6f9068f712c4615d02",
+      "git_blob_sha": "af239bd226a048f2db27bdcfa717194e6fd3260d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.json",
+      "sha256": "906844bc48e684c39624d922b583a7a15e75f6a37191e300adbf0d759b1d27d0",
+      "git_blob_sha": "316eb93a1aef1d628bc923545afd38c160c1aa76"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.md",
+      "sha256": "9016d6fd0623d8a84acf87046fa1b60d26ba6623172c4a6f9068f712c4615d02",
+      "git_blob_sha": "af239bd226a048f2db27bdcfa717194e6fd3260d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.json",
+      "sha256": "906844bc48e684c39624d922b583a7a15e75f6a37191e300adbf0d759b1d27d0",
+      "git_blob_sha": "316eb93a1aef1d628bc923545afd38c160c1aa76"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.md",
+      "sha256": "9016d6fd0623d8a84acf87046fa1b60d26ba6623172c4a6f9068f712c4615d02",
+      "git_blob_sha": "af239bd226a048f2db27bdcfa717194e6fd3260d"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.archive.json",
+      "sha256": "fdccb729c1328aa0c39825ab736f25856c2b9be7d3f10c1208dbe4bd7793f282",
+      "git_blob_sha": "e1e194b2869d564bca97421a7f7291470669c224"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.archive.json",
+      "sha256": "fdccb729c1328aa0c39825ab736f25856c2b9be7d3f10c1208dbe4bd7793f282",
+      "git_blob_sha": "e1e194b2869d564bca97421a7f7291470669c224"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-08.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-08.archive.json",
+      "sha256": "fdccb729c1328aa0c39825ab736f25856c2b9be7d3f10c1208dbe4bd7793f282",
+      "git_blob_sha": "e1e194b2869d564bca97421a7f7291470669c224"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.json",
+      "sha256": "d7f352dfc80e90434f6a6b9248d05ee90d77bc5e65f1160459988495ad1b4b2d",
+      "git_blob_sha": "1cb9c622f712a297f38afe7fd15deb8bac491e7e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.md",
+      "sha256": "83662d3a87de3aa27c8767d805928b71ca75ef82782e454c27ee4d1257dc405d",
+      "git_blob_sha": "9bcb5004ed5c38836014af414e428ea5fa8efa4a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.json",
+      "sha256": "d7f352dfc80e90434f6a6b9248d05ee90d77bc5e65f1160459988495ad1b4b2d",
+      "git_blob_sha": "1cb9c622f712a297f38afe7fd15deb8bac491e7e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.md",
+      "sha256": "83662d3a87de3aa27c8767d805928b71ca75ef82782e454c27ee4d1257dc405d",
+      "git_blob_sha": "9bcb5004ed5c38836014af414e428ea5fa8efa4a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.json",
+      "sha256": "d7f352dfc80e90434f6a6b9248d05ee90d77bc5e65f1160459988495ad1b4b2d",
+      "git_blob_sha": "1cb9c622f712a297f38afe7fd15deb8bac491e7e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.md",
+      "sha256": "83662d3a87de3aa27c8767d805928b71ca75ef82782e454c27ee4d1257dc405d",
+      "git_blob_sha": "9bcb5004ed5c38836014af414e428ea5fa8efa4a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.archive.json",
+      "sha256": "224ddf322a496a8eeeacafdf3d154ee6c2f9343063197871f8070746b1dda75d",
+      "git_blob_sha": "797348860ea7a8dbf3c3849bd912eba02817c230"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.archive.json",
+      "sha256": "224ddf322a496a8eeeacafdf3d154ee6c2f9343063197871f8070746b1dda75d",
+      "git_blob_sha": "797348860ea7a8dbf3c3849bd912eba02817c230"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-09.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-09.archive.json",
+      "sha256": "224ddf322a496a8eeeacafdf3d154ee6c2f9343063197871f8070746b1dda75d",
+      "git_blob_sha": "797348860ea7a8dbf3c3849bd912eba02817c230"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.json",
+      "sha256": "4fe5a9d382a5660e047c216b02884f0a42c74028f4dc31164cabb3da3a4493f0",
+      "git_blob_sha": "45afff3121d7418488a4537586efb5d15f59aa8a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.md",
+      "sha256": "cc82595e5027dcc096f6896f614d1ce55db7503e1cd19a0aced7d479cfd2458f",
+      "git_blob_sha": "b95e213c7c2ad3f0bc6d54502ed492a03c3711fb"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.json",
+      "sha256": "4fe5a9d382a5660e047c216b02884f0a42c74028f4dc31164cabb3da3a4493f0",
+      "git_blob_sha": "45afff3121d7418488a4537586efb5d15f59aa8a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.md",
+      "sha256": "cc82595e5027dcc096f6896f614d1ce55db7503e1cd19a0aced7d479cfd2458f",
+      "git_blob_sha": "b95e213c7c2ad3f0bc6d54502ed492a03c3711fb"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.json",
+      "sha256": "4fe5a9d382a5660e047c216b02884f0a42c74028f4dc31164cabb3da3a4493f0",
+      "git_blob_sha": "45afff3121d7418488a4537586efb5d15f59aa8a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.md",
+      "sha256": "cc82595e5027dcc096f6896f614d1ce55db7503e1cd19a0aced7d479cfd2458f",
+      "git_blob_sha": "b95e213c7c2ad3f0bc6d54502ed492a03c3711fb"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.archive.json",
+      "sha256": "62fc59245e038e0f757c358805c10d1c1b3d47b3472162fadb0dbf9be8f4e205",
+      "git_blob_sha": "5578e5fc315a6f5597f5912568056f01885b0434"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.archive.json",
+      "sha256": "62fc59245e038e0f757c358805c10d1c1b3d47b3472162fadb0dbf9be8f4e205",
+      "git_blob_sha": "5578e5fc315a6f5597f5912568056f01885b0434"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-10.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-10.archive.json",
+      "sha256": "62fc59245e038e0f757c358805c10d1c1b3d47b3472162fadb0dbf9be8f4e205",
+      "git_blob_sha": "5578e5fc315a6f5597f5912568056f01885b0434"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.json",
+      "sha256": "28393c5c47cd86ec13d64b64e568916353abf0d5267f1429b3ab193ead0c3a27",
+      "git_blob_sha": "81544273d0defbad0d8a14c9a31679894941da36"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.md",
+      "sha256": "fedf7bf34e95d20aa6f2a1eb0ca055faeacae547e8fee9e5be5e122b6c1d6ac0",
+      "git_blob_sha": "03dce86f875812777796fea08e4a7a4f63be05ee"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.json",
+      "sha256": "28393c5c47cd86ec13d64b64e568916353abf0d5267f1429b3ab193ead0c3a27",
+      "git_blob_sha": "81544273d0defbad0d8a14c9a31679894941da36"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.md",
+      "sha256": "fedf7bf34e95d20aa6f2a1eb0ca055faeacae547e8fee9e5be5e122b6c1d6ac0",
+      "git_blob_sha": "03dce86f875812777796fea08e4a7a4f63be05ee"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.json",
+      "sha256": "28393c5c47cd86ec13d64b64e568916353abf0d5267f1429b3ab193ead0c3a27",
+      "git_blob_sha": "81544273d0defbad0d8a14c9a31679894941da36"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.md",
+      "sha256": "fedf7bf34e95d20aa6f2a1eb0ca055faeacae547e8fee9e5be5e122b6c1d6ac0",
+      "git_blob_sha": "03dce86f875812777796fea08e4a7a4f63be05ee"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.archive.json",
+      "sha256": "372fcbc00652022a08b248f7e20b92bbbf2f81b4a28da9dfe868c31077dc96bf",
+      "git_blob_sha": "1dceda6be702beb9670a2755d37da26258c136ff"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.archive.json",
+      "sha256": "372fcbc00652022a08b248f7e20b92bbbf2f81b4a28da9dfe868c31077dc96bf",
+      "git_blob_sha": "1dceda6be702beb9670a2755d37da26258c136ff"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-11.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-11.archive.json",
+      "sha256": "372fcbc00652022a08b248f7e20b92bbbf2f81b4a28da9dfe868c31077dc96bf",
+      "git_blob_sha": "1dceda6be702beb9670a2755d37da26258c136ff"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.json",
+      "sha256": "e21d5a97ef7dbe93f8e11c90b2f2141ee7d3442ebf6646a52995131ae72e5f1e",
+      "git_blob_sha": "73a4a5467dd2bce859ab3b6a830694290f800857"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.md",
+      "sha256": "429ac0e188c605228cdd848e2e3a40b8f515f643879d504c406bac3b4f98d358",
+      "git_blob_sha": "26b862c39c0346f8c858b64926f45b7c072f76e7"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.json",
+      "sha256": "e21d5a97ef7dbe93f8e11c90b2f2141ee7d3442ebf6646a52995131ae72e5f1e",
+      "git_blob_sha": "73a4a5467dd2bce859ab3b6a830694290f800857"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.md",
+      "sha256": "429ac0e188c605228cdd848e2e3a40b8f515f643879d504c406bac3b4f98d358",
+      "git_blob_sha": "26b862c39c0346f8c858b64926f45b7c072f76e7"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.json",
+      "sha256": "e21d5a97ef7dbe93f8e11c90b2f2141ee7d3442ebf6646a52995131ae72e5f1e",
+      "git_blob_sha": "73a4a5467dd2bce859ab3b6a830694290f800857"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.md",
+      "sha256": "429ac0e188c605228cdd848e2e3a40b8f515f643879d504c406bac3b4f98d358",
+      "git_blob_sha": "26b862c39c0346f8c858b64926f45b7c072f76e7"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.archive.json",
+      "sha256": "d9ebd03af3045638c87a5cb4b137e5882111b5521ae09628a2ed4dc5d288278c",
+      "git_blob_sha": "80aee72d483b7c321cdd14cf4467e707ea102cd5"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.archive.json",
+      "sha256": "d9ebd03af3045638c87a5cb4b137e5882111b5521ae09628a2ed4dc5d288278c",
+      "git_blob_sha": "80aee72d483b7c321cdd14cf4467e707ea102cd5"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-12.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-12.archive.json",
+      "sha256": "d9ebd03af3045638c87a5cb4b137e5882111b5521ae09628a2ed4dc5d288278c",
+      "git_blob_sha": "80aee72d483b7c321cdd14cf4467e707ea102cd5"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.json",
+      "sha256": "5e5b4bc05352c12e48a4f7a401ec95eb0df6322d3ab70c2a826853ac7f79fa2c",
+      "git_blob_sha": "71e493850293b823c06d0519559548aec02fa672"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.md",
+      "sha256": "90f8bd1ebeb6d3a4586f2629183f8b4a5426880ddb0ca208575ce6e56e560a68",
+      "git_blob_sha": "9538520c51fa396d11f0f3cf7979281a6efe1de3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.json",
+      "sha256": "5e5b4bc05352c12e48a4f7a401ec95eb0df6322d3ab70c2a826853ac7f79fa2c",
+      "git_blob_sha": "71e493850293b823c06d0519559548aec02fa672"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.md",
+      "sha256": "90f8bd1ebeb6d3a4586f2629183f8b4a5426880ddb0ca208575ce6e56e560a68",
+      "git_blob_sha": "9538520c51fa396d11f0f3cf7979281a6efe1de3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.json",
+      "sha256": "5e5b4bc05352c12e48a4f7a401ec95eb0df6322d3ab70c2a826853ac7f79fa2c",
+      "git_blob_sha": "71e493850293b823c06d0519559548aec02fa672"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.md",
+      "sha256": "90f8bd1ebeb6d3a4586f2629183f8b4a5426880ddb0ca208575ce6e56e560a68",
+      "git_blob_sha": "9538520c51fa396d11f0f3cf7979281a6efe1de3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.archive.json",
+      "sha256": "3ae177737c4a8a4c11ef8de17d06d96ebc5fb59e88fb59a30b383dbafa8ebb38",
+      "git_blob_sha": "c23a2e22abbe5c9221f5329cf726820906a380f3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.archive.json",
+      "sha256": "3ae177737c4a8a4c11ef8de17d06d96ebc5fb59e88fb59a30b383dbafa8ebb38",
+      "git_blob_sha": "c23a2e22abbe5c9221f5329cf726820906a380f3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-13.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-13.archive.json",
+      "sha256": "3ae177737c4a8a4c11ef8de17d06d96ebc5fb59e88fb59a30b383dbafa8ebb38",
+      "git_blob_sha": "c23a2e22abbe5c9221f5329cf726820906a380f3"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.json",
+      "sha256": "e54867183b50207d1c35e69c9c1fd834ef421c05ddc7c389490132b839d9b747",
+      "git_blob_sha": "d8c4de33c5d4442ed9e82454e27bdadb195696bf"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.md",
+      "sha256": "8dadb2c60c983a71b668ba2495ea9034a0c284c2f46c219bf76c375fab293a64",
+      "git_blob_sha": "c85efaa9b9624e7d9f4f25852e9fc2b3b092024e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.json",
+      "sha256": "e54867183b50207d1c35e69c9c1fd834ef421c05ddc7c389490132b839d9b747",
+      "git_blob_sha": "d8c4de33c5d4442ed9e82454e27bdadb195696bf"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.md",
+      "sha256": "8dadb2c60c983a71b668ba2495ea9034a0c284c2f46c219bf76c375fab293a64",
+      "git_blob_sha": "c85efaa9b9624e7d9f4f25852e9fc2b3b092024e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.json",
+      "sha256": "e54867183b50207d1c35e69c9c1fd834ef421c05ddc7c389490132b839d9b747",
+      "git_blob_sha": "d8c4de33c5d4442ed9e82454e27bdadb195696bf"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.md",
+      "sha256": "8dadb2c60c983a71b668ba2495ea9034a0c284c2f46c219bf76c375fab293a64",
+      "git_blob_sha": "c85efaa9b9624e7d9f4f25852e9fc2b3b092024e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.archive.json",
+      "sha256": "9500514f8984eca9db62321780bf3e5916f96d0298f96486f583f7955681554c",
+      "git_blob_sha": "9f7d4fdf262c01e828af6e3c8a235c6f65f0af82"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.archive.json",
+      "sha256": "9500514f8984eca9db62321780bf3e5916f96d0298f96486f583f7955681554c",
+      "git_blob_sha": "9f7d4fdf262c01e828af6e3c8a235c6f65f0af82"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-14.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-14.archive.json",
+      "sha256": "9500514f8984eca9db62321780bf3e5916f96d0298f96486f583f7955681554c",
+      "git_blob_sha": "9f7d4fdf262c01e828af6e3c8a235c6f65f0af82"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.json",
+      "sha256": "c78fca92e1106b0f98b5ae04b15de883a021de812dda0eb0efe089c6f86fdebd",
+      "git_blob_sha": "a60cf7b9905a00e96c8cf7cad01b1ec86bfd525f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.md",
+      "sha256": "f3c8f1b28d867b9571c810a01786a8b929623fcaff6b9db7ca2d7ecd9e8bb2a5",
+      "git_blob_sha": "61d807473b3a8185b2c9c08123d5d2d7e35d6f22"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.json",
+      "sha256": "c78fca92e1106b0f98b5ae04b15de883a021de812dda0eb0efe089c6f86fdebd",
+      "git_blob_sha": "a60cf7b9905a00e96c8cf7cad01b1ec86bfd525f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.md",
+      "sha256": "f3c8f1b28d867b9571c810a01786a8b929623fcaff6b9db7ca2d7ecd9e8bb2a5",
+      "git_blob_sha": "61d807473b3a8185b2c9c08123d5d2d7e35d6f22"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.json",
+      "sha256": "c78fca92e1106b0f98b5ae04b15de883a021de812dda0eb0efe089c6f86fdebd",
+      "git_blob_sha": "a60cf7b9905a00e96c8cf7cad01b1ec86bfd525f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.md",
+      "sha256": "f3c8f1b28d867b9571c810a01786a8b929623fcaff6b9db7ca2d7ecd9e8bb2a5",
+      "git_blob_sha": "61d807473b3a8185b2c9c08123d5d2d7e35d6f22"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.archive.json",
+      "sha256": "632bccea5b49778f6d267b8106d288b5815304864e80d1da209b34eff3329f17",
+      "git_blob_sha": "086aa1c71649f9e56572c0e8a430b02f2eda8399"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.archive.json",
+      "sha256": "632bccea5b49778f6d267b8106d288b5815304864e80d1da209b34eff3329f17",
+      "git_blob_sha": "086aa1c71649f9e56572c0e8a430b02f2eda8399"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-15.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-15.archive.json",
+      "sha256": "632bccea5b49778f6d267b8106d288b5815304864e80d1da209b34eff3329f17",
+      "git_blob_sha": "086aa1c71649f9e56572c0e8a430b02f2eda8399"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.json",
+      "sha256": "648e453cd95633c27c71e7539d40263101ab37acdc18e126976473511abe3d0d",
+      "git_blob_sha": "ad65b6d18466d2042d7c8033e25137f7427d6cca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.md",
+      "sha256": "402c84adadcea3ad139bce2cc84a8621b1a1f27d24688dd38b95d0a091f3e766",
+      "git_blob_sha": "5c70fbadb7eb11fef7b010f1c972ddadea7ed0ca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.json",
+      "sha256": "648e453cd95633c27c71e7539d40263101ab37acdc18e126976473511abe3d0d",
+      "git_blob_sha": "ad65b6d18466d2042d7c8033e25137f7427d6cca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.md",
+      "sha256": "402c84adadcea3ad139bce2cc84a8621b1a1f27d24688dd38b95d0a091f3e766",
+      "git_blob_sha": "5c70fbadb7eb11fef7b010f1c972ddadea7ed0ca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.json",
+      "sha256": "648e453cd95633c27c71e7539d40263101ab37acdc18e126976473511abe3d0d",
+      "git_blob_sha": "ad65b6d18466d2042d7c8033e25137f7427d6cca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.md",
+      "sha256": "402c84adadcea3ad139bce2cc84a8621b1a1f27d24688dd38b95d0a091f3e766",
+      "git_blob_sha": "5c70fbadb7eb11fef7b010f1c972ddadea7ed0ca"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.archive.json",
+      "sha256": "7bcac361a9efc314c9a8c3e8c7dd4464ce4b779f345fd521c0da7f953460bdcf",
+      "git_blob_sha": "ee0843898a69fb7aa7c5f65fd22cf028a1856e4b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.archive.json",
+      "sha256": "7bcac361a9efc314c9a8c3e8c7dd4464ce4b779f345fd521c0da7f953460bdcf",
+      "git_blob_sha": "ee0843898a69fb7aa7c5f65fd22cf028a1856e4b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-16.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-16.archive.json",
+      "sha256": "7bcac361a9efc314c9a8c3e8c7dd4464ce4b779f345fd521c0da7f953460bdcf",
+      "git_blob_sha": "ee0843898a69fb7aa7c5f65fd22cf028a1856e4b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-17 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-17.json",
+      "sha256": "645380b32153771dacf026c212cadd72f0113b2b030dc67786d85ebbfd65bd8b",
+      "git_blob_sha": "c059a038d0e4f07e37ecfc9f6668d2cedeb9405b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-17 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-17.md",
+      "sha256": "48f1b062d32e40ea51c6b8fe725c4369173d5c1735a11140d44505000fc889fd",
+      "git_blob_sha": "d789cd79185790dd0c791e413749768a71cda640"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-17 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-17.json",
+      "sha256": "645380b32153771dacf026c212cadd72f0113b2b030dc67786d85ebbfd65bd8b",
+      "git_blob_sha": "c059a038d0e4f07e37ecfc9f6668d2cedeb9405b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-17 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-17.md",
+      "sha256": "48f1b062d32e40ea51c6b8fe725c4369173d5c1735a11140d44505000fc889fd",
+      "git_blob_sha": "d789cd79185790dd0c791e413749768a71cda640"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-17 7.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-17.md",
+      "sha256": "48f1b062d32e40ea51c6b8fe725c4369173d5c1735a11140d44505000fc889fd",
+      "git_blob_sha": "d789cd79185790dd0c791e413749768a71cda640"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-17.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-17.archive.json",
+      "sha256": "734f230508603024e6845daa798ad0ee4052d7f777232950fbedaa0b0f3ba1b2",
+      "git_blob_sha": "6d507693e39ab93002f3f3de5c30d955831b868b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-17.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-17.archive.json",
+      "sha256": "734f230508603024e6845daa798ad0ee4052d7f777232950fbedaa0b0f3ba1b2",
+      "git_blob_sha": "6d507693e39ab93002f3f3de5c30d955831b868b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-17.archive 7.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-17.archive.json",
+      "sha256": "734f230508603024e6845daa798ad0ee4052d7f777232950fbedaa0b0f3ba1b2",
+      "git_blob_sha": "6d507693e39ab93002f3f3de5c30d955831b868b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.json",
+      "sha256": "24ae3ec06dc576b4bd7652f44f7f11101c799371360dab1bc96047d4988bf22c",
+      "git_blob_sha": "443643e75c0ced86fc4f1aab8036a25ee83c65ed"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.md",
+      "sha256": "1370d1c9c52b6c6243477fd5363c33a595a95caf0e63f50a61a342fa0cea550f",
+      "git_blob_sha": "96dd2b97e2cb68c043ff0ff3296ec98035b15427"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.json",
+      "sha256": "24ae3ec06dc576b4bd7652f44f7f11101c799371360dab1bc96047d4988bf22c",
+      "git_blob_sha": "443643e75c0ced86fc4f1aab8036a25ee83c65ed"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.md",
+      "sha256": "1370d1c9c52b6c6243477fd5363c33a595a95caf0e63f50a61a342fa0cea550f",
+      "git_blob_sha": "96dd2b97e2cb68c043ff0ff3296ec98035b15427"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.json",
+      "sha256": "24ae3ec06dc576b4bd7652f44f7f11101c799371360dab1bc96047d4988bf22c",
+      "git_blob_sha": "443643e75c0ced86fc4f1aab8036a25ee83c65ed"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.md",
+      "sha256": "1370d1c9c52b6c6243477fd5363c33a595a95caf0e63f50a61a342fa0cea550f",
+      "git_blob_sha": "96dd2b97e2cb68c043ff0ff3296ec98035b15427"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.archive.json",
+      "sha256": "b257397141c489c5ae1ccb68cf28c78dadd9cc919a3d274c58610ba3cb17971d",
+      "git_blob_sha": "4b22c7d5a19ba9db9c83aa20d5256da1a32ece0a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.archive.json",
+      "sha256": "b257397141c489c5ae1ccb68cf28c78dadd9cc919a3d274c58610ba3cb17971d",
+      "git_blob_sha": "4b22c7d5a19ba9db9c83aa20d5256da1a32ece0a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-18.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-18.archive.json",
+      "sha256": "b257397141c489c5ae1ccb68cf28c78dadd9cc919a3d274c58610ba3cb17971d",
+      "git_blob_sha": "4b22c7d5a19ba9db9c83aa20d5256da1a32ece0a"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-19 3.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-19.md",
+      "sha256": "41da12ac62b723513e91f216e35586f25ce060bbbd8d5cddb74912b710785b9e",
+      "git_blob_sha": "ce25859d9c42c81d7fb9eff550571ae41104c5fe"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-19 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-19.json",
+      "sha256": "0a192a1018d1836948b6fcf9cfb5b64147886d7c9dd2d176842ccdefc5aa3d8a",
+      "git_blob_sha": "faff7bea6a0d0ac87a2a892feec6e76c472dfc7b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-19 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-19.md",
+      "sha256": "41da12ac62b723513e91f216e35586f25ce060bbbd8d5cddb74912b710785b9e",
+      "git_blob_sha": "ce25859d9c42c81d7fb9eff550571ae41104c5fe"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-19 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-19.json",
+      "sha256": "0a192a1018d1836948b6fcf9cfb5b64147886d7c9dd2d176842ccdefc5aa3d8a",
+      "git_blob_sha": "faff7bea6a0d0ac87a2a892feec6e76c472dfc7b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-19 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-19.json",
+      "sha256": "0a192a1018d1836948b6fcf9cfb5b64147886d7c9dd2d176842ccdefc5aa3d8a",
+      "git_blob_sha": "faff7bea6a0d0ac87a2a892feec6e76c472dfc7b"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-19.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-19.archive.json",
+      "sha256": "1dae3fa90e5c643a4f24d4f00332cb846541d69c9000304736ec98a2c0c0e1d9",
+      "git_blob_sha": "97773464ffdd7d1e6fe9922c9439f6d9e90be48e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-19.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-19.archive.json",
+      "sha256": "1dae3fa90e5c643a4f24d4f00332cb846541d69c9000304736ec98a2c0c0e1d9",
+      "git_blob_sha": "97773464ffdd7d1e6fe9922c9439f6d9e90be48e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-19.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-19.archive.json",
+      "sha256": "1dae3fa90e5c643a4f24d4f00332cb846541d69c9000304736ec98a2c0c0e1d9",
+      "git_blob_sha": "97773464ffdd7d1e6fe9922c9439f6d9e90be48e"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.json",
+      "sha256": "431fa7f4a872ab249dc5f63a7fa4d25f0d525be02d0f246d0c6ffb7f470e658a",
+      "git_blob_sha": "00c6f46d897bea6680b1a0f66235a663226720ec"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.md",
+      "sha256": "ef7f814a4faa43f5e18af9582416686cbfb46d68f42d91e1c33d74c744ac7dcd",
+      "git_blob_sha": "15898f76524102a514a04d037c888a934734ca70"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.json",
+      "sha256": "431fa7f4a872ab249dc5f63a7fa4d25f0d525be02d0f246d0c6ffb7f470e658a",
+      "git_blob_sha": "00c6f46d897bea6680b1a0f66235a663226720ec"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.md",
+      "sha256": "ef7f814a4faa43f5e18af9582416686cbfb46d68f42d91e1c33d74c744ac7dcd",
+      "git_blob_sha": "15898f76524102a514a04d037c888a934734ca70"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.json",
+      "sha256": "431fa7f4a872ab249dc5f63a7fa4d25f0d525be02d0f246d0c6ffb7f470e658a",
+      "git_blob_sha": "00c6f46d897bea6680b1a0f66235a663226720ec"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.md",
+      "sha256": "ef7f814a4faa43f5e18af9582416686cbfb46d68f42d91e1c33d74c744ac7dcd",
+      "git_blob_sha": "15898f76524102a514a04d037c888a934734ca70"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.archive.json",
+      "sha256": "03ab027a27ae96f49e3beff0728eae9a130e1a7a94832c219b77bf79da35fa8d",
+      "git_blob_sha": "66a61b23a462eeded3afddde84e3ba3467034a57"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.archive.json",
+      "sha256": "03ab027a27ae96f49e3beff0728eae9a130e1a7a94832c219b77bf79da35fa8d",
+      "git_blob_sha": "66a61b23a462eeded3afddde84e3ba3467034a57"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-20.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-20.archive.json",
+      "sha256": "03ab027a27ae96f49e3beff0728eae9a130e1a7a94832c219b77bf79da35fa8d",
+      "git_blob_sha": "66a61b23a462eeded3afddde84e3ba3467034a57"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.json",
+      "sha256": "81c25302af19628d1636895cf8c0991089c0199c74fe8067493f2f1c428ef730",
+      "git_blob_sha": "1a2403be7de3aa28085169acc60f950fea3cb98f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.md",
+      "sha256": "0005435ff1ea8dbbb06ee7e297d750205e59832ddea67301d55ab532ffcc1bfd",
+      "git_blob_sha": "220a51ef482f25d6fabe99b4f7407a1a3ca55020"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.json",
+      "sha256": "81c25302af19628d1636895cf8c0991089c0199c74fe8067493f2f1c428ef730",
+      "git_blob_sha": "1a2403be7de3aa28085169acc60f950fea3cb98f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.md",
+      "sha256": "0005435ff1ea8dbbb06ee7e297d750205e59832ddea67301d55ab532ffcc1bfd",
+      "git_blob_sha": "220a51ef482f25d6fabe99b4f7407a1a3ca55020"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.json",
+      "sha256": "81c25302af19628d1636895cf8c0991089c0199c74fe8067493f2f1c428ef730",
+      "git_blob_sha": "1a2403be7de3aa28085169acc60f950fea3cb98f"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.md",
+      "sha256": "0005435ff1ea8dbbb06ee7e297d750205e59832ddea67301d55ab532ffcc1bfd",
+      "git_blob_sha": "220a51ef482f25d6fabe99b4f7407a1a3ca55020"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.archive.json",
+      "sha256": "166f128e967cddc20c0801bac1ba0e16c78823610b604e6be04bfcd4c18d0b08",
+      "git_blob_sha": "b86a4c46ad7b8e730b5bfa685d04494801ce54a7"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.archive.json",
+      "sha256": "166f128e967cddc20c0801bac1ba0e16c78823610b604e6be04bfcd4c18d0b08",
+      "git_blob_sha": "b86a4c46ad7b8e730b5bfa685d04494801ce54a7"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016-21.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016-21.archive.json",
+      "sha256": "166f128e967cddc20c0801bac1ba0e16c78823610b604e6be04bfcd4c18d0b08",
+      "git_blob_sha": "b86a4c46ad7b8e730b5bfa685d04494801ce54a7"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.archive.json",
+      "sha256": "33248a48129dd0c5cc33483e1de99c1604f8ff03833a5d5d013f06d7a2dd596d",
+      "git_blob_sha": "652ce3b564f81dc6726f26b5fc88345c544e64cd"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.archive.json",
+      "sha256": "33248a48129dd0c5cc33483e1de99c1604f8ff03833a5d5d013f06d7a2dd596d",
+      "git_blob_sha": "652ce3b564f81dc6726f26b5fc88345c544e64cd"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261016.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261016.archive.json",
+      "sha256": "33248a48129dd0c5cc33483e1de99c1604f8ff03833a5d5d013f06d7a2dd596d",
+      "git_blob_sha": "652ce3b564f81dc6726f26b5fc88345c544e64cd"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.json",
+      "sha256": "e9c10b5e7cbfa3c7b5622784d5d9c1b6724435de70f314b47b0aa6c94c00c64b",
+      "git_blob_sha": "3867718a3dcafd4ab902e50df330a1c4cd9c51e5"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017 4.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.md",
+      "sha256": "35d089dcf109485590430e387b0544a040e4525b2b4b5f2ecbb561cb577884ff",
+      "git_blob_sha": "87afffb182e0da6729a68636c224362789253296"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.json",
+      "sha256": "e9c10b5e7cbfa3c7b5622784d5d9c1b6724435de70f314b47b0aa6c94c00c64b",
+      "git_blob_sha": "3867718a3dcafd4ab902e50df330a1c4cd9c51e5"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017 5.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.md",
+      "sha256": "35d089dcf109485590430e387b0544a040e4525b2b4b5f2ecbb561cb577884ff",
+      "git_blob_sha": "87afffb182e0da6729a68636c224362789253296"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.json",
+      "sha256": "e9c10b5e7cbfa3c7b5622784d5d9c1b6724435de70f314b47b0aa6c94c00c64b",
+      "git_blob_sha": "3867718a3dcafd4ab902e50df330a1c4cd9c51e5"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017 6.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.md",
+      "sha256": "35d089dcf109485590430e387b0544a040e4525b2b4b5f2ecbb561cb577884ff",
+      "git_blob_sha": "87afffb182e0da6729a68636c224362789253296"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017.archive 4.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.archive.json",
+      "sha256": "3b7fbdd430cae591433e38b2b4459aea71fb85de60f8505e6acdeed375f596ff",
+      "git_blob_sha": "950308fb4985790b5bb2c04e02596428a6590031"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017.archive 5.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.archive.json",
+      "sha256": "3b7fbdd430cae591433e38b2b4459aea71fb85de60f8505e6acdeed375f596ff",
+      "git_blob_sha": "950308fb4985790b5bb2c04e02596428a6590031"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261017.archive 6.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261017.archive.json",
+      "sha256": "3b7fbdd430cae591433e38b2b4459aea71fb85de60f8505e6acdeed375f596ff",
+      "git_blob_sha": "950308fb4985790b5bb2c04e02596428a6590031"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261019 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261019.json",
+      "sha256": "65803b5ef69c477d503b8f87351ba8ac0acdfb8c7697350663ac111d84ba0661",
+      "git_blob_sha": "e84ea62e1c7acfef40e706133846845ebd4cdee0"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261019 2.md",
+      "canonical_path": "docs/archive/constitution/Constitution-261019.md",
+      "sha256": "058ae660f189c57f09e08e1da32700969c5eeb5ce662c8976ecf0ed651f45b57",
+      "git_blob_sha": "88c71494334e581d6c842040f120c2592edc64f2"
+    },
+    {
+      "path": "docs/archive/constitution/Constitution-261019.archive 2.json",
+      "canonical_path": "docs/archive/constitution/Constitution-261019.archive.json",
+      "sha256": "65959fdaafae269a81d27632a5a6b69f3c5ca5fa58c66d49eff5b2fe133f8724",
+      "git_blob_sha": "c343d23be9e551c8c6b4caf0aacec9524b60f723"
+    },
+    {
+      "path": "docs/archive/constitution/README 2.md",
+      "canonical_path": "docs/archive/constitution/README.md",
+      "sha256": "2cf14fd123993d68ded6b2b081cd89dab5ae61dd91674a3fbcb5412bf19aec8d",
+      "git_blob_sha": "4708506142e6d2acaf614790d7410e684a3df767"
+    },
+    {
+      "path": "docs/archive/constitution/policy 2.json",
+      "canonical_path": "docs/archive/constitution/policy.json",
+      "sha256": "ff29949c25230af0afe1443e6adbd717deef83f4271220cacb3dba90e089266c",
+      "git_blob_sha": "a7ccd5dd82c3eef6137b0af3c49c70fd63aa7b0f"
+    }
+  ]
+}

@@ -20,6 +20,10 @@ ARCHIVE = "docs/archive/constitution"
 POLICY = f"{ARCHIVE}/policy.json"
 STEM = re.compile(r"Constitution-\d{6}(?:-\d{2,})?$")
 ROOT = Path(__file__).resolve().parent.parent
+REVIEWED_ALIAS_MANIFEST = "scripts/constitution-archive-aliases.json"
+# Frozen review of the 298 exact copies imported by c5130bd4 on 2026-10-30.
+# A changed manifest requires an explicit code review, never auto-discovery.
+REVIEWED_ALIAS_MANIFEST_SHA256 = "1c11abc0d6bfe05c5138cca34f5312f981c89cb2fe6e0e7e6603bfca7255d7f8"
 
 
 def git(root, *args):
@@ -74,6 +78,13 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def reviewed_duplicate_aliases():
+    data = safe_path(ROOT, REVIEWED_ALIAS_MANIFEST).read_bytes()
+    if digest(data) != REVIEWED_ALIAS_MANIFEST_SHA256:
+        raise ValueError("Reviewed archive alias manifest hash mismatch")
+    return {entry["path"]: entry for entry in json.loads(data)["files"]}
+
+
 def inventory(root, ref=None):
     if ref:
         paths = git(root, "ls-tree", "-r", "--name-only", ref, "--", ARCHIVE).decode().splitlines()
@@ -88,12 +99,20 @@ def inventory(root, ref=None):
 LEGACY_DUPLICATE_NAMES = frozenset(["Constitution-261014 2.json","Constitution-261014 2.md","Constitution-261014.archive 2.json","Constitution-261015 2.json","Constitution-261015 2.md","Constitution-261015-01 2.json","Constitution-261015-01 2.md","Constitution-261015-01.archive 2.json","Constitution-261015.archive 2.json","Constitution-261016 2.json","Constitution-261016 2.md","Constitution-261016 3.json","Constitution-261016 3.md","Constitution-261016-01 2.json","Constitution-261016-01 2.md","Constitution-261016-01.archive 2.json","Constitution-261016-02 2.json","Constitution-261016-02 2.md","Constitution-261016-02.archive 2.json","Constitution-261016-03 2.json","Constitution-261016-03 2.md","Constitution-261016-03.archive 2.json","Constitution-261016-04 2.json","Constitution-261016-04 2.md","Constitution-261016-04.archive 2.json","Constitution-261016-05 2.json","Constitution-261016-05 2.md","Constitution-261016-05.archive 2.json","Constitution-261016-06 2.json","Constitution-261016-06 2.md","Constitution-261016-06.archive 2.json","Constitution-261016-07 2.json","Constitution-261016-07 2.md","Constitution-261016-07 3.json","Constitution-261016-07 3.md","Constitution-261016-07.archive 2.json","Constitution-261016-07.archive 3.json","Constitution-261016-08 2.json","Constitution-261016-08 2.md","Constitution-261016-08 3.json","Constitution-261016-08 3.md","Constitution-261016-08.archive 2.json","Constitution-261016-08.archive 3.json","Constitution-261016-09 2.json","Constitution-261016-09 2.md","Constitution-261016-09 3.json","Constitution-261016-09 3.md","Constitution-261016-09.archive 2.json","Constitution-261016-09.archive 3.json","Constitution-261016-10 2.json","Constitution-261016-10 2.md","Constitution-261016-10 3.json","Constitution-261016-10 3.md","Constitution-261016-10.archive 2.json","Constitution-261016-10.archive 3.json","Constitution-261016-11 2.json","Constitution-261016-11 2.md","Constitution-261016-11 3.json","Constitution-261016-11 3.md","Constitution-261016-11.archive 2.json","Constitution-261016-11.archive 3.json","Constitution-261016-12 2.json","Constitution-261016-12 2.md","Constitution-261016-12 3.json","Constitution-261016-12 3.md","Constitution-261016-12.archive 2.json","Constitution-261016-12.archive 3.json","Constitution-261016-13 2.json","Constitution-261016-13 2.md","Constitution-261016-13 3.json","Constitution-261016-13 3.md","Constitution-261016-13.archive 2.json","Constitution-261016-13.archive 3.json","Constitution-261016-14 2.json","Constitution-261016-14 2.md","Constitution-261016-14 3.json","Constitution-261016-14 3.md","Constitution-261016-14.archive 2.json","Constitution-261016-14.archive 3.json","Constitution-261016-15 2.json","Constitution-261016-15 2.md","Constitution-261016-15 3.json","Constitution-261016-15 3.md","Constitution-261016-15.archive 2.json","Constitution-261016-15.archive 3.json","Constitution-261016-16 2.json","Constitution-261016-16 2.md","Constitution-261016-16 3.json","Constitution-261016-16 3.md","Constitution-261016-16.archive 2.json","Constitution-261016-16.archive 3.json","Constitution-261016-17 2.json","Constitution-261016-17 2.md","Constitution-261016-17 3.json","Constitution-261016-17 3.md","Constitution-261016-17.archive 2.json","Constitution-261016-17.archive 3.json","Constitution-261016-18 2.json","Constitution-261016-18 2.md","Constitution-261016-18 3.json","Constitution-261016-18 3.md","Constitution-261016-18.archive 2.json","Constitution-261016-18.archive 3.json","Constitution-261016-19 2.json","Constitution-261016-19 2.md","Constitution-261016-19 3.json","Constitution-261016-19.archive 2.json","Constitution-261016-19.archive 3.json","Constitution-261016-20 2.json","Constitution-261016-20 2.md","Constitution-261016-20 3.json","Constitution-261016-20 3.md","Constitution-261016-20.archive 2.json","Constitution-261016-20.archive 3.json","Constitution-261016-21 2.json","Constitution-261016-21 2.md","Constitution-261016-21 3.json","Constitution-261016-21 3.md","Constitution-261016-21.archive 2.json","Constitution-261016-21.archive 3.json","Constitution-261016.archive 2.json","Constitution-261016.archive 3.json","Constitution-261017 2.json","Constitution-261017 2.md","Constitution-261017 3.json","Constitution-261017 3.md","Constitution-261017.archive 2.json","Constitution-261017.archive 3.json"])
 
 def validate_inventory(files):
+    reviewed = reviewed_duplicate_aliases()
     stems = set()
     for name in files:
         basename = Path(name).name
         if name in (f"{ARCHIVE}/README.md", POLICY):
             continue
-        if basename in LEGACY_DUPLICATE_NAMES:
+        if name in reviewed:
+            entry = reviewed[name]
+            original = entry["canonical_path"]
+            if (original not in files or files[name] != files[original] or
+                    digest(files[name]) != entry["sha256"]):
+                raise ValueError(f"Reviewed duplicate archive verification failed: {name}")
+            continue
+        if basename in LEGACY_DUPLICATE_NAMES and name == f"{ARCHIVE}/{basename}":
             original = f"{ARCHIVE}/{basename.replace(' 2.', '.').replace(' 3.', '.')}"
             if original not in files or files[name] != files[original]:
                 raise ValueError(f"Legacy duplicate archive differs from canonical: {name}")

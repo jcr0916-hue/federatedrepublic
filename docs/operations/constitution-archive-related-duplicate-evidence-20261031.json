@@ -1,0 +1,54 @@
+{
+  "introduced_commit": "c5130bd4a9c7aa61ed07d8cae5eb388e9c74e397",
+  "disposition": "remove_byte_identical_noncanonical_filenames_only_canonical_content_unchanged_original_blobs_preserved_on_main",
+  "files": [
+    {
+      "path": "state-tests/aldenmere/aldenmere-test-01-the-budget-that-continued 2.html",
+      "canonical_path": "state-tests/aldenmere/aldenmere-test-01-the-budget-that-continued.html",
+      "sha256": "9c233f2323c85addbc116dbf9d74e7dec76297407d14efdb45972bcf32770121",
+      "git_blob_sha": "d7740c2fdb4260f8a591a7493ee6c1ba17e9ac6e"
+    },
+    {
+      "path": "state-tests/arvane/arvane-test-01-the-rule-that-ran-out 2.html",
+      "canonical_path": "state-tests/arvane/arvane-test-01-the-rule-that-ran-out.html",
+      "sha256": "d1840b3369c7332fae4c7583d730b0f9fcd2b30c7ac40c21d5295559374a69e7",
+      "git_blob_sha": "3b000ab12191658aa11da4fcd9947e8a4338fd79"
+    },
+    {
+      "path": "state-tests/caldenmere/caldenmere-test-01-the-minister-neither-could-appoint-alone 2.html",
+      "canonical_path": "state-tests/caldenmere/caldenmere-test-01-the-minister-neither-could-appoint-alone.html",
+      "sha256": "29ab23dfa73ffd741cad971f2b93c42a993a5b5ff3ec1e32c9dd4b7be716b40c",
+      "git_blob_sha": "c9b5a53ebd12dfc1d45d1cf80d216d27a00d4762"
+    },
+    {
+      "path": "state-tests/corindal/corindal-test-01-the-grant-the-governor-could-not-cancel 2.html",
+      "canonical_path": "state-tests/corindal/corindal-test-01-the-grant-the-governor-could-not-cancel.html",
+      "sha256": "b551f68f76b6cce55c0a767fb530b73c9961fcd8ffea6832e1252850b831d750",
+      "git_blob_sha": "1ef7ed5fbbef20d7d66eda79bbb10471f8fe3954"
+    },
+    {
+      "path": "state-tests/kelvant/kelvant-test-02-a-year-for-the-shore 2.html",
+      "canonical_path": "state-tests/kelvant/kelvant-test-02-a-year-for-the-shore.html",
+      "sha256": "020be2fc73f8f76ff67f3afbd204a9de485b54e972e228bec254cd25fc65214f",
+      "git_blob_sha": "9c05569575aa5e4c0645e00a710e99cfe5256938"
+    },
+    {
+      "path": "state-tests/merath/merath-test-01-the-promise-at-the-foundry-gate 2.html",
+      "canonical_path": "state-tests/merath/merath-test-01-the-promise-at-the-foundry-gate.html",
+      "sha256": "babbdbc72fbc8aeaa288b7b354fa3ca2c6b43774fd317227536a5456426d24c3",
+      "git_blob_sha": "48745a526b7cd2d95c279badfe86b7ca67d09a49"
+    },
+    {
+      "path": "state-tests/orath/orath-test-01-the-petition-at-harvest 2.html",
+      "canonical_path": "state-tests/orath/orath-test-01-the-petition-at-harvest.html",
+      "sha256": "372bf5bfe3ec992158866bca27fff5572831d01fbdb06f1316b3089752e7cc4f",
+      "git_blob_sha": "7b7c8f4e085e016f1ac85a7244f4b8ddfc56541d"
+    },
+    {
+      "path": "state-tests/selvane/selvane-test-01-the-appointment-no-one-could-block 2.html",
+      "canonical_path": "state-tests/selvane/selvane-test-01-the-appointment-no-one-could-block.html",
+      "sha256": "ccec84f125794d6874f172e674f603d232b4ab9f16f0893b1cf2bfc1fd16e24d",
+      "git_blob_sha": "c2692a7980ed9d30a7204b2fd95cce6b58fd8a01"
+    }
+  ]
+}
