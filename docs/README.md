@@ -21,6 +21,8 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 
 - [Story Bible](torenthia/STORY-BIBLE.md) — durable canon and continuity constraints.
 - [Story Status](torenthia/STORY-STATUS.md) — live threads, clocks, open decisions, and current frontier.
+- [Political and character planning](torenthia/POLITICAL-CHARACTER-PLANNING.md) — internal editorial intentions and possibilities, **not published canon**.
+- [State-story pilot](torenthia/STATE-STORY-PILOT.md) — proposed source packets, local autonomy and central review; no agents deployed.
 - Published World records and front matter — authoritative published history, including older records.
 - [Chronology registry](../_data/worldChronology.json) and [clock registry](../_data/worldClocks.json) — current infrastructure.
 - [World publishing](torenthia/PUBLISHING.md).
@@ -28,6 +30,10 @@ Edit canonical sources and regenerate derivatives rather than editing generated 
 - [State historical tests](STATE-TEST-PUBLISHING.md) — canonical State history, provision validation, and discovery.
 - [Scenario publishing](SCENARIO-PUBLISHING.md).
 - [Torenthia constitutional citation audit register](archive/torenthia-citation-audit/README.md) — dated per-article reference maintenance; completed-text audit of all twenty articles prepared for review.
+
+## Research design
+
+- [Constitutional paper framework](research/CONSTITUTION-PAPER-FRAMEWORK.md) — proposed methods and source hierarchy; fictional State cases are illustrations, not empirical validation.
 
 ## Operations and visual references
 

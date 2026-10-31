@@ -7,6 +7,8 @@ This is the navigation home for Torenthia material on `main`. **Published record
 - [Story Bible](STORY-BIBLE.md) — durable canon and continuity constraints.
 - [Story Status](STORY-STATUS.md) — live storylines, clocks, and publication frontier.
 - [Year 14 storylines](STORYLINES-Y14.md) — planning proposals, **not canon**.
+- [Political and character planning](POLITICAL-CHARACTER-PLANNING.md) — internal six-party reference, author intentions and unresolved possibilities; **not published canon or a public plot synopsis**.
+- [State-story pilot](STATE-STORY-PILOT.md) — proposed one-State editorial workflow, maintained source packets and central publication review; no agents deployed.
 - [Publishing workflow](PUBLISHING.md) — authoring, metadata, validation, and release process.
 
 ## Published record families
