@@ -72,9 +72,10 @@ changes in its main push triggers. Its byte-identical
 `.github/workflows/constitution-archive 2.yml` copy is removed; the original
 copy remains permanently available in the import commit and main's history.
 No other numbered workflow is edited. After the archive check passed, the full
-publishing suite exposed eight duplicate State-test filenames from the same
-import. Each is exactly identical to its canonical file and the pre-import
-canonical Git blob. Only those eight redundant ` 2.html` filenames are removed,
+publishing suite exposed eight duplicate State-test filenames and 106 duplicate
+World-record filenames (102 NRS, four dispatches) from the same import. Each is
+exactly identical to its canonical file and the pre-import canonical Git blob.
+Only those 114 redundant ` 2.html` filenames are removed,
 following the same noncanonical-file hygiene used in the October 18 incident.
 Their [exact paths and hashes](constitution-archive-related-duplicate-evidence-20261031.json)
 are recorded and their original blobs remain reachable in main history.

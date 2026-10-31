@@ -78,8 +78,10 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def reviewed_duplicate_aliases():
-    data = safe_path(ROOT, REVIEWED_ALIAS_MANIFEST).read_bytes()
+def reviewed_duplicate_aliases(root=None, ref=None):
+    root = ROOT if root is None else root
+    data = (git(root, "show", f"{ref}:{REVIEWED_ALIAS_MANIFEST}") if ref else
+            safe_path(root, REVIEWED_ALIAS_MANIFEST).read_bytes())
     if digest(data) != REVIEWED_ALIAS_MANIFEST_SHA256:
         raise ValueError("Reviewed archive alias manifest hash mismatch")
     return {entry["path"]: entry for entry in json.loads(data)["files"]}
@@ -98,8 +100,8 @@ def inventory(root, ref=None):
 
 LEGACY_DUPLICATE_NAMES = frozenset(["Constitution-261014 2.json","Constitution-261014 2.md","Constitution-261014.archive 2.json","Constitution-261015 2.json","Constitution-261015 2.md","Constitution-261015-01 2.json","Constitution-261015-01 2.md","Constitution-261015-01.archive 2.json","Constitution-261015.archive 2.json","Constitution-261016 2.json","Constitution-261016 2.md","Constitution-261016 3.json","Constitution-261016 3.md","Constitution-261016-01 2.json","Constitution-261016-01 2.md","Constitution-261016-01.archive 2.json","Constitution-261016-02 2.json","Constitution-261016-02 2.md","Constitution-261016-02.archive 2.json","Constitution-261016-03 2.json","Constitution-261016-03 2.md","Constitution-261016-03.archive 2.json","Constitution-261016-04 2.json","Constitution-261016-04 2.md","Constitution-261016-04.archive 2.json","Constitution-261016-05 2.json","Constitution-261016-05 2.md","Constitution-261016-05.archive 2.json","Constitution-261016-06 2.json","Constitution-261016-06 2.md","Constitution-261016-06.archive 2.json","Constitution-261016-07 2.json","Constitution-261016-07 2.md","Constitution-261016-07 3.json","Constitution-261016-07 3.md","Constitution-261016-07.archive 2.json","Constitution-261016-07.archive 3.json","Constitution-261016-08 2.json","Constitution-261016-08 2.md","Constitution-261016-08 3.json","Constitution-261016-08 3.md","Constitution-261016-08.archive 2.json","Constitution-261016-08.archive 3.json","Constitution-261016-09 2.json","Constitution-261016-09 2.md","Constitution-261016-09 3.json","Constitution-261016-09 3.md","Constitution-261016-09.archive 2.json","Constitution-261016-09.archive 3.json","Constitution-261016-10 2.json","Constitution-261016-10 2.md","Constitution-261016-10 3.json","Constitution-261016-10 3.md","Constitution-261016-10.archive 2.json","Constitution-261016-10.archive 3.json","Constitution-261016-11 2.json","Constitution-261016-11 2.md","Constitution-261016-11 3.json","Constitution-261016-11 3.md","Constitution-261016-11.archive 2.json","Constitution-261016-11.archive 3.json","Constitution-261016-12 2.json","Constitution-261016-12 2.md","Constitution-261016-12 3.json","Constitution-261016-12 3.md","Constitution-261016-12.archive 2.json","Constitution-261016-12.archive 3.json","Constitution-261016-13 2.json","Constitution-261016-13 2.md","Constitution-261016-13 3.json","Constitution-261016-13 3.md","Constitution-261016-13.archive 2.json","Constitution-261016-13.archive 3.json","Constitution-261016-14 2.json","Constitution-261016-14 2.md","Constitution-261016-14 3.json","Constitution-261016-14 3.md","Constitution-261016-14.archive 2.json","Constitution-261016-14.archive 3.json","Constitution-261016-15 2.json","Constitution-261016-15 2.md","Constitution-261016-15 3.json","Constitution-261016-15 3.md","Constitution-261016-15.archive 2.json","Constitution-261016-15.archive 3.json","Constitution-261016-16 2.json","Constitution-261016-16 2.md","Constitution-261016-16 3.json","Constitution-261016-16 3.md","Constitution-261016-16.archive 2.json","Constitution-261016-16.archive 3.json","Constitution-261016-17 2.json","Constitution-261016-17 2.md","Constitution-261016-17 3.json","Constitution-261016-17 3.md","Constitution-261016-17.archive 2.json","Constitution-261016-17.archive 3.json","Constitution-261016-18 2.json","Constitution-261016-18 2.md","Constitution-261016-18 3.json","Constitution-261016-18 3.md","Constitution-261016-18.archive 2.json","Constitution-261016-18.archive 3.json","Constitution-261016-19 2.json","Constitution-261016-19 2.md","Constitution-261016-19 3.json","Constitution-261016-19.archive 2.json","Constitution-261016-19.archive 3.json","Constitution-261016-20 2.json","Constitution-261016-20 2.md","Constitution-261016-20 3.json","Constitution-261016-20 3.md","Constitution-261016-20.archive 2.json","Constitution-261016-20.archive 3.json","Constitution-261016-21 2.json","Constitution-261016-21 2.md","Constitution-261016-21 3.json","Constitution-261016-21 3.md","Constitution-261016-21.archive 2.json","Constitution-261016-21.archive 3.json","Constitution-261016.archive 2.json","Constitution-261016.archive 3.json","Constitution-261017 2.json","Constitution-261017 2.md","Constitution-261017 3.json","Constitution-261017 3.md","Constitution-261017.archive 2.json","Constitution-261017.archive 3.json"])
 
-def validate_inventory(files):
-    reviewed = reviewed_duplicate_aliases()
+def validate_inventory(files, root=None, ref=None):
+    reviewed = reviewed_duplicate_aliases(root, ref)
     stems = set()
     for name in files:
         basename = Path(name).name
@@ -157,7 +159,7 @@ def timestamp(value=None):
 def plan_pair(root, contents, now=None, source_commit=None):
     moment = timestamp(now)
     files = inventory(root)
-    records = validate_inventory(files)
+    records = validate_inventory(files, root)
     # Exact bytes, rather than JSON equality, also preserve formatting-only changes.
     for stem, metadata, saved in records:
         if saved == contents:
@@ -211,7 +213,7 @@ def write_pair(root, contents, plan):
         raise ValueError("Planned archived JSON/Markdown pair is out of sync")
     paths = archive_paths(root, plan)
     if plan["reused"]:
-        records = validate_inventory(inventory(root))
+        records = validate_inventory(inventory(root), root)
         if not any(stem == plan["stem"] and saved == contents for stem, _, saved in records):
             raise ValueError("Planned archive changed; preview again")
         return paths
@@ -319,7 +321,7 @@ def check(root, base=None, head=None, worktree=False):
     current = pair(root, destination)
     validate_pair(root, current, destination)
     files = inventory(root, destination)
-    records = validate_inventory(files)
+    records = validate_inventory(files, root, destination)
     verify_records(records)
     if base:
         source = commit(root, base)
@@ -446,7 +448,7 @@ def check_recovery(root, base, head="HEAD"):
     """Check the entire recovery plan against committed evidence without writes."""
     head = commit(root, head)
     required = recovery_requirements(root, base, head, evidence_ref=head)
-    records = validate_inventory(inventory(root, head))
+    records = validate_inventory(inventory(root, head), root, head)
     verify_records(records)
     for contents, _, ref in required:
         if not any(saved == contents for _, _, saved in records):
@@ -457,13 +459,13 @@ def reconcile(root, base, head="HEAD"):
     required = recovery_requirements(root, base, head)
     saved = []
     with locked(root):
-        verify_records(validate_inventory(inventory(root)))
+        verify_records(validate_inventory(inventory(root), root))
         for contents, when, ref in required:
             plan = plan_pair(root, contents, when, ref)
             paths = write_pair(root, contents, plan)
             if not plan["reused"]:
                 saved.extend(paths)
-        verify_records(validate_inventory(inventory(root)))
+        verify_records(validate_inventory(inventory(root), root))
     return saved
 
 

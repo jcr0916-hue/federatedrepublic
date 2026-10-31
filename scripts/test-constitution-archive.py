@@ -305,6 +305,19 @@ class ConstitutionArchiveTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "manifest hash mismatch"):
                 archive.validate_inventory({})
 
+    def test_uncommitted_manifest_cannot_authorize_a_committed_check(self):
+        self.reviewed_alias()
+        self.commit()
+        manifest = self.root / archive.REVIEWED_ALIAS_MANIFEST
+        saved = manifest.read_bytes()
+        manifest.unlink()
+        self.commit()
+        manifest.write_bytes(saved)
+        with self.assertRaisesRegex(ValueError, archive.REVIEWED_ALIAS_MANIFEST):
+            archive.check(self.root)
+        with self.assertRaisesRegex(ValueError, archive.REVIEWED_ALIAS_MANIFEST):
+            archive.check_recovery(self.root, self.base)
+
     def test_reviewed_alias_cannot_replace_the_canonical_pair(self):
         alias, canonical = self.reviewed_alias()
         files = archive.inventory(self.root)
