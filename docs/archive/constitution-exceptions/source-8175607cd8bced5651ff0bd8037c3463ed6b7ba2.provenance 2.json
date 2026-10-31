@@ -1,0 +1,14 @@
+{
+  "previous_commit": "8175607cd8bced5651ff0bd8037c3463ed6b7ba2",
+  "superseding_commit": "2653e96c6070974e77450ceb5ded3bbc6f7ac621",
+  "superseded_utc": "2026-09-19T03:11:29+00:00",
+  "verified_pair": false,
+  "previous_json_sha256": "46e0f9a26d0c446f186b288a08a0638754ac065673b542e47be2f71c5f4fa04c",
+  "previous_markdown_sha256": "7ad0e69d266ff335cff3954be3dc4e523186deb5750138895dcdfd0f29f05b43",
+  "error": "KeyError: 'render'",
+  "status": "unverified_historical_source",
+  "source_paths": [
+    "constitution_data.json",
+    "docs/constitution-current.md"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "previous_commit": "55dd8b926ddbd76029c5d5aa6b1a2a14c1806321",
+  "superseding_commit": "c06e87f41a4c3bc0e359cdc533ace64ddc3d84ae",
+  "superseded_utc": "2026-10-07T21:29:38+00:00",
+  "verified_pair": false,
+  "previous_json_sha256": "3fe8fc040b3e02554ef0c5c593b4e1d4901b2ff9d88b8b2b36da6d193444ccad",
+  "previous_markdown_sha256": "2e73122ec68a319febf74c15ae6a8afa807049f2845b1d271a0e9061c3ab786d",
+  "error": "ValueError: Constitution JSON/Markdown pair is out of sync (55dd8b926ddbd76029c5d5aa6b1a2a14c1806321)",
+  "status": "unverified_historical_source",
+  "source_paths": [
+    "constitution_data.json",
+    "docs/constitution-current.md"
+  ]
+}

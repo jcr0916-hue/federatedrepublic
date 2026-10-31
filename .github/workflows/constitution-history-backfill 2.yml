@@ -1,0 +1,39 @@
+name: Prepare historical Constitution recovery PR
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Recover exact historical sources in working tree
+        run: python3 -B scripts/recover-constitution-history.py --apply > historical-recovery-report.json
+      - name: Include audit manifest
+        run: |
+          mkdir -p docs/archive/development
+          cp historical-recovery-report.json docs/archive/development/HISTORICAL-RECOVERY-REPORT.json
+      - name: Open reviewable preservation PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          if git diff --quiet && test -z "$(git ls-files --others --exclude-standard docs/archive)"; then
+            echo "No changes to propose"
+            exit 0
+          fi
+          branch="history/recovered-constitution-source-editions"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add docs/archive/constitution docs/archive/constitution-exceptions docs/archive/development/HISTORICAL-RECOVERY-REPORT.json
+          git commit -m "Preserve verified historic Constitution editions and exception sources"
+          git push --set-upstream origin "$branch"
+          gh pr create --base main --head "$branch" --title "Preserve historical Constitution editions and exception sources" --body "Generated from first-parent history. Original Markdown/JSON verified with historical renderers go to the immutable Constitution archive; mismatches and unsupported renderers are preserved separately as unverified exact source blobs. Review manifest and archival CI before merge."

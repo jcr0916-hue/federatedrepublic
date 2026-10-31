@@ -1,0 +1,454 @@
+{
+  "total_transitions": 53,
+  "verified_transitions": 30,
+  "exceptions": 23,
+  "entries": [
+    {
+      "previous_commit": "ef1ea87443ca0f68b722f89b29f8413055aa8079",
+      "superseding_commit": "83cedbc5707d1f971c2baa4cef64cf42bb1b59fd",
+      "superseded_utc": "2026-09-19T02:34:29+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "b03238d64d31bcc6659c6a26b7fa4ebe766651922ba421fe21249d70e7c87ece",
+      "previous_markdown_sha256": "2acef6f85f2385bea8fe9e65ead8fba9b96f75f61b74994b16fcee7595c997a6",
+      "error": "KeyError: 'render'"
+    },
+    {
+      "previous_commit": "8175607cd8bced5651ff0bd8037c3463ed6b7ba2",
+      "superseding_commit": "2653e96c6070974e77450ceb5ded3bbc6f7ac621",
+      "superseded_utc": "2026-09-19T03:11:29+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "46e0f9a26d0c446f186b288a08a0638754ac065673b542e47be2f71c5f4fa04c",
+      "previous_markdown_sha256": "7ad0e69d266ff335cff3954be3dc4e523186deb5750138895dcdfd0f29f05b43",
+      "error": "KeyError: 'render'"
+    },
+    {
+      "previous_commit": "2653e96c6070974e77450ceb5ded3bbc6f7ac621",
+      "superseding_commit": "352ba664c79e30868e7a841e1029104505e715be",
+      "superseded_utc": "2026-09-19T03:17:16+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "2242ccfd0c64870e4e5ea638f7bf5b97dab7dc58181fadbcaf29db23858c6a90",
+      "previous_markdown_sha256": "c4bdae2e688c61dfbcc190a94d5aa4942502bb4d41aa0639cd4a7443d64140b0",
+      "error": "KeyError: 'render'"
+    },
+    {
+      "previous_commit": "9ca8767079837255f4d3e501d381225cce06bbc9",
+      "superseding_commit": "728c5e7e4eea4977e07b33c6d6e778ba208ad8e3",
+      "superseded_utc": "2026-09-19T14:27:51+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "e8391982e0375b4d248033d0fba20aae5f0aa110ca63f7077756042adf453d40",
+      "previous_markdown_sha256": "0ec5c30d1ffda3feebdae54ca7a43489c3026f8f543a2e0f9d6f0ff573be4b1f",
+      "error": "KeyError: 'render'"
+    },
+    {
+      "previous_commit": "a1222af9aeb70f442a365ee566c556ab3e3d36ea",
+      "superseding_commit": "894c62220fa92291424234dc33638bd6370fcca3",
+      "superseded_utc": "2026-09-19T16:25:29+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "ea2bf6139d83ad029eec3da7c92c26e2eafe4ab9fab4090a6afd4f17149f7a45",
+      "previous_markdown_sha256": "0ec5c30d1ffda3feebdae54ca7a43489c3026f8f543a2e0f9d6f0ff573be4b1f",
+      "error": "KeyError: 'render'"
+    },
+    {
+      "previous_commit": "76e6977733dd4234536359d2853d6bda27b77004",
+      "superseding_commit": "75f41434c22f9711de6a51d90d94a6a82771f30c",
+      "superseded_utc": "2026-09-23T05:44:28+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "181892e61c061f91ae6a6911e7b85055e5f7f08409c18a0d2c11ee878712460a",
+      "previous_markdown_sha256": "b681c8937f123ee7fb9f266233057f83de5ee9245d808c95de62067bb267bd35",
+      "error": "KeyError: 'render'"
+    },
+    {
+      "previous_commit": "b0467158d8bb47cdbed981f4359e74abc1bd5c89",
+      "superseding_commit": "87a3bb103860a70cdcbd479da2402c10570e9539",
+      "superseded_utc": "2026-09-27T00:14:24+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "3baa7df0331142562fa12674767a5e5febd4e4cea263483121653c92820360c9",
+      "previous_markdown_sha256": "d77841a1370aec0bf665f7d3e12dcd1b9f84996b19f4b7a0dd09ab2b49f81a1f",
+      "error": "KeyError: 'render'"
+    },
+    {
+      "previous_commit": "67cd735c4fdc9a8d3b65f00d16129f91fa10662a",
+      "superseding_commit": "c33e21d881e4ce492abe0dd09203def51e069818",
+      "superseded_utc": "2026-09-27T04:08:47+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "53db2bc7aabfbc8d1099c0f81b7df971fe235c7c08ab7472e39dab979d132eda",
+      "previous_markdown_sha256": "937f487534c8f33586771731d17694ae1dd8422622c78db25666b664f9156f0f"
+    },
+    {
+      "previous_commit": "a8ed107f36a5747a2710f26660a7c3c51ba6e9af",
+      "superseding_commit": "6c43549ea451f99a3e28612b63f5498ceb3d2b5a",
+      "superseded_utc": "2026-09-30T02:44:58+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "2547d542bcd95fb39aeac8a9cef6824da998324996d0f0178b2a830de50295e5",
+      "previous_markdown_sha256": "c14fec9f223a9923d321cf3c43693829f5424c1c0d9e63c49b456579bfbf7c40"
+    },
+    {
+      "previous_commit": "4c6ea85fd85b1f7bd8742a0a56ff1ba5c423de0f",
+      "superseding_commit": "7a10fb75a3d150993c4655c0cc05f8c5c5a82ea0",
+      "superseded_utc": "2026-10-01T02:41:11+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "04095e5f3eeec36eddcdcfe684e03d15ec7f2c2f0d2ee9ee97ac1518e4cc03a2",
+      "previous_markdown_sha256": "5264efc6924e240124c4d5c307fee6d3e62652ffcca7ce45e22dd6adc5dfc001"
+    },
+    {
+      "previous_commit": "28075152639bbe22146dc5883fefadcac3f9fdb3",
+      "superseding_commit": "610840ce428805287375417c46e6fe1b58b26bc3",
+      "superseded_utc": "2026-10-06T03:12:35+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "942ea3cd5e1cd4de966ad3e2cf1114f3268e923457098fa1050a0b1ae56d09fe",
+      "previous_markdown_sha256": "5c42ab67f84e9e1745b8e4a2f120526129d30d5f8d7f682dbef097dd1208bf1f"
+    },
+    {
+      "previous_commit": "85d8d54b1b11d62a51562b2b3aa371a52cc897ae",
+      "superseding_commit": "e6d8506078e88315f5b0f6c787276af9a74df462",
+      "superseded_utc": "2026-10-06T13:21:26+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "5d7336ea33d5d3e52600c47e6a07abbe9cb7db2da867d5e21659b341dbbc0548",
+      "previous_markdown_sha256": "7d4505055a0f01bc2062d442323ffed297908f60c280ac7090ba99631bf41f9d"
+    },
+    {
+      "previous_commit": "e6d8506078e88315f5b0f6c787276af9a74df462",
+      "superseding_commit": "e84fdc4c6d4d429fbcba6dd887874ce043b84713",
+      "superseded_utc": "2026-10-06T13:21:30+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "5d7336ea33d5d3e52600c47e6a07abbe9cb7db2da867d5e21659b341dbbc0548",
+      "previous_markdown_sha256": "b356da17de899be05c1ecaf54e814c811f18725731fec80b5ce5cc795527c500",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (e6d8506078e88315f5b0f6c787276af9a74df462)"
+    },
+    {
+      "previous_commit": "16ae42d3cfb5c8c4ce9f3b2e6b8d043db33c3f11",
+      "superseding_commit": "832e973f1ff3cb493586c391c4151e64a31094a2",
+      "superseded_utc": "2026-10-06T13:30:42+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "d04540c336133a16893fedd81efcf0d03fb20942c4d5aa969db6cb3104bfd09f",
+      "previous_markdown_sha256": "b356da17de899be05c1ecaf54e814c811f18725731fec80b5ce5cc795527c500",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (16ae42d3cfb5c8c4ce9f3b2e6b8d043db33c3f11)"
+    },
+    {
+      "previous_commit": "832e973f1ff3cb493586c391c4151e64a31094a2",
+      "superseding_commit": "77e46a442d5e238e67e2a4dc81aab342d07683d5",
+      "superseded_utc": "2026-10-06T13:30:45+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "d04540c336133a16893fedd81efcf0d03fb20942c4d5aa969db6cb3104bfd09f",
+      "previous_markdown_sha256": "12122d885ca34bb0e2f0d711eb171e08238d1c3a3f580a31281daf4d44d1a38a",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (832e973f1ff3cb493586c391c4151e64a31094a2)"
+    },
+    {
+      "previous_commit": "9b1560b37dabd4b85a2cedc27000e8502a342173",
+      "superseding_commit": "a69b39ae53741c71ae5cecbe345c8d2c577483c2",
+      "superseded_utc": "2026-10-06T13:45:57+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "8792ce04c0b393f100b8af2420749f144fe44d143368eb0da607f0dd73058799",
+      "previous_markdown_sha256": "12122d885ca34bb0e2f0d711eb171e08238d1c3a3f580a31281daf4d44d1a38a",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (9b1560b37dabd4b85a2cedc27000e8502a342173)"
+    },
+    {
+      "previous_commit": "a69b39ae53741c71ae5cecbe345c8d2c577483c2",
+      "superseding_commit": "93bb73b864c55b5a48874f981dc318dc28809a4b",
+      "superseded_utc": "2026-10-06T13:46:00+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "dcd1e38dc9361aebecf8c5a85c97d28f93672e0e1233133e90d3ab35288e93e9",
+      "previous_markdown_sha256": "12122d885ca34bb0e2f0d711eb171e08238d1c3a3f580a31281daf4d44d1a38a",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (a69b39ae53741c71ae5cecbe345c8d2c577483c2)"
+    },
+    {
+      "previous_commit": "5762acc6ca1299d65cb492dc4396f9c131e2cf59",
+      "superseding_commit": "23cd072ccc8ed8dfd0d074012d722fef1a55aeac",
+      "superseded_utc": "2026-10-06T14:00:15+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "dcd1e38dc9361aebecf8c5a85c97d28f93672e0e1233133e90d3ab35288e93e9",
+      "previous_markdown_sha256": "f6ba6bfb3f4db7047280eda271f0f4e380f558db9bc3371f3f68780eca36a426",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (5762acc6ca1299d65cb492dc4396f9c131e2cf59)"
+    },
+    {
+      "previous_commit": "b512195a724d7b8258c0a491e4a6e35b14a0df52",
+      "superseding_commit": "9066890473f8d73b58f1efd141352aa0f58ef427",
+      "superseded_utc": "2026-10-07T13:50:17+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "dcd1e38dc9361aebecf8c5a85c97d28f93672e0e1233133e90d3ab35288e93e9",
+      "previous_markdown_sha256": "95db9db52fbb9a1a6842f636fe716a99b32ecc3ada987da640dba311503e0df7"
+    },
+    {
+      "previous_commit": "9066890473f8d73b58f1efd141352aa0f58ef427",
+      "superseding_commit": "4dae1f898d91c298d12e67581227313bfa6f405d",
+      "superseded_utc": "2026-10-07T13:51:02+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "9ad92c9650c0a7263a8775e66b29b6bed979bcad7a84dd8a078792a361a9057a",
+      "previous_markdown_sha256": "95db9db52fbb9a1a6842f636fe716a99b32ecc3ada987da640dba311503e0df7",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (9066890473f8d73b58f1efd141352aa0f58ef427)"
+    },
+    {
+      "previous_commit": "02a46711741dc8f6591b89421704f50127ff5afc",
+      "superseding_commit": "3feeeb194a60a71398961e3efcb2faa1aaf02bb7",
+      "superseded_utc": "2026-10-07T13:52:05+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "9ad92c9650c0a7263a8775e66b29b6bed979bcad7a84dd8a078792a361a9057a",
+      "previous_markdown_sha256": "2679b39651e6ec8889a7de745e18eb919b13b3b23f3042a3c6c0775dd4d02231"
+    },
+    {
+      "previous_commit": "b6f10a544e8c6f541e755d23c77b8c997d2f2fc4",
+      "superseding_commit": "6a54454356cfbb7c947d8e60726b3821b6f7d770",
+      "superseded_utc": "2026-10-07T13:55:45+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "7b2b5bd6810a7ed48143c3e9cb3a5bf2f6b7988ecef4a580c2a13b685a072ccf",
+      "previous_markdown_sha256": "2679b39651e6ec8889a7de745e18eb919b13b3b23f3042a3c6c0775dd4d02231",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (b6f10a544e8c6f541e755d23c77b8c997d2f2fc4)"
+    },
+    {
+      "previous_commit": "4dba883c81892e679b8bf35c3b60d0f963e6f4c2",
+      "superseding_commit": "6a6e04c39f4324c54d2f06b12ced6b352b145f30",
+      "superseded_utc": "2026-10-07T15:45:10+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "7b2b5bd6810a7ed48143c3e9cb3a5bf2f6b7988ecef4a580c2a13b685a072ccf",
+      "previous_markdown_sha256": "8588b2c621f68b20a1540b676cb50a4d3dca15b9ffcf28d40d3bce6d683ecb69"
+    },
+    {
+      "previous_commit": "6a6e04c39f4324c54d2f06b12ced6b352b145f30",
+      "superseding_commit": "4fccf438d727126b5160a62dba5360bddc5e5866",
+      "superseded_utc": "2026-10-07T15:45:43+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "cb52373c47f0b3cc4c779856504399348c057a44da8348e1a2e43ca8b3fe488b",
+      "previous_markdown_sha256": "8588b2c621f68b20a1540b676cb50a4d3dca15b9ffcf28d40d3bce6d683ecb69",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (6a6e04c39f4324c54d2f06b12ced6b352b145f30)"
+    },
+    {
+      "previous_commit": "a2ecf6a3eb799794c3b1c3f2660e4a2a90ad7237",
+      "superseding_commit": "9de578835a6b935ce89624e1171a526e977c2be1",
+      "superseded_utc": "2026-10-07T17:11:04+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "cb52373c47f0b3cc4c779856504399348c057a44da8348e1a2e43ca8b3fe488b",
+      "previous_markdown_sha256": "fb1e94c77d3154a0ecda38ff787a9ab600011c9bbfe689edb1a7ae0c7c40c37d"
+    },
+    {
+      "previous_commit": "9de578835a6b935ce89624e1171a526e977c2be1",
+      "superseding_commit": "c41cb6f7662f6e314c99d6424f4c10d2cbbad33e",
+      "superseded_utc": "2026-10-07T17:11:32+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "b3b35cbc31f771aa20ff9c4cb25036f4adcae9456c60e37efbcf1e51f87317f4",
+      "previous_markdown_sha256": "fb1e94c77d3154a0ecda38ff787a9ab600011c9bbfe689edb1a7ae0c7c40c37d",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (9de578835a6b935ce89624e1171a526e977c2be1)"
+    },
+    {
+      "previous_commit": "64a7da6faa852cd8ebd2b22b3c60878a3c0cf96d",
+      "superseding_commit": "348761fed4e30fbe0dfc53719e0a6b02759a26c5",
+      "superseded_utc": "2026-10-07T18:31:55+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "b3b35cbc31f771aa20ff9c4cb25036f4adcae9456c60e37efbcf1e51f87317f4",
+      "previous_markdown_sha256": "00490f33cd5e0b1783a805e3a43f75d8345a5d0601c251253be732d15a27ffbc"
+    },
+    {
+      "previous_commit": "348761fed4e30fbe0dfc53719e0a6b02759a26c5",
+      "superseding_commit": "3ed6aa19fd235ecea3c3486d67f1c006b91e18be",
+      "superseded_utc": "2026-10-07T18:32:23+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "3334dac8ddc907a05dc0d26b55009b1b88774607ddb27c7395fa74b4a2887e5a",
+      "previous_markdown_sha256": "00490f33cd5e0b1783a805e3a43f75d8345a5d0601c251253be732d15a27ffbc",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (348761fed4e30fbe0dfc53719e0a6b02759a26c5)"
+    },
+    {
+      "previous_commit": "ebfe6c1fa18152650f2237020462cdc239a2e73c",
+      "superseding_commit": "13fa39d53561c98a9e8a4417e6dcc4bca47f5a3f",
+      "superseded_utc": "2026-10-07T21:20:20+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "3334dac8ddc907a05dc0d26b55009b1b88774607ddb27c7395fa74b4a2887e5a",
+      "previous_markdown_sha256": "14f0a76a2d1931c23c1fd4c4e1dfe6894d18e4fd151e9b8dac86ca57936c63fa"
+    },
+    {
+      "previous_commit": "13fa39d53561c98a9e8a4417e6dcc4bca47f5a3f",
+      "superseding_commit": "a06d13f32454c11b44e0f83dc4f50f447ce35119",
+      "superseded_utc": "2026-10-07T21:20:55+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "dcef4c199c4120dd614ce78b60701b194f1754b2be78a5b33759957f1afd76e1",
+      "previous_markdown_sha256": "14f0a76a2d1931c23c1fd4c4e1dfe6894d18e4fd151e9b8dac86ca57936c63fa",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (13fa39d53561c98a9e8a4417e6dcc4bca47f5a3f)"
+    },
+    {
+      "previous_commit": "d4aa8badff76a8cfd45af3da57409ab495d9f4ed",
+      "superseding_commit": "f20af93d012ed6e91d46f3a780e23216ce4728c3",
+      "superseded_utc": "2026-10-07T21:24:09+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "dcef4c199c4120dd614ce78b60701b194f1754b2be78a5b33759957f1afd76e1",
+      "previous_markdown_sha256": "9b717221dc91b12cf45ba5b8773dc71734e0e758de6da50d143ba69768b2e98f"
+    },
+    {
+      "previous_commit": "f20af93d012ed6e91d46f3a780e23216ce4728c3",
+      "superseding_commit": "671de337b56db50bf1653d1f25771533b6fc41db",
+      "superseded_utc": "2026-10-07T21:24:41+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "6f6a4ba0d2a4f3ca2bb631cbe328a9fd5f6a62b2c8e02f306b655300bdf05809",
+      "previous_markdown_sha256": "9b717221dc91b12cf45ba5b8773dc71734e0e758de6da50d143ba69768b2e98f",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (f20af93d012ed6e91d46f3a780e23216ce4728c3)"
+    },
+    {
+      "previous_commit": "b22448455efe520bb8fb5a7bded5f69be81de62d",
+      "superseding_commit": "edb6b09037b423f18a04508072082853e9e20f55",
+      "superseded_utc": "2026-10-07T21:28:25+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "6f6a4ba0d2a4f3ca2bb631cbe328a9fd5f6a62b2c8e02f306b655300bdf05809",
+      "previous_markdown_sha256": "2e73122ec68a319febf74c15ae6a8afa807049f2845b1d271a0e9061c3ab786d"
+    },
+    {
+      "previous_commit": "55dd8b926ddbd76029c5d5aa6b1a2a14c1806321",
+      "superseding_commit": "c06e87f41a4c3bc0e359cdc533ace64ddc3d84ae",
+      "superseded_utc": "2026-10-07T21:29:38+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "3fe8fc040b3e02554ef0c5c593b4e1d4901b2ff9d88b8b2b36da6d193444ccad",
+      "previous_markdown_sha256": "2e73122ec68a319febf74c15ae6a8afa807049f2845b1d271a0e9061c3ab786d",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (55dd8b926ddbd76029c5d5aa6b1a2a14c1806321)"
+    },
+    {
+      "previous_commit": "8077c49854e166e21ce60b92d17bce2dd80fa13e",
+      "superseding_commit": "2590cd3e6d7a40da80e27a9c4769f950836fcf63",
+      "superseded_utc": "2026-10-07T23:08:55+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "3fe8fc040b3e02554ef0c5c593b4e1d4901b2ff9d88b8b2b36da6d193444ccad",
+      "previous_markdown_sha256": "f30965fcbf8cec3654770518a7123c8bb1599847db43b0962fd74023eda42938"
+    },
+    {
+      "previous_commit": "2590cd3e6d7a40da80e27a9c4769f950836fcf63",
+      "superseding_commit": "7f221e8775b179443e5e104fab660862c1777aad",
+      "superseded_utc": "2026-10-07T23:09:34+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "cd5a41a06f2d9c1ef6125033d596d2f750495b2ba3893d22c20a1ef11e820dc7",
+      "previous_markdown_sha256": "f30965fcbf8cec3654770518a7123c8bb1599847db43b0962fd74023eda42938",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (2590cd3e6d7a40da80e27a9c4769f950836fcf63)"
+    },
+    {
+      "previous_commit": "81080b0c6909d2937b3c7fb0555c8a003bbc8e7f",
+      "superseding_commit": "6e5cd74a95c20c68d5569517074a2450b0cb6629",
+      "superseded_utc": "2026-10-07T23:11:33+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "cd5a41a06f2d9c1ef6125033d596d2f750495b2ba3893d22c20a1ef11e820dc7",
+      "previous_markdown_sha256": "e842a9a4614f3bac0c178af3794797961ef7586a565b5354b989c209b6fa5b7c"
+    },
+    {
+      "previous_commit": "6e5cd74a95c20c68d5569517074a2450b0cb6629",
+      "superseding_commit": "572bc4146b1cea52e4d4adff1a4ead97fec87cb6",
+      "superseded_utc": "2026-10-07T23:12:07+00:00",
+      "verified_pair": false,
+      "previous_json_sha256": "63e2fe632b562a7bb64f6eff0922394c087c840c796dfbb73de5470229de6d54",
+      "previous_markdown_sha256": "e842a9a4614f3bac0c178af3794797961ef7586a565b5354b989c209b6fa5b7c",
+      "error": "ValueError: Constitution JSON/Markdown pair is out of sync (6e5cd74a95c20c68d5569517074a2450b0cb6629)"
+    },
+    {
+      "previous_commit": "24c5957a6d604bad00cd8ea20c49f5775d686171",
+      "superseding_commit": "e60f06a23ba5889eb6f35792768fd1a0c7776754",
+      "superseded_utc": "2026-10-08T02:54:54+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "63e2fe632b562a7bb64f6eff0922394c087c840c796dfbb73de5470229de6d54",
+      "previous_markdown_sha256": "642ca1bc86cf5dc40ea718f0101bd2a7126413a289263dbc22492799c9feeeb1"
+    },
+    {
+      "previous_commit": "51d7371003fc48ab026cd1d5a21cb0411057d6d3",
+      "superseding_commit": "c94509828e1a16124a777f57c4a8ababfba6352e",
+      "superseded_utc": "2026-10-08T22:47:03+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "f82890beab6f627c2fd6ccfe4607a895c4cecf206b07f66ebb9334f5b1a1de4b",
+      "previous_markdown_sha256": "5587de879fa533677ba49b03563eef67f17af7d75b2a44da0b7b9ce50e2c8fd7"
+    },
+    {
+      "previous_commit": "c94509828e1a16124a777f57c4a8ababfba6352e",
+      "superseding_commit": "5a4046721e56fd96e88eb42a215ba264384e764f",
+      "superseded_utc": "2026-10-09T12:18:31+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "6cfaa415f0fc8f785bd89f927a5bcd3bc37e2d8c03f9fb76abbf469dd46e626a",
+      "previous_markdown_sha256": "8a3371593a4cf3a3050396fab7fbcabd2fdfa423d2ea956e7aa58b84203bff6c"
+    },
+    {
+      "previous_commit": "5a4046721e56fd96e88eb42a215ba264384e764f",
+      "superseding_commit": "1f3ba0be9d57f35d5b281a301d6f0721287fd0dc",
+      "superseded_utc": "2026-10-09T15:23:40+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "ce63aabd9180c86674076f4178cfba22ac7e6d4b991b233c0c9aec8984b9dfca",
+      "previous_markdown_sha256": "2a77d906ef0934df485267c77a331384ad097db9dce499d81bf8796793b529a6"
+    },
+    {
+      "previous_commit": "1f3ba0be9d57f35d5b281a301d6f0721287fd0dc",
+      "superseding_commit": "4c7dd0e769dfc6829559abc0347e15e871a5dc45",
+      "superseded_utc": "2026-10-09T22:28:22+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "7be3bbc37337edf7110e2fd71d5ee01f9624bb10494ef630b274131bc926cb4d",
+      "previous_markdown_sha256": "4a185ee6142c6e6d7a42f5d64c876841181112f96601ea375d7030055e66fb93"
+    },
+    {
+      "previous_commit": "4c7dd0e769dfc6829559abc0347e15e871a5dc45",
+      "superseding_commit": "e652cf779a9391f9115ff94fee9c0f3afee1eb35",
+      "superseded_utc": "2026-10-10T01:16:19+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "a2b3c21cd2f2a3df07cbc561a863d18ca2c84c8019bd31f0baf8b44ee6342b20",
+      "previous_markdown_sha256": "79eea9ba9c087fe50f2a49f11ea5861681e5020295776a6a5306e9a0f541875e"
+    },
+    {
+      "previous_commit": "e652cf779a9391f9115ff94fee9c0f3afee1eb35",
+      "superseding_commit": "48ea007a7073f0c90d2abe28bd8c061a46f01605",
+      "superseded_utc": "2026-10-10T13:48:22+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "2a5ca2a614d2b672cb3a063253a3b172878bb639615e88f4d4896ff7b1519b63",
+      "previous_markdown_sha256": "1b2071f79e9fafbe38e598448034ffeaf001486e8866a2975c352df7adf9c735"
+    },
+    {
+      "previous_commit": "48ea007a7073f0c90d2abe28bd8c061a46f01605",
+      "superseding_commit": "eab7b1ba8b50241341c7237135acaad877171f7f",
+      "superseded_utc": "2026-10-10T14:19:41+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "f89c542fbc8f9d702e7b31c7764429d41aa501052f2f735ea7069cabd9915614",
+      "previous_markdown_sha256": "cdc25bf828cfbff60707b4501ac17ea907897ff78c698531e8939b637411b678"
+    },
+    {
+      "previous_commit": "25e3fc5a105a6df5758d25c69db0352b5058cd04",
+      "superseding_commit": "0428629e77a771f42c26a5eae5fccc31871aa661",
+      "superseded_utc": "2026-10-10T15:01:21+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "6af6ae4c3ac4b791b4d8d844d3a8b5103024caa1ebc209a733a916f7fcd4203c",
+      "previous_markdown_sha256": "e06a3375339749ca578dac0ab0164ca69eb6039aa4c8233722d7538dbe951123"
+    },
+    {
+      "previous_commit": "706be33ba1b0c789b2fccc6b8644831383f290cc",
+      "superseding_commit": "d55e0513168d980dbef0c64060b9b4b0556a2002",
+      "superseded_utc": "2026-10-10T18:52:11+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "eac686f6f1813a01b9a2b6690761b6f76bd176f24a4cd8033a6d0b712778412c",
+      "previous_markdown_sha256": "183cc7ec405a791e98765ea305f94dae5d03ee81f40685154787d76da1e4873a"
+    },
+    {
+      "previous_commit": "2d435c2c01ef2cf87da305ac82876c62ed24c040",
+      "superseding_commit": "97d8c01f8a44b702b65db76f7ec7a7cc933310f8",
+      "superseded_utc": "2026-10-10T21:35:42+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "80285cab80766338f7c1a04bc780d2811e88fd0259ab53da35552064ce004de5",
+      "previous_markdown_sha256": "2b5433a2d5ef69f715ca3ae6a9f5c79c77d6784dbbffdd3b09e8500c931adaa9"
+    },
+    {
+      "previous_commit": "97d8c01f8a44b702b65db76f7ec7a7cc933310f8",
+      "superseding_commit": "072ba3f51c88a1c748cd155a2ad844b042bc7288",
+      "superseded_utc": "2026-10-11T02:16:34+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "d4b30c5152ecc6aea624b3837779e73544658fdfce57d5008c45c6dec38c7c1f",
+      "previous_markdown_sha256": "ac1653551ea81553f93209c3ccb12525a1ba763b8dbe65effac4b8df1ad8a809"
+    },
+    {
+      "previous_commit": "054872d3fd10809dde3e9be5a28e7a4d2b163918",
+      "superseding_commit": "ad11bcb634778bcce336f969a80ffd41ce40f7b6",
+      "superseded_utc": "2026-10-11T13:46:15+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "b765d8853b40d28403cc13f3ef20b05849938ee625aaa5e10207b02e1198e0cb",
+      "previous_markdown_sha256": "884e5cbd46f7ba30f0358cd41282f6800ff95e01755cda5a0bd5d2b3b21b7ffc"
+    },
+    {
+      "previous_commit": "2e325d03eaee3371c859e7b1b4055878f3dee914",
+      "superseding_commit": "088504177ec7716169b375cad8528e5892816845",
+      "superseded_utc": "2026-10-11T14:33:20+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "558ff686b48648275ae08afd9501ae0bca9930f9cccbb2811b6307d865c81a00",
+      "previous_markdown_sha256": "07d53b8ec671bfa03ae5305aac1c9a92a5abbd04c6bb32db1f18f6e90dde3180"
+    },
+    {
+      "previous_commit": "088504177ec7716169b375cad8528e5892816845",
+      "superseding_commit": "c3e4c7d3d6499284c22b7fa8fb379e00bb3e12ba",
+      "superseded_utc": "2026-10-11T14:36:25+00:00",
+      "verified_pair": true,
+      "previous_json_sha256": "f250b2a5f72334189285be9bd5d5cbacdb190c3bdec8e0be87fd79864665e30a",
+      "previous_markdown_sha256": "24aaf4ace6dbcb933fe4b6720d701f4befec1ac611b1401ad3ef1370e13bfb36"
+    }
+  ]
+}

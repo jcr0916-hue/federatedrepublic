@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="orath-title orath-desc">
+  <title id="orath-title">Flag of Orath</title>
+  <desc id="orath-desc">A gold sunrise on white above green agricultural fields with gold furrows. Green frames the upper edge.</desc>
+  <rect width="1536" height="1024" fill="#19543b"/>
+  <path fill="#fff" d="M0 192h1536v388H0z"/>
+  <g fill="none" stroke="#d5ad45" stroke-width="24">
+    <path d="M768 258v66M607 300l38 54M497 424l62 22M929 300l-38 54M1039 424l-62 22"/>
+  </g>
+  <g fill="#d5ad45">
+    <path d="M612 580a156 156 0 0 1 312 0zM0 580h1536v24H0z"/>
+    <path d="M638 604h48C480 718 312 874 204 1024H96C238 837 425 691 638 604z"/>
+    <path d="M717 604h24C640 728 552 879 492 1024H410C488 835 596 694 717 604z"/>
+    <path d="M754 604h28l26 420h-80z"/>
+    <path d="M850 604h48c213 87 400 233 542 420h-108C1224 874 1056 718 850 604z"/>
+    <path d="M795 604h24c121 90 229 231 307 420h-82C984 879 896 728 795 604z"/>
+  </g>
+</svg>
