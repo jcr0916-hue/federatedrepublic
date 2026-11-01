@@ -2,8 +2,8 @@
 
 **Original branch:** `testing/korda-agent-readiness-20261101`
 **Base:** active feature `docs/federated-editorial-operating-model-20261101` at [`be462b06604681d4dadfdabafb395b0c64876e04`](https://github.com/jcr0916-hue/federatedrepublic/commit/be462b06604681d4dadfdabafb395b0c64876e04), [PR #273](https://github.com/jcr0916-hue/federatedrepublic/pull/273).
-**PR:** not yet opened at initial checkpoint; review as a draft stacked on #273, not as an instruction to merge.
-**Head at handoff:** initial save commit pending; exact final SHA is reported in the PR and saving chat.
+**PR:** [#274](https://github.com/jcr0916-hue/federatedrepublic/pull/274), draft stacked on #273; no merge is requested.
+**Substantive checkpoint commit:** [`0e0cb5df4f7b8e721a9467613bc92d3654102a28`](https://github.com/jcr0916-hue/federatedrepublic/commit/0e0cb5df4f7b8e721a9467613bc92d3654102a28). This handoff-reference follow-up is its direct child; the exact final head is reported in #274 and the saving chat.
 **Status:** saved documentation and historical evidence; testing remains incomplete; nothing shipped to main.
 
 ## Purpose and branch choice
@@ -26,7 +26,7 @@ The chosen testing branch starts at the open editorial feature's exact existing 
 - Trial 01 is **conditional pass — incomplete submission**, as assessed in Constitution 15. Parts I/II were submitted; Parts III/IV are missing. The review finds constitutional/Compact/current-canon understanding satisfactory, source verification partial, and editorial independence not yet demonstrated.
 - The saved completion prompt requires three independent story opportunities (at least one ordinary local concern), detailed source verification and an accurate distinction between the Convention and the federal Assembly members constituting it.
 - No new external-agent trials, runtime/access inspection, full source audit or Trial 02/03 was performed. The source packet and training upload are author-reported. Earlier chat turns, a separate Constitution training attachment, and a live TypingMind export were not supplied.
-- Source-fidelity verification passed for all **eight original files**. All **twelve Compact articles** match the corrected draft after exactly the two approved body copyedits, with heading/blank-line formatting normalized for comparison. **45 relative documentation links** resolve against the base tree plus the checkpoint. Trial-completeness and follow-up checks passed; **17 files, all under `docs/`**, are included. Remote CI is not established at initial commit.
+- Source-fidelity verification passed for all **eight original files**. All **twelve Compact articles** match the corrected draft after exactly the two approved body copyedits, with heading/blank-line formatting normalized for comparison. **45 relative documentation links** resolve against the base tree plus the checkpoint. Trial-completeness and follow-up checks passed; **17 files, all under `docs/`**, are included. Remote-tree verification also confirmed all 17 uploaded blobs match the locally verified bytes and every other pre-existing file is unchanged. Remote CI is tracked on [PR #274 checks](https://github.com/jcr0916-hue/federatedrepublic/pull/274/checks); no unobserved CI result is asserted here.
 - Inspected `vercel.json` keeps non-main Git deployments disabled (`"**": false`, `"main": true`); no deployment configuration is changed. The World publishing workflow runs checks for branches and PRs; this is validation, not an instruction to publish new records.
 
 ## Decisions, rejected approaches and reuse
