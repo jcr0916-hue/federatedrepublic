@@ -1,0 +1,97 @@
+# Korda Territorial Agent — Trial 01 Readiness Assessment
+
+*Prepared as internal demonstration of constitutional and canon readiness. Not a published record or news draft. All assertions below are drawn from the supplied training files (Constitution, Korda Territorial Compact, published references, editorial context) as pinned at `main` @ `ed68a7aa62fe`, frontier **Y14 M2**; `worldSeq` 178; `nrsSeq` 133.*
+
+---
+
+## Part I — Territorial Government
+
+### 1. Origin of the Korda Territorial Compact
+
+The Compact originates in the Republic's founding-era status election under **§16.2**. The Korda people were a recognized Indigenous political entity on the founding register. During the founding admission period, Korda — through its own lawful governance process — elected **Territorial Integration**, rather than Associated Community status.
+
+Under §16.2(2), an election for Territorial Integration constituted the petition and confirmation otherwise required by §15.6. The nation and the Republic's Legislature therefore negotiated an **incorporation agreement**, ratified by **two-thirds of both chambers** as §15.6 requires. That incorporation agreement now stands as Korda's **Territorial Compact under §15.1**.
+
+Two consequences follow and remain operative:
+
+- Under **§16.2(7)**, the election of Territorial Integration **permanently ended** Korda's founding Associated Community option. There is no current Associated Community status to revive; the only route back to a compact relationship under Article XX would be through Korda later becoming an independent sovereign nation (a status it does not hold and is not pursuing).
+- The Compact's preamble and Article 1(4) make clear the incorporation transition is **completed**. The Compact governs the *ordinary government* of the Territory; it does not reopen or re-ratify the incorporation itself.
+
+### 2. The Korda Territorial Assembly
+
+The Assembly is Korda's unicameral **elected local governing authority over matters of local concern**, satisfying §15.1's requirement. Its features:
+
+- **Composition (Art. 2(2)):** three representatives per federal Assembly district within Korda. Total membership equals three times the number of federal Assembly districts, adjusting automatically as that number changes.
+- **Election (Art. 2(3)):** multi-member **Ranked Choice Voting (single transferable vote)** within each federal Assembly district. Representatives are elected together for **four-year terms**, following the four-year federal electoral cycle and conducted within the federal electoral period.
+- **Districts (Art. 2(4)):** the Assembly is elected on the same districts the **Elections Panel draws for federal elections under §3.3**. Korda maintains **no separate territorial districting system**.
+- **Separation (Art. 2(5)):** membership in the Territorial Assembly is institutionally **separate** from representation in the federal Assembly. The two offices, their mandates, and their removal are distinct.
+- **Powers (Art. 2(6)):** it enacts territorial legislation on matters of local concern, subject to the Constitution, the Compact, and valid federal law.
+
+### 3. The Chief Minister
+
+- **Election (Art. 4(2)–(3)):** the Chief Minister heads the Territorial Administration and is elected by the **territorial electorate at large** by Ranked Choice Voting. A candidate is nominated either by the Territorial Assembly or by **citizen petition**, under arrangements established by territorial legislation.
+- **Term (Art. 4(4)):** a **two-year term**, following the two-year federal Assembly electoral cycle, conducted within the federal electoral period.
+- **Service limit:** no person may hold the office of Chief Minister, *or territory-wide acting service in that office*, for more than **eight years in total** (consecutive or not). A portion of a term counts; acting service under Article 6 also counts.
+- **Mandate (Art. 4(5)):** the Chief Minister holds an **independent electoral mandate** and is **not removable by a vote of no confidence**.
+- **Ministers (Art. 4(6)):** the Chief Minister appoints and dismisses territorial ministers, within any qualifications territorial legislation sets.
+- **Removal (Art. 5):** only by Territorial Assembly **impeachment**, for grave misconduct, serious constitutional violation, corruption, or abuse of office. It requires due process and a **two-thirds vote of the full membership**. Disagreement with policy, judgment, or lawful discretion is expressly **not** a ground. A removal is subject to judicial review of constitutional and procedural legality.
+- **Succession (Art. 6):** on a permanent vacancy, the **Speaker of the Territorial Assembly** serves temporarily as Acting Chief Minister (suspending legislative presiding duties while the Assembly arranges its own interim presiding). A **territory-wide special election within 90 days** fills the vacancy; the elected successor serves the remainder of the term. If the Speaker is unable to serve, the **Civic Consul** may appoint a temporary acting executive from eligible territorial officials *pursuant to applicable federal law*; that appointee may exercise only authority necessary to preserve continuity, may not enact legislation, make permanent appointments, or alter the Compact, and serves only until the election. Any such appointment is judicially reviewable.
+
+### 4. Local Government, Traditional Institutions, Courts, Taxation, Budgets
+
+- **Local government and traditional institutions (Art. 7):** Korda may maintain, recognize, reorganize, or establish counties, municipalities, cities, other local governments, **and traditional or customary community institutions**. Federal Assembly electoral districts do **not** replace traditional or municipal jurisdictions. Korda's **Indigenous identity is preserved**, and the Republic's obligations to recognized Indigenous nations under **§16.3** and continuity of existing arrangements under **§16.5** are **not extinguished or diminished** by the Compact.
+- **Courts (Art. 8):** Korda's principal judicial framework is the **federal judicial system under Article IV**. Korda may organize **local courts, community tribunals, and customary dispute-resolution institutions** to the extent Republic law authorizes; these determine ordinary local matters within their lawful jurisdiction. Korda **shall not establish a separate territorial supreme court**. Federal courts retain their constitutionally and statutorily assigned appellate and review authority. **Traditional dispute resolution remains subject to Article I**, including the right to an independent and impartial court under §1.1.
+- **Taxation and budgets (Art. 9):** the Territorial Assembly may enact **budgets, appropriations, taxes, and fees**, and the Territory may levy lawful revenue, subject to the Compact, **§12.3** (federal exclusive taxation of duties/tariffs at the national level), and the internal-commerce rules of **§12.5**. Valid federal legislation specifically governing territorial finances may supersede conflicting territorial provisions. Korda's participation in federal fiscal transfers, **equalization under §12.6**, and the **social-state systems of Article XII** is preserved, with the **Executive Monitor** retaining constitutional financial oversight.
+
+### 5. Territorial Law, the Compact, Republic Law, and the NRS
+
+- **Hierarchy:** Korda is governed by the Constitution, by federal law enacted within federal competence, and by the Compact (Art. 1(1)). Where the Compact does not establish a governing arrangement, **applicable Republic law governs**; territorial legislation must comply with the Constitution, the Compact, and valid superseding federal law (Art. 1(3)). The Compact is read consistently with the Constitution, and **the Constitution prevails** on any conflict (Art. 1(6)).
+- **National Record System (Art. 10):** the NRS is the **authoritative system for official territorial legal records**. Territorial legislation, regulations, and official acts requiring publication are filed with the NRS under Article X. **Korda operates no separate authoritative territorial legal publication system**; only ordinary internal administrative records may be maintained locally, still subject to Article X's record obligations.
+
+### Distinguishing Korda's Institutions
+
+| Institution | Nature | Key points |
+|---|---|---|
+| **Korda Territorial Assembly** | Elected *local* governing authority (Art. 2) | Enacts territorial legislation; 3 reps per federal district; 4-year terms. |
+| **Chief Minister / Territorial Administration** | Territorial executive (Arts. 4–6) | At-large RCV election; 2-year term; 8-year service cap; impeachment only; independent mandate. |
+| **Korda's federal Assembly delegation** | *Federal* representation in the Assembly | Korda elects federal Assembly representatives (§3.2). As a **Territory, Korda has no federal senators** (§3.5 applies to States only). A delegation's members are not automatically aligned with the territorial government. |
+| **Territory Convention (33 delegates)** | *Temporary* constitutional body under §15.5.a(4) | Convened after the JMC determination and judicial proceedings over the collided corridor-merger and Statehood claims. It produced the adopted Northern Lake Settlement proposal (28–5). It is **not** the Territorial Assembly, not the federal delegation, and not an ongoing governing institution. |
+
+---
+
+## Part II — Current Canon
+
+### Korda's Status
+
+Korda is an **Indigenous Territory** of the Federated Republic — not a State, not an Associated Community, and not an independent nation. Its governing institutions and powers are those of the Territorial Compact and applicable law. It elects federal Assembly representatives but **elects no federal senators**.
+
+### The Open Constitutional File (in correct order)
+
+1. **Two certified claims collided:** a proposed corridor merger with Kelvant, and a whole-Korda Statehood petition.
+2. A **Constitutional Convention** was convened following the relevant **Joint Monitor Council** determination and judicial proceedings.
+3. In **Y13 M12**, the Convention (33 delegates) adopted an amended proposal — the **Northern Lake Settlement** — by **28–5**. Only the three northern districts (**LC-N1** Varenne Station, **LC-N2** Upper Lake Road, **LC-N3** North Freight Landing) are proposed to merge with Kelvant; the southern lakefront and interior would remain Korda on a separately governed Statehood path.
+4. In **Y14 M1**, the Elections Panel authenticated district boundaries and opened the **affected-electorate docket** (NRS-Y14-0007).
+5. In **Y14 M2**, the Panel published a **residence-record correction procedure** (NRS-Y14-0043).
+
+### What Has *Not* Happened
+
+None of the following exists in the pinned frontier, and none may be treated as current or inevitable:
+
+- A certified final electorate list, ballot wording, referendum date, or referendum result (the 60% support / 50% participation threshold under §15.4 has not been met because no referendum has run).
+- Kelvant's constitutional approval, the **joint Legislative–Judicial Monitor assessment**, or **Senate ratification**.
+- Any effective transfer, completed merger, or completed Statehood determination (Korda's Statehood path remains subject to its own independent Monitor audits and legislative determinations under §15.2).
+- A funded or delivered continuity schedule for affected services and obligations — these are conditions to be worked out, not settled costs.
+
+**Key disambiguation discipline:** authenticated borders ≠ certified electors; Convention adoption ≠ popular ratification; merger ≠ Statehood; a historical viability assessment ≠ final approval; a proposed service commitment ≠ funded, delivered service.
+
+### Federal Representation and Perspective
+
+Korda's federal Assembly representatives may carry local concerns into national debates, participate in committees, submit initiatives, and disagree with one another and with territorial leaders. Established Convention participants — **Jalen Mire** (corridor-support), **Tomas Rell** (remainder viability), and **Dessa Orin** (intact Korda / southern access) — each voted in favor at adoption but are **not** a permanent unified alliance; their positions may evolve only through new approved work. **Mara Iset** (*The Korda Press*) is an independent journalistic voice, not a Convention agent.
+
+### Source-Discipline Caveat
+
+The supplied references are a **pinned snapshot**, not a guarantee that `main` is unchanged. Before undertaking any original reporting, I would refresh `worldChronology.json`, `worldClocks.json`, `currentFiles.json`, and the NRS/news directories through GitHub to confirm nothing has advanced past Y14 M2. I will not publish, allocate NRS numbers, invent institutions (a Korda Governor, Senate seats, or a territorial supreme court), or advance fictional time.
+
+---
+
+I am ready to proceed to original reporting on approval. Please indicate which beat or proposal type you would like me to develop first (news draft, proposed official record, coordinated package, or a no-publication recommendation), and I will submit it in the required submission-standard format with a separate editorial note.
