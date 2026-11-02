@@ -19,3 +19,14 @@
 **Integration chain:** #273 (editorial framework) → #274 (Korda Compact/trial checkpoint) → #275 (Korda candidates) → #276 (editorial queue, discovery proposal, agent briefs, new candidates). These are separate branch dependencies; do not merge out of order or delete supporting refs. Main and live site unchanged by these notes.
 
 **Unfinished technical release gates:** confirm latest main, World packet, source links, constitutional provisions and seasons; build two or more correctly metadata-tagged World HTML article shells with preview-first `npm run world:new`; implement/validate global and State discovery links; tests and review; final release authorization. No World HTML or UI changes are claimed by this checkpoint.
+
+
+## Flag initiative — combined next-release review (added 2026-11-01)
+
+**Approved scheduling intent:** The President directs that the new Torenthia flag content be considered for the same upcoming merge/release window as the editorial publication package. This is **not** authority to merge now.
+
+- **Independent draft PR:** [#277](https://github.com/jcr0916-hue/federatedrepublic/pull/277), `feature/torenthia-flag-initiative-20261101` → `main`, tip `6327166b93cb54ef380b145dc280ba308c093678`. Unlike #276, this PR branches from `main`, not the stacked editorial chain.
+- **Contents:** Founding flag initiative within `scenario-the-first-twelve-years.html`; four SVG finalist designs; one `STORY-BIBLE.md` canon/context update; design provenance and permanent branch handoff. Winning design is Four Founders by ordinary National Flag Act in the founding history, with no invented exact date or count. The federal emblem remains the seal.
+- **Reported validation:** PR #277 records passing full publishing suite and final-head GitHub workflows, but these results apply to the **flag branch independently**, not to the combined release.
+- **Integration discipline:** Retain #277 and #273–#276 as separate open PR histories. For the release, inspect the combined diff and reconcile `STORY-BIBLE.md`, scenario, shared templates, and article chronology. Merge or otherwise integrate only after final checks in a tested combined tree and the President's release clearance. Do not retarget, cherry-pick or merge tonight.
+- **Publication classification:** The founding-era scenario addition is historical scenario/flag content, **not** a new Y14 M2 World/NRS news item. Do not allocate `worldSeq`/`nrsSeq`, establish a new contemporary flag-adoption event, or move fictional time for it.
