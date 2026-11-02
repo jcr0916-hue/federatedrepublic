@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 96" width="150" height="96" role="img" aria-labelledby="title desc">
+  <title id="title">Proposal C — New Republic</title>
+  <desc id="desc">A navy field with a white band rising from lower left to upper right and a central gold circle bearing a navy cross.</desc>
+  <rect width="150" height="96" fill="#102a4d"/>
+  <path d="M0 83L150 13V28L0 96Z" fill="#f2f1e9"/>
+  <circle cx="75" cy="48" r="15" fill="#d5ad52"/>
+  <path d="M75 37V59M64 48H86" stroke="#102a4d" stroke-width="3"/>
+</svg>

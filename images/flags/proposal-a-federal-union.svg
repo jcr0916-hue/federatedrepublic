@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 96" width="150" height="96" role="img" aria-labelledby="title desc">
+  <title id="title">Proposal A — Federal Union</title>
+  <desc id="desc">A navy field with a horizontal white band and a central gold ring with a navy center.</desc>
+  <rect width="150" height="96" fill="#142e55"/>
+  <rect y="34" width="150" height="28" fill="#f5f3ea"/>
+  <circle cx="75" cy="48" r="17" fill="#c9a34b"/>
+  <circle cx="75" cy="48" r="9" fill="#142e55"/>
+</svg>

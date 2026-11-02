@@ -38,6 +38,14 @@ Do not treat an archived plan as canon when it conflicts with a published piece 
 - By **Year 10**, Casimir Rehn is Legat Consul and Ines Carrow serves as Director of Foreign Affairs.
 - The transition scenario closes at **Year 12, Month 9**, immediately before `torenthia-news-001.html`.
 
+### Torenthia's flag and the Federated Republic seal
+
+- During the founding transition, a **nonpartisan citizen initiative** gathers proposed national flags from Harren, the Commonwealth, Vardan, and Korda. It presents four finalists to the newly constituted federal Assembly: **Federal Union**, **Constitutional Republic**, **New Republic**, and **Four Founders**. The four designs are embedded in the [founding scenario](../../scenario-the-first-twelve-years.html#four-founders).
+- The Assembly considers the finalists and selects **Four Founders**. The **National Flag Act**, enacted through ordinary legislative procedure, legally adopts it as **Torenthia's national flag**. This is an ordinary statute, not a constitutional amendment. No adoption date, vote count, or public preference ballot has been established.
+- Four muted goldenrod saltire arms represent **four founding political communities**: Harren, the Torenthian Commonwealth, Vardan, and Korda. Only **three sovereign predecessor countries** ratified the merger. Korda's separate Indigenous status election and Territorial Integration remain unchanged.
+- The flag has a **deep navy field**, **thin white lines edged in dark red along the golden arms**, and a **pure white four-point central star with no red outline**, representing their union as one Republic. The **Federated Republic emblem remains the seal**.
+- Reuse the [design reference](FLAG-DESIGN-REFERENCE-20261101.md) and committed SVGs. The approved raster was unavailable in the repository task; the SVG fallback implements the agreed design without claiming recovered pixel geometry or legally standardized numerical specifications.
+
 ### Selection of the federal seat
 
 [`The Winning Bid`](../../scenario-winning-bid.html) is canonical historical seat-selection history, shared by the Aldenmere and Caldenmere profiles. No year or month is assigned to the episode.
