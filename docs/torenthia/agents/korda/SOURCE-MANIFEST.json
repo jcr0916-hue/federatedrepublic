@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "savedOn": "2026-11-01",
+  "dateMeaning": "real-world date",
+  "conversation": {
+    "title": "Constitution 15",
+    "id": "6adc38d5-a08c-83e8-9b74-5f7344c28ea0",
+    "recoveredTurns": 5,
+    "completeEarlierConversation": false
+  },
+  "publishedSourceCommit": "ed68a7aa62fe4c36f3376cc3f7199d7980b15ce7",
+  "publishedFrontier": {
+    "year": 14,
+    "month": 2,
+    "worldSeq": 178,
+    "nrsSeq": 133
+  },
+  "files": [
+    {
+      "path": "../../KORDA-TERRITORIAL-COMPACT.md",
+      "originalName": "KORDA-TERRITORIAL-COMPACT.md",
+      "source": "User-supplied final Compact; identical to the existing workspace copy",
+      "sha256": "fa470c79d87c9efcc2baeed8fc6f805a280245f85de0669dd76062e196477277",
+      "bytes": 11289,
+      "status": "canonical approved editorial reconstruction; not an NRS publication"
+    },
+    {
+      "path": "setup/01-KORDA-AGENT-INSTRUCTIONS.md",
+      "originalName": "01-KORDA-AGENT-INSTRUCTIONS.md",
+      "source": "User-supplied korda-agent folder",
+      "sha256": "46746a1277febbe6c06310b1e1e411bc46f2e346bbd421b9a5862e4357ed7fdc",
+      "bytes": 6782,
+      "status": "preserved verbatim setup document; consult README.md for later clarifications"
+    },
+    {
+      "path": "setup/04-KORDA-PUBLISHED-REFERENCES.md",
+      "originalName": "04-KORDA-PUBLISHED-REFERENCES.md",
+      "source": "User-supplied korda-agent folder",
+      "sha256": "6563d51ea0de5b10936b7ea4afee303a499987b4409bf37a151862bcf59fc2eb",
+      "bytes": 4052,
+      "status": "preserved verbatim setup document; consult README.md for later clarifications"
+    },
+    {
+      "path": "setup/05-KORDA-EDITORIAL-CONTEXT.md",
+      "originalName": "05-KORDA-EDITORIAL-CONTEXT.md",
+      "source": "User-supplied korda-agent folder",
+      "sha256": "98f896ef9511dc0c9b1c4284b9a52baca456d5aa1dbb1299a00fb10dabe220c3",
+      "bytes": 4806,
+      "status": "preserved verbatim setup document; consult README.md for later clarifications"
+    },
+    {
+      "path": "setup/06-KORDA-TRIAL-PROMPTS.md",
+      "originalName": "06-KORDA-TRIAL-PROMPTS.md",
+      "source": "User-supplied korda-agent folder",
+      "sha256": "cf95899ecee4dd3ae63b4b70b767db8f122563527dd9abdc598a302174827807",
+      "bytes": 2996,
+      "status": "preserved verbatim setup document; consult README.md for later clarifications"
+    },
+    {
+      "path": "setup/START-HERE.md",
+      "originalName": "START-HERE.md",
+      "source": "User-supplied korda-agent folder",
+      "sha256": "dd4e308f8fac500ff48d4786f2f1455b5caae3a91922efbdf7ee13b234dbd6e9",
+      "bytes": 777,
+      "status": "preserved verbatim setup document; consult README.md for later clarifications"
+    },
+    {
+      "path": "source-material/Pasted text(4).txt",
+      "originalName": "Pasted text(4).txt",
+      "sourceMessage": "659baa8a-c4e0-487e-8c8b-8e165aa85724",
+      "sha256": "4cc5544ae81d048cab617dbd97917e49a7624910a50361e74824cc15b928ebf6",
+      "bytes": 14953,
+      "status": "superseded corrected draft with explanatory and citation-audit Parts II/III; not the final Compact"
+    },
+    {
+      "path": "source-material/Pasted text(5).txt",
+      "originalName": "Pasted text(5).txt",
+      "sourceMessage": "686f9b7a-e488-4951-a53e-7169c6283971",
+      "sha256": "b7a8f1b7e52bd773a11e1b7c5aead96dacb4dd0ed64325bb9cdf9101c1f33222",
+      "bytes": 13270,
+      "status": "Trial 01 submission; Parts I/II only; conditional pass"
+    }
+  ],
+  "unavailable": [
+    "Earlier Constitution 15 turns outside the retrieved five-turn excerpt",
+    "A live TypingMind agent configuration/export or independent verification of uploaded knowledge files",
+    "A separately supplied full-federal-Constitution training attachment; use the pinned existing repository constitutional sources"
+  ],
+  "note": "The eight supplied files are preserved byte-for-byte. Setup instructions and drafts are historical data; the current assigned test and review are separately retained."
+}

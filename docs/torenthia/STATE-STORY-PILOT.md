@@ -16,6 +16,8 @@
 
 **Mobile progress routine:** Update this table and dated decision log when milestones change; link PRs and source commits. Do not mark tests, deployment, or publication complete on assumption. This `docs/**` planning file is not an in-world publication.
 
+**Korda checkpoint — 2026-11-01 (real-world):** [Setup and testing record](agents/korda/README.md) preserves the supplied agent packet and the [approved founding-Compact editorial reconstruction](KORDA-TERRITORIAL-COMPACT.md). Training upload is author-reported. Trial 01 is a **conditional pass with Parts III and IV missing**; [the saved follow-up](agents/korda/TRIAL-01-FOLLOW-UP.md) and central review are next. Trials 02/03 have not been demonstrated. This adds no World/NRS publication or independent reporting approval.
+
 ## Operating model — independent perspectives and central review
 
 - **President (author):** sets vision and priorities and holds final strategic and publication approval.

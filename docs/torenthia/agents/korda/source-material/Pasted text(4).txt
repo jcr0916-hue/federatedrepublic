@@ -1,0 +1,157 @@
+# PROPOSED — FOR EDITORIAL REVIEW
+
+## Draft: Korda Territorial Compact (Corrected)
+
+**Status:** Editorial proposal. Not published, not canon, not an official record. No ratification date, vote, negotiator, or officeholder is invented; nothing advances the fictional clock.
+
+**Source baseline:** `main` @ `ed68a7aa62fe4c36f3376cc3f7199d7980b15ce7`; Federal Constitution 20 articles / 177 provisions.
+
+---
+
+# Part I — Korda Territorial Compact
+
+## Preamble
+
+The Korda people, a recognized Indigenous political entity at the founding of the Federated Republic, having elected Territorial Integration through their own lawful governance process during the transition to the constituted Republic; and the Republic, acting through its Legislature; having negotiated an incorporation agreement under §§16.2 and 15.6 of the Constitution, and that agreement having received the constitutionally required legislative ratification;
+
+Now therefore the parties record that the incorporation agreement stands as the Territorial Compact of Korda under §15.1 of the Constitution, upon the terms set out below.
+
+---
+
+**Article 1 — Status, Incorporation, and Federal Relationship**
+
+1. Korda is a Territory of the Federated Republic, governed by the Constitution, by federal law enacted within federal competence, and by this Compact.
+
+2. The Republic holds the governing authority over the Territory. This Compact establishes the framework for Korda's delegated and protected local self-government. It is not a State constitution, and Korda does not hold the residual powers or independent constitutional standing of a State.
+
+3. Where this Compact does not establish a governing arrangement, responsibility, or structure, applicable Republic law governs. Korda's territorial legislation must comply with the Federal Constitution, this Compact, and valid superseding federal law.
+
+4. Korda's election of Territorial Integration permanently ended the founding Associated Community option available to it under §16.2. The incorporation transition contemplated by §15.6 having been completed, this Compact now provides for the ordinary government of the Territory. Nothing in this Compact reopens, or implies a fresh ratification of, the incorporation itself.
+
+5. The elected local governing authority required by §15.1, and the constitutional principles of local government and subsidiarity under §§15.8 and 15.8.a, are respected in the interpretation and application of this Compact.
+
+6. This Compact is read consistently with the Constitution. Where it conflicts with the Constitution, the Constitution prevails.
+
+**Article 2 — The Korda Territorial Assembly**
+
+1. There is a Korda Territorial Assembly, a unicameral elected local governing authority over matters of local concern under §15.1.
+
+2. Composition. Three representatives are elected from each federal Assembly district within Korda. The number of representatives is three times the number of federal Assembly districts within Korda and adjusts automatically as that number changes.
+
+3. Election. Representatives are elected together for four-year terms by multi-member Ranked Choice Voting (single transferable vote) within each federal Assembly district. Territorial elections follow the four-year federal electoral cycle and are conducted within the federal electoral period established by law.
+
+4. Districts. The Territorial Assembly is elected on the Assembly districts drawn by the Elections Panel for federal elections under §3.3. It does not maintain a separate territorial districting system.
+
+5. Separation. Membership in the Territorial Assembly is institutionally separate from representation in the federal Assembly. The two offices, their mandates, and their removal are distinct.
+
+6. The Territorial Assembly enacts territorial legislation on matters of local concern, subject to this Constitution, this Compact, and valid federal law.
+
+**Article 3 — Change in Districts or Territorial Extent**
+
+1. Where a lawful change in the number or boundaries of Korda's federal Assembly districts, or in the territorial extent of Korda, takes effect, the composition of the Territorial Assembly under Article 2 adjusts accordingly as provided by territorial legislation.
+
+2. Nothing in this Article predetermines, accelerates, or forecloses any constitutional proceeding concerning Korda's boundaries or Statehood. This Compact applies to Korda within its lawful extent from time to time.
+
+**Article 4 — The Chief Minister and the Territorial Administration**
+
+1. There is a Territorial Administration responsible for the ordinary administration of the Territory and for executing territorial legislation and applicable federal programs delegated to it.
+
+2. The Territorial Administration is headed by a Chief Minister, elected by the territorial electorate at large by Ranked Choice Voting.
+
+3. Nomination. A candidate for Chief Minister may be nominated by the Territorial Assembly or may qualify by citizen petition, under arrangements established by territorial legislation.
+
+4. Term. The Chief Minister serves a two-year term, following the two-year federal Assembly electoral cycle and conducted within the federal electoral period established by law. No person may hold the office of Chief Minister, or territory-wide acting service in that office, for more than eight years in total, whether or not consecutive. Service of a portion of a term counts toward that maximum; territory-wide acting service under Article 6 counts toward it.
+
+5. Mandate. The Chief Minister holds an independent electoral mandate and is not subject to removal by a vote of no confidence.
+
+6. Ministers. The Chief Minister appoints territorial ministers responsible for defined portfolios of administration, and may dismiss them, within any qualifications established by territorial legislation.
+
+**Article 5 — Removal of the Chief Minister**
+
+1. The Territorial Assembly may impeach and remove the Chief Minister for grave misconduct, serious constitutional violation, corruption, or abuse of office.
+
+2. Removal requires due process and a vote of two-thirds of the full membership of the Territorial Assembly. Disagreement with the Chief Minister's policies, judgments, or lawful exercise of discretion is not a ground for removal.
+
+3. A removal is subject to judicial review of its constitutional and procedural legality. A removal contrary to this Constitution or to the procedures established under this Article is void.
+
+**Article 6 — Succession**
+
+1. Upon a permanent vacancy in the office of Chief Minister, the Speaker of the Territorial Assembly serves temporarily as Acting Chief Minister, suspending legislative presiding duties for the duration of that acting service, during which the Territorial Assembly provides for its own interim presiding arrangements.
+
+2. A territory-wide special election to fill the vacancy is held within ninety days. The elected successor serves the remainder of the existing term.
+
+3. Where the Speaker is unable to serve, the Civic Consul may appoint a temporary acting executive from among eligible territorial officials, under the Republic's residual executive authority over domestic and territorial administration and any applicable statutory delegation, subject to this Constitution. The appointee exercises only the authority necessary to preserve the continuity of existing territorial administration; may not enact territorial legislation, make permanent appointments, or alter this Compact; and serves until the election and installation of a successor under this Article. Any such appointment is subject to judicial review of its constitutional and procedural legality.
+
+**Article 7 — Local Government and Indigenous Continuity**
+
+1. Korda possessed local governing institutions before incorporation. This Compact preserves its ability to maintain, recognize, reorganize, or establish counties, municipalities, cities, and other local governments, and traditional or customary community institutions.
+
+2. Such bodies may exercise authority over local matters consistent with Article I, applicable federal law, and this Compact. Federal Assembly electoral districts do not replace traditional or municipal jurisdictions.
+
+3. Korda's Indigenous identity is preserved. The Republic's obligations to recognized Indigenous nations under §16.3, and the continuity of existing arrangements under §16.5, are not extinguished or diminished by this Compact.
+
+**Article 8 — Judicial Arrangements**
+
+1. Korda's principal judicial framework is the federal judicial system under Article IV.
+
+2. Korda may organize local courts, community tribunals, and customary dispute-resolution institutions to the extent authorized by applicable Republic law. Territorial institutions determine the selection, tenure, organization, and procedures of local adjudicators within constitutional and statutory limits.
+
+3. Local bodies determine ordinary local matters within their lawful jurisdiction. Federal courts retain their constitutionally and statutorily assigned appellate and judicial-review authority.
+
+4. Korda shall not establish a separate territorial supreme court.
+
+5. Traditional dispute resolution remains subject to the rights guaranteed by Article I, including the right to an independent and impartial court under §1.1.
+
+**Article 9 — Territorial Finances**
+
+1. The Territorial Assembly may enact budgets, appropriations, taxes, and fees, and the Territory may levy lawful revenue within its jurisdiction, subject to this Compact, §12.3, and the internal-commerce requirements of §12.5.
+
+2. Valid federal legislation specifically governing territorial finances may supersede conflicting territorial provisions within the scope of federal constitutional authority. Where this Compact does not govern and federal law applies, federal law controls.
+
+3. Korda's participation in applicable federal fiscal transfers, equalization arrangements under §12.6, and the social-state systems of Article XII is preserved, together with constitutional financial oversight by the Executive Monitor.
+
+**Article 10 — Public Records**
+
+1. The National Record System is the authoritative system for official territorial legal records. Territorial legislation, regulations, and official acts requiring publication are filed with the National Record System under Article X.
+
+2. Korda operates no separate authoritative territorial legal publication system. Ordinary internal administrative records may be maintained locally, subject to the record obligations of Article X.
+
+**Article 11 — Amendment**
+
+1. An amendment to this Compact requires agreement between the Korda Territorial Assembly and the federal Legislature through constitutionally valid procedures.
+
+2. Amendment of this Compact should be exceptional. Ordinary territorial legislation and administrative arrangements may be modified through lawful territorial procedures without renegotiating this Compact.
+
+**Article 12 — Construction and Severability**
+
+1. If a provision of this Compact is held contrary to this Constitution, it is severed to that extent and the remainder stands.
+
+2. Nothing in this Compact impairs the independence of the Monitors, the Elections Panel, the NRS Panel, the Monetary Authority, or the Judiciary, or any right under Article I, including the non-derogable rights under §1.16.a.
+
+---
+
+# Part II — Explanation of Substantive Changes
+
+**1. District-count correction (Article 2).** Removed the unsupported totals "thirty-three districts" and "ninety-nine representatives." The published record establishes thirty-three *federal Assembly members* from Korda (the Convention's delegates under §15.5.a(4)), not thirty-three *districts*; §3.2(1) permits multi-member districts, so members cannot be equated with districts. The approved formula (three territorial representatives per federal district) is preserved, now expressed as a ratio with automatic adjustment, with no asserted baseline total.
+
+**2. Civic Consul backstop legal foundation (Article 6(3)).** Grounded the appointment in the Republic's residual executive authority over domestic and territorial administration (§2.5) and any applicable statutory delegation (§3.11). Added express limits: the appointee may not legislate, make permanent appointments, or alter the Compact; serves only until a successor is elected and installed; and is subject to judicial review. This preserves the backstop while confining its authority and giving it a defensible constitutional source.
+
+**3. Consolidation (Articles 1, 2, 11 → new Article 1).** Merged the former "Status and Interpretation," "Continuity of Incorporation," and "Federal Relationship and Legal Priority" into a single "Status, Incorporation, and Federal Relationship," removing repetitive statements of territorial status and federal authority without changing substance. All subsequent articles renumbered accordingly (former 3–14 became 2–12).
+
+**4. Election alignment (Articles 2(3), 4(4)).** Specified that four-year Territorial Assembly elections follow the four-year federal electoral cycle, and the Chief Minister's two-year elections follow the two-year federal Assembly electoral cycle, consistent with §7.2(1).
+
+**5. Administrative detail deferred.** Nomination mechanics, minister qualifications, and the Speaker's interim presiding arrangements remain assigned to ordinary territorial legislation rather than the founding instrument.
+
+---
+
+# Part III — Citation and Canon Audit Notes
+
+- **§15.5.a(4)** confirmed as the source of the "thirty-three Assembly delegates" — members, not districts. No published Korda district count exists; the corrected text asserts none.
+- **§§16.2(2), 15.6, 15.1** continue to support the incorporation-agreement-as-Compact framing; §16.2(7) supports the permanence statement in Article 1(4).
+- **§7.2(1)** supports the two-cycle election alignment (Assembly biennial; Legat Consul quadrennial).
+- **§2.5, §3.11** cited for the Civic Consul backstop; the provision remains the point most likely to warrant a future confirmation of its statutory basis.
+- **§§3.2, 3.3** govern the *federal* Assembly and its Elections Panel-drawn districts; they do not constrain a territory's own §15.1 local governing authority, so the three-per-district formula and reuse of federal boundaries remain permissible.
+- **§§12.3, 12.5, 12.6; Article X; §§16.3, 16.5** continue to support the finance, records, and Indigenous-continuity provisions, with no rates, allocations, treaties, institutions, or customary rules invented.
+- **Article 8 (judicial)** remains compliant: no territorial supreme court, federal primacy under Article IV, local courts only as authorized by Republic law, and traditional dispute resolution subject to Article I (including §1.1).
+
+No approved decisions were reopened, no historical details were invented, and nothing was published, committed, or advanced.
