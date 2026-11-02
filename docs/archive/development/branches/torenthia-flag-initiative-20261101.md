@@ -2,11 +2,11 @@
 
 **Original branch:** `feature/torenthia-flag-initiative-20261101`
 
-**PR:** draft PR link pending at initial handoff; see this branch's pull request
+**PR:** [Draft #277](https://github.com/jcr0916-hue/federatedrepublic/pull/277)
 
 **Base commit:** [`ed68a7aa62fe4c36f3376cc3f7199d7980b15ce7`](https://github.com/jcr0916-hue/federatedrepublic/commit/ed68a7aa62fe4c36f3376cc3f7199d7980b15ce7)
 
-**Head commit at handoff:** pending initial commit; the draft PR records the final head
+**Substantive commit:** [`6ba63bd1e762b33d217ad947c2b48861c36f4c88`](https://github.com/jcr0916-hue/federatedrepublic/commit/6ba63bd1e762b33d217ad947c2b48861c36f4c88); the draft PR records the final head including this handoff-link update
 
 **Status:** proposed and locally verified; not shipped, merged, or deployed
 
@@ -26,6 +26,7 @@ Integrate the author-approved citizen flag initiative and legislative adoption i
 - **Passed:** SVG XML parsing and accessibility metadata; A–C artwork elements/attributes compared with the recovered original SVGs. All four built flag assets are byte-identical to their reviewed source files. D's star is explicitly `#ffffff` with `stroke="none"` and no inherited stroke.
 - **Passed:** in-app browser inspection at 1440, 768, 390 and 320 CSS pixels: two columns on desktop/tablet, one on phones, all four images loaded with alt text and original aspect ratios, no horizontal overflow. Desktop gallery and 390-pixel adopted-flag views visually inspected. Browser warning/error log was empty. The navigation still uses `/seal.png`.
 - **Passed:** `git diff --check`. A shared dependency directory was temporarily linked only after package-lock equality was verified; that link is excluded from the proposed changes.
+- **Passed:** the GitHub tree for the substantive commit exactly matched the local staged tree, preserving every other base file. All relative links in the new design reference and handoff resolve. The temporary dependency link was removed after validation.
 - Initial direct browser launch and local-server binding were restricted in the execution environment; verification completed through the in-app browser and an approved loopback-only local preview. No deployment was used.
 - Full local validation log and desktop/mobile screenshots are retained in the task workspace's `output/` directory; they are local QA artifacts, not website assets or public records.
 
@@ -40,7 +41,6 @@ Integrate the author-approved citizen flag initiative and legislative adoption i
 ## Open follow-ups
 
 - Review the draft narrative and SVG fallback. No merge, deployment, fictional-time advance or World/NRS publication is authorized by this handoff.
-- Add the draft PR link and substantive commit reference once available, without renaming this note.
 
 ## Preservation and branch disposition
 
