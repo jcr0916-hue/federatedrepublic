@@ -33,3 +33,5 @@ description: "Corindal, Torenthia’s southern-border jurisdiction: a one-chambe
 <h2>Provisional status in ordinary life</h2>
 <p>Corindal’s current story is not only institutional. Maren Sollis teaches civics in a State that has been Provisional for three years, explaining to students why their Assembly elections continue while the Senate consequences of the audit remain unresolved. Her <a href="torenthia-dispatch-sollis.html">Dispatch</a> records what a constitutional status change feels like from inside a classroom rather than from a federal hearing room.</p>
 <p>The State’s longer economic-development story remains deliberately unresolved. Corindal has strong institutions for public-private development, but the same structures demand unusually careful attention to disclosure, conflicts, and the permanent record.</p>
+
+<section class="state-local-news"><h2>Latest reporting from Corindal</h2><div class="record-grid">{% for p in collections.world | jurisdictionRecords('Corindal') | reverse | take(4) %}{% include "record-card.njk" %}{% endfor %}</div><p><a href="torenthia-record.html?place=Corindal">Browse all Corindal reporting and records</a></p></section>
