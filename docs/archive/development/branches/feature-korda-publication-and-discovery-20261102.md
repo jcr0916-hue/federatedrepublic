@@ -20,3 +20,7 @@
 - **Execution state:** all four desks submitted their first supervised assignments. External agent replies were provided by the President in chat; no direct agent API execution or independent publication is claimed.
 - **Remaining limitations:** current source frontier and seasonality must be refreshed; publication HTML, discoverability UI, validation, review and President's merge approval are not complete.
 - **Branch disposition:** retain active branch and entire #273 → #274 → #275 → #276 dependency chain; guarded closure pending later merge and checks.
+
+## Flag release coordination addendum — 2026-11-01
+
+The President requested grouping the new founding flag initiative with the next release window. Independent draft PR [#277](https://github.com/jcr0916-hue/federatedrepublic/pull/277) is based on `main`, separate from the stacked editorial PR chain, and retains its own permanent handoff. The [editorial queue](../../../../torenthia/EDITORIAL-QUEUE-20261101.md) records content, checks, and integration safeguards. No branches have been merged, rebased, retargeted, deleted or deployed for this decision. The combined release needs fresh integrated validation and explicit approval.
