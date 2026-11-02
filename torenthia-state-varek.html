@@ -21,3 +21,5 @@ description: "Varek, Torenthia’s northern cantonal State: County government, d
 
 <h2>The consent decision</h2>
 <p>In Year 13, Month 11, Varek’s Assembly consented to the Argent Ridge National Trust designation. Reyna Oskitt, delegate for Kell’s Hollow County, testified that the County containing Varek’s half of the tract had no competing use for the land. Delegate Corren Vask questioned why the whole Assembly should vote on one County’s land without opposing consent. Varek’s consent is filed; Norvane’s remains outstanding. <a href="torenthia-news-069.html">Read Aleth Fenn’s report &rarr;</a></p>
+
+<section class="state-local-news"><h2>Latest reporting from Varek</h2><div class="record-grid">{% for p in collections.world | jurisdictionRecords('Varek') | reverse | take(4) %}{% include "record-card.njk" %}{% endfor %}</div><p><a href="torenthia-record.html?place=Varek">Browse all Varek reporting and records</a></p></section>
