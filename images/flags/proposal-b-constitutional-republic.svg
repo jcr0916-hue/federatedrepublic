@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 96" width="150" height="96" role="img" aria-labelledby="title desc">
+  <title id="title">Proposal B — Constitutional Republic</title>
+  <desc id="desc">Blue, white, and green horizontal stripes with a central gold diamond.</desc>
+  <rect width="150" height="96" fill="#f5f3ea"/>
+  <path d="M0 0H150V33H0Z" fill="#164763"/>
+  <path d="M0 63H150V96H0Z" fill="#287d77"/>
+  <path d="M75 28L95 48L75 68L55 48Z" fill="#c6a04e"/>
+</svg>
