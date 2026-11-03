@@ -102,6 +102,8 @@ Torenthia is not a peninsula.
 | **Norvane** | North-lake cell between the Alps and Lake Varda’s northern tip; northern refugee-arrival zone; newest-named State. Capital/seat: **Ilyr**. |
 | **Harren** | Northern heartland below Varek; founding State; does not touch the national border. Capital/seat: **Hadrin**. |
 | **Arvane** | Northwestern/western coast; maritime. **Westport** is an established western freight port and State infrastructure/commercial center. |
+
+**Arvane local reporting and everyday life (Year 14, Month 2):** *The Westport Ledger* is a Westport newspaper. **Maren Vey** reports for it. Her feature *The Two-Sailing Week* documents adjustments to the established Ostara–Westport winter ferry reduction (three to two weekday sailings; weekend sailings and fares unchanged). **Rin Corliss** runs a chandlery supplying island-bound goods; **Sela Hart** carries clinic samples to a mainland laboratory; **Mara Drennan** and her family in Westport have relatives in Ostara. These ordinary-life figures do not imply any new ferry authority, sailing schedule, or government action. Keep Arvane's inland communities open for further development; no State capital, county names, or current officeholders are established by this article.
 | **Rhovane** | Middle-northeast; touches Lake Varda’s upper-western shore; Seren Mak’s home State; under spillover pressure from Norvane. |
 | **Merath** | Center-west interior; industrial. |
 | **Orath** | Eastern-central interior; agricultural heartland; Dorven is here. |
