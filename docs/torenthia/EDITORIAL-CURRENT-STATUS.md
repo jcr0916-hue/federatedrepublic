@@ -1,6 +1,6 @@
 # Torenthia editorial network — current operational status
 
-**Updated:** 2026-11-03 (real world), including Morantine's completed tests. **Scope:** coordination and qualification record, not published fictional canon. **Baseline verified:** `main` `c8d43dbd2aabfe0260fb9eb095529382a6bb0764`, fictional Year 14 Month 2; worldSeq 181 (news 134); nrsSeq 135 (NRS-Y14-0047). **Reverify live main before using numbers.**
+**Updated:** 2026-11-03 (real world), including Morantine and Verdmont's completed tests. **Scope:** coordination and qualification record, not published fictional canon. **Baseline verified:** `main` `c8d43dbd2aabfe0260fb9eb095529382a6bb0764`, fictional Year 14 Month 2; worldSeq 181 (news 134); nrsSeq 135 (NRS-Y14-0047). **Reverify live main before using numbers.**
 
 **Read this first in a new chat.** This status overrides older *planning predictions*, not published World/NRS sources. In case of conflicts, approved published record > current Constitution > approved local constitutions/compact design > current editorial status > older trial/checkpoint notes > raw pitches. Agent qualification is not permission to publish or create official actions.
 
@@ -32,9 +32,9 @@
 | Korda (Territory) | **Qualified for supervised editorial operations** — all three trials passed | `agents/korda/QUALIFICATION-STATUS-20261101.md` supersedes incomplete checkpoint in `agents/korda/README.md` |
 | Solara (Territory) | **Qualified 2026-11-03**, tests 01, 02, 03 passed | Compact v0.3 **approved editorial governing reference**, not newly enacted Year 14 NRS law |
 | Morantine (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (94, 89, 91) | [Qualification record](agents/morantine/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved as editorial reference, first article needs six copyedits |
-| Verdmont (Territory) | Not yet confirmed built/qualified | Future agent |
+| Verdmont (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (93, 90, 94) | [Qualification record](agents/verdmont/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved editorial design **not enacted**, equality/section review outstanding |
 
-**Eight geographically scoped agents remain to be created or confirmed:** seven States (Harren, Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane) and one Territory (Verdmont). There are 12 States in all (five established, seven remaining) and four Territories (three qualified, one remaining). The prior count of nine predates Morantine's qualification.
+**Seven geographically scoped agents remain to be created or confirmed:** seven States (Harren, Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane). **All four Territories are now qualified** under supervised operations. The prior count of eight predates Verdmont's qualification.
 
 ## Non-geographic desks
 
@@ -47,7 +47,7 @@
 
 ## Distinguish three statuses
 
-1. **Approved editorial background:** e.g., Solara Compact v0.3, preserved verbatim in ChatGPT Library `/Torenthia/Agent Governance/SOLARA-TERRITORIAL-COMPACT-v0.3-APPROVED-EDITORIAL.md`, and Morantine Compact v0.2 at `/Torenthia/Agent Governance/MORANTINE-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md`; each authorizes its agent to draft consistent institutional stories. It is *not* an enacted NRS record and creates no Year 14 enactment event.
+1. **Approved editorial background:** e.g., Solara Compact v0.3, preserved verbatim in ChatGPT Library `/Torenthia/Agent Governance/SOLARA-TERRITORIAL-COMPACT-v0.3-APPROVED-EDITORIAL.md`, and Morantine Compact v0.2 at `/Torenthia/Agent Governance/MORANTINE-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md`, and Verdmont Compact v0.2 at `/Torenthia/Agent Governance/VERDMONT-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md`; each authorizes its agent to draft consistent institutional stories. It is *not* an enacted NRS record and creates no Year 14 enactment event.
 2. **Approved publication candidate:** article text/pitch accepted editorially but not yet canon, numbered or published unless integrated and merged.
 3. **Published canon:** merged World/NRS source with metadata and a confirmed publishing state. A draft PR is not published canon.
 
