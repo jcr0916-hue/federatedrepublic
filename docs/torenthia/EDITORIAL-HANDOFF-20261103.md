@@ -21,6 +21,8 @@
 
 - **Founding-territories clarification (2026-11-03, President's direction):** Solara, Morantine and Verdmont are **inherited territorial jurisdictions from the founding union**, not recent Year 14 creations. Their founding Compacts/statutory frameworks date to the **implementation period after Day Zero**. **Korda is distinct**, entering through its own §16.2 Indigenous-status choice. The Republic had **three sovereign predecessor countries** (Harren Union, Torenthian Commonwealth, Vardan Confederacy), plus **Korda as a fourth founding political community** (the Four Founders flag), **not four sovereign predecessors**. The exact predecessor affiliation and original Compact dates/texts for each of the three Territories are unresolved. Current approved training Compacts are editorial reconstructions/designs: don't call them newly enacted Year 14 law or exact verified historic founding instruments. See `STORY-BIBLE.md`.
 
+- **2026-11-04: Harren State Agent completed qualification**, Tests 01–03 **94/92/94**; [qualification record](agents/harren/QUALIFICATION-STATUS-20261104.md) contains four authoritative edits to accepted **unpublished** “The Seed Bench” by proposed Sera Morden for proposed *The Hadrin Valley Gazette*, plus corrections on privacy §1.7, proper Monitor scope, and unverified licensing procedures. **All 16 geographic agents reportedly created**, but six States (Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane) still need qualification; Kelvant is an older existing agent, not initialized with Work's new packet. **Hadrin (capital) vs Casten (called administrative center in news-001) unresolved**; do not merge them without editorial decision.
+
 ## Open review work — verify live status
 
 | PR | Content | Decision needed |
