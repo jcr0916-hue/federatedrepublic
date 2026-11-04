@@ -10,7 +10,7 @@ All twelve State and four Territory agents have reportedly been created. Of the 
 
 | State | Packet standing | Qualification standing | Next action |
 | --- | --- | --- | --- |
-| Aldenmere | Work packet received (7? see inventory below: six files supplied, with Tests 01–02) | Pending | **Start with Test 01 constitutional readiness**; wait for VP review before Test 02 |
+| Aldenmere | Work packet received (6 files; Tests 01–02, no Test 03 supplied) | Pending | **Start with Test 01 constitutional readiness**; wait for VP review before Test 02 |
 | Caldenmere | Work packet received (7 files; Tests 01–03) | Pending | Test 01 after Aldenmere |
 | Selvane | Work packet received (7 files; Tests 01–03) | Pending | Test 01 after earlier State(s) |
 | Rhovane | Work packet received (7 files; Tests 01–03) | Pending | Test 01 after earlier State(s) |
