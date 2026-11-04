@@ -6,11 +6,11 @@ This document transfers the **durable editorial coordination information** neede
 
 ## Operational roster
 
-All twelve State and four Territory agents have reportedly been created. Of the six States awaiting qualification, **five Work-created packet sets have been received and reviewed in the central conversation**; **Kelvant** is a pre-existing separately trained State agent, not part of Work's new packet series. **Harren's Work packet was also received** but Harren **already passed** a different central three-test program on 2026-11-04 (94/92/94); **do not retest Harren**, reassign its exercises, or undo the existing qualification record `agents/harren/QUALIFICATION-STATUS-20261104.md`.
+All twelve State and four Territory agents have reportedly been created. Of the original six States awaiting qualification, **five Work-created packet sets have been received and reviewed in the central conversation**; **Kelvant** is a pre-existing separately trained State agent, not part of Work's new packet series. **Harren's Work packet was also received** but Harren **already passed** a different central three-test program on 2026-11-04 (94/92/94); **do not retest Harren**, reassign its exercises, or undo the existing qualification record `agents/harren/QUALIFICATION-STATUS-20261104.md`.
 
 | State | Packet standing | Qualification standing | Next action |
 | --- | --- | --- | --- |
-| Aldenmere | Work packet received (6 files; Tests 01–02, no Test 03 supplied) | Pending | **Start with Test 01 constitutional readiness**; wait for VP review before Test 02 |
+| Aldenmere | Work packet received (6 files; Tests 01–02, no Test 03 supplied); VP wrote Test 03 | **Qualified 2026-11-04** (96/92/90) | [Aldenmere qualification record](aldenmere/QUALIFICATION-STATUS-20261104.md); no retest; unpublished story revisions pending |
 | Caldenmere | Work packet received (7 files; Tests 01–03) | Pending | Test 01 after Aldenmere |
 | Selvane | Work packet received (7 files; Tests 01–03) | Pending | Test 01 after earlier State(s) |
 | Rhovane | Work packet received (7 files; Tests 01–03) | Pending | Test 01 after earlier State(s) |
@@ -19,6 +19,8 @@ All twelve State and four Territory agents have reportedly been created. Of the 
 | Harren | Work packet received (7 files; test scenarios **not used**) | **Qualified 94 / 92 / 94** | Four corrections to unpublished “The Seed Bench”; no retesting |
 
 **Packet inventory caveat:** Aldenmere uploaded six files: permanent instructions, VP review guide, published references, continuity guidance, Test 01 and Test 02. **No Aldenmere Test 03 from Work was supplied**; create/approve a targeted third examination **only after Test 02**. Other newly prepared States each supplied seven files: permanent instructions, published references, continuity guidance, tests 01–03 and private VP guide.
+
+**2026-11-04 status update:** Aldenmere's separately administered third exam also passed, making **seven qualified/established States and four qualified Territories**. The remaining States are **Caldenmere, Selvane, Rhovane, Norvane and Kelvant**; next is Caldenmere Test 01. The table above is now a historical inventory, not permission to retest already qualified desks.
 
 ## Universal sequence and boundaries
 
