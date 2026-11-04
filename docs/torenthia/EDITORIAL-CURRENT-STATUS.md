@@ -34,7 +34,7 @@
 | Morantine (Territory) | Not yet confirmed built/qualified | Future agent |
 | Verdmont (Territory) | Not yet confirmed built/qualified | Future agent |
 
-**Eight geographically scoped agents remain to be created or confirmed:** seven States (Harren, Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane) and **two Territories** (Morantine, Verdmont) = **nine**, not eight. The earlier “eight remaining” conversational count was an arithmetic error; the explicit roster of nine is authoritative. (There are 12 States total; 5 established, 7 remaining, and 4 Territories total; 2 qualified, 2 remaining.)
+**Nine geographically scoped agents remain to be created or confirmed:** seven States (Harren, Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane) and two Territories (Morantine, Verdmont). The earlier conversational count of eight remaining was an arithmetic error. There are 12 States in all (five established, seven remaining) and four Territories (two qualified, two remaining).
 
 ## Non-geographic desks
 
