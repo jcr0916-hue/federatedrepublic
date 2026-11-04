@@ -9,6 +9,7 @@ This is the navigation home for Torenthia material on `main`. **Published record
 - [Current Agent Roster and Editorial Status](EDITORIAL-CURRENT-STATUS.md) — dated qualifications, scope, limits, current coverage and still-unbuilt jurisdictions.
 - [Chat-Independent Handoff](EDITORIAL-HANDOFF-20261103.md) — current frontier, open PRs, accepted/unpublished drafts, source checks, and resume procedure.
 - [Remaining-State Qualification Runbook (2026-11-04)](agents/REMAINING-STATE-QUALIFICATION-RUNBOOK-20261104.md) — Work packet inventory, five unqualified Work-prepared States, separate Kelvant baseline, no retesting Harren, source/continuity and privacy boundaries.
+- [Caldenmere Qualification Progress](agents/caldenmere/QUALIFICATION-STATUS-20261104.md) — Test 01 passed 95/100; Test 02 authorized; no full qualification yet.
 - [Aldenmere Qualification Status](agents/aldenmere/QUALIFICATION-STATUS-20261104.md) — three tests passed (96/92/90); unpublished Terenne feature and required corrections.
 - [Harren Qualification Status](agents/harren/QUALIFICATION-STATUS-20261104.md) — all three tests passed; “The Seed Bench” remains unpublished pending four edits; Hadrin–Casten issue open.
 - [Verdmont Qualification Status](agents/verdmont/QUALIFICATION-STATUS-20261103.md) — three tests passed, pending article revisions, approved collective-executive design not enacted.
