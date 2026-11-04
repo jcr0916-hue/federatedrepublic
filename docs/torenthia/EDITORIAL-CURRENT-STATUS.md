@@ -25,7 +25,7 @@
 | Corindal | Supervised pilot accepted; candidate story saved | Repository pilot documents describe the earlier stage |
 | Varek | **Qualified; all readiness/story/interstate/continuity evaluations passed; no retest needed** | “The Crew at Tessin Ford” accepted candidate; old 2026-11-01 activation note is obsolete |
 | Harren | **Qualified 2026-11-04**, all three tests passed (94, 92, 94) | [Qualification record](agents/harren/QUALIFICATION-STATUS-20261104.md); “The Seed Bench” accepted unpublished candidate, four copyedits pending; Hadrin–Casten continuity question unresolved |
-| Aldenmere | **Agent created; Work packet received; qualification pending** | [Remaining-State Runbook](agents/REMAINING-STATE-QUALIFICATION-RUNBOOK-20261104.md); first to test; six-file packet includes Tests 01–02, **no uploaded Test 03** |
+| Aldenmere | **QUALIFIED 2026-11-04** (96, 92, 90) | [Qualification record](agents/aldenmere/QUALIFICATION-STATUS-20261104.md); *Five in the Morning, Seamark Hill* unpublished pending four required edits |
 | Caldenmere | **Agent created; Work packet received; qualification pending** | Full seven-file Work packet; minister appointment and Sovereign Recourse tests |
 | Kelvant | **Pre-existing agent; qualification pending verification** | Earlier training materials exist separately; review prior tests before new work |
 | Selvane | **Agent created; Work packet received; qualification pending** | Seven-file packet; professional merit and Chief Administrator safeguards |
@@ -36,7 +36,7 @@
 | Morantine (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (94, 89, 91) | [Qualification record](agents/morantine/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved as editorial reference, first article needs six copyedits |
 | Verdmont (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (93, 90, 94) | [Qualification record](agents/verdmont/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved editorial design **not enacted**, equality/section review outstanding |
 
-**All 16 geographic agents have reportedly been created by the President**, including pre-existing Kelvant. **Ten have completed/are established in supervised qualification:** six States (Arvane, Orath, Merath, Corindal, Varek, Harren) and all four Territories. **Six States remain to qualify** (Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane), notwithstanding agent creation. Work-prepared agent packets for **Harren, Aldenmere, Caldenmere, Selvane, Rhovane and Norvane** have been supplied to central review; see [dated transfer and qualification runbook](agents/REMAINING-STATE-QUALIFICATION-RUNBOOK-20261104.md). These are **editorial training materials, not independently approved fictional canon**. Five of those States still await testing; Harren already qualified and must not be retested. Kelvant is pre-existing and has a separate earlier packet.
+**All 16 geographic agents have reportedly been created by the President**, including pre-existing Kelvant. **Eleven have completed/are established in supervised qualification:** seven States (Arvane, Orath, Merath, Corindal, Varek, Harren, Aldenmere) and all four Territories. **Five States remain to qualify** (Caldenmere, Kelvant, Selvane, Rhovane, Norvane), notwithstanding agent creation. Work-prepared agent packets for **Harren, Aldenmere, Caldenmere, Selvane, Rhovane and Norvane** have been supplied to central review; see [dated transfer and qualification runbook](agents/REMAINING-STATE-QUALIFICATION-RUNBOOK-20261104.md). These are **editorial training materials, not independently approved fictional canon**. Five of those States still await testing; Harren already qualified and must not be retested. Kelvant is pre-existing and has a separate earlier packet.
 
 ## Non-geographic desks
 
@@ -46,6 +46,10 @@
 - **International/foreign press:** optional future role worth considering once geographic coverage stabilizes; do not pre-create states, treaties or foreign government actions.
 - **Elections Panel specialist:** optional only if necessary. Do not transfer Elections Panel independence to federal executive desk.
 - **Separate SC agent:** deferred, not part of current build backlog.
+
+## Aldenmere qualification (2026-11-04)
+
+Aldenmere passed Test 01 **96**, Test 02 **92** and Test 03 **90**; authorized for **supervised** editorial operations, **not publication**. The Test 02 article *Five in the Morning, Seamark Hill* is an **unpublished candidate** with four required revisions (invented hours, Month 1/2 continuity, water-main age/operator, fully itemized proposed-facts ledger and qualified resident sentiment). Test 03 also flagged assumed ownership of connecting roads and an overly narrow definition of NRS: **NRS-Y14-0033 is a published Aldenmere municipal notice**, though not every State act automatically belongs there. See [qualification record](agents/aldenmere/QUALIFICATION-STATUS-20261104.md).
 
 ## Harren qualification (2026-11-04)
 
