@@ -45,6 +45,10 @@
 - **Elections Panel specialist:** optional only if necessary. Do not transfer Elections Panel independence to federal executive desk.
 - **Separate SC agent:** deferred, not part of current build backlog.
 
+## Territorial founding continuity (2026-11-03 clarification)
+
+Solara, Morantine and Verdmont entered the Republic as **inherited territorial jurisdictions** of the founding sovereign predecessors. Their governing territorial arrangements were made during the **post–Day Zero founding implementation**, not recently in Year 14. Korda instead chose its constitutional relationship through **Indigenous status election under §16.2**. There were **three sovereign predecessor countries**, and Korda was the fourth founding **political community**, not a fourth sovereign merger party. The precise predecessor mapping and actual historic founding instrument texts/dates for each inherited Territory remain undefined. Approved Solara/Morantine/Verdmont training Compacts are editorial governing designs/reconstructions; do not invent their adoption dates, historical membership or current enacted-law status merely from those documents.
+
 ## Distinguish three statuses
 
 1. **Approved editorial background:** e.g., Solara Compact v0.3, preserved verbatim in ChatGPT Library `/Torenthia/Agent Governance/SOLARA-TERRITORIAL-COMPACT-v0.3-APPROVED-EDITORIAL.md`, and Morantine Compact v0.2 at `/Torenthia/Agent Governance/MORANTINE-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md`, and Verdmont Compact v0.2 at `/Torenthia/Agent Governance/VERDMONT-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md`; each authorizes its agent to draft consistent institutional stories. It is *not* an enacted NRS record and creates no Year 14 enactment event.
