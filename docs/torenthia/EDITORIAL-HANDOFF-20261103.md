@@ -2,6 +2,8 @@
 
 **Prepared 2026-11-03 (real world).** A future VP/chat should read this, `EDITORIAL-CURRENT-STATUS.md`, `STORY-BIBLE.md`, `STORY-STATUS.md`, current Constitution, and *then* GitHub's current main HEAD and open PRs. This file is a timestamped snapshot; it does not replace live GitHub checks or published records.
 
+**2026-11-04 publication addendum:** The approved Wednesday opinion columns, *The Clock Is Not the Problem* (news 135/worldSeq182, Halen Druse, *The Verentum Review*) and *Two Sailings, and a Committee Drawing Pictures* (news 136/worldSeq183, Ilsa Varn, *The Common Interest*) merged in PR #283 at `a45f0ea91a32e3249ed93d9b30625ba743767e80`. Latest narrative frontier **183**; NRS **135**; fictional time Year 14 Month 2. The Solara editorial inquiry about ferry rationale is **unanswered, not a government finding**. This note is later than the older snapshot below. The Wednesday content is merged into GitHub main; site deploy needs independent verification.
+
 ## Where matters stand
 
 - Verified main HEAD at time of snapshot: `c8d43dbd2aabfe0260fb9eb095529382a6bb0764`.
