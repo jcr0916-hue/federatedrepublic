@@ -118,10 +118,12 @@ Torenthia is not a peninsula.
 
 | Territory | Durable position / identity |
 |---|---|
-| **Verdmont** | Northwest along the Alps to the coast; resource-extraction Territory. |
+| **Verdmont** | Northwest along the Alps to the coast; resource-extraction Territory. **Strong positive territorial identity:** coastal and mountain regions broadly favor retaining their territorial relationship with the Republic despite competing local interests. Statehood or division into two States is **not** an active local agenda; its Statehood Audit remains uninitiated. |
 | **Korda** | Southeast only, on southern Lake Varda; Indigenous Territory; land border with Sunderland. Lake corridor includes Varenne Station; ancestral/inland zone lies toward Kelvant. |
 | **Morantine** | South along the Valedon border; pursuing statehood. |
 | **Solara** | Island in the Western Sea; pursuing statehood; Ostara is its ancient capital. |
+
+**Verdmont political direction (President-approved editorial canon, 2026-11-03):** Verdmont's geography could suggest a coastal/mountain division into separate States, but **the Territory is content to remain united and territorial**. The communities broadly share support for the benefits and autonomy of the territorial relationship with the federal Republic, while disagreeing on transport, extraction, access and local priorities. This is a durable regional political culture, **not** a claimed unanimous referendum, enacted resolution, specific polling result or Statehood application. There is no active campaign to split Verdmont or turn it into one/two States; individuals may hold alternative views. Do not fabricate a Statehood drive or portray territorial status as an unwanted limbo. The existing published 'audit not started' status is unchanged. The recently approved Compact v0.2 is a governing **editorial reconstruction**, not an enacted Year 14 statute; its equality review and section boundaries remain unresolved.
 
 ### Water and neighbors
 
