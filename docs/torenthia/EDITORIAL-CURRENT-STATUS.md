@@ -26,7 +26,7 @@
 | Varek | **Qualified; all readiness/story/interstate/continuity evaluations passed; no retest needed** | “The Crew at Tessin Ford” accepted candidate; old 2026-11-01 activation note is obsolete |
 | Harren | **Qualified 2026-11-04**, all three tests passed (94, 92, 94) | [Qualification record](agents/harren/QUALIFICATION-STATUS-20261104.md); “The Seed Bench” accepted unpublished candidate, four copyedits pending; Hadrin–Casten continuity question unresolved |
 | Aldenmere | **QUALIFIED 2026-11-04** (96, 92, 90) | [Qualification record](agents/aldenmere/QUALIFICATION-STATUS-20261104.md); *Five in the Morning, Seamark Hill* unpublished pending four required edits |
-| Caldenmere | **Test 01 PASS — 95/100 (2026-11-04); Test 02 authorized; qualification pending** | [Qualification progress](agents/caldenmere/QUALIFICATION-STATUS-20261104.md); split executive and Sovereign Recourse verified |
+| Caldenmere | **Tests 01–02 PASS — 95/100 and 90/100 (2026-11-04); Test 03 authorized; qualification pending** | [Qualification progress](agents/caldenmere/QUALIFICATION-STATUS-20261104.md); *The Queue on the Hard* unpublished with five corrections |
 | Kelvant | **Pre-existing agent; qualification pending verification** | Earlier training materials exist separately; review prior tests before new work |
 | Selvane | **Agent created; Work packet received; qualification pending** | Seven-file packet; professional merit and Chief Administrator safeguards |
 | Rhovane | **Agent created; Work packet received; qualification pending** | Seven-file packet; lake public trust and Estate Council override |
