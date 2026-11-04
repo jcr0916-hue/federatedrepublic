@@ -2,6 +2,8 @@
 
 **Updated:** 2026-11-04 (real world), including Harren's completed three-test qualification. **Scope:** coordination and qualification record, not published fictional canon. **Baseline verified:** `main` `c8d43dbd2aabfe0260fb9eb095529382a6bb0764`, fictional Year 14 Month 2; worldSeq 181 (news 134); nrsSeq 135 (NRS-Y14-0047). **Reverify live main before using numbers.**
 
+**Wednesday 2026-11-04 publication update:** PR #283 merged the approved opinion columns as news 135–136, worldSeq **182–183**; NRS remains **135**. These are clearly labeled opinion, not official acts. Solara ferry rationale inquiry is an editorial follow-up with **no answer or official Solara act established**. GitHub merge SHA `a45f0ea91a32e3249ed93d9b30625ba743767e80`; website deployment still requires independent verification. See [Story Status](STORY-STATUS.md).
+
 **Read this first in a new chat.** This status overrides older *planning predictions*, not published World/NRS sources. In case of conflicts, approved published record > current Constitution > approved local constitutions/compact design > current editorial status > older trial/checkpoint notes > raw pitches. Agent qualification is not permission to publish or create official actions.
 
 ## Editorial leadership and agent permissions
