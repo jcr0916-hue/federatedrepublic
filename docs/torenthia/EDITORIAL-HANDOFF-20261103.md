@@ -17,6 +17,8 @@
 - **Verdmont design remains proposed:** northwest coastal/mountain territory, population largely outside mountains, some Varek heritage; bicameral legislature with upper chamber representing geographic sections equally (two each), executive selected from upper chamber. Do not confuse with southern Morantine. Full design note: ChatGPT Library `/Torenthia/Agent Governance/VERDMONT-TERRITORIAL-DESIGN-NOTE-20261103.md`.
 - **Capital image:** a new image of Verentum with the correct Four Founders flag was approved by President; asset package was prepared but website upload/deploy **not independently confirmed**. Do not claim it is live without checking.
 
+- **2026-11-03 (later): Verdmont Territory Agent qualified**, Tests 01/02/03 **93/90/94**, including corrected Test 01 council vote arithmetic. [Qualification record](agents/verdmont/QUALIFICATION-STATUS-20261103.md). Compact **v0.2** is the approved *editorial* governing model: **unicameral 24-member People's Assembly, collective eight-member Executive Council (two from each of four undrawn sections), five-of-eight executive decisions**. It **supersedes** the earlier *bicameral legislature / upper chamber executive* planning note below, which remains only historical rationale. The equality/rights review and section boundaries are unresolved; no enactment or sitting councillors exist in published canon. “The Road That Stays Open” accepted as an unpublished candidate with **six specific editorial revisions** in the status record; agent's Test 03 paraphrase of those revisions was incomplete. **All four Territorial Agents qualified; only seven States remain** in the geographic-agent build backlog.
+
 ## Open review work — verify live status
 
 | PR | Content | Decision needed |
