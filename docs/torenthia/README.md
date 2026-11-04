@@ -8,6 +8,7 @@ This is the navigation home for Torenthia material on `main`. **Published record
 
 - [Current Agent Roster and Editorial Status](EDITORIAL-CURRENT-STATUS.md) — dated qualifications, scope, limits, current coverage and still-unbuilt jurisdictions.
 - [Chat-Independent Handoff](EDITORIAL-HANDOFF-20261103.md) — current frontier, open PRs, accepted/unpublished drafts, source checks, and resume procedure.
+- [Varek Qualification Status](agents/varek/QUALIFICATION-STATUS-20261103.md) — completed tests, no retest needed.
 - [Solara Qualification and Approved Compact Standing](agents/solara/QUALIFICATION-STATUS-20261103.md) — tests 01–03 completed; approved v0.3 reference distinct from NRS law.
 - [Korda Qualification Status](agents/korda/QUALIFICATION-STATUS-20261101.md) — supersedes the partial trial status in the earlier setup README.
 
