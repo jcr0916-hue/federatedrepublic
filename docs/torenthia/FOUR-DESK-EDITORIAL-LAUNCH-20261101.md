@@ -1,5 +1,8 @@
 # Federated Torenthia editorial desk — four-agent launch plan
 
+> **Historical plan, superseded as a current roster on 2026-11-03.** See [Current Editorial Status](EDITORIAL-CURRENT-STATUS.md) and [Handoff](EDITORIAL-HANDOFF-20261103.md). In particular **Varek has completed qualification**, and the Partisan Media and Solara desks have since been established. The initial four-desk scheme is preserved here as history, not as today's activation checklist.
+
+
 **Real-world date:** 2026-11-01. **Status:** Assignments drafted, awaiting agent activation and supervised responses. **Not published canon.**
 
 ## Organization and authority
