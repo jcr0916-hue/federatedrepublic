@@ -1,6 +1,6 @@
 # Torenthia editorial network — current operational status
 
-**Updated:** 2026-11-03 (real world), including Morantine and Verdmont's completed tests. **Scope:** coordination and qualification record, not published fictional canon. **Baseline verified:** `main` `c8d43dbd2aabfe0260fb9eb095529382a6bb0764`, fictional Year 14 Month 2; worldSeq 181 (news 134); nrsSeq 135 (NRS-Y14-0047). **Reverify live main before using numbers.**
+**Updated:** 2026-11-04 (real world), including Harren's completed three-test qualification. **Scope:** coordination and qualification record, not published fictional canon. **Baseline verified:** `main` `c8d43dbd2aabfe0260fb9eb095529382a6bb0764`, fictional Year 14 Month 2; worldSeq 181 (news 134); nrsSeq 135 (NRS-Y14-0047). **Reverify live main before using numbers.**
 
 **Read this first in a new chat.** This status overrides older *planning predictions*, not published World/NRS sources. In case of conflicts, approved published record > current Constitution > approved local constitutions/compact design > current editorial status > older trial/checkpoint notes > raw pitches. Agent qualification is not permission to publish or create official actions.
 
@@ -22,7 +22,7 @@
 | Merath | Established following historical State qualification work (conversation-level status) | Do not equate historic test case with modern event |
 | Corindal | Supervised pilot accepted; candidate story saved | Repository pilot documents describe the earlier stage |
 | Varek | **Qualified; all readiness/story/interstate/continuity evaluations passed; no retest needed** | “The Crew at Tessin Ford” accepted candidate; old 2026-11-01 activation note is obsolete |
-| Harren | Not yet confirmed built/qualified | Future agent |
+| Harren | **Qualified 2026-11-04**, all three tests passed (94, 92, 94) | [Qualification record](agents/harren/QUALIFICATION-STATUS-20261104.md); “The Seed Bench” accepted unpublished candidate, four copyedits pending; Hadrin–Casten continuity question unresolved |
 | Aldenmere | Not yet confirmed built/qualified | Future agent; hosts Verentum |
 | Caldenmere | Not yet confirmed built/qualified | Future agent |
 | Kelvant | Not yet confirmed built/qualified | Future agent |
@@ -34,7 +34,7 @@
 | Morantine (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (94, 89, 91) | [Qualification record](agents/morantine/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved as editorial reference, first article needs six copyedits |
 | Verdmont (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (93, 90, 94) | [Qualification record](agents/verdmont/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved editorial design **not enacted**, equality/section review outstanding |
 
-**Seven geographically scoped agents remain to be created or confirmed:** seven States (Harren, Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane). **All four Territories are now qualified** under supervised operations. The prior count of eight predates Verdmont's qualification.
+**All 16 geographic agents have reportedly been created by the President**, including pre-existing Kelvant. **Ten have completed/are established in supervised qualification:** six States (Arvane, Orath, Merath, Corindal, Varek, Harren) and all four Territories. **Six States remain to qualify** (Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane), notwithstanding agent creation. Work-prepared agent packets are local project materials, not independently reviewed/approved canon.
 
 ## Non-geographic desks
 
@@ -44,6 +44,10 @@
 - **International/foreign press:** optional future role worth considering once geographic coverage stabilizes; do not pre-create states, treaties or foreign government actions.
 - **Elections Panel specialist:** optional only if necessary. Do not transfer Elections Panel independence to federal executive desk.
 - **Separate SC agent:** deferred, not part of current build backlog.
+
+## Harren qualification (2026-11-04)
+
+Harren agent **PASSED** Test 01 94, Test 02 92, Test 03 94 and is qualified for supervised editorial work. “The Seed Bench” is accepted but **unpublished** with four specific edits; review [qualification record](agents/harren/QUALIFICATION-STATUS-20261104.md). Live sources distinguish **Hadrin** (Bible capital) from **Casten** (news-001 administrative center) without reconciling them; no spontaneous retcon. Harren Governor and State Administrator have independent constitutional domains; state/federal immigration sponsorship stages are distinct.
 
 ## Territorial founding continuity (2026-11-03 clarification)
 
