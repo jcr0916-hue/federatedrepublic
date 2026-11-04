@@ -25,18 +25,18 @@
 | Corindal | Supervised pilot accepted; candidate story saved | Repository pilot documents describe the earlier stage |
 | Varek | **Qualified; all readiness/story/interstate/continuity evaluations passed; no retest needed** | “The Crew at Tessin Ford” accepted candidate; old 2026-11-01 activation note is obsolete |
 | Harren | **Qualified 2026-11-04**, all three tests passed (94, 92, 94) | [Qualification record](agents/harren/QUALIFICATION-STATUS-20261104.md); “The Seed Bench” accepted unpublished candidate, four copyedits pending; Hadrin–Casten continuity question unresolved |
-| Aldenmere | Not yet confirmed built/qualified | Future agent; hosts Verentum |
-| Caldenmere | Not yet confirmed built/qualified | Future agent |
-| Kelvant | Not yet confirmed built/qualified | Future agent |
-| Selvane | Not yet confirmed built/qualified | Future agent |
-| Rhovane | Not yet confirmed built/qualified | Future agent |
-| Norvane | Not yet confirmed built/qualified | Future agent |
+| Aldenmere | **Agent created; Work packet received; qualification pending** | [Remaining-State Runbook](agents/REMAINING-STATE-QUALIFICATION-RUNBOOK-20261104.md); first to test; six-file packet includes Tests 01–02, **no uploaded Test 03** |
+| Caldenmere | **Agent created; Work packet received; qualification pending** | Full seven-file Work packet; minister appointment and Sovereign Recourse tests |
+| Kelvant | **Pre-existing agent; qualification pending verification** | Earlier training materials exist separately; review prior tests before new work |
+| Selvane | **Agent created; Work packet received; qualification pending** | Seven-file packet; professional merit and Chief Administrator safeguards |
+| Rhovane | **Agent created; Work packet received; qualification pending** | Seven-file packet; lake public trust and Estate Council override |
+| Norvane | **Agent created; Work packet received; qualification pending** | Seven-file packet; emergency authority, reception rights and Riverglow consent |
 | Korda (Territory) | **Qualified for supervised editorial operations** — all three trials passed | `agents/korda/QUALIFICATION-STATUS-20261101.md` supersedes incomplete checkpoint in `agents/korda/README.md` |
 | Solara (Territory) | **Qualified 2026-11-03**, tests 01, 02, 03 passed | Compact v0.3 **approved editorial governing reference**, not newly enacted Year 14 NRS law |
 | Morantine (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (94, 89, 91) | [Qualification record](agents/morantine/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved as editorial reference, first article needs six copyedits |
 | Verdmont (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (93, 90, 94) | [Qualification record](agents/verdmont/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved editorial design **not enacted**, equality/section review outstanding |
 
-**All 16 geographic agents have reportedly been created by the President**, including pre-existing Kelvant. **Ten have completed/are established in supervised qualification:** six States (Arvane, Orath, Merath, Corindal, Varek, Harren) and all four Territories. **Six States remain to qualify** (Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane), notwithstanding agent creation. Work-prepared agent packets are local project materials, not independently reviewed/approved canon.
+**All 16 geographic agents have reportedly been created by the President**, including pre-existing Kelvant. **Ten have completed/are established in supervised qualification:** six States (Arvane, Orath, Merath, Corindal, Varek, Harren) and all four Territories. **Six States remain to qualify** (Aldenmere, Caldenmere, Kelvant, Selvane, Rhovane, Norvane), notwithstanding agent creation. Work-prepared agent packets for **Harren, Aldenmere, Caldenmere, Selvane, Rhovane and Norvane** have been supplied to central review; see [dated transfer and qualification runbook](agents/REMAINING-STATE-QUALIFICATION-RUNBOOK-20261104.md). These are **editorial training materials, not independently approved fictional canon**. Five of those States still await testing; Harren already qualified and must not be retested. Kelvant is pre-existing and has a separate earlier packet.
 
 ## Non-geographic desks
 
