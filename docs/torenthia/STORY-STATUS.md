@@ -1,5 +1,8 @@
 # World Story Status
 
+**November 3, 2026 editorial synchronization:** The November 3 Year 14 Month 2 publication batch adds news 134 (worldSeq 181), *The Two-Sailing Week*, describing Arvane residents' adjustments to Solara's two-sailing winter weekday ferry timetable without attributing a rationale or grievance. The Council of Ministers' informational Lake Varda and budget-calendar summary (NRS 134) and the Elections Panel's contribution-record publication-readiness review (NRS 135) add no new executive decision, funding allocation, electoral outcome, or constitutional clock. This editorial update records the published frontier only; the two approved partisan opinion columns in draft PR #283 are not yet published canon.
+
+
 **Weekend editorial work — 31 October 2026:** Orath test 02 (Year 8, Month 4; State §§5.6–5.7) and Corindal test 02 (Year 7, Month 11; State §8.1) are historical State cases, independent of current character arcs. The [political/character reference](POLITICAL-CHARACTER-PLANNING.md) preserves author intentions separately from published canon, and the [State pilot](STATE-STORY-PILOT.md) remains a proposal with no agents deployed. No daily World/NRS item, new poll, official election result or fictional time advance is part of this weekend work. Routine World/NRS publication remains paused for October 31–November 1, 2026 (real-world dates).
 
 The October 30 Year 14 Month 2 batch adds NRS 132–133 and news 131 (worldSeq 178). The Elections Panel releases nonbinding, accessible practice-ballot materials for single-member and multi-member Assembly contests and the separate Legat Consul ballot, without setting a date, conducting the Legat ballot-order lot, or changing candidacy. The Morantine works office files initial field measurements in its already-commissioned Kessel culvert survey without authorizing construction. Petra Vend explains why teaching the counting process is not predicting or initiating any election. No election date, election result, allocation, referendum outcome or new constitutional clock is established.
@@ -33,7 +36,7 @@ The October 18 Year 14 Month 1 election-season batch adds NRS 102–106, news 11
 
 The October 16 Year 14 Month 1 batch adds NRS 099–101 and news 115. Routine records from Merath (industrial inspection scheduling), Solara (port-register reconciliation), and Varek (county Toren River submissions) diversify the administrative register. Aleth Fenn reports the Varek river and county-government question against the approaching spring Legat Consul election, without adding candidate pledges, polling, a treaty change or an election date. No constitutional clock has changed.
 
-**Current published frontier:** Year 14, Month 2 · worldSeq through **178** · nrsSeq through **133**.
+**Current published frontier:** Year 14, Month 2 · worldSeq through **181** · nrsSeq through **135**.
 
 The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 
