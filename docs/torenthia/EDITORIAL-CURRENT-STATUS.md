@@ -47,7 +47,7 @@
 
 ## Distinguish three statuses
 
-1. **Approved editorial background:** e.g., Solara Compact v0.3; authorizes agent to draft Solara institutional stories consistent with it. It is *not* an enacted NRS record and creates no Year 14 enactment event.
+1. **Approved editorial background:** e.g., Solara Compact v0.3, preserved verbatim in ChatGPT Library `/Torenthia/Agent Governance/SOLARA-TERRITORIAL-COMPACT-v0.3-APPROVED-EDITORIAL.md`; authorizes agent to draft Solara institutional stories consistent with it. It is *not* an enacted NRS record and creates no Year 14 enactment event.
 2. **Approved publication candidate:** article text/pitch accepted editorially but not yet canon, numbered or published unless integrated and merged.
 3. **Published canon:** merged World/NRS source with metadata and a confirmed publishing state. A draft PR is not published canon.
 
