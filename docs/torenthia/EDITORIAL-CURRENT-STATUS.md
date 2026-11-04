@@ -28,7 +28,7 @@
 | Aldenmere | **QUALIFIED 2026-11-04** (96, 92, 90) | [Qualification record](agents/aldenmere/QUALIFICATION-STATUS-20261104.md); *Five in the Morning, Seamark Hill* unpublished pending four required edits |
 | Caldenmere | **Tests 01–02 PASS — 95/100 and 90/100 (2026-11-04); Test 03 authorized; qualification pending** | [Qualification progress](agents/caldenmere/QUALIFICATION-STATUS-20261104.md); *The Queue on the Hard* unpublished with five corrections |
 | Kelvant | **Pre-existing agent; qualification pending verification** | Earlier training materials exist separately; review prior tests before new work |
-| Selvane | **Test 01 PASS — 97/100 (2026-11-04); Test 02 authorized; qualification pending** | [Qualification record](agents/selvane/QUALIFICATION-STATUS-20261104.md); merit system, appointment and anti-patronage safeguards |
+| Selvane | **Tests 01–02 PASS — 97/100 and 91/100 (2026-11-04); Test 03 authorized; qualification pending** | [Qualification record](agents/selvane/QUALIFICATION-STATUS-20261104.md); unpublished *Quiet Afternoon* article has five required corrections |
 | Rhovane | **Agent created; Work packet received; qualification pending** | Seven-file packet; lake public trust and Estate Council override |
 | Norvane | **Agent created; Work packet received; qualification pending** | Seven-file packet; emergency authority, reception rights and Riverglow consent |
 | Korda (Territory) | **Qualified for supervised editorial operations** — all three trials passed | `agents/korda/QUALIFICATION-STATUS-20261101.md` supersedes incomplete checkpoint in `agents/korda/README.md` |
