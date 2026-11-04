@@ -10,12 +10,19 @@
 - Unverified: live website deploy status. Merge/CI evidence is not independent proof of deploy.
 - User's preferred workflow: agents receive built-in current federal Constitution, act as independent sources of prose, and submit drafts; President authorizes merges; **never put local agent initialization files in GitHub unless requested**; provide verified downloadable markdown/ZIP packages instead.
 
+## Updates after initial handoff
+
+- **2026-11-03:** PR #284 (story-status 181/135) and #285 (continuity handoff) **merged** on main, final merge commit `4886141e13cf9694db7f25a37570532539c854e8`. The PR table below is the older snapshot; treat the merge updates as superseding it.
+- **2026-11-03:** **Morantine Territory Agent qualified** across three tests (94/100, 89/100, 91/100). [Qualification record](agents/morantine/QUALIFICATION-STATUS-20261103.md). Approved governing **editorial** Compact v0.2 preserved verbatim in ChatGPT Library `/Torenthia/Agent Governance/MORANTINE-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md`, not enacted law. Article “An Honest Scale and a Leaky Roof” accepted as unpublished publication candidate pending six revisions; border-agricultural-exchange Test 03 pitch held as proposal. **Eight geographic jurisdictions remain:** seven States and Verdmont Territory.
+- **Verdmont design remains proposed:** northwest coastal/mountain territory, population largely outside mountains, some Varek heritage; bicameral legislature with upper chamber representing geographic sections equally (two each), executive selected from upper chamber. Do not confuse with southern Morantine. Full design note: ChatGPT Library `/Torenthia/Agent Governance/VERDMONT-TERRITORIAL-DESIGN-NOTE-20261103.md`.
+- **Capital image:** a new image of Verentum with the correct Four Founders flag was approved by President; asset package was prepared but website upload/deploy **not independently confirmed**. Do not claim it is live without checking.
+
 ## Open review work — verify live status
 
 | PR | Content | Decision needed |
 |---|---|---|
 | [#283](https://github.com/jcr0916-hue/federatedrepublic/pull/283) | **Draft** debut media opinion articles: *The Clock Is Not the Problem*, Halen Druse / The Verentum Review (staged worldSeq 182, news 135); *Two Sailings, and a Committee Drawing Pictures*, Ilsa Varn / The Common Interest (staged worldSeq 183, news 136) | Review HTML, publication checks, current frontier; ask President before merge |
-| [#284](https://github.com/jcr0916-hue/federatedrepublic/pull/284) | **Draft** correct STORY-STATUS frontier from 178/133 to 181/135 | Review/merge with approval; reconcile future frontier if #283 merges first |
+| [#284](https://github.com/jcr0916-hue/federatedrepublic/pull/284) | **Merged** correction to STORY-STATUS frontier (181/135) | None; check current published frontier before next story |
 | [#282](https://github.com/jcr0916-hue/federatedrepublic/pull/282) | Draft Partisan Media Agent setup files mistakenly committed to GitHub | President expected local downloadable files; do not merge reflexively; ask whether to close |
 | [#279](https://github.com/jcr0916-hue/federatedrepublic/pull/279) | Operating philosophy / naming | Still open; preserve President's preference |
 | [#278](https://github.com/jcr0916-hue/federatedrepublic/pull/278) | Orath qualification docs | Still open; don't misread open docs PR as unfinished testing |
