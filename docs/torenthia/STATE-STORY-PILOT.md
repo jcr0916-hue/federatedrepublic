@@ -1,5 +1,8 @@
 # State-storytelling pilot — editorial architecture
 
+> **Later status update (2026-11-03):** This document preserves the original pilot planning and should **not** be used as the present agent roster. See [Current Editorial Status](EDITORIAL-CURRENT-STATUS.md) and [Handoff](EDITORIAL-HANDOFF-20261103.md). Corindal's pilot, Varek's completed qualification, and the later Korda and Solara qualifications supersede dated activation/partial-test descriptions below. Historical text retained to explain decisions.
+
+
 **Status:** Corindal supervised editorial pilot tested and configured; broader federal/State network planned, not yet deployed. Internal editorial planning only, not published World/NRS canon.
 
 ## At-a-glance progress — 2026-11-01 (real-world)

@@ -1,5 +1,8 @@
 # Torenthia editorial queue — November 1, 2026 checkpoint
 
+> **Historical queue snapshot.** Use [current handoff](EDITORIAL-HANDOFF-20261103.md) and [current agent status](EDITORIAL-CURRENT-STATUS.md) for updated priorities and qualifications. The baseline 178/133 and pending PR chain below describe the older checkpoint, **not the November 3 main frontier 181/135**. Existing candidate links remain useful; verify current merge status before action.
+
+
 **Status:** Internal, unpublished. **Verified agent-source baseline:** `main` at `ed68a7aa62fe4c36f3376cc3f7199d7980b15ce7`; fictional Y14 M2, narrative worldSeq 178, NRS nrsSeq 133. Refresh before publication and do not assume this remains current.
 
 | Priority | Desk | Candidate | Status |
