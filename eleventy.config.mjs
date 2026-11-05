@@ -103,6 +103,7 @@ export default function (eleventyConfig) {
   const passthrough = [
     "site.css", "links.css", "republic.css", "nav.js", "discovery.js", "related-rail.js", "map-data.js", "search-index.js", "sw.js",
     "favicon.ico", "favicon-32.png", "apple-touch-icon.png",
+    "verentum-four-founders-card.webp",
     "crossroads-engine.js", "korda-crossroads.json", "tier2-borders.json", "tier2-labels.json",
     "rhovane-flag.svg", "corindal-flag.svg", "aldenmere-flag.svg", "arvane-flag.svg",
     "orath-flag.svg", "merath-flag.svg",
