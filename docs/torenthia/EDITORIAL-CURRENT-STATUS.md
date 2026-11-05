@@ -22,7 +22,7 @@
 | Arvane | Established / working under central supervision (reported in current editorial conversation) | Local publication: Westport Ledger, news 134; no autonomous publishing |
 | Orath | Qualification work reported completed / established; documentation PR #278 remains unmerged | Check that later editorial decisions supersede dated checkpoints |
 | Merath | Established following historical State qualification work (conversation-level status) | Do not equate historic test case with modern event |
-| Corindal | Supervised pilot accepted; candidate story saved | Repository pilot documents describe the earlier stage |
+| Corindal | Supervised pilot accepted; [political foundation approved 2026-11-04](CORINDAL-POLITICAL-FOUNDATION.md) | Year 12 Vorn/Veth ticket, Year 16 expiry, Year 14 full Senate cycle; 19/18/11/3 is an estimated current alignment, not results. Rehn outside first election feature; *Before the Ground Thaws* remains unpublished and its proposed cast/history unapproved. |
 | Varek | **Qualified; all readiness/story/interstate/continuity evaluations passed; no retest needed** | “The Crew at Tessin Ford” accepted candidate; old 2026-11-01 activation note is obsolete |
 | Harren | **Qualified 2026-11-04**, all three tests passed (94, 92, 94) | [Qualification record](agents/harren/QUALIFICATION-STATUS-20261104.md); “The Seed Bench” accepted unpublished candidate, four copyedits pending; Hadrin–Casten continuity question unresolved |
 | Aldenmere | **QUALIFIED 2026-11-04** (96, 92, 90) | [Qualification record](agents/aldenmere/QUALIFICATION-STATUS-20261104.md); *Five in the Morning, Seamark Hill* unpublished pending four required edits |
