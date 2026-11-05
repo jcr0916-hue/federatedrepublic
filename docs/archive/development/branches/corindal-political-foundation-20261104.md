@@ -1,8 +1,8 @@
 # Branch history — docs/corindal-political-foundation-20261104
 
 **Original branch:** `docs/corindal-political-foundation-20261104`
-**PR:** Not yet opened at initial commit; link to be added in this PR.
-**Head commit at handoff:** Pending initial commit; the PR's head metadata will identify the final SHA.
+**PR:** [#300 — Record approved Corindal political foundation](https://github.com/jcr0916-hue/federatedrepublic/pull/300).
+**Head at initial verification:** `9bd39a491f14f9592e64c2238e8952e64ce4ec81` (before this PR-link update); the PR's head metadata identifies the final SHA.
 **Status:** President-approved editorial foundation; proposed repository integration, awaiting the author's merge review. Not merged or deployed.
 
 ## Purpose
@@ -22,7 +22,7 @@ Record the President's approval in *Constitution 16* on a new feature branch, wi
 - Local verification passed: fetched baseline blob hashes match GitHub; added relative links resolve against the baseline tree plus this change; modified scope is Markdown documentation only; the candidate remains byte-for-byte identical; the whitespace check reports no errors.
 - Recomputed coalition totals: 37 / 30 / 29 meet 26; a single faction plus all unaligned reaches only 22 / 21 / 14.
 - Confirmed unchanged Eleventy configuration excludes `docs/**`; unchanged `vercel.json` disables feature-branch Git deployments. No public HTML, data ledger, publishing sequence, clock, constitutional source or deployment configuration is changed.
-- The full application build/test suite was not run locally for these internal Markdown edits. Its actual GitHub **World publishing** result is tracked in the PR checks; no CI success is assumed here.
+- The full application build/test suite was not run locally for these internal Markdown edits. The initial content commit passed the GitHub **World publishing** push check ([run 41966199823](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/41966199823)); final-head validation is tracked in PR #300. That initial result does not assert the outcome of later runs.
 
 ## Decisions and lessons
 
