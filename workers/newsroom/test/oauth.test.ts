@@ -57,6 +57,26 @@ describe("authentication adapter in local Workers runtime", () => {
     assert.deepEqual(f.calls, { token: 0, identity: 0 });
   });
 
+  it("accepts ChatGPT's read-only shorthand without resource while keeping strict client and PKCE", async () => {
+    const f = await instance();
+    const compatible = await call(f, authorizeUrl(f, "read", { resource: null }));
+    assert.equal(compatible.status, 200);
+    const html = await compatible.text();
+    assert.match(html, /List and read submissions across newsroom desks/);
+    assert.doesNotMatch(html, /Record editorial review decisions/);
+    for (const change of [
+      { client_id: "unknown-client", resource: null },
+      { redirect_uri: "https://attacker.example/callback", resource: null },
+      { code_challenge_method: "plain", resource: null },
+      { scope: "review", resource: null },
+      { scope: "read newsroom:review", resource: null },
+      { resource: "https://attacker.example/mcp", scope: "read" },
+    ]) {
+      assert.equal((await call(f, authorizeUrl(f, "read", change))).status, 400);
+    }
+    assert.deepEqual(f.calls, { token: 0, identity: 0 });
+  });
+
   it("escapes client metadata and binds consent to its browser and origin", async () => {
     const f = await instance();
     const started = await call(f, authorizeUrl(f));
