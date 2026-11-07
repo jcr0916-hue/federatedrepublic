@@ -34,7 +34,11 @@ describe("synthetic authorization code + S256 grant exchange (local only)", () =
             audience: RESOURCE, redirectUri: REDIRECT, now: NOW, ...fields,
           }),
         });
-        return { status: response.status, body: await response.json() as Reply };
+        const raw = await response.text();
+        let body: Reply;
+        try { body = JSON.parse(raw) as Reply; }
+        catch { throw new Error(`Synthetic authorization fixture returned HTTP ${response.status}: ${raw.slice(0, 1600)}`); }
+        return { status: response.status, body };
       };
       const begin = (grant: string, fields: Record<string, unknown> = {}) =>
         call("begin_code", { scope: "newsroom:read", codeChallenge: CHALLENGE, ...fields }, grant);
