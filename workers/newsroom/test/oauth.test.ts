@@ -84,6 +84,9 @@ describe("authentication adapter in local Workers runtime", () => {
     assert.ok(!html.includes("ChatGPT <test client>"));
     assert.ok(html.includes("ChatGPT &#60;test client&#62;"));
     assert.match(started.headers.get("content-security-policy")!, /frame-ancestors 'none'/);
+    // Chromium/WebKit enforce form-action on the POST redirect to GitHub.
+    assert.match(started.headers.get("content-security-policy")!, /form-action 'self' https:\/\/github\.com(?:;|$)/);
+    assert.doesNotMatch(started.headers.get("content-security-policy")!, /form-action[^;]*https:/ + "\\/\\/" + "attacker\\.example/);
     // A no-referrer policy changes the Origin on browser form POSTs to "null",
     // causing the strict consent origin check to reject a legitimate approval.
     assert.equal(started.headers.get("referrer-policy"), "origin");
