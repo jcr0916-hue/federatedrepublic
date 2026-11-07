@@ -14,6 +14,7 @@ const CLIENT = "synthetic-newsroom-editor";
 const SECRET = "synthetic-local-fixture-client-secret";
 const EDITOR = "synthetic-editor-12345";
 const AUDIENCE = "https://synthetic.newsroom.invalid/mcp";
+const REDIRECT = "https://chatgpt.invalid/oauth/callback";
 const ACCESS_TTL = 900;
 const REFRESH_TTL = 7200;
 
@@ -27,6 +28,7 @@ type RequestBody = {
   action?: string; grant?: string; clientId?: string; clientSecret?: string;
   refreshToken?: string; accessToken?: string; scope?: string;
   audience?: string; now?: number; requestedScope?: string;
+  redirectUri?: string; codeChallenge?: string; code?: string; codeVerifier?: string;
 };
 
 export default {
@@ -46,6 +48,49 @@ export default {
       return Response.json({ error: "invalid_request" }, { status: 400 });
     }
     const stub = env.SYNTHETIC_GRANTS.get(env.SYNTHETIC_GRANTS.idFromName(params.grant));
+    // These test-only actions model pre-approved identity + consent. They are
+    // deliberately NOT browser OAuth endpoints, and must never be deployed.
+    if (params.action === "begin_code") {
+      if (params.audience !== AUDIENCE || params.redirectUri !== REDIRECT ||
+          params.scope !== "newsroom:read" ||
+          typeof params.codeChallenge !== "string" ||
+          !/^[A-Za-z0-9_-]{43}$/.test(params.codeChallenge)) {
+        return Response.json({ error: "invalid_authorization_request" }, { status: 400 });
+      }
+      const code = token();
+      const started = await stub.beginCode({
+        codeHash: await digest(code), challenge: params.codeChallenge,
+        clientId: CLIENT, audience: AUDIENCE, redirectUri: REDIRECT,
+        scopes: ["newsroom:read"], now: now as number, ttl: 300,
+      });
+      return Response.json(started ? { code, expires_in: 300 } : { error: "invalid_grant" },
+        { status: started ? 200 : 400 });
+    }
+    if (params.action === "exchange_code") {
+      if (typeof params.code !== "string" || !/^[0-9a-f]{64}$/.test(params.code) ||
+          typeof params.codeVerifier !== "string" ||
+          !/^[A-Za-z0-9_-]{43,128}$/.test(params.codeVerifier) ||
+          params.redirectUri !== REDIRECT || params.audience !== AUDIENCE) {
+        return Response.json({ error: "invalid_grant" }, { status: 400 });
+      }
+      const pkceDigest = new Uint8Array(await crypto.subtle.digest(
+        "SHA-256", new TextEncoder().encode(params.codeVerifier),
+      ));
+      const computedChallenge = btoa(Array.from(pkceDigest, byte =>
+        String.fromCharCode(byte)).join("")).replace(/\\+/g, "-").replace(/\\//g, "_").replace(/=+$/, "");
+      const refreshToken = token(), accessToken = token();
+      const result = await stub.exchangeCode({
+        codeHash: await digest(params.code), computedChallenge,
+        clientId: CLIENT, audience: AUDIENCE, redirectUri: REDIRECT,
+        editorId: EDITOR, refreshHash: await digest(refreshToken),
+        accessHash: await digest(accessToken), now: now as number,
+        refreshTTL: REFRESH_TTL, accessTTL: ACCESS_TTL,
+      });
+      return Response.json(result.ok ? {
+        token_type: "Bearer", scope: "newsroom:read", expires_in: ACCESS_TTL,
+        access_token: accessToken, refresh_token: refreshToken, generation: result.generation,
+      } : { error: result.error }, { status: result.ok ? 200 : 400 });
+    }
     if (params.action === "issue") {
       if (params.audience !== AUDIENCE || params.scope !== "newsroom:read") {
         return Response.json({ error: "invalid_scope_or_audience" }, { status: 400 });
