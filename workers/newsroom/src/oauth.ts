@@ -53,7 +53,9 @@ async function authorize<Env extends OAuthBindings>(
     // Keep the authorization query private while allowing a browser form POST to
     // send its actual Origin; "no-referrer" makes navigation-mode POSTs send "null".
     transaction.headers.set("Referrer-Policy", "origin");
-    transaction.headers.set("Content-Security-Policy", "default-src 'none'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'");
+    // Chromium/WebKit enforce form-action across the redirect following this
+    // same-origin POST. Permit only the intended upstream GitHub OAuth host.
+    transaction.headers.set("Content-Security-Policy", "default-src 'none'; form-action 'self' https://github.com; frame-ancestors 'none'; base-uri 'none'");
     const permissions = auth.scope.filter(x => x !== "offline_access").map(scope =>
       `<li>${scope === READ_SCOPE ? "List and read submissions across newsroom desks" : "Record editorial review decisions"}</li>`,
     ).join("");
