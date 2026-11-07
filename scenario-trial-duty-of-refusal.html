@@ -1,0 +1,116 @@
+---
+scenarioTrial: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Duty of Refusal — Constitutional Stress-Test Trial — The Federated Republic</title>
+  <meta name="description" content="A proposed staged test of the Constitution's duty to refuse unlawful executive orders, including assumptions, failure conditions, and limits of enforcement.">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .trial-wrap{max-width:860px;margin:0 auto;padding:100px 22px 80px}
+    .trial-kicker{font-family:monospace;font-size:.77rem;letter-spacing:.12em;text-transform:uppercase;color:#8b6b26}
+    .trial-wrap h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.08;margin:.5rem 0 1rem}
+    .trial-wrap h2{font-size:1.55rem;margin:2.3rem 0 .8rem}
+    .trial-wrap h3{font-size:1.13rem;margin:1rem 0 .4rem}
+    .trial-wrap p,.trial-wrap li{line-height:1.74}
+    .trial-deck{font-size:1.1rem;max-width:720px;color:var(--muted,#59616b)}
+    .trial-note{padding:1rem 1.3rem;border-left:4px solid #ae7d2d;background:rgba(174,125,45,.08);margin:1.5rem 0}
+    .trial-table{width:100%;border-collapse:collapse;margin:1rem 0 2rem;font-size:.95rem}
+    .trial-table th,.trial-table td{padding:.8rem;text-align:left;border-bottom:1px solid #b0b0b055;vertical-align:top}
+    .trial-table th{width:33%}
+    .trial-stage{border:1px solid #b0b0b077;border-radius:6px;margin:1.1rem 0;padding:1.2rem 1.3rem}
+    .trial-stage h3{margin-top:0}
+    .trial-result{font-weight:650}
+    .trial-wrap a{overflow-wrap:anywhere}
+    .trial-wrap ul{padding-left:1.5rem}
+    @media(max-width:600px){.trial-wrap{padding:85px 16px 50px}.trial-table th{width:38%}}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+{% include "nav.njk" %}
+<main id="main-content" class="trial-wrap">
+  <p class="trial-kicker">Format trial · Federal constitutional stress test · Article II</p>
+  <h1>The Duty of Refusal</h1>
+  <p class="trial-deck">Does a prohibition on obeying unlawful executive orders protect constitutional government when an officer's superiors refuse to accept the protection?</p>
+  <div class="trial-note"><strong>Editorial status:</strong> Experimental, non-canonical format trial. This is not a historical event, a claim of a court ruling, or an addition to the National Record System. Compare the original narrative <a href="scenario-the-order.html">The Order</a>.</div>
+
+  <h2>Test specification</h2>
+  <table class="trial-table">
+    <tbody>
+      <tr><th>Test ID</th><td>FR-ART02-TRIAL-01</td></tr>
+      <tr><th>Primary rule</th><td>§2.8 — duty of refusal. Supporting provisions: §1.1, §2.3, §6.2 and §9.1.b.</td></tr>
+      <tr><th>Question</th><td>When an executive order requires unconstitutional conduct, does the legal duty to refuse remain meaningful if disciplinary and enforcement institutions do not cooperate?</td></tr>
+      <tr><th>Baseline conditions</th><td>An officer exercises federal authority; an executive issues an order to transfer a person out of the Republic without a lawful removal process or an opportunity to seek judicial remedy. The order is stipulated to violate applicable law. The affected individual is within Republic jurisdiction.</td></tr>
+      <tr><th>Legal assumptions</th><td>The order is in fact unlawful, not merely disputed; the officer identifies the defect accurately. An independent court is accessible unless a stage expressly changes that condition. No emergency suspension, special legislation, or new constitutional power is assumed.</td></tr>
+      <tr><th>Variables</th><td>Superior's willingness to withdraw the order; institutional willingness to review discipline; practical ability to enforce an adverse ruling.</td></tr>
+      <tr><th>Excluded</th><td>Whether the person merits removal, whether intelligence evidence is sufficient, national-security outcomes, and any actual criminal liability of a named officer.</td></tr>
+      <tr><th>Success criterion</th><td>The officer can refuse without a legally valid penalty, and a lawful path exists to challenge or remedy any rights violation.</td></tr>
+      <tr><th>Failure criterion</th><td>Not merely that a superior acts unlawfully, but that the operative safeguards cannot prevent or remedy an unlawful penalty or order under the stated conditions.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Staged pressure test</h2>
+  <section class="trial-stage">
+    <h3>Stage 1 — The rule is observed</h3>
+    <p><strong>Change:</strong> The officer refuses; the superior accepts the refusal, suspends the proposed transfer, and seeks lawful review.</p>
+    <p><strong>Constitutional behavior:</strong> §2.8 forbids compliance with an order requiring a violation of the Constitution or statute. The refusal is lawful under the stipulated facts. No penalty follows.</p>
+    <p class="trial-result">Finding: The safeguard functions at the point of execution.</p>
+    <p><strong>Limit:</strong> This stage tests the duty, not enforcement against a hostile command structure.</p>
+  </section>
+  <section class="trial-stage">
+    <h3>Stage 2 — The command structure retaliates</h3>
+    <p><strong>Change:</strong> The superior maintains the order and initiates discipline solely because the officer refused it. Independent review remains available.</p>
+    <p><strong>Constitutional behavior:</strong> Under §2.8, lawful refusal creates no liability and may not support a penalty; any such penalty is void. The officer may report the order to the Executive Monitor. §1.1 protects access to a court for rights violations. An initiated proceeding and a valid penalty are not the same thing.</p>
+    <p class="trial-result">Finding: The disciplinary act conflicts with the constitutional rule; the legal safeguard has not disappeared.</p>
+    <p><strong>Limit:</strong> The text does not itself guarantee that every disciplinary process stops immediately or specify the speed of review.</p>
+  </section>
+  <section class="trial-stage">
+    <h3>Stage 3 — Oversight identifies the violation, but the superior obstructs correction</h3>
+    <p><strong>Change:</strong> The Executive Monitor investigates compliance, finds the order unlawful, and reports that the penalty is unconstitutional. The superior refuses voluntary correction. Courts remain functioning and accessible.</p>
+    <p><strong>Constitutional behavior:</strong> §9.1.b authorizes the Executive Monitor to audit executive constitutional compliance. The Monitor's audit is not treated here as an independent power to command the officer, expunge records, or impose a sentence. The affected officer still has a pathway to judicial remedy under §1.1.</p>
+    <p class="trial-result">Finding: Oversight can identify the breach; effective correction now depends on an institution with remedial authority and compliance with its decision.</p>
+    <p><strong>Limit:</strong> A public finding and an effective remedy are distinct. The constitutional text does not, by these cited provisions alone, establish that publication automatically cures the penalty.</p>
+  </section>
+  <section class="trial-stage">
+    <h3>Stage 4 — Enforcement fails in practice</h3>
+    <p><strong>Change:</strong> The officer wins an independent court ruling, but responsible officials knowingly refuse to implement it, and no effective enforcement is available within the period tested.</p>
+    <p><strong>Constitutional behavior:</strong> The underlying order remains unlawful, and a lawful refusal remains protected by §2.8. Access to a court and obtaining a favorable ruling satisfy different parts of the system than actual compliance. The facts stipulate that the latter is absent.</p>
+    <p class="trial-result">Finding: A practical enforcement failure under the test assumptions, not proof that the Constitution authorized the order or penalty.</p>
+    <p><strong>Limit:</strong> This trial does not establish that all other constitutional remedies are absent. It identifies a stressed dependency on effective enforcement and calls for a separate review of any additional remedies elsewhere in the Constitution or statute.</p>
+  </section>
+
+  <h2>What works, what breaks, and where</h2>
+  <table class="trial-table">
+    <thead><tr><th>Stage</th><th>Legal rule</th><th>Practical result</th></tr></thead>
+    <tbody>
+      <tr><th>1</th><td>Duty to refuse applies</td><td>Works with institutional cooperation</td></tr>
+      <tr><th>2</th><td>Penalty for lawful refusal is void</td><td>Unlawful discipline begins; legal protection remains</td></tr>
+      <tr><th>3</th><td>Oversight and court access remain</td><td>Correction depends on effective remedy</td></tr>
+      <tr><th>4</th><td>Order and penalty remain unlawful</td><td>Enforcement fails under stipulated obstruction</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Why isn't there an automatic fix?</h2>
+  <p>Section 2.8 makes the duty categorical and any penalty void, but does not make a superior physically incapable of issuing an unlawful order or taking retaliatory action. The Constitution protects access to courts (§1.1) and establishes oversight of executive compliance (§9.1.b). Those safeguards assign responsibilities to different institutions instead of giving the refusing officer unrestricted power to compel obedience.</p>
+  <p>Whether a stronger built-in enforcement device was deliberately rejected <strong>cannot be determined from these provisions alone</strong>. Possible alternatives—automatic suspension of all disputed orders, direct Monitor coercive power, or independent emergency enforcement—would each create new powers and risks. They are questions for design evaluation, not mechanisms silently supplied by this Constitution.</p>
+
+  <h2>Conclusions and unresolved questions</h2>
+  <ul>
+    <li><strong>Supported by text:</strong> Unlawful executive orders must not be obeyed; lawful refusal is protected; a penalty for such refusal is void.</li>
+    <li><strong>Supported by text:</strong> A report to the Executive Monitor is permitted, and the Monitor audits the executive for constitutional compliance.</li>
+    <li><strong>Dependency exposed:</strong> Legal invalidity and actual prevention of punishment are not identical. Enforcement requires operative institutions.</li>
+    <li><strong>Not established:</strong> That oversight findings alone command an expungement, that all enforcement remedies have been exhausted, or that the omission of a further remedy was intentional.</li>
+    <li><strong>Next test:</strong> Vary whether an officer reasonably but incorrectly believes an order is unlawful; §2.8 expressly protects <em>lawful</em> refusal rather than an unlimited right to refuse disputed orders.</li>
+  </ul>
+
+  <h2>Source and comparison</h2>
+  <p><a href="constitution.html">The Constitution</a> · <a href="scenario-the-order.html">Original narrative: The Order</a>. The operative source is the Constitution's §§1.1, 2.8, 6.2 and 9.1.b; §2.3 provides jurisdictional context, not an exemption from rights. Conclusions above are limited to the stated assumptions and cited text.</p>
+</main>
+{% include "footer.njk" %}
+<script src="nav.js"></script>
+</body>
+</html>
