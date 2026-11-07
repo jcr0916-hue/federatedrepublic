@@ -223,6 +223,17 @@ export function createNewsroomOAuth<Env extends OAuthBindings>(
         const config = configuration(env);
         if (new URL(request.url).origin !== config.issuer) return errorResponse(421, "wrong_origin");
         checkOrigin(request, config);
+        // ChatGPT currently sends scope=read and may omit the RFC 8707 resource
+        // indicator. Normalize only that read-only alias to our fixed MCP audience.
+        // Do not accept arbitrary scopes, supplied audiences or callbacks.
+        if (path === "/authorize" && request.method === "GET") {
+          const url = new URL(request.url);
+          if (url.searchParams.get("scope") === "read") {
+            url.searchParams.set("scope", READ_SCOPE);
+            if (!url.searchParams.has("resource")) url.searchParams.set("resource", config.resource);
+            request = new Request(url, request);
+          }
+        }
         const provider = new OAuthProvider(providerOptions(env, adapter, dependencies));
         return await provider.fetch(request, env, ctx);
       } catch (error) {
