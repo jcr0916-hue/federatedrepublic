@@ -125,3 +125,12 @@ No deployment, merge, test OAuth grant interruption, production modification, or
 - No real GitHub API call, deployment, new cloud binding or grant interruption occurred. Working ChatGPT editor and both existing Workers, `main`, and Torenthia canon remain untouched. PR #305 is still draft against PR #304 feature branch.
 
 **Future work:** Design the production-shaped issuer as a distinct test-only build **without importing synthetic fixture endpoints**. A strict replay policy may force explicit reauthorization after a response-loss event; weigh usability versus stronger security before authorizing any hosted test.
+
+## Server-issued grant routing and registered synthetic client — 2026-11-07
+
+- Added `prototype/issuer-boundary.ts` (commit `32e6e64`): creates 256-bit random grant identifiers and independently random opaque refresh/access secrets; parses grant routing metadata without granting authority; checks a high-entropy synthetic confidential-client secret against a trusted registered hash.
+- Added test-only `prototype/issuer-boundary-fixture.ts` (commit `1cb41b6`): client must authenticate before grant issuance, refresh, read or revoke; each grant DO ID is created by the server and no request-supplied grant ID is accepted. This fixture bypasses real login and carries known synthetic credentials, so **must never be publicly deployed**.
+- Added unit and local SQLite DO tests `test/issuer-boundary.test.ts` and `test/issuer-boundary-runtime.test.ts`, including altered token/ID, client mismatch, isolated grants, concurrent refresh replay, and revocation. GitHub Actions `Newsroom OAuth checks` run **42360937260** (job **128368988727**, commit `d0611c3`) **passed 45 tests, zero failures**, plus typecheck and both builds.
+- Updated `prototype/SECURITY-READINESS-REVIEW.md` (commit `e27b293`) to distinguish the **local routing proof** from unfinished genuine OAuth security/registration and protected server resource access. P0 test administration and mock identity issues remain; no deployment, merge or production/environment changes authorized or performed.
+
+**Next scope:** remove local test shortcuts from a separately built authorization server; integrate issuer-owned grants with real browser/callback identity, OAuth token endpoints and resource verification, then independent review and isolated hosted evaluation. The current test fixture and both draft PRs remain non-production.
