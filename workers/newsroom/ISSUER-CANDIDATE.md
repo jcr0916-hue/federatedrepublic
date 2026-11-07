@@ -55,12 +55,16 @@ The paired HTTP tests use actual local Worker/SQLite/R2 runtimes and mocked GitH
 
 Local Node is 24.15.0, below the pinned supported engine range. A clean install in GitHub CI remains the authoritative supported-environment check. Historical previous-stage evidence: [56-test CI run 42363718849](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42363718849), implementation `9174c785`. Current-stage CI results are recorded separately in the permanent handoff after completion.
 
+**Current-stage CI verified:** [Newsroom OAuth checks run 42366430106](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42366430106), job `128385360438`, passed on implementation commit [`2b945702`](https://github.com/jcr0916-hue/federatedrepublic/commit/2b945702468a5dcaf24b20934db06d860703cf38). Logs confirm Node **24.22.2**, successful clean install, TypeScript, **73 tests passed / zero failures**, four builds and all three separate review artifacts. [World publishing run 42366430165](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42366430165) also passed. Browser/hosted results remain outside this proof.
+
 ## Remaining gates and next checkpoint
 
 1. Human-assisted browser certificate/real consent and an independently configured GitHub sign-in app; actual ChatGPT connection compatibility is not yet tested. Static-client protocol tests are not proof of real client interoperability.
 2. Hosted isolated issuer/resource evaluation with new namespaces, test bucket and credentials; multiple-region concurrency, safe observability, transport deadlines and rollback. No existing Worker, grant or production resource may be reused for this test. See [the prepared hosted test plan](ISOLATED-ISSUER-TEST-PLAN.md).
 3. Independent security review. This source self-review found and removed a TypeScript-only private writer exposure by using runtime `#private`, and replaced the JS digest-comparison loop with native cryptographic verification. It is not an independent audit.
 4. Hosted operational hardening, broader abuse controls, secret-rotation procedure and deployment/monitoring ownership. Coarse shared rate limits trade availability for bounded issuance and need tuning.
+
+Fresh authorization creates an independent grant; it does not implicitly revoke all older grants for that editor/client. Current-credential revocation and expiry are enforced, but an account-wide grant inventory/supersession/revocation policy still needs design before production. Do not claim reconnect automatically revokes every earlier grant.
 
 The user's later instruction authorizes unattended work available through existing tools; no repeated approval is needed for routine branch work. This checkpoint stops at verified source/CI and the concrete human browser gate. Neither PR has been merged, no host resources were provisioned, no production/`main` change occurred, and the working ChatGPT grant remains untouched.
 
