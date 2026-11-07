@@ -112,7 +112,7 @@ describe("browser cookie and mocked GitHub callback fixture (never deploy)", () 
       assert.equal(githubUrl.searchParams.get("redirect_uri"), ORIGIN + "/oauth/callback");
       challenges.set("editor-a", githubUrl.searchParams.get("code_challenge")!);
       assert.equal((await callback("editor-a", STATE, undefined)).status, 403);
-      assert.equal((await callback("editor-c", secondUpstreamState, secondCookieForGood)).status, 403);
+      assert.equal((await callback("editor-a", STATE, value)).status, 403);
       assert.equal((await callback("editor-a", "b".repeat(64), value)).status, 403);
       assert.equal((await callback("editor-a", upstreamState, value, "synthetic-other-user-code")).status, 403);
       // Callback claims the upstream state exactly once, including on denied
@@ -130,7 +130,7 @@ describe("browser cookie and mocked GitHub callback fixture (never deploy)", () 
       assert.equal(destination.origin, "https://chatgpt.invalid");
       assert.equal(destination.searchParams.get("state"), "d".repeat(64));
       assert.match(destination.searchParams.get("code")!, /^[0-9a-f]{64}$/);
-      assert.equal((await callback("editor-a", STATE, value)).status, 403);
+      assert.equal((await callback("editor-c", secondUpstreamState, secondCookieForGood)).status, 403);
       assert.equal((await authorize("editor-a")).status, 400);
       assert.equal(tokenCalls, 2);
       assert.equal(userCalls, 2);
