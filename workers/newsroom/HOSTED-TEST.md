@@ -59,3 +59,13 @@ Cloudflare settings were independently re-read for the isolated Worker. `NEWSROO
 The branch's `.github/workflows/newsroom-oauth.yml` now uploads `workers/newsroom/dist/worker.js` as the seven-day `newsroom-oauth-pr-bundle` artifact **only after the existing typecheck, local tests, release build and fixture build succeed**. No Cloudflare secrets or deployment permissions were added to GitHub Actions. This is a preparation step, not a verified hosted deployment. Artifact availability and passing checks must be confirmed against the actual run before use; the local shell could not resolve the public GitHub/npm hosts.
 
 Before deployment, the OAuth client must be privately pre-registered via `oauthHelpers().createClient()` with its exact callback and scopes, and the returned ID/secret installed securely. The current Worker exposes no HTTP administrative client-registration route and must not be modified to expose one. Do not invent `CHATGPT_CLIENT_ID`. Align the isolated Worker's compatibility date with tested `2026-10-01` and verify all 12 bindings persist after code deployment. The public test Worker currently runs the starter code; production remains untouched.
+
+## Validated PR artifact — 2026-11-07
+
+- GitHub Actions `Newsroom OAuth checks` run **42346948721** succeeded for PR head `25194edc0a4e3a623d58dfce31845e0fce9e8a91`.
+- Artifact **`newsroom-oauth-pr-bundle`**, ID **13563891958**, created 2026-11-07 06:25:58 UTC; reported expiry 2026-11-14 06:25:57 UTC.
+- Artifact ZIP size **59,313 bytes**; locally verified ZIP SHA-256 **`9827e2181909a08f99fb90cd1d1194df45aeea2c8b3b429a6fca2777fe376d2e`** matches GitHub artifact digest.
+- ZIP contains exactly `worker.js` (**259,635 bytes**). This is the release bundle produced by the passing PR check; no hand-reconstructed replacement is acceptable.
+- GitHub workflow run also included other site workflows; the newsroom check alone is the relevant passing build gate.
+- **Not yet uploaded/deployed:** available Cloudflare connector supports Workers script upload, but this session cannot pass the downloaded ZIP's compiled bytes securely to that API; direct container internet access is unavailable. Do not claim hosted code validation from the artifact check.
+- **Still required:** secure transfer of the exact bundle to the test Worker with preservation/re-verification of existing bindings, alignment of compatibility date, private client registration and real ChatGPT OAuth testing. Avoid an unprotected registration endpoint or secrets in workflow artifacts. The test Worker continues to run Hello World. Production unaffected.
