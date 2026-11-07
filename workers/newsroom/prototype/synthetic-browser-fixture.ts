@@ -96,7 +96,7 @@ export default {
       const state = url.searchParams.get("state")!;
       const started = await stub.startConsent({
         browserHash: await digest(browser), stateHash: await digest(state),
-        challenge, clientId: CLIENT, audience: AUDIENCE,
+        clientState: state, challenge, clientId: CLIENT, audience: AUDIENCE,
         redirectUri: REDIRECT, scopes: ["newsroom:read"], now, ttl: 300,
       });
       if (!started) return fail(400, "authorization_in_progress");
@@ -178,12 +178,12 @@ export default {
         return fail(403, "callback_invalid");
       // Upstream callback state differs from downstream OAuth client state;
       // claimUpstream checks the cookie-bound transaction and its own state.
-      const verifier = await stub.claimUpstream({
+      const claimed = await stub.claimUpstream({
         browserHash: await digest(browser), upstreamStateHash: await digest(state), now,
       });
-      if (!verifier) return fail(403, "callback_invalid");
+      if (!claimed) return fail(403, "callback_invalid");
       let id: string | null = null;
-      try { id = await githubId(env, upstreamCode, verifier); }
+      try { id = await githubId(env, upstreamCode, claimed.verifier); }
       catch { return fail(502, "identity_provider_unavailable"); }
       if (id !== EDITOR) return fail(403, "editor_not_allowed");
       const authCode = code();
@@ -196,7 +196,7 @@ export default {
       const destination = new URL(REDIRECT);
       // The downstream state is fixed at start; do not forward the upstream
       // state to ChatGPT. A separate pending-consent read exposes no raw token.
-      destination.search = new URLSearchParams({ code: authCode }).toString();
+      destination.search = new URLSearchParams({ code: authCode, state: claimed.clientState }).toString();
       const h = responseHeaders(true); h.set("Location", destination.toString());
       return new Response(null, { status: 302, headers: h });
     }
