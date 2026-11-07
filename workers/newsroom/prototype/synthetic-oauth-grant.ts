@@ -33,6 +33,7 @@ interface PendingConsent {
   scopes: string[];
   expiresAt: number;
   consumed: boolean;
+  upstream?: { stateHash: string; verifier: string; claimed: boolean };
 }
 
 const HEX = /^[0-9a-f]{64}$/;
@@ -125,6 +126,48 @@ export class SyntheticOAuthGrant extends DurableObject {
       pending.browserHash === input.browserHash && pending.stateHash === input.stateHash &&
       this.ctx.storage.kv.get(CODE_KEY) === undefined &&
       this.ctx.storage.kv.get(KEY) === undefined;
+  }
+
+  /** Bind an independent, server-generated GitHub state and upstream PKCE
+   * verifier to the browser consent. A claim is single-use, even on failure. */
+  async beginUpstream(input: {
+    browserHash: string; downstreamStateHash: string;
+    upstreamStateHash: string; verifier: string; now: number;
+  }): Promise<boolean> {
+    if (!valid(input.browserHash) || !valid(input.downstreamStateHash) ||
+        !valid(input.upstreamStateHash) || !/^[A-Za-z0-9_-]{43,128}$/.test(input.verifier) ||
+        !clock(input.now)) return false;
+    return this.ctx.storage.transactionSync(() => {
+      const pending = this.ctx.storage.kv.get<PendingConsent>(CONSENT_KEY);
+      if (!pending || pending.consumed || pending.upstream ||
+          pending.expiresAt <= input.now ||
+          pending.browserHash !== input.browserHash ||
+          pending.stateHash !== input.downstreamStateHash) return false;
+      pending.upstream = {
+        stateHash: input.upstreamStateHash, verifier: input.verifier, claimed: false,
+      };
+      this.ctx.storage.kv.put(CONSENT_KEY, pending);
+      return true;
+    });
+  }
+
+  /** Atomically claim GitHub state before making the upstream token request.
+   * The private verifier is exposed only over an internal DO RPC to the fixture. */
+  async claimUpstream(input: {
+    browserHash: string; upstreamStateHash: string; now: number;
+  }): Promise<string | null> {
+    if (!valid(input.browserHash) || !valid(input.upstreamStateHash) ||
+        !clock(input.now)) return null;
+    return this.ctx.storage.transactionSync(() => {
+      const pending = this.ctx.storage.kv.get<PendingConsent>(CONSENT_KEY);
+      if (!pending || pending.consumed || pending.expiresAt <= input.now ||
+          pending.browserHash !== input.browserHash ||
+          !pending.upstream || pending.upstream.claimed ||
+          pending.upstream.stateHash !== input.upstreamStateHash) return null;
+      pending.upstream.claimed = true;
+      this.ctx.storage.kv.put(CONSENT_KEY, pending);
+      return pending.upstream.verifier;
+    });
   }
 
   /** Called ONLY after a trusted identity provider has verified the editor.
