@@ -9,7 +9,10 @@
     "test": "node --test --import tsx test/*.test.ts",
     "typecheck": "tsc --noEmit",
     "build": "node scripts/build.mjs",
-    "build:test": "node scripts/build-test.mjs"
+    "build:test": "node scripts/build-test.mjs",
+    "build:issuer-candidate": "node scripts/build-issuer-candidate.mjs",
+    "build:resource-candidate": "node scripts/build-resource-candidate.mjs",
+    "browser:candidate": "node --import tsx scripts/browser-candidate-harness.ts"
   },
   "dependencies": {
     "@cloudflare/workers-oauth-provider": "1.2.4"

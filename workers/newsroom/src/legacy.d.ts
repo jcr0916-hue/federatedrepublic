@@ -11,6 +11,6 @@ export interface LegacyBindings {
 }
 
 export function principal(request: Request, env: LegacyBindings): LegacyPrincipal | null;
-export function mcp(request: Request, principal: LegacyPrincipal, env: LegacyBindings): Promise<Response>;
+export function mcp(request: Request, principal: LegacyPrincipal, env: Pick<LegacyBindings, "NEWSROOM">): Promise<Response>;
 declare const worker: { fetch(request: Request, env: LegacyBindings): Promise<Response> };
 export default worker;

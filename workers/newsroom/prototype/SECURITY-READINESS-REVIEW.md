@@ -1,0 +1,60 @@
+# Independent security-readiness review — synthetic newsroom OAuth prototype
+
+**Date:** 2026-11-07  
+**Branch/PR:** `feature/newsroom-strict-refresh-prototype` / draft #305 (base: draft #304 feature branch)  
+**Disposition:** **NOT READY FOR HOSTED DEPLOYMENT**. This is a source-level self-review, **not** an independent external audit.
+
+**Current source-only milestone:** [the standalone issuer candidate](../ISSUER-CANDIDATE.md) now has a separate non-synthetic `IssuerGrant`, numeric GitHub identity verification, consent shown after authentication, code exchange, strict refresh and credential-authenticated revocation. The older findings below remain historical evidence for the unsafe fixtures; they do not describe the candidate's current HTTP surface. This addition reduces those source gaps but does **not** clear the hosted/browser/client, MCP resource integration, operational or independent-review release gates. No existing grant or release entrypoint changed.
+
+**Subsequent unattended source checkpoint:** the independent resource candidate now validates issuer/audience/client/scope/expiry with separate resource credentials on every request. Local R2, immediate revocation, persisted restart/forced-process-group crash recovery, state cleanup and shared abuse budgets have local tests. State/alarm writes are transactional, the low-level writer is runtime `#private`, and secret comparison uses native cryptography. The full local suite passed **73 tests, zero failures** and four builds; supported-engine CI must be checked separately. Browser automation stopped at a self-signed TLS warning requiring human handoff; no browser consent or live GitHub/ChatGPT interoperability proof exists. Shared budgets can be deliberately exhausted and require hosted per-source/edge controls. See the current contract and [unexecuted hosted/rollback plan](../ISOLATED-ISSUER-TEST-PLAN.md). These are self-review findings and source mitigations, not independent audit clearance or deployment approval.
+
+## Verified local properties
+
+- Durable Object (DO) SQLite transaction serializes refresh rotation and authorization-code exchange; local concurrent tests reject replay.
+- Synthetic scope and audience restrictions prevent review scope from being inferred from a read-only grant; revoked grants fail access validation.
+- Cookie-bound consent fixture uses a Secure, HttpOnly, SameSite=Lax, host-only cookie and distinct downstream/upstream state; hashed browser session is checked before GitHub redirect and callback; PKCE S256 is simulated for both legs.
+- Upstream state is claimed in the DO **before** token exchange. Replays after a failure cannot contact GitHub again. A successful callback is redirected only to the fixed synthetic client URI.
+- Test identity/user responses are mocked with the GITHUB service binding; no real identity secrets or production tokens are used.
+
+## Release-blocking findings
+
+**P0 — Unsafe prototype/test endpoints and identity assumptions.** `synthetic-oauth-fixture.ts` exposes test-only `issue`, `begin_code`, `consent_complete`, `revoke` and test-selected grant operations. `synthetic-browser-fixture.ts` uses a fixed synthetic clock, test-origin, synthetic client, synthetic GitHub ID and no true authentication of a registered GitHub app. **Never deploy these entrypoints, even on a public test hostname, unchanged.** Remove test administration surfaces from any eventual hosted issuer entrypoint.
+
+**P0 — Not a complete OAuth authorization server.** OAuth discovery, authorized client registration, true GitHub authentication, client-bound authorization code, RFC-compliant token endpoint and resource-server integration are not end-to-end implemented. The fixed client IDs and secrets in fixtures are public synthetic values only. The deployed read-only ChatGPT editor uses a *different* implementation.
+
+**P1 — Loss-of-response recovery policy.** Rotation consumes the refresh token in the authoritative DO transaction. If the new credential response is lost, retrying the old token fails by design; client reauthorization is required. Callback state is similarly consumed prior to GitHub token exchange; timeout or upstream failure requires a fresh authorization transaction/grant. Document that ChatGPT reconnect behavior is not yet tested, and do not claim transparent recovery.
+
+**P1 — Grant routing and subject binding.** The local fixture accepts a caller-supplied grant name and uses it in `idFromName`. The future issuer must create unguessable, server-owned grant IDs, validate OAuth client/editor/resource binding, protect its DO RPC access, and map bearer tokens to the correct DO without exposing a public grant selector. Storing only hashes in a DO is not sufficient authentication.
+
+**P1 — Upstream hardening incomplete.** Real GitHub numeric user IDs, client secret/PKCE enforcement by GitHub, redirect/callback behavior, timeout propagation, 429/5xx response behavior, scope handling, JSON/content-length limits on streamed bodies, and user-agent requirements must be validated against the real GitHub contract. Test mocks are not a substitute. The fixture currently bounds responses only *after* reading them into memory, so it needs bounded streaming for an actual hosted service.
+
+**P1 — Resource-side validation and immediate revocation.** The synthetic access token is a random opaque value stored hashed per DO, not a production OAuth bearer usable by ChatGPT. A future MCP resource server must validate issuer, audience, exact scopes, client and expiry against authoritative state for every operation; avoid cached allow decisions that outlive revocation. Never grant submit or publish through OAuth.
+
+**P2 — Operational limits.** No per-client rate limits, distributed hosted tests, durable storage migration/rollback plan, automated secret rotation, out-of-band audit events, threat-model review or independently verified deploy architecture. No production releases or canon changes are authorized.
+
+## Timeout and retry policy
+
+- Bound both upstream token and user requests to a deadline in the local browser fixture; return only `identity_provider_unavailable` on transport timeout. Do not leak upstream tokens or exception details.
+- Since the upstream state is claimed before the request, **do not automatically retry a timed-out GitHub code**. Require a fresh consent/sign-in transaction with a distinct grant ID. A successor credential lost after a successful refresh also requires new authorization under this strict policy.
+- The test must demonstrate that a timed-out callback cannot be replayed and a fresh synthetic grant can authorize successfully. This is a *local simulation*, not a browser or hosted reliability guarantee.
+
+## Proposed release gates
+
+1. Prototype local TypeScript/build/tests green, with timestamped workflow evidence.
+2. Build separate, **non-fixture** isolated issuer that owns the complete OAuth lifecycle. It must not import old test administration endpoints, use fixed clocks, accept caller-provided grant IDs or use test identities.
+3. Protocol and security test suite: real browser cookie behavior, registered client, OAuth discovery/authorization code/token and refresh endpoints, PKCE/CSRF, GitHub numeric allowlist, redirect/error handling, token resource/scope, reauth, replay and revocation.
+4. Independent security review plus fresh hosted tests on new synthetic client credentials, separate DO storage and no existing live editor grant access; verify multi-location behavior and rollback.
+5. Separate Presidential approvals for any production bindings, merge or deployment. Keep PRs #304/#305 draft until explicitly approved.
+
+**Preservation:** `workers/newsroom/HOSTED-TEST.md` and this branch's permanent note in `docs/archive/development/branches/` record historical results; do not re-run completed investigations without a changed hypothesis.
+
+
+## Server-issued grant routing prototype — 2026-11-07
+
+**New verified local evidence, not a release approval.**
+
+- `issuer-boundary.ts` generates 256-bit random server-owned grant identifiers and separately random 256-bit access/refresh secrets, identified by distinct credential type prefixes. Parsing yields a **routing hint plus SHA-256 digest only**; routing IDs are never treated as authentication. The future resource server must still check that digest, fixed client ID, scope, audience, expiry and revocation at the authoritative DO.
+- `verifyConfidentialClient` validates an HTTP Basic credential against the trusted registered client ID and a stored SHA-256 hash of a high-entropy synthetic secret using fixed-length digest comparison. The *registration* must come from trusted server configuration; there is no client registration, rate limiting, rotation or secret management in this local primitive.
+- `issuer-boundary-fixture.ts` is **LOCAL ONLY / NEVER DEPLOY**. It has a hard-coded synthetic client secret, test identity and test clock and bypasses real GitHub identity/PKCE. It issues grant IDs inside the Worker, not from request fields, then routes typed opaque credentials to a single synthetic SQLite DO. It rejects explicit `grant`/`grantId` selectors and incorrect client credentials. Its `/issue` action intentionally remains a privileged test shortcut — still a **P0 blocker** for deployment.
+- New unit and Miniflare tests check malformed credentials, altered secrets and IDs, client mismatches, two independent grants, concurrent refresh replay, revoked grant isolation, and absence of caller-chosen grant IDs. CI `Newsroom OAuth checks` **run 42360937260**, job **128368988727**, commit `d0611c3fe2a41d5b349ac071ee90e7ae615cdc80` **passed 45 tests, zero failures** plus typecheck, release and fixture builds.
+- The previous P1 grant-routing gap has an **experimental local proof**, but is **not remediated in any deployable authorization server**. A production design still requires an authenticated editor/callback, correct token-to-grant lookup, secured internal DO RPC, proper confidential-client credential lifecycle, explicit reauthorization on lost responses, and independently reviewed hosted tests. No existing OAuth grant, live Worker, production Worker, `main`, R2/KV, or Torenthia canon was modified.
