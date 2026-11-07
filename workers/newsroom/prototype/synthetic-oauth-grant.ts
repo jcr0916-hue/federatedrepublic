@@ -25,6 +25,7 @@ interface AuthorizationCodeState {
 
 interface PendingConsent {
   browserHash: string;
+  clientState?: string;
   stateHash: string;
   challenge: string;
   clientId: string;
@@ -91,11 +92,12 @@ export class SyntheticOAuthGrant extends DurableObject {
   /** Start a single test-only browser transaction. Cookies and OAuth state are hashed.
    * Do not expose this DO method to a client-chosen grant or unauthenticated endpoint. */
   async startConsent(input: {
-    browserHash: string; stateHash: string; challenge: string;
+    browserHash: string; stateHash: string; clientState?: string; challenge: string;
     clientId: string; audience: string; redirectUri: string;
     scopes: string[]; now: number; ttl: number;
   }): Promise<boolean> {
     if (!valid(input.browserHash) || !valid(input.stateHash) ||
+        (input.clientState !== undefined && (!/^[a-f0-9]{64}$/.test(input.clientState) || !input.clientState)) ||
         input.browserHash === input.stateHash || !PKCE.test(input.challenge) ||
         !input.clientId || !input.audience || input.redirectUri !== FIXED_REDIRECT ||
         input.scopes.length !== 1 || input.scopes[0] !== READ || !clock(input.now) ||
@@ -106,7 +108,7 @@ export class SyntheticOAuthGrant extends DurableObject {
           this.ctx.storage.kv.get(KEY) !== undefined) return false;
       const record: PendingConsent = {
         browserHash: input.browserHash, stateHash: input.stateHash,
-        challenge: input.challenge, clientId: input.clientId,
+        clientState: input.clientState, challenge: input.challenge, clientId: input.clientId,
         audience: input.audience, redirectUri: input.redirectUri,
         scopes: [...input.scopes], expiresAt: input.now + input.ttl, consumed: false,
       };
@@ -155,7 +157,7 @@ export class SyntheticOAuthGrant extends DurableObject {
    * The private verifier is exposed only over an internal DO RPC to the fixture. */
   async claimUpstream(input: {
     browserHash: string; upstreamStateHash: string; now: number;
-  }): Promise<string | null> {
+  }): Promise<{ verifier: string; clientState: string } | null> {
     if (!valid(input.browserHash) || !valid(input.upstreamStateHash) ||
         !clock(input.now)) return null;
     return this.ctx.storage.transactionSync(() => {
@@ -166,7 +168,7 @@ export class SyntheticOAuthGrant extends DurableObject {
           pending.upstream.stateHash !== input.upstreamStateHash) return null;
       pending.upstream.claimed = true;
       this.ctx.storage.kv.put(CONSENT_KEY, pending);
-      return pending.upstream.verifier;
+      return { verifier: pending.upstream.verifier, clientState: pending.clientState ?? "" };
     });
   }
 
