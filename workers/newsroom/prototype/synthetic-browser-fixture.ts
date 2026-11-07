@@ -57,16 +57,25 @@ async function githubId(env: BrowserEnv, authCode: string, verifier: string): Pr
     body: new URLSearchParams({ code: authCode, client_id: "synthetic-github-client",
       redirect_uri: ORIGIN + "/oauth/callback", code_verifier: verifier }),
   }));
-  if (!tokenResponse.ok) return null;
-  const token: unknown = await tokenResponse.json();
+  if (!tokenResponse.ok || tokenResponse.status !== 200) return null;
+  if (Number(tokenResponse.headers.get("Content-Length") ?? "0") > 16_384) return null;
+  const rawToken = await tokenResponse.text();
+  if (rawToken.length > 16_384) return null;
+  const token: unknown = JSON.parse(rawToken);
   if (!token || typeof token !== "object" || Array.isArray(token)) return null;
-  const access = (token as { access_token?: unknown }).access_token;
+  const tokenData = token as { access_token?: unknown; token_type?: unknown; scope?: unknown };
+  if (tokenData.token_type !== undefined && tokenData.token_type !== "bearer") return null;
+  if (typeof tokenData.scope === "string" && tokenData.scope.trim() !== "") return null;
+  const access = tokenData.access_token;
   if (typeof access !== "string" || !/^[a-z0-9-]{1,128}$/.test(access)) return null;
   const userResponse = await env.GITHUB.fetch(new Request("https://api.github.com/user", {
     redirect: "manual", headers: { Authorization: "Bearer " + access, Accept: "application/json" },
   }));
-  if (!userResponse.ok) return null;
-  const user: unknown = await userResponse.json();
+  if (!userResponse.ok || userResponse.status !== 200) return null;
+  if (Number(userResponse.headers.get("Content-Length") ?? "0") > 16_384) return null;
+  const rawUser = await userResponse.text();
+  if (rawUser.length > 16_384) return null;
+  const user: unknown = JSON.parse(rawUser);
   if (!user || typeof user !== "object" || Array.isArray(user)) return null;
   const id = (user as { id?: unknown }).id;
   return typeof id === "string" ? id : null;
@@ -172,7 +181,12 @@ export default {
     if (url.pathname === "/oauth/callback" && request.method === "GET") {
       const browser = cookieValue(request), state = url.searchParams.get("state");
       const upstreamCode = url.searchParams.get("code");
-      if (!browser || !state || !SESSION.test(state) || !upstreamCode ||
+      // Reject provider cancellations and ambiguous/extra callback fields
+      // BEFORE claiming the state or contacting GitHub.
+      if (url.searchParams.has("error") || url.searchParams.has("error_description") ||
+          [...url.searchParams.keys()].some(key => !["grant", "state", "code"].includes(key)) ||
+          url.searchParams.getAll("grant").length !== 1 ||
+          !browser || !state || !SESSION.test(state) || !upstreamCode ||
           url.searchParams.getAll("state").length !== 1 ||
           url.searchParams.getAll("code").length !== 1)
         return fail(403, "callback_invalid");
