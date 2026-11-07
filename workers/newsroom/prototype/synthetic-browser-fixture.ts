@@ -18,6 +18,7 @@ const EDITOR = "synthetic-editor-12345";
 const AUDIENCE = ORIGIN + "/mcp";
 const REDIRECT = "https://chatgpt.invalid/oauth/callback";
 const COOKIE = "__Host-newsroom-consent";
+const GITHUB_TIMEOUT_MS = 1500; // prototype-only upper bound
 const PKCE = /^[A-Za-z0-9_-]{43}$/;
 const GRANT = /^[a-z0-9-]{1,64}$/;
 const SESSION = /^[a-f0-9]{64}$/;
@@ -52,7 +53,7 @@ async function githubId(env: BrowserEnv, authCode: string, verifier: string): Pr
   // manual redirects protect the fixture from accidental external egress.
   if (!/^[a-z0-9-]{1,80}$/.test(authCode)) return null;
   const tokenResponse = await env.GITHUB.fetch(new Request("https://github.com/login/oauth/access_token", {
-    method: "POST", redirect: "manual",
+    method: "POST", redirect: "manual", signal: AbortSignal.timeout(GITHUB_TIMEOUT_MS),
     headers: { "Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json" },
     body: new URLSearchParams({ code: authCode, client_id: "synthetic-github-client",
       redirect_uri: ORIGIN + "/oauth/callback", code_verifier: verifier }),
@@ -69,7 +70,8 @@ async function githubId(env: BrowserEnv, authCode: string, verifier: string): Pr
   const access = tokenData.access_token;
   if (typeof access !== "string" || !/^[a-z0-9-]{1,128}$/.test(access)) return null;
   const userResponse = await env.GITHUB.fetch(new Request("https://api.github.com/user", {
-    redirect: "manual", headers: { Authorization: "Bearer " + access, Accept: "application/json" },
+    redirect: "manual", signal: AbortSignal.timeout(GITHUB_TIMEOUT_MS),
+    headers: { Authorization: "Bearer " + access, Accept: "application/json" },
   }));
   if (!userResponse.ok || userResponse.status !== 200) throw new Error("upstream_user_failure");
   if (Number(userResponse.headers.get("Content-Length") ?? "0") > 16_384) return null;
