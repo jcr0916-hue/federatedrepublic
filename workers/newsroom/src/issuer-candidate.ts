@@ -36,6 +36,7 @@ interface Configuration extends GrantBinding {
   githubClientSecret: string;
 }
 const COOKIE = "__Host-newsroom-issuer";
+const GITHUB_ISSUER = "https://github.com/login/oauth";
 const SCOPE = "newsroom:read";
 const now = () => Math.floor(Date.now() / 1000);
 const headers = () => new Headers({
@@ -160,8 +161,11 @@ async function callback(
 ): Promise<Response> {
   const params = new URL(request.url).searchParams;
   const cancelled = params.has("error");
-  if (!(cancelled ? parameters(params, ["state", "error"], ["error_description", "error_uri"])
-    : parameters(params, ["state", "code"])) ||
+  // One fixed upstream: accept legacy responses without iss, but validate any
+  // supplied RFC 9207 issuer before claiming state or contacting GitHub.
+  if (!(cancelled ? parameters(params, ["state", "error"], ["error_description", "error_uri", "iss"])
+    : parameters(params, ["state", "code"], ["iss"])) ||
+      (params.has("iss") && params.get("iss") !== GITHUB_ISSUER) ||
       (!cancelled && !/^[\x21-\x7e]{1,1024}$/.test(params.get("code")!))) return fail(400, "invalid_callback");
   const state = await routeBoundCredential(params.get("state")!, "state");
   const session = await browser(request);

@@ -10,6 +10,7 @@ const ORIGIN = "https://candidate.invalid";
 const CLIENT = "synthetic-registered-editor";
 const SECRET = "synthetic-only-candidate-secret-long-randomish-0123456789";
 const GITHUB_SECRET = "synthetic-dedicated-github-secret";
+const GITHUB_ISSUER = "https://github.com/login/oauth";
 const RESOURCE_ID = "synthetic-resource-validator";
 const RESOURCE_SECRET = "synthetic-resource-validator-secret-0123456789";
 const RESOURCE_AUTH = "Basic " + Buffer.from(RESOURCE_ID + ":" + RESOURCE_SECRET).toString("base64");
@@ -107,10 +108,12 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     return { cookie: cookie(response), state: github.searchParams.get("state")!,
       challenge: github.searchParams.get("code_challenge")! };
   };
-  const callback = async (transaction: Awaited<ReturnType<typeof start>>, scenario = "good") => {
+  const callback = async (transaction: Awaited<ReturnType<typeof start>>, scenario = "good", githubIssuer?: string) => {
     const code = randomBytes(16).toString("hex");
     upstream.set(code, { scenario, challenge: transaction.challenge });
-    return mf.dispatchFetch(ORIGIN + "/oauth/callback?" + new URLSearchParams({ state: transaction.state, code }), {
+    const params = new URLSearchParams({ state: transaction.state, code });
+    if (githubIssuer !== undefined) params.set("iss", githubIssuer);
+    return mf.dispatchFetch(ORIGIN + "/oauth/callback?" + params, {
       redirect: "manual", headers: { Cookie: transaction.cookie },
     });
   };
@@ -322,6 +325,69 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.equal(new URL(cancelled.headers.get("location")!).searchParams.get("state"), STATE);
     assert.equal(tokenCalls, afterCalls);
     assert.equal((await callback(other)).status, 403);
+  });
+
+  it("accepts the pinned GitHub issuer and preserves the downstream issuer after consent", async () => {
+    const transaction = await start();
+    const response = await callback(transaction, "good", GITHUB_ISSUER);
+    assert.equal(response.status, 200, await response.clone().text());
+    const html = await response.text();
+    const csrf = html.match(/name="csrf" value="([a-f0-9]{64})"/)?.[1];
+    assert.ok(csrf);
+    const approved = await consent({ cookie: cookie(response), csrf, oldCookie: transaction.cookie });
+    assert.equal(approved.status, 302);
+    const redirect = new URL(approved.headers.get("location")!);
+    assert.equal(redirect.searchParams.get("iss"), ORIGIN);
+    assert.equal(redirect.searchParams.get("state"), STATE);
+    assert.ok(redirect.searchParams.get("code"));
+    const beforeReplay = tokenCalls;
+    assert.equal((await callback(transaction, "good", GITHUB_ISSUER)).status, 403);
+    assert.equal(tokenCalls, beforeReplay);
+  });
+
+  it("rejects wrong or duplicate upstream issuer fields before consuming state or calling GitHub", async () => {
+    const transaction = await start();
+    const beforeCalls = tokenCalls;
+    const bad: URLSearchParams[] = [];
+    for (const iss of ["", "https://evil.invalid", "https://github.com.evil.invalid/login/oauth",
+      GITHUB_ISSUER + "/", GITHUB_ISSUER + "?extra=1", GITHUB_ISSUER + "#fragment"]) {
+      bad.push(new URLSearchParams({ state: transaction.state, code: "synthetic-only", iss }));
+      bad.push(new URLSearchParams({ state: transaction.state, error: "access_denied", iss }));
+    }
+    for (const other of [GITHUB_ISSUER, "https://evil.invalid"]) {
+      const params = new URLSearchParams({ state: transaction.state, code: "synthetic-only", iss: GITHUB_ISSUER });
+      params.append("iss", other); bad.push(params);
+    }
+    for (const params of bad) {
+      const response = await mf.dispatchFetch(ORIGIN + "/oauth/callback?" + params, {
+        redirect: "manual", headers: { Cookie: transaction.cookie },
+      });
+      assert.equal(response.status, 400);
+      assert.deepEqual(await response.json(), { error: "invalid_callback" });
+      assert.equal(response.headers.get("location"), null);
+      assert.equal(response.headers.get("set-cookie"), null);
+    }
+    assert.equal(tokenCalls, beforeCalls);
+    assert.equal((await callback(transaction, "good", GITHUB_ISSUER)).status, 200);
+    assert.equal(tokenCalls, beforeCalls + 1);
+  });
+
+  it("accepts cancellation with the pinned GitHub issuer without exchanging or issuing a code", async () => {
+    const transaction = await start();
+    const beforeCalls = tokenCalls;
+    const params = new URLSearchParams({ state: transaction.state, error: "access_denied", iss: GITHUB_ISSUER });
+    const response = await mf.dispatchFetch(ORIGIN + "/oauth/callback?" + params, {
+      redirect: "manual", headers: { Cookie: transaction.cookie },
+    });
+    assert.equal(response.status, 302);
+    const redirect = new URL(response.headers.get("location")!);
+    assert.equal(redirect.searchParams.get("error"), "access_denied");
+    assert.equal(redirect.searchParams.get("state"), STATE);
+    assert.equal(redirect.searchParams.get("iss"), ORIGIN);
+    assert.equal(redirect.searchParams.has("code"), false);
+    assert.equal(tokenCalls, beforeCalls);
+    assert.equal((await callback(transaction, "good", GITHUB_ISSUER)).status, 403);
+    assert.equal(tokenCalls, beforeCalls);
   });
 
   it("fails closed on GitHub identity, scope, malformed/large responses, redirects and timeouts", async () => {
