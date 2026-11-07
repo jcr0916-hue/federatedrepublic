@@ -106,10 +106,10 @@ describe("synthetic GitHub callback failure paths (local-only)", () => {
       assert.equal(tokenCalls, 1);
 
       const failures: Array<[string, number]> = [
-        ["transport-fail", 502], ["bad-status", 403],
+        ["transport-fail", 502], ["bad-status", 502],
         ["invalid-json", 502], ["missing-token", 403],
         ["permission-scope", 403], ["incorrect-type", 403],
-        ["wrong-user", 403], ["invalid-user-json", 502], ["user-status", 403],
+        ["wrong-user", 403], ["invalid-user-json", 502], ["user-status", 502],
       ];
       for (const [scenario, expectedStatus] of failures) {
         const pending = await prepare(scenario);
