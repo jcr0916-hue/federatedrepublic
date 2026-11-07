@@ -18,12 +18,19 @@ jobs:
           cache-dependency-path: workers/newsroom/package-lock.json
       - run: npm ci --ignore-scripts
         working-directory: workers/newsroom
-      - run: npm run typecheck && npm test && npm run build && npm run build:test
+      - run: npm run typecheck && npm test && npm run build && npm run build:test && npm run build:issuer-candidate
         working-directory: workers/newsroom
       - name: Save validated release bundle for isolated hosted test
         uses: actions/upload-artifact@v4
         with:
           name: newsroom-oauth-pr-bundle
           path: workers/newsroom/dist/worker.js
+          if-no-files-found: error
+          retention-days: 7
+      - name: Save unbound issuer candidate for source review only
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsroom-issuer-candidate-pr-bundle
+          path: workers/newsroom/dist/issuer-candidate.js
           if-no-files-found: error
           retention-days: 7

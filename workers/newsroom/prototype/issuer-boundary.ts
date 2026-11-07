@@ -8,8 +8,10 @@
  *
  * This module does NOT provide a public OAuth endpoint or identity provider.
  */
-export type CredentialKind = "access" | "refresh";
-const KIND_TAG: Record<CredentialKind, string> = { access: "nr1a", refresh: "nr1r" };
+export type CredentialKind = "access" | "refresh" | "code" | "browser" | "state";
+const KIND_TAG: Record<CredentialKind, string> = {
+  access: "nr1a", refresh: "nr1r", code: "nr1c", browser: "nr1b", state: "nr1s",
+};
 const HEX_256 = /^[0-9a-f]{64}$/;
 const CLIENT_ID = /^[a-zA-Z0-9_-]{1,100}$/;
 const randomHex = (): string => Array.from(crypto.getRandomValues(new Uint8Array(32)),

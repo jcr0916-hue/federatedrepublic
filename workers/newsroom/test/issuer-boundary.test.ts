@@ -42,6 +42,19 @@ describe("server-owned grant identifiers and OAuth client binding (prototype)", 
     assert.equal(await routeBoundCredential(access + ".extra", "access"), null);
   });
 
+  it("keeps browser, upstream-state and authorization-code credentials distinct from bearer tokens", async () => {
+    const grant = mintGrantId();
+    const kinds = ["access", "refresh", "code", "browser", "state"] as const;
+    for (const kind of kinds) {
+      const credential = mintBoundCredential(grant, kind);
+      for (const presentedAs of kinds) {
+        const result = await routeBoundCredential(credential, presentedAs);
+        if (kind === presentedAs) assert.equal(result?.credentialHash, await sha256Hex(credential));
+        else assert.equal(result, null, kind + " must not authenticate as " + presentedAs);
+      }
+    }
+  });
+
   it("checks confidential clients against trusted hashed registration", async () => {
     const stored = await sha256Hex(SECRET);
     const good = "Basic " + Buffer.from("synthetic-editor:" + SECRET).toString("base64");

@@ -4,6 +4,8 @@
 **Branch/PR:** `feature/newsroom-strict-refresh-prototype` / draft #305 (base: draft #304 feature branch)  
 **Disposition:** **NOT READY FOR HOSTED DEPLOYMENT**. This is a source-level self-review, **not** an independent external audit.
 
+**Current source-only milestone:** [the standalone issuer candidate](../ISSUER-CANDIDATE.md) now has a separate non-synthetic `IssuerGrant`, numeric GitHub identity verification, consent shown after authentication, code exchange, strict refresh and credential-authenticated revocation. The older findings below remain historical evidence for the unsafe fixtures; they do not describe the candidate's current HTTP surface. This addition reduces those source gaps but does **not** clear the hosted/browser/client, MCP resource integration, operational or independent-review release gates. No existing grant or release entrypoint changed.
+
 ## Verified local properties
 
 - Durable Object (DO) SQLite transaction serializes refresh rotation and authorization-code exchange; local concurrent tests reject replay.
