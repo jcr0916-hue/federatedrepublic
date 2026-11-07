@@ -57,7 +57,7 @@ async function githubId(env: BrowserEnv, authCode: string, verifier: string): Pr
     body: new URLSearchParams({ code: authCode, client_id: "synthetic-github-client",
       redirect_uri: ORIGIN + "/oauth/callback", code_verifier: verifier }),
   }));
-  if (!tokenResponse.ok || tokenResponse.status !== 200) return null;
+  if (!tokenResponse.ok || tokenResponse.status !== 200) throw new Error("upstream_token_failure");
   if (Number(tokenResponse.headers.get("Content-Length") ?? "0") > 16_384) return null;
   const rawToken = await tokenResponse.text();
   if (rawToken.length > 16_384) return null;
@@ -71,7 +71,7 @@ async function githubId(env: BrowserEnv, authCode: string, verifier: string): Pr
   const userResponse = await env.GITHUB.fetch(new Request("https://api.github.com/user", {
     redirect: "manual", headers: { Authorization: "Bearer " + access, Accept: "application/json" },
   }));
-  if (!userResponse.ok || userResponse.status !== 200) return null;
+  if (!userResponse.ok || userResponse.status !== 200) throw new Error("upstream_user_failure");
   if (Number(userResponse.headers.get("Content-Length") ?? "0") > 16_384) return null;
   const rawUser = await userResponse.text();
   if (rawUser.length > 16_384) return null;
