@@ -101,3 +101,10 @@ Status: **OAuth editor authentication and core newsroom workflow verified in iso
 3. Verify GitHub callback/session integrity, refresh/revocation/reconnect, race conditions and hosted KV consistency; maintain exact callback, client ID, PKCE, origin checks, and editor GitHub ID checks.
 4. Assess audit records, test-data cleanup, rollback procedure and source-to-artifact integrity before any proposed production release.
 5. Obtain explicit user approval **before** merging PR #304, deploying the production Worker, changing production secrets, or advancing/publishing canon.
+
+## Read-only OAuth scope review — 2026-11-07
+
+- Current hosted ChatGPT connector exposes **only** `newsroom_list` and `newsroom_read`. A fresh authorized editor `newsroom_list` call across both test desks succeeded, returning synthetic Corindal and Korda records and the reviewed Corindal submission. This demonstrates functional read scope, not a direct black-box forbidden-tool invocation.
+- Source test `restricts discovery and direct calls to granted tools and enforces review scope` issues a read-only OAuth token and verifies that direct `newsroom_review` returns HTTP **403 insufficient_scope**, while `newsroom_submit` and `newsroom_publish` return HTTP **403**; it also exercises an explicitly granted `newsroom:review` token. Test `rotates refresh tokens...` verifies refresh rotation and rejection of a replaced token; `refuses expired access tokens and locally revoked refresh grants` verifies expiry/revocation; `rechecks the editor allowlist on both access and refresh` verifies identity revocation. All are **local integration tests**, not hosted refresh/revocation proofs.
+- GitHub `Newsroom OAuth checks` run **42355085545** passed on documentation head `8250c10344788b23121a8a3102c9f3c9004ca4bf`. The deployed test Worker remains unchanged since the earlier code build and later secret updates.
+- Current external connector does **not** expose `newsroom_review`; OAuth review-scope end-to-end remains **untested**. Do not describe direct hosted OAuth review denial, hosted token refresh or revocation as passed solely on the basis of local integration tests.
