@@ -14,6 +14,8 @@ const STATE = "a".repeat(64);
 describe("browser cookie and mocked GitHub callback fixture (never deploy)", () => {
   it("binds authorization to HttpOnly cookie, Origin, OAuth state and editor identity", async () => {
     let tokenCalls = 0, userCalls = 0;
+    const challenges = new Map<string, string>();
+    const redeemed = new Set<string>();
     const built = await build({
       entryPoints: ["prototype/synthetic-browser-fixture.ts"], bundle: true,
       format: "esm", platform: "neutral", target: "es2023",
@@ -30,8 +32,17 @@ describe("browser cookie and mocked GitHub callback fixture (never deploy)", () 
           if (url.href === "https://github.com/login/oauth/access_token" && request.method === "POST") {
             tokenCalls++;
             const form = new URLSearchParams(await request.text());
-            if (form.get("client_id") !== "synthetic-github-client") return Response.json({ error: "bad_client" }, { status: 403 });
+            if (form.get("client_id") !== "synthetic-github-client" ||
+                form.get("redirect_uri") !== ORIGIN + "/oauth/callback") return Response.json({ error: "bad_client" }, { status: 403 });
+            const verifier = form.get("code_verifier") ?? "";
             const upstream = form.get("code");
+            const expectedChallenge = challenges.get("editor-a");
+            const actualChallenge = createHash("sha256").update(verifier).digest("base64url");
+            if (!expectedChallenge || actualChallenge !== expectedChallenge) {
+              return Response.json({ error: "bad_pkce" }, { status: 403 });
+            }
+            if (upstream && redeemed.has(upstream)) return Response.json({ error: "code_reused" }, { status: 403 });
+            if (upstream) redeemed.add(upstream);
             if (upstream !== "synthetic-approved-github-code" && upstream !== "synthetic-other-user-code")
               return Response.json({ error: "invalid_code" }, { status: 403 });
             return Response.json({ access_token: upstream === "synthetic-approved-github-code"
@@ -92,16 +103,32 @@ describe("browser cookie and mocked GitHub callback fixture (never deploy)", () 
       const consentOK = await consent("editor-a", STATE, value);
       assert.equal(consentOK.status, 302);
       assert.equal(new URL(consentOK.headers.get("location")!).hostname, "github.com");
-      assert.equal(new URL(consentOK.headers.get("location")!).searchParams.get("state"), STATE);
+      const githubUrl = new URL(consentOK.headers.get("location")!);
+      const upstreamState = githubUrl.searchParams.get("state")!;
+      assert.notEqual(upstreamState, STATE);
+      assert.match(upstreamState, /^[a-f0-9]{64}$/);
+      assert.equal(githubUrl.searchParams.get("code_challenge_method"), "S256");
+      assert.match(githubUrl.searchParams.get("code_challenge")!, /^[A-Za-z0-9_-]{43}$/);
+      assert.equal(githubUrl.searchParams.get("redirect_uri"), ORIGIN + "/oauth/callback");
+      challenges.set("editor-a", githubUrl.searchParams.get("code_challenge")!);
       assert.equal((await callback("editor-a", STATE, undefined)).status, 403);
+      assert.equal((await callback("editor-c", secondUpstreamState, secondCookieForGood)).status, 403);
       assert.equal((await callback("editor-a", "b".repeat(64), value)).status, 403);
-      assert.equal((await callback("editor-a", STATE, value, "synthetic-other-user-code")).status, 403);
-      const good = await callback("editor-a", STATE, value);
+      assert.equal((await callback("editor-a", upstreamState, value, "synthetic-other-user-code")).status, 403);
+      // Callback claims the upstream state exactly once, including on denied
+      // identity. A fresh grant is required to demonstrate success.
+      const secondAuth = await authorize("editor-c", "d".repeat(64));
+      const secondCookieForGood = secondAuth.headers.get("set-cookie")!.split(";")[0];
+      const secondConsent = await consent("editor-c", "d".repeat(64), secondCookieForGood);
+      const secondGithub = new URL(secondConsent.headers.get("location")!);
+      const secondUpstreamState = secondGithub.searchParams.get("state")!;
+      challenges.set("editor-a", secondGithub.searchParams.get("code_challenge")!);
+      const good = await callback("editor-c", secondUpstreamState, secondCookieForGood);
       assert.equal(good.status, 302, await good.clone().text());
       assert.match(good.headers.get("set-cookie")!, /Max-Age=0/);
       const destination = new URL(good.headers.get("location")!);
       assert.equal(destination.origin, "https://chatgpt.invalid");
-      assert.equal(destination.searchParams.get("state"), STATE);
+      assert.equal(destination.searchParams.get("state"), "d".repeat(64));
       assert.match(destination.searchParams.get("code")!, /^[0-9a-f]{64}$/);
       assert.equal((await callback("editor-a", STATE, value)).status, 403);
       assert.equal((await authorize("editor-a")).status, 400);
