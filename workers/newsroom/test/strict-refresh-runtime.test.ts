@@ -26,7 +26,7 @@ describe("strict refresh SQLite Durable Object local integration (not in release
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ operation, grant, ...fields }),
         });
-        assert.equal(response.status, 200);
+        assert.equal(response.status, 200, `Durable Object fixture failed: HTTP ${response.status} ${await response.clone().text()}`);
         return await response.json() as Record<string, any>;
       };
 
