@@ -69,3 +69,11 @@ Before deployment, the OAuth client must be privately pre-registered via `oauthH
 - GitHub workflow run also included other site workflows; the newsroom check alone is the relevant passing build gate.
 - **Not yet uploaded/deployed:** available Cloudflare connector supports Workers script upload, but this session cannot pass the downloaded ZIP's compiled bytes securely to that API; direct container internet access is unavailable. Do not claim hosted code validation from the artifact check.
 - **Still required:** secure transfer of the exact bundle to the test Worker with preservation/re-verification of existing bindings, alignment of compatibility date, private client registration and real ChatGPT OAuth testing. Avoid an unprotected registration endpoint or secrets in workflow artifacts. The test Worker continues to run Hello World. Production unaffected.
+
+## Isolated deployment verified — 2026-11-07
+
+The user deployed the verified PR artifact via Wrangler from the extracted deployment package. Cloudflare independently confirmed the **isolated** Worker `newsroom-oauth-isolated-test` running version `1263866c-9ef9-4973-869b-8afff113ae73` at 100% with compatibility date `2026-10-01`. Both isolated bindings persisted: `NEWSROOM` -> R2 `newsroom-oauth-isolated-test`, and `OAUTH_KV` -> KV `e57f8f6712514fb79d1a1db98fc544d4`. All five synthetic `KEY_*` secret bindings and `GITHUB_CLIENT_SECRET` remain present, along with the GitHub client ID, approved GitHub editor user ID, issuer and ChatGPT callback. Values of secrets were not read.
+
+The **production** `federated-republic-newsroom` Worker remains on deployment version `08a99769-3618-488e-adbd-30a8be38a788` at 100%, bound to the original production R2 bucket. No production deployment or main merge occurred.
+
+**Next gates:** private ChatGPT OAuth client pre-registration (generated client ID/secret; never invent values or expose registration through HTTP), configure `CHATGPT_CLIENT_ID` and client secret for ChatGPT itself, verify hosted discovery and the browser OAuth roundtrip, four-desk isolation and editor read/review permissions. Do not claim OAuth is fully operational yet.
