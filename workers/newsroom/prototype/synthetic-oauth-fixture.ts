@@ -77,7 +77,7 @@ export default {
         "SHA-256", new TextEncoder().encode(params.codeVerifier),
       ));
       const computedChallenge = btoa(Array.from(pkceDigest, byte =>
-        String.fromCharCode(byte)).join("")).replace(/\\+/g, "-").replace(/\\//g, "_").replace(/=+$/, "");
+        String.fromCharCode(byte)).join("")).split("+").join("-").split("/").join("_").replace(/=+$/, "");
       const refreshToken = token(), accessToken = token();
       const result = await stub.exchangeCode({
         codeHash: await digest(params.code), computedChallenge,
