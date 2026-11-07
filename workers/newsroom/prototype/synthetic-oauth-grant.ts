@@ -114,6 +114,19 @@ export class SyntheticOAuthGrant extends DurableObject {
     });
   }
 
+  /** Validate browser-bound pending consent before any upstream redirect or
+   * identity-provider call. This does not consume authorization state. */
+  async verifyConsent(input: {
+    browserHash: string; stateHash: string; now: number;
+  }): Promise<boolean> {
+    if (!valid(input.browserHash) || !valid(input.stateHash) || !clock(input.now)) return false;
+    const pending = this.ctx.storage.kv.get<PendingConsent>(CONSENT_KEY);
+    return !!pending && !pending.consumed && pending.expiresAt > input.now &&
+      pending.browserHash === input.browserHash && pending.stateHash === input.stateHash &&
+      this.ctx.storage.kv.get(CODE_KEY) === undefined &&
+      this.ctx.storage.kv.get(KEY) === undefined;
+  }
+
   /** Called ONLY after a trusted identity provider has verified the editor.
    * Records one-time consent consumption and creates the code atomically. */
   async finishConsent(input: {
