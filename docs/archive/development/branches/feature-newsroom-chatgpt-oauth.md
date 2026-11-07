@@ -52,3 +52,12 @@ Prepare the approved branch-only OAuth addition for ChatGPT custom MCP, preservi
 Retain the unfinished branch and draft PR. Nothing is shipped; no content merge, production release or branch deletion is authorized or claimed. This handoff belongs in the same eventual PR. Prefer a merge commit for original-history reachability and later apply the guarded three-completed-branch retention policy with its exceptions.
 
 External dependency/cleanup review remains pending; do not attest `dependencies: none`. The final-SHA review and eventual disposition must be recorded under [the lifecycle policy](../BRANCH-LIFECYCLE.md). Main and `archive/legacy-project-material` remain permanent.
+
+
+## Hosted progress and security architecture update — 2026-11-07
+
+The initial status above is a historical snapshot, **not the current state**. Hosted isolated Worker, connected ChatGPT read-only editor, synthetic real agent submission, cross-desk denial, editor legacy review and unsupported publication rejection are now verified; precise evidence and limitations are in `workers/newsroom/HOSTED-TEST.md`. Draft PR #304 is not merged and production Worker remains unchanged.
+
+The provider's immediately previous refresh token is intentionally accepted for recovery; two simultaneous local refresh requests both returned 200. Incorrect strict single-use test failed on `fc0c711`, and corrected provider-behavior test plus documentation passed on `dc4c79f`. This does **not** prove cross-region replay protection. New proposed design/acceptance gates are preserved in `workers/newsroom/OAUTH-SECURITY-DECISION.md` (commit `3543f838`). The working connected editor remains read-only; no hardened authentication implementation or hosted strong-consistency test has shipped. Avoid repeating the original investigation or treating the proposed design as implemented.
+
+Branch disposition remains **retain — open draft PR and active dependency**; do not merge, deploy production, advance canon, or delete this branch without the required approval and lifecycle checks.
