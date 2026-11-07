@@ -100,6 +100,9 @@ export default {
       });
       if (!started) return fail(400, "authorization_in_progress");
       const h = responseHeaders();
+      // A browser form POST needs a same-origin Origin; a no-referrer policy
+      // may produce an opaque/null Origin in real WebKit/Chromium.
+      h.set("Referrer-Policy", "origin");
       h.set("Content-Type", "text/html; charset=utf-8");
       h.set("Content-Security-Policy",
         "default-src 'none'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'");
