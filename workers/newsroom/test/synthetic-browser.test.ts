@@ -76,7 +76,7 @@ describe("browser cookie and mocked GitHub callback fixture (never deploy)", () 
       const cookie = first.headers.get("set-cookie")!;
       assert.match(cookie, /^__Host-newsroom-consent=[0-9a-f]{64}; Path=\/; Secure; HttpOnly; SameSite=Lax; Max-Age=300$/);
       assert.match(first.headers.get("content-security-policy")!, /form-action 'self'/);
-      assert.equal(first.headers.get("referrer-policy"), "no-referrer");
+      assert.equal(first.headers.get("referrer-policy"), "origin");
       const value = cookie.split(";")[0];
       const form = await first.text();
       assert.ok(form.includes("state=" + STATE));
@@ -84,11 +84,11 @@ describe("browser cookie and mocked GitHub callback fixture (never deploy)", () 
 
       assert.equal((await consent("editor-a", STATE, undefined)).status, 403);
       assert.equal((await consent("editor-a", STATE, value, "https://attacker.invalid")).status, 403);
-      assert.equal((await consent("editor-a", STATE, "__Host-newsroom-consent=" + "f".repeat(64))).status, 302,
-        "Consent POST must not determine final authorization without callback verification");
+      assert.equal((await consent("editor-a", STATE, "__Host-newsroom-consent=" + "f".repeat(64))).status, 403,
+        "Swapped session cookie must fail before redirecting to GitHub");
       // In the attacker's swapped-cookie request, the callback still cannot pass.
       assert.equal((await callback("editor-a", STATE, "__Host-newsroom-consent=" + "f".repeat(64))).status, 403);
-      assert.equal(tokenCalls, 1);
+      assert.equal(tokenCalls, 0);
       const consentOK = await consent("editor-a", STATE, value);
       assert.equal(consentOK.status, 302);
       assert.equal(new URL(consentOK.headers.get("location")!).hostname, "github.com");
@@ -105,7 +105,8 @@ describe("browser cookie and mocked GitHub callback fixture (never deploy)", () 
       assert.match(destination.searchParams.get("code")!, /^[0-9a-f]{64}$/);
       assert.equal((await callback("editor-a", STATE, value)).status, 403);
       assert.equal((await authorize("editor-a")).status, 400);
-      assert.ok(tokenCalls >= 3 && userCalls >= 3);
+      assert.equal(tokenCalls, 2);
+      assert.equal(userCalls, 2);
 
       const second = await authorize("editor-b", "c".repeat(64));
       assert.equal(second.status, 200);
