@@ -1,5 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import {
   initialRefreshState, revokeRefreshState, rotateRefreshState,
 } from "../prototype/refresh-state.ts";
@@ -56,5 +57,19 @@ describe("strict refresh lineage prototype (not wired to OAuth)", () => {
     const next = rotateRefreshState(s, hash("a"), hash("b"), NOW);
     assert.equal(next.ok, true);
     assert.equal(JSON.stringify(next).includes("raw-token"), false);
+  });
+});
+
+describe("strict refresh prototype release isolation", () => {
+  it("is not imported into the deployed OAuth entrypoint", async () => {
+    const index = await readFile("src/index.ts", "utf8");
+    const adapter = await readFile("src/oauth.ts", "utf8");
+    for (const source of [index, adapter]) {
+      assert.ok(!source.includes("strict-refresh"), "prototype imported into release code");
+      assert.ok(!source.includes("StrictRefreshGrant"), "prototype class in release code");
+      assert.ok(!source.includes("REFRESH_GRANTS"), "experimental Durable Object bound in release code");
+    }
+    const config = await readFile("cloudflare.config.ts", "utf8");
+    assert.ok(!config.includes("REFRESH_GRANTS"));
   });
 });
