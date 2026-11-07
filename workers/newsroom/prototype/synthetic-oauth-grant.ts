@@ -8,6 +8,7 @@ import { DurableObject } from "cloudflare:workers";
 
 const KEY = "synthetic:grant:v1";
 const CODE_KEY = "synthetic:authorization-code:v1";
+const CONSENT_KEY = "synthetic:pending-consent:v1";
 const PKCE = /^[A-Za-z0-9_-]{43}$/;
 const FIXED_REDIRECT = "https://chatgpt.invalid/oauth/callback";
 
@@ -18,6 +19,18 @@ interface AuthorizationCodeState {
   audience: string;
   scope: string[];
   redirectUri: string;
+  expiresAt: number;
+  consumed: boolean;
+}
+
+interface PendingConsent {
+  browserHash: string;
+  stateHash: string;
+  challenge: string;
+  clientId: string;
+  audience: string;
+  redirectUri: string;
+  scopes: string[];
   expiresAt: number;
   consumed: boolean;
 }
@@ -71,6 +84,65 @@ export class SyntheticOAuthGrant extends DurableObject {
       };
       this.ctx.storage.kv.put(KEY, record);
       return { ok: true, generation: 0 };
+    });
+  }
+
+  /** Start a single test-only browser transaction. Cookies and OAuth state are hashed.
+   * Do not expose this DO method to a client-chosen grant or unauthenticated endpoint. */
+  async startConsent(input: {
+    browserHash: string; stateHash: string; challenge: string;
+    clientId: string; audience: string; redirectUri: string;
+    scopes: string[]; now: number; ttl: number;
+  }): Promise<boolean> {
+    if (!valid(input.browserHash) || !valid(input.stateHash) ||
+        input.browserHash === input.stateHash || !PKCE.test(input.challenge) ||
+        !input.clientId || !input.audience || input.redirectUri !== FIXED_REDIRECT ||
+        input.scopes.length !== 1 || input.scopes[0] !== READ || !clock(input.now) ||
+        !Number.isSafeInteger(input.ttl) || input.ttl < 1 || input.ttl > 300) return false;
+    return this.ctx.storage.transactionSync(() => {
+      if (this.ctx.storage.kv.get(CONSENT_KEY) !== undefined ||
+          this.ctx.storage.kv.get(CODE_KEY) !== undefined ||
+          this.ctx.storage.kv.get(KEY) !== undefined) return false;
+      const record: PendingConsent = {
+        browserHash: input.browserHash, stateHash: input.stateHash,
+        challenge: input.challenge, clientId: input.clientId,
+        audience: input.audience, redirectUri: input.redirectUri,
+        scopes: [...input.scopes], expiresAt: input.now + input.ttl, consumed: false,
+      };
+      this.ctx.storage.kv.put(CONSENT_KEY, record);
+      return true;
+    });
+  }
+
+  /** Called ONLY after a trusted identity provider has verified the editor.
+   * Records one-time consent consumption and creates the code atomically. */
+  async finishConsent(input: {
+    browserHash: string; stateHash: string; verifiedEditorId: string;
+    expectedEditorId: string; decision: "approve" | "deny";
+    codeHash: string; now: number;
+  }): Promise<boolean> {
+    if (!valid(input.browserHash) || !valid(input.stateHash) ||
+        !valid(input.codeHash) || !clock(input.now) ||
+        !input.expectedEditorId || input.verifiedEditorId !== input.expectedEditorId ||
+        !["approve", "deny"].includes(input.decision)) return false;
+    return this.ctx.storage.transactionSync(() => {
+      const pending = this.ctx.storage.kv.get<PendingConsent>(CONSENT_KEY);
+      if (!pending || pending.consumed || pending.expiresAt <= input.now ||
+          pending.browserHash !== input.browserHash ||
+          pending.stateHash !== input.stateHash ||
+          this.ctx.storage.kv.get(CODE_KEY) !== undefined ||
+          this.ctx.storage.kv.get(KEY) !== undefined) return false;
+      pending.consumed = true;
+      this.ctx.storage.kv.put(CONSENT_KEY, pending);
+      if (input.decision === "deny") return false;
+      const record: AuthorizationCodeState = {
+        codeHash: input.codeHash, challenge: pending.challenge,
+        clientId: pending.clientId, audience: pending.audience,
+        scope: [...pending.scopes], redirectUri: pending.redirectUri,
+        expiresAt: input.now + 300, consumed: false,
+      };
+      this.ctx.storage.kv.put(CODE_KEY, record);
+      return true;
     });
   }
 
