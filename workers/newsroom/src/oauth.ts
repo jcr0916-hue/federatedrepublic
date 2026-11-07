@@ -50,7 +50,9 @@ async function authorize<Env extends OAuthBindings>(
     const details = await helpers.describeConsent(auth);
     const transaction = await helpers.beginConsent(auth);
     transaction.headers.set("Content-Type", "text/html; charset=utf-8");
-    transaction.headers.set("Referrer-Policy", "no-referrer");
+    // Keep the authorization query private while allowing a browser form POST to
+    // send its actual Origin; "no-referrer" makes navigation-mode POSTs send "null".
+    transaction.headers.set("Referrer-Policy", "origin");
     transaction.headers.set("Content-Security-Policy", "default-src 'none'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'");
     const permissions = auth.scope.filter(x => x !== "offline_access").map(scope =>
       `<li>${scope === READ_SCOPE ? "List and read submissions across newsroom desks" : "Record editorial review decisions"}</li>`,
