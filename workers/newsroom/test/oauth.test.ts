@@ -84,6 +84,9 @@ describe("authentication adapter in local Workers runtime", () => {
     assert.ok(!html.includes("ChatGPT <test client>"));
     assert.ok(html.includes("ChatGPT &#60;test client&#62;"));
     assert.match(started.headers.get("content-security-policy")!, /frame-ancestors 'none'/);
+    // A no-referrer policy changes the Origin on browser form POSTs to "null",
+    // causing the strict consent origin check to reject a legitimate approval.
+    assert.equal(started.headers.get("referrer-policy"), "origin");
     assert.match(started.headers.get("set-cookie")!, /HttpOnly/);
     assert.match(started.headers.get("set-cookie")!, /Secure/);
     const handle = /name="handle" value="([^"]+)"/.exec(html)![1];
