@@ -108,3 +108,14 @@ Status: **OAuth editor authentication and core newsroom workflow verified in iso
 - Source test `restricts discovery and direct calls to granted tools and enforces review scope` issues a read-only OAuth token and verifies that direct `newsroom_review` returns HTTP **403 insufficient_scope**, while `newsroom_submit` and `newsroom_publish` return HTTP **403**; it also exercises an explicitly granted `newsroom:review` token. Test `rotates refresh tokens...` verifies refresh rotation and rejection of a replaced token; `refuses expired access tokens and locally revoked refresh grants` verifies expiry/revocation; `rechecks the editor allowlist on both access and refresh` verifies identity revocation. All are **local integration tests**, not hosted refresh/revocation proofs.
 - GitHub `Newsroom OAuth checks` run **42355085545** passed on documentation head `8250c10344788b23121a8a3102c9f3c9004ca4bf`. The deployed test Worker remains unchanged since the earlier code build and later secret updates.
 - Current external connector does **not** expose `newsroom_review`; OAuth review-scope end-to-end remains **untested**. Do not describe direct hosted OAuth review denial, hosted token refresh or revocation as passed solely on the basis of local integration tests.
+
+## Hosted OAuth refresh evidence — 2026-11-07
+
+Read-only inspection of the isolated Cloudflare OAuth KV namespace (without exposing token IDs, token values, secrets or encrypted grants) found:
+
+- One approved editor grant for the exact test MCP audience and `https://chatgpt.com/connector_platform_oauth_redirect`, scope `newsroom:read`.
+- Both current and **previous** refresh-token references, including wrapped-key references, are present on the grant. This is evidence that the hosted library has performed a refresh-token rotation. A current refresh credential is present.
+- Three access-token records with 15-minute expiry windows and `newsroom:read` scope. Metadata observation does not by itself establish whether each issuance was a refresh or a new authorization.
+- After inspection, the connected ChatGPT plugin successfully read the Corindal synthetic submission and its saved `UNDER_REVIEW` status, confirming that the live editor connection continues to work.
+- **Still unproven live:** explicit reuse denial of a previous refresh token, forced revocation/reconnection, hosted OAuth review-scope write behavior, and cross-location KV single-use behavior. These remain separate release gates. No production or `main` changes.
+
