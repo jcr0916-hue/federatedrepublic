@@ -233,6 +233,25 @@ describe("authentication adapter in local Workers runtime", () => {
     assert.equal((await refresh(initial.refresh_token)).status, 400);
   });
 
+  it("rejects concurrent reuse of a single refresh token", async () => {
+    const f = await instance();
+    const initial = await tokens(f, "newsroom:read offline_access");
+    const refresh = () => call(f, "/oauth/token", {
+      method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "refresh_token", client_id: f.client.clientId,
+        client_secret: f.client.clientSecret, refresh_token: initial.refresh_token, resource: RESOURCE,
+      }),
+    });
+    const responses = await Promise.all([refresh(), refresh()]);
+    assert.deepEqual(responses.map(response => response.status).sort(), [200, 400]);
+    const successful = responses.find(response => response.status === 200)!;
+    const replacement = await successful.json() as Tokens;
+    assert.notEqual(replacement.refresh_token, initial.refresh_token);
+    assert.equal((await refresh()).status, 400);
+    assert.equal((await rpc(f, replacement.access_token, "tools/list")).status, 200);
+  });
+
   it("refuses expired access tokens and locally revoked refresh grants", async () => {
     const f = await instance();
     const token = await tokens(f, "newsroom:read offline_access");
