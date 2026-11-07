@@ -77,3 +77,27 @@ The user deployed the verified PR artifact via Wrangler from the extracted deplo
 The **production** `federated-republic-newsroom` Worker remains on deployment version `08a99769-3618-488e-adbd-30a8be38a788` at 100%, bound to the original production R2 bucket. No production deployment or main merge occurred.
 
 **Next gates:** private ChatGPT OAuth client pre-registration (generated client ID/secret; never invent values or expose registration through HTTP), configure `CHATGPT_CLIENT_ID` and client secret for ChatGPT itself, verify hosted discovery and the browser OAuth roundtrip, four-desk isolation and editor read/review permissions. Do not claim OAuth is fully operational yet.
+
+
+## Hosted integration results — 2026-11-07 (isolated test only)
+
+Status: **OAuth editor authentication and core newsroom workflow verified in isolation; production release NOT authorized**. Earlier preparation sections above are historical snapshots, superseded by this section where they describe incomplete deployment.
+
+- Isolated Worker: `newsroom-oauth-isolated-test`; after OAuth/CSP fixes Cloudflare verified version `711cf4dc-c422-4f59-88a1-0c1e8e0ef9a4` at 100%, with 13 bindings, compatibility date `2026-10-01`, and the original isolated R2/KV resources. Later `wrangler secret put` updates generated isolated versions `093c4eff-25a2-46da-8093-0610982c851f` (Corindal) and `cdab7934-206d-459b-b89c-95537a98f68a` (editor).
+- Registered fixed ChatGPT OAuth client in isolated KV by a **local-only** bootstrap process (no public registration endpoint). ChatGPT callback observed in actual browser was `https://chatgpt.com/connector_platform_oauth_redirect`; both Worker setting and existing registered client redirect were aligned without rotating the client ID or secret. Preserve these exact callback values unless verified client behavior changes.
+- OAuth interoperability fixes committed on the PR branch: normalization of the observed read-only request shape, browser Origin compatibility by using a same-origin-referring policy for the consent page, and the restricted GitHub redirect allowance in consent CSP. GitHub CI passed on final fix commit `b03e7de14211d9d763a03f91d4590cde636181b2`; run `42353767448`, artifact `13567240295`, ZIP digest `sha256:051bc198860b2aced6409257d85b12b8d41bd773f55eadc90f10ca29ffb0e21e`. User verified ZIP SHA-256 locally before deployment.
+- GitHub editor sign-in completed and the `Torenthia Newsroom Editor — Test` ChatGPT plugin appeared under Connected accounts. The connected plugin's `newsroom_list` and `newsroom_read` were successfully invoked from ChatGPT.
+- A synthetic Corindal fixture created directly in **test** R2 (`00000000-0000-4000-8000-000000000304`) was listable/readable by the editor. This fixture does **not** prove agent authentication.
+- A **real bearer-authenticated Corindal submission** was made to the test Worker's `POST /v1/submit`, id `67c475cd-ab27-477a-a516-8571a75944c6`, key `submissions/corindal/2026-11-07/67c475cd-ab27-477a-a516-8571a75944c6.json`. Response showed `PROPOSED`; ChatGPT editor independently listed and read its full noncanonical body.
+- A separate synthetic **Korda** fixture (`00000000-0000-4000-8000-000000000305`) was uploaded into isolated R2. Editor listed/read it successfully; Corindal's authenticated `GET /v1/read` attempt against that Korda key returned `{"error":"invalid or unauthorized submission key"}`. This proves the tested cross-desk read denial, not a complete multi-desk security audit.
+- A **test-only legacy editor bearer credential** was used on `POST /v1/review` to mark the Corindal submission `UNDER_REVIEW`, with an explicit no-publication editorial note. ChatGPT editor independently verified the updated status and note while the original body, desk, date, and `nonCanonical: true` remained intact. **Important:** this tests the legacy editor review route, not the `newsroom:review` OAuth scope; the connected ChatGPT editor currently exposes only list/read.
+- An authenticated **legacy editor** `tools/call` of `newsroom_publish` returned `{"content":[{"type":"text","text":"unknown tool"}],"isError":true}`. This proves that unsupported operation is rejected in the tested path; it is not a comprehensive publication authorization audit.
+- No synthetic record is a canonical story; no publication, time advancement, production Worker deployment, or `main` merge occurred. Test-only credentials were handled locally and installed as Cloudflare secrets without committing values.
+
+### Remaining release gates
+
+1. Exercise `newsroom:review` via authenticated ChatGPT OAuth (including review-privilege gating and denial when omitted); confirm OAuth read-only cannot submit, review, or publish.
+2. Repeat isolation assertions with actual Korda, Varek, and Federal bearer identities where warranted; check negative cross-desk list, read, and review paths.
+3. Verify GitHub callback/session integrity, refresh/revocation/reconnect, race conditions and hosted KV consistency; maintain exact callback, client ID, PKCE, origin checks, and editor GitHub ID checks.
+4. Assess audit records, test-data cleanup, rollback procedure and source-to-artifact integrity before any proposed production release.
+5. Obtain explicit user approval **before** merging PR #304, deploying the production Worker, changing production secrets, or advancing/publishing canon.
