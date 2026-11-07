@@ -1,5 +1,5 @@
 {
-  "status": "source-import-blocked",
+  "status": "source-integrated-local-tests-passed",
   "inspectedRepositoryCommit": "98430167c1c5130b41d329d0b99887c29f35ea4f",
   "worker": "federated-republic-newsroom",
   "workerVersion": "08a99769-3618-488e-adbd-30a8be38a788",
@@ -14,6 +14,16 @@
     "contentsCopied": false
   },
   "credentialsCopied": false,
-  "liveSourceCopied": false,
-  "deployedByThisWork": false
+  "deployedByThisWork": false,
+  "suppliedSource": {
+    "filename": "newsroom-worker.txt",
+    "bytes": 7808,
+    "sha256": "8bd4c7352f6af43e4a6ff265671c7a832c4f37866e40f5f1022a14f45030db3a",
+    "preservedAt": "src/legacy.js",
+    "preservedPrefixBytes": 7808,
+    "integrationChange": "Appended named exports for principal and mcp; original bytes unchanged.",
+    "credentialPreflight": "Parsed authentication literals are known headers and public desk labels. No opaque token literal or common credential/PEM marker found. Five credentials remain environment bindings.",
+    "byteEquivalenceToDeployedModule": "not-established"
+  },
+  "sourceRetrievedThroughCloudflareConnector": false
 }

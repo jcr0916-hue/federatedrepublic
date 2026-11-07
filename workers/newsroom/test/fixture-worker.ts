@@ -1,10 +1,12 @@
-/** Synthetic adapter only. This is not an export or reconstruction of the live Worker. */
+/** Test-only administration and GitHub transport; never a release entrypoint. */
 import { WorkerEntrypoint } from "cloudflare:workers";
+import { legacyAdapter, type NewsroomEnv } from "../src/adapter.ts";
 import { createNewsroomOAuth, oauthHelpers, type LegacyAdapter } from "../src/oauth.ts";
-import { type OAuthBindings, type LegacyPrincipal } from "../src/policy.ts";
+import { type LegacyPrincipal } from "../src/policy.ts";
 
-interface FixtureEnv extends OAuthBindings {
+interface FixtureEnv extends NewsroomEnv {
   GITHUB: Fetcher;
+  TEST_ORIGINAL: string;
 }
 
 const desks = ["corindal", "korda", "varek", "federal", "editorial"];
@@ -47,20 +49,22 @@ const adapter: LegacyAdapter<FixtureEnv> = {
   },
 };
 
-const auth = createNewsroomOAuth(adapter, {
-  githubTransport: (request, env) => env.GITHUB.fetch(request),
-});
+const selectedAdapter = (env: FixtureEnv): LegacyAdapter<FixtureEnv> =>
+  env.TEST_ORIGINAL === "true" ? legacyAdapter : adapter;
 
 export default class FixtureWorker extends WorkerEntrypoint<FixtureEnv> {
   async fetch(request: Request) {
     const [clientId, editorId] = await Promise.all([
       this.env.OAUTH_KV.get("fixture:configured-client"), this.env.OAUTH_KV.get("fixture:editor-id"),
     ]);
+    const auth = createNewsroomOAuth(selectedAdapter(this.env), {
+      githubTransport: (request, env) => env.GITHUB.fetch(request),
+    });
     return auth.fetch(request, { ...this.env, CHATGPT_CLIENT_ID: clientId || this.env.CHATGPT_CLIENT_ID,
       EDITOR_GITHUB_USER_ID: editorId || this.env.EDITOR_GITHUB_USER_ID }, this.ctx);
   }
   async provision() {
-    const helpers = oauthHelpers(this.env, adapter);
+    const helpers = oauthHelpers(this.env, selectedAdapter(this.env));
     const client = await helpers.createClient({
       clientName: "ChatGPT <test client>", redirectUris: [this.env.CHATGPT_REDIRECT_URI],
       grantTypes: ["authorization_code", "refresh_token"], responseTypes: ["code"],

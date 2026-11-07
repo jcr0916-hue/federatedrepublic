@@ -1,5 +1,5 @@
 import { defineConfig } from "cf/config";
 
-// Intentionally no Worker entrypoint or remote bindings. Source import and explicit
-// release approval are prerequisites. The synthetic fixture runs only in Miniflare.
+// Release configuration and remote bindings require separate approval/provisioning.
+// `npm run build` builds src/index.ts locally without configuring or deploying it.
 export default defineConfig({});

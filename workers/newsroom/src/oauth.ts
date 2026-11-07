@@ -10,7 +10,7 @@ import {
   type EditorGrant, type LegacyPrincipal, type OAuthBindings, type OAuthConfiguration,
 } from "./policy.ts";
 
-/** Wire these ports to the original source after its secret-safe import and regression review. */
+/** Ports to the preserved original source; test fixtures can inject isolated handlers. */
 export interface LegacyAdapter<Env> {
   principal(request: Request, env: Env): LegacyPrincipal | null | Promise<LegacyPrincipal | null>;
   fetch(request: Request, env: Env, ctx: ExecutionContext): Response | Promise<Response>;
@@ -208,7 +208,7 @@ export function providerOptions<Env extends OAuthBindings>(
   };
 }
 
-/** No production entrypoint is supplied until the original Worker has been imported. */
+/** Add OAuth at /mcp while retaining the original bearer and REST paths. */
 export function createNewsroomOAuth<Env extends OAuthBindings>(
   adapter: LegacyAdapter<Env>, dependencies: OAuthDependencies<Env> = {},
 ): { fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> } {

@@ -18,5 +18,5 @@ jobs:
           cache-dependency-path: workers/newsroom/package-lock.json
       - run: npm ci --ignore-scripts
         working-directory: workers/newsroom
-      - run: npm run typecheck && npm test && npm run build:test
+      - run: npm run typecheck && npm test && npm run build && npm run build:test
         working-directory: workers/newsroom
