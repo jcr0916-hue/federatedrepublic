@@ -140,6 +140,9 @@ export default {
       // by an actual GitHub upstream PKCE transaction.
       const state = url.searchParams.get("state");
       if (!state || !SESSION.test(state)) return fail(400, "missing_state");
+      if (!await stub.verifyConsent({
+        browserHash: await digest(browser), stateHash: await digest(state), now,
+      })) return fail(403, "consent_session_invalid");
       const location = new URL("https://github.com/login/oauth/authorize");
       location.search = new URLSearchParams({
         client_id: "synthetic-github-client", state,
@@ -155,6 +158,9 @@ export default {
           url.searchParams.getAll("state").length !== 1 ||
           url.searchParams.getAll("code").length !== 1)
         return fail(403, "callback_invalid");
+      if (!await stub.verifyConsent({
+        browserHash: await digest(browser), stateHash: await digest(state), now,
+      })) return fail(403, "callback_invalid");
       const id = await githubId(env, upstreamCode);
       if (id !== EDITOR) return fail(403, "editor_not_allowed");
       const authCode = code();
