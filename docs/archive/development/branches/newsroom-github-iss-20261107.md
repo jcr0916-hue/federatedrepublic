@@ -1,9 +1,9 @@
 # Branch history — fix/newsroom-github-iss-20261107
 
 **Original branch:** `fix/newsroom-github-iss-20261107`  
-**PR:** not yet opened  
+**PR:** [#306](https://github.com/jcr0916-hue/federatedrepublic/pull/306)  
 **Frozen parent:** PR #305, `4fda7e342b70f3ea59b151d89a7e8976572d7f39`  
-**Status:** experimental isolated callback compatibility fix; not merged or production deployed
+**Status:** experimental; deployed only to the isolated issuer candidate after supported CI and review; not merged or production deployed
 
 ## Purpose and scope
 
@@ -20,8 +20,16 @@ The first real GitHub return included an `iss` field. The candidate's strict que
 
 The three new targeted regressions reproduced the original defect: **0 passed / 3 failed**, all at the expected valid-callback acceptance checks. They then passed with the narrow fix. The complete local typecheck, **76 tests / 0 failures**, and four release/fixture/issuer/resource builds passed. Local Node 24.15.0 is below the supported engine range, so supported-Node CI remains the authoritative clean-install check.
 
-A separate read-only review agent independently computed the delta, inspected the source/tests/bundle and reported **no actionable security findings**. Reviewed issuer bundle SHA-256: `98657a65570f3927a283bdfa137fd43f6c57750ee5b2fefcec6685205f1dcd1a`. The resource bundle remains `57026b456d1807c6a62cb2b0081f939964ae02a8f95cbd9ddcecfbbe958b79a3`. This is an agent code review with no independent test execution or cloud inspection, not a human/external audit. Supported-Node CI and candidate-only redeployment are pending at this commit's preparation; actual results are recorded in the PR and session evidence. No hosted success is claimed here.
+A separate read-only review agent independently computed the delta, inspected the source/tests/bundle and reported **no actionable security findings**. Reviewed issuer bundle SHA-256: `98657a65570f3927a283bdfa137fd43f6c57750ee5b2fefcec6685205f1dcd1a`. The resource bundle remains `57026b456d1807c6a62cb2b0081f939964ae02a8f95cbd9ddcecfbbe958b79a3`. This is an agent code review with no independent test execution or cloud inspection, not a human/external audit.
+
+Supported clean-install [CI run 42413533266](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42413533266), job 128526562908, passed on source [3300d737](https://github.com/jcr0916-hue/federatedrepublic/commit/3300d737c33ce5cf3960d2dad33c1e577a76aa77), using Node **24.22.2**: typecheck, **76 tests / zero failures**, and four builds. World publishing run 42413533320 also passed. Downloaded issuer artifact 13590761626 and resource artifact 13590337694 matched the reviewed module hashes exactly; their ZIP digests matched GitHub's artifact metadata.
+
+At 21:00 UTC on November 7, only `newsroom-strict-issuer-candidate` was updated, while both candidate public URLs were closed. Deployment `62377e37-e379-447d-92f7-297e5e287264`, version `5b3f6ec8-cace-4c0c-b5b5-0c39531aa917`, serves the reviewed issuer bytes. Post-upload download verified that hash. All three encrypted issuer secrets, existing public bindings, SQLite namespace IDs and query redaction were retained. No migration was sent. The resource deployment and bundle were unchanged; it remains bound only to the candidate issuer and private synthetic bucket. Secret values were never retrieved or printed.
+
+Three live, nonsecret callback checks passed: pinned issuer with no browser session reaches the expected 403; wrong issuer and duplicate issuer each fail with 400. The saved local-client and independent validator credential pairs were then rechecked successfully without minting a grant. Both candidate URLs were reopened at 21:02 UTC for a fresh human authorization; previews stay disabled, query redaction stays enabled, traces/exports stay disabled. The earlier runtime redaction canaries remain the logging evidence; this parser-only patch adds no logging.
+
+Real editor identity, validity of the private GitHub app secret, successful consent/code exchange and authenticated synthetic reads remain **not established** until the human completes fresh sign-in. Hosted refresh/replay, revocation and regional/recovery acceptance remain pending. No real callback code or state is retained in this note.
 
 ## Preservation and disposition
 
-Retain this unfinished child branch and its frozen #305/#304 dependencies. No merge, main change, production deployment, existing grant mutation or branch deletion is authorized by this fix. Candidate deployment will preserve the already-installed Secret bindings and SQLite namespaces; the initial namespace migration must not be repeated. A fresh browser authorization is required after the old five-minute state expires. Final deployment/automation dependency review and preservation/disposition gates remain pending before any future merge or cleanup.
+Retain this unfinished child branch and its frozen #305/#304 dependencies. No merge, main change, production deployment, existing grant mutation or branch deletion is authorized by this fix. The candidate update preserved the already-installed Secret bindings and SQLite namespaces; the initial namespace migration must not be repeated. A fresh browser authorization is required after the old five-minute state expires. Final deployment/automation dependency review and preservation/disposition gates remain pending before any future merge or cleanup.
