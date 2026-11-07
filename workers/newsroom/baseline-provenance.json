@@ -1,0 +1,19 @@
+{
+  "status": "source-import-blocked",
+  "inspectedRepositoryCommit": "98430167c1c5130b41d329d0b99887c29f35ea4f",
+  "worker": "federated-republic-newsroom",
+  "workerVersion": "08a99769-3618-488e-adbd-30a8be38a788",
+  "deployment": "7a53aadb-d87e-46e5-b7b8-831970590373",
+  "scriptEtag": "0776013786605db1100edd25c58bc9c90f075727d7ef57751e169635ed4ed807",
+  "compatibilityDate": "2026-10-01",
+  "setupNote": {
+    "filename": "federated_republic_newsroom_setup.md",
+    "bytes": 2273,
+    "sha256": "59a77a286bf9aad584e6a19850f46cc72bf283796f8959c86010622504c020ff",
+    "containsWorkerSource": false,
+    "contentsCopied": false
+  },
+  "credentialsCopied": false,
+  "liveSourceCopied": false,
+  "deployedByThisWork": false
+}

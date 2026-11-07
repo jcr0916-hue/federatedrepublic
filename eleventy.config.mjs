@@ -116,6 +116,8 @@ export default function (eleventyConfig) {
   // Keep legacy flattened image/PDF URLs and /logos/ URLs unchanged.
   eleventyConfig.ignores.add("docs/**");
   eleventyConfig.ignores.add("scripts/**");
+  // Worker source, local fixtures and credentials are never website templates.
+  eleventyConfig.ignores.add("workers/**");
   // Cold storage: source retained in-repo but omitted from the public build.
   eleventyConfig.ignores.add("survey.html");
   eleventyConfig.addWatchTarget("images/");
