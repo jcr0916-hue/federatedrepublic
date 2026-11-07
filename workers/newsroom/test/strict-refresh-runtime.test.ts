@@ -17,7 +17,7 @@ describe("strict refresh SQLite Durable Object local integration (not in release
     const mf = new Miniflare(convertV4MiniflareOptions({
       modules: true, script: result.outputFiles[0].text,
       compatibilityDate: "2026-10-01",
-      durableObjects: { REFRESH_GRANTS: "StrictRefreshGrant" },
+      durableObjects: { REFRESH_GRANTS: { className: "StrictRefreshGrant", useSQLite: true } },
     }));
     try {
       const rpc = async (operation: string, fields: Record<string, unknown> = {}, grant = "editor-a") => {
