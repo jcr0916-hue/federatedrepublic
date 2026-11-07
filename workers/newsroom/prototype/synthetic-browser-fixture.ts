@@ -47,14 +47,15 @@ function responseHeaders(clear = false): Headers {
 function stubFor(env: BrowserEnv, grant: string) {
   return env.SYNTHETIC_GRANTS.get(env.SYNTHETIC_GRANTS.idFromName(grant));
 }
-async function githubId(env: BrowserEnv, authCode: string): Promise<string | null> {
+async function githubId(env: BrowserEnv, authCode: string, verifier: string): Promise<string | null> {
   // The local transport only recognizes synthetic codes. Fixed endpoints and
   // manual redirects protect the fixture from accidental external egress.
   if (!/^[a-z0-9-]{1,80}$/.test(authCode)) return null;
   const tokenResponse = await env.GITHUB.fetch(new Request("https://github.com/login/oauth/access_token", {
     method: "POST", redirect: "manual",
     headers: { "Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json" },
-    body: new URLSearchParams({ code: authCode, client_id: "synthetic-github-client" }),
+    body: new URLSearchParams({ code: authCode, client_id: "synthetic-github-client",
+      redirect_uri: ORIGIN + "/oauth/callback", code_verifier: verifier }),
   }));
   if (!tokenResponse.ok) return null;
   const token: unknown = await tokenResponse.json();
@@ -146,10 +147,24 @@ export default {
       if (!await stub.verifyConsent({
         browserHash: await digest(browser), stateHash: await digest(state), now,
       })) return fail(403, "consent_session_invalid");
+      // Use distinct, server-generated upstream state, not the client's OAuth
+      // state. The verifier is held in this DO and claimed exactly once.
+      const upstreamState = code(), upstreamVerifier = code() + code();
+      const bytes = new Uint8Array(await crypto.subtle.digest(
+        "SHA-256", new TextEncoder().encode(upstreamVerifier),
+      ));
+      const challenge = btoa(Array.from(bytes, byte => String.fromCharCode(byte)).join(""))
+        .split("+").join("-").split("/").join("_").replace(/=+$/, "");
+      const started = await stub.beginUpstream({
+        browserHash: await digest(browser), downstreamStateHash: await digest(state),
+        upstreamStateHash: await digest(upstreamState), verifier: upstreamVerifier, now,
+      });
+      if (!started) return fail(403, "upstream_already_started");
       const location = new URL("https://github.com/login/oauth/authorize");
       location.search = new URLSearchParams({
-        client_id: "synthetic-github-client", state,
-        redirect_uri: ORIGIN + "/oauth/callback?grant=" + encodeURIComponent(grant),
+        client_id: "synthetic-github-client", state: upstreamState,
+        redirect_uri: ORIGIN + "/oauth/callback",
+        code_challenge: challenge, code_challenge_method: "S256",
       }).toString();
       const h = responseHeaders(); h.set("Location", location.toString());
       return new Response(null, { status: 302, headers: h });
@@ -161,10 +176,15 @@ export default {
           url.searchParams.getAll("state").length !== 1 ||
           url.searchParams.getAll("code").length !== 1)
         return fail(403, "callback_invalid");
-      if (!await stub.verifyConsent({
-        browserHash: await digest(browser), stateHash: await digest(state), now,
-      })) return fail(403, "callback_invalid");
-      const id = await githubId(env, upstreamCode);
+      // Upstream callback state differs from downstream OAuth client state;
+      // claimUpstream checks the cookie-bound transaction and its own state.
+      const verifier = await stub.claimUpstream({
+        browserHash: await digest(browser), upstreamStateHash: await digest(state), now,
+      });
+      if (!verifier) return fail(403, "callback_invalid");
+      let id: string | null = null;
+      try { id = await githubId(env, upstreamCode, verifier); }
+      catch { return fail(502, "identity_provider_unavailable"); }
       if (id !== EDITOR) return fail(403, "editor_not_allowed");
       const authCode = code();
       const ok = await stub.finishConsent({
@@ -174,7 +194,9 @@ export default {
       });
       if (!ok) return fail(403, "callback_invalid");
       const destination = new URL(REDIRECT);
-      destination.search = new URLSearchParams({ code: authCode, state }).toString();
+      // The downstream state is fixed at start; do not forward the upstream
+      // state to ChatGPT. A separate pending-consent read exposes no raw token.
+      destination.search = new URLSearchParams({ code: authCode }).toString();
       const h = responseHeaders(true); h.set("Location", destination.toString());
       return new Response(null, { status: 302, headers: h });
     }
