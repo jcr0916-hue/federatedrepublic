@@ -29,6 +29,7 @@ type RequestBody = {
   refreshToken?: string; accessToken?: string; scope?: string;
   audience?: string; now?: number; requestedScope?: string;
   redirectUri?: string; codeChallenge?: string; code?: string; codeVerifier?: string;
+  browserSession?: string; state?: string; decision?: string; githubCode?: string;
 };
 
 export default {
@@ -48,6 +49,48 @@ export default {
       return Response.json({ error: "invalid_request" }, { status: 400 });
     }
     const stub = env.SYNTHETIC_GRANTS.get(env.SYNTHETIC_GRANTS.idFromName(params.grant));
+    // The fake upstream identity provider is an INTERNAL deterministic test stub.
+    // Nothing here contacts GitHub or accepts a caller-supplied editor identity.
+    if (params.action === "consent_start") {
+      if (params.audience !== AUDIENCE || params.redirectUri !== REDIRECT ||
+          params.scope !== "newsroom:read" || typeof params.codeChallenge !== "string" ||
+          !/^[A-Za-z0-9_-]{43}$/.test(params.codeChallenge)) {
+        return Response.json({ error: "invalid_authorization_request" }, { status: 400 });
+      }
+      const browserSession = token(), state = token();
+      const started = await stub.startConsent({
+        browserHash: await digest(browserSession), stateHash: await digest(state),
+        challenge: params.codeChallenge, clientId: CLIENT, audience: AUDIENCE,
+        redirectUri: REDIRECT, scopes: ["newsroom:read"], now: now as number, ttl: 300,
+      });
+      return Response.json(started ? { browserSession, state, expires_in: 300 } :
+        { error: "invalid_grant" }, { status: started ? 200 : 400 });
+    }
+    if (params.action === "consent_complete") {
+      if (typeof params.browserSession !== "string" || !/^[0-9a-f]{64}$/.test(params.browserSession) ||
+          typeof params.state !== "string" || !/^[0-9a-f]{64}$/.test(params.state) ||
+          !["approve", "deny"].includes(params.decision ?? "")) {
+        return Response.json({ error: "invalid_consent" }, { status: 400 });
+      }
+      // Identity verification must finish BEFORE the DO is asked to commit the
+      // authorization code. The mock recognizes only two fixed test exchanges.
+      const verifiedEditorId = params.githubCode === "synthetic-approved-github-code"
+        ? EDITOR : params.githubCode === "synthetic-other-user-code"
+          ? "synthetic-other-user" : "";
+      if (!verifiedEditorId) {
+        return Response.json({ error: "identity_provider_rejected" }, { status: 403 });
+      }
+      const code = token();
+      const approved = await stub.finishConsent({
+        browserHash: await digest(params.browserSession), stateHash: await digest(params.state),
+        verifiedEditorId, expectedEditorId: EDITOR,
+        decision: params.decision as "approve" | "deny",
+        codeHash: await digest(code), now: now as number,
+      });
+      return Response.json(approved ? { code, expires_in: 300 } :
+        { error: "consent_denied_or_invalid" }, { status: approved ? 200 : 403 });
+    }
+
     // These test-only actions model pre-approved identity + consent. They are
     // deliberately NOT browser OAuth endpoints, and must never be deployed.
     if (params.action === "begin_code") {
