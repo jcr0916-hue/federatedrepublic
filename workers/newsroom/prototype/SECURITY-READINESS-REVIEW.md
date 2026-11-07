@@ -43,3 +43,14 @@
 5. Separate Presidential approvals for any production bindings, merge or deployment. Keep PRs #304/#305 draft until explicitly approved.
 
 **Preservation:** `workers/newsroom/HOSTED-TEST.md` and this branch's permanent note in `docs/archive/development/branches/` record historical results; do not re-run completed investigations without a changed hypothesis.
+
+
+## Server-issued grant routing prototype — 2026-11-07
+
+**New verified local evidence, not a release approval.**
+
+- `issuer-boundary.ts` generates 256-bit random server-owned grant identifiers and separately random 256-bit access/refresh secrets, identified by distinct credential type prefixes. Parsing yields a **routing hint plus SHA-256 digest only**; routing IDs are never treated as authentication. The future resource server must still check that digest, fixed client ID, scope, audience, expiry and revocation at the authoritative DO.
+- `verifyConfidentialClient` validates an HTTP Basic credential against the trusted registered client ID and a stored SHA-256 hash of a high-entropy synthetic secret using fixed-length digest comparison. The *registration* must come from trusted server configuration; there is no client registration, rate limiting, rotation or secret management in this local primitive.
+- `issuer-boundary-fixture.ts` is **LOCAL ONLY / NEVER DEPLOY**. It has a hard-coded synthetic client secret, test identity and test clock and bypasses real GitHub identity/PKCE. It issues grant IDs inside the Worker, not from request fields, then routes typed opaque credentials to a single synthetic SQLite DO. It rejects explicit `grant`/`grantId` selectors and incorrect client credentials. Its `/issue` action intentionally remains a privileged test shortcut — still a **P0 blocker** for deployment.
+- New unit and Miniflare tests check malformed credentials, altered secrets and IDs, client mismatches, two independent grants, concurrent refresh replay, revoked grant isolation, and absence of caller-chosen grant IDs. CI `Newsroom OAuth checks` **run 42360937260**, job **128368988727**, commit `d0611c3fe2a41d5b349ac071ee90e7ae615cdc80` **passed 45 tests, zero failures** plus typecheck, release and fixture builds.
+- The previous P1 grant-routing gap has an **experimental local proof**, but is **not remediated in any deployable authorization server**. A production design still requires an authenticated editor/callback, correct token-to-grant lookup, secured internal DO RPC, proper confidential-client credential lifecycle, explicit reauthorization on lost responses, and independently reviewed hosted tests. No existing OAuth grant, live Worker, production Worker, `main`, R2/KV, or Torenthia canon was modified.
