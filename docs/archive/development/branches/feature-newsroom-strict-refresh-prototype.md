@@ -34,3 +34,11 @@ Use a separate branch based on PR #304 rather than modifying its deployed source
 5. Retain branch while open; never merge into PR #304 or `main`, deploy production, or advance Torenthia canon without explicit Presidential approval. Final branch cleanup follows AGENTS.md and the branch lifecycle policy.
 
 Historical provenance: `workers/newsroom/HOSTED-TEST.md`, `workers/newsroom/OAUTH-SECURITY-DECISION.md`, draft PR #304. Maintain separation from Constitution-Lab.
+
+## Initial CI verification — 2026-11-07
+
+- Opened **draft PR [#305](https://github.com/jcr0916-hue/federatedrepublic/pull/305)** targeting `feature/newsroom-chatgpt-oauth` (NOT `main`).
+- GitHub Actions `Newsroom OAuth checks` run **42356794969**, job **128356529028**, **passed**: `npm run typecheck && npm test && npm run build && npm run build:test`.
+- Exactly **34 tests passed; zero failed**, including the five `strict refresh lineage prototype (not wired to OAuth)` state-machine cases.
+- The experimental Durable Object module itself was **typechecked**, but **was not instantiated in a Miniflare Durable Object runtime or deployed**. Its transaction behavior remains unverified in a live DO. Build success does not imply provider integration, cross-region isolation or strict token replay protection.
+- The release entrypoint `src/index.ts` was not changed. No R2/KV/DO provisioning, credential changes, connected ChatGPT plugin disruption, production deployment or merge occurred.
