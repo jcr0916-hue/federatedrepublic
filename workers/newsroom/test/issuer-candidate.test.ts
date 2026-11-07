@@ -10,6 +10,9 @@ const ORIGIN = "https://candidate.invalid";
 const CLIENT = "synthetic-registered-editor";
 const SECRET = "synthetic-only-candidate-secret-long-randomish-0123456789";
 const GITHUB_SECRET = "synthetic-dedicated-github-secret";
+const RESOURCE_ID = "synthetic-resource-validator";
+const RESOURCE_SECRET = "synthetic-resource-validator-secret-0123456789";
+const RESOURCE_AUTH = "Basic " + Buffer.from(RESOURCE_ID + ":" + RESOURCE_SECRET).toString("base64");
 const AUDIENCE = "https://resource.invalid/mcp";
 const REDIRECT = "https://chatgpt.invalid/oauth/callback?registered=1";
 const STATE = "opaque client state +/%&= keeps its original value";
@@ -30,6 +33,7 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
   const upstream = new Map<string, { scenario: string; challenge: string }>();
   const bindings = {
     ISSUER_ORIGIN: ORIGIN, ISSUER_CLIENT_ID: CLIENT, ISSUER_CLIENT_SECRET_SHA256: hash(SECRET),
+    ISSUER_RESOURCE_ID: RESOURCE_ID, ISSUER_RESOURCE_SECRET_SHA256: hash(RESOURCE_SECRET),
     ISSUER_REDIRECT_URI: REDIRECT, ISSUER_AUDIENCE: AUDIENCE, ISSUER_EDITOR_ID: "12345",
     ISSUER_GITHUB_CLIENT_ID: "dedicated-test-github-app", ISSUER_GITHUB_CLIENT_SECRET: GITHUB_SECRET,
   };
@@ -42,7 +46,8 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     script = built.outputFiles[0].text;
     mf = new Miniflare(convertV4MiniflareOptions({
       modules: true, script, compatibilityDate: "2026-10-01", bindings,
-      durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true } },
+      durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true },
+        ISSUER_GUARD: { className: "IssuerGuard", useSQLite: true } },
       outboundService: async request => {
         const url = new URL(request.url);
         if (url.href === "https://github.com/login/oauth/access_token") {
@@ -135,6 +140,7 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.equal(location.origin + location.pathname, "https://chatgpt.invalid/oauth/callback");
     assert.equal(location.searchParams.get("registered"), "1");
     assert.equal(location.searchParams.get("state"), STATE);
+    assert.equal(location.searchParams.get("iss"), ORIGIN);
     assert.match(response.headers.get("set-cookie")!, /Max-Age=0$/);
     return location.searchParams.get("code")!;
   };
@@ -155,13 +161,15 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.equal(result.status, 200, result.raw);
     return { access: String(result.body.access_token), refresh: String(result.body.refresh_token) };
   };
-  const introspect = async (token: string) => (await post("/introspect", { token, token_type_hint: "access_token" })).body;
+  const introspect = async (token: string) => (await post("/introspect", { token, token_type_hint: "access_token" },
+    { ...POST_HEADERS, Authorization: RESOURCE_AUTH })).body;
 
   it("fails closed with missing dedicated configuration and has no issuance/admin shortcuts", async () => {
     const unconfigured = new Miniflare(convertV4MiniflareOptions({
       modules: true, script, compatibilityDate: "2026-10-01",
       bindings: { ...bindings, ISSUER_GITHUB_CLIENT_SECRET: "" },
-      durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true } },
+      durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true },
+        ISSUER_GUARD: { className: "IssuerGuard", useSQLite: true } },
     }));
     try {
       const response = await unconfigured.dispatchFetch(ORIGIN + "/authorize?" + startParams());
@@ -176,7 +184,8 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.equal(data.issuer, ORIGIN);
     assert.equal(data.token_endpoint, ORIGIN + "/token");
     assert.deepEqual(data.grant_types_supported, ["authorization_code", "refresh_token"]);
-    assert.deepEqual(data.token_endpoint_auth_methods_supported, ["client_secret_basic"]);
+    assert.deepEqual(data.token_endpoint_auth_methods_supported, ["client_secret_basic", "client_secret_post"]);
+    assert.equal(data.authorization_response_iss_parameter_supported, true);
   });
 
   it("rejects changed/duplicate authorization inputs before redirecting or setting a cookie", async () => {
@@ -205,7 +214,13 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.equal(result.body.scope, "newsroom:read");
     assert.match(String(result.body.access_token), /^nr1a\.[a-f0-9]{64}\.[a-f0-9]{64}$/);
     assert.match(String(result.body.refresh_token), /^nr1r\.[a-f0-9]{64}\.[a-f0-9]{64}$/);
-    assert.deepEqual(await introspect(String(result.body.access_token)), { active: true, scope: "newsroom:read", aud: AUDIENCE });
+    const inspected = await introspect(String(result.body.access_token));
+    assert.equal(inspected.active, true);
+    assert.equal(inspected.scope, "newsroom:read");
+    assert.equal(inspected.aud, AUDIENCE);
+    assert.equal(inspected.iss, ORIGIN);
+    assert.equal(inspected.client_id, CLIENT);
+    assert.ok(Number(inspected.exp) > Date.now() / 1000);
     assert.deepEqual(await introspect(String(result.body.refresh_token)), { active: false });
     assert.equal((await post("/token", exchangeFields(code))).status, 400);
   });
@@ -271,7 +286,9 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.deepEqual(await introspect(crossGrant.join(".")), { active: false });
     await post("/revoke", { token: changeSecret(String(current.refresh_token)) });
     assert.equal((await introspect(String(current.access_token))).active, true);
-    assert.equal((await post("/revoke", { token: String(current.refresh_token) }, {})).status, 401);
+    assert.equal((await post("/revoke", { token: String(current.refresh_token) }, {
+      "Content-Type": POST_HEADERS["Content-Type"],
+    })).status, 401);
     assert.equal((await post("/revoke", { token: String(current.refresh_token), token_type_hint: "access_token" })).status, 200);
     assert.deepEqual(await introspect(String(current.access_token)), { active: false });
     assert.equal((await post("/token", { grant_type: "refresh_token", refresh_token: String(current.refresh_token) })).status, 400);
@@ -368,7 +385,9 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.equal((await post("/token", fields, { Authorization: AUTH, "Content-Type": "application/json" })).status, 415);
     assert.equal((await post("/token?grant=chosen", fields)).status, 400);
     assert.equal((await post("/token", { ...fields, refresh_token: "x".repeat(5000) })).status, 413);
-    assert.equal((await post("/introspect", { token: "invalid", token_type_hint: "refresh_token" })).status, 400);
+    assert.equal((await post("/introspect", { token: "invalid", token_type_hint: "refresh_token" }, {
+      ...POST_HEADERS, Authorization: RESOURCE_AUTH,
+    })).status, 400);
     assert.equal((await post("/introspect", { token: "invalid", token_type_hint: "access_token" }, {
       ...POST_HEADERS, Authorization: "Basic invalid",
     })).status, 401);

@@ -47,12 +47,16 @@ export async function routeBoundCredential(
   return { grantId: parts[1], credentialHash: await sha256Hex(raw) };
 }
 
-/** Constant-work comparison of two pre-normalized 32-byte digests. */
-function equalDigest(a: Uint8Array, b: Uint8Array): boolean {
+/** Compare normalized digests through native crypto, never a JS equality loop. */
+async function equalDigest(a: Uint8Array<ArrayBuffer>, b: Uint8Array<ArrayBuffer>): Promise<boolean> {
   if (a.length !== 32 || b.length !== 32) return false;
-  let diff = 0;
-  for (let i = 0; i < 32; i++) diff |= a[i] ^ b[i];
-  return diff === 0;
+  if ("timingSafeEqual" in crypto.subtle && typeof crypto.subtle.timingSafeEqual === "function")
+    return crypto.subtle.timingSafeEqual(a, b);
+  // Standard Web Crypto fallback for offline Node unit tests. Native HMAC
+  // verification performs the comparison; the expected digest is not exposed.
+  const key = await crypto.subtle.importKey("raw", b, { name: "HMAC", hash: "SHA-256" }, false, ["sign", "verify"]);
+  const signature = await crypto.subtle.sign("HMAC", key, b);
+  return crypto.subtle.verify("HMAC", key, signature, a);
 }
 
 /**
@@ -82,5 +86,5 @@ export async function verifyConfidentialClient(
   const expected = Uint8Array.from(registeredSecretHash.match(/.{2}/g)!,
     pair => Number.parseInt(pair, 16));
   // Both checks run after digesting a syntactically valid candidate.
-  return equalDigest(candidate, expected) && clientId === registeredClientId;
+  return await equalDigest(candidate, expected) && clientId === registeredClientId;
 }

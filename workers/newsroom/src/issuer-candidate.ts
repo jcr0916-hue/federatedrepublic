@@ -3,6 +3,8 @@
  * One explicitly registered confidential client and allowlisted GitHub editor only.
  */
 export { IssuerGrant } from "./issuer-grant.ts";
+export { IssuerGuard } from "./issuer-guard.ts";
+import type { IssuerGuard, GuardBucket } from "./issuer-guard.ts";
 import type { IssuerGrant, GrantBinding, AuthorizationBinding } from "./issuer-grant.ts";
 import { issuerGitHubIdentity, type IssuerGitHubTransport } from "./issuer-github.ts";
 import {
@@ -14,17 +16,22 @@ interface Env {
   ISSUER_ORIGIN: string;
   ISSUER_CLIENT_ID: string;
   ISSUER_CLIENT_SECRET_SHA256: string;
+  ISSUER_RESOURCE_ID: string;
+  ISSUER_RESOURCE_SECRET_SHA256: string;
   ISSUER_REDIRECT_URI: string;
   ISSUER_AUDIENCE: string;
   ISSUER_EDITOR_ID: string;
   ISSUER_GITHUB_CLIENT_ID: string;
   ISSUER_GITHUB_CLIENT_SECRET: string;
   ISSUER_GRANTS: DurableObjectNamespace<IssuerGrant>;
+  ISSUER_GUARD: DurableObjectNamespace<IssuerGuard>;
 }
 interface Configuration extends GrantBinding {
   issuer: string;
   redirectUri: string;
   secretHash: string;
+  resourceId: string;
+  resourceSecretHash: string;
   githubClientId: string;
   githubClientSecret: string;
 }
@@ -54,6 +61,10 @@ function configuration(env: Env): Configuration {
         audience.search || audience.hash || audience.pathname !== "/mcp" ||
         typeof env.ISSUER_CLIENT_ID !== "string" || !/^[A-Za-z0-9_-]{1,100}$/.test(env.ISSUER_CLIENT_ID) ||
         typeof env.ISSUER_CLIENT_SECRET_SHA256 !== "string" || !/^[a-f0-9]{64}$/.test(env.ISSUER_CLIENT_SECRET_SHA256) ||
+        typeof env.ISSUER_RESOURCE_ID !== "string" || !/^[A-Za-z0-9_-]{1,100}$/.test(env.ISSUER_RESOURCE_ID) ||
+        env.ISSUER_RESOURCE_ID === env.ISSUER_CLIENT_ID ||
+        typeof env.ISSUER_RESOURCE_SECRET_SHA256 !== "string" || !/^[a-f0-9]{64}$/.test(env.ISSUER_RESOURCE_SECRET_SHA256) ||
+        env.ISSUER_RESOURCE_SECRET_SHA256 === env.ISSUER_CLIENT_SECRET_SHA256 || !env.ISSUER_GUARD ||
         typeof env.ISSUER_EDITOR_ID !== "string" || !/^[1-9][0-9]{0,19}$/.test(env.ISSUER_EDITOR_ID) ||
         typeof env.ISSUER_GITHUB_CLIENT_ID !== "string" || !env.ISSUER_GITHUB_CLIENT_ID ||
         env.ISSUER_GITHUB_CLIENT_ID.length > 256 ||
@@ -62,6 +73,7 @@ function configuration(env: Env): Configuration {
     return { issuer: issuer.origin, redirectUri: env.ISSUER_REDIRECT_URI,
       audience: env.ISSUER_AUDIENCE, clientId: env.ISSUER_CLIENT_ID,
       editorId: env.ISSUER_EDITOR_ID, secretHash: env.ISSUER_CLIENT_SECRET_SHA256,
+      resourceId: env.ISSUER_RESOURCE_ID, resourceSecretHash: env.ISSUER_RESOURCE_SECRET_SHA256,
       githubClientId: env.ISSUER_GITHUB_CLIENT_ID, githubClientSecret: env.ISSUER_GITHUB_CLIENT_SECRET };
   } catch { return fail(503, "issuer_not_configured"); }
 }
@@ -88,10 +100,11 @@ function cookie(h: Headers, value: string, clear = false): void {
   h.set("Set-Cookie", COOKIE + "=" + value +
     "; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=" + (clear ? "0" : "300"));
 }
-function redirect(binding: AuthorizationBinding, key: "code" | "error", value: string): Response {
+function redirect(binding: AuthorizationBinding, key: "code" | "error", value: string, issuer: string): Response {
   const url = new URL(binding.redirectUri);
   url.searchParams.set(key, value);
   url.searchParams.set("state", binding.clientState);
+  url.searchParams.set("iss", issuer);
   const h = headers(); cookie(h, "", true); h.set("Location", url.href);
   return new Response(null, { status: 302, headers: h });
 }
@@ -101,9 +114,22 @@ function stub(env: Env, grantId: string) {
 const grantBinding = (config: Configuration): GrantBinding => ({
   clientId: config.clientId, editorId: config.editorId, audience: config.audience,
 });
+async function admit(env: Env, config: Configuration, bucket: GuardBucket): Promise<void> {
+  const result = await env.ISSUER_GUARD.get(env.ISSUER_GUARD.idFromName(config.clientId)).admit(bucket, Date.now());
+  if (!result.allowed) throw new RateLimitError(result.retryAfter);
+}
+class RateLimitError extends Error {
+  constructor(readonly retryAfter: number) { super("rate_limited"); }
+}
 
 async function authorize(request: Request, env: Env, config: Configuration): Promise<Response> {
   const params = new URL(request.url).searchParams;
+  // Historical ChatGPT read shorthand is narrowly normalized for this one
+  // pre-registered client; supplied audiences and all broader scopes still fail.
+  if (params.getAll("scope").length === 1 && params.get("scope") === "read") {
+    params.set("scope", SCOPE);
+    if (!params.has("resource")) params.set("resource", config.audience);
+  }
   if (!parameters(params, ["response_type", "client_id", "redirect_uri", "scope", "resource",
     "state", "code_challenge", "code_challenge_method"]) || params.get("response_type") !== "code" ||
       params.get("client_id") !== config.clientId || params.get("redirect_uri") !== config.redirectUri ||
@@ -111,6 +137,7 @@ async function authorize(request: Request, env: Env, config: Configuration): Pro
       !/^[\x20-\x7e]{1,1024}$/.test(params.get("state")!) ||
       !/^[A-Za-z0-9_-]{43}$/.test(params.get("code_challenge")!) ||
       params.get("code_challenge_method") !== "S256") return fail(400, "invalid_authorization_request");
+  await admit(env, config, "authorize");
   const grantId = mintGrantId();
   const session = mintBoundCredential(grantId, "browser");
   const upstream = mintBoundCredential(grantId, "state");
@@ -143,7 +170,7 @@ async function callback(
   const claimed = await grant.claimUpstream({ browserHash: session.credentialHash,
     upstreamHash: state.credentialHash, expected: grantBinding(config), now: now() });
   if (!claimed) return fail(403, "invalid_callback");
-  if (cancelled) return redirect(claimed.binding, "error", "access_denied");
+  if (cancelled) return redirect(claimed.binding, "error", "access_denied", config.issuer);
   const editorId = await issuerGitHubIdentity(params.get("code")!, claimed.verifier, config, transport);
   const successorSession = mintBoundCredential(state.grantId, "browser");
   const csrf = mintGrantId();
@@ -180,14 +207,27 @@ async function consent(request: Request, env: Env, config: Configuration): Promi
     approve, codeHash: await sha256Hex(code), expected: grantBinding(config), now: now(),
   });
   if (!binding) return fail(403, "invalid_consent");
-  return redirect(binding, approve ? "code" : "error", approve ? code : "access_denied");
+  return redirect(binding, approve ? "code" : "error", approve ? code : "access_denied", config.issuer);
 }
 
 async function clientEndpoint(request: Request, env: Env, config: Configuration): Promise<Response> {
-  if (!(await verifyConfidentialClient(request.headers.get("Authorization"), config.clientId, config.secretHash)))
-    return fail(401, "invalid_client");
   const params = await form(request);
   const path = new URL(request.url).pathname;
+  await admit(env, config, path.slice(1) as "token" | "introspect" | "revoke");
+  const names = [...params.keys()];
+  if (names.length !== new Set(names).size) return fail(400, "invalid_request");
+  let authorization = request.headers.get("Authorization");
+  const bodyAuth = params.has("client_id") || params.has("client_secret");
+  if (bodyAuth) {
+    if (authorization || path === "/introspect") return fail(400, "invalid_request");
+    const client = params.get("client_id"), secret = params.get("client_secret");
+    if (!client || !secret || !/^[\x21-\x7e]{32,256}$/.test(secret)) return fail(401, "invalid_client");
+    authorization = "Basic " + btoa(client + ":" + secret);
+    params.delete("client_id"); params.delete("client_secret");
+  }
+  const resourceSide = path === "/introspect";
+  if (!(await verifyConfidentialClient(authorization, resourceSide ? config.resourceId : config.clientId,
+    resourceSide ? config.resourceSecretHash : config.secretHash))) return fail(401, "invalid_client");
   if (path === "/token") {
     const isCode = params.get("grant_type") === "authorization_code";
     if (!isCode && params.get("grant_type") !== "refresh_token") return fail(400, "unsupported_grant_type");
@@ -216,9 +256,10 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
     if (!parameters(params, ["token", "token_type_hint"]) || params.get("token_type_hint") !== "access_token")
       return fail(400, "invalid_request");
     const routed = await routeBoundCredential(params.get("token")!, "access");
-    const active = !!routed && await stub(env, routed.grantId).authorize({ expected: grantBinding(config),
+    const active = routed && await stub(env, routed.grantId).inspect({ expected: grantBinding(config),
       accessHash: routed.credentialHash, now: now() });
-    return json(active ? { active: true, scope: SCOPE, aud: config.audience } : { active: false });
+    return json(active ? { active: true, scope: SCOPE, aud: config.audience,
+      iss: config.issuer, client_id: config.clientId, exp: active.expiresAt } : { active: false });
   }
   if (!parameters(params, ["token"], ["token_type_hint"])) return fail(400, "invalid_request");
   // A hint is advisory; search both supported credential kinds.
@@ -252,12 +293,18 @@ export function createIssuerCandidate(dependencies: { githubTransport?: IssuerGi
           token_endpoint: config.issuer + "/token", introspection_endpoint: config.issuer + "/introspect",
           revocation_endpoint: config.issuer + "/revoke", response_types_supported: ["code"],
           grant_types_supported: ["authorization_code", "refresh_token"], scopes_supported: [SCOPE],
-          token_endpoint_auth_methods_supported: ["client_secret_basic"],
+          token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post"],
           introspection_endpoint_auth_methods_supported: ["client_secret_basic"],
-          revocation_endpoint_auth_methods_supported: ["client_secret_basic"], code_challenge_methods_supported: ["S256"],
+          revocation_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post"],
+          code_challenge_methods_supported: ["S256"], authorization_response_iss_parameter_supported: true,
         });
         return fail(404, "not_found");
       } catch (error) {
+        if (error instanceof RateLimitError) {
+          const response = json({ error: "rate_limited" }, 429);
+          response.headers.set("Retry-After", String(error.retryAfter));
+          return response;
+        }
         return error instanceof PolicyError ? json({ error: error.publicCode }, error.status)
           : json({ error: "issuer_unavailable" }, 503);
       }
