@@ -68,6 +68,8 @@ describe("strict refresh prototype release isolation", () => {
       assert.ok(!source.includes("strict-refresh"), "prototype imported into release code");
       assert.ok(!source.includes("StrictRefreshGrant"), "prototype class in release code");
       assert.ok(!source.includes("REFRESH_GRANTS"), "experimental Durable Object bound in release code");
+      assert.ok(!source.includes("SyntheticOAuthGrant"), "synthetic test grant imported into release code");
+      assert.ok(!source.includes("SYNTHETIC_GRANTS"), "synthetic test namespace bound in release code");
     }
     const config = await readFile("cloudflare.config.ts", "utf8");
     assert.ok(!config.includes("REFRESH_GRANTS"));
