@@ -116,9 +116,9 @@ describe("synthetic GitHub callback failure paths (local-only)", () => {
         const first = await callback(scenario, pending.cookie, params(pending.state, scenario));
         assert.equal(first.status, expectedStatus, scenario + ": " + await first.clone().text());
         assert.equal(first.headers.get("location"), null, scenario);
-        const before = tokenCalls;
+        const tokenCallsBeforeReplay: number = tokenCalls;
         assert.equal((await callback(scenario, pending.cookie, params(pending.state, scenario))).status, 403);
-        assert.equal(tokenCalls, before, "replay after upstream failure must not contact GitHub");
+        assert.equal(tokenCalls, tokenCallsBeforeReplay, "replay after upstream failure must not contact GitHub");
       }
       assert.ok(userCalls >= 3);
     } finally {
