@@ -3,7 +3,7 @@
 **Original branch:** `fix/newsroom-github-iss-20261107`  
 **PR:** [#306](https://github.com/jcr0916-hue/federatedrepublic/pull/306)  
 **Frozen parent:** PR #305, `4fda7e342b70f3ea59b151d89a7e8976572d7f39`  
-**Status:** experimental; deployed only to the isolated issuer candidate after supported CI and review; not merged or production deployed
+**Status:** experimental; candidate-only deployment and local-client acceptance passed; evaluation closed; not merged or production deployed
 
 ## Purpose and scope
 
@@ -30,11 +30,24 @@ Three live, nonsecret callback checks passed: pinned issuer with no browser sess
 
 The first real isolated approval subsequently completed: the local client verified the downstream issuer/state and exchanged its code, and authenticated discovery returned exactly `newsroom_list` and `newsroom_read`. This establishes that the deployed immutable editor-ID gate and private GitHub app secret were accepted in this flow; the raw GitHub identity/token response was not exposed. At 21:14 UTC, discovery confirmed the grant active immediately before revocation, then the first following resource request returned 401. Both candidate URLs were closed while further probes were prepared.
 
-The private synthetic bucket was empty and had no public domain. One clearly synthetic, noncanonical fixture was seeded through the control plane and read back exactly: `submissions/korda/2026-11-07/11111111-1111-4111-8111-111111111111.json` (460 bytes, ETag `afe3c7973c2bee630ba83c06887fd3ad`). No production bucket was accessed. This control-plane readback is not yet authenticated resource-tool read evidence.
+The private synthetic bucket was empty and had no public domain. One clearly synthetic, noncanonical fixture was seeded through the control plane and read back exactly: `submissions/korda/2026-11-07/11111111-1111-4111-8111-111111111111.json` (460 bytes, ETag `afe3c7973c2bee630ba83c06887fd3ad`). No production bucket was accessed. This control-plane readback established setup; authenticated resource-tool read evidence is recorded below.
 
 The separate local test client now has read/write-denial, refresh-race/replay and revocation/refresh-denial controls. **15 synthetic helper tests pass locally.** This helper is task-local, outside the candidate Worker source/bundles. A scoped read-only agent review identified cleanup gaps after interrupted or nonconforming refresh responses; the helper now retains known successors for best-effort revocation, marks uncertain outcomes before issuance probes and forbids a fresh sign-in or full revocation claim while the outcome is uncertain. Regression tests cover the review findings; the final correction was tested by the implementing agent, without claiming an independent re-review.
 
-Only candidate URL switches changed in this phase; Worker code, encrypted secrets, namespace bindings and the existing connection were unchanged. Both candidate URLs reopened at 21:25 UTC with query redaction enabled and previews/traces/exports disabled. The first observed grant is revoked; a fresh human sign-in is required after the local helper restart. Actual authenticated synthetic reads, forbidden-operation probes, hosted refresh/replay, next-grant revocation, multiple-region and recovery acceptance remain pending. No real callback code, state or token is retained in this note.
+Only candidate URL switches changed in that preparation phase; Worker code, encrypted secrets, namespace bindings and the existing connection were unchanged. Both candidate URLs reopened at 21:25 UTC with query redaction enabled and previews/traces/exports disabled.
+
+### Hosted local-client acceptance — passed, evaluation closed
+
+The next human approval and code exchange succeeded. On November 7 at 22:19 UTC, the expanded client completed four live stages against the hosted candidates:
+
+1. Authenticated discovery exposed exactly the two read tools. List/read returned the expected synthetic record, including its exact body. Submit, review, publish and unknown tools were denied with 403; forged arguments returned 400 and the unsupported method returned 403.
+2. Two concurrent refresh requests from this one local process produced exactly one 200 successor and one 400 `invalid_grant`. The previous access credential was denied with 401, and a further replay of the previous refresh credential returned 400 `invalid_grant`.
+3. Discovery and exact synthetic list/read passed again with the successor. The same forbidden-operation probes were denied.
+4. Revocation succeeded; the first subsequent resource request returned 401, and the revoked refresh credential returned 400 `invalid_grant`. No ambiguous outcome occurred and no token value was exposed.
+
+Both candidate URLs were closed at **22:19:43 UTC** and independently read back disabled, with previews disabled and query redaction preserved. At 22:20 UTC, the synthetic bucket still contained exactly the same one object: unchanged key, ETag, size, last-modified timestamp and content. Public bucket access remains off, no custom domains are attached, and exact Worker public/SQLite/service/R2 bindings and secret names were unchanged. The task-owned local helper was stopped and its loopback listener closure verified.
+
+This completes the bounded **local-client isolated acceptance**, not a production release. Multiple-region refresh races and hosted outage/recovery/lost-response behavior remain unverified, along with broader abuse controls, credential-rotation operations and ownership. Actual ChatGPT interoperability was not tested because the user chose the separate local client; the working connection is untouched. The two observed test grants were revoked. Candidate resources, encrypted secrets, private local setup and one synthetic fixture are retained for controlled further evaluation, with public candidate URLs closed. No Worker source deployment or migration occurred in this acceptance phase; no real callback code, state or token is retained in this note.
 
 ## Preservation and disposition
 
