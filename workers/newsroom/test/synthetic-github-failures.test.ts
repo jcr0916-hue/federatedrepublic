@@ -33,12 +33,13 @@ describe("synthetic GitHub callback failure paths (local-only)", () => {
               return Response.json({ error: "bad_pkce" }, { status: 400 });
             const code = form.get("code");
             if (code === "transport-fail") throw new Error("synthetic upstream failure");
+            if (code === "token-timeout") throw new DOMException("synthetic deadline exceeded", "TimeoutError");
             if (code === "bad-status") return Response.json({ error: "bad_gateway" }, { status: 502 });
             if (code === "invalid-json") return new Response("{", { status: 200 });
             if (code === "missing-token") return Response.json({ token_type: "bearer" });
             if (code === "permission-scope") return Response.json({ access_token: "mock-valid", scope: "repo" });
             if (code === "incorrect-type") return Response.json({ access_token: "mock-valid", token_type: "mac" });
-            if (code === "wrong-user" || code === "invalid-user-json" || code === "user-status")
+            if (code === "wrong-user" || code === "invalid-user-json" || code === "user-status" || code === "user-timeout")
               return Response.json({ access_token: "mock-" + code, token_type: "bearer", scope: "" });
             return Response.json({ access_token: "mock-valid", token_type: "bearer", scope: "" });
           }
@@ -46,6 +47,7 @@ describe("synthetic GitHub callback failure paths (local-only)", () => {
             userCalls++;
             const auth = req.headers.get("authorization");
             if (auth === "Bearer mock-invalid-user-json") return new Response("{", { status: 200 });
+            if (auth === "Bearer mock-user-timeout") throw new DOMException("synthetic user timeout", "TimeoutError");
             if (auth === "Bearer mock-user-status") return Response.json({ error: "offline" }, { status: 503 });
             if (auth === "Bearer mock-wrong-user") return Response.json({ id: "synthetic-other-user" });
             if (auth === "Bearer mock-valid") return Response.json({ id: "synthetic-editor-12345" });
@@ -106,10 +108,11 @@ describe("synthetic GitHub callback failure paths (local-only)", () => {
       assert.equal(tokenCalls, 1);
 
       const failures: Array<[string, number]> = [
-        ["transport-fail", 502], ["bad-status", 502],
+        ["transport-fail", 502], ["token-timeout", 502], ["bad-status", 502],
         ["invalid-json", 502], ["missing-token", 403],
         ["permission-scope", 403], ["incorrect-type", 403],
         ["wrong-user", 403], ["invalid-user-json", 502], ["user-status", 502],
+        ["user-timeout", 502],
       ];
       for (const [scenario, expectedStatus] of failures) {
         const pending = await prepare(scenario);
@@ -120,6 +123,21 @@ describe("synthetic GitHub callback failure paths (local-only)", () => {
         assert.equal((await callback(scenario, pending.cookie, params(pending.state, scenario))).status, 403);
         assert.equal(tokenCalls, tokenCallsBeforeReplay, "replay after upstream failure must not contact GitHub");
       }
+      // A lost upstream response is not retried with the same claimed state.
+      // The synthetic fixture requires a newly authorized, distinct grant;
+      // it cannot refresh/reissue the exhausted grant.
+      const failed = await prepare("recovery-exhausted");
+      assert.equal((await callback("recovery-exhausted", failed.cookie,
+        params(failed.state, "token-timeout"))).status, 502);
+      const beforeRetry = tokenCalls;
+      assert.equal((await callback("recovery-exhausted", failed.cookie,
+        params(failed.state, "good"))).status, 403);
+      assert.equal(tokenCalls, beforeRetry);
+      const recovered = await prepare("recovery-fresh");
+      const resumed = await callback("recovery-fresh", recovered.cookie,
+        params(recovered.state, "good"));
+      assert.equal(resumed.status, 302);
+      assert.equal(new URL(resumed.headers.get("location")!).hostname, "chatgpt.invalid");
       assert.ok(userCalls >= 3);
     } finally {
       await mf.dispose();
