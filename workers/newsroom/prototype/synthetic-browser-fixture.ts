@@ -105,7 +105,7 @@ export default {
         "default-src 'none'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'");
       h.set("Set-Cookie", COOKIE + "=" + browser +
         "; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=300");
-      const form = new URLSearchParams({ grant });
+      const form = new URLSearchParams({ grant, state });
       return new Response('<!doctype html><html><form method="post" action="/consent?' +
         form.toString() + '"><button name="decision" value="approve">Approve</button>' +
         '<button name="decision" value="deny">Deny</button></form></html>',
