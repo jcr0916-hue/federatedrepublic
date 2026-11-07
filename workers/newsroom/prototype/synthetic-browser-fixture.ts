@@ -188,7 +188,7 @@ export default {
       if (id !== EDITOR) return fail(403, "editor_not_allowed");
       const authCode = code();
       const ok = await stub.finishConsent({
-        browserHash: await digest(browser), stateHash: await digest(state),
+        browserHash: await digest(browser), stateHash: await digest(claimed.clientState),
         verifiedEditorId: id, expectedEditorId: EDITOR, decision: "approve",
         codeHash: await digest(authCode), now,
       });
