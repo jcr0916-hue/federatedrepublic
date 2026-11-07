@@ -68,6 +68,8 @@ A future constitutional or national confrontation **may** require Thoss to use t
 
 ## 4. Rehn — Corindal long-range arc
 
+**Subsequent Presidential decision — 2026-11-04:** [Corindal's political foundation](CORINDAL-POLITICAL-FOUNDATION.md) is approved foundational canon for editorial continuity, separately from the future possibilities in this planning file. It records the eight-character roster, Year 12/14/16 cycle alignment, three nonpartisan factions, estimated current 19/18/11/3 alignment and Harthmoor/Ashbridge. The estimate is not certified election results and creates no national-party seat allocation or coalition. All three principal pairings could meet the 26-member threshold; the three unaligned cannot independently give one faction a majority. The commission retains independent map-drawing authority and the mid-cycle statutory mechanism remains unresolved. **Rehn is excluded from the first election feature.** No future Rehn role, audit outcome, restoration, election result or new official decision follows. The unchanged, unpublished *Before the Ground Thaws* and its proposed characters/operational history are not made canon by reference; only Ashbridge's location is separately approved.
+
 The user has expressly requested that the **Rehn / Corindal** storyline develop **independently and unobtrusively** within routine Torenthia coverage. The user wants to learn about developments **when the public in the story learns about them**, without advance plot outlines, foreshadowing announcements, or spoilers in progress summaries.
 
 **Editorial instructions:**

@@ -200,6 +200,19 @@ Sollis’s recurring students: **Deva**, **Orren**, and **Tor**.
   he applied was left unanswered. A future SC nomination is an internal author intention, not a
   published appointment or proof of Pool membership; do not collapse these threads.
 
+### Corindal — President-approved political foundation (2026-11-04)
+
+**Approved foundational canon, recorded internally; not a new World/NRS publication.** The [approval record](CORINDAL-POLITICAL-FOUNDATION.md) preserves the President's decision in *Constitution 16*, its constitutional corrections and its limits. Published history and the Year 14, Month 2 frontier remain unchanged.
+
+- **Governor Cindric Vorn** and **Lieutenant Governor Drenna Veth** were elected jointly in **Year 12**, for a four-year term **expiring in Year 16**. Vorn previously served two State Senate terms; his home is **Harthmoor**.
+- **All 51 State Senate seats** are on the approved **Year 14 spring cycle, concurrent with the federal Assembly election**; the Governor/LG are mid-term. No exact polling date, election order, Year 14 result or future candidacy is established.
+- Sitting senators **Selden Skaal** (urban/mill region), **Maelis Thane** (timber region near **Ashbridge**) and **Eldris Ferrel** (mixed rural region) lead the nonpartisan **Federal Restoration**, **District Representation** and **Institutional Reform** factions respectively. Harthmoor and Ashbridge are independently approved Corindal locations; exact district boundaries/numbers and county names remain unassigned.
+- **Approximate current alignment:** 19 Restoration / 18 District Representation / 11 Institutional Reform / 3 unaligned. This is an estimate, **not certified election results**, a poll, a roll call or a forecast. At the 26-member bill threshold, the three principal pairings total **37, 30 and 29**; adding all three unaligned members to one faction yields only **22, 21 or 14**. No coalition is established, and Ferrel is not indispensable when the other two agree. Veth's genuine tie-break cannot supply the 26th member vote or turn a 25–26 defeat into a tie.
+- **Bren Marle** is Development Commission Chair; **Tamsin Greve** chairs a southern-border county board; **Dell Arvin** is a mill-town labor organizer, not an officeholder. These approved identities create no new appointment, confirmation, award or county act.
+- The **independent redistricting commission draws the districts** under State §3.2(c); the Senate legislates the lawful framework, and the Governor has ordinary legislative proposal/signing/veto powers. Neither can select or impose a map. **The mid-cycle corrective-redraw statutory mechanism remains unknown.** No remedial bill, new law, audit result or restoration event is supplied.
+- **Rehn remains outside the first election feature**; NRS 134 confirms he is still Legat Consul in Month 2. No new homecoming date, endorsement, candidacy or future office is approved.
+- **Before the Ground Thaws remains an unchanged, unpublished candidate.** Ashbridge's separate approval does not canonize **Bram Tallow, Sera Hallick, Aldis Reeve**, the Ash, the freight operations or any dialogue/history in that draft. Use the [foundation's publication boundaries](CORINDAL-POLITICAL-FOUNDATION.md#publication-boundaries); do not duplicate the freight story or import candidate details by reference.
+
 ### Supreme Court
 
 Nine justices. Two major published lineups currently matter:
