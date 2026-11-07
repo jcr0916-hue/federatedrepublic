@@ -119,3 +119,17 @@ Read-only inspection of the isolated Cloudflare OAuth KV namespace (without expo
 - After inspection, the connected ChatGPT plugin successfully read the Corindal synthetic submission and its saved `UNDER_REVIEW` status, confirming that the live editor connection continues to work.
 - **Still unproven live:** explicit reuse denial of a previous refresh token, forced revocation/reconnection, hosted OAuth review-scope write behavior, and cross-location KV single-use behavior. These remain separate release gates. No production or `main` changes.
 
+
+## Isolated editor revocation/reconnection exercise — 2026-11-07
+
+**Observed procedure and boundaries:**
+
+- Before the test, the isolated OAuth KV had **one** approved `newsroom:read` editor grant and associated access tokens. Its expected client ID, approved GitHub user ID, fixed MCP audience and callback were verified without disclosing credential values.
+- Removed that single test grant and its associated token records from the isolated KV; immediate post-operation KV enumeration reported **zero grants and zero access-token records**. Client registration (including its stored client secret), isolated R2 submissions and Worker deployment were deliberately retained. This was **test-only**, not production.
+- A subsequent connected-plugin `newsroom_list` call **succeeded** instead of returning a stable access-denied result. A follow-up KV inspection showed a **new grant and token**, consistent with a client reauthorization race/automatic recovery. User explicitly confirmed approving a new authorization prompt. **Do not mark sustained revocation denial as verified**; the test could not separate propagation/caching from rapid reauthorization.
+- The replacement grant was independently verified as `newsroom:read`, for the same fixed ChatGPT client, approved GitHub editor user, and exact MCP audience, with a refresh-token reference. The connected editor successfully listed the synthetic test submissions, including Corindal's `UNDER_REVIEW` record. **Fresh reconnection passed.**
+- Afterward, the isolated KV contained one grant and one token record; test Worker version `cdab7934-206d-459b-b89c-95537a98f68a`, 13 bindings and isolated R2 bucket remained intact. Production Worker deployment remained `08a99769-3618-488e-adbd-30a8be38a788`; no live Worker or canon changes.
+
+**Release conclusion:** Reauthorization/reconnection **passed**. Immediate and sustained denial of revoked credentials, refresh-token replay resistance under hosted concurrency, and cross-location KV consistency **remain unverified live**. Local unit/integration tests cover several of these cases but cannot substitute for hosted validation. Do not revoke the currently connected test grant again without a specific isolation protocol that distinguishes denial from automatic reauthorization.
+
+**Next focus:** Hosted OAuth review scope and permission restrictions, then a controlled revocation/replay test with a separately provisioned test client where credentials can be explicitly retained and exercised without interrupting the user's connected ChatGPT session.
