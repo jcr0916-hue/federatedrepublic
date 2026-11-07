@@ -2,8 +2,8 @@
 
 **Original branch:** `feature/newsroom-chatgpt-oauth`
 **Base:** `98430167c1c5130b41d329d0b99887c29f35ea4f`
-**PR:** draft pending creation
-**Head commit at handoff:** pending commit
+**PR:** [#304 — draft](https://github.com/jcr0916-hue/federatedrepublic/pull/304)
+**Implementation checkpoint:** `0bda38832cb3e77a4504acf0c1303c4d74b4a5b7`; documentation updates follow. Current head is recorded by the PR.
 **Status:** experimental adapter; source integration unresolved; nothing deployed or shipped
 
 ## Purpose
