@@ -75,3 +75,7 @@ Operator invoked `POST /revoke` on the isolated issuer with a dummy `token=inval
 ## Revocation authentication HTTP status confirmation — 2026-11-08
 
 A follow-up operator request repeated `POST /revoke` without client authentication, using only the fabricated token string `invalid-test-token` and suppressing the response body. The observed status was **HTTP 401**. Together with the earlier observed `{"error":"invalid_client"}` response body, this confirms rejection of the tested unauthenticated revocation request. It does **not** test authenticated revocation of a valid token, grant invalidation, or refresh-token invalidation; those remain open and the working ChatGPT grant was preserved.
+
+## Introspection endpoint client-authentication denial — 2026-11-08
+
+Operator invoked unauthenticated `POST /introspect` on the isolated issuer with fabricated `token=invalid-test-token` and `token_type_hint=access_token`. Observed live HTTP/2 **401**, `{"error":"invalid_client"}`, and `WWW-Authenticate: Basic realm="newsroom-issuer"`; `Cache-Control: no-store` and `Pragma: no-cache` present. This passes the specific missing-client-credentials denial test. It does not prove successful valid-client introspection, expired-token handling, or revoked-token inactivity. The working ChatGPT OAuth grant remained untouched.
