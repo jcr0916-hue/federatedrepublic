@@ -2,6 +2,8 @@
 
 **Decision:** The first production OAuth release is **read-only**. This document is a release *design*, not deployment authorization or a runnable Cloudflare config. **Status: NOT READY TO DEPLOY.**
 
+**Source review follow-up:** [The November 8 security review](SECURITY-REVIEW-20261108.md) records reproduced defects, branch-only mitigations and unresolved release blockers. This agent-assisted review is not an independent external audit and does not satisfy G0's independent-review gate. None of its runtime changes have been deployed to Verification 04 or production.
+
 ## Verified baseline (2026-11-08)
 
 - The original production Worker `federated-republic-newsroom` has five legacy bearer secrets (`KEY_CORINDAL`, `KEY_KORDA`, `KEY_VAREK`, `KEY_FEDERAL`, `KEY_EDITOR`) and an R2 `NEWSROOM` binding; no OAuth candidate bindings were added to that Worker. Production legacy clients continue to use their existing paths.
@@ -54,9 +56,11 @@ Cross-binding invariants to verify without disclosing secrets:
 
 ## Rollback and recovery
 
-- **Before live R2 attachment:** disable or roll back the **new production OAuth resource** Workers.dev route only. Leave legacy production Worker, legacy bearer secrets and R2 untouched. Preserve non-secret logs. Test credentials and grants may remain until their documented expiry or be revoked by approved incident action.
+- **Before live R2 attachment:** close **all ingress to the new production OAuth resource**: inventory its Workers.dev URL, custom domains/routes, version/preview URLs and service-binding callers. Turning off Workers.dev alone is insufficient when another path remains. Verify each inventoried path denies access; do not restore ingress until the incident gate is cleared. Leave legacy production Worker, legacy bearer secrets and R2 untouched. Preserve non-secret logs. Test credentials and grants may remain until their documented expiry or be revoked by approved incident action.
 - **After live R2 attachment:** disable the **new production resource** ingress and roll back its last known-good *code* version or detach R2; do not roll back/overwrite the legacy Worker. Be aware that reverting Worker code **does not revert Durable Object SQLite grant state** or R2 data. For suspected credential compromise, independently revoke the affected production OAuth grants and rotate matching issuer/resource/client credentials in a controlled sequence (reconnect expected).
 - A lost successful refresh-token response is **not** automatically recoverable with a consumed token; require a fresh ChatGPT authorization. Old grants may remain valid until revoked/expired; the new issuer does not automatically revoke every previous grant on reconnect. Choose explicit incident and supersession policies before production.
+- The security-review branch retains hash-only spent-refresh and redeemed-code proof. A proven refresh replay or correctly bound code replay revokes the successor family; even the successful response from a duplicate race then yields unusable tokens. A spent refresh can also revoke its family after a concurrent rotation. Accept the resulting reconnect requirement before rollout. Records created/rotated before this mitigation lack earlier proof; use new production namespaces, not a retrofit claim about the existing reference environment.
+- A code rollback leaves connected storage state in place. Never restore a pre-revocation SQLite/PITR checkpoint as an authentication rollback: it can resurrect credentials. The new hash-only proof uses additive keys and the existing `revoked` flag; earlier code ignores those proof keys and loses replay detection for active grants. Keep ingress closed during a downgrade and use a reviewed forward fix or fresh isolated namespaces/credentials. Namespace replacement or client-secret rotation alone is not evidence that every old access token was durably revoked. An inventory/supersession or equivalent approved global invalidation mechanism is still a release blocker.
 - No production data migration is proposed. Rollback does not roll back unpublished status changes in R2—hence this release must never gain write capabilities.
 - Do **not** turn off `Torenthia OAuth Verification 04` or delete the isolated reference Workers/DO/R2 in ordinary production rollback. They are a separate diagnostic environment.
 

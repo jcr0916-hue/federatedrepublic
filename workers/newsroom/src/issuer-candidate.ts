@@ -223,7 +223,6 @@ async function consent(request: Request, env: Env, config: Configuration): Promi
 async function clientEndpoint(request: Request, env: Env, config: Configuration): Promise<Response> {
   const params = await form(request);
   const path = new URL(request.url).pathname;
-  await admit(env, config, path.slice(1) as "token" | "introspect" | "revoke");
   const names = [...params.keys()];
   if (names.length !== new Set(names).size) return fail(400, "invalid_request");
   let authorization = request.headers.get("Authorization");
@@ -238,6 +237,10 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
   const resourceSide = path === "/introspect";
   if (!(await verifyConfidentialClient(authorization, resourceSide ? config.resourceId : config.clientId,
     resourceSide ? config.resourceSecretHash : config.secretHash))) return fail(401, "invalid_client");
+  // A failed client-authentication attempt cannot spend the legitimate client's
+  // token, inspection or emergency revocation quota. Edge/source abuse controls
+  // are still required, including at the resource's public MCP ingress.
+  await admit(env, config, path.slice(1) as "token" | "introspect" | "revoke");
   if (path === "/token") {
     const isCode = params.get("grant_type") === "authorization_code";
     if (!isCode && params.get("grant_type") !== "refresh_token") return fail(400, "unsupported_grant_type");
