@@ -23,3 +23,7 @@ Keep the original `resource-candidate.ts` entrypoint built separately and unchan
 
 ## Branch disposition
 Retain as active draft dependency. Preserve all open PR bases and handoffs, including #304–#312; no merge, deployment, canon edits, credential rotation or branch deletion. Later archival/cleanup follows AGENTS.md and checks live deployment/automation references and original history.
+
+## Isolated R2 provisioning update
+
+On 2026-11-08 a **new test-only** R2 bucket `newsroom-s3-readonly-acceptance` was created, containing exactly two synthetic objects (Korda submission and editorial-status overlay, UUID `22222222-2222-4222-8222-222222222222`). Cloudflare object list confirmed both. No original test bucket or production data was accessed or altered. No S3 API token or read-only secret was generated, no Worker deployed, and no real signed S3 request was made. A bucket-scoped Object Read only token and hosted S3 integration test are the next external dependencies. Older "no real R2" statements in this note describe source-only work before this addendum, not the latest provisioning checkpoint.
