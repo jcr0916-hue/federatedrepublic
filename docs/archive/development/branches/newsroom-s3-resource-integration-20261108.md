@@ -99,3 +99,7 @@ Operator ran a complete GET `/authorize` request against the S3 acceptance issue
 ## Incorrect registered-client secret rejected — 2026-11-08
 
 Operator tested live `POST /token` for `grant_type=refresh_token` and fabricated `refresh_token=invalid-test-token` using HTTP Basic with the **registered S3 acceptance client ID** and a deliberately incorrect client secret. The isolated issuer returned HTTP/2 **401**, JSON `{"error":"invalid_client"}`, `WWW-Authenticate: Basic realm="newsroom-issuer"`, and no-store/no-cache headers. This verifies incorrect-secret rejection in this test, but does not establish valid-client refresh behavior, token expiry/revocation, or OAuth grant isolation. No genuine credential or token was sent, and the working ChatGPT authorization was preserved.
+
+## Valid OAuth client, fabricated refresh token — 2026-11-08
+
+Operator invoked live `POST /token` at the isolated issuer with the registered S3 acceptance client ID, the authentic client secret entered privately in local Terminal, `grant_type=refresh_token`, and a fabricated `refresh_token=invalid-test-token`. Observed HTTP/2 **400** and JSON `{"error":"invalid_grant"}`. The test shows the correctly authenticated client cannot exchange this invalid refresh credential for a new token; it does not prove positive refresh, token expiry, replay, or revocation behavior. Operator's command included `unset S3_TEST_SECRET` after curl; secret content was not posted to chat or GitHub. Existing ChatGPT OAuth grant remained intact.
