@@ -23,3 +23,20 @@ A separately selected and explicitly approved production release must replace th
 An independently named R2 bucket **`newsroom-s3-readonly-acceptance`** was created through Cloudflare after the source and CI tests. It contains only two marked synthetic objects: `submissions/korda/2026-11-08/22222222-2222-4222-8222-222222222222.json` and `status/22222222-2222-4222-8222-222222222222.json`. Object listing confirmed both keys; no production bucket, original OAuth test bucket, or canon was modified. This changes the earlier source-only setup statement: a **synthetic bucket is now provisioned**, but no S3 API token, access key, client credential, Worker deployment or real S3 read has been created/performed. The real permission-enforcement/interop gate remains open.
 
 **Next human-gated step:** Create a Cloudflare R2 **Object Read only** S3 API token restricted to **only** the new acceptance bucket; never paste either credential into a chat, GitHub issue/PR, source file or CI logs. The Cloudflare connector available here has no credential-issuance operation exposed in its R2 endpoint inventory. After the credential is created, prepare a **new isolated S3 candidate Worker** with it via Cloudflare secret bindings, not by changing Verification 04's resource. Perform Get/List and denied Put/Delete using only disposable synthetic objects. The read-only token needs separate authorized handling because the initial key is not redisplayed by Cloudflare.
+
+## Real R2 credential acceptance results — 2026-11-08 (supersedes earlier provisioning checkpoint)
+
+**VERIFIED through operator-run AWS CLI 2.39.6 against the live Cloudflare R2 S3 API, synthetic bucket only.** A dedicated R2 **Object Read only** account token restricted to `newsroom-s3-readonly-acceptance` was created and used via a local `torenthia-r2-acceptance` profile. The earlier statement that no token or real S3 request existed is historical and **no longer current**.
+
+| Operation | Tested resource | Observed result |
+| --- | --- | --- |
+| `ListObjectsV2` | Acceptance bucket | Success; two known synthetic objects listed |
+| `HeadObject` | Synthetic status JSON | Success; 113 bytes, JSON |
+| `GetObject` | Synthetic status JSON | Success; downloaded locally |
+| `PutObject` | New `security-tests/readonly-denial-test.json` key | `AccessDenied` |
+| `DeleteObject` | Existing synthetic status JSON | `AccessDenied` |
+| `ListObjectsV2` | Separate `newsroom-oauth-isolated-test` bucket | `AccessDenied` |
+
+This **passes the credential permission and basic AWS CLI/R2 S3 interoperability gate** for the tested bucket. It does **not** demonstrate that the candidate Worker's own SigV4 implementation, MCP routing, isolated deployment or secret bindings work with real R2. No secrets or account IDs are committed. The profile and downloaded object stayed local; no production changes, Worker deploys, merges or canon edits were made.
+
+**Outstanding:** Hosted isolated S3 candidate Worker with secrets and no `NEWSROOM` native R2 binding; end-to-end MCP `newsroom_list`/`newsroom_read`; issuer/validator/ingress controls; XML parsing and pagination, errors, egress/retry behavior, token lifecycle; independent security/operations review and F5–F8. Keep PR #313 draft and downstream production release blocked. Existing Verification 04 and native resource candidate are unchanged.
