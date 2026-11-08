@@ -65,12 +65,14 @@ describe("review-only production release boundary (never deploys)", () => {
   });
 
   it("requires separate issuer introspection and excludes legacy desk secrets from resource", () => {
-    assert.equal(new Set(contract.issuer.requiredBindings).size, 12);
-    assert.equal(new Set(contract.resource.requiredBindings).size, 7);
+    assert.equal(new Set(contract.issuer.requiredBindings).size, 13);
+    assert.equal(new Set(contract.resource.requiredBindings).size, 8);
     assert.ok(contract.issuer.requiredBindings.includes("ISSUER_GRANTS"));
     assert.ok(contract.issuer.requiredBindings.includes("ISSUER_GUARD"));
     assert.ok(contract.resource.requiredBindings.includes("ISSUER"));
     assert.ok(contract.resource.requiredBindings.includes("NEWSROOM"));
+    assert.ok(contract.resource.requiredBindings.includes("RESOURCE_INGRESS_LIMIT"));
+    assert.ok(contract.issuer.requiredBindings.includes("ISSUER_INGRESS_LIMIT"));
     for (const name of contract.excludedBindingsOnResource) {
       assert.ok(!contract.resource.requiredBindings.includes(name), name);
     }

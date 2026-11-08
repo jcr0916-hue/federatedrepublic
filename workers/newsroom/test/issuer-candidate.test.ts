@@ -47,6 +47,7 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     script = built.outputFiles[0].text;
     mf = new Miniflare(convertV4MiniflareOptions({
       modules: true, script, compatibilityDate: "2026-10-01", bindings,
+      ratelimits: { ISSUER_INGRESS_LIMIT: { namespace_id: "10011", simple: { limit: 20000, period: 60 } } },
       durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true },
         ISSUER_GUARD: { className: "IssuerGuard", useSQLite: true } },
       outboundService: async request => {

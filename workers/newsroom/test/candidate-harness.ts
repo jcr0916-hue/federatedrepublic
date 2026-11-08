@@ -41,6 +41,8 @@ export async function pairedRuntime(options: {
   issuerBindings?: Partial<typeof ISSUER_BINDINGS>;
   resourceBindings?: Partial<typeof RESOURCE_BINDINGS>;
   introspection?: V4FetchHandler;
+  resourceIngressLimit?: number;
+  issuerIngressLimit?: number;
 } = {}) {
   const scripts = await candidateScripts();
   const upstream = new Map<string, string>();
@@ -50,6 +52,7 @@ export async function pairedRuntime(options: {
     workers: [{ name: "issuer", modules: true, script: scripts.issuer, compatibilityDate: "2026-10-01",
       routes: ["issuer.candidate.invalid/*"],
       bindings: { ...ISSUER_BINDINGS, ...options.issuerBindings },
+      ratelimits: { ISSUER_INGRESS_LIMIT: { namespace_id: "10001", simple: { limit: options.issuerIngressLimit ?? 20000, period: 60 } } },
       durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true },
         ISSUER_GUARD: { className: "IssuerGuard", useSQLite: true } },
       outboundService: async request => {
@@ -72,6 +75,7 @@ export async function pairedRuntime(options: {
     }, { name: "resource", modules: true, script: scripts.resource, compatibilityDate: "2026-10-01",
       routes: ["resource.candidate.invalid/*"],
       bindings: { ...RESOURCE_BINDINGS, ...options.resourceBindings },
+      ratelimits: { RESOURCE_INGRESS_LIMIT: { namespace_id: "10002", simple: { limit: options.resourceIngressLimit ?? 20000, period: 60 } } },
       serviceBindings: { ISSUER: options.introspection ?? "issuer" }, r2Buckets: ["NEWSROOM"],
       outboundService: () => new Response(null, { status: 502 }),
     }],
