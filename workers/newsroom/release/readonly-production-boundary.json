@@ -40,7 +40,8 @@
       "ISSUER_REDIRECT_URI",
       "ISSUER_AUDIENCE",
       "ISSUER_RESOURCE_ID",
-      "ISSUER_RESOURCE_SECRET_SHA256"
+      "ISSUER_RESOURCE_SECRET_SHA256",
+      "ISSUER_INGRESS_LIMIT"
     ]
   },
   "resource": {
@@ -54,7 +55,8 @@
       "RESOURCE_CLIENT_ID",
       "RESOURCE_ISSUER",
       "RESOURCE_VALIDATOR_ID",
-      "RESOURCE_VALIDATOR_SECRET"
+      "RESOURCE_VALIDATOR_SECRET",
+      "RESOURCE_INGRESS_LIMIT"
     ]
   },
   "prohibitedOauthTools": [
@@ -77,6 +79,7 @@
     "attach-production-r2",
     "rotate-production-secrets",
     "change-production-permissions",
-    "revoke-live-grants"
+    "revoke-live-grants",
+    "configure-edge-rate-limiting"
   ]
 }
