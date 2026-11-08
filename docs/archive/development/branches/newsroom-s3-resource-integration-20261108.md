@@ -27,3 +27,18 @@ Retain as active draft dependency. Preserve all open PR bases and handoffs, incl
 ## Isolated R2 provisioning update
 
 On 2026-11-08 a **new test-only** R2 bucket `newsroom-s3-readonly-acceptance` was created, containing exactly two synthetic objects (Korda submission and editorial-status overlay, UUID `22222222-2222-4222-8222-222222222222`). Cloudflare object list confirmed both. No original test bucket or production data was accessed or altered. No S3 API token or read-only secret was generated, no Worker deployed, and no real signed S3 request was made. A bucket-scoped Object Read only token and hosted S3 integration test are the next external dependencies. Older "no real R2" statements in this note describe source-only work before this addendum, not the latest provisioning checkpoint.
+
+## Cloudflare R2 S3 credential acceptance — 2026-11-08 (later checkpoint)
+
+**VERIFIED, isolated synthetic bucket only; operator-reported AWS CLI results.** A dedicated Cloudflare R2 account API token with Object Read only permissions scoped to `newsroom-s3-readonly-acceptance` was created and configured locally as AWS profile `torenthia-r2-acceptance`. Using the actual R2 S3 endpoint and AWS CLI 2.39.6 on macOS, the operator observed:
+
+- `ListObjectsV2`: success; returned exactly the known synthetic Korda submission and status-overlay objects.
+- `HeadObject` on `status/22222222-2222-4222-8222-222222222222.json`: success, 113-byte JSON object.
+- `GetObject` on the same status object: success; downloaded to a local temporary file.
+- `PutObject` using a separate `security-tests/readonly-denial-test.json` key: `AccessDenied`.
+- `DeleteObject` on the synthetic status object: `AccessDenied`.
+- `ListObjectsV2` on a distinct bucket (`newsroom-oauth-isolated-test`) with the same profile: `AccessDenied`.
+
+**Conclusion:** Credential-based R2 S3 Get/List interoperability and read-only/bucket-scope enforcement passed these tested requests. The initial source-only and “no token generated” statements above are **historical, superseded** by this checkpoint; retain them to explain the progression. The credentials and Cloudflare Account ID were not recorded in repository documentation. No production bucket, Worker, OAuth integration, or canon was modified by these acceptance commands.
+
+**Still OPEN:** This does not test SigV4 signing by the S3-backed Worker, hosted MCP end-to-end `newsroom_list`/`newsroom_read`, Worker bindings/ingress, XML pagination/error behavior, token lifecycle, independent security review, or F5–F8 clearance. PR #313 remains draft/unmerged and no deployment or release is authorized. The next task is a separately approved isolated Worker test using secret bindings and *no native R2Bucket binding*, then review of these remaining gates.
