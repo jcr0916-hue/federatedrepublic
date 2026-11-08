@@ -1,8 +1,8 @@
 # Branch history — feature/newsroom-readonly-production-gate-20261108
 
 **Original branch:** `feature/newsroom-readonly-production-gate-20261108`  
-**PR:** Pending draft creation against `fix/newsroom-mcp-server-discover-20261108` (PR #308)  
-**Head commit at handoff:** updated in PR after latest checks  
+**PR:** https://github.com/jcr0916-hue/federatedrepublic/pull/309 (draft, based on PR #308)  
+**Head commit at initial CI validation:** `939f86f6bbe150e7153ef62d87997c7d9997a0e2` (documentation-update SHA pending revalidation)  
 **Status:** EXPERIMENTAL, UNMERGED. NO production deployment approval.
 
 ## Purpose
@@ -18,7 +18,7 @@ Reconcile the earlier KV-based newsroom OAuth integration in PR #304 with the se
 - Read-only Cloudflare settings: production `federated-republic-newsroom` has five `KEY_*` secrets and `NEWSROOM`, with compatibility date `2026-10-01`. Isolated issuer has 12 bindings; isolated resource has 7; both have compatibility date `2026-11-07`. Actual secret values were not accessed. No resource was modified.
 - Source review: `scripts/build.mjs` still targets `src/index.ts` (provider/KV path); candidate build scripts separately target `src/issuer-candidate.ts` and `src/resource-candidate.ts`; the existing `cloudflare.config.ts` is empty and has no production deployment target.
 - Previous real ChatGPT read/list/discovery success is retained in PR #307/#308 handoff notes. Current branch is a release plan with static CI assertions, **not** an independent security audit or proof of production R2 least privilege.
-- CI results: pending initial PR checks at handoff creation; inspect actual commit workflow status before any merge gate.
+- **Verified CI:** on commit `939f86f6bbe150e7153ef62d87997c7d9997a0e2`, GitHub Actions `Newsroom OAuth checks` run [42498242777](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42498242777) passed; `World publishing` run [42498242806](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42498242806) passed. The follow-up handoff-only commit requires its own green status before any approval review.
 
 ## Decisions and rejected alternatives
 - Selected: preserve original live bearer-based newsroom unchanged, add two separate OAuth Workers (issuer and read-only resource) if independently approved.
