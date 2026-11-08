@@ -5,6 +5,7 @@
 import { mcp } from "./legacy.js";
 import { boundedText, PolicyError } from "./policy.ts";
 import { readonlyStorage } from "./readonly-storage.ts";
+import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-limit.ts";
 
 interface Env {
   RESOURCE_AUDIENCE: string;
@@ -14,6 +15,7 @@ interface Env {
   RESOURCE_VALIDATOR_SECRET: string;
   ISSUER: Fetcher;
   NEWSROOM: R2Bucket;
+  RESOURCE_INGRESS_LIMIT: IngressRateLimiter;
 }
 const SCOPE = "newsroom:read";
 const READ_TOOLS = new Set(["newsroom_list", "newsroom_read"]);
@@ -59,6 +61,8 @@ export default {
       if (origin !== null && origin !== config.origin) return json({ error: "origin_not_allowed" }, 403);
       const bearer = request.headers.get("Authorization");
       if (!bearer || !/^Bearer nr1a\.[a-f0-9]{64}\.[a-f0-9]{64}$/.test(bearer)) return unauthorized(config.metadata);
+      const ingressDenied = await requireIngressBudget(request, env.RESOURCE_INGRESS_LIMIT, "mcp");
+      if (ingressDenied) return ingressDenied;
       // Only a service binding can contact the configured issuer. The OAuth
       // client's secret never authenticates this resource-side inspection.
       let verified: Record<string, unknown>;
