@@ -11,6 +11,7 @@ import {
   mintGrantId, mintBoundCredential, routeBoundCredential, sha256Hex, verifyConfidentialClient,
 } from "../prototype/issuer-boundary.ts";
 import { boundedText, PolicyError, s256 } from "./policy.ts";
+import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-limit.ts";
 
 interface Env {
   ISSUER_ORIGIN: string;
@@ -25,6 +26,7 @@ interface Env {
   ISSUER_GITHUB_CLIENT_SECRET: string;
   ISSUER_GRANTS: DurableObjectNamespace<IssuerGrant>;
   ISSUER_GUARD: DurableObjectNamespace<IssuerGuard>;
+  ISSUER_INGRESS_LIMIT: IngressRateLimiter;
 }
 interface Configuration extends GrantBinding {
   issuer: string;
@@ -144,6 +146,8 @@ async function authorize(request: Request, env: Env, config: Configuration): Pro
       !/^[\x20-\x7e]{1,1024}$/.test(params.get("state")!) ||
       !/^[A-Za-z0-9_-]{43}$/.test(params.get("code_challenge")!) ||
       params.get("code_challenge_method") !== "S256") return fail(400, "invalid_authorization_request");
+  const ingressDenied = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "authorize");
+  if (ingressDenied) return ingressDenied;
   await admit(env, config, "authorize");
   const grantId = mintGrantId();
   const session = mintBoundCredential(grantId, "browser");
