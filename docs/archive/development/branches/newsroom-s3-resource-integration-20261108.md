@@ -63,3 +63,7 @@ On 2026-11-08 a **new test-only** R2 bucket `newsroom-s3-readonly-acceptance` wa
 ## Authenticated negative-read checks — 2026-11-08
 
 Using the separate authorized **Torenthia S3 Acceptance Test** plugin, `newsroom_read` on a syntactically valid but nonexistent UUID path under `submissions/korda/2026-11-08/` returned `not found`. A read with a `../newsroom-oauth-isolated-test/...` path was rejected as `invalid or unauthorized submission key`. No document content was returned in either case. These are narrow, tested negatives only; they do not prove complete path traversal prevention or that alternate-bucket S3 requests cannot be constructed. Existing OAuth grant was not revoked; token expiry/revocation, missing/invalid bearer, cross-desk permission boundary and other negative authorization cases remain open.
+
+## Forged bearer denial — 2026-11-08
+
+Operator ran an unauthenticated MCP `tools/list` POST against the isolated S3 acceptance resource with header `Authorization: Bearer invalid-test-token`. Live response: HTTP/2 **401**, JSON `{"error":"invalid_token"}`, and `WWW-Authenticate: Bearer error="invalid_token"` with the correct OAuth protected-resource metadata and `newsroom:read` scope. This verifies rejection of this fabricated token without affecting the existing authorized ChatGPT client. This is not an expiry, refresh or revocation test; those remain open.
