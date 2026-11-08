@@ -25,7 +25,7 @@ const digest = async (input: string) => {
 };
 async function hmac(key: Uint8Array | string, message: string): Promise<Uint8Array> {
   const bytes = typeof key === "string" ? encoder.encode(key) : key;
-  const imported = await crypto.subtle.importKey("raw", bytes, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const imported = await crypto.subtle.importKey("raw", Uint8Array.from(bytes).buffer, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
   return new Uint8Array(await crypto.subtle.sign("HMAC", imported, encoder.encode(message)));
 }
 const hex = (bytes: Uint8Array) => Array.from(bytes, x => x.toString(16).padStart(2, "0")).join("");
