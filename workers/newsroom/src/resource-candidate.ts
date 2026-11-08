@@ -89,8 +89,20 @@ export default {
           error instanceof PolicyError ? error.status : 400);
       }
       if (rpc.jsonrpc !== "2.0" || typeof rpc.method !== "string" ||
-          !["initialize", "ping", "notifications/initialized", "tools/list", "tools/call"].includes(rpc.method))
+          !["server/discover", "initialize", "ping", "notifications/initialized", "tools/list", "tools/call"].includes(rpc.method))
         return json({ error: "method_not_allowed" }, 403);
+      // MCP 2026-07-28 capability discovery, required by current ChatGPT clients.
+      // Respond only after checking the bearer token with the isolated issuer.
+      // Advertise strictly read-only tools; no resources, prompts or write capabilities.
+      if (rpc.method === "server/discover") return json({
+        jsonrpc: "2.0", id: rpc.id,
+        result: {
+          resultType: "complete", supportedVersions: ["2026-07-28"],
+          capabilities: { tools: {} }, ttlMs: 0, cacheScope: "private",
+          _meta: { "io.modelcontextprotocol/serverInfo":
+            { name: "torenthia-newsroom-readonly", version: "1.0.0" } },
+        },
+      });
       if (rpc.method === "tools/call") {
         const params = rpc.params;
         if (!params || typeof params !== "object" || Array.isArray(params)) return json({ error: "invalid_request" }, 400);
