@@ -67,3 +67,7 @@ Using the separate authorized **Torenthia S3 Acceptance Test** plugin, `newsroom
 ## Forged bearer denial — 2026-11-08
 
 Operator ran an unauthenticated MCP `tools/list` POST against the isolated S3 acceptance resource with header `Authorization: Bearer invalid-test-token`. Live response: HTTP/2 **401**, JSON `{"error":"invalid_token"}`, and `WWW-Authenticate: Bearer error="invalid_token"` with the correct OAuth protected-resource metadata and `newsroom:read` scope. This verifies rejection of this fabricated token without affecting the existing authorized ChatGPT client. This is not an expiry, refresh or revocation test; those remain open.
+
+## Unauthenticated revocation request — 2026-11-08
+
+Operator invoked `POST /revoke` on the isolated issuer with a dummy `token=invalid-test-token` and **no OAuth client authentication**. The response body was `{"error":"invalid_client"}`. The HTTP status was **not provided** in the returned excerpt and must be verified separately before asserting a 401. No valid token was supplied, and no existing ChatGPT grant was deliberately revoked. This only demonstrates denial/error response for an unauthenticated revocation attempt; successful valid-token revocation, introspection before/after, and refresh-token lifecycle remain open.
