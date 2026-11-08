@@ -87,3 +87,7 @@ Operator invoked `POST /token` on isolated issuer with `grant_type=refresh_token
 ## Invalid OAuth scope request — 2026-11-08
 
 Operator confirmed live HTTP **400** for a GET `/authorize` request with the unsupported `scope=newsroom:write` and no other required authorization parameters. This confirms the tested malformed/broader-scope request was rejected; **it does not isolate scope enforcement** because the request also omitted required authorization parameters. A complete otherwise-valid authorization request carrying only an unauthorized scope must be tested separately before claiming independent scope rejection. Existing OAuth grants and production Workers unchanged.
+
+## Complete OAuth unauthorized-scope acceptance — 2026-11-08
+
+A properly formed GET `/authorize` request (all required response_type, registered client ID, exact redirect URI, resource audience, state and PKCE S256 challenge parameters present) requesting the unsupported **`newsroom:write`** scope was sent using macOS `curl`. The isolated issuer returned live **HTTP/2 400** and `{"error":"invalid_authorization_request"}`. This replaces the earlier scope-test ambiguity caused by missing required parameters and supports independent rejection of this disallowed scope. A preceding attempt to send the same request using Python `urllib` received **HTTP 403 / Cloudflare Error 1010**, an edge denial rather than an OAuth application result; retry with curl reached the issuer successfully. No legitimate OAuth grant was modified or revoked; source code and production Workers remain unchanged.
