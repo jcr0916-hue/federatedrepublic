@@ -71,3 +71,7 @@ Operator ran an unauthenticated MCP `tools/list` POST against the isolated S3 ac
 ## Unauthenticated revocation request — 2026-11-08
 
 Operator invoked `POST /revoke` on the isolated issuer with a dummy `token=invalid-test-token` and **no OAuth client authentication**. The response body was `{"error":"invalid_client"}`. The HTTP status was **not provided** in the returned excerpt and must be verified separately before asserting a 401. No valid token was supplied, and no existing ChatGPT grant was deliberately revoked. This only demonstrates denial/error response for an unauthenticated revocation attempt; successful valid-token revocation, introspection before/after, and refresh-token lifecycle remain open.
+
+## Revocation authentication HTTP status confirmation — 2026-11-08
+
+A follow-up operator request repeated `POST /revoke` without client authentication, using only the fabricated token string `invalid-test-token` and suppressing the response body. The observed status was **HTTP 401**. Together with the earlier observed `{"error":"invalid_client"}` response body, this confirms rejection of the tested unauthenticated revocation request. It does **not** test authenticated revocation of a valid token, grant invalidation, or refresh-token invalidation; those remain open and the working ChatGPT grant was preserved.
