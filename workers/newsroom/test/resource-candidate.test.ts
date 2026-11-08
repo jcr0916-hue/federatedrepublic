@@ -19,6 +19,32 @@ describe("paired standalone issuer and read-only newsroom resource (local only)"
     } finally { await f.mf.dispose(); }
   });
 
+  it("supports authenticated MCP 2026 server/discover with only read-only capabilities", async () => {
+    const f = await pairedRuntime();
+    try {
+      assert.equal((await f.rpc("", "server/discover")).status, 401);
+      const token = await f.tokens();
+      const discovered = await f.rpc(token.access_token, "server/discover", {
+        _meta: { "io.modelcontextprotocol/protocolVersion": "2026-07-28" },
+      });
+      assert.equal(discovered.status, 200);
+      const body = await discovered.json() as {
+        jsonrpc: string; id: number;
+        result: { resultType: string; supportedVersions: string[];
+          capabilities: Record<string, unknown>; ttlMs: number; cacheScope: string };
+      };
+      assert.equal(body.jsonrpc, "2.0");
+      assert.equal(body.id, 1);
+      assert.equal(body.result.resultType, "complete");
+      assert.deepEqual(body.result.supportedVersions, ["2026-07-28"]);
+      assert.deepEqual(body.result.capabilities, { tools: {} });
+      assert.equal(body.result.cacheScope, "private");
+      assert.equal(body.result.ttlMs, 0);
+      assert.equal((await f.rpc(token.access_token, "resources/list")).status, 403);
+      assert.equal((await f.rpc(token.access_token, "prompts/list")).status, 403);
+    } finally { await f.mf.dispose(); }
+  });
+
   it("uses separate resource credentials and prevents OAuth-client introspection or resource token issuance", async () => {
     const f = await pairedRuntime();
     try {
