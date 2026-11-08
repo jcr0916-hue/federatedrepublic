@@ -58,6 +58,14 @@ The release document previously described closing Workers.dev alone. Its rollbac
 
 The new proof keys are additive and use the existing `revoked` flag. Earlier code can read that flag but ignores replay proof. A downgrade loses the new detection for still-active grants; keep ingress closed and prefer a reviewed forward fix. Existing grants lack proof for credentials consumed before the mitigation. New production namespaces remain mandatory. No hosted rotation, rollback, recovery or multi-region rehearsal was performed.
 
+### F8 — High: excluded #304 provider/KV path can redeem a code twice — reproduced, not fixed
+
+The first [OAuth CI run for this review](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42500808335) failed an inherited assertion that concurrent code exchanges produce one 200 and one 400: the actual result was two 200s. The hardened issuer and all new security regressions passed in that run (93/94 tests overall). This was not dismissed as runner noise or retried until green.
+
+The pinned provider reads a pending grant from KV and later clears its wrapped authorization-code key; those operations are not a compare-and-swap. The test-only fixture now holds two already-read pending-code snapshots until both requests arrive, forcing that valid interleaving. The provider produces two distinct access tokens and both reach the authenticated resource successfully. This requires the correct client credential, code and PKCE verifier; it is not an anonymous bypass.
+
+The inherited test was replaced with an explicit deterministic **defect characterization**, not a claim that duplicate issuance is safe or repaired. The hardened SQLite issuer retains strict concurrency and family-revocation tests. Only test fixtures changed for this finding; the pinned provider, original adapter and legacy source were not patched. F8 reinforces the existing release decision to exclude the default provider/KV bundle. Reconsidering that adapter for OAuth would require its own coordinated state fix and acceptance; this PR does not provide one.
+
 ## Authorization, browser and MCP assessment
 
 - **Authorization:** fail-closed configuration; exact registered client/callback/audience; one read scope; explicit numeric GitHub identity allowlist; independent high-entropy routing IDs and credential secrets; no caller-selected authority or public issue/admin shortcut. The narrow historical `read` alias only fills the configured audience. No new authorization bypass was demonstrated.
@@ -72,6 +80,7 @@ Supported local Node **24.22.2**, pinned Miniflare/workerd and synthetic GitHub/
 - Frozen #309 baseline: **82 tests passed**, zero failures.
 - Initial adversarial set against unchanged #309: **7 failures, 2 passes**. Failures reproduce F1–F4; the passing availability test demonstrates unresolved F5. Two additional lifecycle cases and the storage capability case were added afterward.
 - Final mitigated suite: **94 tests passed**, zero failures/skips; TypeScript and all four builds passed. This includes persistence, forced child-runtime/process-group crash, atomic admission/rotation, replay/revocation, forged tokens and seeded-object preservation. A passing test that demonstrates F5 is evidence of a blocker, not clearance.
+- First Linux CI: 93/94 tests passed, with the inherited provider/KV code-race assertion failing; World publishing passed. The deterministic local characterization then passed all 22 tests in `oauth.test.ts`. F8 and its test replace an unsupported serialization claim, without weakening the hardened issuer's assertions. Follow-up CI results are recorded in the handoff.
 - Repository `world:publish-check` passed, including local site generation and link/consistency checks. This did not publish or deploy the site.
 - Online `npm audit --json` of the newsroom lockfile reported zero advisories. This is a registry snapshot, not a supply-chain audit. Lockfiles and dependencies were not changed.
 - Local runtime compatibility is `2026-10-01`. Historical isolated deployment records name `2026-11-07`; current hosted settings and behavior, exact production compatibility, secret entropy, WAF coverage and deployed bundle equivalence were **not established** in this review.

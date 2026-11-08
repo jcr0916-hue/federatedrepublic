@@ -144,9 +144,13 @@ describe("security review regressions: credential lifecycle and availability", (
       const forged = "nr1a." + "a".repeat(64) + "." + "b".repeat(64);
       // Every syntactically valid token invokes the validator-authenticated service
       // binding. Authentication ordering alone cannot distinguish these callers.
-      for (let offset = 0; offset < 1200; offset += 20) {
-        const responses = await Promise.all(Array.from({ length: 20 }, () => f.rpc(forged, "ping")));
-        for (const response of responses) { assert.equal(response.status, 401); await response.arrayBuffer(); }
+      // This is quota-exhaustion evidence, not a throughput benchmark. Consume
+      // each response in its own request lifetime; do not retain a batch of
+      // native-runtime response streams for later consumption.
+      for (let count = 0; count < 1200; count++) {
+        const response = await f.rpc(forged, "ping");
+        assert.equal(response.status, 401);
+        assert.deepEqual(await response.json(), { error: "invalid_token" });
       }
       assert.equal((await f.rpc(token.access_token, "ping")).status, 503, "release blocker: edge/per-source abuse controls are still required");
       assert.equal((await f.clientPost("/revoke", { token: token.refresh_token })).status, 200, "revocation has its own quota");

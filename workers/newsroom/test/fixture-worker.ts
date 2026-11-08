@@ -7,6 +7,30 @@ import { type LegacyPrincipal } from "../src/policy.ts";
 interface FixtureEnv extends NewsroomEnv {
   GITHUB: Fetcher;
   TEST_ORIGINAL: string;
+  TEST_OVERLAP_CODE_READS: string;
+}
+
+// Test-only scheduler: hold two already-read pending-code snapshots until both
+// requests arrive. This models overlapping KV reads, not an atomic authority.
+// The isolated test instance owns this one pair; no release source imports it.
+let codeReaders = 0;
+let releaseCodeReaders: () => void;
+const pairedCodeReads = new Promise<void>(resolve => { releaseCodeReaders = resolve; });
+function overlappingCodeKV(namespace: KVNamespace): KVNamespace {
+  return new Proxy(namespace, {
+    get(target, property) {
+      if (property === "get") return async (key: string, options: { type?: string } = {}) => {
+        const value = await Reflect.apply(target.get, target, [key, options]);
+        if (key.startsWith("grant:") && options.type === "json" && value?.authCodeWrappedKey && codeReaders < 2) {
+          if (++codeReaders === 2) releaseCodeReaders();
+          await pairedCodeReads;
+        }
+        return value;
+      };
+      const value = Reflect.get(target, property);
+      return typeof value === "function" ? value.bind(target) : value;
+    },
+  });
 }
 
 const desks = ["corindal", "korda", "varek", "federal", "editorial"];
@@ -61,7 +85,10 @@ export default class FixtureWorker extends WorkerEntrypoint<FixtureEnv> {
       githubTransport: (request, env) => env.GITHUB.fetch(request),
     });
     return auth.fetch(request, { ...this.env, CHATGPT_CLIENT_ID: clientId || this.env.CHATGPT_CLIENT_ID,
-      EDITOR_GITHUB_USER_ID: editorId || this.env.EDITOR_GITHUB_USER_ID }, this.ctx);
+      EDITOR_GITHUB_USER_ID: editorId || this.env.EDITOR_GITHUB_USER_ID,
+      OAUTH_KV: this.env.TEST_OVERLAP_CODE_READS === "true" && new URL(request.url).pathname === "/oauth/token"
+        ? overlappingCodeKV(this.env.OAUTH_KV) : this.env.OAUTH_KV,
+    }, this.ctx);
   }
   async provision() {
     const helpers = oauthHelpers(this.env, selectedAdapter(this.env));
