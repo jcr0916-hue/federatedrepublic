@@ -95,3 +95,7 @@ A properly formed GET `/authorize` request (all required response_type, register
 ## OAuth resource-audience mismatch denial — 2026-11-08
 
 Operator ran a complete GET `/authorize` request against the S3 acceptance issuer with the registered OAuth client ID, correct ChatGPT callback, `newsroom:read` scope, state, and PKCE S256 parameters, but requested `resource=https://newsroom-oauth-isolated-test.jcr0916.workers.dev/mcp` rather than the configured S3 acceptance MCP audience. Observed live HTTP/2 **400** with `{"error":"invalid_authorization_request"}`. This verifies that the issuer rejects the tested alternate-resource audience at authorization time, without contacting or changing the other Worker or existing ChatGPT authorization. It does not replace comprehensive audience isolation tests of issued tokens or introspection.
+
+## Incorrect registered-client secret rejected — 2026-11-08
+
+Operator tested live `POST /token` for `grant_type=refresh_token` and fabricated `refresh_token=invalid-test-token` using HTTP Basic with the **registered S3 acceptance client ID** and a deliberately incorrect client secret. The isolated issuer returned HTTP/2 **401**, JSON `{"error":"invalid_client"}`, `WWW-Authenticate: Basic realm="newsroom-issuer"`, and no-store/no-cache headers. This verifies incorrect-secret rejection in this test, but does not establish valid-client refresh behavior, token expiry/revocation, or OAuth grant isolation. No genuine credential or token was sent, and the working ChatGPT authorization was preserved.
