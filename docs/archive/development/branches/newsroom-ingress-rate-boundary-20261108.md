@@ -2,7 +2,7 @@
 
 **Original branch:** `feature/newsroom-ingress-rate-boundary-20261108`  
 **Base:** `feature/newsroom-oauth-security-review-20261108` (draft PR #310) at `9076feb2391ffb4fa8f5fff5efb50e1ef7f4d4e0`  
-**PR:** Pending new stacked draft  
+**PR:** https://github.com/jcr0916-hue/federatedrepublic/pull/311 (draft)  
 **Status:** EXPERIMENTAL; release blocked, nothing shipped.
 
 ## Purpose
@@ -17,7 +17,11 @@ Reduce exposure of the hardened issuer's global budget to unauthenticated traffi
 - `workers/newsroom/release/readonly-production-boundary.json`, contract tests, and `PRODUCTION-READONLY-RELEASE.md`: new bindings mandatory, no deployment config/namespace assignments and explicit release blockers.
 
 ## Verification
-Initial branch CI not yet recorded at time of handoff creation. Test by supported Node CI typecheck, full `npm test`, four candidate/legacy builds and world publishing checks. Check final head SHA/PR run; do not infer test success from code review alone.
+The initial PR #311 check failed because a separate standalone issuer test fixture lacked the mandatory new ingress binding (returned fail-closed 503); production fail-closed logic was not weakened. Fixed fixture in source commit `66e94c9102b8a55d09f983c2ca4efcbb07ead81b`.
+
+**Verified CI at implementation commit:** [Newsroom OAuth checks run 42511917112](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42511917112) passed using supported Node: **97 tests / 20 suites / zero failures**, TypeScript and all four builds; artifact uploads completed. [World publishing run 42511917148](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42511917148) also passed, with no publication. Latest handoff-only commit needs its own final CI verification.
+
+The local Miniflare test specifically verifies that an approximate per-source limiter responds 429 before the issuer's strict shared introspection quota is exhausted. This does NOT verify hosted multi-region behavior or WAF policy.
 
 ## Residual risks
 Cloudflare Rate Limiting bindings are **approximate** and **per-location**. They are not strict global caps. Cloudflare docs warn same-zone Worker subrequests may influence `CF-Connecting-IP`; treat it as a best-effort direct-edge source hint, not authenticated identity. Shared NAT/mobile/proxy IPs may deny legitimate ChatGPT requests. A distributed attack can still exhaust the authoritative issuer's `/introspect` and `/authorize` budgets. Separate edge/WAF rules and traffic baselines, verified source signals, global abuse modeling, worker subrequest exclusion, realistic ChatGPT bursts and multi-region tests are release blockers. No Cloudflare rate-limit binding or WAF rule has been provisioned.
