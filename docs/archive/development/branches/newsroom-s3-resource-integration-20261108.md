@@ -79,3 +79,7 @@ A follow-up operator request repeated `POST /revoke` without client authenticati
 ## Introspection endpoint client-authentication denial — 2026-11-08
 
 Operator invoked unauthenticated `POST /introspect` on the isolated issuer with fabricated `token=invalid-test-token` and `token_type_hint=access_token`. Observed live HTTP/2 **401**, `{"error":"invalid_client"}`, and `WWW-Authenticate: Basic realm="newsroom-issuer"`; `Cache-Control: no-store` and `Pragma: no-cache` present. This passes the specific missing-client-credentials denial test. It does not prove successful valid-client introspection, expired-token handling, or revoked-token inactivity. The working ChatGPT OAuth grant remained untouched.
+
+## Token endpoint missing-client denial — 2026-11-08
+
+Operator invoked `POST /token` on isolated issuer with `grant_type=refresh_token` and a fabricated `refresh_token=invalid-test-token`, without any client authentication. Observed HTTP/2 **401**; JSON `{"error":"invalid_client"}`; `WWW-Authenticate: Basic realm="newsroom-issuer"`; `Cache-Control: no-store` and `Pragma: no-cache`. The three separately exercised missing-client-authentication cases for `/token`, `/introspect`, and `/revoke` each returned HTTP 401. This does not establish valid-client token refresh, token expiry/revocation semantics or negative grant isolation. No real token was used or revoked, and the working ChatGPT plugin grant was unaffected.
