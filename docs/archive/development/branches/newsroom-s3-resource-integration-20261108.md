@@ -42,3 +42,20 @@ On 2026-11-08 a **new test-only** R2 bucket `newsroom-s3-readonly-acceptance` wa
 **Conclusion:** Credential-based R2 S3 Get/List interoperability and read-only/bucket-scope enforcement passed these tested requests. The initial source-only and “no token generated” statements above are **historical, superseded** by this checkpoint; retain them to explain the progression. The credentials and Cloudflare Account ID were not recorded in repository documentation. No production bucket, Worker, OAuth integration, or canon was modified by these acceptance commands.
 
 **Still OPEN:** This does not test SigV4 signing by the S3-backed Worker, hosted MCP end-to-end `newsroom_list`/`newsroom_read`, Worker bindings/ingress, XML pagination/error behavior, token lifecycle, independent security review, or F5–F8 clearance. PR #313 remains draft/unmerged and no deployment or release is authorized. The next task is a separately approved isolated Worker test using secret bindings and *no native R2Bucket binding*, then review of these remaining gates.
+
+
+## Isolated hosted S3-backed MCP acceptance — 2026-11-08 (latest checkpoint)
+
+**VERIFIED HOSTED TEST, experimental only; not production release.** Two newly named Cloudflare Workers were created without public targets initially, then their dedicated `workers.dev` endpoints were enabled specifically for controlled acceptance testing:
+
+- OAuth issuer `newsroom-s3-issuer-acceptance`, initial version `7ce5d472-f58e-40cf-aa55-7577ea81f0f9`; Cloudflare settings confirmed both issuer Durable Objects, rate limiting and three secret bindings.
+- S3-backed MCP resource `newsroom-s3-readonly-acceptance`, version `d42778d4-febe-4215-b034-0189c664ad83`; Cloudflare settings confirmed `ISSUER` service binding to the dedicated issuer, three secret bindings, rate limiter namespace `1002`, and **no native `NEWSROOM` R2Bucket binding**.
+- Both `workers.dev` endpoints are **currently enabled** for tests, while preview endpoints remain disabled. Their public discovery endpoints are reachable; this must not be mistaken for privately isolated networking. No production or Verification 04 Workers were targeted.
+- Issuer `/.well-known/oauth-authorization-server`: live HTTP **200**; authorization, token, introspection and revocation metadata, `newsroom:read` scope, PKCE S256.
+- Resource `/.well-known/oauth-protected-resource/mcp`: live HTTP **200**; advertises the dedicated issuer, `newsroom:read`, bearer-header method.
+- POST `/mcp` without bearer token: live HTTP **401**, `invalid_token`, proper `WWW-Authenticate` challenge.
+- Separate ChatGPT plugin **Torenthia S3 Acceptance Test** authorized using the dedicated OAuth client; authenticated `newsroom_list` returned exactly **one** synthetic Korda `HOLD` report, with no next page.
+- Authenticated `newsroom_read` on `submissions/korda/2026-11-08/22222222-2222-4222-8222-222222222222.json` returned the complete expected synthetic report, including body, editorial note and `nonCanonical: true`. This constitutes a successful **live S3-backed MCP read** rather than only mocked SigV4.
+- Temporary issuer/resource secrets JSON and temporary validator-secret file under `/tmp` were removed after uploading the Cloudflare secrets. The dedicated AWS CLI profile remains local; no secret values are committed.
+
+**Still OPEN:** deeper credential/desk isolation and cross-bucket denial through Worker, malformed or expired/revoked token lifecycle, XML pagination/error mapping under real service conditions, load/ingress and resilience, independent security and operations review, F5–F8 gate disposition, and release approval. The successful two-record-fixture read does **not** establish all security gates or production readiness. PR #313 stays **draft and unmerged**; retain its dependency chain and branch until reviewed. Reassess whether to disable the publicly reachable acceptance endpoints when active testing concludes. No fictional time progression, canon publication, or production rollout.
