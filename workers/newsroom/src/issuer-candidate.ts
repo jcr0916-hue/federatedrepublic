@@ -131,8 +131,14 @@ async function authorize(request: Request, env: Env, config: Configuration): Pro
     params.set("scope", SCOPE);
     if (!params.has("resource")) params.set("resource", config.audience);
   }
-  if (!parameters(params, ["response_type", "client_id", "redirect_uri", "scope", "resource",
-    "state", "code_challenge", "code_challenge_method"]) || params.get("response_type") !== "code" ||
+  // ChatGPT sends RFC 8707 resource plus optional RFC 7591/OIDC-style UI locale hints.
+  // UI hints are ignored for authorization and constrained to short language tags.
+  const uiLocales = params.get("ui_locales");
+  if ((uiLocales !== null && (uiLocales.length > 128 ||
+      !/^[A-Za-z]{2,8}(?:-[A-Za-z0-9]{1,8})*(?: [A-Za-z]{2,8}(?:-[A-Za-z0-9]{1,8})*){0,4}$/.test(uiLocales))) ||
+      !parameters(params, ["response_type", "client_id", "redirect_uri", "scope", "resource",
+        "state", "code_challenge", "code_challenge_method"], ["ui_locales"]) ||
+      params.get("response_type") !== "code" ||
       params.get("client_id") !== config.clientId || params.get("redirect_uri") !== config.redirectUri ||
       params.get("scope") !== SCOPE || params.get("resource") !== config.audience ||
       !/^[\x20-\x7e]{1,1024}$/.test(params.get("state")!) ||

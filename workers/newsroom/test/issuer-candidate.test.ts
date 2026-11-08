@@ -208,6 +208,21 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.equal((await mf.dispatchFetch("https://other.invalid/authorize?" + startParams())).status, 421);
   });
 
+  it("allows bounded optional ChatGPT ui_locales but rejects malformed or repeated hints", async () => {
+    for (const locale of ["en-US", "en-US fr-CA"]) {
+      const params = startParams(); params.set("ui_locales", locale);
+      const response = await mf.dispatchFetch(ORIGIN + "/authorize?" + params, { redirect: "manual" });
+      assert.equal(response.status, 302, locale);
+    }
+    for (const locale of ["", "en_US", "en-US/evil", "x".repeat(129)]) {
+      const params = startParams(); params.set("ui_locales", locale);
+      const response = await mf.dispatchFetch(ORIGIN + "/authorize?" + params, { redirect: "manual" });
+      assert.equal(response.status, 400, locale);
+    }
+    const duplicate = startParams(); duplicate.append("ui_locales", "en-US"); duplicate.append("ui_locales", "fr-CA");
+    assert.equal((await mf.dispatchFetch(ORIGIN + "/authorize?" + duplicate)).status, 400);
+  });
+
   it("authenticates the editor before consent and exchanges a code for read-only tokens", async () => {
     const code = await authorizeCode();
     const result = await post("/token", exchangeFields(code));
