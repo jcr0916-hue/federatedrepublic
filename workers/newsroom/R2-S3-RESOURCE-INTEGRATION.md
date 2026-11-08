@@ -40,3 +40,20 @@ An independently named R2 bucket **`newsroom-s3-readonly-acceptance`** was creat
 This **passes the credential permission and basic AWS CLI/R2 S3 interoperability gate** for the tested bucket. It does **not** demonstrate that the candidate Worker's own SigV4 implementation, MCP routing, isolated deployment or secret bindings work with real R2. No secrets or account IDs are committed. The profile and downloaded object stayed local; no production changes, Worker deploys, merges or canon edits were made.
 
 **Outstanding:** Hosted isolated S3 candidate Worker with secrets and no `NEWSROOM` native R2 binding; end-to-end MCP `newsroom_list`/`newsroom_read`; issuer/validator/ingress controls; XML parsing and pagination, errors, egress/retry behavior, token lifecycle; independent security/operations review and F5–F8. Keep PR #313 draft and downstream production release blocked. Existing Verification 04 and native resource candidate are unchanged.
+
+
+## Hosted Cloudflare + ChatGPT OAuth MCP acceptance — 2026-11-08 (latest checkpoint)
+
+**Live isolated integration PASS for discovery, bearer protection, and synthetic list/read.** The previous statements above that the candidate has never been deployed and hosted S3 has not been tested describe *earlier checkpoints* and are superseded for the isolated acceptance Workers only. Production deployment remains **not approved**.
+
+- Issuer: `newsroom-s3-issuer-acceptance`, version `7ce5d472-f58e-40cf-aa55-7577ea81f0f9`, deployed with two Durable Object bindings, rate limiter and three secret bindings.
+- S3 resource: `newsroom-s3-readonly-acceptance`, version `d42778d4-febe-4215-b034-0189c664ad83`, deployed with the issuer service binding, rate limiter and three secret bindings. Cloudflare's live configuration has **no native R2Bucket/NEWSROOM binding**.
+- Both dedicated `workers.dev` endpoints were enabled for testing after initial uploads with no public targets. Preview endpoints remain disabled. These are publicly reachable, protected test endpoints, not private network routes.
+- Live issuer OAuth discovery: HTTP **200**, `newsroom:read`, PKCE S256, authorization/token/introspection/revocation metadata.
+- Live resource OAuth discovery: HTTP **200**, correct issuer/resource relationship, bearer method.
+- Unauthenticated POST `/mcp` for `tools/list`: HTTP **401**, `invalid_token`, `WWW-Authenticate` bearer challenge.
+- Dedicated **Torenthia S3 Acceptance Test** ChatGPT connection completed OAuth authorization; authenticated `newsroom_list` found exactly one synthetic Korda HOLD submission with `more:false`.
+- Authenticated `newsroom_read` returned the complete synthetic payload at `submissions/korda/2026-11-08/22222222-2222-4222-8222-222222222222.json`, including `nonCanonical:true`, editorial note and body. This confirms the live resource-to-R2 S3 retrieval path for the fixture.
+- Operator removed temporary issuer/resource JSON secret files and validator-secret temporary file after configuring Worker secret bindings; never place their values in logs or commits. The read-only AWS CLI profile is retained locally.
+
+**Remaining release gates:** token expiry/refresh/revocation and negative privilege cases; real S3 XML pagination and error behavior; per-desk controls; ingress/load, retry and egress review; independent security sign-off; disposition of F5–F8. The observed successful authenticated read and previously verified separate AWS CLI denied writes are not a complete production security audit. Leave PR #313 draft and dependency chain unmerged. Explicitly consider disabling these two public acceptance test endpoints when testing ends.
