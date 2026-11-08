@@ -293,9 +293,11 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     const fields = { grant_type: "refresh_token", refresh_token: first.refresh };
     assert.equal((await post("/token", { ...fields, scope: "newsroom:review" })).status, 400);
     assert.equal((await post("/token", { ...fields, resource: "https://evil.invalid/mcp" })).status, 400);
-    const attempts = await Promise.all([post("/token", fields), post("/token", fields)]);
-    assert.deepEqual(attempts.map(x => x.status).sort(), [200, 400]);
-    const current = attempts.find(x => x.status === 200)!.body;
+    // A second use now revokes the family; ordinary revocation is tested with
+    // one rotation. Duplicate-race quarantine has its own adversarial case.
+    const rotated = await post("/token", fields);
+    assert.equal(rotated.status, 200);
+    const current = rotated.body;
     assert.deepEqual(await introspect(first.access), { active: false });
     assert.equal((await introspect(String(current.access_token))).active, true);
     assert.deepEqual(await introspect(changeSecret(String(current.access_token))), { active: false });

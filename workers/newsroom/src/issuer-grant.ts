@@ -4,6 +4,8 @@
 import { DurableObject } from "cloudflare:workers";
 
 const KEY = "issuer:v1";
+const REDEEMED_CODE = "redeemed-code:v1";
+const SPENT_REFRESH = "spent-refresh:v1:";
 const HASH = /^[a-f0-9]{64}$/;
 const CHALLENGE = /^[A-Za-z0-9_-]{43}$/;
 const nowIsValid = (now: number) => Number.isSafeInteger(now) && now >= 0;
@@ -32,6 +34,11 @@ interface Code {
   binding: AuthorizationBinding;
   codeHash: string;
   expiresAt: number;
+}
+interface RedeemedCode {
+  codeHash: string;
+  challenge: string;
+  redirectUri: string;
 }
 interface Grant extends GrantBinding {
   phase: "active";
@@ -155,9 +162,24 @@ export class IssuerGrant extends DurableObject {
         !HASH.test(input.accessHash) || input.refreshHash === input.accessHash) return false;
     return this.ctx.storage.transaction(async () => {
       const state = this.ctx.storage.kv.get<State>(KEY);
+      // Keep proof of the consumed code until grant cleanup. Reuse with its
+      // original client/redirect/PKCE binding invalidates the issued family;
+      // knowledge of a routing ID or a wrong verifier cannot revoke it.
+      if (state?.phase === "active" && !state.revoked && bound(state, input.expected)) {
+        const redeemed = this.ctx.storage.kv.get<RedeemedCode>(REDEEMED_CODE);
+        if (redeemed?.codeHash === input.codeHash && redeemed.challenge === input.challenge &&
+            redeemed.redirectUri === input.redirectUri) {
+          state.revoked = true;
+          await this.#write(state);
+        }
+        return false;
+      }
       if (state?.phase !== "code" || state.expiresAt <= input.now ||
           state.codeHash !== input.codeHash || state.binding.challenge !== input.challenge ||
           state.binding.redirectUri !== input.redirectUri || !bound(state.binding, input.expected)) return false;
+      this.ctx.storage.kv.put(REDEEMED_CODE, {
+        codeHash: input.codeHash, challenge: input.challenge, redirectUri: input.redirectUri,
+      } satisfies RedeemedCode);
       await this.#write({
         clientId: input.expected.clientId, editorId: input.expected.editorId,
         audience: input.expected.audience, phase: "active", accessHash: input.accessHash,
@@ -178,7 +200,19 @@ export class IssuerGrant extends DurableObject {
     return this.ctx.storage.transaction(async () => {
       const state = this.ctx.storage.kv.get<State>(KEY);
       if (state?.phase !== "active" || state.revoked || state.refreshExpiresAt <= input.now ||
-          state.refreshHash !== input.presentedHash || !bound(state, input.expected)) return false;
+          !bound(state, input.expected)) return false;
+      if (state.refreshHash !== input.presentedHash) {
+        // Only a digest we actually consumed proves reuse. Revoke the entire
+        // successor family, even when the replay is several generations old.
+        if (this.ctx.storage.kv.get<boolean>(SPENT_REFRESH + input.presentedHash) === true) {
+          state.revoked = true;
+          await this.#write(state);
+        }
+        return false;
+      }
+      // Hash-only tombstones commit atomically with rotation, survive restart,
+      // and are removed by the existing whole-grant expiry/revocation alarm.
+      this.ctx.storage.kv.put(SPENT_REFRESH + state.refreshHash, true);
       state.refreshHash = input.refreshHash;
       state.accessHash = input.accessHash;
       state.accessExpiresAt = input.now + 900;
@@ -198,12 +232,16 @@ export class IssuerGrant extends DurableObject {
       state.accessHash === input.accessHash && bound(state, input.expected) ? { expiresAt: state.accessExpiresAt } : null;
   }
 
-  /** A routing ID alone cannot revoke: require a current credential digest. */
+  /** A routing ID alone cannot revoke. A known spent refresh digest can revoke
+   * its successor family, including a disconnect racing a committed refresh. */
   async revoke(input: { expected: GrantBinding; credentialHash: string; kind: "access" | "refresh" }): Promise<void> {
     await this.ctx.storage.transaction(async () => {
       const state = this.ctx.storage.kv.get<State>(KEY);
-      if (state?.phase !== "active" || !bound(state, input.expected) ||
-          state[input.kind === "access" ? "accessHash" : "refreshHash"] !== input.credentialHash) return;
+      if (state?.phase !== "active" || !bound(state, input.expected) || !HASH.test(input.credentialHash)) return;
+      const current = state[input.kind === "access" ? "accessHash" : "refreshHash"] === input.credentialHash;
+      const spent = input.kind === "refresh" &&
+        this.ctx.storage.kv.get<boolean>(SPENT_REFRESH + input.credentialHash) === true;
+      if (!current && !spent) return;
       state.revoked = true;
       await this.#write(state);
     });

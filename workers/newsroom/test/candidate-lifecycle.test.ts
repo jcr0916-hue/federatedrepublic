@@ -76,6 +76,7 @@ describe("candidate compatibility, durable lifecycle and local abuse limits", ()
       assert.equal((await f.rpc(issued.access_token, "ping")).status, 401);
       assert.equal((await f.rpc(current.access_token, "ping")).status, 200);
       assert.equal((await f.clientPost("/token", { grant_type: "refresh_token", refresh_token: issued.refresh_token })).status, 400);
+      assert.equal((await f.rpc(current.access_token, "ping")).status, 401, "spent-token proof survived restart and revoked the successor");
       await f.clientPost("/revoke", { token: current.refresh_token });
       f = await restart();
       assert.equal((await f.rpc(current.access_token, "ping")).status, 401);

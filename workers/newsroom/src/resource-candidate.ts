@@ -4,6 +4,7 @@
  */
 import { mcp } from "./legacy.js";
 import { boundedText, PolicyError } from "./policy.ts";
+import { readonlyStorage } from "./readonly-storage.ts";
 
 interface Env {
   RESOURCE_AUDIENCE: string;
@@ -116,7 +117,7 @@ export default {
       const clean = new Request(config.audience, { method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify(rpc) });
       // Only the preserved read handlers can be reached after the allowlist.
-      const result = await mcp(clean, { desk: "editorial", editor: true }, { NEWSROOM: env.NEWSROOM });
+      const result = await mcp(clean, { desk: "editorial", editor: true }, { NEWSROOM: readonlyStorage(env.NEWSROOM) });
       if (rpc.method !== "tools/list" || !result.ok) return result;
       const data = await result.json() as { result: { tools: Record<string, unknown>[] } };
       data.result.tools = data.result.tools.filter(tool => READ_TOOLS.has(String(tool.name))).map(tool => {

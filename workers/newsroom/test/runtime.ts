@@ -41,6 +41,7 @@ after(async () => { await Promise.all(instances.map(instance => instance.dispose
 async function instance(options: {
   identity?: number; env?: Partial<typeof syntheticEnv>;
   original?: boolean; entrypoint?: "baseline" | "production";
+  overlapCodeReads?: boolean;
 } = {}) {
   const calls: { token: number; identity: number } = { token: 0, identity: 0 };
   const mf = new Miniflare(convertV4MiniflareOptions({
@@ -49,7 +50,8 @@ async function instance(options: {
       ...syntheticEnv, KEY_EDITOR: "synthetic-editorial-credential",
       ...Object.fromEntries(["corindal", "korda", "varek", "federal"].map(desk =>
         ["KEY_" + desk.toUpperCase(), `synthetic-${desk}-credential`])),
-      TEST_ORIGINAL: options.original ? "true" : "false", ...options.env,
+      TEST_ORIGINAL: options.original ? "true" : "false",
+      TEST_OVERLAP_CODE_READS: options.overlapCodeReads ? "true" : "false", ...options.env,
     },
     serviceBindings: {
       GITHUB: async (request: LocalRequest) => {
