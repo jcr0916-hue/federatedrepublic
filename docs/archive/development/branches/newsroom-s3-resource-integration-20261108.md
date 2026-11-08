@@ -83,3 +83,7 @@ Operator invoked unauthenticated `POST /introspect` on the isolated issuer with 
 ## Token endpoint missing-client denial — 2026-11-08
 
 Operator invoked `POST /token` on isolated issuer with `grant_type=refresh_token` and a fabricated `refresh_token=invalid-test-token`, without any client authentication. Observed HTTP/2 **401**; JSON `{"error":"invalid_client"}`; `WWW-Authenticate: Basic realm="newsroom-issuer"`; `Cache-Control: no-store` and `Pragma: no-cache`. The three separately exercised missing-client-authentication cases for `/token`, `/introspect`, and `/revoke` each returned HTTP 401. This does not establish valid-client token refresh, token expiry/revocation semantics or negative grant isolation. No real token was used or revoked, and the working ChatGPT plugin grant was unaffected.
+
+## Invalid OAuth scope request — 2026-11-08
+
+Operator confirmed live HTTP **400** for a GET `/authorize` request with the unsupported `scope=newsroom:write` and no other required authorization parameters. This confirms the tested malformed/broader-scope request was rejected; **it does not isolate scope enforcement** because the request also omitted required authorization parameters. A complete otherwise-valid authorization request carrying only an unauthorized scope must be tested separately before claiming independent scope rejection. Existing OAuth grants and production Workers unchanged.
