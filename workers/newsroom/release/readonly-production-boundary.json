@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Review-only production architecture boundary; not a deployable Cloudflare configuration",
+  "releaseApproved": false,
+  "productionReady": false,
+  "allowedOAuthScopes": [
+    "newsroom:read"
+  ],
+  "allowedOAuthTools": [
+    "newsroom_list",
+    "newsroom_read"
+  ],
+  "legacy": {
+    "worker": "federated-republic-newsroom",
+    "sourceEntrypoint": "src/index.ts",
+    "bundle": "dist/worker.js",
+    "operation": "preserve-unchanged",
+    "requiredBindings": [
+      "KEY_CORINDAL",
+      "KEY_EDITOR",
+      "KEY_FEDERAL",
+      "KEY_KORDA",
+      "KEY_VAREK",
+      "NEWSROOM"
+    ]
+  },
+  "issuer": {
+    "workerName": "UNASSIGNED_DO_NOT_DEPLOY",
+    "sourceEntrypoint": "src/issuer-candidate.ts",
+    "bundle": "dist/issuer-candidate.js",
+    "requiredBindings": [
+      "ISSUER_ORIGIN",
+      "ISSUER_CLIENT_ID",
+      "ISSUER_CLIENT_SECRET_SHA256",
+      "ISSUER_EDITOR_ID",
+      "ISSUER_GITHUB_CLIENT_ID",
+      "ISSUER_GITHUB_CLIENT_SECRET",
+      "ISSUER_GRANTS",
+      "ISSUER_GUARD",
+      "ISSUER_REDIRECT_URI",
+      "ISSUER_AUDIENCE",
+      "ISSUER_RESOURCE_ID",
+      "ISSUER_RESOURCE_SECRET_SHA256"
+    ]
+  },
+  "resource": {
+    "workerName": "UNASSIGNED_DO_NOT_DEPLOY",
+    "sourceEntrypoint": "src/resource-candidate.ts",
+    "bundle": "dist/resource-candidate.js",
+    "requiredBindings": [
+      "ISSUER",
+      "NEWSROOM",
+      "RESOURCE_AUDIENCE",
+      "RESOURCE_CLIENT_ID",
+      "RESOURCE_ISSUER",
+      "RESOURCE_VALIDATOR_ID",
+      "RESOURCE_VALIDATOR_SECRET"
+    ]
+  },
+  "prohibitedOauthTools": [
+    "newsroom_submit",
+    "newsroom_review",
+    "publish"
+  ],
+  "excludedBindingsOnResource": [
+    "KEY_CORINDAL",
+    "KEY_EDITOR",
+    "KEY_FEDERAL",
+    "KEY_KORDA",
+    "KEY_VAREK",
+    "OAUTH_KV",
+    "CHATGPT_CLIENT_ID"
+  ],
+  "requiresApprovalFor": [
+    "merge-main",
+    "production-deployment",
+    "attach-production-r2",
+    "rotate-production-secrets",
+    "change-production-permissions",
+    "revoke-live-grants"
+  ]
+}
