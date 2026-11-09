@@ -48,7 +48,7 @@ Hosted rehearsal on **new named disposable** issuer, fresh guard/grant namespace
 
 | Gate | Required evidence | Current result |
 |---|---|---|
-| Code and unit/integration tests | frozen SHA, real supported-Node CI pass for test, typecheck, five builds, publishing | PENDING current branch CI |
+| Code and unit/integration tests | frozen SHA, real supported-Node CI pass for test, typecheck, five builds, publishing | PASS on source head `76f611fa67fe42d88a5e1248f27c5d3e068ce1d7`: 121/121 Node 24.22.2, typecheck, five builds, publishing. [OAuth CI](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42667818072) / [World CI](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42667817940). Final doc-only head must be rechecked. |
 | Four-desk legacy isolation | 149-check hosted isolated acceptance, no public endpoint left live | PASS inherited from #314, not repeated |
 | Hosted candidate OAuth | real clean-browser GitHub consent, refresh races/expiry/revocation and S3 read | FAIL/NOT ESTABLISHED |
 | Distributed abuse | multi-IP/multi-region attack does not starve legitimate Editor auth; no unbounded cost | NOT ESTABLISHED — BLOCKER |
