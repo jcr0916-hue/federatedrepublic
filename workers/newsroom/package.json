@@ -13,7 +13,8 @@
     "build:issuer-candidate": "node scripts/build-issuer-candidate.mjs",
     "build:resource-candidate": "node scripts/build-resource-candidate.mjs",
     "browser:candidate": "node --import tsx scripts/browser-candidate-harness.ts",
-    "build:resource-s3-candidate": "node scripts/build-resource-s3-candidate.mjs"
+    "build:resource-s3-candidate": "node scripts/build-resource-s3-candidate.mjs",
+    "build:hosted-recovery": "node scripts/build-hosted-recovery.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-oauth-provider": "1.2.4"

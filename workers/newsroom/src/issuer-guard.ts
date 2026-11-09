@@ -1,8 +1,9 @@
+import { securityEvent } from "./security-events.ts";
 import { DurableObject } from "cloudflare:workers";
 import { observe, type TelemetryEnv } from "./privacy-telemetry.ts";
 
-export type GuardBucket = "authorize" | "token" | "introspect" | "revoke";
-const LIMITS: Record<GuardBucket, number> = { authorize: 60, token: 240, introspect: 1200, revoke: 120 };
+export type GuardBucket = "authorize" | "token" | "introspect" | "revoke" | "storage" | "challenge";
+const LIMITS: Record<GuardBucket, number> = { authorize: 60, token: 240, introspect: 1200, revoke: 120, storage: 3600, challenge: 300 };
 const EPOCH = "authorization-epoch:v1";
 interface Window { startedAt: number; count: number }
 
@@ -22,16 +23,19 @@ export class IssuerGuard extends DurableObject<TelemetryEnv> {
       const epoch = this.currentEpoch();
       if (!Number.isSafeInteger(expectedEpoch) || expectedEpoch < 0 ||
           epoch !== expectedEpoch || epoch >= Number.MAX_SAFE_INTEGER)
-        return { changed: false, epoch };
+        { securityEvent("guard", "containment_stale", "internal", 409); return { changed: false, epoch }; }
       this.ctx.storage.kv.put(EPOCH, epoch + 1);
       return { changed: true, epoch: epoch + 1 };
     });
-    if (result.changed) observe(this.env, "containment_epoch_changed", "operator");
+    if (result.changed) {
+      observe(this.env, "containment_epoch_changed", "operator");
+      securityEvent("guard", "containment_changed", "internal", 200);
+    }
     return result;
   }
 
-  async admit(bucket: GuardBucket, now: number): Promise<{ allowed: boolean; retryAfter: number }> {
-    if (!Object.hasOwn(LIMITS, bucket) || !Number.isSafeInteger(now) || now < 0)
+  async admit(bucket: GuardBucket, now: number, units = 1): Promise<{ allowed: boolean; retryAfter: number }> {
+    if (!Object.hasOwn(LIMITS, bucket) || !Number.isSafeInteger(now) || now < 0 || !Number.isSafeInteger(units) || units < 1 || units > 201 || (bucket !== "storage" && units !== 1))
       return { allowed: false, retryAfter: 60 };
     return this.ctx.storage.transaction(async () => {
       const stored = this.ctx.storage.kv.get<Window>(bucket);
@@ -40,8 +44,8 @@ export class IssuerGuard extends DurableObject<TelemetryEnv> {
       // Do not let a backwards clock reset or extend the admitted budget.
       if (now < window.startedAt) return { allowed: false, retryAfter: 60 };
       const retryAfter = Math.max(1, Math.ceil((window.startedAt + 60_000 - now) / 1000));
-      if (window.count >= LIMITS[bucket]) return { allowed: false, retryAfter };
-      window.count++;
+      if (window.count + units > LIMITS[bucket]) return { allowed: false, retryAfter };
+      window.count += units;
       this.ctx.storage.kv.put(bucket, window);
       // State and alarm use the same SQLite storage transaction.
       await this.ctx.storage.setAlarm(now + 60_000);

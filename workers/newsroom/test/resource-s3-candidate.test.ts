@@ -1,13 +1,15 @@
 /** Local full MCP read flow for S3-backed resource with mocked issuer and S3.
  * Does not grant or exercise any real R2 credentials.
  */
+import { mintAdmittedAccess, accessContext } from "../src/access-admission.ts";
+import { ADMISSION_KEY } from "./challenge-fixture.ts";
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { build } from "esbuild";
 import { Miniflare, convertV4MiniflareOptions } from "miniflare";
 import { RESOURCE, ISSUER, CLIENT, VALIDATOR, VALIDATOR_SECRET } from "./candidate-harness.ts";
 
-const access = "nr1a." + "a".repeat(64) + "." + "b".repeat(64);
+const access = await mintAdmittedAccess("a".repeat(64), ADMISSION_KEY, accessContext(ISSUER, CLIENT, RESOURCE));
 const endpoint = "https://" + "a".repeat(32) + ".r2.cloudflarestorage.com/";
 const bucket = "newsroom-synthetic-only";
 const key = "submissions/korda/2026-11-07/11111111-1111-4111-8111-111111111111.json";
@@ -31,7 +33,7 @@ describe("S3 backed MCP resource without native R2 binding", () => {
       { name: "resource", modules: true, script: built.outputFiles[0].text,
         compatibilityDate: "2026-10-01", routes: ["resource.candidate.invalid/*"],
         bindings: {
-          RESOURCE_AUDIENCE: RESOURCE, RESOURCE_ISSUER: ISSUER, RESOURCE_CLIENT_ID: CLIENT,
+          RESOURCE_ADMISSION_KEY: ADMISSION_KEY, RESOURCE_AUDIENCE: RESOURCE, RESOURCE_ISSUER: ISSUER, RESOURCE_CLIENT_ID: CLIENT,
           RESOURCE_VALIDATOR_ID: VALIDATOR, RESOURCE_VALIDATOR_SECRET: VALIDATOR_SECRET,
           R2_READ_ENDPOINT: endpoint, R2_READ_BUCKET: bucket,
           R2_READ_ACCESS_KEY_ID: "A".repeat(32), R2_READ_SECRET_ACCESS_KEY: "s3-secret-" + "B".repeat(40),
@@ -63,7 +65,7 @@ describe("S3 backed MCP resource without native R2 binding", () => {
       const listed = await rpc("tools/call", { name: "newsroom_list", arguments: { desk: "korda", limit: 10 } });
       assert.equal(listed.status, 200, await listed.clone().text());
       const l = await listed.json() as { result: { content: { text: string }[]; isError: boolean } };
-      assert.equal(l.result.isError, false);
+      assert.equal(l.result.isError, false, JSON.stringify(l));
       const rows = JSON.parse(l.result.content[0].text);
       assert.equal(rows.items[0].status, "HOLD");
       assert.equal(rows.items[0].title, item.title);

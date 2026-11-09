@@ -1,3 +1,4 @@
+import { CHALLENGE_BINDINGS, ADMISSION_KEY, solveChallenge, mockSiteverify } from "./challenge-fixture.ts";
 import { after, before, describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { createHash, randomBytes } from "node:crypto";
@@ -31,8 +32,10 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
   let mf: Miniflare;
   let script: string;
   let tokenCalls = 0, userCalls = 0;
+  const usedChallenges = new Set<string>();
   const upstream = new Map<string, { scenario: string; challenge: string }>();
   const bindings = {
+    ...CHALLENGE_BINDINGS, ISSUER_ADMISSION_KEY: ADMISSION_KEY,
     ISSUER_ORIGIN: ORIGIN, ISSUER_CLIENT_ID: CLIENT, ISSUER_CLIENT_SECRET_SHA256: hash(SECRET),
     ISSUER_RESOURCE_ID: RESOURCE_ID, ISSUER_RESOURCE_SECRET_SHA256: hash(RESOURCE_SECRET),
     ISSUER_REDIRECT_URI: REDIRECT, ISSUER_AUDIENCE: AUDIENCE, ISSUER_EDITOR_ID: "12345",
@@ -52,6 +55,8 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
         ISSUER_GUARD: { className: "IssuerGuard", useSQLite: true } },
       outboundService: async request => {
         const url = new URL(request.url);
+        if (url.href === "https://challenges.cloudflare.com/turnstile/v0/siteverify")
+          return mockSiteverify(request, new URL(ORIGIN).hostname, usedChallenges);
         if (url.href === "https://github.com/login/oauth/access_token") {
           tokenCalls++;
           const form = new URLSearchParams(await request.text());
@@ -95,7 +100,7 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     resource: AUDIENCE, state: STATE, code_challenge: s256(VERIFIER), code_challenge_method: "S256",
   });
   const start = async () => {
-    const response = await mf.dispatchFetch(ORIGIN + "/authorize?" + startParams(), { redirect: "manual" });
+    const response = await solveChallenge(mf.dispatchFetch.bind(mf), ORIGIN + "/authorize?" + startParams());
     assert.equal(response.status, 302, await response.clone().text());
     const github = new URL(response.headers.get("location")!);
     assert.equal(github.origin + github.pathname, "https://github.com/login/oauth/authorize");
@@ -213,7 +218,7 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     for (const locale of ["en-US", "en-US fr-CA"]) {
       const params = startParams(); params.set("ui_locales", locale);
       const response = await mf.dispatchFetch(ORIGIN + "/authorize?" + params, { redirect: "manual" });
-      assert.equal(response.status, 302, locale);
+      assert.equal(response.status, 200, locale);
     }
     for (const locale of ["", "en_US", "en-US/evil", "x".repeat(129)]) {
       const params = startParams(); params.set("ui_locales", locale);
@@ -231,7 +236,7 @@ describe("standalone issuer browser + code lifecycle (mock GitHub, no live grant
     assert.equal(result.body.token_type, "Bearer");
     assert.equal(result.body.expires_in, 900);
     assert.equal(result.body.scope, "newsroom:read");
-    assert.match(String(result.body.access_token), /^nr1a\.[a-f0-9]{64}\.[a-f0-9]{64}$/);
+    assert.match(String(result.body.access_token), /^nr1a\.[a-f0-9]{64}\.[a-f0-9]{64}\.[0-9]{1,12}\.[a-f0-9]{64}$/);
     assert.match(String(result.body.refresh_token), /^nr1r\.[a-f0-9]{64}\.[a-f0-9]{64}$/);
     const inspected = await introspect(String(result.body.access_token));
     assert.equal(inspected.active, true);

@@ -1,5 +1,6 @@
 /** Test-only paired Workers. All credentials/data are synthetic; outbound egress
  * is mocked or denied. No cloud resources or connected OAuth grant are used. */
+import { CHALLENGE_BINDINGS, ADMISSION_KEY, solveChallenge, mockSiteverify } from "./challenge-fixture.ts";
 import assert from "node:assert/strict";
 import { createHash, randomBytes } from "node:crypto";
 import { build } from "esbuild";
@@ -18,13 +19,14 @@ export const hash = (value: string) => createHash("sha256").update(value).digest
 export const challenge = (value: string) => createHash("sha256").update(value).digest("base64url");
 export const basic = (id: string, secret: string) => "Basic " + Buffer.from(id + ":" + secret).toString("base64");
 export const ISSUER_BINDINGS = {
+  ...CHALLENGE_BINDINGS, ISSUER_ADMISSION_KEY: ADMISSION_KEY,
   ISSUER_ORIGIN: ISSUER, ISSUER_CLIENT_ID: CLIENT, ISSUER_CLIENT_SECRET_SHA256: hash(CLIENT_SECRET),
   ISSUER_RESOURCE_ID: VALIDATOR, ISSUER_RESOURCE_SECRET_SHA256: hash(VALIDATOR_SECRET),
   ISSUER_REDIRECT_URI: REDIRECT, ISSUER_AUDIENCE: RESOURCE, ISSUER_EDITOR_ID: "12345",
   ISSUER_GITHUB_CLIENT_ID: "dedicated-synthetic-github-app", ISSUER_GITHUB_CLIENT_SECRET: "synthetic-github-app-secret",
 };
 export const RESOURCE_BINDINGS = {
-  RESOURCE_AUDIENCE: RESOURCE, RESOURCE_ISSUER: ISSUER, RESOURCE_CLIENT_ID: CLIENT,
+  RESOURCE_ADMISSION_KEY: ADMISSION_KEY, RESOURCE_AUDIENCE: RESOURCE, RESOURCE_ISSUER: ISSUER, RESOURCE_CLIENT_ID: CLIENT,
   RESOURCE_VALIDATOR_ID: VALIDATOR, RESOURCE_VALIDATOR_SECRET: VALIDATOR_SECRET,
 };
 let scriptsPromise: Promise<{ issuer: string; resource: string }> | undefined;
@@ -38,6 +40,7 @@ export function candidateScripts() {
 }
 export async function pairedRuntime(options: {
   persistencePath?: string;
+  issuerScript?: string;
   issuerBindings?: Partial<typeof ISSUER_BINDINGS>;
   resourceBindings?: Partial<typeof RESOURCE_BINDINGS>;
   introspection?: V4FetchHandler;
@@ -47,15 +50,18 @@ export async function pairedRuntime(options: {
   const scripts = await candidateScripts();
   const upstream = new Map<string, string>();
   const calls = { token: 0, user: 0 };
+  const usedChallenges = new Set<string>();
   const mf = new Miniflare(convertV4MiniflareOptions({
     resourcePersistencePath: options.persistencePath,
-    workers: [{ name: "issuer", modules: true, script: scripts.issuer, compatibilityDate: "2026-10-01",
+    workers: [{ name: "issuer", modules: true, script: options.issuerScript ?? scripts.issuer, compatibilityDate: "2026-10-01",
       routes: ["issuer.candidate.invalid/*"],
       bindings: { ...ISSUER_BINDINGS, ...options.issuerBindings },
       ratelimits: { ISSUER_INGRESS_LIMIT: { namespace_id: "10001", simple: { limit: options.issuerIngressLimit ?? 20000, period: 60 } } },
       durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true },
         ISSUER_GUARD: { className: "IssuerGuard", useSQLite: true } },
       outboundService: async request => {
+        if (request.url === "https://challenges.cloudflare.com/turnstile/v0/siteverify")
+          return mockSiteverify(request, new URL(ISSUER).hostname, usedChallenges);
         if (request.url === "https://github.com/login/oauth/access_token") {
           calls.token++;
           const params = new URLSearchParams(await request.text());
@@ -93,7 +99,7 @@ export async function pairedRuntime(options: {
       scope: "newsroom:read", resource: RESOURCE, state: CLIENT_STATE,
       code_challenge: challenge(VERIFIER), code_challenge_method: "S256" });
     for (const [key, value] of Object.entries(overrides)) value === null ? params.delete(key) : params.set(key, value);
-    const response = await issuer.fetch(ISSUER + "/authorize?" + params, { redirect: "manual" });
+    const response = await solveChallenge(issuer.fetch, ISSUER + "/authorize?" + params);
     assert.equal(response.status, 302, await response.clone().text());
     const github = new URL(response.headers.get("Location")!);
     return { cookie: response.headers.get("Set-Cookie")!.split(";")[0], state: github.searchParams.get("state")!,

@@ -1,3 +1,5 @@
+import { mintAdmittedAccess, accessContext } from "../src/access-admission.ts";
+import { ADMISSION_KEY } from "./challenge-fixture.ts";
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { Response as LocalResponse } from "miniflare";
@@ -101,6 +103,20 @@ describe("paired standalone issuer and read-only newsroom resource (local only)"
     } finally { await f.mf.dispose(); }
   });
 
+  it("redacts deferred storage JSON failures even when MCP reports a tool error with HTTP 200", async () => {
+    const f = await pairedRuntime();
+    try {
+      const key = "submissions/korda/2026-11-09/11111111-1111-4111-8111-111111111111.json";
+      await f.bucket.put(key, "SENSITIVE_PRIVATE_CONTENT invalid JSON");
+      const tokens = await f.tokens();
+      const response = await f.rpc(tokens.access_token, "tools/call", { name: "newsroom_read", arguments: { key } });
+      assert.equal(response.status, 200);
+      const text = await response.text();
+      assert.match(text, /storage_unavailable/); assert.doesNotMatch(text, /SENSITIVE_PRIVATE_CONTENT/);
+      assert.equal(JSON.parse(text).result.isError, true);
+    } finally { await f.mf.dispose(); }
+  });
+
   it("rejects old access after refresh and rejects the successor on the first request after revocation", async () => {
     const f = await pairedRuntime();
     try {
@@ -138,13 +154,13 @@ describe("paired standalone issuer and read-only newsroom resource (local only)"
     ];
     for (const value of values) {
       const f = await pairedRuntime({ introspection: () => LocalResponse.json(value) });
-      try { assert.equal((await f.rpc("nr1a." + "a".repeat(64) + "." + "b".repeat(64), "ping")).status, 401); }
+      try { assert.equal((await f.rpc(await mintAdmittedAccess("a".repeat(64), ADMISSION_KEY, accessContext(ISSUER, CLIENT, RESOURCE)), "ping")).status, 401); }
       finally { await f.mf.dispose(); }
     }
     for (const response of [new LocalResponse("{"), new LocalResponse("x".repeat(5000)),
       new LocalResponse(null, { status: 302, headers: { Location: "https://evil.invalid" } }), new LocalResponse(null, { status: 503 })]) {
       const f = await pairedRuntime({ introspection: () => response.clone() });
-      try { assert.equal((await f.rpc("nr1a." + "a".repeat(64) + "." + "b".repeat(64), "ping")).status, 503); }
+      try { assert.equal((await f.rpc(await mintAdmittedAccess("a".repeat(64), ADMISSION_KEY, accessContext(ISSUER, CLIENT, RESOURCE)), "ping")).status, 503); }
       finally { await f.mf.dispose(); }
     }
   });

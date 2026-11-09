@@ -2,6 +2,7 @@
  * state/data/credentials are synthetic. Uses an ephemeral self-signed TLS cert.
  * The harness intercepts only its own /test/* and /client/callback paths.
  */
+import { CHALLENGE_BINDINGS, ADMISSION_KEY, solveChallenge, mockSiteverify } from "../test/challenge-fixture.ts";
 import { createServer } from "node:https";
 import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
@@ -17,6 +18,7 @@ execFileSync("openssl", ["req", "-x509", "-newkey", "rsa:2048", "-nodes", "-days
   "-keyout", join(files, "key.pem"), "-out", join(files, "cert.pem")], { stdio: "ignore" });
 let runtime: Miniflare;
 let issuer: string, resource: string, redirect: string;
+const usedChallenges = new Set<string>();
 const upstream = new Map<string, string>();
 const results: Record<string, unknown>[] = [];
 const s256 = (value: string) => createHash("sha256").update(value).digest("base64url");
@@ -30,10 +32,10 @@ const server = createServer({ key: await readFile(join(files, "key.pem")), cert:
         outgoing.end(JSON.stringify(results)); return;
       }
       if (url.pathname === "/test/start") {
-        const start = await runtime.dispatchFetch(issuer + "/authorize?" + new URLSearchParams({
+        const start = await solveChallenge(runtime.dispatchFetch.bind(runtime), issuer + "/authorize?" + new URLSearchParams({
           response_type: "code", client_id: CLIENT, redirect_uri: redirect, resource,
           scope: "newsroom:read", state: "browser-state", code_challenge: s256(VERIFIER), code_challenge_method: "S256",
-        }), { redirect: "manual" });
+        }));
         if (start.status !== 302) throw new Error("Authorization failed");
         const github = new URL(start.headers.get("Location")!);
         const code = randomBytes(16).toString("hex"); upstream.set(code, github.searchParams.get("code_challenge")!);
@@ -95,6 +97,7 @@ redirect = "https://127.0.0.1:" + port + "/client/callback";
 const scripts = await candidateScripts();
 runtime = new Miniflare(convertV4MiniflareOptions({ workers: [
   { name: "issuer", modules: true, script: scripts.issuer, compatibilityDate: "2026-10-01", routes: ["localhost/*"], bindings: {
+    ...CHALLENGE_BINDINGS, ISSUER_ADMISSION_KEY: ADMISSION_KEY,
     ISSUER_ORIGIN: issuer, ISSUER_AUDIENCE: resource, ISSUER_REDIRECT_URI: redirect,
     ISSUER_CLIENT_ID: CLIENT, ISSUER_CLIENT_SECRET_SHA256: hash(CLIENT_SECRET),
     ISSUER_RESOURCE_ID: VALIDATOR, ISSUER_RESOURCE_SECRET_SHA256: hash(VALIDATOR_SECRET),
@@ -102,6 +105,8 @@ runtime = new Miniflare(convertV4MiniflareOptions({ workers: [
   }, ratelimits: { ISSUER_INGRESS_LIMIT: { namespace_id: "10021", simple: { limit: 20000, period: 60 } } },
   durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true },
     ISSUER_GUARD: { className: "IssuerGuard", useSQLite: true } }, outboundService: async request => {
+    if (request.url === "https://challenges.cloudflare.com/turnstile/v0/siteverify")
+      return mockSiteverify(request, new URL(issuer).hostname, usedChallenges);
     if (request.url === "https://github.com/login/oauth/access_token") {
       const params = new URLSearchParams(await request.text());
       if (upstream.get(params.get("code")!) !== s256(params.get("code_verifier")!)) return new Response(null, { status: 403 });
@@ -110,7 +115,7 @@ runtime = new Miniflare(convertV4MiniflareOptions({ workers: [
     return request.url === "https://api.github.com/user" ? Response.json({ id: 12345 }) : new Response(null, { status: 502 });
   } },
   { name: "resource", modules: true, script: scripts.resource, compatibilityDate: "2026-10-01", routes: ["127.0.0.1/*"],
-    bindings: { RESOURCE_AUDIENCE: resource, RESOURCE_ISSUER: issuer, RESOURCE_CLIENT_ID: CLIENT,
+    bindings: { RESOURCE_ADMISSION_KEY: ADMISSION_KEY, RESOURCE_AUDIENCE: resource, RESOURCE_ISSUER: issuer, RESOURCE_CLIENT_ID: CLIENT,
       RESOURCE_VALIDATOR_ID: VALIDATOR, RESOURCE_VALIDATOR_SECRET: VALIDATOR_SECRET },
     ratelimits: { RESOURCE_INGRESS_LIMIT: { namespace_id: "10022", simple: { limit: 20000, period: 60 } } },
     serviceBindings: { ISSUER: "issuer" }, r2Buckets: ["NEWSROOM"], outboundService: () => new Response(null, { status: 502 }) },
