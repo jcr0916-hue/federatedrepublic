@@ -122,12 +122,13 @@ export function readonlyS3Storage(config: ReadonlyS3Config, transport: S3Transpo
       ...(options.cursor ? { "continuation-token": options.cursor } : {}),
     });
     if (response.status !== 200) {
-      // R2 reports a malformed S3 continuation token as InvalidArgument.
+      // R2 can report a malformed S3 continuation token as InvalidContinuation.
       // Do not confuse missing/invalid cursors with credential or service errors.
       if (options.cursor && response.status === 400) {
         const body = await boundedText(response.body, 4096).catch(() => "");
         if (!body.includes("<!DOCTYPE") && !body.includes("<!ENTITY") &&
-            (tag(body, "Code") === "InvalidArgument" || tag(body, "Code") === "InvalidToken"))
+            (tag(body, "Code") === "InvalidContinuation" || tag(body, "Code") === "InvalidArgument" ||
+             tag(body, "Code") === "InvalidToken"))
           throw new Error("r2_invalid_cursor");
       }
       throw new Error("r2_list_unavailable");
