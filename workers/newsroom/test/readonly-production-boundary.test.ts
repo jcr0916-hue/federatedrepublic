@@ -11,6 +11,7 @@ const contract = JSON.parse(read("release/readonly-production-boundary.json")) a
   legacy: { worker: string; sourceEntrypoint: string; bundle: string; operation: string; requiredBindings: string[] };
   issuer: { workerName: string; sourceEntrypoint: string; bundle: string; requiredBindings: string[] };
   resource: { workerName: string; sourceEntrypoint: string; bundle: string; requiredBindings: string[] };
+  monitoring: { schema: string; status: string; mustVerifyBeforeRelease: boolean; forbiddenFields: string[] };
   prohibitedOauthTools: string[];
   excludedBindingsOnResource: string[];
   requiresApprovalFor: string[];
@@ -65,8 +66,8 @@ describe("review-only production release boundary (never deploys)", () => {
   });
 
   it("requires separate issuer introspection and excludes legacy desk secrets from resource", () => {
-    assert.equal(new Set(contract.issuer.requiredBindings).size, 13);
-    assert.equal(new Set(contract.resource.requiredBindings).size, 11);
+    assert.equal(new Set(contract.issuer.requiredBindings).size, 14);
+    assert.equal(new Set(contract.resource.requiredBindings).size, 12);
     assert.ok(contract.issuer.requiredBindings.includes("ISSUER_GRANTS"));
     assert.ok(contract.issuer.requiredBindings.includes("ISSUER_GUARD"));
     assert.ok(contract.resource.requiredBindings.includes("ISSUER"));
@@ -74,6 +75,12 @@ describe("review-only production release boundary (never deploys)", () => {
     assert.ok(contract.resource.requiredBindings.includes("R2_READ_BUCKET"));
     assert.ok(contract.resource.requiredBindings.includes("RESOURCE_INGRESS_LIMIT"));
     assert.ok(contract.issuer.requiredBindings.includes("ISSUER_INGRESS_LIMIT"));
+    assert.ok(contract.issuer.requiredBindings.includes("NEWSROOM_METRICS"));
+    assert.ok(contract.resource.requiredBindings.includes("NEWSROOM_METRICS"));
+    assert.equal(contract.monitoring.schema, "fixed-categorical-counters-v1");
+    assert.equal(contract.monitoring.status, "NOT_PROVISIONED_OR_TESTED");
+    assert.equal(contract.monitoring.mustVerifyBeforeRelease, true);
+    assert.ok(contract.monitoring.forbiddenFields.includes("submission body"));
     for (const name of contract.excludedBindingsOnResource) {
       assert.ok(!contract.resource.requiredBindings.includes(name), name);
     }
