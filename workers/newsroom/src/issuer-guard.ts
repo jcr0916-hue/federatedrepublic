@@ -2,6 +2,7 @@ import { DurableObject } from "cloudflare:workers";
 
 export type GuardBucket = "authorize" | "token" | "introspect" | "revoke";
 const LIMITS: Record<GuardBucket, number> = { authorize: 60, token: 240, introspect: 1200, revoke: 120 };
+const EPOCH = "authorization-epoch:v1";
 interface Window { startedAt: number; count: number }
 
 /** Coarse, authoritative per-registered-client budget. It bounds new grants and
@@ -9,6 +10,23 @@ interface Window { startedAt: number; count: number }
  * Only the issuer may select a registered client or invoke these internal methods.
  */
 export class IssuerGuard extends DurableObject {
+  /** Internal operator RPC only. No HTTP route exposes this control. The epoch
+   * is deliberately independent of expiring quota windows and never cached. */
+  currentEpoch(): number {
+    return this.ctx.storage.kv.get<number>(EPOCH) ?? 0;
+  }
+
+  async invalidateAll(expectedEpoch: number): Promise<{ changed: boolean; epoch: number }> {
+    return this.ctx.storage.transaction(async () => {
+      const epoch = this.currentEpoch();
+      if (!Number.isSafeInteger(expectedEpoch) || expectedEpoch < 0 ||
+          epoch !== expectedEpoch || epoch >= Number.MAX_SAFE_INTEGER)
+        return { changed: false, epoch };
+      this.ctx.storage.kv.put(EPOCH, epoch + 1);
+      return { changed: true, epoch: epoch + 1 };
+    });
+  }
+
   async admit(bucket: GuardBucket, now: number): Promise<{ allowed: boolean; retryAfter: number }> {
     if (!Object.hasOwn(LIMITS, bucket) || !Number.isSafeInteger(now) || now < 0)
       return { allowed: false, retryAfter: 60 };
@@ -37,7 +55,7 @@ export class IssuerGuard extends DurableObject {
         if (value && value.startedAt + 60_000 > now) next = Math.max(next, value.startedAt + 60_000);
       }
       if (next) await this.ctx.storage.setAlarm(next);
-      else await this.ctx.storage.deleteAll();
+      else for (const bucket of Object.keys(LIMITS)) this.ctx.storage.kv.delete(bucket);
     });
   }
 }

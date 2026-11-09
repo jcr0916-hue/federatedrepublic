@@ -32,10 +32,10 @@ describe("review-only production release boundary (never deploys)", () => {
   it("pins the distinct build entrypoints instead of promoting the KV OAuth bundle", () => {
     assert.deepEqual([
       contract.legacy.sourceEntrypoint, contract.issuer.sourceEntrypoint, contract.resource.sourceEntrypoint
-    ], ["src/index.ts", "src/issuer-candidate.ts", "src/resource-candidate.ts"]);
+    ], ["src/index.ts", "src/issuer-candidate.ts", "src/resource-s3-candidate.ts"]);
     assert.deepEqual([
       contract.legacy.bundle, contract.issuer.bundle, contract.resource.bundle
-    ], ["dist/worker.js", "dist/issuer-candidate.js", "dist/resource-candidate.js"]);
+    ], ["dist/worker.js", "dist/issuer-candidate.js", "dist/resource-s3-candidate.js"]);
     const original = read("src/index.ts");
     assert.match(original, /createNewsroomOAuth\(legacyAdapter\)/);
     for (const [script, input, output] of [
@@ -53,7 +53,7 @@ describe("review-only production release boundary (never deploys)", () => {
     assert.deepEqual(contract.allowedOAuthScopes, ["newsroom:read"]);
     assert.deepEqual(contract.allowedOAuthTools, ["newsroom_list", "newsroom_read"]);
     const issuer = read(contract.issuer.sourceEntrypoint);
-    const resource = read(contract.resource.sourceEntrypoint);
+    const resource = read("src/resource-candidate.ts");
     assert.ok(issuer.includes('const SCOPE = "newsroom:read"'));
     assert.ok(resource.includes('const SCOPE = "newsroom:read"'));
     assert.ok(resource.includes('new Set(["newsroom_list", "newsroom_read"])'));
@@ -66,11 +66,12 @@ describe("review-only production release boundary (never deploys)", () => {
 
   it("requires separate issuer introspection and excludes legacy desk secrets from resource", () => {
     assert.equal(new Set(contract.issuer.requiredBindings).size, 13);
-    assert.equal(new Set(contract.resource.requiredBindings).size, 8);
+    assert.equal(new Set(contract.resource.requiredBindings).size, 11);
     assert.ok(contract.issuer.requiredBindings.includes("ISSUER_GRANTS"));
     assert.ok(contract.issuer.requiredBindings.includes("ISSUER_GUARD"));
     assert.ok(contract.resource.requiredBindings.includes("ISSUER"));
-    assert.ok(contract.resource.requiredBindings.includes("NEWSROOM"));
+    assert.ok(!contract.resource.requiredBindings.includes("NEWSROOM"));
+    assert.ok(contract.resource.requiredBindings.includes("R2_READ_BUCKET"));
     assert.ok(contract.resource.requiredBindings.includes("RESOURCE_INGRESS_LIMIT"));
     assert.ok(contract.issuer.requiredBindings.includes("ISSUER_INGRESS_LIMIT"));
     for (const name of contract.excludedBindingsOnResource) {
@@ -79,7 +80,7 @@ describe("review-only production release boundary (never deploys)", () => {
     for (const secret of contract.legacy.requiredBindings.filter(x => x.startsWith("KEY_"))) {
       assert.ok(!contract.resource.requiredBindings.includes(secret), secret);
     }
-    const resource = read(contract.resource.sourceEntrypoint);
+    const resource = read("src/resource-candidate.ts");
     assert.ok(resource.includes('env.ISSUER.fetch'));
     assert.ok(resource.includes('verified.scope !== SCOPE'));
     assert.ok(resource.includes('verified.aud !== config.audience'));

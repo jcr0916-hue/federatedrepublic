@@ -14,6 +14,7 @@ export interface GrantBinding {
   clientId: string;
   editorId: string;
   audience: string;
+  epoch: number;
 }
 export interface AuthorizationBinding extends GrantBinding {
   redirectUri: string;
@@ -51,7 +52,8 @@ interface Grant extends GrantBinding {
 type State = Pending | Code | Grant | { phase: "closed" };
 const bound = (stored: GrantBinding, expected: GrantBinding) =>
   stored.clientId === expected.clientId && stored.editorId === expected.editorId &&
-  stored.audience === expected.audience;
+  stored.audience === expected.audience && Number.isSafeInteger(stored.epoch) &&
+  stored.epoch >= 0 && stored.epoch === expected.epoch;
 
 export class IssuerGrant extends DurableObject {
   /** Persist the transition and its expiration alarm inside one SQLite transaction. */
@@ -80,7 +82,8 @@ export class IssuerGrant extends DurableObject {
     binding: AuthorizationBinding; browserHash: string; upstreamHash: string;
     verifier: string; now: number;
   }): Promise<boolean> {
-    if (!nowIsValid(input.now) || !HASH.test(input.browserHash) ||
+    if (!nowIsValid(input.now) || !Number.isSafeInteger(input.binding.epoch) || input.binding.epoch < 0 ||
+        !HASH.test(input.browserHash) ||
         !HASH.test(input.upstreamHash) || !HASH.test(input.verifier) ||
         !CHALLENGE.test(input.binding.challenge) || !input.binding.clientState ||
         input.binding.clientState.length > 1024) return false;
@@ -182,7 +185,7 @@ export class IssuerGrant extends DurableObject {
       } satisfies RedeemedCode);
       await this.#write({
         clientId: input.expected.clientId, editorId: input.expected.editorId,
-        audience: input.expected.audience, phase: "active", accessHash: input.accessHash,
+        audience: input.expected.audience, epoch: input.expected.epoch, phase: "active", accessHash: input.accessHash,
         refreshHash: input.refreshHash, accessExpiresAt: input.now + 900,
         refreshExpiresAt: input.now + 28800, revoked: false,
       });

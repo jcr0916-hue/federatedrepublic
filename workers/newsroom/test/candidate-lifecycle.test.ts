@@ -134,7 +134,7 @@ describe("candidate compatibility, durable lifecycle and local abuse limits", ()
       const namespace = await f.mf.getDurableObjectNamespace("ISSUER_GRANTS", "issuer");
       const raw = namespace.get(namespace.idFromName("e".repeat(64)));
       const grant = raw as typeof raw & Pick<DurableObjectStub<IssuerGrant>, "start" | "claimUpstream" | "inspect">;
-      const input = { binding: { clientId: CLIENT, editorId: "12345", audience: RESOURCE, redirectUri: REDIRECT,
+      const input = { binding: { clientId: CLIENT, editorId: "12345", audience: RESOURCE, epoch: 0, redirectUri: REDIRECT,
         clientState: CLIENT_STATE, challenge: challenge(VERIFIER) }, browserHash: "a".repeat(64),
         upstreamHash: "b".repeat(64), verifier: "c".repeat(64), now: Math.floor(Date.now() / 1000) - 301 };
       assert.equal(await grant.start(input), true);

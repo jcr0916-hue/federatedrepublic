@@ -28,7 +28,7 @@ interface Env {
   ISSUER_GUARD: DurableObjectNamespace<IssuerGuard>;
   ISSUER_INGRESS_LIMIT: IngressRateLimiter;
 }
-interface Configuration extends GrantBinding {
+interface Configuration extends Omit<GrantBinding, "epoch"> {
   issuer: string;
   redirectUri: string;
   secretHash: string;
@@ -114,9 +114,13 @@ function redirect(binding: AuthorizationBinding, key: "code" | "error", value: s
 function stub(env: Env, grantId: string) {
   return env.ISSUER_GRANTS.get(env.ISSUER_GRANTS.idFromName(grantId));
 }
-const grantBinding = (config: Configuration): GrantBinding => ({
-  clientId: config.clientId, editorId: config.editorId, audience: config.audience,
-});
+const guard = (env: Env, config: Configuration) =>
+  env.ISSUER_GUARD.get(env.ISSUER_GUARD.idFromName(config.clientId));
+async function grantBinding(env: Env, config: Configuration): Promise<GrantBinding> {
+  const epoch = await guard(env, config).currentEpoch();
+  if (!Number.isSafeInteger(epoch) || epoch < 0) return fail(503, "issuer_unavailable");
+  return { clientId: config.clientId, editorId: config.editorId, audience: config.audience, epoch };
+}
 async function admit(env: Env, config: Configuration, bucket: GuardBucket): Promise<void> {
   const result = await env.ISSUER_GUARD.get(env.ISSUER_GUARD.idFromName(config.clientId)).admit(bucket, Date.now());
   if (!result.allowed) throw new RateLimitError(result.retryAfter);
@@ -154,7 +158,7 @@ async function authorize(request: Request, env: Env, config: Configuration): Pro
   const upstream = mintBoundCredential(grantId, "state");
   const verifier = mintGrantId();
   if (!(await stub(env, grantId).start({
-    binding: { clientId: config.clientId, editorId: config.editorId, audience: config.audience,
+    binding: { ...await grantBinding(env, config),
       redirectUri: config.redirectUri, clientState: params.get("state")!, challenge: params.get("code_challenge")! },
     browserHash: await sha256Hex(session), upstreamHash: await sha256Hex(upstream), verifier, now: now(),
   }))) return fail(503, "authorization_unavailable");
@@ -182,7 +186,7 @@ async function callback(
   if (!state || !session || state.grantId !== session.grantId) return fail(403, "invalid_browser_session");
   const grant = stub(env, state.grantId);
   const claimed = await grant.claimUpstream({ browserHash: session.credentialHash,
-    upstreamHash: state.credentialHash, expected: grantBinding(config), now: now() });
+    upstreamHash: state.credentialHash, expected: await grantBinding(env, config), now: now() });
   if (!claimed) return fail(403, "invalid_callback");
   if (cancelled) return redirect(claimed.binding, "error", "access_denied", config.issuer);
   const editorId = await issuerGitHubIdentity(params.get("code")!, claimed.verifier, config, transport);
@@ -218,7 +222,7 @@ async function consent(request: Request, env: Env, config: Configuration): Promi
   const approve = params.get("decision") === "approve";
   const binding = await stub(env, session.grantId).finishConsent({
     browserHash: session.credentialHash, csrfHash: await sha256Hex(params.get("csrf")!),
-    approve, codeHash: await sha256Hex(code), expected: grantBinding(config), now: now(),
+    approve, codeHash: await sha256Hex(code), expected: await grantBinding(env, config), now: now(),
   });
   if (!binding) return fail(403, "invalid_consent");
   return redirect(binding, approve ? "code" : "error", approve ? code : "access_denied", config.issuer);
@@ -244,7 +248,10 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
   // A failed client-authentication attempt cannot spend the legitimate client's
   // token, inspection or emergency revocation quota. Edge/source abuse controls
   // are still required, including at the resource's public MCP ingress.
-  await admit(env, config, path.slice(1) as "token" | "introspect" | "revoke");
+  // Inactive public bearer guesses must not consume the active editor's shared
+  // read quota. The authenticated validator still checks every token at its DO;
+  // local ingress controls bound requests before that service call.
+  if (!resourceSide) await admit(env, config, path.slice(1) as "token" | "revoke");
   if (path === "/token") {
     const isCode = params.get("grant_type") === "authorization_code";
     if (!isCode && params.get("grant_type") !== "refresh_token") return fail(400, "unsupported_grant_type");
@@ -257,7 +264,7 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
     const grant = stub(env, routed.grantId);
     const access = mintBoundCredential(routed.grantId, "access");
     const refresh = mintBoundCredential(routed.grantId, "refresh");
-    const issued = { expected: grantBinding(config), refreshHash: await sha256Hex(refresh), accessHash: await sha256Hex(access), now: now() };
+    const issued = { expected: await grantBinding(env, config), refreshHash: await sha256Hex(refresh), accessHash: await sha256Hex(access), now: now() };
     let accepted: boolean;
     if (isCode) {
       if (!/^[A-Za-z0-9._~-]{43,128}$/.test(params.get("code_verifier")!)) return fail(400, "invalid_grant");
@@ -273,8 +280,9 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
     if (!parameters(params, ["token", "token_type_hint"]) || params.get("token_type_hint") !== "access_token")
       return fail(400, "invalid_request");
     const routed = await routeBoundCredential(params.get("token")!, "access");
-    const active = routed && await stub(env, routed.grantId).inspect({ expected: grantBinding(config),
+    const active = routed && await stub(env, routed.grantId).inspect({ expected: await grantBinding(env, config),
       accessHash: routed.credentialHash, now: now() });
+    if (active) await admit(env, config, "introspect");
     return json(active ? { active: true, scope: SCOPE, aud: config.audience,
       iss: config.issuer, client_id: config.clientId, exp: active.expiresAt } : { active: false });
   }
@@ -282,7 +290,7 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
   // A hint is advisory; search both supported credential kinds.
   for (const kind of ["access", "refresh"] as const) {
     const routed = await routeBoundCredential(params.get("token")!, kind);
-    if (routed) await stub(env, routed.grantId).revoke({ expected: grantBinding(config),
+    if (routed) await stub(env, routed.grantId).revoke({ expected: await grantBinding(env, config),
       credentialHash: routed.credentialHash, kind });
   }
   return new Response(null, { status: 200, headers: headers() });
