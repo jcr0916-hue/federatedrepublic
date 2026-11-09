@@ -12,6 +12,7 @@ import {
 } from "../prototype/issuer-boundary.ts";
 import { boundedText, PolicyError, s256 } from "./policy.ts";
 import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-limit.ts";
+import { observe, type PrivacyCounterSink } from "./privacy-telemetry.ts";
 
 interface Env {
   ISSUER_ORIGIN: string;
@@ -27,6 +28,7 @@ interface Env {
   ISSUER_GRANTS: DurableObjectNamespace<IssuerGrant>;
   ISSUER_GUARD: DurableObjectNamespace<IssuerGuard>;
   ISSUER_INGRESS_LIMIT: IngressRateLimiter;
+  NEWSROOM_METRICS?: PrivacyCounterSink;
 }
 interface Configuration extends Omit<GrantBinding, "epoch"> {
   issuer: string;
@@ -151,7 +153,7 @@ async function authorize(request: Request, env: Env, config: Configuration): Pro
       !/^[A-Za-z0-9_-]{43}$/.test(params.get("code_challenge")!) ||
       params.get("code_challenge_method") !== "S256") return fail(400, "invalid_authorization_request");
   const ingressDenied = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "authorize");
-  if (ingressDenied) return ingressDenied;
+  if (ingressDenied) { observe(env, ingressDenied.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return ingressDenied; }
   await admit(env, config, "authorize");
   const grantId = mintGrantId();
   const session = mintBoundCredential(grantId, "browser");
@@ -184,7 +186,7 @@ async function callback(
   // Bound callback floods before grant routing / durable storage RPC.
   // Browser cookie and CSRF checks remain unchanged.
   const callbackIngress = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "callback");
-  if (callbackIngress) return callbackIngress;
+  if (callbackIngress) { observe(env, callbackIngress.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return callbackIngress; }
   const state = await routeBoundCredential(params.get("state")!, "state");
   const session = await browser(request);
   if (!state || !session || state.grantId !== session.grantId) return fail(403, "invalid_browser_session");
@@ -218,7 +220,7 @@ async function callback(
 async function consent(request: Request, env: Env, config: Configuration): Promise<Response> {
   if (request.headers.get("Origin") !== config.issuer) return fail(403, "origin_not_allowed");
   const consentIngress = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "consent");
-  if (consentIngress) return consentIngress;
+  if (consentIngress) { observe(env, consentIngress.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return consentIngress; }
   const params = await form(request);
   if (!parameters(params, ["csrf", "decision"]) || !/^[a-f0-9]{64}$/.test(params.get("csrf")!) ||
       !["approve", "deny"].includes(params.get("decision")!)) return fail(400, "invalid_consent");
@@ -257,7 +259,7 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
   if (path === "/token" || path === "/revoke") {
     const denied = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT,
       path === "/token" ? "token" : "revoke");
-    if (denied) return denied;
+    if (denied) { observe(env, denied.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return denied; }
   }
   // A failed client-authentication attempt cannot spend the legitimate client's
   // token, inspection or emergency revocation quota. Edge/source abuse controls
@@ -287,7 +289,7 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
       accepted = await grant.exchangeCode({ ...issued, codeHash: routed.credentialHash,
         challenge: await s256(params.get("code_verifier")!), redirectUri: config.redirectUri });
     } else accepted = await grant.refresh({ ...issued, presentedHash: routed.credentialHash });
-    if (!accepted) return fail(400, "invalid_grant");
+    if (!accepted) { if (!isCode) observe(env, "refresh_denied", "issuer"); return fail(400, "invalid_grant"); }
     return json({ access_token: access, refresh_token: refresh, token_type: "Bearer", expires_in: 900, scope: SCOPE });
   }
   if (path === "/introspect") {
@@ -340,10 +342,13 @@ export function createIssuerCandidate(dependencies: { githubTransport?: IssuerGi
         return fail(404, "not_found");
       } catch (error) {
         if (error instanceof RateLimitError) {
+          observe(env, "rate_limit_denied", "issuer");
           const response = json({ error: "rate_limited" }, 429);
           response.headers.set("Retry-After", String(error.retryAfter));
           return response;
         }
+        if (error instanceof PolicyError && error.status === 401) observe(env, "authentication_denied", "issuer");
+        if (!(error instanceof PolicyError) || error.status >= 500) observe(env, "issuer_unavailable", "issuer");
         return error instanceof PolicyError ? json({ error: error.publicCode }, error.status)
           : json({ error: "issuer_unavailable" }, 503);
       }
