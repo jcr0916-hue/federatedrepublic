@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "productionReady": false,
+  "releaseApproved": false,
+  "reviewPullRequest": "https://github.com/jcr0916-hue/federatedrepublic/pull/314",
+  "implementationCommit": "be72290afacf5f3e9531c7607ff5910f3fe3c7ad",
+  "supportedNodeCI": {
+    "node": "24.22.2",
+    "testsPassed": 111,
+    "testsFailed": 0,
+    "typecheckPassed": true,
+    "buildsPassed": 5,
+    "oauthRun": "https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42548852956",
+    "publishingRun": "https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42548852955"
+  },
+  "localRawBundleSha256": {
+    "worker.js": "e62ba0c0ccb9e89faf22a63672161f7a70792b0e886013c4bb76f1f7020bb6b3",
+    "fixture-worker.js": "616c8735cd5152608ef5a1ce22ed53ad41dca6af38aadfb2482b233d2c4ff6e5",
+    "issuer-candidate.js": "1384c21bcf2cd7e3a0ef69e8e052ad0bcea85b8636cd97bd549a6860d8facf8a",
+    "resource-candidate.js": "dc49d34bed6441f524bd3227202dbabfd4f0dd67e7576876d6dcaa9395bc842d",
+    "resource-s3-candidate.js": "d14d19047f7f4a9a3f5df386b8e195027521195e2b83a708cf28e370c125c1dd"
+  },
+  "hostedLegacyAcceptance": {
+    "passed": true,
+    "checksPassed": 149,
+    "worker": "newsroom-legacy-isolation-20261108",
+    "bucket": "newsroom-legacy-isolation-20261108",
+    "version": "adc0539d-c531-4e3c-8cd6-c7be627be253",
+    "deployment": "570b826c-3cbe-44cf-b3cf-42cd79301f10",
+    "sourceSha256": "8bd4c7352f6af43e4a6ff265671c7a832c4f37866e40f5f1022a14f45030db3a",
+    "sourceBytesMatchProduction": 7808,
+    "desks": ["corindal", "korda", "varek", "federal"],
+    "syntheticObjectCount": 6,
+    "workersDevEnabledAfterTest": false,
+    "previewsEnabledAfterTest": false,
+    "temporaryCredentialTransportKeyRemoved": true
+  },
+  "preservedProduction": {
+    "worker": "federated-republic-newsroom",
+    "version": "08a99769-3618-488e-adbd-30a8be38a788",
+    "deployment": "7a53aadb-d87e-46e5-b7b8-831970590373",
+    "mainCommitAtInspection": "98430167c1c5130b41d329d0b99887c29f35ea4f",
+    "mainProtectedAtInspection": false,
+    "repositoryRulesetCountAtInspection": 0
+  },
+  "connectedReaders": {
+    "s3AcceptanceListReadAndTwoPagePagination": "passed",
+    "verification04SyntheticList": "passed",
+    "deliberateWorkingGrantRevocation": false,
+    "existingIssuerUpgrade": false
+  },
+  "remainingGates": [
+    "dedicated-github-oauth-app-and-browser-consent",
+    "real-hosted-disposable-token-lifecycle",
+    "independent-security-and-operations-review",
+    "distributed-authorize-and-backend-abuse-controls",
+    "hosted-global-containment-secret-rotation-and-regional-rollback",
+    "administrative-main-protection-reconciled-with-archive-automation",
+    "presidential-merge-and-production-release-approval"
+  ]
+}

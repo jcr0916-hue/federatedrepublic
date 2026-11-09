@@ -22,7 +22,7 @@ const hash = (raw: string) => createHash("sha256").update(raw).digest("hex");
 const s256 = (raw: string) => createHash("sha256").update(raw).digest("base64url");
 const AUTH = "Basic " + Buffer.from(CLIENT + ":" + SECRET).toString("base64");
 const POST_HEADERS = { Authorization: AUTH, "Content-Type": "application/x-www-form-urlencoded" };
-const EXPECTED = { clientId: CLIENT, editorId: "12345", audience: AUDIENCE };
+const EXPECTED = { clientId: CLIENT, editorId: "12345", audience: AUDIENCE, epoch: 0 };
 const cookie = (response: { headers: { get(name: string): string | null } }) =>
   response.headers.get("set-cookie")!.split(";")[0];
 const changeSecret = (raw: string) => raw.slice(0, -1) + (raw.endsWith("f") ? "e" : "f");

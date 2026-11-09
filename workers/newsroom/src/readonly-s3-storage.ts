@@ -60,6 +60,11 @@ const queryString = (values: Record<string, string>) =>
     .sort(([a, av], [b, bv]) => a.localeCompare(b) || av.localeCompare(bv))
     .map(([k, v]) => k + "=" + v).join("&");
 
+async function readBody(response: Response, maximum: number, errorCode: string): Promise<string> {
+  try { return await boundedText(response.body, maximum); }
+  catch { throw new Error(errorCode); }
+}
+
 export function readonlyS3Storage(config: ReadonlyS3Config, transport: S3Transport = fetch): NewsroomReadStorage {
   const url = new URL(config.endpoint);
   // Restrict the authority to the R2 S3 HTTPS endpoint for the intended account.
@@ -105,9 +110,7 @@ export function readonlyS3Storage(config: ReadonlyS3Config, transport: S3Transpo
     if (response.status !== 200) throw new Error("r2_read_unavailable");
     const length = Number(response.headers.get("Content-Length") || "0");
     if (!Number.isFinite(length) || length > MAX_OBJECT_BYTES) throw new Error("r2_object_too_large");
-    const body = await response.arrayBuffer();
-    if (body.byteLength > MAX_OBJECT_BYTES) throw new Error("r2_object_too_large");
-    const raw = new TextDecoder("utf-8", { fatal: true }).decode(body);
+    const raw = await readBody(response, MAX_OBJECT_BYTES, "r2_object_too_large_or_invalid");
     return Object.freeze({ json: async () => JSON.parse(raw) }) as unknown as Awaited<ReturnType<R2Bucket["get"]>>;
   }
   async function list(options: R2ListOptions = {}) {
@@ -133,9 +136,7 @@ export function readonlyS3Storage(config: ReadonlyS3Config, transport: S3Transpo
       }
       throw new Error("r2_list_unavailable");
     }
-    const body = await response.arrayBuffer();
-    if (body.byteLength > MAX_LIST_BYTES) throw new Error("r2_list_too_large");
-    const xml = new TextDecoder("utf-8", { fatal: true }).decode(body);
+    const xml = await readBody(response, MAX_LIST_BYTES, "r2_list_too_large_or_invalid");
     if (!xml.includes("<ListBucketResult") || xml.includes("<!DOCTYPE") || xml.includes("<!ENTITY"))
       throw new Error("r2_invalid_list");
     const chunks = [...xml.matchAll(/<Contents>([\s\S]*?)<\/Contents>/g)];
@@ -146,7 +147,9 @@ export function readonlyS3Storage(config: ReadonlyS3Config, transport: S3Transpo
         throw new Error("r2_invalid_object_key");
       return { key };
     });
-    const truncated = tag(xml, "IsTruncated") === "true";
+    const flag = tag(xml, "IsTruncated");
+    if (flag !== "true" && flag !== "false") throw new Error("r2_invalid_list");
+    const truncated = flag === "true";
     const cursor = tag(xml, "NextContinuationToken") ?? undefined;
     if (truncated && !cursor) throw new Error("r2_missing_cursor");
     return { objects, truncated, cursor, delimitedPrefixes: [] } as unknown as R2Objects;

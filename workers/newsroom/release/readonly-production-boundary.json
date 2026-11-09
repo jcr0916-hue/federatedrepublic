@@ -46,11 +46,14 @@
   },
   "resource": {
     "workerName": "UNASSIGNED_DO_NOT_DEPLOY",
-    "sourceEntrypoint": "src/resource-candidate.ts",
-    "bundle": "dist/resource-candidate.js",
+    "sourceEntrypoint": "src/resource-s3-candidate.ts",
+    "bundle": "dist/resource-s3-candidate.js",
     "requiredBindings": [
       "ISSUER",
-      "NEWSROOM",
+      "R2_READ_ENDPOINT",
+      "R2_READ_BUCKET",
+      "R2_READ_ACCESS_KEY_ID",
+      "R2_READ_SECRET_ACCESS_KEY",
       "RESOURCE_AUDIENCE",
       "RESOURCE_CLIENT_ID",
       "RESOURCE_ISSUER",
@@ -65,6 +68,7 @@
     "publish"
   ],
   "excludedBindingsOnResource": [
+    "NEWSROOM",
     "KEY_CORINDAL",
     "KEY_EDITOR",
     "KEY_FEDERAL",

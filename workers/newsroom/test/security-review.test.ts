@@ -137,22 +137,20 @@ describe("security review regressions: credential lifecycle and availability", (
     } finally { await f.mf.dispose(); await rm(path, { recursive: true, force: true }); }
   });
 
-  it("documents the unresolved resource-mediated introspection exhaustion path without credentials", async () => {
+  it("keeps the active read quota available after more than a full quota of forged bearer attempts", async () => {
     const f = await pairedRuntime();
     try {
       const token = await f.tokens();
       const forged = "nr1a." + "a".repeat(64) + "." + "b".repeat(64);
-      // Every syntactically valid token invokes the validator-authenticated service
-      // binding. Authentication ordering alone cannot distinguish these callers.
-      // This is quota-exhaustion evidence, not a throughput benchmark. Consume
-      // each response in its own request lifetime; do not retain a batch of
-      // native-runtime response streams for later consumption.
-      for (let count = 0; count < 1200; count++) {
+      // Unknown credentials still reach authoritative inspection, but they cannot
+      // spend the active editor's quota. This tests admission isolation, not edge
+      // throughput or resistance to a distributed request-cost attack.
+      for (let count = 0; count < 1201; count++) {
         const response = await f.rpc(forged, "ping");
         assert.equal(response.status, 401);
         assert.deepEqual(await response.json(), { error: "invalid_token" });
       }
-      assert.equal((await f.rpc(token.access_token, "ping")).status, 503, "release blocker: edge/per-source abuse controls are still required");
+      assert.equal((await f.rpc(token.access_token, "ping")).status, 200);
       assert.equal((await f.clientPost("/revoke", { token: token.refresh_token })).status, 200, "revocation has its own quota");
     } finally { await f.mf.dispose(); }
   });

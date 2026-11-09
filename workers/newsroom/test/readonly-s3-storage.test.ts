@@ -75,6 +75,30 @@ describe("R2 S3 credential-scoped read adapter (mocked network only)", () => {
     const storage = readonlyS3Storage(config, async () => new Response(xml));
     await assert.rejects(storage.list({ prefix: "submissions/" }), /r2_invalid_object_key/);
   });
+
+  it("cancels oversized chunked object and list streams without buffering the full response", async () => {
+    for (const [operation, error] of [["get", /r2_object_too_large/], ["list", /r2_list_too_large/]] as const) {
+      let pulls = 0, cancelled = false;
+      const storage = readonlyS3Storage(config, async () => new Response(new ReadableStream({
+        pull(controller) {
+          pulls++;
+          controller.enqueue(new TextEncoder().encode("x".repeat(32_768)));
+          if (pulls > 100) controller.close();
+        },
+        cancel() { cancelled = true; },
+      })));
+      await assert.rejects(operation === "get" ? storage.get(key) : storage.list({ prefix: "submissions/" }), error);
+      assert.equal(cancelled, true);
+      assert.ok(pulls < 10, "must stop reading long before the full upstream response");
+    }
+  });
+
+  it("fails closed on missing or invalid pagination flags", async () => {
+    for (const flag of ["", "<IsTruncated>maybe</IsTruncated>"]) {
+      const storage = readonlyS3Storage(config, async () => new Response("<ListBucketResult>" + flag + "</ListBucketResult>"));
+      await assert.rejects(storage.list({ prefix: "submissions/" }), /r2_invalid_list/);
+    }
+  });
   it("follows S3 pagination using the returned continuation token", async () => {
     const seen: (string | null)[] = [];
     const storage = readonlyS3Storage(config, async request => {
