@@ -106,6 +106,15 @@ describe("R2 S3 credential-scoped read adapter (mocked network only)", () => {
     await assert.rejects(
       invalid.list({prefix: "submissions/"}), /r2_list_unavailable/);
 
+    const actualR2Code = readonlyS3Storage(config, async () => new Response(
+      '<Error><Code>InvalidContinuation</Code><Message>Continuation token is not valid</Message></Error>',
+      {status: 400, headers: {"Content-Type": "application/xml"}}));
+    await assert.rejects(
+      actualR2Code.list({prefix: "submissions/", cursor: "definitely-not-a-valid-cursor"}),
+      /r2_invalid_cursor/);
+    await assert.rejects(
+      actualR2Code.list({prefix: "submissions/"}), /r2_list_unavailable/);
+
     const unavailable = readonlyS3Storage(config, async () => new Response(
       '<Error><Code>AccessDenied</Code></Error>', {status: 403}));
     await assert.rejects(
