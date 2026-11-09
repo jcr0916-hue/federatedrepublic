@@ -548,5 +548,22 @@
     "Final callback Analytics Engine counter restoration is local/CI-tested, after hosted source snapshot",
     "No hosted Analytics Engine ingestion, real alert delivery, production rotation or external approval",
     "Test runner retains two inert synthetic secret_text bindings; all service/storage/DO bindings detached; no public or scheduled invocation"
-  ]
+  ],
+  "finalIsolationAudit": {
+    "callers": [
+      {
+        "caller": "newsroom-security-resource-20261109",
+        "target": "newsroom-security-issuer-20261109",
+        "binding": "ISSUER"
+      }
+    ],
+    "domains": [],
+    "testNamespaceOwners": [
+      "newsroom-security-issuer-20261109",
+      "newsroom-security-resource-20261109",
+      "newsroom-security-runner-20261109"
+    ]
+  },
+  "verifiedEngineeringCommit": "2e55bf4d54398339612c88bdf89705f9427b7b67",
+  "sourceSnapshotLimit": "Hosted recovery snapshot precedes only the final callback categorical-counter restoration; that path is verified by local and real CI regression."
 }

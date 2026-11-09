@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "2e55bf4d54398339612c88bdf89705f9427b7b67",
+  "pullRequest": 318,
+  "parent": {
+    "pr": 317,
+    "sha": "7cab06439c285e92f8d8d6d3bab7bcd8834cf7a5"
+  },
+  "node": "24.22.2",
+  "tests": {
+    "passed": 130,
+    "total": 130,
+    "suites": 29,
+    "failures": 0,
+    "skipped": 0
+  },
+  "ci": {
+    "oauth": {
+      "id": 42720818788,
+      "url": "https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42720818788",
+      "conclusion": "success",
+      "includes": [
+        "change detection",
+        "typecheck",
+        "130 tests",
+        "six builds",
+        "Newsroom readiness gate"
+      ]
+    },
+    "publishing": {
+      "id": 42720818555,
+      "url": "https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42720818555",
+      "conclusion": "success"
+    }
+  },
+  "bundleSHA256": {
+    "fixture-worker.js": "40f1452ddfb6e3f76244adc7d7554507f0b85b9c190af4214117e1a9fcf3297b",
+    "issuer-candidate.js": "ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac",
+    "worker.js": "b1ba7cff22cbbf0de4b1f855590e3b95c36b887aecd6cc27c1e6614d3db736a4",
+    "resource-s3-candidate.js": "59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9",
+    "hosted-recovery.js": "aac5745cf88b25f114b4d53b999dcdbae68418c5dbdd2cc24ec124e76a91cabe",
+    "resource-candidate.js": "35964ff5c7906e99e83e758dbd680030f275addc84ab3ef2ba491a0abc0f5d00"
+  },
+  "hostedMonitoring": {
+    "scope": "Only three newly-created newsroom-security test Workers, fixed-schema custom events, preceding hour",
+    "verifiedEvents": {
+      "revocation_succeeded": 1,
+      "refresh_failed": 3,
+      "service_failure": 1,
+      "containment_changed": 2,
+      "containment_stale": 8,
+      "refresh_succeeded": 1
+    },
+    "eventsWithQueryStringInRequestURL": 0,
+    "queryRunIds": [
+      "heqxhk7c7kqknfzky22naq7z",
+      "9rni94hykdxyzjveq7j5mrhk"
+    ],
+    "limits": "Not a complete privacy canary/export audit or alert-delivery proof; no real GitHub or Turnstile browser flow"
+  },
+  "currentMain": {
+    "sha": "98430167c1c5130b41d329d0b99887c29f35ea4f",
+    "protected": false,
+    "rulesets": []
+  },
+  "readOnlyFinalRefs": {
+    "314": "420897a5127794dacf11324947bfcf1ca86ef8ce",
+    "315": "b466ecfc81e1efe99b3b57ed584744cd03f82e14",
+    "316": "80ce22335dcc3dec5b37e9eb2cb1632eef2a378d",
+    "317": "7cab06439c285e92f8d8d6d3bab7bcd8834cf7a5"
+  },
+  "productionApproved": false,
+  "productionReady": false
+}
