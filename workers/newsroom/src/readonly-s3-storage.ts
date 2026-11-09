@@ -126,7 +126,7 @@ export function readonlyS3Storage(config: ReadonlyS3Config, transport: S3Transpo
       // Do not confuse missing/invalid cursors with credential or service errors.
       if (options.cursor && response.status === 400) {
         const body = await boundedText(response.body, 4096).catch(() => "");
-        if ( !body.includes("<!DOCTYPE") && !body.includes("<!ENTITY") &&
+        if (!body.includes("<!DOCTYPE") && !body.includes("<!ENTITY") &&
             (tag(body, "Code") === "InvalidArgument" || tag(body, "Code") === "InvalidToken"))
           throw new Error("r2_invalid_cursor");
       }
