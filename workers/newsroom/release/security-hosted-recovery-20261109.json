@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "status": "SYNTHETIC HOSTED CHECKS VERIFIED; NOT PRODUCTION APPROVAL",
+  "date": "2026-11-09",
+  "accountId": "5fa1569f8ddb79c8fcf2138a2ae3f090",
+  "basePR": 317,
+  "baseSHA": "7cab06439c285e92f8d8d6d3bab7bcd8834cf7a5",
+  "resources": {
+    "kv": "31137097da4e49a8a6f8df981ed51696",
+    "bucket": "newsroom-security-recovery-20261109"
+  },
+  "testType": "Private cron runner; real candidate state/HTTP handlers; synthetic grants, no real GitHub or Turnstile, native isolated R2 not production S3",
+  "counts": {
+    "seed": {
+      "passed": 33,
+      "total": 33,
+      "success": true
+    },
+    "outage": {
+      "passed": 4,
+      "total": 4,
+      "success": true
+    },
+    "recover": {
+      "passed": 15,
+      "total": 15,
+      "success": true
+    }
+  },
+  "results": {
+    "seed": {
+      "schemaVersion": 1,
+      "syntheticOnly": true,
+      "phase": "seed",
+      "success": true,
+      "checks": [
+        {
+          "check": "fresh-namespace-epoch-zero",
+          "pass": true
+        },
+        {
+          "check": "synthetic-pending-start",
+          "pass": true
+        },
+        {
+          "check": "synthetic-upstream-claim",
+          "pass": true
+        },
+        {
+          "check": "synthetic-verified-identity-transition",
+          "pass": true
+        },
+        {
+          "check": "synthetic-consent-transition",
+          "pass": true
+        },
+        {
+          "check": "real-issuer-code-exchange",
+          "pass": true
+        },
+        {
+          "check": "synthetic-pending-start",
+          "pass": true
+        },
+        {
+          "check": "synthetic-upstream-claim",
+          "pass": true
+        },
+        {
+          "check": "synthetic-verified-identity-transition",
+          "pass": true
+        },
+        {
+          "check": "synthetic-consent-transition",
+          "pass": true
+        },
+        {
+          "check": "real-issuer-code-exchange",
+          "pass": true
+        },
+        {
+          "check": "synthetic-pending-start",
+          "pass": true
+        },
+        {
+          "check": "synthetic-pending-start",
+          "pass": true
+        },
+        {
+          "check": "synthetic-upstream-claim",
+          "pass": true
+        },
+        {
+          "check": "synthetic-verified-identity-transition",
+          "pass": true
+        },
+        {
+          "check": "synthetic-consent-transition",
+          "pass": true
+        },
+        {
+          "check": "resource-active-before-containment",
+          "pass": true
+        },
+        {
+          "check": "isolated-native-bucket-read",
+          "pass": true
+        },
+        {
+          "check": "containment-cas-one-winner",
+          "pass": true
+        },
+        {
+          "check": "old-access-denied-after-containment",
+          "pass": true
+        },
+        {
+          "check": "old-refresh-denied-after-containment",
+          "pass": true
+        },
+        {
+          "check": "old-access-denied-after-containment",
+          "pass": true
+        },
+        {
+          "check": "old-refresh-denied-after-containment",
+          "pass": true
+        },
+        {
+          "check": "pending-login-denied-after-containment",
+          "pass": true
+        },
+        {
+          "check": "pending-code-denied-after-containment",
+          "pass": true
+        },
+        {
+          "check": "synthetic-pending-start",
+          "pass": true
+        },
+        {
+          "check": "synthetic-upstream-claim",
+          "pass": true
+        },
+        {
+          "check": "synthetic-verified-identity-transition",
+          "pass": true
+        },
+        {
+          "check": "synthetic-consent-transition",
+          "pass": true
+        },
+        {
+          "check": "real-issuer-code-exchange",
+          "pass": true
+        },
+        {
+          "check": "fresh-authorization-after-containment",
+          "pass": true
+        },
+        {
+          "check": "stale-containment-retry-no-change",
+          "pass": true
+        },
+        {
+          "check": "fresh-grant-survives-stale-retry",
+          "pass": true
+        }
+      ],
+      "limitations": [
+        "no real GitHub or Turnstile browser acceptance",
+        "native isolated R2 test; not S3 permission proof",
+        "not a multi-region outage test"
+      ]
+    },
+    "outage": {
+      "schemaVersion": 1,
+      "syntheticOnly": true,
+      "phase": "outage",
+      "success": true,
+      "checks": [
+        {
+          "check": "recovery-checkpoint-present",
+          "pass": true
+        },
+        {
+          "check": "epoch-persists-across-upload",
+          "pass": true
+        },
+        {
+          "check": "issuer-outage-fails-closed-at-resource",
+          "pass": true
+        },
+        {
+          "check": "issuer-outage-refresh-unavailable",
+          "pass": true
+        }
+      ],
+      "limitations": [
+        "no real GitHub or Turnstile browser acceptance",
+        "native isolated R2 test; not S3 permission proof",
+        "not a multi-region outage test"
+      ]
+    },
+    "recover": {
+      "schemaVersion": 1,
+      "syntheticOnly": true,
+      "phase": "recover",
+      "success": true,
+      "checks": [
+        {
+          "check": "recovery-checkpoint-present",
+          "pass": true
+        },
+        {
+          "check": "epoch-persists-across-upload",
+          "pass": true
+        },
+        {
+          "check": "old-access-still-denied-after-restart",
+          "pass": true
+        },
+        {
+          "check": "current-access-recovers-after-restart",
+          "pass": true
+        },
+        {
+          "check": "refresh-race-exactly-one-success",
+          "pass": true
+        },
+        {
+          "check": "refresh-replay-revokes-winning-family",
+          "pass": true
+        },
+        {
+          "check": "synthetic-pending-start",
+          "pass": true
+        },
+        {
+          "check": "synthetic-upstream-claim",
+          "pass": true
+        },
+        {
+          "check": "synthetic-verified-identity-transition",
+          "pass": true
+        },
+        {
+          "check": "synthetic-consent-transition",
+          "pass": true
+        },
+        {
+          "check": "real-issuer-code-exchange",
+          "pass": true
+        },
+        {
+          "check": "fresh-reconnect-read-recovers",
+          "pass": true
+        },
+        {
+          "check": "revoke-endpoint-succeeds",
+          "pass": true
+        },
+        {
+          "check": "revoked-access-immediately-denied",
+          "pass": true
+        },
+        {
+          "check": "second-epoch-containment",
+          "pass": true
+        }
+      ],
+      "limitations": [
+        "no real GitHub or Turnstile browser acceptance",
+        "native isolated R2 test; not S3 permission proof",
+        "not a multi-region outage test"
+      ]
+    }
+  },
+  "final": [
+    {
+      "name": "newsroom-security-issuer-20261109",
+      "bindings": [
+        {
+          "name": "ISSUER_ADMISSION_KEY",
+          "type": "secret_text"
+        },
+        {
+          "name": "ISSUER_AUDIENCE",
+          "type": "plain_text"
+        },
+        {
+          "name": "ISSUER_CLIENT_ID",
+          "type": "plain_text"
+        },
+        {
+          "name": "ISSUER_CLIENT_SECRET_SHA256",
+          "type": "secret_text"
+        },
+        {
+          "name": "ISSUER_EDITOR_ID",
+          "type": "plain_text"
+        },
+        {
+          "name": "ISSUER_GITHUB_CLIENT_ID",
+          "type": "plain_text"
+        },
+        {
+          "name": "ISSUER_GITHUB_CLIENT_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "name": "ISSUER_GRANTS",
+          "type": "durable_object_namespace",
+          "namespace_id": "69c09d17f17248d9be53abf069a2ab8b"
+        },
+        {
+          "name": "ISSUER_GUARD",
+          "type": "durable_object_namespace",
+          "namespace_id": "3df8a6744f034592a2e190e7865d4b84"
+        },
+        {
+          "name": "ISSUER_INGRESS_LIMIT",
+          "type": "ratelimit",
+          "namespace_id": "11109"
+        },
+        {
+          "name": "ISSUER_ORIGIN",
+          "type": "plain_text"
+        },
+        {
+          "name": "ISSUER_REDIRECT_URI",
+          "type": "plain_text"
+        },
+        {
+          "name": "ISSUER_RESOURCE_ID",
+          "type": "plain_text"
+        },
+        {
+          "name": "ISSUER_RESOURCE_SECRET_SHA256",
+          "type": "secret_text"
+        },
+        {
+          "name": "ISSUER_SESSION_KEY",
+          "type": "secret_text"
+        },
+        {
+          "name": "ISSUER_TURNSTILE_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "name": "ISSUER_TURNSTILE_SITE_KEY",
+          "type": "plain_text"
+        }
+      ],
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1,
+        "redact_query_string": true,
+        "logs": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "persist": true,
+          "invocation_logs": false
+        },
+        "traces": {
+          "enabled": false,
+          "persist": false,
+          "head_sampling_rate": 1
+        }
+      },
+      "subdomain": {
+        "enabled": false,
+        "previews_enabled": false
+      },
+      "schedules": [],
+      "deployment": {
+        "id": "3f08a1c5-e0ac-4fd3-ad7b-d9c3958dcf0d",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "jcr0916@gmail.com",
+        "annotations": {
+          "workers/message": "Automatic deployment on upload.",
+          "workers/triggered_by": "upload"
+        },
+        "versions": [
+          {
+            "version_id": "0e43c51d-0874-41de-8f75-3dc95d29d66b",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-09T23:25:10.319603Z"
+      }
+    },
+    {
+      "name": "newsroom-security-resource-20261109",
+      "bindings": [
+        {
+          "name": "ISSUER",
+          "type": "service",
+          "service": "newsroom-security-issuer-20261109"
+        },
+        {
+          "name": "NEWSROOM",
+          "type": "r2_bucket",
+          "bucket_name": "newsroom-security-recovery-20261109"
+        },
+        {
+          "name": "RESOURCE_ADMISSION_KEY",
+          "type": "secret_text"
+        },
+        {
+          "name": "RESOURCE_AUDIENCE",
+          "type": "plain_text"
+        },
+        {
+          "name": "RESOURCE_CLIENT_ID",
+          "type": "plain_text"
+        },
+        {
+          "name": "RESOURCE_INGRESS_LIMIT",
+          "type": "ratelimit",
+          "namespace_id": "11110"
+        },
+        {
+          "name": "RESOURCE_ISSUER",
+          "type": "plain_text"
+        },
+        {
+          "name": "RESOURCE_VALIDATOR_ID",
+          "type": "plain_text"
+        },
+        {
+          "name": "RESOURCE_VALIDATOR_SECRET",
+          "type": "secret_text"
+        }
+      ],
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1,
+        "redact_query_string": true,
+        "logs": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "persist": true,
+          "invocation_logs": false
+        },
+        "traces": {
+          "enabled": false,
+          "persist": false,
+          "head_sampling_rate": 1
+        }
+      },
+      "subdomain": {
+        "enabled": false,
+        "previews_enabled": false
+      },
+      "schedules": [],
+      "deployment": {
+        "id": "15fd6891-be7f-4c3d-af4c-ad02c5b4766a",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "jcr0916@gmail.com",
+        "annotations": {
+          "workers/message": "Automatic deployment on upload.",
+          "workers/triggered_by": "upload"
+        },
+        "versions": [
+          {
+            "version_id": "7d040230-0a7e-4e8d-ae95-9fa4ab6e6e29",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-09T23:25:11.988665Z"
+      }
+    },
+    {
+      "name": "newsroom-security-runner-20261109",
+      "bindings": [
+        {
+          "name": "CLIENT_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "name": "SESSION_KEY",
+          "type": "secret_text"
+        }
+      ],
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1,
+        "redact_query_string": true,
+        "logs": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "persist": true,
+          "invocation_logs": false
+        },
+        "traces": {
+          "enabled": false,
+          "persist": false,
+          "head_sampling_rate": 1
+        }
+      },
+      "subdomain": {
+        "enabled": false,
+        "previews_enabled": false
+      },
+      "schedules": [],
+      "deployment": {
+        "id": "5fc092db-867c-43cd-a4c3-c7bb87282c07",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "jcr0916@gmail.com",
+        "annotations": {
+          "workers/message": "Automatic deployment on upload.",
+          "workers/triggered_by": "upload"
+        },
+        "versions": [
+          {
+            "version_id": "f7c58da4-973e-4bdc-9fcc-08267650d4bb",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-09T23:26:45.037104Z"
+      }
+    }
+  ],
+  "productionDeployment": {
+    "id": "7a53aadb-d87e-46e5-b7b8-831970590373",
+    "source": "api",
+    "strategy": "percentage",
+    "author_email": "jcr0916@gmail.com",
+    "annotations": {
+      "workers/triggered_by": "secret"
+    },
+    "versions": [
+      {
+        "version_id": "08a99769-3618-488e-adbd-30a8be38a788",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-11-06T17:58:21.011268Z"
+  },
+  "limitations": [
+    "No real GitHub/Turnstile/browser lifecycle proof",
+    "No hosted S3 permission proof in this run; inherited predecessor S3 evidence preserved",
+    "Immediate code update with persistent namespaces; not a process-kill or regional outage test",
+    "Final callback Analytics Engine counter restoration is local/CI-tested, after hosted source snapshot",
+    "No hosted Analytics Engine ingestion, real alert delivery, production rotation or external approval",
+    "Test runner retains two inert synthetic secret_text bindings; all service/storage/DO bindings detached; no public or scheduled invocation"
+  ]
+}

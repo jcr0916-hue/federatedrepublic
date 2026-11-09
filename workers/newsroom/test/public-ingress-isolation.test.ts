@@ -30,24 +30,26 @@ describe("OAuth public ingress isolation", () => {
     } finally { await f.mf.dispose(); }
   });
 
-  it("bounds callbacks before provider requests and without allowing cookie/CSRF bypass", async () => {
+  it("rejects unproved callbacks before source quota and preserves a legitimate callback", async () => {
     const f = await pairedRuntime({ issuerIngressLimit: 2 });
     try {
       const pending = await f.start();
-      for (const expected of [403, 403, 429]) {
+      for (const expected of [403, 403, 403]) {
         const response = await f.issuer.fetch(ISSUER + "/oauth/callback?" +
           new URLSearchParams({ state: pending.state, code: "synthetic-code" }), { redirect: "manual" });
         assert.equal(response.status, expected);
       }
       assert.equal(f.calls.token, 0);
       assert.equal(f.calls.user, 0);
+      await f.login(pending);
+      assert.equal(f.calls.token, 1, "missing-cookie traffic cannot spend valid callback admission");
     } finally { await f.mf.dispose(); }
   });
 
-  it("bounds malformed consent floods independently of token issuance", async () => {
+  it("rejects unproved consent before quota and preserves legitimate issuance", async () => {
     const f = await pairedRuntime({ issuerIngressLimit: 2 });
     try {
-      for (const expected of [403, 403, 429]) {
+      for (const expected of [403, 403, 403]) {
         const response = await f.issuer.fetch(ISSUER + "/consent", {
           method: "POST", headers: { Origin: ISSUER, "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams({ csrf: "a".repeat(64), decision: "approve" }).toString(),
@@ -55,6 +57,7 @@ describe("OAuth public ingress isolation", () => {
         assert.equal(response.status, expected);
       }
       assert.equal(f.calls.token, 0);
+      assert.ok((await f.tokens()).access_token);
     } finally { await f.mf.dispose(); }
   });
 });

@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "releaseApproved": false,
+  "productionReady": false,
+  "status": "NOT APPROVED FOR DEPLOYMENT",
+  "accountId": "5fa1569f8ddb79c8fcf2138a2ae3f090",
+  "compatibilityDate": "2026-10-01",
+  "issuer": {
+    "workerName": "NOT_APPROVED_ISSUER",
+    "source": "src/issuer-candidate.ts",
+    "metadata": {
+      "main_module": "issuer-candidate.js",
+      "compatibility_date": "2026-10-01",
+      "bindings": [
+        {
+          "type": "plain_text",
+          "name": "ISSUER_ORIGIN",
+          "text": "https://UNASSIGNED.invalid"
+        },
+        {
+          "type": "plain_text",
+          "name": "ISSUER_AUDIENCE",
+          "text": "https://UNASSIGNED.invalid/mcp"
+        },
+        {
+          "type": "plain_text",
+          "name": "ISSUER_CLIENT_ID",
+          "text": "UNASSIGNED"
+        },
+        {
+          "type": "plain_text",
+          "name": "ISSUER_RESOURCE_ID",
+          "text": "UNASSIGNED_VALIDATOR"
+        },
+        {
+          "type": "plain_text",
+          "name": "ISSUER_EDITOR_ID",
+          "text": "UNASSIGNED"
+        },
+        {
+          "type": "plain_text",
+          "name": "ISSUER_REDIRECT_URI",
+          "text": "https://UNASSIGNED.invalid/callback"
+        },
+        {
+          "type": "plain_text",
+          "name": "ISSUER_GITHUB_CLIENT_ID",
+          "text": "UNASSIGNED"
+        },
+        {
+          "type": "plain_text",
+          "name": "ISSUER_TURNSTILE_SITE_KEY",
+          "text": "UNASSIGNED"
+        },
+        {
+          "type": "secret_text",
+          "name": "ISSUER_CLIENT_SECRET_SHA256",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "secret_text",
+          "name": "ISSUER_RESOURCE_SECRET_SHA256",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "secret_text",
+          "name": "ISSUER_GITHUB_CLIENT_SECRET",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "secret_text",
+          "name": "ISSUER_ADMISSION_KEY",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "secret_text",
+          "name": "ISSUER_SESSION_KEY",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "secret_text",
+          "name": "ISSUER_TURNSTILE_SECRET",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "durable_object_namespace",
+          "name": "ISSUER_GRANTS",
+          "class_name": "IssuerGrant"
+        },
+        {
+          "type": "durable_object_namespace",
+          "name": "ISSUER_GUARD",
+          "class_name": "IssuerGuard"
+        },
+        {
+          "type": "ratelimit",
+          "name": "ISSUER_INGRESS_LIMIT",
+          "namespace_id": "ASSIGN_FRESH_APPROVED_ID",
+          "simple": {
+            "limit": 120,
+            "period": 60
+          }
+        },
+        {
+          "type": "analytics_engine",
+          "name": "NEWSROOM_METRICS",
+          "dataset": "ASSIGN_DEDICATED_ISSUER_DATASET"
+        }
+      ],
+      "observability": {
+        "enabled": true,
+        "redact_query_string": true,
+        "logs": {
+          "enabled": true,
+          "invocation_logs": false,
+          "head_sampling_rate": 1
+        },
+        "traces": {
+          "enabled": false,
+          "persist": false
+        }
+      },
+      "logpush": false,
+      "migrations": {
+        "new_tag": "reviewed-initial-v1",
+        "new_sqlite_classes": [
+          "IssuerGrant",
+          "IssuerGuard"
+        ]
+      }
+    }
+  },
+  "resource": {
+    "workerName": "NOT_APPROVED_RESOURCE",
+    "source": "src/resource-s3-candidate.ts",
+    "metadata": {
+      "main_module": "resource-s3-candidate.js",
+      "compatibility_date": "2026-10-01",
+      "bindings": [
+        {
+          "type": "service",
+          "name": "ISSUER",
+          "service": "NOT_APPROVED_ISSUER"
+        },
+        {
+          "type": "plain_text",
+          "name": "RESOURCE_AUDIENCE",
+          "text": "https://UNASSIGNED.invalid/mcp"
+        },
+        {
+          "type": "plain_text",
+          "name": "RESOURCE_ISSUER",
+          "text": "https://UNASSIGNED.invalid"
+        },
+        {
+          "type": "plain_text",
+          "name": "RESOURCE_CLIENT_ID",
+          "text": "UNASSIGNED"
+        },
+        {
+          "type": "plain_text",
+          "name": "RESOURCE_VALIDATOR_ID",
+          "text": "UNASSIGNED_VALIDATOR"
+        },
+        {
+          "type": "plain_text",
+          "name": "R2_READ_ENDPOINT",
+          "text": "https://UNASSIGNED.r2.cloudflarestorage.com/"
+        },
+        {
+          "type": "plain_text",
+          "name": "R2_READ_BUCKET",
+          "text": "UNASSIGNED"
+        },
+        {
+          "type": "secret_text",
+          "name": "RESOURCE_VALIDATOR_SECRET",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "secret_text",
+          "name": "RESOURCE_ADMISSION_KEY",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "secret_text",
+          "name": "R2_READ_ACCESS_KEY_ID",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "secret_text",
+          "name": "R2_READ_SECRET_ACCESS_KEY",
+          "text": "PROVISION_PRIVATELY_AFTER_APPROVAL"
+        },
+        {
+          "type": "ratelimit",
+          "name": "RESOURCE_INGRESS_LIMIT",
+          "namespace_id": "ASSIGN_DISTINCT_APPROVED_ID",
+          "simple": {
+            "limit": 600,
+            "period": 60
+          }
+        },
+        {
+          "type": "analytics_engine",
+          "name": "NEWSROOM_METRICS",
+          "dataset": "ASSIGN_DEDICATED_RESOURCE_DATASET"
+        }
+      ],
+      "observability": {
+        "enabled": true,
+        "redact_query_string": true,
+        "logs": {
+          "enabled": true,
+          "invocation_logs": false,
+          "head_sampling_rate": 1
+        },
+        "traces": {
+          "enabled": false,
+          "persist": false
+        }
+      },
+      "logpush": false
+    }
+  },
+  "prohibited": [
+    "NEWSROOM native R2 binding on production resource",
+    "KEY_* desk credentials on resource",
+    "acceptance runner or its privileged mint/containment bindings in production",
+    "provider/KV default bundle as new OAuth issuer",
+    "reuse existing authentication namespaces",
+    "production deploy without explicit approval"
+  ]
+}

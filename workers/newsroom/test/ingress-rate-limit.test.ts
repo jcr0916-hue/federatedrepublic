@@ -24,24 +24,22 @@ describe("fail-closed ingress rate-limit behavior", () => {
     assert.deepEqual(keys, ["mcp:2001:db8::1", "mcp:2001:db8::1", "mcp:unattributed", "authorize:unattributed"]);
   });
 
-  it("prevents local excessive MCP traffic from spending the global introspection quota", async () => {
+  it("rejects fabricated traffic before charging the legitimate source budget", async () => {
     const f = await pairedRuntime({ resourceIngressLimit: 2 });
     try {
       const token = await f.tokens();
-      const forged = "nr1a." + "a".repeat(64) + "." + "b".repeat(64);
-      const statuses: number[] = [];
+      const forged = "nr1a." + ["a", "b", "c"].map(c => c.repeat(64)).join(".");
       for (let i = 0; i < 30; i++) {
         const response = await f.rpc(forged, "ping");
-        statuses.push(response.status);
-        await response.arrayBuffer();
-        if (response.status === 429) break;
+        assert.equal(response.status, 401); await response.arrayBuffer();
       }
-      assert.ok(statuses.includes(429), "local rate binding must reject abusive traffic");
-      assert.ok(statuses.every(s => [401, 429].includes(s)), "forged tokens cannot authorize");
-      // The limiter intentionally also protects legitimate callers sharing an
-      // IP; operational WAF and routing policy must account for this tradeoff.
-      const response = await f.rpc(token.access_token, "ping");
-      assert.equal(response.status, 429);
+      assert.equal((await f.rpc(token.access_token, "ping")).status, 200);
+      let limited = false;
+      for (let i = 0; i < 30 && !limited; i++) {
+        const response = await f.rpc(token.access_token, "ping");
+        limited = response.status === 429; await response.arrayBuffer();
+      }
+      assert.equal(limited, true, "admitted traffic remains bounded");
     } finally { await f.mf.dispose(); }
   });
 });

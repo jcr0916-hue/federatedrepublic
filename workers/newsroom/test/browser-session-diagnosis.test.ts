@@ -1,4 +1,6 @@
 /** Failure classification only; never logs browser credentials or contacts GitHub. */
+import { mintAdmittedCredential } from "../src/access-admission.ts";
+import { CHALLENGE_BINDINGS } from "./challenge-fixture.ts";
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { pairedRuntime, ISSUER } from "./candidate-harness.ts";
@@ -35,7 +37,7 @@ describe("callback browser-session failure diagnosis", () => {
       const response = await f.issuer.fetch(ISSUER + "/oauth/callback?" + new URLSearchParams({
         state: a.state, code: "unused-synthetic-code",
       }), { redirect: "manual", headers: {
-        Cookie: "__Host-newsroom-issuer=" + mintBoundCredential(routed.grantId, "browser"),
+        Cookie: "__Host-newsroom-issuer=" + await mintAdmittedCredential(routed.grantId, "browser", CHALLENGE_BINDINGS.ISSUER_SESSION_KEY, "issuer-browser:v1\n" + ISSUER),
       } });
       assert.equal(response.status, 403);
       assert.deepEqual(await response.json(), { error: "invalid_callback" });
@@ -47,7 +49,8 @@ describe("callback browser-session failure diagnosis", () => {
   it("reports an expired stored session as invalid_callback when its browser cookie is still presented", async () => {
     const f = await pairedRuntime();
     try {
-      const id = mintGrantId(), session = mintBoundCredential(id, "browser"), state = mintBoundCredential(id, "state");
+      const id = mintGrantId(), session = await mintAdmittedCredential(id, "browser", CHALLENGE_BINDINGS.ISSUER_SESSION_KEY, "issuer-browser:v1\n" + ISSUER),
+        state = await mintAdmittedCredential(id, "state", CHALLENGE_BINDINGS.ISSUER_SESSION_KEY, "issuer-browser:v1\n" + ISSUER);
       const ns = await f.mf.getDurableObjectNamespace("ISSUER_GRANTS", "issuer");
       const raw = ns.get(ns.idFromName(id));
       const grant = raw as typeof raw & Pick<DurableObjectStub<IssuerGrant>, "start">;
@@ -83,9 +86,9 @@ describe("callback browser-session failure diagnosis", () => {
         redirect_uri: "https://client.candidate.invalid/callback", scope: "read",
         state: "synthetic", code_challenge: "a".repeat(43), code_challenge_method: "S256",
       }), { redirect: "manual" });
-      assert.equal(start.status, 302);
+      assert.equal(start.status, 200);
       const header = start.headers.get("set-cookie")!;
-      assert.match(header, /^__Host-newsroom-issuer=nr1b\./);
+      assert.match(header, /^__Host-newsroom-admission=[a-f0-9]{64};/);
       assert.match(header, /; Path=\/; Secure; HttpOnly; SameSite=Lax; Max-Age=300$/);
       assert.doesNotMatch(header, /Domain=/i);
     } finally { await f.mf.dispose(); }

@@ -10,11 +10,16 @@ import { issuerGitHubIdentity, type IssuerGitHubTransport } from "./issuer-githu
 import {
   mintGrantId, mintBoundCredential, routeBoundCredential, sha256Hex, verifyConfidentialClient,
 } from "../prototype/issuer-boundary.ts";
+import { accessContext, mintAdmittedAccess, mintAdmittedCredential, verifyAccessAdmission, verifyCredentialAdmission } from "./access-admission.ts";
+import { challengePage, verifyAuthorizationChallenge, type ChallengeConfig } from "./authorization-challenge.ts";
+import { observeResponse, securityEvent } from "./security-events.ts";
 import { boundedText, PolicyError, s256 } from "./policy.ts";
 import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-limit.ts";
 import { observe, type PrivacyCounterSink } from "./privacy-telemetry.ts";
 
-interface Env {
+interface Env extends ChallengeConfig {
+  ISSUER_ADMISSION_KEY: string;
+  ISSUER_SESSION_KEY: string;
   ISSUER_ORIGIN: string;
   ISSUER_CLIENT_ID: string;
   ISSUER_CLIENT_SECRET_SHA256: string;
@@ -74,7 +79,8 @@ function configuration(env: Env): Configuration {
         typeof env.ISSUER_GITHUB_CLIENT_ID !== "string" || !env.ISSUER_GITHUB_CLIENT_ID ||
         env.ISSUER_GITHUB_CLIENT_ID.length > 256 ||
         typeof env.ISSUER_GITHUB_CLIENT_SECRET !== "string" || !env.ISSUER_GITHUB_CLIENT_SECRET ||
-        env.ISSUER_GITHUB_CLIENT_SECRET.length > 4096 || !env.ISSUER_GRANTS) throw new Error();
+        env.ISSUER_GITHUB_CLIENT_SECRET.length > 4096 || !env.ISSUER_GRANTS || !/^[a-f0-9]{64}$/.test(env.ISSUER_ADMISSION_KEY) ||
+        !/^[a-f0-9]{64}$/.test(env.ISSUER_SESSION_KEY) || env.ISSUER_SESSION_KEY === env.ISSUER_ADMISSION_KEY) throw new Error();
     return { issuer: issuer.origin, redirectUri: env.ISSUER_REDIRECT_URI,
       audience: env.ISSUER_AUDIENCE, clientId: env.ISSUER_CLIENT_ID,
       editorId: env.ISSUER_EDITOR_ID, secretHash: env.ISSUER_CLIENT_SECRET_SHA256,
@@ -96,10 +102,14 @@ async function form(request: Request): Promise<URLSearchParams> {
     return fail(400, "invalid_request");
   }
 }
-async function browser(request: Request) {
+const sessionContext = (env: Env) => "issuer-browser:v1\n" + env.ISSUER_ORIGIN;
+async function browser(request: Request, env: Env) {
   const values = (request.headers.get("Cookie") ?? "").split(";").map(x => x.trim())
     .filter(x => x.startsWith(COOKIE + "="));
-  return values.length === 1 ? routeBoundCredential(values[0].slice(COOKIE.length + 1), "browser") : null;
+  if (values.length !== 1) return null;
+  const raw = values[0].slice(COOKIE.length + 1);
+  return await verifyCredentialAdmission(raw, "nr1b", env.ISSUER_SESSION_KEY, sessionContext(env))
+    ? routeBoundCredential(raw, "browser") : null;
 }
 function cookie(h: Headers, value: string, clear = false): void {
   h.set("Set-Cookie", COOKIE + "=" + value +
@@ -123,16 +133,30 @@ async function grantBinding(env: Env, config: Configuration): Promise<GrantBindi
   if (!Number.isSafeInteger(epoch) || epoch < 0) return fail(503, "issuer_unavailable");
   return { clientId: config.clientId, editorId: config.editorId, audience: config.audience, epoch };
 }
-async function admit(env: Env, config: Configuration, bucket: GuardBucket): Promise<void> {
-  const result = await env.ISSUER_GUARD.get(env.ISSUER_GUARD.idFromName(config.clientId)).admit(bucket, Date.now());
-  if (!result.allowed) throw new RateLimitError(result.retryAfter);
+async function admit(env: Env, config: Configuration, bucket: GuardBucket, units = 1): Promise<void> {
+  const id = bucket === "challenge" ? "anonymous-challenge:v1:" + config.clientId : config.clientId;
+  const result = await env.ISSUER_GUARD.get(env.ISSUER_GUARD.idFromName(id)).admit(bucket, Date.now(), units);
+  if (!result.allowed) {
+    if (bucket !== "challenge") securityEvent("issuer", "rate_limit_exhausted",
+      bucket === "storage" ? "introspect" : bucket, 429);
+    if (bucket === "revoke") securityEvent("issuer", "revocation_failed", "revoke", 429);
+    throw new RateLimitError(result.retryAfter);
+  }
 }
 class RateLimitError extends Error {
   constructor(readonly retryAfter: number) { super("rate_limited"); }
 }
 
 async function authorize(request: Request, env: Env, config: Configuration): Promise<Response> {
-  const params = new URL(request.url).searchParams;
+  let challengeToken = "";
+  let params = new URL(request.url).searchParams;
+  if (request.method === "POST") {
+    if (request.headers.get("Origin") !== config.issuer) return fail(403, "origin_not_allowed");
+    const posted = await form(request);
+    if (!parameters(posted, ["authorization", "cf-turnstile-response"])) return fail(400, "invalid_request");
+    params = new URLSearchParams(posted.get("authorization")!);
+    challengeToken = posted.get("cf-turnstile-response")!;
+  }
   // Historical ChatGPT read shorthand is narrowly normalized for this one
   // pre-registered client; supplied audiences and all broader scopes still fail.
   if (params.getAll("scope").length === 1 && params.get("scope") === "read") {
@@ -154,10 +178,15 @@ async function authorize(request: Request, env: Env, config: Configuration): Pro
       params.get("code_challenge_method") !== "S256") return fail(400, "invalid_authorization_request");
   const ingressDenied = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "authorize");
   if (ingressDenied) { observe(env, ingressDenied.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return ingressDenied; }
+  if (request.method === "GET") return challengePage(params, env);
+  // Bound distributed Siteverify costs separately; this anonymous budget can
+  // shed new sign-ins under attack without touching existing authenticated work.
+  await admit(env, config, "challenge");
+  await verifyAuthorizationChallenge(request, params, challengeToken, env);
   await admit(env, config, "authorize");
   const grantId = mintGrantId();
-  const session = mintBoundCredential(grantId, "browser");
-  const upstream = mintBoundCredential(grantId, "state");
+  const session = await mintAdmittedCredential(grantId, "browser", env.ISSUER_SESSION_KEY, sessionContext(env));
+  const upstream = await mintAdmittedCredential(grantId, "state", env.ISSUER_SESSION_KEY, sessionContext(env));
   const verifier = mintGrantId();
   if (!(await stub(env, grantId).start({
     binding: { ...await grantBinding(env, config),
@@ -183,20 +212,22 @@ async function callback(
     : parameters(params, ["state", "code"], ["iss"])) ||
       (params.has("iss") && params.get("iss") !== GITHUB_ISSUER) ||
       (!cancelled && !/^[\x21-\x7e]{1,1024}$/.test(params.get("code")!))) return fail(400, "invalid_callback");
-  // Bound callback floods before grant routing / durable storage RPC.
-  // Browser cookie and CSRF checks remain unchanged.
+  const stateProof = await verifyCredentialAdmission(params.get("state")!, "nr1s", env.ISSUER_SESSION_KEY, sessionContext(env));
+  const state = stateProof ? await routeBoundCredential(params.get("state")!, "state") : null;
+  const session = await browser(request, env);
+  if (!state || !session || state.grantId !== session.grantId) {
+    observe(env, "authentication_denied", "issuer");
+    return fail(403, "invalid_browser_session");
+  }
   const callbackIngress = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "callback");
   if (callbackIngress) { observe(env, callbackIngress.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return callbackIngress; }
-  const state = await routeBoundCredential(params.get("state")!, "state");
-  const session = await browser(request);
-  if (!state || !session || state.grantId !== session.grantId) { observe(env, "authentication_denied", "issuer"); return fail(403, "invalid_browser_session"); }
   const grant = stub(env, state.grantId);
   const claimed = await grant.claimUpstream({ browserHash: session.credentialHash,
     upstreamHash: state.credentialHash, expected: await grantBinding(env, config), now: now() });
   if (!claimed) return fail(403, "invalid_callback");
   if (cancelled) return redirect(claimed.binding, "error", "access_denied", config.issuer);
   const editorId = await issuerGitHubIdentity(params.get("code")!, claimed.verifier, config, transport);
-  const successorSession = mintBoundCredential(state.grantId, "browser");
+  const successorSession = await mintAdmittedCredential(state.grantId, "browser", env.ISSUER_SESSION_KEY, sessionContext(env));
   const csrf = mintGrantId();
   const binding = await grant.authenticate({ browserHash: session.credentialHash,
     verifiedEditorId: editorId, successorBrowserHash: await sha256Hex(successorSession),
@@ -219,13 +250,14 @@ async function callback(
 
 async function consent(request: Request, env: Env, config: Configuration): Promise<Response> {
   if (request.headers.get("Origin") !== config.issuer) return fail(403, "origin_not_allowed");
-  const consentIngress = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "consent");
-  if (consentIngress) { observe(env, consentIngress.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return consentIngress; }
   const params = await form(request);
   if (!parameters(params, ["csrf", "decision"]) || !/^[a-f0-9]{64}$/.test(params.get("csrf")!) ||
       !["approve", "deny"].includes(params.get("decision")!)) return fail(400, "invalid_consent");
-  const session = await browser(request);
+  const session = await browser(request, env);
   if (!session) return fail(403, "invalid_browser_session");
+  const consentIngress = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "consent");
+  if (consentIngress) { observe(env, consentIngress.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return consentIngress; }
+
   const code = mintBoundCredential(session.grantId, "code");
   const approve = params.get("decision") === "approve";
   const binding = await stub(env, session.grantId).finishConsent({
@@ -278,7 +310,8 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
     const routed = await routeBoundCredential(params.get(isCode ? "code" : "refresh_token")!, isCode ? "code" : "refresh");
     if (!routed) return fail(400, "invalid_grant");
     const grant = stub(env, routed.grantId);
-    const access = mintBoundCredential(routed.grantId, "access");
+    const access = await mintAdmittedAccess(routed.grantId, env.ISSUER_ADMISSION_KEY,
+      accessContext(config.issuer, config.clientId, config.audience));
     const refresh = mintBoundCredential(routed.grantId, "refresh");
     const issued = { expected: await grantBinding(env, config), refreshHash: await sha256Hex(refresh), accessHash: await sha256Hex(access), now: now() };
     let accepted: boolean;
@@ -289,16 +322,24 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
       accepted = await grant.exchangeCode({ ...issued, codeHash: routed.credentialHash,
         challenge: await s256(params.get("code_verifier")!), redirectUri: config.redirectUri });
     } else accepted = await grant.refresh({ ...issued, presentedHash: routed.credentialHash });
+    if (!isCode) securityEvent("issuer", accepted ? "refresh_succeeded" : "refresh_failed", "token", accepted ? 200 : 400);
     if (!accepted) { if (!isCode) observe(env, "refresh_denied", "issuer"); return fail(400, "invalid_grant"); }
     return json({ access_token: access, refresh_token: refresh, token_type: "Bearer", expires_in: 900, scope: SCOPE });
   }
   if (path === "/introspect") {
-    if (!parameters(params, ["token", "token_type_hint"]) || params.get("token_type_hint") !== "access_token")
+    if (!parameters(params, ["token", "token_type_hint"], ["request_cost"]) || params.get("token_type_hint") !== "access_token")
       return fail(400, "invalid_request");
-    const routed = await routeBoundCredential(params.get("token")!, "access");
+    const cost = params.get("request_cost") ?? "0";
+    if (!/^(?:0|[1-9][0-9]{0,2})$/.test(cost) || Number(cost) > 201) return fail(400, "invalid_request");
+    const token = params.get("token")!;
+    const proof = await verifyAccessAdmission(token, env.ISSUER_ADMISSION_KEY, accessContext(config.issuer, config.clientId, config.audience));
+    const routed = proof ? await routeBoundCredential(token, "access") : null;
     const active = routed && await stub(env, routed.grantId).inspect({ expected: await grantBinding(env, config),
       accessHash: routed.credentialHash, now: now() });
-    if (active) await admit(env, config, "introspect");
+    if (active) {
+      await admit(env, config, "introspect");
+      if (Number(cost)) await admit(env, config, "storage", Number(cost));
+    }
     return json(active ? { active: true, scope: SCOPE, aud: config.audience,
       iss: config.issuer, client_id: config.clientId, exp: active.expiresAt } : { active: false });
   }
@@ -309,11 +350,12 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
     if (routed) await stub(env, routed.grantId).revoke({ expected: await grantBinding(env, config),
       credentialHash: routed.credentialHash, kind });
   }
+  securityEvent("issuer", "revocation_succeeded", "revoke", 200);
   return new Response(null, { status: 200, headers: headers() });
 }
 
 export function createIssuerCandidate(dependencies: { githubTransport?: IssuerGitHubTransport } = {}) {
-  return {
+  const handler = {
     async fetch(request: Request, env: Env): Promise<Response> {
       try {
         const config = configuration(env);
@@ -322,7 +364,8 @@ export function createIssuerCandidate(dependencies: { githubTransport?: IssuerGi
         if (request.url.length > 8192) return fail(414, "request_too_large");
         const origin = request.headers.get("Origin");
         if (origin !== null && origin !== config.issuer) return fail(403, "origin_not_allowed");
-        if (request.method === "GET" && url.pathname === "/authorize") return await authorize(request, env, config);
+        if (["GET", "POST"].includes(request.method) && url.pathname === "/authorize" && (request.method === "GET" || !url.search))
+          return await authorize(request, env, config);
         if (request.method === "GET" && url.pathname === "/oauth/callback")
           return await callback(request, env, config, dependencies.githubTransport);
         if (url.search) return fail(400, "invalid_request");
@@ -355,5 +398,10 @@ export function createIssuerCandidate(dependencies: { githubTransport?: IssuerGi
       }
     },
   };
+  return { async fetch(request: Request, env: Env): Promise<Response> {
+    const response = await handler.fetch(request, env);
+    observeResponse("issuer", new URL(request.url).pathname, response.status);
+    return response;
+  } };
 }
 export default createIssuerCandidate();

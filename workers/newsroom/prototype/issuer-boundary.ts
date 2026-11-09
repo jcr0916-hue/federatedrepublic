@@ -40,10 +40,12 @@ export async function sha256Hex(raw: string): Promise<string> {
 export async function routeBoundCredential(
   raw: string, kind: CredentialKind,
 ): Promise<{ grantId: string; credentialHash: string } | null> {
-  if (typeof raw !== "string" || raw.length !== 134) return null;
+  if (typeof raw !== "string" || raw.length > 220) return null;
   const parts = raw.split(".");
-  if (parts.length !== 3 || parts[0] !== KIND_TAG[kind] ||
-      !HEX_256.test(parts[1]) || !HEX_256.test(parts[2])) return null;
+  const admitted = ["access", "browser", "state"].includes(kind) && parts.length === 5;
+  if (parts.length !== (admitted ? 5 : 3) || parts[0] !== KIND_TAG[kind] ||
+      !HEX_256.test(parts[1]) || !HEX_256.test(parts[2]) ||
+      (admitted && (!/^[0-9]{1,12}$/.test(parts[3]) || !HEX_256.test(parts[4])))) return null;
   return { grantId: parts[1], credentialHash: await sha256Hex(raw) };
 }
 

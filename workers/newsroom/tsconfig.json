@@ -16,6 +16,7 @@
     "src/**/*.ts",
     "test/**/*.ts",
     "scripts/**/*.ts",
-    "cloudflare.config.ts"
+    "cloudflare.config.ts",
+    "acceptance/**/*.ts"
   ]
 }
