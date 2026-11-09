@@ -93,7 +93,7 @@ describe("R2 S3 credential-scoped read adapter (mocked network only)", () => {
     assert.equal(first.cursor, "page-two");
     const second = await storage.list({prefix: "submissions/korda/", limit: 1, cursor: first.cursor});
     assert.equal(second.truncated, false);
-    assert.equal(second.cursor, undefined);
+    assert.equal("cursor" in second, false);
     assert.notEqual(first.objects[0].key, second.objects[0].key);
     assert.deepEqual(seen, [null, "page-two"]);
   });
