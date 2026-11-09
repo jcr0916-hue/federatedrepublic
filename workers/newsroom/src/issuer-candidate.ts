@@ -189,7 +189,7 @@ async function callback(
   if (callbackIngress) { observe(env, callbackIngress.status === 429 ? "rate_limit_denied" : "issuer_unavailable", "issuer"); return callbackIngress; }
   const state = await routeBoundCredential(params.get("state")!, "state");
   const session = await browser(request);
-  if (!state || !session || state.grantId !== session.grantId) return fail(403, "invalid_browser_session");
+  if (!state || !session || state.grantId !== session.grantId) { observe(env, "authentication_denied", "issuer"); return fail(403, "invalid_browser_session"); }
   const grant = stub(env, state.grantId);
   const claimed = await grant.claimUpstream({ browserHash: session.credentialHash,
     upstreamHash: state.credentialHash, expected: await grantBinding(env, config), now: now() });
@@ -348,6 +348,7 @@ export function createIssuerCandidate(dependencies: { githubTransport?: IssuerGi
           return response;
         }
         if (error instanceof PolicyError && error.status === 401) observe(env, "authentication_denied", "issuer");
+        if (new URL(request.url).pathname === "/revoke") observe(env, "revocation_failed", "issuer");
         if (!(error instanceof PolicyError) || error.status >= 500) observe(env, "issuer_unavailable", "issuer");
         return error instanceof PolicyError ? json({ error: error.publicCode }, error.status)
           : json({ error: "issuer_unavailable" }, 503);
