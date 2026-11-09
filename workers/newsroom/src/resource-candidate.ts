@@ -70,7 +70,7 @@ return {
       const origin = request.headers.get("Origin");
       if (origin !== null && origin !== config.origin) return json({ error: "origin_not_allowed" }, 403);
       const bearer = request.headers.get("Authorization");
-      if (!bearer || !/^Bearer nr1a\.[a-f0-9]{64}\.[a-f0-9]{64}$/.test(bearer)) return unauthorized(config.metadata);
+      if (!bearer || !/^Bearer nr1a\.[a-f0-9]{64}\.[a-f0-9]{64}$/.test(bearer)) { observe(env, "authentication_denied", "resource"); return unauthorized(config.metadata); }
       const ingressDenied = await requireIngressBudget(request, env.RESOURCE_INGRESS_LIMIT, "mcp");
       if (ingressDenied) { observe(env, ingressDenied.status === 429 ? "rate_limit_denied" : "resource_unavailable", "resource"); return ingressDenied; }
       // Only a service binding can contact the configured issuer. The OAuth
