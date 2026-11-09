@@ -75,4 +75,47 @@ describe("R2 S3 credential-scoped read adapter (mocked network only)", () => {
     const storage = readonlyS3Storage(config, async () => new Response(xml));
     await assert.rejects(storage.list({ prefix: "submissions/" }), /r2_invalid_object_key/);
   });
+  it("follows S3 pagination using the returned continuation token", async () => {
+    const seen: (string | null)[] = [];
+    const storage = readonlyS3Storage(config, async request => {
+      const token = new URL(request.url).searchParams.get("continuation-token");
+      seen.push(token);
+      if (!token) return new Response(
+        '<ListBucketResult><IsTruncated>true</IsTruncated><Contents><Key>' + key +
+        '</Key></Contents><NextContinuationToken>page-two</NextContinuationToken></ListBucketResult>');
+      assert.equal(token, "page-two");
+      const nextKey = key.replace("11111111-1111-4111-8111-111111111111", "22222222-2222-4222-8222-222222222222");
+      return new Response('<ListBucketResult><IsTruncated>false</IsTruncated><Contents><Key>' +
+        nextKey + '</Key></Contents></ListBucketResult>');
+    });
+    const first = await storage.list({prefix: "submissions/korda/", limit: 1});
+    assert.equal(first.truncated, true);
+    assert.equal(first.cursor, "page-two");
+    const second = await storage.list({prefix: "submissions/korda/", limit: 1, cursor: first.cursor});
+    assert.equal(second.truncated, false);
+    assert.equal(second.cursor, undefined);
+    assert.notEqual(first.objects[0].key, second.objects[0].key);
+    assert.deepEqual(seen, [null, "page-two"]);
+  });
+
+  it("distinguishes rejected continuation tokens from S3 backend errors", async () => {
+    const invalid = readonlyS3Storage(config, async () => new Response(
+      '<Error><Code>InvalidArgument</Code><Message>Bad continuation token</Message></Error>',
+      {status: 400, headers: {"Content-Type": "application/xml"}}));
+    await assert.rejects(
+      invalid.list({prefix: "submissions/", cursor: "bogus-token"}), /r2_invalid_cursor/);
+    await assert.rejects(
+      invalid.list({prefix: "submissions/"}), /r2_list_unavailable/);
+
+    const unavailable = readonlyS3Storage(config, async () => new Response(
+      '<Error><Code>AccessDenied</Code></Error>', {status: 403}));
+    await assert.rejects(
+      unavailable.list({prefix: "submissions/", cursor: "bogus-token"}), /r2_list_unavailable/);
+
+    const genericBadRequest = readonlyS3Storage(config, async () => new Response(
+      '<Error><Code>InvalidBucketName</Code></Error>', {status: 400}));
+    await assert.rejects(
+      genericBadRequest.list({prefix: "submissions/", cursor: "bogus-token"}), /r2_list_unavailable/);
+  });
+
 });
