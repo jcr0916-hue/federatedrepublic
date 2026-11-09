@@ -4,17 +4,21 @@
  */
 import { mcp } from "./legacy.js";
 import { boundedText, PolicyError } from "./policy.ts";
-import { readonlyStorage } from "./readonly-storage.ts";
+import { readonlyStorage, type NewsroomReadStorage } from "./readonly-storage.ts";
 import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-limit.ts";
 
-interface Env {
+export interface Env {
   RESOURCE_AUDIENCE: string;
   RESOURCE_ISSUER: string;
   RESOURCE_CLIENT_ID: string;
   RESOURCE_VALIDATOR_ID: string;
   RESOURCE_VALIDATOR_SECRET: string;
   ISSUER: Fetcher;
-  NEWSROOM: R2Bucket;
+  NEWSROOM?: R2Bucket;
+  R2_READ_ENDPOINT?: string;
+  R2_READ_BUCKET?: string;
+  R2_READ_ACCESS_KEY_ID?: string;
+  R2_READ_SECRET_ACCESS_KEY?: string;
   RESOURCE_INGRESS_LIMIT: IngressRateLimiter;
 }
 const SCOPE = "newsroom:read";
@@ -33,7 +37,7 @@ function configuration(env: Env) {
         typeof env.RESOURCE_VALIDATOR_ID !== "string" || !/^[A-Za-z0-9_-]{1,100}$/.test(env.RESOURCE_VALIDATOR_ID) ||
         env.RESOURCE_CLIENT_ID === env.RESOURCE_VALIDATOR_ID ||
         typeof env.RESOURCE_VALIDATOR_SECRET !== "string" || !/^[\x21-\x7e]{32,256}$/.test(env.RESOURCE_VALIDATOR_SECRET) ||
-        !env.ISSUER || !env.NEWSROOM) throw new Error();
+        !env.ISSUER) throw new Error();
     return { audience: env.RESOURCE_AUDIENCE, issuer: issuer.origin, origin: audience.origin,
       metadata: audience.origin + "/.well-known/oauth-protected-resource/mcp" };
   } catch { throw new PolicyError(503, "resource_not_configured"); }
@@ -44,7 +48,11 @@ function unauthorized(metadata: string): Response {
   return json({ error: "invalid_token" }, 401, headers);
 }
 
-export default {
+export function createResourceCandidate(storageFactory: (env: Env) => NewsroomReadStorage = env => {
+  if (!env.NEWSROOM) throw new PolicyError(503, "resource_not_configured");
+  return readonlyStorage(env.NEWSROOM);
+}) {
+return {
   async fetch(request: Request, env: Env): Promise<Response> {
     try {
       const config = configuration(env), url = new URL(request.url);
@@ -121,7 +129,7 @@ export default {
       const clean = new Request(config.audience, { method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify(rpc) });
       // Only the preserved read handlers can be reached after the allowlist.
-      const result = await mcp(clean, { desk: "editorial", editor: true }, { NEWSROOM: readonlyStorage(env.NEWSROOM) });
+      const result = await mcp(clean, { desk: "editorial", editor: true }, { NEWSROOM: storageFactory(env) });
       if (rpc.method !== "tools/list" || !result.ok) return result;
       const data = await result.json() as { result: { tools: Record<string, unknown>[] } };
       data.result.tools = data.result.tools.filter(tool => READ_TOOLS.has(String(tool.name))).map(tool => {
@@ -136,3 +144,6 @@ export default {
     }
   },
 };
+}
+
+export default createResourceCandidate();
