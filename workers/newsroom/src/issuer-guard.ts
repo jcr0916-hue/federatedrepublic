@@ -1,4 +1,5 @@
 import { DurableObject } from "cloudflare:workers";
+import { observe, type TelemetryEnv } from "./privacy-telemetry.ts";
 
 export type GuardBucket = "authorize" | "token" | "introspect" | "revoke";
 const LIMITS: Record<GuardBucket, number> = { authorize: 60, token: 240, introspect: 1200, revoke: 120 };
@@ -9,7 +10,7 @@ interface Window { startedAt: number; count: number }
  * expensive grant RPC, including bad credential attempts. It is not a bot/WAF substitute.
  * Only the issuer may select a registered client or invoke these internal methods.
  */
-export class IssuerGuard extends DurableObject {
+export class IssuerGuard extends DurableObject<TelemetryEnv> {
   /** Internal operator RPC only. No HTTP route exposes this control. The epoch
    * is deliberately independent of expiring quota windows and never cached. */
   currentEpoch(): number {
@@ -17,7 +18,7 @@ export class IssuerGuard extends DurableObject {
   }
 
   async invalidateAll(expectedEpoch: number): Promise<{ changed: boolean; epoch: number }> {
-    return this.ctx.storage.transaction(async () => {
+    const result = await this.ctx.storage.transaction(async () => {
       const epoch = this.currentEpoch();
       if (!Number.isSafeInteger(expectedEpoch) || expectedEpoch < 0 ||
           epoch !== expectedEpoch || epoch >= Number.MAX_SAFE_INTEGER)
@@ -25,6 +26,8 @@ export class IssuerGuard extends DurableObject {
       this.ctx.storage.kv.put(EPOCH, epoch + 1);
       return { changed: true, epoch: epoch + 1 };
     });
+    if (result.changed) observe(this.env, "containment_epoch_changed", "operator");
+    return result;
   }
 
   async admit(bucket: GuardBucket, now: number): Promise<{ allowed: boolean; retryAfter: number }> {
