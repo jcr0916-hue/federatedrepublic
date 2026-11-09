@@ -6,7 +6,7 @@
 export type IngressRateLimiter = { limit(input: { key: string }): Promise<{ success: boolean }> };
 
 export async function requireIngressBudget(
-  request: Request, limiter: IngressRateLimiter | undefined, route: "authorize" | "mcp",
+  request: Request, limiter: IngressRateLimiter | undefined, route: "authorize" | "mcp" | "callback" | "consent" | "token" | "revoke",
 ): Promise<Response | null> {
   // Missing/failed deployment binding must never silently turn protection off.
   if (!limiter || typeof limiter.limit !== "function")

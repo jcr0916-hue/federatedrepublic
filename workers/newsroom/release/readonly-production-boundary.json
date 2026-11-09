@@ -41,7 +41,8 @@
       "ISSUER_AUDIENCE",
       "ISSUER_RESOURCE_ID",
       "ISSUER_RESOURCE_SECRET_SHA256",
-      "ISSUER_INGRESS_LIMIT"
+      "ISSUER_INGRESS_LIMIT",
+      "NEWSROOM_METRICS"
     ]
   },
   "resource": {
@@ -59,7 +60,8 @@
       "RESOURCE_ISSUER",
       "RESOURCE_VALIDATOR_ID",
       "RESOURCE_VALIDATOR_SECRET",
-      "RESOURCE_INGRESS_LIMIT"
+      "RESOURCE_INGRESS_LIMIT",
+      "NEWSROOM_METRICS"
     ]
   },
   "prohibitedOauthTools": [
@@ -85,5 +87,29 @@
     "change-production-permissions",
     "revoke-live-grants",
     "configure-edge-rate-limiting"
-  ]
+  ],
+  "monitoring": {
+    "schema": "fixed-categorical-counters-v1",
+    "issuerDataset": "NEW_DEDICATED_ISSUER_ANALYTICS_ENGINE_BINDING_REQUIRED",
+    "resourceDataset": "NEW_DEDICATED_RESOURCE_ANALYTICS_ENGINE_BINDING_REQUIRED",
+    "allowedFields": [
+      "category",
+      "surface",
+      "count"
+    ],
+    "forbiddenFields": [
+      "Authorization",
+      "Cookie",
+      "code",
+      "state",
+      "token",
+      "refresh_token",
+      "client_secret",
+      "request URL",
+      "IP address",
+      "submission body"
+    ],
+    "status": "NOT_PROVISIONED_OR_TESTED",
+    "mustVerifyBeforeRelease": true
+  }
 }

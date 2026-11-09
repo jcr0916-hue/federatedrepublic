@@ -6,6 +6,7 @@ import { mcp } from "./legacy.js";
 import { boundedText, PolicyError } from "./policy.ts";
 import { readonlyStorage, type NewsroomReadStorage } from "./readonly-storage.ts";
 import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-limit.ts";
+import { observe, type PrivacyCounterSink } from "./privacy-telemetry.ts";
 
 export interface Env {
   RESOURCE_AUDIENCE: string;
@@ -20,6 +21,7 @@ export interface Env {
   R2_READ_ACCESS_KEY_ID?: string;
   R2_READ_SECRET_ACCESS_KEY?: string;
   RESOURCE_INGRESS_LIMIT: IngressRateLimiter;
+  NEWSROOM_METRICS?: PrivacyCounterSink;
 }
 const SCOPE = "newsroom:read";
 const READ_TOOLS = new Set(["newsroom_list", "newsroom_read"]);
@@ -68,9 +70,9 @@ return {
       const origin = request.headers.get("Origin");
       if (origin !== null && origin !== config.origin) return json({ error: "origin_not_allowed" }, 403);
       const bearer = request.headers.get("Authorization");
-      if (!bearer || !/^Bearer nr1a\.[a-f0-9]{64}\.[a-f0-9]{64}$/.test(bearer)) return unauthorized(config.metadata);
+      if (!bearer || !/^Bearer nr1a\.[a-f0-9]{64}\.[a-f0-9]{64}$/.test(bearer)) { observe(env, "authentication_denied", "resource"); return unauthorized(config.metadata); }
       const ingressDenied = await requireIngressBudget(request, env.RESOURCE_INGRESS_LIMIT, "mcp");
-      if (ingressDenied) return ingressDenied;
+      if (ingressDenied) { observe(env, ingressDenied.status === 429 ? "rate_limit_denied" : "resource_unavailable", "resource"); return ingressDenied; }
       // Only a service binding can contact the configured issuer. The OAuth
       // client's secret never authenticates this resource-side inspection.
       let verified: Record<string, unknown>;
@@ -85,11 +87,11 @@ return {
         const value: unknown = JSON.parse(await boundedText(response.body, 4096));
         if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error();
         verified = value as Record<string, unknown>;
-      } catch { return json({ error: "issuer_unavailable" }, 503); }
+      } catch { observe(env, "issuer_unavailable", "resource"); return json({ error: "issuer_unavailable" }, 503); }
       if (verified.active !== true || verified.iss !== config.issuer || verified.aud !== config.audience ||
           verified.client_id !== env.RESOURCE_CLIENT_ID || verified.scope !== SCOPE ||
           !Number.isSafeInteger(verified.exp) || Number(verified.exp) <= Date.now() / 1000)
-        return unauthorized(config.metadata);
+        { observe(env, "authentication_denied", "resource"); return unauthorized(config.metadata); }
       if (request.headers.get("Content-Type")?.split(";")[0].trim().toLowerCase() !== "application/json")
         return json({ error: "unsupported_media_type" }, 415);
       let rpc: Record<string, unknown>;
@@ -139,6 +141,7 @@ return {
       });
       return json(data);
     } catch (error) {
+      observe(env, "resource_unavailable", "resource");
       return json({ error: error instanceof PolicyError ? error.publicCode : "resource_unavailable" },
         error instanceof PolicyError ? error.status : 503);
     }
