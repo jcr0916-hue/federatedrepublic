@@ -120,7 +120,17 @@ export function readonlyS3Storage(config: ReadonlyS3Config, transport: S3Transpo
       "list-type": "2", prefix, "max-keys": String(limit),
       ...(options.cursor ? { "continuation-token": options.cursor } : {}),
     });
-    if (response.status !== 200) throw new Error("r2_list_unavailable");
+    if (response.status !== 200) {
+      // R2 reports a malformed S3 continuation token as InvalidArgument.
+      // Do not confuse missing/invalid cursors with credential or service errors.
+      if (options.cursor && response.status === 400) {
+        const body = await response.text();
+        if (body.length <= 4096 && !body.includes("<!DOCTYPE") && !body.includes("<!ENTITY") &&
+            (tag(body, "Code") === "InvalidArgument" || tag(body, "Code") === "InvalidToken"))
+          throw new Error("r2_invalid_cursor");
+      }
+      throw new Error("r2_list_unavailable");
+    }
     const body = await response.arrayBuffer();
     if (body.byteLength > MAX_LIST_BYTES) throw new Error("r2_list_too_large");
     const xml = new TextDecoder("utf-8", { fatal: true }).decode(body);
