@@ -21,3 +21,11 @@ Cloudflare's Object Read only S3 token must be enforced by the R2 service; GET-o
 
 ## Branch disposition
 Retain active PR branch, all bases and permanent records; no main merge or cleanup. Re-evaluate after independent review, reproducible tests, actual deployment dependencies and AGENTS.md guarded branch lifecycle.
+
+## Follow-up: pagination cursor classification and two-page tests — 2026-11-08
+
+After live hosted S3-backed MCP acceptance on the dependent [draft PR #313](https://github.com/jcr0916-hue/federatedrepublic/pull/313), a fabricated `newsroom_list` cursor was observed to yield `r2_list_unavailable`. Source inspection traced this to a blanket non-200 ListObjectsV2 error mapping in this adapter. The exact upstream R2 response status/code for that live request was not captured; do not infer it was a particular S3 code.
+
+**Experimental fix on this PR #312 branch:** `src/readonly-s3-storage.ts` now, only when a cursor is present and the signed ListObjectsV2 response is HTTP 400, reads a *bounded* 4096-byte XML error body and maps S3 `InvalidArgument` or `InvalidToken` to `r2_invalid_cursor`; all other non-200 statuses and malformed/unbounded error bodies still map to `r2_list_unavailable`. No changes to endpoint restrictions, read-only GET methods, production entrypoints, secret handling or native R2 binding. `test/readonly-s3-storage.test.ts` adds mocked two-page continuation-token handoff and explicit invalid-cursor vs missing-cursor, denied-access and unrelated-error differentiation. **Tests/CI results for this latest patch are pending independent confirmation**; don't claim the live hosted Worker changed, because it still runs the earlier deployed artifact.
+
+**Dependency coordination:** PR #313 was branched from the earlier #312 implementation, so it will need to incorporate the reviewed #312 correction before any rebuild/redeploy; avoid duplicate conflicting changes. To confirm the specific live case, capture the S3 response classification safely (without logging tokens/keys or sensitive XML), then test with hosted R2 and real two-page synthetic listing. Independent security review and F5–F8 remain open. Both PRs stay draft/unmerged; retain dependency refs and archive.
