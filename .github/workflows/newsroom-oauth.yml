@@ -1,13 +1,35 @@
 name: Newsroom OAuth checks
 on:
   pull_request:
-    paths:
-      - 'workers/newsroom/**'
-      - '.github/workflows/newsroom-oauth.yml'
 permissions:
   contents: read
 jobs:
+  newsroom-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      affected: ${{ steps.paths.outputs.affected }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - id: paths
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet "$BASE_SHA" "$HEAD_SHA" -- workers/newsroom .github/workflows/newsroom-oauth.yml; then
+            echo 'affected=false' >> "$GITHUB_OUTPUT"
+          else
+            result=$?
+            if [ "$result" -ne 1 ]; then exit "$result"; fi
+            echo 'affected=true' >> "$GITHUB_OUTPUT"
+          fi
   local-oauth:
+    needs: newsroom-changes
+    if: needs.newsroom-changes.outputs.affected == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -48,3 +70,26 @@ jobs:
           path: workers/newsroom/dist/resource-s3-candidate.js
           if-no-files-found: error
           retention-days: 7
+
+  newsroom-readiness:
+    name: Newsroom readiness gate
+    if: always()
+    needs: [newsroom-changes, local-oauth]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require successful applicable checks
+        env:
+          DETECTION_RESULT: ${{ needs.newsroom-changes.result }}
+          AFFECTED: ${{ needs.newsroom-changes.outputs.affected }}
+          OAUTH_RESULT: ${{ needs.local-oauth.result }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$DETECTION_RESULT" = success
+          if [ "$AFFECTED" = true ]; then
+            test "$OAUTH_RESULT" = success
+          elif [ "$AFFECTED" = false ]; then
+            test "$OAUTH_RESULT" = skipped
+          else
+            exit 1
+          fi
